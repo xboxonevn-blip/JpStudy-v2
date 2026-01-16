@@ -11,12 +11,10 @@ part 'app_database.g.dart';
 
 @DriftDatabase(
   tables: [
-    VocabItems,
-    SrsReviews,
-    GrammarQuestions,
-    ExamSessions,
-    ExamAnswers,
-    DailyProgress,
+    SrsState,
+    UserProgress,
+    Attempt,
+    AttemptAnswer,
   ],
 )
 class AppDatabase extends _$AppDatabase {

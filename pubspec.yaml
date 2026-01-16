@@ -74,6 +74,10 @@ flutter:
     - assets/db/
     - assets/paths/
     - assets/audio/
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope/Manrope[wght].ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

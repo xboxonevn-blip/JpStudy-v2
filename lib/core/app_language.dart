@@ -104,6 +104,315 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get lessonPickerTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Choose lessons';
+      case AppLanguage.vi:
+        return 'Chọn bài học';
+      case AppLanguage.ja:
+        return 'レッスンを選択';
+    }
+  }
+
+  String get filterAllLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'All';
+      case AppLanguage.vi:
+        return 'Tất cả';
+      case AppLanguage.ja:
+        return 'すべて';
+    }
+  }
+
+  String get recentItemsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Recent items';
+      case AppLanguage.vi:
+        return 'Các mục gần đây';
+      case AppLanguage.ja:
+        return '最近の項目';
+    }
+  }
+
+  String get searchFolderHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Search in this folder';
+      case AppLanguage.vi:
+        return 'Tìm kiếm thư mục này';
+      case AppLanguage.ja:
+        return 'このフォルダ内を検索';
+    }
+  }
+
+  String lessonTitle(int index) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Minna No Nihongo $index';
+      case AppLanguage.vi:
+        return 'Minna No Nihongo $index';
+      case AppLanguage.ja:
+        return 'みんなの日本語 $index';
+    }
+  }
+
+  String lessonSubtitle(int termCount) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Set • $termCount terms';
+      case AppLanguage.vi:
+        return 'Học phần • $termCount thuật ngữ';
+      case AppLanguage.ja:
+        return '学習セット・$termCount 語';
+    }
+  }
+
+  String get savedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Saved';
+      case AppLanguage.vi:
+        return 'Đã lưu';
+      case AppLanguage.ja:
+        return '保存済み';
+    }
+  }
+
+  String get groupLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Group';
+      case AppLanguage.vi:
+        return 'Nhóm';
+      case AppLanguage.ja:
+        return 'グループ';
+    }
+  }
+
+  String lessonLearnersLabel(int people, int days) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$people learners in last $days days';
+      case AppLanguage.vi:
+        return '$people người học trong $days ngày qua';
+      case AppLanguage.ja:
+        return '過去$days日で$people人が学習';
+    }
+  }
+
+  String lessonRatingLabel(double rating, int reviews) {
+    final ratingText = rating.toStringAsFixed(1);
+    switch (this) {
+      case AppLanguage.en:
+        return '$ratingText ($reviews reviews)';
+      case AppLanguage.vi:
+        return '$ratingText ($reviews đánh giá)';
+      case AppLanguage.ja:
+        return '$ratingText（$reviews件）';
+    }
+  }
+
+  String get lastStudiedSample {
+    switch (this) {
+      case AppLanguage.en:
+        return '2 hours ago';
+      case AppLanguage.vi:
+        return '2 giờ trước';
+      case AppLanguage.ja:
+        return '2時間前';
+    }
+  }
+
+  String lastStudiedLabel(String timeAgo) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Last studied: $timeAgo';
+      case AppLanguage.vi:
+        return 'Lần học cuối: $timeAgo';
+      case AppLanguage.ja:
+        return '最後の学習: $timeAgo';
+    }
+  }
+
+  String get copySetLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Make a copy';
+      case AppLanguage.vi:
+        return 'Tạo một bản sao';
+      case AppLanguage.ja:
+        return 'コピーを作成';
+    }
+  }
+
+  String get resetProgressLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Reset progress';
+      case AppLanguage.vi:
+        return 'Đặt lại tiến độ';
+      case AppLanguage.ja:
+        return '進捗をリセット';
+    }
+  }
+
+  String get combineSetLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Combine';
+      case AppLanguage.vi:
+        return 'Ghép';
+      case AppLanguage.ja:
+        return '結合';
+    }
+  }
+
+  String get reportLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Report';
+      case AppLanguage.vi:
+        return 'Báo cáo';
+      case AppLanguage.ja:
+        return '報告';
+    }
+  }
+
+  String get flashcardsAction {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Flashcards';
+      case AppLanguage.vi:
+        return 'Thẻ ghi nhớ';
+      case AppLanguage.ja:
+        return '単語カード';
+    }
+  }
+
+  String get learnAction {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Learn';
+      case AppLanguage.vi:
+        return 'Học';
+      case AppLanguage.ja:
+        return '学習';
+    }
+  }
+
+  String get testAction {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Test';
+      case AppLanguage.vi:
+        return 'Kiểm tra';
+      case AppLanguage.ja:
+        return 'テスト';
+    }
+  }
+
+  String get matchAction {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Match';
+      case AppLanguage.vi:
+        return 'Khớp thẻ';
+      case AppLanguage.ja:
+        return 'マッチ';
+    }
+  }
+
+  String get blastAction {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Blast';
+      case AppLanguage.vi:
+        return 'Blast';
+      case AppLanguage.ja:
+        return 'Blast';
+    }
+  }
+
+  String get combineAction {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Combine';
+      case AppLanguage.vi:
+        return 'Ghép thẻ';
+      case AppLanguage.ja:
+        return 'カード結合';
+    }
+  }
+
+  String get showHintsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Show hints';
+      case AppLanguage.vi:
+        return 'Hiển thị gợi ý';
+      case AppLanguage.ja:
+        return 'ヒントを表示';
+    }
+  }
+
+  String get trackProgressLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Track progress';
+      case AppLanguage.vi:
+        return 'Theo dõi tiến độ';
+      case AppLanguage.ja:
+        return '進捗を追跡';
+    }
+  }
+
+  String get shortcutLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Shortcut';
+      case AppLanguage.vi:
+        return 'Phím tắt';
+      case AppLanguage.ja:
+        return 'ショートカット';
+    }
+  }
+
+  String get shortcutInstruction {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Press space or tap the card to flip.';
+      case AppLanguage.vi:
+        return 'Nhấn phím cách hoặc nhấp vào thẻ để lật.';
+      case AppLanguage.ja:
+        return 'スペースキーまたはカードをタップして裏返します。';
+    }
+  }
+
+  String get audioComingSoon {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Audio will be added later.';
+      case AppLanguage.vi:
+        return 'Âm thanh sẽ được thêm sau.';
+      case AppLanguage.ja:
+        return '音声は後で追加されます。';
+    }
+  }
+
+  String lessonCountLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count lessons';
+      case AppLanguage.vi:
+        return '$count bài học';
+      case AppLanguage.ja:
+        return '$count レッスン';
+    }
+  }
+
   String get vocabTitle {
     switch (this) {
       case AppLanguage.en:
@@ -200,6 +509,39 @@ extension AppLanguageLabels on AppLanguage {
         return 'Luồng ôn từ vựng sẽ hiển thị ở đây.';
       case AppLanguage.ja:
         return '語彙復習フローはここに表示されます。';
+    }
+  }
+
+  String get selectLevelToViewVocab {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Select a level to see vocab.';
+      case AppLanguage.vi:
+        return 'Hãy chọn cấp để xem từ vựng.';
+      case AppLanguage.ja:
+        return '単語を見るにはレベルを選択してください。';
+    }
+  }
+
+  String get vocabPreviewTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Sample vocab';
+      case AppLanguage.vi:
+        return 'Từ vựng mẫu';
+      case AppLanguage.ja:
+        return 'サンプル単語';
+    }
+  }
+
+  String get loadErrorLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Failed to load data.';
+      case AppLanguage.vi:
+        return 'Tải dữ liệu thất bại.';
+      case AppLanguage.ja:
+        return 'データの読み込みに失敗しました。';
     }
   }
 

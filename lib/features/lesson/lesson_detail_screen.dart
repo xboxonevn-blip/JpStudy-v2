@@ -68,7 +68,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final totalTerms = displayTerms.length;
     final currentIndex = totalTerms == 0
         ? 0
-        : _currentIndex.clamp(0, totalTerms - 1) as int;
+        : _currentIndex.clamp(0, totalTerms - 1);
     final currentTerm =
         totalTerms == 0 ? null : displayTerms.elementAt(currentIndex);
     final isSaved = terms.isNotEmpty && _starredTermIds.length == terms.length;
@@ -236,7 +236,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       return;
     }
     setState(() {
-      _currentIndex = (_currentIndex - 1).clamp(0, total - 1) as int;
+      _currentIndex = (_currentIndex - 1).clamp(0, total - 1);
     });
   }
 
@@ -245,7 +245,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       return;
     }
     setState(() {
-      _currentIndex = (_currentIndex + 1).clamp(0, total - 1) as int;
+      _currentIndex = (_currentIndex + 1).clamp(0, total - 1);
     });
   }
 
@@ -284,7 +284,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         ids.shuffle(_random);
         _shuffledOrder = ids;
         if (currentId != null) {
-          _currentIndex = ids.indexOf(currentId).clamp(0, ids.length - 1) as int;
+          _currentIndex = ids.indexOf(currentId).clamp(0, ids.length - 1);
         } else {
           _currentIndex = 0;
         }
@@ -306,7 +306,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     if (ordered.isEmpty) {
       return null;
     }
-    final index = _currentIndex.clamp(0, ordered.length - 1) as int;
+    final index = _currentIndex.clamp(0, ordered.length - 1);
     return ordered[index].id;
   }
 

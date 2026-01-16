@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static ThemeData light() {
+    const appBackground = Color(0xFFF5F7FB);
     final colorScheme = const ColorScheme.light(
       primary: Color(0xFF4255FF),
       secondary: Color(0xFF6C7CFF),
       surface: Color(0xFFFFFFFF),
-      background: Color(0xFFF5F7FB),
       onPrimary: Color(0xFFFFFFFF),
       onSurface: Color(0xFF1C2440),
     );
@@ -15,9 +15,9 @@ class AppTheme {
       colorScheme: colorScheme,
       useMaterial3: true,
       fontFamily: 'Manrope',
-      scaffoldBackgroundColor: colorScheme.background,
+      scaffoldBackgroundColor: appBackground,
       appBarTheme: AppBarTheme(
-        backgroundColor: colorScheme.background,
+        backgroundColor: appBackground,
         elevation: 0,
         foregroundColor: colorScheme.onSurface,
         titleTextStyle: const TextStyle(

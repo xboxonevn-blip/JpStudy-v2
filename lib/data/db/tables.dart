@@ -34,3 +34,26 @@ class AttemptAnswer extends Table {
   IntColumn get selectedIndex => integer()();
   BoolColumn get isCorrect => boolean()();
 }
+
+class UserLesson extends Table {
+  IntColumn get id => integer()();
+  TextColumn get level => text()();
+  TextColumn get title => text()();
+  TextColumn get description => text().withDefault(const Constant(''))();
+  BoolColumn get isPublic => boolean().withDefault(const Constant(true))();
+  BoolColumn get isCustomTitle => boolean().withDefault(const Constant(false))();
+  DateTimeColumn get updatedAt => dateTime().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+class UserLessonTerm extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  IntColumn get lessonId => integer().references(UserLesson, #id)();
+  TextColumn get term => text().withDefault(const Constant(''))();
+  TextColumn get reading => text().withDefault(const Constant(''))();
+  TextColumn get definition => text().withDefault(const Constant(''))();
+  TextColumn get imagePath => text().nullable()();
+  IntColumn get orderIndex => integer().withDefault(const Constant(0))();
+}

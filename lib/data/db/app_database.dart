@@ -15,13 +15,31 @@ part 'app_database.g.dart';
     UserProgress,
     Attempt,
     AttemptAnswer,
+    UserLesson,
+    UserLessonTerm,
   ],
 )
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 3;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+        onCreate: (migrator) async {
+          await migrator.createAll();
+        },
+        onUpgrade: (migrator, from, to) async {
+          if (from < 2) {
+            await migrator.createTable(userLesson);
+            await migrator.createTable(userLessonTerm);
+          }
+          if (from < 3) {
+            await migrator.addColumn(userLesson, userLesson.isCustomTitle);
+          }
+        },
+      );
 }
 
 LazyDatabase _openConnection() {

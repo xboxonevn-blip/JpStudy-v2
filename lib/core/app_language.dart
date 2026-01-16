@@ -115,6 +115,17 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String lessonListTitle(String level) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$level · Sets';
+      case AppLanguage.vi:
+        return '$level · Học phần';
+      case AppLanguage.ja:
+        return '$level ・学習セット';
+    }
+  }
+
   String get filterAllLabel {
     switch (this) {
       case AppLanguage.en:
@@ -145,6 +156,116 @@ extension AppLanguageLabels on AppLanguage {
         return 'Tìm kiếm thư mục này';
       case AppLanguage.ja:
         return 'このフォルダ内を検索';
+    }
+  }
+
+  String get searchLessonsHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Search lessons';
+      case AppLanguage.vi:
+        return 'Tìm kiếm học phần';
+      case AppLanguage.ja:
+        return '学習セットを検索';
+    }
+  }
+
+  String get createLessonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Create set';
+      case AppLanguage.vi:
+        return 'Tạo học phần';
+      case AppLanguage.ja:
+        return 'セット作成';
+    }
+  }
+
+  String get sortRecentLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Recent';
+      case AppLanguage.vi:
+        return 'Gần đây';
+      case AppLanguage.ja:
+        return '最近';
+    }
+  }
+
+  String get sortAzLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'A-Z';
+      case AppLanguage.vi:
+        return 'A-Z';
+      case AppLanguage.ja:
+        return 'A-Z';
+    }
+  }
+
+  String get sortProgressLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Progress';
+      case AppLanguage.vi:
+        return 'Tiến độ';
+      case AppLanguage.ja:
+        return '進捗';
+    }
+  }
+
+  String get sortTermCountLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Term count';
+      case AppLanguage.vi:
+        return 'Số thuật ngữ';
+      case AppLanguage.ja:
+        return '語数';
+    }
+  }
+
+  String termsCountLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count terms';
+      case AppLanguage.vi:
+        return '$count thuật ngữ';
+      case AppLanguage.ja:
+        return '$count 語';
+    }
+  }
+
+  String relativeTimeLabel(int minutes) {
+    if (minutes < 60) {
+      switch (this) {
+        case AppLanguage.en:
+          return '$minutes minutes ago';
+        case AppLanguage.vi:
+          return '$minutes phút trước';
+        case AppLanguage.ja:
+          return '$minutes分前';
+      }
+    }
+    if (minutes < 1440) {
+      final hours = (minutes / 60).round();
+      switch (this) {
+        case AppLanguage.en:
+          return '$hours hours ago';
+        case AppLanguage.vi:
+          return '$hours giờ trước';
+        case AppLanguage.ja:
+          return '$hours時間前';
+      }
+    }
+    final days = (minutes / 1440).round();
+    switch (this) {
+      case AppLanguage.en:
+        return '$days days ago';
+      case AppLanguage.vi:
+        return '$days ngày trước';
+      case AppLanguage.ja:
+        return '$days日前';
     }
   }
 
@@ -240,11 +361,11 @@ extension AppLanguageLabels on AppLanguage {
   String get copySetLabel {
     switch (this) {
       case AppLanguage.en:
-        return 'Make a copy';
+        return 'Edit';
       case AppLanguage.vi:
-        return 'Tạo một bản sao';
+        return 'Sửa';
       case AppLanguage.ja:
-        return 'コピーを作成';
+        return '編集';
     }
   }
 
@@ -278,6 +399,127 @@ extension AppLanguageLabels on AppLanguage {
         return 'Báo cáo';
       case AppLanguage.ja:
         return '報告';
+    }
+  }
+
+  String get backToLessonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Back to lesson';
+      case AppLanguage.vi:
+        return 'Trở về học phần';
+      case AppLanguage.ja:
+        return '学習セットに戻る';
+    }
+  }
+
+  String get doneLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Done';
+      case AppLanguage.vi:
+        return 'Hoàn tất';
+      case AppLanguage.ja:
+        return '完了';
+    }
+  }
+
+  String get publicLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Public';
+      case AppLanguage.vi:
+        return 'Công khai';
+      case AppLanguage.ja:
+        return '公開';
+    }
+  }
+
+  String get titleLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Title';
+      case AppLanguage.vi:
+        return 'Tiêu đề';
+      case AppLanguage.ja:
+        return 'タイトル';
+    }
+  }
+
+  String get descriptionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Add description...';
+      case AppLanguage.vi:
+        return 'Thêm mô tả...';
+      case AppLanguage.ja:
+        return '説明を追加...';
+    }
+  }
+
+  String get addTermLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Add';
+      case AppLanguage.vi:
+        return 'Nhập';
+      case AppLanguage.ja:
+        return '追加';
+    }
+  }
+
+  String get addDiagramLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Add diagram';
+      case AppLanguage.vi:
+        return 'Thêm sơ đồ';
+      case AppLanguage.ja:
+        return '図を追加';
+    }
+  }
+
+  String get hintsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Hints';
+      case AppLanguage.vi:
+        return 'Gợi ý';
+      case AppLanguage.ja:
+        return 'ヒント';
+    }
+  }
+
+  String get termLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Term';
+      case AppLanguage.vi:
+        return 'Thuật ngữ';
+      case AppLanguage.ja:
+        return '用語';
+    }
+  }
+
+  String get definitionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Definition';
+      case AppLanguage.vi:
+        return 'Định nghĩa';
+      case AppLanguage.ja:
+        return '定義';
+    }
+  }
+
+  String get swapLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Swap';
+      case AppLanguage.vi:
+        return 'Hoán đổi';
+      case AppLanguage.ja:
+        return '入れ替え';
     }
   }
 
@@ -344,6 +586,72 @@ extension AppLanguageLabels on AppLanguage {
         return 'Ghép thẻ';
       case AppLanguage.ja:
         return 'カード結合';
+    }
+  }
+
+  String get gamesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Games';
+      case AppLanguage.vi:
+        return 'Tr? ch?i';
+      case AppLanguage.ja:
+        return '???';
+    }
+  }
+
+  String get shuffleLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Shuffle';
+      case AppLanguage.vi:
+        return 'Tr?n';
+      case AppLanguage.ja:
+        return '?????';
+    }
+  }
+
+  String get autoLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Auto';
+      case AppLanguage.vi:
+        return 'T? ??ng';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get speedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Speed';
+      case AppLanguage.vi:
+        return 'T?c ??';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get settingsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Settings';
+      case AppLanguage.vi:
+        return 'C?i ??t';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get fullscreenLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fullscreen';
+      case AppLanguage.vi:
+        return 'To?n m?n h?nh';
+      case AppLanguage.ja:
+        return '???';
     }
   }
 

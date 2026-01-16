@@ -1560,6 +1560,916 @@ class AttemptAnswerCompanion extends UpdateCompanion<AttemptAnswerData> {
   }
 }
 
+class $UserLessonTable extends UserLesson
+    with TableInfo<$UserLessonTable, UserLessonData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UserLessonTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  @override
+  late final GeneratedColumn<String> level = GeneratedColumn<String>(
+    'level',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  @override
+  late final GeneratedColumn<String> title = GeneratedColumn<String>(
+    'title',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _descriptionMeta = const VerificationMeta(
+    'description',
+  );
+  @override
+  late final GeneratedColumn<String> description = GeneratedColumn<String>(
+    'description',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _isPublicMeta = const VerificationMeta(
+    'isPublic',
+  );
+  @override
+  late final GeneratedColumn<bool> isPublic = GeneratedColumn<bool>(
+    'is_public',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_public" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _isCustomTitleMeta = const VerificationMeta(
+    'isCustomTitle',
+  );
+  @override
+  late final GeneratedColumn<bool> isCustomTitle = GeneratedColumn<bool>(
+    'is_custom_title',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_custom_title" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    level,
+    title,
+    description,
+    isPublic,
+    isCustomTitle,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'user_lesson';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<UserLessonData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('level')) {
+      context.handle(
+        _levelMeta,
+        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_levelMeta);
+    }
+    if (data.containsKey('title')) {
+      context.handle(
+        _titleMeta,
+        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_titleMeta);
+    }
+    if (data.containsKey('description')) {
+      context.handle(
+        _descriptionMeta,
+        description.isAcceptableOrUnknown(
+          data['description']!,
+          _descriptionMeta,
+        ),
+      );
+    }
+    if (data.containsKey('is_public')) {
+      context.handle(
+        _isPublicMeta,
+        isPublic.isAcceptableOrUnknown(data['is_public']!, _isPublicMeta),
+      );
+    }
+    if (data.containsKey('is_custom_title')) {
+      context.handle(
+        _isCustomTitleMeta,
+        isCustomTitle.isAcceptableOrUnknown(
+          data['is_custom_title']!,
+          _isCustomTitleMeta,
+        ),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  UserLessonData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return UserLessonData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      level: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}level'],
+      )!,
+      title: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}title'],
+      )!,
+      description: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}description'],
+      )!,
+      isPublic: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_public'],
+      )!,
+      isCustomTitle: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_custom_title'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      ),
+    );
+  }
+
+  @override
+  $UserLessonTable createAlias(String alias) {
+    return $UserLessonTable(attachedDatabase, alias);
+  }
+}
+
+class UserLessonData extends DataClass implements Insertable<UserLessonData> {
+  final int id;
+  final String level;
+  final String title;
+  final String description;
+  final bool isPublic;
+  final bool isCustomTitle;
+  final DateTime? updatedAt;
+  const UserLessonData({
+    required this.id,
+    required this.level,
+    required this.title,
+    required this.description,
+    required this.isPublic,
+    required this.isCustomTitle,
+    this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['level'] = Variable<String>(level);
+    map['title'] = Variable<String>(title);
+    map['description'] = Variable<String>(description);
+    map['is_public'] = Variable<bool>(isPublic);
+    map['is_custom_title'] = Variable<bool>(isCustomTitle);
+    if (!nullToAbsent || updatedAt != null) {
+      map['updated_at'] = Variable<DateTime>(updatedAt);
+    }
+    return map;
+  }
+
+  UserLessonCompanion toCompanion(bool nullToAbsent) {
+    return UserLessonCompanion(
+      id: Value(id),
+      level: Value(level),
+      title: Value(title),
+      description: Value(description),
+      isPublic: Value(isPublic),
+      isCustomTitle: Value(isCustomTitle),
+      updatedAt: updatedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updatedAt),
+    );
+  }
+
+  factory UserLessonData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return UserLessonData(
+      id: serializer.fromJson<int>(json['id']),
+      level: serializer.fromJson<String>(json['level']),
+      title: serializer.fromJson<String>(json['title']),
+      description: serializer.fromJson<String>(json['description']),
+      isPublic: serializer.fromJson<bool>(json['isPublic']),
+      isCustomTitle: serializer.fromJson<bool>(json['isCustomTitle']),
+      updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'level': serializer.toJson<String>(level),
+      'title': serializer.toJson<String>(title),
+      'description': serializer.toJson<String>(description),
+      'isPublic': serializer.toJson<bool>(isPublic),
+      'isCustomTitle': serializer.toJson<bool>(isCustomTitle),
+      'updatedAt': serializer.toJson<DateTime?>(updatedAt),
+    };
+  }
+
+  UserLessonData copyWith({
+    int? id,
+    String? level,
+    String? title,
+    String? description,
+    bool? isPublic,
+    bool? isCustomTitle,
+    Value<DateTime?> updatedAt = const Value.absent(),
+  }) => UserLessonData(
+    id: id ?? this.id,
+    level: level ?? this.level,
+    title: title ?? this.title,
+    description: description ?? this.description,
+    isPublic: isPublic ?? this.isPublic,
+    isCustomTitle: isCustomTitle ?? this.isCustomTitle,
+    updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
+  );
+  UserLessonData copyWithCompanion(UserLessonCompanion data) {
+    return UserLessonData(
+      id: data.id.present ? data.id.value : this.id,
+      level: data.level.present ? data.level.value : this.level,
+      title: data.title.present ? data.title.value : this.title,
+      description: data.description.present
+          ? data.description.value
+          : this.description,
+      isPublic: data.isPublic.present ? data.isPublic.value : this.isPublic,
+      isCustomTitle: data.isCustomTitle.present
+          ? data.isCustomTitle.value
+          : this.isCustomTitle,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserLessonData(')
+          ..write('id: $id, ')
+          ..write('level: $level, ')
+          ..write('title: $title, ')
+          ..write('description: $description, ')
+          ..write('isPublic: $isPublic, ')
+          ..write('isCustomTitle: $isCustomTitle, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    level,
+    title,
+    description,
+    isPublic,
+    isCustomTitle,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is UserLessonData &&
+          other.id == this.id &&
+          other.level == this.level &&
+          other.title == this.title &&
+          other.description == this.description &&
+          other.isPublic == this.isPublic &&
+          other.isCustomTitle == this.isCustomTitle &&
+          other.updatedAt == this.updatedAt);
+}
+
+class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
+  final Value<int> id;
+  final Value<String> level;
+  final Value<String> title;
+  final Value<String> description;
+  final Value<bool> isPublic;
+  final Value<bool> isCustomTitle;
+  final Value<DateTime?> updatedAt;
+  const UserLessonCompanion({
+    this.id = const Value.absent(),
+    this.level = const Value.absent(),
+    this.title = const Value.absent(),
+    this.description = const Value.absent(),
+    this.isPublic = const Value.absent(),
+    this.isCustomTitle = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  UserLessonCompanion.insert({
+    this.id = const Value.absent(),
+    required String level,
+    required String title,
+    this.description = const Value.absent(),
+    this.isPublic = const Value.absent(),
+    this.isCustomTitle = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  }) : level = Value(level),
+       title = Value(title);
+  static Insertable<UserLessonData> custom({
+    Expression<int>? id,
+    Expression<String>? level,
+    Expression<String>? title,
+    Expression<String>? description,
+    Expression<bool>? isPublic,
+    Expression<bool>? isCustomTitle,
+    Expression<DateTime>? updatedAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (level != null) 'level': level,
+      if (title != null) 'title': title,
+      if (description != null) 'description': description,
+      if (isPublic != null) 'is_public': isPublic,
+      if (isCustomTitle != null) 'is_custom_title': isCustomTitle,
+      if (updatedAt != null) 'updated_at': updatedAt,
+    });
+  }
+
+  UserLessonCompanion copyWith({
+    Value<int>? id,
+    Value<String>? level,
+    Value<String>? title,
+    Value<String>? description,
+    Value<bool>? isPublic,
+    Value<bool>? isCustomTitle,
+    Value<DateTime?>? updatedAt,
+  }) {
+    return UserLessonCompanion(
+      id: id ?? this.id,
+      level: level ?? this.level,
+      title: title ?? this.title,
+      description: description ?? this.description,
+      isPublic: isPublic ?? this.isPublic,
+      isCustomTitle: isCustomTitle ?? this.isCustomTitle,
+      updatedAt: updatedAt ?? this.updatedAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (level.present) {
+      map['level'] = Variable<String>(level.value);
+    }
+    if (title.present) {
+      map['title'] = Variable<String>(title.value);
+    }
+    if (description.present) {
+      map['description'] = Variable<String>(description.value);
+    }
+    if (isPublic.present) {
+      map['is_public'] = Variable<bool>(isPublic.value);
+    }
+    if (isCustomTitle.present) {
+      map['is_custom_title'] = Variable<bool>(isCustomTitle.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserLessonCompanion(')
+          ..write('id: $id, ')
+          ..write('level: $level, ')
+          ..write('title: $title, ')
+          ..write('description: $description, ')
+          ..write('isPublic: $isPublic, ')
+          ..write('isCustomTitle: $isCustomTitle, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $UserLessonTermTable extends UserLessonTerm
+    with TableInfo<$UserLessonTermTable, UserLessonTermData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UserLessonTermTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
+  @override
+  late final GeneratedColumn<int> lessonId = GeneratedColumn<int>(
+    'lesson_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES user_lesson (id)',
+    ),
+  );
+  static const VerificationMeta _termMeta = const VerificationMeta('term');
+  @override
+  late final GeneratedColumn<String> term = GeneratedColumn<String>(
+    'term',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _readingMeta = const VerificationMeta(
+    'reading',
+  );
+  @override
+  late final GeneratedColumn<String> reading = GeneratedColumn<String>(
+    'reading',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _definitionMeta = const VerificationMeta(
+    'definition',
+  );
+  @override
+  late final GeneratedColumn<String> definition = GeneratedColumn<String>(
+    'definition',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _imagePathMeta = const VerificationMeta(
+    'imagePath',
+  );
+  @override
+  late final GeneratedColumn<String> imagePath = GeneratedColumn<String>(
+    'image_path',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _orderIndexMeta = const VerificationMeta(
+    'orderIndex',
+  );
+  @override
+  late final GeneratedColumn<int> orderIndex = GeneratedColumn<int>(
+    'order_index',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    lessonId,
+    term,
+    reading,
+    definition,
+    imagePath,
+    orderIndex,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'user_lesson_term';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<UserLessonTermData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('lesson_id')) {
+      context.handle(
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_lessonIdMeta);
+    }
+    if (data.containsKey('term')) {
+      context.handle(
+        _termMeta,
+        term.isAcceptableOrUnknown(data['term']!, _termMeta),
+      );
+    }
+    if (data.containsKey('reading')) {
+      context.handle(
+        _readingMeta,
+        reading.isAcceptableOrUnknown(data['reading']!, _readingMeta),
+      );
+    }
+    if (data.containsKey('definition')) {
+      context.handle(
+        _definitionMeta,
+        definition.isAcceptableOrUnknown(data['definition']!, _definitionMeta),
+      );
+    }
+    if (data.containsKey('image_path')) {
+      context.handle(
+        _imagePathMeta,
+        imagePath.isAcceptableOrUnknown(data['image_path']!, _imagePathMeta),
+      );
+    }
+    if (data.containsKey('order_index')) {
+      context.handle(
+        _orderIndexMeta,
+        orderIndex.isAcceptableOrUnknown(data['order_index']!, _orderIndexMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  UserLessonTermData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return UserLessonTermData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lesson_id'],
+      )!,
+      term: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}term'],
+      )!,
+      reading: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}reading'],
+      )!,
+      definition: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}definition'],
+      )!,
+      imagePath: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}image_path'],
+      ),
+      orderIndex: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}order_index'],
+      )!,
+    );
+  }
+
+  @override
+  $UserLessonTermTable createAlias(String alias) {
+    return $UserLessonTermTable(attachedDatabase, alias);
+  }
+}
+
+class UserLessonTermData extends DataClass
+    implements Insertable<UserLessonTermData> {
+  final int id;
+  final int lessonId;
+  final String term;
+  final String reading;
+  final String definition;
+  final String? imagePath;
+  final int orderIndex;
+  const UserLessonTermData({
+    required this.id,
+    required this.lessonId,
+    required this.term,
+    required this.reading,
+    required this.definition,
+    this.imagePath,
+    required this.orderIndex,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['lesson_id'] = Variable<int>(lessonId);
+    map['term'] = Variable<String>(term);
+    map['reading'] = Variable<String>(reading);
+    map['definition'] = Variable<String>(definition);
+    if (!nullToAbsent || imagePath != null) {
+      map['image_path'] = Variable<String>(imagePath);
+    }
+    map['order_index'] = Variable<int>(orderIndex);
+    return map;
+  }
+
+  UserLessonTermCompanion toCompanion(bool nullToAbsent) {
+    return UserLessonTermCompanion(
+      id: Value(id),
+      lessonId: Value(lessonId),
+      term: Value(term),
+      reading: Value(reading),
+      definition: Value(definition),
+      imagePath: imagePath == null && nullToAbsent
+          ? const Value.absent()
+          : Value(imagePath),
+      orderIndex: Value(orderIndex),
+    );
+  }
+
+  factory UserLessonTermData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return UserLessonTermData(
+      id: serializer.fromJson<int>(json['id']),
+      lessonId: serializer.fromJson<int>(json['lessonId']),
+      term: serializer.fromJson<String>(json['term']),
+      reading: serializer.fromJson<String>(json['reading']),
+      definition: serializer.fromJson<String>(json['definition']),
+      imagePath: serializer.fromJson<String?>(json['imagePath']),
+      orderIndex: serializer.fromJson<int>(json['orderIndex']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'lessonId': serializer.toJson<int>(lessonId),
+      'term': serializer.toJson<String>(term),
+      'reading': serializer.toJson<String>(reading),
+      'definition': serializer.toJson<String>(definition),
+      'imagePath': serializer.toJson<String?>(imagePath),
+      'orderIndex': serializer.toJson<int>(orderIndex),
+    };
+  }
+
+  UserLessonTermData copyWith({
+    int? id,
+    int? lessonId,
+    String? term,
+    String? reading,
+    String? definition,
+    Value<String?> imagePath = const Value.absent(),
+    int? orderIndex,
+  }) => UserLessonTermData(
+    id: id ?? this.id,
+    lessonId: lessonId ?? this.lessonId,
+    term: term ?? this.term,
+    reading: reading ?? this.reading,
+    definition: definition ?? this.definition,
+    imagePath: imagePath.present ? imagePath.value : this.imagePath,
+    orderIndex: orderIndex ?? this.orderIndex,
+  );
+  UserLessonTermData copyWithCompanion(UserLessonTermCompanion data) {
+    return UserLessonTermData(
+      id: data.id.present ? data.id.value : this.id,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
+      term: data.term.present ? data.term.value : this.term,
+      reading: data.reading.present ? data.reading.value : this.reading,
+      definition: data.definition.present
+          ? data.definition.value
+          : this.definition,
+      imagePath: data.imagePath.present ? data.imagePath.value : this.imagePath,
+      orderIndex: data.orderIndex.present
+          ? data.orderIndex.value
+          : this.orderIndex,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserLessonTermData(')
+          ..write('id: $id, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('term: $term, ')
+          ..write('reading: $reading, ')
+          ..write('definition: $definition, ')
+          ..write('imagePath: $imagePath, ')
+          ..write('orderIndex: $orderIndex')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    lessonId,
+    term,
+    reading,
+    definition,
+    imagePath,
+    orderIndex,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is UserLessonTermData &&
+          other.id == this.id &&
+          other.lessonId == this.lessonId &&
+          other.term == this.term &&
+          other.reading == this.reading &&
+          other.definition == this.definition &&
+          other.imagePath == this.imagePath &&
+          other.orderIndex == this.orderIndex);
+}
+
+class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
+  final Value<int> id;
+  final Value<int> lessonId;
+  final Value<String> term;
+  final Value<String> reading;
+  final Value<String> definition;
+  final Value<String?> imagePath;
+  final Value<int> orderIndex;
+  const UserLessonTermCompanion({
+    this.id = const Value.absent(),
+    this.lessonId = const Value.absent(),
+    this.term = const Value.absent(),
+    this.reading = const Value.absent(),
+    this.definition = const Value.absent(),
+    this.imagePath = const Value.absent(),
+    this.orderIndex = const Value.absent(),
+  });
+  UserLessonTermCompanion.insert({
+    this.id = const Value.absent(),
+    required int lessonId,
+    this.term = const Value.absent(),
+    this.reading = const Value.absent(),
+    this.definition = const Value.absent(),
+    this.imagePath = const Value.absent(),
+    this.orderIndex = const Value.absent(),
+  }) : lessonId = Value(lessonId);
+  static Insertable<UserLessonTermData> custom({
+    Expression<int>? id,
+    Expression<int>? lessonId,
+    Expression<String>? term,
+    Expression<String>? reading,
+    Expression<String>? definition,
+    Expression<String>? imagePath,
+    Expression<int>? orderIndex,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (lessonId != null) 'lesson_id': lessonId,
+      if (term != null) 'term': term,
+      if (reading != null) 'reading': reading,
+      if (definition != null) 'definition': definition,
+      if (imagePath != null) 'image_path': imagePath,
+      if (orderIndex != null) 'order_index': orderIndex,
+    });
+  }
+
+  UserLessonTermCompanion copyWith({
+    Value<int>? id,
+    Value<int>? lessonId,
+    Value<String>? term,
+    Value<String>? reading,
+    Value<String>? definition,
+    Value<String?>? imagePath,
+    Value<int>? orderIndex,
+  }) {
+    return UserLessonTermCompanion(
+      id: id ?? this.id,
+      lessonId: lessonId ?? this.lessonId,
+      term: term ?? this.term,
+      reading: reading ?? this.reading,
+      definition: definition ?? this.definition,
+      imagePath: imagePath ?? this.imagePath,
+      orderIndex: orderIndex ?? this.orderIndex,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<int>(lessonId.value);
+    }
+    if (term.present) {
+      map['term'] = Variable<String>(term.value);
+    }
+    if (reading.present) {
+      map['reading'] = Variable<String>(reading.value);
+    }
+    if (definition.present) {
+      map['definition'] = Variable<String>(definition.value);
+    }
+    if (imagePath.present) {
+      map['image_path'] = Variable<String>(imagePath.value);
+    }
+    if (orderIndex.present) {
+      map['order_index'] = Variable<int>(orderIndex.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserLessonTermCompanion(')
+          ..write('id: $id, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('term: $term, ')
+          ..write('reading: $reading, ')
+          ..write('definition: $definition, ')
+          ..write('imagePath: $imagePath, ')
+          ..write('orderIndex: $orderIndex')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -1567,6 +2477,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $UserProgressTable userProgress = $UserProgressTable(this);
   late final $AttemptTable attempt = $AttemptTable(this);
   late final $AttemptAnswerTable attemptAnswer = $AttemptAnswerTable(this);
+  late final $UserLessonTable userLesson = $UserLessonTable(this);
+  late final $UserLessonTermTable userLessonTerm = $UserLessonTermTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1576,6 +2488,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     userProgress,
     attempt,
     attemptAnswer,
+    userLesson,
+    userLessonTerm,
   ];
 }
 
@@ -2650,6 +3564,715 @@ typedef $$AttemptAnswerTableProcessedTableManager =
       AttemptAnswerData,
       PrefetchHooks Function({bool attemptId})
     >;
+typedef $$UserLessonTableCreateCompanionBuilder =
+    UserLessonCompanion Function({
+      Value<int> id,
+      required String level,
+      required String title,
+      Value<String> description,
+      Value<bool> isPublic,
+      Value<bool> isCustomTitle,
+      Value<DateTime?> updatedAt,
+    });
+typedef $$UserLessonTableUpdateCompanionBuilder =
+    UserLessonCompanion Function({
+      Value<int> id,
+      Value<String> level,
+      Value<String> title,
+      Value<String> description,
+      Value<bool> isPublic,
+      Value<bool> isCustomTitle,
+      Value<DateTime?> updatedAt,
+    });
+
+final class $$UserLessonTableReferences
+    extends BaseReferences<_$AppDatabase, $UserLessonTable, UserLessonData> {
+  $$UserLessonTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static MultiTypedResultKey<$UserLessonTermTable, List<UserLessonTermData>>
+  _userLessonTermRefsTable(_$AppDatabase db) => MultiTypedResultKey.fromTable(
+    db.userLessonTerm,
+    aliasName: $_aliasNameGenerator(
+      db.userLesson.id,
+      db.userLessonTerm.lessonId,
+    ),
+  );
+
+  $$UserLessonTermTableProcessedTableManager get userLessonTermRefs {
+    final manager = $$UserLessonTermTableTableManager(
+      $_db,
+      $_db.userLessonTerm,
+    ).filter((f) => f.lessonId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(_userLessonTermRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$UserLessonTableFilterComposer
+    extends Composer<_$AppDatabase, $UserLessonTable> {
+  $$UserLessonTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get description => $composableBuilder(
+    column: $table.description,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isPublic => $composableBuilder(
+    column: $table.isPublic,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isCustomTitle => $composableBuilder(
+    column: $table.isCustomTitle,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  Expression<bool> userLessonTermRefs(
+    Expression<bool> Function($$UserLessonTermTableFilterComposer f) f,
+  ) {
+    final $$UserLessonTermTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.userLessonTerm,
+      getReferencedColumn: (t) => t.lessonId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$UserLessonTermTableFilterComposer(
+            $db: $db,
+            $table: $db.userLessonTerm,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$UserLessonTableOrderingComposer
+    extends Composer<_$AppDatabase, $UserLessonTable> {
+  $$UserLessonTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get description => $composableBuilder(
+    column: $table.description,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isPublic => $composableBuilder(
+    column: $table.isPublic,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isCustomTitle => $composableBuilder(
+    column: $table.isCustomTitle,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$UserLessonTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UserLessonTable> {
+  $$UserLessonTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get level =>
+      $composableBuilder(column: $table.level, builder: (column) => column);
+
+  GeneratedColumn<String> get title =>
+      $composableBuilder(column: $table.title, builder: (column) => column);
+
+  GeneratedColumn<String> get description => $composableBuilder(
+    column: $table.description,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get isPublic =>
+      $composableBuilder(column: $table.isPublic, builder: (column) => column);
+
+  GeneratedColumn<bool> get isCustomTitle => $composableBuilder(
+    column: $table.isCustomTitle,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  Expression<T> userLessonTermRefs<T extends Object>(
+    Expression<T> Function($$UserLessonTermTableAnnotationComposer a) f,
+  ) {
+    final $$UserLessonTermTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.userLessonTerm,
+      getReferencedColumn: (t) => t.lessonId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$UserLessonTermTableAnnotationComposer(
+            $db: $db,
+            $table: $db.userLessonTerm,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$UserLessonTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $UserLessonTable,
+          UserLessonData,
+          $$UserLessonTableFilterComposer,
+          $$UserLessonTableOrderingComposer,
+          $$UserLessonTableAnnotationComposer,
+          $$UserLessonTableCreateCompanionBuilder,
+          $$UserLessonTableUpdateCompanionBuilder,
+          (UserLessonData, $$UserLessonTableReferences),
+          UserLessonData,
+          PrefetchHooks Function({bool userLessonTermRefs})
+        > {
+  $$UserLessonTableTableManager(_$AppDatabase db, $UserLessonTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UserLessonTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UserLessonTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UserLessonTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> level = const Value.absent(),
+                Value<String> title = const Value.absent(),
+                Value<String> description = const Value.absent(),
+                Value<bool> isPublic = const Value.absent(),
+                Value<bool> isCustomTitle = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => UserLessonCompanion(
+                id: id,
+                level: level,
+                title: title,
+                description: description,
+                isPublic: isPublic,
+                isCustomTitle: isCustomTitle,
+                updatedAt: updatedAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String level,
+                required String title,
+                Value<String> description = const Value.absent(),
+                Value<bool> isPublic = const Value.absent(),
+                Value<bool> isCustomTitle = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => UserLessonCompanion.insert(
+                id: id,
+                level: level,
+                title: title,
+                description: description,
+                isPublic: isPublic,
+                isCustomTitle: isCustomTitle,
+                updatedAt: updatedAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$UserLessonTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({userLessonTermRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [
+                if (userLessonTermRefs) db.userLessonTerm,
+              ],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (userLessonTermRefs)
+                    await $_getPrefetchedData<
+                      UserLessonData,
+                      $UserLessonTable,
+                      UserLessonTermData
+                    >(
+                      currentTable: table,
+                      referencedTable: $$UserLessonTableReferences
+                          ._userLessonTermRefsTable(db),
+                      managerFromTypedResult: (p0) =>
+                          $$UserLessonTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).userLessonTermRefs,
+                      referencedItemsForCurrentItem: (item, referencedItems) =>
+                          referencedItems.where((e) => e.lessonId == item.id),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$UserLessonTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $UserLessonTable,
+      UserLessonData,
+      $$UserLessonTableFilterComposer,
+      $$UserLessonTableOrderingComposer,
+      $$UserLessonTableAnnotationComposer,
+      $$UserLessonTableCreateCompanionBuilder,
+      $$UserLessonTableUpdateCompanionBuilder,
+      (UserLessonData, $$UserLessonTableReferences),
+      UserLessonData,
+      PrefetchHooks Function({bool userLessonTermRefs})
+    >;
+typedef $$UserLessonTermTableCreateCompanionBuilder =
+    UserLessonTermCompanion Function({
+      Value<int> id,
+      required int lessonId,
+      Value<String> term,
+      Value<String> reading,
+      Value<String> definition,
+      Value<String?> imagePath,
+      Value<int> orderIndex,
+    });
+typedef $$UserLessonTermTableUpdateCompanionBuilder =
+    UserLessonTermCompanion Function({
+      Value<int> id,
+      Value<int> lessonId,
+      Value<String> term,
+      Value<String> reading,
+      Value<String> definition,
+      Value<String?> imagePath,
+      Value<int> orderIndex,
+    });
+
+final class $$UserLessonTermTableReferences
+    extends
+        BaseReferences<
+          _$AppDatabase,
+          $UserLessonTermTable,
+          UserLessonTermData
+        > {
+  $$UserLessonTermTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $UserLessonTable _lessonIdTable(_$AppDatabase db) =>
+      db.userLesson.createAlias(
+        $_aliasNameGenerator(db.userLessonTerm.lessonId, db.userLesson.id),
+      );
+
+  $$UserLessonTableProcessedTableManager get lessonId {
+    final $_column = $_itemColumn<int>('lesson_id')!;
+
+    final manager = $$UserLessonTableTableManager(
+      $_db,
+      $_db.userLesson,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_lessonIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$UserLessonTermTableFilterComposer
+    extends Composer<_$AppDatabase, $UserLessonTermTable> {
+  $$UserLessonTermTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get term => $composableBuilder(
+    column: $table.term,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get reading => $composableBuilder(
+    column: $table.reading,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get definition => $composableBuilder(
+    column: $table.definition,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get imagePath => $composableBuilder(
+    column: $table.imagePath,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get orderIndex => $composableBuilder(
+    column: $table.orderIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$UserLessonTableFilterComposer get lessonId {
+    final $$UserLessonTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.lessonId,
+      referencedTable: $db.userLesson,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$UserLessonTableFilterComposer(
+            $db: $db,
+            $table: $db.userLesson,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$UserLessonTermTableOrderingComposer
+    extends Composer<_$AppDatabase, $UserLessonTermTable> {
+  $$UserLessonTermTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get term => $composableBuilder(
+    column: $table.term,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get reading => $composableBuilder(
+    column: $table.reading,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get definition => $composableBuilder(
+    column: $table.definition,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get imagePath => $composableBuilder(
+    column: $table.imagePath,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get orderIndex => $composableBuilder(
+    column: $table.orderIndex,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$UserLessonTableOrderingComposer get lessonId {
+    final $$UserLessonTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.lessonId,
+      referencedTable: $db.userLesson,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$UserLessonTableOrderingComposer(
+            $db: $db,
+            $table: $db.userLesson,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$UserLessonTermTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UserLessonTermTable> {
+  $$UserLessonTermTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get term =>
+      $composableBuilder(column: $table.term, builder: (column) => column);
+
+  GeneratedColumn<String> get reading =>
+      $composableBuilder(column: $table.reading, builder: (column) => column);
+
+  GeneratedColumn<String> get definition => $composableBuilder(
+    column: $table.definition,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get imagePath =>
+      $composableBuilder(column: $table.imagePath, builder: (column) => column);
+
+  GeneratedColumn<int> get orderIndex => $composableBuilder(
+    column: $table.orderIndex,
+    builder: (column) => column,
+  );
+
+  $$UserLessonTableAnnotationComposer get lessonId {
+    final $$UserLessonTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.lessonId,
+      referencedTable: $db.userLesson,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$UserLessonTableAnnotationComposer(
+            $db: $db,
+            $table: $db.userLesson,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$UserLessonTermTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $UserLessonTermTable,
+          UserLessonTermData,
+          $$UserLessonTermTableFilterComposer,
+          $$UserLessonTermTableOrderingComposer,
+          $$UserLessonTermTableAnnotationComposer,
+          $$UserLessonTermTableCreateCompanionBuilder,
+          $$UserLessonTermTableUpdateCompanionBuilder,
+          (UserLessonTermData, $$UserLessonTermTableReferences),
+          UserLessonTermData,
+          PrefetchHooks Function({bool lessonId})
+        > {
+  $$UserLessonTermTableTableManager(
+    _$AppDatabase db,
+    $UserLessonTermTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UserLessonTermTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UserLessonTermTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UserLessonTermTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> lessonId = const Value.absent(),
+                Value<String> term = const Value.absent(),
+                Value<String> reading = const Value.absent(),
+                Value<String> definition = const Value.absent(),
+                Value<String?> imagePath = const Value.absent(),
+                Value<int> orderIndex = const Value.absent(),
+              }) => UserLessonTermCompanion(
+                id: id,
+                lessonId: lessonId,
+                term: term,
+                reading: reading,
+                definition: definition,
+                imagePath: imagePath,
+                orderIndex: orderIndex,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int lessonId,
+                Value<String> term = const Value.absent(),
+                Value<String> reading = const Value.absent(),
+                Value<String> definition = const Value.absent(),
+                Value<String?> imagePath = const Value.absent(),
+                Value<int> orderIndex = const Value.absent(),
+              }) => UserLessonTermCompanion.insert(
+                id: id,
+                lessonId: lessonId,
+                term: term,
+                reading: reading,
+                definition: definition,
+                imagePath: imagePath,
+                orderIndex: orderIndex,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$UserLessonTermTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({lessonId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (lessonId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.lessonId,
+                                referencedTable: $$UserLessonTermTableReferences
+                                    ._lessonIdTable(db),
+                                referencedColumn:
+                                    $$UserLessonTermTableReferences
+                                        ._lessonIdTable(db)
+                                        .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$UserLessonTermTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $UserLessonTermTable,
+      UserLessonTermData,
+      $$UserLessonTermTableFilterComposer,
+      $$UserLessonTermTableOrderingComposer,
+      $$UserLessonTermTableAnnotationComposer,
+      $$UserLessonTermTableCreateCompanionBuilder,
+      $$UserLessonTermTableUpdateCompanionBuilder,
+      (UserLessonTermData, $$UserLessonTermTableReferences),
+      UserLessonTermData,
+      PrefetchHooks Function({bool lessonId})
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -2662,4 +4285,8 @@ class $AppDatabaseManager {
       $$AttemptTableTableManager(_db, _db.attempt);
   $$AttemptAnswerTableTableManager get attemptAnswer =>
       $$AttemptAnswerTableTableManager(_db, _db.attemptAnswer);
+  $$UserLessonTableTableManager get userLesson =>
+      $$UserLessonTableTableManager(_db, _db.userLesson);
+  $$UserLessonTermTableTableManager get userLessonTerm =>
+      $$UserLessonTermTableTableManager(_db, _db.userLessonTerm);
 }

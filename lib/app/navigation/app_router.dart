@@ -1,0 +1,33 @@
+import 'package:go_router/go_router.dart';
+import 'package:jpstudy/features/exam/exam_screen.dart';
+import 'package:jpstudy/features/grammar/grammar_screen.dart';
+import 'package:jpstudy/features/home/home_screen.dart';
+import 'package:jpstudy/features/progress/progress_screen.dart';
+import 'package:jpstudy/features/vocab/vocab_screen.dart';
+
+class AppRouter {
+  static final GoRouter router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: '/vocab',
+        builder: (context, state) => const VocabScreen(),
+      ),
+      GoRoute(
+        path: '/grammar',
+        builder: (context, state) => const GrammarScreen(),
+      ),
+      GoRoute(
+        path: '/exam',
+        builder: (context, state) => const ExamScreen(),
+      ),
+      GoRoute(
+        path: '/progress',
+        builder: (context, state) => const ProgressScreen(),
+      ),
+    ],
+  );
+}

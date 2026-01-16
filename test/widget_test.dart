@@ -7,6 +7,6 @@ void main() {
     await tester.pumpWidget(const ProviderScope(child: App()));
 
     expect(find.text('JpStudy'), findsWidgets);
-    expect(find.text('MVP modules'), findsOneWidget);
+    expect(find.text('Select JLPT level'), findsOneWidget);
   });
 }

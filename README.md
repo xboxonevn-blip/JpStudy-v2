@@ -6,7 +6,9 @@ Offline-first Japanese study app for Windows, Android, and iOS.
 
 - Flutter (single codebase for desktop + mobile)
 - Riverpod (state management)
+- GoRouter (routing)
 - SQLite + Drift (local database and ORM)
+- google_mobile_ads (Android/iOS only)
 
 ## MVP scope
 

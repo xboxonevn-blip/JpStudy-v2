@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/level_provider.dart';
+import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/core/study_level.dart';
 
-class GrammarScreen extends StatelessWidget {
+class GrammarScreen extends ConsumerWidget {
   const GrammarScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final language = ref.watch(appLanguageProvider);
+    final level = ref.watch(studyLevelProvider);
+    final levelSuffix = level == null ? '' : ' (${level.shortLabel})';
     return Scaffold(
-      appBar: AppBar(title: const Text('Grammar Quiz')),
-      body: const Center(
-        child: Text('Grammar quiz flow will live here.'),
+      appBar: AppBar(title: Text('${language.grammarTitle}$levelSuffix')),
+      body: Center(
+        child: Text(language.grammarScreenBody),
       ),
     );
   }

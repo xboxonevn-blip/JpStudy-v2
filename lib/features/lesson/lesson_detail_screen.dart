@@ -9,10 +9,17 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/core/tts/tts_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-enum _LessonMode { learn, test, flashcards }
+enum _LessonMode { learn, test, flashcards, review }
+
+enum _AudioMode { term, reading, definition }
+
+enum _AudioVoice { female, male }
 
 enum _MenuAction { edit, reset, combine, report }
 
@@ -32,18 +39,61 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _shuffle = false;
   bool _focusMode = false;
   final Set<int> _flippedTermIds = {};
+  final Set<int> _starredTermIds = {};
+  final Set<int> _learnedTermIds = {};
+  Set<int> _syncedTermIds = {};
   double _speed = 1.0;
   _LessonMode _mode = _LessonMode.learn;
   int _currentIndex = 0;
-  final Set<int> _starredTermIds = {};
   final Random _random = Random();
   List<int>? _shuffledOrder;
   Timer? _autoTimer;
   int _autoTotal = 0;
+  SharedPreferences? _prefs;
+  late final AudioPlayer _audioPlayer;
+  late final TtsService _ttsService;
+  StreamSubscription<PlayerState>? _playerStateSub;
+  _AudioMode _audioMode = _AudioMode.term;
+  _AudioVoice _audioVoice = _AudioVoice.female;
+  bool _isAudioPlaying = false;
+  int _ttsCacheBytes = 0;
+  bool _isClearingCache = false;
+
+  static const _prefShowHints = 'lesson.showHints';
+  static const _prefTrackProgress = 'lesson.trackProgress';
+  static const _prefAutoPlay = 'lesson.autoPlay';
+  static const _prefShuffle = 'lesson.shuffle';
+  static const _prefSpeed = 'lesson.speed';
+  static const _prefFocusMode = 'lesson.focusMode';
+  static const _prefAudioMode = 'lesson.audioMode';
+  static const _prefAudioVoice = 'lesson.audioVoice';
+
+  @override
+  void initState() {
+    super.initState();
+    _audioPlayer = AudioPlayer();
+    _ttsService = TtsService();
+    final language = ref.read(appLanguageProvider);
+    _audioMode = _defaultAudioMode(language);
+    _audioVoice = _defaultAudioVoice();
+    _playerStateSub = _audioPlayer.playerStateStream.listen((state) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {
+        _isAudioPlaying = state.playing;
+      });
+    });
+    _loadSettings();
+    _refreshTtsCacheSize();
+  }
 
   @override
   void dispose() {
     _autoTimer?.cancel();
+    _playerStateSub?.cancel();
+    _audioPlayer.dispose();
+    _ttsService.dispose();
     super.dispose();
   }
 
@@ -66,7 +116,15 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       orElse: () => fallbackTitle,
     );
     final terms = termsAsync.asData?.value ?? const <UserLessonTermData>[];
-    final displayTerms = _orderedTerms(terms);
+    final dueAsync = _mode == _LessonMode.review
+        ? ref.watch(lessonDueTermsProvider(widget.lessonId))
+        : const AsyncValue.data(<UserLessonTermData>[]);
+    final activeTermsAsync =
+        _mode == _LessonMode.review ? dueAsync : termsAsync;
+    final activeTerms =
+        activeTermsAsync.asData?.value ?? const <UserLessonTermData>[];
+    _maybeSyncTermFlags(terms);
+    final displayTerms = _orderedTerms(activeTerms);
     final totalTerms = displayTerms.length;
     final currentIndex = totalTerms == 0
         ? 0
@@ -76,6 +134,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final isSaved = terms.isNotEmpty && _starredTermIds.length == terms.length;
     final isStarred = currentTerm != null &&
         _starredTermIds.contains(currentTerm.id);
+    final isLearned = currentTerm != null &&
+        _learnedTermIds.contains(currentTerm.id);
     final isFlipped =
         currentTerm != null && _flippedTermIds.contains(currentTerm.id);
     final canFlip = currentTerm?.definition.trim().isNotEmpty == true;
@@ -117,7 +177,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
           _SavedPill(
             label: language.savedLabel,
             active: isSaved,
-            onTap: totalTerms == 0 ? null : () => _toggleSaved(terms),
+            onTap:
+                totalTerms == 0 ? null : () => _toggleSaved(terms, level),
           ),
           const SizedBox(width: 8),
           _OverflowMenu(
@@ -151,8 +212,18 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                     _ModeSwitcher(
                       language: language,
                       mode: _mode,
-                      onModeChanged: (mode) => setState(() => _mode = mode),
+                      onModeChanged: (mode) {
+                        setState(() {
+                          _mode = mode;
+                          _currentIndex = 0;
+                          _shuffledOrder = null;
+                        });
+                      },
                     ),
+                    if (_mode == _LessonMode.review) ...[
+                      const SizedBox(height: 8),
+                      Text(language.reviewCountLabel(totalTerms)),
+                    ],
                     const SizedBox(height: 20),
                   ],
                   Center(
@@ -162,26 +233,56 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                         height: _focusMode ? 520 : 460,
                         child: _LessonCard(
                           language: language,
-                          termsAsync: termsAsync,
+                          termsAsync: activeTermsAsync,
                           term: currentTerm,
                           showHints: _showHints,
                           isFlipped: isFlipped,
                           trackProgress: _trackProgress,
                           isStarred: isStarred,
+                          isLearned: isLearned,
+                          emptyLabel: _mode == _LessonMode.review
+                              ? language.reviewEmptyLabel
+                              : null,
                           onShowHintsChanged: (value) =>
-                              setState(() => _showHints = value),
+                              _updateShowHints(value),
                           onFlip: onFlip,
                           onEdit: () => context.push(
                             '/lesson/${widget.lessonId}/edit',
                           ),
-                          onAudio: () => _showAudioNotice(language),
+                          onAudio: currentTerm == null
+                              ? null
+                              : () => _playTts(language, currentTerm),
                           onStar: currentTerm == null
                               ? null
-                              : () => _toggleStar(currentTerm),
+                              : () => _toggleStar(currentTerm, level),
+                          onLearned: !_trackProgress || currentTerm == null
+                              ? null
+                              : () => _toggleLearned(currentTerm, level),
+                          isAudioPlaying: _isAudioPlaying,
+                          onStopAudio: _stopTts,
                         ),
                       ),
                     ),
                   ),
+                  if (_mode == _LessonMode.review) ...[
+                    const SizedBox(height: 16),
+                    _ReviewActions(
+                      language: language,
+                      enabled: currentTerm != null,
+                      onAgain: currentTerm == null
+                          ? null
+                          : () => _reviewTerm(currentTerm, 0),
+                      onHard: currentTerm == null
+                          ? null
+                          : () => _reviewTerm(currentTerm, 3),
+                      onGood: currentTerm == null
+                          ? null
+                          : () => _reviewTerm(currentTerm, 4),
+                      onEasy: currentTerm == null
+                          ? null
+                          : () => _reviewTerm(currentTerm, 5),
+                    ),
+                  ],
                 ],
               ),
             );
@@ -191,8 +292,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       bottomNavigationBar: _PlayerBar(
         language: language,
         trackProgress: _trackProgress,
-        onTrackProgressChanged: (value) =>
-            setState(() => _trackProgress = value),
+        onTrackProgressChanged: (value) => _updateTrackProgress(value),
         currentIndex: currentIndex,
         total: totalTerms,
         onPrev: () => _goPrev(totalTerms),
@@ -201,11 +301,11 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         autoPlay: _autoPlay,
         speed: _speed,
         fullscreen: _focusMode,
-        onToggleShuffle: () => _toggleShuffle(terms),
+        onToggleShuffle: () => _toggleShuffle(activeTerms),
         onToggleAuto: () => _toggleAuto(totalTerms),
         onSpeedChanged: (value) => _setSpeed(value, totalTerms),
-        onSettings: () => _showSettings(language, totalTerms, terms),
-        onFullscreen: () => setState(() => _focusMode = !_focusMode),
+        onSettings: () => _showSettings(language, totalTerms, activeTerms),
+        onFullscreen: _toggleFocusMode,
       ),
     );
   }
@@ -231,26 +331,172 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     return _shuffledOrder!.map((id) => lookup[id]!).toList();
   }
 
-  void _toggleSaved(List<UserLessonTermData> terms) {
+  Future<void> _toggleSaved(
+    List<UserLessonTermData> terms,
+    StudyLevel level,
+  ) async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final shouldStarAll = _starredTermIds.length != terms.length;
     setState(() {
-      if (_starredTermIds.length == terms.length) {
-        _starredTermIds.clear();
-      } else {
+      if (shouldStarAll) {
         _starredTermIds
           ..clear()
           ..addAll(terms.map((term) => term.id));
+      } else {
+        _starredTermIds.clear();
       }
+    });
+    await repo.setStarredForLesson(widget.lessonId, shouldStarAll);
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<void> _toggleStar(
+    UserLessonTermData term,
+    StudyLevel level,
+  ) async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final nextValue = !_starredTermIds.contains(term.id);
+    setState(() {
+      if (nextValue) {
+        _starredTermIds.add(term.id);
+      } else {
+        _starredTermIds.remove(term.id);
+      }
+    });
+    await repo.updateTermStar(
+      term.id,
+      lessonId: widget.lessonId,
+      isStarred: nextValue,
+    );
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<void> _toggleLearned(
+    UserLessonTermData term,
+    StudyLevel level,
+  ) async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final nextValue = !_learnedTermIds.contains(term.id);
+    setState(() {
+      if (nextValue) {
+        _learnedTermIds.add(term.id);
+      } else {
+        _learnedTermIds.remove(term.id);
+      }
+    });
+    await repo.updateTermLearned(
+      term.id,
+      lessonId: widget.lessonId,
+      isLearned: nextValue,
+    );
+    if (nextValue) {
+      final now = DateTime.now();
+      await repo.upsertSrsState(
+        termId: term.id,
+        box: 1,
+        repetitions: 0,
+        ease: 2.5,
+        lastReviewedAt: now,
+        nextReviewAt: now.add(const Duration(days: 1)),
+      );
+    } else {
+      await repo.deleteSrsState(term.id);
+    }
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+    ref.invalidate(lessonDueTermsProvider(widget.lessonId));
+  }
+
+  Future<void> _reviewTerm(UserLessonTermData term, int quality) async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final now = DateTime.now();
+    final existing = await repo.getSrsState(term.id);
+    final currentEase = existing?.ease ?? 2.5;
+    final currentReps = existing?.repetitions ?? 0;
+    final previousIntervalDays = _intervalDaysFromState(existing);
+    final updated = _nextSrsState(
+      ease: currentEase,
+      repetitions: currentReps,
+      previousIntervalDays: previousIntervalDays,
+      quality: quality,
+      now: now,
+    );
+    await repo.upsertSrsState(
+      termId: term.id,
+      box: updated.intervalDays,
+      repetitions: updated.repetitions,
+      ease: updated.ease,
+      lastReviewedAt: now,
+      nextReviewAt: updated.nextReviewAt,
+    );
+    ref.invalidate(lessonDueTermsProvider(widget.lessonId));
+    _goNextAutoReview();
+  }
+
+  void _goNextAutoReview() {
+    setState(() {
+      _currentIndex = 0;
     });
   }
 
-  void _toggleStar(UserLessonTermData term) {
-    setState(() {
-      if (_starredTermIds.contains(term.id)) {
-        _starredTermIds.remove(term.id);
+  _SrsUpdate _nextSrsState({
+    required double ease,
+    required int repetitions,
+    required int previousIntervalDays,
+    required int quality,
+    required DateTime now,
+  }) {
+    final clampedQuality = quality.clamp(0, 5);
+    final nextEase = _nextEaseFactor(ease, clampedQuality);
+    int nextReps;
+    int nextIntervalDays;
+
+    if (clampedQuality < 3) {
+      nextReps = 0;
+      nextIntervalDays = 1;
+    } else {
+      nextReps = repetitions + 1;
+      if (nextReps == 1) {
+        nextIntervalDays = 1;
+      } else if (nextReps == 2) {
+        nextIntervalDays = 6;
       } else {
-        _starredTermIds.add(term.id);
+        final raw = (previousIntervalDays * nextEase).round();
+        nextIntervalDays = raw < 1 ? 1 : raw;
       }
-    });
+    }
+
+    return _SrsUpdate(
+      intervalDays: nextIntervalDays,
+      repetitions: nextReps,
+      ease: nextEase,
+      nextReviewAt: now.add(Duration(days: nextIntervalDays)),
+    );
+  }
+
+  double _nextEaseFactor(double ease, int quality) {
+    final q = quality.clamp(0, 5);
+    final delta = 0.1 - (5 - q) * (0.08 + (5 - q) * 0.02);
+    final next = ease + delta;
+    if (next < 1.3) {
+      return 1.3;
+    }
+    if (next > 2.5) {
+      return 2.5;
+    }
+    return next;
+  }
+
+  int _intervalDaysFromState(SrsStateData? state) {
+    if (state == null) {
+      return 1;
+    }
+    final last = state.lastReviewedAt;
+    final next = state.nextReviewAt;
+    if (last != null && next.isAfter(last)) {
+      final diff = next.difference(last).inDays;
+      return diff > 0 ? diff : 1;
+    }
+    return state.box > 0 ? state.box : 1;
   }
 
   void _toggleFlip(UserLessonTermData? term) {
@@ -264,6 +510,217 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         _flippedTermIds.add(term.id);
       }
     });
+  }
+
+  void _updateShowHints(bool value) {
+    setState(() => _showHints = value);
+    _saveBool(_prefShowHints, value);
+  }
+
+  void _updateTrackProgress(bool value) {
+    setState(() => _trackProgress = value);
+    _saveBool(_prefTrackProgress, value);
+  }
+
+  void _toggleFocusMode() {
+    final nextValue = !_focusMode;
+    setState(() => _focusMode = nextValue);
+    _saveBool(_prefFocusMode, nextValue);
+  }
+
+  Future<void> _loadSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _prefs = prefs;
+      _showHints = prefs.getBool(_prefShowHints) ?? true;
+      _trackProgress = prefs.getBool(_prefTrackProgress) ?? false;
+      _autoPlay = prefs.getBool(_prefAutoPlay) ?? false;
+      _shuffle = prefs.getBool(_prefShuffle) ?? false;
+      _speed = prefs.getDouble(_prefSpeed) ?? 1.0;
+      _focusMode = prefs.getBool(_prefFocusMode) ?? false;
+      final storedAudioMode = prefs.getString(_prefAudioMode);
+      if (storedAudioMode != null) {
+        _audioMode = _audioModeFromString(storedAudioMode);
+      }
+      final storedAudioVoice = prefs.getString(_prefAudioVoice);
+      if (storedAudioVoice != null) {
+        _audioVoice = _audioVoiceFromString(storedAudioVoice);
+      }
+    });
+  }
+
+  Future<void> _saveBool(String key, bool value) async {
+    final prefs = _prefs ?? await SharedPreferences.getInstance();
+    _prefs ??= prefs;
+    await prefs.setBool(key, value);
+  }
+
+  Future<void> _saveDouble(String key, double value) async {
+    final prefs = _prefs ?? await SharedPreferences.getInstance();
+    _prefs ??= prefs;
+    await prefs.setDouble(key, value);
+  }
+
+  Future<void> _saveString(String key, String value) async {
+    final prefs = _prefs ?? await SharedPreferences.getInstance();
+    _prefs ??= prefs;
+    await prefs.setString(key, value);
+  }
+
+  void _updateAudioMode(_AudioMode mode) {
+    setState(() => _audioMode = mode);
+    _saveString(_prefAudioMode, _audioModeToString(mode));
+  }
+
+  void _updateAudioVoice(_AudioVoice voice) {
+    setState(() => _audioVoice = voice);
+    _saveString(_prefAudioVoice, _audioVoiceToString(voice));
+  }
+
+  _AudioMode _defaultAudioMode(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.ja:
+        return _AudioMode.reading;
+      case AppLanguage.vi:
+        return _AudioMode.definition;
+      case AppLanguage.en:
+        return _AudioMode.term;
+    }
+  }
+
+  String _audioModeToString(_AudioMode mode) {
+    switch (mode) {
+      case _AudioMode.term:
+        return 'term';
+      case _AudioMode.reading:
+        return 'reading';
+      case _AudioMode.definition:
+        return 'definition';
+    }
+  }
+
+  _AudioMode _audioModeFromString(String? value) {
+    switch (value) {
+      case 'reading':
+        return _AudioMode.reading;
+      case 'definition':
+        return _AudioMode.definition;
+      case 'term':
+      default:
+        return _AudioMode.term;
+    }
+  }
+
+  _AudioVoice _defaultAudioVoice() {
+    return _AudioVoice.female;
+  }
+
+  String _audioVoiceToString(_AudioVoice voice) {
+    switch (voice) {
+      case _AudioVoice.female:
+        return 'female';
+      case _AudioVoice.male:
+        return 'male';
+    }
+  }
+
+  _AudioVoice _audioVoiceFromString(String value) {
+    switch (value) {
+      case 'male':
+        return _AudioVoice.male;
+      case 'female':
+      default:
+        return _AudioVoice.female;
+    }
+  }
+
+  Future<void> _refreshTtsCacheSize() async {
+    final bytes = await _ttsService.cacheSizeBytes();
+    if (!mounted) {
+      return;
+    }
+    setState(() => _ttsCacheBytes = bytes);
+  }
+
+  Future<void> _clearTtsCache() async {
+    if (_isClearingCache) {
+      return;
+    }
+    setState(() => _isClearingCache = true);
+    try {
+      await _ttsService.clearCache();
+      await _refreshTtsCacheSize();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(ref.read(appLanguageProvider).audioCacheClearedLabel)),
+        );
+      }
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(ref.read(appLanguageProvider).audioCacheClearFailedLabel)),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isClearingCache = false);
+      }
+    }
+  }
+
+  void _stopTts() {
+    _audioPlayer.stop();
+  }
+
+  String _formatBytes(int bytes) {
+    if (bytes < 1024) {
+      return '$bytes B';
+    }
+    final kb = bytes / 1024;
+    if (kb < 1024) {
+      return '${kb.toStringAsFixed(1)} KB';
+    }
+    final mb = kb / 1024;
+    if (mb < 1024) {
+      return '${mb.toStringAsFixed(1)} MB';
+    }
+    final gb = mb / 1024;
+    return '${gb.toStringAsFixed(1)} GB';
+  }
+
+  void _maybeSyncTermFlags(List<UserLessonTermData> terms) {
+    final ids = terms.map((term) => term.id).toSet();
+    final starred =
+        terms.where((term) => term.isStarred).map((term) => term.id).toSet();
+    final learned =
+        terms.where((term) => term.isLearned).map((term) => term.id).toSet();
+    final needsSync = !_setsEqual(ids, _syncedTermIds) ||
+        !_setsEqual(starred, _starredTermIds) ||
+        !_setsEqual(learned, _learnedTermIds);
+    if (!needsSync) {
+      return;
+    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {
+        _syncedTermIds = ids;
+        _starredTermIds
+          ..clear()
+          ..addAll(starred);
+        _learnedTermIds
+          ..clear()
+          ..addAll(learned);
+      });
+    });
+  }
+
+  bool _setsEqual(Set<int> a, Set<int> b) {
+    return a.length == b.length && a.containsAll(b);
   }
 
   void _goPrev(int total) {
@@ -293,10 +750,64 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     });
   }
 
-  void _showAudioNotice(AppLanguage language) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(language.audioComingSoon)),
-    );
+  Future<void> _playTts(AppLanguage language, UserLessonTermData term) async {
+    final text = _ttsTextForTerm(term).trim();
+    if (text.isEmpty) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.audioEmptyLabel)),
+      );
+      return;
+    }
+    try {
+      final file = await _ttsService.synthesize(
+        text: text,
+        locale: _ttsLocaleForLanguage(language),
+        voice: _audioVoiceToString(_audioVoice),
+      );
+      await _audioPlayer.stop();
+      await _audioPlayer.setFilePath(file.path);
+      await _audioPlayer.play();
+      _refreshTtsCacheSize();
+    } on TtsNotConfiguredException {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.audioNotConfigured)),
+      );
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.audioErrorLabel)),
+      );
+    }
+  }
+
+  String _ttsLocaleForLanguage(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.ja:
+        return 'ja-JP';
+      case AppLanguage.vi:
+        return 'vi-VN';
+      case AppLanguage.en:
+        return 'en-US';
+    }
+  }
+
+  String _ttsTextForTerm(UserLessonTermData term) {
+    switch (_audioMode) {
+      case _AudioMode.reading:
+        return term.reading.isNotEmpty ? term.reading : term.term;
+      case _AudioMode.definition:
+        return term.definition.isNotEmpty ? term.definition : term.term;
+      case _AudioMode.term:
+        return term.term;
+    }
   }
 
   void _handleMenu(_MenuAction action, BuildContext context) {
@@ -307,9 +818,10 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   void _toggleShuffle(List<UserLessonTermData> terms) {
     final currentId = _currentTermId(terms);
+    final nextValue = !_shuffle;
     setState(() {
-      _shuffle = !_shuffle;
-      if (_shuffle) {
+      _shuffle = nextValue;
+      if (nextValue) {
         final ids = terms.map((term) => term.id).toList();
         if (ids.isEmpty) {
           _shuffledOrder = null;
@@ -334,6 +846,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         }
       }
     });
+    _saveBool(_prefShuffle, nextValue);
   }
 
   int? _currentTermId(List<UserLessonTermData> terms) {
@@ -346,12 +859,15 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   }
 
   void _toggleAuto(int total) {
-    setState(() => _autoPlay = !_autoPlay);
+    final nextValue = !_autoPlay;
+    setState(() => _autoPlay = nextValue);
+    _saveBool(_prefAutoPlay, nextValue);
     _syncAutoTimer(total);
   }
 
   void _setSpeed(double value, int total) {
     setState(() => _speed = value);
+    _saveDouble(_prefSpeed, value);
     _syncAutoTimer(total);
   }
 
@@ -405,7 +921,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       title: Text(language.showHintsLabel),
                       value: _showHints,
                       onChanged: (value) {
-                        setState(() => _showHints = value);
+                        _updateShowHints(value);
                         setModalState(() {});
                       },
                     ),
@@ -414,7 +930,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       title: Text(language.trackProgressLabel),
                       value: _trackProgress,
                       onChanged: (value) {
-                        setState(() => _trackProgress = value);
+                        _updateTrackProgress(value);
                         setModalState(() {});
                       },
                     ),
@@ -432,8 +948,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       title: Text(language.autoLabel),
                       value: _autoPlay,
                       onChanged: (value) {
-                        setState(() => _autoPlay = value);
-                        _syncAutoTimer(total);
+                        _toggleAuto(total);
                         setModalState(() {});
                       },
                     ),
@@ -446,10 +961,82 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       divisions: 6,
                       label: '${_speed.toStringAsFixed(1)}x',
                       onChanged: (value) {
-                        setState(() => _speed = value);
-                        _syncAutoTimer(total);
+                        _setSpeed(value, total);
                         setModalState(() {});
                       },
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      language.audioSettingsLabel,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(language.audioModeLabel),
+                    const SizedBox(height: 8),
+                    SegmentedButton<_AudioMode>(
+                      segments: [
+                        ButtonSegment(
+                          value: _AudioMode.term,
+                          label: Text(language.audioModeTerm),
+                        ),
+                        ButtonSegment(
+                          value: _AudioMode.reading,
+                          label: Text(language.audioModeReading),
+                        ),
+                        ButtonSegment(
+                          value: _AudioMode.definition,
+                          label: Text(language.audioModeDefinition),
+                        ),
+                      ],
+                      selected: {_audioMode},
+                      onSelectionChanged: (selection) {
+                        if (selection.isEmpty) {
+                          return;
+                        }
+                        _updateAudioMode(selection.first);
+                        setModalState(() {});
+                      },
+                    ),
+                    const SizedBox(height: 12),
+                    Text(language.audioVoiceLabel),
+                    const SizedBox(height: 8),
+                    SegmentedButton<_AudioVoice>(
+                      segments: [
+                        ButtonSegment(
+                          value: _AudioVoice.female,
+                          label: Text(language.audioVoiceFemale),
+                        ),
+                        ButtonSegment(
+                          value: _AudioVoice.male,
+                          label: Text(language.audioVoiceMale),
+                        ),
+                      ],
+                      selected: {_audioVoice},
+                      onSelectionChanged: (selection) {
+                        if (selection.isEmpty) {
+                          return;
+                        }
+                        _updateAudioVoice(selection.first);
+                        setModalState(() {});
+                      },
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            '${language.audioCacheLabel}: ${_formatBytes(_ttsCacheBytes)}',
+                          ),
+                        ),
+                        TextButton(
+                          onPressed:
+                              _isClearingCache ? null : _clearTtsCache,
+                          child: Text(language.audioClearCacheLabel),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -458,6 +1045,77 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
           ),
         );
       },
+    );
+  }
+}
+
+class _SrsUpdate {
+  const _SrsUpdate({
+    required this.intervalDays,
+    required this.repetitions,
+    required this.ease,
+    required this.nextReviewAt,
+  });
+
+  final int intervalDays;
+  final int repetitions;
+  final double ease;
+  final DateTime nextReviewAt;
+}
+
+class _ReviewActions extends StatelessWidget {
+  const _ReviewActions({
+    required this.language,
+    required this.enabled,
+    required this.onAgain,
+    required this.onHard,
+    required this.onGood,
+    required this.onEasy,
+  });
+
+  final AppLanguage language;
+  final bool enabled;
+  final VoidCallback? onAgain;
+  final VoidCallback? onHard;
+  final VoidCallback? onGood;
+  final VoidCallback? onEasy;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 12,
+      runSpacing: 12,
+      children: [
+        SizedBox(
+          width: 130,
+          child: OutlinedButton(
+            onPressed: enabled ? onAgain : null,
+            child: Text(language.reviewAgainLabel),
+          ),
+        ),
+        SizedBox(
+          width: 130,
+          child: OutlinedButton(
+            onPressed: enabled ? onHard : null,
+            child: Text(language.reviewHardLabel),
+          ),
+        ),
+        SizedBox(
+          width: 130,
+          child: ElevatedButton(
+            onPressed: enabled ? onGood : null,
+            child: Text(language.reviewGoodLabel),
+          ),
+        ),
+        SizedBox(
+          width: 130,
+          child: ElevatedButton(
+            onPressed: enabled ? onEasy : null,
+            child: Text(language.reviewEasyLabel),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -575,6 +1233,10 @@ class _ModeSwitcher extends StatelessWidget {
               value: _LessonMode.flashcards,
               label: Text(language.flashcardsAction),
             ),
+            ButtonSegment(
+              value: _LessonMode.review,
+              label: Text(language.reviewAction),
+            ),
           ],
           selected: {mode},
           onSelectionChanged: (selection) {
@@ -663,11 +1325,16 @@ class _LessonCard extends StatelessWidget {
     required this.isFlipped,
     required this.trackProgress,
     required this.isStarred,
+    required this.isLearned,
+    required this.isAudioPlaying,
     required this.onShowHintsChanged,
     required this.onFlip,
     required this.onEdit,
     required this.onAudio,
     required this.onStar,
+    required this.onLearned,
+    required this.onStopAudio,
+    this.emptyLabel,
   });
 
   final AppLanguage language;
@@ -677,11 +1344,16 @@ class _LessonCard extends StatelessWidget {
   final bool isFlipped;
   final bool trackProgress;
   final bool isStarred;
+  final bool isLearned;
+  final bool isAudioPlaying;
   final ValueChanged<bool> onShowHintsChanged;
   final VoidCallback? onFlip;
   final VoidCallback onEdit;
-  final VoidCallback onAudio;
+  final VoidCallback? onAudio;
   final VoidCallback? onStar;
+  final VoidCallback? onLearned;
+  final VoidCallback? onStopAudio;
+  final String? emptyLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -719,9 +1391,13 @@ class _LessonCard extends StatelessWidget {
                 const Spacer(),
                 _ActionPill(
                   isStarred: isStarred,
+                  isLearned: isLearned,
+                  isAudioPlaying: isAudioPlaying,
                   onEdit: onEdit,
                   onAudio: onAudio,
                   onStar: onStar,
+                  onLearned: onLearned,
+                  onStopAudio: onStopAudio,
                 ),
               ],
             ),
@@ -736,6 +1412,7 @@ class _LessonCard extends StatelessWidget {
                   term: term,
                   showHints: showHints,
                   isFlipped: isFlipped,
+                  emptyLabel: emptyLabel,
                 ),
               ),
             ),
@@ -754,6 +1431,7 @@ class _CardContent extends StatelessWidget {
     required this.term,
     required this.showHints,
     required this.isFlipped,
+    required this.emptyLabel,
   });
 
   final AppLanguage language;
@@ -761,6 +1439,7 @@ class _CardContent extends StatelessWidget {
   final UserLessonTermData? term;
   final bool showHints;
   final bool isFlipped;
+  final String? emptyLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -772,7 +1451,15 @@ class _CardContent extends StatelessWidget {
     }
     final resolvedTerm = term;
     if (resolvedTerm == null) {
-      return const SizedBox.shrink();
+      final label = emptyLabel;
+      if (label == null || label.isEmpty) {
+        return const SizedBox.shrink();
+      }
+      return Text(
+        label,
+        style: const TextStyle(color: Color(0xFF6B7390)),
+        textAlign: TextAlign.center,
+      );
     }
 
     final showBack = isFlipped && resolvedTerm.definition.trim().isNotEmpty;
@@ -835,11 +1522,7 @@ class _CardContent extends StatelessWidget {
 
     final back = _CardFace(
       key: const ValueKey(true),
-      child: Transform(
-        alignment: Alignment.center,
-        transform: Matrix4.rotationY(pi),
-        child: backContent,
-      ),
+      child: backContent,
     );
 
     return AnimatedSwitcher(
@@ -953,15 +1636,23 @@ class _ShortcutBar extends StatelessWidget {
 class _ActionPill extends StatelessWidget {
   const _ActionPill({
     required this.isStarred,
+    required this.isLearned,
+    required this.isAudioPlaying,
     required this.onEdit,
     required this.onAudio,
     required this.onStar,
+    required this.onLearned,
+    required this.onStopAudio,
   });
 
   final bool isStarred;
+  final bool isLearned;
+  final bool isAudioPlaying;
   final VoidCallback onEdit;
-  final VoidCallback onAudio;
+  final VoidCallback? onAudio;
   final VoidCallback? onStar;
+  final VoidCallback? onLearned;
+  final VoidCallback? onStopAudio;
 
   @override
   Widget build(BuildContext context) {
@@ -977,7 +1668,22 @@ class _ActionPill extends StatelessWidget {
         children: [
           _IconPillButton(icon: Icons.edit_outlined, onTap: onEdit),
           const SizedBox(width: 4),
-          _IconPillButton(icon: Icons.volume_up_outlined, onTap: onAudio),
+          _IconPillButton(
+            icon: isAudioPlaying
+                ? Icons.stop_circle_outlined
+                : Icons.volume_up_outlined,
+            onTap: isAudioPlaying ? onStopAudio : onAudio,
+          ),
+          if (onLearned != null) ...[
+            const SizedBox(width: 4),
+            _IconPillButton(
+              icon: isLearned
+                  ? Icons.check_circle
+                  : Icons.check_circle_outline,
+              onTap: onLearned,
+              active: isLearned,
+            ),
+          ],
           const SizedBox(width: 4),
           _IconPillButton(
             icon: isStarred ? Icons.star : Icons.star_border,

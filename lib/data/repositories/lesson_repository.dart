@@ -32,6 +32,12 @@ final lessonMetaProvider =
   return repo.fetchLessonMeta(level);
 });
 
+final lessonDueTermsProvider =
+    FutureProvider.family<List<UserLessonTermData>, int>((ref, lessonId) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchDueTerms(lessonId);
+});
+
 class LessonTitleArgs {
   const LessonTitleArgs(this.lessonId, this.fallback);
 
@@ -86,6 +92,18 @@ class LessonMeta {
   final int termCount;
   final int completedCount;
   final DateTime? updatedAt;
+}
+
+class LessonTermDraft {
+  const LessonTermDraft({
+    required this.term,
+    required this.reading,
+    required this.definition,
+  });
+
+  final String term;
+  final String reading;
+  final String definition;
 }
 
 class LessonRepository {
@@ -146,7 +164,7 @@ class LessonRepository {
     final completedCounts = <int, int>{};
     for (final term in terms) {
       counts.update(term.lessonId, (value) => value + 1, ifAbsent: () => 1);
-      if (term.definition.trim().isNotEmpty) {
+      if (term.isLearned) {
         completedCounts.update(
           term.lessonId,
           (value) => value + 1,
@@ -321,6 +339,41 @@ class LessonRepository {
     return update.then((_) => _touchLesson(lessonId));
   }
 
+  Future<void> updateTermStar(
+    int termId, {
+    required bool isStarred,
+    int? lessonId,
+  }) {
+    final update = (_db.update(_db.userLessonTerm)
+          ..where((tbl) => tbl.id.equals(termId)))
+        .write(UserLessonTermCompanion(isStarred: Value(isStarred)));
+    if (lessonId == null) {
+      return update;
+    }
+    return update.then((_) => _touchLesson(lessonId));
+  }
+
+  Future<void> updateTermLearned(
+    int termId, {
+    required bool isLearned,
+    int? lessonId,
+  }) {
+    final update = (_db.update(_db.userLessonTerm)
+          ..where((tbl) => tbl.id.equals(termId)))
+        .write(UserLessonTermCompanion(isLearned: Value(isLearned)));
+    if (lessonId == null) {
+      return update;
+    }
+    return update.then((_) => _touchLesson(lessonId));
+  }
+
+  Future<void> setStarredForLesson(int lessonId, bool isStarred) async {
+    await (_db.update(_db.userLessonTerm)
+          ..where((tbl) => tbl.lessonId.equals(lessonId)))
+        .write(UserLessonTermCompanion(isStarred: Value(isStarred)));
+    await _touchLesson(lessonId);
+  }
+
   Future<void> deleteTerm(int termId, {int? lessonId}) {
     final delete = (_db.delete(_db.userLessonTerm)
           ..where((tbl) => tbl.id.equals(termId)))
@@ -342,6 +395,116 @@ class LessonRepository {
       }
     });
     await _touchLesson(lessonId);
+  }
+
+  Future<void> replaceTerms(
+    int lessonId,
+    List<LessonTermDraft> terms,
+  ) async {
+    await _db.transaction(() async {
+      await (_db.delete(_db.userLessonTerm)
+            ..where((tbl) => tbl.lessonId.equals(lessonId)))
+          .go();
+      for (var i = 0; i < terms.length; i++) {
+        final term = terms[i];
+        await _db.into(_db.userLessonTerm).insert(
+              UserLessonTermCompanion.insert(
+                lessonId: lessonId,
+                orderIndex: Value(i + 1),
+                term: Value(term.term),
+                reading: Value(term.reading),
+                definition: Value(term.definition),
+              ),
+            );
+      }
+    });
+    await _touchLesson(lessonId);
+  }
+
+  Future<void> appendTerms(
+    int lessonId,
+    List<LessonTermDraft> terms,
+  ) async {
+    if (terms.isEmpty) {
+      return;
+    }
+    final maxOrder = await (_db.selectOnly(_db.userLessonTerm)
+          ..addColumns([_db.userLessonTerm.orderIndex])
+          ..where(_db.userLessonTerm.lessonId.equals(lessonId))
+          ..orderBy([
+            OrderingTerm(
+              expression: _db.userLessonTerm.orderIndex,
+              mode: OrderingMode.desc,
+            ),
+          ])
+          ..limit(1))
+        .getSingleOrNull();
+    var nextOrder = (maxOrder?.read(_db.userLessonTerm.orderIndex) ?? 0) + 1;
+    await _db.batch((batch) {
+      for (final term in terms) {
+        batch.insert(
+          _db.userLessonTerm,
+          UserLessonTermCompanion.insert(
+            lessonId: lessonId,
+            orderIndex: Value(nextOrder),
+            term: Value(term.term),
+            reading: Value(term.reading),
+            definition: Value(term.definition),
+          ),
+        );
+        nextOrder += 1;
+      }
+    });
+    await _touchLesson(lessonId);
+  }
+
+  Future<List<UserLessonTermData>> fetchDueTerms(int lessonId) {
+    final now = DateTime.now();
+    final query = _db.select(_db.userLessonTerm).join([
+      innerJoin(
+        _db.srsState,
+        _db.srsState.vocabId.equalsExp(_db.userLessonTerm.id),
+      ),
+    ]);
+    query
+      ..where(_db.userLessonTerm.lessonId.equals(lessonId))
+      ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now))
+      ..orderBy([
+        OrderingTerm(expression: _db.userLessonTerm.orderIndex),
+      ]);
+    return query.map((row) => row.readTable(_db.userLessonTerm)).get();
+  }
+
+  Future<SrsStateData?> getSrsState(int termId) {
+    return (_db.select(_db.srsState)
+          ..where((tbl) => tbl.vocabId.equals(termId)))
+        .getSingleOrNull();
+  }
+
+  Future<void> upsertSrsState({
+    required int termId,
+    required int box,
+    required int repetitions,
+    required double ease,
+    required DateTime nextReviewAt,
+    required DateTime lastReviewedAt,
+  }) {
+    return _db.into(_db.srsState).insertOnConflictUpdate(
+          SrsStateCompanion(
+            vocabId: Value(termId),
+            box: Value(box),
+            repetitions: Value(repetitions),
+            ease: Value(ease),
+            lastReviewedAt: Value(lastReviewedAt),
+            nextReviewAt: Value(nextReviewAt),
+          ),
+        );
+  }
+
+  Future<void> deleteSrsState(int termId) {
+    return (_db.delete(_db.srsState)
+          ..where((tbl) => tbl.vocabId.equals(termId)))
+        .go();
   }
 
   Future<void> _touchLesson(int lessonId) {

@@ -23,7 +23,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 6;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -40,6 +40,25 @@ class AppDatabase extends _$AppDatabase {
           }
           if (from < 4) {
             await _removeImagePathColumn(migrator);
+          }
+          if (from < 5) {
+            await migrator.addColumn(userLessonTerm, userLessonTerm.isStarred);
+            await migrator.addColumn(userLessonTerm, userLessonTerm.isLearned);
+            await customStatement(
+              "UPDATE user_lesson_term "
+              "SET is_learned = CASE "
+              "WHEN TRIM(definition) <> '' THEN 1 ELSE 0 END",
+            );
+          }
+          if (from < 6) {
+            await customStatement(
+              "INSERT INTO srs_state "
+              "(vocab_id, box, repetitions, ease, last_reviewed_at, next_review_at) "
+              "SELECT id, 1, 0, 2.5, CURRENT_TIMESTAMP, datetime(CURRENT_TIMESTAMP, '+1 day') "
+              "FROM user_lesson_term "
+              "WHERE is_learned = 1 "
+              "AND id NOT IN (SELECT vocab_id FROM srs_state)",
+            );
           }
         },
       );

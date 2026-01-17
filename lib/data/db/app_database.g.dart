@@ -2084,6 +2084,36 @@ class $UserLessonTermTable extends UserLessonTerm
     requiredDuringInsert: false,
     defaultValue: const Constant(''),
   );
+  static const VerificationMeta _isStarredMeta = const VerificationMeta(
+    'isStarred',
+  );
+  @override
+  late final GeneratedColumn<bool> isStarred = GeneratedColumn<bool>(
+    'is_starred',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_starred" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _isLearnedMeta = const VerificationMeta(
+    'isLearned',
+  );
+  @override
+  late final GeneratedColumn<bool> isLearned = GeneratedColumn<bool>(
+    'is_learned',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_learned" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
   static const VerificationMeta _orderIndexMeta = const VerificationMeta(
     'orderIndex',
   );
@@ -2103,6 +2133,8 @@ class $UserLessonTermTable extends UserLessonTerm
     term,
     reading,
     definition,
+    isStarred,
+    isLearned,
     orderIndex,
   ];
   @override
@@ -2146,6 +2178,18 @@ class $UserLessonTermTable extends UserLessonTerm
         definition.isAcceptableOrUnknown(data['definition']!, _definitionMeta),
       );
     }
+    if (data.containsKey('is_starred')) {
+      context.handle(
+        _isStarredMeta,
+        isStarred.isAcceptableOrUnknown(data['is_starred']!, _isStarredMeta),
+      );
+    }
+    if (data.containsKey('is_learned')) {
+      context.handle(
+        _isLearnedMeta,
+        isLearned.isAcceptableOrUnknown(data['is_learned']!, _isLearnedMeta),
+      );
+    }
     if (data.containsKey('order_index')) {
       context.handle(
         _orderIndexMeta,
@@ -2181,6 +2225,14 @@ class $UserLessonTermTable extends UserLessonTerm
         DriftSqlType.string,
         data['${effectivePrefix}definition'],
       )!,
+      isStarred: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_starred'],
+      )!,
+      isLearned: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_learned'],
+      )!,
       orderIndex: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
         data['${effectivePrefix}order_index'],
@@ -2201,6 +2253,8 @@ class UserLessonTermData extends DataClass
   final String term;
   final String reading;
   final String definition;
+  final bool isStarred;
+  final bool isLearned;
   final int orderIndex;
   const UserLessonTermData({
     required this.id,
@@ -2208,6 +2262,8 @@ class UserLessonTermData extends DataClass
     required this.term,
     required this.reading,
     required this.definition,
+    required this.isStarred,
+    required this.isLearned,
     required this.orderIndex,
   });
   @override
@@ -2218,6 +2274,8 @@ class UserLessonTermData extends DataClass
     map['term'] = Variable<String>(term);
     map['reading'] = Variable<String>(reading);
     map['definition'] = Variable<String>(definition);
+    map['is_starred'] = Variable<bool>(isStarred);
+    map['is_learned'] = Variable<bool>(isLearned);
     map['order_index'] = Variable<int>(orderIndex);
     return map;
   }
@@ -2229,6 +2287,8 @@ class UserLessonTermData extends DataClass
       term: Value(term),
       reading: Value(reading),
       definition: Value(definition),
+      isStarred: Value(isStarred),
+      isLearned: Value(isLearned),
       orderIndex: Value(orderIndex),
     );
   }
@@ -2244,6 +2304,8 @@ class UserLessonTermData extends DataClass
       term: serializer.fromJson<String>(json['term']),
       reading: serializer.fromJson<String>(json['reading']),
       definition: serializer.fromJson<String>(json['definition']),
+      isStarred: serializer.fromJson<bool>(json['isStarred']),
+      isLearned: serializer.fromJson<bool>(json['isLearned']),
       orderIndex: serializer.fromJson<int>(json['orderIndex']),
     );
   }
@@ -2256,6 +2318,8 @@ class UserLessonTermData extends DataClass
       'term': serializer.toJson<String>(term),
       'reading': serializer.toJson<String>(reading),
       'definition': serializer.toJson<String>(definition),
+      'isStarred': serializer.toJson<bool>(isStarred),
+      'isLearned': serializer.toJson<bool>(isLearned),
       'orderIndex': serializer.toJson<int>(orderIndex),
     };
   }
@@ -2266,6 +2330,8 @@ class UserLessonTermData extends DataClass
     String? term,
     String? reading,
     String? definition,
+    bool? isStarred,
+    bool? isLearned,
     int? orderIndex,
   }) => UserLessonTermData(
     id: id ?? this.id,
@@ -2273,6 +2339,8 @@ class UserLessonTermData extends DataClass
     term: term ?? this.term,
     reading: reading ?? this.reading,
     definition: definition ?? this.definition,
+    isStarred: isStarred ?? this.isStarred,
+    isLearned: isLearned ?? this.isLearned,
     orderIndex: orderIndex ?? this.orderIndex,
   );
   UserLessonTermData copyWithCompanion(UserLessonTermCompanion data) {
@@ -2284,6 +2352,8 @@ class UserLessonTermData extends DataClass
       definition: data.definition.present
           ? data.definition.value
           : this.definition,
+      isStarred: data.isStarred.present ? data.isStarred.value : this.isStarred,
+      isLearned: data.isLearned.present ? data.isLearned.value : this.isLearned,
       orderIndex: data.orderIndex.present
           ? data.orderIndex.value
           : this.orderIndex,
@@ -2298,14 +2368,24 @@ class UserLessonTermData extends DataClass
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
+          ..write('isStarred: $isStarred, ')
+          ..write('isLearned: $isLearned, ')
           ..write('orderIndex: $orderIndex')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode =>
-      Object.hash(id, lessonId, term, reading, definition, orderIndex);
+  int get hashCode => Object.hash(
+    id,
+    lessonId,
+    term,
+    reading,
+    definition,
+    isStarred,
+    isLearned,
+    orderIndex,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -2315,6 +2395,8 @@ class UserLessonTermData extends DataClass
           other.term == this.term &&
           other.reading == this.reading &&
           other.definition == this.definition &&
+          other.isStarred == this.isStarred &&
+          other.isLearned == this.isLearned &&
           other.orderIndex == this.orderIndex);
 }
 
@@ -2324,6 +2406,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
   final Value<String> term;
   final Value<String> reading;
   final Value<String> definition;
+  final Value<bool> isStarred;
+  final Value<bool> isLearned;
   final Value<int> orderIndex;
   const UserLessonTermCompanion({
     this.id = const Value.absent(),
@@ -2331,6 +2415,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
+    this.isStarred = const Value.absent(),
+    this.isLearned = const Value.absent(),
     this.orderIndex = const Value.absent(),
   });
   UserLessonTermCompanion.insert({
@@ -2339,6 +2425,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
+    this.isStarred = const Value.absent(),
+    this.isLearned = const Value.absent(),
     this.orderIndex = const Value.absent(),
   }) : lessonId = Value(lessonId);
   static Insertable<UserLessonTermData> custom({
@@ -2347,6 +2435,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Expression<String>? term,
     Expression<String>? reading,
     Expression<String>? definition,
+    Expression<bool>? isStarred,
+    Expression<bool>? isLearned,
     Expression<int>? orderIndex,
   }) {
     return RawValuesInsertable({
@@ -2355,6 +2445,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       if (term != null) 'term': term,
       if (reading != null) 'reading': reading,
       if (definition != null) 'definition': definition,
+      if (isStarred != null) 'is_starred': isStarred,
+      if (isLearned != null) 'is_learned': isLearned,
       if (orderIndex != null) 'order_index': orderIndex,
     });
   }
@@ -2365,6 +2457,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Value<String>? term,
     Value<String>? reading,
     Value<String>? definition,
+    Value<bool>? isStarred,
+    Value<bool>? isLearned,
     Value<int>? orderIndex,
   }) {
     return UserLessonTermCompanion(
@@ -2373,6 +2467,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       term: term ?? this.term,
       reading: reading ?? this.reading,
       definition: definition ?? this.definition,
+      isStarred: isStarred ?? this.isStarred,
+      isLearned: isLearned ?? this.isLearned,
       orderIndex: orderIndex ?? this.orderIndex,
     );
   }
@@ -2395,6 +2491,12 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     if (definition.present) {
       map['definition'] = Variable<String>(definition.value);
     }
+    if (isStarred.present) {
+      map['is_starred'] = Variable<bool>(isStarred.value);
+    }
+    if (isLearned.present) {
+      map['is_learned'] = Variable<bool>(isLearned.value);
+    }
     if (orderIndex.present) {
       map['order_index'] = Variable<int>(orderIndex.value);
     }
@@ -2409,6 +2511,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
+          ..write('isStarred: $isStarred, ')
+          ..write('isLearned: $isLearned, ')
           ..write('orderIndex: $orderIndex')
           ..write(')'))
         .toString();
@@ -3858,6 +3962,8 @@ typedef $$UserLessonTermTableCreateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
+      Value<bool> isStarred,
+      Value<bool> isLearned,
       Value<int> orderIndex,
     });
 typedef $$UserLessonTermTableUpdateCompanionBuilder =
@@ -3867,6 +3973,8 @@ typedef $$UserLessonTermTableUpdateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
+      Value<bool> isStarred,
+      Value<bool> isLearned,
       Value<int> orderIndex,
     });
 
@@ -3932,6 +4040,16 @@ class $$UserLessonTermTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<bool> get isStarred => $composableBuilder(
+    column: $table.isStarred,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isLearned => $composableBuilder(
+    column: $table.isLearned,
+    builder: (column) => ColumnFilters(column),
+  );
+
   ColumnFilters<int> get orderIndex => $composableBuilder(
     column: $table.orderIndex,
     builder: (column) => ColumnFilters(column),
@@ -3990,6 +4108,16 @@ class $$UserLessonTermTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<bool> get isStarred => $composableBuilder(
+    column: $table.isStarred,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isLearned => $composableBuilder(
+    column: $table.isLearned,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<int> get orderIndex => $composableBuilder(
     column: $table.orderIndex,
     builder: (column) => ColumnOrderings(column),
@@ -4041,6 +4169,12 @@ class $$UserLessonTermTableAnnotationComposer
     column: $table.definition,
     builder: (column) => column,
   );
+
+  GeneratedColumn<bool> get isStarred =>
+      $composableBuilder(column: $table.isStarred, builder: (column) => column);
+
+  GeneratedColumn<bool> get isLearned =>
+      $composableBuilder(column: $table.isLearned, builder: (column) => column);
 
   GeneratedColumn<int> get orderIndex => $composableBuilder(
     column: $table.orderIndex,
@@ -4106,6 +4240,8 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
+                Value<bool> isStarred = const Value.absent(),
+                Value<bool> isLearned = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
               }) => UserLessonTermCompanion(
                 id: id,
@@ -4113,6 +4249,8 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
+                isStarred: isStarred,
+                isLearned: isLearned,
                 orderIndex: orderIndex,
               ),
           createCompanionCallback:
@@ -4122,6 +4260,8 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
+                Value<bool> isStarred = const Value.absent(),
+                Value<bool> isLearned = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
               }) => UserLessonTermCompanion.insert(
                 id: id,
@@ -4129,6 +4269,8 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
+                isStarred: isStarred,
+                isLearned: isLearned,
                 orderIndex: orderIndex,
               ),
           withReferenceMapper: (p0) => p0

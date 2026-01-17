@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:csv/csv.dart';
+import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,6 +19,8 @@ class LessonEditScreen extends ConsumerStatefulWidget {
   @override
   ConsumerState<LessonEditScreen> createState() => _LessonEditScreenState();
 }
+
+enum _CsvImportMode { replace, append }
 
 class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
   final List<_EditableTerm> _terms = [];
@@ -172,6 +178,22 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               Switch(
                 value: _hintsEnabled,
                 onChanged: (value) => setState(() => _hintsEnabled = value),
+              ),
+              const SizedBox(width: 8),
+              Tooltip(
+                message: language.importCsvLabel,
+                child: _IconCircleButton(
+                  icon: Icons.file_upload_outlined,
+                  onTap: () => _importCsv(language, repo, level),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Tooltip(
+                message: language.exportCsvLabel,
+                child: _IconCircleButton(
+                  icon: Icons.file_download_outlined,
+                  onTap: () => _exportCsv(language),
+                ),
               ),
               const SizedBox(width: 8),
               _IconCircleButton(
@@ -337,6 +359,169 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       );
     }
     ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<void> _exportCsv(AppLanguage language) async {
+    final rows = <List<String>>[
+      const ['term', 'reading', 'definition'],
+      ..._terms.map((term) => [term.term, term.reading, term.definition]),
+    ];
+    final csv = const ListToCsvConverter().convert(rows);
+    final location = await getSaveLocation(
+      suggestedName: 'lesson_${widget.lessonId}.csv',
+      acceptedTypeGroups: const [
+        XTypeGroup(label: 'CSV', extensions: ['csv']),
+      ],
+    );
+    if (location == null) {
+      return;
+    }
+    try {
+      final file = File(location.path);
+      await file.writeAsString(csv, flush: true);
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.exportSuccessLabel)),
+      );
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.exportErrorLabel)),
+      );
+    }
+  }
+
+  Future<void> _importCsv(
+    AppLanguage language,
+    LessonRepository repo,
+    StudyLevel level,
+  ) async {
+    final file = await openFile(
+      acceptedTypeGroups: const [
+        XTypeGroup(label: 'CSV', extensions: ['csv']),
+      ],
+    );
+    if (file == null) {
+      return;
+    }
+    try {
+      final content = await File(file.path).readAsString();
+      final rows = const CsvToListConverter(
+        shouldParseNumbers: false,
+        eol: '\n',
+      ).convert(content);
+      final drafts = _parseCsvRows(rows);
+      if (drafts.isEmpty) {
+        if (!mounted) {
+          return;
+        }
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(language.importErrorLabel)),
+        );
+        return;
+      }
+      final mode = await _confirmImportMode(language);
+      if (mode == null) {
+        return;
+      }
+      if (mode == _CsvImportMode.replace) {
+        await repo.replaceTerms(widget.lessonId, drafts);
+      } else {
+        await repo.appendTerms(widget.lessonId, drafts);
+      }
+      await _refreshTerms(repo);
+      ref.invalidate(lessonMetaProvider(level.shortLabel));
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.importSuccessLabel)),
+      );
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.importErrorLabel)),
+      );
+    }
+  }
+
+  List<LessonTermDraft> _parseCsvRows(List<List<dynamic>> rows) {
+    if (rows.isEmpty) {
+      return const [];
+    }
+    var startIndex = 0;
+    if (_isHeaderRow(rows.first)) {
+      startIndex = 1;
+    }
+    final drafts = <LessonTermDraft>[];
+    for (final row in rows.skip(startIndex)) {
+      if (row.isEmpty) {
+        continue;
+      }
+      final term = row.isNotEmpty ? row[0].toString().trim() : '';
+      final reading = row.length > 1 ? row[1].toString().trim() : '';
+      final definition = row.length > 2 ? row[2].toString().trim() : '';
+      if (term.isEmpty && reading.isEmpty && definition.isEmpty) {
+        continue;
+      }
+      drafts.add(
+        LessonTermDraft(
+          term: term,
+          reading: reading,
+          definition: definition,
+        ),
+      );
+    }
+    return drafts;
+  }
+
+  bool _isHeaderRow(List<dynamic> row) {
+    if (row.isEmpty) {
+      return false;
+    }
+    final first = row[0].toString().toLowerCase().trim();
+    if (first == 'term' || first == 'word' || first == 'từ') {
+      return true;
+    }
+    if (row.length < 2) {
+      return false;
+    }
+    final second = row[1].toString().toLowerCase().trim();
+    final third = row.length > 2 ? row[2].toString().toLowerCase().trim() : '';
+    return second == 'reading' || third == 'definition';
+  }
+
+  Future<_CsvImportMode?> _confirmImportMode(AppLanguage language) async {
+    final result = await showDialog<_CsvImportMode>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(language.importConfirmTitle),
+        content: Text(language.importConfirmBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+          ),
+          TextButton(
+            onPressed: () =>
+                Navigator.of(context).pop(_CsvImportMode.append),
+            child: Text(language.importConfirmAppendLabel),
+          ),
+          ElevatedButton(
+            onPressed: () =>
+                Navigator.of(context).pop(_CsvImportMode.replace),
+            child: Text(language.importConfirmReplaceLabel),
+          ),
+        ],
+      ),
+    );
+    return result;
   }
 
   Future<void> _reorderTerms(

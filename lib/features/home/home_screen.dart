@@ -761,7 +761,7 @@ class _ToolbarActions extends StatelessWidget {
             _MenuOption('all', language.filterAllLabel),
             _MenuOption('has_data', language.filterHasDataLabel),
             _MenuOption('empty', language.filterEmptyLabel),
-            const _MenuOption('custom', 'Custom'),
+            _MenuOption('custom', language.filterCustomLabel),
           ],
           onChanged: onFilterChanged,
         ),

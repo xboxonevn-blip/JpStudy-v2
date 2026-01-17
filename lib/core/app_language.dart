@@ -270,6 +270,50 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String dueCountLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count due';
+      case AppLanguage.vi:
+        return '$count \u0111\u1ebfn h\u1ea1n';
+      case AppLanguage.ja:
+        return '\u7de0\u5207 $count';
+    }
+  }
+
+  String get statsTotalLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Total';
+      case AppLanguage.vi:
+        return 'T\u1ed5ng';
+      case AppLanguage.ja:
+        return '\u7dcf\u6570';
+    }
+  }
+
+  String get statsLearnedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Learned';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 h\u1ecdc';
+      case AppLanguage.ja:
+        return '\u7fd2\u5f97';
+    }
+  }
+
+  String get statsDueLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Due';
+      case AppLanguage.vi:
+        return '\u0110\u1ebfn h\u1ea1n';
+      case AppLanguage.ja:
+        return '\u5fa9\u7fd2';
+    }
+  }
+
   String relativeTimeLabel(int minutes) {
     if (minutes < 60) {
       switch (this) {
@@ -414,6 +458,61 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get resetProgressTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Reset progress?';
+      case AppLanguage.vi:
+        return 'X\u00f3a ti\u1ebfn \u0111\u1ed9?';
+      case AppLanguage.ja:
+        return '\u9032\u6357\u3092\u30ea\u30bb\u30c3\u30c8\u3057\u307e\u3059\u304b\uff1f';
+    }
+  }
+
+  String get resetProgressBody {
+    switch (this) {
+      case AppLanguage.en:
+        return 'This will clear learned status and review schedule.';
+      case AppLanguage.vi:
+        return 'Thao t\u00e1c n\u00e0y s\u1ebd x\u00f3a \u0111\u00e1nh d\u1ea5u \u0111\u00e3 h\u1ecdc v\u00e0 l\u1ecbch \u00f4n t\u1eadp.';
+      case AppLanguage.ja:
+        return '\u5b66\u7fd2\u6e08\u307f\u3068\u30ec\u30d3\u30e5\u30fc\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u3092\u30af\u30ea\u30a2\u3057\u307e\u3059\u3002';
+    }
+  }
+
+  String get resetProgressConfirmLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Reset';
+      case AppLanguage.vi:
+        return 'X\u00f3a';
+      case AppLanguage.ja:
+        return '\u30ea\u30bb\u30c3\u30c8';
+    }
+  }
+
+  String get resetProgressSuccessLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Progress reset.';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 x\u00f3a ti\u1ebfn \u0111\u1ed9.';
+      case AppLanguage.ja:
+        return '\u9032\u6357\u3092\u30ea\u30bb\u30c3\u30c8\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
+  String get resetProgressErrorLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Failed to reset progress.';
+      case AppLanguage.vi:
+        return 'Kh\u00f4ng th\u1ec3 x\u00f3a ti\u1ebfn \u0111\u1ed9.';
+      case AppLanguage.ja:
+        return '\u9032\u6357\u306e\u30ea\u30bb\u30c3\u30c8\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
   String get combineSetLabel {
     switch (this) {
       case AppLanguage.en:
@@ -425,6 +524,72 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get combineNewLessonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Create new lesson';
+      case AppLanguage.vi:
+        return 'T\u1ea1o h\u1ecdc ph\u1ea7n m\u1edbi';
+      case AppLanguage.ja:
+        return '\u65b0\u3057\u3044\u30bb\u30c3\u30c8\u3092\u4f5c\u6210';
+    }
+  }
+
+  String get combineSuccessLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Combined successfully.';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 g\u1ed9p th\u00e0nh c\u00f4ng.';
+      case AppLanguage.ja:
+        return '\u7d50\u5408\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
+  String get combineErrorLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Failed to combine.';
+      case AppLanguage.vi:
+        return 'G\u1ed9p th\u1ea5t b\u1ea1i.';
+      case AppLanguage.ja:
+        return '\u7d50\u5408\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
+  String get combineEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No terms to combine.';
+      case AppLanguage.vi:
+        return 'Kh\u00f4ng c\u00f3 thu\u1eadt ng\u1eef \u0111\u1ec3 g\u1ed9p.';
+      case AppLanguage.ja:
+        return '\u7d50\u5408\u3059\u308b\u7528\u8a9e\u304c\u3042\u308a\u307e\u305b\u3093\u3002';
+    }
+  }
+
+  String get combineNoNewLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No new terms to add.';
+      case AppLanguage.vi:
+        return 'Kh\u00f4ng c\u00f3 thu\u1eadt ng\u1eef m\u1edbi \u0111\u1ec3 th\u00eam.';
+      case AppLanguage.ja:
+        return '\u8ffd\u52a0\u3067\u304d\u308b\u65b0\u3057\u3044\u7528\u8a9e\u304c\u3042\u308a\u307e\u305b\u3093\u3002';
+    }
+  }
+
+  String combineSkippedLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Skipped $count duplicate(s).';
+      case AppLanguage.vi:
+        return 'B\u1ecf qua $count m\u1ee5c tr\u00f9ng.';
+      case AppLanguage.ja:
+        return '$count \u4ef6\u306e\u91cd\u8907\u3092\u30b9\u30ad\u30c3\u30d7\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
   String get reportLabel {
     switch (this) {
       case AppLanguage.en:
@@ -433,6 +598,17 @@ extension AppLanguageLabels on AppLanguage {
         return 'B\xe1o c\xe1o';
       case AppLanguage.ja:
         return '\u5831\u544a';
+    }
+  }
+
+  String get reportCopiedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Report copied.';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 sao ch\u00e9p b\u00e1o c\u00e1o.';
+      case AppLanguage.ja:
+        return '\u5831\u544a\u3092\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f\u3002';
     }
   }
 
@@ -637,6 +813,17 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get readingLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Reading';
+      case AppLanguage.vi:
+        return 'C\u00e1ch \u0111\u1ecdc';
+      case AppLanguage.ja:
+        return '\u8aad\u307f';
+    }
+  }
+
   String get definitionLabel {
     switch (this) {
       case AppLanguage.en:
@@ -814,6 +1001,193 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get reminderDailyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Daily reminder';
+      case AppLanguage.vi:
+        return 'Nh\u1eafc nh\u1edf h\u1eb1ng ng\u00e0y';
+      case AppLanguage.ja:
+        return '\u6bce\u65e5\u306e\u30ea\u30de\u30a4\u30f3\u30c0\u30fc';
+    }
+  }
+
+  String get reminderDailyHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Get a daily notification to review.';
+      case AppLanguage.vi:
+        return 'Nh\u1eadn th\u00f4ng b\u00e1o \u00f4n t\u1eadp m\u1ed7i ng\u00e0y.';
+      case AppLanguage.ja:
+        return '\u6bce\u65e5\u306e\u5fa9\u7fd2\u901a\u77e5\u3092\u53d7\u3051\u53d6\u308b\u3002';
+    }
+  }
+
+  String get reminderTimeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Reminder time';
+      case AppLanguage.vi:
+        return 'Gi\u1edd nh\u1eafc nh\u1edf';
+      case AppLanguage.ja:
+        return '\u30ea\u30de\u30a4\u30f3\u30c0\u30fc\u6642\u9593';
+    }
+  }
+
+  String get reminderTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time to review';
+      case AppLanguage.vi:
+        return '\u0110\u1ebfn gi\u1edd \u00f4n t\u1eadp';
+      case AppLanguage.ja:
+        return '\u5fa9\u7fd2\u306e\u6642\u9593\u3067\u3059';
+    }
+  }
+
+  String get reminderBody {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Open JpStudy to keep your streak.';
+      case AppLanguage.vi:
+        return 'M\u1edf JpStudy \u0111\u1ec3 duy tr\u00ec th\u00f3i quen.';
+      case AppLanguage.ja:
+        return 'JpStudy\u3092\u958b\u3044\u3066\u7d99\u7d9a\u3057\u307e\u3057\u3087\u3046\u3002';
+    }
+  }
+
+  String get reminderTestBody {
+    switch (this) {
+      case AppLanguage.en:
+        return 'This is a test notification.';
+      case AppLanguage.vi:
+        return '\u0110\u00e2y l\u00e0 th\u00f4ng b\u00e1o th\u1eed.';
+      case AppLanguage.ja:
+        return '\u30c6\u30b9\u30c8\u901a\u77e5\u3067\u3059\u3002';
+    }
+  }
+
+  String get reminderTestLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Test notification';
+      case AppLanguage.vi:
+        return 'Th\u1eed th\u00f4ng b\u00e1o';
+      case AppLanguage.ja:
+        return '\u901a\u77e5\u3092\u30c6\u30b9\u30c8';
+    }
+  }
+
+  String get reminderUnsupportedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Notifications are not supported here. In-app reminders only.';
+      case AppLanguage.vi:
+        return 'Kh\u00f4ng h\u1ed7 tr\u1ee3 th\u00f4ng b\u00e1o. Ch\u1ec9 nh\u1eafc trong \u1ee9ng d\u1ee5ng.';
+      case AppLanguage.ja:
+        return '\u901a\u77e5\u306f\u4f7f\u3048\u307e\u305b\u3093\u3002\u30a2\u30d7\u30ea\u5185\u30ea\u30de\u30a4\u30f3\u30c0\u30fc\u306e\u307f\u3002';
+    }
+  }
+
+  String get backupExportLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Export backup';
+      case AppLanguage.vi:
+        return 'Xu\u1ea5t sao l\u01b0u';
+      case AppLanguage.ja:
+        return '\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u3092\u30a8\u30af\u30b9\u30dd\u30fc\u30c8';
+    }
+  }
+
+  String get backupImportLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Import backup';
+      case AppLanguage.vi:
+        return 'Nh\u1eadp sao l\u01b0u';
+      case AppLanguage.ja:
+        return '\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u3092\u30a4\u30f3\u30dd\u30fc\u30c8';
+    }
+  }
+
+  String get backupExportSuccess {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Backup exported.';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 xu\u1ea5t sao l\u01b0u.';
+      case AppLanguage.ja:
+        return '\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u3092\u51fa\u529b\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
+  String get backupExportError {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Failed to export backup.';
+      case AppLanguage.vi:
+        return 'Xu\u1ea5t sao l\u01b0u th\u1ea5t b\u1ea1i.';
+      case AppLanguage.ja:
+        return '\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u306e\u51fa\u529b\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
+  String get backupImportTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Import backup?';
+      case AppLanguage.vi:
+        return 'Nh\u1eadp sao l\u01b0u?';
+      case AppLanguage.ja:
+        return '\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u3092\u30a4\u30f3\u30dd\u30fc\u30c8\u3057\u307e\u3059\u304b\uff1f';
+    }
+  }
+
+  String get backupImportBody {
+    switch (this) {
+      case AppLanguage.en:
+        return 'This will replace current lessons and progress.';
+      case AppLanguage.vi:
+        return 'Thao t\u00e1c n\u00e0y s\u1ebd thay th\u1ebf d\u1eef li\u1ec7u hi\u1ec7n t\u1ea1i.';
+      case AppLanguage.ja:
+        return '\u73fe\u5728\u306e\u30c7\u30fc\u30bf\u304c\u7f6e\u304d\u63db\u3048\u3089\u308c\u307e\u3059\u3002';
+    }
+  }
+
+  String get backupImportConfirmLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Import';
+      case AppLanguage.vi:
+        return 'Nh\u1eadp';
+      case AppLanguage.ja:
+        return '\u30a4\u30f3\u30dd\u30fc\u30c8';
+    }
+  }
+
+  String get backupImportSuccess {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Backup imported.';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 nh\u1eadp sao l\u01b0u.';
+      case AppLanguage.ja:
+        return '\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u3092\u53d6\u308a\u8fbc\u307f\u307e\u3057\u305f\u3002';
+    }
+  }
+
+  String get backupImportError {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Failed to import backup.';
+      case AppLanguage.vi:
+        return 'Nh\u1eadp sao l\u01b0u th\u1ea5t b\u1ea1i.';
+      case AppLanguage.ja:
+        return '\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u306e\u53d6\u308a\u8fbc\u307f\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
   String get fullscreenLabel {
     switch (this) {
       case AppLanguage.en:
@@ -935,6 +1309,17 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get reviewedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Reviewed';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 \u00f4n';
+      case AppLanguage.ja:
+        return '\u5fa9\u7fd2\u6e08\u307f';
+    }
+  }
+
   String get audioNotConfigured {
     switch (this) {
       case AppLanguage.en:
@@ -954,6 +1339,17 @@ extension AppLanguageLabels on AppLanguage {
         return '\u00c2m thanh';
       case AppLanguage.ja:
         return '\u97f3\u58f0';
+    }
+  }
+
+  String get audioAutoPlayLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Auto-play audio';
+      case AppLanguage.vi:
+        return 'T\u1ef1 \u0111\u1ed9ng ph\u00e1t \u00e2m';
+      case AppLanguage.ja:
+        return '\u81ea\u52d5\u518d\u751f';
     }
   }
 
@@ -1031,6 +1427,28 @@ extension AppLanguageLabels on AppLanguage {
         return 'Nam';
       case AppLanguage.ja:
         return '\u7537';
+    }
+  }
+
+  String get audioTestVoiceLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Test voice';
+      case AppLanguage.vi:
+        return 'Nghe th\u1eed';
+      case AppLanguage.ja:
+        return '\u30c6\u30b9\u30c8\u518d\u751f';
+    }
+  }
+
+  String get audioTestSample {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Hello, welcome to JpStudy.';
+      case AppLanguage.vi:
+        return 'Xin ch\u00e0o, ch\u00e0o m\u1eebng \u0111\u1ebfn v\u1edbi JpStudy.';
+      case AppLanguage.ja:
+        return '\u3053\u3093\u306b\u3061\u306f\u3001JpStudy\u3078\u3088\u3046\u3053\u305d\u3002';
     }
   }
 

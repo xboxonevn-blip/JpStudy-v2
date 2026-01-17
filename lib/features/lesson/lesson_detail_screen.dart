@@ -15,13 +15,13 @@ import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum _LessonMode { learn, test, flashcards, review }
+enum _LessonMode { flashcards, review }
 
 enum _AudioMode { term, reading, definition }
 
 enum _AudioVoice { female, male }
 
-enum _MenuAction { edit, reset, combine, report }
+enum _MenuAction { edit, addTerm, reset, combine, report }
 
 class LessonDetailScreen extends ConsumerStatefulWidget {
   const LessonDetailScreen({super.key, required this.lessonId});
@@ -36,6 +36,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _showHints = true;
   bool _trackProgress = false;
   bool _autoPlay = false;
+  bool _autoSpeak = false;
   bool _shuffle = false;
   bool _focusMode = false;
   final Set<int> _flippedTermIds = {};
@@ -43,7 +44,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   final Set<int> _learnedTermIds = {};
   Set<int> _syncedTermIds = {};
   double _speed = 1.0;
-  _LessonMode _mode = _LessonMode.learn;
+  _LessonMode _mode = _LessonMode.flashcards;
   int _currentIndex = 0;
   final Random _random = Random();
   List<int>? _shuffledOrder;
@@ -58,10 +59,17 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _isAudioPlaying = false;
   int _ttsCacheBytes = 0;
   bool _isClearingCache = false;
+  int? _lastAutoSpeakTermId;
+  int _reviewedCount = 0;
+  int _reviewAgainCount = 0;
+  int _reviewHardCount = 0;
+  int _reviewGoodCount = 0;
+  int _reviewEasyCount = 0;
 
   static const _prefShowHints = 'lesson.showHints';
   static const _prefTrackProgress = 'lesson.trackProgress';
   static const _prefAutoPlay = 'lesson.autoPlay';
+  static const _prefAutoSpeak = 'lesson.autoSpeak';
   static const _prefShuffle = 'lesson.shuffle';
   static const _prefSpeed = 'lesson.speed';
   static const _prefFocusMode = 'lesson.focusMode';
@@ -132,6 +140,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final currentTerm =
         totalTerms == 0 ? null : displayTerms.elementAt(currentIndex);
     final isSaved = terms.isNotEmpty && _starredTermIds.length == terms.length;
+    final learnedCount = terms.where((term) => term.isLearned).length;
+    final dueCount = dueAsync.asData?.value.length ?? 0;
     final isStarred = currentTerm != null &&
         _starredTermIds.contains(currentTerm.id);
     final isLearned = currentTerm != null &&
@@ -149,6 +159,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         }
       });
     }
+    _maybeAutoSpeak(language, currentTerm);
 
     return Scaffold(
       appBar: _focusMode
@@ -183,7 +194,14 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
           const SizedBox(width: 8),
           _OverflowMenu(
             language: language,
-            onSelected: (action) => _handleMenu(action, context),
+            onSelected: (action) => _handleMenu(
+              action,
+              context,
+              language,
+              level,
+              title,
+              terms,
+            ),
           ),
           const SizedBox(width: 12),
         ],
@@ -217,8 +235,18 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                           _mode = mode;
                           _currentIndex = 0;
                           _shuffledOrder = null;
+                          if (mode == _LessonMode.review) {
+                            _resetReviewStats();
+                          }
                         });
                       },
+                    ),
+                    const SizedBox(height: 12),
+                    _StatsRow(
+                      language: language,
+                      total: terms.length,
+                      learned: learnedCount,
+                      due: dueCount,
                     ),
                     if (_mode == _LessonMode.review) ...[
                       const SizedBox(height: 8),
@@ -281,6 +309,15 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       onEasy: currentTerm == null
                           ? null
                           : () => _reviewTerm(currentTerm, 5),
+                    ),
+                    const SizedBox(height: 12),
+                    _ReviewSummary(
+                      language: language,
+                      reviewed: _reviewedCount,
+                      again: _reviewAgainCount,
+                      hard: _reviewHardCount,
+                      good: _reviewGoodCount,
+                      easy: _reviewEasyCount,
                     ),
                   ],
                 ],
@@ -429,13 +466,39 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       nextReviewAt: updated.nextReviewAt,
     );
     ref.invalidate(lessonDueTermsProvider(widget.lessonId));
-    _goNextAutoReview();
-  }
-
-  void _goNextAutoReview() {
+    if (!mounted) {
+      return;
+    }
     setState(() {
+      _incrementReviewStats(quality);
       _currentIndex = 0;
     });
+  }
+
+  void _resetReviewStats() {
+    _reviewedCount = 0;
+    _reviewAgainCount = 0;
+    _reviewHardCount = 0;
+    _reviewGoodCount = 0;
+    _reviewEasyCount = 0;
+  }
+
+  void _incrementReviewStats(int quality) {
+    _reviewedCount += 1;
+    switch (quality) {
+      case 0:
+        _reviewAgainCount += 1;
+        break;
+      case 3:
+        _reviewHardCount += 1;
+        break;
+      case 4:
+        _reviewGoodCount += 1;
+        break;
+      case 5:
+        _reviewEasyCount += 1;
+        break;
+    }
   }
 
   _SrsUpdate _nextSrsState({
@@ -522,6 +585,14 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     _saveBool(_prefTrackProgress, value);
   }
 
+  void _updateAutoSpeak(bool value) {
+    setState(() => _autoSpeak = value);
+    if (!value) {
+      _lastAutoSpeakTermId = null;
+    }
+    _saveBool(_prefAutoSpeak, value);
+  }
+
   void _toggleFocusMode() {
     final nextValue = !_focusMode;
     setState(() => _focusMode = nextValue);
@@ -538,6 +609,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       _showHints = prefs.getBool(_prefShowHints) ?? true;
       _trackProgress = prefs.getBool(_prefTrackProgress) ?? false;
       _autoPlay = prefs.getBool(_prefAutoPlay) ?? false;
+      _autoSpeak = prefs.getBool(_prefAutoSpeak) ?? false;
       _shuffle = prefs.getBool(_prefShuffle) ?? false;
       _speed = prefs.getDouble(_prefSpeed) ?? 1.0;
       _focusMode = prefs.getBool(_prefFocusMode) ?? false;
@@ -691,6 +763,17 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     return '${gb.toStringAsFixed(1)} GB';
   }
 
+  String _termKey(String term, String reading, String definition) {
+    final cleanTerm = _normalizeKeyPart(term);
+    final cleanReading = _normalizeKeyPart(reading);
+    final cleanDefinition = _normalizeKeyPart(definition);
+    return '$cleanTerm|$cleanReading|$cleanDefinition';
+  }
+
+  String _normalizeKeyPart(String value) {
+    return value.trim().replaceAll(RegExp(r'\s+'), ' ').toLowerCase();
+  }
+
   void _maybeSyncTermFlags(List<UserLessonTermData> terms) {
     final ids = terms.map((term) => term.id).toSet();
     final starred =
@@ -750,8 +833,33 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     });
   }
 
+  void _maybeAutoSpeak(AppLanguage language, UserLessonTermData? term) {
+    if (!_autoSpeak || term == null) {
+      return;
+    }
+    if (_lastAutoSpeakTermId == term.id) {
+      return;
+    }
+    _lastAutoSpeakTermId = term.id;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted || !_autoSpeak) {
+        return;
+      }
+      _playTts(language, term);
+    });
+  }
+
   Future<void> _playTts(AppLanguage language, UserLessonTermData term) async {
     final text = _ttsTextForTerm(term).trim();
+    await _playTtsText(language, text);
+  }
+
+  Future<void> _playTtsSample(AppLanguage language) async {
+    final text = language.audioTestSample;
+    await _playTtsText(language, text);
+  }
+
+  Future<void> _playTtsText(AppLanguage language, String text) async {
     if (text.isEmpty) {
       if (!mounted) {
         return;
@@ -778,6 +886,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(language.audioNotConfigured)),
       );
+      if (_autoSpeak) {
+        _updateAutoSpeak(false);
+      }
     } catch (_) {
       if (!mounted) {
         return;
@@ -810,10 +921,405 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     }
   }
 
-  void _handleMenu(_MenuAction action, BuildContext context) {
-    if (action == _MenuAction.edit) {
-      context.push('/lesson/${widget.lessonId}/edit');
+  void _handleMenu(
+    _MenuAction action,
+    BuildContext context,
+    AppLanguage language,
+    StudyLevel level,
+    String title,
+    List<UserLessonTermData> terms,
+  ) {
+    switch (action) {
+      case _MenuAction.edit:
+        context.push('/lesson/${widget.lessonId}/edit');
+        break;
+      case _MenuAction.addTerm:
+        _showQuickAddTerm(language, level);
+        break;
+      case _MenuAction.reset:
+        _resetProgress(language, level);
+        break;
+      case _MenuAction.combine:
+        _combineLesson(language, level, terms);
+        break;
+      case _MenuAction.report:
+        _reportLesson(language, level, title, terms);
+        break;
     }
+  }
+
+  Future<void> _showQuickAddTerm(
+    AppLanguage language,
+    StudyLevel level,
+  ) async {
+    final termController = TextEditingController();
+    final readingController = TextEditingController();
+    final definitionController = TextEditingController();
+    var canSave = false;
+    final saved = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            return AlertDialog(
+              title: Text(language.addTermLabel),
+              content: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextField(
+                      controller: termController,
+                      decoration: InputDecoration(
+                        labelText: language.termLabel,
+                      ),
+                      onChanged: (value) {
+                        final next = value.trim().isNotEmpty;
+                        if (next != canSave) {
+                          setDialogState(() => canSave = next);
+                        }
+                      },
+                    ),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: readingController,
+                      decoration: InputDecoration(
+                        labelText: language.readingLabel,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: definitionController,
+                      decoration: InputDecoration(
+                        labelText: language.definitionLabel,
+                      ),
+                      maxLines: 3,
+                    ),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child:
+                      Text(MaterialLocalizations.of(context).cancelButtonLabel),
+                ),
+                ElevatedButton(
+                  onPressed: canSave
+                      ? () => Navigator.of(context).pop(true)
+                      : null,
+                  child: Text(MaterialLocalizations.of(context).okButtonLabel),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+    if (saved != true || !context.mounted) {
+      termController.dispose();
+      readingController.dispose();
+      definitionController.dispose();
+      return;
+    }
+    final term = termController.text.trim();
+    final reading = readingController.text.trim();
+    final definition = definitionController.text.trim();
+    termController.dispose();
+    readingController.dispose();
+    definitionController.dispose();
+    if (term.isEmpty) {
+      return;
+    }
+    final repo = ref.read(lessonRepositoryProvider);
+    await repo.appendTerms(
+      widget.lessonId,
+      [
+        LessonTermDraft(
+          term: term,
+          reading: reading,
+          definition: definition,
+        ),
+      ],
+    );
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+    ref.invalidate(
+      lessonTermsProvider(
+        LessonTermsArgs(
+          widget.lessonId,
+          level.shortLabel,
+          language.lessonTitle(widget.lessonId),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _resetProgress(
+    AppLanguage language,
+    StudyLevel level,
+  ) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(language.resetProgressTitle),
+        content: Text(language.resetProgressBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(language.resetProgressConfirmLabel),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) {
+      return;
+    }
+    try {
+      final repo = ref.read(lessonRepositoryProvider);
+      await repo.resetLessonProgress(widget.lessonId);
+      ref.invalidate(lessonMetaProvider(level.shortLabel));
+      ref.invalidate(lessonDueTermsProvider(widget.lessonId));
+      ref.invalidate(
+        lessonTermsProvider(
+          LessonTermsArgs(
+            widget.lessonId,
+            level.shortLabel,
+            language.lessonTitle(widget.lessonId),
+          ),
+        ),
+      );
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.resetProgressSuccessLabel)),
+      );
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.resetProgressErrorLabel)),
+      );
+    }
+  }
+
+  Future<void> _combineLesson(
+    AppLanguage language,
+    StudyLevel level,
+    List<UserLessonTermData> terms,
+  ) async {
+    if (terms.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.combineEmptyLabel)),
+      );
+      return;
+    }
+    final repo = ref.read(lessonRepositoryProvider);
+    final lessons =
+        await ref.read(lessonMetaProvider(level.shortLabel).future);
+    if (!mounted) {
+      return;
+    }
+    final options = lessons
+        .where((lesson) => lesson.id != widget.lessonId)
+        .toList();
+    final targetId = await showModalBottomSheet<int>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) {
+        return SafeArea(
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            shrinkWrap: true,
+            children: [
+              Text(
+                language.combineSetLabel,
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+              ),
+              const SizedBox(height: 8),
+              ListTile(
+                leading: const Icon(Icons.add_circle_outline),
+                title: Text(language.combineNewLessonLabel),
+                onTap: () => Navigator.of(context).pop(-1),
+              ),
+              if (options.isNotEmpty) const Divider(),
+              for (final lesson in options)
+                ListTile(
+                  title: Text(lesson.title),
+                  subtitle:
+                      Text(language.termsCountLabel(lesson.termCount)),
+                  onTap: () => Navigator.of(context).pop(lesson.id),
+                ),
+            ],
+          ),
+        );
+      },
+    );
+    if (targetId == null) {
+      return;
+    }
+    if (!mounted) {
+      return;
+    }
+    int destinationId = targetId;
+    if (targetId == -1) {
+      final nextId = await repo.nextLessonId();
+      if (!mounted) {
+        return;
+      }
+      final defaultTitle = language.lessonTitle(nextId);
+      final controller = TextEditingController(text: defaultTitle);
+      final confirmed = await showDialog<bool>(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(language.combineNewLessonLabel),
+          content: TextField(
+            controller: controller,
+            decoration: InputDecoration(hintText: defaultTitle),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child:
+                  Text(MaterialLocalizations.of(context).cancelButtonLabel),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              child: Text(language.createLessonLabel),
+            ),
+          ],
+        ),
+      );
+      if (confirmed != true) {
+        controller.dispose();
+        return;
+      }
+      final resolvedTitle = controller.text.trim().isEmpty
+          ? defaultTitle
+          : controller.text.trim();
+      final isCustomTitle = resolvedTitle != defaultTitle;
+      controller.dispose();
+      destinationId = await repo.createLesson(
+        level: level.shortLabel,
+        title: resolvedTitle,
+        isPublic: true,
+        isCustomTitle: isCustomTitle,
+      );
+    }
+    final drafts = terms
+        .map(
+          (term) => LessonTermDraft(
+            term: term.term,
+            reading: term.reading,
+            definition: term.definition,
+          ),
+        )
+        .toList();
+    try {
+      final existing = await repo.fetchTerms(destinationId);
+      if (!mounted) {
+        return;
+      }
+      final existingKeys = existing
+          .map(
+            (term) => _termKey(term.term, term.reading, term.definition),
+          )
+          .toSet();
+      final filteredDrafts = <LessonTermDraft>[];
+      var skipped = 0;
+      for (final draft in drafts) {
+        final key = _termKey(draft.term, draft.reading, draft.definition);
+        if (existingKeys.add(key)) {
+          filteredDrafts.add(draft);
+        } else {
+          skipped += 1;
+        }
+      }
+      if (filteredDrafts.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(language.combineNoNewLabel)),
+        );
+        return;
+      }
+      await repo.appendTerms(destinationId, filteredDrafts);
+      ref.invalidate(lessonMetaProvider(level.shortLabel));
+      if (!mounted) {
+        return;
+      }
+      final message = skipped == 0
+          ? language.combineSuccessLabel
+          : language.combineSkippedLabel(skipped);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(message)),
+      );
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.combineErrorLabel)),
+      );
+    }
+  }
+
+  Future<void> _reportLesson(
+    AppLanguage language,
+    StudyLevel level,
+    String title,
+    List<UserLessonTermData> terms,
+  ) async {
+    final buffer = StringBuffer()
+      ..writeln('Lesson ID: ${widget.lessonId}')
+      ..writeln('Level: ${level.shortLabel}')
+      ..writeln('Title: $title')
+      ..writeln('Terms: ${terms.length}')
+      ..writeln('---')
+      ..writeln('Sample:');
+    final sampleCount = terms.length < 5 ? terms.length : 5;
+    for (var i = 0; i < sampleCount; i++) {
+      final term = terms[i];
+      buffer.writeln(
+        '${i + 1}. ${term.term}\t${term.reading}\t${term.definition}',
+      );
+    }
+    final reportText = buffer.toString();
+    final copied = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(language.reportLabel),
+        content: SizedBox(
+          width: 520,
+          child: SingleChildScrollView(
+            child: SelectableText(reportText),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(MaterialLocalizations.of(context).copyButtonLabel),
+          ),
+        ],
+      ),
+    );
+    if (copied != true) {
+      return;
+    }
+    await Clipboard.setData(ClipboardData(text: reportText));
+    if (!mounted) {
+      return;
+    }
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(language.reportCopiedLabel)),
+    );
   }
 
   void _toggleShuffle(List<UserLessonTermData> terms) {
@@ -966,15 +1472,24 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       },
                     ),
                     const SizedBox(height: 16),
-                    Text(
-                      language.audioSettingsLabel,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
+                      Text(
+                        language.audioSettingsLabel,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(language.audioModeLabel),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(language.audioAutoPlayLabel),
+                        value: _autoSpeak,
+                        onChanged: (value) {
+                          _updateAutoSpeak(value);
+                          setModalState(() {});
+                        },
+                      ),
+                      const SizedBox(height: 8),
+                      Text(language.audioModeLabel),
                     const SizedBox(height: 8),
                     SegmentedButton<_AudioMode>(
                       segments: [
@@ -1023,6 +1538,12 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                         setModalState(() {});
                       },
                     ),
+                    const SizedBox(height: 8),
+                    TextButton.icon(
+                      onPressed: () => _playTtsSample(language),
+                      icon: const Icon(Icons.play_arrow),
+                      label: Text(language.audioTestVoiceLabel),
+                    ),
                     const SizedBox(height: 12),
                     Row(
                       children: [
@@ -1061,6 +1582,78 @@ class _SrsUpdate {
   final int repetitions;
   final double ease;
   final DateTime nextReviewAt;
+}
+
+class _StatsRow extends StatelessWidget {
+  const _StatsRow({
+    required this.language,
+    required this.total,
+    required this.learned,
+    required this.due,
+  });
+
+  final AppLanguage language;
+  final int total;
+  final int learned;
+  final int due;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 12,
+      runSpacing: 8,
+      children: [
+        _StatChip(
+          label: language.statsTotalLabel,
+          value: total.toString(),
+        ),
+        _StatChip(
+          label: language.statsLearnedLabel,
+          value: learned.toString(),
+        ),
+        _StatChip(
+          label: language.statsDueLabel,
+          value: due.toString(),
+        ),
+      ],
+    );
+  }
+}
+
+class _StatChip extends StatelessWidget {
+  const _StatChip({required this.label, required this.value});
+
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: const Color(0xFFE8ECF5)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            label,
+            style: const TextStyle(
+              fontSize: 12,
+              color: Color(0xFF6B7390),
+            ),
+          ),
+          const SizedBox(width: 6),
+          Text(
+            value,
+            style: const TextStyle(fontWeight: FontWeight.w700),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class _ReviewActions extends StatelessWidget {
@@ -1116,6 +1709,91 @@ class _ReviewActions extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _ReviewSummary extends StatelessWidget {
+  const _ReviewSummary({
+    required this.language,
+    required this.reviewed,
+    required this.again,
+    required this.hard,
+    required this.good,
+    required this.easy,
+  });
+
+  final AppLanguage language;
+  final int reviewed;
+  final int again;
+  final int hard;
+  final int good;
+  final int easy;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 10,
+      runSpacing: 8,
+      alignment: WrapAlignment.center,
+      children: [
+        _SummaryChip(
+          label: language.reviewedLabel,
+          value: reviewed.toString(),
+        ),
+        _SummaryChip(
+          label: language.reviewAgainLabel,
+          value: again.toString(),
+        ),
+        _SummaryChip(
+          label: language.reviewHardLabel,
+          value: hard.toString(),
+        ),
+        _SummaryChip(
+          label: language.reviewGoodLabel,
+          value: good.toString(),
+        ),
+        _SummaryChip(
+          label: language.reviewEasyLabel,
+          value: easy.toString(),
+        ),
+      ],
+    );
+  }
+}
+
+class _SummaryChip extends StatelessWidget {
+  const _SummaryChip({
+    required this.label,
+    required this.value,
+  });
+
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF7F9FC),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: const Color(0xFFE1E6F0)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            label,
+            style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
+          ),
+          const SizedBox(width: 6),
+          Text(
+            value,
+            style: const TextStyle(fontWeight: FontWeight.w700),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -1179,15 +1857,19 @@ class _OverflowMenu extends StatelessWidget {
     return PopupMenuButton<_MenuAction>(
       onSelected: onSelected,
       icon: const Icon(Icons.more_horiz),
-      itemBuilder: (context) => [
-        PopupMenuItem(
-          value: _MenuAction.edit,
-          child: Text(language.copySetLabel),
-        ),
-        PopupMenuItem(
-          value: _MenuAction.reset,
-          child: Text(language.resetProgressLabel),
-        ),
+        itemBuilder: (context) => [
+          PopupMenuItem(
+            value: _MenuAction.edit,
+            child: Text(language.copySetLabel),
+          ),
+          PopupMenuItem(
+            value: _MenuAction.addTerm,
+            child: Text(language.addTermLabel),
+          ),
+          PopupMenuItem(
+            value: _MenuAction.reset,
+            child: Text(language.resetProgressLabel),
+          ),
         PopupMenuItem(
           value: _MenuAction.combine,
           child: Text(language.combineSetLabel),
@@ -1221,14 +1903,6 @@ class _ModeSwitcher extends StatelessWidget {
       children: [
         SegmentedButton<_LessonMode>(
           segments: [
-            ButtonSegment(
-              value: _LessonMode.learn,
-              label: Text(language.learnAction),
-            ),
-            ButtonSegment(
-              value: _LessonMode.test,
-              label: Text(language.testAction),
-            ),
             ButtonSegment(
               value: _LessonMode.flashcards,
               label: Text(language.flashcardsAction),
@@ -1265,53 +1939,7 @@ class _ModeSwitcher extends StatelessWidget {
             ),
           ),
         ),
-        _GamesMenu(language: language),
       ],
-    );
-  }
-}
-
-class _GamesMenu extends StatelessWidget {
-  const _GamesMenu({required this.language});
-
-  final AppLanguage language;
-
-  @override
-  Widget build(BuildContext context) {
-    return PopupMenuButton<String>(
-      itemBuilder: (context) => [
-        PopupMenuItem(
-          value: 'match',
-          child: Text(language.matchAction),
-        ),
-        PopupMenuItem(
-          value: 'blast',
-          child: Text(language.blastAction),
-        ),
-        PopupMenuItem(
-          value: 'combine',
-          child: Text(language.combineAction),
-        ),
-      ],
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: const Color(0xFFE1E6F0)),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              language.gamesLabel,
-              style: const TextStyle(fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(width: 6),
-            const Icon(Icons.expand_more, size: 18),
-          ],
-        ),
-      ),
     );
   }
 }

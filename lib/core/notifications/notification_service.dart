@@ -1,0 +1,92 @@
+import 'dart:io';
+
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+class NotificationService {
+  NotificationService._();
+
+  static final NotificationService instance = NotificationService._();
+
+  final FlutterLocalNotificationsPlugin _plugin =
+      FlutterLocalNotificationsPlugin();
+
+  static const int _dailyReminderId = 1001;
+
+  bool get isSupported =>
+      Platform.isAndroid ||
+      Platform.isIOS ||
+      Platform.isMacOS ||
+      Platform.isLinux;
+
+  Future<void> initialize() async {
+    if (!isSupported) {
+      return;
+    }
+    const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const iosSettings = DarwinInitializationSettings();
+
+    const initSettings = InitializationSettings(
+      android: androidSettings,
+      iOS: iosSettings,
+    );
+    await _plugin.initialize(initSettings);
+  }
+
+  Future<void> enableDailyReminder({
+    required String title,
+    required String body,
+  }) async {
+    if (!isSupported) {
+      return;
+    }
+    const androidDetails = AndroidNotificationDetails(
+      'daily_reminder',
+      'Daily reminder',
+      channelDescription: 'Daily study reminder',
+      importance: Importance.high,
+      priority: Priority.high,
+    );
+    const iosDetails = DarwinNotificationDetails();
+    const details = NotificationDetails(
+      android: androidDetails,
+      iOS: iosDetails,
+    );
+    await _plugin.periodicallyShow(
+      _dailyReminderId,
+      title,
+      body,
+      RepeatInterval.daily,
+      details,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+    );
+  }
+
+  Future<void> disableDailyReminder() async {
+    if (!isSupported) {
+      return;
+    }
+    await _plugin.cancel(_dailyReminderId);
+  }
+
+  Future<void> showTestNotification({
+    required String title,
+    required String body,
+  }) async {
+    if (!isSupported) {
+      return;
+    }
+    const androidDetails = AndroidNotificationDetails(
+      'test_reminder',
+      'Test reminder',
+      channelDescription: 'Test notifications',
+      importance: Importance.defaultImportance,
+      priority: Priority.defaultPriority,
+    );
+    const iosDetails = DarwinNotificationDetails();
+    const details = NotificationDetails(
+      android: androidDetails,
+      iOS: iosDetails,
+    );
+    await _plugin.show(9999, title, body, details);
+  }
+}

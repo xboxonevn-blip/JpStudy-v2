@@ -82,6 +82,7 @@ class LessonMeta {
     required this.isCustomTitle,
     required this.termCount,
     required this.completedCount,
+    required this.dueCount,
     required this.updatedAt,
   });
 
@@ -91,6 +92,7 @@ class LessonMeta {
   final bool isCustomTitle;
   final int termCount;
   final int completedCount;
+  final int dueCount;
   final DateTime? updatedAt;
 }
 
@@ -172,6 +174,7 @@ class LessonRepository {
         );
       }
     }
+    final dueCounts = await _fetchDueCounts(ids);
     return lessons
         .map(
           (lesson) => LessonMeta(
@@ -181,10 +184,34 @@ class LessonRepository {
             isCustomTitle: lesson.isCustomTitle,
             termCount: counts[lesson.id] ?? 0,
             completedCount: completedCounts[lesson.id] ?? 0,
+            dueCount: dueCounts[lesson.id] ?? 0,
             updatedAt: lesson.updatedAt,
           ),
         )
         .toList();
+  }
+
+  Future<Map<int, int>> _fetchDueCounts(List<int> lessonIds) async {
+    if (lessonIds.isEmpty) {
+      return const {};
+    }
+    final now = DateTime.now();
+    final query = _db.select(_db.userLessonTerm).join([
+      innerJoin(
+        _db.srsState,
+        _db.srsState.vocabId.equalsExp(_db.userLessonTerm.id),
+      ),
+    ]);
+    query
+      ..where(_db.userLessonTerm.lessonId.isIn(lessonIds))
+      ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now));
+    final rows = await query.get();
+    final counts = <int, int>{};
+    for (final row in rows) {
+      final term = row.readTable(_db.userLessonTerm);
+      counts.update(term.lessonId, (value) => value + 1, ifAbsent: () => 1);
+    }
+    return counts;
   }
 
   Future<int> nextLessonId() async {
@@ -374,6 +401,26 @@ class LessonRepository {
     await _touchLesson(lessonId);
   }
 
+  Future<void> resetLessonProgress(int lessonId) async {
+    final ids = await (_db.selectOnly(_db.userLessonTerm)
+          ..addColumns([_db.userLessonTerm.id])
+          ..where(_db.userLessonTerm.lessonId.equals(lessonId)))
+        .map((row) => row.read(_db.userLessonTerm.id)!)
+        .get();
+    if (ids.isEmpty) {
+      return;
+    }
+    await _db.transaction(() async {
+      await (_db.update(_db.userLessonTerm)
+            ..where((tbl) => tbl.lessonId.equals(lessonId)))
+          .write(const UserLessonTermCompanion(isLearned: Value(false)));
+      await (_db.delete(_db.srsState)
+            ..where((tbl) => tbl.vocabId.isIn(ids)))
+          .go();
+    });
+    await _touchLesson(lessonId);
+  }
+
   Future<void> deleteTerm(int termId, {int? lessonId}) {
     final delete = (_db.delete(_db.userLessonTerm)
           ..where((tbl) => tbl.id.equals(termId)))
@@ -505,6 +552,68 @@ class LessonRepository {
     return (_db.delete(_db.srsState)
           ..where((tbl) => tbl.vocabId.equals(termId)))
         .go();
+  }
+
+  Future<Map<String, dynamic>> exportBackup() async {
+    final lessons = await _db.select(_db.userLesson).get();
+    final terms = await _db.select(_db.userLessonTerm).get();
+    final srs = await _db.select(_db.srsState).get();
+    return {
+      'version': 1,
+      'exportedAt': DateTime.now().toIso8601String(),
+      'lessons': lessons.map((lesson) => lesson.toJson()).toList(),
+      'terms': terms.map((term) => term.toJson()).toList(),
+      'srs': srs.map((state) => state.toJson()).toList(),
+    };
+  }
+
+  Future<void> importBackup(Map<String, dynamic> data) async {
+    final lessonsRaw = data['lessons'] as List<dynamic>? ?? const [];
+    final termsRaw = data['terms'] as List<dynamic>? ?? const [];
+    final srsRaw = data['srs'] as List<dynamic>? ?? const [];
+
+    final lessons = lessonsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(UserLessonData.fromJson)
+        .toList();
+    final terms = termsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(UserLessonTermData.fromJson)
+        .toList();
+    final srs = srsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(SrsStateData.fromJson)
+        .toList();
+
+    await _db.transaction(() async {
+      await _db.delete(_db.srsState).go();
+      await _db.delete(_db.userLessonTerm).go();
+      await _db.delete(_db.userLesson).go();
+
+      await _db.batch((batch) {
+        for (final lesson in lessons) {
+          batch.insert(
+            _db.userLesson,
+            lesson.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final term in terms) {
+          batch.insert(
+            _db.userLessonTerm,
+            term.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final state in srs) {
+          batch.insert(
+            _db.srsState,
+            state.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+      });
+    });
   }
 
   Future<void> _touchLesson(int lessonId) {

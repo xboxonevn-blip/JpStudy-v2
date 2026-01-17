@@ -1,17 +1,50 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/notifications/notification_service.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class HomeScreen extends ConsumerWidget {
+const _prefDailyReminder = 'notifications.daily';
+const _prefDailyReminderTime = 'notifications.daily.time';
+const _prefDailyReminderLast = 'notifications.daily.last';
+
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends ConsumerState<HomeScreen> {
+  Timer? _inAppReminderTimer;
+  SharedPreferences? _prefs;
+  TimeOfDay _reminderTime = const TimeOfDay(hour: 20, minute: 0);
+  bool _reminderEnabled = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadReminderPrefs();
+  }
+
+  @override
+  void dispose() {
+    _inAppReminderTimer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final level = ref.watch(studyLevelProvider);
     final language = ref.watch(appLanguageProvider);
 
@@ -23,15 +56,15 @@ class HomeScreen extends ConsumerWidget {
         title: _HeaderBar(
           level: level,
           language: language,
-          onLanguageTap: () => _showLanguageSheet(context, ref),
-          onLevelChanged: (selected) => _setLevel(ref, selected),
-          onSettingsTap: () => _showSettingsSheet(context, ref),
+          onLanguageTap: () => _showLanguageSheet(context),
+          onLevelChanged: (selected) => _setLevel(selected),
+          onSettingsTap: () => _showSettingsSheet(context),
         ),
       ),
       body: level == null
           ? _LevelGate(
               language: language,
-              onSelected: (selected) => _setLevel(ref, selected),
+              onSelected: (selected) => _setLevel(selected),
             )
           : _LessonHome(
               level: level,
@@ -40,7 +73,7 @@ class HomeScreen extends ConsumerWidget {
     );
   }
 
-  void _setLevel(WidgetRef ref, StudyLevel selected) {
+  void _setLevel(StudyLevel selected) {
     ref.read(studyLevelProvider.notifier).state = selected;
     if (selected != StudyLevel.n3 &&
         ref.read(appLanguageProvider) == AppLanguage.ja) {
@@ -48,7 +81,7 @@ class HomeScreen extends ConsumerWidget {
     }
   }
 
-  void _showLanguageSheet(BuildContext context, WidgetRef ref) {
+  void _showLanguageSheet(BuildContext context) {
     final level = ref.read(studyLevelProvider);
     final allowJapanese = level == StudyLevel.n3;
     showModalBottomSheet<void>(
@@ -67,51 +100,373 @@ class HomeScreen extends ConsumerWidget {
     );
   }
 
-  void _showSettingsSheet(BuildContext context, WidgetRef ref) {
+  void _showSettingsSheet(BuildContext context) {
     final language = ref.read(appLanguageProvider);
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
       builder: (context) {
-        return SafeArea(
-          child: ListView(
-            padding: const EdgeInsets.all(16),
-            shrinkWrap: true,
-            children: [
-              Text(
-                language.settingsLabel,
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
-              ),
-              const SizedBox(height: 12),
-              ListTile(
-                leading: const Icon(Icons.language),
-                title: Text(language.languageMenuLabel),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  _showLanguageSheet(context, ref);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.school_outlined),
-                title: Text(language.levelMenuTitle),
-                onTap: () {
-                  ref.read(studyLevelProvider.notifier).state = null;
-                  Navigator.of(context).pop();
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.insights_outlined),
-                title: Text(language.progressTitle),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  context.push('/progress');
-                },
-              ),
-            ],
-          ),
+        return FutureBuilder<SharedPreferences>(
+          future: SharedPreferences.getInstance(),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return const SizedBox(
+                height: 120,
+                child: Center(child: CircularProgressIndicator()),
+              );
+            }
+            final prefs = snapshot.data!;
+            final supportsNotifications =
+                NotificationService.instance.isSupported;
+            var reminderEnabled =
+                prefs.getBool(_prefDailyReminder) ?? false;
+            if (_prefs == null) {
+              _prefs = prefs;
+              _reminderEnabled = reminderEnabled;
+              _reminderTime = _reminderTimeFromPrefs(prefs) ??
+                  const TimeOfDay(hour: 20, minute: 0);
+            }
+            return StatefulBuilder(
+              builder: (context, setModalState) {
+                return SafeArea(
+                  child: ListView(
+                    padding: const EdgeInsets.all(16),
+                    shrinkWrap: true,
+                    children: [
+                      Text(
+                        language.settingsLabel,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      ListTile(
+                        leading: const Icon(Icons.language),
+                        title: Text(language.languageMenuLabel),
+                        onTap: () {
+                          Navigator.of(context).pop();
+                          _showLanguageSheet(context);
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.school_outlined),
+                        title: Text(language.levelMenuTitle),
+                        onTap: () {
+                          ref.read(studyLevelProvider.notifier).state = null;
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.insights_outlined),
+                        title: Text(language.progressTitle),
+                        onTap: () {
+                          Navigator.of(context).pop();
+                          context.push('/progress');
+                        },
+                      ),
+                      const Divider(),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(language.reminderDailyLabel),
+                        subtitle: Text(language.reminderDailyHint),
+                        value: reminderEnabled,
+                        onChanged: (value) async {
+                          reminderEnabled = value;
+                          await _setDailyReminder(
+                            value,
+                            prefs: prefs,
+                            language: language,
+                          );
+                          if (!supportsNotifications && value) {
+                            if (!context.mounted) {
+                              return;
+                            }
+                            final picked = await showTimePicker(
+                              context: context,
+                              initialTime: _reminderTime,
+                            );
+                            if (picked != null) {
+                              _reminderTime = picked;
+                              await _saveReminderTime(prefs, picked);
+                              _scheduleInAppReminder();
+                            }
+                          }
+                          setModalState(() {});
+                        },
+                      ),
+                      if (!supportsNotifications) ...[
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Text(
+                            language.reminderUnsupportedLabel,
+                            style: const TextStyle(color: Color(0xFF6B7390)),
+                          ),
+                        ),
+                        ListTile(
+                          contentPadding: EdgeInsets.zero,
+                          leading: const Icon(Icons.schedule_outlined),
+                          title: Text(language.reminderTimeLabel),
+                          subtitle: Text(_formatTime(_reminderTime, context)),
+                          onTap: reminderEnabled
+                              ? () async {
+                                  final picked = await showTimePicker(
+                                    context: context,
+                                    initialTime: _reminderTime,
+                                  );
+                                  if (picked == null) {
+                                    return;
+                                  }
+                                  _reminderTime = picked;
+                                  await _saveReminderTime(prefs, picked);
+                                  if (reminderEnabled) {
+                                    _scheduleInAppReminder();
+                                  }
+                                  setModalState(() {});
+                                }
+                              : null,
+                        ),
+                      ],
+                      TextButton.icon(
+                        onPressed: supportsNotifications
+                            ? () => NotificationService.instance
+                                .showTestNotification(
+                              title: language.reminderTitle,
+                              body: language.reminderTestBody,
+                            )
+                            : () => _showInAppReminder(language),
+                        icon: const Icon(Icons.notifications_active_outlined),
+                        label: Text(language.reminderTestLabel),
+                      ),
+                      const Divider(),
+                      ListTile(
+                        leading: const Icon(Icons.save_alt_outlined),
+                        title: Text(language.backupExportLabel),
+                        onTap: () => _exportBackup(context, language),
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.restore_outlined),
+                        title: Text(language.backupImportLabel),
+                        onTap: () => _importBackup(context, language),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            );
+          },
         );
       },
     );
+  }
+
+  Future<void> _exportBackup(
+    BuildContext context,
+    AppLanguage language,
+  ) async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final data = await repo.exportBackup();
+    final jsonText = const JsonEncoder.withIndent('  ').convert(data);
+    final location = await getSaveLocation(
+      suggestedName: 'jpstudy_backup.json',
+      acceptedTypeGroups: const [
+        XTypeGroup(label: 'JSON', extensions: ['json']),
+      ],
+    );
+    if (location == null) {
+      return;
+    }
+    try {
+      await File(location.path).writeAsString(jsonText, flush: true);
+      if (!context.mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.backupExportSuccess)),
+      );
+    } catch (_) {
+      if (!context.mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.backupExportError)),
+      );
+    }
+  }
+
+  Future<void> _importBackup(
+    BuildContext context,
+    AppLanguage language,
+  ) async {
+    final file = await openFile(
+      acceptedTypeGroups: const [
+        XTypeGroup(label: 'JSON', extensions: ['json']),
+      ],
+    );
+    if (file == null) {
+      return;
+    }
+    if (!context.mounted) {
+      return;
+    }
+    final shouldImport = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(language.backupImportTitle),
+        content: Text(language.backupImportBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(language.backupImportConfirmLabel),
+          ),
+        ],
+      ),
+    );
+    if (shouldImport != true) {
+      return;
+    }
+    try {
+      final content = await File(file.path).readAsString();
+      final data = jsonDecode(content) as Map<String, dynamic>;
+      final repo = ref.read(lessonRepositoryProvider);
+      await repo.importBackup(data);
+      ref.invalidate(lessonMetaProvider);
+      if (!context.mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.backupImportSuccess)),
+      );
+      } catch (_) {
+        if (!context.mounted) {
+          return;
+        }
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(language.backupImportError)),
+        );
+      }
+    }
+
+  Future<void> _loadReminderPrefs() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (!mounted) {
+      return;
+    }
+    _prefs = prefs;
+    _reminderEnabled = prefs.getBool(_prefDailyReminder) ?? false;
+    _reminderTime = _reminderTimeFromPrefs(prefs) ??
+        const TimeOfDay(hour: 20, minute: 0);
+    if (_reminderEnabled && !NotificationService.instance.isSupported) {
+      _scheduleInAppReminder();
+    }
+  }
+
+  TimeOfDay? _reminderTimeFromPrefs(SharedPreferences prefs) {
+    final stored = prefs.getString(_prefDailyReminderTime);
+    if (stored == null || stored.isEmpty) {
+      return null;
+    }
+    final parts = stored.split(':');
+    if (parts.length != 2) {
+      return null;
+    }
+    final hour = int.tryParse(parts[0]);
+    final minute = int.tryParse(parts[1]);
+    if (hour == null || minute == null) {
+      return null;
+    }
+    return TimeOfDay(hour: hour, minute: minute);
+  }
+
+  Future<void> _saveReminderTime(
+    SharedPreferences prefs,
+    TimeOfDay time,
+  ) async {
+    final value = '${time.hour.toString().padLeft(2, '0')}:'
+        '${time.minute.toString().padLeft(2, '0')}';
+    await prefs.setString(_prefDailyReminderTime, value);
+  }
+
+  Future<void> _setDailyReminder(
+    bool enabled, {
+    required SharedPreferences prefs,
+    required AppLanguage language,
+  }) async {
+    _reminderEnabled = enabled;
+    await prefs.setBool(_prefDailyReminder, enabled);
+    if (NotificationService.instance.isSupported) {
+      if (enabled) {
+        await NotificationService.instance.enableDailyReminder(
+          title: language.reminderTitle,
+          body: language.reminderBody,
+        );
+      } else {
+        await NotificationService.instance.disableDailyReminder();
+      }
+    } else {
+      if (enabled) {
+        _scheduleInAppReminder();
+      } else {
+        _inAppReminderTimer?.cancel();
+      }
+    }
+  }
+
+  void _scheduleInAppReminder() {
+    _inAppReminderTimer?.cancel();
+    if (!_reminderEnabled) {
+      return;
+    }
+    final now = DateTime.now();
+    final next = _nextReminderTime(now, _reminderTime);
+    final delay = next.difference(now);
+    _inAppReminderTimer = Timer(delay, _handleInAppReminder);
+  }
+
+  DateTime _nextReminderTime(DateTime now, TimeOfDay time) {
+    var next = DateTime(now.year, now.month, now.day, time.hour, time.minute);
+    if (!next.isAfter(now)) {
+      next = next.add(const Duration(days: 1));
+    }
+    return next;
+  }
+
+  Future<void> _handleInAppReminder() async {
+    if (!mounted) {
+      return;
+    }
+    final prefs = _prefs ?? await SharedPreferences.getInstance();
+    _prefs ??= prefs;
+    final todayKey = _dateKey(DateTime.now());
+    final lastShown = prefs.getString(_prefDailyReminderLast);
+    if (lastShown != todayKey) {
+      await prefs.setString(_prefDailyReminderLast, todayKey);
+      _showInAppReminder(ref.read(appLanguageProvider));
+    }
+    _scheduleInAppReminder();
+  }
+
+  String _dateKey(DateTime time) {
+    return '${time.year.toString().padLeft(4, '0')}-'
+        '${time.month.toString().padLeft(2, '0')}-'
+        '${time.day.toString().padLeft(2, '0')}';
+  }
+
+  void _showInAppReminder(AppLanguage language) {
+    if (!mounted) {
+      return;
+    }
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(language.reminderBody)),
+    );
+  }
+
+  String _formatTime(TimeOfDay time, BuildContext context) {
+    return MaterialLocalizations.of(context).formatTimeOfDay(time);
   }
 }
 
@@ -513,6 +868,7 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
       final progress = stored == null
           ? 0.0
           : _progressFromCounts(stored.completedCount, termCount);
+      final dueCount = stored?.dueCount ?? 0;
 
       summaries.add(
         _LessonSummary(
@@ -522,6 +878,7 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
           termCount: termCount,
           lastStudiedMinutes: lastStudiedMinutes,
           progress: progress,
+          dueCount: dueCount,
           isCustomTitle: stored?.isCustomTitle ?? false,
           isCustomLesson: false,
         ),
@@ -545,6 +902,7 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
           termCount: stored.termCount,
           lastStudiedMinutes: lastStudiedMinutes,
           progress: progress,
+          dueCount: stored.dueCount,
           isCustomTitle: stored.isCustomTitle,
           isCustomLesson: true,
         ),
@@ -857,6 +1215,32 @@ class _LessonCard extends ConsumerStatefulWidget {
   ConsumerState<_LessonCard> createState() => _LessonCardState();
 }
 
+class _DueChip extends StatelessWidget {
+  const _DueChip({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: const Color(0xFFFFF3E6),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: const Color(0xFFFFD7B0)),
+      ),
+      child: Text(
+        label,
+        style: const TextStyle(
+          fontSize: 11,
+          fontWeight: FontWeight.w600,
+          color: Color(0xFF9A5B1A),
+        ),
+      ),
+    );
+  }
+}
+
 class _LessonCardState extends ConsumerState<_LessonCard> {
   bool _hovering = false;
 
@@ -915,6 +1299,14 @@ class _LessonCardState extends ConsumerState<_LessonCard> {
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
+                        if (widget.lesson.dueCount > 0) ...[
+                          const SizedBox(width: 8),
+                          _DueChip(
+                            label: widget.language.dueCountLabel(
+                              widget.lesson.dueCount,
+                            ),
+                          ),
+                        ],
                         const SizedBox(width: 12),
                         SizedBox(
                           width: 110,
@@ -1201,6 +1593,7 @@ class _LessonSummary {
     required this.termCount,
     required this.lastStudiedMinutes,
     required this.progress,
+    required this.dueCount,
     required this.isCustomTitle,
     required this.isCustomLesson,
   });
@@ -1211,6 +1604,7 @@ class _LessonSummary {
   final int termCount;
   final int lastStudiedMinutes;
   final double progress;
+  final int dueCount;
   final bool isCustomTitle;
   final bool isCustomLesson;
 }

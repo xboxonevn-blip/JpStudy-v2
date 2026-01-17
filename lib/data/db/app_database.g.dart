@@ -514,8 +514,78 @@ class $UserProgressTable extends UserProgress
     requiredDuringInsert: false,
     defaultValue: const Constant(0),
   );
+  static const VerificationMeta _reviewedCountMeta = const VerificationMeta(
+    'reviewedCount',
+  );
   @override
-  List<GeneratedColumn> get $columns => [id, day, xp, streak];
+  late final GeneratedColumn<int> reviewedCount = GeneratedColumn<int>(
+    'reviewed_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _reviewAgainCountMeta = const VerificationMeta(
+    'reviewAgainCount',
+  );
+  @override
+  late final GeneratedColumn<int> reviewAgainCount = GeneratedColumn<int>(
+    'review_again_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _reviewHardCountMeta = const VerificationMeta(
+    'reviewHardCount',
+  );
+  @override
+  late final GeneratedColumn<int> reviewHardCount = GeneratedColumn<int>(
+    'review_hard_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _reviewGoodCountMeta = const VerificationMeta(
+    'reviewGoodCount',
+  );
+  @override
+  late final GeneratedColumn<int> reviewGoodCount = GeneratedColumn<int>(
+    'review_good_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _reviewEasyCountMeta = const VerificationMeta(
+    'reviewEasyCount',
+  );
+  @override
+  late final GeneratedColumn<int> reviewEasyCount = GeneratedColumn<int>(
+    'review_easy_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    day,
+    xp,
+    streak,
+    reviewedCount,
+    reviewAgainCount,
+    reviewHardCount,
+    reviewGoodCount,
+    reviewEasyCount,
+  ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
@@ -548,6 +618,51 @@ class $UserProgressTable extends UserProgress
         streak.isAcceptableOrUnknown(data['streak']!, _streakMeta),
       );
     }
+    if (data.containsKey('reviewed_count')) {
+      context.handle(
+        _reviewedCountMeta,
+        reviewedCount.isAcceptableOrUnknown(
+          data['reviewed_count']!,
+          _reviewedCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('review_again_count')) {
+      context.handle(
+        _reviewAgainCountMeta,
+        reviewAgainCount.isAcceptableOrUnknown(
+          data['review_again_count']!,
+          _reviewAgainCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('review_hard_count')) {
+      context.handle(
+        _reviewHardCountMeta,
+        reviewHardCount.isAcceptableOrUnknown(
+          data['review_hard_count']!,
+          _reviewHardCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('review_good_count')) {
+      context.handle(
+        _reviewGoodCountMeta,
+        reviewGoodCount.isAcceptableOrUnknown(
+          data['review_good_count']!,
+          _reviewGoodCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('review_easy_count')) {
+      context.handle(
+        _reviewEasyCountMeta,
+        reviewEasyCount.isAcceptableOrUnknown(
+          data['review_easy_count']!,
+          _reviewEasyCountMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -573,6 +688,26 @@ class $UserProgressTable extends UserProgress
         DriftSqlType.int,
         data['${effectivePrefix}streak'],
       )!,
+      reviewedCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}reviewed_count'],
+      )!,
+      reviewAgainCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}review_again_count'],
+      )!,
+      reviewHardCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}review_hard_count'],
+      )!,
+      reviewGoodCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}review_good_count'],
+      )!,
+      reviewEasyCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}review_easy_count'],
+      )!,
     );
   }
 
@@ -588,11 +723,21 @@ class UserProgressData extends DataClass
   final DateTime day;
   final int xp;
   final int streak;
+  final int reviewedCount;
+  final int reviewAgainCount;
+  final int reviewHardCount;
+  final int reviewGoodCount;
+  final int reviewEasyCount;
   const UserProgressData({
     required this.id,
     required this.day,
     required this.xp,
     required this.streak,
+    required this.reviewedCount,
+    required this.reviewAgainCount,
+    required this.reviewHardCount,
+    required this.reviewGoodCount,
+    required this.reviewEasyCount,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -601,6 +746,11 @@ class UserProgressData extends DataClass
     map['day'] = Variable<DateTime>(day);
     map['xp'] = Variable<int>(xp);
     map['streak'] = Variable<int>(streak);
+    map['reviewed_count'] = Variable<int>(reviewedCount);
+    map['review_again_count'] = Variable<int>(reviewAgainCount);
+    map['review_hard_count'] = Variable<int>(reviewHardCount);
+    map['review_good_count'] = Variable<int>(reviewGoodCount);
+    map['review_easy_count'] = Variable<int>(reviewEasyCount);
     return map;
   }
 
@@ -610,6 +760,11 @@ class UserProgressData extends DataClass
       day: Value(day),
       xp: Value(xp),
       streak: Value(streak),
+      reviewedCount: Value(reviewedCount),
+      reviewAgainCount: Value(reviewAgainCount),
+      reviewHardCount: Value(reviewHardCount),
+      reviewGoodCount: Value(reviewGoodCount),
+      reviewEasyCount: Value(reviewEasyCount),
     );
   }
 
@@ -623,6 +778,11 @@ class UserProgressData extends DataClass
       day: serializer.fromJson<DateTime>(json['day']),
       xp: serializer.fromJson<int>(json['xp']),
       streak: serializer.fromJson<int>(json['streak']),
+      reviewedCount: serializer.fromJson<int>(json['reviewedCount']),
+      reviewAgainCount: serializer.fromJson<int>(json['reviewAgainCount']),
+      reviewHardCount: serializer.fromJson<int>(json['reviewHardCount']),
+      reviewGoodCount: serializer.fromJson<int>(json['reviewGoodCount']),
+      reviewEasyCount: serializer.fromJson<int>(json['reviewEasyCount']),
     );
   }
   @override
@@ -633,22 +793,56 @@ class UserProgressData extends DataClass
       'day': serializer.toJson<DateTime>(day),
       'xp': serializer.toJson<int>(xp),
       'streak': serializer.toJson<int>(streak),
+      'reviewedCount': serializer.toJson<int>(reviewedCount),
+      'reviewAgainCount': serializer.toJson<int>(reviewAgainCount),
+      'reviewHardCount': serializer.toJson<int>(reviewHardCount),
+      'reviewGoodCount': serializer.toJson<int>(reviewGoodCount),
+      'reviewEasyCount': serializer.toJson<int>(reviewEasyCount),
     };
   }
 
-  UserProgressData copyWith({int? id, DateTime? day, int? xp, int? streak}) =>
-      UserProgressData(
-        id: id ?? this.id,
-        day: day ?? this.day,
-        xp: xp ?? this.xp,
-        streak: streak ?? this.streak,
-      );
+  UserProgressData copyWith({
+    int? id,
+    DateTime? day,
+    int? xp,
+    int? streak,
+    int? reviewedCount,
+    int? reviewAgainCount,
+    int? reviewHardCount,
+    int? reviewGoodCount,
+    int? reviewEasyCount,
+  }) => UserProgressData(
+    id: id ?? this.id,
+    day: day ?? this.day,
+    xp: xp ?? this.xp,
+    streak: streak ?? this.streak,
+    reviewedCount: reviewedCount ?? this.reviewedCount,
+    reviewAgainCount: reviewAgainCount ?? this.reviewAgainCount,
+    reviewHardCount: reviewHardCount ?? this.reviewHardCount,
+    reviewGoodCount: reviewGoodCount ?? this.reviewGoodCount,
+    reviewEasyCount: reviewEasyCount ?? this.reviewEasyCount,
+  );
   UserProgressData copyWithCompanion(UserProgressCompanion data) {
     return UserProgressData(
       id: data.id.present ? data.id.value : this.id,
       day: data.day.present ? data.day.value : this.day,
       xp: data.xp.present ? data.xp.value : this.xp,
       streak: data.streak.present ? data.streak.value : this.streak,
+      reviewedCount: data.reviewedCount.present
+          ? data.reviewedCount.value
+          : this.reviewedCount,
+      reviewAgainCount: data.reviewAgainCount.present
+          ? data.reviewAgainCount.value
+          : this.reviewAgainCount,
+      reviewHardCount: data.reviewHardCount.present
+          ? data.reviewHardCount.value
+          : this.reviewHardCount,
+      reviewGoodCount: data.reviewGoodCount.present
+          ? data.reviewGoodCount.value
+          : this.reviewGoodCount,
+      reviewEasyCount: data.reviewEasyCount.present
+          ? data.reviewEasyCount.value
+          : this.reviewEasyCount,
     );
   }
 
@@ -658,13 +852,28 @@ class UserProgressData extends DataClass
           ..write('id: $id, ')
           ..write('day: $day, ')
           ..write('xp: $xp, ')
-          ..write('streak: $streak')
+          ..write('streak: $streak, ')
+          ..write('reviewedCount: $reviewedCount, ')
+          ..write('reviewAgainCount: $reviewAgainCount, ')
+          ..write('reviewHardCount: $reviewHardCount, ')
+          ..write('reviewGoodCount: $reviewGoodCount, ')
+          ..write('reviewEasyCount: $reviewEasyCount')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode => Object.hash(id, day, xp, streak);
+  int get hashCode => Object.hash(
+    id,
+    day,
+    xp,
+    streak,
+    reviewedCount,
+    reviewAgainCount,
+    reviewHardCount,
+    reviewGoodCount,
+    reviewEasyCount,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -672,7 +881,12 @@ class UserProgressData extends DataClass
           other.id == this.id &&
           other.day == this.day &&
           other.xp == this.xp &&
-          other.streak == this.streak);
+          other.streak == this.streak &&
+          other.reviewedCount == this.reviewedCount &&
+          other.reviewAgainCount == this.reviewAgainCount &&
+          other.reviewHardCount == this.reviewHardCount &&
+          other.reviewGoodCount == this.reviewGoodCount &&
+          other.reviewEasyCount == this.reviewEasyCount);
 }
 
 class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
@@ -680,29 +894,54 @@ class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
   final Value<DateTime> day;
   final Value<int> xp;
   final Value<int> streak;
+  final Value<int> reviewedCount;
+  final Value<int> reviewAgainCount;
+  final Value<int> reviewHardCount;
+  final Value<int> reviewGoodCount;
+  final Value<int> reviewEasyCount;
   const UserProgressCompanion({
     this.id = const Value.absent(),
     this.day = const Value.absent(),
     this.xp = const Value.absent(),
     this.streak = const Value.absent(),
+    this.reviewedCount = const Value.absent(),
+    this.reviewAgainCount = const Value.absent(),
+    this.reviewHardCount = const Value.absent(),
+    this.reviewGoodCount = const Value.absent(),
+    this.reviewEasyCount = const Value.absent(),
   });
   UserProgressCompanion.insert({
     this.id = const Value.absent(),
     required DateTime day,
     this.xp = const Value.absent(),
     this.streak = const Value.absent(),
+    this.reviewedCount = const Value.absent(),
+    this.reviewAgainCount = const Value.absent(),
+    this.reviewHardCount = const Value.absent(),
+    this.reviewGoodCount = const Value.absent(),
+    this.reviewEasyCount = const Value.absent(),
   }) : day = Value(day);
   static Insertable<UserProgressData> custom({
     Expression<int>? id,
     Expression<DateTime>? day,
     Expression<int>? xp,
     Expression<int>? streak,
+    Expression<int>? reviewedCount,
+    Expression<int>? reviewAgainCount,
+    Expression<int>? reviewHardCount,
+    Expression<int>? reviewGoodCount,
+    Expression<int>? reviewEasyCount,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
       if (day != null) 'day': day,
       if (xp != null) 'xp': xp,
       if (streak != null) 'streak': streak,
+      if (reviewedCount != null) 'reviewed_count': reviewedCount,
+      if (reviewAgainCount != null) 'review_again_count': reviewAgainCount,
+      if (reviewHardCount != null) 'review_hard_count': reviewHardCount,
+      if (reviewGoodCount != null) 'review_good_count': reviewGoodCount,
+      if (reviewEasyCount != null) 'review_easy_count': reviewEasyCount,
     });
   }
 
@@ -711,12 +950,22 @@ class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
     Value<DateTime>? day,
     Value<int>? xp,
     Value<int>? streak,
+    Value<int>? reviewedCount,
+    Value<int>? reviewAgainCount,
+    Value<int>? reviewHardCount,
+    Value<int>? reviewGoodCount,
+    Value<int>? reviewEasyCount,
   }) {
     return UserProgressCompanion(
       id: id ?? this.id,
       day: day ?? this.day,
       xp: xp ?? this.xp,
       streak: streak ?? this.streak,
+      reviewedCount: reviewedCount ?? this.reviewedCount,
+      reviewAgainCount: reviewAgainCount ?? this.reviewAgainCount,
+      reviewHardCount: reviewHardCount ?? this.reviewHardCount,
+      reviewGoodCount: reviewGoodCount ?? this.reviewGoodCount,
+      reviewEasyCount: reviewEasyCount ?? this.reviewEasyCount,
     );
   }
 
@@ -735,6 +984,21 @@ class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
     if (streak.present) {
       map['streak'] = Variable<int>(streak.value);
     }
+    if (reviewedCount.present) {
+      map['reviewed_count'] = Variable<int>(reviewedCount.value);
+    }
+    if (reviewAgainCount.present) {
+      map['review_again_count'] = Variable<int>(reviewAgainCount.value);
+    }
+    if (reviewHardCount.present) {
+      map['review_hard_count'] = Variable<int>(reviewHardCount.value);
+    }
+    if (reviewGoodCount.present) {
+      map['review_good_count'] = Variable<int>(reviewGoodCount.value);
+    }
+    if (reviewEasyCount.present) {
+      map['review_easy_count'] = Variable<int>(reviewEasyCount.value);
+    }
     return map;
   }
 
@@ -744,7 +1008,12 @@ class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
           ..write('id: $id, ')
           ..write('day: $day, ')
           ..write('xp: $xp, ')
-          ..write('streak: $streak')
+          ..write('streak: $streak, ')
+          ..write('reviewedCount: $reviewedCount, ')
+          ..write('reviewAgainCount: $reviewAgainCount, ')
+          ..write('reviewHardCount: $reviewHardCount, ')
+          ..write('reviewGoodCount: $reviewGoodCount, ')
+          ..write('reviewEasyCount: $reviewEasyCount')
           ..write(')'))
         .toString();
   }
@@ -1645,6 +1914,42 @@ class $UserLessonTable extends UserLesson
     ),
     defaultValue: const Constant(false),
   );
+  static const VerificationMeta _learnTermLimitMeta = const VerificationMeta(
+    'learnTermLimit',
+  );
+  @override
+  late final GeneratedColumn<int> learnTermLimit = GeneratedColumn<int>(
+    'learn_term_limit',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _testQuestionLimitMeta = const VerificationMeta(
+    'testQuestionLimit',
+  );
+  @override
+  late final GeneratedColumn<int> testQuestionLimit = GeneratedColumn<int>(
+    'test_question_limit',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(12),
+  );
+  static const VerificationMeta _matchPairLimitMeta = const VerificationMeta(
+    'matchPairLimit',
+  );
+  @override
+  late final GeneratedColumn<int> matchPairLimit = GeneratedColumn<int>(
+    'match_pair_limit',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(8),
+  );
   static const VerificationMeta _updatedAtMeta = const VerificationMeta(
     'updatedAt',
   );
@@ -1665,6 +1970,9 @@ class $UserLessonTable extends UserLesson
     tags,
     isPublic,
     isCustomTitle,
+    learnTermLimit,
+    testQuestionLimit,
+    matchPairLimit,
     updatedAt,
   ];
   @override
@@ -1728,6 +2036,33 @@ class $UserLessonTable extends UserLesson
         ),
       );
     }
+    if (data.containsKey('learn_term_limit')) {
+      context.handle(
+        _learnTermLimitMeta,
+        learnTermLimit.isAcceptableOrUnknown(
+          data['learn_term_limit']!,
+          _learnTermLimitMeta,
+        ),
+      );
+    }
+    if (data.containsKey('test_question_limit')) {
+      context.handle(
+        _testQuestionLimitMeta,
+        testQuestionLimit.isAcceptableOrUnknown(
+          data['test_question_limit']!,
+          _testQuestionLimitMeta,
+        ),
+      );
+    }
+    if (data.containsKey('match_pair_limit')) {
+      context.handle(
+        _matchPairLimitMeta,
+        matchPairLimit.isAcceptableOrUnknown(
+          data['match_pair_limit']!,
+          _matchPairLimitMeta,
+        ),
+      );
+    }
     if (data.containsKey('updated_at')) {
       context.handle(
         _updatedAtMeta,
@@ -1771,6 +2106,18 @@ class $UserLessonTable extends UserLesson
         DriftSqlType.bool,
         data['${effectivePrefix}is_custom_title'],
       )!,
+      learnTermLimit: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}learn_term_limit'],
+      )!,
+      testQuestionLimit: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}test_question_limit'],
+      )!,
+      matchPairLimit: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}match_pair_limit'],
+      )!,
       updatedAt: attachedDatabase.typeMapping.read(
         DriftSqlType.dateTime,
         data['${effectivePrefix}updated_at'],
@@ -1792,6 +2139,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
   final String tags;
   final bool isPublic;
   final bool isCustomTitle;
+  final int learnTermLimit;
+  final int testQuestionLimit;
+  final int matchPairLimit;
   final DateTime? updatedAt;
   const UserLessonData({
     required this.id,
@@ -1801,6 +2151,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     required this.tags,
     required this.isPublic,
     required this.isCustomTitle,
+    required this.learnTermLimit,
+    required this.testQuestionLimit,
+    required this.matchPairLimit,
     this.updatedAt,
   });
   @override
@@ -1813,6 +2166,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     map['tags'] = Variable<String>(tags);
     map['is_public'] = Variable<bool>(isPublic);
     map['is_custom_title'] = Variable<bool>(isCustomTitle);
+    map['learn_term_limit'] = Variable<int>(learnTermLimit);
+    map['test_question_limit'] = Variable<int>(testQuestionLimit);
+    map['match_pair_limit'] = Variable<int>(matchPairLimit);
     if (!nullToAbsent || updatedAt != null) {
       map['updated_at'] = Variable<DateTime>(updatedAt);
     }
@@ -1828,6 +2184,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       tags: Value(tags),
       isPublic: Value(isPublic),
       isCustomTitle: Value(isCustomTitle),
+      learnTermLimit: Value(learnTermLimit),
+      testQuestionLimit: Value(testQuestionLimit),
+      matchPairLimit: Value(matchPairLimit),
       updatedAt: updatedAt == null && nullToAbsent
           ? const Value.absent()
           : Value(updatedAt),
@@ -1847,6 +2206,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       tags: serializer.fromJson<String>(json['tags']),
       isPublic: serializer.fromJson<bool>(json['isPublic']),
       isCustomTitle: serializer.fromJson<bool>(json['isCustomTitle']),
+      learnTermLimit: serializer.fromJson<int>(json['learnTermLimit']),
+      testQuestionLimit: serializer.fromJson<int>(json['testQuestionLimit']),
+      matchPairLimit: serializer.fromJson<int>(json['matchPairLimit']),
       updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
     );
   }
@@ -1861,6 +2223,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       'tags': serializer.toJson<String>(tags),
       'isPublic': serializer.toJson<bool>(isPublic),
       'isCustomTitle': serializer.toJson<bool>(isCustomTitle),
+      'learnTermLimit': serializer.toJson<int>(learnTermLimit),
+      'testQuestionLimit': serializer.toJson<int>(testQuestionLimit),
+      'matchPairLimit': serializer.toJson<int>(matchPairLimit),
       'updatedAt': serializer.toJson<DateTime?>(updatedAt),
     };
   }
@@ -1873,6 +2238,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     String? tags,
     bool? isPublic,
     bool? isCustomTitle,
+    int? learnTermLimit,
+    int? testQuestionLimit,
+    int? matchPairLimit,
     Value<DateTime?> updatedAt = const Value.absent(),
   }) => UserLessonData(
     id: id ?? this.id,
@@ -1882,6 +2250,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     tags: tags ?? this.tags,
     isPublic: isPublic ?? this.isPublic,
     isCustomTitle: isCustomTitle ?? this.isCustomTitle,
+    learnTermLimit: learnTermLimit ?? this.learnTermLimit,
+    testQuestionLimit: testQuestionLimit ?? this.testQuestionLimit,
+    matchPairLimit: matchPairLimit ?? this.matchPairLimit,
     updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
   );
   UserLessonData copyWithCompanion(UserLessonCompanion data) {
@@ -1897,6 +2268,15 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       isCustomTitle: data.isCustomTitle.present
           ? data.isCustomTitle.value
           : this.isCustomTitle,
+      learnTermLimit: data.learnTermLimit.present
+          ? data.learnTermLimit.value
+          : this.learnTermLimit,
+      testQuestionLimit: data.testQuestionLimit.present
+          ? data.testQuestionLimit.value
+          : this.testQuestionLimit,
+      matchPairLimit: data.matchPairLimit.present
+          ? data.matchPairLimit.value
+          : this.matchPairLimit,
       updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
     );
   }
@@ -1911,6 +2291,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
           ..write('tags: $tags, ')
           ..write('isPublic: $isPublic, ')
           ..write('isCustomTitle: $isCustomTitle, ')
+          ..write('learnTermLimit: $learnTermLimit, ')
+          ..write('testQuestionLimit: $testQuestionLimit, ')
+          ..write('matchPairLimit: $matchPairLimit, ')
           ..write('updatedAt: $updatedAt')
           ..write(')'))
         .toString();
@@ -1925,6 +2308,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     tags,
     isPublic,
     isCustomTitle,
+    learnTermLimit,
+    testQuestionLimit,
+    matchPairLimit,
     updatedAt,
   );
   @override
@@ -1938,6 +2324,9 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
           other.tags == this.tags &&
           other.isPublic == this.isPublic &&
           other.isCustomTitle == this.isCustomTitle &&
+          other.learnTermLimit == this.learnTermLimit &&
+          other.testQuestionLimit == this.testQuestionLimit &&
+          other.matchPairLimit == this.matchPairLimit &&
           other.updatedAt == this.updatedAt);
 }
 
@@ -1949,6 +2338,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
   final Value<String> tags;
   final Value<bool> isPublic;
   final Value<bool> isCustomTitle;
+  final Value<int> learnTermLimit;
+  final Value<int> testQuestionLimit;
+  final Value<int> matchPairLimit;
   final Value<DateTime?> updatedAt;
   const UserLessonCompanion({
     this.id = const Value.absent(),
@@ -1958,6 +2350,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     this.tags = const Value.absent(),
     this.isPublic = const Value.absent(),
     this.isCustomTitle = const Value.absent(),
+    this.learnTermLimit = const Value.absent(),
+    this.testQuestionLimit = const Value.absent(),
+    this.matchPairLimit = const Value.absent(),
     this.updatedAt = const Value.absent(),
   });
   UserLessonCompanion.insert({
@@ -1968,6 +2363,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     this.tags = const Value.absent(),
     this.isPublic = const Value.absent(),
     this.isCustomTitle = const Value.absent(),
+    this.learnTermLimit = const Value.absent(),
+    this.testQuestionLimit = const Value.absent(),
+    this.matchPairLimit = const Value.absent(),
     this.updatedAt = const Value.absent(),
   }) : level = Value(level),
        title = Value(title);
@@ -1979,6 +2377,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     Expression<String>? tags,
     Expression<bool>? isPublic,
     Expression<bool>? isCustomTitle,
+    Expression<int>? learnTermLimit,
+    Expression<int>? testQuestionLimit,
+    Expression<int>? matchPairLimit,
     Expression<DateTime>? updatedAt,
   }) {
     return RawValuesInsertable({
@@ -1989,6 +2390,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
       if (tags != null) 'tags': tags,
       if (isPublic != null) 'is_public': isPublic,
       if (isCustomTitle != null) 'is_custom_title': isCustomTitle,
+      if (learnTermLimit != null) 'learn_term_limit': learnTermLimit,
+      if (testQuestionLimit != null) 'test_question_limit': testQuestionLimit,
+      if (matchPairLimit != null) 'match_pair_limit': matchPairLimit,
       if (updatedAt != null) 'updated_at': updatedAt,
     });
   }
@@ -2001,6 +2405,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     Value<String>? tags,
     Value<bool>? isPublic,
     Value<bool>? isCustomTitle,
+    Value<int>? learnTermLimit,
+    Value<int>? testQuestionLimit,
+    Value<int>? matchPairLimit,
     Value<DateTime?>? updatedAt,
   }) {
     return UserLessonCompanion(
@@ -2011,6 +2418,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
       tags: tags ?? this.tags,
       isPublic: isPublic ?? this.isPublic,
       isCustomTitle: isCustomTitle ?? this.isCustomTitle,
+      learnTermLimit: learnTermLimit ?? this.learnTermLimit,
+      testQuestionLimit: testQuestionLimit ?? this.testQuestionLimit,
+      matchPairLimit: matchPairLimit ?? this.matchPairLimit,
       updatedAt: updatedAt ?? this.updatedAt,
     );
   }
@@ -2039,6 +2449,15 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     if (isCustomTitle.present) {
       map['is_custom_title'] = Variable<bool>(isCustomTitle.value);
     }
+    if (learnTermLimit.present) {
+      map['learn_term_limit'] = Variable<int>(learnTermLimit.value);
+    }
+    if (testQuestionLimit.present) {
+      map['test_question_limit'] = Variable<int>(testQuestionLimit.value);
+    }
+    if (matchPairLimit.present) {
+      map['match_pair_limit'] = Variable<int>(matchPairLimit.value);
+    }
     if (updatedAt.present) {
       map['updated_at'] = Variable<DateTime>(updatedAt.value);
     }
@@ -2055,6 +2474,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
           ..write('tags: $tags, ')
           ..write('isPublic: $isPublic, ')
           ..write('isCustomTitle: $isCustomTitle, ')
+          ..write('learnTermLimit: $learnTermLimit, ')
+          ..write('testQuestionLimit: $testQuestionLimit, ')
+          ..write('matchPairLimit: $matchPairLimit, ')
           ..write('updatedAt: $updatedAt')
           ..write(')'))
         .toString();
@@ -2830,6 +3252,11 @@ typedef $$UserProgressTableCreateCompanionBuilder =
       required DateTime day,
       Value<int> xp,
       Value<int> streak,
+      Value<int> reviewedCount,
+      Value<int> reviewAgainCount,
+      Value<int> reviewHardCount,
+      Value<int> reviewGoodCount,
+      Value<int> reviewEasyCount,
     });
 typedef $$UserProgressTableUpdateCompanionBuilder =
     UserProgressCompanion Function({
@@ -2837,6 +3264,11 @@ typedef $$UserProgressTableUpdateCompanionBuilder =
       Value<DateTime> day,
       Value<int> xp,
       Value<int> streak,
+      Value<int> reviewedCount,
+      Value<int> reviewAgainCount,
+      Value<int> reviewHardCount,
+      Value<int> reviewGoodCount,
+      Value<int> reviewEasyCount,
     });
 
 class $$UserProgressTableFilterComposer
@@ -2865,6 +3297,31 @@ class $$UserProgressTableFilterComposer
 
   ColumnFilters<int> get streak => $composableBuilder(
     column: $table.streak,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reviewedCount => $composableBuilder(
+    column: $table.reviewedCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reviewAgainCount => $composableBuilder(
+    column: $table.reviewAgainCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reviewHardCount => $composableBuilder(
+    column: $table.reviewHardCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reviewGoodCount => $composableBuilder(
+    column: $table.reviewGoodCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reviewEasyCount => $composableBuilder(
+    column: $table.reviewEasyCount,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -2897,6 +3354,31 @@ class $$UserProgressTableOrderingComposer
     column: $table.streak,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<int> get reviewedCount => $composableBuilder(
+    column: $table.reviewedCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get reviewAgainCount => $composableBuilder(
+    column: $table.reviewAgainCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get reviewHardCount => $composableBuilder(
+    column: $table.reviewHardCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get reviewGoodCount => $composableBuilder(
+    column: $table.reviewGoodCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get reviewEasyCount => $composableBuilder(
+    column: $table.reviewEasyCount,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$UserProgressTableAnnotationComposer
@@ -2919,6 +3401,31 @@ class $$UserProgressTableAnnotationComposer
 
   GeneratedColumn<int> get streak =>
       $composableBuilder(column: $table.streak, builder: (column) => column);
+
+  GeneratedColumn<int> get reviewedCount => $composableBuilder(
+    column: $table.reviewedCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get reviewAgainCount => $composableBuilder(
+    column: $table.reviewAgainCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get reviewHardCount => $composableBuilder(
+    column: $table.reviewHardCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get reviewGoodCount => $composableBuilder(
+    column: $table.reviewGoodCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get reviewEasyCount => $composableBuilder(
+    column: $table.reviewEasyCount,
+    builder: (column) => column,
+  );
 }
 
 class $$UserProgressTableTableManager
@@ -2956,11 +3463,21 @@ class $$UserProgressTableTableManager
                 Value<DateTime> day = const Value.absent(),
                 Value<int> xp = const Value.absent(),
                 Value<int> streak = const Value.absent(),
+                Value<int> reviewedCount = const Value.absent(),
+                Value<int> reviewAgainCount = const Value.absent(),
+                Value<int> reviewHardCount = const Value.absent(),
+                Value<int> reviewGoodCount = const Value.absent(),
+                Value<int> reviewEasyCount = const Value.absent(),
               }) => UserProgressCompanion(
                 id: id,
                 day: day,
                 xp: xp,
                 streak: streak,
+                reviewedCount: reviewedCount,
+                reviewAgainCount: reviewAgainCount,
+                reviewHardCount: reviewHardCount,
+                reviewGoodCount: reviewGoodCount,
+                reviewEasyCount: reviewEasyCount,
               ),
           createCompanionCallback:
               ({
@@ -2968,11 +3485,21 @@ class $$UserProgressTableTableManager
                 required DateTime day,
                 Value<int> xp = const Value.absent(),
                 Value<int> streak = const Value.absent(),
+                Value<int> reviewedCount = const Value.absent(),
+                Value<int> reviewAgainCount = const Value.absent(),
+                Value<int> reviewHardCount = const Value.absent(),
+                Value<int> reviewGoodCount = const Value.absent(),
+                Value<int> reviewEasyCount = const Value.absent(),
               }) => UserProgressCompanion.insert(
                 id: id,
                 day: day,
                 xp: xp,
                 streak: streak,
+                reviewedCount: reviewedCount,
+                reviewAgainCount: reviewAgainCount,
+                reviewHardCount: reviewHardCount,
+                reviewGoodCount: reviewGoodCount,
+                reviewEasyCount: reviewEasyCount,
               ),
           withReferenceMapper: (p0) => p0
               .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
@@ -3666,6 +4193,9 @@ typedef $$UserLessonTableCreateCompanionBuilder =
       Value<String> tags,
       Value<bool> isPublic,
       Value<bool> isCustomTitle,
+      Value<int> learnTermLimit,
+      Value<int> testQuestionLimit,
+      Value<int> matchPairLimit,
       Value<DateTime?> updatedAt,
     });
 typedef $$UserLessonTableUpdateCompanionBuilder =
@@ -3677,6 +4207,9 @@ typedef $$UserLessonTableUpdateCompanionBuilder =
       Value<String> tags,
       Value<bool> isPublic,
       Value<bool> isCustomTitle,
+      Value<int> learnTermLimit,
+      Value<int> testQuestionLimit,
+      Value<int> matchPairLimit,
       Value<DateTime?> updatedAt,
     });
 
@@ -3747,6 +4280,21 @@ class $$UserLessonTableFilterComposer
 
   ColumnFilters<bool> get isCustomTitle => $composableBuilder(
     column: $table.isCustomTitle,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get learnTermLimit => $composableBuilder(
+    column: $table.learnTermLimit,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get testQuestionLimit => $composableBuilder(
+    column: $table.testQuestionLimit,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get matchPairLimit => $composableBuilder(
+    column: $table.matchPairLimit,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -3825,6 +4373,21 @@ class $$UserLessonTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get learnTermLimit => $composableBuilder(
+    column: $table.learnTermLimit,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get testQuestionLimit => $composableBuilder(
+    column: $table.testQuestionLimit,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get matchPairLimit => $composableBuilder(
+    column: $table.matchPairLimit,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
     column: $table.updatedAt,
     builder: (column) => ColumnOrderings(column),
@@ -3862,6 +4425,21 @@ class $$UserLessonTableAnnotationComposer
 
   GeneratedColumn<bool> get isCustomTitle => $composableBuilder(
     column: $table.isCustomTitle,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get learnTermLimit => $composableBuilder(
+    column: $table.learnTermLimit,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get testQuestionLimit => $composableBuilder(
+    column: $table.testQuestionLimit,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get matchPairLimit => $composableBuilder(
+    column: $table.matchPairLimit,
     builder: (column) => column,
   );
 
@@ -3929,6 +4507,9 @@ class $$UserLessonTableTableManager
                 Value<String> tags = const Value.absent(),
                 Value<bool> isPublic = const Value.absent(),
                 Value<bool> isCustomTitle = const Value.absent(),
+                Value<int> learnTermLimit = const Value.absent(),
+                Value<int> testQuestionLimit = const Value.absent(),
+                Value<int> matchPairLimit = const Value.absent(),
                 Value<DateTime?> updatedAt = const Value.absent(),
               }) => UserLessonCompanion(
                 id: id,
@@ -3938,6 +4519,9 @@ class $$UserLessonTableTableManager
                 tags: tags,
                 isPublic: isPublic,
                 isCustomTitle: isCustomTitle,
+                learnTermLimit: learnTermLimit,
+                testQuestionLimit: testQuestionLimit,
+                matchPairLimit: matchPairLimit,
                 updatedAt: updatedAt,
               ),
           createCompanionCallback:
@@ -3949,6 +4533,9 @@ class $$UserLessonTableTableManager
                 Value<String> tags = const Value.absent(),
                 Value<bool> isPublic = const Value.absent(),
                 Value<bool> isCustomTitle = const Value.absent(),
+                Value<int> learnTermLimit = const Value.absent(),
+                Value<int> testQuestionLimit = const Value.absent(),
+                Value<int> matchPairLimit = const Value.absent(),
                 Value<DateTime?> updatedAt = const Value.absent(),
               }) => UserLessonCompanion.insert(
                 id: id,
@@ -3958,6 +4545,9 @@ class $$UserLessonTableTableManager
                 tags: tags,
                 isPublic: isPublic,
                 isCustomTitle: isCustomTitle,
+                learnTermLimit: learnTermLimit,
+                testQuestionLimit: testQuestionLimit,
+                matchPairLimit: matchPairLimit,
                 updatedAt: updatedAt,
               ),
           withReferenceMapper: (p0) => p0

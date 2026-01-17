@@ -54,9 +54,14 @@ class LessonPracticeScreen extends ConsumerWidget {
         LessonTermsArgs(lessonId, level.shortLabel, fallbackTitle),
       ),
     );
+    final settingsAsync = ref.watch(lessonPracticeSettingsProvider(lessonId));
     final title = titleAsync.maybeWhen(
       data: (value) => value,
       orElse: () => fallbackTitle,
+    );
+    final settings = settingsAsync.maybeWhen(
+      data: (value) => value,
+      orElse: () => LessonPracticeSettings.defaults,
     );
 
     return Scaffold(
@@ -79,6 +84,7 @@ class LessonPracticeScreen extends ConsumerWidget {
                 level: level,
                 language: language,
                 terms: terms,
+                termLimit: settings.learnTermLimit,
               );
             case LessonPracticeMode.test:
               return _TestMode(
@@ -86,6 +92,7 @@ class LessonPracticeScreen extends ConsumerWidget {
                 level: level,
                 language: language,
                 terms: terms,
+                questionLimit: settings.testQuestionLimit,
               );
             case LessonPracticeMode.match:
               return _MatchMode(
@@ -93,6 +100,7 @@ class LessonPracticeScreen extends ConsumerWidget {
                 level: level,
                 language: language,
                 terms: terms,
+                pairLimit: settings.matchPairLimit,
               );
             case LessonPracticeMode.write:
               return _WriteSpellMode(
@@ -139,12 +147,14 @@ class _LearnMode extends ConsumerStatefulWidget {
     required this.level,
     required this.language,
     required this.terms,
+    required this.termLimit,
   });
 
   final int lessonId;
   final StudyLevel level;
   final AppLanguage language;
   final List<UserLessonTermData> terms;
+  final int termLimit;
 
   @override
   ConsumerState<_LearnMode> createState() => _LearnModeState();
@@ -155,6 +165,8 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
   final TextEditingController _answerController = TextEditingController();
   final Map<int, int> _mastery = {};
   final Set<int> _learnedIds = {};
+  late final LessonRepository _lessonRepo;
+  late List<UserLessonTermData> _sessionTerms;
   bool _trackProgress = true;
   bool _showResult = false;
   bool _lastCorrect = false;
@@ -168,6 +180,8 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
   @override
   void initState() {
     super.initState();
+    _lessonRepo = ref.read(lessonRepositoryProvider);
+    _sessionTerms = _limitTerms(widget.terms, widget.termLimit);
     _nextQuestion();
   }
 
@@ -175,7 +189,7 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
   void dispose() {
     _answerController.dispose();
     if (_xpEarned > 0) {
-      ref.read(lessonRepositoryProvider).recordStudyActivity(xpDelta: _xpEarned);
+      _lessonRepo.recordStudyActivity(xpDelta: _xpEarned);
     }
     super.dispose();
   }
@@ -209,7 +223,7 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
               Text(
                 language.learnProgressLabel(
                   _masteredCount(),
-                  widget.terms.length,
+                  _sessionTerms.length,
                 ),
                 style: const TextStyle(fontWeight: FontWeight.w600),
               ),
@@ -257,6 +271,7 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
 
   void _restart() {
     setState(() {
+      _sessionTerms = _limitTerms(widget.terms, widget.termLimit);
       _mastery.clear();
       _learnedIds.clear();
       _correctCount = 0;
@@ -271,7 +286,7 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
     if (!reset) {
       setState(() => _showResult = false);
     }
-    final remaining = widget.terms
+    final remaining = _sessionTerms
         .where((term) => (_mastery[term.id] ?? 0) < 2)
         .toList();
     if (remaining.isEmpty) {
@@ -280,14 +295,14 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
     }
     final term = remaining[_random.nextInt(remaining.length)];
     final meaning = _termMeaning(term);
-    if (meaning.isEmpty || widget.terms.length < 4) {
+    if (meaning.isEmpty || _sessionTerms.length < 4) {
       _isChoice = false;
     } else {
       _isChoice = _random.nextBool();
     }
     _answerController.clear();
     if (_isChoice) {
-      final choices = _buildChoices(term, widget.terms);
+      final choices = _buildChoices(term, _sessionTerms);
       _current = _LearnQuestion(
         term: term,
         prompt: term.term,
@@ -315,6 +330,17 @@ class _LearnModeState extends ConsumerState<_LearnMode> {
       }
     }
     return count;
+  }
+
+  List<UserLessonTermData> _limitTerms(
+    List<UserLessonTermData> terms,
+    int limit,
+  ) {
+    if (limit <= 0 || terms.length <= limit) {
+      return terms;
+    }
+    final pool = List<UserLessonTermData>.from(terms)..shuffle(_random);
+    return pool.take(limit).toList();
   }
 
   void _handleChoice(String value) {
@@ -400,12 +426,14 @@ class _TestMode extends ConsumerStatefulWidget {
     required this.level,
     required this.language,
     required this.terms,
+    required this.questionLimit,
   });
 
   final int lessonId;
   final StudyLevel level;
   final AppLanguage language;
   final List<UserLessonTermData> terms;
+  final int questionLimit;
 
   @override
   ConsumerState<_TestMode> createState() => _TestModeState();
@@ -419,10 +447,12 @@ class _TestModeState extends ConsumerState<_TestMode> {
   final List<_TestAnswer> _answers = [];
   int _index = 0;
   int _xpEarned = 0;
+  late final LessonRepository _lessonRepo;
 
   @override
   void initState() {
     super.initState();
+    _lessonRepo = ref.read(lessonRepositoryProvider);
     _startedAt = DateTime.now();
     _questions = _buildQuestions();
   }
@@ -431,10 +461,9 @@ class _TestModeState extends ConsumerState<_TestMode> {
   void dispose() {
     _answerController.dispose();
     if (_answers.isNotEmpty) {
-      final repo = ref.read(lessonRepositoryProvider);
       final score = _answers.where((a) => a.correct).length;
       final total = _answers.length;
-      repo.recordAttempt(
+      _lessonRepo.recordAttempt(
         mode: 'test',
         level: widget.level.shortLabel,
         startedAt: _startedAt,
@@ -452,7 +481,7 @@ class _TestModeState extends ConsumerState<_TestMode> {
             .toList(),
       );
       if (_xpEarned > 0) {
-        repo.recordStudyActivity(xpDelta: _xpEarned);
+        _lessonRepo.recordStudyActivity(xpDelta: _xpEarned);
       }
     }
     super.dispose();
@@ -514,7 +543,9 @@ class _TestModeState extends ConsumerState<_TestMode> {
   List<_TestQuestion> _buildQuestions() {
     final shuffled = List<UserLessonTermData>.from(widget.terms)
       ..shuffle(_random);
-    final count = min(12, shuffled.length);
+    final limit =
+        widget.questionLimit <= 0 ? shuffled.length : widget.questionLimit;
+    final count = min(limit, shuffled.length);
     final selected = shuffled.take(count).toList();
     final questions = <_TestQuestion>[];
     for (var i = 0; i < selected.length; i++) {
@@ -591,12 +622,14 @@ class _MatchMode extends ConsumerStatefulWidget {
     required this.level,
     required this.language,
     required this.terms,
+    required this.pairLimit,
   });
 
   final int lessonId;
   final StudyLevel level;
   final AppLanguage language;
   final List<UserLessonTermData> terms;
+  final int pairLimit;
 
   @override
   ConsumerState<_MatchMode> createState() => _MatchModeState();
@@ -725,7 +758,9 @@ class _MatchModeState extends ConsumerState<_MatchMode> {
   }
 
   void _buildCards() {
-    final pairCount = min(8, widget.terms.length);
+    final limit =
+        widget.pairLimit <= 0 ? widget.terms.length : widget.pairLimit;
+    final pairCount = min(limit, widget.terms.length);
     final pairs = widget.terms.take(pairCount).toList();
     final cards = <_MatchCard>[];
     for (final term in pairs) {
@@ -826,6 +861,7 @@ class _WriteSpellModeState extends ConsumerState<_WriteSpellMode> {
   final TextEditingController _answerController = TextEditingController();
   late final AudioPlayer _audioPlayer;
   late final TtsService _ttsService;
+  late final LessonRepository _lessonRepo;
   int _index = 0;
   int _correctCount = 0;
   int _answeredCount = 0;
@@ -837,6 +873,7 @@ class _WriteSpellModeState extends ConsumerState<_WriteSpellMode> {
   @override
   void initState() {
     super.initState();
+    _lessonRepo = ref.read(lessonRepositoryProvider);
     _audioPlayer = AudioPlayer();
     _ttsService = TtsService();
     _queue = List<UserLessonTermData>.from(widget.terms)..shuffle(_random);
@@ -851,7 +888,7 @@ class _WriteSpellModeState extends ConsumerState<_WriteSpellMode> {
     _audioPlayer.dispose();
     _ttsService.dispose();
     if (_xpEarned > 0) {
-      ref.read(lessonRepositoryProvider).recordStudyActivity(xpDelta: _xpEarned);
+      _lessonRepo.recordStudyActivity(xpDelta: _xpEarned);
     }
     super.dispose();
   }

@@ -766,6 +766,61 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get practiceSettingsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice settings';
+      case AppLanguage.vi:
+        return 'C\xe0i \u0111\u1eb7t luy\u1ec7n t\u1eadp';
+      case AppLanguage.ja:
+        return '\u7df4\u7fd2\u8a2d\u5b9a';
+    }
+  }
+
+  String get practiceLimitHint {
+    switch (this) {
+      case AppLanguage.en:
+        return '0 = all terms';
+      case AppLanguage.vi:
+        return '0 = t\u1ea5t c\u1ea3 thu\u1eadt ng\u1eef';
+      case AppLanguage.ja:
+        return '0 = \u5168\u3066\u306e\u7528\u8a9e';
+    }
+  }
+
+  String get learnLimitLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Learn terms';
+      case AppLanguage.vi:
+        return 'Learn: s\u1ed1 t\u1eeb';
+      case AppLanguage.ja:
+        return 'Learn\u306e\u6570';
+    }
+  }
+
+  String get testLimitLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Test questions';
+      case AppLanguage.vi:
+        return 'Test: s\u1ed1 c\xe2u';
+      case AppLanguage.ja:
+        return 'Test\u306e\u554f\u984c\u6570';
+    }
+  }
+
+  String get matchLimitLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Match pairs';
+      case AppLanguage.vi:
+        return 'Match: s\u1ed1 c\u1eb7p';
+      case AppLanguage.ja:
+        return 'Match\u306e\u30da\u30a2\u6570';
+    }
+  }
+
   String tagsMetaLabel(String tags) {
     switch (this) {
       case AppLanguage.en:
@@ -2021,6 +2076,83 @@ extension AppLanguageLabels on AppLanguage {
         return '\u0110\u1ed9 ch\u00ednh x\xe1c';
       case AppLanguage.ja:
         return '\u6b63\u7b54\u7387';
+    }
+  }
+
+  String get reviewHistoryLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review history';
+      case AppLanguage.vi:
+        return 'L\u1ecbch s\u1eed \u00f4n t\u1eadp';
+      case AppLanguage.ja:
+        return '\u5fa9\u7fd2\u5c65\u6b74';
+    }
+  }
+
+  String get reviewHistoryEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No reviews yet.';
+      case AppLanguage.vi:
+        return 'Ch\u01b0a c\xf3 l\u01b0\u1ee3t \u00f4n t\u1eadp n\xe0o.';
+      case AppLanguage.ja:
+        return '\u5fa9\u7fd2\u5c65\u6b74\u306f\u307e\u3060\u3042\u308a\u307e\u305b\u3093\u3002';
+    }
+  }
+
+  String get attemptHistoryLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Attempt history';
+      case AppLanguage.vi:
+        return 'L\u1ecbch s\u1eed l\xe0m b\xe0i';
+      case AppLanguage.ja:
+        return '\u30c6\u30b9\u30c8\u5c65\u6b74';
+    }
+  }
+
+  String get attemptHistoryEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No attempts yet.';
+      case AppLanguage.vi:
+        return 'Ch\u01b0a c\xf3 l\u1ea7n l\xe0m n\xe0o.';
+      case AppLanguage.ja:
+        return '\u5c65\u6b74\u306f\u307e\u3060\u3042\u308a\u307e\u305b\u3093\u3002';
+    }
+  }
+
+  String get attemptModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mode';
+      case AppLanguage.vi:
+        return 'Ch\u1ebf \u0111\u1ed9';
+      case AppLanguage.ja:
+        return '\u30e2\u30fc\u30c9';
+    }
+  }
+
+  String get attemptDurationLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Duration';
+      case AppLanguage.vi:
+        return 'Th\u1eddi l\u01b0\u1ee3ng';
+      case AppLanguage.ja:
+        return '\u6642\u9593';
+    }
+  }
+
+  String attemptScoreLabel(int score, int total, int accuracy) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Score: $score/$total ($accuracy%)';
+      case AppLanguage.vi:
+        return '\u0110i\u1ec3m: $score/$total ($accuracy%)';
+      case AppLanguage.ja:
+        return '\u30b9\u30b3\u30a2: $score/$total ($accuracy%)';
     }
   }
 

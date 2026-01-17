@@ -43,6 +43,23 @@ final progressSummaryProvider = FutureProvider<ProgressSummary>((ref) async {
   return repo.fetchProgressSummary();
 });
 
+final lessonPracticeSettingsProvider =
+    FutureProvider.family<LessonPracticeSettings, int>((ref, lessonId) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchLessonPracticeSettings(lessonId);
+});
+
+final reviewHistoryProvider = FutureProvider<List<ReviewDaySummary>>((ref) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchReviewHistory();
+});
+
+final attemptHistoryProvider =
+    FutureProvider<List<AttemptSummary>>((ref) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchAttemptHistory();
+});
+
 class LessonTitleArgs {
   const LessonTitleArgs(this.lessonId, this.fallback);
 
@@ -103,6 +120,24 @@ class LessonMeta {
   final DateTime? updatedAt;
 }
 
+class LessonPracticeSettings {
+  const LessonPracticeSettings({
+    required this.learnTermLimit,
+    required this.testQuestionLimit,
+    required this.matchPairLimit,
+  });
+
+  static const LessonPracticeSettings defaults = LessonPracticeSettings(
+    learnTermLimit: 0,
+    testQuestionLimit: 12,
+    matchPairLimit: 8,
+  );
+
+  final int learnTermLimit;
+  final int testQuestionLimit;
+  final int matchPairLimit;
+}
+
 class LessonTermDraft {
   const LessonTermDraft({
     required this.term,
@@ -125,6 +160,47 @@ class AttemptAnswerDraft {
   final int questionId;
   final int selectedIndex;
   final bool isCorrect;
+}
+
+class AttemptSummary {
+  const AttemptSummary({
+    required this.id,
+    required this.mode,
+    required this.level,
+    required this.startedAt,
+    required this.finishedAt,
+    required this.score,
+    required this.total,
+  });
+
+  final int id;
+  final String mode;
+  final String level;
+  final DateTime startedAt;
+  final DateTime? finishedAt;
+  final int score;
+  final int total;
+
+  Duration? get duration =>
+      finishedAt == null ? null : finishedAt!.difference(startedAt);
+}
+
+class ReviewDaySummary {
+  const ReviewDaySummary({
+    required this.day,
+    required this.reviewed,
+    required this.again,
+    required this.hard,
+    required this.good,
+    required this.easy,
+  });
+
+  final DateTime day;
+  final int reviewed;
+  final int again;
+  final int hard;
+  final int good;
+  final int easy;
 }
 
 class ProgressSummary {
@@ -161,6 +237,22 @@ class LessonRepository {
     return existing.isCustomTitle ? existing.title : fallback;
   }
 
+  Future<LessonPracticeSettings> fetchLessonPracticeSettings(
+    int lessonId,
+  ) async {
+    final existing = await (_db.select(_db.userLesson)
+          ..where((tbl) => tbl.id.equals(lessonId)))
+        .getSingleOrNull();
+    if (existing == null) {
+      return LessonPracticeSettings.defaults;
+    }
+    return LessonPracticeSettings(
+      learnTermLimit: existing.learnTermLimit,
+      testQuestionLimit: existing.testQuestionLimit,
+      matchPairLimit: existing.matchPairLimit,
+    );
+  }
+
   Future<UserLessonData> ensureLesson({
     required int lessonId,
     required String level,
@@ -180,6 +272,12 @@ class LessonRepository {
             description: const Value(''),
             isPublic: const Value(true),
             isCustomTitle: const Value(false),
+            learnTermLimit:
+                Value(LessonPracticeSettings.defaults.learnTermLimit),
+            testQuestionLimit:
+                Value(LessonPracticeSettings.defaults.testQuestionLimit),
+            matchPairLimit:
+                Value(LessonPracticeSettings.defaults.matchPairLimit),
             updatedAt: Value(DateTime.now()),
           ),
         );
@@ -359,6 +457,25 @@ class LessonRepository {
     ));
   }
 
+  Future<void> updateLessonPracticeSettings(
+    int lessonId, {
+    int? learnTermLimit,
+    int? testQuestionLimit,
+    int? matchPairLimit,
+  }) {
+    return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
+        .write(UserLessonCompanion(
+      learnTermLimit:
+          learnTermLimit == null ? const Value.absent() : Value(learnTermLimit),
+      testQuestionLimit: testQuestionLimit == null
+          ? const Value.absent()
+          : Value(testQuestionLimit),
+      matchPairLimit:
+          matchPairLimit == null ? const Value.absent() : Value(matchPairLimit),
+      updatedAt: Value(DateTime.now()),
+    ));
+  }
+
   Future<int> addTerm(
     int lessonId, {
     String? term,
@@ -467,35 +584,79 @@ class LessonRepository {
     await _touchLesson(lessonId);
   }
 
+  Future<UserProgressData> _ensureProgressRow(DateTime day) async {
+    final existing = await (_db.select(_db.userProgress)
+          ..where((tbl) => tbl.day.equals(day)))
+        .getSingleOrNull();
+    if (existing != null) {
+      return existing;
+    }
+    final yesterday = day.subtract(const Duration(days: 1));
+    final yesterdayRow = await (_db.select(_db.userProgress)
+          ..where((tbl) => tbl.day.equals(yesterday)))
+        .getSingleOrNull();
+    final nextStreak = yesterdayRow == null ? 1 : yesterdayRow.streak + 1;
+    final id = await _db.into(_db.userProgress).insert(
+          UserProgressCompanion.insert(
+            day: day,
+            xp: const Value(0),
+            streak: Value(nextStreak),
+            reviewedCount: const Value(0),
+            reviewAgainCount: const Value(0),
+            reviewHardCount: const Value(0),
+            reviewGoodCount: const Value(0),
+            reviewEasyCount: const Value(0),
+          ),
+        );
+    return (_db.select(_db.userProgress)..where((tbl) => tbl.id.equals(id)))
+        .getSingle();
+  }
+
   Future<void> recordStudyActivity({required int xpDelta}) async {
     if (xpDelta <= 0) {
       return;
     }
     final today = _startOfDay(DateTime.now());
-    final todayRow = await (_db.select(_db.userProgress)
-          ..where((tbl) => tbl.day.equals(today)))
-        .getSingleOrNull();
-    if (todayRow != null) {
-      await (_db.update(_db.userProgress)
-            ..where((tbl) => tbl.id.equals(todayRow.id)))
-          .write(UserProgressCompanion(
-        xp: Value(todayRow.xp + xpDelta),
-        streak: Value(todayRow.streak),
-      ));
-      return;
+    final todayRow = await _ensureProgressRow(today);
+    await (_db.update(_db.userProgress)
+          ..where((tbl) => tbl.id.equals(todayRow.id)))
+        .write(UserProgressCompanion(
+      xp: Value(todayRow.xp + xpDelta),
+      streak: Value(todayRow.streak),
+    ));
+  }
+
+  Future<void> recordReview({required int quality}) async {
+    final today = _startOfDay(DateTime.now());
+    final todayRow = await _ensureProgressRow(today);
+    var againDelta = 0;
+    var hardDelta = 0;
+    var goodDelta = 0;
+    var easyDelta = 0;
+    switch (quality) {
+      case 0:
+        againDelta = 1;
+        break;
+      case 3:
+        hardDelta = 1;
+        break;
+      case 4:
+        goodDelta = 1;
+        break;
+      case 5:
+        easyDelta = 1;
+        break;
     }
-    final yesterday = today.subtract(const Duration(days: 1));
-    final yesterdayRow = await (_db.select(_db.userProgress)
-          ..where((tbl) => tbl.day.equals(yesterday)))
-        .getSingleOrNull();
-    final nextStreak = yesterdayRow == null ? 1 : yesterdayRow.streak + 1;
-    await _db.into(_db.userProgress).insert(
-          UserProgressCompanion.insert(
-            day: today,
-            xp: Value(xpDelta),
-            streak: Value(nextStreak),
-          ),
-        );
+    await (_db.update(_db.userProgress)
+          ..where((tbl) => tbl.id.equals(todayRow.id)))
+        .write(UserProgressCompanion(
+      reviewedCount: Value(todayRow.reviewedCount + 1),
+      reviewAgainCount: Value(todayRow.reviewAgainCount + againDelta),
+      reviewHardCount: Value(todayRow.reviewHardCount + hardDelta),
+      reviewGoodCount: Value(todayRow.reviewGoodCount + goodDelta),
+      reviewEasyCount: Value(todayRow.reviewEasyCount + easyDelta),
+      streak: Value(todayRow.streak),
+    ));
   }
 
   Future<int> recordAttempt({
@@ -535,6 +696,54 @@ class LessonRepository {
       }
       return attemptId;
     });
+  }
+
+  Future<List<ReviewDaySummary>> fetchReviewHistory({int limit = 30}) async {
+    final rows = await (_db.select(_db.userProgress)
+          ..where((tbl) => tbl.reviewedCount.isBiggerThanValue(0))
+          ..orderBy([
+            (tbl) =>
+                OrderingTerm(expression: tbl.day, mode: OrderingMode.desc),
+          ])
+          ..limit(limit))
+        .get();
+    return rows
+        .map(
+          (row) => ReviewDaySummary(
+            day: row.day,
+            reviewed: row.reviewedCount,
+            again: row.reviewAgainCount,
+            hard: row.reviewHardCount,
+            good: row.reviewGoodCount,
+            easy: row.reviewEasyCount,
+          ),
+        )
+        .toList();
+  }
+
+  Future<List<AttemptSummary>> fetchAttemptHistory({int limit = 50}) async {
+    final rows = await (_db.select(_db.attempt)
+          ..orderBy([
+            (tbl) => OrderingTerm(
+                  expression: tbl.startedAt,
+                  mode: OrderingMode.desc,
+                ),
+          ])
+          ..limit(limit))
+        .get();
+    return rows
+        .map(
+          (row) => AttemptSummary(
+            id: row.id,
+            mode: row.mode,
+            level: row.level,
+            startedAt: row.startedAt,
+            finishedAt: row.finishedAt,
+            score: row.score ?? 0,
+            total: row.total ?? 0,
+          ),
+        )
+        .toList();
   }
 
   Future<ProgressSummary> fetchProgressSummary() async {

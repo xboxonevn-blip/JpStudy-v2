@@ -15,6 +15,11 @@ class UserProgress extends Table {
   DateTimeColumn get day => dateTime()();
   IntColumn get xp => integer().withDefault(const Constant(0))();
   IntColumn get streak => integer().withDefault(const Constant(0))();
+  IntColumn get reviewedCount => integer().withDefault(const Constant(0))();
+  IntColumn get reviewAgainCount => integer().withDefault(const Constant(0))();
+  IntColumn get reviewHardCount => integer().withDefault(const Constant(0))();
+  IntColumn get reviewGoodCount => integer().withDefault(const Constant(0))();
+  IntColumn get reviewEasyCount => integer().withDefault(const Constant(0))();
 }
 
 class Attempt extends Table {
@@ -43,6 +48,9 @@ class UserLesson extends Table {
   TextColumn get tags => text().withDefault(const Constant(''))();
   BoolColumn get isPublic => boolean().withDefault(const Constant(true))();
   BoolColumn get isCustomTitle => boolean().withDefault(const Constant(false))();
+  IntColumn get learnTermLimit => integer().withDefault(const Constant(0))();
+  IntColumn get testQuestionLimit => integer().withDefault(const Constant(12))();
+  IntColumn get matchPairLimit => integer().withDefault(const Constant(8))();
   DateTimeColumn get updatedAt => dateTime().nullable()();
 
   @override

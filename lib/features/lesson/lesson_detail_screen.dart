@@ -470,6 +470,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       lastReviewedAt: now,
       nextReviewAt: updated.nextReviewAt,
     );
+    await repo.recordReview(quality: quality);
     ref.invalidate(lessonDueTermsProvider(widget.lessonId));
     if (!mounted) {
       return;
@@ -547,9 +548,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final next = ease + delta;
     if (next < 1.3) {
       return 1.3;
-    }
-    if (next > 2.5) {
-      return 2.5;
     }
     return next;
   }

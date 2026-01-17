@@ -27,6 +27,9 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
   late final TextEditingController _titleController;
   late final TextEditingController _descriptionController;
   late final TextEditingController _tagsController;
+  late final TextEditingController _learnLimitController;
+  late final TextEditingController _testLimitController;
+  late final TextEditingController _matchLimitController;
   late String _defaultTitle;
   bool _hintsEnabled = true;
   bool _isPublic = true;
@@ -38,6 +41,9 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     _titleController = TextEditingController();
     _descriptionController = TextEditingController();
     _tagsController = TextEditingController();
+    _learnLimitController = TextEditingController();
+    _testLimitController = TextEditingController();
+    _matchLimitController = TextEditingController();
     _load();
   }
 
@@ -46,6 +52,9 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     _titleController.dispose();
     _descriptionController.dispose();
     _tagsController.dispose();
+    _learnLimitController.dispose();
+    _testLimitController.dispose();
+    _matchLimitController.dispose();
     super.dispose();
   }
 
@@ -69,6 +78,9 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       _titleController.text = lesson.title;
       _descriptionController.text = lesson.description;
       _tagsController.text = lesson.tags;
+      _learnLimitController.text = lesson.learnTermLimit.toString();
+      _testLimitController.text = lesson.testQuestionLimit.toString();
+      _matchLimitController.text = lesson.matchPairLimit.toString();
       _terms
         ..clear()
         ..addAll(
@@ -104,6 +116,29 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
           ),
         );
     });
+  }
+
+  int _parseLimit(String value) {
+    final parsed = int.tryParse(value.trim());
+    if (parsed == null || parsed < 0) {
+      return 0;
+    }
+    return parsed;
+  }
+
+  Future<void> _updatePracticeSettings(
+    LessonRepository repo, {
+    int? learnTermLimit,
+    int? testQuestionLimit,
+    int? matchPairLimit,
+  }) async {
+    await repo.updateLessonPracticeSettings(
+      widget.lessonId,
+      learnTermLimit: learnTermLimit,
+      testQuestionLimit: testQuestionLimit,
+      matchPairLimit: matchPairLimit,
+    );
+    ref.invalidate(lessonPracticeSettingsProvider(widget.lessonId));
   }
 
   @override
@@ -179,6 +214,58 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                 hintText: language.tagsHint,
               ),
             ),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            language.practiceSettingsLabel,
+            style: const TextStyle(fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(height: 8),
+          _LabeledField(
+            label: language.learnLimitLabel,
+            child: TextField(
+              controller: _learnLimitController,
+              keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              onChanged: (value) => _updatePracticeSettings(
+                repo,
+                learnTermLimit: _parseLimit(value),
+              ),
+              decoration: const InputDecoration(),
+            ),
+          ),
+          const SizedBox(height: 12),
+          _LabeledField(
+            label: language.testLimitLabel,
+            child: TextField(
+              controller: _testLimitController,
+              keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              onChanged: (value) => _updatePracticeSettings(
+                repo,
+                testQuestionLimit: _parseLimit(value),
+              ),
+              decoration: const InputDecoration(),
+            ),
+          ),
+          const SizedBox(height: 12),
+          _LabeledField(
+            label: language.matchLimitLabel,
+            child: TextField(
+              controller: _matchLimitController,
+              keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              onChanged: (value) => _updatePracticeSettings(
+                repo,
+                matchPairLimit: _parseLimit(value),
+              ),
+              decoration: const InputDecoration(),
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            language.practiceLimitHint,
+            style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
           ),
           const SizedBox(height: 18),
           Row(

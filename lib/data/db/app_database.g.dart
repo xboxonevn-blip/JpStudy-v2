@@ -2084,17 +2084,6 @@ class $UserLessonTermTable extends UserLessonTerm
     requiredDuringInsert: false,
     defaultValue: const Constant(''),
   );
-  static const VerificationMeta _imagePathMeta = const VerificationMeta(
-    'imagePath',
-  );
-  @override
-  late final GeneratedColumn<String> imagePath = GeneratedColumn<String>(
-    'image_path',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
   static const VerificationMeta _orderIndexMeta = const VerificationMeta(
     'orderIndex',
   );
@@ -2114,7 +2103,6 @@ class $UserLessonTermTable extends UserLessonTerm
     term,
     reading,
     definition,
-    imagePath,
     orderIndex,
   ];
   @override
@@ -2158,12 +2146,6 @@ class $UserLessonTermTable extends UserLessonTerm
         definition.isAcceptableOrUnknown(data['definition']!, _definitionMeta),
       );
     }
-    if (data.containsKey('image_path')) {
-      context.handle(
-        _imagePathMeta,
-        imagePath.isAcceptableOrUnknown(data['image_path']!, _imagePathMeta),
-      );
-    }
     if (data.containsKey('order_index')) {
       context.handle(
         _orderIndexMeta,
@@ -2199,10 +2181,6 @@ class $UserLessonTermTable extends UserLessonTerm
         DriftSqlType.string,
         data['${effectivePrefix}definition'],
       )!,
-      imagePath: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}image_path'],
-      ),
       orderIndex: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
         data['${effectivePrefix}order_index'],
@@ -2223,7 +2201,6 @@ class UserLessonTermData extends DataClass
   final String term;
   final String reading;
   final String definition;
-  final String? imagePath;
   final int orderIndex;
   const UserLessonTermData({
     required this.id,
@@ -2231,7 +2208,6 @@ class UserLessonTermData extends DataClass
     required this.term,
     required this.reading,
     required this.definition,
-    this.imagePath,
     required this.orderIndex,
   });
   @override
@@ -2242,9 +2218,6 @@ class UserLessonTermData extends DataClass
     map['term'] = Variable<String>(term);
     map['reading'] = Variable<String>(reading);
     map['definition'] = Variable<String>(definition);
-    if (!nullToAbsent || imagePath != null) {
-      map['image_path'] = Variable<String>(imagePath);
-    }
     map['order_index'] = Variable<int>(orderIndex);
     return map;
   }
@@ -2256,9 +2229,6 @@ class UserLessonTermData extends DataClass
       term: Value(term),
       reading: Value(reading),
       definition: Value(definition),
-      imagePath: imagePath == null && nullToAbsent
-          ? const Value.absent()
-          : Value(imagePath),
       orderIndex: Value(orderIndex),
     );
   }
@@ -2274,7 +2244,6 @@ class UserLessonTermData extends DataClass
       term: serializer.fromJson<String>(json['term']),
       reading: serializer.fromJson<String>(json['reading']),
       definition: serializer.fromJson<String>(json['definition']),
-      imagePath: serializer.fromJson<String?>(json['imagePath']),
       orderIndex: serializer.fromJson<int>(json['orderIndex']),
     );
   }
@@ -2287,7 +2256,6 @@ class UserLessonTermData extends DataClass
       'term': serializer.toJson<String>(term),
       'reading': serializer.toJson<String>(reading),
       'definition': serializer.toJson<String>(definition),
-      'imagePath': serializer.toJson<String?>(imagePath),
       'orderIndex': serializer.toJson<int>(orderIndex),
     };
   }
@@ -2298,7 +2266,6 @@ class UserLessonTermData extends DataClass
     String? term,
     String? reading,
     String? definition,
-    Value<String?> imagePath = const Value.absent(),
     int? orderIndex,
   }) => UserLessonTermData(
     id: id ?? this.id,
@@ -2306,7 +2273,6 @@ class UserLessonTermData extends DataClass
     term: term ?? this.term,
     reading: reading ?? this.reading,
     definition: definition ?? this.definition,
-    imagePath: imagePath.present ? imagePath.value : this.imagePath,
     orderIndex: orderIndex ?? this.orderIndex,
   );
   UserLessonTermData copyWithCompanion(UserLessonTermCompanion data) {
@@ -2318,7 +2284,6 @@ class UserLessonTermData extends DataClass
       definition: data.definition.present
           ? data.definition.value
           : this.definition,
-      imagePath: data.imagePath.present ? data.imagePath.value : this.imagePath,
       orderIndex: data.orderIndex.present
           ? data.orderIndex.value
           : this.orderIndex,
@@ -2333,22 +2298,14 @@ class UserLessonTermData extends DataClass
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
-          ..write('imagePath: $imagePath, ')
           ..write('orderIndex: $orderIndex')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode => Object.hash(
-    id,
-    lessonId,
-    term,
-    reading,
-    definition,
-    imagePath,
-    orderIndex,
-  );
+  int get hashCode =>
+      Object.hash(id, lessonId, term, reading, definition, orderIndex);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -2358,7 +2315,6 @@ class UserLessonTermData extends DataClass
           other.term == this.term &&
           other.reading == this.reading &&
           other.definition == this.definition &&
-          other.imagePath == this.imagePath &&
           other.orderIndex == this.orderIndex);
 }
 
@@ -2368,7 +2324,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
   final Value<String> term;
   final Value<String> reading;
   final Value<String> definition;
-  final Value<String?> imagePath;
   final Value<int> orderIndex;
   const UserLessonTermCompanion({
     this.id = const Value.absent(),
@@ -2376,7 +2331,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
-    this.imagePath = const Value.absent(),
     this.orderIndex = const Value.absent(),
   });
   UserLessonTermCompanion.insert({
@@ -2385,7 +2339,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
-    this.imagePath = const Value.absent(),
     this.orderIndex = const Value.absent(),
   }) : lessonId = Value(lessonId);
   static Insertable<UserLessonTermData> custom({
@@ -2394,7 +2347,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Expression<String>? term,
     Expression<String>? reading,
     Expression<String>? definition,
-    Expression<String>? imagePath,
     Expression<int>? orderIndex,
   }) {
     return RawValuesInsertable({
@@ -2403,7 +2355,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       if (term != null) 'term': term,
       if (reading != null) 'reading': reading,
       if (definition != null) 'definition': definition,
-      if (imagePath != null) 'image_path': imagePath,
       if (orderIndex != null) 'order_index': orderIndex,
     });
   }
@@ -2414,7 +2365,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Value<String>? term,
     Value<String>? reading,
     Value<String>? definition,
-    Value<String?>? imagePath,
     Value<int>? orderIndex,
   }) {
     return UserLessonTermCompanion(
@@ -2423,7 +2373,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       term: term ?? this.term,
       reading: reading ?? this.reading,
       definition: definition ?? this.definition,
-      imagePath: imagePath ?? this.imagePath,
       orderIndex: orderIndex ?? this.orderIndex,
     );
   }
@@ -2446,9 +2395,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     if (definition.present) {
       map['definition'] = Variable<String>(definition.value);
     }
-    if (imagePath.present) {
-      map['image_path'] = Variable<String>(imagePath.value);
-    }
     if (orderIndex.present) {
       map['order_index'] = Variable<int>(orderIndex.value);
     }
@@ -2463,7 +2409,6 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
-          ..write('imagePath: $imagePath, ')
           ..write('orderIndex: $orderIndex')
           ..write(')'))
         .toString();
@@ -3913,7 +3858,6 @@ typedef $$UserLessonTermTableCreateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
-      Value<String?> imagePath,
       Value<int> orderIndex,
     });
 typedef $$UserLessonTermTableUpdateCompanionBuilder =
@@ -3923,7 +3867,6 @@ typedef $$UserLessonTermTableUpdateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
-      Value<String?> imagePath,
       Value<int> orderIndex,
     });
 
@@ -3989,11 +3932,6 @@ class $$UserLessonTermTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get imagePath => $composableBuilder(
-    column: $table.imagePath,
-    builder: (column) => ColumnFilters(column),
-  );
-
   ColumnFilters<int> get orderIndex => $composableBuilder(
     column: $table.orderIndex,
     builder: (column) => ColumnFilters(column),
@@ -4052,11 +3990,6 @@ class $$UserLessonTermTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get imagePath => $composableBuilder(
-    column: $table.imagePath,
-    builder: (column) => ColumnOrderings(column),
-  );
-
   ColumnOrderings<int> get orderIndex => $composableBuilder(
     column: $table.orderIndex,
     builder: (column) => ColumnOrderings(column),
@@ -4108,9 +4041,6 @@ class $$UserLessonTermTableAnnotationComposer
     column: $table.definition,
     builder: (column) => column,
   );
-
-  GeneratedColumn<String> get imagePath =>
-      $composableBuilder(column: $table.imagePath, builder: (column) => column);
 
   GeneratedColumn<int> get orderIndex => $composableBuilder(
     column: $table.orderIndex,
@@ -4176,7 +4106,6 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
-                Value<String?> imagePath = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
               }) => UserLessonTermCompanion(
                 id: id,
@@ -4184,7 +4113,6 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
-                imagePath: imagePath,
                 orderIndex: orderIndex,
               ),
           createCompanionCallback:
@@ -4194,7 +4122,6 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
-                Value<String?> imagePath = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
               }) => UserLessonTermCompanion.insert(
                 id: id,
@@ -4202,7 +4129,6 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
-                imagePath: imagePath,
                 orderIndex: orderIndex,
               ),
           withReferenceMapper: (p0) => p0

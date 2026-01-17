@@ -54,6 +54,5 @@ class UserLessonTerm extends Table {
   TextColumn get term => text().withDefault(const Constant(''))();
   TextColumn get reading => text().withDefault(const Constant(''))();
   TextColumn get definition => text().withDefault(const Constant(''))();
-  TextColumn get imagePath => text().nullable()();
   IntColumn get orderIndex => integer().withDefault(const Constant(0))();
 }

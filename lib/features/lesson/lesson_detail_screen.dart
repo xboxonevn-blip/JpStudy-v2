@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jpstudy/core/app_language.dart';
@@ -30,6 +31,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _autoPlay = false;
   bool _shuffle = false;
   bool _focusMode = false;
+  final Set<int> _flippedTermIds = {};
   double _speed = 1.0;
   _LessonMode _mode = _LessonMode.learn;
   int _currentIndex = 0;
@@ -74,6 +76,10 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final isSaved = terms.isNotEmpty && _starredTermIds.length == terms.length;
     final isStarred = currentTerm != null &&
         _starredTermIds.contains(currentTerm.id);
+    final isFlipped =
+        currentTerm != null && _flippedTermIds.contains(currentTerm.id);
+    final canFlip = currentTerm?.definition.trim().isNotEmpty == true;
+    final onFlip = canFlip ? () => _toggleFlip(currentTerm) : null;
 
     if (_autoPlay && totalTerms != _autoTotal) {
       _autoTotal = totalTerms;
@@ -121,50 +127,66 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
           const SizedBox(width: 12),
         ],
       ),
-      body: LayoutBuilder(
-        builder: (context, _) {
-          return SingleChildScrollView(
-            padding: EdgeInsets.fromLTRB(20, _focusMode ? 20 : 12, 20, 24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                if (!_focusMode) ...[
-                  _ModeSwitcher(
-                    language: language,
-                    mode: _mode,
-                    onModeChanged: (mode) => setState(() => _mode = mode),
-                  ),
-                  const SizedBox(height: 20),
-                ],
-                Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 960),
-                    child: SizedBox(
-                      height: _focusMode ? 520 : 460,
-                      child: _LessonCard(
-                        language: language,
-                        termsAsync: termsAsync,
-                        term: currentTerm,
-                        showHints: _showHints,
-                        trackProgress: _trackProgress,
-                        isStarred: isStarred,
-                        onShowHintsChanged: (value) =>
-                            setState(() => _showHints = value),
-                        onEdit: () => context.push(
-                          '/lesson/${widget.lessonId}/edit',
+      body: FocusableActionDetector(
+        autofocus: true,
+        shortcuts: {
+          LogicalKeySet(LogicalKeyboardKey.space): const ActivateIntent(),
+        },
+        actions: {
+          ActivateIntent: CallbackAction<ActivateIntent>(
+            onInvoke: (_) {
+              onFlip?.call();
+              return null;
+            },
+          ),
+        },
+        child: LayoutBuilder(
+          builder: (context, _) {
+            return SingleChildScrollView(
+              padding: EdgeInsets.fromLTRB(20, _focusMode ? 20 : 12, 20, 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  if (!_focusMode) ...[
+                    _ModeSwitcher(
+                      language: language,
+                      mode: _mode,
+                      onModeChanged: (mode) => setState(() => _mode = mode),
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                  Center(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 960),
+                      child: SizedBox(
+                        height: _focusMode ? 520 : 460,
+                        child: _LessonCard(
+                          language: language,
+                          termsAsync: termsAsync,
+                          term: currentTerm,
+                          showHints: _showHints,
+                          isFlipped: isFlipped,
+                          trackProgress: _trackProgress,
+                          isStarred: isStarred,
+                          onShowHintsChanged: (value) =>
+                              setState(() => _showHints = value),
+                          onFlip: onFlip,
+                          onEdit: () => context.push(
+                            '/lesson/${widget.lessonId}/edit',
+                          ),
+                          onAudio: () => _showAudioNotice(language),
+                          onStar: currentTerm == null
+                              ? null
+                              : () => _toggleStar(currentTerm),
                         ),
-                        onAudio: () => _showAudioNotice(language),
-                        onStar: currentTerm == null
-                            ? null
-                            : () => _toggleStar(currentTerm),
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          );
-        },
+                ],
+              ),
+            );
+          },
+        ),
       ),
       bottomNavigationBar: _PlayerBar(
         language: language,
@@ -227,6 +249,19 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         _starredTermIds.remove(term.id);
       } else {
         _starredTermIds.add(term.id);
+      }
+    });
+  }
+
+  void _toggleFlip(UserLessonTermData? term) {
+    if (term == null || term.definition.trim().isEmpty) {
+      return;
+    }
+    setState(() {
+      if (_flippedTermIds.contains(term.id)) {
+        _flippedTermIds.remove(term.id);
+      } else {
+        _flippedTermIds.add(term.id);
       }
     });
   }
@@ -625,9 +660,11 @@ class _LessonCard extends StatelessWidget {
     required this.termsAsync,
     required this.term,
     required this.showHints,
+    required this.isFlipped,
     required this.trackProgress,
     required this.isStarred,
     required this.onShowHintsChanged,
+    required this.onFlip,
     required this.onEdit,
     required this.onAudio,
     required this.onStar,
@@ -637,9 +674,11 @@ class _LessonCard extends StatelessWidget {
   final AsyncValue<List<UserLessonTermData>> termsAsync;
   final UserLessonTermData? term;
   final bool showHints;
+  final bool isFlipped;
   final bool trackProgress;
   final bool isStarred;
   final ValueChanged<bool> onShowHintsChanged;
+  final VoidCallback? onFlip;
   final VoidCallback onEdit;
   final VoidCallback onAudio;
   final VoidCallback? onStar;
@@ -689,11 +728,15 @@ class _LessonCard extends StatelessWidget {
           ),
           Expanded(
             child: Center(
-              child: _CardContent(
-                language: language,
-                termsAsync: termsAsync,
-                term: term,
-                showHints: showHints,
+              child: GestureDetector(
+                onTap: onFlip,
+                child: _CardContent(
+                  language: language,
+                  termsAsync: termsAsync,
+                  term: term,
+                  showHints: showHints,
+                  isFlipped: isFlipped,
+                ),
               ),
             ),
           ),
@@ -710,12 +753,14 @@ class _CardContent extends StatelessWidget {
     required this.termsAsync,
     required this.term,
     required this.showHints,
+    required this.isFlipped,
   });
 
   final AppLanguage language;
   final AsyncValue<List<UserLessonTermData>> termsAsync;
   final UserLessonTermData? term;
   final bool showHints;
+  final bool isFlipped;
 
   @override
   Widget build(BuildContext context) {
@@ -725,40 +770,138 @@ class _CardContent extends StatelessWidget {
     if (termsAsync.hasError) {
       return Text(language.loadErrorLabel);
     }
-    if (term == null) {
+    final resolvedTerm = term;
+    if (resolvedTerm == null) {
       return const SizedBox.shrink();
     }
 
-    return Column(
+    final showBack = isFlipped && resolvedTerm.definition.trim().isNotEmpty;
+    final hintText =
+        showHints ? _hintForDefinition(resolvedTerm.definition) : '';
+
+    final front = _CardFace(
+      key: const ValueKey(false),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            resolvedTerm.term,
+            style: const TextStyle(
+              fontSize: 36,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF1C2440),
+            ),
+            textAlign: TextAlign.center,
+          ),
+          if (resolvedTerm.reading.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Text(
+              resolvedTerm.reading,
+              style: const TextStyle(fontSize: 18, color: Color(0xFF6B7390)),
+              textAlign: TextAlign.center,
+            ),
+          ],
+          if (hintText.isNotEmpty) ...[
+            const SizedBox(height: 16),
+            Text(
+              hintText,
+              style: const TextStyle(fontSize: 14, color: Color(0xFF4D5877)),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ],
+      ),
+    );
+
+    final backContent = Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          term!.term,
+          language.definitionLabel,
           style: const TextStyle(
-            fontSize: 36,
-            fontWeight: FontWeight.w700,
-            color: Color(0xFF1C2440),
+            fontSize: 12,
+            color: Color(0xFF8F9BB3),
+            fontWeight: FontWeight.w600,
           ),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          resolvedTerm.definition,
+          style: const TextStyle(fontSize: 18, color: Color(0xFF1C2440)),
           textAlign: TextAlign.center,
         ),
-        if (term!.reading.isNotEmpty) ...[
-          const SizedBox(height: 6),
-          Text(
-            term!.reading,
-            style: const TextStyle(fontSize: 18, color: Color(0xFF6B7390)),
-            textAlign: TextAlign.center,
-          ),
-        ],
-        if (showHints && term!.definition.isNotEmpty) ...[
-          const SizedBox(height: 16),
-          Text(
-            term!.definition,
-            style: const TextStyle(fontSize: 16, color: Color(0xFF4D5877)),
-            textAlign: TextAlign.center,
-          ),
-        ],
       ],
     );
+
+    final back = _CardFace(
+      key: const ValueKey(true),
+      child: Transform(
+        alignment: Alignment.center,
+        transform: Matrix4.rotationY(pi),
+        child: backContent,
+      ),
+    );
+
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 320),
+      switchInCurve: Curves.easeInOut,
+      switchOutCurve: Curves.easeInOut,
+      transitionBuilder: (child, animation) {
+        final rotate = Tween(begin: pi, end: 0.0).animate(animation);
+        return AnimatedBuilder(
+          animation: rotate,
+          child: child,
+          builder: (context, child) {
+            final isUnder = child?.key != ValueKey(showBack);
+            var value = rotate.value;
+            if (isUnder) {
+              value = min(rotate.value, pi / 2);
+            }
+            final transform = Matrix4.identity()
+              ..setEntry(3, 2, 0.001)
+              ..rotateY(value);
+            return Transform(
+              transform: transform,
+              alignment: Alignment.center,
+              child: child,
+            );
+          },
+        );
+      },
+      layoutBuilder: (currentChild, previousChildren) {
+        return Stack(
+          alignment: Alignment.center,
+          children: [
+            ...previousChildren,
+            if (currentChild != null) currentChild,
+          ],
+        );
+      },
+      child: showBack ? back : front,
+    );
+  }
+
+  String _hintForDefinition(String definition) {
+    final clean = definition.replaceAll('\n', ' ').trim();
+    if (clean.isEmpty) {
+      return '';
+    }
+    const maxChars = 3;
+    if (clean.length <= maxChars) {
+      return clean;
+    }
+    return '${clean.substring(0, maxChars)}...';
+  }
+}
+
+class _CardFace extends StatelessWidget {
+  const _CardFace({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return child;
   }
 }
 
@@ -985,7 +1128,7 @@ class _PlayerBar extends StatelessWidget {
                   child: _PlayerChip(
                     icon: Icons.speed,
                     label: '${language.speedLabel} ${_speedLabel(speed)}',
-                    onTap: null,
+                    interactive: false,
                   ),
                 ),
                 _PlayerChip(
@@ -1021,43 +1164,51 @@ class _PlayerChip extends StatelessWidget {
     required this.label,
     this.active = false,
     this.onTap,
+    this.interactive = true,
   });
 
   final IconData icon;
   final String label;
   final bool active;
   final VoidCallback? onTap;
+  final bool interactive;
 
   @override
   Widget build(BuildContext context) {
+    final content = Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: active ? const Color(0xFFEFF2FF) : Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(
+          color: active ? const Color(0xFFD6DDFF) : const Color(0xFFE1E6F0),
+        ),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            icon,
+            size: 16,
+            color: active ? const Color(0xFF4255FF) : null,
+          ),
+          const SizedBox(width: 6),
+          Text(
+            label,
+            style: const TextStyle(fontSize: 12),
+          ),
+        ],
+      ),
+    );
+
+    if (!interactive) {
+      return content;
+    }
+
     return InkWell(
       borderRadius: BorderRadius.circular(18),
       onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        decoration: BoxDecoration(
-          color: active ? const Color(0xFFEFF2FF) : Colors.white,
-          borderRadius: BorderRadius.circular(18),
-          border: Border.all(
-            color: active ? const Color(0xFFD6DDFF) : const Color(0xFFE1E6F0),
-          ),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              icon,
-              size: 16,
-              color: active ? const Color(0xFF4255FF) : null,
-            ),
-            const SizedBox(width: 6),
-            Text(
-              label,
-              style: const TextStyle(fontSize: 12),
-            ),
-          ],
-        ),
-      ),
+      child: content,
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
@@ -19,6 +20,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
   final List<_EditableTerm> _terms = [];
   late final TextEditingController _titleController;
   late final TextEditingController _descriptionController;
+  late String _defaultTitle;
   bool _hintsEnabled = true;
   bool _isPublic = true;
   bool _isLoading = true;
@@ -41,11 +43,12 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
   Future<void> _load() async {
     final repo = ref.read(lessonRepositoryProvider);
     final level = ref.read(studyLevelProvider)?.shortLabel ?? 'N5';
-    final defaultTitle = 'Minna No Nihongo ${widget.lessonId}';
+    final language = ref.read(appLanguageProvider);
+    _defaultTitle = language.lessonTitle(widget.lessonId);
     final lesson = await repo.ensureLesson(
       lessonId: widget.lessonId,
       level: level,
-      title: defaultTitle,
+      title: _defaultTitle,
     );
     await repo.seedTermsIfEmpty(widget.lessonId);
     final terms = await repo.fetchTerms(widget.lessonId);
@@ -69,6 +72,27 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
           ),
         );
       _isLoading = false;
+    });
+  }
+
+  Future<void> _refreshTerms(LessonRepository repo) async {
+    final terms = await repo.fetchTerms(widget.lessonId);
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _terms
+        ..clear()
+        ..addAll(
+          terms.map(
+            (term) => _EditableTerm(
+              id: term.id,
+              term: term.term,
+              reading: term.reading,
+              definition: term.definition,
+            ),
+          ),
+        );
     });
   }
 
@@ -120,7 +144,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
             label: language.titleLabel,
             child: TextField(
               controller: _titleController,
-              onChanged: (value) => _onTitleChanged(repo, value),
+              onChanged: (value) => _onTitleChanged(repo, level, value),
               decoration: const InputDecoration(),
             ),
           ),
@@ -140,33 +164,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               _GhostButton(
                 label: language.addTermLabel,
                 icon: Icons.add,
-                onPressed: () async {
-                  await repo.addTerm(widget.lessonId);
-                  final terms = await repo.fetchTerms(widget.lessonId);
-                  if (!mounted) {
-                    return;
-                  }
-                  setState(() {
-                    _terms
-                      ..clear()
-                      ..addAll(
-                        terms.map(
-                          (term) => _EditableTerm(
-                            id: term.id,
-                            term: term.term,
-                            reading: term.reading,
-                            definition: term.definition,
-                          ),
-                        ),
-                      );
-                  });
-                },
-              ),
-              const SizedBox(width: 10),
-              _GhostButton(
-                label: language.addDiagramLabel,
-                icon: Icons.add_box_outlined,
-                onPressed: () {},
+                onPressed: () => _addTerm(repo, level),
               ),
               const Spacer(),
               Text(language.hintsLabel),
@@ -176,51 +174,80 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                 onChanged: (value) => setState(() => _hintsEnabled = value),
               ),
               const SizedBox(width: 8),
-              _IconCircleButton(icon: Icons.swap_horiz, onTap: () {}),
+              _IconCircleButton(
+                icon: Icons.swap_horiz,
+                onTap: () => _swapTerms(repo, level),
+              ),
               const SizedBox(width: 8),
-              _IconCircleButton(icon: Icons.keyboard, onTap: () {}),
+              _IconCircleButton(
+                icon: Icons.keyboard,
+                onTap: () => _showKeyboardHelper(language),
+              ),
               const SizedBox(width: 8),
               _IconCircleButton(
                 icon: Icons.delete_outline,
-                onTap: () async {
-                  if (_terms.isNotEmpty) {
-                    final term = _terms.removeLast();
-                    setState(() {});
-                    await repo.deleteTerm(term.id);
-                  }
-                },
+                onTap: () => _removeLastTerm(repo, level, language),
               ),
             ],
           ),
           const SizedBox(height: 12),
-          for (int i = 0; i < _terms.length; i++)
-            _TermCard(
-              key: ValueKey(_terms[i].id),
-              index: i + 1,
-              term: _terms[i],
-              language: language,
-              onRemove: () async {
-                final term = _terms.removeAt(i);
-                setState(() {});
-                await repo.deleteTerm(term.id);
-              },
-              onTermChanged: (value) {
-                final parsed = _parseTerm(value);
-                _terms[i] = _terms[i].copyWith(
-                  term: parsed.term,
-                  reading: parsed.reading,
-                );
-                repo.updateTerm(
-                  _terms[i].id,
-                  term: parsed.term,
-                  reading: parsed.reading,
-                );
-              },
-              onDefinitionChanged: (value) {
-                _terms[i] = _terms[i].copyWith(definition: value);
-                repo.updateTerm(_terms[i].id, definition: value);
-              },
-            ),
+          ReorderableListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            buildDefaultDragHandles: false,
+            itemCount: _terms.length,
+            onReorder: (oldIndex, newIndex) =>
+                _reorderTerms(repo, level, oldIndex, newIndex),
+            itemBuilder: (context, index) {
+              final term = _terms[index];
+              return _TermCard(
+                key: ValueKey(term.id),
+                index: index + 1,
+                term: term,
+                language: language,
+                showHints: _hintsEnabled,
+                dragHandle: ReorderableDragStartListener(
+                  index: index,
+                  child: const _IconCircleButton(
+                    icon: Icons.drag_indicator,
+                  ),
+                ),
+                onRemove: () async {
+                  if (_terms.length <= 1) {
+                    final shouldDelete = await _confirmDeleteTerm(language);
+                    if (!shouldDelete) {
+                      return;
+                    }
+                  }
+                  _terms.removeAt(index);
+                  setState(() {});
+                  await repo.deleteTerm(term.id, lessonId: widget.lessonId);
+                  ref.invalidate(lessonMetaProvider(level.shortLabel));
+                },
+                onTermChanged: (value) {
+                  final parsed = _parseTerm(value);
+                  _terms[index] = _terms[index].copyWith(
+                    term: parsed.term,
+                    reading: parsed.reading,
+                  );
+                  repo.updateTerm(
+                    _terms[index].id,
+                    lessonId: widget.lessonId,
+                    term: parsed.term,
+                    reading: parsed.reading,
+                  );
+                },
+                onDefinitionChanged: (value) {
+                  _terms[index] = _terms[index].copyWith(definition: value);
+                  repo.updateTerm(
+                    _terms[index].id,
+                    lessonId: widget.lessonId,
+                    definition: value,
+                  );
+                },
+              );
+            },
+          ),
           const SizedBox(height: 12),
           Text(
             '${language.levelLabelPrefix}${level.shortLabel}',
@@ -234,6 +261,8 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
   void _exit(BuildContext context) {
     ref.invalidate(lessonTitleProvider);
     ref.invalidate(lessonTermsProvider);
+    final level = ref.read(studyLevelProvider)?.shortLabel ?? 'N5';
+    ref.invalidate(lessonMetaProvider(level));
     Navigator.of(context).pop();
   }
 
@@ -244,9 +273,197 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     return _ParsedTerm(term: term, reading: reading);
   }
 
-  void _onTitleChanged(LessonRepository repo, String value) {
-    repo.updateLessonTitle(widget.lessonId, value);
+  void _onTitleChanged(
+    LessonRepository repo,
+    StudyLevel level,
+    String value,
+  ) {
+    final trimmed = value.trim();
+    final isCustomTitle =
+        trimmed.isNotEmpty && trimmed != _defaultTitle;
+    repo.updateLessonTitle(
+      widget.lessonId,
+      value,
+      isCustomTitle: isCustomTitle,
+    );
     ref.invalidate(lessonTitleProvider);
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<void> _addTerm(LessonRepository repo, StudyLevel level) async {
+    await repo.addTerm(widget.lessonId);
+    await _refreshTerms(repo);
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<void> _removeLastTerm(
+    LessonRepository repo,
+    StudyLevel level,
+    AppLanguage language,
+  ) async {
+    if (_terms.isEmpty) {
+      return;
+    }
+    final shouldDelete = await _confirmDeleteTerm(language);
+    if (!shouldDelete) {
+      return;
+    }
+    final term = _terms.removeLast();
+    setState(() {});
+    await repo.deleteTerm(term.id, lessonId: widget.lessonId);
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<void> _swapTerms(LessonRepository repo, StudyLevel level) async {
+    if (_terms.isEmpty) {
+      return;
+    }
+    for (var i = 0; i < _terms.length; i++) {
+      final current = _terms[i];
+      _terms[i] = current.copyWith(
+        term: current.definition,
+        definition: current.term,
+        reading: '',
+      );
+    }
+    setState(() {});
+    for (final term in _terms) {
+      await repo.updateTerm(
+        term.id,
+        lessonId: widget.lessonId,
+        term: term.term,
+        reading: term.reading,
+        definition: term.definition,
+      );
+    }
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<void> _reorderTerms(
+    LessonRepository repo,
+    StudyLevel level,
+    int oldIndex,
+    int newIndex,
+  ) async {
+    if (oldIndex == newIndex) {
+      return;
+    }
+    var updatedIndex = newIndex;
+    if (updatedIndex > oldIndex) {
+      updatedIndex -= 1;
+    }
+    final term = _terms.removeAt(oldIndex);
+    _terms.insert(updatedIndex, term);
+    setState(() {});
+    await repo.updateTermOrder(
+      widget.lessonId,
+      _terms.map((item) => item.id).toList(),
+    );
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
+  Future<bool> _confirmDeleteTerm(AppLanguage language) async {
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(language.confirmDeleteTermTitle),
+          content: Text(language.confirmDeleteTermBody),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              child: Text(MaterialLocalizations.of(context).okButtonLabel),
+            ),
+          ],
+        );
+      },
+    );
+    return result ?? false;
+  }
+
+  Future<void> _showKeyboardHelper(AppLanguage language) async {
+    const snippets = [
+      'a',
+      'i',
+      'u',
+      'e',
+      'o',
+      'ka',
+      'ki',
+      'ku',
+      'ke',
+      'ko',
+      'sa',
+      'shi',
+      'su',
+      'se',
+      'so',
+      'ta',
+      'chi',
+      'tsu',
+      'te',
+      'to',
+      'na',
+      'ni',
+      'nu',
+      'ne',
+      'no',
+    ];
+    final messenger = ScaffoldMessenger.of(context);
+    await showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) {
+        return SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  language.hintsLabel,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  'Tap a snippet to copy it to the clipboard.',
+                  style: TextStyle(color: Color(0xFF6B7390)),
+                ),
+                const SizedBox(height: 16),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: [
+                    for (final snippet in snippets)
+                      ActionChip(
+                        label: Text(snippet),
+                        onPressed: () async {
+                          await Clipboard.setData(
+                            ClipboardData(text: snippet),
+                          );
+                          messenger.showSnackBar(
+                            SnackBar(
+                              content: Text('Copied "$snippet".'),
+                            ),
+                          );
+                        },
+                      ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 }
 
@@ -344,10 +561,10 @@ class _GhostButton extends StatelessWidget {
 }
 
 class _IconCircleButton extends StatelessWidget {
-  const _IconCircleButton({required this.icon, required this.onTap});
+  const _IconCircleButton({required this.icon, this.onTap});
 
   final IconData icon;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -373,6 +590,8 @@ class _TermCard extends StatelessWidget {
     required this.index,
     required this.term,
     required this.language,
+    required this.showHints,
+    required this.dragHandle,
     required this.onRemove,
     required this.onTermChanged,
     required this.onDefinitionChanged,
@@ -381,6 +600,8 @@ class _TermCard extends StatelessWidget {
   final int index;
   final _EditableTerm term;
   final AppLanguage language;
+  final bool showHints;
+  final Widget dragHandle;
   final VoidCallback onRemove;
   final ValueChanged<String> onTermChanged;
   final ValueChanged<String> onDefinitionChanged;
@@ -407,7 +628,7 @@ class _TermCard extends StatelessWidget {
                 style: const TextStyle(fontWeight: FontWeight.w600),
               ),
               const Spacer(),
-              _IconCircleButton(icon: Icons.drag_indicator, onTap: () {}),
+              dragHandle,
               const SizedBox(width: 8),
               _IconCircleButton(icon: Icons.delete_outline, onTap: onRemove),
             ],
@@ -430,18 +651,53 @@ class _TermCard extends StatelessWidget {
                   onChanged: onDefinitionChanged,
                 ),
               ),
-              const SizedBox(width: 12),
-              Container(
-                width: 60,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF1F3F7),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Icon(Icons.image_outlined),
-              ),
             ],
           ),
+          if (showHints &&
+              (term.term.isNotEmpty ||
+                  term.reading.isNotEmpty ||
+                  term.definition.isNotEmpty)) ...[
+            const SizedBox(height: 12),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: const Color(0xFFF7F9FC),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: const Color(0xFFE1E6F0)),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (term.term.isNotEmpty)
+                    Text(
+                      term.term,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  if (term.reading.isNotEmpty) ...[
+                    const SizedBox(height: 4),
+                    Text(
+                      term.reading,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        color: Color(0xFF6B7390),
+                      ),
+                    ),
+                  ],
+                  if (term.definition.isNotEmpty) ...[
+                    const SizedBox(height: 8),
+                    Text(
+                      term.definition,
+                      style: const TextStyle(fontSize: 13),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
         ],
       ),
     );
@@ -470,6 +726,7 @@ class _TermField extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         TextFormField(
+          key: ValueKey(initialValue),
           initialValue: initialValue,
           onChanged: onChanged,
           maxLines: 2,

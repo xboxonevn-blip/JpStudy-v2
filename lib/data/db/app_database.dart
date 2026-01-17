@@ -23,7 +23,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -38,8 +38,24 @@ class AppDatabase extends _$AppDatabase {
           if (from < 3) {
             await migrator.addColumn(userLesson, userLesson.isCustomTitle);
           }
+          if (from < 4) {
+            await _removeImagePathColumn(migrator);
+          }
         },
       );
+
+  Future<void> _removeImagePathColumn(Migrator migrator) async {
+    await customStatement(
+      'ALTER TABLE user_lesson_term RENAME TO user_lesson_term_old',
+    );
+    await migrator.createTable(userLessonTerm);
+    await customStatement(
+      'INSERT INTO user_lesson_term (id, lesson_id, term, reading, definition, order_index) '
+      'SELECT id, lesson_id, term, reading, definition, order_index '
+      'FROM user_lesson_term_old',
+    );
+    await customStatement('DROP TABLE user_lesson_term_old');
+  }
 }
 
 LazyDatabase _openConnection() {

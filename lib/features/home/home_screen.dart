@@ -25,6 +25,7 @@ class HomeScreen extends ConsumerWidget {
           language: language,
           onLanguageTap: () => _showLanguageSheet(context, ref),
           onLevelChanged: (selected) => _setLevel(ref, selected),
+          onSettingsTap: () => _showSettingsSheet(context, ref),
         ),
       ),
       body: level == null
@@ -65,6 +66,53 @@ class HomeScreen extends ConsumerWidget {
       },
     );
   }
+
+  void _showSettingsSheet(BuildContext context, WidgetRef ref) {
+    final language = ref.read(appLanguageProvider);
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) {
+        return SafeArea(
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            shrinkWrap: true,
+            children: [
+              Text(
+                language.settingsLabel,
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+              ),
+              const SizedBox(height: 12),
+              ListTile(
+                leading: const Icon(Icons.language),
+                title: Text(language.languageMenuLabel),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  _showLanguageSheet(context, ref);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.school_outlined),
+                title: Text(language.levelMenuTitle),
+                onTap: () {
+                  ref.read(studyLevelProvider.notifier).state = null;
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.insights_outlined),
+                title: Text(language.progressTitle),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  context.push('/progress');
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
 }
 
 class _HeaderBar extends StatelessWidget {
@@ -73,12 +121,14 @@ class _HeaderBar extends StatelessWidget {
     required this.language,
     required this.onLanguageTap,
     required this.onLevelChanged,
+    required this.onSettingsTap,
   });
 
   final StudyLevel? level;
   final AppLanguage language;
   final VoidCallback onLanguageTap;
   final ValueChanged<StudyLevel> onLevelChanged;
+  final VoidCallback onSettingsTap;
 
   @override
   Widget build(BuildContext context) {
@@ -103,6 +153,7 @@ class _HeaderBar extends StatelessWidget {
         _HeaderRight(
           language: language,
           onLanguageTap: onLanguageTap,
+          onSettingsTap: onSettingsTap,
         ),
       ],
     );
@@ -203,10 +254,12 @@ class _HeaderRight extends StatelessWidget {
   const _HeaderRight({
     required this.language,
     required this.onLanguageTap,
+    required this.onSettingsTap,
   });
 
   final AppLanguage language;
   final VoidCallback onLanguageTap;
+  final VoidCallback onSettingsTap;
 
   @override
   Widget build(BuildContext context) {
@@ -218,7 +271,7 @@ class _HeaderRight extends StatelessWidget {
         ),
         const SizedBox(width: 8),
         IconButton(
-          onPressed: () {},
+          onPressed: onSettingsTap,
           icon: const Icon(Icons.settings_outlined),
         ),
         const SizedBox(width: 8),
@@ -316,7 +369,7 @@ class _LevelGate extends StatelessWidget {
   }
 }
 
-class _LessonHome extends StatelessWidget {
+class _LessonHome extends ConsumerStatefulWidget {
   const _LessonHome({
     required this.level,
     required this.language,
@@ -326,61 +379,314 @@ class _LessonHome extends StatelessWidget {
   final AppLanguage language;
 
   @override
+  ConsumerState<_LessonHome> createState() => _LessonHomeState();
+}
+
+class _LessonHomeState extends ConsumerState<_LessonHome> {
+  late final TextEditingController _searchController;
+  String _filter = 'all';
+  String _sort = 'recent';
+
+  @override
+  void initState() {
+    super.initState();
+    _searchController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final lessons = _lessonItems(level);
+    final metaAsync = ref.watch(lessonMetaProvider(widget.level.shortLabel));
+    final meta = metaAsync.asData?.value ?? const <LessonMeta>[];
+    final lessons = _buildLessonSummaries(
+      widget.level,
+      widget.language,
+      meta,
+    );
+    final filtered = _applyFilters(lessons);
+
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
       children: [
-        _LessonToolbar(level: level, language: language),
+        _LessonToolbar(
+          level: widget.level,
+          language: widget.language,
+          searchController: _searchController,
+          filter: _filter,
+          sort: _sort,
+          onSearchChanged: (value) => setState(() {}),
+          onFilterChanged: (value) => setState(() => _filter = value),
+          onSortChanged: (value) => setState(() => _sort = value),
+          onCreateLesson: () => _createLesson(context),
+        ),
         const SizedBox(height: 16),
-        for (final lesson in lessons)
-          _LessonCard(
-            lessonId: lesson.index,
-            fallbackTitle: language.lessonTitle(lesson.index),
-            metaText: _lessonMeta(language, lesson),
-            progress: lesson.progress,
-            onTap: () => context.push('/lesson/${lesson.index}'),
-          ),
+        if (metaAsync.isLoading)
+          const LinearProgressIndicator(minHeight: 2),
+        if (metaAsync.isLoading) const SizedBox(height: 12),
+        if (filtered.isEmpty)
+          const SizedBox.shrink()
+        else
+          for (final lesson in filtered)
+            _LessonCard(
+              lesson: lesson,
+              language: widget.language,
+              levelLabel: widget.level.shortLabel,
+              onTap: () => context.push('/lesson/${lesson.id}'),
+              onEdit: () => context.push('/lesson/${lesson.id}/edit'),
+              metaText: _lessonMeta(widget.language, lesson),
+            ),
       ],
     );
   }
 
-  String _lessonMeta(AppLanguage language, _LessonItem lesson) {
+  List<_LessonSummary> _applyFilters(List<_LessonSummary> lessons) {
+    final query = _searchController.text.trim().toLowerCase();
+    var results = lessons;
+    if (query.isNotEmpty) {
+      results = results
+          .where(
+            (lesson) =>
+                lesson.title.toLowerCase().contains(query) ||
+                lesson.id.toString() == query,
+          )
+          .toList();
+    }
+    switch (_filter) {
+      case 'has_data':
+        results = results.where((lesson) => lesson.termCount > 0).toList();
+        break;
+      case 'empty':
+        results = results.where((lesson) => lesson.termCount == 0).toList();
+        break;
+      case 'custom':
+        results = results
+            .where((lesson) => lesson.isCustomLesson || lesson.isCustomTitle)
+            .toList();
+        break;
+    }
+    results.sort((a, b) {
+      switch (_sort) {
+        case 'az':
+          final titleCompare =
+              a.title.toLowerCase().compareTo(b.title.toLowerCase());
+          return titleCompare != 0 ? titleCompare : a.id.compareTo(b.id);
+        case 'progress':
+          final progressCompare = b.progress.compareTo(a.progress);
+          return progressCompare != 0 ? progressCompare : a.id.compareTo(b.id);
+        case 'terms':
+          final countCompare = b.termCount.compareTo(a.termCount);
+          return countCompare != 0 ? countCompare : a.id.compareTo(b.id);
+        case 'recent':
+        default:
+          final recentCompare =
+              a.lastStudiedMinutes.compareTo(b.lastStudiedMinutes);
+          return recentCompare != 0 ? recentCompare : a.id.compareTo(b.id);
+      }
+    });
+    return results;
+  }
+
+  List<_LessonSummary> _buildLessonSummaries(
+    StudyLevel level,
+    AppLanguage language,
+    List<LessonMeta> meta,
+  ) {
+    final defaults = _lessonDefaults(level);
+    final metaById = {for (final lesson in meta) lesson.id: lesson};
+    final summaries = <_LessonSummary>[];
+
+    for (final stub in defaults) {
+      final fallbackTitle = language.lessonTitle(stub.index);
+      final stored = metaById.remove(stub.index);
+      final title = stored == null
+          ? fallbackTitle
+          : (stored.isCustomTitle ? stored.title : fallbackTitle);
+      final lastStudiedMinutes = stored?.updatedAt == null
+          ? stub.lastStudiedMinutes
+          : _minutesSince(stored!.updatedAt!, stub.lastStudiedMinutes);
+      final termCount = stored?.termCount ?? stub.termCount;
+      final progress = stored == null
+          ? 0.0
+          : _progressFromCounts(stored.completedCount, termCount);
+
+      summaries.add(
+        _LessonSummary(
+          id: stub.index,
+          title: title,
+          fallbackTitle: fallbackTitle,
+          termCount: termCount,
+          lastStudiedMinutes: lastStudiedMinutes,
+          progress: progress,
+          isCustomTitle: stored?.isCustomTitle ?? false,
+          isCustomLesson: false,
+        ),
+      );
+    }
+
+    for (final stored in metaById.values) {
+      final fallbackTitle = language.lessonTitle(stored.id);
+      final title =
+          stored.isCustomTitle ? stored.title : fallbackTitle;
+      final lastStudiedMinutes = stored.updatedAt == null
+          ? 0
+          : _minutesSince(stored.updatedAt!, 0);
+      final progress =
+          _progressFromCounts(stored.completedCount, stored.termCount);
+      summaries.add(
+        _LessonSummary(
+          id: stored.id,
+          title: title,
+          fallbackTitle: fallbackTitle,
+          termCount: stored.termCount,
+          lastStudiedMinutes: lastStudiedMinutes,
+          progress: progress,
+          isCustomTitle: stored.isCustomTitle,
+          isCustomLesson: true,
+        ),
+      );
+    }
+
+    return summaries;
+  }
+
+  int _minutesSince(DateTime value, int fallback) {
+    final diff = DateTime.now().difference(value).inMinutes;
+    return diff.isNegative ? fallback : diff;
+  }
+
+  double _progressFromCounts(int completed, int total) {
+    if (total <= 0) {
+      return 0;
+    }
+    final ratio = completed / total;
+    return ratio.clamp(0.0, 1.0).toDouble();
+  }
+
+  String _lessonMeta(AppLanguage language, _LessonSummary lesson) {
     final countText = language.termsCountLabel(lesson.termCount);
     final timeText = language.lastStudiedLabel(
       language.relativeTimeLabel(lesson.lastStudiedMinutes),
     );
     return '$countText - $timeText';
   }
+
+  Future<void> _createLesson(BuildContext context) async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final level = widget.level.shortLabel;
+    final nextId = await repo.nextLessonId();
+    if (!context.mounted) {
+      return;
+    }
+    final defaultTitle = widget.language.lessonTitle(nextId);
+    final controller = TextEditingController(text: defaultTitle);
+    var isPublic = true;
+
+    final created = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(widget.language.createLessonLabel),
+          content: StatefulBuilder(
+            builder: (context, setDialogState) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextField(
+                    controller: controller,
+                    decoration: InputDecoration(
+                      hintText: defaultTitle,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  SwitchListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(widget.language.publicLabel),
+                    value: isPublic,
+                    onChanged: (value) =>
+                        setDialogState(() => isPublic = value),
+                  ),
+                ],
+              );
+            },
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              child: Text(widget.language.createLessonLabel),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (created != true || !context.mounted) {
+      controller.dispose();
+      return;
+    }
+
+    final title = controller.text.trim();
+    controller.dispose();
+    final resolvedTitle = title.isEmpty ? defaultTitle : title;
+    final isCustomTitle = resolvedTitle != defaultTitle;
+    final lessonId = await repo.createLesson(
+      level: level,
+      title: resolvedTitle,
+      isPublic: isPublic,
+      isCustomTitle: isCustomTitle,
+    );
+    ref.invalidate(lessonMetaProvider(level));
+    if (!context.mounted) {
+      return;
+    }
+    context.push('/lesson/$lessonId/edit');
+  }
 }
 
-class _LessonToolbar extends StatefulWidget {
+class _LessonToolbar extends StatelessWidget {
   const _LessonToolbar({
     required this.level,
     required this.language,
+    required this.searchController,
+    required this.filter,
+    required this.sort,
+    required this.onSearchChanged,
+    required this.onFilterChanged,
+    required this.onSortChanged,
+    required this.onCreateLesson,
   });
 
   final StudyLevel level;
   final AppLanguage language;
-
-  @override
-  State<_LessonToolbar> createState() => _LessonToolbarState();
-}
-
-class _LessonToolbarState extends State<_LessonToolbar> {
-  String _filter = 'all';
-  String _sort = 'recent';
+  final TextEditingController searchController;
+  final String filter;
+  final String sort;
+  final ValueChanged<String> onSearchChanged;
+  final ValueChanged<String> onFilterChanged;
+  final ValueChanged<String> onSortChanged;
+  final VoidCallback onCreateLesson;
 
   @override
   Widget build(BuildContext context) {
     final isNarrow = MediaQuery.of(context).size.width < 980;
-    final title = widget.language.lessonListTitle(widget.level.shortLabel);
+    final title = language.lessonListTitle(level.shortLabel);
     final actions = _ToolbarActions(
-      language: widget.language,
-      filter: _filter,
-      sort: _sort,
-      onFilterChanged: (value) => setState(() => _filter = value),
-      onSortChanged: (value) => setState(() => _sort = value),
+      language: language,
+      searchController: searchController,
+      filter: filter,
+      sort: sort,
+      onSearchChanged: onSearchChanged,
+      onFilterChanged: onFilterChanged,
+      onSortChanged: onSortChanged,
+      onCreateLesson: onCreateLesson,
     );
 
     if (isNarrow) {
@@ -413,17 +719,23 @@ class _LessonToolbarState extends State<_LessonToolbar> {
 class _ToolbarActions extends StatelessWidget {
   const _ToolbarActions({
     required this.language,
+    required this.searchController,
     required this.filter,
     required this.sort,
+    required this.onSearchChanged,
     required this.onFilterChanged,
     required this.onSortChanged,
+    required this.onCreateLesson,
   });
 
   final AppLanguage language;
+  final TextEditingController searchController;
   final String filter;
   final String sort;
+  final ValueChanged<String> onSearchChanged;
   final ValueChanged<String> onFilterChanged;
   final ValueChanged<String> onSortChanged;
+  final VoidCallback onCreateLesson;
 
   @override
   Widget build(BuildContext context) {
@@ -435,6 +747,8 @@ class _ToolbarActions extends StatelessWidget {
         SizedBox(
           width: 380,
           child: TextField(
+            controller: searchController,
+            onChanged: onSearchChanged,
             decoration: InputDecoration(
               hintText: language.searchLessonsHint,
               prefixIcon: const Icon(Icons.search),
@@ -445,6 +759,9 @@ class _ToolbarActions extends StatelessWidget {
           value: filter,
           items: [
             _MenuOption('all', language.filterAllLabel),
+            _MenuOption('has_data', language.filterHasDataLabel),
+            _MenuOption('empty', language.filterEmptyLabel),
+            const _MenuOption('custom', 'Custom'),
           ],
           onChanged: onFilterChanged,
         ),
@@ -459,7 +776,7 @@ class _ToolbarActions extends StatelessWidget {
           onChanged: onSortChanged,
         ),
         ElevatedButton.icon(
-          onPressed: () {},
+          onPressed: onCreateLesson,
           icon: const Icon(Icons.add),
           label: Text(language.createLessonLabel),
         ),
@@ -517,20 +834,24 @@ class _DropdownChip extends StatelessWidget {
   }
 }
 
+enum _LessonAction { open, edit, rename }
+
 class _LessonCard extends ConsumerStatefulWidget {
   const _LessonCard({
-    required this.lessonId,
-    required this.fallbackTitle,
+    required this.lesson,
+    required this.language,
+    required this.levelLabel,
     required this.metaText,
-    required this.progress,
     required this.onTap,
+    required this.onEdit,
   });
 
-  final int lessonId;
-  final String fallbackTitle;
+  final _LessonSummary lesson;
+  final AppLanguage language;
+  final String levelLabel;
   final String metaText;
-  final double progress;
   final VoidCallback onTap;
+  final VoidCallback onEdit;
 
   @override
   ConsumerState<_LessonCard> createState() => _LessonCardState();
@@ -541,14 +862,6 @@ class _LessonCardState extends ConsumerState<_LessonCard> {
 
   @override
   Widget build(BuildContext context) {
-    final titleAsync = ref.watch(
-      lessonTitleProvider(LessonTitleArgs(widget.lessonId, widget.fallbackTitle)),
-    );
-    final resolvedTitle = titleAsync.maybeWhen(
-      data: (value) => value,
-      orElse: () => widget.fallbackTitle,
-    );
-
     return MouseRegion(
       onEnter: (_) => setState(() => _hovering = true),
       onExit: (_) => setState(() => _hovering = false),
@@ -585,7 +898,7 @@ class _LessonCardState extends ConsumerState<_LessonCard> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      resolvedTitle,
+                      widget.lesson.title,
                       style: const TextStyle(fontWeight: FontWeight.w600),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -608,7 +921,7 @@ class _LessonCardState extends ConsumerState<_LessonCard> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(2),
                             child: LinearProgressIndicator(
-                              value: widget.progress,
+                              value: widget.lesson.progress,
                               minHeight: 2,
                               backgroundColor: const Color(0xFFE8ECF5),
                               color: const Color(0xFF4255FF),
@@ -628,13 +941,116 @@ class _LessonCardState extends ConsumerState<_LessonCard> {
                   ignoring: !_hovering,
                   child: IconButton(
                     icon: const Icon(Icons.more_horiz),
-                    onPressed: () {},
+                    onPressed: () => _showLessonMenu(context),
                   ),
                 ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Future<void> _showLessonMenu(BuildContext context) async {
+    final action = await showModalBottomSheet<_LessonAction>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) {
+        return SafeArea(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                leading: const Icon(Icons.play_circle_outline),
+                title: Text(widget.language.learnAction),
+                onTap: () => Navigator.of(context).pop(_LessonAction.open),
+              ),
+              ListTile(
+                leading: const Icon(Icons.edit_outlined),
+                title: const Text('Edit'),
+                onTap: () => Navigator.of(context).pop(_LessonAction.edit),
+              ),
+              ListTile(
+                leading: const Icon(Icons.drive_file_rename_outline),
+                title: const Text('Rename'),
+                onTap: () => Navigator.of(context).pop(_LessonAction.rename),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+
+    if (!context.mounted) {
+      return;
+    }
+    if (action == null) {
+      return;
+    }
+    switch (action) {
+      case _LessonAction.open:
+        widget.onTap();
+        break;
+      case _LessonAction.edit:
+        widget.onEdit();
+        break;
+      case _LessonAction.rename:
+        await _renameLesson(context);
+        break;
+    }
+  }
+
+  Future<void> _renameLesson(BuildContext context) async {
+    if (!context.mounted) {
+      return;
+    }
+    final controller = TextEditingController(text: widget.lesson.title);
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(widget.language.titleLabel),
+          content: TextField(
+            controller: controller,
+            decoration: InputDecoration(
+              hintText: widget.lesson.fallbackTitle,
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              child: Text(MaterialLocalizations.of(context).okButtonLabel),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (confirmed != true) {
+      controller.dispose();
+      return;
+    }
+
+    final title = controller.text.trim();
+    controller.dispose();
+    final resolvedTitle =
+        title.isEmpty ? widget.lesson.fallbackTitle : title;
+    final isCustomTitle = resolvedTitle != widget.lesson.fallbackTitle;
+    final repo = ref.read(lessonRepositoryProvider);
+    await repo.updateLessonTitle(
+      widget.lesson.id,
+      resolvedTitle,
+      isCustomTitle: isCustomTitle,
+    );
+    ref.invalidate(lessonMetaProvider(widget.levelLabel));
+    ref.invalidate(
+      lessonTitleProvider(
+        LessonTitleArgs(widget.lesson.id, widget.lesson.fallbackTitle),
       ),
     );
   }
@@ -751,25 +1167,20 @@ class _LanguageCard extends StatelessWidget {
   }
 }
 
-List<_LessonItem> _lessonItems(StudyLevel level) {
-  final base = switch (level) {
-    StudyLevel.n5 => 38,
-    StudyLevel.n4 => 42,
-    StudyLevel.n3 => 45,
-  };
+List<_LessonStub> _lessonDefaults(StudyLevel level) {
   return List.generate(
     25,
-    (index) => _LessonItem(
+    (index) => _LessonStub(
       index: index + 1,
-      termCount: base + ((index * 3) % 16),
-      lastStudiedMinutes: 60 + (index * 35) % 720,
-      progress: 0.2 + ((index * 7) % 60) / 100,
+      termCount: 0,
+      lastStudiedMinutes: 0,
+      progress: 0,
     ),
   );
 }
 
-class _LessonItem {
-  const _LessonItem({
+class _LessonStub {
+  const _LessonStub({
     required this.index,
     required this.termCount,
     required this.lastStudiedMinutes,
@@ -780,4 +1191,26 @@ class _LessonItem {
   final int termCount;
   final int lastStudiedMinutes;
   final double progress;
+}
+
+class _LessonSummary {
+  const _LessonSummary({
+    required this.id,
+    required this.title,
+    required this.fallbackTitle,
+    required this.termCount,
+    required this.lastStudiedMinutes,
+    required this.progress,
+    required this.isCustomTitle,
+    required this.isCustomLesson,
+  });
+
+  final int id;
+  final String title;
+  final String fallbackTitle;
+  final int termCount;
+  final int lastStudiedMinutes;
+  final double progress;
+  final bool isCustomTitle;
+  final bool isCustomLesson;
 }

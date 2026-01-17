@@ -23,7 +23,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 6;
+  int get schemaVersion => 7;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -59,6 +59,9 @@ class AppDatabase extends _$AppDatabase {
               "WHERE is_learned = 1 "
               "AND id NOT IN (SELECT vocab_id FROM srs_state)",
             );
+          }
+          if (from < 7) {
+            await migrator.addColumn(userLesson, userLesson.tags);
           }
         },
       );

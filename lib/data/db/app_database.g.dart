@@ -1605,6 +1605,16 @@ class $UserLessonTable extends UserLesson
     requiredDuringInsert: false,
     defaultValue: const Constant(''),
   );
+  static const VerificationMeta _tagsMeta = const VerificationMeta('tags');
+  @override
+  late final GeneratedColumn<String> tags = GeneratedColumn<String>(
+    'tags',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
   static const VerificationMeta _isPublicMeta = const VerificationMeta(
     'isPublic',
   );
@@ -1652,6 +1662,7 @@ class $UserLessonTable extends UserLesson
     level,
     title,
     description,
+    tags,
     isPublic,
     isCustomTitle,
     updatedAt,
@@ -1694,6 +1705,12 @@ class $UserLessonTable extends UserLesson
           data['description']!,
           _descriptionMeta,
         ),
+      );
+    }
+    if (data.containsKey('tags')) {
+      context.handle(
+        _tagsMeta,
+        tags.isAcceptableOrUnknown(data['tags']!, _tagsMeta),
       );
     }
     if (data.containsKey('is_public')) {
@@ -1742,6 +1759,10 @@ class $UserLessonTable extends UserLesson
         DriftSqlType.string,
         data['${effectivePrefix}description'],
       )!,
+      tags: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}tags'],
+      )!,
       isPublic: attachedDatabase.typeMapping.read(
         DriftSqlType.bool,
         data['${effectivePrefix}is_public'],
@@ -1768,6 +1789,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
   final String level;
   final String title;
   final String description;
+  final String tags;
   final bool isPublic;
   final bool isCustomTitle;
   final DateTime? updatedAt;
@@ -1776,6 +1798,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     required this.level,
     required this.title,
     required this.description,
+    required this.tags,
     required this.isPublic,
     required this.isCustomTitle,
     this.updatedAt,
@@ -1787,6 +1810,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     map['level'] = Variable<String>(level);
     map['title'] = Variable<String>(title);
     map['description'] = Variable<String>(description);
+    map['tags'] = Variable<String>(tags);
     map['is_public'] = Variable<bool>(isPublic);
     map['is_custom_title'] = Variable<bool>(isCustomTitle);
     if (!nullToAbsent || updatedAt != null) {
@@ -1801,6 +1825,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       level: Value(level),
       title: Value(title),
       description: Value(description),
+      tags: Value(tags),
       isPublic: Value(isPublic),
       isCustomTitle: Value(isCustomTitle),
       updatedAt: updatedAt == null && nullToAbsent
@@ -1819,6 +1844,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       level: serializer.fromJson<String>(json['level']),
       title: serializer.fromJson<String>(json['title']),
       description: serializer.fromJson<String>(json['description']),
+      tags: serializer.fromJson<String>(json['tags']),
       isPublic: serializer.fromJson<bool>(json['isPublic']),
       isCustomTitle: serializer.fromJson<bool>(json['isCustomTitle']),
       updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
@@ -1832,6 +1858,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       'level': serializer.toJson<String>(level),
       'title': serializer.toJson<String>(title),
       'description': serializer.toJson<String>(description),
+      'tags': serializer.toJson<String>(tags),
       'isPublic': serializer.toJson<bool>(isPublic),
       'isCustomTitle': serializer.toJson<bool>(isCustomTitle),
       'updatedAt': serializer.toJson<DateTime?>(updatedAt),
@@ -1843,6 +1870,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     String? level,
     String? title,
     String? description,
+    String? tags,
     bool? isPublic,
     bool? isCustomTitle,
     Value<DateTime?> updatedAt = const Value.absent(),
@@ -1851,6 +1879,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     level: level ?? this.level,
     title: title ?? this.title,
     description: description ?? this.description,
+    tags: tags ?? this.tags,
     isPublic: isPublic ?? this.isPublic,
     isCustomTitle: isCustomTitle ?? this.isCustomTitle,
     updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
@@ -1863,6 +1892,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
       description: data.description.present
           ? data.description.value
           : this.description,
+      tags: data.tags.present ? data.tags.value : this.tags,
       isPublic: data.isPublic.present ? data.isPublic.value : this.isPublic,
       isCustomTitle: data.isCustomTitle.present
           ? data.isCustomTitle.value
@@ -1878,6 +1908,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
           ..write('level: $level, ')
           ..write('title: $title, ')
           ..write('description: $description, ')
+          ..write('tags: $tags, ')
           ..write('isPublic: $isPublic, ')
           ..write('isCustomTitle: $isCustomTitle, ')
           ..write('updatedAt: $updatedAt')
@@ -1891,6 +1922,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
     level,
     title,
     description,
+    tags,
     isPublic,
     isCustomTitle,
     updatedAt,
@@ -1903,6 +1935,7 @@ class UserLessonData extends DataClass implements Insertable<UserLessonData> {
           other.level == this.level &&
           other.title == this.title &&
           other.description == this.description &&
+          other.tags == this.tags &&
           other.isPublic == this.isPublic &&
           other.isCustomTitle == this.isCustomTitle &&
           other.updatedAt == this.updatedAt);
@@ -1913,6 +1946,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
   final Value<String> level;
   final Value<String> title;
   final Value<String> description;
+  final Value<String> tags;
   final Value<bool> isPublic;
   final Value<bool> isCustomTitle;
   final Value<DateTime?> updatedAt;
@@ -1921,6 +1955,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     this.level = const Value.absent(),
     this.title = const Value.absent(),
     this.description = const Value.absent(),
+    this.tags = const Value.absent(),
     this.isPublic = const Value.absent(),
     this.isCustomTitle = const Value.absent(),
     this.updatedAt = const Value.absent(),
@@ -1930,6 +1965,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     required String level,
     required String title,
     this.description = const Value.absent(),
+    this.tags = const Value.absent(),
     this.isPublic = const Value.absent(),
     this.isCustomTitle = const Value.absent(),
     this.updatedAt = const Value.absent(),
@@ -1940,6 +1976,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     Expression<String>? level,
     Expression<String>? title,
     Expression<String>? description,
+    Expression<String>? tags,
     Expression<bool>? isPublic,
     Expression<bool>? isCustomTitle,
     Expression<DateTime>? updatedAt,
@@ -1949,6 +1986,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
       if (level != null) 'level': level,
       if (title != null) 'title': title,
       if (description != null) 'description': description,
+      if (tags != null) 'tags': tags,
       if (isPublic != null) 'is_public': isPublic,
       if (isCustomTitle != null) 'is_custom_title': isCustomTitle,
       if (updatedAt != null) 'updated_at': updatedAt,
@@ -1960,6 +1998,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     Value<String>? level,
     Value<String>? title,
     Value<String>? description,
+    Value<String>? tags,
     Value<bool>? isPublic,
     Value<bool>? isCustomTitle,
     Value<DateTime?>? updatedAt,
@@ -1969,6 +2008,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
       level: level ?? this.level,
       title: title ?? this.title,
       description: description ?? this.description,
+      tags: tags ?? this.tags,
       isPublic: isPublic ?? this.isPublic,
       isCustomTitle: isCustomTitle ?? this.isCustomTitle,
       updatedAt: updatedAt ?? this.updatedAt,
@@ -1990,6 +2030,9 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
     if (description.present) {
       map['description'] = Variable<String>(description.value);
     }
+    if (tags.present) {
+      map['tags'] = Variable<String>(tags.value);
+    }
     if (isPublic.present) {
       map['is_public'] = Variable<bool>(isPublic.value);
     }
@@ -2009,6 +2052,7 @@ class UserLessonCompanion extends UpdateCompanion<UserLessonData> {
           ..write('level: $level, ')
           ..write('title: $title, ')
           ..write('description: $description, ')
+          ..write('tags: $tags, ')
           ..write('isPublic: $isPublic, ')
           ..write('isCustomTitle: $isCustomTitle, ')
           ..write('updatedAt: $updatedAt')
@@ -3619,6 +3663,7 @@ typedef $$UserLessonTableCreateCompanionBuilder =
       required String level,
       required String title,
       Value<String> description,
+      Value<String> tags,
       Value<bool> isPublic,
       Value<bool> isCustomTitle,
       Value<DateTime?> updatedAt,
@@ -3629,6 +3674,7 @@ typedef $$UserLessonTableUpdateCompanionBuilder =
       Value<String> level,
       Value<String> title,
       Value<String> description,
+      Value<String> tags,
       Value<bool> isPublic,
       Value<bool> isCustomTitle,
       Value<DateTime?> updatedAt,
@@ -3686,6 +3732,11 @@ class $$UserLessonTableFilterComposer
 
   ColumnFilters<String> get description => $composableBuilder(
     column: $table.description,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get tags => $composableBuilder(
+    column: $table.tags,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -3759,6 +3810,11 @@ class $$UserLessonTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get tags => $composableBuilder(
+    column: $table.tags,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<bool> get isPublic => $composableBuilder(
     column: $table.isPublic,
     builder: (column) => ColumnOrderings(column),
@@ -3797,6 +3853,9 @@ class $$UserLessonTableAnnotationComposer
     column: $table.description,
     builder: (column) => column,
   );
+
+  GeneratedColumn<String> get tags =>
+      $composableBuilder(column: $table.tags, builder: (column) => column);
 
   GeneratedColumn<bool> get isPublic =>
       $composableBuilder(column: $table.isPublic, builder: (column) => column);
@@ -3867,6 +3926,7 @@ class $$UserLessonTableTableManager
                 Value<String> level = const Value.absent(),
                 Value<String> title = const Value.absent(),
                 Value<String> description = const Value.absent(),
+                Value<String> tags = const Value.absent(),
                 Value<bool> isPublic = const Value.absent(),
                 Value<bool> isCustomTitle = const Value.absent(),
                 Value<DateTime?> updatedAt = const Value.absent(),
@@ -3875,6 +3935,7 @@ class $$UserLessonTableTableManager
                 level: level,
                 title: title,
                 description: description,
+                tags: tags,
                 isPublic: isPublic,
                 isCustomTitle: isCustomTitle,
                 updatedAt: updatedAt,
@@ -3885,6 +3946,7 @@ class $$UserLessonTableTableManager
                 required String level,
                 required String title,
                 Value<String> description = const Value.absent(),
+                Value<String> tags = const Value.absent(),
                 Value<bool> isPublic = const Value.absent(),
                 Value<bool> isCustomTitle = const Value.absent(),
                 Value<DateTime?> updatedAt = const Value.absent(),
@@ -3893,6 +3955,7 @@ class $$UserLessonTableTableManager
                 level: level,
                 title: title,
                 description: description,
+                tags: tags,
                 isPublic: isPublic,
                 isCustomTitle: isCustomTitle,
                 updatedAt: updatedAt,

@@ -4,6 +4,7 @@ import 'package:jpstudy/features/grammar/grammar_screen.dart';
 import 'package:jpstudy/features/home/home_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_detail_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_edit_screen.dart';
+import 'package:jpstudy/features/lesson/lesson_practice_screen.dart';
 import 'package:jpstudy/features/progress/progress_screen.dart';
 import 'package:jpstudy/features/vocab/vocab_screen.dart';
 
@@ -42,6 +43,19 @@ class AppRouter {
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           return LessonEditScreen(lessonId: id ?? 1);
+        },
+      ),
+      GoRoute(
+        path: '/lesson/:id/practice/:mode',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '');
+          final modeValue = state.pathParameters['mode'] ?? 'learn';
+          final mode = lessonPracticeModeFromPath(modeValue) ??
+              LessonPracticeMode.learn;
+          return LessonPracticeScreen(
+            lessonId: id ?? 1,
+            mode: mode,
+          );
         },
       ),
     ],

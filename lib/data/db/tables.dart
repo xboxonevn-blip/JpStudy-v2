@@ -40,6 +40,7 @@ class UserLesson extends Table {
   TextColumn get level => text()();
   TextColumn get title => text()();
   TextColumn get description => text().withDefault(const Constant(''))();
+  TextColumn get tags => text().withDefault(const Constant(''))();
   BoolColumn get isPublic => boolean().withDefault(const Constant(true))();
   BoolColumn get isCustomTitle => boolean().withDefault(const Constant(false))();
   DateTimeColumn get updatedAt => dateTime().nullable()();

@@ -879,6 +879,7 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
           lastStudiedMinutes: lastStudiedMinutes,
           progress: progress,
           dueCount: dueCount,
+          tags: stored?.tags ?? '',
           isCustomTitle: stored?.isCustomTitle ?? false,
           isCustomLesson: false,
         ),
@@ -903,6 +904,7 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
           lastStudiedMinutes: lastStudiedMinutes,
           progress: progress,
           dueCount: stored.dueCount,
+          tags: stored.tags,
           isCustomTitle: stored.isCustomTitle,
           isCustomLesson: true,
         ),
@@ -930,7 +932,11 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
     final timeText = language.lastStudiedLabel(
       language.relativeTimeLabel(lesson.lastStudiedMinutes),
     );
-    return '$countText - $timeText';
+    final tags = lesson.tags.trim();
+    if (tags.isEmpty) {
+      return '$countText - $timeText';
+    }
+    return '$countText - $timeText - ${language.tagsMetaLabel(tags)}';
   }
 
   Future<void> _createLesson(BuildContext context) async {
@@ -1594,6 +1600,7 @@ class _LessonSummary {
     required this.lastStudiedMinutes,
     required this.progress,
     required this.dueCount,
+    required this.tags,
     required this.isCustomTitle,
     required this.isCustomLesson,
   });
@@ -1605,6 +1612,7 @@ class _LessonSummary {
   final int lastStudiedMinutes;
   final double progress;
   final int dueCount;
+  final String tags;
   final bool isCustomTitle;
   final bool isCustomLesson;
 }

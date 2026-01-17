@@ -634,6 +634,83 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get checkLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Check';
+      case AppLanguage.vi:
+        return 'Ki\u1ec3m tra';
+      case AppLanguage.ja:
+        return '\u78ba\u8a8d';
+    }
+  }
+
+  String get correctLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Correct';
+      case AppLanguage.vi:
+        return '\u0110\u00fang';
+      case AppLanguage.ja:
+        return '\u6b63\u89e3';
+    }
+  }
+
+  String get incorrectLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Incorrect';
+      case AppLanguage.vi:
+        return 'Sai';
+      case AppLanguage.ja:
+        return '\u4e0d\u6b63\u89e3';
+    }
+  }
+
+  String get nextLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Next';
+      case AppLanguage.vi:
+        return 'Ti\u1ebfp';
+      case AppLanguage.ja:
+        return '\u6b21\u3078';
+    }
+  }
+
+  String get retryLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Retry';
+      case AppLanguage.vi:
+        return 'L\u00e0m l\u1ea1i';
+      case AppLanguage.ja:
+        return '\u3082\u3046\u4e00\u5ea6';
+    }
+  }
+
+  String get restartLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Restart';
+      case AppLanguage.vi:
+        return 'B\u1eaft \u0111\u1ea7u l\u1ea1i';
+      case AppLanguage.ja:
+        return '\u3084\u308a\u76f4\u3057';
+    }
+  }
+
+  String get playAudioLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Play audio';
+      case AppLanguage.vi:
+        return 'Ph\u00e1t \u00e2m thanh';
+      case AppLanguage.ja:
+        return '\u97f3\u58f0\u3092\u518d\u751f';
+    }
+  }
+
   String get publicLabel {
     switch (this) {
       case AppLanguage.en:
@@ -664,6 +741,39 @@ extension AppLanguageLabels on AppLanguage {
         return 'Th\xeam m\xf4 t\u1ea3...';
       case AppLanguage.ja:
         return '\u8aac\u660e\u3092\u8ffd\u52a0...';
+    }
+  }
+
+  String get tagsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Tags';
+      case AppLanguage.vi:
+        return 'Th\u1ebb';
+      case AppLanguage.ja:
+        return '\u30bf\u30b0';
+    }
+  }
+
+  String get tagsHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Comma separated tags';
+      case AppLanguage.vi:
+        return 'C\xe1ch nhau b\u1edfi d\u1ea5u ph\u1ea9y';
+      case AppLanguage.ja:
+        return '\u30ab\u30f3\u30de\u533a\u5207\u308a\u306e\u30bf\u30b0';
+    }
+  }
+
+  String tagsMetaLabel(String tags) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Tags: $tags';
+      case AppLanguage.vi:
+        return 'Th\u1ebb: $tags';
+      case AppLanguage.ja:
+        return '\u30bf\u30b0: $tags';
     }
   }
 
@@ -921,6 +1031,237 @@ extension AppLanguageLabels on AppLanguage {
         return 'Gh\xe9p th\u1ebb';
       case AppLanguage.ja:
         return '\u30de\u30c3\u30c1';
+    }
+  }
+
+  String get learnModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Learn';
+      case AppLanguage.vi:
+        return 'H\u1ecdc';
+      case AppLanguage.ja:
+        return '\u5b66\u7fd2';
+    }
+  }
+
+  String get testModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Test';
+      case AppLanguage.vi:
+        return 'Ki\u1ec3m tra';
+      case AppLanguage.ja:
+        return '\u30c6\u30b9\u30c8';
+    }
+  }
+
+  String get matchModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Match';
+      case AppLanguage.vi:
+        return 'Gh\xe9p';
+      case AppLanguage.ja:
+        return '\u30de\u30c3\u30c1';
+    }
+  }
+
+  String get writeModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Write';
+      case AppLanguage.vi:
+        return 'Vi\u1ebft';
+      case AppLanguage.ja:
+        return '\u66f8\u304f';
+    }
+  }
+
+  String get spellModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Spell';
+      case AppLanguage.vi:
+        return '\u0110\u00e1nh v\u1ea7n';
+      case AppLanguage.ja:
+        return '\u767a\u97f3';
+    }
+  }
+
+  String learnProgressLabel(int mastered, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mastered $mastered / $total';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 thu\u1ed9c $mastered / $total';
+      case AppLanguage.ja:
+        return '\u7fd2\u5f97 $mastered / $total';
+    }
+  }
+
+  String get learnCompleteLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Learn session complete';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 ho\u00e0n th\u00e0nh h\u1ecdc';
+      case AppLanguage.ja:
+        return '\u5b66\u7fd2\u5b8c\u4e86';
+    }
+  }
+
+  String learnSummaryLabel(int correct, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Correct $correct / $total';
+      case AppLanguage.vi:
+        return '\u0110\u00fang $correct / $total';
+      case AppLanguage.ja:
+        return '\u6b63\u89e3 $correct / $total';
+    }
+  }
+
+  String testProgressLabel(int current, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Question $current / $total';
+      case AppLanguage.vi:
+        return 'C\u00e2u $current / $total';
+      case AppLanguage.ja:
+        return '\u554f\u984c $current / $total';
+    }
+  }
+
+  String testScoreLabel(int correct, int total, int accuracy) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Score $correct / $total ($accuracy%)';
+      case AppLanguage.vi:
+        return '\u0110i\u1ec3m $correct / $total ($accuracy%)';
+      case AppLanguage.ja:
+        return '\u5f97\u70b9 $correct / $total ($accuracy%)';
+    }
+  }
+
+  String get testAllCorrectLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'All answers are correct.';
+      case AppLanguage.vi:
+        return 'T\u1ea5t c\u1ea3 \u0111\u1ec1u \u0111\u00fang.';
+      case AppLanguage.ja:
+        return '\u3059\u3079\u3066\u6b63\u89e3\u3067\u3059\u3002';
+    }
+  }
+
+  String testWrongLabel(String correctAnswer) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Correct: $correctAnswer';
+      case AppLanguage.vi:
+        return '\u0110\u00e1p \u00e1n: $correctAnswer';
+      case AppLanguage.ja:
+        return '\u6b63\u89e3: $correctAnswer';
+    }
+  }
+
+  String testYourAnswerLabel(String answer) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Your answer: $answer';
+      case AppLanguage.vi:
+        return 'B\u1ea1n ch\u1ecdn: $answer';
+      case AppLanguage.ja:
+        return '\u3042\u306a\u305f\u306e\u56de\u7b54: $answer';
+    }
+  }
+
+  String matchTimeLabel(int seconds) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time: ${seconds}s';
+      case AppLanguage.vi:
+        return 'Th\u1eddi gian: ${seconds}s';
+      case AppLanguage.ja:
+        return '\u6642\u9593: ${seconds}s';
+    }
+  }
+
+  String matchPairsLabel(int matched, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Pairs $matched / $total';
+      case AppLanguage.vi:
+        return 'C\u1eb7p $matched / $total';
+      case AppLanguage.ja:
+        return '\u30da\u30a2 $matched / $total';
+    }
+  }
+
+  String matchFinishedLabel(int seconds) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Finished in ${seconds}s';
+      case AppLanguage.vi:
+        return 'Ho\u00e0n th\u00e0nh ${seconds}s';
+      case AppLanguage.ja:
+        return '${seconds}s\u3067\u7d42\u4e86';
+    }
+  }
+
+  String get writeCompleteLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Write session complete';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 ho\u00e0n th\u00e0nh vi\u1ebft';
+      case AppLanguage.ja:
+        return '\u66f8\u304f\u7d42\u4e86';
+    }
+  }
+
+  String get spellCompleteLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Spell session complete';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 ho\u00e0n th\u00e0nh \u0111\u00e1nh v\u1ea7n';
+      case AppLanguage.ja:
+        return '\u767a\u97f3\u7d42\u4e86';
+    }
+  }
+
+  String practiceSummaryLabel(int correct, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Correct $correct / $total';
+      case AppLanguage.vi:
+        return '\u0110\u00fang $correct / $total';
+      case AppLanguage.ja:
+        return '\u6b63\u89e3 $correct / $total';
+    }
+  }
+
+  String practiceProgressLabel(int current, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Item $current / $total';
+      case AppLanguage.vi:
+        return 'M\u1ee5c $current / $total';
+      case AppLanguage.ja:
+        return '\u554f\u984c $current / $total';
+    }
+  }
+
+  String get spellPromptLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Type what you hear';
+      case AppLanguage.vi:
+        return 'G\u00f5 theo nh\u1eefng g\u00ec b\u1ea1n nghe';
+      case AppLanguage.ja:
+        return '\u805e\u3048\u305f\u3082\u306e\u3092\u5165\u529b';
     }
   }
 
@@ -1617,6 +1958,72 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get progressEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No progress yet.';
+      case AppLanguage.vi:
+        return 'Ch\u01b0a c\u00f3 ti\u1ebfn \u0111\u1ed9.';
+      case AppLanguage.ja:
+        return '\u307e\u3060\u9032\u6357\u304c\u3042\u308a\u307e\u305b\u3093\u3002';
+    }
+  }
+
+  String get progressStreakLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Streak';
+      case AppLanguage.vi:
+        return 'Chu\u1ed7i';
+      case AppLanguage.ja:
+        return '\u9023\u7d9a';
+    }
+  }
+
+  String get progressTodayXpLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'XP today';
+      case AppLanguage.vi:
+        return 'XP h\u00f4m nay';
+      case AppLanguage.ja:
+        return '\u4eca\u65e5\u306eXP';
+    }
+  }
+
+  String get progressTotalXpLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Total XP';
+      case AppLanguage.vi:
+        return 'T\u1ed5ng XP';
+      case AppLanguage.ja:
+        return '\u7dcfXP';
+    }
+  }
+
+  String get progressAttemptsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Attempts';
+      case AppLanguage.vi:
+        return 'L\u1ea7n l\u00e0m';
+      case AppLanguage.ja:
+        return '\u8a66\u884c';
+    }
+  }
+
+  String get progressAccuracyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Accuracy';
+      case AppLanguage.vi:
+        return '\u0110\u1ed9 ch\u00ednh x\xe1c';
+      case AppLanguage.ja:
+        return '\u6b63\u7b54\u7387';
+    }
+  }
+
   String get vocabScreenBody {
     switch (this) {
       case AppLanguage.en:
@@ -1658,6 +2065,17 @@ extension AppLanguageLabels on AppLanguage {
         return 'T\u1ea3i d\u1eef li\u1ec7u th\u1ea5t b\u1ea1i.';
       case AppLanguage.ja:
         return '\u30c7\u30fc\u30bf\u306e\u8aad\u307f\u8fbc\u307f\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002';
+    }
+  }
+
+  String get noTermsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No terms yet.';
+      case AppLanguage.vi:
+        return 'Ch\u01b0a c\u00f3 thu\u1eadt ng\u1eef.';
+      case AppLanguage.ja:
+        return '\u307e\u3060\u5358\u8a9e\u304c\u3042\u308a\u307e\u305b\u3093\u3002';
     }
   }
 

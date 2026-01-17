@@ -26,6 +26,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
   final List<_EditableTerm> _terms = [];
   late final TextEditingController _titleController;
   late final TextEditingController _descriptionController;
+  late final TextEditingController _tagsController;
   late String _defaultTitle;
   bool _hintsEnabled = true;
   bool _isPublic = true;
@@ -36,6 +37,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     super.initState();
     _titleController = TextEditingController();
     _descriptionController = TextEditingController();
+    _tagsController = TextEditingController();
     _load();
   }
 
@@ -43,6 +45,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
   void dispose() {
     _titleController.dispose();
     _descriptionController.dispose();
+    _tagsController.dispose();
     super.dispose();
   }
 
@@ -65,6 +68,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       _isPublic = lesson.isPublic;
       _titleController.text = lesson.title;
       _descriptionController.text = lesson.description;
+      _tagsController.text = lesson.tags;
       _terms
         ..clear()
         ..addAll(
@@ -162,6 +166,18 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               onChanged: (value) =>
                   repo.updateLessonDescription(widget.lessonId, value),
               decoration: const InputDecoration(),
+            ),
+          ),
+          const SizedBox(height: 12),
+          _LabeledField(
+            label: language.tagsLabel,
+            child: TextField(
+              controller: _tagsController,
+              onChanged: (value) =>
+                  repo.updateLessonTags(widget.lessonId, value),
+              decoration: InputDecoration(
+                hintText: language.tagsHint,
+              ),
             ),
           ),
           const SizedBox(height: 18),

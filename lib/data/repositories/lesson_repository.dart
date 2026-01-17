@@ -38,6 +38,11 @@ final lessonDueTermsProvider =
   return repo.fetchDueTerms(lessonId);
 });
 
+final progressSummaryProvider = FutureProvider<ProgressSummary>((ref) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchProgressSummary();
+});
+
 class LessonTitleArgs {
   const LessonTitleArgs(this.lessonId, this.fallback);
 
@@ -80,6 +85,7 @@ class LessonMeta {
     required this.level,
     required this.title,
     required this.isCustomTitle,
+    required this.tags,
     required this.termCount,
     required this.completedCount,
     required this.dueCount,
@@ -90,6 +96,7 @@ class LessonMeta {
   final String level;
   final String title;
   final bool isCustomTitle;
+  final String tags;
   final int termCount;
   final int completedCount;
   final int dueCount;
@@ -106,6 +113,36 @@ class LessonTermDraft {
   final String term;
   final String reading;
   final String definition;
+}
+
+class AttemptAnswerDraft {
+  const AttemptAnswerDraft({
+    required this.questionId,
+    required this.selectedIndex,
+    required this.isCorrect,
+  });
+
+  final int questionId;
+  final int selectedIndex;
+  final bool isCorrect;
+}
+
+class ProgressSummary {
+  const ProgressSummary({
+    required this.totalXp,
+    required this.todayXp,
+    required this.streak,
+    required this.totalAttempts,
+    required this.totalCorrect,
+    required this.totalQuestions,
+  });
+
+  final int totalXp;
+  final int todayXp;
+  final int streak;
+  final int totalAttempts;
+  final int totalCorrect;
+  final int totalQuestions;
 }
 
 class LessonRepository {
@@ -182,6 +219,7 @@ class LessonRepository {
             level: lesson.level,
             title: lesson.title,
             isCustomTitle: lesson.isCustomTitle,
+            tags: lesson.tags,
             termCount: counts[lesson.id] ?? 0,
             completedCount: completedCounts[lesson.id] ?? 0,
             dueCount: dueCounts[lesson.id] ?? 0,
@@ -305,6 +343,14 @@ class LessonRepository {
     ));
   }
 
+  Future<void> updateLessonTags(int lessonId, String tags) {
+    return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
+        .write(UserLessonCompanion(
+      tags: Value(tags),
+      updatedAt: Value(DateTime.now()),
+    ));
+  }
+
   Future<void> updateLessonPublic(int lessonId, bool isPublic) {
     return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
         .write(UserLessonCompanion(
@@ -419,6 +465,133 @@ class LessonRepository {
           .go();
     });
     await _touchLesson(lessonId);
+  }
+
+  Future<void> recordStudyActivity({required int xpDelta}) async {
+    if (xpDelta <= 0) {
+      return;
+    }
+    final today = _startOfDay(DateTime.now());
+    final todayRow = await (_db.select(_db.userProgress)
+          ..where((tbl) => tbl.day.equals(today)))
+        .getSingleOrNull();
+    if (todayRow != null) {
+      await (_db.update(_db.userProgress)
+            ..where((tbl) => tbl.id.equals(todayRow.id)))
+          .write(UserProgressCompanion(
+        xp: Value(todayRow.xp + xpDelta),
+        streak: Value(todayRow.streak),
+      ));
+      return;
+    }
+    final yesterday = today.subtract(const Duration(days: 1));
+    final yesterdayRow = await (_db.select(_db.userProgress)
+          ..where((tbl) => tbl.day.equals(yesterday)))
+        .getSingleOrNull();
+    final nextStreak = yesterdayRow == null ? 1 : yesterdayRow.streak + 1;
+    await _db.into(_db.userProgress).insert(
+          UserProgressCompanion.insert(
+            day: today,
+            xp: Value(xpDelta),
+            streak: Value(nextStreak),
+          ),
+        );
+  }
+
+  Future<int> recordAttempt({
+    required String mode,
+    required String level,
+    required DateTime startedAt,
+    required DateTime finishedAt,
+    required int score,
+    required int total,
+    List<AttemptAnswerDraft> answers = const [],
+  }) async {
+    return _db.transaction(() async {
+      final attemptId = await _db.into(_db.attempt).insert(
+            AttemptCompanion.insert(
+              mode: mode,
+              level: level,
+              startedAt: startedAt,
+              finishedAt: Value(finishedAt),
+              score: Value(score),
+              total: Value(total),
+            ),
+          );
+      if (answers.isNotEmpty) {
+        await _db.batch((batch) {
+          for (final answer in answers) {
+            batch.insert(
+              _db.attemptAnswer,
+              AttemptAnswerCompanion.insert(
+                attemptId: attemptId,
+                questionId: answer.questionId,
+                selectedIndex: answer.selectedIndex,
+                isCorrect: answer.isCorrect,
+              ),
+            );
+          }
+        });
+      }
+      return attemptId;
+    });
+  }
+
+  Future<ProgressSummary> fetchProgressSummary() async {
+    final today = _startOfDay(DateTime.now());
+    final todayRow = await (_db.select(_db.userProgress)
+          ..where((tbl) => tbl.day.equals(today)))
+        .getSingleOrNull();
+    final latestRow = await (_db.select(_db.userProgress)
+          ..orderBy([
+            (tbl) =>
+                OrderingTerm(expression: tbl.day, mode: OrderingMode.desc),
+          ])
+          ..limit(1))
+        .getSingleOrNull();
+
+    var streak = 0;
+    if (todayRow != null) {
+      streak = todayRow.streak;
+    } else if (latestRow != null) {
+      final yesterday = today.subtract(const Duration(days: 1));
+      if (_isSameDay(latestRow.day, yesterday)) {
+        streak = latestRow.streak;
+      }
+    }
+
+    final totalXpRow = await (_db.selectOnly(_db.userProgress)
+          ..addColumns([_db.userProgress.xp.sum()]))
+        .getSingleOrNull();
+    final totalXp = totalXpRow?.read(_db.userProgress.xp.sum()) ?? 0;
+
+    final attemptStats = await (_db.selectOnly(_db.attempt)
+          ..addColumns([
+            _db.attempt.id.count(),
+            _db.attempt.score.sum(),
+            _db.attempt.total.sum(),
+          ]))
+        .getSingleOrNull();
+    final totalAttempts = attemptStats?.read(_db.attempt.id.count()) ?? 0;
+    final totalCorrect = attemptStats?.read(_db.attempt.score.sum()) ?? 0;
+    final totalQuestions = attemptStats?.read(_db.attempt.total.sum()) ?? 0;
+
+    return ProgressSummary(
+      totalXp: totalXp,
+      todayXp: todayRow?.xp ?? 0,
+      streak: streak,
+      totalAttempts: totalAttempts,
+      totalCorrect: totalCorrect,
+      totalQuestions: totalQuestions,
+    );
+  }
+
+  DateTime _startOfDay(DateTime time) {
+    return DateTime(time.year, time.month, time.day);
+  }
+
+  bool _isSameDay(DateTime a, DateTime b) {
+    return a.year == b.year && a.month == b.month && a.day == b.day;
   }
 
   Future<void> deleteTerm(int termId, {int? lessonId}) {

@@ -252,6 +252,11 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       const SizedBox(height: 8),
                       Text(language.reviewCountLabel(totalTerms)),
                     ],
+                    const SizedBox(height: 12),
+                    _PracticeActions(
+                      language: language,
+                      lessonId: widget.lessonId,
+                    ),
                     const SizedBox(height: 20),
                   ],
                   Center(
@@ -1940,6 +1945,71 @@ class _ModeSwitcher extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _PracticeActions extends StatelessWidget {
+  const _PracticeActions({
+    required this.language,
+    required this.lessonId,
+  });
+
+  final AppLanguage language;
+  final int lessonId;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 10,
+      runSpacing: 10,
+      alignment: WrapAlignment.center,
+      children: [
+        _PracticeButton(
+          label: language.learnModeLabel,
+          onTap: () => context.push('/lesson/$lessonId/practice/learn'),
+        ),
+        _PracticeButton(
+          label: language.testModeLabel,
+          onTap: () => context.push('/lesson/$lessonId/practice/test'),
+        ),
+        _PracticeButton(
+          label: language.matchModeLabel,
+          onTap: () => context.push('/lesson/$lessonId/practice/match'),
+        ),
+        _PracticeButton(
+          label: language.writeModeLabel,
+          onTap: () => context.push('/lesson/$lessonId/practice/write'),
+        ),
+        _PracticeButton(
+          label: language.spellModeLabel,
+          onTap: () => context.push('/lesson/$lessonId/practice/spell'),
+        ),
+      ],
+    );
+  }
+}
+
+class _PracticeButton extends StatelessWidget {
+  const _PracticeButton({
+    required this.label,
+    required this.onTap,
+  });
+
+  final String label;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+      onPressed: onTap,
+      style: OutlinedButton.styleFrom(
+        foregroundColor: const Color(0xFF1C2440),
+        side: const BorderSide(color: Color(0xFFE1E6F0)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      ),
+      child: Text(label),
     );
   }
 }

@@ -85,4 +85,53 @@ class AppTheme {
       iconTheme: const IconThemeData(color: Color(0xFF64748B)),
     );
   }
+
+  static ThemeData dark() {
+    const primaryColor = Color(0xFF8B8FF1);
+    const secondaryColor = Color(0xFFA78BFE);
+    const scaffoldBg = Color(0xFF0F172A);
+    const cardBg = Color(0xFF1E293B);
+    final fontName = GoogleFonts.nunito().fontFamily;
+
+    return ThemeData(
+      useMaterial3: true,
+      brightness: Brightness.dark,
+      fontFamily: fontName,
+      colorScheme: const ColorScheme.dark(
+        primary: primaryColor,
+        secondary: secondaryColor,
+        tertiary: Color(0xFF34D399),
+        surface: cardBg,
+        onPrimary: Colors.white,
+      ),
+      scaffoldBackgroundColor: scaffoldBg,
+      appBarTheme: AppBarTheme(
+        backgroundColor: scaffoldBg,
+        elevation: 0,
+        centerTitle: true,
+        titleTextStyle: TextStyle(
+          fontFamily: fontName,
+          fontSize: 20,
+          fontWeight: FontWeight.w700,
+          color: Colors.white,
+        ),
+      ),
+      cardTheme: CardThemeData(
+        color: cardBg,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: primaryColor,
+          foregroundColor: Colors.white,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24),
+          ),
+        ),
+      ),
+    );
+  }
 }

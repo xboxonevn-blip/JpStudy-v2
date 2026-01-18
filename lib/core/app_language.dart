@@ -2297,4 +2297,15 @@ extension AppLanguageLabels on AppLanguage {
         return '$learned / $total \u8a9e\u7fd2\u5f97';
     }
   }
+
+  String get emptyStateMessage {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Tap to create your first study set!';
+      case AppLanguage.vi:
+        return 'Chạm để tạo học phần đầu tiên!';
+      case AppLanguage.ja:
+        return 'タップして最初のセットを作成！';
+    }
+  }
 }

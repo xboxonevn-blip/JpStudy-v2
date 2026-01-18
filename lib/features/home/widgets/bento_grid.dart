@@ -10,6 +10,7 @@ class BentoGrid extends StatelessWidget {
     required this.level,
     required this.language,
     required this.recentLesson,
+    required this.progressSummary,
     required this.onContinueTap,
     required this.onLessonTap,
   });
@@ -17,6 +18,7 @@ class BentoGrid extends StatelessWidget {
   final StudyLevel level;
   final AppLanguage language;
   final LessonMeta? recentLesson;
+  final ProgressSummary? progressSummary;
   final VoidCallback onContinueTap;
   final VoidCallback onLessonTap;
 
@@ -41,13 +43,20 @@ class BentoGrid extends StatelessWidget {
         StaggeredGridTile.count(
           crossAxisCellCount: 2,
           mainAxisCellCount: 2,
-          child: _StreakWidget(language: language),
+          child: _StreakWidget(
+            language: language,
+            streak: progressSummary?.streak ?? 0,
+          ),
         ),
         // Stats Widget
         StaggeredGridTile.count(
           crossAxisCellCount: 2,
           mainAxisCellCount: 2,
-          child: _StatsWidget(language: language),
+          child: _StatsWidget(
+            language: language,
+            totalCorrect: progressSummary?.totalCorrect ?? 0,
+            totalQuestions: progressSummary?.totalQuestions ?? 0,
+          ),
         ),
       ],
     );
@@ -68,7 +77,6 @@ class _HeroWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    // Gradient Background
     final gradient = LinearGradient(
       colors: [theme.colorScheme.primary, theme.colorScheme.secondary],
       begin: Alignment.topLeft,
@@ -94,72 +102,109 @@ class _HeroWidget extends StatelessWidget {
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.all(24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.2),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Text(
-                        language.continueLearningLabel,
-                        style: theme.textTheme.labelSmall?.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.0,
-                        ),
-                      ),
-                    ),
-                    const Spacer(),
-                    const Icon(Icons.play_circle_fill, color: Colors.white, size: 32),
-                  ],
-                ),
-                const Spacer(),
-                Text(
-                  lesson?.title ?? language.lessonTitle(1),
-                  style: theme.textTheme.headlineSmall?.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 8),
-                LinearProgressIndicator(
-                  value: (lesson?.completedCount ?? 0) / (lesson?.termCount == 0 ? 1 : (lesson?.termCount ?? 1)),
-                  backgroundColor: Colors.white.withValues(alpha: 0.2),
-                  valueColor: const AlwaysStoppedAnimation(Colors.white),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  language.termsLearnedLabel(lesson?.completedCount ?? 0, lesson?.termCount ?? 0),
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: Colors.white.withValues(alpha: 0.9),
-                  ),
-                ),
-              ],
-            ),
+            child: lesson == null
+                ? _buildEmptyState(theme)
+                : _buildLessonContent(theme),
           ),
         ),
       ),
     );
   }
+
+  Widget _buildEmptyState(ThemeData theme) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          Icons.rocket_launch_rounded,
+          color: Colors.white.withValues(alpha: 0.9),
+          size: 48,
+        ),
+        const SizedBox(height: 16),
+        Text(
+          language.createLessonLabel,
+          style: theme.textTheme.headlineSmall?.copyWith(
+            color: Colors.white,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          language.emptyStateMessage,
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: Colors.white.withValues(alpha: 0.8),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildLessonContent(ThemeData theme) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                language.continueLearningLabel,
+                style: theme.textTheme.labelSmall?.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                ),
+              ),
+            ),
+            const Spacer(),
+            const Icon(Icons.play_circle_fill, color: Colors.white, size: 32),
+          ],
+        ),
+        const Spacer(),
+        Text(
+          lesson?.title ?? language.lessonTitle(1),
+          style: theme.textTheme.headlineSmall?.copyWith(
+            color: Colors.white,
+            fontWeight: FontWeight.w900,
+          ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
+        const SizedBox(height: 8),
+        LinearProgressIndicator(
+          value: (lesson?.completedCount ?? 0) / (lesson?.termCount == 0 ? 1 : (lesson?.termCount ?? 1)),
+          backgroundColor: Colors.white.withValues(alpha: 0.2),
+          valueColor: const AlwaysStoppedAnimation(Colors.white),
+          borderRadius: BorderRadius.circular(4),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          language.termsLearnedLabel(lesson?.completedCount ?? 0, lesson?.termCount ?? 0),
+          style: theme.textTheme.bodySmall?.copyWith(
+            color: Colors.white.withValues(alpha: 0.9),
+          ),
+        ),
+      ],
+    );
+  }
 }
 
 class _StreakWidget extends StatelessWidget {
-  const _StreakWidget({required this.language});
+  const _StreakWidget({
+    required this.language,
+    required this.streak,
+  });
 
   final AppLanguage language;
+  final int streak;
 
   @override
   Widget build(BuildContext context) {
-    // Placeholder logic for streak
-    const streakDays = 3;
     final theme = Theme.of(context);
 
     return Container(
@@ -175,7 +220,7 @@ class _StreakWidget extends StatelessWidget {
           const Icon(Icons.local_fire_department_rounded, color: Color(0xFFFF6B6B), size: 40),
           const SizedBox(height: 8),
           Text(
-            '$streakDays',
+            '$streak',
             style: theme.textTheme.headlineMedium?.copyWith(
               fontWeight: FontWeight.w900,
               color: const Color(0xFF1E293B),
@@ -194,13 +239,22 @@ class _StreakWidget extends StatelessWidget {
 }
 
 class _StatsWidget extends StatelessWidget {
-  const _StatsWidget({required this.language});
+  const _StatsWidget({
+    required this.language,
+    required this.totalCorrect,
+    required this.totalQuestions,
+  });
 
   final AppLanguage language;
+  final int totalCorrect;
+  final int totalQuestions;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final masteryPercent = totalQuestions > 0
+        ? ((totalCorrect / totalQuestions) * 100).round()
+        : 0;
 
     return Container(
       decoration: BoxDecoration(
@@ -215,7 +269,7 @@ class _StatsWidget extends StatelessWidget {
           Icon(Icons.check_circle_rounded, color: theme.colorScheme.tertiary, size: 40),
           const SizedBox(height: 8),
           Text(
-            '85%', // Placeholder
+            '$masteryPercent%',
             style: theme.textTheme.headlineMedium?.copyWith(
               fontWeight: FontWeight.w900,
               color: theme.colorScheme.tertiary,

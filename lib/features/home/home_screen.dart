@@ -787,6 +787,9 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
   Widget build(BuildContext context) {
     final metaAsync = ref.watch(lessonMetaProvider(widget.level.shortLabel));
     final meta = metaAsync.asData?.value ?? const <LessonMeta>[];
+    final progressAsync = ref.watch(progressSummaryProvider);
+    final progress = progressAsync.asData?.value;
+    
     final lessons = _buildLessonSummaries(
       widget.level,
       widget.language,
@@ -801,13 +804,14 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
         BentoGrid(
           level: widget.level,
           language: widget.language,
-          recentLesson: meta.isNotEmpty ? meta.first : null, // Todo: better recent logic?
+          recentLesson: meta.isNotEmpty ? _findBestLesson(meta) : null,
+          progressSummary: progress,
           onContinueTap: () {
             if (meta.isNotEmpty) {
-              final latest = meta.first;
+              final bestLesson = _findBestLesson(meta);
               context.push(
-                '/lesson/${latest.id}?level=${widget.level.shortLabel}',
-                extra: latest.title,
+                '/lesson/${bestLesson.id}?level=${widget.level.shortLabel}',
+                extra: bestLesson.title,
               );
             } else {
                _createLesson(context);
@@ -846,6 +850,39 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
             ),
       ],
     );
+  }
+
+  LessonMeta _findBestLesson(List<LessonMeta> lessons) {
+    // Priority 1: Lesson with due terms (needs review)
+    final withDue = lessons.where((l) => l.dueCount > 0).toList();
+    if (withDue.isNotEmpty) {
+      // Sort by most due terms
+      withDue.sort((a, b) => b.dueCount.compareTo(a.dueCount));
+      return withDue.first;
+    }
+
+    // Priority 2: Incomplete lesson (not all terms learned)
+    final incomplete = lessons.where((l) {
+      return l.termCount > 0 && l.completedCount < l.termCount;
+    }).toList();
+    if (incomplete.isNotEmpty) {
+      // Sort by most progress (closest to completion = most engaging)
+      incomplete.sort((a, b) {
+        final progressA = a.completedCount / (a.termCount == 0 ? 1 : a.termCount);
+        final progressB = b.completedCount / (b.termCount == 0 ? 1 : b.termCount);
+        return progressB.compareTo(progressA);
+      });
+      return incomplete.first;
+    }
+
+    // Priority 3: Most recently updated (fallback)
+    final sorted = List<LessonMeta>.from(lessons);
+    sorted.sort((a, b) {
+      final dateA = a.updatedAt ?? DateTime(2000);
+      final dateB = b.updatedAt ?? DateTime(2000);
+      return dateB.compareTo(dateA);
+    });
+    return sorted.first;
   }
 
   List<_LessonSummary> _applyFilters(List<_LessonSummary> lessons) {

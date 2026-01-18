@@ -7,6 +7,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/content_repository.dart';
+import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/games/match_game/logic/match_engine.dart';
 
 class MatchGameScreen extends ConsumerStatefulWidget {
@@ -133,6 +134,15 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
       _isGameActive = false;
       _isGameOver = true;
     });
+    
+    // Award XP based on performance
+    // Base: 10 XP per pair, Combo bonus: 2 XP per max combo, Time bonus: up to 20 XP for fast completion
+    final baseXp = (_cards.length ~/ 2) * 10; // 6 pairs = 60 XP
+    final comboBonus = _maxCombo * 2;
+    final timeBonus = _secondsElapsed < 30 ? 20 : (_secondsElapsed < 60 ? 10 : 0);
+    final totalXp = baseXp + comboBonus + timeBonus;
+    
+    ref.read(lessonRepositoryProvider).recordStudyActivity(xpDelta: totalXp);
   }
 
   @override

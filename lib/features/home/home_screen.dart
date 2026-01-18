@@ -11,8 +11,9 @@ import 'package:jpstudy/core/notifications/notification_service.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/core/gamification/level_calculator.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
-import 'package:jpstudy/features/home/widgets/quick_actions.dart';
+import 'package:jpstudy/features/home/widgets/bento_grid.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _prefDailyReminder = 'notifications.daily';
@@ -606,7 +607,7 @@ class _LevelSegmented extends StatelessWidget {
   }
 }
 
-class _HeaderRight extends StatelessWidget {
+class _HeaderRight extends ConsumerWidget {
   const _HeaderRight({
     required this.language,
     required this.onLanguageTap,
@@ -618,7 +619,11 @@ class _HeaderRight extends StatelessWidget {
   final VoidCallback onSettingsTap;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final progressAsync = ref.watch(progressSummaryProvider);
+    final totalXp = progressAsync.asData?.value.totalXp ?? 0;
+    final levelInfo = LevelCalculator.calculate(totalXp);
+
     return Row(
       children: [
         _LanguageChip(
@@ -631,12 +636,35 @@ class _HeaderRight extends StatelessWidget {
           icon: const Icon(Icons.settings_outlined),
         ),
         const SizedBox(width: 8),
-        const CircleAvatar(
-          radius: 16,
-          backgroundColor: Color(0xFFEFF2FF),
-          child: Text(
-            'U',
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+        Tooltip(
+          message: '${levelInfo.currentXp} / ${levelInfo.nextLevelXp} XP',
+          child: Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: const Color(0xFFEFF2FF),
+              border: Border.all(color: const Color(0xFFD6DDFF), width: 2),
+            ),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                CircularProgressIndicator(
+                  value: levelInfo.progress,
+                  backgroundColor: Colors.transparent,
+                  valueColor: const AlwaysStoppedAnimation(Color(0xFF6366F1)),
+                  strokeWidth: 3,
+                ),
+                Text(
+                  '${levelInfo.level}',
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900,
+                    color: Color(0xFF6366F1),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],
@@ -769,14 +797,26 @@ class _LessonHomeState extends ConsumerState<_LessonHome> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
       children: [
-        QuickActions(
-           levelLabel: widget.level.shortLabel,
-           language: widget.language,
-           onVocabTap: () => context.push('/vocab'),
-           onDoTestTap: () => context.push('/exam'),
-           onMatchGameTap: () => context.push('/match'),
+        // Bento Grid Section
+        BentoGrid(
+          level: widget.level,
+          language: widget.language,
+          recentLesson: meta.isNotEmpty ? meta.first : null, // Todo: better recent logic?
+          onContinueTap: () {
+            if (meta.isNotEmpty) {
+              final latest = meta.first;
+              context.push(
+                '/lesson/${latest.id}?level=${widget.level.shortLabel}',
+                extra: latest.title,
+              );
+            } else {
+               _createLesson(context);
+            }
+          },
+          onLessonTap: () {},
         ),
-        const SizedBox(height: 24),
+        const SizedBox(height: 32),
+        // Toolbar
         _LessonToolbar(
           level: widget.level,
           language: widget.language,

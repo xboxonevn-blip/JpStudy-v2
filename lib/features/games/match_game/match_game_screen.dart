@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/widgets/juicy_button.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
@@ -22,6 +24,8 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
   int _secondsElapsed = 0;
   bool _isGameActive = false;
   bool _isGameOver = false;
+  int _combo = 0;
+  int _maxCombo = 0;
 
   @override
   void dispose() {
@@ -44,6 +48,8 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
       _isGameActive = true;
       _isGameOver = false;
       _secondsElapsed = 0;
+      _combo = 0;
+      _maxCombo = 0;
       _isProcessingInfo = false;
     });
 
@@ -66,6 +72,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
     if (_selectedCard == null) {
       // First card selected
       _selectedCard = card;
+      HapticFeedback.selectionClick();
     } else {
       // Second card selected -> Check match
       _isProcessingInfo = true;
@@ -79,7 +86,10 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           second.state = MatchCardState.matched;
           _selectedCard = null;
           _isProcessingInfo = false;
+          _combo++;
+          if (_combo > _maxCombo) _maxCombo = _combo;
         });
+        HapticFeedback.mediumImpact();
         // Save Progress (Correct)
         ref.read(contentRepositoryProvider).updateProgress(first.vocabId, true);
         
@@ -89,7 +99,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         setState(() {
           first.state = MatchCardState.mismatched;
           second.state = MatchCardState.mismatched;
+          _combo = 0; // Reset combo
         });
+        HapticFeedback.vibrate();
 
         // Save Progress (Incorrect)
         ref.read(contentRepositoryProvider).updateProgress(first.vocabId, false);
@@ -170,13 +182,15 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.timer, size: 64, color: Colors.blue),
+                const Icon(Icons.emoji_events_rounded, size: 64, color: Colors.amber),
                 const SizedBox(height: 16),
                 Text("Time: ${_secondsElapsed}s", style: Theme.of(context).textTheme.headlineMedium),
+                Text("Max Combo: x$_maxCombo", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.deepPurple)),
                 const SizedBox(height: 24),
-                ElevatedButton(
+                JuicyButton(
+                  label: "Play Again",
                   onPressed: () => _startGame(items),
-                  child: const Text("Play Again"),
+                  icon: Icons.refresh,
                 )
               ],
             ),
@@ -185,26 +199,50 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
         if (!_isGameActive) {
           return Center(
-             child: ElevatedButton.icon(
+             child: JuicyButton(
+              label: "Start Match Game",
               onPressed: () => _startGame(items),
-              icon: const Icon(Icons.play_circle_filled),
-              label: const Text("Start Match Game"),
+              icon: Icons.play_circle_filled,
+              height: 64,
             ),
           );
         }
 
-        return GridView.builder(
-          padding: const EdgeInsets.all(16),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            childAspectRatio: 1.0,
-            crossAxisSpacing: 8,
-            mainAxisSpacing: 8,
-          ),
-          itemCount: _cards.length,
-          itemBuilder: (context, index) {
-            return _buildCard(_cards[index]);
-          },
+        return Column(
+          children: [
+            if (_combo > 1)
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: AnimatedScale(
+                  scale: 1.0 + (_combo * 0.1).clamp(0.0, 0.5),
+                  duration: const Duration(milliseconds: 200),
+                  child: Text(
+                    'COMBO x$_combo!',
+                    style: const TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.orange,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                ),
+              ),
+            Expanded(
+              child: GridView.builder(
+                padding: const EdgeInsets.all(16),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  childAspectRatio: 1.0,
+                  crossAxisSpacing: 8,
+                  mainAxisSpacing: 8,
+                ),
+                itemCount: _cards.length,
+                itemBuilder: (context, index) {
+                  return _buildCard(_cards[index]);
+                },
+              ),
+            ),
+          ],
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),

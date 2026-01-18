@@ -1,53 +1,88 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static ThemeData light() {
-    const appBackground = Color(0xFFF5F7FB);
+    const appBackground = Color(0xFFF8FAFC); // Soft off-white
+    const primaryColor = Color(0xFF6366F1); // Indigo
+    const secondaryColor = Color(0xFF8B5CF6); // Violet
+
     final colorScheme = const ColorScheme.light(
-      primary: Color(0xFF4255FF),
-      secondary: Color(0xFF6C7CFF),
+      primary: primaryColor,
+      secondary: secondaryColor,
       surface: Color(0xFFFFFFFF),
       onPrimary: Color(0xFFFFFFFF),
-      onSurface: Color(0xFF1C2440),
+      onSurface: Color(0xFF1E293B), // Slate 800
+      error: Color(0xFFEF4444),
+      tertiary: Color(0xFF10B981), // Emerald (Success)
     );
+
+    final fontName = GoogleFonts.nunito().fontFamily;
 
     return ThemeData(
       colorScheme: colorScheme,
       useMaterial3: true,
-      fontFamily: 'Manrope',
+      fontFamily: fontName,
       scaffoldBackgroundColor: appBackground,
       appBarTheme: AppBarTheme(
-        backgroundColor: appBackground,
+        backgroundColor: Colors.transparent, // For gradient backgrounds
         elevation: 0,
+        centerTitle: true,
         foregroundColor: colorScheme.onSurface,
-        titleTextStyle: const TextStyle(
+        titleTextStyle: TextStyle(
+          fontFamily: fontName,
           fontSize: 20,
-          fontWeight: FontWeight.w700,
-          color: Color(0xFF1C2440),
+          fontWeight: FontWeight.w800, // Extra bold for "Juicy" feel
+          color: const Color(0xFF1E293B),
         ),
       ),
       cardTheme: CardThemeData(
         color: colorScheme.surface,
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(24), // Increased radius
+          side: const BorderSide(color: Color(0xFFE2E8F0), width: 1.5),
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          textStyle: const TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+          ),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: const Color(0xFFF1F3F7),
+        fillColor: const Color(0xFFF1F5F9), // Slate 100
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,
         ),
-        hintStyle: const TextStyle(color: Color(0xFF8F9BB3)),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(color: primaryColor, width: 2),
+        ),
+        hintStyle: const TextStyle(color: Color(0xFF94A3B8)), // Slate 400
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       ),
-      textTheme: const TextTheme(
-        titleLarge: TextStyle(fontWeight: FontWeight.w700),
-        titleMedium: TextStyle(fontWeight: FontWeight.w600),
-        bodyMedium: TextStyle(color: Color(0xFF4D5877)),
+      textTheme: TextTheme(
+        displayLarge: TextStyle(fontFamily: fontName, fontWeight: FontWeight.w900, color: const Color(0xFF1E293B)),
+        titleLarge: TextStyle(fontFamily: fontName, fontWeight: FontWeight.w800, color: const Color(0xFF1E293B)),
+        titleMedium: TextStyle(fontFamily: fontName, fontWeight: FontWeight.w700, color: const Color(0xFF1E293B)),
+        bodyLarge: TextStyle(fontFamily: fontName, color: const Color(0xFF334155)),
+        bodyMedium: TextStyle(fontFamily: fontName, color: const Color(0xFF475569)),
       ),
-      iconTheme: const IconThemeData(color: Color(0xFF4D5877)),
+      iconTheme: const IconThemeData(color: Color(0xFF64748B)),
     );
   }
 }

@@ -2254,4 +2254,47 @@ extension AppLanguageLabels on AppLanguage {
         return 'N3\u306e\u307f';
     }
   }
+  String get continueLearningLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'CONTINUE LEARNING';
+      case AppLanguage.vi:
+        return 'H\u1eccC TI\u1ebeP';
+      case AppLanguage.ja:
+        return '\u5b66\u7fd2\u3092\u7d9a\u3051\u308b';
+    }
+  }
+
+  String get dayStreakLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Day Streak';
+      case AppLanguage.vi:
+        return 'Chu\u1ed7i ng\xe0y';
+      case AppLanguage.ja:
+        return '\u9023\u7d9a\u65e5\u6570';
+    }
+  }
+
+  String get masteryLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mastery';
+      case AppLanguage.vi:
+        return 'Th\xe0nh th\u1ea1o';
+      case AppLanguage.ja:
+        return '\u7fd2\u719f\u5ea6';
+    }
+  }
+
+  String termsLearnedLabel(int learned, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$learned / $total terms learned';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 h\u1ecdc $learned / $total';
+      case AppLanguage.ja:
+        return '$learned / $total \u8a9e\u7fd2\u5f97';
+    }
+  }
 }

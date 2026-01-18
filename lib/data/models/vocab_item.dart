@@ -3,6 +3,7 @@ class VocabItem {
   final String term;
   final String? reading;
   final String meaning;
+  final String? kanjiMeaning;
   final String level;
 
   const VocabItem({
@@ -10,6 +11,7 @@ class VocabItem {
     required this.term,
     this.reading,
     required this.meaning,
+    this.kanjiMeaning,
     required this.level,
   });
 }

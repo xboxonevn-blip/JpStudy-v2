@@ -68,7 +68,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       level: level,
       title: _defaultTitle,
     );
-    await repo.seedTermsIfEmpty(widget.lessonId);
+    await repo.seedTermsIfEmpty(widget.lessonId, level);
     final terms = await repo.fetchTerms(widget.lessonId);
     if (!mounted) {
       return;
@@ -90,6 +90,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               term: term.term,
               reading: term.reading,
               definition: term.definition,
+              kanjiMeaning: term.kanjiMeaning,
             ),
           ),
         );
@@ -112,6 +113,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               term: term.term,
               reading: term.reading,
               definition: term.definition,
+              kanjiMeaning: term.kanjiMeaning,
             ),
           ),
         );
@@ -353,13 +355,19 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                   final parsed = _parseTerm(value);
                   _terms[index] = _terms[index].copyWith(
                     term: parsed.term,
-                    reading: parsed.reading,
                   );
                   repo.updateTerm(
                     _terms[index].id,
                     lessonId: widget.lessonId,
                     term: parsed.term,
-                    reading: parsed.reading,
+                  );
+                },
+                onReadingChanged: (value) {
+                  _terms[index] = _terms[index].copyWith(reading: value);
+                  repo.updateTerm(
+                    _terms[index].id,
+                    lessonId: widget.lessonId,
+                    reading: value,
                   );
                 },
                 onDefinitionChanged: (value) {
@@ -368,6 +376,14 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                     _terms[index].id,
                     lessonId: widget.lessonId,
                     definition: value,
+                  );
+                },
+                onKanjiMeaningChanged: (value) {
+                  _terms[index] = _terms[index].copyWith(kanjiMeaning: value);
+                  repo.updateTerm(
+                    _terms[index].id,
+                    lessonId: widget.lessonId,
+                    kanjiMeaning: value,
                   );
                 },
               );
@@ -449,6 +465,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
         term: current.definition,
         definition: current.term,
         reading: '',
+        kanjiMeaning: '',
       );
     }
     setState(() {});
@@ -459,6 +476,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
         term: term.term,
         reading: term.reading,
         definition: term.definition,
+        kanjiMeaning: term.kanjiMeaning,
       );
     }
     ref.invalidate(lessonMetaProvider(level.shortLabel));
@@ -466,8 +484,11 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
 
   Future<void> _exportCsv(AppLanguage language) async {
     final rows = <List<String>>[
-      const ['term', 'reading', 'definition'],
-      ..._terms.map((term) => [term.term, term.reading, term.definition]),
+      const ['term', 'reading', 'definition', 'kanjiMeaning'],
+      ..._terms.map(
+        (term) =>
+            [term.term, term.reading, term.definition, term.kanjiMeaning],
+      ),
     ];
     final csv = const ListToCsvConverter().convert(rows);
     final location = await getSaveLocation(
@@ -570,7 +591,11 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       final term = row.isNotEmpty ? row[0].toString().trim() : '';
       final reading = row.length > 1 ? row[1].toString().trim() : '';
       final definition = row.length > 2 ? row[2].toString().trim() : '';
-      if (term.isEmpty && reading.isEmpty && definition.isEmpty) {
+      final kanjiMeaning = row.length > 3 ? row[3].toString().trim() : '';
+      if (term.isEmpty &&
+          reading.isEmpty &&
+          definition.isEmpty &&
+          kanjiMeaning.isEmpty) {
         continue;
       }
       drafts.add(
@@ -578,6 +603,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
           term: term,
           reading: reading,
           definition: definition,
+          kanjiMeaning: kanjiMeaning,
         ),
       );
     }
@@ -882,7 +908,9 @@ class _TermCard extends StatelessWidget {
     required this.dragHandle,
     required this.onRemove,
     required this.onTermChanged,
+    required this.onReadingChanged, // Added
     required this.onDefinitionChanged,
+    required this.onKanjiMeaningChanged, // Added
   });
 
   final int index;
@@ -892,13 +920,14 @@ class _TermCard extends StatelessWidget {
   final Widget dragHandle;
   final VoidCallback onRemove;
   final ValueChanged<String> onTermChanged;
+  final ValueChanged<String> onReadingChanged; // Added
   final ValueChanged<String> onDefinitionChanged;
+  final ValueChanged<String> onKanjiMeaningChanged; // Added
 
   @override
   Widget build(BuildContext context) {
-    final termValue = term.reading.isEmpty
-        ? term.term
-        : '${term.term}\n${term.reading}';
+    // Term (Kanji) | Kanji Meaning
+    // Reading      | Definition
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.all(16),
@@ -926,15 +955,35 @@ class _TermCard extends StatelessWidget {
             children: [
               Expanded(
                 child: _TermField(
-                  label: language.termLabel,
-                  initialValue: termValue,
+                  label: 'Kanji / Word',
+                  initialValue: term.term,
                   onChanged: onTermChanged,
                 ),
               ),
               const SizedBox(width: 12),
               Expanded(
                 child: _TermField(
-                  label: language.definitionLabel,
+                  label: 'Kanji Meaning',
+                  initialValue: term.kanjiMeaning,
+                  onChanged: onKanjiMeaningChanged,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: _TermField(
+                  label: 'Reading (Kana)',
+                  initialValue: term.reading,
+                  onChanged: onReadingChanged,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _TermField(
+                  label: 'Meaning',
                   initialValue: term.definition,
                   onChanged: onDefinitionChanged,
                 ),
@@ -1031,23 +1080,27 @@ class _EditableTerm {
     required this.term,
     required this.reading,
     required this.definition,
+    required this.kanjiMeaning,
   });
 
   final int id;
   final String term;
   final String reading;
   final String definition;
+  final String kanjiMeaning;
 
   _EditableTerm copyWith({
     String? term,
     String? reading,
     String? definition,
+    String? kanjiMeaning,
   }) {
     return _EditableTerm(
       id: id,
       term: term ?? this.term,
       reading: reading ?? this.reading,
       definition: definition ?? this.definition,
+      kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
     );
   }
 }

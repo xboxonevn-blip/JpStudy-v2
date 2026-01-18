@@ -79,6 +79,7 @@ class _VocabContent extends ConsumerWidget {
           term: e.term,
           reading: e.reading,
           meaning: e.meaning,
+          kanjiMeaning: null,
           level: e.level,
         )).toList();
 

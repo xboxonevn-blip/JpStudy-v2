@@ -23,7 +23,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 8;
+  int get schemaVersion => 9;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -72,6 +72,9 @@ class AppDatabase extends _$AppDatabase {
             await migrator.addColumn(userProgress, userProgress.reviewHardCount);
             await migrator.addColumn(userProgress, userProgress.reviewGoodCount);
             await migrator.addColumn(userProgress, userProgress.reviewEasyCount);
+          }
+          if (from < 9) {
+            await migrator.addColumn(userLessonTerm, userLessonTerm.kanjiMeaning);
           }
         },
       );

@@ -2550,6 +2550,18 @@ class $UserLessonTermTable extends UserLessonTerm
     requiredDuringInsert: false,
     defaultValue: const Constant(''),
   );
+  static const VerificationMeta _kanjiMeaningMeta = const VerificationMeta(
+    'kanjiMeaning',
+  );
+  @override
+  late final GeneratedColumn<String> kanjiMeaning = GeneratedColumn<String>(
+    'kanji_meaning',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
   static const VerificationMeta _isStarredMeta = const VerificationMeta(
     'isStarred',
   );
@@ -2599,6 +2611,7 @@ class $UserLessonTermTable extends UserLessonTerm
     term,
     reading,
     definition,
+    kanjiMeaning,
     isStarred,
     isLearned,
     orderIndex,
@@ -2642,6 +2655,15 @@ class $UserLessonTermTable extends UserLessonTerm
       context.handle(
         _definitionMeta,
         definition.isAcceptableOrUnknown(data['definition']!, _definitionMeta),
+      );
+    }
+    if (data.containsKey('kanji_meaning')) {
+      context.handle(
+        _kanjiMeaningMeta,
+        kanjiMeaning.isAcceptableOrUnknown(
+          data['kanji_meaning']!,
+          _kanjiMeaningMeta,
+        ),
       );
     }
     if (data.containsKey('is_starred')) {
@@ -2691,6 +2713,10 @@ class $UserLessonTermTable extends UserLessonTerm
         DriftSqlType.string,
         data['${effectivePrefix}definition'],
       )!,
+      kanjiMeaning: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kanji_meaning'],
+      )!,
       isStarred: attachedDatabase.typeMapping.read(
         DriftSqlType.bool,
         data['${effectivePrefix}is_starred'],
@@ -2719,6 +2745,7 @@ class UserLessonTermData extends DataClass
   final String term;
   final String reading;
   final String definition;
+  final String kanjiMeaning;
   final bool isStarred;
   final bool isLearned;
   final int orderIndex;
@@ -2728,6 +2755,7 @@ class UserLessonTermData extends DataClass
     required this.term,
     required this.reading,
     required this.definition,
+    required this.kanjiMeaning,
     required this.isStarred,
     required this.isLearned,
     required this.orderIndex,
@@ -2740,6 +2768,7 @@ class UserLessonTermData extends DataClass
     map['term'] = Variable<String>(term);
     map['reading'] = Variable<String>(reading);
     map['definition'] = Variable<String>(definition);
+    map['kanji_meaning'] = Variable<String>(kanjiMeaning);
     map['is_starred'] = Variable<bool>(isStarred);
     map['is_learned'] = Variable<bool>(isLearned);
     map['order_index'] = Variable<int>(orderIndex);
@@ -2753,6 +2782,7 @@ class UserLessonTermData extends DataClass
       term: Value(term),
       reading: Value(reading),
       definition: Value(definition),
+      kanjiMeaning: Value(kanjiMeaning),
       isStarred: Value(isStarred),
       isLearned: Value(isLearned),
       orderIndex: Value(orderIndex),
@@ -2770,6 +2800,7 @@ class UserLessonTermData extends DataClass
       term: serializer.fromJson<String>(json['term']),
       reading: serializer.fromJson<String>(json['reading']),
       definition: serializer.fromJson<String>(json['definition']),
+      kanjiMeaning: serializer.fromJson<String>(json['kanjiMeaning']),
       isStarred: serializer.fromJson<bool>(json['isStarred']),
       isLearned: serializer.fromJson<bool>(json['isLearned']),
       orderIndex: serializer.fromJson<int>(json['orderIndex']),
@@ -2784,6 +2815,7 @@ class UserLessonTermData extends DataClass
       'term': serializer.toJson<String>(term),
       'reading': serializer.toJson<String>(reading),
       'definition': serializer.toJson<String>(definition),
+      'kanjiMeaning': serializer.toJson<String>(kanjiMeaning),
       'isStarred': serializer.toJson<bool>(isStarred),
       'isLearned': serializer.toJson<bool>(isLearned),
       'orderIndex': serializer.toJson<int>(orderIndex),
@@ -2796,6 +2828,7 @@ class UserLessonTermData extends DataClass
     String? term,
     String? reading,
     String? definition,
+    String? kanjiMeaning,
     bool? isStarred,
     bool? isLearned,
     int? orderIndex,
@@ -2805,6 +2838,7 @@ class UserLessonTermData extends DataClass
     term: term ?? this.term,
     reading: reading ?? this.reading,
     definition: definition ?? this.definition,
+    kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
     isStarred: isStarred ?? this.isStarred,
     isLearned: isLearned ?? this.isLearned,
     orderIndex: orderIndex ?? this.orderIndex,
@@ -2818,6 +2852,9 @@ class UserLessonTermData extends DataClass
       definition: data.definition.present
           ? data.definition.value
           : this.definition,
+      kanjiMeaning: data.kanjiMeaning.present
+          ? data.kanjiMeaning.value
+          : this.kanjiMeaning,
       isStarred: data.isStarred.present ? data.isStarred.value : this.isStarred,
       isLearned: data.isLearned.present ? data.isLearned.value : this.isLearned,
       orderIndex: data.orderIndex.present
@@ -2834,6 +2871,7 @@ class UserLessonTermData extends DataClass
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
+          ..write('kanjiMeaning: $kanjiMeaning, ')
           ..write('isStarred: $isStarred, ')
           ..write('isLearned: $isLearned, ')
           ..write('orderIndex: $orderIndex')
@@ -2848,6 +2886,7 @@ class UserLessonTermData extends DataClass
     term,
     reading,
     definition,
+    kanjiMeaning,
     isStarred,
     isLearned,
     orderIndex,
@@ -2861,6 +2900,7 @@ class UserLessonTermData extends DataClass
           other.term == this.term &&
           other.reading == this.reading &&
           other.definition == this.definition &&
+          other.kanjiMeaning == this.kanjiMeaning &&
           other.isStarred == this.isStarred &&
           other.isLearned == this.isLearned &&
           other.orderIndex == this.orderIndex);
@@ -2872,6 +2912,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
   final Value<String> term;
   final Value<String> reading;
   final Value<String> definition;
+  final Value<String> kanjiMeaning;
   final Value<bool> isStarred;
   final Value<bool> isLearned;
   final Value<int> orderIndex;
@@ -2881,6 +2922,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
+    this.kanjiMeaning = const Value.absent(),
     this.isStarred = const Value.absent(),
     this.isLearned = const Value.absent(),
     this.orderIndex = const Value.absent(),
@@ -2891,6 +2933,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
+    this.kanjiMeaning = const Value.absent(),
     this.isStarred = const Value.absent(),
     this.isLearned = const Value.absent(),
     this.orderIndex = const Value.absent(),
@@ -2901,6 +2944,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Expression<String>? term,
     Expression<String>? reading,
     Expression<String>? definition,
+    Expression<String>? kanjiMeaning,
     Expression<bool>? isStarred,
     Expression<bool>? isLearned,
     Expression<int>? orderIndex,
@@ -2911,6 +2955,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       if (term != null) 'term': term,
       if (reading != null) 'reading': reading,
       if (definition != null) 'definition': definition,
+      if (kanjiMeaning != null) 'kanji_meaning': kanjiMeaning,
       if (isStarred != null) 'is_starred': isStarred,
       if (isLearned != null) 'is_learned': isLearned,
       if (orderIndex != null) 'order_index': orderIndex,
@@ -2923,6 +2968,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Value<String>? term,
     Value<String>? reading,
     Value<String>? definition,
+    Value<String>? kanjiMeaning,
     Value<bool>? isStarred,
     Value<bool>? isLearned,
     Value<int>? orderIndex,
@@ -2933,6 +2979,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       term: term ?? this.term,
       reading: reading ?? this.reading,
       definition: definition ?? this.definition,
+      kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
       isStarred: isStarred ?? this.isStarred,
       isLearned: isLearned ?? this.isLearned,
       orderIndex: orderIndex ?? this.orderIndex,
@@ -2957,6 +3004,9 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     if (definition.present) {
       map['definition'] = Variable<String>(definition.value);
     }
+    if (kanjiMeaning.present) {
+      map['kanji_meaning'] = Variable<String>(kanjiMeaning.value);
+    }
     if (isStarred.present) {
       map['is_starred'] = Variable<bool>(isStarred.value);
     }
@@ -2977,6 +3027,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
+          ..write('kanjiMeaning: $kanjiMeaning, ')
           ..write('isStarred: $isStarred, ')
           ..write('isLearned: $isLearned, ')
           ..write('orderIndex: $orderIndex')
@@ -4615,6 +4666,7 @@ typedef $$UserLessonTermTableCreateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
+      Value<String> kanjiMeaning,
       Value<bool> isStarred,
       Value<bool> isLearned,
       Value<int> orderIndex,
@@ -4626,6 +4678,7 @@ typedef $$UserLessonTermTableUpdateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
+      Value<String> kanjiMeaning,
       Value<bool> isStarred,
       Value<bool> isLearned,
       Value<int> orderIndex,
@@ -4690,6 +4743,11 @@ class $$UserLessonTermTableFilterComposer
 
   ColumnFilters<String> get definition => $composableBuilder(
     column: $table.definition,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kanjiMeaning => $composableBuilder(
+    column: $table.kanjiMeaning,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -4761,6 +4819,11 @@ class $$UserLessonTermTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get kanjiMeaning => $composableBuilder(
+    column: $table.kanjiMeaning,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<bool> get isStarred => $composableBuilder(
     column: $table.isStarred,
     builder: (column) => ColumnOrderings(column),
@@ -4820,6 +4883,11 @@ class $$UserLessonTermTableAnnotationComposer
 
   GeneratedColumn<String> get definition => $composableBuilder(
     column: $table.definition,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get kanjiMeaning => $composableBuilder(
+    column: $table.kanjiMeaning,
     builder: (column) => column,
   );
 
@@ -4893,6 +4961,7 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
+                Value<String> kanjiMeaning = const Value.absent(),
                 Value<bool> isStarred = const Value.absent(),
                 Value<bool> isLearned = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
@@ -4902,6 +4971,7 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
+                kanjiMeaning: kanjiMeaning,
                 isStarred: isStarred,
                 isLearned: isLearned,
                 orderIndex: orderIndex,
@@ -4913,6 +4983,7 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
+                Value<String> kanjiMeaning = const Value.absent(),
                 Value<bool> isStarred = const Value.absent(),
                 Value<bool> isLearned = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
@@ -4922,6 +4993,7 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
+                kanjiMeaning: kanjiMeaning,
                 isStarred: isStarred,
                 isLearned: isLearned,
                 orderIndex: orderIndex,

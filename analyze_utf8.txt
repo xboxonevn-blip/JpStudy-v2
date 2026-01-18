@@ -1,0 +1,43 @@
+﻿Analyzing JpStudy-v2...                                         
+
+   info - Don't invoke 'print' in production code - lib\data\repositories\content_repository.dart:17:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\data\repositories\content_repository.dart:19:7 - avoid_print
+warning - The library 'package:jpstudy/data/db/content_database.dart' doesn't export a member with the hidden name 'UserProgress' - lib\data\repositories\lesson_repository.dart:6:61 - undefined_hidden_name
+warning - The value of the local variable '<unnamed>' isn't used - lib\data\repositories\lesson_repository.dart:530:15 - unused_local_variable
+  error - The body might complete normally, causing 'null' to be returned, but the return type, 'FutureOr<int>', is a potentially non-nullable type - lib\data\repositories\lesson_repository.dart:530:15 - body_might_complete_normally
+warning - The value of the local variable 'kanjiMeaning' isn't used - lib\data\repositories\lesson_repository.dart:537:13 - unused_local_variable
+  error - Expected to find ';' - lib\data\repositories\lesson_repository.dart:537:25 - expected_token
+  error - Expected an identifier - lib\data\repositories\lesson_repository.dart:538:3 - missing_identifier
+  error - Expected a class member - lib\data\repositories\lesson_repository.dart:538:4 - expected_class_member
+   info - Missing type annotation - lib\data\repositories\lesson_repository.dart:538:6 - strict_top_level_inference
+  error - Methods must have an explicit list of parameters - lib\data\repositories\lesson_repository.dart:538:6 - missing_method_parameters
+  error - Expected a class member - lib\data\repositories\lesson_repository.dart:539:4 - expected_class_member
+   info - Missing type annotation - lib\data\repositories\lesson_repository.dart:539:6 - strict_top_level_inference
+  error - Methods must have an explicit list of parameters - lib\data\repositories\lesson_repository.dart:539:6 - missing_method_parameters
+  error - The name 'async' is already defined - lib\data\repositories\lesson_repository.dart:539:6 - duplicate_definition
+  error - The method 'await' isn't defined for the type 'LessonRepository' - lib\data\repositories\lesson_repository.dart:540:22 - undefined_method
+  error - Undefined name 'lessonId' - lib\data\repositories\lesson_repository.dart:542:54 - undefined_identifier
+  error - The await expression can only be used in an async function - lib\data\repositories\lesson_repository.dart:552:20 - await_in_wrong_context
+  error - Undefined name 'lessonId' - lib\data\repositories\lesson_repository.dart:554:23 - undefined_identifier
+  error - Undefined name 'term' - lib\data\repositories\lesson_repository.dart:556:19 - undefined_identifier
+  error - Undefined name 'term' - lib\data\repositories\lesson_repository.dart:556:63 - undefined_identifier
+  error - Undefined name 'reading' - lib\data\repositories\lesson_repository.dart:557:22 - undefined_identifier
+  error - Undefined name 'reading' - lib\data\repositories\lesson_repository.dart:557:69 - undefined_identifier
+  error - Undefined name 'definition' - lib\data\repositories\lesson_repository.dart:559:17 - undefined_identifier
+  error - Undefined name 'definition' - lib\data\repositories\lesson_repository.dart:559:67 - undefined_identifier
+  error - Undefined name 'kanjiMeaning' - lib\data\repositories\lesson_repository.dart:561:17 - undefined_identifier
+  error - Undefined name 'kanjiMeaning' - lib\data\repositories\lesson_repository.dart:561:69 - undefined_identifier
+  error - The await expression can only be used in an async function - lib\data\repositories\lesson_repository.dart:564:5 - await_in_wrong_context
+  error - Undefined name 'lessonId' - lib\data\repositories\lesson_repository.dart:564:24 - undefined_identifier
+  error - The argument for the named parameter 'borderRadius' was already specified - lib\features\lesson\lesson_edit_screen.dart:806:11 - duplicate_named_argument
+  error - Expected an identifier - lib\features\lesson\lesson_edit_screen.dart:984:11 - missing_identifier
+  error - Expected to find ')' - lib\features\lesson\lesson_edit_screen.dart:984:11 - expected_token
+  error - Expected to find ';' - lib\features\lesson\lesson_edit_screen.dart:1030:7 - expected_token
+warning - Dead code - lib\features\lesson\lesson_edit_screen.dart:1030:8 - dead_code
+  error - Expected an identifier - lib\features\lesson\lesson_edit_screen.dart:1030:8 - missing_identifier
+  error - Expected to find ';' - lib\features\lesson\lesson_edit_screen.dart:1030:8 - expected_token
+  error - Unexpected text ';' - lib\features\lesson\lesson_edit_screen.dart:1030:8 - unexpected_token
+  error - Expected an identifier - lib\features\lesson\lesson_edit_screen.dart:1031:5 - missing_identifier
+  error - Unexpected text ';' - lib\features\lesson\lesson_edit_screen.dart:1031:5 - unexpected_token
+   info - Unnecessary empty statement - lib\features\lesson\lesson_edit_screen.dart:1031:6 - empty_statements
+

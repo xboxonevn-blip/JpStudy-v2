@@ -347,14 +347,14 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
-  String lessonTitle(int index) {
+  String lessonTitle(int number) {
     switch (this) {
       case AppLanguage.en:
-        return 'Minna No Nihongo $index';
+        return 'Minna No Nihongo $number';
       case AppLanguage.vi:
-        return 'Minna No Nihongo $index';
+        return 'Minna No Nihongo $number';
       case AppLanguage.ja:
-        return '\u307f\u3093\u306a\u306e\u65e5\u672c\u8a9e $index';
+        return '\u307f\u3093\u306a\u306e\u65e5\u672c\u8a9e $number';
     }
   }
 

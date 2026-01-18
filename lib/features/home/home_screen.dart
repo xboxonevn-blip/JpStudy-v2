@@ -1575,10 +1575,17 @@ class _LanguageCard extends StatelessWidget {
 }
 
 List<_LessonStub> _lessonDefaults(StudyLevel level) {
+  int startLesson = 1;
+  if (level == StudyLevel.n4) {
+    startLesson = 26;
+  } else if (level == StudyLevel.n3) {
+    startLesson = 51;
+  }
+
   return List.generate(
     25,
     (index) => _LessonStub(
-      index: index + 1,
+      index: startLesson + index,
       termCount: 0,
       lastStudiedMinutes: 0,
       progress: 0,

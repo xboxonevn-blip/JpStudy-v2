@@ -1360,13 +1360,19 @@ class _TestAnswer {
   final String correctAnswer;
 }
 String _termMeaning(UserLessonTermData term) {
+  var text = '';
   if (term.definition.trim().isNotEmpty) {
-    return term.definition.trim();
+    text = term.definition.trim();
+  } else if (term.reading.trim().isNotEmpty) {
+    text = term.reading.trim();
+  } else {
+    text = term.term.trim();
   }
-  if (term.reading.trim().isNotEmpty) {
-    return term.reading.trim();
+  
+  if (term.kanjiMeaning.trim().isNotEmpty) {
+    return '$text (${term.kanjiMeaning.trim()})';
   }
-  return term.term.trim();
+  return text;
 }
 
 List<String> _buildChoices(

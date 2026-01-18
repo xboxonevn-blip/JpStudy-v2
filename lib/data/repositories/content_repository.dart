@@ -7,15 +7,30 @@ final vocabPreviewProvider =
     FutureProvider.family<List<VocabData>, String>((ref, level) async {
   final db = ref.watch(contentDatabaseProvider);
   final query = db.select(db.vocab)
-    ..where((tbl) => tbl.level.equals(level))
-    ..limit(100); // Increase limit for more variety
-  return query.get();
+    ..where((tbl) => tbl.level.equals(level));
+  final result = await query.get();
+  // DEBUG: Check for specific Minna words
+  // final debugTerms = ['私', '見ます', '探します', '食べる'];
+  // for (final t in debugTerms) {
+  //   try {
+  //     final found = result.firstWhere((item) => item.term == t);
+  //     // print('DEBUG_TAGS_SPECIFIC: ${found.term} - ${found.tags} - ${found.level}');
+  //   } catch (_) {
+  //     // print('DEBUG_TAGS_SPECIFIC: $t NOT FOUND');
+  //   }
+  // }
+  return result;
 });
 
 class ContentRepository {
   final ContentDatabase _db;
 
   ContentRepository(this._db);
+
+  Future<String> getDebugTags(String term) async {
+    final item = await (_db.select(_db.vocab)..where((tbl) => tbl.term.equals(term))).getSingleOrNull();
+    return item != null ? '${item.term}: ${item.tags} (Level: ${item.level})' : '$term NOT FOUND';
+  }
 
   Future<void> updateProgress(int vocabId, bool isCorrect) async {
     final existing = await (_db.select(_db.userProgress)

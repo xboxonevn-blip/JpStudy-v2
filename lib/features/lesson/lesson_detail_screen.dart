@@ -1041,6 +1041,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
           term: term,
           reading: reading,
           definition: definition,
+          kanjiMeaning: '',
         ),
       ],
     );
@@ -1220,6 +1221,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
             term: term.term,
             reading: term.reading,
             definition: term.definition,
+            kanjiMeaning: term.kanjiMeaning,
           ),
         )
         .toList();
@@ -2181,6 +2183,18 @@ class _CardContent extends StatelessWidget {
             Text(
               resolvedTerm.reading,
               style: const TextStyle(fontSize: 18, color: Color(0xFF6B7390)),
+              textAlign: TextAlign.center,
+            ),
+          ],
+          if (resolvedTerm.kanjiMeaning.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            Text(
+              resolvedTerm.kanjiMeaning,
+              style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xFF4D5877),
+                fontStyle: FontStyle.italic,
+              ),
               textAlign: TextAlign.center,
             ),
           ],

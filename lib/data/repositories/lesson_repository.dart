@@ -3,8 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 
+import 'package:jpstudy/data/db/content_database.dart' hide UserProgressCompanion, UserProgressData;
+import 'package:jpstudy/data/db/content_database_provider.dart';
+
 final lessonRepositoryProvider = Provider<LessonRepository>((ref) {
-  return LessonRepository(ref.watch(databaseProvider));
+  return LessonRepository(
+    ref.watch(databaseProvider),
+    ref.watch(contentDatabaseProvider),
+  );
 });
 
 final lessonTitleProvider =
@@ -22,7 +28,7 @@ final lessonTermsProvider =
     level: args.level,
     title: args.fallbackTitle,
   );
-  await repo.seedTermsIfEmpty(args.lessonId);
+  await repo.seedTermsIfEmpty(args.lessonId, args.level);
   return repo.fetchTerms(args.lessonId);
 });
 
@@ -143,11 +149,13 @@ class LessonTermDraft {
     required this.term,
     required this.reading,
     required this.definition,
+    required this.kanjiMeaning,
   });
 
   final String term;
   final String reading;
   final String definition;
+  final String kanjiMeaning;
 }
 
 class AttemptAnswerDraft {
@@ -222,9 +230,10 @@ class ProgressSummary {
 }
 
 class LessonRepository {
-  LessonRepository(this._db);
+  LessonRepository(this._db, this._contentDb);
 
   final AppDatabase _db;
+  final ContentDatabase _contentDb;
   static const int _defaultLessonCount = 25;
 
   Future<String> getLessonTitle(int lessonId, String fallback) async {
@@ -395,29 +404,73 @@ class LessonRepository {
         .get();
   }
 
-  Future<void> seedTermsIfEmpty(int lessonId) async {
+  Future<void> seedTermsIfEmpty(int lessonId, String currentLevelLabel) async {
     final existing = await fetchTerms(lessonId);
-    if (existing.isNotEmpty) {
+    
+    // Check if existing terms are the dummy ones and should be replaced
+    if (existing.length == 2 && 
+        existing[0].term == '見ます' && 
+        existing[1].term == '探します') {
+       // Delete dummy terms
+       await (_db.delete(_db.userLessonTerm)..where((tbl) => tbl.lessonId.equals(lessonId))).go();
+    } else if (existing.isNotEmpty) {
+      // Real data exists, do nothing
       return;
     }
-    await _db.into(_db.userLessonTerm).insert(
+
+    // Determine level and offset based on lessonId
+    // Standard Minna No Nihongo: ~25-40 words per lesson.
+    // If we assume sequential ID in DB:
+    // N5: Lesson 1 starts at offset 0.
+    // N4: Lesson 26 starts at offset 0 of N4 level?
+    
+    // We will use 25 words per lesson as a safe default if no mapping exists.
+    int limit = 50; // Fetch generous amount, though typical lesson is ~30
+    int offset = 0;
+
+    // Normalize level label
+    String dbLevel = currentLevelLabel; // e.g. "N5", "N4"
+
+    if (currentLevelLabel == 'N5') {
+       // Lesson 1 -> 0
+       // Lesson 2 -> 25?
+       // Let's assume vaguely 40 items per lesson to be safe, or just 100?
+       // Actually, Minna vocab is roughly 1000 words for N5 (25 lessons). 1000/25 = 40 words/lesson.
+       offset = (lessonId - 1) * 35; // Approximation
+    } else if (currentLevelLabel == 'N4') {
+       // N4 starts at Lesson 26.
+       offset = (lessonId - 26) * 35;
+    }
+
+    if (offset < 0) offset = 0;
+
+    // Fetch from ContentDatabase
+    final vocabList = await (_contentDb.select(_contentDb.vocab)
+      ..where((tbl) => tbl.level.equals(dbLevel))
+      ..limit(limit, offset: offset)) // Fetch limit words
+      .get();
+    
+    if (vocabList.isEmpty) {
+      // Fallback if no vocab found
+      return;
+    }
+
+    // Insert into UserLessonTerm
+    await _db.batch((batch) {
+      for (var i = 0; i < vocabList.length; i++) {
+        final v = vocabList[i];
+        batch.insert(
+          _db.userLessonTerm,
           UserLessonTermCompanion.insert(
             lessonId: lessonId,
-            term: const Value('見ます'),
-            reading: const Value('みます'),
-            definition: const Value('KIEN\nxem,nhìn'),
-            orderIndex: const Value(1),
+            term: Value(v.term),
+            reading: Value(v.reading ?? ''),
+            definition: Value(v.meaning),
+            orderIndex: Value(i + 1),
           ),
         );
-    await _db.into(_db.userLessonTerm).insert(
-          UserLessonTermCompanion.insert(
-            lessonId: lessonId,
-            term: const Value('探します'),
-            reading: const Value('さがします'),
-            definition: const Value('THAM\ntìm,tìm kiếm (cv,người...)'),
-            orderIndex: const Value(2),
-          ),
-        );
+      }
+    });
   }
 
   Future<void> updateLessonTitle(
@@ -481,6 +534,7 @@ class LessonRepository {
     String? term,
     String? reading,
     String? definition,
+    String? kanjiMeaning,
   }) async {
     final maxOrder = await (_db.selectOnly(_db.userLessonTerm)
           ..addColumns([_db.userLessonTerm.orderIndex])
@@ -502,6 +556,8 @@ class LessonRepository {
             reading: reading == null ? const Value.absent() : Value(reading),
             definition:
                 definition == null ? const Value.absent() : Value(definition),
+            kanjiMeaning:
+                kanjiMeaning == null ? const Value.absent() : Value(kanjiMeaning),
           ),
         );
     await _touchLesson(lessonId);
@@ -514,6 +570,7 @@ class LessonRepository {
     String? term,
     String? reading,
     String? definition,
+    String? kanjiMeaning,
   }) {
     final update = (_db.update(_db.userLessonTerm)
           ..where((tbl) => tbl.id.equals(termId)))
@@ -522,6 +579,8 @@ class LessonRepository {
       reading: reading == null ? const Value.absent() : Value(reading),
       definition:
           definition == null ? const Value.absent() : Value(definition),
+      kanjiMeaning:
+          kanjiMeaning == null ? const Value.absent() : Value(kanjiMeaning),
     ));
     if (lessonId == null) {
       return update;
@@ -843,6 +902,7 @@ class LessonRepository {
                 term: Value(term.term),
                 reading: Value(term.reading),
                 definition: Value(term.definition),
+                kanjiMeaning: Value(term.kanjiMeaning),
               ),
             );
       }
@@ -879,6 +939,7 @@ class LessonRepository {
             term: Value(term.term),
             reading: Value(term.reading),
             definition: Value(term.definition),
+            kanjiMeaning: Value(term.kanjiMeaning),
           ),
         );
         nextOrder += 1;

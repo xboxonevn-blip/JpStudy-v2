@@ -115,6 +115,18 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
                     ),
                 textAlign: TextAlign.center,
               ),
+              if (widget.item.kanjiMeaning != null &&
+                  widget.item.kanjiMeaning!.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Text(
+                  widget.item.kanjiMeaning!,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        color: Colors.grey[700],
+                        fontStyle: FontStyle.italic,
+                      ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
               const SizedBox(height: 16),
               Text(
                 'Tap to flip',

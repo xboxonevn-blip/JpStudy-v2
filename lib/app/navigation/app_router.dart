@@ -7,6 +7,7 @@ import 'package:jpstudy/features/lesson/lesson_edit_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_practice_screen.dart';
 import 'package:jpstudy/features/progress/progress_screen.dart';
 import 'package:jpstudy/features/vocab/vocab_screen.dart';
+import 'package:jpstudy/features/games/match_game/match_game_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -57,6 +58,10 @@ class AppRouter {
             mode: mode,
           );
         },
+      ),
+      GoRoute(
+        path: '/match',
+        builder: (context, state) => const MatchGameScreen(),
       ),
     ],
   );

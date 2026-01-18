@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
+import 'package:jpstudy/core/services/tts_service.dart';
 
 class FlashcardWidget extends StatefulWidget {
   final VocabItem item;
@@ -99,24 +100,41 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
   }
 
   Widget _buildFront() {
-    return _buildCardBase(
       color: Theme.of(context).colorScheme.surface,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Stack(
+        alignment: Alignment.center,
         children: [
-          Text(
-            widget.item.term,
-            style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-            textAlign: TextAlign.center,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                widget.item.term,
+                style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Tap to flip',
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: Colors.grey,
+                    ),
+              ),
+            ],
           ),
-          const SizedBox(height: 16),
-          Text(
-            'Tap to flip',
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: Colors.grey,
-                ),
+          Positioned(
+            top: 0,
+            right: 0,
+            child: IconButton(
+              icon: const Icon(Icons.volume_up, size: 28),
+              color: Colors.blue,
+              onPressed: () {
+                // Determine text to speak: Reading if available, else Term
+                final text = widget.item.reading ?? widget.item.term;
+                TtsService.instance.speak(text);
+              },
+            ),
           ),
         ],
       ),

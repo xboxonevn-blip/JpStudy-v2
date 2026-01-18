@@ -83,3 +83,16 @@ class MockTestQuestionMap extends Table {
   @override
   Set<Column> get primaryKey => {id};
 }
+
+class UserProgress extends Table {
+  @override
+  String get tableName => 'user_progress';
+
+  IntColumn get vocabId => integer().references(Vocab, #id)();
+  IntColumn get correctCount => integer().withDefault(const Constant(0))();
+  IntColumn get missedCount => integer().withDefault(const Constant(0))();
+  DateTimeColumn get lastReviewedAt => dateTime().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {vocabId};
+}

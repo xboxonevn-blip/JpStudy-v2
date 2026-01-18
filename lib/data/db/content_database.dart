@@ -18,13 +18,28 @@ part 'content_database.g.dart';
     MockTest,
     MockTestSection,
     MockTestQuestionMap,
+    UserProgress,
   ],
 )
 class ContentDatabase extends _$ContentDatabase {
   ContentDatabase() : super(_openContentConnection());
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
+
+  @override
+  MigrationStrategy get migration {
+    return MigrationStrategy(
+      onCreate: (Migrator m) async {
+        await m.createAll();
+      },
+      onUpgrade: (Migrator m, int from, int to) async {
+        if (from < 2) {
+          await m.createTable(userProgress);
+        }
+      },
+    );
+  }
 }
 
 LazyDatabase _openContentConnection() {

@@ -7,6 +7,7 @@ import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/content_repository.dart';
 import 'package:jpstudy/features/vocab/widgets/flashcard_widget.dart';
+import 'package:jpstudy/core/services/tts_service.dart';
 
 class VocabScreen extends ConsumerStatefulWidget {
   const VocabScreen({super.key});
@@ -118,6 +119,13 @@ class _ListView extends StatelessWidget {
                 item.reading == null || item.reading!.isEmpty
                     ? item.meaning
                     : '${item.reading} • ${item.meaning}',
+              ),
+              trailing: IconButton(
+                icon: const Icon(Icons.volume_up, size: 20),
+                onPressed: () {
+                   final text = item.reading ?? item.term;
+                   TtsService.instance.speak(text);
+                },
               ),
             ),
           ),

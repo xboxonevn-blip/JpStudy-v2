@@ -80,6 +80,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           _selectedCard = null;
           _isProcessingInfo = false;
         });
+        // Save Progress (Correct)
+        ref.read(contentRepositoryProvider).updateProgress(first.vocabId, true);
+        
         _checkWinCondition();
       } else {
         // Mismatch
@@ -87,6 +90,10 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           first.state = MatchCardState.mismatched;
           second.state = MatchCardState.mismatched;
         });
+
+        // Save Progress (Incorrect)
+        ref.read(contentRepositoryProvider).updateProgress(first.vocabId, false);
+        ref.read(contentRepositoryProvider).updateProgress(second.vocabId, false);
 
         Future.delayed(const Duration(milliseconds: 800), () {
           if (mounted) {

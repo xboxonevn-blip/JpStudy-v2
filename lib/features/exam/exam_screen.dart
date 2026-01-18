@@ -57,6 +57,11 @@ class _ExamScreenState extends ConsumerState<ExamScreen> {
       if (isCorrect) {
         _score++;
       }
+      // Save progress
+      ref.read(contentRepositoryProvider).updateProgress(
+            currentQuestion.correctItem.id,
+            isCorrect,
+          );
     });
 
     // Auto advance after short delay
@@ -331,6 +336,12 @@ class _ExamScreenState extends ConsumerState<ExamScreen> {
       if (isCorrect) {
         _score++;
       }
+      
+      // Save progress
+      ref.read(contentRepositoryProvider).updateProgress(
+        question.correctItem.id,
+        isCorrect,
+      );
     });
 
     Future.delayed(const Duration(seconds: 2), () {

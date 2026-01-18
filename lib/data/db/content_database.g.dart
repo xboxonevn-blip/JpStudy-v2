@@ -2093,6 +2093,333 @@ class MockTestQuestionMapCompanion
   }
 }
 
+class $UserProgressTable extends UserProgress
+    with TableInfo<$UserProgressTable, UserProgressData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UserProgressTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _vocabIdMeta = const VerificationMeta(
+    'vocabId',
+  );
+  @override
+  late final GeneratedColumn<int> vocabId = GeneratedColumn<int>(
+    'vocab_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES vocab (id)',
+    ),
+  );
+  static const VerificationMeta _correctCountMeta = const VerificationMeta(
+    'correctCount',
+  );
+  @override
+  late final GeneratedColumn<int> correctCount = GeneratedColumn<int>(
+    'correct_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _missedCountMeta = const VerificationMeta(
+    'missedCount',
+  );
+  @override
+  late final GeneratedColumn<int> missedCount = GeneratedColumn<int>(
+    'missed_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _lastReviewedAtMeta = const VerificationMeta(
+    'lastReviewedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> lastReviewedAt =
+      GeneratedColumn<DateTime>(
+        'last_reviewed_at',
+        aliasedName,
+        true,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: false,
+      );
+  @override
+  List<GeneratedColumn> get $columns => [
+    vocabId,
+    correctCount,
+    missedCount,
+    lastReviewedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'user_progress';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<UserProgressData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('vocab_id')) {
+      context.handle(
+        _vocabIdMeta,
+        vocabId.isAcceptableOrUnknown(data['vocab_id']!, _vocabIdMeta),
+      );
+    }
+    if (data.containsKey('correct_count')) {
+      context.handle(
+        _correctCountMeta,
+        correctCount.isAcceptableOrUnknown(
+          data['correct_count']!,
+          _correctCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('missed_count')) {
+      context.handle(
+        _missedCountMeta,
+        missedCount.isAcceptableOrUnknown(
+          data['missed_count']!,
+          _missedCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('last_reviewed_at')) {
+      context.handle(
+        _lastReviewedAtMeta,
+        lastReviewedAt.isAcceptableOrUnknown(
+          data['last_reviewed_at']!,
+          _lastReviewedAtMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {vocabId};
+  @override
+  UserProgressData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return UserProgressData(
+      vocabId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}vocab_id'],
+      )!,
+      correctCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}correct_count'],
+      )!,
+      missedCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}missed_count'],
+      )!,
+      lastReviewedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}last_reviewed_at'],
+      ),
+    );
+  }
+
+  @override
+  $UserProgressTable createAlias(String alias) {
+    return $UserProgressTable(attachedDatabase, alias);
+  }
+}
+
+class UserProgressData extends DataClass
+    implements Insertable<UserProgressData> {
+  final int vocabId;
+  final int correctCount;
+  final int missedCount;
+  final DateTime? lastReviewedAt;
+  const UserProgressData({
+    required this.vocabId,
+    required this.correctCount,
+    required this.missedCount,
+    this.lastReviewedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['vocab_id'] = Variable<int>(vocabId);
+    map['correct_count'] = Variable<int>(correctCount);
+    map['missed_count'] = Variable<int>(missedCount);
+    if (!nullToAbsent || lastReviewedAt != null) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
+    }
+    return map;
+  }
+
+  UserProgressCompanion toCompanion(bool nullToAbsent) {
+    return UserProgressCompanion(
+      vocabId: Value(vocabId),
+      correctCount: Value(correctCount),
+      missedCount: Value(missedCount),
+      lastReviewedAt: lastReviewedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastReviewedAt),
+    );
+  }
+
+  factory UserProgressData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return UserProgressData(
+      vocabId: serializer.fromJson<int>(json['vocabId']),
+      correctCount: serializer.fromJson<int>(json['correctCount']),
+      missedCount: serializer.fromJson<int>(json['missedCount']),
+      lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'vocabId': serializer.toJson<int>(vocabId),
+      'correctCount': serializer.toJson<int>(correctCount),
+      'missedCount': serializer.toJson<int>(missedCount),
+      'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
+    };
+  }
+
+  UserProgressData copyWith({
+    int? vocabId,
+    int? correctCount,
+    int? missedCount,
+    Value<DateTime?> lastReviewedAt = const Value.absent(),
+  }) => UserProgressData(
+    vocabId: vocabId ?? this.vocabId,
+    correctCount: correctCount ?? this.correctCount,
+    missedCount: missedCount ?? this.missedCount,
+    lastReviewedAt: lastReviewedAt.present
+        ? lastReviewedAt.value
+        : this.lastReviewedAt,
+  );
+  UserProgressData copyWithCompanion(UserProgressCompanion data) {
+    return UserProgressData(
+      vocabId: data.vocabId.present ? data.vocabId.value : this.vocabId,
+      correctCount: data.correctCount.present
+          ? data.correctCount.value
+          : this.correctCount,
+      missedCount: data.missedCount.present
+          ? data.missedCount.value
+          : this.missedCount,
+      lastReviewedAt: data.lastReviewedAt.present
+          ? data.lastReviewedAt.value
+          : this.lastReviewedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserProgressData(')
+          ..write('vocabId: $vocabId, ')
+          ..write('correctCount: $correctCount, ')
+          ..write('missedCount: $missedCount, ')
+          ..write('lastReviewedAt: $lastReviewedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(vocabId, correctCount, missedCount, lastReviewedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is UserProgressData &&
+          other.vocabId == this.vocabId &&
+          other.correctCount == this.correctCount &&
+          other.missedCount == this.missedCount &&
+          other.lastReviewedAt == this.lastReviewedAt);
+}
+
+class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
+  final Value<int> vocabId;
+  final Value<int> correctCount;
+  final Value<int> missedCount;
+  final Value<DateTime?> lastReviewedAt;
+  const UserProgressCompanion({
+    this.vocabId = const Value.absent(),
+    this.correctCount = const Value.absent(),
+    this.missedCount = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+  });
+  UserProgressCompanion.insert({
+    this.vocabId = const Value.absent(),
+    this.correctCount = const Value.absent(),
+    this.missedCount = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+  });
+  static Insertable<UserProgressData> custom({
+    Expression<int>? vocabId,
+    Expression<int>? correctCount,
+    Expression<int>? missedCount,
+    Expression<DateTime>? lastReviewedAt,
+  }) {
+    return RawValuesInsertable({
+      if (vocabId != null) 'vocab_id': vocabId,
+      if (correctCount != null) 'correct_count': correctCount,
+      if (missedCount != null) 'missed_count': missedCount,
+      if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
+    });
+  }
+
+  UserProgressCompanion copyWith({
+    Value<int>? vocabId,
+    Value<int>? correctCount,
+    Value<int>? missedCount,
+    Value<DateTime?>? lastReviewedAt,
+  }) {
+    return UserProgressCompanion(
+      vocabId: vocabId ?? this.vocabId,
+      correctCount: correctCount ?? this.correctCount,
+      missedCount: missedCount ?? this.missedCount,
+      lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (vocabId.present) {
+      map['vocab_id'] = Variable<int>(vocabId.value);
+    }
+    if (correctCount.present) {
+      map['correct_count'] = Variable<int>(correctCount.value);
+    }
+    if (missedCount.present) {
+      map['missed_count'] = Variable<int>(missedCount.value);
+    }
+    if (lastReviewedAt.present) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserProgressCompanion(')
+          ..write('vocabId: $vocabId, ')
+          ..write('correctCount: $correctCount, ')
+          ..write('missedCount: $missedCount, ')
+          ..write('lastReviewedAt: $lastReviewedAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$ContentDatabase extends GeneratedDatabase {
   _$ContentDatabase(QueryExecutor e) : super(e);
   $ContentDatabaseManager get managers => $ContentDatabaseManager(this);
@@ -2105,6 +2432,7 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
   );
   late final $MockTestQuestionMapTable mockTestQuestionMap =
       $MockTestQuestionMapTable(this);
+  late final $UserProgressTable userProgress = $UserProgressTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -2116,6 +2444,7 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
     mockTest,
     mockTestSection,
     mockTestQuestionMap,
+    userProgress,
   ];
 }
 
@@ -2137,6 +2466,29 @@ typedef $$VocabTableUpdateCompanionBuilder =
       Value<String> level,
       Value<String?> tags,
     });
+
+final class $$VocabTableReferences
+    extends BaseReferences<_$ContentDatabase, $VocabTable, VocabData> {
+  $$VocabTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static MultiTypedResultKey<$UserProgressTable, List<UserProgressData>>
+  _userProgressRefsTable(_$ContentDatabase db) => MultiTypedResultKey.fromTable(
+    db.userProgress,
+    aliasName: $_aliasNameGenerator(db.vocab.id, db.userProgress.vocabId),
+  );
+
+  $$UserProgressTableProcessedTableManager get userProgressRefs {
+    final manager = $$UserProgressTableTableManager(
+      $_db,
+      $_db.userProgress,
+    ).filter((f) => f.vocabId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(_userProgressRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
 
 class $$VocabTableFilterComposer
     extends Composer<_$ContentDatabase, $VocabTable> {
@@ -2176,6 +2528,31 @@ class $$VocabTableFilterComposer
     column: $table.tags,
     builder: (column) => ColumnFilters(column),
   );
+
+  Expression<bool> userProgressRefs(
+    Expression<bool> Function($$UserProgressTableFilterComposer f) f,
+  ) {
+    final $$UserProgressTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.userProgress,
+      getReferencedColumn: (t) => t.vocabId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$UserProgressTableFilterComposer(
+            $db: $db,
+            $table: $db.userProgress,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
 class $$VocabTableOrderingComposer
@@ -2244,6 +2621,31 @@ class $$VocabTableAnnotationComposer
 
   GeneratedColumn<String> get tags =>
       $composableBuilder(column: $table.tags, builder: (column) => column);
+
+  Expression<T> userProgressRefs<T extends Object>(
+    Expression<T> Function($$UserProgressTableAnnotationComposer a) f,
+  ) {
+    final $$UserProgressTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.userProgress,
+      getReferencedColumn: (t) => t.vocabId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$UserProgressTableAnnotationComposer(
+            $db: $db,
+            $table: $db.userProgress,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
 class $$VocabTableTableManager
@@ -2257,12 +2659,9 @@ class $$VocabTableTableManager
           $$VocabTableAnnotationComposer,
           $$VocabTableCreateCompanionBuilder,
           $$VocabTableUpdateCompanionBuilder,
-          (
-            VocabData,
-            BaseReferences<_$ContentDatabase, $VocabTable, VocabData>,
-          ),
+          (VocabData, $$VocabTableReferences),
           VocabData,
-          PrefetchHooks Function()
+          PrefetchHooks Function({bool userProgressRefs})
         > {
   $$VocabTableTableManager(_$ContentDatabase db, $VocabTable table)
     : super(
@@ -2308,9 +2707,40 @@ class $$VocabTableTableManager
                 tags: tags,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) =>
+                    (e.readTable(table), $$VocabTableReferences(db, table, e)),
+              )
               .toList(),
-          prefetchHooksCallback: null,
+          prefetchHooksCallback: ({userProgressRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [if (userProgressRefs) db.userProgress],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (userProgressRefs)
+                    await $_getPrefetchedData<
+                      VocabData,
+                      $VocabTable,
+                      UserProgressData
+                    >(
+                      currentTable: table,
+                      referencedTable: $$VocabTableReferences
+                          ._userProgressRefsTable(db),
+                      managerFromTypedResult: (p0) => $$VocabTableReferences(
+                        db,
+                        table,
+                        p0,
+                      ).userProgressRefs,
+                      referencedItemsForCurrentItem: (item, referencedItems) =>
+                          referencedItems.where((e) => e.vocabId == item.id),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
         ),
       );
 }
@@ -2325,9 +2755,9 @@ typedef $$VocabTableProcessedTableManager =
       $$VocabTableAnnotationComposer,
       $$VocabTableCreateCompanionBuilder,
       $$VocabTableUpdateCompanionBuilder,
-      (VocabData, BaseReferences<_$ContentDatabase, $VocabTable, VocabData>),
+      (VocabData, $$VocabTableReferences),
       VocabData,
-      PrefetchHooks Function()
+      PrefetchHooks Function({bool userProgressRefs})
     >;
 typedef $$GrammarTableCreateCompanionBuilder =
     GrammarCompanion Function({
@@ -3320,6 +3750,311 @@ typedef $$MockTestQuestionMapTableProcessedTableManager =
       MockTestQuestionMapData,
       PrefetchHooks Function()
     >;
+typedef $$UserProgressTableCreateCompanionBuilder =
+    UserProgressCompanion Function({
+      Value<int> vocabId,
+      Value<int> correctCount,
+      Value<int> missedCount,
+      Value<DateTime?> lastReviewedAt,
+    });
+typedef $$UserProgressTableUpdateCompanionBuilder =
+    UserProgressCompanion Function({
+      Value<int> vocabId,
+      Value<int> correctCount,
+      Value<int> missedCount,
+      Value<DateTime?> lastReviewedAt,
+    });
+
+final class $$UserProgressTableReferences
+    extends
+        BaseReferences<
+          _$ContentDatabase,
+          $UserProgressTable,
+          UserProgressData
+        > {
+  $$UserProgressTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static $VocabTable _vocabIdTable(_$ContentDatabase db) => db.vocab
+      .createAlias($_aliasNameGenerator(db.userProgress.vocabId, db.vocab.id));
+
+  $$VocabTableProcessedTableManager get vocabId {
+    final $_column = $_itemColumn<int>('vocab_id')!;
+
+    final manager = $$VocabTableTableManager(
+      $_db,
+      $_db.vocab,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_vocabIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$UserProgressTableFilterComposer
+    extends Composer<_$ContentDatabase, $UserProgressTable> {
+  $$UserProgressTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get missedCount => $composableBuilder(
+    column: $table.missedCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$VocabTableFilterComposer get vocabId {
+    final $$VocabTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.vocabId,
+      referencedTable: $db.vocab,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$VocabTableFilterComposer(
+            $db: $db,
+            $table: $db.vocab,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$UserProgressTableOrderingComposer
+    extends Composer<_$ContentDatabase, $UserProgressTable> {
+  $$UserProgressTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get missedCount => $composableBuilder(
+    column: $table.missedCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$VocabTableOrderingComposer get vocabId {
+    final $$VocabTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.vocabId,
+      referencedTable: $db.vocab,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$VocabTableOrderingComposer(
+            $db: $db,
+            $table: $db.vocab,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$UserProgressTableAnnotationComposer
+    extends Composer<_$ContentDatabase, $UserProgressTable> {
+  $$UserProgressTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get missedCount => $composableBuilder(
+    column: $table.missedCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => column,
+  );
+
+  $$VocabTableAnnotationComposer get vocabId {
+    final $$VocabTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.vocabId,
+      referencedTable: $db.vocab,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$VocabTableAnnotationComposer(
+            $db: $db,
+            $table: $db.vocab,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$UserProgressTableTableManager
+    extends
+        RootTableManager<
+          _$ContentDatabase,
+          $UserProgressTable,
+          UserProgressData,
+          $$UserProgressTableFilterComposer,
+          $$UserProgressTableOrderingComposer,
+          $$UserProgressTableAnnotationComposer,
+          $$UserProgressTableCreateCompanionBuilder,
+          $$UserProgressTableUpdateCompanionBuilder,
+          (UserProgressData, $$UserProgressTableReferences),
+          UserProgressData,
+          PrefetchHooks Function({bool vocabId})
+        > {
+  $$UserProgressTableTableManager(
+    _$ContentDatabase db,
+    $UserProgressTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UserProgressTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UserProgressTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UserProgressTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> vocabId = const Value.absent(),
+                Value<int> correctCount = const Value.absent(),
+                Value<int> missedCount = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+              }) => UserProgressCompanion(
+                vocabId: vocabId,
+                correctCount: correctCount,
+                missedCount: missedCount,
+                lastReviewedAt: lastReviewedAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> vocabId = const Value.absent(),
+                Value<int> correctCount = const Value.absent(),
+                Value<int> missedCount = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+              }) => UserProgressCompanion.insert(
+                vocabId: vocabId,
+                correctCount: correctCount,
+                missedCount: missedCount,
+                lastReviewedAt: lastReviewedAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$UserProgressTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({vocabId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (vocabId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.vocabId,
+                                referencedTable: $$UserProgressTableReferences
+                                    ._vocabIdTable(db),
+                                referencedColumn: $$UserProgressTableReferences
+                                    ._vocabIdTable(db)
+                                    .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$UserProgressTableProcessedTableManager =
+    ProcessedTableManager<
+      _$ContentDatabase,
+      $UserProgressTable,
+      UserProgressData,
+      $$UserProgressTableFilterComposer,
+      $$UserProgressTableOrderingComposer,
+      $$UserProgressTableAnnotationComposer,
+      $$UserProgressTableCreateCompanionBuilder,
+      $$UserProgressTableUpdateCompanionBuilder,
+      (UserProgressData, $$UserProgressTableReferences),
+      UserProgressData,
+      PrefetchHooks Function({bool vocabId})
+    >;
 
 class $ContentDatabaseManager {
   final _$ContentDatabase _db;
@@ -3336,4 +4071,6 @@ class $ContentDatabaseManager {
       $$MockTestSectionTableTableManager(_db, _db.mockTestSection);
   $$MockTestQuestionMapTableTableManager get mockTestQuestionMap =>
       $$MockTestQuestionMapTableTableManager(_db, _db.mockTestQuestionMap);
+  $$UserProgressTableTableManager get userProgress =>
+      $$UserProgressTableTableManager(_db, _db.userProgress);
 }

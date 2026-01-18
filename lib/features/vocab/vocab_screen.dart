@@ -135,16 +135,16 @@ class _ListView extends StatelessWidget {
   }
 }
 
-class _FlashcardView extends StatefulWidget {
+class _FlashcardView extends ConsumerStatefulWidget {
   const _FlashcardView({required this.items});
 
   final List<VocabItem> items;
 
   @override
-  State<_FlashcardView> createState() => _FlashcardViewState();
+  ConsumerState<_FlashcardView> createState() => _FlashcardViewState();
 }
 
-class _FlashcardViewState extends State<_FlashcardView> {
+class _FlashcardViewState extends ConsumerState<_FlashcardView> {
   late PageController _pageController;
   int _currentIndex = 0;
 
@@ -162,6 +162,8 @@ class _FlashcardViewState extends State<_FlashcardView> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
+    
     return Column(
       children: [
         const SizedBox(height: 20),
@@ -190,7 +192,10 @@ class _FlashcardViewState extends State<_FlashcardView> {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
                 child: Center(
-                  child: FlashcardWidget(item: widget.items[index]),
+                  child: FlashcardWidget(
+                    item: widget.items[index],
+                    language: language,
+                  ),
                 ),
               );
             },

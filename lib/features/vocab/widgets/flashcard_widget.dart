@@ -1,16 +1,19 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/core/services/tts_service.dart';
 
 class FlashcardWidget extends StatefulWidget {
   final VocabItem item;
   final VoidCallback? onFlip;
+  final AppLanguage language;
 
   const FlashcardWidget({
     super.key,
     required this.item,
     this.onFlip,
+    required this.language,
   });
 
   @override
@@ -115,7 +118,9 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
                     ),
                 textAlign: TextAlign.center,
               ),
-              if (widget.item.kanjiMeaning != null &&
+              // Only show Kanji Meaning for Vietnamese and Japanese users
+              if (widget.language != AppLanguage.en &&
+                  widget.item.kanjiMeaning != null &&
                   widget.item.kanjiMeaning!.isNotEmpty) ...[
                 const SizedBox(height: 8),
                 Text(

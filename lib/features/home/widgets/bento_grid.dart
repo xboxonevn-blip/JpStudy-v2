@@ -32,7 +32,7 @@ class BentoGrid extends StatelessWidget {
         // Hero Widget (Main Continue)
         StaggeredGridTile.count(
           crossAxisCellCount: 4,
-          mainAxisCellCount: 2,
+          mainAxisCellCount: 1.2,
           child: _HeroWidget(
             language: language,
             lesson: recentLesson,
@@ -42,7 +42,7 @@ class BentoGrid extends StatelessWidget {
         // Streak Widget
         StaggeredGridTile.count(
           crossAxisCellCount: 2,
-          mainAxisCellCount: 2,
+          mainAxisCellCount: 1.2,
           child: _StreakWidget(
             language: language,
             streak: progressSummary?.streak ?? 0,
@@ -51,7 +51,7 @@ class BentoGrid extends StatelessWidget {
         // Stats Widget
         StaggeredGridTile.count(
           crossAxisCellCount: 2,
-          mainAxisCellCount: 2,
+          mainAxisCellCount: 1.2,
           child: _StatsWidget(
             language: language,
             totalCorrect: progressSummary?.totalCorrect ?? 0,

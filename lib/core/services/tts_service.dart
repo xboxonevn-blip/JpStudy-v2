@@ -17,7 +17,7 @@ class TtsService {
   }
 
   Future<void> speak(String text) async {
-     print("TTS Disabled: Would speak '$text'");
+     // print("TTS Disabled: Would speak '$text'");
   }
 
   Future<void> stop() async {

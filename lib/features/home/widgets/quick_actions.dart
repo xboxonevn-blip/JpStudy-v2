@@ -1,6 +1,10 @@
 
-class _QuickActions extends StatelessWidget {
-  const _QuickActions({
+import 'package:flutter/material.dart';
+import 'package:jpstudy/core/app_language.dart';
+
+class QuickActions extends StatelessWidget {
+  const QuickActions({
+    super.key,
     required this.levelLabel,
     required this.language,
     required this.onVocabTap,
@@ -26,21 +30,21 @@ class _QuickActions extends StatelessWidget {
         const SizedBox(height: 12),
         Row(
           children: [
-            _ActionCard(
+            ActionCard(
               title: "Vocab List",
               icon: Icons.list_alt,
               color: Colors.blue,
               onTap: onVocabTap,
             ),
             const SizedBox(width: 12),
-            _ActionCard(
+            ActionCard(
               title: "Quiz Mode",
               icon: Icons.quiz,
               color: Colors.orange,
               onTap: onDoTestTap,
             ),
             const SizedBox(width: 12),
-            _ActionCard(
+            ActionCard(
               title: "Match Game",
               icon: Icons.games,
               color: Colors.purple,
@@ -53,8 +57,9 @@ class _QuickActions extends StatelessWidget {
   }
 }
 
-class _ActionCard extends StatelessWidget {
-  const _ActionCard({
+class ActionCard extends StatelessWidget {
+  const ActionCard({
+    super.key,
     required this.title,
     required this.icon,
     required this.color,

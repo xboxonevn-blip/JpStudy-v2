@@ -87,7 +87,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.2),
+            color: Colors.black.withValues(alpha: 0.2),
             blurRadius: 12,
             offset: const Offset(0, 6),
           ),
@@ -100,6 +100,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
   }
 
   Widget _buildFront() {
+    return _buildCardBase(
       color: Theme.of(context).colorScheme.surface,
       child: Stack(
         alignment: Alignment.center,
@@ -138,7 +139,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
           ),
         ],
       ),
-    )
+    );
   }
 
   Widget _buildBack() {

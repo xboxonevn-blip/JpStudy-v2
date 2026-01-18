@@ -138,7 +138,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
           ),
         ],
       ),
-    );
+    )
   }
 
   Widget _buildBack() {

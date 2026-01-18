@@ -182,7 +182,7 @@ class AttemptSummary {
   final int total;
 
   Duration? get duration =>
-      finishedAt == null ? null : finishedAt!.difference(startedAt);
+      finishedAt?.difference(startedAt);
 }
 
 class ReviewDaySummary {

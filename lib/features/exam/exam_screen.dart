@@ -245,7 +245,7 @@ class _ExamScreenState extends ConsumerState<ExamScreen> {
                         CircleAvatar(
                           radius: 12,
                           backgroundColor: Colors.transparent,
-                          child: Text("${String.fromCharCode(65 + index)}", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black)), // A, B, C, D
+                          child: Text(String.fromCharCode(65 + index), style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black)), // A, B, C, D
                         ),
                         const SizedBox(width: 12),
                         Expanded(

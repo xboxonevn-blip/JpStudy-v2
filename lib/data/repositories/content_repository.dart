@@ -1,3 +1,4 @@
+import 'package:drift/drift.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/db/content_database_provider.dart';
@@ -24,7 +25,7 @@ class ContentRepository {
     if (existing == null) {
       await _db.into(_db.userProgress).insert(
             UserProgressCompanion.insert(
-              vocabId: vocabId,
+              vocabId: Value(vocabId),
               correctCount: Value(isCorrect ? 1 : 0),
               missedCount: Value(isCorrect ? 0 : 1),
               lastReviewedAt: Value(DateTime.now()),

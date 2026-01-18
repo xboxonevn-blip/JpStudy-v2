@@ -13,7 +13,6 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:jpstudy/features/home/widgets/quick_actions.dart';
 
 const _prefDailyReminder = 'notifications.daily';
 const _prefDailyReminderTime = 'notifications.daily.time';

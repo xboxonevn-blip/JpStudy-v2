@@ -244,7 +244,6 @@ class LearnSummaryScreen extends StatelessWidget {
             height: 56,
             child: ElevatedButton.icon(
               onPressed: () {
-                // TODO: Start practice mode with weak terms
                 Navigator.pop(context);
               },
               icon: const Icon(Icons.replay),

@@ -6,7 +6,7 @@ part 'test_dao.g.dart';
 
 @DriftAccessor(tables: [TestSessions, TestAnswers])
 class TestDao extends DatabaseAccessor<AppDatabase> with _$TestDaoMixin {
-  TestDao(AppDatabase db) : super(db);
+  TestDao(super.db);
 
   /// Create a new test session
   Future<int> createSession(TestSessionsCompanion session) {

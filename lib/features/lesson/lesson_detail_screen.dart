@@ -9,9 +9,11 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/core/services/audio_service.dart';
 import 'package:jpstudy/core/tts/tts_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/shared/widgets/widgets.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -256,64 +258,83 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                     _PracticeActions(
                       language: language,
                       lessonId: widget.lessonId,
+                      lessonTitle: title,
                     ),
                     const SizedBox(height: 20),
                   ],
-                  Center(
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 960),
-                      child: SizedBox(
-                        height: _focusMode ? 520 : 460,
-                        child: _LessonCard(
-                          language: language,
-                          termsAsync: activeTermsAsync,
-                          term: currentTerm,
-                          showHints: _showHints,
-                          isFlipped: isFlipped,
-                          trackProgress: _trackProgress,
-                          isStarred: isStarred,
-                          isLearned: isLearned,
-                          emptyLabel: _mode == _LessonMode.review
-                              ? language.reviewEmptyLabel
-                              : null,
-                          onShowHintsChanged: (value) =>
-                              _updateShowHints(value),
-                          onFlip: onFlip,
-                          onEdit: () => context.push(
-                            '/lesson/${widget.lessonId}/edit',
+                    Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 960),
+                        child: SizedBox(
+                          height: _focusMode ? 520 : 460,
+                          child: GestureDetector(
+                            onHorizontalDragEnd: (details) {
+                              if (details.primaryVelocity! > 0) {
+                                AudioService.instance.play('swipe');
+                                _goPrev(totalTerms);
+                              } else if (details.primaryVelocity! < 0) {
+                                AudioService.instance.play('swipe');
+                                _goNext(totalTerms);
+                              }
+                            },
+                            child: AnimatedSwitcher(
+                              duration: const Duration(milliseconds: 300),
+                              transitionBuilder: (child, animation) {
+                                final offset = Tween<Offset>(
+                                  begin: const Offset(1.0, 0.0),
+                                  end: Offset.zero,
+                                ).animate(animation);
+                                return SlideTransition(
+                                  position: offset,
+                                  child: child,
+                                );
+                              },
+                              child: KeyedSubtree(
+                                key: ValueKey(currentIndex),
+                                child: _LessonCard(
+                                  language: language,
+                                  termsAsync: activeTermsAsync,
+                                  term: currentTerm,
+                                  showHints: _showHints,
+                                  isFlipped: isFlipped,
+                                  trackProgress: _trackProgress,
+                                  isStarred: isStarred,
+                                  isLearned: isLearned,
+                                  emptyLabel: _mode == _LessonMode.review
+                                      ? language.reviewEmptyLabel
+                                      : null,
+                                  onShowHintsChanged: (value) =>
+                                      _updateShowHints(value),
+                                  onFlip: onFlip,
+                                  onEdit: () => context.push(
+                                    '/lesson/${widget.lessonId}/edit',
+                                  ),
+                                  onAudio: currentTerm == null
+                                      ? null
+                                      : () => _playTts(language, currentTerm),
+                                  onStar: currentTerm == null
+                                      ? null
+                                      : () => _toggleStar(currentTerm, level),
+                                  onLearned: !_trackProgress || currentTerm == null
+                                      ? null
+                                      : () => _toggleLearned(currentTerm, level),
+                                  isAudioPlaying: _isAudioPlaying,
+                                  onStopAudio: _stopTts,
+                                ),
+                              ),
+                            ),
                           ),
-                          onAudio: currentTerm == null
-                              ? null
-                              : () => _playTts(language, currentTerm),
-                          onStar: currentTerm == null
-                              ? null
-                              : () => _toggleStar(currentTerm, level),
-                          onLearned: !_trackProgress || currentTerm == null
-                              ? null
-                              : () => _toggleLearned(currentTerm, level),
-                          isAudioPlaying: _isAudioPlaying,
-                          onStopAudio: _stopTts,
                         ),
                       ),
                     ),
-                  ),
                   if (_mode == _LessonMode.review) ...[
                     const SizedBox(height: 16),
                     _ReviewActions(
                       language: language,
                       enabled: currentTerm != null,
-                      onAgain: currentTerm == null
+                      onRate: currentTerm == null
                           ? null
-                          : () => _reviewTerm(currentTerm, 0),
-                      onHard: currentTerm == null
-                          ? null
-                          : () => _reviewTerm(currentTerm, 3),
-                      onGood: currentTerm == null
-                          ? null
-                          : () => _reviewTerm(currentTerm, 4),
-                      onEasy: currentTerm == null
-                          ? null
-                          : () => _reviewTerm(currentTerm, 5),
+                          : (level) => _reviewTerm(currentTerm, level.value),
                     ),
                     const SizedBox(height: 12),
                     _ReviewSummary(
@@ -450,27 +471,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   Future<void> _reviewTerm(UserLessonTermData term, int quality) async {
     final repo = ref.read(lessonRepositoryProvider);
-    final now = DateTime.now();
-    final existing = await repo.getSrsState(term.id);
-    final currentEase = existing?.ease ?? 2.5;
-    final currentReps = existing?.repetitions ?? 0;
-    final previousIntervalDays = _intervalDaysFromState(existing);
-    final updated = _nextSrsState(
-      ease: currentEase,
-      repetitions: currentReps,
-      previousIntervalDays: previousIntervalDays,
-      quality: quality,
-      now: now,
-    );
-    await repo.upsertSrsState(
-      termId: term.id,
-      box: updated.intervalDays,
-      repetitions: updated.repetitions,
-      ease: updated.ease,
-      lastReviewedAt: now,
-      nextReviewAt: updated.nextReviewAt,
-    );
-    await repo.recordReview(quality: quality);
+    // Use the comprehensive saveTermReview method which handles SRS calculation
+    await repo.saveTermReview(termId: term.id, quality: quality);
+    
     ref.invalidate(lessonDueTermsProvider(widget.lessonId));
     if (!mounted) {
       return;
@@ -478,6 +481,19 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     setState(() {
       _incrementReviewStats(quality);
       _currentIndex = 0;
+    });
+  }
+
+  void _toggleFlip(UserLessonTermData? term) {
+    if (term == null || term.definition.trim().isEmpty) {
+      return;
+    }
+    setState(() {
+      if (_flippedTermIds.contains(term.id)) {
+        _flippedTermIds.remove(term.id);
+      } else {
+        _flippedTermIds.add(term.id);
+      }
     });
   }
 
@@ -505,77 +521,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         _reviewEasyCount += 1;
         break;
     }
-  }
-
-  _SrsUpdate _nextSrsState({
-    required double ease,
-    required int repetitions,
-    required int previousIntervalDays,
-    required int quality,
-    required DateTime now,
-  }) {
-    final clampedQuality = quality.clamp(0, 5);
-    final nextEase = _nextEaseFactor(ease, clampedQuality);
-    int nextReps;
-    int nextIntervalDays;
-
-    if (clampedQuality < 3) {
-      nextReps = 0;
-      nextIntervalDays = 1;
-    } else {
-      nextReps = repetitions + 1;
-      if (nextReps == 1) {
-        nextIntervalDays = 1;
-      } else if (nextReps == 2) {
-        nextIntervalDays = 6;
-      } else {
-        final raw = (previousIntervalDays * nextEase).round();
-        nextIntervalDays = raw < 1 ? 1 : raw;
-      }
-    }
-
-    return _SrsUpdate(
-      intervalDays: nextIntervalDays,
-      repetitions: nextReps,
-      ease: nextEase,
-      nextReviewAt: now.add(Duration(days: nextIntervalDays)),
-    );
-  }
-
-  double _nextEaseFactor(double ease, int quality) {
-    final q = quality.clamp(0, 5);
-    final delta = 0.1 - (5 - q) * (0.08 + (5 - q) * 0.02);
-    final next = ease + delta;
-    if (next < 1.3) {
-      return 1.3;
-    }
-    return next;
-  }
-
-  int _intervalDaysFromState(SrsStateData? state) {
-    if (state == null) {
-      return 1;
-    }
-    final last = state.lastReviewedAt;
-    final next = state.nextReviewAt;
-    if (last != null && next.isAfter(last)) {
-      final diff = next.difference(last).inDays;
-      return diff > 0 ? diff : 1;
-    }
-    return state.box > 0 ? state.box : 1;
-  }
-
-  void _toggleFlip(UserLessonTermData? term) {
-    if (term == null || term.definition.trim().isEmpty) {
-      return;
-    }
-    setState(() {
-      if (_flippedTermIds.contains(term.id)) {
-        _flippedTermIds.remove(term.id);
-      } else {
-        _flippedTermIds.add(term.id);
-      }
-    });
   }
 
   void _updateShowHints(bool value) {
@@ -1575,19 +1520,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   }
 }
 
-class _SrsUpdate {
-  const _SrsUpdate({
-    required this.intervalDays,
-    required this.repetitions,
-    required this.ease,
-    required this.nextReviewAt,
-  });
 
-  final int intervalDays;
-  final int repetitions;
-  final double ease;
-  final DateTime nextReviewAt;
-}
 
 class _StatsRow extends StatelessWidget {
   const _StatsRow({
@@ -1665,56 +1598,20 @@ class _ReviewActions extends StatelessWidget {
   const _ReviewActions({
     required this.language,
     required this.enabled,
-    required this.onAgain,
-    required this.onHard,
-    required this.onGood,
-    required this.onEasy,
+    required this.onRate,
   });
 
   final AppLanguage language;
   final bool enabled;
-  final VoidCallback? onAgain;
-  final VoidCallback? onHard;
-  final VoidCallback? onGood;
-  final VoidCallback? onEasy;
+  final ValueChanged<ConfidenceLevel>? onRate;
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: 12,
-      runSpacing: 12,
-      children: [
-        SizedBox(
-          width: 130,
-          child: OutlinedButton(
-            onPressed: enabled ? onAgain : null,
-            child: Text(language.reviewAgainLabel),
-          ),
-        ),
-        SizedBox(
-          width: 130,
-          child: OutlinedButton(
-            onPressed: enabled ? onHard : null,
-            child: Text(language.reviewHardLabel),
-          ),
-        ),
-        SizedBox(
-          width: 130,
-          child: ElevatedButton(
-            onPressed: enabled ? onGood : null,
-            child: Text(language.reviewGoodLabel),
-          ),
-        ),
-        SizedBox(
-          width: 130,
-          child: ElevatedButton(
-            onPressed: enabled ? onEasy : null,
-            child: Text(language.reviewEasyLabel),
-          ),
-        ),
-      ],
-    );
+    return enabled
+        ? ConfidenceRatingWidget(
+            onSelect: (level) => onRate?.call(level),
+          )
+        : const SizedBox.shrink();
   }
 }
 
@@ -1953,10 +1850,12 @@ class _PracticeActions extends StatelessWidget {
   const _PracticeActions({
     required this.language,
     required this.lessonId,
+    required this.lessonTitle,
   });
 
   final AppLanguage language;
   final int lessonId;
+  final String lessonTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -1967,11 +1866,15 @@ class _PracticeActions extends StatelessWidget {
       children: [
         _PracticeButton(
           label: language.learnModeLabel,
-          onTap: () => context.push('/lesson/$lessonId/practice/learn'),
+          onTap: () => context.push(
+            '/lesson/$lessonId/learn-enhanced?title=${Uri.encodeComponent(lessonTitle)}',
+          ),
         ),
         _PracticeButton(
           label: language.testModeLabel,
-          onTap: () => context.push('/lesson/$lessonId/practice/test'),
+          onTap: () => context.push(
+            '/lesson/$lessonId/test-enhanced?title=${Uri.encodeComponent(lessonTitle)}',
+          ),
         ),
         _PracticeButton(
           label: language.matchModeLabel,

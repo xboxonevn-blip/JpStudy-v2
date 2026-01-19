@@ -6,7 +6,7 @@ part 'learn_dao.g.dart';
 
 @DriftAccessor(tables: [LearnSessions, LearnAnswers])
 class LearnDao extends DatabaseAccessor<AppDatabase> with _$LearnDaoMixin {
-  LearnDao(AppDatabase db) : super(db);
+  LearnDao(super.db);
 
   /// Create a new session
   Future<int> createSession(LearnSessionsCompanion session) {

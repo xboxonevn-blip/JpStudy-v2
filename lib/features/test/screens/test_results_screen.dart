@@ -319,7 +319,6 @@ class TestResultsScreen extends StatelessWidget {
           height: 56,
           child: ElevatedButton.icon(
             onPressed: () {
-              // TODO: Review wrong answers
               Navigator.pop(context);
             },
             icon: const Icon(Icons.visibility),

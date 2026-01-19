@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/services/audio_service.dart';
 
 import '../../../data/db/database_provider.dart';
 import '../../../data/daos/learn_dao.dart';
@@ -77,6 +78,8 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
       answeredAt: DateTime.now(),
     );
 
+    AudioService.instance.play(isCorrect ? 'success' : 'error');
+
     state!.recordResult(result);
     
     // Notify listeners
@@ -108,6 +111,9 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
     
     // Save to database
     await _learnService.saveSession(state!);
+    
+    // Play completion sound
+    AudioService.instance.play('levelup');
   }
 
   /// Reset session

@@ -1,15 +1,19 @@
 import 'dart:io';
 
-import '../daos/achievement_dao.dart';
 import '../daos/learn_dao.dart';
 import '../daos/test_dao.dart';
+import '../daos/srs_dao.dart';
+import '../daos/achievement_dao.dart';
+import '../daos/grammar_dao.dart';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
+import 'settings_tables.dart';
 import 'study_tables.dart';
+import 'grammar_tables.dart';
 import 'tables.dart';
 
 part 'app_database.g.dart';
@@ -20,6 +24,10 @@ part 'app_database.g.dart';
     UserProgress,
     Attempt,
     AttemptAnswer,
+    // Grammar Tables
+    GrammarPoints,
+    GrammarExamples,
+    GrammarSrsState,
     UserLesson,
 
     UserLessonTerm,
@@ -29,18 +37,24 @@ part 'app_database.g.dart';
     TestSessions,
     TestAnswers,
     Achievements,
+    // Settings Tables
+    FlashcardSettings,
+    LearnSettings,
+    TestSettings,
   ],
   daos: [
     LearnDao,
     TestDao,
     AchievementDao,
+    SrsDao,
+    GrammarDao,
   ],
 )
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 10;
+  int get schemaVersion => 12;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -99,6 +113,18 @@ class AppDatabase extends _$AppDatabase {
             await migrator.createTable(testSessions);
             await migrator.createTable(testAnswers);
             await migrator.createTable(achievements);
+          }
+          if (from < 11) {
+            await migrator.addColumn(srsState, srsState.lastConfidence);
+            await migrator.createTable(flashcardSettings);
+            await migrator.createTable(learnSettings);
+            await migrator.createTable(testSettings);
+            await migrator.createTable(testSettings);
+          }
+          if (from < 12) {
+            await migrator.createTable(grammarPoints);
+            await migrator.createTable(grammarExamples);
+            await migrator.createTable(grammarSrsState);
           }
         },
       );

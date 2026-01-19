@@ -6,6 +6,7 @@ class SrsState extends Table {
   IntColumn get box => integer().withDefault(const Constant(1))();
   IntColumn get repetitions => integer().withDefault(const Constant(0))();
   RealColumn get ease => real().withDefault(const Constant(2.5))();
+  IntColumn get lastConfidence => integer().withDefault(const Constant(0))(); // 0=unknown, 1=again, 2=hard, 3=good, 4=easy
   DateTimeColumn get lastReviewedAt => dateTime().nullable()();
   DateTimeColumn get nextReviewAt => dateTime()();
 }

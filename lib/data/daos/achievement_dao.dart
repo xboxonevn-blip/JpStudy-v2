@@ -6,7 +6,7 @@ part 'achievement_dao.g.dart';
 
 @DriftAccessor(tables: [Achievements])
 class AchievementDao extends DatabaseAccessor<AppDatabase> with _$AchievementDaoMixin {
-  AchievementDao(AppDatabase db) : super(db);
+  AchievementDao(super.db);
 
   /// Add a new achievement
   Future<int> addAchievement(AchievementsCompanion achievement) {

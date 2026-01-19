@@ -125,7 +125,7 @@ class TestHistoryService {
         totalQuestions: session.totalQuestions,
         timeElapsed: duration,
         xpEarned: session.xpEarned,
-        weakTermIds: [], // TODO: Load weak terms from answers if needed
+        weakTermIds: [],
       );
   }
 }

@@ -14,12 +14,14 @@ class LearnScreen extends ConsumerStatefulWidget {
   final List<VocabItem> items;
   final int lessonId;
   final String lessonTitle;
+  final List<QuestionType>? enabledTypes;
 
   const LearnScreen({
     super.key,
     required this.items,
     required this.lessonId,
     required this.lessonTitle,
+    this.enabledTypes,
   });
 
   @override
@@ -42,10 +44,18 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
 
   void _startSession() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(learnSessionProvider.notifier).startSession(
-            lessonId: widget.lessonId,
-            items: widget.items,
-          );
+      if (widget.enabledTypes != null) {
+        ref.read(learnSessionProvider.notifier).startSession(
+              lessonId: widget.lessonId,
+              items: widget.items,
+              enabledTypes: widget.enabledTypes!,
+            );
+      } else {
+        ref.read(learnSessionProvider.notifier).startSession(
+              lessonId: widget.lessonId,
+              items: widget.items,
+            );
+      }
       _questionStartTime = DateTime.now();
     });
   }
@@ -111,7 +121,25 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
-              child: _buildQuestionWidget(question),
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (child, animation) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: SlideTransition(
+                      position: Tween<Offset>(
+                        begin: const Offset(0.0, 0.1),
+                        end: Offset.zero,
+                      ).animate(animation),
+                      child: child,
+                    ),
+                  );
+                },
+                child: KeyedSubtree(
+                  key: ValueKey(question.id),
+                  child: _buildQuestionWidget(question),
+                ),
+              ),
             ),
           ),
 

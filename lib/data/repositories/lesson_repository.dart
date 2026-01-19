@@ -1,5 +1,6 @@
 import 'package:drift/drift.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/services/srs_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 
@@ -234,6 +235,7 @@ class LessonRepository {
 
   final AppDatabase _db;
   final ContentDatabase _contentDb;
+  final SrsService _srsService = SrsService();
   static const int _defaultLessonCount = 25;
 
   Future<String> getLessonTitle(int lessonId, String fallback) async {
@@ -244,6 +246,10 @@ class LessonRepository {
       return fallback;
     }
     return existing.isCustomTitle ? existing.title : fallback;
+  }
+
+  Future<List<UserLessonData>> getAllLessons() {
+    return _db.select(_db.userLesson).get();
   }
 
   Future<LessonPracticeSettings> fetchLessonPracticeSettings(
@@ -716,6 +722,44 @@ class LessonRepository {
       reviewEasyCount: Value(todayRow.reviewEasyCount + easyDelta),
       streak: Value(todayRow.streak),
     ));
+  }
+
+  /// Process an SRS review for a specific term
+  Future<void> saveTermReview({
+    required int termId,
+    required int quality,
+  }) async {
+    // 1. Update Global Stats
+    await recordReview(quality: quality);
+
+    // 2. Get current SRS state
+    var srsState = await _db.srsDao.getSrsState(termId);
+    
+    // Initialize if missing
+    if (srsState == null) {
+      await _db.srsDao.initializeSrsState(termId);
+      srsState = await _db.srsDao.getSrsState(termId);
+    }
+    
+    if (srsState == null) return; // Should not happen
+
+    // 3. Calculate next review
+    final result = _srsService.review(
+      currentBox: srsState.box,
+      xRepetitions: srsState.repetitions,
+      xEaseFactor: srsState.ease,
+      quality: quality,
+    );
+
+    // 4. Update SRS state
+    await _db.srsDao.updateSrsState(
+      vocabId: termId,
+      box: result.box,
+      repetitions: result.repetitions,
+      ease: result.easeFactor,
+      lastConfidence: quality,
+      nextReviewAt: result.nextReview,
+    );
   }
 
   Future<int> recordAttempt({

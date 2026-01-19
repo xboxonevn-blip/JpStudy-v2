@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
 
 class AudioService {
@@ -13,18 +14,19 @@ class AudioService {
     await _preloadSound('error');
     await _preloadSound('combo');
     await _preloadSound('levelup');
+    await _preloadSound('swipe');
   }
 
   Future<void> _preloadSound(String name) async {
     try {
       final player = AudioPlayer();
-      // Note: These asset paths assume you'll add audio files to assets/sounds/
-      // For now, this won't play anything but structure is ready
-      // await player.setAsset('assets/sounds/$name.mp3');
+      // Note: These asset paths assume you'll add audio files to assets/audio/
+      // The directory was found to be assets/audio, not assets/sounds
+      await player.setAsset('assets/audio/$name.mp3');
       _players[name] = player;
     } catch (e) {
       // Silently fail if audio not available
-      // print('Failed to load sound $name: $e');
+      debugPrint('Failed to load sound $name: $e');
     }
   }
 

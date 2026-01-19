@@ -65,6 +65,18 @@ class $SrsStateTable extends SrsState
     requiredDuringInsert: false,
     defaultValue: const Constant(2.5),
   );
+  static const VerificationMeta _lastConfidenceMeta = const VerificationMeta(
+    'lastConfidence',
+  );
+  @override
+  late final GeneratedColumn<int> lastConfidence = GeneratedColumn<int>(
+    'last_confidence',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   static const VerificationMeta _lastReviewedAtMeta = const VerificationMeta(
     'lastReviewedAt',
   );
@@ -95,6 +107,7 @@ class $SrsStateTable extends SrsState
     box,
     repetitions,
     ease,
+    lastConfidence,
     lastReviewedAt,
     nextReviewAt,
   ];
@@ -140,6 +153,15 @@ class $SrsStateTable extends SrsState
       context.handle(
         _easeMeta,
         ease.isAcceptableOrUnknown(data['ease']!, _easeMeta),
+      );
+    }
+    if (data.containsKey('last_confidence')) {
+      context.handle(
+        _lastConfidenceMeta,
+        lastConfidence.isAcceptableOrUnknown(
+          data['last_confidence']!,
+          _lastConfidenceMeta,
+        ),
       );
     }
     if (data.containsKey('last_reviewed_at')) {
@@ -191,6 +213,10 @@ class $SrsStateTable extends SrsState
         DriftSqlType.double,
         data['${effectivePrefix}ease'],
       )!,
+      lastConfidence: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}last_confidence'],
+      )!,
       lastReviewedAt: attachedDatabase.typeMapping.read(
         DriftSqlType.dateTime,
         data['${effectivePrefix}last_reviewed_at'],
@@ -214,6 +240,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
   final int box;
   final int repetitions;
   final double ease;
+  final int lastConfidence;
   final DateTime? lastReviewedAt;
   final DateTime nextReviewAt;
   const SrsStateData({
@@ -222,6 +249,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     required this.box,
     required this.repetitions,
     required this.ease,
+    required this.lastConfidence,
     this.lastReviewedAt,
     required this.nextReviewAt,
   });
@@ -233,6 +261,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     map['box'] = Variable<int>(box);
     map['repetitions'] = Variable<int>(repetitions);
     map['ease'] = Variable<double>(ease);
+    map['last_confidence'] = Variable<int>(lastConfidence);
     if (!nullToAbsent || lastReviewedAt != null) {
       map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
     }
@@ -247,6 +276,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
       box: Value(box),
       repetitions: Value(repetitions),
       ease: Value(ease),
+      lastConfidence: Value(lastConfidence),
       lastReviewedAt: lastReviewedAt == null && nullToAbsent
           ? const Value.absent()
           : Value(lastReviewedAt),
@@ -265,6 +295,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
       box: serializer.fromJson<int>(json['box']),
       repetitions: serializer.fromJson<int>(json['repetitions']),
       ease: serializer.fromJson<double>(json['ease']),
+      lastConfidence: serializer.fromJson<int>(json['lastConfidence']),
       lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
       nextReviewAt: serializer.fromJson<DateTime>(json['nextReviewAt']),
     );
@@ -278,6 +309,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
       'box': serializer.toJson<int>(box),
       'repetitions': serializer.toJson<int>(repetitions),
       'ease': serializer.toJson<double>(ease),
+      'lastConfidence': serializer.toJson<int>(lastConfidence),
       'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
       'nextReviewAt': serializer.toJson<DateTime>(nextReviewAt),
     };
@@ -289,6 +321,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     int? box,
     int? repetitions,
     double? ease,
+    int? lastConfidence,
     Value<DateTime?> lastReviewedAt = const Value.absent(),
     DateTime? nextReviewAt,
   }) => SrsStateData(
@@ -297,6 +330,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     box: box ?? this.box,
     repetitions: repetitions ?? this.repetitions,
     ease: ease ?? this.ease,
+    lastConfidence: lastConfidence ?? this.lastConfidence,
     lastReviewedAt: lastReviewedAt.present
         ? lastReviewedAt.value
         : this.lastReviewedAt,
@@ -311,6 +345,9 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
           ? data.repetitions.value
           : this.repetitions,
       ease: data.ease.present ? data.ease.value : this.ease,
+      lastConfidence: data.lastConfidence.present
+          ? data.lastConfidence.value
+          : this.lastConfidence,
       lastReviewedAt: data.lastReviewedAt.present
           ? data.lastReviewedAt.value
           : this.lastReviewedAt,
@@ -328,6 +365,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
           ..write('box: $box, ')
           ..write('repetitions: $repetitions, ')
           ..write('ease: $ease, ')
+          ..write('lastConfidence: $lastConfidence, ')
           ..write('lastReviewedAt: $lastReviewedAt, ')
           ..write('nextReviewAt: $nextReviewAt')
           ..write(')'))
@@ -341,6 +379,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     box,
     repetitions,
     ease,
+    lastConfidence,
     lastReviewedAt,
     nextReviewAt,
   );
@@ -353,6 +392,7 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
           other.box == this.box &&
           other.repetitions == this.repetitions &&
           other.ease == this.ease &&
+          other.lastConfidence == this.lastConfidence &&
           other.lastReviewedAt == this.lastReviewedAt &&
           other.nextReviewAt == this.nextReviewAt);
 }
@@ -363,6 +403,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
   final Value<int> box;
   final Value<int> repetitions;
   final Value<double> ease;
+  final Value<int> lastConfidence;
   final Value<DateTime?> lastReviewedAt;
   final Value<DateTime> nextReviewAt;
   const SrsStateCompanion({
@@ -371,6 +412,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     this.box = const Value.absent(),
     this.repetitions = const Value.absent(),
     this.ease = const Value.absent(),
+    this.lastConfidence = const Value.absent(),
     this.lastReviewedAt = const Value.absent(),
     this.nextReviewAt = const Value.absent(),
   });
@@ -380,6 +422,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     this.box = const Value.absent(),
     this.repetitions = const Value.absent(),
     this.ease = const Value.absent(),
+    this.lastConfidence = const Value.absent(),
     this.lastReviewedAt = const Value.absent(),
     required DateTime nextReviewAt,
   }) : vocabId = Value(vocabId),
@@ -390,6 +433,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     Expression<int>? box,
     Expression<int>? repetitions,
     Expression<double>? ease,
+    Expression<int>? lastConfidence,
     Expression<DateTime>? lastReviewedAt,
     Expression<DateTime>? nextReviewAt,
   }) {
@@ -399,6 +443,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
       if (box != null) 'box': box,
       if (repetitions != null) 'repetitions': repetitions,
       if (ease != null) 'ease': ease,
+      if (lastConfidence != null) 'last_confidence': lastConfidence,
       if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
       if (nextReviewAt != null) 'next_review_at': nextReviewAt,
     });
@@ -410,6 +455,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     Value<int>? box,
     Value<int>? repetitions,
     Value<double>? ease,
+    Value<int>? lastConfidence,
     Value<DateTime?>? lastReviewedAt,
     Value<DateTime>? nextReviewAt,
   }) {
@@ -419,6 +465,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
       box: box ?? this.box,
       repetitions: repetitions ?? this.repetitions,
       ease: ease ?? this.ease,
+      lastConfidence: lastConfidence ?? this.lastConfidence,
       lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
       nextReviewAt: nextReviewAt ?? this.nextReviewAt,
     );
@@ -442,6 +489,9 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     if (ease.present) {
       map['ease'] = Variable<double>(ease.value);
     }
+    if (lastConfidence.present) {
+      map['last_confidence'] = Variable<int>(lastConfidence.value);
+    }
     if (lastReviewedAt.present) {
       map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt.value);
     }
@@ -459,6 +509,7 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
           ..write('box: $box, ')
           ..write('repetitions: $repetitions, ')
           ..write('ease: $ease, ')
+          ..write('lastConfidence: $lastConfidence, ')
           ..write('lastReviewedAt: $lastReviewedAt, ')
           ..write('nextReviewAt: $nextReviewAt')
           ..write(')'))
@@ -1824,6 +1875,1310 @@ class AttemptAnswerCompanion extends UpdateCompanion<AttemptAnswerData> {
           ..write('questionId: $questionId, ')
           ..write('selectedIndex: $selectedIndex, ')
           ..write('isCorrect: $isCorrect')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $GrammarPointsTable extends GrammarPoints
+    with TableInfo<$GrammarPointsTable, GrammarPoint> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $GrammarPointsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _grammarPointMeta = const VerificationMeta(
+    'grammarPoint',
+  );
+  @override
+  late final GeneratedColumn<String> grammarPoint = GeneratedColumn<String>(
+    'grammar_point',
+    aliasedName,
+    false,
+    additionalChecks: GeneratedColumn.checkTextLength(
+      minTextLength: 1,
+      maxTextLength: 255,
+    ),
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _meaningMeta = const VerificationMeta(
+    'meaning',
+  );
+  @override
+  late final GeneratedColumn<String> meaning = GeneratedColumn<String>(
+    'meaning',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _connectionMeta = const VerificationMeta(
+    'connection',
+  );
+  @override
+  late final GeneratedColumn<String> connection = GeneratedColumn<String>(
+    'connection',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _explanationMeta = const VerificationMeta(
+    'explanation',
+  );
+  @override
+  late final GeneratedColumn<String> explanation = GeneratedColumn<String>(
+    'explanation',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _jlptLevelMeta = const VerificationMeta(
+    'jlptLevel',
+  );
+  @override
+  late final GeneratedColumn<String> jlptLevel = GeneratedColumn<String>(
+    'jlpt_level',
+    aliasedName,
+    false,
+    additionalChecks: GeneratedColumn.checkTextLength(
+      minTextLength: 2,
+      maxTextLength: 2,
+    ),
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _isLearnedMeta = const VerificationMeta(
+    'isLearned',
+  );
+  @override
+  late final GeneratedColumn<bool> isLearned = GeneratedColumn<bool>(
+    'is_learned',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_learned" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    grammarPoint,
+    meaning,
+    connection,
+    explanation,
+    jlptLevel,
+    isLearned,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'grammar_points';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<GrammarPoint> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('grammar_point')) {
+      context.handle(
+        _grammarPointMeta,
+        grammarPoint.isAcceptableOrUnknown(
+          data['grammar_point']!,
+          _grammarPointMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_grammarPointMeta);
+    }
+    if (data.containsKey('meaning')) {
+      context.handle(
+        _meaningMeta,
+        meaning.isAcceptableOrUnknown(data['meaning']!, _meaningMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_meaningMeta);
+    }
+    if (data.containsKey('connection')) {
+      context.handle(
+        _connectionMeta,
+        connection.isAcceptableOrUnknown(data['connection']!, _connectionMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_connectionMeta);
+    }
+    if (data.containsKey('explanation')) {
+      context.handle(
+        _explanationMeta,
+        explanation.isAcceptableOrUnknown(
+          data['explanation']!,
+          _explanationMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_explanationMeta);
+    }
+    if (data.containsKey('jlpt_level')) {
+      context.handle(
+        _jlptLevelMeta,
+        jlptLevel.isAcceptableOrUnknown(data['jlpt_level']!, _jlptLevelMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_jlptLevelMeta);
+    }
+    if (data.containsKey('is_learned')) {
+      context.handle(
+        _isLearnedMeta,
+        isLearned.isAcceptableOrUnknown(data['is_learned']!, _isLearnedMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  GrammarPoint map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return GrammarPoint(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      grammarPoint: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}grammar_point'],
+      )!,
+      meaning: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}meaning'],
+      )!,
+      connection: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}connection'],
+      )!,
+      explanation: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}explanation'],
+      )!,
+      jlptLevel: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}jlpt_level'],
+      )!,
+      isLearned: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_learned'],
+      )!,
+    );
+  }
+
+  @override
+  $GrammarPointsTable createAlias(String alias) {
+    return $GrammarPointsTable(attachedDatabase, alias);
+  }
+}
+
+class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
+  final int id;
+  final String grammarPoint;
+  final String meaning;
+  final String connection;
+  final String explanation;
+  final String jlptLevel;
+  final bool isLearned;
+  const GrammarPoint({
+    required this.id,
+    required this.grammarPoint,
+    required this.meaning,
+    required this.connection,
+    required this.explanation,
+    required this.jlptLevel,
+    required this.isLearned,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['grammar_point'] = Variable<String>(grammarPoint);
+    map['meaning'] = Variable<String>(meaning);
+    map['connection'] = Variable<String>(connection);
+    map['explanation'] = Variable<String>(explanation);
+    map['jlpt_level'] = Variable<String>(jlptLevel);
+    map['is_learned'] = Variable<bool>(isLearned);
+    return map;
+  }
+
+  GrammarPointsCompanion toCompanion(bool nullToAbsent) {
+    return GrammarPointsCompanion(
+      id: Value(id),
+      grammarPoint: Value(grammarPoint),
+      meaning: Value(meaning),
+      connection: Value(connection),
+      explanation: Value(explanation),
+      jlptLevel: Value(jlptLevel),
+      isLearned: Value(isLearned),
+    );
+  }
+
+  factory GrammarPoint.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return GrammarPoint(
+      id: serializer.fromJson<int>(json['id']),
+      grammarPoint: serializer.fromJson<String>(json['grammarPoint']),
+      meaning: serializer.fromJson<String>(json['meaning']),
+      connection: serializer.fromJson<String>(json['connection']),
+      explanation: serializer.fromJson<String>(json['explanation']),
+      jlptLevel: serializer.fromJson<String>(json['jlptLevel']),
+      isLearned: serializer.fromJson<bool>(json['isLearned']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'grammarPoint': serializer.toJson<String>(grammarPoint),
+      'meaning': serializer.toJson<String>(meaning),
+      'connection': serializer.toJson<String>(connection),
+      'explanation': serializer.toJson<String>(explanation),
+      'jlptLevel': serializer.toJson<String>(jlptLevel),
+      'isLearned': serializer.toJson<bool>(isLearned),
+    };
+  }
+
+  GrammarPoint copyWith({
+    int? id,
+    String? grammarPoint,
+    String? meaning,
+    String? connection,
+    String? explanation,
+    String? jlptLevel,
+    bool? isLearned,
+  }) => GrammarPoint(
+    id: id ?? this.id,
+    grammarPoint: grammarPoint ?? this.grammarPoint,
+    meaning: meaning ?? this.meaning,
+    connection: connection ?? this.connection,
+    explanation: explanation ?? this.explanation,
+    jlptLevel: jlptLevel ?? this.jlptLevel,
+    isLearned: isLearned ?? this.isLearned,
+  );
+  GrammarPoint copyWithCompanion(GrammarPointsCompanion data) {
+    return GrammarPoint(
+      id: data.id.present ? data.id.value : this.id,
+      grammarPoint: data.grammarPoint.present
+          ? data.grammarPoint.value
+          : this.grammarPoint,
+      meaning: data.meaning.present ? data.meaning.value : this.meaning,
+      connection: data.connection.present
+          ? data.connection.value
+          : this.connection,
+      explanation: data.explanation.present
+          ? data.explanation.value
+          : this.explanation,
+      jlptLevel: data.jlptLevel.present ? data.jlptLevel.value : this.jlptLevel,
+      isLearned: data.isLearned.present ? data.isLearned.value : this.isLearned,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarPoint(')
+          ..write('id: $id, ')
+          ..write('grammarPoint: $grammarPoint, ')
+          ..write('meaning: $meaning, ')
+          ..write('connection: $connection, ')
+          ..write('explanation: $explanation, ')
+          ..write('jlptLevel: $jlptLevel, ')
+          ..write('isLearned: $isLearned')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    grammarPoint,
+    meaning,
+    connection,
+    explanation,
+    jlptLevel,
+    isLearned,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is GrammarPoint &&
+          other.id == this.id &&
+          other.grammarPoint == this.grammarPoint &&
+          other.meaning == this.meaning &&
+          other.connection == this.connection &&
+          other.explanation == this.explanation &&
+          other.jlptLevel == this.jlptLevel &&
+          other.isLearned == this.isLearned);
+}
+
+class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
+  final Value<int> id;
+  final Value<String> grammarPoint;
+  final Value<String> meaning;
+  final Value<String> connection;
+  final Value<String> explanation;
+  final Value<String> jlptLevel;
+  final Value<bool> isLearned;
+  const GrammarPointsCompanion({
+    this.id = const Value.absent(),
+    this.grammarPoint = const Value.absent(),
+    this.meaning = const Value.absent(),
+    this.connection = const Value.absent(),
+    this.explanation = const Value.absent(),
+    this.jlptLevel = const Value.absent(),
+    this.isLearned = const Value.absent(),
+  });
+  GrammarPointsCompanion.insert({
+    this.id = const Value.absent(),
+    required String grammarPoint,
+    required String meaning,
+    required String connection,
+    required String explanation,
+    required String jlptLevel,
+    this.isLearned = const Value.absent(),
+  }) : grammarPoint = Value(grammarPoint),
+       meaning = Value(meaning),
+       connection = Value(connection),
+       explanation = Value(explanation),
+       jlptLevel = Value(jlptLevel);
+  static Insertable<GrammarPoint> custom({
+    Expression<int>? id,
+    Expression<String>? grammarPoint,
+    Expression<String>? meaning,
+    Expression<String>? connection,
+    Expression<String>? explanation,
+    Expression<String>? jlptLevel,
+    Expression<bool>? isLearned,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (grammarPoint != null) 'grammar_point': grammarPoint,
+      if (meaning != null) 'meaning': meaning,
+      if (connection != null) 'connection': connection,
+      if (explanation != null) 'explanation': explanation,
+      if (jlptLevel != null) 'jlpt_level': jlptLevel,
+      if (isLearned != null) 'is_learned': isLearned,
+    });
+  }
+
+  GrammarPointsCompanion copyWith({
+    Value<int>? id,
+    Value<String>? grammarPoint,
+    Value<String>? meaning,
+    Value<String>? connection,
+    Value<String>? explanation,
+    Value<String>? jlptLevel,
+    Value<bool>? isLearned,
+  }) {
+    return GrammarPointsCompanion(
+      id: id ?? this.id,
+      grammarPoint: grammarPoint ?? this.grammarPoint,
+      meaning: meaning ?? this.meaning,
+      connection: connection ?? this.connection,
+      explanation: explanation ?? this.explanation,
+      jlptLevel: jlptLevel ?? this.jlptLevel,
+      isLearned: isLearned ?? this.isLearned,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (grammarPoint.present) {
+      map['grammar_point'] = Variable<String>(grammarPoint.value);
+    }
+    if (meaning.present) {
+      map['meaning'] = Variable<String>(meaning.value);
+    }
+    if (connection.present) {
+      map['connection'] = Variable<String>(connection.value);
+    }
+    if (explanation.present) {
+      map['explanation'] = Variable<String>(explanation.value);
+    }
+    if (jlptLevel.present) {
+      map['jlpt_level'] = Variable<String>(jlptLevel.value);
+    }
+    if (isLearned.present) {
+      map['is_learned'] = Variable<bool>(isLearned.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarPointsCompanion(')
+          ..write('id: $id, ')
+          ..write('grammarPoint: $grammarPoint, ')
+          ..write('meaning: $meaning, ')
+          ..write('connection: $connection, ')
+          ..write('explanation: $explanation, ')
+          ..write('jlptLevel: $jlptLevel, ')
+          ..write('isLearned: $isLearned')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $GrammarExamplesTable extends GrammarExamples
+    with TableInfo<$GrammarExamplesTable, GrammarExample> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $GrammarExamplesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _grammarIdMeta = const VerificationMeta(
+    'grammarId',
+  );
+  @override
+  late final GeneratedColumn<int> grammarId = GeneratedColumn<int>(
+    'grammar_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES grammar_points (id) ON DELETE CASCADE',
+    ),
+  );
+  static const VerificationMeta _japaneseMeta = const VerificationMeta(
+    'japanese',
+  );
+  @override
+  late final GeneratedColumn<String> japanese = GeneratedColumn<String>(
+    'japanese',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _translationMeta = const VerificationMeta(
+    'translation',
+  );
+  @override
+  late final GeneratedColumn<String> translation = GeneratedColumn<String>(
+    'translation',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _audioUrlMeta = const VerificationMeta(
+    'audioUrl',
+  );
+  @override
+  late final GeneratedColumn<String> audioUrl = GeneratedColumn<String>(
+    'audio_url',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    grammarId,
+    japanese,
+    translation,
+    audioUrl,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'grammar_examples';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<GrammarExample> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('grammar_id')) {
+      context.handle(
+        _grammarIdMeta,
+        grammarId.isAcceptableOrUnknown(data['grammar_id']!, _grammarIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_grammarIdMeta);
+    }
+    if (data.containsKey('japanese')) {
+      context.handle(
+        _japaneseMeta,
+        japanese.isAcceptableOrUnknown(data['japanese']!, _japaneseMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_japaneseMeta);
+    }
+    if (data.containsKey('translation')) {
+      context.handle(
+        _translationMeta,
+        translation.isAcceptableOrUnknown(
+          data['translation']!,
+          _translationMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_translationMeta);
+    }
+    if (data.containsKey('audio_url')) {
+      context.handle(
+        _audioUrlMeta,
+        audioUrl.isAcceptableOrUnknown(data['audio_url']!, _audioUrlMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  GrammarExample map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return GrammarExample(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      grammarId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}grammar_id'],
+      )!,
+      japanese: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}japanese'],
+      )!,
+      translation: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}translation'],
+      )!,
+      audioUrl: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}audio_url'],
+      ),
+    );
+  }
+
+  @override
+  $GrammarExamplesTable createAlias(String alias) {
+    return $GrammarExamplesTable(attachedDatabase, alias);
+  }
+}
+
+class GrammarExample extends DataClass implements Insertable<GrammarExample> {
+  final int id;
+  final int grammarId;
+  final String japanese;
+  final String translation;
+  final String? audioUrl;
+  const GrammarExample({
+    required this.id,
+    required this.grammarId,
+    required this.japanese,
+    required this.translation,
+    this.audioUrl,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['grammar_id'] = Variable<int>(grammarId);
+    map['japanese'] = Variable<String>(japanese);
+    map['translation'] = Variable<String>(translation);
+    if (!nullToAbsent || audioUrl != null) {
+      map['audio_url'] = Variable<String>(audioUrl);
+    }
+    return map;
+  }
+
+  GrammarExamplesCompanion toCompanion(bool nullToAbsent) {
+    return GrammarExamplesCompanion(
+      id: Value(id),
+      grammarId: Value(grammarId),
+      japanese: Value(japanese),
+      translation: Value(translation),
+      audioUrl: audioUrl == null && nullToAbsent
+          ? const Value.absent()
+          : Value(audioUrl),
+    );
+  }
+
+  factory GrammarExample.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return GrammarExample(
+      id: serializer.fromJson<int>(json['id']),
+      grammarId: serializer.fromJson<int>(json['grammarId']),
+      japanese: serializer.fromJson<String>(json['japanese']),
+      translation: serializer.fromJson<String>(json['translation']),
+      audioUrl: serializer.fromJson<String?>(json['audioUrl']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'grammarId': serializer.toJson<int>(grammarId),
+      'japanese': serializer.toJson<String>(japanese),
+      'translation': serializer.toJson<String>(translation),
+      'audioUrl': serializer.toJson<String?>(audioUrl),
+    };
+  }
+
+  GrammarExample copyWith({
+    int? id,
+    int? grammarId,
+    String? japanese,
+    String? translation,
+    Value<String?> audioUrl = const Value.absent(),
+  }) => GrammarExample(
+    id: id ?? this.id,
+    grammarId: grammarId ?? this.grammarId,
+    japanese: japanese ?? this.japanese,
+    translation: translation ?? this.translation,
+    audioUrl: audioUrl.present ? audioUrl.value : this.audioUrl,
+  );
+  GrammarExample copyWithCompanion(GrammarExamplesCompanion data) {
+    return GrammarExample(
+      id: data.id.present ? data.id.value : this.id,
+      grammarId: data.grammarId.present ? data.grammarId.value : this.grammarId,
+      japanese: data.japanese.present ? data.japanese.value : this.japanese,
+      translation: data.translation.present
+          ? data.translation.value
+          : this.translation,
+      audioUrl: data.audioUrl.present ? data.audioUrl.value : this.audioUrl,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarExample(')
+          ..write('id: $id, ')
+          ..write('grammarId: $grammarId, ')
+          ..write('japanese: $japanese, ')
+          ..write('translation: $translation, ')
+          ..write('audioUrl: $audioUrl')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(id, grammarId, japanese, translation, audioUrl);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is GrammarExample &&
+          other.id == this.id &&
+          other.grammarId == this.grammarId &&
+          other.japanese == this.japanese &&
+          other.translation == this.translation &&
+          other.audioUrl == this.audioUrl);
+}
+
+class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
+  final Value<int> id;
+  final Value<int> grammarId;
+  final Value<String> japanese;
+  final Value<String> translation;
+  final Value<String?> audioUrl;
+  const GrammarExamplesCompanion({
+    this.id = const Value.absent(),
+    this.grammarId = const Value.absent(),
+    this.japanese = const Value.absent(),
+    this.translation = const Value.absent(),
+    this.audioUrl = const Value.absent(),
+  });
+  GrammarExamplesCompanion.insert({
+    this.id = const Value.absent(),
+    required int grammarId,
+    required String japanese,
+    required String translation,
+    this.audioUrl = const Value.absent(),
+  }) : grammarId = Value(grammarId),
+       japanese = Value(japanese),
+       translation = Value(translation);
+  static Insertable<GrammarExample> custom({
+    Expression<int>? id,
+    Expression<int>? grammarId,
+    Expression<String>? japanese,
+    Expression<String>? translation,
+    Expression<String>? audioUrl,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (grammarId != null) 'grammar_id': grammarId,
+      if (japanese != null) 'japanese': japanese,
+      if (translation != null) 'translation': translation,
+      if (audioUrl != null) 'audio_url': audioUrl,
+    });
+  }
+
+  GrammarExamplesCompanion copyWith({
+    Value<int>? id,
+    Value<int>? grammarId,
+    Value<String>? japanese,
+    Value<String>? translation,
+    Value<String?>? audioUrl,
+  }) {
+    return GrammarExamplesCompanion(
+      id: id ?? this.id,
+      grammarId: grammarId ?? this.grammarId,
+      japanese: japanese ?? this.japanese,
+      translation: translation ?? this.translation,
+      audioUrl: audioUrl ?? this.audioUrl,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (grammarId.present) {
+      map['grammar_id'] = Variable<int>(grammarId.value);
+    }
+    if (japanese.present) {
+      map['japanese'] = Variable<String>(japanese.value);
+    }
+    if (translation.present) {
+      map['translation'] = Variable<String>(translation.value);
+    }
+    if (audioUrl.present) {
+      map['audio_url'] = Variable<String>(audioUrl.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarExamplesCompanion(')
+          ..write('id: $id, ')
+          ..write('grammarId: $grammarId, ')
+          ..write('japanese: $japanese, ')
+          ..write('translation: $translation, ')
+          ..write('audioUrl: $audioUrl')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $GrammarSrsStateTable extends GrammarSrsState
+    with TableInfo<$GrammarSrsStateTable, GrammarSrsStateData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $GrammarSrsStateTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _grammarIdMeta = const VerificationMeta(
+    'grammarId',
+  );
+  @override
+  late final GeneratedColumn<int> grammarId = GeneratedColumn<int>(
+    'grammar_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES grammar_points (id) ON DELETE CASCADE',
+    ),
+  );
+  static const VerificationMeta _streakMeta = const VerificationMeta('streak');
+  @override
+  late final GeneratedColumn<int> streak = GeneratedColumn<int>(
+    'streak',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _easeMeta = const VerificationMeta('ease');
+  @override
+  late final GeneratedColumn<double> ease = GeneratedColumn<double>(
+    'ease',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(2.5),
+  );
+  static const VerificationMeta _nextReviewAtMeta = const VerificationMeta(
+    'nextReviewAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> nextReviewAt = GeneratedColumn<DateTime>(
+    'next_review_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _lastReviewedAtMeta = const VerificationMeta(
+    'lastReviewedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> lastReviewedAt =
+      GeneratedColumn<DateTime>(
+        'last_reviewed_at',
+        aliasedName,
+        true,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _ghostReviewsDueMeta = const VerificationMeta(
+    'ghostReviewsDue',
+  );
+  @override
+  late final GeneratedColumn<int> ghostReviewsDue = GeneratedColumn<int>(
+    'ghost_reviews_due',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    grammarId,
+    streak,
+    ease,
+    nextReviewAt,
+    lastReviewedAt,
+    ghostReviewsDue,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'grammar_srs_state';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<GrammarSrsStateData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('grammar_id')) {
+      context.handle(
+        _grammarIdMeta,
+        grammarId.isAcceptableOrUnknown(data['grammar_id']!, _grammarIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_grammarIdMeta);
+    }
+    if (data.containsKey('streak')) {
+      context.handle(
+        _streakMeta,
+        streak.isAcceptableOrUnknown(data['streak']!, _streakMeta),
+      );
+    }
+    if (data.containsKey('ease')) {
+      context.handle(
+        _easeMeta,
+        ease.isAcceptableOrUnknown(data['ease']!, _easeMeta),
+      );
+    }
+    if (data.containsKey('next_review_at')) {
+      context.handle(
+        _nextReviewAtMeta,
+        nextReviewAt.isAcceptableOrUnknown(
+          data['next_review_at']!,
+          _nextReviewAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_nextReviewAtMeta);
+    }
+    if (data.containsKey('last_reviewed_at')) {
+      context.handle(
+        _lastReviewedAtMeta,
+        lastReviewedAt.isAcceptableOrUnknown(
+          data['last_reviewed_at']!,
+          _lastReviewedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('ghost_reviews_due')) {
+      context.handle(
+        _ghostReviewsDueMeta,
+        ghostReviewsDue.isAcceptableOrUnknown(
+          data['ghost_reviews_due']!,
+          _ghostReviewsDueMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  GrammarSrsStateData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return GrammarSrsStateData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      grammarId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}grammar_id'],
+      )!,
+      streak: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}streak'],
+      )!,
+      ease: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}ease'],
+      )!,
+      nextReviewAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}next_review_at'],
+      )!,
+      lastReviewedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}last_reviewed_at'],
+      ),
+      ghostReviewsDue: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}ghost_reviews_due'],
+      )!,
+    );
+  }
+
+  @override
+  $GrammarSrsStateTable createAlias(String alias) {
+    return $GrammarSrsStateTable(attachedDatabase, alias);
+  }
+}
+
+class GrammarSrsStateData extends DataClass
+    implements Insertable<GrammarSrsStateData> {
+  final int id;
+  final int grammarId;
+  final int streak;
+  final double ease;
+  final DateTime nextReviewAt;
+  final DateTime? lastReviewedAt;
+  final int ghostReviewsDue;
+  const GrammarSrsStateData({
+    required this.id,
+    required this.grammarId,
+    required this.streak,
+    required this.ease,
+    required this.nextReviewAt,
+    this.lastReviewedAt,
+    required this.ghostReviewsDue,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['grammar_id'] = Variable<int>(grammarId);
+    map['streak'] = Variable<int>(streak);
+    map['ease'] = Variable<double>(ease);
+    map['next_review_at'] = Variable<DateTime>(nextReviewAt);
+    if (!nullToAbsent || lastReviewedAt != null) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
+    }
+    map['ghost_reviews_due'] = Variable<int>(ghostReviewsDue);
+    return map;
+  }
+
+  GrammarSrsStateCompanion toCompanion(bool nullToAbsent) {
+    return GrammarSrsStateCompanion(
+      id: Value(id),
+      grammarId: Value(grammarId),
+      streak: Value(streak),
+      ease: Value(ease),
+      nextReviewAt: Value(nextReviewAt),
+      lastReviewedAt: lastReviewedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastReviewedAt),
+      ghostReviewsDue: Value(ghostReviewsDue),
+    );
+  }
+
+  factory GrammarSrsStateData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return GrammarSrsStateData(
+      id: serializer.fromJson<int>(json['id']),
+      grammarId: serializer.fromJson<int>(json['grammarId']),
+      streak: serializer.fromJson<int>(json['streak']),
+      ease: serializer.fromJson<double>(json['ease']),
+      nextReviewAt: serializer.fromJson<DateTime>(json['nextReviewAt']),
+      lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
+      ghostReviewsDue: serializer.fromJson<int>(json['ghostReviewsDue']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'grammarId': serializer.toJson<int>(grammarId),
+      'streak': serializer.toJson<int>(streak),
+      'ease': serializer.toJson<double>(ease),
+      'nextReviewAt': serializer.toJson<DateTime>(nextReviewAt),
+      'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
+      'ghostReviewsDue': serializer.toJson<int>(ghostReviewsDue),
+    };
+  }
+
+  GrammarSrsStateData copyWith({
+    int? id,
+    int? grammarId,
+    int? streak,
+    double? ease,
+    DateTime? nextReviewAt,
+    Value<DateTime?> lastReviewedAt = const Value.absent(),
+    int? ghostReviewsDue,
+  }) => GrammarSrsStateData(
+    id: id ?? this.id,
+    grammarId: grammarId ?? this.grammarId,
+    streak: streak ?? this.streak,
+    ease: ease ?? this.ease,
+    nextReviewAt: nextReviewAt ?? this.nextReviewAt,
+    lastReviewedAt: lastReviewedAt.present
+        ? lastReviewedAt.value
+        : this.lastReviewedAt,
+    ghostReviewsDue: ghostReviewsDue ?? this.ghostReviewsDue,
+  );
+  GrammarSrsStateData copyWithCompanion(GrammarSrsStateCompanion data) {
+    return GrammarSrsStateData(
+      id: data.id.present ? data.id.value : this.id,
+      grammarId: data.grammarId.present ? data.grammarId.value : this.grammarId,
+      streak: data.streak.present ? data.streak.value : this.streak,
+      ease: data.ease.present ? data.ease.value : this.ease,
+      nextReviewAt: data.nextReviewAt.present
+          ? data.nextReviewAt.value
+          : this.nextReviewAt,
+      lastReviewedAt: data.lastReviewedAt.present
+          ? data.lastReviewedAt.value
+          : this.lastReviewedAt,
+      ghostReviewsDue: data.ghostReviewsDue.present
+          ? data.ghostReviewsDue.value
+          : this.ghostReviewsDue,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarSrsStateData(')
+          ..write('id: $id, ')
+          ..write('grammarId: $grammarId, ')
+          ..write('streak: $streak, ')
+          ..write('ease: $ease, ')
+          ..write('nextReviewAt: $nextReviewAt, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('ghostReviewsDue: $ghostReviewsDue')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    grammarId,
+    streak,
+    ease,
+    nextReviewAt,
+    lastReviewedAt,
+    ghostReviewsDue,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is GrammarSrsStateData &&
+          other.id == this.id &&
+          other.grammarId == this.grammarId &&
+          other.streak == this.streak &&
+          other.ease == this.ease &&
+          other.nextReviewAt == this.nextReviewAt &&
+          other.lastReviewedAt == this.lastReviewedAt &&
+          other.ghostReviewsDue == this.ghostReviewsDue);
+}
+
+class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
+  final Value<int> id;
+  final Value<int> grammarId;
+  final Value<int> streak;
+  final Value<double> ease;
+  final Value<DateTime> nextReviewAt;
+  final Value<DateTime?> lastReviewedAt;
+  final Value<int> ghostReviewsDue;
+  const GrammarSrsStateCompanion({
+    this.id = const Value.absent(),
+    this.grammarId = const Value.absent(),
+    this.streak = const Value.absent(),
+    this.ease = const Value.absent(),
+    this.nextReviewAt = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+    this.ghostReviewsDue = const Value.absent(),
+  });
+  GrammarSrsStateCompanion.insert({
+    this.id = const Value.absent(),
+    required int grammarId,
+    this.streak = const Value.absent(),
+    this.ease = const Value.absent(),
+    required DateTime nextReviewAt,
+    this.lastReviewedAt = const Value.absent(),
+    this.ghostReviewsDue = const Value.absent(),
+  }) : grammarId = Value(grammarId),
+       nextReviewAt = Value(nextReviewAt);
+  static Insertable<GrammarSrsStateData> custom({
+    Expression<int>? id,
+    Expression<int>? grammarId,
+    Expression<int>? streak,
+    Expression<double>? ease,
+    Expression<DateTime>? nextReviewAt,
+    Expression<DateTime>? lastReviewedAt,
+    Expression<int>? ghostReviewsDue,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (grammarId != null) 'grammar_id': grammarId,
+      if (streak != null) 'streak': streak,
+      if (ease != null) 'ease': ease,
+      if (nextReviewAt != null) 'next_review_at': nextReviewAt,
+      if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
+      if (ghostReviewsDue != null) 'ghost_reviews_due': ghostReviewsDue,
+    });
+  }
+
+  GrammarSrsStateCompanion copyWith({
+    Value<int>? id,
+    Value<int>? grammarId,
+    Value<int>? streak,
+    Value<double>? ease,
+    Value<DateTime>? nextReviewAt,
+    Value<DateTime?>? lastReviewedAt,
+    Value<int>? ghostReviewsDue,
+  }) {
+    return GrammarSrsStateCompanion(
+      id: id ?? this.id,
+      grammarId: grammarId ?? this.grammarId,
+      streak: streak ?? this.streak,
+      ease: ease ?? this.ease,
+      nextReviewAt: nextReviewAt ?? this.nextReviewAt,
+      lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
+      ghostReviewsDue: ghostReviewsDue ?? this.ghostReviewsDue,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (grammarId.present) {
+      map['grammar_id'] = Variable<int>(grammarId.value);
+    }
+    if (streak.present) {
+      map['streak'] = Variable<int>(streak.value);
+    }
+    if (ease.present) {
+      map['ease'] = Variable<double>(ease.value);
+    }
+    if (nextReviewAt.present) {
+      map['next_review_at'] = Variable<DateTime>(nextReviewAt.value);
+    }
+    if (lastReviewedAt.present) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt.value);
+    }
+    if (ghostReviewsDue.present) {
+      map['ghost_reviews_due'] = Variable<int>(ghostReviewsDue.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarSrsStateCompanion(')
+          ..write('id: $id, ')
+          ..write('grammarId: $grammarId, ')
+          ..write('streak: $streak, ')
+          ..write('ease: $ease, ')
+          ..write('nextReviewAt: $nextReviewAt, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('ghostReviewsDue: $ghostReviewsDue')
           ..write(')'))
         .toString();
   }
@@ -5959,6 +7314,1759 @@ class AchievementsCompanion extends UpdateCompanion<Achievement> {
   }
 }
 
+class $FlashcardSettingsTable extends FlashcardSettings
+    with TableInfo<$FlashcardSettingsTable, FlashcardSetting> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $FlashcardSettingsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _showTermFirstMeta = const VerificationMeta(
+    'showTermFirst',
+  );
+  @override
+  late final GeneratedColumn<bool> showTermFirst = GeneratedColumn<bool>(
+    'show_term_first',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("show_term_first" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _autoPlayAudioMeta = const VerificationMeta(
+    'autoPlayAudio',
+  );
+  @override
+  late final GeneratedColumn<bool> autoPlayAudio = GeneratedColumn<bool>(
+    'auto_play_audio',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("auto_play_audio" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _shuffleCardsMeta = const VerificationMeta(
+    'shuffleCards',
+  );
+  @override
+  late final GeneratedColumn<bool> shuffleCards = GeneratedColumn<bool>(
+    'shuffle_cards',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("shuffle_cards" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _showStarredOnlyMeta = const VerificationMeta(
+    'showStarredOnly',
+  );
+  @override
+  late final GeneratedColumn<bool> showStarredOnly = GeneratedColumn<bool>(
+    'show_starred_only',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("show_starred_only" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    showTermFirst,
+    autoPlayAudio,
+    shuffleCards,
+    showStarredOnly,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'flashcard_settings';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<FlashcardSetting> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('show_term_first')) {
+      context.handle(
+        _showTermFirstMeta,
+        showTermFirst.isAcceptableOrUnknown(
+          data['show_term_first']!,
+          _showTermFirstMeta,
+        ),
+      );
+    }
+    if (data.containsKey('auto_play_audio')) {
+      context.handle(
+        _autoPlayAudioMeta,
+        autoPlayAudio.isAcceptableOrUnknown(
+          data['auto_play_audio']!,
+          _autoPlayAudioMeta,
+        ),
+      );
+    }
+    if (data.containsKey('shuffle_cards')) {
+      context.handle(
+        _shuffleCardsMeta,
+        shuffleCards.isAcceptableOrUnknown(
+          data['shuffle_cards']!,
+          _shuffleCardsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('show_starred_only')) {
+      context.handle(
+        _showStarredOnlyMeta,
+        showStarredOnly.isAcceptableOrUnknown(
+          data['show_starred_only']!,
+          _showStarredOnlyMeta,
+        ),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  FlashcardSetting map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return FlashcardSetting(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      showTermFirst: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}show_term_first'],
+      )!,
+      autoPlayAudio: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}auto_play_audio'],
+      )!,
+      shuffleCards: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}shuffle_cards'],
+      )!,
+      showStarredOnly: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}show_starred_only'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      ),
+    );
+  }
+
+  @override
+  $FlashcardSettingsTable createAlias(String alias) {
+    return $FlashcardSettingsTable(attachedDatabase, alias);
+  }
+}
+
+class FlashcardSetting extends DataClass
+    implements Insertable<FlashcardSetting> {
+  final int id;
+  final bool showTermFirst;
+  final bool autoPlayAudio;
+  final bool shuffleCards;
+  final bool showStarredOnly;
+  final DateTime? updatedAt;
+  const FlashcardSetting({
+    required this.id,
+    required this.showTermFirst,
+    required this.autoPlayAudio,
+    required this.shuffleCards,
+    required this.showStarredOnly,
+    this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['show_term_first'] = Variable<bool>(showTermFirst);
+    map['auto_play_audio'] = Variable<bool>(autoPlayAudio);
+    map['shuffle_cards'] = Variable<bool>(shuffleCards);
+    map['show_starred_only'] = Variable<bool>(showStarredOnly);
+    if (!nullToAbsent || updatedAt != null) {
+      map['updated_at'] = Variable<DateTime>(updatedAt);
+    }
+    return map;
+  }
+
+  FlashcardSettingsCompanion toCompanion(bool nullToAbsent) {
+    return FlashcardSettingsCompanion(
+      id: Value(id),
+      showTermFirst: Value(showTermFirst),
+      autoPlayAudio: Value(autoPlayAudio),
+      shuffleCards: Value(shuffleCards),
+      showStarredOnly: Value(showStarredOnly),
+      updatedAt: updatedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updatedAt),
+    );
+  }
+
+  factory FlashcardSetting.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return FlashcardSetting(
+      id: serializer.fromJson<int>(json['id']),
+      showTermFirst: serializer.fromJson<bool>(json['showTermFirst']),
+      autoPlayAudio: serializer.fromJson<bool>(json['autoPlayAudio']),
+      shuffleCards: serializer.fromJson<bool>(json['shuffleCards']),
+      showStarredOnly: serializer.fromJson<bool>(json['showStarredOnly']),
+      updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'showTermFirst': serializer.toJson<bool>(showTermFirst),
+      'autoPlayAudio': serializer.toJson<bool>(autoPlayAudio),
+      'shuffleCards': serializer.toJson<bool>(shuffleCards),
+      'showStarredOnly': serializer.toJson<bool>(showStarredOnly),
+      'updatedAt': serializer.toJson<DateTime?>(updatedAt),
+    };
+  }
+
+  FlashcardSetting copyWith({
+    int? id,
+    bool? showTermFirst,
+    bool? autoPlayAudio,
+    bool? shuffleCards,
+    bool? showStarredOnly,
+    Value<DateTime?> updatedAt = const Value.absent(),
+  }) => FlashcardSetting(
+    id: id ?? this.id,
+    showTermFirst: showTermFirst ?? this.showTermFirst,
+    autoPlayAudio: autoPlayAudio ?? this.autoPlayAudio,
+    shuffleCards: shuffleCards ?? this.shuffleCards,
+    showStarredOnly: showStarredOnly ?? this.showStarredOnly,
+    updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
+  );
+  FlashcardSetting copyWithCompanion(FlashcardSettingsCompanion data) {
+    return FlashcardSetting(
+      id: data.id.present ? data.id.value : this.id,
+      showTermFirst: data.showTermFirst.present
+          ? data.showTermFirst.value
+          : this.showTermFirst,
+      autoPlayAudio: data.autoPlayAudio.present
+          ? data.autoPlayAudio.value
+          : this.autoPlayAudio,
+      shuffleCards: data.shuffleCards.present
+          ? data.shuffleCards.value
+          : this.shuffleCards,
+      showStarredOnly: data.showStarredOnly.present
+          ? data.showStarredOnly.value
+          : this.showStarredOnly,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('FlashcardSetting(')
+          ..write('id: $id, ')
+          ..write('showTermFirst: $showTermFirst, ')
+          ..write('autoPlayAudio: $autoPlayAudio, ')
+          ..write('shuffleCards: $shuffleCards, ')
+          ..write('showStarredOnly: $showStarredOnly, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    showTermFirst,
+    autoPlayAudio,
+    shuffleCards,
+    showStarredOnly,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is FlashcardSetting &&
+          other.id == this.id &&
+          other.showTermFirst == this.showTermFirst &&
+          other.autoPlayAudio == this.autoPlayAudio &&
+          other.shuffleCards == this.shuffleCards &&
+          other.showStarredOnly == this.showStarredOnly &&
+          other.updatedAt == this.updatedAt);
+}
+
+class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
+  final Value<int> id;
+  final Value<bool> showTermFirst;
+  final Value<bool> autoPlayAudio;
+  final Value<bool> shuffleCards;
+  final Value<bool> showStarredOnly;
+  final Value<DateTime?> updatedAt;
+  const FlashcardSettingsCompanion({
+    this.id = const Value.absent(),
+    this.showTermFirst = const Value.absent(),
+    this.autoPlayAudio = const Value.absent(),
+    this.shuffleCards = const Value.absent(),
+    this.showStarredOnly = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  FlashcardSettingsCompanion.insert({
+    this.id = const Value.absent(),
+    this.showTermFirst = const Value.absent(),
+    this.autoPlayAudio = const Value.absent(),
+    this.shuffleCards = const Value.absent(),
+    this.showStarredOnly = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  static Insertable<FlashcardSetting> custom({
+    Expression<int>? id,
+    Expression<bool>? showTermFirst,
+    Expression<bool>? autoPlayAudio,
+    Expression<bool>? shuffleCards,
+    Expression<bool>? showStarredOnly,
+    Expression<DateTime>? updatedAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (showTermFirst != null) 'show_term_first': showTermFirst,
+      if (autoPlayAudio != null) 'auto_play_audio': autoPlayAudio,
+      if (shuffleCards != null) 'shuffle_cards': shuffleCards,
+      if (showStarredOnly != null) 'show_starred_only': showStarredOnly,
+      if (updatedAt != null) 'updated_at': updatedAt,
+    });
+  }
+
+  FlashcardSettingsCompanion copyWith({
+    Value<int>? id,
+    Value<bool>? showTermFirst,
+    Value<bool>? autoPlayAudio,
+    Value<bool>? shuffleCards,
+    Value<bool>? showStarredOnly,
+    Value<DateTime?>? updatedAt,
+  }) {
+    return FlashcardSettingsCompanion(
+      id: id ?? this.id,
+      showTermFirst: showTermFirst ?? this.showTermFirst,
+      autoPlayAudio: autoPlayAudio ?? this.autoPlayAudio,
+      shuffleCards: shuffleCards ?? this.shuffleCards,
+      showStarredOnly: showStarredOnly ?? this.showStarredOnly,
+      updatedAt: updatedAt ?? this.updatedAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (showTermFirst.present) {
+      map['show_term_first'] = Variable<bool>(showTermFirst.value);
+    }
+    if (autoPlayAudio.present) {
+      map['auto_play_audio'] = Variable<bool>(autoPlayAudio.value);
+    }
+    if (shuffleCards.present) {
+      map['shuffle_cards'] = Variable<bool>(shuffleCards.value);
+    }
+    if (showStarredOnly.present) {
+      map['show_starred_only'] = Variable<bool>(showStarredOnly.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('FlashcardSettingsCompanion(')
+          ..write('id: $id, ')
+          ..write('showTermFirst: $showTermFirst, ')
+          ..write('autoPlayAudio: $autoPlayAudio, ')
+          ..write('shuffleCards: $shuffleCards, ')
+          ..write('showStarredOnly: $showStarredOnly, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $LearnSettingsTable extends LearnSettings
+    with TableInfo<$LearnSettingsTable, LearnSetting> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $LearnSettingsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _defaultQuestionCountMeta =
+      const VerificationMeta('defaultQuestionCount');
+  @override
+  late final GeneratedColumn<int> defaultQuestionCount = GeneratedColumn<int>(
+    'default_question_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(20),
+  );
+  static const VerificationMeta _enableMultipleChoiceMeta =
+      const VerificationMeta('enableMultipleChoice');
+  @override
+  late final GeneratedColumn<bool> enableMultipleChoice = GeneratedColumn<bool>(
+    'enable_multiple_choice',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_multiple_choice" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _enableTrueFalseMeta = const VerificationMeta(
+    'enableTrueFalse',
+  );
+  @override
+  late final GeneratedColumn<bool> enableTrueFalse = GeneratedColumn<bool>(
+    'enable_true_false',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_true_false" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _enableFillBlankMeta = const VerificationMeta(
+    'enableFillBlank',
+  );
+  @override
+  late final GeneratedColumn<bool> enableFillBlank = GeneratedColumn<bool>(
+    'enable_fill_blank',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_fill_blank" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _enableAudioMatchMeta = const VerificationMeta(
+    'enableAudioMatch',
+  );
+  @override
+  late final GeneratedColumn<bool> enableAudioMatch = GeneratedColumn<bool>(
+    'enable_audio_match',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_audio_match" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _shuffleQuestionsMeta = const VerificationMeta(
+    'shuffleQuestions',
+  );
+  @override
+  late final GeneratedColumn<bool> shuffleQuestions = GeneratedColumn<bool>(
+    'shuffle_questions',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("shuffle_questions" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _enableHintsMeta = const VerificationMeta(
+    'enableHints',
+  );
+  @override
+  late final GeneratedColumn<bool> enableHints = GeneratedColumn<bool>(
+    'enable_hints',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_hints" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _showCorrectAnswerMeta = const VerificationMeta(
+    'showCorrectAnswer',
+  );
+  @override
+  late final GeneratedColumn<bool> showCorrectAnswer = GeneratedColumn<bool>(
+    'show_correct_answer',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("show_correct_answer" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    defaultQuestionCount,
+    enableMultipleChoice,
+    enableTrueFalse,
+    enableFillBlank,
+    enableAudioMatch,
+    shuffleQuestions,
+    enableHints,
+    showCorrectAnswer,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'learn_settings';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<LearnSetting> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('default_question_count')) {
+      context.handle(
+        _defaultQuestionCountMeta,
+        defaultQuestionCount.isAcceptableOrUnknown(
+          data['default_question_count']!,
+          _defaultQuestionCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_multiple_choice')) {
+      context.handle(
+        _enableMultipleChoiceMeta,
+        enableMultipleChoice.isAcceptableOrUnknown(
+          data['enable_multiple_choice']!,
+          _enableMultipleChoiceMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_true_false')) {
+      context.handle(
+        _enableTrueFalseMeta,
+        enableTrueFalse.isAcceptableOrUnknown(
+          data['enable_true_false']!,
+          _enableTrueFalseMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_fill_blank')) {
+      context.handle(
+        _enableFillBlankMeta,
+        enableFillBlank.isAcceptableOrUnknown(
+          data['enable_fill_blank']!,
+          _enableFillBlankMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_audio_match')) {
+      context.handle(
+        _enableAudioMatchMeta,
+        enableAudioMatch.isAcceptableOrUnknown(
+          data['enable_audio_match']!,
+          _enableAudioMatchMeta,
+        ),
+      );
+    }
+    if (data.containsKey('shuffle_questions')) {
+      context.handle(
+        _shuffleQuestionsMeta,
+        shuffleQuestions.isAcceptableOrUnknown(
+          data['shuffle_questions']!,
+          _shuffleQuestionsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_hints')) {
+      context.handle(
+        _enableHintsMeta,
+        enableHints.isAcceptableOrUnknown(
+          data['enable_hints']!,
+          _enableHintsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('show_correct_answer')) {
+      context.handle(
+        _showCorrectAnswerMeta,
+        showCorrectAnswer.isAcceptableOrUnknown(
+          data['show_correct_answer']!,
+          _showCorrectAnswerMeta,
+        ),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  LearnSetting map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return LearnSetting(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      defaultQuestionCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}default_question_count'],
+      )!,
+      enableMultipleChoice: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_multiple_choice'],
+      )!,
+      enableTrueFalse: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_true_false'],
+      )!,
+      enableFillBlank: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_fill_blank'],
+      )!,
+      enableAudioMatch: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_audio_match'],
+      )!,
+      shuffleQuestions: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}shuffle_questions'],
+      )!,
+      enableHints: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_hints'],
+      )!,
+      showCorrectAnswer: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}show_correct_answer'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      ),
+    );
+  }
+
+  @override
+  $LearnSettingsTable createAlias(String alias) {
+    return $LearnSettingsTable(attachedDatabase, alias);
+  }
+}
+
+class LearnSetting extends DataClass implements Insertable<LearnSetting> {
+  final int id;
+  final int defaultQuestionCount;
+  final bool enableMultipleChoice;
+  final bool enableTrueFalse;
+  final bool enableFillBlank;
+  final bool enableAudioMatch;
+  final bool shuffleQuestions;
+  final bool enableHints;
+  final bool showCorrectAnswer;
+  final DateTime? updatedAt;
+  const LearnSetting({
+    required this.id,
+    required this.defaultQuestionCount,
+    required this.enableMultipleChoice,
+    required this.enableTrueFalse,
+    required this.enableFillBlank,
+    required this.enableAudioMatch,
+    required this.shuffleQuestions,
+    required this.enableHints,
+    required this.showCorrectAnswer,
+    this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['default_question_count'] = Variable<int>(defaultQuestionCount);
+    map['enable_multiple_choice'] = Variable<bool>(enableMultipleChoice);
+    map['enable_true_false'] = Variable<bool>(enableTrueFalse);
+    map['enable_fill_blank'] = Variable<bool>(enableFillBlank);
+    map['enable_audio_match'] = Variable<bool>(enableAudioMatch);
+    map['shuffle_questions'] = Variable<bool>(shuffleQuestions);
+    map['enable_hints'] = Variable<bool>(enableHints);
+    map['show_correct_answer'] = Variable<bool>(showCorrectAnswer);
+    if (!nullToAbsent || updatedAt != null) {
+      map['updated_at'] = Variable<DateTime>(updatedAt);
+    }
+    return map;
+  }
+
+  LearnSettingsCompanion toCompanion(bool nullToAbsent) {
+    return LearnSettingsCompanion(
+      id: Value(id),
+      defaultQuestionCount: Value(defaultQuestionCount),
+      enableMultipleChoice: Value(enableMultipleChoice),
+      enableTrueFalse: Value(enableTrueFalse),
+      enableFillBlank: Value(enableFillBlank),
+      enableAudioMatch: Value(enableAudioMatch),
+      shuffleQuestions: Value(shuffleQuestions),
+      enableHints: Value(enableHints),
+      showCorrectAnswer: Value(showCorrectAnswer),
+      updatedAt: updatedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updatedAt),
+    );
+  }
+
+  factory LearnSetting.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return LearnSetting(
+      id: serializer.fromJson<int>(json['id']),
+      defaultQuestionCount: serializer.fromJson<int>(
+        json['defaultQuestionCount'],
+      ),
+      enableMultipleChoice: serializer.fromJson<bool>(
+        json['enableMultipleChoice'],
+      ),
+      enableTrueFalse: serializer.fromJson<bool>(json['enableTrueFalse']),
+      enableFillBlank: serializer.fromJson<bool>(json['enableFillBlank']),
+      enableAudioMatch: serializer.fromJson<bool>(json['enableAudioMatch']),
+      shuffleQuestions: serializer.fromJson<bool>(json['shuffleQuestions']),
+      enableHints: serializer.fromJson<bool>(json['enableHints']),
+      showCorrectAnswer: serializer.fromJson<bool>(json['showCorrectAnswer']),
+      updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'defaultQuestionCount': serializer.toJson<int>(defaultQuestionCount),
+      'enableMultipleChoice': serializer.toJson<bool>(enableMultipleChoice),
+      'enableTrueFalse': serializer.toJson<bool>(enableTrueFalse),
+      'enableFillBlank': serializer.toJson<bool>(enableFillBlank),
+      'enableAudioMatch': serializer.toJson<bool>(enableAudioMatch),
+      'shuffleQuestions': serializer.toJson<bool>(shuffleQuestions),
+      'enableHints': serializer.toJson<bool>(enableHints),
+      'showCorrectAnswer': serializer.toJson<bool>(showCorrectAnswer),
+      'updatedAt': serializer.toJson<DateTime?>(updatedAt),
+    };
+  }
+
+  LearnSetting copyWith({
+    int? id,
+    int? defaultQuestionCount,
+    bool? enableMultipleChoice,
+    bool? enableTrueFalse,
+    bool? enableFillBlank,
+    bool? enableAudioMatch,
+    bool? shuffleQuestions,
+    bool? enableHints,
+    bool? showCorrectAnswer,
+    Value<DateTime?> updatedAt = const Value.absent(),
+  }) => LearnSetting(
+    id: id ?? this.id,
+    defaultQuestionCount: defaultQuestionCount ?? this.defaultQuestionCount,
+    enableMultipleChoice: enableMultipleChoice ?? this.enableMultipleChoice,
+    enableTrueFalse: enableTrueFalse ?? this.enableTrueFalse,
+    enableFillBlank: enableFillBlank ?? this.enableFillBlank,
+    enableAudioMatch: enableAudioMatch ?? this.enableAudioMatch,
+    shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
+    enableHints: enableHints ?? this.enableHints,
+    showCorrectAnswer: showCorrectAnswer ?? this.showCorrectAnswer,
+    updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
+  );
+  LearnSetting copyWithCompanion(LearnSettingsCompanion data) {
+    return LearnSetting(
+      id: data.id.present ? data.id.value : this.id,
+      defaultQuestionCount: data.defaultQuestionCount.present
+          ? data.defaultQuestionCount.value
+          : this.defaultQuestionCount,
+      enableMultipleChoice: data.enableMultipleChoice.present
+          ? data.enableMultipleChoice.value
+          : this.enableMultipleChoice,
+      enableTrueFalse: data.enableTrueFalse.present
+          ? data.enableTrueFalse.value
+          : this.enableTrueFalse,
+      enableFillBlank: data.enableFillBlank.present
+          ? data.enableFillBlank.value
+          : this.enableFillBlank,
+      enableAudioMatch: data.enableAudioMatch.present
+          ? data.enableAudioMatch.value
+          : this.enableAudioMatch,
+      shuffleQuestions: data.shuffleQuestions.present
+          ? data.shuffleQuestions.value
+          : this.shuffleQuestions,
+      enableHints: data.enableHints.present
+          ? data.enableHints.value
+          : this.enableHints,
+      showCorrectAnswer: data.showCorrectAnswer.present
+          ? data.showCorrectAnswer.value
+          : this.showCorrectAnswer,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LearnSetting(')
+          ..write('id: $id, ')
+          ..write('defaultQuestionCount: $defaultQuestionCount, ')
+          ..write('enableMultipleChoice: $enableMultipleChoice, ')
+          ..write('enableTrueFalse: $enableTrueFalse, ')
+          ..write('enableFillBlank: $enableFillBlank, ')
+          ..write('enableAudioMatch: $enableAudioMatch, ')
+          ..write('shuffleQuestions: $shuffleQuestions, ')
+          ..write('enableHints: $enableHints, ')
+          ..write('showCorrectAnswer: $showCorrectAnswer, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    defaultQuestionCount,
+    enableMultipleChoice,
+    enableTrueFalse,
+    enableFillBlank,
+    enableAudioMatch,
+    shuffleQuestions,
+    enableHints,
+    showCorrectAnswer,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is LearnSetting &&
+          other.id == this.id &&
+          other.defaultQuestionCount == this.defaultQuestionCount &&
+          other.enableMultipleChoice == this.enableMultipleChoice &&
+          other.enableTrueFalse == this.enableTrueFalse &&
+          other.enableFillBlank == this.enableFillBlank &&
+          other.enableAudioMatch == this.enableAudioMatch &&
+          other.shuffleQuestions == this.shuffleQuestions &&
+          other.enableHints == this.enableHints &&
+          other.showCorrectAnswer == this.showCorrectAnswer &&
+          other.updatedAt == this.updatedAt);
+}
+
+class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
+  final Value<int> id;
+  final Value<int> defaultQuestionCount;
+  final Value<bool> enableMultipleChoice;
+  final Value<bool> enableTrueFalse;
+  final Value<bool> enableFillBlank;
+  final Value<bool> enableAudioMatch;
+  final Value<bool> shuffleQuestions;
+  final Value<bool> enableHints;
+  final Value<bool> showCorrectAnswer;
+  final Value<DateTime?> updatedAt;
+  const LearnSettingsCompanion({
+    this.id = const Value.absent(),
+    this.defaultQuestionCount = const Value.absent(),
+    this.enableMultipleChoice = const Value.absent(),
+    this.enableTrueFalse = const Value.absent(),
+    this.enableFillBlank = const Value.absent(),
+    this.enableAudioMatch = const Value.absent(),
+    this.shuffleQuestions = const Value.absent(),
+    this.enableHints = const Value.absent(),
+    this.showCorrectAnswer = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  LearnSettingsCompanion.insert({
+    this.id = const Value.absent(),
+    this.defaultQuestionCount = const Value.absent(),
+    this.enableMultipleChoice = const Value.absent(),
+    this.enableTrueFalse = const Value.absent(),
+    this.enableFillBlank = const Value.absent(),
+    this.enableAudioMatch = const Value.absent(),
+    this.shuffleQuestions = const Value.absent(),
+    this.enableHints = const Value.absent(),
+    this.showCorrectAnswer = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  static Insertable<LearnSetting> custom({
+    Expression<int>? id,
+    Expression<int>? defaultQuestionCount,
+    Expression<bool>? enableMultipleChoice,
+    Expression<bool>? enableTrueFalse,
+    Expression<bool>? enableFillBlank,
+    Expression<bool>? enableAudioMatch,
+    Expression<bool>? shuffleQuestions,
+    Expression<bool>? enableHints,
+    Expression<bool>? showCorrectAnswer,
+    Expression<DateTime>? updatedAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (defaultQuestionCount != null)
+        'default_question_count': defaultQuestionCount,
+      if (enableMultipleChoice != null)
+        'enable_multiple_choice': enableMultipleChoice,
+      if (enableTrueFalse != null) 'enable_true_false': enableTrueFalse,
+      if (enableFillBlank != null) 'enable_fill_blank': enableFillBlank,
+      if (enableAudioMatch != null) 'enable_audio_match': enableAudioMatch,
+      if (shuffleQuestions != null) 'shuffle_questions': shuffleQuestions,
+      if (enableHints != null) 'enable_hints': enableHints,
+      if (showCorrectAnswer != null) 'show_correct_answer': showCorrectAnswer,
+      if (updatedAt != null) 'updated_at': updatedAt,
+    });
+  }
+
+  LearnSettingsCompanion copyWith({
+    Value<int>? id,
+    Value<int>? defaultQuestionCount,
+    Value<bool>? enableMultipleChoice,
+    Value<bool>? enableTrueFalse,
+    Value<bool>? enableFillBlank,
+    Value<bool>? enableAudioMatch,
+    Value<bool>? shuffleQuestions,
+    Value<bool>? enableHints,
+    Value<bool>? showCorrectAnswer,
+    Value<DateTime?>? updatedAt,
+  }) {
+    return LearnSettingsCompanion(
+      id: id ?? this.id,
+      defaultQuestionCount: defaultQuestionCount ?? this.defaultQuestionCount,
+      enableMultipleChoice: enableMultipleChoice ?? this.enableMultipleChoice,
+      enableTrueFalse: enableTrueFalse ?? this.enableTrueFalse,
+      enableFillBlank: enableFillBlank ?? this.enableFillBlank,
+      enableAudioMatch: enableAudioMatch ?? this.enableAudioMatch,
+      shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
+      enableHints: enableHints ?? this.enableHints,
+      showCorrectAnswer: showCorrectAnswer ?? this.showCorrectAnswer,
+      updatedAt: updatedAt ?? this.updatedAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (defaultQuestionCount.present) {
+      map['default_question_count'] = Variable<int>(defaultQuestionCount.value);
+    }
+    if (enableMultipleChoice.present) {
+      map['enable_multiple_choice'] = Variable<bool>(
+        enableMultipleChoice.value,
+      );
+    }
+    if (enableTrueFalse.present) {
+      map['enable_true_false'] = Variable<bool>(enableTrueFalse.value);
+    }
+    if (enableFillBlank.present) {
+      map['enable_fill_blank'] = Variable<bool>(enableFillBlank.value);
+    }
+    if (enableAudioMatch.present) {
+      map['enable_audio_match'] = Variable<bool>(enableAudioMatch.value);
+    }
+    if (shuffleQuestions.present) {
+      map['shuffle_questions'] = Variable<bool>(shuffleQuestions.value);
+    }
+    if (enableHints.present) {
+      map['enable_hints'] = Variable<bool>(enableHints.value);
+    }
+    if (showCorrectAnswer.present) {
+      map['show_correct_answer'] = Variable<bool>(showCorrectAnswer.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LearnSettingsCompanion(')
+          ..write('id: $id, ')
+          ..write('defaultQuestionCount: $defaultQuestionCount, ')
+          ..write('enableMultipleChoice: $enableMultipleChoice, ')
+          ..write('enableTrueFalse: $enableTrueFalse, ')
+          ..write('enableFillBlank: $enableFillBlank, ')
+          ..write('enableAudioMatch: $enableAudioMatch, ')
+          ..write('shuffleQuestions: $shuffleQuestions, ')
+          ..write('enableHints: $enableHints, ')
+          ..write('showCorrectAnswer: $showCorrectAnswer, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $TestSettingsTable extends TestSettings
+    with TableInfo<$TestSettingsTable, TestSetting> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $TestSettingsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _defaultQuestionCountMeta =
+      const VerificationMeta('defaultQuestionCount');
+  @override
+  late final GeneratedColumn<int> defaultQuestionCount = GeneratedColumn<int>(
+    'default_question_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(20),
+  );
+  static const VerificationMeta _defaultTimeLimitMinutesMeta =
+      const VerificationMeta('defaultTimeLimitMinutes');
+  @override
+  late final GeneratedColumn<int> defaultTimeLimitMinutes =
+      GeneratedColumn<int>(
+        'default_time_limit_minutes',
+        aliasedName,
+        true,
+        type: DriftSqlType.int,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _enableMultipleChoiceMeta =
+      const VerificationMeta('enableMultipleChoice');
+  @override
+  late final GeneratedColumn<bool> enableMultipleChoice = GeneratedColumn<bool>(
+    'enable_multiple_choice',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_multiple_choice" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _enableTrueFalseMeta = const VerificationMeta(
+    'enableTrueFalse',
+  );
+  @override
+  late final GeneratedColumn<bool> enableTrueFalse = GeneratedColumn<bool>(
+    'enable_true_false',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_true_false" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _enableFillBlankMeta = const VerificationMeta(
+    'enableFillBlank',
+  );
+  @override
+  late final GeneratedColumn<bool> enableFillBlank = GeneratedColumn<bool>(
+    'enable_fill_blank',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("enable_fill_blank" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _shuffleQuestionsMeta = const VerificationMeta(
+    'shuffleQuestions',
+  );
+  @override
+  late final GeneratedColumn<bool> shuffleQuestions = GeneratedColumn<bool>(
+    'shuffle_questions',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("shuffle_questions" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _shuffleOptionsMeta = const VerificationMeta(
+    'shuffleOptions',
+  );
+  @override
+  late final GeneratedColumn<bool> shuffleOptions = GeneratedColumn<bool>(
+    'shuffle_options',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("shuffle_options" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _showCorrectAfterWrongMeta =
+      const VerificationMeta('showCorrectAfterWrong');
+  @override
+  late final GeneratedColumn<bool> showCorrectAfterWrong =
+      GeneratedColumn<bool>(
+        'show_correct_after_wrong',
+        aliasedName,
+        false,
+        type: DriftSqlType.bool,
+        requiredDuringInsert: false,
+        defaultConstraints: GeneratedColumn.constraintIsAlways(
+          'CHECK ("show_correct_after_wrong" IN (0, 1))',
+        ),
+        defaultValue: const Constant(true),
+      );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    defaultQuestionCount,
+    defaultTimeLimitMinutes,
+    enableMultipleChoice,
+    enableTrueFalse,
+    enableFillBlank,
+    shuffleQuestions,
+    shuffleOptions,
+    showCorrectAfterWrong,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'test_settings';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<TestSetting> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('default_question_count')) {
+      context.handle(
+        _defaultQuestionCountMeta,
+        defaultQuestionCount.isAcceptableOrUnknown(
+          data['default_question_count']!,
+          _defaultQuestionCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('default_time_limit_minutes')) {
+      context.handle(
+        _defaultTimeLimitMinutesMeta,
+        defaultTimeLimitMinutes.isAcceptableOrUnknown(
+          data['default_time_limit_minutes']!,
+          _defaultTimeLimitMinutesMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_multiple_choice')) {
+      context.handle(
+        _enableMultipleChoiceMeta,
+        enableMultipleChoice.isAcceptableOrUnknown(
+          data['enable_multiple_choice']!,
+          _enableMultipleChoiceMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_true_false')) {
+      context.handle(
+        _enableTrueFalseMeta,
+        enableTrueFalse.isAcceptableOrUnknown(
+          data['enable_true_false']!,
+          _enableTrueFalseMeta,
+        ),
+      );
+    }
+    if (data.containsKey('enable_fill_blank')) {
+      context.handle(
+        _enableFillBlankMeta,
+        enableFillBlank.isAcceptableOrUnknown(
+          data['enable_fill_blank']!,
+          _enableFillBlankMeta,
+        ),
+      );
+    }
+    if (data.containsKey('shuffle_questions')) {
+      context.handle(
+        _shuffleQuestionsMeta,
+        shuffleQuestions.isAcceptableOrUnknown(
+          data['shuffle_questions']!,
+          _shuffleQuestionsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('shuffle_options')) {
+      context.handle(
+        _shuffleOptionsMeta,
+        shuffleOptions.isAcceptableOrUnknown(
+          data['shuffle_options']!,
+          _shuffleOptionsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('show_correct_after_wrong')) {
+      context.handle(
+        _showCorrectAfterWrongMeta,
+        showCorrectAfterWrong.isAcceptableOrUnknown(
+          data['show_correct_after_wrong']!,
+          _showCorrectAfterWrongMeta,
+        ),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  TestSetting map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return TestSetting(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      defaultQuestionCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}default_question_count'],
+      )!,
+      defaultTimeLimitMinutes: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}default_time_limit_minutes'],
+      ),
+      enableMultipleChoice: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_multiple_choice'],
+      )!,
+      enableTrueFalse: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_true_false'],
+      )!,
+      enableFillBlank: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}enable_fill_blank'],
+      )!,
+      shuffleQuestions: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}shuffle_questions'],
+      )!,
+      shuffleOptions: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}shuffle_options'],
+      )!,
+      showCorrectAfterWrong: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}show_correct_after_wrong'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      ),
+    );
+  }
+
+  @override
+  $TestSettingsTable createAlias(String alias) {
+    return $TestSettingsTable(attachedDatabase, alias);
+  }
+}
+
+class TestSetting extends DataClass implements Insertable<TestSetting> {
+  final int id;
+  final int defaultQuestionCount;
+  final int? defaultTimeLimitMinutes;
+  final bool enableMultipleChoice;
+  final bool enableTrueFalse;
+  final bool enableFillBlank;
+  final bool shuffleQuestions;
+  final bool shuffleOptions;
+  final bool showCorrectAfterWrong;
+  final DateTime? updatedAt;
+  const TestSetting({
+    required this.id,
+    required this.defaultQuestionCount,
+    this.defaultTimeLimitMinutes,
+    required this.enableMultipleChoice,
+    required this.enableTrueFalse,
+    required this.enableFillBlank,
+    required this.shuffleQuestions,
+    required this.shuffleOptions,
+    required this.showCorrectAfterWrong,
+    this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['default_question_count'] = Variable<int>(defaultQuestionCount);
+    if (!nullToAbsent || defaultTimeLimitMinutes != null) {
+      map['default_time_limit_minutes'] = Variable<int>(
+        defaultTimeLimitMinutes,
+      );
+    }
+    map['enable_multiple_choice'] = Variable<bool>(enableMultipleChoice);
+    map['enable_true_false'] = Variable<bool>(enableTrueFalse);
+    map['enable_fill_blank'] = Variable<bool>(enableFillBlank);
+    map['shuffle_questions'] = Variable<bool>(shuffleQuestions);
+    map['shuffle_options'] = Variable<bool>(shuffleOptions);
+    map['show_correct_after_wrong'] = Variable<bool>(showCorrectAfterWrong);
+    if (!nullToAbsent || updatedAt != null) {
+      map['updated_at'] = Variable<DateTime>(updatedAt);
+    }
+    return map;
+  }
+
+  TestSettingsCompanion toCompanion(bool nullToAbsent) {
+    return TestSettingsCompanion(
+      id: Value(id),
+      defaultQuestionCount: Value(defaultQuestionCount),
+      defaultTimeLimitMinutes: defaultTimeLimitMinutes == null && nullToAbsent
+          ? const Value.absent()
+          : Value(defaultTimeLimitMinutes),
+      enableMultipleChoice: Value(enableMultipleChoice),
+      enableTrueFalse: Value(enableTrueFalse),
+      enableFillBlank: Value(enableFillBlank),
+      shuffleQuestions: Value(shuffleQuestions),
+      shuffleOptions: Value(shuffleOptions),
+      showCorrectAfterWrong: Value(showCorrectAfterWrong),
+      updatedAt: updatedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updatedAt),
+    );
+  }
+
+  factory TestSetting.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return TestSetting(
+      id: serializer.fromJson<int>(json['id']),
+      defaultQuestionCount: serializer.fromJson<int>(
+        json['defaultQuestionCount'],
+      ),
+      defaultTimeLimitMinutes: serializer.fromJson<int?>(
+        json['defaultTimeLimitMinutes'],
+      ),
+      enableMultipleChoice: serializer.fromJson<bool>(
+        json['enableMultipleChoice'],
+      ),
+      enableTrueFalse: serializer.fromJson<bool>(json['enableTrueFalse']),
+      enableFillBlank: serializer.fromJson<bool>(json['enableFillBlank']),
+      shuffleQuestions: serializer.fromJson<bool>(json['shuffleQuestions']),
+      shuffleOptions: serializer.fromJson<bool>(json['shuffleOptions']),
+      showCorrectAfterWrong: serializer.fromJson<bool>(
+        json['showCorrectAfterWrong'],
+      ),
+      updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'defaultQuestionCount': serializer.toJson<int>(defaultQuestionCount),
+      'defaultTimeLimitMinutes': serializer.toJson<int?>(
+        defaultTimeLimitMinutes,
+      ),
+      'enableMultipleChoice': serializer.toJson<bool>(enableMultipleChoice),
+      'enableTrueFalse': serializer.toJson<bool>(enableTrueFalse),
+      'enableFillBlank': serializer.toJson<bool>(enableFillBlank),
+      'shuffleQuestions': serializer.toJson<bool>(shuffleQuestions),
+      'shuffleOptions': serializer.toJson<bool>(shuffleOptions),
+      'showCorrectAfterWrong': serializer.toJson<bool>(showCorrectAfterWrong),
+      'updatedAt': serializer.toJson<DateTime?>(updatedAt),
+    };
+  }
+
+  TestSetting copyWith({
+    int? id,
+    int? defaultQuestionCount,
+    Value<int?> defaultTimeLimitMinutes = const Value.absent(),
+    bool? enableMultipleChoice,
+    bool? enableTrueFalse,
+    bool? enableFillBlank,
+    bool? shuffleQuestions,
+    bool? shuffleOptions,
+    bool? showCorrectAfterWrong,
+    Value<DateTime?> updatedAt = const Value.absent(),
+  }) => TestSetting(
+    id: id ?? this.id,
+    defaultQuestionCount: defaultQuestionCount ?? this.defaultQuestionCount,
+    defaultTimeLimitMinutes: defaultTimeLimitMinutes.present
+        ? defaultTimeLimitMinutes.value
+        : this.defaultTimeLimitMinutes,
+    enableMultipleChoice: enableMultipleChoice ?? this.enableMultipleChoice,
+    enableTrueFalse: enableTrueFalse ?? this.enableTrueFalse,
+    enableFillBlank: enableFillBlank ?? this.enableFillBlank,
+    shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
+    shuffleOptions: shuffleOptions ?? this.shuffleOptions,
+    showCorrectAfterWrong: showCorrectAfterWrong ?? this.showCorrectAfterWrong,
+    updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
+  );
+  TestSetting copyWithCompanion(TestSettingsCompanion data) {
+    return TestSetting(
+      id: data.id.present ? data.id.value : this.id,
+      defaultQuestionCount: data.defaultQuestionCount.present
+          ? data.defaultQuestionCount.value
+          : this.defaultQuestionCount,
+      defaultTimeLimitMinutes: data.defaultTimeLimitMinutes.present
+          ? data.defaultTimeLimitMinutes.value
+          : this.defaultTimeLimitMinutes,
+      enableMultipleChoice: data.enableMultipleChoice.present
+          ? data.enableMultipleChoice.value
+          : this.enableMultipleChoice,
+      enableTrueFalse: data.enableTrueFalse.present
+          ? data.enableTrueFalse.value
+          : this.enableTrueFalse,
+      enableFillBlank: data.enableFillBlank.present
+          ? data.enableFillBlank.value
+          : this.enableFillBlank,
+      shuffleQuestions: data.shuffleQuestions.present
+          ? data.shuffleQuestions.value
+          : this.shuffleQuestions,
+      shuffleOptions: data.shuffleOptions.present
+          ? data.shuffleOptions.value
+          : this.shuffleOptions,
+      showCorrectAfterWrong: data.showCorrectAfterWrong.present
+          ? data.showCorrectAfterWrong.value
+          : this.showCorrectAfterWrong,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('TestSetting(')
+          ..write('id: $id, ')
+          ..write('defaultQuestionCount: $defaultQuestionCount, ')
+          ..write('defaultTimeLimitMinutes: $defaultTimeLimitMinutes, ')
+          ..write('enableMultipleChoice: $enableMultipleChoice, ')
+          ..write('enableTrueFalse: $enableTrueFalse, ')
+          ..write('enableFillBlank: $enableFillBlank, ')
+          ..write('shuffleQuestions: $shuffleQuestions, ')
+          ..write('shuffleOptions: $shuffleOptions, ')
+          ..write('showCorrectAfterWrong: $showCorrectAfterWrong, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    defaultQuestionCount,
+    defaultTimeLimitMinutes,
+    enableMultipleChoice,
+    enableTrueFalse,
+    enableFillBlank,
+    shuffleQuestions,
+    shuffleOptions,
+    showCorrectAfterWrong,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is TestSetting &&
+          other.id == this.id &&
+          other.defaultQuestionCount == this.defaultQuestionCount &&
+          other.defaultTimeLimitMinutes == this.defaultTimeLimitMinutes &&
+          other.enableMultipleChoice == this.enableMultipleChoice &&
+          other.enableTrueFalse == this.enableTrueFalse &&
+          other.enableFillBlank == this.enableFillBlank &&
+          other.shuffleQuestions == this.shuffleQuestions &&
+          other.shuffleOptions == this.shuffleOptions &&
+          other.showCorrectAfterWrong == this.showCorrectAfterWrong &&
+          other.updatedAt == this.updatedAt);
+}
+
+class TestSettingsCompanion extends UpdateCompanion<TestSetting> {
+  final Value<int> id;
+  final Value<int> defaultQuestionCount;
+  final Value<int?> defaultTimeLimitMinutes;
+  final Value<bool> enableMultipleChoice;
+  final Value<bool> enableTrueFalse;
+  final Value<bool> enableFillBlank;
+  final Value<bool> shuffleQuestions;
+  final Value<bool> shuffleOptions;
+  final Value<bool> showCorrectAfterWrong;
+  final Value<DateTime?> updatedAt;
+  const TestSettingsCompanion({
+    this.id = const Value.absent(),
+    this.defaultQuestionCount = const Value.absent(),
+    this.defaultTimeLimitMinutes = const Value.absent(),
+    this.enableMultipleChoice = const Value.absent(),
+    this.enableTrueFalse = const Value.absent(),
+    this.enableFillBlank = const Value.absent(),
+    this.shuffleQuestions = const Value.absent(),
+    this.shuffleOptions = const Value.absent(),
+    this.showCorrectAfterWrong = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  TestSettingsCompanion.insert({
+    this.id = const Value.absent(),
+    this.defaultQuestionCount = const Value.absent(),
+    this.defaultTimeLimitMinutes = const Value.absent(),
+    this.enableMultipleChoice = const Value.absent(),
+    this.enableTrueFalse = const Value.absent(),
+    this.enableFillBlank = const Value.absent(),
+    this.shuffleQuestions = const Value.absent(),
+    this.shuffleOptions = const Value.absent(),
+    this.showCorrectAfterWrong = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  static Insertable<TestSetting> custom({
+    Expression<int>? id,
+    Expression<int>? defaultQuestionCount,
+    Expression<int>? defaultTimeLimitMinutes,
+    Expression<bool>? enableMultipleChoice,
+    Expression<bool>? enableTrueFalse,
+    Expression<bool>? enableFillBlank,
+    Expression<bool>? shuffleQuestions,
+    Expression<bool>? shuffleOptions,
+    Expression<bool>? showCorrectAfterWrong,
+    Expression<DateTime>? updatedAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (defaultQuestionCount != null)
+        'default_question_count': defaultQuestionCount,
+      if (defaultTimeLimitMinutes != null)
+        'default_time_limit_minutes': defaultTimeLimitMinutes,
+      if (enableMultipleChoice != null)
+        'enable_multiple_choice': enableMultipleChoice,
+      if (enableTrueFalse != null) 'enable_true_false': enableTrueFalse,
+      if (enableFillBlank != null) 'enable_fill_blank': enableFillBlank,
+      if (shuffleQuestions != null) 'shuffle_questions': shuffleQuestions,
+      if (shuffleOptions != null) 'shuffle_options': shuffleOptions,
+      if (showCorrectAfterWrong != null)
+        'show_correct_after_wrong': showCorrectAfterWrong,
+      if (updatedAt != null) 'updated_at': updatedAt,
+    });
+  }
+
+  TestSettingsCompanion copyWith({
+    Value<int>? id,
+    Value<int>? defaultQuestionCount,
+    Value<int?>? defaultTimeLimitMinutes,
+    Value<bool>? enableMultipleChoice,
+    Value<bool>? enableTrueFalse,
+    Value<bool>? enableFillBlank,
+    Value<bool>? shuffleQuestions,
+    Value<bool>? shuffleOptions,
+    Value<bool>? showCorrectAfterWrong,
+    Value<DateTime?>? updatedAt,
+  }) {
+    return TestSettingsCompanion(
+      id: id ?? this.id,
+      defaultQuestionCount: defaultQuestionCount ?? this.defaultQuestionCount,
+      defaultTimeLimitMinutes:
+          defaultTimeLimitMinutes ?? this.defaultTimeLimitMinutes,
+      enableMultipleChoice: enableMultipleChoice ?? this.enableMultipleChoice,
+      enableTrueFalse: enableTrueFalse ?? this.enableTrueFalse,
+      enableFillBlank: enableFillBlank ?? this.enableFillBlank,
+      shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
+      shuffleOptions: shuffleOptions ?? this.shuffleOptions,
+      showCorrectAfterWrong:
+          showCorrectAfterWrong ?? this.showCorrectAfterWrong,
+      updatedAt: updatedAt ?? this.updatedAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (defaultQuestionCount.present) {
+      map['default_question_count'] = Variable<int>(defaultQuestionCount.value);
+    }
+    if (defaultTimeLimitMinutes.present) {
+      map['default_time_limit_minutes'] = Variable<int>(
+        defaultTimeLimitMinutes.value,
+      );
+    }
+    if (enableMultipleChoice.present) {
+      map['enable_multiple_choice'] = Variable<bool>(
+        enableMultipleChoice.value,
+      );
+    }
+    if (enableTrueFalse.present) {
+      map['enable_true_false'] = Variable<bool>(enableTrueFalse.value);
+    }
+    if (enableFillBlank.present) {
+      map['enable_fill_blank'] = Variable<bool>(enableFillBlank.value);
+    }
+    if (shuffleQuestions.present) {
+      map['shuffle_questions'] = Variable<bool>(shuffleQuestions.value);
+    }
+    if (shuffleOptions.present) {
+      map['shuffle_options'] = Variable<bool>(shuffleOptions.value);
+    }
+    if (showCorrectAfterWrong.present) {
+      map['show_correct_after_wrong'] = Variable<bool>(
+        showCorrectAfterWrong.value,
+      );
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('TestSettingsCompanion(')
+          ..write('id: $id, ')
+          ..write('defaultQuestionCount: $defaultQuestionCount, ')
+          ..write('defaultTimeLimitMinutes: $defaultTimeLimitMinutes, ')
+          ..write('enableMultipleChoice: $enableMultipleChoice, ')
+          ..write('enableTrueFalse: $enableTrueFalse, ')
+          ..write('enableFillBlank: $enableFillBlank, ')
+          ..write('shuffleQuestions: $shuffleQuestions, ')
+          ..write('shuffleOptions: $shuffleOptions, ')
+          ..write('showCorrectAfterWrong: $showCorrectAfterWrong, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -5966,6 +9074,13 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $UserProgressTable userProgress = $UserProgressTable(this);
   late final $AttemptTable attempt = $AttemptTable(this);
   late final $AttemptAnswerTable attemptAnswer = $AttemptAnswerTable(this);
+  late final $GrammarPointsTable grammarPoints = $GrammarPointsTable(this);
+  late final $GrammarExamplesTable grammarExamples = $GrammarExamplesTable(
+    this,
+  );
+  late final $GrammarSrsStateTable grammarSrsState = $GrammarSrsStateTable(
+    this,
+  );
   late final $UserLessonTable userLesson = $UserLessonTable(this);
   late final $UserLessonTermTable userLessonTerm = $UserLessonTermTable(this);
   late final $LearnSessionsTable learnSessions = $LearnSessionsTable(this);
@@ -5973,11 +9088,17 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $TestSessionsTable testSessions = $TestSessionsTable(this);
   late final $TestAnswersTable testAnswers = $TestAnswersTable(this);
   late final $AchievementsTable achievements = $AchievementsTable(this);
+  late final $FlashcardSettingsTable flashcardSettings =
+      $FlashcardSettingsTable(this);
+  late final $LearnSettingsTable learnSettings = $LearnSettingsTable(this);
+  late final $TestSettingsTable testSettings = $TestSettingsTable(this);
   late final LearnDao learnDao = LearnDao(this as AppDatabase);
   late final TestDao testDao = TestDao(this as AppDatabase);
   late final AchievementDao achievementDao = AchievementDao(
     this as AppDatabase,
   );
+  late final SrsDao srsDao = SrsDao(this as AppDatabase);
+  late final GrammarDao grammarDao = GrammarDao(this as AppDatabase);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -5987,6 +9108,9 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     userProgress,
     attempt,
     attemptAnswer,
+    grammarPoints,
+    grammarExamples,
+    grammarSrsState,
     userLesson,
     userLessonTerm,
     learnSessions,
@@ -5994,7 +9118,27 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     testSessions,
     testAnswers,
     achievements,
+    flashcardSettings,
+    learnSettings,
+    testSettings,
   ];
+  @override
+  StreamQueryUpdateRules get streamUpdateRules => const StreamQueryUpdateRules([
+    WritePropagation(
+      on: TableUpdateQuery.onTableName(
+        'grammar_points',
+        limitUpdateKind: UpdateKind.delete,
+      ),
+      result: [TableUpdate('grammar_examples', kind: UpdateKind.delete)],
+    ),
+    WritePropagation(
+      on: TableUpdateQuery.onTableName(
+        'grammar_points',
+        limitUpdateKind: UpdateKind.delete,
+      ),
+      result: [TableUpdate('grammar_srs_state', kind: UpdateKind.delete)],
+    ),
+  ]);
 }
 
 typedef $$SrsStateTableCreateCompanionBuilder =
@@ -6004,6 +9148,7 @@ typedef $$SrsStateTableCreateCompanionBuilder =
       Value<int> box,
       Value<int> repetitions,
       Value<double> ease,
+      Value<int> lastConfidence,
       Value<DateTime?> lastReviewedAt,
       required DateTime nextReviewAt,
     });
@@ -6014,6 +9159,7 @@ typedef $$SrsStateTableUpdateCompanionBuilder =
       Value<int> box,
       Value<int> repetitions,
       Value<double> ease,
+      Value<int> lastConfidence,
       Value<DateTime?> lastReviewedAt,
       Value<DateTime> nextReviewAt,
     });
@@ -6049,6 +9195,11 @@ class $$SrsStateTableFilterComposer
 
   ColumnFilters<double> get ease => $composableBuilder(
     column: $table.ease,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -6097,6 +9248,11 @@ class $$SrsStateTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<DateTime> get lastReviewedAt => $composableBuilder(
     column: $table.lastReviewedAt,
     builder: (column) => ColumnOrderings(column),
@@ -6133,6 +9289,11 @@ class $$SrsStateTableAnnotationComposer
 
   GeneratedColumn<double> get ease =>
       $composableBuilder(column: $table.ease, builder: (column) => column);
+
+  GeneratedColumn<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<DateTime> get lastReviewedAt => $composableBuilder(
     column: $table.lastReviewedAt,
@@ -6181,6 +9342,7 @@ class $$SrsStateTableTableManager
                 Value<int> box = const Value.absent(),
                 Value<int> repetitions = const Value.absent(),
                 Value<double> ease = const Value.absent(),
+                Value<int> lastConfidence = const Value.absent(),
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
                 Value<DateTime> nextReviewAt = const Value.absent(),
               }) => SrsStateCompanion(
@@ -6189,6 +9351,7 @@ class $$SrsStateTableTableManager
                 box: box,
                 repetitions: repetitions,
                 ease: ease,
+                lastConfidence: lastConfidence,
                 lastReviewedAt: lastReviewedAt,
                 nextReviewAt: nextReviewAt,
               ),
@@ -6199,6 +9362,7 @@ class $$SrsStateTableTableManager
                 Value<int> box = const Value.absent(),
                 Value<int> repetitions = const Value.absent(),
                 Value<double> ease = const Value.absent(),
+                Value<int> lastConfidence = const Value.absent(),
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
                 required DateTime nextReviewAt,
               }) => SrsStateCompanion.insert(
@@ -6207,6 +9371,7 @@ class $$SrsStateTableTableManager
                 box: box,
                 repetitions: repetitions,
                 ease: ease,
+                lastConfidence: lastConfidence,
                 lastReviewedAt: lastReviewedAt,
                 nextReviewAt: nextReviewAt,
               ),
@@ -7172,6 +10337,1154 @@ typedef $$AttemptAnswerTableProcessedTableManager =
       (AttemptAnswerData, $$AttemptAnswerTableReferences),
       AttemptAnswerData,
       PrefetchHooks Function({bool attemptId})
+    >;
+typedef $$GrammarPointsTableCreateCompanionBuilder =
+    GrammarPointsCompanion Function({
+      Value<int> id,
+      required String grammarPoint,
+      required String meaning,
+      required String connection,
+      required String explanation,
+      required String jlptLevel,
+      Value<bool> isLearned,
+    });
+typedef $$GrammarPointsTableUpdateCompanionBuilder =
+    GrammarPointsCompanion Function({
+      Value<int> id,
+      Value<String> grammarPoint,
+      Value<String> meaning,
+      Value<String> connection,
+      Value<String> explanation,
+      Value<String> jlptLevel,
+      Value<bool> isLearned,
+    });
+
+final class $$GrammarPointsTableReferences
+    extends BaseReferences<_$AppDatabase, $GrammarPointsTable, GrammarPoint> {
+  $$GrammarPointsTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static MultiTypedResultKey<$GrammarExamplesTable, List<GrammarExample>>
+  _grammarExamplesRefsTable(_$AppDatabase db) => MultiTypedResultKey.fromTable(
+    db.grammarExamples,
+    aliasName: $_aliasNameGenerator(
+      db.grammarPoints.id,
+      db.grammarExamples.grammarId,
+    ),
+  );
+
+  $$GrammarExamplesTableProcessedTableManager get grammarExamplesRefs {
+    final manager = $$GrammarExamplesTableTableManager(
+      $_db,
+      $_db.grammarExamples,
+    ).filter((f) => f.grammarId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(
+      _grammarExamplesRefsTable($_db),
+    );
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+
+  static MultiTypedResultKey<$GrammarSrsStateTable, List<GrammarSrsStateData>>
+  _grammarSrsStateRefsTable(_$AppDatabase db) => MultiTypedResultKey.fromTable(
+    db.grammarSrsState,
+    aliasName: $_aliasNameGenerator(
+      db.grammarPoints.id,
+      db.grammarSrsState.grammarId,
+    ),
+  );
+
+  $$GrammarSrsStateTableProcessedTableManager get grammarSrsStateRefs {
+    final manager = $$GrammarSrsStateTableTableManager(
+      $_db,
+      $_db.grammarSrsState,
+    ).filter((f) => f.grammarId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(
+      _grammarSrsStateRefsTable($_db),
+    );
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$GrammarPointsTableFilterComposer
+    extends Composer<_$AppDatabase, $GrammarPointsTable> {
+  $$GrammarPointsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get grammarPoint => $composableBuilder(
+    column: $table.grammarPoint,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get meaning => $composableBuilder(
+    column: $table.meaning,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get connection => $composableBuilder(
+    column: $table.connection,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get explanation => $composableBuilder(
+    column: $table.explanation,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get jlptLevel => $composableBuilder(
+    column: $table.jlptLevel,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isLearned => $composableBuilder(
+    column: $table.isLearned,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  Expression<bool> grammarExamplesRefs(
+    Expression<bool> Function($$GrammarExamplesTableFilterComposer f) f,
+  ) {
+    final $$GrammarExamplesTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.grammarExamples,
+      getReferencedColumn: (t) => t.grammarId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarExamplesTableFilterComposer(
+            $db: $db,
+            $table: $db.grammarExamples,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+
+  Expression<bool> grammarSrsStateRefs(
+    Expression<bool> Function($$GrammarSrsStateTableFilterComposer f) f,
+  ) {
+    final $$GrammarSrsStateTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.grammarSrsState,
+      getReferencedColumn: (t) => t.grammarId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarSrsStateTableFilterComposer(
+            $db: $db,
+            $table: $db.grammarSrsState,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$GrammarPointsTableOrderingComposer
+    extends Composer<_$AppDatabase, $GrammarPointsTable> {
+  $$GrammarPointsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get grammarPoint => $composableBuilder(
+    column: $table.grammarPoint,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get meaning => $composableBuilder(
+    column: $table.meaning,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get connection => $composableBuilder(
+    column: $table.connection,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get explanation => $composableBuilder(
+    column: $table.explanation,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get jlptLevel => $composableBuilder(
+    column: $table.jlptLevel,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isLearned => $composableBuilder(
+    column: $table.isLearned,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$GrammarPointsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $GrammarPointsTable> {
+  $$GrammarPointsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get grammarPoint => $composableBuilder(
+    column: $table.grammarPoint,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get meaning =>
+      $composableBuilder(column: $table.meaning, builder: (column) => column);
+
+  GeneratedColumn<String> get connection => $composableBuilder(
+    column: $table.connection,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get explanation => $composableBuilder(
+    column: $table.explanation,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get jlptLevel =>
+      $composableBuilder(column: $table.jlptLevel, builder: (column) => column);
+
+  GeneratedColumn<bool> get isLearned =>
+      $composableBuilder(column: $table.isLearned, builder: (column) => column);
+
+  Expression<T> grammarExamplesRefs<T extends Object>(
+    Expression<T> Function($$GrammarExamplesTableAnnotationComposer a) f,
+  ) {
+    final $$GrammarExamplesTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.grammarExamples,
+      getReferencedColumn: (t) => t.grammarId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarExamplesTableAnnotationComposer(
+            $db: $db,
+            $table: $db.grammarExamples,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+
+  Expression<T> grammarSrsStateRefs<T extends Object>(
+    Expression<T> Function($$GrammarSrsStateTableAnnotationComposer a) f,
+  ) {
+    final $$GrammarSrsStateTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.grammarSrsState,
+      getReferencedColumn: (t) => t.grammarId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarSrsStateTableAnnotationComposer(
+            $db: $db,
+            $table: $db.grammarSrsState,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$GrammarPointsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $GrammarPointsTable,
+          GrammarPoint,
+          $$GrammarPointsTableFilterComposer,
+          $$GrammarPointsTableOrderingComposer,
+          $$GrammarPointsTableAnnotationComposer,
+          $$GrammarPointsTableCreateCompanionBuilder,
+          $$GrammarPointsTableUpdateCompanionBuilder,
+          (GrammarPoint, $$GrammarPointsTableReferences),
+          GrammarPoint,
+          PrefetchHooks Function({
+            bool grammarExamplesRefs,
+            bool grammarSrsStateRefs,
+          })
+        > {
+  $$GrammarPointsTableTableManager(_$AppDatabase db, $GrammarPointsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$GrammarPointsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$GrammarPointsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$GrammarPointsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> grammarPoint = const Value.absent(),
+                Value<String> meaning = const Value.absent(),
+                Value<String> connection = const Value.absent(),
+                Value<String> explanation = const Value.absent(),
+                Value<String> jlptLevel = const Value.absent(),
+                Value<bool> isLearned = const Value.absent(),
+              }) => GrammarPointsCompanion(
+                id: id,
+                grammarPoint: grammarPoint,
+                meaning: meaning,
+                connection: connection,
+                explanation: explanation,
+                jlptLevel: jlptLevel,
+                isLearned: isLearned,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String grammarPoint,
+                required String meaning,
+                required String connection,
+                required String explanation,
+                required String jlptLevel,
+                Value<bool> isLearned = const Value.absent(),
+              }) => GrammarPointsCompanion.insert(
+                id: id,
+                grammarPoint: grammarPoint,
+                meaning: meaning,
+                connection: connection,
+                explanation: explanation,
+                jlptLevel: jlptLevel,
+                isLearned: isLearned,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$GrammarPointsTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback:
+              ({grammarExamplesRefs = false, grammarSrsStateRefs = false}) {
+                return PrefetchHooks(
+                  db: db,
+                  explicitlyWatchedTables: [
+                    if (grammarExamplesRefs) db.grammarExamples,
+                    if (grammarSrsStateRefs) db.grammarSrsState,
+                  ],
+                  addJoins: null,
+                  getPrefetchedDataCallback: (items) async {
+                    return [
+                      if (grammarExamplesRefs)
+                        await $_getPrefetchedData<
+                          GrammarPoint,
+                          $GrammarPointsTable,
+                          GrammarExample
+                        >(
+                          currentTable: table,
+                          referencedTable: $$GrammarPointsTableReferences
+                              ._grammarExamplesRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$GrammarPointsTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).grammarExamplesRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.grammarId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
+                      if (grammarSrsStateRefs)
+                        await $_getPrefetchedData<
+                          GrammarPoint,
+                          $GrammarPointsTable,
+                          GrammarSrsStateData
+                        >(
+                          currentTable: table,
+                          referencedTable: $$GrammarPointsTableReferences
+                              ._grammarSrsStateRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$GrammarPointsTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).grammarSrsStateRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.grammarId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
+                    ];
+                  },
+                );
+              },
+        ),
+      );
+}
+
+typedef $$GrammarPointsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $GrammarPointsTable,
+      GrammarPoint,
+      $$GrammarPointsTableFilterComposer,
+      $$GrammarPointsTableOrderingComposer,
+      $$GrammarPointsTableAnnotationComposer,
+      $$GrammarPointsTableCreateCompanionBuilder,
+      $$GrammarPointsTableUpdateCompanionBuilder,
+      (GrammarPoint, $$GrammarPointsTableReferences),
+      GrammarPoint,
+      PrefetchHooks Function({
+        bool grammarExamplesRefs,
+        bool grammarSrsStateRefs,
+      })
+    >;
+typedef $$GrammarExamplesTableCreateCompanionBuilder =
+    GrammarExamplesCompanion Function({
+      Value<int> id,
+      required int grammarId,
+      required String japanese,
+      required String translation,
+      Value<String?> audioUrl,
+    });
+typedef $$GrammarExamplesTableUpdateCompanionBuilder =
+    GrammarExamplesCompanion Function({
+      Value<int> id,
+      Value<int> grammarId,
+      Value<String> japanese,
+      Value<String> translation,
+      Value<String?> audioUrl,
+    });
+
+final class $$GrammarExamplesTableReferences
+    extends
+        BaseReferences<_$AppDatabase, $GrammarExamplesTable, GrammarExample> {
+  $$GrammarExamplesTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $GrammarPointsTable _grammarIdTable(_$AppDatabase db) =>
+      db.grammarPoints.createAlias(
+        $_aliasNameGenerator(db.grammarExamples.grammarId, db.grammarPoints.id),
+      );
+
+  $$GrammarPointsTableProcessedTableManager get grammarId {
+    final $_column = $_itemColumn<int>('grammar_id')!;
+
+    final manager = $$GrammarPointsTableTableManager(
+      $_db,
+      $_db.grammarPoints,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_grammarIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$GrammarExamplesTableFilterComposer
+    extends Composer<_$AppDatabase, $GrammarExamplesTable> {
+  $$GrammarExamplesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get japanese => $composableBuilder(
+    column: $table.japanese,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get translation => $composableBuilder(
+    column: $table.translation,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get audioUrl => $composableBuilder(
+    column: $table.audioUrl,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$GrammarPointsTableFilterComposer get grammarId {
+    final $$GrammarPointsTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarId,
+      referencedTable: $db.grammarPoints,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointsTableFilterComposer(
+            $db: $db,
+            $table: $db.grammarPoints,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarExamplesTableOrderingComposer
+    extends Composer<_$AppDatabase, $GrammarExamplesTable> {
+  $$GrammarExamplesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get japanese => $composableBuilder(
+    column: $table.japanese,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get translation => $composableBuilder(
+    column: $table.translation,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get audioUrl => $composableBuilder(
+    column: $table.audioUrl,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$GrammarPointsTableOrderingComposer get grammarId {
+    final $$GrammarPointsTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarId,
+      referencedTable: $db.grammarPoints,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointsTableOrderingComposer(
+            $db: $db,
+            $table: $db.grammarPoints,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarExamplesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $GrammarExamplesTable> {
+  $$GrammarExamplesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get japanese =>
+      $composableBuilder(column: $table.japanese, builder: (column) => column);
+
+  GeneratedColumn<String> get translation => $composableBuilder(
+    column: $table.translation,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get audioUrl =>
+      $composableBuilder(column: $table.audioUrl, builder: (column) => column);
+
+  $$GrammarPointsTableAnnotationComposer get grammarId {
+    final $$GrammarPointsTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarId,
+      referencedTable: $db.grammarPoints,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointsTableAnnotationComposer(
+            $db: $db,
+            $table: $db.grammarPoints,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarExamplesTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $GrammarExamplesTable,
+          GrammarExample,
+          $$GrammarExamplesTableFilterComposer,
+          $$GrammarExamplesTableOrderingComposer,
+          $$GrammarExamplesTableAnnotationComposer,
+          $$GrammarExamplesTableCreateCompanionBuilder,
+          $$GrammarExamplesTableUpdateCompanionBuilder,
+          (GrammarExample, $$GrammarExamplesTableReferences),
+          GrammarExample,
+          PrefetchHooks Function({bool grammarId})
+        > {
+  $$GrammarExamplesTableTableManager(
+    _$AppDatabase db,
+    $GrammarExamplesTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$GrammarExamplesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$GrammarExamplesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$GrammarExamplesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> grammarId = const Value.absent(),
+                Value<String> japanese = const Value.absent(),
+                Value<String> translation = const Value.absent(),
+                Value<String?> audioUrl = const Value.absent(),
+              }) => GrammarExamplesCompanion(
+                id: id,
+                grammarId: grammarId,
+                japanese: japanese,
+                translation: translation,
+                audioUrl: audioUrl,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int grammarId,
+                required String japanese,
+                required String translation,
+                Value<String?> audioUrl = const Value.absent(),
+              }) => GrammarExamplesCompanion.insert(
+                id: id,
+                grammarId: grammarId,
+                japanese: japanese,
+                translation: translation,
+                audioUrl: audioUrl,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$GrammarExamplesTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({grammarId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (grammarId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.grammarId,
+                                referencedTable:
+                                    $$GrammarExamplesTableReferences
+                                        ._grammarIdTable(db),
+                                referencedColumn:
+                                    $$GrammarExamplesTableReferences
+                                        ._grammarIdTable(db)
+                                        .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$GrammarExamplesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $GrammarExamplesTable,
+      GrammarExample,
+      $$GrammarExamplesTableFilterComposer,
+      $$GrammarExamplesTableOrderingComposer,
+      $$GrammarExamplesTableAnnotationComposer,
+      $$GrammarExamplesTableCreateCompanionBuilder,
+      $$GrammarExamplesTableUpdateCompanionBuilder,
+      (GrammarExample, $$GrammarExamplesTableReferences),
+      GrammarExample,
+      PrefetchHooks Function({bool grammarId})
+    >;
+typedef $$GrammarSrsStateTableCreateCompanionBuilder =
+    GrammarSrsStateCompanion Function({
+      Value<int> id,
+      required int grammarId,
+      Value<int> streak,
+      Value<double> ease,
+      required DateTime nextReviewAt,
+      Value<DateTime?> lastReviewedAt,
+      Value<int> ghostReviewsDue,
+    });
+typedef $$GrammarSrsStateTableUpdateCompanionBuilder =
+    GrammarSrsStateCompanion Function({
+      Value<int> id,
+      Value<int> grammarId,
+      Value<int> streak,
+      Value<double> ease,
+      Value<DateTime> nextReviewAt,
+      Value<DateTime?> lastReviewedAt,
+      Value<int> ghostReviewsDue,
+    });
+
+final class $$GrammarSrsStateTableReferences
+    extends
+        BaseReferences<
+          _$AppDatabase,
+          $GrammarSrsStateTable,
+          GrammarSrsStateData
+        > {
+  $$GrammarSrsStateTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $GrammarPointsTable _grammarIdTable(_$AppDatabase db) =>
+      db.grammarPoints.createAlias(
+        $_aliasNameGenerator(db.grammarSrsState.grammarId, db.grammarPoints.id),
+      );
+
+  $$GrammarPointsTableProcessedTableManager get grammarId {
+    final $_column = $_itemColumn<int>('grammar_id')!;
+
+    final manager = $$GrammarPointsTableTableManager(
+      $_db,
+      $_db.grammarPoints,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_grammarIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$GrammarSrsStateTableFilterComposer
+    extends Composer<_$AppDatabase, $GrammarSrsStateTable> {
+  $$GrammarSrsStateTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get streak => $composableBuilder(
+    column: $table.streak,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get ease => $composableBuilder(
+    column: $table.ease,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get ghostReviewsDue => $composableBuilder(
+    column: $table.ghostReviewsDue,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$GrammarPointsTableFilterComposer get grammarId {
+    final $$GrammarPointsTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarId,
+      referencedTable: $db.grammarPoints,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointsTableFilterComposer(
+            $db: $db,
+            $table: $db.grammarPoints,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarSrsStateTableOrderingComposer
+    extends Composer<_$AppDatabase, $GrammarSrsStateTable> {
+  $$GrammarSrsStateTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get streak => $composableBuilder(
+    column: $table.streak,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get ease => $composableBuilder(
+    column: $table.ease,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get ghostReviewsDue => $composableBuilder(
+    column: $table.ghostReviewsDue,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$GrammarPointsTableOrderingComposer get grammarId {
+    final $$GrammarPointsTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarId,
+      referencedTable: $db.grammarPoints,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointsTableOrderingComposer(
+            $db: $db,
+            $table: $db.grammarPoints,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarSrsStateTableAnnotationComposer
+    extends Composer<_$AppDatabase, $GrammarSrsStateTable> {
+  $$GrammarSrsStateTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get streak =>
+      $composableBuilder(column: $table.streak, builder: (column) => column);
+
+  GeneratedColumn<double> get ease =>
+      $composableBuilder(column: $table.ease, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get ghostReviewsDue => $composableBuilder(
+    column: $table.ghostReviewsDue,
+    builder: (column) => column,
+  );
+
+  $$GrammarPointsTableAnnotationComposer get grammarId {
+    final $$GrammarPointsTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarId,
+      referencedTable: $db.grammarPoints,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointsTableAnnotationComposer(
+            $db: $db,
+            $table: $db.grammarPoints,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarSrsStateTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $GrammarSrsStateTable,
+          GrammarSrsStateData,
+          $$GrammarSrsStateTableFilterComposer,
+          $$GrammarSrsStateTableOrderingComposer,
+          $$GrammarSrsStateTableAnnotationComposer,
+          $$GrammarSrsStateTableCreateCompanionBuilder,
+          $$GrammarSrsStateTableUpdateCompanionBuilder,
+          (GrammarSrsStateData, $$GrammarSrsStateTableReferences),
+          GrammarSrsStateData,
+          PrefetchHooks Function({bool grammarId})
+        > {
+  $$GrammarSrsStateTableTableManager(
+    _$AppDatabase db,
+    $GrammarSrsStateTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$GrammarSrsStateTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$GrammarSrsStateTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$GrammarSrsStateTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> grammarId = const Value.absent(),
+                Value<int> streak = const Value.absent(),
+                Value<double> ease = const Value.absent(),
+                Value<DateTime> nextReviewAt = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+                Value<int> ghostReviewsDue = const Value.absent(),
+              }) => GrammarSrsStateCompanion(
+                id: id,
+                grammarId: grammarId,
+                streak: streak,
+                ease: ease,
+                nextReviewAt: nextReviewAt,
+                lastReviewedAt: lastReviewedAt,
+                ghostReviewsDue: ghostReviewsDue,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int grammarId,
+                Value<int> streak = const Value.absent(),
+                Value<double> ease = const Value.absent(),
+                required DateTime nextReviewAt,
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+                Value<int> ghostReviewsDue = const Value.absent(),
+              }) => GrammarSrsStateCompanion.insert(
+                id: id,
+                grammarId: grammarId,
+                streak: streak,
+                ease: ease,
+                nextReviewAt: nextReviewAt,
+                lastReviewedAt: lastReviewedAt,
+                ghostReviewsDue: ghostReviewsDue,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$GrammarSrsStateTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({grammarId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (grammarId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.grammarId,
+                                referencedTable:
+                                    $$GrammarSrsStateTableReferences
+                                        ._grammarIdTable(db),
+                                referencedColumn:
+                                    $$GrammarSrsStateTableReferences
+                                        ._grammarIdTable(db)
+                                        .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$GrammarSrsStateTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $GrammarSrsStateTable,
+      GrammarSrsStateData,
+      $$GrammarSrsStateTableFilterComposer,
+      $$GrammarSrsStateTableOrderingComposer,
+      $$GrammarSrsStateTableAnnotationComposer,
+      $$GrammarSrsStateTableCreateCompanionBuilder,
+      $$GrammarSrsStateTableUpdateCompanionBuilder,
+      (GrammarSrsStateData, $$GrammarSrsStateTableReferences),
+      GrammarSrsStateData,
+      PrefetchHooks Function({bool grammarId})
     >;
 typedef $$UserLessonTableCreateCompanionBuilder =
     UserLessonCompanion Function({
@@ -9896,6 +14209,850 @@ typedef $$AchievementsTableProcessedTableManager =
       Achievement,
       PrefetchHooks Function()
     >;
+typedef $$FlashcardSettingsTableCreateCompanionBuilder =
+    FlashcardSettingsCompanion Function({
+      Value<int> id,
+      Value<bool> showTermFirst,
+      Value<bool> autoPlayAudio,
+      Value<bool> shuffleCards,
+      Value<bool> showStarredOnly,
+      Value<DateTime?> updatedAt,
+    });
+typedef $$FlashcardSettingsTableUpdateCompanionBuilder =
+    FlashcardSettingsCompanion Function({
+      Value<int> id,
+      Value<bool> showTermFirst,
+      Value<bool> autoPlayAudio,
+      Value<bool> shuffleCards,
+      Value<bool> showStarredOnly,
+      Value<DateTime?> updatedAt,
+    });
+
+class $$FlashcardSettingsTableFilterComposer
+    extends Composer<_$AppDatabase, $FlashcardSettingsTable> {
+  $$FlashcardSettingsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get showTermFirst => $composableBuilder(
+    column: $table.showTermFirst,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get autoPlayAudio => $composableBuilder(
+    column: $table.autoPlayAudio,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get shuffleCards => $composableBuilder(
+    column: $table.shuffleCards,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get showStarredOnly => $composableBuilder(
+    column: $table.showStarredOnly,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$FlashcardSettingsTableOrderingComposer
+    extends Composer<_$AppDatabase, $FlashcardSettingsTable> {
+  $$FlashcardSettingsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get showTermFirst => $composableBuilder(
+    column: $table.showTermFirst,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get autoPlayAudio => $composableBuilder(
+    column: $table.autoPlayAudio,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get shuffleCards => $composableBuilder(
+    column: $table.shuffleCards,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get showStarredOnly => $composableBuilder(
+    column: $table.showStarredOnly,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$FlashcardSettingsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $FlashcardSettingsTable> {
+  $$FlashcardSettingsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<bool> get showTermFirst => $composableBuilder(
+    column: $table.showTermFirst,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get autoPlayAudio => $composableBuilder(
+    column: $table.autoPlayAudio,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get shuffleCards => $composableBuilder(
+    column: $table.shuffleCards,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get showStarredOnly => $composableBuilder(
+    column: $table.showStarredOnly,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$FlashcardSettingsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $FlashcardSettingsTable,
+          FlashcardSetting,
+          $$FlashcardSettingsTableFilterComposer,
+          $$FlashcardSettingsTableOrderingComposer,
+          $$FlashcardSettingsTableAnnotationComposer,
+          $$FlashcardSettingsTableCreateCompanionBuilder,
+          $$FlashcardSettingsTableUpdateCompanionBuilder,
+          (
+            FlashcardSetting,
+            BaseReferences<
+              _$AppDatabase,
+              $FlashcardSettingsTable,
+              FlashcardSetting
+            >,
+          ),
+          FlashcardSetting,
+          PrefetchHooks Function()
+        > {
+  $$FlashcardSettingsTableTableManager(
+    _$AppDatabase db,
+    $FlashcardSettingsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$FlashcardSettingsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$FlashcardSettingsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$FlashcardSettingsTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<bool> showTermFirst = const Value.absent(),
+                Value<bool> autoPlayAudio = const Value.absent(),
+                Value<bool> shuffleCards = const Value.absent(),
+                Value<bool> showStarredOnly = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => FlashcardSettingsCompanion(
+                id: id,
+                showTermFirst: showTermFirst,
+                autoPlayAudio: autoPlayAudio,
+                shuffleCards: shuffleCards,
+                showStarredOnly: showStarredOnly,
+                updatedAt: updatedAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<bool> showTermFirst = const Value.absent(),
+                Value<bool> autoPlayAudio = const Value.absent(),
+                Value<bool> shuffleCards = const Value.absent(),
+                Value<bool> showStarredOnly = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => FlashcardSettingsCompanion.insert(
+                id: id,
+                showTermFirst: showTermFirst,
+                autoPlayAudio: autoPlayAudio,
+                shuffleCards: shuffleCards,
+                showStarredOnly: showStarredOnly,
+                updatedAt: updatedAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$FlashcardSettingsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $FlashcardSettingsTable,
+      FlashcardSetting,
+      $$FlashcardSettingsTableFilterComposer,
+      $$FlashcardSettingsTableOrderingComposer,
+      $$FlashcardSettingsTableAnnotationComposer,
+      $$FlashcardSettingsTableCreateCompanionBuilder,
+      $$FlashcardSettingsTableUpdateCompanionBuilder,
+      (
+        FlashcardSetting,
+        BaseReferences<
+          _$AppDatabase,
+          $FlashcardSettingsTable,
+          FlashcardSetting
+        >,
+      ),
+      FlashcardSetting,
+      PrefetchHooks Function()
+    >;
+typedef $$LearnSettingsTableCreateCompanionBuilder =
+    LearnSettingsCompanion Function({
+      Value<int> id,
+      Value<int> defaultQuestionCount,
+      Value<bool> enableMultipleChoice,
+      Value<bool> enableTrueFalse,
+      Value<bool> enableFillBlank,
+      Value<bool> enableAudioMatch,
+      Value<bool> shuffleQuestions,
+      Value<bool> enableHints,
+      Value<bool> showCorrectAnswer,
+      Value<DateTime?> updatedAt,
+    });
+typedef $$LearnSettingsTableUpdateCompanionBuilder =
+    LearnSettingsCompanion Function({
+      Value<int> id,
+      Value<int> defaultQuestionCount,
+      Value<bool> enableMultipleChoice,
+      Value<bool> enableTrueFalse,
+      Value<bool> enableFillBlank,
+      Value<bool> enableAudioMatch,
+      Value<bool> shuffleQuestions,
+      Value<bool> enableHints,
+      Value<bool> showCorrectAnswer,
+      Value<DateTime?> updatedAt,
+    });
+
+class $$LearnSettingsTableFilterComposer
+    extends Composer<_$AppDatabase, $LearnSettingsTable> {
+  $$LearnSettingsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get defaultQuestionCount => $composableBuilder(
+    column: $table.defaultQuestionCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableMultipleChoice => $composableBuilder(
+    column: $table.enableMultipleChoice,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableTrueFalse => $composableBuilder(
+    column: $table.enableTrueFalse,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableFillBlank => $composableBuilder(
+    column: $table.enableFillBlank,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableAudioMatch => $composableBuilder(
+    column: $table.enableAudioMatch,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get shuffleQuestions => $composableBuilder(
+    column: $table.shuffleQuestions,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableHints => $composableBuilder(
+    column: $table.enableHints,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get showCorrectAnswer => $composableBuilder(
+    column: $table.showCorrectAnswer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$LearnSettingsTableOrderingComposer
+    extends Composer<_$AppDatabase, $LearnSettingsTable> {
+  $$LearnSettingsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get defaultQuestionCount => $composableBuilder(
+    column: $table.defaultQuestionCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableMultipleChoice => $composableBuilder(
+    column: $table.enableMultipleChoice,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableTrueFalse => $composableBuilder(
+    column: $table.enableTrueFalse,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableFillBlank => $composableBuilder(
+    column: $table.enableFillBlank,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableAudioMatch => $composableBuilder(
+    column: $table.enableAudioMatch,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get shuffleQuestions => $composableBuilder(
+    column: $table.shuffleQuestions,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableHints => $composableBuilder(
+    column: $table.enableHints,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get showCorrectAnswer => $composableBuilder(
+    column: $table.showCorrectAnswer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$LearnSettingsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $LearnSettingsTable> {
+  $$LearnSettingsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get defaultQuestionCount => $composableBuilder(
+    column: $table.defaultQuestionCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableMultipleChoice => $composableBuilder(
+    column: $table.enableMultipleChoice,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableTrueFalse => $composableBuilder(
+    column: $table.enableTrueFalse,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableFillBlank => $composableBuilder(
+    column: $table.enableFillBlank,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableAudioMatch => $composableBuilder(
+    column: $table.enableAudioMatch,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get shuffleQuestions => $composableBuilder(
+    column: $table.shuffleQuestions,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableHints => $composableBuilder(
+    column: $table.enableHints,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get showCorrectAnswer => $composableBuilder(
+    column: $table.showCorrectAnswer,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$LearnSettingsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $LearnSettingsTable,
+          LearnSetting,
+          $$LearnSettingsTableFilterComposer,
+          $$LearnSettingsTableOrderingComposer,
+          $$LearnSettingsTableAnnotationComposer,
+          $$LearnSettingsTableCreateCompanionBuilder,
+          $$LearnSettingsTableUpdateCompanionBuilder,
+          (
+            LearnSetting,
+            BaseReferences<_$AppDatabase, $LearnSettingsTable, LearnSetting>,
+          ),
+          LearnSetting,
+          PrefetchHooks Function()
+        > {
+  $$LearnSettingsTableTableManager(_$AppDatabase db, $LearnSettingsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$LearnSettingsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$LearnSettingsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$LearnSettingsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> defaultQuestionCount = const Value.absent(),
+                Value<bool> enableMultipleChoice = const Value.absent(),
+                Value<bool> enableTrueFalse = const Value.absent(),
+                Value<bool> enableFillBlank = const Value.absent(),
+                Value<bool> enableAudioMatch = const Value.absent(),
+                Value<bool> shuffleQuestions = const Value.absent(),
+                Value<bool> enableHints = const Value.absent(),
+                Value<bool> showCorrectAnswer = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => LearnSettingsCompanion(
+                id: id,
+                defaultQuestionCount: defaultQuestionCount,
+                enableMultipleChoice: enableMultipleChoice,
+                enableTrueFalse: enableTrueFalse,
+                enableFillBlank: enableFillBlank,
+                enableAudioMatch: enableAudioMatch,
+                shuffleQuestions: shuffleQuestions,
+                enableHints: enableHints,
+                showCorrectAnswer: showCorrectAnswer,
+                updatedAt: updatedAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> defaultQuestionCount = const Value.absent(),
+                Value<bool> enableMultipleChoice = const Value.absent(),
+                Value<bool> enableTrueFalse = const Value.absent(),
+                Value<bool> enableFillBlank = const Value.absent(),
+                Value<bool> enableAudioMatch = const Value.absent(),
+                Value<bool> shuffleQuestions = const Value.absent(),
+                Value<bool> enableHints = const Value.absent(),
+                Value<bool> showCorrectAnswer = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => LearnSettingsCompanion.insert(
+                id: id,
+                defaultQuestionCount: defaultQuestionCount,
+                enableMultipleChoice: enableMultipleChoice,
+                enableTrueFalse: enableTrueFalse,
+                enableFillBlank: enableFillBlank,
+                enableAudioMatch: enableAudioMatch,
+                shuffleQuestions: shuffleQuestions,
+                enableHints: enableHints,
+                showCorrectAnswer: showCorrectAnswer,
+                updatedAt: updatedAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$LearnSettingsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $LearnSettingsTable,
+      LearnSetting,
+      $$LearnSettingsTableFilterComposer,
+      $$LearnSettingsTableOrderingComposer,
+      $$LearnSettingsTableAnnotationComposer,
+      $$LearnSettingsTableCreateCompanionBuilder,
+      $$LearnSettingsTableUpdateCompanionBuilder,
+      (
+        LearnSetting,
+        BaseReferences<_$AppDatabase, $LearnSettingsTable, LearnSetting>,
+      ),
+      LearnSetting,
+      PrefetchHooks Function()
+    >;
+typedef $$TestSettingsTableCreateCompanionBuilder =
+    TestSettingsCompanion Function({
+      Value<int> id,
+      Value<int> defaultQuestionCount,
+      Value<int?> defaultTimeLimitMinutes,
+      Value<bool> enableMultipleChoice,
+      Value<bool> enableTrueFalse,
+      Value<bool> enableFillBlank,
+      Value<bool> shuffleQuestions,
+      Value<bool> shuffleOptions,
+      Value<bool> showCorrectAfterWrong,
+      Value<DateTime?> updatedAt,
+    });
+typedef $$TestSettingsTableUpdateCompanionBuilder =
+    TestSettingsCompanion Function({
+      Value<int> id,
+      Value<int> defaultQuestionCount,
+      Value<int?> defaultTimeLimitMinutes,
+      Value<bool> enableMultipleChoice,
+      Value<bool> enableTrueFalse,
+      Value<bool> enableFillBlank,
+      Value<bool> shuffleQuestions,
+      Value<bool> shuffleOptions,
+      Value<bool> showCorrectAfterWrong,
+      Value<DateTime?> updatedAt,
+    });
+
+class $$TestSettingsTableFilterComposer
+    extends Composer<_$AppDatabase, $TestSettingsTable> {
+  $$TestSettingsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get defaultQuestionCount => $composableBuilder(
+    column: $table.defaultQuestionCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get defaultTimeLimitMinutes => $composableBuilder(
+    column: $table.defaultTimeLimitMinutes,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableMultipleChoice => $composableBuilder(
+    column: $table.enableMultipleChoice,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableTrueFalse => $composableBuilder(
+    column: $table.enableTrueFalse,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get enableFillBlank => $composableBuilder(
+    column: $table.enableFillBlank,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get shuffleQuestions => $composableBuilder(
+    column: $table.shuffleQuestions,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get shuffleOptions => $composableBuilder(
+    column: $table.shuffleOptions,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get showCorrectAfterWrong => $composableBuilder(
+    column: $table.showCorrectAfterWrong,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$TestSettingsTableOrderingComposer
+    extends Composer<_$AppDatabase, $TestSettingsTable> {
+  $$TestSettingsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get defaultQuestionCount => $composableBuilder(
+    column: $table.defaultQuestionCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get defaultTimeLimitMinutes => $composableBuilder(
+    column: $table.defaultTimeLimitMinutes,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableMultipleChoice => $composableBuilder(
+    column: $table.enableMultipleChoice,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableTrueFalse => $composableBuilder(
+    column: $table.enableTrueFalse,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get enableFillBlank => $composableBuilder(
+    column: $table.enableFillBlank,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get shuffleQuestions => $composableBuilder(
+    column: $table.shuffleQuestions,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get shuffleOptions => $composableBuilder(
+    column: $table.shuffleOptions,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get showCorrectAfterWrong => $composableBuilder(
+    column: $table.showCorrectAfterWrong,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$TestSettingsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $TestSettingsTable> {
+  $$TestSettingsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get defaultQuestionCount => $composableBuilder(
+    column: $table.defaultQuestionCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get defaultTimeLimitMinutes => $composableBuilder(
+    column: $table.defaultTimeLimitMinutes,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableMultipleChoice => $composableBuilder(
+    column: $table.enableMultipleChoice,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableTrueFalse => $composableBuilder(
+    column: $table.enableTrueFalse,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get enableFillBlank => $composableBuilder(
+    column: $table.enableFillBlank,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get shuffleQuestions => $composableBuilder(
+    column: $table.shuffleQuestions,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get shuffleOptions => $composableBuilder(
+    column: $table.shuffleOptions,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get showCorrectAfterWrong => $composableBuilder(
+    column: $table.showCorrectAfterWrong,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$TestSettingsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $TestSettingsTable,
+          TestSetting,
+          $$TestSettingsTableFilterComposer,
+          $$TestSettingsTableOrderingComposer,
+          $$TestSettingsTableAnnotationComposer,
+          $$TestSettingsTableCreateCompanionBuilder,
+          $$TestSettingsTableUpdateCompanionBuilder,
+          (
+            TestSetting,
+            BaseReferences<_$AppDatabase, $TestSettingsTable, TestSetting>,
+          ),
+          TestSetting,
+          PrefetchHooks Function()
+        > {
+  $$TestSettingsTableTableManager(_$AppDatabase db, $TestSettingsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$TestSettingsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$TestSettingsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$TestSettingsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> defaultQuestionCount = const Value.absent(),
+                Value<int?> defaultTimeLimitMinutes = const Value.absent(),
+                Value<bool> enableMultipleChoice = const Value.absent(),
+                Value<bool> enableTrueFalse = const Value.absent(),
+                Value<bool> enableFillBlank = const Value.absent(),
+                Value<bool> shuffleQuestions = const Value.absent(),
+                Value<bool> shuffleOptions = const Value.absent(),
+                Value<bool> showCorrectAfterWrong = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => TestSettingsCompanion(
+                id: id,
+                defaultQuestionCount: defaultQuestionCount,
+                defaultTimeLimitMinutes: defaultTimeLimitMinutes,
+                enableMultipleChoice: enableMultipleChoice,
+                enableTrueFalse: enableTrueFalse,
+                enableFillBlank: enableFillBlank,
+                shuffleQuestions: shuffleQuestions,
+                shuffleOptions: shuffleOptions,
+                showCorrectAfterWrong: showCorrectAfterWrong,
+                updatedAt: updatedAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> defaultQuestionCount = const Value.absent(),
+                Value<int?> defaultTimeLimitMinutes = const Value.absent(),
+                Value<bool> enableMultipleChoice = const Value.absent(),
+                Value<bool> enableTrueFalse = const Value.absent(),
+                Value<bool> enableFillBlank = const Value.absent(),
+                Value<bool> shuffleQuestions = const Value.absent(),
+                Value<bool> shuffleOptions = const Value.absent(),
+                Value<bool> showCorrectAfterWrong = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+              }) => TestSettingsCompanion.insert(
+                id: id,
+                defaultQuestionCount: defaultQuestionCount,
+                defaultTimeLimitMinutes: defaultTimeLimitMinutes,
+                enableMultipleChoice: enableMultipleChoice,
+                enableTrueFalse: enableTrueFalse,
+                enableFillBlank: enableFillBlank,
+                shuffleQuestions: shuffleQuestions,
+                shuffleOptions: shuffleOptions,
+                showCorrectAfterWrong: showCorrectAfterWrong,
+                updatedAt: updatedAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$TestSettingsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $TestSettingsTable,
+      TestSetting,
+      $$TestSettingsTableFilterComposer,
+      $$TestSettingsTableOrderingComposer,
+      $$TestSettingsTableAnnotationComposer,
+      $$TestSettingsTableCreateCompanionBuilder,
+      $$TestSettingsTableUpdateCompanionBuilder,
+      (
+        TestSetting,
+        BaseReferences<_$AppDatabase, $TestSettingsTable, TestSetting>,
+      ),
+      TestSetting,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -9908,6 +15065,12 @@ class $AppDatabaseManager {
       $$AttemptTableTableManager(_db, _db.attempt);
   $$AttemptAnswerTableTableManager get attemptAnswer =>
       $$AttemptAnswerTableTableManager(_db, _db.attemptAnswer);
+  $$GrammarPointsTableTableManager get grammarPoints =>
+      $$GrammarPointsTableTableManager(_db, _db.grammarPoints);
+  $$GrammarExamplesTableTableManager get grammarExamples =>
+      $$GrammarExamplesTableTableManager(_db, _db.grammarExamples);
+  $$GrammarSrsStateTableTableManager get grammarSrsState =>
+      $$GrammarSrsStateTableTableManager(_db, _db.grammarSrsState);
   $$UserLessonTableTableManager get userLesson =>
       $$UserLessonTableTableManager(_db, _db.userLesson);
   $$UserLessonTermTableTableManager get userLessonTerm =>
@@ -9922,4 +15085,10 @@ class $AppDatabaseManager {
       $$TestAnswersTableTableManager(_db, _db.testAnswers);
   $$AchievementsTableTableManager get achievements =>
       $$AchievementsTableTableManager(_db, _db.achievements);
+  $$FlashcardSettingsTableTableManager get flashcardSettings =>
+      $$FlashcardSettingsTableTableManager(_db, _db.flashcardSettings);
+  $$LearnSettingsTableTableManager get learnSettings =>
+      $$LearnSettingsTableTableManager(_db, _db.learnSettings);
+  $$TestSettingsTableTableManager get testSettings =>
+      $$TestSettingsTableTableManager(_db, _db.testSettings);
 }

@@ -8,6 +8,9 @@ import 'package:jpstudy/features/lesson/lesson_practice_screen.dart';
 import 'package:jpstudy/features/progress/progress_screen.dart';
 import 'package:jpstudy/features/vocab/vocab_screen.dart';
 import 'package:jpstudy/features/games/match_game/match_game_screen.dart';
+import 'package:jpstudy/features/learn/integration/learn_mode_integration.dart';
+import 'package:jpstudy/features/test/integration/test_mode_integration.dart';
+import 'package:jpstudy/features/test/screens/test_history_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -62,6 +65,42 @@ class AppRouter {
       GoRoute(
         path: '/match',
         builder: (context, state) => const MatchGameScreen(),
+      ),
+      // Enhanced Learn Mode with config screen
+      GoRoute(
+        path: '/lesson/:id/learn-enhanced',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '');
+          final title = state.uri.queryParameters['title'] ?? 'Lesson';
+          return LearnModeIntegration(
+            lessonId: id ?? 1,
+            lessonTitle: title,
+          );
+        },
+      ),
+      // Enhanced Test Mode with config screen  
+      GoRoute(
+        path: '/lesson/:id/test-enhanced',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '');
+          final title = state.uri.queryParameters['title'] ?? 'Lesson';
+          return TestModeIntegration(
+            lessonId: id ?? 1,
+            lessonTitle: title,
+          );
+        },
+      ),
+      // Test History Screen
+      GoRoute(
+        path: '/lesson/:id/test-history',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '');
+          final title = state.uri.queryParameters['title'] ?? 'Lesson';
+          return TestHistoryScreen(
+            lessonId: id ?? 1,
+            lessonTitle: title,
+          );
+        },
       ),
     ],
   );

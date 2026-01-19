@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'package:jpstudy/core/services/audio_service.dart';
+
 import '../../../data/models/vocab_item.dart';
 import '../../learn/models/question.dart';
 import '../../learn/models/question_type.dart';
@@ -151,7 +153,25 @@ class _TestScreenState extends ConsumerState<TestScreen> {
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
-              child: _buildQuestionWidget(question),
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (child, animation) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: SlideTransition(
+                      position: Tween<Offset>(
+                        begin: const Offset(0.0, 0.1),
+                        end: Offset.zero,
+                      ).animate(animation),
+                      child: child,
+                    ),
+                  );
+                },
+                child: KeyedSubtree(
+                  key: ValueKey(question.id),
+                  child: _buildQuestionWidget(question),
+                ),
+              ),
             ),
           ),
 
@@ -333,6 +353,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       _showResult = true;
       _isCorrect = _session.currentQuestion!.checkAnswer(answer);
     });
+
+    if (widget.config.showCorrectAfterWrong) {
+      AudioService.instance.play(_isCorrect ? 'success' : 'error');
+    }
   }
 
   void _handleTrueFalseSelect(bool answer) {
@@ -342,6 +366,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       _showResult = true;
       _isCorrect = _session.currentQuestion!.checkAnswer(answer ? 'true' : 'false');
     });
+
+    if (widget.config.showCorrectAfterWrong) {
+      AudioService.instance.play(_isCorrect ? 'success' : 'error');
+    }
   }
 
   void _handleFillBlankSubmit(String answer) {
@@ -350,6 +378,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       _showResult = true;
       _isCorrect = _session.currentQuestion!.checkAnswer(answer);
     });
+
+    if (widget.config.showCorrectAfterWrong) {
+      AudioService.instance.play(_isCorrect ? 'success' : 'error');
+    }
   }
 
   void _goToQuestion(int index) {
@@ -422,6 +454,9 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
     // Save to database
     await ref.read(testHistoryServiceProvider).saveTest(_session);
+
+    // Play completion sound
+    AudioService.instance.play('levelup');
 
     if (!mounted) return;
 

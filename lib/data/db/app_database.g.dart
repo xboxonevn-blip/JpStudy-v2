@@ -3036,6 +3036,2929 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
   }
 }
 
+class $LearnSessionsTable extends LearnSessions
+    with TableInfo<$LearnSessionsTable, LearnSession> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $LearnSessionsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _sessionIdMeta = const VerificationMeta(
+    'sessionId',
+  );
+  @override
+  late final GeneratedColumn<String> sessionId = GeneratedColumn<String>(
+    'session_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'),
+  );
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
+  @override
+  late final GeneratedColumn<int> lessonId = GeneratedColumn<int>(
+    'lesson_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _startedAtMeta = const VerificationMeta(
+    'startedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> startedAt = GeneratedColumn<DateTime>(
+    'started_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _completedAtMeta = const VerificationMeta(
+    'completedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> completedAt = GeneratedColumn<DateTime>(
+    'completed_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _totalQuestionsMeta = const VerificationMeta(
+    'totalQuestions',
+  );
+  @override
+  late final GeneratedColumn<int> totalQuestions = GeneratedColumn<int>(
+    'total_questions',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _correctCountMeta = const VerificationMeta(
+    'correctCount',
+  );
+  @override
+  late final GeneratedColumn<int> correctCount = GeneratedColumn<int>(
+    'correct_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _wrongCountMeta = const VerificationMeta(
+    'wrongCount',
+  );
+  @override
+  late final GeneratedColumn<int> wrongCount = GeneratedColumn<int>(
+    'wrong_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _currentRoundMeta = const VerificationMeta(
+    'currentRound',
+  );
+  @override
+  late final GeneratedColumn<int> currentRound = GeneratedColumn<int>(
+    'current_round',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _xpEarnedMeta = const VerificationMeta(
+    'xpEarned',
+  );
+  @override
+  late final GeneratedColumn<int> xpEarned = GeneratedColumn<int>(
+    'xp_earned',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _isPerfectMeta = const VerificationMeta(
+    'isPerfect',
+  );
+  @override
+  late final GeneratedColumn<bool> isPerfect = GeneratedColumn<bool>(
+    'is_perfect',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_perfect" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    sessionId,
+    lessonId,
+    startedAt,
+    completedAt,
+    totalQuestions,
+    correctCount,
+    wrongCount,
+    currentRound,
+    xpEarned,
+    isPerfect,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'learn_sessions';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<LearnSession> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('session_id')) {
+      context.handle(
+        _sessionIdMeta,
+        sessionId.isAcceptableOrUnknown(data['session_id']!, _sessionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_sessionIdMeta);
+    }
+    if (data.containsKey('lesson_id')) {
+      context.handle(
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_lessonIdMeta);
+    }
+    if (data.containsKey('started_at')) {
+      context.handle(
+        _startedAtMeta,
+        startedAt.isAcceptableOrUnknown(data['started_at']!, _startedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_startedAtMeta);
+    }
+    if (data.containsKey('completed_at')) {
+      context.handle(
+        _completedAtMeta,
+        completedAt.isAcceptableOrUnknown(
+          data['completed_at']!,
+          _completedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('total_questions')) {
+      context.handle(
+        _totalQuestionsMeta,
+        totalQuestions.isAcceptableOrUnknown(
+          data['total_questions']!,
+          _totalQuestionsMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_totalQuestionsMeta);
+    }
+    if (data.containsKey('correct_count')) {
+      context.handle(
+        _correctCountMeta,
+        correctCount.isAcceptableOrUnknown(
+          data['correct_count']!,
+          _correctCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('wrong_count')) {
+      context.handle(
+        _wrongCountMeta,
+        wrongCount.isAcceptableOrUnknown(data['wrong_count']!, _wrongCountMeta),
+      );
+    }
+    if (data.containsKey('current_round')) {
+      context.handle(
+        _currentRoundMeta,
+        currentRound.isAcceptableOrUnknown(
+          data['current_round']!,
+          _currentRoundMeta,
+        ),
+      );
+    }
+    if (data.containsKey('xp_earned')) {
+      context.handle(
+        _xpEarnedMeta,
+        xpEarned.isAcceptableOrUnknown(data['xp_earned']!, _xpEarnedMeta),
+      );
+    }
+    if (data.containsKey('is_perfect')) {
+      context.handle(
+        _isPerfectMeta,
+        isPerfect.isAcceptableOrUnknown(data['is_perfect']!, _isPerfectMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  LearnSession map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return LearnSession(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      sessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}session_id'],
+      )!,
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lesson_id'],
+      )!,
+      startedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}started_at'],
+      )!,
+      completedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}completed_at'],
+      ),
+      totalQuestions: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}total_questions'],
+      )!,
+      correctCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}correct_count'],
+      )!,
+      wrongCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}wrong_count'],
+      )!,
+      currentRound: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}current_round'],
+      )!,
+      xpEarned: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}xp_earned'],
+      )!,
+      isPerfect: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_perfect'],
+      )!,
+    );
+  }
+
+  @override
+  $LearnSessionsTable createAlias(String alias) {
+    return $LearnSessionsTable(attachedDatabase, alias);
+  }
+}
+
+class LearnSession extends DataClass implements Insertable<LearnSession> {
+  final int id;
+  final String sessionId;
+  final int lessonId;
+  final DateTime startedAt;
+  final DateTime? completedAt;
+  final int totalQuestions;
+  final int correctCount;
+  final int wrongCount;
+  final int currentRound;
+  final int xpEarned;
+  final bool isPerfect;
+  const LearnSession({
+    required this.id,
+    required this.sessionId,
+    required this.lessonId,
+    required this.startedAt,
+    this.completedAt,
+    required this.totalQuestions,
+    required this.correctCount,
+    required this.wrongCount,
+    required this.currentRound,
+    required this.xpEarned,
+    required this.isPerfect,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['session_id'] = Variable<String>(sessionId);
+    map['lesson_id'] = Variable<int>(lessonId);
+    map['started_at'] = Variable<DateTime>(startedAt);
+    if (!nullToAbsent || completedAt != null) {
+      map['completed_at'] = Variable<DateTime>(completedAt);
+    }
+    map['total_questions'] = Variable<int>(totalQuestions);
+    map['correct_count'] = Variable<int>(correctCount);
+    map['wrong_count'] = Variable<int>(wrongCount);
+    map['current_round'] = Variable<int>(currentRound);
+    map['xp_earned'] = Variable<int>(xpEarned);
+    map['is_perfect'] = Variable<bool>(isPerfect);
+    return map;
+  }
+
+  LearnSessionsCompanion toCompanion(bool nullToAbsent) {
+    return LearnSessionsCompanion(
+      id: Value(id),
+      sessionId: Value(sessionId),
+      lessonId: Value(lessonId),
+      startedAt: Value(startedAt),
+      completedAt: completedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(completedAt),
+      totalQuestions: Value(totalQuestions),
+      correctCount: Value(correctCount),
+      wrongCount: Value(wrongCount),
+      currentRound: Value(currentRound),
+      xpEarned: Value(xpEarned),
+      isPerfect: Value(isPerfect),
+    );
+  }
+
+  factory LearnSession.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return LearnSession(
+      id: serializer.fromJson<int>(json['id']),
+      sessionId: serializer.fromJson<String>(json['sessionId']),
+      lessonId: serializer.fromJson<int>(json['lessonId']),
+      startedAt: serializer.fromJson<DateTime>(json['startedAt']),
+      completedAt: serializer.fromJson<DateTime?>(json['completedAt']),
+      totalQuestions: serializer.fromJson<int>(json['totalQuestions']),
+      correctCount: serializer.fromJson<int>(json['correctCount']),
+      wrongCount: serializer.fromJson<int>(json['wrongCount']),
+      currentRound: serializer.fromJson<int>(json['currentRound']),
+      xpEarned: serializer.fromJson<int>(json['xpEarned']),
+      isPerfect: serializer.fromJson<bool>(json['isPerfect']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'sessionId': serializer.toJson<String>(sessionId),
+      'lessonId': serializer.toJson<int>(lessonId),
+      'startedAt': serializer.toJson<DateTime>(startedAt),
+      'completedAt': serializer.toJson<DateTime?>(completedAt),
+      'totalQuestions': serializer.toJson<int>(totalQuestions),
+      'correctCount': serializer.toJson<int>(correctCount),
+      'wrongCount': serializer.toJson<int>(wrongCount),
+      'currentRound': serializer.toJson<int>(currentRound),
+      'xpEarned': serializer.toJson<int>(xpEarned),
+      'isPerfect': serializer.toJson<bool>(isPerfect),
+    };
+  }
+
+  LearnSession copyWith({
+    int? id,
+    String? sessionId,
+    int? lessonId,
+    DateTime? startedAt,
+    Value<DateTime?> completedAt = const Value.absent(),
+    int? totalQuestions,
+    int? correctCount,
+    int? wrongCount,
+    int? currentRound,
+    int? xpEarned,
+    bool? isPerfect,
+  }) => LearnSession(
+    id: id ?? this.id,
+    sessionId: sessionId ?? this.sessionId,
+    lessonId: lessonId ?? this.lessonId,
+    startedAt: startedAt ?? this.startedAt,
+    completedAt: completedAt.present ? completedAt.value : this.completedAt,
+    totalQuestions: totalQuestions ?? this.totalQuestions,
+    correctCount: correctCount ?? this.correctCount,
+    wrongCount: wrongCount ?? this.wrongCount,
+    currentRound: currentRound ?? this.currentRound,
+    xpEarned: xpEarned ?? this.xpEarned,
+    isPerfect: isPerfect ?? this.isPerfect,
+  );
+  LearnSession copyWithCompanion(LearnSessionsCompanion data) {
+    return LearnSession(
+      id: data.id.present ? data.id.value : this.id,
+      sessionId: data.sessionId.present ? data.sessionId.value : this.sessionId,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
+      startedAt: data.startedAt.present ? data.startedAt.value : this.startedAt,
+      completedAt: data.completedAt.present
+          ? data.completedAt.value
+          : this.completedAt,
+      totalQuestions: data.totalQuestions.present
+          ? data.totalQuestions.value
+          : this.totalQuestions,
+      correctCount: data.correctCount.present
+          ? data.correctCount.value
+          : this.correctCount,
+      wrongCount: data.wrongCount.present
+          ? data.wrongCount.value
+          : this.wrongCount,
+      currentRound: data.currentRound.present
+          ? data.currentRound.value
+          : this.currentRound,
+      xpEarned: data.xpEarned.present ? data.xpEarned.value : this.xpEarned,
+      isPerfect: data.isPerfect.present ? data.isPerfect.value : this.isPerfect,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LearnSession(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('totalQuestions: $totalQuestions, ')
+          ..write('correctCount: $correctCount, ')
+          ..write('wrongCount: $wrongCount, ')
+          ..write('currentRound: $currentRound, ')
+          ..write('xpEarned: $xpEarned, ')
+          ..write('isPerfect: $isPerfect')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    sessionId,
+    lessonId,
+    startedAt,
+    completedAt,
+    totalQuestions,
+    correctCount,
+    wrongCount,
+    currentRound,
+    xpEarned,
+    isPerfect,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is LearnSession &&
+          other.id == this.id &&
+          other.sessionId == this.sessionId &&
+          other.lessonId == this.lessonId &&
+          other.startedAt == this.startedAt &&
+          other.completedAt == this.completedAt &&
+          other.totalQuestions == this.totalQuestions &&
+          other.correctCount == this.correctCount &&
+          other.wrongCount == this.wrongCount &&
+          other.currentRound == this.currentRound &&
+          other.xpEarned == this.xpEarned &&
+          other.isPerfect == this.isPerfect);
+}
+
+class LearnSessionsCompanion extends UpdateCompanion<LearnSession> {
+  final Value<int> id;
+  final Value<String> sessionId;
+  final Value<int> lessonId;
+  final Value<DateTime> startedAt;
+  final Value<DateTime?> completedAt;
+  final Value<int> totalQuestions;
+  final Value<int> correctCount;
+  final Value<int> wrongCount;
+  final Value<int> currentRound;
+  final Value<int> xpEarned;
+  final Value<bool> isPerfect;
+  const LearnSessionsCompanion({
+    this.id = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.lessonId = const Value.absent(),
+    this.startedAt = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.totalQuestions = const Value.absent(),
+    this.correctCount = const Value.absent(),
+    this.wrongCount = const Value.absent(),
+    this.currentRound = const Value.absent(),
+    this.xpEarned = const Value.absent(),
+    this.isPerfect = const Value.absent(),
+  });
+  LearnSessionsCompanion.insert({
+    this.id = const Value.absent(),
+    required String sessionId,
+    required int lessonId,
+    required DateTime startedAt,
+    this.completedAt = const Value.absent(),
+    required int totalQuestions,
+    this.correctCount = const Value.absent(),
+    this.wrongCount = const Value.absent(),
+    this.currentRound = const Value.absent(),
+    this.xpEarned = const Value.absent(),
+    this.isPerfect = const Value.absent(),
+  }) : sessionId = Value(sessionId),
+       lessonId = Value(lessonId),
+       startedAt = Value(startedAt),
+       totalQuestions = Value(totalQuestions);
+  static Insertable<LearnSession> custom({
+    Expression<int>? id,
+    Expression<String>? sessionId,
+    Expression<int>? lessonId,
+    Expression<DateTime>? startedAt,
+    Expression<DateTime>? completedAt,
+    Expression<int>? totalQuestions,
+    Expression<int>? correctCount,
+    Expression<int>? wrongCount,
+    Expression<int>? currentRound,
+    Expression<int>? xpEarned,
+    Expression<bool>? isPerfect,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (sessionId != null) 'session_id': sessionId,
+      if (lessonId != null) 'lesson_id': lessonId,
+      if (startedAt != null) 'started_at': startedAt,
+      if (completedAt != null) 'completed_at': completedAt,
+      if (totalQuestions != null) 'total_questions': totalQuestions,
+      if (correctCount != null) 'correct_count': correctCount,
+      if (wrongCount != null) 'wrong_count': wrongCount,
+      if (currentRound != null) 'current_round': currentRound,
+      if (xpEarned != null) 'xp_earned': xpEarned,
+      if (isPerfect != null) 'is_perfect': isPerfect,
+    });
+  }
+
+  LearnSessionsCompanion copyWith({
+    Value<int>? id,
+    Value<String>? sessionId,
+    Value<int>? lessonId,
+    Value<DateTime>? startedAt,
+    Value<DateTime?>? completedAt,
+    Value<int>? totalQuestions,
+    Value<int>? correctCount,
+    Value<int>? wrongCount,
+    Value<int>? currentRound,
+    Value<int>? xpEarned,
+    Value<bool>? isPerfect,
+  }) {
+    return LearnSessionsCompanion(
+      id: id ?? this.id,
+      sessionId: sessionId ?? this.sessionId,
+      lessonId: lessonId ?? this.lessonId,
+      startedAt: startedAt ?? this.startedAt,
+      completedAt: completedAt ?? this.completedAt,
+      totalQuestions: totalQuestions ?? this.totalQuestions,
+      correctCount: correctCount ?? this.correctCount,
+      wrongCount: wrongCount ?? this.wrongCount,
+      currentRound: currentRound ?? this.currentRound,
+      xpEarned: xpEarned ?? this.xpEarned,
+      isPerfect: isPerfect ?? this.isPerfect,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (sessionId.present) {
+      map['session_id'] = Variable<String>(sessionId.value);
+    }
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<int>(lessonId.value);
+    }
+    if (startedAt.present) {
+      map['started_at'] = Variable<DateTime>(startedAt.value);
+    }
+    if (completedAt.present) {
+      map['completed_at'] = Variable<DateTime>(completedAt.value);
+    }
+    if (totalQuestions.present) {
+      map['total_questions'] = Variable<int>(totalQuestions.value);
+    }
+    if (correctCount.present) {
+      map['correct_count'] = Variable<int>(correctCount.value);
+    }
+    if (wrongCount.present) {
+      map['wrong_count'] = Variable<int>(wrongCount.value);
+    }
+    if (currentRound.present) {
+      map['current_round'] = Variable<int>(currentRound.value);
+    }
+    if (xpEarned.present) {
+      map['xp_earned'] = Variable<int>(xpEarned.value);
+    }
+    if (isPerfect.present) {
+      map['is_perfect'] = Variable<bool>(isPerfect.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LearnSessionsCompanion(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('totalQuestions: $totalQuestions, ')
+          ..write('correctCount: $correctCount, ')
+          ..write('wrongCount: $wrongCount, ')
+          ..write('currentRound: $currentRound, ')
+          ..write('xpEarned: $xpEarned, ')
+          ..write('isPerfect: $isPerfect')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $LearnAnswersTable extends LearnAnswers
+    with TableInfo<$LearnAnswersTable, LearnAnswer> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $LearnAnswersTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _sessionIdMeta = const VerificationMeta(
+    'sessionId',
+  );
+  @override
+  late final GeneratedColumn<String> sessionId = GeneratedColumn<String>(
+    'session_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES learn_sessions (session_id)',
+    ),
+  );
+  static const VerificationMeta _questionIndexMeta = const VerificationMeta(
+    'questionIndex',
+  );
+  @override
+  late final GeneratedColumn<int> questionIndex = GeneratedColumn<int>(
+    'question_index',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _termIdMeta = const VerificationMeta('termId');
+  @override
+  late final GeneratedColumn<int> termId = GeneratedColumn<int>(
+    'term_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _questionTypeMeta = const VerificationMeta(
+    'questionType',
+  );
+  @override
+  late final GeneratedColumn<String> questionType = GeneratedColumn<String>(
+    'question_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _userAnswerMeta = const VerificationMeta(
+    'userAnswer',
+  );
+  @override
+  late final GeneratedColumn<String> userAnswer = GeneratedColumn<String>(
+    'user_answer',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _isCorrectMeta = const VerificationMeta(
+    'isCorrect',
+  );
+  @override
+  late final GeneratedColumn<bool> isCorrect = GeneratedColumn<bool>(
+    'is_correct',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_correct" IN (0, 1))',
+    ),
+  );
+  static const VerificationMeta _timeTakenMsMeta = const VerificationMeta(
+    'timeTakenMs',
+  );
+  @override
+  late final GeneratedColumn<int> timeTakenMs = GeneratedColumn<int>(
+    'time_taken_ms',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _answeredAtMeta = const VerificationMeta(
+    'answeredAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> answeredAt = GeneratedColumn<DateTime>(
+    'answered_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    sessionId,
+    questionIndex,
+    termId,
+    questionType,
+    userAnswer,
+    isCorrect,
+    timeTakenMs,
+    answeredAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'learn_answers';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<LearnAnswer> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('session_id')) {
+      context.handle(
+        _sessionIdMeta,
+        sessionId.isAcceptableOrUnknown(data['session_id']!, _sessionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_sessionIdMeta);
+    }
+    if (data.containsKey('question_index')) {
+      context.handle(
+        _questionIndexMeta,
+        questionIndex.isAcceptableOrUnknown(
+          data['question_index']!,
+          _questionIndexMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_questionIndexMeta);
+    }
+    if (data.containsKey('term_id')) {
+      context.handle(
+        _termIdMeta,
+        termId.isAcceptableOrUnknown(data['term_id']!, _termIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_termIdMeta);
+    }
+    if (data.containsKey('question_type')) {
+      context.handle(
+        _questionTypeMeta,
+        questionType.isAcceptableOrUnknown(
+          data['question_type']!,
+          _questionTypeMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_questionTypeMeta);
+    }
+    if (data.containsKey('user_answer')) {
+      context.handle(
+        _userAnswerMeta,
+        userAnswer.isAcceptableOrUnknown(data['user_answer']!, _userAnswerMeta),
+      );
+    }
+    if (data.containsKey('is_correct')) {
+      context.handle(
+        _isCorrectMeta,
+        isCorrect.isAcceptableOrUnknown(data['is_correct']!, _isCorrectMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_isCorrectMeta);
+    }
+    if (data.containsKey('time_taken_ms')) {
+      context.handle(
+        _timeTakenMsMeta,
+        timeTakenMs.isAcceptableOrUnknown(
+          data['time_taken_ms']!,
+          _timeTakenMsMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_timeTakenMsMeta);
+    }
+    if (data.containsKey('answered_at')) {
+      context.handle(
+        _answeredAtMeta,
+        answeredAt.isAcceptableOrUnknown(data['answered_at']!, _answeredAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_answeredAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  LearnAnswer map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return LearnAnswer(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      sessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}session_id'],
+      )!,
+      questionIndex: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}question_index'],
+      )!,
+      termId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}term_id'],
+      )!,
+      questionType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_type'],
+      )!,
+      userAnswer: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}user_answer'],
+      ),
+      isCorrect: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_correct'],
+      )!,
+      timeTakenMs: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}time_taken_ms'],
+      )!,
+      answeredAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}answered_at'],
+      )!,
+    );
+  }
+
+  @override
+  $LearnAnswersTable createAlias(String alias) {
+    return $LearnAnswersTable(attachedDatabase, alias);
+  }
+}
+
+class LearnAnswer extends DataClass implements Insertable<LearnAnswer> {
+  final int id;
+  final String sessionId;
+  final int questionIndex;
+  final int termId;
+  final String questionType;
+  final String? userAnswer;
+  final bool isCorrect;
+  final int timeTakenMs;
+  final DateTime answeredAt;
+  const LearnAnswer({
+    required this.id,
+    required this.sessionId,
+    required this.questionIndex,
+    required this.termId,
+    required this.questionType,
+    this.userAnswer,
+    required this.isCorrect,
+    required this.timeTakenMs,
+    required this.answeredAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['session_id'] = Variable<String>(sessionId);
+    map['question_index'] = Variable<int>(questionIndex);
+    map['term_id'] = Variable<int>(termId);
+    map['question_type'] = Variable<String>(questionType);
+    if (!nullToAbsent || userAnswer != null) {
+      map['user_answer'] = Variable<String>(userAnswer);
+    }
+    map['is_correct'] = Variable<bool>(isCorrect);
+    map['time_taken_ms'] = Variable<int>(timeTakenMs);
+    map['answered_at'] = Variable<DateTime>(answeredAt);
+    return map;
+  }
+
+  LearnAnswersCompanion toCompanion(bool nullToAbsent) {
+    return LearnAnswersCompanion(
+      id: Value(id),
+      sessionId: Value(sessionId),
+      questionIndex: Value(questionIndex),
+      termId: Value(termId),
+      questionType: Value(questionType),
+      userAnswer: userAnswer == null && nullToAbsent
+          ? const Value.absent()
+          : Value(userAnswer),
+      isCorrect: Value(isCorrect),
+      timeTakenMs: Value(timeTakenMs),
+      answeredAt: Value(answeredAt),
+    );
+  }
+
+  factory LearnAnswer.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return LearnAnswer(
+      id: serializer.fromJson<int>(json['id']),
+      sessionId: serializer.fromJson<String>(json['sessionId']),
+      questionIndex: serializer.fromJson<int>(json['questionIndex']),
+      termId: serializer.fromJson<int>(json['termId']),
+      questionType: serializer.fromJson<String>(json['questionType']),
+      userAnswer: serializer.fromJson<String?>(json['userAnswer']),
+      isCorrect: serializer.fromJson<bool>(json['isCorrect']),
+      timeTakenMs: serializer.fromJson<int>(json['timeTakenMs']),
+      answeredAt: serializer.fromJson<DateTime>(json['answeredAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'sessionId': serializer.toJson<String>(sessionId),
+      'questionIndex': serializer.toJson<int>(questionIndex),
+      'termId': serializer.toJson<int>(termId),
+      'questionType': serializer.toJson<String>(questionType),
+      'userAnswer': serializer.toJson<String?>(userAnswer),
+      'isCorrect': serializer.toJson<bool>(isCorrect),
+      'timeTakenMs': serializer.toJson<int>(timeTakenMs),
+      'answeredAt': serializer.toJson<DateTime>(answeredAt),
+    };
+  }
+
+  LearnAnswer copyWith({
+    int? id,
+    String? sessionId,
+    int? questionIndex,
+    int? termId,
+    String? questionType,
+    Value<String?> userAnswer = const Value.absent(),
+    bool? isCorrect,
+    int? timeTakenMs,
+    DateTime? answeredAt,
+  }) => LearnAnswer(
+    id: id ?? this.id,
+    sessionId: sessionId ?? this.sessionId,
+    questionIndex: questionIndex ?? this.questionIndex,
+    termId: termId ?? this.termId,
+    questionType: questionType ?? this.questionType,
+    userAnswer: userAnswer.present ? userAnswer.value : this.userAnswer,
+    isCorrect: isCorrect ?? this.isCorrect,
+    timeTakenMs: timeTakenMs ?? this.timeTakenMs,
+    answeredAt: answeredAt ?? this.answeredAt,
+  );
+  LearnAnswer copyWithCompanion(LearnAnswersCompanion data) {
+    return LearnAnswer(
+      id: data.id.present ? data.id.value : this.id,
+      sessionId: data.sessionId.present ? data.sessionId.value : this.sessionId,
+      questionIndex: data.questionIndex.present
+          ? data.questionIndex.value
+          : this.questionIndex,
+      termId: data.termId.present ? data.termId.value : this.termId,
+      questionType: data.questionType.present
+          ? data.questionType.value
+          : this.questionType,
+      userAnswer: data.userAnswer.present
+          ? data.userAnswer.value
+          : this.userAnswer,
+      isCorrect: data.isCorrect.present ? data.isCorrect.value : this.isCorrect,
+      timeTakenMs: data.timeTakenMs.present
+          ? data.timeTakenMs.value
+          : this.timeTakenMs,
+      answeredAt: data.answeredAt.present
+          ? data.answeredAt.value
+          : this.answeredAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LearnAnswer(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('questionIndex: $questionIndex, ')
+          ..write('termId: $termId, ')
+          ..write('questionType: $questionType, ')
+          ..write('userAnswer: $userAnswer, ')
+          ..write('isCorrect: $isCorrect, ')
+          ..write('timeTakenMs: $timeTakenMs, ')
+          ..write('answeredAt: $answeredAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    sessionId,
+    questionIndex,
+    termId,
+    questionType,
+    userAnswer,
+    isCorrect,
+    timeTakenMs,
+    answeredAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is LearnAnswer &&
+          other.id == this.id &&
+          other.sessionId == this.sessionId &&
+          other.questionIndex == this.questionIndex &&
+          other.termId == this.termId &&
+          other.questionType == this.questionType &&
+          other.userAnswer == this.userAnswer &&
+          other.isCorrect == this.isCorrect &&
+          other.timeTakenMs == this.timeTakenMs &&
+          other.answeredAt == this.answeredAt);
+}
+
+class LearnAnswersCompanion extends UpdateCompanion<LearnAnswer> {
+  final Value<int> id;
+  final Value<String> sessionId;
+  final Value<int> questionIndex;
+  final Value<int> termId;
+  final Value<String> questionType;
+  final Value<String?> userAnswer;
+  final Value<bool> isCorrect;
+  final Value<int> timeTakenMs;
+  final Value<DateTime> answeredAt;
+  const LearnAnswersCompanion({
+    this.id = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.questionIndex = const Value.absent(),
+    this.termId = const Value.absent(),
+    this.questionType = const Value.absent(),
+    this.userAnswer = const Value.absent(),
+    this.isCorrect = const Value.absent(),
+    this.timeTakenMs = const Value.absent(),
+    this.answeredAt = const Value.absent(),
+  });
+  LearnAnswersCompanion.insert({
+    this.id = const Value.absent(),
+    required String sessionId,
+    required int questionIndex,
+    required int termId,
+    required String questionType,
+    this.userAnswer = const Value.absent(),
+    required bool isCorrect,
+    required int timeTakenMs,
+    required DateTime answeredAt,
+  }) : sessionId = Value(sessionId),
+       questionIndex = Value(questionIndex),
+       termId = Value(termId),
+       questionType = Value(questionType),
+       isCorrect = Value(isCorrect),
+       timeTakenMs = Value(timeTakenMs),
+       answeredAt = Value(answeredAt);
+  static Insertable<LearnAnswer> custom({
+    Expression<int>? id,
+    Expression<String>? sessionId,
+    Expression<int>? questionIndex,
+    Expression<int>? termId,
+    Expression<String>? questionType,
+    Expression<String>? userAnswer,
+    Expression<bool>? isCorrect,
+    Expression<int>? timeTakenMs,
+    Expression<DateTime>? answeredAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (sessionId != null) 'session_id': sessionId,
+      if (questionIndex != null) 'question_index': questionIndex,
+      if (termId != null) 'term_id': termId,
+      if (questionType != null) 'question_type': questionType,
+      if (userAnswer != null) 'user_answer': userAnswer,
+      if (isCorrect != null) 'is_correct': isCorrect,
+      if (timeTakenMs != null) 'time_taken_ms': timeTakenMs,
+      if (answeredAt != null) 'answered_at': answeredAt,
+    });
+  }
+
+  LearnAnswersCompanion copyWith({
+    Value<int>? id,
+    Value<String>? sessionId,
+    Value<int>? questionIndex,
+    Value<int>? termId,
+    Value<String>? questionType,
+    Value<String?>? userAnswer,
+    Value<bool>? isCorrect,
+    Value<int>? timeTakenMs,
+    Value<DateTime>? answeredAt,
+  }) {
+    return LearnAnswersCompanion(
+      id: id ?? this.id,
+      sessionId: sessionId ?? this.sessionId,
+      questionIndex: questionIndex ?? this.questionIndex,
+      termId: termId ?? this.termId,
+      questionType: questionType ?? this.questionType,
+      userAnswer: userAnswer ?? this.userAnswer,
+      isCorrect: isCorrect ?? this.isCorrect,
+      timeTakenMs: timeTakenMs ?? this.timeTakenMs,
+      answeredAt: answeredAt ?? this.answeredAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (sessionId.present) {
+      map['session_id'] = Variable<String>(sessionId.value);
+    }
+    if (questionIndex.present) {
+      map['question_index'] = Variable<int>(questionIndex.value);
+    }
+    if (termId.present) {
+      map['term_id'] = Variable<int>(termId.value);
+    }
+    if (questionType.present) {
+      map['question_type'] = Variable<String>(questionType.value);
+    }
+    if (userAnswer.present) {
+      map['user_answer'] = Variable<String>(userAnswer.value);
+    }
+    if (isCorrect.present) {
+      map['is_correct'] = Variable<bool>(isCorrect.value);
+    }
+    if (timeTakenMs.present) {
+      map['time_taken_ms'] = Variable<int>(timeTakenMs.value);
+    }
+    if (answeredAt.present) {
+      map['answered_at'] = Variable<DateTime>(answeredAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LearnAnswersCompanion(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('questionIndex: $questionIndex, ')
+          ..write('termId: $termId, ')
+          ..write('questionType: $questionType, ')
+          ..write('userAnswer: $userAnswer, ')
+          ..write('isCorrect: $isCorrect, ')
+          ..write('timeTakenMs: $timeTakenMs, ')
+          ..write('answeredAt: $answeredAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $TestSessionsTable extends TestSessions
+    with TableInfo<$TestSessionsTable, TestSession> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $TestSessionsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _sessionIdMeta = const VerificationMeta(
+    'sessionId',
+  );
+  @override
+  late final GeneratedColumn<String> sessionId = GeneratedColumn<String>(
+    'session_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'),
+  );
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
+  @override
+  late final GeneratedColumn<int> lessonId = GeneratedColumn<int>(
+    'lesson_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _startedAtMeta = const VerificationMeta(
+    'startedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> startedAt = GeneratedColumn<DateTime>(
+    'started_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _completedAtMeta = const VerificationMeta(
+    'completedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> completedAt = GeneratedColumn<DateTime>(
+    'completed_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _totalQuestionsMeta = const VerificationMeta(
+    'totalQuestions',
+  );
+  @override
+  late final GeneratedColumn<int> totalQuestions = GeneratedColumn<int>(
+    'total_questions',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _correctCountMeta = const VerificationMeta(
+    'correctCount',
+  );
+  @override
+  late final GeneratedColumn<int> correctCount = GeneratedColumn<int>(
+    'correct_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _wrongCountMeta = const VerificationMeta(
+    'wrongCount',
+  );
+  @override
+  late final GeneratedColumn<int> wrongCount = GeneratedColumn<int>(
+    'wrong_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _scoreMeta = const VerificationMeta('score');
+  @override
+  late final GeneratedColumn<int> score = GeneratedColumn<int>(
+    'score',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _gradeMeta = const VerificationMeta('grade');
+  @override
+  late final GeneratedColumn<String> grade = GeneratedColumn<String>(
+    'grade',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _xpEarnedMeta = const VerificationMeta(
+    'xpEarned',
+  );
+  @override
+  late final GeneratedColumn<int> xpEarned = GeneratedColumn<int>(
+    'xp_earned',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _timeLimitMinutesMeta = const VerificationMeta(
+    'timeLimitMinutes',
+  );
+  @override
+  late final GeneratedColumn<int> timeLimitMinutes = GeneratedColumn<int>(
+    'time_limit_minutes',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    sessionId,
+    lessonId,
+    startedAt,
+    completedAt,
+    totalQuestions,
+    correctCount,
+    wrongCount,
+    score,
+    grade,
+    xpEarned,
+    timeLimitMinutes,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'test_sessions';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<TestSession> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('session_id')) {
+      context.handle(
+        _sessionIdMeta,
+        sessionId.isAcceptableOrUnknown(data['session_id']!, _sessionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_sessionIdMeta);
+    }
+    if (data.containsKey('lesson_id')) {
+      context.handle(
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_lessonIdMeta);
+    }
+    if (data.containsKey('started_at')) {
+      context.handle(
+        _startedAtMeta,
+        startedAt.isAcceptableOrUnknown(data['started_at']!, _startedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_startedAtMeta);
+    }
+    if (data.containsKey('completed_at')) {
+      context.handle(
+        _completedAtMeta,
+        completedAt.isAcceptableOrUnknown(
+          data['completed_at']!,
+          _completedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('total_questions')) {
+      context.handle(
+        _totalQuestionsMeta,
+        totalQuestions.isAcceptableOrUnknown(
+          data['total_questions']!,
+          _totalQuestionsMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_totalQuestionsMeta);
+    }
+    if (data.containsKey('correct_count')) {
+      context.handle(
+        _correctCountMeta,
+        correctCount.isAcceptableOrUnknown(
+          data['correct_count']!,
+          _correctCountMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_correctCountMeta);
+    }
+    if (data.containsKey('wrong_count')) {
+      context.handle(
+        _wrongCountMeta,
+        wrongCount.isAcceptableOrUnknown(data['wrong_count']!, _wrongCountMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_wrongCountMeta);
+    }
+    if (data.containsKey('score')) {
+      context.handle(
+        _scoreMeta,
+        score.isAcceptableOrUnknown(data['score']!, _scoreMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_scoreMeta);
+    }
+    if (data.containsKey('grade')) {
+      context.handle(
+        _gradeMeta,
+        grade.isAcceptableOrUnknown(data['grade']!, _gradeMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_gradeMeta);
+    }
+    if (data.containsKey('xp_earned')) {
+      context.handle(
+        _xpEarnedMeta,
+        xpEarned.isAcceptableOrUnknown(data['xp_earned']!, _xpEarnedMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_xpEarnedMeta);
+    }
+    if (data.containsKey('time_limit_minutes')) {
+      context.handle(
+        _timeLimitMinutesMeta,
+        timeLimitMinutes.isAcceptableOrUnknown(
+          data['time_limit_minutes']!,
+          _timeLimitMinutesMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  TestSession map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return TestSession(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      sessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}session_id'],
+      )!,
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lesson_id'],
+      )!,
+      startedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}started_at'],
+      )!,
+      completedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}completed_at'],
+      ),
+      totalQuestions: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}total_questions'],
+      )!,
+      correctCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}correct_count'],
+      )!,
+      wrongCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}wrong_count'],
+      )!,
+      score: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}score'],
+      )!,
+      grade: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}grade'],
+      )!,
+      xpEarned: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}xp_earned'],
+      )!,
+      timeLimitMinutes: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}time_limit_minutes'],
+      ),
+    );
+  }
+
+  @override
+  $TestSessionsTable createAlias(String alias) {
+    return $TestSessionsTable(attachedDatabase, alias);
+  }
+}
+
+class TestSession extends DataClass implements Insertable<TestSession> {
+  final int id;
+  final String sessionId;
+  final int lessonId;
+  final DateTime startedAt;
+  final DateTime? completedAt;
+  final int totalQuestions;
+  final int correctCount;
+  final int wrongCount;
+  final int score;
+  final String grade;
+  final int xpEarned;
+  final int? timeLimitMinutes;
+  const TestSession({
+    required this.id,
+    required this.sessionId,
+    required this.lessonId,
+    required this.startedAt,
+    this.completedAt,
+    required this.totalQuestions,
+    required this.correctCount,
+    required this.wrongCount,
+    required this.score,
+    required this.grade,
+    required this.xpEarned,
+    this.timeLimitMinutes,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['session_id'] = Variable<String>(sessionId);
+    map['lesson_id'] = Variable<int>(lessonId);
+    map['started_at'] = Variable<DateTime>(startedAt);
+    if (!nullToAbsent || completedAt != null) {
+      map['completed_at'] = Variable<DateTime>(completedAt);
+    }
+    map['total_questions'] = Variable<int>(totalQuestions);
+    map['correct_count'] = Variable<int>(correctCount);
+    map['wrong_count'] = Variable<int>(wrongCount);
+    map['score'] = Variable<int>(score);
+    map['grade'] = Variable<String>(grade);
+    map['xp_earned'] = Variable<int>(xpEarned);
+    if (!nullToAbsent || timeLimitMinutes != null) {
+      map['time_limit_minutes'] = Variable<int>(timeLimitMinutes);
+    }
+    return map;
+  }
+
+  TestSessionsCompanion toCompanion(bool nullToAbsent) {
+    return TestSessionsCompanion(
+      id: Value(id),
+      sessionId: Value(sessionId),
+      lessonId: Value(lessonId),
+      startedAt: Value(startedAt),
+      completedAt: completedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(completedAt),
+      totalQuestions: Value(totalQuestions),
+      correctCount: Value(correctCount),
+      wrongCount: Value(wrongCount),
+      score: Value(score),
+      grade: Value(grade),
+      xpEarned: Value(xpEarned),
+      timeLimitMinutes: timeLimitMinutes == null && nullToAbsent
+          ? const Value.absent()
+          : Value(timeLimitMinutes),
+    );
+  }
+
+  factory TestSession.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return TestSession(
+      id: serializer.fromJson<int>(json['id']),
+      sessionId: serializer.fromJson<String>(json['sessionId']),
+      lessonId: serializer.fromJson<int>(json['lessonId']),
+      startedAt: serializer.fromJson<DateTime>(json['startedAt']),
+      completedAt: serializer.fromJson<DateTime?>(json['completedAt']),
+      totalQuestions: serializer.fromJson<int>(json['totalQuestions']),
+      correctCount: serializer.fromJson<int>(json['correctCount']),
+      wrongCount: serializer.fromJson<int>(json['wrongCount']),
+      score: serializer.fromJson<int>(json['score']),
+      grade: serializer.fromJson<String>(json['grade']),
+      xpEarned: serializer.fromJson<int>(json['xpEarned']),
+      timeLimitMinutes: serializer.fromJson<int?>(json['timeLimitMinutes']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'sessionId': serializer.toJson<String>(sessionId),
+      'lessonId': serializer.toJson<int>(lessonId),
+      'startedAt': serializer.toJson<DateTime>(startedAt),
+      'completedAt': serializer.toJson<DateTime?>(completedAt),
+      'totalQuestions': serializer.toJson<int>(totalQuestions),
+      'correctCount': serializer.toJson<int>(correctCount),
+      'wrongCount': serializer.toJson<int>(wrongCount),
+      'score': serializer.toJson<int>(score),
+      'grade': serializer.toJson<String>(grade),
+      'xpEarned': serializer.toJson<int>(xpEarned),
+      'timeLimitMinutes': serializer.toJson<int?>(timeLimitMinutes),
+    };
+  }
+
+  TestSession copyWith({
+    int? id,
+    String? sessionId,
+    int? lessonId,
+    DateTime? startedAt,
+    Value<DateTime?> completedAt = const Value.absent(),
+    int? totalQuestions,
+    int? correctCount,
+    int? wrongCount,
+    int? score,
+    String? grade,
+    int? xpEarned,
+    Value<int?> timeLimitMinutes = const Value.absent(),
+  }) => TestSession(
+    id: id ?? this.id,
+    sessionId: sessionId ?? this.sessionId,
+    lessonId: lessonId ?? this.lessonId,
+    startedAt: startedAt ?? this.startedAt,
+    completedAt: completedAt.present ? completedAt.value : this.completedAt,
+    totalQuestions: totalQuestions ?? this.totalQuestions,
+    correctCount: correctCount ?? this.correctCount,
+    wrongCount: wrongCount ?? this.wrongCount,
+    score: score ?? this.score,
+    grade: grade ?? this.grade,
+    xpEarned: xpEarned ?? this.xpEarned,
+    timeLimitMinutes: timeLimitMinutes.present
+        ? timeLimitMinutes.value
+        : this.timeLimitMinutes,
+  );
+  TestSession copyWithCompanion(TestSessionsCompanion data) {
+    return TestSession(
+      id: data.id.present ? data.id.value : this.id,
+      sessionId: data.sessionId.present ? data.sessionId.value : this.sessionId,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
+      startedAt: data.startedAt.present ? data.startedAt.value : this.startedAt,
+      completedAt: data.completedAt.present
+          ? data.completedAt.value
+          : this.completedAt,
+      totalQuestions: data.totalQuestions.present
+          ? data.totalQuestions.value
+          : this.totalQuestions,
+      correctCount: data.correctCount.present
+          ? data.correctCount.value
+          : this.correctCount,
+      wrongCount: data.wrongCount.present
+          ? data.wrongCount.value
+          : this.wrongCount,
+      score: data.score.present ? data.score.value : this.score,
+      grade: data.grade.present ? data.grade.value : this.grade,
+      xpEarned: data.xpEarned.present ? data.xpEarned.value : this.xpEarned,
+      timeLimitMinutes: data.timeLimitMinutes.present
+          ? data.timeLimitMinutes.value
+          : this.timeLimitMinutes,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('TestSession(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('totalQuestions: $totalQuestions, ')
+          ..write('correctCount: $correctCount, ')
+          ..write('wrongCount: $wrongCount, ')
+          ..write('score: $score, ')
+          ..write('grade: $grade, ')
+          ..write('xpEarned: $xpEarned, ')
+          ..write('timeLimitMinutes: $timeLimitMinutes')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    sessionId,
+    lessonId,
+    startedAt,
+    completedAt,
+    totalQuestions,
+    correctCount,
+    wrongCount,
+    score,
+    grade,
+    xpEarned,
+    timeLimitMinutes,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is TestSession &&
+          other.id == this.id &&
+          other.sessionId == this.sessionId &&
+          other.lessonId == this.lessonId &&
+          other.startedAt == this.startedAt &&
+          other.completedAt == this.completedAt &&
+          other.totalQuestions == this.totalQuestions &&
+          other.correctCount == this.correctCount &&
+          other.wrongCount == this.wrongCount &&
+          other.score == this.score &&
+          other.grade == this.grade &&
+          other.xpEarned == this.xpEarned &&
+          other.timeLimitMinutes == this.timeLimitMinutes);
+}
+
+class TestSessionsCompanion extends UpdateCompanion<TestSession> {
+  final Value<int> id;
+  final Value<String> sessionId;
+  final Value<int> lessonId;
+  final Value<DateTime> startedAt;
+  final Value<DateTime?> completedAt;
+  final Value<int> totalQuestions;
+  final Value<int> correctCount;
+  final Value<int> wrongCount;
+  final Value<int> score;
+  final Value<String> grade;
+  final Value<int> xpEarned;
+  final Value<int?> timeLimitMinutes;
+  const TestSessionsCompanion({
+    this.id = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.lessonId = const Value.absent(),
+    this.startedAt = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.totalQuestions = const Value.absent(),
+    this.correctCount = const Value.absent(),
+    this.wrongCount = const Value.absent(),
+    this.score = const Value.absent(),
+    this.grade = const Value.absent(),
+    this.xpEarned = const Value.absent(),
+    this.timeLimitMinutes = const Value.absent(),
+  });
+  TestSessionsCompanion.insert({
+    this.id = const Value.absent(),
+    required String sessionId,
+    required int lessonId,
+    required DateTime startedAt,
+    this.completedAt = const Value.absent(),
+    required int totalQuestions,
+    required int correctCount,
+    required int wrongCount,
+    required int score,
+    required String grade,
+    required int xpEarned,
+    this.timeLimitMinutes = const Value.absent(),
+  }) : sessionId = Value(sessionId),
+       lessonId = Value(lessonId),
+       startedAt = Value(startedAt),
+       totalQuestions = Value(totalQuestions),
+       correctCount = Value(correctCount),
+       wrongCount = Value(wrongCount),
+       score = Value(score),
+       grade = Value(grade),
+       xpEarned = Value(xpEarned);
+  static Insertable<TestSession> custom({
+    Expression<int>? id,
+    Expression<String>? sessionId,
+    Expression<int>? lessonId,
+    Expression<DateTime>? startedAt,
+    Expression<DateTime>? completedAt,
+    Expression<int>? totalQuestions,
+    Expression<int>? correctCount,
+    Expression<int>? wrongCount,
+    Expression<int>? score,
+    Expression<String>? grade,
+    Expression<int>? xpEarned,
+    Expression<int>? timeLimitMinutes,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (sessionId != null) 'session_id': sessionId,
+      if (lessonId != null) 'lesson_id': lessonId,
+      if (startedAt != null) 'started_at': startedAt,
+      if (completedAt != null) 'completed_at': completedAt,
+      if (totalQuestions != null) 'total_questions': totalQuestions,
+      if (correctCount != null) 'correct_count': correctCount,
+      if (wrongCount != null) 'wrong_count': wrongCount,
+      if (score != null) 'score': score,
+      if (grade != null) 'grade': grade,
+      if (xpEarned != null) 'xp_earned': xpEarned,
+      if (timeLimitMinutes != null) 'time_limit_minutes': timeLimitMinutes,
+    });
+  }
+
+  TestSessionsCompanion copyWith({
+    Value<int>? id,
+    Value<String>? sessionId,
+    Value<int>? lessonId,
+    Value<DateTime>? startedAt,
+    Value<DateTime?>? completedAt,
+    Value<int>? totalQuestions,
+    Value<int>? correctCount,
+    Value<int>? wrongCount,
+    Value<int>? score,
+    Value<String>? grade,
+    Value<int>? xpEarned,
+    Value<int?>? timeLimitMinutes,
+  }) {
+    return TestSessionsCompanion(
+      id: id ?? this.id,
+      sessionId: sessionId ?? this.sessionId,
+      lessonId: lessonId ?? this.lessonId,
+      startedAt: startedAt ?? this.startedAt,
+      completedAt: completedAt ?? this.completedAt,
+      totalQuestions: totalQuestions ?? this.totalQuestions,
+      correctCount: correctCount ?? this.correctCount,
+      wrongCount: wrongCount ?? this.wrongCount,
+      score: score ?? this.score,
+      grade: grade ?? this.grade,
+      xpEarned: xpEarned ?? this.xpEarned,
+      timeLimitMinutes: timeLimitMinutes ?? this.timeLimitMinutes,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (sessionId.present) {
+      map['session_id'] = Variable<String>(sessionId.value);
+    }
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<int>(lessonId.value);
+    }
+    if (startedAt.present) {
+      map['started_at'] = Variable<DateTime>(startedAt.value);
+    }
+    if (completedAt.present) {
+      map['completed_at'] = Variable<DateTime>(completedAt.value);
+    }
+    if (totalQuestions.present) {
+      map['total_questions'] = Variable<int>(totalQuestions.value);
+    }
+    if (correctCount.present) {
+      map['correct_count'] = Variable<int>(correctCount.value);
+    }
+    if (wrongCount.present) {
+      map['wrong_count'] = Variable<int>(wrongCount.value);
+    }
+    if (score.present) {
+      map['score'] = Variable<int>(score.value);
+    }
+    if (grade.present) {
+      map['grade'] = Variable<String>(grade.value);
+    }
+    if (xpEarned.present) {
+      map['xp_earned'] = Variable<int>(xpEarned.value);
+    }
+    if (timeLimitMinutes.present) {
+      map['time_limit_minutes'] = Variable<int>(timeLimitMinutes.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('TestSessionsCompanion(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('totalQuestions: $totalQuestions, ')
+          ..write('correctCount: $correctCount, ')
+          ..write('wrongCount: $wrongCount, ')
+          ..write('score: $score, ')
+          ..write('grade: $grade, ')
+          ..write('xpEarned: $xpEarned, ')
+          ..write('timeLimitMinutes: $timeLimitMinutes')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $TestAnswersTable extends TestAnswers
+    with TableInfo<$TestAnswersTable, TestAnswer> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $TestAnswersTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _sessionIdMeta = const VerificationMeta(
+    'sessionId',
+  );
+  @override
+  late final GeneratedColumn<String> sessionId = GeneratedColumn<String>(
+    'session_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES test_sessions (session_id)',
+    ),
+  );
+  static const VerificationMeta _questionIndexMeta = const VerificationMeta(
+    'questionIndex',
+  );
+  @override
+  late final GeneratedColumn<int> questionIndex = GeneratedColumn<int>(
+    'question_index',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _termIdMeta = const VerificationMeta('termId');
+  @override
+  late final GeneratedColumn<int> termId = GeneratedColumn<int>(
+    'term_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _questionTypeMeta = const VerificationMeta(
+    'questionType',
+  );
+  @override
+  late final GeneratedColumn<String> questionType = GeneratedColumn<String>(
+    'question_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _userAnswerMeta = const VerificationMeta(
+    'userAnswer',
+  );
+  @override
+  late final GeneratedColumn<String> userAnswer = GeneratedColumn<String>(
+    'user_answer',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _isCorrectMeta = const VerificationMeta(
+    'isCorrect',
+  );
+  @override
+  late final GeneratedColumn<bool> isCorrect = GeneratedColumn<bool>(
+    'is_correct',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_correct" IN (0, 1))',
+    ),
+  );
+  static const VerificationMeta _answeredAtMeta = const VerificationMeta(
+    'answeredAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> answeredAt = GeneratedColumn<DateTime>(
+    'answered_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    sessionId,
+    questionIndex,
+    termId,
+    questionType,
+    userAnswer,
+    isCorrect,
+    answeredAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'test_answers';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<TestAnswer> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('session_id')) {
+      context.handle(
+        _sessionIdMeta,
+        sessionId.isAcceptableOrUnknown(data['session_id']!, _sessionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_sessionIdMeta);
+    }
+    if (data.containsKey('question_index')) {
+      context.handle(
+        _questionIndexMeta,
+        questionIndex.isAcceptableOrUnknown(
+          data['question_index']!,
+          _questionIndexMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_questionIndexMeta);
+    }
+    if (data.containsKey('term_id')) {
+      context.handle(
+        _termIdMeta,
+        termId.isAcceptableOrUnknown(data['term_id']!, _termIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_termIdMeta);
+    }
+    if (data.containsKey('question_type')) {
+      context.handle(
+        _questionTypeMeta,
+        questionType.isAcceptableOrUnknown(
+          data['question_type']!,
+          _questionTypeMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_questionTypeMeta);
+    }
+    if (data.containsKey('user_answer')) {
+      context.handle(
+        _userAnswerMeta,
+        userAnswer.isAcceptableOrUnknown(data['user_answer']!, _userAnswerMeta),
+      );
+    }
+    if (data.containsKey('is_correct')) {
+      context.handle(
+        _isCorrectMeta,
+        isCorrect.isAcceptableOrUnknown(data['is_correct']!, _isCorrectMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_isCorrectMeta);
+    }
+    if (data.containsKey('answered_at')) {
+      context.handle(
+        _answeredAtMeta,
+        answeredAt.isAcceptableOrUnknown(data['answered_at']!, _answeredAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_answeredAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  TestAnswer map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return TestAnswer(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      sessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}session_id'],
+      )!,
+      questionIndex: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}question_index'],
+      )!,
+      termId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}term_id'],
+      )!,
+      questionType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_type'],
+      )!,
+      userAnswer: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}user_answer'],
+      ),
+      isCorrect: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_correct'],
+      )!,
+      answeredAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}answered_at'],
+      )!,
+    );
+  }
+
+  @override
+  $TestAnswersTable createAlias(String alias) {
+    return $TestAnswersTable(attachedDatabase, alias);
+  }
+}
+
+class TestAnswer extends DataClass implements Insertable<TestAnswer> {
+  final int id;
+  final String sessionId;
+  final int questionIndex;
+  final int termId;
+  final String questionType;
+  final String? userAnswer;
+  final bool isCorrect;
+  final DateTime answeredAt;
+  const TestAnswer({
+    required this.id,
+    required this.sessionId,
+    required this.questionIndex,
+    required this.termId,
+    required this.questionType,
+    this.userAnswer,
+    required this.isCorrect,
+    required this.answeredAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['session_id'] = Variable<String>(sessionId);
+    map['question_index'] = Variable<int>(questionIndex);
+    map['term_id'] = Variable<int>(termId);
+    map['question_type'] = Variable<String>(questionType);
+    if (!nullToAbsent || userAnswer != null) {
+      map['user_answer'] = Variable<String>(userAnswer);
+    }
+    map['is_correct'] = Variable<bool>(isCorrect);
+    map['answered_at'] = Variable<DateTime>(answeredAt);
+    return map;
+  }
+
+  TestAnswersCompanion toCompanion(bool nullToAbsent) {
+    return TestAnswersCompanion(
+      id: Value(id),
+      sessionId: Value(sessionId),
+      questionIndex: Value(questionIndex),
+      termId: Value(termId),
+      questionType: Value(questionType),
+      userAnswer: userAnswer == null && nullToAbsent
+          ? const Value.absent()
+          : Value(userAnswer),
+      isCorrect: Value(isCorrect),
+      answeredAt: Value(answeredAt),
+    );
+  }
+
+  factory TestAnswer.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return TestAnswer(
+      id: serializer.fromJson<int>(json['id']),
+      sessionId: serializer.fromJson<String>(json['sessionId']),
+      questionIndex: serializer.fromJson<int>(json['questionIndex']),
+      termId: serializer.fromJson<int>(json['termId']),
+      questionType: serializer.fromJson<String>(json['questionType']),
+      userAnswer: serializer.fromJson<String?>(json['userAnswer']),
+      isCorrect: serializer.fromJson<bool>(json['isCorrect']),
+      answeredAt: serializer.fromJson<DateTime>(json['answeredAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'sessionId': serializer.toJson<String>(sessionId),
+      'questionIndex': serializer.toJson<int>(questionIndex),
+      'termId': serializer.toJson<int>(termId),
+      'questionType': serializer.toJson<String>(questionType),
+      'userAnswer': serializer.toJson<String?>(userAnswer),
+      'isCorrect': serializer.toJson<bool>(isCorrect),
+      'answeredAt': serializer.toJson<DateTime>(answeredAt),
+    };
+  }
+
+  TestAnswer copyWith({
+    int? id,
+    String? sessionId,
+    int? questionIndex,
+    int? termId,
+    String? questionType,
+    Value<String?> userAnswer = const Value.absent(),
+    bool? isCorrect,
+    DateTime? answeredAt,
+  }) => TestAnswer(
+    id: id ?? this.id,
+    sessionId: sessionId ?? this.sessionId,
+    questionIndex: questionIndex ?? this.questionIndex,
+    termId: termId ?? this.termId,
+    questionType: questionType ?? this.questionType,
+    userAnswer: userAnswer.present ? userAnswer.value : this.userAnswer,
+    isCorrect: isCorrect ?? this.isCorrect,
+    answeredAt: answeredAt ?? this.answeredAt,
+  );
+  TestAnswer copyWithCompanion(TestAnswersCompanion data) {
+    return TestAnswer(
+      id: data.id.present ? data.id.value : this.id,
+      sessionId: data.sessionId.present ? data.sessionId.value : this.sessionId,
+      questionIndex: data.questionIndex.present
+          ? data.questionIndex.value
+          : this.questionIndex,
+      termId: data.termId.present ? data.termId.value : this.termId,
+      questionType: data.questionType.present
+          ? data.questionType.value
+          : this.questionType,
+      userAnswer: data.userAnswer.present
+          ? data.userAnswer.value
+          : this.userAnswer,
+      isCorrect: data.isCorrect.present ? data.isCorrect.value : this.isCorrect,
+      answeredAt: data.answeredAt.present
+          ? data.answeredAt.value
+          : this.answeredAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('TestAnswer(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('questionIndex: $questionIndex, ')
+          ..write('termId: $termId, ')
+          ..write('questionType: $questionType, ')
+          ..write('userAnswer: $userAnswer, ')
+          ..write('isCorrect: $isCorrect, ')
+          ..write('answeredAt: $answeredAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    sessionId,
+    questionIndex,
+    termId,
+    questionType,
+    userAnswer,
+    isCorrect,
+    answeredAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is TestAnswer &&
+          other.id == this.id &&
+          other.sessionId == this.sessionId &&
+          other.questionIndex == this.questionIndex &&
+          other.termId == this.termId &&
+          other.questionType == this.questionType &&
+          other.userAnswer == this.userAnswer &&
+          other.isCorrect == this.isCorrect &&
+          other.answeredAt == this.answeredAt);
+}
+
+class TestAnswersCompanion extends UpdateCompanion<TestAnswer> {
+  final Value<int> id;
+  final Value<String> sessionId;
+  final Value<int> questionIndex;
+  final Value<int> termId;
+  final Value<String> questionType;
+  final Value<String?> userAnswer;
+  final Value<bool> isCorrect;
+  final Value<DateTime> answeredAt;
+  const TestAnswersCompanion({
+    this.id = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.questionIndex = const Value.absent(),
+    this.termId = const Value.absent(),
+    this.questionType = const Value.absent(),
+    this.userAnswer = const Value.absent(),
+    this.isCorrect = const Value.absent(),
+    this.answeredAt = const Value.absent(),
+  });
+  TestAnswersCompanion.insert({
+    this.id = const Value.absent(),
+    required String sessionId,
+    required int questionIndex,
+    required int termId,
+    required String questionType,
+    this.userAnswer = const Value.absent(),
+    required bool isCorrect,
+    required DateTime answeredAt,
+  }) : sessionId = Value(sessionId),
+       questionIndex = Value(questionIndex),
+       termId = Value(termId),
+       questionType = Value(questionType),
+       isCorrect = Value(isCorrect),
+       answeredAt = Value(answeredAt);
+  static Insertable<TestAnswer> custom({
+    Expression<int>? id,
+    Expression<String>? sessionId,
+    Expression<int>? questionIndex,
+    Expression<int>? termId,
+    Expression<String>? questionType,
+    Expression<String>? userAnswer,
+    Expression<bool>? isCorrect,
+    Expression<DateTime>? answeredAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (sessionId != null) 'session_id': sessionId,
+      if (questionIndex != null) 'question_index': questionIndex,
+      if (termId != null) 'term_id': termId,
+      if (questionType != null) 'question_type': questionType,
+      if (userAnswer != null) 'user_answer': userAnswer,
+      if (isCorrect != null) 'is_correct': isCorrect,
+      if (answeredAt != null) 'answered_at': answeredAt,
+    });
+  }
+
+  TestAnswersCompanion copyWith({
+    Value<int>? id,
+    Value<String>? sessionId,
+    Value<int>? questionIndex,
+    Value<int>? termId,
+    Value<String>? questionType,
+    Value<String?>? userAnswer,
+    Value<bool>? isCorrect,
+    Value<DateTime>? answeredAt,
+  }) {
+    return TestAnswersCompanion(
+      id: id ?? this.id,
+      sessionId: sessionId ?? this.sessionId,
+      questionIndex: questionIndex ?? this.questionIndex,
+      termId: termId ?? this.termId,
+      questionType: questionType ?? this.questionType,
+      userAnswer: userAnswer ?? this.userAnswer,
+      isCorrect: isCorrect ?? this.isCorrect,
+      answeredAt: answeredAt ?? this.answeredAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (sessionId.present) {
+      map['session_id'] = Variable<String>(sessionId.value);
+    }
+    if (questionIndex.present) {
+      map['question_index'] = Variable<int>(questionIndex.value);
+    }
+    if (termId.present) {
+      map['term_id'] = Variable<int>(termId.value);
+    }
+    if (questionType.present) {
+      map['question_type'] = Variable<String>(questionType.value);
+    }
+    if (userAnswer.present) {
+      map['user_answer'] = Variable<String>(userAnswer.value);
+    }
+    if (isCorrect.present) {
+      map['is_correct'] = Variable<bool>(isCorrect.value);
+    }
+    if (answeredAt.present) {
+      map['answered_at'] = Variable<DateTime>(answeredAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('TestAnswersCompanion(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('questionIndex: $questionIndex, ')
+          ..write('termId: $termId, ')
+          ..write('questionType: $questionType, ')
+          ..write('userAnswer: $userAnswer, ')
+          ..write('isCorrect: $isCorrect, ')
+          ..write('answeredAt: $answeredAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $AchievementsTable extends Achievements
+    with TableInfo<$AchievementsTable, Achievement> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $AchievementsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _typeMeta = const VerificationMeta('type');
+  @override
+  late final GeneratedColumn<String> type = GeneratedColumn<String>(
+    'type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
+  @override
+  late final GeneratedColumn<int> lessonId = GeneratedColumn<int>(
+    'lesson_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _sessionIdMeta = const VerificationMeta(
+    'sessionId',
+  );
+  @override
+  late final GeneratedColumn<String> sessionId = GeneratedColumn<String>(
+    'session_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _valueMeta = const VerificationMeta('value');
+  @override
+  late final GeneratedColumn<int> value = GeneratedColumn<int>(
+    'value',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _earnedAtMeta = const VerificationMeta(
+    'earnedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> earnedAt = GeneratedColumn<DateTime>(
+    'earned_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _isNotifiedMeta = const VerificationMeta(
+    'isNotified',
+  );
+  @override
+  late final GeneratedColumn<bool> isNotified = GeneratedColumn<bool>(
+    'is_notified',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_notified" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    type,
+    lessonId,
+    sessionId,
+    value,
+    earnedAt,
+    isNotified,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'achievements';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<Achievement> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('type')) {
+      context.handle(
+        _typeMeta,
+        type.isAcceptableOrUnknown(data['type']!, _typeMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_typeMeta);
+    }
+    if (data.containsKey('lesson_id')) {
+      context.handle(
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
+      );
+    }
+    if (data.containsKey('session_id')) {
+      context.handle(
+        _sessionIdMeta,
+        sessionId.isAcceptableOrUnknown(data['session_id']!, _sessionIdMeta),
+      );
+    }
+    if (data.containsKey('value')) {
+      context.handle(
+        _valueMeta,
+        value.isAcceptableOrUnknown(data['value']!, _valueMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_valueMeta);
+    }
+    if (data.containsKey('earned_at')) {
+      context.handle(
+        _earnedAtMeta,
+        earnedAt.isAcceptableOrUnknown(data['earned_at']!, _earnedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_earnedAtMeta);
+    }
+    if (data.containsKey('is_notified')) {
+      context.handle(
+        _isNotifiedMeta,
+        isNotified.isAcceptableOrUnknown(data['is_notified']!, _isNotifiedMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  Achievement map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return Achievement(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      type: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}type'],
+      )!,
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lesson_id'],
+      ),
+      sessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}session_id'],
+      ),
+      value: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}value'],
+      )!,
+      earnedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}earned_at'],
+      )!,
+      isNotified: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_notified'],
+      )!,
+    );
+  }
+
+  @override
+  $AchievementsTable createAlias(String alias) {
+    return $AchievementsTable(attachedDatabase, alias);
+  }
+}
+
+class Achievement extends DataClass implements Insertable<Achievement> {
+  final int id;
+  final String type;
+  final int? lessonId;
+  final String? sessionId;
+  final int value;
+  final DateTime earnedAt;
+  final bool isNotified;
+  const Achievement({
+    required this.id,
+    required this.type,
+    this.lessonId,
+    this.sessionId,
+    required this.value,
+    required this.earnedAt,
+    required this.isNotified,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['type'] = Variable<String>(type);
+    if (!nullToAbsent || lessonId != null) {
+      map['lesson_id'] = Variable<int>(lessonId);
+    }
+    if (!nullToAbsent || sessionId != null) {
+      map['session_id'] = Variable<String>(sessionId);
+    }
+    map['value'] = Variable<int>(value);
+    map['earned_at'] = Variable<DateTime>(earnedAt);
+    map['is_notified'] = Variable<bool>(isNotified);
+    return map;
+  }
+
+  AchievementsCompanion toCompanion(bool nullToAbsent) {
+    return AchievementsCompanion(
+      id: Value(id),
+      type: Value(type),
+      lessonId: lessonId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lessonId),
+      sessionId: sessionId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(sessionId),
+      value: Value(value),
+      earnedAt: Value(earnedAt),
+      isNotified: Value(isNotified),
+    );
+  }
+
+  factory Achievement.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return Achievement(
+      id: serializer.fromJson<int>(json['id']),
+      type: serializer.fromJson<String>(json['type']),
+      lessonId: serializer.fromJson<int?>(json['lessonId']),
+      sessionId: serializer.fromJson<String?>(json['sessionId']),
+      value: serializer.fromJson<int>(json['value']),
+      earnedAt: serializer.fromJson<DateTime>(json['earnedAt']),
+      isNotified: serializer.fromJson<bool>(json['isNotified']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'type': serializer.toJson<String>(type),
+      'lessonId': serializer.toJson<int?>(lessonId),
+      'sessionId': serializer.toJson<String?>(sessionId),
+      'value': serializer.toJson<int>(value),
+      'earnedAt': serializer.toJson<DateTime>(earnedAt),
+      'isNotified': serializer.toJson<bool>(isNotified),
+    };
+  }
+
+  Achievement copyWith({
+    int? id,
+    String? type,
+    Value<int?> lessonId = const Value.absent(),
+    Value<String?> sessionId = const Value.absent(),
+    int? value,
+    DateTime? earnedAt,
+    bool? isNotified,
+  }) => Achievement(
+    id: id ?? this.id,
+    type: type ?? this.type,
+    lessonId: lessonId.present ? lessonId.value : this.lessonId,
+    sessionId: sessionId.present ? sessionId.value : this.sessionId,
+    value: value ?? this.value,
+    earnedAt: earnedAt ?? this.earnedAt,
+    isNotified: isNotified ?? this.isNotified,
+  );
+  Achievement copyWithCompanion(AchievementsCompanion data) {
+    return Achievement(
+      id: data.id.present ? data.id.value : this.id,
+      type: data.type.present ? data.type.value : this.type,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
+      sessionId: data.sessionId.present ? data.sessionId.value : this.sessionId,
+      value: data.value.present ? data.value.value : this.value,
+      earnedAt: data.earnedAt.present ? data.earnedAt.value : this.earnedAt,
+      isNotified: data.isNotified.present
+          ? data.isNotified.value
+          : this.isNotified,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('Achievement(')
+          ..write('id: $id, ')
+          ..write('type: $type, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('value: $value, ')
+          ..write('earnedAt: $earnedAt, ')
+          ..write('isNotified: $isNotified')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(id, type, lessonId, sessionId, value, earnedAt, isNotified);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is Achievement &&
+          other.id == this.id &&
+          other.type == this.type &&
+          other.lessonId == this.lessonId &&
+          other.sessionId == this.sessionId &&
+          other.value == this.value &&
+          other.earnedAt == this.earnedAt &&
+          other.isNotified == this.isNotified);
+}
+
+class AchievementsCompanion extends UpdateCompanion<Achievement> {
+  final Value<int> id;
+  final Value<String> type;
+  final Value<int?> lessonId;
+  final Value<String?> sessionId;
+  final Value<int> value;
+  final Value<DateTime> earnedAt;
+  final Value<bool> isNotified;
+  const AchievementsCompanion({
+    this.id = const Value.absent(),
+    this.type = const Value.absent(),
+    this.lessonId = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.value = const Value.absent(),
+    this.earnedAt = const Value.absent(),
+    this.isNotified = const Value.absent(),
+  });
+  AchievementsCompanion.insert({
+    this.id = const Value.absent(),
+    required String type,
+    this.lessonId = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    required int value,
+    required DateTime earnedAt,
+    this.isNotified = const Value.absent(),
+  }) : type = Value(type),
+       value = Value(value),
+       earnedAt = Value(earnedAt);
+  static Insertable<Achievement> custom({
+    Expression<int>? id,
+    Expression<String>? type,
+    Expression<int>? lessonId,
+    Expression<String>? sessionId,
+    Expression<int>? value,
+    Expression<DateTime>? earnedAt,
+    Expression<bool>? isNotified,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (type != null) 'type': type,
+      if (lessonId != null) 'lesson_id': lessonId,
+      if (sessionId != null) 'session_id': sessionId,
+      if (value != null) 'value': value,
+      if (earnedAt != null) 'earned_at': earnedAt,
+      if (isNotified != null) 'is_notified': isNotified,
+    });
+  }
+
+  AchievementsCompanion copyWith({
+    Value<int>? id,
+    Value<String>? type,
+    Value<int?>? lessonId,
+    Value<String?>? sessionId,
+    Value<int>? value,
+    Value<DateTime>? earnedAt,
+    Value<bool>? isNotified,
+  }) {
+    return AchievementsCompanion(
+      id: id ?? this.id,
+      type: type ?? this.type,
+      lessonId: lessonId ?? this.lessonId,
+      sessionId: sessionId ?? this.sessionId,
+      value: value ?? this.value,
+      earnedAt: earnedAt ?? this.earnedAt,
+      isNotified: isNotified ?? this.isNotified,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (type.present) {
+      map['type'] = Variable<String>(type.value);
+    }
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<int>(lessonId.value);
+    }
+    if (sessionId.present) {
+      map['session_id'] = Variable<String>(sessionId.value);
+    }
+    if (value.present) {
+      map['value'] = Variable<int>(value.value);
+    }
+    if (earnedAt.present) {
+      map['earned_at'] = Variable<DateTime>(earnedAt.value);
+    }
+    if (isNotified.present) {
+      map['is_notified'] = Variable<bool>(isNotified.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('AchievementsCompanion(')
+          ..write('id: $id, ')
+          ..write('type: $type, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('value: $value, ')
+          ..write('earnedAt: $earnedAt, ')
+          ..write('isNotified: $isNotified')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -3045,6 +5968,16 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $AttemptAnswerTable attemptAnswer = $AttemptAnswerTable(this);
   late final $UserLessonTable userLesson = $UserLessonTable(this);
   late final $UserLessonTermTable userLessonTerm = $UserLessonTermTable(this);
+  late final $LearnSessionsTable learnSessions = $LearnSessionsTable(this);
+  late final $LearnAnswersTable learnAnswers = $LearnAnswersTable(this);
+  late final $TestSessionsTable testSessions = $TestSessionsTable(this);
+  late final $TestAnswersTable testAnswers = $TestAnswersTable(this);
+  late final $AchievementsTable achievements = $AchievementsTable(this);
+  late final LearnDao learnDao = LearnDao(this as AppDatabase);
+  late final TestDao testDao = TestDao(this as AppDatabase);
+  late final AchievementDao achievementDao = AchievementDao(
+    this as AppDatabase,
+  );
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -3056,6 +5989,11 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     attemptAnswer,
     userLesson,
     userLessonTerm,
+    learnSessions,
+    learnAnswers,
+    testSessions,
+    testAnswers,
+    achievements,
   ];
 }
 
@@ -5066,6 +8004,1898 @@ typedef $$UserLessonTermTableProcessedTableManager =
       UserLessonTermData,
       PrefetchHooks Function({bool lessonId})
     >;
+typedef $$LearnSessionsTableCreateCompanionBuilder =
+    LearnSessionsCompanion Function({
+      Value<int> id,
+      required String sessionId,
+      required int lessonId,
+      required DateTime startedAt,
+      Value<DateTime?> completedAt,
+      required int totalQuestions,
+      Value<int> correctCount,
+      Value<int> wrongCount,
+      Value<int> currentRound,
+      Value<int> xpEarned,
+      Value<bool> isPerfect,
+    });
+typedef $$LearnSessionsTableUpdateCompanionBuilder =
+    LearnSessionsCompanion Function({
+      Value<int> id,
+      Value<String> sessionId,
+      Value<int> lessonId,
+      Value<DateTime> startedAt,
+      Value<DateTime?> completedAt,
+      Value<int> totalQuestions,
+      Value<int> correctCount,
+      Value<int> wrongCount,
+      Value<int> currentRound,
+      Value<int> xpEarned,
+      Value<bool> isPerfect,
+    });
+
+final class $$LearnSessionsTableReferences
+    extends BaseReferences<_$AppDatabase, $LearnSessionsTable, LearnSession> {
+  $$LearnSessionsTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static MultiTypedResultKey<$LearnAnswersTable, List<LearnAnswer>>
+  _learnAnswersRefsTable(_$AppDatabase db) => MultiTypedResultKey.fromTable(
+    db.learnAnswers,
+    aliasName: $_aliasNameGenerator(
+      db.learnSessions.sessionId,
+      db.learnAnswers.sessionId,
+    ),
+  );
+
+  $$LearnAnswersTableProcessedTableManager get learnAnswersRefs {
+    final manager = $$LearnAnswersTableTableManager($_db, $_db.learnAnswers)
+        .filter(
+          (f) => f.sessionId.sessionId.sqlEquals(
+            $_itemColumn<String>('session_id')!,
+          ),
+        );
+
+    final cache = $_typedResult.readTableOrNull(_learnAnswersRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$LearnSessionsTableFilterComposer
+    extends Composer<_$AppDatabase, $LearnSessionsTable> {
+  $$LearnSessionsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get totalQuestions => $composableBuilder(
+    column: $table.totalQuestions,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get currentRound => $composableBuilder(
+    column: $table.currentRound,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get xpEarned => $composableBuilder(
+    column: $table.xpEarned,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isPerfect => $composableBuilder(
+    column: $table.isPerfect,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  Expression<bool> learnAnswersRefs(
+    Expression<bool> Function($$LearnAnswersTableFilterComposer f) f,
+  ) {
+    final $$LearnAnswersTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.learnAnswers,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$LearnAnswersTableFilterComposer(
+            $db: $db,
+            $table: $db.learnAnswers,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$LearnSessionsTableOrderingComposer
+    extends Composer<_$AppDatabase, $LearnSessionsTable> {
+  $$LearnSessionsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get totalQuestions => $composableBuilder(
+    column: $table.totalQuestions,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get currentRound => $composableBuilder(
+    column: $table.currentRound,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get xpEarned => $composableBuilder(
+    column: $table.xpEarned,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isPerfect => $composableBuilder(
+    column: $table.isPerfect,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$LearnSessionsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $LearnSessionsTable> {
+  $$LearnSessionsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get sessionId =>
+      $composableBuilder(column: $table.sessionId, builder: (column) => column);
+
+  GeneratedColumn<int> get lessonId =>
+      $composableBuilder(column: $table.lessonId, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get startedAt =>
+      $composableBuilder(column: $table.startedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get totalQuestions => $composableBuilder(
+    column: $table.totalQuestions,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get currentRound => $composableBuilder(
+    column: $table.currentRound,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get xpEarned =>
+      $composableBuilder(column: $table.xpEarned, builder: (column) => column);
+
+  GeneratedColumn<bool> get isPerfect =>
+      $composableBuilder(column: $table.isPerfect, builder: (column) => column);
+
+  Expression<T> learnAnswersRefs<T extends Object>(
+    Expression<T> Function($$LearnAnswersTableAnnotationComposer a) f,
+  ) {
+    final $$LearnAnswersTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.learnAnswers,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$LearnAnswersTableAnnotationComposer(
+            $db: $db,
+            $table: $db.learnAnswers,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$LearnSessionsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $LearnSessionsTable,
+          LearnSession,
+          $$LearnSessionsTableFilterComposer,
+          $$LearnSessionsTableOrderingComposer,
+          $$LearnSessionsTableAnnotationComposer,
+          $$LearnSessionsTableCreateCompanionBuilder,
+          $$LearnSessionsTableUpdateCompanionBuilder,
+          (LearnSession, $$LearnSessionsTableReferences),
+          LearnSession,
+          PrefetchHooks Function({bool learnAnswersRefs})
+        > {
+  $$LearnSessionsTableTableManager(_$AppDatabase db, $LearnSessionsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$LearnSessionsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$LearnSessionsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$LearnSessionsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> sessionId = const Value.absent(),
+                Value<int> lessonId = const Value.absent(),
+                Value<DateTime> startedAt = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<int> totalQuestions = const Value.absent(),
+                Value<int> correctCount = const Value.absent(),
+                Value<int> wrongCount = const Value.absent(),
+                Value<int> currentRound = const Value.absent(),
+                Value<int> xpEarned = const Value.absent(),
+                Value<bool> isPerfect = const Value.absent(),
+              }) => LearnSessionsCompanion(
+                id: id,
+                sessionId: sessionId,
+                lessonId: lessonId,
+                startedAt: startedAt,
+                completedAt: completedAt,
+                totalQuestions: totalQuestions,
+                correctCount: correctCount,
+                wrongCount: wrongCount,
+                currentRound: currentRound,
+                xpEarned: xpEarned,
+                isPerfect: isPerfect,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String sessionId,
+                required int lessonId,
+                required DateTime startedAt,
+                Value<DateTime?> completedAt = const Value.absent(),
+                required int totalQuestions,
+                Value<int> correctCount = const Value.absent(),
+                Value<int> wrongCount = const Value.absent(),
+                Value<int> currentRound = const Value.absent(),
+                Value<int> xpEarned = const Value.absent(),
+                Value<bool> isPerfect = const Value.absent(),
+              }) => LearnSessionsCompanion.insert(
+                id: id,
+                sessionId: sessionId,
+                lessonId: lessonId,
+                startedAt: startedAt,
+                completedAt: completedAt,
+                totalQuestions: totalQuestions,
+                correctCount: correctCount,
+                wrongCount: wrongCount,
+                currentRound: currentRound,
+                xpEarned: xpEarned,
+                isPerfect: isPerfect,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$LearnSessionsTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({learnAnswersRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [if (learnAnswersRefs) db.learnAnswers],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (learnAnswersRefs)
+                    await $_getPrefetchedData<
+                      LearnSession,
+                      $LearnSessionsTable,
+                      LearnAnswer
+                    >(
+                      currentTable: table,
+                      referencedTable: $$LearnSessionsTableReferences
+                          ._learnAnswersRefsTable(db),
+                      managerFromTypedResult: (p0) =>
+                          $$LearnSessionsTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).learnAnswersRefs,
+                      referencedItemsForCurrentItem: (item, referencedItems) =>
+                          referencedItems.where(
+                            (e) => e.sessionId == item.sessionId,
+                          ),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$LearnSessionsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $LearnSessionsTable,
+      LearnSession,
+      $$LearnSessionsTableFilterComposer,
+      $$LearnSessionsTableOrderingComposer,
+      $$LearnSessionsTableAnnotationComposer,
+      $$LearnSessionsTableCreateCompanionBuilder,
+      $$LearnSessionsTableUpdateCompanionBuilder,
+      (LearnSession, $$LearnSessionsTableReferences),
+      LearnSession,
+      PrefetchHooks Function({bool learnAnswersRefs})
+    >;
+typedef $$LearnAnswersTableCreateCompanionBuilder =
+    LearnAnswersCompanion Function({
+      Value<int> id,
+      required String sessionId,
+      required int questionIndex,
+      required int termId,
+      required String questionType,
+      Value<String?> userAnswer,
+      required bool isCorrect,
+      required int timeTakenMs,
+      required DateTime answeredAt,
+    });
+typedef $$LearnAnswersTableUpdateCompanionBuilder =
+    LearnAnswersCompanion Function({
+      Value<int> id,
+      Value<String> sessionId,
+      Value<int> questionIndex,
+      Value<int> termId,
+      Value<String> questionType,
+      Value<String?> userAnswer,
+      Value<bool> isCorrect,
+      Value<int> timeTakenMs,
+      Value<DateTime> answeredAt,
+    });
+
+final class $$LearnAnswersTableReferences
+    extends BaseReferences<_$AppDatabase, $LearnAnswersTable, LearnAnswer> {
+  $$LearnAnswersTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static $LearnSessionsTable _sessionIdTable(_$AppDatabase db) =>
+      db.learnSessions.createAlias(
+        $_aliasNameGenerator(
+          db.learnAnswers.sessionId,
+          db.learnSessions.sessionId,
+        ),
+      );
+
+  $$LearnSessionsTableProcessedTableManager get sessionId {
+    final $_column = $_itemColumn<String>('session_id')!;
+
+    final manager = $$LearnSessionsTableTableManager(
+      $_db,
+      $_db.learnSessions,
+    ).filter((f) => f.sessionId.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_sessionIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$LearnAnswersTableFilterComposer
+    extends Composer<_$AppDatabase, $LearnAnswersTable> {
+  $$LearnAnswersTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get questionIndex => $composableBuilder(
+    column: $table.questionIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get termId => $composableBuilder(
+    column: $table.termId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get questionType => $composableBuilder(
+    column: $table.questionType,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isCorrect => $composableBuilder(
+    column: $table.isCorrect,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get timeTakenMs => $composableBuilder(
+    column: $table.timeTakenMs,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get answeredAt => $composableBuilder(
+    column: $table.answeredAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$LearnSessionsTableFilterComposer get sessionId {
+    final $$LearnSessionsTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.learnSessions,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$LearnSessionsTableFilterComposer(
+            $db: $db,
+            $table: $db.learnSessions,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$LearnAnswersTableOrderingComposer
+    extends Composer<_$AppDatabase, $LearnAnswersTable> {
+  $$LearnAnswersTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get questionIndex => $composableBuilder(
+    column: $table.questionIndex,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get termId => $composableBuilder(
+    column: $table.termId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get questionType => $composableBuilder(
+    column: $table.questionType,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isCorrect => $composableBuilder(
+    column: $table.isCorrect,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get timeTakenMs => $composableBuilder(
+    column: $table.timeTakenMs,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get answeredAt => $composableBuilder(
+    column: $table.answeredAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$LearnSessionsTableOrderingComposer get sessionId {
+    final $$LearnSessionsTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.learnSessions,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$LearnSessionsTableOrderingComposer(
+            $db: $db,
+            $table: $db.learnSessions,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$LearnAnswersTableAnnotationComposer
+    extends Composer<_$AppDatabase, $LearnAnswersTable> {
+  $$LearnAnswersTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get questionIndex => $composableBuilder(
+    column: $table.questionIndex,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get termId =>
+      $composableBuilder(column: $table.termId, builder: (column) => column);
+
+  GeneratedColumn<String> get questionType => $composableBuilder(
+    column: $table.questionType,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get isCorrect =>
+      $composableBuilder(column: $table.isCorrect, builder: (column) => column);
+
+  GeneratedColumn<int> get timeTakenMs => $composableBuilder(
+    column: $table.timeTakenMs,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get answeredAt => $composableBuilder(
+    column: $table.answeredAt,
+    builder: (column) => column,
+  );
+
+  $$LearnSessionsTableAnnotationComposer get sessionId {
+    final $$LearnSessionsTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.learnSessions,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$LearnSessionsTableAnnotationComposer(
+            $db: $db,
+            $table: $db.learnSessions,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$LearnAnswersTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $LearnAnswersTable,
+          LearnAnswer,
+          $$LearnAnswersTableFilterComposer,
+          $$LearnAnswersTableOrderingComposer,
+          $$LearnAnswersTableAnnotationComposer,
+          $$LearnAnswersTableCreateCompanionBuilder,
+          $$LearnAnswersTableUpdateCompanionBuilder,
+          (LearnAnswer, $$LearnAnswersTableReferences),
+          LearnAnswer,
+          PrefetchHooks Function({bool sessionId})
+        > {
+  $$LearnAnswersTableTableManager(_$AppDatabase db, $LearnAnswersTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$LearnAnswersTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$LearnAnswersTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$LearnAnswersTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> sessionId = const Value.absent(),
+                Value<int> questionIndex = const Value.absent(),
+                Value<int> termId = const Value.absent(),
+                Value<String> questionType = const Value.absent(),
+                Value<String?> userAnswer = const Value.absent(),
+                Value<bool> isCorrect = const Value.absent(),
+                Value<int> timeTakenMs = const Value.absent(),
+                Value<DateTime> answeredAt = const Value.absent(),
+              }) => LearnAnswersCompanion(
+                id: id,
+                sessionId: sessionId,
+                questionIndex: questionIndex,
+                termId: termId,
+                questionType: questionType,
+                userAnswer: userAnswer,
+                isCorrect: isCorrect,
+                timeTakenMs: timeTakenMs,
+                answeredAt: answeredAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String sessionId,
+                required int questionIndex,
+                required int termId,
+                required String questionType,
+                Value<String?> userAnswer = const Value.absent(),
+                required bool isCorrect,
+                required int timeTakenMs,
+                required DateTime answeredAt,
+              }) => LearnAnswersCompanion.insert(
+                id: id,
+                sessionId: sessionId,
+                questionIndex: questionIndex,
+                termId: termId,
+                questionType: questionType,
+                userAnswer: userAnswer,
+                isCorrect: isCorrect,
+                timeTakenMs: timeTakenMs,
+                answeredAt: answeredAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$LearnAnswersTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({sessionId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (sessionId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.sessionId,
+                                referencedTable: $$LearnAnswersTableReferences
+                                    ._sessionIdTable(db),
+                                referencedColumn: $$LearnAnswersTableReferences
+                                    ._sessionIdTable(db)
+                                    .sessionId,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$LearnAnswersTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $LearnAnswersTable,
+      LearnAnswer,
+      $$LearnAnswersTableFilterComposer,
+      $$LearnAnswersTableOrderingComposer,
+      $$LearnAnswersTableAnnotationComposer,
+      $$LearnAnswersTableCreateCompanionBuilder,
+      $$LearnAnswersTableUpdateCompanionBuilder,
+      (LearnAnswer, $$LearnAnswersTableReferences),
+      LearnAnswer,
+      PrefetchHooks Function({bool sessionId})
+    >;
+typedef $$TestSessionsTableCreateCompanionBuilder =
+    TestSessionsCompanion Function({
+      Value<int> id,
+      required String sessionId,
+      required int lessonId,
+      required DateTime startedAt,
+      Value<DateTime?> completedAt,
+      required int totalQuestions,
+      required int correctCount,
+      required int wrongCount,
+      required int score,
+      required String grade,
+      required int xpEarned,
+      Value<int?> timeLimitMinutes,
+    });
+typedef $$TestSessionsTableUpdateCompanionBuilder =
+    TestSessionsCompanion Function({
+      Value<int> id,
+      Value<String> sessionId,
+      Value<int> lessonId,
+      Value<DateTime> startedAt,
+      Value<DateTime?> completedAt,
+      Value<int> totalQuestions,
+      Value<int> correctCount,
+      Value<int> wrongCount,
+      Value<int> score,
+      Value<String> grade,
+      Value<int> xpEarned,
+      Value<int?> timeLimitMinutes,
+    });
+
+final class $$TestSessionsTableReferences
+    extends BaseReferences<_$AppDatabase, $TestSessionsTable, TestSession> {
+  $$TestSessionsTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static MultiTypedResultKey<$TestAnswersTable, List<TestAnswer>>
+  _testAnswersRefsTable(_$AppDatabase db) => MultiTypedResultKey.fromTable(
+    db.testAnswers,
+    aliasName: $_aliasNameGenerator(
+      db.testSessions.sessionId,
+      db.testAnswers.sessionId,
+    ),
+  );
+
+  $$TestAnswersTableProcessedTableManager get testAnswersRefs {
+    final manager = $$TestAnswersTableTableManager($_db, $_db.testAnswers)
+        .filter(
+          (f) => f.sessionId.sessionId.sqlEquals(
+            $_itemColumn<String>('session_id')!,
+          ),
+        );
+
+    final cache = $_typedResult.readTableOrNull(_testAnswersRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$TestSessionsTableFilterComposer
+    extends Composer<_$AppDatabase, $TestSessionsTable> {
+  $$TestSessionsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get totalQuestions => $composableBuilder(
+    column: $table.totalQuestions,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get score => $composableBuilder(
+    column: $table.score,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get grade => $composableBuilder(
+    column: $table.grade,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get xpEarned => $composableBuilder(
+    column: $table.xpEarned,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get timeLimitMinutes => $composableBuilder(
+    column: $table.timeLimitMinutes,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  Expression<bool> testAnswersRefs(
+    Expression<bool> Function($$TestAnswersTableFilterComposer f) f,
+  ) {
+    final $$TestAnswersTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.testAnswers,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$TestAnswersTableFilterComposer(
+            $db: $db,
+            $table: $db.testAnswers,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$TestSessionsTableOrderingComposer
+    extends Composer<_$AppDatabase, $TestSessionsTable> {
+  $$TestSessionsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get totalQuestions => $composableBuilder(
+    column: $table.totalQuestions,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get score => $composableBuilder(
+    column: $table.score,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get grade => $composableBuilder(
+    column: $table.grade,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get xpEarned => $composableBuilder(
+    column: $table.xpEarned,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get timeLimitMinutes => $composableBuilder(
+    column: $table.timeLimitMinutes,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$TestSessionsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $TestSessionsTable> {
+  $$TestSessionsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get sessionId =>
+      $composableBuilder(column: $table.sessionId, builder: (column) => column);
+
+  GeneratedColumn<int> get lessonId =>
+      $composableBuilder(column: $table.lessonId, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get startedAt =>
+      $composableBuilder(column: $table.startedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get totalQuestions => $composableBuilder(
+    column: $table.totalQuestions,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get correctCount => $composableBuilder(
+    column: $table.correctCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get score =>
+      $composableBuilder(column: $table.score, builder: (column) => column);
+
+  GeneratedColumn<String> get grade =>
+      $composableBuilder(column: $table.grade, builder: (column) => column);
+
+  GeneratedColumn<int> get xpEarned =>
+      $composableBuilder(column: $table.xpEarned, builder: (column) => column);
+
+  GeneratedColumn<int> get timeLimitMinutes => $composableBuilder(
+    column: $table.timeLimitMinutes,
+    builder: (column) => column,
+  );
+
+  Expression<T> testAnswersRefs<T extends Object>(
+    Expression<T> Function($$TestAnswersTableAnnotationComposer a) f,
+  ) {
+    final $$TestAnswersTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.testAnswers,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$TestAnswersTableAnnotationComposer(
+            $db: $db,
+            $table: $db.testAnswers,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$TestSessionsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $TestSessionsTable,
+          TestSession,
+          $$TestSessionsTableFilterComposer,
+          $$TestSessionsTableOrderingComposer,
+          $$TestSessionsTableAnnotationComposer,
+          $$TestSessionsTableCreateCompanionBuilder,
+          $$TestSessionsTableUpdateCompanionBuilder,
+          (TestSession, $$TestSessionsTableReferences),
+          TestSession,
+          PrefetchHooks Function({bool testAnswersRefs})
+        > {
+  $$TestSessionsTableTableManager(_$AppDatabase db, $TestSessionsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$TestSessionsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$TestSessionsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$TestSessionsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> sessionId = const Value.absent(),
+                Value<int> lessonId = const Value.absent(),
+                Value<DateTime> startedAt = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<int> totalQuestions = const Value.absent(),
+                Value<int> correctCount = const Value.absent(),
+                Value<int> wrongCount = const Value.absent(),
+                Value<int> score = const Value.absent(),
+                Value<String> grade = const Value.absent(),
+                Value<int> xpEarned = const Value.absent(),
+                Value<int?> timeLimitMinutes = const Value.absent(),
+              }) => TestSessionsCompanion(
+                id: id,
+                sessionId: sessionId,
+                lessonId: lessonId,
+                startedAt: startedAt,
+                completedAt: completedAt,
+                totalQuestions: totalQuestions,
+                correctCount: correctCount,
+                wrongCount: wrongCount,
+                score: score,
+                grade: grade,
+                xpEarned: xpEarned,
+                timeLimitMinutes: timeLimitMinutes,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String sessionId,
+                required int lessonId,
+                required DateTime startedAt,
+                Value<DateTime?> completedAt = const Value.absent(),
+                required int totalQuestions,
+                required int correctCount,
+                required int wrongCount,
+                required int score,
+                required String grade,
+                required int xpEarned,
+                Value<int?> timeLimitMinutes = const Value.absent(),
+              }) => TestSessionsCompanion.insert(
+                id: id,
+                sessionId: sessionId,
+                lessonId: lessonId,
+                startedAt: startedAt,
+                completedAt: completedAt,
+                totalQuestions: totalQuestions,
+                correctCount: correctCount,
+                wrongCount: wrongCount,
+                score: score,
+                grade: grade,
+                xpEarned: xpEarned,
+                timeLimitMinutes: timeLimitMinutes,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$TestSessionsTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({testAnswersRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [if (testAnswersRefs) db.testAnswers],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (testAnswersRefs)
+                    await $_getPrefetchedData<
+                      TestSession,
+                      $TestSessionsTable,
+                      TestAnswer
+                    >(
+                      currentTable: table,
+                      referencedTable: $$TestSessionsTableReferences
+                          ._testAnswersRefsTable(db),
+                      managerFromTypedResult: (p0) =>
+                          $$TestSessionsTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).testAnswersRefs,
+                      referencedItemsForCurrentItem: (item, referencedItems) =>
+                          referencedItems.where(
+                            (e) => e.sessionId == item.sessionId,
+                          ),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$TestSessionsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $TestSessionsTable,
+      TestSession,
+      $$TestSessionsTableFilterComposer,
+      $$TestSessionsTableOrderingComposer,
+      $$TestSessionsTableAnnotationComposer,
+      $$TestSessionsTableCreateCompanionBuilder,
+      $$TestSessionsTableUpdateCompanionBuilder,
+      (TestSession, $$TestSessionsTableReferences),
+      TestSession,
+      PrefetchHooks Function({bool testAnswersRefs})
+    >;
+typedef $$TestAnswersTableCreateCompanionBuilder =
+    TestAnswersCompanion Function({
+      Value<int> id,
+      required String sessionId,
+      required int questionIndex,
+      required int termId,
+      required String questionType,
+      Value<String?> userAnswer,
+      required bool isCorrect,
+      required DateTime answeredAt,
+    });
+typedef $$TestAnswersTableUpdateCompanionBuilder =
+    TestAnswersCompanion Function({
+      Value<int> id,
+      Value<String> sessionId,
+      Value<int> questionIndex,
+      Value<int> termId,
+      Value<String> questionType,
+      Value<String?> userAnswer,
+      Value<bool> isCorrect,
+      Value<DateTime> answeredAt,
+    });
+
+final class $$TestAnswersTableReferences
+    extends BaseReferences<_$AppDatabase, $TestAnswersTable, TestAnswer> {
+  $$TestAnswersTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static $TestSessionsTable _sessionIdTable(_$AppDatabase db) =>
+      db.testSessions.createAlias(
+        $_aliasNameGenerator(
+          db.testAnswers.sessionId,
+          db.testSessions.sessionId,
+        ),
+      );
+
+  $$TestSessionsTableProcessedTableManager get sessionId {
+    final $_column = $_itemColumn<String>('session_id')!;
+
+    final manager = $$TestSessionsTableTableManager(
+      $_db,
+      $_db.testSessions,
+    ).filter((f) => f.sessionId.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_sessionIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$TestAnswersTableFilterComposer
+    extends Composer<_$AppDatabase, $TestAnswersTable> {
+  $$TestAnswersTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get questionIndex => $composableBuilder(
+    column: $table.questionIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get termId => $composableBuilder(
+    column: $table.termId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get questionType => $composableBuilder(
+    column: $table.questionType,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isCorrect => $composableBuilder(
+    column: $table.isCorrect,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get answeredAt => $composableBuilder(
+    column: $table.answeredAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$TestSessionsTableFilterComposer get sessionId {
+    final $$TestSessionsTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.testSessions,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$TestSessionsTableFilterComposer(
+            $db: $db,
+            $table: $db.testSessions,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$TestAnswersTableOrderingComposer
+    extends Composer<_$AppDatabase, $TestAnswersTable> {
+  $$TestAnswersTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get questionIndex => $composableBuilder(
+    column: $table.questionIndex,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get termId => $composableBuilder(
+    column: $table.termId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get questionType => $composableBuilder(
+    column: $table.questionType,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isCorrect => $composableBuilder(
+    column: $table.isCorrect,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get answeredAt => $composableBuilder(
+    column: $table.answeredAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$TestSessionsTableOrderingComposer get sessionId {
+    final $$TestSessionsTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.testSessions,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$TestSessionsTableOrderingComposer(
+            $db: $db,
+            $table: $db.testSessions,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$TestAnswersTableAnnotationComposer
+    extends Composer<_$AppDatabase, $TestAnswersTable> {
+  $$TestAnswersTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get questionIndex => $composableBuilder(
+    column: $table.questionIndex,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get termId =>
+      $composableBuilder(column: $table.termId, builder: (column) => column);
+
+  GeneratedColumn<String> get questionType => $composableBuilder(
+    column: $table.questionType,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get isCorrect =>
+      $composableBuilder(column: $table.isCorrect, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get answeredAt => $composableBuilder(
+    column: $table.answeredAt,
+    builder: (column) => column,
+  );
+
+  $$TestSessionsTableAnnotationComposer get sessionId {
+    final $$TestSessionsTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.sessionId,
+      referencedTable: $db.testSessions,
+      getReferencedColumn: (t) => t.sessionId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$TestSessionsTableAnnotationComposer(
+            $db: $db,
+            $table: $db.testSessions,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$TestAnswersTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $TestAnswersTable,
+          TestAnswer,
+          $$TestAnswersTableFilterComposer,
+          $$TestAnswersTableOrderingComposer,
+          $$TestAnswersTableAnnotationComposer,
+          $$TestAnswersTableCreateCompanionBuilder,
+          $$TestAnswersTableUpdateCompanionBuilder,
+          (TestAnswer, $$TestAnswersTableReferences),
+          TestAnswer,
+          PrefetchHooks Function({bool sessionId})
+        > {
+  $$TestAnswersTableTableManager(_$AppDatabase db, $TestAnswersTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$TestAnswersTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$TestAnswersTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$TestAnswersTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> sessionId = const Value.absent(),
+                Value<int> questionIndex = const Value.absent(),
+                Value<int> termId = const Value.absent(),
+                Value<String> questionType = const Value.absent(),
+                Value<String?> userAnswer = const Value.absent(),
+                Value<bool> isCorrect = const Value.absent(),
+                Value<DateTime> answeredAt = const Value.absent(),
+              }) => TestAnswersCompanion(
+                id: id,
+                sessionId: sessionId,
+                questionIndex: questionIndex,
+                termId: termId,
+                questionType: questionType,
+                userAnswer: userAnswer,
+                isCorrect: isCorrect,
+                answeredAt: answeredAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String sessionId,
+                required int questionIndex,
+                required int termId,
+                required String questionType,
+                Value<String?> userAnswer = const Value.absent(),
+                required bool isCorrect,
+                required DateTime answeredAt,
+              }) => TestAnswersCompanion.insert(
+                id: id,
+                sessionId: sessionId,
+                questionIndex: questionIndex,
+                termId: termId,
+                questionType: questionType,
+                userAnswer: userAnswer,
+                isCorrect: isCorrect,
+                answeredAt: answeredAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$TestAnswersTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({sessionId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (sessionId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.sessionId,
+                                referencedTable: $$TestAnswersTableReferences
+                                    ._sessionIdTable(db),
+                                referencedColumn: $$TestAnswersTableReferences
+                                    ._sessionIdTable(db)
+                                    .sessionId,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$TestAnswersTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $TestAnswersTable,
+      TestAnswer,
+      $$TestAnswersTableFilterComposer,
+      $$TestAnswersTableOrderingComposer,
+      $$TestAnswersTableAnnotationComposer,
+      $$TestAnswersTableCreateCompanionBuilder,
+      $$TestAnswersTableUpdateCompanionBuilder,
+      (TestAnswer, $$TestAnswersTableReferences),
+      TestAnswer,
+      PrefetchHooks Function({bool sessionId})
+    >;
+typedef $$AchievementsTableCreateCompanionBuilder =
+    AchievementsCompanion Function({
+      Value<int> id,
+      required String type,
+      Value<int?> lessonId,
+      Value<String?> sessionId,
+      required int value,
+      required DateTime earnedAt,
+      Value<bool> isNotified,
+    });
+typedef $$AchievementsTableUpdateCompanionBuilder =
+    AchievementsCompanion Function({
+      Value<int> id,
+      Value<String> type,
+      Value<int?> lessonId,
+      Value<String?> sessionId,
+      Value<int> value,
+      Value<DateTime> earnedAt,
+      Value<bool> isNotified,
+    });
+
+class $$AchievementsTableFilterComposer
+    extends Composer<_$AppDatabase, $AchievementsTable> {
+  $$AchievementsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get type => $composableBuilder(
+    column: $table.type,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get value => $composableBuilder(
+    column: $table.value,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get earnedAt => $composableBuilder(
+    column: $table.earnedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isNotified => $composableBuilder(
+    column: $table.isNotified,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$AchievementsTableOrderingComposer
+    extends Composer<_$AppDatabase, $AchievementsTable> {
+  $$AchievementsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get type => $composableBuilder(
+    column: $table.type,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get value => $composableBuilder(
+    column: $table.value,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get earnedAt => $composableBuilder(
+    column: $table.earnedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isNotified => $composableBuilder(
+    column: $table.isNotified,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$AchievementsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $AchievementsTable> {
+  $$AchievementsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get type =>
+      $composableBuilder(column: $table.type, builder: (column) => column);
+
+  GeneratedColumn<int> get lessonId =>
+      $composableBuilder(column: $table.lessonId, builder: (column) => column);
+
+  GeneratedColumn<String> get sessionId =>
+      $composableBuilder(column: $table.sessionId, builder: (column) => column);
+
+  GeneratedColumn<int> get value =>
+      $composableBuilder(column: $table.value, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get earnedAt =>
+      $composableBuilder(column: $table.earnedAt, builder: (column) => column);
+
+  GeneratedColumn<bool> get isNotified => $composableBuilder(
+    column: $table.isNotified,
+    builder: (column) => column,
+  );
+}
+
+class $$AchievementsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $AchievementsTable,
+          Achievement,
+          $$AchievementsTableFilterComposer,
+          $$AchievementsTableOrderingComposer,
+          $$AchievementsTableAnnotationComposer,
+          $$AchievementsTableCreateCompanionBuilder,
+          $$AchievementsTableUpdateCompanionBuilder,
+          (
+            Achievement,
+            BaseReferences<_$AppDatabase, $AchievementsTable, Achievement>,
+          ),
+          Achievement,
+          PrefetchHooks Function()
+        > {
+  $$AchievementsTableTableManager(_$AppDatabase db, $AchievementsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$AchievementsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$AchievementsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$AchievementsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> type = const Value.absent(),
+                Value<int?> lessonId = const Value.absent(),
+                Value<String?> sessionId = const Value.absent(),
+                Value<int> value = const Value.absent(),
+                Value<DateTime> earnedAt = const Value.absent(),
+                Value<bool> isNotified = const Value.absent(),
+              }) => AchievementsCompanion(
+                id: id,
+                type: type,
+                lessonId: lessonId,
+                sessionId: sessionId,
+                value: value,
+                earnedAt: earnedAt,
+                isNotified: isNotified,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String type,
+                Value<int?> lessonId = const Value.absent(),
+                Value<String?> sessionId = const Value.absent(),
+                required int value,
+                required DateTime earnedAt,
+                Value<bool> isNotified = const Value.absent(),
+              }) => AchievementsCompanion.insert(
+                id: id,
+                type: type,
+                lessonId: lessonId,
+                sessionId: sessionId,
+                value: value,
+                earnedAt: earnedAt,
+                isNotified: isNotified,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$AchievementsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $AchievementsTable,
+      Achievement,
+      $$AchievementsTableFilterComposer,
+      $$AchievementsTableOrderingComposer,
+      $$AchievementsTableAnnotationComposer,
+      $$AchievementsTableCreateCompanionBuilder,
+      $$AchievementsTableUpdateCompanionBuilder,
+      (
+        Achievement,
+        BaseReferences<_$AppDatabase, $AchievementsTable, Achievement>,
+      ),
+      Achievement,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -5082,4 +9912,14 @@ class $AppDatabaseManager {
       $$UserLessonTableTableManager(_db, _db.userLesson);
   $$UserLessonTermTableTableManager get userLessonTerm =>
       $$UserLessonTermTableTableManager(_db, _db.userLessonTerm);
+  $$LearnSessionsTableTableManager get learnSessions =>
+      $$LearnSessionsTableTableManager(_db, _db.learnSessions);
+  $$LearnAnswersTableTableManager get learnAnswers =>
+      $$LearnAnswersTableTableManager(_db, _db.learnAnswers);
+  $$TestSessionsTableTableManager get testSessions =>
+      $$TestSessionsTableTableManager(_db, _db.testSessions);
+  $$TestAnswersTableTableManager get testAnswers =>
+      $$TestAnswersTableTableManager(_db, _db.testAnswers);
+  $$AchievementsTableTableManager get achievements =>
+      $$AchievementsTableTableManager(_db, _db.achievements);
 }

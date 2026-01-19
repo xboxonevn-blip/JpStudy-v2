@@ -1,10 +1,15 @@
 import 'dart:io';
 
+import '../daos/achievement_dao.dart';
+import '../daos/learn_dao.dart';
+import '../daos/test_dao.dart';
+
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
+import 'study_tables.dart';
 import 'tables.dart';
 
 part 'app_database.g.dart';
@@ -16,14 +21,26 @@ part 'app_database.g.dart';
     Attempt,
     AttemptAnswer,
     UserLesson,
+
     UserLessonTerm,
+    // Study Tables
+    LearnSessions,
+    LearnAnswers,
+    TestSessions,
+    TestAnswers,
+    Achievements,
+  ],
+  daos: [
+    LearnDao,
+    TestDao,
+    AchievementDao,
   ],
 )
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 9;
+  int get schemaVersion => 10;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -76,6 +93,13 @@ class AppDatabase extends _$AppDatabase {
           if (from < 9) {
             await migrator.addColumn(userLessonTerm, userLessonTerm.kanjiMeaning);
           }
+          if (from < 10) {
+            await migrator.createTable(learnSessions);
+            await migrator.createTable(learnAnswers);
+            await migrator.createTable(testSessions);
+            await migrator.createTable(testAnswers);
+            await migrator.createTable(achievements);
+          }
         },
       );
 
@@ -95,8 +119,8 @@ class AppDatabase extends _$AppDatabase {
 
 LazyDatabase _openConnection() {
   return LazyDatabase(() async {
-    final directory = await getApplicationDocumentsDirectory();
-    final file = File(p.join(directory.path, 'jpstudy.sqlite'));
+    final dbFolder = await getApplicationDocumentsDirectory();
+    final file = File(p.join(dbFolder.path, 'jpstudy.sqlite'));
     return NativeDatabase(file);
   });
 }

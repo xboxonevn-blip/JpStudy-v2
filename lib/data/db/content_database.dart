@@ -211,9 +211,6 @@ LazyDatabase _openContentConnection() {
   return LazyDatabase(() async {
     final directory = await getApplicationDocumentsDirectory();
     final file = File(p.join(directory.path, 'content.sqlite'));
-    
-    // Always create fresh database (no asset copy)
-    // Migration will handle seeding
     return NativeDatabase(file);
   });
 }

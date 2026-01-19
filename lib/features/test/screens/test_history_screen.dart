@@ -1,0 +1,447 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../providers/test_providers.dart';
+import '../services/test_history_service.dart';
+
+/// Widget to display test history and progress
+class TestHistoryScreen extends ConsumerWidget {
+  final int lessonId;
+  final String lessonTitle;
+
+  const TestHistoryScreen({
+    super.key,
+    required this.lessonId,
+    required this.lessonTitle,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final historyService = ref.watch(testHistoryServiceProvider);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('History: $lessonTitle'),
+      ),
+      body: FutureBuilder<_HistoryData>(
+        future: _loadData(historyService),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+
+          if (snapshot.hasError) {
+            return Center(child: Text('Error: ${snapshot.error}'));
+          }
+
+          final data = snapshot.data!;
+          final history = data.history;
+
+          if (history.isEmpty) {
+            return _buildEmptyState();
+          }
+
+          return SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Stats summary
+                _buildStatsSummary(context, history.length, data.bestScore, data.averageScore),
+                const SizedBox(height: 24),
+
+                // Progress chart
+                if (data.progressData.length >= 2) ...[
+                  _buildProgressChart(context, data.progressData),
+                  const SizedBox(height: 24),
+                ],
+
+                // History list
+                _buildHistoryList(context, history),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  Future<_HistoryData> _loadData(TestHistoryService service) async {
+    final results = await Future.wait([
+      service.getHistory(lessonId),
+      service.getProgressData(lessonId),
+      service.getBestScore(lessonId), // Returns nullable, so handle carefully if Future.wait disallows different types? No, it returns List<dynamic> or typed if consistent.
+      service.getAverageScore(lessonId),
+    ]);
+
+    return _HistoryData(
+      history: results[0] as List<TestHistoryRecord>,
+      progressData: results[1] as List<ProgressPoint>,
+      bestScore: results[2] as TestHistoryRecord?,
+      averageScore: results[3] as double,
+    );
+  }
+
+  Widget _buildEmptyState() {
+    return const Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.history, size: 64, color: Colors.grey),
+          SizedBox(height: 16),
+          Text(
+            'No test history yet',
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.grey,
+            ),
+          ),
+          SizedBox(height: 8),
+          Text(
+            'Complete a test to see your progress',
+            style: TextStyle(color: Colors.grey),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStatsSummary(
+    BuildContext context,
+    int testCount,
+    TestHistoryRecord? bestScore,
+    double averageScore,
+  ) {
+    return Row(
+      children: [
+        Expanded(
+          child: _StatCard(
+            icon: Icons.quiz,
+            label: 'Tests Taken',
+            value: testCount.toString(),
+            color: Colors.blue,
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: _StatCard(
+            icon: Icons.emoji_events,
+            label: 'Best Score',
+            value: bestScore != null ? '${bestScore.score.toInt()}%' : '-',
+            color: Colors.amber,
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: _StatCard(
+            icon: Icons.analytics,
+            label: 'Average',
+            value: '${averageScore.toInt()}%',
+            color: Colors.green,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildProgressChart(BuildContext context, List<ProgressPoint> data) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Progress Over Time',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 16),
+
+          // Simple bar chart
+          SizedBox(
+            height: 120,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: data.map((point) {
+                final height = (point.score / 100) * 100;
+                final color = _getScoreColor(point.score);
+
+                return Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          '${point.score.toInt()}',
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: color,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Container(
+                          height: height,
+                          decoration: BoxDecoration(
+                            color: color,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+
+          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Oldest',
+                style: TextStyle(fontSize: 10, color: Colors.grey[600]),
+              ),
+              Text(
+                'Latest',
+                style: TextStyle(fontSize: 10, color: Colors.grey[600]),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHistoryList(BuildContext context, List<TestHistoryRecord> history) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Test History',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 12),
+        ...history.asMap().entries.map((entry) {
+          final index = entry.key;
+          final record = entry.value;
+          final showComparison = index > 0;
+
+          return _HistoryItem(
+            record: record,
+            previousRecord: showComparison ? history[index - 1] : null,
+          );
+        }),
+      ],
+    );
+  }
+
+  Color _getScoreColor(double score) {
+    if (score >= 90) return Colors.green;
+    if (score >= 70) return Colors.blue;
+    if (score >= 50) return Colors.orange;
+    return Colors.red;
+  }
+}
+
+class _StatCard extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
+  final Color color;
+
+  const _StatCard({
+    required this.icon,
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: [
+          Icon(icon, color: color, size: 24),
+          const SizedBox(height: 8),
+          Text(
+            value,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
+          ),
+          Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey[600],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _HistoryItem extends StatelessWidget {
+  final TestHistoryRecord record;
+  final TestHistoryRecord? previousRecord;
+
+  const _HistoryItem({
+    required this.record,
+    this.previousRecord,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final scoreDiff = previousRecord != null
+        ? record.score - previousRecord!.score
+        : null;
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Theme.of(context).cardColor,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          // Grade circle
+          Container(
+            width: 50,
+            height: 50,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: _getGradeColor(record.grade).withValues(alpha: 0.2),
+            ),
+            child: Center(
+              child: Text(
+                record.grade,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: _getGradeColor(record.grade),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 16),
+
+          // Details
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${record.score.toInt()}% (${record.correctCount}/${record.totalQuestions})',
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  _formatDate(record.completedAt),
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey[600],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          // Comparison badge
+          if (scoreDiff != null)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: scoreDiff >= 0
+                    ? Colors.green.withValues(alpha: 0.1)
+                    : Colors.red.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    scoreDiff >= 0 ? Icons.arrow_upward : Icons.arrow_downward,
+                    size: 14,
+                    color: scoreDiff >= 0 ? Colors.green : Colors.red,
+                  ),
+                  const SizedBox(width: 2),
+                  Text(
+                    '${scoreDiff.abs().toInt()}%',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: scoreDiff >= 0 ? Colors.green : Colors.red,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Color _getGradeColor(String grade) {
+    switch (grade) {
+      case 'A':
+        return Colors.green;
+      case 'B':
+        return Colors.blue;
+      case 'C':
+        return Colors.orange;
+      case 'D':
+        return Colors.deepOrange;
+      default:
+        return Colors.red;
+    }
+  }
+
+  String _formatDate(DateTime date) {
+    return '${date.day}/${date.month}/${date.year} ${date.hour}:${date.minute.toString().padLeft(2, '0')}';
+  }
+}
+
+class _HistoryData {
+  final List<TestHistoryRecord> history;
+  final List<ProgressPoint> progressData;
+  final TestHistoryRecord? bestScore;
+  final double averageScore;
+
+  _HistoryData({
+    required this.history,
+    required this.progressData,
+    this.bestScore,
+    required this.averageScore,
+  });
+}

@@ -1,0 +1,192 @@
+import 'package:flutter/material.dart';
+
+import '../models/question.dart';
+
+/// Fill in the blank question widget
+class FillBlankWidget extends StatefulWidget {
+  final Question question;
+  final bool showResult;
+  final bool isCorrect;
+  final Function(String) onSubmit;
+
+  const FillBlankWidget({
+    super.key,
+    required this.question,
+    this.showResult = false,
+    this.isCorrect = false,
+    required this.onSubmit,
+  });
+
+  @override
+  State<FillBlankWidget> createState() => _FillBlankWidgetState();
+}
+
+class _FillBlankWidgetState extends State<FillBlankWidget> {
+  final _controller = TextEditingController();
+  final _focusNode = FocusNode();
+  bool _showHint = false;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Question card
+        Container(
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: Column(
+            children: [
+              Text(
+                widget.question.targetItem.term,
+                style: const TextStyle(
+                  fontSize: 48,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              if (widget.question.targetItem.reading != null) ...[
+                const SizedBox(height: 8),
+                Text(
+                  widget.question.targetItem.reading!,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.grey[600],
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+              const SizedBox(height: 16),
+              Text(
+                widget.question.questionText,
+                style: Theme.of(context).textTheme.titleMedium,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 32),
+
+        // Answer input
+        TextField(
+          controller: _controller,
+          focusNode: _focusNode,
+          enabled: !widget.showResult,
+          autofocus: true,
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 24),
+          decoration: InputDecoration(
+            hintText: 'Type your answer...',
+            hintStyle: TextStyle(color: Colors.grey[400]),
+            filled: true,
+            fillColor: widget.showResult
+                ? (widget.isCorrect
+                    ? Colors.green.withValues(alpha: 0.1)
+                    : Colors.red.withValues(alpha: 0.1))
+                : Colors.grey.withValues(alpha: 0.1),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: BorderSide.none,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: BorderSide(
+                color: Colors.grey.withValues(alpha: 0.3),
+                width: 2,
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: BorderSide(
+                color: Theme.of(context).primaryColor,
+                width: 2,
+              ),
+            ),
+            suffixIcon: widget.showResult
+                ? Icon(
+                    widget.isCorrect ? Icons.check_circle : Icons.cancel,
+                    color: widget.isCorrect ? Colors.green : Colors.red,
+                    size: 28,
+                  )
+                : null,
+          ),
+          onSubmitted: widget.showResult ? null : widget.onSubmit,
+        ),
+        const SizedBox(height: 16),
+
+        // Hint button
+        if (!widget.showResult && widget.question.hint != null)
+          TextButton.icon(
+            onPressed: () {
+              setState(() {
+                _showHint = true;
+              });
+            },
+            icon: const Icon(Icons.lightbulb_outline),
+            label: Text(_showHint ? 'Hint: ${widget.question.hint}' : 'Show Hint'),
+          ),
+
+        // Show correct answer if wrong
+        if (widget.showResult && !widget.isCorrect) ...[
+          const SizedBox(height: 16),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.green.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.green, width: 2),
+            ),
+            child: Column(
+              children: [
+                const Text(
+                  'Correct Answer:',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.green,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  widget.question.correctAnswer,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+
+        const SizedBox(height: 24),
+
+        // Submit button
+        if (!widget.showResult)
+          ElevatedButton(
+            onPressed: () => widget.onSubmit(_controller.text),
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+            child: const Text(
+              'Check Answer',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
+          ),
+      ],
+    );
+  }
+}

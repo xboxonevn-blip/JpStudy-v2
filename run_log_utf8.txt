@@ -1,0 +1,33 @@
+﻿Launching lib\main.dart on Windows in debug mode...
+Building Windows application...                                 
+flutter : NUGET.EXE 
+not found.
+At line:1 char:1
++ flutter run -d 
+windows > run_log.txt 
+2>&1
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (NUGET.EXE    
+ not found.:String    
+) [], RemoteExcep    
+tion
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+CMake Error at flutter
+/ephemeral/.plugin_sym
+links/flutter_tts/wind
+ows/CMakeLists.txt:9 
+(message):
+  Please install this 
+executable, and run 
+CMake again.
+
+
+Building Windows application...                                     61ms
+Error: Unable to 
+generate build files

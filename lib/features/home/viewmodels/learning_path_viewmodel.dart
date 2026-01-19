@@ -33,6 +33,8 @@ class LearningPathViewModel extends StateNotifier<AsyncValue<List<Unit>>> {
       
       final units = <Unit>[];
       
+      final statsMap = await _repo.getAllLessonProgress();
+      
       // 2. Process each group
       grouped.forEach((level, levelLessons) {
         // Sort by id or order (assuming id is creation order for now)
@@ -42,17 +44,8 @@ class LearningPathViewModel extends StateNotifier<AsyncValue<List<Unit>>> {
         bool previousCompleted = true; // First lesson is always unlocked
 
         for (final lesson in levelLessons) {
-          // TODO: Check actual completion status from DB (UserProgress or LessonTerm stats)
-          // For MVP Zero-Cost: completion is just mocked or simple boolean
-          // We need a way to check if a lesson is "completed".
-          // Let's assume for now if it has any learned terms it's "Available", 
-          // if >80% learned it's "Completed".
-          
-          // Since we don't have this data readily available in UserLessonData, 
-          // we might need to fetch stats. For now, strict linear unlocking:
-          // If previous is completed, this one is available.
-          
-          final isCompleted = false; // Mock for now, need repo method to check stats
+          final stats = statsMap[lesson.id];
+          final isCompleted = stats != null && stats.termCount > 0 && stats.completedCount == stats.termCount;
           
           LessonStatus status = LessonStatus.locked;
           if (previousCompleted) {
@@ -63,21 +56,23 @@ class LearningPathViewModel extends StateNotifier<AsyncValue<List<Unit>>> {
             lesson: lesson,
             status: status,
             stars: isCompleted ? 3 : 0,
-            progress: 0.0,
+            progress: (stats == null || stats.termCount == 0) 
+              ? 0.0 
+              : stats.completedCount / stats.termCount,
           ));
           
           previousCompleted = isCompleted;
-          
-          // Temporary override for dev: Unlock all
-          // status = LessonStatus.available; 
         }
 
         // Color based on level
         Color color = Colors.blue;
         if (level == 'N5') {
           color = Colors.pink;
-        } else if (level == 'N4') color = Colors.orange;
-        else if (level == 'N3') color = Colors.teal;
+        } else if (level == 'N4') {
+          color = Colors.orange;
+        } else if (level == 'N3') {
+          color = Colors.teal;
+        }
 
         units.add(Unit(
           id: level,
@@ -93,4 +88,6 @@ class LearningPathViewModel extends StateNotifier<AsyncValue<List<Unit>>> {
       state = AsyncValue.error(e, st);
     }
   }
+
+  // Helper removed as logic is inline now
 }

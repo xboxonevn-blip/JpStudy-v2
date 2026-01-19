@@ -140,10 +140,12 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       body: Column(
         children: [
           // Progress bar
-          LinearProgressIndicator(
-            value: _session.progress,
-            backgroundColor: Colors.grey[200],
-            minHeight: 6,
+          SizedBox(
+            height: 6,
+            child: LinearProgressIndicator(
+              value: _session.progress,
+              backgroundColor: Colors.grey[200],
+            ),
           ),
 
           // Question navigator

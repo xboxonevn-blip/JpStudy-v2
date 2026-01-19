@@ -1925,6 +1925,17 @@ class $GrammarPointsTable extends GrammarPoints
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _meaningViMeta = const VerificationMeta(
+    'meaningVi',
+  );
+  @override
+  late final GeneratedColumn<String> meaningVi = GeneratedColumn<String>(
+    'meaning_vi',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _connectionMeta = const VerificationMeta(
     'connection',
   );
@@ -1946,6 +1957,17 @@ class $GrammarPointsTable extends GrammarPoints
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
+  );
+  static const VerificationMeta _explanationViMeta = const VerificationMeta(
+    'explanationVi',
+  );
+  @override
+  late final GeneratedColumn<String> explanationVi = GeneratedColumn<String>(
+    'explanation_vi',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
   );
   static const VerificationMeta _jlptLevelMeta = const VerificationMeta(
     'jlptLevel',
@@ -1982,8 +2004,10 @@ class $GrammarPointsTable extends GrammarPoints
     id,
     grammarPoint,
     meaning,
+    meaningVi,
     connection,
     explanation,
+    explanationVi,
     jlptLevel,
     isLearned,
   ];
@@ -2021,6 +2045,12 @@ class $GrammarPointsTable extends GrammarPoints
     } else if (isInserting) {
       context.missing(_meaningMeta);
     }
+    if (data.containsKey('meaning_vi')) {
+      context.handle(
+        _meaningViMeta,
+        meaningVi.isAcceptableOrUnknown(data['meaning_vi']!, _meaningViMeta),
+      );
+    }
     if (data.containsKey('connection')) {
       context.handle(
         _connectionMeta,
@@ -2039,6 +2069,15 @@ class $GrammarPointsTable extends GrammarPoints
       );
     } else if (isInserting) {
       context.missing(_explanationMeta);
+    }
+    if (data.containsKey('explanation_vi')) {
+      context.handle(
+        _explanationViMeta,
+        explanationVi.isAcceptableOrUnknown(
+          data['explanation_vi']!,
+          _explanationViMeta,
+        ),
+      );
     }
     if (data.containsKey('jlpt_level')) {
       context.handle(
@@ -2075,6 +2114,10 @@ class $GrammarPointsTable extends GrammarPoints
         DriftSqlType.string,
         data['${effectivePrefix}meaning'],
       )!,
+      meaningVi: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}meaning_vi'],
+      ),
       connection: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}connection'],
@@ -2083,6 +2126,10 @@ class $GrammarPointsTable extends GrammarPoints
         DriftSqlType.string,
         data['${effectivePrefix}explanation'],
       )!,
+      explanationVi: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}explanation_vi'],
+      ),
       jlptLevel: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}jlpt_level'],
@@ -2104,16 +2151,20 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
   final int id;
   final String grammarPoint;
   final String meaning;
+  final String? meaningVi;
   final String connection;
   final String explanation;
+  final String? explanationVi;
   final String jlptLevel;
   final bool isLearned;
   const GrammarPoint({
     required this.id,
     required this.grammarPoint,
     required this.meaning,
+    this.meaningVi,
     required this.connection,
     required this.explanation,
+    this.explanationVi,
     required this.jlptLevel,
     required this.isLearned,
   });
@@ -2123,8 +2174,14 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
     map['id'] = Variable<int>(id);
     map['grammar_point'] = Variable<String>(grammarPoint);
     map['meaning'] = Variable<String>(meaning);
+    if (!nullToAbsent || meaningVi != null) {
+      map['meaning_vi'] = Variable<String>(meaningVi);
+    }
     map['connection'] = Variable<String>(connection);
     map['explanation'] = Variable<String>(explanation);
+    if (!nullToAbsent || explanationVi != null) {
+      map['explanation_vi'] = Variable<String>(explanationVi);
+    }
     map['jlpt_level'] = Variable<String>(jlptLevel);
     map['is_learned'] = Variable<bool>(isLearned);
     return map;
@@ -2135,8 +2192,14 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
       id: Value(id),
       grammarPoint: Value(grammarPoint),
       meaning: Value(meaning),
+      meaningVi: meaningVi == null && nullToAbsent
+          ? const Value.absent()
+          : Value(meaningVi),
       connection: Value(connection),
       explanation: Value(explanation),
+      explanationVi: explanationVi == null && nullToAbsent
+          ? const Value.absent()
+          : Value(explanationVi),
       jlptLevel: Value(jlptLevel),
       isLearned: Value(isLearned),
     );
@@ -2151,8 +2214,10 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
       id: serializer.fromJson<int>(json['id']),
       grammarPoint: serializer.fromJson<String>(json['grammarPoint']),
       meaning: serializer.fromJson<String>(json['meaning']),
+      meaningVi: serializer.fromJson<String?>(json['meaningVi']),
       connection: serializer.fromJson<String>(json['connection']),
       explanation: serializer.fromJson<String>(json['explanation']),
+      explanationVi: serializer.fromJson<String?>(json['explanationVi']),
       jlptLevel: serializer.fromJson<String>(json['jlptLevel']),
       isLearned: serializer.fromJson<bool>(json['isLearned']),
     );
@@ -2164,8 +2229,10 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
       'id': serializer.toJson<int>(id),
       'grammarPoint': serializer.toJson<String>(grammarPoint),
       'meaning': serializer.toJson<String>(meaning),
+      'meaningVi': serializer.toJson<String?>(meaningVi),
       'connection': serializer.toJson<String>(connection),
       'explanation': serializer.toJson<String>(explanation),
+      'explanationVi': serializer.toJson<String?>(explanationVi),
       'jlptLevel': serializer.toJson<String>(jlptLevel),
       'isLearned': serializer.toJson<bool>(isLearned),
     };
@@ -2175,16 +2242,22 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
     int? id,
     String? grammarPoint,
     String? meaning,
+    Value<String?> meaningVi = const Value.absent(),
     String? connection,
     String? explanation,
+    Value<String?> explanationVi = const Value.absent(),
     String? jlptLevel,
     bool? isLearned,
   }) => GrammarPoint(
     id: id ?? this.id,
     grammarPoint: grammarPoint ?? this.grammarPoint,
     meaning: meaning ?? this.meaning,
+    meaningVi: meaningVi.present ? meaningVi.value : this.meaningVi,
     connection: connection ?? this.connection,
     explanation: explanation ?? this.explanation,
+    explanationVi: explanationVi.present
+        ? explanationVi.value
+        : this.explanationVi,
     jlptLevel: jlptLevel ?? this.jlptLevel,
     isLearned: isLearned ?? this.isLearned,
   );
@@ -2195,12 +2268,16 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
           ? data.grammarPoint.value
           : this.grammarPoint,
       meaning: data.meaning.present ? data.meaning.value : this.meaning,
+      meaningVi: data.meaningVi.present ? data.meaningVi.value : this.meaningVi,
       connection: data.connection.present
           ? data.connection.value
           : this.connection,
       explanation: data.explanation.present
           ? data.explanation.value
           : this.explanation,
+      explanationVi: data.explanationVi.present
+          ? data.explanationVi.value
+          : this.explanationVi,
       jlptLevel: data.jlptLevel.present ? data.jlptLevel.value : this.jlptLevel,
       isLearned: data.isLearned.present ? data.isLearned.value : this.isLearned,
     );
@@ -2212,8 +2289,10 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
           ..write('id: $id, ')
           ..write('grammarPoint: $grammarPoint, ')
           ..write('meaning: $meaning, ')
+          ..write('meaningVi: $meaningVi, ')
           ..write('connection: $connection, ')
           ..write('explanation: $explanation, ')
+          ..write('explanationVi: $explanationVi, ')
           ..write('jlptLevel: $jlptLevel, ')
           ..write('isLearned: $isLearned')
           ..write(')'))
@@ -2225,8 +2304,10 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
     id,
     grammarPoint,
     meaning,
+    meaningVi,
     connection,
     explanation,
+    explanationVi,
     jlptLevel,
     isLearned,
   );
@@ -2237,8 +2318,10 @@ class GrammarPoint extends DataClass implements Insertable<GrammarPoint> {
           other.id == this.id &&
           other.grammarPoint == this.grammarPoint &&
           other.meaning == this.meaning &&
+          other.meaningVi == this.meaningVi &&
           other.connection == this.connection &&
           other.explanation == this.explanation &&
+          other.explanationVi == this.explanationVi &&
           other.jlptLevel == this.jlptLevel &&
           other.isLearned == this.isLearned);
 }
@@ -2247,16 +2330,20 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
   final Value<int> id;
   final Value<String> grammarPoint;
   final Value<String> meaning;
+  final Value<String?> meaningVi;
   final Value<String> connection;
   final Value<String> explanation;
+  final Value<String?> explanationVi;
   final Value<String> jlptLevel;
   final Value<bool> isLearned;
   const GrammarPointsCompanion({
     this.id = const Value.absent(),
     this.grammarPoint = const Value.absent(),
     this.meaning = const Value.absent(),
+    this.meaningVi = const Value.absent(),
     this.connection = const Value.absent(),
     this.explanation = const Value.absent(),
+    this.explanationVi = const Value.absent(),
     this.jlptLevel = const Value.absent(),
     this.isLearned = const Value.absent(),
   });
@@ -2264,8 +2351,10 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
     this.id = const Value.absent(),
     required String grammarPoint,
     required String meaning,
+    this.meaningVi = const Value.absent(),
     required String connection,
     required String explanation,
+    this.explanationVi = const Value.absent(),
     required String jlptLevel,
     this.isLearned = const Value.absent(),
   }) : grammarPoint = Value(grammarPoint),
@@ -2277,8 +2366,10 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
     Expression<int>? id,
     Expression<String>? grammarPoint,
     Expression<String>? meaning,
+    Expression<String>? meaningVi,
     Expression<String>? connection,
     Expression<String>? explanation,
+    Expression<String>? explanationVi,
     Expression<String>? jlptLevel,
     Expression<bool>? isLearned,
   }) {
@@ -2286,8 +2377,10 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
       if (id != null) 'id': id,
       if (grammarPoint != null) 'grammar_point': grammarPoint,
       if (meaning != null) 'meaning': meaning,
+      if (meaningVi != null) 'meaning_vi': meaningVi,
       if (connection != null) 'connection': connection,
       if (explanation != null) 'explanation': explanation,
+      if (explanationVi != null) 'explanation_vi': explanationVi,
       if (jlptLevel != null) 'jlpt_level': jlptLevel,
       if (isLearned != null) 'is_learned': isLearned,
     });
@@ -2297,8 +2390,10 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
     Value<int>? id,
     Value<String>? grammarPoint,
     Value<String>? meaning,
+    Value<String?>? meaningVi,
     Value<String>? connection,
     Value<String>? explanation,
+    Value<String?>? explanationVi,
     Value<String>? jlptLevel,
     Value<bool>? isLearned,
   }) {
@@ -2306,8 +2401,10 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
       id: id ?? this.id,
       grammarPoint: grammarPoint ?? this.grammarPoint,
       meaning: meaning ?? this.meaning,
+      meaningVi: meaningVi ?? this.meaningVi,
       connection: connection ?? this.connection,
       explanation: explanation ?? this.explanation,
+      explanationVi: explanationVi ?? this.explanationVi,
       jlptLevel: jlptLevel ?? this.jlptLevel,
       isLearned: isLearned ?? this.isLearned,
     );
@@ -2325,11 +2422,17 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
     if (meaning.present) {
       map['meaning'] = Variable<String>(meaning.value);
     }
+    if (meaningVi.present) {
+      map['meaning_vi'] = Variable<String>(meaningVi.value);
+    }
     if (connection.present) {
       map['connection'] = Variable<String>(connection.value);
     }
     if (explanation.present) {
       map['explanation'] = Variable<String>(explanation.value);
+    }
+    if (explanationVi.present) {
+      map['explanation_vi'] = Variable<String>(explanationVi.value);
     }
     if (jlptLevel.present) {
       map['jlpt_level'] = Variable<String>(jlptLevel.value);
@@ -2346,8 +2449,10 @@ class GrammarPointsCompanion extends UpdateCompanion<GrammarPoint> {
           ..write('id: $id, ')
           ..write('grammarPoint: $grammarPoint, ')
           ..write('meaning: $meaning, ')
+          ..write('meaningVi: $meaningVi, ')
           ..write('connection: $connection, ')
           ..write('explanation: $explanation, ')
+          ..write('explanationVi: $explanationVi, ')
           ..write('jlptLevel: $jlptLevel, ')
           ..write('isLearned: $isLearned')
           ..write(')'))
@@ -2410,6 +2515,17 @@ class $GrammarExamplesTable extends GrammarExamples
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _translationViMeta = const VerificationMeta(
+    'translationVi',
+  );
+  @override
+  late final GeneratedColumn<String> translationVi = GeneratedColumn<String>(
+    'translation_vi',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _audioUrlMeta = const VerificationMeta(
     'audioUrl',
   );
@@ -2427,6 +2543,7 @@ class $GrammarExamplesTable extends GrammarExamples
     grammarId,
     japanese,
     translation,
+    translationVi,
     audioUrl,
   ];
   @override
@@ -2471,6 +2588,15 @@ class $GrammarExamplesTable extends GrammarExamples
     } else if (isInserting) {
       context.missing(_translationMeta);
     }
+    if (data.containsKey('translation_vi')) {
+      context.handle(
+        _translationViMeta,
+        translationVi.isAcceptableOrUnknown(
+          data['translation_vi']!,
+          _translationViMeta,
+        ),
+      );
+    }
     if (data.containsKey('audio_url')) {
       context.handle(
         _audioUrlMeta,
@@ -2502,6 +2628,10 @@ class $GrammarExamplesTable extends GrammarExamples
         DriftSqlType.string,
         data['${effectivePrefix}translation'],
       )!,
+      translationVi: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}translation_vi'],
+      ),
       audioUrl: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}audio_url'],
@@ -2520,12 +2650,14 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
   final int grammarId;
   final String japanese;
   final String translation;
+  final String? translationVi;
   final String? audioUrl;
   const GrammarExample({
     required this.id,
     required this.grammarId,
     required this.japanese,
     required this.translation,
+    this.translationVi,
     this.audioUrl,
   });
   @override
@@ -2535,6 +2667,9 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
     map['grammar_id'] = Variable<int>(grammarId);
     map['japanese'] = Variable<String>(japanese);
     map['translation'] = Variable<String>(translation);
+    if (!nullToAbsent || translationVi != null) {
+      map['translation_vi'] = Variable<String>(translationVi);
+    }
     if (!nullToAbsent || audioUrl != null) {
       map['audio_url'] = Variable<String>(audioUrl);
     }
@@ -2547,6 +2682,9 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       grammarId: Value(grammarId),
       japanese: Value(japanese),
       translation: Value(translation),
+      translationVi: translationVi == null && nullToAbsent
+          ? const Value.absent()
+          : Value(translationVi),
       audioUrl: audioUrl == null && nullToAbsent
           ? const Value.absent()
           : Value(audioUrl),
@@ -2563,6 +2701,7 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       grammarId: serializer.fromJson<int>(json['grammarId']),
       japanese: serializer.fromJson<String>(json['japanese']),
       translation: serializer.fromJson<String>(json['translation']),
+      translationVi: serializer.fromJson<String?>(json['translationVi']),
       audioUrl: serializer.fromJson<String?>(json['audioUrl']),
     );
   }
@@ -2574,6 +2713,7 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       'grammarId': serializer.toJson<int>(grammarId),
       'japanese': serializer.toJson<String>(japanese),
       'translation': serializer.toJson<String>(translation),
+      'translationVi': serializer.toJson<String?>(translationVi),
       'audioUrl': serializer.toJson<String?>(audioUrl),
     };
   }
@@ -2583,12 +2723,16 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
     int? grammarId,
     String? japanese,
     String? translation,
+    Value<String?> translationVi = const Value.absent(),
     Value<String?> audioUrl = const Value.absent(),
   }) => GrammarExample(
     id: id ?? this.id,
     grammarId: grammarId ?? this.grammarId,
     japanese: japanese ?? this.japanese,
     translation: translation ?? this.translation,
+    translationVi: translationVi.present
+        ? translationVi.value
+        : this.translationVi,
     audioUrl: audioUrl.present ? audioUrl.value : this.audioUrl,
   );
   GrammarExample copyWithCompanion(GrammarExamplesCompanion data) {
@@ -2599,6 +2743,9 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       translation: data.translation.present
           ? data.translation.value
           : this.translation,
+      translationVi: data.translationVi.present
+          ? data.translationVi.value
+          : this.translationVi,
       audioUrl: data.audioUrl.present ? data.audioUrl.value : this.audioUrl,
     );
   }
@@ -2610,14 +2757,21 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
           ..write('grammarId: $grammarId, ')
           ..write('japanese: $japanese, ')
           ..write('translation: $translation, ')
+          ..write('translationVi: $translationVi, ')
           ..write('audioUrl: $audioUrl')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode =>
-      Object.hash(id, grammarId, japanese, translation, audioUrl);
+  int get hashCode => Object.hash(
+    id,
+    grammarId,
+    japanese,
+    translation,
+    translationVi,
+    audioUrl,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -2626,6 +2780,7 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
           other.grammarId == this.grammarId &&
           other.japanese == this.japanese &&
           other.translation == this.translation &&
+          other.translationVi == this.translationVi &&
           other.audioUrl == this.audioUrl);
 }
 
@@ -2634,12 +2789,14 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
   final Value<int> grammarId;
   final Value<String> japanese;
   final Value<String> translation;
+  final Value<String?> translationVi;
   final Value<String?> audioUrl;
   const GrammarExamplesCompanion({
     this.id = const Value.absent(),
     this.grammarId = const Value.absent(),
     this.japanese = const Value.absent(),
     this.translation = const Value.absent(),
+    this.translationVi = const Value.absent(),
     this.audioUrl = const Value.absent(),
   });
   GrammarExamplesCompanion.insert({
@@ -2647,6 +2804,7 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     required int grammarId,
     required String japanese,
     required String translation,
+    this.translationVi = const Value.absent(),
     this.audioUrl = const Value.absent(),
   }) : grammarId = Value(grammarId),
        japanese = Value(japanese),
@@ -2656,6 +2814,7 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     Expression<int>? grammarId,
     Expression<String>? japanese,
     Expression<String>? translation,
+    Expression<String>? translationVi,
     Expression<String>? audioUrl,
   }) {
     return RawValuesInsertable({
@@ -2663,6 +2822,7 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
       if (grammarId != null) 'grammar_id': grammarId,
       if (japanese != null) 'japanese': japanese,
       if (translation != null) 'translation': translation,
+      if (translationVi != null) 'translation_vi': translationVi,
       if (audioUrl != null) 'audio_url': audioUrl,
     });
   }
@@ -2672,6 +2832,7 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     Value<int>? grammarId,
     Value<String>? japanese,
     Value<String>? translation,
+    Value<String?>? translationVi,
     Value<String?>? audioUrl,
   }) {
     return GrammarExamplesCompanion(
@@ -2679,6 +2840,7 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
       grammarId: grammarId ?? this.grammarId,
       japanese: japanese ?? this.japanese,
       translation: translation ?? this.translation,
+      translationVi: translationVi ?? this.translationVi,
       audioUrl: audioUrl ?? this.audioUrl,
     );
   }
@@ -2698,6 +2860,9 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     if (translation.present) {
       map['translation'] = Variable<String>(translation.value);
     }
+    if (translationVi.present) {
+      map['translation_vi'] = Variable<String>(translationVi.value);
+    }
     if (audioUrl.present) {
       map['audio_url'] = Variable<String>(audioUrl.value);
     }
@@ -2711,6 +2876,7 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
           ..write('grammarId: $grammarId, ')
           ..write('japanese: $japanese, ')
           ..write('translation: $translation, ')
+          ..write('translationVi: $translationVi, ')
           ..write('audioUrl: $audioUrl')
           ..write(')'))
         .toString();
@@ -10343,8 +10509,10 @@ typedef $$GrammarPointsTableCreateCompanionBuilder =
       Value<int> id,
       required String grammarPoint,
       required String meaning,
+      Value<String?> meaningVi,
       required String connection,
       required String explanation,
+      Value<String?> explanationVi,
       required String jlptLevel,
       Value<bool> isLearned,
     });
@@ -10353,8 +10521,10 @@ typedef $$GrammarPointsTableUpdateCompanionBuilder =
       Value<int> id,
       Value<String> grammarPoint,
       Value<String> meaning,
+      Value<String?> meaningVi,
       Value<String> connection,
       Value<String> explanation,
+      Value<String?> explanationVi,
       Value<String> jlptLevel,
       Value<bool> isLearned,
     });
@@ -10438,6 +10608,11 @@ class $$GrammarPointsTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<String> get meaningVi => $composableBuilder(
+    column: $table.meaningVi,
+    builder: (column) => ColumnFilters(column),
+  );
+
   ColumnFilters<String> get connection => $composableBuilder(
     column: $table.connection,
     builder: (column) => ColumnFilters(column),
@@ -10445,6 +10620,11 @@ class $$GrammarPointsTableFilterComposer
 
   ColumnFilters<String> get explanation => $composableBuilder(
     column: $table.explanation,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get explanationVi => $composableBuilder(
+    column: $table.explanationVi,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -10533,6 +10713,11 @@ class $$GrammarPointsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get meaningVi => $composableBuilder(
+    column: $table.meaningVi,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get connection => $composableBuilder(
     column: $table.connection,
     builder: (column) => ColumnOrderings(column),
@@ -10540,6 +10725,11 @@ class $$GrammarPointsTableOrderingComposer
 
   ColumnOrderings<String> get explanation => $composableBuilder(
     column: $table.explanation,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get explanationVi => $composableBuilder(
+    column: $table.explanationVi,
     builder: (column) => ColumnOrderings(column),
   );
 
@@ -10574,6 +10764,9 @@ class $$GrammarPointsTableAnnotationComposer
   GeneratedColumn<String> get meaning =>
       $composableBuilder(column: $table.meaning, builder: (column) => column);
 
+  GeneratedColumn<String> get meaningVi =>
+      $composableBuilder(column: $table.meaningVi, builder: (column) => column);
+
   GeneratedColumn<String> get connection => $composableBuilder(
     column: $table.connection,
     builder: (column) => column,
@@ -10581,6 +10774,11 @@ class $$GrammarPointsTableAnnotationComposer
 
   GeneratedColumn<String> get explanation => $composableBuilder(
     column: $table.explanation,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get explanationVi => $composableBuilder(
+    column: $table.explanationVi,
     builder: (column) => column,
   );
 
@@ -10675,16 +10873,20 @@ class $$GrammarPointsTableTableManager
                 Value<int> id = const Value.absent(),
                 Value<String> grammarPoint = const Value.absent(),
                 Value<String> meaning = const Value.absent(),
+                Value<String?> meaningVi = const Value.absent(),
                 Value<String> connection = const Value.absent(),
                 Value<String> explanation = const Value.absent(),
+                Value<String?> explanationVi = const Value.absent(),
                 Value<String> jlptLevel = const Value.absent(),
                 Value<bool> isLearned = const Value.absent(),
               }) => GrammarPointsCompanion(
                 id: id,
                 grammarPoint: grammarPoint,
                 meaning: meaning,
+                meaningVi: meaningVi,
                 connection: connection,
                 explanation: explanation,
+                explanationVi: explanationVi,
                 jlptLevel: jlptLevel,
                 isLearned: isLearned,
               ),
@@ -10693,16 +10895,20 @@ class $$GrammarPointsTableTableManager
                 Value<int> id = const Value.absent(),
                 required String grammarPoint,
                 required String meaning,
+                Value<String?> meaningVi = const Value.absent(),
                 required String connection,
                 required String explanation,
+                Value<String?> explanationVi = const Value.absent(),
                 required String jlptLevel,
                 Value<bool> isLearned = const Value.absent(),
               }) => GrammarPointsCompanion.insert(
                 id: id,
                 grammarPoint: grammarPoint,
                 meaning: meaning,
+                meaningVi: meaningVi,
                 connection: connection,
                 explanation: explanation,
+                explanationVi: explanationVi,
                 jlptLevel: jlptLevel,
                 isLearned: isLearned,
               ),
@@ -10798,6 +11004,7 @@ typedef $$GrammarExamplesTableCreateCompanionBuilder =
       required int grammarId,
       required String japanese,
       required String translation,
+      Value<String?> translationVi,
       Value<String?> audioUrl,
     });
 typedef $$GrammarExamplesTableUpdateCompanionBuilder =
@@ -10806,6 +11013,7 @@ typedef $$GrammarExamplesTableUpdateCompanionBuilder =
       Value<int> grammarId,
       Value<String> japanese,
       Value<String> translation,
+      Value<String?> translationVi,
       Value<String?> audioUrl,
     });
 
@@ -10862,6 +11070,11 @@ class $$GrammarExamplesTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<String> get translationVi => $composableBuilder(
+    column: $table.translationVi,
+    builder: (column) => ColumnFilters(column),
+  );
+
   ColumnFilters<String> get audioUrl => $composableBuilder(
     column: $table.audioUrl,
     builder: (column) => ColumnFilters(column),
@@ -10915,6 +11128,11 @@ class $$GrammarExamplesTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get translationVi => $composableBuilder(
+    column: $table.translationVi,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get audioUrl => $composableBuilder(
     column: $table.audioUrl,
     builder: (column) => ColumnOrderings(column),
@@ -10961,6 +11179,11 @@ class $$GrammarExamplesTableAnnotationComposer
 
   GeneratedColumn<String> get translation => $composableBuilder(
     column: $table.translation,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get translationVi => $composableBuilder(
+    column: $table.translationVi,
     builder: (column) => column,
   );
 
@@ -11025,12 +11248,14 @@ class $$GrammarExamplesTableTableManager
                 Value<int> grammarId = const Value.absent(),
                 Value<String> japanese = const Value.absent(),
                 Value<String> translation = const Value.absent(),
+                Value<String?> translationVi = const Value.absent(),
                 Value<String?> audioUrl = const Value.absent(),
               }) => GrammarExamplesCompanion(
                 id: id,
                 grammarId: grammarId,
                 japanese: japanese,
                 translation: translation,
+                translationVi: translationVi,
                 audioUrl: audioUrl,
               ),
           createCompanionCallback:
@@ -11039,12 +11264,14 @@ class $$GrammarExamplesTableTableManager
                 required int grammarId,
                 required String japanese,
                 required String translation,
+                Value<String?> translationVi = const Value.absent(),
                 Value<String?> audioUrl = const Value.absent(),
               }) => GrammarExamplesCompanion.insert(
                 id: id,
                 grammarId: grammarId,
                 japanese: japanese,
                 translation: translation,
+                translationVi: translationVi,
                 audioUrl: audioUrl,
               ),
           withReferenceMapper: (p0) => p0

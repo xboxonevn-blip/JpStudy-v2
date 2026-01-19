@@ -9,12 +9,24 @@ final grammarRepositoryProvider = Provider<GrammarRepository>((ref) {
 
 class GrammarRepository {
   final AppDatabase _db;
+  AppDatabase get db => _db;
 
   GrammarRepository(this._db);
 
   /// Fetch all grammar points for a specific JLPT level
   Future<List<GrammarPoint>> fetchPointsByLevel(String level) {
     return _db.grammarDao.getGrammarPointsByLevel(level);
+  }
+
+  /// Fetch all grammar points due for review
+  Future<List<GrammarPoint>> fetchDuePoints() async {
+    final dueStates = await _db.grammarDao.getDueReviews();
+    final ids = dueStates.map((s) => s.grammarId).toList();
+    if (ids.isEmpty) return [];
+    
+    // Fetch actual points for these ids
+    final points = await (_db.select(_db.grammarPoints)..where((t) => t.id.isIn(ids))).get();
+    return points;
   }
 
   /// Fetch full details for a grammar point (including examples)
@@ -53,14 +65,18 @@ class GrammarRepository {
     int newStreak = state.streak;
     double newEase = state.ease;
     int interval = 1;
+    int ghostReviewsDue = state.ghostReviewsDue;
 
     if (quality < 3) {
       newStreak = 0;
       interval = 1;
       // Ghost logic: Mark as needing special review
-      // In future: set ghostReviewsDue = 1
+      ghostReviewsDue = 1; // Need 1 successful review to clear ghost status
     } else {
       newStreak += 1;
+      // If was ghost, clear it
+      ghostReviewsDue = 0;
+      
       if (newStreak == 1) {
         interval = 1;
       } else if (newStreak == 2) {
@@ -89,6 +105,13 @@ class GrammarRepository {
       streak: newStreak,
       ease: newEase,
       nextReviewAt: DateTime.now().add(Duration(days: interval)),
+      ghostReviewsDue: ghostReviewsDue,
     );
+  }
+
+  /// Mark a grammar point as learned and initialize SRS
+  Future<void> markAsLearned(int grammarId) async {
+    await _db.grammarDao.updateLearnedStatus(grammarId, true);
+    await ensureSrsInitialized(grammarId);
   }
 }

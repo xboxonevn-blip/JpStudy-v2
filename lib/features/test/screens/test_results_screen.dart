@@ -251,13 +251,15 @@ class TestResultsScreen extends StatelessWidget {
                 const SizedBox(height: 4),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(4),
-                  child: LinearProgressIndicator(
-                    value: breakdown.accuracy / 100,
-                    backgroundColor: Colors.grey[300],
-                    valueColor: AlwaysStoppedAnimation<Color>(
-                      breakdown.accuracy >= 70 ? Colors.green : Colors.orange,
+                  child: SizedBox(
+                    height: 8,
+                    child: LinearProgressIndicator(
+                      value: breakdown.accuracy / 100,
+                      backgroundColor: Colors.grey[300],
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        breakdown.accuracy >= 70 ? Colors.green : Colors.orange,
+                      ),
                     ),
-                    minHeight: 8,
                   ),
                 ),
               ],

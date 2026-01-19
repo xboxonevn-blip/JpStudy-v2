@@ -1,22 +1,12 @@
 import 'package:jpstudy/core/app_language.dart';
 
 enum StudyLevel {
-  n5,
-  n4,
-  n3,
-}
+  n5('N5'),
+  n4('N4'),
+  n3('N3');
 
-extension StudyLevelLabels on StudyLevel {
-  String get shortLabel {
-    switch (this) {
-      case StudyLevel.n5:
-        return 'N5';
-      case StudyLevel.n4:
-        return 'N4';
-      case StudyLevel.n3:
-        return 'N3';
-    }
-  }
+  final String shortLabel;
+  const StudyLevel(this.shortLabel);
 
   String description(AppLanguage language) {
     switch (language) {

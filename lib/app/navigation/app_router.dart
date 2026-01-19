@@ -1,6 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:jpstudy/features/exam/exam_screen.dart';
 import 'package:jpstudy/features/grammar/grammar_screen.dart';
+import 'package:jpstudy/features/grammar/screens/grammar_detail_screen.dart';
+import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 import 'package:jpstudy/features/home/home_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_detail_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_edit_screen.dart';
@@ -40,6 +42,20 @@ class AppRouter {
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           return LessonDetailScreen(lessonId: id ?? 1);
+        },
+      ),
+      GoRoute(
+        path: '/grammar/:id',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '');
+          return GrammarDetailScreen(grammarId: id ?? 1);
+        },
+      ),
+      GoRoute(
+        path: '/grammar-practice',
+        builder: (context, state) {
+          final extra = state.extra as List<int>?;
+          return GrammarPracticeScreen(initialIds: extra);
         },
       ),
       GoRoute(

@@ -44,7 +44,18 @@ class LearningPathScreen extends ConsumerWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Quick access to last lesson or practice
-          // TODO: Implement "Jump to current"
+          // Logic: Find first available/completed node
+          pathState.whenData((allUnits) {
+            final units = selectedLevel == null 
+                ? allUnits 
+                : allUnits.where((u) => u.id == selectedLevel.shortLabel).toList();
+                
+            if (units.isNotEmpty && units.first.nodes.isNotEmpty) {
+               // For now, jump to the first node of the first unit
+               // In future: Find first !isCompleted node
+               _handleNodeTap(context, units.first.nodes.first);
+            }
+          });
         },
         child: const Icon(Icons.play_arrow_rounded),
       ),

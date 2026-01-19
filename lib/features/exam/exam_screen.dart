@@ -171,10 +171,11 @@ class _ExamScreenState extends ConsumerState<ExamScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          LinearProgressIndicator(
-            value: (_currentIndex + 1) / _questions.length,
-            minHeight: 8,
-            borderRadius: BorderRadius.circular(4),
+          SizedBox(
+            height: 8,
+            child: LinearProgressIndicator(
+              value: (_currentIndex + 1) / _questions.length,
+            ),
           ),
           const SizedBox(height: 8),
           Text(

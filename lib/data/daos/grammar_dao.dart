@@ -59,6 +59,13 @@ class GrammarDao extends DatabaseAccessor<AppDatabase> with _$GrammarDaoMixin {
       ),
     );
   }
+
+  /// Update learned status
+  Future<void> updateLearnedStatus(int grammarId, bool isLearned) {
+    return (update(grammarPoints)..where((t) => t.id.equals(grammarId))).write(
+      GrammarPointsCompanion(isLearned: Value(isLearned)),
+    );
+  }
   
   /// Get all due reviews
   Future<List<GrammarSrsStateData>> getDueReviews() {

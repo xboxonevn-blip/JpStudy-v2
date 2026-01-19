@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
-import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 
 class ProgressScreen extends ConsumerWidget {

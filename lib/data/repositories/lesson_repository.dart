@@ -252,6 +252,45 @@ class LessonRepository {
     return _db.select(_db.userLesson).get();
   }
 
+  // Returns a map of lessonId -> {termCount, completedCount}
+  Future<Map<int, LessonProgressStats>> getAllLessonProgress() async {
+    final termCounts = await (_db.selectOnly(_db.userLessonTerm)
+          ..addColumns([_db.userLessonTerm.lessonId, _db.userLessonTerm.id.count()])
+          ..groupBy([_db.userLessonTerm.lessonId]))
+        .get();
+
+    final completedCounts = await (_db.selectOnly(_db.userLessonTerm)
+          ..addColumns([_db.userLessonTerm.lessonId, _db.userLessonTerm.id.count()])
+          ..where(_db.userLessonTerm.isLearned.equals(true))
+          ..groupBy([_db.userLessonTerm.lessonId]))
+        .get();
+
+    final stats = <int, LessonProgressStats>{};
+
+    for (final row in termCounts) {
+      final lessonId = row.read(_db.userLessonTerm.lessonId);
+      final count = row.read(_db.userLessonTerm.id.count()) ?? 0;
+      if (lessonId != null) {
+        stats[lessonId] = LessonProgressStats(termCount: count, completedCount: 0);
+      }
+    }
+
+    for (final row in completedCounts) {
+      final lessonId = row.read(_db.userLessonTerm.lessonId);
+      final count = row.read(_db.userLessonTerm.id.count()) ?? 0;
+      if (lessonId != null) {
+        if (stats.containsKey(lessonId)) {
+          stats[lessonId] = stats[lessonId]!.copyWith(completedCount: count);
+        } else {
+           // Should not happen usually as learned implies existing
+           stats[lessonId] = LessonProgressStats(termCount: 0, completedCount: count);
+        }
+      }
+    }
+    
+    return stats;
+  }
+
   Future<LessonPracticeSettings> fetchLessonPracticeSettings(
     int lessonId,
   ) async {
@@ -1106,5 +1145,25 @@ class LessonRepository {
   Future<void> _touchLesson(int lessonId) {
     return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
         .write(UserLessonCompanion(updatedAt: Value(DateTime.now())));
+  }
+}
+
+class LessonProgressStats {
+  const LessonProgressStats({
+    required this.termCount,
+    required this.completedCount,
+  });
+
+  final int termCount;
+  final int completedCount;
+
+  LessonProgressStats copyWith({
+    int? termCount,
+    int? completedCount,
+  }) {
+    return LessonProgressStats(
+      termCount: termCount ?? this.termCount,
+      completedCount: completedCount ?? this.completedCount,
+    );
   }
 }

@@ -202,12 +202,14 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
     return Column(
       children: [
         // Timer bar
-        LinearProgressIndicator(
-          value: progress,
-          minHeight: 8,
-          backgroundColor: Colors.grey.shade300,
-          valueColor: AlwaysStoppedAnimation(
-            progress > 0.3 ? Colors.green : Colors.red,
+        SizedBox(
+          height: 8,
+          child: LinearProgressIndicator(
+            value: progress,
+            backgroundColor: Colors.grey.shade300,
+            valueColor: AlwaysStoppedAnimation(
+              progress > 0.3 ? Colors.green : Colors.red,
+            ),
           ),
         ),
         Padding(

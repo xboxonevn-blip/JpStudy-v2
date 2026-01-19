@@ -26,8 +26,10 @@ class GrammarSeeder {
           GrammarPointsCompanion.insert(
             grammarPoint: item['grammarPoint'],
             meaning: item['meaning'],
+            meaningVi: Value(item['meaning_vi']),
             connection: item['connection'],
             explanation: item['explanation'],
+            explanationVi: Value(item['explanation_vi']),
             jlptLevel: item['jlptLevel'],
             isLearned: const Value(false),
           ),
@@ -40,6 +42,7 @@ class GrammarSeeder {
               grammarId: point.id,
               japanese: ex['japanese'],
               translation: ex['translation'],
+              translationVi: Value(ex['translation_vi']),
               audioUrl: Value(ex['audioUrl']),
             ),
           );

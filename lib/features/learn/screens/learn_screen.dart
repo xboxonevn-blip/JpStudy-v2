@@ -108,10 +108,12 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
       body: Column(
         children: [
           // Progress bar
-          LinearProgressIndicator(
-            value: session.progress,
-            backgroundColor: Colors.grey[200],
-            minHeight: 6,
+          SizedBox(
+            height: 6,
+            child: LinearProgressIndicator(
+              value: session.progress,
+              backgroundColor: Colors.grey[200],
+            ),
           ),
 
           // Stats row

@@ -2,7 +2,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
-import 'package:jpstudy/core/services/tts_service.dart';
 
 class FlashcardWidget extends StatefulWidget {
   final VocabItem item;
@@ -141,19 +140,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
               ),
             ],
           ),
-          Positioned(
-            top: 0,
-            right: 0,
-            child: IconButton(
-              icon: const Icon(Icons.volume_up, size: 28),
-              color: Colors.blue,
-              onPressed: () {
-                // Determine text to speak: Reading if available, else Term
-                final text = widget.item.reading ?? widget.item.term;
-                TtsService.instance.speak(text);
-              },
-            ),
-          ),
+          // Audio speaker icon removed - TTS disabled
         ],
       ),
     );

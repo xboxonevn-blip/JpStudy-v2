@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 
 class GrammarExampleWidget extends StatelessWidget {
   final String japanese;
   final String translation;
   final String? translationVi;
   final bool showVietnamese;
-  final FlutterTts tts;
 
   const GrammarExampleWidget({
     super.key,
@@ -14,12 +12,7 @@ class GrammarExampleWidget extends StatelessWidget {
     required this.translation,
     this.translationVi,
     this.showVietnamese = true,
-    required this.tts,
   });
-
-  Future<void> _speak() async {
-    await tts.speak(japanese);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,13 +31,7 @@ class GrammarExampleWidget extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(width: 8),
-            IconButton(
-              icon: const Icon(Icons.volume_up_rounded),
-              onPressed: _speak,
-              color: Theme.of(context).colorScheme.primary,
-              tooltip: 'Listen',
-            ),
+            // Audio button removed - TTS disabled
           ],
         ),
         const SizedBox(height: 4),

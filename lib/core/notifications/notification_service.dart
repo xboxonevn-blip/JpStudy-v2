@@ -7,8 +7,12 @@ class NotificationService {
 
   static final NotificationService instance = NotificationService._();
 
-  final FlutterLocalNotificationsPlugin _plugin =
-      FlutterLocalNotificationsPlugin();
+  // Lazy-loaded plugin to avoid loading native libraries on unsupported platforms
+  FlutterLocalNotificationsPlugin? _pluginInstance;
+  FlutterLocalNotificationsPlugin get _plugin {
+    _pluginInstance ??= FlutterLocalNotificationsPlugin();
+    return _pluginInstance!;
+  }
 
   static const int _dailyReminderId = 1001;
 
@@ -16,10 +20,21 @@ class NotificationService {
       Platform.isAndroid ||
       Platform.isIOS ||
       Platform.isMacOS ||
+      Platform.isLinux ||
+      Platform.isWindows;
+
+  /// Whether native OS notifications are supported on this platform.
+  /// Windows is included in [isSupported] for in-app reminders,
+  /// but native notifications are not yet configured.
+  bool get _supportsNativeNotifications =>
+      Platform.isAndroid ||
+      Platform.isIOS ||
+      Platform.isMacOS ||
       Platform.isLinux;
 
   Future<void> initialize() async {
-    if (!isSupported) {
+    if (!_supportsNativeNotifications) {
+      // Windows: Skip native plugin, use in-app reminders instead
       return;
     }
     const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
@@ -36,7 +51,7 @@ class NotificationService {
     required String title,
     required String body,
   }) async {
-    if (!isSupported) {
+    if (!_supportsNativeNotifications) {
       return;
     }
     const androidDetails = AndroidNotificationDetails(
@@ -62,7 +77,7 @@ class NotificationService {
   }
 
   Future<void> disableDailyReminder() async {
-    if (!isSupported) {
+    if (!_supportsNativeNotifications) {
       return;
     }
     await _plugin.cancel(_dailyReminderId);
@@ -72,7 +87,7 @@ class NotificationService {
     required String title,
     required String body,
   }) async {
-    if (!isSupported) {
+    if (!_supportsNativeNotifications) {
       return;
     }
     const androidDetails = AndroidNotificationDetails(

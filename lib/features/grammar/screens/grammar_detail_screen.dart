@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 
 import '../../../data/repositories/grammar_repository.dart';
 import '../../../data/db/app_database.dart';
@@ -16,27 +15,7 @@ class GrammarDetailScreen extends ConsumerStatefulWidget {
 }
 
 class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
-  final FlutterTts _flutterTts = FlutterTts();
   bool _showVietnamese = true; // Default to showing VI if available
-
-  @override
-  void initState() {
-    super.initState();
-    _initTts();
-  }
-
-  Future<void> _initTts() async {
-    await _flutterTts.setLanguage("ja-JP");
-    await _flutterTts.setSpeechRate(0.5);
-    await _flutterTts.setVolume(1.0);
-  }
-
-
-  @override
-  void dispose() {
-    _flutterTts.stop();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -179,7 +158,7 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
             Text(point.explanation),
           
           if (_showVietnamese && point.explanationVi != null) ...[
-             if (!_showVietnamese) const Divider(height: 24), // Show separator if showing both (logic below)
+             if (!_showVietnamese) const Divider(height: 24),
              Text(point.explanationVi!),
           ]
         ],
@@ -200,7 +179,6 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
           translation: ex.translation,
           translationVi: ex.translationVi,
           showVietnamese: _showVietnamese,
-          tts: _flutterTts,
         );
       },
     );

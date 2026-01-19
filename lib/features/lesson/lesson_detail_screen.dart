@@ -9,19 +9,17 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
-import 'package:jpstudy/core/services/audio_service.dart';
-import 'package:jpstudy/core/tts/tts_service.dart';
+// Audio imports removed
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/shared/widgets/widgets.dart';
-import 'package:just_audio/just_audio.dart';
+// Stub import removed
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum _LessonMode { flashcards, review }
 
-enum _AudioMode { term, reading, definition }
-
-enum _AudioVoice { female, male }
+// _AudioMode removed
+// _AudioVoice removed
 
 enum _MenuAction { edit, addTerm, reset, combine, report }
 
@@ -37,31 +35,23 @@ class LessonDetailScreen extends ConsumerStatefulWidget {
 class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _showHints = true;
   bool _trackProgress = false;
-  bool _autoPlay = false;
-  bool _autoSpeak = false;
-  bool _shuffle = false;
-  bool _focusMode = false;
+
+// _autoSpeak removed
+  final bool _shuffle = false;
+  final bool _focusMode = false;
   final Set<int> _flippedTermIds = {};
   final Set<int> _starredTermIds = {};
   final Set<int> _learnedTermIds = {};
   Set<int> _syncedTermIds = {};
-  double _speed = 1.0;
+// _speed removed
   _LessonMode _mode = _LessonMode.flashcards;
   int _currentIndex = 0;
   final Random _random = Random();
   List<int>? _shuffledOrder;
   Timer? _autoTimer;
-  int _autoTotal = 0;
+
   SharedPreferences? _prefs;
-  late final AudioPlayer _audioPlayer;
-  late final TtsService _ttsService;
-  StreamSubscription<PlayerState>? _playerStateSub;
-  _AudioMode _audioMode = _AudioMode.term;
-  _AudioVoice _audioVoice = _AudioVoice.female;
-  bool _isAudioPlaying = false;
-  int _ttsCacheBytes = 0;
-  bool _isClearingCache = false;
-  int? _lastAutoSpeakTermId;
+// Audio/TTS fields removed
   int _reviewedCount = 0;
   int _reviewAgainCount = 0;
   int _reviewHardCount = 0;
@@ -70,40 +60,20 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   static const _prefShowHints = 'lesson.showHints';
   static const _prefTrackProgress = 'lesson.trackProgress';
-  static const _prefAutoPlay = 'lesson.autoPlay';
-  static const _prefAutoSpeak = 'lesson.autoSpeak';
-  static const _prefShuffle = 'lesson.shuffle';
-  static const _prefSpeed = 'lesson.speed';
-  static const _prefFocusMode = 'lesson.focusMode';
-  static const _prefAudioMode = 'lesson.audioMode';
-  static const _prefAudioVoice = 'lesson.audioVoice';
+
+
 
   @override
   void initState() {
     super.initState();
-    _audioPlayer = AudioPlayer();
-    _ttsService = TtsService();
-    final language = ref.read(appLanguageProvider);
-    _audioMode = _defaultAudioMode(language);
-    _audioVoice = _defaultAudioVoice();
-    _playerStateSub = _audioPlayer.playerStateStream.listen((state) {
-      if (!mounted) {
-        return;
-      }
-      setState(() {
-        _isAudioPlaying = state.playing;
-      });
-    });
     _loadSettings();
-    _refreshTtsCacheSize();
   }
 
   @override
   void dispose() {
     _autoTimer?.cancel();
-    _playerStateSub?.cancel();
-    _audioPlayer.dispose();
-    _ttsService.dispose();
+    _autoTimer?.cancel();
+    // Audio dispose removed
     super.dispose();
   }
 
@@ -153,15 +123,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final canFlip = currentTerm?.definition.trim().isNotEmpty == true;
     final onFlip = canFlip ? () => _toggleFlip(currentTerm) : null;
 
-    if (_autoPlay && totalTerms != _autoTotal) {
-      _autoTotal = totalTerms;
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (mounted) {
-          _syncAutoTimer(totalTerms);
-        }
-      });
-    }
-    _maybeAutoSpeak(language, currentTerm);
+
+// _maybeAutoSpeak removed
 
     return Scaffold(
       appBar: _focusMode
@@ -270,10 +233,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                           child: GestureDetector(
                             onHorizontalDragEnd: (details) {
                               if (details.primaryVelocity! > 0) {
-                                AudioService.instance.play('swipe');
                                 _goPrev(totalTerms);
                               } else if (details.primaryVelocity! < 0) {
-                                AudioService.instance.play('swipe');
                                 _goNext(totalTerms);
                               }
                             },
@@ -309,17 +270,12 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                                   onEdit: () => context.push(
                                     '/lesson/${widget.lessonId}/edit',
                                   ),
-                                  onAudio: currentTerm == null
-                                      ? null
-                                      : () => _playTts(language, currentTerm),
                                   onStar: currentTerm == null
                                       ? null
                                       : () => _toggleStar(currentTerm, level),
                                   onLearned: !_trackProgress || currentTerm == null
                                       ? null
                                       : () => _toggleLearned(currentTerm, level),
-                                  isAudioPlaying: _isAudioPlaying,
-                                  onStopAudio: _stopTts,
                                 ),
                               ),
                             ),
@@ -352,24 +308,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
           },
         ),
       ),
-      bottomNavigationBar: _PlayerBar(
-        language: language,
-        trackProgress: _trackProgress,
-        onTrackProgressChanged: (value) => _updateTrackProgress(value),
-        currentIndex: currentIndex,
-        total: totalTerms,
-        onPrev: () => _goPrev(totalTerms),
-        onNext: () => _goNext(totalTerms),
-        shuffle: _shuffle,
-        autoPlay: _autoPlay,
-        speed: _speed,
-        fullscreen: _focusMode,
-        onToggleShuffle: () => _toggleShuffle(activeTerms),
-        onToggleAuto: () => _toggleAuto(totalTerms),
-        onSpeedChanged: (value) => _setSpeed(value, totalTerms),
-        onSettings: () => _showSettings(language, totalTerms, activeTerms),
-        onFullscreen: _toggleFocusMode,
-      ),
+
     );
   }
 
@@ -528,24 +467,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     _saveBool(_prefShowHints, value);
   }
 
-  void _updateTrackProgress(bool value) {
-    setState(() => _trackProgress = value);
-    _saveBool(_prefTrackProgress, value);
-  }
 
-  void _updateAutoSpeak(bool value) {
-    setState(() => _autoSpeak = value);
-    if (!value) {
-      _lastAutoSpeakTermId = null;
-    }
-    _saveBool(_prefAutoSpeak, value);
-  }
 
-  void _toggleFocusMode() {
-    final nextValue = !_focusMode;
-    setState(() => _focusMode = nextValue);
-    _saveBool(_prefFocusMode, nextValue);
-  }
+
 
   Future<void> _loadSettings() async {
     final prefs = await SharedPreferences.getInstance();
@@ -556,19 +480,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       _prefs = prefs;
       _showHints = prefs.getBool(_prefShowHints) ?? true;
       _trackProgress = prefs.getBool(_prefTrackProgress) ?? false;
-      _autoPlay = prefs.getBool(_prefAutoPlay) ?? false;
-      _autoSpeak = prefs.getBool(_prefAutoSpeak) ?? false;
-      _shuffle = prefs.getBool(_prefShuffle) ?? false;
-      _speed = prefs.getDouble(_prefSpeed) ?? 1.0;
-      _focusMode = prefs.getBool(_prefFocusMode) ?? false;
-      final storedAudioMode = prefs.getString(_prefAudioMode);
-      if (storedAudioMode != null) {
-        _audioMode = _audioModeFromString(storedAudioMode);
-      }
-      final storedAudioVoice = prefs.getString(_prefAudioVoice);
-      if (storedAudioVoice != null) {
-        _audioVoice = _audioVoiceFromString(storedAudioVoice);
-      }
+
+// Audio loading removed
     });
   }
 
@@ -578,138 +491,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     await prefs.setBool(key, value);
   }
 
-  Future<void> _saveDouble(String key, double value) async {
-    final prefs = _prefs ?? await SharedPreferences.getInstance();
-    _prefs ??= prefs;
-    await prefs.setDouble(key, value);
-  }
 
-  Future<void> _saveString(String key, String value) async {
-    final prefs = _prefs ?? await SharedPreferences.getInstance();
-    _prefs ??= prefs;
-    await prefs.setString(key, value);
-  }
 
-  void _updateAudioMode(_AudioMode mode) {
-    setState(() => _audioMode = mode);
-    _saveString(_prefAudioMode, _audioModeToString(mode));
-  }
-
-  void _updateAudioVoice(_AudioVoice voice) {
-    setState(() => _audioVoice = voice);
-    _saveString(_prefAudioVoice, _audioVoiceToString(voice));
-  }
-
-  _AudioMode _defaultAudioMode(AppLanguage language) {
-    switch (language) {
-      case AppLanguage.ja:
-        return _AudioMode.reading;
-      case AppLanguage.vi:
-        return _AudioMode.definition;
-      case AppLanguage.en:
-        return _AudioMode.term;
-    }
-  }
-
-  String _audioModeToString(_AudioMode mode) {
-    switch (mode) {
-      case _AudioMode.term:
-        return 'term';
-      case _AudioMode.reading:
-        return 'reading';
-      case _AudioMode.definition:
-        return 'definition';
-    }
-  }
-
-  _AudioMode _audioModeFromString(String? value) {
-    switch (value) {
-      case 'reading':
-        return _AudioMode.reading;
-      case 'definition':
-        return _AudioMode.definition;
-      case 'term':
-      default:
-        return _AudioMode.term;
-    }
-  }
-
-  _AudioVoice _defaultAudioVoice() {
-    return _AudioVoice.female;
-  }
-
-  String _audioVoiceToString(_AudioVoice voice) {
-    switch (voice) {
-      case _AudioVoice.female:
-        return 'female';
-      case _AudioVoice.male:
-        return 'male';
-    }
-  }
-
-  _AudioVoice _audioVoiceFromString(String value) {
-    switch (value) {
-      case 'male':
-        return _AudioVoice.male;
-      case 'female':
-      default:
-        return _AudioVoice.female;
-    }
-  }
-
-  Future<void> _refreshTtsCacheSize() async {
-    final bytes = await _ttsService.cacheSizeBytes();
-    if (!mounted) {
-      return;
-    }
-    setState(() => _ttsCacheBytes = bytes);
-  }
-
-  Future<void> _clearTtsCache() async {
-    if (_isClearingCache) {
-      return;
-    }
-    setState(() => _isClearingCache = true);
-    try {
-      await _ttsService.clearCache();
-      await _refreshTtsCacheSize();
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(ref.read(appLanguageProvider).audioCacheClearedLabel)),
-        );
-      }
-    } catch (_) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(ref.read(appLanguageProvider).audioCacheClearFailedLabel)),
-        );
-      }
-    } finally {
-      if (mounted) {
-        setState(() => _isClearingCache = false);
-      }
-    }
-  }
-
-  void _stopTts() {
-    _audioPlayer.stop();
-  }
-
-  String _formatBytes(int bytes) {
-    if (bytes < 1024) {
-      return '$bytes B';
-    }
-    final kb = bytes / 1024;
-    if (kb < 1024) {
-      return '${kb.toStringAsFixed(1)} KB';
-    }
-    final mb = kb / 1024;
-    if (mb < 1024) {
-      return '${mb.toStringAsFixed(1)} MB';
-    }
-    final gb = mb / 1024;
-    return '${gb.toStringAsFixed(1)} GB';
-  }
+// Audio helpers removed
 
   String _termKey(String term, String reading, String definition) {
     final cleanTerm = _normalizeKeyPart(term);
@@ -772,102 +556,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     });
   }
 
-  void _goNextAuto(int total) {
-    if (total == 0) {
-      return;
-    }
-    setState(() {
-      _currentIndex = (_currentIndex + 1) % total;
-    });
-  }
 
-  void _maybeAutoSpeak(AppLanguage language, UserLessonTermData? term) {
-    if (!_autoSpeak || term == null) {
-      return;
-    }
-    if (_lastAutoSpeakTermId == term.id) {
-      return;
-    }
-    _lastAutoSpeakTermId = term.id;
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted || !_autoSpeak) {
-        return;
-      }
-      _playTts(language, term);
-    });
-  }
 
-  Future<void> _playTts(AppLanguage language, UserLessonTermData term) async {
-    final text = _ttsTextForTerm(term).trim();
-    await _playTtsText(language, text);
-  }
-
-  Future<void> _playTtsSample(AppLanguage language) async {
-    final text = language.audioTestSample;
-    await _playTtsText(language, text);
-  }
-
-  Future<void> _playTtsText(AppLanguage language, String text) async {
-    if (text.isEmpty) {
-      if (!mounted) {
-        return;
-      }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.audioEmptyLabel)),
-      );
-      return;
-    }
-    try {
-      final file = await _ttsService.synthesize(
-        text: text,
-        locale: _ttsLocaleForLanguage(language),
-        voice: _audioVoiceToString(_audioVoice),
-      );
-      await _audioPlayer.stop();
-      await _audioPlayer.setFilePath(file.path);
-      await _audioPlayer.play();
-      _refreshTtsCacheSize();
-    } on TtsNotConfiguredException {
-      if (!mounted) {
-        return;
-      }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.audioNotConfigured)),
-      );
-      if (_autoSpeak) {
-        _updateAutoSpeak(false);
-      }
-    } catch (_) {
-      if (!mounted) {
-        return;
-      }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.audioErrorLabel)),
-      );
-    }
-  }
-
-  String _ttsLocaleForLanguage(AppLanguage language) {
-    switch (language) {
-      case AppLanguage.ja:
-        return 'ja-JP';
-      case AppLanguage.vi:
-        return 'vi-VN';
-      case AppLanguage.en:
-        return 'en-US';
-    }
-  }
-
-  String _ttsTextForTerm(UserLessonTermData term) {
-    switch (_audioMode) {
-      case _AudioMode.reading:
-        return term.reading.isNotEmpty ? term.reading : term.term;
-      case _AudioMode.definition:
-        return term.definition.isNotEmpty ? term.definition : term.term;
-      case _AudioMode.term:
-        return term.term;
-    }
-  }
+// TTS methods removed
 
   void _handleMenu(
     _MenuAction action,
@@ -1272,252 +963,11 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     );
   }
 
-  void _toggleShuffle(List<UserLessonTermData> terms) {
-    final currentId = _currentTermId(terms);
-    final nextValue = !_shuffle;
-    setState(() {
-      _shuffle = nextValue;
-      if (nextValue) {
-        final ids = terms.map((term) => term.id).toList();
-        if (ids.isEmpty) {
-          _shuffledOrder = null;
-          _currentIndex = 0;
-          return;
-        }
-        ids.shuffle(_random);
-        _shuffledOrder = ids;
-        if (currentId != null) {
-          _currentIndex = ids.indexOf(currentId).clamp(0, ids.length - 1);
-        } else {
-          _currentIndex = 0;
-        }
-      } else {
-        _shuffledOrder = null;
-        if (currentId != null) {
-          final index =
-              terms.indexWhere((term) => term.id == currentId);
-          _currentIndex = index == -1 ? 0 : index;
-        } else {
-          _currentIndex = 0;
-        }
-      }
-    });
-    _saveBool(_prefShuffle, nextValue);
-  }
 
-  int? _currentTermId(List<UserLessonTermData> terms) {
-    final ordered = _orderedTerms(terms);
-    if (ordered.isEmpty) {
-      return null;
-    }
-    final index = _currentIndex.clamp(0, ordered.length - 1);
-    return ordered[index].id;
-  }
 
-  void _toggleAuto(int total) {
-    final nextValue = !_autoPlay;
-    setState(() => _autoPlay = nextValue);
-    _saveBool(_prefAutoPlay, nextValue);
-    _syncAutoTimer(total);
-  }
 
-  void _setSpeed(double value, int total) {
-    setState(() => _speed = value);
-    _saveDouble(_prefSpeed, value);
-    _syncAutoTimer(total);
-  }
 
-  void _syncAutoTimer(int total) {
-    _autoTimer?.cancel();
-    if (!_autoPlay || total == 0) {
-      return;
-    }
-    final intervalMs =
-        (3800 / _speed).round().clamp(900, 8000).toInt();
-    _autoTimer = Timer.periodic(
-      Duration(milliseconds: intervalMs),
-      (_) {
-        if (!mounted || !_autoPlay) {
-          return;
-        }
-        _goNextAuto(total);
-      },
-    );
-  }
 
-  Future<void> _showSettings(
-    AppLanguage language,
-    int total,
-    List<UserLessonTermData> terms,
-  ) async {
-    await showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      isScrollControlled: true,
-      builder: (context) {
-        return SafeArea(
-          child: StatefulBuilder(
-            builder: (context, setModalState) {
-              return SingleChildScrollView(
-                padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      language.settingsLabel,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    SwitchListTile(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(language.showHintsLabel),
-                      value: _showHints,
-                      onChanged: (value) {
-                        _updateShowHints(value);
-                        setModalState(() {});
-                      },
-                    ),
-                    SwitchListTile(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(language.trackProgressLabel),
-                      value: _trackProgress,
-                      onChanged: (value) {
-                        _updateTrackProgress(value);
-                        setModalState(() {});
-                      },
-                    ),
-                    SwitchListTile(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(language.shuffleLabel),
-                      value: _shuffle,
-                      onChanged: (value) {
-                        _toggleShuffle(terms);
-                        setModalState(() {});
-                      },
-                    ),
-                    SwitchListTile(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(language.autoLabel),
-                      value: _autoPlay,
-                      onChanged: (value) {
-                        _toggleAuto(total);
-                        setModalState(() {});
-                      },
-                    ),
-                    const SizedBox(height: 12),
-                    Text(language.speedLabel),
-                    Slider(
-                      value: _speed,
-                      min: 0.8,
-                      max: 2.0,
-                      divisions: 6,
-                      label: '${_speed.toStringAsFixed(1)}x',
-                      onChanged: (value) {
-                        _setSpeed(value, total);
-                        setModalState(() {});
-                      },
-                    ),
-                    const SizedBox(height: 16),
-                      Text(
-                        language.audioSettingsLabel,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SwitchListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(language.audioAutoPlayLabel),
-                        value: _autoSpeak,
-                        onChanged: (value) {
-                          _updateAutoSpeak(value);
-                          setModalState(() {});
-                        },
-                      ),
-                      const SizedBox(height: 8),
-                      Text(language.audioModeLabel),
-                    const SizedBox(height: 8),
-                    SegmentedButton<_AudioMode>(
-                      segments: [
-                        ButtonSegment(
-                          value: _AudioMode.term,
-                          label: Text(language.audioModeTerm),
-                        ),
-                        ButtonSegment(
-                          value: _AudioMode.reading,
-                          label: Text(language.audioModeReading),
-                        ),
-                        ButtonSegment(
-                          value: _AudioMode.definition,
-                          label: Text(language.audioModeDefinition),
-                        ),
-                      ],
-                      selected: {_audioMode},
-                      onSelectionChanged: (selection) {
-                        if (selection.isEmpty) {
-                          return;
-                        }
-                        _updateAudioMode(selection.first);
-                        setModalState(() {});
-                      },
-                    ),
-                    const SizedBox(height: 12),
-                    Text(language.audioVoiceLabel),
-                    const SizedBox(height: 8),
-                    SegmentedButton<_AudioVoice>(
-                      segments: [
-                        ButtonSegment(
-                          value: _AudioVoice.female,
-                          label: Text(language.audioVoiceFemale),
-                        ),
-                        ButtonSegment(
-                          value: _AudioVoice.male,
-                          label: Text(language.audioVoiceMale),
-                        ),
-                      ],
-                      selected: {_audioVoice},
-                      onSelectionChanged: (selection) {
-                        if (selection.isEmpty) {
-                          return;
-                        }
-                        _updateAudioVoice(selection.first);
-                        setModalState(() {});
-                      },
-                    ),
-                    const SizedBox(height: 8),
-                    TextButton.icon(
-                      onPressed: () => _playTtsSample(language),
-                      icon: const Icon(Icons.play_arrow),
-                      label: Text(language.audioTestVoiceLabel),
-                    ),
-                    const SizedBox(height: 12),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            '${language.audioCacheLabel}: ${_formatBytes(_ttsCacheBytes)}',
-                          ),
-                        ),
-                        TextButton(
-                          onPressed:
-                              _isClearingCache ? null : _clearTtsCache,
-                          child: Text(language.audioClearCacheLabel),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-        );
-      },
-    );
-  }
 }
 
 
@@ -1927,14 +1377,11 @@ class _LessonCard extends StatelessWidget {
     required this.trackProgress,
     required this.isStarred,
     required this.isLearned,
-    required this.isAudioPlaying,
     required this.onShowHintsChanged,
     required this.onFlip,
     required this.onEdit,
-    required this.onAudio,
     required this.onStar,
     required this.onLearned,
-    required this.onStopAudio,
     this.emptyLabel,
   });
 
@@ -1946,14 +1393,11 @@ class _LessonCard extends StatelessWidget {
   final bool trackProgress;
   final bool isStarred;
   final bool isLearned;
-  final bool isAudioPlaying;
   final ValueChanged<bool> onShowHintsChanged;
   final VoidCallback? onFlip;
   final VoidCallback onEdit;
-  final VoidCallback? onAudio;
   final VoidCallback? onStar;
   final VoidCallback? onLearned;
-  final VoidCallback? onStopAudio;
   final String? emptyLabel;
 
   @override
@@ -1993,12 +1437,9 @@ class _LessonCard extends StatelessWidget {
                 _ActionPill(
                   isStarred: isStarred,
                   isLearned: isLearned,
-                  isAudioPlaying: isAudioPlaying,
                   onEdit: onEdit,
-                  onAudio: onAudio,
                   onStar: onStar,
                   onLearned: onLearned,
-                  onStopAudio: onStopAudio,
                 ),
               ],
             ),
@@ -2250,22 +1691,16 @@ class _ActionPill extends StatelessWidget {
   const _ActionPill({
     required this.isStarred,
     required this.isLearned,
-    required this.isAudioPlaying,
     required this.onEdit,
-    required this.onAudio,
     required this.onStar,
     required this.onLearned,
-    required this.onStopAudio,
   });
 
   final bool isStarred;
   final bool isLearned;
-  final bool isAudioPlaying;
   final VoidCallback onEdit;
-  final VoidCallback? onAudio;
   final VoidCallback? onStar;
   final VoidCallback? onLearned;
-  final VoidCallback? onStopAudio;
 
   @override
   Widget build(BuildContext context) {
@@ -2281,12 +1716,7 @@ class _ActionPill extends StatelessWidget {
         children: [
           _IconPillButton(icon: Icons.edit_outlined, onTap: onEdit),
           const SizedBox(width: 4),
-          _IconPillButton(
-            icon: isAudioPlaying
-                ? Icons.stop_circle_outlined
-                : Icons.volume_up_outlined,
-            onTap: isAudioPlaying ? onStopAudio : onAudio,
-          ),
+          // Audio button removed
           if (onLearned != null) ...[
             const SizedBox(width: 4),
             _IconPillButton(
@@ -2342,192 +1772,7 @@ class _IconPillButton extends StatelessWidget {
   }
 }
 
-class _PlayerBar extends StatelessWidget {
-  const _PlayerBar({
-    required this.language,
-    required this.trackProgress,
-    required this.onTrackProgressChanged,
-    required this.currentIndex,
-    required this.total,
-    required this.onPrev,
-    required this.onNext,
-    required this.shuffle,
-    required this.autoPlay,
-    required this.speed,
-    required this.fullscreen,
-    required this.onToggleShuffle,
-    required this.onToggleAuto,
-    required this.onSpeedChanged,
-    required this.onSettings,
-    required this.onFullscreen,
-  });
 
-  final AppLanguage language;
-  final bool trackProgress;
-  final ValueChanged<bool> onTrackProgressChanged;
-  final int currentIndex;
-  final int total;
-  final VoidCallback onPrev;
-  final VoidCallback onNext;
-  final bool shuffle;
-  final bool autoPlay;
-  final double speed;
-  final bool fullscreen;
-  final VoidCallback onToggleShuffle;
-  final VoidCallback onToggleAuto;
-  final ValueChanged<double> onSpeedChanged;
-  final VoidCallback onSettings;
-  final VoidCallback onFullscreen;
 
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      top: false,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          border: Border(top: BorderSide(color: Color(0xFFE8ECF5))),
-        ),
-        child: Row(
-          children: [
-            Row(
-              children: [
-                Text(language.trackProgressLabel),
-                const SizedBox(width: 8),
-                Switch(
-                  value: trackProgress,
-                  onChanged: onTrackProgressChanged,
-                ),
-              ],
-            ),
-            const Spacer(),
-            Row(
-              children: [
-                IconButton(
-                  onPressed: onPrev,
-                  icon: const Icon(Icons.chevron_left),
-                ),
-                Text(
-                  '${total == 0 ? 0 : currentIndex + 1} / $total',
-                  style: const TextStyle(fontWeight: FontWeight.w600),
-                ),
-                IconButton(
-                  onPressed: onNext,
-                  icon: const Icon(Icons.chevron_right),
-                ),
-              ],
-            ),
-            const Spacer(),
-            Wrap(
-              spacing: 10,
-              runSpacing: 8,
-              children: [
-                _PlayerChip(
-                  icon: Icons.shuffle,
-                  label: language.shuffleLabel,
-                  active: shuffle,
-                  onTap: onToggleShuffle,
-                ),
-                _PlayerChip(
-                  icon: Icons.play_circle_outline,
-                  label: language.autoLabel,
-                  active: autoPlay,
-                  onTap: onToggleAuto,
-                ),
-                PopupMenuButton<double>(
-                  onSelected: onSpeedChanged,
-                  itemBuilder: (context) => const [
-                    PopupMenuItem(value: 0.8, child: Text('0.8x')),
-                    PopupMenuItem(value: 1.0, child: Text('1x')),
-                    PopupMenuItem(value: 1.2, child: Text('1.2x')),
-                    PopupMenuItem(value: 1.5, child: Text('1.5x')),
-                    PopupMenuItem(value: 2.0, child: Text('2x')),
-                  ],
-                  child: _PlayerChip(
-                    icon: Icons.speed,
-                    label: '${language.speedLabel} ${_speedLabel(speed)}',
-                    interactive: false,
-                  ),
-                ),
-                _PlayerChip(
-                  icon: Icons.settings_outlined,
-                  label: language.settingsLabel,
-                  onTap: onSettings,
-                ),
-                _PlayerChip(
-                  icon: Icons.fullscreen,
-                  label: language.fullscreenLabel,
-                  active: fullscreen,
-                  onTap: onFullscreen,
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
-  String _speedLabel(double value) {
-    final clean = value == value.roundToDouble()
-        ? value.toStringAsFixed(0)
-        : value.toStringAsFixed(1);
-    return '${clean}x';
-  }
-}
 
-class _PlayerChip extends StatelessWidget {
-  const _PlayerChip({
-    required this.icon,
-    required this.label,
-    this.active = false,
-    this.onTap,
-    this.interactive = true,
-  });
-
-  final IconData icon;
-  final String label;
-  final bool active;
-  final VoidCallback? onTap;
-  final bool interactive;
-
-  @override
-  Widget build(BuildContext context) {
-    final content = Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration: BoxDecoration(
-        color: active ? const Color(0xFFEFF2FF) : Colors.white,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(
-          color: active ? const Color(0xFFD6DDFF) : const Color(0xFFE1E6F0),
-        ),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(
-            icon,
-            size: 16,
-            color: active ? const Color(0xFF4255FF) : null,
-          ),
-          const SizedBox(width: 6),
-          Text(
-            label,
-            style: const TextStyle(fontSize: 12),
-          ),
-        ],
-      ),
-    );
-
-    if (!interactive) {
-      return content;
-    }
-
-    return InkWell(
-      borderRadius: BorderRadius.circular(18),
-      onTap: onTap,
-      child: content,
-    );
-  }
-}

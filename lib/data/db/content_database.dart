@@ -68,23 +68,17 @@ class ContentDatabase extends _$ContentDatabase {
   }
   
   Future<void> _seedFromJsonFiles({bool isN5 = false}) async {
-    final List<String> jsonFiles;
+    final List<String> jsonFiles = [];
     if (isN5) {
-      jsonFiles = [
-        'assets/data/vocab_n5_1_5.json',
-        'assets/data/vocab_n5_6_10.json',
-        'assets/data/vocab_n5_11_15.json',
-        'assets/data/vocab_n5_16_20.json',
-        'assets/data/vocab_n5_21_25.json',
-      ];
+      // N5: Lesson 1 to 25
+      for (int i = 1; i <= 25; i++) {
+        jsonFiles.add('assets/data/vocab_n5_$i.json');
+      }
     } else {
-      jsonFiles = [
-        'assets/data/vocab_n4_26_30.json',
-        'assets/data/vocab_n4_31_35.json',
-        'assets/data/vocab_n4_36_40.json',
-        'assets/data/vocab_n4_41_45.json',
-        'assets/data/vocab_n4_46_50.json',
-      ];
+      // N4: Lesson 26 to 50
+      for (int i = 26; i <= 50; i++) {
+        jsonFiles.add('assets/data/vocab_n4_$i.json');
+      }
     }
     
     for (final file in jsonFiles) {

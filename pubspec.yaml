@@ -87,6 +87,16 @@ flutter:
   assets:
     - assets/audio/
     - assets/data/
+    - assets/data/vocab/n5/
+    - assets/data/vocab/n4/
+    - assets/data/grammar/n5/
+    - assets/data/grammar/n4/
+    - assets/data/grammar/n3/
+    - assets/data/grammar/n2/
+    - assets/data/grammar/n1/
+    - assets/data/vocab/n3/
+    - assets/data/vocab/n2/
+    - assets/data/vocab/n1/
   fonts:
     - family: Manrope
       fonts:

@@ -1,0 +1,77 @@
+[
+    {
+        "lessonId": 14,
+        "title": "Chia động từ thể Te (Vて)",
+        "structure": "Vて",
+        "explanation": "Cách chia động từ sang thể Te.\n\n*   **Nhóm I**: i,chi,ri -> tte; mi,bi,ni -> nde; ki -> ite; gi -> ide; shi -> shite.\n*   **Nhóm II**: Bỏ masu thêm te.\n*   **Nhóm III**: kimasu -> kite; shimasu -> shite.",
+        "explanationEn": "Conjugating verbs to Te-form.\n\n*   **Group I**: i,chi,ri -> tte; mi,bi,ni -> nde; ki -> ite; gi -> ide; shi -> shite.\n*   **Group II**: Drop masu, add te.\n*   **Group III**: kimasu -> kite; shimasu -> shite.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "書きます -> 書いて",
+                "translation": "Viết",
+                "translationEn": "Write"
+            },
+            {
+                "sentence": "食べます -> 食べて",
+                "translation": "Ăn",
+                "translationEn": "Eat"
+            }
+        ]
+    },
+    {
+        "lessonId": 14,
+        "title": "Vて ください (Yêu cầu)",
+        "structure": "Vて ください",
+        "explanation": "Yêu cầu, nhờ vả ai đó làm gì một cách lịch sự.\n\n*   `書いてください`: Hãy viết đi.",
+        "explanationEn": "Polite request.\n\n*   `書いてください`: Please write.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "ちょっと待ってください。",
+                "translation": "Vui lòng chờ một chút.",
+                "translationEn": "Please wait a moment."
+            },
+            {
+                "sentence": "辞書を貸してください。",
+                "translation": "Vui lòng cho tôi mượn từ điển.",
+                "translationEn": "Please lend me a dictionary."
+            }
+        ]
+    },
+    {
+        "lessonId": 14,
+        "title": "Vて います (Đang làm)",
+        "structure": "Vて います",
+        "explanation": "Diễn tả hành động đang diễn ra tại thời điểm nói.",
+        "explanationEn": "Expresses an action currently in progress.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "今電話をかけています。",
+                "translation": "Bây giờ tôi đang gọi điện thoại.",
+                "translationEn": "I am making a phone call now."
+            }
+        ]
+    },
+    {
+        "lessonId": 14,
+        "title": "Vましょうか (Đề nghị giúp đỡ)",
+        "structure": "Vましょうか",
+        "explanation": "Người nói đề nghị làm giúp người nghe việc gì đó.\n\n*   `手伝いましょうか`: Tôi giúp bạn nhé?",
+        "explanationEn": "Offer to do something for the listener.\n\n*   `手伝いましょうか`: Shall I help you?",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "窓を開けましょうか。",
+                "translation": "Tôi mở cửa sổ giúp bạn nhé?",
+                "translationEn": "Shall I open the window?"
+            },
+            {
+                "sentence": "ええ、お願いします。",
+                "translation": "Vâng, nhờ bạn.",
+                "translationEn": "Yes, please."
+            }
+        ]
+    }
+]

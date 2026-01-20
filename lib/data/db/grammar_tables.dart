@@ -5,12 +5,15 @@ import 'package:drift/drift.dart';
 /// Based on Bunpro/JLPT data structure
 class GrammarPoints extends Table {
   IntColumn get id => integer().autoIncrement()();
+  IntColumn get lessonId => integer().nullable()(); // Linked to UserLesson
   TextColumn get grammarPoint => text().withLength(min: 1, max: 255)(); // e.g. "〜てはいけない"
-  TextColumn get meaning => text()(); // e.g. "Must not, cannot"
+  TextColumn get meaning => text()(); // Default meaning
   TextColumn get meaningVi => text().nullable()(); // Vietnamese meaning
+  TextColumn get meaningEn => text().nullable()(); // English meaning
   TextColumn get connection => text()(); // e.g. "Verb-て + は + いけない"
-  TextColumn get explanation => text()(); // Detailed HTML or Markdown explanation
+  TextColumn get explanation => text()(); // Default explanation
   TextColumn get explanationVi => text().nullable()(); // Vietnamese explanation
+  TextColumn get explanationEn => text().nullable()(); // English explanation
   TextColumn get jlptLevel => text().withLength(min: 2, max: 2)(); // e.g. "N5", "N4"
   BoolColumn get isLearned => boolean().withDefault(const Constant(false))();
 }
@@ -20,8 +23,9 @@ class GrammarExamples extends Table {
   IntColumn get id => integer().autoIncrement()();
   IntColumn get grammarId => integer().references(GrammarPoints, #id, onDelete: KeyAction.cascade)();
   TextColumn get japanese => text()(); // Full japanese sentence
-  TextColumn get translation => text()(); // English translation
+  TextColumn get translation => text()(); // Default translation
   TextColumn get translationVi => text().nullable()(); // Vietnamese translation
+  TextColumn get translationEn => text().nullable()(); // English translation
   TextColumn get audioUrl => text().nullable()(); // Path to audio file if available
 }
 

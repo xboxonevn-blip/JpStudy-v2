@@ -13,6 +13,7 @@ import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/shared/widgets/widgets.dart';
+import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
 // Stub import removed
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -126,106 +127,119 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
 // _maybeAutoSpeak removed
 
-    return Scaffold(
-      appBar: _focusMode
-          ? null
-          : AppBar(
-        toolbarHeight: 64,
-        automaticallyImplyLeading: false,
-        titleSpacing: 16,
-        title: Row(
-          children: [
-            IconButton(
-              icon: const Icon(Icons.chevron_left),
-              tooltip: language.backToLessonLabel,
-              onPressed: () => context.pop(),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: _focusMode
+            ? null
+            : AppBar(
+          toolbarHeight: 64,
+          automaticallyImplyLeading: false,
+          titleSpacing: 16,
+          title: Row(
+            children: [
+              IconButton(
+                icon: const Icon(Icons.chevron_left),
+                tooltip: language.backToLessonLabel,
+                onPressed: () => context.pop(),
+              ),
+              const SizedBox(width: 4),
+              Expanded(
+                child: Text(
+                  '${level.shortLabel} / $title',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            _SavedPill(
+              label: language.savedLabel,
+              active: isSaved,
+              onTap:
+                  totalTerms == 0 ? null : () => _toggleSaved(terms, level),
             ),
-            const SizedBox(width: 4),
-            Expanded(
-              child: Text(
-                '${level.shortLabel} / $title',
-                overflow: TextOverflow.ellipsis,
+            const SizedBox(width: 8),
+            _OverflowMenu(
+              language: language,
+              onSelected: (action) => _handleMenu(
+                action,
+                context,
+                language,
+                level,
+                title,
+                terms,
               ),
             ),
+            const SizedBox(width: 12),
           ],
+          bottom: TabBar(
+            labelColor: const Color(0xFF4255FF),
+            unselectedLabelColor: const Color(0xFF6B7390),
+            indicatorColor: const Color(0xFF4255FF),
+            tabs: [
+              Tab(text: language.flashcardsAction), // Reuse Flashcards label for Vocab for now
+              Tab(text: 'Grammar'), // Static label for now or add to AppLanguage
+            ],
+          ),
         ),
-        actions: [
-          _SavedPill(
-            label: language.savedLabel,
-            active: isSaved,
-            onTap:
-                totalTerms == 0 ? null : () => _toggleSaved(terms, level),
-          ),
-          const SizedBox(width: 8),
-          _OverflowMenu(
-            language: language,
-            onSelected: (action) => _handleMenu(
-              action,
-              context,
-              language,
-              level,
-              title,
-              terms,
-            ),
-          ),
-          const SizedBox(width: 12),
-        ],
-      ),
-      body: FocusableActionDetector(
-        autofocus: true,
-        shortcuts: {
-          LogicalKeySet(LogicalKeyboardKey.space): const ActivateIntent(),
-        },
-        actions: {
-          ActivateIntent: CallbackAction<ActivateIntent>(
-            onInvoke: (_) {
-              onFlip?.call();
-              return null;
-            },
-          ),
-        },
-        child: LayoutBuilder(
-          builder: (context, _) {
-            return SingleChildScrollView(
-              padding: EdgeInsets.fromLTRB(20, _focusMode ? 20 : 12, 20, 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  if (!_focusMode) ...[
-                    _ModeSwitcher(
-                      language: language,
-                      mode: _mode,
-                      onModeChanged: (mode) {
-                        setState(() {
-                          _mode = mode;
-                          _currentIndex = 0;
-                          _shuffledOrder = null;
-                          if (mode == _LessonMode.review) {
-                            _resetReviewStats();
-                          }
-                        });
-                      },
-                    ),
-                    const SizedBox(height: 12),
-                    _StatsRow(
-                      language: language,
-                      total: terms.length,
-                      learned: learnedCount,
-                      due: dueCount,
-                    ),
-                    if (_mode == _LessonMode.review) ...[
-                      const SizedBox(height: 8),
-                      Text(language.reviewCountLabel(totalTerms)),
-                    ],
-                    const SizedBox(height: 12),
-                    _PracticeActions(
-                      language: language,
-                      lessonId: widget.lessonId,
-                      lessonTitle: title,
-                    ),
-                    const SizedBox(height: 20),
-                  ],
-                    Center(
+        body: TabBarView(
+          children: [
+            FocusableActionDetector(
+              autofocus: true,
+              shortcuts: {
+                LogicalKeySet(LogicalKeyboardKey.space): const ActivateIntent(),
+              },
+              actions: {
+                ActivateIntent: CallbackAction<ActivateIntent>(
+                  onInvoke: (_) {
+                    onFlip?.call();
+                    return null;
+                  },
+                ),
+              },
+              child: LayoutBuilder(
+                builder: (context, _) {
+                  return SingleChildScrollView(
+                    padding: EdgeInsets.fromLTRB(20, _focusMode ? 20 : 12, 20, 24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        if (!_focusMode) ...[
+                          _ModeSwitcher(
+                            language: language,
+                            mode: _mode,
+                            onModeChanged: (mode) {
+                              setState(() {
+                                _mode = mode;
+                                _currentIndex = 0;
+                                _shuffledOrder = null;
+                                if (mode == _LessonMode.review) {
+                                  _resetReviewStats();
+                                }
+                              });
+                            },
+                          ),
+                          const SizedBox(height: 12),
+                          _StatsRow(
+                            language: language,
+                            total: terms.length,
+                            learned: learnedCount,
+                            due: dueCount,
+                          ),
+                          if (_mode == _LessonMode.review) ...[
+                            const SizedBox(height: 8),
+                            Text(language.reviewCountLabel(totalTerms)),
+                          ],
+                          const SizedBox(height: 12),
+                          _PracticeActions(
+                            language: language,
+                            lessonId: widget.lessonId,
+                            lessonTitle: title,
+                          ),
+                          const SizedBox(height: 20),
+                        ],
+                        Center(
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 960),
                         child: SizedBox(
@@ -307,8 +321,14 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
             );
           },
         ),
+            ),
+            GrammarListWidget(
+              lessonId: widget.lessonId,
+              language: language,
+            ),
+          ],
+        ),
       ),
-
     );
   }
 

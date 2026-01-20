@@ -1,0 +1,77 @@
+[
+    {
+        "lessonId": 4,
+        "title": "Thời gian (Giờ / Phút)",
+        "structure": "今、～時～分 です",
+        "explanation": "Cách nói giờ.\n\n*   `いま`: Bây giờ.\n*   `～じ`: ~ giờ.\n*   `～ふん / ぷん`: ~ phút.",
+        "explanationEn": "Telling time.\n\n*   `いま`: Now.\n*   `～じ`: ~ o'clock.\n*   `～ふん / ぷん`: ~ minute.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "今、何時ですか。…７時１０分です。",
+                "translation": "Bây giờ là mấy giờ? ...7 giờ 10 phút.",
+                "translationEn": "What time is it now? ...It's 7:10."
+            }
+        ]
+    },
+    {
+        "lessonId": 4,
+        "title": "Động từ Vます",
+        "structure": "Vます / Vません / Vました / Vませんでした",
+        "explanation": "Các thì cơ bản của động từ.\n\n*   `ます`: Hiện tại/Tương lai khẳng định.\n*   `ません`: Hiện tại/Tương lai phủ định.\n*   `ました`: Quá khứ khẳng định.\n*   `ませんでした`: Quá khứ phủ định.",
+        "explanationEn": "Basic verb tenses.\n\n*   `ます`: Present/Future Affirmative.\n*   `ません`: Present/Future Negative.\n*   `ました`: Past Affirmative.\n*   `ませんでした`: Past Negative.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "私は毎日勉強します。",
+                "translation": "Tôi học bài mỗi ngày.",
+                "translationEn": "I study every day."
+            },
+            {
+                "sentence": "明日働きません。",
+                "translation": "Ngày mai tôi sẽ không làm việc.",
+                "translationEn": "I will not work tomorrow."
+            },
+            {
+                "sentence": "昨日勉強しました。",
+                "translation": "Hôm qua tôi đã học bài.",
+                "translationEn": "I studied yesterday."
+            }
+        ]
+    },
+    {
+        "lessonId": 4,
+        "title": "N1 から N2 まで",
+        "structure": "N1 (Thời gian / Địa điểm) から N2 まで",
+        "explanation": "Từ N1 đến N2.\n\n*   `から`: Điểm bắt đầu.\n*   `まで`: Điểm kết thúc.",
+        "explanationEn": "From N1 to N2.\n\n*   `から`: Start point.\n*   `まで`: End point.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "銀行は９時から３時までです。",
+                "translation": "Ngân hàng mở cửa từ 9 giờ đến 3 giờ.",
+                "translationEn": "The bank is open from 9:00 to 3:00."
+            },
+            {
+                "sentence": "昼休みは１２時からです。",
+                "translation": "Giờ nghỉ trưa bắt đầu từ 12 giờ.",
+                "translationEn": "Lunch break starts at 12:00."
+            }
+        ]
+    },
+    {
+        "lessonId": 4,
+        "title": "N1 と N2",
+        "structure": "N1 と N2",
+        "explanation": "Trợ từ `と` (và) dùng để nối hai danh từ.",
+        "explanationEn": "Particle `と` (and) used to connect two nouns.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "土曜日と日曜日は休みです。",
+                "translation": "Thứ 7 và chủ nhật là ngày nghỉ.",
+                "translationEn": "Saturday and Sunday are holidays."
+            }
+        ]
+    }
+]

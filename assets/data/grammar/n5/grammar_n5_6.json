@@ -1,0 +1,142 @@
+[
+    {
+        "lessonId": 6,
+        "title": "N を V",
+        "structure": "N を V (tha động từ)",
+        "explanation": "Trợ từ `を` chỉ đối tượng chịu tác động của hành động (tân ngữ).\n\n*   `本を読みます`: Đọc sách.\n*   `水を飲みます`: Uống nước.",
+        "explanationEn": "Particle `を` marks the direct object of a transitive verb.\n\n*   `本を読みます`: Read a book.\n*   `水を飲みます`: Drink water.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "私はジュースを飲みます。",
+                "translation": "Tôi uống nước ngọt.",
+                "translationEn": "I drink juice."
+            },
+            {
+                "sentence": "魚を食べます。",
+                "translation": "Tôi ăn cá.",
+                "translationEn": "I allow fish."
+            }
+        ]
+    },
+    {
+        "lessonId": 6,
+        "title": "N を します",
+        "structure": "N を します",
+        "explanation": "Làm hành động N (danh từ chỉ hành động).\n\n*   Ví dụ: `サッカー` (bóng đá) -> `サッカーをします` (chơi bóng đá).",
+        "explanationEn": "Do N (action noun).\n\n*   Example: `サッカー` (soccer) -> `サッカーをします` (play soccer).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "テニスをします。",
+                "translation": "Tôi chơi tennis.",
+                "translationEn": "I play tennis."
+            },
+            {
+                "sentence": "宿題をします。",
+                "translation": "Tôi làm bài tập.",
+                "translationEn": "I do homework."
+            }
+        ]
+    },
+    {
+        "lessonId": 6,
+        "title": "何を しますか",
+        "structure": "何を しますか",
+        "explanation": "Câu hỏi: Làm cái gì?\n\nDùng để hỏi ai đó làm hành động gì.",
+        "explanationEn": "Question: What do you do?\n\nUsed to ask what action someone is performing.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "明日何をしますか。",
+                "translation": "Ngày mai bạn làm gì?",
+                "translationEn": "What will you do tomorrow?"
+            },
+            {
+                "sentence": "京都へ行きます。",
+                "translation": "Tôi đi Kyoto.",
+                "translationEn": "I'm going to Kyoto."
+            }
+        ]
+    },
+    {
+        "lessonId": 6,
+        "title": "なん (Cái gì)",
+        "structure": "何 (なん) / 何 (なに)",
+        "explanation": "Cách đọc của `何` (Cái gì).\n\n1.  Đọc là `なん` khi đứng trước `d`, `n`, `t` hoặc hậu tố đếm.\n2.  Đọc là `なに` trong các trường hợp còn lại (đặc biệt khi đi với `を`).",
+        "explanationEn": "Readings of `何` (What).\n\n1.  Read as `なん` before `d`, `n`, `t` or counters.\n2.  Read as `なに` otherwise (especially with `を`).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "それは何ですか。",
+                "translation": "Đó là cái gì? (なん)",
+                "translationEn": "What is that?"
+            },
+            {
+                "sentence": "何を買いますか。",
+                "translation": "Bạn mua gì vậy? (なに)",
+                "translationEn": "What are you buying?"
+            }
+        ]
+    },
+    {
+        "lessonId": 6,
+        "title": "N (địa điểm) で V",
+        "structure": "N (địa điểm) で V",
+        "explanation": "Trợ từ `で` chỉ địa điểm nơi diễn ra hành động.\n\n*   Khác với `に` (chỉ sự tồn tại) và `へ` (chỉ phương hướng).",
+        "explanationEn": "Particle `で` indicates the place where an action occurs.\n\n*   Distinct from `に` (existence) and `へ` (direction).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "駅で新聞を買います。",
+                "translation": "Tôi mua báo ở nhà ga.",
+                "translationEn": "I buy a newspaper at the station."
+            },
+            {
+                "sentence": "図書室で勉強します。",
+                "translation": "Tôi học bài ở thư viện.",
+                "translationEn": "I study in the library."
+            }
+        ]
+    },
+    {
+        "lessonId": 6,
+        "title": "Vませんか (Mời mọc)",
+        "structure": "Vませんか",
+        "explanation": "Dạng phủ định nghi vấn dùng để mời mọc, rủ rê người khác làm gì đó cùng mình một cách lịch sự.\n\n*   Dịch: \"Anh/chị có muốn ~ không?\" hoặc \"Cùng ~ nhé?\"",
+        "explanationEn": "Negative question form used to politely invite someone to do something.\n\n*   Translation: \"Would you like to ~?\" or \"Shall we ~?\"",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "いっしょに京都へ行きませんか。",
+                "translation": "Bạn có muốn đi Kyoto cùng tôi không?",
+                "translationEn": "Would you like to go to Kyoto with me?"
+            },
+            {
+                "sentence": "ええ、いいですね。",
+                "translation": "Vâng, được đấy nhỉ.",
+                "translationEn": "Yes, I'd love to."
+            }
+        ]
+    },
+    {
+        "lessonId": 6,
+        "title": "Vましょう (Đề nghị)",
+        "structure": "Vましょう",
+        "explanation": "Đề nghị người khác cùng làm gì đó, hoặc đáp lại lời mời `Vませんか`.\n\n*   Dịch: \"Chúng ta cùng ~ nào.\"",
+        "explanationEn": "Propose to do something together, or respond to `Vませんか`.\n\n*   Translation: \"Let's ~.\"",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "ちょっと休みましょう。",
+                "translation": "Chúng ta cùng nghỉ một chút nào.",
+                "translationEn": "Let's take a break."
+            },
+            {
+                "sentence": "昼ごはんを食べましょう。",
+                "translation": "Cùng ăn trưa nào.",
+                "translationEn": "Let's have lunch."
+            }
+        ]
+    }
+]

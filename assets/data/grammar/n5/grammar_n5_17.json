@@ -1,0 +1,67 @@
+[
+    {
+        "lessonId": 17,
+        "title": "Thể Nai (Vない - Phủ định ngắn)",
+        "structure": "Vない",
+        "explanation": "Cách chia động từ sang thể Nai (Phủ định ngắn).\n\n*   **Nhóm I**: Chuyển cột `i` thành cột `a` + `ない`. (Trừ `い` -> `わ`)\n*   **Nhóm II**: Bỏ `ます` thêm `ない`.\n*   **Nhóm III**: `きます` -> `こない`; `します` -> `しない`.",
+        "explanationEn": "Conjugating verbs to Nai-form (Plain Negative).\n\n*   **Group I**: Change `i` column to `a` column + `ない`. (Exception: `い` -> `わ`)\n*   **Group II**: Drop `ます`, add `ない`.\n*   **Group III**: `きます` -> `こない`; `します` -> `しない`.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "書かない (Viết) / 買わない (Mua) / 待たない (Chờ)",
+                "translation": "Không viết / Không mua / Không chờ",
+                "translationEn": "Not write / Not buy / Not wait"
+            },
+            {
+                "sentence": "食べない (Ăn)",
+                "translation": "Không ăn",
+                "translationEn": "Not eat"
+            }
+        ]
+    },
+    {
+        "lessonId": 17,
+        "title": "Vないで ください (Xin đừng)",
+        "structure": "Vないで ください",
+        "explanation": "Yêu cầu ai đó đừng làm gì (lịch sự).\n\n*   `ここで写真を撮らないでください`: Xin đừng chụp ảnh ở đây.",
+        "explanationEn": "Polite request not to do something.\n\n*   `ここで写真を撮らないでください`: Please do not take photos here.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "ここでたばこを吸わないでください。",
+                "translation": "Xin đừng hút thuốc ở đây.",
+                "translationEn": "Please don't smoke here."
+            }
+        ]
+    },
+    {
+        "lessonId": 17,
+        "title": "Vなければ なりません (Phải)",
+        "structure": "Vない (bỏ い) + ければ なりません",
+        "explanation": "Phải làm gì đó (bắt buộc, nghĩa vụ).\n\n*   `薬を飲まなければなりません`: Phải uống thuốc.",
+        "explanationEn": "Must do something (Obligation).\n\n*   `薬を飲まなければなりません`: Must take medicine.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "毎日日本語を勉強しなければなりません。",
+                "translation": "Mỗi ngày phải học tiếng Nhật.",
+                "translationEn": "I must study Japanese every day."
+            }
+        ]
+    },
+    {
+        "lessonId": 17,
+        "title": "Vなくて もいいです (Không cần)",
+        "structure": "Vない (bỏ い) + くても いいです",
+        "explanation": "Không làm gì đó cũng được (Không cần phải).\n\n*   `明日来なくてもいいです`: Ngày mai không đến cũng được.",
+        "explanationEn": "Need not do (Not necessary).\n\n*   `明日来なくてもいいです`: You don't have to come tomorrow.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "明日来なくてもいいです。",
+                "translation": "Ngày mai bạn không đến cũng được.",
+                "translationEn": "You don't need to come tomorrow."
+            }
+        ]
+    }
+]

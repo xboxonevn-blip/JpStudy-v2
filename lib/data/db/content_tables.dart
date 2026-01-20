@@ -17,14 +17,33 @@ class Vocab extends Table {
   Set<Column> get primaryKey => {id};
 }
 
-class Grammar extends Table {
+class GrammarPoint extends Table {
   @override
-  String get tableName => 'grammar';
+  String get tableName => 'grammar_point';
 
   IntColumn get id => integer()();
-  TextColumn get level => text()();
-  TextColumn get title => text()();
-  TextColumn get summary => text()();
+  IntColumn get lessonId => integer()(); // Linked to Minna Lesson (1-50)
+  TextColumn get title => text()(); // e.g. "N1 wa N2 desu"
+  TextColumn get structure => text()(); // Formula
+  TextColumn get explanation => text()(); // Vietnamese (Default)
+  TextColumn get explanationEn => text().nullable()(); // English
+  TextColumn get level => text()(); // N5/N4
+  TextColumn get tags => text().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+class GrammarExample extends Table {
+  @override
+  String get tableName => 'grammar_example';
+
+  IntColumn get id => integer()();
+  IntColumn get grammarPointId => integer().references(GrammarPoint, #id)();
+  TextColumn get sentence => text()(); // Japanese
+  TextColumn get translation => text()(); // Vietnamese (Default)
+  TextColumn get translationEn => text().nullable()(); // English
+  TextColumn get audioUrl => text().nullable()();
 
   @override
   Set<Column> get primaryKey => {id};

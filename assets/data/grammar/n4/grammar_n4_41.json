@@ -1,0 +1,47 @@
+[
+    {
+        "lessonId": 41,
+        "title": "Cho / Tặng (Hạ mình - Yaru)",
+        "structure": "N (người dưới) に N (vật) を やります",
+        "explanation": "Cho/tặng ai đó (người/vật ở địa vị thấp hơn, động vật, thực vật).\n\n*   `犬にえさをやりました`: Tôi đã cho chó ăn.",
+        "explanationEn": "Give to someone/something of lower status (animals, plants).\n\n*   `犬にえさをやりました`: I fed the dog.",
+        "level": "N4",
+        "examples": [
+            {
+                "sentence": "息子にお菓子をやりました。",
+                "translation": "Tôi cho con trai kẹo.",
+                "translationEn": "I gave my son some sweets."
+            }
+        ]
+    },
+    {
+        "lessonId": 41,
+        "title": "Tặng / Cho (Tôn kính - Kudasaimasu)",
+        "structure": "N (người trên) が N (vật) を くださいました",
+        "explanation": "Ai đó (người trên) tặng/cho tôi (Kính ngữ của `くれます`).\n\n*   `部長が [私に] お土産をくださいました`: Trưởng phòng đã tặng quà đặc sản cho tôi.",
+        "explanationEn": "Someone (superior) gives me (Honorific of `kuremasu`).\n\n*   `部長が [私に] お土産をくださいました`: The department manager gave me a souvenir.",
+        "level": "N4",
+        "examples": [
+            {
+                "sentence": "先生が本をくださいました。",
+                "translation": "Thầy giáo đã tặng sách cho tôi.",
+                "translationEn": "The teacher gave me a book."
+            }
+        ]
+    },
+    {
+        "lessonId": 41,
+        "title": "Nhận (Khiêm nhường - Itadakimasu)",
+        "structure": "N (người trên) に N (vật) を いただきます",
+        "explanation": "Nhận từ ai đó (người trên) (Khiêm nhường ngữ của `もらいます`).\n\n*   `社長に時計をいただきました`: Tôi đã nhận được đồng hồ từ giám đốc.",
+        "explanationEn": "Receive from someone (superior) (Humble form of `moraimasu`).\n\n*   `社長に時計をいただきました`: I received a watch from the president.",
+        "level": "N4",
+        "examples": [
+            {
+                "sentence": "先生に辞書をいただきました。",
+                "translation": "Tôi được thầy giáo tặng từ điển.",
+                "translationEn": "I received a dictionary from the teacher."
+            }
+        ]
+    }
+]

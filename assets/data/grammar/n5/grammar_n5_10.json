@@ -1,0 +1,92 @@
+[
+    {
+        "lessonId": 10,
+        "title": "います / あります (Tồn tại)",
+        "structure": "N が います / あります",
+        "explanation": "Động từ chỉ sự tồn tại (Có).\n\n*   `います`: Dùng cho người và động vật (vật sống/chuyển động).\n*   `あります`: Dùng cho đồ vật, cây cối (vật vô tri/bất động).",
+        "explanationEn": "Verbs of existence (There is/are/have).\n\n*   `います`: For people and animals (animate).\n*   `あります`: For objects and plants (inanimate).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "あそこに男の人がいます。",
+                "translation": "Ở kia có người đàn ông.",
+                "translationEn": "There is a man over there."
+            },
+            {
+                "sentence": "あそこにコンビニがあります。",
+                "translation": "Ở kia có cửa hàng tiện lợi.",
+                "translationEn": "There is a convenience store over there."
+            }
+        ]
+    },
+    {
+        "lessonId": 10,
+        "title": "N1 (địa điểm) に N2 (vật/người) が います/あります",
+        "structure": "N1 に N2 が います/あります",
+        "explanation": "Ở địa điểm N1 có N2.\nTrợ từ `に` chỉ địa điểm tồn tại.",
+        "explanationEn": "There is N2 at place N1.\nParticle `に` indicates the location of existence.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "ロビーに佐藤さんがいます。",
+                "translation": "Có cô Sato ở hành lang.",
+                "translationEn": "Ms. Sato is in the lobby."
+            },
+            {
+                "sentence": "机の上に写真があります。",
+                "translation": "Trên bàn có bức ảnh.",
+                "translationEn": "There is a photo on the desk."
+            }
+        ]
+    },
+    {
+        "lessonId": 10,
+        "title": "N1 (vật/người) は N2 (địa điểm) に います/あります",
+        "structure": "N1 は N2 に います/あります",
+        "explanation": "N1 thì ở địa điểm N2. (Chủ ngữ là N1, đã xác định).\nDùng khi muốn nói về vị trí của một vật/người đã biết.",
+        "explanationEn": "N1 is at place N2 (N1 is the topic).\nUsed to state the location of a known person/object.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "佐藤さんはどこにいますか。",
+                "translation": "Cô Sato ở đâu?",
+                "translationEn": "Where is Ms. Sato?"
+            },
+            {
+                "sentence": "佐藤さんはロビーにいます。",
+                "translation": "Cô Sato ở hành lang.",
+                "translationEn": "Ms. Sato is in the lobby."
+            }
+        ]
+    },
+    {
+        "lessonId": 10,
+        "title": "N1 (vật/người) や N2 (vật/người)",
+        "structure": "N1 や N2",
+        "explanation": "Trợ từ `や` dùng để liệt kê danh từ (như A, B...). Thường không liệt kê hết toàn bộ.",
+        "explanationEn": "Particle `や` used to list items incompletely (A, B, etc.).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "箱の中に手紙や写真があります。",
+                "translation": "Trong hộp có thư, ảnh, (và những thứ khác).",
+                "translationEn": "There are letters, photos, etc. in the box."
+            }
+        ]
+    },
+    {
+        "lessonId": 10,
+        "title": "～など (Vân vân)",
+        "structure": "N1 や N2 など",
+        "explanation": "Dùng sau danh từ cuối cùng trong liệt kê để chỉ \"vân vân\", \"...v.v\".",
+        "explanationEn": "Used after the last noun in a list to mean \"etc.\"",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "箱の中に手紙や写真などがあります。",
+                "translation": "Trong hộp có thư, ảnh, v.v...",
+                "translationEn": "There are letters, photos, etc. in the box."
+            }
+        ]
+    }
+]

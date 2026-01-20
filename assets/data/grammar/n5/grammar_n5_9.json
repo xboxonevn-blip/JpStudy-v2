@@ -1,0 +1,117 @@
+[
+    {
+        "lessonId": 9,
+        "title": "N が あります / わかります",
+        "structure": "N が あります / わかります",
+        "explanation": "Trợ từ `が` dùng với các động từ/tính từ chỉ năng lực, sở hữu, cảm giác.\n\n*   `あります`: Có (sở hữu).\n*   `わかります`: Hiểu.",
+        "explanationEn": "Particle `が` used with verbs/adjectives of ability, possession, or feeling.\n\n*   `あります`: Have/Exist.\n*   `わかります`: Understand.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "私は車があります。",
+                "translation": "Tôi có ô tô.",
+                "translationEn": "I have a car."
+            },
+            {
+                "sentence": "だいたいわかります。",
+                "translation": "Tôi đại khái hiểu rồi.",
+                "translationEn": "I mostly understand."
+            }
+        ]
+    },
+    {
+        "lessonId": 9,
+        "title": "N が 好き / 嫌い / 上手 / 下手 です",
+        "structure": "N が 好き/嫌い/上手/下手 です",
+        "explanation": "Trợ từ `が` dùng với tính từ chỉ sở thích, năng lực.\n\n*   `好き` (suki): Thích.\n*   `嫌い` (kirai): Ghét.\n*   `上手` (jouzu): Giỏi.\n*   `下手` (heta): Kém.",
+        "explanationEn": "Particle `が` with adjectives of preference or ability.\n\n*   `好き`: Like.\n*   `嫌い`: Dislike.\n*   `上手`: Good at.\n*   `下手`: Bad at.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "私はイタリア料理が好きです。",
+                "translation": "Tôi thích món ăn Ý.",
+                "translationEn": "I like Italian food."
+            },
+            {
+                "sentence": "マリアさんはダンスが上手です。",
+                "translation": "Maria nhảy giỏi.",
+                "translationEn": "Maria is good at dancing."
+            }
+        ]
+    },
+    {
+        "lessonId": 9,
+        "title": "どんな N (Sở thích)",
+        "structure": "どんな N が 好きですか",
+        "explanation": "Hỏi cụ thể về sở thích (Thích loại N nào).",
+        "explanationEn": "Ask specifically about preferences (What kind of N do you like?).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "どんなスポーツが好きですか。",
+                "translation": "Bạn thích môn thể thao nào?",
+                "translationEn": "What sports do you like?"
+            },
+            {
+                "sentence": "サッカーが好きです。",
+                "translation": "Tôi thích bóng đá.",
+                "translationEn": "I like soccer."
+            }
+        ]
+    },
+    {
+        "lessonId": 9,
+        "title": "よく / だいたい / たくさん / 少し / 全然",
+        "structure": "Phó từ chỉ mức độ + V",
+        "explanation": "Các phó từ chỉ mức độ.\n\n*   `よく` (Rõ/Thường), `だいたい` (Đại khái), `たくさん` (Nhiều), `少し` (Một chút) -> Dùng với khẳng định.\n*   `あまり` (Không lắm), `全然` (Hoàn toàn không) -> Dùng với phủ định.",
+        "explanationEn": "Adverbs of degree.\n\n*   `よく`, `だいたい`, `たくさん`, `少し` -> Affirmative.\n*   `あまり`, `全然` -> Negative.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "英語がよくわかります。",
+                "translation": "Tôi hiểu rõ tiếng Anh.",
+                "translationEn": "I understand English well."
+            },
+            {
+                "sentence": "お金が全然ありません。",
+                "translation": "Tôi hoàn toàn không có tiền.",
+                "translationEn": "I have no money at all."
+            }
+        ]
+    },
+    {
+        "lessonId": 9,
+        "title": "～から (Lý do)",
+        "structure": "S1 (Lý do) から、 S2 (Kết quả)",
+        "explanation": "Nối hai mệnh đề chỉ nguyên nhân - kết quả (Vì ... nên ...).\n`から` đứng sau mệnh đề chỉ nguyên nhân.",
+        "explanationEn": "Connects cause and effect (Because ..., ...).\n`から` comes after the reason clause.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "時間がありませんから、新聞を読みません。",
+                "translation": "Vì không có thời gian nên tôi không đọc báo.",
+                "translationEn": "I don't read the newspaper because I don't have time."
+            }
+        ]
+    },
+    {
+        "lessonId": 9,
+        "title": "どうして",
+        "structure": "どうして ～ か",
+        "explanation": "Tại sao? Câu hỏi tìm lý do.\nTrả lời thường kết thúc bằng `～から`.",
+        "explanationEn": "Why? Asks for a reason.\nAnswer usually ends with `～から`.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "どうして朝新聞を読みませんか。",
+                "translation": "Tại sao sáng nay bạn không đọc báo?",
+                "translationEn": "Why didn't you read the newspaper this morning?"
+            },
+            {
+                "sentence": "時間がありませんから。",
+                "translation": "Vì tôi không có thời gian.",
+                "translationEn": "Because I didn't have time."
+            }
+        ]
+    }
+]

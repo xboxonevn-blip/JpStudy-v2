@@ -1,0 +1,77 @@
+[
+    {
+        "lessonId": 20,
+        "title": "Thể Thông thường (Plain Form)",
+        "structure": "Thể thông thường vs Thể lịch sự",
+        "explanation": "Cách dùng thể thông thường (Văn nói thân mật).\n\n*   `書きます` -> `書く`\n*   `書きません` -> `書かない`\n*   `書きました` -> `書いた`\n*   `書きませんでした` -> `書かなかった`",
+        "explanationEn": "Usage of Plain Form (Casual Speech).\n\n*   `書きます` -> `書く`\n*   `書きません` -> `書かない`\n*   `書きました` -> `書いた`\n*   `書きませんでした` -> `書かなかった`",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "明日東京へ行く？ うん、行く。",
+                "translation": "Mai đi Tokyo không? Ừ, đi.",
+                "translationEn": "Going to Tokyo tomorrow? Yeah, going."
+            },
+            {
+                "sentence": "毎日忙しい？ うん、忙しい。",
+                "translation": "Mỗi ngày đều bận hả? Ừ, bận.",
+                "translationEn": "Busy every day? Yeah, busy."
+            }
+        ]
+    },
+    {
+        "lessonId": 20,
+        "title": "Câu hỏi trong thể thông thường",
+        "structure": "S?",
+        "explanation": "Trong văn nói thân mật, thường bỏ `か` ở cuối câu hỏi và lên giọng.\n\n*   `飲みますか` -> `飲む？`",
+        "explanationEn": "In casual speech, omit `か` and raise intonation for questions.\n\n*   `飲みますか` -> `飲む？`",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "コーヒー、飲む？",
+                "translation": "Uống cà phê không?",
+                "translationEn": "Drink coffee?"
+            },
+            {
+                "sentence": "うん、飲む。",
+                "translation": "Ừ, uống.",
+                "translationEn": "Yeah, drink."
+            }
+        ]
+    },
+    {
+        "lessonId": 20,
+        "title": "Bỏ trợ từ trong văn nói",
+        "structure": "Bỏ `は`, `を`, `へ`...",
+        "explanation": "Trong hội thoại thân mật, các trợ từ như `は`, `を`, `へ` thường bị lược bỏ nếu nghĩa đã rõ ràng.",
+        "explanationEn": "In casual conversation, particles like `は`, `を`, `へ` are often dropped if the meaning is clear.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "ご飯 [を] 食べる？",
+                "translation": "Ăn cơm không?",
+                "translationEn": "Eat rice?"
+            },
+            {
+                "sentence": "明日、京都 [へ] 行く。",
+                "translation": "Mai đi Kyoto.",
+                "translationEn": "Going to Kyoto tomorrow."
+            }
+        ]
+    },
+    {
+        "lessonId": 20,
+        "title": "kedo (Nhưng - Thân mật)",
+        "structure": "S1 けど、 S2",
+        "explanation": "Giống `が` (nhưng), dùng trong văn nói thân mật để nối câu hoặc làm nhẹ câu nói.\n\n*   `チケットがあるけど、一緒に行かない？`: Tôi có vé này, đi cùng không?",
+        "explanationEn": "Same as `が` (but), used in casual speech to connect sentences or soften the tone.\n\n*   `チケットがあるけど、一緒に行かない？`: I have tickets, wanna go together?",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "チケットがあるけど、一緒に行かない？",
+                "translation": "Tôi có vé này, đi cùng không?",
+                "translationEn": "I have tickets, won't you go with me?"
+            }
+        ]
+    }
+]

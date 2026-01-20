@@ -1,0 +1,72 @@
+[
+    {
+        "lessonId": 11,
+        "title": "Số lượng từ (Quantifiers)",
+        "structure": "N を Số lượng từ + V",
+        "explanation": "Số lượng từ đứng ngay trước động từ (không dùng trợ từ).\n\n*   `みかんを３つ食べました` (Tôi đã ăn 3 quả quýt).",
+        "explanationEn": "Quantifiers are placed directly before the verb (no particle).\n\n*   `みかんを３つ食べました` (I ate 3 tangerines).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "りんごを４つ買いました。",
+                "translation": "Tôi đã mua 4 quả táo.",
+                "translationEn": "I bought 4 apples."
+            },
+            {
+                "sentence": "外国人の学生が２人います。",
+                "translation": "Có 2 sinh viên nước ngoài.",
+                "translationEn": "There are 2 foreign students."
+            }
+        ]
+    },
+    {
+        "lessonId": 11,
+        "title": "Số lượng từ (Thời gian)",
+        "structure": "S (thời gian) に ～回 V",
+        "explanation": "Tần suất thực hiện hành động trong một khoảng thời gian.\n\n*   `１か月に２回`: 2 lần trong 1 tháng.",
+        "explanationEn": "Frequency of an action within a time period.\n\n*   `１か月に２回`: Twice in a month.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "１週間に１回テニスをします。",
+                "translation": "Tôi chơi tennis 1 tuần 1 lần.",
+                "translationEn": "I play tennis once a week."
+            }
+        ]
+    },
+    {
+        "lessonId": 11,
+        "title": "どのくらい (Bao lâu)",
+        "structure": "どのくらい V ますか",
+        "explanation": "Hỏi về khoảng thời gian (lượng thời gian) hoặc mức độ.\n\n*   `どのくらいかかりますか`: Mất bao lâu?",
+        "explanationEn": "Ask about duration or extent.\n\n*   `どのくらいかかりますか`: How long does it take?",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "国から日本までどのくらいかかりますか。",
+                "translation": "Từ nước bạn đến Nhật mất bao lâu?",
+                "translationEn": "How long does it take from your country to Japan?"
+            },
+            {
+                "sentence": "飛行機で５時間ぐらいです。",
+                "translation": "Đi bằng máy bay mất khoảng 5 tiếng.",
+                "translationEn": "It takes about 5 hours by plane."
+            }
+        ]
+    },
+    {
+        "lessonId": 11,
+        "title": "Chỉ (Only)",
+        "structure": "N だけ",
+        "explanation": "Chỉ N (và không có gì khác). Đi sau danh từ.\n\n*   `休みは日曜日だけです`: Ngày nghỉ chỉ có chủ nhật.",
+        "explanationEn": "Only N. Used after a noun.\n\n*   `休みは日曜日だけです`: The only holiday is Sunday.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "休みは日曜日だけです。",
+                "translation": "Ngày nghỉ chỉ có chủ nhật.",
+                "translationEn": "My only day off is Sunday."
+            }
+        ]
+    }
+]

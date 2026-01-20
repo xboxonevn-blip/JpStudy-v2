@@ -1,0 +1,82 @@
+[
+    {
+        "lessonId": 12,
+        "title": "Thì quá khứ của tính từ",
+        "structure": "Aい -> Aかったです / Aな -> Aでした",
+        "explanation": "Quá khứ của tính từ.\n\n*   `あつい` -> `あつかったです` (Đã nóng).\n*   `ひま` -> `ひまでした` (Đã rảnh).",
+        "explanationEn": "Past tense of adjectives.\n\n*   `あつい` -> `あつかったです` (Was hot).\n*   `ひま` -> `ひまでした` (Was free).",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "昨日は寒かったです。",
+                "translation": "Hôm qua trời lạnh.",
+                "translationEn": "It was cold yesterday."
+            },
+            {
+                "sentence": "昨日は雨でした。",
+                "translation": "Hôm qua trời mưa.",
+                "translationEn": "It was rainy yesterday."
+            }
+        ]
+    },
+    {
+        "lessonId": 12,
+        "title": "So sánh hơn (Yori)",
+        "structure": "N1 は N2 より A です",
+        "explanation": "N1 thì A hơn N2.\n\n*   `より`: Hơn.",
+        "explanationEn": "N1 is more A than N2.\n\n*   `より`: Than.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "この車はあの車より大きいです。",
+                "translation": "Cái xe này to hơn cái xe kia.",
+                "translationEn": "This car is bigger than that car."
+            },
+            {
+                "sentence": "北海道は大阪より涼しいです。",
+                "translation": "Hokkaido mát hơn Osaka.",
+                "translationEn": "Hokkaido is cooler than Osaka."
+            }
+        ]
+    },
+    {
+        "lessonId": 12,
+        "title": "So sánh nhất (Ichiban)",
+        "structure": "N1 (phạm vi) で 何/どこ/誰 が いちばん A ですか",
+        "explanation": "Trong phạm vi N1, cái gì/đâu/ai là A nhất?\n\n*   Trả lời: `N2 が いちばん A です`.",
+        "explanationEn": "In N1, what/where/who is the most A?\n\n*   Answer: `N2 is the most A`.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "日本料理で何がいちばんおいしいですか。",
+                "translation": "Trong các món ăn Nhật, món nào ngon nhất?",
+                "translationEn": "What is the most delicious Japanese food?"
+            },
+            {
+                "sentence": "天ぷらがいちばんおいしいです。",
+                "translation": "Tempura là ngon nhất.",
+                "translationEn": "Tempura is the most delicious."
+            }
+        ]
+    },
+    {
+        "lessonId": 12,
+        "title": "So sánh lựa chọn (Dochira)",
+        "structure": "N1 と N2 と どちらが A ですか",
+        "explanation": "Giữa N1 và N2, cái nào A hơn?\n\n*   Trả lời: `N のほうが A です`.",
+        "explanationEn": "Between N1 and N2, which is more A?\n\n*   Answer: `N is more A`.",
+        "level": "N5",
+        "examples": [
+            {
+                "sentence": "サッカーと野球とどちらがおもしろいですか。",
+                "translation": "Bóng đá và bóng chày, cái nào thú vị hơn?",
+                "translationEn": "Which is more interesting, soccer or baseball?"
+            },
+            {
+                "sentence": "サッカーのほうが面白いです。",
+                "translation": "Bóng đá thú vị hơn.",
+                "translationEn": "Soccer is more interesting."
+            }
+        ]
+    }
+]

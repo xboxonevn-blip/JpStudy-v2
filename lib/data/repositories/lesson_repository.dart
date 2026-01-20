@@ -31,6 +31,7 @@ final lessonTermsProvider =
     title: args.fallbackTitle,
   );
   await repo.seedTermsIfEmpty(args.lessonId, args.level);
+  await repo.seedGrammarIfEmpty(args.lessonId, args.level);
   return repo.fetchTerms(args.lessonId);
 });
 
@@ -83,6 +84,25 @@ class LessonTitleArgs {
 
   @override
   int get hashCode => Object.hash(lessonId, fallback);
+}
+
+  final int maxId;
+}
+
+final lessonGrammarProvider =
+    FutureProvider.family<List<GrammarPointData>, int>((ref, lessonId) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchGrammar(lessonId);
+});
+
+class GrammarPointData {
+  const GrammarPointData({
+    required this.point,
+    required this.examples,
+  });
+
+  final GrammarPoint point;
+  final List<GrammarExample> examples;
 }
 
 class LessonTermsArgs {
@@ -526,6 +546,90 @@ class LessonRepository {
             orderIndex: Value(i + 1),
           ),
         );
+      }
+    });
+    });
+  }
+
+    });
+  }
+
+  Future<List<GrammarPointData>> fetchGrammar(int lessonId) async {
+    final points = await (_db.select(_db.grammarPoints)
+          ..where((tbl) => tbl.lessonId.equals(lessonId)))
+        .get();
+
+    if (points.isEmpty) {
+      return [];
+    }
+
+    final result = <GrammarPointData>[];
+    for (final point in points) {
+      final examples = await (_db.select(_db.grammarExamples)
+            ..where((tbl) => tbl.grammarId.equals(point.id)))
+          .get();
+      result.add(GrammarPointData(point: point, examples: examples));
+    }
+    return result;
+  }
+
+  Future<void> seedGrammarIfEmpty(int lessonId, String level) async {
+    // Check if grammar already exists for this lesson
+    final existingCount = await (_db.selectOnly(_db.grammarPoints)
+          ..addColumns([_db.grammarPoints.id.count()])
+          ..where(_db.grammarPoints.lessonId.equals(lessonId)))
+        .getSingleOrNull();
+    
+    if ((existingCount?.read(_db.grammarPoints.id.count()) ?? 0) > 0) {
+      return;
+    }
+
+    // Fetch from Content DB
+    final contentPoints = await (_contentDb.select(_contentDb.grammarPoint)
+          ..where((tbl) => tbl.lessonId.equals(lessonId)))
+        .get();
+
+    if (contentPoints.isEmpty) {
+      return;
+    }
+
+    await _db.batch((batch) async {
+      for (final cp in contentPoints) {
+        // Insert Point
+        final pointId = await _db.into(_db.grammarPoints).insert(
+          GrammarPointsCompanion.insert(
+            lessonId: Value(lessonId),
+            grammarPoint: cp.title,
+            meaning: cp.title, // Placeholder
+            meaningVi: Value(cp.title), // Placeholder
+            meaningEn: Value(cp.title), // Placeholder
+            connection: cp.structure,
+            explanation: cp.explanation,
+            explanationVi: Value(cp.explanation),
+            explanationEn: Value(cp.explanationEn),
+            jlptLevel: cp.level,
+            isLearned: const Value(false),
+          ),
+        );
+
+        // Fetch Examples
+        final examples = await (_contentDb.select(_contentDb.grammarExample)
+              ..where((tbl) => tbl.grammarPointId.equals(cp.id)))
+            .get();
+
+        for (final ex in examples) {
+          batch.insert(
+            _db.grammarExamples,
+            GrammarExamplesCompanion.insert(
+              grammarId: pointId,
+              japanese: ex.sentence,
+              translation: ex.translation,
+              translationVi: Value(ex.translation),
+              translationEn: Value(ex.translationEn),
+              audioUrl: Value(ex.audioUrl),
+            ),
+          );
+        }
       }
     });
   }

@@ -501,11 +501,12 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
   }
 }
 
-class $GrammarTable extends Grammar with TableInfo<$GrammarTable, GrammarData> {
+class $GrammarPointTable extends GrammarPoint
+    with TableInfo<$GrammarPointTable, GrammarPointData> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $GrammarTable(this.attachedDatabase, [this._alias]);
+  $GrammarPointTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<int> id = GeneratedColumn<int>(
@@ -515,13 +516,15 @@ class $GrammarTable extends Grammar with TableInfo<$GrammarTable, GrammarData> {
     type: DriftSqlType.int,
     requiredDuringInsert: false,
   );
-  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
   @override
-  late final GeneratedColumn<String> level = GeneratedColumn<String>(
-    'level',
+  late final GeneratedColumn<int> lessonId = GeneratedColumn<int>(
+    'lesson_id',
     aliasedName,
     false,
-    type: DriftSqlType.string,
+    type: DriftSqlType.int,
     requiredDuringInsert: true,
   );
   static const VerificationMeta _titleMeta = const VerificationMeta('title');
@@ -533,27 +536,76 @@ class $GrammarTable extends Grammar with TableInfo<$GrammarTable, GrammarData> {
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _summaryMeta = const VerificationMeta(
-    'summary',
+  static const VerificationMeta _structureMeta = const VerificationMeta(
+    'structure',
   );
   @override
-  late final GeneratedColumn<String> summary = GeneratedColumn<String>(
-    'summary',
+  late final GeneratedColumn<String> structure = GeneratedColumn<String>(
+    'structure',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _explanationMeta = const VerificationMeta(
+    'explanation',
+  );
   @override
-  List<GeneratedColumn> get $columns => [id, level, title, summary];
+  late final GeneratedColumn<String> explanation = GeneratedColumn<String>(
+    'explanation',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _explanationEnMeta = const VerificationMeta(
+    'explanationEn',
+  );
+  @override
+  late final GeneratedColumn<String> explanationEn = GeneratedColumn<String>(
+    'explanation_en',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  @override
+  late final GeneratedColumn<String> level = GeneratedColumn<String>(
+    'level',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _tagsMeta = const VerificationMeta('tags');
+  @override
+  late final GeneratedColumn<String> tags = GeneratedColumn<String>(
+    'tags',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    lessonId,
+    title,
+    structure,
+    explanation,
+    explanationEn,
+    level,
+    tags,
+  ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
-  static const String $name = 'grammar';
+  static const String $name = 'grammar_point';
   @override
   VerificationContext validateIntegrity(
-    Insertable<GrammarData> instance, {
+    Insertable<GrammarPointData> instance, {
     bool isInserting = false,
   }) {
     final context = VerificationContext();
@@ -561,13 +613,13 @@ class $GrammarTable extends Grammar with TableInfo<$GrammarTable, GrammarData> {
     if (data.containsKey('id')) {
       context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
     }
-    if (data.containsKey('level')) {
+    if (data.containsKey('lesson_id')) {
       context.handle(
-        _levelMeta,
-        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
       );
     } else if (isInserting) {
-      context.missing(_levelMeta);
+      context.missing(_lessonIdMeta);
     }
     if (data.containsKey('title')) {
       context.handle(
@@ -577,13 +629,47 @@ class $GrammarTable extends Grammar with TableInfo<$GrammarTable, GrammarData> {
     } else if (isInserting) {
       context.missing(_titleMeta);
     }
-    if (data.containsKey('summary')) {
+    if (data.containsKey('structure')) {
       context.handle(
-        _summaryMeta,
-        summary.isAcceptableOrUnknown(data['summary']!, _summaryMeta),
+        _structureMeta,
+        structure.isAcceptableOrUnknown(data['structure']!, _structureMeta),
       );
     } else if (isInserting) {
-      context.missing(_summaryMeta);
+      context.missing(_structureMeta);
+    }
+    if (data.containsKey('explanation')) {
+      context.handle(
+        _explanationMeta,
+        explanation.isAcceptableOrUnknown(
+          data['explanation']!,
+          _explanationMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_explanationMeta);
+    }
+    if (data.containsKey('explanation_en')) {
+      context.handle(
+        _explanationEnMeta,
+        explanationEn.isAcceptableOrUnknown(
+          data['explanation_en']!,
+          _explanationEnMeta,
+        ),
+      );
+    }
+    if (data.containsKey('level')) {
+      context.handle(
+        _levelMeta,
+        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_levelMeta);
+    }
+    if (data.containsKey('tags')) {
+      context.handle(
+        _tagsMeta,
+        tags.isAcceptableOrUnknown(data['tags']!, _tagsMeta),
+      );
     }
     return context;
   }
@@ -591,74 +677,117 @@ class $GrammarTable extends Grammar with TableInfo<$GrammarTable, GrammarData> {
   @override
   Set<GeneratedColumn> get $primaryKey => {id};
   @override
-  GrammarData map(Map<String, dynamic> data, {String? tablePrefix}) {
+  GrammarPointData map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return GrammarData(
+    return GrammarPointData(
       id: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
         data['${effectivePrefix}id'],
       )!,
-      level: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}level'],
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lesson_id'],
       )!,
       title: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}title'],
       )!,
-      summary: attachedDatabase.typeMapping.read(
+      structure: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}summary'],
+        data['${effectivePrefix}structure'],
       )!,
+      explanation: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}explanation'],
+      )!,
+      explanationEn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}explanation_en'],
+      ),
+      level: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}level'],
+      )!,
+      tags: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}tags'],
+      ),
     );
   }
 
   @override
-  $GrammarTable createAlias(String alias) {
-    return $GrammarTable(attachedDatabase, alias);
+  $GrammarPointTable createAlias(String alias) {
+    return $GrammarPointTable(attachedDatabase, alias);
   }
 }
 
-class GrammarData extends DataClass implements Insertable<GrammarData> {
+class GrammarPointData extends DataClass
+    implements Insertable<GrammarPointData> {
   final int id;
-  final String level;
+  final int lessonId;
   final String title;
-  final String summary;
-  const GrammarData({
+  final String structure;
+  final String explanation;
+  final String? explanationEn;
+  final String level;
+  final String? tags;
+  const GrammarPointData({
     required this.id,
-    required this.level,
+    required this.lessonId,
     required this.title,
-    required this.summary,
+    required this.structure,
+    required this.explanation,
+    this.explanationEn,
+    required this.level,
+    this.tags,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
     map['id'] = Variable<int>(id);
-    map['level'] = Variable<String>(level);
+    map['lesson_id'] = Variable<int>(lessonId);
     map['title'] = Variable<String>(title);
-    map['summary'] = Variable<String>(summary);
+    map['structure'] = Variable<String>(structure);
+    map['explanation'] = Variable<String>(explanation);
+    if (!nullToAbsent || explanationEn != null) {
+      map['explanation_en'] = Variable<String>(explanationEn);
+    }
+    map['level'] = Variable<String>(level);
+    if (!nullToAbsent || tags != null) {
+      map['tags'] = Variable<String>(tags);
+    }
     return map;
   }
 
-  GrammarCompanion toCompanion(bool nullToAbsent) {
-    return GrammarCompanion(
+  GrammarPointCompanion toCompanion(bool nullToAbsent) {
+    return GrammarPointCompanion(
       id: Value(id),
-      level: Value(level),
+      lessonId: Value(lessonId),
       title: Value(title),
-      summary: Value(summary),
+      structure: Value(structure),
+      explanation: Value(explanation),
+      explanationEn: explanationEn == null && nullToAbsent
+          ? const Value.absent()
+          : Value(explanationEn),
+      level: Value(level),
+      tags: tags == null && nullToAbsent ? const Value.absent() : Value(tags),
     );
   }
 
-  factory GrammarData.fromJson(
+  factory GrammarPointData.fromJson(
     Map<String, dynamic> json, {
     ValueSerializer? serializer,
   }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
-    return GrammarData(
+    return GrammarPointData(
       id: serializer.fromJson<int>(json['id']),
-      level: serializer.fromJson<String>(json['level']),
+      lessonId: serializer.fromJson<int>(json['lessonId']),
       title: serializer.fromJson<String>(json['title']),
-      summary: serializer.fromJson<String>(json['summary']),
+      structure: serializer.fromJson<String>(json['structure']),
+      explanation: serializer.fromJson<String>(json['explanation']),
+      explanationEn: serializer.fromJson<String?>(json['explanationEn']),
+      level: serializer.fromJson<String>(json['level']),
+      tags: serializer.fromJson<String?>(json['tags']),
     );
   }
   @override
@@ -666,99 +795,168 @@ class GrammarData extends DataClass implements Insertable<GrammarData> {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
       'id': serializer.toJson<int>(id),
-      'level': serializer.toJson<String>(level),
+      'lessonId': serializer.toJson<int>(lessonId),
       'title': serializer.toJson<String>(title),
-      'summary': serializer.toJson<String>(summary),
+      'structure': serializer.toJson<String>(structure),
+      'explanation': serializer.toJson<String>(explanation),
+      'explanationEn': serializer.toJson<String?>(explanationEn),
+      'level': serializer.toJson<String>(level),
+      'tags': serializer.toJson<String?>(tags),
     };
   }
 
-  GrammarData copyWith({
+  GrammarPointData copyWith({
     int? id,
-    String? level,
+    int? lessonId,
     String? title,
-    String? summary,
-  }) => GrammarData(
+    String? structure,
+    String? explanation,
+    Value<String?> explanationEn = const Value.absent(),
+    String? level,
+    Value<String?> tags = const Value.absent(),
+  }) => GrammarPointData(
     id: id ?? this.id,
-    level: level ?? this.level,
+    lessonId: lessonId ?? this.lessonId,
     title: title ?? this.title,
-    summary: summary ?? this.summary,
+    structure: structure ?? this.structure,
+    explanation: explanation ?? this.explanation,
+    explanationEn: explanationEn.present
+        ? explanationEn.value
+        : this.explanationEn,
+    level: level ?? this.level,
+    tags: tags.present ? tags.value : this.tags,
   );
-  GrammarData copyWithCompanion(GrammarCompanion data) {
-    return GrammarData(
+  GrammarPointData copyWithCompanion(GrammarPointCompanion data) {
+    return GrammarPointData(
       id: data.id.present ? data.id.value : this.id,
-      level: data.level.present ? data.level.value : this.level,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
       title: data.title.present ? data.title.value : this.title,
-      summary: data.summary.present ? data.summary.value : this.summary,
+      structure: data.structure.present ? data.structure.value : this.structure,
+      explanation: data.explanation.present
+          ? data.explanation.value
+          : this.explanation,
+      explanationEn: data.explanationEn.present
+          ? data.explanationEn.value
+          : this.explanationEn,
+      level: data.level.present ? data.level.value : this.level,
+      tags: data.tags.present ? data.tags.value : this.tags,
     );
   }
 
   @override
   String toString() {
-    return (StringBuffer('GrammarData(')
+    return (StringBuffer('GrammarPointData(')
           ..write('id: $id, ')
-          ..write('level: $level, ')
+          ..write('lessonId: $lessonId, ')
           ..write('title: $title, ')
-          ..write('summary: $summary')
+          ..write('structure: $structure, ')
+          ..write('explanation: $explanation, ')
+          ..write('explanationEn: $explanationEn, ')
+          ..write('level: $level, ')
+          ..write('tags: $tags')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode => Object.hash(id, level, title, summary);
+  int get hashCode => Object.hash(
+    id,
+    lessonId,
+    title,
+    structure,
+    explanation,
+    explanationEn,
+    level,
+    tags,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      (other is GrammarData &&
+      (other is GrammarPointData &&
           other.id == this.id &&
-          other.level == this.level &&
+          other.lessonId == this.lessonId &&
           other.title == this.title &&
-          other.summary == this.summary);
+          other.structure == this.structure &&
+          other.explanation == this.explanation &&
+          other.explanationEn == this.explanationEn &&
+          other.level == this.level &&
+          other.tags == this.tags);
 }
 
-class GrammarCompanion extends UpdateCompanion<GrammarData> {
+class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
   final Value<int> id;
-  final Value<String> level;
+  final Value<int> lessonId;
   final Value<String> title;
-  final Value<String> summary;
-  const GrammarCompanion({
+  final Value<String> structure;
+  final Value<String> explanation;
+  final Value<String?> explanationEn;
+  final Value<String> level;
+  final Value<String?> tags;
+  const GrammarPointCompanion({
     this.id = const Value.absent(),
-    this.level = const Value.absent(),
+    this.lessonId = const Value.absent(),
     this.title = const Value.absent(),
-    this.summary = const Value.absent(),
+    this.structure = const Value.absent(),
+    this.explanation = const Value.absent(),
+    this.explanationEn = const Value.absent(),
+    this.level = const Value.absent(),
+    this.tags = const Value.absent(),
   });
-  GrammarCompanion.insert({
+  GrammarPointCompanion.insert({
     this.id = const Value.absent(),
-    required String level,
+    required int lessonId,
     required String title,
-    required String summary,
-  }) : level = Value(level),
+    required String structure,
+    required String explanation,
+    this.explanationEn = const Value.absent(),
+    required String level,
+    this.tags = const Value.absent(),
+  }) : lessonId = Value(lessonId),
        title = Value(title),
-       summary = Value(summary);
-  static Insertable<GrammarData> custom({
+       structure = Value(structure),
+       explanation = Value(explanation),
+       level = Value(level);
+  static Insertable<GrammarPointData> custom({
     Expression<int>? id,
-    Expression<String>? level,
+    Expression<int>? lessonId,
     Expression<String>? title,
-    Expression<String>? summary,
+    Expression<String>? structure,
+    Expression<String>? explanation,
+    Expression<String>? explanationEn,
+    Expression<String>? level,
+    Expression<String>? tags,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
-      if (level != null) 'level': level,
+      if (lessonId != null) 'lesson_id': lessonId,
       if (title != null) 'title': title,
-      if (summary != null) 'summary': summary,
+      if (structure != null) 'structure': structure,
+      if (explanation != null) 'explanation': explanation,
+      if (explanationEn != null) 'explanation_en': explanationEn,
+      if (level != null) 'level': level,
+      if (tags != null) 'tags': tags,
     });
   }
 
-  GrammarCompanion copyWith({
+  GrammarPointCompanion copyWith({
     Value<int>? id,
-    Value<String>? level,
+    Value<int>? lessonId,
     Value<String>? title,
-    Value<String>? summary,
+    Value<String>? structure,
+    Value<String>? explanation,
+    Value<String?>? explanationEn,
+    Value<String>? level,
+    Value<String?>? tags,
   }) {
-    return GrammarCompanion(
+    return GrammarPointCompanion(
       id: id ?? this.id,
-      level: level ?? this.level,
+      lessonId: lessonId ?? this.lessonId,
       title: title ?? this.title,
-      summary: summary ?? this.summary,
+      structure: structure ?? this.structure,
+      explanation: explanation ?? this.explanation,
+      explanationEn: explanationEn ?? this.explanationEn,
+      level: level ?? this.level,
+      tags: tags ?? this.tags,
     );
   }
 
@@ -768,25 +966,466 @@ class GrammarCompanion extends UpdateCompanion<GrammarData> {
     if (id.present) {
       map['id'] = Variable<int>(id.value);
     }
-    if (level.present) {
-      map['level'] = Variable<String>(level.value);
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<int>(lessonId.value);
     }
     if (title.present) {
       map['title'] = Variable<String>(title.value);
     }
-    if (summary.present) {
-      map['summary'] = Variable<String>(summary.value);
+    if (structure.present) {
+      map['structure'] = Variable<String>(structure.value);
+    }
+    if (explanation.present) {
+      map['explanation'] = Variable<String>(explanation.value);
+    }
+    if (explanationEn.present) {
+      map['explanation_en'] = Variable<String>(explanationEn.value);
+    }
+    if (level.present) {
+      map['level'] = Variable<String>(level.value);
+    }
+    if (tags.present) {
+      map['tags'] = Variable<String>(tags.value);
     }
     return map;
   }
 
   @override
   String toString() {
-    return (StringBuffer('GrammarCompanion(')
+    return (StringBuffer('GrammarPointCompanion(')
           ..write('id: $id, ')
-          ..write('level: $level, ')
+          ..write('lessonId: $lessonId, ')
           ..write('title: $title, ')
-          ..write('summary: $summary')
+          ..write('structure: $structure, ')
+          ..write('explanation: $explanation, ')
+          ..write('explanationEn: $explanationEn, ')
+          ..write('level: $level, ')
+          ..write('tags: $tags')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $GrammarExampleTable extends GrammarExample
+    with TableInfo<$GrammarExampleTable, GrammarExampleData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $GrammarExampleTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _grammarPointIdMeta = const VerificationMeta(
+    'grammarPointId',
+  );
+  @override
+  late final GeneratedColumn<int> grammarPointId = GeneratedColumn<int>(
+    'grammar_point_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES grammar_point (id)',
+    ),
+  );
+  static const VerificationMeta _sentenceMeta = const VerificationMeta(
+    'sentence',
+  );
+  @override
+  late final GeneratedColumn<String> sentence = GeneratedColumn<String>(
+    'sentence',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _translationMeta = const VerificationMeta(
+    'translation',
+  );
+  @override
+  late final GeneratedColumn<String> translation = GeneratedColumn<String>(
+    'translation',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _translationEnMeta = const VerificationMeta(
+    'translationEn',
+  );
+  @override
+  late final GeneratedColumn<String> translationEn = GeneratedColumn<String>(
+    'translation_en',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _audioUrlMeta = const VerificationMeta(
+    'audioUrl',
+  );
+  @override
+  late final GeneratedColumn<String> audioUrl = GeneratedColumn<String>(
+    'audio_url',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    grammarPointId,
+    sentence,
+    translation,
+    translationEn,
+    audioUrl,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'grammar_example';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<GrammarExampleData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('grammar_point_id')) {
+      context.handle(
+        _grammarPointIdMeta,
+        grammarPointId.isAcceptableOrUnknown(
+          data['grammar_point_id']!,
+          _grammarPointIdMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_grammarPointIdMeta);
+    }
+    if (data.containsKey('sentence')) {
+      context.handle(
+        _sentenceMeta,
+        sentence.isAcceptableOrUnknown(data['sentence']!, _sentenceMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_sentenceMeta);
+    }
+    if (data.containsKey('translation')) {
+      context.handle(
+        _translationMeta,
+        translation.isAcceptableOrUnknown(
+          data['translation']!,
+          _translationMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_translationMeta);
+    }
+    if (data.containsKey('translation_en')) {
+      context.handle(
+        _translationEnMeta,
+        translationEn.isAcceptableOrUnknown(
+          data['translation_en']!,
+          _translationEnMeta,
+        ),
+      );
+    }
+    if (data.containsKey('audio_url')) {
+      context.handle(
+        _audioUrlMeta,
+        audioUrl.isAcceptableOrUnknown(data['audio_url']!, _audioUrlMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  GrammarExampleData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return GrammarExampleData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      grammarPointId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}grammar_point_id'],
+      )!,
+      sentence: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}sentence'],
+      )!,
+      translation: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}translation'],
+      )!,
+      translationEn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}translation_en'],
+      ),
+      audioUrl: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}audio_url'],
+      ),
+    );
+  }
+
+  @override
+  $GrammarExampleTable createAlias(String alias) {
+    return $GrammarExampleTable(attachedDatabase, alias);
+  }
+}
+
+class GrammarExampleData extends DataClass
+    implements Insertable<GrammarExampleData> {
+  final int id;
+  final int grammarPointId;
+  final String sentence;
+  final String translation;
+  final String? translationEn;
+  final String? audioUrl;
+  const GrammarExampleData({
+    required this.id,
+    required this.grammarPointId,
+    required this.sentence,
+    required this.translation,
+    this.translationEn,
+    this.audioUrl,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['grammar_point_id'] = Variable<int>(grammarPointId);
+    map['sentence'] = Variable<String>(sentence);
+    map['translation'] = Variable<String>(translation);
+    if (!nullToAbsent || translationEn != null) {
+      map['translation_en'] = Variable<String>(translationEn);
+    }
+    if (!nullToAbsent || audioUrl != null) {
+      map['audio_url'] = Variable<String>(audioUrl);
+    }
+    return map;
+  }
+
+  GrammarExampleCompanion toCompanion(bool nullToAbsent) {
+    return GrammarExampleCompanion(
+      id: Value(id),
+      grammarPointId: Value(grammarPointId),
+      sentence: Value(sentence),
+      translation: Value(translation),
+      translationEn: translationEn == null && nullToAbsent
+          ? const Value.absent()
+          : Value(translationEn),
+      audioUrl: audioUrl == null && nullToAbsent
+          ? const Value.absent()
+          : Value(audioUrl),
+    );
+  }
+
+  factory GrammarExampleData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return GrammarExampleData(
+      id: serializer.fromJson<int>(json['id']),
+      grammarPointId: serializer.fromJson<int>(json['grammarPointId']),
+      sentence: serializer.fromJson<String>(json['sentence']),
+      translation: serializer.fromJson<String>(json['translation']),
+      translationEn: serializer.fromJson<String?>(json['translationEn']),
+      audioUrl: serializer.fromJson<String?>(json['audioUrl']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'grammarPointId': serializer.toJson<int>(grammarPointId),
+      'sentence': serializer.toJson<String>(sentence),
+      'translation': serializer.toJson<String>(translation),
+      'translationEn': serializer.toJson<String?>(translationEn),
+      'audioUrl': serializer.toJson<String?>(audioUrl),
+    };
+  }
+
+  GrammarExampleData copyWith({
+    int? id,
+    int? grammarPointId,
+    String? sentence,
+    String? translation,
+    Value<String?> translationEn = const Value.absent(),
+    Value<String?> audioUrl = const Value.absent(),
+  }) => GrammarExampleData(
+    id: id ?? this.id,
+    grammarPointId: grammarPointId ?? this.grammarPointId,
+    sentence: sentence ?? this.sentence,
+    translation: translation ?? this.translation,
+    translationEn: translationEn.present
+        ? translationEn.value
+        : this.translationEn,
+    audioUrl: audioUrl.present ? audioUrl.value : this.audioUrl,
+  );
+  GrammarExampleData copyWithCompanion(GrammarExampleCompanion data) {
+    return GrammarExampleData(
+      id: data.id.present ? data.id.value : this.id,
+      grammarPointId: data.grammarPointId.present
+          ? data.grammarPointId.value
+          : this.grammarPointId,
+      sentence: data.sentence.present ? data.sentence.value : this.sentence,
+      translation: data.translation.present
+          ? data.translation.value
+          : this.translation,
+      translationEn: data.translationEn.present
+          ? data.translationEn.value
+          : this.translationEn,
+      audioUrl: data.audioUrl.present ? data.audioUrl.value : this.audioUrl,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarExampleData(')
+          ..write('id: $id, ')
+          ..write('grammarPointId: $grammarPointId, ')
+          ..write('sentence: $sentence, ')
+          ..write('translation: $translation, ')
+          ..write('translationEn: $translationEn, ')
+          ..write('audioUrl: $audioUrl')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    grammarPointId,
+    sentence,
+    translation,
+    translationEn,
+    audioUrl,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is GrammarExampleData &&
+          other.id == this.id &&
+          other.grammarPointId == this.grammarPointId &&
+          other.sentence == this.sentence &&
+          other.translation == this.translation &&
+          other.translationEn == this.translationEn &&
+          other.audioUrl == this.audioUrl);
+}
+
+class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
+  final Value<int> id;
+  final Value<int> grammarPointId;
+  final Value<String> sentence;
+  final Value<String> translation;
+  final Value<String?> translationEn;
+  final Value<String?> audioUrl;
+  const GrammarExampleCompanion({
+    this.id = const Value.absent(),
+    this.grammarPointId = const Value.absent(),
+    this.sentence = const Value.absent(),
+    this.translation = const Value.absent(),
+    this.translationEn = const Value.absent(),
+    this.audioUrl = const Value.absent(),
+  });
+  GrammarExampleCompanion.insert({
+    this.id = const Value.absent(),
+    required int grammarPointId,
+    required String sentence,
+    required String translation,
+    this.translationEn = const Value.absent(),
+    this.audioUrl = const Value.absent(),
+  }) : grammarPointId = Value(grammarPointId),
+       sentence = Value(sentence),
+       translation = Value(translation);
+  static Insertable<GrammarExampleData> custom({
+    Expression<int>? id,
+    Expression<int>? grammarPointId,
+    Expression<String>? sentence,
+    Expression<String>? translation,
+    Expression<String>? translationEn,
+    Expression<String>? audioUrl,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (grammarPointId != null) 'grammar_point_id': grammarPointId,
+      if (sentence != null) 'sentence': sentence,
+      if (translation != null) 'translation': translation,
+      if (translationEn != null) 'translation_en': translationEn,
+      if (audioUrl != null) 'audio_url': audioUrl,
+    });
+  }
+
+  GrammarExampleCompanion copyWith({
+    Value<int>? id,
+    Value<int>? grammarPointId,
+    Value<String>? sentence,
+    Value<String>? translation,
+    Value<String?>? translationEn,
+    Value<String?>? audioUrl,
+  }) {
+    return GrammarExampleCompanion(
+      id: id ?? this.id,
+      grammarPointId: grammarPointId ?? this.grammarPointId,
+      sentence: sentence ?? this.sentence,
+      translation: translation ?? this.translation,
+      translationEn: translationEn ?? this.translationEn,
+      audioUrl: audioUrl ?? this.audioUrl,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (grammarPointId.present) {
+      map['grammar_point_id'] = Variable<int>(grammarPointId.value);
+    }
+    if (sentence.present) {
+      map['sentence'] = Variable<String>(sentence.value);
+    }
+    if (translation.present) {
+      map['translation'] = Variable<String>(translation.value);
+    }
+    if (translationEn.present) {
+      map['translation_en'] = Variable<String>(translationEn.value);
+    }
+    if (audioUrl.present) {
+      map['audio_url'] = Variable<String>(audioUrl.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarExampleCompanion(')
+          ..write('id: $id, ')
+          ..write('grammarPointId: $grammarPointId, ')
+          ..write('sentence: $sentence, ')
+          ..write('translation: $translation, ')
+          ..write('translationEn: $translationEn, ')
+          ..write('audioUrl: $audioUrl')
           ..write(')'))
         .toString();
   }
@@ -2534,7 +3173,8 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
   _$ContentDatabase(QueryExecutor e) : super(e);
   $ContentDatabaseManager get managers => $ContentDatabaseManager(this);
   late final $VocabTable vocab = $VocabTable(this);
-  late final $GrammarTable grammar = $GrammarTable(this);
+  late final $GrammarPointTable grammarPoint = $GrammarPointTable(this);
+  late final $GrammarExampleTable grammarExample = $GrammarExampleTable(this);
   late final $QuestionTable question = $QuestionTable(this);
   late final $MockTestTable mockTest = $MockTestTable(this);
   late final $MockTestSectionTable mockTestSection = $MockTestSectionTable(
@@ -2549,7 +3189,8 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [
     vocab,
-    grammar,
+    grammarPoint,
+    grammarExample,
     question,
     mockTest,
     mockTestSection,
@@ -2909,24 +3550,64 @@ typedef $$VocabTableProcessedTableManager =
       VocabData,
       PrefetchHooks Function({bool userProgressRefs})
     >;
-typedef $$GrammarTableCreateCompanionBuilder =
-    GrammarCompanion Function({
+typedef $$GrammarPointTableCreateCompanionBuilder =
+    GrammarPointCompanion Function({
       Value<int> id,
-      required String level,
+      required int lessonId,
       required String title,
-      required String summary,
+      required String structure,
+      required String explanation,
+      Value<String?> explanationEn,
+      required String level,
+      Value<String?> tags,
     });
-typedef $$GrammarTableUpdateCompanionBuilder =
-    GrammarCompanion Function({
+typedef $$GrammarPointTableUpdateCompanionBuilder =
+    GrammarPointCompanion Function({
       Value<int> id,
-      Value<String> level,
+      Value<int> lessonId,
       Value<String> title,
-      Value<String> summary,
+      Value<String> structure,
+      Value<String> explanation,
+      Value<String?> explanationEn,
+      Value<String> level,
+      Value<String?> tags,
     });
 
-class $$GrammarTableFilterComposer
-    extends Composer<_$ContentDatabase, $GrammarTable> {
-  $$GrammarTableFilterComposer({
+final class $$GrammarPointTableReferences
+    extends
+        BaseReferences<
+          _$ContentDatabase,
+          $GrammarPointTable,
+          GrammarPointData
+        > {
+  $$GrammarPointTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static MultiTypedResultKey<$GrammarExampleTable, List<GrammarExampleData>>
+  _grammarExampleRefsTable(_$ContentDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.grammarExample,
+        aliasName: $_aliasNameGenerator(
+          db.grammarPoint.id,
+          db.grammarExample.grammarPointId,
+        ),
+      );
+
+  $$GrammarExampleTableProcessedTableManager get grammarExampleRefs {
+    final manager = $$GrammarExampleTableTableManager(
+      $_db,
+      $_db.grammarExample,
+    ).filter((f) => f.grammarPointId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(_grammarExampleRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$GrammarPointTableFilterComposer
+    extends Composer<_$ContentDatabase, $GrammarPointTable> {
+  $$GrammarPointTableFilterComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -2938,8 +3619,8 @@ class $$GrammarTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get level => $composableBuilder(
-    column: $table.level,
+  ColumnFilters<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -2948,15 +3629,60 @@ class $$GrammarTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get summary => $composableBuilder(
-    column: $table.summary,
+  ColumnFilters<String> get structure => $composableBuilder(
+    column: $table.structure,
     builder: (column) => ColumnFilters(column),
   );
+
+  ColumnFilters<String> get explanation => $composableBuilder(
+    column: $table.explanation,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get explanationEn => $composableBuilder(
+    column: $table.explanationEn,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get tags => $composableBuilder(
+    column: $table.tags,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  Expression<bool> grammarExampleRefs(
+    Expression<bool> Function($$GrammarExampleTableFilterComposer f) f,
+  ) {
+    final $$GrammarExampleTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.grammarExample,
+      getReferencedColumn: (t) => t.grammarPointId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarExampleTableFilterComposer(
+            $db: $db,
+            $table: $db.grammarExample,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
-class $$GrammarTableOrderingComposer
-    extends Composer<_$ContentDatabase, $GrammarTable> {
-  $$GrammarTableOrderingComposer({
+class $$GrammarPointTableOrderingComposer
+    extends Composer<_$ContentDatabase, $GrammarPointTable> {
+  $$GrammarPointTableOrderingComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -2968,8 +3694,8 @@ class $$GrammarTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get level => $composableBuilder(
-    column: $table.level,
+  ColumnOrderings<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
     builder: (column) => ColumnOrderings(column),
   );
 
@@ -2978,15 +3704,35 @@ class $$GrammarTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get summary => $composableBuilder(
-    column: $table.summary,
+  ColumnOrderings<String> get structure => $composableBuilder(
+    column: $table.structure,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get explanation => $composableBuilder(
+    column: $table.explanation,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get explanationEn => $composableBuilder(
+    column: $table.explanationEn,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get tags => $composableBuilder(
+    column: $table.tags,
     builder: (column) => ColumnOrderings(column),
   );
 }
 
-class $$GrammarTableAnnotationComposer
-    extends Composer<_$ContentDatabase, $GrammarTable> {
-  $$GrammarTableAnnotationComposer({
+class $$GrammarPointTableAnnotationComposer
+    extends Composer<_$ContentDatabase, $GrammarPointTable> {
+  $$GrammarPointTableAnnotationComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -2996,93 +3742,535 @@ class $$GrammarTableAnnotationComposer
   GeneratedColumn<int> get id =>
       $composableBuilder(column: $table.id, builder: (column) => column);
 
-  GeneratedColumn<String> get level =>
-      $composableBuilder(column: $table.level, builder: (column) => column);
+  GeneratedColumn<int> get lessonId =>
+      $composableBuilder(column: $table.lessonId, builder: (column) => column);
 
   GeneratedColumn<String> get title =>
       $composableBuilder(column: $table.title, builder: (column) => column);
 
-  GeneratedColumn<String> get summary =>
-      $composableBuilder(column: $table.summary, builder: (column) => column);
+  GeneratedColumn<String> get structure =>
+      $composableBuilder(column: $table.structure, builder: (column) => column);
+
+  GeneratedColumn<String> get explanation => $composableBuilder(
+    column: $table.explanation,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get explanationEn => $composableBuilder(
+    column: $table.explanationEn,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get level =>
+      $composableBuilder(column: $table.level, builder: (column) => column);
+
+  GeneratedColumn<String> get tags =>
+      $composableBuilder(column: $table.tags, builder: (column) => column);
+
+  Expression<T> grammarExampleRefs<T extends Object>(
+    Expression<T> Function($$GrammarExampleTableAnnotationComposer a) f,
+  ) {
+    final $$GrammarExampleTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.grammarExample,
+      getReferencedColumn: (t) => t.grammarPointId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarExampleTableAnnotationComposer(
+            $db: $db,
+            $table: $db.grammarExample,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
-class $$GrammarTableTableManager
+class $$GrammarPointTableTableManager
     extends
         RootTableManager<
           _$ContentDatabase,
-          $GrammarTable,
-          GrammarData,
-          $$GrammarTableFilterComposer,
-          $$GrammarTableOrderingComposer,
-          $$GrammarTableAnnotationComposer,
-          $$GrammarTableCreateCompanionBuilder,
-          $$GrammarTableUpdateCompanionBuilder,
-          (
-            GrammarData,
-            BaseReferences<_$ContentDatabase, $GrammarTable, GrammarData>,
-          ),
-          GrammarData,
-          PrefetchHooks Function()
+          $GrammarPointTable,
+          GrammarPointData,
+          $$GrammarPointTableFilterComposer,
+          $$GrammarPointTableOrderingComposer,
+          $$GrammarPointTableAnnotationComposer,
+          $$GrammarPointTableCreateCompanionBuilder,
+          $$GrammarPointTableUpdateCompanionBuilder,
+          (GrammarPointData, $$GrammarPointTableReferences),
+          GrammarPointData,
+          PrefetchHooks Function({bool grammarExampleRefs})
         > {
-  $$GrammarTableTableManager(_$ContentDatabase db, $GrammarTable table)
-    : super(
+  $$GrammarPointTableTableManager(
+    _$ContentDatabase db,
+    $GrammarPointTable table,
+  ) : super(
         TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
-              $$GrammarTableFilterComposer($db: db, $table: table),
+              $$GrammarPointTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
-              $$GrammarTableOrderingComposer($db: db, $table: table),
+              $$GrammarPointTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
-              $$GrammarTableAnnotationComposer($db: db, $table: table),
+              $$GrammarPointTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
-                Value<String> level = const Value.absent(),
+                Value<int> lessonId = const Value.absent(),
                 Value<String> title = const Value.absent(),
-                Value<String> summary = const Value.absent(),
-              }) => GrammarCompanion(
+                Value<String> structure = const Value.absent(),
+                Value<String> explanation = const Value.absent(),
+                Value<String?> explanationEn = const Value.absent(),
+                Value<String> level = const Value.absent(),
+                Value<String?> tags = const Value.absent(),
+              }) => GrammarPointCompanion(
                 id: id,
-                level: level,
+                lessonId: lessonId,
                 title: title,
-                summary: summary,
+                structure: structure,
+                explanation: explanation,
+                explanationEn: explanationEn,
+                level: level,
+                tags: tags,
               ),
           createCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
-                required String level,
+                required int lessonId,
                 required String title,
-                required String summary,
-              }) => GrammarCompanion.insert(
+                required String structure,
+                required String explanation,
+                Value<String?> explanationEn = const Value.absent(),
+                required String level,
+                Value<String?> tags = const Value.absent(),
+              }) => GrammarPointCompanion.insert(
                 id: id,
-                level: level,
+                lessonId: lessonId,
                 title: title,
-                summary: summary,
+                structure: structure,
+                explanation: explanation,
+                explanationEn: explanationEn,
+                level: level,
+                tags: tags,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$GrammarPointTableReferences(db, table, e),
+                ),
+              )
               .toList(),
-          prefetchHooksCallback: null,
+          prefetchHooksCallback: ({grammarExampleRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [
+                if (grammarExampleRefs) db.grammarExample,
+              ],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (grammarExampleRefs)
+                    await $_getPrefetchedData<
+                      GrammarPointData,
+                      $GrammarPointTable,
+                      GrammarExampleData
+                    >(
+                      currentTable: table,
+                      referencedTable: $$GrammarPointTableReferences
+                          ._grammarExampleRefsTable(db),
+                      managerFromTypedResult: (p0) =>
+                          $$GrammarPointTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).grammarExampleRefs,
+                      referencedItemsForCurrentItem: (item, referencedItems) =>
+                          referencedItems.where(
+                            (e) => e.grammarPointId == item.id,
+                          ),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
         ),
       );
 }
 
-typedef $$GrammarTableProcessedTableManager =
+typedef $$GrammarPointTableProcessedTableManager =
     ProcessedTableManager<
       _$ContentDatabase,
-      $GrammarTable,
-      GrammarData,
-      $$GrammarTableFilterComposer,
-      $$GrammarTableOrderingComposer,
-      $$GrammarTableAnnotationComposer,
-      $$GrammarTableCreateCompanionBuilder,
-      $$GrammarTableUpdateCompanionBuilder,
-      (
-        GrammarData,
-        BaseReferences<_$ContentDatabase, $GrammarTable, GrammarData>,
-      ),
-      GrammarData,
-      PrefetchHooks Function()
+      $GrammarPointTable,
+      GrammarPointData,
+      $$GrammarPointTableFilterComposer,
+      $$GrammarPointTableOrderingComposer,
+      $$GrammarPointTableAnnotationComposer,
+      $$GrammarPointTableCreateCompanionBuilder,
+      $$GrammarPointTableUpdateCompanionBuilder,
+      (GrammarPointData, $$GrammarPointTableReferences),
+      GrammarPointData,
+      PrefetchHooks Function({bool grammarExampleRefs})
+    >;
+typedef $$GrammarExampleTableCreateCompanionBuilder =
+    GrammarExampleCompanion Function({
+      Value<int> id,
+      required int grammarPointId,
+      required String sentence,
+      required String translation,
+      Value<String?> translationEn,
+      Value<String?> audioUrl,
+    });
+typedef $$GrammarExampleTableUpdateCompanionBuilder =
+    GrammarExampleCompanion Function({
+      Value<int> id,
+      Value<int> grammarPointId,
+      Value<String> sentence,
+      Value<String> translation,
+      Value<String?> translationEn,
+      Value<String?> audioUrl,
+    });
+
+final class $$GrammarExampleTableReferences
+    extends
+        BaseReferences<
+          _$ContentDatabase,
+          $GrammarExampleTable,
+          GrammarExampleData
+        > {
+  $$GrammarExampleTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $GrammarPointTable _grammarPointIdTable(_$ContentDatabase db) =>
+      db.grammarPoint.createAlias(
+        $_aliasNameGenerator(
+          db.grammarExample.grammarPointId,
+          db.grammarPoint.id,
+        ),
+      );
+
+  $$GrammarPointTableProcessedTableManager get grammarPointId {
+    final $_column = $_itemColumn<int>('grammar_point_id')!;
+
+    final manager = $$GrammarPointTableTableManager(
+      $_db,
+      $_db.grammarPoint,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_grammarPointIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$GrammarExampleTableFilterComposer
+    extends Composer<_$ContentDatabase, $GrammarExampleTable> {
+  $$GrammarExampleTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sentence => $composableBuilder(
+    column: $table.sentence,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get translation => $composableBuilder(
+    column: $table.translation,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get translationEn => $composableBuilder(
+    column: $table.translationEn,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get audioUrl => $composableBuilder(
+    column: $table.audioUrl,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$GrammarPointTableFilterComposer get grammarPointId {
+    final $$GrammarPointTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarPointId,
+      referencedTable: $db.grammarPoint,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointTableFilterComposer(
+            $db: $db,
+            $table: $db.grammarPoint,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarExampleTableOrderingComposer
+    extends Composer<_$ContentDatabase, $GrammarExampleTable> {
+  $$GrammarExampleTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sentence => $composableBuilder(
+    column: $table.sentence,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get translation => $composableBuilder(
+    column: $table.translation,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get translationEn => $composableBuilder(
+    column: $table.translationEn,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get audioUrl => $composableBuilder(
+    column: $table.audioUrl,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$GrammarPointTableOrderingComposer get grammarPointId {
+    final $$GrammarPointTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarPointId,
+      referencedTable: $db.grammarPoint,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointTableOrderingComposer(
+            $db: $db,
+            $table: $db.grammarPoint,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarExampleTableAnnotationComposer
+    extends Composer<_$ContentDatabase, $GrammarExampleTable> {
+  $$GrammarExampleTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get sentence =>
+      $composableBuilder(column: $table.sentence, builder: (column) => column);
+
+  GeneratedColumn<String> get translation => $composableBuilder(
+    column: $table.translation,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get translationEn => $composableBuilder(
+    column: $table.translationEn,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get audioUrl =>
+      $composableBuilder(column: $table.audioUrl, builder: (column) => column);
+
+  $$GrammarPointTableAnnotationComposer get grammarPointId {
+    final $$GrammarPointTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.grammarPointId,
+      referencedTable: $db.grammarPoint,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$GrammarPointTableAnnotationComposer(
+            $db: $db,
+            $table: $db.grammarPoint,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$GrammarExampleTableTableManager
+    extends
+        RootTableManager<
+          _$ContentDatabase,
+          $GrammarExampleTable,
+          GrammarExampleData,
+          $$GrammarExampleTableFilterComposer,
+          $$GrammarExampleTableOrderingComposer,
+          $$GrammarExampleTableAnnotationComposer,
+          $$GrammarExampleTableCreateCompanionBuilder,
+          $$GrammarExampleTableUpdateCompanionBuilder,
+          (GrammarExampleData, $$GrammarExampleTableReferences),
+          GrammarExampleData,
+          PrefetchHooks Function({bool grammarPointId})
+        > {
+  $$GrammarExampleTableTableManager(
+    _$ContentDatabase db,
+    $GrammarExampleTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$GrammarExampleTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$GrammarExampleTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$GrammarExampleTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> grammarPointId = const Value.absent(),
+                Value<String> sentence = const Value.absent(),
+                Value<String> translation = const Value.absent(),
+                Value<String?> translationEn = const Value.absent(),
+                Value<String?> audioUrl = const Value.absent(),
+              }) => GrammarExampleCompanion(
+                id: id,
+                grammarPointId: grammarPointId,
+                sentence: sentence,
+                translation: translation,
+                translationEn: translationEn,
+                audioUrl: audioUrl,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int grammarPointId,
+                required String sentence,
+                required String translation,
+                Value<String?> translationEn = const Value.absent(),
+                Value<String?> audioUrl = const Value.absent(),
+              }) => GrammarExampleCompanion.insert(
+                id: id,
+                grammarPointId: grammarPointId,
+                sentence: sentence,
+                translation: translation,
+                translationEn: translationEn,
+                audioUrl: audioUrl,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$GrammarExampleTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({grammarPointId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (grammarPointId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.grammarPointId,
+                                referencedTable: $$GrammarExampleTableReferences
+                                    ._grammarPointIdTable(db),
+                                referencedColumn:
+                                    $$GrammarExampleTableReferences
+                                        ._grammarPointIdTable(db)
+                                        .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$GrammarExampleTableProcessedTableManager =
+    ProcessedTableManager<
+      _$ContentDatabase,
+      $GrammarExampleTable,
+      GrammarExampleData,
+      $$GrammarExampleTableFilterComposer,
+      $$GrammarExampleTableOrderingComposer,
+      $$GrammarExampleTableAnnotationComposer,
+      $$GrammarExampleTableCreateCompanionBuilder,
+      $$GrammarExampleTableUpdateCompanionBuilder,
+      (GrammarExampleData, $$GrammarExampleTableReferences),
+      GrammarExampleData,
+      PrefetchHooks Function({bool grammarPointId})
     >;
 typedef $$QuestionTableCreateCompanionBuilder =
     QuestionCompanion Function({
@@ -4211,8 +5399,10 @@ class $ContentDatabaseManager {
   $ContentDatabaseManager(this._db);
   $$VocabTableTableManager get vocab =>
       $$VocabTableTableManager(_db, _db.vocab);
-  $$GrammarTableTableManager get grammar =>
-      $$GrammarTableTableManager(_db, _db.grammar);
+  $$GrammarPointTableTableManager get grammarPoint =>
+      $$GrammarPointTableTableManager(_db, _db.grammarPoint);
+  $$GrammarExampleTableTableManager get grammarExample =>
+      $$GrammarExampleTableTableManager(_db, _db.grammarExample);
   $$QuestionTableTableManager get question =>
       $$QuestionTableTableManager(_db, _db.question);
   $$MockTestTableTableManager get mockTest =>

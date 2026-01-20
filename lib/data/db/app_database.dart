@@ -54,7 +54,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 15;
+  int get schemaVersion => 17;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -136,6 +136,9 @@ class AppDatabase extends _$AppDatabase {
           }
           if (from < 15) {
             await _safeAddColumn(migrator, userLessonTerm, userLessonTerm.definitionEn);
+          }
+          if (from < 16) {
+             await _safeAddColumn(migrator, grammarPoints, grammarPoints.lessonId);
           }
         },
       );

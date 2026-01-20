@@ -115,7 +115,7 @@ class AppDatabase extends _$AppDatabase {
             await migrator.createTable(achievements);
           }
           if (from < 11) {
-            await migrator.addColumn(srsState, srsState.lastConfidence);
+            await _safeAddColumn(migrator, srsState, srsState.lastConfidence);
             await migrator.createTable(flashcardSettings);
             await migrator.createTable(learnSettings);
             await migrator.createTable(testSettings);
@@ -126,9 +126,9 @@ class AppDatabase extends _$AppDatabase {
             await migrator.createTable(grammarSrsState);
           }
           if (from < 13) {
-            await migrator.addColumn(grammarPoints, grammarPoints.meaningVi);
-            await migrator.addColumn(grammarPoints, grammarPoints.explanationVi);
-            await migrator.addColumn(grammarExamples, grammarExamples.translationVi);
+            await _safeAddColumn(migrator, grammarPoints, grammarPoints.meaningVi);
+            await _safeAddColumn(migrator, grammarPoints, grammarPoints.explanationVi);
+            await _safeAddColumn(migrator, grammarExamples, grammarExamples.translationVi);
           }
         },
       );
@@ -144,6 +144,18 @@ class AppDatabase extends _$AppDatabase {
       'FROM user_lesson_term_old',
     );
     await customStatement('DROP TABLE user_lesson_term_old');
+  }
+
+  /// Safely add a column, ignoring errors if the column already exists
+  Future<void> _safeAddColumn(Migrator migrator, TableInfo table, GeneratedColumn column) async {
+    try {
+      await migrator.addColumn(table, column);
+    } catch (e) {
+      // Column already exists, ignore the error
+      if (!e.toString().contains('duplicate column')) {
+        rethrow;
+      }
+    }
   }
 }
 

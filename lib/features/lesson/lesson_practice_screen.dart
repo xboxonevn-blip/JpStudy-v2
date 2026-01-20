@@ -5,7 +5,7 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 
-enum LessonPracticeMode { learn, test, match, write, spell }
+enum LessonPracticeMode { learn, test, match, write }
 
 LessonPracticeMode? lessonPracticeModeFromPath(String value) {
   switch (value) {
@@ -17,8 +17,6 @@ LessonPracticeMode? lessonPracticeModeFromPath(String value) {
       return LessonPracticeMode.match;
     case 'write':
       return LessonPracticeMode.write;
-    case 'spell':
-      return LessonPracticeMode.spell;
   }
   return null;
 }
@@ -86,8 +84,6 @@ class LessonPracticeScreen extends ConsumerWidget {
         return language.matchModeLabel;
       case LessonPracticeMode.write:
         return language.writeModeLabel;
-      case LessonPracticeMode.spell:
-        return language.spellModeLabel;
     }
   }
 }

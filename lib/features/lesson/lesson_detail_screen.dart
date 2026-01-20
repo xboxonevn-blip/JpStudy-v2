@@ -1328,15 +1328,15 @@ class _PracticeActions extends StatelessWidget {
         ),
         _PracticeButton(
           label: language.matchModeLabel,
-          onTap: () => context.push('/lesson/$lessonId/practice/match'),
+          onTap: () => context.push(
+            '/lesson/$lessonId/match-mode?title=${Uri.encodeComponent(lessonTitle)}',
+          ),
         ),
         _PracticeButton(
           label: language.writeModeLabel,
-          onTap: () => context.push('/lesson/$lessonId/practice/write'),
-        ),
-        _PracticeButton(
-          label: language.spellModeLabel,
-          onTap: () => context.push('/lesson/$lessonId/practice/spell'),
+          onTap: () => context.push(
+            '/lesson/$lessonId/write-mode?title=${Uri.encodeComponent(lessonTitle)}',
+          ),
         ),
       ],
     );

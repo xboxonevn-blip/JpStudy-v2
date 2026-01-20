@@ -1,0 +1,42 @@
+﻿Analyzing JpStudy-v2...                                         
+
+  error - Target of URI doesn't exist: '../logic/match_engine.dart' - lib\features\games\match_game\lesson_match_screen.dart:13:8 - uri_does_not_exist
+  error - The name 'MatchCard' isn't a type, so it can't be used as a type argument - lib\features\games\match_game\lesson_match_screen.dart:31:8 - non_type_as_type_argument
+  error - Undefined class 'MatchCard' - lib\features\games\match_game\lesson_match_screen.dart:32:3 - undefined_class
+  error - The method 'MatchEngine' isn't defined for the type '_LessonMatchScreenState' - lib\features\games\match_game\lesson_match_screen.dart:55:20 - undefined_method
+  error - Undefined class 'MatchCard' - lib\features\games\match_game\lesson_match_screen.dart:77:19 - undefined_class
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:78:62 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:82:20 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:96:25 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:97:26 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:109:25 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:110:26 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:121:29 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:122:30 - undefined_identifier
+  error - The property 'state' can't be unconditionally accessed because the receiver can be 'null' - lib\features\games\match_game\lesson_match_screen.dart:133:31 - unchecked_use_of_nullable_value
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:133:40 - undefined_identifier
+  error - Undefined class 'MatchCard' - lib\features\games\match_game\lesson_match_screen.dart:295:21 - undefined_class
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:296:23 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:301:23 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:302:23 - undefined_identifier
+  error - Undefined name 'MatchCardState' - lib\features\games\match_game\lesson_match_screen.dart:312:34 - undefined_identifier
+
+flutter : 20 issues 
+found. (ran in 1.5s)
+At line:1 char:1
++ flutter analyze 
+2>&1 | Out-File 
+-FilePath 
+"analyze_result.txt" 
+-Encod ...
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (20 issues    
+ found. (ran in 1.    
+5s):String) [], R    
+emoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 

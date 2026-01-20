@@ -27,7 +27,6 @@ class Question {
   bool checkAnswer(String userAnswer) {
     switch (type) {
       case QuestionType.multipleChoice:
-      case QuestionType.audioMatch:
         return userAnswer.toLowerCase().trim() == correctAnswer.toLowerCase().trim();
       case QuestionType.trueFalse:
         return userAnswer.toLowerCase() == (isStatementTrue! ? 'true' : 'false');

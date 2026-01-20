@@ -245,7 +245,6 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
   Widget _buildQuestionWidget(Question question) {
     switch (question.type) {
       case QuestionType.multipleChoice:
-      case QuestionType.audioMatch:
         return MultipleChoiceWidget(
           question: question,
           selectedAnswer: _selectedAnswer,

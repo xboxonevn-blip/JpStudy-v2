@@ -10,7 +10,9 @@ import 'package:jpstudy/features/lesson/lesson_practice_screen.dart';
 import 'package:jpstudy/features/progress/progress_screen.dart';
 import 'package:jpstudy/features/vocab/vocab_screen.dart';
 import 'package:jpstudy/features/games/match_game/match_game_screen.dart';
+import 'package:jpstudy/features/games/match_game/lesson_match_screen.dart';
 import 'package:jpstudy/features/learn/integration/learn_mode_integration.dart';
+import 'package:jpstudy/features/learn/integration/write_mode_integration.dart';
 import 'package:jpstudy/features/test/integration/test_mode_integration.dart';
 import 'package:jpstudy/features/test/screens/test_history_screen.dart';
 
@@ -113,6 +115,30 @@ class AppRouter {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           final title = state.uri.queryParameters['title'] ?? 'Lesson';
           return TestHistoryScreen(
+            lessonId: id ?? 1,
+            lessonTitle: title,
+          );
+        },
+      ),
+      // Write Mode (fillBlank only)
+      GoRoute(
+        path: '/lesson/:id/write-mode',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '');
+          final title = state.uri.queryParameters['title'] ?? 'Lesson';
+          return WriteModeIntegration(
+            lessonId: id ?? 1,
+            lessonTitle: title,
+          );
+        },
+      ),
+      // Match Mode for lessons
+      GoRoute(
+        path: '/lesson/:id/match-mode',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '');
+          final title = state.uri.queryParameters['title'] ?? 'Lesson';
+          return LessonMatchScreen(
             lessonId: id ?? 1,
             lessonTitle: title,
           );

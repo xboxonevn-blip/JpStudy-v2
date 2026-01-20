@@ -78,8 +78,6 @@ class QuestionGenerator {
         return _generateTrueFalse(item, allItems);
       case QuestionType.fillBlank:
         return _generateFillBlank(item);
-      case QuestionType.audioMatch:
-        return _generateAudioMatch(item, allItems);
     }
   }
 
@@ -148,21 +146,6 @@ class QuestionGenerator {
         hint: item.reading?.isNotEmpty == true ? '${item.reading![0]}...' : null,
       );
     }
-  }
-
-  Question _generateAudioMatch(VocabItem item, List<VocabItem> allItems) {
-    // Similar to multiple choice but with audio prompt
-    final distractors = _selectDistractors(item, allItems, count: 3);
-    final options = [item.term, ...distractors.map((d) => d.term)]..shuffle(_random);
-
-    return Question(
-      id: 'audio_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
-      type: QuestionType.audioMatch,
-      targetItem: item,
-      questionText: 'Listen and select the correct term',
-      correctAnswer: item.term,
-      options: options,
-    );
   }
 
   /// Select distractor items for multiple choice (similar difficulty/category)

@@ -3,7 +3,6 @@ enum QuestionType {
   multipleChoice,
   trueFalse,
   fillBlank,
-  audioMatch,
 }
 
 extension QuestionTypeExtension on QuestionType {
@@ -15,8 +14,6 @@ extension QuestionTypeExtension on QuestionType {
         return 'True/False';
       case QuestionType.fillBlank:
         return 'Fill in the Blank';
-      case QuestionType.audioMatch:
-        return 'Audio Match';
     }
   }
 
@@ -28,8 +25,6 @@ extension QuestionTypeExtension on QuestionType {
         return '✓✗';
       case QuestionType.fillBlank:
         return '✏️';
-      case QuestionType.audioMatch:
-        return '🔊';
     }
   }
 
@@ -42,8 +37,6 @@ extension QuestionTypeExtension on QuestionType {
         return 2;
       case QuestionType.fillBlank:
         return 3; // Hardest
-      case QuestionType.audioMatch:
-        return 2;
     }
   }
 }

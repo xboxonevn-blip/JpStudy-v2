@@ -287,7 +287,6 @@ class _TestScreenState extends ConsumerState<TestScreen> {
   Widget _buildQuestionContent(Question question) {
     switch (question.type) {
       case QuestionType.multipleChoice:
-      case QuestionType.audioMatch:
         return MultipleChoiceWidget(
           question: question,
           selectedAnswer: _selectedAnswer,

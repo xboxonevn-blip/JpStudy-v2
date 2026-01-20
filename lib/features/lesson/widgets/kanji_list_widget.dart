@@ -79,22 +79,29 @@ class KanjiListWidget extends ConsumerWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        if (language != AppLanguage.vi)
+                        if (language == AppLanguage.vi)
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
                             child: Text('Nghĩa Việt: ${item.meaning}'),
                           ),
-                        if (language != AppLanguage.en && item.meaningEn != null)
+                        if (language == AppLanguage.en)
+                           Padding(
+                            padding: const EdgeInsets.only(bottom: 8.0),
+                            child: Text('Meaning: ${item.meaningEn ?? item.meaning}'),
+                          ),
+                         if (language != AppLanguage.en && item.meaningEn != null)
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
                             child: Text('Nghĩa Anh: ${item.meaningEn}'),
                           ),
-                        Text('Số nét: ${item.strokeCount}'),
+                        Text(language == AppLanguage.en 
+                            ? 'Strokes: ${item.strokeCount}' 
+                            : 'Số nét: ${item.strokeCount}'),
                         if (item.examples.isNotEmpty) ...[
                           const SizedBox(height: 8),
-                          const Text(
-                            'Ví dụ:',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Text(
+                            language == AppLanguage.en ? 'Examples:' : 'Ví dụ:',
+                            style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           ...item.examples.map((ex) => Padding(
                                 padding: const EdgeInsets.symmetric(vertical: 4),

@@ -64,22 +64,27 @@ class _GrammarPointCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final point = data.point;
     
-    // Determine Meaning and Explanation based on Language
-    String meaning = point.grammarPoint;
+    // Determine Display Values based on Language
+    String title = point.grammarPoint;
+    String structure = point.connection;
+    String meaning = point.grammarPoint; // Fallback
     String explanation = '';
 
     switch (language) {
       case AppLanguage.vi:
+        title = point.grammarPoint; // Vietnamese title usually matches point
         meaning = point.meaningVi ?? point.grammarPoint;
         explanation = point.explanationVi ?? point.explanation;
         break;
       case AppLanguage.en:
+        title = point.titleEn ?? point.grammarPoint;
+        structure = point.connectionEn ?? point.connection;
         meaning = point.meaningEn ?? point.grammarPoint;
         explanation = point.explanationEn ?? point.explanation;
         break;
       case AppLanguage.ja:
-        meaning = point.grammarPoint;
-        explanation = point.connection; // For JP, show structure mainly
+        title = point.grammarPoint;
+        explanation = point.connection; 
         break;
     }
 
@@ -100,7 +105,7 @@ class _GrammarPointCard extends StatelessWidget {
           ),
         ),
         title: Text(
-          point.grammarPoint,
+          language == AppLanguage.en ? title : _formatStructure(title, language),
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -119,7 +124,7 @@ class _GrammarPointCard extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            if (point.connection.isNotEmpty) ...[
+            if (structure.isNotEmpty) ...[
               const SizedBox(height: 4),
                Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -128,7 +133,7 @@ class _GrammarPointCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(
-                  point.connection,
+                  language == AppLanguage.en ? structure : _formatStructure(structure, language),
                   style: const TextStyle(
                     fontFamily: 'Courier', // Monospace for structure
                     fontSize: 12,
@@ -226,5 +231,37 @@ class _GrammarPointCard extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  /// Format structure/title text based on language
+  /// Strips Vietnamese explanations when in English mode
+  String _formatStructure(String text, AppLanguage language) {
+    if (language == AppLanguage.vi) {
+      return text;
+    }
+    
+    // For English/Japanese: Remove Vietnamese text
+    String result = text;
+    
+    // Pattern 1: Remove content in parentheses that contains Vietnamese diacritics
+    final parenRegex = RegExp(
+      r'\s*\([^)]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ][^)]*\)',
+      caseSensitive: false
+    );
+    result = result.replaceAll(parenRegex, '');
+    
+    // Pattern 2: Remove entire Vietnamese words (words containing viet diacritics)
+    final wordRegex = RegExp(
+      r'[a-zA-ZàáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ][a-zA-ZàáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]*',
+      caseSensitive: false
+    );
+    result = result.replaceAll(wordRegex, '');
+    
+    // Clean up multiple spaces, slashes
+    result = result
+      .replaceAll(RegExp(r'/\s*/'), '/')
+      .replaceAll(RegExp(r'\s+'), ' ');
+    
+    return result.trim();
   }
 }

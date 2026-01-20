@@ -28,6 +28,7 @@ part 'app_database.g.dart';
     GrammarPoints,
     GrammarExamples,
     GrammarSrsState,
+    GrammarQuestions,
     UserLesson,
 
     UserLessonTerm,
@@ -54,7 +55,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 17;
+  int get schemaVersion => 21;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -138,7 +139,25 @@ class AppDatabase extends _$AppDatabase {
             await _safeAddColumn(migrator, userLessonTerm, userLessonTerm.definitionEn);
           }
           if (from < 16) {
-             await _safeAddColumn(migrator, grammarPoints, grammarPoints.lessonId);
+            await _safeAddColumn(migrator, grammarPoints, grammarPoints.lessonId);
+          }
+          if (from < 18) {
+             await _safeAddColumn(migrator, grammarPoints, grammarPoints.meaningEn);
+             await _safeAddColumn(migrator, grammarPoints, grammarPoints.explanationEn);
+             await _safeAddColumn(migrator, grammarExamples, grammarExamples.translationEn);
+          }
+          if (from < 19) {
+            // Force resync English definitions for existing vocab
+            await customStatement(
+              "UPDATE user_lesson_term SET is_learned = 0"
+            );
+          }
+          if (from < 20) {
+            await migrator.createTable(grammarQuestions);
+          }
+          if (from < 21) {
+            await migrator.addColumn(grammarPoints, grammarPoints.titleEn);
+            await migrator.addColumn(grammarPoints, grammarPoints.connectionEn);
           }
         },
       );

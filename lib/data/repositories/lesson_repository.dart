@@ -501,14 +501,25 @@ class LessonRepository {
     final existing = await fetchTerms(lessonId);
     
     // Check if existing terms are the dummy ones and should be replaced
+    // OR if any term has empty definitionEn (needs resync for English support)
+    bool needsResync = false;
     if (existing.length == 2 && 
         existing[0].term == '見ます' && 
         existing[1].term == '探します') {
-       // Delete dummy terms
-       await (_db.delete(_db.userLessonTerm)..where((tbl) => tbl.lessonId.equals(lessonId))).go();
+       needsResync = true;
     } else if (existing.isNotEmpty) {
-      // Real data exists, do nothing
+      // Check if English definitions are missing
+      needsResync = existing.any((t) => t.definitionEn.isEmpty);
+    }
+
+    if (existing.isNotEmpty && !needsResync) {
+      // Real data exists with English, do nothing
       return;
+    }
+    
+    if (needsResync) {
+      // Delete old terms to force resync
+      await (_db.delete(_db.userLessonTerm)..where((tbl) => tbl.lessonId.equals(lessonId))).go();
     }
 
     // Determine level and try to fetch by tag first (more accurate)
@@ -600,13 +611,29 @@ class LessonRepository {
 
   Future<void> seedGrammarIfEmpty(int lessonId, String level) async {
     // Check if grammar already exists for this lesson
-    final existingCount = await (_db.selectOnly(_db.grammarPoints)
-          ..addColumns([_db.grammarPoints.id.count()])
-          ..where(_db.grammarPoints.lessonId.equals(lessonId)))
-        .getSingleOrNull();
+    final existingPoints = await (_db.select(_db.grammarPoints)
+          ..where((tbl) => tbl.lessonId.equals(lessonId)))
+        .get();
     
-    if ((existingCount?.read(_db.grammarPoints.id.count()) ?? 0) > 0) {
+    // Check if resync needed: Either empty or missing English explanations
+    bool needsResync = existingPoints.isEmpty;
+    if (!needsResync && existingPoints.isNotEmpty) {
+      // Check if any point is missing English explanation or title
+      needsResync = existingPoints.any((p) => 
+        p.explanationEn == null || p.explanationEn!.isEmpty || 
+        p.titleEn == null || p.titleEn!.isEmpty
+      );
+    }
+    
+    if (!needsResync) {
       return;
+    }
+    
+    // Delete old data if resyncing
+    if (existingPoints.isNotEmpty) {
+      await (_db.delete(_db.grammarPoints)
+        ..where((tbl) => tbl.lessonId.equals(lessonId))
+      ).go();
     }
 
     // Fetch from Content DB
@@ -618,47 +645,44 @@ class LessonRepository {
       return;
     }
 
-    await _db.batch((batch) async {
-      for (final cp in contentPoints) {
-        // Insert Point
-        final pointId = await _db.into(_db.grammarPoints).insert(
-          GrammarPointsCompanion.insert(
-            lessonId: Value(lessonId),
-            grammarPoint: cp.title,
-            meaning: cp.title, // Placeholder
-            meaningVi: Value(cp.title), // Placeholder
-            meaningEn: Value(cp.title), // Placeholder
-            connection: cp.structure,
-            explanation: cp.explanation,
-            explanationVi: Value(cp.explanation),
-            explanationEn: Value(cp.explanationEn),
-            jlptLevel: cp.level,
-            isLearned: const Value(false),
+    for (final cp in contentPoints) {
+      // Insert Point with proper English data from ContentDB
+      final pointId = await _db.into(_db.grammarPoints).insert(
+        GrammarPointsCompanion.insert(
+          lessonId: Value(lessonId),
+          grammarPoint: cp.title,
+          titleEn: Value(cp.titleEn), // Copy English title
+          meaning: cp.title,
+          meaningVi: Value(cp.title),
+          meaningEn: Value(cp.titleEn ?? cp.title), 
+          connection: cp.structure,
+          connectionEn: Value(cp.structureEn), // Copy English structure
+          explanation: cp.explanation,
+          explanationVi: Value(cp.explanation),
+          explanationEn: Value(cp.explanationEn),
+          jlptLevel: cp.level,
+          isLearned: const Value(false),
+        ),
+      );
+
+      // Fetch Examples with English translations
+      final examples = await (_contentDb.select(_contentDb.grammarExample)
+            ..where((tbl) => tbl.grammarPointId.equals(cp.id)))
+          .get();
+
+      for (final ex in examples) {
+        await _db.into(_db.grammarExamples).insert(
+          GrammarExamplesCompanion.insert(
+            grammarId: pointId,
+            japanese: ex.sentence,
+            translation: ex.translation,
+            translationVi: Value(ex.translation),
+            translationEn: Value(ex.translationEn),
+            audioUrl: Value(ex.audioUrl),
           ),
         );
-
-        // Fetch Examples
-        final examples = await (_contentDb.select(_contentDb.grammarExample)
-              ..where((tbl) => tbl.grammarPointId.equals(cp.id)))
-            .get();
-
-        for (final ex in examples) {
-          batch.insert(
-            _db.grammarExamples,
-            GrammarExamplesCompanion.insert(
-              grammarId: pointId,
-              japanese: ex.sentence,
-              translation: ex.translation,
-              translationVi: Value(ex.translation),
-              translationEn: Value(ex.translationEn),
-              audioUrl: Value(ex.audioUrl),
-            ),
-          );
-        }
       }
-
-
-    });
+    }
   }
 
   Future<List<KanjiItem>> fetchKanji(int lessonId) async {

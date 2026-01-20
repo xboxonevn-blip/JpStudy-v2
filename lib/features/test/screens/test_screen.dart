@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:jpstudy/core/services/audio_service.dart';
-
 import '../../../data/models/vocab_item.dart';
 import '../../learn/models/question.dart';
 import '../../learn/models/question_type.dart';
@@ -356,7 +354,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     });
 
     if (widget.config.showCorrectAfterWrong) {
-      AudioService.instance.play(_isCorrect ? 'success' : 'error');
+      // Audio removed
     }
   }
 
@@ -369,7 +367,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     });
 
     if (widget.config.showCorrectAfterWrong) {
-      AudioService.instance.play(_isCorrect ? 'success' : 'error');
+      // Audio removed
     }
   }
 
@@ -381,7 +379,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     });
 
     if (widget.config.showCorrectAfterWrong) {
-      AudioService.instance.play(_isCorrect ? 'success' : 'error');
+      // Audio removed
     }
   }
 
@@ -456,8 +454,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     // Save to database
     await ref.read(testHistoryServiceProvider).saveTest(_session);
 
-    // Play completion sound
-    AudioService.instance.play('levelup');
+    // Audio removed
 
     if (!mounted) return;
 

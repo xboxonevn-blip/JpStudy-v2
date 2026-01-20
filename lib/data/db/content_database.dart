@@ -28,7 +28,7 @@ class ContentDatabase extends _$ContentDatabase {
   ContentDatabase() : super(_openContentConnection());
 
   @override
-  int get schemaVersion => 10;
+  int get schemaVersion => 14;
 
   @override
   MigrationStrategy get migration {
@@ -65,9 +65,21 @@ class ContentDatabase extends _$ContentDatabase {
         if (from < 10) {
           await _reseedMinnaKanji();
         }
+
+        // Fix for missing Grammar data in v10
+        if (from < 11) {
+          await _seedMinnaGrammar();
+          await _reseedMinnaVocabulary(); // Reseed vocab to be safe as requested
+        }
         
-        // Always re-seed Minna vocabulary (delete old + insert new)
-        await _reseedMinnaVocabulary();
+        // Ensure grammar is re-seeded for v12/13/14 to fix stale data
+        if (from < 14) {
+           await _seedMinnaGrammar(); 
+        }
+        
+        if (from >= 11) {
+          await _reseedMinnaVocabulary();
+        }
       },
     );
   }
@@ -89,6 +101,10 @@ class ContentDatabase extends _$ContentDatabase {
   }
 
   Future<void> _seedMinnaGrammar() async {
+    // Clear existing data to prevent duplicates and ensure fresh data
+    await delete(grammarExample).go();
+    await delete(grammarPoint).go();
+
     // Seeding Minna Grammar Lessons 1-5 (Batch 1)
     final List<String> grammarFiles = [
       'assets/data/grammar/n5/grammar_n5_1.json',
@@ -166,7 +182,9 @@ class ContentDatabase extends _$ContentDatabase {
             GrammarPointCompanion.insert(
               lessonId: pointData['lessonId'] as int,
               title: pointData['title'] as String,
+              titleEn: Value(pointData['titleEn'] as String?),
               structure: pointData['structure'] as String,
+              structureEn: Value(pointData['structureEn'] as String?),
               explanation: pointData['explanation'] as String,
               explanationEn: Value(pointData['explanationEn'] as String?),
               level: pointData['level'] as String,

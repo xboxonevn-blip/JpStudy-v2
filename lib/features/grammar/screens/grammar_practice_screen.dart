@@ -5,8 +5,7 @@ import '../../../data/repositories/grammar_repository.dart';
 import '../../../data/db/app_database.dart';
 import '../widgets/sentence_builder_widget.dart';
 import '../widgets/cloze_test_widget.dart';
-
-enum GrammarQuestionType { sentenceBuilder, cloze }
+import '../services/grammar_question_generator.dart';
 
 class GrammarPracticeScreen extends ConsumerStatefulWidget {
   final List<int>? initialIds; // Optional: practice specific points
@@ -19,9 +18,10 @@ class GrammarPracticeScreen extends ConsumerStatefulWidget {
 
 class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
   int _currentIndex = 0;
-  final List<Map<String, dynamic>> _questions = [];
+  final List<GeneratedQuestion> _questions = [];
   bool _isLoading = true;
   int _score = 0;
+  bool _isAnswered = false; // To prevent multiple submissions per card
 
   @override
   void initState() {
@@ -40,85 +40,58 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
        // Fetch due points
        points = await repo.fetchDuePoints();
        if (points.isEmpty) {
-         // Fallback: fetch some points from current level if nothing due
-         // For now, just show empty or message
+         // Fallback: fetch random 5 learned or any points for practice if nothing due
+         // For now, just show empty
        }
     }
 
+    final details = <({GrammarPoint point, List<GrammarExample> examples})>[];
     for (final point in points) {
       final detail = await repo.getGrammarDetail(point.id);
       if (detail != null && detail.examples.isNotEmpty) {
-        // Create a question from one example
-        final example = detail.examples.first;
-        
-        // Decide type: if Japanese is short, maybe cloze. If long, sentence builder.
-        // Or just rotate.
-        final type = _questions.length % 2 == 0 
-            ? GrammarQuestionType.sentenceBuilder 
-            : GrammarQuestionType.cloze;
-
-        if (type == GrammarQuestionType.sentenceBuilder) {
-          // Simple split by space for now, ideally we need tokenized japanese
-          // Mock tokenization: [word, word, word]
-          // In real app, we'd use a morphological analyzer or pre-tokenized data
-          final words = example.japanese.split(''); // Char by char is safer for JP without analyzer
-          _questions.add({
-            'type': type,
-            'point': point,
-            'example': example,
-            'correctWords': words,
-            'shuffledWords': List.from(words)..shuffle(),
-          });
-        } else {
-          // Cloze: remove the grammar point part from the sentence
-          // This is tricky: we need to find where the grammar point is in the example
-          // For now, let's just use a stubbed approach
-          _questions.add({
-            'type': type,
-            'point': point,
-            'example': example,
-            'template': example.japanese.replaceFirst(point.grammarPoint, '{blank}'),
-            'options': [point.grammarPoint, 'です', 'ます', 'ない'].shuffled().toList(),
-            'correct': point.grammarPoint,
-          });
-        }
+        details.add(detail);
       }
     }
+
+    // Generate questions using the service
+    final generated = GrammarQuestionGenerator.generateQuestions(details);
+    _questions.addAll(generated);
 
     if (mounted) {
       setState(() {
         _isLoading = false;
-        if (_questions.isEmpty) {
-          // No questions found
-        }
       });
     }
   }
 
   void _onAnswer(bool isCorrect) {
+    if (_isAnswered) return;
+    setState(() {
+      _isAnswered = true;
+    });
+
     if (isCorrect) _score++;
     
     // Update SRS in background
     final q = _questions[_currentIndex];
     ref.read(grammarRepositoryProvider).recordReview(
-      grammarId: (q['point'] as GrammarPoint).id,
+      grammarId: q.point.id,
       quality: isCorrect ? 5 : 0,
     );
 
-    if (_currentIndex < _questions.length - 1) {
-      Future.delayed(const Duration(milliseconds: 1500), () {
-        if (mounted) {
+    // Provide immediate feedback before moving on
+    Future.delayed(const Duration(milliseconds: 1500), () {
+      if (mounted) {
+        if (_currentIndex < _questions.length - 1) {
           setState(() {
             _currentIndex++;
+            _isAnswered = false;
           });
+        } else {
+          _showSummary();
         }
-      });
-    } else {
-      // Show summary
-      Future.delayed(const Duration(milliseconds: 1500), () {
-        _showSummary();
-      });
-    }
+      }
+    });
   }
 
   void _showSummary() {
@@ -166,7 +139,6 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     }
 
     final q = _questions[_currentIndex];
-    final type = q['type'] as GrammarQuestionType;
 
     return Scaffold(
       appBar: AppBar(
@@ -185,31 +157,36 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
             ),
             const SizedBox(height: 32),
             Expanded(
-              child: type == GrammarQuestionType.sentenceBuilder
-                ? SentenceBuilderWidget(
-                    correctWords: List<String>.from(q['correctWords']),
-                    shuffledWords: List<String>.from(q['shuffledWords']),
-                    onCheck: _onAnswer,
-                    onReset: () {},
-                  )
-                : ClozeTestWidget(
-                    sentenceTemplate: q['template'],
-                    options: List<String>.from(q['options']),
-                    correctOption: q['correct'],
-                    onCheck: (isCorrect, _) => _onAnswer(isCorrect),
-                  ),
+              child: _buildQuestionContent(q),
             ),
           ],
         ),
       ),
     );
   }
-}
 
-extension ListX<T> on List<T> {
-  List<T> shuffled() {
-    final list = List<T>.from(this);
-    list.shuffle();
-    return list;
+  Widget _buildQuestionContent(GeneratedQuestion q) {
+    switch (q.type) {
+      case GrammarQuestionType.sentenceBuilder:
+        return SentenceBuilderWidget(
+          correctWords: q.options, // In generator, options are the chars
+          shuffledWords: List.of(q.options)..shuffle(), 
+          onCheck: _onAnswer,
+          onReset: () {},
+        );
+      case GrammarQuestionType.cloze:
+        // Use regex or string manipulation to create the template
+        // The generator already provides: 
+        // q.question -> "Example with ___"
+        // q.options -> ["Correct", "Wrong1", ...]
+        return ClozeTestWidget(
+          sentenceTemplate: q.question,
+          options: q.options,
+          correctOption: q.correctAnswer,
+          onCheck: (isCorrect, _) => _onAnswer(isCorrect),
+        );
+      default:
+        return const Center(child: Text('Unsupported question type'));
+    }
   }
 }

@@ -536,6 +536,17 @@ class $GrammarPointTable extends GrammarPoint
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _titleEnMeta = const VerificationMeta(
+    'titleEn',
+  );
+  @override
+  late final GeneratedColumn<String> titleEn = GeneratedColumn<String>(
+    'title_en',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _structureMeta = const VerificationMeta(
     'structure',
   );
@@ -546,6 +557,17 @@ class $GrammarPointTable extends GrammarPoint
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
+  );
+  static const VerificationMeta _structureEnMeta = const VerificationMeta(
+    'structureEn',
+  );
+  @override
+  late final GeneratedColumn<String> structureEn = GeneratedColumn<String>(
+    'structure_en',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
   );
   static const VerificationMeta _explanationMeta = const VerificationMeta(
     'explanation',
@@ -592,7 +614,9 @@ class $GrammarPointTable extends GrammarPoint
     id,
     lessonId,
     title,
+    titleEn,
     structure,
+    structureEn,
     explanation,
     explanationEn,
     level,
@@ -629,6 +653,12 @@ class $GrammarPointTable extends GrammarPoint
     } else if (isInserting) {
       context.missing(_titleMeta);
     }
+    if (data.containsKey('title_en')) {
+      context.handle(
+        _titleEnMeta,
+        titleEn.isAcceptableOrUnknown(data['title_en']!, _titleEnMeta),
+      );
+    }
     if (data.containsKey('structure')) {
       context.handle(
         _structureMeta,
@@ -636,6 +666,15 @@ class $GrammarPointTable extends GrammarPoint
       );
     } else if (isInserting) {
       context.missing(_structureMeta);
+    }
+    if (data.containsKey('structure_en')) {
+      context.handle(
+        _structureEnMeta,
+        structureEn.isAcceptableOrUnknown(
+          data['structure_en']!,
+          _structureEnMeta,
+        ),
+      );
     }
     if (data.containsKey('explanation')) {
       context.handle(
@@ -692,10 +731,18 @@ class $GrammarPointTable extends GrammarPoint
         DriftSqlType.string,
         data['${effectivePrefix}title'],
       )!,
+      titleEn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}title_en'],
+      ),
       structure: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}structure'],
       )!,
+      structureEn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}structure_en'],
+      ),
       explanation: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}explanation'],
@@ -726,7 +773,9 @@ class GrammarPointData extends DataClass
   final int id;
   final int lessonId;
   final String title;
+  final String? titleEn;
   final String structure;
+  final String? structureEn;
   final String explanation;
   final String? explanationEn;
   final String level;
@@ -735,7 +784,9 @@ class GrammarPointData extends DataClass
     required this.id,
     required this.lessonId,
     required this.title,
+    this.titleEn,
     required this.structure,
+    this.structureEn,
     required this.explanation,
     this.explanationEn,
     required this.level,
@@ -747,7 +798,13 @@ class GrammarPointData extends DataClass
     map['id'] = Variable<int>(id);
     map['lesson_id'] = Variable<int>(lessonId);
     map['title'] = Variable<String>(title);
+    if (!nullToAbsent || titleEn != null) {
+      map['title_en'] = Variable<String>(titleEn);
+    }
     map['structure'] = Variable<String>(structure);
+    if (!nullToAbsent || structureEn != null) {
+      map['structure_en'] = Variable<String>(structureEn);
+    }
     map['explanation'] = Variable<String>(explanation);
     if (!nullToAbsent || explanationEn != null) {
       map['explanation_en'] = Variable<String>(explanationEn);
@@ -764,7 +821,13 @@ class GrammarPointData extends DataClass
       id: Value(id),
       lessonId: Value(lessonId),
       title: Value(title),
+      titleEn: titleEn == null && nullToAbsent
+          ? const Value.absent()
+          : Value(titleEn),
       structure: Value(structure),
+      structureEn: structureEn == null && nullToAbsent
+          ? const Value.absent()
+          : Value(structureEn),
       explanation: Value(explanation),
       explanationEn: explanationEn == null && nullToAbsent
           ? const Value.absent()
@@ -783,7 +846,9 @@ class GrammarPointData extends DataClass
       id: serializer.fromJson<int>(json['id']),
       lessonId: serializer.fromJson<int>(json['lessonId']),
       title: serializer.fromJson<String>(json['title']),
+      titleEn: serializer.fromJson<String?>(json['titleEn']),
       structure: serializer.fromJson<String>(json['structure']),
+      structureEn: serializer.fromJson<String?>(json['structureEn']),
       explanation: serializer.fromJson<String>(json['explanation']),
       explanationEn: serializer.fromJson<String?>(json['explanationEn']),
       level: serializer.fromJson<String>(json['level']),
@@ -797,7 +862,9 @@ class GrammarPointData extends DataClass
       'id': serializer.toJson<int>(id),
       'lessonId': serializer.toJson<int>(lessonId),
       'title': serializer.toJson<String>(title),
+      'titleEn': serializer.toJson<String?>(titleEn),
       'structure': serializer.toJson<String>(structure),
+      'structureEn': serializer.toJson<String?>(structureEn),
       'explanation': serializer.toJson<String>(explanation),
       'explanationEn': serializer.toJson<String?>(explanationEn),
       'level': serializer.toJson<String>(level),
@@ -809,7 +876,9 @@ class GrammarPointData extends DataClass
     int? id,
     int? lessonId,
     String? title,
+    Value<String?> titleEn = const Value.absent(),
     String? structure,
+    Value<String?> structureEn = const Value.absent(),
     String? explanation,
     Value<String?> explanationEn = const Value.absent(),
     String? level,
@@ -818,7 +887,9 @@ class GrammarPointData extends DataClass
     id: id ?? this.id,
     lessonId: lessonId ?? this.lessonId,
     title: title ?? this.title,
+    titleEn: titleEn.present ? titleEn.value : this.titleEn,
     structure: structure ?? this.structure,
+    structureEn: structureEn.present ? structureEn.value : this.structureEn,
     explanation: explanation ?? this.explanation,
     explanationEn: explanationEn.present
         ? explanationEn.value
@@ -831,7 +902,11 @@ class GrammarPointData extends DataClass
       id: data.id.present ? data.id.value : this.id,
       lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
       title: data.title.present ? data.title.value : this.title,
+      titleEn: data.titleEn.present ? data.titleEn.value : this.titleEn,
       structure: data.structure.present ? data.structure.value : this.structure,
+      structureEn: data.structureEn.present
+          ? data.structureEn.value
+          : this.structureEn,
       explanation: data.explanation.present
           ? data.explanation.value
           : this.explanation,
@@ -849,7 +924,9 @@ class GrammarPointData extends DataClass
           ..write('id: $id, ')
           ..write('lessonId: $lessonId, ')
           ..write('title: $title, ')
+          ..write('titleEn: $titleEn, ')
           ..write('structure: $structure, ')
+          ..write('structureEn: $structureEn, ')
           ..write('explanation: $explanation, ')
           ..write('explanationEn: $explanationEn, ')
           ..write('level: $level, ')
@@ -863,7 +940,9 @@ class GrammarPointData extends DataClass
     id,
     lessonId,
     title,
+    titleEn,
     structure,
+    structureEn,
     explanation,
     explanationEn,
     level,
@@ -876,7 +955,9 @@ class GrammarPointData extends DataClass
           other.id == this.id &&
           other.lessonId == this.lessonId &&
           other.title == this.title &&
+          other.titleEn == this.titleEn &&
           other.structure == this.structure &&
+          other.structureEn == this.structureEn &&
           other.explanation == this.explanation &&
           other.explanationEn == this.explanationEn &&
           other.level == this.level &&
@@ -887,7 +968,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
   final Value<int> id;
   final Value<int> lessonId;
   final Value<String> title;
+  final Value<String?> titleEn;
   final Value<String> structure;
+  final Value<String?> structureEn;
   final Value<String> explanation;
   final Value<String?> explanationEn;
   final Value<String> level;
@@ -896,7 +979,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
     this.id = const Value.absent(),
     this.lessonId = const Value.absent(),
     this.title = const Value.absent(),
+    this.titleEn = const Value.absent(),
     this.structure = const Value.absent(),
+    this.structureEn = const Value.absent(),
     this.explanation = const Value.absent(),
     this.explanationEn = const Value.absent(),
     this.level = const Value.absent(),
@@ -906,7 +991,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
     this.id = const Value.absent(),
     required int lessonId,
     required String title,
+    this.titleEn = const Value.absent(),
     required String structure,
+    this.structureEn = const Value.absent(),
     required String explanation,
     this.explanationEn = const Value.absent(),
     required String level,
@@ -920,7 +1007,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
     Expression<int>? id,
     Expression<int>? lessonId,
     Expression<String>? title,
+    Expression<String>? titleEn,
     Expression<String>? structure,
+    Expression<String>? structureEn,
     Expression<String>? explanation,
     Expression<String>? explanationEn,
     Expression<String>? level,
@@ -930,7 +1019,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
       if (id != null) 'id': id,
       if (lessonId != null) 'lesson_id': lessonId,
       if (title != null) 'title': title,
+      if (titleEn != null) 'title_en': titleEn,
       if (structure != null) 'structure': structure,
+      if (structureEn != null) 'structure_en': structureEn,
       if (explanation != null) 'explanation': explanation,
       if (explanationEn != null) 'explanation_en': explanationEn,
       if (level != null) 'level': level,
@@ -942,7 +1033,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
     Value<int>? id,
     Value<int>? lessonId,
     Value<String>? title,
+    Value<String?>? titleEn,
     Value<String>? structure,
+    Value<String?>? structureEn,
     Value<String>? explanation,
     Value<String?>? explanationEn,
     Value<String>? level,
@@ -952,7 +1045,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
       id: id ?? this.id,
       lessonId: lessonId ?? this.lessonId,
       title: title ?? this.title,
+      titleEn: titleEn ?? this.titleEn,
       structure: structure ?? this.structure,
+      structureEn: structureEn ?? this.structureEn,
       explanation: explanation ?? this.explanation,
       explanationEn: explanationEn ?? this.explanationEn,
       level: level ?? this.level,
@@ -972,8 +1067,14 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
     if (title.present) {
       map['title'] = Variable<String>(title.value);
     }
+    if (titleEn.present) {
+      map['title_en'] = Variable<String>(titleEn.value);
+    }
     if (structure.present) {
       map['structure'] = Variable<String>(structure.value);
+    }
+    if (structureEn.present) {
+      map['structure_en'] = Variable<String>(structureEn.value);
     }
     if (explanation.present) {
       map['explanation'] = Variable<String>(explanation.value);
@@ -996,7 +1097,9 @@ class GrammarPointCompanion extends UpdateCompanion<GrammarPointData> {
           ..write('id: $id, ')
           ..write('lessonId: $lessonId, ')
           ..write('title: $title, ')
+          ..write('titleEn: $titleEn, ')
           ..write('structure: $structure, ')
+          ..write('structureEn: $structureEn, ')
           ..write('explanation: $explanation, ')
           ..write('explanationEn: $explanationEn, ')
           ..write('level: $level, ')
@@ -4165,7 +4268,9 @@ typedef $$GrammarPointTableCreateCompanionBuilder =
       Value<int> id,
       required int lessonId,
       required String title,
+      Value<String?> titleEn,
       required String structure,
+      Value<String?> structureEn,
       required String explanation,
       Value<String?> explanationEn,
       required String level,
@@ -4176,7 +4281,9 @@ typedef $$GrammarPointTableUpdateCompanionBuilder =
       Value<int> id,
       Value<int> lessonId,
       Value<String> title,
+      Value<String?> titleEn,
       Value<String> structure,
+      Value<String?> structureEn,
       Value<String> explanation,
       Value<String?> explanationEn,
       Value<String> level,
@@ -4239,8 +4346,18 @@ class $$GrammarPointTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<String> get titleEn => $composableBuilder(
+    column: $table.titleEn,
+    builder: (column) => ColumnFilters(column),
+  );
+
   ColumnFilters<String> get structure => $composableBuilder(
     column: $table.structure,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get structureEn => $composableBuilder(
+    column: $table.structureEn,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -4314,8 +4431,18 @@ class $$GrammarPointTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get titleEn => $composableBuilder(
+    column: $table.titleEn,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get structure => $composableBuilder(
     column: $table.structure,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get structureEn => $composableBuilder(
+    column: $table.structureEn,
     builder: (column) => ColumnOrderings(column),
   );
 
@@ -4358,8 +4485,16 @@ class $$GrammarPointTableAnnotationComposer
   GeneratedColumn<String> get title =>
       $composableBuilder(column: $table.title, builder: (column) => column);
 
+  GeneratedColumn<String> get titleEn =>
+      $composableBuilder(column: $table.titleEn, builder: (column) => column);
+
   GeneratedColumn<String> get structure =>
       $composableBuilder(column: $table.structure, builder: (column) => column);
+
+  GeneratedColumn<String> get structureEn => $composableBuilder(
+    column: $table.structureEn,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<String> get explanation => $composableBuilder(
     column: $table.explanation,
@@ -4436,7 +4571,9 @@ class $$GrammarPointTableTableManager
                 Value<int> id = const Value.absent(),
                 Value<int> lessonId = const Value.absent(),
                 Value<String> title = const Value.absent(),
+                Value<String?> titleEn = const Value.absent(),
                 Value<String> structure = const Value.absent(),
+                Value<String?> structureEn = const Value.absent(),
                 Value<String> explanation = const Value.absent(),
                 Value<String?> explanationEn = const Value.absent(),
                 Value<String> level = const Value.absent(),
@@ -4445,7 +4582,9 @@ class $$GrammarPointTableTableManager
                 id: id,
                 lessonId: lessonId,
                 title: title,
+                titleEn: titleEn,
                 structure: structure,
+                structureEn: structureEn,
                 explanation: explanation,
                 explanationEn: explanationEn,
                 level: level,
@@ -4456,7 +4595,9 @@ class $$GrammarPointTableTableManager
                 Value<int> id = const Value.absent(),
                 required int lessonId,
                 required String title,
+                Value<String?> titleEn = const Value.absent(),
                 required String structure,
+                Value<String?> structureEn = const Value.absent(),
                 required String explanation,
                 Value<String?> explanationEn = const Value.absent(),
                 required String level,
@@ -4465,7 +4606,9 @@ class $$GrammarPointTableTableManager
                 id: id,
                 lessonId: lessonId,
                 title: title,
+                titleEn: titleEn,
                 structure: structure,
+                structureEn: structureEn,
                 explanation: explanation,
                 explanationEn: explanationEn,
                 level: level,

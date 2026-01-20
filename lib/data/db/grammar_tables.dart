@@ -7,10 +7,12 @@ class GrammarPoints extends Table {
   IntColumn get id => integer().autoIncrement()();
   IntColumn get lessonId => integer().nullable()(); // Linked to UserLesson
   TextColumn get grammarPoint => text().withLength(min: 1, max: 255)(); // e.g. "〜てはいけない"
+  TextColumn get titleEn => text().nullable()(); // English Title
   TextColumn get meaning => text()(); // Default meaning
   TextColumn get meaningVi => text().nullable()(); // Vietnamese meaning
   TextColumn get meaningEn => text().nullable()(); // English meaning
   TextColumn get connection => text()(); // e.g. "Verb-て + は + いけない"
+  TextColumn get connectionEn => text().nullable()(); // English structure
   TextColumn get explanation => text()(); // Default explanation
   TextColumn get explanationVi => text().nullable()(); // Vietnamese explanation
   TextColumn get explanationEn => text().nullable()(); // English explanation
@@ -43,4 +45,29 @@ class GrammarSrsState extends Table {
   // If > 0, this item is a "Ghost" generated from a mistake.
   // Reviews of ghosts don't advance the main SRS interval as much, or are auxiliary.
   IntColumn get ghostReviewsDue => integer().withDefault(const Constant(0))();
+}
+
+/// Table to store Grammar Questions (Exercises)
+/// Used for Practice Mode (Fill-in-blank, Multiple Choice, etc.)
+class GrammarQuestions extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  IntColumn get grammarId => integer().references(GrammarPoints, #id, onDelete: KeyAction.cascade)();
+  
+  // Type of question: 'fill_blank', 'multiple_choice', 'reorder', 'translate'
+  TextColumn get type => text().withLength(min: 1, max: 50)();
+  
+  // The question prompt (e.g. "Complete the sentence", or the sentence with blank)
+  TextColumn get question => text()();
+  
+  // The correct answer string
+  TextColumn get correctAnswer => text()();
+  
+  // JSON list of options for multiple choice (optional)
+  TextColumn get optionsJson => text().nullable()();
+  
+  // JSON list of correct order indices for reordering (optional)
+  TextColumn get correctOrderJson => text().nullable()(); // e.g. "[0, 2, 1, 3]"
+
+  // Explanation/Hint
+  TextColumn get explanation => text().nullable()();
 }

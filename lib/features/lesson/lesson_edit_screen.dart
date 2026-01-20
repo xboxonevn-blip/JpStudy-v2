@@ -354,22 +354,13 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     return _ParsedTerm(term: term, reading: reading);
   }
 
-  void _onTitleChanged(
-    LessonRepository repo,
-    StudyLevel level,
-    String value,
-  ) {
-    final trimmed = value.trim();
-    final isCustomTitle =
-        trimmed.isNotEmpty && trimmed != _defaultTitle;
-    repo.updateLessonTitle(
-      widget.lessonId,
-      value,
-      isCustomTitle: isCustomTitle,
-    );
-    ref.invalidate(lessonTitleProvider);
+
+  Future<void> _addTerm(LessonRepository repo, StudyLevel level) async {
+    await repo.addTerm(widget.lessonId);
+    await _refreshTerms(repo);
     ref.invalidate(lessonMetaProvider(level.shortLabel));
   }
+
 
   Future<void> _removeLastTerm(
     LessonRepository repo,

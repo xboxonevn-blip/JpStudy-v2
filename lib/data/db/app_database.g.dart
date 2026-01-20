@@ -4071,6 +4071,18 @@ class $UserLessonTermTable extends UserLessonTerm
     requiredDuringInsert: false,
     defaultValue: const Constant(''),
   );
+  static const VerificationMeta _definitionEnMeta = const VerificationMeta(
+    'definitionEn',
+  );
+  @override
+  late final GeneratedColumn<String> definitionEn = GeneratedColumn<String>(
+    'definition_en',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
   static const VerificationMeta _kanjiMeaningMeta = const VerificationMeta(
     'kanjiMeaning',
   );
@@ -4132,6 +4144,7 @@ class $UserLessonTermTable extends UserLessonTerm
     term,
     reading,
     definition,
+    definitionEn,
     kanjiMeaning,
     isStarred,
     isLearned,
@@ -4176,6 +4189,15 @@ class $UserLessonTermTable extends UserLessonTerm
       context.handle(
         _definitionMeta,
         definition.isAcceptableOrUnknown(data['definition']!, _definitionMeta),
+      );
+    }
+    if (data.containsKey('definition_en')) {
+      context.handle(
+        _definitionEnMeta,
+        definitionEn.isAcceptableOrUnknown(
+          data['definition_en']!,
+          _definitionEnMeta,
+        ),
       );
     }
     if (data.containsKey('kanji_meaning')) {
@@ -4234,6 +4256,10 @@ class $UserLessonTermTable extends UserLessonTerm
         DriftSqlType.string,
         data['${effectivePrefix}definition'],
       )!,
+      definitionEn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}definition_en'],
+      )!,
       kanjiMeaning: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}kanji_meaning'],
@@ -4266,6 +4292,7 @@ class UserLessonTermData extends DataClass
   final String term;
   final String reading;
   final String definition;
+  final String definitionEn;
   final String kanjiMeaning;
   final bool isStarred;
   final bool isLearned;
@@ -4276,6 +4303,7 @@ class UserLessonTermData extends DataClass
     required this.term,
     required this.reading,
     required this.definition,
+    required this.definitionEn,
     required this.kanjiMeaning,
     required this.isStarred,
     required this.isLearned,
@@ -4289,6 +4317,7 @@ class UserLessonTermData extends DataClass
     map['term'] = Variable<String>(term);
     map['reading'] = Variable<String>(reading);
     map['definition'] = Variable<String>(definition);
+    map['definition_en'] = Variable<String>(definitionEn);
     map['kanji_meaning'] = Variable<String>(kanjiMeaning);
     map['is_starred'] = Variable<bool>(isStarred);
     map['is_learned'] = Variable<bool>(isLearned);
@@ -4303,6 +4332,7 @@ class UserLessonTermData extends DataClass
       term: Value(term),
       reading: Value(reading),
       definition: Value(definition),
+      definitionEn: Value(definitionEn),
       kanjiMeaning: Value(kanjiMeaning),
       isStarred: Value(isStarred),
       isLearned: Value(isLearned),
@@ -4321,6 +4351,7 @@ class UserLessonTermData extends DataClass
       term: serializer.fromJson<String>(json['term']),
       reading: serializer.fromJson<String>(json['reading']),
       definition: serializer.fromJson<String>(json['definition']),
+      definitionEn: serializer.fromJson<String>(json['definitionEn']),
       kanjiMeaning: serializer.fromJson<String>(json['kanjiMeaning']),
       isStarred: serializer.fromJson<bool>(json['isStarred']),
       isLearned: serializer.fromJson<bool>(json['isLearned']),
@@ -4336,6 +4367,7 @@ class UserLessonTermData extends DataClass
       'term': serializer.toJson<String>(term),
       'reading': serializer.toJson<String>(reading),
       'definition': serializer.toJson<String>(definition),
+      'definitionEn': serializer.toJson<String>(definitionEn),
       'kanjiMeaning': serializer.toJson<String>(kanjiMeaning),
       'isStarred': serializer.toJson<bool>(isStarred),
       'isLearned': serializer.toJson<bool>(isLearned),
@@ -4349,6 +4381,7 @@ class UserLessonTermData extends DataClass
     String? term,
     String? reading,
     String? definition,
+    String? definitionEn,
     String? kanjiMeaning,
     bool? isStarred,
     bool? isLearned,
@@ -4359,6 +4392,7 @@ class UserLessonTermData extends DataClass
     term: term ?? this.term,
     reading: reading ?? this.reading,
     definition: definition ?? this.definition,
+    definitionEn: definitionEn ?? this.definitionEn,
     kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
     isStarred: isStarred ?? this.isStarred,
     isLearned: isLearned ?? this.isLearned,
@@ -4373,6 +4407,9 @@ class UserLessonTermData extends DataClass
       definition: data.definition.present
           ? data.definition.value
           : this.definition,
+      definitionEn: data.definitionEn.present
+          ? data.definitionEn.value
+          : this.definitionEn,
       kanjiMeaning: data.kanjiMeaning.present
           ? data.kanjiMeaning.value
           : this.kanjiMeaning,
@@ -4392,6 +4429,7 @@ class UserLessonTermData extends DataClass
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
+          ..write('definitionEn: $definitionEn, ')
           ..write('kanjiMeaning: $kanjiMeaning, ')
           ..write('isStarred: $isStarred, ')
           ..write('isLearned: $isLearned, ')
@@ -4407,6 +4445,7 @@ class UserLessonTermData extends DataClass
     term,
     reading,
     definition,
+    definitionEn,
     kanjiMeaning,
     isStarred,
     isLearned,
@@ -4421,6 +4460,7 @@ class UserLessonTermData extends DataClass
           other.term == this.term &&
           other.reading == this.reading &&
           other.definition == this.definition &&
+          other.definitionEn == this.definitionEn &&
           other.kanjiMeaning == this.kanjiMeaning &&
           other.isStarred == this.isStarred &&
           other.isLearned == this.isLearned &&
@@ -4433,6 +4473,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
   final Value<String> term;
   final Value<String> reading;
   final Value<String> definition;
+  final Value<String> definitionEn;
   final Value<String> kanjiMeaning;
   final Value<bool> isStarred;
   final Value<bool> isLearned;
@@ -4443,6 +4484,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
+    this.definitionEn = const Value.absent(),
     this.kanjiMeaning = const Value.absent(),
     this.isStarred = const Value.absent(),
     this.isLearned = const Value.absent(),
@@ -4454,6 +4496,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.definition = const Value.absent(),
+    this.definitionEn = const Value.absent(),
     this.kanjiMeaning = const Value.absent(),
     this.isStarred = const Value.absent(),
     this.isLearned = const Value.absent(),
@@ -4465,6 +4508,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Expression<String>? term,
     Expression<String>? reading,
     Expression<String>? definition,
+    Expression<String>? definitionEn,
     Expression<String>? kanjiMeaning,
     Expression<bool>? isStarred,
     Expression<bool>? isLearned,
@@ -4476,6 +4520,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       if (term != null) 'term': term,
       if (reading != null) 'reading': reading,
       if (definition != null) 'definition': definition,
+      if (definitionEn != null) 'definition_en': definitionEn,
       if (kanjiMeaning != null) 'kanji_meaning': kanjiMeaning,
       if (isStarred != null) 'is_starred': isStarred,
       if (isLearned != null) 'is_learned': isLearned,
@@ -4489,6 +4534,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Value<String>? term,
     Value<String>? reading,
     Value<String>? definition,
+    Value<String>? definitionEn,
     Value<String>? kanjiMeaning,
     Value<bool>? isStarred,
     Value<bool>? isLearned,
@@ -4500,6 +4546,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       term: term ?? this.term,
       reading: reading ?? this.reading,
       definition: definition ?? this.definition,
+      definitionEn: definitionEn ?? this.definitionEn,
       kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
       isStarred: isStarred ?? this.isStarred,
       isLearned: isLearned ?? this.isLearned,
@@ -4525,6 +4572,9 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     if (definition.present) {
       map['definition'] = Variable<String>(definition.value);
     }
+    if (definitionEn.present) {
+      map['definition_en'] = Variable<String>(definitionEn.value);
+    }
     if (kanjiMeaning.present) {
       map['kanji_meaning'] = Variable<String>(kanjiMeaning.value);
     }
@@ -4548,6 +4598,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('definition: $definition, ')
+          ..write('definitionEn: $definitionEn, ')
           ..write('kanjiMeaning: $kanjiMeaning, ')
           ..write('isStarred: $isStarred, ')
           ..write('isLearned: $isLearned, ')
@@ -12144,6 +12195,7 @@ typedef $$UserLessonTermTableCreateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
+      Value<String> definitionEn,
       Value<String> kanjiMeaning,
       Value<bool> isStarred,
       Value<bool> isLearned,
@@ -12156,6 +12208,7 @@ typedef $$UserLessonTermTableUpdateCompanionBuilder =
       Value<String> term,
       Value<String> reading,
       Value<String> definition,
+      Value<String> definitionEn,
       Value<String> kanjiMeaning,
       Value<bool> isStarred,
       Value<bool> isLearned,
@@ -12221,6 +12274,11 @@ class $$UserLessonTermTableFilterComposer
 
   ColumnFilters<String> get definition => $composableBuilder(
     column: $table.definition,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get definitionEn => $composableBuilder(
+    column: $table.definitionEn,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -12297,6 +12355,11 @@ class $$UserLessonTermTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get definitionEn => $composableBuilder(
+    column: $table.definitionEn,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get kanjiMeaning => $composableBuilder(
     column: $table.kanjiMeaning,
     builder: (column) => ColumnOrderings(column),
@@ -12361,6 +12424,11 @@ class $$UserLessonTermTableAnnotationComposer
 
   GeneratedColumn<String> get definition => $composableBuilder(
     column: $table.definition,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get definitionEn => $composableBuilder(
+    column: $table.definitionEn,
     builder: (column) => column,
   );
 
@@ -12439,6 +12507,7 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
+                Value<String> definitionEn = const Value.absent(),
                 Value<String> kanjiMeaning = const Value.absent(),
                 Value<bool> isStarred = const Value.absent(),
                 Value<bool> isLearned = const Value.absent(),
@@ -12449,6 +12518,7 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
+                definitionEn: definitionEn,
                 kanjiMeaning: kanjiMeaning,
                 isStarred: isStarred,
                 isLearned: isLearned,
@@ -12461,6 +12531,7 @@ class $$UserLessonTermTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String> reading = const Value.absent(),
                 Value<String> definition = const Value.absent(),
+                Value<String> definitionEn = const Value.absent(),
                 Value<String> kanjiMeaning = const Value.absent(),
                 Value<bool> isStarred = const Value.absent(),
                 Value<bool> isLearned = const Value.absent(),
@@ -12471,6 +12542,7 @@ class $$UserLessonTermTableTableManager
                 term: term,
                 reading: reading,
                 definition: definition,
+                definitionEn: definitionEn,
                 kanjiMeaning: kanjiMeaning,
                 isStarred: isStarred,
                 isLearned: isLearned,

@@ -7,7 +7,8 @@ class Vocab extends Table {
   IntColumn get id => integer()();
   TextColumn get term => text()();
   TextColumn get reading => text().nullable()();
-  TextColumn get meaning => text()();
+  TextColumn get meaning => text()(); // Vietnamese
+  TextColumn get meaningEn => text().nullable()(); // English
   TextColumn get kanjiMeaning => text().nullable()();
   TextColumn get level => text()();
   TextColumn get tags => text().nullable()();

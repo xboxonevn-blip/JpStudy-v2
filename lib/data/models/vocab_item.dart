@@ -3,6 +3,7 @@ class VocabItem {
   final String term;
   final String? reading;
   final String meaning;
+  final String? meaningEn;
   final String? kanjiMeaning;
   final String level;
 
@@ -11,6 +12,7 @@ class VocabItem {
     required this.term,
     this.reading,
     required this.meaning,
+    this.meaningEn,
     this.kanjiMeaning,
     required this.level,
   });

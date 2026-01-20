@@ -1,7 +1,9 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
+import 'package:flutter/services.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
@@ -24,7 +26,7 @@ class ContentDatabase extends _$ContentDatabase {
   ContentDatabase() : super(_openContentConnection());
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 6;
 
   @override
   MigrationStrategy get migration {
@@ -40,6 +42,9 @@ class ContentDatabase extends _$ContentDatabase {
         if (from < 3) {
           await m.addColumn(vocab, vocab.kanjiMeaning);
         }
+        if (from < 6) {
+          await m.addColumn(vocab, vocab.meaningEn);
+        }
         // Always re-seed Minna vocabulary (delete old + insert new)
         await _reseedMinnaVocabulary();
       },
@@ -47,7 +52,7 @@ class ContentDatabase extends _$ContentDatabase {
   }
 
   Future<void> _reseedMinnaVocabulary() async {
-    // Delete all old Minna vocabulary
+    // Delete all old Minna vocabulary (both N5 and N4)
     await (delete(vocab)..where((tbl) => tbl.tags.like('%minna_%'))).go();
     
     // Seed new vocabulary
@@ -55,21 +60,56 @@ class ContentDatabase extends _$ContentDatabase {
   }
 
   Future<void> _seedMinnaVocabulary() async {
-    // Seed Minna No Nihongo Lessons 1-5 (119 terms)
-    final vocabData = _getMinnaVocab();
+    // Seed N5 Vocabulary from JSON files
+    await _seedFromJsonFiles(isN5: true);
     
-    for (final item in vocabData) {
-      await into(vocab).insert(
-        VocabCompanion.insert(
-          term: item['term']!,
-          reading: Value(item['reading']),
-          kanjiMeaning: Value(item['kanjiMeaning']),
-          meaning: item['meaning']!,
-          level: item['level']!,
-          tags: Value(item['tags']),
-        ),
-        mode: InsertMode.insertOrIgnore,
-      );
+    // Seed N4 Vocabulary from JSON files
+    await _seedFromJsonFiles(isN5: false);
+  }
+  
+  Future<void> _seedFromJsonFiles({bool isN5 = false}) async {
+    final List<String> jsonFiles;
+    if (isN5) {
+      jsonFiles = [
+        'assets/data/vocab_n5_1_5.json',
+        'assets/data/vocab_n5_6_10.json',
+        'assets/data/vocab_n5_11_15.json',
+        'assets/data/vocab_n5_16_20.json',
+        'assets/data/vocab_n5_21_25.json',
+      ];
+    } else {
+      jsonFiles = [
+        'assets/data/vocab_n4_26_30.json',
+        'assets/data/vocab_n4_31_35.json',
+        'assets/data/vocab_n4_36_40.json',
+        'assets/data/vocab_n4_41_45.json',
+        'assets/data/vocab_n4_46_50.json',
+      ];
+    }
+    
+    for (final file in jsonFiles) {
+      try {
+        final jsonString = await rootBundle.loadString(file);
+        final List<dynamic> items = json.decode(jsonString);
+        
+        for (final item in items) {
+          await into(vocab).insert(
+            VocabCompanion.insert(
+              term: item['term'] as String,
+              reading: Value(item['reading'] as String?),
+              kanjiMeaning: Value(item['kanjiMeaning'] as String?),
+              meaning: (item['meaning_vi'] ?? item['meaning']) as String,
+              meaningEn: Value(item['meaning_en'] as String?),
+              level: item['level'] as String,
+              tags: Value(item['tags'] as String?),
+            ),
+            mode: InsertMode.insertOrIgnore,
+          );
+        }
+      } catch (e) {
+        // File might not exist or be invalid, skip silently
+        // debugPrint('Error loading $file: $e'); 
+      }
     }
   }
 

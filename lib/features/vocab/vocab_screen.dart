@@ -78,6 +78,7 @@ class _VocabContent extends ConsumerWidget {
           term: e.term,
           reading: e.reading,
           meaning: e.meaning,
+          meaningEn: e.meaningEn,
           kanjiMeaning: null,
           level: e.level,
         )).toList();
@@ -117,8 +118,8 @@ class _ListView extends StatelessWidget {
               title: Text(item.term),
               subtitle: Text(
                 item.reading == null || item.reading!.isEmpty
-                    ? item.meaning
-                    : '${item.reading} • ${item.meaning}',
+                    ? (language == AppLanguage.en ? (item.meaningEn ?? item.meaning) : item.meaning)
+                    : '${item.reading} • ${language == AppLanguage.en ? (item.meaningEn ?? item.meaning) : item.meaning}',
               ),
               // Audio speaker icon removed - TTS disabled
             ),

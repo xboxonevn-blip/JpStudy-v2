@@ -78,6 +78,8 @@ class LearnModeIntegration extends ConsumerWidget {
       term: term.term,
       reading: term.reading,
       meaning: term.definition,
+      meaningEn: term.definitionEn,
+      kanjiMeaning: term.kanjiMeaning,
       level: 'N5', // Default level
     )).toList();
   }

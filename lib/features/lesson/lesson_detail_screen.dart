@@ -924,8 +924,11 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final sampleCount = terms.length < 5 ? terms.length : 5;
     for (var i = 0; i < sampleCount; i++) {
       final term = terms[i];
+      final def = language == AppLanguage.en && term.definitionEn.isNotEmpty
+          ? term.definitionEn
+          : term.definition;
       buffer.writeln(
-        '${i + 1}. ${term.term}\t${term.reading}\t${term.definition}',
+        '${i + 1}. ${term.term}\t${term.reading}\t$def',
       );
     }
     final reportText = buffer.toString();
@@ -1530,7 +1533,7 @@ class _CardContent extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ],
-          if (resolvedTerm.kanjiMeaning.isNotEmpty) ...[
+          if (language != AppLanguage.en && resolvedTerm.kanjiMeaning.isNotEmpty) ...[
             const SizedBox(height: 8),
             Text(
               resolvedTerm.kanjiMeaning,
@@ -1567,7 +1570,9 @@ class _CardContent extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         Text(
-          resolvedTerm.definition,
+          language == AppLanguage.en && resolvedTerm.definitionEn.isNotEmpty
+              ? resolvedTerm.definitionEn
+              : resolvedTerm.definition,
           style: const TextStyle(fontSize: 18, color: Color(0xFF1C2440)),
           textAlign: TextAlign.center,
         ),

@@ -163,7 +163,9 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
             const SizedBox(height: 16),
           ],
           Text(
-            widget.item.meaning,
+            widget.language == AppLanguage.en 
+                ? (widget.item.meaningEn ?? widget.item.meaning)
+                : widget.item.meaning,
             style: Theme.of(context).textTheme.titleLarge,
             textAlign: TextAlign.center,
           ),

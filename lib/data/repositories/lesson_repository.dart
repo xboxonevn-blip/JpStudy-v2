@@ -463,40 +463,50 @@ class LessonRepository {
       return;
     }
 
-    // Determine level and offset based on lessonId
-    // Standard Minna No Nihongo: ~25-40 words per lesson.
-    // If we assume sequential ID in DB:
-    // N5: Lesson 1 starts at offset 0.
-    // N4: Lesson 26 starts at offset 0 of N4 level?
-    
-    // We will use 25 words per lesson as a safe default if no mapping exists.
-    int limit = 50; // Fetch generous amount, though typical lesson is ~30
-    int offset = 0;
-
-    // Normalize level label
+    // Determine level and try to fetch by tag first (more accurate)
+    final minnaTag = 'minna_$lessonId';
     String dbLevel = currentLevelLabel; // e.g. "N5", "N4"
 
-    if (currentLevelLabel == 'N5') {
-       // Lesson 1 -> 0
-       // Lesson 2 -> 25?
-       // Let's assume vaguely 40 items per lesson to be safe, or just 100?
-       // Actually, Minna vocab is roughly 1000 words for N5 (25 lessons). 1000/25 = 40 words/lesson.
-       offset = (lessonId - 1) * 35; // Approximation
-    } else if (currentLevelLabel == 'N4') {
-       // N4 starts at Lesson 26.
-       offset = (lessonId - 26) * 35;
-    }
-
-    if (offset < 0) offset = 0;
-
-    // Fetch from ContentDatabase
-    final vocabList = await (_contentDb.select(_contentDb.vocab)
-      ..where((tbl) => tbl.level.equals(dbLevel))
-      ..limit(limit, offset: offset)) // Fetch limit words
+    // Try finding by tag
+    var vocabList = await (_contentDb.select(_contentDb.vocab)
+      ..where((tbl) {
+        // Match tag: "minna_X", "minna_X,...", "...,minna_X", "...,minna_X,..."
+        // In SQL LIKE: 'minna_X', 'minna_X,%', '%,minna_X', '%,minna_X,%'
+        // Simplification: Check if it contains minna_X
+        // But to avoid minna_1 matching minna_10, we can be more specific if needed.
+        // For simplicity in this app, we assume strict formatting or acceptable overlap.
+        // Better: Query all for level, filter in Dart to be safe, or just use LIKE.
+        // Given existing data "minna_1,noun", LIKE 'minna_$id,%' is safest for start.
+        final idStr = lessonId.toString();
+        return tbl.level.equals(dbLevel) & 
+               (tbl.tags.like('minna_$idStr,%') | 
+                tbl.tags.equals('minna_$idStr') | 
+                tbl.tags.like('%,minna_$idStr,%') | 
+                tbl.tags.like('%,minna_$idStr'));
+      })
+      // ..orderBy([(t) => OrderingTerm(expression: t.id)]) // content DB ID order
+      ) 
       .get();
+      
+    // Fallback to offset if tag lookup failed (e.g. old data or manual lessons)
+    if (vocabList.isEmpty) {
+        int limit = 50; 
+        int offset = 0;
+
+        if (currentLevelLabel == 'N5') {
+           offset = (lessonId - 1) * 35; 
+        } else if (currentLevelLabel == 'N4') {
+           offset = (lessonId - 26) * 35;
+        }
+        if (offset < 0) offset = 0;
+        
+        vocabList = await (_contentDb.select(_contentDb.vocab)
+          ..where((tbl) => tbl.level.equals(dbLevel))
+          ..limit(limit, offset: offset)) 
+          .get();
+    }
     
     if (vocabList.isEmpty) {
-      // Fallback if no vocab found
       return;
     }
 
@@ -511,6 +521,7 @@ class LessonRepository {
             term: Value(v.term),
             reading: Value(v.reading ?? ''),
             definition: Value(v.meaning),
+            definitionEn: Value(v.meaningEn ?? ''),
             orderIndex: Value(i + 1),
           ),
         );
@@ -579,6 +590,7 @@ class LessonRepository {
     String? term,
     String? reading,
     String? definition,
+    String? definitionEn,
     String? kanjiMeaning,
   }) async {
     final maxOrder = await (_db.selectOnly(_db.userLessonTerm)
@@ -601,6 +613,9 @@ class LessonRepository {
             reading: reading == null ? const Value.absent() : Value(reading),
             definition:
                 definition == null ? const Value.absent() : Value(definition),
+            definitionEn: definitionEn == null
+                ? const Value.absent()
+                : Value(definitionEn),
             kanjiMeaning:
                 kanjiMeaning == null ? const Value.absent() : Value(kanjiMeaning),
           ),
@@ -615,6 +630,7 @@ class LessonRepository {
     String? term,
     String? reading,
     String? definition,
+    String? definitionEn,
     String? kanjiMeaning,
   }) {
     final update = (_db.update(_db.userLessonTerm)
@@ -624,6 +640,8 @@ class LessonRepository {
       reading: reading == null ? const Value.absent() : Value(reading),
       definition:
           definition == null ? const Value.absent() : Value(definition),
+      definitionEn:
+          definitionEn == null ? const Value.absent() : Value(definitionEn),
       kanjiMeaning:
           kanjiMeaning == null ? const Value.absent() : Value(kanjiMeaning),
     ));

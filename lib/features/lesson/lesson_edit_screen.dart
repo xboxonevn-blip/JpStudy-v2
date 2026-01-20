@@ -90,6 +90,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               term: term.term,
               reading: term.reading,
               definition: term.definition,
+              definitionEn: term.definitionEn,
               kanjiMeaning: term.kanjiMeaning,
             ),
           ),
@@ -113,6 +114,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               term: term.term,
               reading: term.reading,
               definition: term.definition,
+              definitionEn: term.definitionEn,
               kanjiMeaning: term.kanjiMeaning,
             ),
           ),
@@ -376,6 +378,14 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                     _terms[index].id,
                     lessonId: widget.lessonId,
                     definition: value,
+                  );
+                },
+                onDefinitionEnChanged: (value) {
+                  _terms[index] = _terms[index].copyWith(definitionEn: value);
+                  repo.updateTerm(
+                    _terms[index].id,
+                    lessonId: widget.lessonId,
+                    definitionEn: value,
                   );
                 },
                 onKanjiMeaningChanged: (value) {
@@ -910,6 +920,7 @@ class _TermCard extends StatelessWidget {
     required this.onTermChanged,
     required this.onReadingChanged, // Added
     required this.onDefinitionChanged,
+    required this.onDefinitionEnChanged,
     required this.onKanjiMeaningChanged, // Added
   });
 
@@ -922,6 +933,7 @@ class _TermCard extends StatelessWidget {
   final ValueChanged<String> onTermChanged;
   final ValueChanged<String> onReadingChanged; // Added
   final ValueChanged<String> onDefinitionChanged;
+  final ValueChanged<String> onDefinitionEnChanged;
   final ValueChanged<String> onKanjiMeaningChanged; // Added
 
   @override
@@ -971,6 +983,9 @@ class _TermCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
+            ],
+          ),
+          const SizedBox(height: 12),
           Row(
             children: [
               Expanded(
@@ -980,12 +995,24 @@ class _TermCard extends StatelessWidget {
                   onChanged: onReadingChanged,
                 ),
               ),
-              const SizedBox(width: 12),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
               Expanded(
                 child: _TermField(
                   label: 'Meaning',
                   initialValue: term.definition,
                   onChanged: onDefinitionChanged,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _TermField(
+                  label: 'Meaning (EN)',
+                  initialValue: term.definitionEn,
+                  onChanged: onDefinitionEnChanged,
                 ),
               ),
             ],
@@ -1080,6 +1107,7 @@ class _EditableTerm {
     required this.term,
     required this.reading,
     required this.definition,
+    required this.definitionEn,
     required this.kanjiMeaning,
   });
 
@@ -1087,12 +1115,14 @@ class _EditableTerm {
   final String term;
   final String reading;
   final String definition;
+  final String definitionEn;
   final String kanjiMeaning;
 
   _EditableTerm copyWith({
     String? term,
     String? reading,
     String? definition,
+    String? definitionEn,
     String? kanjiMeaning,
   }) {
     return _EditableTerm(
@@ -1100,6 +1130,7 @@ class _EditableTerm {
       term: term ?? this.term,
       reading: reading ?? this.reading,
       definition: definition ?? this.definition,
+      definitionEn: definitionEn ?? this.definitionEn,
       kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
     );
   }

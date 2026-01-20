@@ -1,0 +1,965 @@
+[
+    {
+        "term": "私",
+        "reading": "わたし",
+        "kanjiMeaning": "tôi",
+        "meaning_vi": "tôi",
+        "meaning_en": "I",
+        "level": "N5",
+        "tags": "minna_1,pronoun"
+    },
+    {
+        "term": "私たち",
+        "reading": "わたしたち",
+        "kanjiMeaning": "chúng tôi",
+        "meaning_vi": "chúng tôi",
+        "meaning_en": "we",
+        "level": "N5",
+        "tags": "minna_1,pronoun"
+    },
+    {
+        "term": "あなた",
+        "reading": "あなた",
+        "kanjiMeaning": null,
+        "meaning_vi": "bạn",
+        "meaning_en": "you",
+        "level": "N5",
+        "tags": "minna_1,pronoun"
+    },
+    {
+        "term": "あの人",
+        "reading": "あのひと",
+        "kanjiMeaning": "người kia",
+        "meaning_vi": "người kia",
+        "meaning_en": "that person",
+        "level": "N5",
+        "tags": "minna_1,pronoun"
+    },
+    {
+        "term": "先生",
+        "reading": "せんせい",
+        "kanjiMeaning": "tiên sinh",
+        "meaning_vi": "giáo viên",
+        "meaning_en": "teacher",
+        "level": "N5",
+        "tags": "minna_1,occupation"
+    },
+    {
+        "term": "学生",
+        "reading": "がくせい",
+        "kanjiMeaning": "học sinh",
+        "meaning_vi": "học sinh",
+        "meaning_en": "student",
+        "level": "N5",
+        "tags": "minna_1,occupation"
+    },
+    {
+        "term": "会社員",
+        "reading": "かいしゃいん",
+        "kanjiMeaning": "nhân viên công ty",
+        "meaning_vi": "nhân viên công ty",
+        "meaning_en": "company employee",
+        "level": "N5",
+        "tags": "minna_1,occupation"
+    },
+    {
+        "term": "医者",
+        "reading": "いしゃ",
+        "kanjiMeaning": "thầy thuốc",
+        "meaning_vi": "bác sĩ",
+        "meaning_en": "doctor",
+        "level": "N5",
+        "tags": "minna_1,occupation"
+    },
+    {
+        "term": "大学",
+        "reading": "だいがく",
+        "kanjiMeaning": "đại học",
+        "meaning_vi": "trường đại học",
+        "meaning_en": "university",
+        "level": "N5",
+        "tags": "minna_1,place"
+    },
+    {
+        "term": "病院",
+        "reading": "びょういん",
+        "kanjiMeaning": "bệnh viện",
+        "meaning_vi": "bệnh viện",
+        "meaning_en": "hospital",
+        "level": "N5",
+        "tags": "minna_1,place"
+    },
+    {
+        "term": "はい",
+        "reading": "はい",
+        "kanjiMeaning": null,
+        "meaning_vi": "vâng",
+        "meaning_en": "yes",
+        "level": "N5",
+        "tags": "minna_1,response"
+    },
+    {
+        "term": "いいえ",
+        "reading": "いいえ",
+        "kanjiMeaning": null,
+        "meaning_vi": "không",
+        "meaning_en": "no",
+        "level": "N5",
+        "tags": "minna_1,response"
+    },
+    {
+        "term": "初めまして",
+        "reading": "はじめまして",
+        "kanjiMeaning": "lần đầu gặp",
+        "meaning_vi": "hân hạnh được gặp",
+        "meaning_en": "How do you do?",
+        "level": "N5",
+        "tags": "minna_1,phrase"
+    },
+    {
+        "term": "どうぞよろしく",
+        "reading": "どうぞよろしく",
+        "kanjiMeaning": null,
+        "meaning_vi": "rất hân hạnh",
+        "meaning_en": "Nice to meet you",
+        "level": "N5",
+        "tags": "minna_1,phrase"
+    },
+    {
+        "term": "これ",
+        "reading": "これ",
+        "kanjiMeaning": null,
+        "meaning_vi": "cái này",
+        "meaning_en": "this",
+        "level": "N5",
+        "tags": "minna_2,pronoun"
+    },
+    {
+        "term": "それ",
+        "reading": "それ",
+        "kanjiMeaning": null,
+        "meaning_vi": "cái đó",
+        "meaning_en": "that",
+        "level": "N5",
+        "tags": "minna_2,pronoun"
+    },
+    {
+        "term": "あれ",
+        "reading": "あれ",
+        "kanjiMeaning": null,
+        "meaning_vi": "cái kia",
+        "meaning_en": "that (over there)",
+        "level": "N5",
+        "tags": "minna_2,pronoun"
+    },
+    {
+        "term": "この",
+        "reading": "この",
+        "kanjiMeaning": null,
+        "meaning_vi": "~ này",
+        "meaning_en": "this ...",
+        "level": "N5",
+        "tags": "minna_2,pronoun"
+    },
+    {
+        "term": "その",
+        "reading": "その",
+        "kanjiMeaning": null,
+        "meaning_vi": "~ đó",
+        "meaning_en": "that ...",
+        "level": "N5",
+        "tags": "minna_2,pronoun"
+    },
+    {
+        "term": "あの",
+        "reading": "あの",
+        "kanjiMeaning": null,
+        "meaning_vi": "~ kia",
+        "meaning_en": "that ... (over there)",
+        "level": "N5",
+        "tags": "minna_2,pronoun"
+    },
+    {
+        "term": "本",
+        "reading": "ほん",
+        "kanjiMeaning": "sách",
+        "meaning_vi": "sách",
+        "meaning_en": "book",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "辞書",
+        "reading": "じしょ",
+        "kanjiMeaning": "từ điển",
+        "meaning_vi": "từ điển",
+        "meaning_en": "dictionary",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "新聞",
+        "reading": "しんぶん",
+        "kanjiMeaning": "báo mới",
+        "meaning_vi": "báo",
+        "meaning_en": "newspaper",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "ノート",
+        "reading": "のーと",
+        "kanjiMeaning": null,
+        "meaning_vi": "vở",
+        "meaning_en": "notebook",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "鉛筆",
+        "reading": "えんぴつ",
+        "kanjiMeaning": "bút chì",
+        "meaning_vi": "bút chì",
+        "meaning_en": "pencil",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "時計",
+        "reading": "とけい",
+        "kanjiMeaning": "đồng hồ",
+        "meaning_vi": "đồng hồ",
+        "meaning_en": "watch/clock",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "傘",
+        "reading": "かさ",
+        "kanjiMeaning": "ô",
+        "meaning_vi": "cái ô",
+        "meaning_en": "umbrella",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "かばん",
+        "reading": "かばん",
+        "kanjiMeaning": null,
+        "meaning_vi": "cặp",
+        "meaning_en": "bag",
+        "level": "N5",
+        "tags": "minna_2,things"
+    },
+    {
+        "term": "テレビ",
+        "reading": "てれび",
+        "kanjiMeaning": null,
+        "meaning_vi": "ti vi",
+        "meaning_en": "TV",
+        "level": "N5",
+        "tags": "minna_2,electronics"
+    },
+    {
+        "term": "カメラ",
+        "reading": "かめら",
+        "kanjiMeaning": null,
+        "meaning_vi": "máy ảnh",
+        "meaning_en": "camera",
+        "level": "N5",
+        "tags": "minna_2,electronics"
+    },
+    {
+        "term": "机",
+        "reading": "つくえ",
+        "kanjiMeaning": "bàn",
+        "meaning_vi": "bàn",
+        "meaning_en": "desk",
+        "level": "N5",
+        "tags": "minna_2,furniture"
+    },
+    {
+        "term": "英語",
+        "reading": "えいご",
+        "kanjiMeaning": "tiếng Anh",
+        "meaning_vi": "tiếng Anh",
+        "meaning_en": "English language",
+        "level": "N5",
+        "tags": "minna_2,language"
+    },
+    {
+        "term": "日本語",
+        "reading": "にほんご",
+        "kanjiMeaning": "tiếng Nhật",
+        "meaning_vi": "tiếng Nhật",
+        "meaning_en": "Japanese language",
+        "level": "N5",
+        "tags": "minna_2,language"
+    },
+    {
+        "term": "何",
+        "reading": "なん",
+        "kanjiMeaning": "gì",
+        "meaning_vi": "cái gì",
+        "meaning_en": "what",
+        "level": "N5",
+        "tags": "minna_2,question"
+    },
+    {
+        "term": "ここ",
+        "reading": "ここ",
+        "kanjiMeaning": null,
+        "meaning_vi": "đây",
+        "meaning_en": "here",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "そこ",
+        "reading": "そこ",
+        "kanjiMeaning": null,
+        "meaning_vi": "đó",
+        "meaning_en": "there",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "あそこ",
+        "reading": "あそこ",
+        "kanjiMeaning": null,
+        "meaning_vi": "kia",
+        "meaning_en": "over there",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "どこ",
+        "reading": "どこ",
+        "kanjiMeaning": null,
+        "meaning_vi": "đâu",
+        "meaning_en": "where",
+        "level": "N5",
+        "tags": "minna_3,question"
+    },
+    {
+        "term": "こちら",
+        "reading": "こちら",
+        "kanjiMeaning": null,
+        "meaning_vi": "đây (lịch sự)",
+        "meaning_en": "this way (polite)",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "そちら",
+        "reading": "そちら",
+        "kanjiMeaning": null,
+        "meaning_vi": "đó (lịch sự)",
+        "meaning_en": "that way (polite)",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "あちら",
+        "reading": "あちら",
+        "kanjiMeaning": null,
+        "meaning_vi": "kia (lịch sự)",
+        "meaning_en": "that way (polite)",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "どちら",
+        "reading": "どちら",
+        "kanjiMeaning": null,
+        "meaning_vi": "hướng nào",
+        "meaning_en": "which way",
+        "level": "N5",
+        "tags": "minna_3,question"
+    },
+    {
+        "term": "教室",
+        "reading": "きょうしつ",
+        "kanjiMeaning": "lớp học",
+        "meaning_vi": "lớp học",
+        "meaning_en": "classroom",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "食堂",
+        "reading": "しょくどう",
+        "kanjiMeaning": "nhà ăn",
+        "meaning_vi": "nhà ăn",
+        "meaning_en": "dining hall/canteen",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "事務所",
+        "reading": "じむしょ",
+        "kanjiMeaning": "văn phòng",
+        "meaning_vi": "văn phòng",
+        "meaning_en": "office",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "会議室",
+        "reading": "かいぎしつ",
+        "kanjiMeaning": "phòng họp",
+        "meaning_vi": "phòng họp",
+        "meaning_en": "meeting room",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "受付",
+        "reading": "うけつけ",
+        "kanjiMeaning": "tiếp tân",
+        "meaning_vi": "quầy tiếp tân",
+        "meaning_en": "reception",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "部屋",
+        "reading": "へや",
+        "kanjiMeaning": "phòng",
+        "meaning_vi": "căn phòng",
+        "meaning_en": "room",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "トイレ",
+        "reading": "といれ",
+        "kanjiMeaning": null,
+        "meaning_vi": "nhà vệ sinh",
+        "meaning_en": "toilet",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "階段",
+        "reading": "かいだん",
+        "kanjiMeaning": "cầu thang",
+        "meaning_vi": "cầu thang",
+        "meaning_en": "stairs",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "エレベーター",
+        "reading": "えれべーたー",
+        "kanjiMeaning": null,
+        "meaning_vi": "thang máy",
+        "meaning_en": "elevator",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "国",
+        "reading": "くに",
+        "kanjiMeaning": "quốc",
+        "meaning_vi": "đất nước",
+        "meaning_en": "country",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "会社",
+        "reading": "かいしゃ",
+        "kanjiMeaning": "công ty",
+        "meaning_vi": "công ty",
+        "meaning_en": "company",
+        "level": "N5",
+        "tags": "minna_3,place"
+    },
+    {
+        "term": "電話",
+        "reading": "でんわ",
+        "kanjiMeaning": "điện thoại",
+        "meaning_vi": "điện thoại",
+        "meaning_en": "telephone",
+        "level": "N5",
+        "tags": "minna_3,electronics"
+    },
+    {
+        "term": "靴",
+        "reading": "くつ",
+        "kanjiMeaning": "giày",
+        "meaning_vi": "giày",
+        "meaning_en": "shoes",
+        "level": "N5",
+        "tags": "minna_3,things"
+    },
+    {
+        "term": "ネクタイ",
+        "reading": "ねくたい",
+        "kanjiMeaning": null,
+        "meaning_vi": "cà vạt",
+        "meaning_en": "necktie",
+        "level": "N5",
+        "tags": "minna_3,things"
+    },
+    {
+        "term": "ワイン",
+        "reading": "わいん",
+        "kanjiMeaning": null,
+        "meaning_vi": "rượu vang",
+        "meaning_en": "wine",
+        "level": "N5",
+        "tags": "minna_3,food"
+    },
+    {
+        "term": "いくら",
+        "reading": "いくら",
+        "kanjiMeaning": null,
+        "meaning_vi": "bao nhiêu tiền",
+        "meaning_en": "how much",
+        "level": "N5",
+        "tags": "minna_3,question"
+    },
+    {
+        "term": "起きます",
+        "reading": "おきます",
+        "kanjiMeaning": "thức dậy",
+        "meaning_vi": "thức dậy",
+        "meaning_en": "get up",
+        "level": "N5",
+        "tags": "minna_4,verb"
+    },
+    {
+        "term": "寝ます",
+        "reading": "ねます",
+        "kanjiMeaning": "ngủ",
+        "meaning_vi": "ngủ",
+        "meaning_en": "sleep",
+        "level": "N5",
+        "tags": "minna_4,verb"
+    },
+    {
+        "term": "働きます",
+        "reading": "はたらきます",
+        "kanjiMeaning": "làm việc",
+        "meaning_vi": "làm việc",
+        "meaning_en": "work",
+        "level": "N5",
+        "tags": "minna_4,verb"
+    },
+    {
+        "term": "休みます",
+        "reading": "やすみます",
+        "kanjiMeaning": "nghỉ ngơi",
+        "meaning_vi": "nghỉ ngơi",
+        "meaning_en": "rest",
+        "level": "N5",
+        "tags": "minna_4,verb"
+    },
+    {
+        "term": "勉強します",
+        "reading": "べんきょうします",
+        "kanjiMeaning": "học",
+        "meaning_vi": "học tập",
+        "meaning_en": "study",
+        "level": "N5",
+        "tags": "minna_4,verb"
+    },
+    {
+        "term": "終わります",
+        "reading": "おわります",
+        "kanjiMeaning": "kết thúc",
+        "meaning_vi": "kết thúc",
+        "meaning_en": "finish",
+        "level": "N5",
+        "tags": "minna_4,verb"
+    },
+    {
+        "term": "デパート",
+        "reading": "でぱーと",
+        "kanjiMeaning": null,
+        "meaning_vi": "bách hóa",
+        "meaning_en": "department store",
+        "level": "N5",
+        "tags": "minna_4,place"
+    },
+    {
+        "term": "銀行",
+        "reading": "ぎんこう",
+        "kanjiMeaning": "ngân hàng",
+        "meaning_vi": "ngân hàng",
+        "meaning_en": "bank",
+        "level": "N5",
+        "tags": "minna_4,place"
+    },
+    {
+        "term": "郵便局",
+        "reading": "ゆうびんきょく",
+        "kanjiMeaning": "bưu điện",
+        "meaning_vi": "bưu điện",
+        "meaning_en": "post office",
+        "level": "N5",
+        "tags": "minna_4,place"
+    },
+    {
+        "term": "図書館",
+        "reading": "としょかん",
+        "kanjiMeaning": "thư viện",
+        "meaning_vi": "thư viện",
+        "meaning_en": "library",
+        "level": "N5",
+        "tags": "minna_4,place"
+    },
+    {
+        "term": "美術館",
+        "reading": "びじゅつかん",
+        "kanjiMeaning": "bảo tàng",
+        "meaning_vi": "bảo tàng mỹ thuật",
+        "meaning_en": "art museum",
+        "level": "N5",
+        "tags": "minna_4,place"
+    },
+    {
+        "term": "今",
+        "reading": "いま",
+        "kanjiMeaning": "bây giờ",
+        "meaning_vi": "bây giờ",
+        "meaning_en": "now",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "時",
+        "reading": "じ",
+        "kanjiMeaning": "giờ",
+        "meaning_vi": "giờ",
+        "meaning_en": "o'clock",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "分",
+        "reading": "ふん",
+        "kanjiMeaning": "phút",
+        "meaning_vi": "phút",
+        "meaning_en": "minute",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "半",
+        "reading": "はん",
+        "kanjiMeaning": "nửa",
+        "meaning_vi": "rưỡi",
+        "meaning_en": "half",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "何時",
+        "reading": "なんじ",
+        "kanjiMeaning": "mấy giờ",
+        "meaning_vi": "mấy giờ",
+        "meaning_en": "what time",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "何分",
+        "reading": "なんぷん",
+        "kanjiMeaning": "mấy phút",
+        "meaning_vi": "mấy phút",
+        "meaning_en": "how many minutes",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "午前",
+        "reading": "ごぜん",
+        "kanjiMeaning": "buổi sáng",
+        "meaning_vi": "buổi sáng (AM)",
+        "meaning_en": "AM",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "午後",
+        "reading": "ごご",
+        "kanjiMeaning": "buổi chiều",
+        "meaning_vi": "buổi chiều (PM)",
+        "meaning_en": "PM",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "朝",
+        "reading": "あさ",
+        "kanjiMeaning": "sáng",
+        "meaning_vi": "buổi sáng",
+        "meaning_en": "morning",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "昼",
+        "reading": "ひる",
+        "kanjiMeaning": "trưa",
+        "meaning_vi": "buổi trưa",
+        "meaning_en": "noon/daytime",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "晩",
+        "reading": "ばん",
+        "kanjiMeaning": "tối",
+        "meaning_vi": "buổi tối",
+        "meaning_en": "evening",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "昨日",
+        "reading": "きのう",
+        "kanjiMeaning": "hôm qua",
+        "meaning_vi": "hôm qua",
+        "meaning_en": "yesterday",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "今日",
+        "reading": "きょう",
+        "kanjiMeaning": "hôm nay",
+        "meaning_vi": "hôm nay",
+        "meaning_en": "today",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "明日",
+        "reading": "あした",
+        "kanjiMeaning": "ngày mai",
+        "meaning_vi": "ngày mai",
+        "meaning_en": "tomorrow",
+        "level": "N5",
+        "tags": "minna_4,time"
+    },
+    {
+        "term": "行きます",
+        "reading": "いきます",
+        "kanjiMeaning": "đi",
+        "meaning_vi": "đi",
+        "meaning_en": "go",
+        "level": "N5",
+        "tags": "minna_5,verb"
+    },
+    {
+        "term": "来ます",
+        "reading": "きます",
+        "kanjiMeaning": "đến",
+        "meaning_vi": "đến",
+        "meaning_en": "come",
+        "level": "N5",
+        "tags": "minna_5,verb"
+    },
+    {
+        "term": "帰ります",
+        "reading": "かえります",
+        "kanjiMeaning": "về",
+        "meaning_vi": "trở về",
+        "meaning_en": "return/go home",
+        "level": "N5",
+        "tags": "minna_5,verb"
+    },
+    {
+        "term": "学校",
+        "reading": "がっこう",
+        "kanjiMeaning": "trường học",
+        "meaning_vi": "trường học",
+        "meaning_en": "school",
+        "level": "N5",
+        "tags": "minna_5,place"
+    },
+    {
+        "term": "スーパー",
+        "reading": "すーぱー",
+        "kanjiMeaning": null,
+        "meaning_vi": "siêu thị",
+        "meaning_en": "supermarket",
+        "level": "N5",
+        "tags": "minna_5,place"
+    },
+    {
+        "term": "駅",
+        "reading": "えき",
+        "kanjiMeaning": "nhà ga",
+        "meaning_vi": "nhà ga",
+        "meaning_en": "station",
+        "level": "N5",
+        "tags": "minna_5,place"
+    },
+    {
+        "term": "飛行機",
+        "reading": "ひこうき",
+        "kanjiMeaning": "máy bay",
+        "meaning_vi": "máy bay",
+        "meaning_en": "airplane",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "船",
+        "reading": "ふね",
+        "kanjiMeaning": "tàu",
+        "meaning_vi": "tàu thuyền",
+        "meaning_en": "ship",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "電車",
+        "reading": "でんしゃ",
+        "kanjiMeaning": "tàu điện",
+        "meaning_vi": "tàu điện",
+        "meaning_en": "train",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "地下鉄",
+        "reading": "ちかてつ",
+        "kanjiMeaning": "tàu ngầm",
+        "meaning_vi": "tàu điện ngầm",
+        "meaning_en": "subway",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "新幹線",
+        "reading": "しんかんせん",
+        "kanjiMeaning": "tàu cao tốc",
+        "meaning_vi": "tàu shinkansen",
+        "meaning_en": "Shinkansen",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "バス",
+        "reading": "ばす",
+        "kanjiMeaning": null,
+        "meaning_vi": "xe buýt",
+        "meaning_en": "bus",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "タクシー",
+        "reading": "たくしー",
+        "kanjiMeaning": null,
+        "meaning_vi": "taxi",
+        "meaning_en": "taxi",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "自転車",
+        "reading": "じてんしゃ",
+        "kanjiMeaning": "xe đạp",
+        "meaning_vi": "xe đạp",
+        "meaning_en": "bicycle",
+        "level": "N5",
+        "tags": "minna_5,vehicle"
+    },
+    {
+        "term": "歩いて",
+        "reading": "あるいて",
+        "kanjiMeaning": "đi bộ",
+        "meaning_vi": "đi bộ",
+        "meaning_en": "on foot",
+        "level": "N5",
+        "tags": "minna_5,verb"
+    },
+    {
+        "term": "人",
+        "reading": "ひと",
+        "kanjiMeaning": "người",
+        "meaning_vi": "người",
+        "meaning_en": "person",
+        "level": "N5",
+        "tags": "minna_5,noun"
+    },
+    {
+        "term": "友達",
+        "reading": "ともだち",
+        "kanjiMeaning": "bạn bè",
+        "meaning_vi": "bạn bè",
+        "meaning_en": "friend",
+        "level": "N5",
+        "tags": "minna_5,noun"
+    },
+    {
+        "term": "彼女",
+        "reading": "かのじょ",
+        "kanjiMeaning": "bạn gái",
+        "meaning_vi": "bạn gái / cô ấy",
+        "meaning_en": "girlfriend/she",
+        "level": "N5",
+        "tags": "minna_5,noun"
+    },
+    {
+        "term": "彼",
+        "reading": "かれ",
+        "kanjiMeaning": "bạn trai",
+        "meaning_vi": "bạn trai / anh ấy",
+        "meaning_en": "boyfriend/he",
+        "level": "N5",
+        "tags": "minna_5,noun"
+    },
+    {
+        "term": "家族",
+        "reading": "かぞく",
+        "kanjiMeaning": "gia đình",
+        "meaning_vi": "gia đình",
+        "meaning_en": "family",
+        "level": "N5",
+        "tags": "minna_5,noun"
+    },
+    {
+        "term": "一人で",
+        "reading": "ひとりで",
+        "kanjiMeaning": "một mình",
+        "meaning_vi": "một mình",
+        "meaning_en": "alone",
+        "level": "N5",
+        "tags": "minna_5,adverb"
+    },
+    {
+        "term": "先週",
+        "reading": "せんしゅう",
+        "kanjiMeaning": "tuần trước",
+        "meaning_vi": "tuần trước",
+        "meaning_en": "last week",
+        "level": "N5",
+        "tags": "minna_5,time"
+    },
+    {
+        "term": "今週",
+        "reading": "こんしゅう",
+        "kanjiMeaning": "tuần này",
+        "meaning_vi": "tuần này",
+        "meaning_en": "this week",
+        "level": "N5",
+        "tags": "minna_5,time"
+    },
+    {
+        "term": "来週",
+        "reading": "らいしゅう",
+        "kanjiMeaning": "tuần sau",
+        "meaning_vi": "tuần sau",
+        "meaning_en": "next week",
+        "level": "N5",
+        "tags": "minna_5,time"
+    }
+]

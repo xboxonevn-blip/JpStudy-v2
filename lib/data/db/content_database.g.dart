@@ -48,6 +48,17 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _meaningEnMeta = const VerificationMeta(
+    'meaningEn',
+  );
+  @override
+  late final GeneratedColumn<String> meaningEn = GeneratedColumn<String>(
+    'meaning_en',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _kanjiMeaningMeta = const VerificationMeta(
     'kanjiMeaning',
   );
@@ -83,6 +94,7 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
     term,
     reading,
     meaning,
+    meaningEn,
     kanjiMeaning,
     level,
     tags,
@@ -123,6 +135,12 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
       );
     } else if (isInserting) {
       context.missing(_meaningMeta);
+    }
+    if (data.containsKey('meaning_en')) {
+      context.handle(
+        _meaningEnMeta,
+        meaningEn.isAcceptableOrUnknown(data['meaning_en']!, _meaningEnMeta),
+      );
     }
     if (data.containsKey('kanji_meaning')) {
       context.handle(
@@ -172,6 +190,10 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
         DriftSqlType.string,
         data['${effectivePrefix}meaning'],
       )!,
+      meaningEn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}meaning_en'],
+      ),
       kanjiMeaning: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}kanji_meaning'],
@@ -198,6 +220,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
   final String term;
   final String? reading;
   final String meaning;
+  final String? meaningEn;
   final String? kanjiMeaning;
   final String level;
   final String? tags;
@@ -206,6 +229,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     required this.term,
     this.reading,
     required this.meaning,
+    this.meaningEn,
     this.kanjiMeaning,
     required this.level,
     this.tags,
@@ -219,6 +243,9 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       map['reading'] = Variable<String>(reading);
     }
     map['meaning'] = Variable<String>(meaning);
+    if (!nullToAbsent || meaningEn != null) {
+      map['meaning_en'] = Variable<String>(meaningEn);
+    }
     if (!nullToAbsent || kanjiMeaning != null) {
       map['kanji_meaning'] = Variable<String>(kanjiMeaning);
     }
@@ -237,6 +264,9 @@ class VocabData extends DataClass implements Insertable<VocabData> {
           ? const Value.absent()
           : Value(reading),
       meaning: Value(meaning),
+      meaningEn: meaningEn == null && nullToAbsent
+          ? const Value.absent()
+          : Value(meaningEn),
       kanjiMeaning: kanjiMeaning == null && nullToAbsent
           ? const Value.absent()
           : Value(kanjiMeaning),
@@ -255,6 +285,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       term: serializer.fromJson<String>(json['term']),
       reading: serializer.fromJson<String?>(json['reading']),
       meaning: serializer.fromJson<String>(json['meaning']),
+      meaningEn: serializer.fromJson<String?>(json['meaningEn']),
       kanjiMeaning: serializer.fromJson<String?>(json['kanjiMeaning']),
       level: serializer.fromJson<String>(json['level']),
       tags: serializer.fromJson<String?>(json['tags']),
@@ -268,6 +299,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       'term': serializer.toJson<String>(term),
       'reading': serializer.toJson<String?>(reading),
       'meaning': serializer.toJson<String>(meaning),
+      'meaningEn': serializer.toJson<String?>(meaningEn),
       'kanjiMeaning': serializer.toJson<String?>(kanjiMeaning),
       'level': serializer.toJson<String>(level),
       'tags': serializer.toJson<String?>(tags),
@@ -279,6 +311,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     String? term,
     Value<String?> reading = const Value.absent(),
     String? meaning,
+    Value<String?> meaningEn = const Value.absent(),
     Value<String?> kanjiMeaning = const Value.absent(),
     String? level,
     Value<String?> tags = const Value.absent(),
@@ -287,6 +320,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     term: term ?? this.term,
     reading: reading.present ? reading.value : this.reading,
     meaning: meaning ?? this.meaning,
+    meaningEn: meaningEn.present ? meaningEn.value : this.meaningEn,
     kanjiMeaning: kanjiMeaning.present ? kanjiMeaning.value : this.kanjiMeaning,
     level: level ?? this.level,
     tags: tags.present ? tags.value : this.tags,
@@ -297,6 +331,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       term: data.term.present ? data.term.value : this.term,
       reading: data.reading.present ? data.reading.value : this.reading,
       meaning: data.meaning.present ? data.meaning.value : this.meaning,
+      meaningEn: data.meaningEn.present ? data.meaningEn.value : this.meaningEn,
       kanjiMeaning: data.kanjiMeaning.present
           ? data.kanjiMeaning.value
           : this.kanjiMeaning,
@@ -312,6 +347,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('meaning: $meaning, ')
+          ..write('meaningEn: $meaningEn, ')
           ..write('kanjiMeaning: $kanjiMeaning, ')
           ..write('level: $level, ')
           ..write('tags: $tags')
@@ -320,8 +356,16 @@ class VocabData extends DataClass implements Insertable<VocabData> {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(id, term, reading, meaning, kanjiMeaning, level, tags);
+  int get hashCode => Object.hash(
+    id,
+    term,
+    reading,
+    meaning,
+    meaningEn,
+    kanjiMeaning,
+    level,
+    tags,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -330,6 +374,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
           other.term == this.term &&
           other.reading == this.reading &&
           other.meaning == this.meaning &&
+          other.meaningEn == this.meaningEn &&
           other.kanjiMeaning == this.kanjiMeaning &&
           other.level == this.level &&
           other.tags == this.tags);
@@ -340,6 +385,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
   final Value<String> term;
   final Value<String?> reading;
   final Value<String> meaning;
+  final Value<String?> meaningEn;
   final Value<String?> kanjiMeaning;
   final Value<String> level;
   final Value<String?> tags;
@@ -348,6 +394,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     this.term = const Value.absent(),
     this.reading = const Value.absent(),
     this.meaning = const Value.absent(),
+    this.meaningEn = const Value.absent(),
     this.kanjiMeaning = const Value.absent(),
     this.level = const Value.absent(),
     this.tags = const Value.absent(),
@@ -357,6 +404,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     required String term,
     this.reading = const Value.absent(),
     required String meaning,
+    this.meaningEn = const Value.absent(),
     this.kanjiMeaning = const Value.absent(),
     required String level,
     this.tags = const Value.absent(),
@@ -368,6 +416,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     Expression<String>? term,
     Expression<String>? reading,
     Expression<String>? meaning,
+    Expression<String>? meaningEn,
     Expression<String>? kanjiMeaning,
     Expression<String>? level,
     Expression<String>? tags,
@@ -377,6 +426,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
       if (term != null) 'term': term,
       if (reading != null) 'reading': reading,
       if (meaning != null) 'meaning': meaning,
+      if (meaningEn != null) 'meaning_en': meaningEn,
       if (kanjiMeaning != null) 'kanji_meaning': kanjiMeaning,
       if (level != null) 'level': level,
       if (tags != null) 'tags': tags,
@@ -388,6 +438,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     Value<String>? term,
     Value<String?>? reading,
     Value<String>? meaning,
+    Value<String?>? meaningEn,
     Value<String?>? kanjiMeaning,
     Value<String>? level,
     Value<String?>? tags,
@@ -397,6 +448,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
       term: term ?? this.term,
       reading: reading ?? this.reading,
       meaning: meaning ?? this.meaning,
+      meaningEn: meaningEn ?? this.meaningEn,
       kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
       level: level ?? this.level,
       tags: tags ?? this.tags,
@@ -418,6 +470,9 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     if (meaning.present) {
       map['meaning'] = Variable<String>(meaning.value);
     }
+    if (meaningEn.present) {
+      map['meaning_en'] = Variable<String>(meaningEn.value);
+    }
     if (kanjiMeaning.present) {
       map['kanji_meaning'] = Variable<String>(kanjiMeaning.value);
     }
@@ -437,6 +492,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
           ..write('term: $term, ')
           ..write('reading: $reading, ')
           ..write('meaning: $meaning, ')
+          ..write('meaningEn: $meaningEn, ')
           ..write('kanjiMeaning: $kanjiMeaning, ')
           ..write('level: $level, ')
           ..write('tags: $tags')
@@ -2508,6 +2564,7 @@ typedef $$VocabTableCreateCompanionBuilder =
       required String term,
       Value<String?> reading,
       required String meaning,
+      Value<String?> meaningEn,
       Value<String?> kanjiMeaning,
       required String level,
       Value<String?> tags,
@@ -2518,6 +2575,7 @@ typedef $$VocabTableUpdateCompanionBuilder =
       Value<String> term,
       Value<String?> reading,
       Value<String> meaning,
+      Value<String?> meaningEn,
       Value<String?> kanjiMeaning,
       Value<String> level,
       Value<String?> tags,
@@ -2572,6 +2630,11 @@ class $$VocabTableFilterComposer
 
   ColumnFilters<String> get meaning => $composableBuilder(
     column: $table.meaning,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get meaningEn => $composableBuilder(
+    column: $table.meaningEn,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -2645,6 +2708,11 @@ class $$VocabTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get meaningEn => $composableBuilder(
+    column: $table.meaningEn,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get kanjiMeaning => $composableBuilder(
     column: $table.kanjiMeaning,
     builder: (column) => ColumnOrderings(column),
@@ -2681,6 +2749,9 @@ class $$VocabTableAnnotationComposer
 
   GeneratedColumn<String> get meaning =>
       $composableBuilder(column: $table.meaning, builder: (column) => column);
+
+  GeneratedColumn<String> get meaningEn =>
+      $composableBuilder(column: $table.meaningEn, builder: (column) => column);
 
   GeneratedColumn<String> get kanjiMeaning => $composableBuilder(
     column: $table.kanjiMeaning,
@@ -2751,6 +2822,7 @@ class $$VocabTableTableManager
                 Value<String> term = const Value.absent(),
                 Value<String?> reading = const Value.absent(),
                 Value<String> meaning = const Value.absent(),
+                Value<String?> meaningEn = const Value.absent(),
                 Value<String?> kanjiMeaning = const Value.absent(),
                 Value<String> level = const Value.absent(),
                 Value<String?> tags = const Value.absent(),
@@ -2759,6 +2831,7 @@ class $$VocabTableTableManager
                 term: term,
                 reading: reading,
                 meaning: meaning,
+                meaningEn: meaningEn,
                 kanjiMeaning: kanjiMeaning,
                 level: level,
                 tags: tags,
@@ -2769,6 +2842,7 @@ class $$VocabTableTableManager
                 required String term,
                 Value<String?> reading = const Value.absent(),
                 required String meaning,
+                Value<String?> meaningEn = const Value.absent(),
                 Value<String?> kanjiMeaning = const Value.absent(),
                 required String level,
                 Value<String?> tags = const Value.absent(),
@@ -2777,6 +2851,7 @@ class $$VocabTableTableManager
                 term: term,
                 reading: reading,
                 meaning: meaning,
+                meaningEn: meaningEn,
                 kanjiMeaning: kanjiMeaning,
                 level: level,
                 tags: tags,

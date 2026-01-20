@@ -54,12 +54,13 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 13;
+  int get schemaVersion => 15;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
         onCreate: (migrator) async {
           await migrator.createAll();
+          await _seedLessons();
         },
         onUpgrade: (migrator, from, to) async {
           if (from < 2) {
@@ -130,8 +131,47 @@ class AppDatabase extends _$AppDatabase {
             await _safeAddColumn(migrator, grammarPoints, grammarPoints.explanationVi);
             await _safeAddColumn(migrator, grammarExamples, grammarExamples.translationVi);
           }
+          if (from < 14) {
+            await _seedLessons();
+          }
+          if (from < 15) {
+            await _safeAddColumn(migrator, userLessonTerm, userLessonTerm.definitionEn);
+          }
         },
       );
+
+  Future<void> _seedLessons() async {
+    // Seed lessons 1-25 (N5)
+    for (var i = 1; i <= 25; i++) {
+      await into(userLesson).insert(
+        UserLessonCompanion.insert(
+          id: Value(i),
+          level: 'N5',
+          title: 'Lesson $i',
+          description: const Value(''),
+          isPublic: const Value(true),
+          isCustomTitle: const Value(false),
+          updatedAt: Value(DateTime.now()),
+        ),
+        mode: InsertMode.insertOrIgnore,
+      );
+    }
+    // Seed lessons 26-50 (N4)
+    for (var i = 26; i <= 50; i++) {
+        await into(userLesson).insert(
+        UserLessonCompanion.insert(
+          id: Value(i),
+          level: 'N4',
+          title: 'Lesson $i',
+          description: const Value(''),
+          isPublic: const Value(true),
+          isCustomTitle: const Value(false),
+          updatedAt: Value(DateTime.now()),
+        ),
+        mode: InsertMode.insertOrIgnore,
+      );
+    }
+  }
 
   Future<void> _removeImagePathColumn(Migrator migrator) async {
     await customStatement(

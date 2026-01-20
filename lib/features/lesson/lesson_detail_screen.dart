@@ -14,6 +14,7 @@ import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/shared/widgets/widgets.dart';
 import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
+import 'package:jpstudy/features/lesson/widgets/kanji_list_widget.dart';
 // Stub import removed
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -128,7 +129,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 // _maybeAutoSpeak removed
 
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: _focusMode
             ? null
@@ -179,7 +180,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
             indicatorColor: const Color(0xFF4255FF),
             tabs: [
               Tab(text: language.flashcardsAction), // Reuse Flashcards label for Vocab for now
-              Tab(text: 'Grammar'), // Static label for now or add to AppLanguage
+              Tab(text: language.grammarLabel),
+              Tab(text: language.kanjiLabel),
             ],
           ),
         ),
@@ -325,6 +327,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
             GrammarListWidget(
               lessonId: widget.lessonId,
               language: language,
+            ),
+            KanjiListWidget(
+              lessonId: widget.lessonId,
             ),
           ],
         ),

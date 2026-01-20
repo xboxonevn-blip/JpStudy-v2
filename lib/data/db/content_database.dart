@@ -21,13 +21,14 @@ part 'content_database.g.dart';
     MockTestSection,
     MockTestQuestionMap,
     UserProgress,
+    Kanji,
   ],
 )
 class ContentDatabase extends _$ContentDatabase {
   ContentDatabase() : super(_openContentConnection());
 
   @override
-  int get schemaVersion => 8;
+  int get schemaVersion => 10;
 
   @override
   MigrationStrategy get migration {
@@ -36,6 +37,7 @@ class ContentDatabase extends _$ContentDatabase {
         await m.createAll();
         await _seedMinnaVocabulary();
         await _seedMinnaGrammar();
+        await _seedMinnaKanji();
       },
       onUpgrade: (Migrator m, int from, int to) async {
         if (from < 2) {
@@ -53,6 +55,15 @@ class ContentDatabase extends _$ContentDatabase {
           
           // Seed grammar for the first time
           await _seedMinnaGrammar();
+        }
+        if (from < 9) {
+          await m.createTable(kanji);
+          await _seedMinnaKanji();
+        }
+        
+        // Fix for missing Kanji assets in v9
+        if (from < 10) {
+          await _reseedMinnaKanji();
         }
         
         // Always re-seed Minna vocabulary (delete old + insert new)
@@ -226,6 +237,55 @@ class ContentDatabase extends _$ContentDatabase {
   }
 
 
+  Future<void> _reseedMinnaKanji() async {
+    // Delete all existing Kanji data to prevent duplicates or stale data
+    await delete(kanji).go();
+    
+    // Seed new Kanji data
+    await _seedMinnaKanji();
+  }
+
+  Future<void> _seedMinnaKanji() async {
+    final List<String> kanjiFiles = [];
+
+    // N5: Lesson 1 to 25
+    for (int i = 1; i <= 25; i++) {
+      kanjiFiles.add('assets/data/kanji/n5/kanji_n5_$i.json');
+    }
+
+    // N4: Lesson 26 to 50
+    for (int i = 26; i <= 50; i++) {
+      kanjiFiles.add('assets/data/kanji/n4/kanji_n4_$i.json');
+    }
+
+    for (final file in kanjiFiles) {
+      try {
+        final jsonString = await rootBundle.loadString(file);
+        final List<dynamic> jsonList = json.decode(jsonString);
+
+        await batch((batch) {
+          for (final item in jsonList) {
+            batch.insert(
+              kanji,
+              KanjiCompanion.insert(
+                lessonId: item['lessonId'],
+                character: item['character'],
+                strokeCount: item['strokeCount'],
+                onyomi: Value(item['onyomi']),
+                kunyomi: Value(item['kunyomi']),
+                meaning: item['meaning'],
+                meaningEn: Value(item['meaningEn']),
+                examplesJson: json.encode(item['examples']),
+                jlptLevel: item['jlptLevel'],
+              ),
+            );
+          }
+        });
+      } catch (e) {
+        // print('Error seeding Kanji file $file: $e');
+      }
+    }
+  }
 }
 
 LazyDatabase _openContentConnection() {

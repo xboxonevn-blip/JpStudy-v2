@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'package:jpstudy/core/level_provider.dart';
+import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/test/screens/test_config_screen.dart';
 import 'package:jpstudy/features/test/screens/test_screen.dart';
@@ -11,51 +13,14 @@ class PracticeTestDashboard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // Determine the level color theme
-    final n5Color = Colors.pink;
-    final n4Color = Colors.orange;
+    final level = ref.watch(studyLevelProvider) ?? StudyLevel.n5;
+    final isN5 = level == StudyLevel.n5;
+    final color = isN5 ? Colors.pink : Colors.orange;
+    final levelLabel = isN5 ? 'N5' : 'N4';
 
-    return Column(
-      children: [
-        // Tab Bar equivalent using simple toggle for cleaner look
-        DefaultTabController(
-          length: 2,
-          child: Column(
-            children: [
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: TabBar(
-                  indicator: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(25),
-                  ),
-                  labelColor: Colors.white,
-                  unselectedLabelColor: Colors.grey.shade700,
-                  indicatorSize: TabBarIndicatorSize.tab,
-                  dividerColor: Colors.transparent,
-                  tabs: const [
-                    Tab(text: 'JLPT N5'),
-                    Tab(text: 'JLPT N4'),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
-              SizedBox(
-                height: 180, // Slightly reduced height to prevent overflow
-                child: TabBarView(
-                  children: [
-                    _buildTestCard(context, ref, 'N5', n5Color),
-                    _buildTestCard(context, ref, 'N4', n4Color),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: _buildTestCard(context, ref, levelLabel, color),
     );
   }
 

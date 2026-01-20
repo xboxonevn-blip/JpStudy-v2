@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:drift/drift.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/services/srs_service.dart';
@@ -7,6 +8,7 @@ import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/data/db/content_database.dart' hide UserProgressCompanion, UserProgressData;
 import 'package:jpstudy/data/db/content_database_provider.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
+import 'package:jpstudy/data/models/kanji_item.dart';
 
 final lessonRepositoryProvider = Provider<LessonRepository>((ref) {
   return LessonRepository(
@@ -86,13 +88,18 @@ class LessonTitleArgs {
   int get hashCode => Object.hash(lessonId, fallback);
 }
 
-  final int maxId;
-}
+
 
 final lessonGrammarProvider =
     FutureProvider.family<List<GrammarPointData>, int>((ref, lessonId) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchGrammar(lessonId);
+});
+
+final lessonKanjiProvider =
+    FutureProvider.family<List<KanjiItem>, int>((ref, lessonId) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchKanji(lessonId);
 });
 
 class GrammarPointData {
@@ -402,6 +409,26 @@ class LessonRepository {
         .toList();
   }
 
+  // Fetch all vocabulary for a specific JLPT level from ContentDatabase
+  Future<List<VocabItem>> getVocabByLevel(String level) async {
+    final items = await (_contentDb.select(_contentDb.vocab)
+          ..where((tbl) => tbl.level.equals(level)))
+        .get();
+    
+    return items.map((item) {
+      return VocabItem(
+        id: item.id,
+        term: item.term,
+        reading: item.reading ?? '',
+        meaning: item.meaning,
+        meaningEn: item.meaningEn,
+        kanjiMeaning: item.kanjiMeaning,
+        level: item.level,
+        tags: item.tags?.split(','),
+      );
+    }).toList();
+  }
+
   Future<Map<int, int>> _fetchDueCounts(List<int> lessonIds) async {
     if (lessonIds.isEmpty) {
       return const {};
@@ -548,11 +575,9 @@ class LessonRepository {
         );
       }
     });
-    });
   }
 
-    });
-  }
+
 
   Future<List<GrammarPointData>> fetchGrammar(int lessonId) async {
     final points = await (_db.select(_db.grammarPoints)
@@ -631,7 +656,33 @@ class LessonRepository {
           );
         }
       }
+
+
     });
+  }
+
+  Future<List<KanjiItem>> fetchKanji(int lessonId) async {
+    final rows = await (_contentDb.select(_contentDb.kanji)
+          ..where((tbl) => tbl.lessonId.equals(lessonId)))
+        .get();
+
+    return rows.map((row) {
+      final examplesList = (json.decode(row.examplesJson) as List)
+          .map((e) => KanjiExample.fromJson(e))
+          .toList();
+
+      return KanjiItem(
+        id: row.id,
+        character: row.character,
+        strokeCount: row.strokeCount,
+        onyomi: row.onyomi,
+        kunyomi: row.kunyomi,
+        meaning: row.meaning,
+        meaningEn: row.meaningEn,
+        examples: examplesList,
+        jlptLevel: row.jlptLevel,
+      );
+    }).toList();
   }
 
   Future<void> updateLessonTitle(
@@ -1270,25 +1321,7 @@ class LessonRepository {
         .write(UserLessonCompanion(updatedAt: Value(DateTime.now())));
   }
 
-  Future<List<VocabItem>> getVocabByLevel(String level) async {
-    final query = _contentDb.select(_contentDb.vocab)
-      ..where((tbl) => tbl.level.equals(level));
-    
-    final results = await query.get();
-    
-    return results.map((row) {
-      return VocabItem(
-        id: row.id,
-        term: row.term,
-        reading: row.reading,
-        meaning: row.meaning,
-        meaningEn: row.meaningEn,
-        kanjiMeaning: row.kanjiMeaning,
-        level: row.level,
-        tags: row.tags?.split(','),
-      );
-    }).toList();
-  }
+
 }
 
 class LessonProgressStats {

@@ -2308,4 +2308,26 @@ extension AppLanguageLabels on AppLanguage {
         return 'タップして最初のセットを作成！';
     }
   }
-}
+
+  String get grammarLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Grammar';
+      case AppLanguage.vi:
+        return 'Ngữ pháp';
+      case AppLanguage.ja:
+        return '文法';
+    }
+  }
+
+  String get kanjiLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Kanji';
+      case AppLanguage.vi:
+        return 'Hán tự';
+      case AppLanguage.ja:
+        return '漢字';
+    }
+  }
+} // End extension

@@ -117,3 +117,19 @@ class UserProgress extends Table {
   @override
   Set<Column> get primaryKey => {vocabId};
 }
+
+class Kanji extends Table {
+  @override
+  String get tableName => 'kanji';
+
+  IntColumn get id => integer().autoIncrement()();
+  IntColumn get lessonId => integer()(); // Linked to Minna Lesson (1-50)
+  TextColumn get character => text()(); // e.g. "日"
+  IntColumn get strokeCount => integer()();
+  TextColumn get onyomi => text().nullable()(); // Comma separated
+  TextColumn get kunyomi => text().nullable()(); // Comma separated
+  TextColumn get meaning => text()(); // Vietnamese
+  TextColumn get meaningEn => text().nullable()(); // English
+  TextColumn get examplesJson => text()(); // JSON string of examples
+  TextColumn get jlptLevel => text()(); // N5/N4
+}

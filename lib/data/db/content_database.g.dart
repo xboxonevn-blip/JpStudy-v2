@@ -3169,6 +3169,614 @@ class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
   }
 }
 
+class $KanjiTable extends Kanji with TableInfo<$KanjiTable, KanjiData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $KanjiTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
+  @override
+  late final GeneratedColumn<int> lessonId = GeneratedColumn<int>(
+    'lesson_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _characterMeta = const VerificationMeta(
+    'character',
+  );
+  @override
+  late final GeneratedColumn<String> character = GeneratedColumn<String>(
+    'character',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _strokeCountMeta = const VerificationMeta(
+    'strokeCount',
+  );
+  @override
+  late final GeneratedColumn<int> strokeCount = GeneratedColumn<int>(
+    'stroke_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _onyomiMeta = const VerificationMeta('onyomi');
+  @override
+  late final GeneratedColumn<String> onyomi = GeneratedColumn<String>(
+    'onyomi',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _kunyomiMeta = const VerificationMeta(
+    'kunyomi',
+  );
+  @override
+  late final GeneratedColumn<String> kunyomi = GeneratedColumn<String>(
+    'kunyomi',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _meaningMeta = const VerificationMeta(
+    'meaning',
+  );
+  @override
+  late final GeneratedColumn<String> meaning = GeneratedColumn<String>(
+    'meaning',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _meaningEnMeta = const VerificationMeta(
+    'meaningEn',
+  );
+  @override
+  late final GeneratedColumn<String> meaningEn = GeneratedColumn<String>(
+    'meaning_en',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _examplesJsonMeta = const VerificationMeta(
+    'examplesJson',
+  );
+  @override
+  late final GeneratedColumn<String> examplesJson = GeneratedColumn<String>(
+    'examples_json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _jlptLevelMeta = const VerificationMeta(
+    'jlptLevel',
+  );
+  @override
+  late final GeneratedColumn<String> jlptLevel = GeneratedColumn<String>(
+    'jlpt_level',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    lessonId,
+    character,
+    strokeCount,
+    onyomi,
+    kunyomi,
+    meaning,
+    meaningEn,
+    examplesJson,
+    jlptLevel,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'kanji';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<KanjiData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('lesson_id')) {
+      context.handle(
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_lessonIdMeta);
+    }
+    if (data.containsKey('character')) {
+      context.handle(
+        _characterMeta,
+        character.isAcceptableOrUnknown(data['character']!, _characterMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_characterMeta);
+    }
+    if (data.containsKey('stroke_count')) {
+      context.handle(
+        _strokeCountMeta,
+        strokeCount.isAcceptableOrUnknown(
+          data['stroke_count']!,
+          _strokeCountMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_strokeCountMeta);
+    }
+    if (data.containsKey('onyomi')) {
+      context.handle(
+        _onyomiMeta,
+        onyomi.isAcceptableOrUnknown(data['onyomi']!, _onyomiMeta),
+      );
+    }
+    if (data.containsKey('kunyomi')) {
+      context.handle(
+        _kunyomiMeta,
+        kunyomi.isAcceptableOrUnknown(data['kunyomi']!, _kunyomiMeta),
+      );
+    }
+    if (data.containsKey('meaning')) {
+      context.handle(
+        _meaningMeta,
+        meaning.isAcceptableOrUnknown(data['meaning']!, _meaningMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_meaningMeta);
+    }
+    if (data.containsKey('meaning_en')) {
+      context.handle(
+        _meaningEnMeta,
+        meaningEn.isAcceptableOrUnknown(data['meaning_en']!, _meaningEnMeta),
+      );
+    }
+    if (data.containsKey('examples_json')) {
+      context.handle(
+        _examplesJsonMeta,
+        examplesJson.isAcceptableOrUnknown(
+          data['examples_json']!,
+          _examplesJsonMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_examplesJsonMeta);
+    }
+    if (data.containsKey('jlpt_level')) {
+      context.handle(
+        _jlptLevelMeta,
+        jlptLevel.isAcceptableOrUnknown(data['jlpt_level']!, _jlptLevelMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_jlptLevelMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  KanjiData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return KanjiData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lesson_id'],
+      )!,
+      character: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}character'],
+      )!,
+      strokeCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}stroke_count'],
+      )!,
+      onyomi: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}onyomi'],
+      ),
+      kunyomi: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kunyomi'],
+      ),
+      meaning: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}meaning'],
+      )!,
+      meaningEn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}meaning_en'],
+      ),
+      examplesJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}examples_json'],
+      )!,
+      jlptLevel: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}jlpt_level'],
+      )!,
+    );
+  }
+
+  @override
+  $KanjiTable createAlias(String alias) {
+    return $KanjiTable(attachedDatabase, alias);
+  }
+}
+
+class KanjiData extends DataClass implements Insertable<KanjiData> {
+  final int id;
+  final int lessonId;
+  final String character;
+  final int strokeCount;
+  final String? onyomi;
+  final String? kunyomi;
+  final String meaning;
+  final String? meaningEn;
+  final String examplesJson;
+  final String jlptLevel;
+  const KanjiData({
+    required this.id,
+    required this.lessonId,
+    required this.character,
+    required this.strokeCount,
+    this.onyomi,
+    this.kunyomi,
+    required this.meaning,
+    this.meaningEn,
+    required this.examplesJson,
+    required this.jlptLevel,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['lesson_id'] = Variable<int>(lessonId);
+    map['character'] = Variable<String>(character);
+    map['stroke_count'] = Variable<int>(strokeCount);
+    if (!nullToAbsent || onyomi != null) {
+      map['onyomi'] = Variable<String>(onyomi);
+    }
+    if (!nullToAbsent || kunyomi != null) {
+      map['kunyomi'] = Variable<String>(kunyomi);
+    }
+    map['meaning'] = Variable<String>(meaning);
+    if (!nullToAbsent || meaningEn != null) {
+      map['meaning_en'] = Variable<String>(meaningEn);
+    }
+    map['examples_json'] = Variable<String>(examplesJson);
+    map['jlpt_level'] = Variable<String>(jlptLevel);
+    return map;
+  }
+
+  KanjiCompanion toCompanion(bool nullToAbsent) {
+    return KanjiCompanion(
+      id: Value(id),
+      lessonId: Value(lessonId),
+      character: Value(character),
+      strokeCount: Value(strokeCount),
+      onyomi: onyomi == null && nullToAbsent
+          ? const Value.absent()
+          : Value(onyomi),
+      kunyomi: kunyomi == null && nullToAbsent
+          ? const Value.absent()
+          : Value(kunyomi),
+      meaning: Value(meaning),
+      meaningEn: meaningEn == null && nullToAbsent
+          ? const Value.absent()
+          : Value(meaningEn),
+      examplesJson: Value(examplesJson),
+      jlptLevel: Value(jlptLevel),
+    );
+  }
+
+  factory KanjiData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return KanjiData(
+      id: serializer.fromJson<int>(json['id']),
+      lessonId: serializer.fromJson<int>(json['lessonId']),
+      character: serializer.fromJson<String>(json['character']),
+      strokeCount: serializer.fromJson<int>(json['strokeCount']),
+      onyomi: serializer.fromJson<String?>(json['onyomi']),
+      kunyomi: serializer.fromJson<String?>(json['kunyomi']),
+      meaning: serializer.fromJson<String>(json['meaning']),
+      meaningEn: serializer.fromJson<String?>(json['meaningEn']),
+      examplesJson: serializer.fromJson<String>(json['examplesJson']),
+      jlptLevel: serializer.fromJson<String>(json['jlptLevel']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'lessonId': serializer.toJson<int>(lessonId),
+      'character': serializer.toJson<String>(character),
+      'strokeCount': serializer.toJson<int>(strokeCount),
+      'onyomi': serializer.toJson<String?>(onyomi),
+      'kunyomi': serializer.toJson<String?>(kunyomi),
+      'meaning': serializer.toJson<String>(meaning),
+      'meaningEn': serializer.toJson<String?>(meaningEn),
+      'examplesJson': serializer.toJson<String>(examplesJson),
+      'jlptLevel': serializer.toJson<String>(jlptLevel),
+    };
+  }
+
+  KanjiData copyWith({
+    int? id,
+    int? lessonId,
+    String? character,
+    int? strokeCount,
+    Value<String?> onyomi = const Value.absent(),
+    Value<String?> kunyomi = const Value.absent(),
+    String? meaning,
+    Value<String?> meaningEn = const Value.absent(),
+    String? examplesJson,
+    String? jlptLevel,
+  }) => KanjiData(
+    id: id ?? this.id,
+    lessonId: lessonId ?? this.lessonId,
+    character: character ?? this.character,
+    strokeCount: strokeCount ?? this.strokeCount,
+    onyomi: onyomi.present ? onyomi.value : this.onyomi,
+    kunyomi: kunyomi.present ? kunyomi.value : this.kunyomi,
+    meaning: meaning ?? this.meaning,
+    meaningEn: meaningEn.present ? meaningEn.value : this.meaningEn,
+    examplesJson: examplesJson ?? this.examplesJson,
+    jlptLevel: jlptLevel ?? this.jlptLevel,
+  );
+  KanjiData copyWithCompanion(KanjiCompanion data) {
+    return KanjiData(
+      id: data.id.present ? data.id.value : this.id,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
+      character: data.character.present ? data.character.value : this.character,
+      strokeCount: data.strokeCount.present
+          ? data.strokeCount.value
+          : this.strokeCount,
+      onyomi: data.onyomi.present ? data.onyomi.value : this.onyomi,
+      kunyomi: data.kunyomi.present ? data.kunyomi.value : this.kunyomi,
+      meaning: data.meaning.present ? data.meaning.value : this.meaning,
+      meaningEn: data.meaningEn.present ? data.meaningEn.value : this.meaningEn,
+      examplesJson: data.examplesJson.present
+          ? data.examplesJson.value
+          : this.examplesJson,
+      jlptLevel: data.jlptLevel.present ? data.jlptLevel.value : this.jlptLevel,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('KanjiData(')
+          ..write('id: $id, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('character: $character, ')
+          ..write('strokeCount: $strokeCount, ')
+          ..write('onyomi: $onyomi, ')
+          ..write('kunyomi: $kunyomi, ')
+          ..write('meaning: $meaning, ')
+          ..write('meaningEn: $meaningEn, ')
+          ..write('examplesJson: $examplesJson, ')
+          ..write('jlptLevel: $jlptLevel')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    lessonId,
+    character,
+    strokeCount,
+    onyomi,
+    kunyomi,
+    meaning,
+    meaningEn,
+    examplesJson,
+    jlptLevel,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is KanjiData &&
+          other.id == this.id &&
+          other.lessonId == this.lessonId &&
+          other.character == this.character &&
+          other.strokeCount == this.strokeCount &&
+          other.onyomi == this.onyomi &&
+          other.kunyomi == this.kunyomi &&
+          other.meaning == this.meaning &&
+          other.meaningEn == this.meaningEn &&
+          other.examplesJson == this.examplesJson &&
+          other.jlptLevel == this.jlptLevel);
+}
+
+class KanjiCompanion extends UpdateCompanion<KanjiData> {
+  final Value<int> id;
+  final Value<int> lessonId;
+  final Value<String> character;
+  final Value<int> strokeCount;
+  final Value<String?> onyomi;
+  final Value<String?> kunyomi;
+  final Value<String> meaning;
+  final Value<String?> meaningEn;
+  final Value<String> examplesJson;
+  final Value<String> jlptLevel;
+  const KanjiCompanion({
+    this.id = const Value.absent(),
+    this.lessonId = const Value.absent(),
+    this.character = const Value.absent(),
+    this.strokeCount = const Value.absent(),
+    this.onyomi = const Value.absent(),
+    this.kunyomi = const Value.absent(),
+    this.meaning = const Value.absent(),
+    this.meaningEn = const Value.absent(),
+    this.examplesJson = const Value.absent(),
+    this.jlptLevel = const Value.absent(),
+  });
+  KanjiCompanion.insert({
+    this.id = const Value.absent(),
+    required int lessonId,
+    required String character,
+    required int strokeCount,
+    this.onyomi = const Value.absent(),
+    this.kunyomi = const Value.absent(),
+    required String meaning,
+    this.meaningEn = const Value.absent(),
+    required String examplesJson,
+    required String jlptLevel,
+  }) : lessonId = Value(lessonId),
+       character = Value(character),
+       strokeCount = Value(strokeCount),
+       meaning = Value(meaning),
+       examplesJson = Value(examplesJson),
+       jlptLevel = Value(jlptLevel);
+  static Insertable<KanjiData> custom({
+    Expression<int>? id,
+    Expression<int>? lessonId,
+    Expression<String>? character,
+    Expression<int>? strokeCount,
+    Expression<String>? onyomi,
+    Expression<String>? kunyomi,
+    Expression<String>? meaning,
+    Expression<String>? meaningEn,
+    Expression<String>? examplesJson,
+    Expression<String>? jlptLevel,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (lessonId != null) 'lesson_id': lessonId,
+      if (character != null) 'character': character,
+      if (strokeCount != null) 'stroke_count': strokeCount,
+      if (onyomi != null) 'onyomi': onyomi,
+      if (kunyomi != null) 'kunyomi': kunyomi,
+      if (meaning != null) 'meaning': meaning,
+      if (meaningEn != null) 'meaning_en': meaningEn,
+      if (examplesJson != null) 'examples_json': examplesJson,
+      if (jlptLevel != null) 'jlpt_level': jlptLevel,
+    });
+  }
+
+  KanjiCompanion copyWith({
+    Value<int>? id,
+    Value<int>? lessonId,
+    Value<String>? character,
+    Value<int>? strokeCount,
+    Value<String?>? onyomi,
+    Value<String?>? kunyomi,
+    Value<String>? meaning,
+    Value<String?>? meaningEn,
+    Value<String>? examplesJson,
+    Value<String>? jlptLevel,
+  }) {
+    return KanjiCompanion(
+      id: id ?? this.id,
+      lessonId: lessonId ?? this.lessonId,
+      character: character ?? this.character,
+      strokeCount: strokeCount ?? this.strokeCount,
+      onyomi: onyomi ?? this.onyomi,
+      kunyomi: kunyomi ?? this.kunyomi,
+      meaning: meaning ?? this.meaning,
+      meaningEn: meaningEn ?? this.meaningEn,
+      examplesJson: examplesJson ?? this.examplesJson,
+      jlptLevel: jlptLevel ?? this.jlptLevel,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<int>(lessonId.value);
+    }
+    if (character.present) {
+      map['character'] = Variable<String>(character.value);
+    }
+    if (strokeCount.present) {
+      map['stroke_count'] = Variable<int>(strokeCount.value);
+    }
+    if (onyomi.present) {
+      map['onyomi'] = Variable<String>(onyomi.value);
+    }
+    if (kunyomi.present) {
+      map['kunyomi'] = Variable<String>(kunyomi.value);
+    }
+    if (meaning.present) {
+      map['meaning'] = Variable<String>(meaning.value);
+    }
+    if (meaningEn.present) {
+      map['meaning_en'] = Variable<String>(meaningEn.value);
+    }
+    if (examplesJson.present) {
+      map['examples_json'] = Variable<String>(examplesJson.value);
+    }
+    if (jlptLevel.present) {
+      map['jlpt_level'] = Variable<String>(jlptLevel.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('KanjiCompanion(')
+          ..write('id: $id, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('character: $character, ')
+          ..write('strokeCount: $strokeCount, ')
+          ..write('onyomi: $onyomi, ')
+          ..write('kunyomi: $kunyomi, ')
+          ..write('meaning: $meaning, ')
+          ..write('meaningEn: $meaningEn, ')
+          ..write('examplesJson: $examplesJson, ')
+          ..write('jlptLevel: $jlptLevel')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$ContentDatabase extends GeneratedDatabase {
   _$ContentDatabase(QueryExecutor e) : super(e);
   $ContentDatabaseManager get managers => $ContentDatabaseManager(this);
@@ -3183,6 +3791,7 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
   late final $MockTestQuestionMapTable mockTestQuestionMap =
       $MockTestQuestionMapTable(this);
   late final $UserProgressTable userProgress = $UserProgressTable(this);
+  late final $KanjiTable kanji = $KanjiTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -3196,6 +3805,7 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
     mockTestSection,
     mockTestQuestionMap,
     userProgress,
+    kanji,
   ];
 }
 
@@ -5393,6 +6003,296 @@ typedef $$UserProgressTableProcessedTableManager =
       UserProgressData,
       PrefetchHooks Function({bool vocabId})
     >;
+typedef $$KanjiTableCreateCompanionBuilder =
+    KanjiCompanion Function({
+      Value<int> id,
+      required int lessonId,
+      required String character,
+      required int strokeCount,
+      Value<String?> onyomi,
+      Value<String?> kunyomi,
+      required String meaning,
+      Value<String?> meaningEn,
+      required String examplesJson,
+      required String jlptLevel,
+    });
+typedef $$KanjiTableUpdateCompanionBuilder =
+    KanjiCompanion Function({
+      Value<int> id,
+      Value<int> lessonId,
+      Value<String> character,
+      Value<int> strokeCount,
+      Value<String?> onyomi,
+      Value<String?> kunyomi,
+      Value<String> meaning,
+      Value<String?> meaningEn,
+      Value<String> examplesJson,
+      Value<String> jlptLevel,
+    });
+
+class $$KanjiTableFilterComposer
+    extends Composer<_$ContentDatabase, $KanjiTable> {
+  $$KanjiTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get character => $composableBuilder(
+    column: $table.character,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get strokeCount => $composableBuilder(
+    column: $table.strokeCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get onyomi => $composableBuilder(
+    column: $table.onyomi,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kunyomi => $composableBuilder(
+    column: $table.kunyomi,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get meaning => $composableBuilder(
+    column: $table.meaning,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get meaningEn => $composableBuilder(
+    column: $table.meaningEn,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get examplesJson => $composableBuilder(
+    column: $table.examplesJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get jlptLevel => $composableBuilder(
+    column: $table.jlptLevel,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$KanjiTableOrderingComposer
+    extends Composer<_$ContentDatabase, $KanjiTable> {
+  $$KanjiTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get character => $composableBuilder(
+    column: $table.character,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get strokeCount => $composableBuilder(
+    column: $table.strokeCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get onyomi => $composableBuilder(
+    column: $table.onyomi,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kunyomi => $composableBuilder(
+    column: $table.kunyomi,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get meaning => $composableBuilder(
+    column: $table.meaning,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get meaningEn => $composableBuilder(
+    column: $table.meaningEn,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get examplesJson => $composableBuilder(
+    column: $table.examplesJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get jlptLevel => $composableBuilder(
+    column: $table.jlptLevel,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$KanjiTableAnnotationComposer
+    extends Composer<_$ContentDatabase, $KanjiTable> {
+  $$KanjiTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get lessonId =>
+      $composableBuilder(column: $table.lessonId, builder: (column) => column);
+
+  GeneratedColumn<String> get character =>
+      $composableBuilder(column: $table.character, builder: (column) => column);
+
+  GeneratedColumn<int> get strokeCount => $composableBuilder(
+    column: $table.strokeCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get onyomi =>
+      $composableBuilder(column: $table.onyomi, builder: (column) => column);
+
+  GeneratedColumn<String> get kunyomi =>
+      $composableBuilder(column: $table.kunyomi, builder: (column) => column);
+
+  GeneratedColumn<String> get meaning =>
+      $composableBuilder(column: $table.meaning, builder: (column) => column);
+
+  GeneratedColumn<String> get meaningEn =>
+      $composableBuilder(column: $table.meaningEn, builder: (column) => column);
+
+  GeneratedColumn<String> get examplesJson => $composableBuilder(
+    column: $table.examplesJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get jlptLevel =>
+      $composableBuilder(column: $table.jlptLevel, builder: (column) => column);
+}
+
+class $$KanjiTableTableManager
+    extends
+        RootTableManager<
+          _$ContentDatabase,
+          $KanjiTable,
+          KanjiData,
+          $$KanjiTableFilterComposer,
+          $$KanjiTableOrderingComposer,
+          $$KanjiTableAnnotationComposer,
+          $$KanjiTableCreateCompanionBuilder,
+          $$KanjiTableUpdateCompanionBuilder,
+          (
+            KanjiData,
+            BaseReferences<_$ContentDatabase, $KanjiTable, KanjiData>,
+          ),
+          KanjiData,
+          PrefetchHooks Function()
+        > {
+  $$KanjiTableTableManager(_$ContentDatabase db, $KanjiTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$KanjiTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$KanjiTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$KanjiTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> lessonId = const Value.absent(),
+                Value<String> character = const Value.absent(),
+                Value<int> strokeCount = const Value.absent(),
+                Value<String?> onyomi = const Value.absent(),
+                Value<String?> kunyomi = const Value.absent(),
+                Value<String> meaning = const Value.absent(),
+                Value<String?> meaningEn = const Value.absent(),
+                Value<String> examplesJson = const Value.absent(),
+                Value<String> jlptLevel = const Value.absent(),
+              }) => KanjiCompanion(
+                id: id,
+                lessonId: lessonId,
+                character: character,
+                strokeCount: strokeCount,
+                onyomi: onyomi,
+                kunyomi: kunyomi,
+                meaning: meaning,
+                meaningEn: meaningEn,
+                examplesJson: examplesJson,
+                jlptLevel: jlptLevel,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int lessonId,
+                required String character,
+                required int strokeCount,
+                Value<String?> onyomi = const Value.absent(),
+                Value<String?> kunyomi = const Value.absent(),
+                required String meaning,
+                Value<String?> meaningEn = const Value.absent(),
+                required String examplesJson,
+                required String jlptLevel,
+              }) => KanjiCompanion.insert(
+                id: id,
+                lessonId: lessonId,
+                character: character,
+                strokeCount: strokeCount,
+                onyomi: onyomi,
+                kunyomi: kunyomi,
+                meaning: meaning,
+                meaningEn: meaningEn,
+                examplesJson: examplesJson,
+                jlptLevel: jlptLevel,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$KanjiTableProcessedTableManager =
+    ProcessedTableManager<
+      _$ContentDatabase,
+      $KanjiTable,
+      KanjiData,
+      $$KanjiTableFilterComposer,
+      $$KanjiTableOrderingComposer,
+      $$KanjiTableAnnotationComposer,
+      $$KanjiTableCreateCompanionBuilder,
+      $$KanjiTableUpdateCompanionBuilder,
+      (KanjiData, BaseReferences<_$ContentDatabase, $KanjiTable, KanjiData>),
+      KanjiData,
+      PrefetchHooks Function()
+    >;
 
 class $ContentDatabaseManager {
   final _$ContentDatabase _db;
@@ -5413,4 +6313,6 @@ class $ContentDatabaseManager {
       $$MockTestQuestionMapTableTableManager(_db, _db.mockTestQuestionMap);
   $$UserProgressTableTableManager get userProgress =>
       $$UserProgressTableTableManager(_db, _db.userProgress);
+  $$KanjiTableTableManager get kanji =>
+      $$KanjiTableTableManager(_db, _db.kanji);
 }

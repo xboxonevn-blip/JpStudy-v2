@@ -6,6 +6,7 @@ import 'package:jpstudy/data/db/database_provider.dart';
 
 import 'package:jpstudy/data/db/content_database.dart' hide UserProgressCompanion, UserProgressData;
 import 'package:jpstudy/data/db/content_database_provider.dart';
+import 'package:jpstudy/data/models/vocab_item.dart';
 
 final lessonRepositoryProvider = Provider<LessonRepository>((ref) {
   return LessonRepository(
@@ -464,7 +465,7 @@ class LessonRepository {
     }
 
     // Determine level and try to fetch by tag first (more accurate)
-    final minnaTag = 'minna_$lessonId';
+    // Determine level and try to fetch by tag first (more accurate)
     String dbLevel = currentLevelLabel; // e.g. "N5", "N4"
 
     // Try finding by tag
@@ -1163,6 +1164,26 @@ class LessonRepository {
   Future<void> _touchLesson(int lessonId) {
     return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
         .write(UserLessonCompanion(updatedAt: Value(DateTime.now())));
+  }
+
+  Future<List<VocabItem>> getVocabByLevel(String level) async {
+    final query = _contentDb.select(_contentDb.vocab)
+      ..where((tbl) => tbl.level.equals(level));
+    
+    final results = await query.get();
+    
+    return results.map((row) {
+      return VocabItem(
+        id: row.id,
+        term: row.term,
+        reading: row.reading,
+        meaning: row.meaning,
+        meaningEn: row.meaningEn,
+        kanjiMeaning: row.kanjiMeaning,
+        level: row.level,
+        tags: row.tags?.split(','),
+      );
+    }).toList();
   }
 }
 

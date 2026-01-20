@@ -6,6 +6,7 @@ class VocabItem {
   final String? meaningEn;
   final String? kanjiMeaning;
   final String level;
+  final List<String>? tags;
 
   const VocabItem({
     required this.id,
@@ -15,5 +16,6 @@ class VocabItem {
     this.meaningEn,
     this.kanjiMeaning,
     required this.level,
+    this.tags,
   });
 }

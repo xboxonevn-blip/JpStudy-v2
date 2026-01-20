@@ -1525,7 +1525,7 @@ class _CardContent extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          if (resolvedTerm.reading.isNotEmpty) ...[
+          if (resolvedTerm.reading.isNotEmpty && language != AppLanguage.ja) ...[
             const SizedBox(height: 6),
             Text(
               resolvedTerm.reading,
@@ -1533,7 +1533,7 @@ class _CardContent extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ],
-          if (language != AppLanguage.en && resolvedTerm.kanjiMeaning.isNotEmpty) ...[
+          if (language == AppLanguage.vi && resolvedTerm.kanjiMeaning.isNotEmpty) ...[
             const SizedBox(height: 8),
             Text(
               resolvedTerm.kanjiMeaning,
@@ -1561,7 +1561,7 @@ class _CardContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          language.definitionLabel,
+          language == AppLanguage.ja ? 'Reading' : language.definitionLabel,
           style: const TextStyle(
             fontSize: 12,
             color: Color(0xFF8F9BB3),
@@ -1570,9 +1570,12 @@ class _CardContent extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         Text(
-          language == AppLanguage.en && resolvedTerm.definitionEn.isNotEmpty
-              ? resolvedTerm.definitionEn
-              : resolvedTerm.definition,
+          language == AppLanguage.ja
+              ? resolvedTerm.reading
+              : (language == AppLanguage.en &&
+                      resolvedTerm.definitionEn.isNotEmpty
+                  ? resolvedTerm.definitionEn
+                  : resolvedTerm.definition),
           style: const TextStyle(fontSize: 18, color: Color(0xFF1C2440)),
           textAlign: TextAlign.center,
         ),

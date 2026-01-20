@@ -40,17 +40,15 @@ class LearningPathViewModel extends StateNotifier<AsyncValue<List<Unit>>> {
         // Sort by id or order (assuming id is creation order for now)
         levelLessons.sort((a, b) => a.id.compareTo(b.id));
 
+
         final nodes = <LessonNode>[];
-        bool previousCompleted = true; // First lesson is always unlocked
 
         for (final lesson in levelLessons) {
           final stats = statsMap[lesson.id];
           final isCompleted = stats != null && stats.termCount > 0 && stats.completedCount == stats.termCount;
           
-          LessonStatus status = LessonStatus.locked;
-          if (previousCompleted) {
-            status = isCompleted ? LessonStatus.completed : LessonStatus.available;
-          }
+          // Unlock all lessons
+          LessonStatus status = isCompleted ? LessonStatus.completed : LessonStatus.available;
           
           nodes.add(LessonNode(
             lesson: lesson,
@@ -61,7 +59,7 @@ class LearningPathViewModel extends StateNotifier<AsyncValue<List<Unit>>> {
               : stats.completedCount / stats.termCount,
           ));
           
-          previousCompleted = isCompleted;
+
         }
 
         // Color based on level

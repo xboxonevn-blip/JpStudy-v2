@@ -6,6 +6,7 @@ import '../widgets/unit_map_widget.dart';
 import '../models/lesson_node.dart';
 
 import 'package:jpstudy/core/level_provider.dart';
+import '../../test/widgets/practice_test_dashboard.dart';
 
 class LearningPathScreen extends ConsumerWidget {
   const LearningPathScreen({super.key});
@@ -26,16 +27,34 @@ class LearningPathScreen extends ConsumerWidget {
           if (units.isEmpty) {
             return const Center(child: Text('No lessons found for this level.'));
           }
-          return ListView.builder(
-            padding: const EdgeInsets.only(bottom: 100), // Space for bottom nav
-            itemCount: units.length,
-            itemBuilder: (context, index) {
-              final unit = units[index];
-              return UnitMapWidget(
-                unit: unit,
-                onNodeTap: (node) => _handleNodeTap(context, node),
-              );
-            },
+
+          return CustomScrollView(
+            slivers: [
+              // Dashboard Header
+              const SliverToBoxAdapter(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8.0),
+                  child: PracticeTestDashboard(),
+                ),
+              ),
+              
+              // Lesson List
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final unit = units[index];
+                    return UnitMapWidget(
+                      unit: unit,
+                      onNodeTap: (node) => _handleNodeTap(context, node),
+                    );
+                  },
+                  childCount: units.length,
+                ),
+              ),
+              
+              // Bottom padding
+              const SliverPadding(padding: EdgeInsets.only(bottom: 100)),
+            ],
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),

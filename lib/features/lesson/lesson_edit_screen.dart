@@ -122,29 +122,6 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     });
   }
 
-  int _parseLimit(String value) {
-    final parsed = int.tryParse(value.trim());
-    if (parsed == null || parsed < 0) {
-      return 0;
-    }
-    return parsed;
-  }
-
-  Future<void> _updatePracticeSettings(
-    LessonRepository repo, {
-    int? learnTermLimit,
-    int? testQuestionLimit,
-    int? matchPairLimit,
-  }) async {
-    await repo.updateLessonPracticeSettings(
-      widget.lessonId,
-      learnTermLimit: learnTermLimit,
-      testQuestionLimit: testQuestionLimit,
-      matchPairLimit: matchPairLimit,
-    );
-    ref.invalidate(lessonPracticeSettingsProvider(widget.lessonId));
-  }
-
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
@@ -193,8 +170,11 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
             label: language.titleLabel,
             child: TextField(
               controller: _titleController,
-              onChanged: (value) => _onTitleChanged(repo, level, value),
-              decoration: const InputDecoration(),
+              enabled: false, // Locked as requested
+              decoration: const InputDecoration(
+                filled: true,
+                fillColor: Color(0xFFF0F0F0),
+              ),
             ),
           ),
           const SizedBox(height: 12),
@@ -219,58 +199,8 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 16),
-          Text(
-            language.practiceSettingsLabel,
-            style: const TextStyle(fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(height: 8),
-          _LabeledField(
-            label: language.learnLimitLabel,
-            child: TextField(
-              controller: _learnLimitController,
-              keyboardType: TextInputType.number,
-              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-              onChanged: (value) => _updatePracticeSettings(
-                repo,
-                learnTermLimit: _parseLimit(value),
-              ),
-              decoration: const InputDecoration(),
-            ),
-          ),
-          const SizedBox(height: 12),
-          _LabeledField(
-            label: language.testLimitLabel,
-            child: TextField(
-              controller: _testLimitController,
-              keyboardType: TextInputType.number,
-              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-              onChanged: (value) => _updatePracticeSettings(
-                repo,
-                testQuestionLimit: _parseLimit(value),
-              ),
-              decoration: const InputDecoration(),
-            ),
-          ),
-          const SizedBox(height: 12),
-          _LabeledField(
-            label: language.matchLimitLabel,
-            child: TextField(
-              controller: _matchLimitController,
-              keyboardType: TextInputType.number,
-              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-              onChanged: (value) => _updatePracticeSettings(
-                repo,
-                matchPairLimit: _parseLimit(value),
-              ),
-              decoration: const InputDecoration(),
-            ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            language.practiceLimitHint,
-            style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
-          ),
+          // Practice Settings hidden as requested (Smart Defaults used instead)
+          // Practice Settings hidden as requested (Smart Defaults used instead)
           const SizedBox(height: 18),
           Row(
             children: [
@@ -438,12 +368,6 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       isCustomTitle: isCustomTitle,
     );
     ref.invalidate(lessonTitleProvider);
-    ref.invalidate(lessonMetaProvider(level.shortLabel));
-  }
-
-  Future<void> _addTerm(LessonRepository repo, StudyLevel level) async {
-    await repo.addTerm(widget.lessonId);
-    await _refreshTerms(repo);
     ref.invalidate(lessonMetaProvider(level.shortLabel));
   }
 
@@ -983,8 +907,7 @@ class _TermCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-            ],
-          ),
+
           const SizedBox(height: 12),
           Row(
             children: [

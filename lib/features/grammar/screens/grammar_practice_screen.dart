@@ -53,8 +53,24 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
       }
     }
 
+    // Fetch potential distractors (e.g. 20 random points from same level if possible, or just all)
+    // For simplicity, fetch all points from the same levels as the target points
+    final levels = points.map((p) => p.jlptLevel).toSet().toList();
+    List<GrammarPoint> distractorPool = [];
+    if (levels.isNotEmpty) {
+       // Since we have N5/N4, just fetch all for now or optimize later
+       // repo.getGrammarPointsByLevel(level) - we need to iterate
+       for (final level in levels) {
+          final levelPoints = await repo.fetchPointsByLevel(level);
+          distractorPool.addAll(levelPoints);
+       }
+    }
+
     // Generate questions using the service
-    final generated = GrammarQuestionGenerator.generateQuestions(details);
+    final generated = GrammarQuestionGenerator.generateQuestions(
+      details, 
+      allPoints: distractorPool,
+    );
     _questions.addAll(generated);
 
     if (mounted) {

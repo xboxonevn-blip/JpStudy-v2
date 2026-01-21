@@ -33,8 +33,6 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
   bool? _selectedTrueFalse;
   bool _showResult = false;
   bool _isCorrect = false;
-  // ignore: unused_field
-  DateTime? _questionStartTime;
 
   @override
   void initState() {
@@ -56,7 +54,6 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
               items: widget.items,
             );
       }
-      _questionStartTime = DateTime.now();
     });
   }
 
@@ -288,8 +285,8 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     _submitAnswer(answer);
   }
 
-  void _submitAnswer(String answer) {
-    final result = ref.read(learnSessionProvider.notifier).submitAnswer(answer);
+  Future<void> _submitAnswer(String answer) async {
+    final result = await ref.read(learnSessionProvider.notifier).submitAnswer(answer);
 
     if (result != null) {
       setState(() {
@@ -307,7 +304,6 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
       _selectedTrueFalse = null;
       _showResult = false;
       _isCorrect = false;
-      _questionStartTime = DateTime.now();
     });
   }
 }

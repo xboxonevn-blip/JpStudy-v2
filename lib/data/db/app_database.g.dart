@@ -10129,6 +10129,364 @@ class TestSettingsCompanion extends UpdateCompanion<TestSetting> {
   }
 }
 
+class $UserMistakesTable extends UserMistakes
+    with TableInfo<$UserMistakesTable, UserMistake> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UserMistakesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _typeMeta = const VerificationMeta('type');
+  @override
+  late final GeneratedColumn<String> type = GeneratedColumn<String>(
+    'type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _itemIdMeta = const VerificationMeta('itemId');
+  @override
+  late final GeneratedColumn<int> itemId = GeneratedColumn<int>(
+    'item_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _wrongCountMeta = const VerificationMeta(
+    'wrongCount',
+  );
+  @override
+  late final GeneratedColumn<int> wrongCount = GeneratedColumn<int>(
+    'wrong_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _lastMistakeAtMeta = const VerificationMeta(
+    'lastMistakeAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> lastMistakeAt =
+      GeneratedColumn<DateTime>(
+        'last_mistake_at',
+        aliasedName,
+        false,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: true,
+      );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    type,
+    itemId,
+    wrongCount,
+    lastMistakeAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'user_mistakes';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<UserMistake> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('type')) {
+      context.handle(
+        _typeMeta,
+        type.isAcceptableOrUnknown(data['type']!, _typeMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_typeMeta);
+    }
+    if (data.containsKey('item_id')) {
+      context.handle(
+        _itemIdMeta,
+        itemId.isAcceptableOrUnknown(data['item_id']!, _itemIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_itemIdMeta);
+    }
+    if (data.containsKey('wrong_count')) {
+      context.handle(
+        _wrongCountMeta,
+        wrongCount.isAcceptableOrUnknown(data['wrong_count']!, _wrongCountMeta),
+      );
+    }
+    if (data.containsKey('last_mistake_at')) {
+      context.handle(
+        _lastMistakeAtMeta,
+        lastMistakeAt.isAcceptableOrUnknown(
+          data['last_mistake_at']!,
+          _lastMistakeAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_lastMistakeAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  List<Set<GeneratedColumn>> get uniqueKeys => [
+    {type, itemId},
+  ];
+  @override
+  UserMistake map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return UserMistake(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      type: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}type'],
+      )!,
+      itemId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}item_id'],
+      )!,
+      wrongCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}wrong_count'],
+      )!,
+      lastMistakeAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}last_mistake_at'],
+      )!,
+    );
+  }
+
+  @override
+  $UserMistakesTable createAlias(String alias) {
+    return $UserMistakesTable(attachedDatabase, alias);
+  }
+}
+
+class UserMistake extends DataClass implements Insertable<UserMistake> {
+  final int id;
+  final String type;
+  final int itemId;
+  final int wrongCount;
+  final DateTime lastMistakeAt;
+  const UserMistake({
+    required this.id,
+    required this.type,
+    required this.itemId,
+    required this.wrongCount,
+    required this.lastMistakeAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['type'] = Variable<String>(type);
+    map['item_id'] = Variable<int>(itemId);
+    map['wrong_count'] = Variable<int>(wrongCount);
+    map['last_mistake_at'] = Variable<DateTime>(lastMistakeAt);
+    return map;
+  }
+
+  UserMistakesCompanion toCompanion(bool nullToAbsent) {
+    return UserMistakesCompanion(
+      id: Value(id),
+      type: Value(type),
+      itemId: Value(itemId),
+      wrongCount: Value(wrongCount),
+      lastMistakeAt: Value(lastMistakeAt),
+    );
+  }
+
+  factory UserMistake.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return UserMistake(
+      id: serializer.fromJson<int>(json['id']),
+      type: serializer.fromJson<String>(json['type']),
+      itemId: serializer.fromJson<int>(json['itemId']),
+      wrongCount: serializer.fromJson<int>(json['wrongCount']),
+      lastMistakeAt: serializer.fromJson<DateTime>(json['lastMistakeAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'type': serializer.toJson<String>(type),
+      'itemId': serializer.toJson<int>(itemId),
+      'wrongCount': serializer.toJson<int>(wrongCount),
+      'lastMistakeAt': serializer.toJson<DateTime>(lastMistakeAt),
+    };
+  }
+
+  UserMistake copyWith({
+    int? id,
+    String? type,
+    int? itemId,
+    int? wrongCount,
+    DateTime? lastMistakeAt,
+  }) => UserMistake(
+    id: id ?? this.id,
+    type: type ?? this.type,
+    itemId: itemId ?? this.itemId,
+    wrongCount: wrongCount ?? this.wrongCount,
+    lastMistakeAt: lastMistakeAt ?? this.lastMistakeAt,
+  );
+  UserMistake copyWithCompanion(UserMistakesCompanion data) {
+    return UserMistake(
+      id: data.id.present ? data.id.value : this.id,
+      type: data.type.present ? data.type.value : this.type,
+      itemId: data.itemId.present ? data.itemId.value : this.itemId,
+      wrongCount: data.wrongCount.present
+          ? data.wrongCount.value
+          : this.wrongCount,
+      lastMistakeAt: data.lastMistakeAt.present
+          ? data.lastMistakeAt.value
+          : this.lastMistakeAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserMistake(')
+          ..write('id: $id, ')
+          ..write('type: $type, ')
+          ..write('itemId: $itemId, ')
+          ..write('wrongCount: $wrongCount, ')
+          ..write('lastMistakeAt: $lastMistakeAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, type, itemId, wrongCount, lastMistakeAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is UserMistake &&
+          other.id == this.id &&
+          other.type == this.type &&
+          other.itemId == this.itemId &&
+          other.wrongCount == this.wrongCount &&
+          other.lastMistakeAt == this.lastMistakeAt);
+}
+
+class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
+  final Value<int> id;
+  final Value<String> type;
+  final Value<int> itemId;
+  final Value<int> wrongCount;
+  final Value<DateTime> lastMistakeAt;
+  const UserMistakesCompanion({
+    this.id = const Value.absent(),
+    this.type = const Value.absent(),
+    this.itemId = const Value.absent(),
+    this.wrongCount = const Value.absent(),
+    this.lastMistakeAt = const Value.absent(),
+  });
+  UserMistakesCompanion.insert({
+    this.id = const Value.absent(),
+    required String type,
+    required int itemId,
+    this.wrongCount = const Value.absent(),
+    required DateTime lastMistakeAt,
+  }) : type = Value(type),
+       itemId = Value(itemId),
+       lastMistakeAt = Value(lastMistakeAt);
+  static Insertable<UserMistake> custom({
+    Expression<int>? id,
+    Expression<String>? type,
+    Expression<int>? itemId,
+    Expression<int>? wrongCount,
+    Expression<DateTime>? lastMistakeAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (type != null) 'type': type,
+      if (itemId != null) 'item_id': itemId,
+      if (wrongCount != null) 'wrong_count': wrongCount,
+      if (lastMistakeAt != null) 'last_mistake_at': lastMistakeAt,
+    });
+  }
+
+  UserMistakesCompanion copyWith({
+    Value<int>? id,
+    Value<String>? type,
+    Value<int>? itemId,
+    Value<int>? wrongCount,
+    Value<DateTime>? lastMistakeAt,
+  }) {
+    return UserMistakesCompanion(
+      id: id ?? this.id,
+      type: type ?? this.type,
+      itemId: itemId ?? this.itemId,
+      wrongCount: wrongCount ?? this.wrongCount,
+      lastMistakeAt: lastMistakeAt ?? this.lastMistakeAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (type.present) {
+      map['type'] = Variable<String>(type.value);
+    }
+    if (itemId.present) {
+      map['item_id'] = Variable<int>(itemId.value);
+    }
+    if (wrongCount.present) {
+      map['wrong_count'] = Variable<int>(wrongCount.value);
+    }
+    if (lastMistakeAt.present) {
+      map['last_mistake_at'] = Variable<DateTime>(lastMistakeAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserMistakesCompanion(')
+          ..write('id: $id, ')
+          ..write('type: $type, ')
+          ..write('itemId: $itemId, ')
+          ..write('wrongCount: $wrongCount, ')
+          ..write('lastMistakeAt: $lastMistakeAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -10157,6 +10515,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       $FlashcardSettingsTable(this);
   late final $LearnSettingsTable learnSettings = $LearnSettingsTable(this);
   late final $TestSettingsTable testSettings = $TestSettingsTable(this);
+  late final $UserMistakesTable userMistakes = $UserMistakesTable(this);
   late final LearnDao learnDao = LearnDao(this as AppDatabase);
   late final TestDao testDao = TestDao(this as AppDatabase);
   late final AchievementDao achievementDao = AchievementDao(
@@ -10164,6 +10523,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   );
   late final SrsDao srsDao = SrsDao(this as AppDatabase);
   late final GrammarDao grammarDao = GrammarDao(this as AppDatabase);
+  late final MistakeDao mistakeDao = MistakeDao(this as AppDatabase);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -10187,6 +10547,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     flashcardSettings,
     learnSettings,
     testSettings,
+    userMistakes,
   ];
   @override
   StreamQueryUpdateRules get streamUpdateRules => const StreamQueryUpdateRules([
@@ -16819,6 +17180,204 @@ typedef $$TestSettingsTableProcessedTableManager =
       TestSetting,
       PrefetchHooks Function()
     >;
+typedef $$UserMistakesTableCreateCompanionBuilder =
+    UserMistakesCompanion Function({
+      Value<int> id,
+      required String type,
+      required int itemId,
+      Value<int> wrongCount,
+      required DateTime lastMistakeAt,
+    });
+typedef $$UserMistakesTableUpdateCompanionBuilder =
+    UserMistakesCompanion Function({
+      Value<int> id,
+      Value<String> type,
+      Value<int> itemId,
+      Value<int> wrongCount,
+      Value<DateTime> lastMistakeAt,
+    });
+
+class $$UserMistakesTableFilterComposer
+    extends Composer<_$AppDatabase, $UserMistakesTable> {
+  $$UserMistakesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get type => $composableBuilder(
+    column: $table.type,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get itemId => $composableBuilder(
+    column: $table.itemId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get lastMistakeAt => $composableBuilder(
+    column: $table.lastMistakeAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$UserMistakesTableOrderingComposer
+    extends Composer<_$AppDatabase, $UserMistakesTable> {
+  $$UserMistakesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get type => $composableBuilder(
+    column: $table.type,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get itemId => $composableBuilder(
+    column: $table.itemId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get lastMistakeAt => $composableBuilder(
+    column: $table.lastMistakeAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$UserMistakesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UserMistakesTable> {
+  $$UserMistakesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get type =>
+      $composableBuilder(column: $table.type, builder: (column) => column);
+
+  GeneratedColumn<int> get itemId =>
+      $composableBuilder(column: $table.itemId, builder: (column) => column);
+
+  GeneratedColumn<int> get wrongCount => $composableBuilder(
+    column: $table.wrongCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get lastMistakeAt => $composableBuilder(
+    column: $table.lastMistakeAt,
+    builder: (column) => column,
+  );
+}
+
+class $$UserMistakesTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $UserMistakesTable,
+          UserMistake,
+          $$UserMistakesTableFilterComposer,
+          $$UserMistakesTableOrderingComposer,
+          $$UserMistakesTableAnnotationComposer,
+          $$UserMistakesTableCreateCompanionBuilder,
+          $$UserMistakesTableUpdateCompanionBuilder,
+          (
+            UserMistake,
+            BaseReferences<_$AppDatabase, $UserMistakesTable, UserMistake>,
+          ),
+          UserMistake,
+          PrefetchHooks Function()
+        > {
+  $$UserMistakesTableTableManager(_$AppDatabase db, $UserMistakesTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UserMistakesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UserMistakesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UserMistakesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> type = const Value.absent(),
+                Value<int> itemId = const Value.absent(),
+                Value<int> wrongCount = const Value.absent(),
+                Value<DateTime> lastMistakeAt = const Value.absent(),
+              }) => UserMistakesCompanion(
+                id: id,
+                type: type,
+                itemId: itemId,
+                wrongCount: wrongCount,
+                lastMistakeAt: lastMistakeAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String type,
+                required int itemId,
+                Value<int> wrongCount = const Value.absent(),
+                required DateTime lastMistakeAt,
+              }) => UserMistakesCompanion.insert(
+                id: id,
+                type: type,
+                itemId: itemId,
+                wrongCount: wrongCount,
+                lastMistakeAt: lastMistakeAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$UserMistakesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $UserMistakesTable,
+      UserMistake,
+      $$UserMistakesTableFilterComposer,
+      $$UserMistakesTableOrderingComposer,
+      $$UserMistakesTableAnnotationComposer,
+      $$UserMistakesTableCreateCompanionBuilder,
+      $$UserMistakesTableUpdateCompanionBuilder,
+      (
+        UserMistake,
+        BaseReferences<_$AppDatabase, $UserMistakesTable, UserMistake>,
+      ),
+      UserMistake,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -16859,4 +17418,6 @@ class $AppDatabaseManager {
       $$LearnSettingsTableTableManager(_db, _db.learnSettings);
   $$TestSettingsTableTableManager get testSettings =>
       $$TestSettingsTableTableManager(_db, _db.testSettings);
+  $$UserMistakesTableTableManager get userMistakes =>
+      $$UserMistakesTableTableManager(_db, _db.userMistakes);
 }

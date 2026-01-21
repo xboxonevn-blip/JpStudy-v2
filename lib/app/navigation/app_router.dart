@@ -15,6 +15,7 @@ import 'package:jpstudy/features/learn/integration/learn_mode_integration.dart';
 import 'package:jpstudy/features/learn/integration/write_mode_integration.dart';
 import 'package:jpstudy/features/test/integration/test_mode_integration.dart';
 import 'package:jpstudy/features/test/screens/test_history_screen.dart';
+import 'package:jpstudy/features/mistakes/screens/mistake_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -143,6 +144,10 @@ class AppRouter {
             lessonTitle: title,
           );
         },
+      ),
+      GoRoute(
+        path: '/mistakes',
+        builder: (context, state) => const MistakeScreen(),
       ),
     ],
   );

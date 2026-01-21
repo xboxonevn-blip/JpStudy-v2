@@ -7,6 +7,8 @@ import '../models/lesson_node.dart';
 
 import 'package:jpstudy/core/level_provider.dart';
 import '../../test/widgets/practice_test_dashboard.dart';
+import '../widgets/mini_dashboard.dart';
+import '../widgets/continue_button.dart';
 
 class LearningPathScreen extends ConsumerWidget {
   const LearningPathScreen({super.key});
@@ -31,10 +33,17 @@ class LearningPathScreen extends ConsumerWidget {
           return CustomScrollView(
             slivers: [
               // Dashboard Header
-              const SliverToBoxAdapter(
+              SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8.0),
-                  child: PracticeTestDashboard(),
+                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 16),
+                  child: Column(
+                    children: [
+                       const MiniDashboard(),
+                       const ContinueButton(),
+                       const SizedBox(height: 16),
+                       const PracticeTestDashboard(),
+                    ],
+                  ),
                 ),
               ),
               
@@ -59,24 +68,6 @@ class LearningPathScreen extends ConsumerWidget {
         },
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (err, stack) => Center(child: Text('Error: $err')),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Quick access to last lesson or practice
-          // Logic: Find first available/completed node
-          pathState.whenData((allUnits) {
-            final units = selectedLevel == null 
-                ? allUnits 
-                : allUnits.where((u) => u.id == selectedLevel.shortLabel).toList();
-                
-            if (units.isNotEmpty && units.first.nodes.isNotEmpty) {
-               // For now, jump to the first node of the first unit
-               // In future: Find first !isCompleted node
-               _handleNodeTap(context, units.first.nodes.first);
-            }
-          });
-        },
-        child: const Icon(Icons.play_arrow_rounded),
       ),
     );
   }

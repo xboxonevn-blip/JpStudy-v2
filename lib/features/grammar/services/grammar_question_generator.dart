@@ -23,8 +23,9 @@ class GeneratedQuestion {
 class GrammarQuestionGenerator {
   /// Generate questions for a list of grammar points
   static List<GeneratedQuestion> generateQuestions(
-    List<({GrammarPoint point, List<GrammarExample> examples})> details,
-  ) {
+    List<({GrammarPoint point, List<GrammarExample> examples})> details, {
+    List<GrammarPoint>? allPoints,
+  }) {
     final questions = <GeneratedQuestion>[];
 
     for (final detail in details) {
@@ -53,6 +54,19 @@ class GrammarQuestionGenerator {
       // This is hard to do perfectly automatically without regex matching the specific conjugation.
       // Simple heuristic: if the example contains the exact grammar point string
       if (example.japanese.contains(point.grammarPoint)) {
+        // Generate Distractors
+        final distractors = <String>[];
+        if (allPoints != null && allPoints.isNotEmpty) {
+           final pool = allPoints.where((p) => p.id != point.id).toList();
+           pool.shuffle();
+           distractors.addAll(pool.take(3).map((p) => p.grammarPoint));
+        }
+        
+        // Fill remaining if needed
+        while (distractors.length < 3) {
+           distractors.add('Wrong ${distractors.length + 1}');
+        }
+
         questions.add(GeneratedQuestion(
           type: GrammarQuestionType.cloze,
           point: point,
@@ -60,9 +74,7 @@ class GrammarQuestionGenerator {
           correctAnswer: point.grammarPoint,
           options: [
             point.grammarPoint, 
-            'Wrong 1', // TODO: Need better distractors methodology
-            'Wrong 2',
-            'Wrong 3'
+            ...distractors,
           ]..shuffle(),
           explanation: point.meaning,
         ));

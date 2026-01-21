@@ -7,15 +7,19 @@ class GrammarListWidget extends ConsumerWidget {
   const GrammarListWidget({
     super.key,
     required this.lessonId,
+    required this.level,
     required this.language,
   });
 
   final int lessonId;
+  final String level;
   final AppLanguage language;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final grammarAsync = ref.watch(lessonGrammarProvider(lessonId));
+    final grammarAsync = ref.watch(
+      lessonGrammarProvider(LessonTermsArgs(lessonId, level, '')),
+    );
 
     return grammarAsync.when(
       data: (grammarList) {

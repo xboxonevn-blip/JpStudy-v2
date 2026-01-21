@@ -5,6 +5,7 @@ import '../daos/test_dao.dart';
 import '../daos/srs_dao.dart';
 import '../daos/achievement_dao.dart';
 import '../daos/grammar_dao.dart';
+import '../daos/mistake_dao.dart';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
@@ -14,6 +15,7 @@ import 'package:path_provider/path_provider.dart';
 import 'settings_tables.dart';
 import 'study_tables.dart';
 import 'grammar_tables.dart';
+import 'mistake_tables.dart';
 import 'tables.dart';
 
 part 'app_database.g.dart';
@@ -42,6 +44,8 @@ part 'app_database.g.dart';
     FlashcardSettings,
     LearnSettings,
     TestSettings,
+    // Mistake Bank
+    UserMistakes,
   ],
   daos: [
     LearnDao,
@@ -49,13 +53,14 @@ part 'app_database.g.dart';
     AchievementDao,
     SrsDao,
     GrammarDao,
+    MistakeDao,
   ],
 )
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 21;
+  int get schemaVersion => 22;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -158,6 +163,9 @@ class AppDatabase extends _$AppDatabase {
           if (from < 21) {
             await migrator.addColumn(grammarPoints, grammarPoints.titleEn);
             await migrator.addColumn(grammarPoints, grammarPoints.connectionEn);
+          }
+          if (from < 22) {
+            await migrator.createTable(userMistakes);
           }
         },
       );

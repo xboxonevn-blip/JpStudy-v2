@@ -4,6 +4,7 @@ import '../../../data/db/database_provider.dart';
 import '../../../data/daos/learn_dao.dart';
 import '../../../data/daos/achievement_dao.dart';
 import '../../../data/models/vocab_item.dart';
+import '../../mistakes/repositories/mistake_repository.dart';
 import '../models/learn_session.dart';
 import '../models/question.dart';
 import '../models/question_type.dart';
@@ -14,8 +15,9 @@ import '../services/learn_session_service.dart';
 class LearnSessionNotifier extends StateNotifier<LearnSession?> {
   final QuestionGenerator _questionGenerator = QuestionGenerator();
   final LearnSessionService _learnService;
+  final MistakeRepository _mistakeRepo;
 
-  LearnSessionNotifier(this._learnService) : super(null);
+  LearnSessionNotifier(this._learnService, this._mistakeRepo) : super(null);
 
   /// Start a new learn session
   void startSession({
@@ -62,7 +64,7 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
   }
 
   /// Submit answer for current question
-  QuestionResult? submitAnswer(String answer) {
+  Future<QuestionResult?> submitAnswer(String answer) async {
     if (state == null || state!.currentQuestion == null) return null;
 
     final question = state!.currentQuestion!;
@@ -77,7 +79,20 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
       answeredAt: DateTime.now(),
     );
 
-    // Audio removed
+    // Record mistake if wrong
+    if (!isCorrect) {
+      await _mistakeRepo.addMistake(
+        type: 'vocab',
+        itemId: question.targetItem.id,
+      );
+    } else {
+      // Remove from mistake bank if correct (simplistic "fix" logic for now)
+      // Or we can leave it for the dedicated "Fix Mistakes" mode to remove.
+      // The requirement says: "đúng 2 lần liên tiếp -> remove". 
+      // This implies tracking streak on the mistake itself.
+      // For now, let's strictly follow: "Review/Practice -> Mistake Bank".
+      // We perform removal in "Fix Mistakes" mode.
+    }
 
     state!.recordResult(result);
     
@@ -111,7 +126,6 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
     // Save to database
     await _learnService.saveSession(state!);
     
-    // Audio removed
   }
 
   /// Reset session
@@ -124,15 +138,13 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
 final learnSessionProvider =
     StateNotifierProvider<LearnSessionNotifier, LearnSession?>((ref) {
   final db = ref.watch(databaseProvider);
-  // DAOs are created with the database instance.
-  // Assuming DAOs have been added to AppDatabase as accessors, 
-  // we could access them via db.learnDao if using generated mixins properly,
-  // but simpler independent instantiation is:
+  final mistakeRepo = ref.watch(mistakeRepositoryProvider);
+  
   final learnDao = LearnDao(db);
   final achievementDao = AchievementDao(db);
   final service = LearnSessionService(learnDao, achievementDao);
   
-  return LearnSessionNotifier(service);
+  return LearnSessionNotifier(service, mistakeRepo);
 });
 
 /// Provider for question timing

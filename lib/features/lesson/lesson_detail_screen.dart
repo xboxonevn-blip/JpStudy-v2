@@ -326,6 +326,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
             ),
             GrammarListWidget(
               lessonId: widget.lessonId,
+              level: level.shortLabel,
               language: language,
             ),
             KanjiListWidget(

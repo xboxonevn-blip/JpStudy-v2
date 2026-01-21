@@ -91,9 +91,11 @@ class LessonTitleArgs {
 
 
 final lessonGrammarProvider =
-    FutureProvider.family<List<GrammarPointData>, int>((ref, lessonId) async {
+    FutureProvider.family<List<GrammarPointData>, LessonTermsArgs>((ref, args) async {
   final repo = ref.watch(lessonRepositoryProvider);
-  return repo.fetchGrammar(lessonId);
+  // Ensure grammar is seeded before fetching
+  await repo.seedGrammarIfEmpty(args.lessonId, args.level);
+  return repo.fetchGrammar(args.lessonId);
 });
 
 final lessonKanjiProvider =

@@ -28,7 +28,7 @@ class ContentDatabase extends _$ContentDatabase {
   ContentDatabase() : super(_openContentConnection());
 
   @override
-  int get schemaVersion => 14;
+  int get schemaVersion => 15;
 
   @override
   MigrationStrategy get migration {
@@ -79,6 +79,10 @@ class ContentDatabase extends _$ContentDatabase {
         
         if (from >= 11) {
           await _reseedMinnaVocabulary();
+        }
+
+        if (from < 15) {
+          await _seedMinnaGrammar();
         }
       },
     );

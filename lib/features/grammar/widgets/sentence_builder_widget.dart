@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import '../../common/widgets/clay_button.dart';
+import '../../common/widgets/clay_card.dart';
+import '../../../theme/app_theme_v2.dart';
 
 class SentenceBuilderWidget extends StatefulWidget {
   final List<String> correctWords;
@@ -66,43 +69,40 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
 
   @override
   Widget build(BuildContext context) {
+    Color targetColor = Colors.white;
+    if (_isLastCorrect == true) targetColor = AppThemeV2.secondary.withValues(alpha: 0.2);
+    if (_isLastCorrect == false) targetColor = AppThemeV2.error.withValues(alpha: 0.1);
+
     return Column(
       children: [
         // Target Area
-        Container(
-          constraints: const BoxConstraints(minHeight: 120),
-          width: double.infinity,
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(
-              color: _isLastCorrect == null
-                  ? Theme.of(context).colorScheme.outlineVariant
-                  : (_isLastCorrect! ? Colors.green : Colors.red),
-              width: 2,
+        ClayCard(
+          color: targetColor,
+          child: Container(
+            constraints: const BoxConstraints(minHeight: 120),
+            width: double.infinity,
+            alignment: Alignment.centerLeft,
+            child: Wrap(
+              spacing: 8,
+              runSpacing: 12,
+              children: _selectedWords.asMap().entries.map((entry) {
+                return _ClayWordTile(
+                  word: entry.value,
+                  onTap: () => _deselectWord(entry.key),
+                  isSelected: true,
+                ).animate().scale(duration: 200.ms).fadeIn();
+              }).toList(),
             ),
-          ),
-          child: Wrap(
-            spacing: 8,
-            runSpacing: 12,
-            children: _selectedWords.asMap().entries.map((entry) {
-              return _WordTile(
-                word: entry.value,
-                onTap: () => _deselectWord(entry.key),
-                isSelected: true,
-              ).animate().scale(duration: 200.ms).fadeIn();
-            }).toList(),
           ),
         ),
         const SizedBox(height: 32),
         // Source Area
         Wrap(
-          spacing: 10,
-          runSpacing: 15,
+          spacing: 12,
+          runSpacing: 16,
           alignment: WrapAlignment.center,
           children: _remainingWords.asMap().entries.map((entry) {
-            return _WordTile(
+            return _ClayWordTile(
               word: entry.value,
               onTap: () => _selectWord(entry.key),
               isSelected: false,
@@ -114,25 +114,22 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
         Row(
           children: [
             Expanded(
-              child: OutlinedButton.icon(
+              child: ClayButton(
+                label: 'Reset',
+                icon: Icons.refresh,
+                style: ClayButtonStyle.neutral,
                 onPressed: _reset,
-                icon: const Icon(Icons.refresh),
-                label: const Text('Reset'),
-                style: OutlinedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                ),
+                isExpanded: true,
               ),
             ),
             const SizedBox(width: 16),
             Expanded(
-              child: FilledButton.icon(
+              child: ClayButton(
+                label: 'Check',
+                icon: Icons.check_circle,
+                style: _isLastCorrect == true ? ClayButtonStyle.secondary : ClayButtonStyle.primary,
                 onPressed: _selectedWords.isEmpty ? null : _check,
-                icon: const Icon(Icons.check_circle_outline),
-                label: const Text('Check Answer'),
-                style: FilledButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  backgroundColor: _isLastCorrect == true ? Colors.green : null,
-                ),
+                isExpanded: true,
               ),
             ),
           ],
@@ -142,12 +139,12 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
   }
 }
 
-class _WordTile extends StatelessWidget {
+class _ClayWordTile extends StatelessWidget {
   final String word;
   final VoidCallback onTap;
   final bool isSelected;
 
-  const _WordTile({
+  const _ClayWordTile({
     required this.word,
     required this.onTap,
     required this.isSelected,
@@ -157,37 +154,13 @@ class _WordTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        decoration: BoxDecoration(
-          color: isSelected 
-              ? Theme.of(context).colorScheme.primaryContainer 
-              : Theme.of(context).colorScheme.surface,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: isSelected 
-                ? Theme.of(context).colorScheme.primary 
-                : Theme.of(context).colorScheme.outline,
-          ),
-          boxShadow: isSelected ? null : [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
-              blurRadius: 4,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        child: Text(
-          word,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-            color: isSelected 
-                ? Theme.of(context).colorScheme.onPrimaryContainer 
-                : Theme.of(context).colorScheme.onSurface,
-          ),
-        ),
+      child: ClayButton(
+        label: word,
+        onPressed: onTap,
+        style: isSelected ? ClayButtonStyle.primary : ClayButtonStyle.neutral,
       ),
     );
   }
 }
+
+

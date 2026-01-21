@@ -54,7 +54,7 @@ class _ClayButtonState extends State<ClayButton> {
     final borderColor = baseColor == Colors.white ? AppThemeV2.neutral : depthColor;
 
     // When pressed, we translate Y by 4px and remove shadow to simulate depression
-    final double offset = _isPressed ? 4.0 : 0.0;
+
     
     Widget content = Row(
       mainAxisAlignment: MainAxisAlignment.center,

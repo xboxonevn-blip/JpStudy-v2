@@ -164,16 +164,21 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard>
   Widget _buildCard(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 400,
+      height: 480, // Slightly taller for emphasis
       margin: const EdgeInsets.symmetric(horizontal: 20),
+      // Mimic ClayCard decoration
       decoration: BoxDecoration(
-        color: Theme.of(context).cardColor,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(24),
+        border: Border.all(
+          color: const Color(0xFFE5E7EB), // Neutral 200
+          width: 3,
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
-            blurRadius: 20,
-            offset: const Offset(0, 10),
+            color: const Color(0xFFE5E7EB),
+            offset: const Offset(0, 8), // Deeper shadow for main card
+            blurRadius: 0, // Sharp clay style
           ),
         ],
       ),

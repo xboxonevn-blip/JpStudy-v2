@@ -38,14 +38,14 @@ class AppThemeV2 {
         ),
         iconTheme: IconThemeData(color: textMain),
       ),
-      cardTheme: CardTheme(
-        color: Colors.white,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: neutral, width: 2),
-        ),
-      ),
+      // cardTheme: CardTheme(
+      //   color: Colors.white,
+      //   elevation: 0,
+      //   // shape: RoundedRectangleBorder(
+      //   //   borderRadius: BorderRadius.circular(16),
+      //   //   side: BorderSide(color: neutral, width: 2),
+      //   // ),
+      // ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: primary,

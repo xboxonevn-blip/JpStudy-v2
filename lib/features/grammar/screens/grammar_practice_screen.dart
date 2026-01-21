@@ -6,6 +6,8 @@ import '../../../data/db/app_database.dart';
 import '../widgets/sentence_builder_widget.dart';
 import '../widgets/cloze_test_widget.dart';
 import '../services/grammar_question_generator.dart';
+import '../../../theme/app_theme_v2.dart';
+import '../../common/widgets/clay_button.dart';
 
 class GrammarPracticeScreen extends ConsumerStatefulWidget {
   final List<int>? initialIds; // Optional: practice specific points
@@ -138,16 +140,24 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
 
     if (_questions.isEmpty) {
        return Scaffold(
-         appBar: AppBar(),
+         appBar: AppBar(backgroundColor: Colors.transparent, elevation: 0),
          body: Center(
            child: Column(
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-               const Icon(Icons.sentiment_satisfied_alt, size: 64, color: Colors.blue),
+               Icon(Icons.sentiment_satisfied_alt, size: 80, color: AppThemeV2.primary),
                const SizedBox(height: 16),
-               const Text('Zero items due for review!', style: TextStyle(fontSize: 18)),
-               const SizedBox(height: 24),
-               ElevatedButton(onPressed: () => context.pop(), child: const Text('Go Back')),
+               Text('Zero items due for review!', style: TextStyle(fontSize: 18, color: AppThemeV2.textSub, fontWeight: FontWeight.bold)),
+               const SizedBox(height: 32),
+               SizedBox(
+                 width: 200,
+                 child: ClayButton(
+                   label: 'GO BACK',
+                   onPressed: () => context.pop(),
+                   style: ClayButtonStyle.secondary,
+                   isExpanded: true,
+                 ),
+               ),
              ],
            ),
          ),
@@ -155,27 +165,67 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     }
 
     final q = _questions[_currentIndex];
+    final progress = (_currentIndex + 1) / _questions.length;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Practice ${(_currentIndex + 1)}/${_questions.length}'),
-        leading: IconButton(icon: const Icon(Icons.close), onPressed: () => context.pop()),
+        centerTitle: true,
+        title: Text(
+          'PRACTICE',
+          style: TextStyle(
+            color: AppThemeV2.textSub,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 1.2,
+            fontSize: 16,
+          ),
+        ),
+        leading: IconButton(
+          icon: Icon(Icons.close_rounded, color: AppThemeV2.textSub), 
+          onPressed: () => context.pop(),
+        ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 8,
-              child: LinearProgressIndicator(
-                value: (_currentIndex + 1) / _questions.length,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
+          child: Column(
+            children: [
+              _buildProgressBar(progress),
+              const SizedBox(height: 32),
+              Expanded(
+                child: _buildQuestionContent(q),
               ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildProgressBar(double progress) {
+    return Container(
+      height: 24,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: AppThemeV2.neutral,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: FractionallySizedBox(
+        alignment: Alignment.centerLeft,
+        widthFactor: progress,
+        child: Container(
+          decoration: BoxDecoration(
+            color: AppThemeV2.secondary,
+            borderRadius: BorderRadius.circular(12),
+            // Highlight
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.white.withValues(alpha: 0.3),
+                Colors.white.withValues(alpha: 0.0),
+              ],
             ),
-            const SizedBox(height: 32),
-            Expanded(
-              child: _buildQuestionContent(q),
-            ),
-          ],
+          ),
         ),
       ),
     );

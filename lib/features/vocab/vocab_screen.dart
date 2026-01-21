@@ -9,6 +9,9 @@ import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/content_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/vocab/widgets/flashcard_widget.dart';
+import '../common/widgets/clay_button.dart';
+import '../common/widgets/clay_card.dart';
+import '../../theme/app_theme_v2.dart';
 
 class VocabScreen extends ConsumerStatefulWidget {
   const VocabScreen({super.key});
@@ -28,19 +31,23 @@ class _VocabScreenState extends ConsumerState<VocabScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('${language.vocabTitle}$levelSuffix'),
         actions: [
           if (level != null)
-            IconButton(
-              icon: Icon(_isFlashcardMode ? Icons.list : Icons.style),
-              tooltip: _isFlashcardMode
-                  ? 'Switch to List View'
-                  : 'Switch to Flashcards',
-              onPressed: () {
-                setState(() {
-                  _isFlashcardMode = !_isFlashcardMode;
-                });
-              },
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: IconButton(
+                icon: Icon(_isFlashcardMode ? Icons.list_rounded : Icons.style_rounded),
+                tooltip: _isFlashcardMode
+                    ? 'Switch to List View'
+                    : 'Switch to Flashcards',
+                onPressed: () {
+                  setState(() {
+                    _isFlashcardMode = !_isFlashcardMode;
+                  });
+                },
+              ),
             ),
         ],
       ),
@@ -90,21 +97,13 @@ class _VocabContent extends ConsumerWidget {
         return Column(
           children: [
             if (dueTermsAsync.hasValue && dueTermsAsync.value!.isNotEmpty)
-              Container(
-                width: double.infinity,
+              Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: ElevatedButton.icon(
-                  icon: const Icon(Icons.rate_review),
-                  label: Text(
-                      '${language.reviewAction} (${dueTermsAsync.value!.length})'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    backgroundColor: Theme.of(context).primaryColor,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
+                child: ClayButton(
+                  label: '${language.reviewAction} (${dueTermsAsync.value!.length})',
+                  icon: Icons.rate_review,
+                  style: ClayButtonStyle.primary,
+                  isExpanded: true,
                   onPressed: () => context.push('/vocab/review'),
                 ),
               ),
@@ -131,28 +130,41 @@ class _ListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return ListView.builder(
       padding: const EdgeInsets.all(16),
-      children: [
-        Text(
-          language.vocabPreviewTitle,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
-        ),
-        const SizedBox(height: 12),
-        for (final item in items)
-          Card(
-            margin: const EdgeInsets.only(bottom: 12),
+      itemCount: items.length + 1, // Title + items
+      itemBuilder: (context, index) {
+        if (index == 0) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Text(
+              language.vocabPreviewTitle,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+            ),
+          );
+        }
+        final item = items[index - 1];
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 12),
+          child: ClayCard(
+           color: Colors.white,
+           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             child: ListTile(
-              title: Text(item.term),
+              contentPadding: EdgeInsets.zero,
+              title: Text(
+                item.term,
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
               subtitle: Text(
                 item.reading == null || item.reading!.isEmpty
                     ? (language == AppLanguage.en ? (item.meaningEn ?? item.meaning) : item.meaning)
                     : '${item.reading} • ${language == AppLanguage.en ? (item.meaningEn ?? item.meaning) : item.meaning}',
+                style: TextStyle(color: AppThemeV2.textSub),
               ),
-              // Audio speaker icon removed - TTS disabled
             ),
           ),
-      ],
+        );
+      },
     );
   }
 }
@@ -185,22 +197,24 @@ class _FlashcardViewState extends ConsumerState<_FlashcardView> {
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
+    final progress = (_currentIndex + 1) / widget.items.length;
     
     return Column(
       children: [
-        const SizedBox(height: 20),
+        const SizedBox(height: 12),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: LinearProgressIndicator(
-            value: (_currentIndex + 1) / widget.items.length,
-            borderRadius: BorderRadius.circular(4),
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: _buildProgressBar(progress),
         ),
         const SizedBox(height: 8),
         Text(
           '${_currentIndex + 1} / ${widget.items.length}',
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+            color: AppThemeV2.textSub,
+            fontWeight: FontWeight.bold,
+          ),
         ),
+        const SizedBox(height: 12),
         Expanded(
           child: PageView.builder(
             controller: _pageController,
@@ -212,7 +226,7 @@ class _FlashcardViewState extends ConsumerState<_FlashcardView> {
             },
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: Center(
                   child: FlashcardWidget(
                     item: widget.items[index],
@@ -225,6 +239,35 @@ class _FlashcardViewState extends ConsumerState<_FlashcardView> {
         ),
         const SizedBox(height: 20),
       ],
+    );
+  }
+
+  Widget _buildProgressBar(double progress) {
+    return Container(
+      height: 16,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: AppThemeV2.neutral,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: FractionallySizedBox(
+        alignment: Alignment.centerLeft,
+        widthFactor: progress,
+        child: Container(
+          decoration: BoxDecoration(
+            color: AppThemeV2.secondary,
+            borderRadius: BorderRadius.circular(12),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.white.withValues(alpha: 0.3),
+                Colors.white.withValues(alpha: 0.0),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

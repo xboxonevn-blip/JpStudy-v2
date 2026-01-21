@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import '../../common/widgets/clay_button.dart';
+import '../../common/widgets/clay_card.dart';
+import '../../../theme/app_theme_v2.dart';
 
 class ClozeTestWidget extends StatefulWidget {
   final String sentenceTemplate; // e.g., "私は {blank} です。"
@@ -45,107 +48,84 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
     return Column(
       children: [
         // Sentence Display
-        Container(
+        ClayCard(
+          color: Colors.white,
           padding: const EdgeInsets.all(24),
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              style: Theme.of(context).textTheme.headlineSmall?.copyWith(height: 1.5),
-              children: [
-                TextSpan(text: parts[0]),
-                WidgetSpan(
-                  alignment: PlaceholderAlignment.middle,
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 8),
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                    decoration: BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(
+          child: SizedBox(
+            width: double.infinity,
+            child: RichText(
+              textAlign: TextAlign.center,
+              text: TextSpan(
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  height: 1.5,
+                  color: AppThemeV2.textMain,
+                  fontWeight: FontWeight.w600,
+                ),
+                children: [
+                  TextSpan(text: parts[0]),
+                  WidgetSpan(
+                    alignment: PlaceholderAlignment.middle,
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      margin: const EdgeInsets.symmetric(horizontal: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: _isCorrect == null 
+                            ? AppThemeV2.neutral.withValues(alpha: 0.5) 
+                            : (_isCorrect! ? AppThemeV2.secondary.withValues(alpha: 0.2) : AppThemeV2.error.withValues(alpha: 0.2)),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
                           color: _isCorrect == null 
-                              ? Theme.of(context).colorScheme.primary 
-                              : (_isCorrect! ? Colors.green : Colors.red),
+                              ? AppThemeV2.primary 
+                              : (_isCorrect! ? AppThemeV2.secondary : AppThemeV2.error),
                           width: 2,
                         ),
                       ),
-                    ),
-                    child: Text(
-                      _selectedOption ?? " ",
-                      style: TextStyle(
-                        color: _isCorrect == null 
-                            ? Theme.of(context).colorScheme.primary 
-                            : (_isCorrect! ? Colors.green : Colors.red),
-                        fontWeight: FontWeight.bold,
+                      child: Text(
+                        _selectedOption ?? "   ?   ",
+                        style: TextStyle(
+                          color: _isCorrect == null 
+                              ? AppThemeV2.primary 
+                              : (_isCorrect! ? AppThemeV2.secondary : AppThemeV2.error),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                if (parts.length > 1) TextSpan(text: parts[1]),
-              ],
+                  if (parts.length > 1) TextSpan(text: parts[1]),
+                ],
+              ),
             ),
           ),
         ),
-        const SizedBox(height: 48),
+        const SizedBox(height: 32),
         // Options List
         Column(
           children: widget.options.asMap().entries.map((entry) {
             final option = entry.value;
             final isSelected = _selectedOption == option;
             
-            Color? tileColor;
+            ClayButtonStyle style = ClayButtonStyle.neutral;
             if (isSelected) {
-              if (_isCorrect == null) {
-                tileColor = Theme.of(context).colorScheme.primaryContainer;
-              } else {
-                tileColor = _isCorrect! ? Colors.green[100] : Colors.red[100];
-              }
+               style = ClayButtonStyle.primary;
+               if (_isCorrect != null) {
+                 style = _isCorrect! ? ClayButtonStyle.secondary : ClayButtonStyle.tertiary; // Use Tertiary (Orange) for error instead of Red if unavailable, or just Primary
+                 // Actually passing custom colors to ClayButton isn't supported yet, but we have secondary/tertiary.
+                 if (!_isCorrect!) style = ClayButtonStyle.tertiary; // Use Orange for error/warning
+               }
             }
 
             return Padding(
               padding: const EdgeInsets.only(bottom: 12),
-              child: InkWell(
-                onTap: () => _onOptionSelected(option),
-                borderRadius: BorderRadius.circular(12),
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-                  decoration: BoxDecoration(
-                    color: tileColor ?? Theme.of(context).colorScheme.surface,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      color: isSelected 
-                          ? (_isCorrect == null ? Theme.of(context).colorScheme.primary : (_isCorrect! ? Colors.green : Colors.red))
-                          : Theme.of(context).colorScheme.outlineVariant,
-                      width: isSelected ? 2 : 1,
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 32,
-                        height: 32,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Theme.of(context).colorScheme.outline),
-                        ),
-                        child: Center(child: Text("${entry.key + 1}")),
-                      ),
-                      const SizedBox(width: 16),
-                      Text(
-                        option,
-                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                      ),
-                      const Spacer(),
-                      if (isSelected && _isCorrect != null)
-                        Icon(
-                          _isCorrect! ? Icons.check_circle : Icons.cancel,
-                          color: _isCorrect! ? Colors.green : Colors.red,
-                        ),
-                    ],
-                  ),
+              child: SizedBox(
+                width: double.infinity,
+                child: ClayButton(
+                  label: option,
+                  onPressed: () => _onOptionSelected(option),
+                  style: style,
+                  icon: isSelected ? Icons.radio_button_checked : Icons.radio_button_unchecked,
+                  isExpanded: true,
                 ),
               ).animate().slideX(begin: 0.1, duration: 300.ms, delay: 50.ms * entry.key).fadeIn(),
             );
@@ -155,13 +135,11 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
         // Actions
         SizedBox(
           width: double.infinity,
-          child: FilledButton(
+          child: ClayButton(
+            label: 'CHECK ANSWER',
             onPressed: _selectedOption == null || _isCorrect != null ? null : _check,
-            style: FilledButton.styleFrom(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            ),
-            child: const Text('CHECK ANSWER', style: TextStyle(letterSpacing: 1.2, fontWeight: FontWeight.bold)),
+            isExpanded: true,
+            style: ClayButtonStyle.secondary, // Green for action
           ),
         ),
       ],

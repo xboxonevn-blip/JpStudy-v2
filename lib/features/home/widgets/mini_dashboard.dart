@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/dashboard_provider.dart';
+import '../../common/widgets/clay_card.dart';
+import '../../../theme/app_theme_v2.dart';
 
 class MiniDashboard extends ConsumerWidget {
   const MiniDashboard({super.key});
@@ -11,72 +13,52 @@ class MiniDashboard extends ConsumerWidget {
 
     return dashboardAsync.when(
       data: (state) => _buildContent(context, state),
-      loading: () => const SizedBox(height: 100, child: Center(child: CircularProgressIndicator())),
+      loading: () => const SizedBox(height: 80, child: Center(child: CircularProgressIndicator())),
       error: (err, stack) => const SizedBox.shrink(),
     );
   }
 
   Widget _buildContent(BuildContext context, DashboardState state) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: Theme.of(context).colorScheme.outlineVariant.withValues(alpha: 0.5),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: ClayCard(
+        color: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _buildStatItem(
+              context,
+              icon: Icons.local_fire_department_rounded,
+              color: AppThemeV2.tertiary,
+              value: '${state.streak}',
+              label: 'Streak',
+            ),
+            _buildStatItem(
+              context,
+              icon: Icons.star_rounded,
+              color: const Color(0xFFFFC800),
+              value: '${state.todayXp}',
+              label: 'XP',
+            ),
+            _buildStatItem(
+              context,
+              icon: Icons.school_rounded,
+              color: AppThemeV2.primary,
+              value: '${state.vocabDue + state.grammarDue}',
+              label: 'Reviews',
+            ),
+            if (state.mistakeCount > 0)
+              _buildStatItem(
+                context,
+                icon: Icons.error_outline_rounded,
+                color: AppThemeV2.error,
+                value: '${state.mistakeCount}',
+                label: 'Mistakes',
+              ),
+          ],
         ),
       ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildStatItem(
-                context,
-                icon: Icons.local_fire_department_rounded,
-                color: Colors.orange,
-                value: '${state.streak}',
-                label: 'Streak',
-              ),
-              _buildVerticalDivider(context),
-              _buildStatItem(
-                context,
-                icon: Icons.star_rounded,
-                color: Colors.amber,
-                value: '${state.todayXp}',
-                label: 'Today XP',
-              ),
-              _buildVerticalDivider(context),
-              _buildStatItem(
-                context,
-                icon: Icons.school_rounded,
-                color: Colors.blue,
-                value: '${state.vocabDue + state.grammarDue}',
-                label: 'Reviews',
-              ),
-              if (state.mistakeCount > 0) ...[
-                _buildVerticalDivider(context),
-                 _buildStatItem(
-                  context,
-                  icon: Icons.error_outline_rounded,
-                  color: Colors.redAccent,
-                  value: '${state.mistakeCount}',
-                  label: 'Mistakes',
-                ),
-              ]
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildVerticalDivider(BuildContext context) {
-    return Container(
-      height: 32,
-      width: 1,
-      color: Theme.of(context).colorScheme.outlineVariant,
     );
   }
 
@@ -87,28 +69,36 @@ class MiniDashboard extends ConsumerWidget {
     required String value,
     required String label,
   }) {
-    return Expanded(
-      child: Column(
-        children: [
-          Icon(icon, color: color, size: 24),
-          const SizedBox(height: 4),
-          Text(
-            value,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+         Container(
+           padding: const EdgeInsets.all(8),
+           decoration: BoxDecoration(
+             color: color.withValues(alpha: 0.1),
+             shape: BoxShape.circle,
+           ),
+           child: Icon(icon, color: color, size: 20),
+         ),
+        const SizedBox(height: 6),
+        Text(
+          value,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w800,
+            color: AppThemeV2.textMain,
           ),
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 11,
-              color: Theme.of(context).colorScheme.onSurfaceVariant,
-            ),
-            textAlign: TextAlign.center,
+        ),
+        Text(
+          label.toUpperCase(),
+          style: TextStyle(
+            fontSize: 10,
+            fontWeight: FontWeight.bold,
+            color: AppThemeV2.textSub,
+            letterSpacing: 0.5,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

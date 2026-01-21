@@ -45,7 +45,7 @@ class LessonNodeWidget extends StatelessWidget {
     // Locked nodes are flat, Active nodes have depth
     final double depth = node.isLocked ? 0 : 6.0;
 
-    return Container(
+    return SizedBox(
       width: size,
       height: size + depth, // Add space for the 3D bottom part
       child: Stack(

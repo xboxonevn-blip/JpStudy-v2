@@ -83,15 +83,19 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
   Widget _buildCardBase({required Widget child, required Color color}) {
     return Container(
       width: double.infinity,
-      height: 300,
+      height: 480, // Match EnhancedFlashcard height
       decoration: BoxDecoration(
-        color: color,
+        color: Colors.white, // Always white for Clay style usually, or color param
         borderRadius: BorderRadius.circular(24),
+        border: Border.all(
+          color: const Color(0xFFE5E7EB), // Neutral 200
+          width: 3,
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
-            blurRadius: 12,
-            offset: const Offset(0, 6),
+            color: const Color(0xFFE5E7EB),
+            offset: const Offset(0, 8),
+            blurRadius: 0,
           ),
         ],
       ),

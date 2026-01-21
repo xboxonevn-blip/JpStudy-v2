@@ -41,20 +41,24 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 
 ### 2.0 Global UX Upgrade (Giữ chân người dùng toàn app) — NEW ✅
 
-#### 2.0.1 “Continue Button” (Auto Next Best Action) — HIGH IMPACT
+#### 2.0.1 “Continue Button” (Auto Next Best Action) — COMPLETED ✅
 *   Thêm **Continue** ở Path/Home/Lesson.
 *   **Ưu tiên:** Grammar Due > Vocab Due > Kanji Due > Practice Mixed > Next Lesson.
 *   Hiển thị rõ: *“Continue: Grammar Review (5) / Fix Mistakes (2)…”*
 
-#### 2.0.2 Mini Dashboard (Header card) — HIGH
+#### 2.0.2 Mini Dashboard (Header card) — COMPLETED ✅
 *   Daily goal (5–10 phút/ngày) + Streak + Due counters.
 *   Due: Flashcards X | Grammar Y | Kanji Z.
 *   Reward sau session: XP + streak + mastery tăng.
 
-#### 2.0.3 Mistake Bank (Kho lỗi) — HIGH
+#### 2.0.3 Mistake Bank (Kho lỗi) — COMPLETED ✅
 *   Mọi câu sai (Review/Practice) → tự vào **Mistake Bank**.
 *   Tab “Fix Mistakes (n)” trong từng module và/hoặc dashboard.
 *   Rule clear: đúng 2 lần liên tiếp → remove.
+
+#### 2.0.4 Vocab SRS Global Review — COMPLETED ✅
+*   Ôn tập từ vựng toàn diện (Global).
+*   Màn hình ôn tập chuyên biệt với 4 mức độ (Again, Hard, Good, Easy).
 
 ### 2.1 Grammar System (Ngữ pháp) — ACTIVE (đã nâng cấp roadmap) ✅
 
@@ -113,6 +117,10 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 #### 2.3.3 Continue từ Path
 *   Continue dẫn thẳng đến session đúng nhất (Grammar due, Mistakes…).
 
+### 2.4 Data Safety (An toàn dữ liệu) — CRITICAL NEW
+*   **Import/Export:** Sao lưu toàn bộ tiến độ (database + preferences) ra file `.zip` hoặc `.json`.
+*   **Auto Backup:** Tự động backup cục bộ định kỳ.
+
 ---
 
 ## 📅 Phase 3: Immersion (Đọc hiểu & Thực tế) — kế hoạch
@@ -143,9 +151,9 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 
 1.  ✅ **Continue Button + Auto Next Best Action**
 2.  ✅ **Grammar Review (Ghost Reviews)** dạng session + MCQ mini
-3.  ✅ **Practice Mixed + Word Bank Fill blank**
+3.  ✅ **Data Safety (Backup/Restore)**
 4.  ✅ **Mistake Bank** (Fix Mistakes tab + rule clear)
-5.  ✅ **Path node states + preview + Continue**
+5.  ✅ **Mini Dashboard** (Streak + Due counts)
 
 *Sau đó mới đến:*
 *   Kanji Stroke Order

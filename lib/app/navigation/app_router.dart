@@ -9,6 +9,7 @@ import 'package:jpstudy/features/lesson/lesson_edit_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_practice_screen.dart';
 import 'package:jpstudy/features/progress/progress_screen.dart';
 import 'package:jpstudy/features/vocab/vocab_screen.dart';
+import 'package:jpstudy/features/vocab/screens/term_review_screen.dart';
 import 'package:jpstudy/features/games/match_game/match_game_screen.dart';
 import 'package:jpstudy/features/games/match_game/lesson_match_screen.dart';
 import 'package:jpstudy/features/learn/integration/learn_mode_integration.dart';
@@ -27,6 +28,10 @@ class AppRouter {
       GoRoute(
         path: '/vocab',
         builder: (context, state) => const VocabScreen(),
+      ),
+      GoRoute(
+        path: '/vocab/review',
+        builder: (context, state) => const TermReviewScreen(),
       ),
       GoRoute(
         path: '/grammar',

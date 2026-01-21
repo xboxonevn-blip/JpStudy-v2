@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/content_repository.dart';
+import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/vocab/widgets/flashcard_widget.dart';
 
 class VocabScreen extends ConsumerStatefulWidget {
@@ -67,6 +69,8 @@ class _VocabContent extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final vocabAsync = ref.watch(vocabPreviewProvider(level.shortLabel));
+    final dueTermsAsync = ref.watch(allDueTermsProvider);
+
     return vocabAsync.when(
       data: (dataItems) {
         if (dataItems.isEmpty) {
@@ -83,10 +87,34 @@ class _VocabContent extends ConsumerWidget {
           level: e.level,
         )).toList();
 
-        if (isFlashcardMode) {
-          return _FlashcardView(items: items);
-        }
-        return _ListView(items: items, language: language);
+        return Column(
+          children: [
+            if (dueTermsAsync.hasValue && dueTermsAsync.value!.isNotEmpty)
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16.0),
+                child: ElevatedButton.icon(
+                  icon: const Icon(Icons.rate_review),
+                  label: Text(
+                      '${language.reviewAction} (${dueTermsAsync.value!.length})'),
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    backgroundColor: Theme.of(context).primaryColor,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  onPressed: () => context.push('/vocab/review'),
+                ),
+              ),
+            Expanded(
+              child: isFlashcardMode
+                  ? _FlashcardView(items: items)
+                  : _ListView(items: items, language: language),
+            ),
+          ],
+        );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
       error: (error, stackTrace) =>

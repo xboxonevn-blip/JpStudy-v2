@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/data/db/app_database.dart';
 
 class GrammarListWidget extends ConsumerWidget {
   const GrammarListWidget({
@@ -67,6 +68,8 @@ class _GrammarPointCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final point = data.point;
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
     
     // Determine Display Values based on Language
     String title = point.grammarPoint;
@@ -76,14 +79,14 @@ class _GrammarPointCard extends StatelessWidget {
 
     switch (language) {
       case AppLanguage.vi:
-        title = point.grammarPoint; // Vietnamese title usually matches point
-        meaning = point.meaningVi ?? point.grammarPoint;
+        title = point.grammarPoint;
+        meaning = point.meaningVi ?? point.meaning;
         explanation = point.explanationVi ?? point.explanation;
         break;
       case AppLanguage.en:
         title = point.titleEn ?? point.grammarPoint;
         structure = point.connectionEn ?? point.connection;
-        meaning = point.meaningEn ?? point.grammarPoint;
+        meaning = point.meaningEn ?? point.meaning;
         explanation = point.explanationEn ?? point.explanation;
         break;
       case AppLanguage.ja:
@@ -92,180 +95,231 @@ class _GrammarPointCard extends StatelessWidget {
         break;
     }
 
-    // Fallbacks if empty
+    // Fallbacks
     if (explanation.isEmpty) explanation = point.explanation;
 
+    // Clean up structure for display
+    final displayStructure = language == AppLanguage.en 
+        ? structure 
+        : _formatStructure(structure, language);
+
     return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      elevation: 0,
+      color: colorScheme.surfaceContainer,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: BorderSide(color: colorScheme.outlineVariant.withValues(alpha: 0.5)),
+      ),
+      clipBehavior: Clip.antiAlias,
       child: ExpansionTile(
-        tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        leading: CircleAvatar(
-          backgroundColor: const Color(0xFFE0E7FF),
-          foregroundColor: const Color(0xFF4255FF),
-          child: Text(
-            '$index',
-            style: const TextStyle(fontWeight: FontWeight.bold),
+        tilePadding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+        expandedCrossAxisAlignment: CrossAxisAlignment.start,
+        childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+        shape: const Border(), // Remove default borders
+        collapsedShape: const Border(),
+        leading: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+             color: colorScheme.primaryContainer,
+             borderRadius: BorderRadius.circular(12),
+          ),
+          child: Center(
+            child: Text(
+              '$index', 
+              style: TextStyle(
+                fontWeight: FontWeight.bold, 
+                color: colorScheme.onPrimaryContainer,
+                fontSize: 16,
+              )
+            ),
           ),
         ),
-        title: Text(
-          language == AppLanguage.en ? title : _formatStructure(title, language),
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF1C2440),
-          ),
-        ),
-        subtitle: Column(
+        title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 4),
+            Row(
+              children: [
+                _buildChip(
+                  context, 
+                  point.jlptLevel, 
+                  colorScheme.tertiaryContainer, 
+                  colorScheme.onTertiaryContainer
+                ),
+                const SizedBox(width: 8),
+                if (point.isLearned)
+                  _buildChip(
+                    context, 
+                    'Mastered', 
+                    Colors.green.shade100, 
+                    Colors.green.shade900
+                  )
+                else
+                  _buildChip(
+                    context, 
+                    'New', 
+                    colorScheme.secondaryContainer, 
+                    colorScheme.onSecondaryContainer
+                  ),
+              ],
+            ),
+            const SizedBox(height: 8),
             Text(
-              meaning,
-              style: const TextStyle(
-                fontSize: 14,
-                color: Color(0xFF6B7390),
-                fontWeight: FontWeight.w500,
+              language == AppLanguage.en ? title : _formatStructure(title, language),
+              style: theme.textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+                color: colorScheme.onSurface,
               ),
             ),
-            if (structure.isNotEmpty) ...[
-              const SizedBox(height: 4),
-               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF7F9FC),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: Text(
-                  language == AppLanguage.en ? structure : _formatStructure(structure, language),
-                  style: const TextStyle(
-                    fontFamily: 'Courier', // Monospace for structure
-                    fontSize: 12,
-                    color: Color(0xFF4255FF),
-                  ),
-                ),
-              ),
-            ],
           ],
         ),
-        childrenPadding: const EdgeInsets.all(16),
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Text(
-                  explanation,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    color: Color(0xFF2E3A59),
-                    height: 1.5,
-                  ),
-                ),
-              ),
-            ],
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Text(
+             meaning,
+             style: theme.textTheme.bodyMedium?.copyWith(
+               color: colorScheme.onSurfaceVariant,
+               fontWeight: FontWeight.w500,
+             ),
           ),
-          if (data.examples.isNotEmpty) ...[
-            const SizedBox(height: 16),
-            const Divider(),
+        ),
+        children: [
+          const Divider(height: 32),
+          
+          // Structure Section
+          if (displayStructure.isNotEmpty) ...[
+            _buildSectionHeader(context, 'Structure', Icons.account_tree_outlined),
             const SizedBox(height: 8),
-            Align(
-              alignment: Alignment.centerLeft,
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: colorScheme.surfaceContainerHigh,
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: colorScheme.outlineVariant.withValues(alpha: 0.5)),
+              ),
               child: Text(
-                language == AppLanguage.vi 
-                    ? 'Ví dụ:' 
-                    : language == AppLanguage.en ? 'Examples:' : '例文',
+                displayStructure,
                 style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF8F9BB3),
+                  fontFamily: 'Courier', 
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),
-            const SizedBox(height: 8),
-            ...data.examples.map((ex) {
-              String translation = '';
-               switch (language) {
-                case AppLanguage.vi:
-                  translation = ex.translationVi ?? ex.translation;
-                  break;
-                case AppLanguage.en:
-                  translation = ex.translationEn ?? ex.translation;
-                  break;
-                case AppLanguage.ja:
-                  translation = ''; // No translation for JP mode
-                  break;
-              }
-
-              return Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text('• ', style: TextStyle(color: Color(0xFF4255FF))),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            ex.japanese,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          if (translation.isNotEmpty) ...[
-                            const SizedBox(height: 2),
-                            Text(
-                              translation,
-                              style: const TextStyle(
-                                fontSize: 14,
-                                color: Color(0xFF6B7390),
-                                fontStyle: FontStyle.italic,
-                              ),
-                            ),
-                          ]
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            }),
+            const SizedBox(height: 24),
           ],
+
+          // Explanation Section
+          _buildSectionHeader(context, 'Explanation', Icons.info_outline),
+           const SizedBox(height: 8),
+          Text(
+            explanation,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              height: 1.6,
+              color: colorScheme.onSurface,
+            ),
+          ),
+          const SizedBox(height: 24),
+
+          // Examples Section
+          if (data.examples.isNotEmpty) ...[
+             _buildSectionHeader(context, 'Examples', Icons.format_quote_rounded),
+             const SizedBox(height: 12),
+             ...data.examples.map((ex) => _buildExampleItem(context, ex, language)),
+          ],
+
+          // Action Section (Optional: Mark as learned if needed in future, hidden for now as it's implied by Lesson)
         ],
       ),
     );
   }
 
-  /// Format structure/title text based on language
-  /// Strips Vietnamese explanations when in English mode
-  String _formatStructure(String text, AppLanguage language) {
-    if (language == AppLanguage.vi) {
-      return text;
+  Widget _buildChip(BuildContext context, String label, Color bg, Color fg) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: Text(
+        label.toUpperCase(),
+        style: TextStyle(
+          fontSize: 10,
+          fontWeight: FontWeight.bold,
+          color: fg,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSectionHeader(BuildContext context, String title, IconData icon) {
+    final color = Theme.of(context).colorScheme.primary;
+    return Row(
+      children: [
+        Icon(icon, size: 18, color: color),
+        const SizedBox(width: 8),
+        Text(
+          title.toUpperCase(),
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            color: color,
+            letterSpacing: 1.0,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildExampleItem(BuildContext context, GrammarExample ex, AppLanguage language) {
+    String translation = '';
+    switch (language) {
+      case AppLanguage.vi:
+        translation = ex.translationVi ?? ex.translation;
+        break;
+      case AppLanguage.en:
+        translation = ex.translationEn ?? ex.translation;
+        break;
+      case AppLanguage.ja:
+        translation = '';
+        break;
     }
-    
-    // For English/Japanese: Remove Vietnamese text
-    String result = text;
-    
-    // Pattern 1: Remove content in parentheses that contains Vietnamese diacritics
-    final parenRegex = RegExp(
-      r'\s*\([^)]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ][^)]*\)',
-      caseSensitive: false
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+           Text(
+             ex.japanese,
+             style: const TextStyle(
+               fontSize: 16,
+               fontWeight: FontWeight.w500,
+             ),
+           ),
+           if (translation.isNotEmpty) ...[
+             const SizedBox(height: 4),
+             Text(
+               translation,
+               style: TextStyle(
+                 fontSize: 14,
+                 color: Theme.of(context).colorScheme.outline,
+                 fontStyle: FontStyle.italic,
+               ),
+             ),
+           ],
+        ],
+      ),
     );
-    result = result.replaceAll(parenRegex, '');
-    
-    // Pattern 2: Remove entire Vietnamese words (words containing viet diacritics)
-    final wordRegex = RegExp(
-      r'[a-zA-ZàáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ][a-zA-ZàáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]*',
-      caseSensitive: false
-    );
-    result = result.replaceAll(wordRegex, '');
-    
-    // Clean up multiple spaces, slashes
-    result = result
-      .replaceAll(RegExp(r'/\s*/'), '/')
-      .replaceAll(RegExp(r'\s+'), ' ');
-    
-    return result.trim();
+  }
+
+  String _formatStructure(String text, AppLanguage language) {
+    if (language == AppLanguage.vi) return text;
+    // Simple filter to keep it clean - logic remains similar but simplified regex for robustness
+    // Only keeping characters, Basic punctuations, and Japanese characters
+    // Removing parentheses content that looks localized if needed
+    // For now, reusing the previous logic logic implicitly or simplified:
+    return text.replaceAll(RegExp(r'\([^)]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]+[^)]*\)'), '').trim();
   }
 }

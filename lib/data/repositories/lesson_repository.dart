@@ -49,6 +49,11 @@ final lessonDueTermsProvider =
   return repo.fetchDueTerms(lessonId);
 });
 
+final allDueTermsProvider = FutureProvider<List<UserLessonTermData>>((ref) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchAllDueTerms();
+});
+
 final progressSummaryProvider = FutureProvider<ProgressSummary>((ref) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchProgressSummary();
@@ -939,14 +944,16 @@ class LessonRepository {
     var easyDelta = 0;
     switch (quality) {
       case 0:
+      case 1:
         againDelta = 1;
         break;
-      case 3:
+      case 2:
         hardDelta = 1;
         break;
-      case 4:
+      case 3:
         goodDelta = 1;
         break;
+      case 4:
       case 5:
         easyDelta = 1;
         break;
@@ -1244,6 +1251,22 @@ class LessonRepository {
       ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now))
       ..orderBy([
         OrderingTerm(expression: _db.userLessonTerm.orderIndex),
+      ]);
+    return query.map((row) => row.readTable(_db.userLessonTerm)).get();
+  }
+
+  Future<List<UserLessonTermData>> fetchAllDueTerms() {
+    final now = DateTime.now();
+    final query = _db.select(_db.userLessonTerm).join([
+      innerJoin(
+        _db.srsState,
+        _db.srsState.vocabId.equalsExp(_db.userLessonTerm.id),
+      ),
+    ]);
+    query
+      ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now))
+      ..orderBy([
+        OrderingTerm(expression: _db.srsState.nextReviewAt),
       ]);
     return query.map((row) => row.readTable(_db.userLessonTerm)).get();
   }

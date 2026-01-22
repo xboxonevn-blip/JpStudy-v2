@@ -793,9 +793,42 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Learn terms';
       case AppLanguage.vi:
-        return 'Learn: s\u1ed1 t\u1eeb';
+        return 'Learn: số từ';
       case AppLanguage.ja:
-        return 'Learn\u306e\u6570';
+        return 'Learnの数';
+    }
+  }
+
+  String get streakLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Streak';
+      case AppLanguage.vi:
+        return 'Chuỗi';
+      case AppLanguage.ja:
+        return 'ストリーク';
+    }
+  }
+
+  String get xpLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'XP';
+      case AppLanguage.vi:
+        return 'XP';
+      case AppLanguage.ja:
+        return '経験値';
+    }
+  }
+
+  String get mistakesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mistakes';
+      case AppLanguage.vi:
+        return 'Lỗi sai';
+      case AppLanguage.ja:
+        return '間違い';
     }
   }
 

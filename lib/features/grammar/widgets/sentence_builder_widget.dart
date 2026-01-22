@@ -6,7 +6,7 @@ import '../../../theme/app_theme_v2.dart';
 
 class SentenceBuilderWidget extends StatefulWidget {
   final String prompt;
-  final List<String> correctWords;
+  final String correctSentence;
   final List<String> shuffledWords;
   final Function(bool isCorrect) onCheck;
   final VoidCallback onReset;
@@ -14,7 +14,7 @@ class SentenceBuilderWidget extends StatefulWidget {
   const SentenceBuilderWidget({
     super.key,
     required this.prompt,
-    required this.correctWords,
+    required this.correctSentence,
     required this.shuffledWords,
     required this.onCheck,
     required this.onReset,
@@ -54,8 +54,12 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
   void _check() {
     setState(() {
       final userSentence = _selectedWords.join('').trim();
-      final correctSentence = widget.correctWords.join('').trim();
-      _isLastCorrect = userSentence == correctSentence;
+      // Remove spaces from both for robust comparison in Japanese
+      // (though usually no spaces, but just in case of formatting)
+      final normalizedUser = userSentence.replaceAll(' ', '');
+      final normalizedCorrect = widget.correctSentence.replaceAll(' ', '');
+      
+      _isLastCorrect = normalizedUser == normalizedCorrect;
       widget.onCheck(_isLastCorrect!);
     });
   }
@@ -75,102 +79,136 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
     if (_isLastCorrect == true) targetColor = AppThemeV2.secondary.withValues(alpha: 0.2);
     if (_isLastCorrect == false) targetColor = AppThemeV2.error.withValues(alpha: 0.1);
 
-    return Column(
+    return Stack(
       children: [
-        // Prompt
-        Container(
-          width: double.infinity,
-          margin: const EdgeInsets.only(bottom: 24),
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: AppThemeV2.primary.withValues(alpha: 0.05),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppThemeV2.primary.withValues(alpha: 0.1)),
-          ),
-          child: Column(
-            children: [
-               Text(
-                 'Arrange the sentence:',
-                 style: TextStyle(
-                   color: AppThemeV2.textSub,
-                   fontSize: 12,
-                   fontWeight: FontWeight.bold,
-                   letterSpacing: 0.5,
-                 ),
-               ),
-               const SizedBox(height: 8),
-               Text(
-                 widget.prompt,
-                 textAlign: TextAlign.center,
-                 style: TextStyle(
-                    color: AppThemeV2.textMain,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                 ),
-               ),
-            ],
-          ),
-        ),
-
-        // Target Area
-        ClayCard(
-          color: targetColor,
-          child: Container(
-            constraints: const BoxConstraints(minHeight: 120),
-            width: double.infinity,
-            alignment: Alignment.centerLeft,
-            child: Wrap(
-              spacing: 8,
-              runSpacing: 12,
-              children: _selectedWords.asMap().entries.map((entry) {
+        Column(
+          children: [
+            // Prompt
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.only(bottom: 24),
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: AppThemeV2.primary.withValues(alpha: 0.05),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppThemeV2.primary.withValues(alpha: 0.1)),
+              ),
+              child: Column(
+                children: [
+                   Text(
+                     'Arrange the sentence:',
+                     style: TextStyle(
+                       color: AppThemeV2.textSub,
+                       fontSize: 12,
+                       fontWeight: FontWeight.bold,
+                       letterSpacing: 0.5,
+                     ),
+                   ),
+                   const SizedBox(height: 8),
+                   Text(
+                     widget.prompt,
+                     textAlign: TextAlign.center,
+                     style: TextStyle(
+                        color: AppThemeV2.textMain,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                     ),
+                   ),
+                ],
+              ),
+            ),
+    
+            // Target Area
+            ClayCard(
+              color: targetColor,
+              child: Container(
+                constraints: const BoxConstraints(minHeight: 120),
+                width: double.infinity,
+                alignment: Alignment.centerLeft,
+                child: Wrap(
+                  spacing: 8,
+                  runSpacing: 12,
+                  children: _selectedWords.asMap().entries.map((entry) {
+                    return _ClayWordTile(
+                      word: entry.value,
+                      onTap: () => _deselectWord(entry.key),
+                      isSelected: true,
+                    ).animate().scale(duration: 200.ms).fadeIn();
+                  }).toList(),
+                ),
+              ),
+            ),
+            const SizedBox(height: 32),
+            // Source Area
+            Wrap(
+              spacing: 12,
+              runSpacing: 16,
+              alignment: WrapAlignment.center,
+              children: _remainingWords.asMap().entries.map((entry) {
                 return _ClayWordTile(
                   word: entry.value,
-                  onTap: () => _deselectWord(entry.key),
-                  isSelected: true,
-                ).animate().scale(duration: 200.ms).fadeIn();
+                  onTap: () => _selectWord(entry.key),
+                  isSelected: false,
+                ).animate().fadeIn(delay: 50.ms * entry.key);
               }).toList(),
             ),
-          ),
-        ),
-        const SizedBox(height: 32),
-        // Source Area
-        Wrap(
-          spacing: 12,
-          runSpacing: 16,
-          alignment: WrapAlignment.center,
-          children: _remainingWords.asMap().entries.map((entry) {
-            return _ClayWordTile(
-              word: entry.value,
-              onTap: () => _selectWord(entry.key),
-              isSelected: false,
-            ).animate().fadeIn(delay: 50.ms * entry.key);
-          }).toList(),
-        ),
-        const Spacer(),
-        // Actions
-        Row(
-          children: [
-            Expanded(
-              child: ClayButton(
-                label: 'Reset',
-                icon: Icons.refresh,
-                style: ClayButtonStyle.neutral,
-                onPressed: _reset,
-                isExpanded: true,
-              ),
-            ),
-            const SizedBox(width: 16),
-            Expanded(
-              child: ClayButton(
-                label: 'Check',
-                icon: Icons.check_circle,
-                style: _isLastCorrect == true ? ClayButtonStyle.secondary : ClayButtonStyle.primary,
-                onPressed: _selectedWords.isEmpty ? null : _check,
-                isExpanded: true,
-              ),
+            const Spacer(),
+            // Actions
+            Row(
+              children: [
+                Expanded(
+                  child: ClayButton(
+                    label: 'Reset',
+                    icon: Icons.refresh,
+                    style: ClayButtonStyle.neutral,
+                    onPressed: _reset,
+                    isExpanded: true,
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: ClayButton(
+                    label: 'Check',
+                    icon: Icons.check_circle,
+                    style: _isLastCorrect == true ? ClayButtonStyle.secondary : ClayButtonStyle.primary,
+                    onPressed: _selectedWords.isEmpty ? null : _check,
+                    isExpanded: true,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
+        
+        // Feedback Overlay
+        if (_isLastCorrect != null)
+          Positioned.fill(
+            child: Container(
+              color: Colors.white.withValues(alpha: 0.8),
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      _isLastCorrect! ? Icons.check_circle : Icons.cancel,
+                      color: _isLastCorrect! ? Colors.green : Colors.red,
+                      size: 80,
+                    ).animate().scale(duration: 300.ms, curve: Curves.elasticOut),
+                    const SizedBox(height: 16),
+                    Text(
+                      _isLastCorrect! ? 'CORRECT!' : 'TRY AGAIN',
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w900,
+                        color: _isLastCorrect! ? Colors.green : Colors.red,
+                        letterSpacing: 2.0,
+                      ),
+                    ).animate().fadeIn(delay: 200.ms).moveY(begin: 20, end: 0),
+                  ],
+                ),
+              ),
+            ),
+          ),
       ],
     );
   }

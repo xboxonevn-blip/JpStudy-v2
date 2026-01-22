@@ -215,7 +215,11 @@ class _GrammarPointCard extends StatelessWidget {
           
           // Structure Section
           if (displayStructure.isNotEmpty) ...[
-            _buildSectionHeader(context, 'Structure', Icons.account_tree_outlined),
+            _buildSectionHeader(
+                context, 
+                language == AppLanguage.vi ? 'Cấu trúc' : 'Structure', 
+                Icons.account_tree_outlined
+            ),
             const SizedBox(height: 8),
             Container(
               width: double.infinity,
@@ -238,7 +242,11 @@ class _GrammarPointCard extends StatelessWidget {
           ],
 
           // Explanation Section
-          _buildSectionHeader(context, 'Explanation', Icons.info_outline),
+          _buildSectionHeader(
+             context, 
+             language == AppLanguage.vi ? 'Giải thích' : 'Explanation', 
+             Icons.info_outline
+          ),
            const SizedBox(height: 8),
           Text(
             explanation,
@@ -251,7 +259,11 @@ class _GrammarPointCard extends StatelessWidget {
 
           // Examples Section
           if (data.examples.isNotEmpty) ...[
-             _buildSectionHeader(context, 'Examples', Icons.format_quote_rounded),
+             _buildSectionHeader(
+                 context, 
+                 language == AppLanguage.vi ? 'Ví dụ' : 'Examples', 
+                 Icons.format_quote_rounded
+             ),
              const SizedBox(height: 12),
              ...data.examples.map((ex) => _buildExampleItem(context, ex, language)),
           ],

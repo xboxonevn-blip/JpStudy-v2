@@ -9,7 +9,7 @@ final databaseProvider = Provider<AppDatabase>((ref) {
   // Trigger seeding (Fire-and-forget safe because of internal check)
   Future.microtask(() async {
     final seeder = GrammarSeeder(database.grammarDao);
-    await seeder.seedN5Grammar();
+    await seeder.seedN5Grammar(database);
   });
 
   return database;

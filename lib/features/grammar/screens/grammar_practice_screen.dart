@@ -9,6 +9,7 @@ import '../widgets/multiple_choice_widget.dart';
 import '../services/grammar_question_generator.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../common/widgets/clay_button.dart';
+import '../../../core/language_provider.dart';
 
 enum GrammarPracticeMode { normal, ghost }
 
@@ -83,9 +84,11 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     }
 
     // Generate questions using the service
+    final language = ref.watch(appLanguageProvider);
     final generated = GrammarQuestionGenerator.generateQuestions(
       details, 
       allPoints: distractorPool,
+      language: language,
     );
     
     // Customize for Ghost Mode if needed (e.g. force specific types)
@@ -270,8 +273,9 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     switch (q.type) {
       case GrammarQuestionType.sentenceBuilder:
         return SentenceBuilderWidget(
+          key: ValueKey(_currentIndex), // Force rebuild when question changes
           prompt: q.explanation ?? 'Arrange the sentence',
-          correctWords: q.options, // In generator, options are the chars
+          correctSentence: q.correctAnswer,
           shuffledWords: List.of(q.options)..shuffle(), 
           onCheck: _onAnswer,
           onReset: () {},
@@ -284,6 +288,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           onCheck: (isCorrect, _) => _onAnswer(isCorrect),
         );
       case GrammarQuestionType.multipleChoice:
+      case GrammarQuestionType.reverseMultipleChoice:
         return MultipleChoiceWidget(
           question: q.question,
           options: q.options,

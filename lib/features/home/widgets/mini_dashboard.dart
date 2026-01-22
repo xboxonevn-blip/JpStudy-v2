@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/dashboard_provider.dart';
 import '../../common/widgets/clay_card.dart';
 import '../../../theme/app_theme_v2.dart';
+import '../../../core/language_provider.dart';
+import '../../../core/app_language.dart';
 
 class MiniDashboard extends ConsumerWidget {
   const MiniDashboard({super.key});
@@ -10,15 +12,16 @@ class MiniDashboard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final dashboardAsync = ref.watch(dashboardProvider);
+    final language = ref.watch(appLanguageProvider);
 
     return dashboardAsync.when(
-      data: (state) => _buildContent(context, state),
+      data: (state) => _buildContent(context, state, language),
       loading: () => const SizedBox(height: 80, child: Center(child: CircularProgressIndicator())),
       error: (err, stack) => const SizedBox.shrink(),
     );
   }
 
-  Widget _buildContent(BuildContext context, DashboardState state) {
+  Widget _buildContent(BuildContext context, DashboardState state, AppLanguage language) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: ClayCard(
@@ -32,21 +35,21 @@ class MiniDashboard extends ConsumerWidget {
               icon: Icons.local_fire_department_rounded,
               color: AppThemeV2.tertiary,
               value: '${state.streak}',
-              label: 'Streak',
+              label: language.streakLabel,
             ),
             _buildStatItem(
               context,
               icon: Icons.star_rounded,
               color: const Color(0xFFFFC800),
               value: '${state.todayXp}',
-              label: 'XP',
+              label: language.xpLabel,
             ),
             _buildStatItem(
               context,
               icon: Icons.school_rounded,
               color: AppThemeV2.primary,
               value: '${state.vocabDue + state.grammarDue}',
-              label: 'Reviews',
+              label: language.reviewsLabel,
             ),
             if (state.mistakeCount > 0)
               _buildStatItem(
@@ -54,7 +57,7 @@ class MiniDashboard extends ConsumerWidget {
                 icon: Icons.error_outline_rounded,
                 color: AppThemeV2.error,
                 value: '${state.mistakeCount}',
-                label: 'Mistakes',
+                label: language.mistakesLabel,
               ),
           ],
         ),

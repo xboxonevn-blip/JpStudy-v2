@@ -2,24 +2,42 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:drift/drift.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../db/app_database.dart';
 import '../daos/grammar_dao.dart';
 
 class GrammarSeeder {
   final GrammarDao _dao;
   
+  // Tăng version này lên khi thay đổi file JSON data
+  static const int kGrammarDataVersion = 1; 
+  static const String kKeyGrammarVersion = 'grammar_data_version';
+
   GrammarSeeder(this._dao);
 
-  Future<void> seedN5Grammar(AppDatabase db) async {
-    // We want to force update if data is old/mismatched. 
-    // Ideally, we version this. For now, we will Upsert (Insert or Replace).
-    // Or we can check count. If count < 50 (since we have 50 lessons now), re-seed.
-    // The previous monolith had ~25 lessons?
-    // Let's iterate all 50 lessons (N5: 1-25, N4: 26-50) and insert/update.
+  Future<void> seedGrammarData(AppDatabase db) async {
+    final prefs = await SharedPreferences.getInstance();
+    final currentVersion = prefs.getInt(kKeyGrammarVersion) ?? 0;
+
+    // Smart Seeding: Chỉ chạy nếu version thay đổi hoặc chưa có data
+    if (currentVersion >= kGrammarDataVersion) {
+      debugPrint('⚡ Skipping Grammar Seed: Data is up to date (v$currentVersion)');
+      return;
+    }
+
+    debugPrint('🔄 Starting Grammar Seed (v$kGrammarDataVersion)...');
     
-    // NOTE: This seeder is now renamed to seedGrammarData since it covers N5 and N4.
-    await _seedLevel('N5', 1, 25);
-    await _seedLevel('N4', 26, 50);
+    final stopwatch = Stopwatch()..start();
+
+    // Chạy trong transaction để đảm bảo toàn vẹn dữ liệu
+    await db.transaction(() async {
+      await _seedLevel('N5', 1, 25);
+      await _seedLevel('N4', 26, 50);
+    });
+
+    await prefs.setInt(kKeyGrammarVersion, kGrammarDataVersion);
+    stopwatch.stop();
+    debugPrint('✅ Grammar Seed Completed in ${stopwatch.elapsedMilliseconds}ms. Version updated to $kGrammarDataVersion');
   }
 
   Future<void> _seedLevel(String level, int startLesson, int endLesson) async {
@@ -44,34 +62,22 @@ class GrammarSeeder {
                 // Insert Grammar Point
                 final pointStart = await _dao.into(_dao.db.grammarPoints).insertReturning(
                     GrammarPointsCompanion.insert(
-                        // We might need to handle ID conflicts if we want to preserve IDs. 
-                        // But usually IDs are auto-inc. 
-                        // Better to check if exists by grammarPoint string + level
-                        grammarPoint: item['grammarPoint'] ?? item['title'], // Handle different keys if any
+                        grammarPoint: item['grammarPoint'] ?? item['title'], 
                         meaning: item['titleEn'] ?? item['meaning'] ?? '',
                         meaningVi: Value(item['title'] ?? item['meaning_vi']), 
                         connection: item['structure'] ?? item['connection'] ?? '',
                         explanation: item['explanation'] ?? '',
-                        explanationVi: Value(item['explanation'] ?? item['explanation_vi']), // explanation in new format is Vietnamese
+                        explanationVi: Value(item['explanation'] ?? item['explanation_vi']),
                         jlptLevel: level,
                         isLearned: const Value(false),
                     ),
-                    mode: InsertMode.insertOrReplace, // Update if conflict on ID (but ID is auto-inc?)
-                    // Actually, we can't easily upsert without a unique key other than ID.
-                    // For now, let's just insert. Duplicates? 
-                    // We should ideally clear valid data first or check existence.
+                    mode: InsertMode.insertOrReplace,
                 );
 
                 // Insert Examples
                 if (exJson != null) {
-                    // Match example block to grammar point. 
-                    // The example file has structure: [{ "grammarPoint": "...", "examples": [...] }]
-                    // We need to find the matching block.
                     final exBlock = exJson.firstWhere(
-                        (e) => e['grammarPoint'] == item['title'], // 'title' in def matches 'grammarPoint' in ex?
-                        // Let's check keys. 
-                        // Def: "title": "N1 は N2 です"
-                        // Ex: "grammarPoint": "N1 は N2 です"
+                        (e) => e['grammarPoint'] == item['title'], 
                         orElse: () => null,
                     );
 
@@ -91,9 +97,9 @@ class GrammarSeeder {
                     }
                 }
             }
-            debugPrint('Seeded Lesson $i ($level)');
+            debugPrint('   -> Seeded Lesson $i ($level)');
         } catch (e) {
-            debugPrint('Error seeding Lesson $i: $e');
+            debugPrint('   -> Error seeding Lesson $i: $e');
         }
     }
   }

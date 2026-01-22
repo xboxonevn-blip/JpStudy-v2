@@ -1,0 +1,387 @@
+[
+    {
+        "grammarPoint": "N を V",
+        "examples": [
+            {
+                "sentence": "私はジュースを飲みます。",
+                "translation": "Tôi uống nước ngọt.",
+                "translationEn": "I drink juice."
+            },
+            {
+                "sentence": "魚を食べます。",
+                "translation": "Tôi ăn cá.",
+                "translationEn": "I eat fish."
+            },
+            {
+                "sentence": "毎日、新聞を読みます。",
+                "translation": "Tôi đọc báo mỗi ngày.",
+                "translationEn": "I read the newspaper every day."
+            },
+            {
+                "sentence": "写真を撮ります。",
+                "translation": "Tôi chụp ảnh.",
+                "translationEn": "I take photos."
+            },
+            {
+                "sentence": "タバコを吸います。",
+                "translation": "Tôi hút thuốc.",
+                "translationEn": "I smoke."
+            },
+            {
+                "sentence": "朝、パンを食べました。",
+                "translation": "Sáng nay tôi đã ăn bánh mì.",
+                "translationEn": "I ate bread this morning."
+            },
+            {
+                "sentence": "今、手紙を書きます。",
+                "translation": "Bây giờ tôi viết thư.",
+                "translationEn": "I am writing a letter now."
+            },
+            {
+                "sentence": "お酒を飲みますか。",
+                "translation": "Bạn có uống rượu không?",
+                "translationEn": "Do you drink alcohol?"
+            },
+            {
+                "sentence": "店で服を買いました。",
+                "translation": "Tôi đã mua quần áo ở cửa hàng.",
+                "translationEn": "I bought clothes at the shop."
+            },
+            {
+                "sentence": "毎日日本語を勉強します。",
+                "translation": "Tôi học tiếng Nhật mỗi ngày.",
+                "translationEn": "I study Japanese every day."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "N を します",
+        "examples": [
+            {
+                "sentence": "テニスをします。",
+                "translation": "Tôi chơi tennis.",
+                "translationEn": "I play tennis."
+            },
+            {
+                "sentence": "宿題をします。",
+                "translation": "Tôi làm bài tập.",
+                "translationEn": "I do homework."
+            },
+            {
+                "sentence": "サッカーをしました。",
+                "translation": "Tôi đã chơi bóng đá.",
+                "translationEn": "I played soccer."
+            },
+            {
+                "sentence": "明日、パーティーをします。",
+                "translation": "Ngày mai tôi tổ chức tiệc.",
+                "translationEn": "I'm having a party tomorrow."
+            },
+            {
+                "sentence": "日曜日、仕事をしません。",
+                "translation": "Chủ nhật tôi không làm việc.",
+                "translationEn": "I don't work on Sundays."
+            },
+            {
+                "sentence": "来週、会議をします。",
+                "translation": "Tuần sau sẽ họp.",
+                "translationEn": "We will have a meeting next week."
+            },
+            {
+                "sentence": "ゲームをします。",
+                "translation": "Tôi chơi game.",
+                "translationEn": "I play games."
+            },
+            {
+                "sentence": "週末、買い物をします。",
+                "translation": "Cuối tuần tôi đi mua sắm.",
+                "translationEn": "I go shopping on weekends."
+            },
+            {
+                "sentence": "花見をします。",
+                "translation": "Tôi đi ngắm hoa.",
+                "translationEn": "I go cherry blossom viewing."
+            },
+            {
+                "sentence": "電話をしました。",
+                "translation": "Tôi đã gọi điện thoại.",
+                "translationEn": "I made a phone call."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "何を しますか",
+        "examples": [
+            {
+                "sentence": "明日何をしますか。",
+                "translation": "Ngày mai bạn làm gì?",
+                "translationEn": "What will you do tomorrow?"
+            },
+            {
+                "sentence": "昨日何をしましたか。",
+                "translation": "Hôm qua bạn đã làm gì?",
+                "translationEn": "What did you do yesterday?"
+            },
+            {
+                "sentence": "週末は何をしますか。",
+                "translation": "Cuối tuần bạn làm gì?",
+                "translationEn": "What do you do on weekends?"
+            },
+            {
+                "sentence": "今から何をしますか。",
+                "translation": "Bây giờ bạn sẽ làm gì?",
+                "translationEn": "What are you going to do now?"
+            },
+            {
+                "sentence": "休みの日、何をしますか。",
+                "translation": "Ngày nghỉ bạn làm gì?",
+                "translationEn": "What do you do on your days off?"
+            },
+            {
+                "sentence": "何を勉強しますか。",
+                "translation": "Bạn học cái gì?",
+                "translationEn": "What do you study?"
+            },
+            {
+                "sentence": "デパートで何を買いましたか。",
+                "translation": "Bạn đã mua gì ở trung tâm thương mại?",
+                "translationEn": "What did you buy at the department store?"
+            },
+            {
+                "sentence": "図書館で何を読みますか。",
+                "translation": "Bạn đọc gì ở thư viện?",
+                "translationEn": "What do you read in the library?"
+            },
+            {
+                "sentence": "朝ごはん、何を食べましたか。",
+                "translation": "Bạn đã ăn gì vào bữa sáng?",
+                "translationEn": "What did you eat for breakfast?"
+            },
+            {
+                "sentence": "昨日の晩、何をしましたか。",
+                "translation": "Tối qua bạn đã làm gì?",
+                "translationEn": "What did you do last night?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "なん (Cái gì)",
+        "examples": [
+            {
+                "sentence": "それは何ですか。",
+                "translation": "Đó là cái gì? (なん)",
+                "translationEn": "What is that?"
+            },
+            {
+                "sentence": "何を買いますか。",
+                "translation": "Bạn mua gì vậy? (なに)",
+                "translationEn": "What are you buying?"
+            },
+            {
+                "sentence": "何歳ですか。",
+                "translation": "Bạn mấy tuổi? (なん)",
+                "translationEn": "How old are you?"
+            },
+            {
+                "sentence": "何番ですか。",
+                "translation": "Số mấy vậy? (なん)",
+                "translationEn": "What number is it?"
+            },
+            {
+                "sentence": "何曜日ですか。",
+                "translation": "Thứ mấy vậy? (なん)",
+                "translationEn": "What day of the week is it?"
+            },
+            {
+                "sentence": "何を飲みたいですか。",
+                "translation": "Bạn muốn uống gì? (なに)",
+                "translationEn": "What do you want to drink?"
+            },
+            {
+                "sentence": "何時ですか。",
+                "translation": "Mấy giờ rồi? (なん)",
+                "translationEn": "What time is it?"
+            },
+            {
+                "sentence": "何人ですか。",
+                "translation": "Mấy người vậy? (なん)",
+                "translationEn": "How many people?"
+            },
+            {
+                "sentence": "何月ですか。",
+                "translation": "Tháng mấy vậy? (なん)",
+                "translationEn": "What month is it?"
+            },
+            {
+                "sentence": "何を見ますか。",
+                "translation": "Bạn xem gì vậy? (なに)",
+                "translationEn": "What are you watching?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "N (địa điểm) で V",
+        "examples": [
+            {
+                "sentence": "駅で新聞を買います。",
+                "translation": "Tôi mua báo ở nhà ga.",
+                "translationEn": "I buy a newspaper at the station."
+            },
+            {
+                "sentence": "図書室で勉強します。",
+                "translation": "Tôi học bài ở thư viện.",
+                "translationEn": "I study in the library."
+            },
+            {
+                "sentence": "食堂で昼ごはんを食べます。",
+                "translation": "Tôi ăn trưa ở nhà ăn.",
+                "translationEn": "I eat lunch in the cafeteria."
+            },
+            {
+                "sentence": "デパートで靴を買いました。",
+                "translation": "Tôi đã mua giày ở trung tâm thương mại.",
+                "translationEn": "I bought shoes at the department store."
+            },
+            {
+                "sentence": "公園で写真を撮ります。",
+                "translation": "Tôi chụp ảnh ở công viên.",
+                "translationEn": "I take photos at the park."
+            },
+            {
+                "sentence": "家でテレビを見ます。",
+                "translation": "Tôi xem TV ở nhà.",
+                "translationEn": "I watch TV at home."
+            },
+            {
+                "sentence": "ロビーで新聞を読みました。",
+                "translation": "Tôi đã đọc báo ở sảnh.",
+                "translationEn": "I read the newspaper in the lobby."
+            },
+            {
+                "sentence": "教室で日本語を勉強します。",
+                "translation": "Tôi học tiếng Nhật ở lớp.",
+                "translationEn": "I study Japanese in the classroom."
+            },
+            {
+                "sentence": "どこでシャツを買いましたか。",
+                "translation": "Bạn đã mua áo sơ mi ở đâu?",
+                "translationEn": "Where did you buy the shirt?"
+            },
+            {
+                "sentence": "庭で花見をします。",
+                "translation": "Tôi ngắm hoa ở vườn.",
+                "translationEn": "I view flowers in the garden."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "Vませんか (Mời mọc)",
+        "examples": [
+            {
+                "sentence": "いっしょに京都へ行きませんか。",
+                "translation": "Bạn có muốn đi Kyoto cùng tôi không?",
+                "translationEn": "Would you like to go to Kyoto with me?"
+            },
+            {
+                "sentence": "明日、映画を見ませんか。",
+                "translation": "Ngày mai đi xem phim không?",
+                "translationEn": "Would you like to watch a movie tomorrow?"
+            },
+            {
+                "sentence": "昼ごはんを食べませんか。",
+                "translation": "Cùng đi ăn trưa không?",
+                "translationEn": "Would you like to have lunch?"
+            },
+            {
+                "sentence": "テニスをしませんか。",
+                "translation": "Chơi tennis không?",
+                "translationEn": "Would you like to play tennis?"
+            },
+            {
+                "sentence": "お茶を飲みませんか。",
+                "translation": "Uống trà không?",
+                "translationEn": "Would you like to drink tea?"
+            },
+            {
+                "sentence": "日曜日に会いませんか。",
+                "translation": "Chủ nhật gặp nhau không?",
+                "translationEn": "Would you like to meet on Sunday?"
+            },
+            {
+                "sentence": "一緒に宿題をしませんか。",
+                "translation": "Cùng làm bài tập không?",
+                "translationEn": "Would you like to do homework together?"
+            },
+            {
+                "sentence": "カラオケに行きませんか。",
+                "translation": "Đi karaoke không?",
+                "translationEn": "Would you like to go to karaoke?"
+            },
+            {
+                "sentence": "散歩しませんか。",
+                "translation": "Đi dạo không?",
+                "translationEn": "Would you like to take a walk?"
+            },
+            {
+                "sentence": "今晩、食事しませんか。",
+                "translation": "Tối nay đi ăn không?",
+                "translationEn": "Would you like to have dinner tonight?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "Vましょう (Đề nghị)",
+        "examples": [
+            {
+                "sentence": "ちょっと休みましょう。",
+                "translation": "Chúng ta cùng nghỉ một chút nào.",
+                "translationEn": "Let's take a break."
+            },
+            {
+                "sentence": "昼ごはんを食べましょう。",
+                "translation": "Cùng ăn trưa nào.",
+                "translationEn": "Let's have lunch."
+            },
+            {
+                "sentence": "帰りましょう。",
+                "translation": "Về thôi nào.",
+                "translationEn": "Let's go home."
+            },
+            {
+                "sentence": "勉強しましょう。",
+                "translation": "Cùng học nào.",
+                "translationEn": "Let's study."
+            },
+            {
+                "sentence": "始めましょう。",
+                "translation": "Bắt đầu thôi.",
+                "translationEn": "Let's start."
+            },
+            {
+                "sentence": "行きましょう。",
+                "translation": "Đi thôi.",
+                "translationEn": "Let's go."
+            },
+            {
+                "sentence": "映画を見ましょう。",
+                "translation": "Cùng xem phim nào.",
+                "translationEn": "Let's watch a movie."
+            },
+            {
+                "sentence": "写真を撮りましょう。",
+                "translation": "Chụp ảnh nào.",
+                "translationEn": "Let's take a photo."
+            },
+            {
+                "sentence": "乾杯しましょう。",
+                "translation": "Cạn ly nào.",
+                "translationEn": "Let's toast."
+            },
+            {
+                "sentence": "急ぎましょう。",
+                "translation": "Nhanh lên nào.",
+                "translationEn": "Let's hurry."
+            }
+        ]
+    }
+]

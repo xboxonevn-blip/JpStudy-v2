@@ -62,8 +62,20 @@ class AppRouter {
       GoRoute(
         path: '/grammar-practice',
         builder: (context, state) {
-          final extra = state.extra as List<int>?;
-          return GrammarPracticeScreen(initialIds: extra);
+          List<int>? ids;
+          GrammarPracticeMode mode = GrammarPracticeMode.normal;
+
+          if (state.extra is List<int>) {
+             ids = state.extra as List<int>;
+          } else if (state.extra is GrammarPracticeMode) {
+             mode = state.extra as GrammarPracticeMode;
+          } else if (state.extra is Map) {
+             final map = state.extra as Map;
+             ids = map['ids'];
+             mode = map['mode'] ?? GrammarPracticeMode.normal;
+          }
+
+          return GrammarPracticeScreen(initialIds: ids, mode: mode);
         },
       ),
       GoRoute(

@@ -1,0 +1,222 @@
+[
+    {
+        "grammarPoint": "Thể Thông thường (Plain Form)",
+        "examples": [
+            {
+                "sentence": "明日東京へ行く？ うん、行く。",
+                "translation": "Mai đi Tokyo không? Ừ, đi.",
+                "translationEn": "Going to Tokyo tomorrow? Yeah, going."
+            },
+            {
+                "sentence": "毎日忙しい？ うん、忙しい。",
+                "translation": "Mỗi ngày đều bận hả? Ừ, bận.",
+                "translationEn": "Busy every day? Yeah, busy."
+            },
+            {
+                "sentence": "今日暇？ ううん、暇じゃない。",
+                "translation": "Hôm nay rảnh không? Không, không rảnh.",
+                "translationEn": "Free today? No, not free."
+            },
+            {
+                "sentence": "それ、食べる？ ううん、食べない。",
+                "translation": "Cái đó ăn không? Không, không ăn.",
+                "translationEn": "Eat that? No, won't eat."
+            },
+            {
+                "sentence": "昨日、マリアさんに会った？ ううん、会わなかった。",
+                "translation": "Hôm qua gặp Maria không? Không, không gặp.",
+                "translationEn": "Did you meet Maria yesterday? No, didn't meet."
+            },
+            {
+                "sentence": "カレーライス、好き？ うん、好き。",
+                "translation": "Thích cơm cà ri không? Ừ, thích.",
+                "translationEn": "Like curry rice? Yeah, like it."
+            },
+            {
+                "sentence": "今、お金ある？ ううん、ない。",
+                "translation": "Giờ có tiền không? Không, không có.",
+                "translationEn": "Have money now? No, don't."
+            },
+            {
+                "sentence": "明日休み？ うん、休みだよ。",
+                "translation": "Mai nghỉ hả? Ừ, nghỉ đó.",
+                "translationEn": "Day off tomorrow? Yeah, day off."
+            },
+            {
+                "sentence": "お酒、飲む？ ううん、飲まない。",
+                "translation": "Uống rượu không? Không, không uống.",
+                "translationEn": "Drink alcohol? No, won't drink."
+            },
+            {
+                "sentence": "もう昼ごはん食べた？ まだ。",
+                "translation": "Ăn trưa chưa? Chưa.",
+                "translationEn": "Ate lunch already? Not yet."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "Câu hỏi trong thể thông thường",
+        "examples": [
+            {
+                "sentence": "コーヒー、飲む？",
+                "translation": "Uống cà phê không?",
+                "translationEn": "Drink coffee?"
+            },
+            {
+                "sentence": "うん、飲む。",
+                "translation": "Ừ, uống.",
+                "translationEn": "Yeah, drink."
+            },
+            {
+                "sentence": "大阪、行く？",
+                "translation": "Đi Osaka không?",
+                "translationEn": "Go to Osaka?"
+            },
+            {
+                "sentence": "元気？",
+                "translation": "Khỏe không?",
+                "translationEn": "How are you?"
+            },
+            {
+                "sentence": "大丈夫？",
+                "translation": "Ổn không?",
+                "translationEn": "Are you okay?"
+            },
+            {
+                "sentence": "何してるの？",
+                "translation": "Đang làm gì đó?",
+                "translationEn": "What are you doing?"
+            },
+            {
+                "sentence": "映画、見る？",
+                "translation": "Xem phim không?",
+                "translationEn": "Watch a movie?"
+            },
+            {
+                "sentence": "一緒に帰る？",
+                "translation": "Về cùng không?",
+                "translationEn": "Go home together?"
+            },
+            {
+                "sentence": "それ、おいしい？",
+                "translation": "Cái đó ngon không?",
+                "translationEn": "Is that tasty?"
+            },
+            {
+                "sentence": "どこ行くの？",
+                "translation": "Đi đâu đó?",
+                "translationEn": "Where are you going?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "Bỏ trợ từ trong văn nói",
+        "examples": [
+            {
+                "sentence": "ご飯食べる？",
+                "translation": "Ăn cơm không? (Bỏ o)",
+                "translationEn": "Eat rice?"
+            },
+            {
+                "sentence": "明日、京都行く。",
+                "translation": "Mai đi Kyoto. (Bỏ e)",
+                "translationEn": "Going to Kyoto tomorrow."
+            },
+            {
+                "sentence": "ここ、座っていい？",
+                "translation": "Ngồi đây được không? (Bỏ ni)",
+                "translationEn": "Sit here okay?"
+            },
+            {
+                "sentence": "喉、渇いた。",
+                "translation": "Khát nước. (Bỏ ga)",
+                "translationEn": "Thirsty."
+            },
+            {
+                "sentence": "これ、ください。",
+                "translation": "Cho tôi cái này. (Bỏ o)",
+                "translationEn": "Please give me this."
+            },
+            {
+                "sentence": "私、行く。",
+                "translation": "Tôi đi. (Bỏ wa)",
+                "translationEn": "I go."
+            },
+            {
+                "sentence": "それ、何？",
+                "translation": "Cái đó là gì? (Bỏ wa)",
+                "translationEn": "What is that?"
+            },
+            {
+                "sentence": "今、何時？",
+                "translation": "Giờ mấy giờ? (Bỏ wa)",
+                "translationEn": "What time is it now?"
+            },
+            {
+                "sentence": "自転車、ある？",
+                "translation": "Có xe đạp không? (Bỏ ga)",
+                "translationEn": "Have a bicycle?"
+            },
+            {
+                "sentence": "明日、友達、来る。",
+                "translation": "Mai bạn đến. (Bỏ ga)",
+                "translationEn": "Friend coming tomorrow."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "kedo (Nhưng - Thân mật)",
+        "examples": [
+            {
+                "sentence": "チケットがあるけど、一緒に行かない？",
+                "translation": "Tôi có vé này, đi cùng không?",
+                "translationEn": "I have tickets, won't you go with me?"
+            },
+            {
+                "sentence": "その映画、見たけど、面白くなかった。",
+                "translation": "Phim đó xem rồi nhưng không hay.",
+                "translationEn": "I saw that movie, but it wasn't interesting."
+            },
+            {
+                "sentence": "日本語は難しいけど、面白い。",
+                "translation": "Tiếng Nhật khó nhưng thú vị.",
+                "translationEn": "Japanese is difficult but interesting."
+            },
+            {
+                "sentence": "行きたいけど、時間がない。",
+                "translation": "Muốn đi nhưng không có thời gian.",
+                "translationEn": "I want to go but don't have time."
+            },
+            {
+                "sentence": "高いけど、買う。",
+                "translation": "Đắt nhưng sẽ mua.",
+                "translationEn": "Expensive but I'll buy it."
+            },
+            {
+                "sentence": "雨降ってるけど、大丈夫？",
+                "translation": "Trời đang mưa đó, ổn không?",
+                "translationEn": "It's raining, are you okay?"
+            },
+            {
+                "sentence": "美味しいけど、辛い。",
+                "translation": "Ngon nhưng cay.",
+                "translationEn": "Tasty but spicy."
+            },
+            {
+                "sentence": "約束があるけど、遅れそう。",
+                "translation": "Có hẹn nhưng chắc sẽ muộn.",
+                "translationEn": "I have an appointment but might be late."
+            },
+            {
+                "sentence": "頭痛いけど、薬飲む。",
+                "translation": "Đau đầu nhưng sẽ uống thuốc.",
+                "translationEn": "Head hurts but I'll take medicine."
+            },
+            {
+                "sentence": "眠いけど、勉強する。",
+                "translation": "Buồn ngủ nhưng sẽ học.",
+                "translationEn": "Sleepy but I'll study."
+            }
+        ]
+    }
+]

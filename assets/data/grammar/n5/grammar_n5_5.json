@@ -7,24 +7,7 @@
         "structureEn": "N (Place) e ikimasu / kimasu / kaerimasu",
         "explanation": "Diễn tả hành động di chuyển.\n\n*   Trợ từ `へ` (đọc là 'e') chỉ hướng đi.\n*   `行きます` (ikimasu): Đi (rời xa người nói).\n*   `来ます` (kimasu): Đến (hướng về người nói).\n*   `帰ります` (kaerimasu): Về (nhà, quê hương).",
         "explanationEn": "Expresses movement.\n\n*   Particle `へ` (read 'e') indicates direction.\n*   `行きます`: To go (away from speaker).\n*   `来ます`: To come (towards speaker).\n*   `帰ります`: To return (home).",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "私は京都へ行きます.",
-                "translation": "Tôi đi Kyoto.",
-                "translationEn": "I am going to Kyoto."
-            },
-            {
-                "sentence": "日本へ来ました.",
-                "translation": "Tôi đã đến Nhật Bản.",
-                "translationEn": "I came to Japan."
-            },
-            {
-                "sentence": "うちへ帰ります.",
-                "translation": "Tôi về nhà.",
-                "translationEn": "I am going home."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 5,
@@ -34,19 +17,7 @@
         "structureEn": "Doko [e] mo ikimasen",
         "explanation": "Phủ định hoàn toàn với từ để hỏi + `も` + Động từ phủ định.\n\n*   `どこ[へ]も`: Không đi đâu cả.\n*   `なにも`: Không ăn/làm gì cả.",
         "explanationEn": "Total negation with Question Word + `も` + Negative Verb.\n\n*   `どこ[へ]も`: Go nowhere.\n*   `なにも`: Do/eat nothing.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "どこも行きません.",
-                "translation": "Tôi không đi đâu cả.",
-                "translationEn": "I'm not going anywhere."
-            },
-            {
-                "sentence": "何も食べません.",
-                "translation": "Tôi không ăn gì cả.",
-                "translationEn": "I'm not eating anything."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 5,
@@ -56,19 +27,7 @@
         "structureEn": "N (Transport) de ikimasu / kimasu / kaerimasu",
         "explanation": "Trợ từ `để` chỉ phương tiện, cách thức.\n\n*   Đi bằng cái gì (Taxi, Xe buýt, Tàu điện...).",
         "explanationEn": "Particle `で` indicates means of transport.\n\n*   Go by taxi, bus, train, etc.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "電車で行きます.",
-                "translation": "Tôi đi bằng tàu điện.",
-                "translationEn": "I go by train."
-            },
-            {
-                "sentence": "タクシーで来ました.",
-                "translation": "Tôi đã đến bằng taxi.",
-                "translationEn": "I came by taxi."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 5,
@@ -78,14 +37,7 @@
         "structureEn": "aruite ikimasu",
         "explanation": "Trường hợp đặc biệt: Đi bộ dùng `歩いて` (không dùng trợ từ `để`).",
         "explanationEn": "Special case: `歩いて` (on foot). Do not use particle `で`.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "駅から歩いて帰りました.",
-                "translation": "Tôi đã đi bộ từ nhà ga về.",
-                "translationEn": "I walked home from the station."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 5,
@@ -95,19 +47,7 @@
         "structureEn": "N (Person) to V",
         "explanation": "Trợ từ `と` chỉ đối tượng cùng thực hiện hành động (với).\n\n*   `一人で` (hitoride): Một mình (trường hợp đặc biệt, không dùng `と`).",
         "explanationEn": "Particle `と` indicates the person you do the action with (with).\n\n*   `一人で` (alone): Special case, no `と`.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "家族と日本へ来ました.",
-                "translation": "Tôi đã đến Nhật cùng gia đình.",
-                "translationEn": "I came to Japan with my family."
-            },
-            {
-                "sentence": "一人で東京へ行きます.",
-                "translation": "Tôi đi Tokyo một mình.",
-                "translationEn": "I am going to Tokyo alone."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 5,
@@ -117,13 +57,6 @@
         "structureEn": "itsu V-masu ka",
         "explanation": "Từ để hỏi về thời gian. Không dùng trợ từ `に` sau `いつ`.",
         "explanationEn": "Question word for time (When). Do not use particle `に` after `いつ`.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "いつ日本へ来ましたか。…３月２５日に来ました.",
-                "translation": "Bạn đến Nhật bao giờ? ...Tôi đến vào ngày 25 tháng 3.",
-                "translationEn": "When did you come to Japan? ...I came on March 25th."
-            }
-        ]
+        "level": "N5"
     }
 ]

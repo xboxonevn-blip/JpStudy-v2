@@ -73,30 +73,35 @@ class GrammarRepository {
       // Ghost logic: Mark as needing special review
       ghostReviewsDue = 1; // Need 1 successful review to clear ghost status
     } else {
-      newStreak += 1;
-      // If was ghost, clear it
-      ghostReviewsDue = 0;
-      
-      if (newStreak == 1) {
-        interval = 1;
-      } else if (newStreak == 2) {
-        interval = 6;
+      // If was ghost application, we just clear the ghost status but don't advance SRS much
+      if (ghostReviewsDue > 0) {
+         ghostReviewsDue = 0;
+         // Don't change streak/ease significantly for ghost clearing, or maybe small boost
       } else {
-        final daysSinceReview = state.lastReviewedAt == null 
-            ? 0 
-            : DateTime.now().difference(state.lastReviewedAt!).inDays;
-        // Use max(1, days) to avoid 0 mul
-        final days = daysSinceReview < 1 ? 1 : daysSinceReview;
-        interval = (days * state.ease).round();
-      }
-      
-      if (interval < 1) {
-        interval = 1;
-      }
+        // Normal SRS advancement
+        newStreak += 1;
+        
+        if (newStreak == 1) {
+          interval = 1;
+        } else if (newStreak == 2) {
+          interval = 6;
+        } else {
+          final daysSinceReview = state.lastReviewedAt == null 
+              ? 0 
+              : DateTime.now().difference(state.lastReviewedAt!).inDays;
+          // Use max(1, days) to avoid 0 mul
+          final days = daysSinceReview < 1 ? 1 : daysSinceReview;
+          interval = (days * state.ease).round();
+        }
+        
+        if (interval < 1) {
+          interval = 1;
+        }
 
-      newEase = state.ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
-      if (newEase < 1.3) {
-        newEase = 1.3;
+        newEase = state.ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
+        if (newEase < 1.3) {
+          newEase = 1.3;
+        }
       }
     }
 
@@ -107,6 +112,17 @@ class GrammarRepository {
       nextReviewAt: DateTime.now().add(Duration(days: interval)),
       ghostReviewsDue: ghostReviewsDue,
     );
+  }
+
+  /// Fetch all grammar points that are "Ghosts" (failed previously)
+  Future<List<GrammarPoint>> fetchGhostPoints() async {
+    final ghostStates = await _db.grammarDao.getGhostReviews();
+    final ids = ghostStates.map((s) => s.grammarId).toList();
+    if (ids.isEmpty) return [];
+    
+    // Fetch actual points for these ids
+    final points = await (_db.select(_db.grammarPoints)..where((t) => t.id.isIn(ids))).get();
+    return points;
   }
 
   /// Mark a grammar point as learned and initialize SRS

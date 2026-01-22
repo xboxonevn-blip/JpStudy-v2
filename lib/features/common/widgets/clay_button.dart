@@ -6,6 +6,7 @@ enum ClayButtonStyle {
   secondary,
   tertiary,
   neutral,
+  error,
 }
 
 class ClayButton extends StatefulWidget {
@@ -14,6 +15,8 @@ class ClayButton extends StatefulWidget {
   final VoidCallback? onPressed;
   final ClayButtonStyle style;
   final bool isExpanded;
+  final double? width;
+  final double? height;
 
   const ClayButton({
     super.key,
@@ -22,6 +25,8 @@ class ClayButton extends StatefulWidget {
     this.onPressed,
     this.style = ClayButtonStyle.primary,
     this.isExpanded = false,
+    this.width,
+    this.height,
   });
 
   @override
@@ -37,6 +42,7 @@ class _ClayButtonState extends State<ClayButton> {
       case ClayButtonStyle.secondary: return AppThemeV2.secondary;
       case ClayButtonStyle.tertiary: return AppThemeV2.tertiary;
       case ClayButtonStyle.neutral: return Colors.white;
+      case ClayButtonStyle.error: return AppThemeV2.error;
     }
   }
 
@@ -54,7 +60,6 @@ class _ClayButtonState extends State<ClayButton> {
     final borderColor = baseColor == Colors.white ? AppThemeV2.neutral : depthColor;
 
     // When pressed, we translate Y by 4px and remove shadow to simulate depression
-
     
     Widget content = Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -89,6 +94,8 @@ class _ClayButtonState extends State<ClayButton> {
         duration: const Duration(milliseconds: 50),
         transform: Matrix4.translationValues(0, _isPressed ? 4 : 0, 0),
         child: Container(
+          width: widget.width,
+          height: widget.height,
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           decoration: BoxDecoration(
             color: baseColor,
@@ -106,7 +113,9 @@ class _ClayButtonState extends State<ClayButton> {
                 ),
             ],
           ),
-          child: content,
+          child: widget.height != null || widget.width != null 
+             ? Center(child: content) 
+             : content,
         ),
       ),
     );

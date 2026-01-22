@@ -1,0 +1,222 @@
+[
+    {
+        "grammarPoint": "Thể Nai (Vない - Phủ định ngắn)",
+        "examples": [
+            {
+                "sentence": "書かない",
+                "translation": "Không viết",
+                "translationEn": "Not write"
+            },
+            {
+                "sentence": "買わない",
+                "translation": "Không mua",
+                "translationEn": "Not buy"
+            },
+            {
+                "sentence": "食べない",
+                "translation": "Không ăn",
+                "translationEn": "Not eat"
+            },
+            {
+                "sentence": "来ない",
+                "translation": "Không đến (kuru -> konai)",
+                "translationEn": "Not come"
+            },
+            {
+                "sentence": "しない",
+                "translation": "Không làm (suru -> shinai)",
+                "translationEn": "Not do"
+            },
+            {
+                "sentence": "泳がない",
+                "translation": "Không bơi",
+                "translationEn": "Not swim"
+            },
+            {
+                "sentence": "終わらない",
+                "translation": "Không kết thúc",
+                "translationEn": "Not finish"
+            },
+            {
+                "sentence": "待たない",
+                "translation": "Không đợi",
+                "translationEn": "Not wait"
+            },
+            {
+                "sentence": "浴びない",
+                "translation": "Không tắm",
+                "translationEn": "Not take a shower"
+            },
+            {
+                "sentence": "ない",
+                "translation": "Không có (arimasu -> nai)",
+                "translationEn": "Not have/exist"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "Vないで ください (Xin đừng)",
+        "examples": [
+            {
+                "sentence": "ここでたばこを吸わないでください。",
+                "translation": "Xin đừng hút thuốc ở đây.",
+                "translationEn": "Please don't smoke here."
+            },
+            {
+                "sentence": "写真を撮らないでください。",
+                "translation": "Xin đừng chụp ảnh.",
+                "translationEn": "Please don't take photos."
+            },
+            {
+                "sentence": "入らないでください。",
+                "translation": "Xin đừng vào.",
+                "translationEn": "Please don't enter."
+            },
+            {
+                "sentence": "忘れないでください。",
+                "translation": "Xin đừng quên.",
+                "translationEn": "Please don't forget."
+            },
+            {
+                "sentence": "心配しないでください。",
+                "translation": "Xin đừng lo lắng.",
+                "translationEn": "Please don't worry."
+            },
+            {
+                "sentence": "パスポートをなくさないでください。",
+                "translation": "Xin đừng làm mất hộ chiếu.",
+                "translationEn": "Please don't lose your passport."
+            },
+            {
+                "sentence": "ここに車を止めないでください。",
+                "translation": "Xin đừng đậu xe ở đây.",
+                "translationEn": "Please don't park here."
+            },
+            {
+                "sentence": "寝ないでください。",
+                "translation": "Xin đừng ngủ.",
+                "translationEn": "Please don't sleep."
+            },
+            {
+                "sentence": "英語で話さないでください。",
+                "translation": "Xin đừng nói tiếng Anh.",
+                "translationEn": "Please don't speak English."
+            },
+            {
+                "sentence": "無理しないでください。",
+                "translation": "Xin đừng quá sức.",
+                "translationEn": "Please don't overdo it."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "Vなければ なりません (Phải)",
+        "examples": [
+            {
+                "sentence": "毎日日本語を勉強しなければなりません。",
+                "translation": "Mỗi ngày phải học tiếng Nhật.",
+                "translationEn": "I must study Japanese every day."
+            },
+            {
+                "sentence": "薬を飲まなければなりません。",
+                "translation": "Phải uống thuốc.",
+                "translationEn": "I must take medicine."
+            },
+            {
+                "sentence": "明日病院へ行かなければなりません。",
+                "translation": "Ngày mai phải đi bệnh viện.",
+                "translationEn": "I must go to the hospital tomorrow."
+            },
+            {
+                "sentence": "レポートを書かなければなりません。",
+                "translation": "Phải viết báo cáo.",
+                "translationEn": "I must write a report."
+            },
+            {
+                "sentence": "早く帰らなければなりません。",
+                "translation": "Phải về sớm.",
+                "translationEn": "I must go home early."
+            },
+            {
+                "sentence": "パスポートを見せなければなりません。",
+                "translation": "Phải cho xem hộ chiếu.",
+                "translationEn": "I must show my passport."
+            },
+            {
+                "sentence": "試験がありますから、勉強しなければなりません。",
+                "translation": "Vì có thi nên phải học.",
+                "translationEn": "Since there is an exam, I must study."
+            },
+            {
+                "sentence": "何時に起きなければなりませんか。",
+                "translation": "Phải dậy lúc mấy giờ?",
+                "translationEn": "What time must you get up?"
+            },
+            {
+                "sentence": "残業しなければなりません。",
+                "translation": "Phải làm thêm giờ.",
+                "translationEn": "I must work overtime."
+            },
+            {
+                "sentence": "お金を払わなければなりません。",
+                "translation": "Phải trả tiền.",
+                "translationEn": "I must pay money."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "Vなくて もいいです (Không cần)",
+        "examples": [
+            {
+                "sentence": "明日来なくてもいいです。",
+                "translation": "Ngày mai bạn không đến cũng được.",
+                "translationEn": "You don't need to come tomorrow."
+            },
+            {
+                "sentence": "靴を脱がなくてもいいです。",
+                "translation": "Không cần cởi giày cũng được.",
+                "translationEn": "You don't need to take off your shoes."
+            },
+            {
+                "sentence": "急がなくてもいいです。",
+                "translation": "Không cần vội cũng được.",
+                "translationEn": "You don't need to hurry."
+            },
+            {
+                "sentence": "今日払わなくてもいいです。",
+                "translation": "Hôm nay không trả tiền cũng được.",
+                "translationEn": "You don't need to pay today."
+            },
+            {
+                "sentence": "名前を書かなくてもいいです。",
+                "translation": "Không cần viết tên cũng được.",
+                "translationEn": "You don't need to write your name."
+            },
+            {
+                "sentence": "心配しなくてもいいです。",
+                "translation": "Không cần lo lắng đâu.",
+                "translationEn": "You don't need to worry."
+            },
+            {
+                "sentence": "残業しなくてもいいです。",
+                "translation": "Không cần làm thêm giờ cũng được.",
+                "translationEn": "You don't need to work overtime."
+            },
+            {
+                "sentence": "薬を飲まなくてもいいです。",
+                "translation": "Không uống thuốc cũng được (nếu đã khỏi).",
+                "translationEn": "You don't need to take medicine."
+            },
+            {
+                "sentence": "電話しなくてもいいです。",
+                "translation": "Không cần gọi điện cũng được.",
+                "translationEn": "You don't need to call."
+            },
+            {
+                "sentence": "何も言わなくてもいいです。",
+                "translation": "Không cần nói gì cũng được.",
+                "translationEn": "You don't need to say anything."
+            }
+        ]
+    }
+]

@@ -1,0 +1,332 @@
+[
+    {
+        "grammarPoint": "これ・それ・あれ",
+        "examples": [
+            {
+                "sentence": "これは本です。",
+                "translation": "Đây là quyển sách.",
+                "translationEn": "This is a book."
+            },
+            {
+                "sentence": "それは時計です。",
+                "translation": "Đó là cái đồng hồ.",
+                "translationEn": "That is a clock."
+            },
+            {
+                "sentence": "あれはテレビです。",
+                "translation": "Kia là cái ti vi.",
+                "translationEn": "That (over there) is a TV."
+            },
+            {
+                "sentence": "これは辞書です。",
+                "translation": "Đây là từ điển.",
+                "translationEn": "This is a dictionary."
+            },
+            {
+                "sentence": "それは新聞です。",
+                "translation": "Đó là báo.",
+                "translationEn": "That is a newspaper."
+            },
+            {
+                "sentence": "あれはカバンです。",
+                "translation": "Kia là cái cặp.",
+                "translationEn": "That is a bag."
+            },
+            {
+                "sentence": "これは何ですか。",
+                "translation": "Đây là cái gì?",
+                "translationEn": "What is this?"
+            },
+            {
+                "sentence": "それはボールペンです。",
+                "translation": "Đó là bút bi.",
+                "translationEn": "That is a ballpoint pen."
+            },
+            {
+                "sentence": "あれは自動車です。",
+                "translation": "Kia là ô tô.",
+                "translationEn": "That is a car."
+            },
+            {
+                "sentence": "これは名刺です。",
+                "translation": "Đây là danh thiếp.",
+                "translationEn": "This is a business card."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "この・その・あの",
+        "examples": [
+            {
+                "sentence": "この本は私のです。",
+                "translation": "Quyển sách này là của tôi.",
+                "translationEn": "This book is mine."
+            },
+            {
+                "sentence": "その時計はミラーさんのです。",
+                "translation": "Cái đồng hồ đó là của anh Miller.",
+                "translationEn": "That clock is Mr. Miller's."
+            },
+            {
+                "sentence": "あの方はどなたですか。",
+                "translation": "Vị kia là ai vậy?",
+                "translationEn": "Who is that person?"
+            },
+            {
+                "sentence": "この傘はあなたのですか。",
+                "translation": "Cái ô này là của bạn phải không?",
+                "translationEn": "Is this umbrella yours?"
+            },
+            {
+                "sentence": "その辞書は先生のです。",
+                "translation": "Quyển từ điển đó là của giáo viên.",
+                "translationEn": "That dictionary is the teacher's."
+            },
+            {
+                "sentence": "あの車は会社のです。",
+                "translation": "Cái ô tô kia là của công ty.",
+                "translationEn": "That car is the company's."
+            },
+            {
+                "sentence": "この手帳は誰のですか。",
+                "translation": "Quyển sổ tay này là của ai?",
+                "translationEn": "Whose is this notebook?"
+            },
+            {
+                "sentence": "その鉛筆は私のです。",
+                "translation": "Cái bút chì đó là của tôi.",
+                "translationEn": "That pencil is mine."
+            },
+            {
+                "sentence": "あの人は私の友達です。",
+                "translation": "Người kia là bạn của tôi.",
+                "translationEn": "That person is my friend."
+            },
+            {
+                "sentence": "この鍵は私のじゃありません。",
+                "translation": "Cái chìa khóa này không phải của tôi.",
+                "translationEn": "This key is not mine."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "そうです・そうじゃありません",
+        "examples": [
+            {
+                "sentence": "それは辞書ですか。…はい、そうです。",
+                "translation": "Đó là từ điển phải không? ...Vâng, đúng vậy.",
+                "translationEn": "Is that a dictionary? ...Yes, it is."
+            },
+            {
+                "sentence": "それは手帳ですか。…いいえ、そうじゃありません。",
+                "translation": "Đó là sổ tay phải không? ...Không, không phải vậy.",
+                "translationEn": "Is that a notebook? ...No, it isn't."
+            },
+            {
+                "sentence": "あなたは学生ですか。…はい、そうです。",
+                "translation": "Bạn là học sinh phải không? ...Vâng, đúng vậy.",
+                "translationEn": "Are you a student? ...Yes, I am."
+            },
+            {
+                "sentence": "ミラーさんはアメリカ人ですか。…はい、そうです。",
+                "translation": "Anh Miller là người Mỹ phải không? ...Vâng, đúng vậy.",
+                "translationEn": "Is Mr. Miller American? ...Yes, he is."
+            },
+            {
+                "sentence": "それは日本語の本ですか。…いいえ、ちがいます。",
+                "translation": "Đó là sách tiếng Nhật phải không? ...Không, sai rồi.",
+                "translationEn": "Is that a Japanese book? ...No, it's not."
+            },
+            {
+                "sentence": "これはあなたの傘ですか。…はい、そうです。",
+                "translation": "Đây là ô của bạn phải không? ...Vâng, đúng vậy.",
+                "translationEn": "Is this your umbrella? ...Yes, it is."
+            },
+            {
+                "sentence": "あれは学校ですか。…いいえ、そうじゃありません。",
+                "translation": "Kia là trường học phải không? ...Không, không phải.",
+                "translationEn": "Is that a school? ...No, it isn't."
+            },
+            {
+                "sentence": "サントスさんは先生ですか。…いいえ、ちがいます。",
+                "translation": "Anh Santos là giáo viên phải không? ...Không, sai rồi.",
+                "translationEn": "Is Mr. Santos a teacher? ...No, he isn't."
+            },
+            {
+                "sentence": "それはラジオですか。…はい、そうです。",
+                "translation": "Đó là cái đài phải không? ...Vâng, đúng vậy.",
+                "translationEn": "Is that a radio? ...Yes, it is."
+            },
+            {
+                "sentence": "これは「９」ですか。…いいえ、ちがいます。",
+                "translation": "Đây là số 9 phải không? ...Không, sai rồi.",
+                "translationEn": "Is this a 9? ...No, it isn't."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "N1 の N2",
+        "examples": [
+            {
+                "sentence": "これは自動車の雑誌です。",
+                "translation": "Đây là tạp chí về ô tô.",
+                "translationEn": "This is a car magazine."
+            },
+            {
+                "sentence": "それは私の傘です。",
+                "translation": "Đó là cái ô của tôi.",
+                "translationEn": "That is my umbrella."
+            },
+            {
+                "sentence": "これは英語の新聞です。",
+                "translation": "Đây là báo tiếng Anh.",
+                "translationEn": "This is an English newspaper."
+            },
+            {
+                "sentence": "それは誰のカバンですか。",
+                "translation": "Đó là cặp của ai?",
+                "translationEn": "Whose bag is that?"
+            },
+            {
+                "sentence": "あれは先生の車です。",
+                "translation": "Kia là xe của giáo viên.",
+                "translationEn": "That is the teacher's car."
+            },
+            {
+                "sentence": "この本は私のです。",
+                "translation": "Quyển sách này là của tôi.",
+                "translationEn": "This book is mine."
+            },
+            {
+                "sentence": "それはカメラの雑誌ですか。",
+                "translation": "Đó là tạp chí máy ảnh phải không?",
+                "translationEn": "Is that a camera magazine?"
+            },
+            {
+                "sentence": "あれはIBMのコンピュータです。",
+                "translation": "Kia là máy tính của IBM.",
+                "translationEn": "That is an IBM computer."
+            },
+            {
+                "sentence": "これは日本語のCDです。",
+                "translation": "Đây là đĩa CD tiếng Nhật.",
+                "translationEn": "This is a Japanese CD."
+            },
+            {
+                "sentence": "サントスさんの手帳はどれですか。",
+                "translation": "Sổ tay của anh Santos là cái nào?",
+                "translationEn": "Which one is Mr. Santos's notebook?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "S1 か、S2 か",
+        "examples": [
+            {
+                "sentence": "これは「９」ですか、「７」ですか。…「９」です。",
+                "translation": "Đây là số 9 hay số 7? ...Là số 9.",
+                "translationEn": "Is this a 9 or a 7? ...It's a 9."
+            },
+            {
+                "sentence": "それは本ですか、辞書ですか。…辞書です。",
+                "translation": "Đó là sách hay từ điển? ...Là từ điển.",
+                "translationEn": "Is that a book or a dictionary? ...It's a dictionary."
+            },
+            {
+                "sentence": "あれはアパートですか、寮ですか。…寮です。",
+                "translation": "Kia là căn hộ hay ký túc xá? ...Là ký túc xá.",
+                "translationEn": "Is that an apartment or a dormitory? ...It's a dormitory."
+            },
+            {
+                "sentence": "あなたは学生ですか、先生ですか。",
+                "translation": "Bạn là học sinh hay giáo viên?",
+                "translationEn": "Are you a student or a teacher?"
+            },
+            {
+                "sentence": "今日は月曜日ですか、火曜日ですか。",
+                "translation": "Hôm nay là thứ 2 hay thứ 3?",
+                "translationEn": "Is today Monday or Tuesday?"
+            },
+            {
+                "sentence": "これはボールペンですか、シャープペンシルですか。",
+                "translation": "Đây là bút bi hay bút chì kim?",
+                "translationEn": "Is this a ballpoint pen or a mechanical pencil?"
+            },
+            {
+                "sentence": "サントスさんはエンジニアですか、医者ですか。",
+                "translation": "Anh Santos là kỹ sư hay bác sĩ?",
+                "translationEn": "Is Mr. Santos an engineer or a doctor?"
+            },
+            {
+                "sentence": "コーヒーですか、紅茶ですか。",
+                "translation": "Cà phê hay hồng trà?",
+                "translationEn": "Coffee or black tea?"
+            },
+            {
+                "sentence": "それは「あ」ですか、「お」ですか。",
+                "translation": "Đó là chữ 'a' hay chữ 'o'?",
+                "translationEn": "Is that 'a' or 'o'?"
+            },
+            {
+                "sentence": "会社は東京ですか、大阪ですか。",
+                "translation": "Công ty ở Tokyo hay Osaka?",
+                "translationEn": "Is the company in Tokyo or Osaka?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "何（なん）",
+        "examples": [
+            {
+                "sentence": "これは何ですか。",
+                "translation": "Đây là cái gì?",
+                "translationEn": "What is this?"
+            },
+            {
+                "sentence": "それは何ですか。",
+                "translation": "Đó là cái gì?",
+                "translationEn": "What is that?"
+            },
+            {
+                "sentence": "あれは何ですか。",
+                "translation": "Kia là cái gì?",
+                "translationEn": "What is that (over there)?"
+            },
+            {
+                "sentence": "この本は何の本ですか。",
+                "translation": "Quyển sách này là sách gì?",
+                "translationEn": "What kind of book is this?"
+            },
+            {
+                "sentence": "お仕事は何ですか。",
+                "translation": "Công việc của bạn là gì?",
+                "translationEn": "What is your job?"
+            },
+            {
+                "sentence": "専門は何ですか。",
+                "translation": "Chuyên môn của bạn là gì?",
+                "translationEn": "What is your specialty?"
+            },
+            {
+                "sentence": "電話番号は何番ですか。",
+                "translation": "Số điện thoại là bao nhiêu?",
+                "translationEn": "What is your phone number?"
+            },
+            {
+                "sentence": "会社は何ですか。",
+                "translation": "Công ty là gì (Công ty nào)?",
+                "translationEn": "What is your company?"
+            },
+            {
+                "sentence": "趣味は何ですか。",
+                "translation": "Sở thích là gì?",
+                "translationEn": "What is your hobby?"
+            },
+            {
+                "sentence": "これは何の鍵ですか。",
+                "translation": "Đây là chìa khóa gì?",
+                "translationEn": "What key is this?"
+            }
+        ]
+    }
+]

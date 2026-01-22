@@ -179,7 +179,7 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
     }
     
     if (action.count != null && action.count! > 0) {
-      return '${action.count} items'; // TODO: Add 'itemsLabel' to AppLanguage if strictly needed.
+      return '${action.count} item(s)';
     }
     return action.label;
   }

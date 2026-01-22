@@ -5,6 +5,7 @@ import '../../common/widgets/clay_card.dart';
 import '../../../theme/app_theme_v2.dart';
 
 class SentenceBuilderWidget extends StatefulWidget {
+  final String prompt;
   final List<String> correctWords;
   final List<String> shuffledWords;
   final Function(bool isCorrect) onCheck;
@@ -12,6 +13,7 @@ class SentenceBuilderWidget extends StatefulWidget {
 
   const SentenceBuilderWidget({
     super.key,
+    required this.prompt,
     required this.correctWords,
     required this.shuffledWords,
     required this.onCheck,
@@ -75,6 +77,41 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
 
     return Column(
       children: [
+        // Prompt
+        Container(
+          width: double.infinity,
+          margin: const EdgeInsets.only(bottom: 24),
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: AppThemeV2.primary.withValues(alpha: 0.05),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppThemeV2.primary.withValues(alpha: 0.1)),
+          ),
+          child: Column(
+            children: [
+               Text(
+                 'Arrange the sentence:',
+                 style: TextStyle(
+                   color: AppThemeV2.textSub,
+                   fontSize: 12,
+                   fontWeight: FontWeight.bold,
+                   letterSpacing: 0.5,
+                 ),
+               ),
+               const SizedBox(height: 8),
+               Text(
+                 widget.prompt,
+                 textAlign: TextAlign.center,
+                 style: TextStyle(
+                    color: AppThemeV2.textMain,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                 ),
+               ),
+            ],
+          ),
+        ),
+
         // Target Area
         ClayCard(
           color: targetColor,

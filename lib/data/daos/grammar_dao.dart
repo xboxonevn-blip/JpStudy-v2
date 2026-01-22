@@ -72,4 +72,9 @@ class GrammarDao extends DatabaseAccessor<AppDatabase> with _$GrammarDaoMixin {
      final now = DateTime.now();
      return (select(grammarSrsState)..where((t) => t.nextReviewAt.isSmallerOrEqualValue(now))).get();
   }
+
+  /// Get all ghost reviews (items with ghostReviewsDue > 0)
+  Future<List<GrammarSrsStateData>> getGhostReviews() {
+     return (select(grammarSrsState)..where((t) => t.ghostReviewsDue.isBiggerThanValue(0))).get();
+  }
 }

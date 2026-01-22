@@ -12,3 +12,9 @@ final grammarDueCountProvider = FutureProvider<int>((ref) async {
   final points = await repo.fetchDuePoints();
   return points.length;
 });
+
+final grammarGhostCountProvider = FutureProvider<int>((ref) async {
+  final repo = ref.watch(grammarRepositoryProvider);
+  final points = await repo.fetchGhostPoints();
+  return points.length;
+});

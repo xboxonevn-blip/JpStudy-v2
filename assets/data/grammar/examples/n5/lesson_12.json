@@ -1,0 +1,222 @@
+[
+    {
+        "grammarPoint": "Thì quá khứ của tính từ",
+        "examples": [
+            {
+                "sentence": "昨日は寒かったです。",
+                "translation": "Hôm qua trời lạnh.",
+                "translationEn": "It was cold yesterday."
+            },
+            {
+                "sentence": "昨日は雨でした。",
+                "translation": "Hôm qua trời mưa.",
+                "translationEn": "It was rainy yesterday."
+            },
+            {
+                "sentence": "先週は忙しかったです。",
+                "translation": "Tuần trước tôi bận.",
+                "translationEn": "I was busy last week."
+            },
+            {
+                "sentence": "お祭りはにぎやかでした。",
+                "translation": "Lễ hội đã rất náo nhiệt.",
+                "translationEn": "The festival was lively."
+            },
+            {
+                "sentence": "試験は簡単でした。",
+                "translation": "Kỳ thi đã rất đơn giản.",
+                "translationEn": "The exam was simple."
+            },
+            {
+                "sentence": "映画は面白かったです。",
+                "translation": "Bộ phim đã rất thú vị.",
+                "translationEn": "The movie was interesting."
+            },
+            {
+                "sentence": "昨日はあまり暑くなかったです。",
+                "translation": "Hôm qua trời không nóng lắm.",
+                "translationEn": "It wasn't very hot yesterday."
+            },
+            {
+                "sentence": "パーティーは楽しかったです。",
+                "translation": "Buổi tiệc đã rất vui.",
+                "translationEn": "The party was fun."
+            },
+            {
+                "sentence": "昨日は暇じゃありませんでした。",
+                "translation": "Hôm qua tôi không rảnh.",
+                "translationEn": "I wasn't free yesterday."
+            },
+            {
+                "sentence": "天気はよくなかったです。",
+                "translation": "Thời tiết hôm qua không tốt.",
+                "translationEn": "The weather was not good."
+            }
+        ]
+    },
+    {
+        "grammarPoint": "So sánh hơn (Yori)",
+        "examples": [
+            {
+                "sentence": "この車はあの車より大きいです。",
+                "translation": "Cái xe này to hơn cái xe kia.",
+                "translationEn": "This car is bigger than that car."
+            },
+            {
+                "sentence": "北海道は大阪より涼しいです。",
+                "translation": "Hokkaido mát hơn Osaka.",
+                "translationEn": "Hokkaido is cooler than Osaka."
+            },
+            {
+                "sentence": "飛行機は電車より速いです。",
+                "translation": "Máy bay nhanh hơn tàu điện.",
+                "translationEn": "Airplanes are faster than trains."
+            },
+            {
+                "sentence": "今日は昨日より暑いです。",
+                "translation": "Hôm nay nóng hơn hôm qua.",
+                "translationEn": "Today is hotter than yesterday."
+            },
+            {
+                "sentence": "私は田中さんより背が高いです。",
+                "translation": "Tôi cao hơn anh Tanaka.",
+                "translationEn": "I am taller than Mr. Tanaka."
+            },
+            {
+                "sentence": "肉は魚より好きです。",
+                "translation": "Tôi thích thịt hơn cá.",
+                "translationEn": "I like meat more than fish."
+            },
+            {
+                "sentence": "今年の夏は去年の夏より雨が多いです。",
+                "translation": "Hè năm nay mưa nhiều hơn hè năm ngoái.",
+                "translationEn": "There is more rain this summer than last summer."
+            },
+            {
+                "sentence": "英語は日本語より簡単ですか。",
+                "translation": "Tiếng Anh dễ hơn tiếng Nhật không?",
+                "translationEn": "Is English easier than Japanese?"
+            },
+            {
+                "sentence": "海は山よりいいです。",
+                "translation": "Biển tốt hơn núi (tôi thích biển hơn).",
+                "translationEn": "The sea is better than the mountains."
+            },
+            {
+                "sentence": "東京はニューヨークより人が多いですか。",
+                "translation": "Tokyo có đông người hơn New York không?",
+                "translationEn": "Does Tokyo have more people than New York?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "So sánh nhất (Ichiban)",
+        "examples": [
+            {
+                "sentence": "日本料理で何がいちばんおいしいですか。",
+                "translation": "Trong các món ăn Nhật, món nào ngon nhất?",
+                "translationEn": "What is the most delicious Japanese food?"
+            },
+            {
+                "sentence": "天ぷらがいちばんおいしいです。",
+                "translation": "Tempura là ngon nhất.",
+                "translationEn": "Tempura is the most delicious."
+            },
+            {
+                "sentence": "クラスで誰がいちばん元気ですか。",
+                "translation": "Trong lớp ai là người khỏe mạnh nhất?",
+                "translationEn": "Who is the most energetic in the class?"
+            },
+            {
+                "sentence": "１年でいつがいちばん寒いですか。",
+                "translation": "Trong 1 năm khi nào lạnh nhất?",
+                "translationEn": "When is the coldest time of the year?"
+            },
+            {
+                "sentence": "世界でどこがいちばん綺麗ですか。",
+                "translation": "Trên thế giới nơi nào đẹp nhất?",
+                "translationEn": "Where is the most beautiful place in the world?"
+            },
+            {
+                "sentence": "家族で父がいちばん背が高いです。",
+                "translation": "Trong gia đình, bố tôi cao nhất.",
+                "translationEn": "My father is the tallest in the family."
+            },
+            {
+                "sentence": "スポーツでサッカーがいちばん好きです。",
+                "translation": "Trong thể thao tôi thích bóng đá nhất.",
+                "translationEn": "I like soccer the best among sports."
+            },
+            {
+                "sentence": "日本で富士山がいちばん高い山です。",
+                "translation": "Ở Nhật Bản, núi Phú Sĩ là núi cao nhất.",
+                "translationEn": "Mt. Fuji is the highest mountain in Japan."
+            },
+            {
+                "sentence": "１週間で土曜日がいちばん暇です。",
+                "translation": "Trong 1 tuần, thứ 7 là rảnh nhất.",
+                "translationEn": "Saturday is the freest day of the week."
+            },
+            {
+                "sentence": "果物で何がいちばん安いですか。",
+                "translation": "Trong các loại quả, quả nào rẻ nhất?",
+                "translationEn": "Which fruit is the cheapest?"
+            }
+        ]
+    },
+    {
+        "grammarPoint": "So sánh lựa chọn (Dochira)",
+        "examples": [
+            {
+                "sentence": "サッカーと野球とどちらがおもしろいですか。",
+                "translation": "Bóng đá và bóng chày, cái nào thú vị hơn?",
+                "translationEn": "Which is more interesting, soccer or baseball?"
+            },
+            {
+                "sentence": "サッカーのほうが面白いです。",
+                "translation": "Bóng đá thú vị hơn.",
+                "translationEn": "Soccer is more interesting."
+            },
+            {
+                "sentence": "コーヒーと紅茶とどちらが好きですか。",
+                "translation": "Cà phê và hồng trà, bạn thích cái nào hơn?",
+                "translationEn": "Which do you like better, coffee or black tea?"
+            },
+            {
+                "sentence": "北海道と大阪とどちらが涼しいですか。",
+                "translation": "Hokkaido và Osaka, chỗ nào mát hơn?",
+                "translationEn": "Which is cooler, Hokkaido or Osaka?"
+            },
+            {
+                "sentence": "仕事と勉強とどちらが大切ですか。",
+                "translation": "Công việc và học tập, cái nào quan trọng hơn?",
+                "translationEn": "Which is more important, work or study?"
+            },
+            {
+                "sentence": "これとあれとどちらがいいですか。",
+                "translation": "Cái này và cái kia, cái nào tốt hơn?",
+                "translationEn": "Which is better, this one or that one?"
+            },
+            {
+                "sentence": "春と秋とどちらが好きですか。",
+                "translation": "Mùa xuân và mùa thu, bạn thích mùa nào?",
+                "translationEn": "Which season do you like better, spring or autumn?"
+            },
+            {
+                "sentence": "パンとごはん、どちらを食べたいですか。",
+                "translation": "Bánh mì và cơm, bạn muốn ăn cái nào?",
+                "translationEn": "Which would you like to eat, bread or rice?"
+            },
+            {
+                "sentence": "どちらも好きです。",
+                "translation": "Tôi thích cả hai.",
+                "translationEn": "I like both."
+            },
+            {
+                "sentence": "どちらも好きじゃありません。",
+                "translation": "Tôi không thích cái nào cả.",
+                "translationEn": "I don't like either."
+            }
+        ]
+    }
+]

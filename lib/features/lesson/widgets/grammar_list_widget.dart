@@ -3,6 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/data/db/app_database.dart';
+import 'package:go_router/go_router.dart';
+import 'package:jpstudy/features/common/widgets/clay_button.dart';
+import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 
 class GrammarListWidget extends ConsumerWidget {
   const GrammarListWidget({
@@ -34,16 +37,40 @@ class GrammarListWidget extends ConsumerWidget {
             ),
           );
         }
-        return ListView.separated(
+        
+        return ListView.builder(
           padding: const EdgeInsets.all(16),
-          itemCount: grammarList.length,
-          separatorBuilder: (context, index) => const SizedBox(height: 16),
+          itemCount: grammarList.length + 1, // +1 for the button
           itemBuilder: (context, index) {
-            final data = grammarList[index];
-            return _GrammarPointCard(
-              index: index + 1,
-              data: data,
-              language: language,
+            if (index == 0) {
+              // Practice Button
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 16),
+                child: ClayButton(
+                  label: language == AppLanguage.vi 
+                      ? 'Làm Bài Tập & Quiz' 
+                      : 'Exercises & Quiz',
+                  icon: Icons.model_training,
+                  style: ClayButtonStyle.primary,
+                  onPressed: () {
+                    final ids = grammarList.map((e) => e.point.id).toList();
+                    context.push('/grammar-practice', extra: {
+                      'ids': ids,
+                      'mode': GrammarPracticeMode.normal,
+                    });
+                  },
+                ),
+              );
+            }
+            
+            final data = grammarList[index - 1];
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 16),
+              child: _GrammarPointCard(
+                index: index,
+                data: data,
+                language: language,
+              ),
             );
           },
         );

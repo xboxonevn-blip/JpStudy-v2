@@ -50,23 +50,24 @@ class GrammarQuestionGenerator {
       ));
 
       // Strategy 2: Cloze (Fill in the blank)
-      // Remove the grammar point pattern from the sentence
-      // This is hard to do perfectly automatically without regex matching the specific conjugation.
+      // Remainder of logic...
       // Simple heuristic: if the example contains the exact grammar point string
       if (example.japanese.contains(point.grammarPoint)) {
         // Generate Distractors
         final distractors = <String>[];
         if (allPoints != null && allPoints.isNotEmpty) {
-           final pool = allPoints.where((p) => p.id != point.id).toList();
+           // Filter out the correct answer
+           final pool = allPoints.where((p) => p.id != point.id && p.grammarPoint != point.grammarPoint).toList();
            pool.shuffle();
            distractors.addAll(pool.take(3).map((p) => p.grammarPoint));
         }
         
         // Fill remaining if needed
         while (distractors.length < 3) {
-           distractors.add('Wrong ${distractors.length + 1}');
+           distractors.add('Wrong Answer ${distractors.length + 1}');
         }
 
+        // Add Cloze Question
         questions.add(GeneratedQuestion(
           type: GrammarQuestionType.cloze,
           point: point,
@@ -77,6 +78,36 @@ class GrammarQuestionGenerator {
             ...distractors,
           ]..shuffle(),
           explanation: point.meaning,
+        ));
+
+        // Strategy 3: Multiple Choice (Select Correct Grammar for Meaning)
+        // Question: "Which grammar point means: [Meaning]?"
+        // Or "Which grammar point fits this structure?"
+        // Let's do a Context-based MCQ: "Select the grammar used in: [Example with blank]"
+        // This is similar to Cloze but purely selection driven.
+        // Let's vary it: "Select the correct meaning for: [point.grammarPoint]"
+        
+        // 3a. Meaning MCQ
+        final meaningDistractors = <String>[];
+        if (allPoints != null && allPoints.isNotEmpty) {
+           final pool = allPoints.where((p) => p.id != point.id).toList();
+           pool.shuffle();
+           meaningDistractors.addAll(pool.take(3).map((p) => p.meaning));
+        }
+         while (meaningDistractors.length < 3) {
+           meaningDistractors.add('Other Meaning ${meaningDistractors.length + 1}');
+        }
+
+        questions.add(GeneratedQuestion(
+          type: GrammarQuestionType.multipleChoice,
+          point: point,
+          question: 'What is the meaning of "${point.grammarPoint}"?',
+          correctAnswer: point.meaning,
+          options: [
+            point.meaning,
+            ...meaningDistractors,
+          ]..shuffle(),
+          explanation: point.explanation,
         ));
       }
     }

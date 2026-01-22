@@ -7,19 +7,7 @@
         "structureEn": "V (Passive)",
         "explanation": "Cách chia động từ sang thể Bị động.\n\n*   **Nhóm I**: Chuyển cột `i` thành cột `a` + `れる`.\n*   **Nhóm II**: Bỏ `ます` thêm `られる`.\n*   **Nhóm III**: `きます` -> `こられる`; `します` -> `される`.",
         "explanationEn": "Conjugating verbs to Passive Voice.\n\n*   **Group I**: Change `i` column to `a` column + `れる`.\n*   **Group II**: Drop `ます`, add `られる`.\n*   **Group III**: `きます` -> `こられる`; `します` -> `される`.",
-        "level": "N4",
-        "examples": [
-            {
-                "sentence": "書かれる (Bị viết) / 踏まれる (Bị giẫm lên)",
-                "translation": "Bị viết / Bị giẫm lên",
-                "translationEn": "To be written / To be stepped on"
-            },
-            {
-                "sentence": "褒められる (Được khen)",
-                "translation": "Được khen",
-                "translationEn": "To be praised"
-            }
-        ]
+        "level": "N4"
     },
     {
         "lessonId": 37,
@@ -29,14 +17,7 @@
         "structureEn": "N1 wa N2 ni V (Passive)",
         "explanation": "N1 bị/được N2 làm gì đó.\n\n*   `私は先生に褒められました`: Tôi được thầy giáo khen.",
         "explanationEn": "N1 was V-ed by N2.\n\n*   `私は先生に褒められました`: I was praised by the teacher.",
-        "level": "N4",
-        "examples": [
-            {
-                "sentence": "私は母に叱られました。",
-                "translation": "Tôi bị mẹ mắng.",
-                "translationEn": "I was scolded by my mother."
-            }
-        ]
+        "level": "N4"
     },
     {
         "lessonId": 37,
@@ -46,13 +27,6 @@
         "structureEn": "N1 wa N2 ni N3 o V (Passive)",
         "explanation": "N1 bị N2 làm gì đó vào N3 (vật sở hữu).\n\n*   `私は弟にパソコンを壊されました`: Tôi bị em trai làm hỏng máy tính.",
         "explanationEn": "N1 had N3 V-ed by N2 (Suffering passive).\n\n*   `私は弟にパソコンを壊されました`: My computer was broken by my younger brother.",
-        "level": "N4",
-        "examples": [
-            {
-                "sentence": "足を踏まれました。",
-                "translation": "Tôi bị giẫm vào chân.",
-                "translationEn": "My foot was stepped on."
-            }
-        ]
+        "level": "N4"
     }
 ]

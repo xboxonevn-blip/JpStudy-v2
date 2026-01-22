@@ -7,19 +7,7 @@
         "structureEn": "N1 wa N2 desu",
         "explanation": "Câu danh từ cơ bản. Diễn tả A là B.\n*   `は` (đọc là `wa`): trợ từ xác định chủ ngữ.\n*   `です`: động từ tobe, thể hiện sự lịch sự.",
         "explanationEn": "Basic noun sentence. Expresses 'A is B'.\n*   `は` (read as `wa`): Topic marker particle.\n*   `です`: Copula (is/am/are), indicates politeness.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "私は学生です。",
-                "translation": "Tôi là học sinh.",
-                "translationEn": "I am a student."
-            },
-            {
-                "sentence": "マイさんは会社員です。",
-                "translation": "Mai là nhân viên công ty.",
-                "translationEn": "Mai is a company employee."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 1,
@@ -29,19 +17,7 @@
         "structureEn": "N1 wa N2 ja arimasen (short: ja nai desu)",
         "explanation": "Câu phủ định của `N1 は N2 です`.\nDiễn tả A không phải là B.",
         "explanationEn": "Negative form of `N1 は N2 です`.\nExpresses 'A is not B'.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "私は日本人じゃありません。",
-                "translation": "Tôi không phải là người Nhật.",
-                "translationEn": "I am not Japanese."
-            },
-            {
-                "sentence": "ラオさんはエンジニアじゃありません。",
-                "translation": "Lao không phải là kỹ sư.",
-                "translationEn": "Mr. Rao is not an engineer."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 1,
@@ -51,19 +27,7 @@
         "structureEn": "Sentence + ka",
         "explanation": "Câu hỏi. Thêm `か` vào cuối câu để biến câu trần thuật thành câu hỏi.\nLên giọng ở cuối câu.",
         "explanationEn": "Question particle. Add `か` to the end of a sentence to turn it into a question.\nRaise your intonation at the end.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "あなたは学生ですか。",
-                "translation": "Bạn có phải là học sinh không?",
-                "translationEn": "Are you a student?"
-            },
-            {
-                "sentence": "...はい、そうです。",
-                "translation": "...Vâng, đúng vậy.",
-                "translationEn": "...Yes, that's right."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 1,
@@ -73,19 +37,7 @@
         "structureEn": "Noun + mo",
         "explanation": "Trợ từ `も` (cũng). Thay thế cho `は` khi danh từ có cùng thuộc tính với danh từ đã nêu trước đó.",
         "explanationEn": "Particle `も` (also/too). Replaces `は` when the noun shares the same property as a previously mentioned topic.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "私もベトナム人です。",
-                "translation": "Tôi cũng là người Việt Nam.",
-                "translationEn": "I am also Vietnamese."
-            },
-            {
-                "sentence": "山田さんも会社員ですか。",
-                "translation": "Anh Yamada cũng là nhân viên công ty à?",
-                "translationEn": "Is Mr. Yamada also a company employee?"
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 1,
@@ -95,19 +47,7 @@
         "structureEn": "N1 no N2",
         "explanation": "Trợ từ `の` nối hai danh từ. N1 bổ nghĩa cho N2.\nTrong bài này biểu thị sự sở hữu (N2 của N1).",
         "explanationEn": "Particle `の` connects two nouns. N1 modifies N2.\nIn this lesson, it indicates possession (N1's N2).",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "IMCの社員",
-                "translation": "Nhân viên của IMC.",
-                "translationEn": "IMC employee."
-            },
-            {
-                "sentence": "私の本",
-                "translation": "Sách của tôi.",
-                "translationEn": "My book."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 1,
@@ -117,13 +57,6 @@
         "structureEn": "Name + san",
         "explanation": "Hậu tố xưng hô lịch sự thêm vào sau tên người khác.\nKhông dùng cho bản thân mình.",
         "explanationEn": "Polite suffix added to names.\nDo not use it for yourself.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "あの方はミラーさんです。",
-                "translation": "Vị kia là ngài Miller.",
-                "translationEn": "That person is Mr. Miller."
-            }
-        ]
+        "level": "N5"
     }
 ]

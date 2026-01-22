@@ -7,19 +7,7 @@
         "structureEn": "koko / soko / asoko wa N (Place) desu",
         "explanation": "Đại từ chỉ địa điểm.\n\n*   `ここ` (Chỗ này): Vị trí của người nói.\n*   `そこ` (Chỗ đó): Vị trí của người nghe.\n*   `あそこ` (Chỗ kia): Vị trí xa cả hai.",
         "explanationEn": "Demonstratives for place.\n\n*   `ここ` (Here): Near speaker.\n*   `そこ` (There): Near listener.\n*   `あそこ` (Over there): Far from both.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "ここは食堂です。",
-                "translation": "Đây là nhà ăn.",
-                "translationEn": "This is the cafeteria."
-            },
-            {
-                "sentence": "電話はあそこです。",
-                "translation": "Điện thoại ở chỗ kia.",
-                "translationEn": "The telephone is over there."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 3,
@@ -29,19 +17,7 @@
         "structureEn": "kochira / sochira / achira wa N (Place/Person) desu",
         "explanation": "Đại từ chỉ phương hướng, vị trí hoặc người (lịch sự hơn `ここ、そこ、あそこ`).\n\n*   `こちら`: Phía này, vị này.\n*   `そちら`: Phía đó, vị đó.\n*   `あちら`: Phía kia, vị kia.",
         "explanationEn": "Demonstratives for direction, location, or people (more polite than koko/soko/asoko).\n\n*   `こちら`: This way / person.\n*   `そちら`: That way / person.\n*   `あちら`: That way / person over there.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "ロビーはこちらです。",
-                "translation": "Hành lang ở phía này.",
-                "translationEn": "The lobby is this way."
-            },
-            {
-                "sentence": "こちらはミラーさんです。",
-                "translation": "Đây là ngài Miller.",
-                "translationEn": "This is Mr. Miller."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 3,
@@ -51,19 +27,7 @@
         "structureEn": "N1 wa N2 (Place) desu",
         "explanation": "Diễn tả sự tồn tại/vị trí của N1 tại N2.\n\n*   Người / Vật `は` Địa điểm `です`.",
         "explanationEn": "Expresses the location of N1.\n\n*   Person/Thing `は` Place `です`.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "トイレはどこですか。…あそこです。",
-                "translation": "Nhà vệ sinh ở đâu vậy? ...Ở chỗ kia.",
-                "translationEn": "Where is the restroom? ...It's over there."
-            },
-            {
-                "sentence": "ミラーさんは会議室です。",
-                "translation": "Anh Miller ở phòng họp.",
-                "translationEn": "Mr. Miller is in the conference room."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 3,
@@ -73,19 +37,7 @@
         "structureEn": "N wa doko / dochira desu ka",
         "explanation": "Từ để hỏi về địa điểm hoặc phương hướng.\n\n*   `どこ`: Ở đâu?\n*   `どちら`: Ở phía nào? (lịch sự hơn).",
         "explanationEn": "Question words for place or direction.\n\n*   `どこ`: Where?\n*   `どちら`: Which way? (polite).",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "エレベーターはどちらですか。",
-                "translation": "Thang máy ở phía nào vậy ạ?",
-                "translationEn": "Where (which way) is the elevator?"
-            },
-            {
-                "sentence": "学校はどこですか。",
-                "translation": "Trường học ở đâu?",
-                "translationEn": "Where is the school?"
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 3,
@@ -95,19 +47,7 @@
         "structureEn": "N1 (Country/Company) no N2 (Product)",
         "explanation": "Diễn tả nơi sản xuất hoặc xuất xứ của sản phẩm N2.",
         "explanationEn": "Expresses the origin or manufacturer of N2.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "これはどこの時計ですか。…スイスの時計です。",
-                "translation": "Đây là đồng hồ nước nào vậy? ...Đồng hồ Thụy Sĩ.",
-                "translationEn": "Where is this watch from? ...It's a Swiss watch."
-            },
-            {
-                "sentence": "それは日本の車ですか。…はい、そうです。",
-                "translation": "Đó là ô tô Nhật Bản phải không? ...Vâng, đúng vậy.",
-                "translationEn": "Is that a Japanese car? ...Yes, it is."
-            }
-        ]
+        "level": "N5"
     },
     {
         "lessonId": 3,
@@ -117,13 +57,6 @@
         "structureEn": "Okuni wa dochira desu ka",
         "explanation": "Câu hỏi lịch sự về quốc tịch/quê quán.\n\nThêm tiền tố `お` trước `国` (nước) để thể hiện sự tôn trọng.",
         "explanationEn": "Polite question about country/hometown.\n\nAdd prefix `お` before `国` (country) to show respect.",
-        "level": "N5",
-        "examples": [
-            {
-                "sentence": "お国はどちらですか。…アメリカです。",
-                "translation": "Anh/chị là người nước nào? ...Mỹ.",
-                "translationEn": "Where are you from? ...America."
-            }
-        ]
+        "level": "N5"
     }
 ]

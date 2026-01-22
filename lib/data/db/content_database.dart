@@ -28,7 +28,7 @@ class ContentDatabase extends _$ContentDatabase {
   ContentDatabase({QueryExecutor? executor}) : super(executor ?? _openContentConnection());
 
   @override
-  int get schemaVersion => 15;
+  int get schemaVersion => 16;
 
   @override
   MigrationStrategy get migration {
@@ -47,46 +47,42 @@ class ContentDatabase extends _$ContentDatabase {
           await m.addColumn(vocab, vocab.kanjiMeaning);
         }
         if (from < 6) {
-           await m.addColumn(vocab, vocab.meaningEn); // Keep original from < 6 for vocab.meaningEn
+           await m.addColumn(vocab, vocab.meaningEn); 
         }
         if (from < 7) {
           await m.createTable(grammarPoint);
           await m.createTable(grammarExample);
-          
-          // Seed grammar for the first time
           await _seedMinnaGrammar();
         }
         if (from < 9) {
           await m.createTable(kanji);
           await _seedMinnaKanji();
         }
-        
-        // Fix for missing Kanji assets in v9
         if (from < 10) {
           await _reseedMinnaKanji();
         }
-
-        // Fix for missing Grammar data in v10
         if (from < 11) {
           await _seedMinnaGrammar();
-          await _reseedMinnaVocabulary(); // Reseed vocab to be safe as requested
+          await _reseedMinnaVocabulary(); 
         }
-        
-        // Ensure grammar is re-seeded for v12/13/14 to fix stale data
         if (from < 14) {
            await _seedMinnaGrammar(); 
         }
-        
-        if (from >= 11) {
+        if (from >= 11 && from < 15) {
           await _reseedMinnaVocabulary();
         }
-
         if (from < 15) {
+          await _seedMinnaGrammar();
+        }
+        // Force re-seed for grammar examples expansion (v16)
+        if (from < 16) {
           await _seedMinnaGrammar();
         }
       },
     );
   }
+
+  // ... (reseed methods)
 
   Future<void> _reseedMinnaVocabulary() async {
     // Delete all old Minna vocabulary (both N5 and N4)
@@ -111,6 +107,7 @@ class ContentDatabase extends _$ContentDatabase {
 
     // Seeding Minna Grammar Lessons 1-5 (Batch 1)
     final List<String> grammarFiles = [
+       // ... list remains same in implementation, just showing logic change ...
       'assets/data/grammar/n5/grammar_n5_1.json',
       'assets/data/grammar/n5/grammar_n5_2.json',
       'assets/data/grammar/n5/grammar_n5_3.json',
@@ -172,13 +169,36 @@ class ContentDatabase extends _$ContentDatabase {
       'assets/data/grammar/n4/grammar_n4_48.json',
       'assets/data/grammar/n4/grammar_n4_49.json',
       'assets/data/grammar/n4/grammar_n4_50.json',
-      // Add more files here as we create them
     ];
 
     for (final file in grammarFiles) {
       try {
         final jsonString = await rootBundle.loadString(file);
         final List<dynamic> points = json.decode(jsonString);
+        
+        if (points.isEmpty) continue;
+
+        // Try load supplementary examples
+        Map<String, List<dynamic>> extraExamplesMap = {};
+        try {
+          // Infer lesson and level from first point or file path
+          // File path: assets/data/grammar/n5/grammar_n5_1.json
+          // We can parse file path string usually, or take from point data
+          final firstPoint = points.first;
+          final lessonId = firstPoint['lessonId'] as int;
+          final level = (firstPoint['level'] as String).toLowerCase(); // 'n5'
+          
+          final examplesFile = 'assets/data/grammar/examples/$level/lesson_$lessonId.json';
+          final exJsonString = await rootBundle.loadString(examplesFile);
+          final List<dynamic> exList = json.decode(exJsonString);
+          
+          for (final item in exList) {
+             final gp = item['grammarPoint'] as String;
+             extraExamplesMap[gp] = item['examples'] as List<dynamic>;
+          }
+        } catch (_) {
+           // No supplementary file or parse error, ignore
+        }
 
         for (final pointData in points) {
           // Insert Grammar Point
@@ -197,8 +217,15 @@ class ContentDatabase extends _$ContentDatabase {
             mode: InsertMode.insertOrReplace,
           );
 
-          // Insert Examples
-          final List<dynamic> examples = pointData['examples'] ?? [];
+          // Insert Original Examples
+          final List<dynamic> examples = [...(pointData['examples'] ?? [])];
+          
+          // Merge Supplementary Examples
+          final titleKey = pointData['title'] as String;
+          if (extraExamplesMap.containsKey(titleKey)) {
+             examples.addAll(extraExamplesMap[titleKey]!);
+          }
+
           for (final ex in examples) {
             await into(grammarExample).insert(
               GrammarExampleCompanion.insert(

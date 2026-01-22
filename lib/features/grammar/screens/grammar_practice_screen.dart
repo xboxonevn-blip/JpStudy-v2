@@ -5,14 +5,22 @@ import '../../../data/repositories/grammar_repository.dart';
 import '../../../data/db/app_database.dart';
 import '../widgets/sentence_builder_widget.dart';
 import '../widgets/cloze_test_widget.dart';
+import '../widgets/multiple_choice_widget.dart';
 import '../services/grammar_question_generator.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../common/widgets/clay_button.dart';
 
+enum GrammarPracticeMode { normal, ghost }
+
 class GrammarPracticeScreen extends ConsumerStatefulWidget {
   final List<int>? initialIds; // Optional: practice specific points
+  final GrammarPracticeMode mode; // Practice Mode
 
-  const GrammarPracticeScreen({super.key, this.initialIds});
+  const GrammarPracticeScreen({
+    super.key, 
+    this.initialIds,
+    this.mode = GrammarPracticeMode.normal,
+  });
 
   @override
   ConsumerState<GrammarPracticeScreen> createState() => _GrammarPracticeScreenState();
@@ -38,6 +46,9 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     if (widget.initialIds != null && widget.initialIds!.isNotEmpty) {
        // Fetch specific points
        points = await (repo.db.select(repo.db.grammarPoints)..where((t) => t.id.isIn(widget.initialIds!))).get();
+    } else if (widget.mode == GrammarPracticeMode.ghost) {
+       // Fetch Ghost Points
+       points = await repo.fetchGhostPoints();
     } else {
        // Fetch due points
        points = await repo.fetchDuePoints();
@@ -47,6 +58,9 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
        }
     }
 
+    // If ghost mode and no ghosts, maybe fallback? 
+    // Usually invalid state if we checked before nav, but handle gracefully.
+    
     final details = <({GrammarPoint point, List<GrammarExample> examples})>[];
     for (final point in points) {
       final detail = await repo.getGrammarDetail(point.id);
@@ -73,7 +87,14 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
       details, 
       allPoints: distractorPool,
     );
+    
+    // Customize for Ghost Mode if needed (e.g. force specific types)
+    // The generator produces multiple types per point sometimes. 
+    // We might want to limit to 1 question per point for SRS.
+    // For now, just take all generated. It adds variety.
+    
     _questions.addAll(generated);
+    _questions.shuffle(); // Shuffle order
 
     if (mounted) {
       setState(() {
@@ -117,16 +138,32 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        title: const Text('Practice Complete!'),
-        content: Text('You got $_score out of ${_questions.length} correct.'),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: const Text('Session Complete!', textAlign: TextAlign.center),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.check_circle_outline, color: Colors.green, size: 60),
+            const SizedBox(height: 16),
+            Text('You got $_score out of ${_questions.length} correct.', textAlign: TextAlign.center),
+          ],
+        ),
         actions: [
-          TextButton(
-            onPressed: () {
-              context.pop(); // close dialog
-              context.pop(); // back to grammar list
-            },
-            child: const Text('Finish'),
+          Center(
+            child: SizedBox(
+               width: 150,
+               child: ClayButton(
+                label: 'Finish',
+                onPressed: () {
+                  context.pop(); // close dialog
+                  context.pop(); // back to grammar list
+                },
+                style: ClayButtonStyle.primary,
+                isExpanded: true,
+              ),
+            ),
           ),
+          const SizedBox(height: 10),
         ],
       ),
     );
@@ -147,7 +184,12 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
              children: [
                Icon(Icons.sentiment_satisfied_alt, size: 80, color: AppThemeV2.primary),
                const SizedBox(height: 16),
-               Text('Zero items due for review!', style: TextStyle(fontSize: 18, color: AppThemeV2.textSub, fontWeight: FontWeight.bold)),
+               Text(
+                 widget.mode == GrammarPracticeMode.ghost 
+                   ? 'No mistakes to review!' 
+                   : 'Zero items due for review!', 
+                 style: TextStyle(fontSize: 18, color: AppThemeV2.textSub, fontWeight: FontWeight.bold)
+               ),
                const SizedBox(height: 32),
                SizedBox(
                  width: 200,
@@ -170,8 +212,10 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         title: Text(
-          'PRACTICE',
+          widget.mode == GrammarPracticeMode.ghost ? 'FIX MISTAKES' : 'PRACTICE',
           style: TextStyle(
             color: AppThemeV2.textSub,
             fontWeight: FontWeight.w900,
@@ -203,10 +247,10 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
 
   Widget _buildProgressBar(double progress) {
     return Container(
-      height: 24,
+      height: 16,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: AppThemeV2.neutral,
+        color: AppThemeV2.neutral.withValues(alpha: 0.3),
         borderRadius: BorderRadius.circular(12),
       ),
       child: FractionallySizedBox(
@@ -214,17 +258,8 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
         widthFactor: progress,
         child: Container(
           decoration: BoxDecoration(
-            color: AppThemeV2.secondary,
+            color: AppThemeV2.primary,
             borderRadius: BorderRadius.circular(12),
-            // Highlight
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Colors.white.withValues(alpha: 0.3),
-                Colors.white.withValues(alpha: 0.0),
-              ],
-            ),
           ),
         ),
       ),
@@ -235,24 +270,26 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     switch (q.type) {
       case GrammarQuestionType.sentenceBuilder:
         return SentenceBuilderWidget(
+          prompt: q.explanation ?? 'Arrange the sentence',
           correctWords: q.options, // In generator, options are the chars
           shuffledWords: List.of(q.options)..shuffle(), 
           onCheck: _onAnswer,
           onReset: () {},
         );
       case GrammarQuestionType.cloze:
-        // Use regex or string manipulation to create the template
-        // The generator already provides: 
-        // q.question -> "Example with ___"
-        // q.options -> ["Correct", "Wrong1", ...]
         return ClozeTestWidget(
           sentenceTemplate: q.question,
           options: q.options,
           correctOption: q.correctAnswer,
           onCheck: (isCorrect, _) => _onAnswer(isCorrect),
         );
-      default:
-        return const Center(child: Text('Unsupported question type'));
+      case GrammarQuestionType.multipleChoice:
+        return MultipleChoiceWidget(
+          question: q.question,
+          options: q.options,
+          correctAnswer: q.correctAnswer, 
+          onAnswer: _onAnswer,
+        );
     }
   }
 }

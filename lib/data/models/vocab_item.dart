@@ -8,14 +8,21 @@ class VocabItem {
   final String level;
   final List<String>? tags;
 
-  const VocabItem({
-    required this.id,
-    required this.term,
-    this.reading,
-    required this.meaning,
-    this.meaningEn,
     this.kanjiMeaning,
+    this.mnemonicVi,
+    this.mnemonicEn,
     required this.level,
     this.tags,
   });
+
+  final int id;
+  final String term;
+  final String? reading;
+  final String meaning;
+  final String? meaningEn;
+  final String? kanjiMeaning;
+  final String? mnemonicVi;
+  final String? mnemonicEn;
+  final String level;
+  final List<String>? tags;
 }

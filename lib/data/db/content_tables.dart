@@ -132,6 +132,8 @@ class Kanji extends Table {
   TextColumn get kunyomi => text().nullable()(); // Comma separated
   TextColumn get meaning => text()(); // Vietnamese
   TextColumn get meaningEn => text().nullable()(); // English
+  TextColumn get mnemonicVi => text().nullable()(); // Vietnamese Mnemonic
+  TextColumn get mnemonicEn => text().nullable()(); // English Mnemonic
   TextColumn get examplesJson => text()(); // JSON string of examples
   TextColumn get jlptLevel => text()(); // N5/N4
 }

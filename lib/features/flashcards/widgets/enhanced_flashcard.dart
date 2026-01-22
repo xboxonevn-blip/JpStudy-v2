@@ -138,6 +138,37 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
                 textAlign: TextAlign.center,
               ),
             ],
+            if (widget.item.mnemonicVi != null &&
+                widget.item.mnemonicVi!.isNotEmpty) ...[
+              const SizedBox(height: 24),
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.amber.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: Colors.amber.withValues(alpha: 0.3),
+                    width: 1,
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.lightbulb_outline_rounded,
+                        color: Colors.amber, size: 24),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        widget.item.mnemonicVi!,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: Colors.amber[900],
+                              height: 1.4,
+                            ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ],
         ),
       ),

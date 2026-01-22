@@ -7,6 +7,8 @@ class KanjiItem {
     this.kunyomi,
     required this.meaning,
     this.meaningEn,
+    this.mnemonicVi,
+    this.mnemonicEn,
     required this.examples,
     required this.jlptLevel,
   });
@@ -18,6 +20,8 @@ class KanjiItem {
   final String? kunyomi;
   final String meaning;
   final String? meaningEn;
+  final String? mnemonicVi;
+  final String? mnemonicEn;
   final List<KanjiExample> examples;
   final String jlptLevel;
 }

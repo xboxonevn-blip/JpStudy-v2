@@ -28,7 +28,7 @@ class ContentDatabase extends _$ContentDatabase {
   ContentDatabase({QueryExecutor? executor}) : super(executor ?? _openContentConnection());
 
   @override
-  int get schemaVersion => 16;
+  int get schemaVersion => 17;
 
   @override
   MigrationStrategy get migration {
@@ -77,6 +77,11 @@ class ContentDatabase extends _$ContentDatabase {
         // Force re-seed for grammar examples expansion (v16)
         if (from < 16) {
           await _seedMinnaGrammar();
+        }
+        if (from < 17) {
+          await m.addColumn(kanji, kanji.mnemonicVi);
+          await m.addColumn(kanji, kanji.mnemonicEn);
+          await _reseedMinnaKanji();
         }
       },
     );
@@ -324,6 +329,8 @@ class ContentDatabase extends _$ContentDatabase {
                 kunyomi: Value(item['kunyomi']),
                 meaning: item['meaning'],
                 meaningEn: Value(item['meaningEn']),
+                mnemonicVi: Value(item['mnemonic_vi']),
+                mnemonicEn: Value(item['mnemonic_en']),
                 examplesJson: json.encode(item['examples']),
                 jlptLevel: item['jlptLevel'],
               ),

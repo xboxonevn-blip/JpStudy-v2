@@ -65,6 +65,8 @@ class UserLessonTerm extends Table {
   TextColumn get reading => text().withDefault(const Constant(''))();
   TextColumn get definition => text().withDefault(const Constant(''))();
   TextColumn get definitionEn => text().withDefault(const Constant(''))(); // English definition
+  TextColumn get mnemonicVi => text().withDefault(const Constant(''))(); // Vietnamese Mnemonic
+  TextColumn get mnemonicEn => text().withDefault(const Constant(''))(); // English Mnemonic
   TextColumn get kanjiMeaning => text().withDefault(const Constant(''))();
   BoolColumn get isStarred => boolean().withDefault(const Constant(false))();
   BoolColumn get isLearned => boolean().withDefault(const Constant(false))();

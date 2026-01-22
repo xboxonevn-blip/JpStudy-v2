@@ -60,7 +60,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase({QueryExecutor? executor}) : super(executor ?? _openConnection());
 
   @override
-  int get schemaVersion => 22;
+  int get schemaVersion => 23;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -166,6 +166,11 @@ class AppDatabase extends _$AppDatabase {
           }
           if (from < 22) {
             await migrator.createTable(userMistakes);
+          }
+          if (from < 23) {
+            await _safeAddColumn(migrator, userLessonTerm, userLessonTerm.mnemonicVi);
+            await _safeAddColumn(migrator, userLessonTerm, userLessonTerm.mnemonicEn);
+            // Optionally force resync to get mnemonics
           }
         },
       );

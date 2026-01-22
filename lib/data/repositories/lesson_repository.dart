@@ -610,6 +610,8 @@ class LessonRepository {
             reading: Value(v.reading ?? ''),
             definition: Value(v.meaning),
             definitionEn: Value(v.meaningEn ?? ''),
+            mnemonicVi: Value(v.mnemonicVi ?? ''),
+            mnemonicEn: Value(v.mnemonicEn ?? ''),
             orderIndex: Value(i + 1),
           ),
         );

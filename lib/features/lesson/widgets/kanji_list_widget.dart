@@ -97,6 +97,33 @@ class KanjiListWidget extends ConsumerWidget {
                         Text(language == AppLanguage.en 
                             ? 'Strokes: ${item.strokeCount}' 
                             : 'Số nét: ${item.strokeCount}'),
+                        if (item.mnemonicVi != null && item.mnemonicVi!.isNotEmpty) ...[
+                          const SizedBox(height: 12),
+                          Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.amber.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(color: Colors.amber.withValues(alpha: 0.2)),
+                            ),
+                            child: Row(
+                              children: [
+                                const Icon(Icons.lightbulb_outline, color: Colors.amber, size: 20),
+                                const SizedBox(width: 8),
+                                Expanded(
+                                  child: Text(
+                                    item.mnemonicVi!,
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      color: Colors.amber[900],
+                                      fontStyle: FontStyle.italic,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                         if (item.examples.isNotEmpty) ...[
                           const SizedBox(height: 8),
                           Text(

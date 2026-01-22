@@ -1,107 +1,147 @@
-# 🚀 JpStudy-v2 Roadmap (v2.2 Updated: Claymorphism + Full Localization + SRS Fixes)
+# 🚀 JpStudy-v2 Roadmap (v2.3: Chiến lược Pro Max & Tối ưu Trải nghiệm)
 
 ## 🌟 Tầm nhìn (Vision)
 
-Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp tinh hoa từ các ứng dụng hàng đầu nhưng vẫn miễn phí vận hành (0đ):
+Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp tinh hoa từ các ứng dụng hàng đầu nhưng vẫn duy trì triết lý **"Zero-Cost Architecture" (Vận hành 0đ)**:
 
-*   **🧠 Anki/Quizlet:** SRS mạnh, modes đa dạng.
-*   **🏗️ LingoDeer/Duolingo:** Curriculum + gamification + “Continue loop”.
-*   **🧬 Bunpro:** Grammar SRS chuyên sâu (Ghost Reviews).
-*   **📰 Todaii/Migii:** Immersion + luyện thi JLPT thực chiến.
-
-### 📉 Chiến lược Tối ưu Chi phí (Zero-Cost Architecture)
-
-*   **Local-First:** chạy hoàn toàn offline (SQLite/Drift).
-*   **No-Backend:** Backup/Restore file thay Cloud DB realtime.
-*   **Open Data:** JMdict, Tatoeba, KanjiVG…
+*   **🧠 Logic Anki/Quizlet:** Thuật toán SRS mạnh mẽ, chế độ học đa dạng.
+*   **🏗️ Cấu trúc LingoDeer:** Lộ trình học bài bản (Curriculum) + Gamification.
+*   **🧬 Chuyên sâu Bunpro:** Ngữ pháp Ghost Reviews.
+*   **📰 Immersion (Todaii/Migii):** Đọc báo và luyện đề thực chiến.
 
 ---
 
-## 📅 Tổng quan Tiến độ (Phases)
+## 📊 Tổng quan Tiến độ (Build Status)
 
-| Phase | Tên gọi | Cảm hứng chính | Trạng thái | Dự kiến |
-| :--- | :--- | :--- | :--- | :--- |
-| **Phase 1** | **Foundation** | Anki & Quizlet | ✅ 100% | Q1 2026 |
-| **Phase 2** | **Structure + Retention Loop** | LingoDeer & Bunpro | ✅ 90% | Q1 2026 |
-| **Phase 2.5** | **Flashcard & Visual Polish** | Anki Logic + Claymorphism | ✅ 100% | Jan 2026 |
-| **Phase 3** | **Data Safety & Immersion** | Import/Export + Easy News | � Starting | Feb 2026 |
-| **Phase 4** | **Mastery** | Migii JLPT | 📅 | Q2 2026 |
-
----
-
-## ✅ Phase 1: Foundation (Nền tảng Từ vựng & SRS) — 100% Complete
-
-*(Đã hoàn thành)*
+| Phase | Trọng tâm | Trạng thái | Dự kiến |
+| :--- | :--- | :--- | :--- |
+| **Phase 1** | **Foundation** (Anki Logic) | ✅ 100% | Done |
+| **Phase 2** | **Structure** (LingoDeer Style) | ✅ 95% | Q1 2026 |
+| **Phase 2.5** | **Visual Polish & Mnemonics** | ✅ 100% | Done |
+| **Phase 3** | **Data Safety & Enrichment** | 🚧 25% | Feb 2026 |
+| **Phase 4** | **Mastery & Immersion** | 📅 0% | Q2 2026 |
 
 ---
 
-## ✅ Phase 2: Structure + Retention Loop (Ngữ pháp & Kanji) — 90% Done
+## 🛠️ Trạng thái Tính năng Core (Pro Max Upgrade)
 
-**Mục tiêu:** Giữ chân + học hiệu quả bằng vòng lặp **Learn → Review (SRS) → Practice**.
+Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế độ luyện tập chính:
 
-### 2.0 Global UX Upgrade ✅
-*   **2.0.1 Continue Button:** ✅ Auto-suggest next action (Grammar Due > Vocab Due).
-*   **2.0.2 Mini Dashboard:** ✅ Daily goal, Streak, Due counters.
-*   **2.0.3 Mistake Bank:** ✅ Kho lỗi tự động.
-*   **2.0.4 Vocab SRS Global Review:** ✅ Anki-style (Again/Hard/Good/Easy).
+### 1. 📖 Learn (Học Tập) — ✅ Basic | 🚧 Upgrading
+*   **Hiện tại:** Trắc nghiệm, Đúng/Sai, Điền khuyết cơ bản.
+*   **Pro Max Upgrade:** 
+    *   [ ] **Guided Interaction:** Học qua ngữ cảnh (Contextual Learning).
+    *   [x] **Mnemonic Support:** Bổ sung hình ảnh/câu chuyện gợi nhớ Kanji (Done for N5/N4).
 
-### 2.1 Grammar System (Ngữ pháp) ✅
-*   **2.1.1 Database:** ✅ N5/N4 Data + Seeding fix.
-*   **2.1.2 Grammar UI:** ✅ Localized (Vi/En), Structure, Meaning.
-*   **2.1.3 Grammar SRS:** ✅ Ghost Reviews basic flow.
-*   **2.1.4 Grammar Exercises:** ✅ Fill-in-the-blank & MCQ.
+### 2. 📝 Test (Kiểm Tra) — ✅ Basic | 🚧 Upgrading
+*   **Hiện tại:** Có timer, flagging, lưu lịch sử bài test.
+*   **Pro Max Upgrade:**
+    *   [ ] **Adaptive Testing:** Tự động lặp lại các câu sai ở định dạng khác (Space Repetition trong cùng buổi test).
+    *   [ ] **Phân tích lỗi:** Gợi ý bài học liên quan khi user sai nhiều ở một mảng kiến thức.
 
-### 2.2 Kanji Mastery (Chữ Hán) — 🚧 NEXT PRIORITY
-*   **2.2.1 Database:** ✅ N5/N4 Kanji data available.
-*   **2.2.2 Kanji UI Upgrade:** 🚧 Cần làm UI chuyên sâu như Flashcard.
-*   **2.2.3 Kanji Stroke Order:** 📅 Tính năng vẽ/viết Kanji (Chưa làm).
+### 3. 🧩 Match (Nối Từ) — ✅ Basic | 🚧 Upgrading
+*   **Hiện tại:** Lưới thẻ 3x3, có combo logic và ghi điểm XP.
+*   **Pro Max Upgrade:**
+    *   [ ] **Time Attack Blitz:** Chế độ đua tốc độ với hiệu ứng vật lý (Particle effects).
+    *   [ ] **Hỗ trợ hình ảnh:** Nối từ vựng với hình ảnh (tăng khả năng ghi nhớ thị giác).
 
----
-
-## ✅ Phase 2.5: Flashcard & Visual Polish — 100% Complete
-
-**Mục tiêu:** Đưa trải nghiệm về chuẩn **Quizlet** (visual) và **Anki** (logic).
-
-### 1. � Visual & UI Overhaul (Done)
-*   **Claymorphism:** ✅ Áp dụng toàn bộ cho Flashcard, Review buttons, Dashboard.
-*   **Localization:** ✅ Full support Việt/Anh (Speech bubbles, Menus, Labels).
-*   **Mascot:** ✅ Fix vị trí hội thoại, fix ngôn ngữ.
-
-### 2. 🃏 Flashcard & Review Logic (Done)
-*   **Swipe/Navigation:** ✅ Nút Previous/Next (Quizlet style).
-*   **SRS Logic:** ✅ Nút "Start Learning" (khởi tạo SRS).
-*   **Review Session:** ✅ Xử lý 4 nút Review (Again/Hard/Good/Easy) đúng chuẩn Anki.
-*   **Progress:** ✅ Fix lỗi reset progress khi switch mode.
+### 4. ✍️ Write (Viết) — 📅 Planned
+*   **Mục tiêu:** Canvas vẽ tay Kanji thực tế.
+*   **Pro Max Features:**
+    *   [ ] **Stroke Order Animation:** Hướng dẫn nét vẽ mờ bên dưới.
+    *   [ ] **Recognition Logic:** Tự động kiểm tra nét vẽ (Basic overlay comparison).
 
 ---
 
-## 🚧 Phase 3: Data Safety & Immersion (Next Focus)
+## 📅 Chi tiết các Phase
 
-### 3.1 Data Safety (An toàn dữ liệu) — CRITICAL PRIORITY
-*   **Import/Export:** 📅 Sao lưu database ra file (`.backup` hoặc `.json`) để user giữ dữ liệu.
-*   **Auto Backup:** 📅 Cơ chế backup tự động local.
+### ✅ Phase 1: Foundation (Nền tảng Từ vựng & SRS) — 100% Complete
+**Mục tiêu:** Xây dựng hạ tầng dữ liệu và lõi thuật toán ghi nhớ.
+*   **Hạ tầng dữ liệu (Infrastructure):**
+    *   [x] **SQLite Core:** Sử dụng Drift làm engine lưu trữ offline hoàn toàn.
+    *   [x] **Smart Seeding:** Cơ chế nạp dữ liệu nhanh (Transaction + Version Check).
+    *   [x] **Local Persistence:** Đảm bảo mọi tiến độ học tập được lưu cục bộ an toàn.
+*   **Thuật toán Ghi nhớ (SRS Logic):**
+    *   [x] **Anki Algorithm:** Thuật toán lặp lại ngắt quãng chuẩn (Interval, ease factor).
+    *   [x] **4 Nút ôn tập:** Again, Hard, Good, Easy với logic tính toán ngày tái khám chính xác.
+    *   [x] **Vocabulary SRS:** Theo dõi mức độ thuộc lòng của từng từ vựng riêng lẻ.
+*   **Trải nghiệm Flashcard:**
+    *   [x] **Card Flip:** Hiệu ứng lật thẻ mượt mà cho mặt Kanji/Nghĩa.
+    *   [x] **Navigation:** Nút Previous/Next và phím tắt (Space/Arrows).
 
-### 3.2 Immersion (Đọc hiểu)
-*   **Easy News Reader:** Đọc báo offline.
-*   **Tap-to-lookup:** Tra từ điển ngay trong bài đọc.
+### ✅ Phase 2: Structure + Retention Loop (Lộ trình & Ngữ pháp) — 95% Done
+**Mục tiêu:** Tạo vòng lặp học tập có định hướng và mở rộng sang Ngữ pháp.
+*   **Lộ trình học tập (Learning Path):**
+    *   [x] **Unit Map:** Bản đồ bài học trực quan từ Bài 1 đến Bài 50.
+    *   [x] **Lesson Detail:** Màn hình chi tiết bài học với danh sách Từ vựng/Ngữ pháp/Kanji.
+    *   [x] **Continue Button:** Thuật toán tìm bài học/buổi ôn tập cần ưu tiên nhất.
+*   **Hệ thống Ngữ pháp (Grammar System):**
+    *   [x] **Grammar DB:** Đầy đủ dữ liệu N5/N4 (Cấu trúc, Giải thích, Ví dụ).
+    *   [x] **Localization:** Đã dịch 100% sang Tiếng Việt (Titles, Explanations, Examples).
+    *   [x] **Ghost Reviews:** Cơ chế ôn tập lại các điểm ngữ pháp bị sai (giống Bunpro).
+    *   [x] **Diverse Exercises:** Trắc nghiệm, Điền khuyết, Sắp xếp câu (Sentence Builder).
+*   **Tối ưu UX & Phụ trợ:**
+    *   [x] **Mini Dashboard:** Hiển thị số lượng từ Due (cần ôn) và Streak ngày học.
+    *   [x] **Mistake Bank:** Tự động lưu các câu sai vào "Ngân hàng lỗi sai".
+    *   [x] **Localization:** Hệ thống chuyển đổi ngôn ngữ Việt/Anh toàn diện.
+
+### 🚧 Phase 2.5: Kanji Mastery & Visual Polish — 🚧 In Progress
+**Mục tiêu:** Biến Kanji thành những mảnh ghép logic thay vì hình vẽ trừu tượng.
+*   **Kanji Mastery (Học thuật):**
+    *   [x] **Kanji Data:** Đã nạp dữ liệu N5/N4.
+    *   [x] **Mnemonic Stories:** Hỗ trợ câu chuyện gợi nhớ (100% N5/N4) và hiển thị trên Flashcard.
+    *   [ ] **Radical Explorer:** Bóc tách Kanji thành các bộ thủ thành phần để dễ nhớ.
+    *   [ ] **Jukugo Blitz:** Chế độ luyện tập ghép Kanji thành từ vựng (Compound words).
+*   **Tương tác & Visual (Juicy UI):**
+    *   [x] **Claymorphism UI:** Đồng bộ giao diện mềm mại cho Dashboard & Flashcards.
+    *   [ ] **Particle Effects:** Hiệu ứng bắn hạt (Confetti/Particles) khi chọn "Easy" hoặc hoàn thành chuỗi đúng (Dopamine loop).
+    *   [ ] **Stroke Order:** Hướng dẫn vẽ nét Kanji (Animation & Canvas tô màu).
+    *   [ ] **Glassmorphism Overlay:** Hiệu ứng làm nổi bật bộ thủ khi user chạm vào chữ Kanji.
+
+### 🚧 Phase 3: Data Safety & Advanced Interaction (Next Priority)
+*   **3.1 An toàn dữ liệu:** 
+    *   [ ] Import/Export Database ra file (Đảm bảo học tập 10 năm không mất dữ liệu).
+    *   [ ] Auto-backup local.
+*   **3.2 Kanji Mastery:**
+    *   [ ] **Kanji UI Upgrade:** Đồng bộ giao diện Kanji chuyên sâu như Flashcard.
+    *   [ ] **Kanji Stroke Order:** Tích hợp bộ vẽ nét.
+*   **3.3 UI Thừa hành (UX Fixes):**
+    *   [ ] **Auto-save state:** Đang làm bài bấm thoát ra vẫn giữ được tiến độ.
+    *   [ ] **Empty States:** Thêm Mascot cổ vũ khi hoàn thành bài học.
+*   **3.4 SRS Advanced Logic (Tối ưu Trí nhớ):**
+    *   [ ] **FSRS Algorithm:** Chuyển đổi từ SM-2 sang mô hình FSRS (hiện đại như Anki mới).
+    *   [ ] **Leech Protection:** Tự động phát hiện và xử lý các từ vựng "khó nuốt" (sai quá nhiều lần).
+    *   [ ] **Intra-day Learning:** Thiết lập các bước học trong ngày (1p -> 10p -> 1h) cho từ mới hoặc từ vừa sai.
+    *   [ ] **Load Balancing (Fuzzy):** Điều tiết lượng bài ôn tập hàng ngày để tránh quá tải.
+
+### 📅 Phase 4: Mastery & Immersion (Giai đoạn Bứt phá)
+**Mục tiêu:** Chuyển đổi từ "Học" sang "Dùng" và chinh phục thực chiến JLPT.
+
+*   **4.1 Immersion (Trạm đọc Thông minh - News Reader):**
+    *   [ ] **Easy News Integration:** Đọc báo NHK News Web Easy trực tiếp (Offline cache).
+    *   [ ] **Tap-to-lookup:** Chạm vào bất kỳ từ/cụm từ nào để tra nghĩa tức thì.
+    *   [ ] **Quick-add SRS:** Lưu từ mới từ bài báo vào bộ thẻ ôn tập với 1 chạm.
+    *   [ ] **Furigana Toggle:** Tự động điều chỉnh Furigana theo trình độ user.
+*   **4.2 Mastery (Sát thủ JLPT - Mock Exam Suite):**
+    *   [ ] **Full Mock Tests:** Bộ đề thi mô phỏng định dạng JLPT chuẩn (N5 -> N3).
+    *   [ ] **Adaptive Mock Tests:** Tự động đề xuất ôn tập lại các mảng kiến thức bị hổng sau bài thi.
+    *   [ ] **Skill Analytics:** Biểu đồ phân tích kỹ năng (Đọc hiểu, Từ vựng, Ngữ pháp).
+    *   [ ] **Pressure Simulator:** Chế độ thi có áp lực thời gian thực.
+*   **4.3 Ghost Reviews (Advanced):**
+    *   [ ] Tự động hóa việc ôn tập các điểm ngữ pháp user thường xuyên làm sai trong lúc đọc báo hoặc làm đề.
 
 ---
 
-## �️ Tech Stack & Quality
+## ⚡ Ưu Tiên Tiếp Theo (Next Steps)
+
+1.  🚧 **Import/Export Data:** Tính năng "sống còn" cho người học lâu dài.
+2.  📚 **N4 Vocab :** Nạp 500 từ vựng N4 còn thiếu vào các bài học 26-50.
+3.  🎨 **Refactor Training UI:** Thay đổi màu sắc/điều hướng cho 4 mode (Learn/Test/Match/Write) theo tone màu Pro Max.
+
+---
+
+## 🧩 Tech Stack
 *   **Framework:** Flutter (Windows focus).
 *   **State:** Riverpod.
-*   **DB:** Drift (SQLite).
-*   **Build:** Windows (`nuget`, `cmake` issues resolved ✅).
-*   **Quality:** `flutter analyze` clean ✅.
-
----
-
-## ⚡ Ưu Tiên Phát Triển Tiếp Theo (Next Steps)
-
-1.  🚧 **Data Backup/Restore (Import/Export):** 
-    *   *Tại sao?* User học nhiều mà mất dữ liệu là thảm họa. Cần làm ngay.
-2.  🚧 **Kanji Enhancement:**
-    *   Nâng cấp UI bài học Kanji (tương tự Flashcard/Grammar).
-    *   Stroke Order (Vẽ nét).
-3.  📅 **Immersion Reader:**
-    *   Bắt đầu làm trình đọc tin tức cơ bản.
+*   **DB:** Drift (SQLite) - Offline first.
+*   **UI Style:** Custom Claymorphism (No violet/purple ban).

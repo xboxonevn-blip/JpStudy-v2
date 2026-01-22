@@ -167,18 +167,19 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
   }
 
   String _getLabel(ContinueAction action, AppLanguage language) {
-    // If we want localized detailed label, we might need more logic.
-    // Ideally action.label is generic or key.
-    // For now, let's use the Title as the main Call to Action and the Label as "X items" or "Lesson Y".
-    // Reusing the action.label IF it's not generic English.
-    // 'Next Lesson' -> Localize?
-    
     if (action.type == ContinueActionType.nextLesson) {
-       return action.label;
+       // Extract number from "Lesson 3" -> "3"
+       final number = action.label.replaceAll(RegExp(r'[^0-9]'), '');
+       if (number.isNotEmpty) {
+         // Return localized "Bài 3"
+         return '${language.lessonLabel} $number';
+       }
+       // Fallback if no number found
+       return action.label; 
     }
     
     if (action.count != null && action.count! > 0) {
-      return '${action.count} items'; // TODO: Localize items count
+      return '${action.count} items'; // TODO: Add 'itemsLabel' to AppLanguage if strictly needed.
     }
     return action.label;
   }

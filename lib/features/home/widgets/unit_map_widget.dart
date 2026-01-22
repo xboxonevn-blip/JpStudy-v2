@@ -1,13 +1,16 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/unit.dart';
 import '../models/lesson_node.dart';
 import 'lesson_node_widget.dart';
 import 'path_painter.dart';
 import 'mascot_rive.dart';
+import '../../../../core/language_provider.dart';
+import '../../../../core/app_language.dart';
 
-class UnitMapWidget extends StatelessWidget {
+class UnitMapWidget extends ConsumerWidget {
   final Unit unit;
   final Function(LessonNode) onNodeTap;
 
@@ -18,9 +21,10 @@ class UnitMapWidget extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final positions = _generatePositions(context, unit.nodes.length);
     final totalHeight = (unit.nodes.length + 1) * 120.0; // Space for mascot at bottom if needed
+    final language = ref.watch(appLanguageProvider);
     
     // Find active node (First unlocked and not completed)
     // Or if all completed, maybe the last one?
@@ -74,17 +78,21 @@ class UnitMapWidget extends StatelessWidget {
             top: 20,
             left: 20,
             right: 20,
-            child: _buildUnitHeader(context),
+            child: _buildUnitHeader(context, language),
           ),
         ],
       ),
     );
   }
   
+  Widget _buildUnitHeader(BuildContext context, AppLanguage language) {
+    // Localize Title if it matches "Level X"
+    String title = unit.title;
+    if (title.startsWith('Level ')) {
+       final level = title.replaceAll('Level ', '');
+       title = '${language.levelLabel} $level';
+    }
 
-
-
-  Widget _buildUnitHeader(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
@@ -105,7 +113,7 @@ class UnitMapWidget extends StatelessWidget {
           const SizedBox(width: 8),
           Flexible(
             child: Text(
-              unit.title,
+              title,
               style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -136,5 +144,3 @@ class UnitMapWidget extends StatelessWidget {
     });
   }
 }
-
-

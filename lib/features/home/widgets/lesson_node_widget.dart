@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../models/lesson_node.dart';
+import '../../../../core/language_provider.dart';
+import '../../../../core/app_language.dart';
 
-class LessonNodeWidget extends StatefulWidget {
+class LessonNodeWidget extends ConsumerStatefulWidget {
   final LessonNode node;
   final VoidCallback? onTap;
   final double size;
@@ -15,10 +18,10 @@ class LessonNodeWidget extends StatefulWidget {
   });
 
   @override
-  State<LessonNodeWidget> createState() => _LessonNodeWidgetState();
+  ConsumerState<LessonNodeWidget> createState() => _LessonNodeWidgetState();
 }
 
-class _LessonNodeWidgetState extends State<LessonNodeWidget>
+class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _scaleAnimation;
@@ -60,6 +63,15 @@ class _LessonNodeWidgetState extends State<LessonNodeWidget>
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
+    
+    // Localize "Lesson X" -> "Bai X"
+    String title = widget.node.lesson.title;
+    if (title.startsWith('Lesson ')) {
+      final number = title.replaceAll('Lesson ', '');
+      title = '${language.lessonLabel} $number';
+    }
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -80,7 +92,7 @@ class _LessonNodeWidgetState extends State<LessonNodeWidget>
         _buildStars(context),
         const SizedBox(height: 4),
         Text(
-          widget.node.lesson.title,
+          title,
           style: TextStyle(
             color: widget.node.isLocked ? AppThemeV2.textSub : AppThemeV2.textMain,
             fontWeight: widget.isActive ? FontWeight.w900 : FontWeight.bold,

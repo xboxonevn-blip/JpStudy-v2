@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/core/language_provider.dart'; 
+import 'package:jpstudy/core/app_language.dart'; // Explicit import
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/test/screens/test_config_screen.dart';
 import 'package:jpstudy/features/test/screens/test_screen.dart';
@@ -17,14 +19,17 @@ class PracticeTestDashboard extends ConsumerWidget {
     final isN5 = level == StudyLevel.n5;
     final color = isN5 ? Colors.pink : Colors.orange;
     final levelLabel = isN5 ? 'N5' : 'N4';
+    
+    // Localization
+    final language = ref.watch(appLanguageProvider);
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
-      child: _buildTestCard(context, ref, levelLabel, color),
+      child: _buildTestCard(context, ref, levelLabel, color, language),
     );
   }
 
-  Widget _buildTestCard(BuildContext context, WidgetRef ref, String level, Color color) {
+  Widget _buildTestCard(BuildContext context, WidgetRef ref, String level, Color color, AppLanguage language) {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       elevation: 2,
@@ -66,7 +71,7 @@ class PracticeTestDashboard extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Start $level Practice',
+                      language.startPracticeTitle(level),
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -74,9 +79,9 @@ class PracticeTestDashboard extends ConsumerWidget {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    const Text(
-                      'Comprehensive Mock Exam',
-                      style: TextStyle(color: Colors.white70, fontSize: 13),
+                    Text(
+                      language.mockExamSubtitle,
+                      style: const TextStyle(color: Colors.white70, fontSize: 13),
                     ),
                   ],
                 ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:rive/rive.dart'; // Uncomment when Rive works
 import 'package:flutter_animate/flutter_animate.dart';
-// Internal import removed.
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../../core/language_provider.dart';
+import '../../../../core/app_language.dart';
 
 class MascotRive extends StatefulWidget {
   final Offset nodePos;
@@ -108,7 +109,7 @@ class MascotRiveState extends State<MascotRive> with SingleTickerProviderStateMi
           ),
            // Speech Bubble
            Positioned(
-             bottom: 110, // Clear the face
+             bottom: 130, // Clear the face (increased from 110)
              left: isRightSide ? -20 : 0,
              right: isRightSide ? 0 : -20,
              child: _MascotSpeechBubble(isRightSide: isRightSide),
@@ -119,24 +120,21 @@ class MascotRiveState extends State<MascotRive> with SingleTickerProviderStateMi
   }
 }
 
-class _MascotSpeechBubble extends StatefulWidget {
+
+
+// ... (MascotRive imports)
+
+class _MascotSpeechBubble extends ConsumerStatefulWidget {
   final bool isRightSide;
   const _MascotSpeechBubble({required this.isRightSide});
 
   @override
-  State<_MascotSpeechBubble> createState() => _MascotSpeechBubbleState();
+  ConsumerState<_MascotSpeechBubble> createState() => _MascotSpeechBubbleState();
 }
 
-class _MascotSpeechBubbleState extends State<_MascotSpeechBubble> {
+class _MascotSpeechBubbleState extends ConsumerState<_MascotSpeechBubble> {
   int _index = 0;
-  final List<String> _messages = [
-    'Keep going!\nGanbatte!',
-    'You\'re doing\ngreat!',
-    'Almost there!',
-    'Don\'t give up!',
-    'Fight on!',
-    'Learning is\nfun!',
-  ];
+  // Removed hardcoded _messages list
   
   @override
   void initState() {
@@ -144,8 +142,9 @@ class _MascotSpeechBubbleState extends State<_MascotSpeechBubble> {
     Future.doWhile(() async {
       await Future.delayed(const Duration(seconds: 5));
       if (mounted) {
+        final messages = ref.read(appLanguageProvider).mascotEncouragement;
         setState(() {
-          _index = (_index + 1) % _messages.length;
+          _index = (_index + 1) % messages.length;
         });
       }
       return mounted;
@@ -154,6 +153,11 @@ class _MascotSpeechBubbleState extends State<_MascotSpeechBubble> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
+    final messages = language.mascotEncouragement;
+    // Safety check for index out of bounds if language changes
+    final safeIndex = _index % messages.length;
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
@@ -171,8 +175,8 @@ class _MascotSpeechBubbleState extends State<_MascotSpeechBubble> {
         duration: const Duration(milliseconds: 500),
         transitionBuilder: (child, anim) => FadeTransition(opacity: anim, child: child),
         child: Text(
-          _messages[_index],
-          key: ValueKey(_index),
+          messages[safeIndex],
+          key: ValueKey(safeIndex),
           style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
@@ -182,6 +186,7 @@ class _MascotSpeechBubbleState extends State<_MascotSpeechBubble> {
           textAlign: TextAlign.center,
         ),
       ),
-    ); // No extra animate here to keep it simple with Rive
+    ); 
   }
 }
+

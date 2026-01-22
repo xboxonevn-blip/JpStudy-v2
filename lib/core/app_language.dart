@@ -1661,6 +1661,83 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  // Mascot Messages
+  List<String> get mascotEncouragement {
+    switch (this) {
+      case AppLanguage.en:
+        return [
+          'Keep going!\nGanbatte!',
+          'You\'re doing\ngreat!',
+          'Almost there!',
+          'Don\'t give up!',
+          'Fight on!',
+          'Learning is\nfun!',
+        ];
+      case AppLanguage.vi:
+        return [
+          'C\u1ed1 l\u00ean!\nGanbatte!',
+          'B\u1ea1n l\u00e0m\nt\u1ed1t l\u1eafm!',
+          'S\u1eafp \u0111\u1ebfn \u0111\u00edch!',
+          '\u0110\u1eebng b\u1ecf cu\u1ed9c!',
+          'Chi\u1ebfn \u0111\u1ea5u!',
+          'H\u1ecdc r\u1ea5t\nvui!',
+        ];
+      case AppLanguage.ja:
+        return [
+          '\u9811\u5f35\u3063\u3066\uff01',
+          '\u3059\u3054\u3044\u3067\u3059\uff01',
+          '\u3082\u3046\u5c11\u3057\uff01',
+          '\u8ae6\u3081\u306a\u3044\u3067\uff01',
+          '\u30d5\u30a1\u30a4\u30c8\uff01',
+          '\u5b66\u3076\u306e\u306f\u697d\u3057\u3044\uff01',
+        ];
+    }
+  }
+
+  String get nextLessonSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Next Lesson';
+      case AppLanguage.vi:
+        return 'B\u00e0i ti\u1ebfp theo';
+      case AppLanguage.ja:
+        return '\u6b21\u306e\u30ec\u30c3\u30b9\u30f3';
+    }
+  }
+
+  String get startPracticeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start Practice';
+      case AppLanguage.vi:
+        return 'B\u1eaft \u0111\u1ea7u luy\u1ec7n t\u1eadp';
+      case AppLanguage.ja:
+        return '\u7df4\u7fd2\u3092\u958b\u59cb';
+    }
+  }
+  
+  String get levelLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Level';
+      case AppLanguage.vi:
+        return 'C\u1ea5p \u0111\u1ed9';
+      case AppLanguage.ja:
+        return '\u30ec\u30d9\u30eb';
+    }
+  }
+
+  String get lessonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Lesson';
+      case AppLanguage.vi:
+        return 'B\u00e0i';
+      case AppLanguage.ja:
+        return '\u30ec\u30c3\u30b9\u30f3';
+    }
+  }
+
 
   String get trackProgressLabel {
     switch (this) {
@@ -2384,6 +2461,27 @@ extension AppLanguageLabels on AppLanguage {
         return 'Hán tự';
       case AppLanguage.ja:
         return '漢字';
+    }
+  }
+  String get mockExamSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Comprehensive Mock Exam';
+      case AppLanguage.vi:
+        return '\u0110\u1ec1 thi th\u1eed t\u1ed5ng h\u1ee3p';
+      case AppLanguage.ja:
+        return '\u7dcf\u53d0\u6a21\u64ec\u8a66\u9a13';
+    }
+  }
+
+  String startPracticeTitle(String level) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start $level Practice';
+      case AppLanguage.vi:
+        return 'Luy\u1ec7n t\u1eadp $level';
+      case AppLanguage.ja:
+        return '$level\u306e\u7df4\u7fd2\u3092\u958b\u59cb';
     }
   }
 } // End extension

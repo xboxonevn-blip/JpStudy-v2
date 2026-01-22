@@ -52,8 +52,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final language = ref.watch(appLanguageProvider);
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        toolbarHeight: 64,
+        toolbarHeight: 80, // Taller for floating look
+        backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
         titleSpacing: 20,
         title: HeaderBar(
@@ -63,13 +65,31 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           onLevelChanged: (selected) => _setLevel(selected),
           onSettingsTap: () => _showSettingsSheet(context),
         ),
+        elevation: 0,
+        scrolledUnderElevation: 0,
       ),
-      body: level == null
-          ? LevelGate(
-              language: language,
-              onSelected: (selected) => _setLevel(selected),
-            )
-          : const LearningPathScreen(),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFFF8FAFC), // Slate 50
+              Color(0xFFEEF2FF), // Indigo 50
+              Color(0xFFE0E7FF), // Indigo 100
+            ],
+            stops: [0.0, 0.5, 1.0],
+          ),
+        ),
+        child: level == null
+            ? SafeArea(
+                child: LevelGate(
+                  language: language,
+                  onSelected: (selected) => _setLevel(selected),
+                ),
+              )
+            : const LearningPathScreen(),
+      ),
     );
   }
 

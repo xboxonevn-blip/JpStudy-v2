@@ -1,0 +1,85 @@
+import 'package:drift/drift.dart';
+import 'package:drift/native.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/db/content_database.dart';
+import 'package:jpstudy/data/repositories/lesson_repository.dart';
+
+void main() {
+  late AppDatabase db;
+  late ContentDatabase contentDb;
+  late LessonRepository repository;
+
+  setUp(() {
+    db = AppDatabase(executor: NativeDatabase.memory());
+    contentDb = ContentDatabase(executor: NativeDatabase.memory());
+    repository = LessonRepository(db, contentDb);
+  });
+
+  tearDown(() async {
+    await db.close();
+    await contentDb.close();
+  });
+
+  test('initializeLessonSrs should populate SRS state and mark terms as learned', () async {
+    // Arrange: Create a lesson and add terms
+    const lessonId = 1;
+    await db.into(db.userLesson).insert(
+          UserLessonCompanion.insert(
+            id: const Value(lessonId),
+            level: 'N5',
+            title: 'Test Lesson',
+            updatedAt: Value(DateTime.now()),
+          ),
+          mode: InsertMode.insertOrReplace,
+        );
+
+    await db.into(db.userLessonTerm).insert(
+          UserLessonTermCompanion.insert(
+            id: const Value(101),
+            lessonId: lessonId,
+            term: const Value('Term 1'),
+            reading: const Value('Reading 1'),
+            definition: const Value('Def 1'),
+            orderIndex: const Value(1),
+            isLearned: const Value(false),
+          ),
+        );
+     await db.into(db.userLessonTerm).insert(
+          UserLessonTermCompanion.insert(
+            id: const Value(102),
+            lessonId: lessonId,
+            term: const Value('Term 2'),
+            reading: const Value('Reading 2'),
+            definition: const Value('Def 2'),
+            orderIndex: const Value(2),
+            isLearned: const Value(false),
+          ),
+        );
+
+    // Act
+    await repository.initializeLessonSrs(lessonId);
+
+    // Assert
+    // Check SRS State
+    final srsStates = await db.select(db.srsState).get();
+    expect(srsStates.length, 2);
+    expect(srsStates.any((s) => s.vocabId == 101), true);
+    expect(srsStates.any((s) => s.vocabId == 102), true);
+    
+    // Check Next Review is recently set
+    final now = DateTime.now();
+    for (final state in srsStates) {
+        // verify nextReviewAt is reasonable (not in far future or past, but explicitly set to 'now' in logic)
+        // Since we can't inject 'now' into repo easily without clock abstraction, we check it's close to test's 'now'
+        final diff = state.nextReviewAt.difference(now).inSeconds.abs();
+        expect(diff < 10, true, reason: 'nextReviewAt should be close to now');
+        expect(state.box, 1);
+        expect(state.repetitions, 0);
+    }
+
+    // Check Terms are Learned
+    final terms = await db.select(db.userLessonTerm).get();
+    expect(terms.every((t) => t.isLearned), true);
+  });
+}

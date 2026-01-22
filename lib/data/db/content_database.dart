@@ -25,7 +25,7 @@ part 'content_database.g.dart';
   ],
 )
 class ContentDatabase extends _$ContentDatabase {
-  ContentDatabase() : super(_openContentConnection());
+  ContentDatabase({QueryExecutor? executor}) : super(executor ?? _openContentConnection());
 
   @override
   int get schemaVersion => 15;

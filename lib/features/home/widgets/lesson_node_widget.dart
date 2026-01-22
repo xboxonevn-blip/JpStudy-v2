@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../models/lesson_node.dart';
 
-class LessonNodeWidget extends StatelessWidget {
+class LessonNodeWidget extends StatefulWidget {
   final LessonNode node;
   final VoidCallback? onTap;
   final double size;
@@ -15,155 +15,231 @@ class LessonNodeWidget extends StatelessWidget {
   });
 
   @override
+  State<LessonNodeWidget> createState() => _LessonNodeWidgetState();
+}
+
+class _LessonNodeWidgetState extends State<LessonNodeWidget>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _scaleAnimation;
+
+  bool get _isActive => !widget.node.isLocked && !widget.node.isCompleted;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+    _scaleAnimation = Tween<double>(begin: 1.0, end: 1.05).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    );
+
+    if (_isActive) {
+      _controller.repeat(reverse: true);
+    }
+  }
+
+  @override
+  void didUpdateWidget(LessonNodeWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (_isActive && !_controller.isAnimating) {
+      _controller.repeat(reverse: true);
+    } else if (!_isActive && _controller.isAnimating) {
+      _controller.stop();
+      _controller.reset();
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         GestureDetector(
-          onTap: node.isLocked ? null : onTap,
-          child: _buildClayNode(context),
+          onTap: widget.node.isLocked ? null : widget.onTap,
+          child: AnimatedBuilder(
+            animation: _scaleAnimation,
+            builder: (context, child) {
+              return Transform.scale(
+                scale: _isActive ? _scaleAnimation.value : 1.0,
+                child: child,
+              );
+            },
+            child: _buildProClayNode(context),
+          ),
         ),
         const SizedBox(height: 8),
         _buildStars(context),
         const SizedBox(height: 4),
         Text(
-          node.lesson.title, // "Lesson X"
+          widget.node.lesson.title,
           style: TextStyle(
-            color: node.isLocked ? AppThemeV2.textSub : AppThemeV2.textMain,
-            fontWeight: FontWeight.bold, 
+            color: widget.node.isLocked ? AppThemeV2.textSub : AppThemeV2.textMain,
+            fontWeight: widget.isActive ? FontWeight.w900 : FontWeight.bold,
             fontSize: 12,
+            fontFamily: 'M_PLUS_Rounded_1c', 
           ),
+          textAlign: TextAlign.center,
         ),
       ],
     );
   }
 
-  Widget _buildClayNode(BuildContext context) {
-    final baseColor = _getNodeColor();
-    // Depth color is crucial for the 3D effect
-    final depthColor = AppThemeV2.getDepthColor(baseColor);
-    // Locked nodes are flat, Active nodes have depth
-    final double depth = node.isLocked ? 0 : 6.0;
-
-    return SizedBox(
-      width: size,
-      height: size + depth, // Add space for the 3D bottom part
-      child: Stack(
-        children: [
-          // Bottom layer (Depth/Shadow)
-          if (!node.isLocked)
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              top: depth, // Push down
-              child: Container(
-                decoration: BoxDecoration(
-                  color: depthColor,
-                  shape: BoxShape.circle,
-                ),
-              ),
-            ),
-            
-          // Top layer (Face)
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: depth, // Keep above the depth
-            child: Container(
-              decoration: BoxDecoration(
-                color: baseColor,
-                shape: BoxShape.circle,
-                // Inner highlight for plastic look
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.white.withValues(alpha: 0.2), // Highlight top
-                    Colors.white.withValues(alpha: 0.0),
-                  ],
-                  stops: const [0.0, 0.5],
-                ),
-                border: Border.all(
-                  // Slightly lighter border usually looks good, or just rely on color
-                  color: Colors.white.withValues(alpha: 0.1),
-                  width: 1,
-                ),
-              ),
-              child: Center(
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    // Icon
-                    Icon(
-                      _getNodeIcon(),
-                      color: Colors.white,
-                      size: size * 0.4,
-                    ),
-                    // Unlock animation or status could go here
-                  ],
-                ),
-              ),
-            ),
-          ),
-          
-          // Completion Crow/Check
-          if (node.isCompleted)
-            Positioned(
-              right: 0,
-              bottom: depth, // Float above
-              child: _buildStatusBadge(Icons.check, AppThemeV2.secondary),
-            ),
+  Widget _buildProClayNode(BuildContext context) {
+    final colors = _getNodeColors();
+    final depth = widget.node.isLocked ? 2.0 : 8.0;
+    
+    return Container(
+      width: widget.size,
+      height: widget.size, // Aspect ratio 1:1, depth handled by shadow
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        // Main sphere gradient
+        gradient: RadialGradient(
+          center: const Alignment(-0.4, -0.4), // Light source top-left
+          radius: 1.2,
+          colors: [
+            colors.light,
+            colors.main,
+            colors.dark,
+          ],
+          stops: const [0.0, 0.4, 0.9],
+        ),
+        boxShadow: [
+           // Drop Shadow (Depth)
+           BoxShadow(
+             color: colors.shadow.withValues(alpha: 0.4),
+             offset: Offset(0, depth),
+             blurRadius: 10,
+             spreadRadius: 1,
+           ),
+           // Inner Highlight (Top Left - "Glassy")
+           BoxShadow(
+             color: Colors.white.withValues(alpha: 0.4),
+             offset: const Offset(-4, -4),
+             blurRadius: 8,
+             spreadRadius: -2,
+             blurStyle: BlurStyle.inner, // IMPORTANT: Inner shadow
+           ),
+           // Inner Shadow (Bottom Right)
+           BoxShadow(
+             color: Colors.black.withValues(alpha: 0.1),
+             offset: const Offset(4, 4),
+             blurRadius: 8,
+             spreadRadius: -2,
+             blurStyle: BlurStyle.inner,
+           ),
+           // Glow for Active
+           if (_isActive)
+             BoxShadow(
+               color: colors.main.withValues(alpha: 0.6),
+               blurRadius: 20,
+               spreadRadius: 4,
+             ),
         ],
       ),
-    );
-  }
-  
-  Widget _buildStatusBadge(IconData icon, Color color) {
-    return Container(
-      width: 24,
-      height: 24,
-      decoration: BoxDecoration(
-        color: color,
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.white, width: 2),
-      ),
       child: Center(
-        child: Icon(icon, size: 14, color: Colors.white),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+             if (widget.node.isCompleted)
+              Icon(Icons.check_rounded, color: Colors.white, size: widget.size * 0.5)
+             else if (widget.node.isLocked)
+              Icon(Icons.lock_rounded, color: Colors.white.withValues(alpha: 0.5), size: widget.size * 0.4)
+             else
+              Icon(Icons.play_arrow_rounded, color: Colors.white, size: widget.size * 0.5),
+             
+             // Shine reflection (Gloss)
+             Positioned(
+               top: widget.size * 0.15,
+               left: widget.size * 0.2,
+               child: Container(
+                 width: widget.size * 0.25,
+                 height: widget.size * 0.12,
+                 decoration: BoxDecoration(
+                   color: Colors.white.withValues(alpha: 0.3),
+                   borderRadius: BorderRadius.all(Radius.elliptical(widget.size, widget.size)),
+                 ),
+               ),
+             ),
+          ],
+        ),
       ),
     );
   }
 
-  Color _getNodeColor() {
-    if (node.isLocked) return const Color(0xFFE5E7EB); // Gray 200
-    if (node.isCompleted) return const Color(0xFFFFC800); // Gold
-    // Current/Active
-    return AppThemeV2.primary; 
-  }
-
-  IconData _getNodeIcon() {
-    if (node.isLocked) return Icons.lock;
-    if (node.isCompleted) return Icons.star_rounded;
-    return Icons.play_arrow_rounded;
+  _NodeColors _getNodeColors() {
+    if (widget.node.isLocked) {
+      return _NodeColors(
+        light: const Color(0xFFE5E7EB),
+        main: const Color(0xFFD1D5DB), // Slate 300
+        dark: const Color(0xFF9CA3AF),
+        shadow: Colors.black,
+      );
+    }
+    if (widget.node.isCompleted) {
+      // Amber/Gold
+      return _NodeColors(
+        light: AppThemeV2.amber400,
+        main: Colors.orange, // Standard orange for middle
+        dark: AppThemeV2.orange500,
+        shadow: AppThemeV2.orange500,
+      );
+    }
+    // Active (Violet)
+    return _NodeColors(
+      light: const Color(0xFFA78BFA), // Violet 400
+      main: AppThemeV2.violet500,
+      dark: AppThemeV2.indigo600,
+      shadow: AppThemeV2.indigo600,
+    );
   }
 
   Widget _buildStars(BuildContext context) {
-    if (node.isLocked) return const SizedBox(height: 16); 
+    if (widget.node.isLocked) return const SizedBox(height: 16); 
     
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: List.generate(3, (index) {
-        final isEarned = index < node.stars;
+        final isEarned = index < widget.node.stars;
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 1.0),
           child: Icon(
             Icons.star_rounded,
             size: 14,
             color: isEarned ? const Color(0xFFFFC800) : Colors.grey[300],
+             shadows: isEarned ? [
+               Shadow(color: Colors.orange.withValues(alpha: 0.5), blurRadius: 4),
+             ] : null,
           ),
         );
       }),
     );
   }
+}
+
+class _NodeColors {
+  final Color light;
+  final Color main;
+  final Color dark;
+  final Color shadow;
+
+  _NodeColors({
+    required this.light,
+    required this.main,
+    required this.dark,
+    required this.shadow,
+  });
+}
+
+extension on LessonNodeWidget {
+  bool get isActive => !node.isLocked && !node.isCompleted;
 }

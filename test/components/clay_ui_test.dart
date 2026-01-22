@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/features/common/widgets/clay_button.dart';
 import 'package:jpstudy/features/common/widgets/clay_card.dart';
-import 'package:jpstudy/theme/app_theme_v2.dart';
+
 
 void main() {
   testWidgets('ClayButton renders correctly', (WidgetTester tester) async {

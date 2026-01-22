@@ -459,6 +459,28 @@ class LessonRepository {
     return counts;
   }
 
+  Future<int?> findNextToStudyLesson(String level) async {
+    final lessons = await (_db.select(_db.userLesson)
+          ..where((tbl) => tbl.level.equals(level))
+          ..orderBy([
+            (t) => OrderingTerm(expression: t.id),
+          ]))
+        .get();
+
+    if (lessons.isEmpty) return null;
+
+    final stats = await getAllLessonProgress();
+
+    for (final lesson in lessons) {
+      final stat = stats[lesson.id];
+      // If no stats (no terms yet) or not fully completed, this is the next one
+      if (stat == null || stat.termCount == 0 || stat.completedCount < stat.termCount) {
+        return lesson.id;
+      }
+    }
+    return null; // All completed
+  }
+
   Future<int> nextLessonId() async {
     final maxId = await (_db.selectOnly(_db.userLesson)
           ..addColumns([_db.userLesson.id])
@@ -1363,6 +1385,38 @@ class LessonRepository {
         }
       });
     });
+  }
+
+  /// Initialize SRS state for ALL terms in a lesson (Start Learning Feature)
+  /// This makes all terms in the lesson immediately available for review
+  Future<void> initializeLessonSrs(int lessonId) async {
+    final terms = await fetchTerms(lessonId);
+    if (terms.isEmpty) return;
+
+    final now = DateTime.now();
+    // Schedule all terms for immediate review (nextReviewAt = now)
+    await _db.batch((batch) {
+      for (final term in terms) {
+        // Use insertOrReplace to avoid duplicates
+        batch.insert(
+          _db.srsState,
+          SrsStateCompanion.insert(
+            vocabId: term.id,
+            box: const Value(1),
+            repetitions: const Value(0),
+            ease: const Value(2.5),
+            lastReviewedAt: Value(now),
+            nextReviewAt: now, // Due immediately
+          ),
+          mode: InsertMode.insertOrReplace,
+        );
+      }
+    });
+
+    // Also mark all terms as "learned" (started)
+    await (_db.update(_db.userLessonTerm)
+          ..where((tbl) => tbl.lessonId.equals(lessonId)))
+        .write(const UserLessonTermCompanion(isLearned: Value(true)));
   }
 
   Future<void> _touchLesson(int lessonId) {

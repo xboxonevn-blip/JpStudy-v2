@@ -1,67 +1,184 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
 import '../providers/continue_provider.dart';
-import '../../common/widgets/clay_button.dart';
+import '../../../theme/app_theme_v2.dart';
 
-class ContinueButton extends ConsumerWidget {
+class ContinueButton extends ConsumerStatefulWidget {
   const ContinueButton({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ContinueButton> createState() => _ContinueButtonState();
+}
+
+class _ContinueButtonState extends ConsumerState<ContinueButton>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _scaleAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    )..repeat(reverse: true);
+    
+    _scaleAnimation = Tween<double>(begin: 1.0, end: 1.02).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final actionAsync = ref.watch(continueActionProvider);
+    final language = ref.watch(appLanguageProvider);
 
     return actionAsync.when(
-      data: (action) => _buildButton(context, action),
+      data: (action) => _buildAnimatedButton(context, action, language),
       loading: () => const SizedBox.shrink(),
       error: (err, stack) => const SizedBox.shrink(),
     );
   }
 
-  Widget _buildButton(BuildContext context, ContinueAction action) {
-    ClayButtonStyle style = ClayButtonStyle.primary;
-    IconData icon = Icons.play_arrow_rounded;
-
-    switch (action.type) {
-      case ContinueActionType.grammarReview:
-        style = ClayButtonStyle.tertiary; // Orange for Grammar
-        icon = Icons.auto_stories;
-        break;
-      case ContinueActionType.vocabReview:
-        style = ClayButtonStyle.primary; // Indigo for Vocab
-        icon = Icons.style;
-        break;
-      case ContinueActionType.fixMistakes:
-        style = ClayButtonStyle.neutral; // White for Mistakes 
-        // Note: Neutral usually has gray text, might want custom later.
-        icon = Icons.build_circle;
-        break;
-      case ContinueActionType.nextLesson:
-        style = ClayButtonStyle.secondary; // Green for "Go"
-        icon = Icons.arrow_forward_rounded;
-        break;
-      default:
-        break;
-    }
-
+  Widget _buildAnimatedButton(BuildContext context, ContinueAction action, AppLanguage language) {
+    final gradient = _getGradient(action.type);
+    final icon = _getIcon(action.type);
+    
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: SizedBox(
-        width: double.infinity,
-        child: ClayButton(
-          label: _getLabel(action),
-          icon: icon,
-          style: style,
-          isExpanded: true, // Make text centered
-          onPressed: () => _handleNavigation(context, action),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      child: AnimatedBuilder(
+        animation: _scaleAnimation,
+        builder: (context, child) {
+          return Transform.scale(
+            scale: _scaleAnimation.value,
+            child: child,
+          );
+        },
+        child: Container(
+          width: double.infinity,
+          height: 64, // Floating Card Height
+          decoration: BoxDecoration(
+            gradient: gradient,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: gradient.colors.first.withValues(alpha: 0.4),
+                blurRadius: 16,
+                offset: const Offset(0, 8),
+                spreadRadius: 2,
+              ),
+            ],
+          ),
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              borderRadius: BorderRadius.circular(20),
+              onTap: () => _handleNavigation(context, action),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.2),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(icon, color: Colors.white, size: 24),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                             _getTitle(action.type, language),
+                             style: const TextStyle(
+                               color: Colors.white,
+                               fontSize: 12,
+                               fontWeight: FontWeight.w600,
+                               letterSpacing: 0.5,
+                             ),
+                          ),
+                          Text(
+                            _getLabel(action, language),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w800,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Icon(Icons.chevron_right_rounded, color: Colors.white, size: 32),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
   }
 
-  String _getLabel(ContinueAction action) {
+  LinearGradient _getGradient(ContinueActionType type) {
+    switch (type) {
+      case ContinueActionType.grammarReview:
+        return AppThemeV2.secondaryGradient;
+      case ContinueActionType.vocabReview:
+        return AppThemeV2.primaryGradient;
+      case ContinueActionType.nextLesson:
+        return AppThemeV2.successGradient;
+      default:
+        return AppThemeV2.primaryGradient;
+    }
+  }
+
+  IconData _getIcon(ContinueActionType type) {
+    switch (type) {
+      case ContinueActionType.grammarReview: return Icons.auto_stories_rounded;
+      case ContinueActionType.vocabReview: return Icons.style_rounded;
+      case ContinueActionType.nextLesson: return Icons.play_lesson_rounded;
+      default: return Icons.arrow_forward_rounded;
+    }
+  }
+
+  String _getTitle(ContinueActionType type, AppLanguage language) {
+     switch (type) {
+      case ContinueActionType.grammarReview: return language.reviewGrammarLabel.toUpperCase();
+      case ContinueActionType.vocabReview: return language.reviewVocabLabel.toUpperCase();
+      case ContinueActionType.nextLesson: return language.continueJourneyLabel.toUpperCase();
+      case ContinueActionType.fixMistakes: return language.fixMistakesLabel.toUpperCase();
+      default: return 'NEXT STEP';
+    }
+  }
+
+  String _getLabel(ContinueAction action, AppLanguage language) {
+    // If we want localized detailed label, we might need more logic.
+    // Ideally action.label is generic or key.
+    // For now, let's use the Title as the main Call to Action and the Label as "X items" or "Lesson Y".
+    // Reusing the action.label IF it's not generic English.
+    // 'Next Lesson' -> Localize?
+    
+    if (action.type == ContinueActionType.nextLesson) {
+       return action.label;
+    }
+    
     if (action.count != null && action.count! > 0) {
-      return '${action.label} (${action.count})';
+      return '${action.count} items'; // TODO: Localize items count
     }
     return action.label;
   }
@@ -69,18 +186,22 @@ class ContinueButton extends ConsumerWidget {
   void _handleNavigation(BuildContext context, ContinueAction action) {
     switch (action.type) {
       case ContinueActionType.grammarReview:
+        // Maps to /grammar (list) or /grammar-practice
         context.push('/grammar');
         break;
       case ContinueActionType.vocabReview:
-        context.push('/vocab');
+        context.push('/vocab/review');
         break;
       case ContinueActionType.fixMistakes:
         context.push('/mistakes');
         break;
       case ContinueActionType.nextLesson:
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Select the next unlocked lesson from the path above!')),
-        );
+        if (action.data != null) {
+          context.push('/lesson/${action.data}');
+        } else {
+           // Should not happen if data is correctly set
+           context.push('/'); 
+        }
         break;
       default:
         break;

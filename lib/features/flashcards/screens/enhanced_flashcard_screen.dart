@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../data/models/vocab_item.dart';
-import '../models/flashcard_session.dart';
 import '../models/flashcard_settings.dart';
-import '../models/swipe_action.dart';
 import '../widgets/enhanced_flashcard.dart';
 import '../widgets/flashcard_settings_dialog.dart';
-import '../widgets/flashcard_summary.dart';
 
 class EnhancedFlashcardScreen extends ConsumerStatefulWidget {
   final List<VocabItem> items;
@@ -29,7 +26,6 @@ class EnhancedFlashcardScreen extends ConsumerStatefulWidget {
 class _EnhancedFlashcardScreenState
     extends ConsumerState<EnhancedFlashcardScreen> {
   int _currentIndex = 0;
-  late FlashcardSession _session;
   late List<VocabItem> _displayItems;
   FlashcardSettings _settings = const FlashcardSettings();
 
@@ -43,12 +39,6 @@ class _EnhancedFlashcardScreenState
     _displayItems = _settings.shuffleCards
         ? (List.from(widget.items)..shuffle())
         : widget.items;
-
-    _session = FlashcardSession(
-      sessionId: DateTime.now().millisecondsSinceEpoch.toString(),
-      lessonId: widget.lessonId,
-      startedAt: DateTime.now(),
-    );
   }
 
   @override
@@ -72,9 +62,6 @@ class _EnhancedFlashcardScreenState
           // Progress bar
           _buildProgressBar(progress),
 
-          // Stats row
-          _buildStatsRow(),
-
           // Flashcard
           Expanded(
             child: Padding(
@@ -82,15 +69,13 @@ class _EnhancedFlashcardScreenState
               child: EnhancedFlashcard(
                 key: ValueKey(currentItem.id),
                 item: currentItem,
-                enableSwipeGestures: _settings.enableSwipeGestures,
                 showTermFirst: _settings.showTermFirst,
-                onSwipe: _handleSwipe,
               ),
             ),
           ),
 
           // Bottom navigation
-          if (!_settings.enableSwipeGestures) _buildManualButtons(),
+          _buildBottomControls(),
 
           // Card counter
           _buildCardCounter(),
@@ -118,91 +103,44 @@ class _EnhancedFlashcardScreenState
     );
   }
 
-  Widget _buildStatsRow() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _buildStatChip(
-            icon: Icons.check_circle_rounded,
-            label: 'Known',
-            value: _session.knownTermIds.length,
-            color: Colors.green,
-          ),
-          _buildStatChip(
-            icon: Icons.replay_rounded,
-            label: 'Practice',
-            value: _session.needPracticeTermIds.length,
-            color: Colors.orange,
-          ),
-          _buildStatChip(
-            icon: Icons.star_rounded,
-            label: 'Starred',
-            value: _session.starredTermIds.length,
-            color: Colors.amber,
-          ),
-        ],
-      ),
-    );
-  }
 
-  Widget _buildStatChip({
-    required IconData icon,
-    required String label,
-    required int value,
-    required Color color,
-  }) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        children: [
-          Icon(icon, size: 18, color: color),
-          const SizedBox(width: 6),
-          Text(
-            '$value',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: color,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 
-  Widget _buildManualButtons() {
+  Widget _buildBottomControls() {
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(
-            child: ElevatedButton.icon(
-              onPressed: () => _handleSwipe(SwipeAction.needPractice),
-              icon: const Icon(Icons.replay_rounded),
-              label: const Text('Need Practice'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 16),
-              ),
+          // Prev Button
+          ElevatedButton(
+            onPressed: _currentIndex > 0 ? _handlePrevious : null,
+            style: ElevatedButton.styleFrom(
+              shape: const CircleBorder(),
+              padding: const EdgeInsets.all(20),
+              backgroundColor: Colors.white,
+              foregroundColor: Theme.of(context).primaryColor,
+              elevation: 4,
             ),
+            child: const Icon(Icons.arrow_back_rounded, size: 32),
           ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: ElevatedButton.icon(
-              onPressed: () => _handleSwipe(SwipeAction.know),
-              icon: const Icon(Icons.check_rounded),
-              label: const Text('Know It'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 16),
-              ),
+
+          // Next Button
+          ElevatedButton(
+            onPressed: _currentIndex < _displayItems.length - 1
+                ? _handleNext
+                : _showSummary,
+            style: ElevatedButton.styleFrom(
+              shape: const CircleBorder(),
+              padding: const EdgeInsets.all(20),
+              backgroundColor: Theme.of(context).primaryColor,
+              foregroundColor: Colors.white,
+              elevation: 4,
+            ),
+            child: Icon(
+              _currentIndex < _displayItems.length - 1
+                  ? Icons.arrow_forward_rounded
+                  : Icons.check_rounded,
+              size: 32,
             ),
           ),
         ],
@@ -220,33 +158,18 @@ class _EnhancedFlashcardScreenState
     );
   }
 
-  void _handleSwipe(SwipeAction action) {
-    final currentItem = _displayItems[_currentIndex];
-
-    // Update session
-    switch (action) {
-      case SwipeAction.know:
-        _session.knownTermIds.add(currentItem.id);
-        break;
-      case SwipeAction.needPractice:
-        _session.needPracticeTermIds.add(currentItem.id);
-        break;
-      case SwipeAction.star:
-        _session.starredTermIds.add(currentItem.id);
-        // Don't advance to next card for star
-        setState(() {});
-        return;
-      case SwipeAction.skip:
-        _session.skippedTermIds.add(currentItem.id);
-        break;
-    }
-
-    // Move to next card or show summary
+  void _handleNext() {
     setState(() {
       if (_currentIndex < _displayItems.length - 1) {
         _currentIndex++;
-      } else {
-        _showSummary();
+      }
+    });
+  }
+
+  void _handlePrevious() {
+    setState(() {
+      if (_currentIndex > 0) {
+        _currentIndex--;
       }
     });
   }
@@ -269,30 +192,7 @@ class _EnhancedFlashcardScreenState
   }
 
   void _showSummary() {
-    _session.completedAt = DateTime.now();
-
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (context) => FlashcardSummaryScreen(
-          session: _session,
-          onPracticeAgain: () {
-            // Practice only terms that need practice
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => EnhancedFlashcardScreen(
-                  items: widget.items
-                      .where((item) =>
-                          _session.needPracticeTermIds.contains(item.id))
-                      .toList(),
-                  lessonId: widget.lessonId,
-                  lessonTitle: '${widget.lessonTitle} (Practice)',
-                ),
-              ),
-            );
-          },
-          onDone: () => Navigator.of(context).pop(),
-        ),
-      ),
-    );
+    // Simply pop back to lesson detail when done
+    Navigator.of(context).pop();
   }
 }

@@ -1,8 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../../core/level_provider.dart';
+import '../../../data/repositories/lesson_repository.dart';
 import 'dashboard_provider.dart';
 
 final continueActionProvider = FutureProvider<ContinueAction>((ref) async {
   final dashboard = await ref.watch(dashboardProvider.future);
+  final level = ref.watch(studyLevelProvider);
+  final lessonRepo = ref.watch(lessonRepositoryProvider);
 
   // Priority 1: Grammar Due
   if (dashboard.grammarDue > 0) {
@@ -31,17 +35,22 @@ final continueActionProvider = FutureProvider<ContinueAction>((ref) async {
     );
   }
 
-  // Priority 4: Practice Mixed (Default fallback if existing lessons found) or Next Lesson
-  // For now, default to Practice or Next Lesson.
-  // We can refine this later to check if there are any learned lessons.
-  
-  // Checking if there is anything learned to practice would be ideal, 
-  // but for "Next Lesson" we need to know the next unlocked lesson.
-  // For simplicity v1: Return "Next Lesson" or "Practice" generically.
-  
+  // Priority 4: Next Lesson (Find the first not-fully-completed lesson)
+  if (level != null) {
+    final nextLessonId = await lessonRepo.findNextToStudyLesson(level.shortLabel);
+    if (nextLessonId != null) {
+       return ContinueAction(
+        type: ContinueActionType.nextLesson,
+        label: 'Next Lesson',
+        data: nextLessonId,
+      );
+    }
+  }
+
+  // Fallback: Practice Mixed if nothing else
   return ContinueAction(
-    type: ContinueActionType.nextLesson,
-    label: 'Next Lesson',
+    type: ContinueActionType.practiceMixed,
+    label: 'Practice',
     count: null,
   );
 });
@@ -58,10 +67,12 @@ class ContinueAction {
   final ContinueActionType type;
   final String label;
   final int? count;
+  final dynamic data;
 
   const ContinueAction({
     required this.type,
     required this.label,
     this.count,
+    this.data,
   });
 }

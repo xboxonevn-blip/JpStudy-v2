@@ -1,9 +1,11 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+
 import '../models/unit.dart';
 import '../models/lesson_node.dart';
 import 'lesson_node_widget.dart';
 import 'path_painter.dart';
+import 'mascot_rive.dart';
 
 class UnitMapWidget extends StatelessWidget {
   final Unit unit;
@@ -17,24 +19,24 @@ class UnitMapWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Generate positions based on sine wave
     final positions = _generatePositions(context, unit.nodes.length);
-    final totalHeight = (unit.nodes.length + 1) * 120.0;
+    final totalHeight = (unit.nodes.length + 1) * 120.0; // Space for mascot at bottom if needed
+    
+    // Find active node (First unlocked and not completed)
+    // Or if all completed, maybe the last one?
+    // If all locked, the first one.
+    int activeIndex = unit.nodes.indexWhere((n) => !n.isCompleted && !n.isLocked);
+    if (activeIndex == -1) {
+       if (unit.nodes.isNotEmpty && unit.nodes.first.isLocked) {
+         activeIndex = 0;
+       } else if (unit.nodes.isNotEmpty && unit.nodes.last.isCompleted) {
+         activeIndex = unit.nodes.length - 1;
+       }
+    }
 
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: totalHeight,
-      // Optional: Background pattern/gradient for the unit
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            unit.color.withValues(alpha: 0.05),
-            unit.color.withValues(alpha: 0.0),
-          ],
-        ),
-      ),
       child: Stack(
         children: [
           // 1. Draw the connected path
@@ -50,8 +52,6 @@ class UnitMapWidget extends StatelessWidget {
           ...List.generate(unit.nodes.length, (index) {
             final node = unit.nodes[index];
             final pos = positions[index];
-            
-            // Adjust position to center the widget (node size 80)
             const nodeSize = 80.0;
             
             return Positioned(
@@ -65,7 +65,11 @@ class UnitMapWidget extends StatelessWidget {
             );
           }),
           
-          // 3. Unit Header (floating top)
+          // 3. Mascot (Floating near Active Node)
+          if (activeIndex != -1 && activeIndex < positions.length)
+             MascotRive(nodePos: positions[activeIndex]),
+
+          // 4. Unit Header
           Positioned(
             top: 20,
             left: 20,
@@ -76,6 +80,9 @@ class UnitMapWidget extends StatelessWidget {
       ),
     );
   }
+  
+
+
 
   Widget _buildUnitHeader(BuildContext context) {
     return Container(
@@ -94,7 +101,7 @@ class UnitMapWidget extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.flag_rounded, color: Colors.white),
+          const Icon(Icons.flag_rounded, color: Colors.white),
           const SizedBox(width: 8),
           Flexible(
             child: Text(
@@ -129,3 +136,5 @@ class UnitMapWidget extends StatelessWidget {
     });
   }
 }
+
+

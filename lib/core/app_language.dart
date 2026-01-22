@@ -1600,11 +1600,67 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Show hints';
       case AppLanguage.vi:
-        return 'Hi\u1ec3n th\u1ecb g\u1ee3i \xfd';
+        return 'Hi\u1ec7n g\u1ee3i \xfd';
       case AppLanguage.ja:
         return '\u30d2\u30f3\u30c8\u3092\u8868\u793a';
     }
   }
+  
+  String get reviewsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Reviews';
+      case AppLanguage.vi:
+        return '\u00d4n t\u1eadp';
+      case AppLanguage.ja:
+        return '\u5fa9\u7fd2';
+    }
+  }
+
+  String get reviewVocabLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review Vocab';
+      case AppLanguage.vi:
+        return '\u00d4n t\u1eeb v\u1eefng';
+      case AppLanguage.ja:
+        return '\u5358\u8a9e\u5fa9\u7fd2';
+    }
+  }
+
+  String get reviewGrammarLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review Grammar';
+      case AppLanguage.vi:
+        return '\u00d4n ng\u1eef ph\u00e1p';
+      case AppLanguage.ja:
+        return '\u6587\u6cd5\u5fa9\u7fd2';
+    }
+  }
+
+  String get fixMistakesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fix Mistakes';
+      case AppLanguage.vi:
+        return 'S\u1eeda l\u1ed7i sai';
+      case AppLanguage.ja:
+        return '\u9593\u9055\u3044\u3092\u76f4\u3059';
+    }
+  }
+  
+  String get continueJourneyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Continue Journey';
+      case AppLanguage.vi:
+        return 'Ti\u1ebfp t\u1ee5c h\u1ecdc';
+      case AppLanguage.ja:
+        return '\u5b66\u7fd2\u3092\u7d9a\u3051\u308b';
+    }
+  }
+
 
   String get trackProgressLabel {
     switch (this) {

@@ -23,6 +23,7 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 | :--- | :--- | :--- | :--- | :--- |
 | **Phase 1** | **Foundation** | Anki & Quizlet | ✅ 100% | Q1 2026 |
 | **Phase 2** | **Structure + Retention Loop** | LingoDeer & Bunpro + Duolingo loop | 🚧 | Q1–Q2 2026 |
+| **Phase 2.5** | **Flashcard & Review Fix** | Anki & Quizlet Standard | ✅ Finished | Q1 2026 |
 | **Phase 3** | **Immersion** | Todaii / Easy Japanese | 📅 | Q2 2026 |
 | **Phase 4** | **Mastery** | Migii JLPT | 📅 | Q3 2026 |
 
@@ -35,6 +36,8 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 ---
 
 ## 🚧 Phase 2: Structure + Retention Loop (Ngữ pháp & Kanji chuyên sâu + UI giữ chân)
+
+*(Giữ nguyên nội dung cũ...)*
 
 **Mục tiêu Phase 2 mới:** Không chỉ “có dữ liệu”, mà phải giữ chân lâu + học hiệu quả bằng vòng lặp:
 **Learn → Review (SRS) → Practice → Fix Mistakes → Continue**
@@ -123,6 +126,35 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 
 ---
 
+## 🔄 Phase 2.5: Flashcard & Review Overhaul (Cải tổ UI/UX Flashcard & Review)
+
+**Mục tiêu:** Đưa trải nghiệm học về chuẩn **Quizlet** (học) và **Anki** (ôn tập), loại bỏ các thao tác thừa và giải quyết vấn đề logic Review.
+
+### 1. 🃏 Flashcard UI (Chế độ Học) - Quizlet Style
+**Mục tiêu:** Tạo môi trường học tập trung, không áp lực chấm điểm ngay lập tức.
+*   **[Action] Thay đổi điều hướng:**
+    *   Loại bỏ hoàn toàn cơ chế "Vuốt thẻ" (Swipe) kiểu Tinder.
+    *   Thêm thanh điều hướng (Bottom Bar) với 2 nút lớn: **[← Trước/Previous]** và **[Sau/Next →]**.
+    *   Cho phép lật thẻ bằng cách chạm vào bất kỳ đâu trên thẻ.
+*   **[Action] Làm sạch giao diện (Clean UI):**
+    *   Xóa bỏ các icon trạng thái "Đã thuộc/Cần học" (Checkmarks/Stars) trên mặt thẻ.
+    *   Chuyển nút "Đánh dấu sao" (Star/Mark) lên góc trên bên phải, thiết kế nhỏ gọn tinh tế.
+    *   Chỉ hiển thị nội dung học (Từ vựng/Nghĩa) làm trung tâm.
+
+### 2. 🧠 Review Logic (Chế độ Ôn tập) - Anki Standard
+**Mục tiêu:** Đảm bảo tính năng Review hoạt động đúng logic SRS (Lặp lại ngắt quãng).
+*   **[Fix] Khởi tạo SRS (Initialize SRS):**
+    *   Thêm nút **"Bắt đầu học" (Start Learning)** ở màn hình Lesson Detail nếu từ vựng chưa có trong hàng đợi SRS.
+    *   Logic: Khi bấm "Start Learning", hệ thống sẽ nạp toàn bộ từ vựng của bài học đó vào SRS (Review Queue) với trạng thái ban đầu.
+*   **[Fix] Xử lý trạng thái rỗng:**
+    *   Nếu Review Queue trống (người dùng chưa học bài nào), hiển thị thông báo hướng dẫn rõ ràng: *"Bạn chưa có thẻ nào cần ôn tập. Hãy bắt đầu học bài mới!"*.
+
+### 3. 🎨 Visual Polish & Consistency
+*   **Claymorphism:** Áp dụng phong cách UI hiện tại (Clay) cho các nút điều hướng mới để đồng bộ.
+*   **Shortcuts:** Hỗ trợ phím tắt (Mũi tên trái/phải/Space) để lật và chuyển thẻ trên Desktop.
+
+---
+
 ## 📅 Phase 3: Immersion (Đọc hiểu & Thực tế) — kế hoạch
 
 *   Offline Easy News.
@@ -150,10 +182,10 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 **Top 5 (impact cao nhất):**
 
 1.  ✅ **Continue Button + Auto Next Best Action**
-2.  ✅ **Grammar Review (Ghost Reviews)** dạng session + MCQ mini
-3.  ✅ **Data Safety (Backup/Restore)**
-4.  ✅ **Mistake Bank** (Fix Mistakes tab + rule clear)
-5.  ✅ **Mini Dashboard** (Streak + Due counts)
+2.  ✅ **Flashcard UI Overhaul** (Quizlet Style)
+3.  ✅ **Review Logic Fix** (Start Learning Button)
+4.  ✅ **Grammar Review (Ghost Reviews)** dạng session + MCQ mini
+5.  ✅ **Data Safety (Backup/Restore)**
 
 *Sau đó mới đến:*
 *   Kanji Stroke Order

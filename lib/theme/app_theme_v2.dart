@@ -12,6 +12,32 @@ class AppThemeV2 {
   static const Color textMain = Color(0xFF1F2937); // Navy specific
   static const Color textSub = Color(0xFF6B7280); // Gray
 
+  // Pro Max Palette
+  static const Color violet500 = Color(0xFF8B5CF6);
+  static const Color indigo600 = Color(0xFF4F46E5);
+  static const Color amber400 = Color(0xFFFBBF24);
+  static const Color orange500 = Color(0xFFF97316);
+  static const Color emerald400 = Color(0xFF34D399);
+  static const Color teal500 = Color(0xFF14B8A6);
+
+  static const LinearGradient primaryGradient = LinearGradient(
+    colors: [violet500, indigo600],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+  
+  static const LinearGradient secondaryGradient = LinearGradient(
+    colors: [amber400, orange500],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  static const LinearGradient successGradient = LinearGradient(
+    colors: [emerald400, teal500],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
   static ThemeData get theme {
     return ThemeData(
       useMaterial3: true,

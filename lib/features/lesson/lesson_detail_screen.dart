@@ -39,7 +39,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _trackProgress = false;
 
 // _autoSpeak removed
-  final bool _shuffle = false;
+  bool _shuffle = false;
+  bool _isAutoPlay = false;
+  
   final bool _focusMode = false;
   final Set<int> _flippedTermIds = {};
   final Set<int> _starredTermIds = {};
@@ -73,7 +75,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   @override
   void dispose() {
-    _autoTimer?.cancel();
     _autoTimer?.cancel();
     // Audio dispose removed
     super.dispose();
@@ -246,58 +247,65 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                         constraints: const BoxConstraints(maxWidth: 960),
                         child: SizedBox(
                           height: _focusMode ? 520 : 460,
-                          child: GestureDetector(
-                            onHorizontalDragEnd: (details) {
-                              if (details.primaryVelocity! > 0) {
-                                _goPrev(totalTerms);
-                              } else if (details.primaryVelocity! < 0) {
-                                _goNext(totalTerms);
-                              }
+                          child: AnimatedSwitcher(
+                            duration: const Duration(milliseconds: 300),
+                            transitionBuilder: (child, animation) {
+                              final offset = Tween<Offset>(
+                                begin: const Offset(1.0, 0.0),
+                                end: Offset.zero,
+                              ).animate(animation);
+                              return SlideTransition(
+                                position: offset,
+                                child: child,
+                              );
                             },
-                            child: AnimatedSwitcher(
-                              duration: const Duration(milliseconds: 300),
-                              transitionBuilder: (child, animation) {
-                                final offset = Tween<Offset>(
-                                  begin: const Offset(1.0, 0.0),
-                                  end: Offset.zero,
-                                ).animate(animation);
-                                return SlideTransition(
-                                  position: offset,
-                                  child: child,
-                                );
-                              },
-                              child: KeyedSubtree(
-                                key: ValueKey(currentIndex),
-                                child: _LessonCard(
-                                  language: language,
-                                  termsAsync: activeTermsAsync,
-                                  term: currentTerm,
-                                  showHints: _showHints,
-                                  isFlipped: isFlipped,
-                                  trackProgress: _trackProgress,
-                                  isStarred: isStarred,
-                                  isLearned: isLearned,
-                                  emptyLabel: _mode == _LessonMode.review
-                                      ? language.reviewEmptyLabel
-                                      : null,
-                                  onShowHintsChanged: (value) =>
-                                      _updateShowHints(value),
-                                  onFlip: onFlip,
-                                  onEdit: () => context.push(
-                                    '/lesson/${widget.lessonId}/edit',
-                                  ),
-                                  onStar: currentTerm == null
-                                      ? null
-                                      : () => _toggleStar(currentTerm, level),
-                                  onLearned: !_trackProgress || currentTerm == null
-                                      ? null
-                                      : () => _toggleLearned(currentTerm, level),
+                            child: KeyedSubtree(
+                              key: ValueKey(currentIndex),
+                              child: _LessonCard(
+                                language: language,
+                                termsAsync: activeTermsAsync,
+                                term: currentTerm,
+                                showHints: _showHints,
+                                isFlipped: isFlipped,
+                                trackProgress: _trackProgress,
+                                isStarred: isStarred,
+                                isLearned: isLearned,
+                                emptyLabel: _mode == _LessonMode.review
+                                    ? language.reviewEmptyLabel
+                                    : null,
+                                onShowHintsChanged: (value) =>
+                                    _updateShowHints(value),
+                                onFlip: onFlip,
+                                onEdit: () => context.push(
+                                  '/lesson/${widget.lessonId}/edit',
                                 ),
+                                onStar: currentTerm == null
+                                    ? null
+                                    : () => _toggleStar(currentTerm, level),
+                                onLearned: !_trackProgress || currentTerm == null
+                                    ? null
+                                    : () => _toggleLearned(currentTerm, level),
+                                onStartLearning: (_mode == _LessonMode.review &&
+                                        activeTerms.isEmpty &&
+                                        terms.isNotEmpty &&
+                                        learnedCount == 0)
+                                    ? _startLearning
+                                    : null,
                               ),
                             ),
                           ),
                         ),
                       ),
+                    ),
+                  const SizedBox(height: 24),
+                  if (totalTerms > 0)
+                    _FlashcardControls(
+                      isShuffle: _shuffle,
+                      isAutoPlay: _isAutoPlay,
+                      onShuffle: _toggleShuffle,
+                      onAutoPlay: () => _toggleAutoPlay(totalTerms),
+                      onPrev: () => _goPrev(totalTerms),
+                      onNext: () => _goNext(totalTerms),
                     ),
                   if (_mode == _LessonMode.review) ...[
                     const SizedBox(height: 16),
@@ -449,6 +457,25 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     });
   }
 
+  Future<void> _startLearning() async {
+    final repo = ref.read(lessonRepositoryProvider);
+    await repo.initializeLessonSrs(widget.lessonId);
+    
+    // Refresh providers to update UI
+    ref.invalidate(lessonDueTermsProvider(widget.lessonId));
+    
+    final language = ref.read(appLanguageProvider);
+    final level = ref.read(studyLevelProvider) ?? StudyLevel.n5;
+    final fallbackTitle = language.lessonTitle(widget.lessonId);
+    
+    ref.invalidate(
+      lessonTermsProvider(
+        LessonTermsArgs(widget.lessonId, level.shortLabel, fallbackTitle),
+      ),
+    );
+    ref.invalidate(lessonMetaProvider(level.shortLabel));
+  }
+
   void _toggleFlip(UserLessonTermData? term) {
     if (term == null || term.definition.trim().isEmpty) {
       return;
@@ -578,8 +605,50 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       return;
     }
     setState(() {
-      _currentIndex = (_currentIndex + 1).clamp(0, total - 1);
+      if (_currentIndex >= total - 1) {
+         // Loop back to start if auto-playing or just stay?
+         // If auto-play, loop. If manual, maybe stop or loop?
+         // Standard is usually stop or loop. Let's loop for auto-play, stop for manual?
+         // Original code clamped.
+         // Let's loop if auto-play.
+         if (_isAutoPlay) {
+           _currentIndex = 0;
+         } else {
+           // Standard next button behavior: stop at end or loop?
+           // Quizlet stops at end usually. I'll stick to clamp for manual.
+           _currentIndex = (_currentIndex + 1).clamp(0, total - 1);
+         }
+      } else {
+        _currentIndex++;
+      }
     });
+  }
+
+  void _toggleShuffle() {
+    setState(() {
+      _shuffle = !_shuffle;
+      _shuffledOrder = null; // Will trigger re-shuffle in _orderedTerms
+      _currentIndex = 0;
+    });
+  }
+
+  void _toggleAutoPlay(int total) {
+    setState(() {
+      _isAutoPlay = !_isAutoPlay;
+    });
+
+    if (_isAutoPlay) {
+      _autoTimer = Timer.periodic(const Duration(seconds: 3), (timer) {
+        if (!mounted) {
+          timer.cancel();
+          return;
+        }
+        _goNext(total);
+      });
+    } else {
+      _autoTimer?.cancel();
+      _autoTimer = null;
+    }
   }
 
 
@@ -1411,6 +1480,7 @@ class _LessonCard extends StatelessWidget {
     required this.onEdit,
     required this.onStar,
     required this.onLearned,
+    this.onStartLearning,
     this.emptyLabel,
   });
 
@@ -1427,6 +1497,7 @@ class _LessonCard extends StatelessWidget {
   final VoidCallback onEdit;
   final VoidCallback? onStar;
   final VoidCallback? onLearned;
+  final VoidCallback? onStartLearning;
   final String? emptyLabel;
 
   @override
@@ -1463,12 +1534,45 @@ class _LessonCard extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                _ActionPill(
-                  isStarred: isStarred,
-                  isLearned: isLearned,
-                  onEdit: onEdit,
-                  onStar: onStar,
-                  onLearned: onLearned,
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (onLearned != null)
+                      IconButton(
+                        onPressed: onLearned,
+                        icon: Icon(
+                          isLearned ? Icons.check_circle : Icons.check_circle_outline,
+                          color: isLearned ? const Color(0xFF22C55E) : const Color(0xFF8F9BB3),
+                        ),
+                        tooltip: 'Learned',
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                      ),
+                    const SizedBox(width: 16),
+                    IconButton(
+                        onPressed: onStar,
+                        icon: Icon(
+                          isStarred ? Icons.star_rounded : Icons.star_border_rounded,
+                          color: isStarred ? const Color(0xFFFFC107) : const Color(0xFF8F9BB3),
+                          size: 26,
+                        ),
+                        tooltip: 'Star',
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                      ),
+                     const SizedBox(width: 16),
+                    IconButton(
+                      onPressed: onEdit,
+                      icon: const Icon(
+                        Icons.edit_outlined,
+                        color: Color(0xFF8F9BB3),
+                        size: 22,
+                      ),
+                      tooltip: 'Edit',
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints(),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -1484,6 +1588,7 @@ class _LessonCard extends StatelessWidget {
                   showHints: showHints,
                   isFlipped: isFlipped,
                   emptyLabel: emptyLabel,
+                  onStartLearning: onStartLearning,
                 ),
               ),
             ),
@@ -1503,6 +1608,7 @@ class _CardContent extends StatelessWidget {
     required this.showHints,
     required this.isFlipped,
     required this.emptyLabel,
+    this.onStartLearning,
   });
 
   final AppLanguage language;
@@ -1511,6 +1617,7 @@ class _CardContent extends StatelessWidget {
   final bool showHints;
   final bool isFlipped;
   final String? emptyLabel;
+  final VoidCallback? onStartLearning;
 
   @override
   Widget build(BuildContext context) {
@@ -1522,6 +1629,32 @@ class _CardContent extends StatelessWidget {
     }
     final resolvedTerm = term;
     if (resolvedTerm == null) {
+      if (onStartLearning != null) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              emptyLabel ?? '',
+              style: const TextStyle(color: Color(0xFF6B7390)),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: onStartLearning,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF4255FF),
+                foregroundColor: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Text('Start Learning'), // Localize if possible, but hardcode for now as req
+            ),
+          ],
+        );
+      }
       final label = emptyLabel;
       if (label == null || label.isEmpty) {
         return const SizedBox.shrink();
@@ -1721,86 +1854,82 @@ class _ShortcutBar extends StatelessWidget {
   }
 }
 
-class _ActionPill extends StatelessWidget {
-  const _ActionPill({
-    required this.isStarred,
-    required this.isLearned,
-    required this.onEdit,
-    required this.onStar,
-    required this.onLearned,
+class _FlashcardControls extends StatelessWidget {
+  const _FlashcardControls({
+    required this.isShuffle,
+    required this.isAutoPlay,
+    required this.onShuffle,
+    required this.onAutoPlay,
+    required this.onPrev,
+    required this.onNext,
   });
 
-  final bool isStarred;
-  final bool isLearned;
-  final VoidCallback onEdit;
-  final VoidCallback? onStar;
-  final VoidCallback? onLearned;
+  final bool isShuffle;
+  final bool isAutoPlay;
+  final VoidCallback onShuffle;
+  final VoidCallback onAutoPlay;
+  final VoidCallback onPrev;
+  final VoidCallback onNext;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-        color: const Color(0xFFF1F3F7),
-        borderRadius: BorderRadius.circular(20),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(24),
         border: Border.all(color: const Color(0xFFE1E6F0)),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          _IconPillButton(icon: Icons.edit_outlined, onTap: onEdit),
-          const SizedBox(width: 4),
-          // Audio button removed
-          if (onLearned != null) ...[
-            const SizedBox(width: 4),
-            _IconPillButton(
-              icon: isLearned
-                  ? Icons.check_circle
-                  : Icons.check_circle_outline,
-              onTap: onLearned,
-              active: isLearned,
-            ),
-          ],
-          const SizedBox(width: 4),
-          _IconPillButton(
-            icon: isStarred ? Icons.star : Icons.star_border,
-            onTap: onStar,
-            active: isStarred,
-          ),
+        boxShadow: const [
+           BoxShadow(
+             color: Color(0x05000000),
+             blurRadius: 10,
+             offset: Offset(0, 4),
+           ),
         ],
       ),
-    );
-  }
-}
-
-class _IconPillButton extends StatelessWidget {
-  const _IconPillButton({
-    required this.icon,
-    required this.onTap,
-    this.active = false,
-  });
-
-  final IconData icon;
-  final VoidCallback? onTap;
-  final bool active;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(18),
-      onTap: onTap,
-      child: Container(
-        width: 40,
-        height: 40,
-        decoration: BoxDecoration(
-          color: active ? const Color(0xFFEFF2FF) : Colors.transparent,
-          borderRadius: BorderRadius.circular(18),
-        ),
-        child: Icon(
-          icon,
-          size: 18,
-          color: active ? const Color(0xFF4255FF) : null,
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min, // Wrap content so it doesn't stretch
+        children: [
+          IconButton(
+            onPressed: onShuffle,
+            icon: Icon(
+              isShuffle ? Icons.shuffle_on_outlined : Icons.shuffle,
+              color: isShuffle ? const Color(0xFF4255FF) : const Color(0xFF6B7390),
+            ),
+            tooltip: 'Shuffle',
+          ),
+          const SizedBox(width: 8),
+          Container(
+             width: 1, 
+             height: 24, 
+             color: const Color(0xFFE1E6F0),
+          ),
+          const SizedBox(width: 8),
+          IconButton(
+            onPressed: onPrev,
+            icon: const Icon(Icons.arrow_back_rounded, size: 28),
+            color: const Color(0xFF1C2440),
+            tooltip: 'Previous',
+          ),
+          const SizedBox(width: 4),
+          IconButton(
+            onPressed: onAutoPlay,
+            icon: Icon(
+              isAutoPlay ? Icons.pause_circle_filled : Icons.play_circle_filled,
+              color: const Color(0xFF4255FF),
+              size: 52,
+            ),
+            padding: EdgeInsets.zero,
+            tooltip: isAutoPlay ? 'Pause' : 'Auto Play',
+          ),
+          const SizedBox(width: 4),
+          IconButton(
+            onPressed: onNext,
+            icon: const Icon(Icons.arrow_forward_rounded, size: 28),
+            color: const Color(0xFF1C2440),
+            tooltip: 'Next',
+          ),
+        ],
       ),
     );
   }

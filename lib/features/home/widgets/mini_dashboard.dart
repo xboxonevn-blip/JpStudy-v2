@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/dashboard_provider.dart';
-import '../../common/widgets/clay_card.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../../core/language_provider.dart';
 import '../../../core/app_language.dart';
@@ -24,9 +23,20 @@ class MiniDashboard extends ConsumerWidget {
   Widget _buildContent(BuildContext context, DashboardState state, AppLanguage language) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: ClayCard(
-        color: Colors.white,
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.85),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: Colors.white, width: 2),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF64748B).withValues(alpha: 0.08),
+              blurRadius: 24,
+              offset: const Offset(0, 8),
+            ),
+          ],
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

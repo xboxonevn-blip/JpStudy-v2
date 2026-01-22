@@ -94,15 +94,26 @@ class UnitMapWidget extends ConsumerWidget {
     }
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       decoration: BoxDecoration(
-        color: unit.color.withValues(alpha: 0.9),
-        borderRadius: BorderRadius.circular(20),
+        gradient: LinearGradient(
+          colors: [
+            unit.color.withValues(alpha: 0.9),
+            unit.color.withValues(alpha: 0.7),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(30),
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.3),
+          width: 1.5,
+        ),
         boxShadow: [
           BoxShadow(
-            color: unit.color.withValues(alpha: 0.3),
-            blurRadius: 8,
-            offset: const Offset(0, 4),
+            color: unit.color.withValues(alpha: 0.4),
+            blurRadius: 12,
+            offset: const Offset(0, 6),
           ),
         ],
       ),
@@ -133,7 +144,7 @@ class UnitMapWidget extends ConsumerWidget {
     const spacing = 120.0;
     const amplitude = 90.0;
     // Start drawing a bit down to accommodate header
-    const startY = 100.0; 
+    const startY = 180.0; 
 
     return List.generate(count, (index) {
       // Sine wave pattern

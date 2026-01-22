@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import '../providers/continue_provider.dart';
-import '../../../theme/app_theme_v2.dart';
 
 class ContinueButton extends ConsumerStatefulWidget {
   const ContinueButton({super.key});
@@ -137,13 +136,29 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
   LinearGradient _getGradient(ContinueActionType type) {
     switch (type) {
       case ContinueActionType.grammarReview:
-        return AppThemeV2.secondaryGradient;
+        return const LinearGradient(
+          colors: [Color(0xFF8B5CF6), Color(0xFF6D28D9)], // Violet
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        );
       case ContinueActionType.vocabReview:
-        return AppThemeV2.primaryGradient;
+        return const LinearGradient(
+          colors: [Color(0xFF3B82F6), Color(0xFF2563EB)], // Blue
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        );
       case ContinueActionType.nextLesson:
-        return AppThemeV2.successGradient;
+        return const LinearGradient(
+          colors: [Color(0xFF10B981), Color(0xFF059669)], // Emerald
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        );
       default:
-        return AppThemeV2.primaryGradient;
+        return const LinearGradient(
+          colors: [Color(0xFF3B82F6), Color(0xFF2563EB)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        );
     }
   }
 

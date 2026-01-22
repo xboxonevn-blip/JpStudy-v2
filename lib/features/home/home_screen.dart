@@ -71,14 +71,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xFFF8FAFC), // Slate 50
+              Color(0xFFFFFFFF), // White
               Color(0xFFEEF2FF), // Indigo 50
               Color(0xFFE0E7FF), // Indigo 100
+              Color(0xFFD1E9FF), // Light Blue 100 (Subtle accent)
             ],
-            stops: [0.0, 0.5, 1.0],
+            stops: [0.0, 0.4, 0.7, 1.0],
           ),
         ),
         child: level == null

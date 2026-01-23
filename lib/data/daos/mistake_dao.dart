@@ -60,9 +60,9 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
 
   /// Gets the total count of mistakes in the bank.
   Stream<int> watchTotalMistakes() {
-    final count = userMistakes.id.count();
-    return (selectOnly(userMistakes)..addColumns([count]))
-        .map((row) => row.read(count) ?? 0)
+    final total = userMistakes.wrongCount.sum();
+    return (selectOnly(userMistakes)..addColumns([total]))
+        .map((row) => row.read(total) ?? 0)
         .watchSingle();
   }
 

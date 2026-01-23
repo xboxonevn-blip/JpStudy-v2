@@ -3,9 +3,9 @@ import '../../../data/db/database_provider.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
 
-final dashboardProvider = FutureProvider<DashboardState>((ref) async {
+final dashboardProvider = StreamProvider<DashboardState>((ref) async* {
   final progress = await ref.watch(progressSummaryProvider.future);
-  
+
   final db = ref.watch(databaseProvider);
   final srsDao = db.srsDao;
   final grammarDao = db.grammarDao;
@@ -19,17 +19,15 @@ final dashboardProvider = FutureProvider<DashboardState>((ref) async {
   final grammarDueFunctions = await grammarDao.getDueReviews();
   final grammarDueCount = grammarDueFunctions.length;
 
-  // Fetch Mistake Count
-  final mistakeCountStream = mistakeRepo.watchTotalMistakes();
-  final mistakeCount = await mistakeCountStream.first;
-
-  return DashboardState(
-    streak: progress.streak,
-    todayXp: progress.todayXp,
-    vocabDue: vocabDueCount,
-    grammarDue: grammarDueCount,
-    mistakeCount: mistakeCount,
-  );
+  await for (final mistakeCount in mistakeRepo.watchTotalMistakes()) {
+    yield DashboardState(
+      streak: progress.streak,
+      todayXp: progress.todayXp,
+      vocabDue: vocabDueCount,
+      grammarDue: grammarDueCount,
+      mistakeCount: mistakeCount,
+    );
+  }
 });
 
 class DashboardState {

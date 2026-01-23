@@ -13,6 +13,7 @@ import '../../learn/widgets/fill_blank_widget.dart';
 import '../../learn/widgets/multiple_choice_widget.dart';
 import '../../learn/widgets/true_false_widget.dart';
 import '../../../data/repositories/lesson_repository.dart';
+import '../../mistakes/repositories/mistake_repository.dart';
 import '../models/test_config.dart';
 import '../models/test_session.dart';
 import '../providers/test_providers.dart';
@@ -463,6 +464,23 @@ class _TestScreenState extends ConsumerState<TestScreen> {
   Future<void> _submitTest() async {
     _timer?.cancel();
     _session.completedAt = DateTime.now();
+
+    final mistakeRepo = ref.read(mistakeRepositoryProvider);
+    for (int i = 0; i < _session.questions.length; i++) {
+      final question = _session.questions[i];
+      final answer = _session.getAnswer(i);
+      if (answer == null || !answer.isCorrect) {
+        await mistakeRepo.addMistake(
+          type: 'vocab',
+          itemId: question.targetItem.id,
+        );
+      } else {
+        await mistakeRepo.markCorrect(
+          type: 'vocab',
+          itemId: question.targetItem.id,
+        );
+      }
+    }
 
     // Save to database
     await ref.read(testHistoryServiceProvider).saveTest(_session);

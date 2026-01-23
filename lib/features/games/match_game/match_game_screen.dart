@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/widgets/juicy_button.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
@@ -35,9 +37,10 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
   }
 
   void _startGame(List<VocabItem> allVocab) {
+    final language = ref.read(appLanguageProvider);
     if (allVocab.length < 3) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Not enough vocabulary for a game (need at least 3).")),
+        SnackBar(content: Text(language.notEnoughTermsLabel(3))),
       );
       return;
     }
@@ -147,11 +150,14 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider);
     
     return Scaffold(
       appBar: AppBar(
-        title: Text("Match Game${level != null ? ' (${level.shortLabel})' : ''}"),
+        title: Text(
+          '${language.matchGameLabel}${level != null ? ' (${level.shortLabel})' : ''}',
+        ),
         actions: [
           if (_isGameActive || _isGameOver)
             Center(
@@ -166,7 +172,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         ],
       ),
       body: level == null
-          ? const Center(child: Text("Select a level first."))
+          ? Center(child: Text(language.selectLevelFirstLabel))
           : _buildBody(level),
     );
   }
@@ -176,16 +182,26 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
     return vocabAsync.when(
       data: (dataItems) {
-         if (dataItems.isEmpty) return const Center(child: Text("No vocabulary found."));
+         final language = ref.read(appLanguageProvider);
+         if (dataItems.isEmpty) {
+           return Center(child: Text(language.noVocabFoundLabel));
+         }
 
          // Map to VocabItem
-         final items = dataItems.map((e) => VocabItem(
-          id: e.id,
-          term: e.term,
-          reading: e.reading,
-          meaning: e.meaning,
-          level: e.level,
-        )).toList();
+         final items = dataItems.map((e) {
+          final meaningEn = e.meaningEn?.trim() ?? '';
+          final meaning = language == AppLanguage.vi
+              ? e.meaning
+              : (meaningEn.isNotEmpty ? meaningEn : e.meaning);
+          return VocabItem(
+            id: e.id,
+            term: e.term,
+            reading: e.reading,
+            meaning: meaning,
+            meaningEn: e.meaningEn,
+            level: e.level,
+          );
+        }).toList();
 
         if (_isGameOver) {
           return Center(
@@ -194,11 +210,20 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
               children: [
                 const Icon(Icons.emoji_events_rounded, size: 64, color: Colors.amber),
                 const SizedBox(height: 16),
-                Text("Time: ${_secondsElapsed}s", style: Theme.of(context).textTheme.headlineMedium),
-                Text("Max Combo: x$_maxCombo", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.deepPurple)),
+                Text(
+                  language.timeSecondsLabel(_secondsElapsed),
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                Text(
+                  language.maxComboLabel(_maxCombo),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge
+                      ?.copyWith(color: Colors.deepPurple),
+                ),
                 const SizedBox(height: 24),
                 JuicyButton(
-                  label: "Play Again",
+                  label: language.playAgainLabel,
                   onPressed: () => _startGame(items),
                   icon: Icons.refresh,
                 )
@@ -208,9 +233,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         }
 
         if (!_isGameActive) {
-          return Center(
+         return Center(
              child: JuicyButton(
-              label: "Start Match Game",
+              label: language.startMatchGameLabel,
               onPressed: () => _startGame(items),
               icon: Icons.play_circle_filled,
               height: 64,
@@ -227,7 +252,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
                   scale: 1.0 + (_combo * 0.1).clamp(0.0, 0.5),
                   duration: const Duration(milliseconds: 200),
                   child: Text(
-                    'COMBO x$_combo!',
+                    language.comboLabel(_combo),
                     style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w900,
@@ -256,7 +281,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (e, s) => Center(child: Text("Error: $e")),
+      error: (e, s) => Center(
+        child: Text(ref.read(appLanguageProvider).loadErrorLabel),
+      ),
     );
   }
 

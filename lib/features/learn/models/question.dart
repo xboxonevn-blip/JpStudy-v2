@@ -10,6 +10,7 @@ class Question {
   final String correctAnswer;
   final List<String>? options; // For multiple choice
   final bool? isStatementTrue; // For true/false
+  final bool? expectsReading; // For fill-in-blank reading questions
   final String? hint; // For fill-in-blank
 
   const Question({
@@ -20,6 +21,7 @@ class Question {
     required this.correctAnswer,
     this.options,
     this.isStatementTrue,
+    this.expectsReading,
     this.hint,
   });
 
@@ -31,9 +33,27 @@ class Question {
       case QuestionType.trueFalse:
         return userAnswer.toLowerCase() == (isStatementTrue! ? 'true' : 'false');
       case QuestionType.fillBlank:
-        // Fuzzy matching for fill-in-blank
-        return _fuzzyMatch(userAnswer, correctAnswer);
+        // Fuzzy matching for fill-in-blank with multiple acceptable meanings
+        for (final candidate in _splitAlternatives(correctAnswer)) {
+          if (_fuzzyMatch(userAnswer, candidate)) {
+            return true;
+          }
+        }
+        return false;
     }
+  }
+
+  List<String> _splitAlternatives(String target) {
+    final raw = target.trim();
+    if (raw.isEmpty) return const [''];
+
+    final parts = raw
+        .split(RegExp(r'\s*(?:/|／|\\bor\\b|;|\\|)\\s*', caseSensitive: false))
+        .map((part) => part.trim())
+        .where((part) => part.isNotEmpty)
+        .toList();
+
+    return parts.isEmpty ? [raw] : parts;
   }
 
   /// Fuzzy match allowing minor typos

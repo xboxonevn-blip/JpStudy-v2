@@ -5,6 +5,7 @@ import '../../../data/daos/learn_dao.dart';
 import '../../../data/daos/achievement_dao.dart';
 import '../../../data/models/vocab_item.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
+import '../../../core/app_language.dart';
 import '../models/learn_session.dart';
 import '../models/question.dart';
 import '../models/question_type.dart';
@@ -23,6 +24,7 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
   void startSession({
     required int lessonId,
     required List<VocabItem> items,
+    AppLanguage language = AppLanguage.en,
     List<QuestionType> enabledTypes = const [
       QuestionType.multipleChoice,
       QuestionType.trueFalse,
@@ -33,6 +35,7 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
       items: items,
       enabledTypes: enabledTypes,
       count: items.length,
+      language: language,
     );
 
     state = LearnSession(
@@ -47,6 +50,7 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
   void startAdaptiveRound({
     required List<VocabItem> items,
     required int round,
+    AppLanguage language = AppLanguage.en,
   }) {
     if (state == null) return;
 
@@ -54,6 +58,7 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
       items: items,
       round: round,
       weakTermIds: state!.weakTermIds,
+      language: language,
     );
 
     state = state!.copyWith(
@@ -86,12 +91,10 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
         itemId: question.targetItem.id,
       );
     } else {
-      // Remove from mistake bank if correct (simplistic "fix" logic for now)
-      // Or we can leave it for the dedicated "Fix Mistakes" mode to remove.
-      // The requirement says: "đúng 2 lần liên tiếp -> remove". 
-      // This implies tracking streak on the mistake itself.
-      // For now, let's strictly follow: "Review/Practice -> Mistake Bank".
-      // We perform removal in "Fix Mistakes" mode.
+      await _mistakeRepo.markCorrect(
+        type: 'vocab',
+        itemId: question.targetItem.id,
+      );
     }
 
     state!.recordResult(result);
@@ -114,6 +117,12 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
       // Session complete
       _completeSession();
     }
+  }
+
+  void requeueQuestion(Question question) {
+    if (state == null) return;
+    final nextQuestions = List<Question>.from(state!.questions)..add(question);
+    state = state!.copyWith(questions: nextQuestions);
   }
 
   /// Complete the session

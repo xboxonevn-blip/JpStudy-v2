@@ -25,7 +25,15 @@ class MistakeRepository {
     await _dao.removeMistake(type, itemId);
   }
 
+  Future<void> markCorrect({required String type, required int itemId}) async {
+    await _dao.markCorrect(type, itemId);
+  }
+
   Future<List<UserMistake>> getMistakesByType(String type) {
     return _dao.getMistakesByType(type);
+  }
+
+  Stream<List<UserMistake>> watchAllMistakes() {
+    return _dao.watchAllMistakes();
   }
 }

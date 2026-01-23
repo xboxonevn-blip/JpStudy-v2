@@ -7,21 +7,24 @@ part 'mistake_dao.g.dart';
 @DriftAccessor(tables: [UserMistakes])
 class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
   MistakeDao(super.db);
+  static const int requiredCorrectStreak = 2;
 
   /// Adds a mistake to the bank.
   /// If it already exists, increments the wrongCount and updates the timestamp.
   Future<void> addMistake(String type, int itemId) async {
+    final now = DateTime.now().millisecondsSinceEpoch;
     await customStatement(
       'INSERT INTO user_mistakes (type, item_id, wrong_count, last_mistake_at) '
-      'VALUES (?, ?, 1, ?) '
+      'VALUES (?, ?, ?, ?) '
       'ON CONFLICT(type, item_id) DO UPDATE SET '
       'wrong_count = wrong_count + 1, '
       'last_mistake_at = ?',
       [
         type,
         itemId,
-        DateTime.now().toIso8601String(),
-        DateTime.now().toIso8601String(),
+        requiredCorrectStreak,
+        now,
+        now,
       ],
     );
   }
@@ -31,6 +34,28 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
     await (delete(userMistakes)
           ..where((tbl) => tbl.type.equals(type) & tbl.itemId.equals(itemId)))
         .go();
+  }
+
+  /// Decrease remaining mistakes; remove when cleared.
+  Future<void> markCorrect(String type, int itemId) async {
+    final existing = await (select(userMistakes)
+          ..where((tbl) => tbl.type.equals(type) & tbl.itemId.equals(itemId)))
+        .getSingleOrNull();
+    if (existing == null) {
+      return;
+    }
+
+    if (existing.wrongCount <= 1) {
+      await removeMistake(type, itemId);
+      return;
+    }
+
+    await (update(userMistakes)
+          ..where((tbl) => tbl.type.equals(type) & tbl.itemId.equals(itemId)))
+        .write(UserMistakesCompanion(
+          wrongCount: Value(existing.wrongCount - 1),
+          lastMistakeAt: Value(DateTime.now()),
+        ));
   }
 
   /// Gets the total count of mistakes in the bank.
@@ -49,5 +74,15 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
   /// Get all mistakes
   Future<List<UserMistake>> getAllMistakes() {
     return select(userMistakes).get();
+  }
+
+  /// Watch all mistakes for live updates
+  Stream<List<UserMistake>> watchAllMistakes() {
+    return (select(userMistakes)
+          ..orderBy([
+            (tbl) => OrderingTerm(expression: tbl.lastMistakeAt, mode: OrderingMode.desc),
+            (tbl) => OrderingTerm(expression: tbl.wrongCount, mode: OrderingMode.desc),
+          ]))
+        .watch();
   }
 }

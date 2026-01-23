@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/app_language.dart';
+import '../../../core/language_provider.dart';
 import '../../../data/models/vocab_item.dart';
 import '../../learn/models/question.dart';
 import '../../learn/models/question_type.dart';
@@ -10,6 +12,7 @@ import '../../learn/services/question_generator.dart';
 import '../../learn/widgets/fill_blank_widget.dart';
 import '../../learn/widgets/multiple_choice_widget.dart';
 import '../../learn/widgets/true_false_widget.dart';
+import '../../../data/repositories/lesson_repository.dart';
 import '../models/test_config.dart';
 import '../models/test_session.dart';
 import '../providers/test_providers.dart';
@@ -55,11 +58,13 @@ class _TestScreenState extends ConsumerState<TestScreen> {
   }
 
   void _startTest() {
+    final language = ref.read(appLanguageProvider);
     final generator = QuestionGenerator();
     final questions = generator.generateQuestions(
       items: widget.items,
       enabledTypes: widget.config.enabledTypes,
       count: widget.config.questionCount,
+      language: language,
     );
 
     if (widget.config.shuffleQuestions) {
@@ -96,6 +101,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
     final question = _session.currentQuestion;
 
     if (question == null) {
@@ -106,7 +112,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test: ${widget.lessonTitle}'),
+        title: Text('${language.testModeLabel}: ${widget.lessonTitle}'),
         actions: [
           // Timer display
           if (widget.config.timeLimitMinutes != null)
@@ -131,7 +137,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
                 _session.toggleFlag(_session.currentQuestionIndex);
               });
             },
-            tooltip: 'Flag for review',
+            tooltip: language.flagForReviewLabel,
           ),
         ],
       ),
@@ -169,14 +175,14 @@ class _TestScreenState extends ConsumerState<TestScreen> {
                 },
                 child: KeyedSubtree(
                   key: ValueKey(question.id),
-                  child: _buildQuestionWidget(question),
+                  child: _buildQuestionWidget(question, language),
                 ),
               ),
             ),
           ),
 
           // Navigation buttons
-          _buildNavigationButtons(),
+          _buildNavigationButtons(language),
         ],
       ),
     );
@@ -262,13 +268,16 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     );
   }
 
-  Widget _buildQuestionWidget(Question question) {
+  Widget _buildQuestionWidget(Question question, AppLanguage language) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Question number
         Text(
-          'Question ${_session.currentQuestionIndex + 1} of ${_session.totalQuestions}',
+          language.testProgressLabel(
+            _session.currentQuestionIndex + 1,
+            _session.totalQuestions,
+          ),
           style: TextStyle(
             fontSize: 14,
             color: Colors.grey[600],
@@ -277,18 +286,19 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         const SizedBox(height: 16),
 
         // Question content
-        _buildQuestionContent(question),
+        _buildQuestionContent(question, language),
       ],
     );
   }
 
-  Widget _buildQuestionContent(Question question) {
+  Widget _buildQuestionContent(Question question, AppLanguage language) {
     switch (question.type) {
       case QuestionType.multipleChoice:
         return MultipleChoiceWidget(
           question: question,
           selectedAnswer: _selectedAnswer,
           showResult: _showResult && widget.config.showCorrectAfterWrong,
+          language: language,
           onSelect: _handleMultipleChoiceSelect,
         );
 
@@ -297,6 +307,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
           question: question,
           selectedAnswer: _selectedTrueFalse,
           showResult: _showResult && widget.config.showCorrectAfterWrong,
+          language: language,
           onSelect: _handleTrueFalseSelect,
         );
 
@@ -305,12 +316,13 @@ class _TestScreenState extends ConsumerState<TestScreen> {
           question: question,
           showResult: _showResult && widget.config.showCorrectAfterWrong,
           isCorrect: _isCorrect,
+          language: language,
           onSubmit: _handleFillBlankSubmit,
         );
     }
   }
 
-  Widget _buildNavigationButtons() {
+  Widget _buildNavigationButtons(AppLanguage language) {
     final isFirst = _session.currentQuestionIndex == 0;
     final isLast = _session.currentQuestionIndex == _session.totalQuestions - 1;
 
@@ -323,7 +335,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
               child: OutlinedButton.icon(
                 onPressed: _previousQuestion,
                 icon: const Icon(Icons.arrow_back),
-                label: const Text('Previous'),
+                label: Text(language.previousLabel),
               ),
             ),
           if (!isFirst) const SizedBox(width: 12),
@@ -335,7 +347,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 16),
               ),
               child: Text(
-                isLast ? 'Submit Test' : 'Next',
+                isLast ? language.submitTestLabel : language.nextLabel,
                 style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
             ),
@@ -422,25 +434,26 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
   void _showSubmitDialog() {
     final unanswered = _session.totalQuestions - _session.answeredCount;
+    final language = ref.read(appLanguageProvider);
 
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Submit Test?'),
+        title: Text(language.submitTestTitle),
         content: unanswered > 0
-            ? Text('You have $unanswered unanswered questions. Submit anyway?')
-            : const Text('Are you sure you want to submit your test?'),
+            ? Text(language.unansweredSubmitLabel(unanswered))
+            : Text(language.submitTestTitle),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.pop(context);
               _submitTest();
             },
-            child: const Text('Submit'),
+            child: Text(language.submitTestConfirmLabel),
           ),
         ],
       ),
@@ -453,6 +466,9 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
     // Save to database
     await ref.read(testHistoryServiceProvider).saveTest(_session);
+    await ref.read(lessonRepositoryProvider).recordStudyActivity(
+      xpDelta: _session.xpEarned,
+    );
 
     // Audio removed
 
@@ -460,7 +476,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => TestResultsScreen(session: _session),
+        builder: (context) => TestResultsScreen(
+          session: _session,
+          lessonTitle: widget.lessonTitle,
+        ),
       ),
     );
   }

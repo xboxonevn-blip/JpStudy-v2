@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/app_language.dart';
+import '../../../core/language_provider.dart';
 import '../../../data/models/vocab_item.dart';
 import '../models/question.dart';
 import '../models/question_type.dart';
 import '../providers/learn_session_provider.dart';
+import '../widgets/contextual_hint_card.dart';
 import '../widgets/fill_blank_widget.dart';
 import '../widgets/multiple_choice_widget.dart';
 import '../widgets/true_false_widget.dart';
@@ -33,6 +36,8 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
   bool? _selectedTrueFalse;
   bool _showResult = false;
   bool _isCorrect = false;
+  final Set<String> _contextHintsShown = {};
+  final Set<String> _contextHintsRequeued = {};
 
   @override
   void initState() {
@@ -42,16 +47,19 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
 
   void _startSession() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      final language = ref.read(appLanguageProvider);
       if (widget.enabledTypes != null) {
         ref.read(learnSessionProvider.notifier).startSession(
               lessonId: widget.lessonId,
               items: widget.items,
               enabledTypes: widget.enabledTypes!,
+              language: language,
             );
       } else {
         ref.read(learnSessionProvider.notifier).startSession(
               lessonId: widget.lessonId,
               items: widget.items,
+              language: language,
             );
       }
     });
@@ -59,6 +67,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
     final session = ref.watch(learnSessionProvider);
 
     if (session == null) {
@@ -85,7 +94,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Learn: ${widget.lessonTitle}'),
+        title: Text('${language.learnModeLabel}: ${widget.lessonTitle}'),
         actions: [
           // Progress indicator
           Padding(
@@ -114,7 +123,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
           ),
 
           // Stats row
-          _buildStatsRow(session),
+          _buildStatsRow(session, language),
 
           // Question content
           Expanded(
@@ -136,7 +145,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
                 },
                 child: KeyedSubtree(
                   key: ValueKey(question.id),
-                  child: _buildQuestionWidget(question),
+                  child: _buildQuestionWidget(question, language),
                 ),
               ),
             ),
@@ -161,7 +170,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
                       ),
                     ),
                     child: Text(
-                      _isCorrect ? 'Continue' : 'Got it',
+                      _isCorrect ? language.continueLabel : language.gotItLabel,
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -176,7 +185,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     );
   }
 
-  Widget _buildStatsRow(dynamic session) {
+  Widget _buildStatsRow(dynamic session, AppLanguage language) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       color: Colors.grey[50],
@@ -185,19 +194,19 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
         children: [
           _buildStatItem(
             icon: Icons.check_circle,
-            label: 'Correct',
+            label: language.correctLabel,
             value: session.correctCount,
             color: Colors.green,
           ),
           _buildStatItem(
             icon: Icons.cancel,
-            label: 'Wrong',
+            label: language.incorrectLabel,
             value: session.wrongCount,
             color: Colors.red,
           ),
           _buildStatItem(
             icon: Icons.percent,
-            label: 'Accuracy',
+            label: language.progressAccuracyLabel,
             value: '${(session.accuracy * 100).toInt()}%',
             color: Colors.blue,
           ),
@@ -239,32 +248,59 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     );
   }
 
-  Widget _buildQuestionWidget(Question question) {
-    switch (question.type) {
-      case QuestionType.multipleChoice:
-        return MultipleChoiceWidget(
+  Widget _buildQuestionWidget(Question question, AppLanguage language) {
+    final showContextHint = _contextHintsShown.contains(question.id);
+    final content = switch (question.type) {
+      QuestionType.multipleChoice => MultipleChoiceWidget(
           question: question,
           selectedAnswer: _selectedAnswer,
           showResult: _showResult,
+          language: language,
           onSelect: _handleMultipleChoiceSelect,
-        );
-
-      case QuestionType.trueFalse:
-        return TrueFalseWidget(
+        ),
+      QuestionType.trueFalse => TrueFalseWidget(
           question: question,
           selectedAnswer: _selectedTrueFalse,
           showResult: _showResult,
+          language: language,
           onSelect: _handleTrueFalseSelect,
-        );
-
-      case QuestionType.fillBlank:
-        return FillBlankWidget(
+        ),
+      QuestionType.fillBlank => FillBlankWidget(
           question: question,
           showResult: _showResult,
           isCorrect: _isCorrect,
+          language: language,
           onSubmit: _handleFillBlankSubmit,
-        );
-    }
+        ),
+    };
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        content,
+        const SizedBox(height: 12),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton.icon(
+            onPressed: showContextHint
+                ? null
+                : () {
+                    setState(() {
+                      _contextHintsShown.add(question.id);
+                    });
+                  },
+            icon: const Icon(Icons.lightbulb_outline),
+            label: Text(
+              showContextHint
+                  ? language.contextualHintUsedLabel
+                  : language.contextualHintButtonLabel,
+            ),
+          ),
+        ),
+        if (showContextHint)
+          ContextualHintCard(item: question.targetItem, language: language),
+      ],
+    );
   }
 
   void _handleMultipleChoiceSelect(String answer) {
@@ -289,6 +325,13 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     final result = await ref.read(learnSessionProvider.notifier).submitAnswer(answer);
 
     if (result != null) {
+      final usedHint = _contextHintsShown.contains(result.question.id);
+      if (usedHint &&
+          result.isCorrect &&
+          !_contextHintsRequeued.contains(result.question.id)) {
+        ref.read(learnSessionProvider.notifier).requeueQuestion(result.question);
+        _contextHintsRequeued.add(result.question.id);
+      }
       setState(() {
         _showResult = true;
         _isCorrect = result.isCorrect;

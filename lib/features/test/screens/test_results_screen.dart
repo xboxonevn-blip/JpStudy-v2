@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:jpstudy/core/app_language.dart';
 
 import '../../learn/models/question_type.dart';
 import '../models/test_session.dart';
 import '../services/test_export_service.dart';
+import 'test_review_screen.dart';
 
 class TestResultsScreen extends StatelessWidget {
   final TestSession session;
+  final String lessonTitle;
 
   const TestResultsScreen({
     super.key,
     required this.session,
+    required this.lessonTitle,
   });
 
   @override
@@ -245,7 +249,7 @@ class TestResultsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  type.label,
+                  type.label(AppLanguage.en),
                   style: const TextStyle(fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(height: 4),
@@ -321,7 +325,14 @@ class TestResultsScreen extends StatelessWidget {
           height: 56,
           child: ElevatedButton.icon(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => TestReviewScreen(
+                    session: session,
+                    lessonTitle: lessonTitle,
+                  ),
+                ),
+              );
             },
             icon: const Icon(Icons.visibility),
             label: const Text(

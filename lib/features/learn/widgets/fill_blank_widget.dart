@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/app_language.dart';
 import '../models/question.dart';
 
 /// Fill in the blank question widget
@@ -7,6 +8,7 @@ class FillBlankWidget extends StatefulWidget {
   final Question question;
   final bool showResult;
   final bool isCorrect;
+  final AppLanguage language;
   final Function(String) onSubmit;
 
   const FillBlankWidget({
@@ -14,6 +16,7 @@ class FillBlankWidget extends StatefulWidget {
     required this.question,
     this.showResult = false,
     this.isCorrect = false,
+    required this.language,
     required this.onSubmit,
   });
 
@@ -55,7 +58,8 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              if (widget.question.targetItem.reading != null) ...[
+              if (widget.question.expectsReading != true &&
+                  widget.question.targetItem.reading != null) ...[
                 const SizedBox(height: 8),
                 Text(
                   widget.question.targetItem.reading!,
@@ -86,7 +90,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
           textAlign: TextAlign.center,
           style: const TextStyle(fontSize: 24),
           decoration: InputDecoration(
-            hintText: 'Type your answer...',
+            hintText: widget.language.typeYourAnswerHint,
             hintStyle: TextStyle(color: Colors.grey[400]),
             filled: true,
             fillColor: widget.showResult
@@ -133,7 +137,9 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
               });
             },
             icon: const Icon(Icons.lightbulb_outline),
-            label: Text(_showHint ? 'Hint: ${widget.question.hint}' : 'Show Hint'),
+            label: Text(_showHint
+                ? widget.language.hintWithValue(widget.question.hint!)
+                : widget.language.showHintLabel),
           ),
 
         // Show correct answer if wrong
@@ -148,9 +154,9 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
             ),
             child: Column(
               children: [
-                const Text(
-                  'Correct Answer:',
-                  style: TextStyle(
+                Text(
+                  widget.language.correctAnswerLabel,
+                  style: const TextStyle(
                     fontSize: 14,
                     color: Colors.green,
                   ),
@@ -181,9 +187,9 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
-            child: const Text(
-              'Check Answer',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            child: Text(
+              widget.language.checkAnswerLabel,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
           ),
       ],

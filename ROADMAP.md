@@ -17,8 +17,8 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 | :--- | :--- | :--- | :--- |
 | **Phase 1** | **Foundation** (Anki Logic) | ✅ 100% | Done |
 | **Phase 2** | **Structure** (LingoDeer Style) | ✅ 95% | Q1 2026 |
-| **Phase 2.5** | **Visual Polish & Mnemonics** | ✅ 100% | Done |
-| **Phase 3** | **Data Safety & Enrichment** | 🚧 25% | Feb 2026 |
+| **Phase 2.5** | **Visual Polish & Mnemonics** | 🚧 40% | In Progress |
+| **Phase 3** | **Data Safety & Enrichment** | 🚧 10% | Feb 2026 |
 | **Phase 4** | **Mastery & Immersion** | 📅 0% | Q2 2026 |
 
 ---
@@ -27,23 +27,22 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 
 Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế độ luyện tập chính:
 
-### 1. 📖 Learn (Học Tập) — ✅ Basic | 🚧 Upgrading
+### 1. 📖 Learn (Học Tập) — ✅ Done
 *   **Hiện tại:** Trắc nghiệm, Đúng/Sai, Điền khuyết cơ bản.
 *   **Pro Max Upgrade:** 
-    *   [ ] **Guided Interaction:** Học qua ngữ cảnh (Contextual Learning).
-    *   [x] **Mnemonic Support:** Bổ sung hình ảnh/câu chuyện gợi nhớ Kanji (Done for N5/N4).
+    *   [x] **Guided Interaction:** Học qua ngữ cảnh (Contextual Learning).
+    *   [x] **Mnemonic Support:** Bổ sung câu chuyện gợi nhớ Kanji (Done for N5/N4).
 
-### 2. 📝 Test (Kiểm Tra) — ✅ Basic | 🚧 Upgrading
+### 2. 📝 Test (Kiểm Tra) — ✅ Done
 *   **Hiện tại:** Có timer, flagging, lưu lịch sử bài test.
 *   **Pro Max Upgrade:**
     *   [ ] **Adaptive Testing:** Tự động lặp lại các câu sai ở định dạng khác (Space Repetition trong cùng buổi test).
     *   [ ] **Phân tích lỗi:** Gợi ý bài học liên quan khi user sai nhiều ở một mảng kiến thức.
 
-### 3. 🧩 Match (Nối Từ) — ✅ Basic | 🚧 Upgrading
+### 3. 🧩 Match (Nối Từ) — ✅ Done
 *   **Hiện tại:** Lưới thẻ 3x3, có combo logic và ghi điểm XP.
 *   **Pro Max Upgrade:**
     *   [ ] **Time Attack Blitz:** Chế độ đua tốc độ với hiệu ứng vật lý (Particle effects).
-    *   [ ] **Hỗ trợ hình ảnh:** Nối từ vựng với hình ảnh (tăng khả năng ghi nhớ thị giác).
 
 ### 4. ✍️ Write (Viết) — 📅 Planned
 *   **Mục tiêu:** Canvas vẽ tay Kanji thực tế.
@@ -100,7 +99,7 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
 
 ### 🚧 Phase 3: Data Safety & Advanced Interaction (Next Priority)
 *   **3.1 An toàn dữ liệu:** 
-    *   [ ] Import/Export Database ra file (Đảm bảo học tập 10 năm không mất dữ liệu).
+    *   [x] Import/Export Database ra file (Đảm bảo học tập 10 năm không mất dữ liệu).
     *   [ ] Auto-backup local.
 *   **3.2 Kanji Mastery:**
     *   [ ] **Kanji UI Upgrade:** Đồng bộ giao diện Kanji chuyên sâu như Flashcard.
@@ -134,8 +133,8 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
 
 ## ⚡ Ưu Tiên Tiếp Theo (Next Steps)
 
-1.  🚧 **Import/Export Data:** Tính năng "sống còn" cho người học lâu dài.
-2.  📚 **N4 Vocab :** Nạp 500 từ vựng N4 còn thiếu vào các bài học 26-50.
+1.  🚧 **Auto-backup local:** Hoàn thiện backup tự động cho dữ liệu học.
+2.  📚 **Rà soát N4 Vocab:** Đối soát đủ số lượng/độ phủ từ vựng N4 cho bài 26-50.
 3.  🎨 **Refactor Training UI:** Thay đổi màu sắc/điều hướng cho 4 mode (Learn/Test/Match/Write) theo tone màu Pro Max.
 
 ---

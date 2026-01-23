@@ -2517,4 +2517,686 @@ extension AppLanguageLabels on AppLanguage {
         return '$level\u306e\u7df4\u7fd2\u3092\u958b\u59cb';
     }
   }
+  String get configureLearnSessionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Configure Your Session';
+      case AppLanguage.vi:
+        return 'Cấu hình buổi học';
+      case AppLanguage.ja:
+        return '学習セッション設定';
+    }
+  }
+
+  String get configureTestLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Configure Your Test';
+      case AppLanguage.vi:
+        return 'Cấu hình bài kiểm tra';
+      case AppLanguage.ja:
+        return 'テスト設定';
+    }
+  }
+
+  String learnTermsAvailableLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count terms available';
+      case AppLanguage.vi:
+        return '$count từ có sẵn';
+      case AppLanguage.ja:
+        return '$count語利用可能';
+    }
+  }
+
+  String testQuestionsAvailableLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count questions available';
+      case AppLanguage.vi:
+        return '$count câu hỏi có sẵn';
+      case AppLanguage.ja:
+        return '$count問利用可能';
+    }
+  }
+
+  String get numberOfQuestionsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Number of Questions';
+      case AppLanguage.vi:
+        return 'Số lượng câu hỏi';
+      case AppLanguage.ja:
+        return '問題数';
+    }
+  }
+
+  String allCountLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'All ($count)';
+      case AppLanguage.vi:
+        return 'Tất cả ($count)';
+      case AppLanguage.ja:
+        return 'すべて ($count)';
+    }
+  }
+
+  String get questionTypesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Question Types';
+      case AppLanguage.vi:
+        return 'Loại câu hỏi';
+      case AppLanguage.ja:
+        return '問題タイプ';
+    }
+  }
+
+  String get selectQuestionTypesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Select which question types to include';
+      case AppLanguage.vi:
+        return 'Chọn loại câu hỏi muốn sử dụng';
+      case AppLanguage.ja:
+        return '含める問題タイプを選択';
+    }
+  }
+
+  String get optionsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Options';
+      case AppLanguage.vi:
+        return 'Tùy chọn';
+      case AppLanguage.ja:
+        return 'オプション';
+    }
+  }
+
+  String get shuffleQuestionsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Shuffle Questions';
+      case AppLanguage.vi:
+        return 'Trộn câu hỏi';
+      case AppLanguage.ja:
+        return '問題をシャッフル';
+    }
+  }
+
+  String get shuffleQuestionsHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Randomize question order';
+      case AppLanguage.vi:
+        return 'Xáo trộn thứ tự câu hỏi';
+      case AppLanguage.ja:
+        return '問題の順序をランダム化';
+    }
+  }
+
+  String get enableHintsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Enable Hints';
+      case AppLanguage.vi:
+        return 'Bật gợi ý';
+      case AppLanguage.ja:
+        return 'ヒントを有効化';
+    }
+  }
+
+  String get enableHintsHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Show hints for fill-in-blank questions';
+      case AppLanguage.vi:
+        return 'Hiện gợi ý cho câu điền khuyết';
+      case AppLanguage.ja:
+        return '穴埋め問題のヒントを表示';
+    }
+  }
+
+  String get showCorrectAnswerLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Show Correct Answer';
+      case AppLanguage.vi:
+        return 'Hiện đáp án đúng';
+      case AppLanguage.ja:
+        return '正解を表示';
+    }
+  }
+
+  String get showCorrectAnswerHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Display correct answer after wrong response';
+      case AppLanguage.vi:
+        return 'Hiện đáp án đúng sau khi trả lời sai';
+      case AppLanguage.ja:
+        return '誤答後に正解を表示';
+    }
+  }
+
+  String get startLearningLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start Learning';
+      case AppLanguage.vi:
+        return 'Bắt đầu học';
+      case AppLanguage.ja:
+        return '学習を開始';
+    }
+  }
+
+  String get startTestLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start Test';
+      case AppLanguage.vi:
+        return 'Bắt đầu kiểm tra';
+      case AppLanguage.ja:
+        return 'テスト開始';
+    }
+  }
+
+  String get timeLimitLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time Limit';
+      case AppLanguage.vi:
+        return 'Giới hạn thời gian';
+      case AppLanguage.ja:
+        return '制限時間';
+    }
+  }
+
+  String get noTimeLimitLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No Limit';
+      case AppLanguage.vi:
+        return 'Không giới hạn';
+      case AppLanguage.ja:
+        return '制限なし';
+    }
+  }
+
+  String timeLimitMinutesLabel(int minutes) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$minutes min';
+      case AppLanguage.vi:
+        return '$minutes phút';
+      case AppLanguage.ja:
+        return '$minutes分';
+    }
+  }
+
+  String get typeYourAnswerHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Type your answer...';
+      case AppLanguage.vi:
+        return 'Nhập câu trả lời...';
+      case AppLanguage.ja:
+        return '答えを入力...';
+    }
+  }
+
+  String get showHintLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Show Hint';
+      case AppLanguage.vi:
+        return 'Hiện gợi ý';
+      case AppLanguage.ja:
+        return 'ヒントを表示';
+    }
+  }
+
+  String hintWithValue(String hint) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Hint: $hint';
+      case AppLanguage.vi:
+        return 'Gợi ý: $hint';
+      case AppLanguage.ja:
+        return 'ヒント: $hint';
+    }
+  }
+
+  String get correctAnswerLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Correct Answer:';
+      case AppLanguage.vi:
+        return 'Đáp án đúng:';
+      case AppLanguage.ja:
+        return '正解:';
+    }
+  }
+
+  String get yourAnswerLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Your Answer:';
+      case AppLanguage.vi:
+        return 'Câu trả lời của bạn:';
+      case AppLanguage.ja:
+        return 'あなたの答え:';
+    }
+  }
+
+  String get skippedAnswerLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No answer';
+      case AppLanguage.vi:
+        return 'Chưa trả lời';
+      case AppLanguage.ja:
+        return '未回答';
+    }
+  }
+
+  String get reviewAnswersLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review Answers';
+      case AppLanguage.vi:
+        return 'Xem lại câu trả lời';
+      case AppLanguage.ja:
+        return '解答を復習';
+    }
+  }
+
+  String get retryWrongLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Retry Wrong';
+      case AppLanguage.vi:
+        return 'Làm lại câu sai';
+      case AppLanguage.ja:
+        return '間違いをやり直す';
+    }
+  }
+
+  String get reviewAllLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'All';
+      case AppLanguage.vi:
+        return 'Tất cả';
+      case AppLanguage.ja:
+        return 'すべて';
+    }
+  }
+
+  String get reviewWrongLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Wrong/Skipped';
+      case AppLanguage.vi:
+        return 'Sai/Bỏ trống';
+      case AppLanguage.ja:
+        return '誤答/未回答';
+    }
+  }
+
+  String get checkAnswerLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Check Answer';
+      case AppLanguage.vi:
+        return 'Kiểm tra';
+      case AppLanguage.ja:
+        return '答えを確認';
+    }
+  }
+
+  String get trueLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'TRUE';
+      case AppLanguage.vi:
+        return 'ĐÚNG';
+      case AppLanguage.ja:
+        return '正しい';
+    }
+  }
+
+  String get falseLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'FALSE';
+      case AppLanguage.vi:
+        return 'SAI';
+      case AppLanguage.ja:
+        return '間違い';
+    }
+  }
+
+  String questionMeaningPrompt(String term) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'What does "$term" mean?';
+      case AppLanguage.vi:
+        return '"$term" nghĩa là gì?';
+      case AppLanguage.ja:
+        return '「$term」の意味は？';
+    }
+  }
+
+  String questionReadingPrompt(String term) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Type the reading of "$term"';
+      case AppLanguage.vi:
+        return 'Nhập cách đọc của "$term"';
+      case AppLanguage.ja:
+        return '「$term」の読み方を入力';
+    }
+  }
+
+  String questionTrueFalsePrompt(String term, String meaning) {
+    switch (this) {
+      case AppLanguage.en:
+        return '"$term" means "$meaning"';
+      case AppLanguage.vi:
+        return '"$term" có nghĩa là "$meaning"';
+      case AppLanguage.ja:
+        return '「$term」は「$meaning」という意味です';
+    }
+  }
+
+  String get contextualLearningLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Contextual Learning';
+      case AppLanguage.vi:
+        return 'Học qua ngữ cảnh';
+      case AppLanguage.ja:
+        return '文脈で学習';
+    }
+  }
+
+  String get contextualLearningHelperLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Try saying it aloud and picture the scene.';
+      case AppLanguage.vi:
+        return 'Hãy đọc to và tưởng tượng bối cảnh.';
+      case AppLanguage.ja:
+        return '声に出して場面を想像してみよう。';
+    }
+  }
+
+  String get multipleChoiceLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Multiple Choice';
+      case AppLanguage.vi:
+        return 'Trắc nghiệm';
+      case AppLanguage.ja:
+        return '四択';
+    }
+  }
+
+  String get trueFalseChoiceLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'True/False';
+      case AppLanguage.vi:
+        return 'Đúng/Sai';
+      case AppLanguage.ja:
+        return '正誤';
+    }
+  }
+
+  String get fillBlankLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fill in the Blank';
+      case AppLanguage.vi:
+        return 'Điền khuyết';
+      case AppLanguage.ja:
+        return '穴埋め';
+    }
+  }
+
+  String get matchGameLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Match Game';
+      case AppLanguage.vi:
+        return 'Trò chơi Ghép';
+      case AppLanguage.ja:
+        return 'マッチゲーム';
+    }
+  }
+
+  String get startMatchGameLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start Match Game';
+      case AppLanguage.vi:
+        return 'Bắt đầu chơi ghép';
+      case AppLanguage.ja:
+        return 'マッチゲーム開始';
+    }
+  }
+
+  String get startGameLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start Game';
+      case AppLanguage.vi:
+        return 'Bắt đầu chơi';
+      case AppLanguage.ja:
+        return 'ゲーム開始';
+    }
+  }
+
+  String get playAgainLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Play Again';
+      case AppLanguage.vi:
+        return 'Chơi lại';
+      case AppLanguage.ja:
+        return 'もう一度';
+    }
+  }
+
+  String get selectLevelFirstLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Select a level first.';
+      case AppLanguage.vi:
+        return 'Vui lòng chọn trình độ trước.';
+      case AppLanguage.ja:
+        return '先にレベルを選択してください。';
+    }
+  }
+
+  String get noVocabFoundLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No vocabulary found.';
+      case AppLanguage.vi:
+        return 'Không có từ vựng.';
+      case AppLanguage.ja:
+        return '語彙が見つかりません。';
+    }
+  }
+
+  String get noTermsAvailableLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No terms available for this lesson';
+      case AppLanguage.vi:
+        return 'Bài học này chưa có từ vựng';
+      case AppLanguage.ja:
+        return 'このレッスンには語彙がありません';
+    }
+  }
+
+  String notEnoughTermsLabel(int minimum) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Not enough terms for a game (need at least $minimum).';
+      case AppLanguage.vi:
+        return 'Không đủ từ để chơi (cần ít nhất $minimum).';
+      case AppLanguage.ja:
+        return '$minimum語以上必要です。';
+    }
+  }
+
+  String timeSecondsLabel(int seconds) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time: ${seconds}s';
+      case AppLanguage.vi:
+        return 'Thời gian: ${seconds}s';
+      case AppLanguage.ja:
+        return '時間: ${seconds}s';
+    }
+  }
+
+  String maxComboLabel(int combo) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Max Combo: x$combo';
+      case AppLanguage.vi:
+        return 'Combo cao nhất: x$combo';
+      case AppLanguage.ja:
+        return '最大コンボ: x$combo';
+    }
+  }
+
+  String comboLabel(int combo) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'COMBO x$combo!';
+      case AppLanguage.vi:
+        return 'COMBO x$combo!';
+      case AppLanguage.ja:
+        return 'コンボ x$combo!';
+    }
+  }
+
+  String get flagForReviewLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Flag for review';
+      case AppLanguage.vi:
+        return 'Đánh dấu để xem lại';
+      case AppLanguage.ja:
+        return '復習用にフラグ';
+    }
+  }
+
+  String get previousLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Previous';
+      case AppLanguage.vi:
+        return 'Trước';
+      case AppLanguage.ja:
+        return '前へ';
+    }
+  }
+
+  String get submitTestLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Submit Test';
+      case AppLanguage.vi:
+        return 'Nộp bài';
+      case AppLanguage.ja:
+        return 'テスト送信';
+    }
+  }
+
+  String get submitTestTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Submit Test?';
+      case AppLanguage.vi:
+        return 'Nộp bài?';
+      case AppLanguage.ja:
+        return 'テストを送信しますか？';
+    }
+  }
+
+  String unansweredSubmitLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'You have $count unanswered questions. Submit anyway?';
+      case AppLanguage.vi:
+        return 'Bạn còn $count câu chưa trả lời. Vẫn nộp bài?';
+      case AppLanguage.ja:
+        return '$count問未回答です。送信しますか？';
+    }
+  }
+
+  String get submitTestConfirmLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Submit';
+      case AppLanguage.vi:
+        return 'Nộp';
+      case AppLanguage.ja:
+        return '送信';
+    }
+  }
+
+  String get continueLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Continue';
+      case AppLanguage.vi:
+        return 'Tiếp tục';
+      case AppLanguage.ja:
+        return '続ける';
+    }
+  }
+
+  String get gotItLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Got it';
+      case AppLanguage.vi:
+        return 'Đã hiểu';
+      case AppLanguage.ja:
+        return '了解';
+    }
+  }
+
+  String get contextualHintButtonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Hint';
+      case AppLanguage.vi:
+        return 'Gợi ý';
+      case AppLanguage.ja:
+        return 'ヒント';
+    }
+  }
+
+  String get contextualHintUsedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Hint used';
+      case AppLanguage.vi:
+        return 'Đã dùng gợi ý';
+      case AppLanguage.ja:
+        return 'ヒント使用済み';
+    }
+  }
+
 } // End extension

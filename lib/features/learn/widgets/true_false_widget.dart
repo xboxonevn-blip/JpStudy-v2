@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/app_language.dart';
 import '../models/question.dart';
 
 /// True/False question widget
@@ -7,6 +8,7 @@ class TrueFalseWidget extends StatelessWidget {
   final Question question;
   final bool? selectedAnswer;
   final bool showResult;
+  final AppLanguage language;
   final Function(bool) onSelect;
 
   const TrueFalseWidget({
@@ -14,6 +16,7 @@ class TrueFalseWidget extends StatelessWidget {
     required this.question,
     this.selectedAnswer,
     this.showResult = false,
+    required this.language,
     required this.onSelect,
   });
 
@@ -58,7 +61,7 @@ class TrueFalseWidget extends StatelessWidget {
           children: [
             Expanded(
               child: _AnswerButton(
-                label: 'TRUE',
+                label: language.trueLabel,
                 icon: Icons.check_circle_outline,
                 isSelected: selectedAnswer == true,
                 isCorrect: showResult && isCorrectTrue,
@@ -70,7 +73,7 @@ class TrueFalseWidget extends StatelessWidget {
             const SizedBox(width: 16),
             Expanded(
               child: _AnswerButton(
-                label: 'FALSE',
+                label: language.falseLabel,
                 icon: Icons.cancel_outlined,
                 isSelected: selectedAnswer == false,
                 isCorrect: showResult && isCorrectFalse,

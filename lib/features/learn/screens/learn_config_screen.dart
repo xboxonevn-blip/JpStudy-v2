@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/app_language.dart';
+import '../../../core/language_provider.dart';
 import '../models/question_type.dart';
 
 /// Settings for a Learn Mode session
@@ -39,7 +42,7 @@ class LearnConfig {
   }
 }
 
-class LearnConfigScreen extends StatefulWidget {
+class LearnConfigScreen extends ConsumerStatefulWidget {
   final int lessonId;
   final String lessonTitle;
   final int maxTerms;
@@ -54,10 +57,10 @@ class LearnConfigScreen extends StatefulWidget {
   });
 
   @override
-  State<LearnConfigScreen> createState() => _LearnConfigScreenState();
+  ConsumerState<LearnConfigScreen> createState() => _LearnConfigScreenState();
 }
 
-class _LearnConfigScreenState extends State<LearnConfigScreen> {
+class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
   late LearnConfig _config;
 
   @override
@@ -70,9 +73,10 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Learn: ${widget.lessonTitle}'),
+        title: Text('${language.learnModeLabel}: ${widget.lessonTitle}'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
@@ -80,30 +84,30 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Header
-            _buildHeader(context),
+            _buildHeader(context, language),
             const SizedBox(height: 32),
 
             // Question count
-            _buildQuestionCountSection(),
+            _buildQuestionCountSection(language),
             const SizedBox(height: 24),
 
             // Question types
-            _buildQuestionTypesSection(),
+            _buildQuestionTypesSection(language),
             const SizedBox(height: 24),
 
             // Options
-            _buildOptionsSection(),
+            _buildOptionsSection(language),
             const SizedBox(height: 40),
 
             // Start button
-            _buildStartButton(context),
+            _buildStartButton(context, language),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildHeader(BuildContext context) {
+  Widget _buildHeader(BuildContext context, AppLanguage language) {
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
@@ -129,16 +133,16 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Configure Your Session',
-                  style: TextStyle(
+                Text(
+                  language.configureLearnSessionLabel,
+                  style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
                 Text(
-                  '${widget.maxTerms} terms available',
+                  language.learnTermsAvailableLabel(widget.maxTerms),
                   style: const TextStyle(
                     fontSize: 14,
                     color: Colors.white70,
@@ -152,11 +156,11 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
     );
   }
 
-  Widget _buildQuestionCountSection() {
+  Widget _buildQuestionCountSection(AppLanguage language) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildSectionTitle('Number of Questions'),
+        _buildSectionTitle(language.numberOfQuestionsLabel),
         const SizedBox(height: 12),
         Wrap(
           spacing: 8,
@@ -164,7 +168,11 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
               .where((n) => n <= widget.maxTerms)
               .toSet()
               .map((count) => ChoiceChip(
-                    label: Text(count == widget.maxTerms ? 'All ($count)' : '$count'),
+                    label: Text(
+                      count == widget.maxTerms
+                          ? language.allCountLabel(count)
+                          : '$count',
+                    ),
                     selected: _config.questionCount == count,
                     onSelected: (selected) {
                       if (selected) {
@@ -180,14 +188,14 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
     );
   }
 
-  Widget _buildQuestionTypesSection() {
+  Widget _buildQuestionTypesSection(AppLanguage language) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildSectionTitle('Question Types'),
+        _buildSectionTitle(language.questionTypesLabel),
         const SizedBox(height: 8),
         Text(
-          'Select which question types to include',
+          language.selectQuestionTypesLabel,
           style: TextStyle(fontSize: 14, color: Colors.grey[600]),
         ),
         const SizedBox(height: 12),
@@ -197,7 +205,7 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
           children: QuestionType.values.map((type) {
             final isSelected = _config.enabledTypes.contains(type);
             return FilterChip(
-              label: Text('${type.icon} ${type.label}'),
+              label: Text('${type.icon} ${type.label(language)}'),
               selected: isSelected,
               onSelected: (selected) {
                 setState(() {
@@ -217,15 +225,15 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
     );
   }
 
-  Widget _buildOptionsSection() {
+  Widget _buildOptionsSection(AppLanguage language) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildSectionTitle('Options'),
+        _buildSectionTitle(language.optionsLabel),
         const SizedBox(height: 12),
         SwitchListTile(
-          title: const Text('Shuffle Questions'),
-          subtitle: const Text('Randomize question order'),
+          title: Text(language.shuffleQuestionsLabel),
+          subtitle: Text(language.shuffleQuestionsHint),
           value: _config.shuffleQuestions,
           onChanged: (value) {
             setState(() {
@@ -235,8 +243,8 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
           contentPadding: EdgeInsets.zero,
         ),
         SwitchListTile(
-          title: const Text('Enable Hints'),
-          subtitle: const Text('Show hints for fill-in-blank questions'),
+          title: Text(language.enableHintsLabel),
+          subtitle: Text(language.enableHintsHint),
           value: _config.enableHints,
           onChanged: (value) {
             setState(() {
@@ -246,8 +254,8 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
           contentPadding: EdgeInsets.zero,
         ),
         SwitchListTile(
-          title: const Text('Show Correct Answer'),
-          subtitle: const Text('Display correct answer after wrong response'),
+          title: Text(language.showCorrectAnswerLabel),
+          subtitle: Text(language.showCorrectAnswerHint),
           value: _config.showCorrectAnswer,
           onChanged: (value) {
             setState(() {
@@ -270,16 +278,16 @@ class _LearnConfigScreenState extends State<LearnConfigScreen> {
     );
   }
 
-  Widget _buildStartButton(BuildContext context) {
+  Widget _buildStartButton(BuildContext context, AppLanguage language) {
     return SizedBox(
       width: double.infinity,
       height: 56,
       child: ElevatedButton.icon(
         onPressed: () => widget.onStart(_config),
         icon: const Icon(Icons.play_arrow_rounded),
-        label: const Text(
-          'Start Learning',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+        label: Text(
+          language.startLearningLabel,
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
         ),
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.purple,

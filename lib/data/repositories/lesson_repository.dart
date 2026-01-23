@@ -528,72 +528,36 @@ class LessonRepository {
 
   Future<void> seedTermsIfEmpty(int lessonId, String currentLevelLabel) async {
     final existing = await fetchTerms(lessonId);
-    
+
     // Check if existing terms are the dummy ones and should be replaced
-    // OR if any term has empty definitionEn (needs resync for English support)
-    bool needsResync = false;
-    if (existing.length == 2 && 
-        existing[0].term == '見ます' && 
-        existing[1].term == '探します') {
-       needsResync = true;
-    } else if (existing.isNotEmpty) {
-      // Check if English definitions are missing
-      needsResync = existing.any((t) => t.definitionEn.isEmpty);
+    final isDummy = existing.length == 2 &&
+        existing[0].term == '見ます' &&
+        existing[1].term == '探します';
+
+    if (existing.isNotEmpty && !isDummy) {
+      // Try to backfill missing English without destructive reset.
+      final missingEnglish = existing.any((t) => t.definitionEn.isEmpty);
+      if (missingEnglish) {
+        await _backfillEnglishDefinitions(lessonId, currentLevelLabel, existing);
+      }
+
+      final refreshed = await fetchTerms(lessonId);
+      if (refreshed.isNotEmpty && refreshed.every((t) => t.definitionEn.isNotEmpty)) {
+        return;
+      }
     }
 
-    if (existing.isNotEmpty && !needsResync) {
-      // Real data exists with English, do nothing
+    if (existing.isNotEmpty && !isDummy) {
+      // Data exists but still missing English; keep user data as-is.
       return;
     }
-    
-    if (needsResync) {
-      // Delete old terms to force resync
+
+    if (isDummy) {
+      // Delete dummy terms to force resync
       await (_db.delete(_db.userLessonTerm)..where((tbl) => tbl.lessonId.equals(lessonId))).go();
     }
 
-    // Determine level and try to fetch by tag first (more accurate)
-    // Determine level and try to fetch by tag first (more accurate)
-    String dbLevel = currentLevelLabel; // e.g. "N5", "N4"
-
-    // Try finding by tag
-    var vocabList = await (_contentDb.select(_contentDb.vocab)
-      ..where((tbl) {
-        // Match tag: "minna_X", "minna_X,...", "...,minna_X", "...,minna_X,..."
-        // In SQL LIKE: 'minna_X', 'minna_X,%', '%,minna_X', '%,minna_X,%'
-        // Simplification: Check if it contains minna_X
-        // But to avoid minna_1 matching minna_10, we can be more specific if needed.
-        // For simplicity in this app, we assume strict formatting or acceptable overlap.
-        // Better: Query all for level, filter in Dart to be safe, or just use LIKE.
-        // Given existing data "minna_1,noun", LIKE 'minna_$id,%' is safest for start.
-        final idStr = lessonId.toString();
-        return tbl.level.equals(dbLevel) & 
-               (tbl.tags.like('minna_$idStr,%') | 
-                tbl.tags.equals('minna_$idStr') | 
-                tbl.tags.like('%,minna_$idStr,%') | 
-                tbl.tags.like('%,minna_$idStr'));
-      })
-      // ..orderBy([(t) => OrderingTerm(expression: t.id)]) // content DB ID order
-      ) 
-      .get();
-      
-    // Fallback to offset if tag lookup failed (e.g. old data or manual lessons)
-    if (vocabList.isEmpty) {
-        int limit = 50; 
-        int offset = 0;
-
-        if (currentLevelLabel == 'N5') {
-           offset = (lessonId - 1) * 35; 
-        } else if (currentLevelLabel == 'N4') {
-           offset = (lessonId - 26) * 35;
-        }
-        if (offset < 0) offset = 0;
-        
-        vocabList = await (_contentDb.select(_contentDb.vocab)
-          ..where((tbl) => tbl.level.equals(dbLevel))
-          ..limit(limit, offset: offset)) 
-          .get();
-    }
-    
+    final vocabList = await _fetchLessonVocabFromContent(lessonId, currentLevelLabel);
     if (vocabList.isEmpty) {
       return;
     }
@@ -610,8 +574,8 @@ class LessonRepository {
             reading: Value(v.reading ?? ''),
             definition: Value(v.meaning),
             definitionEn: Value(v.meaningEn ?? ''),
-            mnemonicVi: Value(v.mnemonicVi ?? ''),
-            mnemonicEn: Value(v.mnemonicEn ?? ''),
+            mnemonicVi: const Value(''),
+            mnemonicEn: const Value(''),
             orderIndex: Value(i + 1),
           ),
         );
@@ -619,6 +583,100 @@ class LessonRepository {
     });
   }
 
+  Future<void> _backfillEnglishDefinitions(
+    int lessonId,
+    String currentLevelLabel,
+    List<UserLessonTermData> existing,
+  ) async {
+    final vocabList = await _fetchLessonVocabFromContent(lessonId, currentLevelLabel);
+    if (vocabList.isEmpty) {
+      return;
+    }
+
+    final vocabMap = <String, String>{};
+    final termOnlyMap = <String, String>{};
+    final termConflicts = <String>{};
+    for (final v in vocabList) {
+      final meaningEn = v.meaningEn?.trim() ?? '';
+      if (meaningEn.isEmpty) continue;
+      vocabMap[_vocabKey(v.term, v.reading)] = meaningEn;
+      final termKey = v.term.trim();
+      if (termKey.isEmpty) continue;
+      if (termOnlyMap.containsKey(termKey) &&
+          termOnlyMap[termKey] != meaningEn) {
+        termConflicts.add(termKey);
+        termOnlyMap.remove(termKey);
+      } else if (!termConflicts.contains(termKey)) {
+        termOnlyMap[termKey] = meaningEn;
+      }
+    }
+
+    if (vocabMap.isEmpty) {
+      return;
+    }
+
+    await _db.batch((batch) {
+      for (final term in existing) {
+        if (term.definitionEn.isNotEmpty) continue;
+        final key = _vocabKey(term.term, term.reading);
+        var meaningEn = vocabMap[key];
+        if ((meaningEn == null || meaningEn.isEmpty) && term.reading.trim().isEmpty) {
+          meaningEn = termOnlyMap[term.term.trim()];
+        }
+        if (meaningEn == null || meaningEn.isEmpty) continue;
+        batch.update(
+          _db.userLessonTerm,
+          UserLessonTermCompanion(
+            definitionEn: Value(meaningEn),
+          ),
+          where: (tbl) => tbl.id.equals(term.id),
+        );
+      }
+    });
+  }
+
+  Future<List<VocabData>> _fetchLessonVocabFromContent(
+    int lessonId,
+    String currentLevelLabel,
+  ) async {
+    final dbLevel = currentLevelLabel; // e.g. "N5", "N4"
+    final idStr = lessonId.toString();
+    var vocabList = await (_contentDb.select(_contentDb.vocab)
+          ..where((tbl) {
+            return tbl.level.equals(dbLevel) &
+                (tbl.tags.like('minna_$idStr,%') |
+                    tbl.tags.equals('minna_$idStr') |
+                    tbl.tags.like('%,minna_$idStr,%') |
+                    tbl.tags.like('%,minna_$idStr'));
+          }))
+        .get();
+
+    // Fallback to offset if tag lookup failed (e.g. old data or manual lessons)
+    if (vocabList.isEmpty) {
+      int limit = 50;
+      int offset = 0;
+
+      if (currentLevelLabel == 'N5') {
+        offset = (lessonId - 1) * 35;
+      } else if (currentLevelLabel == 'N4') {
+        offset = (lessonId - 26) * 35;
+      }
+      if (offset < 0) offset = 0;
+
+      vocabList = await (_contentDb.select(_contentDb.vocab)
+            ..where((tbl) => tbl.level.equals(dbLevel))
+            ..limit(limit, offset: offset))
+          .get();
+    }
+
+    return vocabList;
+  }
+
+  String _vocabKey(String term, String? reading) {
+    final termValue = term.trim();
+    final readingValue = (reading ?? '').trim();
+    return '$termValue|$readingValue';
+  }
 
 
   Future<List<GrammarPointData>> fetchGrammar(int lessonId) async {

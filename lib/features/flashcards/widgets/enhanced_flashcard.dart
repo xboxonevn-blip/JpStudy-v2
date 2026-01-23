@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
+import '../../../core/app_language.dart';
 import '../../../data/models/vocab_item.dart';
 
 class EnhancedFlashcard extends StatefulWidget {
   final VocabItem item;
   final VoidCallback? onFlip;
   final bool showTermFirst;
+  final AppLanguage language;
 
   const EnhancedFlashcard({
     super.key,
     required this.item,
     this.onFlip,
     this.showTermFirst = true,
+    required this.language,
   });
 
   @override
@@ -67,9 +70,11 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
   }
 
   Widget _buildFront() {
+    final meaning = widget.item.displayMeaning(widget.language);
     final displayTerm = widget.showTermFirst
         ? widget.item.term
-        : widget.item.meaning;
+        : meaning;
+    final resolvedTerm = displayTerm.trim().isEmpty ? meaning : displayTerm;
     final secondaryText = widget.showTermFirst && widget.item.reading != null
         ? widget.item.reading
         : null;
@@ -79,7 +84,7 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            displayTerm,
+            resolvedTerm,
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 48,
@@ -109,9 +114,11 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
   }
 
   Widget _buildBack() {
+    final meaning = widget.item.displayMeaning(widget.language);
     final displayMeaning = widget.showTermFirst
-        ? widget.item.meaning
+        ? meaning
         : widget.item.term;
+    final resolvedMeaning = displayMeaning.trim().isEmpty ? meaning : displayMeaning;
 
     return Center(
       child: Padding(
@@ -120,7 +127,7 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              displayMeaning,
+              resolvedMeaning,
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.w600,
                   ),

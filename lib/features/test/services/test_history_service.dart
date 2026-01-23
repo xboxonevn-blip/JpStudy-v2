@@ -28,20 +28,18 @@ class TestHistoryService {
 
     await _testDao.createSession(companion);
     
-    // Save answers
+    // Save answers (including unanswered)
     for (int i = 0; i < session.questions.length; i++) {
-        final answer = session.getAnswer(i);
-        if (answer != null) {
-            await _testDao.recordAnswer(TestAnswersCompanion(
-                sessionId: Value(session.sessionId),
-                questionIndex: Value(answer.questionIndex),
-                termId: Value(session.questions[i].targetItem.id),
-                questionType: Value(session.questions[i].type.name),
-                userAnswer: Value(answer.userAnswer),
-                isCorrect: Value(answer.isCorrect),
-                answeredAt: Value(answer.answeredAt ?? DateTime.now()),
-            ));
-        }
+      final answer = session.getAnswer(i);
+      await _testDao.recordAnswer(TestAnswersCompanion(
+        sessionId: Value(session.sessionId),
+        questionIndex: Value(i),
+        termId: Value(session.questions[i].targetItem.id),
+        questionType: Value(session.questions[i].type.name),
+        userAnswer: Value(answer?.userAnswer),
+        isCorrect: Value(answer?.isCorrect ?? false),
+        answeredAt: Value(answer?.answeredAt ?? DateTime.now()),
+      ));
     }
   }
 

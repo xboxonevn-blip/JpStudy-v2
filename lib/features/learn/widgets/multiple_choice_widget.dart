@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/app_language.dart';
 import '../models/question.dart';
 
 /// Multiple choice question widget
@@ -7,6 +8,7 @@ class MultipleChoiceWidget extends StatelessWidget {
   final Question question;
   final String? selectedAnswer;
   final bool showResult;
+  final AppLanguage language;
   final Function(String) onSelect;
 
   const MultipleChoiceWidget({
@@ -14,6 +16,7 @@ class MultipleChoiceWidget extends StatelessWidget {
     required this.question,
     this.selectedAnswer,
     this.showResult = false,
+    required this.language,
     required this.onSelect,
   });
 

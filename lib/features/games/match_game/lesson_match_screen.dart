@@ -7,6 +7,8 @@ import '../../../data/models/vocab_item.dart';
 import '../../../data/db/app_database.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../../../data/repositories/content_repository.dart';
+import '../../../core/app_language.dart';
+import '../../../core/language_provider.dart';
 import '../../../core/level_provider.dart';
 import '../../../core/study_level.dart';
 import '../../../core/widgets/juicy_button.dart';
@@ -45,9 +47,10 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
   }
 
   void _startGame(List<VocabItem> items) {
+    final language = ref.read(appLanguageProvider);
     if (items.length < 3) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Not enough terms for a game (need at least 3).")),
+        SnackBar(content: Text(language.notEnoughTermsLabel(3))),
       );
       return;
     }
@@ -152,6 +155,7 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider) ?? StudyLevel.n5;
     final termsAsync = ref.watch(
       lessonTermsProvider(
@@ -161,7 +165,7 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Match: ${widget.lessonTitle}'),
+        title: Text('${language.matchModeLabel}: ${widget.lessonTitle}'),
         actions: [
           if (_isGameActive || _isGameOver)
             Center(
@@ -178,11 +182,11 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
       body: termsAsync.when(
         data: (terms) {
           if (terms.isEmpty) {
-            return const Center(child: Text("No terms available for this lesson"));
+            return Center(child: Text(language.noTermsAvailableLabel));
           }
 
           // Convert to VocabItem
-          final items = _convertToVocabItems(terms);
+          final items = _convertToVocabItems(terms, language);
 
           if (_isGameOver) {
             return _buildGameOverScreen(items);
@@ -195,12 +199,15 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
           return _buildGameScreen();
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (e, _) => Center(child: Text('Error: $e')),
+      error: (e, _) => Center(
+        child: Text(ref.read(appLanguageProvider).loadErrorLabel),
       ),
-    );
-  }
+    ),
+  );
+}
 
   Widget _buildStartScreen(List<VocabItem> items) {
+    final language = ref.read(appLanguageProvider);
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -208,17 +215,17 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
           const Icon(Icons.extension, size: 64, color: Colors.blue),
           const SizedBox(height: 16),
           Text(
-            'Match Game',
+            language.matchGameLabel,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           const SizedBox(height: 8),
           Text(
-            '${items.length} terms available',
+            language.learnTermsAvailableLabel(items.length),
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.grey),
           ),
           const SizedBox(height: 24),
           JuicyButton(
-            label: "Start Game",
+            label: language.startGameLabel,
             onPressed: () => _startGame(items),
             icon: Icons.play_circle_filled,
             height: 64,
@@ -229,24 +236,31 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
   }
 
   Widget _buildGameOverScreen(List<VocabItem> items) {
+    final language = ref.read(appLanguageProvider);
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Icon(Icons.emoji_events_rounded, size: 64, color: Colors.amber),
           const SizedBox(height: 16),
-          Text("Time: ${_secondsElapsed}s", style: Theme.of(context).textTheme.headlineMedium),
-          Text("Max Combo: x$_maxCombo", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.deepPurple)),
+          Text(
+            language.timeSecondsLabel(_secondsElapsed),
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          Text(
+            language.maxComboLabel(_maxCombo),
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.deepPurple),
+          ),
           const SizedBox(height: 24),
           JuicyButton(
-            label: "Play Again",
+            label: language.playAgainLabel,
             onPressed: () => _startGame(items),
             icon: Icons.refresh,
           ),
           const SizedBox(height: 12),
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Back to Lesson'),
+            child: Text(language.backToLessonLabel),
           ),
         ],
       ),
@@ -254,6 +268,7 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
   }
 
   Widget _buildGameScreen() {
+    final language = ref.read(appLanguageProvider);
     return Column(
       children: [
         if (_combo > 1)
@@ -262,12 +277,12 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
             child: AnimatedScale(
               scale: 1.0 + (_combo * 0.1).clamp(0.0, 0.5),
               duration: const Duration(milliseconds: 200),
-              child: Text(
-                'COMBO x$_combo!',
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.orange,
+                child: Text(
+                  language.comboLabel(_combo),
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.orange,
                   letterSpacing: 1.2,
                 ),
               ),
@@ -334,12 +349,18 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
     );
   }
 
-  List<VocabItem> _convertToVocabItems(List<UserLessonTermData> terms) {
+  List<VocabItem> _convertToVocabItems(
+    List<UserLessonTermData> terms,
+    AppLanguage language,
+  ) {
     return terms.map((term) => VocabItem(
       id: term.id,
       term: term.term,
       reading: term.reading,
-      meaning: term.definition,
+      meaning: language == AppLanguage.vi
+          ? term.definition
+          : (term.definitionEn.isNotEmpty ? term.definitionEn : term.definition),
+      meaningEn: term.definitionEn,
       level: 'N5',
     )).toList();
   }

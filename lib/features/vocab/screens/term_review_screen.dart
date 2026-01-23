@@ -90,6 +90,7 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> {
                      child: EnhancedFlashcard(
                        key: ValueKey(vocabItem.id), // Important for animation reset
                        item: vocabItem,
+                       language: language,
                        // enableSwipeGestures removed
                        onFlip: () {
                          // Optional: could track flip count

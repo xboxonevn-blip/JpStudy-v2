@@ -1,3 +1,5 @@
+import 'package:jpstudy/core/app_language.dart';
+
 /// Question types available in Learn Mode
 enum QuestionType {
   multipleChoice,
@@ -6,14 +8,14 @@ enum QuestionType {
 }
 
 extension QuestionTypeExtension on QuestionType {
-  String get label {
+  String label(AppLanguage language) {
     switch (this) {
       case QuestionType.multipleChoice:
-        return 'Multiple Choice';
+        return language.multipleChoiceLabel;
       case QuestionType.trueFalse:
-        return 'True/False';
+        return language.trueFalseChoiceLabel;
       case QuestionType.fillBlank:
-        return 'Fill in the Blank';
+        return language.fillBlankLabel;
     }
   }
 

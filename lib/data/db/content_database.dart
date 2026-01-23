@@ -44,10 +44,10 @@ class ContentDatabase extends _$ContentDatabase {
           await m.createTable(userProgress);
         }
         if (from < 3) {
-          await m.addColumn(vocab, vocab.kanjiMeaning);
+          await _addColumn(m, vocab, vocab.kanjiMeaning);
         }
         if (from < 6) {
-           await m.addColumn(vocab, vocab.meaningEn); 
+           await _addColumn(m, vocab, vocab.meaningEn); 
         }
         if (from < 7) {
           await m.createTable(grammarPoint);
@@ -79,8 +79,8 @@ class ContentDatabase extends _$ContentDatabase {
           await _seedMinnaGrammar();
         }
         if (from < 17) {
-          await m.addColumn(kanji, kanji.mnemonicVi);
-          await m.addColumn(kanji, kanji.mnemonicEn);
+          await _addColumn(m, kanji, kanji.mnemonicVi);
+          await _addColumn(m, kanji, kanji.mnemonicEn);
           await _reseedMinnaKanji();
         }
       },
@@ -288,6 +288,14 @@ class ContentDatabase extends _$ContentDatabase {
         // debugPrint('Error loading $file: $e'); 
       }
     }
+  }
+
+  Future<void> _addColumn<T extends Object>(
+    Migrator migrator,
+    TableInfo table,
+    Column<T> column,
+  ) async {
+    await migrator.addColumn(table, column as GeneratedColumn);
   }
 
 

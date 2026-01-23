@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:jpstudy/core/app_language.dart';
+
 import '../../../data/models/vocab_item.dart';
 import '../models/question.dart';
 import '../models/question_type.dart';
@@ -7,12 +9,15 @@ import '../models/question_type.dart';
 /// Service to generate questions for Learn Mode
 class QuestionGenerator {
   final Random _random = Random();
+  static final RegExp _kanaOnlyRegex =
+      RegExp(r'^[\u3040-\u309F\u30A0-\u30FF\u30FB\u30FC]+$');
 
   /// Generate a batch of questions from vocabulary items
   List<Question> generateQuestions({
     required List<VocabItem> items,
     required List<QuestionType> enabledTypes,
     int count = 20,
+    AppLanguage language = AppLanguage.en,
   }) {
     if (items.isEmpty || enabledTypes.isEmpty) return [];
 
@@ -27,6 +32,7 @@ class QuestionGenerator {
         item: item,
         type: type,
         allItems: items,
+        language: language,
       );
 
       if (question != null) {
@@ -42,6 +48,7 @@ class QuestionGenerator {
     required List<VocabItem> items,
     required int round,
     required List<int> weakTermIds,
+    AppLanguage language = AppLanguage.en,
   }) {
     // Round 1: All terms as multiple choice (easy)
     // Round 2: Weak terms as fill-in-blank (harder)
@@ -63,6 +70,7 @@ class QuestionGenerator {
       items: targetItems,
       enabledTypes: [questionType],
       count: targetItems.length,
+      language: language,
     );
   }
 
@@ -70,46 +78,81 @@ class QuestionGenerator {
     required VocabItem item,
     required QuestionType type,
     required List<VocabItem> allItems,
+    required AppLanguage language,
   }) {
     switch (type) {
       case QuestionType.multipleChoice:
-        return _generateMultipleChoice(item, allItems);
+        return _generateMultipleChoice(item, allItems, language);
       case QuestionType.trueFalse:
-        return _generateTrueFalse(item, allItems);
+        return _generateTrueFalse(item, allItems, language);
       case QuestionType.fillBlank:
-        return _generateFillBlank(item);
+        return _generateFillBlank(item, language);
     }
   }
 
-  Question _generateMultipleChoice(VocabItem item, List<VocabItem> allItems) {
+  Question _generateMultipleChoice(
+    VocabItem item,
+    List<VocabItem> allItems,
+    AppLanguage language,
+  ) {
     // Generate 3 wrong options (distractors)
     final distractors = _selectDistractors(item, allItems, count: 3);
-    final options = [item.meaning, ...distractors.map((d) => d.meaning)]..shuffle(_random);
+    final correctMeaning = item.displayMeaning(language);
+    final options = [
+      correctMeaning,
+      ...distractors.map((d) => d.displayMeaning(language)),
+    ]..shuffle(_random);
 
     return Question(
       id: 'mcq_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
       type: QuestionType.multipleChoice,
       targetItem: item,
-      questionText: 'What does "${item.term}" mean?',
-      correctAnswer: item.meaning,
+      questionText: language.questionMeaningPrompt(item.term),
+      correctAnswer: correctMeaning,
       options: options,
     );
   }
 
-  Question _generateTrueFalse(VocabItem item, List<VocabItem> allItems) {
-    // 50% chance to show correct pairing
-    final isTrue = _random.nextBool();
-    
-    String shownMeaning;
-    if (isTrue) {
-      shownMeaning = item.meaning;
-    } else {
-      // Pick a wrong meaning
+  Question _generateTrueFalse(
+    VocabItem item,
+    List<VocabItem> allItems,
+    AppLanguage language,
+  ) {
+    bool isTrue = _random.nextBool();
+
+    String normalizeMeaning(String value) => value.trim().toLowerCase();
+
+    final correctMeaning = item.displayMeaning(language);
+    String shownMeaning = correctMeaning;
+
+    if (!isTrue) {
+      // Pick a wrong meaning that is actually different from the correct one.
       final wrongItems = allItems.where((i) => i.id != item.id).toList();
-      if (wrongItems.isEmpty) {
-        shownMeaning = item.meaning;
+      if (wrongItems.isNotEmpty) {
+        wrongItems.shuffle(_random);
+        final target = normalizeMeaning(correctMeaning);
+        String? candidate;
+        for (final wrong in wrongItems) {
+          final meaning = wrong.displayMeaning(language);
+          if (meaning.trim().isEmpty) {
+            continue;
+          }
+          if (normalizeMeaning(meaning) != target) {
+            candidate = meaning;
+            break;
+          }
+        }
+
+        if (candidate != null) {
+          shownMeaning = candidate;
+        } else {
+          // Avoid false negatives when meanings collide.
+          isTrue = true;
+          shownMeaning = correctMeaning;
+        }
       } else {
-        shownMeaning = wrongItems[_random.nextInt(wrongItems.length)].meaning;
+        isTrue = true;
+        shownMeaning = correctMeaning;
       }
     }
 
@@ -117,35 +160,46 @@ class QuestionGenerator {
       id: 'tf_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
       type: QuestionType.trueFalse,
       targetItem: item,
-      questionText: '"${item.term}" means "$shownMeaning"',
+      questionText: language.questionTrueFalsePrompt(item.term, shownMeaning),
       correctAnswer: isTrue ? 'true' : 'false',
       isStatementTrue: isTrue,
     );
   }
 
-  Question _generateFillBlank(VocabItem item) {
+  Question _generateFillBlank(VocabItem item, AppLanguage language) {
     // Ask for meaning or reading
-    final askForMeaning = _random.nextBool();
-
+    var askForMeaning = _random.nextBool();
+    if (!askForMeaning && _isKanaOnly(item.term)) {
+      askForMeaning = true;
+    }
     if (askForMeaning) {
+      final answer = item.displayMeaning(language);
       return Question(
         id: 'fb_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
         type: QuestionType.fillBlank,
         targetItem: item,
-        questionText: 'Type the meaning of "${item.term}"',
-        correctAnswer: item.meaning,
-        hint: item.meaning.isNotEmpty ? '${item.meaning[0]}...' : null,
+        questionText: language.questionMeaningPrompt(item.term),
+        correctAnswer: answer,
+        expectsReading: false,
+        hint: answer.isNotEmpty ? '${answer[0]}...' : null,
       );
     } else {
       return Question(
         id: 'fb_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
         type: QuestionType.fillBlank,
         targetItem: item,
-        questionText: 'Type the reading of "${item.term}"',
+        questionText: language.questionReadingPrompt(item.term),
         correctAnswer: item.reading ?? item.term,
+        expectsReading: true,
         hint: item.reading?.isNotEmpty == true ? '${item.reading![0]}...' : null,
       );
     }
+  }
+
+  bool _isKanaOnly(String term) {
+    final value = term.trim();
+    if (value.isEmpty) return false;
+    return _kanaOnlyRegex.hasMatch(value);
   }
 
   /// Select distractor items for multiple choice (similar difficulty/category)

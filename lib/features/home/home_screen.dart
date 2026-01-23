@@ -362,15 +362,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(language.backupImportSuccess)),
       );
-      } catch (_) {
-        if (!context.mounted) {
-          return;
-        }
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(language.backupImportError)),
-        );
+    } catch (_) {
+      if (!context.mounted) {
+        return;
       }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.backupImportError)),
+      );
     }
+  }
 
   Future<void> _loadReminderPrefs() async {
     final prefs = await SharedPreferences.getInstance();
@@ -554,5 +554,4 @@ class _LanguageCard extends StatelessWidget {
     );
   }
 }
-
 

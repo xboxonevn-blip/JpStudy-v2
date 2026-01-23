@@ -1,6 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import 'package:jpstudy/core/app_language.dart';
+
 import '../../learn/models/question_type.dart';
 import '../models/test_session.dart';
 
@@ -34,7 +36,7 @@ class TestExportService {
     for (final entry in session.breakdownByType.entries) {
       final type = entry.key;
       final breakdown = entry.value;
-      buffer.writeln('  ${type.icon} ${type.label}');
+      buffer.writeln('  ${type.icon} ${type.label(AppLanguage.en)}');
       buffer.writeln('     ${breakdown.correct}/${breakdown.total} (${breakdown.accuracy.toInt()}%)');
     }
 
@@ -82,7 +84,7 @@ class TestExportService {
 
       buffer.writeln([
         i + 1,
-        question.type.label,
+        question.type.label(AppLanguage.en),
         '"${answer?.userAnswer ?? ""}"',
         '"${question.correctAnswer}"',
         answer?.isCorrect == true ? 'Correct' : 'Wrong',

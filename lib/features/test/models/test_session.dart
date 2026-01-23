@@ -31,11 +31,11 @@ class TestSession {
   int get totalQuestions => questions.length;
   int get answeredCount => answers.where((a) => a.userAnswer != null).length;
   int get correctCount => answers.where((a) => a.isCorrect).length;
-  int get wrongCount => answers.where((a) => !a.isCorrect && a.userAnswer != null).length;
+  int get wrongCount => totalQuestions - correctCount;
 
   double get score {
-    if (answeredCount == 0) return 0.0;
-    return correctCount / answeredCount * 100;
+    if (totalQuestions == 0) return 0.0;
+    return correctCount / totalQuestions * 100;
   }
 
   double get progress => answeredCount / totalQuestions;
@@ -129,9 +129,12 @@ class TestSession {
   List<int> get weakTermIds {
     final weak = <int>[];
     for (int i = 0; i < answers.length; i++) {
-      if (!answers[i].isCorrect && answers[i].userAnswer != null) {
+      if (!answers[i].isCorrect || answers[i].userAnswer == null) {
         weak.add(questions[i].targetItem.id);
       }
+    }
+    for (int i = answers.length; i < questions.length; i++) {
+      weak.add(questions[i].targetItem.id);
     }
     return weak;
   }

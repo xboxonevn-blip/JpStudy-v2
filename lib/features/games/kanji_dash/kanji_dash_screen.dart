@@ -3,7 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/level_provider.dart';
+import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/core/widgets/juicy_button.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
@@ -136,6 +138,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   }
 
   Widget _buildBody(StudyLevel level) {
+    final language = ref.watch(appLanguageProvider);
     final vocabAsync = ref.watch(vocabPreviewProvider(level.shortLabel));
 
     return vocabAsync.when(
@@ -144,13 +147,9 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
           return const Center(child: Text('No vocabulary found.'));
         }
 
-        final items = dataItems.map((e) => VocabItem(
-          id: e.id,
-          term: e.term,
-          reading: e.reading,
-          meaning: e.meaning,
-          level: e.level,
-        )).toList();
+        final items = dataItems
+            .map((e) => _mapToVocabItem(e, language))
+            .toList();
 
         if (_isGameOver) {
           return _buildGameOver();
@@ -324,13 +323,10 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
                 ref.read(studyLevelProvider)!.shortLabel,
               ));
               vocabAsync.whenData((dataItems) {
-                final items = dataItems.map((e) => VocabItem(
-                  id: e.id,
-                  term: e.term,
-                  reading: e.reading,
-                  meaning: e.meaning,
-                  level: e.level,
-                )).toList();
+                final language = ref.read(appLanguageProvider);
+                final items = dataItems
+                    .map((e) => _mapToVocabItem(e, language))
+                    .toList();
                 _startGame(items);
               });
             },
@@ -338,6 +334,21 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  VocabItem _mapToVocabItem(dynamic source, AppLanguage language) {
+    final meaningEn = (source.meaningEn ?? '').toString().trim();
+    final meaning = language == AppLanguage.en
+        ? (meaningEn.isNotEmpty ? meaningEn : source.meaning)
+        : source.meaning;
+    return VocabItem(
+      id: source.id,
+      term: source.term,
+      reading: source.reading,
+      meaning: meaning,
+      meaningEn: source.meaningEn,
+      level: source.level,
     );
   }
 }

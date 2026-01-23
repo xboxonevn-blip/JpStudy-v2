@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/language_provider.dart';
 import '../../../data/models/vocab_item.dart';
 import '../models/flashcard_settings.dart';
 import '../widgets/enhanced_flashcard.dart';
@@ -43,6 +44,7 @@ class _EnhancedFlashcardScreenState
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
     final currentItem = _displayItems[_currentIndex];
     final progress = (_currentIndex + 1) / _displayItems.length;
 
@@ -70,6 +72,7 @@ class _EnhancedFlashcardScreenState
                 key: ValueKey(currentItem.id),
                 item: currentItem,
                 showTermFirst: _settings.showTermFirst,
+                language: language,
               ),
             ),
           ),

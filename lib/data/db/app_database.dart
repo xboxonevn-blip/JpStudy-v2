@@ -60,7 +60,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase({QueryExecutor? executor}) : super(executor ?? _openConnection());
 
   @override
-  int get schemaVersion => 23;
+  int get schemaVersion => 24;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -172,6 +172,19 @@ class AppDatabase extends _$AppDatabase {
             await _safeAddColumn(migrator, userLessonTerm, userLessonTerm.mnemonicEn);
             // Optionally force resync to get mnemonics
           }
+          if (from < 24) {
+            await customStatement(
+              "UPDATE user_mistakes "
+              "SET last_mistake_at = CAST(strftime('%s', last_mistake_at) AS INTEGER) * 1000 "
+              "WHERE typeof(last_mistake_at) = 'text' "
+              "AND strftime('%s', last_mistake_at) IS NOT NULL",
+            );
+            await customStatement(
+              "UPDATE user_mistakes "
+              "SET last_mistake_at = CAST(strftime('%s', 'now') AS INTEGER) * 1000 "
+              "WHERE typeof(last_mistake_at) = 'text'",
+            );
+          }
         },
       );
 
@@ -222,13 +235,17 @@ class AppDatabase extends _$AppDatabase {
   }
 
   /// Safely add a column, ignoring errors if the column already exists
-  Future<void> _safeAddColumn(Migrator migrator, TableInfo table, GeneratedColumn column) async {
-    try {
-      await migrator.addColumn(table, column);
-    } catch (e) {
-      // Column already exists, ignore the error
-      if (!e.toString().contains('duplicate column')) {
-        rethrow;
+  Future<void> _safeAddColumn<T extends Object>(
+    Migrator migrator,
+    TableInfo table,
+    Column<T> column,
+  ) async {
+      try {
+        await migrator.addColumn(table, column as GeneratedColumn);
+      } catch (e) {
+        // Column already exists, ignore the error
+        if (!e.toString().contains('duplicate column')) {
+          rethrow;
       }
     }
   }

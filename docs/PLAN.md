@@ -1,40 +1,33 @@
-# Plan: Enhance Grammar UI Visibility
+# Plan: Sửa lỗi ngôn ngữ & Review màn học
 
 ## Problem
-The user reported missing "Ghost Reviews (SRS Logic)" and "Grammar Exercises".
-Analysis reveals:
-1. **Ghost Reviews**: The UI (`GrammarScreen.dart`) specifically hides the Ghost Dashboard when `ghostCount == 0`. User cannot confirm the feature exists.
-2. **Exercises**: "Exercises" are accessed via the "Practice Lesson Grammar" button, which might not be explicit enough.
+1) **Contextual Learning** vẫn hiển thị tiếng Anh khi chọn tiếng Việt.  
+2) Khi chọn tiếng Anh, đáp án trong Learn/Test vẫn có tiếng Việt (không đồng bộ ngôn ngữ).  
+3) **Review** (màn hình thứ 3 theo ảnh) bị trắng, không hiển thị nội dung.
 
 ## Goals
-1. **Visibility**: Ensure "Ghost Reviews" section is always visible in the main Grammar Screen, showing a positive state ("All caught up!") when empty.
-2. **Clarity**: Rename/Enhance the "Practice" button to clearly indicate "Exercises / Quiz".
-
-## Architecture
-- **Frontend**: Flutter (Riverpod)
-- **Screens**: 
-    - `lib/features/grammar/grammar_screen.dart` (Main Level View)
-    - `lib/features/lesson/widgets/grammar_list_widget.dart` (Lesson View)
+1) Đồng bộ ngôn ngữ cho Contextual Learning (nhãn + câu ví dụ + dịch).  
+2) Đồng bộ ngôn ngữ đáp án theo AppLanguage (EN dùng meaningEn, VI dùng meaning).  
+3) Khắc phục Review trắng: hiển thị dữ liệu đúng, có empty state rõ ràng nếu không có thẻ.
 
 ## Proposed Changes
+### 1) Contextual Learning
+- Dùng AppLanguage để chọn nghĩa hiển thị (vi/en) thay vì mặc định tiếng Anh.
+- Câu ví dụ/translation phải dùng cùng ngôn ngữ đã chọn.
 
-### 1. `GrammarScreen.dart`
-- Remove `if (ghostCount == 0) return const SizedBox.shrink();`
-- Add an "Empty State" for Ghost Dashboard:
-    - Icon: `check_circle` (Green)
-    - Text: "No mistakes pending"
-    - Action: Disable "Review" button or change to "Practice Random"
+### 2) Đáp án Learn/Test
+- Chọn trường nghĩa theo AppLanguage:
+  - VI → `meaning`
+  - EN → `meaningEn` (fallback `meaning` nếu trống)
+  - JA → `meaningEn` hoặc `meaning` tùy định nghĩa
+- Đồng bộ: options, correctAnswer, hint, và text question.
 
-### 2. `GrammarListWidget.dart`
-- Update "Practice Lesson Grammar" button:
-    - Change label to "Practice & Exercises" (or local equivalent).
-    - Add a subtitle or icon indicating "Quiz".
+### 3) Review trắng
+- Xác định màn Review và luồng dữ liệu.
+- Kiểm tra điều kiện hiển thị/empty state.
+- Sửa để luôn có nội dung hoặc thông báo “không có thẻ cần ôn”.
 
-### 3. Verification
-- Manual verification via hot reload (if possible) or code review.
-- Check `ghostCountProvider` logic.
-
-## Task Breakdown
-1. **Frontend Specialist**: Modify `GrammarScreen.dart` to show persistent Ghost Dashboard.
-2. **Frontend Specialist**: Modify `GrammarListWidget.dart` to enhance Practice button.
-3. **Test Engineer**: Verify logic handles 0 items correctly without errors.
+## Verification
+- Chạy `flutter analyze`
+- Manual: mở Learn/Test/Match/Write, đổi ngôn ngữ EN/VI và xác nhận toàn bộ text + đáp án đồng nhất.
+- Manual: mở Review theo ảnh, xác nhận có dữ liệu hoặc empty state.

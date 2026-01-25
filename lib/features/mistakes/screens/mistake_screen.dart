@@ -6,7 +6,7 @@ import '../../home/providers/dashboard_provider.dart';
 import '../repositories/mistake_repository.dart';
 import '../../../data/db/database_provider.dart';
 import '../../../data/models/vocab_item.dart';
-import '../../learn/providers/learn_session_provider.dart';
+import '../../learn/models/learn_session_args.dart';
 import 'package:go_router/go_router.dart';
 import '../../../data/db/app_database.dart';
 
@@ -163,13 +163,15 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
       }
 
       if (items.isNotEmpty && context.mounted) {
-        ref.read(learnSessionProvider.notifier).startSession(
-          lessonId: -999,
-          items: items,
-          language: language,
-        );
         // We push and return because we currently support one session at a time in UI
-        context.push('/learn/session');
+        context.push(
+          '/learn/session',
+          extra: LearnSessionArgs(
+            lessonId: -999,
+            lessonTitle: language.mistakesLabel,
+            items: items,
+          ),
+        );
         return; 
       }
     }

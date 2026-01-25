@@ -3199,4 +3199,292 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+
+
+  String get adaptiveTestingLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Adaptive Testing';
+      case AppLanguage.vi:
+        return 'Kiểm tra thích ứng';
+      case AppLanguage.ja:
+        return '適応テスト';
+    }
+  }
+
+  String get adaptiveTestingHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Repeat wrong answers in different formats during the test';
+      case AppLanguage.vi:
+        return 'Lặp lại câu sai với định dạng khác trong cùng buổi kiểm tra';
+      case AppLanguage.ja:
+        return 'テスト中に誤答を別形式で繰り返す';
+    }
+  }
+
+  String get testResultsTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Test Results';
+      case AppLanguage.vi:
+        return 'Kết quả kiểm tra';
+      case AppLanguage.ja:
+        return 'テスト結果';
+    }
+  }
+
+  String get copyToClipboardLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Copy to Clipboard';
+      case AppLanguage.vi:
+        return 'Sao chép vào clipboard';
+      case AppLanguage.ja:
+        return 'クリップボードにコピー';
+    }
+  }
+
+  String get shareResultsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Share Results';
+      case AppLanguage.vi:
+        return 'Chia sẻ kết quả';
+      case AppLanguage.ja:
+        return '結果を共有';
+    }
+  }
+
+  String get resultsCopiedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Results copied to clipboard!';
+      case AppLanguage.vi:
+        return 'Đã sao chép kết quả!';
+      case AppLanguage.ja:
+        return '結果をコピーしました！';
+    }
+  }
+
+  String testCorrectSummaryLabel(int correct, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Correct $correct/$total';
+      case AppLanguage.vi:
+        return 'Đúng $correct/$total';
+      case AppLanguage.ja:
+        return '正解 $correct/$total';
+    }
+  }
+
+  String get timeSpentLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time';
+      case AppLanguage.vi:
+        return 'Thời gian';
+      case AppLanguage.ja:
+        return '時間';
+    }
+  }
+
+  String get performanceByTypeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Performance by Type';
+      case AppLanguage.vi:
+        return 'Hiệu suất theo dạng';
+      case AppLanguage.ja:
+        return '形式別の成績';
+    }
+  }
+
+  String termsNeedPracticeLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count terms need practice';
+      case AppLanguage.vi:
+        return '$count từ cần ôn luyện';
+      case AppLanguage.ja:
+        return '$count語は要復習';
+    }
+  }
+
+  String get termsNeedPracticeHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review these terms to improve your score.';
+      case AppLanguage.vi:
+        return 'Ôn lại các từ này để cải thiện điểm số.';
+      case AppLanguage.ja:
+        return 'これらの語を復習して点数を上げましょう。';
+    }
+  }
+
+  String get lessonRecommendationsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Recommended Lessons';
+      case AppLanguage.vi:
+        return 'Gợi ý bài học';
+      case AppLanguage.ja:
+        return 'おすすめのレッスン';
+    }
+  }
+
+  String get lessonRecommendationsHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'You missed many in these lessons - review them:';
+      case AppLanguage.vi:
+        return 'Bạn sai nhiều ở các bài sau, nên ôn lại:';
+      case AppLanguage.ja:
+        return '以下のレッスンで間違いが多いので復習しましょう。';
+    }
+  }
+
+
+  String get lessonRecommendationsEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No lesson recommendations available yet.';
+      case AppLanguage.vi:
+        return 'Chưa có gợi ý bài học phù hợp.';
+      case AppLanguage.ja:
+        return 'おすすめのレッスンはまだありません。';
+    }
+  }
+
+  String lessonRecommendationItemLabel(int wrongCount) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Wrong $wrongCount';
+      case AppLanguage.vi:
+        return 'Sai $wrongCount câu';
+      case AppLanguage.ja:
+        return '誤り $wrongCount問';
+    }
+  }
+
+  String lessonRecommendationItemLabelWithRate(int wrongCount, int percent) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Wrong $wrongCount - $percent% of mistakes';
+      case AppLanguage.vi:
+        return 'Sai $wrongCount - $percent% lỗi';
+      case AppLanguage.ja:
+        return '誤り $wrongCount - ミスの$percent%';
+    }
+  }
+
+  String get pinLessonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Pin lesson';
+      case AppLanguage.vi:
+        return 'Ghim bài học';
+      case AppLanguage.ja:
+        return 'レッスンをピン留め';
+    }
+  }
+
+  String get unpinLessonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Unpin lesson';
+      case AppLanguage.vi:
+        return 'Bỏ ghim';
+      case AppLanguage.ja:
+        return 'ピン留め解除';
+    }
+  }
+
+  String get pinnedLessonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Pinned lesson';
+      case AppLanguage.vi:
+        return 'Bài học đã ghim';
+      case AppLanguage.ja:
+        return 'ピン留め済みのレッスン';
+    }
+  }
+
+  String get timeAttackBlitzLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time Attack Blitz';
+      case AppLanguage.vi:
+        return 'Đua thời gian';
+      case AppLanguage.ja:
+        return 'タイムアタック';
+    }
+  }
+
+  String get startTimeAttackLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start Time Attack';
+      case AppLanguage.vi:
+        return 'Bắt đầu Time Attack';
+      case AppLanguage.ja:
+        return 'タイムアタック開始';
+    }
+  }
+
+  String get timeAttackSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Match as many pairs as possible before time runs out.';
+      case AppLanguage.vi:
+        return 'Ghép được càng nhiều cặp càng tốt trước khi hết giờ.';
+      case AppLanguage.ja:
+        return '時間切れまでにできるだけ多くペアを合わせよう。';
+    }
+  }
+
+  String timeRemainingLabel(int seconds) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time left: ${seconds}s';
+      case AppLanguage.vi:
+        return 'Còn lại: ${seconds}s';
+      case AppLanguage.ja:
+        return '残り: $seconds秒';
+    }
+  }
+
+  String timeAttackScoreLabel(int score) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Score: $score';
+      case AppLanguage.vi:
+        return 'Điểm: $score';
+      case AppLanguage.ja:
+        return 'スコア: $score';
+    }
+  }
+
+  String timeAttackBonusLabel(int bonus) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time bonus: +$bonus';
+      case AppLanguage.vi:
+        return 'Thưởng thời gian: +$bonus';
+      case AppLanguage.ja:
+        return 'タイムボーナス: +$bonus';
+    }
+  }
+
+  String get timeAttackOverLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time Attack Finished!';
+      case AppLanguage.vi:
+        return 'Kết thúc Time Attack!';
+      case AppLanguage.ja:
+        return 'タイムアップ！';
+    }
+  }
 } // End extension

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -38,6 +39,8 @@ class TestScreen extends ConsumerStatefulWidget {
 }
 
 class _TestScreenState extends ConsumerState<TestScreen> {
+  final QuestionGenerator _questionGenerator = QuestionGenerator();
+  final Random _random = Random();
   late TestSession _session;
   String? _selectedAnswer;
   bool? _selectedTrueFalse;
@@ -45,6 +48,12 @@ class _TestScreenState extends ConsumerState<TestScreen> {
   bool _isCorrect = false;
   Timer? _timer;
   int _secondsRemaining = 0;
+  int _adaptiveAdded = 0;
+  int _adaptiveMaxExtra = 0;
+  final Map<int, Set<QuestionType>> _usedTypesByItem = {};
+  final Map<int, int> _adaptiveRepeatCount = {};
+  final Map<int, int> _adaptiveCorrectStreak = {};
+  final Set<int> _adaptiveCompleted = {};
 
   @override
   void initState() {
@@ -60,8 +69,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
   void _startTest() {
     final language = ref.read(appLanguageProvider);
-    final generator = QuestionGenerator();
-    final questions = generator.generateQuestions(
+    final questions = _questionGenerator.generateQuestions(
       items: widget.items,
       enabledTypes: widget.config.enabledTypes,
       count: widget.config.questionCount,
@@ -71,6 +79,17 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     if (widget.config.shuffleQuestions) {
       questions.shuffle();
     }
+
+    _adaptiveAdded = 0;
+    _adaptiveRepeatCount.clear();
+    _adaptiveCorrectStreak.clear();
+    _adaptiveCompleted.clear();
+    _usedTypesByItem.clear();
+    for (final q in questions) {
+      _usedTypesByItem.putIfAbsent(q.targetItem.id, () => <QuestionType>{})
+          .add(q.type);
+    }
+    _adaptiveMaxExtra = (widget.config.questionCount * 0.3).floor().clamp(0, 20);
 
     _session = TestSession(
       sessionId: DateTime.now().millisecondsSinceEpoch.toString(),
@@ -366,6 +385,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       _isCorrect = _session.currentQuestion!.checkAnswer(answer);
     });
 
+    _maybeQueueAdaptiveQuestion(_session.currentQuestion!, _isCorrect);
     if (widget.config.showCorrectAfterWrong) {
       // Audio removed
     }
@@ -379,6 +399,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       _isCorrect = _session.currentQuestion!.checkAnswer(answer ? 'true' : 'false');
     });
 
+    _maybeQueueAdaptiveQuestion(_session.currentQuestion!, _isCorrect);
     if (widget.config.showCorrectAfterWrong) {
       // Audio removed
     }
@@ -391,9 +412,56 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       _isCorrect = _session.currentQuestion!.checkAnswer(answer);
     });
 
+    _maybeQueueAdaptiveQuestion(_session.currentQuestion!, _isCorrect);
     if (widget.config.showCorrectAfterWrong) {
       // Audio removed
     }
+  }
+
+  void _maybeQueueAdaptiveQuestion(Question question, bool isCorrect) {
+    if (!widget.config.adaptiveTesting) return;
+
+    final item = question.targetItem;
+    final currentStreak = _adaptiveCorrectStreak[item.id] ?? 0;
+    if (isCorrect) {
+      final nextStreak = currentStreak + 1;
+      _adaptiveCorrectStreak[item.id] = nextStreak;
+      if (nextStreak >= 2) {
+        _adaptiveCompleted.add(item.id);
+      }
+      return;
+    }
+
+    _adaptiveCorrectStreak[item.id] = 0;
+    if (_adaptiveCompleted.contains(item.id)) return;
+    if (_adaptiveAdded >= _adaptiveMaxExtra) return;
+    if (widget.config.enabledTypes.length < 2) return;
+    final currentRepeats = _adaptiveRepeatCount[item.id] ?? 0;
+    if (currentRepeats >= 2) return;
+    final repeatChance = currentRepeats == 0 ? 1.0 : 0.6;
+    if (_random.nextDouble() > repeatChance) return;
+
+    final usedTypes = _usedTypesByItem.putIfAbsent(item.id, () => <QuestionType>{})
+      ..add(question.type);
+
+    final availableTypes = widget.config.enabledTypes
+        .where((type) => !usedTypes.contains(type))
+        .toList();
+    if (availableTypes.isEmpty) return;
+
+    final nextType = availableTypes[_random.nextInt(availableTypes.length)];
+    final newQuestion = _questionGenerator.generateQuestionForItem(
+      item: item,
+      type: nextType,
+      allItems: widget.items,
+      language: ref.read(appLanguageProvider),
+    );
+    if (newQuestion == null) return;
+
+    _session.questions.add(newQuestion);
+    usedTypes.add(nextType);
+    _adaptiveAdded++;
+    _adaptiveRepeatCount.update(item.id, (v) => v + 1, ifAbsent: () => 1);
   }
 
   void _goToQuestion(int index) {

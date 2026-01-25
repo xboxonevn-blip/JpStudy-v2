@@ -43,6 +43,21 @@ class QuestionGenerator {
     return questions;
   }
 
+  /// Generate a single question for a specific item and type
+  Question? generateQuestionForItem({
+    required VocabItem item,
+    required QuestionType type,
+    required List<VocabItem> allItems,
+    AppLanguage language = AppLanguage.en,
+  }) {
+    return _generateQuestion(
+      item: item,
+      type: type,
+      allItems: allItems,
+      language: language,
+    );
+  }
+
   /// Generate questions for a specific round with adaptive difficulty
   List<Question> generateAdaptiveRound({
     required List<VocabItem> items,

@@ -40,11 +40,11 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
   }
 
   // Priority 3: Fix Mistakes
-  if (dashboard.mistakeCount > 0) {
+  if (dashboard.totalMistakeCount > 0) {
     yield ContinueAction(
       type: ContinueActionType.fixMistakes,
       label: 'Fix Mistakes',
-      count: dashboard.mistakeCount,
+      count: dashboard.vocabMistakeCount,
     );
     return;
   }

@@ -10,6 +10,7 @@ import '../services/grammar_question_generator.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../common/widgets/clay_button.dart';
 import '../../../core/language_provider.dart';
+import '../../mistakes/repositories/mistake_repository.dart';
 
 enum GrammarPracticeMode { normal, ghost }
 
@@ -30,6 +31,7 @@ class GrammarPracticeScreen extends ConsumerStatefulWidget {
 class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
   int _currentIndex = 0;
   final List<GeneratedQuestion> _questions = [];
+  final Set<String> _requeuedQuestions = {};
   bool _isLoading = true;
   int _score = 0;
   bool _isAnswered = false; // To prevent multiple submissions per card
@@ -106,7 +108,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     }
   }
 
-  void _onAnswer(bool isCorrect) {
+  void _onAnswer(bool isCorrect) async {
     if (_isAnswered) return;
     setState(() {
       _isAnswered = true;
@@ -116,6 +118,17 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     
     // Update SRS in background
     final q = _questions[_currentIndex];
+    final mistakeRepo = ref.read(mistakeRepositoryProvider);
+    if (isCorrect) {
+      await mistakeRepo.markCorrect(type: 'grammar', itemId: q.point.id);
+    } else {
+      await mistakeRepo.addMistake(type: 'grammar', itemId: q.point.id);
+      final key = '${q.point.id}_${q.type}_${q.question}';
+      if (!_requeuedQuestions.contains(key)) {
+        _requeuedQuestions.add(key);
+        _questions.add(q);
+      }
+    }
     ref.read(grammarRepositoryProvider).recordReview(
       grammarId: q.point.id,
       quality: isCorrect ? 5 : 0,

@@ -7,6 +7,7 @@ class TestConfig {
   final int? timeLimitMinutes; // null = no time limit
   final bool shuffleQuestions;
   final bool showCorrectAfterWrong;
+  final bool adaptiveTesting;
 
   const TestConfig({
     this.questionCount = 20,
@@ -18,6 +19,7 @@ class TestConfig {
     this.timeLimitMinutes,
     this.shuffleQuestions = true,
     this.showCorrectAfterWrong = true,
+    this.adaptiveTesting = false,
   });
 
   TestConfig copyWith({
@@ -27,6 +29,7 @@ class TestConfig {
     bool clearTimeLimit = false,
     bool? shuffleQuestions,
     bool? showCorrectAfterWrong,
+    bool? adaptiveTesting,
   }) {
     return TestConfig(
       questionCount: questionCount ?? this.questionCount,
@@ -34,6 +37,7 @@ class TestConfig {
       timeLimitMinutes: clearTimeLimit ? null : (timeLimitMinutes ?? this.timeLimitMinutes),
       shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
       showCorrectAfterWrong: showCorrectAfterWrong ?? this.showCorrectAfterWrong,
+      adaptiveTesting: adaptiveTesting ?? this.adaptiveTesting,
     );
   }
 }

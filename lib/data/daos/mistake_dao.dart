@@ -66,6 +66,16 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
         .watchSingle();
   }
 
+  /// Gets the count of unique mistake items, optionally filtered by type.
+  Stream<int> watchMistakeItemCount({String? type}) {
+    final count = userMistakes.id.count();
+    final query = selectOnly(userMistakes)..addColumns([count]);
+    if (type != null) {
+      query.where(userMistakes.type.equals(type));
+    }
+    return query.map((row) => row.read(count) ?? 0).watchSingle();
+  }
+
   /// Gets key-value pairs of pending mistakes for a specific type.
   Future<List<UserMistake>> getMistakesByType(String type) {
     return (select(userMistakes)..where((tbl) => tbl.type.equals(type))).get();

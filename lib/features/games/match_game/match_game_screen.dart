@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -20,15 +21,25 @@ class MatchGameScreen extends ConsumerStatefulWidget {
 }
 
 class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
+  static const int _timeAttackDurationSeconds = 60;
   List<MatchCard> _cards = [];
   MatchCard? _selectedCard;
   bool _isProcessingInfo = false;
   Timer? _timer;
   int _secondsElapsed = 0;
+  int _timeAttackRemaining = 0;
+  int _timeAttackScore = 0;
+  int _timeAttackBonus = 0;
   bool _isGameActive = false;
   bool _isGameOver = false;
   int _combo = 0;
   int _maxCombo = 0;
+  MatchGameMode _mode = MatchGameMode.classic;
+  final Random _random = Random();
+  final List<_ParticleBurst> _bursts = [];
+  int _burstId = 0;
+  Size _lastBoardSize = Size.zero;
+  List<VocabItem> _currentItems = [];
 
   @override
   void dispose() {
@@ -36,7 +47,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
     super.dispose();
   }
 
-  void _startGame(List<VocabItem> allVocab) {
+  void _startGame(List<VocabItem> allVocab, MatchGameMode mode) {
     final language = ref.read(appLanguageProvider);
     if (allVocab.length < 3) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -47,20 +58,34 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
     final engine = MatchEngine(allVocab);
     setState(() {
+      _currentItems = allVocab;
       _cards = engine.generateGame(6); // 6 pairs = 12 cards
       _selectedCard = null;
       _isGameActive = true;
       _isGameOver = false;
       _secondsElapsed = 0;
+      _timeAttackRemaining = _timeAttackDurationSeconds;
+      _timeAttackScore = 0;
+      _timeAttackBonus = 0;
       _combo = 0;
       _maxCombo = 0;
       _isProcessingInfo = false;
+      _mode = mode;
+      _bursts.clear();
     });
 
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
-        _secondsElapsed++;
+        if (_mode == MatchGameMode.timeAttack) {
+          _timeAttackRemaining = (_timeAttackRemaining - 1).clamp(0, _timeAttackDurationSeconds);
+          if (_timeAttackRemaining <= 0) {
+            timer.cancel();
+            _endGame();
+          }
+        } else {
+          _secondsElapsed++;
+        }
       });
     });
   }
@@ -92,8 +117,13 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           _isProcessingInfo = false;
           _combo++;
           if (_combo > _maxCombo) _maxCombo = _combo;
+          if (_mode == MatchGameMode.timeAttack) {
+            final comboBonus = _combo > 1 ? (_combo - 1) * 2 : 0;
+            _timeAttackScore += 10 + comboBonus;
+          }
         });
         HapticFeedback.mediumImpact();
+        _spawnParticles();
         // Save Progress (Correct)
         ref.read(contentRepositoryProvider).updateProgress(first.vocabId, true);
         
@@ -104,6 +134,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           first.state = MatchCardState.mismatched;
           second.state = MatchCardState.mismatched;
           _combo = 0; // Reset combo
+          if (_mode == MatchGameMode.timeAttack) {
+            _timeAttackScore = max(0, _timeAttackScore - 5);
+          }
         });
         HapticFeedback.vibrate();
 
@@ -127,25 +160,71 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
   void _checkWinCondition() {
     if (_cards.every((c) => c.state == MatchCardState.matched)) {
-      _endGame();
+      if (_mode == MatchGameMode.timeAttack) {
+        _refreshBoard();
+      } else {
+        _endGame();
+      }
     }
+  }
+
+  void _refreshBoard() {
+    if (_currentItems.length < 3) return;
+    final engine = MatchEngine(_currentItems);
+    setState(() {
+      _cards = engine.generateGame(6);
+      _selectedCard = null;
+      _isProcessingInfo = false;
+    });
   }
 
   void _endGame() {
     _timer?.cancel();
+    final timeAttackBonus = _mode == MatchGameMode.timeAttack
+        ? (_timeAttackRemaining ~/ 10) * 5
+        : 0;
     setState(() {
       _isGameActive = false;
       _isGameOver = true;
+      _timeAttackBonus = timeAttackBonus;
     });
     
     // Award XP based on performance
-    // Base: 10 XP per pair, Combo bonus: 2 XP per max combo, Time bonus: up to 20 XP for fast completion
-    final baseXp = (_cards.length ~/ 2) * 10; // 6 pairs = 60 XP
-    final comboBonus = _maxCombo * 2;
-    final timeBonus = _secondsElapsed < 30 ? 20 : (_secondsElapsed < 60 ? 10 : 0);
+    // Classic: 10 XP per pair, combo bonus, time bonus
+    // Time Attack: score-based XP
+    final timeAttackTotalScore = _timeAttackScore + timeAttackBonus;
+    final baseXp = (_mode == MatchGameMode.timeAttack)
+        ? timeAttackTotalScore
+        : (_cards.length ~/ 2) * 10;
+    final comboBonus = _mode == MatchGameMode.timeAttack ? 0 : _maxCombo * 2;
+    final timeBonus = (_mode == MatchGameMode.timeAttack)
+        ? 0
+        : (_secondsElapsed < 30 ? 20 : (_secondsElapsed < 60 ? 10 : 0));
     final totalXp = baseXp + comboBonus + timeBonus;
     
     ref.read(lessonRepositoryProvider).recordStudyActivity(xpDelta: totalXp);
+  }
+
+  void _spawnParticles() {
+    if (_lastBoardSize == Size.zero) return;
+    for (var i = 0; i < 6; i++) {
+      final burst = _ParticleBurst(
+        id: _burstId++,
+        offset: Offset(
+          _random.nextDouble() * _lastBoardSize.width,
+          _random.nextDouble() * _lastBoardSize.height,
+        ),
+      );
+      setState(() {
+        _bursts.add(burst);
+      });
+      Future.delayed(const Duration(milliseconds: 700), () {
+        if (!mounted) return;
+        setState(() {
+          _bursts.removeWhere((b) => b.id == burst.id);
+        });
+      });
+    }
   }
 
   @override
@@ -156,7 +235,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          '${language.matchGameLabel}${level != null ? ' (${level.shortLabel})' : ''}',
+          _mode == MatchGameMode.timeAttack && (_isGameActive || _isGameOver)
+              ? language.timeAttackBlitzLabel
+              : '${language.matchGameLabel}${level != null ? ' (${level.shortLabel})' : ''}',
         ),
         actions: [
           if (_isGameActive || _isGameOver)
@@ -164,7 +245,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(right: 16.0),
                 child: Text(
-                  "${_secondsElapsed}s",
+                  _mode == MatchGameMode.timeAttack
+                      ? language.timeRemainingLabel(_timeAttackRemaining)
+                      : "${_secondsElapsed}s",
                   style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -203,6 +286,8 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           );
         }).toList();
 
+        final timeAttackTotalScore = _timeAttackScore + _timeAttackBonus;
+
         if (_isGameOver) {
           return Center(
             child: Column(
@@ -210,10 +295,32 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
               children: [
                 const Icon(Icons.emoji_events_rounded, size: 64, color: Colors.amber),
                 const SizedBox(height: 16),
-                Text(
-                  language.timeSecondsLabel(_secondsElapsed),
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
+                if (_mode == MatchGameMode.timeAttack) ...[
+                  Text(
+                    language.timeAttackOverLabel,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    language.timeAttackScoreLabel(timeAttackTotalScore),
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  if (_timeAttackBonus > 0) ...[
+                    const SizedBox(height: 6),
+                    Text(
+                      language.timeAttackBonusLabel(_timeAttackBonus),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleMedium
+                          ?.copyWith(color: Colors.blueGrey),
+                    ),
+                  ],
+                ] else ...[
+                  Text(
+                    language.timeSecondsLabel(_secondsElapsed),
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                ],
                 Text(
                   language.maxComboLabel(_maxCombo),
                   style: Theme.of(context)
@@ -224,7 +331,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
                 const SizedBox(height: 24),
                 JuicyButton(
                   label: language.playAgainLabel,
-                  onPressed: () => _startGame(items),
+                  onPressed: () => _startGame(items, _mode),
                   icon: Icons.refresh,
                 )
               ],
@@ -234,17 +341,46 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
         if (!_isGameActive) {
          return Center(
-             child: JuicyButton(
-              label: language.startMatchGameLabel,
-              onPressed: () => _startGame(items),
-              icon: Icons.play_circle_filled,
-              height: 64,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                JuicyButton(
+                  label: language.startMatchGameLabel,
+                  onPressed: () => _startGame(items, MatchGameMode.classic),
+                  icon: Icons.play_circle_filled,
+                  height: 64,
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  language.timeAttackSubtitle,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.grey[600]),
+                ),
+                const SizedBox(height: 12),
+                JuicyButton(
+                  label: language.startTimeAttackLabel,
+                  onPressed: () => _startGame(items, MatchGameMode.timeAttack),
+                  icon: Icons.bolt_rounded,
+                  height: 56,
+                ),
+              ],
             ),
           );
         }
 
         return Column(
           children: [
+            if (_mode == MatchGameMode.timeAttack)
+              Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: Text(
+                  language.timeAttackScoreLabel(_timeAttackScore),
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             if (_combo > 1)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8),
@@ -263,17 +399,27 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
                 ),
               ),
             Expanded(
-              child: GridView.builder(
-                padding: const EdgeInsets.all(16),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  childAspectRatio: 1.0,
-                  crossAxisSpacing: 8,
-                  mainAxisSpacing: 8,
-                ),
-                itemCount: _cards.length,
-                itemBuilder: (context, index) {
-                  return _buildCard(_cards[index]);
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  _lastBoardSize = constraints.biggest;
+                  return Stack(
+                    children: [
+                      GridView.builder(
+                        padding: const EdgeInsets.all(16),
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 3,
+                          childAspectRatio: 1.0,
+                          crossAxisSpacing: 8,
+                          mainAxisSpacing: 8,
+                        ),
+                        itemCount: _cards.length,
+                        itemBuilder: (context, index) {
+                          return _buildCard(_cards[index]);
+                        },
+                      ),
+                      ..._bursts.map(_buildBurst),
+                    ],
+                  );
                 },
               ),
             ),
@@ -328,4 +474,36 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
       ),
     );
   }
+
+  Widget _buildBurst(_ParticleBurst burst) {
+    return Positioned(
+      left: burst.offset.dx,
+      top: burst.offset.dy,
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(begin: 0.0, end: 1.0),
+        duration: const Duration(milliseconds: 700),
+        builder: (context, value, child) {
+          final scale = 0.6 + value * 1.2;
+          final opacity = (1 - value).clamp(0.0, 1.0);
+          return Opacity(
+            opacity: opacity,
+            child: Transform.scale(scale: scale, child: child),
+          );
+        },
+        child: const Icon(Icons.auto_awesome, color: Colors.amber, size: 18),
+      ),
+    );
+  }
+}
+
+enum MatchGameMode { classic, timeAttack }
+
+class _ParticleBurst {
+  final int id;
+  final Offset offset;
+
+  const _ParticleBurst({
+    required this.id,
+    required this.offset,
+  });
 }

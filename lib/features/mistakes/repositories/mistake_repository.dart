@@ -17,6 +17,10 @@ class MistakeRepository {
     return _dao.watchTotalMistakes();
   }
 
+  Stream<int> watchVocabMistakeItemCount() {
+    return _dao.watchMistakeItemCount(type: 'vocab');
+  }
+
   Future<void> addMistake({required String type, required int itemId}) async {
     await _dao.addMistake(type, itemId);
   }

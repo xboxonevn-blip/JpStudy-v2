@@ -13,6 +13,8 @@ import 'package:jpstudy/features/vocab/screens/term_review_screen.dart';
 import 'package:jpstudy/features/games/match_game/match_game_screen.dart';
 import 'package:jpstudy/features/games/match_game/lesson_match_screen.dart';
 import 'package:jpstudy/features/learn/integration/learn_mode_integration.dart';
+import 'package:jpstudy/features/learn/models/learn_session_args.dart';
+import 'package:jpstudy/features/learn/screens/learn_screen.dart';
 import 'package:jpstudy/features/learn/integration/write_mode_integration.dart';
 import 'package:jpstudy/features/test/integration/test_mode_integration.dart';
 import 'package:jpstudy/features/test/screens/test_history_screen.dart';
@@ -165,6 +167,21 @@ class AppRouter {
       GoRoute(
         path: '/mistakes',
         builder: (context, state) => const MistakeScreen(),
+      ),
+      GoRoute(
+        path: '/learn/session',
+        builder: (context, state) {
+          final args = state.extra;
+          if (args is LearnSessionArgs) {
+            return LearnScreen(
+              lessonId: args.lessonId,
+              lessonTitle: args.lessonTitle,
+              items: args.items,
+              enabledTypes: args.enabledTypes,
+            );
+          }
+          return const HomeScreen();
+        },
       ),
     ],
   );

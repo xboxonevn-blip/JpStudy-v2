@@ -252,6 +252,17 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
           },
           contentPadding: EdgeInsets.zero,
         ),
+        SwitchListTile(
+          title: Text(language.adaptiveTestingLabel),
+          subtitle: Text(language.adaptiveTestingHint),
+          value: _config.adaptiveTesting,
+          onChanged: (value) {
+            setState(() {
+              _config = _config.copyWith(adaptiveTesting: value);
+            });
+          },
+          contentPadding: EdgeInsets.zero,
+        ),
       ],
     );
   }

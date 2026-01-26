@@ -20,9 +20,7 @@ class TestHistoryScreen extends ConsumerWidget {
     final historyService = ref.watch(testHistoryServiceProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('History: $lessonTitle'),
-      ),
+      appBar: AppBar(title: Text('History: $lessonTitle')),
       body: FutureBuilder<_HistoryData>(
         future: _loadData(historyService),
         builder: (context, snapshot) {
@@ -47,7 +45,12 @@ class TestHistoryScreen extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Stats summary
-                _buildStatsSummary(context, history.length, data.bestScore, data.averageScore),
+                _buildStatsSummary(
+                  context,
+                  history.length,
+                  data.bestScore,
+                  data.averageScore,
+                ),
                 const SizedBox(height: 24),
 
                 // Progress chart
@@ -70,7 +73,9 @@ class TestHistoryScreen extends ConsumerWidget {
     final results = await Future.wait([
       service.getHistory(lessonId),
       service.getProgressData(lessonId),
-      service.getBestScore(lessonId), // Returns nullable, so handle carefully if Future.wait disallows different types? No, it returns List<dynamic> or typed if consistent.
+      service.getBestScore(
+        lessonId,
+      ), // Returns nullable, so handle carefully if Future.wait disallows different types? No, it returns List<dynamic> or typed if consistent.
       service.getAverageScore(lessonId),
     ]);
 
@@ -91,10 +96,7 @@ class TestHistoryScreen extends ConsumerWidget {
           SizedBox(height: 16),
           Text(
             'No test history yet',
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.grey,
-            ),
+            style: TextStyle(fontSize: 18, color: Colors.grey),
           ),
           SizedBox(height: 8),
           Text(
@@ -156,10 +158,7 @@ class TestHistoryScreen extends ConsumerWidget {
         children: [
           const Text(
             'Progress Over Time',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 16),
 
@@ -221,16 +220,16 @@ class TestHistoryScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildHistoryList(BuildContext context, List<TestHistoryRecord> history) {
+  Widget _buildHistoryList(
+    BuildContext context,
+    List<TestHistoryRecord> history,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
           'Test History',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 12),
         ...history.asMap().entries.map((entry) {
@@ -288,13 +287,7 @@ class _StatCard extends StatelessWidget {
               color: color,
             ),
           ),
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.grey[600],
-            ),
-          ),
+          Text(label, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
         ],
       ),
     );
@@ -305,10 +298,7 @@ class _HistoryItem extends StatelessWidget {
   final TestHistoryRecord record;
   final TestHistoryRecord? previousRecord;
 
-  const _HistoryItem({
-    required this.record,
-    this.previousRecord,
-  });
+  const _HistoryItem({required this.record, this.previousRecord});
 
   @override
   Widget build(BuildContext context) {
@@ -368,10 +358,7 @@ class _HistoryItem extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   _formatDate(record.completedAt),
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                 ),
               ],
             ),

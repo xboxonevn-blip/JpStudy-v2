@@ -26,14 +26,8 @@ import 'package:jpstudy/features/achievements/achievements_screen.dart';
 class AppRouter {
   static final GoRouter router = GoRouter(
     routes: [
-      GoRoute(
-        path: '/',
-        builder: (context, state) => const HomeScreen(),
-      ),
-      GoRoute(
-        path: '/vocab',
-        builder: (context, state) => const VocabScreen(),
-      ),
+      GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
+      GoRoute(path: '/vocab', builder: (context, state) => const VocabScreen()),
       GoRoute(
         path: '/vocab/review',
         builder: (context, state) => const TermReviewScreen(),
@@ -42,10 +36,7 @@ class AppRouter {
         path: '/grammar',
         builder: (context, state) => const GrammarScreen(),
       ),
-      GoRoute(
-        path: '/exam',
-        builder: (context, state) => const ExamScreen(),
-      ),
+      GoRoute(path: '/exam', builder: (context, state) => const ExamScreen()),
       GoRoute(
         path: '/progress',
         builder: (context, state) => const ProgressScreen(),
@@ -71,13 +62,13 @@ class AppRouter {
           GrammarPracticeMode mode = GrammarPracticeMode.normal;
 
           if (state.extra is List<int>) {
-             ids = state.extra as List<int>;
+            ids = state.extra as List<int>;
           } else if (state.extra is GrammarPracticeMode) {
-             mode = state.extra as GrammarPracticeMode;
+            mode = state.extra as GrammarPracticeMode;
           } else if (state.extra is Map) {
-             final map = state.extra as Map;
-             ids = map['ids'];
-             mode = map['mode'] ?? GrammarPracticeMode.normal;
+            final map = state.extra as Map;
+            ids = map['ids'];
+            mode = map['mode'] ?? GrammarPracticeMode.normal;
           }
 
           return GrammarPracticeScreen(initialIds: ids, mode: mode);
@@ -95,12 +86,9 @@ class AppRouter {
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           final modeValue = state.pathParameters['mode'] ?? 'learn';
-          final mode = lessonPracticeModeFromPath(modeValue) ??
-              LessonPracticeMode.learn;
-          return LessonPracticeScreen(
-            lessonId: id ?? 1,
-            mode: mode,
-          );
+          final mode =
+              lessonPracticeModeFromPath(modeValue) ?? LessonPracticeMode.learn;
+          return LessonPracticeScreen(lessonId: id ?? 1, mode: mode);
         },
       ),
       GoRoute(
@@ -121,22 +109,16 @@ class AppRouter {
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           final title = state.uri.queryParameters['title'] ?? 'Lesson';
-          return LearnModeIntegration(
-            lessonId: id ?? 1,
-            lessonTitle: title,
-          );
+          return LearnModeIntegration(lessonId: id ?? 1, lessonTitle: title);
         },
       ),
-      // Enhanced Test Mode with config screen  
+      // Enhanced Test Mode with config screen
       GoRoute(
         path: '/lesson/:id/test-enhanced',
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           final title = state.uri.queryParameters['title'] ?? 'Lesson';
-          return TestModeIntegration(
-            lessonId: id ?? 1,
-            lessonTitle: title,
-          );
+          return TestModeIntegration(lessonId: id ?? 1, lessonTitle: title);
         },
       ),
       // Test History Screen
@@ -145,10 +127,7 @@ class AppRouter {
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           final title = state.uri.queryParameters['title'] ?? 'Lesson';
-          return TestHistoryScreen(
-            lessonId: id ?? 1,
-            lessonTitle: title,
-          );
+          return TestHistoryScreen(lessonId: id ?? 1, lessonTitle: title);
         },
       ),
       // Write Mode (fillBlank only)
@@ -157,10 +136,7 @@ class AppRouter {
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           final title = state.uri.queryParameters['title'] ?? 'Lesson';
-          return WriteModeIntegration(
-            lessonId: id ?? 1,
-            lessonTitle: title,
-          );
+          return WriteModeIntegration(lessonId: id ?? 1, lessonTitle: title);
         },
       ),
       // Match Mode for lessons
@@ -169,10 +145,7 @@ class AppRouter {
         builder: (context, state) {
           final id = int.tryParse(state.pathParameters['id'] ?? '');
           final title = state.uri.queryParameters['title'] ?? 'Lesson';
-          return LessonMatchScreen(
-            lessonId: id ?? 1,
-            lessonTitle: title,
-          );
+          return LessonMatchScreen(lessonId: id ?? 1, lessonTitle: title);
         },
       ),
       GoRoute(

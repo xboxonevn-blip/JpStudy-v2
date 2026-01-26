@@ -152,12 +152,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             final supportsNotifications =
                 NotificationService.instance.isSupported;
             final themeMode = ref.watch(themeModeProvider);
-            var reminderEnabled =
-                prefs.getBool(_prefDailyReminder) ?? false;
+            var reminderEnabled = prefs.getBool(_prefDailyReminder) ?? false;
             if (_prefs == null) {
               _prefs = prefs;
               _reminderEnabled = reminderEnabled;
-              _reminderTime = _reminderTimeFromPrefs(prefs) ??
+              _reminderTime =
+                  _reminderTimeFromPrefs(prefs) ??
                   const TimeOfDay(hour: 20, minute: 0);
             }
             return StatefulBuilder(
@@ -216,7 +216,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           await ref
                               .read(themeModeProvider.notifier)
                               .setThemeMode(
-                                  value ? ThemeMode.dark : ThemeMode.light);
+                                value ? ThemeMode.dark : ThemeMode.light,
+                              );
                           setModalState(() {});
                         },
                       ),
@@ -285,10 +286,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       TextButton.icon(
                         onPressed: supportsNotifications
                             ? () => NotificationService.instance
-                                .showTestNotification(
-                              title: language.reminderTitle,
-                              body: language.reminderTestBody,
-                            )
+                                  .showTestNotification(
+                                    title: language.reminderTitle,
+                                    body: language.reminderTestBody,
+                                  )
                             : () => _showInAppReminder(language),
                         icon: const Icon(Icons.notifications_active_outlined),
                         label: Text(language.reminderTestLabel),
@@ -336,8 +337,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           padding: const EdgeInsets.only(bottom: 8),
                           child: Text(
                             language.autoBackupLastLabel(
-                              MaterialLocalizations.of(context)
-                                  .formatMediumDate(_lastAutoBackup!),
+                              MaterialLocalizations.of(
+                                context,
+                              ).formatMediumDate(_lastAutoBackup!),
                             ),
                             style: const TextStyle(color: Color(0xFF6B7390)),
                           ),
@@ -364,10 +366,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Future<void> _exportBackup(
-    BuildContext context,
-    AppLanguage language,
-  ) async {
+  Future<void> _exportBackup(BuildContext context, AppLanguage language) async {
     final repo = ref.read(lessonRepositoryProvider);
     final data = await repo.exportBackup();
     final jsonText = const JsonEncoder.withIndent('  ').convert(data);
@@ -385,23 +384,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       if (!context.mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.backupExportSuccess)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.backupExportSuccess)));
     } catch (_) {
       if (!context.mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.backupExportError)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.backupExportError)));
     }
   }
 
-  Future<void> _importBackup(
-    BuildContext context,
-    AppLanguage language,
-  ) async {
+  Future<void> _importBackup(BuildContext context, AppLanguage language) async {
     final file = await openFile(
       acceptedTypeGroups: const [
         XTypeGroup(label: 'JSON', extensions: ['json']),
@@ -442,16 +438,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       if (!context.mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.backupImportSuccess)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.backupImportSuccess)));
     } catch (_) {
       if (!context.mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.backupImportError)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.backupImportError)));
     }
   }
 
@@ -462,8 +458,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     }
     _prefs = prefs;
     _reminderEnabled = prefs.getBool(_prefDailyReminder) ?? false;
-    _reminderTime = _reminderTimeFromPrefs(prefs) ??
-        const TimeOfDay(hour: 20, minute: 0);
+    _reminderTime =
+        _reminderTimeFromPrefs(prefs) ?? const TimeOfDay(hour: 20, minute: 0);
     if (_reminderEnabled && !NotificationService.instance.isSupported) {
       _scheduleInAppReminder();
     }
@@ -508,7 +504,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     SharedPreferences prefs,
     TimeOfDay time,
   ) async {
-    final value = '${time.hour.toString().padLeft(2, '0')}:'
+    final value =
+        '${time.hour.toString().padLeft(2, '0')}:'
         '${time.minute.toString().padLeft(2, '0')}';
     await prefs.setString(_prefDailyReminderTime, value);
   }
@@ -530,11 +527,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return TimeOfDay(hour: hour, minute: minute);
   }
 
-  Future<void> _saveBackupTime(
-    SharedPreferences prefs,
-    TimeOfDay time,
-  ) async {
-    final value = '${time.hour.toString().padLeft(2, '0')}:'
+  Future<void> _saveBackupTime(SharedPreferences prefs, TimeOfDay time) async {
+    final value =
+        '${time.hour.toString().padLeft(2, '0')}:'
         '${time.minute.toString().padLeft(2, '0')}';
     await prefs.setString(_prefAutoBackupTime, value);
   }
@@ -658,20 +653,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       }
     } catch (_) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(language.autoBackupErrorLabel)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(language.autoBackupErrorLabel)));
       }
     }
   }
 
   Future<void> _cleanupOldBackups(Directory backupDir, {int keep = 7}) async {
-    final files = backupDir
-        .listSync()
-        .whereType<File>()
-        .where((f) => f.path.endsWith('.json'))
-        .toList()
-      ..sort((a, b) => b.lastModifiedSync().compareTo(a.lastModifiedSync()));
+    final files =
+        backupDir
+            .listSync()
+            .whereType<File>()
+            .where((f) => f.path.endsWith('.json'))
+            .toList()
+          ..sort(
+            (a, b) => b.lastModifiedSync().compareTo(a.lastModifiedSync()),
+          );
     if (files.length <= keep) return;
     for (final file in files.sublist(keep)) {
       try {
@@ -690,9 +688,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     if (!mounted) {
       return;
     }
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(language.reminderBody)),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(language.reminderBody)));
   }
 
   String _formatTime(TimeOfDay time, BuildContext context) {
@@ -756,7 +754,9 @@ class _LanguageCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       child: ListTile(
         title: Text(language.label),
-        subtitle: !enabled && disabledLabel != null ? Text(disabledLabel!) : null,
+        subtitle: !enabled && disabledLabel != null
+            ? Text(disabledLabel!)
+            : null,
         trailing: const Icon(Icons.chevron_right),
         onTap: enabled ? () => onSelected(language) : null,
       ),

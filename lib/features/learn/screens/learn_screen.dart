@@ -76,14 +76,18 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final language = ref.read(appLanguageProvider);
       if (widget.enabledTypes != null) {
-        ref.read(learnSessionProvider.notifier).startSession(
+        ref
+            .read(learnSessionProvider.notifier)
+            .startSession(
               lessonId: widget.lessonId,
               items: widget.items,
               enabledTypes: widget.enabledTypes!,
               language: language,
             );
       } else {
-        ref.read(learnSessionProvider.notifier).startSession(
+        ref
+            .read(learnSessionProvider.notifier)
+            .startSession(
               lessonId: widget.lessonId,
               items: widget.items,
               language: language,
@@ -99,9 +103,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     final session = ref.watch(learnSessionProvider);
 
     if (session == null) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final question = session.currentQuestion;
@@ -116,9 +118,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
           ),
         );
       });
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     return Scaffold(
@@ -191,8 +191,9 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
                   child: ElevatedButton(
                     onPressed: _handleContinue,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          _isCorrect ? Colors.green : Colors.orange,
+                      backgroundColor: _isCorrect
+                          ? Colors.green
+                          : Colors.orange,
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -266,13 +267,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
             ),
           ],
         ),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.grey[600],
-          ),
-        ),
+        Text(label, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
       ],
     );
   }
@@ -281,26 +276,26 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     final showContextHint = _contextHintsShown.contains(question.id);
     final content = switch (question.type) {
       QuestionType.multipleChoice => MultipleChoiceWidget(
-          question: question,
-          selectedAnswer: _selectedAnswer,
-          showResult: _showResult,
-          language: language,
-          onSelect: _handleMultipleChoiceSelect,
-        ),
+        question: question,
+        selectedAnswer: _selectedAnswer,
+        showResult: _showResult,
+        language: language,
+        onSelect: _handleMultipleChoiceSelect,
+      ),
       QuestionType.trueFalse => TrueFalseWidget(
-          question: question,
-          selectedAnswer: _selectedTrueFalse,
-          showResult: _showResult,
-          language: language,
-          onSelect: _handleTrueFalseSelect,
-        ),
+        question: question,
+        selectedAnswer: _selectedTrueFalse,
+        showResult: _showResult,
+        language: language,
+        onSelect: _handleTrueFalseSelect,
+      ),
       QuestionType.fillBlank => FillBlankWidget(
-          question: question,
-          showResult: _showResult,
-          isCorrect: _isCorrect,
-          language: language,
-          onSubmit: _handleFillBlankSubmit,
-        ),
+        question: question,
+        showResult: _showResult,
+        isCorrect: _isCorrect,
+        language: language,
+        onSubmit: _handleFillBlankSubmit,
+      ),
     };
 
     return Column(
@@ -351,14 +346,18 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
   }
 
   Future<void> _submitAnswer(String answer) async {
-    final result = await ref.read(learnSessionProvider.notifier).submitAnswer(answer);
+    final result = await ref
+        .read(learnSessionProvider.notifier)
+        .submitAnswer(answer);
 
     if (result != null) {
       final usedHint = _contextHintsShown.contains(result.question.id);
       if (usedHint &&
           result.isCorrect &&
           !_contextHintsRequeued.contains(result.question.id)) {
-        ref.read(learnSessionProvider.notifier).requeueQuestion(result.question);
+        ref
+            .read(learnSessionProvider.notifier)
+            .requeueQuestion(result.question);
         _contextHintsRequeued.add(result.question.id);
       }
       setState(() {
@@ -384,7 +383,8 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
   Future<void> _persistSession() async {
     final session = ref.read(learnSessionProvider);
     if (session == null || session.isComplete) return;
-    final enabledTypes = widget.enabledTypes ??
+    final enabledTypes =
+        widget.enabledTypes ??
         session.questions.map((q) => q.type).toSet().toList();
     final storage = ref.read(sessionStorageProvider);
     await storage.saveLearnSession(

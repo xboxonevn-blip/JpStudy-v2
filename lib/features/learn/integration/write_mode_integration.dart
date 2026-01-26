@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../data/models/vocab_item.dart';
+import '../../../data/models/kanji_item.dart';
 import '../../../data/db/app_database.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../../../core/level_provider.dart';
@@ -31,16 +32,24 @@ class WriteModeIntegration extends ConsumerWidget {
       ),
     );
     final kanjiAsync = ref.watch(lessonKanjiProvider(lessonId));
+    final dueTermsAsync = ref.watch(lessonDueTermsProvider(lessonId));
+    final dueKanjiAsync = ref.watch(lessonDueKanjiProvider(lessonId));
 
     return termsAsync.when(
       data: (terms) => kanjiAsync.when(
         data: (kanji) {
+          final dueTerms =
+              dueTermsAsync.valueOrNull ?? const <UserLessonTermData>[];
+          final dueKanji = dueKanjiAsync.valueOrNull ?? const <KanjiItem>[];
           final vocabItems = _convertToVocabItems(terms);
+          final dueVocabItems = _convertToVocabItems(dueTerms);
           return WriteModeScreen(
             lessonId: lessonId,
             lessonTitle: lessonTitle,
             vocabItems: vocabItems,
+            dueVocabItems: dueVocabItems,
             kanjiItems: kanji,
+            dueKanjiItems: dueKanji,
           );
         },
         loading: () => Scaffold(

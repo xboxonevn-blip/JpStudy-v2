@@ -27,19 +27,21 @@ class TestHistoryService {
     );
 
     await _testDao.createSession(companion);
-    
+
     // Save answers (including unanswered)
     for (int i = 0; i < session.questions.length; i++) {
       final answer = session.getAnswer(i);
-      await _testDao.recordAnswer(TestAnswersCompanion(
-        sessionId: Value(session.sessionId),
-        questionIndex: Value(i),
-        termId: Value(session.questions[i].targetItem.id),
-        questionType: Value(session.questions[i].type.name),
-        userAnswer: Value(answer?.userAnswer),
-        isCorrect: Value(answer?.isCorrect ?? false),
-        answeredAt: Value(answer?.answeredAt ?? DateTime.now()),
-      ));
+      await _testDao.recordAnswer(
+        TestAnswersCompanion(
+          sessionId: Value(session.sessionId),
+          questionIndex: Value(i),
+          termId: Value(session.questions[i].targetItem.id),
+          questionType: Value(session.questions[i].type.name),
+          userAnswer: Value(answer?.userAnswer),
+          isCorrect: Value(answer?.isCorrect ?? false),
+          answeredAt: Value(answer?.answeredAt ?? DateTime.now()),
+        ),
+      );
     }
   }
 
@@ -56,19 +58,29 @@ class TestHistoryService {
   }
 
   /// Get progress data for charts (last N tests)
-  Future<List<ProgressPoint>> getProgressData(int lessonId, {int limit = 10}) async {
+  Future<List<ProgressPoint>> getProgressData(
+    int lessonId, {
+    int limit = 10,
+  }) async {
     final history = await getHistory(lessonId);
     final limitedHistory = history.take(limit).toList().reversed;
 
-    return limitedHistory.map((h) => ProgressPoint(
-      date: h.completedAt,
-      score: h.score,
-      grade: h.grade,
-    )).toList();
+    return limitedHistory
+        .map(
+          (h) => ProgressPoint(
+            date: h.completedAt,
+            score: h.score,
+            grade: h.grade,
+          ),
+        )
+        .toList();
   }
 
   /// Compare two test attempts
-  Future<TestComparison?> compareAttempts(String sessionId1, String sessionId2) async {
+  Future<TestComparison?> compareAttempts(
+    String sessionId1,
+    String sessionId2,
+  ) async {
     final s1 = await _testDao.getSession(sessionId1);
     final s2 = await _testDao.getSession(sessionId2);
 
@@ -109,22 +121,22 @@ class TestHistoryService {
 
   // Helper map
   TestHistoryRecord _mapToRecord(TestSession session) {
-      final duration = session.completedAt != null 
+    final duration = session.completedAt != null
         ? session.completedAt!.difference(session.startedAt)
         : Duration.zero;
 
-      return TestHistoryRecord(
-        sessionId: session.sessionId,
-        lessonId: session.lessonId,
-        completedAt: session.completedAt ?? DateTime.now(),
-        score: session.score.toDouble(),
-        grade: session.grade,
-        correctCount: session.correctCount,
-        totalQuestions: session.totalQuestions,
-        timeElapsed: duration,
-        xpEarned: session.xpEarned,
-        weakTermIds: [],
-      );
+    return TestHistoryRecord(
+      sessionId: session.sessionId,
+      lessonId: session.lessonId,
+      completedAt: session.completedAt ?? DateTime.now(),
+      score: session.score.toDouble(),
+      grade: session.grade,
+      correctCount: session.correctCount,
+      totalQuestions: session.totalQuestions,
+      timeElapsed: duration,
+      xpEarned: session.xpEarned,
+      weakTermIds: [],
+    );
   }
 }
 

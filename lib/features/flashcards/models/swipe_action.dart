@@ -1,16 +1,11 @@
 enum SwipeAction {
-  know,           // Right swipe - user knows this term
-  needPractice,   // Left swipe - needs more practice
-  star,           // Up swipe - bookmark/favorite
-  skip,           // Down swipe - skip for now
+  know, // Right swipe - user knows this term
+  needPractice, // Left swipe - needs more practice
+  star, // Up swipe - bookmark/favorite
+  skip, // Down swipe - skip for now
 }
 
-enum SwipeDirection {
-  left,
-  right,
-  up,
-  down,
-}
+enum SwipeDirection { left, right, up, down }
 
 extension SwipeActionExtension on SwipeAction {
   String get label {

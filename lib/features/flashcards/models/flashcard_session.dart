@@ -17,15 +17,13 @@ class FlashcardSession {
     List<int>? needPracticeTermIds,
     List<int>? starredTermIds,
     List<int>? skippedTermIds,
-  })  : knownTermIds = knownTermIds ?? [],
-        needPracticeTermIds = needPracticeTermIds ?? [],
-        starredTermIds = starredTermIds ?? [],
-        skippedTermIds = skippedTermIds ?? [];
+  }) : knownTermIds = knownTermIds ?? [],
+       needPracticeTermIds = needPracticeTermIds ?? [],
+       starredTermIds = starredTermIds ?? [],
+       skippedTermIds = skippedTermIds ?? [];
 
   int get totalSeen =>
-      knownTermIds.length +
-      needPracticeTermIds.length +
-      skippedTermIds.length;
+      knownTermIds.length + needPracticeTermIds.length + skippedTermIds.length;
 
   double get accuracy {
     if (totalSeen == 0) return 0.0;

@@ -37,7 +37,9 @@ class NotificationService {
       // Windows: Skip native plugin, use in-app reminders instead
       return;
     }
-    const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const androidSettings = AndroidInitializationSettings(
+      '@mipmap/ic_launcher',
+    );
     const iosSettings = DarwinInitializationSettings();
 
     const initSettings = InitializationSettings(

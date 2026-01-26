@@ -12,6 +12,7 @@ import '../../common/widgets/clay_button.dart';
 import '../../../core/language_provider.dart';
 import '../../../core/app_language.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
+import '../../../data/models/mistake_context.dart';
 
 enum GrammarPracticeMode { normal, ghost }
 
@@ -112,7 +113,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     }
   }
 
-  void _onAnswer(bool isCorrect) async {
+  void _onAnswer(bool isCorrect, {String? userAnswer}) async {
     if (_isAnswered) return;
     setState(() {
       _isAnswered = true;
@@ -126,7 +127,20 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     if (isCorrect) {
       await mistakeRepo.markCorrect(type: 'grammar', itemId: q.point.id);
     } else {
-      await mistakeRepo.addMistake(type: 'grammar', itemId: q.point.id);
+      final prompt = (q.explanation ?? q.question).trim().isEmpty
+          ? q.question
+          : (q.explanation ?? q.question);
+      await mistakeRepo.addMistake(
+        type: 'grammar',
+        itemId: q.point.id,
+        context: MistakeContext(
+          prompt: prompt,
+          correctAnswer: q.correctAnswer,
+          userAnswer: userAnswer,
+          source: 'grammar_practice',
+          extra: {'type': q.type.name},
+        ),
+      );
       final key = '${q.point.id}_${q.type}_${q.question}';
       if (!_requeuedQuestions.contains(key)) {
         _requeuedQuestions.add(key);
@@ -135,7 +149,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     }
     ref
         .read(grammarRepositoryProvider)
-        .recordReview(grammarId: q.point.id, quality: isCorrect ? 5 : 0);
+        .recordReview(grammarId: q.point.id, grade: isCorrect ? 3 : 1);
 
     // Provide immediate feedback before moving on
     Future.delayed(const Duration(milliseconds: 1500), () {
@@ -312,7 +326,8 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           prompt: q.explanation ?? 'Arrange the sentence',
           correctSentence: q.correctAnswer,
           shuffledWords: List.of(q.options)..shuffle(),
-          onCheck: _onAnswer,
+          onCheck: (isCorrect, userSentence) =>
+              _onAnswer(isCorrect, userAnswer: userSentence),
           onReset: () {},
         );
       case GrammarQuestionType.cloze:
@@ -320,7 +335,8 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           sentenceTemplate: q.question,
           options: q.options,
           correctOption: q.correctAnswer,
-          onCheck: (isCorrect, _) => _onAnswer(isCorrect),
+          onCheck: (isCorrect, selected) =>
+              _onAnswer(isCorrect, userAnswer: selected),
         );
       case GrammarQuestionType.multipleChoice:
       case GrammarQuestionType.reverseMultipleChoice:
@@ -328,7 +344,8 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           question: q.question,
           options: q.options,
           correctAnswer: q.correctAnswer,
-          onAnswer: _onAnswer,
+          onAnswer: (isCorrect, selected) =>
+              _onAnswer(isCorrect, userAnswer: selected),
         );
     }
   }

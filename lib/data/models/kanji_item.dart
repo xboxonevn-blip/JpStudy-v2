@@ -38,7 +38,7 @@ class KanjiExample {
   final String reading;
   final String meaning;
   final String? meaningEn;
-  
+
   Map<String, dynamic> toJson() => {
     'word': word,
     'reading': reading,

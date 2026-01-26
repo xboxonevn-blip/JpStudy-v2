@@ -31,25 +31,25 @@ class FlashcardSummaryScreen extends ConsumerWidget {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              
+
               // Accuracy Circle
               _buildAccuracyCircle(context, accuracyPercent),
-              
+
               const SizedBox(height: 40),
-              
+
               // Stats Grid
               _buildStatsGrid(context),
-              
+
               const SizedBox(height: 40),
-              
+
               // XP Earned Card
               _buildXPCard(context, xpEarned),
-              
+
               const SizedBox(height: 40),
-              
+
               // Action Buttons
               _buildActionButtons(context),
-              
+
               const SizedBox(height: 20),
             ],
           ),
@@ -146,10 +146,7 @@ class FlashcardSummaryScreen extends ConsumerWidget {
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF667eea),
-            Color(0xFF764ba2),
-          ],
+          colors: [Color(0xFF667eea), Color(0xFF764ba2)],
         ),
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
@@ -163,11 +160,7 @@ class FlashcardSummaryScreen extends ConsumerWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(
-            Icons.stars_rounded,
-            color: Colors.white,
-            size: 36,
-          ),
+          const Icon(Icons.stars_rounded, color: Colors.white, size: 36),
           const SizedBox(width: 16),
           Text(
             '+$xpEarned XP',
@@ -180,10 +173,7 @@ class FlashcardSummaryScreen extends ConsumerWidget {
           const SizedBox(width: 8),
           const Text(
             'Earned!',
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.white70,
-            ),
+            style: TextStyle(fontSize: 18, color: Colors.white70),
           ),
         ],
       ),
@@ -226,17 +216,11 @@ class FlashcardSummaryScreen extends ConsumerWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              side: BorderSide(
-                color: Theme.of(context).primaryColor,
-                width: 2,
-              ),
+              side: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             ),
             child: const Text(
               'Done',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
           ),
         ),
@@ -272,18 +256,11 @@ class _StatCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: color.withValues(alpha: 0.3),
-          width: 2,
-        ),
+        border: Border.all(color: color.withValues(alpha: 0.3), width: 2),
       ),
       child: Column(
         children: [
-          Icon(
-            icon,
-            color: color,
-            size: 36,
-          ),
+          Icon(icon, color: color, size: 36),
           const SizedBox(height: 12),
           Text(
             value.toString(),

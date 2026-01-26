@@ -41,9 +41,7 @@ class LearnModeIntegration extends ConsumerWidget {
             appBar: AppBar(
               title: Text('${language.learnModeLabel}: $lessonTitle'),
             ),
-            body: Center(
-              child: Text(language.noTermsAvailableLabel),
-            ),
+            body: Center(child: Text(language.noTermsAvailableLabel)),
           );
         }
 
@@ -99,29 +97,29 @@ class LearnModeIntegration extends ConsumerWidget {
         );
       },
       loading: () => Scaffold(
-        appBar: AppBar(
-          title: Text('${language.learnModeLabel}: $lessonTitle'),
-        ),
+        appBar: AppBar(title: Text('${language.learnModeLabel}: $lessonTitle')),
         body: const Center(child: CircularProgressIndicator()),
       ),
       error: (e, _) => Scaffold(
-        appBar: AppBar(
-          title: Text('${language.learnModeLabel}: $lessonTitle'),
-        ),
+        appBar: AppBar(title: Text('${language.learnModeLabel}: $lessonTitle')),
         body: Center(child: Text(language.loadErrorLabel)),
       ),
     );
   }
 
   List<VocabItem> _convertToVocabItems(List<UserLessonTermData> terms) {
-    return terms.map((term) => VocabItem(
-      id: term.id,
-      term: term.term,
-      reading: term.reading,
-      meaning: term.definition,
-      meaningEn: term.definitionEn,
-      kanjiMeaning: term.kanjiMeaning,
-      level: 'N5', // Default level
-    )).toList();
+    return terms
+        .map(
+          (term) => VocabItem(
+            id: term.id,
+            term: term.term,
+            reading: term.reading,
+            meaning: term.definition,
+            meaningEn: term.definitionEn,
+            kanjiMeaning: term.kanjiMeaning,
+            level: 'N5', // Default level
+          ),
+        )
+        .toList();
   }
 }

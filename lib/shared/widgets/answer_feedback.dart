@@ -22,7 +22,7 @@ class AnswerFeedback extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: isCorrect 
+        color: isCorrect
             ? Colors.green.withValues(alpha: 0.1)
             : Colors.red.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(16),
@@ -65,17 +65,14 @@ class AnswerFeedback extends StatelessWidget {
                     if (!isCorrect && showDetails && correctAnswer != null)
                       Text(
                         'Correct answer: $correctAnswer',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.grey[600],
-                        ),
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                       ),
                   ],
                 ),
               ),
             ],
           ),
-          
+
           // User's answer (if wrong)
           if (!isCorrect && showDetails && userAnswer != null) ...[
             const SizedBox(height: 12),
@@ -91,10 +88,7 @@ class AnswerFeedback extends StatelessWidget {
                 children: [
                   Text(
                     'Your answer:',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey[600],
-                    ),
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
                   const SizedBox(height: 4),
                   Text(
@@ -109,7 +103,7 @@ class AnswerFeedback extends StatelessWidget {
               ),
             ),
           ],
-          
+
           // Continue button
           if (onContinue != null) ...[
             const SizedBox(height: 16),
@@ -141,11 +135,8 @@ class AnswerFeedback extends StatelessWidget {
 /// Simple inline feedback indicator
 class InlineFeedback extends StatelessWidget {
   final bool isCorrect;
-  
-  const InlineFeedback({
-    super.key,
-    required this.isCorrect,
-  });
+
+  const InlineFeedback({super.key, required this.isCorrect});
 
   @override
   Widget build(BuildContext context) {

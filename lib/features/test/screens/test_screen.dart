@@ -15,6 +15,7 @@ import '../../learn/widgets/multiple_choice_widget.dart';
 import '../../learn/widgets/true_false_widget.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
+import '../../../data/models/mistake_context.dart';
 import '../models/test_config.dart';
 import '../models/test_session.dart';
 import '../providers/test_providers.dart';
@@ -97,10 +98,14 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     _adaptiveCompleted.clear();
     _usedTypesByItem.clear();
     for (final q in questions) {
-      _usedTypesByItem.putIfAbsent(q.targetItem.id, () => <QuestionType>{})
+      _usedTypesByItem
+          .putIfAbsent(q.targetItem.id, () => <QuestionType>{})
           .add(q.type);
     }
-    _adaptiveMaxExtra = (widget.config.questionCount * 0.3).floor().clamp(0, 20);
+    _adaptiveMaxExtra = (widget.config.questionCount * 0.3).floor().clamp(
+      0,
+      20,
+    );
 
     _session = TestSession(
       sessionId: DateTime.now().millisecondsSinceEpoch.toString(),
@@ -172,9 +177,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     final question = _session.currentQuestion;
 
     if (question == null) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     return Scaffold(
@@ -185,9 +188,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
           if (widget.config.timeLimitMinutes != null)
             Padding(
               padding: const EdgeInsets.only(right: 8),
-              child: Center(
-                child: _buildTimerDisplay(),
-              ),
+              child: Center(child: _buildTimerDisplay()),
             ),
           // Flag button
           IconButton(
@@ -264,17 +265,15 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: isLow ? Colors.red.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.2),
+        color: isLow
+            ? Colors.red.withValues(alpha: 0.2)
+            : Colors.grey.withValues(alpha: 0.2),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(
-            Icons.timer,
-            size: 18,
-            color: isLow ? Colors.red : null,
-          ),
+          Icon(Icons.timer, size: 18, color: isLow ? Colors.red : null),
           const SizedBox(width: 4),
           Text(
             '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}',
@@ -297,7 +296,8 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         itemCount: _session.totalQuestions,
         itemBuilder: (context, index) {
-          final isAnswered = index < _session.answers.length &&
+          final isAnswered =
+              index < _session.answers.length &&
               _session.answers[index].userAnswer != null;
           final isCurrent = index == _session.currentQuestionIndex;
           final isFlagged = _session.isFlagged(index);
@@ -312,8 +312,8 @@ class _TestScreenState extends ConsumerState<TestScreen> {
                   color: isCurrent
                       ? Theme.of(context).primaryColor
                       : isAnswered
-                          ? Colors.green.withValues(alpha: 0.2)
-                          : Colors.grey.withValues(alpha: 0.2),
+                      ? Colors.green.withValues(alpha: 0.2)
+                      : Colors.grey.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(8),
                   border: isFlagged
                       ? Border.all(color: Colors.orange, width: 2)
@@ -346,10 +346,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
             _session.currentQuestionIndex + 1,
             _session.totalQuestions,
           ),
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.grey[600],
-          ),
+          style: TextStyle(fontSize: 14, color: Colors.grey[600]),
         ),
         const SizedBox(height: 16),
 
@@ -416,7 +413,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
               ),
               child: Text(
                 isLast ? language.submitTestLabel : language.nextLabel,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),
@@ -445,7 +445,9 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     setState(() {
       _selectedTrueFalse = answer;
       _showResult = true;
-      _isCorrect = _session.currentQuestion!.checkAnswer(answer ? 'true' : 'false');
+      _isCorrect = _session.currentQuestion!.checkAnswer(
+        answer ? 'true' : 'false',
+      );
     });
 
     _maybeQueueAdaptiveQuestion(_session.currentQuestion!, _isCorrect);
@@ -492,8 +494,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     final repeatChance = currentRepeats == 0 ? 1.0 : 0.6;
     if (_random.nextDouble() > repeatChance) return;
 
-    final usedTypes = _usedTypesByItem.putIfAbsent(item.id, () => <QuestionType>{})
-      ..add(question.type);
+    final usedTypes = _usedTypesByItem.putIfAbsent(
+      item.id,
+      () => <QuestionType>{},
+    )..add(question.type);
 
     final availableTypes = widget.config.enabledTypes
         .where((type) => !usedTypes.contains(type))
@@ -549,8 +553,8 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     _selectedTrueFalse = answer?.userAnswer == 'true'
         ? true
         : answer?.userAnswer == 'false'
-            ? false
-            : null;
+        ? false
+        : null;
     _showResult = answer?.userAnswer != null;
     _isCorrect = answer?.isCorrect ?? false;
   }
@@ -595,6 +599,13 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         await mistakeRepo.addMistake(
           type: 'vocab',
           itemId: question.targetItem.id,
+          context: MistakeContext(
+            prompt: question.questionText,
+            correctAnswer: question.correctAnswer,
+            userAnswer: answer?.userAnswer,
+            source: 'test',
+            extra: {'type': question.type.name},
+          ),
         );
       } else {
         await mistakeRepo.markCorrect(
@@ -606,9 +617,9 @@ class _TestScreenState extends ConsumerState<TestScreen> {
 
     // Save to database
     await ref.read(testHistoryServiceProvider).saveTest(_session);
-    await ref.read(lessonRepositoryProvider).recordStudyActivity(
-      xpDelta: _session.xpEarned,
-    );
+    await ref
+        .read(lessonRepositoryProvider)
+        .recordStudyActivity(xpDelta: _session.xpEarned);
 
     await _clearSavedSession();
 

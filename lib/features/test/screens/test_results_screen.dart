@@ -182,20 +182,14 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
       children: [
         Text(
           '${session.score.toInt()}%',
-          style: const TextStyle(
-            fontSize: 48,
-            fontWeight: FontWeight.bold,
-          ),
+          style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
         ),
         Text(
           language.testCorrectSummaryLabel(
             session.correctCount,
             session.totalQuestions,
           ),
-          style: TextStyle(
-            fontSize: 18,
-            color: Colors.grey[600],
-          ),
+          style: TextStyle(fontSize: 18, color: Colors.grey[600]),
         ),
       ],
     );
@@ -284,10 +278,7 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
         children: [
           Text(
             language.performanceByTypeLabel,
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 16),
           ...breakdown.entries.map(
@@ -298,7 +289,11 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
     );
   }
 
-  Widget _buildTypeRow(QuestionType type, TypeBreakdown breakdown, AppLanguage language) {
+  Widget _buildTypeRow(
+    QuestionType type,
+    TypeBreakdown breakdown,
+    AppLanguage language,
+  ) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
@@ -368,10 +363,7 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
           const SizedBox(height: 8),
           Text(
             language.termsNeedPracticeHint,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey[600],
-            ),
+            style: TextStyle(fontSize: 14, color: Colors.grey[600]),
           ),
         ],
       ),
@@ -412,10 +404,7 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              side: BorderSide(
-                color: Theme.of(context).primaryColor,
-                width: 2,
-              ),
+              side: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             ),
             child: Text(
               language.doneLabel,
@@ -464,10 +453,7 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
                 const SizedBox(height: 8),
                 Text(
                   language.lessonRecommendationsEmptyLabel,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                 ),
               ],
             ),
@@ -492,7 +478,9 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
             }
             displayList.insert(0, pinnedSuggestion);
           }
-          final pinnedIndex = displayList.indexWhere((s) => s.lessonId == pinnedId);
+          final pinnedIndex = displayList.indexWhere(
+            (s) => s.lessonId == pinnedId,
+          );
           if (pinnedIndex > 0) {
             final pinned = displayList.removeAt(pinnedIndex);
             displayList.insert(0, pinned);
@@ -519,10 +507,7 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
               const SizedBox(height: 8),
               Text(
                 language.lessonRecommendationsHint,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey[600],
-                ),
+                style: TextStyle(fontSize: 14, color: Colors.grey[600]),
               ),
               const SizedBox(height: 12),
               if (data.pinned != null) ...[
@@ -598,7 +583,9 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
         mainAxisSize: MainAxisSize.min,
         children: [
           IconButton(
-            tooltip: isPinned ? language.unpinLessonLabel : language.pinLessonLabel,
+            tooltip: isPinned
+                ? language.unpinLessonLabel
+                : language.pinLessonLabel,
             icon: Icon(
               isPinned ? Icons.push_pin : Icons.push_pin_outlined,
               color: isPinned ? Colors.indigo : Colors.blueGrey,
@@ -621,9 +608,9 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
       return const _LessonRecommendationsData.empty();
     }
 
-    final terms = await (db.select(db.userLessonTerm)
-          ..where((t) => t.id.isIn(termIds)))
-        .get();
+    final terms = await (db.select(
+      db.userLessonTerm,
+    )..where((t) => t.id.isIn(termIds))).get();
     if (terms.isEmpty) {
       return const _LessonRecommendationsData.empty();
     }
@@ -634,30 +621,34 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
     }
 
     final lessonIds = counts.keys.toList();
-    final lessons = await (db.select(db.userLesson)
-          ..where((l) => l.id.isIn(lessonIds)))
-        .get();
+    final lessons = await (db.select(
+      db.userLesson,
+    )..where((l) => l.id.isIn(lessonIds))).get();
     final titles = {for (final lesson in lessons) lesson.id: lesson.title};
 
     final suggestions = <_LessonSuggestion>[];
     final totalWrong = termIds.length;
     for (final entry in counts.entries) {
-      suggestions.add(_LessonSuggestion(
-        lessonId: entry.key,
-        title: titles[entry.key] ?? '',
-        wrongCount: entry.value,
-        wrongRate: totalWrong > 0 ? (entry.value / totalWrong) * 100 : 0,
-      ));
+      suggestions.add(
+        _LessonSuggestion(
+          lessonId: entry.key,
+          title: titles[entry.key] ?? '',
+          wrongCount: entry.value,
+          wrongRate: totalWrong > 0 ? (entry.value / totalWrong) * 100 : 0,
+        ),
+      );
     }
     suggestions.sort((a, b) => b.wrongCount.compareTo(a.wrongCount));
 
     _PinnedLesson? pinned;
     if (pinnedLessonId != null) {
-      final inSuggestions = suggestions.any((s) => s.lessonId == pinnedLessonId);
+      final inSuggestions = suggestions.any(
+        (s) => s.lessonId == pinnedLessonId,
+      );
       if (!inSuggestions) {
-        final pinnedLesson = await (db.select(db.userLesson)
-              ..where((l) => l.id.equals(pinnedLessonId)))
-            .getSingleOrNull();
+        final pinnedLesson = await (db.select(
+          db.userLesson,
+        )..where((l) => l.id.equals(pinnedLessonId))).getSingleOrNull();
         if (pinnedLesson != null) {
           pinned = _PinnedLesson(
             lessonId: pinnedLesson.id,
@@ -667,10 +658,7 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
       }
     }
 
-    return _LessonRecommendationsData(
-      suggestions: suggestions,
-      pinned: pinned,
-    );
+    return _LessonRecommendationsData(suggestions: suggestions, pinned: pinned);
   }
 
   Color _getGradeColor(String grade) {
@@ -694,7 +682,11 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
     return '${minutes}m ${seconds}s';
   }
 
-  void _handleExport(BuildContext context, String action, AppLanguage language) async {
+  void _handleExport(
+    BuildContext context,
+    String action,
+    AppLanguage language,
+  ) async {
     switch (action) {
       case 'copy':
         await TestExportService.copyToClipboard(session);
@@ -732,24 +724,18 @@ class _PinnedLesson {
   final int lessonId;
   final String title;
 
-  const _PinnedLesson({
-    required this.lessonId,
-    required this.title,
-  });
+  const _PinnedLesson({required this.lessonId, required this.title});
 }
 
 class _LessonRecommendationsData {
   final List<_LessonSuggestion> suggestions;
   final _PinnedLesson? pinned;
 
-  const _LessonRecommendationsData({
-    required this.suggestions,
-    this.pinned,
-  });
+  const _LessonRecommendationsData({required this.suggestions, this.pinned});
 
   const _LessonRecommendationsData.empty()
-      : suggestions = const [],
-        pinned = null;
+    : suggestions = const [],
+      pinned = null;
 }
 
 class _StatCard extends StatelessWidget {
@@ -788,10 +774,7 @@ class _StatCard extends StatelessWidget {
           ),
           Text(
             label,
-            style: TextStyle(
-              fontSize: 12,
-              color: color.withValues(alpha: 0.8),
-            ),
+            style: TextStyle(fontSize: 12, color: color.withValues(alpha: 0.8)),
           ),
         ],
       ),

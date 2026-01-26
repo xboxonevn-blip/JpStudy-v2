@@ -11,10 +11,13 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 // Audio imports removed
 import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/models/mistake_context.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/shared/widgets/widgets.dart';
 import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
 import 'package:jpstudy/features/lesson/widgets/kanji_list_widget.dart';
+import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
 // Stub import removed
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -37,17 +40,18 @@ class LessonDetailScreen extends ConsumerStatefulWidget {
 class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _showHints = true;
   bool _trackProgress = false;
+  final FsrsService _fsrsService = FsrsService();
 
-// _autoSpeak removed
+  // _autoSpeak removed
   bool _shuffle = false;
   bool _isAutoPlay = false;
-  
+
   final bool _focusMode = false;
   final Set<int> _flippedTermIds = {};
   final Set<int> _starredTermIds = {};
   final Set<int> _learnedTermIds = {};
   Set<int> _syncedTermIds = {};
-// _speed removed
+  // _speed removed
   _LessonMode _mode = _LessonMode.flashcards;
   int _currentIndex = 0;
   final Random _random = Random();
@@ -55,7 +59,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   Timer? _autoTimer;
 
   SharedPreferences? _prefs;
-// Audio/TTS fields removed
+  // Audio/TTS fields removed
   int _reviewedCount = 0;
   int _reviewAgainCount = 0;
   int _reviewHardCount = 0;
@@ -64,8 +68,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   static const _prefShowHints = 'lesson.showHints';
   static const _prefTrackProgress = 'lesson.trackProgress';
-
-
 
   @override
   void initState() {
@@ -102,8 +104,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final dueAsync = _mode == _LessonMode.review
         ? ref.watch(lessonDueTermsProvider(widget.lessonId))
         : const AsyncValue.data(<UserLessonTermData>[]);
-    final activeTermsAsync =
-        _mode == _LessonMode.review ? dueAsync : termsAsync;
+    final activeTermsAsync = _mode == _LessonMode.review
+        ? dueAsync
+        : termsAsync;
     final activeTerms =
         activeTermsAsync.asData?.value ?? const <UserLessonTermData>[];
     _maybeSyncTermFlags(terms);
@@ -112,22 +115,26 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final currentIndex = totalTerms == 0
         ? 0
         : _currentIndex.clamp(0, totalTerms - 1);
-    final currentTerm =
-        totalTerms == 0 ? null : displayTerms.elementAt(currentIndex);
+    final currentTerm = totalTerms == 0
+        ? null
+        : displayTerms.elementAt(currentIndex);
     final isSaved = terms.isNotEmpty && _starredTermIds.length == terms.length;
     final learnedCount = terms.where((term) => term.isLearned).length;
     final dueCount = dueAsync.asData?.value.length ?? 0;
-    final isStarred = currentTerm != null &&
-        _starredTermIds.contains(currentTerm.id);
-    final isLearned = currentTerm != null &&
-        _learnedTermIds.contains(currentTerm.id);
+    final isStarred =
+        currentTerm != null && _starredTermIds.contains(currentTerm.id);
+    final isLearned =
+        currentTerm != null && _learnedTermIds.contains(currentTerm.id);
+    final srsStateAsync = currentTerm == null
+        ? const AsyncValue<SrsStateData?>.data(null)
+        : ref.watch(srsStateProvider(currentTerm.id));
+    final srsState = srsStateAsync.valueOrNull;
     final isFlipped =
         currentTerm != null && _flippedTermIds.contains(currentTerm.id);
     final canFlip = currentTerm?.definition.trim().isNotEmpty == true;
     final onFlip = canFlip ? () => _toggleFlip(currentTerm) : null;
 
-
-// _maybeAutoSpeak removed
+    // _maybeAutoSpeak removed
 
     return DefaultTabController(
       length: 3,
@@ -135,57 +142,60 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         appBar: _focusMode
             ? null
             : AppBar(
-          toolbarHeight: 64,
-          automaticallyImplyLeading: false,
-          titleSpacing: 16,
-          title: Row(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.chevron_left),
-                tooltip: language.backToLessonLabel,
-                onPressed: () => context.pop(),
-              ),
-              const SizedBox(width: 4),
-              Expanded(
-                child: Text(
-                  '${level.shortLabel} / $title',
-                  overflow: TextOverflow.ellipsis,
+                toolbarHeight: 64,
+                automaticallyImplyLeading: false,
+                titleSpacing: 16,
+                title: Row(
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.chevron_left),
+                      tooltip: language.backToLessonLabel,
+                      onPressed: () => context.pop(),
+                    ),
+                    const SizedBox(width: 4),
+                    Expanded(
+                      child: Text(
+                        '${level.shortLabel} / $title',
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+                actions: [
+                  _SavedPill(
+                    label: language.savedLabel,
+                    active: isSaved,
+                    onTap: totalTerms == 0
+                        ? null
+                        : () => _toggleSaved(terms, level),
+                  ),
+                  const SizedBox(width: 8),
+                  _OverflowMenu(
+                    language: language,
+                    onSelected: (action) => _handleMenu(
+                      action,
+                      context,
+                      language,
+                      level,
+                      title,
+                      terms,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                ],
+                bottom: TabBar(
+                  labelColor: const Color(0xFF4255FF),
+                  unselectedLabelColor: const Color(0xFF6B7390),
+                  indicatorColor: const Color(0xFF4255FF),
+                  tabs: [
+                    Tab(
+                      text: language.flashcardsAction,
+                    ), // Reuse Flashcards label for Vocab for now
+                    Tab(text: language.grammarLabel),
+                    Tab(text: language.kanjiLabel),
+                  ],
                 ),
               ),
-            ],
-          ),
-          actions: [
-            _SavedPill(
-              label: language.savedLabel,
-              active: isSaved,
-              onTap:
-                  totalTerms == 0 ? null : () => _toggleSaved(terms, level),
-            ),
-            const SizedBox(width: 8),
-            _OverflowMenu(
-              language: language,
-              onSelected: (action) => _handleMenu(
-                action,
-                context,
-                language,
-                level,
-                title,
-                terms,
-              ),
-            ),
-            const SizedBox(width: 12),
-          ],
-          bottom: TabBar(
-            labelColor: const Color(0xFF4255FF),
-            unselectedLabelColor: const Color(0xFF6B7390),
-            indicatorColor: const Color(0xFF4255FF),
-            tabs: [
-              Tab(text: language.flashcardsAction), // Reuse Flashcards label for Vocab for now
-              Tab(text: language.grammarLabel),
-              Tab(text: language.kanjiLabel),
-            ],
-          ),
-        ),
         body: TabBarView(
           children: [
             FocusableActionDetector(
@@ -204,7 +214,12 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
               child: LayoutBuilder(
                 builder: (context, _) {
                   return SingleChildScrollView(
-                    padding: EdgeInsets.fromLTRB(20, _focusMode ? 20 : 12, 20, 24),
+                    padding: EdgeInsets.fromLTRB(
+                      20,
+                      _focusMode ? 20 : 12,
+                      20,
+                      24,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -243,103 +258,128 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                           const SizedBox(height: 20),
                         ],
                         Center(
-                      child: ConstrainedBox(
-                        constraints: const BoxConstraints(maxWidth: 960),
-                        child: SizedBox(
-                          height: _focusMode ? 520 : 460,
-                          child: AnimatedSwitcher(
-                            duration: const Duration(milliseconds: 300),
-                            transitionBuilder: (child, animation) {
-                              final offset = Tween<Offset>(
-                                begin: const Offset(1.0, 0.0),
-                                end: Offset.zero,
-                              ).animate(animation);
-                              return SlideTransition(
-                                position: offset,
-                                child: child,
-                              );
-                            },
-                            child: KeyedSubtree(
-                              key: ValueKey(currentIndex),
-                              child: _LessonCard(
-                                language: language,
-                                termsAsync: activeTermsAsync,
-                                term: currentTerm,
-                                showHints: _showHints,
-                                isFlipped: isFlipped,
-                                trackProgress: _trackProgress,
-                                isStarred: isStarred,
-                                isLearned: isLearned,
-                                emptyLabel: _mode == _LessonMode.review
-                                    ? language.reviewEmptyLabel
-                                    : null,
-                                onShowHintsChanged: (value) =>
-                                    _updateShowHints(value),
-                                onFlip: onFlip,
-                                onEdit: () => context.push(
-                                  '/lesson/${widget.lessonId}/edit',
+                          child: ConstrainedBox(
+                            constraints: const BoxConstraints(maxWidth: 960),
+                            child: SizedBox(
+                              height: _focusMode ? 520 : 460,
+                              child: AnimatedSwitcher(
+                                duration: const Duration(milliseconds: 300),
+                                transitionBuilder: (child, animation) {
+                                  final offset = Tween<Offset>(
+                                    begin: const Offset(1.0, 0.0),
+                                    end: Offset.zero,
+                                  ).animate(animation);
+                                  return SlideTransition(
+                                    position: offset,
+                                    child: child,
+                                  );
+                                },
+                                child: KeyedSubtree(
+                                  key: ValueKey(currentIndex),
+                                  child: _LessonCard(
+                                    language: language,
+                                    termsAsync: activeTermsAsync,
+                                    term: currentTerm,
+                                    showHints: _showHints,
+                                    isFlipped: isFlipped,
+                                    trackProgress: _trackProgress,
+                                    isStarred: isStarred,
+                                    isLearned: isLearned,
+                                    emptyLabel: _mode == _LessonMode.review
+                                        ? language.reviewEmptyLabel
+                                        : null,
+                                    onShowHintsChanged: (value) =>
+                                        _updateShowHints(value),
+                                    onFlip: onFlip,
+                                    onEdit: () => context.push(
+                                      '/lesson/${widget.lessonId}/edit',
+                                    ),
+                                    onStar: currentTerm == null
+                                        ? null
+                                        : () => _toggleStar(currentTerm, level),
+                                    onLearned:
+                                        !_trackProgress || currentTerm == null
+                                        ? null
+                                        : () => _toggleLearned(
+                                            currentTerm,
+                                            level,
+                                          ),
+                                    onStartLearning:
+                                        (_mode == _LessonMode.review &&
+                                            activeTerms.isEmpty &&
+                                            terms.isNotEmpty &&
+                                            learnedCount == 0)
+                                        ? _startLearning
+                                        : null,
+                                  ),
                                 ),
-                                onStar: currentTerm == null
-                                    ? null
-                                    : () => _toggleStar(currentTerm, level),
-                                onLearned: !_trackProgress || currentTerm == null
-                                    ? null
-                                    : () => _toggleLearned(currentTerm, level),
-                                onStartLearning: (_mode == _LessonMode.review &&
-                                        activeTerms.isEmpty &&
-                                        terms.isNotEmpty &&
-                                        learnedCount == 0)
-                                    ? _startLearning
-                                    : null,
                               ),
                             ),
                           ),
                         ),
-                      ),
+                        const SizedBox(height: 24),
+                        if (totalTerms > 0)
+                          _FlashcardControls(
+                            isShuffle: _shuffle,
+                            isAutoPlay: _isAutoPlay,
+                            onShuffle: _toggleShuffle,
+                            onAutoPlay: () => _toggleAutoPlay(totalTerms),
+                            onPrev: () => _goPrev(totalTerms),
+                            onNext: () => _goNext(totalTerms),
+                          ),
+                        if (_mode == _LessonMode.review) ...[
+                          const SizedBox(height: 16),
+                          if (srsState != null)
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 8),
+                              child: Text(
+                                language.retrievabilityPercentLabel(
+                                  (_fsrsService.retrievability(
+                                            stability: srsState.stability,
+                                            lastReviewedAt:
+                                                srsState.lastReviewedAt,
+                                          ) *
+                                          100)
+                                      .round(),
+                                ),
+                                style: Theme.of(context).textTheme.bodySmall
+                                    ?.copyWith(
+                                      color: Colors.grey[700],
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          _ReviewActions(
+                            language: language,
+                            enabled: currentTerm != null,
+                            onRate: currentTerm == null
+                                ? null
+                                : (level) =>
+                                      _reviewTerm(currentTerm, level.value),
+                          ),
+                          const SizedBox(height: 12),
+                          _ReviewSummary(
+                            language: language,
+                            reviewed: _reviewedCount,
+                            again: _reviewAgainCount,
+                            hard: _reviewHardCount,
+                            good: _reviewGoodCount,
+                            easy: _reviewEasyCount,
+                          ),
+                        ],
+                      ],
                     ),
-                  const SizedBox(height: 24),
-                  if (totalTerms > 0)
-                    _FlashcardControls(
-                      isShuffle: _shuffle,
-                      isAutoPlay: _isAutoPlay,
-                      onShuffle: _toggleShuffle,
-                      onAutoPlay: () => _toggleAutoPlay(totalTerms),
-                      onPrev: () => _goPrev(totalTerms),
-                      onNext: () => _goNext(totalTerms),
-                    ),
-                  if (_mode == _LessonMode.review) ...[
-                    const SizedBox(height: 16),
-                    _ReviewActions(
-                      language: language,
-                      enabled: currentTerm != null,
-                      onRate: currentTerm == null
-                          ? null
-                          : (level) => _reviewTerm(currentTerm, level.value),
-                    ),
-                    const SizedBox(height: 12),
-                    _ReviewSummary(
-                      language: language,
-                      reviewed: _reviewedCount,
-                      again: _reviewAgainCount,
-                      hard: _reviewHardCount,
-                      good: _reviewGoodCount,
-                      easy: _reviewEasyCount,
-                    ),
-                  ],
-                ],
+                  );
+                },
               ),
-            );
-          },
-        ),
             ),
             GrammarListWidget(
               lessonId: widget.lessonId,
               level: level.shortLabel,
               language: language,
             ),
-            KanjiListWidget(
-              lessonId: widget.lessonId,
-            ),
+            KanjiListWidget(lessonId: widget.lessonId),
           ],
         ),
       ),
@@ -386,10 +426,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     ref.invalidate(lessonMetaProvider(level.shortLabel));
   }
 
-  Future<void> _toggleStar(
-    UserLessonTermData term,
-    StudyLevel level,
-  ) async {
+  Future<void> _toggleStar(UserLessonTermData term, StudyLevel level) async {
     final repo = ref.read(lessonRepositoryProvider);
     final nextValue = !_starredTermIds.contains(term.id);
     setState(() {
@@ -407,10 +444,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     ref.invalidate(lessonMetaProvider(level.shortLabel));
   }
 
-  Future<void> _toggleLearned(
-    UserLessonTermData term,
-    StudyLevel level,
-  ) async {
+  Future<void> _toggleLearned(UserLessonTermData term, StudyLevel level) async {
     final repo = ref.read(lessonRepositoryProvider);
     final nextValue = !_learnedTermIds.contains(term.id);
     setState(() {
@@ -432,6 +466,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         box: 1,
         repetitions: 0,
         ease: 2.5,
+        stability: 1.0,
+        difficulty: 5.0,
         lastReviewedAt: now,
         nextReviewAt: now.add(const Duration(days: 1)),
       );
@@ -444,9 +480,33 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   Future<void> _reviewTerm(UserLessonTermData term, int quality) async {
     final repo = ref.read(lessonRepositoryProvider);
+    final mistakeRepo = ref.read(mistakeRepositoryProvider);
     // Use the comprehensive saveTermReview method which handles SRS calculation
     await repo.saveTermReview(termId: term.id, quality: quality);
-    
+
+    if (quality <= 2) {
+      final language = ref.read(appLanguageProvider);
+      final prompt = term.reading.isNotEmpty
+          ? '${term.term} • ${term.reading}'
+          : term.term;
+      final correctAnswer = language == AppLanguage.en
+          ? (term.definitionEn.isNotEmpty ? term.definitionEn : term.definition)
+          : term.definition;
+      await mistakeRepo.addMistake(
+        type: 'vocab',
+        itemId: term.id,
+        context: MistakeContext(
+          prompt: prompt,
+          correctAnswer: correctAnswer,
+          userAnswer: quality == 1 ? 'again' : 'hard',
+          source: 'lesson_review',
+          extra: {'confidence': quality},
+        ),
+      );
+    } else {
+      await mistakeRepo.markCorrect(type: 'vocab', itemId: term.id);
+    }
+
     ref.invalidate(lessonDueTermsProvider(widget.lessonId));
     if (!mounted) {
       return;
@@ -460,14 +520,14 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   Future<void> _startLearning() async {
     final repo = ref.read(lessonRepositoryProvider);
     await repo.initializeLessonSrs(widget.lessonId);
-    
+
     // Refresh providers to update UI
     ref.invalidate(lessonDueTermsProvider(widget.lessonId));
-    
+
     final language = ref.read(appLanguageProvider);
     final level = ref.read(studyLevelProvider) ?? StudyLevel.n5;
     final fallbackTitle = language.lessonTitle(widget.lessonId);
-    
+
     ref.invalidate(
       lessonTermsProvider(
         LessonTermsArgs(widget.lessonId, level.shortLabel, fallbackTitle),
@@ -500,16 +560,16 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   void _incrementReviewStats(int quality) {
     _reviewedCount += 1;
     switch (quality) {
-      case 0:
+      case 1:
         _reviewAgainCount += 1;
         break;
-      case 3:
+      case 2:
         _reviewHardCount += 1;
         break;
-      case 4:
+      case 3:
         _reviewGoodCount += 1;
         break;
-      case 5:
+      case 4:
         _reviewEasyCount += 1;
         break;
     }
@@ -519,10 +579,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     setState(() => _showHints = value);
     _saveBool(_prefShowHints, value);
   }
-
-
-
-
 
   Future<void> _loadSettings() async {
     final prefs = await SharedPreferences.getInstance();
@@ -534,7 +590,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       _showHints = prefs.getBool(_prefShowHints) ?? true;
       _trackProgress = prefs.getBool(_prefTrackProgress) ?? false;
 
-// Audio loading removed
+      // Audio loading removed
     });
   }
 
@@ -544,9 +600,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     await prefs.setBool(key, value);
   }
 
-
-
-// Audio helpers removed
+  // Audio helpers removed
 
   String _termKey(String term, String reading, String definition) {
     final cleanTerm = _normalizeKeyPart(term);
@@ -561,11 +615,16 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   void _maybeSyncTermFlags(List<UserLessonTermData> terms) {
     final ids = terms.map((term) => term.id).toSet();
-    final starred =
-        terms.where((term) => term.isStarred).map((term) => term.id).toSet();
-    final learned =
-        terms.where((term) => term.isLearned).map((term) => term.id).toSet();
-    final needsSync = !_setsEqual(ids, _syncedTermIds) ||
+    final starred = terms
+        .where((term) => term.isStarred)
+        .map((term) => term.id)
+        .toSet();
+    final learned = terms
+        .where((term) => term.isLearned)
+        .map((term) => term.id)
+        .toSet();
+    final needsSync =
+        !_setsEqual(ids, _syncedTermIds) ||
         !_setsEqual(starred, _starredTermIds) ||
         !_setsEqual(learned, _learnedTermIds);
     if (!needsSync) {
@@ -606,18 +665,18 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     }
     setState(() {
       if (_currentIndex >= total - 1) {
-         // Loop back to start if auto-playing or just stay?
-         // If auto-play, loop. If manual, maybe stop or loop?
-         // Standard is usually stop or loop. Let's loop for auto-play, stop for manual?
-         // Original code clamped.
-         // Let's loop if auto-play.
-         if (_isAutoPlay) {
-           _currentIndex = 0;
-         } else {
-           // Standard next button behavior: stop at end or loop?
-           // Quizlet stops at end usually. I'll stick to clamp for manual.
-           _currentIndex = (_currentIndex + 1).clamp(0, total - 1);
-         }
+        // Loop back to start if auto-playing or just stay?
+        // If auto-play, loop. If manual, maybe stop or loop?
+        // Standard is usually stop or loop. Let's loop for auto-play, stop for manual?
+        // Original code clamped.
+        // Let's loop if auto-play.
+        if (_isAutoPlay) {
+          _currentIndex = 0;
+        } else {
+          // Standard next button behavior: stop at end or loop?
+          // Quizlet stops at end usually. I'll stick to clamp for manual.
+          _currentIndex = (_currentIndex + 1).clamp(0, total - 1);
+        }
       } else {
         _currentIndex++;
       }
@@ -651,9 +710,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     }
   }
 
-
-
-// TTS methods removed
+  // TTS methods removed
 
   void _handleMenu(
     _MenuAction action,
@@ -682,10 +739,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     }
   }
 
-  Future<void> _showQuickAddTerm(
-    AppLanguage language,
-    StudyLevel level,
-  ) async {
+  Future<void> _showQuickAddTerm(AppLanguage language, StudyLevel level) async {
     final termController = TextEditingController();
     final readingController = TextEditingController();
     final definitionController = TextEditingController();
@@ -734,8 +788,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.of(context).pop(false),
-                  child:
-                      Text(MaterialLocalizations.of(context).cancelButtonLabel),
+                  child: Text(
+                    MaterialLocalizations.of(context).cancelButtonLabel,
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: canSave
@@ -765,17 +820,14 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       return;
     }
     final repo = ref.read(lessonRepositoryProvider);
-    await repo.appendTerms(
-      widget.lessonId,
-      [
-        LessonTermDraft(
-          term: term,
-          reading: reading,
-          definition: definition,
-          kanjiMeaning: '',
-        ),
-      ],
-    );
+    await repo.appendTerms(widget.lessonId, [
+      LessonTermDraft(
+        term: term,
+        reading: reading,
+        definition: definition,
+        kanjiMeaning: '',
+      ),
+    ]);
     ref.invalidate(lessonMetaProvider(level.shortLabel));
     ref.invalidate(
       lessonTermsProvider(
@@ -788,10 +840,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     );
   }
 
-  Future<void> _resetProgress(
-    AppLanguage language,
-    StudyLevel level,
-  ) async {
+  Future<void> _resetProgress(AppLanguage language, StudyLevel level) async {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -836,9 +885,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.resetProgressErrorLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.resetProgressErrorLabel)));
     }
   }
 
@@ -848,14 +897,13 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     List<UserLessonTermData> terms,
   ) async {
     if (terms.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.combineEmptyLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.combineEmptyLabel)));
       return;
     }
     final repo = ref.read(lessonRepositoryProvider);
-    final lessons =
-        await ref.read(lessonMetaProvider(level.shortLabel).future);
+    final lessons = await ref.read(lessonMetaProvider(level.shortLabel).future);
     if (!mounted) {
       return;
     }
@@ -873,8 +921,10 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
             children: [
               Text(
                 language.combineSetLabel,
-                style:
-                    const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
               const SizedBox(height: 8),
               ListTile(
@@ -886,8 +936,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
               for (final lesson in options)
                 ListTile(
                   title: Text(lesson.title),
-                  subtitle:
-                      Text(language.termsCountLabel(lesson.termCount)),
+                  subtitle: Text(language.termsCountLabel(lesson.termCount)),
                   onTap: () => Navigator.of(context).pop(lesson.id),
                 ),
             ],
@@ -920,8 +969,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(false),
-              child:
-                  Text(MaterialLocalizations.of(context).cancelButtonLabel),
+              child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
             ),
             ElevatedButton(
               onPressed: () => Navigator.of(context).pop(true),
@@ -962,9 +1010,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         return;
       }
       final existingKeys = existing
-          .map(
-            (term) => _termKey(term.term, term.reading, term.definition),
-          )
+          .map((term) => _termKey(term.term, term.reading, term.definition))
           .toSet();
       final filteredDrafts = <LessonTermDraft>[];
       var skipped = 0;
@@ -977,9 +1023,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         }
       }
       if (filteredDrafts.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(language.combineNoNewLabel)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(language.combineNoNewLabel)));
         return;
       }
       await repo.appendTerms(destinationId, filteredDrafts);
@@ -990,16 +1036,16 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       final message = skipped == 0
           ? language.combineSuccessLabel
           : language.combineSkippedLabel(skipped);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(message)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(message)));
     } catch (_) {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.combineErrorLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.combineErrorLabel)));
     }
   }
 
@@ -1022,9 +1068,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       final def = language == AppLanguage.en && term.definitionEn.isNotEmpty
           ? term.definitionEn
           : term.definition;
-      buffer.writeln(
-        '${i + 1}. ${term.term}\t${term.reading}\t$def',
-      );
+      buffer.writeln('${i + 1}. ${term.term}\t${term.reading}\t$def');
     }
     final reportText = buffer.toString();
     final copied = await showDialog<bool>(
@@ -1033,9 +1077,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         title: Text(language.reportLabel),
         content: SizedBox(
           width: 520,
-          child: SingleChildScrollView(
-            child: SelectableText(reportText),
-          ),
+          child: SingleChildScrollView(child: SelectableText(reportText)),
         ),
         actions: [
           TextButton(
@@ -1056,19 +1098,11 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     if (!mounted) {
       return;
     }
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(language.reportCopiedLabel)),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(language.reportCopiedLabel)));
   }
-
-
-
-
-
-
 }
-
-
 
 class _StatsRow extends StatelessWidget {
   const _StatsRow({
@@ -1089,18 +1123,9 @@ class _StatsRow extends StatelessWidget {
       spacing: 12,
       runSpacing: 8,
       children: [
-        _StatChip(
-          label: language.statsTotalLabel,
-          value: total.toString(),
-        ),
-        _StatChip(
-          label: language.statsLearnedLabel,
-          value: learned.toString(),
-        ),
-        _StatChip(
-          label: language.statsDueLabel,
-          value: due.toString(),
-        ),
+        _StatChip(label: language.statsTotalLabel, value: total.toString()),
+        _StatChip(label: language.statsLearnedLabel, value: learned.toString()),
+        _StatChip(label: language.statsDueLabel, value: due.toString()),
       ],
     );
   }
@@ -1126,16 +1151,10 @@ class _StatChip extends StatelessWidget {
         children: [
           Text(
             label,
-            style: const TextStyle(
-              fontSize: 12,
-              color: Color(0xFF6B7390),
-            ),
+            style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
           ),
           const SizedBox(width: 6),
-          Text(
-            value,
-            style: const TextStyle(fontWeight: FontWeight.w700),
-          ),
+          Text(value, style: const TextStyle(fontWeight: FontWeight.w700)),
         ],
       ),
     );
@@ -1156,9 +1175,7 @@ class _ReviewActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return enabled
-        ? ConfidenceRatingWidget(
-            onSelect: (level) => onRate?.call(level),
-          )
+        ? ConfidenceRatingWidget(onSelect: (level) => onRate?.call(level))
         : const SizedBox.shrink();
   }
 }
@@ -1187,36 +1204,18 @@ class _ReviewSummary extends StatelessWidget {
       runSpacing: 8,
       alignment: WrapAlignment.center,
       children: [
-        _SummaryChip(
-          label: language.reviewedLabel,
-          value: reviewed.toString(),
-        ),
-        _SummaryChip(
-          label: language.reviewAgainLabel,
-          value: again.toString(),
-        ),
-        _SummaryChip(
-          label: language.reviewHardLabel,
-          value: hard.toString(),
-        ),
-        _SummaryChip(
-          label: language.reviewGoodLabel,
-          value: good.toString(),
-        ),
-        _SummaryChip(
-          label: language.reviewEasyLabel,
-          value: easy.toString(),
-        ),
+        _SummaryChip(label: language.reviewedLabel, value: reviewed.toString()),
+        _SummaryChip(label: language.reviewAgainLabel, value: again.toString()),
+        _SummaryChip(label: language.reviewHardLabel, value: hard.toString()),
+        _SummaryChip(label: language.reviewGoodLabel, value: good.toString()),
+        _SummaryChip(label: language.reviewEasyLabel, value: easy.toString()),
       ],
     );
   }
 }
 
 class _SummaryChip extends StatelessWidget {
-  const _SummaryChip({
-    required this.label,
-    required this.value,
-  });
+  const _SummaryChip({required this.label, required this.value});
 
   final String label;
   final String value;
@@ -1238,10 +1237,7 @@ class _SummaryChip extends StatelessWidget {
             style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
           ),
           const SizedBox(width: 6),
-          Text(
-            value,
-            style: const TextStyle(fontWeight: FontWeight.w700),
-          ),
+          Text(value, style: const TextStyle(fontWeight: FontWeight.w700)),
         ],
       ),
     );
@@ -1282,10 +1278,7 @@ class _SavedPill extends StatelessWidget {
               color: active ? const Color(0xFF4255FF) : null,
             ),
             const SizedBox(width: 6),
-            Text(
-              label,
-              style: const TextStyle(fontWeight: FontWeight.w600),
-            ),
+            Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
           ],
         ),
       ),
@@ -1294,10 +1287,7 @@ class _SavedPill extends StatelessWidget {
 }
 
 class _OverflowMenu extends StatelessWidget {
-  const _OverflowMenu({
-    required this.language,
-    required this.onSelected,
-  });
+  const _OverflowMenu({required this.language, required this.onSelected});
 
   final AppLanguage language;
   final ValueChanged<_MenuAction> onSelected;
@@ -1307,19 +1297,19 @@ class _OverflowMenu extends StatelessWidget {
     return PopupMenuButton<_MenuAction>(
       onSelected: onSelected,
       icon: const Icon(Icons.more_horiz),
-        itemBuilder: (context) => [
-          PopupMenuItem(
-            value: _MenuAction.edit,
-            child: Text(language.copySetLabel),
-          ),
-          PopupMenuItem(
-            value: _MenuAction.addTerm,
-            child: Text(language.addTermLabel),
-          ),
-          PopupMenuItem(
-            value: _MenuAction.reset,
-            child: Text(language.resetProgressLabel),
-          ),
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          value: _MenuAction.edit,
+          child: Text(language.copySetLabel),
+        ),
+        PopupMenuItem(
+          value: _MenuAction.addTerm,
+          child: Text(language.addTermLabel),
+        ),
+        PopupMenuItem(
+          value: _MenuAction.reset,
+          child: Text(language.resetProgressLabel),
+        ),
         PopupMenuItem(
           value: _MenuAction.combine,
           child: Text(language.combineSetLabel),
@@ -1442,10 +1432,7 @@ class _PracticeActions extends StatelessWidget {
 }
 
 class _PracticeButton extends StatelessWidget {
-  const _PracticeButton({
-    required this.label,
-    required this.onTap,
-  });
+  const _PracticeButton({required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
@@ -1527,10 +1514,7 @@ class _LessonCard extends StatelessWidget {
                     const SizedBox(width: 6),
                     Text(language.showHintsLabel),
                     const SizedBox(width: 8),
-                    Switch(
-                      value: showHints,
-                      onChanged: onShowHintsChanged,
-                    ),
+                    Switch(value: showHints, onChanged: onShowHintsChanged),
                   ],
                 ),
                 const Spacer(),
@@ -1541,8 +1525,12 @@ class _LessonCard extends StatelessWidget {
                       IconButton(
                         onPressed: onLearned,
                         icon: Icon(
-                          isLearned ? Icons.check_circle : Icons.check_circle_outline,
-                          color: isLearned ? const Color(0xFF22C55E) : const Color(0xFF8F9BB3),
+                          isLearned
+                              ? Icons.check_circle
+                              : Icons.check_circle_outline,
+                          color: isLearned
+                              ? const Color(0xFF22C55E)
+                              : const Color(0xFF8F9BB3),
                         ),
                         tooltip: 'Learned',
                         padding: EdgeInsets.zero,
@@ -1550,17 +1538,21 @@ class _LessonCard extends StatelessWidget {
                       ),
                     const SizedBox(width: 16),
                     IconButton(
-                        onPressed: onStar,
-                        icon: Icon(
-                          isStarred ? Icons.star_rounded : Icons.star_border_rounded,
-                          color: isStarred ? const Color(0xFFFFC107) : const Color(0xFF8F9BB3),
-                          size: 26,
-                        ),
-                        tooltip: 'Star',
-                        padding: EdgeInsets.zero,
-                        constraints: const BoxConstraints(),
+                      onPressed: onStar,
+                      icon: Icon(
+                        isStarred
+                            ? Icons.star_rounded
+                            : Icons.star_border_rounded,
+                        color: isStarred
+                            ? const Color(0xFFFFC107)
+                            : const Color(0xFF8F9BB3),
+                        size: 26,
                       ),
-                     const SizedBox(width: 16),
+                      tooltip: 'Star',
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints(),
+                    ),
+                    const SizedBox(width: 16),
                     IconButton(
                       onPressed: onEdit,
                       icon: const Icon(
@@ -1644,13 +1636,17 @@ class _CardContent extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF4255FF),
                 foregroundColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              child: const Text('Start Learning'), // Localize if possible, but hardcode for now as req
+              child: const Text(
+                'Start Learning',
+              ), // Localize if possible, but hardcode for now as req
             ),
           ],
         );
@@ -1667,8 +1663,9 @@ class _CardContent extends StatelessWidget {
     }
 
     final showBack = isFlipped && resolvedTerm.definition.trim().isNotEmpty;
-    final hintText =
-        showHints ? _hintForDefinition(resolvedTerm.definition) : '';
+    final hintText = showHints
+        ? _hintForDefinition(resolvedTerm.definition)
+        : '';
 
     final front = _CardFace(
       key: const ValueKey(false),
@@ -1684,7 +1681,8 @@ class _CardContent extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          if (resolvedTerm.reading.isNotEmpty && language != AppLanguage.ja) ...[
+          if (resolvedTerm.reading.isNotEmpty &&
+              language != AppLanguage.ja) ...[
             const SizedBox(height: 6),
             Text(
               resolvedTerm.reading,
@@ -1692,7 +1690,8 @@ class _CardContent extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ],
-          if (language == AppLanguage.vi && resolvedTerm.kanjiMeaning.isNotEmpty) ...[
+          if (language == AppLanguage.vi &&
+              resolvedTerm.kanjiMeaning.isNotEmpty) ...[
             const SizedBox(height: 8),
             Text(
               resolvedTerm.kanjiMeaning,
@@ -1732,19 +1731,16 @@ class _CardContent extends StatelessWidget {
           language == AppLanguage.ja
               ? resolvedTerm.reading
               : (language == AppLanguage.en &&
-                      resolvedTerm.definitionEn.isNotEmpty
-                  ? resolvedTerm.definitionEn
-                  : resolvedTerm.definition),
+                        resolvedTerm.definitionEn.isNotEmpty
+                    ? resolvedTerm.definitionEn
+                    : resolvedTerm.definition),
           style: const TextStyle(fontSize: 18, color: Color(0xFF1C2440)),
           textAlign: TextAlign.center,
         ),
       ],
     );
 
-    final back = _CardFace(
-      key: const ValueKey(true),
-      child: backContent,
-    );
+    final back = _CardFace(key: const ValueKey(true), child: backContent);
 
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 320),
@@ -1880,11 +1876,11 @@ class _FlashcardControls extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         border: Border.all(color: const Color(0xFFE1E6F0)),
         boxShadow: const [
-           BoxShadow(
-             color: Color(0x05000000),
-             blurRadius: 10,
-             offset: Offset(0, 4),
-           ),
+          BoxShadow(
+            color: Color(0x05000000),
+            blurRadius: 10,
+            offset: Offset(0, 4),
+          ),
         ],
       ),
       child: Row(
@@ -1894,16 +1890,14 @@ class _FlashcardControls extends StatelessWidget {
             onPressed: onShuffle,
             icon: Icon(
               isShuffle ? Icons.shuffle_on_outlined : Icons.shuffle,
-              color: isShuffle ? const Color(0xFF4255FF) : const Color(0xFF6B7390),
+              color: isShuffle
+                  ? const Color(0xFF4255FF)
+                  : const Color(0xFF6B7390),
             ),
             tooltip: 'Shuffle',
           ),
           const SizedBox(width: 8),
-          Container(
-             width: 1, 
-             height: 24, 
-             color: const Color(0xFFE1E6F0),
-          ),
+          Container(width: 1, height: 24, color: const Color(0xFFE1E6F0)),
           const SizedBox(width: 8),
           IconButton(
             onPressed: onPrev,
@@ -1934,8 +1928,3 @@ class _FlashcardControls extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

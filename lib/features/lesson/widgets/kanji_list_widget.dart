@@ -18,7 +18,9 @@ class KanjiListWidget extends ConsumerWidget {
     return kanjiAsync.when(
       data: (items) {
         if (items.isEmpty) {
-          return const Center(child: Text('Chưa có dữ liệu Hán tự cho bài này.'));
+          return const Center(
+            child: Text('Chưa có dữ liệu Hán tự cho bài này.'),
+          );
         }
 
         return ListView.builder(
@@ -26,26 +28,28 @@ class KanjiListWidget extends ConsumerWidget {
           itemCount: items.length,
           itemBuilder: (context, index) {
             final KanjiItem item = items[index];
-            
+
             String primaryMeaning;
             String subtitle;
 
             switch (language) {
               case AppLanguage.vi:
                 primaryMeaning = item.meaning;
-                subtitle = 'On: ${item.onyomi ?? "-"} | Kun: ${item.kunyomi ?? "-"}';
+                subtitle =
+                    'On: ${item.onyomi ?? "-"} | Kun: ${item.kunyomi ?? "-"}';
                 break;
               case AppLanguage.en:
                 primaryMeaning = item.meaningEn ?? item.meaning;
-                subtitle = 'On: ${item.onyomi ?? "-"} | Kun: ${item.kunyomi ?? "-"}';
+                subtitle =
+                    'On: ${item.onyomi ?? "-"} | Kun: ${item.kunyomi ?? "-"}';
                 break;
               case AppLanguage.ja:
                 final readings = [
                   if (item.onyomi != null) item.onyomi,
-                  if (item.kunyomi != null) item.kunyomi
+                  if (item.kunyomi != null) item.kunyomi,
                 ].join(' / ');
                 primaryMeaning = readings.isNotEmpty ? readings : item.meaning;
-                subtitle = item.meaning; 
+                subtitle = item.meaning;
                 break;
             }
 
@@ -85,30 +89,42 @@ class KanjiListWidget extends ConsumerWidget {
                             child: Text('Nghĩa Việt: ${item.meaning}'),
                           ),
                         if (language == AppLanguage.en)
-                           Padding(
+                          Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: Text('Meaning: ${item.meaningEn ?? item.meaning}'),
+                            child: Text(
+                              'Meaning: ${item.meaningEn ?? item.meaning}',
+                            ),
                           ),
-                         if (language != AppLanguage.en && item.meaningEn != null)
+                        if (language != AppLanguage.en &&
+                            item.meaningEn != null)
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
                             child: Text('Nghĩa Anh: ${item.meaningEn}'),
                           ),
-                        Text(language == AppLanguage.en 
-                            ? 'Strokes: ${item.strokeCount}' 
-                            : 'Số nét: ${item.strokeCount}'),
-                        if (item.mnemonicVi != null && item.mnemonicVi!.isNotEmpty) ...[
+                        Text(
+                          language == AppLanguage.en
+                              ? 'Strokes: ${item.strokeCount}'
+                              : 'Số nét: ${item.strokeCount}',
+                        ),
+                        if (item.mnemonicVi != null &&
+                            item.mnemonicVi!.isNotEmpty) ...[
                           const SizedBox(height: 12),
                           Container(
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
                               color: Colors.amber.withValues(alpha: 0.1),
                               borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: Colors.amber.withValues(alpha: 0.2)),
+                              border: Border.all(
+                                color: Colors.amber.withValues(alpha: 0.2),
+                              ),
                             ),
                             child: Row(
                               children: [
-                                const Icon(Icons.lightbulb_outline, color: Colors.amber, size: 20),
+                                const Icon(
+                                  Icons.lightbulb_outline,
+                                  color: Colors.amber,
+                                  size: 20,
+                                ),
                                 const SizedBox(width: 8),
                                 Expanded(
                                   child: Text(
@@ -130,31 +146,34 @@ class KanjiListWidget extends ConsumerWidget {
                             language == AppLanguage.en ? 'Examples:' : 'Ví dụ:',
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          ...item.examples.map((ex) => Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 4),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      ex.word,
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
+                          ...item.examples.map(
+                            (ex) => Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 4),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    ex.word,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
                                     ),
-                                    const SizedBox(width: 8),
-                                    Text('(${ex.reading})'),
-                                    const Spacer(),
-                                    Flexible(
-                                      child: Text(
-                                        language == AppLanguage.en
-                                            ? (ex.meaningEn ?? ex.meaning)
-                                            : ex.meaning,
-                                        textAlign: TextAlign.right,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Text('(${ex.reading})'),
+                                  const Spacer(),
+                                  Flexible(
+                                    child: Text(
+                                      language == AppLanguage.en
+                                          ? (ex.meaningEn ?? ex.meaning)
+                                          : ex.meaning,
+                                      textAlign: TextAlign.right,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
-                                  ],
-                                ),
-                              )),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ],
                       ],
                     ),

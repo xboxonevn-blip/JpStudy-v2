@@ -25,7 +25,8 @@ class JuicyButton extends StatefulWidget {
   State<JuicyButton> createState() => _JuicyButtonState();
 }
 
-class _JuicyButtonState extends State<JuicyButton> with SingleTickerProviderStateMixin {
+class _JuicyButtonState extends State<JuicyButton>
+    with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _scale;
 
@@ -37,9 +38,10 @@ class _JuicyButtonState extends State<JuicyButton> with SingleTickerProviderStat
       duration: const Duration(milliseconds: 100),
       reverseDuration: const Duration(milliseconds: 100),
     );
-    _scale = Tween<double>(begin: 1.0, end: 0.95).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
+    _scale = Tween<double>(
+      begin: 1.0,
+      end: 0.95,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
   }
 
   @override
@@ -50,15 +52,15 @@ class _JuicyButtonState extends State<JuicyButton> with SingleTickerProviderStat
 
   Future<void> _handleTap() async {
     if (!widget.enabled) return;
-    
+
     // Haptic feedback
     HapticFeedback.lightImpact();
-    
+
     // Animate down
     await _controller.forward();
     // Animate up
     await _controller.reverse();
-    
+
     // Execute callback
     widget.onPressed();
   }
@@ -67,7 +69,9 @@ class _JuicyButtonState extends State<JuicyButton> with SingleTickerProviderStat
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final baseColor = widget.color ?? theme.colorScheme.primary;
-    final shadowColor = HSLColor.fromColor(baseColor).withLightness(0.4).toColor();
+    final shadowColor = HSLColor.fromColor(
+      baseColor,
+    ).withLightness(0.4).toColor();
 
     return GestureDetector(
       onTapDown: (_) => widget.enabled ? _controller.forward() : null,
@@ -77,16 +81,15 @@ class _JuicyButtonState extends State<JuicyButton> with SingleTickerProviderStat
       child: AnimatedBuilder(
         animation: _scale,
         builder: (context, child) {
-          return Transform.scale(
-            scale: _scale.value,
-            child: child,
-          );
+          return Transform.scale(scale: _scale.value, child: child);
         },
         child: Container(
           height: widget.height,
           width: widget.width,
           decoration: BoxDecoration(
-            color: widget.enabled ? baseColor : theme.colorScheme.surfaceContainerHighest,
+            color: widget.enabled
+                ? baseColor
+                : theme.colorScheme.surfaceContainerHighest,
             borderRadius: BorderRadius.circular(16),
             boxShadow: widget.enabled
                 ? [
@@ -105,7 +108,9 @@ class _JuicyButtonState extends State<JuicyButton> with SingleTickerProviderStat
                 if (widget.icon != null) ...[
                   Icon(
                     widget.icon,
-                    color: widget.enabled ? Colors.white : theme.colorScheme.onSurfaceVariant,
+                    color: widget.enabled
+                        ? Colors.white
+                        : theme.colorScheme.onSurfaceVariant,
                     size: 20,
                   ),
                   const SizedBox(width: 8),
@@ -113,7 +118,9 @@ class _JuicyButtonState extends State<JuicyButton> with SingleTickerProviderStat
                 Text(
                   widget.label,
                   style: theme.textTheme.titleMedium?.copyWith(
-                    color: widget.enabled ? Colors.white : theme.colorScheme.onSurfaceVariant,
+                    color: widget.enabled
+                        ? Colors.white
+                        : theme.colorScheme.onSurfaceVariant,
                     fontWeight: FontWeight.w800,
                   ),
                 ),

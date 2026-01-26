@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../features/grammar/grammar_providers.dart';
+import '../../../features/mistakes/repositories/mistake_repository.dart';
+import '../../../data/db/app_database.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../common/widgets/clay_card.dart';
 import '../models/grammar_point_data.dart';
@@ -15,13 +17,14 @@ class GhostReviewScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
     final ghostsAsync = ref.watch(grammarGhostsProvider);
+    final mistakesAsync = ref.watch(mistakesByTypeProvider('grammar'));
 
     return Scaffold(
       backgroundColor: AppThemeV2.surface,
       appBar: AppBar(
-        title: const Text(
-          'Ghost Reviews',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        title: Text(
+          language.ghostReviewsLabel,
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -32,11 +35,7 @@ class GhostReviewScreen extends ConsumerWidget {
             icon: const Icon(Icons.info_outline),
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text(
-                    'Review grammar points you missed in previous tests.',
-                  ),
-                ),
+                SnackBar(content: Text(language.ghostReviewInfoLabel)),
               );
             },
           ),
@@ -44,6 +43,10 @@ class GhostReviewScreen extends ConsumerWidget {
       ),
       body: ghostsAsync.when(
         data: (ghosts) {
+          final mistakes = mistakesAsync.valueOrNull ?? const <UserMistake>[];
+          final mistakeMap = {
+            for (final mistake in mistakes) mistake.itemId: mistake,
+          };
           if (ghosts.isEmpty) {
             return Center(
               child: Column(
@@ -57,7 +60,7 @@ class GhostReviewScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    'No Ghosts!',
+                    language.ghostReviewEmptyTitle,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -66,7 +69,7 @@ class GhostReviewScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'You haven\'t missed any grammar points yet.\nKeep up the good work!',
+                    language.ghostReviewEmptySubtitle,
                     textAlign: TextAlign.center,
                     style: TextStyle(color: AppThemeV2.textSub),
                   ),
@@ -85,9 +88,14 @@ class GhostReviewScreen extends ConsumerWidget {
             itemCount: ghosts.length,
             itemBuilder: (context, index) {
               final data = ghosts[index];
+              final mistake = mistakeMap[data.point.id];
               return Padding(
                 padding: const EdgeInsets.only(bottom: 16),
-                child: _GhostClayCard(data: data, language: language),
+                child: _GhostClayCard(
+                  data: data,
+                  language: language,
+                  mistake: mistake,
+                ),
               );
             },
           );
@@ -109,9 +117,9 @@ class GhostReviewScreen extends ConsumerWidget {
                     ),
                   );
                 },
-                label: const Text(
-                  'Practice Ghosts',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                label: Text(
+                  language.practiceGhostsLabel,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 icon: const Icon(Icons.videogame_asset),
               ),
@@ -124,8 +132,13 @@ class GhostReviewScreen extends ConsumerWidget {
 class _GhostClayCard extends StatefulWidget {
   final GrammarPointData data;
   final AppLanguage language;
+  final UserMistake? mistake;
 
-  const _GhostClayCard({required this.data, required this.language});
+  const _GhostClayCard({
+    required this.data,
+    required this.language,
+    this.mistake,
+  });
 
   @override
   State<_GhostClayCard> createState() => _GhostClayCardState();
@@ -137,7 +150,8 @@ class _GhostClayCardState extends State<_GhostClayCard> {
   @override
   Widget build(BuildContext context) {
     final point = widget.data.point;
-    final isVietnamese = widget.language == AppLanguage.vi;
+    final language = widget.language;
+    final isVietnamese = language == AppLanguage.vi;
     final title = isVietnamese
         ? point.meaningVi
         : point.titleEn ?? point.grammarPoint;
@@ -204,7 +218,7 @@ class _GhostClayCardState extends State<_GhostClayCard> {
               padding: EdgeInsets.symmetric(vertical: 16),
               child: Divider(height: 1),
             ),
-            _buildLabel('Connection'),
+            _buildLabel(language.grammarConnectionLabel),
             Text(
               connection ?? '',
               style: const TextStyle(
@@ -213,13 +227,18 @@ class _GhostClayCardState extends State<_GhostClayCard> {
               ),
             ),
             const SizedBox(height: 16),
-            _buildLabel('Explanation'),
+            _buildLabel(language.grammarExplanationLabel),
             Text(
               explanation ?? '',
               style: const TextStyle(color: AppThemeV2.textMain, height: 1.4),
             ),
+            if (widget.mistake != null) ...[
+              const SizedBox(height: 16),
+              _buildLabel(language.mistakeContextTitle),
+              _buildMistakeContext(language, widget.mistake!),
+            ],
             const SizedBox(height: 16),
-            _buildLabel('Examples'),
+            _buildLabel(language.grammarExamplesLabel),
             ...widget.data.examples.map(
               (ex) => Padding(
                 padding: const EdgeInsets.only(top: 12.0),
@@ -273,5 +292,83 @@ class _GhostClayCardState extends State<_GhostClayCard> {
         ),
       ),
     );
+  }
+
+  Widget _buildMistakeContext(AppLanguage language, UserMistake mistake) {
+    final rows = <Widget>[];
+    void addRow(String label, String? value) {
+      final cleaned = (value ?? '').trim();
+      if (cleaned.isEmpty) return;
+      rows.add(_buildContextRow(label, cleaned));
+    }
+
+    addRow(language.mistakePromptLabel, mistake.prompt);
+    addRow(language.mistakeYourAnswerLabel, mistake.userAnswer);
+    addRow(language.mistakeCorrectAnswerLabel, mistake.correctAnswer);
+    final sourceLabel = _sourceLabel(language, mistake.source);
+    if (sourceLabel.isNotEmpty) {
+      rows.add(_buildContextRow(language.mistakeSourceLabel, sourceLabel));
+    }
+
+    if (rows.isEmpty) {
+      return Text(
+        language.mistakeContextEmptyLabel,
+        style: const TextStyle(color: AppThemeV2.textSub),
+      );
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: rows
+          .map(
+            (row) =>
+                Padding(padding: const EdgeInsets.only(bottom: 6), child: row),
+          )
+          .toList(),
+    );
+  }
+
+  Widget _buildContextRow(String label, String value) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 90,
+          child: Text(
+            label,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+              color: AppThemeV2.textSub,
+            ),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value,
+            style: const TextStyle(fontSize: 12, color: AppThemeV2.textMain),
+          ),
+        ),
+      ],
+    );
+  }
+
+  String _sourceLabel(AppLanguage language, String? source) {
+    switch (source) {
+      case 'learn':
+        return language.mistakeSourceLearnLabel;
+      case 'review':
+        return language.mistakeSourceReviewLabel;
+      case 'lesson_review':
+        return language.mistakeSourceLessonReviewLabel;
+      case 'test':
+        return language.mistakeSourceTestLabel;
+      case 'grammar_practice':
+        return language.mistakeSourceGrammarPracticeLabel;
+      case 'handwriting':
+        return language.mistakeSourceHandwritingLabel;
+      default:
+        return (source ?? '').trim();
+    }
   }
 }

@@ -13,7 +13,8 @@ class FlashcardSettingsDialog extends StatefulWidget {
   });
 
   @override
-  State<FlashcardSettingsDialog> createState() => _FlashcardSettingsDialogState();
+  State<FlashcardSettingsDialog> createState() =>
+      _FlashcardSettingsDialogState();
 }
 
 class _FlashcardSettingsDialogState extends State<FlashcardSettingsDialog> {
@@ -119,16 +120,10 @@ class _FlashcardSettingsDialogState extends State<FlashcardSettingsDialog> {
     required ValueChanged<bool> onChanged,
   }) {
     return SwitchListTile(
-      title: Text(
-        title,
-        style: const TextStyle(fontWeight: FontWeight.w600),
-      ),
+      title: Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
       subtitle: Text(
         subtitle,
-        style: TextStyle(
-          fontSize: 12,
-          color: Colors.grey[600],
-        ),
+        style: TextStyle(fontSize: 12, color: Colors.grey[600]),
       ),
       value: value,
       onChanged: onChanged,

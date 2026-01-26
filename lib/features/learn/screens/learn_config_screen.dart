@@ -74,9 +74,7 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
   @override
   void initState() {
     super.initState();
-    _config = LearnConfig(
-      questionCount: widget.maxTerms.clamp(10, 50),
-    );
+    _config = LearnConfig(questionCount: widget.maxTerms.clamp(10, 50));
     _resumeSnapshot = widget.resumeSnapshot;
   }
 
@@ -127,20 +125,13 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [
-            Colors.purple,
-            Colors.purple.withValues(alpha: 0.7),
-          ],
+          colors: [Colors.purple, Colors.purple.withValues(alpha: 0.7)],
         ),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         children: [
-          const Icon(
-            Icons.psychology_rounded,
-            size: 48,
-            color: Colors.white,
-          ),
+          const Icon(Icons.psychology_rounded, size: 48, color: Colors.white),
           const SizedBox(width: 16),
           Expanded(
             child: Column(
@@ -156,10 +147,7 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
                 ),
                 Text(
                   language.learnTermsAvailableLabel(widget.maxTerms),
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.white70,
-                  ),
+                  style: const TextStyle(fontSize: 14, color: Colors.white70),
                 ),
               ],
             ),
@@ -174,7 +162,9 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
     final progress = snapshot.totalQuestions == 0
         ? 0
         : (snapshot.answeredCount / snapshot.totalQuestions * 100).round();
-    final lastSaved = MaterialLocalizations.of(context).formatMediumDate(snapshot.lastSavedAt);
+    final lastSaved = MaterialLocalizations.of(
+      context,
+    ).formatMediumDate(snapshot.lastSavedAt);
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -187,10 +177,7 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
         children: [
           Text(
             language.resumeSessionTitle,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-            ),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
           ),
           const SizedBox(height: 6),
           Text(
@@ -239,21 +226,23 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
           children: [10, 20, 30, widget.maxTerms]
               .where((n) => n <= widget.maxTerms)
               .toSet()
-              .map((count) => ChoiceChip(
-                    label: Text(
-                      count == widget.maxTerms
-                          ? language.allCountLabel(count)
-                          : '$count',
-                    ),
-                    selected: _config.questionCount == count,
-                    onSelected: (selected) {
-                      if (selected) {
-                        setState(() {
-                          _config = _config.copyWith(questionCount: count);
-                        });
-                      }
-                    },
-                  ))
+              .map(
+                (count) => ChoiceChip(
+                  label: Text(
+                    count == widget.maxTerms
+                        ? language.allCountLabel(count)
+                        : '$count',
+                  ),
+                  selected: _config.questionCount == count,
+                  onSelected: (selected) {
+                    if (selected) {
+                      setState(() {
+                        _config = _config.copyWith(questionCount: count);
+                      });
+                    }
+                  },
+                ),
+              )
               .toList(),
         ),
       ],
@@ -343,10 +332,7 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
   Widget _buildSectionTitle(String title) {
     return Text(
       title,
-      style: const TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
+      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
     );
   }
 

@@ -8,23 +8,19 @@ class FlashcardSessionNotifier extends StateNotifier<FlashcardSession> {
   final int lessonId;
   final int totalTerms;
 
-  FlashcardSessionNotifier({
-    required this.lessonId,
-    required this.totalTerms,
-  }) : super(
-          FlashcardSession(
-            sessionId: const Uuid().v4(),
-            lessonId: lessonId,
-            startedAt: DateTime.now(),
-          ),
-        );
+  FlashcardSessionNotifier({required this.lessonId, required this.totalTerms})
+    : super(
+        FlashcardSession(
+          sessionId: const Uuid().v4(),
+          lessonId: lessonId,
+          startedAt: DateTime.now(),
+        ),
+      );
 
   void handleSwipe(int termId, SwipeAction action) {
     switch (action) {
       case SwipeAction.know:
-        state = state.copyWith(
-          knownTermIds: [...state.knownTermIds, termId],
-        );
+        state = state.copyWith(knownTermIds: [...state.knownTermIds, termId]);
         break;
       case SwipeAction.needPractice:
         state = state.copyWith(
@@ -63,12 +59,14 @@ class FlashcardSessionNotifier extends StateNotifier<FlashcardSession> {
 }
 
 // Provider factory
-final flashcardSessionProvider = StateNotifierProvider.family<
-    FlashcardSessionNotifier,
-    FlashcardSession,
-    ({int lessonId, int totalTerms})>(
-  (ref, params) => FlashcardSessionNotifier(
-    lessonId: params.lessonId,
-    totalTerms: params.totalTerms,
-  ),
-);
+final flashcardSessionProvider =
+    StateNotifierProvider.family<
+      FlashcardSessionNotifier,
+      FlashcardSession,
+      ({int lessonId, int totalTerms})
+    >(
+      (ref, params) => FlashcardSessionNotifier(
+        lessonId: params.lessonId,
+        totalTerms: params.totalTerms,
+      ),
+    );

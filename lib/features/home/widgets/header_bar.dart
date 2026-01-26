@@ -6,7 +6,6 @@ import 'package:jpstudy/core/study_level.dart';
 
 import '../providers/dashboard_provider.dart';
 
-
 import '../../../theme/app_theme_v2.dart';
 
 class HeaderBar extends StatelessWidget {
@@ -93,7 +92,7 @@ class _HeaderStats extends ConsumerWidget {
     final reviews = (stats?.vocabDue ?? 0) + (stats?.grammarDue ?? 0);
 
     // If loading, show zeros or skeleton? 0s for now.
-    
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -121,8 +120,7 @@ class _HeaderStats extends ConsumerWidget {
         ),
         const SizedBox(width: 8),
         // Level Indicator
-        if (level != null)
-           _LevelBadge(label: level!.shortLabel),
+        if (level != null) _LevelBadge(label: level!.shortLabel),
       ],
     );
   }
@@ -182,7 +180,7 @@ class _StatCapsule extends StatelessWidget {
 
 class _LevelBadge extends StatelessWidget {
   const _LevelBadge({required this.label});
-  
+
   final String label;
 
   @override
@@ -214,31 +212,31 @@ class _LevelBadge extends StatelessWidget {
 
 class _ProfileAvatar extends StatelessWidget {
   final VoidCallback onTap;
-  
+
   const _ProfileAvatar({required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-     return GestureDetector(
-       onTap: onTap,
-       child: Container(
-         width: 36,
-         height: 36,
-         decoration: BoxDecoration(
-           shape: BoxShape.circle,
-           color: AppThemeV2.surface,
-           border: Border.all(color: Colors.white, width: 2),
-           boxShadow: [
-             BoxShadow(
-               color: Colors.black.withValues(alpha: 0.1),
-               blurRadius: 4,
-             ),
-           ],
-         ),
-         child: const Center(
-           child: Icon(Icons.person, color: AppThemeV2.textSub, size: 20),
-         ),
-       ),
-     );
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 36,
+        height: 36,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppThemeV2.surface,
+          border: Border.all(color: Colors.white, width: 2),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.1),
+              blurRadius: 4,
+            ),
+          ],
+        ),
+        child: const Center(
+          child: Icon(Icons.person, color: AppThemeV2.textSub, size: 20),
+        ),
+      ),
+    );
   }
 }

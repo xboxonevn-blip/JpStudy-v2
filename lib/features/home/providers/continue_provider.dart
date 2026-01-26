@@ -1,4 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
 import '../../../../core/level_provider.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import 'dashboard_provider.dart';
@@ -7,11 +9,12 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
   final level = ref.watch(studyLevelProvider);
   final lessonRepo = ref.watch(lessonRepositoryProvider);
   final dashboardAsync = ref.watch(dashboardProvider);
+  final language = ref.watch(appLanguageProvider);
 
   if (!dashboardAsync.hasValue) {
-    yield const ContinueAction(
+    yield ContinueAction(
       type: ContinueActionType.practiceMixed,
-      label: 'Practice',
+      label: language.practiceLabel,
       count: null,
     );
     return;
@@ -23,7 +26,7 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
   if (dashboard.grammarDue > 0) {
     yield ContinueAction(
       type: ContinueActionType.grammarReview,
-      label: 'Review Grammar',
+      label: language.reviewGrammarLabel,
       count: dashboard.grammarDue,
     );
     return;
@@ -33,7 +36,7 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
   if (dashboard.vocabDue > 0) {
     yield ContinueAction(
       type: ContinueActionType.vocabReview,
-      label: 'Review Vocab',
+      label: language.reviewVocabLabel,
       count: dashboard.vocabDue,
     );
     return;
@@ -43,19 +46,21 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
   if (dashboard.totalMistakeCount > 0) {
     yield ContinueAction(
       type: ContinueActionType.fixMistakes,
-      label: 'Fix Mistakes',
-      count: dashboard.vocabMistakeCount,
+      label: language.fixMistakesLabel,
+      count: dashboard.totalMistakeCount,
     );
     return;
   }
 
   // Priority 4: Next Lesson (Find the first not-fully-completed lesson)
   if (level != null) {
-    final nextLessonId = await lessonRepo.findNextToStudyLesson(level.shortLabel);
+    final nextLessonId = await lessonRepo.findNextToStudyLesson(
+      level.shortLabel,
+    );
     if (nextLessonId != null) {
       yield ContinueAction(
         type: ContinueActionType.nextLesson,
-        label: 'Next Lesson',
+        label: language.lessonTitle(nextLessonId),
         data: nextLessonId,
       );
       return;
@@ -63,9 +68,9 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
   }
 
   // Fallback: Practice Mixed if nothing else
-  yield const ContinueAction(
+  yield ContinueAction(
     type: ContinueActionType.practiceMixed,
-    label: 'Practice',
+    label: language.practiceLabel,
     count: null,
   );
 });

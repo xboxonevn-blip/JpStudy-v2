@@ -50,9 +50,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
   void _startGame(List<VocabItem> allVocab, MatchGameMode mode) {
     final language = ref.read(appLanguageProvider);
     if (allVocab.length < 3) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.notEnoughTermsLabel(3))),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.notEnoughTermsLabel(3))));
       return;
     }
 
@@ -78,7 +78,10 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         if (_mode == MatchGameMode.timeAttack) {
-          _timeAttackRemaining = (_timeAttackRemaining - 1).clamp(0, _timeAttackDurationSeconds);
+          _timeAttackRemaining = (_timeAttackRemaining - 1).clamp(
+            0,
+            _timeAttackDurationSeconds,
+          );
           if (_timeAttackRemaining <= 0) {
             timer.cancel();
             _endGame();
@@ -91,8 +94,14 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
   }
 
   void _onCardTap(MatchCard card) {
-    if (!_isGameActive || _isProcessingInfo || card.state == MatchCardState.matched) return;
-    if (card == _selectedCard) return; // Tap same card
+    if (!_isGameActive ||
+        _isProcessingInfo ||
+        card.state == MatchCardState.matched) {
+      return;
+    }
+    if (card == _selectedCard) {
+      return;
+    } // Tap same card
 
     setState(() {
       card.state = MatchCardState.selected;
@@ -116,7 +125,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           _selectedCard = null;
           _isProcessingInfo = false;
           _combo++;
-          if (_combo > _maxCombo) _maxCombo = _combo;
+          if (_combo > _maxCombo) {
+            _maxCombo = _combo;
+          }
           if (_mode == MatchGameMode.timeAttack) {
             final comboBonus = _combo > 1 ? (_combo - 1) * 2 : 0;
             _timeAttackScore += 10 + comboBonus;
@@ -126,7 +137,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         _spawnParticles();
         // Save Progress (Correct)
         ref.read(contentRepositoryProvider).updateProgress(first.vocabId, true);
-        
+
         _checkWinCondition();
       } else {
         // Mismatch
@@ -141,8 +152,12 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         HapticFeedback.vibrate();
 
         // Save Progress (Incorrect)
-        ref.read(contentRepositoryProvider).updateProgress(first.vocabId, false);
-        ref.read(contentRepositoryProvider).updateProgress(second.vocabId, false);
+        ref
+            .read(contentRepositoryProvider)
+            .updateProgress(first.vocabId, false);
+        ref
+            .read(contentRepositoryProvider)
+            .updateProgress(second.vocabId, false);
 
         Future.delayed(const Duration(milliseconds: 800), () {
           if (mounted) {
@@ -188,7 +203,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
       _isGameOver = true;
       _timeAttackBonus = timeAttackBonus;
     });
-    
+
     // Award XP based on performance
     // Classic: 10 XP per pair, combo bonus, time bonus
     // Time Attack: score-based XP
@@ -201,7 +216,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         ? 0
         : (_secondsElapsed < 30 ? 20 : (_secondsElapsed < 60 ? 10 : 0));
     final totalXp = baseXp + comboBonus + timeBonus;
-    
+
     ref.read(lessonRepositoryProvider).recordStudyActivity(xpDelta: totalXp);
   }
 
@@ -231,7 +246,7 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider);
-    
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -248,10 +263,13 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
                   _mode == MatchGameMode.timeAttack
                       ? language.timeRemainingLabel(_timeAttackRemaining)
                       : "${_secondsElapsed}s",
-                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            )
+            ),
         ],
       ),
       body: level == null
@@ -265,13 +283,13 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
     return vocabAsync.when(
       data: (dataItems) {
-         final language = ref.read(appLanguageProvider);
-         if (dataItems.isEmpty) {
-           return Center(child: Text(language.noVocabFoundLabel));
-         }
+        final language = ref.read(appLanguageProvider);
+        if (dataItems.isEmpty) {
+          return Center(child: Text(language.noVocabFoundLabel));
+        }
 
-         // Map to VocabItem
-         final items = dataItems.map((e) {
+        // Map to VocabItem
+        final items = dataItems.map((e) {
           final meaningEn = e.meaningEn?.trim() ?? '';
           final meaning = language == AppLanguage.vi
               ? e.meaning
@@ -293,7 +311,11 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.emoji_events_rounded, size: 64, color: Colors.amber),
+                const Icon(
+                  Icons.emoji_events_rounded,
+                  size: 64,
+                  color: Colors.amber,
+                ),
                 const SizedBox(height: 16),
                 if (_mode == MatchGameMode.timeAttack) ...[
                   Text(
@@ -309,10 +331,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
                     const SizedBox(height: 6),
                     Text(
                       language.timeAttackBonusLabel(_timeAttackBonus),
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium
-                          ?.copyWith(color: Colors.blueGrey),
+                      style: Theme.of(
+                        context,
+                      ).textTheme.titleMedium?.copyWith(color: Colors.blueGrey),
                     ),
                   ],
                 ] else ...[
@@ -323,24 +344,23 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
                 ],
                 Text(
                   language.maxComboLabel(_maxCombo),
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge
-                      ?.copyWith(color: Colors.deepPurple),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(color: Colors.deepPurple),
                 ),
                 const SizedBox(height: 24),
                 JuicyButton(
                   label: language.playAgainLabel,
                   onPressed: () => _startGame(items, _mode),
                   icon: Icons.refresh,
-                )
+                ),
               ],
             ),
           );
         }
 
         if (!_isGameActive) {
-         return Center(
+          return Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -406,12 +426,13 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
                     children: [
                       GridView.builder(
                         padding: const EdgeInsets.all(16),
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3,
-                          childAspectRatio: 1.0,
-                          crossAxisSpacing: 8,
-                          mainAxisSpacing: 8,
-                        ),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3,
+                              childAspectRatio: 1.0,
+                              crossAxisSpacing: 8,
+                              mainAxisSpacing: 8,
+                            ),
                         itemCount: _cards.length,
                         itemBuilder: (context, index) {
                           return _buildCard(_cards[index]);
@@ -427,9 +448,8 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (e, s) => Center(
-        child: Text(ref.read(appLanguageProvider).loadErrorLabel),
-      ),
+      error: (e, s) =>
+          Center(child: Text(ref.read(appLanguageProvider).loadErrorLabel)),
     );
   }
 
@@ -450,16 +470,18 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
           color: color,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: card.state == MatchCardState.selected ? Colors.blue : Colors.grey.shade300,
+            color: card.state == MatchCardState.selected
+                ? Colors.blue
+                : Colors.grey.shade300,
             width: 2,
           ),
           boxShadow: [
-             BoxShadow(
+            BoxShadow(
               color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 4,
               offset: const Offset(0, 2),
-            )
-          ]
+            ),
+          ],
         ),
         padding: const EdgeInsets.all(8),
         alignment: Alignment.center,
@@ -502,8 +524,5 @@ class _ParticleBurst {
   final int id;
   final Offset offset;
 
-  const _ParticleBurst({
-    required this.id,
-    required this.offset,
-  });
+  const _ParticleBurst({required this.id, required this.offset});
 }

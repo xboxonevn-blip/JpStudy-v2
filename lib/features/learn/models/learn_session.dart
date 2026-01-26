@@ -6,10 +6,10 @@ class LearnSession {
   final int lessonId;
   final DateTime startedAt;
   DateTime? completedAt;
-  
+
   final List<Question> questions;
   final List<QuestionResult> results;
-  
+
   int currentRound;
   int currentQuestionIndex;
 
@@ -79,10 +79,10 @@ class LearnSession {
 
   /// Terms that are mastered (answered correct 3+ times)
   final Map<int, int> _correctCountByTerm = {};
-  
+
   void recordResult(QuestionResult result) {
     results.add(result);
-    
+
     // Track correct count per term
     if (result.isCorrect) {
       final termId = result.question.targetItem.id;

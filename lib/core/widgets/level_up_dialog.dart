@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jpstudy/core/gamification/level_calculator.dart';
 
 class LevelUpDialog extends StatelessWidget {
-  const LevelUpDialog({
-    super.key,
-    required this.levelInfo,
-  });
+  const LevelUpDialog({super.key, required this.levelInfo});
 
   final LevelInfo levelInfo;
 
@@ -78,17 +75,17 @@ class LevelUpDialog extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: theme.colorScheme.primary,
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                  vertical: 16,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
               ),
               child: const Text(
                 'Continue',
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 16,
-                ),
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
             ),
           ],

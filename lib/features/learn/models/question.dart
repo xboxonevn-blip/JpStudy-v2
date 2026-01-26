@@ -29,9 +29,11 @@ class Question {
   bool checkAnswer(String userAnswer) {
     switch (type) {
       case QuestionType.multipleChoice:
-        return userAnswer.toLowerCase().trim() == correctAnswer.toLowerCase().trim();
+        return userAnswer.toLowerCase().trim() ==
+            correctAnswer.toLowerCase().trim();
       case QuestionType.trueFalse:
-        return userAnswer.toLowerCase() == (isStatementTrue! ? 'true' : 'false');
+        return userAnswer.toLowerCase() ==
+            (isStatementTrue! ? 'true' : 'false');
       case QuestionType.fillBlank:
         // Fuzzy matching for fill-in-blank with multiple acceptable meanings
         for (final candidate in _splitAlternatives(correctAnswer)) {

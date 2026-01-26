@@ -24,7 +24,8 @@ class GrammarPoint extends Table {
   IntColumn get id => integer()();
   IntColumn get lessonId => integer()(); // Linked to Minna Lesson (1-50)
   TextColumn get title => text()(); // e.g. "N1 は N2 です"
-  TextColumn get titleEn => text().nullable()(); // e.g. "N1 is N2 (Noun Sentence)"
+  TextColumn get titleEn =>
+      text().nullable()(); // e.g. "N1 is N2 (Noun Sentence)"
   TextColumn get structure => text()(); // Formula (Vietnamese)
   TextColumn get structureEn => text().nullable()(); // Formula (English)
   TextColumn get explanation => text()(); // Vietnamese (Default)

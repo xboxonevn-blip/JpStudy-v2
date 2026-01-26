@@ -26,9 +26,7 @@ class _ImmersionHomeScreenState extends ConsumerState<ImmersionHomeScreen> {
     _future = _loadArticles(forceRefresh: false);
   }
 
-  Future<List<ImmersionArticle>> _loadArticles({
-    required bool forceRefresh,
-  }) {
+  Future<List<ImmersionArticle>> _loadArticles({required bool forceRefresh}) {
     final service = ref.read(immersionServiceProvider);
     switch (_source) {
       case ImmersionSource.nhkEasy:
@@ -100,19 +98,20 @@ class _ImmersionHomeScreenState extends ConsumerState<ImmersionHomeScreen> {
                       ),
                     ),
                     const SizedBox(height: 12),
-                    ...articles.map((article) => _ArticleCard(
-                          article: article,
-                          language: language,
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => ImmersionReaderScreen(
-                                  article: article,
-                                ),
-                              ),
-                            );
-                          },
-                        )),
+                    ...articles.map(
+                      (article) => _ArticleCard(
+                        article: article,
+                        language: language,
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ImmersionReaderScreen(article: article),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
                   ],
                 );
               },
@@ -160,8 +159,9 @@ class _ArticleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dateLabel =
-        MaterialLocalizations.of(context).formatMediumDate(article.publishedAt);
+    final dateLabel = MaterialLocalizations.of(
+      context,
+    ).formatMediumDate(article.publishedAt);
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
       child: ListTile(

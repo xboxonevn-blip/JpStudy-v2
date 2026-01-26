@@ -20,8 +20,9 @@ class LearnDao extends DatabaseAccessor<AppDatabase> with _$LearnDaoMixin {
 
   /// Get session by ID
   Future<LearnSession?> getSession(String id) {
-    return (select(learnSessions)..where((t) => t.sessionId.equals(id)))
-        .getSingleOrNull();
+    return (select(
+      learnSessions,
+    )..where((t) => t.sessionId.equals(id))).getSingleOrNull();
   }
 
   /// Get incomplete sessions for a lesson
@@ -37,7 +38,12 @@ class LearnDao extends DatabaseAccessor<AppDatabase> with _$LearnDaoMixin {
     return (select(learnSessions)
           ..where((t) => t.lessonId.equals(lessonId))
           ..where((t) => t.completedAt.isNotNull())
-          ..orderBy([(t) => OrderingTerm(expression: t.completedAt, mode: OrderingMode.desc)]))
+          ..orderBy([
+            (t) => OrderingTerm(
+              expression: t.completedAt,
+              mode: OrderingMode.desc,
+            ),
+          ]))
         .get();
   }
 

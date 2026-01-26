@@ -4,9 +4,13 @@ import 'package:go_router/go_router.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../data/models/vocab_item.dart';
+import '../../../data/db/app_database.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../../../shared/widgets/confidence_rating.dart';
 import '../../flashcards/widgets/enhanced_flashcard.dart';
+import '../../../data/models/mistake_context.dart';
+import '../../../core/services/fsrs_service.dart';
+import '../../mistakes/repositories/mistake_repository.dart';
 
 class TermReviewScreen extends ConsumerStatefulWidget {
   const TermReviewScreen({super.key});
@@ -15,12 +19,14 @@ class TermReviewScreen extends ConsumerStatefulWidget {
   ConsumerState<TermReviewScreen> createState() => _TermReviewScreenState();
 }
 
-class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with SingleTickerProviderStateMixin {
+class _TermReviewScreenState extends ConsumerState<TermReviewScreen>
+    with SingleTickerProviderStateMixin {
   int _currentIndex = 0;
   bool _isSessionComplete = false;
   late AnimationController _animController;
   late Animation<double> _scaleAnimation;
-  
+  final FsrsService _fsrsService = FsrsService();
+
   // Session stats
   int _againCount = 0;
   int _hardCount = 0;
@@ -34,7 +40,10 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
       duration: const Duration(milliseconds: 800),
       vsync: this,
     );
-    _scaleAnimation = CurvedAnimation(parent: _animController, curve: Curves.elasticOut);
+    _scaleAnimation = CurvedAnimation(
+      parent: _animController,
+      curve: Curves.elasticOut,
+    );
   }
 
   @override
@@ -72,14 +81,15 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
           final currentTermData = terms[_currentIndex];
           // Map UserLessonTermData to VocabItem explicitly
           final vocabItem = VocabItem(
-             id: currentTermData.id,
-             term: currentTermData.term,
-             reading: currentTermData.reading,
-             meaning: currentTermData.definition,
-             meaningEn: currentTermData.definitionEn,
-             kanjiMeaning: currentTermData.kanjiMeaning,
-             level: '', // Not strictly needed for flashcard display
+            id: currentTermData.id,
+            term: currentTermData.term,
+            reading: currentTermData.reading,
+            meaning: currentTermData.definition,
+            meaningEn: currentTermData.definitionEn,
+            kanjiMeaning: currentTermData.kanjiMeaning,
+            level: '', // Not strictly needed for flashcard display
           );
+          final srsStateAsync = ref.watch(srsStateProvider(currentTermData.id));
 
           return Column(
             children: [
@@ -95,25 +105,27 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
                   '${_currentIndex + 1} / ${terms.length}',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: Colors.grey[600],
-                  ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleMedium?.copyWith(color: Colors.grey[600]),
                 ),
               ),
-              
+
               // Flashcard Area
               Expanded(
                 child: Center(
                   child: SingleChildScrollView(
-                     child: EnhancedFlashcard(
-                       key: ValueKey(vocabItem.id), // Important for animation reset
-                       item: vocabItem,
-                       language: language,
-                       // enableSwipeGestures removed
-                       onFlip: () {
-                         // Optional: could track flip count
-                       },
-                     ),
+                    child: EnhancedFlashcard(
+                      key: ValueKey(
+                        vocabItem.id,
+                      ), // Important for animation reset
+                      item: vocabItem,
+                      language: language,
+                      // enableSwipeGestures removed
+                      onFlip: () {
+                        // Optional: could track flip count
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -121,9 +133,26 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
               // Rating Buttons
               Padding(
                 padding: const EdgeInsets.all(24.0),
-                child: ConfidenceRatingWidget(
-                  onSelect: (level) => _handleRating(level, currentTermData.id, terms.length),
-                  showLabels: true,
+                child: Column(
+                  children: [
+                    if (srsStateAsync.valueOrNull != null)
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: _buildRetrievability(
+                          language,
+                          srsStateAsync.valueOrNull!,
+                        ),
+                      ),
+                    ConfidenceRatingWidget(
+                      onSelect: (level) => _handleRating(
+                        level,
+                        currentTermData,
+                        terms.length,
+                        language,
+                      ),
+                      showLabels: true,
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 20),
@@ -137,24 +166,24 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
   }
 
   Widget _buildEmptyState(AppLanguage language) {
-     return Center(
-       child: Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-         children: [
-           const Icon(Icons.check_circle_outline, size: 80, color: Colors.green),
-           const SizedBox(height: 16),
-           Text(
-             language.reviewEmptyLabel,
-             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-           ),
-           const SizedBox(height: 8),
-           ElevatedButton(
-             onPressed: () => context.pop(),
-             child: Text(MaterialLocalizations.of(context).backButtonTooltip),
-           ),
-         ],
-       ),
-     );
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Icon(Icons.check_circle_outline, size: 80, color: Colors.green),
+          const SizedBox(height: 16),
+          Text(
+            language.reviewEmptyLabel,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 8),
+          ElevatedButton(
+            onPressed: () => context.pop(),
+            child: Text(MaterialLocalizations.of(context).backButtonTooltip),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildSummary(AppLanguage language, int total) {
@@ -167,30 +196,44 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
           children: [
             ScaleTransition(
               scale: _scaleAnimation,
-              child: const Icon(Icons.celebration, size: 100, color: Colors.blue),
+              child: const Icon(
+                Icons.celebration,
+                size: 100,
+                color: Colors.blue,
+              ),
             ),
             const SizedBox(height: 24),
             Text(
-              'Session Complete!', // Provide localization key if available, hardcoded fallback
+              language.sessionCompleteTitle,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-             const SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
-              'You reviewed $total items.',
+              language.sessionReviewCountLabel(total),
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 32),
-            _buildSummaryRow('Again', _againCount, Colors.red),
-            _buildSummaryRow('Hard', _hardCount, Colors.orange),
-            _buildSummaryRow('Good', _goodCount, Colors.blue),
-            _buildSummaryRow('Easy', _easyCount, Colors.green),
+            _buildSummaryRow(
+              language.reviewAgainLabel,
+              _againCount,
+              Colors.red,
+            ),
+            _buildSummaryRow(
+              language.reviewHardLabel,
+              _hardCount,
+              Colors.orange,
+            ),
+            _buildSummaryRow(language.reviewGoodLabel, _goodCount, Colors.blue),
+            _buildSummaryRow(
+              language.reviewEasyLabel,
+              _easyCount,
+              Colors.green,
+            ),
             const SizedBox(height: 48),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(200, 50),
-              ),
+              style: ElevatedButton.styleFrom(minimumSize: const Size(200, 50)),
               onPressed: () => context.pop(),
-              child: const Text('Finish'),
+              child: Text(language.doneLabel),
             ),
           ],
         ),
@@ -213,7 +256,10 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
           const SizedBox(width: 8),
           SizedBox(
             width: 60,
-            child: Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
+            child: Text(
+              label,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           Text('$count', style: const TextStyle(fontSize: 16)),
         ],
@@ -221,50 +267,77 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with Single
     );
   }
 
-  Future<void> _handleRating(ConfidenceLevel levelEnum, int termId, int totalTerms) async {
-    final repo = ref.read(lessonRepositoryProvider);
-    
-    // Map enum to int quality (0-5 scale usually used in SRS service)
-    // SrsService uses: 0=Unknown, 1=Again, 2=Hard, 3=Good, 4=Easy
-    // ConfidenceLevel enum: again=1, hard=2, good=3, easy=4
-    // We can use the .value directly if they align, or map explicitly.
-    // ConfidenceLevel values are 1,2,3,4.
-    // LessonDetailScreen mapping: Again->0, Hard->3, Good->4, Easy->5 (based on _incrementReviewStats)
-    // Wait, let's look at `_incrementReviewStats` in LessonDetailScreen again.
-    // case 0: again, case 3: hard, case 4: good, case 5: easy.
-    // This seems weird. Let's check `SrsService` if possible.
-    // But safely, `saveTermReview` likely takes 1-4 or 0-5.
-    // Let's assume standard mapping: Again=1, Hard=2, Good=3, Easy=4. 
-    // Actually, looking at `ConfidenceLevel`: again(1), hard(2), good(3), easy(4).
-    
-    // Let's just pass the value and if the service expects different, we might adjust.
-    // However, `LessonDetailScreen` passed:
-    // _reviewTerm(currentTerm, level.value) where level is ConfidenceLevel.
-    // So passing `level.value` is correct.
+  Widget _buildRetrievability(AppLanguage language, SrsStateData state) {
+    final value = _fsrsService.retrievability(
+      stability: state.stability,
+      lastReviewedAt: state.lastReviewedAt,
+    );
+    final percent = (value * 100).round();
+    return Text(
+      language.retrievabilityPercentLabel(percent),
+      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+        color: Colors.grey[700],
+        fontWeight: FontWeight.w600,
+      ),
+      textAlign: TextAlign.center,
+    );
+  }
 
-    await repo.saveTermReview(termId: termId, quality: levelEnum.value);
+  Future<void> _handleRating(
+    ConfidenceLevel levelEnum,
+    UserLessonTermData term,
+    int totalTerms,
+    AppLanguage language,
+  ) async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final mistakeRepo = ref.read(mistakeRepositoryProvider);
+
+    await repo.saveTermReview(termId: term.id, quality: levelEnum.value);
+
+    if (levelEnum == ConfidenceLevel.again ||
+        levelEnum == ConfidenceLevel.hard) {
+      final prompt = term.reading.isNotEmpty
+          ? '${term.term} • ${term.reading}'
+          : term.term;
+      final correctAnswer = language == AppLanguage.en
+          ? (term.definitionEn.isNotEmpty ? term.definitionEn : term.definition)
+          : term.definition;
+      await mistakeRepo.addMistake(
+        type: 'vocab',
+        itemId: term.id,
+        context: MistakeContext(
+          prompt: prompt,
+          correctAnswer: correctAnswer,
+          userAnswer: levelEnum.name,
+          source: 'review',
+          extra: {'confidence': levelEnum.name},
+        ),
+      );
+    } else {
+      await mistakeRepo.markCorrect(type: 'vocab', itemId: term.id);
+    }
 
     setState(() {
-       switch (levelEnum) {
-         case ConfidenceLevel.again:
-           _againCount++;
-           break;
-         case ConfidenceLevel.hard:
-           _hardCount++;
-           break;
-         case ConfidenceLevel.good:
-           _goodCount++;
-           break;
-         case ConfidenceLevel.easy:
-           _easyCount++;
-           break;
-       }
+      switch (levelEnum) {
+        case ConfidenceLevel.again:
+          _againCount++;
+          break;
+        case ConfidenceLevel.hard:
+          _hardCount++;
+          break;
+        case ConfidenceLevel.good:
+          _goodCount++;
+          break;
+        case ConfidenceLevel.easy:
+          _easyCount++;
+          break;
+      }
 
-       if (_currentIndex < totalTerms - 1) {
-         _currentIndex++;
-       } else {
-         _isSessionComplete = true;
-       }
+      if (_currentIndex < totalTerms - 1) {
+        _currentIndex++;
+      } else {
+        _isSessionComplete = true;
+      }
     });
   }
 }

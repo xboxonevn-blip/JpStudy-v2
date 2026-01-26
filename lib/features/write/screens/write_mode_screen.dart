@@ -15,38 +15,49 @@ class WriteModeScreen extends ConsumerWidget {
     required this.lessonId,
     required this.lessonTitle,
     required this.vocabItems,
+    this.dueVocabItems = const [],
     required this.kanjiItems,
+    this.dueKanjiItems = const [],
   });
 
   final int lessonId;
   final String lessonTitle;
   final List<VocabItem> vocabItems;
+  final List<VocabItem> dueVocabItems;
   final List<KanjiItem> kanjiItems;
+  final List<KanjiItem> dueKanjiItems;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
 
-    if (vocabItems.isEmpty && kanjiItems.isEmpty) {
+    final activeVocabItems = dueVocabItems.isNotEmpty
+        ? dueVocabItems
+        : vocabItems;
+    final activeKanjiItems = dueKanjiItems.isNotEmpty
+        ? dueKanjiItems
+        : kanjiItems;
+
+    if (activeVocabItems.isEmpty && activeKanjiItems.isEmpty) {
       return Scaffold(
         appBar: AppBar(title: Text('${language.writeModeLabel}: $lessonTitle')),
         body: Center(child: Text(language.noTermsAvailableLabel)),
       );
     }
 
-    if (vocabItems.isNotEmpty && kanjiItems.isEmpty) {
+    if (activeVocabItems.isNotEmpty && activeKanjiItems.isEmpty) {
       return LearnScreen(
         lessonId: lessonId,
         lessonTitle: lessonTitle,
-        items: vocabItems,
+        items: activeVocabItems,
         enabledTypes: const [QuestionType.fillBlank],
       );
     }
 
-    if (vocabItems.isEmpty && kanjiItems.isNotEmpty) {
+    if (activeVocabItems.isEmpty && activeKanjiItems.isNotEmpty) {
       return HandwritingPracticeScreen(
         lessonTitle: lessonTitle,
-        items: kanjiItems,
+        items: activeKanjiItems,
       );
     }
 
@@ -65,14 +76,18 @@ class WriteModeScreen extends ConsumerWidget {
             color: const Color(0xFF2563EB),
             title: language.writeModeTypingLabel,
             subtitle: language.writeModeTypingSubtitle,
-            countLabel: language.termsCountLabel(vocabItems.length),
+            countLabel: _buildCountLabel(
+              language: language,
+              dueCount: dueVocabItems.length,
+              totalLabel: language.termsCountLabel(vocabItems.length),
+            ),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => LearnScreen(
                     lessonId: lessonId,
                     lessonTitle: lessonTitle,
-                    items: vocabItems,
+                    items: activeVocabItems,
                     enabledTypes: const [QuestionType.fillBlank],
                   ),
                 ),
@@ -85,13 +100,17 @@ class WriteModeScreen extends ConsumerWidget {
             color: const Color(0xFF7C3AED),
             title: language.writeModeHandwritingLabel,
             subtitle: language.writeModeHandwritingSubtitle,
-            countLabel: language.kanjiCountLabel(kanjiItems.length),
+            countLabel: _buildCountLabel(
+              language: language,
+              dueCount: dueKanjiItems.length,
+              totalLabel: language.kanjiCountLabel(kanjiItems.length),
+            ),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => HandwritingPracticeScreen(
                     lessonTitle: lessonTitle,
-                    items: kanjiItems,
+                    items: activeKanjiItems,
                   ),
                 ),
               );
@@ -100,6 +119,17 @@ class WriteModeScreen extends ConsumerWidget {
         ],
       ),
     );
+  }
+
+  String _buildCountLabel({
+    required AppLanguage language,
+    required int dueCount,
+    required String totalLabel,
+  }) {
+    if (dueCount <= 0) {
+      return totalLabel;
+    }
+    return '${language.dueCountLabel(dueCount)} - $totalLabel';
   }
 }
 

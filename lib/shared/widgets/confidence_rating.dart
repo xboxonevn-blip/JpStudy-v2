@@ -61,7 +61,11 @@ class ConfidenceRatingWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildButton(BuildContext context, ConfidenceLevel level, bool isSelected) {
+  Widget _buildButton(
+    BuildContext context,
+    ConfidenceLevel level,
+    bool isSelected,
+  ) {
     return Material(
       color: isSelected ? level.color : level.color.withValues(alpha: 0.1),
       borderRadius: BorderRadius.circular(12),
@@ -121,15 +125,17 @@ class StarRating extends StatelessWidget {
       children: List.generate(5, (index) {
         final starIndex = index + 1;
         final isActive = starIndex <= rating;
-        
+
         return GestureDetector(
-          onTap: onRatingChanged != null ? () => onRatingChanged!(starIndex) : null,
+          onTap: onRatingChanged != null
+              ? () => onRatingChanged!(starIndex)
+              : null,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 2),
             child: Icon(
               isActive ? Icons.star_rounded : Icons.star_border_rounded,
               size: size,
-              color: isActive 
+              color: isActive
                   ? (activeColor ?? Colors.amber)
                   : (inactiveColor ?? Colors.grey[300]),
             ),

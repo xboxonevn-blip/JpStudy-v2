@@ -9,8 +9,9 @@ import '../models/question_type.dart';
 /// Service to generate questions for Learn Mode
 class QuestionGenerator {
   final Random _random = Random();
-  static final RegExp _kanaOnlyRegex =
-      RegExp(r'^[\u3040-\u309F\u30A0-\u30FF\u30FB\u30FC]+$');
+  static final RegExp _kanaOnlyRegex = RegExp(
+    r'^[\u3040-\u309F\u30A0-\u30FF\u30FB\u30FC]+$',
+  );
 
   /// Generate a batch of questions from vocabulary items
   List<Question> generateQuestions({
@@ -78,7 +79,10 @@ class QuestionGenerator {
     final questionType = switch (round) {
       1 => QuestionType.multipleChoice,
       2 => QuestionType.fillBlank,
-      _ => _random.nextBool() ? QuestionType.trueFalse : QuestionType.multipleChoice,
+      _ =>
+        _random.nextBool()
+            ? QuestionType.trueFalse
+            : QuestionType.multipleChoice,
     };
 
     return generateQuestions(
@@ -206,7 +210,9 @@ class QuestionGenerator {
         questionText: language.questionReadingPrompt(item.term),
         correctAnswer: item.reading ?? item.term,
         expectsReading: true,
-        hint: item.reading?.isNotEmpty == true ? '${item.reading![0]}...' : null,
+        hint: item.reading?.isNotEmpty == true
+            ? '${item.reading![0]}...'
+            : null,
       );
     }
   }
@@ -218,7 +224,11 @@ class QuestionGenerator {
   }
 
   /// Select distractor items for multiple choice (similar difficulty/category)
-  List<VocabItem> _selectDistractors(VocabItem target, List<VocabItem> allItems, {int count = 3}) {
+  List<VocabItem> _selectDistractors(
+    VocabItem target,
+    List<VocabItem> allItems, {
+    int count = 3,
+  }) {
     // Filter out the target item
     final candidates = allItems.where((item) => item.id != target.id).toList();
 
@@ -227,11 +237,13 @@ class QuestionGenerator {
     }
 
     // Prefer items from same level/category for harder distractors
-    final sameLevel = candidates.where((item) => item.level == target.level).toList();
-    
+    final sameLevel = candidates
+        .where((item) => item.level == target.level)
+        .toList();
+
     final selected = <VocabItem>[];
     final source = sameLevel.length >= count ? sameLevel : candidates;
-    
+
     source.shuffle(_random);
     selected.addAll(source.take(count));
 

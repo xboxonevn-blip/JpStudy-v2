@@ -8,7 +8,7 @@ class SentenceBuilderWidget extends StatefulWidget {
   final String prompt;
   final String correctSentence;
   final List<String> shuffledWords;
-  final Function(bool isCorrect) onCheck;
+  final void Function(bool isCorrect, String userAnswer) onCheck;
   final VoidCallback onReset;
 
   const SentenceBuilderWidget({
@@ -58,9 +58,9 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
       // (though usually no spaces, but just in case of formatting)
       final normalizedUser = userSentence.replaceAll(' ', '');
       final normalizedCorrect = widget.correctSentence.replaceAll(' ', '');
-      
+
       _isLastCorrect = normalizedUser == normalizedCorrect;
-      widget.onCheck(_isLastCorrect!);
+      widget.onCheck(_isLastCorrect!, userSentence);
     });
   }
 
@@ -76,8 +76,12 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
   @override
   Widget build(BuildContext context) {
     Color targetColor = Colors.white;
-    if (_isLastCorrect == true) targetColor = AppThemeV2.secondary.withValues(alpha: 0.2);
-    if (_isLastCorrect == false) targetColor = AppThemeV2.error.withValues(alpha: 0.1);
+    if (_isLastCorrect == true) {
+      targetColor = AppThemeV2.secondary.withValues(alpha: 0.2);
+    }
+    if (_isLastCorrect == false) {
+      targetColor = AppThemeV2.error.withValues(alpha: 0.1);
+    }
 
     return Stack(
       children: [
@@ -91,33 +95,35 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
               decoration: BoxDecoration(
                 color: AppThemeV2.primary.withValues(alpha: 0.05),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppThemeV2.primary.withValues(alpha: 0.1)),
+                border: Border.all(
+                  color: AppThemeV2.primary.withValues(alpha: 0.1),
+                ),
               ),
               child: Column(
                 children: [
-                   Text(
-                     'Arrange the sentence:',
-                     style: TextStyle(
-                       color: AppThemeV2.textSub,
-                       fontSize: 12,
-                       fontWeight: FontWeight.bold,
-                       letterSpacing: 0.5,
-                     ),
-                   ),
-                   const SizedBox(height: 8),
-                   Text(
-                     widget.prompt,
-                     textAlign: TextAlign.center,
-                     style: TextStyle(
-                        color: AppThemeV2.textMain,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                     ),
-                   ),
+                  Text(
+                    'Arrange the sentence:',
+                    style: TextStyle(
+                      color: AppThemeV2.textSub,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    widget.prompt,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: AppThemeV2.textMain,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ],
               ),
             ),
-    
+
             // Target Area
             ClayCard(
               color: targetColor,
@@ -170,7 +176,9 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                   child: ClayButton(
                     label: 'Check',
                     icon: Icons.check_circle,
-                    style: _isLastCorrect == true ? ClayButtonStyle.secondary : ClayButtonStyle.primary,
+                    style: _isLastCorrect == true
+                        ? ClayButtonStyle.secondary
+                        : ClayButtonStyle.primary,
                     onPressed: _selectedWords.isEmpty ? null : _check,
                     isExpanded: true,
                   ),
@@ -179,7 +187,7 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
             ),
           ],
         ),
-        
+
         // Feedback Overlay
         if (_isLastCorrect != null)
           Positioned.fill(
@@ -193,7 +201,10 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                       _isLastCorrect! ? Icons.check_circle : Icons.cancel,
                       color: _isLastCorrect! ? Colors.green : Colors.red,
                       size: 80,
-                    ).animate().scale(duration: 300.ms, curve: Curves.elasticOut),
+                    ).animate().scale(
+                      duration: 300.ms,
+                      curve: Curves.elasticOut,
+                    ),
                     const SizedBox(height: 16),
                     Text(
                       _isLastCorrect! ? 'CORRECT!' : 'TRY AGAIN',
@@ -237,5 +248,3 @@ class _ClayWordTile extends StatelessWidget {
     );
   }
 }
-
-

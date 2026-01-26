@@ -65,6 +65,30 @@ class $SrsStateTable extends SrsState
     requiredDuringInsert: false,
     defaultValue: const Constant(2.5),
   );
+  static const VerificationMeta _stabilityMeta = const VerificationMeta(
+    'stability',
+  );
+  @override
+  late final GeneratedColumn<double> stability = GeneratedColumn<double>(
+    'stability',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1.0),
+  );
+  static const VerificationMeta _difficultyMeta = const VerificationMeta(
+    'difficulty',
+  );
+  @override
+  late final GeneratedColumn<double> difficulty = GeneratedColumn<double>(
+    'difficulty',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(5.0),
+  );
   static const VerificationMeta _lastConfidenceMeta = const VerificationMeta(
     'lastConfidence',
   );
@@ -107,6 +131,8 @@ class $SrsStateTable extends SrsState
     box,
     repetitions,
     ease,
+    stability,
+    difficulty,
     lastConfidence,
     lastReviewedAt,
     nextReviewAt,
@@ -153,6 +179,18 @@ class $SrsStateTable extends SrsState
       context.handle(
         _easeMeta,
         ease.isAcceptableOrUnknown(data['ease']!, _easeMeta),
+      );
+    }
+    if (data.containsKey('stability')) {
+      context.handle(
+        _stabilityMeta,
+        stability.isAcceptableOrUnknown(data['stability']!, _stabilityMeta),
+      );
+    }
+    if (data.containsKey('difficulty')) {
+      context.handle(
+        _difficultyMeta,
+        difficulty.isAcceptableOrUnknown(data['difficulty']!, _difficultyMeta),
       );
     }
     if (data.containsKey('last_confidence')) {
@@ -213,6 +251,14 @@ class $SrsStateTable extends SrsState
         DriftSqlType.double,
         data['${effectivePrefix}ease'],
       )!,
+      stability: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}stability'],
+      )!,
+      difficulty: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty'],
+      )!,
       lastConfidence: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
         data['${effectivePrefix}last_confidence'],
@@ -240,6 +286,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
   final int box;
   final int repetitions;
   final double ease;
+  final double stability;
+  final double difficulty;
   final int lastConfidence;
   final DateTime? lastReviewedAt;
   final DateTime nextReviewAt;
@@ -249,6 +297,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     required this.box,
     required this.repetitions,
     required this.ease,
+    required this.stability,
+    required this.difficulty,
     required this.lastConfidence,
     this.lastReviewedAt,
     required this.nextReviewAt,
@@ -261,6 +311,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     map['box'] = Variable<int>(box);
     map['repetitions'] = Variable<int>(repetitions);
     map['ease'] = Variable<double>(ease);
+    map['stability'] = Variable<double>(stability);
+    map['difficulty'] = Variable<double>(difficulty);
     map['last_confidence'] = Variable<int>(lastConfidence);
     if (!nullToAbsent || lastReviewedAt != null) {
       map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
@@ -276,6 +328,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
       box: Value(box),
       repetitions: Value(repetitions),
       ease: Value(ease),
+      stability: Value(stability),
+      difficulty: Value(difficulty),
       lastConfidence: Value(lastConfidence),
       lastReviewedAt: lastReviewedAt == null && nullToAbsent
           ? const Value.absent()
@@ -295,6 +349,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
       box: serializer.fromJson<int>(json['box']),
       repetitions: serializer.fromJson<int>(json['repetitions']),
       ease: serializer.fromJson<double>(json['ease']),
+      stability: serializer.fromJson<double>(json['stability']),
+      difficulty: serializer.fromJson<double>(json['difficulty']),
       lastConfidence: serializer.fromJson<int>(json['lastConfidence']),
       lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
       nextReviewAt: serializer.fromJson<DateTime>(json['nextReviewAt']),
@@ -309,6 +365,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
       'box': serializer.toJson<int>(box),
       'repetitions': serializer.toJson<int>(repetitions),
       'ease': serializer.toJson<double>(ease),
+      'stability': serializer.toJson<double>(stability),
+      'difficulty': serializer.toJson<double>(difficulty),
       'lastConfidence': serializer.toJson<int>(lastConfidence),
       'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
       'nextReviewAt': serializer.toJson<DateTime>(nextReviewAt),
@@ -321,6 +379,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     int? box,
     int? repetitions,
     double? ease,
+    double? stability,
+    double? difficulty,
     int? lastConfidence,
     Value<DateTime?> lastReviewedAt = const Value.absent(),
     DateTime? nextReviewAt,
@@ -330,6 +390,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     box: box ?? this.box,
     repetitions: repetitions ?? this.repetitions,
     ease: ease ?? this.ease,
+    stability: stability ?? this.stability,
+    difficulty: difficulty ?? this.difficulty,
     lastConfidence: lastConfidence ?? this.lastConfidence,
     lastReviewedAt: lastReviewedAt.present
         ? lastReviewedAt.value
@@ -345,6 +407,10 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
           ? data.repetitions.value
           : this.repetitions,
       ease: data.ease.present ? data.ease.value : this.ease,
+      stability: data.stability.present ? data.stability.value : this.stability,
+      difficulty: data.difficulty.present
+          ? data.difficulty.value
+          : this.difficulty,
       lastConfidence: data.lastConfidence.present
           ? data.lastConfidence.value
           : this.lastConfidence,
@@ -365,6 +431,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
           ..write('box: $box, ')
           ..write('repetitions: $repetitions, ')
           ..write('ease: $ease, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
           ..write('lastConfidence: $lastConfidence, ')
           ..write('lastReviewedAt: $lastReviewedAt, ')
           ..write('nextReviewAt: $nextReviewAt')
@@ -379,6 +447,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
     box,
     repetitions,
     ease,
+    stability,
+    difficulty,
     lastConfidence,
     lastReviewedAt,
     nextReviewAt,
@@ -392,6 +462,8 @@ class SrsStateData extends DataClass implements Insertable<SrsStateData> {
           other.box == this.box &&
           other.repetitions == this.repetitions &&
           other.ease == this.ease &&
+          other.stability == this.stability &&
+          other.difficulty == this.difficulty &&
           other.lastConfidence == this.lastConfidence &&
           other.lastReviewedAt == this.lastReviewedAt &&
           other.nextReviewAt == this.nextReviewAt);
@@ -403,6 +475,8 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
   final Value<int> box;
   final Value<int> repetitions;
   final Value<double> ease;
+  final Value<double> stability;
+  final Value<double> difficulty;
   final Value<int> lastConfidence;
   final Value<DateTime?> lastReviewedAt;
   final Value<DateTime> nextReviewAt;
@@ -412,6 +486,8 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     this.box = const Value.absent(),
     this.repetitions = const Value.absent(),
     this.ease = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
     this.lastConfidence = const Value.absent(),
     this.lastReviewedAt = const Value.absent(),
     this.nextReviewAt = const Value.absent(),
@@ -422,6 +498,8 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     this.box = const Value.absent(),
     this.repetitions = const Value.absent(),
     this.ease = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
     this.lastConfidence = const Value.absent(),
     this.lastReviewedAt = const Value.absent(),
     required DateTime nextReviewAt,
@@ -433,6 +511,8 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     Expression<int>? box,
     Expression<int>? repetitions,
     Expression<double>? ease,
+    Expression<double>? stability,
+    Expression<double>? difficulty,
     Expression<int>? lastConfidence,
     Expression<DateTime>? lastReviewedAt,
     Expression<DateTime>? nextReviewAt,
@@ -443,6 +523,8 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
       if (box != null) 'box': box,
       if (repetitions != null) 'repetitions': repetitions,
       if (ease != null) 'ease': ease,
+      if (stability != null) 'stability': stability,
+      if (difficulty != null) 'difficulty': difficulty,
       if (lastConfidence != null) 'last_confidence': lastConfidence,
       if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
       if (nextReviewAt != null) 'next_review_at': nextReviewAt,
@@ -455,6 +537,8 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     Value<int>? box,
     Value<int>? repetitions,
     Value<double>? ease,
+    Value<double>? stability,
+    Value<double>? difficulty,
     Value<int>? lastConfidence,
     Value<DateTime?>? lastReviewedAt,
     Value<DateTime>? nextReviewAt,
@@ -465,6 +549,8 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
       box: box ?? this.box,
       repetitions: repetitions ?? this.repetitions,
       ease: ease ?? this.ease,
+      stability: stability ?? this.stability,
+      difficulty: difficulty ?? this.difficulty,
       lastConfidence: lastConfidence ?? this.lastConfidence,
       lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
       nextReviewAt: nextReviewAt ?? this.nextReviewAt,
@@ -489,6 +575,12 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
     if (ease.present) {
       map['ease'] = Variable<double>(ease.value);
     }
+    if (stability.present) {
+      map['stability'] = Variable<double>(stability.value);
+    }
+    if (difficulty.present) {
+      map['difficulty'] = Variable<double>(difficulty.value);
+    }
     if (lastConfidence.present) {
       map['last_confidence'] = Variable<int>(lastConfidence.value);
     }
@@ -509,6 +601,482 @@ class SrsStateCompanion extends UpdateCompanion<SrsStateData> {
           ..write('box: $box, ')
           ..write('repetitions: $repetitions, ')
           ..write('ease: $ease, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('lastConfidence: $lastConfidence, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('nextReviewAt: $nextReviewAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $KanjiSrsStateTable extends KanjiSrsState
+    with TableInfo<$KanjiSrsStateTable, KanjiSrsStateData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $KanjiSrsStateTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _kanjiIdMeta = const VerificationMeta(
+    'kanjiId',
+  );
+  @override
+  late final GeneratedColumn<int> kanjiId = GeneratedColumn<int>(
+    'kanji_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _stabilityMeta = const VerificationMeta(
+    'stability',
+  );
+  @override
+  late final GeneratedColumn<double> stability = GeneratedColumn<double>(
+    'stability',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1.0),
+  );
+  static const VerificationMeta _difficultyMeta = const VerificationMeta(
+    'difficulty',
+  );
+  @override
+  late final GeneratedColumn<double> difficulty = GeneratedColumn<double>(
+    'difficulty',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(5.0),
+  );
+  static const VerificationMeta _lastConfidenceMeta = const VerificationMeta(
+    'lastConfidence',
+  );
+  @override
+  late final GeneratedColumn<int> lastConfidence = GeneratedColumn<int>(
+    'last_confidence',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _lastReviewedAtMeta = const VerificationMeta(
+    'lastReviewedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> lastReviewedAt =
+      GeneratedColumn<DateTime>(
+        'last_reviewed_at',
+        aliasedName,
+        true,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _nextReviewAtMeta = const VerificationMeta(
+    'nextReviewAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> nextReviewAt = GeneratedColumn<DateTime>(
+    'next_review_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    kanjiId,
+    stability,
+    difficulty,
+    lastConfidence,
+    lastReviewedAt,
+    nextReviewAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'kanji_srs_state';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<KanjiSrsStateData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('kanji_id')) {
+      context.handle(
+        _kanjiIdMeta,
+        kanjiId.isAcceptableOrUnknown(data['kanji_id']!, _kanjiIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kanjiIdMeta);
+    }
+    if (data.containsKey('stability')) {
+      context.handle(
+        _stabilityMeta,
+        stability.isAcceptableOrUnknown(data['stability']!, _stabilityMeta),
+      );
+    }
+    if (data.containsKey('difficulty')) {
+      context.handle(
+        _difficultyMeta,
+        difficulty.isAcceptableOrUnknown(data['difficulty']!, _difficultyMeta),
+      );
+    }
+    if (data.containsKey('last_confidence')) {
+      context.handle(
+        _lastConfidenceMeta,
+        lastConfidence.isAcceptableOrUnknown(
+          data['last_confidence']!,
+          _lastConfidenceMeta,
+        ),
+      );
+    }
+    if (data.containsKey('last_reviewed_at')) {
+      context.handle(
+        _lastReviewedAtMeta,
+        lastReviewedAt.isAcceptableOrUnknown(
+          data['last_reviewed_at']!,
+          _lastReviewedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('next_review_at')) {
+      context.handle(
+        _nextReviewAtMeta,
+        nextReviewAt.isAcceptableOrUnknown(
+          data['next_review_at']!,
+          _nextReviewAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_nextReviewAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  List<Set<GeneratedColumn>> get uniqueKeys => [
+    {kanjiId},
+  ];
+  @override
+  KanjiSrsStateData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return KanjiSrsStateData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      kanjiId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}kanji_id'],
+      )!,
+      stability: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}stability'],
+      )!,
+      difficulty: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty'],
+      )!,
+      lastConfidence: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}last_confidence'],
+      )!,
+      lastReviewedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}last_reviewed_at'],
+      ),
+      nextReviewAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}next_review_at'],
+      )!,
+    );
+  }
+
+  @override
+  $KanjiSrsStateTable createAlias(String alias) {
+    return $KanjiSrsStateTable(attachedDatabase, alias);
+  }
+}
+
+class KanjiSrsStateData extends DataClass
+    implements Insertable<KanjiSrsStateData> {
+  final int id;
+  final int kanjiId;
+  final double stability;
+  final double difficulty;
+  final int lastConfidence;
+  final DateTime? lastReviewedAt;
+  final DateTime nextReviewAt;
+  const KanjiSrsStateData({
+    required this.id,
+    required this.kanjiId,
+    required this.stability,
+    required this.difficulty,
+    required this.lastConfidence,
+    this.lastReviewedAt,
+    required this.nextReviewAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['kanji_id'] = Variable<int>(kanjiId);
+    map['stability'] = Variable<double>(stability);
+    map['difficulty'] = Variable<double>(difficulty);
+    map['last_confidence'] = Variable<int>(lastConfidence);
+    if (!nullToAbsent || lastReviewedAt != null) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
+    }
+    map['next_review_at'] = Variable<DateTime>(nextReviewAt);
+    return map;
+  }
+
+  KanjiSrsStateCompanion toCompanion(bool nullToAbsent) {
+    return KanjiSrsStateCompanion(
+      id: Value(id),
+      kanjiId: Value(kanjiId),
+      stability: Value(stability),
+      difficulty: Value(difficulty),
+      lastConfidence: Value(lastConfidence),
+      lastReviewedAt: lastReviewedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastReviewedAt),
+      nextReviewAt: Value(nextReviewAt),
+    );
+  }
+
+  factory KanjiSrsStateData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return KanjiSrsStateData(
+      id: serializer.fromJson<int>(json['id']),
+      kanjiId: serializer.fromJson<int>(json['kanjiId']),
+      stability: serializer.fromJson<double>(json['stability']),
+      difficulty: serializer.fromJson<double>(json['difficulty']),
+      lastConfidence: serializer.fromJson<int>(json['lastConfidence']),
+      lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
+      nextReviewAt: serializer.fromJson<DateTime>(json['nextReviewAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'kanjiId': serializer.toJson<int>(kanjiId),
+      'stability': serializer.toJson<double>(stability),
+      'difficulty': serializer.toJson<double>(difficulty),
+      'lastConfidence': serializer.toJson<int>(lastConfidence),
+      'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
+      'nextReviewAt': serializer.toJson<DateTime>(nextReviewAt),
+    };
+  }
+
+  KanjiSrsStateData copyWith({
+    int? id,
+    int? kanjiId,
+    double? stability,
+    double? difficulty,
+    int? lastConfidence,
+    Value<DateTime?> lastReviewedAt = const Value.absent(),
+    DateTime? nextReviewAt,
+  }) => KanjiSrsStateData(
+    id: id ?? this.id,
+    kanjiId: kanjiId ?? this.kanjiId,
+    stability: stability ?? this.stability,
+    difficulty: difficulty ?? this.difficulty,
+    lastConfidence: lastConfidence ?? this.lastConfidence,
+    lastReviewedAt: lastReviewedAt.present
+        ? lastReviewedAt.value
+        : this.lastReviewedAt,
+    nextReviewAt: nextReviewAt ?? this.nextReviewAt,
+  );
+  KanjiSrsStateData copyWithCompanion(KanjiSrsStateCompanion data) {
+    return KanjiSrsStateData(
+      id: data.id.present ? data.id.value : this.id,
+      kanjiId: data.kanjiId.present ? data.kanjiId.value : this.kanjiId,
+      stability: data.stability.present ? data.stability.value : this.stability,
+      difficulty: data.difficulty.present
+          ? data.difficulty.value
+          : this.difficulty,
+      lastConfidence: data.lastConfidence.present
+          ? data.lastConfidence.value
+          : this.lastConfidence,
+      lastReviewedAt: data.lastReviewedAt.present
+          ? data.lastReviewedAt.value
+          : this.lastReviewedAt,
+      nextReviewAt: data.nextReviewAt.present
+          ? data.nextReviewAt.value
+          : this.nextReviewAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('KanjiSrsStateData(')
+          ..write('id: $id, ')
+          ..write('kanjiId: $kanjiId, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('lastConfidence: $lastConfidence, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('nextReviewAt: $nextReviewAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    kanjiId,
+    stability,
+    difficulty,
+    lastConfidence,
+    lastReviewedAt,
+    nextReviewAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is KanjiSrsStateData &&
+          other.id == this.id &&
+          other.kanjiId == this.kanjiId &&
+          other.stability == this.stability &&
+          other.difficulty == this.difficulty &&
+          other.lastConfidence == this.lastConfidence &&
+          other.lastReviewedAt == this.lastReviewedAt &&
+          other.nextReviewAt == this.nextReviewAt);
+}
+
+class KanjiSrsStateCompanion extends UpdateCompanion<KanjiSrsStateData> {
+  final Value<int> id;
+  final Value<int> kanjiId;
+  final Value<double> stability;
+  final Value<double> difficulty;
+  final Value<int> lastConfidence;
+  final Value<DateTime?> lastReviewedAt;
+  final Value<DateTime> nextReviewAt;
+  const KanjiSrsStateCompanion({
+    this.id = const Value.absent(),
+    this.kanjiId = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.lastConfidence = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+    this.nextReviewAt = const Value.absent(),
+  });
+  KanjiSrsStateCompanion.insert({
+    this.id = const Value.absent(),
+    required int kanjiId,
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.lastConfidence = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+    required DateTime nextReviewAt,
+  }) : kanjiId = Value(kanjiId),
+       nextReviewAt = Value(nextReviewAt);
+  static Insertable<KanjiSrsStateData> custom({
+    Expression<int>? id,
+    Expression<int>? kanjiId,
+    Expression<double>? stability,
+    Expression<double>? difficulty,
+    Expression<int>? lastConfidence,
+    Expression<DateTime>? lastReviewedAt,
+    Expression<DateTime>? nextReviewAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (kanjiId != null) 'kanji_id': kanjiId,
+      if (stability != null) 'stability': stability,
+      if (difficulty != null) 'difficulty': difficulty,
+      if (lastConfidence != null) 'last_confidence': lastConfidence,
+      if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
+      if (nextReviewAt != null) 'next_review_at': nextReviewAt,
+    });
+  }
+
+  KanjiSrsStateCompanion copyWith({
+    Value<int>? id,
+    Value<int>? kanjiId,
+    Value<double>? stability,
+    Value<double>? difficulty,
+    Value<int>? lastConfidence,
+    Value<DateTime?>? lastReviewedAt,
+    Value<DateTime>? nextReviewAt,
+  }) {
+    return KanjiSrsStateCompanion(
+      id: id ?? this.id,
+      kanjiId: kanjiId ?? this.kanjiId,
+      stability: stability ?? this.stability,
+      difficulty: difficulty ?? this.difficulty,
+      lastConfidence: lastConfidence ?? this.lastConfidence,
+      lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
+      nextReviewAt: nextReviewAt ?? this.nextReviewAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (kanjiId.present) {
+      map['kanji_id'] = Variable<int>(kanjiId.value);
+    }
+    if (stability.present) {
+      map['stability'] = Variable<double>(stability.value);
+    }
+    if (difficulty.present) {
+      map['difficulty'] = Variable<double>(difficulty.value);
+    }
+    if (lastConfidence.present) {
+      map['last_confidence'] = Variable<int>(lastConfidence.value);
+    }
+    if (lastReviewedAt.present) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt.value);
+    }
+    if (nextReviewAt.present) {
+      map['next_review_at'] = Variable<DateTime>(nextReviewAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('KanjiSrsStateCompanion(')
+          ..write('id: $id, ')
+          ..write('kanjiId: $kanjiId, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
           ..write('lastConfidence: $lastConfidence, ')
           ..write('lastReviewedAt: $lastReviewedAt, ')
           ..write('nextReviewAt: $nextReviewAt')
@@ -3249,6 +3817,30 @@ class $GrammarSrsStateTable extends GrammarSrsState
     requiredDuringInsert: false,
     defaultValue: const Constant(2.5),
   );
+  static const VerificationMeta _stabilityMeta = const VerificationMeta(
+    'stability',
+  );
+  @override
+  late final GeneratedColumn<double> stability = GeneratedColumn<double>(
+    'stability',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1.0),
+  );
+  static const VerificationMeta _difficultyMeta = const VerificationMeta(
+    'difficulty',
+  );
+  @override
+  late final GeneratedColumn<double> difficulty = GeneratedColumn<double>(
+    'difficulty',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(5.0),
+  );
   static const VerificationMeta _nextReviewAtMeta = const VerificationMeta(
     'nextReviewAt',
   );
@@ -3290,6 +3882,8 @@ class $GrammarSrsStateTable extends GrammarSrsState
     grammarId,
     streak,
     ease,
+    stability,
+    difficulty,
     nextReviewAt,
     lastReviewedAt,
     ghostReviewsDue,
@@ -3327,6 +3921,18 @@ class $GrammarSrsStateTable extends GrammarSrsState
       context.handle(
         _easeMeta,
         ease.isAcceptableOrUnknown(data['ease']!, _easeMeta),
+      );
+    }
+    if (data.containsKey('stability')) {
+      context.handle(
+        _stabilityMeta,
+        stability.isAcceptableOrUnknown(data['stability']!, _stabilityMeta),
+      );
+    }
+    if (data.containsKey('difficulty')) {
+      context.handle(
+        _difficultyMeta,
+        difficulty.isAcceptableOrUnknown(data['difficulty']!, _difficultyMeta),
       );
     }
     if (data.containsKey('next_review_at')) {
@@ -3383,6 +3989,14 @@ class $GrammarSrsStateTable extends GrammarSrsState
         DriftSqlType.double,
         data['${effectivePrefix}ease'],
       )!,
+      stability: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}stability'],
+      )!,
+      difficulty: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty'],
+      )!,
       nextReviewAt: attachedDatabase.typeMapping.read(
         DriftSqlType.dateTime,
         data['${effectivePrefix}next_review_at'],
@@ -3410,6 +4024,8 @@ class GrammarSrsStateData extends DataClass
   final int grammarId;
   final int streak;
   final double ease;
+  final double stability;
+  final double difficulty;
   final DateTime nextReviewAt;
   final DateTime? lastReviewedAt;
   final int ghostReviewsDue;
@@ -3418,6 +4034,8 @@ class GrammarSrsStateData extends DataClass
     required this.grammarId,
     required this.streak,
     required this.ease,
+    required this.stability,
+    required this.difficulty,
     required this.nextReviewAt,
     this.lastReviewedAt,
     required this.ghostReviewsDue,
@@ -3429,6 +4047,8 @@ class GrammarSrsStateData extends DataClass
     map['grammar_id'] = Variable<int>(grammarId);
     map['streak'] = Variable<int>(streak);
     map['ease'] = Variable<double>(ease);
+    map['stability'] = Variable<double>(stability);
+    map['difficulty'] = Variable<double>(difficulty);
     map['next_review_at'] = Variable<DateTime>(nextReviewAt);
     if (!nullToAbsent || lastReviewedAt != null) {
       map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
@@ -3443,6 +4063,8 @@ class GrammarSrsStateData extends DataClass
       grammarId: Value(grammarId),
       streak: Value(streak),
       ease: Value(ease),
+      stability: Value(stability),
+      difficulty: Value(difficulty),
       nextReviewAt: Value(nextReviewAt),
       lastReviewedAt: lastReviewedAt == null && nullToAbsent
           ? const Value.absent()
@@ -3461,6 +4083,8 @@ class GrammarSrsStateData extends DataClass
       grammarId: serializer.fromJson<int>(json['grammarId']),
       streak: serializer.fromJson<int>(json['streak']),
       ease: serializer.fromJson<double>(json['ease']),
+      stability: serializer.fromJson<double>(json['stability']),
+      difficulty: serializer.fromJson<double>(json['difficulty']),
       nextReviewAt: serializer.fromJson<DateTime>(json['nextReviewAt']),
       lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
       ghostReviewsDue: serializer.fromJson<int>(json['ghostReviewsDue']),
@@ -3474,6 +4098,8 @@ class GrammarSrsStateData extends DataClass
       'grammarId': serializer.toJson<int>(grammarId),
       'streak': serializer.toJson<int>(streak),
       'ease': serializer.toJson<double>(ease),
+      'stability': serializer.toJson<double>(stability),
+      'difficulty': serializer.toJson<double>(difficulty),
       'nextReviewAt': serializer.toJson<DateTime>(nextReviewAt),
       'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
       'ghostReviewsDue': serializer.toJson<int>(ghostReviewsDue),
@@ -3485,6 +4111,8 @@ class GrammarSrsStateData extends DataClass
     int? grammarId,
     int? streak,
     double? ease,
+    double? stability,
+    double? difficulty,
     DateTime? nextReviewAt,
     Value<DateTime?> lastReviewedAt = const Value.absent(),
     int? ghostReviewsDue,
@@ -3493,6 +4121,8 @@ class GrammarSrsStateData extends DataClass
     grammarId: grammarId ?? this.grammarId,
     streak: streak ?? this.streak,
     ease: ease ?? this.ease,
+    stability: stability ?? this.stability,
+    difficulty: difficulty ?? this.difficulty,
     nextReviewAt: nextReviewAt ?? this.nextReviewAt,
     lastReviewedAt: lastReviewedAt.present
         ? lastReviewedAt.value
@@ -3505,6 +4135,10 @@ class GrammarSrsStateData extends DataClass
       grammarId: data.grammarId.present ? data.grammarId.value : this.grammarId,
       streak: data.streak.present ? data.streak.value : this.streak,
       ease: data.ease.present ? data.ease.value : this.ease,
+      stability: data.stability.present ? data.stability.value : this.stability,
+      difficulty: data.difficulty.present
+          ? data.difficulty.value
+          : this.difficulty,
       nextReviewAt: data.nextReviewAt.present
           ? data.nextReviewAt.value
           : this.nextReviewAt,
@@ -3524,6 +4158,8 @@ class GrammarSrsStateData extends DataClass
           ..write('grammarId: $grammarId, ')
           ..write('streak: $streak, ')
           ..write('ease: $ease, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
           ..write('nextReviewAt: $nextReviewAt, ')
           ..write('lastReviewedAt: $lastReviewedAt, ')
           ..write('ghostReviewsDue: $ghostReviewsDue')
@@ -3537,6 +4173,8 @@ class GrammarSrsStateData extends DataClass
     grammarId,
     streak,
     ease,
+    stability,
+    difficulty,
     nextReviewAt,
     lastReviewedAt,
     ghostReviewsDue,
@@ -3549,6 +4187,8 @@ class GrammarSrsStateData extends DataClass
           other.grammarId == this.grammarId &&
           other.streak == this.streak &&
           other.ease == this.ease &&
+          other.stability == this.stability &&
+          other.difficulty == this.difficulty &&
           other.nextReviewAt == this.nextReviewAt &&
           other.lastReviewedAt == this.lastReviewedAt &&
           other.ghostReviewsDue == this.ghostReviewsDue);
@@ -3559,6 +4199,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
   final Value<int> grammarId;
   final Value<int> streak;
   final Value<double> ease;
+  final Value<double> stability;
+  final Value<double> difficulty;
   final Value<DateTime> nextReviewAt;
   final Value<DateTime?> lastReviewedAt;
   final Value<int> ghostReviewsDue;
@@ -3567,6 +4209,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
     this.grammarId = const Value.absent(),
     this.streak = const Value.absent(),
     this.ease = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
     this.nextReviewAt = const Value.absent(),
     this.lastReviewedAt = const Value.absent(),
     this.ghostReviewsDue = const Value.absent(),
@@ -3576,6 +4220,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
     required int grammarId,
     this.streak = const Value.absent(),
     this.ease = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
     required DateTime nextReviewAt,
     this.lastReviewedAt = const Value.absent(),
     this.ghostReviewsDue = const Value.absent(),
@@ -3586,6 +4232,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
     Expression<int>? grammarId,
     Expression<int>? streak,
     Expression<double>? ease,
+    Expression<double>? stability,
+    Expression<double>? difficulty,
     Expression<DateTime>? nextReviewAt,
     Expression<DateTime>? lastReviewedAt,
     Expression<int>? ghostReviewsDue,
@@ -3595,6 +4243,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
       if (grammarId != null) 'grammar_id': grammarId,
       if (streak != null) 'streak': streak,
       if (ease != null) 'ease': ease,
+      if (stability != null) 'stability': stability,
+      if (difficulty != null) 'difficulty': difficulty,
       if (nextReviewAt != null) 'next_review_at': nextReviewAt,
       if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
       if (ghostReviewsDue != null) 'ghost_reviews_due': ghostReviewsDue,
@@ -3606,6 +4256,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
     Value<int>? grammarId,
     Value<int>? streak,
     Value<double>? ease,
+    Value<double>? stability,
+    Value<double>? difficulty,
     Value<DateTime>? nextReviewAt,
     Value<DateTime?>? lastReviewedAt,
     Value<int>? ghostReviewsDue,
@@ -3615,6 +4267,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
       grammarId: grammarId ?? this.grammarId,
       streak: streak ?? this.streak,
       ease: ease ?? this.ease,
+      stability: stability ?? this.stability,
+      difficulty: difficulty ?? this.difficulty,
       nextReviewAt: nextReviewAt ?? this.nextReviewAt,
       lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
       ghostReviewsDue: ghostReviewsDue ?? this.ghostReviewsDue,
@@ -3636,6 +4290,12 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
     if (ease.present) {
       map['ease'] = Variable<double>(ease.value);
     }
+    if (stability.present) {
+      map['stability'] = Variable<double>(stability.value);
+    }
+    if (difficulty.present) {
+      map['difficulty'] = Variable<double>(difficulty.value);
+    }
     if (nextReviewAt.present) {
       map['next_review_at'] = Variable<DateTime>(nextReviewAt.value);
     }
@@ -3655,6 +4315,8 @@ class GrammarSrsStateCompanion extends UpdateCompanion<GrammarSrsStateData> {
           ..write('grammarId: $grammarId, ')
           ..write('streak: $streak, ')
           ..write('ease: $ease, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
           ..write('nextReviewAt: $nextReviewAt, ')
           ..write('lastReviewedAt: $lastReviewedAt, ')
           ..write('ghostReviewsDue: $ghostReviewsDue')
@@ -10286,6 +10948,57 @@ class $UserMistakesTable extends UserMistakes
         type: DriftSqlType.dateTime,
         requiredDuringInsert: true,
       );
+  static const VerificationMeta _promptMeta = const VerificationMeta('prompt');
+  @override
+  late final GeneratedColumn<String> prompt = GeneratedColumn<String>(
+    'prompt',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _correctAnswerMeta = const VerificationMeta(
+    'correctAnswer',
+  );
+  @override
+  late final GeneratedColumn<String> correctAnswer = GeneratedColumn<String>(
+    'correct_answer',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _userAnswerMeta = const VerificationMeta(
+    'userAnswer',
+  );
+  @override
+  late final GeneratedColumn<String> userAnswer = GeneratedColumn<String>(
+    'user_answer',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _sourceMeta = const VerificationMeta('source');
+  @override
+  late final GeneratedColumn<String> source = GeneratedColumn<String>(
+    'source',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _extraJsonMeta = const VerificationMeta(
+    'extraJson',
+  );
+  @override
+  late final GeneratedColumn<String> extraJson = GeneratedColumn<String>(
+    'extra_json',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -10293,6 +11006,11 @@ class $UserMistakesTable extends UserMistakes
     itemId,
     wrongCount,
     lastMistakeAt,
+    prompt,
+    correctAnswer,
+    userAnswer,
+    source,
+    extraJson,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -10342,6 +11060,39 @@ class $UserMistakesTable extends UserMistakes
     } else if (isInserting) {
       context.missing(_lastMistakeAtMeta);
     }
+    if (data.containsKey('prompt')) {
+      context.handle(
+        _promptMeta,
+        prompt.isAcceptableOrUnknown(data['prompt']!, _promptMeta),
+      );
+    }
+    if (data.containsKey('correct_answer')) {
+      context.handle(
+        _correctAnswerMeta,
+        correctAnswer.isAcceptableOrUnknown(
+          data['correct_answer']!,
+          _correctAnswerMeta,
+        ),
+      );
+    }
+    if (data.containsKey('user_answer')) {
+      context.handle(
+        _userAnswerMeta,
+        userAnswer.isAcceptableOrUnknown(data['user_answer']!, _userAnswerMeta),
+      );
+    }
+    if (data.containsKey('source')) {
+      context.handle(
+        _sourceMeta,
+        source.isAcceptableOrUnknown(data['source']!, _sourceMeta),
+      );
+    }
+    if (data.containsKey('extra_json')) {
+      context.handle(
+        _extraJsonMeta,
+        extraJson.isAcceptableOrUnknown(data['extra_json']!, _extraJsonMeta),
+      );
+    }
     return context;
   }
 
@@ -10375,6 +11126,26 @@ class $UserMistakesTable extends UserMistakes
         DriftSqlType.dateTime,
         data['${effectivePrefix}last_mistake_at'],
       )!,
+      prompt: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}prompt'],
+      ),
+      correctAnswer: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}correct_answer'],
+      ),
+      userAnswer: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}user_answer'],
+      ),
+      source: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}source'],
+      ),
+      extraJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}extra_json'],
+      ),
     );
   }
 
@@ -10390,12 +11161,22 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
   final int itemId;
   final int wrongCount;
   final DateTime lastMistakeAt;
+  final String? prompt;
+  final String? correctAnswer;
+  final String? userAnswer;
+  final String? source;
+  final String? extraJson;
   const UserMistake({
     required this.id,
     required this.type,
     required this.itemId,
     required this.wrongCount,
     required this.lastMistakeAt,
+    this.prompt,
+    this.correctAnswer,
+    this.userAnswer,
+    this.source,
+    this.extraJson,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -10405,6 +11186,21 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
     map['item_id'] = Variable<int>(itemId);
     map['wrong_count'] = Variable<int>(wrongCount);
     map['last_mistake_at'] = Variable<DateTime>(lastMistakeAt);
+    if (!nullToAbsent || prompt != null) {
+      map['prompt'] = Variable<String>(prompt);
+    }
+    if (!nullToAbsent || correctAnswer != null) {
+      map['correct_answer'] = Variable<String>(correctAnswer);
+    }
+    if (!nullToAbsent || userAnswer != null) {
+      map['user_answer'] = Variable<String>(userAnswer);
+    }
+    if (!nullToAbsent || source != null) {
+      map['source'] = Variable<String>(source);
+    }
+    if (!nullToAbsent || extraJson != null) {
+      map['extra_json'] = Variable<String>(extraJson);
+    }
     return map;
   }
 
@@ -10415,6 +11211,21 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
       itemId: Value(itemId),
       wrongCount: Value(wrongCount),
       lastMistakeAt: Value(lastMistakeAt),
+      prompt: prompt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(prompt),
+      correctAnswer: correctAnswer == null && nullToAbsent
+          ? const Value.absent()
+          : Value(correctAnswer),
+      userAnswer: userAnswer == null && nullToAbsent
+          ? const Value.absent()
+          : Value(userAnswer),
+      source: source == null && nullToAbsent
+          ? const Value.absent()
+          : Value(source),
+      extraJson: extraJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(extraJson),
     );
   }
 
@@ -10429,6 +11240,11 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
       itemId: serializer.fromJson<int>(json['itemId']),
       wrongCount: serializer.fromJson<int>(json['wrongCount']),
       lastMistakeAt: serializer.fromJson<DateTime>(json['lastMistakeAt']),
+      prompt: serializer.fromJson<String?>(json['prompt']),
+      correctAnswer: serializer.fromJson<String?>(json['correctAnswer']),
+      userAnswer: serializer.fromJson<String?>(json['userAnswer']),
+      source: serializer.fromJson<String?>(json['source']),
+      extraJson: serializer.fromJson<String?>(json['extraJson']),
     );
   }
   @override
@@ -10440,6 +11256,11 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
       'itemId': serializer.toJson<int>(itemId),
       'wrongCount': serializer.toJson<int>(wrongCount),
       'lastMistakeAt': serializer.toJson<DateTime>(lastMistakeAt),
+      'prompt': serializer.toJson<String?>(prompt),
+      'correctAnswer': serializer.toJson<String?>(correctAnswer),
+      'userAnswer': serializer.toJson<String?>(userAnswer),
+      'source': serializer.toJson<String?>(source),
+      'extraJson': serializer.toJson<String?>(extraJson),
     };
   }
 
@@ -10449,12 +11270,24 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
     int? itemId,
     int? wrongCount,
     DateTime? lastMistakeAt,
+    Value<String?> prompt = const Value.absent(),
+    Value<String?> correctAnswer = const Value.absent(),
+    Value<String?> userAnswer = const Value.absent(),
+    Value<String?> source = const Value.absent(),
+    Value<String?> extraJson = const Value.absent(),
   }) => UserMistake(
     id: id ?? this.id,
     type: type ?? this.type,
     itemId: itemId ?? this.itemId,
     wrongCount: wrongCount ?? this.wrongCount,
     lastMistakeAt: lastMistakeAt ?? this.lastMistakeAt,
+    prompt: prompt.present ? prompt.value : this.prompt,
+    correctAnswer: correctAnswer.present
+        ? correctAnswer.value
+        : this.correctAnswer,
+    userAnswer: userAnswer.present ? userAnswer.value : this.userAnswer,
+    source: source.present ? source.value : this.source,
+    extraJson: extraJson.present ? extraJson.value : this.extraJson,
   );
   UserMistake copyWithCompanion(UserMistakesCompanion data) {
     return UserMistake(
@@ -10467,6 +11300,15 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
       lastMistakeAt: data.lastMistakeAt.present
           ? data.lastMistakeAt.value
           : this.lastMistakeAt,
+      prompt: data.prompt.present ? data.prompt.value : this.prompt,
+      correctAnswer: data.correctAnswer.present
+          ? data.correctAnswer.value
+          : this.correctAnswer,
+      userAnswer: data.userAnswer.present
+          ? data.userAnswer.value
+          : this.userAnswer,
+      source: data.source.present ? data.source.value : this.source,
+      extraJson: data.extraJson.present ? data.extraJson.value : this.extraJson,
     );
   }
 
@@ -10477,13 +11319,29 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
           ..write('type: $type, ')
           ..write('itemId: $itemId, ')
           ..write('wrongCount: $wrongCount, ')
-          ..write('lastMistakeAt: $lastMistakeAt')
+          ..write('lastMistakeAt: $lastMistakeAt, ')
+          ..write('prompt: $prompt, ')
+          ..write('correctAnswer: $correctAnswer, ')
+          ..write('userAnswer: $userAnswer, ')
+          ..write('source: $source, ')
+          ..write('extraJson: $extraJson')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode => Object.hash(id, type, itemId, wrongCount, lastMistakeAt);
+  int get hashCode => Object.hash(
+    id,
+    type,
+    itemId,
+    wrongCount,
+    lastMistakeAt,
+    prompt,
+    correctAnswer,
+    userAnswer,
+    source,
+    extraJson,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -10492,7 +11350,12 @@ class UserMistake extends DataClass implements Insertable<UserMistake> {
           other.type == this.type &&
           other.itemId == this.itemId &&
           other.wrongCount == this.wrongCount &&
-          other.lastMistakeAt == this.lastMistakeAt);
+          other.lastMistakeAt == this.lastMistakeAt &&
+          other.prompt == this.prompt &&
+          other.correctAnswer == this.correctAnswer &&
+          other.userAnswer == this.userAnswer &&
+          other.source == this.source &&
+          other.extraJson == this.extraJson);
 }
 
 class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
@@ -10501,12 +11364,22 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
   final Value<int> itemId;
   final Value<int> wrongCount;
   final Value<DateTime> lastMistakeAt;
+  final Value<String?> prompt;
+  final Value<String?> correctAnswer;
+  final Value<String?> userAnswer;
+  final Value<String?> source;
+  final Value<String?> extraJson;
   const UserMistakesCompanion({
     this.id = const Value.absent(),
     this.type = const Value.absent(),
     this.itemId = const Value.absent(),
     this.wrongCount = const Value.absent(),
     this.lastMistakeAt = const Value.absent(),
+    this.prompt = const Value.absent(),
+    this.correctAnswer = const Value.absent(),
+    this.userAnswer = const Value.absent(),
+    this.source = const Value.absent(),
+    this.extraJson = const Value.absent(),
   });
   UserMistakesCompanion.insert({
     this.id = const Value.absent(),
@@ -10514,6 +11387,11 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
     required int itemId,
     this.wrongCount = const Value.absent(),
     required DateTime lastMistakeAt,
+    this.prompt = const Value.absent(),
+    this.correctAnswer = const Value.absent(),
+    this.userAnswer = const Value.absent(),
+    this.source = const Value.absent(),
+    this.extraJson = const Value.absent(),
   }) : type = Value(type),
        itemId = Value(itemId),
        lastMistakeAt = Value(lastMistakeAt);
@@ -10523,6 +11401,11 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
     Expression<int>? itemId,
     Expression<int>? wrongCount,
     Expression<DateTime>? lastMistakeAt,
+    Expression<String>? prompt,
+    Expression<String>? correctAnswer,
+    Expression<String>? userAnswer,
+    Expression<String>? source,
+    Expression<String>? extraJson,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -10530,6 +11413,11 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
       if (itemId != null) 'item_id': itemId,
       if (wrongCount != null) 'wrong_count': wrongCount,
       if (lastMistakeAt != null) 'last_mistake_at': lastMistakeAt,
+      if (prompt != null) 'prompt': prompt,
+      if (correctAnswer != null) 'correct_answer': correctAnswer,
+      if (userAnswer != null) 'user_answer': userAnswer,
+      if (source != null) 'source': source,
+      if (extraJson != null) 'extra_json': extraJson,
     });
   }
 
@@ -10539,6 +11427,11 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
     Value<int>? itemId,
     Value<int>? wrongCount,
     Value<DateTime>? lastMistakeAt,
+    Value<String?>? prompt,
+    Value<String?>? correctAnswer,
+    Value<String?>? userAnswer,
+    Value<String?>? source,
+    Value<String?>? extraJson,
   }) {
     return UserMistakesCompanion(
       id: id ?? this.id,
@@ -10546,6 +11439,11 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
       itemId: itemId ?? this.itemId,
       wrongCount: wrongCount ?? this.wrongCount,
       lastMistakeAt: lastMistakeAt ?? this.lastMistakeAt,
+      prompt: prompt ?? this.prompt,
+      correctAnswer: correctAnswer ?? this.correctAnswer,
+      userAnswer: userAnswer ?? this.userAnswer,
+      source: source ?? this.source,
+      extraJson: extraJson ?? this.extraJson,
     );
   }
 
@@ -10567,6 +11465,21 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
     if (lastMistakeAt.present) {
       map['last_mistake_at'] = Variable<DateTime>(lastMistakeAt.value);
     }
+    if (prompt.present) {
+      map['prompt'] = Variable<String>(prompt.value);
+    }
+    if (correctAnswer.present) {
+      map['correct_answer'] = Variable<String>(correctAnswer.value);
+    }
+    if (userAnswer.present) {
+      map['user_answer'] = Variable<String>(userAnswer.value);
+    }
+    if (source.present) {
+      map['source'] = Variable<String>(source.value);
+    }
+    if (extraJson.present) {
+      map['extra_json'] = Variable<String>(extraJson.value);
+    }
     return map;
   }
 
@@ -10577,7 +11490,12 @@ class UserMistakesCompanion extends UpdateCompanion<UserMistake> {
           ..write('type: $type, ')
           ..write('itemId: $itemId, ')
           ..write('wrongCount: $wrongCount, ')
-          ..write('lastMistakeAt: $lastMistakeAt')
+          ..write('lastMistakeAt: $lastMistakeAt, ')
+          ..write('prompt: $prompt, ')
+          ..write('correctAnswer: $correctAnswer, ')
+          ..write('userAnswer: $userAnswer, ')
+          ..write('source: $source, ')
+          ..write('extraJson: $extraJson')
           ..write(')'))
         .toString();
   }
@@ -10587,6 +11505,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
   late final $SrsStateTable srsState = $SrsStateTable(this);
+  late final $KanjiSrsStateTable kanjiSrsState = $KanjiSrsStateTable(this);
   late final $UserProgressTable userProgress = $UserProgressTable(this);
   late final $AttemptTable attempt = $AttemptTable(this);
   late final $AttemptAnswerTable attemptAnswer = $AttemptAnswerTable(this);
@@ -10620,12 +11539,14 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final SrsDao srsDao = SrsDao(this as AppDatabase);
   late final GrammarDao grammarDao = GrammarDao(this as AppDatabase);
   late final MistakeDao mistakeDao = MistakeDao(this as AppDatabase);
+  late final KanjiSrsDao kanjiSrsDao = KanjiSrsDao(this as AppDatabase);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [
     srsState,
+    kanjiSrsState,
     userProgress,
     attempt,
     attemptAnswer,
@@ -10678,6 +11599,8 @@ typedef $$SrsStateTableCreateCompanionBuilder =
       Value<int> box,
       Value<int> repetitions,
       Value<double> ease,
+      Value<double> stability,
+      Value<double> difficulty,
       Value<int> lastConfidence,
       Value<DateTime?> lastReviewedAt,
       required DateTime nextReviewAt,
@@ -10689,6 +11612,8 @@ typedef $$SrsStateTableUpdateCompanionBuilder =
       Value<int> box,
       Value<int> repetitions,
       Value<double> ease,
+      Value<double> stability,
+      Value<double> difficulty,
       Value<int> lastConfidence,
       Value<DateTime?> lastReviewedAt,
       Value<DateTime> nextReviewAt,
@@ -10725,6 +11650,16 @@ class $$SrsStateTableFilterComposer
 
   ColumnFilters<double> get ease => $composableBuilder(
     column: $table.ease,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -10778,6 +11713,16 @@ class $$SrsStateTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<int> get lastConfidence => $composableBuilder(
     column: $table.lastConfidence,
     builder: (column) => ColumnOrderings(column),
@@ -10819,6 +11764,14 @@ class $$SrsStateTableAnnotationComposer
 
   GeneratedColumn<double> get ease =>
       $composableBuilder(column: $table.ease, builder: (column) => column);
+
+  GeneratedColumn<double> get stability =>
+      $composableBuilder(column: $table.stability, builder: (column) => column);
+
+  GeneratedColumn<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<int> get lastConfidence => $composableBuilder(
     column: $table.lastConfidence,
@@ -10872,6 +11825,8 @@ class $$SrsStateTableTableManager
                 Value<int> box = const Value.absent(),
                 Value<int> repetitions = const Value.absent(),
                 Value<double> ease = const Value.absent(),
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
                 Value<int> lastConfidence = const Value.absent(),
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
                 Value<DateTime> nextReviewAt = const Value.absent(),
@@ -10881,6 +11836,8 @@ class $$SrsStateTableTableManager
                 box: box,
                 repetitions: repetitions,
                 ease: ease,
+                stability: stability,
+                difficulty: difficulty,
                 lastConfidence: lastConfidence,
                 lastReviewedAt: lastReviewedAt,
                 nextReviewAt: nextReviewAt,
@@ -10892,6 +11849,8 @@ class $$SrsStateTableTableManager
                 Value<int> box = const Value.absent(),
                 Value<int> repetitions = const Value.absent(),
                 Value<double> ease = const Value.absent(),
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
                 Value<int> lastConfidence = const Value.absent(),
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
                 required DateTime nextReviewAt,
@@ -10901,6 +11860,8 @@ class $$SrsStateTableTableManager
                 box: box,
                 repetitions: repetitions,
                 ease: ease,
+                stability: stability,
+                difficulty: difficulty,
                 lastConfidence: lastConfidence,
                 lastReviewedAt: lastReviewedAt,
                 nextReviewAt: nextReviewAt,
@@ -10928,6 +11889,250 @@ typedef $$SrsStateTableProcessedTableManager =
         BaseReferences<_$AppDatabase, $SrsStateTable, SrsStateData>,
       ),
       SrsStateData,
+      PrefetchHooks Function()
+    >;
+typedef $$KanjiSrsStateTableCreateCompanionBuilder =
+    KanjiSrsStateCompanion Function({
+      Value<int> id,
+      required int kanjiId,
+      Value<double> stability,
+      Value<double> difficulty,
+      Value<int> lastConfidence,
+      Value<DateTime?> lastReviewedAt,
+      required DateTime nextReviewAt,
+    });
+typedef $$KanjiSrsStateTableUpdateCompanionBuilder =
+    KanjiSrsStateCompanion Function({
+      Value<int> id,
+      Value<int> kanjiId,
+      Value<double> stability,
+      Value<double> difficulty,
+      Value<int> lastConfidence,
+      Value<DateTime?> lastReviewedAt,
+      Value<DateTime> nextReviewAt,
+    });
+
+class $$KanjiSrsStateTableFilterComposer
+    extends Composer<_$AppDatabase, $KanjiSrsStateTable> {
+  $$KanjiSrsStateTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get kanjiId => $composableBuilder(
+    column: $table.kanjiId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$KanjiSrsStateTableOrderingComposer
+    extends Composer<_$AppDatabase, $KanjiSrsStateTable> {
+  $$KanjiSrsStateTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get kanjiId => $composableBuilder(
+    column: $table.kanjiId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$KanjiSrsStateTableAnnotationComposer
+    extends Composer<_$AppDatabase, $KanjiSrsStateTable> {
+  $$KanjiSrsStateTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get kanjiId =>
+      $composableBuilder(column: $table.kanjiId, builder: (column) => column);
+
+  GeneratedColumn<double> get stability =>
+      $composableBuilder(column: $table.stability, builder: (column) => column);
+
+  GeneratedColumn<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => column,
+  );
+}
+
+class $$KanjiSrsStateTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $KanjiSrsStateTable,
+          KanjiSrsStateData,
+          $$KanjiSrsStateTableFilterComposer,
+          $$KanjiSrsStateTableOrderingComposer,
+          $$KanjiSrsStateTableAnnotationComposer,
+          $$KanjiSrsStateTableCreateCompanionBuilder,
+          $$KanjiSrsStateTableUpdateCompanionBuilder,
+          (
+            KanjiSrsStateData,
+            BaseReferences<
+              _$AppDatabase,
+              $KanjiSrsStateTable,
+              KanjiSrsStateData
+            >,
+          ),
+          KanjiSrsStateData,
+          PrefetchHooks Function()
+        > {
+  $$KanjiSrsStateTableTableManager(_$AppDatabase db, $KanjiSrsStateTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$KanjiSrsStateTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$KanjiSrsStateTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$KanjiSrsStateTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> kanjiId = const Value.absent(),
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
+                Value<int> lastConfidence = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+                Value<DateTime> nextReviewAt = const Value.absent(),
+              }) => KanjiSrsStateCompanion(
+                id: id,
+                kanjiId: kanjiId,
+                stability: stability,
+                difficulty: difficulty,
+                lastConfidence: lastConfidence,
+                lastReviewedAt: lastReviewedAt,
+                nextReviewAt: nextReviewAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int kanjiId,
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
+                Value<int> lastConfidence = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+                required DateTime nextReviewAt,
+              }) => KanjiSrsStateCompanion.insert(
+                id: id,
+                kanjiId: kanjiId,
+                stability: stability,
+                difficulty: difficulty,
+                lastConfidence: lastConfidence,
+                lastReviewedAt: lastReviewedAt,
+                nextReviewAt: nextReviewAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$KanjiSrsStateTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $KanjiSrsStateTable,
+      KanjiSrsStateData,
+      $$KanjiSrsStateTableFilterComposer,
+      $$KanjiSrsStateTableOrderingComposer,
+      $$KanjiSrsStateTableAnnotationComposer,
+      $$KanjiSrsStateTableCreateCompanionBuilder,
+      $$KanjiSrsStateTableUpdateCompanionBuilder,
+      (
+        KanjiSrsStateData,
+        BaseReferences<_$AppDatabase, $KanjiSrsStateTable, KanjiSrsStateData>,
+      ),
+      KanjiSrsStateData,
       PrefetchHooks Function()
     >;
 typedef $$UserProgressTableCreateCompanionBuilder =
@@ -12934,6 +14139,8 @@ typedef $$GrammarSrsStateTableCreateCompanionBuilder =
       required int grammarId,
       Value<int> streak,
       Value<double> ease,
+      Value<double> stability,
+      Value<double> difficulty,
       required DateTime nextReviewAt,
       Value<DateTime?> lastReviewedAt,
       Value<int> ghostReviewsDue,
@@ -12944,6 +14151,8 @@ typedef $$GrammarSrsStateTableUpdateCompanionBuilder =
       Value<int> grammarId,
       Value<int> streak,
       Value<double> ease,
+      Value<double> stability,
+      Value<double> difficulty,
       Value<DateTime> nextReviewAt,
       Value<DateTime?> lastReviewedAt,
       Value<int> ghostReviewsDue,
@@ -13003,6 +14212,16 @@ class $$GrammarSrsStateTableFilterComposer
 
   ColumnFilters<double> get ease => $composableBuilder(
     column: $table.ease,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -13069,6 +14288,16 @@ class $$GrammarSrsStateTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<DateTime> get nextReviewAt => $composableBuilder(
     column: $table.nextReviewAt,
     builder: (column) => ColumnOrderings(column),
@@ -13125,6 +14354,14 @@ class $$GrammarSrsStateTableAnnotationComposer
 
   GeneratedColumn<double> get ease =>
       $composableBuilder(column: $table.ease, builder: (column) => column);
+
+  GeneratedColumn<double> get stability =>
+      $composableBuilder(column: $table.stability, builder: (column) => column);
+
+  GeneratedColumn<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<DateTime> get nextReviewAt => $composableBuilder(
     column: $table.nextReviewAt,
@@ -13199,6 +14436,8 @@ class $$GrammarSrsStateTableTableManager
                 Value<int> grammarId = const Value.absent(),
                 Value<int> streak = const Value.absent(),
                 Value<double> ease = const Value.absent(),
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
                 Value<DateTime> nextReviewAt = const Value.absent(),
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
                 Value<int> ghostReviewsDue = const Value.absent(),
@@ -13207,6 +14446,8 @@ class $$GrammarSrsStateTableTableManager
                 grammarId: grammarId,
                 streak: streak,
                 ease: ease,
+                stability: stability,
+                difficulty: difficulty,
                 nextReviewAt: nextReviewAt,
                 lastReviewedAt: lastReviewedAt,
                 ghostReviewsDue: ghostReviewsDue,
@@ -13217,6 +14458,8 @@ class $$GrammarSrsStateTableTableManager
                 required int grammarId,
                 Value<int> streak = const Value.absent(),
                 Value<double> ease = const Value.absent(),
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
                 required DateTime nextReviewAt,
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
                 Value<int> ghostReviewsDue = const Value.absent(),
@@ -13225,6 +14468,8 @@ class $$GrammarSrsStateTableTableManager
                 grammarId: grammarId,
                 streak: streak,
                 ease: ease,
+                stability: stability,
+                difficulty: difficulty,
                 nextReviewAt: nextReviewAt,
                 lastReviewedAt: lastReviewedAt,
                 ghostReviewsDue: ghostReviewsDue,
@@ -17325,6 +18570,11 @@ typedef $$UserMistakesTableCreateCompanionBuilder =
       required int itemId,
       Value<int> wrongCount,
       required DateTime lastMistakeAt,
+      Value<String?> prompt,
+      Value<String?> correctAnswer,
+      Value<String?> userAnswer,
+      Value<String?> source,
+      Value<String?> extraJson,
     });
 typedef $$UserMistakesTableUpdateCompanionBuilder =
     UserMistakesCompanion Function({
@@ -17333,6 +18583,11 @@ typedef $$UserMistakesTableUpdateCompanionBuilder =
       Value<int> itemId,
       Value<int> wrongCount,
       Value<DateTime> lastMistakeAt,
+      Value<String?> prompt,
+      Value<String?> correctAnswer,
+      Value<String?> userAnswer,
+      Value<String?> source,
+      Value<String?> extraJson,
     });
 
 class $$UserMistakesTableFilterComposer
@@ -17366,6 +18621,31 @@ class $$UserMistakesTableFilterComposer
 
   ColumnFilters<DateTime> get lastMistakeAt => $composableBuilder(
     column: $table.lastMistakeAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get prompt => $composableBuilder(
+    column: $table.prompt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get correctAnswer => $composableBuilder(
+    column: $table.correctAnswer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get source => $composableBuilder(
+    column: $table.source,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get extraJson => $composableBuilder(
+    column: $table.extraJson,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -17403,6 +18683,31 @@ class $$UserMistakesTableOrderingComposer
     column: $table.lastMistakeAt,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<String> get prompt => $composableBuilder(
+    column: $table.prompt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get correctAnswer => $composableBuilder(
+    column: $table.correctAnswer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get source => $composableBuilder(
+    column: $table.source,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get extraJson => $composableBuilder(
+    column: $table.extraJson,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$UserMistakesTableAnnotationComposer
@@ -17432,6 +18737,25 @@ class $$UserMistakesTableAnnotationComposer
     column: $table.lastMistakeAt,
     builder: (column) => column,
   );
+
+  GeneratedColumn<String> get prompt =>
+      $composableBuilder(column: $table.prompt, builder: (column) => column);
+
+  GeneratedColumn<String> get correctAnswer => $composableBuilder(
+    column: $table.correctAnswer,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get userAnswer => $composableBuilder(
+    column: $table.userAnswer,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get source =>
+      $composableBuilder(column: $table.source, builder: (column) => column);
+
+  GeneratedColumn<String> get extraJson =>
+      $composableBuilder(column: $table.extraJson, builder: (column) => column);
 }
 
 class $$UserMistakesTableTableManager
@@ -17470,12 +18794,22 @@ class $$UserMistakesTableTableManager
                 Value<int> itemId = const Value.absent(),
                 Value<int> wrongCount = const Value.absent(),
                 Value<DateTime> lastMistakeAt = const Value.absent(),
+                Value<String?> prompt = const Value.absent(),
+                Value<String?> correctAnswer = const Value.absent(),
+                Value<String?> userAnswer = const Value.absent(),
+                Value<String?> source = const Value.absent(),
+                Value<String?> extraJson = const Value.absent(),
               }) => UserMistakesCompanion(
                 id: id,
                 type: type,
                 itemId: itemId,
                 wrongCount: wrongCount,
                 lastMistakeAt: lastMistakeAt,
+                prompt: prompt,
+                correctAnswer: correctAnswer,
+                userAnswer: userAnswer,
+                source: source,
+                extraJson: extraJson,
               ),
           createCompanionCallback:
               ({
@@ -17484,12 +18818,22 @@ class $$UserMistakesTableTableManager
                 required int itemId,
                 Value<int> wrongCount = const Value.absent(),
                 required DateTime lastMistakeAt,
+                Value<String?> prompt = const Value.absent(),
+                Value<String?> correctAnswer = const Value.absent(),
+                Value<String?> userAnswer = const Value.absent(),
+                Value<String?> source = const Value.absent(),
+                Value<String?> extraJson = const Value.absent(),
               }) => UserMistakesCompanion.insert(
                 id: id,
                 type: type,
                 itemId: itemId,
                 wrongCount: wrongCount,
                 lastMistakeAt: lastMistakeAt,
+                prompt: prompt,
+                correctAnswer: correctAnswer,
+                userAnswer: userAnswer,
+                source: source,
+                extraJson: extraJson,
               ),
           withReferenceMapper: (p0) => p0
               .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
@@ -17522,6 +18866,8 @@ class $AppDatabaseManager {
   $AppDatabaseManager(this._db);
   $$SrsStateTableTableManager get srsState =>
       $$SrsStateTableTableManager(_db, _db.srsState);
+  $$KanjiSrsStateTableTableManager get kanjiSrsState =>
+      $$KanjiSrsStateTableTableManager(_db, _db.kanjiSrsState);
   $$UserProgressTableTableManager get userProgress =>
       $$UserProgressTableTableManager(_db, _db.userProgress);
   $$AttemptTableTableManager get attempt =>

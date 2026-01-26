@@ -20,7 +20,7 @@ class DatabaseResetDialog extends StatelessWidget {
     try {
       final dbFolder = await getApplicationDocumentsDirectory();
       final file = File(p.join(dbFolder.path, 'jpstudy.sqlite'));
-      
+
       if (await file.exists()) {
         await file.delete();
         return true;
@@ -51,9 +51,7 @@ class DatabaseResetDialog extends StatelessWidget {
           child: const Text('Cancel'),
         ),
         FilledButton(
-          style: FilledButton.styleFrom(
-            backgroundColor: Colors.red,
-          ),
+          style: FilledButton.styleFrom(backgroundColor: Colors.red),
           onPressed: () async {
             final success = await resetDatabase();
             if (context.mounted) {

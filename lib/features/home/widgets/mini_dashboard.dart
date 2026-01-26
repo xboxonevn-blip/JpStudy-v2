@@ -72,15 +72,15 @@ class MiniDashboard extends ConsumerWidget {
               context,
               icon: Icons.school_rounded,
               color: AppThemeV2.primary,
-              value: '${state.vocabDue + state.grammarDue}',
+              value: '${state.vocabDue + state.grammarDue + state.kanjiDue}',
               label: language.reviewsLabel,
             ),
-            if (state.vocabMistakeCount > 0)
+            if (state.totalMistakeCount > 0)
               _buildStatItem(
                 context,
                 icon: Icons.error_outline_rounded,
                 color: AppThemeV2.error,
-                value: '${state.vocabMistakeCount}',
+                value: '${state.totalMistakeCount}',
                 label: language.mistakesLabel,
               ),
             if (ghostCount > 0)

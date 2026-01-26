@@ -24,7 +24,7 @@ class SessionSummaryCard extends StatelessWidget {
   });
 
   double get accuracy => totalCount > 0 ? correctCount / totalCount : 0;
-  
+
   String get grade {
     final percent = accuracy * 100;
     if (percent >= 90) return 'A';
@@ -36,11 +36,16 @@ class SessionSummaryCard extends StatelessWidget {
 
   Color get gradeColor {
     switch (grade) {
-      case 'A': return Colors.green;
-      case 'B': return Colors.blue;
-      case 'C': return Colors.orange;
-      case 'D': return Colors.deepOrange;
-      default: return Colors.red;
+      case 'A':
+        return Colors.green;
+      case 'B':
+        return Colors.blue;
+      case 'C':
+        return Colors.orange;
+      case 'D':
+        return Colors.deepOrange;
+      default:
+        return Colors.red;
     }
   }
 
@@ -57,13 +62,10 @@ class SessionSummaryCard extends StatelessWidget {
             // Title
             Text(
               title,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 24),
-            
+
             // Grade circle
             Container(
               width: 100,
@@ -85,7 +87,7 @@ class SessionSummaryCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            
+
             // Score
             Text(
               '${(accuracy * 100).toInt()}%',
@@ -97,13 +99,10 @@ class SessionSummaryCard extends StatelessWidget {
             ),
             Text(
               '$correctCount / $totalCount correct',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey[600],
-              ),
+              style: TextStyle(fontSize: 16, color: Colors.grey[600]),
             ),
             const SizedBox(height: 24),
-            
+
             // Stats row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -121,13 +120,13 @@ class SessionSummaryCard extends StatelessWidget {
                 ),
               ],
             ),
-            
+
             // Extra content
             if (extraContent != null) ...[
               const SizedBox(height: 24),
               extraContent!,
             ],
-            
+
             // Action buttons
             if (onReview != null || onContinue != null) ...[
               const SizedBox(height: 24),
@@ -192,7 +191,7 @@ class _StatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final displayColor = color ?? Theme.of(context).primaryColor;
-    
+
     return Column(
       children: [
         Icon(icon, color: displayColor, size: 28),
@@ -205,13 +204,7 @@ class _StatItem extends StatelessWidget {
             color: displayColor,
           ),
         ),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.grey[600],
-          ),
-        ),
+        Text(label, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
       ],
     );
   }

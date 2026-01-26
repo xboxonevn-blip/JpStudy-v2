@@ -19,7 +19,8 @@ class FlashcardWidget extends StatefulWidget {
   State<FlashcardWidget> createState() => _FlashcardWidgetState();
 }
 
-class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProviderStateMixin {
+class _FlashcardWidgetState extends State<FlashcardWidget>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
   bool _isFront = true;
@@ -85,7 +86,8 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
       width: double.infinity,
       height: 480, // Match EnhancedFlashcard height
       decoration: BoxDecoration(
-        color: Colors.white, // Always white for Clay style usually, or color param
+        color:
+            Colors.white, // Always white for Clay style usually, or color param
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
           color: const Color(0xFFE5E7EB), // Neutral 200
@@ -117,8 +119,8 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
               Text(
                 widget.item.term,
                 style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+                  fontWeight: FontWeight.bold,
+                ),
                 textAlign: TextAlign.center,
               ),
               // Only show Kanji Meaning for Vietnamese and Japanese users
@@ -129,18 +131,18 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
                 Text(
                   widget.item.kanjiMeaning!,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: Colors.grey[700],
-                        fontStyle: FontStyle.italic,
-                      ),
+                    color: Colors.grey[700],
+                    fontStyle: FontStyle.italic,
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ],
               const SizedBox(height: 16),
               Text(
                 'Tap to flip',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Colors.grey,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodySmall?.copyWith(color: Colors.grey),
               ),
             ],
           ),
@@ -156,18 +158,19 @@ class _FlashcardWidgetState extends State<FlashcardWidget> with SingleTickerProv
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (widget.item.reading != null && widget.item.reading!.isNotEmpty) ...[
+          if (widget.item.reading != null &&
+              widget.item.reading!.isNotEmpty) ...[
             Text(
               widget.item.reading!,
-              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                    fontStyle: FontStyle.italic,
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.headlineSmall?.copyWith(fontStyle: FontStyle.italic),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 16),
           ],
           Text(
-            widget.language == AppLanguage.en 
+            widget.language == AppLanguage.en
                 ? (widget.item.meaningEn ?? widget.item.meaning)
                 : widget.item.meaning,
             style: Theme.of(context).textTheme.titleLarge,

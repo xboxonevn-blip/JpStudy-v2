@@ -6,6 +6,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../data/models/kanji_item.dart';
+import '../../../data/models/mistake_context.dart';
+import '../../../data/repositories/lesson_repository.dart';
+import '../../mistakes/repositories/mistake_repository.dart';
 import '../widgets/handwriting_canvas.dart';
 
 class HandwritingPracticeScreen extends ConsumerStatefulWidget {
@@ -32,6 +35,7 @@ class _HandwritingPracticeScreenState
   List<List<Offset>> _strokes = [];
   Size _canvasSize = Size.zero;
   _HandwritingEvaluation? _evaluation;
+  bool _hasCommitted = false;
 
   KanjiItem get _currentItem => widget.items[_currentIndex];
 
@@ -322,12 +326,14 @@ class _HandwritingPracticeScreenState
       _checked = false;
       _evaluation = null;
       _strokes = [];
+      _hasCommitted = false;
     });
   }
 
-  void _next() {
+  Future<void> _next() async {
+    await _commitReviewIfNeeded();
     if (_currentIndex >= widget.items.length - 1) {
-      _showSummary();
+      await _showSummary();
       return;
     }
     setState(() {
@@ -335,6 +341,7 @@ class _HandwritingPracticeScreenState
       _checked = false;
       _evaluation = null;
       _strokes = [];
+      _hasCommitted = false;
     });
   }
 
@@ -353,6 +360,7 @@ class _HandwritingPracticeScreenState
       _strokes = [];
       _checked = false;
       _evaluation = null;
+      _hasCommitted = false;
     });
   }
 
@@ -400,7 +408,53 @@ class _HandwritingPracticeScreenState
     return item.meaning;
   }
 
+  Future<void> _commitReviewIfNeeded() async {
+    if (_hasCommitted || _evaluation == null) {
+      return;
+    }
+    _hasCommitted = true;
+    final language = ref.read(appLanguageProvider);
+    final repo = ref.read(lessonRepositoryProvider);
+    final mistakeRepo = ref.read(mistakeRepositoryProvider);
+    final evaluation = _evaluation!;
+    final isCorrect = evaluation.isCorrect;
+    final grade = isCorrect ? (_showGuide ? 3 : 4) : 1;
+
+    await repo.saveKanjiReview(kanjiId: _currentItem.id, grade: grade);
+
+    if (isCorrect) {
+      await mistakeRepo.markCorrect(type: 'kanji', itemId: _currentItem.id);
+      return;
+    }
+
+    final meaning = _resolveMeaning(_currentItem, language);
+    final prompt = meaning.isNotEmpty
+        ? '${_currentItem.character} - $meaning'
+        : _currentItem.character;
+    await mistakeRepo.addMistake(
+      type: 'kanji',
+      itemId: _currentItem.id,
+      context: MistakeContext(
+        prompt: prompt,
+        correctAnswer: _currentItem.character,
+        userAnswer: language.handwritingStrokesDrawnLabel(
+          evaluation.drawnStrokes,
+        ),
+        source: 'handwriting',
+        extra: {
+          'expectedStrokes': evaluation.expectedStrokes,
+          'drawnStrokes': evaluation.drawnStrokes,
+          'showGuide': _showGuide,
+        },
+      ),
+    );
+  }
+
   Future<void> _showSummary() async {
+    await _commitReviewIfNeeded();
+    if (!mounted) {
+      return;
+    }
     final language = ref.read(appLanguageProvider);
     await showDialog<void>(
       context: context,
@@ -476,7 +530,7 @@ class _KanjiHeader extends StatelessWidget {
                     [
                       if ((item.kunyomi ?? '').isNotEmpty) item.kunyomi!,
                       if ((item.onyomi ?? '').isNotEmpty) item.onyomi!,
-                    ].join(' • '),
+                    ].join(' - '),
                     style: const TextStyle(
                       fontSize: 12,
                       color: Color(0xFF6B7390),

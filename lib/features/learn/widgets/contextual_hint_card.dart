@@ -52,10 +52,7 @@ class ContextualHintCard extends StatelessWidget {
           ),
           if (reading.isNotEmpty) ...[
             const SizedBox(height: 6),
-            Text(
-              reading,
-              style: const TextStyle(color: Color(0xFF6B7390)),
-            ),
+            Text(reading, style: const TextStyle(color: Color(0xFF6B7390))),
           ],
           const SizedBox(height: 8),
           Text(
@@ -85,28 +82,41 @@ class ContextualHintCard extends StatelessWidget {
     if (has('place') || has('country')) {
       return _ContextLines(
         jp: '私は${item.term}に行きます。',
-        translation:
-            _translate(language, 'I go to $meaning.', 'Tôi đi đến $meaning.'),
+        translation: _translate(
+          language,
+          'I go to $meaning.',
+          'Tôi đi đến $meaning.',
+        ),
       );
     }
     if (has('question')) {
       return _ContextLines(
         jp: '${item.term}は何ですか。',
-        translation:
-            _translate(language, 'What is $meaning?', '$meaning là gì?'),
+        translation: _translate(
+          language,
+          'What is $meaning?',
+          '$meaning là gì?',
+        ),
       );
     }
     if (has('phrase') || has('response')) {
       return _ContextLines(
         jp: '「${item.term}」と言います。',
-        translation:
-            _translate(language, 'You say "$meaning".', 'Bạn nói "$meaning".'),
+        translation: _translate(
+          language,
+          'You say "$meaning".',
+          'Bạn nói "$meaning".',
+        ),
       );
     }
 
     return _ContextLines(
       jp: 'これは${item.term}です。',
-      translation: _translate(language, 'This is $meaning.', 'Đây là $meaning.'),
+      translation: _translate(
+        language,
+        'This is $meaning.',
+        'Đây là $meaning.',
+      ),
     );
   }
 

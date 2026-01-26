@@ -25,7 +25,8 @@ part 'content_database.g.dart';
   ],
 )
 class ContentDatabase extends _$ContentDatabase {
-  ContentDatabase({QueryExecutor? executor}) : super(executor ?? _openContentConnection());
+  ContentDatabase({QueryExecutor? executor})
+    : super(executor ?? _openContentConnection());
 
   @override
   int get schemaVersion => 17;
@@ -47,7 +48,7 @@ class ContentDatabase extends _$ContentDatabase {
           await _addColumn(m, vocab, vocab.kanjiMeaning);
         }
         if (from < 6) {
-           await _addColumn(m, vocab, vocab.meaningEn); 
+          await _addColumn(m, vocab, vocab.meaningEn);
         }
         if (from < 7) {
           await m.createTable(grammarPoint);
@@ -63,10 +64,10 @@ class ContentDatabase extends _$ContentDatabase {
         }
         if (from < 11) {
           await _seedMinnaGrammar();
-          await _reseedMinnaVocabulary(); 
+          await _reseedMinnaVocabulary();
         }
         if (from < 14) {
-           await _seedMinnaGrammar(); 
+          await _seedMinnaGrammar();
         }
         if (from >= 11 && from < 15) {
           await _reseedMinnaVocabulary();
@@ -92,7 +93,7 @@ class ContentDatabase extends _$ContentDatabase {
   Future<void> _reseedMinnaVocabulary() async {
     // Delete all old Minna vocabulary (both N5 and N4)
     await (delete(vocab)..where((tbl) => tbl.tags.like('%minna_%'))).go();
-    
+
     // Seed new vocabulary
     await _seedMinnaVocabulary();
   }
@@ -100,7 +101,7 @@ class ContentDatabase extends _$ContentDatabase {
   Future<void> _seedMinnaVocabulary() async {
     // Seed N5 Vocabulary from JSON files
     await _seedFromJsonFiles(isN5: true);
-    
+
     // Seed N4 Vocabulary from JSON files
     await _seedFromJsonFiles(isN5: false);
   }
@@ -112,7 +113,7 @@ class ContentDatabase extends _$ContentDatabase {
 
     // Seeding Minna Grammar Lessons 1-5 (Batch 1)
     final List<String> grammarFiles = [
-       // ... list remains same in implementation, just showing logic change ...
+      // ... list remains same in implementation, just showing logic change ...
       'assets/data/grammar/n5/grammar_n5_1.json',
       'assets/data/grammar/n5/grammar_n5_2.json',
       'assets/data/grammar/n5/grammar_n5_3.json',
@@ -180,7 +181,7 @@ class ContentDatabase extends _$ContentDatabase {
       try {
         final jsonString = await rootBundle.loadString(file);
         final List<dynamic> points = json.decode(jsonString);
-        
+
         if (points.isEmpty) continue;
 
         // Try load supplementary examples
@@ -192,17 +193,18 @@ class ContentDatabase extends _$ContentDatabase {
           final firstPoint = points.first;
           final lessonId = firstPoint['lessonId'] as int;
           final level = (firstPoint['level'] as String).toLowerCase(); // 'n5'
-          
-          final examplesFile = 'assets/data/grammar/examples/$level/lesson_$lessonId.json';
+
+          final examplesFile =
+              'assets/data/grammar/examples/$level/lesson_$lessonId.json';
           final exJsonString = await rootBundle.loadString(examplesFile);
           final List<dynamic> exList = json.decode(exJsonString);
-          
+
           for (final item in exList) {
-             final gp = item['grammarPoint'] as String;
-             extraExamplesMap[gp] = item['examples'] as List<dynamic>;
+            final gp = item['grammarPoint'] as String;
+            extraExamplesMap[gp] = item['examples'] as List<dynamic>;
           }
         } catch (_) {
-           // No supplementary file or parse error, ignore
+          // No supplementary file or parse error, ignore
         }
 
         for (final pointData in points) {
@@ -224,11 +226,11 @@ class ContentDatabase extends _$ContentDatabase {
 
           // Insert Original Examples
           final List<dynamic> examples = [...(pointData['examples'] ?? [])];
-          
+
           // Merge Supplementary Examples
           final titleKey = pointData['title'] as String;
           if (extraExamplesMap.containsKey(titleKey)) {
-             examples.addAll(extraExamplesMap[titleKey]!);
+            examples.addAll(extraExamplesMap[titleKey]!);
           }
 
           for (final ex in examples) {
@@ -249,7 +251,7 @@ class ContentDatabase extends _$ContentDatabase {
       }
     }
   }
-  
+
   Future<void> _seedFromJsonFiles({bool isN5 = false}) async {
     final List<String> jsonFiles = [];
     if (isN5) {
@@ -263,12 +265,12 @@ class ContentDatabase extends _$ContentDatabase {
         jsonFiles.add('assets/data/vocab/n4/vocab_n4_$i.json');
       }
     }
-    
+
     for (final file in jsonFiles) {
       try {
         final jsonString = await rootBundle.loadString(file);
         final List<dynamic> items = json.decode(jsonString);
-        
+
         for (final item in items) {
           await into(vocab).insert(
             VocabCompanion.insert(
@@ -285,7 +287,7 @@ class ContentDatabase extends _$ContentDatabase {
         }
       } catch (e) {
         // File might not exist or be invalid, skip silently
-        // debugPrint('Error loading $file: $e'); 
+        // debugPrint('Error loading $file: $e');
       }
     }
   }
@@ -298,11 +300,10 @@ class ContentDatabase extends _$ContentDatabase {
     await migrator.addColumn(table, column as GeneratedColumn);
   }
 
-
   Future<void> _reseedMinnaKanji() async {
     // Delete all existing Kanji data to prevent duplicates or stale data
     await delete(kanji).go();
-    
+
     // Seed new Kanji data
     await _seedMinnaKanji();
   }

@@ -28,8 +28,7 @@ class TestModeIntegration extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider) ?? StudyLevel.n5;
-    final safeTitle =
-        lessonTitle.replaceAll(RegExp(r'[^a-zA-Z0-9]+'), '_');
+    final safeTitle = lessonTitle.replaceAll(RegExp(r'[^a-zA-Z0-9]+'), '_');
     final sessionKey = 'lesson_${lessonId}_$safeTitle';
     final termsAsync = ref.watch(
       lessonTermsProvider(
@@ -44,9 +43,7 @@ class TestModeIntegration extends ConsumerWidget {
             appBar: AppBar(
               title: Text('${language.testModeLabel}: $lessonTitle'),
             ),
-            body: Center(
-              child: Text(language.noTermsAvailableLabel),
-            ),
+            body: Center(child: Text(language.noTermsAvailableLabel)),
           );
         }
 
@@ -102,28 +99,28 @@ class TestModeIntegration extends ConsumerWidget {
         );
       },
       loading: () => Scaffold(
-        appBar: AppBar(
-          title: Text('${language.testModeLabel}: $lessonTitle'),
-        ),
+        appBar: AppBar(title: Text('${language.testModeLabel}: $lessonTitle')),
         body: const Center(child: CircularProgressIndicator()),
       ),
       error: (e, _) => Scaffold(
-        appBar: AppBar(
-          title: Text('${language.testModeLabel}: $lessonTitle'),
-        ),
+        appBar: AppBar(title: Text('${language.testModeLabel}: $lessonTitle')),
         body: Center(child: Text(language.loadErrorLabel)),
       ),
     );
   }
 
   List<VocabItem> _convertToVocabItems(List<UserLessonTermData> terms) {
-    return terms.map((term) => VocabItem(
-      id: term.id,
-      term: term.term,
-      reading: term.reading,
-      meaning: term.definition,
-      meaningEn: term.definitionEn,
-      level: 'N5', // Default level
-    )).toList();
+    return terms
+        .map(
+          (term) => VocabItem(
+            id: term.id,
+            term: term.term,
+            reading: term.reading,
+            meaning: term.definition,
+            meaningEn: term.definitionEn,
+            level: 'N5', // Default level
+          ),
+        )
+        .toList();
   }
 }

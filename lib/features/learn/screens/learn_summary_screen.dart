@@ -13,14 +13,10 @@ import '../services/learn_session_service.dart';
 class LearnSummaryScreen extends ConsumerStatefulWidget {
   final LearnSession session;
 
-  const LearnSummaryScreen({
-    super.key,
-    required this.session,
-  });
+  const LearnSummaryScreen({super.key, required this.session});
 
   @override
-  ConsumerState<LearnSummaryScreen> createState() =>
-      _LearnSummaryScreenState();
+  ConsumerState<LearnSummaryScreen> createState() => _LearnSummaryScreenState();
 }
 
 class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
@@ -306,10 +302,7 @@ class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
           const SizedBox(height: 8),
           Text(
             language.learnWeakTermsHint,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey[600],
-            ),
+            style: TextStyle(fontSize: 14, color: Colors.grey[600]),
           ),
         ],
       ),
@@ -330,7 +323,10 @@ class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
               icon: const Icon(Icons.replay),
               label: Text(
                 language.practiceWeakTermsLabel,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.orange,
@@ -351,10 +347,7 @@ class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              side: BorderSide(
-                color: Theme.of(context).primaryColor,
-                width: 2,
-              ),
+              side: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             ),
             child: Text(
               language.doneLabel,
@@ -416,10 +409,7 @@ class _StatCard extends StatelessWidget {
           ),
           Text(
             label,
-            style: TextStyle(
-              fontSize: 12,
-              color: color.withValues(alpha: 0.8),
-            ),
+            style: TextStyle(fontSize: 12, color: color.withValues(alpha: 0.8)),
           ),
         ],
       ),

@@ -5,7 +5,8 @@ import '../db/study_tables.dart';
 part 'achievement_dao.g.dart';
 
 @DriftAccessor(tables: [Achievements])
-class AchievementDao extends DatabaseAccessor<AppDatabase> with _$AchievementDaoMixin {
+class AchievementDao extends DatabaseAccessor<AppDatabase>
+    with _$AchievementDaoMixin {
   AchievementDao(super.db);
 
   /// Add a new achievement
@@ -15,19 +16,23 @@ class AchievementDao extends DatabaseAccessor<AppDatabase> with _$AchievementDao
 
   /// Get all achievements
   Future<List<Achievement>> getAchievements() {
-    return (select(achievements)
-          ..orderBy([(t) => OrderingTerm(expression: t.earnedAt, mode: OrderingMode.desc)]))
+    return (select(achievements)..orderBy([
+          (t) => OrderingTerm(expression: t.earnedAt, mode: OrderingMode.desc),
+        ]))
         .get();
   }
 
   /// Get un-notified achievements
   Future<List<Achievement>> getUnnotifiedAchievements() {
-    return (select(achievements)..where((t) => t.isNotified.equals(false))).get();
+    return (select(
+      achievements,
+    )..where((t) => t.isNotified.equals(false))).get();
   }
 
   /// Mark achievement as notified
   Future<void> markAsNotified(int id) {
-    return (update(achievements)..where((t) => t.id.equals(id)))
-        .write(const AchievementsCompanion(isNotified: Value(true)));
+    return (update(achievements)..where((t) => t.id.equals(id))).write(
+      const AchievementsCompanion(isNotified: Value(true)),
+    );
   }
 }

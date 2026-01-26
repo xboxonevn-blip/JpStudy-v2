@@ -18,8 +18,12 @@ class ClayCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final baseColor = color ?? Colors.white;
-    final depthColor = AppThemeV2.getDepthColor(baseColor == Colors.white ? AppThemeV2.neutral : baseColor);
-    final borderColor = baseColor == Colors.white ? AppThemeV2.neutral : depthColor;
+    final depthColor = AppThemeV2.getDepthColor(
+      baseColor == Colors.white ? AppThemeV2.neutral : baseColor,
+    );
+    final borderColor = baseColor == Colors.white
+        ? AppThemeV2.neutral
+        : depthColor;
 
     return GestureDetector(
       onTap: onTap,
@@ -28,10 +32,7 @@ class ClayCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: baseColor,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: borderColor,
-            width: 2,
-          ),
+          border: Border.all(color: borderColor, width: 2),
           boxShadow: [
             BoxShadow(
               color: borderColor,

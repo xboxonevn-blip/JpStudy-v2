@@ -41,10 +41,7 @@ class AchievementPopup extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             // Emoji
-            Text(
-              achievement.type.emoji,
-              style: const TextStyle(fontSize: 64),
-            ),
+            Text(achievement.type.emoji, style: const TextStyle(fontSize: 64)),
             const SizedBox(height: 16),
 
             // Title
@@ -62,10 +59,7 @@ class AchievementPopup extends StatelessWidget {
             // Description
             Text(
               achievement.description,
-              style: const TextStyle(
-                fontSize: 16,
-                color: Colors.white70,
-              ),
+              style: const TextStyle(fontSize: 16, color: Colors.white70),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
@@ -80,7 +74,11 @@ class AchievementPopup extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.stars_rounded, color: Colors.white, size: 24),
+                  const Icon(
+                    Icons.stars_rounded,
+                    color: Colors.white,
+                    size: 24,
+                  ),
                   const SizedBox(width: 8),
                   Text(
                     '+${achievement.bonusXP} XP',
@@ -110,10 +108,7 @@ class AchievementPopup extends StatelessWidget {
                 ),
                 child: const Text(
                   'Awesome!',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -183,10 +178,7 @@ class AchievementBadge extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            achievement.type.emoji,
-            style: const TextStyle(fontSize: 32),
-          ),
+          Text(achievement.type.emoji, style: const TextStyle(fontSize: 32)),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
@@ -202,10 +194,7 @@ class AchievementBadge extends StatelessWidget {
                 ),
                 Text(
                   achievement.description,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                 ),
               ],
             ),

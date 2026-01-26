@@ -8,10 +8,7 @@ import 'package:path/path.dart' as p;
 
 import '../models/immersion_article.dart';
 
-enum ImmersionSource {
-  local,
-  nhkEasy,
-}
+enum ImmersionSource { local, nhkEasy }
 
 class ImmersionService {
   static const _assetPath = 'assets/data/immersion/immersion_samples.json';
@@ -56,7 +53,8 @@ class ImmersionService {
       }
       seen.add(id);
       final title = _string(item['title']) ?? id;
-      final timeRaw = _string(item['news_prearranged_time']) ??
+      final timeRaw =
+          _string(item['news_prearranged_time']) ??
           _string(item['news_published_time']) ??
           _string(item['publish_time']) ??
           _string(item['date']);
@@ -181,16 +179,20 @@ class ImmersionService {
         ? json['data'] as Map<String, dynamic>
         : json;
 
-    final id = _string(root['news_id'] ?? root['id'] ?? fallbackId) ?? fallbackId;
+    final id =
+        _string(root['news_id'] ?? root['id'] ?? fallbackId) ?? fallbackId;
     final titleWithRuby = _string(root['title_with_ruby']);
-    final title = _string(root['title']) ??
+    final title =
+        _string(root['title']) ??
         (titleWithRuby != null ? _stripTags(titleWithRuby) : null) ??
         id;
 
-    final titleFurigana =
-        titleWithRuby == null ? null : _renderRubyText(titleWithRuby);
+    final titleFurigana = titleWithRuby == null
+        ? null
+        : _renderRubyText(titleWithRuby);
 
-    final timeRaw = _string(root['news_prearranged_time']) ??
+    final timeRaw =
+        _string(root['news_prearranged_time']) ??
         _string(root['news_published_time']) ??
         _string(root['publish_time']) ??
         _string(root['date']);
@@ -263,10 +265,7 @@ class ImmersionService {
     return paragraphs;
   }
 
-  List<ImmersionToken> _parseRubyText(
-    String html,
-    Map<String, _NhkWord> dict,
-  ) {
+  List<ImmersionToken> _parseRubyText(String html, Map<String, _NhkWord> dict) {
     final tokens = <ImmersionToken>[];
     final rubyRegex = RegExp(r'<ruby[^>]*>.*?</ruby>', dotAll: true);
     var cursor = 0;
@@ -298,12 +297,13 @@ class ImmersionService {
     final rbMatches = rbRegex.allMatches(rubyHtml).toList();
     String surface;
     if (rbMatches.isNotEmpty) {
-      surface =
-          rbMatches.map((m) => _stripTags(m.group(1) ?? '')).join();
+      surface = rbMatches.map((m) => _stripTags(m.group(1) ?? '')).join();
     } else {
-      surface = _stripTags(rubyHtml
-          .replaceAll(rtRegex, '')
-          .replaceAll(RegExp(r'<rp[^>]*>.*?</rp>'), ''));
+      surface = _stripTags(
+        rubyHtml
+            .replaceAll(rtRegex, '')
+            .replaceAll(RegExp(r'<rp[^>]*>.*?</rp>'), ''),
+      );
     }
     surface = surface.trim();
     if (surface.isEmpty) return null;
@@ -316,10 +316,7 @@ class ImmersionService {
     );
   }
 
-  List<ImmersionToken> _plainTokens(
-    String text,
-    Map<String, _NhkWord> dict,
-  ) {
+  List<ImmersionToken> _plainTokens(String text, Map<String, _NhkWord> dict) {
     final cleaned = _decodeEntities(_stripTags(text));
     final tokens = <ImmersionToken>[];
     final buffer = StringBuffer();
@@ -351,10 +348,7 @@ class ImmersionService {
     buffer.clear();
   }
 
-  ImmersionToken _tokenFromSurface(
-    String surface,
-    Map<String, _NhkWord> dict,
-  ) {
+  ImmersionToken _tokenFromSurface(String surface, Map<String, _NhkWord> dict) {
     final dictWord = dict[surface];
     return ImmersionToken(
       surface: surface,
@@ -369,21 +363,25 @@ class ImmersionService {
     if (raw is List) {
       for (final item in raw) {
         if (item is! Map) continue;
-        final surface = _string(item['word'] ??
-                item['surface'] ??
-                item['text'] ??
-                item['kanji'] ??
-                item['term']) ??
+        final surface =
+            _string(
+              item['word'] ??
+                  item['surface'] ??
+                  item['text'] ??
+                  item['kanji'] ??
+                  item['term'],
+            ) ??
             '';
         if (surface.trim().isEmpty) continue;
-        final reading = _string(item['ruby'] ??
-            item['furigana'] ??
-            item['reading'] ??
-            item['kana']);
-        final meaning = _string(item['meaning'] ??
-            item['meaning_en'] ??
-            item['definition'] ??
-            item['translation']);
+        final reading = _string(
+          item['ruby'] ?? item['furigana'] ?? item['reading'] ?? item['kana'],
+        );
+        final meaning = _string(
+          item['meaning'] ??
+              item['meaning_en'] ??
+              item['definition'] ??
+              item['translation'],
+        );
         if (reading == null && meaning == null) continue;
         map[surface] = _NhkWord(
           surface: surface,
@@ -492,8 +490,7 @@ class ImmersionService {
     if (normalized.contains(' ')) {
       normalized = normalized.replaceFirst(' ', 'T');
     }
-    if (RegExp(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$')
-        .hasMatch(normalized)) {
+    if (RegExp(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$').hasMatch(normalized)) {
       normalized = '$normalized:00';
     }
     return DateTime.tryParse(normalized);
@@ -528,8 +525,7 @@ class ImmersionService {
         .replaceAll('&#39;', "'");
   }
 
-  bool _isWhitespace(String char) =>
-      char.trim().isEmpty || char == '\u00A0';
+  bool _isWhitespace(String char) => char.trim().isEmpty || char == '\u00A0';
 
   bool _isPunctuation(String char) {
     const punctuation = '。、！？.,!?「」『』（）()[]{}・：:';
@@ -538,11 +534,7 @@ class ImmersionService {
 }
 
 class _NhkWord {
-  const _NhkWord({
-    required this.surface,
-    this.reading,
-    this.meaningEn,
-  });
+  const _NhkWord({required this.surface, this.reading, this.meaningEn});
 
   final String surface;
   final String? reading;

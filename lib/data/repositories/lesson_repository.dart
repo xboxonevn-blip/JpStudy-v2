@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:drift/drift.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:jpstudy/core/services/srs_service.dart';
+import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 
@@ -122,6 +122,22 @@ final lessonKanjiProvider = FutureProvider.family<List<KanjiItem>, int>((
 ) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchKanji(lessonId);
+});
+
+final lessonDueKanjiProvider = FutureProvider.family<List<KanjiItem>, int>((
+  ref,
+  lessonId,
+) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchDueKanji(lessonId);
+});
+
+final srsStateProvider = FutureProvider.family<SrsStateData?, int>((
+  ref,
+  termId,
+) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.getSrsState(termId);
 });
 
 final grammarGhostsProvider = FutureProvider<List<GrammarPointData>>((
@@ -288,7 +304,7 @@ class LessonRepository {
 
   final AppDatabase _db;
   final ContentDatabase _contentDb;
-  final SrsService _srsService = SrsService();
+  final FsrsService _fsrsService = FsrsService();
   static const int _defaultLessonCount = 25;
 
   Future<String> getLessonTitle(int lessonId, String fallback) async {
@@ -936,6 +952,80 @@ class LessonRepository {
     }).toList();
   }
 
+  Future<List<KanjiItem>> fetchKanjiByIds(List<int> ids) async {
+    if (ids.isEmpty) return [];
+    final rows = await (_contentDb.select(
+      _contentDb.kanji,
+    )..where((tbl) => tbl.id.isIn(ids))).get();
+
+    return rows.map((row) {
+      final examplesList = (json.decode(row.examplesJson) as List)
+          .map((e) => KanjiExample.fromJson(e))
+          .toList();
+
+      return KanjiItem(
+        id: row.id,
+        character: row.character,
+        strokeCount: row.strokeCount,
+        onyomi: row.onyomi,
+        kunyomi: row.kunyomi,
+        meaning: row.meaning,
+        meaningEn: row.meaningEn,
+        examples: examplesList,
+        jlptLevel: row.jlptLevel,
+      );
+    }).toList();
+  }
+
+  Future<List<KanjiItem>> fetchDueKanji(int lessonId) async {
+    final items = await fetchKanji(lessonId);
+    if (items.isEmpty) return [];
+    final ids = items.map((item) => item.id).toList();
+    final states = await _db.kanjiSrsDao.getStatesForIds(ids);
+    final stateMap = {for (final state in states) state.kanjiId: state};
+    final now = DateTime.now();
+    return items.where((item) {
+      final state = stateMap[item.id];
+      if (state == null) return true;
+      return !state.nextReviewAt.isAfter(now);
+    }).toList();
+  }
+
+  Future<KanjiSrsStateData?> getKanjiSrsState(int kanjiId) {
+    return _db.kanjiSrsDao.getSrsState(kanjiId);
+  }
+
+  Future<void> ensureKanjiSrsState(int kanjiId) async {
+    final existing = await _db.kanjiSrsDao.getSrsState(kanjiId);
+    if (existing == null) {
+      await _db.kanjiSrsDao.initializeSrsState(kanjiId);
+    }
+  }
+
+  Future<void> saveKanjiReview({
+    required int kanjiId,
+    required int grade,
+  }) async {
+    await ensureKanjiSrsState(kanjiId);
+    final state = await _db.kanjiSrsDao.getSrsState(kanjiId);
+    if (state == null) return;
+
+    final result = _fsrsService.review(
+      grade: grade,
+      stability: state.stability,
+      difficulty: state.difficulty,
+      lastReviewedAt: state.lastReviewedAt,
+    );
+
+    await _db.kanjiSrsDao.updateSrsState(
+      kanjiId: kanjiId,
+      stability: result.stability,
+      difficulty: result.difficulty,
+      lastConfidence: grade,
+      nextReviewAt: result.nextReviewAt,
+    );
+  }
+
   Future<void> updateLessonTitle(
     int lessonId,
     String title, {
@@ -1255,22 +1345,23 @@ class LessonRepository {
 
     if (srsState == null) return; // Should not happen
 
-    // 3. Calculate next review
-    final result = _srsService.review(
-      currentBox: srsState.box,
-      xRepetitions: srsState.repetitions,
-      xEaseFactor: srsState.ease,
-      quality: quality,
+    final result = _fsrsService.review(
+      grade: quality,
+      stability: srsState.stability,
+      difficulty: srsState.difficulty,
+      lastReviewedAt: srsState.lastReviewedAt,
     );
 
     // 4. Update SRS state
     await _db.srsDao.updateSrsState(
       vocabId: termId,
-      box: result.box,
-      repetitions: result.repetitions,
-      ease: result.easeFactor,
+      box: srsState.box,
+      repetitions: srsState.repetitions + 1,
+      ease: srsState.ease,
+      stability: result.stability,
+      difficulty: result.difficulty,
       lastConfidence: quality,
-      nextReviewAt: result.nextReview,
+      nextReviewAt: result.nextReviewAt,
     );
   }
 
@@ -1553,6 +1644,8 @@ class LessonRepository {
     required int box,
     required int repetitions,
     required double ease,
+    required double stability,
+    required double difficulty,
     required DateTime nextReviewAt,
     required DateTime lastReviewedAt,
   }) {
@@ -1564,6 +1657,8 @@ class LessonRepository {
             box: Value(box),
             repetitions: Value(repetitions),
             ease: Value(ease),
+            stability: Value(stability),
+            difficulty: Value(difficulty),
             lastReviewedAt: Value(lastReviewedAt),
             nextReviewAt: Value(nextReviewAt),
           ),
@@ -1656,6 +1751,8 @@ class LessonRepository {
             box: const Value(1),
             repetitions: const Value(0),
             ease: const Value(2.5),
+            stability: const Value(1.0),
+            difficulty: const Value(5.0),
             lastReviewedAt: Value(now),
             nextReviewAt: now, // Due immediately
           ),

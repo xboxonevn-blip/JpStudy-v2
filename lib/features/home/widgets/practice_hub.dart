@@ -5,6 +5,7 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
+import '../providers/dashboard_provider.dart';
 
 class PracticeHub extends ConsumerWidget {
   const PracticeHub({super.key});
@@ -15,6 +16,8 @@ class PracticeHub extends ConsumerWidget {
     final ghostCount = ref
         .watch(grammarGhostCountProvider)
         .maybeWhen(data: (count) => count, orElse: () => 0);
+    final dashboard = ref.watch(dashboardProvider).valueOrNull;
+    final mistakeCount = dashboard?.totalMistakeCount ?? 0;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -79,6 +82,7 @@ class PracticeHub extends ConsumerWidget {
                 subtitle: language.practiceMistakesSubtitle,
                 icon: Icons.warning_amber_rounded,
                 color: const Color(0xFFEF4444),
+                badgeCount: mistakeCount > 0 ? mistakeCount : null,
                 onTap: () => context.push('/mistakes'),
               ),
             ],

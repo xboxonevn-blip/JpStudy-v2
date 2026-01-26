@@ -827,6 +827,39 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get practiceLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice';
+      case AppLanguage.vi:
+        return 'Luy?n t?p';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get nextStepLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Next Step';
+      case AppLanguage.vi:
+        return 'B??c ti?p theo';
+      case AppLanguage.ja:
+        return '??????';
+    }
+  }
+
+  String itemsCountLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count items';
+      case AppLanguage.vi:
+        return '$count m?c';
+      case AppLanguage.ja:
+        return '$count??';
+    }
+  }
+
   String get mistakesLabel {
     switch (this) {
       case AppLanguage.en:
@@ -835,6 +868,237 @@ extension AppLanguageLabels on AppLanguage {
         return 'Lỗi sai';
       case AppLanguage.ja:
         return '間違い';
+    }
+  }
+
+  String get mistakeBankTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mistake Bank';
+      case AppLanguage.vi:
+        return 'Kho l?i sai';
+      case AppLanguage.ja:
+        return '??????';
+    }
+  }
+
+  String get mistakeEmptyTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No mistakes yet';
+      case AppLanguage.vi:
+        return 'Ch?a c? l?i n?o';
+      case AppLanguage.ja:
+        return '????????';
+    }
+  }
+
+  String get mistakeEmptySubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'You are all caught up. Keep going!';
+      case AppLanguage.vi:
+        return 'B?n ?? b?t k?p h?t. Ti?p t?c nh?!';
+      case AppLanguage.ja:
+        return '?????????????????';
+    }
+  }
+
+  String mistakeRemainingLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Need $count correct';
+      case AppLanguage.vi:
+        return 'C?n ??ng $count l?n';
+      case AppLanguage.ja:
+        return '??$count??????';
+    }
+  }
+
+  String mistakeItemIdLabel(int id) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Item #$id';
+      case AppLanguage.vi:
+        return 'M?c #$id';
+      case AppLanguage.ja:
+        return '?? #$id';
+    }
+  }
+
+  String get mistakePromptLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Prompt';
+      case AppLanguage.vi:
+        return 'G?i ?';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get mistakeYourAnswerLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Your answer';
+      case AppLanguage.vi:
+        return '??p ?n c?a b?n';
+      case AppLanguage.ja:
+        return '??????';
+    }
+  }
+
+  String get mistakeCorrectAnswerLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Correct answer';
+      case AppLanguage.vi:
+        return '??p ?n ??ng';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get mistakeSourceLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Source';
+      case AppLanguage.vi:
+        return 'Ngu?n';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String mistakeStrokeSummaryLabel(int drawn, int expected) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Strokes: $drawn/$expected';
+      case AppLanguage.vi:
+        return 'N?t: $drawn/$expected';
+      case AppLanguage.ja:
+        return '??: $drawn/$expected';
+    }
+  }
+
+  String get mistakeContextTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Last mistake';
+      case AppLanguage.vi:
+        return 'L?i g?n nh?t';
+      case AppLanguage.ja:
+        return '?????';
+    }
+  }
+
+  String get mistakeContextEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No context saved.';
+      case AppLanguage.vi:
+        return 'Ch?a l?u ng? c?nh.';
+      case AppLanguage.ja:
+        return '????????';
+    }
+  }
+
+  String practiceVocabMistakesLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice Vocab ($count)';
+      case AppLanguage.vi:
+        return '?n t? v?ng ($count)';
+      case AppLanguage.ja:
+        return '????? ($count)';
+    }
+  }
+
+  String practiceGrammarMistakesLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice Grammar ($count)';
+      case AppLanguage.vi:
+        return '?n ng? ph?p ($count)';
+      case AppLanguage.ja:
+        return '????? ($count)';
+    }
+  }
+
+  String practiceKanjiMistakesLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice Kanji ($count)';
+      case AppLanguage.vi:
+        return '?n Kanji ($count)';
+      case AppLanguage.ja:
+        return '????? ($count)';
+    }
+  }
+
+  String get mistakeSourceLearnLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Learn';
+      case AppLanguage.vi:
+        return 'H?c';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get mistakeSourceReviewLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review';
+      case AppLanguage.vi:
+        return '?n';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get mistakeSourceLessonReviewLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Lesson Review';
+      case AppLanguage.vi:
+        return '?n trong b?i';
+      case AppLanguage.ja:
+        return '??????';
+    }
+  }
+
+  String get mistakeSourceTestLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Test';
+      case AppLanguage.vi:
+        return 'B?i ki?m tra';
+      case AppLanguage.ja:
+        return '???';
+    }
+  }
+
+  String get mistakeSourceGrammarPracticeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Grammar Practice';
+      case AppLanguage.vi:
+        return 'Luy?n ng? ph?p';
+      case AppLanguage.ja:
+        return '????';
+    }
+  }
+
+  String get mistakeSourceHandwritingLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Handwriting';
+      case AppLanguage.vi:
+        return 'Vi?t tay';
+      case AppLanguage.ja:
+        return '???';
     }
   }
 
@@ -1957,6 +2221,39 @@ extension AppLanguageLabels on AppLanguage {
         return '$count t\u1eeb \u0111\u1ebfn h\u1ea1n \u00f4n t\u1eadp';
       case AppLanguage.ja:
         return '\u672c\u65e5\u306e\u5fa9\u7fd2: $count';
+    }
+  }
+
+  String retrievabilityPercentLabel(int percent) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Recall chance: $percent%';
+      case AppLanguage.vi:
+        return 'Kh? n?ng nh?: $percent%';
+      case AppLanguage.ja:
+        return '????: $percent%';
+    }
+  }
+
+  String get sessionCompleteTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Session complete!';
+      case AppLanguage.vi:
+        return 'Ho?n th?nh phi?n h?c!';
+      case AppLanguage.ja:
+        return '????????';
+    }
+  }
+
+  String sessionReviewCountLabel(int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'You reviewed $total items.';
+      case AppLanguage.vi:
+        return 'B?n ?? ?n $total m?c.';
+      case AppLanguage.ja:
+        return '$total?????????';
     }
   }
 
@@ -3740,6 +4037,94 @@ extension AppLanguageLabels on AppLanguage {
         return 'Không còn lỗi ngữ pháp.';
       case AppLanguage.ja:
         return '復習が必要な文法はありません。';
+    }
+  }
+
+  String get ghostReviewInfoLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review grammar points you missed recently.';
+      case AppLanguage.vi:
+        return '?n l?i c?c ?i?m ng? ph?p b?n v?a sai.';
+      case AppLanguage.ja:
+        return '?????????????????';
+    }
+  }
+
+  String get ghostReviewEmptyTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No ghosts yet';
+      case AppLanguage.vi:
+        return 'Ch?a c? ghost n?o';
+      case AppLanguage.ja:
+        return '??????????';
+    }
+  }
+
+  String get ghostReviewEmptySubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'You have not missed any grammar points yet.';
+      case AppLanguage.vi:
+        return 'B?n ch?a sai ?i?m ng? ph?p n?o.';
+      case AppLanguage.ja:
+        return '??????????????';
+    }
+  }
+
+  String get practiceGhostsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice Ghosts';
+      case AppLanguage.vi:
+        return 'Luy?n Ghost';
+      case AppLanguage.ja:
+        return '??????';
+    }
+  }
+
+  String get grammarConnectionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Connection';
+      case AppLanguage.vi:
+        return 'K?t n?i';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get grammarExplanationLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Explanation';
+      case AppLanguage.vi:
+        return 'Gi?i th?ch';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get grammarExamplesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Examples';
+      case AppLanguage.vi:
+        return 'V? d?';
+      case AppLanguage.ja:
+        return '??';
+    }
+  }
+
+  String get ghostKanjiTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Kanji Ghosts';
+      case AppLanguage.vi:
+        return 'Ghost Kanji';
+      case AppLanguage.ja:
+        return '??????';
     }
   }
 

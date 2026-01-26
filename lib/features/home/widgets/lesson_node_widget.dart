@@ -35,9 +35,10 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
       vsync: this,
       duration: const Duration(seconds: 2),
     );
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 1.05).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
+    _scaleAnimation = Tween<double>(
+      begin: 1.0,
+      end: 1.05,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
 
     if (_isActive) {
       _controller.repeat(reverse: true);
@@ -64,7 +65,7 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
-    
+
     // Localize "Lesson X" -> "Bai X"
     String title = widget.node.lesson.title;
     if (title.startsWith('Lesson ')) {
@@ -94,10 +95,12 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
         Text(
           title,
           style: TextStyle(
-            color: widget.node.isLocked ? AppThemeV2.textSub : AppThemeV2.textMain,
+            color: widget.node.isLocked
+                ? AppThemeV2.textSub
+                : AppThemeV2.textMain,
             fontWeight: widget.isActive ? FontWeight.w900 : FontWeight.bold,
             fontSize: 12,
-            fontFamily: 'M_PLUS_Rounded_1c', 
+            fontFamily: 'M_PLUS_Rounded_1c',
           ),
           textAlign: TextAlign.center,
         ),
@@ -108,7 +111,7 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
   Widget _buildProClayNode(BuildContext context) {
     final colors = _getNodeColors();
     final depth = widget.node.isLocked ? 2.0 : 8.0;
-    
+
     return Container(
       width: widget.size,
       height: widget.size, // Aspect ratio 1:1, depth handled by shadow
@@ -118,70 +121,80 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
         gradient: RadialGradient(
           center: const Alignment(-0.4, -0.4), // Light source top-left
           radius: 1.2,
-          colors: [
-            colors.light,
-            colors.main,
-            colors.dark,
-          ],
+          colors: [colors.light, colors.main, colors.dark],
           stops: const [0.0, 0.4, 0.9],
         ),
         boxShadow: [
-           // Drop Shadow (Depth)
-           BoxShadow(
-             color: colors.shadow.withValues(alpha: 0.4),
-             offset: Offset(0, depth),
-             blurRadius: 10,
-             spreadRadius: 1,
-           ),
-           // Inner Highlight (Top Left - "Glassy")
-           BoxShadow(
-             color: Colors.white.withValues(alpha: 0.4),
-             offset: const Offset(-4, -4),
-             blurRadius: 8,
-             spreadRadius: -2,
-             blurStyle: BlurStyle.inner, // IMPORTANT: Inner shadow
-           ),
-           // Inner Shadow (Bottom Right)
-           BoxShadow(
-             color: Colors.black.withValues(alpha: 0.1),
-             offset: const Offset(4, 4),
-             blurRadius: 8,
-             spreadRadius: -2,
-             blurStyle: BlurStyle.inner,
-           ),
-           // Glow for Active
-           if (_isActive)
-             BoxShadow(
-               color: colors.main.withValues(alpha: 0.6),
-               blurRadius: 20,
-               spreadRadius: 4,
-             ),
+          // Drop Shadow (Depth)
+          BoxShadow(
+            color: colors.shadow.withValues(alpha: 0.4),
+            offset: Offset(0, depth),
+            blurRadius: 10,
+            spreadRadius: 1,
+          ),
+          // Inner Highlight (Top Left - "Glassy")
+          BoxShadow(
+            color: Colors.white.withValues(alpha: 0.4),
+            offset: const Offset(-4, -4),
+            blurRadius: 8,
+            spreadRadius: -2,
+            blurStyle: BlurStyle.inner, // IMPORTANT: Inner shadow
+          ),
+          // Inner Shadow (Bottom Right)
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.1),
+            offset: const Offset(4, 4),
+            blurRadius: 8,
+            spreadRadius: -2,
+            blurStyle: BlurStyle.inner,
+          ),
+          // Glow for Active
+          if (_isActive)
+            BoxShadow(
+              color: colors.main.withValues(alpha: 0.6),
+              blurRadius: 20,
+              spreadRadius: 4,
+            ),
         ],
       ),
       child: Center(
         child: Stack(
           alignment: Alignment.center,
           children: [
-             if (widget.node.isCompleted)
-              Icon(Icons.check_rounded, color: Colors.white, size: widget.size * 0.5)
-             else if (widget.node.isLocked)
-              Icon(Icons.lock_rounded, color: Colors.white.withValues(alpha: 0.5), size: widget.size * 0.4)
-             else
-              Icon(Icons.play_arrow_rounded, color: Colors.white, size: widget.size * 0.5),
-             
-             // Shine reflection (Gloss)
-             Positioned(
-               top: widget.size * 0.15,
-               left: widget.size * 0.2,
-               child: Container(
-                 width: widget.size * 0.25,
-                 height: widget.size * 0.12,
-                 decoration: BoxDecoration(
-                   color: Colors.white.withValues(alpha: 0.3),
-                   borderRadius: BorderRadius.all(Radius.elliptical(widget.size, widget.size)),
-                 ),
-               ),
-             ),
+            if (widget.node.isCompleted)
+              Icon(
+                Icons.check_rounded,
+                color: Colors.white,
+                size: widget.size * 0.5,
+              )
+            else if (widget.node.isLocked)
+              Icon(
+                Icons.lock_rounded,
+                color: Colors.white.withValues(alpha: 0.5),
+                size: widget.size * 0.4,
+              )
+            else
+              Icon(
+                Icons.play_arrow_rounded,
+                color: Colors.white,
+                size: widget.size * 0.5,
+              ),
+
+            // Shine reflection (Gloss)
+            Positioned(
+              top: widget.size * 0.15,
+              left: widget.size * 0.2,
+              child: Container(
+                width: widget.size * 0.25,
+                height: widget.size * 0.12,
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.all(
+                    Radius.elliptical(widget.size, widget.size),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -216,8 +229,8 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
   }
 
   Widget _buildStars(BuildContext context) {
-    if (widget.node.isLocked) return const SizedBox(height: 16); 
-    
+    if (widget.node.isLocked) return const SizedBox(height: 16);
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: List.generate(3, (index) {
@@ -228,9 +241,14 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
             Icons.star_rounded,
             size: 14,
             color: isEarned ? const Color(0xFFFFC800) : Colors.grey[300],
-             shadows: isEarned ? [
-               Shadow(color: Colors.orange.withValues(alpha: 0.5), blurRadius: 4),
-             ] : null,
+            shadows: isEarned
+                ? [
+                    Shadow(
+                      color: Colors.orange.withValues(alpha: 0.5),
+                      blurRadius: 4,
+                    ),
+                  ]
+                : null,
           ),
         );
       }),

@@ -20,8 +20,9 @@ class TestDao extends DatabaseAccessor<AppDatabase> with _$TestDaoMixin {
 
   /// Get session by ID
   Future<TestSession?> getSession(String id) {
-    return (select(testSessions)..where((t) => t.sessionId.equals(id)))
-        .getSingleOrNull();
+    return (select(
+      testSessions,
+    )..where((t) => t.sessionId.equals(id))).getSingleOrNull();
   }
 
   /// Record an answer
@@ -34,7 +35,12 @@ class TestDao extends DatabaseAccessor<AppDatabase> with _$TestDaoMixin {
     return (select(testSessions)
           ..where((t) => t.lessonId.equals(lessonId))
           ..where((t) => t.completedAt.isNotNull())
-          ..orderBy([(t) => OrderingTerm(expression: t.completedAt, mode: OrderingMode.desc)]))
+          ..orderBy([
+            (t) => OrderingTerm(
+              expression: t.completedAt,
+              mode: OrderingMode.desc,
+            ),
+          ]))
         .get();
   }
 
@@ -43,15 +49,22 @@ class TestDao extends DatabaseAccessor<AppDatabase> with _$TestDaoMixin {
     return (select(testSessions)
           ..where((t) => t.lessonId.equals(lessonId))
           ..where((t) => t.completedAt.isNotNull())
-          ..orderBy([(t) => OrderingTerm(expression: t.score, mode: OrderingMode.desc)]))
+          ..orderBy([
+            (t) => OrderingTerm(expression: t.score, mode: OrderingMode.desc),
+          ]))
         .getSingleOrNull(); // getSingleOrNull might return the FIRST one, which is the best due to order
   }
-   
+
   /// Get all history sorted by date
   Future<List<TestSession>> getAllHistory() {
-     return (select(testSessions)
+    return (select(testSessions)
           ..where((t) => t.completedAt.isNotNull())
-          ..orderBy([(t) => OrderingTerm(expression: t.completedAt, mode: OrderingMode.desc)]))
+          ..orderBy([
+            (t) => OrderingTerm(
+              expression: t.completedAt,
+              mode: OrderingMode.desc,
+            ),
+          ]))
         .get();
   }
 }

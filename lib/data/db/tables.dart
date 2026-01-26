@@ -6,7 +6,11 @@ class SrsState extends Table {
   IntColumn get box => integer().withDefault(const Constant(1))();
   IntColumn get repetitions => integer().withDefault(const Constant(0))();
   RealColumn get ease => real().withDefault(const Constant(2.5))();
-  IntColumn get lastConfidence => integer().withDefault(const Constant(0))(); // 0=unknown, 1=again, 2=hard, 3=good, 4=easy
+  RealColumn get stability => real().withDefault(const Constant(1.0))();
+  RealColumn get difficulty => real().withDefault(const Constant(5.0))();
+  IntColumn get lastConfidence => integer().withDefault(
+    const Constant(0),
+  )(); // 0=unknown, 1=again, 2=hard, 3=good, 4=easy
   DateTimeColumn get lastReviewedAt => dateTime().nullable()();
   DateTimeColumn get nextReviewAt => dateTime()();
 }
@@ -48,9 +52,11 @@ class UserLesson extends Table {
   TextColumn get description => text().withDefault(const Constant(''))();
   TextColumn get tags => text().withDefault(const Constant(''))();
   BoolColumn get isPublic => boolean().withDefault(const Constant(true))();
-  BoolColumn get isCustomTitle => boolean().withDefault(const Constant(false))();
+  BoolColumn get isCustomTitle =>
+      boolean().withDefault(const Constant(false))();
   IntColumn get learnTermLimit => integer().withDefault(const Constant(0))();
-  IntColumn get testQuestionLimit => integer().withDefault(const Constant(12))();
+  IntColumn get testQuestionLimit =>
+      integer().withDefault(const Constant(12))();
   IntColumn get matchPairLimit => integer().withDefault(const Constant(8))();
   DateTimeColumn get updatedAt => dateTime().nullable()();
 
@@ -64,9 +70,12 @@ class UserLessonTerm extends Table {
   TextColumn get term => text().withDefault(const Constant(''))();
   TextColumn get reading => text().withDefault(const Constant(''))();
   TextColumn get definition => text().withDefault(const Constant(''))();
-  TextColumn get definitionEn => text().withDefault(const Constant(''))(); // English definition
-  TextColumn get mnemonicVi => text().withDefault(const Constant(''))(); // Vietnamese Mnemonic
-  TextColumn get mnemonicEn => text().withDefault(const Constant(''))(); // English Mnemonic
+  TextColumn get definitionEn =>
+      text().withDefault(const Constant(''))(); // English definition
+  TextColumn get mnemonicVi =>
+      text().withDefault(const Constant(''))(); // Vietnamese Mnemonic
+  TextColumn get mnemonicEn =>
+      text().withDefault(const Constant(''))(); // English Mnemonic
   TextColumn get kanjiMeaning => text().withDefault(const Constant(''))();
   BoolColumn get isStarred => boolean().withDefault(const Constant(false))();
   BoolColumn get isLearned => boolean().withDefault(const Constant(false))();

@@ -6,7 +6,7 @@ class MultipleChoiceWidget extends StatefulWidget {
   final String question;
   final List<String> options;
   final String correctAnswer;
-  final Function(bool isCorrect) onAnswer;
+  final void Function(bool isCorrect, String selected) onAnswer;
   final VoidCallback? onNext; // Optional, triggered after feedback
 
   const MultipleChoiceWidget({
@@ -35,7 +35,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
     });
 
     final isCorrect = option == widget.correctAnswer;
-    widget.onAnswer(isCorrect);
+    widget.onAnswer(isCorrect, option);
   }
 
   @override
@@ -68,23 +68,23 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
             textAlign: TextAlign.center,
           ),
         ),
-        
+
         const Spacer(),
 
         // Options Grid
         ...widget.options.map((option) {
           final isSelected = option == _selectedOption;
           final isCorrect = option == widget.correctAnswer;
-          
+
           ClayButtonStyle style = ClayButtonStyle.neutral;
           if (_isAnswered) {
-             if (isCorrect) {
-               style = ClayButtonStyle.secondary; // Green
-             } else if (isSelected) {
-               style = ClayButtonStyle.error; // Red
-             }
+            if (isCorrect) {
+              style = ClayButtonStyle.secondary; // Green
+            } else if (isSelected) {
+              style = ClayButtonStyle.error; // Red
+            }
           }
-          
+
           return Padding(
             padding: const EdgeInsets.only(bottom: 12),
             child: ClayButton(
@@ -96,7 +96,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
             ),
           );
         }),
-        
+
         const Spacer(),
       ],
     );

@@ -6,8 +6,9 @@ import 'package:jpstudy/data/daos/achievement_dao.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/learn/models/achievement.dart' as learn;
 
-final achievementsProvider =
-    FutureProvider<List<_AchievementEntry>>((ref) async {
+final achievementsProvider = FutureProvider<List<_AchievementEntry>>((
+  ref,
+) async {
   final db = ref.watch(databaseProvider);
   final dao = AchievementDao(db);
   final rows = await dao.getAchievements();
@@ -51,21 +52,25 @@ class AchievementsScreen extends ConsumerWidget {
               if (entries.isNotEmpty) ...[
                 _SectionHeader(label: language.achievementsUnlockedLabel),
                 const SizedBox(height: 8),
-                ...entries.map((entry) => _AchievementCard(
-                      language: language,
-                      entry: entry,
-                      unlocked: true,
-                    )),
+                ...entries.map(
+                  (entry) => _AchievementCard(
+                    language: language,
+                    entry: entry,
+                    unlocked: true,
+                  ),
+                ),
                 const SizedBox(height: 16),
               ],
               if (lockedTypes.isNotEmpty) ...[
                 _SectionHeader(label: language.achievementsLockedLabel),
                 const SizedBox(height: 8),
-                ...lockedTypes.map((type) => _AchievementCard(
-                      language: language,
-                      entry: _AchievementEntry(type: type, value: 0),
-                      unlocked: false,
-                    )),
+                ...lockedTypes.map(
+                  (type) => _AchievementCard(
+                    language: language,
+                    entry: _AchievementEntry(type: type, value: 0),
+                    unlocked: false,
+                  ),
+                ),
               ],
             ],
           );
@@ -121,7 +126,10 @@ class _AchievementCard extends StatelessWidget {
             CircleAvatar(
               radius: 24,
               backgroundColor: color.withValues(alpha: 0.15),
-              child: Text(entry.type.emoji, style: const TextStyle(fontSize: 22)),
+              child: Text(
+                entry.type.emoji,
+                style: const TextStyle(fontSize: 22),
+              ),
             ),
             const SizedBox(width: 12),
             Expanded(
@@ -138,20 +146,25 @@ class _AchievementCard extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     description,
-                    style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF6B7390),
+                    ),
                   ),
                   if (dateLabel != null) ...[
                     const SizedBox(height: 6),
                     Text(
                       language.achievementsUnlockedAtLabel(dateLabel),
-                      style: const TextStyle(fontSize: 11, color: Color(0xFF9AA3B2)),
+                      style: const TextStyle(
+                        fontSize: 11,
+                        color: Color(0xFF9AA3B2),
+                      ),
                     ),
                   ],
                 ],
               ),
             ),
-            if (unlocked)
-              const Icon(Icons.check_circle, color: Colors.green),
+            if (unlocked) const Icon(Icons.check_circle, color: Colors.green),
           ],
         ),
       ),

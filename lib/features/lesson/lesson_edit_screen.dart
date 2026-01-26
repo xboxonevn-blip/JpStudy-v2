@@ -129,9 +129,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     final level = ref.watch(studyLevelProvider) ?? StudyLevel.n5;
 
     if (_isLoading) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     return Scaffold(
@@ -194,9 +192,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
               controller: _tagsController,
               onChanged: (value) =>
                   repo.updateLessonTags(widget.lessonId, value),
-              decoration: InputDecoration(
-                hintText: language.tagsHint,
-              ),
+              decoration: InputDecoration(hintText: language.tagsHint),
             ),
           ),
           // Practice Settings hidden as requested (Smart Defaults used instead)
@@ -267,9 +263,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                 showHints: _hintsEnabled,
                 dragHandle: ReorderableDragStartListener(
                   index: index,
-                  child: const _IconCircleButton(
-                    icon: Icons.drag_indicator,
-                  ),
+                  child: const _IconCircleButton(icon: Icons.drag_indicator),
                 ),
                 onRemove: () async {
                   if (_terms.length <= 1) {
@@ -285,9 +279,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                 },
                 onTermChanged: (value) {
                   final parsed = _parseTerm(value);
-                  _terms[index] = _terms[index].copyWith(
-                    term: parsed.term,
-                  );
+                  _terms[index] = _terms[index].copyWith(term: parsed.term);
                   repo.updateTerm(
                     _terms[index].id,
                     lessonId: widget.lessonId,
@@ -354,13 +346,11 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     return _ParsedTerm(term: term, reading: reading);
   }
 
-
   Future<void> _addTerm(LessonRepository repo, StudyLevel level) async {
     await repo.addTerm(widget.lessonId);
     await _refreshTerms(repo);
     ref.invalidate(lessonMetaProvider(level.shortLabel));
   }
-
 
   Future<void> _removeLastTerm(
     LessonRepository repo,
@@ -411,8 +401,7 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
     final rows = <List<String>>[
       const ['term', 'reading', 'definition', 'kanjiMeaning'],
       ..._terms.map(
-        (term) =>
-            [term.term, term.reading, term.definition, term.kanjiMeaning],
+        (term) => [term.term, term.reading, term.definition, term.kanjiMeaning],
       ),
     ];
     final csv = const ListToCsvConverter().convert(rows);
@@ -431,16 +420,16 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.exportSuccessLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.exportSuccessLabel)));
     } catch (_) {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.exportErrorLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.exportErrorLabel)));
     }
   }
 
@@ -468,9 +457,9 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
         if (!mounted) {
           return;
         }
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(language.importErrorLabel)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(language.importErrorLabel)));
         return;
       }
       final mode = await _confirmImportMode(language);
@@ -487,16 +476,16 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.importSuccessLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.importSuccessLabel)));
     } catch (_) {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.importErrorLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.importErrorLabel)));
     }
   }
 
@@ -563,13 +552,11 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
             child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
           ),
           TextButton(
-            onPressed: () =>
-                Navigator.of(context).pop(_CsvImportMode.append),
+            onPressed: () => Navigator.of(context).pop(_CsvImportMode.append),
             child: Text(language.importConfirmAppendLabel),
           ),
           ElevatedButton(
-            onPressed: () =>
-                Navigator.of(context).pop(_CsvImportMode.replace),
+            onPressed: () => Navigator.of(context).pop(_CsvImportMode.replace),
             child: Text(language.importConfirmReplaceLabel),
           ),
         ],
@@ -685,13 +672,9 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                       ActionChip(
                         label: Text(snippet),
                         onPressed: () async {
-                          await Clipboard.setData(
-                            ClipboardData(text: snippet),
-                          );
+                          await Clipboard.setData(ClipboardData(text: snippet));
                           messenger.showSnackBar(
-                            SnackBar(
-                              content: Text('Copied "$snippet".'),
-                            ),
+                            SnackBar(content: Text('Copied "$snippet".')),
                           );
                         },
                       ),
@@ -967,10 +950,7 @@ class _TermCard extends StatelessWidget {
                   ],
                   if (term.definition.isNotEmpty) ...[
                     const SizedBox(height: 8),
-                    Text(
-                      term.definition,
-                      style: const TextStyle(fontSize: 13),
-                    ),
+                    Text(term.definition, style: const TextStyle(fontSize: 13)),
                   ],
                 ],
               ),

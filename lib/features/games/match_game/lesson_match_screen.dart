@@ -49,15 +49,18 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
   void _startGame(List<VocabItem> items) {
     final language = ref.read(appLanguageProvider);
     if (items.length < 3) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.notEnoughTermsLabel(3))),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.notEnoughTermsLabel(3))));
       return;
     }
 
     final engine = MatchEngine(items);
-    final pairCount = items.length.clamp(3, 6); // 3-6 pairs based on available terms
-    
+    final pairCount = items.length.clamp(
+      3,
+      6,
+    ); // 3-6 pairs based on available terms
+
     setState(() {
       _cards = engine.generateGame(pairCount);
       _selectedCard = null;
@@ -78,8 +81,14 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
   }
 
   void _onCardTap(MatchCard card) {
-    if (!_isGameActive || _isProcessingInfo || card.state == MatchCardState.matched) return;
-    if (card == _selectedCard) return;
+    if (!_isGameActive ||
+        _isProcessingInfo ||
+        card.state == MatchCardState.matched) {
+      return;
+    }
+    if (card == _selectedCard) {
+      return;
+    }
 
     setState(() {
       card.state = MatchCardState.selected;
@@ -101,7 +110,9 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
           _selectedCard = null;
           _isProcessingInfo = false;
           _combo++;
-          if (_combo > _maxCombo) _maxCombo = _combo;
+          if (_combo > _maxCombo) {
+            _maxCombo = _combo;
+          }
         });
         HapticFeedback.mediumImpact();
         ref.read(contentRepositoryProvider).updateProgress(first.vocabId, true);
@@ -115,8 +126,12 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
         });
         HapticFeedback.vibrate();
 
-        ref.read(contentRepositoryProvider).updateProgress(first.vocabId, false);
-        ref.read(contentRepositoryProvider).updateProgress(second.vocabId, false);
+        ref
+            .read(contentRepositoryProvider)
+            .updateProgress(first.vocabId, false);
+        ref
+            .read(contentRepositoryProvider)
+            .updateProgress(second.vocabId, false);
 
         Future.delayed(const Duration(milliseconds: 800), () {
           if (mounted) {
@@ -144,12 +159,14 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
       _isGameActive = false;
       _isGameOver = true;
     });
-    
+
     final baseXp = (_cards.length ~/ 2) * 10;
     final comboBonus = _maxCombo * 2;
-    final timeBonus = _secondsElapsed < 30 ? 20 : (_secondsElapsed < 60 ? 10 : 0);
+    final timeBonus = _secondsElapsed < 30
+        ? 20
+        : (_secondsElapsed < 60 ? 10 : 0);
     final totalXp = baseXp + comboBonus + timeBonus;
-    
+
     ref.read(lessonRepositoryProvider).recordStudyActivity(xpDelta: totalXp);
   }
 
@@ -173,10 +190,13 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
                 padding: const EdgeInsets.only(right: 16.0),
                 child: Text(
                   "${_secondsElapsed}s",
-                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            )
+            ),
         ],
       ),
       body: termsAsync.when(
@@ -199,12 +219,11 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
           return _buildGameScreen();
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-      error: (e, _) => Center(
-        child: Text(ref.read(appLanguageProvider).loadErrorLabel),
+        error: (e, _) =>
+            Center(child: Text(ref.read(appLanguageProvider).loadErrorLabel)),
       ),
-    ),
-  );
-}
+    );
+  }
 
   Widget _buildStartScreen(List<VocabItem> items) {
     final language = ref.read(appLanguageProvider);
@@ -221,7 +240,9 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
           const SizedBox(height: 8),
           Text(
             language.learnTermsAvailableLabel(items.length),
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.grey),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyLarge?.copyWith(color: Colors.grey),
           ),
           const SizedBox(height: 24),
           JuicyButton(
@@ -249,7 +270,9 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
           ),
           Text(
             language.maxComboLabel(_maxCombo),
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.deepPurple),
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(color: Colors.deepPurple),
           ),
           const SizedBox(height: 24),
           JuicyButton(
@@ -277,12 +300,12 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
             child: AnimatedScale(
               scale: 1.0 + (_combo * 0.1).clamp(0.0, 0.5),
               duration: const Duration(milliseconds: 200),
-                child: Text(
-                  language.comboLabel(_combo),
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.orange,
+              child: Text(
+                language.comboLabel(_combo),
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.orange,
                   letterSpacing: 1.2,
                 ),
               ),
@@ -324,7 +347,9 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
           color: color,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: card.state == MatchCardState.selected ? Colors.blue : Colors.grey.shade300,
+            color: card.state == MatchCardState.selected
+                ? Colors.blue
+                : Colors.grey.shade300,
             width: 2,
           ),
           boxShadow: [
@@ -332,7 +357,7 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
               color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 4,
               offset: const Offset(0, 2),
-            )
+            ),
           ],
         ),
         padding: const EdgeInsets.all(8),
@@ -353,15 +378,21 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
     List<UserLessonTermData> terms,
     AppLanguage language,
   ) {
-    return terms.map((term) => VocabItem(
-      id: term.id,
-      term: term.term,
-      reading: term.reading,
-      meaning: language == AppLanguage.vi
-          ? term.definition
-          : (term.definitionEn.isNotEmpty ? term.definitionEn : term.definition),
-      meaningEn: term.definitionEn,
-      level: 'N5',
-    )).toList();
+    return terms
+        .map(
+          (term) => VocabItem(
+            id: term.id,
+            term: term.term,
+            reading: term.reading,
+            meaning: language == AppLanguage.vi
+                ? term.definition
+                : (term.definitionEn.isNotEmpty
+                      ? term.definitionEn
+                      : term.definition),
+            meaningEn: term.definitionEn,
+            level: 'N5',
+          ),
+        )
+        .toList();
   }
 }

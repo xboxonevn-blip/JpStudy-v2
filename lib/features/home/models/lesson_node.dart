@@ -1,10 +1,6 @@
 import '../../../data/db/app_database.dart';
 
-enum LessonStatus {
-  locked,
-  available,
-  completed,
-}
+enum LessonStatus { locked, available, completed }
 
 class LessonNode {
   final UserLessonData lesson;

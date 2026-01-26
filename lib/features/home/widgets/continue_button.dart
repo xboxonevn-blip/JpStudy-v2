@@ -24,10 +24,11 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
       vsync: this,
       duration: const Duration(seconds: 2),
     )..repeat(reverse: true);
-    
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 1.02).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
+
+    _scaleAnimation = Tween<double>(
+      begin: 1.0,
+      end: 1.02,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
   }
 
   @override
@@ -48,19 +49,20 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
     );
   }
 
-  Widget _buildAnimatedButton(BuildContext context, ContinueAction action, AppLanguage language) {
+  Widget _buildAnimatedButton(
+    BuildContext context,
+    ContinueAction action,
+    AppLanguage language,
+  ) {
     final gradient = _getGradient(action.type);
     final icon = _getIcon(action.type);
-    
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       child: AnimatedBuilder(
         animation: _scaleAnimation,
         builder: (context, child) {
-          return Transform.scale(
-            scale: _scaleAnimation.value,
-            child: child,
-          );
+          return Transform.scale(scale: _scaleAnimation.value, child: child);
         },
         child: Container(
           width: double.infinity,
@@ -101,13 +103,13 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                             _getTitle(action.type, language),
-                             style: const TextStyle(
-                               color: Colors.white,
-                               fontSize: 12,
-                               fontWeight: FontWeight.w600,
-                               letterSpacing: 0.5,
-                             ),
+                            _getTitle(action.type, language),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 0.5,
+                            ),
                           ),
                           Text(
                             _getLabel(action, language),
@@ -122,7 +124,11 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
                         ],
                       ),
                     ),
-                    const Icon(Icons.chevron_right_rounded, color: Colors.white, size: 32),
+                    const Icon(
+                      Icons.chevron_right_rounded,
+                      color: Colors.white,
+                      size: 32,
+                    ),
                   ],
                 ),
               ),
@@ -164,37 +170,46 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
 
   IconData _getIcon(ContinueActionType type) {
     switch (type) {
-      case ContinueActionType.grammarReview: return Icons.auto_stories_rounded;
-      case ContinueActionType.vocabReview: return Icons.style_rounded;
-      case ContinueActionType.nextLesson: return Icons.play_lesson_rounded;
-      default: return Icons.arrow_forward_rounded;
+      case ContinueActionType.grammarReview:
+        return Icons.auto_stories_rounded;
+      case ContinueActionType.vocabReview:
+        return Icons.style_rounded;
+      case ContinueActionType.nextLesson:
+        return Icons.play_lesson_rounded;
+      default:
+        return Icons.arrow_forward_rounded;
     }
   }
 
   String _getTitle(ContinueActionType type, AppLanguage language) {
-     switch (type) {
-      case ContinueActionType.grammarReview: return language.reviewGrammarLabel.toUpperCase();
-      case ContinueActionType.vocabReview: return language.reviewVocabLabel.toUpperCase();
-      case ContinueActionType.nextLesson: return language.continueJourneyLabel.toUpperCase();
-      case ContinueActionType.fixMistakes: return language.fixMistakesLabel.toUpperCase();
-      default: return 'NEXT STEP';
+    switch (type) {
+      case ContinueActionType.grammarReview:
+        return language.reviewGrammarLabel.toUpperCase();
+      case ContinueActionType.vocabReview:
+        return language.reviewVocabLabel.toUpperCase();
+      case ContinueActionType.nextLesson:
+        return language.continueJourneyLabel.toUpperCase();
+      case ContinueActionType.fixMistakes:
+        return language.fixMistakesLabel.toUpperCase();
+      default:
+        return language.nextStepLabel.toUpperCase();
     }
   }
 
   String _getLabel(ContinueAction action, AppLanguage language) {
     if (action.type == ContinueActionType.nextLesson) {
-       // Extract number from "Lesson 3" -> "3"
-       final number = action.label.replaceAll(RegExp(r'[^0-9]'), '');
-       if (number.isNotEmpty) {
-         // Return localized "Bài 3"
-         return '${language.lessonLabel} $number';
-       }
-       // Fallback if no number found
-       return action.label; 
+      // Extract number from "Lesson 3" -> "3"
+      final number = action.label.replaceAll(RegExp(r'[^0-9]'), '');
+      if (number.isNotEmpty) {
+        // Return localized "Bài 3"
+        return '${language.lessonLabel} $number';
+      }
+      // Fallback if no number found
+      return action.label;
     }
-    
+
     if (action.count != null && action.count! > 0) {
-      return '${action.count} item(s)';
+      return language.itemsCountLabel(action.count!);
     }
     return action.label;
   }
@@ -215,8 +230,8 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
         if (action.data != null) {
           context.push('/lesson/${action.data}');
         } else {
-           // Should not happen if data is correctly set
-           context.push('/'); 
+          // Should not happen if data is correctly set
+          context.push('/');
         }
         break;
       default:

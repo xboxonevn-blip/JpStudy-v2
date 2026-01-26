@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../theme/app_theme_v2.dart';
 
-enum ClayButtonStyle {
-  primary,
-  secondary,
-  tertiary,
-  neutral,
-  error,
-}
+enum ClayButtonStyle { primary, secondary, tertiary, neutral, error }
 
 class ClayButton extends StatefulWidget {
   final String label;
@@ -38,29 +32,40 @@ class _ClayButtonState extends State<ClayButton> {
 
   Color get _baseColor {
     switch (widget.style) {
-      case ClayButtonStyle.primary: return AppThemeV2.primary;
-      case ClayButtonStyle.secondary: return AppThemeV2.secondary;
-      case ClayButtonStyle.tertiary: return AppThemeV2.tertiary;
-      case ClayButtonStyle.neutral: return Colors.white;
-      case ClayButtonStyle.error: return AppThemeV2.error;
+      case ClayButtonStyle.primary:
+        return AppThemeV2.primary;
+      case ClayButtonStyle.secondary:
+        return AppThemeV2.secondary;
+      case ClayButtonStyle.tertiary:
+        return AppThemeV2.tertiary;
+      case ClayButtonStyle.neutral:
+        return Colors.white;
+      case ClayButtonStyle.error:
+        return AppThemeV2.error;
     }
   }
 
   Color get _textColor {
     switch (widget.style) {
-      case ClayButtonStyle.neutral: return AppThemeV2.textSub;
-      default: return Colors.white;
+      case ClayButtonStyle.neutral:
+        return AppThemeV2.textSub;
+      default:
+        return Colors.white;
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final baseColor = _baseColor;
-    final depthColor = AppThemeV2.getDepthColor(baseColor == Colors.white ? AppThemeV2.neutral : baseColor);
-    final borderColor = baseColor == Colors.white ? AppThemeV2.neutral : depthColor;
+    final depthColor = AppThemeV2.getDepthColor(
+      baseColor == Colors.white ? AppThemeV2.neutral : baseColor,
+    );
+    final borderColor = baseColor == Colors.white
+        ? AppThemeV2.neutral
+        : depthColor;
 
     // When pressed, we translate Y by 4px and remove shadow to simulate depression
-    
+
     Widget content = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
@@ -113,9 +118,9 @@ class _ClayButtonState extends State<ClayButton> {
                 ),
             ],
           ),
-          child: widget.height != null || widget.width != null 
-             ? Center(child: content) 
-             : content,
+          child: widget.height != null || widget.width != null
+              ? Center(child: content)
+              : content,
         ),
       ),
     );

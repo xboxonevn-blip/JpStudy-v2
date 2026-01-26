@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/app_language.dart';
@@ -6,9 +8,12 @@ import '../../home/providers/dashboard_provider.dart';
 import '../repositories/mistake_repository.dart';
 import '../../../data/db/database_provider.dart';
 import '../../../data/models/vocab_item.dart';
+import '../../../data/models/kanji_item.dart';
+import '../../../data/repositories/lesson_repository.dart';
 import '../../learn/models/learn_session_args.dart';
 import 'package:go_router/go_router.dart';
 import '../../../data/db/app_database.dart';
+import '../../write/screens/handwriting_practice_screen.dart';
 
 class MistakeScreen extends ConsumerStatefulWidget {
   const MistakeScreen({super.key});
@@ -23,11 +28,10 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     final repo = ref.watch(mistakeRepositoryProvider);
     final language = ref.watch(appLanguageProvider);
     final db = ref.watch(databaseProvider);
-    
+    final lessonRepo = ref.watch(lessonRepositoryProvider);
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Mistake Bank'),
-      ),
+      appBar: AppBar(title: Text(language.mistakeBankTitle)),
       body: StreamBuilder<List<UserMistake>>(
         stream: repo.watchAllMistakes(),
         builder: (context, snapshot) {
@@ -39,22 +43,35 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
           }
 
           final allMistakes = snapshot.data ?? [];
-          
+
           if (allMistakes.isEmpty) {
-            return const Center(
+            return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.check_circle_outline, size: 64, color: Colors.green),
-                  SizedBox(height: 16),
-                  Text('No mistakes! Great job!'),
+                  const Icon(
+                    Icons.check_circle_outline,
+                    size: 64,
+                    color: Colors.green,
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    language.mistakeEmptyTitle,
+                    style: const TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    language.mistakeEmptySubtitle,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: Color(0xFF6B7390)),
+                  ),
                 ],
               ),
             );
           }
 
           return FutureBuilder<_MistakeDetails>(
-            future: _loadMistakeDetails(allMistakes, db),
+            future: _loadMistakeDetails(allMistakes, db, lessonRepo),
             builder: (context, detailSnapshot) {
               if (detailSnapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
@@ -72,50 +89,65 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
                       itemCount: allMistakes.length,
                       itemBuilder: (context, index) {
                         final mistake = allMistakes[index];
-                        final isVocab = mistake.type == 'vocab';
                         final display = _buildMistakeDisplay(
                           mistake,
                           details,
                           language,
                         );
+                        final contextLines = _buildContextLines(
+                          mistake,
+                          language,
+                        );
+                        final icon = _mistakeIcon(mistake.type);
+                        final color = _mistakeColor(mistake.type);
 
-                        return ListTile(
-                          leading: Icon(
-                            isVocab ? Icons.translate : Icons.menu_book_rounded,
-                            color: isVocab ? Colors.orange : Colors.purple,
+                        return Card(
+                          margin: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 6,
                           ),
-                          title: Text(display.title),
-                          subtitle: Text(display.subtitle),
-                          trailing: IconButton(
-                            icon: const Icon(Icons.delete_outline),
-                            onPressed: () {
-                              repo.removeMistake(
-                                type: mistake.type,
-                                itemId: mistake.itemId,
-                              );
-                              ref.invalidate(dashboardProvider);
-                            },
+                          child: ListTile(
+                            leading: Icon(icon, color: color),
+                            title: Text(display.title),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(display.subtitle),
+                                if (contextLines.isNotEmpty) ...[
+                                  const SizedBox(height: 6),
+                                  ...contextLines.map(
+                                    (line) => Text(
+                                      line,
+                                      style: const TextStyle(
+                                        fontSize: 12,
+                                        color: Color(0xFF6B7390),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ],
+                            ),
+                            trailing: IconButton(
+                              icon: const Icon(Icons.delete_outline),
+                              onPressed: () {
+                                repo.removeMistake(
+                                  type: mistake.type,
+                                  itemId: mistake.itemId,
+                                );
+                                ref.invalidate(dashboardProvider);
+                              },
+                            ),
                           ),
                         );
                       },
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: FilledButton.icon(
-                      onPressed: () => _startPractice(
-                        context,
-                        ref,
-                        allMistakes,
-                        details,
-                        language,
-                      ),
-                      icon: const Icon(Icons.build),
-                      label: const Text('Fix Mistakes'),
-                      style: FilledButton.styleFrom(
-                        minimumSize: const Size(double.infinity, 50),
-                      ),
-                    ),
+                  _buildPracticeActions(
+                    context,
+                    ref,
+                    allMistakes,
+                    details,
+                    language,
                   ),
                 ],
               );
@@ -126,82 +158,186 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     );
   }
 
-  Future<void> _startPractice(
+  Widget _buildPracticeActions(
     BuildContext context,
     WidgetRef ref,
     List<UserMistake> mistakes,
     _MistakeDetails details,
     AppLanguage language,
-  ) async {
-    
-    // Separate mistakes
-    final vocabIds = <int>[];
-    final grammarIds = <int>[];
+  ) {
+    final vocabIds = <int>{};
+    final grammarIds = <int>{};
+    final kanjiIds = <int>{};
 
     for (final m in mistakes) {
       if (m.type == 'vocab') {
         vocabIds.add(m.itemId);
       } else if (m.type == 'grammar') {
         grammarIds.add(m.itemId);
+      } else if (m.type == 'kanji') {
+        kanjiIds.add(m.itemId);
       }
     }
 
-    // 1. Handle Vocab Mistakes
+    final actions = <Widget>[];
     if (vocabIds.isNotEmpty) {
-      final items = <VocabItem>[];
-      for (final id in vocabIds) {
-        final term = details.vocab[id];
-        if (term == null) continue;
-        items.add(VocabItem(
+      actions.add(
+        _buildPracticeButton(
+          icon: Icons.translate,
+          label: language.practiceVocabMistakesLabel(vocabIds.length),
+          onPressed: () => _startVocabPractice(
+            context,
+            vocabIds.toList(),
+            details,
+            language,
+          ),
+        ),
+      );
+    }
+    if (grammarIds.isNotEmpty) {
+      actions.add(
+        _buildPracticeButton(
+          icon: Icons.menu_book_rounded,
+          label: language.practiceGrammarMistakesLabel(grammarIds.length),
+          onPressed: () => _startGrammarPractice(context, grammarIds.toList()),
+        ),
+      );
+    }
+    if (kanjiIds.isNotEmpty) {
+      actions.add(
+        _buildPracticeButton(
+          icon: Icons.edit_rounded,
+          label: language.practiceKanjiMistakesLabel(kanjiIds.length),
+          onPressed: () => _startKanjiPractice(
+            context,
+            kanjiIds.toList(),
+            details,
+            language,
+          ),
+        ),
+      );
+    }
+
+    if (actions.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 6, 16, 16),
+      child: Column(
+        children: [
+          for (var i = 0; i < actions.length; i++) ...[
+            actions[i],
+            if (i != actions.length - 1) const SizedBox(height: 8),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPracticeButton({
+    required IconData icon,
+    required String label,
+    required VoidCallback onPressed,
+  }) {
+    return SizedBox(
+      width: double.infinity,
+      child: FilledButton.icon(
+        onPressed: onPressed,
+        icon: Icon(icon),
+        label: Text(label),
+        style: FilledButton.styleFrom(
+          minimumSize: const Size(double.infinity, 48),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _startVocabPractice(
+    BuildContext context,
+    List<int> vocabIds,
+    _MistakeDetails details,
+    AppLanguage language,
+  ) async {
+    final items = <VocabItem>[];
+    for (final id in vocabIds) {
+      final term = details.vocab[id];
+      if (term == null) continue;
+      items.add(
+        VocabItem(
           id: term.id,
           term: term.term,
           reading: term.reading,
           meaning: term.definition,
           meaningEn: term.definitionEn,
           level: 'Unknown',
-        ));
-      }
-
-      if (items.isNotEmpty && context.mounted) {
-        // We push and return because we currently support one session at a time in UI
-        context.push(
-          '/learn/session',
-          extra: LearnSessionArgs(
-            lessonId: -999,
-            lessonTitle: language.mistakesLabel,
-            items: items,
-          ),
-        );
-        return; 
-      }
+        ),
+      );
     }
 
-    // 2. Handle Grammar Mistakes
-    if (grammarIds.isNotEmpty && context.mounted) {
-       // Navigate to Grammar Practice with IDs
-       context.push('/grammar-practice', extra: grammarIds);
+    if (items.isEmpty || !context.mounted) return;
+    context.push(
+      '/learn/session',
+      extra: LearnSessionArgs(
+        lessonId: -999,
+        lessonTitle: language.mistakesLabel,
+        items: items,
+      ),
+    );
+  }
+
+  void _startGrammarPractice(BuildContext context, List<int> grammarIds) {
+    if (grammarIds.isEmpty || !context.mounted) return;
+    context.push('/grammar-practice', extra: grammarIds);
+  }
+
+  Future<void> _startKanjiPractice(
+    BuildContext context,
+    List<int> kanjiIds,
+    _MistakeDetails details,
+    AppLanguage language,
+  ) async {
+    final items = <KanjiItem>[];
+    for (final id in kanjiIds) {
+      final item = details.kanji[id];
+      if (item != null) {
+        items.add(item);
+      }
     }
+    if (items.isEmpty || !context.mounted) return;
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => HandwritingPracticeScreen(
+          lessonTitle: language.ghostKanjiTitle,
+          items: items,
+        ),
+      ),
+    );
   }
 
   Future<_MistakeDetails> _loadMistakeDetails(
     List<UserMistake> mistakes,
     AppDatabase db,
+    LessonRepository lessonRepo,
   ) async {
     final vocabIds = <int>{};
     final grammarIds = <int>{};
+    final kanjiIds = <int>{};
     for (final mistake in mistakes) {
       if (mistake.type == 'vocab') {
         vocabIds.add(mistake.itemId);
       } else if (mistake.type == 'grammar') {
         grammarIds.add(mistake.itemId);
+      } else if (mistake.type == 'kanji') {
+        kanjiIds.add(mistake.itemId);
       }
     }
 
     final vocabMap = <int, UserLessonTermData>{};
     if (vocabIds.isNotEmpty) {
-      final terms = await (db.select(db.userLessonTerm)
-            ..where((t) => t.id.isIn(vocabIds.toList())))
-          .get();
+      final terms = await (db.select(
+        db.userLessonTerm,
+      )..where((t) => t.id.isIn(vocabIds.toList()))).get();
       for (final term in terms) {
         vocabMap[term.id] = term;
       }
@@ -209,17 +345,26 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
 
     final grammarMap = <int, GrammarPoint>{};
     if (grammarIds.isNotEmpty) {
-      final points = await (db.select(db.grammarPoints)
-            ..where((g) => g.id.isIn(grammarIds.toList())))
-          .get();
+      final points = await (db.select(
+        db.grammarPoints,
+      )..where((g) => g.id.isIn(grammarIds.toList()))).get();
       for (final point in points) {
         grammarMap[point.id] = point;
+      }
+    }
+
+    final kanjiMap = <int, KanjiItem>{};
+    if (kanjiIds.isNotEmpty) {
+      final items = await lessonRepo.fetchKanjiByIds(kanjiIds.toList());
+      for (final item in items) {
+        kanjiMap[item.id] = item;
       }
     }
 
     return _MistakeDetails(
       vocab: vocabMap,
       grammar: grammarMap,
+      kanji: kanjiMap,
     );
   }
 
@@ -228,6 +373,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     _MistakeDetails details,
     AppLanguage language,
   ) {
+    final remainingLabel = language.mistakeRemainingLabel(mistake.wrongCount);
     if (mistake.type == 'vocab') {
       final term = details.vocab[mistake.itemId];
       final meaning = _resolveMeaning(
@@ -237,11 +383,32 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
       );
       final reading = (term?.reading ?? '').trim();
       final title = term == null
-          ? 'Vocab ID: ${mistake.itemId}'
-          : '${term.term}${reading.isNotEmpty ? ' • $reading' : ''}';
+          ? language.mistakeItemIdLabel(mistake.itemId)
+          : '${term.term}${reading.isNotEmpty ? ' - $reading' : ''}';
       final subtitle = meaning.isNotEmpty
-          ? '$meaning • Cần đúng ${mistake.wrongCount} lần'
-          : 'Cần đúng ${mistake.wrongCount} lần';
+          ? '$meaning - $remainingLabel'
+          : remainingLabel;
+      return _MistakeDisplay(title: title, subtitle: subtitle);
+    }
+
+    if (mistake.type == 'kanji') {
+      final kanji = details.kanji[mistake.itemId];
+      final meaning = kanji == null
+          ? ''
+          : _resolveMeaning(language, kanji.meaning, kanji.meaningEn);
+      final readingParts = [
+        if ((kanji?.onyomi ?? '').trim().isNotEmpty) kanji!.onyomi!,
+        if ((kanji?.kunyomi ?? '').trim().isNotEmpty) kanji!.kunyomi!,
+      ];
+      final reading = readingParts.join(' - ');
+      final title = kanji == null
+          ? language.mistakeItemIdLabel(mistake.itemId)
+          : kanji.character;
+      final subtitle = [
+        if (meaning.isNotEmpty) meaning,
+        if (reading.isNotEmpty) reading,
+        remainingLabel,
+      ].join(' - ');
       return _MistakeDisplay(title: title, subtitle: subtitle);
     }
 
@@ -252,12 +419,106 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
       language == AppLanguage.vi ? grammar?.meaningVi : grammar?.meaningEn,
     );
     final title = grammar == null
-        ? 'Grammar ID: ${mistake.itemId}'
+        ? language.mistakeItemIdLabel(mistake.itemId)
         : grammar.grammarPoint;
     final subtitle = meaning.isNotEmpty
-        ? '$meaning • Cần đúng ${mistake.wrongCount} lần'
-        : 'Cần đúng ${mistake.wrongCount} lần';
+        ? '$meaning - $remainingLabel'
+        : remainingLabel;
     return _MistakeDisplay(title: title, subtitle: subtitle);
+  }
+
+  List<String> _buildContextLines(UserMistake mistake, AppLanguage language) {
+    final lines = <String>[];
+    final prompt = (mistake.prompt ?? '').trim();
+    if (prompt.isNotEmpty) {
+      lines.add('${language.mistakePromptLabel}: $prompt');
+    }
+    final userAnswer = (mistake.userAnswer ?? '').trim();
+    if (userAnswer.isNotEmpty) {
+      lines.add('${language.mistakeYourAnswerLabel}: $userAnswer');
+    }
+    final correct = (mistake.correctAnswer ?? '').trim();
+    if (correct.isNotEmpty) {
+      lines.add('${language.mistakeCorrectAnswerLabel}: $correct');
+    }
+    final extra = _parseExtraJson(mistake.extraJson);
+    final strokeSummary = _strokeSummary(extra, language);
+    if (strokeSummary != null) {
+      lines.add(strokeSummary);
+    }
+    final sourceLabel = _sourceLabel(language, mistake.source);
+    if (sourceLabel.isNotEmpty) {
+      lines.add('${language.mistakeSourceLabel}: $sourceLabel');
+    }
+    return lines;
+  }
+
+  Map<String, dynamic> _parseExtraJson(String? raw) {
+    if (raw == null || raw.trim().isEmpty) return const {};
+    try {
+      final decoded = json.decode(raw);
+      if (decoded is Map<String, dynamic>) {
+        return decoded;
+      }
+    } catch (_) {}
+    return const {};
+  }
+
+  String? _strokeSummary(Map<String, dynamic> extra, AppLanguage language) {
+    final expected = extra['expectedStrokes'];
+    final drawn = extra['drawnStrokes'];
+    if (expected is num && drawn is num) {
+      return language.mistakeStrokeSummaryLabel(
+        drawn.toInt(),
+        expected.toInt(),
+      );
+    }
+    return null;
+  }
+
+  String _sourceLabel(AppLanguage language, String? source) {
+    switch (source) {
+      case 'learn':
+        return language.mistakeSourceLearnLabel;
+      case 'review':
+        return language.mistakeSourceReviewLabel;
+      case 'lesson_review':
+        return language.mistakeSourceLessonReviewLabel;
+      case 'test':
+        return language.mistakeSourceTestLabel;
+      case 'grammar_practice':
+        return language.mistakeSourceGrammarPracticeLabel;
+      case 'handwriting':
+        return language.mistakeSourceHandwritingLabel;
+      default:
+        return (source ?? '').trim();
+    }
+  }
+
+  IconData _mistakeIcon(String type) {
+    switch (type) {
+      case 'vocab':
+        return Icons.translate;
+      case 'grammar':
+        return Icons.menu_book_rounded;
+      case 'kanji':
+        return Icons.edit_rounded;
+      default:
+        return Icons.warning_amber_rounded;
+    }
+  }
+
+  Color _mistakeColor(String type) {
+    switch (type) {
+      case 'vocab':
+        return Colors.orange;
+      case 'grammar':
+        return Colors.purple;
+      case 'kanji':
+        return const Color(0xFF0F766E);
+      default:
+        return Colors.grey;
+    }
   }
 
   String _resolveMeaning(
@@ -276,10 +537,12 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
 class _MistakeDetails {
   final Map<int, UserLessonTermData> vocab;
   final Map<int, GrammarPoint> grammar;
+  final Map<int, KanjiItem> kanji;
 
   const _MistakeDetails({
     this.vocab = const {},
     this.grammar = const {},
+    this.kanji = const {},
   });
 }
 
@@ -287,8 +550,5 @@ class _MistakeDisplay {
   final String title;
   final String subtitle;
 
-  const _MistakeDisplay({
-    required this.title,
-    required this.subtitle,
-  });
+  const _MistakeDisplay({required this.title, required this.subtitle});
 }

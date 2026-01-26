@@ -106,8 +106,6 @@ class _EnhancedFlashcardScreenState
     );
   }
 
-
-
   Widget _buildBottomControls() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -155,9 +153,9 @@ class _EnhancedFlashcardScreenState
     return Text(
       '${_currentIndex + 1} / ${_displayItems.length}',
       style: Theme.of(context).textTheme.titleMedium?.copyWith(
-            color: Colors.grey[600],
-            fontWeight: FontWeight.w500,
-          ),
+        color: Colors.grey[600],
+        fontWeight: FontWeight.w500,
+      ),
     );
   }
 

@@ -16,7 +16,9 @@ class TestExportService {
     buffer.writeln('          TEST RESULTS');
     buffer.writeln('═══════════════════════════════════');
     buffer.writeln();
-    buffer.writeln('📅 Date: ${_formatDate(session.completedAt ?? DateTime.now())}');
+    buffer.writeln(
+      '📅 Date: ${_formatDate(session.completedAt ?? DateTime.now())}',
+    );
     buffer.writeln('⏱️ Duration: ${_formatDuration(session.timeElapsed)}');
     buffer.writeln();
     buffer.writeln('───────────────────────────────────');
@@ -25,7 +27,9 @@ class TestExportService {
     buffer.writeln();
     buffer.writeln('  Grade: ${session.grade}');
     buffer.writeln('  Score: ${session.score.toInt()}%');
-    buffer.writeln('  Correct: ${session.correctCount}/${session.totalQuestions}');
+    buffer.writeln(
+      '  Correct: ${session.correctCount}/${session.totalQuestions}',
+    );
     buffer.writeln('  XP Earned: +${session.xpEarned}');
     buffer.writeln();
     buffer.writeln('───────────────────────────────────');
@@ -37,7 +41,9 @@ class TestExportService {
       final type = entry.key;
       final breakdown = entry.value;
       buffer.writeln('  ${type.icon} ${type.label(AppLanguage.en)}');
-      buffer.writeln('     ${breakdown.correct}/${breakdown.total} (${breakdown.accuracy.toInt()}%)');
+      buffer.writeln(
+        '     ${breakdown.correct}/${breakdown.total} (${breakdown.accuracy.toInt()}%)',
+      );
     }
 
     buffer.writeln();
@@ -65,9 +71,7 @@ class TestExportService {
   /// Share results using platform share sheet
   static Future<void> shareResults(TestSession session) async {
     final text = exportAsText(session);
-    await SharePlus.instance.share(
-      ShareParams(text: text),
-    );
+    await SharePlus.instance.share(ShareParams(text: text));
   }
 
   /// Export as CSV format
@@ -82,14 +86,16 @@ class TestExportService {
       final question = session.questions[i];
       final answer = i < session.answers.length ? session.answers[i] : null;
 
-      buffer.writeln([
-        i + 1,
-        question.type.label(AppLanguage.en),
-        '"${answer?.userAnswer ?? ""}"',
-        '"${question.correctAnswer}"',
-        answer?.isCorrect == true ? 'Correct' : 'Wrong',
-        '0', // Time not tracked per question currently
-      ].join(','));
+      buffer.writeln(
+        [
+          i + 1,
+          question.type.label(AppLanguage.en),
+          '"${answer?.userAnswer ?? ""}"',
+          '"${question.correctAnswer}"',
+          answer?.isCorrect == true ? 'Correct' : 'Wrong',
+          '0', // Time not tracked per question currently
+        ].join(','),
+      );
     }
 
     return buffer.toString();

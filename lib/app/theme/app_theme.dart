@@ -51,10 +51,7 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          textStyle: const TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 16,
-          ),
+          textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -73,14 +70,35 @@ class AppTheme {
           borderSide: const BorderSide(color: primaryColor, width: 2),
         ),
         hintStyle: const TextStyle(color: Color(0xFF94A3B8)), // Slate 400
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 16,
+        ),
       ),
       textTheme: TextTheme(
-        displayLarge: TextStyle(fontFamily: fontName, fontWeight: FontWeight.w900, color: const Color(0xFF1E293B)),
-        titleLarge: TextStyle(fontFamily: fontName, fontWeight: FontWeight.w800, color: const Color(0xFF1E293B)),
-        titleMedium: TextStyle(fontFamily: fontName, fontWeight: FontWeight.w700, color: const Color(0xFF1E293B)),
-        bodyLarge: TextStyle(fontFamily: fontName, color: const Color(0xFF334155)),
-        bodyMedium: TextStyle(fontFamily: fontName, color: const Color(0xFF475569)),
+        displayLarge: TextStyle(
+          fontFamily: fontName,
+          fontWeight: FontWeight.w900,
+          color: const Color(0xFF1E293B),
+        ),
+        titleLarge: TextStyle(
+          fontFamily: fontName,
+          fontWeight: FontWeight.w800,
+          color: const Color(0xFF1E293B),
+        ),
+        titleMedium: TextStyle(
+          fontFamily: fontName,
+          fontWeight: FontWeight.w700,
+          color: const Color(0xFF1E293B),
+        ),
+        bodyLarge: TextStyle(
+          fontFamily: fontName,
+          color: const Color(0xFF334155),
+        ),
+        bodyMedium: TextStyle(
+          fontFamily: fontName,
+          color: const Color(0xFF475569),
+        ),
       ),
       iconTheme: const IconThemeData(color: Color(0xFF64748B)),
     );
@@ -118,9 +136,7 @@ class AppTheme {
       ),
       cardTheme: CardThemeData(
         color: cardBg,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(

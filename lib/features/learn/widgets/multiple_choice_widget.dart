@@ -46,10 +46,7 @@ class MultipleChoiceWidget extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(
                   question.targetItem.reading!,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 20, color: Colors.grey[600]),
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -65,18 +62,21 @@ class MultipleChoiceWidget extends StatelessWidget {
         const SizedBox(height: 24),
 
         // Options
-        ...question.options!.map((option) => Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: _OptionButton(
-                text: option,
-                isSelected: selectedAnswer == option,
-                isCorrect: showResult && option == question.correctAnswer,
-                isWrong: showResult &&
-                    selectedAnswer == option &&
-                    option != question.correctAnswer,
-                onTap: showResult ? null : () => onSelect(option),
-              ),
-            )),
+        ...question.options!.map(
+          (option) => Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: _OptionButton(
+              text: option,
+              isSelected: selectedAnswer == option,
+              isCorrect: showResult && option == question.correctAnswer,
+              isWrong:
+                  showResult &&
+                  selectedAnswer == option &&
+                  option != question.correctAnswer,
+              onTap: showResult ? null : () => onSelect(option),
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -147,8 +147,7 @@ class _OptionButton extends StatelessWidget {
               ),
               if (isCorrect)
                 const Icon(Icons.check_circle, color: Colors.green),
-              if (isWrong)
-                const Icon(Icons.cancel, color: Colors.red),
+              if (isWrong) const Icon(Icons.cancel, color: Colors.red),
             ],
           ),
         ),

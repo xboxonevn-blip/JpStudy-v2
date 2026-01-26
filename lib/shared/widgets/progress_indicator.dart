@@ -22,7 +22,7 @@ class StudyProgressIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final progressColor = color ?? Theme.of(context).primaryColor;
-    
+
     return SizedBox(
       width: size,
       height: size,
@@ -85,10 +85,7 @@ class StudyProgressBar extends StatelessWidget {
             children: [
               Text(
                 label!,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.grey[600],
-                ),
+                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
               ),
               Text(
                 '${(progress * 100).toInt()}%',

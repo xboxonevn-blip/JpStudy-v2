@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../db/app_database.dart';
 import '../db/database_provider.dart';
+import '../../core/services/fsrs_service.dart';
 
 final grammarRepositoryProvider = Provider<GrammarRepository>((ref) {
   final db = ref.watch(databaseProvider);
@@ -9,6 +10,7 @@ final grammarRepositoryProvider = Provider<GrammarRepository>((ref) {
 
 class GrammarRepository {
   final AppDatabase _db;
+  final FsrsService _fsrsService = FsrsService();
   AppDatabase get db => _db;
 
   GrammarRepository(this._db);
@@ -23,17 +25,20 @@ class GrammarRepository {
     final dueStates = await _db.grammarDao.getDueReviews();
     final ids = dueStates.map((s) => s.grammarId).toList();
     if (ids.isEmpty) return [];
-    
+
     // Fetch actual points for these ids
-    final points = await (_db.select(_db.grammarPoints)..where((t) => t.id.isIn(ids))).get();
+    final points = await (_db.select(
+      _db.grammarPoints,
+    )..where((t) => t.id.isIn(ids))).get();
     return points;
   }
 
   /// Fetch full details for a grammar point (including examples)
-  Future<({GrammarPoint point, List<GrammarExample> examples})?> getGrammarDetail(int id) async {
+  Future<({GrammarPoint point, List<GrammarExample> examples})?>
+  getGrammarDetail(int id) async {
     final point = await _db.grammarDao.getGrammarPoint(id);
     if (point == null) return null;
-    
+
     final examples = await _db.grammarDao.getExamplesForPoint(id);
     return (point: point, examples: examples);
   }
@@ -52,64 +57,41 @@ class GrammarRepository {
   /// - If quality >= 3 (Correct): Reduce Ghost or Advance SRS.
   Future<void> recordReview({
     required int grammarId,
-    required int quality, // 0-5
+    required int grade, // 1-4
   }) async {
     await ensureSrsInitialized(grammarId);
     final state = await _db.grammarDao.getSrsState(grammarId);
     if (state == null) return;
 
-    // Use SrsService logic here? Or custom Grammar logic?
-    // For now, implementing basic SRS update similar to vocab but with Ghost concept stubbed.
-    
-    // Simple SM-2 implementation inline for now, can move to service later
     int newStreak = state.streak;
-    double newEase = state.ease;
-    int interval = 1;
+    final nextGrade = grade.clamp(1, 4);
     int ghostReviewsDue = state.ghostReviewsDue;
 
-    if (quality < 3) {
+    if (nextGrade == 1) {
       newStreak = 0;
-      interval = 1;
       // Ghost logic: Mark as needing special review
-      ghostReviewsDue = 1; // Need 1 successful review to clear ghost status
+      ghostReviewsDue = 1;
     } else {
-      // If was ghost application, we just clear the ghost status but don't advance SRS much
+      newStreak += 1;
       if (ghostReviewsDue > 0) {
-         ghostReviewsDue = 0;
-         // Don't change streak/ease significantly for ghost clearing, or maybe small boost
-      } else {
-        // Normal SRS advancement
-        newStreak += 1;
-        
-        if (newStreak == 1) {
-          interval = 1;
-        } else if (newStreak == 2) {
-          interval = 6;
-        } else {
-          final daysSinceReview = state.lastReviewedAt == null 
-              ? 0 
-              : DateTime.now().difference(state.lastReviewedAt!).inDays;
-          // Use max(1, days) to avoid 0 mul
-          final days = daysSinceReview < 1 ? 1 : daysSinceReview;
-          interval = (days * state.ease).round();
-        }
-        
-        if (interval < 1) {
-          interval = 1;
-        }
-
-        newEase = state.ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
-        if (newEase < 1.3) {
-          newEase = 1.3;
-        }
+        ghostReviewsDue = 0;
       }
     }
+
+    final result = _fsrsService.review(
+      grade: nextGrade,
+      stability: state.stability,
+      difficulty: state.difficulty,
+      lastReviewedAt: state.lastReviewedAt,
+    );
 
     await _db.grammarDao.updateSrsState(
       grammarId: grammarId,
       streak: newStreak,
-      ease: newEase,
-      nextReviewAt: DateTime.now().add(Duration(days: interval)),
+      ease: state.ease,
+      stability: result.stability,
+      difficulty: result.difficulty,
+      nextReviewAt: result.nextReviewAt,
       ghostReviewsDue: ghostReviewsDue,
     );
   }
@@ -119,9 +101,11 @@ class GrammarRepository {
     final ghostStates = await _db.grammarDao.getGhostReviews();
     final ids = ghostStates.map((s) => s.grammarId).toList();
     if (ids.isEmpty) return [];
-    
+
     // Fetch actual points for these ids
-    final points = await (_db.select(_db.grammarPoints)..where((t) => t.id.isIn(ids))).get();
+    final points = await (_db.select(
+      _db.grammarPoints,
+    )..where((t) => t.id.isIn(ids))).get();
     return points;
   }
 

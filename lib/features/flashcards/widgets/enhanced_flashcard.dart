@@ -71,9 +71,7 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
 
   Widget _buildFront() {
     final meaning = widget.item.displayMeaning(widget.language);
-    final displayTerm = widget.showTermFirst
-        ? widget.item.term
-        : meaning;
+    final displayTerm = widget.showTermFirst ? widget.item.term : meaning;
     final resolvedTerm = displayTerm.trim().isEmpty ? meaning : displayTerm;
     final secondaryText = widget.showTermFirst && widget.item.reading != null
         ? widget.item.reading
@@ -86,27 +84,27 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
           Text(
             resolvedTerm,
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 48,
-                ),
+              fontWeight: FontWeight.bold,
+              fontSize: 48,
+            ),
             textAlign: TextAlign.center,
           ),
           if (secondaryText != null) ...[
             const SizedBox(height: 16),
             Text(
               secondaryText,
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Colors.grey[600],
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(color: Colors.grey[600]),
               textAlign: TextAlign.center,
             ),
           ],
           const SizedBox(height: 32),
           Text(
             'Tap to flip',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Colors.grey[500],
-                ),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: Colors.grey[500]),
           ),
         ],
       ),
@@ -115,10 +113,10 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
 
   Widget _buildBack() {
     final meaning = widget.item.displayMeaning(widget.language);
-    final displayMeaning = widget.showTermFirst
+    final displayMeaning = widget.showTermFirst ? meaning : widget.item.term;
+    final resolvedMeaning = displayMeaning.trim().isEmpty
         ? meaning
-        : widget.item.term;
-    final resolvedMeaning = displayMeaning.trim().isEmpty ? meaning : displayMeaning;
+        : displayMeaning;
 
     return Center(
       child: Padding(
@@ -128,9 +126,9 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
           children: [
             Text(
               resolvedMeaning,
-              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.w600,
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
             ),
             if (widget.item.kanjiMeaning != null &&
@@ -139,9 +137,9 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
               Text(
                 widget.item.kanjiMeaning!,
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: Colors.grey[700],
-                      fontStyle: FontStyle.italic,
-                    ),
+                  color: Colors.grey[700],
+                  fontStyle: FontStyle.italic,
+                ),
                 textAlign: TextAlign.center,
               ),
             ],
@@ -160,16 +158,19 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
                 ),
                 child: Row(
                   children: [
-                    const Icon(Icons.lightbulb_outline_rounded,
-                        color: Colors.amber, size: 24),
+                    const Icon(
+                      Icons.lightbulb_outline_rounded,
+                      color: Colors.amber,
+                      size: 24,
+                    ),
                     const SizedBox(width: 12),
                     Expanded(
                       child: Text(
                         widget.item.mnemonicVi!,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Colors.amber[900],
-                              height: 1.4,
-                            ),
+                          color: Colors.amber[900],
+                          height: 1.4,
+                        ),
                       ),
                     ),
                   ],

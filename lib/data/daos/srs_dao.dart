@@ -1,4 +1,3 @@
-
 import 'package:drift/drift.dart';
 import '../db/app_database.dart';
 import '../db/tables.dart';
@@ -11,8 +10,9 @@ class SrsDao extends DatabaseAccessor<AppDatabase> with _$SrsDaoMixin {
 
   /// Get SRS state for a specific vocab term
   Future<SrsStateData?> getSrsState(int vocabId) {
-    return (select(srsState)..where((t) => t.vocabId.equals(vocabId)))
-        .getSingleOrNull();
+    return (select(
+      srsState,
+    )..where((t) => t.vocabId.equals(vocabId))).getSingleOrNull();
   }
 
   /// Initialize SRS state for a new term
@@ -21,7 +21,7 @@ class SrsDao extends DatabaseAccessor<AppDatabase> with _$SrsDaoMixin {
       SrsStateCompanion.insert(
         vocabId: vocabId,
         nextReviewAt: DateTime.now(),
-        // Defaults: box=1, reps=0, ease=2.5 defined in table
+        // Defaults defined in table
       ),
       mode: InsertMode.insertOrIgnore,
     );
@@ -33,6 +33,8 @@ class SrsDao extends DatabaseAccessor<AppDatabase> with _$SrsDaoMixin {
     required int box,
     required int repetitions,
     required double ease,
+    required double stability,
+    required double difficulty,
     required int lastConfidence,
     required DateTime nextReviewAt,
   }) {
@@ -41,6 +43,8 @@ class SrsDao extends DatabaseAccessor<AppDatabase> with _$SrsDaoMixin {
         box: Value(box),
         repetitions: Value(repetitions),
         ease: Value(ease),
+        stability: Value(stability),
+        difficulty: Value(difficulty),
         lastConfidence: Value(lastConfidence),
         lastReviewedAt: Value(DateTime.now()),
         nextReviewAt: Value(nextReviewAt),

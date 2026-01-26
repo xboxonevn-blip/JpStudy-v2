@@ -50,11 +50,13 @@ class LearnSessionService {
     final achievements = dbAchievements.map((a) {
       model.AchievementType type;
       try {
-        type = model.AchievementType.values.firstWhere((e) => e.toString() == 'AchievementType.${a.type}');
+        type = model.AchievementType.values.firstWhere(
+          (e) => e.toString() == 'AchievementType.${a.type}',
+        );
       } catch (_) {
         type = model.AchievementType.values.firstWhere((e) => e.name == a.type);
       }
-      
+
       return model.Achievement(
         type: type,
         value: a.value,
@@ -76,39 +78,46 @@ class LearnSessionService {
   /// Check for and record achievements
   Future<void> _checkAchievements(domain.LearnSession session) async {
     // Perfect round achievement
-    if (session.correctCount == session.totalQuestions && session.totalQuestions >= 10) {
-      await _achievementDao.addAchievement(AchievementsCompanion(
-        type: Value(model.AchievementType.perfectRound.name),
-        value: Value(session.totalQuestions),
-        earnedAt: Value(DateTime.now()),
-        lessonId: Value(session.lessonId),
-        sessionId: Value(session.sessionId),
-        isNotified: const Value(false),
-      ));
+    if (session.correctCount == session.totalQuestions &&
+        session.totalQuestions >= 10) {
+      await _achievementDao.addAchievement(
+        AchievementsCompanion(
+          type: Value(model.AchievementType.perfectRound.name),
+          value: Value(session.totalQuestions),
+          earnedAt: Value(DateTime.now()),
+          lessonId: Value(session.lessonId),
+          sessionId: Value(session.sessionId),
+          isNotified: const Value(false),
+        ),
+      );
     }
 
     // Speed demon achievement (completed in under 2 minutes for 20+ questions)
     if (session.totalTime.inMinutes < 2 && session.totalQuestions >= 20) {
-      await _achievementDao.addAchievement(AchievementsCompanion(
-        type: Value(model.AchievementType.speedDemon.name),
-        value: Value(session.totalTime.inSeconds),
-        earnedAt: Value(DateTime.now()),
-        lessonId: Value(session.lessonId),
-        sessionId: Value(session.sessionId),
-        isNotified: const Value(false),
-      ));
+      await _achievementDao.addAchievement(
+        AchievementsCompanion(
+          type: Value(model.AchievementType.speedDemon.name),
+          value: Value(session.totalTime.inSeconds),
+          earnedAt: Value(DateTime.now()),
+          lessonId: Value(session.lessonId),
+          sessionId: Value(session.sessionId),
+          isNotified: const Value(false),
+        ),
+      );
     }
 
     // Mastery complete (all terms mastered)
     if (session.unmasteredTermIds.isEmpty && session.totalQuestions >= 10) {
-      await _achievementDao.addAchievement(AchievementsCompanion(
-        type: Value(model.AchievementType.masteryComplete.name),
-        value: Value(session.totalQuestions),
-        earnedAt: Value(DateTime.now()),
-        lessonId: Value(session.lessonId),
-        sessionId: Value(session.sessionId),
-        isNotified: const Value(false),
-      ));
+      await _achievementDao.addAchievement(
+        AchievementsCompanion(
+          type: Value(model.AchievementType.masteryComplete.name),
+          value: Value(session.totalQuestions),
+          earnedAt: Value(DateTime.now()),
+          lessonId: Value(session.lessonId),
+          sessionId: Value(session.sessionId),
+          isNotified: const Value(false),
+        ),
+      );
     }
   }
 

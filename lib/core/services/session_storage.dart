@@ -38,9 +38,7 @@ class SessionStorage {
     await prefs.remove('$_learnPrefix$lessonId');
   }
 
-  Future<void> saveTestSession({
-    required TestSessionSnapshot snapshot,
-  }) async {
+  Future<void> saveTestSession({required TestSessionSnapshot snapshot}) async {
     final prefs = await SharedPreferences.getInstance();
     final key = '$_testPrefix${snapshot.sessionKey}';
     await prefs.setString(key, jsonEncode(snapshot.toJson()));
@@ -130,14 +128,17 @@ class LearnSessionSnapshot {
           .toList(),
       enabledTypes: (json['enabledTypes'] as List<dynamic>? ?? const [])
           .map((e) => e.toString())
-          .map((value) => QuestionType.values.firstWhere(
-                (t) => t.name == value,
-                orElse: () => QuestionType.multipleChoice,
-              ))
+          .map(
+            (value) => QuestionType.values.firstWhere(
+              (t) => t.name == value,
+              orElse: () => QuestionType.multipleChoice,
+            ),
+          )
           .toList(),
-      contextHintsShown: (json['contextHintsShown'] as List<dynamic>? ?? const [])
-          .map((e) => e.toString())
-          .toSet(),
+      contextHintsShown:
+          (json['contextHintsShown'] as List<dynamic>? ?? const [])
+              .map((e) => e.toString())
+              .toSet(),
       contextHintsRequeued:
           (json['contextHintsRequeued'] as List<dynamic>? ?? const [])
               .map((e) => e.toString())
@@ -238,12 +239,16 @@ class TestSessionSnapshot {
       'config': TestConfigSerializer.toJson(config),
       'adaptiveAdded': adaptiveAdded,
       'adaptiveMaxExtra': adaptiveMaxExtra,
-      'usedTypesByItem': usedTypesByItem.map((key, value) =>
-          MapEntry(key.toString(), value.map((e) => e.name).toList())),
-      'adaptiveRepeatCount':
-          adaptiveRepeatCount.map((key, value) => MapEntry(key.toString(), value)),
-      'adaptiveCorrectStreak':
-          adaptiveCorrectStreak.map((key, value) => MapEntry(key.toString(), value)),
+      'usedTypesByItem': usedTypesByItem.map(
+        (key, value) =>
+            MapEntry(key.toString(), value.map((e) => e.name).toList()),
+      ),
+      'adaptiveRepeatCount': adaptiveRepeatCount.map(
+        (key, value) => MapEntry(key.toString(), value),
+      ),
+      'adaptiveCorrectStreak': adaptiveCorrectStreak.map(
+        (key, value) => MapEntry(key.toString(), value),
+      ),
       'adaptiveCompleted': adaptiveCompleted.toList(),
       'lastSavedAt': lastSavedAt.toIso8601String(),
     };
@@ -258,10 +263,12 @@ class TestSessionSnapshot {
       if (key == null) continue;
       final list = (entry.value as List<dynamic>? ?? const [])
           .map((e) => e.toString())
-          .map((value) => QuestionType.values.firstWhere(
-                (t) => t.name == value,
-                orElse: () => QuestionType.multipleChoice,
-              ))
+          .map(
+            (value) => QuestionType.values.firstWhere(
+              (t) => t.name == value,
+              orElse: () => QuestionType.multipleChoice,
+            ),
+          )
           .toSet();
       usedTypesByItem[key] = list;
     }
@@ -300,12 +307,12 @@ class TestSessionSnapshot {
           .map((e) => TestAnswerSerializer.fromJson(e))
           .whereType<TestAnswer>()
           .toList(),
-      flaggedQuestions:
-          (json['flaggedQuestions'] as List<dynamic>? ?? const [])
-              .map((e) => e as int)
-              .toSet(),
+      flaggedQuestions: (json['flaggedQuestions'] as List<dynamic>? ?? const [])
+          .map((e) => e as int)
+          .toSet(),
       config: TestConfigSerializer.fromJson(
-          json['config'] as Map<String, dynamic>? ?? const {}),
+        json['config'] as Map<String, dynamic>? ?? const {},
+      ),
       adaptiveAdded: json['adaptiveAdded'] as int? ?? 0,
       adaptiveMaxExtra: json['adaptiveMaxExtra'] as int? ?? 0,
       usedTypesByItem: usedTypesByItem,
@@ -383,7 +390,9 @@ class QuestionSerializer {
       targetItem: targetItem,
       questionText: json['questionText']?.toString() ?? '',
       correctAnswer: json['correctAnswer']?.toString() ?? '',
-      options: (json['options'] as List<dynamic>?)?.map((e) => e.toString()).toList(),
+      options: (json['options'] as List<dynamic>?)
+          ?.map((e) => e.toString())
+          .toList(),
       isStatementTrue: json['isStatementTrue'] as bool?,
       expectsReading: json['expectsReading'] as bool?,
       hint: json['hint']?.toString(),
@@ -478,10 +487,12 @@ class TestConfigSerializer {
       questionCount: json['questionCount'] as int? ?? 20,
       enabledTypes: (json['enabledTypes'] as List<dynamic>? ?? const [])
           .map((e) => e.toString())
-          .map((value) => QuestionType.values.firstWhere(
-                (t) => t.name == value,
-                orElse: () => QuestionType.multipleChoice,
-              ))
+          .map(
+            (value) => QuestionType.values.firstWhere(
+              (t) => t.name == value,
+              orElse: () => QuestionType.multipleChoice,
+            ),
+          )
           .toList(),
       timeLimitMinutes: json['timeLimitMinutes'] as int?,
       shuffleQuestions: json['shuffleQuestions'] as bool? ?? true,

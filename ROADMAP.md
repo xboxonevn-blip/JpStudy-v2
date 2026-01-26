@@ -1,13 +1,7 @@
-# 🚀 JpStudy-v2 Roadmap (v2.3: Chiến lược Pro Max & Tối ưu Trải nghiệm)
+# 🚀 JpStudy-v2 Roadmap (v2.4: Smart Immersion & Cloud Ecosystem)
 
 ## 🌟 Tầm nhìn (Vision)
-
-Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp tinh hoa từ các ứng dụng hàng đầu nhưng vẫn duy trì triết lý **"Zero-Cost Architecture" (Vận hành 0đ)**:
-
-*   **🧠 Logic Anki/Quizlet:** Thuật toán SRS mạnh mẽ, chế độ học đa dạng. - ✅ Done
-*   **🏗️ Cấu trúc LingoDeer:** Lộ trình học bài bản (Curriculum) + Gamification. - ✅ Done
-*   **🧬 Chuyên sâu Bunpro:** Ngữ pháp Ghost Reviews. - ✅ Done
-*   **📰 Immersion (Todaii/Migii):** MVP đọc bài mẫu + lưu từ mới. - ✅ Done
+Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật toán thông minh (FSRS), trải nghiệm đắm mình (Immersion) và kết nối cộng đồng, duy trì triết lý **"Zero-Cost Architecture"**.
 
 ---
 
@@ -15,122 +9,91 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 
 | Phase | Trọng tâm | Trạng thái | Dự kiến |
 | :--- | :--- | :--- | :--- |
-| **Phase 1** | **Foundation** (Anki Logic) | ✅ 100% | Done |
-| **Phase 2** | **Structure** (LingoDeer Style) | ✅ 95% | Done |
-| **Phase 2.5** | **Visual Polish & Mnemonics** | ✅ 80% | In Progress |
-| **Phase 3** | **Immersion & Refinement** | 🚧 85% | Feb 2026 |
-| **Phase 4** | **Expansion & AI** | 🧪 10% | Q2 2026 |
+| **Phase 1** | **Foundation** (Anki Logic) | ✅ 100% | Completed |
+| **Phase 2** | **Structure & Visuals** (LingoDeer + Clay UI) | ✅ 100% | Completed |
+| **Phase 3** | **Smart Immersion** (FSRS + Auto-Ghost) | ?? 70% | Feb 2026 |
+| **Phase 4** | **Cloud & AI** (Sync + Gemini) | 🧪 0% | Q2 2026 |
 
 ---
 
-## 🧭 Đối chiếu codebase (Reality check)
+## 📅 Chi tiết các Phase
 
-Ký hiệu trạng thái: ✅ Done | 🚧 Partial | 📅 Planned | 🧪 Basic.
-
-Mục này giúp đối chiếu nhanh roadmap ↔ codebase: những thứ **đã có nhưng chưa ghi**, và những thứ **còn thiếu/chưa hoàn thiện**.
-
-- **✅ Đã hoàn thành (Implemented):**
-    - **Offline TTS:** Đọc mẫu câu/từ vựng (Android/iOS/Windows). - ✅ Done
-    - **Ghost Reviews (Logic):** Backend scheduling & logic chọn bài ôn. - ✅ Done
-    - **Practice Hub:** Trung tâm truy cập nhanh các mode luyện tập. - ✅ Done
-    - **Kanji Dash:** mini-game tăng tốc phản xạ. - ✅ Done
-    - **Exam/Quiz Screen:** quiz nhanh 10 câu. - ✅ Done
-    - **Ghost Reviews (UI Integration):** Tích hợp Dashboard + luồng học chính. - ✅ Done
-    - **Immersion Reader:** Đọc bài mẫu, tra từ, lưu SRS. - ✅ Done
-    - **Handwriting (Viết Kanji):** Canvas viết tay + nhận diện nét (MVP). - ✅ Done
-    - **Writer Mode:** Typing + viết tay Kanji. - ✅ Done
-    - **Mock Exams:** Đề thi thử N5/N4 có timer, chấm điểm, review. - ✅ Done
-    - **Clay UI System:** Design system Claymorphism thống nhất. - ✅ Done
-    - **Daily Reminders & Backup:** Nhắc học + Tự động sao lưu. - ✅ Done
-
-- **🚧/📅 Còn thiếu / đang phát triển:**
-    - **Ghost Reviews (Auto Trigger):** Kích hoạt từ bài đọc/test khi trả lời sai. - 🚧 Partial
-    - **Handwriting nâng cao:** Thứ tự nét + nhận diện chính xác hơn. - 📅 Planned
+### ✅ Phase 1 & 2: Core Complete (Đã hoàn tất)
+*   **Hạ Tầng:** Drift/SQLite, SRS (FSRS), Localization.
+*   **Học Tập:** Flashcards, Quiz, Writer Mode (MVP), Context Learning.
+*   **Giao Diện:** Claymorphism UI, Particle Effects, Mascot placeholders.
+*   **Tính Năng:** Immersion Reader (Offline), Ghost Reviews (UI Manual), Mock Exams (N5/N4).
 
 ---
 
-## 🛠️ Trạng thái Tính năng Core (Pro Max Upgrade)
+### ?? Phase 3: Smart Immersion & Algorithms (Current Priority)
+**M?c ti?u:** N?ng c?p "b? n?o" c?a ?ng d?ng, gi?p h?c th?ng minh h?n, kh?ng ch? l? ch?m ch? h?n.
 
-### 1. 📖 Learn (Học Tập) — ✅ Done
-*   **Guided Interaction:** Học qua ngữ cảnh (Contextual Learning). - ✅ Done
-*   **Mnemonic Support:** Bổ sung câu chuyện gợi nhớ Kanji (Done for N5/N4). - ✅ Done
+1.  **?? Ghost Review 2.0 (Auto-Integration):**
+    *   [x] **Auto-Trigger:** T? ??ng t?o Ghost khi sai trong Learn/Review/Test/Grammar/Handwriting.
+    *   [x] **Contextual Ghosts:** L?u k?m prompt/??p ?n/ngu?n ? Mistake Bank + Ghost Review.
 
-### 2. 📝 Test (Kiểm Tra) — ✅ Done
-*   **Adaptive Testing:** Tự động lặp lại các câu sai. - ✅ Done
-*   **Test Analysis:** Phân tích lỗi sai & gợi ý ôn tập. - ✅ Done
+2.  **?? FSRS Algorithm (N?ng c?p SRS):**
+    *   [x] **Algorithm Swap:** Thay SM-2 b?ng FSRS cho vocab/grammar/kanji.
+    *   [x] **Retrievability:** Hi?n th? x?c su?t nh? tr??c khi ch?n m?c ??.
 
-### 3. 🧩 Match (Nối Từ) — ✅ Done
-*   **Time Attack Blitz:** Đua tốc độ với hiệu ứng vật lý. - ✅ Done
-
-### 4. ✍️ Write (Viết) — ✅ Done (MVP)
-*   **Current:** Write-mode typing + viết tay Kanji (canvas + check nét). - ✅ Done
-*   **Next:** Stroke order & nhận diện nâng cao. - 📅 Planned
-
-### 5. 👻 Ghost Review (Ôn Lỗi Sai) — 🚧 Partial
-*   **Current:** Logic backend + UI tích hợp Dashboard/Practice Hub. - ✅ Done
-*   **Next:** Tự động kích hoạt Ghost Review khi làm sai trong bài đọc/test. - 🚧 Partial
+3.  **?? Advanced Immersion (Not in scope for Phase 3):**
+    *   [ ] **Context Search:** (Deferred)
+    *   [ ] **Audio Sync:** (Deferred)
 
 ---
 
-## 📅 Chi tiết các Phase (Updated)
+### ☁️ Phase 4: Cloud Ecosystem & AI (Future)
+**Mục tiêu:** Mở rộng trải nghiệm đa nền tảng và hỗ trợ AI.
 
-### ✅ Phase 1 & 2: Core Foundation & Structure — Completed
-*   Hạ tầng dữ liệu (Drift/SQLite).
-*   Thuật toán SRS (Anki-like).
-*   Lộ trình bài học (Lesson 1-50).
-*   Ngữ pháp & Từ vựng N5/N4.
-*   Localization (Việt/Anh).
+1.  **☁️ Cloud Sync (Free):**
+    *   [ ] **Google Drive Backup:** Sync file database qua Google Drive API (Android/Windows).
+    *   [ ] **Cross-device:** Học trên PC, ôn trên điện thoại.
 
-### 🚧 Phase 3: Immersion & Refinement (Mục tiêu hiện tại)
-**Trọng tâm:** Ổn định tính năng mới và hoàn thiện trải nghiệm đọc hiểu/ôn tập.
+2.  **🤖 AI Assistant (Gemini Flash):**
+    *   [ ] **Why Wrong?**: Giải thích tại sao chọn đáp án sai.
+    *   [ ] **Story Gen**: Tạo câu chuyện ngắn từ list từ vựng đang học.
 
-*   **3.1 Immersion (Trạm đọc):**
-    *   Offline Article Reader (Đọc bài mẫu offline). - ✅ Done
-    *   Tap-to-lookup (Tra từ nhanh). - ✅ Done
-    *   Quick-add SRS (Lưu từ vào Flashcard). - ✅ Done
-*   **3.2 Ghost Review Integration:**
-    *   Hoàn thiện UI cho Ghost Review. - ✅ Done
-    *   Kết nối Ghost Review vào Practice Hub. - ✅ Done
-*   **3.3 Mock Exam Suite:**
-    *   Hoàn thiện UI thi thử (Timer, Progress Bar). - ✅ Done
-    *   Chấm điểm & Review kết quả. - ✅ Done
-
-### 📅 Phase 4: Expansion & AI (Q2 2026)
-**Trọng tâm:** Công nghệ nâng cao và mở rộng cộng đồng.
-
-*   **Handwriting:** Nhận diện chữ viết tay.
-*   **FSRS Algorithm:** Nâng cấp thuật toán SRS hiện đại.
-*   **AI Pronunciation:** Check phát âm.
-*   **Community:** Chia sẻ bộ từ vựng (Share Decks).
+3.  **🤝 Community:**
+    *   [ ] **Share Decks:** Import/Export bộ từ vựng (JSON/QR).
 
 ---
 
-## ✅ UI Walkthrough Checklist (QA nhanh)
+## ✅ Feature Verification Checklist (QA)
 
-**Ghost Review**
-- Mở Home → thấy banner “Ôn lỗi” khi có ghost; nhấn “Ôn ngay” đi vào Ghost Practice.
-- Practice Hub hiển thị tile Ghost Review có badge số lượng.
-- Mini Dashboard hiển thị count Ghost Reviews.
-
-**Immersion Reader**
-- Practice Hub → Immersion → mở bài NHK + bật/tắt Furigana.
-- Tap từ có nghĩa → modal hiển thị nghĩa → Add to SRS.
-- Từ đã lưu đổi màu + không cho add lại.
-
-**Handwriting (Write Mode)**
-- Vào Lesson → Write → chọn “Viết tay”.
-- Canvas hiện gợi ý chữ, toggle guide, Undo/Clear hoạt động.
-- Check đánh giá theo số nét + summary cuối phiên.
-
-**Mock Exam**
-- Practice Hub → Mock Exam → chọn N5/N4.
-- Config có time limit mặc định; vào Test thấy timer + progress.
-- Nộp bài → Result + Review Answers hiển thị đúng.
+| Feature | Status | Notes |
+| :--- | :--- | :--- |
+| **Clay UI System** | ✅ Done | Unified Theme, Buttons, Cards. |
+| **Shadowing/TTS** | ✅ Done | Offline TTS windows/android. |
+| **Writer Mode** | ✅ Done | Canvas drawing (Basic). |
+| **Ghost Practice** | ✅ Done | Gamified with particles. |
+| **Mock Exam** | ✅ Done | Timer, Scoring, Review. |
+| **Handwriting Check** | ?? Partial | Basic stroke check + SRS; recognition pending.
 
 ---
 
-## ⚡ Ưu Tiên Tiếp Theo (Next Steps)
+## ?? UI Walkthrough Checklists
 
-1.  ✍️ **Handwriting nâng cao:** Thứ tự nét + nhận diện chính xác hơn.
-2.  🧠 **FSRS Upgrade:** Nâng cấp thuật toán SRS hiện đại.
-3.  📰 **Immersion mở rộng:** Thêm nguồn bài đọc & từ điển.
+### Ghost Review
+- [ ] M? Ghost Review t? Practice Hub ho?c banner.
+- [ ] Ki?m tra hi?n th? ng? c?nh (prompt/??p ?n/ngu?n).
+- [ ] B?m Practice v? x?c nh?n l?i gi?m sau khi l?m ??ng.
+
+### Immersion Reader
+- [ ] M? Immersion Reader (NHK/Local), t?i b?i.
+- [ ] Tap t? ?? tra ngh?a; th?m v?o SRS; ki?m tra tr?ng th?i ?? l?u.
+- [ ] B?t/t?t Furigana v? b?n d?ch.
+
+### Handwriting
+- [ ] V?o Write Mode ? Handwriting.
+- [ ] V? n?t, ki?m tra k?t qu?; x?c nh?n SRS c?p nh?t.
+- [ ] Sai th? t?o Mistake (Kanji).
+
+### Mock Exam
+- [ ] B?t ??u ?? N5/N4; ki?m tra timer v? flow.
+- [ ] Ho?n th?nh; xem ?i?m & resume session.
+
+## ? Next Priority Tasks
+1.  ?? **N?ng c?p nh?n di?n n?t:** ch?m ?i?m theo th? t?/shape n?t.
+2.  ?? **Kanji Ghost UX:** gom nh?m theo b?i + filter theo due.
+3.  ?? **Mock Exam polish:** chia section, pressure timer, review flow.

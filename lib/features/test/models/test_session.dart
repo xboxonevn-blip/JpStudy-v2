@@ -25,8 +25,8 @@ class TestSession {
     Set<int>? flaggedQuestions,
     this.timeLimitMinutes,
     this.currentQuestionIndex = 0,
-  })  : answers = answers ?? [],
-        flaggedQuestions = flaggedQuestions ?? {};
+  }) : answers = answers ?? [],
+       flaggedQuestions = flaggedQuestions ?? {};
 
   int get totalQuestions => questions.length;
   int get answeredCount => answers.where((a) => a.userAnswer != null).length;
@@ -182,11 +182,7 @@ class TypeBreakdown {
   int total;
   int correct;
 
-  TypeBreakdown({
-    required this.type,
-    this.total = 0,
-    this.correct = 0,
-  });
+  TypeBreakdown({required this.type, this.total = 0, this.correct = 0});
 
   double get accuracy => total > 0 ? correct / total * 100 : 0;
 }

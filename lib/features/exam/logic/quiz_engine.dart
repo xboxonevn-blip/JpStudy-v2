@@ -28,7 +28,7 @@ class QuizEngine {
 
     final questions = <QuizQuestion>[];
     final availableVocab = List<VocabItem>.from(_allVocab)..shuffle(_random);
-    
+
     // Determine how many questions to generate
     final count = min(numberOfQuestions, availableVocab.length);
 
@@ -36,9 +36,9 @@ class QuizEngine {
       final target = availableVocab[i];
       // Randomly decide question type: 30% typing, 70% multiple choice
       if (_random.nextDouble() < 0.3) {
-         questions.add(_createTypingQuestion(target));
+        questions.add(_createTypingQuestion(target));
       } else {
-         questions.add(_createMultipleChoiceQuestion(target));
+        questions.add(_createMultipleChoiceQuestion(target));
       }
     }
 
@@ -50,18 +50,18 @@ class QuizEngine {
     final distractors = <String>[];
     final potentialDistractors = List<VocabItem>.from(_allVocab)
       ..removeWhere((e) => e.id == target.id); // Remove target from distractors
-    
+
     potentialDistractors.shuffle(_random);
-    
+
     // Take up to 3 distractors
     for (int i = 0; i < min(3, potentialDistractors.length); i++) {
-        // Use meaning for MC options
-        distractors.add(potentialDistractors[i].meaning);
+      // Use meaning for MC options
+      distractors.add(potentialDistractors[i].meaning);
     }
-    
+
     final options = List<String>.from(distractors);
     final correctAnswer = target.meaning;
-    
+
     // Insert correct answer at random position
     final correctIndex = _random.nextInt(options.length + 1);
     options.insert(correctIndex, correctAnswer);
@@ -83,4 +83,3 @@ class QuizEngine {
     );
   }
 }
-

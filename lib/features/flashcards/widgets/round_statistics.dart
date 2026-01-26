@@ -42,12 +42,15 @@ class RoundStatisticsWidget extends StatelessWidget {
             children: [
               Text(
                 'Round Progress',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 4,
+                ),
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
@@ -137,10 +140,7 @@ class _BucketIndicator extends StatelessWidget {
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: color.withValues(alpha: 0.3),
-          width: 1,
-        ),
+        border: Border.all(color: color.withValues(alpha: 0.3), width: 1),
       ),
       child: Column(
         children: [
@@ -156,10 +156,7 @@ class _BucketIndicator extends StatelessWidget {
           ),
           Text(
             '$percentage%',
-            style: TextStyle(
-              fontSize: 11,
-              color: color.withValues(alpha: 0.8),
-            ),
+            style: TextStyle(fontSize: 11, color: color.withValues(alpha: 0.8)),
           ),
         ],
       ),
@@ -194,10 +191,7 @@ class _AccuracyBar extends StatelessWidget {
           children: [
             Text(
               'Accuracy',
-              style: TextStyle(
-                fontSize: 12,
-                color: Colors.grey[600],
-              ),
+              style: TextStyle(fontSize: 12, color: Colors.grey[600]),
             ),
             Text(
               '$accuracy%',
@@ -225,7 +219,10 @@ class _AccuracyBar extends StatelessWidget {
                   child: Container(color: Colors.orange),
                 ),
                 Expanded(
-                  flex: 100 - (knownRatio * 100).toInt() - (practiceRatio * 100).toInt(),
+                  flex:
+                      100 -
+                      (knownRatio * 100).toInt() -
+                      (practiceRatio * 100).toInt(),
                   child: Container(color: Colors.grey[300]),
                 ),
               ],

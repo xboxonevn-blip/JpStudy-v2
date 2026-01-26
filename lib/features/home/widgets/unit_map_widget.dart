@@ -14,28 +14,27 @@ class UnitMapWidget extends ConsumerWidget {
   final Unit unit;
   final Function(LessonNode) onNodeTap;
 
-  const UnitMapWidget({
-    super.key,
-    required this.unit,
-    required this.onNodeTap,
-  });
+  const UnitMapWidget({super.key, required this.unit, required this.onNodeTap});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final positions = _generatePositions(context, unit.nodes.length);
-    final totalHeight = (unit.nodes.length + 1) * 120.0; // Space for mascot at bottom if needed
+    final totalHeight =
+        (unit.nodes.length + 1) * 120.0; // Space for mascot at bottom if needed
     final language = ref.watch(appLanguageProvider);
-    
+
     // Find active node (First unlocked and not completed)
     // Or if all completed, maybe the last one?
     // If all locked, the first one.
-    int activeIndex = unit.nodes.indexWhere((n) => !n.isCompleted && !n.isLocked);
+    int activeIndex = unit.nodes.indexWhere(
+      (n) => !n.isCompleted && !n.isLocked,
+    );
     if (activeIndex == -1) {
-       if (unit.nodes.isNotEmpty && unit.nodes.first.isLocked) {
-         activeIndex = 0;
-       } else if (unit.nodes.isNotEmpty && unit.nodes.last.isCompleted) {
-         activeIndex = unit.nodes.length - 1;
-       }
+      if (unit.nodes.isNotEmpty && unit.nodes.first.isLocked) {
+        activeIndex = 0;
+      } else if (unit.nodes.isNotEmpty && unit.nodes.last.isCompleted) {
+        activeIndex = unit.nodes.length - 1;
+      }
     }
 
     return SizedBox(
@@ -45,10 +44,7 @@ class UnitMapWidget extends ConsumerWidget {
         children: [
           // 1. Draw the connected path
           CustomPaint(
-            painter: PathPainter(
-              points: positions,
-              color: unit.color,
-            ),
+            painter: PathPainter(points: positions, color: unit.color),
             size: Size.infinite,
           ),
 
@@ -57,7 +53,7 @@ class UnitMapWidget extends ConsumerWidget {
             final node = unit.nodes[index];
             final pos = positions[index];
             const nodeSize = 80.0;
-            
+
             return Positioned(
               left: pos.dx - nodeSize / 2,
               top: pos.dy - nodeSize / 2,
@@ -68,10 +64,10 @@ class UnitMapWidget extends ConsumerWidget {
               ),
             );
           }),
-          
+
           // 3. Mascot (Floating near Active Node)
           if (activeIndex != -1 && activeIndex < positions.length)
-             MascotRive(nodePos: positions[activeIndex]),
+            MascotRive(nodePos: positions[activeIndex]),
 
           // 4. Unit Header
           Positioned(
@@ -84,13 +80,13 @@ class UnitMapWidget extends ConsumerWidget {
       ),
     );
   }
-  
+
   Widget _buildUnitHeader(BuildContext context, AppLanguage language) {
     // Localize Title if it matches "Level X"
     String title = unit.title;
     if (title.startsWith('Level ')) {
-       final level = title.replaceAll('Level ', '');
-       title = '${language.levelLabel} $level';
+      final level = title.replaceAll('Level ', '');
+      title = '${language.levelLabel} $level';
     }
 
     return Container(
@@ -144,7 +140,7 @@ class UnitMapWidget extends ConsumerWidget {
     const spacing = 120.0;
     const amplitude = 90.0;
     // Start drawing a bit down to accommodate header
-    const startY = 180.0; 
+    const startY = 180.0;
 
     return List.generate(count, (index) {
       // Sine wave pattern

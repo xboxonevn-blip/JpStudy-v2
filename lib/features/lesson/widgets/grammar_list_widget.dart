@@ -37,7 +37,7 @@ class GrammarListWidget extends ConsumerWidget {
             ),
           );
         }
-        
+
         return ListView.builder(
           padding: const EdgeInsets.all(16),
           itemCount: grammarList.length + 1, // +1 for the button
@@ -47,22 +47,22 @@ class GrammarListWidget extends ConsumerWidget {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: ClayButton(
-                  label: language == AppLanguage.vi 
-                      ? 'Làm Bài Tập & Quiz' 
+                  label: language == AppLanguage.vi
+                      ? 'Làm Bài Tập & Quiz'
                       : 'Exercises & Quiz',
                   icon: Icons.model_training,
                   style: ClayButtonStyle.primary,
                   onPressed: () {
                     final ids = grammarList.map((e) => e.point.id).toList();
-                    context.push('/grammar-practice', extra: {
-                      'ids': ids,
-                      'mode': GrammarPracticeMode.normal,
-                    });
+                    context.push(
+                      '/grammar-practice',
+                      extra: {'ids': ids, 'mode': GrammarPracticeMode.normal},
+                    );
                   },
                 ),
               );
             }
-            
+
             final data = grammarList[index - 1];
             return Padding(
               padding: const EdgeInsets.only(bottom: 16),
@@ -97,7 +97,7 @@ class _GrammarPointCard extends StatelessWidget {
     final point = data.point;
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    
+
     // Determine Display Values based on Language
     String title = point.grammarPoint;
     String structure = point.connection;
@@ -118,7 +118,7 @@ class _GrammarPointCard extends StatelessWidget {
         break;
       case AppLanguage.ja:
         title = point.grammarPoint;
-        explanation = point.connection; 
+        explanation = point.connection;
         break;
     }
 
@@ -126,8 +126,8 @@ class _GrammarPointCard extends StatelessWidget {
     if (explanation.isEmpty) explanation = point.explanation;
 
     // Clean up structure for display
-    final displayStructure = language == AppLanguage.en 
-        ? structure 
+    final displayStructure = language == AppLanguage.en
+        ? structure
         : _formatStructure(structure, language);
 
     return Card(
@@ -135,7 +135,9 @@ class _GrammarPointCard extends StatelessWidget {
       color: colorScheme.surfaceContainer,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: colorScheme.outlineVariant.withValues(alpha: 0.5)),
+        side: BorderSide(
+          color: colorScheme.outlineVariant.withValues(alpha: 0.5),
+        ),
       ),
       clipBehavior: Clip.antiAlias,
       child: ExpansionTile(
@@ -148,17 +150,17 @@ class _GrammarPointCard extends StatelessWidget {
           width: 40,
           height: 40,
           decoration: BoxDecoration(
-             color: colorScheme.primaryContainer,
-             borderRadius: BorderRadius.circular(12),
+            color: colorScheme.primaryContainer,
+            borderRadius: BorderRadius.circular(12),
           ),
           child: Center(
             child: Text(
-              '$index', 
+              '$index',
               style: TextStyle(
-                fontWeight: FontWeight.bold, 
+                fontWeight: FontWeight.bold,
                 color: colorScheme.onPrimaryContainer,
                 fontSize: 16,
-              )
+              ),
             ),
           ),
         ),
@@ -168,31 +170,33 @@ class _GrammarPointCard extends StatelessWidget {
             Row(
               children: [
                 _buildChip(
-                  context, 
-                  point.jlptLevel, 
-                  colorScheme.tertiaryContainer, 
-                  colorScheme.onTertiaryContainer
+                  context,
+                  point.jlptLevel,
+                  colorScheme.tertiaryContainer,
+                  colorScheme.onTertiaryContainer,
                 ),
                 const SizedBox(width: 8),
                 if (point.isLearned)
                   _buildChip(
-                    context, 
-                    'Mastered', 
-                    Colors.green.shade100, 
-                    Colors.green.shade900
+                    context,
+                    'Mastered',
+                    Colors.green.shade100,
+                    Colors.green.shade900,
                   )
                 else
                   _buildChip(
-                    context, 
-                    'New', 
-                    colorScheme.secondaryContainer, 
-                    colorScheme.onSecondaryContainer
+                    context,
+                    'New',
+                    colorScheme.secondaryContainer,
+                    colorScheme.onSecondaryContainer,
                   ),
               ],
             ),
             const SizedBox(height: 8),
             Text(
-              language == AppLanguage.en ? title : _formatStructure(title, language),
+              language == AppLanguage.en
+                  ? title
+                  : _formatStructure(title, language),
               style: theme.textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: colorScheme.onSurface,
@@ -203,22 +207,22 @@ class _GrammarPointCard extends StatelessWidget {
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 8),
           child: Text(
-             meaning,
-             style: theme.textTheme.bodyMedium?.copyWith(
-               color: colorScheme.onSurfaceVariant,
-               fontWeight: FontWeight.w500,
-             ),
+            meaning,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: colorScheme.onSurfaceVariant,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         children: [
           const Divider(height: 32),
-          
+
           // Structure Section
           if (displayStructure.isNotEmpty) ...[
             _buildSectionHeader(
-                context, 
-                language == AppLanguage.vi ? 'Cấu trúc' : 'Structure', 
-                Icons.account_tree_outlined
+              context,
+              language == AppLanguage.vi ? 'Cấu trúc' : 'Structure',
+              Icons.account_tree_outlined,
             ),
             const SizedBox(height: 8),
             Container(
@@ -227,12 +231,14 @@ class _GrammarPointCard extends StatelessWidget {
               decoration: BoxDecoration(
                 color: colorScheme.surfaceContainerHigh,
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: colorScheme.outlineVariant.withValues(alpha: 0.5)),
+                border: Border.all(
+                  color: colorScheme.outlineVariant.withValues(alpha: 0.5),
+                ),
               ),
               child: Text(
                 displayStructure,
                 style: const TextStyle(
-                  fontFamily: 'Courier', 
+                  fontFamily: 'Courier',
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
                 ),
@@ -243,11 +249,11 @@ class _GrammarPointCard extends StatelessWidget {
 
           // Explanation Section
           _buildSectionHeader(
-             context, 
-             language == AppLanguage.vi ? 'Giải thích' : 'Explanation', 
-             Icons.info_outline
+            context,
+            language == AppLanguage.vi ? 'Giải thích' : 'Explanation',
+            Icons.info_outline,
           ),
-           const SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             explanation,
             style: theme.textTheme.bodyMedium?.copyWith(
@@ -259,13 +265,15 @@ class _GrammarPointCard extends StatelessWidget {
 
           // Examples Section
           if (data.examples.isNotEmpty) ...[
-             _buildSectionHeader(
-                 context, 
-                 language == AppLanguage.vi ? 'Ví dụ' : 'Examples', 
-                 Icons.format_quote_rounded
-             ),
-             const SizedBox(height: 12),
-             ...data.examples.map((ex) => _buildExampleItem(context, ex, language)),
+            _buildSectionHeader(
+              context,
+              language == AppLanguage.vi ? 'Ví dụ' : 'Examples',
+              Icons.format_quote_rounded,
+            ),
+            const SizedBox(height: 12),
+            ...data.examples.map(
+              (ex) => _buildExampleItem(context, ex, language),
+            ),
           ],
 
           // Action Section (Optional: Mark as learned if needed in future, hidden for now as it's implied by Lesson)
@@ -283,16 +291,16 @@ class _GrammarPointCard extends StatelessWidget {
       ),
       child: Text(
         label.toUpperCase(),
-        style: TextStyle(
-          fontSize: 10,
-          fontWeight: FontWeight.bold,
-          color: fg,
-        ),
+        style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: fg),
       ),
     );
   }
 
-  Widget _buildSectionHeader(BuildContext context, String title, IconData icon) {
+  Widget _buildSectionHeader(
+    BuildContext context,
+    String title,
+    IconData icon,
+  ) {
     final color = Theme.of(context).colorScheme.primary;
     return Row(
       children: [
@@ -311,7 +319,11 @@ class _GrammarPointCard extends StatelessWidget {
     );
   }
 
-  Widget _buildExampleItem(BuildContext context, GrammarExample ex, AppLanguage language) {
+  Widget _buildExampleItem(
+    BuildContext context,
+    GrammarExample ex,
+    AppLanguage language,
+  ) {
     String translation = '';
     switch (language) {
       case AppLanguage.vi:
@@ -330,24 +342,21 @@ class _GrammarPointCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-           Text(
-             ex.japanese,
-             style: const TextStyle(
-               fontSize: 16,
-               fontWeight: FontWeight.w500,
-             ),
-           ),
-           if (translation.isNotEmpty) ...[
-             const SizedBox(height: 4),
-             Text(
-               translation,
-               style: TextStyle(
-                 fontSize: 14,
-                 color: Theme.of(context).colorScheme.outline,
-                 fontStyle: FontStyle.italic,
-               ),
-             ),
-           ],
+          Text(
+            ex.japanese,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+          ),
+          if (translation.isNotEmpty) ...[
+            const SizedBox(height: 4),
+            Text(
+              translation,
+              style: TextStyle(
+                fontSize: 14,
+                color: Theme.of(context).colorScheme.outline,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ],
         ],
       ),
     );
@@ -359,6 +368,13 @@ class _GrammarPointCard extends StatelessWidget {
     // Only keeping characters, Basic punctuations, and Japanese characters
     // Removing parentheses content that looks localized if needed
     // For now, reusing the previous logic logic implicitly or simplified:
-    return text.replaceAll(RegExp(r'\([^)]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]+[^)]*\)'), '').trim();
+    return text
+        .replaceAll(
+          RegExp(
+            r'\([^)]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]+[^)]*\)',
+          ),
+          '',
+        )
+        .trim();
   }
 }

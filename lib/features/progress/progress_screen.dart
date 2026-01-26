@@ -63,10 +63,8 @@ class ProgressScreen extends ConsumerWidget {
                             ),
                         ],
                       ),
-                loading: () =>
-                    const Center(child: CircularProgressIndicator()),
-                error: (_, _) =>
-                    Center(child: Text(language.loadErrorLabel)),
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (_, _) => Center(child: Text(language.loadErrorLabel)),
               ),
               const SizedBox(height: 16),
               _SectionHeader(label: language.attemptHistoryLabel),
@@ -85,10 +83,8 @@ class ProgressScreen extends ConsumerWidget {
                             ),
                         ],
                       ),
-                loading: () =>
-                    const Center(child: CircularProgressIndicator()),
-                error: (_, _) =>
-                    Center(child: Text(language.loadErrorLabel)),
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (_, _) => Center(child: Text(language.loadErrorLabel)),
               ),
             ],
           );
@@ -101,10 +97,7 @@ class ProgressScreen extends ConsumerWidget {
 }
 
 class _StatCard extends StatelessWidget {
-  const _StatCard({
-    required this.label,
-    required this.value,
-  });
+  const _StatCard({required this.label, required this.value});
 
   final String label;
   final String value;
@@ -164,27 +157,22 @@ class _EmptyState extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
       alignment: Alignment.centerLeft,
-      child: Text(
-        label,
-        style: const TextStyle(color: Color(0xFF6B7390)),
-      ),
+      child: Text(label, style: const TextStyle(color: Color(0xFF6B7390))),
     );
   }
 }
 
 class _ReviewHistoryCard extends StatelessWidget {
-  const _ReviewHistoryCard({
-    required this.language,
-    required this.summary,
-  });
+  const _ReviewHistoryCard({required this.language, required this.summary});
 
   final AppLanguage language;
   final ReviewDaySummary summary;
 
   @override
   Widget build(BuildContext context) {
-    final dateLabel =
-        MaterialLocalizations.of(context).formatMediumDate(summary.day);
+    final dateLabel = MaterialLocalizations.of(
+      context,
+    ).formatMediumDate(summary.day);
     return _HistoryCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -207,22 +195,10 @@ class _ReviewHistoryCard extends StatelessWidget {
             spacing: 8,
             runSpacing: 6,
             children: [
-              _MiniChip(
-                label: language.reviewAgainLabel,
-                value: summary.again,
-              ),
-              _MiniChip(
-                label: language.reviewHardLabel,
-                value: summary.hard,
-              ),
-              _MiniChip(
-                label: language.reviewGoodLabel,
-                value: summary.good,
-              ),
-              _MiniChip(
-                label: language.reviewEasyLabel,
-                value: summary.easy,
-              ),
+              _MiniChip(label: language.reviewAgainLabel, value: summary.again),
+              _MiniChip(label: language.reviewHardLabel, value: summary.hard),
+              _MiniChip(label: language.reviewGoodLabel, value: summary.good),
+              _MiniChip(label: language.reviewEasyLabel, value: summary.easy),
             ],
           ),
         ],
@@ -232,22 +208,24 @@ class _ReviewHistoryCard extends StatelessWidget {
 }
 
 class _AttemptHistoryCard extends StatelessWidget {
-  const _AttemptHistoryCard({
-    required this.language,
-    required this.attempt,
-  });
+  const _AttemptHistoryCard({required this.language, required this.attempt});
 
   final AppLanguage language;
   final AttemptSummary attempt;
 
   @override
   Widget build(BuildContext context) {
-    final dateLabel =
-        MaterialLocalizations.of(context).formatMediumDate(attempt.startedAt);
-    final accuracy =
-        attempt.total == 0 ? 0 : (attempt.score / attempt.total * 100).round();
-    final scoreLabel =
-        language.attemptScoreLabel(attempt.score, attempt.total, accuracy);
+    final dateLabel = MaterialLocalizations.of(
+      context,
+    ).formatMediumDate(attempt.startedAt);
+    final accuracy = attempt.total == 0
+        ? 0
+        : (attempt.score / attempt.total * 100).round();
+    final scoreLabel = language.attemptScoreLabel(
+      attempt.score,
+      attempt.total,
+      accuracy,
+    );
     final modeLabel = _modeLabel(language, attempt.mode);
     final durationLabel = attempt.duration == null
         ? '-'
@@ -336,10 +314,7 @@ class _HistoryCard extends StatelessWidget {
 }
 
 class _MiniChip extends StatelessWidget {
-  const _MiniChip({
-    required this.label,
-    required this.value,
-  });
+  const _MiniChip({required this.label, required this.value});
 
   final String label;
   final int value;

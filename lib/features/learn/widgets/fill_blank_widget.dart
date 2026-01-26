@@ -63,10 +63,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                 const SizedBox(height: 8),
                 Text(
                   widget.question.targetItem.reading!,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 20, color: Colors.grey[600]),
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -95,8 +92,8 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
             filled: true,
             fillColor: widget.showResult
                 ? (widget.isCorrect
-                    ? Colors.green.withValues(alpha: 0.1)
-                    : Colors.red.withValues(alpha: 0.1))
+                      ? Colors.green.withValues(alpha: 0.1)
+                      : Colors.red.withValues(alpha: 0.1))
                 : Colors.grey.withValues(alpha: 0.1),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
@@ -137,9 +134,11 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
               });
             },
             icon: const Icon(Icons.lightbulb_outline),
-            label: Text(_showHint
-                ? widget.language.hintWithValue(widget.question.hint!)
-                : widget.language.showHintLabel),
+            label: Text(
+              _showHint
+                  ? widget.language.hintWithValue(widget.question.hint!)
+                  : widget.language.showHintLabel,
+            ),
           ),
 
         // Show correct answer if wrong
@@ -156,10 +155,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
               children: [
                 Text(
                   widget.language.correctAnswerLabel,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.green,
-                  ),
+                  style: const TextStyle(fontSize: 14, color: Colors.green),
                 ),
                 const SizedBox(height: 8),
                 Text(

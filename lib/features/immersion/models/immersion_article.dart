@@ -58,9 +58,11 @@ class ImmersionArticle {
   factory ImmersionArticle.fromJson(Map<String, dynamic> json) {
     final paragraphsRaw = json['paragraphs'] as List<dynamic>? ?? const [];
     final paragraphs = paragraphsRaw
-        .map((p) => (p as List<dynamic>)
-            .map((t) => ImmersionToken.fromJson(t as Map<String, dynamic>))
-            .toList())
+        .map(
+          (p) => (p as List<dynamic>)
+              .map((t) => ImmersionToken.fromJson(t as Map<String, dynamic>))
+              .toList(),
+        )
         .toList();
     return ImmersionArticle(
       id: json['id']?.toString() ?? '',
@@ -68,7 +70,8 @@ class ImmersionArticle {
       titleFurigana: json['titleFurigana']?.toString(),
       level: json['level']?.toString() ?? 'N5',
       source: json['source']?.toString() ?? 'Sample',
-      publishedAt: DateTime.tryParse(json['publishedAt']?.toString() ?? '') ??
+      publishedAt:
+          DateTime.tryParse(json['publishedAt']?.toString() ?? '') ??
           DateTime.now(),
       paragraphs: paragraphs,
       translation: json['translation']?.toString(),

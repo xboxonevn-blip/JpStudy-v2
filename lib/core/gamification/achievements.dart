@@ -1,12 +1,12 @@
 enum AchievementId {
-  firstLesson,      // Hoàn thành lesson đầu tiên
-  perfectStreak7,   // 7 ngày streak
-  perfectStreak30,  // 30 ngày streak
-  nightOwl,         // Học sau 10h tối (Cú đêm)
-  kanjiMaster,      // Thuộc 100 từ Kanji (Thánh Kanji)
-  perfectScore,     // Làm test không sai câu nào (Bàn tay vàng)
-  speedRunner,      // Hoàn thành match game < 20s
-  comboKing,        // Đạt combo x10 trong match game
+  firstLesson, // Hoàn thành lesson đầu tiên
+  perfectStreak7, // 7 ngày streak
+  perfectStreak30, // 30 ngày streak
+  nightOwl, // Học sau 10h tối (Cú đêm)
+  kanjiMaster, // Thuộc 100 từ Kanji (Thánh Kanji)
+  perfectScore, // Làm test không sai câu nào (Bàn tay vàng)
+  speedRunner, // Hoàn thành match game < 20s
+  comboKing, // Đạt combo x10 trong match game
 }
 
 class Achievement {

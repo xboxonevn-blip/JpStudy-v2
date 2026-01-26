@@ -44,7 +44,7 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
   @override
   Widget build(BuildContext context) {
     final parts = widget.sentenceTemplate.split('{blank}');
-    
+
     return Column(
       children: [
         // Sentence Display
@@ -68,25 +68,34 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 300),
                       margin: const EdgeInsets.symmetric(horizontal: 8),
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
-                        color: _isCorrect == null 
-                            ? AppThemeV2.neutral.withValues(alpha: 0.5) 
-                            : (_isCorrect! ? AppThemeV2.secondary.withValues(alpha: 0.2) : AppThemeV2.error.withValues(alpha: 0.2)),
+                        color: _isCorrect == null
+                            ? AppThemeV2.neutral.withValues(alpha: 0.5)
+                            : (_isCorrect!
+                                  ? AppThemeV2.secondary.withValues(alpha: 0.2)
+                                  : AppThemeV2.error.withValues(alpha: 0.2)),
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
-                          color: _isCorrect == null 
-                              ? AppThemeV2.primary 
-                              : (_isCorrect! ? AppThemeV2.secondary : AppThemeV2.error),
+                          color: _isCorrect == null
+                              ? AppThemeV2.primary
+                              : (_isCorrect!
+                                    ? AppThemeV2.secondary
+                                    : AppThemeV2.error),
                           width: 2,
                         ),
                       ),
                       child: Text(
                         _selectedOption ?? "   ?   ",
                         style: TextStyle(
-                          color: _isCorrect == null 
-                              ? AppThemeV2.primary 
-                              : (_isCorrect! ? AppThemeV2.secondary : AppThemeV2.error),
+                          color: _isCorrect == null
+                              ? AppThemeV2.primary
+                              : (_isCorrect!
+                                    ? AppThemeV2.secondary
+                                    : AppThemeV2.error),
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
@@ -105,29 +114,45 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
           children: widget.options.asMap().entries.map((entry) {
             final option = entry.value;
             final isSelected = _selectedOption == option;
-            
+
             ClayButtonStyle style = ClayButtonStyle.neutral;
             if (isSelected) {
-               style = ClayButtonStyle.primary;
-               if (_isCorrect != null) {
-                 style = _isCorrect! ? ClayButtonStyle.secondary : ClayButtonStyle.tertiary; // Use Tertiary (Orange) for error instead of Red if unavailable, or just Primary
-                 // Actually passing custom colors to ClayButton isn't supported yet, but we have secondary/tertiary.
-                 if (!_isCorrect!) style = ClayButtonStyle.tertiary; // Use Orange for error/warning
-               }
+              style = ClayButtonStyle.primary;
+              if (_isCorrect != null) {
+                style = _isCorrect!
+                    ? ClayButtonStyle.secondary
+                    : ClayButtonStyle
+                          .tertiary; // Use Tertiary (Orange) for error instead of Red if unavailable, or just Primary
+                // Actually passing custom colors to ClayButton isn't supported yet, but we have secondary/tertiary.
+                if (!_isCorrect!) {
+                  style =
+                      ClayButtonStyle.tertiary; // Use Orange for error/warning
+                }
+              }
             }
 
             return Padding(
               padding: const EdgeInsets.only(bottom: 12),
-              child: SizedBox(
-                width: double.infinity,
-                child: ClayButton(
-                  label: option,
-                  onPressed: () => _onOptionSelected(option),
-                  style: style,
-                  icon: isSelected ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-                  isExpanded: true,
-                ),
-              ).animate().slideX(begin: 0.1, duration: 300.ms, delay: 50.ms * entry.key).fadeIn(),
+              child:
+                  SizedBox(
+                        width: double.infinity,
+                        child: ClayButton(
+                          label: option,
+                          onPressed: () => _onOptionSelected(option),
+                          style: style,
+                          icon: isSelected
+                              ? Icons.radio_button_checked
+                              : Icons.radio_button_unchecked,
+                          isExpanded: true,
+                        ),
+                      )
+                      .animate()
+                      .slideX(
+                        begin: 0.1,
+                        duration: 300.ms,
+                        delay: 50.ms * entry.key,
+                      )
+                      .fadeIn(),
             );
           }).toList(),
         ),
@@ -137,7 +162,9 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
           width: double.infinity,
           child: ClayButton(
             label: 'CHECK ANSWER',
-            onPressed: _selectedOption == null || _isCorrect != null ? null : _check,
+            onPressed: _selectedOption == null || _isCorrect != null
+                ? null
+                : _check,
             isExpanded: true,
             style: ClayButtonStyle.secondary, // Green for action
           ),

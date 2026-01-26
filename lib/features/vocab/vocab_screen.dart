@@ -38,7 +38,9 @@ class _VocabScreenState extends ConsumerState<VocabScreen> {
             Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: IconButton(
-                icon: Icon(_isFlashcardMode ? Icons.list_rounded : Icons.style_rounded),
+                icon: Icon(
+                  _isFlashcardMode ? Icons.list_rounded : Icons.style_rounded,
+                ),
                 tooltip: _isFlashcardMode
                     ? 'Switch to List View'
                     : 'Switch to Flashcards',
@@ -84,15 +86,19 @@ class _VocabContent extends ConsumerWidget {
           return Center(child: Text(language.vocabScreenBody));
         }
         // Map database entities (VocabData) to domain models (VocabItem)
-        final items = dataItems.map((e) => VocabItem(
-          id: e.id,
-          term: e.term,
-          reading: e.reading,
-          meaning: e.meaning,
-          meaningEn: e.meaningEn,
-          kanjiMeaning: null,
-          level: e.level,
-        )).toList();
+        final items = dataItems
+            .map(
+              (e) => VocabItem(
+                id: e.id,
+                term: e.term,
+                reading: e.reading,
+                meaning: e.meaning,
+                meaningEn: e.meaningEn,
+                kanjiMeaning: null,
+                level: e.level,
+              ),
+            )
+            .toList();
 
         return Column(
           children: [
@@ -100,7 +106,8 @@ class _VocabContent extends ConsumerWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: ClayButton(
-                  label: '${language.reviewAction} (${dueTermsAsync.value!.length})',
+                  label:
+                      '${language.reviewAction} (${dueTermsAsync.value!.length})',
                   icon: Icons.rate_review,
                   style: ClayButtonStyle.primary,
                   isExpanded: true,
@@ -147,17 +154,22 @@ class _ListView extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: 12),
           child: ClayCard(
-           color: Colors.white,
-           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            color: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             child: ListTile(
               contentPadding: EdgeInsets.zero,
               title: Text(
                 item.term,
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               subtitle: Text(
                 item.reading == null || item.reading!.isEmpty
-                    ? (language == AppLanguage.en ? (item.meaningEn ?? item.meaning) : item.meaning)
+                    ? (language == AppLanguage.en
+                          ? (item.meaningEn ?? item.meaning)
+                          : item.meaning)
                     : '${item.reading} • ${language == AppLanguage.en ? (item.meaningEn ?? item.meaning) : item.meaning}',
                 style: TextStyle(color: AppThemeV2.textSub),
               ),
@@ -198,7 +210,7 @@ class _FlashcardViewState extends ConsumerState<_FlashcardView> {
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
     final progress = (_currentIndex + 1) / widget.items.length;
-    
+
     return Column(
       children: [
         const SizedBox(height: 12),
@@ -271,4 +283,3 @@ class _FlashcardViewState extends ConsumerState<_FlashcardView> {
     );
   }
 }
-

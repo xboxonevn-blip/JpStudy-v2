@@ -5,6 +5,7 @@ import '../../../data/daos/learn_dao.dart';
 import '../../../data/daos/achievement_dao.dart';
 import '../../../data/models/vocab_item.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
+import '../../../data/models/mistake_context.dart';
 import '../../../core/app_language.dart';
 import '../models/learn_session.dart';
 import '../models/question.dart';
@@ -77,8 +78,10 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
     if (state == null || state!.currentQuestion == null) return null;
 
     final question = state!.currentQuestion!;
-    final startTime = DateTime.now().subtract(const Duration(seconds: 5)); // Approximate
-    
+    final startTime = DateTime.now().subtract(
+      const Duration(seconds: 5),
+    ); // Approximate
+
     final isCorrect = question.checkAnswer(answer);
     final result = QuestionResult(
       question: question,
@@ -93,6 +96,13 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
       await _mistakeRepo.addMistake(
         type: 'vocab',
         itemId: question.targetItem.id,
+        context: MistakeContext(
+          prompt: question.questionText,
+          correctAnswer: question.correctAnswer,
+          userAnswer: answer,
+          source: 'learn',
+          extra: {'type': question.type.name},
+        ),
       );
     } else {
       await _mistakeRepo.markCorrect(
@@ -102,7 +112,7 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
     }
 
     state!.recordResult(result);
-    
+
     // Notify listeners
     state = state!.copyWith();
 
@@ -132,13 +142,12 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
   /// Complete the session
   Future<void> _completeSession() async {
     if (state == null) return;
-    
+
     // Update state first
     state = state!.copyWith(completedAt: DateTime.now());
-    
+
     // Save to database
     await _learnService.saveSession(state!);
-    
   }
 
   /// Reset session
@@ -150,15 +159,15 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
 /// Provider instance
 final learnSessionProvider =
     StateNotifierProvider<LearnSessionNotifier, LearnSession?>((ref) {
-  final db = ref.watch(databaseProvider);
-  final mistakeRepo = ref.watch(mistakeRepositoryProvider);
-  
-  final learnDao = LearnDao(db);
-  final achievementDao = AchievementDao(db);
-  final service = LearnSessionService(learnDao, achievementDao);
-  
-  return LearnSessionNotifier(service, mistakeRepo);
-});
+      final db = ref.watch(databaseProvider);
+      final mistakeRepo = ref.watch(mistakeRepositoryProvider);
+
+      final learnDao = LearnDao(db);
+      final achievementDao = AchievementDao(db);
+      final service = LearnSessionService(learnDao, achievementDao);
+
+      return LearnSessionNotifier(service, mistakeRepo);
+    });
 
 /// Provider for question timing
 final questionStartTimeProvider = StateProvider<DateTime?>((ref) => null);

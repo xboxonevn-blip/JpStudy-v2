@@ -11,7 +11,8 @@ class GrammarDetailScreen extends ConsumerStatefulWidget {
   const GrammarDetailScreen({super.key, required this.grammarId});
 
   @override
-  ConsumerState<GrammarDetailScreen> createState() => _GrammarDetailScreenState();
+  ConsumerState<GrammarDetailScreen> createState() =>
+      _GrammarDetailScreenState();
 }
 
 class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
@@ -56,9 +57,9 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
                 Text(
                   point.connection,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        fontFamily: 'RobotoMono',
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
+                    fontFamily: 'RobotoMono',
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
                 ),
                 const SizedBox(height: 24),
                 _buildSectionTitle('Explanation / Giải thích'),
@@ -80,13 +81,15 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
           if (data == null || data.point.isLearned) return null;
           return FloatingActionButton.extended(
             onPressed: () async {
-              await ref.read(grammarRepositoryProvider).markAsLearned(widget.grammarId);
+              await ref
+                  .read(grammarRepositoryProvider)
+                  .markAsLearned(widget.grammarId);
               // Refresh provider
               ref.invalidate(grammarDetailProvider(widget.grammarId));
               if (context.mounted) {
-                 ScaffoldMessenger.of(context).showSnackBar(
-                   const SnackBar(content: Text('Added to your review list!')),
-                 );
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Added to your review list!')),
+                );
               }
             },
             icon: const Icon(Icons.check),
@@ -124,8 +127,8 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
               child: Text(
                 point.grammarPoint,
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],
@@ -133,9 +136,9 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
         const SizedBox(height: 8),
         Text(
           _showVietnamese ? (point.meaningVi ?? point.meaning) : point.meaning,
-          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: Colors.grey[700],
-              ),
+          style: Theme.of(
+            context,
+          ).textTheme.titleLarge?.copyWith(color: Colors.grey[700]),
         ),
       ],
     );
@@ -145,22 +148,22 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
+        color: Theme.of(
+          context,
+        ).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: Theme.of(context).colorScheme.outlineVariant,
-        ),
+        border: Border.all(color: Theme.of(context).colorScheme.outlineVariant),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (!_showVietnamese || point.explanationVi == null)
             Text(point.explanation),
-          
+
           if (_showVietnamese && point.explanationVi != null) ...[
-             if (!_showVietnamese) const Divider(height: 24),
-             Text(point.explanationVi!),
-          ]
+            if (!_showVietnamese) const Divider(height: 24),
+            Text(point.explanationVi!),
+          ],
         ],
       ),
     );
@@ -188,15 +191,19 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
     return Text(
       title.toUpperCase(),
       style: Theme.of(context).textTheme.labelLarge?.copyWith(
-            color: Theme.of(context).colorScheme.tertiary,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.2,
-          ),
+        color: Theme.of(context).colorScheme.tertiary,
+        fontWeight: FontWeight.bold,
+        letterSpacing: 1.2,
+      ),
     );
   }
 }
 
-final grammarDetailProvider = FutureProvider.family<({GrammarPoint point, List<GrammarExample> examples})?, int>((ref, id) {
-  final repo = ref.watch(grammarRepositoryProvider);
-  return repo.getGrammarDetail(id);
-});
+final grammarDetailProvider =
+    FutureProvider.family<
+      ({GrammarPoint point, List<GrammarExample> examples})?,
+      int
+    >((ref, id) {
+      final repo = ref.watch(grammarRepositoryProvider);
+      return repo.getGrammarDetail(id);
+    });

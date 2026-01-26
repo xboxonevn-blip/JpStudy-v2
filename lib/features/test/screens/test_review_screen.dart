@@ -33,13 +33,13 @@ class _TestReviewScreenState extends ConsumerState<TestReviewScreen> {
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
     final entries = _buildEntries(widget.session);
-    final wrongEntries = entries.where((e) => !e.isCorrect || e.isSkipped).toList();
+    final wrongEntries = entries
+        .where((e) => !e.isCorrect || e.isSkipped)
+        .toList();
     final visibleEntries = _filter == ReviewFilter.all ? entries : wrongEntries;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(language.reviewAnswersLabel),
-      ),
+      appBar: AppBar(title: Text(language.reviewAnswersLabel)),
       body: Column(
         children: [
           Padding(
@@ -55,12 +55,14 @@ class _TestReviewScreenState extends ConsumerState<TestReviewScreen> {
                 ChoiceChip(
                   label: Text(language.reviewWrongLabel),
                   selected: _filter == ReviewFilter.wrong,
-                  onSelected: (_) => setState(() => _filter = ReviewFilter.wrong),
+                  onSelected: (_) =>
+                      setState(() => _filter = ReviewFilter.wrong),
                 ),
                 const Spacer(),
                 if (wrongEntries.isNotEmpty)
                   ElevatedButton.icon(
-                    onPressed: () => _retryWrong(context, wrongEntries, language),
+                    onPressed: () =>
+                        _retryWrong(context, wrongEntries, language),
                     icon: const Icon(Icons.refresh),
                     label: Text(language.retryWrongLabel),
                   ),
@@ -73,10 +75,7 @@ class _TestReviewScreenState extends ConsumerState<TestReviewScreen> {
               itemCount: visibleEntries.length,
               itemBuilder: (context, index) {
                 final entry = visibleEntries[index];
-                return _ReviewCard(
-                  entry: entry,
-                  language: language,
-                );
+                return _ReviewCard(entry: entry, language: language);
               },
             ),
           ),
@@ -156,10 +155,7 @@ class _ReviewCard extends StatelessWidget {
   final _ReviewEntry entry;
   final AppLanguage language;
 
-  const _ReviewCard({
-    required this.entry,
-    required this.language,
-  });
+  const _ReviewCard({required this.entry, required this.language});
 
   @override
   Widget build(BuildContext context) {

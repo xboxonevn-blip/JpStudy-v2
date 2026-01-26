@@ -42,11 +42,7 @@ class AchievementUnlockedDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(
-              Icons.stars_rounded,
-              color: Colors.white,
-              size: 60,
-            ),
+            const Icon(Icons.stars_rounded, color: Colors.white, size: 60),
             const SizedBox(height: 16),
             Text(
               'ACHIEVEMENT UNLOCKED!',
@@ -58,10 +54,7 @@ class AchievementUnlockedDialog extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            Text(
-              achievement.icon,
-              style: const TextStyle(fontSize: 64),
-            ),
+            Text(achievement.icon, style: const TextStyle(fontSize: 64)),
             const SizedBox(height: 16),
             Text(
               achievement.getTitle(languageCode),
@@ -100,17 +93,17 @@ class AchievementUnlockedDialog extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: const Color(0xFFFF8C00),
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                  vertical: 16,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
               ),
               child: const Text(
                 'Awesome!',
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 16,
-                ),
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
             ),
           ],

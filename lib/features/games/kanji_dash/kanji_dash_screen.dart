@@ -25,7 +25,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   int _score = 0;
   bool _isGameActive = false;
   bool _isGameOver = false;
-  
+
   VocabItem? _currentQuestion;
   List<String> _options = [];
   List<VocabItem> _vocabPool = [];
@@ -39,7 +39,9 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   void _startGame(List<VocabItem> vocab) {
     if (vocab.length < 4) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Need at least 4 vocabulary words to play')),
+        const SnackBar(
+          content: Text('Need at least 4 vocabulary words to play'),
+        ),
       );
       return;
     }
@@ -73,18 +75,17 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
 
     final random = Random();
     _currentQuestion = _vocabPool[random.nextInt(_vocabPool.length)];
-    
+
     // Generate 3 wrong answers
-    final wrongAnswers = _vocabPool
-        .where((v) => v.id != _currentQuestion!.id)
-        .toList()
-      ..shuffle();
-    
+    final wrongAnswers =
+        _vocabPool.where((v) => v.id != _currentQuestion!.id).toList()
+          ..shuffle();
+
     final wrongOptions = wrongAnswers.take(3).map((v) => v.meaning).toList();
-    
+
     // Mix correct answer with wrong ones
     final allOptions = [...wrongOptions, _currentQuestion!.meaning]..shuffle();
-    
+
     setState(() {
       _options = allOptions;
     });
@@ -94,7 +95,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
     if (!_isGameActive) return;
 
     final isCorrect = selectedMeaning == _currentQuestion!.meaning;
-    
+
     if (isCorrect) {
       HapticFeedback.mediumImpact();
       setState(() {
@@ -126,10 +127,12 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   @override
   Widget build(BuildContext context) {
     final level = ref.watch(studyLevelProvider);
-    
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Kanji Dash${level != null ? ' (${level.shortLabel})' : ''}'),
+        title: Text(
+          'Kanji Dash${level != null ? ' (${level.shortLabel})' : ''}',
+        ),
       ),
       body: level == null
           ? const Center(child: Text('Select a level first.'))
@@ -277,19 +280,14 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
       onPressed: () => _handleAnswer(meaning),
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(16),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       child: FittedBox(
         fit: BoxFit.scaleDown,
         child: Text(
           meaning,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-          ),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
         ),
       ),
     );
@@ -319,9 +317,9 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
           JuicyButton(
             label: 'Play Again',
             onPressed: () {
-              final vocabAsync = ref.read(vocabPreviewProvider(
-                ref.read(studyLevelProvider)!.shortLabel,
-              ));
+              final vocabAsync = ref.read(
+                vocabPreviewProvider(ref.read(studyLevelProvider)!.shortLabel),
+              );
               vocabAsync.whenData((dataItems) {
                 final language = ref.read(appLanguageProvider);
                 final items = dataItems

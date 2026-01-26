@@ -77,7 +77,8 @@ class TrueFalseWidget extends StatelessWidget {
                 icon: Icons.cancel_outlined,
                 isSelected: selectedAnswer == false,
                 isCorrect: showResult && isCorrectFalse,
-                isWrong: showResult && selectedAnswer == false && !isCorrectFalse,
+                isWrong:
+                    showResult && selectedAnswer == false && !isCorrectFalse,
                 color: Colors.red,
                 onTap: showResult ? null : () => onSelect(false),
               ),
@@ -142,7 +143,9 @@ class _AnswerButton extends StatelessWidget {
           child: Column(
             children: [
               Icon(
-                isCorrect ? Icons.check_circle : (isWrong ? Icons.cancel : icon),
+                isCorrect
+                    ? Icons.check_circle
+                    : (isWrong ? Icons.cancel : icon),
                 size: 48,
                 color: isCorrect || isSelected ? color : Colors.grey,
               ),

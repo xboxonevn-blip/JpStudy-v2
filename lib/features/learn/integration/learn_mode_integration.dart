@@ -10,6 +10,8 @@ import '../../../core/level_provider.dart';
 import '../../../core/study_level.dart';
 import '../screens/learn_config_screen.dart';
 import '../screens/learn_screen.dart';
+import '../../../core/services/session_storage_provider.dart';
+import '../../../core/services/session_storage.dart';
 
 /// Integration screen that shows config first, then navigates to learn mode
 class LearnModeIntegration extends ConsumerWidget {
@@ -48,20 +50,50 @@ class LearnModeIntegration extends ConsumerWidget {
         // Convert to VocabItem
         final vocabItems = _convertToVocabItems(terms);
 
-        return LearnConfigScreen(
-          lessonId: lessonId,
-          lessonTitle: lessonTitle,
-          maxTerms: vocabItems.length,
-          onStart: (config) {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => LearnScreen(
-                  lessonId: lessonId,
-                  lessonTitle: lessonTitle,
-                  items: vocabItems,
-                  enabledTypes: config.enabledTypes,
-                ),
-              ),
+        final storage = ref.read(sessionStorageProvider);
+        return FutureBuilder<LearnSessionSnapshot?>(
+          future: storage.loadLearnSession(lessonId),
+          builder: (context, snapshot) {
+            final resumeSnapshot = snapshot.data;
+            return LearnConfigScreen(
+              lessonId: lessonId,
+              lessonTitle: lessonTitle,
+              maxTerms: vocabItems.length,
+              resumeSnapshot: resumeSnapshot,
+              onResume: resumeSnapshot == null
+                  ? null
+                  : () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => LearnScreen(
+                            lessonId: lessonId,
+                            lessonTitle: lessonTitle,
+                            items: vocabItems,
+                            enabledTypes: resumeSnapshot.enabledTypes.isEmpty
+                                ? null
+                                : resumeSnapshot.enabledTypes,
+                            resumeSnapshot: resumeSnapshot,
+                          ),
+                        ),
+                      );
+                    },
+              onDiscardResume: resumeSnapshot == null
+                  ? null
+                  : () async {
+                      await storage.clearLearnSession(lessonId);
+                    },
+              onStart: (config) {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => LearnScreen(
+                      lessonId: lessonId,
+                      lessonTitle: lessonTitle,
+                      items: vocabItems,
+                      enabledTypes: config.enabledTypes,
+                    ),
+                  ),
+                );
+              },
             );
           },
         );

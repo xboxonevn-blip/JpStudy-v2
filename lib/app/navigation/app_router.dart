@@ -12,6 +12,7 @@ import 'package:jpstudy/features/vocab/vocab_screen.dart';
 import 'package:jpstudy/features/vocab/screens/term_review_screen.dart';
 import 'package:jpstudy/features/games/match_game/match_game_screen.dart';
 import 'package:jpstudy/features/games/match_game/lesson_match_screen.dart';
+import 'package:jpstudy/features/games/kanji_dash/kanji_dash_screen.dart';
 import 'package:jpstudy/features/learn/integration/learn_mode_integration.dart';
 import 'package:jpstudy/features/learn/models/learn_session_args.dart';
 import 'package:jpstudy/features/learn/screens/learn_screen.dart';
@@ -19,6 +20,8 @@ import 'package:jpstudy/features/learn/integration/write_mode_integration.dart';
 import 'package:jpstudy/features/test/integration/test_mode_integration.dart';
 import 'package:jpstudy/features/test/screens/test_history_screen.dart';
 import 'package:jpstudy/features/mistakes/screens/mistake_screen.dart';
+import 'package:jpstudy/features/immersion/immersion_home_screen.dart';
+import 'package:jpstudy/features/achievements/achievements_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -104,6 +107,14 @@ class AppRouter {
         path: '/match',
         builder: (context, state) => const MatchGameScreen(),
       ),
+      GoRoute(
+        path: '/kanji-dash',
+        builder: (context, state) => const KanjiDashScreen(),
+      ),
+      GoRoute(
+        path: '/immersion',
+        builder: (context, state) => const ImmersionHomeScreen(),
+      ),
       // Enhanced Learn Mode with config screen
       GoRoute(
         path: '/lesson/:id/learn-enhanced',
@@ -167,6 +178,10 @@ class AppRouter {
       GoRoute(
         path: '/mistakes',
         builder: (context, state) => const MistakeScreen(),
+      ),
+      GoRoute(
+        path: '/achievements',
+        builder: (context, state) => const AchievementsScreen(),
       ),
       GoRoute(
         path: '/learn/session',

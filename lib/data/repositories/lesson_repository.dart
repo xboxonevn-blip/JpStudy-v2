@@ -109,6 +109,11 @@ final lessonKanjiProvider =
   return repo.fetchKanji(lessonId);
 });
 
+final grammarGhostsProvider = FutureProvider<List<GrammarPointData>>((ref) async {
+  final repo = ref.watch(lessonRepositoryProvider);
+  return repo.fetchGrammarGhosts();
+});
+
 class GrammarPointData {
   const GrammarPointData({
     required this.point,
@@ -698,6 +703,78 @@ class LessonRepository {
     return result;
   }
 
+  /// Fetch grammar points that have been answered incorrectly in attempts (Ghosts)
+  /// Logic: Find unique questionIds from AttemptAnswer where isCorrect = false
+  /// and Attempt.mode contains 'grammar'.
+  Future<List<GrammarPointData>> fetchGrammarGhosts() async {
+    // Join AttemptAnswer -> Attempt to filter by mode
+    final query = _db.select(_db.attemptAnswer).join([
+      innerJoin(
+        _db.attempt,
+        _db.attempt.id.equalsExp(_db.attemptAnswer.attemptId),
+      ),
+    ]);
+
+    query.where(_db.attemptAnswer.isCorrect.not());
+    query.where(_db.attempt.mode.like('%grammar%'));
+    
+    // Get distinct question IDs (Grammar IDs)
+    final rows = await query.get();
+    final ghostIds = rows
+        .map((row) => row.readTable(_db.attemptAnswer).questionId)
+        .toSet() // Deduplicate
+        .toList();
+
+    if (ghostIds.isEmpty) {
+      return [];
+    }
+
+    // Fetch full grammar data for these IDs
+    final points = await (_db.select(_db.grammarPoints)
+          ..where((tbl) => tbl.id.isIn(ghostIds)))
+        .get();
+
+    final result = <GrammarPointData>[];
+    for (final point in points) {
+      final examples = await (_db.select(_db.grammarExamples)
+            ..where((tbl) => tbl.grammarId.equals(point.id)))
+          .get();
+      result.add(GrammarPointData(point: point, examples: examples));
+    }
+    return result;
+  }
+
+  /// Remove a grammar point from ghosts by deleting its incorrect attempt records
+  Future<void> markGrammarAsMastered(int grammarId) async {
+    await (_db.delete(_db.attemptAnswer)
+      ..where((tbl) => tbl.questionId.equals(grammarId))
+      ..where((tbl) => tbl.isCorrect.not())
+      ..where((tbl) => tbl.attemptId.isInQuery(
+        _db.selectOnly(_db.attempt)
+          ..addColumns([_db.attempt.id])
+          ..where(_db.attempt.mode.like('%grammar%'))
+      ))
+    ).go();
+  }
+
+  Future<List<GrammarPoint>> fetchRandomGrammarPoints(
+    String level,
+    int limit, {
+    List<int>? excludeIds,
+  }) async {
+    final query = _db.select(_db.grammarPoints)
+      ..where((tbl) => tbl.jlptLevel.equals(level));
+
+    if (excludeIds != null && excludeIds.isNotEmpty) {
+      query.where((tbl) => tbl.id.isNotIn(excludeIds));
+    }
+
+    query.orderBy([(t) => OrderingTerm(expression: const CustomExpression('RANDOM()'))]);
+    query.limit(limit);
+
+    return query.get();
+  }
+
   Future<void> seedGrammarIfEmpty(int lessonId, String level) async {
     // Check if grammar already exists for this lesson
     final existingPoints = await (_db.select(_db.grammarPoints)
@@ -891,6 +968,19 @@ class LessonRepository {
         );
     await _touchLesson(lessonId);
     return termId;
+  }
+
+  Future<UserLessonTermData?> findTermInLesson(
+    int lessonId,
+    String term,
+    String? reading,
+  ) {
+    final normalizedReading = (reading ?? '').trim();
+    return (_db.select(_db.userLessonTerm)
+          ..where((tbl) => tbl.lessonId.equals(lessonId))
+          ..where((tbl) => tbl.term.equals(term))
+          ..where((tbl) => tbl.reading.equals(normalizedReading)))
+        .getSingleOrNull();
   }
 
   Future<void> updateTerm(

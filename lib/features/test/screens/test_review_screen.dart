@@ -129,6 +129,7 @@ class _TestReviewScreenState extends ConsumerState<TestReviewScreen> {
               : widget.lessonTitle,
           items: items,
           config: config,
+          sessionKey: 'review_${widget.session.lessonId}',
         ),
       ),
     );

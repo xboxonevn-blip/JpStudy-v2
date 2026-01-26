@@ -15,15 +15,33 @@ class TermReviewScreen extends ConsumerStatefulWidget {
   ConsumerState<TermReviewScreen> createState() => _TermReviewScreenState();
 }
 
-class _TermReviewScreenState extends ConsumerState<TermReviewScreen> {
+class _TermReviewScreenState extends ConsumerState<TermReviewScreen> with SingleTickerProviderStateMixin {
   int _currentIndex = 0;
   bool _isSessionComplete = false;
+  late AnimationController _animController;
+  late Animation<double> _scaleAnimation;
   
   // Session stats
   int _againCount = 0;
   int _hardCount = 0;
   int _goodCount = 0;
   int _easyCount = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _animController = AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    );
+    _scaleAnimation = CurvedAnimation(parent: _animController, curve: Curves.elasticOut);
+  }
+
+  @override
+  void dispose() {
+    _animController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -140,13 +158,17 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen> {
   }
 
   Widget _buildSummary(AppLanguage language, int total) {
+    _animController.forward();
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.celebration, size: 80, color: Colors.blue),
+            ScaleTransition(
+              scale: _scaleAnimation,
+              child: const Icon(Icons.celebration, size: 100, color: Colors.blue),
+            ),
             const SizedBox(height: 24),
             Text(
               'Session Complete!', // Provide localization key if available, hardcoded fallback

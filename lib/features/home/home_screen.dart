@@ -11,15 +11,21 @@ import 'package:jpstudy/core/notifications/notification_service.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/core/theme_provider.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/home/screens/learning_path_screen.dart';
 import 'package:jpstudy/features/home/widgets/header_bar.dart';
 import 'package:jpstudy/features/home/widgets/level_gate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:path/path.dart' as p;
 
 const _prefDailyReminder = 'notifications.daily';
 const _prefDailyReminderTime = 'notifications.daily.time';
 const _prefDailyReminderLast = 'notifications.daily.last';
+const _prefAutoBackup = 'backup.auto.enabled';
+const _prefAutoBackupTime = 'backup.auto.time';
+const _prefAutoBackupLast = 'backup.auto.last';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -30,19 +36,25 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   Timer? _inAppReminderTimer;
+  Timer? _autoBackupTimer;
   SharedPreferences? _prefs;
   TimeOfDay _reminderTime = const TimeOfDay(hour: 20, minute: 0);
   bool _reminderEnabled = false;
+  TimeOfDay _autoBackupTime = const TimeOfDay(hour: 2, minute: 0);
+  bool _autoBackupEnabled = false;
+  DateTime? _lastAutoBackup;
 
   @override
   void initState() {
     super.initState();
     _loadReminderPrefs();
+    _loadBackupPrefs();
   }
 
   @override
   void dispose() {
     _inAppReminderTimer?.cancel();
+    _autoBackupTimer?.cancel();
     super.dispose();
   }
 
@@ -139,6 +151,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             final prefs = snapshot.data!;
             final supportsNotifications =
                 NotificationService.instance.isSupported;
+            final themeMode = ref.watch(themeModeProvider);
             var reminderEnabled =
                 prefs.getBool(_prefDailyReminder) ?? false;
             if (_prefs == null) {
@@ -184,6 +197,27 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         onTap: () {
                           Navigator.of(context).pop();
                           context.push('/progress');
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.emoji_events_outlined),
+                        title: Text(language.achievementsTitle),
+                        onTap: () {
+                          Navigator.of(context).pop();
+                          context.push('/achievements');
+                        },
+                      ),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(language.darkModeLabel),
+                        subtitle: Text(language.darkModeHint),
+                        value: themeMode == ThemeMode.dark,
+                        onChanged: (value) async {
+                          await ref
+                              .read(themeModeProvider.notifier)
+                              .setThemeMode(
+                                  value ? ThemeMode.dark : ThemeMode.light);
+                          setModalState(() {});
                         },
                       ),
                       const Divider(),
@@ -259,6 +293,55 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         icon: const Icon(Icons.notifications_active_outlined),
                         label: Text(language.reminderTestLabel),
                       ),
+                      const Divider(),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(language.autoBackupLabel),
+                        subtitle: Text(language.autoBackupHint),
+                        value: _autoBackupEnabled,
+                        onChanged: (value) async {
+                          await _setAutoBackup(
+                            value,
+                            prefs: prefs,
+                            language: language,
+                          );
+                          setModalState(() {});
+                        },
+                      ),
+                      ListTile(
+                        contentPadding: EdgeInsets.zero,
+                        leading: const Icon(Icons.schedule_outlined),
+                        title: Text(language.autoBackupTimeLabel),
+                        subtitle: Text(_formatTime(_autoBackupTime, context)),
+                        onTap: _autoBackupEnabled
+                            ? () async {
+                                final picked = await showTimePicker(
+                                  context: context,
+                                  initialTime: _autoBackupTime,
+                                );
+                                if (picked == null) {
+                                  return;
+                                }
+                                _autoBackupTime = picked;
+                                await _saveBackupTime(prefs, picked);
+                                if (_autoBackupEnabled) {
+                                  _scheduleAutoBackup();
+                                }
+                                setModalState(() {});
+                              }
+                            : null,
+                      ),
+                      if (_lastAutoBackup != null)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Text(
+                            language.autoBackupLastLabel(
+                              MaterialLocalizations.of(context)
+                                  .formatMediumDate(_lastAutoBackup!),
+                            ),
+                            style: const TextStyle(color: Color(0xFF6B7390)),
+                          ),
+                        ),
                       const Divider(),
                       ListTile(
                         leading: const Icon(Icons.save_alt_outlined),
@@ -386,6 +469,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     }
   }
 
+  Future<void> _loadBackupPrefs() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (!mounted) {
+      return;
+    }
+    _prefs ??= prefs;
+    _autoBackupEnabled = prefs.getBool(_prefAutoBackup) ?? false;
+    _autoBackupTime =
+        _backupTimeFromPrefs(prefs) ?? const TimeOfDay(hour: 2, minute: 0);
+    final lastRaw = prefs.getString(_prefAutoBackupLast);
+    if (lastRaw != null) {
+      _lastAutoBackup = DateTime.tryParse(lastRaw);
+    }
+    if (_autoBackupEnabled) {
+      _scheduleAutoBackup();
+    }
+  }
+
   TimeOfDay? _reminderTimeFromPrefs(SharedPreferences prefs) {
     final stored = prefs.getString(_prefDailyReminderTime);
     if (stored == null || stored.isEmpty) {
@@ -410,6 +511,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final value = '${time.hour.toString().padLeft(2, '0')}:'
         '${time.minute.toString().padLeft(2, '0')}';
     await prefs.setString(_prefDailyReminderTime, value);
+  }
+
+  TimeOfDay? _backupTimeFromPrefs(SharedPreferences prefs) {
+    final stored = prefs.getString(_prefAutoBackupTime);
+    if (stored == null || stored.isEmpty) {
+      return null;
+    }
+    final parts = stored.split(':');
+    if (parts.length != 2) {
+      return null;
+    }
+    final hour = int.tryParse(parts[0]);
+    final minute = int.tryParse(parts[1]);
+    if (hour == null || minute == null) {
+      return null;
+    }
+    return TimeOfDay(hour: hour, minute: minute);
+  }
+
+  Future<void> _saveBackupTime(
+    SharedPreferences prefs,
+    TimeOfDay time,
+  ) async {
+    final value = '${time.hour.toString().padLeft(2, '0')}:'
+        '${time.minute.toString().padLeft(2, '0')}';
+    await prefs.setString(_prefAutoBackupTime, value);
   }
 
   Future<void> _setDailyReminder(
@@ -437,6 +564,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     }
   }
 
+  Future<void> _setAutoBackup(
+    bool enabled, {
+    required SharedPreferences prefs,
+    required AppLanguage language,
+  }) async {
+    _autoBackupEnabled = enabled;
+    await prefs.setBool(_prefAutoBackup, enabled);
+    if (enabled) {
+      await _performAutoBackup(language);
+      _scheduleAutoBackup();
+    } else {
+      _autoBackupTimer?.cancel();
+    }
+  }
+
   void _scheduleInAppReminder() {
     _inAppReminderTimer?.cancel();
     if (!_reminderEnabled) {
@@ -446,6 +588,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final next = _nextReminderTime(now, _reminderTime);
     final delay = next.difference(now);
     _inAppReminderTimer = Timer(delay, _handleInAppReminder);
+  }
+
+  void _scheduleAutoBackup() {
+    _autoBackupTimer?.cancel();
+    if (!_autoBackupEnabled) {
+      return;
+    }
+    final now = DateTime.now();
+    final next = _nextReminderTime(now, _autoBackupTime);
+    final delay = next.difference(now);
+    _autoBackupTimer = Timer(delay, () async {
+      await _performAutoBackup(ref.read(appLanguageProvider));
+      _scheduleAutoBackup();
+    });
   }
 
   DateTime _nextReminderTime(DateTime now, TimeOfDay time) {
@@ -469,6 +625,59 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _showInAppReminder(ref.read(appLanguageProvider));
     }
     _scheduleInAppReminder();
+  }
+
+  Future<void> _performAutoBackup(AppLanguage language) async {
+    final prefs = _prefs ?? await SharedPreferences.getInstance();
+    final todayKey = _dateKey(DateTime.now());
+    final lastKey = prefs.getString(_prefAutoBackupLast);
+    if (lastKey == todayKey) {
+      return;
+    }
+    try {
+      final repo = ref.read(lessonRepositoryProvider);
+      final data = await repo.exportBackup();
+      final jsonText = const JsonEncoder.withIndent('  ').convert(data);
+      final directory = await getApplicationDocumentsDirectory();
+      final backupDir = Directory(p.join(directory.path, 'backups'));
+      if (!backupDir.existsSync()) {
+        backupDir.createSync(recursive: true);
+      }
+      final timestamp = DateTime.now();
+      final fileName =
+          'jpstudy_auto_backup_${timestamp.toIso8601String().replaceAll(':', '-')}.json';
+      final file = File(p.join(backupDir.path, fileName));
+      await file.writeAsString(jsonText, flush: true);
+      await prefs.setString(_prefAutoBackupLast, todayKey);
+      _lastAutoBackup = timestamp;
+      await _cleanupOldBackups(backupDir, keep: 7);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(language.autoBackupSuccessLabel)),
+        );
+      }
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(language.autoBackupErrorLabel)),
+        );
+      }
+    }
+  }
+
+  Future<void> _cleanupOldBackups(Directory backupDir, {int keep = 7}) async {
+    final files = backupDir
+        .listSync()
+        .whereType<File>()
+        .where((f) => f.path.endsWith('.json'))
+        .toList()
+      ..sort((a, b) => b.lastModifiedSync().compareTo(a.lastModifiedSync()));
+    if (files.length <= keep) return;
+    for (final file in files.sublist(keep)) {
+      try {
+        await file.delete();
+      } catch (_) {}
+    }
   }
 
   String _dateKey(DateTime time) {
@@ -554,4 +763,3 @@ class _LanguageCard extends StatelessWidget {
     );
   }
 }
-

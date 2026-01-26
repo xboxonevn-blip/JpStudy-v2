@@ -28,7 +28,7 @@ Revamp Flashcard UI to match Quizlet style (Navigation buttons, no swipe) and fi
     - File: `lib/data/repositories/lesson_repository.dart`
     - Action: Create `initializeSession(lessonId)`: Fetch all terms -> Insert into `user_lesson_progress` (or equivalent) with initial SRS state (New).
     - Verify: Database table populated after click.
-- [ ] 6. **Fix Review Screen Empty State:**
+- [x] 6. **Fix Review Screen Empty State:**
     - File: `lib/features/vocab/screens/term_review_screen.dart`
     - Action: If empty, show improved message linking back to Lesson Detail.
     - Verify: Helpful message displayed.
@@ -49,4 +49,4 @@ Revamp Flashcard UI to match Quizlet style (Navigation buttons, no swipe) and fi
 - [x] "Start Learning" successfully populates Review Queue.
 - [x] Lesson Detail Flashcard has Shuffle/Auto-Play/Prev/Next.
 - [x] Lesson Detail Swipe is removed.
-- [ ] Review screen works correctly after "Start Learning".
+- [x] Review screen works correctly after "Start Learning".

@@ -19,12 +19,16 @@ import '../models/test_config.dart';
 import '../models/test_session.dart';
 import '../providers/test_providers.dart';
 import 'test_results_screen.dart';
+import '../../../core/services/session_storage_provider.dart';
+import '../../../core/services/session_storage.dart';
 
 class TestScreen extends ConsumerStatefulWidget {
   final List<VocabItem> items;
   final int lessonId;
   final String lessonTitle;
   final TestConfig config;
+  final String sessionKey;
+  final TestSessionSnapshot? resumeSnapshot;
 
   const TestScreen({
     super.key,
@@ -32,6 +36,8 @@ class TestScreen extends ConsumerStatefulWidget {
     required this.lessonId,
     required this.lessonTitle,
     required this.config,
+    required this.sessionKey,
+    this.resumeSnapshot,
   });
 
   @override
@@ -58,12 +64,17 @@ class _TestScreenState extends ConsumerState<TestScreen> {
   @override
   void initState() {
     super.initState();
-    _startTest();
+    if (widget.resumeSnapshot != null) {
+      _restoreSession(widget.resumeSnapshot!);
+    } else {
+      _startTest();
+    }
   }
 
   @override
   void dispose() {
     _timer?.cancel();
+    _persistSession();
     super.dispose();
   }
 
@@ -103,6 +114,42 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     if (widget.config.timeLimitMinutes != null) {
       _secondsRemaining = widget.config.timeLimitMinutes! * 60;
       _startTimer();
+    }
+    _persistSession();
+  }
+
+  void _restoreSession(TestSessionSnapshot snapshot) {
+    final session = snapshot.buildSession(widget.items);
+    setState(() {
+      _session = session;
+      _adaptiveAdded = snapshot.adaptiveAdded;
+      _adaptiveMaxExtra = snapshot.adaptiveMaxExtra > 0
+          ? snapshot.adaptiveMaxExtra
+          : (widget.config.questionCount * 0.3).floor().clamp(0, 20);
+      _adaptiveRepeatCount
+        ..clear()
+        ..addAll(snapshot.adaptiveRepeatCount);
+      _adaptiveCorrectStreak
+        ..clear()
+        ..addAll(snapshot.adaptiveCorrectStreak);
+      _adaptiveCompleted
+        ..clear()
+        ..addAll(snapshot.adaptiveCompleted);
+      _usedTypesByItem
+        ..clear()
+        ..addAll(snapshot.usedTypesByItem);
+      _resetQuestionState(_session.currentQuestionIndex);
+    });
+
+    if (widget.config.timeLimitMinutes != null) {
+      final totalSeconds = widget.config.timeLimitMinutes! * 60;
+      final elapsed = DateTime.now().difference(snapshot.startedAt).inSeconds;
+      _secondsRemaining = (totalSeconds - elapsed).clamp(0, totalSeconds);
+      if (_secondsRemaining > 0) {
+        _startTimer();
+      } else {
+        WidgetsBinding.instance.addPostFrameCallback((_) => _submitTest());
+      }
     }
   }
 
@@ -156,6 +203,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
               setState(() {
                 _session.toggleFlag(_session.currentQuestionIndex);
               });
+              _persistSession();
             },
             tooltip: language.flagForReviewLabel,
           ),
@@ -389,6 +437,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     if (widget.config.showCorrectAfterWrong) {
       // Audio removed
     }
+    _persistSession();
   }
 
   void _handleTrueFalseSelect(bool answer) {
@@ -403,6 +452,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     if (widget.config.showCorrectAfterWrong) {
       // Audio removed
     }
+    _persistSession();
   }
 
   void _handleFillBlankSubmit(String answer) {
@@ -416,6 +466,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     if (widget.config.showCorrectAfterWrong) {
       // Audio removed
     }
+    _persistSession();
   }
 
   void _maybeQueueAdaptiveQuestion(Question question, bool isCorrect) {
@@ -469,6 +520,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       _session.currentQuestionIndex = index;
       _resetQuestionState(index);
     });
+    _persistSession();
   }
 
   void _previousQuestion() {
@@ -477,6 +529,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         _session.currentQuestionIndex--;
         _resetQuestionState(_session.currentQuestionIndex);
       });
+      _persistSession();
     }
   }
 
@@ -486,6 +539,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         _session.currentQuestionIndex++;
         _resetQuestionState(_session.currentQuestionIndex);
       });
+      _persistSession();
     }
   }
 
@@ -556,6 +610,8 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       xpDelta: _session.xpEarned,
     );
 
+    await _clearSavedSession();
+
     // Audio removed
 
     if (!mounted) return;
@@ -568,5 +624,34 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         ),
       ),
     );
+  }
+
+  Future<void> _persistSession() async {
+    final storage = ref.read(sessionStorageProvider);
+    await storage.saveTestSession(
+      snapshot: TestSessionSnapshot(
+        sessionKey: widget.sessionKey,
+        sessionId: _session.sessionId,
+        lessonId: _session.lessonId,
+        startedAt: _session.startedAt,
+        currentQuestionIndex: _session.currentQuestionIndex,
+        questions: _session.questions,
+        answers: _session.answers,
+        flaggedQuestions: _session.flaggedQuestions,
+        config: widget.config,
+        adaptiveAdded: _adaptiveAdded,
+        adaptiveMaxExtra: _adaptiveMaxExtra,
+        usedTypesByItem: _usedTypesByItem,
+        adaptiveRepeatCount: _adaptiveRepeatCount,
+        adaptiveCorrectStreak: _adaptiveCorrectStreak,
+        adaptiveCompleted: _adaptiveCompleted,
+        lastSavedAt: DateTime.now(),
+      ),
+    );
+  }
+
+  Future<void> _clearSavedSession() async {
+    final storage = ref.read(sessionStorageProvider);
+    await storage.clearTestSession(widget.sessionKey);
   }
 }

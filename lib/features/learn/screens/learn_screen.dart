@@ -12,12 +12,15 @@ import '../widgets/fill_blank_widget.dart';
 import '../widgets/multiple_choice_widget.dart';
 import '../widgets/true_false_widget.dart';
 import 'learn_summary_screen.dart';
+import '../../../core/services/session_storage_provider.dart';
+import '../../../core/services/session_storage.dart';
 
 class LearnScreen extends ConsumerStatefulWidget {
   final List<VocabItem> items;
   final int lessonId;
   final String lessonTitle;
   final List<QuestionType>? enabledTypes;
+  final LearnSessionSnapshot? resumeSnapshot;
 
   const LearnScreen({
     super.key,
@@ -25,6 +28,7 @@ class LearnScreen extends ConsumerStatefulWidget {
     required this.lessonId,
     required this.lessonTitle,
     this.enabledTypes,
+    this.resumeSnapshot,
   });
 
   @override
@@ -42,7 +46,30 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
   @override
   void initState() {
     super.initState();
-    _startSession();
+    if (widget.resumeSnapshot != null) {
+      _restoreSession(widget.resumeSnapshot!);
+    } else {
+      _startSession();
+    }
+  }
+
+  void _restoreSession(LearnSessionSnapshot snapshot) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final session = snapshot.buildSession(widget.items);
+      ref.read(learnSessionProvider.notifier).restoreSession(session);
+      setState(() {
+        _contextHintsShown
+          ..clear()
+          ..addAll(snapshot.contextHintsShown);
+        _contextHintsRequeued
+          ..clear()
+          ..addAll(snapshot.contextHintsRequeued);
+        _selectedAnswer = null;
+        _selectedTrueFalse = null;
+        _showResult = false;
+        _isCorrect = false;
+      });
+    });
   }
 
   void _startSession() {
@@ -62,6 +89,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
               language: language,
             );
       }
+      _persistSession();
     });
   }
 
@@ -79,6 +107,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
     final question = session.currentQuestion;
 
     if (question == null || session.isComplete) {
+      _clearSavedSession();
       // Navigate to summary
       WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.of(context).pushReplacement(
@@ -336,6 +365,7 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
         _showResult = true;
         _isCorrect = result.isCorrect;
       });
+      await _persistSession();
     }
   }
 
@@ -348,5 +378,40 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
       _showResult = false;
       _isCorrect = false;
     });
+    _persistSession();
+  }
+
+  Future<void> _persistSession() async {
+    final session = ref.read(learnSessionProvider);
+    if (session == null || session.isComplete) return;
+    final enabledTypes = widget.enabledTypes ??
+        session.questions.map((q) => q.type).toSet().toList();
+    final storage = ref.read(sessionStorageProvider);
+    await storage.saveLearnSession(
+      snapshot: LearnSessionSnapshot(
+        lessonId: session.lessonId,
+        sessionId: session.sessionId,
+        startedAt: session.startedAt,
+        currentRound: session.currentRound,
+        currentQuestionIndex: session.currentQuestionIndex,
+        questions: session.questions,
+        results: session.results,
+        enabledTypes: enabledTypes,
+        contextHintsShown: _contextHintsShown,
+        contextHintsRequeued: _contextHintsRequeued,
+        lastSavedAt: DateTime.now(),
+      ),
+    );
+  }
+
+  Future<void> _clearSavedSession() async {
+    final storage = ref.read(sessionStorageProvider);
+    await storage.clearLearnSession(widget.lessonId);
+  }
+
+  @override
+  void dispose() {
+    _persistSession();
+    super.dispose();
   }
 }

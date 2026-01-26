@@ -3487,4 +3487,538 @@ extension AppLanguageLabels on AppLanguage {
         return 'タイムアップ！';
     }
   }
+
+  // ===== New: Practice Hub =====
+  String get practiceHubTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice Hub';
+      case AppLanguage.vi:
+        return 'Trung tâm Luyện tập';
+      case AppLanguage.ja:
+        return '練習ハブ';
+    }
+  }
+
+  String get practiceHubSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Quick access to training modes.';
+      case AppLanguage.vi:
+        return 'Truy cập nhanh các chế độ luyện.';
+      case AppLanguage.ja:
+        return '練習モードへすぐアクセス。';
+    }
+  }
+
+  String get practiceMatchLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Match';
+      case AppLanguage.vi:
+        return 'Match';
+      case AppLanguage.ja:
+        return 'マッチ';
+    }
+  }
+
+  String get practiceMatchSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Speed matching cards.';
+      case AppLanguage.vi:
+        return 'Ghép thẻ tốc độ.';
+      case AppLanguage.ja:
+        return 'スピードマッチ。';
+    }
+  }
+
+  String get practiceKanjiDashLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Kanji Dash';
+      case AppLanguage.vi:
+        return 'Kanji Dash';
+      case AppLanguage.ja:
+        return '漢字ダッシュ';
+    }
+  }
+
+  String get practiceKanjiDashSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fast kanji reaction.';
+      case AppLanguage.vi:
+        return 'Phản xạ Kanji nhanh.';
+      case AppLanguage.ja:
+        return '漢字反射トレーニング。';
+    }
+  }
+
+  String get practiceExamLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Exam';
+      case AppLanguage.vi:
+        return 'Exam';
+      case AppLanguage.ja:
+        return 'クイズ';
+    }
+  }
+
+  String get practiceExamSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Quick 10-question quiz.';
+      case AppLanguage.vi:
+        return 'Quiz nhanh 10 câu.';
+      case AppLanguage.ja:
+        return '10問クイック。';
+    }
+  }
+
+  String get practiceImmersionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Immersion';
+      case AppLanguage.vi:
+        return 'Immersion';
+      case AppLanguage.ja:
+        return 'イマージョン';
+    }
+  }
+
+  String get practiceImmersionSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Read & save new words.';
+      case AppLanguage.vi:
+        return 'Đọc & lưu từ mới.';
+      case AppLanguage.ja:
+        return '読む＆保存。';
+    }
+  }
+
+  String get practiceMistakesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mistakes';
+      case AppLanguage.vi:
+        return 'Mistakes';
+      case AppLanguage.ja:
+        return 'ミス修正';
+    }
+  }
+
+  String get practiceMistakesSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fix weak points.';
+      case AppLanguage.vi:
+        return 'Sửa lỗi yếu.';
+      case AppLanguage.ja:
+        return '弱点を修正。';
+    }
+  }
+
+  // ===== New: Resume / Session =====
+  String get resumeSessionTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Resume last session';
+      case AppLanguage.vi:
+        return 'Tiếp tục phiên trước';
+      case AppLanguage.ja:
+        return '前回の続き';
+    }
+  }
+
+  String resumeSessionSubtitle(int progress, String lastSaved) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Progress $progress% • Saved $lastSaved';
+      case AppLanguage.vi:
+        return 'Tiến độ $progress% • Lưu $lastSaved';
+      case AppLanguage.ja:
+        return '進捗 $progress% • 保存 $lastSaved';
+    }
+  }
+
+  String get resumeButtonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Resume';
+      case AppLanguage.vi:
+        return 'Tiếp tục';
+      case AppLanguage.ja:
+        return '再開';
+    }
+  }
+
+  String get discardButtonLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Discard';
+      case AppLanguage.vi:
+        return 'Bỏ';
+      case AppLanguage.ja:
+        return '破棄';
+    }
+  }
+
+  // ===== New: Settings =====
+  String get darkModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Dark mode';
+      case AppLanguage.vi:
+        return 'Chế độ tối';
+      case AppLanguage.ja:
+        return 'ダークモード';
+    }
+  }
+
+  String get darkModeHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Use dark theme for night.';
+      case AppLanguage.vi:
+        return 'Dùng giao diện tối ban đêm.';
+      case AppLanguage.ja:
+        return '夜間に暗いテーマ。';
+    }
+  }
+
+  String get autoBackupLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Auto backup';
+      case AppLanguage.vi:
+        return 'Tự động sao lưu';
+      case AppLanguage.ja:
+        return '自動バックアップ';
+    }
+  }
+
+  String get autoBackupHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Save a local backup daily.';
+      case AppLanguage.vi:
+        return 'Sao lưu cục bộ mỗi ngày.';
+      case AppLanguage.ja:
+        return '毎日ローカルに保存。';
+    }
+  }
+
+  String get autoBackupTimeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Backup time';
+      case AppLanguage.vi:
+        return 'Giờ sao lưu';
+      case AppLanguage.ja:
+        return 'バックアップ時間';
+    }
+  }
+
+  String autoBackupLastLabel(String date) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Last backup: $date';
+      case AppLanguage.vi:
+        return 'Sao lưu gần nhất: $date';
+      case AppLanguage.ja:
+        return '最終バックアップ: $date';
+    }
+  }
+
+  String get autoBackupSuccessLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Auto backup completed.';
+      case AppLanguage.vi:
+        return 'Đã sao lưu tự động.';
+      case AppLanguage.ja:
+        return '自動バックアップ完了。';
+    }
+  }
+
+  String get autoBackupErrorLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Auto backup failed.';
+      case AppLanguage.vi:
+        return 'Sao lưu tự động thất bại.';
+      case AppLanguage.ja:
+        return '自動バックアップ失敗。';
+    }
+  }
+
+  // ===== New: Achievements =====
+  String get achievementsTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Achievements';
+      case AppLanguage.vi:
+        return 'Thành tích';
+      case AppLanguage.ja:
+        return '実績';
+    }
+  }
+
+  String get achievementsEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No achievements yet.';
+      case AppLanguage.vi:
+        return 'Chưa có thành tích.';
+      case AppLanguage.ja:
+        return '実績がありません。';
+    }
+  }
+
+  String get achievementsUnlockedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Unlocked';
+      case AppLanguage.vi:
+        return 'Đã mở khóa';
+      case AppLanguage.ja:
+        return '解除済み';
+    }
+  }
+
+  String get achievementsLockedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Locked';
+      case AppLanguage.vi:
+        return 'Chưa mở khóa';
+      case AppLanguage.ja:
+        return '未解除';
+    }
+  }
+
+  String achievementsUnlockedAtLabel(String date) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Unlocked: $date';
+      case AppLanguage.vi:
+        return 'Mở khóa: $date';
+      case AppLanguage.ja:
+        return '解除日: $date';
+    }
+  }
+
+  String get achievementUnlockedTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Achievement unlocked';
+      case AppLanguage.vi:
+        return 'Mở khóa thành tích';
+      case AppLanguage.ja:
+        return '実績解除';
+    }
+  }
+
+  String get closeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Close';
+      case AppLanguage.vi:
+        return 'Đóng';
+      case AppLanguage.ja:
+        return '閉じる';
+    }
+  }
+
+  // ===== New: Learn summary =====
+  String get learnSummaryTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Session Complete!';
+      case AppLanguage.vi:
+        return 'Hoàn thành phiên học!';
+      case AppLanguage.ja:
+        return 'セッション完了！';
+    }
+  }
+
+  String get learnPerfectLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Perfect! No weak terms!';
+      case AppLanguage.vi:
+        return 'Tuyệt vời! Không có từ yếu!';
+      case AppLanguage.ja:
+        return '完璧！弱点なし！';
+    }
+  }
+
+  String learnWeakTermsLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Terms to practice: $count';
+      case AppLanguage.vi:
+        return 'Từ cần luyện: $count';
+      case AppLanguage.ja:
+        return '要練習: $count';
+    }
+  }
+
+  String get learnWeakTermsHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review these terms to improve your mastery.';
+      case AppLanguage.vi:
+        return 'Ôn lại các từ này để cải thiện mastery.';
+      case AppLanguage.ja:
+        return 'これらを復習しましょう。';
+    }
+  }
+
+  String get practiceWeakTermsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice Weak Terms';
+      case AppLanguage.vi:
+        return 'Luyện từ yếu';
+      case AppLanguage.ja:
+        return '弱点を練習';
+    }
+  }
+
+  // ===== New: Immersion =====
+  String get immersionTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Immersion Reader';
+      case AppLanguage.vi:
+        return 'Đọc Immersion';
+      case AppLanguage.ja:
+        return '読解モード';
+    }
+  }
+
+  String get immersionSourceLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Source';
+      case AppLanguage.vi:
+        return 'Nguồn';
+      case AppLanguage.ja:
+        return 'ソース';
+    }
+  }
+
+  String get immersionSourceNhkLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'NHK Easy';
+      case AppLanguage.vi:
+        return 'NHK Easy';
+      case AppLanguage.ja:
+        return 'NHK Easy';
+    }
+  }
+
+  String get immersionSourceLocalLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Local samples';
+      case AppLanguage.vi:
+        return 'Bài mẫu';
+      case AppLanguage.ja:
+        return 'サンプル';
+    }
+  }
+
+  String get immersionRefreshLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Refresh';
+      case AppLanguage.vi:
+        return 'Làm mới';
+      case AppLanguage.ja:
+        return '更新';
+    }
+  }
+
+  String get immersionSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Read and save new words.';
+      case AppLanguage.vi:
+        return 'Đọc và lưu từ mới.';
+      case AppLanguage.ja:
+        return '読んで単語を保存。';
+    }
+  }
+
+  String get immersionEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No articles available.';
+      case AppLanguage.vi:
+        return 'Chưa có bài đọc.';
+      case AppLanguage.ja:
+        return '記事がありません。';
+    }
+  }
+
+  String get immersionFuriganaLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Furigana';
+      case AppLanguage.vi:
+        return 'Furigana';
+      case AppLanguage.ja:
+        return 'ふりがな';
+    }
+  }
+
+  String get immersionTranslateLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Translation';
+      case AppLanguage.vi:
+        return 'Dịch';
+      case AppLanguage.ja:
+        return '翻訳';
+    }
+  }
+
+  String get immersionAddSrsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Add to SRS';
+      case AppLanguage.vi:
+        return 'Thêm vào SRS';
+      case AppLanguage.ja:
+        return 'SRSに追加';
+    }
+  }
+
+  String get immersionAddedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Added to SRS.';
+      case AppLanguage.vi:
+        return 'Đã thêm vào SRS.';
+      case AppLanguage.ja:
+        return 'SRSに追加しました。';
+    }
+  }
+
+  String get immersionAlreadyAddedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Already in SRS.';
+      case AppLanguage.vi:
+        return 'Đã có trong SRS.';
+      case AppLanguage.ja:
+        return 'SRSに既にあります。';
+    }
+  }
 } // End extension

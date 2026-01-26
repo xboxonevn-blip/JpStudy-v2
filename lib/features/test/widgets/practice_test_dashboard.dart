@@ -8,6 +8,7 @@ import 'package:jpstudy/core/app_language.dart'; // Explicit import
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/test/screens/test_config_screen.dart';
 import 'package:jpstudy/features/test/screens/test_screen.dart';
+import 'package:jpstudy/core/services/session_storage_provider.dart';
 
 class PracticeTestDashboard extends ConsumerWidget {
   const PracticeTestDashboard({super.key});
@@ -106,6 +107,7 @@ class PracticeTestDashboard extends ConsumerWidget {
       // Fetch data
       final repo = ref.read(lessonRepositoryProvider);
       final allVocab = await repo.getVocabByLevel(level);
+      final sessionKey = 'mock_$level';
       
       if (!context.mounted) return;
       Navigator.pop(context); // Hide loading
@@ -118,12 +120,37 @@ class PracticeTestDashboard extends ConsumerWidget {
       }
 
       // Navigate to Config Screen
+      final storage = ref.read(sessionStorageProvider);
+      final resumeSnapshot = await storage.loadTestSession(sessionKey);
+      if (!context.mounted) return;
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => TestConfigScreen(
             lessonId: -1, // Special ID for Mock Tests
             lessonTitle: 'JLPT $level Mock Exam',
             maxQuestions: allVocab.length,
+            resumeSnapshot: resumeSnapshot,
+            onResume: resumeSnapshot == null
+                ? null
+                : () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => TestScreen(
+                          items: allVocab,
+                          lessonId: -1,
+                          lessonTitle: 'JLPT $level Mock Exam',
+                          config: resumeSnapshot.config,
+                          resumeSnapshot: resumeSnapshot,
+                          sessionKey: sessionKey,
+                        ),
+                      ),
+                    );
+                  },
+            onDiscardResume: resumeSnapshot == null
+                ? null
+                : () async {
+                    await storage.clearTestSession(sessionKey);
+                  },
             onStart: (config) {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
@@ -132,6 +159,7 @@ class PracticeTestDashboard extends ConsumerWidget {
                     lessonId: -1,
                     lessonTitle: 'JLPT $level Mock Exam',
                     config: config,
+                    sessionKey: sessionKey,
                   ),
                 ),
               );
@@ -142,6 +170,7 @@ class PracticeTestDashboard extends ConsumerWidget {
 
     } catch (e) {
       if (context.mounted) Navigator.pop(context);
+      if (!context.mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Error loading test: $e')),
       );

@@ -1,0 +1,59 @@
+{
+  "articles": [
+    {
+      "id": "sample-1",
+      "title": "今日はいい天気です",
+      "titleFurigana": "きょうは いい てんき です",
+      "level": "N5",
+      "source": "Sample",
+      "publishedAt": "2026-01-25",
+      "translation": "Hôm nay thời tiết rất đẹp.",
+      "paragraphs": [
+        [
+          {"surface": "今日", "reading": "きょう", "meaningVi": "hôm nay", "meaningEn": "today"},
+          {"surface": "は", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "天気", "reading": "てんき", "meaningVi": "thời tiết", "meaningEn": "weather"},
+          {"surface": "が", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "いい", "reading": "", "meaningVi": "tốt/đẹp", "meaningEn": "good"},
+          {"surface": "です", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "。", "reading": "", "meaningVi": "", "meaningEn": ""}
+        ],
+        [
+          {"surface": "公園", "reading": "こうえん", "meaningVi": "công viên", "meaningEn": "park"},
+          {"surface": "で", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "散歩", "reading": "さんぽ", "meaningVi": "đi dạo", "meaningEn": "walk"},
+          {"surface": "を", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "します", "reading": "", "meaningVi": "làm/đi", "meaningEn": "do"},
+          {"surface": "。", "reading": "", "meaningVi": "", "meaningEn": ""}
+        ]
+      ]
+    },
+    {
+      "id": "sample-2",
+      "title": "スーパーで買い物",
+      "titleFurigana": "スーパー で かいもの",
+      "level": "N5",
+      "source": "Sample",
+      "publishedAt": "2026-01-20",
+      "translation": "Tôi đi mua sắm ở siêu thị.",
+      "paragraphs": [
+        [
+          {"surface": "スーパー", "reading": "", "meaningVi": "siêu thị", "meaningEn": "supermarket"},
+          {"surface": "で", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "野菜", "reading": "やさい", "meaningVi": "rau", "meaningEn": "vegetables"},
+          {"surface": "と", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "果物", "reading": "くだもの", "meaningVi": "trái cây", "meaningEn": "fruit"},
+          {"surface": "を", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "買いました", "reading": "かいました", "meaningVi": "đã mua", "meaningEn": "bought"},
+          {"surface": "。", "reading": "", "meaningVi": "", "meaningEn": ""}
+        ],
+        [
+          {"surface": "とても", "reading": "", "meaningVi": "rất", "meaningEn": "very"},
+          {"surface": "新鮮", "reading": "しんせん", "meaningVi": "tươi", "meaningEn": "fresh"},
+          {"surface": "でした", "reading": "", "meaningVi": "", "meaningEn": ""},
+          {"surface": "。", "reading": "", "meaningVi": "", "meaningEn": ""}
+        ]
+      ]
+    }
+  ]
+}

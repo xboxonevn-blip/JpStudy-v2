@@ -10,6 +10,8 @@ import '../../../core/level_provider.dart';
 import '../../../core/study_level.dart';
 import '../screens/test_config_screen.dart';
 import '../screens/test_screen.dart';
+import '../../../core/services/session_storage_provider.dart';
+import '../../../core/services/session_storage.dart';
 
 /// Integration screen that shows config first, then navigates to test mode
 class TestModeIntegration extends ConsumerWidget {
@@ -26,6 +28,9 @@ class TestModeIntegration extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider) ?? StudyLevel.n5;
+    final safeTitle =
+        lessonTitle.replaceAll(RegExp(r'[^a-zA-Z0-9]+'), '_');
+    final sessionKey = 'lesson_${lessonId}_$safeTitle';
     final termsAsync = ref.watch(
       lessonTermsProvider(
         LessonTermsArgs(lessonId, level.shortLabel, lessonTitle),
@@ -48,20 +53,50 @@ class TestModeIntegration extends ConsumerWidget {
         // Convert to VocabItem
         final vocabItems = _convertToVocabItems(terms);
 
-        return TestConfigScreen(
-          lessonId: lessonId,
-          lessonTitle: lessonTitle,
-          maxQuestions: vocabItems.length,
-          onStart: (config) {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => TestScreen(
-                  lessonId: lessonId,
-                  lessonTitle: lessonTitle,
-                  items: vocabItems,
-                  config: config,
-                ),
-              ),
+        final storage = ref.read(sessionStorageProvider);
+        return FutureBuilder<TestSessionSnapshot?>(
+          future: storage.loadTestSession(sessionKey),
+          builder: (context, snapshot) {
+            final resumeSnapshot = snapshot.data;
+            return TestConfigScreen(
+              lessonId: lessonId,
+              lessonTitle: lessonTitle,
+              maxQuestions: vocabItems.length,
+              resumeSnapshot: resumeSnapshot,
+              onResume: resumeSnapshot == null
+                  ? null
+                  : () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => TestScreen(
+                            lessonId: lessonId,
+                            lessonTitle: lessonTitle,
+                            items: vocabItems,
+                            config: resumeSnapshot.config,
+                            resumeSnapshot: resumeSnapshot,
+                            sessionKey: sessionKey,
+                          ),
+                        ),
+                      );
+                    },
+              onDiscardResume: resumeSnapshot == null
+                  ? null
+                  : () async {
+                      await storage.clearTestSession(sessionKey);
+                    },
+              onStart: (config) {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => TestScreen(
+                      lessonId: lessonId,
+                      lessonTitle: lessonTitle,
+                      items: vocabItems,
+                      config: config,
+                      sessionKey: sessionKey,
+                    ),
+                  ),
+                );
+              },
             );
           },
         );

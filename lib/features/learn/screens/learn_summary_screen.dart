@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/core/services/session_storage_provider.dart';
+import 'package:jpstudy/data/daos/achievement_dao.dart';
+import 'package:jpstudy/data/daos/learn_dao.dart';
+import 'package:jpstudy/data/db/database_provider.dart';
+import '../models/achievement.dart';
 import '../models/learn_session.dart';
+import '../services/learn_session_service.dart';
 
-class LearnSummaryScreen extends StatelessWidget {
+class LearnSummaryScreen extends ConsumerStatefulWidget {
   final LearnSession session;
 
   const LearnSummaryScreen({
@@ -11,12 +19,78 @@ class LearnSummaryScreen extends StatelessWidget {
   });
 
   @override
+  ConsumerState<LearnSummaryScreen> createState() =>
+      _LearnSummaryScreenState();
+}
+
+class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
+  LearnSession get session => widget.session;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _showPendingAchievements();
+      _clearSavedSession();
+    });
+  }
+
+  Future<void> _showPendingAchievements() async {
+    final db = ref.read(databaseProvider);
+    final service = LearnSessionService(LearnDao(db), AchievementDao(db));
+    final achievements = await service.getPendingAchievements();
+    if (!mounted || achievements.isEmpty) return;
+
+    final language = ref.read(appLanguageProvider);
+    for (final achievement in achievements) {
+      if (!mounted) return;
+      await showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => AlertDialog(
+          title: Text(language.achievementUnlockedTitle),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                achievement.type.emoji,
+                style: const TextStyle(fontSize: 48),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                achievement.type.title,
+                style: const TextStyle(fontWeight: FontWeight.w700),
+              ),
+              const SizedBox(height: 6),
+              Text(achievement.description, textAlign: TextAlign.center),
+              const SizedBox(height: 12),
+              Text('+${achievement.bonusXP} XP'),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(language.closeLabel),
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  Future<void> _clearSavedSession() async {
+    final storage = ref.read(sessionStorageProvider);
+    await storage.clearLearnSession(session.lessonId);
+  }
+
+  @override
   Widget build(BuildContext context) {
     final accuracyPercent = (session.accuracy * 100).toInt();
+    final language = ref.watch(appLanguageProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Session Complete! 🎉'),
+        title: Text(language.learnSummaryTitle),
         automaticallyImplyLeading: false,
       ),
       body: SafeArea(
@@ -27,27 +101,27 @@ class LearnSummaryScreen extends StatelessWidget {
               const SizedBox(height: 20),
 
               // Accuracy circle
-              _buildAccuracyCircle(context, accuracyPercent),
+              _buildAccuracyCircle(context, accuracyPercent, language),
 
               const SizedBox(height: 40),
 
               // Stats grid
-              _buildStatsGrid(context),
+              _buildStatsGrid(context, language),
 
               const SizedBox(height: 40),
 
               // XP Card
-              _buildXPCard(context),
+              _buildXPCard(context, language),
 
               const SizedBox(height: 40),
 
               // Performance breakdown
-              _buildPerformanceBreakdown(context),
+              _buildPerformanceBreakdown(context, language),
 
               const SizedBox(height: 40),
 
               // Action buttons
-              _buildActionButtons(context),
+              _buildActionButtons(context, language),
             ],
           ),
         ),
@@ -55,7 +129,11 @@ class LearnSummaryScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildAccuracyCircle(BuildContext context, int accuracy) {
+  Widget _buildAccuracyCircle(
+    BuildContext context,
+    int accuracy,
+    AppLanguage language,
+  ) {
     final color = _getAccuracyColor(accuracy);
 
     return Container(
@@ -88,9 +166,9 @@ class LearnSummaryScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const Text(
-              'Accuracy',
-              style: TextStyle(
+            Text(
+              language.progressAccuracyLabel,
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
@@ -102,14 +180,14 @@ class LearnSummaryScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildStatsGrid(BuildContext context) {
+  Widget _buildStatsGrid(BuildContext context, AppLanguage language) {
     return Row(
       children: [
         Expanded(
           child: _StatCard(
             icon: Icons.check_circle,
             value: session.correctCount,
-            label: 'Correct',
+            label: language.correctLabel,
             color: Colors.green,
           ),
         ),
@@ -118,7 +196,7 @@ class LearnSummaryScreen extends StatelessWidget {
           child: _StatCard(
             icon: Icons.cancel,
             value: session.wrongCount,
-            label: 'Wrong',
+            label: language.incorrectLabel,
             color: Colors.red,
           ),
         ),
@@ -127,7 +205,7 @@ class LearnSummaryScreen extends StatelessWidget {
           child: _StatCard(
             icon: Icons.timer,
             value: _formatDuration(session.totalTime),
-            label: 'Time',
+            label: language.attemptDurationLabel,
             color: Colors.blue,
           ),
         ),
@@ -135,7 +213,7 @@ class LearnSummaryScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildXPCard(BuildContext context) {
+  Widget _buildXPCard(BuildContext context, AppLanguage language) {
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
@@ -171,7 +249,10 @@ class LearnSummaryScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildPerformanceBreakdown(BuildContext context) {
+  Widget _buildPerformanceBreakdown(
+    BuildContext context,
+    AppLanguage language,
+  ) {
     if (session.weakTermIds.isEmpty) {
       return Container(
         padding: const EdgeInsets.all(20),
@@ -180,14 +261,14 @@ class LearnSummaryScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: Colors.green, width: 2),
         ),
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.celebration, color: Colors.green, size: 32),
-            SizedBox(width: 12),
+            const Icon(Icons.celebration, color: Colors.green, size: 32),
+            const SizedBox(width: 12),
             Text(
-              'Perfect! No weak terms!',
-              style: TextStyle(
+              language.learnPerfectLabel,
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Colors.green,
@@ -213,7 +294,7 @@ class LearnSummaryScreen extends StatelessWidget {
               const Icon(Icons.priority_high, color: Colors.orange),
               const SizedBox(width: 8),
               Text(
-                'Terms to practice: ${session.weakTermIds.length}',
+                language.learnWeakTermsLabel(session.weakTermIds.length),
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -224,7 +305,7 @@ class LearnSummaryScreen extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Review these terms to improve your mastery.',
+            language.learnWeakTermsHint,
             style: TextStyle(
               fontSize: 14,
               color: Colors.grey[600],
@@ -235,7 +316,7 @@ class LearnSummaryScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildActionButtons(BuildContext context) {
+  Widget _buildActionButtons(BuildContext context, AppLanguage language) {
     return Column(
       children: [
         if (session.weakTermIds.isNotEmpty)
@@ -247,9 +328,9 @@ class LearnSummaryScreen extends StatelessWidget {
                 Navigator.pop(context);
               },
               icon: const Icon(Icons.replay),
-              label: const Text(
-                'Practice Weak Terms',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              label: Text(
+                language.practiceWeakTermsLabel,
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.orange,
@@ -275,9 +356,9 @@ class LearnSummaryScreen extends StatelessWidget {
                 width: 2,
               ),
             ),
-            child: const Text(
-              'Done',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            child: Text(
+              language.doneLabel,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
           ),
         ),

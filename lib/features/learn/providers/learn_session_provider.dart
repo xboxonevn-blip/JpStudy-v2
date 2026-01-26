@@ -20,6 +20,10 @@ class LearnSessionNotifier extends StateNotifier<LearnSession?> {
 
   LearnSessionNotifier(this._learnService, this._mistakeRepo) : super(null);
 
+  void restoreSession(LearnSession session) {
+    state = session;
+  }
+
   /// Start a new learn session
   void startSession({
     required int lessonId,

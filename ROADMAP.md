@@ -7,7 +7,7 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 *   **🧠 Logic Anki/Quizlet:** Thuật toán SRS mạnh mẽ, chế độ học đa dạng. - ✅ Done
 *   **🏗️ Cấu trúc LingoDeer:** Lộ trình học bài bản (Curriculum) + Gamification. - ✅ Done
 *   **🧬 Chuyên sâu Bunpro:** Ngữ pháp Ghost Reviews. - ✅ Done
-*   **📰 Immersion (Todaii/Migii):** Đọc báo và luyện đề thực chiến. - 📅 Planned
+*   **📰 Immersion (Todaii/Migii):** MVP đọc bài mẫu + lưu từ mới. - 🧪 Basic
 
 ---
 
@@ -17,29 +17,41 @@ Xây dựng nền tảng học tiếng Nhật toàn diện nhất, kết hợp t
 | :--- | :--- | :--- | :--- |
 | **Phase 1** | **Foundation** (Anki Logic) | ✅ 100% | Done |
 | **Phase 2** | **Structure** (LingoDeer Style) | ✅ 95% | Q1 2026 |
-| **Phase 2.5** | **Visual Polish & Mnemonics** | 🚧 40% | In Progress |
-| **Phase 3** | **Data Safety & Enrichment** | 🚧 10% | Feb 2026 |
-| **Phase 4** | **Mastery & Immersion** | 📅 0% | Q2 2026 |
+| **Phase 2.5** | **Visual Polish & Mnemonics** | 🚧 60% | In Progress |
+| **Phase 3** | **Data Safety & Enrichment** | 🚧 35% | Feb 2026 |
+| **Phase 4** | **Mastery & Immersion** | 🧪 15% | Q2 2026 |
 
 ---
 
-## 🧭 Các phần chưa thấy triển khai đầy đủ (đối chiếu codebase hiện tại)
+## 🧭 Đối chiếu codebase (Reality check)
 
 Ký hiệu trạng thái: ✅ Done | 🚧 Partial | 📅 Planned | 🧪 Basic.
 
-Mục này giúp theo dõi nhanh những hạng mục vẫn **chưa có hoặc chỉ mới ở mức stub/placeholder** trong code. Các mục chi tiết vẫn giữ ở phần dưới.
+Mục này giúp đối chiếu nhanh roadmap ↔ codebase: những thứ **đã có nhưng chưa ghi**, và những thứ **còn thiếu/chưa hoàn thiện**. Các mục chi tiết vẫn giữ ở phần dưới.
 
-- **Test:** Adaptive Testing, Phân tích lỗi (đã triển khai). - ✅ Done
-- **Match:** Time Attack Blitz (đã triển khai). - ✅ Done
-- **Write (viết tay Kanji):** chưa có canvas viết tay, stroke order animation, recognition; hiện mới có write-mode dạng fill-blank. - 📅 Planned
-- **Kanji Mastery:** Radical Explorer, Jukugo Blitz, Kanji UI upgrade, Kanji Stroke Order. - 📅 Planned
-- **Visual Polish:** Particle effects, Glassmorphism overlay. - 📅 Planned
-- **Data Safety:** Auto-backup local (mới có export/import thủ công). - 🚧 Partial
-- **UX Fixes:** Auto-save state khi đang làm bài, Empty states mascot. - 📅 Planned
-- **SRS Advanced:** FSRS, Leech protection, Intra-day learning, Load balancing. - 📅 Planned
-- **Immersion:** Easy News, tap-to-lookup, quick-add SRS, furigana toggle. - 📅 Planned
-- **Mastery & Immersion:** Full/Adaptive Mock Tests, Skill analytics, Pressure simulator. - 📅 Planned
-- **Ghost Reviews (Advanced):** tự động hoá ôn lại điểm ngữ pháp sai trong ngữ cảnh đọc báo/đề. - 📅 Planned
+- **✅ Có trong code nhưng roadmap chưa ghi đủ:**
+    - **Practice Hub:** Trung tâm truy cập nhanh các mode luyện tập. - ✅ Done
+    - **Lesson Editor:** chỉnh title/desc/tags, import CSV (append/replace), chỉnh giới hạn Learn/Test/Match. - ✅ Done
+    - **Progress & History:** Progress screen (streak/XP/accuracy) + Review history + Attempt history. - ✅ Done
+    - **Daily Reminders:** nhắc học hằng ngày (notification/in-app fallback). - ✅ Done
+    - **Test Results Export/Share:** copy clipboard + share kết quả. - ✅ Done
+    - **Test Recommendations:** gợi ý lesson cần ôn dựa trên câu sai + pin lesson. - ✅ Done
+    - **Kanji Dash:** mini-game tăng tốc phản xạ. - ✅ Done (đã gắn route + Practice Hub)
+    - **Exam/Quiz Screen:** quiz nhanh 10 câu. - ✅ Done (đã link trong UI)
+
+- **🚧/📅 Còn thiếu / chưa hoàn thiện:**
+    - **Write (viết tay Kanji):** chưa có canvas viết tay, stroke order animation, recognition; hiện mới có write-mode dạng fill-blank. - 📅 Planned
+    - **Kanji Mastery:** Radical Explorer, Jukugo Blitz, Kanji UI upgrade, Kanji Stroke Order. - 📅 Planned
+    - **Visual Polish:** Particle effects (global confetti), Glassmorphism overlay (Kanji highlight). - 🚧 Partial (HeaderBar + Match particles có)
+    - **Data Safety:** Auto-backup local theo lịch. - ✅ Done
+    - **UX Fixes:** Auto-save state (Learn/Test). - ✅ Done
+    - **UX Fixes:** Empty states mascot. - 📅 Planned
+    - **SRS Advanced:** FSRS, Leech protection, Intra-day learning, Load balancing. - 📅 Planned
+    - **Dark Mode UI:** toggle trong Settings. - ✅ Done
+    - **Achievements UI:** hiển thị/unlock UI + notify. - ✅ Done
+    - **Immersion:** bài mẫu local + tap-to-lookup + quick-add SRS + furigana toggle. - 🧪 Basic
+    - **Mastery & Immersion:** Full/Adaptive Mock Tests, Skill analytics, Pressure simulator. - 🚧 Partial (Mock vocab N5/N4 đã có)
+    - **Ghost Reviews (Advanced):** tự động hoá ôn lại điểm ngữ pháp sai trong ngữ cảnh đọc báo/đề. - 📅 Planned
 
 Ghi chú: một số logic Ghost Review ngữ pháp hiện vẫn ở mức đơn giản (stub) trong code.
 
@@ -60,15 +72,16 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
 *   **Pro Max Upgrade:**
     *   **Adaptive Testing:** Tự động lặp lại các câu sai ở định dạng khác (Space Repetition trong cùng buổi test). - ✅ Done
     *   **Phân tích lỗi:** Gợi ý bài học liên quan khi user sai nhiều ở một mảng kiến thức. - ✅ Done
+    *   **Export/Share Results:** copy + share kết quả + breakdown theo dạng câu hỏi. - ✅ Done
 
 ### 3. 🧩 Match (Nối Từ) — ✅ Done
 *   **Hiện tại:** Lưới thẻ 3x3, có combo logic và ghi điểm XP. - ✅ Done
 *   **Pro Max Upgrade:**
     *   **Time Attack Blitz:** Chế độ đua tốc độ với hiệu ứng vật lý (Particle effects). - ✅ Done
 
-### 4. ✍️ Write (Viết) — 📅 Planned
-*   **Mục tiêu:** Canvas vẽ tay Kanji thực tế. - 📅 Planned
-*   **Pro Max Features:**
+### 4. ✍️ Write (Viết) — 🚧 Partial
+*   **Hiện tại:** Write-mode dạng fill-blank (typing) (MVP). - 🧪 Basic
+*   **Pro Max Upgrade (Handwriting Kanji):**
     *   **Stroke Order Animation:** Hướng dẫn nét vẽ mờ bên dưới. - 📅 Planned
     *   **Recognition Logic:** Tự động kiểm tra nét vẽ (Basic overlay comparison). - 📅 Planned
 
@@ -88,7 +101,8 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
     *   **Vocabulary SRS:** Theo dõi mức độ thuộc lòng của từng từ vựng riêng lẻ. - ✅ Done
 *   **Trải nghiệm Flashcard:**
     *   **Card Flip:** Hiệu ứng lật thẻ mượt mà cho mặt Kanji/Nghĩa. - ✅ Done
-    *   **Navigation:** Nút Previous/Next và phím tắt (Space/Arrows). - ✅ Done
+    *   **Navigation:** Nút Previous/Next và phím tắt (Space). - ✅ Done
+    *   **Keyboard Shortcuts:** ←/→ chuyển thẻ. - 📅 Planned
 
 ### ✅ Phase 2: Structure + Retention Loop (Lộ trình & Ngữ pháp) — 95% Done
 **Mục tiêu:** Tạo vòng lặp học tập có định hướng và mở rộng sang Ngữ pháp.
@@ -105,6 +119,9 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
     *   **Mini Dashboard:** Hiển thị số lượng từ Due (cần ôn) và Streak ngày học. - ✅ Done
     *   **Mistake Bank:** Tự động lưu các câu sai vào "Ngân hàng lỗi sai". - ✅ Done
     *   **Localization:** Hệ thống chuyển đổi ngôn ngữ Việt/Anh toàn diện. - ✅ Done
+    *   **Progress Screen:** thống kê & lịch sử học tập (review/attempt history). - ✅ Done
+    *   **Daily Reminder:** nhắc học hằng ngày (notification/in-app). - ✅ Done
+    *   **Lesson Editor:** chỉnh lesson + CSV import. - ✅ Done
 
 ### 🚧 Phase 2.5: Kanji Mastery & Visual Polish — 🚧 In Progress
 **Mục tiêu:** Biến Kanji thành những mảnh ghép logic thay vì hình vẽ trừu tượng.
@@ -113,21 +130,22 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
     *   **Mnemonic Stories:** Hỗ trợ câu chuyện gợi nhớ (100% N5/N4) và hiển thị trên Flashcard. - ✅ Done
     *   **Radical Explorer:** Bóc tách Kanji thành các bộ thủ thành phần để dễ nhớ. - 📅 Planned
     *   **Jukugo Blitz:** Chế độ luyện tập ghép Kanji thành từ vựng (Compound words). - 📅 Planned
+    *   **Kanji Dash (Mini-game):** tăng tốc phản xạ nghĩa/đọc. - ✅ Done (đã gắn route/menu)
 *   **Tương tác & Visual (Juicy UI):**
     *   **Claymorphism UI:** Đồng bộ giao diện mềm mại cho Dashboard & Flashcards. - ✅ Done
-    *   **Particle Effects:** Hiệu ứng bắn hạt (Confetti/Particles) khi chọn "Easy" hoặc hoàn thành chuỗi đúng (Dopamine loop). - 📅 Planned
+    *   **Particle Effects:** Hiệu ứng bắn hạt (global confetti) khi chọn "Easy"/streak. - 🚧 Partial (Match game có)
     *   **Stroke Order:** Hướng dẫn vẽ nét Kanji (Animation & Canvas tô màu). - 📅 Planned
-    *   **Glassmorphism Overlay:** Hiệu ứng làm nổi bật bộ thủ khi user chạm vào chữ Kanji. - 📅 Planned
+    *   **Glassmorphism Overlay:** Hiệu ứng làm nổi bật bộ thủ khi user chạm vào chữ Kanji. - 🚧 Partial (HeaderBar có)
 
 ### 🚧 Phase 3: Data Safety & Advanced Interaction (Next Priority)
 *   **3.1 An toàn dữ liệu:**
     *   Import/Export Database ra file (Đảm bảo học tập 10 năm không mất dữ liệu). - ✅ Done
-    *   Auto-backup local. - 📅 Planned
+    *   Auto-backup local theo lịch. - ✅ Done
 *   **3.2 Kanji Mastery:**
     *   **Kanji UI Upgrade:** Đồng bộ giao diện Kanji chuyên sâu như Flashcard. - 📅 Planned
     *   **Kanji Stroke Order:** Tích hợp bộ vẽ nét. - 📅 Planned
 *   **3.3 UI Thừa hành (UX Fixes):**
-    *   **Auto-save state:** Đang làm bài bấm thoát ra vẫn giữ được tiến độ. - 📅 Planned
+    *   **Auto-save state:** Learn/Test thoát ra vẫn giữ được tiến độ. - ✅ Done
     *   **Empty States:** Thêm Mascot cổ vũ khi hoàn thành bài học. - 📅 Planned
 *   **3.4 SRS Advanced Logic (Tối ưu Trí nhớ):**
     *   **FSRS Algorithm:** Chuyển đổi từ SM-2 sang mô hình FSRS (hiện đại như Anki mới). - 📅 Planned
@@ -139,12 +157,13 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
 **Mục tiêu:** Chuyển đổi từ "Học" sang "Dùng" và chinh phục thực chiến JLPT.
 
 *   **4.1 Immersion (Trạm đọc Thông minh - News Reader):**
-    *   **Easy News Integration:** Đọc báo NHK News Web Easy trực tiếp (Offline cache). - 📅 Planned
-    *   **Tap-to-lookup:** Chạm vào bất kỳ từ/cụm từ nào để tra nghĩa tức thì. - 📅 Planned
-    *   **Quick-add SRS:** Lưu từ mới từ bài báo vào bộ thẻ ôn tập với 1 chạm. - 📅 Planned
-    *   **Furigana Toggle:** Tự động điều chỉnh Furigana theo trình độ user. - 📅 Planned
+    *   **Easy News Integration:** Đọc báo NHK News Web Easy trực tiếp (Offline cache). - 🚧 Partial
+    *   **Tap-to-lookup:** Chạm vào bất kỳ từ/cụm từ nào để tra nghĩa tức thì. - ✅ Done (MVP)
+    *   **Quick-add SRS:** Lưu từ mới từ bài báo vào bộ thẻ ôn tập với 1 chạm. - ✅ Done (MVP)
+    *   **Furigana Toggle:** Tự động điều chỉnh Furigana theo trình độ user. - ✅ Done (MVP)
+    *   **MVP Local Articles:** bài mẫu offline từ JSON. - 🧪 Basic
 *   **4.2 Mastery (Sát thủ JLPT - Mock Exam Suite):**
-    *   **Full Mock Tests:** Bộ đề thi mô phỏng định dạng JLPT chuẩn (N5 -> N3). - 📅 Planned
+    *   **Full Mock Tests (Vocab):** Mock exam theo level (N5/N4). - 🧪 Basic
     *   **Adaptive Mock Tests:** Tự động đề xuất ôn tập lại các mảng kiến thức bị hổng sau bài thi. - 📅 Planned
     *   **Skill Analytics:** Biểu đồ phân tích kỹ năng (Đọc hiểu, Từ vựng, Ngữ pháp). - 📅 Planned
     *   **Pressure Simulator:** Chế độ thi có áp lực thời gian thực. - 📅 Planned
@@ -155,7 +174,7 @@ Dựa trên đối soát codebase, đây là kế hoạch nâng cấp 4 chế đ
 
 ## ⚡ Ưu Tiên Tiếp Theo (Next Steps)
 
-1.  🚧 **Auto-backup local:** Hoàn thiện backup tự động cho dữ liệu học. - 🚧 Partial
+1.  📰 **Immersion Integration:** Kết nối NHK Easy + cache offline. - 🚧 Partial
 2.  📚 **Rà soát N4 Vocab:** Đối soát đủ số lượng/độ phủ từ vựng N4 cho bài 26-50. - 📅 Planned
 3.  🎨 **Refactor Training UI:** Thay đổi màu sắc/điều hướng cho 4 mode (Learn/Test/Match/Write) theo tone màu Pro Max. - 📅 Planned
 

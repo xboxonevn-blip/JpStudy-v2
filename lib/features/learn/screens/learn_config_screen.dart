@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../models/question_type.dart';
+import '../../../core/services/session_storage.dart';
 
 /// Settings for a Learn Mode session
 class LearnConfig {
@@ -47,6 +48,9 @@ class LearnConfigScreen extends ConsumerStatefulWidget {
   final String lessonTitle;
   final int maxTerms;
   final Function(LearnConfig) onStart;
+  final LearnSessionSnapshot? resumeSnapshot;
+  final VoidCallback? onResume;
+  final Future<void> Function()? onDiscardResume;
 
   const LearnConfigScreen({
     super.key,
@@ -54,6 +58,9 @@ class LearnConfigScreen extends ConsumerStatefulWidget {
     required this.lessonTitle,
     required this.maxTerms,
     required this.onStart,
+    this.resumeSnapshot,
+    this.onResume,
+    this.onDiscardResume,
   });
 
   @override
@@ -62,6 +69,7 @@ class LearnConfigScreen extends ConsumerStatefulWidget {
 
 class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
   late LearnConfig _config;
+  LearnSessionSnapshot? _resumeSnapshot;
 
   @override
   void initState() {
@@ -69,6 +77,7 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
     _config = LearnConfig(
       questionCount: widget.maxTerms.clamp(10, 50),
     );
+    _resumeSnapshot = widget.resumeSnapshot;
   }
 
   @override
@@ -83,6 +92,10 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            if (_resumeSnapshot != null) ...[
+              _buildResumeCard(language),
+              const SizedBox(height: 24),
+            ],
             // Header
             _buildHeader(context, language),
             const SizedBox(height: 32),
@@ -150,6 +163,65 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
                 ),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildResumeCard(AppLanguage language) {
+    final snapshot = _resumeSnapshot!;
+    final progress = snapshot.totalQuestions == 0
+        ? 0
+        : (snapshot.answeredCount / snapshot.totalQuestions * 100).round();
+    final lastSaved = MaterialLocalizations.of(context).formatMediumDate(snapshot.lastSavedAt);
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF0F9FF),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFBAE6FD)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            language.resumeSessionTitle,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            language.resumeSessionSubtitle(progress, lastSaved),
+            style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: ElevatedButton.icon(
+                  onPressed: widget.onResume,
+                  icon: const Icon(Icons.play_arrow_rounded),
+                  label: Text(language.resumeButtonLabel),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              TextButton(
+                onPressed: () async {
+                  await widget.onDiscardResume?.call();
+                  setState(() {
+                    _resumeSnapshot = null;
+                  });
+                },
+                child: Text(language.discardButtonLabel),
+              ),
+            ],
           ),
         ],
       ),

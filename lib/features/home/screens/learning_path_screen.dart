@@ -9,6 +9,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import '../../test/widgets/practice_test_dashboard.dart';
 import '../widgets/mini_dashboard.dart';
 import '../widgets/continue_button.dart';
+import '../widgets/practice_hub.dart';
 
 class LearningPathScreen extends ConsumerWidget {
   const LearningPathScreen({super.key});
@@ -42,6 +43,8 @@ class LearningPathScreen extends ConsumerWidget {
                        const ContinueButton(),
                        const SizedBox(height: 16),
                        const PracticeTestDashboard(),
+                       const SizedBox(height: 12),
+                       const PracticeHub(),
                     ],
                   ),
                 ),

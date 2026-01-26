@@ -11,6 +11,7 @@ class TestConfigScreen extends ConsumerStatefulWidget {
   final int lessonId;
   final String lessonTitle;
   final int maxQuestions;
+  final TestConfig? initialConfig;
   final Function(TestConfig) onStart;
   final TestSessionSnapshot? resumeSnapshot;
   final VoidCallback? onResume;
@@ -21,6 +22,7 @@ class TestConfigScreen extends ConsumerStatefulWidget {
     required this.lessonId,
     required this.lessonTitle,
     required this.maxQuestions,
+    this.initialConfig,
     required this.onStart,
     this.resumeSnapshot,
     this.onResume,
@@ -38,9 +40,17 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
   @override
   void initState() {
     super.initState();
-    _config = TestConfig(
-      questionCount: widget.maxQuestions.clamp(10, 50),
-    );
+    final safeCount = widget.maxQuestions.clamp(10, 50);
+    final initial = widget.initialConfig;
+    if (initial == null) {
+      _config = TestConfig(questionCount: safeCount);
+    } else {
+      final adjustedCount = initial.questionCount.clamp(
+        10,
+        widget.maxQuestions,
+      );
+      _config = initial.copyWith(questionCount: adjustedCount);
+    }
     _resumeSnapshot = widget.resumeSnapshot;
   }
 
@@ -104,11 +114,7 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
       ),
       child: Row(
         children: [
-          const Icon(
-            Icons.quiz_rounded,
-            size: 48,
-            color: Colors.white,
-          ),
+          const Icon(Icons.quiz_rounded, size: 48, color: Colors.white),
           const SizedBox(width: 16),
           Expanded(
             child: Column(
@@ -124,10 +130,7 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
                 ),
                 Text(
                   language.testQuestionsAvailableLabel(widget.maxQuestions),
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.white70,
-                  ),
+                  style: const TextStyle(fontSize: 14, color: Colors.white70),
                 ),
               ],
             ),
@@ -148,21 +151,23 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
           children: [10, 20, 30, 50, widget.maxQuestions]
               .where((n) => n <= widget.maxQuestions)
               .toSet()
-              .map((count) => ChoiceChip(
-                    label: Text(
-                      count == widget.maxQuestions
-                          ? language.allCountLabel(count)
-                          : '$count',
-                    ),
-                    selected: _config.questionCount == count,
-                    onSelected: (selected) {
-                      if (selected) {
-                        setState(() {
-                          _config = _config.copyWith(questionCount: count);
-                        });
-                      }
-                    },
-                  ))
+              .map(
+                (count) => ChoiceChip(
+                  label: Text(
+                    count == widget.maxQuestions
+                        ? language.allCountLabel(count)
+                        : '$count',
+                  ),
+                  selected: _config.questionCount == count,
+                  onSelected: (selected) {
+                    if (selected) {
+                      setState(() {
+                        _config = _config.copyWith(questionCount: count);
+                      });
+                    }
+                  },
+                ),
+              )
               .toList(),
         ),
       ],
@@ -213,8 +218,8 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
             final label = minutes == 0
                 ? language.noTimeLimitLabel
                 : language.timeLimitMinutesLabel(minutes);
-            final isSelected = minutes == 0 
-                ? _config.timeLimitMinutes == null 
+            final isSelected = minutes == 0
+                ? _config.timeLimitMinutes == null
                 : _config.timeLimitMinutes == minutes;
             return ChoiceChip(
               label: Text(label),
@@ -285,7 +290,9 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
     final progress = snapshot.totalQuestions == 0
         ? 0
         : (snapshot.answeredCount / snapshot.totalQuestions * 100).round();
-    final lastSaved = MaterialLocalizations.of(context).formatMediumDate(snapshot.lastSavedAt);
+    final lastSaved = MaterialLocalizations.of(
+      context,
+    ).formatMediumDate(snapshot.lastSavedAt);
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -298,10 +305,7 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
         children: [
           Text(
             language.resumeSessionTitle,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-            ),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
           ),
           const SizedBox(height: 6),
           Text(
@@ -342,10 +346,7 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
   Widget _buildSectionTitle(String title) {
     return Text(
       title,
-      style: const TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
+      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
     );
   }
 

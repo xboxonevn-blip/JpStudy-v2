@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/features/grammar/grammar_providers.dart';
+import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 
 class PracticeHub extends ConsumerWidget {
   const PracticeHub({super.key});
@@ -10,6 +12,9 @@ class PracticeHub extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
+    final ghostCount = ref
+        .watch(grammarGhostCountProvider)
+        .maybeWhen(data: (count) => count, orElse: () => 0);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -36,6 +41,17 @@ class PracticeHub extends ConsumerWidget {
                 icon: Icons.extension_rounded,
                 color: const Color(0xFF2563EB),
                 onTap: () => context.push('/match'),
+              ),
+              _PracticeTile(
+                title: language.practiceGhostLabel,
+                subtitle: language.practiceGhostSubtitle,
+                icon: Icons.auto_fix_high_rounded,
+                color: const Color(0xFF7C3AED),
+                badgeCount: ghostCount > 0 ? ghostCount : null,
+                onTap: () => context.push(
+                  '/grammar-practice',
+                  extra: GrammarPracticeMode.ghost,
+                ),
               ),
               _PracticeTile(
                 title: language.practiceKanjiDashLabel,
@@ -80,6 +96,7 @@ class _PracticeTile extends StatelessWidget {
     required this.icon,
     required this.color,
     required this.onTap,
+    this.badgeCount,
   });
 
   final String title;
@@ -87,6 +104,7 @@ class _PracticeTile extends StatelessWidget {
   final IconData icon;
   final Color color;
   final VoidCallback onTap;
+  final int? badgeCount;
 
   @override
   Widget build(BuildContext context) {
@@ -111,30 +129,52 @@ class _PracticeTile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 36,
-              height: 36,
-              decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.15),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Icon(icon, color: color, size: 20),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    color: color.withValues(alpha: 0.15),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Icon(icon, color: color, size: 20),
+                ),
+                if (badgeCount != null && badgeCount! > 0)
+                  Positioned(
+                    right: -6,
+                    top: -6,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 6,
+                        vertical: 2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.redAccent,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        '$badgeCount',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
             ),
             const SizedBox(height: 10),
             Text(
               title,
-              style: const TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 14,
-              ),
+              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
             ),
             const SizedBox(height: 4),
             Text(
               subtitle,
-              style: const TextStyle(
-                fontSize: 12,
-                color: Color(0xFF6B7390),
-              ),
+              style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),

@@ -16,15 +16,15 @@ class GrammarScreen extends ConsumerWidget {
     final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider);
     final levelSuffix = level == null ? '' : ' (${level.shortLabel})';
-    
+
     final levelStr = level?.shortLabel ?? 'N5';
     final pointsAsync = ref.watch(grammarPointsProvider(levelStr));
-    final ghostCountAsync = ref.watch(grammarGhostCountProvider); // New provider
+    final ghostCountAsync = ref.watch(
+      grammarGhostCountProvider,
+    ); // New provider
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('${language.grammarTitle}$levelSuffix'),
-      ),
+      appBar: AppBar(title: Text('${language.grammarTitle}$levelSuffix')),
       body: pointsAsync.when(
         data: (points) {
           if (points.isEmpty) {
@@ -45,92 +45,108 @@ class GrammarScreen extends ConsumerWidget {
               // Ghost Review Alert
               ghostCountAsync.when(
                 data: (ghostCount) {
-                   if (ghostCount == 0) {
-                     // Empty State - "All caught up"
-                     return Container(
-                       margin: const EdgeInsets.all(16),
-                       padding: const EdgeInsets.all(16),
-                       decoration: BoxDecoration(
-                         color: Colors.green[50],
-                         borderRadius: BorderRadius.circular(16),
-                         border: Border.all(color: Colors.green[200]!),
-                       ),
-                       child: Row(
-                         children: [
-                           const Icon(Icons.check_circle_outline, color: Colors.green, size: 28),
-                           const SizedBox(width: 12),
-                           Expanded(
-                             child: Column(
-                               crossAxisAlignment: CrossAxisAlignment.start,
-                               children: [
-                                 Text(
-                                   'All caught up!',
-                                   style: TextStyle(
-                                     fontWeight: FontWeight.bold,
-                                     color: Colors.green[900],
-                                     fontSize: 16,
-                                   ),
-                                 ),
-                                 Text(
-                                   'No tricky grammar points pending.',
-                                   style: TextStyle(color: Colors.green[700], fontSize: 12),
-                                 ),
-                               ],
-                             ),
-                           ),
-                         ],
-                       ),
-                     );
-                   }
-                   
-                   // Active State - "Fix Mistakes"
-                   return Container(
-                     margin: const EdgeInsets.all(16),
-                     padding: const EdgeInsets.all(16),
-                     decoration: BoxDecoration(
-                       color: Colors.red[50],
-                       borderRadius: BorderRadius.circular(16),
-                       border: Border.all(color: Colors.red[200]!),
-                     ),
-                     child: Row(
-                       children: [
-                         const Icon(Icons.warning_amber_rounded, color: Colors.red),
-                         const SizedBox(width: 12),
-                         Expanded(
-                           child: Column(
-                             crossAxisAlignment: CrossAxisAlignment.start,
-                             children: [
-                               Text(
-                                 'Fix Mistakes ($ghostCount)',
-                                 style: TextStyle(
-                                   fontWeight: FontWeight.bold,
-                                   color: Colors.red[900],
-                                 ),
-                               ),
-                               Text(
-                                 'Tap to review tricky grammar.',
-                                 style: TextStyle(color: Colors.red[700], fontSize: 12),
-                               ),
-                             ],
-                           ),
-                         ),
-                         FilledButton(
-                           onPressed: () {
-                              // We need to pass the enum, but it's in grammar_practice.dart
-                              // To avoid circular dep if it was weird, we could use int or string.
-                              // But here we can import it.
-                              // Assuming we add import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
-                              context.push('/grammar-practice', extra: GrammarPracticeMode.ghost);
-                           }, 
-                           style: FilledButton.styleFrom(
-                             backgroundColor: Colors.red,
-                             foregroundColor: Colors.white,
-                           ),
-                           child: const Text('Review'),
-                         ),
-                       ],
-                     ),
-                   );
+                  if (ghostCount == 0) {
+                    // Empty State - "All caught up"
+                    return Container(
+                      margin: const EdgeInsets.all(16),
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.green[50],
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: Colors.green[200]!),
+                      ),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.check_circle_outline,
+                            color: Colors.green,
+                            size: 28,
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  language.ghostReviewAllClearTitle,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.green[900],
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  language.ghostReviewAllClearSubtitle,
+                                  style: TextStyle(
+                                    color: Colors.green[700],
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }
+
+                  // Active State - "Fix Mistakes"
+                  return Container(
+                    margin: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.red[50],
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: Colors.red[200]!),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.warning_amber_rounded,
+                          color: Colors.red,
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                language.ghostReviewBannerTitle(ghostCount),
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.red[900],
+                                ),
+                              ),
+                              Text(
+                                language.ghostReviewBannerSubtitle,
+                                style: TextStyle(
+                                  color: Colors.red[700],
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        FilledButton(
+                          onPressed: () {
+                            // We need to pass the enum, but it's in grammar_practice.dart
+                            // To avoid circular dep if it was weird, we could use int or string.
+                            // But here we can import it.
+                            // Assuming we add import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
+                            context.push(
+                              '/grammar-practice',
+                              extra: GrammarPracticeMode.ghost,
+                            );
+                          },
+                          style: FilledButton.styleFrom(
+                            backgroundColor: Colors.red,
+                            foregroundColor: Colors.white,
+                          ),
+                          child: Text(language.ghostReviewBannerActionLabel),
+                        ),
+                      ],
+                    ),
+                  );
                 },
                 loading: () => const SizedBox.shrink(),
                 error: (_, _) => const SizedBox.shrink(),
@@ -140,16 +156,20 @@ class GrammarScreen extends ConsumerWidget {
                 child: ListView.separated(
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   itemCount: points.length,
-                  separatorBuilder: (context, index) => const Divider(height: 1),
+                  separatorBuilder: (context, index) =>
+                      const Divider(height: 1),
                   itemBuilder: (context, index) {
                     final point = points[index];
                     return ListTile(
                       title: Text(
                         point.grammarPoint,
-                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
                       ),
                       subtitle: Text(point.meaning),
-                      trailing: point.isLearned 
+                      trailing: point.isLearned
                           ? const Icon(Icons.check_circle, color: Colors.green)
                           : Icon(Icons.chevron_right, color: Colors.grey[400]),
                       onTap: () => context.push('/grammar/${point.id}'),
@@ -163,19 +183,21 @@ class GrammarScreen extends ConsumerWidget {
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (err, stack) => Center(child: Text('Error: $err')),
       ),
-      floatingActionButton: ref.watch(grammarDueCountProvider).when(
-        data: (count) => count > 0 
-          ? FloatingActionButton.extended(
-              onPressed: () => context.push('/grammar-practice'),
-              icon: const Icon(Icons.psychology),
-              label: Text('Review ($count)'),
-              backgroundColor: Colors.orange[700],
-              foregroundColor: Colors.white,
-            )
-          : null,
-        loading: () => null,
-        error: (_, _) => null,
-      ),
+      floatingActionButton: ref
+          .watch(grammarDueCountProvider)
+          .when(
+            data: (count) => count > 0
+                ? FloatingActionButton.extended(
+                    onPressed: () => context.push('/grammar-practice'),
+                    icon: const Icon(Icons.psychology),
+                    label: Text('Review ($count)'),
+                    backgroundColor: Colors.orange[700],
+                    foregroundColor: Colors.white,
+                  )
+                : null,
+            loading: () => null,
+            error: (_, _) => null,
+          ),
     );
   }
 }

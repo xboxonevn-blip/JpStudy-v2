@@ -21,6 +21,7 @@ class ImmersionReaderScreen extends ConsumerStatefulWidget {
 class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
   bool _showFurigana = true;
   Future<ImmersionArticle?>? _detailFuture;
+  Set<String> _savedTokens = {};
 
   static const int _immersionLessonId = 9999;
   static const String _immersionLessonTitle = 'Immersion Notes';
@@ -30,6 +31,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
   void initState() {
     super.initState();
     _ensureDetailLoaded();
+    _loadSavedTokens();
   }
 
   void _ensureDetailLoaded({bool forceRefresh = false}) {
@@ -42,6 +44,30 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     _detailFuture = ref
         .read(immersionServiceProvider)
         .loadNhkArticleDetail(widget.article.id, forceRefresh: forceRefresh);
+  }
+
+  Future<void> _loadSavedTokens() async {
+    final repo = ref.read(lessonRepositoryProvider);
+    final terms = await repo.fetchTerms(_immersionLessonId);
+    if (!mounted) return;
+    setState(() {
+      _savedTokens = terms.map((t) => _tokenKey(t.term, t.reading)).toSet();
+    });
+  }
+
+  String _tokenKey(String surface, String? reading) {
+    return '${surface.trim()}|${(reading ?? '').trim()}';
+  }
+
+  bool _isTokenSaved(ImmersionToken token) {
+    return _savedTokens.contains(_tokenKey(token.surface, token.reading));
+  }
+
+  void _markTokenSaved(ImmersionToken token) {
+    if (!mounted) return;
+    setState(() {
+      _savedTokens.add(_tokenKey(token.surface, token.reading));
+    });
   }
 
   @override
@@ -81,11 +107,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
               ),
             );
           }
-          return _buildArticleScaffold(
-            context,
-            language,
-            snapshot.data!,
-          );
+          return _buildArticleScaffold(context, language, snapshot.data!);
         },
       );
     }
@@ -98,8 +120,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     AppLanguage language,
     ImmersionArticle article,
   ) {
-    final dateLabel =
-        MaterialLocalizations.of(context).formatMediumDate(article.publishedAt);
+    final dateLabel = MaterialLocalizations.of(
+      context,
+    ).formatMediumDate(article.publishedAt);
     return Scaffold(
       appBar: AppBar(
         title: Text(language.immersionTitle),
@@ -134,29 +157,33 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
             style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
           ),
           const SizedBox(height: 16),
-          ...article.paragraphs.map((tokens) => Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: Wrap(
-                  spacing: 4,
-                  runSpacing: 6,
-                  children: tokens
-                      .map((token) => _TokenChip(
-                            token: token,
-                            showFurigana: _showFurigana,
-                            language: language,
-                            onTap: token.hasMeaning
-                                ? () => _showTokenDetail(token, language)
-                                : null,
-                          ))
-                      .toList(),
-                ),
-              )),
+          ...article.paragraphs.map(
+            (tokens) => Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Wrap(
+                spacing: 4,
+                runSpacing: 6,
+                children: tokens
+                    .map(
+                      (token) => _TokenChip(
+                        token: token,
+                        showFurigana: _showFurigana,
+                        language: language,
+                        isSaved: _isTokenSaved(token),
+                        onTap: token.hasMeaning
+                            ? () => _showTokenDetail(token, language)
+                            : null,
+                      ),
+                    )
+                    .toList(),
+              ),
+            ),
+          ),
           if (article.translation != null) ...[
             const SizedBox(height: 12),
             Text(
               language.immersionTranslateLabel,
-              style:
-                  const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 6),
             Text(
@@ -173,13 +200,14 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     ImmersionToken token,
     AppLanguage language,
   ) async {
+    final isSaved = _isTokenSaved(token);
     final meaning = language == AppLanguage.en
         ? (token.meaningEn?.trim().isNotEmpty == true
-            ? token.meaningEn!
-            : token.meaningVi ?? '')
+              ? token.meaningEn!
+              : token.meaningVi ?? '')
         : (token.meaningVi?.trim().isNotEmpty == true
-            ? token.meaningVi!
-            : token.meaningEn ?? '');
+              ? token.meaningVi!
+              : token.meaningEn ?? '');
 
     await showModalBottomSheet<void>(
       context: context,
@@ -206,23 +234,26 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                 ),
               ],
               const SizedBox(height: 8),
-              Text(
-                meaning,
-                style: const TextStyle(fontSize: 14),
-              ),
+              Text(meaning, style: const TextStyle(fontSize: 14)),
               const SizedBox(height: 16),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
-                  onPressed: () async {
-                    await _addToSrs(token, language);
-                    if (!context.mounted) {
-                      return;
-                    }
-                    Navigator.pop(context);
-                  },
+                  onPressed: isSaved
+                      ? null
+                      : () async {
+                          await _addToSrs(token, language);
+                          if (!context.mounted) {
+                            return;
+                          }
+                          Navigator.pop(context);
+                        },
                   icon: const Icon(Icons.add),
-                  label: Text(language.immersionAddSrsLabel),
+                  label: Text(
+                    isSaved
+                        ? language.immersionAlreadyAddedLabel
+                        : language.immersionAddSrsLabel,
+                  ),
                 ),
               ),
             ],
@@ -246,6 +277,8 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       token.reading,
     );
     if (existing != null) {
+      await repo.ensureSrsStateForTerm(existing.id);
+      _markTokenSaved(token);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(language.immersionAlreadyAddedLabel)),
@@ -254,17 +287,19 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       return;
     }
 
-    await repo.addTerm(
+    final termId = await repo.addTerm(
       _immersionLessonId,
       term: token.surface,
       reading: token.reading,
       definition: token.meaningVi ?? token.meaningEn,
       definitionEn: token.meaningEn,
     );
+    await repo.ensureSrsStateForTerm(termId);
+    _markTokenSaved(token);
     if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.immersionAddedLabel)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.immersionAddedLabel)));
     }
   }
 }
@@ -274,18 +309,24 @@ class _TokenChip extends StatelessWidget {
     required this.token,
     required this.showFurigana,
     required this.language,
+    required this.isSaved,
     this.onTap,
   });
 
   final ImmersionToken token;
   final bool showFurigana;
   final AppLanguage language;
+  final bool isSaved;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final hasMeaning = token.hasMeaning;
-    final color = hasMeaning ? const Color(0xFFE0F2FE) : Colors.transparent;
+    final color = isSaved
+        ? const Color(0xFFD1FAE5)
+        : hasMeaning
+        ? const Color(0xFFE0F2FE)
+        : Colors.transparent;
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -293,6 +334,7 @@ class _TokenChip extends StatelessWidget {
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(8),
+          border: isSaved ? Border.all(color: const Color(0xFF34D399)) : null,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -302,10 +344,7 @@ class _TokenChip extends StatelessWidget {
                 token.reading!.isNotEmpty)
               Text(
                 token.reading!,
-                style: const TextStyle(
-                  fontSize: 10,
-                  color: Color(0xFF6B7390),
-                ),
+                style: const TextStyle(fontSize: 10, color: Color(0xFF6B7390)),
               ),
             Text(
               token.surface,

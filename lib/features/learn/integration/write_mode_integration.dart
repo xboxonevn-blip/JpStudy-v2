@@ -8,10 +8,9 @@ import '../../../data/db/app_database.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../../../core/level_provider.dart';
 import '../../../core/study_level.dart';
-import '../models/question_type.dart';
-import '../screens/learn_screen.dart';
+import '../../write/screens/write_mode_screen.dart';
 
-/// Write mode - Learn mode with only fillBlank questions
+/// Write mode - choose typing or handwriting practice
 class WriteModeIntegration extends ConsumerWidget {
   final int lessonId;
   final String lessonTitle;
@@ -31,54 +30,55 @@ class WriteModeIntegration extends ConsumerWidget {
         LessonTermsArgs(lessonId, level.shortLabel, lessonTitle),
       ),
     );
+    final kanjiAsync = ref.watch(lessonKanjiProvider(lessonId));
 
     return termsAsync.when(
-      data: (terms) {
-        if (terms.isEmpty) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('${language.writeModeLabel}: $lessonTitle'),
-            ),
-            body: Center(
-              child: Text(language.noTermsAvailableLabel),
-            ),
+      data: (terms) => kanjiAsync.when(
+        data: (kanji) {
+          final vocabItems = _convertToVocabItems(terms);
+          return WriteModeScreen(
+            lessonId: lessonId,
+            lessonTitle: lessonTitle,
+            vocabItems: vocabItems,
+            kanjiItems: kanji,
           );
-        }
-
-        // Convert to VocabItem
-        final vocabItems = _convertToVocabItems(terms);
-
-        // Go directly to LearnScreen with only fillBlank enabled
-        return LearnScreen(
-          lessonId: lessonId,
-          lessonTitle: lessonTitle,
-          items: vocabItems,
-          enabledTypes: const [QuestionType.fillBlank],
-        );
-      },
-      loading: () => Scaffold(
-        appBar: AppBar(
-          title: Text('${language.writeModeLabel}: $lessonTitle'),
+        },
+        loading: () => Scaffold(
+          appBar: AppBar(
+            title: Text('${language.writeModeLabel}: $lessonTitle'),
+          ),
+          body: const Center(child: CircularProgressIndicator()),
         ),
+        error: (e, _) => Scaffold(
+          appBar: AppBar(
+            title: Text('${language.writeModeLabel}: $lessonTitle'),
+          ),
+          body: Center(child: Text(language.loadErrorLabel)),
+        ),
+      ),
+      loading: () => Scaffold(
+        appBar: AppBar(title: Text('${language.writeModeLabel}: $lessonTitle')),
         body: const Center(child: CircularProgressIndicator()),
       ),
       error: (e, _) => Scaffold(
-        appBar: AppBar(
-          title: Text('${language.writeModeLabel}: $lessonTitle'),
-        ),
+        appBar: AppBar(title: Text('${language.writeModeLabel}: $lessonTitle')),
         body: Center(child: Text(language.loadErrorLabel)),
       ),
     );
   }
 
   List<VocabItem> _convertToVocabItems(List<UserLessonTermData> terms) {
-    return terms.map((term) => VocabItem(
-      id: term.id,
-      term: term.term,
-      reading: term.reading,
-      meaning: term.definition,
-      meaningEn: term.definitionEn,
-      level: 'N5', // Default level
-    )).toList();
+    return terms
+        .map(
+          (term) => VocabItem(
+            id: term.id,
+            term: term.term,
+            reading: term.reading,
+            meaning: term.definition,
+            meaningEn: term.definitionEn,
+            level: 'N5', // Default level
+          ),
+        )
+        .toList();
   }
 }

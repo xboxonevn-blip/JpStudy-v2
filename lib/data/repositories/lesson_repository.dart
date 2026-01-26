@@ -5,7 +5,8 @@ import 'package:jpstudy/core/services/srs_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 
-import 'package:jpstudy/data/db/content_database.dart' hide UserProgressCompanion, UserProgressData;
+import 'package:jpstudy/data/db/content_database.dart'
+    hide UserProgressCompanion, UserProgressData;
 import 'package:jpstudy/data/db/content_database_provider.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/models/kanji_item.dart';
@@ -17,39 +18,47 @@ final lessonRepositoryProvider = Provider<LessonRepository>((ref) {
   );
 });
 
-final lessonTitleProvider =
-    FutureProvider.family<String, LessonTitleArgs>((ref, args) async {
+final lessonTitleProvider = FutureProvider.family<String, LessonTitleArgs>((
+  ref,
+  args,
+) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.getLessonTitle(args.lessonId, args.fallback);
 });
 
 final lessonTermsProvider =
-    FutureProvider.family<List<UserLessonTermData>, LessonTermsArgs>(
-        (ref, args) async {
-  final repo = ref.watch(lessonRepositoryProvider);
-  await repo.ensureLesson(
-    lessonId: args.lessonId,
-    level: args.level,
-    title: args.fallbackTitle,
-  );
-  await repo.seedTermsIfEmpty(args.lessonId, args.level);
-  await repo.seedGrammarIfEmpty(args.lessonId, args.level);
-  return repo.fetchTerms(args.lessonId);
-});
+    FutureProvider.family<List<UserLessonTermData>, LessonTermsArgs>((
+      ref,
+      args,
+    ) async {
+      final repo = ref.watch(lessonRepositoryProvider);
+      await repo.ensureLesson(
+        lessonId: args.lessonId,
+        level: args.level,
+        title: args.fallbackTitle,
+      );
+      await repo.seedTermsIfEmpty(args.lessonId, args.level);
+      await repo.seedGrammarIfEmpty(args.lessonId, args.level);
+      return repo.fetchTerms(args.lessonId);
+    });
 
-final lessonMetaProvider =
-    FutureProvider.family<List<LessonMeta>, String>((ref, level) async {
+final lessonMetaProvider = FutureProvider.family<List<LessonMeta>, String>((
+  ref,
+  level,
+) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchLessonMeta(level);
 });
 
 final lessonDueTermsProvider =
     FutureProvider.family<List<UserLessonTermData>, int>((ref, lessonId) async {
-  final repo = ref.watch(lessonRepositoryProvider);
-  return repo.fetchDueTerms(lessonId);
-});
+      final repo = ref.watch(lessonRepositoryProvider);
+      return repo.fetchDueTerms(lessonId);
+    });
 
-final allDueTermsProvider = FutureProvider<List<UserLessonTermData>>((ref) async {
+final allDueTermsProvider = FutureProvider<List<UserLessonTermData>>((
+  ref,
+) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchAllDueTerms();
 });
@@ -61,17 +70,20 @@ final progressSummaryProvider = FutureProvider<ProgressSummary>((ref) async {
 
 final lessonPracticeSettingsProvider =
     FutureProvider.family<LessonPracticeSettings, int>((ref, lessonId) async {
-  final repo = ref.watch(lessonRepositoryProvider);
-  return repo.fetchLessonPracticeSettings(lessonId);
-});
+      final repo = ref.watch(lessonRepositoryProvider);
+      return repo.fetchLessonPracticeSettings(lessonId);
+    });
 
-final reviewHistoryProvider = FutureProvider<List<ReviewDaySummary>>((ref) async {
+final reviewHistoryProvider = FutureProvider<List<ReviewDaySummary>>((
+  ref,
+) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchReviewHistory();
 });
 
-final attemptHistoryProvider =
-    FutureProvider<List<AttemptSummary>>((ref) async {
+final attemptHistoryProvider = FutureProvider<List<AttemptSummary>>((
+  ref,
+) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchAttemptHistory();
 });
@@ -93,32 +105,34 @@ class LessonTitleArgs {
   int get hashCode => Object.hash(lessonId, fallback);
 }
 
-
-
 final lessonGrammarProvider =
-    FutureProvider.family<List<GrammarPointData>, LessonTermsArgs>((ref, args) async {
-  final repo = ref.watch(lessonRepositoryProvider);
-  // Ensure grammar is seeded before fetching
-  await repo.seedGrammarIfEmpty(args.lessonId, args.level);
-  return repo.fetchGrammar(args.lessonId);
-});
+    FutureProvider.family<List<GrammarPointData>, LessonTermsArgs>((
+      ref,
+      args,
+    ) async {
+      final repo = ref.watch(lessonRepositoryProvider);
+      // Ensure grammar is seeded before fetching
+      await repo.seedGrammarIfEmpty(args.lessonId, args.level);
+      return repo.fetchGrammar(args.lessonId);
+    });
 
-final lessonKanjiProvider =
-    FutureProvider.family<List<KanjiItem>, int>((ref, lessonId) async {
+final lessonKanjiProvider = FutureProvider.family<List<KanjiItem>, int>((
+  ref,
+  lessonId,
+) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchKanji(lessonId);
 });
 
-final grammarGhostsProvider = FutureProvider<List<GrammarPointData>>((ref) async {
+final grammarGhostsProvider = FutureProvider<List<GrammarPointData>>((
+  ref,
+) async {
   final repo = ref.watch(lessonRepositoryProvider);
   return repo.fetchGrammarGhosts();
 });
 
 class GrammarPointData {
-  const GrammarPointData({
-    required this.point,
-    required this.examples,
-  });
+  const GrammarPointData({required this.point, required this.examples});
 
   final GrammarPoint point;
   final List<GrammarExample> examples;
@@ -230,8 +244,7 @@ class AttemptSummary {
   final int score;
   final int total;
 
-  Duration? get duration =>
-      finishedAt?.difference(startedAt);
+  Duration? get duration => finishedAt?.difference(startedAt);
 }
 
 class ReviewDaySummary {
@@ -279,9 +292,9 @@ class LessonRepository {
   static const int _defaultLessonCount = 25;
 
   Future<String> getLessonTitle(int lessonId, String fallback) async {
-    final existing = await (_db.select(_db.userLesson)
-          ..where((tbl) => tbl.id.equals(lessonId)))
-        .getSingleOrNull();
+    final existing = await (_db.select(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).getSingleOrNull();
     if (existing == null) {
       return fallback;
     }
@@ -294,16 +307,24 @@ class LessonRepository {
 
   // Returns a map of lessonId -> {termCount, completedCount}
   Future<Map<int, LessonProgressStats>> getAllLessonProgress() async {
-    final termCounts = await (_db.selectOnly(_db.userLessonTerm)
-          ..addColumns([_db.userLessonTerm.lessonId, _db.userLessonTerm.id.count()])
-          ..groupBy([_db.userLessonTerm.lessonId]))
-        .get();
+    final termCounts =
+        await (_db.selectOnly(_db.userLessonTerm)
+              ..addColumns([
+                _db.userLessonTerm.lessonId,
+                _db.userLessonTerm.id.count(),
+              ])
+              ..groupBy([_db.userLessonTerm.lessonId]))
+            .get();
 
-    final completedCounts = await (_db.selectOnly(_db.userLessonTerm)
-          ..addColumns([_db.userLessonTerm.lessonId, _db.userLessonTerm.id.count()])
-          ..where(_db.userLessonTerm.isLearned.equals(true))
-          ..groupBy([_db.userLessonTerm.lessonId]))
-        .get();
+    final completedCounts =
+        await (_db.selectOnly(_db.userLessonTerm)
+              ..addColumns([
+                _db.userLessonTerm.lessonId,
+                _db.userLessonTerm.id.count(),
+              ])
+              ..where(_db.userLessonTerm.isLearned.equals(true))
+              ..groupBy([_db.userLessonTerm.lessonId]))
+            .get();
 
     final stats = <int, LessonProgressStats>{};
 
@@ -311,7 +332,10 @@ class LessonRepository {
       final lessonId = row.read(_db.userLessonTerm.lessonId);
       final count = row.read(_db.userLessonTerm.id.count()) ?? 0;
       if (lessonId != null) {
-        stats[lessonId] = LessonProgressStats(termCount: count, completedCount: 0);
+        stats[lessonId] = LessonProgressStats(
+          termCount: count,
+          completedCount: 0,
+        );
       }
     }
 
@@ -322,21 +346,24 @@ class LessonRepository {
         if (stats.containsKey(lessonId)) {
           stats[lessonId] = stats[lessonId]!.copyWith(completedCount: count);
         } else {
-           // Should not happen usually as learned implies existing
-           stats[lessonId] = LessonProgressStats(termCount: 0, completedCount: count);
+          // Should not happen usually as learned implies existing
+          stats[lessonId] = LessonProgressStats(
+            termCount: 0,
+            completedCount: count,
+          );
         }
       }
     }
-    
+
     return stats;
   }
 
   Future<LessonPracticeSettings> fetchLessonPracticeSettings(
     int lessonId,
   ) async {
-    final existing = await (_db.select(_db.userLesson)
-          ..where((tbl) => tbl.id.equals(lessonId)))
-        .getSingleOrNull();
+    final existing = await (_db.select(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).getSingleOrNull();
     if (existing == null) {
       return LessonPracticeSettings.defaults;
     }
@@ -352,13 +379,15 @@ class LessonRepository {
     required String level,
     required String title,
   }) async {
-    final existing = await (_db.select(_db.userLesson)
-          ..where((tbl) => tbl.id.equals(lessonId)))
-        .getSingleOrNull();
+    final existing = await (_db.select(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).getSingleOrNull();
     if (existing != null) {
       return existing;
     }
-    await _db.into(_db.userLesson).insert(
+    await _db
+        .into(_db.userLesson)
+        .insert(
           UserLessonCompanion.insert(
             id: Value(lessonId),
             level: level,
@@ -366,31 +395,34 @@ class LessonRepository {
             description: const Value(''),
             isPublic: const Value(true),
             isCustomTitle: const Value(false),
-            learnTermLimit:
-                Value(LessonPracticeSettings.defaults.learnTermLimit),
-            testQuestionLimit:
-                Value(LessonPracticeSettings.defaults.testQuestionLimit),
-            matchPairLimit:
-                Value(LessonPracticeSettings.defaults.matchPairLimit),
+            learnTermLimit: Value(
+              LessonPracticeSettings.defaults.learnTermLimit,
+            ),
+            testQuestionLimit: Value(
+              LessonPracticeSettings.defaults.testQuestionLimit,
+            ),
+            matchPairLimit: Value(
+              LessonPracticeSettings.defaults.matchPairLimit,
+            ),
             updatedAt: Value(DateTime.now()),
           ),
         );
-    return (_db.select(_db.userLesson)
-          ..where((tbl) => tbl.id.equals(lessonId)))
-        .getSingle();
+    return (_db.select(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).getSingle();
   }
 
   Future<List<LessonMeta>> fetchLessonMeta(String level) async {
-    final lessons = await (_db.select(_db.userLesson)
-          ..where((tbl) => tbl.level.equals(level)))
-        .get();
+    final lessons = await (_db.select(
+      _db.userLesson,
+    )..where((tbl) => tbl.level.equals(level))).get();
     if (lessons.isEmpty) {
       return const [];
     }
     final ids = lessons.map((lesson) => lesson.id).toList();
-    final terms = await (_db.select(_db.userLessonTerm)
-          ..where((tbl) => tbl.lessonId.isIn(ids)))
-        .get();
+    final terms = await (_db.select(
+      _db.userLessonTerm,
+    )..where((tbl) => tbl.lessonId.isIn(ids))).get();
     final counts = <int, int>{};
     final completedCounts = <int, int>{};
     for (final term in terms) {
@@ -423,10 +455,10 @@ class LessonRepository {
 
   // Fetch all vocabulary for a specific JLPT level from ContentDatabase
   Future<List<VocabItem>> getVocabByLevel(String level) async {
-    final items = await (_contentDb.select(_contentDb.vocab)
-          ..where((tbl) => tbl.level.equals(level)))
-        .get();
-    
+    final items = await (_contentDb.select(
+      _contentDb.vocab,
+    )..where((tbl) => tbl.level.equals(level))).get();
+
     return items.map((item) {
       return VocabItem(
         id: item.id,
@@ -465,12 +497,11 @@ class LessonRepository {
   }
 
   Future<int?> findNextToStudyLesson(String level) async {
-    final lessons = await (_db.select(_db.userLesson)
-          ..where((tbl) => tbl.level.equals(level))
-          ..orderBy([
-            (t) => OrderingTerm(expression: t.id),
-          ]))
-        .get();
+    final lessons =
+        await (_db.select(_db.userLesson)
+              ..where((tbl) => tbl.level.equals(level))
+              ..orderBy([(t) => OrderingTerm(expression: t.id)]))
+            .get();
 
     if (lessons.isEmpty) return null;
 
@@ -479,7 +510,9 @@ class LessonRepository {
     for (final lesson in lessons) {
       final stat = stats[lesson.id];
       // If no stats (no terms yet) or not fully completed, this is the next one
-      if (stat == null || stat.termCount == 0 || stat.completedCount < stat.termCount) {
+      if (stat == null ||
+          stat.termCount == 0 ||
+          stat.completedCount < stat.termCount) {
         return lesson.id;
       }
     }
@@ -487,13 +520,17 @@ class LessonRepository {
   }
 
   Future<int> nextLessonId() async {
-    final maxId = await (_db.selectOnly(_db.userLesson)
-          ..addColumns([_db.userLesson.id])
-          ..orderBy([
-            OrderingTerm(expression: _db.userLesson.id, mode: OrderingMode.desc),
-          ])
-          ..limit(1))
-        .getSingleOrNull();
+    final maxId =
+        await (_db.selectOnly(_db.userLesson)
+              ..addColumns([_db.userLesson.id])
+              ..orderBy([
+                OrderingTerm(
+                  expression: _db.userLesson.id,
+                  mode: OrderingMode.desc,
+                ),
+              ])
+              ..limit(1))
+            .getSingleOrNull();
     final currentMax = maxId?.read(_db.userLesson.id) ?? 0;
     final base = currentMax < _defaultLessonCount
         ? _defaultLessonCount
@@ -508,7 +545,9 @@ class LessonRepository {
     required bool isCustomTitle,
   }) async {
     final nextId = await nextLessonId();
-    await _db.into(_db.userLesson).insert(
+    await _db
+        .into(_db.userLesson)
+        .insert(
           UserLessonCompanion.insert(
             id: Value(nextId),
             level: level,
@@ -525,9 +564,7 @@ class LessonRepository {
   Future<List<UserLessonTermData>> fetchTerms(int lessonId) {
     return (_db.select(_db.userLessonTerm)
           ..where((tbl) => tbl.lessonId.equals(lessonId))
-          ..orderBy([
-            (tbl) => OrderingTerm(expression: tbl.orderIndex),
-          ]))
+          ..orderBy([(tbl) => OrderingTerm(expression: tbl.orderIndex)]))
         .get();
   }
 
@@ -535,7 +572,8 @@ class LessonRepository {
     final existing = await fetchTerms(lessonId);
 
     // Check if existing terms are the dummy ones and should be replaced
-    final isDummy = existing.length == 2 &&
+    final isDummy =
+        existing.length == 2 &&
         existing[0].term == '見ます' &&
         existing[1].term == '探します';
 
@@ -543,11 +581,16 @@ class LessonRepository {
       // Try to backfill missing English without destructive reset.
       final missingEnglish = existing.any((t) => t.definitionEn.isEmpty);
       if (missingEnglish) {
-        await _backfillEnglishDefinitions(lessonId, currentLevelLabel, existing);
+        await _backfillEnglishDefinitions(
+          lessonId,
+          currentLevelLabel,
+          existing,
+        );
       }
 
       final refreshed = await fetchTerms(lessonId);
-      if (refreshed.isNotEmpty && refreshed.every((t) => t.definitionEn.isNotEmpty)) {
+      if (refreshed.isNotEmpty &&
+          refreshed.every((t) => t.definitionEn.isNotEmpty)) {
         return;
       }
     }
@@ -559,10 +602,15 @@ class LessonRepository {
 
     if (isDummy) {
       // Delete dummy terms to force resync
-      await (_db.delete(_db.userLessonTerm)..where((tbl) => tbl.lessonId.equals(lessonId))).go();
+      await (_db.delete(
+        _db.userLessonTerm,
+      )..where((tbl) => tbl.lessonId.equals(lessonId))).go();
     }
 
-    final vocabList = await _fetchLessonVocabFromContent(lessonId, currentLevelLabel);
+    final vocabList = await _fetchLessonVocabFromContent(
+      lessonId,
+      currentLevelLabel,
+    );
     if (vocabList.isEmpty) {
       return;
     }
@@ -593,7 +641,10 @@ class LessonRepository {
     String currentLevelLabel,
     List<UserLessonTermData> existing,
   ) async {
-    final vocabList = await _fetchLessonVocabFromContent(lessonId, currentLevelLabel);
+    final vocabList = await _fetchLessonVocabFromContent(
+      lessonId,
+      currentLevelLabel,
+    );
     if (vocabList.isEmpty) {
       return;
     }
@@ -625,15 +676,14 @@ class LessonRepository {
         if (term.definitionEn.isNotEmpty) continue;
         final key = _vocabKey(term.term, term.reading);
         var meaningEn = vocabMap[key];
-        if ((meaningEn == null || meaningEn.isEmpty) && term.reading.trim().isEmpty) {
+        if ((meaningEn == null || meaningEn.isEmpty) &&
+            term.reading.trim().isEmpty) {
           meaningEn = termOnlyMap[term.term.trim()];
         }
         if (meaningEn == null || meaningEn.isEmpty) continue;
         batch.update(
           _db.userLessonTerm,
-          UserLessonTermCompanion(
-            definitionEn: Value(meaningEn),
-          ),
+          UserLessonTermCompanion(definitionEn: Value(meaningEn)),
           where: (tbl) => tbl.id.equals(term.id),
         );
       }
@@ -646,15 +696,15 @@ class LessonRepository {
   ) async {
     final dbLevel = currentLevelLabel; // e.g. "N5", "N4"
     final idStr = lessonId.toString();
-    var vocabList = await (_contentDb.select(_contentDb.vocab)
-          ..where((tbl) {
-            return tbl.level.equals(dbLevel) &
-                (tbl.tags.like('minna_$idStr,%') |
-                    tbl.tags.equals('minna_$idStr') |
-                    tbl.tags.like('%,minna_$idStr,%') |
-                    tbl.tags.like('%,minna_$idStr'));
-          }))
-        .get();
+    var vocabList =
+        await (_contentDb.select(_contentDb.vocab)..where((tbl) {
+              return tbl.level.equals(dbLevel) &
+                  (tbl.tags.like('minna_$idStr,%') |
+                      tbl.tags.equals('minna_$idStr') |
+                      tbl.tags.like('%,minna_$idStr,%') |
+                      tbl.tags.like('%,minna_$idStr'));
+            }))
+            .get();
 
     // Fallback to offset if tag lookup failed (e.g. old data or manual lessons)
     if (vocabList.isEmpty) {
@@ -668,10 +718,11 @@ class LessonRepository {
       }
       if (offset < 0) offset = 0;
 
-      vocabList = await (_contentDb.select(_contentDb.vocab)
-            ..where((tbl) => tbl.level.equals(dbLevel))
-            ..limit(limit, offset: offset))
-          .get();
+      vocabList =
+          await (_contentDb.select(_contentDb.vocab)
+                ..where((tbl) => tbl.level.equals(dbLevel))
+                ..limit(limit, offset: offset))
+              .get();
     }
 
     return vocabList;
@@ -683,11 +734,10 @@ class LessonRepository {
     return '$termValue|$readingValue';
   }
 
-
   Future<List<GrammarPointData>> fetchGrammar(int lessonId) async {
-    final points = await (_db.select(_db.grammarPoints)
-          ..where((tbl) => tbl.lessonId.equals(lessonId)))
-        .get();
+    final points = await (_db.select(
+      _db.grammarPoints,
+    )..where((tbl) => tbl.lessonId.equals(lessonId))).get();
 
     if (points.isEmpty) {
       return [];
@@ -695,9 +745,9 @@ class LessonRepository {
 
     final result = <GrammarPointData>[];
     for (final point in points) {
-      final examples = await (_db.select(_db.grammarExamples)
-            ..where((tbl) => tbl.grammarId.equals(point.id)))
-          .get();
+      final examples = await (_db.select(
+        _db.grammarExamples,
+      )..where((tbl) => tbl.grammarId.equals(point.id))).get();
       result.add(GrammarPointData(point: point, examples: examples));
     }
     return result;
@@ -717,7 +767,7 @@ class LessonRepository {
 
     query.where(_db.attemptAnswer.isCorrect.not());
     query.where(_db.attempt.mode.like('%grammar%'));
-    
+
     // Get distinct question IDs (Grammar IDs)
     final rows = await query.get();
     final ghostIds = rows
@@ -730,15 +780,15 @@ class LessonRepository {
     }
 
     // Fetch full grammar data for these IDs
-    final points = await (_db.select(_db.grammarPoints)
-          ..where((tbl) => tbl.id.isIn(ghostIds)))
-        .get();
+    final points = await (_db.select(
+      _db.grammarPoints,
+    )..where((tbl) => tbl.id.isIn(ghostIds))).get();
 
     final result = <GrammarPointData>[];
     for (final point in points) {
-      final examples = await (_db.select(_db.grammarExamples)
-            ..where((tbl) => tbl.grammarId.equals(point.id)))
-          .get();
+      final examples = await (_db.select(
+        _db.grammarExamples,
+      )..where((tbl) => tbl.grammarId.equals(point.id))).get();
       result.add(GrammarPointData(point: point, examples: examples));
     }
     return result;
@@ -747,14 +797,16 @@ class LessonRepository {
   /// Remove a grammar point from ghosts by deleting its incorrect attempt records
   Future<void> markGrammarAsMastered(int grammarId) async {
     await (_db.delete(_db.attemptAnswer)
-      ..where((tbl) => tbl.questionId.equals(grammarId))
-      ..where((tbl) => tbl.isCorrect.not())
-      ..where((tbl) => tbl.attemptId.isInQuery(
-        _db.selectOnly(_db.attempt)
-          ..addColumns([_db.attempt.id])
-          ..where(_db.attempt.mode.like('%grammar%'))
-      ))
-    ).go();
+          ..where((tbl) => tbl.questionId.equals(grammarId))
+          ..where((tbl) => tbl.isCorrect.not())
+          ..where(
+            (tbl) => tbl.attemptId.isInQuery(
+              _db.selectOnly(_db.attempt)
+                ..addColumns([_db.attempt.id])
+                ..where(_db.attempt.mode.like('%grammar%')),
+            ),
+          ))
+        .go();
   }
 
   Future<List<GrammarPoint>> fetchRandomGrammarPoints(
@@ -769,7 +821,9 @@ class LessonRepository {
       query.where((tbl) => tbl.id.isNotIn(excludeIds));
     }
 
-    query.orderBy([(t) => OrderingTerm(expression: const CustomExpression('RANDOM()'))]);
+    query.orderBy([
+      (t) => OrderingTerm(expression: const CustomExpression('RANDOM()')),
+    ]);
     query.limit(limit);
 
     return query.get();
@@ -777,35 +831,38 @@ class LessonRepository {
 
   Future<void> seedGrammarIfEmpty(int lessonId, String level) async {
     // Check if grammar already exists for this lesson
-    final existingPoints = await (_db.select(_db.grammarPoints)
-          ..where((tbl) => tbl.lessonId.equals(lessonId)))
-        .get();
-    
+    final existingPoints = await (_db.select(
+      _db.grammarPoints,
+    )..where((tbl) => tbl.lessonId.equals(lessonId))).get();
+
     // Check if resync needed: Either empty or missing English explanations
     bool needsResync = existingPoints.isEmpty;
     if (!needsResync && existingPoints.isNotEmpty) {
       // Check if any point is missing English explanation or title
-      needsResync = existingPoints.any((p) => 
-        p.explanationEn == null || p.explanationEn!.isEmpty || 
-        p.titleEn == null || p.titleEn!.isEmpty
+      needsResync = existingPoints.any(
+        (p) =>
+            p.explanationEn == null ||
+            p.explanationEn!.isEmpty ||
+            p.titleEn == null ||
+            p.titleEn!.isEmpty,
       );
     }
-    
+
     if (!needsResync) {
       return;
     }
-    
+
     // Delete old data if resyncing
     if (existingPoints.isNotEmpty) {
-      await (_db.delete(_db.grammarPoints)
-        ..where((tbl) => tbl.lessonId.equals(lessonId))
-      ).go();
+      await (_db.delete(
+        _db.grammarPoints,
+      )..where((tbl) => tbl.lessonId.equals(lessonId))).go();
     }
 
     // Fetch from Content DB
-    final contentPoints = await (_contentDb.select(_contentDb.grammarPoint)
-          ..where((tbl) => tbl.lessonId.equals(lessonId)))
-        .get();
+    final contentPoints = await (_contentDb.select(
+      _contentDb.grammarPoint,
+    )..where((tbl) => tbl.lessonId.equals(lessonId))).get();
 
     if (contentPoints.isEmpty) {
       return;
@@ -813,48 +870,52 @@ class LessonRepository {
 
     for (final cp in contentPoints) {
       // Insert Point with proper English data from ContentDB
-      final pointId = await _db.into(_db.grammarPoints).insert(
-        GrammarPointsCompanion.insert(
-          lessonId: Value(lessonId),
-          grammarPoint: cp.title,
-          titleEn: Value(cp.titleEn), // Copy English title
-          meaning: cp.title,
-          meaningVi: Value(cp.title),
-          meaningEn: Value(cp.titleEn ?? cp.title), 
-          connection: cp.structure,
-          connectionEn: Value(cp.structureEn), // Copy English structure
-          explanation: cp.explanation,
-          explanationVi: Value(cp.explanation),
-          explanationEn: Value(cp.explanationEn),
-          jlptLevel: cp.level,
-          isLearned: const Value(false),
-        ),
-      );
+      final pointId = await _db
+          .into(_db.grammarPoints)
+          .insert(
+            GrammarPointsCompanion.insert(
+              lessonId: Value(lessonId),
+              grammarPoint: cp.title,
+              titleEn: Value(cp.titleEn), // Copy English title
+              meaning: cp.title,
+              meaningVi: Value(cp.title),
+              meaningEn: Value(cp.titleEn ?? cp.title),
+              connection: cp.structure,
+              connectionEn: Value(cp.structureEn), // Copy English structure
+              explanation: cp.explanation,
+              explanationVi: Value(cp.explanation),
+              explanationEn: Value(cp.explanationEn),
+              jlptLevel: cp.level,
+              isLearned: const Value(false),
+            ),
+          );
 
       // Fetch Examples with English translations
-      final examples = await (_contentDb.select(_contentDb.grammarExample)
-            ..where((tbl) => tbl.grammarPointId.equals(cp.id)))
-          .get();
+      final examples = await (_contentDb.select(
+        _contentDb.grammarExample,
+      )..where((tbl) => tbl.grammarPointId.equals(cp.id))).get();
 
       for (final ex in examples) {
-        await _db.into(_db.grammarExamples).insert(
-          GrammarExamplesCompanion.insert(
-            grammarId: pointId,
-            japanese: ex.sentence,
-            translation: ex.translation,
-            translationVi: Value(ex.translation),
-            translationEn: Value(ex.translationEn),
-            audioUrl: Value(ex.audioUrl),
-          ),
-        );
+        await _db
+            .into(_db.grammarExamples)
+            .insert(
+              GrammarExamplesCompanion.insert(
+                grammarId: pointId,
+                japanese: ex.sentence,
+                translation: ex.translation,
+                translationVi: Value(ex.translation),
+                translationEn: Value(ex.translationEn),
+                audioUrl: Value(ex.audioUrl),
+              ),
+            );
       }
     }
   }
 
   Future<List<KanjiItem>> fetchKanji(int lessonId) async {
-    final rows = await (_contentDb.select(_contentDb.kanji)
-          ..where((tbl) => tbl.lessonId.equals(lessonId)))
-        .get();
+    final rows = await (_contentDb.select(
+      _contentDb.kanji,
+    )..where((tbl) => tbl.lessonId.equals(lessonId))).get();
 
     return rows.map((row) {
       final examplesList = (json.decode(row.examplesJson) as List)
@@ -880,36 +941,45 @@ class LessonRepository {
     String title, {
     bool isCustomTitle = true,
   }) {
-    return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
-        .write(UserLessonCompanion(
-      title: Value(title),
-      isCustomTitle: Value(isCustomTitle),
-      updatedAt: Value(DateTime.now()),
-    ));
+    return (_db.update(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).write(
+      UserLessonCompanion(
+        title: Value(title),
+        isCustomTitle: Value(isCustomTitle),
+        updatedAt: Value(DateTime.now()),
+      ),
+    );
   }
 
   Future<void> updateLessonDescription(int lessonId, String description) {
-    return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
-        .write(UserLessonCompanion(
-      description: Value(description),
-      updatedAt: Value(DateTime.now()),
-    ));
+    return (_db.update(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).write(
+      UserLessonCompanion(
+        description: Value(description),
+        updatedAt: Value(DateTime.now()),
+      ),
+    );
   }
 
   Future<void> updateLessonTags(int lessonId, String tags) {
-    return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
-        .write(UserLessonCompanion(
-      tags: Value(tags),
-      updatedAt: Value(DateTime.now()),
-    ));
+    return (_db.update(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).write(
+      UserLessonCompanion(tags: Value(tags), updatedAt: Value(DateTime.now())),
+    );
   }
 
   Future<void> updateLessonPublic(int lessonId, bool isPublic) {
-    return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
-        .write(UserLessonCompanion(
-      isPublic: Value(isPublic),
-      updatedAt: Value(DateTime.now()),
-    ));
+    return (_db.update(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).write(
+      UserLessonCompanion(
+        isPublic: Value(isPublic),
+        updatedAt: Value(DateTime.now()),
+      ),
+    );
   }
 
   Future<void> updateLessonPracticeSettings(
@@ -918,17 +988,22 @@ class LessonRepository {
     int? testQuestionLimit,
     int? matchPairLimit,
   }) {
-    return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
-        .write(UserLessonCompanion(
-      learnTermLimit:
-          learnTermLimit == null ? const Value.absent() : Value(learnTermLimit),
-      testQuestionLimit: testQuestionLimit == null
-          ? const Value.absent()
-          : Value(testQuestionLimit),
-      matchPairLimit:
-          matchPairLimit == null ? const Value.absent() : Value(matchPairLimit),
-      updatedAt: Value(DateTime.now()),
-    ));
+    return (_db.update(
+      _db.userLesson,
+    )..where((tbl) => tbl.id.equals(lessonId))).write(
+      UserLessonCompanion(
+        learnTermLimit: learnTermLimit == null
+            ? const Value.absent()
+            : Value(learnTermLimit),
+        testQuestionLimit: testQuestionLimit == null
+            ? const Value.absent()
+            : Value(testQuestionLimit),
+        matchPairLimit: matchPairLimit == null
+            ? const Value.absent()
+            : Value(matchPairLimit),
+        updatedAt: Value(DateTime.now()),
+      ),
+    );
   }
 
   Future<int> addTerm(
@@ -939,31 +1014,36 @@ class LessonRepository {
     String? definitionEn,
     String? kanjiMeaning,
   }) async {
-    final maxOrder = await (_db.selectOnly(_db.userLessonTerm)
-          ..addColumns([_db.userLessonTerm.orderIndex])
-          ..where(_db.userLessonTerm.lessonId.equals(lessonId))
-          ..orderBy([
-            OrderingTerm(
-              expression: _db.userLessonTerm.orderIndex,
-              mode: OrderingMode.desc,
-            ),
-          ])
-          ..limit(1))
-        .getSingleOrNull();
+    final maxOrder =
+        await (_db.selectOnly(_db.userLessonTerm)
+              ..addColumns([_db.userLessonTerm.orderIndex])
+              ..where(_db.userLessonTerm.lessonId.equals(lessonId))
+              ..orderBy([
+                OrderingTerm(
+                  expression: _db.userLessonTerm.orderIndex,
+                  mode: OrderingMode.desc,
+                ),
+              ])
+              ..limit(1))
+            .getSingleOrNull();
     final nextOrder = (maxOrder?.read(_db.userLessonTerm.orderIndex) ?? 0) + 1;
-    final termId = await _db.into(_db.userLessonTerm).insert(
+    final termId = await _db
+        .into(_db.userLessonTerm)
+        .insert(
           UserLessonTermCompanion.insert(
             lessonId: lessonId,
             orderIndex: Value(nextOrder),
             term: term == null ? const Value.absent() : Value(term),
             reading: reading == null ? const Value.absent() : Value(reading),
-            definition:
-                definition == null ? const Value.absent() : Value(definition),
+            definition: definition == null
+                ? const Value.absent()
+                : Value(definition),
             definitionEn: definitionEn == null
                 ? const Value.absent()
                 : Value(definitionEn),
-            kanjiMeaning:
-                kanjiMeaning == null ? const Value.absent() : Value(kanjiMeaning),
+            kanjiMeaning: kanjiMeaning == null
+                ? const Value.absent()
+                : Value(kanjiMeaning),
           ),
         );
     await _touchLesson(lessonId);
@@ -992,18 +1072,24 @@ class LessonRepository {
     String? definitionEn,
     String? kanjiMeaning,
   }) {
-    final update = (_db.update(_db.userLessonTerm)
-          ..where((tbl) => tbl.id.equals(termId)))
-        .write(UserLessonTermCompanion(
-      term: term == null ? const Value.absent() : Value(term),
-      reading: reading == null ? const Value.absent() : Value(reading),
-      definition:
-          definition == null ? const Value.absent() : Value(definition),
-      definitionEn:
-          definitionEn == null ? const Value.absent() : Value(definitionEn),
-      kanjiMeaning:
-          kanjiMeaning == null ? const Value.absent() : Value(kanjiMeaning),
-    ));
+    final update =
+        (_db.update(
+          _db.userLessonTerm,
+        )..where((tbl) => tbl.id.equals(termId))).write(
+          UserLessonTermCompanion(
+            term: term == null ? const Value.absent() : Value(term),
+            reading: reading == null ? const Value.absent() : Value(reading),
+            definition: definition == null
+                ? const Value.absent()
+                : Value(definition),
+            definitionEn: definitionEn == null
+                ? const Value.absent()
+                : Value(definitionEn),
+            kanjiMeaning: kanjiMeaning == null
+                ? const Value.absent()
+                : Value(kanjiMeaning),
+          ),
+        );
     if (lessonId == null) {
       return update;
     }
@@ -1015,9 +1101,9 @@ class LessonRepository {
     required bool isStarred,
     int? lessonId,
   }) {
-    final update = (_db.update(_db.userLessonTerm)
-          ..where((tbl) => tbl.id.equals(termId)))
-        .write(UserLessonTermCompanion(isStarred: Value(isStarred)));
+    final update =
+        (_db.update(_db.userLessonTerm)..where((tbl) => tbl.id.equals(termId)))
+            .write(UserLessonTermCompanion(isStarred: Value(isStarred)));
     if (lessonId == null) {
       return update;
     }
@@ -1029,9 +1115,9 @@ class LessonRepository {
     required bool isLearned,
     int? lessonId,
   }) {
-    final update = (_db.update(_db.userLessonTerm)
-          ..where((tbl) => tbl.id.equals(termId)))
-        .write(UserLessonTermCompanion(isLearned: Value(isLearned)));
+    final update =
+        (_db.update(_db.userLessonTerm)..where((tbl) => tbl.id.equals(termId)))
+            .write(UserLessonTermCompanion(isLearned: Value(isLearned)));
     if (lessonId == null) {
       return update;
     }
@@ -1046,11 +1132,12 @@ class LessonRepository {
   }
 
   Future<void> resetLessonProgress(int lessonId) async {
-    final ids = await (_db.selectOnly(_db.userLessonTerm)
-          ..addColumns([_db.userLessonTerm.id])
-          ..where(_db.userLessonTerm.lessonId.equals(lessonId)))
-        .map((row) => row.read(_db.userLessonTerm.id)!)
-        .get();
+    final ids =
+        await (_db.selectOnly(_db.userLessonTerm)
+              ..addColumns([_db.userLessonTerm.id])
+              ..where(_db.userLessonTerm.lessonId.equals(lessonId)))
+            .map((row) => row.read(_db.userLessonTerm.id)!)
+            .get();
     if (ids.isEmpty) {
       return;
     }
@@ -1058,26 +1145,28 @@ class LessonRepository {
       await (_db.update(_db.userLessonTerm)
             ..where((tbl) => tbl.lessonId.equals(lessonId)))
           .write(const UserLessonTermCompanion(isLearned: Value(false)));
-      await (_db.delete(_db.srsState)
-            ..where((tbl) => tbl.vocabId.isIn(ids)))
-          .go();
+      await (_db.delete(
+        _db.srsState,
+      )..where((tbl) => tbl.vocabId.isIn(ids))).go();
     });
     await _touchLesson(lessonId);
   }
 
   Future<UserProgressData> _ensureProgressRow(DateTime day) async {
-    final existing = await (_db.select(_db.userProgress)
-          ..where((tbl) => tbl.day.equals(day)))
-        .getSingleOrNull();
+    final existing = await (_db.select(
+      _db.userProgress,
+    )..where((tbl) => tbl.day.equals(day))).getSingleOrNull();
     if (existing != null) {
       return existing;
     }
     final yesterday = day.subtract(const Duration(days: 1));
-    final yesterdayRow = await (_db.select(_db.userProgress)
-          ..where((tbl) => tbl.day.equals(yesterday)))
-        .getSingleOrNull();
+    final yesterdayRow = await (_db.select(
+      _db.userProgress,
+    )..where((tbl) => tbl.day.equals(yesterday))).getSingleOrNull();
     final nextStreak = yesterdayRow == null ? 1 : yesterdayRow.streak + 1;
-    final id = await _db.into(_db.userProgress).insert(
+    final id = await _db
+        .into(_db.userProgress)
+        .insert(
           UserProgressCompanion.insert(
             day: day,
             xp: const Value(0),
@@ -1089,8 +1178,9 @@ class LessonRepository {
             reviewEasyCount: const Value(0),
           ),
         );
-    return (_db.select(_db.userProgress)..where((tbl) => tbl.id.equals(id)))
-        .getSingle();
+    return (_db.select(
+      _db.userProgress,
+    )..where((tbl) => tbl.id.equals(id))).getSingle();
   }
 
   Future<void> recordStudyActivity({required int xpDelta}) async {
@@ -1099,12 +1189,14 @@ class LessonRepository {
     }
     final today = _startOfDay(DateTime.now());
     final todayRow = await _ensureProgressRow(today);
-    await (_db.update(_db.userProgress)
-          ..where((tbl) => tbl.id.equals(todayRow.id)))
-        .write(UserProgressCompanion(
-      xp: Value(todayRow.xp + xpDelta),
-      streak: Value(todayRow.streak),
-    ));
+    await (_db.update(
+      _db.userProgress,
+    )..where((tbl) => tbl.id.equals(todayRow.id))).write(
+      UserProgressCompanion(
+        xp: Value(todayRow.xp + xpDelta),
+        streak: Value(todayRow.streak),
+      ),
+    );
   }
 
   Future<void> recordReview({required int quality}) async {
@@ -1130,16 +1222,18 @@ class LessonRepository {
         easyDelta = 1;
         break;
     }
-    await (_db.update(_db.userProgress)
-          ..where((tbl) => tbl.id.equals(todayRow.id)))
-        .write(UserProgressCompanion(
-      reviewedCount: Value(todayRow.reviewedCount + 1),
-      reviewAgainCount: Value(todayRow.reviewAgainCount + againDelta),
-      reviewHardCount: Value(todayRow.reviewHardCount + hardDelta),
-      reviewGoodCount: Value(todayRow.reviewGoodCount + goodDelta),
-      reviewEasyCount: Value(todayRow.reviewEasyCount + easyDelta),
-      streak: Value(todayRow.streak),
-    ));
+    await (_db.update(
+      _db.userProgress,
+    )..where((tbl) => tbl.id.equals(todayRow.id))).write(
+      UserProgressCompanion(
+        reviewedCount: Value(todayRow.reviewedCount + 1),
+        reviewAgainCount: Value(todayRow.reviewAgainCount + againDelta),
+        reviewHardCount: Value(todayRow.reviewHardCount + hardDelta),
+        reviewGoodCount: Value(todayRow.reviewGoodCount + goodDelta),
+        reviewEasyCount: Value(todayRow.reviewEasyCount + easyDelta),
+        streak: Value(todayRow.streak),
+      ),
+    );
   }
 
   /// Process an SRS review for a specific term
@@ -1152,13 +1246,13 @@ class LessonRepository {
 
     // 2. Get current SRS state
     var srsState = await _db.srsDao.getSrsState(termId);
-    
+
     // Initialize if missing
     if (srsState == null) {
       await _db.srsDao.initializeSrsState(termId);
       srsState = await _db.srsDao.getSrsState(termId);
     }
-    
+
     if (srsState == null) return; // Should not happen
 
     // 3. Calculate next review
@@ -1180,6 +1274,13 @@ class LessonRepository {
     );
   }
 
+  Future<void> ensureSrsStateForTerm(int termId) async {
+    final existing = await _db.srsDao.getSrsState(termId);
+    if (existing == null) {
+      await _db.srsDao.initializeSrsState(termId);
+    }
+  }
+
   Future<int> recordAttempt({
     required String mode,
     required String level,
@@ -1190,7 +1291,9 @@ class LessonRepository {
     List<AttemptAnswerDraft> answers = const [],
   }) async {
     return _db.transaction(() async {
-      final attemptId = await _db.into(_db.attempt).insert(
+      final attemptId = await _db
+          .into(_db.attempt)
+          .insert(
             AttemptCompanion.insert(
               mode: mode,
               level: level,
@@ -1220,14 +1323,15 @@ class LessonRepository {
   }
 
   Future<List<ReviewDaySummary>> fetchReviewHistory({int limit = 30}) async {
-    final rows = await (_db.select(_db.userProgress)
-          ..where((tbl) => tbl.reviewedCount.isBiggerThanValue(0))
-          ..orderBy([
-            (tbl) =>
-                OrderingTerm(expression: tbl.day, mode: OrderingMode.desc),
-          ])
-          ..limit(limit))
-        .get();
+    final rows =
+        await (_db.select(_db.userProgress)
+              ..where((tbl) => tbl.reviewedCount.isBiggerThanValue(0))
+              ..orderBy([
+                (tbl) =>
+                    OrderingTerm(expression: tbl.day, mode: OrderingMode.desc),
+              ])
+              ..limit(limit))
+            .get();
     return rows
         .map(
           (row) => ReviewDaySummary(
@@ -1243,15 +1347,16 @@ class LessonRepository {
   }
 
   Future<List<AttemptSummary>> fetchAttemptHistory({int limit = 50}) async {
-    final rows = await (_db.select(_db.attempt)
-          ..orderBy([
-            (tbl) => OrderingTerm(
+    final rows =
+        await (_db.select(_db.attempt)
+              ..orderBy([
+                (tbl) => OrderingTerm(
                   expression: tbl.startedAt,
                   mode: OrderingMode.desc,
                 ),
-          ])
-          ..limit(limit))
-        .get();
+              ])
+              ..limit(limit))
+            .get();
     return rows
         .map(
           (row) => AttemptSummary(
@@ -1269,16 +1374,17 @@ class LessonRepository {
 
   Future<ProgressSummary> fetchProgressSummary() async {
     final today = _startOfDay(DateTime.now());
-    final todayRow = await (_db.select(_db.userProgress)
-          ..where((tbl) => tbl.day.equals(today)))
-        .getSingleOrNull();
-    final latestRow = await (_db.select(_db.userProgress)
-          ..orderBy([
-            (tbl) =>
-                OrderingTerm(expression: tbl.day, mode: OrderingMode.desc),
-          ])
-          ..limit(1))
-        .getSingleOrNull();
+    final todayRow = await (_db.select(
+      _db.userProgress,
+    )..where((tbl) => tbl.day.equals(today))).getSingleOrNull();
+    final latestRow =
+        await (_db.select(_db.userProgress)
+              ..orderBy([
+                (tbl) =>
+                    OrderingTerm(expression: tbl.day, mode: OrderingMode.desc),
+              ])
+              ..limit(1))
+            .getSingleOrNull();
 
     var streak = 0;
     if (todayRow != null) {
@@ -1290,18 +1396,18 @@ class LessonRepository {
       }
     }
 
-    final totalXpRow = await (_db.selectOnly(_db.userProgress)
-          ..addColumns([_db.userProgress.xp.sum()]))
-        .getSingleOrNull();
+    final totalXpRow = await (_db.selectOnly(
+      _db.userProgress,
+    )..addColumns([_db.userProgress.xp.sum()])).getSingleOrNull();
     final totalXp = totalXpRow?.read(_db.userProgress.xp.sum()) ?? 0;
 
-    final attemptStats = await (_db.selectOnly(_db.attempt)
-          ..addColumns([
-            _db.attempt.id.count(),
-            _db.attempt.score.sum(),
-            _db.attempt.total.sum(),
-          ]))
-        .getSingleOrNull();
+    final attemptStats =
+        await (_db.selectOnly(_db.attempt)..addColumns([
+              _db.attempt.id.count(),
+              _db.attempt.score.sum(),
+              _db.attempt.total.sum(),
+            ]))
+            .getSingleOrNull();
     final totalAttempts = attemptStats?.read(_db.attempt.id.count()) ?? 0;
     final totalCorrect = attemptStats?.read(_db.attempt.score.sum()) ?? 0;
     final totalQuestions = attemptStats?.read(_db.attempt.total.sum()) ?? 0;
@@ -1325,9 +1431,9 @@ class LessonRepository {
   }
 
   Future<void> deleteTerm(int termId, {int? lessonId}) {
-    final delete = (_db.delete(_db.userLessonTerm)
-          ..where((tbl) => tbl.id.equals(termId)))
-        .go();
+    final delete = (_db.delete(
+      _db.userLessonTerm,
+    )..where((tbl) => tbl.id.equals(termId))).go();
     if (lessonId == null) {
       return delete;
     }
@@ -1347,17 +1453,16 @@ class LessonRepository {
     await _touchLesson(lessonId);
   }
 
-  Future<void> replaceTerms(
-    int lessonId,
-    List<LessonTermDraft> terms,
-  ) async {
+  Future<void> replaceTerms(int lessonId, List<LessonTermDraft> terms) async {
     await _db.transaction(() async {
-      await (_db.delete(_db.userLessonTerm)
-            ..where((tbl) => tbl.lessonId.equals(lessonId)))
-          .go();
+      await (_db.delete(
+        _db.userLessonTerm,
+      )..where((tbl) => tbl.lessonId.equals(lessonId))).go();
       for (var i = 0; i < terms.length; i++) {
         final term = terms[i];
-        await _db.into(_db.userLessonTerm).insert(
+        await _db
+            .into(_db.userLessonTerm)
+            .insert(
               UserLessonTermCompanion.insert(
                 lessonId: lessonId,
                 orderIndex: Value(i + 1),
@@ -1372,24 +1477,22 @@ class LessonRepository {
     await _touchLesson(lessonId);
   }
 
-  Future<void> appendTerms(
-    int lessonId,
-    List<LessonTermDraft> terms,
-  ) async {
+  Future<void> appendTerms(int lessonId, List<LessonTermDraft> terms) async {
     if (terms.isEmpty) {
       return;
     }
-    final maxOrder = await (_db.selectOnly(_db.userLessonTerm)
-          ..addColumns([_db.userLessonTerm.orderIndex])
-          ..where(_db.userLessonTerm.lessonId.equals(lessonId))
-          ..orderBy([
-            OrderingTerm(
-              expression: _db.userLessonTerm.orderIndex,
-              mode: OrderingMode.desc,
-            ),
-          ])
-          ..limit(1))
-        .getSingleOrNull();
+    final maxOrder =
+        await (_db.selectOnly(_db.userLessonTerm)
+              ..addColumns([_db.userLessonTerm.orderIndex])
+              ..where(_db.userLessonTerm.lessonId.equals(lessonId))
+              ..orderBy([
+                OrderingTerm(
+                  expression: _db.userLessonTerm.orderIndex,
+                  mode: OrderingMode.desc,
+                ),
+              ])
+              ..limit(1))
+            .getSingleOrNull();
     var nextOrder = (maxOrder?.read(_db.userLessonTerm.orderIndex) ?? 0) + 1;
     await _db.batch((batch) {
       for (final term in terms) {
@@ -1421,9 +1524,7 @@ class LessonRepository {
     query
       ..where(_db.userLessonTerm.lessonId.equals(lessonId))
       ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now))
-      ..orderBy([
-        OrderingTerm(expression: _db.userLessonTerm.orderIndex),
-      ]);
+      ..orderBy([OrderingTerm(expression: _db.userLessonTerm.orderIndex)]);
     return query.map((row) => row.readTable(_db.userLessonTerm)).get();
   }
 
@@ -1437,16 +1538,14 @@ class LessonRepository {
     ]);
     query
       ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now))
-      ..orderBy([
-        OrderingTerm(expression: _db.srsState.nextReviewAt),
-      ]);
+      ..orderBy([OrderingTerm(expression: _db.srsState.nextReviewAt)]);
     return query.map((row) => row.readTable(_db.userLessonTerm)).get();
   }
 
   Future<SrsStateData?> getSrsState(int termId) {
-    return (_db.select(_db.srsState)
-          ..where((tbl) => tbl.vocabId.equals(termId)))
-        .getSingleOrNull();
+    return (_db.select(
+      _db.srsState,
+    )..where((tbl) => tbl.vocabId.equals(termId))).getSingleOrNull();
   }
 
   Future<void> upsertSrsState({
@@ -1457,7 +1556,9 @@ class LessonRepository {
     required DateTime nextReviewAt,
     required DateTime lastReviewedAt,
   }) {
-    return _db.into(_db.srsState).insertOnConflictUpdate(
+    return _db
+        .into(_db.srsState)
+        .insertOnConflictUpdate(
           SrsStateCompanion(
             vocabId: Value(termId),
             box: Value(box),
@@ -1470,9 +1571,9 @@ class LessonRepository {
   }
 
   Future<void> deleteSrsState(int termId) {
-    return (_db.delete(_db.srsState)
-          ..where((tbl) => tbl.vocabId.equals(termId)))
-        .go();
+    return (_db.delete(
+      _db.srsState,
+    )..where((tbl) => tbl.vocabId.equals(termId))).go();
   }
 
   Future<Map<String, dynamic>> exportBackup() async {
@@ -1573,8 +1674,6 @@ class LessonRepository {
     return (_db.update(_db.userLesson)..where((tbl) => tbl.id.equals(lessonId)))
         .write(UserLessonCompanion(updatedAt: Value(DateTime.now())));
   }
-
-
 }
 
 class LessonProgressStats {
@@ -1586,10 +1685,7 @@ class LessonProgressStats {
   final int termCount;
   final int completedCount;
 
-  LessonProgressStats copyWith({
-    int? termCount,
-    int? completedCount,
-  }) {
+  LessonProgressStats copyWith({int? termCount, int? completedCount}) {
     return LessonProgressStats(
       termCount: termCount ?? this.termCount,
       completedCount: completedCount ?? this.completedCount,

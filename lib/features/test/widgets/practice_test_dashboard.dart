@@ -3,12 +3,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
-import 'package:jpstudy/core/language_provider.dart'; 
+import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/app_language.dart'; // Explicit import
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/test/screens/test_config_screen.dart';
 import 'package:jpstudy/features/test/screens/test_screen.dart';
 import 'package:jpstudy/core/services/session_storage_provider.dart';
+import '../models/test_config.dart';
 
 class PracticeTestDashboard extends ConsumerWidget {
   const PracticeTestDashboard({super.key});
@@ -20,7 +21,7 @@ class PracticeTestDashboard extends ConsumerWidget {
     final isN5 = level == StudyLevel.n5;
     final color = isN5 ? Colors.pink : Colors.orange;
     final levelLabel = isN5 ? 'N5' : 'N4';
-    
+
     // Localization
     final language = ref.watch(appLanguageProvider);
 
@@ -30,13 +31,19 @@ class PracticeTestDashboard extends ConsumerWidget {
     );
   }
 
-  Widget _buildTestCard(BuildContext context, WidgetRef ref, String level, Color color, AppLanguage language) {
+  Widget _buildTestCard(
+    BuildContext context,
+    WidgetRef ref,
+    String level,
+    Color color,
+    AppLanguage language,
+  ) {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       elevation: 2,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: InkWell(
-        onTap: () => _startLevelTest(context, ref, level),
+        onTap: () => _startLevelTest(context, ref, level, language),
         borderRadius: BorderRadius.circular(20),
         child: Container(
           decoration: BoxDecoration(
@@ -63,7 +70,11 @@ class PracticeTestDashboard extends ConsumerWidget {
                   color: Colors.white.withValues(alpha: 0.2),
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(Icons.school_rounded, size: 32, color: Colors.white),
+                child: const Icon(
+                  Icons.school_rounded,
+                  size: 32,
+                  color: Colors.white,
+                ),
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -72,7 +83,7 @@ class PracticeTestDashboard extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      language.startPracticeTitle(level),
+                      language.mockExamTitle(level),
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -82,12 +93,18 @@ class PracticeTestDashboard extends ConsumerWidget {
                     const SizedBox(height: 4),
                     Text(
                       language.mockExamSubtitle,
-                      style: const TextStyle(color: Colors.white70, fontSize: 13),
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 13,
+                      ),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white70),
+              const Icon(
+                Icons.arrow_forward_ios_rounded,
+                color: Colors.white70,
+              ),
             ],
           ),
         ),
@@ -95,7 +112,12 @@ class PracticeTestDashboard extends ConsumerWidget {
     );
   }
 
-  Future<void> _startLevelTest(BuildContext context, WidgetRef ref, String level) async {
+  Future<void> _startLevelTest(
+    BuildContext context,
+    WidgetRef ref,
+    String level,
+    AppLanguage language,
+  ) async {
     // Show loading
     showDialog(
       context: context,
@@ -108,27 +130,29 @@ class PracticeTestDashboard extends ConsumerWidget {
       final repo = ref.read(lessonRepositoryProvider);
       final allVocab = await repo.getVocabByLevel(level);
       final sessionKey = 'mock_$level';
-      
+
       if (!context.mounted) return;
       Navigator.pop(context); // Hide loading
 
       if (allVocab.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('No vocabulary found for JLPT $level')),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(language.noTermsAvailableLabel)));
         return;
       }
 
       // Navigate to Config Screen
       final storage = ref.read(sessionStorageProvider);
       final resumeSnapshot = await storage.loadTestSession(sessionKey);
+      final initialConfig = TestConfig.mockExam(questionCount: allVocab.length);
       if (!context.mounted) return;
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => TestConfigScreen(
             lessonId: -1, // Special ID for Mock Tests
-            lessonTitle: 'JLPT $level Mock Exam',
+            lessonTitle: language.mockExamTitle(level),
             maxQuestions: allVocab.length,
+            initialConfig: initialConfig,
             resumeSnapshot: resumeSnapshot,
             onResume: resumeSnapshot == null
                 ? null
@@ -138,7 +162,7 @@ class PracticeTestDashboard extends ConsumerWidget {
                         builder: (context) => TestScreen(
                           items: allVocab,
                           lessonId: -1,
-                          lessonTitle: 'JLPT $level Mock Exam',
+                          lessonTitle: language.mockExamTitle(level),
                           config: resumeSnapshot.config,
                           resumeSnapshot: resumeSnapshot,
                           sessionKey: sessionKey,
@@ -155,9 +179,10 @@ class PracticeTestDashboard extends ConsumerWidget {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (context) => TestScreen(
-                    items: allVocab, // Pass all, TestScreen handles selection/shuffling based on count
+                    items:
+                        allVocab, // Pass all, TestScreen handles selection/shuffling based on count
                     lessonId: -1,
-                    lessonTitle: 'JLPT $level Mock Exam',
+                    lessonTitle: language.mockExamTitle(level),
                     config: config,
                     sessionKey: sessionKey,
                   ),
@@ -167,13 +192,12 @@ class PracticeTestDashboard extends ConsumerWidget {
           ),
         ),
       );
-
     } catch (e) {
       if (context.mounted) Navigator.pop(context);
       if (!context.mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error loading test: $e')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.loadErrorLabel)));
     }
   }
 }

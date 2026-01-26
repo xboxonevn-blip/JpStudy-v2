@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/dashboard_provider.dart';
+import '../../grammar/grammar_providers.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../../core/language_provider.dart';
 import '../../../core/app_language.dart';
@@ -12,15 +13,26 @@ class MiniDashboard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final dashboardAsync = ref.watch(dashboardProvider);
     final language = ref.watch(appLanguageProvider);
+    final ghostCount = ref
+        .watch(grammarGhostCountProvider)
+        .maybeWhen(data: (count) => count, orElse: () => 0);
 
     return dashboardAsync.when(
-      data: (state) => _buildContent(context, state, language),
-      loading: () => const SizedBox(height: 80, child: Center(child: CircularProgressIndicator())),
+      data: (state) => _buildContent(context, state, language, ghostCount),
+      loading: () => const SizedBox(
+        height: 80,
+        child: Center(child: CircularProgressIndicator()),
+      ),
       error: (err, stack) => const SizedBox.shrink(),
     );
   }
 
-  Widget _buildContent(BuildContext context, DashboardState state, AppLanguage language) {
+  Widget _buildContent(
+    BuildContext context,
+    DashboardState state,
+    AppLanguage language,
+    int ghostCount,
+  ) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Container(
@@ -37,8 +49,10 @@ class MiniDashboard extends ConsumerWidget {
             ),
           ],
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Wrap(
+          alignment: WrapAlignment.spaceEvenly,
+          spacing: 16,
+          runSpacing: 12,
           children: [
             _buildStatItem(
               context,
@@ -69,6 +83,14 @@ class MiniDashboard extends ConsumerWidget {
                 value: '${state.vocabMistakeCount}',
                 label: language.mistakesLabel,
               ),
+            if (ghostCount > 0)
+              _buildStatItem(
+                context,
+                icon: Icons.auto_fix_high_rounded,
+                color: const Color(0xFF7C3AED),
+                value: '$ghostCount',
+                label: language.ghostReviewsLabel,
+              ),
           ],
         ),
       ),
@@ -85,14 +107,14 @@ class MiniDashboard extends ConsumerWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-         Container(
-           padding: const EdgeInsets.all(8),
-           decoration: BoxDecoration(
-             color: color.withValues(alpha: 0.1),
-             shape: BoxShape.circle,
-           ),
-           child: Icon(icon, color: color, size: 20),
-         ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: color.withValues(alpha: 0.1),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(icon, color: color, size: 20),
+        ),
         const SizedBox(height: 6),
         Text(
           value,

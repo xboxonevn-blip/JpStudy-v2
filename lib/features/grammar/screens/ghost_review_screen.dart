@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
-import '../../../data/db/app_database.dart';
 import '../../../features/grammar/grammar_providers.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../common/widgets/clay_card.dart';
@@ -20,7 +19,10 @@ class GhostReviewScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppThemeV2.surface,
       appBar: AppBar(
-        title: const Text('Ghost Reviews', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text(
+          'Ghost Reviews',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -31,7 +33,9 @@ class GhostReviewScreen extends ConsumerWidget {
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text('Review grammar points you missed in previous tests.'),
+                  content: Text(
+                    'Review grammar points you missed in previous tests.',
+                  ),
                 ),
               );
             },
@@ -45,13 +49,17 @@ class GhostReviewScreen extends ConsumerWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                   // Placeholder for Mascot
-                  const Icon(Icons.check_circle_outline, size: 80, color: AppThemeV2.primary),
+                  // Placeholder for Mascot
+                  const Icon(
+                    Icons.check_circle_outline,
+                    size: 80,
+                    color: AppThemeV2.primary,
+                  ),
                   const SizedBox(height: 16),
                   Text(
                     'No Ghosts!',
                     style: TextStyle(
-                      fontSize: 24, 
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: AppThemeV2.textMain,
                     ),
@@ -60,7 +68,7 @@ class GhostReviewScreen extends ConsumerWidget {
                   Text(
                     'You haven\'t missed any grammar points yet.\nKeep up the good work!',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: AppThemeV2.textSecondary),
+                    style: TextStyle(color: AppThemeV2.textSub),
                   ),
                 ],
               ),
@@ -68,7 +76,12 @@ class GhostReviewScreen extends ConsumerWidget {
           }
 
           return ListView.builder(
-            padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 80),
+            padding: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 16,
+              bottom: 80,
+            ),
             itemCount: ghosts.length,
             itemBuilder: (context, index) {
               final data = ghosts[index];
@@ -89,11 +102,17 @@ class GhostReviewScreen extends ConsumerWidget {
                 backgroundColor: AppThemeV2.primary,
                 foregroundColor: Colors.white,
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => GhostPracticeScreen(ghosts: ghostsAsync.value!),
-                  ));
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          GhostPracticeScreen(ghosts: ghostsAsync.value!),
+                    ),
+                  );
                 },
-                label: const Text('Practice Ghosts', style: TextStyle(fontWeight: FontWeight.bold)),
+                label: const Text(
+                  'Practice Ghosts',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
                 icon: const Icon(Icons.videogame_asset),
               ),
             )
@@ -119,8 +138,12 @@ class _GhostClayCardState extends State<_GhostClayCard> {
   Widget build(BuildContext context) {
     final point = widget.data.point;
     final isVietnamese = widget.language == AppLanguage.vi;
-    final title = isVietnamese ? point.meaningVi : point.titleEn ?? point.grammarPoint;
-    final explanation = isVietnamese ? point.explanationVi : point.explanationEn;
+    final title = isVietnamese
+        ? point.meaningVi
+        : point.titleEn ?? point.grammarPoint;
+    final explanation = isVietnamese
+        ? point.explanationVi
+        : point.explanationEn;
     final connection = isVietnamese ? point.connection : point.connectionEn;
 
     return ClayCard(
@@ -134,10 +157,14 @@ class _GhostClayCardState extends State<_GhostClayCard> {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.red.withOpacity(0.1),
+                  color: Colors.red.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Icon(Icons.pest_control, size: 24, color: Colors.red), // Fixed Icon
+                child: const Icon(
+                  Icons.pest_control,
+                  size: 24,
+                  color: Colors.red,
+                ), // Fixed Icon
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -154,52 +181,79 @@ class _GhostClayCardState extends State<_GhostClayCard> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      title ?? '', 
-                      style: const TextStyle(fontSize: 14, color: AppThemeV2.textSub),
+                      title ?? '',
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: AppThemeV2.textSub,
+                      ),
                     ),
                   ],
                 ),
               ),
               Icon(
-                _isExpanded ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded,
+                _isExpanded
+                    ? Icons.keyboard_arrow_up_rounded
+                    : Icons.keyboard_arrow_down_rounded,
                 color: AppThemeV2.textSub,
               ),
             ],
           ),
-          
+
           if (_isExpanded) ...[
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 16),
               child: Divider(height: 1),
             ),
             _buildLabel('Connection'),
-            Text(connection ?? '', style: const TextStyle(fontFamily: 'Monospace', color: AppThemeV2.textMain)),
+            Text(
+              connection ?? '',
+              style: const TextStyle(
+                fontFamily: 'Monospace',
+                color: AppThemeV2.textMain,
+              ),
+            ),
             const SizedBox(height: 16),
             _buildLabel('Explanation'),
-            Text(explanation ?? '', style: const TextStyle(color: AppThemeV2.textMain, height: 1.4)),
+            Text(
+              explanation ?? '',
+              style: const TextStyle(color: AppThemeV2.textMain, height: 1.4),
+            ),
             const SizedBox(height: 16),
             _buildLabel('Examples'),
-            ...widget.data.examples.map((ex) => Padding(
-                  padding: const EdgeInsets.only(top: 12.0),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: AppThemeV2.surface,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(ex.japanese, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-                        const SizedBox(height: 4),
-                        Text(
-                          isVietnamese ? ex.translationVi ?? ex.translation : ex.translationEn ?? ex.translation,
-                          style: TextStyle(fontSize: 13, color: AppThemeV2.textSub),
-                        ),
-                      ],
-                    ),
+            ...widget.data.examples.map(
+              (ex) => Padding(
+                padding: const EdgeInsets.only(top: 12.0),
+                child: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: AppThemeV2.surface,
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                )),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        ex.japanese,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        isVietnamese
+                            ? ex.translationVi ?? ex.translation
+                            : ex.translationEn ?? ex.translation,
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: AppThemeV2.textSub,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ],
       ),

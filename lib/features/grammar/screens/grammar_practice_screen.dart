@@ -10,6 +10,7 @@ import '../services/grammar_question_generator.dart';
 import '../../../theme/app_theme_v2.dart';
 import '../../common/widgets/clay_button.dart';
 import '../../../core/language_provider.dart';
+import '../../../core/app_language.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
 
 enum GrammarPracticeMode { normal, ghost }
@@ -19,13 +20,14 @@ class GrammarPracticeScreen extends ConsumerStatefulWidget {
   final GrammarPracticeMode mode; // Practice Mode
 
   const GrammarPracticeScreen({
-    super.key, 
+    super.key,
     this.initialIds,
     this.mode = GrammarPracticeMode.normal,
   });
 
   @override
-  ConsumerState<GrammarPracticeScreen> createState() => _GrammarPracticeScreenState();
+  ConsumerState<GrammarPracticeScreen> createState() =>
+      _GrammarPracticeScreenState();
 }
 
 class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
@@ -45,25 +47,27 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
   Future<void> _loadQuestions() async {
     final repo = ref.read(grammarRepositoryProvider);
     List<GrammarPoint> points;
-    
+
     if (widget.initialIds != null && widget.initialIds!.isNotEmpty) {
-       // Fetch specific points
-       points = await (repo.db.select(repo.db.grammarPoints)..where((t) => t.id.isIn(widget.initialIds!))).get();
+      // Fetch specific points
+      points = await (repo.db.select(
+        repo.db.grammarPoints,
+      )..where((t) => t.id.isIn(widget.initialIds!))).get();
     } else if (widget.mode == GrammarPracticeMode.ghost) {
-       // Fetch Ghost Points
-       points = await repo.fetchGhostPoints();
+      // Fetch Ghost Points
+      points = await repo.fetchGhostPoints();
     } else {
-       // Fetch due points
-       points = await repo.fetchDuePoints();
-       if (points.isEmpty) {
-         // Fallback: fetch random 5 learned or any points for practice if nothing due
-         // For now, just show empty
-       }
+      // Fetch due points
+      points = await repo.fetchDuePoints();
+      if (points.isEmpty) {
+        // Fallback: fetch random 5 learned or any points for practice if nothing due
+        // For now, just show empty
+      }
     }
 
-    // If ghost mode and no ghosts, maybe fallback? 
+    // If ghost mode and no ghosts, maybe fallback?
     // Usually invalid state if we checked before nav, but handle gracefully.
-    
+
     final details = <({GrammarPoint point, List<GrammarExample> examples})>[];
     for (final point in points) {
       final detail = await repo.getGrammarDetail(point.id);
@@ -77,27 +81,27 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     final levels = points.map((p) => p.jlptLevel).toSet().toList();
     List<GrammarPoint> distractorPool = [];
     if (levels.isNotEmpty) {
-       // Since we have N5/N4, just fetch all for now or optimize later
-       // repo.getGrammarPointsByLevel(level) - we need to iterate
-       for (final level in levels) {
-          final levelPoints = await repo.fetchPointsByLevel(level);
-          distractorPool.addAll(levelPoints);
-       }
+      // Since we have N5/N4, just fetch all for now or optimize later
+      // repo.getGrammarPointsByLevel(level) - we need to iterate
+      for (final level in levels) {
+        final levelPoints = await repo.fetchPointsByLevel(level);
+        distractorPool.addAll(levelPoints);
+      }
     }
 
     // Generate questions using the service
     final language = ref.watch(appLanguageProvider);
     final generated = GrammarQuestionGenerator.generateQuestions(
-      details, 
+      details,
       allPoints: distractorPool,
       language: language,
     );
-    
+
     // Customize for Ghost Mode if needed (e.g. force specific types)
-    // The generator produces multiple types per point sometimes. 
+    // The generator produces multiple types per point sometimes.
     // We might want to limit to 1 question per point for SRS.
     // For now, just take all generated. It adds variety.
-    
+
     _questions.addAll(generated);
     _questions.shuffle(); // Shuffle order
 
@@ -115,7 +119,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     });
 
     if (isCorrect) _score++;
-    
+
     // Update SRS in background
     final q = _questions[_currentIndex];
     final mistakeRepo = ref.read(mistakeRepositoryProvider);
@@ -129,10 +133,9 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
         _questions.add(q);
       }
     }
-    ref.read(grammarRepositoryProvider).recordReview(
-      grammarId: q.point.id,
-      quality: isCorrect ? 5 : 0,
-    );
+    ref
+        .read(grammarRepositoryProvider)
+        .recordReview(grammarId: q.point.id, quality: isCorrect ? 5 : 0);
 
     // Provide immediate feedback before moving on
     Future.delayed(const Duration(milliseconds: 1500), () {
@@ -150,26 +153,34 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
   }
 
   void _showSummary() {
+    final language = ref.read(appLanguageProvider);
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: const Text('Session Complete!', textAlign: TextAlign.center),
+        title: Text(language.reviewGrammarLabel, textAlign: TextAlign.center),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.check_circle_outline, color: Colors.green, size: 60),
+            const Icon(
+              Icons.check_circle_outline,
+              color: Colors.green,
+              size: 60,
+            ),
             const SizedBox(height: 16),
-            Text('You got $_score out of ${_questions.length} correct.', textAlign: TextAlign.center),
+            Text(
+              language.practiceSummaryLabel(_score, _questions.length),
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
         actions: [
           Center(
             child: SizedBox(
-               width: 150,
-               child: ClayButton(
-                label: 'Finish',
+              width: 150,
+              child: ClayButton(
+                label: language.doneLabel,
                 onPressed: () {
                   context.pop(); // close dialog
                   context.pop(); // back to grammar list
@@ -187,39 +198,50 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final language = ref.watch(appLanguageProvider);
     if (_isLoading) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     if (_questions.isEmpty) {
-       return Scaffold(
-         appBar: AppBar(backgroundColor: Colors.transparent, elevation: 0),
-         body: Center(
-           child: Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-             children: [
-               Icon(Icons.sentiment_satisfied_alt, size: 80, color: AppThemeV2.primary),
-               const SizedBox(height: 16),
-               Text(
-                 widget.mode == GrammarPracticeMode.ghost 
-                   ? 'No mistakes to review!' 
-                   : 'Zero items due for review!', 
-                 style: TextStyle(fontSize: 18, color: AppThemeV2.textSub, fontWeight: FontWeight.bold)
-               ),
-               const SizedBox(height: 32),
-               SizedBox(
-                 width: 200,
-                 child: ClayButton(
-                   label: 'GO BACK',
-                   onPressed: () => context.pop(),
-                   style: ClayButtonStyle.secondary,
-                   isExpanded: true,
-                 ),
-               ),
-             ],
-           ),
-         ),
-       );
+      return Scaffold(
+        appBar: AppBar(backgroundColor: Colors.transparent, elevation: 0),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.sentiment_satisfied_alt,
+                size: 80,
+                color: AppThemeV2.primary,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                widget.mode == GrammarPracticeMode.ghost
+                    ? language.ghostReviewAllClearTitle
+                    : language.reviewEmptyLabel,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: AppThemeV2.textSub,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 32),
+              SizedBox(
+                width: 200,
+                child: ClayButton(
+                  label: MaterialLocalizations.of(
+                    context,
+                  ).backButtonTooltip.toUpperCase(),
+                  onPressed: () => context.pop(),
+                  style: ClayButtonStyle.secondary,
+                  isExpanded: true,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
     }
 
     final q = _questions[_currentIndex];
@@ -231,7 +253,9 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(
-          widget.mode == GrammarPracticeMode.ghost ? 'FIX MISTAKES' : 'PRACTICE',
+          widget.mode == GrammarPracticeMode.ghost
+              ? language.ghostReviewTitle.toUpperCase()
+              : language.reviewGrammarLabel.toUpperCase(),
           style: TextStyle(
             color: AppThemeV2.textSub,
             fontWeight: FontWeight.w900,
@@ -240,7 +264,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           ),
         ),
         leading: IconButton(
-          icon: Icon(Icons.close_rounded, color: AppThemeV2.textSub), 
+          icon: Icon(Icons.close_rounded, color: AppThemeV2.textSub),
           onPressed: () => context.pop(),
         ),
       ),
@@ -251,9 +275,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
             children: [
               _buildProgressBar(progress),
               const SizedBox(height: 32),
-              Expanded(
-                child: _buildQuestionContent(q),
-              ),
+              Expanded(child: _buildQuestionContent(q)),
             ],
           ),
         ),
@@ -289,7 +311,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           key: ValueKey(_currentIndex), // Force rebuild when question changes
           prompt: q.explanation ?? 'Arrange the sentence',
           correctSentence: q.correctAnswer,
-          shuffledWords: List.of(q.options)..shuffle(), 
+          shuffledWords: List.of(q.options)..shuffle(),
           onCheck: _onAnswer,
           onReset: () {},
         );
@@ -305,7 +327,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
         return MultipleChoiceWidget(
           question: q.question,
           options: q.options,
-          correctAnswer: q.correctAnswer, 
+          correctAnswer: q.correctAnswer,
           onAnswer: _onAnswer,
         );
     }

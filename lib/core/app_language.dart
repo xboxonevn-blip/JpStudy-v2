@@ -1,8 +1,4 @@
-enum AppLanguage {
-  en,
-  vi,
-  ja,
-}
+enum AppLanguage { en, vi, ja }
 
 extension AppLanguageLabels on AppLanguage {
   String get label {
@@ -137,7 +133,6 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
-
   String get filterHasDataLabel {
     switch (this) {
       case AppLanguage.en:
@@ -267,6 +262,17 @@ extension AppLanguageLabels on AppLanguage {
         return '$count thu\u1eadt ng\u1eef';
       case AppLanguage.ja:
         return '$count \u8a9e';
+    }
+  }
+
+  String kanjiCountLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count kanji';
+      case AppLanguage.vi:
+        return '$count Kanji';
+      case AppLanguage.ja:
+        return '$count 漢字';
     }
   }
 
@@ -986,9 +992,6 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
-
-
-
   String get hintsLabel {
     switch (this) {
       case AppLanguage.en:
@@ -1032,7 +1035,6 @@ extension AppLanguageLabels on AppLanguage {
         return '\u5b9a\u7fa9';
     }
   }
-
 
   String get confirmDeleteTermTitle {
     switch (this) {
@@ -1163,6 +1165,149 @@ extension AppLanguageLabels on AppLanguage {
         return 'Vi\u1ebft';
       case AppLanguage.ja:
         return '\u66f8\u304f';
+    }
+  }
+
+  String get writeModeTypingLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Typing';
+      case AppLanguage.vi:
+        return 'Gõ';
+      case AppLanguage.ja:
+        return '入力';
+    }
+  }
+
+  String get writeModeTypingSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fill in answers with the keyboard.';
+      case AppLanguage.vi:
+        return 'Gõ đáp án.';
+      case AppLanguage.ja:
+        return 'キーボードで入力して答える。';
+    }
+  }
+
+  String get writeModeHandwritingLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Handwriting';
+      case AppLanguage.vi:
+        return 'Viết tay';
+      case AppLanguage.ja:
+        return '手書き';
+    }
+  }
+
+  String get writeModeHandwritingSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Write kanji on a practice canvas.';
+      case AppLanguage.vi:
+        return 'Viết Kanji.';
+      case AppLanguage.ja:
+        return '練習キャンバスで漢字を書く。';
+    }
+  }
+
+  String get handwritingLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Handwriting';
+      case AppLanguage.vi:
+        return 'Viết tay';
+      case AppLanguage.ja:
+        return '手書き';
+    }
+  }
+
+  String get handwritingInstructionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Draw the kanji in the box.';
+      case AppLanguage.vi:
+        return 'Viết Kanji vào khung.';
+      case AppLanguage.ja:
+        return '枠の中に漢字を書いてください。';
+    }
+  }
+
+  String get handwritingShowGuideLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Show guide';
+      case AppLanguage.vi:
+        return 'Hiện gợi ý';
+      case AppLanguage.ja:
+        return 'ガイド表示';
+    }
+  }
+
+  String get handwritingClearLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Clear';
+      case AppLanguage.vi:
+        return 'Xóa';
+      case AppLanguage.ja:
+        return 'クリア';
+    }
+  }
+
+  String get handwritingUndoLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Undo stroke';
+      case AppLanguage.vi:
+        return 'Lùi nét';
+      case AppLanguage.ja:
+        return '一画戻す';
+    }
+  }
+
+  String get handwritingCheckLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Check';
+      case AppLanguage.vi:
+        return 'Kiểm tra';
+      case AppLanguage.ja:
+        return '確認';
+    }
+  }
+
+  String handwritingStrokeCountLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Expected: $count strokes';
+      case AppLanguage.vi:
+        return 'Số nét: $count';
+      case AppLanguage.ja:
+        return '筆画数: $count';
+    }
+  }
+
+  String handwritingStrokesDrawnLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'You drew: $count';
+      case AppLanguage.vi:
+        return 'Bạn vẽ: $count';
+      case AppLanguage.ja:
+        return '描いた数: $count';
+    }
+  }
+
+  String get noKanjiAvailableLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No kanji available for this lesson.';
+      case AppLanguage.vi:
+        return 'Bài này chưa có Kanji.';
+      case AppLanguage.ja:
+        return 'このレッスンには漢字がありません。';
     }
   }
 
@@ -1638,7 +1783,7 @@ extension AppLanguageLabels on AppLanguage {
         return '\u30d2\u30f3\u30c8\u3092\u8868\u793a';
     }
   }
-  
+
   String get reviewsLabel {
     switch (this) {
       case AppLanguage.en:
@@ -1682,7 +1827,7 @@ extension AppLanguageLabels on AppLanguage {
         return '\u9593\u9055\u3044\u3092\u76f4\u3059';
     }
   }
-  
+
   String get continueJourneyLabel {
     switch (this) {
       case AppLanguage.en:
@@ -1748,7 +1893,7 @@ extension AppLanguageLabels on AppLanguage {
         return '\u7df4\u7fd2\u3092\u958b\u59cb';
     }
   }
-  
+
   String get levelLabel {
     switch (this) {
       case AppLanguage.en:
@@ -1770,7 +1915,6 @@ extension AppLanguageLabels on AppLanguage {
         return '\u30ec\u30c3\u30b9\u30f3';
     }
   }
-
 
   String get trackProgressLabel {
     switch (this) {
@@ -2420,6 +2564,7 @@ extension AppLanguageLabels on AppLanguage {
         return 'N3\u306e\u307f';
     }
   }
+
   String get continueLearningLabel {
     switch (this) {
       case AppLanguage.en:
@@ -2496,6 +2641,7 @@ extension AppLanguageLabels on AppLanguage {
         return '漢字';
     }
   }
+
   String get mockExamSubtitle {
     switch (this) {
       case AppLanguage.en:
@@ -2504,6 +2650,17 @@ extension AppLanguageLabels on AppLanguage {
         return '\u0110\u1ec1 thi th\u1eed t\u1ed5ng h\u1ee3p';
       case AppLanguage.ja:
         return '\u7dcf\u53d0\u6a21\u64ec\u8a66\u9a13';
+    }
+  }
+
+  String mockExamTitle(String level) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'JLPT $level Mock Exam';
+      case AppLanguage.vi:
+        return 'Đề thi thử JLPT $level';
+      case AppLanguage.ja:
+        return 'JLPT $level 模擬試験';
     }
   }
 
@@ -2517,6 +2674,7 @@ extension AppLanguageLabels on AppLanguage {
         return '$level\u306e\u7df4\u7fd2\u3092\u958b\u59cb';
     }
   }
+
   String get configureLearnSessionLabel {
     switch (this) {
       case AppLanguage.en:
@@ -3199,8 +3357,6 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
-
-
   String get adaptiveTestingLabel {
     switch (this) {
       case AppLanguage.en:
@@ -3343,7 +3499,6 @@ extension AppLanguageLabels on AppLanguage {
         return '以下のレッスンで間違いが多いので復習しましょう。';
     }
   }
-
 
   String get lessonRecommendationsEmptyLabel {
     switch (this) {
@@ -3511,6 +3666,105 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get ghostReviewsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Ghost Reviews';
+      case AppLanguage.vi:
+        return 'Ôn lỗi';
+      case AppLanguage.ja:
+        return 'ゴースト復習';
+    }
+  }
+
+  String get ghostReviewTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fix Mistakes';
+      case AppLanguage.vi:
+        return 'Sửa lỗi';
+      case AppLanguage.ja:
+        return 'ミス修正';
+    }
+  }
+
+  String ghostReviewBannerTitle(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fix Mistakes ($count)';
+      case AppLanguage.vi:
+        return 'Sửa lỗi ($count)';
+      case AppLanguage.ja:
+        return 'ミス修正 ($count)';
+    }
+  }
+
+  String get ghostReviewBannerSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review tricky grammar now.';
+      case AppLanguage.vi:
+        return 'Ôn lại ngữ pháp dễ sai.';
+      case AppLanguage.ja:
+        return '間違えやすい文法を復習。';
+    }
+  }
+
+  String get ghostReviewBannerActionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review';
+      case AppLanguage.vi:
+        return 'Ôn ngay';
+      case AppLanguage.ja:
+        return '復習';
+    }
+  }
+
+  String get ghostReviewAllClearTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'All caught up!';
+      case AppLanguage.vi:
+        return 'Đã ổn hết!';
+      case AppLanguage.ja:
+        return 'すべて完了！';
+    }
+  }
+
+  String get ghostReviewAllClearSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No tricky grammar pending.';
+      case AppLanguage.vi:
+        return 'Không còn lỗi ngữ pháp.';
+      case AppLanguage.ja:
+        return '復習が必要な文法はありません。';
+    }
+  }
+
+  String get practiceGhostLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Ghost Review';
+      case AppLanguage.vi:
+        return 'Ôn lỗi';
+      case AppLanguage.ja:
+        return 'ゴースト復習';
+    }
+  }
+
+  String get practiceGhostSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Fix grammar mistakes.';
+      case AppLanguage.vi:
+        return 'Ôn ngữ pháp sai.';
+      case AppLanguage.ja:
+        return '文法ミスを直す。';
+    }
+  }
+
   String get practiceMatchLabel {
     switch (this) {
       case AppLanguage.en:
@@ -3558,22 +3812,22 @@ extension AppLanguageLabels on AppLanguage {
   String get practiceExamLabel {
     switch (this) {
       case AppLanguage.en:
-        return 'Exam';
+        return 'Mock Exam';
       case AppLanguage.vi:
-        return 'Exam';
+        return 'Thi thử';
       case AppLanguage.ja:
-        return 'クイズ';
+        return '模擬試験';
     }
   }
 
   String get practiceExamSubtitle {
     switch (this) {
       case AppLanguage.en:
-        return 'Quick 10-question quiz.';
+        return 'Timed exam with scoring.';
       case AppLanguage.vi:
-        return 'Quiz nhanh 10 câu.';
+        return 'Thi có thời gian và chấm điểm.';
       case AppLanguage.ja:
-        return '10問クイック。';
+        return '時間制で採点あり。';
     }
   }
 

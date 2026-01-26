@@ -22,6 +22,18 @@ class TestConfig {
     this.adaptiveTesting = false,
   });
 
+  static TestConfig mockExam({required int questionCount}) {
+    final count = questionCount.clamp(10, 50);
+    final timeLimit = (count * 0.5).round().clamp(5, 30);
+    return TestConfig(
+      questionCount: count,
+      timeLimitMinutes: timeLimit,
+      shuffleQuestions: true,
+      showCorrectAfterWrong: false,
+      adaptiveTesting: false,
+    );
+  }
+
   TestConfig copyWith({
     int? questionCount,
     List<QuestionType>? enabledTypes,
@@ -34,9 +46,12 @@ class TestConfig {
     return TestConfig(
       questionCount: questionCount ?? this.questionCount,
       enabledTypes: enabledTypes ?? this.enabledTypes,
-      timeLimitMinutes: clearTimeLimit ? null : (timeLimitMinutes ?? this.timeLimitMinutes),
+      timeLimitMinutes: clearTimeLimit
+          ? null
+          : (timeLimitMinutes ?? this.timeLimitMinutes),
       shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
-      showCorrectAfterWrong: showCorrectAfterWrong ?? this.showCorrectAfterWrong,
+      showCorrectAfterWrong:
+          showCorrectAfterWrong ?? this.showCorrectAfterWrong,
       adaptiveTesting: adaptiveTesting ?? this.adaptiveTesting,
     );
   }

@@ -25,9 +25,9 @@
 
 ## Manual schema (current)
 Ví dụ thư mục:
-- `assets/data/vocab/normalized/n5/lesson_01/master.json`
-- `assets/data/vocab/normalized/n5/lesson_01/sense.json`
-- `assets/data/vocab/normalized/n5/lesson_01/map.json`
+- `assets/data/vocab/normalize/n5/lesson_01/master.json`
+- `assets/data/vocab/normalize/n5/lesson_01/sense.json`
+- `assets/data/vocab/normalize/n5/lesson_01/map.json`
 
 ### `master.json`
 ```json
@@ -125,7 +125,7 @@ Ví dụ thư mục:
 - [x] Lesson 24 web-check đã bổ sung: `くれる`, `連れて行く`, `連れて来る`, `送る`, `紹介`, `案内`, `説明`, `入れる`, `人`, `コーヒー`, `おじいちゃん`, `おばあちゃん`, `他に`, `弁当`.
 - [x] N5 Lesson 25 hoàn tất (29 mục, gồm 17 mục gốc + 12 mục bổ sung từ đối chiếu nguồn ngoài).
 - [x] Lesson 25 web-check đã bổ sung: `考える`, `着く`, `駅`, `留学`, `年を取る`, `一杯`, `飲む`, `いろいろ`, `お世話になる`, `頑張る`, `どうぞ`, `元気`.
-- [x] Tạo thư mục normalized N4: `assets/data/vocab/normalized/n4/`.
+- [x] Tạo thư mục normalize N4: `assets/data/vocab/normalize/n4/`.
 - [x] N4 Lesson 26 hoàn tất (66 mục, gồm 45 mục gốc + 21 mục bổ sung từ đối chiếu nguồn ngoài).
 - [x] Lesson 26 web-check đã bổ sung: `見る`, `診る`, `捜す`, `探す`, `時間に遅れる`, `会議に間に合う`, `宿題をやる`, `ごみを拾う`, `学校に連絡する`, `盆踊り`, `フリーマーケット`, `財布`, `国会議事堂`, `平日`, `週末`, `大阪弁（方言）`, `片付く`, `燃えるごみ`, `ガス会社`, `様`, `違う`.
 - [x] N4 Lesson 27 hoàn tất (57 mục, gồm 52 mục gốc + 5 mục bổ sung từ đối chiếu nguồn ngoài).
@@ -177,7 +177,7 @@ Ví dụ thư mục:
 - [x] N4 Lesson 50 hoan tat (47 muc, gom 43 muc goc + 4 muc bo sung tu doi chieu nguon ngoai).
 - [x] Lesson 50 web-check da bo sung: `お目にかかります`, `自然`, `撮ります`, `江戸東京博物館`.
 - [x] Final QA N4 (26-50): da sua 96 muc term/reading bi placeholder `?` o cac dong bo sung web-check (lesson 26-40), va re-validate integrity toan bo normalized N4 (26-50) pass.
-- [x] Data cleanup (N4+N5): da chuan hoa `kanjiMeaning` tieng Viet, sua loi dau/ky tu cho cac gia tri bi moji/`?` tren toan bo `assets/data/vocab/normalized/*/lesson_*/master.json`.
-- [x] Data cleanup (N4+N5): da chuan hoa `meaningVi`, sua loi dau/ky tu tren toan bo `assets/data/vocab/normalized/*/lesson_*/sense.json` (khong con ky tu moji/`?` noi bo tu).
+- [x] Data cleanup (N4+N5): da chuan hoa `kanjiMeaning` tieng Viet, sua loi dau/ky tu cho cac gia tri bi moji/`?` tren toan bo `assets/data/vocab/normalize/*/lesson_*/master.json`.
+- [x] Data cleanup (N4+N5): da chuan hoa `meaningVi`, sua loi dau/ky tu tren toan bo `assets/data/vocab/normalize/*/lesson_*/sense.json` (khong con ky tu moji/`?` noi bo tu).
 - [x] Final cleanup kickoff: audited N4/N5 coverage before delete; normalized keeps 100% legacy term+reading coverage (0 missing), with +387 curated rows from web-check.
 - [x] Final cleanup phase 1: removed duplicated legacy source files `assets/data/vocab/n4/vocab_n4_*.json` and `assets/data/vocab/n5/vocab_n5_*.json`; seeding now prefers normalized and only falls back to legacy when normalized is empty.

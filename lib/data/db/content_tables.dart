@@ -46,7 +46,6 @@ class GrammarExample extends Table {
   TextColumn get sentence => text()(); // Japanese
   TextColumn get translation => text()(); // Vietnamese (Default)
   TextColumn get translationEn => text().nullable()(); // English
-  TextColumn get audioUrl => text().nullable()();
 
   @override
   Set<Column> get primaryKey => {id};

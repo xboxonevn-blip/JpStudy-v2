@@ -38,11 +38,10 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
 
   void _startGame(List<VocabItem> vocab) {
     if (vocab.length < 4) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Need at least 4 vocabulary words to play'),
-        ),
-      );
+      final language = ref.read(appLanguageProvider);
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(language.kanjiDashNotEnoughTerms)));
       return;
     }
 
@@ -127,27 +126,27 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   @override
   Widget build(BuildContext context) {
     final level = ref.watch(studyLevelProvider);
+    final language = ref.watch(appLanguageProvider);
 
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Kanji Dash${level != null ? ' (${level.shortLabel})' : ''}',
+          '${language.kanjiDashTitle}${level != null ? ' (${level.shortLabel})' : ''}',
         ),
       ),
       body: level == null
-          ? const Center(child: Text('Select a level first.'))
-          : _buildBody(level),
+          ? Center(child: Text(language.selectLevelFirstLabel))
+          : _buildBody(level, language),
     );
   }
 
-  Widget _buildBody(StudyLevel level) {
-    final language = ref.watch(appLanguageProvider);
+  Widget _buildBody(StudyLevel level, AppLanguage language) {
     final vocabAsync = ref.watch(vocabPreviewProvider(level.shortLabel));
 
     return vocabAsync.when(
       data: (dataItems) {
         if (dataItems.isEmpty) {
-          return const Center(child: Text('No vocabulary found.'));
+          return Center(child: Text(language.noVocabFoundLabel));
         }
 
         final items = dataItems
@@ -165,22 +164,22 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
               children: [
                 const Icon(Icons.flash_on, size: 80, color: Colors.amber),
                 const SizedBox(height: 24),
-                const Text(
-                  'Kanji Dash',
+                Text(
+                  language.kanjiDashTitle,
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.w900),
                 ),
                 const SizedBox(height: 16),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   child: Text(
-                    'Answer quickly to extend your time!\n+3s for correct, -2s for wrong',
+                    language.kanjiDashSubtitle,
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 16),
                   ),
                 ),
                 const SizedBox(height: 32),
                 JuicyButton(
-                  label: 'Start',
+                  label: language.kanjiDashStart,
                   onPressed: () => _startGame(items),
                   icon: Icons.play_arrow,
                   height: 64,
@@ -199,6 +198,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
 
   Widget _buildGame() {
     final theme = Theme.of(context);
+    final language = ref.watch(appLanguageProvider);
     final progress = _timeLeft / 60.0;
 
     return Column(
@@ -220,14 +220,14 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Time: ${_timeLeft.toStringAsFixed(1)}s',
+                '${language.kanjiDashTime}: ${_timeLeft.toStringAsFixed(1)}s',
                 style: theme.textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w700,
                   color: progress > 0.3 ? Colors.green : Colors.red,
                 ),
               ),
               Text(
-                'Score: $_score',
+                '${language.kanjiDashScore}: $_score',
                 style: theme.textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w700,
                 ),
@@ -294,6 +294,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   }
 
   Widget _buildGameOver() {
+    final language = ref.watch(appLanguageProvider);
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -301,7 +302,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
           const Icon(Icons.emoji_events, size: 80, color: Colors.amber),
           const SizedBox(height: 24),
           Text(
-            'Final Score: $_score',
+            '${language.kanjiDashFinalScore}: $_score',
             style: const TextStyle(fontSize: 36, fontWeight: FontWeight.w900),
           ),
           const SizedBox(height: 16),
@@ -315,7 +316,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
           ),
           const SizedBox(height: 32),
           JuicyButton(
-            label: 'Play Again',
+            label: language.kanjiDashPlayAgain,
             onPressed: () {
               final vocabAsync = ref.read(
                 vocabPreviewProvider(ref.read(studyLevelProvider)!.shortLabel),

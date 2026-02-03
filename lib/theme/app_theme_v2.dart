@@ -40,6 +40,27 @@ class AppThemeV2 {
     end: Alignment.bottomRight,
   );
 
+  // Aurora Gradients for Glassmorphism
+  static const LinearGradient auroraGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFFE0E7FF), // Indigo 50
+      Color(0xFFF0FDF4), // Green 50
+      Color(0xFFFFF7ED), // Orange 50
+    ],
+    stops: [0.0, 0.5, 1.0],
+  );
+
+  static const LinearGradient auroraGradientDark = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFF312E81), // Indigo 900
+      Color(0xFF064E3B), // Emerald 900
+    ],
+  );
+
   static ThemeData get theme {
     return ThemeData(
       useMaterial3: true,

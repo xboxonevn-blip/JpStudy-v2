@@ -11,6 +11,9 @@ class ClayButton extends StatefulWidget {
   final bool isExpanded;
   final double? width;
   final double? height;
+  final EdgeInsetsGeometry? padding;
+  final double? fontSize;
+  final bool upperCase;
 
   const ClayButton({
     super.key,
@@ -21,6 +24,9 @@ class ClayButton extends StatefulWidget {
     this.isExpanded = false,
     this.width,
     this.height,
+    this.padding,
+    this.fontSize,
+    this.upperCase = true,
   });
 
   @override
@@ -71,15 +77,15 @@ class _ClayButtonState extends State<ClayButton> {
       mainAxisSize: MainAxisSize.min,
       children: [
         if (widget.icon != null) ...[
-          Icon(widget.icon, color: _textColor),
+          Icon(widget.icon, color: _textColor, size: (widget.fontSize ?? 14) + 4),
           const SizedBox(width: 8),
         ],
         Text(
-          widget.label.toUpperCase(),
+          widget.upperCase ? widget.label.toUpperCase() : widget.label,
           style: TextStyle(
             color: _textColor,
             fontWeight: FontWeight.w800,
-            fontSize: 14,
+            fontSize: widget.fontSize ?? 14,
             letterSpacing: 1.0,
           ),
         ),
@@ -101,7 +107,8 @@ class _ClayButtonState extends State<ClayButton> {
         child: Container(
           width: widget.width,
           height: widget.height,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+          padding: widget.padding ??
+              const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           decoration: BoxDecoration(
             color: baseColor,
             borderRadius: BorderRadius.circular(16),

@@ -30,8 +30,6 @@ class GrammarExamples extends Table {
   TextColumn get translation => text()(); // Default translation
   TextColumn get translationVi => text().nullable()(); // Vietnamese translation
   TextColumn get translationEn => text().nullable()(); // English translation
-  TextColumn get audioUrl =>
-      text().nullable()(); // Path to audio file if available
 }
 
 /// Table to store SRS Progress for Grammar

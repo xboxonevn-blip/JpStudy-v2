@@ -104,7 +104,6 @@ class GrammarSeeder {
                         japanese: ex['sentence'],
                         translation: ex['translationEn'] ?? '',
                         translationVi: Value(ex['translation']),
-                        audioUrl: const Value(null),
                       ),
                     );
               }

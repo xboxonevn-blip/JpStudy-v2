@@ -4,8 +4,6 @@ import 'package:drift/drift.dart';
 class FlashcardSettings extends Table {
   IntColumn get id => integer().autoIncrement()();
   BoolColumn get showTermFirst => boolean().withDefault(const Constant(true))();
-  BoolColumn get autoPlayAudio =>
-      boolean().withDefault(const Constant(false))();
   BoolColumn get shuffleCards => boolean().withDefault(const Constant(true))();
   BoolColumn get showStarredOnly =>
       boolean().withDefault(const Constant(false))();
@@ -23,8 +21,6 @@ class LearnSettings extends Table {
       boolean().withDefault(const Constant(true))();
   BoolColumn get enableFillBlank =>
       boolean().withDefault(const Constant(true))();
-  BoolColumn get enableAudioMatch =>
-      boolean().withDefault(const Constant(false))();
   BoolColumn get shuffleQuestions =>
       boolean().withDefault(const Constant(true))();
   BoolColumn get enableHints => boolean().withDefault(const Constant(true))();

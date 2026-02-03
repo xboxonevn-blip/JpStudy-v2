@@ -13,6 +13,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/core/theme_provider.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/features/common/widgets/japanese_background.dart';
 import 'package:jpstudy/features/home/screens/learning_path_screen.dart';
 import 'package:jpstudy/features/home/widgets/header_bar.dart';
 import 'package:jpstudy/features/home/widgets/level_gate.dart';
@@ -80,29 +81,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         elevation: 0,
         scrolledUnderElevation: 0,
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color(0xFFF8FAFD),
-              Color(0xFFF2F6FC),
-              Color(0xFFEDF3FB),
-              Color(0xFFEAF0F8),
-            ],
-            stops: [0.0, 0.4, 0.7, 1.0],
-          ),
-        ),
-        child: level == null
-            ? SafeArea(
+      body: level == null
+          ? JapaneseBackground(
+              child: SafeArea(
                 child: LevelGate(
                   language: language,
                   onSelected: (selected) => _setLevel(selected),
                 ),
-              )
-            : const LearningPathScreen(),
-      ),
+              ),
+            )
+          : const LearningPathScreen(),
     );
   }
 

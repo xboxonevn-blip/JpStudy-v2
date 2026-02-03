@@ -52,6 +52,11 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
     *   [x] **Mark as Learned:** Đánh dấu bài đã hoàn thành (Progress tracking).
     *   [x] **Auto Scroll:** Tự động cuộn trang (Hands-free reading).
 
+5.  **🧩 Zen Match (Game Redesign):**
+    *   [ ] **Zen Bento UI:** Giao diện tối giản, tập trung (White/Cool Gray), giảm noise.
+    *   [ ] **Tap First:** Chạm để mở nghĩa nhanh và vào bài luyện ngay (không dùng audio).
+    *   [ ] **Smart Logic:** Ưu tiên từ SRS yếu (Weak), Ghost Hint (gợi ý mờ khi sai), Penalty (phạt chờ).
+
 ---
 
 ### ☁️ Phase 4: Cloud Ecosystem
@@ -69,11 +74,10 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 | Feature | Status | Notes |
 | :--- | :--- | :--- |
 | **Clay UI System** | ✅ Done | Unified Theme, Buttons, Cards. |
-| **Shadowing/TTS** | ✅ Done | Offline TTS windows/android. |
 | **Writer Mode** | ✅ Done | Canvas drawing (Basic). |
 | **Ghost Practice** | ✅ Done | Gamified with particles. |
 | **Mock Exam** | ✅ Done | Timer, Scoring, Review. |
-| **Immersion Reader Enhancements** | ✅ Done | Read-status + Auto-scroll + SRS add-word flow. |
+| **Immersion Reader Enhancements** | ✅ Done | Read-status + Auto-scroll + SRS add-word + NHK fallback về local + timeout mạng. |
 | **Handwriting Check** | 🚧 Partial | Đã có chấm điểm stroke/shape/order heuristic; cần dữ liệu nét chuẩn để tăng độ chính xác. |
 
 ---
@@ -90,6 +94,7 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 
 ### Immersion Reader
 - [ ] Mở Immersion Reader (NHK/Local), tải bài.
+    - [ ] Khi NHK lỗi, tự fallback về Local và hiển thị cảnh báo rõ ràng.
     - [ ] Tap từ để tra nghĩa; thêm vào SRS; kiểm tra trạng thái đã lưu.
     - [ ] Bật/tắt Furigana và bản dịch.
     - [ ] Đánh dấu đã học (Mark as Learned).
@@ -135,6 +140,10 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 ---
 
 ## 🧾 Latest Update (2026-02-03)
+- ✅ Immersion Reader: thêm fallback local khi NHK không khả dụng, đặt Local làm nguồn mặc định, thêm timeout mạng để tránh treo.
+- ✅ i18n: sửa lỗi chuỗi Việt/Nhật ở các nhóm label cốt lõi (Settings, Ghost, Grammar, Session summary).
+- ✅ Theme/UI: cập nhật visual trẻ trung thiên hướng Nhật và dùng background kiểu Nhật thống nhất cho Home/Learning Path/Immersion.
+- ✅ Fix compile: sửa lỗi `Kanji Dash` do `language` chưa khai báo/const sai, đồng bộ text theo i18n.
 - ✅ Home UI/UX: làm mới Learning Path theo style tham chiếu cho cả mobile + desktop (top stats capsule + glowing lesson path + current lesson orb + CTA card), giữ nguyên luồng chức năng hiện có.
 - ✅ Home UI/UX: clean-up pass theo feedback (Option 1 - Clean Product UI) cho mobile + desktop: giảm hiệu ứng glow, tăng card hierarchy, cải thiện độ đọc label/path/CTA, vẫn giữ nguyên toàn bộ route và hành vi.
 - ✅ Home UI/UX: thêm Design Lab route (`/design-lab`) để xem quy trình Discover -> Visual -> Validate và theo dõi checklist trực tiếp.

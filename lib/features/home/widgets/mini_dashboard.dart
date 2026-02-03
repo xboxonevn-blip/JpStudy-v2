@@ -33,30 +33,30 @@ class MiniDashboard extends ConsumerWidget {
     int ghostCount,
   ) {
     final totalDue = state.vocabDue + state.grammarDue + state.kanjiDue;
-    final extraBadges = <Widget>[];
-    if (state.totalMistakeCount > 0) {
-      extraBadges.add(
-        _tinyBadge(Icons.warning_amber_rounded, '${state.totalMistakeCount}'),
-      );
-    }
-    if (ghostCount > 0) {
-      extraBadges.add(_tinyBadge(Icons.auto_fix_high_rounded, '$ghostCount'));
-    }
+    final focusCount = state.totalMistakeCount + ghostCount;
 
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 12),
       child: LayoutBuilder(
         builder: (context, constraints) {
-          final isWide = constraints.maxWidth >= 760;
+          final crossAxisCount = constraints.maxWidth >= 880
+              ? 4
+              : constraints.maxWidth >= 560
+              ? 2
+              : 1;
           return Container(
-            padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.9),
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: const Color(0xFFE1E8F4)),
+              gradient: const LinearGradient(
+                colors: [Color(0xFFFFFFFF), Color(0xFFF4FAFF)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(28),
+              border: Border.all(color: const Color(0xFFDCE8F8)),
               boxShadow: const [
                 BoxShadow(
-                  color: Color(0x0F24324D),
+                  color: Color(0x102C3F59),
                   blurRadius: 18,
                   offset: Offset(0, 8),
                 ),
@@ -65,143 +65,94 @@ class MiniDashboard extends ConsumerWidget {
             child: Column(
               children: [
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            language.progressTitle,
+                            language.continueJourneyLabel,
                             style: const TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFF475569),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.35,
+                              color: Color(0xFF4B5563),
                             ),
                           ),
-                          const SizedBox(height: 2),
+                          const SizedBox(height: 4),
                           Text(
-                            language.continueJourneyLabel,
+                            language.progressTitle,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
-                              fontSize: 18,
+                              fontSize: 22,
                               fontWeight: FontWeight.w800,
                               color: Color(0xFF0F172A),
-                              height: 1.1,
                             ),
                           ),
                         ],
                       ),
                     ),
                     Container(
-                      width: 38,
-                      height: 38,
+                      width: 44,
+                      height: 44,
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: const Color(0xFFF1F5FF),
-                        border: Border.all(color: const Color(0xFFD9E1F2)),
+                        borderRadius: BorderRadius.circular(14),
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFFFFEDD5), Color(0xFFFFFBEB)],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                        border: Border.all(color: const Color(0xFFFED7AA)),
                       ),
                       child: const Icon(
-                        Icons.person_rounded,
-                        color: Color(0xFF334155),
+                        Icons.local_fire_department_rounded,
+                        color: Color(0xFFEA580C),
+                        size: 22,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 12),
-                if (isWide)
-                  Row(
-                    children: [
-                      Expanded(
-                        child: _StatTile(
-                          icon: Icons.local_fire_department_rounded,
-                          iconColor: const Color(0xFFF97316),
-                          value: '${state.streak}',
-                          suffix: language.streakLabel.toUpperCase(),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: _StatTile(
-                          icon: Icons.star_rounded,
-                          iconColor: const Color(0xFF7C3AED),
-                          value: '${state.todayXp}',
-                          suffix: language.xpLabel.toUpperCase(),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: _StatTile(
-                          icon: Icons.school_rounded,
-                          iconColor: const Color(0xFF2563EB),
-                          value: '$totalDue',
-                          suffix: '${language.reviewsLabel.toUpperCase()} DUE',
-                        ),
-                      ),
-                    ],
-                  )
-                else
-                  Column(
-                    children: [
-                      _StatTile(
-                        icon: Icons.local_fire_department_rounded,
-                        iconColor: const Color(0xFFF97316),
-                        value: '${state.streak}',
-                        suffix: language.streakLabel.toUpperCase(),
-                      ),
-                      const SizedBox(height: 8),
-                      _StatTile(
-                        icon: Icons.star_rounded,
-                        iconColor: const Color(0xFF7C3AED),
-                        value: '${state.todayXp}',
-                        suffix: language.xpLabel.toUpperCase(),
-                      ),
-                      const SizedBox(height: 8),
-                      _StatTile(
-                        icon: Icons.school_rounded,
-                        iconColor: const Color(0xFF2563EB),
-                        value: '$totalDue',
-                        suffix: '${language.reviewsLabel.toUpperCase()} DUE',
-                      ),
-                    ],
-                  ),
-                if (extraBadges.isNotEmpty) ...[
-                  const SizedBox(height: 10),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 6,
-                    alignment: WrapAlignment.center,
-                    children: extraBadges,
-                  ),
-                ],
+                const SizedBox(height: 14),
+                GridView.count(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  crossAxisCount: crossAxisCount,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 2.45,
+                  children: [
+                    _StatTile(
+                      icon: Icons.local_fire_department_rounded,
+                      iconColor: const Color(0xFFF97316),
+                      value: '${state.streak}',
+                      suffix: language.streakLabel.toUpperCase(),
+                    ),
+                    _StatTile(
+                      icon: Icons.star_rounded,
+                      iconColor: const Color(0xFFF59E0B),
+                      value: '${state.todayXp}',
+                      suffix: language.xpLabel.toUpperCase(),
+                    ),
+                    _StatTile(
+                      icon: Icons.history_edu_rounded,
+                      iconColor: const Color(0xFF0EA5E9),
+                      value: '$totalDue',
+                      suffix: language.reviewsLabel.toUpperCase(),
+                    ),
+                    _StatTile(
+                      icon: Icons.tips_and_updates_rounded,
+                      iconColor: const Color(0xFFEC4899),
+                      value: '$focusCount',
+                      suffix: language.fixMistakesLabel.toUpperCase(),
+                    ),
+                  ],
+                ),
               ],
             ),
           );
         },
-      ),
-    );
-  }
-
-  Widget _tinyBadge(IconData icon, String value) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      decoration: BoxDecoration(
-        color: const Color(0xFFEEF2FF),
-        borderRadius: BorderRadius.circular(999),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, size: 15, color: const Color(0xFF475569)),
-          const SizedBox(width: 4),
-          Text(
-            value,
-            style: const TextStyle(
-              fontWeight: FontWeight.w700,
-              color: Color(0xFF334155),
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -223,11 +174,11 @@ class _StatTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       decoration: BoxDecoration(
-        color: const Color(0xFFF8FAFE),
+        color: Colors.white.withValues(alpha: 0.94),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFE3EAF6)),
+        border: Border.all(color: const Color(0xFFDCE8F8)),
       ),
       child: Row(
         children: [
@@ -251,7 +202,7 @@ class _StatTile extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontSize: 22,
+                    fontSize: 18,
                     height: 1,
                     fontWeight: FontWeight.w900,
                     color: Color(0xFF0F172A),
@@ -263,7 +214,7 @@ class _StatTile extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontSize: 10,
+                    fontSize: 9.5,
                     fontWeight: FontWeight.w700,
                     color: Color(0xFF64748B),
                     letterSpacing: 0.28,

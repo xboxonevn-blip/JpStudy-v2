@@ -146,7 +146,6 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
               ),
             ],
           ),
-          // Audio speaker icon removed - TTS disabled
         ],
       ),
     );

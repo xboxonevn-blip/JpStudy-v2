@@ -52,17 +52,6 @@ class _FlashcardSettingsDialogState extends State<FlashcardSettingsDialog> {
             ),
             const Divider(),
             _buildSwitch(
-              title: 'Auto-play TTS',
-              subtitle: 'Play audio when card is flipped',
-              value: _settings.autoPlayTTS,
-              onChanged: (value) {
-                setState(() {
-                  _settings = _settings.copyWith(autoPlayTTS: value);
-                });
-              },
-            ),
-            const Divider(),
-            _buildSwitch(
               title: 'Enable Swipe Gestures',
               subtitle: 'Swipe to mark cards as known/need practice',
               value: _settings.enableSwipeGestures,

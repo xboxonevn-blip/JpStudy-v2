@@ -921,7 +921,6 @@ class LessonRepository {
                 translation: ex.translation,
                 translationVi: Value(ex.translation),
                 translationEn: Value(ex.translationEn),
-                audioUrl: Value(ex.audioUrl),
               ),
             );
       }
@@ -1709,7 +1708,9 @@ class LessonRepository {
       'testSessions': testSessions.map((item) => item.toJson()).toList(),
       'testAnswers': testAnswers.map((item) => item.toJson()).toList(),
       'achievements': achievements.map((item) => item.toJson()).toList(),
-      'flashcardSettings': flashcardSettings.map((item) => item.toJson()).toList(),
+      'flashcardSettings': flashcardSettings
+          .map((item) => item.toJson())
+          .toList(),
       'learnSettings': learnSettings.map((item) => item.toJson()).toList(),
       'testSettings': testSettings.map((item) => item.toJson()).toList(),
     };
@@ -1724,15 +1725,18 @@ class LessonRepository {
     final mistakesRaw = data['mistakes'] as List<dynamic>? ?? const [];
     final progressRaw = data['progress'] as List<dynamic>? ?? const [];
     final attemptsRaw = data['attempts'] as List<dynamic>? ?? const [];
-    final attemptAnswersRaw = data['attemptAnswers'] as List<dynamic>? ?? const [];
-    final learnSessionsRaw = data['learnSessions'] as List<dynamic>? ?? const [];
+    final attemptAnswersRaw =
+        data['attemptAnswers'] as List<dynamic>? ?? const [];
+    final learnSessionsRaw =
+        data['learnSessions'] as List<dynamic>? ?? const [];
     final learnAnswersRaw = data['learnAnswers'] as List<dynamic>? ?? const [];
     final testSessionsRaw = data['testSessions'] as List<dynamic>? ?? const [];
     final testAnswersRaw = data['testAnswers'] as List<dynamic>? ?? const [];
     final achievementsRaw = data['achievements'] as List<dynamic>? ?? const [];
     final flashcardSettingsRaw =
         data['flashcardSettings'] as List<dynamic>? ?? const [];
-    final learnSettingsRaw = data['learnSettings'] as List<dynamic>? ?? const [];
+    final learnSettingsRaw =
+        data['learnSettings'] as List<dynamic>? ?? const [];
     final testSettingsRaw = data['testSettings'] as List<dynamic>? ?? const [];
 
     final lessons = lessonsRaw

@@ -434,9 +434,6 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     });
 
     _maybeQueueAdaptiveQuestion(_session.currentQuestion!, _isCorrect);
-    if (widget.config.showCorrectAfterWrong) {
-      // Audio removed
-    }
     _persistSession();
   }
 
@@ -451,9 +448,6 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     });
 
     _maybeQueueAdaptiveQuestion(_session.currentQuestion!, _isCorrect);
-    if (widget.config.showCorrectAfterWrong) {
-      // Audio removed
-    }
     _persistSession();
   }
 
@@ -465,9 +459,6 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     });
 
     _maybeQueueAdaptiveQuestion(_session.currentQuestion!, _isCorrect);
-    if (widget.config.showCorrectAfterWrong) {
-      // Audio removed
-    }
     _persistSession();
   }
 
@@ -622,8 +613,6 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         .recordStudyActivity(xpDelta: _session.xpEarned);
 
     await _clearSavedSession();
-
-    // Audio removed
 
     if (!mounted) return;
 

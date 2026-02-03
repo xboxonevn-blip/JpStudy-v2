@@ -23,11 +23,22 @@ class ImmersionService {
   static const _listCacheFile = 'nhk_list.json';
   static const Duration _listCacheTtl = Duration(hours: 6);
   static const Duration _articleCacheTtl = Duration(days: 7);
+  static const Duration _requestTimeout = Duration(seconds: 8);
+  static const Map<String, String> _requestHeaders = {
+    'Accept': 'application/json,text/plain,*/*',
+    'User-Agent': 'JpStudy/2.0',
+  };
 
   Future<List<ImmersionArticle>> loadLocalSamples() async {
     final articles = <ImmersionArticle>[];
-    final levels = ['n5', 'n4', 'n3', 'n2', 'n1'];
-    
+    const lessonRanges = <String, List<int>>{
+      'n5': [1, 25],
+      'n4': [26, 50],
+      'n3': [51, 75],
+      'n2': [76, 90],
+      'n1': [91, 100],
+    };
+
     // 1. Load legacy sample file if exists (optional, keeping for backward compat)
     try {
       final raw = await rootBundle.loadString(_assetPath);
@@ -39,9 +50,11 @@ class ImmersionService {
     }
 
     // 2. Load new structured lessons (lesson_01.json ... lesson_100.json)
-    for (final level in levels) {
-      // Expanded range to support N5 (1-25), N4 (26-50), etc.
-      for (int i = 1; i <= 100; i++) {
+    for (final entry in lessonRanges.entries) {
+      final level = entry.key;
+      final startLesson = entry.value[0];
+      final endLesson = entry.value[1];
+      for (int i = startLesson; i <= endLesson; i++) {
         final paddedId = i.toString().padLeft(2, '0');
         final path = 'assets/data/immersion/$level/lesson_$paddedId.json';
         try {
@@ -49,13 +62,15 @@ class ImmersionService {
           final json = jsonDecode(raw);
           // Support both single object and wrapper format
           if (json is Map<String, dynamic>) {
-             if (json.containsKey('articles')) {
-               final list = json['articles'] as List;
-               articles.addAll(list.map((e) => ImmersionArticle.fromJson(e)).toList());
-             } else {
-               // Single article file
-               articles.add(ImmersionArticle.fromJson(json));
-             }
+            if (json.containsKey('articles')) {
+              final list = json['articles'] as List;
+              articles.addAll(
+                list.map((e) => ImmersionArticle.fromJson(e)).toList(),
+              );
+            } else {
+              // Single article file
+              articles.add(ImmersionArticle.fromJson(json));
+            }
           }
         } catch (_) {
           // File doesn't exist, skip
@@ -63,10 +78,10 @@ class ImmersionService {
         }
       }
     }
-    
+
     // Sort by ID or Level/PublishedAt if needed
     // articles.sort((a, b) => b.publishedAt.compareTo(a.publishedAt));
-    
+
     return articles;
   }
 
@@ -137,8 +152,8 @@ class ImmersionService {
     }
 
     final url = 'https://www3.nhk.or.jp/news/easy/$newsId/$newsId.json';
-    final response = await http.get(Uri.parse(url));
-    if (response.statusCode != 200) {
+    final response = await _safeGet(url);
+    if (response == null || response.statusCode != 200) {
       return _readCacheArticle(newsId, ignoreTtl: true);
     }
 
@@ -158,17 +173,32 @@ class ImmersionService {
   Future<List<Map<String, dynamic>>> _fetchNhkList() async {
     final urls = [_nhkTopListUrl, _nhkNewsListUrl];
     for (final url in urls) {
-      final response = await http.get(Uri.parse(url));
-      if (response.statusCode != 200) {
+      final response = await _safeGet(url);
+      if (response == null || response.statusCode != 200) {
         continue;
       }
-      final decoded = jsonDecode(response.body);
+      dynamic decoded;
+      try {
+        decoded = jsonDecode(response.body);
+      } catch (_) {
+        continue;
+      }
       final items = _extractListItems(decoded);
       if (items.isNotEmpty) {
         return items;
       }
     }
     return [];
+  }
+
+  Future<http.Response?> _safeGet(String url) async {
+    try {
+      return await http
+          .get(Uri.parse(url), headers: _requestHeaders)
+          .timeout(_requestTimeout);
+    } catch (_) {
+      return null;
+    }
   }
 
   List<Map<String, dynamic>> _extractListItems(dynamic decoded) {

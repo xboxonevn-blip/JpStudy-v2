@@ -27,15 +27,33 @@ class MatchEngine {
 
   MatchEngine(this._allVocab);
 
-  List<MatchCard> generateGame(int numberOfPairs) {
+  List<MatchCard> generateGame(int numberOfPairs, {List<VocabItem>? priorityItems}) {
     if (_allVocab.isEmpty) return [];
 
-    final availableVocab = List<VocabItem>.from(_allVocab)..shuffle(_random);
-    final count = min(numberOfPairs, availableVocab.length);
-    final selectedVocab = availableVocab.take(count);
-
     final cards = <MatchCard>[];
+    final selectedVocab = <VocabItem>[];
 
+    // 1. Select priority items first
+    if (priorityItems != null && priorityItems.isNotEmpty) {
+      final validPriority =
+          priorityItems
+              .where((i) => _allVocab.any((v) => v.id == i.id))
+              .toList();
+      validPriority.shuffle(_random);
+      selectedVocab.addAll(validPriority.take(numberOfPairs));
+    }
+
+    // 2. Fill remaining slots with random items
+    if (selectedVocab.length < numberOfPairs) {
+      final remainingCount = numberOfPairs - selectedVocab.length;
+      final remainingVocab =
+          List<VocabItem>.from(_allVocab)
+            ..removeWhere((v) => selectedVocab.contains(v))
+            ..shuffle(_random);
+      selectedVocab.addAll(remainingVocab.take(remainingCount));
+    }
+
+    // 3. Generate Cards
     for (final vocab in selectedVocab) {
       // Create Term Card
       cards.add(

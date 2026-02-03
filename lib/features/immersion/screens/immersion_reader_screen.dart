@@ -1,18 +1,20 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/features/common/widgets/japanese_background.dart';
 
 import '../models/immersion_article.dart';
 import '../providers/immersion_providers.dart';
 import '../services/immersion_service.dart';
-import 'dart:async';
 
 class ImmersionReaderScreen extends ConsumerStatefulWidget {
-  final ImmersionArticle article;
-
   const ImmersionReaderScreen({super.key, required this.article});
+
+  final ImmersionArticle article;
 
   @override
   ConsumerState<ImmersionReaderScreen> createState() =>
@@ -20,13 +22,17 @@ class ImmersionReaderScreen extends ConsumerStatefulWidget {
 }
 
 class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
-  bool _showFurigana = true;
-  Future<ImmersionArticle?>? _detailFuture;
-  Set<String> _savedTokens = {};
-
   static const int _immersionLessonId = 9999;
   static const String _immersionLessonTitle = 'Immersion Notes';
   static const String _immersionLevel = 'IMMERSION';
+
+  bool _showFurigana = true;
+  bool _isAutoScrolling = false;
+  Future<ImmersionArticle?>? _detailFuture;
+  Set<String> _savedTokens = {};
+
+  final ScrollController _scrollController = ScrollController();
+  Timer? _autoScrollTimer;
 
   @override
   void initState() {
@@ -35,13 +41,16 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     _loadSavedTokens();
   }
 
+  @override
+  void dispose() {
+    _autoScrollTimer?.cancel();
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   void _ensureDetailLoaded({bool forceRefresh = false}) {
-    if (widget.article.paragraphs.isNotEmpty) {
-      return;
-    }
-    if (widget.article.source != ImmersionService.nhkSourceLabel) {
-      return;
-    }
+    if (widget.article.paragraphs.isNotEmpty) return;
+    if (widget.article.source != ImmersionService.nhkSourceLabel) return;
     _detailFuture = ref
         .read(immersionServiceProvider)
         .loadNhkArticleDetail(widget.article.id, forceRefresh: forceRefresh);
@@ -71,19 +80,6 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     });
   }
 
-  // --- Auto Scroll & Read Status ---
-
-  final ScrollController _scrollController = ScrollController();
-  Timer? _autoScrollTimer;
-  bool _isAutoScrolling = false;
-
-  @override
-  void dispose() {
-    _autoScrollTimer?.cancel();
-    _scrollController.dispose();
-    super.dispose();
-  }
-
   Future<void> _toggleReadStatus() async {
     await ref.read(readArticlesProvider.notifier).toggle(widget.article.id);
   }
@@ -100,21 +96,18 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     setState(() {
       _isAutoScrolling = true;
     });
-    // Scroll speed: ~20px every 100ms => 200px/sec (Adjustable)
-    const step = 2.0;
-    const duration = Duration(milliseconds: 50);
+
+    const step = 1.8;
+    const duration = Duration(milliseconds: 40);
     _autoScrollTimer = Timer.periodic(duration, (timer) {
       if (!_scrollController.hasClients) return;
-      
       final maxScroll = _scrollController.position.maxScrollExtent;
-      final currentScroll = _scrollController.offset;
-      
-      if (currentScroll >= maxScroll) {
+      final current = _scrollController.offset;
+      if (current >= maxScroll) {
         _stopAutoScroll();
         return;
       }
-      
-      _scrollController.jumpTo(currentScroll + step);
+      _scrollController.jumpTo((current + step).clamp(0, maxScroll));
     });
   }
 
@@ -124,8 +117,6 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       _isAutoScrolling = false;
     });
   }
-
-  // --- End Auto Scroll & Read Status ---
 
   @override
   Widget build(BuildContext context) {
@@ -138,33 +129,10 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
         future: _detailFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Scaffold(
-              appBar: AppBar(title: Text(language.immersionTitle)),
-              body: const Center(child: CircularProgressIndicator()),
-            );
+            return _buildLoading(language);
           }
           if (snapshot.hasError || snapshot.data == null) {
-            return Scaffold(
-              appBar: AppBar(title: Text(language.immersionTitle)),
-              body: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(language.loadErrorLabel),
-                    const SizedBox(height: 12),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        setState(() {
-                          _ensureDetailLoaded(forceRefresh: true);
-                        });
-                      },
-                      icon: const Icon(Icons.refresh),
-                      label: Text(language.immersionRefreshLabel),
-                    ),
-                  ],
-                ),
-              ),
-            );
+            return _buildError(language);
           }
           return _buildArticleScaffold(
             context,
@@ -179,6 +147,43 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     return _buildArticleScaffold(context, language, widget.article, isRead);
   }
 
+  Scaffold _buildLoading(AppLanguage language) {
+    return Scaffold(
+      appBar: AppBar(title: Text(language.immersionTitle)),
+      body: const Center(child: CircularProgressIndicator()),
+    );
+  }
+
+  Scaffold _buildError(AppLanguage language) {
+    return Scaffold(
+      appBar: AppBar(title: Text(language.immersionTitle)),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                language.immersionFallbackToLocalLabel,
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(height: 10),
+            FilledButton.icon(
+              onPressed: () {
+                setState(() {
+                  _ensureDetailLoaded(forceRefresh: true);
+                });
+              },
+              icon: const Icon(Icons.refresh_rounded),
+              label: Text(language.retryLabel),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   Scaffold _buildArticleScaffold(
     BuildContext context,
     AppLanguage language,
@@ -188,91 +193,122 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     final dateLabel = MaterialLocalizations.of(
       context,
     ).formatMediumDate(article.publishedAt);
+
     return Scaffold(
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: Text(language.immersionTitle),
         actions: [
           IconButton(
+            tooltip: language.immersionMarkReadLabel,
             onPressed: _toggleReadStatus,
             icon: Icon(
-              isRead ? Icons.check_circle : Icons.check_circle_outline,
-              color: isRead ? Colors.green : null,
+              isRead ? Icons.check_circle_rounded : Icons.check_circle_outline,
+              color: isRead ? const Color(0xFF059669) : null,
             ),
-            tooltip: language.immersionMarkReadLabel,
           ),
-          Row(
-            children: [
-              Text(language.immersionFuriganaLabel),
-              Switch(
-                value: _showFurigana,
-                onChanged: (value) {
-                  setState(() {
-                    _showFurigana = value;
-                  });
-                },
+          IconButton(
+            tooltip: language.immersionFuriganaLabel,
+            onPressed: () {
+              setState(() {
+                _showFurigana = !_showFurigana;
+              });
+            },
+            icon: Icon(
+              _showFurigana
+                  ? Icons.visibility_rounded
+                  : Icons.visibility_off_rounded,
+            ),
+          ),
+          IconButton(
+            tooltip: language.immersionAutoScrollLabel,
+            onPressed: _toggleAutoScroll,
+            icon: Icon(
+              _isAutoScrolling
+                  ? Icons.pause_circle_rounded
+                  : Icons.play_circle_rounded,
+            ),
+          ),
+          const SizedBox(width: 4),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: _toggleAutoScroll,
+        icon: Icon(
+          _isAutoScrolling ? Icons.pause_rounded : Icons.play_arrow_rounded,
+        ),
+        label: Text(language.immersionAutoScrollLabel),
+      ),
+      body: JapaneseBackground(
+        child: ListView(
+          controller: _scrollController,
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 92),
+          children: [
+            _ArticleHeaderCard(
+              title: article.title,
+              titleFurigana: article.titleFurigana,
+              source: article.source,
+              level: article.level,
+              dateLabel: dateLabel,
+              showFurigana: _showFurigana,
+              isRead: isRead,
+              language: language,
+            ),
+            const SizedBox(height: 14),
+            ...article.paragraphs.map(
+              (tokens) => Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: _ParagraphCard(
+                  children: tokens
+                      .map(
+                        (token) => _TokenChip(
+                          token: token,
+                          showFurigana: _showFurigana,
+                          isSaved: _isTokenSaved(token),
+                          onTap: token.hasMeaning
+                              ? () => _showTokenDetail(token, language)
+                              : null,
+                        ),
+                      )
+                      .toList(),
+                ),
+              ),
+            ),
+            if (article.translation != null) ...[
+              const SizedBox(height: 8),
+              Container(
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.95),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: const Color(0xFFDCE8F8)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      language.immersionTranslateLabel,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w800,
+                        color: Color(0xFF0F172A),
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      article.translation!,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        height: 1.45,
+                        color: Color(0xFF334155),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _toggleAutoScroll,
-        tooltip: language.immersionAutoScrollLabel,
-        child: Icon(_isAutoScrolling ? Icons.pause : Icons.play_arrow),
-      ),
-      body: ListView(
-        controller: _scrollController,
-        padding: const EdgeInsets.all(16),
-        children: [
-          Text(
-            article.titleFurigana != null && _showFurigana
-                ? article.titleFurigana!
-                : article.title,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            '${article.source} • ${article.level} • $dateLabel',
-            style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
-          ),
-          const SizedBox(height: 16),
-          ...article.paragraphs.map(
-            (tokens) => Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: Wrap(
-                spacing: 4,
-                runSpacing: 6,
-                children: tokens
-                    .map(
-                      (token) => _TokenChip(
-                        token: token,
-                        showFurigana: _showFurigana,
-                        language: language,
-                        isSaved: _isTokenSaved(token),
-                        onTap: token.hasMeaning
-                            ? () => _showTokenDetail(token, language)
-                            : null,
-                      ),
-                    )
-                    .toList(),
-              ),
-            ),
-          ),
-          if (article.translation != null) ...[
-            const SizedBox(height: 12),
-            Text(
-              language.immersionTranslateLabel,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              article.translation!,
-              style: const TextStyle(fontSize: 13, color: Color(0xFF374151)),
-            ),
           ],
-          // Extra space at bottom for scrolling comfortably
-          const SizedBox(height: 80),
-        ],
+        ),
       ),
     );
   }
@@ -304,18 +340,18 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                 token.surface,
                 style: const TextStyle(
                   fontSize: 22,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
               if (token.reading != null && token.reading!.isNotEmpty) ...[
                 const SizedBox(height: 4),
                 Text(
                   token.reading!,
-                  style: const TextStyle(color: Color(0xFF6B7390)),
+                  style: const TextStyle(color: Color(0xFF64748B)),
                 ),
               ],
-              const SizedBox(height: 8),
-              Text(meaning, style: const TextStyle(fontSize: 14)),
+              const SizedBox(height: 10),
+              Text(meaning, style: const TextStyle(fontSize: 14, height: 1.4)),
               const SizedBox(height: 16),
               SizedBox(
                 width: double.infinity,
@@ -324,12 +360,10 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                       ? null
                       : () async {
                           await _addToSrs(token, language);
-                          if (!context.mounted) {
-                            return;
-                          }
+                          if (!context.mounted) return;
                           Navigator.pop(context);
                         },
-                  icon: const Icon(Icons.add),
+                  icon: const Icon(Icons.add_rounded),
                   label: Text(
                     isSaved
                         ? language.immersionAlreadyAddedLabel
@@ -385,57 +419,200 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
   }
 }
 
+class _ArticleHeaderCard extends StatelessWidget {
+  const _ArticleHeaderCard({
+    required this.title,
+    required this.titleFurigana,
+    required this.source,
+    required this.level,
+    required this.dateLabel,
+    required this.showFurigana,
+    required this.isRead,
+    required this.language,
+  });
+
+  final String title;
+  final String? titleFurigana;
+  final String source;
+  final String level;
+  final String dateLabel;
+  final bool showFurigana;
+  final bool isRead;
+  final AppLanguage language;
+
+  @override
+  Widget build(BuildContext context) {
+    final heading = (titleFurigana?.trim().isNotEmpty == true && showFurigana)
+        ? titleFurigana!
+        : title;
+
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFFFFFFFF), Color(0xFFF5FAFF)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: const Color(0xFFDCE8F8)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            heading,
+            style: const TextStyle(
+              fontSize: 21,
+              fontWeight: FontWeight.w900,
+              color: Color(0xFF0F172A),
+              height: 1.28,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [
+              _TinyTag(label: source),
+              _TinyTag(label: level),
+              _TinyTag(label: dateLabel),
+              _TinyTag(
+                label: isRead
+                    ? language.doneLabel
+                    : language.immersionMarkReadLabel,
+                emphasize: isRead,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ParagraphCard extends StatelessWidget {
+  const _ParagraphCard({required this.children});
+
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.95),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFDCE8F8)),
+      ),
+      child: Wrap(spacing: 4, runSpacing: 6, children: children),
+    );
+  }
+}
+
 class _TokenChip extends StatelessWidget {
   const _TokenChip({
     required this.token,
     required this.showFurigana,
-    required this.language,
     required this.isSaved,
     this.onTap,
   });
 
   final ImmersionToken token;
   final bool showFurigana;
-  final AppLanguage language;
   final bool isSaved;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final hasMeaning = token.hasMeaning;
-    final color = isSaved
-        ? const Color(0xFFD1FAE5)
+    final bg = isSaved
+        ? const Color(0xFFDCFCE7)
         : hasMeaning
         ? const Color(0xFFE0F2FE)
-        : Colors.transparent;
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(8),
-          border: isSaved ? Border.all(color: const Color(0xFF34D399)) : null,
+        : const Color(0xFFF8FAFC);
+    final border = isSaved
+        ? const Color(0xFF86EFAC)
+        : hasMeaning
+        ? const Color(0xFFBAE6FD)
+        : const Color(0xFFE2E8F0);
+
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
+          decoration: BoxDecoration(
+            color: bg,
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: border),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (showFurigana &&
+                  token.reading != null &&
+                  token.reading!.isNotEmpty)
+                Text(
+                  token.reading!,
+                  style: const TextStyle(
+                    fontSize: 10,
+                    color: Color(0xFF64748B),
+                  ),
+                ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    token.surface,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: hasMeaning
+                          ? FontWeight.w700
+                          : FontWeight.w500,
+                      color: const Color(0xFF0F172A),
+                    ),
+                  ),
+                  if (isSaved) ...[
+                    const SizedBox(width: 3),
+                    const Icon(
+                      Icons.check_circle_rounded,
+                      size: 12,
+                      color: Color(0xFF16A34A),
+                    ),
+                  ],
+                ],
+              ),
+            ],
+          ),
         ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            if (showFurigana &&
-                token.reading != null &&
-                token.reading!.isNotEmpty)
-              Text(
-                token.reading!,
-                style: const TextStyle(fontSize: 10, color: Color(0xFF6B7390)),
-              ),
-            Text(
-              token.surface,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: hasMeaning ? FontWeight.w600 : FontWeight.w400,
-                color: hasMeaning ? Colors.black : Colors.black87,
-              ),
-            ),
-          ],
+      ),
+    );
+  }
+}
+
+class _TinyTag extends StatelessWidget {
+  const _TinyTag({required this.label, this.emphasize = false});
+
+  final String label;
+  final bool emphasize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: emphasize ? const Color(0xFFDCFCE7) : const Color(0xFFF1F5F9),
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(
+          fontSize: 11,
+          fontWeight: FontWeight.w700,
+          color: emphasize ? const Color(0xFF166534) : const Color(0xFF475569),
         ),
       ),
     );

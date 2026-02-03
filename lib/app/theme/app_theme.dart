@@ -3,21 +3,22 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static ThemeData light() {
-    const appBackground = Color(0xFFF8FAFC); // Soft off-white
-    const primaryColor = Color(0xFF6366F1); // Indigo
-    const secondaryColor = Color(0xFF8B5CF6); // Violet
+    const appBackground = Color(0xFFF7F2E8); // Warm ivory
+    const primaryColor = Color(0xFF1E3A5F); // Aizome indigo
+    const secondaryColor = Color(0xFF2F7A64); // Matcha green
+    const accentColor = Color(0xFFD1493F); // Vermilion
 
     final colorScheme = const ColorScheme.light(
       primary: primaryColor,
       secondary: secondaryColor,
-      surface: Color(0xFFFFFFFF),
+      surface: Color(0xFFFFFBF5),
       onPrimary: Color(0xFFFFFFFF),
       onSurface: Color(0xFF1E293B), // Slate 800
       error: Color(0xFFEF4444),
-      tertiary: Color(0xFF10B981), // Emerald (Success)
+      tertiary: accentColor,
     );
 
-    final fontName = GoogleFonts.nunito().fontFamily;
+    final fontName = GoogleFonts.notoSansJp().fontFamily;
 
     return ThemeData(
       colorScheme: colorScheme,
@@ -41,7 +42,7 @@ class AppTheme {
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24), // Increased radius
-          side: const BorderSide(color: Color(0xFFE2E8F0), width: 1.5),
+          side: const BorderSide(color: Color(0xFFE5DED2), width: 1.2),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -56,20 +57,20 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: const Color(0xFFF1F5F9), // Slate 100
+        fillColor: const Color(0xFFF3EEE6),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
+          borderSide: const BorderSide(color: Color(0xFFE5DED2)),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: primaryColor, width: 2),
         ),
-        hintStyle: const TextStyle(color: Color(0xFF94A3B8)), // Slate 400
+        hintStyle: const TextStyle(color: Color(0xFF94A3B8)),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 16,
@@ -105,11 +106,12 @@ class AppTheme {
   }
 
   static ThemeData dark() {
-    const primaryColor = Color(0xFF8B8FF1);
-    const secondaryColor = Color(0xFFA78BFE);
+    const primaryColor = Color(0xFF8FAED0);
+    const secondaryColor = Color(0xFF4FA98B);
+    const accentColor = Color(0xFFF9735B);
     const scaffoldBg = Color(0xFF0F172A);
-    const cardBg = Color(0xFF1E293B);
-    final fontName = GoogleFonts.nunito().fontFamily;
+    const cardBg = Color(0xFF1B2636);
+    final fontName = GoogleFonts.notoSansJp().fontFamily;
 
     return ThemeData(
       useMaterial3: true,
@@ -118,7 +120,7 @@ class AppTheme {
       colorScheme: const ColorScheme.dark(
         primary: primaryColor,
         secondary: secondaryColor,
-        tertiary: Color(0xFF34D399),
+        tertiary: accentColor,
         surface: cardBg,
         onPrimary: Colors.white,
       ),

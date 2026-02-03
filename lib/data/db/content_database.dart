@@ -240,7 +240,6 @@ class ContentDatabase extends _$ContentDatabase {
                 sentence: ex['sentence'] as String,
                 translation: ex['translation'] as String,
                 translationEn: Value(ex['translationEn'] as String?),
-                audioUrl: Value(ex['audioUrl'] as String?),
               ),
               mode: InsertMode.insertOrReplace,
             );

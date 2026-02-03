@@ -6,8 +6,6 @@ import 'package:jpstudy/core/study_level.dart';
 
 import '../providers/dashboard_provider.dart';
 
-import '../../../theme/app_theme_v2.dart';
-
 class HeaderBar extends StatelessWidget {
   const HeaderBar({
     super.key,
@@ -26,47 +24,74 @@ class HeaderBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Glassmorphism Container
     return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(22),
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+        filter: ImageFilter.blur(sigmaX: 14, sigmaY: 14),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          height: 56,
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           decoration: BoxDecoration(
-            color: Theme.of(context).brightness == Brightness.light
-                ? Colors.white.withValues(alpha: 0.7)
-                : Colors.black.withValues(alpha: 0.4),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.2),
-              width: 1,
+            gradient: const LinearGradient(
+              colors: [Color(0xF7FFFFFF), Color(0xECF7FCFF)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
-            boxShadow: [
+            borderRadius: BorderRadius.circular(22),
+            border: Border.all(color: const Color(0xFFDDEAF8), width: 1),
+            boxShadow: const [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.05),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
+                color: Color(0x12203A53),
+                blurRadius: 14,
+                offset: Offset(0, 6),
               ),
             ],
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
                 child: _HeaderStats(level: level, language: language),
               ),
               const SizedBox(width: 8),
-              IconButton(
-                onPressed: onSettingsTap,
-                icon: const Icon(Icons.settings, color: AppThemeV2.textSub),
-                tooltip: language.settingsLabel,
-                style: IconButton.styleFrom(
-                  backgroundColor: Colors.white.withValues(alpha: 0.5),
+              _ActionPill(
+                icon: Icons.language_rounded,
+                label: language.shortCode,
+                tooltip: language.languageMenuLabel,
+                onTap: onLanguageTap,
+              ),
+              const SizedBox(width: 8),
+              PopupMenuButton<StudyLevel>(
+                tooltip: language.changeLevelLabel,
+                onSelected: onLevelChanged,
+                itemBuilder: (context) {
+                  return StudyLevel.values
+                      .map(
+                        (item) => PopupMenuItem<StudyLevel>(
+                          value: item,
+                          child: Text(item.shortLabel),
+                        ),
+                      )
+                      .toList();
+                },
+                child: _MenuPill(
+                  icon: Icons.school_rounded,
+                  label: level?.shortLabel ?? 'JLPT',
                 ),
               ),
               const SizedBox(width: 8),
-              _ProfileAvatar(onTap: onSettingsTap),
+              IconButton(
+                onPressed: onSettingsTap,
+                tooltip: language.settingsLabel,
+                style: IconButton.styleFrom(
+                  backgroundColor: const Color(0xFFF1F6FF),
+                  shape: const CircleBorder(),
+                ),
+                icon: const Icon(
+                  Icons.settings_rounded,
+                  color: Color(0xFF3A4A63),
+                  size: 20,
+                ),
+              ),
             ],
           ),
         ),
@@ -88,40 +113,44 @@ class _HeaderStats extends ConsumerWidget {
 
     final streak = stats?.streak ?? 0;
     final xp = stats?.todayXp ?? 0;
-    // Reviews = Vocab Due + Grammar Due
-    final reviews = (stats?.vocabDue ?? 0) + (stats?.grammarDue ?? 0);
+    final due = (stats?.vocabDue ?? 0) + (stats?.grammarDue ?? 0);
 
-    // If loading, show zeros or skeleton? 0s for now.
-
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        // Streak
-        _StatCapsule(
-          icon: Icons.local_fire_department_rounded,
-          color: Colors.orange,
-          label: streak.toString(),
-        ),
-        const SizedBox(width: 8),
-        // XP
-        _StatCapsule(
-          icon: Icons.bolt_rounded,
-          color: Colors.amber,
-          label: xp.toString(),
-        ),
-        const SizedBox(width: 8),
-        // Reviews (NEW) - Only show if there are reviews? Or always?
-        // User asked to "show reviews again".
-        _StatCapsule(
-          icon: Icons.history_edu_rounded,
-          color: Colors.blueAccent,
-          label: reviews.toString(),
-          showPlus: reviews > 99, // e.g. 100+
-        ),
-        const SizedBox(width: 8),
-        // Level Indicator
-        if (level != null) _LevelBadge(label: level!.shortLabel),
-      ],
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          _StatCapsule(
+            icon: Icons.local_fire_department_rounded,
+            color: const Color(0xFFF97316),
+            label: streak.toString(),
+            tooltip: language.streakLabel,
+          ),
+          const SizedBox(width: 6),
+          _StatCapsule(
+            icon: Icons.bolt_rounded,
+            color: const Color(0xFFEAB308),
+            label: xp.toString(),
+            tooltip: language.xpLabel,
+          ),
+          const SizedBox(width: 6),
+          _StatCapsule(
+            icon: Icons.history_edu_rounded,
+            color: const Color(0xFF0EA5E9),
+            label: due.toString(),
+            tooltip: language.reviewsLabel,
+            showPlus: due > 99,
+          ),
+          if (level != null) ...[
+            const SizedBox(width: 6),
+            _StatCapsule(
+              icon: Icons.flag_rounded,
+              color: const Color(0xFF14B8A6),
+              label: level!.shortLabel,
+              tooltip: language.levelMenuTitle,
+            ),
+          ],
+        ],
+      ),
     );
   }
 }
@@ -131,110 +160,130 @@ class _StatCapsule extends StatelessWidget {
     required this.icon,
     required this.color,
     required this.label,
+    required this.tooltip,
     this.showPlus = false,
   });
 
   final IconData icon;
   final Color color;
   final String label;
+  final String tooltip;
   final bool showPlus;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-      decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.6),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: Colors.white.withValues(alpha: 0.2),
-          width: 1,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: color.withValues(alpha: 0.2),
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, size: 18, color: color),
-          const SizedBox(width: 6),
-          Text(
-            showPlus ? '$label+' : label,
-            style: TextStyle(
-              color: const Color(0xFF1F2937),
-              fontWeight: FontWeight.w700,
-              fontSize: 13,
-              fontFamily: 'Outfit',
+    return Tooltip(
+      message: tooltip,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.94),
+          borderRadius: BorderRadius.circular(999),
+          border: Border.all(color: const Color(0xFFDCE8F8)),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x0D2F3D54),
+              blurRadius: 8,
+              offset: Offset(0, 2),
             ),
-          ),
-        ],
+          ],
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 15, color: color),
+            const SizedBox(width: 5),
+            Text(
+              showPlus ? '$label+' : label,
+              style: const TextStyle(
+                color: Color(0xFF1F2937),
+                fontWeight: FontWeight.w800,
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-class _LevelBadge extends StatelessWidget {
-  const _LevelBadge({required this.label});
+class _ActionPill extends StatelessWidget {
+  const _ActionPill({
+    required this.icon,
+    required this.label,
+    required this.tooltip,
+    required this.onTap,
+  });
 
+  final IconData icon;
+  final String label;
+  final String tooltip;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltip,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(999),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+          decoration: BoxDecoration(
+            color: const Color(0xFFF1F6FF),
+            borderRadius: BorderRadius.circular(999),
+            border: Border.all(color: const Color(0xFFDCE8F8)),
+          ),
+          child: Row(
+            children: [
+              Icon(icon, size: 15, color: const Color(0xFF3A4A63)),
+              const SizedBox(width: 5),
+              Text(
+                label,
+                style: const TextStyle(
+                  color: Color(0xFF334155),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _MenuPill extends StatelessWidget {
+  const _MenuPill({required this.icon, required this.label});
+
+  final IconData icon;
   final String label;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(
-        gradient: AppThemeV2.primaryGradient,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: AppThemeV2.indigo600.withValues(alpha: 0.3),
-            blurRadius: 4,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Text(
-        label,
-        style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 12,
-        ),
-      ),
-    );
-  }
-}
-
-class _ProfileAvatar extends StatelessWidget {
-  final VoidCallback onTap;
-
-  const _ProfileAvatar({required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
       child: Container(
-        width: 36,
-        height: 36,
         decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: AppThemeV2.surface,
-          border: Border.all(color: Colors.white, width: 2),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.1),
-              blurRadius: 4,
+          color: const Color(0xFFEFFCF8),
+          borderRadius: BorderRadius.circular(999),
+          border: Border.all(color: const Color(0xFFCBEBDD)),
+        ),
+        child: Row(
+          children: [
+            Icon(icon, size: 15, color: const Color(0xFF0F766E)),
+            const SizedBox(width: 5),
+            Text(
+              label,
+              style: const TextStyle(
+                color: Color(0xFF0F766E),
+                fontSize: 12,
+                fontWeight: FontWeight.w900,
+              ),
             ),
           ],
-        ),
-        child: const Center(
-          child: Icon(Icons.person, color: AppThemeV2.textSub, size: 20),
         ),
       ),
     );

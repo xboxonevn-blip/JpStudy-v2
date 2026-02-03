@@ -1171,17 +1171,6 @@ class $GrammarExampleTable extends GrammarExample
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
-  static const VerificationMeta _audioUrlMeta = const VerificationMeta(
-    'audioUrl',
-  );
-  @override
-  late final GeneratedColumn<String> audioUrl = GeneratedColumn<String>(
-    'audio_url',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -1189,7 +1178,6 @@ class $GrammarExampleTable extends GrammarExample
     sentence,
     translation,
     translationEn,
-    audioUrl,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -1245,12 +1233,6 @@ class $GrammarExampleTable extends GrammarExample
         ),
       );
     }
-    if (data.containsKey('audio_url')) {
-      context.handle(
-        _audioUrlMeta,
-        audioUrl.isAcceptableOrUnknown(data['audio_url']!, _audioUrlMeta),
-      );
-    }
     return context;
   }
 
@@ -1280,10 +1262,6 @@ class $GrammarExampleTable extends GrammarExample
         DriftSqlType.string,
         data['${effectivePrefix}translation_en'],
       ),
-      audioUrl: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}audio_url'],
-      ),
     );
   }
 
@@ -1300,14 +1278,12 @@ class GrammarExampleData extends DataClass
   final String sentence;
   final String translation;
   final String? translationEn;
-  final String? audioUrl;
   const GrammarExampleData({
     required this.id,
     required this.grammarPointId,
     required this.sentence,
     required this.translation,
     this.translationEn,
-    this.audioUrl,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -1318,9 +1294,6 @@ class GrammarExampleData extends DataClass
     map['translation'] = Variable<String>(translation);
     if (!nullToAbsent || translationEn != null) {
       map['translation_en'] = Variable<String>(translationEn);
-    }
-    if (!nullToAbsent || audioUrl != null) {
-      map['audio_url'] = Variable<String>(audioUrl);
     }
     return map;
   }
@@ -1334,9 +1307,6 @@ class GrammarExampleData extends DataClass
       translationEn: translationEn == null && nullToAbsent
           ? const Value.absent()
           : Value(translationEn),
-      audioUrl: audioUrl == null && nullToAbsent
-          ? const Value.absent()
-          : Value(audioUrl),
     );
   }
 
@@ -1351,7 +1321,6 @@ class GrammarExampleData extends DataClass
       sentence: serializer.fromJson<String>(json['sentence']),
       translation: serializer.fromJson<String>(json['translation']),
       translationEn: serializer.fromJson<String?>(json['translationEn']),
-      audioUrl: serializer.fromJson<String?>(json['audioUrl']),
     );
   }
   @override
@@ -1363,7 +1332,6 @@ class GrammarExampleData extends DataClass
       'sentence': serializer.toJson<String>(sentence),
       'translation': serializer.toJson<String>(translation),
       'translationEn': serializer.toJson<String?>(translationEn),
-      'audioUrl': serializer.toJson<String?>(audioUrl),
     };
   }
 
@@ -1373,7 +1341,6 @@ class GrammarExampleData extends DataClass
     String? sentence,
     String? translation,
     Value<String?> translationEn = const Value.absent(),
-    Value<String?> audioUrl = const Value.absent(),
   }) => GrammarExampleData(
     id: id ?? this.id,
     grammarPointId: grammarPointId ?? this.grammarPointId,
@@ -1382,7 +1349,6 @@ class GrammarExampleData extends DataClass
     translationEn: translationEn.present
         ? translationEn.value
         : this.translationEn,
-    audioUrl: audioUrl.present ? audioUrl.value : this.audioUrl,
   );
   GrammarExampleData copyWithCompanion(GrammarExampleCompanion data) {
     return GrammarExampleData(
@@ -1397,7 +1363,6 @@ class GrammarExampleData extends DataClass
       translationEn: data.translationEn.present
           ? data.translationEn.value
           : this.translationEn,
-      audioUrl: data.audioUrl.present ? data.audioUrl.value : this.audioUrl,
     );
   }
 
@@ -1408,21 +1373,14 @@ class GrammarExampleData extends DataClass
           ..write('grammarPointId: $grammarPointId, ')
           ..write('sentence: $sentence, ')
           ..write('translation: $translation, ')
-          ..write('translationEn: $translationEn, ')
-          ..write('audioUrl: $audioUrl')
+          ..write('translationEn: $translationEn')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode => Object.hash(
-    id,
-    grammarPointId,
-    sentence,
-    translation,
-    translationEn,
-    audioUrl,
-  );
+  int get hashCode =>
+      Object.hash(id, grammarPointId, sentence, translation, translationEn);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1431,8 +1389,7 @@ class GrammarExampleData extends DataClass
           other.grammarPointId == this.grammarPointId &&
           other.sentence == this.sentence &&
           other.translation == this.translation &&
-          other.translationEn == this.translationEn &&
-          other.audioUrl == this.audioUrl);
+          other.translationEn == this.translationEn);
 }
 
 class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
@@ -1441,14 +1398,12 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
   final Value<String> sentence;
   final Value<String> translation;
   final Value<String?> translationEn;
-  final Value<String?> audioUrl;
   const GrammarExampleCompanion({
     this.id = const Value.absent(),
     this.grammarPointId = const Value.absent(),
     this.sentence = const Value.absent(),
     this.translation = const Value.absent(),
     this.translationEn = const Value.absent(),
-    this.audioUrl = const Value.absent(),
   });
   GrammarExampleCompanion.insert({
     this.id = const Value.absent(),
@@ -1456,7 +1411,6 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
     required String sentence,
     required String translation,
     this.translationEn = const Value.absent(),
-    this.audioUrl = const Value.absent(),
   }) : grammarPointId = Value(grammarPointId),
        sentence = Value(sentence),
        translation = Value(translation);
@@ -1466,7 +1420,6 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
     Expression<String>? sentence,
     Expression<String>? translation,
     Expression<String>? translationEn,
-    Expression<String>? audioUrl,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -1474,7 +1427,6 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
       if (sentence != null) 'sentence': sentence,
       if (translation != null) 'translation': translation,
       if (translationEn != null) 'translation_en': translationEn,
-      if (audioUrl != null) 'audio_url': audioUrl,
     });
   }
 
@@ -1484,7 +1436,6 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
     Value<String>? sentence,
     Value<String>? translation,
     Value<String?>? translationEn,
-    Value<String?>? audioUrl,
   }) {
     return GrammarExampleCompanion(
       id: id ?? this.id,
@@ -1492,7 +1443,6 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
       sentence: sentence ?? this.sentence,
       translation: translation ?? this.translation,
       translationEn: translationEn ?? this.translationEn,
-      audioUrl: audioUrl ?? this.audioUrl,
     );
   }
 
@@ -1514,9 +1464,6 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
     if (translationEn.present) {
       map['translation_en'] = Variable<String>(translationEn.value);
     }
-    if (audioUrl.present) {
-      map['audio_url'] = Variable<String>(audioUrl.value);
-    }
     return map;
   }
 
@@ -1527,8 +1474,7 @@ class GrammarExampleCompanion extends UpdateCompanion<GrammarExampleData> {
           ..write('grammarPointId: $grammarPointId, ')
           ..write('sentence: $sentence, ')
           ..write('translation: $translation, ')
-          ..write('translationEn: $translationEn, ')
-          ..write('audioUrl: $audioUrl')
+          ..write('translationEn: $translationEn')
           ..write(')'))
         .toString();
   }
@@ -4783,7 +4729,6 @@ typedef $$GrammarExampleTableCreateCompanionBuilder =
       required String sentence,
       required String translation,
       Value<String?> translationEn,
-      Value<String?> audioUrl,
     });
 typedef $$GrammarExampleTableUpdateCompanionBuilder =
     GrammarExampleCompanion Function({
@@ -4792,7 +4737,6 @@ typedef $$GrammarExampleTableUpdateCompanionBuilder =
       Value<String> sentence,
       Value<String> translation,
       Value<String?> translationEn,
-      Value<String?> audioUrl,
     });
 
 final class $$GrammarExampleTableReferences
@@ -4860,11 +4804,6 @@ class $$GrammarExampleTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get audioUrl => $composableBuilder(
-    column: $table.audioUrl,
-    builder: (column) => ColumnFilters(column),
-  );
-
   $$GrammarPointTableFilterComposer get grammarPointId {
     final $$GrammarPointTableFilterComposer composer = $composerBuilder(
       composer: this,
@@ -4918,11 +4857,6 @@ class $$GrammarExampleTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get audioUrl => $composableBuilder(
-    column: $table.audioUrl,
-    builder: (column) => ColumnOrderings(column),
-  );
-
   $$GrammarPointTableOrderingComposer get grammarPointId {
     final $$GrammarPointTableOrderingComposer composer = $composerBuilder(
       composer: this,
@@ -4971,9 +4905,6 @@ class $$GrammarExampleTableAnnotationComposer
     column: $table.translationEn,
     builder: (column) => column,
   );
-
-  GeneratedColumn<String> get audioUrl =>
-      $composableBuilder(column: $table.audioUrl, builder: (column) => column);
 
   $$GrammarPointTableAnnotationComposer get grammarPointId {
     final $$GrammarPointTableAnnotationComposer composer = $composerBuilder(
@@ -5034,14 +4965,12 @@ class $$GrammarExampleTableTableManager
                 Value<String> sentence = const Value.absent(),
                 Value<String> translation = const Value.absent(),
                 Value<String?> translationEn = const Value.absent(),
-                Value<String?> audioUrl = const Value.absent(),
               }) => GrammarExampleCompanion(
                 id: id,
                 grammarPointId: grammarPointId,
                 sentence: sentence,
                 translation: translation,
                 translationEn: translationEn,
-                audioUrl: audioUrl,
               ),
           createCompanionCallback:
               ({
@@ -5050,14 +4979,12 @@ class $$GrammarExampleTableTableManager
                 required String sentence,
                 required String translation,
                 Value<String?> translationEn = const Value.absent(),
-                Value<String?> audioUrl = const Value.absent(),
               }) => GrammarExampleCompanion.insert(
                 id: id,
                 grammarPointId: grammarPointId,
                 sentence: sentence,
                 translation: translation,
                 translationEn: translationEn,
-                audioUrl: audioUrl,
               ),
           withReferenceMapper: (p0) => p0
               .map(

@@ -9,7 +9,6 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
-// Audio imports removed
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/models/mistake_context.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
@@ -18,13 +17,9 @@ import 'package:jpstudy/shared/widgets/widgets.dart';
 import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
 import 'package:jpstudy/features/lesson/widgets/kanji_list_widget.dart';
 import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
-// Stub import removed
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum _LessonMode { flashcards, review }
-
-// _AudioMode removed
-// _AudioVoice removed
 
 enum _MenuAction { edit, addTerm, reset, combine, report }
 
@@ -42,7 +37,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   bool _trackProgress = false;
   final FsrsService _fsrsService = FsrsService();
 
-  // _autoSpeak removed
   bool _shuffle = false;
   bool _isAutoPlay = false;
 
@@ -51,7 +45,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   final Set<int> _starredTermIds = {};
   final Set<int> _learnedTermIds = {};
   Set<int> _syncedTermIds = {};
-  // _speed removed
   _LessonMode _mode = _LessonMode.flashcards;
   int _currentIndex = 0;
   final Random _random = Random();
@@ -59,7 +52,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   Timer? _autoTimer;
 
   SharedPreferences? _prefs;
-  // Audio/TTS fields removed
   int _reviewedCount = 0;
   int _reviewAgainCount = 0;
   int _reviewHardCount = 0;
@@ -78,7 +70,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   @override
   void dispose() {
     _autoTimer?.cancel();
-    // Audio dispose removed
     super.dispose();
   }
 
@@ -589,8 +580,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       _prefs = prefs;
       _showHints = prefs.getBool(_prefShowHints) ?? true;
       _trackProgress = prefs.getBool(_prefTrackProgress) ?? false;
-
-      // Audio loading removed
     });
   }
 
@@ -599,8 +588,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     _prefs ??= prefs;
     await prefs.setBool(key, value);
   }
-
-  // Audio helpers removed
 
   String _termKey(String term, String reading, String definition) {
     final cleanTerm = _normalizeKeyPart(term);
@@ -709,8 +696,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       _autoTimer = null;
     }
   }
-
-  // TTS methods removed
 
   void _handleMenu(
     _MenuAction action,

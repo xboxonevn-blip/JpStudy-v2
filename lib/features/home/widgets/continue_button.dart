@@ -7,19 +7,29 @@ import 'package:jpstudy/core/language_provider.dart';
 
 import '../providers/continue_provider.dart';
 
-class ContinueButton extends ConsumerWidget {
+class ContinueButton extends ConsumerStatefulWidget {
   const ContinueButton({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ContinueButton> createState() => _ContinueButtonState();
+}
+
+class _ContinueButtonState extends ConsumerState<ContinueButton> {
+  ContinueAction? _lastAction;
+
+  @override
+  Widget build(BuildContext context) {
     final actionAsync = ref.watch(continueActionProvider);
     final language = ref.watch(appLanguageProvider);
-
-    return actionAsync.when(
-      data: (action) => _buildCard(context, action, language),
-      loading: () => const SizedBox.shrink(),
-      error: (err, stack) => const SizedBox.shrink(),
-    );
+    final latest = actionAsync.valueOrNull;
+    if (latest != null) {
+      _lastAction = latest;
+    }
+    final action = latest ?? _lastAction;
+    if (action == null) {
+      return const SizedBox.shrink();
+    }
+    return _buildCard(context, action, language);
   }
 
   Widget _buildCard(
@@ -37,18 +47,22 @@ class ContinueButton extends ConsumerWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: () => _handleNavigation(context, action),
-          borderRadius: BorderRadius.circular(26),
+          borderRadius: BorderRadius.circular(28),
           child: Container(
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(26),
-              border: Border.all(color: accent.withValues(alpha: 0.28)),
+              gradient: const LinearGradient(
+                colors: [Color(0xFFFFFFFF), Color(0xFFF7FBFF)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(28),
+              border: Border.all(color: accent.withValues(alpha: 0.26)),
               boxShadow: const [
                 BoxShadow(
-                  color: Color(0x10213A59),
-                  blurRadius: 16,
+                  color: Color(0x11243A57),
+                  blurRadius: 18,
                   offset: Offset(0, 8),
                 ),
               ],
@@ -71,11 +85,11 @@ class ContinueButton extends ConsumerWidget {
         Row(
           children: [
             Container(
-              width: 34,
-              height: 34,
+              width: 36,
+              height: 36,
               decoration: BoxDecoration(
                 color: accent.withValues(alpha: 0.16),
-                shape: BoxShape.circle,
+                borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(Icons.play_lesson_rounded, color: accent, size: 20),
             ),
@@ -89,6 +103,22 @@ class ContinueButton extends ConsumerWidget {
                 letterSpacing: 0.7,
               ),
             ),
+            const Spacer(),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              decoration: BoxDecoration(
+                color: accent.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(999),
+              ),
+              child: Text(
+                language.startPracticeLabel,
+                style: TextStyle(
+                  color: accent,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ),
           ],
         ),
         const SizedBox(height: 10),
@@ -96,7 +126,7 @@ class ContinueButton extends ConsumerWidget {
           language.nextLessonSubtitle,
           style: const TextStyle(
             color: Color(0xFF0F172A),
-            fontSize: 27,
+            fontSize: 24,
             fontWeight: FontWeight.w900,
             height: 1.02,
           ),
@@ -115,9 +145,13 @@ class ContinueButton extends ConsumerWidget {
         const SizedBox(height: 12),
         Container(
           width: double.infinity,
-          height: 52,
+          height: 50,
           decoration: BoxDecoration(
-            color: accent,
+            gradient: LinearGradient(
+              colors: [accent, accent.withValues(alpha: 0.84)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
             borderRadius: BorderRadius.circular(999),
           ),
           alignment: Alignment.center,
@@ -144,10 +178,10 @@ class ContinueButton extends ConsumerWidget {
     return Row(
       children: [
         Container(
-          width: 44,
-          height: 44,
+          width: 46,
+          height: 46,
           decoration: BoxDecoration(
-            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(14),
             color: accent.withValues(alpha: 0.14),
           ),
           child: Icon(icon, color: accent, size: 23),
@@ -173,17 +207,25 @@ class ContinueButton extends ConsumerWidget {
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   color: Color(0xFF0F172A),
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w900,
                 ),
               ),
             ],
           ),
         ),
-        Icon(
-          Icons.chevron_right_rounded,
-          color: accent.withValues(alpha: 0.9),
-          size: 32,
+        Container(
+          width: 34,
+          height: 34,
+          decoration: BoxDecoration(
+            color: accent.withValues(alpha: 0.14),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            Icons.chevron_right_rounded,
+            color: accent.withValues(alpha: 0.92),
+            size: 22,
+          ),
         ),
       ],
     );

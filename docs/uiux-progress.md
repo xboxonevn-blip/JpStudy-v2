@@ -57,3 +57,23 @@ Track each design iteration so everyone can review the process, not just the fin
 - Verification:
   - `flutter analyze`
   - `flutter test`
+
+## Iteration 004 - Youth UI Production Refresh (2026-02-03)
+
+- Goal: Ship production-ready visual refresh for key daily-use flows (Home + Practice Hub + Immersion).
+- Scope:
+  - Rework Home header/dashboard/action hierarchy for better scanability and one-primary-action flow.
+  - Upgrade Learning Path shell and Practice Hub cards with cleaner spacing, stronger card rhythm, and responsive grids.
+  - Redesign Immersion list + reader for easier long-form reading (clear controls for read state, furigana, auto-scroll).
+- Output:
+  - `lib/features/home/home_screen.dart`
+  - `lib/features/home/screens/learning_path_screen.dart`
+  - `lib/features/home/widgets/header_bar.dart`
+  - `lib/features/home/widgets/mini_dashboard.dart`
+  - `lib/features/home/widgets/continue_button.dart`
+  - `lib/features/home/widgets/practice_hub.dart`
+  - `lib/features/immersion/immersion_home_screen.dart`
+  - `lib/features/immersion/screens/immersion_reader_screen.dart`
+- Verification:
+  - `flutter analyze`
+  - `flutter test`

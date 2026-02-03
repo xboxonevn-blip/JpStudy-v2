@@ -31,7 +31,6 @@ class GrammarExampleWidget extends StatelessWidget {
                 ),
               ),
             ),
-            // Audio button removed - TTS disabled
           ],
         ),
         const SizedBox(height: 4),

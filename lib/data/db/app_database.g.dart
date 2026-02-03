@@ -3362,17 +3362,6 @@ class $GrammarExamplesTable extends GrammarExamples
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
-  static const VerificationMeta _audioUrlMeta = const VerificationMeta(
-    'audioUrl',
-  );
-  @override
-  late final GeneratedColumn<String> audioUrl = GeneratedColumn<String>(
-    'audio_url',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -3381,7 +3370,6 @@ class $GrammarExamplesTable extends GrammarExamples
     translation,
     translationVi,
     translationEn,
-    audioUrl,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -3443,12 +3431,6 @@ class $GrammarExamplesTable extends GrammarExamples
         ),
       );
     }
-    if (data.containsKey('audio_url')) {
-      context.handle(
-        _audioUrlMeta,
-        audioUrl.isAcceptableOrUnknown(data['audio_url']!, _audioUrlMeta),
-      );
-    }
     return context;
   }
 
@@ -3482,10 +3464,6 @@ class $GrammarExamplesTable extends GrammarExamples
         DriftSqlType.string,
         data['${effectivePrefix}translation_en'],
       ),
-      audioUrl: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}audio_url'],
-      ),
     );
   }
 
@@ -3502,7 +3480,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
   final String translation;
   final String? translationVi;
   final String? translationEn;
-  final String? audioUrl;
   const GrammarExample({
     required this.id,
     required this.grammarId,
@@ -3510,7 +3487,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
     required this.translation,
     this.translationVi,
     this.translationEn,
-    this.audioUrl,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -3524,9 +3500,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
     }
     if (!nullToAbsent || translationEn != null) {
       map['translation_en'] = Variable<String>(translationEn);
-    }
-    if (!nullToAbsent || audioUrl != null) {
-      map['audio_url'] = Variable<String>(audioUrl);
     }
     return map;
   }
@@ -3543,9 +3516,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       translationEn: translationEn == null && nullToAbsent
           ? const Value.absent()
           : Value(translationEn),
-      audioUrl: audioUrl == null && nullToAbsent
-          ? const Value.absent()
-          : Value(audioUrl),
     );
   }
 
@@ -3561,7 +3531,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       translation: serializer.fromJson<String>(json['translation']),
       translationVi: serializer.fromJson<String?>(json['translationVi']),
       translationEn: serializer.fromJson<String?>(json['translationEn']),
-      audioUrl: serializer.fromJson<String?>(json['audioUrl']),
     );
   }
   @override
@@ -3574,7 +3543,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       'translation': serializer.toJson<String>(translation),
       'translationVi': serializer.toJson<String?>(translationVi),
       'translationEn': serializer.toJson<String?>(translationEn),
-      'audioUrl': serializer.toJson<String?>(audioUrl),
     };
   }
 
@@ -3585,7 +3553,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
     String? translation,
     Value<String?> translationVi = const Value.absent(),
     Value<String?> translationEn = const Value.absent(),
-    Value<String?> audioUrl = const Value.absent(),
   }) => GrammarExample(
     id: id ?? this.id,
     grammarId: grammarId ?? this.grammarId,
@@ -3597,7 +3564,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
     translationEn: translationEn.present
         ? translationEn.value
         : this.translationEn,
-    audioUrl: audioUrl.present ? audioUrl.value : this.audioUrl,
   );
   GrammarExample copyWithCompanion(GrammarExamplesCompanion data) {
     return GrammarExample(
@@ -3613,7 +3579,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
       translationEn: data.translationEn.present
           ? data.translationEn.value
           : this.translationEn,
-      audioUrl: data.audioUrl.present ? data.audioUrl.value : this.audioUrl,
     );
   }
 
@@ -3625,8 +3590,7 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
           ..write('japanese: $japanese, ')
           ..write('translation: $translation, ')
           ..write('translationVi: $translationVi, ')
-          ..write('translationEn: $translationEn, ')
-          ..write('audioUrl: $audioUrl')
+          ..write('translationEn: $translationEn')
           ..write(')'))
         .toString();
   }
@@ -3639,7 +3603,6 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
     translation,
     translationVi,
     translationEn,
-    audioUrl,
   );
   @override
   bool operator ==(Object other) =>
@@ -3650,8 +3613,7 @@ class GrammarExample extends DataClass implements Insertable<GrammarExample> {
           other.japanese == this.japanese &&
           other.translation == this.translation &&
           other.translationVi == this.translationVi &&
-          other.translationEn == this.translationEn &&
-          other.audioUrl == this.audioUrl);
+          other.translationEn == this.translationEn);
 }
 
 class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
@@ -3661,7 +3623,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
   final Value<String> translation;
   final Value<String?> translationVi;
   final Value<String?> translationEn;
-  final Value<String?> audioUrl;
   const GrammarExamplesCompanion({
     this.id = const Value.absent(),
     this.grammarId = const Value.absent(),
@@ -3669,7 +3630,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     this.translation = const Value.absent(),
     this.translationVi = const Value.absent(),
     this.translationEn = const Value.absent(),
-    this.audioUrl = const Value.absent(),
   });
   GrammarExamplesCompanion.insert({
     this.id = const Value.absent(),
@@ -3678,7 +3638,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     required String translation,
     this.translationVi = const Value.absent(),
     this.translationEn = const Value.absent(),
-    this.audioUrl = const Value.absent(),
   }) : grammarId = Value(grammarId),
        japanese = Value(japanese),
        translation = Value(translation);
@@ -3689,7 +3648,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     Expression<String>? translation,
     Expression<String>? translationVi,
     Expression<String>? translationEn,
-    Expression<String>? audioUrl,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -3698,7 +3656,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
       if (translation != null) 'translation': translation,
       if (translationVi != null) 'translation_vi': translationVi,
       if (translationEn != null) 'translation_en': translationEn,
-      if (audioUrl != null) 'audio_url': audioUrl,
     });
   }
 
@@ -3709,7 +3666,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     Value<String>? translation,
     Value<String?>? translationVi,
     Value<String?>? translationEn,
-    Value<String?>? audioUrl,
   }) {
     return GrammarExamplesCompanion(
       id: id ?? this.id,
@@ -3718,7 +3674,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
       translation: translation ?? this.translation,
       translationVi: translationVi ?? this.translationVi,
       translationEn: translationEn ?? this.translationEn,
-      audioUrl: audioUrl ?? this.audioUrl,
     );
   }
 
@@ -3743,9 +3698,6 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
     if (translationEn.present) {
       map['translation_en'] = Variable<String>(translationEn.value);
     }
-    if (audioUrl.present) {
-      map['audio_url'] = Variable<String>(audioUrl.value);
-    }
     return map;
   }
 
@@ -3757,8 +3709,7 @@ class GrammarExamplesCompanion extends UpdateCompanion<GrammarExample> {
           ..write('japanese: $japanese, ')
           ..write('translation: $translation, ')
           ..write('translationVi: $translationVi, ')
-          ..write('translationEn: $translationEn, ')
-          ..write('audioUrl: $audioUrl')
+          ..write('translationEn: $translationEn')
           ..write(')'))
         .toString();
   }
@@ -9168,21 +9119,6 @@ class $FlashcardSettingsTable extends FlashcardSettings
     ),
     defaultValue: const Constant(true),
   );
-  static const VerificationMeta _autoPlayAudioMeta = const VerificationMeta(
-    'autoPlayAudio',
-  );
-  @override
-  late final GeneratedColumn<bool> autoPlayAudio = GeneratedColumn<bool>(
-    'auto_play_audio',
-    aliasedName,
-    false,
-    type: DriftSqlType.bool,
-    requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("auto_play_audio" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
-  );
   static const VerificationMeta _shuffleCardsMeta = const VerificationMeta(
     'shuffleCards',
   );
@@ -9228,7 +9164,6 @@ class $FlashcardSettingsTable extends FlashcardSettings
   List<GeneratedColumn> get $columns => [
     id,
     showTermFirst,
-    autoPlayAudio,
     shuffleCards,
     showStarredOnly,
     updatedAt,
@@ -9254,15 +9189,6 @@ class $FlashcardSettingsTable extends FlashcardSettings
         showTermFirst.isAcceptableOrUnknown(
           data['show_term_first']!,
           _showTermFirstMeta,
-        ),
-      );
-    }
-    if (data.containsKey('auto_play_audio')) {
-      context.handle(
-        _autoPlayAudioMeta,
-        autoPlayAudio.isAcceptableOrUnknown(
-          data['auto_play_audio']!,
-          _autoPlayAudioMeta,
         ),
       );
     }
@@ -9307,10 +9233,6 @@ class $FlashcardSettingsTable extends FlashcardSettings
         DriftSqlType.bool,
         data['${effectivePrefix}show_term_first'],
       )!,
-      autoPlayAudio: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}auto_play_audio'],
-      )!,
       shuffleCards: attachedDatabase.typeMapping.read(
         DriftSqlType.bool,
         data['${effectivePrefix}shuffle_cards'],
@@ -9336,14 +9258,12 @@ class FlashcardSetting extends DataClass
     implements Insertable<FlashcardSetting> {
   final int id;
   final bool showTermFirst;
-  final bool autoPlayAudio;
   final bool shuffleCards;
   final bool showStarredOnly;
   final DateTime? updatedAt;
   const FlashcardSetting({
     required this.id,
     required this.showTermFirst,
-    required this.autoPlayAudio,
     required this.shuffleCards,
     required this.showStarredOnly,
     this.updatedAt,
@@ -9353,7 +9273,6 @@ class FlashcardSetting extends DataClass
     final map = <String, Expression>{};
     map['id'] = Variable<int>(id);
     map['show_term_first'] = Variable<bool>(showTermFirst);
-    map['auto_play_audio'] = Variable<bool>(autoPlayAudio);
     map['shuffle_cards'] = Variable<bool>(shuffleCards);
     map['show_starred_only'] = Variable<bool>(showStarredOnly);
     if (!nullToAbsent || updatedAt != null) {
@@ -9366,7 +9285,6 @@ class FlashcardSetting extends DataClass
     return FlashcardSettingsCompanion(
       id: Value(id),
       showTermFirst: Value(showTermFirst),
-      autoPlayAudio: Value(autoPlayAudio),
       shuffleCards: Value(shuffleCards),
       showStarredOnly: Value(showStarredOnly),
       updatedAt: updatedAt == null && nullToAbsent
@@ -9383,7 +9301,6 @@ class FlashcardSetting extends DataClass
     return FlashcardSetting(
       id: serializer.fromJson<int>(json['id']),
       showTermFirst: serializer.fromJson<bool>(json['showTermFirst']),
-      autoPlayAudio: serializer.fromJson<bool>(json['autoPlayAudio']),
       shuffleCards: serializer.fromJson<bool>(json['shuffleCards']),
       showStarredOnly: serializer.fromJson<bool>(json['showStarredOnly']),
       updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
@@ -9395,7 +9312,6 @@ class FlashcardSetting extends DataClass
     return <String, dynamic>{
       'id': serializer.toJson<int>(id),
       'showTermFirst': serializer.toJson<bool>(showTermFirst),
-      'autoPlayAudio': serializer.toJson<bool>(autoPlayAudio),
       'shuffleCards': serializer.toJson<bool>(shuffleCards),
       'showStarredOnly': serializer.toJson<bool>(showStarredOnly),
       'updatedAt': serializer.toJson<DateTime?>(updatedAt),
@@ -9405,14 +9321,12 @@ class FlashcardSetting extends DataClass
   FlashcardSetting copyWith({
     int? id,
     bool? showTermFirst,
-    bool? autoPlayAudio,
     bool? shuffleCards,
     bool? showStarredOnly,
     Value<DateTime?> updatedAt = const Value.absent(),
   }) => FlashcardSetting(
     id: id ?? this.id,
     showTermFirst: showTermFirst ?? this.showTermFirst,
-    autoPlayAudio: autoPlayAudio ?? this.autoPlayAudio,
     shuffleCards: shuffleCards ?? this.shuffleCards,
     showStarredOnly: showStarredOnly ?? this.showStarredOnly,
     updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
@@ -9423,9 +9337,6 @@ class FlashcardSetting extends DataClass
       showTermFirst: data.showTermFirst.present
           ? data.showTermFirst.value
           : this.showTermFirst,
-      autoPlayAudio: data.autoPlayAudio.present
-          ? data.autoPlayAudio.value
-          : this.autoPlayAudio,
       shuffleCards: data.shuffleCards.present
           ? data.shuffleCards.value
           : this.shuffleCards,
@@ -9441,7 +9352,6 @@ class FlashcardSetting extends DataClass
     return (StringBuffer('FlashcardSetting(')
           ..write('id: $id, ')
           ..write('showTermFirst: $showTermFirst, ')
-          ..write('autoPlayAudio: $autoPlayAudio, ')
           ..write('shuffleCards: $shuffleCards, ')
           ..write('showStarredOnly: $showStarredOnly, ')
           ..write('updatedAt: $updatedAt')
@@ -9450,21 +9360,14 @@ class FlashcardSetting extends DataClass
   }
 
   @override
-  int get hashCode => Object.hash(
-    id,
-    showTermFirst,
-    autoPlayAudio,
-    shuffleCards,
-    showStarredOnly,
-    updatedAt,
-  );
+  int get hashCode =>
+      Object.hash(id, showTermFirst, shuffleCards, showStarredOnly, updatedAt);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       (other is FlashcardSetting &&
           other.id == this.id &&
           other.showTermFirst == this.showTermFirst &&
-          other.autoPlayAudio == this.autoPlayAudio &&
           other.shuffleCards == this.shuffleCards &&
           other.showStarredOnly == this.showStarredOnly &&
           other.updatedAt == this.updatedAt);
@@ -9473,14 +9376,12 @@ class FlashcardSetting extends DataClass
 class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
   final Value<int> id;
   final Value<bool> showTermFirst;
-  final Value<bool> autoPlayAudio;
   final Value<bool> shuffleCards;
   final Value<bool> showStarredOnly;
   final Value<DateTime?> updatedAt;
   const FlashcardSettingsCompanion({
     this.id = const Value.absent(),
     this.showTermFirst = const Value.absent(),
-    this.autoPlayAudio = const Value.absent(),
     this.shuffleCards = const Value.absent(),
     this.showStarredOnly = const Value.absent(),
     this.updatedAt = const Value.absent(),
@@ -9488,7 +9389,6 @@ class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
   FlashcardSettingsCompanion.insert({
     this.id = const Value.absent(),
     this.showTermFirst = const Value.absent(),
-    this.autoPlayAudio = const Value.absent(),
     this.shuffleCards = const Value.absent(),
     this.showStarredOnly = const Value.absent(),
     this.updatedAt = const Value.absent(),
@@ -9496,7 +9396,6 @@ class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
   static Insertable<FlashcardSetting> custom({
     Expression<int>? id,
     Expression<bool>? showTermFirst,
-    Expression<bool>? autoPlayAudio,
     Expression<bool>? shuffleCards,
     Expression<bool>? showStarredOnly,
     Expression<DateTime>? updatedAt,
@@ -9504,7 +9403,6 @@ class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
     return RawValuesInsertable({
       if (id != null) 'id': id,
       if (showTermFirst != null) 'show_term_first': showTermFirst,
-      if (autoPlayAudio != null) 'auto_play_audio': autoPlayAudio,
       if (shuffleCards != null) 'shuffle_cards': shuffleCards,
       if (showStarredOnly != null) 'show_starred_only': showStarredOnly,
       if (updatedAt != null) 'updated_at': updatedAt,
@@ -9514,7 +9412,6 @@ class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
   FlashcardSettingsCompanion copyWith({
     Value<int>? id,
     Value<bool>? showTermFirst,
-    Value<bool>? autoPlayAudio,
     Value<bool>? shuffleCards,
     Value<bool>? showStarredOnly,
     Value<DateTime?>? updatedAt,
@@ -9522,7 +9419,6 @@ class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
     return FlashcardSettingsCompanion(
       id: id ?? this.id,
       showTermFirst: showTermFirst ?? this.showTermFirst,
-      autoPlayAudio: autoPlayAudio ?? this.autoPlayAudio,
       shuffleCards: shuffleCards ?? this.shuffleCards,
       showStarredOnly: showStarredOnly ?? this.showStarredOnly,
       updatedAt: updatedAt ?? this.updatedAt,
@@ -9537,9 +9433,6 @@ class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
     }
     if (showTermFirst.present) {
       map['show_term_first'] = Variable<bool>(showTermFirst.value);
-    }
-    if (autoPlayAudio.present) {
-      map['auto_play_audio'] = Variable<bool>(autoPlayAudio.value);
     }
     if (shuffleCards.present) {
       map['shuffle_cards'] = Variable<bool>(shuffleCards.value);
@@ -9558,7 +9451,6 @@ class FlashcardSettingsCompanion extends UpdateCompanion<FlashcardSetting> {
     return (StringBuffer('FlashcardSettingsCompanion(')
           ..write('id: $id, ')
           ..write('showTermFirst: $showTermFirst, ')
-          ..write('autoPlayAudio: $autoPlayAudio, ')
           ..write('shuffleCards: $shuffleCards, ')
           ..write('showStarredOnly: $showStarredOnly, ')
           ..write('updatedAt: $updatedAt')
@@ -9641,21 +9533,6 @@ class $LearnSettingsTable extends LearnSettings
     ),
     defaultValue: const Constant(true),
   );
-  static const VerificationMeta _enableAudioMatchMeta = const VerificationMeta(
-    'enableAudioMatch',
-  );
-  @override
-  late final GeneratedColumn<bool> enableAudioMatch = GeneratedColumn<bool>(
-    'enable_audio_match',
-    aliasedName,
-    false,
-    type: DriftSqlType.bool,
-    requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("enable_audio_match" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
-  );
   static const VerificationMeta _shuffleQuestionsMeta = const VerificationMeta(
     'shuffleQuestions',
   );
@@ -9719,7 +9596,6 @@ class $LearnSettingsTable extends LearnSettings
     enableMultipleChoice,
     enableTrueFalse,
     enableFillBlank,
-    enableAudioMatch,
     shuffleQuestions,
     enableHints,
     showCorrectAnswer,
@@ -9773,15 +9649,6 @@ class $LearnSettingsTable extends LearnSettings
         enableFillBlank.isAcceptableOrUnknown(
           data['enable_fill_blank']!,
           _enableFillBlankMeta,
-        ),
-      );
-    }
-    if (data.containsKey('enable_audio_match')) {
-      context.handle(
-        _enableAudioMatchMeta,
-        enableAudioMatch.isAcceptableOrUnknown(
-          data['enable_audio_match']!,
-          _enableAudioMatchMeta,
         ),
       );
     }
@@ -9847,10 +9714,6 @@ class $LearnSettingsTable extends LearnSettings
         DriftSqlType.bool,
         data['${effectivePrefix}enable_fill_blank'],
       )!,
-      enableAudioMatch: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}enable_audio_match'],
-      )!,
       shuffleQuestions: attachedDatabase.typeMapping.read(
         DriftSqlType.bool,
         data['${effectivePrefix}shuffle_questions'],
@@ -9882,7 +9745,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
   final bool enableMultipleChoice;
   final bool enableTrueFalse;
   final bool enableFillBlank;
-  final bool enableAudioMatch;
   final bool shuffleQuestions;
   final bool enableHints;
   final bool showCorrectAnswer;
@@ -9893,7 +9755,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
     required this.enableMultipleChoice,
     required this.enableTrueFalse,
     required this.enableFillBlank,
-    required this.enableAudioMatch,
     required this.shuffleQuestions,
     required this.enableHints,
     required this.showCorrectAnswer,
@@ -9907,7 +9768,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
     map['enable_multiple_choice'] = Variable<bool>(enableMultipleChoice);
     map['enable_true_false'] = Variable<bool>(enableTrueFalse);
     map['enable_fill_blank'] = Variable<bool>(enableFillBlank);
-    map['enable_audio_match'] = Variable<bool>(enableAudioMatch);
     map['shuffle_questions'] = Variable<bool>(shuffleQuestions);
     map['enable_hints'] = Variable<bool>(enableHints);
     map['show_correct_answer'] = Variable<bool>(showCorrectAnswer);
@@ -9924,7 +9784,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
       enableMultipleChoice: Value(enableMultipleChoice),
       enableTrueFalse: Value(enableTrueFalse),
       enableFillBlank: Value(enableFillBlank),
-      enableAudioMatch: Value(enableAudioMatch),
       shuffleQuestions: Value(shuffleQuestions),
       enableHints: Value(enableHints),
       showCorrectAnswer: Value(showCorrectAnswer),
@@ -9949,7 +9808,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
       ),
       enableTrueFalse: serializer.fromJson<bool>(json['enableTrueFalse']),
       enableFillBlank: serializer.fromJson<bool>(json['enableFillBlank']),
-      enableAudioMatch: serializer.fromJson<bool>(json['enableAudioMatch']),
       shuffleQuestions: serializer.fromJson<bool>(json['shuffleQuestions']),
       enableHints: serializer.fromJson<bool>(json['enableHints']),
       showCorrectAnswer: serializer.fromJson<bool>(json['showCorrectAnswer']),
@@ -9965,7 +9823,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
       'enableMultipleChoice': serializer.toJson<bool>(enableMultipleChoice),
       'enableTrueFalse': serializer.toJson<bool>(enableTrueFalse),
       'enableFillBlank': serializer.toJson<bool>(enableFillBlank),
-      'enableAudioMatch': serializer.toJson<bool>(enableAudioMatch),
       'shuffleQuestions': serializer.toJson<bool>(shuffleQuestions),
       'enableHints': serializer.toJson<bool>(enableHints),
       'showCorrectAnswer': serializer.toJson<bool>(showCorrectAnswer),
@@ -9979,7 +9836,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
     bool? enableMultipleChoice,
     bool? enableTrueFalse,
     bool? enableFillBlank,
-    bool? enableAudioMatch,
     bool? shuffleQuestions,
     bool? enableHints,
     bool? showCorrectAnswer,
@@ -9990,7 +9846,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
     enableMultipleChoice: enableMultipleChoice ?? this.enableMultipleChoice,
     enableTrueFalse: enableTrueFalse ?? this.enableTrueFalse,
     enableFillBlank: enableFillBlank ?? this.enableFillBlank,
-    enableAudioMatch: enableAudioMatch ?? this.enableAudioMatch,
     shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
     enableHints: enableHints ?? this.enableHints,
     showCorrectAnswer: showCorrectAnswer ?? this.showCorrectAnswer,
@@ -10011,9 +9866,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
       enableFillBlank: data.enableFillBlank.present
           ? data.enableFillBlank.value
           : this.enableFillBlank,
-      enableAudioMatch: data.enableAudioMatch.present
-          ? data.enableAudioMatch.value
-          : this.enableAudioMatch,
       shuffleQuestions: data.shuffleQuestions.present
           ? data.shuffleQuestions.value
           : this.shuffleQuestions,
@@ -10035,7 +9887,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
           ..write('enableMultipleChoice: $enableMultipleChoice, ')
           ..write('enableTrueFalse: $enableTrueFalse, ')
           ..write('enableFillBlank: $enableFillBlank, ')
-          ..write('enableAudioMatch: $enableAudioMatch, ')
           ..write('shuffleQuestions: $shuffleQuestions, ')
           ..write('enableHints: $enableHints, ')
           ..write('showCorrectAnswer: $showCorrectAnswer, ')
@@ -10051,7 +9902,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
     enableMultipleChoice,
     enableTrueFalse,
     enableFillBlank,
-    enableAudioMatch,
     shuffleQuestions,
     enableHints,
     showCorrectAnswer,
@@ -10066,7 +9916,6 @@ class LearnSetting extends DataClass implements Insertable<LearnSetting> {
           other.enableMultipleChoice == this.enableMultipleChoice &&
           other.enableTrueFalse == this.enableTrueFalse &&
           other.enableFillBlank == this.enableFillBlank &&
-          other.enableAudioMatch == this.enableAudioMatch &&
           other.shuffleQuestions == this.shuffleQuestions &&
           other.enableHints == this.enableHints &&
           other.showCorrectAnswer == this.showCorrectAnswer &&
@@ -10079,7 +9928,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
   final Value<bool> enableMultipleChoice;
   final Value<bool> enableTrueFalse;
   final Value<bool> enableFillBlank;
-  final Value<bool> enableAudioMatch;
   final Value<bool> shuffleQuestions;
   final Value<bool> enableHints;
   final Value<bool> showCorrectAnswer;
@@ -10090,7 +9938,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
     this.enableMultipleChoice = const Value.absent(),
     this.enableTrueFalse = const Value.absent(),
     this.enableFillBlank = const Value.absent(),
-    this.enableAudioMatch = const Value.absent(),
     this.shuffleQuestions = const Value.absent(),
     this.enableHints = const Value.absent(),
     this.showCorrectAnswer = const Value.absent(),
@@ -10102,7 +9949,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
     this.enableMultipleChoice = const Value.absent(),
     this.enableTrueFalse = const Value.absent(),
     this.enableFillBlank = const Value.absent(),
-    this.enableAudioMatch = const Value.absent(),
     this.shuffleQuestions = const Value.absent(),
     this.enableHints = const Value.absent(),
     this.showCorrectAnswer = const Value.absent(),
@@ -10114,7 +9960,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
     Expression<bool>? enableMultipleChoice,
     Expression<bool>? enableTrueFalse,
     Expression<bool>? enableFillBlank,
-    Expression<bool>? enableAudioMatch,
     Expression<bool>? shuffleQuestions,
     Expression<bool>? enableHints,
     Expression<bool>? showCorrectAnswer,
@@ -10128,7 +9973,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
         'enable_multiple_choice': enableMultipleChoice,
       if (enableTrueFalse != null) 'enable_true_false': enableTrueFalse,
       if (enableFillBlank != null) 'enable_fill_blank': enableFillBlank,
-      if (enableAudioMatch != null) 'enable_audio_match': enableAudioMatch,
       if (shuffleQuestions != null) 'shuffle_questions': shuffleQuestions,
       if (enableHints != null) 'enable_hints': enableHints,
       if (showCorrectAnswer != null) 'show_correct_answer': showCorrectAnswer,
@@ -10142,7 +9986,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
     Value<bool>? enableMultipleChoice,
     Value<bool>? enableTrueFalse,
     Value<bool>? enableFillBlank,
-    Value<bool>? enableAudioMatch,
     Value<bool>? shuffleQuestions,
     Value<bool>? enableHints,
     Value<bool>? showCorrectAnswer,
@@ -10154,7 +9997,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
       enableMultipleChoice: enableMultipleChoice ?? this.enableMultipleChoice,
       enableTrueFalse: enableTrueFalse ?? this.enableTrueFalse,
       enableFillBlank: enableFillBlank ?? this.enableFillBlank,
-      enableAudioMatch: enableAudioMatch ?? this.enableAudioMatch,
       shuffleQuestions: shuffleQuestions ?? this.shuffleQuestions,
       enableHints: enableHints ?? this.enableHints,
       showCorrectAnswer: showCorrectAnswer ?? this.showCorrectAnswer,
@@ -10182,9 +10024,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
     if (enableFillBlank.present) {
       map['enable_fill_blank'] = Variable<bool>(enableFillBlank.value);
     }
-    if (enableAudioMatch.present) {
-      map['enable_audio_match'] = Variable<bool>(enableAudioMatch.value);
-    }
     if (shuffleQuestions.present) {
       map['shuffle_questions'] = Variable<bool>(shuffleQuestions.value);
     }
@@ -10208,7 +10047,6 @@ class LearnSettingsCompanion extends UpdateCompanion<LearnSetting> {
           ..write('enableMultipleChoice: $enableMultipleChoice, ')
           ..write('enableTrueFalse: $enableTrueFalse, ')
           ..write('enableFillBlank: $enableFillBlank, ')
-          ..write('enableAudioMatch: $enableAudioMatch, ')
           ..write('shuffleQuestions: $shuffleQuestions, ')
           ..write('enableHints: $enableHints, ')
           ..write('showCorrectAnswer: $showCorrectAnswer, ')
@@ -13775,7 +13613,6 @@ typedef $$GrammarExamplesTableCreateCompanionBuilder =
       required String translation,
       Value<String?> translationVi,
       Value<String?> translationEn,
-      Value<String?> audioUrl,
     });
 typedef $$GrammarExamplesTableUpdateCompanionBuilder =
     GrammarExamplesCompanion Function({
@@ -13785,7 +13622,6 @@ typedef $$GrammarExamplesTableUpdateCompanionBuilder =
       Value<String> translation,
       Value<String?> translationVi,
       Value<String?> translationEn,
-      Value<String?> audioUrl,
     });
 
 final class $$GrammarExamplesTableReferences
@@ -13851,11 +13687,6 @@ class $$GrammarExamplesTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get audioUrl => $composableBuilder(
-    column: $table.audioUrl,
-    builder: (column) => ColumnFilters(column),
-  );
-
   $$GrammarPointsTableFilterComposer get grammarId {
     final $$GrammarPointsTableFilterComposer composer = $composerBuilder(
       composer: this,
@@ -13914,11 +13745,6 @@ class $$GrammarExamplesTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get audioUrl => $composableBuilder(
-    column: $table.audioUrl,
-    builder: (column) => ColumnOrderings(column),
-  );
-
   $$GrammarPointsTableOrderingComposer get grammarId {
     final $$GrammarPointsTableOrderingComposer composer = $composerBuilder(
       composer: this,
@@ -13972,9 +13798,6 @@ class $$GrammarExamplesTableAnnotationComposer
     column: $table.translationEn,
     builder: (column) => column,
   );
-
-  GeneratedColumn<String> get audioUrl =>
-      $composableBuilder(column: $table.audioUrl, builder: (column) => column);
 
   $$GrammarPointsTableAnnotationComposer get grammarId {
     final $$GrammarPointsTableAnnotationComposer composer = $composerBuilder(
@@ -14036,7 +13859,6 @@ class $$GrammarExamplesTableTableManager
                 Value<String> translation = const Value.absent(),
                 Value<String?> translationVi = const Value.absent(),
                 Value<String?> translationEn = const Value.absent(),
-                Value<String?> audioUrl = const Value.absent(),
               }) => GrammarExamplesCompanion(
                 id: id,
                 grammarId: grammarId,
@@ -14044,7 +13866,6 @@ class $$GrammarExamplesTableTableManager
                 translation: translation,
                 translationVi: translationVi,
                 translationEn: translationEn,
-                audioUrl: audioUrl,
               ),
           createCompanionCallback:
               ({
@@ -14054,7 +13875,6 @@ class $$GrammarExamplesTableTableManager
                 required String translation,
                 Value<String?> translationVi = const Value.absent(),
                 Value<String?> translationEn = const Value.absent(),
-                Value<String?> audioUrl = const Value.absent(),
               }) => GrammarExamplesCompanion.insert(
                 id: id,
                 grammarId: grammarId,
@@ -14062,7 +13882,6 @@ class $$GrammarExamplesTableTableManager
                 translation: translation,
                 translationVi: translationVi,
                 translationEn: translationEn,
-                audioUrl: audioUrl,
               ),
           withReferenceMapper: (p0) => p0
               .map(
@@ -17723,7 +17542,6 @@ typedef $$FlashcardSettingsTableCreateCompanionBuilder =
     FlashcardSettingsCompanion Function({
       Value<int> id,
       Value<bool> showTermFirst,
-      Value<bool> autoPlayAudio,
       Value<bool> shuffleCards,
       Value<bool> showStarredOnly,
       Value<DateTime?> updatedAt,
@@ -17732,7 +17550,6 @@ typedef $$FlashcardSettingsTableUpdateCompanionBuilder =
     FlashcardSettingsCompanion Function({
       Value<int> id,
       Value<bool> showTermFirst,
-      Value<bool> autoPlayAudio,
       Value<bool> shuffleCards,
       Value<bool> showStarredOnly,
       Value<DateTime?> updatedAt,
@@ -17754,11 +17571,6 @@ class $$FlashcardSettingsTableFilterComposer
 
   ColumnFilters<bool> get showTermFirst => $composableBuilder(
     column: $table.showTermFirst,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<bool> get autoPlayAudio => $composableBuilder(
-    column: $table.autoPlayAudio,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -17797,11 +17609,6 @@ class $$FlashcardSettingsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<bool> get autoPlayAudio => $composableBuilder(
-    column: $table.autoPlayAudio,
-    builder: (column) => ColumnOrderings(column),
-  );
-
   ColumnOrderings<bool> get shuffleCards => $composableBuilder(
     column: $table.shuffleCards,
     builder: (column) => ColumnOrderings(column),
@@ -17832,11 +17639,6 @@ class $$FlashcardSettingsTableAnnotationComposer
 
   GeneratedColumn<bool> get showTermFirst => $composableBuilder(
     column: $table.showTermFirst,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<bool> get autoPlayAudio => $composableBuilder(
-    column: $table.autoPlayAudio,
     builder: (column) => column,
   );
 
@@ -17896,14 +17698,12 @@ class $$FlashcardSettingsTableTableManager
               ({
                 Value<int> id = const Value.absent(),
                 Value<bool> showTermFirst = const Value.absent(),
-                Value<bool> autoPlayAudio = const Value.absent(),
                 Value<bool> shuffleCards = const Value.absent(),
                 Value<bool> showStarredOnly = const Value.absent(),
                 Value<DateTime?> updatedAt = const Value.absent(),
               }) => FlashcardSettingsCompanion(
                 id: id,
                 showTermFirst: showTermFirst,
-                autoPlayAudio: autoPlayAudio,
                 shuffleCards: shuffleCards,
                 showStarredOnly: showStarredOnly,
                 updatedAt: updatedAt,
@@ -17912,14 +17712,12 @@ class $$FlashcardSettingsTableTableManager
               ({
                 Value<int> id = const Value.absent(),
                 Value<bool> showTermFirst = const Value.absent(),
-                Value<bool> autoPlayAudio = const Value.absent(),
                 Value<bool> shuffleCards = const Value.absent(),
                 Value<bool> showStarredOnly = const Value.absent(),
                 Value<DateTime?> updatedAt = const Value.absent(),
               }) => FlashcardSettingsCompanion.insert(
                 id: id,
                 showTermFirst: showTermFirst,
-                autoPlayAudio: autoPlayAudio,
                 shuffleCards: shuffleCards,
                 showStarredOnly: showStarredOnly,
                 updatedAt: updatedAt,
@@ -17960,7 +17758,6 @@ typedef $$LearnSettingsTableCreateCompanionBuilder =
       Value<bool> enableMultipleChoice,
       Value<bool> enableTrueFalse,
       Value<bool> enableFillBlank,
-      Value<bool> enableAudioMatch,
       Value<bool> shuffleQuestions,
       Value<bool> enableHints,
       Value<bool> showCorrectAnswer,
@@ -17973,7 +17770,6 @@ typedef $$LearnSettingsTableUpdateCompanionBuilder =
       Value<bool> enableMultipleChoice,
       Value<bool> enableTrueFalse,
       Value<bool> enableFillBlank,
-      Value<bool> enableAudioMatch,
       Value<bool> shuffleQuestions,
       Value<bool> enableHints,
       Value<bool> showCorrectAnswer,
@@ -18011,11 +17807,6 @@ class $$LearnSettingsTableFilterComposer
 
   ColumnFilters<bool> get enableFillBlank => $composableBuilder(
     column: $table.enableFillBlank,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<bool> get enableAudioMatch => $composableBuilder(
-    column: $table.enableAudioMatch,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -18074,11 +17865,6 @@ class $$LearnSettingsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<bool> get enableAudioMatch => $composableBuilder(
-    column: $table.enableAudioMatch,
-    builder: (column) => ColumnOrderings(column),
-  );
-
   ColumnOrderings<bool> get shuffleQuestions => $composableBuilder(
     column: $table.shuffleQuestions,
     builder: (column) => ColumnOrderings(column),
@@ -18129,11 +17915,6 @@ class $$LearnSettingsTableAnnotationComposer
 
   GeneratedColumn<bool> get enableFillBlank => $composableBuilder(
     column: $table.enableFillBlank,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<bool> get enableAudioMatch => $composableBuilder(
-    column: $table.enableAudioMatch,
     builder: (column) => column,
   );
 
@@ -18192,7 +17973,6 @@ class $$LearnSettingsTableTableManager
                 Value<bool> enableMultipleChoice = const Value.absent(),
                 Value<bool> enableTrueFalse = const Value.absent(),
                 Value<bool> enableFillBlank = const Value.absent(),
-                Value<bool> enableAudioMatch = const Value.absent(),
                 Value<bool> shuffleQuestions = const Value.absent(),
                 Value<bool> enableHints = const Value.absent(),
                 Value<bool> showCorrectAnswer = const Value.absent(),
@@ -18203,7 +17983,6 @@ class $$LearnSettingsTableTableManager
                 enableMultipleChoice: enableMultipleChoice,
                 enableTrueFalse: enableTrueFalse,
                 enableFillBlank: enableFillBlank,
-                enableAudioMatch: enableAudioMatch,
                 shuffleQuestions: shuffleQuestions,
                 enableHints: enableHints,
                 showCorrectAnswer: showCorrectAnswer,
@@ -18216,7 +17995,6 @@ class $$LearnSettingsTableTableManager
                 Value<bool> enableMultipleChoice = const Value.absent(),
                 Value<bool> enableTrueFalse = const Value.absent(),
                 Value<bool> enableFillBlank = const Value.absent(),
-                Value<bool> enableAudioMatch = const Value.absent(),
                 Value<bool> shuffleQuestions = const Value.absent(),
                 Value<bool> enableHints = const Value.absent(),
                 Value<bool> showCorrectAnswer = const Value.absent(),
@@ -18227,7 +18005,6 @@ class $$LearnSettingsTableTableManager
                 enableMultipleChoice: enableMultipleChoice,
                 enableTrueFalse: enableTrueFalse,
                 enableFillBlank: enableFillBlank,
-                enableAudioMatch: enableAudioMatch,
                 shuffleQuestions: shuffleQuestions,
                 enableHints: enableHints,
                 showCorrectAnswer: showCorrectAnswer,

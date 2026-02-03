@@ -706,17 +706,6 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
-  String get playAudioLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Play audio';
-      case AppLanguage.vi:
-        return 'Ph\u00e1t \u00e2m thanh';
-      case AppLanguage.ja:
-        return '\u97f3\u58f0\u3092\u518d\u751f';
-    }
-  }
-
   String get publicLabel {
     switch (this) {
       case AppLanguage.en:
@@ -832,9 +821,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Practice';
       case AppLanguage.vi:
-        return 'Luy?n t?p';
+        return 'Luyện tập';
       case AppLanguage.ja:
-        return '??';
+        return '練習';
     }
   }
 
@@ -843,9 +832,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Next Step';
       case AppLanguage.vi:
-        return 'B??c ti?p theo';
+        return 'Bước tiếp theo';
       case AppLanguage.ja:
-        return '??????';
+        return '次のステップ';
     }
   }
 
@@ -854,9 +843,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return '$count items';
       case AppLanguage.vi:
-        return '$count m?c';
+        return '$count mục';
       case AppLanguage.ja:
-        return '$count??';
+        return '$count件';
     }
   }
 
@@ -876,9 +865,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Mistake Bank';
       case AppLanguage.vi:
-        return 'Kho l?i sai';
+        return 'Kho l\u1ed7i sai';
       case AppLanguage.ja:
-        return '??????';
+        return '\u30df\u30b9\u30d0\u30f3\u30af';
     }
   }
 
@@ -1791,7 +1780,7 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.vi:
         return 'Tr\xf2 ch\u01a1i';
       case AppLanguage.ja:
-        return '???';
+        return '\u30b2\u30fc\u30e0';
     }
   }
 
@@ -1802,7 +1791,7 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.vi:
         return 'X\xe1o tr\u1ed9n';
       case AppLanguage.ja:
-        return '?????';
+        return '\u30b7\u30e3\u30c3\u30d5\u30eb';
     }
   }
 
@@ -1813,7 +1802,7 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.vi:
         return 'T\u1ef1 \u0111\u1ed9ng';
       case AppLanguage.ja:
-        return '??';
+        return '\u81ea\u52d5';
     }
   }
 
@@ -1824,7 +1813,7 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.vi:
         return 'T\u1ed1c \u0111\u1ed9';
       case AppLanguage.ja:
-        return '??';
+        return '\u901f\u5ea6';
     }
   }
 
@@ -1835,7 +1824,7 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.vi:
         return 'C\xe0i \u0111\u1eb7t';
       case AppLanguage.ja:
-        return '??';
+        return '\u8a2d\u5b9a';
     }
   }
 
@@ -2033,7 +2022,7 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.vi:
         return 'To\xe0n m\xe0n h\xecnh';
       case AppLanguage.ja:
-        return '???';
+        return '\u5168\u753b\u9762';
     }
   }
 
@@ -2240,9 +2229,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Recall chance: $percent%';
       case AppLanguage.vi:
-        return 'Kh? n?ng nh?: $percent%';
+        return 'Kh\u1ea3 n\u0103ng nh\u1edb: $percent%';
       case AppLanguage.ja:
-        return '????: $percent%';
+        return '\u60f3\u8d77\u7387: $percent%';
     }
   }
 
@@ -2251,9 +2240,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Session complete!';
       case AppLanguage.vi:
-        return 'Ho?n th?nh phi?n h?c!';
+        return 'Ho\u00e0n th\u00e0nh phi\u00ean h\u1ecdc!';
       case AppLanguage.ja:
-        return '????????';
+        return '\u30bb\u30c3\u30b7\u30e7\u30f3\u5b8c\u4e86\uff01';
     }
   }
 
@@ -2262,9 +2251,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'You reviewed $total items.';
       case AppLanguage.vi:
-        return 'B?n ?? ?n $total m?c.';
+        return 'B\u1ea1n \u0111\u00e3 \u00f4n $total m\u1ee5c.';
       case AppLanguage.ja:
-        return '$total?????????';
+        return '$total\u4ef6\u3092\u5fa9\u7fd2\u3057\u307e\u3057\u305f\u3002';
     }
   }
 
@@ -2331,204 +2320,6 @@ extension AppLanguageLabels on AppLanguage {
         return '\u0110\u00e3 \u00f4n';
       case AppLanguage.ja:
         return '\u5fa9\u7fd2\u6e08\u307f';
-    }
-  }
-
-  String get audioNotConfigured {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Audio is not configured.';
-      case AppLanguage.vi:
-        return '\u00c2m thanh ch\u01b0a \u0111\u01b0\u1ee3c c\u1ea5u h\u00ecnh.';
-      case AppLanguage.ja:
-        return '\u97f3\u58f0\u304c\u8a2d\u5b9a\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002';
-    }
-  }
-
-  String get audioSettingsLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Audio';
-      case AppLanguage.vi:
-        return '\u00c2m thanh';
-      case AppLanguage.ja:
-        return '\u97f3\u58f0';
-    }
-  }
-
-  String get audioAutoPlayLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Auto-play audio';
-      case AppLanguage.vi:
-        return 'T\u1ef1 \u0111\u1ed9ng ph\u00e1t \u00e2m';
-      case AppLanguage.ja:
-        return '\u81ea\u52d5\u518d\u751f';
-    }
-  }
-
-  String get audioModeLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Read';
-      case AppLanguage.vi:
-        return '\u0110\u1ecdc';
-      case AppLanguage.ja:
-        return '\u8aad\u307f\u4e0a\u3052';
-    }
-  }
-
-  String get audioModeTerm {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Term';
-      case AppLanguage.vi:
-        return 'T\u1eeb';
-      case AppLanguage.ja:
-        return '\u7528\u8a9e';
-    }
-  }
-
-  String get audioModeReading {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Reading';
-      case AppLanguage.vi:
-        return 'C\u00e1ch \u0111\u1ecdc';
-      case AppLanguage.ja:
-        return '\u8aad\u307f';
-    }
-  }
-
-  String get audioModeDefinition {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Definition';
-      case AppLanguage.vi:
-        return '\u0110\u1ecbnh ngh\u0129a';
-      case AppLanguage.ja:
-        return '\u5b9a\u7fa9';
-    }
-  }
-
-  String get audioVoiceLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Voice';
-      case AppLanguage.vi:
-        return 'Gi\u1ecdng';
-      case AppLanguage.ja:
-        return '\u58f0';
-    }
-  }
-
-  String get audioVoiceFemale {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Female';
-      case AppLanguage.vi:
-        return 'N\u1eef';
-      case AppLanguage.ja:
-        return '\u5973';
-    }
-  }
-
-  String get audioVoiceMale {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Male';
-      case AppLanguage.vi:
-        return 'Nam';
-      case AppLanguage.ja:
-        return '\u7537';
-    }
-  }
-
-  String get audioTestVoiceLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Test voice';
-      case AppLanguage.vi:
-        return 'Nghe th\u1eed';
-      case AppLanguage.ja:
-        return '\u30c6\u30b9\u30c8\u518d\u751f';
-    }
-  }
-
-  String get audioTestSample {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Hello, welcome to JpStudy.';
-      case AppLanguage.vi:
-        return 'Xin ch\u00e0o, ch\u00e0o m\u1eebng \u0111\u1ebfn v\u1edbi JpStudy.';
-      case AppLanguage.ja:
-        return '\u3053\u3093\u306b\u3061\u306f\u3001JpStudy\u3078\u3088\u3046\u3053\u305d\u3002';
-    }
-  }
-
-  String get audioCacheLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Audio cache';
-      case AppLanguage.vi:
-        return 'B\u1ed9 nh\u1edb \u0111\u1ec7m \u00e2m thanh';
-      case AppLanguage.ja:
-        return '\u97f3\u58f0\u30ad\u30e3\u30c3\u30b7\u30e5';
-    }
-  }
-
-  String get audioClearCacheLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Clear cache';
-      case AppLanguage.vi:
-        return 'X\u00f3a cache';
-      case AppLanguage.ja:
-        return '\u30ad\u30e3\u30c3\u30b7\u30e5\u3092\u6d88\u53bb';
-    }
-  }
-
-  String get audioCacheClearedLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Audio cache cleared.';
-      case AppLanguage.vi:
-        return '\u0110\u00e3 x\u00f3a cache \u00e2m thanh.';
-      case AppLanguage.ja:
-        return '\u97f3\u58f0\u30ad\u30e3\u30c3\u30b7\u30e5\u3092\u6d88\u53bb\u3057\u307e\u3057\u305f\u3002';
-    }
-  }
-
-  String get audioCacheClearFailedLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Failed to clear audio cache.';
-      case AppLanguage.vi:
-        return 'X\u00f3a cache \u00e2m thanh th\u1ea5t b\u1ea1i.';
-      case AppLanguage.ja:
-        return '\u97f3\u58f0\u30ad\u30e3\u30c3\u30b7\u30e5\u306e\u6d88\u53bb\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002';
-    }
-  }
-
-  String get audioErrorLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Audio failed to play.';
-      case AppLanguage.vi:
-        return 'Kh\xf4ng ph\xe1t \u0111\u01b0\u1ee3c \xe2m thanh.';
-      case AppLanguage.ja:
-        return '\u97f3\u58f0\u306e\u518d\u751f\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002';
-    }
-  }
-
-  String get audioEmptyLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'No text to read.';
-      case AppLanguage.vi:
-        return 'Kh\xf4ng c\xf3 n\u1ed9i dung \u0111\u1ec3 \u0111\u1ecdc.';
-      case AppLanguage.ja:
-        return '\u8aad\u307f\u4e0a\u3052\u308b\u30c6\u30ad\u30b9\u30c8\u304c\u3042\u308a\u307e\u305b\u3093\u3002';
     }
   }
 
@@ -4100,9 +3891,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Practice Ghosts';
       case AppLanguage.vi:
-        return 'Luy?n Ghost';
+        return 'Luy\u1ec7n Ghost';
       case AppLanguage.ja:
-        return '??????';
+        return '\u30b4\u30fc\u30b9\u30c8\u7df4\u7fd2';
     }
   }
 
@@ -4232,9 +4023,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Connection';
       case AppLanguage.vi:
-        return 'K?t n?i';
+        return 'K\u1ebft n\u1ed1i';
       case AppLanguage.ja:
-        return '??';
+        return '\u63a5\u7d9a';
     }
   }
 
@@ -4243,9 +4034,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Explanation';
       case AppLanguage.vi:
-        return 'Gi?i th?ch';
+        return 'Gi\u1ea3i th\u00edch';
       case AppLanguage.ja:
-        return '??';
+        return '\u8aac\u660e';
     }
   }
 
@@ -4254,9 +4045,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Examples';
       case AppLanguage.vi:
-        return 'V? d?';
+        return 'V\u00ed d\u1ee5';
       case AppLanguage.ja:
-        return '??';
+        return '\u4f8b\u6587';
     }
   }
 
@@ -4267,7 +4058,7 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.vi:
         return 'Ghost Kanji';
       case AppLanguage.ja:
-        return '??????';
+        return '\u6f22\u5b57\u30b4\u30fc\u30b9\u30c8';
     }
   }
 
@@ -4727,6 +4518,17 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get immersionFallbackToLocalLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'NHK is currently unavailable. Showing local articles.';
+      case AppLanguage.vi:
+        return 'NHK hi\u1ec7n kh\u00f4ng kh\u1ea3 d\u1ee5ng. \u0110ang hi\u1ec3n th\u1ecb b\u00e0i \u0111\u1ecdc c\u1ee5c b\u1ed9.';
+      case AppLanguage.ja:
+        return 'NHK\u304c\u5229\u7528\u3067\u304d\u306a\u3044\u305f\u3081\u3001\u30ed\u30fc\u30ab\u30eb\u8a18\u4e8b\u3092\u8868\u793a\u3057\u3066\u3044\u307e\u3059\u3002';
+    }
+  }
+
   String get immersionSubtitle {
     switch (this) {
       case AppLanguage.en:
@@ -4823,6 +4625,106 @@ extension AppLanguageLabels on AppLanguage {
         return 'Đã có trong SRS.';
       case AppLanguage.ja:
         return 'SRSに既にあります。';
+    }
+  }
+
+  // Kanji Dash
+  String get kanjiDashTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Kanji Dash';
+      case AppLanguage.vi:
+        return 'Kanji Tốc Chiến';
+      case AppLanguage.ja:
+        return '漢字ダッシュ';
+    }
+  }
+
+  String get kanjiDashSubtitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Answer quickly to extend your time!\n+3s for correct, -2s for wrong';
+      case AppLanguage.vi:
+        return 'Trả lời nhanh để thêm thời gian!\n+3s nếu đúng, -2s nếu sai';
+      case AppLanguage.ja:
+        return '早く答えて時間を延ばそう！\n正解で+3秒、不正解で-2秒';
+    }
+  }
+
+  String get kanjiDashStart {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Start';
+      case AppLanguage.vi:
+        return 'Bắt đầu';
+      case AppLanguage.ja:
+        return 'スタート';
+    }
+  }
+
+  String get kanjiDashTime {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Time';
+      case AppLanguage.vi:
+        return 'Thời gian';
+      case AppLanguage.ja:
+        return '時間';
+    }
+  }
+
+  String get kanjiDashScore {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Score';
+      case AppLanguage.vi:
+        return 'Điểm';
+      case AppLanguage.ja:
+        return 'スコア';
+    }
+  }
+
+  String get kanjiDashFinalScore {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Final Score';
+      case AppLanguage.vi:
+        return 'Điểm số cuối cùng';
+      case AppLanguage.ja:
+        return '最終スコア';
+    }
+  }
+
+  String get kanjiDashPlayAgain {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Play Again';
+      case AppLanguage.vi:
+        return 'Chơi lại';
+      case AppLanguage.ja:
+        return 'もう一度プレイ';
+    }
+  }
+
+  String get kanjiDashNotEnoughTerms {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Need at least 4 vocabulary words to play';
+      case AppLanguage.vi:
+        return 'Cần ít nhất 4 từ vựng để chơi';
+      case AppLanguage.ja:
+        return 'プレイするには少なくとも4つの単語が必要です';
+    }
+  }
+
+  String get kanjiDashNoVocab {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No vocabulary found.';
+      case AppLanguage.vi:
+        return 'Không tìm thấy từ vựng.';
+      case AppLanguage.ja:
+        return '単語が見つかりません。';
     }
   }
 } // End extension

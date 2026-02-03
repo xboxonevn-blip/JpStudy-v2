@@ -179,3 +179,5 @@ Ví dụ thư mục:
 - [x] Final QA N4 (26-50): da sua 96 muc term/reading bi placeholder `?` o cac dong bo sung web-check (lesson 26-40), va re-validate integrity toan bo normalized N4 (26-50) pass.
 - [x] Data cleanup (N4+N5): da chuan hoa `kanjiMeaning` tieng Viet, sua loi dau/ky tu cho cac gia tri bi moji/`?` tren toan bo `assets/data/vocab/normalized/*/lesson_*/master.json`.
 - [x] Data cleanup (N4+N5): da chuan hoa `meaningVi`, sua loi dau/ky tu tren toan bo `assets/data/vocab/normalized/*/lesson_*/sense.json` (khong con ky tu moji/`?` noi bo tu).
+- [x] Final cleanup kickoff: audited N4/N5 coverage before delete; normalized keeps 100% legacy term+reading coverage (0 missing), with +387 curated rows from web-check.
+- [x] Final cleanup phase 1: removed duplicated legacy source files `assets/data/vocab/n4/vocab_n4_*.json` and `assets/data/vocab/n5/vocab_n5_*.json`; seeding now prefers normalized and only falls back to legacy when normalized is empty.

@@ -264,14 +264,27 @@ class ContentDatabase extends _$ContentDatabase {
         level: level,
         lessonId: lessonId,
       );
+
+      // Prefer normalized rows when present; legacy files are only a fallback.
+      if (normalizedRows.isNotEmpty) {
+        allRows.addAll(
+          _mergeLessonRows(
+            preferred: normalizedRows,
+            fallback: const [],
+            level: level,
+            lessonId: lessonId,
+          ),
+        );
+        continue;
+      }
+
       final legacyRows = await _loadLegacyVocabRows(
         levelLower: levelLower,
         lessonId: lessonId,
       );
-
       allRows.addAll(
         _mergeLessonRows(
-          preferred: normalizedRows,
+          preferred: const [],
           fallback: legacyRows,
           level: level,
           lessonId: lessonId,

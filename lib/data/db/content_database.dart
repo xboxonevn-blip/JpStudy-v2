@@ -334,7 +334,7 @@ class ContentDatabase extends _$ContentDatabase {
     final levelLower = level.toLowerCase();
     final paddedLessonId = lessonId.toString().padLeft(2, '0');
     final basePath =
-        'assets/data/vocab/normalize/$levelLower/lesson_$paddedLessonId';
+        'assets/data/vocab/$levelLower/lesson_$paddedLessonId';
 
     try {
       final masterJson = await rootBundle.loadString('$basePath/master.json');

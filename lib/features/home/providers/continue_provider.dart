@@ -42,7 +42,17 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
     return;
   }
 
-  // Priority 3: Fix Mistakes
+  // Priority 3: Kanji Due
+  if (dashboard.kanjiDue > 0) {
+    yield ContinueAction(
+      type: ContinueActionType.kanjiReview,
+      label: language.reviewKanjiLabel,
+      count: dashboard.kanjiDue,
+    );
+    return;
+  }
+
+  // Priority 4: Fix Mistakes
   if (dashboard.totalMistakeCount > 0) {
     yield ContinueAction(
       type: ContinueActionType.fixMistakes,
@@ -52,7 +62,7 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
     return;
   }
 
-  // Priority 4: Next Lesson (Find the first not-fully-completed lesson)
+  // Priority 5: Next Lesson (Find the first not-fully-completed lesson)
   if (level != null) {
     final nextLessonId = await lessonRepo.findNextToStudyLesson(
       level.shortLabel,
@@ -78,6 +88,7 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
 enum ContinueActionType {
   grammarReview,
   vocabReview,
+  kanjiReview,
   fixMistakes,
   practiceMixed,
   nextLesson,

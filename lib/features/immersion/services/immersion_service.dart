@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/immersion_article.dart';
 
@@ -24,12 +25,49 @@ class ImmersionService {
   static const Duration _articleCacheTtl = Duration(days: 7);
 
   Future<List<ImmersionArticle>> loadLocalSamples() async {
-    final raw = await rootBundle.loadString(_assetPath);
-    final json = jsonDecode(raw) as Map<String, dynamic>;
-    final list = json['articles'] as List<dynamic>? ?? const [];
-    return list
-        .map((e) => ImmersionArticle.fromJson(e as Map<String, dynamic>))
-        .toList();
+    final articles = <ImmersionArticle>[];
+    final levels = ['n5', 'n4', 'n3', 'n2', 'n1'];
+    
+    // 1. Load legacy sample file if exists (optional, keeping for backward compat)
+    try {
+      final raw = await rootBundle.loadString(_assetPath);
+      final json = jsonDecode(raw) as Map<String, dynamic>;
+      final list = json['articles'] as List<dynamic>? ?? const [];
+      articles.addAll(list.map((e) => ImmersionArticle.fromJson(e)).toList());
+    } catch (_) {
+      // Ignore if missing
+    }
+
+    // 2. Load new structured lessons (lesson_01.json ... lesson_100.json)
+    for (final level in levels) {
+      // Expanded range to support N5 (1-25), N4 (26-50), etc.
+      for (int i = 1; i <= 100; i++) {
+        final paddedId = i.toString().padLeft(2, '0');
+        final path = 'assets/data/immersion/$level/lesson_$paddedId.json';
+        try {
+          final raw = await rootBundle.loadString(path);
+          final json = jsonDecode(raw);
+          // Support both single object and wrapper format
+          if (json is Map<String, dynamic>) {
+             if (json.containsKey('articles')) {
+               final list = json['articles'] as List;
+               articles.addAll(list.map((e) => ImmersionArticle.fromJson(e)).toList());
+             } else {
+               // Single article file
+               articles.add(ImmersionArticle.fromJson(json));
+             }
+          }
+        } catch (_) {
+          // File doesn't exist, skip
+          continue;
+        }
+      }
+    }
+    
+    // Sort by ID or Level/PublishedAt if needed
+    // articles.sort((a, b) => b.publishedAt.compareTo(a.publishedAt));
+    
+    return articles;
   }
 
   Future<List<ImmersionArticle>> loadNhkEasySummaries({
@@ -468,6 +506,29 @@ class ImmersionService {
     };
     await file.writeAsString(jsonEncode(payload), flush: true);
   }
+
+  // --- Read Status Management ---
+
+  static const _readStatusKey = 'immersion_read_ids';
+
+  Future<Set<String>> getReadArticleIds() async {
+    final prefs = await SharedPreferences.getInstance();
+    final list = prefs.getStringList(_readStatusKey) ?? [];
+    return list.toSet();
+  }
+
+  Future<void> markArticleAsRead(String id, bool isRead) async {
+    final prefs = await SharedPreferences.getInstance();
+    final ids = (prefs.getStringList(_readStatusKey) ?? []).toSet();
+    if (isRead) {
+      ids.add(id);
+    } else {
+      ids.remove(id);
+    }
+    await prefs.setStringList(_readStatusKey, ids.toList());
+  }
+
+  // --- End Read Status Management ---
 
   String? _string(dynamic value) {
     if (value == null) return null;

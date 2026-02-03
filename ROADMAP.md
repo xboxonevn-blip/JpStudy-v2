@@ -11,8 +11,8 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 | :--- | :--- | :--- | :--- |
 | **Phase 1** | **Foundation** (Anki Logic) | ✅ 100% | Completed |
 | **Phase 2** | **Structure & Visuals** (LingoDeer + Clay UI) | ✅ 100% | Completed |
-| **Phase 3** | **Smart Immersion** (FSRS + Auto-Ghost) | ?? 70% | Feb 2026 |
-| **Phase 4** | **Cloud & AI** (Sync + Gemini) | 🧪 0% | Q2 2026 |
+| **Phase 3** | **Smart Immersion** (FSRS + Handwriting) | 🚧 98% | Feb 2026 |
+| **Phase 4** | **Cloud** (Sync) | 🧪 10% | Q2 2026 |
 
 ---
 
@@ -26,36 +26,41 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 
 ---
 
-### ?? Phase 3: Smart Immersion & Algorithms (Current Priority)
-**M?c ti?u:** N?ng c?p "b? n?o" c?a ?ng d?ng, gi?p h?c th?ng minh h?n, kh?ng ch? l? ch?m ch? h?n.
+### 🚧 Phase 3: Smart Immersion & Algorithms (Current Priority)
+**Mục tiêu:** Nâng cấp "bộ não" của ứng dụng, giúp học thông minh hơn, tập trung vào trải nghiệm viết và ôn tập.
 
-1.  **?? Ghost Review 2.0 (Auto-Integration):**
-    *   [x] **Auto-Trigger:** T? ??ng t?o Ghost khi sai trong Learn/Review/Test/Grammar/Handwriting.
-    *   [x] **Contextual Ghosts:** L?u k?m prompt/??p ?n/ngu?n ? Mistake Bank + Ghost Review.
+1.  **👻 Ghost Review 2.0:**
+    *   [x] **Auto-Trigger:** Tự động tạo Ghost khi sai trong Learn/Review/Test/Grammar/Handwriting.
+    *   [x] **Contextual Ghosts:** Lưu kèm prompt/đáp án/nguồn vào Mistake Bank.
 
-2.  **?? FSRS Algorithm (N?ng c?p SRS):**
-    *   [x] **Algorithm Swap:** Thay SM-2 b?ng FSRS cho vocab/grammar/kanji.
-    *   [x] **Retrievability:** Hi?n th? x?c su?t nh? tr??c khi ch?n m?c ??.
+2.  **🧠 FSRS Algorithm (Nâng cấp SRS):**
+    *   [x] **Algorithm Swap:** Thay SM-2 bằng FSRS cho vocab/grammar/kanji.
+    *   [x] **Retrievability:** Hiển thị xác suất nhớ trước khi chọn mức độ.
 
-3.  **?? Advanced Immersion (Not in scope for Phase 3):**
-    *   [ ] **Context Search:** (Deferred)
-    *   [ ] **Audio Sync:** (Deferred)
+3.  **✍️ Advanced Handwriting (Trọng tâm hiện tại):**
+    *   [ ] **Stroke Check:** Kiểm tra thứ tự nét và hình dáng (Shape matching) chuẩn xác.
+    *   [x] **Template Engine (Starter):** Tạo engine chấm theo template nét chuẩn + bộ template khởi đầu cho Kanji phổ biến.
+    *   [x] **N5 Template Coverage:** Đã phủ template cho toàn bộ Kanji N5 (manual + generated baseline).
+    *   [x] **N5 Manual Pack v1:** Nâng cấp bộ template thủ công cho nhóm Kanji nền tảng tần suất cao.
+    *   [x] **N5 Manual Pack v2:** Thêm 20-30 Kanji N5 vào manual pack (đợt mở rộng).
+    *   [x] **N4 Baseline Coverage:** Mở rộng template baseline cho toàn bộ Kanji N4 (generated, có metadata quality/level).
+    *   [x] **N4 Curated/Manual Seed:** Khởi tạo curated pack + manual seed cho N4 để rollout theo độ tin cậy.
+    *   [x] **N4 Promotion Wave 3:** Promote curated → manual theo ưu tiên Mistake Bank (có fallback lesson/stroke).
+    *   [x] **Kanji Ghost:** Gom nhóm Kanji hay sai để luyện tập trung.
+
+4.  **📚 Immersion UX (Mới):**
+    *   [x] **Mark as Learned:** Đánh dấu bài đã hoàn thành (Progress tracking).
+    *   [x] **Auto Scroll:** Tự động cuộn trang (Hands-free reading).
 
 ---
 
-### ☁️ Phase 4: Cloud Ecosystem & AI (Future)
-**Mục tiêu:** Mở rộng trải nghiệm đa nền tảng và hỗ trợ AI.
+### ☁️ Phase 4: Cloud Ecosystem
+**Mục tiêu:** Mở rộng trải nghiệm đa nền tảng
 
 1.  **☁️ Cloud Sync (Free):**
     *   [ ] **Google Drive Backup:** Sync file database qua Google Drive API (Android/Windows).
-    *   [ ] **Cross-device:** Học trên PC, ôn trên điện thoại.
+    *   [x] **Export/Import:** Xuất/Nhập dữ liệu tiến độ (JSON/Zip).
 
-2.  **🤖 AI Assistant (Gemini Flash):**
-    *   [ ] **Why Wrong?**: Giải thích tại sao chọn đáp án sai.
-    *   [ ] **Story Gen**: Tạo câu chuyện ngắn từ list từ vựng đang học.
-
-3.  **🤝 Community:**
-    *   [ ] **Share Decks:** Import/Export bộ từ vựng (JSON/QR).
 
 ---
 
@@ -68,32 +73,61 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 | **Writer Mode** | ✅ Done | Canvas drawing (Basic). |
 | **Ghost Practice** | ✅ Done | Gamified with particles. |
 | **Mock Exam** | ✅ Done | Timer, Scoring, Review. |
-| **Handwriting Check** | ?? Partial | Basic stroke check + SRS; recognition pending.
+| **Immersion Reader Enhancements** | ✅ Done | Read-status + Auto-scroll + SRS add-word flow. |
+| **Handwriting Check** | 🚧 Partial | Đã có chấm điểm stroke/shape/order heuristic; cần dữ liệu nét chuẩn để tăng độ chính xác. |
 
 ---
 
-## ?? UI Walkthrough Checklists
+## 🧪 UI Walkthrough Checklists
 
 ### Ghost Review
-- [ ] M? Ghost Review t? Practice Hub ho?c banner.
-- [ ] Ki?m tra hi?n th? ng? c?nh (prompt/??p ?n/ngu?n).
-- [ ] B?m Practice v? x?c nh?n l?i gi?m sau khi l?m ??ng.
+- [ ] Mở Ghost Review từ Practice Hub hoặc banner.
+- [ ] Kiểm tra hiển thị ngữ cảnh (prompt/đáp án/nguồn).
+- [ ] Bấm Practice và xác nhận lỗi giảm sau khi làm đúng.
 
 ### Immersion Reader
-- [ ] M? Immersion Reader (NHK/Local), t?i b?i.
-- [ ] Tap t? ?? tra ngh?a; th?m v?o SRS; ki?m tra tr?ng th?i ?? l?u.
-- [ ] B?t/t?t Furigana v? b?n d?ch.
+- [ ] Mở Immersion Reader (NHK/Local), tải bài.
+    - [ ] Tap từ để tra nghĩa; thêm vào SRS; kiểm tra trạng thái đã lưu.
+    - [ ] Bật/tắt Furigana và bản dịch.
+    - [ ] Đánh dấu đã học (Mark as Learned).
+    - [ ] Thử tính năng tự động cuộn (Auto Scroll).
 
 ### Handwriting
-- [ ] V?o Write Mode ? Handwriting.
-- [ ] V? n?t, ki?m tra k?t qu?; x?c nh?n SRS c?p nh?t.
-- [ ] Sai th? t?o Mistake (Kanji).
+- [ ] Vào Write Mode ở Handwriting.
+- [ ] Vẽ nét, kiểm tra kết quả; xác nhận SRS cập nhật.
+- [ ] Sai thì tạo Mistake (Kanji).
 
 ### Mock Exam
-- [ ] B?t ??u ?? N5/N4; ki?m tra timer v? flow.
-- [ ] Ho?n th?nh; xem ?i?m & resume session.
+- [ ] Bắt đầu đề N5/N4; kiểm tra timer và flow.
+- [ ] Hoàn thành; xem điểm & resume session.
 
-## ? Next Priority Tasks
-1.  ?? **N?ng c?p nh?n di?n n?t:** ch?m ?i?m theo th? t?/shape n?t.
-2.  ?? **Kanji Ghost UX:** gom nh?m theo b?i + filter theo due.
-3.  ?? **Mock Exam polish:** chia section, pressure timer, review flow.
+## 🚀 Next Priority Tasks
+1.  🔥 **Nâng chất lượng Handwriting N5/N4:** Tiếp tục promote curated → manual cho N4 theo Mistake Bank mới nhất và tune ngưỡng chấm.
+2.  ☁️ **Google Drive Backup:** Triển khai đồng bộ backup/restore qua Drive API (Android/Windows).
+3.  💅 **Mock Exam Polish:** Thêm áp lực thời gian (Time Pressure) và review chi tiết.
+
+---
+
+## 🧾 Latest Update (2026-02-03)
+- ✅ Sửa toàn bộ lỗi compile hiện tại; `flutter analyze` đã sạch lỗi.
+- ✅ Immersion Reader: hoàn tất đọc/đánh dấu đã đọc + auto-scroll + cập nhật UI trạng thái.
+- ✅ Cải thiện Continue flow: thêm nhánh ưu tiên Kanji review.
+- ✅ Cải thiện dashboard: refresh số liệu due/mistakes theo chu kỳ.
+- ✅ Chuẩn hóa một phần i18n cho luồng Ghost Practice và Learning Path.
+- ✅ Handwriting: nâng cấp chấm điểm với stroke count + shape fit + order heuristic.
+- ✅ Handwriting: thêm template-based scoring engine (start/end/direction) + asset `stroke_templates.json` cho nhóm Kanji phổ biến.
+- ✅ Handwriting: mở rộng template coverage full N5, thêm quality flag (`manual/generated`) để kiểm soát trọng số chấm.
+- ✅ Handwriting: thêm manual override pack (N5 high-frequency) + asset overrides riêng để tinh chỉnh an toàn.
+- ✅ Handwriting: thêm quality tier scoring (`manual/curated/generated`) để rollout template theo mức độ tin cậy.
+- ✅ Handwriting: hoàn thành N5 manual pack v2 (mở rộng thêm 20-30 Kanji N5).
+- ✅ Handwriting: mở rộng baseline coverage full N4, tổng template hiện tại: N5+N4.
+- ✅ Handwriting: bắt đầu rollout N4 theo tier với curated pack + manual seed pack.
+- ✅ Handwriting: promotion wave 3 cho N4 (curated -> manual) theo ưu tiên Mistake Bank.
+- ✅ Handwriting UX: hiển thị breakdown điểm (S/Stk/Shp/Ord/Tmp) ngay sau khi Check để tune ngưỡng nhanh hơn.
+- ✅ QA: thêm unit test cho template matcher + test coverage dữ liệu template (bao phủ N5/N4, kiểm tra số nét).
+- ✅ Tooling: thêm script `tooling/generate_stroke_templates.py` để tái tạo baseline template ổn định cho N5/N4.
+- ✅ Tooling: thêm script `tooling/promote_n4_curated_from_mistakes.py` để tự động promote curated N4 theo Mistake Bank.
+- ✅ QA: thêm ngưỡng kiểm tra manual baseline N5 để tránh regress chất lượng template.
+- ✅ QA: thêm ngưỡng kiểm tra curated/manual seed cho N4 để tránh regress rollout tier.
+- ✅ Backup JSON: mở rộng export/import thêm mistakes, grammar/kanji SRS, progress, attempts, sessions, settings.
+- ✅ Kanji Ghost: thêm nhóm luyện theo lesson trong Mistake Bank để luyện tập trung.

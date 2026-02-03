@@ -54,6 +54,7 @@ class _ImmersionHomeScreenState extends ConsumerState<ImmersionHomeScreen> {
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
+    final readIds = ref.watch(readArticlesProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -102,6 +103,7 @@ class _ImmersionHomeScreenState extends ConsumerState<ImmersionHomeScreen> {
                       (article) => _ArticleCard(
                         article: article,
                         language: language,
+                        isRead: readIds.contains(article.id),
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
@@ -150,11 +152,13 @@ class _ArticleCard extends StatelessWidget {
   const _ArticleCard({
     required this.article,
     required this.language,
+    required this.isRead,
     required this.onTap,
   });
 
   final ImmersionArticle article;
   final AppLanguage language;
+  final bool isRead;
   final VoidCallback onTap;
 
   @override
@@ -165,6 +169,9 @@ class _ArticleCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
       child: ListTile(
+        leading: isRead
+            ? const Icon(Icons.check_circle, color: Colors.green)
+            : const Icon(Icons.circle_outlined, color: Colors.black26),
         title: Text(article.title),
         subtitle: Text('${article.source} • ${article.level} • $dateLabel'),
         trailing: const Icon(Icons.chevron_right),

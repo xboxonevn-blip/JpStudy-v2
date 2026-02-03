@@ -11,6 +11,8 @@ import '../widgets/mini_dashboard.dart';
 import '../widgets/continue_button.dart';
 import '../widgets/practice_hub.dart';
 import '../widgets/ghost_review_banner.dart';
+import '../../../core/language_provider.dart';
+import '../../../core/app_language.dart';
 
 class LearningPathScreen extends ConsumerWidget {
   const LearningPathScreen({super.key});
@@ -19,6 +21,7 @@ class LearningPathScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pathState = ref.watch(learningPathViewModelProvider);
     final selectedLevel = ref.watch(studyLevelProvider);
+    final language = ref.watch(appLanguageProvider);
 
     return Scaffold(
       body: pathState.when(
@@ -31,9 +34,7 @@ class LearningPathScreen extends ConsumerWidget {
                     .toList();
 
           if (units.isEmpty) {
-            return const Center(
-              child: Text('No lessons found for this level.'),
-            );
+            return Center(child: Text(language.noLessonsForLevelLabel));
           }
 
           return CustomScrollView(
@@ -74,7 +75,7 @@ class LearningPathScreen extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, stack) => Center(child: Text('Error: $err')),
+        error: (error, stack) => Center(child: Text(language.loadErrorLabel)),
       ),
     );
   }

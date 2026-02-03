@@ -153,6 +153,12 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         );
+      case ContinueActionType.kanjiReview:
+        return const LinearGradient(
+          colors: [Color(0xFF0D9488), Color(0xFF0F766E)], // Teal
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        );
       case ContinueActionType.nextLesson:
         return const LinearGradient(
           colors: [Color(0xFF10B981), Color(0xFF059669)], // Emerald
@@ -174,6 +180,8 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
         return Icons.auto_stories_rounded;
       case ContinueActionType.vocabReview:
         return Icons.style_rounded;
+      case ContinueActionType.kanjiReview:
+        return Icons.brush_rounded;
       case ContinueActionType.nextLesson:
         return Icons.play_lesson_rounded;
       default:
@@ -187,6 +195,8 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
         return language.reviewGrammarLabel.toUpperCase();
       case ContinueActionType.vocabReview:
         return language.reviewVocabLabel.toUpperCase();
+      case ContinueActionType.kanjiReview:
+        return language.reviewKanjiLabel.toUpperCase();
       case ContinueActionType.nextLesson:
         return language.continueJourneyLabel.toUpperCase();
       case ContinueActionType.fixMistakes:
@@ -222,6 +232,9 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
         break;
       case ContinueActionType.vocabReview:
         context.push('/vocab/review');
+        break;
+      case ContinueActionType.kanjiReview:
+        context.push('/kanji-dash');
         break;
       case ContinueActionType.fixMistakes:
         context.push('/mistakes');

@@ -60,6 +60,10 @@ class MistakeRepository {
     return _dao.getMistakesByType(type);
   }
 
+  Future<List<UserMistake>> getAllMistakes() {
+    return _dao.getAllMistakes();
+  }
+
   Stream<List<UserMistake>> watchAllMistakes() {
     return _dao.watchAllMistakes();
   }

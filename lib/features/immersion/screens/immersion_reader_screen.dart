@@ -7,6 +7,7 @@ import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import '../models/immersion_article.dart';
 import '../providers/immersion_providers.dart';
 import '../services/immersion_service.dart';
+import 'dart:async';
 
 class ImmersionReaderScreen extends ConsumerStatefulWidget {
   final ImmersionArticle article;
@@ -70,9 +71,67 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     });
   }
 
+  // --- Auto Scroll & Read Status ---
+
+  final ScrollController _scrollController = ScrollController();
+  Timer? _autoScrollTimer;
+  bool _isAutoScrolling = false;
+
+  @override
+  void dispose() {
+    _autoScrollTimer?.cancel();
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  Future<void> _toggleReadStatus() async {
+    await ref.read(readArticlesProvider.notifier).toggle(widget.article.id);
+  }
+
+  void _toggleAutoScroll() {
+    if (_isAutoScrolling) {
+      _stopAutoScroll();
+    } else {
+      _startAutoScroll();
+    }
+  }
+
+  void _startAutoScroll() {
+    setState(() {
+      _isAutoScrolling = true;
+    });
+    // Scroll speed: ~20px every 100ms => 200px/sec (Adjustable)
+    const step = 2.0;
+    const duration = Duration(milliseconds: 50);
+    _autoScrollTimer = Timer.periodic(duration, (timer) {
+      if (!_scrollController.hasClients) return;
+      
+      final maxScroll = _scrollController.position.maxScrollExtent;
+      final currentScroll = _scrollController.offset;
+      
+      if (currentScroll >= maxScroll) {
+        _stopAutoScroll();
+        return;
+      }
+      
+      _scrollController.jumpTo(currentScroll + step);
+    });
+  }
+
+  void _stopAutoScroll() {
+    _autoScrollTimer?.cancel();
+    setState(() {
+      _isAutoScrolling = false;
+    });
+  }
+
+  // --- End Auto Scroll & Read Status ---
+
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
+    final readIds = ref.watch(readArticlesProvider);
+    final isRead = readIds.contains(widget.article.id);
 
     if (_detailFuture != null) {
       return FutureBuilder<ImmersionArticle?>(
@@ -107,18 +166,24 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
               ),
             );
           }
-          return _buildArticleScaffold(context, language, snapshot.data!);
+          return _buildArticleScaffold(
+            context,
+            language,
+            snapshot.data!,
+            isRead,
+          );
         },
       );
     }
 
-    return _buildArticleScaffold(context, language, widget.article);
+    return _buildArticleScaffold(context, language, widget.article, isRead);
   }
 
   Scaffold _buildArticleScaffold(
     BuildContext context,
     AppLanguage language,
     ImmersionArticle article,
+    bool isRead,
   ) {
     final dateLabel = MaterialLocalizations.of(
       context,
@@ -127,6 +192,14 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       appBar: AppBar(
         title: Text(language.immersionTitle),
         actions: [
+          IconButton(
+            onPressed: _toggleReadStatus,
+            icon: Icon(
+              isRead ? Icons.check_circle : Icons.check_circle_outline,
+              color: isRead ? Colors.green : null,
+            ),
+            tooltip: language.immersionMarkReadLabel,
+          ),
           Row(
             children: [
               Text(language.immersionFuriganaLabel),
@@ -142,7 +215,13 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _toggleAutoScroll,
+        tooltip: language.immersionAutoScrollLabel,
+        child: Icon(_isAutoScrolling ? Icons.pause : Icons.play_arrow),
+      ),
       body: ListView(
+        controller: _scrollController,
         padding: const EdgeInsets.all(16),
         children: [
           Text(
@@ -191,6 +270,8 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
               style: const TextStyle(fontSize: 13, color: Color(0xFF374151)),
             ),
           ],
+          // Extra space at bottom for scrolling comfortably
+          const SizedBox(height: 80),
         ],
       ),
     );

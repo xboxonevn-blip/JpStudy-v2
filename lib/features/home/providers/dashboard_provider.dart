@@ -4,27 +4,18 @@ import '../../../data/repositories/lesson_repository.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
 
 final dashboardProvider = StreamProvider<DashboardState>((ref) async* {
-  final progress = await ref.watch(progressSummaryProvider.future);
-
+  final lessonRepo = ref.watch(lessonRepositoryProvider);
   final db = ref.watch(databaseProvider);
   final srsDao = db.srsDao;
   final grammarDao = db.grammarDao;
   final kanjiSrsDao = db.kanjiSrsDao;
   final mistakeRepo = ref.watch(mistakeRepositoryProvider);
-
-  // Fetch Vocab Due Count
-  final vocabDueFunctions = await srsDao.getDueReviews();
-  final vocabDueCount = vocabDueFunctions.length;
-
-  // Fetch Grammar Due Count
-  final grammarDueFunctions = await grammarDao.getDueReviews();
-  final grammarDueCount = grammarDueFunctions.length;
-
-  // Fetch Kanji Due Count
-  final kanjiDueFunctions = await kanjiSrsDao.getDueReviews();
-  final kanjiDueCount = kanjiDueFunctions.length;
-
-  await for (final mistakes in mistakeRepo.watchAllMistakes()) {
+  while (true) {
+    final progress = await lessonRepo.fetchProgressSummary();
+    final vocabDueCount = (await srsDao.getDueReviews()).length;
+    final grammarDueCount = (await grammarDao.getDueReviews()).length;
+    final kanjiDueCount = (await kanjiSrsDao.getDueReviews()).length;
+    final mistakes = await mistakeRepo.getAllMistakes();
     var vocabMistakeCount = 0;
     var grammarMistakeCount = 0;
     var kanjiMistakeCount = 0;
@@ -48,6 +39,7 @@ final dashboardProvider = StreamProvider<DashboardState>((ref) async* {
       kanjiMistakeCount: kanjiMistakeCount,
       totalMistakeCount: mistakes.length,
     );
+    await Future<void>.delayed(const Duration(seconds: 10));
   }
 });
 

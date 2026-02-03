@@ -1,6 +1,7 @@
 class KanjiItem {
   const KanjiItem({
     required this.id,
+    required this.lessonId,
     required this.character,
     required this.strokeCount,
     this.onyomi,
@@ -14,6 +15,7 @@ class KanjiItem {
   });
 
   final int id;
+  final int lessonId;
   final String character;
   final int strokeCount;
   final String? onyomi;

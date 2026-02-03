@@ -9,6 +9,8 @@ import '../../../data/models/kanji_item.dart';
 import '../../../data/models/mistake_context.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
+import '../services/handwriting_template_matcher.dart';
+import '../services/kanji_stroke_template_service.dart';
 import '../widgets/handwriting_canvas.dart';
 
 class HandwritingPracticeScreen extends ConsumerStatefulWidget {
@@ -36,8 +38,15 @@ class _HandwritingPracticeScreenState
   Size _canvasSize = Size.zero;
   _HandwritingEvaluation? _evaluation;
   bool _hasCommitted = false;
+  KanjiStrokeTemplate? _strokeTemplate;
 
   KanjiItem get _currentItem => widget.items[_currentIndex];
+
+  @override
+  void initState() {
+    super.initState();
+    _loadStrokeTemplate();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -212,24 +221,46 @@ class _HandwritingPracticeScreenState
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: color.withValues(alpha: 0.5)),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            evaluation.isCorrect ? Icons.check_circle : Icons.cancel,
-            color: color,
+          Row(
+            children: [
+              Icon(
+                evaluation.isCorrect ? Icons.check_circle : Icons.cancel,
+                color: color,
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  evaluation.isCorrect
+                      ? language.correctLabel
+                      : language.incorrectLabel,
+                  style: TextStyle(color: color, fontWeight: FontWeight.w600),
+                ),
+              ),
+              Text(
+                '${evaluation.drawnStrokes}/${evaluation.expectedStrokes}',
+                style: TextStyle(color: color, fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              evaluation.isCorrect
-                  ? language.correctLabel
-                  : language.incorrectLabel,
-              style: TextStyle(color: color, fontWeight: FontWeight.w600),
-            ),
-          ),
+          const SizedBox(height: 6),
           Text(
-            '${evaluation.drawnStrokes}/${evaluation.expectedStrokes}',
-            style: TextStyle(color: color, fontWeight: FontWeight.bold),
+            [
+              'S ${evaluation.score.toStringAsFixed(2)}',
+              'Stk ${evaluation.strokeScore.toStringAsFixed(2)}',
+              'Shp ${evaluation.shapeScore.toStringAsFixed(2)}',
+              'Ord ${evaluation.orderScore.toStringAsFixed(2)}',
+              if (evaluation.usedTemplate)
+                'Tmp ${evaluation.templateScore.toStringAsFixed(2)}'
+                    '(${evaluation.templateQuality})',
+            ].join('  |  '),
+            style: const TextStyle(
+              fontSize: 11,
+              fontFeatures: [FontFeature.tabularFigures()],
+              color: Color(0xFF4D587A),
+            ),
           ),
         ],
       ),
@@ -342,7 +373,9 @@ class _HandwritingPracticeScreenState
       _evaluation = null;
       _strokes = [];
       _hasCommitted = false;
+      _strokeTemplate = null;
     });
+    await _loadStrokeTemplate();
   }
 
   void _undoStroke() {
@@ -366,24 +399,152 @@ class _HandwritingPracticeScreenState
 
   _HandwritingEvaluation _evaluate() {
     final expected = _currentItem.strokeCount;
-    final drawnStrokes = _strokeCount;
+    final meaningfulStrokes = _strokes.where((stroke) => stroke.length > 1).toList();
+    final drawnStrokes = meaningfulStrokes.length;
     final inkLength = _inkLength;
     final tolerance = expected >= 12
         ? 2
         : expected >= 6
         ? 1
         : 0;
-    final strokeOk = (drawnStrokes - expected).abs() <= tolerance;
+    final strokeDelta = (drawnStrokes - expected).abs().toDouble();
+    final strokeScore = 1.0 - (strokeDelta / (tolerance + 1)).clamp(0.0, 1.0);
+
     final minSide = _canvasSize.shortestSide == 0
         ? 200
         : _canvasSize.shortestSide;
     final minLength = minSide * max(1.0, expected * 0.2);
-    final lengthOk = inkLength >= minLength;
+    final lengthScore = (inkLength / max(1.0, minLength)).clamp(0.0, 1.0);
+
+    final template = _strokeTemplate;
+    final templateScore = template == null
+        ? 0.0
+        : HandwritingTemplateMatcher.templateScore(
+            strokes: meaningfulStrokes,
+            template: template,
+          );
+    final shapeScore = _shapeScore(meaningfulStrokes);
+    final orderScore = _orderScore(meaningfulStrokes);
+    final useStrongTemplate = template?.isHighConfidence == true;
+    final useMediumTemplate = template?.isMediumConfidence == true;
+    final totalScore = template == null
+        ? (strokeScore * 0.35) +
+              (lengthScore * 0.15) +
+              (shapeScore * 0.30) +
+              (orderScore * 0.20)
+        : useStrongTemplate
+        ? (strokeScore * 0.25) +
+              (lengthScore * 0.10) +
+              (shapeScore * 0.20) +
+              (orderScore * 0.15) +
+              (templateScore * 0.30)
+        : useMediumTemplate
+        ? (strokeScore * 0.30) +
+              (lengthScore * 0.12) +
+              (shapeScore * 0.23) +
+              (orderScore * 0.19) +
+              (templateScore * 0.16)
+        : (strokeScore * 0.33) +
+              (lengthScore * 0.15) +
+              (shapeScore * 0.28) +
+              (orderScore * 0.20) +
+              (templateScore * 0.04);
+    final requiredScore = _showGuide ? 0.58 : 0.68;
+    final minTemplateScore = useStrongTemplate
+        ? 0.35
+        : useMediumTemplate
+        ? 0.22
+        : 0.0;
+    final isCorrect =
+        totalScore >= requiredScore &&
+        strokeScore >= 0.45 &&
+        templateScore >= minTemplateScore;
+
     return _HandwritingEvaluation(
       expectedStrokes: expected,
       drawnStrokes: drawnStrokes,
-      isCorrect: strokeOk && lengthOk,
+      score: totalScore,
+      strokeScore: strokeScore,
+      shapeScore: shapeScore,
+      orderScore: orderScore,
+      templateScore: templateScore,
+      usedTemplate: template != null,
+      templateQuality: template?.normalizedQuality ?? 'none',
+      isCorrect: isCorrect,
     );
+  }
+
+  double _shapeScore(List<List<Offset>> strokes) {
+    if (strokes.isEmpty) return 0;
+    final allPoints = <Offset>[
+      for (final stroke in strokes) ...stroke,
+    ];
+    final minX = allPoints.map((p) => p.dx).reduce(min);
+    final maxX = allPoints.map((p) => p.dx).reduce(max);
+    final minY = allPoints.map((p) => p.dy).reduce(min);
+    final maxY = allPoints.map((p) => p.dy).reduce(max);
+
+    final width = max(1.0, maxX - minX);
+    final height = max(1.0, maxY - minY);
+    final bboxArea = width * height;
+    final canvasArea = max(1.0, _canvasSize.width * _canvasSize.height);
+    final areaRatio = (bboxArea / canvasArea).clamp(0.0, 1.0);
+
+    // Most handwritten kanji should occupy a moderate area in the box.
+    final targetArea = _strokeTemplate?.targetArea ?? 0.32;
+    final areaScore = 1.0 -
+        ((areaRatio - targetArea).abs() / max(0.1, targetArea))
+            .clamp(0.0, 1.0);
+
+    final center = Offset((minX + maxX) / 2, (minY + maxY) / 2);
+    final canvasCenter = Offset(_canvasSize.width / 2, _canvasSize.height / 2);
+    final maxDistance = max(1.0, _canvasSize.shortestSide / 2);
+    final centerDistance = (center - canvasCenter).distance;
+    final centerScore = 1.0 - (centerDistance / maxDistance).clamp(0.0, 1.0);
+
+    final aspect = width / height;
+    // Keep aspect flexible but discourage extremely flat/tall drawings.
+    final targetAspect = _strokeTemplate?.targetAspect ?? 1.0;
+    final aspectScore =
+        1.0 - ((aspect - targetAspect).abs() / 1.5).clamp(0.0, 1.0);
+
+    return (areaScore * 0.45) + (centerScore * 0.35) + (aspectScore * 0.20);
+  }
+
+  double _orderScore(List<List<Offset>> strokes) {
+    final template = _strokeTemplate;
+    if (template != null &&
+        (template.isHighConfidence || template.isMediumConfidence)) {
+      return HandwritingTemplateMatcher.templateOrderScore(
+        strokes: strokes,
+        template: template,
+      );
+    }
+    if (strokes.length <= 1) return 1;
+    final starts = strokes.map((stroke) => stroke.first).toList();
+    final yThreshold = max(8.0, _canvasSize.height * 0.04);
+    final xThreshold = max(8.0, _canvasSize.width * 0.04);
+    var violations = 0;
+
+    for (var i = 1; i < starts.length; i++) {
+      final prev = starts[i - 1];
+      final cur = starts[i];
+
+      // Heuristic: common order is top-to-bottom.
+      if (cur.dy + yThreshold < prev.dy) {
+        violations += 1;
+        continue;
+      }
+
+      // Secondary heuristic: when near the same row, usually left-to-right.
+      final sameRow = (cur.dy - prev.dy).abs() <= yThreshold;
+      if (sameRow && cur.dx + xThreshold < prev.dx) {
+        violations += 1;
+      }
+    }
+
+    final maxViolations = max(1, starts.length - 1);
+    return 1.0 - (violations / maxViolations).clamp(0.0, 1.0);
   }
 
   int get _strokeCount {
@@ -444,6 +605,13 @@ class _HandwritingPracticeScreenState
         extra: {
           'expectedStrokes': evaluation.expectedStrokes,
           'drawnStrokes': evaluation.drawnStrokes,
+          'score': evaluation.score,
+          'strokeScore': evaluation.strokeScore,
+          'shapeScore': evaluation.shapeScore,
+          'orderScore': evaluation.orderScore,
+          'templateScore': evaluation.templateScore,
+          'usedTemplate': evaluation.usedTemplate,
+          'templateQuality': evaluation.templateQuality,
           'showGuide': _showGuide,
         },
       ),
@@ -475,6 +643,17 @@ class _HandwritingPracticeScreenState
         ],
       ),
     );
+  }
+
+  Future<void> _loadStrokeTemplate() async {
+    if (widget.items.isEmpty) return;
+    final template = await KanjiStrokeTemplateService.instance.getTemplate(
+      _currentItem.character,
+    );
+    if (!mounted) return;
+    setState(() {
+      _strokeTemplate = template;
+    });
   }
 }
 
@@ -557,10 +736,24 @@ class _HandwritingEvaluation {
   const _HandwritingEvaluation({
     required this.expectedStrokes,
     required this.drawnStrokes,
+    required this.score,
+    required this.strokeScore,
+    required this.shapeScore,
+    required this.orderScore,
+    required this.templateScore,
+    required this.usedTemplate,
+    required this.templateQuality,
     required this.isCorrect,
   });
 
   final int expectedStrokes;
   final int drawnStrokes;
+  final double score;
+  final double strokeScore;
+  final double shapeScore;
+  final double orderScore;
+  final double templateScore;
+  final bool usedTemplate;
+  final String templateQuality;
   final bool isCorrect;
 }

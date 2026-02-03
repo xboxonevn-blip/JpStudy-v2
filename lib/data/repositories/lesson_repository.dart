@@ -940,6 +940,7 @@ class LessonRepository {
 
       return KanjiItem(
         id: row.id,
+        lessonId: row.lessonId,
         character: row.character,
         strokeCount: row.strokeCount,
         onyomi: row.onyomi,
@@ -965,6 +966,7 @@ class LessonRepository {
 
       return KanjiItem(
         id: row.id,
+        lessonId: row.lessonId,
         character: row.character,
         strokeCount: row.strokeCount,
         onyomi: row.onyomi,
@@ -1675,12 +1677,41 @@ class LessonRepository {
     final lessons = await _db.select(_db.userLesson).get();
     final terms = await _db.select(_db.userLessonTerm).get();
     final srs = await _db.select(_db.srsState).get();
+    final grammarSrs = await _db.select(_db.grammarSrsState).get();
+    final kanjiSrs = await _db.select(_db.kanjiSrsState).get();
+    final mistakes = await _db.select(_db.userMistakes).get();
+    final progress = await _db.select(_db.userProgress).get();
+    final attempts = await _db.select(_db.attempt).get();
+    final attemptAnswers = await _db.select(_db.attemptAnswer).get();
+    final learnSessions = await _db.select(_db.learnSessions).get();
+    final learnAnswers = await _db.select(_db.learnAnswers).get();
+    final testSessions = await _db.select(_db.testSessions).get();
+    final testAnswers = await _db.select(_db.testAnswers).get();
+    final achievements = await _db.select(_db.achievements).get();
+    final flashcardSettings = await _db.select(_db.flashcardSettings).get();
+    final learnSettings = await _db.select(_db.learnSettings).get();
+    final testSettings = await _db.select(_db.testSettings).get();
+
     return {
-      'version': 1,
+      'version': 2,
       'exportedAt': DateTime.now().toIso8601String(),
       'lessons': lessons.map((lesson) => lesson.toJson()).toList(),
       'terms': terms.map((term) => term.toJson()).toList(),
       'srs': srs.map((state) => state.toJson()).toList(),
+      'grammarSrs': grammarSrs.map((state) => state.toJson()).toList(),
+      'kanjiSrs': kanjiSrs.map((state) => state.toJson()).toList(),
+      'mistakes': mistakes.map((item) => item.toJson()).toList(),
+      'progress': progress.map((item) => item.toJson()).toList(),
+      'attempts': attempts.map((item) => item.toJson()).toList(),
+      'attemptAnswers': attemptAnswers.map((item) => item.toJson()).toList(),
+      'learnSessions': learnSessions.map((item) => item.toJson()).toList(),
+      'learnAnswers': learnAnswers.map((item) => item.toJson()).toList(),
+      'testSessions': testSessions.map((item) => item.toJson()).toList(),
+      'testAnswers': testAnswers.map((item) => item.toJson()).toList(),
+      'achievements': achievements.map((item) => item.toJson()).toList(),
+      'flashcardSettings': flashcardSettings.map((item) => item.toJson()).toList(),
+      'learnSettings': learnSettings.map((item) => item.toJson()).toList(),
+      'testSettings': testSettings.map((item) => item.toJson()).toList(),
     };
   }
 
@@ -1688,6 +1719,21 @@ class LessonRepository {
     final lessonsRaw = data['lessons'] as List<dynamic>? ?? const [];
     final termsRaw = data['terms'] as List<dynamic>? ?? const [];
     final srsRaw = data['srs'] as List<dynamic>? ?? const [];
+    final grammarSrsRaw = data['grammarSrs'] as List<dynamic>? ?? const [];
+    final kanjiSrsRaw = data['kanjiSrs'] as List<dynamic>? ?? const [];
+    final mistakesRaw = data['mistakes'] as List<dynamic>? ?? const [];
+    final progressRaw = data['progress'] as List<dynamic>? ?? const [];
+    final attemptsRaw = data['attempts'] as List<dynamic>? ?? const [];
+    final attemptAnswersRaw = data['attemptAnswers'] as List<dynamic>? ?? const [];
+    final learnSessionsRaw = data['learnSessions'] as List<dynamic>? ?? const [];
+    final learnAnswersRaw = data['learnAnswers'] as List<dynamic>? ?? const [];
+    final testSessionsRaw = data['testSessions'] as List<dynamic>? ?? const [];
+    final testAnswersRaw = data['testAnswers'] as List<dynamic>? ?? const [];
+    final achievementsRaw = data['achievements'] as List<dynamic>? ?? const [];
+    final flashcardSettingsRaw =
+        data['flashcardSettings'] as List<dynamic>? ?? const [];
+    final learnSettingsRaw = data['learnSettings'] as List<dynamic>? ?? const [];
+    final testSettingsRaw = data['testSettings'] as List<dynamic>? ?? const [];
 
     final lessons = lessonsRaw
         .whereType<Map<String, dynamic>>()
@@ -1701,9 +1747,79 @@ class LessonRepository {
         .whereType<Map<String, dynamic>>()
         .map(SrsStateData.fromJson)
         .toList();
+    final grammarSrs = grammarSrsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(GrammarSrsStateData.fromJson)
+        .toList();
+    final kanjiSrs = kanjiSrsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(KanjiSrsStateData.fromJson)
+        .toList();
+    final mistakes = mistakesRaw
+        .whereType<Map<String, dynamic>>()
+        .map(UserMistake.fromJson)
+        .toList();
+    final progress = progressRaw
+        .whereType<Map<String, dynamic>>()
+        .map(UserProgressData.fromJson)
+        .toList();
+    final attempts = attemptsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(AttemptData.fromJson)
+        .toList();
+    final attemptAnswers = attemptAnswersRaw
+        .whereType<Map<String, dynamic>>()
+        .map(AttemptAnswerData.fromJson)
+        .toList();
+    final learnSessions = learnSessionsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(LearnSession.fromJson)
+        .toList();
+    final learnAnswers = learnAnswersRaw
+        .whereType<Map<String, dynamic>>()
+        .map(LearnAnswer.fromJson)
+        .toList();
+    final testSessions = testSessionsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(TestSession.fromJson)
+        .toList();
+    final testAnswers = testAnswersRaw
+        .whereType<Map<String, dynamic>>()
+        .map(TestAnswer.fromJson)
+        .toList();
+    final achievements = achievementsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(Achievement.fromJson)
+        .toList();
+    final flashcardSettings = flashcardSettingsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(FlashcardSetting.fromJson)
+        .toList();
+    final learnSettings = learnSettingsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(LearnSetting.fromJson)
+        .toList();
+    final testSettings = testSettingsRaw
+        .whereType<Map<String, dynamic>>()
+        .map(TestSetting.fromJson)
+        .toList();
 
     await _db.transaction(() async {
+      await _db.delete(_db.attemptAnswer).go();
+      await _db.delete(_db.attempt).go();
+      await _db.delete(_db.learnAnswers).go();
+      await _db.delete(_db.learnSessions).go();
+      await _db.delete(_db.testAnswers).go();
+      await _db.delete(_db.testSessions).go();
+      await _db.delete(_db.achievements).go();
+      await _db.delete(_db.flashcardSettings).go();
+      await _db.delete(_db.learnSettings).go();
+      await _db.delete(_db.testSettings).go();
+      await _db.delete(_db.userMistakes).go();
+      await _db.delete(_db.kanjiSrsState).go();
+      await _db.delete(_db.grammarSrsState).go();
       await _db.delete(_db.srsState).go();
+      await _db.delete(_db.userProgress).go();
       await _db.delete(_db.userLessonTerm).go();
       await _db.delete(_db.userLesson).go();
 
@@ -1726,6 +1842,104 @@ class LessonRepository {
           batch.insert(
             _db.srsState,
             state.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final state in grammarSrs) {
+          batch.insert(
+            _db.grammarSrsState,
+            state.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final state in kanjiSrs) {
+          batch.insert(
+            _db.kanjiSrsState,
+            state.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in mistakes) {
+          batch.insert(
+            _db.userMistakes,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in progress) {
+          batch.insert(
+            _db.userProgress,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in attempts) {
+          batch.insert(
+            _db.attempt,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in attemptAnswers) {
+          batch.insert(
+            _db.attemptAnswer,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in learnSessions) {
+          batch.insert(
+            _db.learnSessions,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in learnAnswers) {
+          batch.insert(
+            _db.learnAnswers,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in testSessions) {
+          batch.insert(
+            _db.testSessions,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in testAnswers) {
+          batch.insert(
+            _db.testAnswers,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in achievements) {
+          batch.insert(
+            _db.achievements,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in flashcardSettings) {
+          batch.insert(
+            _db.flashcardSettings,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in learnSettings) {
+          batch.insert(
+            _db.learnSettings,
+            item.toCompanion(true),
+            mode: InsertMode.insertOrReplace,
+          );
+        }
+        for (final item in testSettings) {
+          batch.insert(
+            _db.testSettings,
+            item.toCompanion(true),
             mode: InsertMode.insertOrReplace,
           );
         }

@@ -887,9 +887,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'No mistakes yet';
       case AppLanguage.vi:
-        return 'Ch?a c? l?i n?o';
+        return 'Chưa có lỗi nào';
       case AppLanguage.ja:
-        return '????????';
+        return 'まだ間違いはありません';
     }
   }
 
@@ -898,9 +898,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'You are all caught up. Keep going!';
       case AppLanguage.vi:
-        return 'B?n ?? b?t k?p h?t. Ti?p t?c nh?!';
+        return 'Bạn đã bắt kịp hết. Tiếp tục nhé!';
       case AppLanguage.ja:
-        return '?????????????????';
+        return '今のところ順調です。このまま続けましょう！';
     }
   }
 
@@ -909,9 +909,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Need $count correct';
       case AppLanguage.vi:
-        return 'C?n ??ng $count l?n';
+        return 'Cần đúng $count lần';
       case AppLanguage.ja:
-        return '??$count??????';
+        return 'あと$count回正解が必要';
     }
   }
 
@@ -920,9 +920,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Item #$id';
       case AppLanguage.vi:
-        return 'M?c #$id';
+        return 'Mục #$id';
       case AppLanguage.ja:
-        return '?? #$id';
+        return '項目 #$id';
     }
   }
 
@@ -931,9 +931,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Prompt';
       case AppLanguage.vi:
-        return 'G?i ?';
+        return 'Gợi ý';
       case AppLanguage.ja:
-        return '??';
+        return '問題文';
     }
   }
 
@@ -942,9 +942,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Your answer';
       case AppLanguage.vi:
-        return '??p ?n c?a b?n';
+        return 'Đáp án của bạn';
       case AppLanguage.ja:
-        return '??????';
+        return 'あなたの回答';
     }
   }
 
@@ -953,9 +953,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Correct answer';
       case AppLanguage.vi:
-        return '??p ?n ??ng';
+        return 'Đáp án đúng';
       case AppLanguage.ja:
-        return '??';
+        return '正解';
     }
   }
 
@@ -964,9 +964,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Source';
       case AppLanguage.vi:
-        return 'Ngu?n';
+        return 'Nguồn';
       case AppLanguage.ja:
-        return '??';
+        return '出典';
     }
   }
 
@@ -975,9 +975,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Strokes: $drawn/$expected';
       case AppLanguage.vi:
-        return 'N?t: $drawn/$expected';
+        return 'Nét: $drawn/$expected';
       case AppLanguage.ja:
-        return '??: $drawn/$expected';
+        return '画数: $drawn/$expected';
     }
   }
 
@@ -986,9 +986,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Last mistake';
       case AppLanguage.vi:
-        return 'L?i g?n nh?t';
+        return 'Lỗi gần nhất';
       case AppLanguage.ja:
-        return '?????';
+        return '直近の間違い';
     }
   }
 
@@ -997,9 +997,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'No context saved.';
       case AppLanguage.vi:
-        return 'Ch?a l?u ng? c?nh.';
+        return 'Chưa lưu ngữ cảnh.';
       case AppLanguage.ja:
-        return '????????';
+        return 'コンテキストは未保存です。';
     }
   }
 
@@ -1008,9 +1008,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Practice Vocab ($count)';
       case AppLanguage.vi:
-        return '?n t? v?ng ($count)';
+        return 'Ôn từ vựng ($count)';
       case AppLanguage.ja:
-        return '????? ($count)';
+        return '語彙を練習 ($count)';
     }
   }
 
@@ -1019,9 +1019,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Practice Grammar ($count)';
       case AppLanguage.vi:
-        return '?n ng? ph?p ($count)';
+        return 'Ôn ngữ pháp ($count)';
       case AppLanguage.ja:
-        return '????? ($count)';
+        return '文法を練習 ($count)';
     }
   }
 
@@ -1030,9 +1030,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Practice Kanji ($count)';
       case AppLanguage.vi:
-        return '?n Kanji ($count)';
+        return 'Ôn Kanji ($count)';
       case AppLanguage.ja:
-        return '????? ($count)';
+        return '漢字を練習 ($count)';
     }
   }
 
@@ -1041,9 +1041,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Learn';
       case AppLanguage.vi:
-        return 'H?c';
+        return 'Học';
       case AppLanguage.ja:
-        return '??';
+        return '学習';
     }
   }
 
@@ -1052,9 +1052,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Review';
       case AppLanguage.vi:
-        return '?n';
+        return 'Ôn';
       case AppLanguage.ja:
-        return '??';
+        return '復習';
     }
   }
 
@@ -1063,9 +1063,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Lesson Review';
       case AppLanguage.vi:
-        return '?n trong b?i';
+        return 'Ôn trong bài';
       case AppLanguage.ja:
-        return '??????';
+        return 'レッスン内復習';
     }
   }
 
@@ -1074,9 +1074,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Test';
       case AppLanguage.vi:
-        return 'B?i ki?m tra';
+        return 'Bài kiểm tra';
       case AppLanguage.ja:
-        return '???';
+        return 'テスト';
     }
   }
 
@@ -1085,9 +1085,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Grammar Practice';
       case AppLanguage.vi:
-        return 'Luy?n ng? ph?p';
+        return 'Luyện ngữ pháp';
       case AppLanguage.ja:
-        return '????';
+        return '文法練習';
     }
   }
 
@@ -1096,9 +1096,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Handwriting';
       case AppLanguage.vi:
-        return 'Vi?t tay';
+        return 'Viết tay';
       case AppLanguage.ja:
-        return '???';
+        return '手書き';
     }
   }
 
@@ -2081,6 +2081,17 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get reviewKanjiLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review Kanji';
+      case AppLanguage.vi:
+        return '\u00d4n kanji';
+      case AppLanguage.ja:
+        return '\u6f22\u5b57\u5fa9\u7fd2';
+    }
+  }
+
   String get fixMistakesLabel {
     switch (this) {
       case AppLanguage.en:
@@ -2815,6 +2826,17 @@ extension AppLanguageLabels on AppLanguage {
         return 'Ch\u01b0a c\u00f3 thu\u1eadt ng\u1eef.';
       case AppLanguage.ja:
         return '\u307e\u3060\u5358\u8a9e\u304c\u3042\u308a\u307e\u305b\u3093\u3002';
+    }
+  }
+
+  String get noLessonsForLevelLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No lessons found for this level.';
+      case AppLanguage.vi:
+        return 'Không có bài học cho cấp độ này.';
+      case AppLanguage.ja:
+        return 'このレベルのレッスンがありません。';
     }
   }
 
@@ -4045,9 +4067,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'Review grammar points you missed recently.';
       case AppLanguage.vi:
-        return '?n l?i c?c ?i?m ng? ph?p b?n v?a sai.';
+        return 'Ôn lại các điểm ngữ pháp bạn vừa sai.';
       case AppLanguage.ja:
-        return '?????????????????';
+        return '最近間違えた文法を復習しましょう。';
     }
   }
 
@@ -4056,9 +4078,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'No ghosts yet';
       case AppLanguage.vi:
-        return 'Ch?a c? ghost n?o';
+        return 'Chưa có ghost nào';
       case AppLanguage.ja:
-        return '??????????';
+        return 'まだゴーストはありません';
     }
   }
 
@@ -4067,9 +4089,9 @@ extension AppLanguageLabels on AppLanguage {
       case AppLanguage.en:
         return 'You have not missed any grammar points yet.';
       case AppLanguage.vi:
-        return 'B?n ch?a sai ?i?m ng? ph?p n?o.';
+        return 'Bạn chưa sai điểm ngữ pháp nào.';
       case AppLanguage.ja:
-        return '??????????????';
+        return 'まだ間違えた文法はありません。';
     }
   }
 
@@ -4081,6 +4103,127 @@ extension AppLanguageLabels on AppLanguage {
         return 'Luy?n Ghost';
       case AppLanguage.ja:
         return '??????';
+    }
+  }
+
+  String get ghostPracticeTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Ghost Practice';
+      case AppLanguage.vi:
+        return 'Luyện Ghost';
+      case AppLanguage.ja:
+        return 'ゴースト練習';
+    }
+  }
+
+  String get ghostPracticeCompleteTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice Complete';
+      case AppLanguage.vi:
+        return 'Hoàn thành luyện tập';
+      case AppLanguage.ja:
+        return '練習完了';
+    }
+  }
+
+  String ghostPracticeScoreLabel(int score, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'You scored $score / $total';
+      case AppLanguage.vi:
+        return 'Bạn đạt $score / $total';
+      case AppLanguage.ja:
+        return '$total問中 $score問正解';
+    }
+  }
+
+  String get ghostPracticePerfectLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Perfect! Ghost Busted!';
+      case AppLanguage.vi:
+        return 'Hoàn hảo! Đã xử lý hết ghost!';
+      case AppLanguage.ja:
+        return '満点！ゴーストを撃破！';
+    }
+  }
+
+  String get ghostPracticeFinishLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Finish';
+      case AppLanguage.vi:
+        return 'Kết thúc';
+      case AppLanguage.ja:
+        return '終了';
+    }
+  }
+
+  String get ghostPracticeNoQuestionsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No questions generated.';
+      case AppLanguage.vi:
+        return 'Không tạo được câu hỏi.';
+      case AppLanguage.ja:
+        return '問題を生成できませんでした。';
+    }
+  }
+
+  String ghostPracticeQuestionLabel(int index) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Question $index';
+      case AppLanguage.vi:
+        return 'Câu $index';
+      case AppLanguage.ja:
+        return '問題 $index';
+    }
+  }
+
+  String get ghostPracticePromptLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Which grammar point matches this explanation?';
+      case AppLanguage.vi:
+        return 'Điểm ngữ pháp nào khớp với giải thích này?';
+      case AppLanguage.ja:
+        return 'この説明に合う文法はどれですか？';
+    }
+  }
+
+  String get ghostPracticeNextQuestionLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Next Question';
+      case AppLanguage.vi:
+        return 'Câu tiếp theo';
+      case AppLanguage.ja:
+        return '次の問題';
+    }
+  }
+
+  String get ghostPracticeMarkMasteredLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mark as Mastered (Remove Ghost)';
+      case AppLanguage.vi:
+        return 'Đánh dấu đã thuộc (xóa Ghost)';
+      case AppLanguage.ja:
+        return '習得済みにする（ゴースト解除）';
+    }
+  }
+
+  String get ghostPracticeMasteredToast {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Marked as mastered. Removed from ghosts.';
+      case AppLanguage.vi:
+        return 'Đã đánh dấu thành thạo và xóa khỏi ghost.';
+      case AppLanguage.ja:
+        return '習得済みにしてゴーストから外しました。';
     }
   }
 
@@ -4614,6 +4757,28 @@ extension AppLanguageLabels on AppLanguage {
         return 'Furigana';
       case AppLanguage.ja:
         return 'ふりがな';
+    }
+  }
+
+  String get immersionMarkReadLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mark as read';
+      case AppLanguage.vi:
+        return 'Đánh dấu đã đọc';
+      case AppLanguage.ja:
+        return '既読にする';
+    }
+  }
+
+  String get immersionAutoScrollLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Auto scroll';
+      case AppLanguage.vi:
+        return 'Tự động cuộn';
+      case AppLanguage.ja:
+        return '自動スクロール';
     }
   }
 

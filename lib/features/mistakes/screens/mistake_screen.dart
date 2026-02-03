@@ -168,6 +168,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     final vocabIds = <int>{};
     final grammarIds = <int>{};
     final kanjiIds = <int>{};
+    final kanjiByLesson = <int, List<int>>{};
 
     for (final m in mistakes) {
       if (m.type == 'vocab') {
@@ -176,6 +177,10 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
         grammarIds.add(m.itemId);
       } else if (m.type == 'kanji') {
         kanjiIds.add(m.itemId);
+        final kanji = details.kanji[m.itemId];
+        if (kanji != null) {
+          kanjiByLesson.putIfAbsent(kanji.lessonId, () => []).add(m.itemId);
+        }
       }
     }
 
@@ -216,6 +221,22 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
           ),
         ),
       );
+      if (kanjiByLesson.length > 1) {
+        final sortedLessons = kanjiByLesson.keys.toList()..sort();
+        for (final lessonId in sortedLessons) {
+          final ids = kanjiByLesson[lessonId]!;
+          actions.add(
+            _buildPracticeButton(
+              icon: Icons.layers_clear_rounded,
+              label:
+                  '${language.practiceKanjiMistakesLabel(ids.length)} • '
+                  '${language.lessonLabel} $lessonId',
+              onPressed: () =>
+                  _startKanjiPractice(context, ids, details, language),
+            ),
+          );
+        }
+      }
     }
 
     if (actions.isEmpty) {
@@ -407,6 +428,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
       final subtitle = [
         if (meaning.isNotEmpty) meaning,
         if (reading.isNotEmpty) reading,
+        if (kanji != null) '${language.lessonLabel} ${kanji.lessonId}',
         remainingLabel,
       ].join(' - ');
       return _MistakeDisplay(title: title, subtitle: subtitle);

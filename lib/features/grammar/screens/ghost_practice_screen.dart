@@ -112,6 +112,7 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
   }
 
   void _showResults(int total) {
+    final language = ref.read(appLanguageProvider);
     _spawnParticles(); // Bonus confetti on finish
     showDialog(
       context: context,
@@ -119,10 +120,10 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
       builder: (context) => AlertDialog(
         backgroundColor: AppThemeV2.surface,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        title: const Text(
-          'Practice Complete',
+        title: Text(
+          language.ghostPracticeCompleteTitle,
           textAlign: TextAlign.center,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -144,7 +145,7 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
             ),
             const SizedBox(height: 16),
             Text(
-              'You scored $_score / $total',
+              language.ghostPracticeScoreLabel(_score, total),
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -152,8 +153,8 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
               ),
             ),
             if (_score == total)
-              const Text(
-                'Perfect! Ghost Busted! 👻',
+              Text(
+                '${language.ghostPracticePerfectLabel} 👻',
                 style: TextStyle(
                   color: Colors.green,
                   fontWeight: FontWeight.bold,
@@ -168,7 +169,10 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                 context.pop(); // Close dialog
                 context.pop(); // Close screen
               },
-              child: const Text('Finish', style: TextStyle(fontSize: 18)),
+              child: Text(
+                language.ghostPracticeFinishLabel,
+                style: const TextStyle(fontSize: 18),
+              ),
             ),
           ),
         ],
@@ -177,6 +181,7 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
   }
 
   Future<void> _markAsMastered(int grammarId) async {
+    final language = ref.read(appLanguageProvider);
     await ref
         .read(lesson_repo.lessonRepositoryProvider)
         .markGrammarAsMastered(grammarId);
@@ -184,9 +189,7 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
     if (mounted) {
       _spawnParticles();
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Marked as mastered. Removed from ghosts.'),
-        ),
+        SnackBar(content: Text(language.ghostPracticeMasteredToast)),
       );
     }
   }
@@ -199,9 +202,9 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
     return Scaffold(
       backgroundColor: AppThemeV2.surface,
       appBar: AppBar(
-        title: const Text(
-          'Ghost Practice',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        title: Text(
+          language.ghostPracticeTitle,
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -222,7 +225,9 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
 
               final quizItems = snapshot.data!;
               if (quizItems.isEmpty) {
-                return const Center(child: Text('No questions generated.'));
+                return Center(
+                  child: Text(language.ghostPracticeNoQuestionsLabel),
+                );
               }
 
               final item = quizItems[_currentIndex];
@@ -248,7 +253,7 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                     const SizedBox(height: 24),
                     Center(
                       child: Text(
-                        'Question ${_currentIndex + 1}',
+                        language.ghostPracticeQuestionLabel(_currentIndex + 1),
                         style: TextStyle(
                           color: AppThemeV2.textSub,
                           fontWeight: FontWeight.bold,
@@ -257,7 +262,7 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Which grammar point matches this explanation?',
+                      language.ghostPracticePromptLabel,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 20,
@@ -362,8 +367,8 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                             ),
                             child: Text(
                               _currentIndex < quizItems.length - 1
-                                  ? 'Next Question'
-                                  : 'Finish',
+                                  ? language.ghostPracticeNextQuestionLabel
+                                  : language.ghostPracticeFinishLabel,
                               style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -374,9 +379,7 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                           TextButton.icon(
                             onPressed: () => _markAsMastered(target.id),
                             icon: const Icon(Icons.check_circle_outline),
-                            label: const Text(
-                              'Mark as Mastered (Remove Ghost)',
-                            ),
+                            label: Text(language.ghostPracticeMarkMasteredLabel),
                             style: TextButton.styleFrom(
                               foregroundColor: Colors.green,
                             ),

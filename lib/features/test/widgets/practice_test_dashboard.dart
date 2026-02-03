@@ -18,9 +18,22 @@ class PracticeTestDashboard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // Determine the level color theme
     final level = ref.watch(studyLevelProvider) ?? StudyLevel.n5;
-    final isN5 = level == StudyLevel.n5;
-    final color = isN5 ? Colors.pink : Colors.orange;
-    final levelLabel = isN5 ? 'N5' : 'N4';
+    late final Color color;
+    late final String levelLabel;
+    switch (level) {
+      case StudyLevel.n5:
+        color = Colors.pink;
+        levelLabel = 'N5';
+        break;
+      case StudyLevel.n4:
+        color = Colors.orange;
+        levelLabel = 'N4';
+        break;
+      case StudyLevel.n3:
+        color = Colors.teal;
+        levelLabel = 'N3';
+        break;
+    }
 
     // Localization
     final language = ref.watch(appLanguageProvider);

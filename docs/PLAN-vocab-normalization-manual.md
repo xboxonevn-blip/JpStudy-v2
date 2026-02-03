@@ -176,3 +176,6 @@ Ví dụ thư mục:
 - [x] Lesson 49 web-check da bo sung: `休みます`, `寄ります（銀行に～）`, `灰皿`, `帰りに`, `出します（熱を～）`, `お持ちです`, `ノーベル文学賞`, `～でございます。`.
 - [x] N4 Lesson 50 hoan tat (47 muc, gom 43 muc goc + 4 muc bo sung tu doi chieu nguon ngoai).
 - [x] Lesson 50 web-check da bo sung: `お目にかかります`, `自然`, `撮ります`, `江戸東京博物館`.
+- [x] Final QA N4 (26-50): da sua 96 muc term/reading bi placeholder `?` o cac dong bo sung web-check (lesson 26-40), va re-validate integrity toan bo normalized N4 (26-50) pass.
+- [x] Data cleanup (N4+N5): da chuan hoa `kanjiMeaning` tieng Viet, sua loi dau/ky tu cho cac gia tri bi moji/`?` tren toan bo `assets/data/vocab/normalized/*/lesson_*/master.json`.
+- [x] Data cleanup (N4+N5): da chuan hoa `meaningVi`, sua loi dau/ky tu tren toan bo `assets/data/vocab/normalized/*/lesson_*/sense.json` (khong con ky tu moji/`?` noi bo tu).

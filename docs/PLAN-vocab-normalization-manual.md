@@ -125,3 +125,54 @@ Ví dụ thư mục:
 - [x] Lesson 24 web-check đã bổ sung: `くれる`, `連れて行く`, `連れて来る`, `送る`, `紹介`, `案内`, `説明`, `入れる`, `人`, `コーヒー`, `おじいちゃん`, `おばあちゃん`, `他に`, `弁当`.
 - [x] N5 Lesson 25 hoàn tất (29 mục, gồm 17 mục gốc + 12 mục bổ sung từ đối chiếu nguồn ngoài).
 - [x] Lesson 25 web-check đã bổ sung: `考える`, `着く`, `駅`, `留学`, `年を取る`, `一杯`, `飲む`, `いろいろ`, `お世話になる`, `頑張る`, `どうぞ`, `元気`.
+- [x] Tạo thư mục normalized N4: `assets/data/vocab/normalized/n4/`.
+- [x] N4 Lesson 26 hoàn tất (66 mục, gồm 45 mục gốc + 21 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 26 web-check đã bổ sung: `見る`, `診る`, `捜す`, `探す`, `時間に遅れる`, `会議に間に合う`, `宿題をやる`, `ごみを拾う`, `学校に連絡する`, `盆踊り`, `フリーマーケット`, `財布`, `国会議事堂`, `平日`, `週末`, `大阪弁（方言）`, `片付く`, `燃えるごみ`, `ガス会社`, `様`, `違う`.
+- [x] N4 Lesson 27 hoàn tất (57 mục, gồm 52 mục gốc + 5 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 27 web-check đã bổ sung: `主人公`, `ドラえもん`, `子どもたち`, `不思議な`, `日曜日大工`.
+- [x] N4 Lesson 28 hoàn tất (52 mục, gồm 49 mục gốc + 3 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 28 web-check đã bổ sung: `丁度いい`, `優しい`, `習慣`.
+- [x] N4 Lesson 29 hoàn tất (58 mục, gồm 42 mục gốc + 16 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 29 web-check đã bổ sung: `拭きます`, `取り替えます`, `片付けます`, `皿`, `茶碗`, `書類`, `交番`, `スピーチ`, `返事`, `源氏物語`, `側`, `ポケット`, `覚えていません`, `ああ、よかった`, `西の方`, `燃えます`.
+- [x] N4 Lesson 30 hoàn tất (57 mục, gồm 54 mục gốc + 3 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 30 web-check đã bổ sung: `何かご希望がありますか`, `それはいいですな`, `いや（な）`.
+- [x] N4 Lesson 31 hoàn tất (48 mục, gồm 36 mục gốc + 12 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 31 web-check đã bổ sung: `始まります`, `入学します`, `お客さん`, `だれか`, `普通の`, `インターネット`, `世界中`, `集まります`, `美しい`, `自然`, `すばらしさ`, `気が付きます`.
+- [x] N4 Lesson 32 hoàn tất (63 mục, gồm 57 mục gốc + 6 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 32 web-check đã bổ sung: `もしかしたら`, `それはいけませんね`, `オリンピック`, `無理をします`, `ゆっくりします`, `お金持ち`.
+- [x] N4 Lesson 33 hoàn tất (59 mục, gồm 56 mục gốc + 3 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 33 web-check đã bổ sung: `そりゃあ`, `～以内`, `悲しい`.
+- [x] N4 Lesson 34 hoàn tất (54 mục, gồm 52 mục gốc + 2 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 34 web-check đã bổ sung: `鶏肉`, `四分の１`.
+- [x] N4 Lesson 35 hoàn tất (48 mục, gồm 48 mục gốc + 0 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 35 web-check: không phát hiện mục thiếu cần bổ sung.
+- [x] N4 Lesson 36 hoàn tất (51 mục, gồm 38 mục gốc + 13 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 36 web-check đã bổ sung: `届けます`, `出ます`, `打ちます`, `太ります`, `やせます`, `固い`, `軟らかい`, `工場`, `健康`, `タンゴ`, `安全`, `飛びます`, `地球`.
+- [x] N4 Lesson 37 hoàn tất (48 mục, gồm 47 mục gốc + 1 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 37 web-check đã bổ sung: `利用します`.
+- [x] N4 Lesson 38 hoàn tất (46 mục, gồm 44 mục gốc + 2 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 38 web-check đã bổ sung: `小学校`, `大好き`.
+- [x] N4 Lesson 39 hoàn tất (55 mục, gồm 48 mục gốc + 7 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 39 web-check đã bổ sung: `焼けます`, `遅刻します`, `早退します`, `見合い`, `電話代`, `汗`, `並びます`.
+- [x] N4 Lesson 40 hoàn tất (61 mục, gồm 59 mục gốc + 2 mục bổ sung từ đối chiếu nguồn ngoài).
+- [x] Lesson 40 web-check đã bổ sung: `一所懸命`, `うわさします`.
+- [x] N4 Lesson 41 hoan tat (66 muc, gom 56 muc goc + 10 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 41 web-check da bo sung: `呼びます`, `取り替えます`, `指輪`, `バッグ`, `おととし`, `はあ`, `申し訳ありません`, `預かります`, `先日`, `助かります`.
+- [x] N4 Lesson 42 hoan tat (69 muc, gom 48 muc goc + 21 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 42 web-check da bo sung: `厚い`, `薄い`, `二人`, `歴史`, `安全`, `関係`, `石`, `ピラミッド`, `データ`, `ファイル`, `国際連合`, `セット`, `あとは`, `カップラーメン`, `インスタントラーメン`, `なべ`, `食品`, `調査`, `～の代わりに`, `どこででも`, `今では`.
+- [x] N4 Lesson 43 hoan tat (36 muc, gom 25 muc goc + 11 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 43 web-check da bo sung: `うまい`, `暖房`, `冷房`, `センス`, `会員`, `適当`, `年齢`, `収入`, `ぴったり`, `そのうえ`, `～と言います`.
+- [x] N4 Lesson 44 hoan tat (46 muc, gom 41 muc goc + 5 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 44 web-check da bo sung: `倍`, `たんす`, `理由`, `どういうふうになさいますか`, `どうもお疲れさまでした`.
+- [x] N4 Lesson 45 hoan tat (42 muc, gom 30 muc goc + 12 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 45 web-check da bo sung: `謝ります`, `あいます（事故に～）`, `用意します`, `うまくいきます`, `贈り物`, `間違い電話`, `係`, `レバー`, `～円札`, `ちゃんと`, `ロース`, `眠ります`.
+- [x] N4 Lesson 46 hoan tat (38 muc, gom 32 muc goc + 6 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 46 web-check da bo sung: `帰ってきます`, `出ます（バスが～）`, `宅配便`, `今いいでしょうか`, `ガスコンロ`, `悩み`.
+- [x] N4 Lesson 47 hoan tat (41 muc, gom 36 muc goc + 5 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 47 web-check da bo sung: `音がします`, `傘`, `怖い`, `天気予報`, `化粧品`.
+- [x] N4 Lesson 48 hoan tat (29 muc, gom 22 muc goc + 7 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 48 web-check da bo sung: `下ろします`, `厳しい`, `スケジュール`, `者`, `入管`, `久しぶり`, `代わりをします`.
+- [x] N4 Lesson 49 hoan tat (37 muc, gom 29 muc goc + 8 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 49 web-check da bo sung: `休みます`, `寄ります（銀行に～）`, `灰皿`, `帰りに`, `出します（熱を～）`, `お持ちです`, `ノーベル文学賞`, `～でございます。`.
+- [x] N4 Lesson 50 hoan tat (47 muc, gom 43 muc goc + 4 muc bo sung tu doi chieu nguon ngoai).
+- [x] Lesson 50 web-check da bo sung: `お目にかかります`, `自然`, `撮ります`, `江戸東京博物館`.

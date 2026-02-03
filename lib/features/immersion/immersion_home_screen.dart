@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
@@ -37,7 +38,12 @@ class _ImmersionHomeScreenState extends ConsumerState<ImmersionHomeScreen> {
           forceRefresh: forceRefresh,
         );
         if (nhk.isNotEmpty) {
-          return _ImmersionLoadState(articles: nhk, usedLocalFallback: false);
+          final isFallback =
+              nhk.first.source != ImmersionService.nhkSourceLabel;
+          return _ImmersionLoadState(
+            articles: nhk,
+            usedLocalFallback: isFallback,
+          );
         }
         final local = await service.loadLocalSamples();
         return _ImmersionLoadState(articles: local, usedLocalFallback: true);
@@ -69,19 +75,25 @@ class _ImmersionHomeScreenState extends ConsumerState<ImmersionHomeScreen> {
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
     final readIds = ref.watch(readArticlesProvider);
+    final theme = Theme.of(context);
+    final overlayStyle = theme.brightness == Brightness.dark
+        ? SystemUiOverlayStyle.light
+        : SystemUiOverlayStyle.dark;
 
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: theme.scaffoldBackgroundColor,
+        surfaceTintColor: Colors.transparent,
         elevation: 0,
         scrolledUnderElevation: 0,
+        systemOverlayStyle: overlayStyle,
         title: Text(
           language.immersionTitle,
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FontWeight.w900,
             fontSize: 22,
-            color: Color(0xFF0F172A),
+            color: theme.colorScheme.onSurface,
           ),
         ),
         actions: [

@@ -4521,11 +4521,11 @@ extension AppLanguageLabels on AppLanguage {
   String get immersionFallbackToLocalLabel {
     switch (this) {
       case AppLanguage.en:
-        return 'NHK is currently unavailable. Showing local articles.';
+        return 'NHK is currently unavailable. Showing fallback articles.';
       case AppLanguage.vi:
-        return 'NHK hi\u1ec7n kh\u00f4ng kh\u1ea3 d\u1ee5ng. \u0110ang hi\u1ec3n th\u1ecb b\u00e0i \u0111\u1ecdc c\u1ee5c b\u1ed9.';
+        return 'NHK hiện không khả dụng. Đang hiển thị nguồn thay thế.';
       case AppLanguage.ja:
-        return 'NHK\u304c\u5229\u7528\u3067\u304d\u306a\u3044\u305f\u3081\u3001\u30ed\u30fc\u30ab\u30eb\u8a18\u4e8b\u3092\u8868\u793a\u3057\u3066\u3044\u307e\u3059\u3002';
+        return 'NHKが利用できないため、代替ソースの記事を表示しています。';
     }
   }
 

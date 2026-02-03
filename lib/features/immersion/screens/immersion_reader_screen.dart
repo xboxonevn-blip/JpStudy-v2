@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
@@ -30,6 +32,12 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
   bool _isAutoScrolling = false;
   Future<ImmersionArticle?>? _detailFuture;
   Set<String> _savedTokens = {};
+  Map<String, ImmersionToken> _unknownQueue = {};
+  List<_ImmersionQuizQuestion> _quizQuestions = const [];
+  Map<int, int> _quizAnswers = {};
+  bool _quizSubmitted = false;
+  String? _quizForArticleId;
+  AppLanguage? _quizLanguage;
 
   final ScrollController _scrollController = ScrollController();
   Timer? _autoScrollTimer;
@@ -118,6 +126,365 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     });
   }
 
+  void _ensureArticleSession(ImmersionArticle article, AppLanguage language) {
+    if (_quizForArticleId == article.id && _quizLanguage == language) return;
+    _quizForArticleId = article.id;
+    _quizLanguage = language;
+    _unknownQueue = {};
+    _quizAnswers = {};
+    _quizSubmitted = false;
+    _quizQuestions = _buildQuizQuestions(article, language);
+  }
+
+  List<_ImmersionQuizQuestion> _buildQuizQuestions(
+    ImmersionArticle article,
+    AppLanguage language,
+  ) {
+    final random = Random(article.id.hashCode);
+    final allTokens = article.paragraphs.expand((p) => p).toList();
+
+    final vocabCandidates = <_QuizVocab>[];
+    final seenVocab = <String>{};
+    for (final token in allTokens) {
+      final meaning = _quizMeaning(token, language);
+      if (meaning == null) continue;
+      final key = '${token.surface.trim()}|$meaning';
+      if (seenVocab.add(key)) {
+        vocabCandidates.add(_QuizVocab(token: token, meaning: meaning));
+      }
+    }
+
+    if (vocabCandidates.length >= 4) {
+      vocabCandidates.shuffle(random);
+      final questions = <_ImmersionQuizQuestion>[];
+      final total = min(3, vocabCandidates.length);
+      for (int i = 0; i < total; i++) {
+        final current = vocabCandidates[i];
+        final distractors = vocabCandidates
+            .where((candidate) => candidate.meaning != current.meaning)
+            .map((candidate) => candidate.meaning)
+            .toSet()
+            .toList();
+        distractors.shuffle(random);
+        final options = <String>{
+          current.meaning,
+          ...distractors.take(3),
+        }.toList();
+        options.shuffle(random);
+        final correctIndex = options.indexOf(current.meaning);
+        if (correctIndex < 0 || options.length < 3) continue;
+        questions.add(
+          _ImmersionQuizQuestion(
+            prompt: _quizMeaningPrompt(language, current.token.surface),
+            options: options,
+            correctIndex: correctIndex,
+          ),
+        );
+      }
+      if (questions.length >= 2) {
+        return questions;
+      }
+    }
+
+    final wordCandidates = <String>[];
+    final seenWords = <String>{};
+    for (final token in allTokens) {
+      final surface = token.surface.trim();
+      if (!_isQuizSurfaceCandidate(surface)) continue;
+      if (seenWords.add(surface)) {
+        wordCandidates.add(surface);
+      }
+    }
+    if (wordCandidates.length < 4) return const [];
+    wordCandidates.shuffle(random);
+
+    final paragraphTexts = article.paragraphs
+        .map((tokens) => tokens.map((token) => token.surface).join())
+        .where((text) => text.trim().isNotEmpty)
+        .toList();
+
+    final questions = <_ImmersionQuizQuestion>[];
+    final total = min(3, wordCandidates.length);
+    for (int i = 0; i < total; i++) {
+      final target = wordCandidates[i];
+      String contextText = paragraphTexts.firstWhere(
+        (text) => text.contains(target),
+        orElse: () => paragraphTexts.isNotEmpty ? paragraphTexts.first : '',
+      );
+      if (contextText.isEmpty) continue;
+      contextText = contextText.replaceFirst(target, '____');
+      if (contextText.length > 70) {
+        contextText = '${contextText.substring(0, 70)}...';
+      }
+      final distractors =
+          wordCandidates.where((word) => word != target).toList()
+            ..shuffle(random);
+      final options = <String>[target, ...distractors.take(3)];
+      options.shuffle(random);
+      final correctIndex = options.indexOf(target);
+      if (correctIndex < 0 || options.length < 3) continue;
+      questions.add(
+        _ImmersionQuizQuestion(
+          prompt: _quizClozePrompt(language, contextText),
+          options: options,
+          correctIndex: correctIndex,
+        ),
+      );
+    }
+    return questions.length >= 2 ? questions : const [];
+  }
+
+  bool _isQuizSurfaceCandidate(String surface) {
+    if (surface.length < 2 || surface.length > 10) return false;
+    if (RegExp(r'^[\s\d\.,!?;:(){}\[\]「」『』（）・…\-]+$').hasMatch(surface)) {
+      return false;
+    }
+    return RegExp(r'[\u3040-\u30FF\u3400-\u9FFF]').hasMatch(surface);
+  }
+
+  String? _quizMeaning(ImmersionToken token, AppLanguage language) {
+    final vi = token.meaningVi?.trim();
+    final en = token.meaningEn?.trim();
+    if (language == AppLanguage.en) {
+      if (en != null && en.isNotEmpty) return en;
+      if (vi != null && vi.isNotEmpty) return vi;
+      return null;
+    }
+    if (vi != null && vi.isNotEmpty) return vi;
+    if (en != null && en.isNotEmpty) return en;
+    return null;
+  }
+
+  String _quizMeaningPrompt(AppLanguage language, String surface) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'What does "$surface" mean?';
+      case AppLanguage.vi:
+        return '“$surface” có nghĩa là gì?';
+      case AppLanguage.ja:
+        return '「$surface」の意味は？';
+    }
+  }
+
+  String _quizClozePrompt(AppLanguage language, String context) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Choose the best word for this blank:\n$context';
+      case AppLanguage.vi:
+        return 'Chọn từ phù hợp cho chỗ trống:\n$context';
+      case AppLanguage.ja:
+        return '空欄に入る語を選んでください:\n$context';
+    }
+  }
+
+  String _quizTitle(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Mini Quiz';
+      case AppLanguage.vi:
+        return 'Mini Quiz';
+      case AppLanguage.ja:
+        return 'ミニクイズ';
+    }
+  }
+
+  String _quizSubtitle(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return '2-3 quick questions to confirm understanding.';
+      case AppLanguage.vi:
+        return '2-3 câu nhanh để kiểm tra mức hiểu bài.';
+      case AppLanguage.ja:
+        return '理解度を確認する2〜3問の小テストです。';
+    }
+  }
+
+  String _quizSubmitLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Check answers';
+      case AppLanguage.vi:
+        return 'Chấm điểm';
+      case AppLanguage.ja:
+        return '答え合わせ';
+    }
+  }
+
+  String _quizRetryLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Try again';
+      case AppLanguage.vi:
+        return 'Làm lại';
+      case AppLanguage.ja:
+        return 'もう一度';
+    }
+  }
+
+  String _quizScoreLabel(AppLanguage language, int correct, int total) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Score: $correct/$total';
+      case AppLanguage.vi:
+        return 'Điểm: $correct/$total';
+      case AppLanguage.ja:
+        return 'スコア: $correct/$total';
+    }
+  }
+
+  String _unknownQueueTitle(AppLanguage language, int count) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Unknown words queue ($count)';
+      case AppLanguage.vi:
+        return 'Hàng đợi từ chưa chắc ($count)';
+      case AppLanguage.ja:
+        return '未知語キュー ($count)';
+    }
+  }
+
+  String _unknownQueueSubtitle(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Tapped words are stored here for quick review.';
+      case AppLanguage.vi:
+        return 'Các từ đã chạm sẽ lưu ở đây để ôn nhanh cuối bài.';
+      case AppLanguage.ja:
+        return 'タップした語をここに集めて後でまとめて復習できます。';
+    }
+  }
+
+  String _unknownQueueReviewLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Review queue';
+      case AppLanguage.vi:
+        return 'Xem hàng đợi';
+      case AppLanguage.ja:
+        return 'キューを見る';
+    }
+  }
+
+  void _queueUnknownToken(ImmersionToken token) {
+    if (_isTokenSaved(token)) return;
+    final key = _tokenKey(token.surface, token.reading);
+    if (_unknownQueue.containsKey(key)) return;
+    setState(() {
+      _unknownQueue = {..._unknownQueue, key: token};
+    });
+  }
+
+  void _removeUnknownToken(ImmersionToken token) {
+    final key = _tokenKey(token.surface, token.reading);
+    if (!_unknownQueue.containsKey(key)) return;
+    setState(() {
+      final next = {..._unknownQueue};
+      next.remove(key);
+      _unknownQueue = next;
+    });
+  }
+
+  void _clearUnknownQueue() {
+    if (_unknownQueue.isEmpty) return;
+    setState(() {
+      _unknownQueue = {};
+    });
+  }
+
+  Future<void> _showUnknownQueue(AppLanguage language) async {
+    if (_unknownQueue.isEmpty) return;
+    await showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      builder: (sheetContext) {
+        return StatefulBuilder(
+          builder: (context, setSheetState) {
+            final entries = _unknownQueue.values.toList();
+            return SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      _unknownQueueTitle(language, entries.length),
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Expanded(
+                      child: ListView.separated(
+                        itemCount: entries.length,
+                        separatorBuilder: (_, _) => const Divider(height: 1),
+                        itemBuilder: (context, index) {
+                          final token = entries[index];
+                          final meaning = _quizMeaning(token, language) ?? '';
+                          return ListTile(
+                            contentPadding: EdgeInsets.zero,
+                            title: Text(
+                              token.surface,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                            subtitle: Text(
+                              [
+                                if (token.reading?.isNotEmpty == true)
+                                  token.reading!,
+                                if (meaning.isNotEmpty) meaning,
+                              ].join(' • '),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            trailing: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                IconButton(
+                                  tooltip: language.immersionAddSrsLabel,
+                                  icon: const Icon(Icons.add_circle_rounded),
+                                  onPressed: () async {
+                                    await _addToSrs(token, language);
+                                    if (!mounted) return;
+                                    setSheetState(() {});
+                                  },
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.close_rounded),
+                                  onPressed: () {
+                                    _removeUnknownToken(token);
+                                    if (!mounted) return;
+                                    setSheetState(() {});
+                                  },
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  int _quizScore() {
+    var correct = 0;
+    for (int i = 0; i < _quizQuestions.length; i++) {
+      if (_quizAnswers[i] == _quizQuestions[i].correctIndex) {
+        correct += 1;
+      }
+    }
+    return correct;
+  }
+
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
@@ -129,10 +496,10 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
         future: _detailFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return _buildLoading(language);
+            return _buildLoading(context, language);
           }
           if (snapshot.hasError || snapshot.data == null) {
-            return _buildError(language);
+            return _buildError(context, language);
           }
           return _buildArticleScaffold(
             context,
@@ -147,16 +514,39 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     return _buildArticleScaffold(context, language, widget.article, isRead);
   }
 
-  Scaffold _buildLoading(AppLanguage language) {
+  SystemUiOverlayStyle _overlayStyle(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? SystemUiOverlayStyle.light
+        : SystemUiOverlayStyle.dark;
+  }
+
+  AppBar _buildAppBar(
+    BuildContext context,
+    AppLanguage language, {
+    List<Widget>? actions,
+  }) {
+    final theme = Theme.of(context);
+    return AppBar(
+      backgroundColor: theme.scaffoldBackgroundColor,
+      surfaceTintColor: Colors.transparent,
+      systemOverlayStyle: _overlayStyle(context),
+      title: Text(language.immersionTitle),
+      actions: actions,
+    );
+  }
+
+  Scaffold _buildLoading(BuildContext context, AppLanguage language) {
     return Scaffold(
-      appBar: AppBar(title: Text(language.immersionTitle)),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      appBar: _buildAppBar(context, language),
       body: const Center(child: CircularProgressIndicator()),
     );
   }
 
-  Scaffold _buildError(AppLanguage language) {
+  Scaffold _buildError(BuildContext context, AppLanguage language) {
     return Scaffold(
-      appBar: AppBar(title: Text(language.immersionTitle)),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      appBar: _buildAppBar(context, language),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -190,14 +580,16 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     ImmersionArticle article,
     bool isRead,
   ) {
+    _ensureArticleSession(article, language);
     final dateLabel = MaterialLocalizations.of(
       context,
     ).formatMediumDate(article.publishedAt);
 
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      appBar: AppBar(
-        title: Text(language.immersionTitle),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      appBar: _buildAppBar(
+        context,
+        language,
         actions: [
           IconButton(
             tooltip: language.immersionMarkReadLabel,
@@ -254,6 +646,16 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
               isRead: isRead,
               language: language,
             ),
+            if (_unknownQueue.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              _UnknownQueueCard(
+                title: _unknownQueueTitle(language, _unknownQueue.length),
+                subtitle: _unknownQueueSubtitle(language),
+                reviewLabel: _unknownQueueReviewLabel(language),
+                onReview: () => _showUnknownQueue(language),
+                onClear: _clearUnknownQueue,
+              ),
+            ],
             const SizedBox(height: 14),
             ...article.paragraphs.map(
               (tokens) => Padding(
@@ -274,6 +676,44 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                 ),
               ),
             ),
+            if (_quizQuestions.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              _ImmersionQuizCard(
+                title: _quizTitle(language),
+                subtitle: _quizSubtitle(language),
+                submitLabel: _quizSubmitLabel(language),
+                retryLabel: _quizRetryLabel(language),
+                scoreLabel: _quizScoreLabel(
+                  language,
+                  _quizScore(),
+                  _quizQuestions.length,
+                ),
+                questions: _quizQuestions,
+                answers: _quizAnswers,
+                submitted: _quizSubmitted,
+                onSelect: (questionIndex, optionIndex) {
+                  setState(() {
+                    _quizAnswers = {
+                      ..._quizAnswers,
+                      questionIndex: optionIndex,
+                    };
+                  });
+                },
+                onSubmit: _quizAnswers.length == _quizQuestions.length
+                    ? () {
+                        setState(() {
+                          _quizSubmitted = true;
+                        });
+                      }
+                    : null,
+                onRetry: () {
+                  setState(() {
+                    _quizAnswers = {};
+                    _quizSubmitted = false;
+                  });
+                },
+              ),
+            ],
             if (article.translation != null) ...[
               const SizedBox(height: 8),
               Container(
@@ -318,6 +758,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     AppLanguage language,
   ) async {
     final isSaved = _isTokenSaved(token);
+    if (!isSaved) {
+      _queueUnknownToken(token);
+    }
     final meaning = language == AppLanguage.en
         ? (token.meaningEn?.trim().isNotEmpty == true
               ? token.meaningEn!
@@ -394,6 +837,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     if (existing != null) {
       await repo.ensureSrsStateForTerm(existing.id);
       _markTokenSaved(token);
+      _removeUnknownToken(token);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(language.immersionAlreadyAddedLabel)),
@@ -411,6 +855,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     );
     await repo.ensureSrsStateForTerm(termId);
     _markTokenSaved(token);
+    _removeUnknownToken(token);
     if (mounted) {
       ScaffoldMessenger.of(
         context,
@@ -617,4 +1062,247 @@ class _TinyTag extends StatelessWidget {
       ),
     );
   }
+}
+
+class _UnknownQueueCard extends StatelessWidget {
+  const _UnknownQueueCard({
+    required this.title,
+    required this.subtitle,
+    required this.reviewLabel,
+    required this.onReview,
+    required this.onClear,
+  });
+
+  final String title;
+  final String subtitle;
+  final String reviewLabel;
+  final VoidCallback onReview;
+  final VoidCallback onClear;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.95),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFFACC15)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(
+                Icons.inventory_2_rounded,
+                size: 18,
+                color: Color(0xFFB45309),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: Color(0xFF7C2D12),
+                  ),
+                ),
+              ),
+              IconButton(
+                tooltip: 'Clear',
+                onPressed: onClear,
+                icon: const Icon(Icons.delete_outline_rounded),
+              ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          Text(
+            subtitle,
+            style: const TextStyle(fontSize: 12.5, color: Color(0xFF57534E)),
+          ),
+          const SizedBox(height: 10),
+          FilledButton.icon(
+            onPressed: onReview,
+            icon: const Icon(Icons.visibility_rounded),
+            label: Text(reviewLabel),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ImmersionQuizCard extends StatelessWidget {
+  const _ImmersionQuizCard({
+    required this.title,
+    required this.subtitle,
+    required this.submitLabel,
+    required this.retryLabel,
+    required this.scoreLabel,
+    required this.questions,
+    required this.answers,
+    required this.submitted,
+    required this.onSelect,
+    required this.onSubmit,
+    required this.onRetry,
+  });
+
+  final String title;
+  final String subtitle;
+  final String submitLabel;
+  final String retryLabel;
+  final String scoreLabel;
+  final List<_ImmersionQuizQuestion> questions;
+  final Map<int, int> answers;
+  final bool submitted;
+  final void Function(int questionIndex, int optionIndex) onSelect;
+  final VoidCallback? onSubmit;
+  final VoidCallback onRetry;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.95),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFC7D2FE)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w900,
+              color: Color(0xFF1E1B4B),
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            subtitle,
+            style: const TextStyle(fontSize: 12.5, color: Color(0xFF475569)),
+          ),
+          const SizedBox(height: 12),
+          ...List.generate(questions.length, (questionIndex) {
+            final question = questions[questionIndex];
+            return Padding(
+              padding: EdgeInsets.only(
+                bottom: questionIndex == questions.length - 1 ? 0 : 14,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '${questionIndex + 1}. ${question.prompt}',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w800,
+                      color: Color(0xFF0F172A),
+                      height: 1.35,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  ...List.generate(question.options.length, (optionIndex) {
+                    final selected = answers[questionIndex] == optionIndex;
+                    final isCorrect = optionIndex == question.correctIndex;
+                    final showResult = submitted && selected;
+                    final bgColor = submitted
+                        ? (isCorrect
+                              ? const Color(0xFFDCFCE7)
+                              : (showResult
+                                    ? const Color(0xFFFEE2E2)
+                                    : const Color(0xFFF8FAFC)))
+                        : (selected
+                              ? const Color(0xFFE0E7FF)
+                              : const Color(0xFFF8FAFC));
+                    final borderColor = submitted
+                        ? (isCorrect
+                              ? const Color(0xFF86EFAC)
+                              : (showResult
+                                    ? const Color(0xFFFCA5A5)
+                                    : const Color(0xFFE2E8F0)))
+                        : (selected
+                              ? const Color(0xFFA5B4FC)
+                              : const Color(0xFFE2E8F0));
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 6),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: submitted
+                              ? null
+                              : () => onSelect(questionIndex, optionIndex),
+                          borderRadius: BorderRadius.circular(10),
+                          child: Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                            decoration: BoxDecoration(
+                              color: bgColor,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: borderColor),
+                            ),
+                            child: Text(
+                              question.options[optionIndex],
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF1E293B),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+                ],
+              ),
+            );
+          }),
+          const SizedBox(height: 8),
+          if (submitted) ...[
+            Text(
+              scoreLabel,
+              style: const TextStyle(
+                fontWeight: FontWeight.w900,
+                color: Color(0xFF0F172A),
+              ),
+            ),
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: onRetry,
+              icon: const Icon(Icons.restart_alt_rounded),
+              label: Text(retryLabel),
+            ),
+          ] else
+            FilledButton.icon(
+              onPressed: onSubmit,
+              icon: const Icon(Icons.task_alt_rounded),
+              label: Text(submitLabel),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ImmersionQuizQuestion {
+  const _ImmersionQuizQuestion({
+    required this.prompt,
+    required this.options,
+    required this.correctIndex,
+  });
+
+  final String prompt;
+  final List<String> options;
+  final int correctIndex;
+}
+
+class _QuizVocab {
+  const _QuizVocab({required this.token, required this.meaning});
+
+  final ImmersionToken token;
+  final String meaning;
 }

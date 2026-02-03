@@ -86,10 +86,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFFFFFFFF), // White
-              Color(0xFFEEF2FF), // Indigo 50
-              Color(0xFFE0E7FF), // Indigo 100
-              Color(0xFFD1E9FF), // Light Blue 100 (Subtle accent)
+              Color(0xFFF8FAFD),
+              Color(0xFFF2F6FC),
+              Color(0xFFEDF3FB),
+              Color(0xFFEAF0F8),
             ],
             stops: [0.0, 0.4, 0.7, 1.0],
           ),
@@ -205,6 +205,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         onTap: () {
                           Navigator.of(context).pop();
                           context.push('/achievements');
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.design_services_outlined),
+                        title: const Text('Design Lab'),
+                        subtitle: const Text('UI/UX process playground'),
+                        onTap: () {
+                          Navigator.of(context).pop();
+                          context.push('/design-lab');
                         },
                       ),
                       SwitchListTile(

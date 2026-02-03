@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../theme/app_theme_v2.dart';
-import '../models/lesson_node.dart';
-import '../../../../core/language_provider.dart';
+
 import '../../../../core/app_language.dart';
+import '../../../../core/language_provider.dart';
+import '../models/lesson_node.dart';
 
 class LessonNodeWidget extends ConsumerStatefulWidget {
-  final LessonNode node;
-  final VoidCallback? onTap;
-  final double size;
-
   const LessonNodeWidget({
     super.key,
     required this.node,
+    required this.size,
+    required this.isPrimaryActive,
     this.onTap,
-    this.size = 80.0,
   });
+
+  final LessonNode node;
+  final double size;
+  final bool isPrimaryActive;
+  final VoidCallback? onTap;
 
   @override
   ConsumerState<LessonNodeWidget> createState() => _LessonNodeWidgetState();
@@ -23,176 +25,158 @@ class LessonNodeWidget extends ConsumerStatefulWidget {
 
 class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
     with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _scaleAnimation;
+  late final AnimationController _pulseController;
+  late final Animation<double> _pulse;
 
-  bool get _isActive => !widget.node.isLocked && !widget.node.isCompleted;
+  bool get _canTap => !widget.node.isLocked && widget.onTap != null;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
+    _pulseController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(milliseconds: 2200),
     );
-    _scaleAnimation = Tween<double>(
-      begin: 1.0,
-      end: 1.05,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
-
-    if (_isActive) {
-      _controller.repeat(reverse: true);
-    }
+    _pulse = Tween<double>(begin: 1.0, end: 1.02).animate(
+      CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
+    );
+    _syncPulse();
   }
 
   @override
-  void didUpdateWidget(LessonNodeWidget oldWidget) {
+  void didUpdateWidget(covariant LessonNodeWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (_isActive && !_controller.isAnimating) {
-      _controller.repeat(reverse: true);
-    } else if (!_isActive && _controller.isAnimating) {
-      _controller.stop();
-      _controller.reset();
+    if (oldWidget.isPrimaryActive != widget.isPrimaryActive) {
+      _syncPulse();
+    }
+  }
+
+  void _syncPulse() {
+    if (widget.isPrimaryActive) {
+      _pulseController.repeat(reverse: true);
+    } else {
+      _pulseController.stop();
+      _pulseController.value = 0;
     }
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _pulseController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
-
-    // Localize "Lesson X" -> "Bai X"
-    String title = widget.node.lesson.title;
-    if (title.startsWith('Lesson ')) {
-      final number = title.replaceAll('Lesson ', '');
-      title = '${language.lessonLabel} $number';
-    }
-
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        GestureDetector(
-          onTap: widget.node.isLocked ? null : widget.onTap,
-          child: AnimatedBuilder(
-            animation: _scaleAnimation,
-            builder: (context, child) {
-              return Transform.scale(
-                scale: _isActive ? _scaleAnimation.value : 1.0,
-                child: child,
-              );
-            },
-            child: _buildProClayNode(context),
-          ),
+    return GestureDetector(
+      onTap: _canTap ? widget.onTap : null,
+      child: AnimatedBuilder(
+        animation: _pulse,
+        builder: (context, child) => Transform.scale(
+          scale: widget.isPrimaryActive ? _pulse.value : 1.0,
+          child: child,
         ),
-        const SizedBox(height: 8),
-        _buildStars(context),
-        const SizedBox(height: 4),
-        Text(
-          title,
-          style: TextStyle(
-            color: widget.node.isLocked
-                ? AppThemeV2.textSub
-                : AppThemeV2.textMain,
-            fontWeight: widget.isActive ? FontWeight.w900 : FontWeight.bold,
-            fontSize: 12,
-            fontFamily: 'M_PLUS_Rounded_1c',
-          ),
-          textAlign: TextAlign.center,
-        ),
-      ],
+        child: widget.isPrimaryActive
+            ? _buildCurrentLessonNode(language)
+            : _buildRegularNode(),
+      ),
     );
   }
 
-  Widget _buildProClayNode(BuildContext context) {
-    final colors = _getNodeColors();
-    final depth = widget.node.isLocked ? 2.0 : 8.0;
+  Widget _buildCurrentLessonNode(AppLanguage language) {
+    final progress = widget.node.progress.clamp(0.0, 1.0);
+    final progressText = '${(progress * 100).round()}%';
+    final title = _localizedLessonTitle(language);
+    final subtitle = widget.node.lesson.description.trim();
 
     return Container(
       width: widget.size,
-      height: widget.size, // Aspect ratio 1:1, depth handled by shadow
+      height: widget.size,
+      padding: const EdgeInsets.all(11),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        // Main sphere gradient
-        gradient: RadialGradient(
-          center: const Alignment(-0.4, -0.4), // Light source top-left
-          radius: 1.2,
-          colors: [colors.light, colors.main, colors.dark],
-          stops: const [0.0, 0.4, 0.9],
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFF4C8DFF), Color(0xFF2B6CE6), Color(0xFF1D4ED8)],
         ),
-        boxShadow: [
-          // Drop Shadow (Depth)
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.5),
+          width: 2,
+        ),
+        boxShadow: const [
           BoxShadow(
-            color: colors.shadow.withValues(alpha: 0.4),
-            offset: Offset(0, depth),
-            blurRadius: 10,
+            color: Color(0x2E2563EB),
+            blurRadius: 18,
             spreadRadius: 1,
+            offset: Offset(0, 10),
           ),
-          // Inner Highlight (Top Left - "Glassy")
-          BoxShadow(
-            color: Colors.white.withValues(alpha: 0.4),
-            offset: const Offset(-4, -4),
-            blurRadius: 8,
-            spreadRadius: -2,
-            blurStyle: BlurStyle.inner, // IMPORTANT: Inner shadow
-          ),
-          // Inner Shadow (Bottom Right)
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
-            offset: const Offset(4, 4),
-            blurRadius: 8,
-            spreadRadius: -2,
-            blurStyle: BlurStyle.inner,
-          ),
-          // Glow for Active
-          if (_isActive)
-            BoxShadow(
-              color: colors.main.withValues(alpha: 0.6),
-              blurRadius: 20,
-              spreadRadius: 4,
-            ),
         ],
       ),
-      child: Center(
-        child: Stack(
-          alignment: Alignment.center,
+      child: Container(
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.white.withValues(alpha: 0.12),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (widget.node.isCompleted)
-              Icon(
-                Icons.check_rounded,
+            Text(
+              title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
                 color: Colors.white,
-                size: widget.size * 0.5,
-              )
-            else if (widget.node.isLocked)
-              Icon(
-                Icons.lock_rounded,
-                color: Colors.white.withValues(alpha: 0.5),
-                size: widget.size * 0.4,
-              )
-            else
-              Icon(
-                Icons.play_arrow_rounded,
-                color: Colors.white,
-                size: widget.size * 0.5,
+                fontSize: 13,
+                fontWeight: FontWeight.w800,
+                height: 1.18,
               ),
-
-            // Shine reflection (Gloss)
-            Positioned(
-              top: widget.size * 0.15,
-              left: widget.size * 0.2,
-              child: Container(
-                width: widget.size * 0.25,
-                height: widget.size * 0.12,
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.3),
-                  borderRadius: BorderRadius.all(
-                    Radius.elliptical(widget.size, widget.size),
-                  ),
+            ),
+            if (subtitle.isNotEmpty) ...[
+              const SizedBox(height: 2),
+              Text(
+                subtitle,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Color(0xFFDDE9FF),
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
                 ),
+              ),
+            ],
+            const SizedBox(height: 7),
+            Text(
+              language.trackProgressLabel.toUpperCase(),
+              style: const TextStyle(
+                color: Color(0xFFEAF2FF),
+                fontSize: 8.5,
+                letterSpacing: 0.58,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            const SizedBox(height: 5),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
+                minHeight: 7,
+                value: progress,
+                backgroundColor: const Color(0x66FFFFFF),
+                valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              progressText,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 10,
+                fontWeight: FontWeight.w800,
               ),
             ),
           ],
@@ -201,75 +185,64 @@ class _LessonNodeWidgetState extends ConsumerState<LessonNodeWidget>
     );
   }
 
-  _NodeColors _getNodeColors() {
-    if (widget.node.isLocked) {
-      return _NodeColors(
-        light: const Color(0xFFE5E7EB),
-        main: const Color(0xFFD1D5DB), // Slate 300
-        dark: const Color(0xFF9CA3AF),
-        shadow: Colors.black,
-      );
-    }
-    if (widget.node.isCompleted) {
-      // Amber/Gold
-      return _NodeColors(
-        light: AppThemeV2.amber400,
-        main: Colors.orange, // Standard orange for middle
-        dark: AppThemeV2.orange500,
-        shadow: AppThemeV2.orange500,
-      );
-    }
-    // Active (Violet)
-    return _NodeColors(
-      light: const Color(0xFFA78BFA), // Violet 400
-      main: AppThemeV2.violet500,
-      dark: AppThemeV2.indigo600,
-      shadow: AppThemeV2.indigo600,
-    );
-  }
+  Widget _buildRegularNode() {
+    final colors = _regularNodeColors();
 
-  Widget _buildStars(BuildContext context) {
-    if (widget.node.isLocked) return const SizedBox(height: 16);
-
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: List.generate(3, (index) {
-        final isEarned = index < widget.node.stars;
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 1.0),
-          child: Icon(
-            Icons.star_rounded,
-            size: 14,
-            color: isEarned ? const Color(0xFFFFC800) : Colors.grey[300],
-            shadows: isEarned
-                ? [
-                    Shadow(
-                      color: Colors.orange.withValues(alpha: 0.5),
-                      blurRadius: 4,
-                    ),
-                  ]
-                : null,
+    return Container(
+      width: widget.size,
+      height: widget.size,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: RadialGradient(
+          center: const Alignment(-0.35, -0.35),
+          radius: 1.15,
+          colors: colors,
+        ),
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.65),
+          width: 1.4,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: colors.last.withValues(alpha: 0.24),
+            blurRadius: 12,
+            spreadRadius: 1,
+            offset: const Offset(0, 6),
           ),
-        );
-      }),
+        ],
+      ),
+      child: Center(
+        child: Icon(
+          widget.node.isCompleted
+              ? Icons.check_rounded
+              : widget.node.isLocked
+              ? Icons.lock_rounded
+              : Icons.play_arrow_rounded,
+          size: widget.size * 0.42,
+          color: Colors.white,
+        ),
+      ),
     );
   }
-}
 
-class _NodeColors {
-  final Color light;
-  final Color main;
-  final Color dark;
-  final Color shadow;
+  List<Color> _regularNodeColors() {
+    if (widget.node.isCompleted) {
+      return const [Color(0xFF93C5FD), Color(0xFF3B82F6), Color(0xFF2563EB)];
+    }
+    if (widget.node.isLocked) {
+      return const [Color(0xFFE5E7EB), Color(0xFFBFC7D4), Color(0xFF94A3B8)];
+    }
+    return const [Color(0xFFBFDBFE), Color(0xFF60A5FA), Color(0xFF2563EB)];
+  }
 
-  _NodeColors({
-    required this.light,
-    required this.main,
-    required this.dark,
-    required this.shadow,
-  });
-}
-
-extension on LessonNodeWidget {
-  bool get isActive => !node.isLocked && !node.isCompleted;
+  String _localizedLessonTitle(AppLanguage language) {
+    final raw = widget.node.lesson.title.trim();
+    if (raw.startsWith('Lesson ')) {
+      final number = raw.replaceAll(RegExp(r'[^0-9]'), '');
+      if (number.isNotEmpty) {
+        return '${language.lessonLabel} $number';
+      }
+    }
+    return raw;
+  }
 }

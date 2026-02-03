@@ -1,69 +1,65 @@
 import 'package:flutter/material.dart';
 
 class PathPainter extends CustomPainter {
+  PathPainter({required this.points, required this.color});
+
   final List<Offset> points;
   final Color color;
-
-  PathPainter({required this.points, required this.color});
 
   @override
   void paint(Canvas canvas, Size size) {
     if (points.length < 2) return;
 
-    final paint = Paint()
-      ..color = color.withValues(alpha: 0.3)
+    final path = _buildPath();
+    final shaderRect = Rect.fromLTWH(0, 0, size.width, size.height);
+
+    final trackPaint = Paint()
+      ..color = color.withValues(alpha: 0.18)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 12.0
+      ..strokeWidth = 13
       ..strokeCap = StrokeCap.round
       ..strokeJoin = StrokeJoin.round;
 
+    final mainPaint = Paint()
+      ..shader = LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [
+          Color.lerp(color, const Color(0xFF60A5FA), 0.36) ??
+              const Color(0xFF60A5FA),
+          Color.lerp(color, const Color(0xFF3B82F6), 0.52) ??
+              const Color(0xFF3B82F6),
+          const Color(0xFF2563EB),
+        ],
+      ).createShader(shaderRect)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 6
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
+
+    final highlightPaint = Paint()
+      ..color = Colors.white.withValues(alpha: 0.55)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.8
+      ..strokeCap = StrokeCap.round;
+
+    canvas.drawPath(path, trackPaint);
+    canvas.drawPath(path, mainPaint);
+    canvas.drawPath(path, highlightPaint);
+  }
+
+  Path _buildPath() {
     final path = Path();
-    path.moveTo(points[0].dx, points[0].dy);
+    path.moveTo(points.first.dx, points.first.dy);
 
     for (int i = 0; i < points.length - 1; i++) {
       final p1 = points[i];
       final p2 = points[i + 1];
-
-      // Simple cubic bezier implementation for smooth curves
-      final controlPoint1 = Offset(p1.dx, p1.dy + (p2.dy - p1.dy) / 2);
-      final controlPoint2 = Offset(p2.dx, p2.dy - (p2.dy - p1.dy) / 2);
-
-      path.cubicTo(
-        controlPoint1.dx,
-        controlPoint1.dy,
-        controlPoint2.dx,
-        controlPoint2.dy,
-        p2.dx,
-        p2.dy,
-      );
+      final cp1 = Offset(p1.dx, p1.dy + (p2.dy - p1.dy) * 0.5);
+      final cp2 = Offset(p2.dx, p2.dy - (p2.dy - p1.dy) * 0.5);
+      path.cubicTo(cp1.dx, cp1.dy, cp2.dx, cp2.dy, p2.dx, p2.dy);
     }
-
-    // Draw the main path (thick background)
-    canvas.drawPath(path, paint);
-
-    // Draw dashed overlay (optional detailed look)
-    final dashPaint = Paint()
-      ..color = color.withValues(alpha: 0.6)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 4.0
-      ..strokeCap = StrokeCap.round;
-
-    _drawDashedPath(canvas, path, dashPaint);
-  }
-
-  void _drawDashedPath(Canvas canvas, Path path, Paint paint) {
-    final pathMetrics = path.computeMetrics();
-    for (final metric in pathMetrics) {
-      var distance = 0.0;
-      final dashWidth = 10.0;
-      final dashSpace = 8.0;
-
-      while (distance < metric.length) {
-        final cutPath = metric.extractPath(distance, distance + dashWidth);
-        canvas.drawPath(cutPath, paint);
-        distance += dashWidth + dashSpace;
-      }
-    }
+    return path;
   }
 
   @override

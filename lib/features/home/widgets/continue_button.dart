@@ -1,176 +1,208 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+
 import '../providers/continue_provider.dart';
 
-class ContinueButton extends ConsumerStatefulWidget {
+class ContinueButton extends ConsumerWidget {
   const ContinueButton({super.key});
 
   @override
-  ConsumerState<ContinueButton> createState() => _ContinueButtonState();
-}
-
-class _ContinueButtonState extends ConsumerState<ContinueButton>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _scaleAnimation;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 2),
-    )..repeat(reverse: true);
-
-    _scaleAnimation = Tween<double>(
-      begin: 1.0,
-      end: 1.02,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final actionAsync = ref.watch(continueActionProvider);
     final language = ref.watch(appLanguageProvider);
 
     return actionAsync.when(
-      data: (action) => _buildAnimatedButton(context, action, language),
+      data: (action) => _buildCard(context, action, language),
       loading: () => const SizedBox.shrink(),
       error: (err, stack) => const SizedBox.shrink(),
     );
   }
 
-  Widget _buildAnimatedButton(
+  Widget _buildCard(
     BuildContext context,
     ContinueAction action,
     AppLanguage language,
   ) {
-    final gradient = _getGradient(action.type);
+    final accent = _getAccentColor(action.type);
     final icon = _getIcon(action.type);
+    final isNextLesson = action.type == ContinueActionType.nextLesson;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-      child: AnimatedBuilder(
-        animation: _scaleAnimation,
-        builder: (context, child) {
-          return Transform.scale(scale: _scaleAnimation.value, child: child);
-        },
-        child: Container(
-          width: double.infinity,
-          height: 64, // Floating Card Height
-          decoration: BoxDecoration(
-            gradient: gradient,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: gradient.colors.first.withValues(alpha: 0.4),
-                blurRadius: 16,
-                offset: const Offset(0, 8),
-                spreadRadius: 2,
-              ),
-            ],
-          ),
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              borderRadius: BorderRadius.circular(20),
-              onTap: () => _handleNavigation(context, action),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.2),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(icon, color: Colors.white, size: 24),
-                    ),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            _getTitle(action.type, language),
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              letterSpacing: 0.5,
-                            ),
-                          ),
-                          Text(
-                            _getLabel(action, language),
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w800,
-                            ),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const Icon(
-                      Icons.chevron_right_rounded,
-                      color: Colors.white,
-                      size: 32,
-                    ),
-                  ],
+      padding: const EdgeInsets.fromLTRB(20, 16, 20, 18),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => _handleNavigation(context, action),
+          borderRadius: BorderRadius.circular(26),
+          child: Container(
+            width: double.infinity,
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(26),
+              border: Border.all(color: accent.withValues(alpha: 0.28)),
+              boxShadow: const [
+                BoxShadow(
+                  color: Color(0x10213A59),
+                  blurRadius: 16,
+                  offset: Offset(0, 8),
                 ),
-              ),
+              ],
             ),
+            child: isNextLesson
+                ? _buildNextLessonStyle(action, language)
+                : _buildCompactStyle(icon, accent, action, language),
           ),
         ),
       ),
     );
   }
 
-  LinearGradient _getGradient(ContinueActionType type) {
+  Widget _buildNextLessonStyle(ContinueAction action, AppLanguage language) {
+    final accent = _getAccentColor(action.type);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Container(
+              width: 34,
+              height: 34,
+              decoration: BoxDecoration(
+                color: accent.withValues(alpha: 0.16),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(Icons.play_lesson_rounded, color: accent, size: 20),
+            ),
+            const SizedBox(width: 10),
+            Text(
+              language.nextStepLabel.toUpperCase(),
+              style: const TextStyle(
+                color: Color(0xFF64748B),
+                fontSize: 11,
+                fontWeight: FontWeight.w800,
+                letterSpacing: 0.7,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Text(
+          language.nextLessonSubtitle,
+          style: const TextStyle(
+            color: Color(0xFF0F172A),
+            fontSize: 27,
+            fontWeight: FontWeight.w900,
+            height: 1.02,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          _getLabel(action, language),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(
+            color: Color(0xFF475569),
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        const SizedBox(height: 12),
+        Container(
+          width: double.infinity,
+          height: 52,
+          decoration: BoxDecoration(
+            color: accent,
+            borderRadius: BorderRadius.circular(999),
+          ),
+          alignment: Alignment.center,
+          child: Text(
+            language.startPracticeLabel.toUpperCase(),
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 0.2,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCompactStyle(
+    IconData icon,
+    Color accent,
+    ContinueAction action,
+    AppLanguage language,
+  ) {
+    return Row(
+      children: [
+        Container(
+          width: 44,
+          height: 44,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: accent.withValues(alpha: 0.14),
+          ),
+          child: Icon(icon, color: accent, size: 23),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                _getTitle(action.type, language),
+                style: TextStyle(
+                  color: accent.withValues(alpha: 0.92),
+                  fontSize: 11,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: 0.6,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                _getLabel(action, language),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  color: Color(0xFF0F172A),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Icon(
+          Icons.chevron_right_rounded,
+          color: accent.withValues(alpha: 0.9),
+          size: 32,
+        ),
+      ],
+    );
+  }
+
+  Color _getAccentColor(ContinueActionType type) {
     switch (type) {
       case ContinueActionType.grammarReview:
-        return const LinearGradient(
-          colors: [Color(0xFF8B5CF6), Color(0xFF6D28D9)], // Violet
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        );
+        return const Color(0xFF7C3AED);
       case ContinueActionType.vocabReview:
-        return const LinearGradient(
-          colors: [Color(0xFF3B82F6), Color(0xFF2563EB)], // Blue
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        );
+        return const Color(0xFF2563EB);
       case ContinueActionType.kanjiReview:
-        return const LinearGradient(
-          colors: [Color(0xFF0D9488), Color(0xFF0F766E)], // Teal
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        );
+        return const Color(0xFF0E7490);
       case ContinueActionType.nextLesson:
-        return const LinearGradient(
-          colors: [Color(0xFF10B981), Color(0xFF059669)], // Emerald
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        );
+        return const Color(0xFF16A34A);
+      case ContinueActionType.fixMistakes:
+        return const Color(0xFFDC2626);
       default:
-        return const LinearGradient(
-          colors: [Color(0xFF3B82F6), Color(0xFF2563EB)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        );
+        return const Color(0xFF2563EB);
     }
   }
 
@@ -184,6 +216,8 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
         return Icons.brush_rounded;
       case ContinueActionType.nextLesson:
         return Icons.play_lesson_rounded;
+      case ContinueActionType.fixMistakes:
+        return Icons.warning_amber_rounded;
       default:
         return Icons.arrow_forward_rounded;
     }
@@ -208,16 +242,12 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
 
   String _getLabel(ContinueAction action, AppLanguage language) {
     if (action.type == ContinueActionType.nextLesson) {
-      // Extract number from "Lesson 3" -> "3"
       final number = action.label.replaceAll(RegExp(r'[^0-9]'), '');
       if (number.isNotEmpty) {
-        // Return localized "Bài 3"
         return '${language.lessonLabel} $number';
       }
-      // Fallback if no number found
       return action.label;
     }
-
     if (action.count != null && action.count! > 0) {
       return language.itemsCountLabel(action.count!);
     }
@@ -227,7 +257,6 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
   void _handleNavigation(BuildContext context, ContinueAction action) {
     switch (action.type) {
       case ContinueActionType.grammarReview:
-        // Maps to /grammar (list) or /grammar-practice
         context.push('/grammar');
         break;
       case ContinueActionType.vocabReview:
@@ -243,7 +272,6 @@ class _ContinueButtonState extends ConsumerState<ContinueButton>
         if (action.data != null) {
           context.push('/lesson/${action.data}');
         } else {
-          // Should not happen if data is correctly set
           context.push('/');
         }
         break;

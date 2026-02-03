@@ -22,6 +22,7 @@ import 'package:jpstudy/features/test/screens/test_history_screen.dart';
 import 'package:jpstudy/features/mistakes/screens/mistake_screen.dart';
 import 'package:jpstudy/features/immersion/immersion_home_screen.dart';
 import 'package:jpstudy/features/achievements/achievements_screen.dart';
+import 'package:jpstudy/features/design_lab/design_lab_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -155,6 +156,10 @@ class AppRouter {
       GoRoute(
         path: '/achievements',
         builder: (context, state) => const AchievementsScreen(),
+      ),
+      GoRoute(
+        path: '/design-lab',
+        builder: (context, state) => const DesignLabScreen(),
       ),
       GoRoute(
         path: '/learn/session',

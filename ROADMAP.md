@@ -135,6 +135,10 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 ---
 
 ## 🧾 Latest Update (2026-02-03)
+- ✅ Home UI/UX: làm mới Learning Path theo style tham chiếu cho cả mobile + desktop (top stats capsule + glowing lesson path + current lesson orb + CTA card), giữ nguyên luồng chức năng hiện có.
+- ✅ Home UI/UX: clean-up pass theo feedback (Option 1 - Clean Product UI) cho mobile + desktop: giảm hiệu ứng glow, tăng card hierarchy, cải thiện độ đọc label/path/CTA, vẫn giữ nguyên toàn bộ route và hành vi.
+- ✅ Home UI/UX: thêm Design Lab route (`/design-lab`) để xem quy trình Discover -> Visual -> Validate và theo dõi checklist trực tiếp.
+- ✅ Docs: thêm `docs/uiux-progress.md` và `docs/uiux-review-checklist.md` để log tiến trình + checklist review theo vòng lặp thiết kế.
 - ✅ Tooling: thêm workflow runner `tooling/run_promotion_workflow.py` để tự động chạy promote theo lịch (`app-start`/`weekly`) + gate theo `interval-days`.
 - ✅ Tooling: mỗi lần promote ghi history JSON vào `tooling/reports/n4_promotion_history.json`; lưu state lịch tại `tooling/reports/n4_promotion_schedule_state.json`.
 - ✅ Docs: thêm `tooling/README.md` hướng dẫn chạy schedule/force-run/report.

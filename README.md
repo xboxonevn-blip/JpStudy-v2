@@ -91,6 +91,12 @@ Reports:
 - `tooling/reports/n4_promotion_history.json`
 - `tooling/reports/n4_promotion_schedule_state.json`
 
+## UI/UX Process Visibility
+
+- Open in app: Settings -> `Design Lab` (route: `/design-lab`).
+- Track design iteration notes in `docs/uiux-progress.md`.
+- Use review checklist in `docs/uiux-review-checklist.md`.
+
 ## Project Structure
 
 ```text
@@ -107,4 +113,3 @@ assets/       vocab, grammar, kanji, immersion datasets and UI assets
 
 - Main roadmap: `ROADMAP.md`
 - Tooling usage details: `tooling/README.md`
-

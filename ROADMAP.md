@@ -144,6 +144,8 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 - ✅ Immersion UI: sửa lỗi vùng header/top bar bị nền đen ở màn Immersion Home + Reader (đồng bộ `Scaffold/AppBar` theo theme sáng/tối).
 - ✅ Immersion nguồn đọc: thêm fallback online từ Watanoc (WordPress JSON) khi NHK Easy API trả lỗi xác thực, giúp vẫn có bài mới để đọc.
 - ✅ Immersion nâng cao hiệu quả học: bổ sung Mini Quiz (2-3 câu sau bài đọc), Unknown Words Queue (gom từ chạm để ôn/lưu SRS cuối bài), và mở rộng fallback nguồn đọc sang MATCHA Easy + Tadoku.
+- ✅ Immersion UX v2: thêm thao tác “Add all to SRS” trong Unknown Queue + lưu lịch sử điểm Mini Quiz theo từng bài (kèm hiển thị lịch sử gần nhất trong Reader).
+- ✅ Immersion UX v2.1: thêm bộ lọc lịch sử Mini Quiz theo ngày/tuần/tất cả + biểu đồ tiến bộ theo từng bài Immersion để theo dõi mức độ ổn định theo thời gian.
 - ✅ i18n: sửa lỗi chuỗi Việt/Nhật ở các nhóm label cốt lõi (Settings, Ghost, Grammar, Session summary).
 - ✅ Theme/UI: cập nhật visual trẻ trung thiên hướng Nhật và dùng background kiểu Nhật thống nhất cho Home/Learning Path/Immersion.
 - ✅ Fix compile: sửa lỗi `Kanji Dash` do `language` chưa khai báo/const sai, đồng bộ text theo i18n.

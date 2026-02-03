@@ -888,6 +888,7 @@ class ImmersionService {
   // --- Read Status Management ---
 
   static const _readStatusKey = 'immersion_read_ids';
+  static const _quizHistoryKey = 'immersion_quiz_history_v1';
 
   Future<Set<String>> getReadArticleIds() async {
     final prefs = await SharedPreferences.getInstance();
@@ -904,6 +905,75 @@ class ImmersionService {
       ids.remove(id);
     }
     await prefs.setStringList(_readStatusKey, ids.toList());
+  }
+
+  Future<List<ImmersionQuizAttempt>> getQuizHistory(
+    String articleId, {
+    int limit = 10,
+  }) async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(_quizHistoryKey);
+    if (raw == null || raw.trim().isEmpty) {
+      return const [];
+    }
+    try {
+      final decoded = jsonDecode(raw);
+      if (decoded is! Map) return const [];
+      final listRaw = decoded[articleId];
+      if (listRaw is! List) return const [];
+      return listRaw
+          .whereType<Map>()
+          .map((item) => ImmersionQuizAttempt.fromJson(item))
+          .where((attempt) => attempt.total > 0)
+          .take(limit)
+          .toList();
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  Future<void> saveQuizAttempt({
+    required String articleId,
+    required int correct,
+    required int total,
+    int keep = 20,
+  }) async {
+    if (total <= 0) return;
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(_quizHistoryKey);
+    final payload = <String, dynamic>{};
+    if (raw != null && raw.trim().isNotEmpty) {
+      try {
+        final decoded = jsonDecode(raw);
+        if (decoded is Map) {
+          payload.addAll(decoded.map((k, v) => MapEntry('$k', v)));
+        }
+      } catch (_) {
+        // Ignore invalid cached payload and recreate.
+      }
+    }
+
+    final historyRaw = payload[articleId];
+    final history = <Map<String, dynamic>>[];
+    if (historyRaw is List) {
+      for (final entry in historyRaw) {
+        if (entry is Map) {
+          history.add(entry.map((k, v) => MapEntry('$k', v)));
+        }
+      }
+    }
+
+    history.insert(0, {
+      'correct': correct,
+      'total': total,
+      'attemptedAt': DateTime.now().toIso8601String(),
+    });
+    if (history.length > keep) {
+      history.removeRange(keep, history.length);
+    }
+    payload[articleId] = history;
+
+    await prefs.setString(_quizHistoryKey, jsonEncode(payload));
   }
 
   // --- End Read Status Management ---
@@ -1033,4 +1103,28 @@ class _NhkWord {
   final String surface;
   final String? reading;
   final String? meaningEn;
+}
+
+class ImmersionQuizAttempt {
+  const ImmersionQuizAttempt({
+    required this.correct,
+    required this.total,
+    required this.attemptedAt,
+  });
+
+  final int correct;
+  final int total;
+  final DateTime attemptedAt;
+
+  factory ImmersionQuizAttempt.fromJson(Map<dynamic, dynamic> json) {
+    final correct = int.tryParse('${json['correct'] ?? 0}') ?? 0;
+    final total = int.tryParse('${json['total'] ?? 0}') ?? 0;
+    final attemptedAt =
+        DateTime.tryParse('${json['attemptedAt'] ?? ''}') ?? DateTime.now();
+    return ImmersionQuizAttempt(
+      correct: correct,
+      total: total,
+      attemptedAt: attemptedAt,
+    );
+  }
 }

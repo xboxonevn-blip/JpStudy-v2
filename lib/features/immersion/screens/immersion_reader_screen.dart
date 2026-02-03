@@ -38,6 +38,8 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
   bool _quizSubmitted = false;
   String? _quizForArticleId;
   AppLanguage? _quizLanguage;
+  List<ImmersionQuizAttempt> _quizHistory = const [];
+  _QuizHistoryFilter _quizHistoryFilter = _QuizHistoryFilter.week;
 
   final ScrollController _scrollController = ScrollController();
   Timer? _autoScrollTimer;
@@ -133,7 +135,20 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     _unknownQueue = {};
     _quizAnswers = {};
     _quizSubmitted = false;
+    _quizHistory = const [];
+    _quizHistoryFilter = _QuizHistoryFilter.week;
     _quizQuestions = _buildQuizQuestions(article, language);
+    unawaited(_loadQuizHistory(article.id));
+  }
+
+  Future<void> _loadQuizHistory(String articleId) async {
+    final history = await ref
+        .read(immersionServiceProvider)
+        .getQuizHistory(articleId);
+    if (!mounted || _quizForArticleId != articleId) return;
+    setState(() {
+      _quizHistory = history;
+    });
   }
 
   List<_ImmersionQuizQuestion> _buildQuizQuestions(
@@ -332,6 +347,223 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     }
   }
 
+  String _quizHistoryTitle(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'History';
+      case AppLanguage.vi:
+        return 'Lịch sử';
+      case AppLanguage.ja:
+        return '履歴';
+    }
+  }
+
+  String _quizHistoryEmptyLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'No attempts yet.';
+      case AppLanguage.vi:
+        return 'Chưa có lần làm nào.';
+      case AppLanguage.ja:
+        return 'まだ履歴がありません。';
+    }
+  }
+
+  String _quizSavedLabel(AppLanguage language, int correct, int total) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Saved result: $correct/$total';
+      case AppLanguage.vi:
+        return 'Đã lưu kết quả: $correct/$total';
+      case AppLanguage.ja:
+        return '結果を保存しました: $correct/$total';
+    }
+  }
+
+  String _quizFilterDayLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Day';
+      case AppLanguage.vi:
+        return 'Ngày';
+      case AppLanguage.ja:
+        return '日';
+    }
+  }
+
+  String _quizFilterWeekLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Week';
+      case AppLanguage.vi:
+        return 'Tuần';
+      case AppLanguage.ja:
+        return '週';
+    }
+  }
+
+  String _quizFilterAllLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'All';
+      case AppLanguage.vi:
+        return 'Tất cả';
+      case AppLanguage.ja:
+        return 'すべて';
+    }
+  }
+
+  String _quizProgressTitle(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Progress chart';
+      case AppLanguage.vi:
+        return 'Biểu đồ tiến bộ';
+      case AppLanguage.ja:
+        return '進捗チャート';
+    }
+  }
+
+  String _quizProgressEmptyLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'No progress data for this filter.';
+      case AppLanguage.vi:
+        return 'Chưa có dữ liệu theo bộ lọc này.';
+      case AppLanguage.ja:
+        return 'このフィルターのデータはまだありません。';
+    }
+  }
+
+  String _quizSummaryLabel(
+    AppLanguage language,
+    List<ImmersionQuizAttempt> attempts,
+  ) {
+    if (attempts.isEmpty) return '';
+    final totalCorrect = attempts.fold<int>(
+      0,
+      (sum, item) => sum + item.correct,
+    );
+    final totalQuestions = attempts.fold<int>(
+      0,
+      (sum, item) => sum + item.total,
+    );
+    final avgPercent = totalQuestions == 0
+        ? 0
+        : ((totalCorrect / totalQuestions) * 100).round();
+    final bestPercent = attempts
+        .map((item) => item.total == 0 ? 0.0 : item.correct / item.total)
+        .fold<double>(0, max);
+    final bestText = (bestPercent * 100).round();
+    switch (language) {
+      case AppLanguage.en:
+        return 'Avg $avgPercent% • Best $bestText%';
+      case AppLanguage.vi:
+        return 'TB $avgPercent% • Cao nhất $bestText%';
+      case AppLanguage.ja:
+        return '平均 $avgPercent% ・ 最高 $bestText%';
+    }
+  }
+
+  DateTime _startOfDay(DateTime value) {
+    return DateTime(value.year, value.month, value.day);
+  }
+
+  DateTime _startOfWeek(DateTime value) {
+    final day = _startOfDay(value);
+    final offset = day.weekday - DateTime.monday;
+    return day.subtract(Duration(days: offset));
+  }
+
+  int _weekOfYear(DateTime value) {
+    final firstDay = DateTime(value.year, 1, 1);
+    final dayOfYear = value.difference(firstDay).inDays + 1;
+    return ((dayOfYear - value.weekday + 10) / 7).floor();
+  }
+
+  List<ImmersionQuizAttempt> _historyForCurrentFilter() {
+    final history = [..._quizHistory]
+      ..sort((a, b) => b.attemptedAt.compareTo(a.attemptedAt));
+    if (history.isEmpty) return const [];
+
+    final now = DateTime.now();
+    switch (_quizHistoryFilter) {
+      case _QuizHistoryFilter.day:
+        final from = _startOfDay(now).subtract(const Duration(days: 6));
+        return history
+            .where((item) => !item.attemptedAt.isBefore(from))
+            .toList();
+      case _QuizHistoryFilter.week:
+        final from = _startOfWeek(now).subtract(const Duration(days: 7 * 7));
+        return history
+            .where((item) => !item.attemptedAt.isBefore(from))
+            .toList();
+      case _QuizHistoryFilter.all:
+        return history;
+    }
+  }
+
+  List<_QuizHistoryPoint> _historyPointsForChart() {
+    final source = [..._quizHistory]
+      ..sort((a, b) => a.attemptedAt.compareTo(b.attemptedAt));
+    if (source.isEmpty) return const [];
+
+    switch (_quizHistoryFilter) {
+      case _QuizHistoryFilter.day:
+        final from = _startOfDay(
+          DateTime.now(),
+        ).subtract(const Duration(days: 6));
+        final buckets = <DateTime, _ScoreBucket>{};
+        for (final item in source) {
+          final day = _startOfDay(item.attemptedAt);
+          if (day.isBefore(from)) continue;
+          buckets
+              .putIfAbsent(day, _ScoreBucket.new)
+              .add(item.correct, item.total);
+        }
+        final points = <_QuizHistoryPoint>[];
+        for (int i = 0; i < 7; i++) {
+          final day = from.add(Duration(days: i));
+          final bucket = buckets[day];
+          if (bucket == null || bucket.total == 0) continue;
+          points.add(
+            _QuizHistoryPoint(
+              label: '${day.month}/${day.day}',
+              ratio: bucket.ratio,
+            ),
+          );
+        }
+        return points;
+      case _QuizHistoryFilter.week:
+        final from = _startOfWeek(
+          DateTime.now(),
+        ).subtract(const Duration(days: 7 * 7));
+        final buckets = <DateTime, _ScoreBucket>{};
+        for (final item in source) {
+          final weekStart = _startOfWeek(item.attemptedAt);
+          if (weekStart.isBefore(from)) continue;
+          buckets
+              .putIfAbsent(weekStart, _ScoreBucket.new)
+              .add(item.correct, item.total);
+        }
+        final keys = buckets.keys.toList()..sort();
+        return keys.where((key) => buckets[key]!.total > 0).map((key) {
+          final bucket = buckets[key]!;
+          return _QuizHistoryPoint(
+            label: 'W${_weekOfYear(key)}',
+            ratio: bucket.ratio,
+          );
+        }).toList();
+      case _QuizHistoryFilter.all:
+        final tail = source.reversed.take(12).toList().reversed.toList();
+        return tail.map((item) {
+          final d = item.attemptedAt;
+          final ratio = item.total == 0 ? 0.0 : item.correct / item.total;
+          return _QuizHistoryPoint(label: '${d.month}/${d.day}', ratio: ratio);
+        }).toList();
+    }
+  }
+
   String _unknownQueueTitle(AppLanguage language, int count) {
     switch (language) {
       case AppLanguage.en:
@@ -365,6 +597,44 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     }
   }
 
+  String _unknownQueueAddAllLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Add all to SRS';
+      case AppLanguage.vi:
+        return 'Thêm tất cả vào SRS';
+      case AppLanguage.ja:
+        return 'すべてSRSに追加';
+    }
+  }
+
+  String _unknownQueueClearLabel(AppLanguage language) {
+    switch (language) {
+      case AppLanguage.en:
+        return 'Clear queue';
+      case AppLanguage.vi:
+        return 'Xóa hàng đợi';
+      case AppLanguage.ja:
+        return 'キューをクリア';
+    }
+  }
+
+  String _unknownQueueBulkResultLabel(
+    AppLanguage language,
+    int added,
+    int existed,
+  ) {
+    final total = added + existed;
+    switch (language) {
+      case AppLanguage.en:
+        return 'Processed $total words (new: $added, existing: $existed).';
+      case AppLanguage.vi:
+        return 'Đã xử lý $total từ (mới: $added, đã có: $existed).';
+      case AppLanguage.ja:
+        return '$total語を処理しました（新規: $added、既存: $existed）。';
+    }
+  }
+
   void _queueUnknownToken(ImmersionToken token) {
     if (_isTokenSaved(token)) return;
     final key = _tokenKey(token.surface, token.reading);
@@ -391,6 +661,44 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     });
   }
 
+  Future<void> _submitQuizResult(String articleId, AppLanguage language) async {
+    if (_quizSubmitted) return;
+    final correct = _quizScore();
+    final total = _quizQuestions.length;
+    setState(() {
+      _quizSubmitted = true;
+    });
+    await ref
+        .read(immersionServiceProvider)
+        .saveQuizAttempt(articleId: articleId, correct: correct, total: total);
+    await _loadQuizHistory(articleId);
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(_quizSavedLabel(language, correct, total))),
+    );
+  }
+
+  Future<void> _addAllUnknownToSrs(AppLanguage language) async {
+    final queue = _unknownQueue.values.toList();
+    if (queue.isEmpty) return;
+    var added = 0;
+    var existed = 0;
+    for (final token in queue) {
+      final result = await _addToSrs(token, language, showFeedback: false);
+      if (result == _AddSrsResult.added) {
+        added += 1;
+      } else {
+        existed += 1;
+      }
+    }
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(_unknownQueueBulkResultLabel(language, added, existed)),
+      ),
+    );
+  }
+
   Future<void> _showUnknownQueue(AppLanguage language) async {
     if (_unknownQueue.isEmpty) return;
     await showModalBottomSheet<void>(
@@ -413,6 +721,35 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                         fontSize: 18,
                         fontWeight: FontWeight.w800,
                       ),
+                    ),
+                    const SizedBox(height: 8),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: [
+                        FilledButton.icon(
+                          onPressed: entries.isEmpty
+                              ? null
+                              : () async {
+                                  await _addAllUnknownToSrs(language);
+                                  if (!mounted) return;
+                                  setSheetState(() {});
+                                },
+                          icon: const Icon(Icons.library_add_check_rounded),
+                          label: Text(_unknownQueueAddAllLabel(language)),
+                        ),
+                        OutlinedButton.icon(
+                          onPressed: entries.isEmpty
+                              ? null
+                              : () {
+                                  _clearUnknownQueue();
+                                  if (!mounted) return;
+                                  setSheetState(() {});
+                                },
+                          icon: const Icon(Icons.delete_sweep_rounded),
+                          label: Text(_unknownQueueClearLabel(language)),
+                        ),
+                      ],
                     ),
                     const SizedBox(height: 10),
                     Expanded(
@@ -584,6 +921,8 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     final dateLabel = MaterialLocalizations.of(
       context,
     ).formatMediumDate(article.publishedAt);
+    final filteredHistory = _historyForCurrentFilter();
+    final chartPoints = _historyPointsForChart();
 
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -652,7 +991,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                 title: _unknownQueueTitle(language, _unknownQueue.length),
                 subtitle: _unknownQueueSubtitle(language),
                 reviewLabel: _unknownQueueReviewLabel(language),
+                addAllLabel: _unknownQueueAddAllLabel(language),
                 onReview: () => _showUnknownQueue(language),
+                onAddAll: () => _addAllUnknownToSrs(language),
                 onClear: _clearUnknownQueue,
               ),
             ],
@@ -681,6 +1022,30 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
               _ImmersionQuizCard(
                 title: _quizTitle(language),
                 subtitle: _quizSubtitle(language),
+                historyTitle: _quizHistoryTitle(language),
+                historyEmptyLabel: _quizHistoryEmptyLabel(language),
+                historyItems: filteredHistory
+                    .map(
+                      (attempt) =>
+                          '${attempt.correct}/${attempt.total} • ${MaterialLocalizations.of(context).formatShortDate(attempt.attemptedAt)}',
+                    )
+                    .toList(),
+                progressTitle: _quizProgressTitle(language),
+                progressEmptyLabel: _quizProgressEmptyLabel(language),
+                progressSummaryLabel: _quizSummaryLabel(
+                  language,
+                  filteredHistory,
+                ),
+                progressPoints: chartPoints,
+                filterDayLabel: _quizFilterDayLabel(language),
+                filterWeekLabel: _quizFilterWeekLabel(language),
+                filterAllLabel: _quizFilterAllLabel(language),
+                selectedFilter: _quizHistoryFilter,
+                onFilterChanged: (next) {
+                  setState(() {
+                    _quizHistoryFilter = next;
+                  });
+                },
                 submitLabel: _quizSubmitLabel(language),
                 retryLabel: _quizRetryLabel(language),
                 scoreLabel: _quizScoreLabel(
@@ -700,11 +1065,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                   });
                 },
                 onSubmit: _quizAnswers.length == _quizQuestions.length
-                    ? () {
-                        setState(() {
-                          _quizSubmitted = true;
-                        });
-                      }
+                    ? () => _submitQuizResult(article.id, language)
                     : null,
                 onRetry: () {
                   setState(() {
@@ -821,7 +1182,11 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     );
   }
 
-  Future<void> _addToSrs(ImmersionToken token, AppLanguage language) async {
+  Future<_AddSrsResult> _addToSrs(
+    ImmersionToken token,
+    AppLanguage language, {
+    bool showFeedback = true,
+  }) async {
     final repo = ref.read(lessonRepositoryProvider);
     await repo.ensureLesson(
       lessonId: _immersionLessonId,
@@ -838,12 +1203,12 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       await repo.ensureSrsStateForTerm(existing.id);
       _markTokenSaved(token);
       _removeUnknownToken(token);
-      if (mounted) {
+      if (showFeedback && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(language.immersionAlreadyAddedLabel)),
         );
       }
-      return;
+      return _AddSrsResult.existed;
     }
 
     final termId = await repo.addTerm(
@@ -856,12 +1221,36 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     await repo.ensureSrsStateForTerm(termId);
     _markTokenSaved(token);
     _removeUnknownToken(token);
-    if (mounted) {
+    if (showFeedback && mounted) {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text(language.immersionAddedLabel)));
     }
+    return _AddSrsResult.added;
   }
+}
+
+enum _AddSrsResult { added, existed }
+
+enum _QuizHistoryFilter { day, week, all }
+
+class _ScoreBucket {
+  int correct = 0;
+  int total = 0;
+
+  void add(int valueCorrect, int valueTotal) {
+    correct += valueCorrect;
+    total += valueTotal;
+  }
+
+  double get ratio => total <= 0 ? 0 : correct / total;
+}
+
+class _QuizHistoryPoint {
+  const _QuizHistoryPoint({required this.label, required this.ratio});
+
+  final String label;
+  final double ratio;
 }
 
 class _ArticleHeaderCard extends StatelessWidget {
@@ -1069,14 +1458,18 @@ class _UnknownQueueCard extends StatelessWidget {
     required this.title,
     required this.subtitle,
     required this.reviewLabel,
+    required this.addAllLabel,
     required this.onReview,
+    required this.onAddAll,
     required this.onClear,
   });
 
   final String title;
   final String subtitle;
   final String reviewLabel;
+  final String addAllLabel;
   final VoidCallback onReview;
+  final VoidCallback onAddAll;
   final VoidCallback onClear;
 
   @override
@@ -1121,10 +1514,21 @@ class _UnknownQueueCard extends StatelessWidget {
             style: const TextStyle(fontSize: 12.5, color: Color(0xFF57534E)),
           ),
           const SizedBox(height: 10),
-          FilledButton.icon(
-            onPressed: onReview,
-            icon: const Icon(Icons.visibility_rounded),
-            label: Text(reviewLabel),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              FilledButton.icon(
+                onPressed: onReview,
+                icon: const Icon(Icons.visibility_rounded),
+                label: Text(reviewLabel),
+              ),
+              OutlinedButton.icon(
+                onPressed: onAddAll,
+                icon: const Icon(Icons.library_add_check_rounded),
+                label: Text(addAllLabel),
+              ),
+            ],
           ),
         ],
       ),
@@ -1136,6 +1540,18 @@ class _ImmersionQuizCard extends StatelessWidget {
   const _ImmersionQuizCard({
     required this.title,
     required this.subtitle,
+    required this.historyTitle,
+    required this.historyEmptyLabel,
+    required this.historyItems,
+    required this.progressTitle,
+    required this.progressEmptyLabel,
+    required this.progressSummaryLabel,
+    required this.progressPoints,
+    required this.filterDayLabel,
+    required this.filterWeekLabel,
+    required this.filterAllLabel,
+    required this.selectedFilter,
+    required this.onFilterChanged,
     required this.submitLabel,
     required this.retryLabel,
     required this.scoreLabel,
@@ -1149,6 +1565,18 @@ class _ImmersionQuizCard extends StatelessWidget {
 
   final String title;
   final String subtitle;
+  final String historyTitle;
+  final String historyEmptyLabel;
+  final List<String> historyItems;
+  final String progressTitle;
+  final String progressEmptyLabel;
+  final String progressSummaryLabel;
+  final List<_QuizHistoryPoint> progressPoints;
+  final String filterDayLabel;
+  final String filterWeekLabel;
+  final String filterAllLabel;
+  final _QuizHistoryFilter selectedFilter;
+  final ValueChanged<_QuizHistoryFilter> onFilterChanged;
   final String submitLabel;
   final String retryLabel;
   final String scoreLabel;
@@ -1184,6 +1612,106 @@ class _ImmersionQuizCard extends StatelessWidget {
             subtitle,
             style: const TextStyle(fontSize: 12.5, color: Color(0xFF475569)),
           ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              const Icon(
+                Icons.history_rounded,
+                size: 16,
+                color: Color(0xFF6366F1),
+              ),
+              const SizedBox(width: 6),
+              Text(
+                historyTitle,
+                style: const TextStyle(
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w800,
+                  color: Color(0xFF312E81),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              ChoiceChip(
+                label: Text(filterDayLabel),
+                selected: selectedFilter == _QuizHistoryFilter.day,
+                onSelected: (_) => onFilterChanged(_QuizHistoryFilter.day),
+              ),
+              ChoiceChip(
+                label: Text(filterWeekLabel),
+                selected: selectedFilter == _QuizHistoryFilter.week,
+                onSelected: (_) => onFilterChanged(_QuizHistoryFilter.week),
+              ),
+              ChoiceChip(
+                label: Text(filterAllLabel),
+                selected: selectedFilter == _QuizHistoryFilter.all,
+                onSelected: (_) => onFilterChanged(_QuizHistoryFilter.all),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(
+            progressTitle,
+            style: const TextStyle(
+              fontSize: 12.5,
+              fontWeight: FontWeight.w800,
+              color: Color(0xFF1E293B),
+            ),
+          ),
+          const SizedBox(height: 6),
+          _QuizProgressChart(
+            points: progressPoints,
+            emptyLabel: progressEmptyLabel,
+          ),
+          if (progressSummaryLabel.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Text(
+              progressSummaryLabel,
+              style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF475569),
+              ),
+            ),
+          ],
+          const SizedBox(height: 10),
+          if (historyItems.isEmpty)
+            Text(
+              historyEmptyLabel,
+              style: const TextStyle(fontSize: 12, color: Color(0xFF64748B)),
+            )
+          else
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
+              children: historyItems
+                  .take(5)
+                  .map(
+                    (item) => Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE0E7FF),
+                        borderRadius: BorderRadius.circular(999),
+                      ),
+                      child: Text(
+                        item,
+                        style: const TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFF3730A3),
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
           const SizedBox(height: 12),
           ...List.generate(questions.length, (questionIndex) {
             final question = questions[questionIndex];
@@ -1283,6 +1811,103 @@ class _ImmersionQuizCard extends StatelessWidget {
               label: Text(submitLabel),
             ),
         ],
+      ),
+    );
+  }
+}
+
+class _QuizProgressChart extends StatelessWidget {
+  const _QuizProgressChart({required this.points, required this.emptyLabel});
+
+  final List<_QuizHistoryPoint> points;
+  final String emptyLabel;
+
+  @override
+  Widget build(BuildContext context) {
+    if (points.isEmpty) {
+      return Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+        decoration: BoxDecoration(
+          color: const Color(0xFFF8FAFC),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: const Color(0xFFE2E8F0)),
+        ),
+        child: Text(
+          emptyLabel,
+          style: const TextStyle(fontSize: 12, color: Color(0xFF64748B)),
+        ),
+      );
+    }
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(8, 10, 8, 8),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
+      ),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                height: 56,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: points.map((point) {
+                    final ratio = point.ratio.clamp(0.0, 1.0).toDouble();
+                    final percent = (ratio * 100).round();
+                    final barHeight = max(6.0, ratio * 48);
+                    final color = Color.lerp(
+                      const Color(0xFFF59E0B),
+                      const Color(0xFF22C55E),
+                      ratio,
+                    )!;
+                    return Expanded(
+                      child: Tooltip(
+                        message: '$percent%',
+                        child: Center(
+                          child: Container(
+                            width: 12,
+                            height: barHeight,
+                            decoration: BoxDecoration(
+                              color: color,
+                              borderRadius: BorderRadius.circular(999),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ),
+              const SizedBox(height: 6),
+              SizedBox(
+                height: 14,
+                child: Row(
+                  children: points.map((point) {
+                    return Expanded(
+                      child: Text(
+                        point.label,
+                        textAlign: TextAlign.center,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFF64748B),
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ),
+            ],
+          );
+        },
       ),
     );
   }

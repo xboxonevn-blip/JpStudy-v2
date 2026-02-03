@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:collection';
 import 'dart:io';
 
 import 'package:drift/drift.dart';
@@ -252,43 +253,276 @@ class ContentDatabase extends _$ContentDatabase {
   }
 
   Future<void> _seedFromJsonFiles({bool isN5 = false}) async {
-    final List<String> jsonFiles = [];
-    if (isN5) {
-      // N5: Lesson 1 to 25
-      for (int i = 1; i <= 25; i++) {
-        jsonFiles.add('assets/data/vocab/n5/vocab_n5_$i.json');
+    final level = isN5 ? 'N5' : 'N4';
+    final levelLower = level.toLowerCase();
+    final startLesson = isN5 ? 1 : 26;
+    final endLesson = isN5 ? 25 : 50;
+
+    final allRows = <Map<String, dynamic>>[];
+    for (int lessonId = startLesson; lessonId <= endLesson; lessonId++) {
+      final normalizedRows = await _loadNormalizedVocabRows(
+        level: level,
+        lessonId: lessonId,
+      );
+      final legacyRows = await _loadLegacyVocabRows(
+        levelLower: levelLower,
+        lessonId: lessonId,
+      );
+
+      allRows.addAll(
+        _mergeLessonRows(
+          preferred: normalizedRows,
+          fallback: legacyRows,
+          level: level,
+          lessonId: lessonId,
+        ),
+      );
+    }
+
+    final collapsedRows = _collapseExactDuplicateRows(allRows);
+    for (final item in collapsedRows) {
+      await into(vocab).insert(
+        VocabCompanion.insert(
+          term: item['term'] as String,
+          reading: Value(item['reading'] as String?),
+          kanjiMeaning: Value(item['kanjiMeaning'] as String?),
+          meaning: item['meaning_vi'] as String,
+          meaningEn: Value(item['meaning_en'] as String?),
+          level: item['level'] as String,
+          tags: Value(item['tags'] as String?),
+        ),
+        mode: InsertMode.insertOrIgnore,
+      );
+    }
+  }
+
+  Future<List<Map<String, dynamic>>> _loadLegacyVocabRows({
+    required String levelLower,
+    required int lessonId,
+  }) async {
+    final path =
+        'assets/data/vocab/$levelLower/vocab_${levelLower}_$lessonId.json';
+    try {
+      final jsonString = await rootBundle.loadString(path);
+      final List<dynamic> list = json.decode(jsonString);
+      return list
+          .map((item) => _asMap(item))
+          .whereType<Map<String, dynamic>>()
+          .toList();
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  Future<List<Map<String, dynamic>>> _loadNormalizedVocabRows({
+    required String level,
+    required int lessonId,
+  }) async {
+    final levelLower = level.toLowerCase();
+    final paddedLessonId = lessonId.toString().padLeft(2, '0');
+    final basePath =
+        'assets/data/vocab/normalized/$levelLower/lesson_$paddedLessonId';
+
+    try {
+      final masterJson = await rootBundle.loadString('$basePath/master.json');
+      final senseJson = await rootBundle.loadString('$basePath/sense.json');
+      final mapJson = await rootBundle.loadString('$basePath/map.json');
+
+      final masterList = json.decode(masterJson) as List<dynamic>;
+      final senseList = json.decode(senseJson) as List<dynamic>;
+      final lessonMap = json.decode(mapJson) as List<dynamic>;
+
+      final masterById = <String, Map<String, dynamic>>{};
+      for (final raw in masterList) {
+        final item = _asMap(raw);
+        if (item == null) continue;
+        final vocabId = _readText(item, 'vocabId');
+        if (vocabId.isEmpty) continue;
+        masterById[vocabId] = item;
       }
-    } else {
-      // N4: Lesson 26 to 50
-      for (int i = 26; i <= 50; i++) {
-        jsonFiles.add('assets/data/vocab/n4/vocab_n4_$i.json');
+
+      final senseById = <String, Map<String, dynamic>>{};
+      for (final raw in senseList) {
+        final item = _asMap(raw);
+        if (item == null) continue;
+        final senseId = _readText(item, 'senseId');
+        if (senseId.isEmpty) continue;
+        senseById[senseId] = item;
+      }
+
+      final mapRows =
+          lessonMap
+              .map((row) => _asMap(row))
+              .whereType<Map<String, dynamic>>()
+              .toList()
+            ..sort((a, b) {
+              final aOrder = _readInt(a, 'order') ?? 0;
+              final bOrder = _readInt(b, 'order') ?? 0;
+              return aOrder.compareTo(bOrder);
+            });
+
+      final normalizedRows = <Map<String, dynamic>>[];
+      for (final mapRow in mapRows) {
+        final senseId = _readText(mapRow, 'senseId');
+        if (senseId.isEmpty) continue;
+
+        final sense = senseById[senseId];
+        if (sense == null) continue;
+
+        final vocabId = _readText(sense, 'vocabId');
+        if (vocabId.isEmpty) continue;
+
+        final lemma = masterById[vocabId];
+        if (lemma == null) continue;
+
+        final term = _readText(lemma, 'term');
+        if (term.isEmpty) continue;
+
+        final meaningVi = _readText(sense, 'meaningVi');
+        if (meaningVi.isEmpty) continue;
+
+        final mappedLesson = _readInt(mapRow, 'lessonId') ?? lessonId;
+        final tag = _firstNonEmpty([
+          _readText(mapRow, 'tag'),
+          _readText(sense, 'tag'),
+          _readText(lemma, 'tag'),
+        ]);
+        final tags = tag.isEmpty
+            ? 'minna_$mappedLesson'
+            : 'minna_$mappedLesson,$tag';
+
+        normalizedRows.add({
+          'term': term,
+          'reading': _readNullableText(lemma, 'reading'),
+          'kanjiMeaning': _readNullableText(lemma, 'kanjiMeaning'),
+          'meaning_vi': meaningVi,
+          'meaning_en': _readNullableText(sense, 'meaningEn'),
+          'level': level,
+          'tags': tags,
+        });
+      }
+
+      return normalizedRows;
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  List<Map<String, dynamic>> _mergeLessonRows({
+    required List<Map<String, dynamic>> preferred,
+    required List<Map<String, dynamic>> fallback,
+    required String level,
+    required int lessonId,
+  }) {
+    final merged = <Map<String, dynamic>>[];
+    final seen = <String>{};
+
+    void addRow(Map<String, dynamic> raw) {
+      final term = _readText(raw, 'term');
+      final meaningVi = _firstNonEmpty([
+        _readText(raw, 'meaning_vi'),
+        _readText(raw, 'meaning'),
+      ]);
+      if (term.isEmpty || meaningVi.isEmpty) return;
+
+      final reading = _readNullableText(raw, 'reading');
+      final kanjiMeaning = _readNullableText(raw, 'kanjiMeaning');
+      final meaningEn = _readNullableText(raw, 'meaning_en');
+      final rowLevel = _firstNonEmpty([_readText(raw, 'level'), level]);
+      final tags = _firstNonEmpty([_readText(raw, 'tags'), 'minna_$lessonId']);
+
+      final normalized = <String, dynamic>{
+        'term': term,
+        'reading': reading,
+        'kanjiMeaning': kanjiMeaning,
+        'meaning_vi': meaningVi,
+        'meaning_en': meaningEn,
+        'level': rowLevel,
+        'tags': tags,
+      };
+
+      final key = _exactSignature(normalized);
+      if (seen.add(key)) {
+        merged.add(normalized);
       }
     }
 
-    for (final file in jsonFiles) {
-      try {
-        final jsonString = await rootBundle.loadString(file);
-        final List<dynamic> items = json.decode(jsonString);
+    for (final item in preferred) {
+      addRow(item);
+    }
+    for (final item in fallback) {
+      addRow(item);
+    }
 
-        for (final item in items) {
-          await into(vocab).insert(
-            VocabCompanion.insert(
-              term: item['term'] as String,
-              reading: Value(item['reading'] as String?),
-              kanjiMeaning: Value(item['kanjiMeaning'] as String?),
-              meaning: (item['meaning_vi'] ?? item['meaning']) as String,
-              meaningEn: Value(item['meaning_en'] as String?),
-              level: item['level'] as String,
-              tags: Value(item['tags'] as String?),
-            ),
-            mode: InsertMode.insertOrIgnore,
-          );
-        }
-      } catch (e) {
-        // File might not exist or be invalid, skip silently
-        // debugPrint('Error loading $file: $e');
+    return merged;
+  }
+
+  List<Map<String, dynamic>> _collapseExactDuplicateRows(
+    List<Map<String, dynamic>> rows,
+  ) {
+    final aggregateBySignature = <String, _SeedVocabAggregate>{};
+    for (final row in rows) {
+      final signature = _exactSignature(row);
+      final existing = aggregateBySignature[signature];
+      if (existing == null) {
+        aggregateBySignature[signature] = _SeedVocabAggregate.fromRow(row);
+      } else {
+        existing.mergeTags(_readNullableText(row, 'tags'));
       }
     }
+    return aggregateBySignature.values.map((item) => item.toRow()).toList();
+  }
+
+  Map<String, dynamic>? _asMap(dynamic raw) {
+    if (raw is Map<String, dynamic>) return raw;
+    if (raw is Map) {
+      return raw.map((key, value) => MapEntry(key.toString(), value));
+    }
+    return null;
+  }
+
+  String _readText(Map<String, dynamic> source, String key) {
+    final value = source[key];
+    if (value == null) return '';
+    return value.toString().trim();
+  }
+
+  String? _readNullableText(Map<String, dynamic> source, String key) {
+    final value = source[key];
+    if (value == null) return null;
+    final text = value.toString().trim();
+    if (text.isEmpty) return null;
+    return text;
+  }
+
+  int? _readInt(Map<String, dynamic> source, String key) {
+    final value = source[key];
+    if (value is int) return value;
+    if (value is num) return value.toInt();
+    return int.tryParse(value?.toString() ?? '');
+  }
+
+  String _firstNonEmpty(List<String?> candidates) {
+    for (final candidate in candidates) {
+      final normalized = candidate?.trim() ?? '';
+      if (normalized.isNotEmpty) {
+        return normalized;
+      }
+    }
+    return '';
+  }
+
+  String _exactSignature(Map<String, dynamic> row) {
+    final term = _readText(row, 'term');
+    final reading = _readText(row, 'reading');
+    final kanjiMeaning = _readText(row, 'kanjiMeaning');
+    final meaningVi = _firstNonEmpty([
+      _readText(row, 'meaning_vi'),
+      _readText(row, 'meaning'),
+    ]);
+    final meaningEn = _readText(row, 'meaning_en');
+    final level = _readText(row, 'level');
+    return '$term|$reading|$kanjiMeaning|$meaningVi|$meaningEn|$level';
   }
 
   Future<void> _addColumn<T extends Object>(
@@ -347,6 +581,78 @@ class ContentDatabase extends _$ContentDatabase {
         });
       } catch (e) {
         // print('Error seeding Kanji file $file: $e');
+      }
+    }
+  }
+}
+
+class _SeedVocabAggregate {
+  _SeedVocabAggregate({
+    required this.term,
+    required this.reading,
+    required this.kanjiMeaning,
+    required this.meaningVi,
+    required this.meaningEn,
+    required this.level,
+    required Iterable<String> tags,
+  }) : _tags = LinkedHashSet<String>() {
+    _mergeTags(tags);
+  }
+
+  final String term;
+  final String? reading;
+  final String? kanjiMeaning;
+  final String meaningVi;
+  final String? meaningEn;
+  final String level;
+  final LinkedHashSet<String> _tags;
+
+  factory _SeedVocabAggregate.fromRow(Map<String, dynamic> row) {
+    return _SeedVocabAggregate(
+      term: row['term'] as String,
+      reading: row['reading'] as String?,
+      kanjiMeaning: row['kanjiMeaning'] as String?,
+      meaningVi: row['meaning_vi'] as String,
+      meaningEn: row['meaning_en'] as String?,
+      level: row['level'] as String,
+      tags: _splitTags(row['tags'] as String?),
+    );
+  }
+
+  void mergeTags(String? tags) {
+    _mergeTags(_splitTags(tags));
+  }
+
+  Map<String, dynamic> toRow() {
+    return {
+      'term': term,
+      'reading': reading,
+      'kanjiMeaning': kanjiMeaning,
+      'meaning_vi': meaningVi,
+      'meaning_en': meaningEn,
+      'level': level,
+      'tags': _tags.join(','),
+    };
+  }
+
+  void _mergeTags(Iterable<String> tags) {
+    for (final tag in tags) {
+      final normalized = tag.trim();
+      if (normalized.isNotEmpty) {
+        _tags.add(normalized);
+      }
+    }
+  }
+
+  static Iterable<String> _splitTags(String? rawTags) sync* {
+    if (rawTags == null || rawTags.trim().isEmpty) {
+      return;
+    }
+
+    for (final tag in rawTags.split(',')) {
+      final normalized = tag.trim();
+      if (normalized.isNotEmpty) {
+        yield normalized;
       }
     }
   }

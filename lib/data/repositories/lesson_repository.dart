@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:drift/drift.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
@@ -741,6 +742,24 @@ class LessonRepository {
               .get();
     }
 
+    // Keep lesson order stable: if lesson JSON exists, sort by map.json order.
+    final levelLower = currentLevelLabel.toLowerCase();
+    final orderIndexByKey = await _loadLessonVocabOrderIndex(
+      levelLower: levelLower,
+      lessonId: lessonId,
+    );
+    if (orderIndexByKey.isNotEmpty) {
+      vocabList.sort((a, b) {
+        final aKey = _vocabKeyWithMeaning(a.term, a.reading, a.meaning);
+        final bKey = _vocabKeyWithMeaning(b.term, b.reading, b.meaning);
+        final ai = orderIndexByKey[aKey] ?? 1 << 30;
+        final bi = orderIndexByKey[bKey] ?? 1 << 30;
+        if (ai != bi) return ai.compareTo(bi);
+        // Stable fallback for any items not present in the map.
+        return a.id.compareTo(b.id);
+      });
+    }
+
     return vocabList;
   }
 
@@ -748,6 +767,88 @@ class LessonRepository {
     final termValue = term.trim();
     final readingValue = (reading ?? '').trim();
     return '$termValue|$readingValue';
+  }
+
+  String _vocabKeyWithMeaning(String term, String? reading, String meaning) {
+    final termValue = term.trim();
+    final readingValue = (reading ?? '').trim();
+    final meaningValue = meaning.trim();
+    return '$termValue|$readingValue|$meaningValue';
+  }
+
+  Future<Map<String, int>> _loadLessonVocabOrderIndex({
+    required String levelLower,
+    required int lessonId,
+  }) async {
+    // Only available for lesson-structured vocab (N4/N5 currently).
+    final paddedLessonId = lessonId.toString().padLeft(2, '0');
+    final basePath = 'assets/data/vocab/$levelLower/lesson_$paddedLessonId';
+
+    try {
+      final masterJson = await rootBundle.loadString('$basePath/master.json');
+      final senseJson = await rootBundle.loadString('$basePath/sense.json');
+      final mapJson = await rootBundle.loadString('$basePath/map.json');
+
+      final masterList = json.decode(masterJson) as List<dynamic>;
+      final senseList = json.decode(senseJson) as List<dynamic>;
+      final mapList = json.decode(mapJson) as List<dynamic>;
+
+      final masterById = <String, Map<String, dynamic>>{};
+      for (final raw in masterList) {
+        if (raw is! Map) continue;
+        final item = raw.map((k, v) => MapEntry(k.toString(), v));
+        final vocabId = (item['vocabId'] ?? '').toString().trim();
+        if (vocabId.isEmpty) continue;
+        masterById[vocabId] = item;
+      }
+
+      final senseById = <String, Map<String, dynamic>>{};
+      for (final raw in senseList) {
+        if (raw is! Map) continue;
+        final item = raw.map((k, v) => MapEntry(k.toString(), v));
+        final senseId = (item['senseId'] ?? '').toString().trim();
+        if (senseId.isEmpty) continue;
+        senseById[senseId] = item;
+      }
+
+      final mapRows =
+          mapList
+              .whereType<Map>()
+              .map((row) => row.map((k, v) => MapEntry(k.toString(), v)))
+              .toList()
+            ..sort((a, b) {
+              final aOrder =
+                  int.tryParse((a['order'] ?? '').toString().trim()) ?? 0;
+              final bOrder =
+                  int.tryParse((b['order'] ?? '').toString().trim()) ?? 0;
+              return aOrder.compareTo(bOrder);
+            });
+
+      final result = <String, int>{};
+      var i = 0;
+      for (final mapRow in mapRows) {
+        final senseId = (mapRow['senseId'] ?? '').toString().trim();
+        if (senseId.isEmpty) continue;
+        final sense = senseById[senseId];
+        if (sense == null) continue;
+        final vocabId = (sense['vocabId'] ?? '').toString().trim();
+        if (vocabId.isEmpty) continue;
+        final lemma = masterById[vocabId];
+        if (lemma == null) continue;
+
+        final term = (lemma['term'] ?? '').toString();
+        final reading = (lemma['reading'] ?? '').toString();
+        final meaning = (sense['meaningVi'] ?? '').toString();
+        if (term.trim().isEmpty || meaning.trim().isEmpty) continue;
+
+        i += 1;
+        result[_vocabKeyWithMeaning(term, reading, meaning)] = i;
+      }
+
+      return result;
+    } catch (_) {
+      return const {};
+    }
   }
 
   Future<List<GrammarPointData>> fetchGrammar(int lessonId) async {

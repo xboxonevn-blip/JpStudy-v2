@@ -38,7 +38,7 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
     *   [x] **Retrievability:** Hiển thị xác suất nhớ trước khi chọn mức độ.
 
 3.  **✍️ Advanced Handwriting (Trọng tâm hiện tại):**
-    *   [ ] **Stroke Check:** Kiểm tra thứ tự nét và hình dáng (Shape matching) chuẩn xác.
+    *   [ ] **Stroke Check v2:** Kiểm tra thứ tự nét + shape matching chính xác hơn theo quality tier (manual/curated/generated), có benchmark false-positive/false-negative.
     *   [x] **Template Engine (Starter):** Tạo engine chấm theo template nét chuẩn + bộ template khởi đầu cho Kanji phổ biến.
     *   [x] **N5 Template Coverage:** Đã phủ template cho toàn bộ Kanji N5 (manual + generated baseline).
     *   [x] **N5 Manual Pack v1:** Nâng cấp bộ template thủ công cho nhóm Kanji nền tảng tần suất cao.
@@ -79,6 +79,9 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 ---
 
 ## 🧪 UI Walkthrough Checklists
+> **QA Owner:** Project maintainer
+> **Next full walkthrough target:** 2026-02-05
+
 
 ### Ghost Review
 - [ ] Mở Ghost Review từ Practice Hub hoặc banner.
@@ -101,14 +104,40 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 - [ ] Bắt đầu đề N5/N4; kiểm tra timer và flow.
 - [ ] Hoàn thành; xem điểm & resume session.
 
-## 🚀 Next Priority Tasks
-1.  🔥 **Nâng chất lượng Handwriting N5/N4:** Tiếp tục promote curated → manual cho N4 theo Mistake Bank mới nhất và tune ngưỡng chấm.
-2.  ☁️ **Google Drive Backup:** Triển khai đồng bộ backup/restore qua Drive API (Android/Windows).
-3.  💅 **Mock Exam Polish:** Thêm áp lực thời gian (Time Pressure) và review chi tiết.
+## 🚀 Next Priority Tasks (Now / Next / Later)
+
+### NOW (2026-02-03 -> 2026-02-10)
+1. 🔥 **Đóng Phase 3 - Stroke Check v2 (ưu tiên cao nhất)**
+   - Scope: nâng độ chính xác kiểm tra thứ tự nét + shape matching cho nhóm N5/N4 manual/curated.
+   - DoD:
+     - [ ] Có bộ metric offline: Top-1 pass rate, false-positive rate theo từng quality tier.
+     - [ ] Tune ngưỡng chấm theo tier `manual/curated/generated` có benchmark trước/sau.
+     - [ ] Bổ sung test regression cho 20+ ca nét sai điển hình (order/shape/start-end).
+     - [ ] QA walkthrough Handwriting pass toàn bộ checklist ở phần bên dưới.
+
+### NEXT (2026-02-10 -> 2026-02-24)
+2. ☁️ **Google Drive Backup MVP (Android/Windows)**
+   - Scope: backup/restore DB + metadata settings, có conflict handling cơ bản.
+   - DoD:
+     - [ ] Backup thủ công thành công trên Android và Windows (2 thiết bị test).
+     - [ ] Restore từ backup tạo lại đầy đủ progress/mistakes/SRS/settings.
+     - [ ] Có versioning cho file backup + thông báo lỗi rõ ràng khi mismatch schema.
+     - [ ] Có test happy path + corrupted backup path.
+
+### LATER (sau 2026-02-24)
+3. 💅 **Mock Exam Polish**
+   - Scope: time pressure mode + review chi tiết sau bài.
+   - DoD:
+     - [ ] Có chế độ Time Pressure (config được per level N5/N4).
+     - [ ] Màn review hiển thị phân tích theo phần + gợi ý ôn tập.
+     - [ ] Theo dõi KPI: completion rate, average score, time spent trước/sau.
 
 ---
 
 ## 🧾 Latest Update (2026-02-03)
+- ✅ Tooling: thêm workflow runner `tooling/run_promotion_workflow.py` để tự động chạy promote theo lịch (`app-start`/`weekly`) + gate theo `interval-days`.
+- ✅ Tooling: mỗi lần promote ghi history JSON vào `tooling/reports/n4_promotion_history.json`; lưu state lịch tại `tooling/reports/n4_promotion_schedule_state.json`.
+- ✅ Docs: thêm `tooling/README.md` hướng dẫn chạy schedule/force-run/report.
 - ✅ Sửa toàn bộ lỗi compile hiện tại; `flutter analyze` đã sạch lỗi.
 - ✅ Immersion Reader: hoàn tất đọc/đánh dấu đã đọc + auto-scroll + cập nhật UI trạng thái.
 - ✅ Cải thiện Continue flow: thêm nhánh ưu tiên Kanji review.

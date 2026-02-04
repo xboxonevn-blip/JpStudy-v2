@@ -1,140 +1,122 @@
 [
-    {
-        "lessonId": 45,
-        "character": "謝",
-        "strokeCount": 17,
-        "onyomi": "SHA",
-        "kunyomi": "ayama-ru",
-        "meaning": "Tạ (xin lỗi, cảm tạ)",
-        "meaningEn": "Apologize, Thank",
-        "mnemonic_vi": "Dùng Lời nói (Ngôn 言) để bắn đi cái tôi (Thân 身 - biến thể) - XIN LỖI.",
-        "mnemonic_en": "Using words (言) to express the self (身) - APOLOGIZE.",
-        "examples": [
-            {
-                "word": "謝ります",
-                "reading": "あやまります",
-                "meaning": "Xin lỗi",
-                "meaningEn": "Apologize"
-            },
-            {
-                "word": "感謝",
-                "reading": "かんしゃ",
-                "meaning": "Cảm tạ",
-                "meaningEn": "Gratitude"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 45,
-        "character": "信",
-        "strokeCount": 9,
-        "onyomi": "SHIN",
-        "kunyomi": "shin-jiru",
-        "meaning": "Tín (tin tưởng)",
-        "meaningEn": "Believe, Trust",
-        "mnemonic_vi": "Lời nói (Ngôn 言) của Con người (Nhân 亻) cần được TIN TƯỞNG.",
-        "mnemonic_en": "The words (言) of a person (亻) you BELIEVE.",
-        "examples": [
-            {
-                "word": "信じます",
-                "reading": "しんじます",
-                "meaning": "Tin tưởng",
-                "meaningEn": "Believe"
-            },
-            {
-                "word": "信号",
-                "reading": "しんごう",
-                "meaning": "Đèn tín hiệu",
-                "meaningEn": "Traffic light"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 45,
-        "character": "疑",
-        "strokeCount": 14,
-        "onyomi": "GI",
-        "kunyomi": "utaga-u",
-        "meaning": "Nghi (nghi ngờ)",
-        "meaningEn": "Doubt",
-        "mnemonic_vi": "Con dao (Tí 匕) cắm vào đất cạnh đứa trẻ - NÊU NGHI VẤN.",
-        "mnemonic_en": "Questioning what's on the ground - DOUBT.",
-        "examples": [
-            {
-                "word": "疑います",
-                "reading": "うたがいます",
-                "meaning": "Nghi ngờ",
-                "meaningEn": "Doubt, Suspect"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 45,
-        "character": "折",
-        "strokeCount": 7,
-        "onyomi": "SETSU",
-        "kunyomi": "o-ru, o-reru",
-        "meaning": "Chiết (bẻ, gãy)",
-        "meaningEn": "Break, Fold",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) cầm Rìu (Can 斤) để CHẶT GÃY.",
-        "mnemonic_en": "Using a hand (扌) and an axe (斤) to BREAK.",
-        "examples": [
-            {
-                "word": "折れます",
-                "reading": "おれます",
-                "meaning": "Bị gãy",
-                "meaningEn": "Break, Snap"
-            },
-            {
-                "word": "折り紙",
-                "reading": "おりがみ",
-                "meaning": "Nghệ thuật gấp giấy",
-                "meaningEn": "Origami"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 45,
-        "character": "打",
-        "strokeCount": 5,
-        "onyomi": "DA",
-        "kunyomi": "u-tsu",
-        "meaning": "Đả (đánh)",
-        "meaningEn": "Hit, Strike",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) đóng Đinh (Đinh 丁) là ĐÁNH.",
-        "mnemonic_en": "Hand (扌) hitting a nail (丁) - STRIKE.",
-        "examples": [
-            {
-                "word": "打ちます",
-                "reading": "うちます",
-                "meaning": "Đánh (máy chữ), đập",
-                "meaningEn": "Hit, Type"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 45,
-        "character": "投",
-        "strokeCount": 7,
-        "onyomi": "TOU",
-        "kunyomi": "na-geru",
-        "meaning": "Đầu (ném)",
-        "meaningEn": "Throw",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) NÉM đồ vật (Thù 殳 - binh khí).",
-        "mnemonic_en": "Hand (扌) using a weapon (殳) to THROW.",
-        "examples": [
-            {
-                "word": "投げます",
-                "reading": "なげます",
-                "meaning": "Ném",
-                "meaningEn": "Throw"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 45,
+    "character": "謝",
+    "strokeCount": 17,
+    "onyomi": "SHA",
+    "kunyomi": "ayama-ru",
+    "meaning": "Tạ (xin lỗi, cảm tạ)",
+    "meaningEn": "Apologize, Thank",
+    "mnemonic_vi": "Dùng Lời nói (Ngôn 言) để bắn đi cái tôi (Thân 身 - biến thể) - XIN LỖI.",
+    "mnemonic_en": "Using words (言) to express the self (身) - APOLOGIZE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l43_v024",
+        "sourceSenseId": "n4_l43_s024"
+      },
+      {
+        "sourceVocabId": "n4_l45_v043",
+        "sourceSenseId": "n4_l45_s043"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 45,
+    "character": "信",
+    "strokeCount": 9,
+    "onyomi": "SHIN",
+    "kunyomi": "shin-jiru",
+    "meaning": "Tín (tin tưởng)",
+    "meaningEn": "Believe, Trust",
+    "mnemonic_vi": "Lời nói (Ngôn 言) của Con người (Nhân 亻) cần được TIN TƯỞNG.",
+    "mnemonic_en": "The words (言) of a person (亻) you BELIEVE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l45_v001",
+        "sourceSenseId": "n4_l45_s001"
+      },
+      {
+        "sourceVocabId": "n5_l14_v043",
+        "sourceSenseId": "n5_l14_s043"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 45,
+    "character": "疑",
+    "strokeCount": 14,
+    "onyomi": "GI",
+    "kunyomi": "utaga-u",
+    "meaning": "Nghi (nghi ngờ)",
+    "meaningEn": "Doubt",
+    "mnemonic_vi": "Con dao (Tí 匕) cắm vào đất cạnh đứa trẻ - NÊU NGHI VẤN.",
+    "mnemonic_en": "Questioning what's on the ground - DOUBT.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l45_v044",
+        "sourceSenseId": "n4_l45_s044"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 45,
+    "character": "折",
+    "strokeCount": 7,
+    "onyomi": "SETSU",
+    "kunyomi": "o-ru, o-reru",
+    "meaning": "Chiết (bẻ, gãy)",
+    "meaningEn": "Break, Fold",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) cầm Rìu (Can 斤) để CHẶT GÃY.",
+    "mnemonic_en": "Using a hand (扌) and an axe (斤) to BREAK.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l29_v009",
+        "sourceSenseId": "n4_l29_s009"
+      },
+      {
+        "sourceVocabId": "n4_l45_v045",
+        "sourceSenseId": "n4_l45_s045"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 45,
+    "character": "打",
+    "strokeCount": 5,
+    "onyomi": "DA",
+    "kunyomi": "u-tsu",
+    "meaning": "Đả (đánh)",
+    "meaningEn": "Hit, Strike",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) đóng Đinh (Đinh 丁) là ĐÁNH.",
+    "mnemonic_en": "Hand (扌) hitting a nail (丁) - STRIKE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l33_v042",
+        "sourceSenseId": "n4_l33_s042"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 45,
+    "character": "投",
+    "strokeCount": 7,
+    "onyomi": "TOU",
+    "kunyomi": "na-geru",
+    "meaning": "Đầu (ném)",
+    "meaningEn": "Throw",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) NÉM đồ vật (Thù 殳 - binh khí).",
+    "mnemonic_en": "Hand (扌) using a weapon (殳) to THROW.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l33_v004",
+        "sourceSenseId": "n4_l33_s004"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

@@ -30,30 +30,68 @@ class KanjiItem {
 
 class KanjiExample {
   const KanjiExample({
-    required this.word,
-    required this.reading,
-    required this.meaning,
+    this.word = '',
+    this.reading = '',
+    this.meaning = '',
     this.meaningEn,
+    this.sourceVocabId,
+    this.sourceSenseId,
   });
 
   final String word;
   final String reading;
   final String meaning;
   final String? meaningEn;
+  final String? sourceVocabId;
+  final String? sourceSenseId;
+
+  bool get hasSourceRef =>
+      (sourceSenseId?.trim().isNotEmpty ?? false) ||
+      (sourceVocabId?.trim().isNotEmpty ?? false);
+
+  KanjiExample resolvedWith({
+    required String word,
+    required String reading,
+    required String meaning,
+    String? meaningEn,
+  }) {
+    return KanjiExample(
+      word: word,
+      reading: reading,
+      meaning: meaning,
+      meaningEn: meaningEn,
+      sourceVocabId: sourceVocabId,
+      sourceSenseId: sourceSenseId,
+    );
+  }
 
   Map<String, dynamic> toJson() => {
-    'word': word,
-    'reading': reading,
-    'meaning': meaning,
-    'meaningEn': meaningEn,
+    if (word.trim().isNotEmpty) 'word': word,
+    if (reading.trim().isNotEmpty) 'reading': reading,
+    if (meaning.trim().isNotEmpty) 'meaning': meaning,
+    if (meaningEn != null && meaningEn!.trim().isNotEmpty)
+      'meaningEn': meaningEn,
+    if (sourceVocabId != null && sourceVocabId!.trim().isNotEmpty)
+      'sourceVocabId': sourceVocabId,
+    if (sourceSenseId != null && sourceSenseId!.trim().isNotEmpty)
+      'sourceSenseId': sourceSenseId,
   };
 
   factory KanjiExample.fromJson(Map<String, dynamic> json) {
+    String? readOptional(String key) {
+      final raw = json[key];
+      if (raw == null) return null;
+      final value = raw.toString().trim();
+      return value.isEmpty ? null : value;
+    }
+
     return KanjiExample(
-      word: json['word'] as String,
-      reading: json['reading'] as String,
-      meaning: json['meaning'] as String,
-      meaningEn: json['meaningEn'] as String?,
+      word: readOptional('word') ?? '',
+      reading: readOptional('reading') ?? '',
+      meaning: readOptional('meaning') ?? '',
+      meaningEn: readOptional('meaningEn'),
+      sourceVocabId: readOptional('sourceVocabId'),
+      sourceSenseId: readOptional('sourceSenseId'),
     );
   }
 }

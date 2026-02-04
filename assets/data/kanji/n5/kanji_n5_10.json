@@ -1,224 +1,192 @@
 [
-    {
-        "lessonId": 10,
-        "character": "上",
-        "strokeCount": 3,
-        "onyomi": "JOU",
-        "kunyomi": "ue",
-        "meaning": "Thượng (trên)",
-        "meaningEn": "Up, Above",
-        "mnemonic_vi": "Vạch kẻ chỉ hướng lên TRÊN.",
-        "mnemonic_en": "A line pointing UPWARDS.",
-        "examples": [
-            {
-                "word": "上",
-                "reading": "うえ",
-                "meaning": "Bên trên",
-                "meaningEn": "Above"
-            },
-            {
-                "word": "上手",
-                "reading": "じょうず",
-                "meaning": "Giỏi",
-                "meaningEn": "Good at"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "下",
-        "strokeCount": 3,
-        "onyomi": "KA, GE",
-        "kunyomi": "shita",
-        "meaning": "Hạ (dưới)",
-        "meaningEn": "Down, Below",
-        "mnemonic_vi": "Vạch kẻ chỉ hướng xuống DƯỚI.",
-        "mnemonic_en": "A line pointing DOWNWARDS.",
-        "examples": [
-            {
-                "word": "下",
-                "reading": "した",
-                "meaning": "Bên dưới",
-                "meaningEn": "Below"
-            },
-            {
-                "word": "地下鉄",
-                "reading": "ちかてつ",
-                "meaning": "Tàu điện ngầm",
-                "meaningEn": "Subway"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "前",
-        "strokeCount": 9,
-        "onyomi": "ZEN",
-        "kunyomi": "mae",
-        "meaning": "Tiền (trước)",
-        "meaningEn": "Front, Before",
-        "mnemonic_vi": "Một người cầm dao (Đao 刂) đứng trước mặt để bảo vệ.",
-        "mnemonic_en": "A person with a knife (刂) standing in FRONT.",
-        "examples": [
-            {
-                "word": "前",
-                "reading": "まえ",
-                "meaning": "Phía trước",
-                "meaningEn": "In front"
-            },
-            {
-                "word": "名前",
-                "reading": "なまえ",
-                "meaning": "Tên",
-                "meaningEn": "Name"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "後",
-        "strokeCount": 9,
-        "onyomi": "GO, KOU",
-        "kunyomi": "usho-ro, ato",
-        "meaning": "Hậu (sau)",
-        "meaningEn": "Back, After",
-        "mnemonic_vi": "Người đang đi bộ chậm rãi ở phía SAU.",
-        "mnemonic_en": "Someone walking slowly BEHIND.",
-        "examples": [
-            {
-                "word": "後ろ",
-                "reading": "うしろ",
-                "meaning": "Phía sau",
-                "meaningEn": "Behind"
-            },
-            {
-                "word": "午後",
-                "reading": "ごご",
-                "meaning": "Buổi chiều",
-                "meaningEn": "P.M."
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "右",
-        "strokeCount": 5,
-        "onyomi": "U, YUU",
-        "kunyomi": "migi",
-        "meaning": "Hữu (phải)",
-        "meaningEn": "Right",
-        "mnemonic_vi": "Dùng Tay (Khâu 口) đưa thức ăn vào Miệng bên PHẢI.",
-        "mnemonic_en": "Hand taking food to the mouth (口) on the RIGHT side.",
-        "examples": [
-            {
-                "word": "右",
-                "reading": "みぎ",
-                "meaning": "Bên phải",
-                "meaningEn": "Right"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "左",
-        "strokeCount": 5,
-        "onyomi": "SA",
-        "kunyomi": "hidari",
-        "meaning": "Tả (trái)",
-        "meaningEn": "Left",
-        "mnemonic_vi": "Tay cầm thước đo (Công 工) ở bên TRÁI.",
-        "mnemonic_en": "Hand holding a square tool (工) on the LEFT side.",
-        "examples": [
-            {
-                "word": "左",
-                "reading": "ひだり",
-                "meaning": "Bên trái",
-                "meaningEn": "Left"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "中",
-        "strokeCount": 4,
-        "onyomi": "CHUU",
-        "kunyomi": "naka",
-        "meaning": "Trung (trong, giữa)",
-        "meaningEn": "Inside, Middle",
-        "mnemonic_vi": "Một mũi tên đâm xuyên qua GIỮA mục tiêu.",
-        "mnemonic_en": "An arrow piercing through the MIDDLE.",
-        "examples": [
-            {
-                "word": "中",
-                "reading": "なか",
-                "meaning": "Bên trong",
-                "meaningEn": "Inside"
-            },
-            {
-                "word": "中国",
-                "reading": "ちゅうごく",
-                "meaning": "Trung Quốc",
-                "meaningEn": "China"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "外",
-        "strokeCount": 5,
-        "onyomi": "GAI",
-        "kunyomi": "soto",
-        "meaning": "Ngoại (ngoài)",
-        "meaningEn": "Outside",
-        "mnemonic_vi": "Buổi tối (Tịch 夕) dùng dao (Bặc 卜) để săn bắn bên NGOÀI.",
-        "mnemonic_en": "Hunting OUTSIDE in the evening (夕).",
-        "examples": [
-            {
-                "word": "外",
-                "reading": "そと",
-                "meaning": "Bên ngoài",
-                "meaningEn": "Outside"
-            },
-            {
-                "word": "外国",
-                "reading": "がいこく",
-                "meaning": "Nước ngoài",
-                "meaningEn": "Foreign country"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 10,
-        "character": "間",
-        "strokeCount": 12,
-        "onyomi": "KAN",
-        "kunyomi": "aida",
-        "meaning": "Gian (giữa)",
-        "meaningEn": "Between, Interval",
-        "mnemonic_vi": "Ánh sáng Mặt trời (Nhật 日) lọt qua khe Cửa (Môn 門).",
-        "mnemonic_en": "The sun (日) shining through the gates (門).",
-        "examples": [
-            {
-                "word": "間",
-                "reading": "あいだ",
-                "meaning": "Ở giữa",
-                "meaningEn": "Between"
-            },
-            {
-                "word": "時間",
-                "reading": "じかん",
-                "meaning": "Thời gian",
-                "meaningEn": "Time"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 10,
+    "character": "上",
+    "strokeCount": 3,
+    "onyomi": "JOU",
+    "kunyomi": "ue",
+    "meaning": "Thượng (trên)",
+    "meaningEn": "Up, Above",
+    "mnemonic_vi": "Vạch kẻ chỉ hướng lên TRÊN.",
+    "mnemonic_en": "A line pointing UPWARDS.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v031",
+        "sourceSenseId": "n5_l10_s031"
+      },
+      {
+        "sourceVocabId": "n5_l09_v005",
+        "sourceSenseId": "n5_l09_s005"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "下",
+    "strokeCount": 3,
+    "onyomi": "KA, GE",
+    "kunyomi": "shita",
+    "meaning": "Hạ (dưới)",
+    "meaningEn": "Down, Below",
+    "mnemonic_vi": "Vạch kẻ chỉ hướng xuống DƯỚI.",
+    "mnemonic_en": "A line pointing DOWNWARDS.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v032",
+        "sourceSenseId": "n5_l10_s032"
+      },
+      {
+        "sourceVocabId": "n5_l05_v010",
+        "sourceSenseId": "n5_l05_s010"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "前",
+    "strokeCount": 9,
+    "onyomi": "ZEN",
+    "kunyomi": "mae",
+    "meaning": "Tiền (trước)",
+    "meaningEn": "Front, Before",
+    "mnemonic_vi": "Một người cầm dao (Đao 刂) đứng trước mặt để bảo vệ.",
+    "mnemonic_en": "A person with a knife (刂) standing in FRONT.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v033",
+        "sourceSenseId": "n5_l10_s033"
+      },
+      {
+        "sourceVocabId": "n5_l14_v021",
+        "sourceSenseId": "n5_l14_s021"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "後",
+    "strokeCount": 9,
+    "onyomi": "GO, KOU",
+    "kunyomi": "usho-ro, ato",
+    "meaning": "Hậu (sau)",
+    "meaningEn": "Back, After",
+    "mnemonic_vi": "Người đang đi bộ chậm rãi ở phía SAU.",
+    "mnemonic_en": "Someone walking slowly BEHIND.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v052",
+        "sourceSenseId": "n5_l10_s052"
+      },
+      {
+        "sourceVocabId": "n5_l04_v019",
+        "sourceSenseId": "n5_l04_s019"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "右",
+    "strokeCount": 5,
+    "onyomi": "U, YUU",
+    "kunyomi": "migi",
+    "meaning": "Hữu (phải)",
+    "meaningEn": "Right",
+    "mnemonic_vi": "Dùng Tay (Khâu 口) đưa thức ăn vào Miệng bên PHẢI.",
+    "mnemonic_en": "Hand taking food to the mouth (口) on the RIGHT side.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v035",
+        "sourceSenseId": "n5_l10_s035"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "左",
+    "strokeCount": 5,
+    "onyomi": "SA",
+    "kunyomi": "hidari",
+    "meaning": "Tả (trái)",
+    "meaningEn": "Left",
+    "mnemonic_vi": "Tay cầm thước đo (Công 工) ở bên TRÁI.",
+    "mnemonic_en": "Hand holding a square tool (工) on the LEFT side.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v036",
+        "sourceSenseId": "n5_l10_s036"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "中",
+    "strokeCount": 4,
+    "onyomi": "CHUU",
+    "kunyomi": "naka",
+    "meaning": "Trung (trong, giữa)",
+    "meaningEn": "Inside, Middle",
+    "mnemonic_vi": "Một mũi tên đâm xuyên qua GIỮA mục tiêu.",
+    "mnemonic_en": "An arrow piercing through the MIDDLE.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v037",
+        "sourceSenseId": "n5_l10_s037"
+      },
+      {
+        "sourceVocabId": "n5_l01_v036",
+        "sourceSenseId": "n5_l01_s036"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "外",
+    "strokeCount": 5,
+    "onyomi": "GAI",
+    "kunyomi": "soto",
+    "meaning": "Ngoại (ngoài)",
+    "meaningEn": "Outside",
+    "mnemonic_vi": "Buổi tối (Tịch 夕) dùng dao (Bặc 卜) để săn bắn bên NGOÀI.",
+    "mnemonic_en": "Hunting OUTSIDE in the evening (夕).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v038",
+        "sourceSenseId": "n5_l10_s038"
+      },
+      {
+        "sourceVocabId": "n5_l11_v044",
+        "sourceSenseId": "n5_l11_s044"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 10,
+    "character": "間",
+    "strokeCount": 12,
+    "onyomi": "KAN",
+    "kunyomi": "aida",
+    "meaning": "Gian (giữa)",
+    "meaningEn": "Between, Interval",
+    "mnemonic_vi": "Ánh sáng Mặt trời (Nhật 日) lọt qua khe Cửa (Môn 門).",
+    "mnemonic_en": "The sun (日) shining through the gates (門).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v041",
+        "sourceSenseId": "n5_l10_s041"
+      },
+      {
+        "sourceVocabId": "n5_l09_v027",
+        "sourceSenseId": "n5_l09_s027"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

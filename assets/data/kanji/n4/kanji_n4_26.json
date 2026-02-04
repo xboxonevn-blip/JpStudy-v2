@@ -1,54 +1,46 @@
 [
-    {
-        "lessonId": 26,
-        "character": "私",
-        "strokeCount": 7,
-        "onyomi": "SHI",
-        "kunyomi": "watashi",
-        "meaning": "Tư (tôi)",
-        "meaningEn": "I, Me",
-        "mnemonic_vi": "Sở hữu lúa gạo (Hòa 禾) cho riêng mình (Khư 厶) là TƯ nhân/tôi.",
-        "mnemonic_en": "Grain (禾) that is mine (厶) personally.",
-        "examples": [
-            {
-                "word": "私",
-                "reading": "わたし",
-                "meaning": "Tôi",
-                "meaningEn": "I"
-            },
-            {
-                "word": "私立大学",
-                "reading": "しりつだいがく",
-                "meaning": "Đại học tư thục",
-                "meaningEn": "Private university"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 26,
-        "character": "夫",
-        "strokeCount": 4,
-        "onyomi": "FU",
-        "kunyomi": "otto",
-        "meaning": "Phu (chồng)",
-        "meaningEn": "Husband",
-        "mnemonic_vi": "Người đàn ông (Đại 大) đội mũ (Nhất 一) là người CHỒNG/trượng phu.",
-        "mnemonic_en": "A big man (大) with a hairpin (一) representing a HUSBAND.",
-        "examples": [
-            {
-                "word": "夫",
-                "reading": "おっと",
-                "meaning": "Chồng (tôi)",
-                "meaningEn": "My husband"
-            },
-            {
-                "word": "夫婦",
-                "reading": "ふうふ",
-                "meaning": "Vợ chồng",
-                "meaningEn": "Married couple"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 26,
+    "character": "私",
+    "strokeCount": 7,
+    "onyomi": "SHI",
+    "kunyomi": "watashi",
+    "meaning": "Tư (tôi)",
+    "meaningEn": "I, Me",
+    "mnemonic_vi": "Sở hữu lúa gạo (Hòa 禾) cho riêng mình (Khư 厶) là TƯ nhân/tôi.",
+    "mnemonic_en": "Grain (禾) that is mine (厶) personally.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l01_v001",
+        "sourceSenseId": "n5_l01_s001"
+      },
+      {
+        "sourceVocabId": "n4_l26_v067",
+        "sourceSenseId": "n4_l26_s067"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 26,
+    "character": "夫",
+    "strokeCount": 4,
+    "onyomi": "FU",
+    "kunyomi": "otto",
+    "meaning": "Phu (chồng)",
+    "meaningEn": "Husband",
+    "mnemonic_vi": "Người đàn ông (Đại 大) đội mũ (Nhất 一) là người CHỒNG/trượng phu.",
+    "mnemonic_en": "A big man (大) with a hairpin (一) representing a HUSBAND.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l09_v031",
+        "sourceSenseId": "n5_l09_s031"
+      },
+      {
+        "sourceVocabId": "n4_l26_v068",
+        "sourceSenseId": "n4_l26_s068"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

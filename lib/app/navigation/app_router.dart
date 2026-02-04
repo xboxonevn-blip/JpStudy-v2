@@ -23,6 +23,8 @@ import 'package:jpstudy/features/mistakes/screens/mistake_screen.dart';
 import 'package:jpstudy/features/immersion/immersion_home_screen.dart';
 import 'package:jpstudy/features/achievements/achievements_screen.dart';
 import 'package:jpstudy/features/design_lab/design_lab_screen.dart';
+import 'package:jpstudy/features/write/screens/home_handwriting_practice_screen.dart';
+import 'package:jpstudy/features/test/screens/home_mock_exam_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -160,6 +162,14 @@ class AppRouter {
       GoRoute(
         path: '/design-lab',
         builder: (context, state) => const DesignLabScreen(),
+      ),
+      GoRoute(
+        path: '/practice/handwriting',
+        builder: (context, state) => const HomeHandwritingPracticeScreen(),
+      ),
+      GoRoute(
+        path: '/practice/mock-exam',
+        builder: (context, state) => const HomeMockExamScreen(),
       ),
       GoRoute(
         path: '/learn/session',

@@ -1,240 +1,212 @@
 [
-    {
-        "lessonId": 15,
-        "character": "明",
-        "strokeCount": 8,
-        "onyomi": "MEI, MYOU",
-        "kunyomi": "aka-rui",
-        "meaning": "Minh (sáng)",
-        "meaningEn": "Bright",
-        "mnemonic_vi": "Mặt trời (Nhật 日) và Mặt trăng (Nguyệt 月) cùng chiếu Sáng.",
-        "mnemonic_en": "The sun (日) and the moon (月) together are BRIGHT.",
-        "examples": [
-            {
-                "word": "明るい",
-                "reading": "あかるい",
-                "meaning": "Sáng sủa, vui vẻ",
-                "meaningEn": "Bright, Cheerful"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "暗",
-        "strokeCount": 13,
-        "onyomi": "AN",
-        "kunyomi": "kura-i",
-        "meaning": "Ám (tối)",
-        "meaningEn": "Dark",
-        "mnemonic_vi": "Mặt trời (Nhật 日) phát ra âm thanh (Âm 音) nhưng trời vẫn Tối.",
-        "mnemonic_en": "The sun (日) making sounds but it's still DARK.",
-        "examples": [
-            {
-                "word": "暗い",
-                "reading": "くらい",
-                "meaning": "Tối",
-                "meaningEn": "Dark"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "広",
-        "strokeCount": 5,
-        "onyomi": "KOU",
-        "kunyomi": "hiro-i",
-        "meaning": "Quảng (rộng)",
-        "meaningEn": "Wide",
-        "mnemonic_vi": "Tòa nhà (Nghiễm 广) xây trên vùng đất Rộng (Hoàng 黄).",
-        "mnemonic_en": "A wide building structure.",
-        "examples": [
-            {
-                "word": "広い",
-                "reading": "ひろい",
-                "meaning": "Rộng",
-                "meaningEn": "Wide"
-            },
-            {
-                "word": "広場",
-                "reading": "ひろば",
-                "meaning": "Quảng trường",
-                "meaningEn": "Square (plaza)"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "多",
-        "strokeCount": 6,
-        "onyomi": "TA",
-        "kunyomi": "oo-i",
-        "meaning": "Đa (nhiều)",
-        "meaningEn": "Many",
-        "mnemonic_vi": "Hai buổi tối (Tịch 夕) cộng lại là NHIỀU đêm.",
-        "mnemonic_en": "Two evenings (夕) mean MANY nights.",
-        "examples": [
-            {
-                "word": "多い",
-                "reading": "おおい",
-                "meaning": "Nhiều",
-                "meaningEn": "Many"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "少",
-        "strokeCount": 4,
-        "onyomi": "SHOU",
-        "kunyomi": "suku-nai, suko-shi",
-        "meaning": "Thiểu (ít)",
-        "meaningEn": "Few, Little",
-        "mnemonic_vi": "Chữ Tiểu (nhỏ 小) bị gạch bớt một nét càng thêm ÍT.",
-        "mnemonic_en": "Smaller than small (小) means FEW.",
-        "examples": [
-            {
-                "word": "少ない",
-                "reading": "すくない",
-                "meaning": "Ít",
-                "meaningEn": "Few"
-            },
-            {
-                "word": "少し",
-                "reading": "すこし",
-                "meaning": "Một chút",
-                "meaningEn": "A little"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "長",
-        "strokeCount": 8,
-        "onyomi": "CHOU",
-        "kunyomi": "naga-i",
-        "meaning": "Trường (dài)",
-        "meaningEn": "Long",
-        "mnemonic_vi": "Người có mái tóc DÀI làm thủ lĩnh.",
-        "mnemonic_en": "Long hair representing a leader.",
-        "examples": [
-            {
-                "word": "長い",
-                "reading": "ながい",
-                "meaning": "Dài",
-                "meaningEn": "Long"
-            },
-            {
-                "word": "社長",
-                "reading": "しゃちょう",
-                "meaning": "Giám đốc",
-                "meaningEn": "President"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "短",
-        "strokeCount": 12,
-        "onyomi": "TAN",
-        "kunyomi": "mijika-i",
-        "meaning": "Đoản (ngắn)",
-        "meaningEn": "Short",
-        "mnemonic_vi": "Mũi tên (Thỉ 矢) bắn trúng cái đậu (Đậu 豆) Ngắn.",
-        "mnemonic_en": "A short arrow hitting a small bean.",
-        "examples": [
-            {
-                "word": "短い",
-                "reading": "みじかい",
-                "meaning": "Ngắn",
-                "meaningEn": "Short"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "悪",
-        "strokeCount": 11,
-        "onyomi": "AKU",
-        "kunyomi": "waru-i",
-        "meaning": "Ác (xấu)",
-        "meaningEn": "Bad",
-        "mnemonic_vi": "Trái tim (Tâm 心) ở dưới cái nắp (Á 亜) là người Xấu.",
-        "mnemonic_en": "A heart (心) under a cover (亚) feeling BAD.",
-        "examples": [
-            {
-                "word": "悪い",
-                "reading": "わるい",
-                "meaning": "Xấu",
-                "meaningEn": "Bad"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "重",
-        "strokeCount": 9,
-        "onyomi": "JUU",
-        "kunyomi": "omo-i",
-        "meaning": "Trọng (nặng)",
-        "meaningEn": "Heavy",
-        "mnemonic_vi": "Ngàn (Thiên 千) dặm đường (Lý 里) thật là NẶNG nề.",
-        "mnemonic_en": "Thousand (千) miles (里) feel HEAVY.",
-        "examples": [
-            {
-                "word": "重い",
-                "reading": "おもい",
-                "meaning": "Nặng",
-                "meaningEn": "Heavy"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "軽",
-        "strokeCount": 12,
-        "onyomi": "KEI",
-        "kunyomi": "karu-i",
-        "meaning": "Khinh (nhẹ)",
-        "meaningEn": "Light",
-        "mnemonic_vi": "Chiếc xe (Xa 車) chạy thật NHẸ nhàng.",
-        "mnemonic_en": "A light carriage.",
-        "examples": [
-            {
-                "word": "軽い",
-                "reading": "かるい",
-                "meaning": "Nhẹ",
-                "meaningEn": "Light (weight)"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 15,
-        "character": "早",
-        "strokeCount": 6,
-        "onyomi": "SOU",
-        "kunyomi": "haya-i",
-        "meaning": "Tảo (sớm)",
-        "meaningEn": "Early",
-        "mnemonic_vi": "Mặt trời (Nhật 日) mọc trên ngọn cỏ vào sáng SỚM (Thập 十).",
-        "mnemonic_en": "The sun (日) rising early.",
-        "examples": [
-            {
-                "word": "早い",
-                "reading": "はやい",
-                "meaning": "Sớm",
-                "meaningEn": "Early"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 15,
+    "character": "明",
+    "strokeCount": 8,
+    "onyomi": "MEI, MYOU",
+    "kunyomi": "aka-rui",
+    "meaning": "Minh (sáng)",
+    "meaningEn": "Bright",
+    "mnemonic_vi": "Mặt trời (Nhật 日) và Mặt trăng (Nguyệt 月) cùng chiếu Sáng.",
+    "mnemonic_en": "The sun (日) and the moon (月) together are BRIGHT.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v018",
+        "sourceSenseId": "n5_l16_s018"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "暗",
+    "strokeCount": 13,
+    "onyomi": "AN",
+    "kunyomi": "kura-i",
+    "meaning": "Ám (tối)",
+    "meaningEn": "Dark",
+    "mnemonic_vi": "Mặt trời (Nhật 日) phát ra âm thanh (Âm 音) nhưng trời vẫn Tối.",
+    "mnemonic_en": "The sun (日) making sounds but it's still DARK.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v019",
+        "sourceSenseId": "n5_l16_s019"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "広",
+    "strokeCount": 5,
+    "onyomi": "KOU",
+    "kunyomi": "hiro-i",
+    "meaning": "Quảng (rộng)",
+    "meaningEn": "Wide",
+    "mnemonic_vi": "Tòa nhà (Nghiễm 广) xây trên vùng đất Rộng (Hoàng 黄).",
+    "mnemonic_en": "A wide building structure.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l13_v015",
+        "sourceSenseId": "n5_l13_s015"
+      },
+      {
+        "sourceVocabId": "n5_l15_v030",
+        "sourceSenseId": "n5_l15_s030"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "多",
+    "strokeCount": 6,
+    "onyomi": "TA",
+    "kunyomi": "oo-i",
+    "meaning": "Đa (nhiều)",
+    "meaningEn": "Many",
+    "mnemonic_vi": "Hai buổi tối (Tịch 夕) cộng lại là NHIỀU đêm.",
+    "mnemonic_en": "Two evenings (夕) mean MANY nights.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l12_v007",
+        "sourceSenseId": "n5_l12_s007"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "少",
+    "strokeCount": 4,
+    "onyomi": "SHOU",
+    "kunyomi": "suku-nai, suko-shi",
+    "meaning": "Thiểu (ít)",
+    "meaningEn": "Few, Little",
+    "mnemonic_vi": "Chữ Tiểu (nhỏ 小) bị gạch bớt một nét càng thêm ÍT.",
+    "mnemonic_en": "Smaller than small (小) means FEW.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l12_v008",
+        "sourceSenseId": "n5_l12_s008"
+      },
+      {
+        "sourceVocabId": "n5_l09_v040",
+        "sourceSenseId": "n5_l09_s040"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "長",
+    "strokeCount": 8,
+    "onyomi": "CHOU",
+    "kunyomi": "naga-i",
+    "meaning": "Trường (dài)",
+    "meaningEn": "Long",
+    "mnemonic_vi": "Người có mái tóc DÀI làm thủ lĩnh.",
+    "mnemonic_en": "Long hair representing a leader.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v016",
+        "sourceSenseId": "n5_l16_s016"
+      },
+      {
+        "sourceVocabId": "n5_l18_v020",
+        "sourceSenseId": "n5_l18_s020"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "短",
+    "strokeCount": 12,
+    "onyomi": "TAN",
+    "kunyomi": "mijika-i",
+    "meaning": "Đoản (ngắn)",
+    "meaningEn": "Short",
+    "mnemonic_vi": "Mũi tên (Thỉ 矢) bắn trúng cái đậu (Đậu 豆) Ngắn.",
+    "mnemonic_en": "A short arrow hitting a small bean.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v017",
+        "sourceSenseId": "n5_l16_s017"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "悪",
+    "strokeCount": 11,
+    "onyomi": "AKU",
+    "kunyomi": "waru-i",
+    "meaning": "Ác (xấu)",
+    "meaningEn": "Bad",
+    "mnemonic_vi": "Trái tim (Tâm 心) ở dưới cái nắp (Á 亜) là người Xấu.",
+    "mnemonic_en": "A heart (心) under a cover (亚) feeling BAD.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l08_v017",
+        "sourceSenseId": "n5_l08_s017"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "重",
+    "strokeCount": 9,
+    "onyomi": "JUU",
+    "kunyomi": "omo-i",
+    "meaning": "Trọng (nặng)",
+    "meaningEn": "Heavy",
+    "mnemonic_vi": "Ngàn (Thiên 千) dặm đường (Lý 里) thật là NẶNG nề.",
+    "mnemonic_en": "Thousand (千) miles (里) feel HEAVY.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l12_v014",
+        "sourceSenseId": "n5_l12_s014"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "軽",
+    "strokeCount": 12,
+    "onyomi": "KEI",
+    "kunyomi": "karu-i",
+    "meaning": "Khinh (nhẹ)",
+    "meaningEn": "Light",
+    "mnemonic_vi": "Chiếc xe (Xa 車) chạy thật NHẸ nhàng.",
+    "mnemonic_en": "A light carriage.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l12_v015",
+        "sourceSenseId": "n5_l12_s015"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 15,
+    "character": "早",
+    "strokeCount": 6,
+    "onyomi": "SOU",
+    "kunyomi": "haya-i",
+    "meaning": "Tảo (sớm)",
+    "meaningEn": "Early",
+    "mnemonic_vi": "Mặt trời (Nhật 日) mọc trên ngọn cỏ vào sáng SỚM (Thập 十).",
+    "mnemonic_en": "The sun (日) rising early.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l12_v005",
+        "sourceSenseId": "n5_l12_s005"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

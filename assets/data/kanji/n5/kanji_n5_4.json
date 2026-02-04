@@ -1,80 +1,68 @@
 [
-    {
-        "lessonId": 4,
-        "character": "四",
-        "strokeCount": 5,
-        "onyomi": "SHI",
-        "kunyomi": "yon, yo",
-        "meaning": "Tứ (bốn)",
-        "meaningEn": "Four",
-        "mnemonic_vi": "Hình ảnh một cái cửa sổ có rèm che (các nét bên trong).",
-        "mnemonic_en": "Imagine a window with curtains inside.",
-        "examples": [
-            {
-                "word": "四",
-                "reading": "よん",
-                "meaning": "Số 4",
-                "meaningEn": "Number 4"
-            },
-            {
-                "word": "四月",
-                "reading": "しがつ",
-                "meaning": "Tháng 4",
-                "meaningEn": "April"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 4,
-        "character": "五",
-        "strokeCount": 4,
-        "onyomi": "GO",
-        "kunyomi": "itsu",
-        "meaning": "Ngũ (năm)",
-        "meaningEn": "Five",
-        "mnemonic_vi": "Một người đang đứng với tư thế giống số 5.",
-        "mnemonic_en": "A person standing in a pose that looks like the number 5.",
-        "examples": [
-            {
-                "word": "五",
-                "reading": "ご",
-                "meaning": "Số 5",
-                "meaningEn": "Number 5"
-            },
-            {
-                "word": "五月",
-                "reading": "ごがつ",
-                "meaning": "Tháng 5",
-                "meaningEn": "May"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 4,
-        "character": "六",
-        "strokeCount": 4,
-        "onyomi": "ROKU",
-        "kunyomi": "mutsu",
-        "meaning": "Lục (sáu)",
-        "meaningEn": "Six",
-        "mnemonic_vi": "Hình ảnh một người đang đứng dang tay và chân.",
-        "mnemonic_en": "A person stretching out arms and legs.",
-        "examples": [
-            {
-                "word": "六",
-                "reading": "ろく",
-                "meaning": "Số 6",
-                "meaningEn": "Number 6"
-            },
-            {
-                "word": "六百",
-                "reading": "ろっぴゃく",
-                "meaning": "600",
-                "meaningEn": "600"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 4,
+    "character": "四",
+    "strokeCount": 5,
+    "onyomi": "SHI",
+    "kunyomi": "yon, yo",
+    "meaning": "Tứ (bốn)",
+    "meaningEn": "Four",
+    "mnemonic_vi": "Hình ảnh một cái cửa sổ có rèm che (các nét bên trong).",
+    "mnemonic_en": "Imagine a window with curtains inside.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v052",
+        "sourceSenseId": "n5_l02_s052"
+      },
+      {
+        "sourceVocabId": "n5_l04_v063",
+        "sourceSenseId": "n5_l04_s063"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 4,
+    "character": "五",
+    "strokeCount": 4,
+    "onyomi": "GO",
+    "kunyomi": "itsu",
+    "meaning": "Ngũ (năm)",
+    "meaningEn": "Five",
+    "mnemonic_vi": "Một người đang đứng với tư thế giống số 5.",
+    "mnemonic_en": "A person standing in a pose that looks like the number 5.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v053",
+        "sourceSenseId": "n5_l02_s053"
+      },
+      {
+        "sourceVocabId": "n5_l04_v065",
+        "sourceSenseId": "n5_l04_s065"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 4,
+    "character": "六",
+    "strokeCount": 4,
+    "onyomi": "ROKU",
+    "kunyomi": "mutsu",
+    "meaning": "Lục (sáu)",
+    "meaningEn": "Six",
+    "mnemonic_vi": "Hình ảnh một người đang đứng dang tay và chân.",
+    "mnemonic_en": "A person stretching out arms and legs.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v054",
+        "sourceSenseId": "n5_l02_s054"
+      },
+      {
+        "sourceVocabId": "n5_l04_v067",
+        "sourceSenseId": "n5_l04_s067"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

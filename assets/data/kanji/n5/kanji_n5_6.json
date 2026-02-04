@@ -1,210 +1,178 @@
 [
-    {
-        "lessonId": 6,
-        "character": "食",
-        "strokeCount": 9,
-        "onyomi": "SHOKU",
-        "kunyomi": "ta-bemasu",
-        "meaning": "Thực (ăn)",
-        "meaningEn": "Eat, Food",
-        "mnemonic_vi": "Một người (Nhân 亻) đang ăn thức ăn dưới mái nhà lương thực.",
-        "mnemonic_en": "A person (亻) eating food under a roof.",
-        "examples": [
-            {
-                "word": "食べます",
-                "reading": "たべます",
-                "meaning": "Ăn",
-                "meaningEn": "Eat"
-            },
-            {
-                "word": "食堂",
-                "reading": "しょくどう",
-                "meaning": "Nhà ăn",
-                "meaningEn": "Cafeteria"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 6,
-        "character": "飲",
-        "strokeCount": 12,
-        "onyomi": "IN",
-        "kunyomi": "no-mimasu",
-        "meaning": "Ẩm (uống)",
-        "meaningEn": "Drink",
-        "mnemonic_vi": "Một người đang há miệng (Khiếm 欠) để Uống nước.",
-        "mnemonic_en": "A person opening their mouth (欠) to drink.",
-        "examples": [
-            {
-                "word": "飲みます",
-                "reading": "のみます",
-                "meaning": "Uống",
-                "meaningEn": "Drink"
-            },
-            {
-                "word": "飲み物",
-                "reading": "のみもの",
-                "meaning": "Đồ uống",
-                "meaningEn": "Beverage"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 6,
-        "character": "買",
-        "strokeCount": 12,
-        "onyomi": "BAI",
-        "kunyomi": "ka-imasu",
-        "meaning": "Mãi (mua)",
-        "meaningEn": "Buy",
-        "mnemonic_vi": "Dưới cái lưới (网) là tiền (Bối 貝). Dùng tiền để chuộc đồ ra (Mua).",
-        "mnemonic_en": "Using money (貝) under a net (网) to buy things.",
-        "examples": [
-            {
-                "word": "買います",
-                "reading": "かいます",
-                "meaning": "Mua",
-                "meaningEn": "Buy"
-            },
-            {
-                "word": "買い物",
-                "reading": "かいもの",
-                "meaning": "Mua sắm",
-                "meaningEn": "Shopping"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 6,
-        "character": "見",
-        "strokeCount": 7,
-        "onyomi": "KEN",
-        "kunyomi": "mi-masu",
-        "meaning": "Kiến (nhìn)",
-        "meaningEn": "See, Look",
-        "mnemonic_vi": "Mắt (目) có chân (儿) để đi xem.",
-        "mnemonic_en": "An eye (目) on legs (儿) going to see.",
-        "examples": [
-            {
-                "word": "見ます",
-                "reading": "みます",
-                "meaning": "Nhìn, xem",
-                "meaningEn": "See, Watch"
-            },
-            {
-                "word": "見学",
-                "reading": "けんがく",
-                "meaning": "Tham quan học tập",
-                "meaningEn": "Field trip"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 6,
-        "character": "聞",
-        "strokeCount": 14,
-        "onyomi": "BUN, MON",
-        "kunyomi": "ki-kimasu",
-        "meaning": "Văn (nghe)",
-        "meaningEn": "Hear, Listen",
-        "mnemonic_vi": "Đưa tai (Nhĩ 耳) vào khe Cửa (門) để nghe lén.",
-        "mnemonic_en": "Putting an ear (耳) between the gates (門) to listen.",
-        "examples": [
-            {
-                "word": "聞きます",
-                "reading": "ききます",
-                "meaning": "Nghe",
-                "meaningEn": "Listen, Hear"
-            },
-            {
-                "word": "新聞",
-                "reading": "しんぶん",
-                "meaning": "Báo",
-                "meaningEn": "Newspaper"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 6,
-        "character": "読",
-        "strokeCount": 14,
-        "onyomi": "DOKU",
-        "kunyomi": "yo-mimasu",
-        "meaning": "Độc (đọc)",
-        "meaningEn": "Read",
-        "mnemonic_vi": "Dùng Lời nói (言) để trao đổi (Mại 賣) kiến thức từ việc Đọc.",
-        "mnemonic_en": "Words (言) used to sell/exchange (賣) what you read.",
-        "examples": [
-            {
-                "word": "読みます",
-                "reading": "よみます",
-                "meaning": "Đọc",
-                "meaningEn": "Read"
-            },
-            {
-                "word": "読書",
-                "reading": "どくしょ",
-                "meaning": "Việc đọc sách",
-                "meaningEn": "Reading books"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 6,
-        "character": "書",
-        "strokeCount": 10,
-        "onyomi": "SHO",
-        "kunyomi": "ka-kimasu",
-        "meaning": "Thư (viết)",
-        "meaningEn": "Write",
-        "mnemonic_vi": "Tay cầm cây bút (聿) để Viết.",
-        "mnemonic_en": "A hand holding a brush (聿) to write.",
-        "examples": [
-            {
-                "word": "書きます",
-                "reading": "かきます",
-                "meaning": "Viết",
-                "meaningEn": "Write"
-            },
-            {
-                "word": "辞書",
-                "reading": "じしょ",
-                "meaning": "Từ điển",
-                "meaningEn": "Dictionary"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 6,
-        "character": "話",
-        "strokeCount": 13,
-        "onyomi": "WA",
-        "kunyomi": "hana-shimasu, hanashi",
-        "meaning": "Thoại (nói chuyện)",
-        "meaningEn": "Speak, Talk",
-        "mnemonic_vi": "Lời nói (言) phát ra từ cái Lưỡi (Thiệt 舌).",
-        "mnemonic_en": "Words (言) coming from a tongue (舌).",
-        "examples": [
-            {
-                "word": "話します",
-                "reading": "はなします",
-                "meaning": "Nói chuyện",
-                "meaningEn": "Speak, Talk"
-            },
-            {
-                "word": "電話",
-                "reading": "でんわ",
-                "meaning": "Điện thoại",
-                "meaningEn": "Telephone"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 6,
+    "character": "食",
+    "strokeCount": 9,
+    "onyomi": "SHOKU",
+    "kunyomi": "ta-bemasu",
+    "meaning": "Thực (ăn)",
+    "meaningEn": "Eat, Food",
+    "mnemonic_vi": "Một người (Nhân 亻) đang ăn thức ăn dưới mái nhà lương thực.",
+    "mnemonic_en": "A person (亻) eating food under a roof.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v001",
+        "sourceSenseId": "n5_l06_s001"
+      },
+      {
+        "sourceVocabId": "n5_l03_v010",
+        "sourceSenseId": "n5_l03_s010"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 6,
+    "character": "飲",
+    "strokeCount": 12,
+    "onyomi": "IN",
+    "kunyomi": "no-mimasu",
+    "meaning": "Ẩm (uống)",
+    "meaningEn": "Drink",
+    "mnemonic_vi": "Một người đang há miệng (Khiếm 欠) để Uống nước.",
+    "mnemonic_en": "A person opening their mouth (欠) to drink.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v002",
+        "sourceSenseId": "n5_l06_s002"
+      },
+      {
+        "sourceVocabId": "n5_l09_v008",
+        "sourceSenseId": "n5_l09_s008"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 6,
+    "character": "買",
+    "strokeCount": 12,
+    "onyomi": "BAI",
+    "kunyomi": "ka-imasu",
+    "meaning": "Mãi (mua)",
+    "meaningEn": "Buy",
+    "mnemonic_vi": "Dưới cái lưới (网) là tiền (Bối 貝). Dùng tiền để chuộc đồ ra (Mua).",
+    "mnemonic_en": "Using money (貝) under a net (网) to buy things.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v008",
+        "sourceSenseId": "n5_l06_s008"
+      },
+      {
+        "sourceVocabId": "n5_l06_v054",
+        "sourceSenseId": "n5_l06_s054"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 6,
+    "character": "見",
+    "strokeCount": 7,
+    "onyomi": "KEN",
+    "kunyomi": "mi-masu",
+    "meaning": "Kiến (nhìn)",
+    "meaningEn": "See, Look",
+    "mnemonic_vi": "Mắt (目) có chân (儿) để đi xem.",
+    "mnemonic_en": "An eye (目) on legs (儿) going to see.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v004",
+        "sourceSenseId": "n5_l06_s004"
+      },
+      {
+        "sourceVocabId": "n5_l18_v033",
+        "sourceSenseId": "n5_l18_s033"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 6,
+    "character": "聞",
+    "strokeCount": 14,
+    "onyomi": "BUN, MON",
+    "kunyomi": "ki-kimasu",
+    "meaning": "Văn (nghe)",
+    "meaningEn": "Hear, Listen",
+    "mnemonic_vi": "Đưa tai (Nhĩ 耳) vào khe Cửa (門) để nghe lén.",
+    "mnemonic_en": "Putting an ear (耳) between the gates (門) to listen.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v005",
+        "sourceSenseId": "n5_l06_s005"
+      },
+      {
+        "sourceVocabId": "n5_l02_v010",
+        "sourceSenseId": "n5_l02_s010"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 6,
+    "character": "読",
+    "strokeCount": 14,
+    "onyomi": "DOKU",
+    "kunyomi": "yo-mimasu",
+    "meaning": "Độc (đọc)",
+    "meaningEn": "Read",
+    "mnemonic_vi": "Dùng Lời nói (言) để trao đổi (Mại 賣) kiến thức từ việc Đọc.",
+    "mnemonic_en": "Words (言) used to sell/exchange (賣) what you read.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v006",
+        "sourceSenseId": "n5_l06_s006"
+      },
+      {
+        "sourceVocabId": "n5_l06_v055",
+        "sourceSenseId": "n5_l06_s055"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 6,
+    "character": "書",
+    "strokeCount": 10,
+    "onyomi": "SHO",
+    "kunyomi": "ka-kimasu",
+    "meaning": "Thư (viết)",
+    "meaningEn": "Write",
+    "mnemonic_vi": "Tay cầm cây bút (聿) để Viết.",
+    "mnemonic_en": "A hand holding a brush (聿) to write.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v007",
+        "sourceSenseId": "n5_l06_s007"
+      },
+      {
+        "sourceVocabId": "n5_l02_v008",
+        "sourceSenseId": "n5_l02_s008"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 6,
+    "character": "話",
+    "strokeCount": 13,
+    "onyomi": "WA",
+    "kunyomi": "hana-shimasu, hanashi",
+    "meaning": "Thoại (nói chuyện)",
+    "meaningEn": "Speak, Talk",
+    "mnemonic_vi": "Lời nói (言) phát ra từ cái Lưỡi (Thiệt 舌).",
+    "mnemonic_en": "Words (言) coming from a tongue (舌).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l14_v013",
+        "sourceSenseId": "n5_l14_s013"
+      },
+      {
+        "sourceVocabId": "n5_l03_v024",
+        "sourceSenseId": "n5_l03_s024"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

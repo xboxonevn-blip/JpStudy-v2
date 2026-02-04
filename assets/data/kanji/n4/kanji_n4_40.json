@@ -1,114 +1,100 @@
 [
-    {
-        "lessonId": 40,
-        "character": "数",
-        "strokeCount": 13,
-        "onyomi": "SUU",
-        "kunyomi": "kazu, kazo-eru",
-        "meaning": "Số (đếm, số lượng)",
-        "meaningEn": "Number, Count",
-        "mnemonic_vi": "Người phụ nữ (Nữ 女) dùng tay (Phọc 攵) gõ lúa (Mễ 米) để ĐẾM.",
-        "mnemonic_en": "Counting rice (米) with a tool.",
-        "examples": [
-            {
-                "word": "数えます",
-                "reading": "かぞえます",
-                "meaning": "Đếm",
-                "meaningEn": "Count"
-            },
-            {
-                "word": "数字",
-                "reading": "すうじ",
-                "meaning": "Chữ số",
-                "meaningEn": "Number, Digit"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 40,
-        "character": "測",
-        "strokeCount": 12,
-        "onyomi": "SOKU",
-        "kunyomi": "haka-ru",
-        "meaning": "Trắc (đo đạc)",
-        "meaningEn": "Measure",
-        "mnemonic_vi": "Dùng Nước (Thủy 氵) và vỏ bối (Tắc 則) để ĐO ĐẠC.",
-        "mnemonic_en": "Water (氵) and rules (則) used to MEASURE.",
-        "examples": [
-            {
-                "word": "測ります",
-                "reading": "はかります",
-                "meaning": "Đo (chiều dài, rộng...)",
-                "meaningEn": "Measure"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 40,
-        "character": "式",
-        "strokeCount": 6,
-        "onyomi": "SHIKI",
-        "kunyomi": "",
-        "meaning": "Thức (hình thức, lễ)",
-        "meaningEn": "Ceremony, Style",
-        "mnemonic_vi": "Dùng dụng cụ công (Công 工) để bắn tên (Phát 弋) trong LỄ nghi.",
-        "mnemonic_en": "A ritual involving a craft (工).",
-        "examples": [
-            {
-                "word": "式",
-                "reading": "しき",
-                "meaning": "Lễ",
-                "meaningEn": "Ceremony"
-            },
-            {
-                "word": "入学式",
-                "reading": "にゅうがくしき",
-                "meaning": "Lễ nhập học",
-                "meaningEn": "Entrance ceremony"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 40,
-        "character": "確",
-        "strokeCount": 15,
-        "onyomi": "KAKU",
-        "kunyomi": "tashi-kamesu",
-        "meaning": "Xác (chính xác)",
-        "meaningEn": "Certain",
-        "mnemonic_vi": "Dùng Đá (Thạch 石) làm bệ để chim bay (Hạc 隺) là điều CHÍNH XÁC.",
-        "mnemonic_en": "Finding the bird on the rock - SURE/CERTAIN.",
-        "examples": [
-            {
-                "word": "確かめます",
-                "reading": "たしかめます",
-                "meaning": "Xác nhận",
-                "meaningEn": "Confirm"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 40,
-        "character": "認",
-        "strokeCount": 14,
-        "onyomi": "NIN",
-        "kunyomi": "mito-meru",
-        "meaning": "Nhận (công nhận)",
-        "meaningEn": "Recognize",
-        "mnemonic_vi": "Lời nói (Ngôn 言) nhẫn nại (Nhẫn 忍) là để CÔNG NHẬN.",
-        "mnemonic_en": "Speech (言) that is patient (忍) leads to RECOGNITION.",
-        "examples": [
-            {
-                "word": "確認",
-                "reading": "かくにん",
-                "meaning": "Xác nhận",
-                "meaningEn": "Confirmation"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 40,
+    "character": "数",
+    "strokeCount": 13,
+    "onyomi": "SUU",
+    "kunyomi": "kazu, kazo-eru",
+    "meaning": "Số (đếm, số lượng)",
+    "meaningEn": "Number, Count",
+    "mnemonic_vi": "Người phụ nữ (Nữ 女) dùng tay (Phọc 攵) gõ lúa (Mễ 米) để ĐẾM.",
+    "mnemonic_en": "Counting rice (米) with a tool.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l40_v001",
+        "sourceSenseId": "n4_l40_s001"
+      },
+      {
+        "sourceVocabId": "n4_l40_v062",
+        "sourceSenseId": "n4_l40_s062"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 40,
+    "character": "測",
+    "strokeCount": 12,
+    "onyomi": "SOKU",
+    "kunyomi": "haka-ru",
+    "meaning": "Trắc (đo đạc)",
+    "meaningEn": "Measure",
+    "mnemonic_vi": "Dùng Nước (Thủy 氵) và vỏ bối (Tắc 則) để ĐO ĐẠC.",
+    "mnemonic_en": "Water (氵) and rules (則) used to MEASURE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l40_v002",
+        "sourceSenseId": "n4_l40_s002"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 40,
+    "character": "式",
+    "strokeCount": 6,
+    "onyomi": "SHIKI",
+    "kunyomi": "",
+    "meaning": "Thức (hình thức, lễ)",
+    "meaningEn": "Ceremony, Style",
+    "mnemonic_vi": "Dùng dụng cụ công (Công 工) để bắn tên (Phát 弋) trong LỄ nghi.",
+    "mnemonic_en": "A ritual involving a craft (工).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l31_v013",
+        "sourceSenseId": "n4_l31_s013"
+      },
+      {
+        "sourceVocabId": "n4_l40_v063",
+        "sourceSenseId": "n4_l40_s063"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 40,
+    "character": "確",
+    "strokeCount": 15,
+    "onyomi": "KAKU",
+    "kunyomi": "tashi-kamesu",
+    "meaning": "Xác (chính xác)",
+    "meaningEn": "Certain",
+    "mnemonic_vi": "Dùng Đá (Thạch 石) làm bệ để chim bay (Hạc 隺) là điều CHÍNH XÁC.",
+    "mnemonic_en": "Finding the bird on the rock - SURE/CERTAIN.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l40_v003",
+        "sourceSenseId": "n4_l40_s003"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 40,
+    "character": "認",
+    "strokeCount": 14,
+    "onyomi": "NIN",
+    "kunyomi": "mito-meru",
+    "meaning": "Nhận (công nhận)",
+    "meaningEn": "Recognize",
+    "mnemonic_vi": "Lời nói (Ngôn 言) nhẫn nại (Nhẫn 忍) là để CÔNG NHẬN.",
+    "mnemonic_en": "Speech (言) that is patient (忍) leads to RECOGNITION.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v049",
+        "sourceSenseId": "n5_l16_s049"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

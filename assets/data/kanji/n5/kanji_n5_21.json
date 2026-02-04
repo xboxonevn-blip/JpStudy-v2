@@ -1,226 +1,198 @@
 [
-    {
-        "lessonId": 21,
-        "character": "住",
-        "strokeCount": 7,
-        "onyomi": "JUU",
-        "kunyomi": "su-mu",
-        "meaning": "Trú (sống)",
-        "meaningEn": "Live, Reside",
-        "mnemonic_vi": "Người (Nhân 亻) đứng cạnh cây Đèn (Chủ 主) trong nơi Trú ngụ.",
-        "mnemonic_en": "A person (亻) standing by a lamp (主) where they live.",
-        "examples": [
-            {
-                "word": "住みます",
-                "reading": "すみます",
-                "meaning": "Sống, cư trú",
-                "meaningEn": "Live, Reside"
-            },
-            {
-                "word": "住所",
-                "reading": "じゅうしょ",
-                "meaning": "Địa chỉ",
-                "meaningEn": "Address"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "所",
-        "strokeCount": 8,
-        "onyomi": "SHO",
-        "kunyomi": "tokoro",
-        "meaning": "Sở (nơi chốn)",
-        "meaningEn": "Place",
-        "mnemonic_vi": "Dùng Rìu (Can 斤) mở Cửa (Hộ 戸) để tìm nơi chốn (Sở).",
-        "mnemonic_en": "Using an axe (斤) at the door (戸) of a PLACE.",
-        "examples": [
-            {
-                "word": "所",
-                "reading": "ところ",
-                "meaning": "Nơi, chỗ",
-                "meaningEn": "Place"
-            },
-            {
-                "word": "台所",
-                "reading": "だいどころ",
-                "meaning": "Nhà bếp",
-                "meaningEn": "Kitchen"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "京",
-        "strokeCount": 8,
-        "onyomi": "KYOU",
-        "kunyomi": "",
-        "meaning": "Kinh (kinh đô)",
-        "meaningEn": "Capital",
-        "mnemonic_vi": "Ngôi nhà cao đầu tiên ở Kinh đô.",
-        "mnemonic_en": "A tall building in the CAPITAL city.",
-        "examples": [
-            {
-                "word": "東京",
-                "reading": "とうきょう",
-                "meaning": "Tokyo",
-                "meaningEn": "Tokyo"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "都",
-        "strokeCount": 11,
-        "onyomi": "TO",
-        "kunyomi": "miyako",
-        "meaning": "Đô (đô thành)",
-        "meaningEn": "Metropolis",
-        "mnemonic_vi": "Mọi người (Giả 者) tập trung ở vùng đất có ranh giới (Ấp 阝) tạo nên Đô thị.",
-        "mnemonic_en": "People (者) gathered in a district (阝) to form a METROPOLIS.",
-        "examples": [
-            {
-                "word": "京都",
-                "reading": "きょうと",
-                "meaning": "Kyoto",
-                "meaningEn": "Kyoto"
-            },
-            {
-                "word": "都合",
-                "reading": "つごう",
-                "meaning": "Sự thuận tiện",
-                "meaningEn": "Convenience"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "府",
-        "strokeCount": 8,
-        "onyomi": "FU",
-        "kunyomi": "",
-        "meaning": "Phủ (phủ, tỉnh)",
-        "meaningEn": "Prefecture",
-        "mnemonic_vi": "Nơi nạp (Phó 付) giấy tờ dưới mái nhà chính (Nghiễm 广) là Phủ.",
-        "mnemonic_en": "A government office (付) under a roof (广).",
-        "examples": [
-            {
-                "word": "大阪府",
-                "reading": "おおさかふ",
-                "meaning": "Phủ Osaka",
-                "meaningEn": "Osaka Prefecture"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "県",
-        "strokeCount": 9,
-        "onyomi": "KEN",
-        "kunyomi": "",
-        "meaning": "Huyện (tỉnh)",
-        "meaningEn": "Prefecture",
-        "mnemonic_vi": "Dây buộc (Hệ 系) các con mắt (Mục 目) lại để quản lý tỉnh Huyện.",
-        "mnemonic_en": "Managing districts (ken).",
-        "examples": [
-            {
-                "word": "県",
-                "reading": "けん",
-                "meaning": "Tỉnh",
-                "meaningEn": "Prefecture"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "市",
-        "strokeCount": 5,
-        "onyomi": "SHI",
-        "kunyomi": "ichi",
-        "meaning": "Thị (thành phố, chợ)",
-        "meaningEn": "City, Market",
-        "mnemonic_vi": "Cái khăn (Cân 巾) treo ở chợ (Thị).",
-        "mnemonic_en": "A towel (巾) displayed at the MARKET.",
-        "examples": [
-            {
-                "word": "市",
-                "reading": "し",
-                "meaning": "Thành phố",
-                "meaningEn": "City"
-            },
-            {
-                "word": "市場",
-                "reading": "いちば",
-                "meaning": "Chợ",
-                "meaningEn": "Market"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "区",
-        "strokeCount": 4,
-        "onyomi": "KU",
-        "kunyomi": "",
-        "meaning": "Khu (quận)",
-        "meaningEn": "Ward, District",
-        "mnemonic_vi": "Những vật phẩm được cất giữ trong một Khu vực có vách ngăn.",
-        "mnemonic_en": "Dividing items into specific WARDs.",
-        "examples": [
-            {
-                "word": "区",
-                "reading": "く",
-                "meaning": "Quận (trong thành phố)",
-                "meaningEn": "Ward"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "町",
-        "strokeCount": 7,
-        "onyomi": "CHOU",
-        "kunyomi": "machi",
-        "meaning": "Đinh (thị trấn)",
-        "meaningEn": "Town",
-        "mnemonic_vi": "Cánh đồng (Điền 田) ở ven Đinh (thị trấn 丁).",
-        "mnemonic_en": "A rice field (田) near the street/town corner (丁).",
-        "examples": [
-            {
-                "word": "町",
-                "reading": "まち",
-                "meaning": "Thị trấn, phố",
-                "meaningEn": "Town"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 21,
-        "character": "村",
-        "strokeCount": 7,
-        "onyomi": "SON",
-        "kunyomi": "mura",
-        "meaning": "Thôn (làng)",
-        "meaningEn": "Village",
-        "mnemonic_vi": "Những cái cây (Mộc 木) ở ven Thôn (Thốn 寸) làng.",
-        "mnemonic_en": "Trees (木) marking the boundary (寸) of a VILLAGE.",
-        "examples": [
-            {
-                "word": "村",
-                "reading": "むら",
-                "meaning": "Làng",
-                "meaningEn": "Village"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 21,
+    "character": "住",
+    "strokeCount": 7,
+    "onyomi": "JUU",
+    "kunyomi": "su-mu",
+    "meaning": "Trú (sống)",
+    "meaningEn": "Live, Reside",
+    "mnemonic_vi": "Người (Nhân 亻) đứng cạnh cây Đèn (Chủ 主) trong nơi Trú ngụ.",
+    "mnemonic_en": "A person (亻) standing by a lamp (主) where they live.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l15_v005",
+        "sourceSenseId": "n5_l15_s005"
+      },
+      {
+        "sourceVocabId": "n5_l14_v022",
+        "sourceSenseId": "n5_l14_s022"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "所",
+    "strokeCount": 8,
+    "onyomi": "SHO",
+    "kunyomi": "tokoro",
+    "meaning": "Sở (nơi chốn)",
+    "meaningEn": "Place",
+    "mnemonic_vi": "Dùng Rìu (Can 斤) mở Cửa (Hộ 戸) để tìm nơi chốn (Sở).",
+    "mnemonic_en": "Using an axe (斤) at the door (戸) of a PLACE.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l08_v039",
+        "sourceSenseId": "n5_l08_s039"
+      },
+      {
+        "sourceVocabId": "n4_l27_v022",
+        "sourceSenseId": "n4_l27_s022"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "京",
+    "strokeCount": 8,
+    "onyomi": "KYOU",
+    "kunyomi": "",
+    "meaning": "Kinh (kinh đô)",
+    "meaningEn": "Capital",
+    "mnemonic_vi": "Ngôi nhà cao đầu tiên ở Kinh đô.",
+    "mnemonic_en": "A tall building in the CAPITAL city.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l21_v043",
+        "sourceSenseId": "n5_l21_s043"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "都",
+    "strokeCount": 11,
+    "onyomi": "TO",
+    "kunyomi": "miyako",
+    "meaning": "Đô (đô thành)",
+    "meaningEn": "Metropolis",
+    "mnemonic_vi": "Mọi người (Giả 者) tập trung ở vùng đất có ranh giới (Ấp 阝) tạo nên Đô thị.",
+    "mnemonic_en": "People (者) gathered in a district (阝) to form a METROPOLIS.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l21_v044",
+        "sourceSenseId": "n5_l21_s044"
+      },
+      {
+        "sourceVocabId": "n5_l21_v045",
+        "sourceSenseId": "n5_l21_s045"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "府",
+    "strokeCount": 8,
+    "onyomi": "FU",
+    "kunyomi": "",
+    "meaning": "Phủ (phủ, tỉnh)",
+    "meaningEn": "Prefecture",
+    "mnemonic_vi": "Nơi nạp (Phó 付) giấy tờ dưới mái nhà chính (Nghiễm 广) là Phủ.",
+    "mnemonic_en": "A government office (付) under a roof (广).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l21_v046",
+        "sourceSenseId": "n5_l21_s046"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "県",
+    "strokeCount": 9,
+    "onyomi": "KEN",
+    "kunyomi": "",
+    "meaning": "Huyện (tỉnh)",
+    "meaningEn": "Prefecture",
+    "mnemonic_vi": "Dây buộc (Hệ 系) các con mắt (Mục 目) lại để quản lý tỉnh Huyện.",
+    "mnemonic_en": "Managing districts (ken).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v030",
+        "sourceSenseId": "n5_l10_s030"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "市",
+    "strokeCount": 5,
+    "onyomi": "SHI",
+    "kunyomi": "ichi",
+    "meaning": "Thị (thành phố, chợ)",
+    "meaningEn": "City, Market",
+    "mnemonic_vi": "Cái khăn (Cân 巾) treo ở chợ (Thị).",
+    "mnemonic_en": "A towel (巾) displayed at the MARKET.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l21_v047",
+        "sourceSenseId": "n5_l21_s047"
+      },
+      {
+        "sourceVocabId": "n5_l21_v048",
+        "sourceSenseId": "n5_l21_s048"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "区",
+    "strokeCount": 4,
+    "onyomi": "KU",
+    "kunyomi": "",
+    "meaning": "Khu (quận)",
+    "meaningEn": "Ward, District",
+    "mnemonic_vi": "Những vật phẩm được cất giữ trong một Khu vực có vách ngăn.",
+    "mnemonic_en": "Dividing items into specific WARDs.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l21_v049",
+        "sourceSenseId": "n5_l21_s049"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "町",
+    "strokeCount": 7,
+    "onyomi": "CHOU",
+    "kunyomi": "machi",
+    "meaning": "Đinh (thị trấn)",
+    "meaningEn": "Town",
+    "mnemonic_vi": "Cánh đồng (Điền 田) ở ven Đinh (thị trấn 丁).",
+    "mnemonic_en": "A rice field (田) near the street/town corner (丁).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l08_v037",
+        "sourceSenseId": "n5_l08_s037"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 21,
+    "character": "村",
+    "strokeCount": 7,
+    "onyomi": "SON",
+    "kunyomi": "mura",
+    "meaning": "Thôn (làng)",
+    "meaningEn": "Village",
+    "mnemonic_vi": "Những cái cây (Mộc 木) ở ven Thôn (Thốn 寸) làng.",
+    "mnemonic_en": "Trees (木) marking the boundary (寸) of a VILLAGE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l31_v028",
+        "sourceSenseId": "n4_l31_s028"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

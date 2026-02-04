@@ -1,146 +1,126 @@
 [
-    {
-        "lessonId": 31,
-        "character": "考",
-        "strokeCount": 6,
-        "onyomi": "KOU",
-        "kunyomi": "kan-gaeru",
-        "meaning": "Khảo (suy nghĩ)",
-        "meaningEn": "Think, Consider",
-        "mnemonic_vi": "Người già (Lão 耂) đang chống gậy SUY NGHĨ (Khảo).",
-        "mnemonic_en": "An elder (耂) thinking over time.",
-        "examples": [
-            {
-                "word": "考えます",
-                "reading": "かんがえます",
-                "meaning": "Suy nghĩ",
-                "meaningEn": "Think"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 31,
-        "character": "着",
-        "strokeCount": 12,
-        "onyomi": "CHAKU",
-        "kunyomi": "ki-ru, tsu-ku",
-        "meaning": "Trước (mặc, đến)",
-        "meaningEn": "Wear, Arrive",
-        "mnemonic_vi": "Sử dụng len cừu (Dương 羊) để làm áo MẶC.",
-        "mnemonic_en": "Using wool (羊) to make clothes to WEAR.",
-        "examples": [
-            {
-                "word": "着ます",
-                "reading": "きます",
-                "meaning": "Mặc (áo)",
-                "meaningEn": "Wear"
-            },
-            {
-                "word": "着きます",
-                "reading": "つきます",
-                "meaning": "Đến nơi",
-                "meaningEn": "Arrive"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 31,
-        "character": "空",
-        "strokeCount": 8,
-        "onyomi": "KUU",
-        "kunyomi": "sora",
-        "meaning": "Không (bầu trời, trống)",
-        "meaningEn": "Sky, Empty",
-        "mnemonic_vi": "Trên là hang động (Huyệt 穴), dưới là dụng cụ thủ công (Công 工) tạo ra khoảng KHÔNG.",
-        "mnemonic_en": "A hole (穴) in the ground creating EMPTY space.",
-        "examples": [
-            {
-                "word": "空",
-                "reading": "そら",
-                "meaning": "Bầu trời",
-                "meaningEn": "Sky"
-            },
-            {
-                "word": "空港",
-                "reading": "くうこう",
-                "meaning": "Sân bay",
-                "meaningEn": "Airport"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 31,
-        "character": "港",
-        "strokeCount": 12,
-        "onyomi": "KOU",
-        "kunyomi": "minato",
-        "meaning": "Cảng (bến cảng)",
-        "meaningEn": "Port",
-        "mnemonic_vi": "Dòng nước (Thủy 氵) chảy vào một nơi như cái hầm (Hạng 巷) là BẾN CẢNG.",
-        "mnemonic_en": "Water (氵) meeting the dock area.",
-        "examples": [
-            {
-                "word": "空港",
-                "reading": "くうこう",
-                "meaning": "Sân bay",
-                "meaningEn": "Airport"
-            },
-            {
-                "word": "港",
-                "reading": "みなと",
-                "meaning": "Cảng",
-                "meaningEn": "Port"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 31,
-        "character": "歳",
-        "strokeCount": 13,
-        "onyomi": "SAI",
-        "kunyomi": "",
-        "meaning": "Tuế (tuổi)",
-        "meaningEn": "Age",
-        "mnemonic_vi": "Dừng lại (Chỉ 止) quan sát những gì đã qua trong một năm (Tuế).",
-        "mnemonic_en": "Steps (止) taken through the years.",
-        "examples": [
-            {
-                "word": "歳",
-                "reading": "さい",
-                "meaning": "Tuổi",
-                "meaningEn": "Age"
-            },
-            {
-                "word": "何歳",
-                "reading": "なんさい",
-                "meaning": "Mấy tuổi",
-                "meaningEn": "How old"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 31,
-        "character": "続",
-        "strokeCount": 13,
-        "onyomi": "ZOKU",
-        "kunyomi": "tsuzu-ku",
-        "meaning": "Tục (tiếp tục)",
-        "meaningEn": "Continue",
-        "mnemonic_vi": "Dùng sợi tơ (Mịch 糸) để nối dài (Mại 売) sự TIẾP TỤC.",
-        "mnemonic_en": "Thread (糸) extending out to CONTINUE.",
-        "examples": [
-            {
-                "word": "続けます",
-                "reading": "つづけます",
-                "meaning": "Tiếp tục",
-                "meaningEn": "Continue"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 31,
+    "character": "考",
+    "strokeCount": 6,
+    "onyomi": "KOU",
+    "kunyomi": "kan-gaeru",
+    "meaning": "Khảo (suy nghĩ)",
+    "meaningEn": "Think, Consider",
+    "mnemonic_vi": "Người già (Lão 耂) đang chống gậy SUY NGHĨ (Khảo).",
+    "mnemonic_en": "An elder (耂) thinking over time.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l25_v001",
+        "sourceSenseId": "n5_l25_s001"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 31,
+    "character": "着",
+    "strokeCount": 12,
+    "onyomi": "CHAKU",
+    "kunyomi": "ki-ru, tsu-ku",
+    "meaning": "Trước (mặc, đến)",
+    "meaningEn": "Wear, Arrive",
+    "mnemonic_vi": "Sử dụng len cừu (Dương 羊) để làm áo MẶC.",
+    "mnemonic_en": "Using wool (羊) to make clothes to WEAR.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l22_v001",
+        "sourceSenseId": "n5_l22_s001"
+      },
+      {
+        "sourceVocabId": "n5_l25_v002",
+        "sourceSenseId": "n5_l25_s002"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 31,
+    "character": "空",
+    "strokeCount": 8,
+    "onyomi": "KUU",
+    "kunyomi": "sora",
+    "meaning": "Không (bầu trời, trống)",
+    "meaningEn": "Sky, Empty",
+    "mnemonic_vi": "Trên là hang động (Huyệt 穴), dưới là dụng cụ thủ công (Công 工) tạo ra khoảng KHÔNG.",
+    "mnemonic_en": "A hole (穴) in the ground creating EMPTY space.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l27_v049",
+        "sourceSenseId": "n4_l27_s049"
+      },
+      {
+        "sourceVocabId": "n5_l12_v027",
+        "sourceSenseId": "n5_l12_s027"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 31,
+    "character": "港",
+    "strokeCount": 12,
+    "onyomi": "KOU",
+    "kunyomi": "minato",
+    "meaning": "Cảng (bến cảng)",
+    "meaningEn": "Port",
+    "mnemonic_vi": "Dòng nước (Thủy 氵) chảy vào một nơi như cái hầm (Hạng 巷) là BẾN CẢNG.",
+    "mnemonic_en": "Water (氵) meeting the dock area.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l12_v027",
+        "sourceSenseId": "n5_l12_s027"
+      },
+      {
+        "sourceVocabId": "n4_l35_v014",
+        "sourceSenseId": "n4_l35_s014"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 31,
+    "character": "歳",
+    "strokeCount": 13,
+    "onyomi": "SAI",
+    "kunyomi": "",
+    "meaning": "Tuế (tuổi)",
+    "meaningEn": "Age",
+    "mnemonic_vi": "Dừng lại (Chỉ 止) quan sát những gì đã qua trong một năm (Tuế).",
+    "mnemonic_en": "Steps (止) taken through the years.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l01_v021",
+        "sourceSenseId": "n5_l01_s021"
+      },
+      {
+        "sourceVocabId": "n5_l01_v022",
+        "sourceSenseId": "n5_l01_s022"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 31,
+    "character": "続",
+    "strokeCount": 13,
+    "onyomi": "ZOKU",
+    "kunyomi": "tsuzu-ku",
+    "meaning": "Tục (tiếp tục)",
+    "meaningEn": "Continue",
+    "mnemonic_vi": "Dùng sợi tơ (Mịch 糸) để nối dài (Mại 売) sự TIẾP TỤC.",
+    "mnemonic_en": "Thread (糸) extending out to CONTINUE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l31_v001",
+        "sourceSenseId": "n4_l31_s001"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

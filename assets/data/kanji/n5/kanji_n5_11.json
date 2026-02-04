@@ -1,238 +1,206 @@
 [
-    {
-        "lessonId": 11,
-        "character": "人",
-        "strokeCount": 2,
-        "onyomi": "JIN, NIN",
-        "kunyomi": "hito",
-        "meaning": "Nhân (người)",
-        "meaningEn": "Person",
-        "mnemonic_vi": "Người đang đứng dang chân.",
-        "mnemonic_en": "A person standing on two legs.",
-        "examples": [
-            {
-                "word": "一人",
-                "reading": "ひとり",
-                "meaning": "Một người",
-                "meaningEn": "One person"
-            },
-            {
-                "word": "二人",
-                "reading": "ふたり",
-                "meaning": "Hai người",
-                "meaningEn": "Two people"
-            },
-            {
-                "word": "外国人",
-                "reading": "がいこくじん",
-                "meaning": "Người nước ngoài",
-                "meaningEn": "Foreigner"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "子",
-        "strokeCount": 3,
-        "onyomi": "SHI",
-        "kunyomi": "ko",
-        "meaning": "Tử (con)",
-        "meaningEn": "Child",
-        "mnemonic_vi": "Đứa trẻ đang nằm quấn tã.",
-        "mnemonic_en": "A baby in swaddling clothes.",
-        "examples": [
-            {
-                "word": "子供",
-                "reading": "こども",
-                "meaning": "Trẻ con",
-                "meaningEn": "Child"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "女",
-        "strokeCount": 3,
-        "onyomi": "JO",
-        "kunyomi": "onna",
-        "meaning": "Nữ (phụ nữ)",
-        "meaningEn": "Woman, Female",
-        "mnemonic_vi": "Hình ảnh phụ nữ đang quỳ hoặc ngồi bắt chéo chân khép nép.",
-        "mnemonic_en": "A woman sitting or kneeling politely.",
-        "examples": [
-            {
-                "word": "女",
-                "reading": "おんな",
-                "meaning": "Phụ nữ",
-                "meaningEn": "Woman"
-            },
-            {
-                "word": "女の子",
-                "reading": "おんなのこ",
-                "meaning": "Bé gái",
-                "meaningEn": "Girl"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "男",
-        "strokeCount": 7,
-        "onyomi": "DAN, NAN",
-        "kunyomi": "otoko",
-        "meaning": "Nam (đàn ông)",
-        "meaningEn": "Man, Male",
-        "mnemonic_vi": "Dùng Sức lực (Lực 力) để làm việc trên Ruộng (Điền 田).",
-        "mnemonic_en": "Using strength (力) in the field (田).",
-        "examples": [
-            {
-                "word": "男",
-                "reading": "おとこ",
-                "meaning": "Đàn ông",
-                "meaningEn": "Man"
-            },
-            {
-                "word": "男の子",
-                "reading": "おとこのこ",
-                "meaning": "Bé trai",
-                "meaningEn": "Boy"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "目",
-        "strokeCount": 5,
-        "onyomi": "MOKU",
-        "kunyomi": "me",
-        "meaning": "Mục (mắt)",
-        "meaningEn": "Eye",
-        "mnemonic_vi": "Hình ảnh con mắt quay dọc.",
-        "mnemonic_en": "An eye turned on its side.",
-        "examples": [
-            {
-                "word": "目",
-                "reading": "め",
-                "meaning": "Mắt",
-                "meaningEn": "Eye"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "口",
-        "strokeCount": 3,
-        "onyomi": "KOU",
-        "kunyomi": "kuchi",
-        "meaning": "Khẩu (miệng)",
-        "meaningEn": "Mouth",
-        "mnemonic_vi": "Hình ảnh cái miệng đang mở.",
-        "mnemonic_en": "An open mouth.",
-        "examples": [
-            {
-                "word": "口",
-                "reading": "くち",
-                "meaning": "Miệng",
-                "meaningEn": "Mouth"
-            },
-            {
-                "word": "入口",
-                "reading": "いりぐち",
-                "meaning": "Lối vào",
-                "meaningEn": "Entrance"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "耳",
-        "strokeCount": 6,
-        "onyomi": "JI",
-        "kunyomi": "mimi",
-        "meaning": "Nhĩ (tai)",
-        "meaningEn": "Ear",
-        "mnemonic_vi": "Hình ảnh cái tai.",
-        "mnemonic_en": "The shape of an ear.",
-        "examples": [
-            {
-                "word": "耳",
-                "reading": "みみ",
-                "meaning": "Tai",
-                "meaningEn": "Ear"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "手",
-        "strokeCount": 4,
-        "onyomi": "SHU",
-        "kunyomi": "te",
-        "meaning": "Thủ (tay)",
-        "meaningEn": "Hand",
-        "mnemonic_vi": "Bàn tay với năm ngón rõ rệt.",
-        "mnemonic_en": "A hand with fingers.",
-        "examples": [
-            {
-                "word": "手",
-                "reading": "て",
-                "meaning": "Tay",
-                "meaningEn": "Hand"
-            },
-            {
-                "word": "上手",
-                "reading": "じょうず",
-                "meaning": "Giỏi",
-                "meaningEn": "Skingful"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "足",
-        "strokeCount": 7,
-        "onyomi": "SOKU",
-        "kunyomi": "ashi, ta-riru",
-        "meaning": "Túc (chân)",
-        "meaningEn": "Leg, Foot",
-        "mnemonic_vi": "Một cái chân đang đứng vững chãi.",
-        "mnemonic_en": "A leg/foot standing firmly.",
-        "examples": [
-            {
-                "word": "足",
-                "reading": "あし",
-                "meaning": "Chân",
-                "meaningEn": "Leg, Foot"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 11,
-        "character": "力",
-        "strokeCount": 2,
-        "onyomi": "RYOKU, RIKI",
-        "kunyomi": "chikara",
-        "meaning": "Lực (sức mạnh)",
-        "meaningEn": "Power",
-        "mnemonic_vi": "Bắp tay đang gồng lên hoặc hình cái cày dùng sức.",
-        "mnemonic_en": "A flexed muscle or a plow needing strength.",
-        "examples": [
-            {
-                "word": "力",
-                "reading": "ちから",
-                "meaning": "Sức mạnh",
-                "meaningEn": "Power, Strength"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 11,
+    "character": "人",
+    "strokeCount": 2,
+    "onyomi": "JIN, NIN",
+    "kunyomi": "hito",
+    "meaning": "Nhân (người)",
+    "meaningEn": "Person",
+    "mnemonic_vi": "Người đang đứng dang chân.",
+    "mnemonic_en": "A person standing on two legs.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l11_v015",
+        "sourceSenseId": "n5_l11_s015"
+      },
+      {
+        "sourceVocabId": "n5_l11_v016",
+        "sourceSenseId": "n5_l11_s016"
+      },
+      {
+        "sourceVocabId": "n5_l11_v066",
+        "sourceSenseId": "n5_l11_s066"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "子",
+    "strokeCount": 3,
+    "onyomi": "SHI",
+    "kunyomi": "ko",
+    "meaning": "Tử (con)",
+    "meaningEn": "Child",
+    "mnemonic_vi": "Đứa trẻ đang nằm quấn tã.",
+    "mnemonic_en": "A baby in swaddling clothes.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l09_v036",
+        "sourceSenseId": "n5_l09_s036"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "女",
+    "strokeCount": 3,
+    "onyomi": "JO",
+    "kunyomi": "onna",
+    "meaning": "Nữ (phụ nữ)",
+    "meaningEn": "Woman, Female",
+    "mnemonic_vi": "Hình ảnh phụ nữ đang quỳ hoặc ngồi bắt chéo chân khép nép.",
+    "mnemonic_en": "A woman sitting or kneeling politely.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l11_v067",
+        "sourceSenseId": "n5_l11_s067"
+      },
+      {
+        "sourceVocabId": "n5_l10_v007",
+        "sourceSenseId": "n5_l10_s007"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "男",
+    "strokeCount": 7,
+    "onyomi": "DAN, NAN",
+    "kunyomi": "otoko",
+    "meaning": "Nam (đàn ông)",
+    "meaningEn": "Man, Male",
+    "mnemonic_vi": "Dùng Sức lực (Lực 力) để làm việc trên Ruộng (Điền 田).",
+    "mnemonic_en": "Using strength (力) in the field (田).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l40_v057",
+        "sourceSenseId": "n4_l40_s057"
+      },
+      {
+        "sourceVocabId": "n5_l10_v006",
+        "sourceSenseId": "n5_l10_s006"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "目",
+    "strokeCount": 5,
+    "onyomi": "MOKU",
+    "kunyomi": "me",
+    "meaning": "Mục (mắt)",
+    "meaningEn": "Eye",
+    "mnemonic_vi": "Hình ảnh con mắt quay dọc.",
+    "mnemonic_en": "An eye turned on its side.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l10_v050",
+        "sourceSenseId": "n5_l10_s050"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "口",
+    "strokeCount": 3,
+    "onyomi": "KOU",
+    "kunyomi": "kuchi",
+    "meaning": "Khẩu (miệng)",
+    "meaningEn": "Mouth",
+    "mnemonic_vi": "Hình ảnh cái miệng đang mở.",
+    "mnemonic_en": "An open mouth.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v027",
+        "sourceSenseId": "n5_l16_s027"
+      },
+      {
+        "sourceVocabId": "n4_l33_v021",
+        "sourceSenseId": "n4_l33_s021"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "耳",
+    "strokeCount": 6,
+    "onyomi": "JI",
+    "kunyomi": "mimi",
+    "meaning": "Nhĩ (tai)",
+    "meaningEn": "Ear",
+    "mnemonic_vi": "Hình ảnh cái tai.",
+    "mnemonic_en": "The shape of an ear.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v025",
+        "sourceSenseId": "n5_l16_s025"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "手",
+    "strokeCount": 4,
+    "onyomi": "SHU",
+    "kunyomi": "te",
+    "meaning": "Thủ (tay)",
+    "meaningEn": "Hand",
+    "mnemonic_vi": "Bàn tay với năm ngón rõ rệt.",
+    "mnemonic_en": "A hand with fingers.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v010",
+        "sourceSenseId": "n5_l07_s010"
+      },
+      {
+        "sourceVocabId": "n5_l09_v005",
+        "sourceSenseId": "n5_l09_s005"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "足",
+    "strokeCount": 7,
+    "onyomi": "SOKU",
+    "kunyomi": "ashi, ta-riru",
+    "meaning": "Túc (chân)",
+    "meaningEn": "Leg, Foot",
+    "mnemonic_vi": "Một cái chân đang đứng vững chãi.",
+    "mnemonic_en": "A leg/foot standing firmly.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v030",
+        "sourceSenseId": "n5_l16_s030"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 11,
+    "character": "力",
+    "strokeCount": 2,
+    "onyomi": "RYOKU, RIKI",
+    "kunyomi": "chikara",
+    "meaning": "Lực (sức mạnh)",
+    "meaningEn": "Power",
+    "mnemonic_vi": "Bắp tay đang gồng lên hoặc hình cái cày dùng sức.",
+    "mnemonic_en": "A flexed muscle or a plow needing strength.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v015",
+        "sourceSenseId": "n4_l28_s015"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

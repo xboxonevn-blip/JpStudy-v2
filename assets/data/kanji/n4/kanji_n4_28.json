@@ -1,192 +1,166 @@
 [
-    {
-        "lessonId": 28,
-        "character": "売",
-        "strokeCount": 7,
-        "onyomi": "BAI",
-        "kunyomi": "u-ru",
-        "meaning": "Mại (bán)",
-        "meaningEn": "Sell",
-        "mnemonic_vi": "Dùng lời nói (Sĩ 土 - biến thể) để trao đổi vật phẩm (Bối 貝) là BÁN hàng.",
-        "mnemonic_en": "Giving away items (貝) to others by selling.",
-        "examples": [
-            {
-                "word": "売ります",
-                "reading": "うります",
-                "meaning": "Bán",
-                "meaningEn": "Sell"
-            },
-            {
-                "word": "売店",
-                "reading": "ばいてん",
-                "meaning": "Quầy bán hàng",
-                "meaningEn": "Shop, Stand"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 28,
-        "character": "踊",
-        "strokeCount": 14,
-        "onyomi": "YOU",
-        "kunyomi": "odo-ru",
-        "meaning": "Dũng (nhảy múa)",
-        "meaningEn": "Dance",
-        "mnemonic_vi": "Cái chân (Túc 足) nhún nhảy (Dũng 勇) theo điệu nhạc.",
-        "mnemonic_en": "Feet (足) moving energetically (勇) to DANCE.",
-        "examples": [
-            {
-                "word": "踊ります",
-                "reading": "おどります",
-                "meaning": "Nhảy, múa",
-                "meaningEn": "Dance"
-            },
-            {
-                "word": "踊り",
-                "reading": "おどり",
-                "meaning": "Điệu nhảy",
-                "meaningEn": "Dance"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 28,
-        "character": "選",
-        "strokeCount": 15,
-        "onyomi": "SEN",
-        "kunyomi": "era-bu",
-        "meaning": "Tuyển (chọn)",
-        "meaningEn": "Choose",
-        "mnemonic_vi": "Đi (Sước 辶) tìm những vật phẩm sáng giá (Tốn 巽) để CHỌN.",
-        "mnemonic_en": "Moving (辶) to search and SELECT the best.",
-        "examples": [
-            {
-                "word": "選びます",
-                "reading": "えらびます",
-                "meaning": "Chọn",
-                "meaningEn": "Choose"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 28,
-        "character": "通",
-        "strokeCount": 10,
-        "onyomi": "TSUU",
-        "kunyomi": "kayo-u, too-ru",
-        "meaning": "Thông (đi lại, thông qua)",
-        "meaningEn": "Commute, Pass",
-        "mnemonic_vi": "Đi (Sước 辶) qua con đường có hàng rào (Dụng 用) bao quanh.",
-        "mnemonic_en": "Traveling (辶) through a common (用) path.",
-        "examples": [
-            {
-                "word": "通います",
-                "reading": "かよいます",
-                "meaning": "Đi lại (đi học/làm)",
-                "meaningEn": "Commute"
-            },
-            {
-                "word": "交通",
-                "reading": "こうつう",
-                "meaning": "Giao thông",
-                "meaningEn": "Traffic"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 28,
-        "character": "真",
-        "strokeCount": 10,
-        "onyomi": "SHIN",
-        "kunyomi": "ma",
-        "meaning": "Chân (thật)",
-        "meaningEn": "True",
-        "mnemonic_vi": "Mười (Thập 十) con mắt (Mục 目) nhìn vào sự THẬT trên đôi chân.",
-        "mnemonic_en": "Searching for TRUTH with ten eyes.",
-        "examples": [
-            {
-                "word": "真面目",
-                "reading": "まじめ",
-                "meaning": "Nghiêm túc, chăm chỉ",
-                "meaningEn": "Serious, Earnest"
-            },
-            {
-                "word": "写真",
-                "reading": "しゃしん",
-                "meaning": "Bức ảnh",
-                "meaningEn": "Photograph"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 28,
-        "character": "実",
-        "strokeCount": 8,
-        "onyomi": "JITSU",
-        "kunyomi": "mi, mino-ru",
-        "meaning": "Thực (sự thật, quả)",
-        "meaningEn": "Truth, Reality",
-        "mnemonic_vi": "Dưới mái nhà (Miên 宀) ngập tràn tiền bạc (Bối 貝) là THỰC tế giàu có.",
-        "mnemonic_en": "Wealth (貝) under a roof (宀) is REALITY.",
-        "examples": [
-            {
-                "word": "実は",
-                "reading": "じつは",
-                "meaning": "Thực ra là",
-                "meaningEn": "Actually"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 28,
-        "character": "熱",
-        "strokeCount": 15,
-        "onyomi": "NETSU",
-        "kunyomi": "atsu-i",
-        "meaning": "Nhiệt (nóng, sốt)",
-        "meaningEn": "Heat, Fever",
-        "mnemonic_vi": "Trên là những hạt đậu (Đậu 豆) bị đun nóng bởi lửa (Hỏa 灬) ở dưới.",
-        "mnemonic_en": "Things getting hot over a fire (灬).",
-        "examples": [
-            {
-                "word": "熱心",
-                "reading": "ねっしん",
-                "meaning": "Nhiệt tình",
-                "meaningEn": "Enthusiastic"
-            },
-            {
-                "word": "熱",
-                "reading": "ねつ",
-                "meaning": "Sốt",
-                "meaningEn": "Fever"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 28,
-        "character": "偉",
-        "strokeCount": 12,
-        "onyomi": "I",
-        "kunyomi": "era-i",
-        "meaning": "Vĩ (vĩ đại)",
-        "meaningEn": "Great",
-        "mnemonic_vi": "Người (Nhân 亻) có da (Vi 韋 - da mềm) thuộc hàng quý tộc VĨ ĐẠI.",
-        "mnemonic_en": "A noble person (亻) being GREAT.",
-        "examples": [
-            {
-                "word": "偉い",
-                "reading": "えらい",
-                "meaning": "Vĩ đại, giỏi",
-                "meaningEn": "Great, Admirable"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 28,
+    "character": "売",
+    "strokeCount": 7,
+    "onyomi": "BAI",
+    "kunyomi": "u-ru",
+    "meaning": "Mại (bán)",
+    "meaningEn": "Sell",
+    "mnemonic_vi": "Dùng lời nói (Sĩ 土 - biến thể) để trao đổi vật phẩm (Bối 貝) là BÁN hàng.",
+    "mnemonic_en": "Giving away items (貝) to others by selling.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l15_v003",
+        "sourceSenseId": "n5_l15_s003"
+      },
+      {
+        "sourceVocabId": "n4_l28_v053",
+        "sourceSenseId": "n4_l28_s053"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 28,
+    "character": "踊",
+    "strokeCount": 14,
+    "onyomi": "YOU",
+    "kunyomi": "odo-ru",
+    "meaning": "Dũng (nhảy múa)",
+    "meaningEn": "Dance",
+    "mnemonic_vi": "Cái chân (Túc 足) nhún nhảy (Dũng 勇) theo điệu nhạc.",
+    "mnemonic_en": "Feet (足) moving energetically (勇) to DANCE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v002",
+        "sourceSenseId": "n4_l28_s002"
+      },
+      {
+        "sourceVocabId": "n4_l28_v054",
+        "sourceSenseId": "n4_l28_s054"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 28,
+    "character": "選",
+    "strokeCount": 15,
+    "onyomi": "SEN",
+    "kunyomi": "era-bu",
+    "meaning": "Tuyển (chọn)",
+    "meaningEn": "Choose",
+    "mnemonic_vi": "Đi (Sước 辶) tìm những vật phẩm sáng giá (Tốn 巽) để CHỌN.",
+    "mnemonic_en": "Moving (辶) to search and SELECT the best.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v004",
+        "sourceSenseId": "n4_l28_s004"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 28,
+    "character": "通",
+    "strokeCount": 10,
+    "onyomi": "TSUU",
+    "kunyomi": "kayo-u, too-ru",
+    "meaning": "Thông (đi lại, thông qua)",
+    "meaningEn": "Commute, Pass",
+    "mnemonic_vi": "Đi (Sước 辶) qua con đường có hàng rào (Dụng 用) bao quanh.",
+    "mnemonic_en": "Traveling (辶) through a common (用) path.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v005",
+        "sourceSenseId": "n4_l28_s005"
+      },
+      {
+        "sourceVocabId": "n5_l21_v023",
+        "sourceSenseId": "n5_l21_s023"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 28,
+    "character": "真",
+    "strokeCount": 10,
+    "onyomi": "SHIN",
+    "kunyomi": "ma",
+    "meaning": "Chân (thật)",
+    "meaningEn": "True",
+    "mnemonic_vi": "Mười (Thập 十) con mắt (Mục 目) nhìn vào sự THẬT trên đôi chân.",
+    "mnemonic_en": "Searching for TRUTH with ten eyes.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v007",
+        "sourceSenseId": "n4_l28_s007"
+      },
+      {
+        "sourceVocabId": "n5_l06_v033",
+        "sourceSenseId": "n5_l06_s033"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 28,
+    "character": "実",
+    "strokeCount": 8,
+    "onyomi": "JITSU",
+    "kunyomi": "mi, mino-ru",
+    "meaning": "Thực (sự thật, quả)",
+    "meaningEn": "Truth, Reality",
+    "mnemonic_vi": "Dưới mái nhà (Miên 宀) ngập tràn tiền bạc (Bối 貝) là THỰC tế giàu có.",
+    "mnemonic_en": "Wealth (貝) under a roof (宀) is REALITY.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l19_v032",
+        "sourceSenseId": "n5_l19_s032"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 28,
+    "character": "熱",
+    "strokeCount": 15,
+    "onyomi": "NETSU",
+    "kunyomi": "atsu-i",
+    "meaning": "Nhiệt (nóng, sốt)",
+    "meaningEn": "Heat, Fever",
+    "mnemonic_vi": "Trên là những hạt đậu (Đậu 豆) bị đun nóng bởi lửa (Hỏa 灬) ở dưới.",
+    "mnemonic_en": "Things getting hot over a fire (灬).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v008",
+        "sourceSenseId": "n4_l28_s008"
+      },
+      {
+        "sourceVocabId": "n5_l17_v020",
+        "sourceSenseId": "n5_l17_s020"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 28,
+    "character": "偉",
+    "strokeCount": 12,
+    "onyomi": "I",
+    "kunyomi": "era-i",
+    "meaning": "Vĩ (vĩ đại)",
+    "meaningEn": "Great",
+    "mnemonic_vi": "Người (Nhân 亻) có da (Vi 韋 - da mềm) thuộc hàng quý tộc VĨ ĐẠI.",
+    "mnemonic_en": "A noble person (亻) being GREAT.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v009",
+        "sourceSenseId": "n4_l28_s009"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

@@ -1,126 +1,108 @@
 [
-    {
-        "lessonId": 33,
-        "character": "彼",
-        "strokeCount": 8,
-        "onyomi": "HI",
-        "kunyomi": "kare",
-        "meaning": "Bỉ (anh ấy)",
-        "meaningEn": "He",
-        "mnemonic_vi": "Người đàn ông đang đi bộ (Sách 彳) cùng con vật (Bì 皮).",
-        "mnemonic_en": "A man (彳) walking with his character/skin (皮).",
-        "examples": [
-            {
-                "word": "彼",
-                "reading": "かれ",
-                "meaning": "Anh ấy, bạn trai",
-                "meaningEn": "He, Boyfriend"
-            },
-            {
-                "word": "彼女",
-                "reading": "かのじょ",
-                "meaning": "Cô ấy, bạn gái",
-                "meaningEn": "She, Girlfriend"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 33,
-        "character": "留",
-        "strokeCount": 10,
-        "onyomi": "RYUU",
-        "kunyomi": "to-maru",
-        "meaning": "Lưu (lưu lại)",
-        "meaningEn": "Stay, Keep",
-        "mnemonic_vi": "Cày cuốc trên cánh đồng (Điền 田) rồi LƯU lại đó.",
-        "mnemonic_en": "Occupying a field (田) to STAY.",
-        "examples": [
-            {
-                "word": "留守",
-                "reading": "るす",
-                "meaning": "Vắng nhà",
-                "meaningEn": "Absence"
-            },
-            {
-                "word": "留学生",
-                "reading": "りゅうがくせい",
-                "meaning": "Du học sinh",
-                "meaningEn": "International student"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 33,
-        "character": "守",
-        "strokeCount": 6,
-        "onyomi": "SHU, SU",
-        "kunyomi": "mamo-ru",
-        "meaning": "Thủ (bảo vệ)",
-        "meaningEn": "Protect",
-        "mnemonic_vi": "Dưới mái nhà (Miên 宀) có một tấc (Thốn 寸) đất cần BẢO VỆ.",
-        "mnemonic_en": "Guarding an inch (寸) of land under a roof (宀).",
-        "examples": [
-            {
-                "word": "守ります",
-                "reading": "まもります",
-                "meaning": "Bảo vệ, tuân thủ",
-                "meaningEn": "Protect, Obey"
-            },
-            {
-                "word": "留守",
-                "reading": "るす",
-                "meaning": "Vắng nhà",
-                "meaningEn": "Absence"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 33,
-        "character": "待",
-        "strokeCount": 9,
-        "onyomi": "TAI",
-        "kunyomi": "ma-tsu",
-        "meaning": "Đãi (chờ đợi)",
-        "meaningEn": "Wait",
-        "mnemonic_vi": "Người (Nhân 亻) đứng trước chùa (Tự 寺) CHỜ ĐỢI một điều gì đó.",
-        "mnemonic_en": "A person (彳) waiting at a temple (寺).",
-        "examples": [
-            {
-                "word": "待ちます",
-                "reading": "まちます",
-                "meaning": "Chờ đợi",
-                "meaningEn": "Wait"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 33,
-        "character": "合",
-        "strokeCount": 6,
-        "onyomi": "GOU",
-        "kunyomi": "a-u",
-        "meaning": "Hợp (phù hợp, gặp)",
-        "meaningEn": "Fit, Match",
-        "mnemonic_vi": "Ba người cùng một cái miệng - HỢP nhau.",
-        "mnemonic_en": "Three people with one mouth - they MATCH.",
-        "examples": [
-            {
-                "word": "間に合います",
-                "reading": "まにあいます",
-                "meaning": "Kịp giờ",
-                "meaningEn": "Be in time"
-            },
-            {
-                "word": "試合",
-                "reading": "しあい",
-                "meaning": "Trận đấu",
-                "meaningEn": "Match, Game"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 33,
+    "character": "彼",
+    "strokeCount": 8,
+    "onyomi": "HI",
+    "kunyomi": "kare",
+    "meaning": "Bỉ (anh ấy)",
+    "meaningEn": "He",
+    "mnemonic_vi": "Người đàn ông đang đi bộ (Sách 彳) cùng con vật (Bì 皮).",
+    "mnemonic_en": "A man (彳) walking with his character/skin (皮).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l05_v018",
+        "sourceSenseId": "n5_l05_s018"
+      },
+      {
+        "sourceVocabId": "n5_l05_v019",
+        "sourceSenseId": "n5_l05_s019"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 33,
+    "character": "留",
+    "strokeCount": 10,
+    "onyomi": "RYUU",
+    "kunyomi": "to-maru",
+    "meaning": "Lưu (lưu lại)",
+    "meaningEn": "Stay, Keep",
+    "mnemonic_vi": "Cày cuốc trên cánh đồng (Điền 田) rồi LƯU lại đó.",
+    "mnemonic_en": "Occupying a field (田) to STAY.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l33_v051",
+        "sourceSenseId": "n4_l33_s051"
+      },
+      {
+        "sourceVocabId": "n5_l16_v038",
+        "sourceSenseId": "n5_l16_s038"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 33,
+    "character": "守",
+    "strokeCount": 6,
+    "onyomi": "SHU, SU",
+    "kunyomi": "mamo-ru",
+    "meaning": "Thủ (bảo vệ)",
+    "meaningEn": "Protect",
+    "mnemonic_vi": "Dưới mái nhà (Miên 宀) có một tấc (Thốn 寸) đất cần BẢO VỆ.",
+    "mnemonic_en": "Guarding an inch (寸) of land under a roof (宀).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l33_v005",
+        "sourceSenseId": "n4_l33_s005"
+      },
+      {
+        "sourceVocabId": "n4_l33_v051",
+        "sourceSenseId": "n4_l33_s051"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 33,
+    "character": "待",
+    "strokeCount": 9,
+    "onyomi": "TAI",
+    "kunyomi": "ma-tsu",
+    "meaning": "Đãi (chờ đợi)",
+    "meaningEn": "Wait",
+    "mnemonic_vi": "Người (Nhân 亻) đứng trước chùa (Tự 寺) CHỜ ĐỢI một điều gì đó.",
+    "mnemonic_en": "A person (彳) waiting at a temple (寺).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l14_v006",
+        "sourceSenseId": "n5_l14_s006"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 33,
+    "character": "合",
+    "strokeCount": 6,
+    "onyomi": "GOU",
+    "kunyomi": "a-u",
+    "meaning": "Hợp (phù hợp, gặp)",
+    "meaningEn": "Fit, Match",
+    "mnemonic_vi": "Ba người cùng một cái miệng - HỢP nhau.",
+    "mnemonic_en": "Three people with one mouth - they MATCH.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l26_v004",
+        "sourceSenseId": "n4_l26_s004"
+      },
+      {
+        "sourceVocabId": "n5_l21_v017",
+        "sourceSenseId": "n5_l21_s017"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

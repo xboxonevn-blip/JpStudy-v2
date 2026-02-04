@@ -1,218 +1,188 @@
 [
-    {
-        "lessonId": 7,
-        "character": "会",
-        "strokeCount": 6,
-        "onyomi": "KAI",
-        "kunyomi": "a-imasu",
-        "meaning": "Hội (gặp)",
-        "meaningEn": "Meet",
-        "mnemonic_vi": "Ba người gặp nhau dưới một mái nhà.",
-        "mnemonic_en": "People meeting together under one roof.",
-        "examples": [
-            {
-                "word": "会います",
-                "reading": "あいます",
-                "meaning": "Gặp",
-                "meaningEn": "Meet"
-            },
-            {
-                "word": "会社",
-                "reading": "かいしゃ",
-                "meaning": "Công ty",
-                "meaningEn": "Company"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "教",
-        "strokeCount": 11,
-        "onyomi": "KYOU",
-        "kunyomi": "oshi-emasu",
-        "meaning": "Giáo (dạy)",
-        "meaningEn": "Teach",
-        "mnemonic_vi": "Một đứa trẻ (子) đang bị dạy bảo (攵) để nên người.",
-        "mnemonic_en": "A child (子) being taught/disciplined (攵).",
-        "examples": [
-            {
-                "word": "教えます",
-                "reading": "おしえます",
-                "meaning": "Dạy",
-                "meaningEn": "Teach"
-            },
-            {
-                "word": "教室",
-                "reading": "きょうしつ",
-                "meaning": "Phòng học",
-                "meaningEn": "Classroom"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "習",
-        "strokeCount": 11,
-        "onyomi": "SHUU",
-        "kunyomi": "nara-imasu",
-        "meaning": "Tập (học tập)",
-        "meaningEn": "Learn",
-        "mnemonic_vi": "Dưới đôi cánh chim (Vũ 羽) là sự nỗ lực trắng (Bạch 白). Chim non tập bay.",
-        "mnemonic_en": "White (白) feathers (羽) of a young bird learning to fly.",
-        "examples": [
-            {
-                "word": "習います",
-                "reading": "ならいます",
-                "meaning": "Học (từ ai đó)",
-                "meaningEn": "Learn"
-            },
-            {
-                "word": "練習",
-                "reading": "れんしゅう",
-                "meaning": "Luyện tập",
-                "meaningEn": "Practice"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "貸",
-        "strokeCount": 12,
-        "onyomi": "TAI",
-        "kunyomi": "ka-shimasu",
-        "meaning": "Thải (cho vay)",
-        "meaningEn": "Lend",
-        "mnemonic_vi": "Thay đổi (代) tiền bạc (贝) là cho người khác mượn.",
-        "mnemonic_en": "Substituting (代) money (贝) for someone else (lending).",
-        "examples": [
-            {
-                "word": "貸します",
-                "reading": "かします",
-                "meaning": "Cho vay, cho mượn",
-                "meaningEn": "Lend"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "借",
-        "strokeCount": 10,
-        "onyomi": "SHAKU",
-        "kunyomi": "ka-rimasu",
-        "meaning": "Tá (vay mượn)",
-        "meaningEn": "Borrow",
-        "mnemonic_vi": "Người (亻) của ngày Xưa (昔) thường đi vay mượn.",
-        "mnemonic_en": "People (亻) since ancient times (昔) have borrowed things.",
-        "examples": [
-            {
-                "word": "借ります",
-                "reading": "かります",
-                "meaning": "Vay, mượn",
-                "meaningEn": "Borrow"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "送",
-        "strokeCount": 9,
-        "onyomi": "SOU",
-        "kunyomi": "oku-rimasu",
-        "meaning": "Tống (gửi)",
-        "meaningEn": "Send",
-        "mnemonic_vi": "Đi (辶) trên đường để mang quà đi Gửi.",
-        "mnemonic_en": "Walking on the road (辶) to send something.",
-        "examples": [
-            {
-                "word": "送ります",
-                "reading": "おくります",
-                "meaning": "Gửi (đồ, người)",
-                "meaningEn": "Send"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "手",
-        "strokeCount": 4,
-        "onyomi": "SHU",
-        "kunyomi": "te",
-        "meaning": "Thủ (tay)",
-        "meaningEn": "Hand",
-        "mnemonic_vi": "Hình dáng một bàn tay với bàn tay và các ngón.",
-        "mnemonic_en": "The shape of a hand.",
-        "examples": [
-            {
-                "word": "手",
-                "reading": "て",
-                "meaning": "Tay",
-                "meaningEn": "Hand"
-            },
-            {
-                "word": "切手",
-                "reading": "きって",
-                "meaning": "Tem",
-                "meaningEn": "Stamp"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "紙",
-        "strokeCount": 10,
-        "onyomi": "SHI",
-        "kunyomi": "kami",
-        "meaning": "Chỉ (giấy)",
-        "meaningEn": "Paper",
-        "mnemonic_vi": "Dùng sợi tơ (糸) làm thành vật dụng cho dòng họ (氏) - đó là Giấy.",
-        "mnemonic_en": "Using fibers (糸) for a family/clan (氏) - it's paper.",
-        "examples": [
-            {
-                "word": "紙",
-                "reading": "かみ",
-                "meaning": "Giấy",
-                "meaningEn": "Paper"
-            },
-            {
-                "word": "手紙",
-                "reading": "てがみ",
-                "meaning": "Bức thư",
-                "meaningEn": "Letter"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 7,
-        "character": "友",
-        "strokeCount": 4,
-        "onyomi": "YUU",
-        "kunyomi": "tomo",
-        "meaning": "Hữu (bạn bè)",
-        "meaningEn": "Friend",
-        "mnemonic_vi": "Hai cánh tay (Hựu 又) đan vào nhau chứng tỏ sự gắn kết bạn bè.",
-        "mnemonic_en": "Hands (又) joined together representing friendship.",
-        "examples": [
-            {
-                "word": "友達",
-                "reading": "ともだち",
-                "meaning": "Bạn bè",
-                "meaningEn": "Friend"
-            },
-            {
-                "word": "友人",
-                "reading": "ゆうじん",
-                "meaning": "Thân hữu",
-                "meaningEn": "Friend (formal)"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 7,
+    "character": "会",
+    "strokeCount": 6,
+    "onyomi": "KAI",
+    "kunyomi": "a-imasu",
+    "meaning": "Hội (gặp)",
+    "meaningEn": "Meet",
+    "mnemonic_vi": "Ba người gặp nhau dưới một mái nhà.",
+    "mnemonic_en": "People meeting together under one roof.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l06_v011",
+        "sourceSenseId": "n5_l06_s011"
+      },
+      {
+        "sourceVocabId": "n5_l03_v022",
+        "sourceSenseId": "n5_l03_s022"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "教",
+    "strokeCount": 11,
+    "onyomi": "KYOU",
+    "kunyomi": "oshi-emasu",
+    "meaning": "Giáo (dạy)",
+    "meaningEn": "Teach",
+    "mnemonic_vi": "Một đứa trẻ (子) đang bị dạy bảo (攵) để nên người.",
+    "mnemonic_en": "A child (子) being taught/disciplined (攵).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v007",
+        "sourceSenseId": "n5_l07_s007"
+      },
+      {
+        "sourceVocabId": "n5_l03_v009",
+        "sourceSenseId": "n5_l03_s009"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "習",
+    "strokeCount": 11,
+    "onyomi": "SHUU",
+    "kunyomi": "nara-imasu",
+    "meaning": "Tập (học tập)",
+    "meaningEn": "Learn",
+    "mnemonic_vi": "Dưới đôi cánh chim (Vũ 羽) là sự nỗ lực trắng (Bạch 白). Chim non tập bay.",
+    "mnemonic_en": "White (白) feathers (羽) of a young bird learning to fly.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v008",
+        "sourceSenseId": "n5_l07_s008"
+      },
+      {
+        "sourceVocabId": "n5_l07_v054",
+        "sourceSenseId": "n5_l07_s054"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "貸",
+    "strokeCount": 12,
+    "onyomi": "TAI",
+    "kunyomi": "ka-shimasu",
+    "meaning": "Thải (cho vay)",
+    "meaningEn": "Lend",
+    "mnemonic_vi": "Thay đổi (代) tiền bạc (贝) là cho người khác mượn.",
+    "mnemonic_en": "Substituting (代) money (贝) for someone else (lending).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v005",
+        "sourceSenseId": "n5_l07_s005"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "借",
+    "strokeCount": 10,
+    "onyomi": "SHAKU",
+    "kunyomi": "ka-rimasu",
+    "meaning": "Tá (vay mượn)",
+    "meaningEn": "Borrow",
+    "mnemonic_vi": "Người (亻) của ngày Xưa (昔) thường đi vay mượn.",
+    "mnemonic_en": "People (亻) since ancient times (昔) have borrowed things.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v006",
+        "sourceSenseId": "n5_l07_s006"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "送",
+    "strokeCount": 9,
+    "onyomi": "SOU",
+    "kunyomi": "oku-rimasu",
+    "meaning": "Tống (gửi)",
+    "meaningEn": "Send",
+    "mnemonic_vi": "Đi (辶) trên đường để mang quà đi Gửi.",
+    "mnemonic_en": "Walking on the road (辶) to send something.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v002",
+        "sourceSenseId": "n5_l07_s002"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "手",
+    "strokeCount": 4,
+    "onyomi": "SHU",
+    "kunyomi": "te",
+    "meaning": "Thủ (tay)",
+    "meaningEn": "Hand",
+    "mnemonic_vi": "Hình dáng một bàn tay với bàn tay và các ngón.",
+    "mnemonic_en": "The shape of a hand.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v010",
+        "sourceSenseId": "n5_l07_s010"
+      },
+      {
+        "sourceVocabId": "n5_l11_v026",
+        "sourceSenseId": "n5_l11_s026"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "紙",
+    "strokeCount": 10,
+    "onyomi": "SHI",
+    "kunyomi": "kami",
+    "meaning": "Chỉ (giấy)",
+    "meaningEn": "Paper",
+    "mnemonic_vi": "Dùng sợi tơ (糸) làm thành vật dụng cho dòng họ (氏) - đó là Giấy.",
+    "mnemonic_en": "Using fibers (糸) for a family/clan (氏) - it's paper.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v024",
+        "sourceSenseId": "n5_l07_s024"
+      },
+      {
+        "sourceVocabId": "n5_l06_v031",
+        "sourceSenseId": "n5_l06_s031"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 7,
+    "character": "友",
+    "strokeCount": 4,
+    "onyomi": "YUU",
+    "kunyomi": "tomo",
+    "meaning": "Hữu (bạn bè)",
+    "meaningEn": "Friend",
+    "mnemonic_vi": "Hai cánh tay (Hựu 又) đan vào nhau chứng tỏ sự gắn kết bạn bè.",
+    "mnemonic_en": "Hands (又) joined together representing friendship.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l05_v017",
+        "sourceSenseId": "n5_l05_s017"
+      },
+      {
+        "sourceVocabId": "n5_l07_v055",
+        "sourceSenseId": "n5_l07_s055"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

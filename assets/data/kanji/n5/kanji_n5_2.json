@@ -1,294 +1,262 @@
 [
-    {
-        "lessonId": 2,
-        "character": "二",
-        "strokeCount": 2,
-        "onyomi": "NI",
-        "kunyomi": "futa",
-        "meaning": "Hai",
-        "meaningEn": "Two",
-        "mnemonic_vi": "Hai nét ngang đại diện cho số 2.",
-        "mnemonic_en": "Two horizontal lines representing the number 2.",
-        "examples": [
-            {
-                "word": "二",
-                "reading": "に",
-                "meaning": "Số 2",
-                "meaningEn": "Number 2"
-            },
-            {
-                "word": "二時",
-                "reading": "にじ",
-                "meaning": "2 giờ",
-                "meaningEn": "2 O'clock"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "三",
-        "strokeCount": 3,
-        "onyomi": "SAN",
-        "kunyomi": "mi",
-        "meaning": "Ba",
-        "meaningEn": "Three",
-        "mnemonic_vi": "Ba nét ngang đại diện cho số 3.",
-        "mnemonic_en": "Three horizontal lines representing the number 3.",
-        "examples": [
-            {
-                "word": "三",
-                "reading": "さん",
-                "meaning": "Số 3",
-                "meaningEn": "Number 3"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "一",
-        "strokeCount": 1,
-        "onyomi": "ICHI, ITSU",
-        "kunyomi": "hito",
-        "meaning": "Nhất (một)",
-        "meaningEn": "One",
-        "mnemonic_vi": "Một nét ngang đại diện cho số 1.",
-        "mnemonic_en": "One horizontal line representing the number 1.",
-        "examples": [
-            {
-                "word": "一",
-                "reading": "いち",
-                "meaning": "Số 1",
-                "meaningEn": "Number 1"
-            },
-            {
-                "word": "一人",
-                "reading": "ひとり",
-                "meaning": "1 người",
-                "meaningEn": "One person"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "四",
-        "strokeCount": 5,
-        "onyomi": "SHI",
-        "kunyomi": "yon, yo",
-        "meaning": "Tứ (bốn)",
-        "meaningEn": "Four",
-        "mnemonic_vi": "Hình ảnh một cái cửa sổ có rèm che (các nét bên trong).",
-        "mnemonic_en": "Imagine a window with curtains inside.",
-        "examples": [
-            {
-                "word": "四",
-                "reading": "よん",
-                "meaning": "Số 4",
-                "meaningEn": "Number 4"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "五",
-        "strokeCount": 4,
-        "onyomi": "GO",
-        "kunyomi": "itsu",
-        "meaning": "Ngũ (năm)",
-        "meaningEn": "Five",
-        "mnemonic_vi": "Một người đang đứng với tư thế giống số 5.",
-        "mnemonic_en": "A person standing in a pose that looks like the number 5.",
-        "examples": [
-            {
-                "word": "五",
-                "reading": "ご",
-                "meaning": "Số 5",
-                "meaningEn": "Number 5"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "六",
-        "strokeCount": 4,
-        "onyomi": "ROKU",
-        "kunyomi": "mu",
-        "meaning": "Lục (sáu)",
-        "meaningEn": "Six",
-        "mnemonic_vi": "Hình ảnh một người đang đứng dang tay và chân.",
-        "mnemonic_en": "A person stretching out arms and legs.",
-        "examples": [
-            {
-                "word": "六",
-                "reading": "ろく",
-                "meaning": "Số 6",
-                "meaningEn": "Number 6"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "七",
-        "strokeCount": 2,
-        "onyomi": "SHICHI",
-        "kunyomi": "nana",
-        "meaning": "Thất (bảy)",
-        "meaningEn": "Seven",
-        "mnemonic_vi": "Dạng giống số 7 lộn ngược.",
-        "mnemonic_en": "Looks like an upside-down number 7.",
-        "examples": [
-            {
-                "word": "七",
-                "reading": "なな",
-                "meaning": "Số 7",
-                "meaningEn": "Number 7"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "八",
-        "strokeCount": 2,
-        "onyomi": "HACHI",
-        "kunyomi": "ya",
-        "meaning": "Bát (tám)",
-        "meaningEn": "Eight",
-        "mnemonic_vi": "Hai nét xòe ra như chân của số 8.",
-        "mnemonic_en": "Two lines spreading out like the legs of the number 8.",
-        "examples": [
-            {
-                "word": "八",
-                "reading": "はち",
-                "meaning": "Số 8",
-                "meaningEn": "Number 8"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "九",
-        "strokeCount": 2,
-        "onyomi": "KYUU",
-        "kunyomi": "kokono",
-        "meaning": "Cửu (chín)",
-        "meaningEn": "Nine",
-        "mnemonic_vi": "Một cái móc câu lớn.",
-        "mnemonic_en": "Imagine a big hook.",
-        "examples": [
-            {
-                "word": "九",
-                "reading": "きゅう",
-                "meaning": "Số 9",
-                "meaningEn": "Number 9"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "十",
-        "strokeCount": 2,
-        "onyomi": "JUU",
-        "kunyomi": "tou",
-        "meaning": "Thập (mười)",
-        "meaningEn": "Ten",
-        "mnemonic_vi": "Một cái dấu cộng (thập tự).",
-        "mnemonic_en": "A simple plus sign (cross).",
-        "examples": [
-            {
-                "word": "十",
-                "reading": "じゅう",
-                "meaning": "Số 10",
-                "meaningEn": "Number 10"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "百",
-        "strokeCount": 6,
-        "onyomi": "HYAKU",
-        "kunyomi": "",
-        "meaning": "Bách (trăm)",
-        "meaningEn": "Hundred",
-        "mnemonic_vi": "Chữ Bạch (trắng 白) thêm một nét ngang ở trên. Trắng tay sau khi tiêu hết 100 đồng.",
-        "mnemonic_en": "White (白) with a line on top. Going 'white' (empty) after spending 100 yen.",
-        "examples": [
-            {
-                "word": "百",
-                "reading": "ひゃく",
-                "meaning": "100",
-                "meaningEn": "Hundred"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "千",
-        "strokeCount": 3,
-        "onyomi": "SEN",
-        "kunyomi": "chi",
-        "meaning": "Thiên (nghìn)",
-        "meaningEn": "Thousand",
-        "mnemonic_vi": "Chữ Thập (十) thêm một nét gạch chéo ở trên.",
-        "mnemonic_en": "A cross (十) with a stroke on top.",
-        "examples": [
-            {
-                "word": "千",
-                "reading": "せん",
-                "meaning": "1000",
-                "meaningEn": "Thousand"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "万",
-        "strokeCount": 3,
-        "onyomi": "MAN",
-        "kunyomi": "",
-        "meaning": "Vạn (mười nghìn)",
-        "meaningEn": "Ten thousand",
-        "mnemonic_vi": "Một người đang vung tay mạnh mẽ ra sau để vặn (vạn) mình.",
-        "mnemonic_en": "A person swinging arms back powerfully.",
-        "examples": [
-            {
-                "word": "一万",
-                "reading": "いちまん",
-                "meaning": "10,000",
-                "meaningEn": "Ten thousand"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 2,
-        "character": "円",
-        "strokeCount": 4,
-        "onyomi": "EN",
-        "kunyomi": "maru",
-        "meaning": "Viên (yên, tròn)",
-        "meaningEn": "Yen, Circle",
-        "mnemonic_vi": "Một cái hộp chứa tiền xu bên trong.",
-        "mnemonic_en": "A box containing coins inside.",
-        "examples": [
-            {
-                "word": "百円",
-                "reading": "ひゃくえん",
-                "meaning": "100 Yên",
-                "meaningEn": "100 Yen"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 2,
+    "character": "二",
+    "strokeCount": 2,
+    "onyomi": "NI",
+    "kunyomi": "futa",
+    "meaning": "Hai",
+    "meaningEn": "Two",
+    "mnemonic_vi": "Hai nét ngang đại diện cho số 2.",
+    "mnemonic_en": "Two horizontal lines representing the number 2.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v048",
+        "sourceSenseId": "n5_l02_s048"
+      },
+      {
+        "sourceVocabId": "n5_l02_v049",
+        "sourceSenseId": "n5_l02_s049"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "三",
+    "strokeCount": 3,
+    "onyomi": "SAN",
+    "kunyomi": "mi",
+    "meaning": "Ba",
+    "meaningEn": "Three",
+    "mnemonic_vi": "Ba nét ngang đại diện cho số 3.",
+    "mnemonic_en": "Three horizontal lines representing the number 3.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v050",
+        "sourceSenseId": "n5_l02_s050"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "一",
+    "strokeCount": 1,
+    "onyomi": "ICHI, ITSU",
+    "kunyomi": "hito",
+    "meaning": "Nhất (một)",
+    "meaningEn": "One",
+    "mnemonic_vi": "Một nét ngang đại diện cho số 1.",
+    "mnemonic_en": "One horizontal line representing the number 1.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v051",
+        "sourceSenseId": "n5_l02_s051"
+      },
+      {
+        "sourceVocabId": "n5_l11_v015",
+        "sourceSenseId": "n5_l11_s015"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "四",
+    "strokeCount": 5,
+    "onyomi": "SHI",
+    "kunyomi": "yon, yo",
+    "meaning": "Tứ (bốn)",
+    "meaningEn": "Four",
+    "mnemonic_vi": "Hình ảnh một cái cửa sổ có rèm che (các nét bên trong).",
+    "mnemonic_en": "Imagine a window with curtains inside.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v052",
+        "sourceSenseId": "n5_l02_s052"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "五",
+    "strokeCount": 4,
+    "onyomi": "GO",
+    "kunyomi": "itsu",
+    "meaning": "Ngũ (năm)",
+    "meaningEn": "Five",
+    "mnemonic_vi": "Một người đang đứng với tư thế giống số 5.",
+    "mnemonic_en": "A person standing in a pose that looks like the number 5.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v053",
+        "sourceSenseId": "n5_l02_s053"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "六",
+    "strokeCount": 4,
+    "onyomi": "ROKU",
+    "kunyomi": "mu",
+    "meaning": "Lục (sáu)",
+    "meaningEn": "Six",
+    "mnemonic_vi": "Hình ảnh một người đang đứng dang tay và chân.",
+    "mnemonic_en": "A person stretching out arms and legs.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v054",
+        "sourceSenseId": "n5_l02_s054"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "七",
+    "strokeCount": 2,
+    "onyomi": "SHICHI",
+    "kunyomi": "nana",
+    "meaning": "Thất (bảy)",
+    "meaningEn": "Seven",
+    "mnemonic_vi": "Dạng giống số 7 lộn ngược.",
+    "mnemonic_en": "Looks like an upside-down number 7.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v055",
+        "sourceSenseId": "n5_l02_s055"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "八",
+    "strokeCount": 2,
+    "onyomi": "HACHI",
+    "kunyomi": "ya",
+    "meaning": "Bát (tám)",
+    "meaningEn": "Eight",
+    "mnemonic_vi": "Hai nét xòe ra như chân của số 8.",
+    "mnemonic_en": "Two lines spreading out like the legs of the number 8.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v056",
+        "sourceSenseId": "n5_l02_s056"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "九",
+    "strokeCount": 2,
+    "onyomi": "KYUU",
+    "kunyomi": "kokono",
+    "meaning": "Cửu (chín)",
+    "meaningEn": "Nine",
+    "mnemonic_vi": "Một cái móc câu lớn.",
+    "mnemonic_en": "Imagine a big hook.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v057",
+        "sourceSenseId": "n5_l02_s057"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "十",
+    "strokeCount": 2,
+    "onyomi": "JUU",
+    "kunyomi": "tou",
+    "meaning": "Thập (mười)",
+    "meaningEn": "Ten",
+    "mnemonic_vi": "Một cái dấu cộng (thập tự).",
+    "mnemonic_en": "A simple plus sign (cross).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v058",
+        "sourceSenseId": "n5_l02_s058"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "百",
+    "strokeCount": 6,
+    "onyomi": "HYAKU",
+    "kunyomi": "",
+    "meaning": "Bách (trăm)",
+    "meaningEn": "Hundred",
+    "mnemonic_vi": "Chữ Bạch (trắng 白) thêm một nét ngang ở trên. Trắng tay sau khi tiêu hết 100 đồng.",
+    "mnemonic_en": "White (白) with a line on top. Going 'white' (empty) after spending 100 yen.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l03_v035",
+        "sourceSenseId": "n5_l03_s035"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "千",
+    "strokeCount": 3,
+    "onyomi": "SEN",
+    "kunyomi": "chi",
+    "meaning": "Thiên (nghìn)",
+    "meaningEn": "Thousand",
+    "mnemonic_vi": "Chữ Thập (十) thêm một nét gạch chéo ở trên.",
+    "mnemonic_en": "A cross (十) with a stroke on top.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l03_v036",
+        "sourceSenseId": "n5_l03_s036"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "万",
+    "strokeCount": 3,
+    "onyomi": "MAN",
+    "kunyomi": "",
+    "meaning": "Vạn (mười nghìn)",
+    "meaningEn": "Ten thousand",
+    "mnemonic_vi": "Một người đang vung tay mạnh mẽ ra sau để vặn (vạn) mình.",
+    "mnemonic_en": "A person swinging arms back powerfully.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v059",
+        "sourceSenseId": "n5_l02_s059"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 2,
+    "character": "円",
+    "strokeCount": 4,
+    "onyomi": "EN",
+    "kunyomi": "maru",
+    "meaning": "Viên (yên, tròn)",
+    "meaningEn": "Yen, Circle",
+    "mnemonic_vi": "Một cái hộp chứa tiền xu bên trong.",
+    "mnemonic_en": "A box containing coins inside.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v060",
+        "sourceSenseId": "n5_l02_s060"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

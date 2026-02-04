@@ -1,134 +1,118 @@
 [
-    {
-        "lessonId": 37,
-        "character": "育",
-        "strokeCount": 8,
-        "onyomi": "IKU",
-        "kunyomi": "soda-tsu, soda-teru",
-        "meaning": "Dục (nuôi dạy)",
-        "meaningEn": "Raise, Grow",
-        "mnemonic_vi": "Thịt (Nguyệt 月) lớn lên từ đứa trẻ lộn ngược (vân) - NUÔI DẠY.",
-        "mnemonic_en": "Child developing body/flesh (月) - GROWING up.",
-        "examples": [
-            {
-                "word": "育てます",
-                "reading": "そだてます",
-                "meaning": "Nuôi nấng",
-                "meaningEn": "Raise, Rear"
-            },
-            {
-                "word": "教育",
-                "reading": "きょういく",
-                "meaning": "Giáo dục",
-                "meaningEn": "Education"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 37,
-        "character": "降",
-        "strokeCount": 10,
-        "onyomi": "KOU",
-        "kunyomi": "o-riru, fu-ru",
-        "meaning": "Giáng (xuống, rơi)",
-        "meaningEn": "Descend, Precipitate",
-        "mnemonic_vi": "Đi bộ trên gò đất (Ấp 阝) để XUỐNG núi.",
-        "mnemonic_en": "Walking down a hill (阝) - DESCEND.",
-        "examples": [
-            {
-                "word": "降ります",
-                "reading": "おります",
-                "meaning": "Xuống (xe)",
-                "meaningEn": "Get off"
-            },
-            {
-                "word": "降ります",
-                "reading": "ふります",
-                "meaning": "Rơi (mưa)",
-                "meaningEn": "Fall (rain)"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 37,
-        "character": "若",
-        "strokeCount": 8,
-        "onyomi": "JAKU",
-        "kunyomi": "waka-i",
-        "meaning": "Nhược (trẻ)",
-        "meaningEn": "Young",
-        "mnemonic_vi": "Phụ nữ (Nữ 女) ăn cỏ (Thảo 艹) thì vẫn còn TRẺ.",
-        "mnemonic_en": "A woman (女) as fresh as grass (艹) - YOUNG.",
-        "examples": [
-            {
-                "word": "若い",
-                "reading": "わかい",
-                "meaning": "Trẻ",
-                "meaningEn": "Young"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 37,
-        "character": "取",
-        "strokeCount": 8,
-        "onyomi": "SHU",
-        "kunyomi": "to-ru",
-        "meaning": "Thủ (lấy)",
-        "meaningEn": "Take",
-        "mnemonic_vi": "Dùng Tay (Hựu 又) để nắm cái Tai (Nhĩ 耳) mà LẤY.",
-        "mnemonic_en": "Using a hand (又) to grab an ear (耳) - TAKE.",
-        "examples": [
-            {
-                "word": "取ります",
-                "reading": "とります",
-                "meaning": "Lấy",
-                "meaningEn": "Take"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 37,
-        "character": "拾",
-        "strokeCount": 9,
-        "onyomi": "SHUU",
-        "kunyomi": "hiro-u",
-        "meaning": "Thập (nhặt)",
-        "meaningEn": "Pick up",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) NHẶT mười (Thập 十) vật phẩm rồi cất vào hộp (Hợp 合).",
-        "mnemonic_en": "Hand (扌) gathering things together (合).",
-        "examples": [
-            {
-                "word": "拾います",
-                "reading": "ひろいます",
-                "meaning": "Nhặt",
-                "meaningEn": "Pick up"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 37,
-        "character": "押",
-        "strokeCount": 8,
-        "onyomi": "OU",
-        "kunyomi": "o-su",
-        "meaning": "Áp (ấn, đẩy)",
-        "meaningEn": "Push",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) ÁP vào tấm giáp (Giáp 甲).",
-        "mnemonic_en": "Hand (扌) exerting pressure on a surface (甲).",
-        "examples": [
-            {
-                "word": "押します",
-                "reading": "おします",
-                "meaning": "Ấn, đẩy",
-                "meaningEn": "Push, Press"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 37,
+    "character": "育",
+    "strokeCount": 8,
+    "onyomi": "IKU",
+    "kunyomi": "soda-tsu, soda-teru",
+    "meaning": "Dục (nuôi dạy)",
+    "meaningEn": "Raise, Grow",
+    "mnemonic_vi": "Thịt (Nguyệt 月) lớn lên từ đứa trẻ lộn ngược (vân) - NUÔI DẠY.",
+    "mnemonic_en": "Child developing body/flesh (月) - GROWING up.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l38_v001",
+        "sourceSenseId": "n4_l38_s001"
+      },
+      {
+        "sourceVocabId": "n4_l42_v012",
+        "sourceSenseId": "n4_l42_s012"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 37,
+    "character": "降",
+    "strokeCount": 10,
+    "onyomi": "KOU",
+    "kunyomi": "o-riru, fu-ru",
+    "meaning": "Giáng (xuống, rơi)",
+    "meaningEn": "Descend, Precipitate",
+    "mnemonic_vi": "Đi bộ trên gò đất (Ấp 阝) để XUỐNG núi.",
+    "mnemonic_en": "Walking down a hill (阝) - DESCEND.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v002",
+        "sourceSenseId": "n5_l16_s002"
+      },
+      {
+        "sourceVocabId": "n5_l14_v017",
+        "sourceSenseId": "n5_l14_s017"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 37,
+    "character": "若",
+    "strokeCount": 8,
+    "onyomi": "JAKU",
+    "kunyomi": "waka-i",
+    "meaning": "Nhược (trẻ)",
+    "meaningEn": "Young",
+    "mnemonic_vi": "Phụ nữ (Nữ 女) ăn cỏ (Thảo 艹) thì vẫn còn TRẺ.",
+    "mnemonic_en": "A woman (女) as fresh as grass (艹) - YOUNG.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v015",
+        "sourceSenseId": "n5_l16_s015"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 37,
+    "character": "取",
+    "strokeCount": 8,
+    "onyomi": "SHU",
+    "kunyomi": "to-ru",
+    "meaning": "Thủ (lấy)",
+    "meaningEn": "Take",
+    "mnemonic_vi": "Dùng Tay (Hựu 又) để nắm cái Tai (Nhĩ 耳) mà LẤY.",
+    "mnemonic_en": "Using a hand (又) to grab an ear (耳) - TAKE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l27_v004",
+        "sourceSenseId": "n4_l27_s004"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 37,
+    "character": "拾",
+    "strokeCount": 9,
+    "onyomi": "SHUU",
+    "kunyomi": "hiro-u",
+    "meaning": "Thập (nhặt)",
+    "meaningEn": "Pick up",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) NHẶT mười (Thập 十) vật phẩm rồi cất vào hộp (Hợp 合).",
+    "mnemonic_en": "Hand (扌) gathering things together (合).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l35_v005",
+        "sourceSenseId": "n4_l35_s005"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 37,
+    "character": "押",
+    "strokeCount": 8,
+    "onyomi": "OU",
+    "kunyomi": "o-su",
+    "meaning": "Áp (ấn, đẩy)",
+    "meaningEn": "Push",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) ÁP vào tấm giáp (Giáp 甲).",
+    "mnemonic_en": "Hand (扌) exerting pressure on a surface (甲).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l38_v032",
+        "sourceSenseId": "n4_l38_s032"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

@@ -1,180 +1,158 @@
 [
-    {
-        "lessonId": 30,
-        "character": "張",
-        "strokeCount": 11,
-        "onyomi": "CHOU",
-        "kunyomi": "ha-ru",
-        "meaning": "Trương (dán, căng ra)",
-        "meaningEn": "Stick, Stretch",
-        "mnemonic_vi": "Giương Cung (弓) rộng (Trường 長) để CĂNG RA.",
-        "mnemonic_en": "STRETCHING a bow (弓) over a long (長) distance.",
-        "examples": [
-            {
-                "word": "張ります",
-                "reading": "はります",
-                "meaning": "Dán",
-                "meaningEn": "Stick, Paste"
-            },
-            {
-                "word": "出張",
-                "reading": "しゅっちょう",
-                "meaning": "Đi công tác",
-                "meaningEn": "Business trip"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 30,
-        "character": "掛",
-        "strokeCount": 11,
-        "onyomi": "KAI",
-        "kunyomi": "ka-keru",
-        "meaning": "Quải (treo)",
-        "meaningEn": "Hang",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) để TREO vật phẩm lên bệ (Quái 卦).",
-        "mnemonic_en": "Using a hand (扌) to HANG something.",
-        "examples": [
-            {
-                "word": "掛けます",
-                "reading": "かけます",
-                "meaning": "Treo",
-                "meaningEn": "Hang"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 30,
-        "character": "飾",
-        "strokeCount": 13,
-        "onyomi": "SHOKU",
-        "kunyomi": "kaza-ru",
-        "meaning": "Sức (trang trí)",
-        "meaningEn": "Decorate",
-        "mnemonic_vi": "Ăn (Thực 食) mặc đẹp đẽ như dùng khăn (Cân 巾) để TRANG TRÍ.",
-        "mnemonic_en": "Using items to DECORATE oneself.",
-        "examples": [
-            {
-                "word": "飾ります",
-                "reading": "かざります",
-                "meaning": "Trang trí",
-                "meaningEn": "Decorate"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 30,
-        "character": "並",
-        "strokeCount": 8,
-        "onyomi": "HEI",
-        "kunyomi": "nara-bu, nara-beru",
-        "meaning": "Tịnh (xếp hàng)",
-        "meaningEn": "Line up",
-        "mnemonic_vi": "Hai người đang đứng cùng một tư thế XẾP HÀNG.",
-        "mnemonic_en": "Two people standing in a LINE.",
-        "examples": [
-            {
-                "word": "並べます",
-                "reading": "ならべます",
-                "meaning": "Sắp xếp, bày",
-                "meaningEn": "Line up, Arrange"
-            },
-            {
-                "word": "並びます",
-                "reading": "ならびます",
-                "meaning": "Xếp hàng",
-                "meaningEn": "Line up (intransitive)"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 30,
-        "character": "植",
-        "strokeCount": 12,
-        "onyomi": "SHOKU",
-        "kunyomi": "u-eru",
-        "meaning": "Thực (trồng)",
-        "meaningEn": "Plant",
-        "mnemonic_vi": "Cây (Mộc 木) được đặt ngay ngắn (Trực 直) vào đất để TRỒNG.",
-        "mnemonic_en": "Setting a tree (木) upright (直) to PLANT it.",
-        "examples": [
-            {
-                "word": "植えます",
-                "reading": "うえます",
-                "meaning": "Trồng (cây)",
-                "meaningEn": "Plant"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 30,
-        "character": "戻",
-        "strokeCount": 7,
-        "onyomi": "REI",
-        "kunyomi": "modo-su, modo-ru",
-        "meaning": "Lệ (quay lại)",
-        "meaningEn": "Return",
-        "mnemonic_vi": "Đi qua Cửa (Hộ 戸) rồi QUAY LẠI (Sách 册).",
-        "mnemonic_en": "Returning through a door (戸).",
-        "examples": [
-            {
-                "word": "戻します",
-                "reading": "もどします",
-                "meaning": "Để lại (vào chỗ cũ), trả lại",
-                "meaningEn": "Return, Put back"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 30,
-        "character": "決",
-        "strokeCount": 7,
-        "onyomi": "KETSU",
-        "kunyomi": "ki-meru",
-        "meaning": "Quyết (quyết định)",
-        "meaningEn": "Decide",
-        "mnemonic_vi": "Dùng Nước (Thủy 氵) để gạt đi mọi nghi ngờ - QUYẾT ĐỊNH.",
-        "mnemonic_en": "Splashing water (氵) to make a CLEAR DECISION.",
-        "examples": [
-            {
-                "word": "決めます",
-                "reading": "きめます",
-                "meaning": "Quyết định",
-                "meaningEn": "Decide"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 30,
-        "character": "予",
-        "strokeCount": 4,
-        "onyomi": "YO",
-        "kunyomi": "",
-        "meaning": "Dự (dự báo)",
-        "meaningEn": "Previous, Prepare",
-        "mnemonic_vi": "Dùng cây gậy gõ để DỰ báo điều sắp tới.",
-        "mnemonic_en": "PREPARING for what's ahead.",
-        "examples": [
-            {
-                "word": "予定",
-                "reading": "よてい",
-                "meaning": "Dự định",
-                "meaningEn": "Plan, Schedule"
-            },
-            {
-                "word": "予習",
-                "reading": "よしゅう",
-                "meaning": "Soạn bài",
-                "meaningEn": "Preparation (study)"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 30,
+    "character": "張",
+    "strokeCount": 11,
+    "onyomi": "CHOU",
+    "kunyomi": "ha-ru",
+    "meaning": "Trương (dán, căng ra)",
+    "meaningEn": "Stick, Stretch",
+    "mnemonic_vi": "Giương Cung (弓) rộng (Trường 長) để CĂNG RA.",
+    "mnemonic_en": "STRETCHING a bow (弓) over a long (長) distance.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v058",
+        "sourceSenseId": "n4_l30_s058"
+      },
+      {
+        "sourceVocabId": "n4_l30_v059",
+        "sourceSenseId": "n4_l30_s059"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 30,
+    "character": "掛",
+    "strokeCount": 11,
+    "onyomi": "KAI",
+    "kunyomi": "ka-keru",
+    "meaning": "Quải (treo)",
+    "meaningEn": "Hang",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) để TREO vật phẩm lên bệ (Quái 卦).",
+    "mnemonic_en": "Using a hand (扌) to HANG something.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v002",
+        "sourceSenseId": "n4_l30_s002"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 30,
+    "character": "飾",
+    "strokeCount": 13,
+    "onyomi": "SHOKU",
+    "kunyomi": "kaza-ru",
+    "meaning": "Sức (trang trí)",
+    "meaningEn": "Decorate",
+    "mnemonic_vi": "Ăn (Thực 食) mặc đẹp đẽ như dùng khăn (Cân 巾) để TRANG TRÍ.",
+    "mnemonic_en": "Using items to DECORATE oneself.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v003",
+        "sourceSenseId": "n4_l30_s003"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 30,
+    "character": "並",
+    "strokeCount": 8,
+    "onyomi": "HEI",
+    "kunyomi": "nara-bu, nara-beru",
+    "meaning": "Tịnh (xếp hàng)",
+    "meaningEn": "Line up",
+    "mnemonic_vi": "Hai người đang đứng cùng một tư thế XẾP HÀNG.",
+    "mnemonic_en": "Two people standing in a LINE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v004",
+        "sourceSenseId": "n4_l30_s004"
+      },
+      {
+        "sourceVocabId": "n4_l39_v055",
+        "sourceSenseId": "n4_l39_s055"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 30,
+    "character": "植",
+    "strokeCount": 12,
+    "onyomi": "SHOKU",
+    "kunyomi": "u-eru",
+    "meaning": "Thực (trồng)",
+    "meaningEn": "Plant",
+    "mnemonic_vi": "Cây (Mộc 木) được đặt ngay ngắn (Trực 直) vào đất để TRỒNG.",
+    "mnemonic_en": "Setting a tree (木) upright (直) to PLANT it.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v005",
+        "sourceSenseId": "n4_l30_s005"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 30,
+    "character": "戻",
+    "strokeCount": 7,
+    "onyomi": "REI",
+    "kunyomi": "modo-su, modo-ru",
+    "meaning": "Lệ (quay lại)",
+    "meaningEn": "Return",
+    "mnemonic_vi": "Đi qua Cửa (Hộ 戸) rồi QUAY LẠI (Sách 册).",
+    "mnemonic_en": "Returning through a door (戸).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v006",
+        "sourceSenseId": "n4_l30_s006"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 30,
+    "character": "決",
+    "strokeCount": 7,
+    "onyomi": "KETSU",
+    "kunyomi": "ki-meru",
+    "meaning": "Quyết (quyết định)",
+    "meaningEn": "Decide",
+    "mnemonic_vi": "Dùng Nước (Thủy 氵) để gạt đi mọi nghi ngờ - QUYẾT ĐỊNH.",
+    "mnemonic_en": "Splashing water (氵) to make a CLEAR DECISION.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v010",
+        "sourceSenseId": "n4_l30_s010"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 30,
+    "character": "予",
+    "strokeCount": 4,
+    "onyomi": "YO",
+    "kunyomi": "",
+    "meaning": "Dự (dự báo)",
+    "meaningEn": "Previous, Prepare",
+    "mnemonic_vi": "Dùng cây gậy gõ để DỰ báo điều sắp tới.",
+    "mnemonic_en": "PREPARING for what's ahead.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v020",
+        "sourceSenseId": "n4_l30_s020"
+      },
+      {
+        "sourceVocabId": "n4_l30_v060",
+        "sourceSenseId": "n4_l30_s060"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

@@ -1,134 +1,118 @@
 [
-    {
-        "lessonId": 47,
-        "character": "集",
-        "strokeCount": 12,
-        "onyomi": "SHUU",
-        "kunyomi": "atsu-maru, atsu-meru",
-        "meaning": "Tập (tập hợp)",
-        "meaningEn": "Gather",
-        "mnemonic_vi": "Những con chim (Chuy 隹) đậu trên cây (Mộc 木) - TẬP HỢP.",
-        "mnemonic_en": "Birds (隹) gathering on a tree (木).",
-        "examples": [
-            {
-                "word": "集まります",
-                "reading": "あつまります",
-                "meaning": "Tập hợp, tụ tập",
-                "meaningEn": "Gather"
-            },
-            {
-                "word": "集めます",
-                "reading": "あつめます",
-                "meaning": "Sưu tầm, thu thập",
-                "meaningEn": "Collect"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 47,
-        "character": "別",
-        "strokeCount": 7,
-        "onyomi": "BETSU",
-        "kunyomi": "waka-reru",
-        "meaning": "Biệt (chia tay, khác)",
-        "meaningEn": "Separate, Another",
-        "mnemonic_vi": "Dùng Dao (Đao 刂) để CHIA vật ra làm 10 mảnh - BIỆT lập.",
-        "mnemonic_en": "Using a blade (刂) to SEPARATE things.",
-        "examples": [
-            {
-                "word": "別れます",
-                "reading": "わかれます",
-                "meaning": "Chia tay",
-                "meaningEn": "Separate, Break up"
-            },
-            {
-                "word": "特別",
-                "reading": "とくべつ",
-                "meaning": "Đặc biệt",
-                "meaningEn": "Special"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 47,
-        "character": "喜",
-        "strokeCount": 12,
-        "onyomi": "KI",
-        "kunyomi": "yoroko-bu",
-        "meaning": "Hỉ (vui mừng)",
-        "meaningEn": "Rejoice",
-        "mnemonic_vi": "Miệng (Khẩu 口) cười tươi khi nhận được món quà (Sĩ ⺶ - biến thể) - VUI MỪNG.",
-        "mnemonic_en": "A face showing joy - REJOICE.",
-        "examples": [
-            {
-                "word": "喜びます",
-                "reading": "よろこびます",
-                "meaning": "Vui mừng",
-                "meaningEn": "Be glad"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 47,
-        "character": "驚",
-        "strokeCount": 22,
-        "onyomi": "KYO",
-        "kunyomi": "odoro-ku",
-        "meaning": "Kinh (ngạc nhiên)",
-        "meaningEn": "Surprise",
-        "mnemonic_vi": "Con ngựa (Mã 馬) khi đến Kinh đô (Kinh 京) thấy rất NGẠC NHIÊN.",
-        "mnemonic_en": "A horse (馬) at the capital (京) being SURPRISED.",
-        "examples": [
-            {
-                "word": "驚きます",
-                "reading": "おどろきます",
-                "meaning": "Ngạc nhiên",
-                "meaningEn": "Be surprised"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 47,
-        "character": "怒",
-        "strokeCount": 9,
-        "onyomi": "DO",
-        "kunyomi": "oko-ru",
-        "meaning": "Nộ (tức giận)",
-        "meaningEn": "Angry",
-        "mnemonic_vi": "Trái tim (Tâm 心) của một người phụ nữ (Nữ 女) khi bị làm nô lệ (Nô 奴) - TỨC GIẬN.",
-        "mnemonic_en": "Heart (心) feeling ANGRY like a slave (奴).",
-        "examples": [
-            {
-                "word": "怒ります",
-                "reading": "おこります",
-                "meaning": "Tức giận",
-                "meaningEn": "Get angry"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 47,
-        "character": "悲",
-        "strokeCount": 12,
-        "onyomi": "HI",
-        "kunyomi": "kana-shii",
-        "meaning": "Bi (buồn)",
-        "meaningEn": "Sad",
-        "mnemonic_vi": "Trái tim (Tâm 心) cảm thấy không (Phi 非) ổn - BUỒN bã.",
-        "mnemonic_en": "Heart (心) feeling a 'no' (非) - SAD.",
-        "examples": [
-            {
-                "word": "悲しい",
-                "reading": "かなしい",
-                "meaning": "Buồn",
-                "meaningEn": "Sad"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 47,
+    "character": "集",
+    "strokeCount": 12,
+    "onyomi": "SHUU",
+    "kunyomi": "atsu-maru, atsu-meru",
+    "meaning": "Tập (tập hợp)",
+    "meaningEn": "Gather",
+    "mnemonic_vi": "Những con chim (Chuy 隹) đậu trên cây (Mộc 木) - TẬP HỢP.",
+    "mnemonic_en": "Birds (隹) gathering on a tree (木).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l31_v044",
+        "sourceSenseId": "n4_l31_s044"
+      },
+      {
+        "sourceVocabId": "n5_l18_v005",
+        "sourceSenseId": "n5_l18_s005"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 47,
+    "character": "別",
+    "strokeCount": 7,
+    "onyomi": "BETSU",
+    "kunyomi": "waka-reru",
+    "meaning": "Biệt (chia tay, khác)",
+    "meaningEn": "Separate, Another",
+    "mnemonic_vi": "Dùng Dao (Đao 刂) để CHIA vật ra làm 10 mảnh - BIỆT lập.",
+    "mnemonic_en": "Using a blade (刂) to SEPARATE things.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l44_v039",
+        "sourceSenseId": "n4_l44_s039"
+      },
+      {
+        "sourceVocabId": "n4_l36_v022",
+        "sourceSenseId": "n4_l36_s022"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 47,
+    "character": "喜",
+    "strokeCount": 12,
+    "onyomi": "KI",
+    "kunyomi": "yoroko-bu",
+    "meaning": "Hỉ (vui mừng)",
+    "meaningEn": "Rejoice",
+    "mnemonic_vi": "Miệng (Khẩu 口) cười tươi khi nhận được món quà (Sĩ ⺶ - biến thể) - VUI MỪNG.",
+    "mnemonic_en": "A face showing joy - REJOICE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l47_v042",
+        "sourceSenseId": "n4_l47_s042"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 47,
+    "character": "驚",
+    "strokeCount": 22,
+    "onyomi": "KYO",
+    "kunyomi": "odoro-ku",
+    "meaning": "Kinh (ngạc nhiên)",
+    "meaningEn": "Surprise",
+    "mnemonic_vi": "Con ngựa (Mã 馬) khi đến Kinh đô (Kinh 京) thấy rất NGẠC NHIÊN.",
+    "mnemonic_en": "A horse (馬) at the capital (京) being SURPRISED.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l47_v043",
+        "sourceSenseId": "n4_l47_s043"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 47,
+    "character": "怒",
+    "strokeCount": 9,
+    "onyomi": "DO",
+    "kunyomi": "oko-ru",
+    "meaning": "Nộ (tức giận)",
+    "meaningEn": "Angry",
+    "mnemonic_vi": "Trái tim (Tâm 心) của một người phụ nữ (Nữ 女) khi bị làm nô lệ (Nô 奴) - TỨC GIẬN.",
+    "mnemonic_en": "Heart (心) feeling ANGRY like a slave (奴).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l47_v044",
+        "sourceSenseId": "n4_l47_s044"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 47,
+    "character": "悲",
+    "strokeCount": 12,
+    "onyomi": "HI",
+    "kunyomi": "kana-shii",
+    "meaning": "Bi (buồn)",
+    "meaningEn": "Sad",
+    "mnemonic_vi": "Trái tim (Tâm 心) cảm thấy không (Phi 非) ổn - BUỒN bã.",
+    "mnemonic_en": "Heart (心) feeling a 'no' (非) - SAD.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l33_v059",
+        "sourceSenseId": "n4_l33_s059"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

@@ -1,146 +1,126 @@
 [
-    {
-        "lessonId": 29,
-        "character": "閉",
-        "strokeCount": 11,
-        "onyomi": "HEI",
-        "kunyomi": "shi-maru, shi-meru",
-        "meaning": "Bế (đóng)",
-        "meaningEn": "Close",
-        "mnemonic_vi": "Dùng then cài (Tài 才) để ĐÓNG Cửa (Môn 門).",
-        "mnemonic_en": "Putting a bar across the gate (門) to CLOSE it.",
-        "examples": [
-            {
-                "word": "閉まります",
-                "reading": "しまります",
-                "meaning": "Đóng (cửa tự đóng)",
-                "meaningEn": "Close (intransitive)"
-            },
-            {
-                "word": "閉めます",
-                "reading": "しめます",
-                "meaning": "Đóng (cửa)",
-                "meaningEn": "Close"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 29,
-        "character": "壊",
-        "strokeCount": 16,
-        "onyomi": "KAI",
-        "kunyomi": "kowa-reru, kowa-su",
-        "meaning": "Hoại (hỏng)",
-        "meaningEn": "Break",
-        "mnemonic_vi": "Vật làm từ Đất (Thổ 土) rơi xuống con mắt nhìn chằm chằm là bị HỎNG.",
-        "mnemonic_en": "Something made of earth (土) BREAKING apart.",
-        "examples": [
-            {
-                "word": "壊れます",
-                "reading": "こわれます",
-                "meaning": "Hỏng, vỡ",
-                "meaningEn": "Break (intransitive)"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 29,
-        "character": "消",
-        "strokeCount": 10,
-        "onyomi": "SHOU",
-        "kunyomi": "ki-eru, ke-su",
-        "meaning": "Tiêu (tắt, biến mất)",
-        "meaningEn": "Extinguish, Disappear",
-        "mnemonic_vi": "Dùng Nước (Thủy 氵) để dập tắt ngọn lửa nhỏ (Xiao 肖).",
-        "mnemonic_en": "Water (氵) making things DISAPPEAR/extinguish.",
-        "examples": [
-            {
-                "word": "消えます",
-                "reading": "きえます",
-                "meaning": "Tắt (điện), biến mất",
-                "meaningEn": "Go out, Vanish"
-            },
-            {
-                "word": "消します",
-                "reading": "けします",
-                "meaning": "Tắt, xóa",
-                "meaningEn": "Turn off, Erase"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 29,
-        "character": "汚",
-        "strokeCount": 6,
-        "onyomi": "O",
-        "kunyomi": "yogore-ru, kitana-i",
-        "meaning": "Ô (bẩn)",
-        "meaningEn": "Dirty",
-        "mnemonic_vi": "Nước (Thủy 氵) đục ngầu do con số 5 (Ngũ 亏) dính BẨN.",
-        "mnemonic_en": "Water (氵) that has become DIRTY.",
-        "examples": [
-            {
-                "word": "汚れます",
-                "reading": "よごれます",
-                "meaning": "Bẩn, vấy bẩn",
-                "meaningEn": "Get dirty"
-            },
-            {
-                "word": "汚い",
-                "reading": "きたない",
-                "meaning": "Bẩn",
-                "meaningEn": "Dirty"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 29,
-        "character": "袋",
-        "strokeCount": 11,
-        "onyomi": "TAI",
-        "kunyomi": "fukuro",
-        "meaning": "Đại (cái túi)",
-        "meaningEn": "Bag, Sack",
-        "mnemonic_vi": "Quần áo (Y 衣) được đựng trong cái TÚI (Đại 代).",
-        "mnemonic_en": "Clothing (衣) inside a BAG.",
-        "examples": [
-            {
-                "word": "袋",
-                "reading": "ふくろ",
-                "meaning": "Cái túi",
-                "meaningEn": "Bag"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 29,
-        "character": "落",
-        "strokeCount": 12,
-        "onyomi": "RAKU",
-        "kunyomi": "o-chiru, o-tosu",
-        "meaning": "Lạc (rơi)",
-        "meaningEn": "Fall, Drop",
-        "mnemonic_vi": "Cỏ (Thảo 艹) dưới Nước (Thủy 氵) rụng RƠI lá.",
-        "mnemonic_en": "Leaves from herbs (艹) DROPPING into water (氵).",
-        "examples": [
-            {
-                "word": "落ちます",
-                "reading": "おちます",
-                "meaning": "Rơi",
-                "meaningEn": "Fall"
-            },
-            {
-                "word": "落とします",
-                "reading": "おとします",
-                "meaning": "Đánh rơi",
-                "meaningEn": "Drop"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 29,
+    "character": "閉",
+    "strokeCount": 11,
+    "onyomi": "HEI",
+    "kunyomi": "shi-maru, shi-meru",
+    "meaning": "Bế (đóng)",
+    "meaningEn": "Close",
+    "mnemonic_vi": "Dùng then cài (Tài 才) để ĐÓNG Cửa (Môn 門).",
+    "mnemonic_en": "Putting a bar across the gate (門) to CLOSE it.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l29_v002",
+        "sourceSenseId": "n4_l29_s002"
+      },
+      {
+        "sourceVocabId": "n5_l14_v004",
+        "sourceSenseId": "n5_l14_s004"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 29,
+    "character": "壊",
+    "strokeCount": 16,
+    "onyomi": "KAI",
+    "kunyomi": "kowa-reru, kowa-su",
+    "meaning": "Hoại (hỏng)",
+    "meaningEn": "Break",
+    "mnemonic_vi": "Vật làm từ Đất (Thổ 土) rơi xuống con mắt nhìn chằm chằm là bị HỎNG.",
+    "mnemonic_en": "Something made of earth (土) BREAKING apart.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l29_v007",
+        "sourceSenseId": "n4_l29_s007"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 29,
+    "character": "消",
+    "strokeCount": 10,
+    "onyomi": "SHOU",
+    "kunyomi": "ki-eru, ke-su",
+    "meaning": "Tiêu (tắt, biến mất)",
+    "meaningEn": "Extinguish, Disappear",
+    "mnemonic_vi": "Dùng Nước (Thủy 氵) để dập tắt ngọn lửa nhỏ (Xiao 肖).",
+    "mnemonic_en": "Water (氵) making things DISAPPEAR/extinguish.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l29_v004",
+        "sourceSenseId": "n4_l29_s004"
+      },
+      {
+        "sourceVocabId": "n5_l14_v002",
+        "sourceSenseId": "n5_l14_s002"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 29,
+    "character": "汚",
+    "strokeCount": 6,
+    "onyomi": "O",
+    "kunyomi": "yogore-ru, kitana-i",
+    "meaning": "Ô (bẩn)",
+    "meaningEn": "Dirty",
+    "mnemonic_vi": "Nước (Thủy 氵) đục ngầu do con số 5 (Ngũ 亏) dính BẨN.",
+    "mnemonic_en": "Water (氵) that has become DIRTY.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l29_v011",
+        "sourceSenseId": "n4_l29_s011"
+      },
+      {
+        "sourceVocabId": "n4_l39_v016",
+        "sourceSenseId": "n4_l39_s016"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 29,
+    "character": "袋",
+    "strokeCount": 11,
+    "onyomi": "TAI",
+    "kunyomi": "fukuro",
+    "meaning": "Đại (cái túi)",
+    "meaningEn": "Bag, Sack",
+    "mnemonic_vi": "Quần áo (Y 衣) được đựng trong cái TÚI (Đại 代).",
+    "mnemonic_en": "Clothing (衣) inside a BAG.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l29_v022",
+        "sourceSenseId": "n4_l29_s022"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 29,
+    "character": "落",
+    "strokeCount": 12,
+    "onyomi": "RAKU",
+    "kunyomi": "o-chiru, o-tosu",
+    "meaning": "Lạc (rơi)",
+    "meaningEn": "Fall, Drop",
+    "mnemonic_vi": "Cỏ (Thảo 艹) dưới Nước (Thủy 氵) rụng RƠI lá.",
+    "mnemonic_en": "Leaves from herbs (艹) DROPPING into water (氵).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l43_v007",
+        "sourceSenseId": "n4_l43_s007"
+      },
+      {
+        "sourceVocabId": "n4_l29_v016",
+        "sourceSenseId": "n4_l29_s016"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

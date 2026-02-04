@@ -52,11 +52,18 @@ List<PracticeDestination> buildPracticeDestinations({
       route: '/kanji-dash',
     ),
     PracticeDestination(
-      title: language.practiceExamLabel,
+      title: language.writeModeHandwritingLabel,
+      subtitle: language.writeModeHandwritingSubtitle,
+      icon: Icons.draw_rounded,
+      color: const Color(0xFF0F766E),
+      route: '/practice/handwriting',
+    ),
+    PracticeDestination(
+      title: 'JLPT ${language.practiceExamLabel}',
       subtitle: language.practiceExamSubtitle,
       icon: Icons.quiz_rounded,
       color: const Color(0xFF14B8A6),
-      route: '/exam',
+      route: '/practice/mock-exam',
     ),
     PracticeDestination(
       title: language.practiceImmersionLabel,

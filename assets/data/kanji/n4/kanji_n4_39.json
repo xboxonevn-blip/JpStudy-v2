@@ -1,88 +1,78 @@
 [
-    {
-        "lessonId": 39,
-        "character": "答",
-        "strokeCount": 12,
-        "onyomi": "TOU",
-        "kunyomi": "kota-eru",
-        "meaning": "Đáp (trả lời)",
-        "meaningEn": "Answer",
-        "mnemonic_vi": "Dùng thẻ tre (Trúc ⺮) để viết lời ĐÁP phù hợp (Hợp 合).",
-        "mnemonic_en": "Writing a matching (合) response on bamboo (⺮).",
-        "examples": [
-            {
-                "word": "答えます",
-                "reading": "こたえます",
-                "meaning": "Trả lời",
-                "meaningEn": "Answer"
-            },
-            {
-                "word": "答え",
-                "reading": "こたえ",
-                "meaning": "Câu trả lời",
-                "meaningEn": "Answer"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 39,
-        "character": "死",
-        "strokeCount": 6,
-        "onyomi": "SHI",
-        "kunyomi": "shi-nu",
-        "meaning": "Tử (chết)",
-        "meaningEn": "Death",
-        "mnemonic_vi": "Mảnh xương khô một mình - cái CHẾT.",
-        "mnemonic_en": "The end of life - DEATH.",
-        "examples": [
-            {
-                "word": "死にます",
-                "reading": "しにます",
-                "meaning": "Chết",
-                "meaningEn": "Die"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 39,
-        "character": "焼",
-        "strokeCount": 12,
-        "onyomi": "SHOU",
-        "kunyomi": "ya-ku",
-        "meaning": "Thiêu (nướng, đốt)",
-        "meaningEn": "Burn, Bake",
-        "mnemonic_vi": "Lửa (Hỏa 火) dùng để THIÊU nướng thức ăn cao (Nghiêu 尭).",
-        "mnemonic_en": "Fire (火) used to BAKE or BURN.",
-        "examples": [
-            {
-                "word": "焼けます",
-                "reading": "やけます",
-                "meaning": "Nướng chín, cháy",
-                "meaningEn": "Burn, Be baked"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 39,
-        "character": "倒",
-        "strokeCount": 10,
-        "onyomi": "TOU",
-        "kunyomi": "tao-reru",
-        "meaning": "Đảo (đổ, ngã)",
-        "meaningEn": "Fall down",
-        "mnemonic_vi": "Người (Nhân 亻) đến (Đáo 到) đích rồi bị NGÃ.",
-        "mnemonic_en": "A person (亻) arriving (到) and falling over.",
-        "examples": [
-            {
-                "word": "倒れます",
-                "reading": "たおれます",
-                "meaning": "Đổ, ngã",
-                "meaningEn": "Fall down"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 39,
+    "character": "答",
+    "strokeCount": 12,
+    "onyomi": "TOU",
+    "kunyomi": "kota-eru",
+    "meaning": "Đáp (trả lời)",
+    "meaningEn": "Answer",
+    "mnemonic_vi": "Dùng thẻ tre (Trúc ⺮) để viết lời ĐÁP phù hợp (Hợp 合).",
+    "mnemonic_en": "Writing a matching (合) response on bamboo (⺮).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l39_v001",
+        "sourceSenseId": "n4_l39_s001"
+      },
+      {
+        "sourceVocabId": "n5_l17_v036",
+        "sourceSenseId": "n5_l17_s036"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 39,
+    "character": "死",
+    "strokeCount": 6,
+    "onyomi": "SHI",
+    "kunyomi": "shi-nu",
+    "meaning": "Tử (chết)",
+    "meaningEn": "Death",
+    "mnemonic_vi": "Mảnh xương khô một mình - cái CHẾT.",
+    "mnemonic_en": "The end of life - DEATH.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l39_v004",
+        "sourceSenseId": "n4_l39_s004"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 39,
+    "character": "焼",
+    "strokeCount": 12,
+    "onyomi": "SHOU",
+    "kunyomi": "ya-ku",
+    "meaning": "Thiêu (nướng, đốt)",
+    "meaningEn": "Burn, Bake",
+    "mnemonic_vi": "Lửa (Hỏa 火) dùng để THIÊU nướng thức ăn cao (Nghiêu 尭).",
+    "mnemonic_en": "Fire (火) used to BAKE or BURN.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l39_v049",
+        "sourceSenseId": "n4_l39_s049"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 39,
+    "character": "倒",
+    "strokeCount": 10,
+    "onyomi": "TOU",
+    "kunyomi": "tao-reru",
+    "meaning": "Đảo (đổ, ngã)",
+    "meaningEn": "Fall down",
+    "mnemonic_vi": "Người (Nhân 亻) đến (Đáo 到) đích rồi bị NGÃ.",
+    "mnemonic_en": "A person (亻) arriving (到) and falling over.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l29_v040",
+        "sourceSenseId": "n4_l29_s040"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

@@ -1,226 +1,198 @@
 [
-    {
-        "lessonId": 13,
-        "character": "国",
-        "strokeCount": 8,
-        "onyomi": "KOKU",
-        "kunyomi": "kuni",
-        "meaning": "Quốc (đất nước)",
-        "meaningEn": "Country",
-        "mnemonic_vi": "Một đất nước có vua và ranh giới bao quanh.",
-        "mnemonic_en": "A country with borders and a king inside.",
-        "examples": [
-            {
-                "word": "国",
-                "reading": "くに",
-                "meaning": "Đất nước",
-                "meaningEn": "Country"
-            },
-            {
-                "word": "外国",
-                "reading": "がいこく",
-                "meaning": "Nước ngoài",
-                "meaningEn": "Foreign country"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "会",
-        "strokeCount": 6,
-        "onyomi": "KAI",
-        "kunyomi": "a-u",
-        "meaning": "Hội (gặp)",
-        "meaningEn": "Meet",
-        "mnemonic_vi": "Ba người gặp nhau dưới một mái nhà.",
-        "mnemonic_en": "People meeting under one roof.",
-        "examples": [
-            {
-                "word": "会議",
-                "reading": "かいぎ",
-                "meaning": "Cuộc họp",
-                "meaningEn": "Meeting"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "同",
-        "strokeCount": 6,
-        "onyomi": "DOU",
-        "kunyomi": "ona-ji",
-        "meaning": "Đồng (cùng, giống)",
-        "meaningEn": "Same",
-        "mnemonic_vi": "Mọi người có cùng một cái miệng dưới một mái nhà.",
-        "mnemonic_en": "People with the same mouth/opinion under a roof.",
-        "examples": [
-            {
-                "word": "同じ",
-                "reading": "おなじ",
-                "meaning": "Giống nhau",
-                "meaningEn": "Same"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "事",
-        "strokeCount": 8,
-        "onyomi": "JI",
-        "kunyomi": "koto",
-        "meaning": "Sự (việc)",
-        "meaningEn": "Thing, Matter",
-        "mnemonic_vi": "Một cây gậy cầm quyền xử lý các công việc.",
-        "mnemonic_en": "Dealing with matters and things.",
-        "examples": [
-            {
-                "word": "仕事",
-                "reading": "しごと",
-                "meaning": "Công việc",
-                "meaningEn": "Job, Work"
-            },
-            {
-                "word": "食事",
-                "reading": "しょくじ",
-                "meaning": "Bữa ăn",
-                "meaningEn": "Meal"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "自",
-        "strokeCount": 6,
-        "onyomi": "JI, SHI",
-        "kunyomi": "mizuka-ra",
-        "meaning": "Tự (tự mình)",
-        "meaningEn": "Self",
-        "mnemonic_vi": "Hình con mắt đại diện cho chính mình (tự chỉ mũi).",
-        "mnemonic_en": "Self-represented by an eye (pointing at nose).",
-        "examples": [
-            {
-                "word": "自分",
-                "reading": "じぶん",
-                "meaning": "Bản thân",
-                "meaningEn": "Myself"
-            },
-            {
-                "word": "自転車",
-                "reading": "じてんしゃ",
-                "meaning": "Xe đạp",
-                "meaningEn": "Bicycle"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "社",
-        "strokeCount": 7,
-        "onyomi": "SHA",
-        "kunyomi": "yashiro",
-        "meaning": "Xã (công ty)",
-        "meaningEn": "Company",
-        "mnemonic_vi": "Đất đai (Thổ) và thần linh (Thị) tạo nên cộng đồng Xã.",
-        "mnemonic_en": "Land (Thổ) and spirit (Thị) forming a society.",
-        "examples": [
-            {
-                "word": "社長",
-                "reading": "しゃちょう",
-                "meaning": "Giám đốc",
-                "meaningEn": "President (company)"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "発",
-        "strokeCount": 9,
-        "onyomi": "HATSU",
-        "kunyomi": "",
-        "meaning": "Phát (xuất phát)",
-        "meaningEn": "Departure",
-        "mnemonic_vi": "Đôi chân đang chạy nhanh để Xuất phát.",
-        "mnemonic_en": "Legs running fast to depart.",
-        "examples": [
-            {
-                "word": "発表",
-                "reading": "はっぴょう",
-                "meaning": "Phát biểu",
-                "meaningEn": "Presentation"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "者",
-        "strokeCount": 8,
-        "onyomi": "SHA",
-        "kunyomi": "mono",
-        "meaning": "Giả (người)",
-        "meaningEn": "Person",
-        "mnemonic_vi": "Một người già (Lão) đang giảng giải điều gì đó.",
-        "mnemonic_en": "An elder (SHA) explaining things.",
-        "examples": [
-            {
-                "word": "医者",
-                "reading": "いしゃ",
-                "meaning": "Bác sĩ",
-                "meaningEn": "Doctor"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "地",
-        "strokeCount": 6,
-        "onyomi": "CHI, JI",
-        "kunyomi": "",
-        "meaning": "Địa (đất)",
-        "meaningEn": "Ground, Earth",
-        "mnemonic_vi": "Vùng Đất (Thổ 土) nơi con bọ sống.",
-        "mnemonic_en": "The Earth (Thổ 土) with small creatures.",
-        "examples": [
-            {
-                "word": "地下鉄",
-                "reading": "ちかてつ",
-                "meaning": "Tàu điện ngầm",
-                "meaningEn": "Subway"
-            },
-            {
-                "word": "地図",
-                "reading": "ちず",
-                "meaning": "Bản đồ",
-                "meaningEn": "Map"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 13,
-        "character": "業",
-        "strokeCount": 13,
-        "onyomi": "GYOU",
-        "kunyomi": "waza",
-        "meaning": "Nghiệp (nghề nghiệp)",
-        "meaningEn": "Business",
-        "mnemonic_vi": "Công việc ổn định như rễ cây đâm sâu.",
-        "mnemonic_en": "Deeply rooted business.",
-        "examples": [
-            {
-                "word": "授業",
-                "reading": "じゅぎょう",
-                "meaning": "Giờ học",
-                "meaningEn": "Class, Lesson"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 13,
+    "character": "国",
+    "strokeCount": 8,
+    "onyomi": "KOKU",
+    "kunyomi": "kuni",
+    "meaning": "Quốc (đất nước)",
+    "meaningEn": "Country",
+    "mnemonic_vi": "Một đất nước có vua và ranh giới bao quanh.",
+    "mnemonic_en": "A country with borders and a king inside.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l03_v021",
+        "sourceSenseId": "n5_l03_s021"
+      },
+      {
+        "sourceVocabId": "n5_l11_v044",
+        "sourceSenseId": "n5_l11_s044"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "会",
+    "strokeCount": 6,
+    "onyomi": "KAI",
+    "kunyomi": "a-u",
+    "meaning": "Hội (gặp)",
+    "meaningEn": "Meet",
+    "mnemonic_vi": "Ba người gặp nhau dưới một mái nhà.",
+    "mnemonic_en": "People meeting under one roof.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l04_v034",
+        "sourceSenseId": "n5_l04_s034"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "同",
+    "strokeCount": 6,
+    "onyomi": "DOU",
+    "kunyomi": "ona-ji",
+    "meaning": "Đồng (cùng, giống)",
+    "meaningEn": "Same",
+    "mnemonic_vi": "Mọi người có cùng một cái miệng dưới một mái nhà.",
+    "mnemonic_en": "People with the same mouth/opinion under a roof.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l21_v010",
+        "sourceSenseId": "n5_l21_s010"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "事",
+    "strokeCount": 8,
+    "onyomi": "JI",
+    "kunyomi": "koto",
+    "meaning": "Sự (việc)",
+    "meaningEn": "Thing, Matter",
+    "mnemonic_vi": "Một cây gậy cầm quyền xử lý các công việc.",
+    "mnemonic_en": "Dealing with matters and things.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l08_v043",
+        "sourceSenseId": "n5_l08_s043"
+      },
+      {
+        "sourceVocabId": "n5_l13_v047",
+        "sourceSenseId": "n5_l13_s047"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "自",
+    "strokeCount": 6,
+    "onyomi": "JI, SHI",
+    "kunyomi": "mizuka-ra",
+    "meaning": "Tự (tự mình)",
+    "meaningEn": "Self",
+    "mnemonic_vi": "Hình con mắt đại diện cho chính mình (tự chỉ mũi).",
+    "mnemonic_en": "Self-represented by an eye (pointing at nose).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l27_v051",
+        "sourceSenseId": "n4_l27_s051"
+      },
+      {
+        "sourceVocabId": "n5_l05_v014",
+        "sourceSenseId": "n5_l05_s014"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "社",
+    "strokeCount": 7,
+    "onyomi": "SHA",
+    "kunyomi": "yashiro",
+    "meaning": "Xã (công ty)",
+    "meaningEn": "Company",
+    "mnemonic_vi": "Đất đai (Thổ) và thần linh (Thị) tạo nên cộng đồng Xã.",
+    "mnemonic_en": "Land (Thổ) and spirit (Thị) forming a society.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l18_v020",
+        "sourceSenseId": "n5_l18_s020"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "発",
+    "strokeCount": 9,
+    "onyomi": "HATSU",
+    "kunyomi": "",
+    "meaning": "Phát (xuất phát)",
+    "meaningEn": "Departure",
+    "mnemonic_vi": "Đôi chân đang chạy nhanh để Xuất phát.",
+    "mnemonic_en": "Legs running fast to depart.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l31_v009",
+        "sourceSenseId": "n4_l31_s009"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "者",
+    "strokeCount": 8,
+    "onyomi": "SHA",
+    "kunyomi": "mono",
+    "meaning": "Giả (người)",
+    "meaningEn": "Person",
+    "mnemonic_vi": "Một người già (Lão) đang giảng giải điều gì đó.",
+    "mnemonic_en": "An elder (SHA) explaining things.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l01_v013",
+        "sourceSenseId": "n5_l01_s013"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "地",
+    "strokeCount": 6,
+    "onyomi": "CHI, JI",
+    "kunyomi": "",
+    "meaning": "Địa (đất)",
+    "meaningEn": "Ground, Earth",
+    "mnemonic_vi": "Vùng Đất (Thổ 土) nơi con bọ sống.",
+    "mnemonic_en": "The Earth (Thổ 土) with small creatures.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l05_v010",
+        "sourceSenseId": "n5_l05_s010"
+      },
+      {
+        "sourceVocabId": "n5_l14_v023",
+        "sourceSenseId": "n5_l14_s023"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 13,
+    "character": "業",
+    "strokeCount": 13,
+    "onyomi": "GYOU",
+    "kunyomi": "waza",
+    "meaning": "Nghiệp (nghề nghiệp)",
+    "meaningEn": "Business",
+    "mnemonic_vi": "Công việc ổn định như rễ cây đâm sâu.",
+    "mnemonic_en": "Deeply rooted business.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l30_v017",
+        "sourceSenseId": "n4_l30_s017"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

@@ -1,232 +1,202 @@
 [
-    {
-        "lessonId": 16,
-        "character": "体",
-        "strokeCount": 7,
-        "onyomi": "TAI",
-        "kunyomi": "karada",
-        "meaning": "Thể (cơ thể)",
-        "meaningEn": "Body",
-        "mnemonic_vi": "Cơ thể con người (Nhân 亻) là gốc rễ (Bản 本).",
-        "mnemonic_en": "The body of a person (亻) is their foundation (本).",
-        "examples": [
-            {
-                "word": "体",
-                "reading": "からだ",
-                "meaning": "Cơ thể",
-                "meaningEn": "Body"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "頭",
-        "strokeCount": 16,
-        "onyomi": "TOU, ZU",
-        "kunyomi": "atama",
-        "meaning": "Đầu (đầu)",
-        "meaningEn": "Head",
-        "mnemonic_vi": "Đầu người quan trọng ngang vỏ sò (tiền 貝) và hạt đậu (Đậu 豆).",
-        "mnemonic_en": "The head (豆) and mind (頁) combined.",
-        "examples": [
-            {
-                "word": "頭",
-                "reading": "あたま",
-                "meaning": "Đầu",
-                "meaningEn": "Head"
-            },
-            {
-                "word": "頭がいい",
-                "reading": "あたまがいい",
-                "meaning": "Thông minh",
-                "meaningEn": "Smart"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "顔",
-        "strokeCount": 18,
-        "onyomi": "GAN",
-        "kunyomi": "kao",
-        "meaning": "Nhan (khuôn mặt)",
-        "meaningEn": "Face",
-        "mnemonic_vi": "Khuôn mặt rạng rỡ như những sợi tơ đầy màu sắc.",
-        "mnemonic_en": "A face showing expressions like color.",
-        "examples": [
-            {
-                "word": "顔",
-                "reading": "かお",
-                "meaning": "Khuôn mặt",
-                "meaningEn": "Face"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "首",
-        "strokeCount": 9,
-        "onyomi": "SHU",
-        "kunyomi": "kubi",
-        "meaning": "Thủ (cổ)",
-        "meaningEn": "Neck",
-        "mnemonic_vi": "Phần đầu có lông tóc ở phía trên cái cổ.",
-        "mnemonic_en": "The head/neck area.",
-        "examples": [
-            {
-                "word": "首",
-                "reading": "くび",
-                "meaning": "Cổ",
-                "meaningEn": "Neck"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "心",
-        "strokeCount": 4,
-        "onyomi": "SHIN",
-        "kunyomi": "kokoro",
-        "meaning": "Tâm (trái tim)",
-        "meaningEn": "Heart, Mind",
-        "mnemonic_vi": "Hình ảnh trái tim với các ngăn và mạch máu.",
-        "mnemonic_en": "The shape of a heart.",
-        "examples": [
-            {
-                "word": "心",
-                "reading": "こころ",
-                "meaning": "Trái tim, tấm lòng",
-                "meaningEn": "Heart, Mind"
-            },
-            {
-                "word": "心配します",
-                "reading": "しんぱいします",
-                "meaning": "Lo lắng",
-                "meaningEn": "Worry"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "声",
-        "strokeCount": 7,
-        "onyomi": "SEI",
-        "kunyomi": "koe",
-        "meaning": "Thanh (tiếng, giọng)",
-        "meaningEn": "Voice",
-        "mnemonic_vi": "Âm thanh phát ra từ người đang đứng trên đá.",
-        "mnemonic_en": "A voice carrying over distances.",
-        "examples": [
-            {
-                "word": "声",
-                "reading": "こえ",
-                "meaning": "Giọng nói",
-                "meaningEn": "Voice"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "病",
-        "strokeCount": 10,
-        "onyomi": "BYOU",
-        "kunyomi": "",
-        "meaning": "Bệnh (ốm)",
-        "meaningEn": "Illness",
-        "mnemonic_vi": "Người nằm trên giường bệnh (nét bao quanh) đang phát hỏa (Bính 丙).",
-        "mnemonic_en": "Being sick (Nạch 疒) and feeling heat (丙).",
-        "examples": [
-            {
-                "word": "病気",
-                "reading": "びょうき",
-                "meaning": "Bệnh, ốm",
-                "meaningEn": "Illness, Sickness"
-            },
-            {
-                "word": "病院",
-                "reading": "びょういん",
-                "meaning": "Bệnh viện",
-                "meaningEn": "Hospital"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "薬",
-        "strokeCount": 16,
-        "onyomi": "YAKU",
-        "kunyomi": "kusuri",
-        "meaning": "Dược (thuốc)",
-        "meaningEn": "Medicine",
-        "mnemonic_vi": "Thảo mộc (Thảo 艹) mang lại niềm vui (Lạc 楽) khi chữa Bệnh - đó là Thuốc.",
-        "mnemonic_en": "Grass/Herbs (艹) that bring joy (楽) are MEDICINE.",
-        "examples": [
-            {
-                "word": "薬",
-                "reading": "くすり",
-                "meaning": "Thuốc",
-                "meaningEn": "Medicine"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "科",
-        "strokeCount": 9,
-        "onyomi": "KA",
-        "kunyomi": "",
-        "meaning": "Khoa (khoa học)",
-        "meaningEn": "Department, Science",
-        "mnemonic_vi": "Dùng đấu (Đấu 斗) để đong lúa (Hòa 禾) một cách khoa học.",
-        "mnemonic_en": "Measuring grain (禾) with a ladle (斗).",
-        "examples": [
-            {
-                "word": "科学",
-                "reading": "かがく",
-                "meaning": "Khoa học",
-                "meaningEn": "Science"
-            },
-            {
-                "word": "教科書",
-                "reading": "きょうかしょ",
-                "meaning": "Sách giáo khoa",
-                "meaningEn": "Textbook"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 16,
-        "character": "内",
-        "strokeCount": 4,
-        "onyomi": "NAI",
-        "kunyomi": "uchi",
-        "meaning": "Nội (bên trong)",
-        "meaningEn": "Inside",
-        "mnemonic_vi": "Người (Nhân 入) đi vào cửa (Quynh 冂) là vào bên TRONG.",
-        "mnemonic_en": "Entering (入) through the frame (冂) to get INSIDE.",
-        "examples": [
-            {
-                "word": "案内します",
-                "reading": "あんないします",
-                "meaning": "Hướng dẫn",
-                "meaningEn": "Guide"
-            },
-            {
-                "word": "家内",
-                "reading": "かない",
-                "meaning": "Vợ (mình)",
-                "meaningEn": "My wife"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 16,
+    "character": "体",
+    "strokeCount": 7,
+    "onyomi": "TAI",
+    "kunyomi": "karada",
+    "meaning": "Thể (cơ thể)",
+    "meaningEn": "Body",
+    "mnemonic_vi": "Cơ thể con người (Nhân 亻) là gốc rễ (Bản 本).",
+    "mnemonic_en": "The body of a person (亻) is their foundation (本).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v020",
+        "sourceSenseId": "n5_l16_s020"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "頭",
+    "strokeCount": 16,
+    "onyomi": "TOU, ZU",
+    "kunyomi": "atama",
+    "meaning": "Đầu (đầu)",
+    "meaningEn": "Head",
+    "mnemonic_vi": "Đầu người quan trọng ngang vỏ sò (tiền 貝) và hạt đậu (Đậu 豆).",
+    "mnemonic_en": "The head (豆) and mind (頁) combined.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v021",
+        "sourceSenseId": "n5_l16_s021"
+      },
+      {
+        "sourceVocabId": "n5_l16_v056",
+        "sourceSenseId": "n5_l16_s056"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "顔",
+    "strokeCount": 18,
+    "onyomi": "GAN",
+    "kunyomi": "kao",
+    "meaning": "Nhan (khuôn mặt)",
+    "meaningEn": "Face",
+    "mnemonic_vi": "Khuôn mặt rạng rỡ như những sợi tơ đầy màu sắc.",
+    "mnemonic_en": "A face showing expressions like color.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v023",
+        "sourceSenseId": "n5_l16_s023"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "首",
+    "strokeCount": 9,
+    "onyomi": "SHU",
+    "kunyomi": "kubi",
+    "meaning": "Thủ (cổ)",
+    "meaningEn": "Neck",
+    "mnemonic_vi": "Phần đầu có lông tóc ở phía trên cái cổ.",
+    "mnemonic_en": "The head/neck area.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v065",
+        "sourceSenseId": "n5_l16_s065"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "心",
+    "strokeCount": 4,
+    "onyomi": "SHIN",
+    "kunyomi": "kokoro",
+    "meaning": "Tâm (trái tim)",
+    "meaningEn": "Heart, Mind",
+    "mnemonic_vi": "Hình ảnh trái tim với các ngăn và mạch máu.",
+    "mnemonic_en": "The shape of a heart.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l16_v066",
+        "sourceSenseId": "n5_l16_s066"
+      },
+      {
+        "sourceVocabId": "n5_l17_v010",
+        "sourceSenseId": "n5_l17_s010"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "声",
+    "strokeCount": 7,
+    "onyomi": "SEI",
+    "kunyomi": "koe",
+    "meaning": "Thanh (tiếng, giọng)",
+    "meaningEn": "Voice",
+    "mnemonic_vi": "Âm thanh phát ra từ người đang đứng trên đá.",
+    "mnemonic_en": "A voice carrying over distances.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l27_v011",
+        "sourceSenseId": "n4_l27_s011"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "病",
+    "strokeCount": 10,
+    "onyomi": "BYOU",
+    "kunyomi": "",
+    "meaning": "Bệnh (ốm)",
+    "meaningEn": "Illness",
+    "mnemonic_vi": "Người nằm trên giường bệnh (nét bao quanh) đang phát hỏa (Bính 丙).",
+    "mnemonic_en": "Being sick (Nạch 疒) and feeling heat (丙).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l17_v021",
+        "sourceSenseId": "n5_l17_s021"
+      },
+      {
+        "sourceVocabId": "n5_l01_v017",
+        "sourceSenseId": "n5_l01_s017"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "薬",
+    "strokeCount": 16,
+    "onyomi": "YAKU",
+    "kunyomi": "kusuri",
+    "meaning": "Dược (thuốc)",
+    "meaningEn": "Medicine",
+    "mnemonic_vi": "Thảo mộc (Thảo 艹) mang lại niềm vui (Lạc 楽) khi chữa Bệnh - đó là Thuốc.",
+    "mnemonic_en": "Grass/Herbs (艹) that bring joy (楽) are MEDICINE.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l17_v033",
+        "sourceSenseId": "n5_l17_s033"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "科",
+    "strokeCount": 9,
+    "onyomi": "KA",
+    "kunyomi": "",
+    "meaning": "Khoa (khoa học)",
+    "meaningEn": "Department, Science",
+    "mnemonic_vi": "Dùng đấu (Đấu 斗) để đong lúa (Hòa 禾) một cách khoa học.",
+    "mnemonic_en": "Measuring grain (禾) with a ladle (斗).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l47_v016",
+        "sourceSenseId": "n4_l47_s016"
+      },
+      {
+        "sourceVocabId": "n5_l16_v067",
+        "sourceSenseId": "n5_l16_s067"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 16,
+    "character": "内",
+    "strokeCount": 4,
+    "onyomi": "NAI",
+    "kunyomi": "uchi",
+    "meaning": "Nội (bên trong)",
+    "meaningEn": "Inside",
+    "mnemonic_vi": "Người (Nhân 入) đi vào cửa (Quynh 冂) là vào bên TRONG.",
+    "mnemonic_en": "Entering (入) through the frame (冂) to get INSIDE.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l24_v006",
+        "sourceSenseId": "n5_l24_s006"
+      },
+      {
+        "sourceVocabId": "n5_l09_v035",
+        "sourceSenseId": "n5_l09_s035"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

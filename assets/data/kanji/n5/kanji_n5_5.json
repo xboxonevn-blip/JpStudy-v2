@@ -1,106 +1,90 @@
 [
-    {
-        "lessonId": 5,
-        "character": "七",
-        "strokeCount": 2,
-        "onyomi": "SHICHI",
-        "kunyomi": "nana",
-        "meaning": "Thất (bảy)",
-        "meaningEn": "Seven",
-        "mnemonic_vi": "Dạng giống số 7 lộn ngược.",
-        "mnemonic_en": "Looks like an upside-down number 7.",
-        "examples": [
-            {
-                "word": "七",
-                "reading": "なな",
-                "meaning": "Số 7",
-                "meaningEn": "Number 7"
-            },
-            {
-                "word": "七月",
-                "reading": "しちがつ",
-                "meaning": "Tháng 7",
-                "meaningEn": "July"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 5,
-        "character": "八",
-        "strokeCount": 2,
-        "onyomi": "HACHI",
-        "kunyomi": "yatsu",
-        "meaning": "Bát (tám)",
-        "meaningEn": "Eight",
-        "mnemonic_vi": "Hai nét xòe ra như chân của số 8.",
-        "mnemonic_en": "Two lines spreading out like the legs of the number 8.",
-        "examples": [
-            {
-                "word": "八",
-                "reading": "はち",
-                "meaning": "Số 8",
-                "meaningEn": "Number 8"
-            },
-            {
-                "word": "八百",
-                "reading": "はっぴゃく",
-                "meaning": "800",
-                "meaningEn": "800"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 5,
-        "character": "九",
-        "strokeCount": 2,
-        "onyomi": "KYUU, KU",
-        "kunyomi": "kokono",
-        "meaning": "Cửu (chín)",
-        "meaningEn": "Nine",
-        "mnemonic_vi": "Một cái móc câu lớn.",
-        "mnemonic_en": "Imagine a big hook.",
-        "examples": [
-            {
-                "word": "九",
-                "reading": "きゅう",
-                "meaning": "Số 9",
-                "meaningEn": "Number 9"
-            },
-            {
-                "word": "九月",
-                "reading": "くがつ",
-                "meaning": "Tháng 9",
-                "meaningEn": "September"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 5,
-        "character": "十",
-        "strokeCount": 2,
-        "onyomi": "JUU",
-        "kunyomi": "tou",
-        "meaning": "Thập (mười)",
-        "meaningEn": "Ten",
-        "mnemonic_vi": "Một cái dấu cộng (thập tự).",
-        "mnemonic_en": "A simple plus sign (cross).",
-        "examples": [
-            {
-                "word": "十",
-                "reading": "じゅう",
-                "meaning": "Số 10",
-                "meaningEn": "Number 10"
-            },
-            {
-                "word": "十月",
-                "reading": "じゅうがつ",
-                "meaning": "Tháng 10",
-                "meaningEn": "October"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 5,
+    "character": "七",
+    "strokeCount": 2,
+    "onyomi": "SHICHI",
+    "kunyomi": "nana",
+    "meaning": "Thất (bảy)",
+    "meaningEn": "Seven",
+    "mnemonic_vi": "Dạng giống số 7 lộn ngược.",
+    "mnemonic_en": "Looks like an upside-down number 7.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v055",
+        "sourceSenseId": "n5_l02_s055"
+      },
+      {
+        "sourceVocabId": "n5_l05_v058",
+        "sourceSenseId": "n5_l05_s058"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 5,
+    "character": "八",
+    "strokeCount": 2,
+    "onyomi": "HACHI",
+    "kunyomi": "yatsu",
+    "meaning": "Bát (tám)",
+    "meaningEn": "Eight",
+    "mnemonic_vi": "Hai nét xòe ra như chân của số 8.",
+    "mnemonic_en": "Two lines spreading out like the legs of the number 8.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v056",
+        "sourceSenseId": "n5_l02_s056"
+      },
+      {
+        "sourceVocabId": "n5_l05_v060",
+        "sourceSenseId": "n5_l05_s060"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 5,
+    "character": "九",
+    "strokeCount": 2,
+    "onyomi": "KYUU, KU",
+    "kunyomi": "kokono",
+    "meaning": "Cửu (chín)",
+    "meaningEn": "Nine",
+    "mnemonic_vi": "Một cái móc câu lớn.",
+    "mnemonic_en": "Imagine a big hook.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v057",
+        "sourceSenseId": "n5_l02_s057"
+      },
+      {
+        "sourceVocabId": "n5_l05_v062",
+        "sourceSenseId": "n5_l05_s062"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 5,
+    "character": "十",
+    "strokeCount": 2,
+    "onyomi": "JUU",
+    "kunyomi": "tou",
+    "meaning": "Thập (mười)",
+    "meaningEn": "Ten",
+    "mnemonic_vi": "Một cái dấu cộng (thập tự).",
+    "mnemonic_en": "A simple plus sign (cross).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v058",
+        "sourceSenseId": "n5_l02_s058"
+      },
+      {
+        "sourceVocabId": "n5_l05_v064",
+        "sourceSenseId": "n5_l05_s064"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

@@ -1,220 +1,194 @@
 [
-    {
-        "lessonId": 12,
-        "character": "父",
-        "strokeCount": 4,
-        "onyomi": "FU",
-        "kunyomi": "chichi",
-        "meaning": "Phụ (bố)",
-        "meaningEn": "Father",
-        "mnemonic_vi": "Hình ảnh khuôn mặt với hai cái ria mép của người cha.",
-        "mnemonic_en": "A face with two whiskers showing authority.",
-        "examples": [
-            {
-                "word": "父",
-                "reading": "ちち",
-                "meaning": "Bố (của tôi)",
-                "meaningEn": "My father"
-            },
-            {
-                "word": "お父さん",
-                "reading": "おとうさん",
-                "meaning": "Bố (người khác)",
-                "meaningEn": "Father (polite)"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "母",
-        "strokeCount": 5,
-        "onyomi": "BO",
-        "kunyomi": "haha",
-        "meaning": "Mẫu (mẹ)",
-        "meaningEn": "Mother",
-        "mnemonic_vi": "Người mẹ với hai bầu sữa đang ôm ấp con.",
-        "mnemonic_en": "A mother nursing her child.",
-        "examples": [
-            {
-                "word": "母",
-                "reading": "はは",
-                "meaning": "Mẹ (của tôi)",
-                "meaningEn": "My mother"
-            },
-            {
-                "word": "お母さん",
-                "reading": "おかあさん",
-                "meaning": "Mẹ (người khác)",
-                "meaningEn": "Mother (polite)"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "先",
-        "strokeCount": 6,
-        "onyomi": "SEN",
-        "kunyomi": "saki",
-        "meaning": "Tiên (trước)",
-        "meaningEn": "Previous",
-        "mnemonic_vi": "Người đi đầu dẫn đường.",
-        "mnemonic_en": "Someone moving ahead to lead.",
-        "examples": [
-            {
-                "word": "先月",
-                "reading": "せんげつ",
-                "meaning": "Tháng trước",
-                "meaningEn": "Last month"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "生",
-        "strokeCount": 5,
-        "onyomi": "SEI",
-        "kunyomi": "u-mareru",
-        "meaning": "Sinh (sinh ra)",
-        "meaningEn": "Birth",
-        "mnemonic_vi": "Mầm cây nảy mầm từ đất.",
-        "mnemonic_en": "A plant sprouting from the earth.",
-        "examples": [
-            {
-                "word": "生まれます",
-                "reading": "うまれます",
-                "meaning": "Được sinh ra",
-                "meaningEn": "Be born"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "学",
-        "strokeCount": 8,
-        "onyomi": "GAKU",
-        "kunyomi": "mana-bu",
-        "meaning": "Học (học)",
-        "meaningEn": "Study",
-        "mnemonic_vi": "Trẻ con đi học dưới mái nhà.",
-        "mnemonic_en": "A child studying under a roof.",
-        "examples": [
-            {
-                "word": "学生",
-                "reading": "がくせい",
-                "meaning": "Học sinh",
-                "meaningEn": "Student"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "校",
-        "strokeCount": 10,
-        "onyomi": "KOU",
-        "kunyomi": "",
-        "meaning": "Hiệu (trường học)",
-        "meaningEn": "School",
-        "mnemonic_vi": "Ngôi trường được làm từ gỗ (Mộc 木) nơi mọi người tụ họp.",
-        "mnemonic_en": "A wooden building where people gather.",
-        "examples": [
-            {
-                "word": "学校",
-                "reading": "がっこう",
-                "meaning": "Trường học",
-                "meaningEn": "School"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "友",
-        "strokeCount": 4,
-        "onyomi": "YUU",
-        "kunyomi": "tomo",
-        "meaning": "Hữu (bạn)",
-        "meaningEn": "Friend",
-        "mnemonic_vi": "Tay bắt mặt mừng cùng bạn bè.",
-        "mnemonic_en": "Hand in hand with a friend.",
-        "examples": [
-            {
-                "word": "友人",
-                "reading": "ゆうじん",
-                "meaning": "Thân hữu",
-                "meaningEn": "Friend (formal)"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "本",
-        "strokeCount": 5,
-        "onyomi": "HON",
-        "kunyomi": "moto",
-        "meaning": "Bản (sách)",
-        "meaningEn": "Book",
-        "mnemonic_vi": "Đánh dấu dưới gốc cây để tìm căn bản làm sách.",
-        "mnemonic_en": "Marking the base of a tree to find its roots.",
-        "examples": [
-            {
-                "word": "本",
-                "reading": "ほん",
-                "meaning": "Sách",
-                "meaningEn": "Book"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "毎",
-        "strokeCount": 6,
-        "onyomi": "MAI",
-        "kunyomi": "",
-        "meaning": "Mỗi (mỗi)",
-        "meaningEn": "Every",
-        "mnemonic_vi": "Người mẹ (母) luôn chăm sóc con MỖI ngày.",
-        "mnemonic_en": "A mother (母) doing things EVERY day.",
-        "examples": [
-            {
-                "word": "毎日",
-                "reading": "まいにち",
-                "meaning": "Mỗi ngày",
-                "meaningEn": "Every day"
-            },
-            {
-                "word": "毎月",
-                "reading": "まいつき",
-                "meaning": "Mỗi tháng",
-                "meaningEn": "Every month"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 12,
-        "character": "何",
-        "strokeCount": 7,
-        "onyomi": "KA",
-        "kunyomi": "nani, nan",
-        "meaning": "Hà (cái gì)",
-        "meaningEn": "What",
-        "mnemonic_vi": "Người vác vật gì đó trên vai hỏi 'Cái gì?'.",
-        "mnemonic_en": "A person carrying something asking 'WHAT?'.",
-        "examples": [
-            {
-                "word": "何人",
-                "reading": "なんにん",
-                "meaning": "Mấy người",
-                "meaningEn": "How many people"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 12,
+    "character": "父",
+    "strokeCount": 4,
+    "onyomi": "FU",
+    "kunyomi": "chichi",
+    "meaning": "Phụ (bố)",
+    "meaningEn": "Father",
+    "mnemonic_vi": "Hình ảnh khuôn mặt với hai cái ria mép của người cha.",
+    "mnemonic_en": "A face with two whiskers showing authority.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v032",
+        "sourceSenseId": "n5_l07_s032"
+      },
+      {
+        "sourceVocabId": "n5_l07_v034",
+        "sourceSenseId": "n5_l07_s034"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "母",
+    "strokeCount": 5,
+    "onyomi": "BO",
+    "kunyomi": "haha",
+    "meaning": "Mẫu (mẹ)",
+    "meaningEn": "Mother",
+    "mnemonic_vi": "Người mẹ với hai bầu sữa đang ôm ấp con.",
+    "mnemonic_en": "A mother nursing her child.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v033",
+        "sourceSenseId": "n5_l07_s033"
+      },
+      {
+        "sourceVocabId": "n5_l07_v035",
+        "sourceSenseId": "n5_l07_s035"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "先",
+    "strokeCount": 6,
+    "onyomi": "SEN",
+    "kunyomi": "saki",
+    "meaning": "Tiên (trước)",
+    "meaningEn": "Previous",
+    "mnemonic_vi": "Người đi đầu dẫn đường.",
+    "mnemonic_en": "Someone moving ahead to lead.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l05_v025",
+        "sourceSenseId": "n5_l05_s025"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "生",
+    "strokeCount": 5,
+    "onyomi": "SEI",
+    "kunyomi": "u-mareru",
+    "meaning": "Sinh (sinh ra)",
+    "meaningEn": "Birth",
+    "mnemonic_vi": "Mầm cây nảy mầm từ đất.",
+    "mnemonic_en": "A plant sprouting from the earth.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l22_v005",
+        "sourceSenseId": "n5_l22_s005"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "学",
+    "strokeCount": 8,
+    "onyomi": "GAKU",
+    "kunyomi": "mana-bu",
+    "meaning": "Học (học)",
+    "meaningEn": "Study",
+    "mnemonic_vi": "Trẻ con đi học dưới mái nhà.",
+    "mnemonic_en": "A child studying under a roof.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l01_v009",
+        "sourceSenseId": "n5_l01_s009"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "校",
+    "strokeCount": 10,
+    "onyomi": "KOU",
+    "kunyomi": "",
+    "meaning": "Hiệu (trường học)",
+    "meaningEn": "School",
+    "mnemonic_vi": "Ngôi trường được làm từ gỗ (Mộc 木) nơi mọi người tụ họp.",
+    "mnemonic_en": "A wooden building where people gather.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l05_v004",
+        "sourceSenseId": "n5_l05_s004"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "友",
+    "strokeCount": 4,
+    "onyomi": "YUU",
+    "kunyomi": "tomo",
+    "meaning": "Hữu (bạn)",
+    "meaningEn": "Friend",
+    "mnemonic_vi": "Tay bắt mặt mừng cùng bạn bè.",
+    "mnemonic_en": "Hand in hand with a friend.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l07_v055",
+        "sourceSenseId": "n5_l07_s055"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "本",
+    "strokeCount": 5,
+    "onyomi": "HON",
+    "kunyomi": "moto",
+    "meaning": "Bản (sách)",
+    "meaningEn": "Book",
+    "mnemonic_vi": "Đánh dấu dưới gốc cây để tìm căn bản làm sách.",
+    "mnemonic_en": "Marking the base of a tree to find its roots.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l02_v007",
+        "sourceSenseId": "n5_l02_s007"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "毎",
+    "strokeCount": 6,
+    "onyomi": "MAI",
+    "kunyomi": "",
+    "meaning": "Mỗi (mỗi)",
+    "meaningEn": "Every",
+    "mnemonic_vi": "Người mẹ (母) luôn chăm sóc con MỖI ngày.",
+    "mnemonic_en": "A mother (母) doing things EVERY day.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l04_v038",
+        "sourceSenseId": "n5_l04_s038"
+      },
+      {
+        "sourceVocabId": "n4_l36_v011",
+        "sourceSenseId": "n4_l36_s011"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 12,
+    "character": "何",
+    "strokeCount": 7,
+    "onyomi": "KA",
+    "kunyomi": "nani, nan",
+    "meaning": "Hà (cái gì)",
+    "meaningEn": "What",
+    "mnemonic_vi": "Người vác vật gì đó trên vai hỏi 'Cái gì?'.",
+    "mnemonic_en": "A person carrying something asking 'WHAT?'.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l12_v056",
+        "sourceSenseId": "n5_l12_s056"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

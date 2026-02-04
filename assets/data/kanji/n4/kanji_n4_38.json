@@ -1,94 +1,82 @@
 [
-    {
-        "lessonId": 38,
-        "character": "加",
-        "strokeCount": 5,
-        "onyomi": "KA",
-        "kunyomi": "kuwa-eru",
-        "meaning": "Gia (thêm vào)",
-        "meaningEn": "Add, Join",
-        "mnemonic_vi": "Dùng Lực (力) và Miệng (Khẩu 口) để gia tăng số lượng - THÊM VÀO.",
-        "mnemonic_en": "Using muscle (力) and speech (口) to ADD.",
-        "examples": [
-            {
-                "word": "参加します",
-                "reading": "さんかします",
-                "meaning": "Tham gia",
-                "meaningEn": "Join, Participate"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 38,
-        "character": "申",
-        "strokeCount": 5,
-        "onyomi": "SHIN",
-        "kunyomi": "mou-su",
-        "meaning": "Thân (nói - khiêm nhường)",
-        "meaningEn": "Say (Humble)",
-        "mnemonic_vi": "Một đường kẻ xuyên suốt - lời nói THẲNG thắn.",
-        "mnemonic_en": "A straight line or a report going through.",
-        "examples": [
-            {
-                "word": "申します",
-                "reading": "もうします",
-                "meaning": "Tên là ~ (khiêm nhường)",
-                "meaningEn": "Say, Be called (Humble)"
-            },
-            {
-                "word": "申し込み",
-                "reading": "もうしこみ",
-                "meaning": "Đăng ký",
-                "meaningEn": "Application"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 38,
-        "character": "込",
-        "strokeCount": 5,
-        "onyomi": "",
-        "kunyomi": "ko-mu",
-        "meaning": "Vào (đông đúc)",
-        "meaningEn": "Crowded, Into",
-        "mnemonic_vi": "Đi (Sước 辶) vào nơi có nhiều người - ĐÔNG ĐÚC.",
-        "mnemonic_en": "Moving (辶) into a space or it becoming CROWDED.",
-        "examples": [
-            {
-                "word": "申し込み",
-                "reading": "もうしこみ",
-                "meaning": "Đăng ký",
-                "meaningEn": "Application"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 38,
-        "character": "伝",
-        "strokeCount": 6,
-        "onyomi": "DEN",
-        "kunyomi": "tsuta-eru",
-        "meaning": "Truyền (truyền đạt)",
-        "meaningEn": "Transmit",
-        "mnemonic_vi": "Người (Nhân 亻) dùng bánh xe (Chuyên 専) để TRUYỀN tin.",
-        "mnemonic_en": "A person (亻) passing things on a roll (専).",
-        "examples": [
-            {
-                "word": "伝えます",
-                "reading": "つたえます",
-                "meaning": "Truyền đạt, nhắn lại",
-                "meaningEn": "Convey, Report"
-            },
-            {
-                "word": "手伝います",
-                "reading": "てつだいます",
-                "meaning": "Giúp đỡ",
-                "meaningEn": "Help"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 38,
+    "character": "加",
+    "strokeCount": 5,
+    "onyomi": "KA",
+    "kunyomi": "kuwa-eru",
+    "meaning": "Gia (thêm vào)",
+    "meaningEn": "Add, Join",
+    "mnemonic_vi": "Dùng Lực (力) và Miệng (Khẩu 口) để gia tăng số lượng - THÊM VÀO.",
+    "mnemonic_en": "Using muscle (力) and speech (口) to ADD.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l38_v047",
+        "sourceSenseId": "n4_l38_s047"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 38,
+    "character": "申",
+    "strokeCount": 5,
+    "onyomi": "SHIN",
+    "kunyomi": "mou-su",
+    "meaning": "Thân (nói - khiêm nhường)",
+    "meaningEn": "Say (Humble)",
+    "mnemonic_vi": "Một đường kẻ xuyên suốt - lời nói THẲNG thắn.",
+    "mnemonic_en": "A straight line or a report going through.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l50_v004",
+        "sourceSenseId": "n4_l50_s004"
+      },
+      {
+        "sourceVocabId": "n4_l40_v021",
+        "sourceSenseId": "n4_l40_s021"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 38,
+    "character": "込",
+    "strokeCount": 5,
+    "onyomi": "",
+    "kunyomi": "ko-mu",
+    "meaning": "Vào (đông đúc)",
+    "meaningEn": "Crowded, Into",
+    "mnemonic_vi": "Đi (Sước 辶) vào nơi có nhiều người - ĐÔNG ĐÚC.",
+    "mnemonic_en": "Moving (辶) into a space or it becoming CROWDED.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l40_v021",
+        "sourceSenseId": "n4_l40_s021"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 38,
+    "character": "伝",
+    "strokeCount": 6,
+    "onyomi": "DEN",
+    "kunyomi": "tsuta-eru",
+    "meaning": "Truyền (truyền đạt)",
+    "meaningEn": "Transmit",
+    "mnemonic_vi": "Người (Nhân 亻) dùng bánh xe (Chuyên 専) để TRUYỀN tin.",
+    "mnemonic_en": "A person (亻) passing things on a roll (専).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l33_v008",
+        "sourceSenseId": "n4_l33_s008"
+      },
+      {
+        "sourceVocabId": "n5_l14_v011",
+        "sourceSenseId": "n5_l14_s011"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

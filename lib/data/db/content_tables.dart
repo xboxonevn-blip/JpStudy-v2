@@ -10,6 +10,9 @@ class Vocab extends Table {
   TextColumn get meaning => text()(); // Vietnamese
   TextColumn get meaningEn => text().nullable()(); // English
   TextColumn get kanjiMeaning => text().nullable()();
+  // Back-reference to normalized vocab assets for cross-dataset linking.
+  TextColumn get sourceVocabId => text().nullable()();
+  TextColumn get sourceSenseId => text().nullable()();
   TextColumn get level => text()();
   TextColumn get tags => text().nullable()();
 

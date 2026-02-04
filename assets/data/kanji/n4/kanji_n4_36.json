@@ -1,180 +1,158 @@
 [
-    {
-        "lessonId": 36,
-        "character": "石",
-        "strokeCount": 5,
-        "onyomi": "SEKI",
-        "kunyomi": "ishi",
-        "meaning": "Thạch (đá)",
-        "meaningEn": "Stone",
-        "mnemonic_vi": "Một vật nằm dưới vách núi (Hán 厂) có miệng (Khẩu 口) là hòn ĐÁ.",
-        "mnemonic_en": "Something under a cliff (厂) that looks like a mouth - a STONE.",
-        "examples": [
-            {
-                "word": "石",
-                "reading": "いし",
-                "meaning": "Hòn đá",
-                "meaningEn": "Stone"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 36,
-        "character": "油",
-        "strokeCount": 8,
-        "onyomi": "YU",
-        "kunyomi": "abura",
-        "meaning": "Du (dầu)",
-        "meaningEn": "Oil",
-        "mnemonic_vi": "Nước (Thủy 氵) chảy ra từ bình (Do 由) là DẦU.",
-        "mnemonic_en": "Liquid (氵) coming from a container (由) - OIL.",
-        "examples": [
-            {
-                "word": "油",
-                "reading": "あぶら",
-                "meaning": "Dầu",
-                "meaningEn": "Oil"
-            },
-            {
-                "word": "しょう油",
-                "reading": "しょうゆ",
-                "meaning": "Nước tương",
-                "meaningEn": "Soy sauce"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 36,
-        "character": "原",
-        "strokeCount": 10,
-        "onyomi": "GEN",
-        "kunyomi": "hara",
-        "meaning": "Nguyên (cánh đồng, nguyên nhân)",
-        "meaningEn": "Field, Origin",
-        "mnemonic_vi": "Nguồn nước (Bạch 白 - biến thể) chảy ra từ dưới vách núi là NGUYÊN nhân.",
-        "mnemonic_en": "A spring flowing from under a cliff (厂) - ORIGIN.",
-        "examples": [
-            {
-                "word": "原因",
-                "reading": "げんいん",
-                "meaning": "Nguyên nhân",
-                "meaningEn": "Cause"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 36,
-        "character": "輸",
-        "strokeCount": 16,
-        "onyomi": "YU",
-        "kunyomi": "",
-        "meaning": "Du (vận chuyển)",
-        "meaningEn": "Transport",
-        "mnemonic_vi": "Chiếc xe (Xa 車) chở vật phẩm đi theo nhóm (Du 兪) để VẬN CHUYỂN.",
-        "mnemonic_en": "A vehicle (車) used for TRANSPORTING goods.",
-        "examples": [
-            {
-                "word": "輸出",
-                "reading": "ゆしゅつ",
-                "meaning": "Xuất khẩu",
-                "meaningEn": "Export"
-            },
-            {
-                "word": "輸入",
-                "reading": "ゆにゅう",
-                "meaning": "Nhập khẩu",
-                "meaningEn": "Import"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 36,
-        "character": "呼",
-        "strokeCount": 8,
-        "onyomi": "KO",
-        "kunyomi": "yo-bu",
-        "meaning": "Hô (gọi)",
-        "meaningEn": "Call",
-        "mnemonic_vi": "Dùng Miệng (Khẩu 口) để hét to (Hồ 乎) là GỌI.",
-        "mnemonic_en": "Using the mouth (口) to give a loud CALL.",
-        "examples": [
-            {
-                "word": "呼びます",
-                "reading": "よびます",
-                "meaning": "Gọi",
-                "meaningEn": "Call"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 36,
-        "character": "頼",
-        "strokeCount": 16,
-        "onyomi": "RAI",
-        "kunyomi": "tano-mu",
-        "meaning": "Lại (nhờ cậy)",
-        "meaningEn": "Request, Rely",
-        "mnemonic_vi": "Bó lúa (Thúc 束) quý giá ngang vỏ sò (Bối 貝) nên cần NHỜ CẬY bảo vệ.",
-        "mnemonic_en": "Counting on someone to guard the bundle (束).",
-        "examples": [
-            {
-                "word": "頼みます",
-                "reading": "たのみます",
-                "meaning": "Nhờ cậy",
-                "meaningEn": "Ask, Request"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 36,
-        "character": "注",
-        "strokeCount": 8,
-        "onyomi": "CHUU",
-        "kunyomi": "soso-gu",
-        "meaning": "Chú (rót, chú ý)",
-        "meaningEn": "Pour, Caution",
-        "mnemonic_vi": "Rót Nước (Thủy 氵) vào đèn (Chủ 主) cần sự CHÚ Ý.",
-        "mnemonic_en": "Pouring water (氵) with focus like a candle flame (主).",
-        "examples": [
-            {
-                "word": "注意",
-                "reading": "ちゅうい",
-                "meaning": "Chú ý",
-                "meaningEn": "Caution"
-            },
-            {
-                "word": "注文",
-                "reading": "ちゅうもん",
-                "meaning": "Đặt hàng / Gọi món",
-                "meaningEn": "Order"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 36,
-        "character": "招",
-        "strokeCount": 8,
-        "onyomi": "SHOU",
-        "kunyomi": "mane-ku",
-        "meaning": "Chiêu (mời)",
-        "meaningEn": "Invite",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) cầm đao (Chiêu 召) để MỜI khách.",
-        "mnemonic_en": "Using a hand (扌) to beckon or INVITE.",
-        "examples": [
-            {
-                "word": "招待します",
-                "reading": "しょうたいします",
-                "meaning": "Chiêu đãi, mời",
-                "meaningEn": "Invite"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 36,
+    "character": "石",
+    "strokeCount": 5,
+    "onyomi": "SEKI",
+    "kunyomi": "ishi",
+    "meaning": "Thạch (đá)",
+    "meaningEn": "Stone",
+    "mnemonic_vi": "Một vật nằm dưới vách núi (Hán 厂) có miệng (Khẩu 口) là hòn ĐÁ.",
+    "mnemonic_en": "Something under a cliff (厂) that looks like a mouth - a STONE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l32_v057",
+        "sourceSenseId": "n4_l32_s057"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 36,
+    "character": "油",
+    "strokeCount": 8,
+    "onyomi": "YU",
+    "kunyomi": "abura",
+    "meaning": "Du (dầu)",
+    "meaningEn": "Oil",
+    "mnemonic_vi": "Nước (Thủy 氵) chảy ra từ bình (Do 由) là DẦU.",
+    "mnemonic_en": "Liquid (氵) coming from a container (由) - OIL.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l36_v052",
+        "sourceSenseId": "n4_l36_s052"
+      },
+      {
+        "sourceVocabId": "n4_l36_v053",
+        "sourceSenseId": "n4_l36_s053"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 36,
+    "character": "原",
+    "strokeCount": 10,
+    "onyomi": "GEN",
+    "kunyomi": "hara",
+    "meaning": "Nguyên (cánh đồng, nguyên nhân)",
+    "meaningEn": "Field, Origin",
+    "mnemonic_vi": "Nguồn nước (Bạch 白 - biến thể) chảy ra từ dưới vách núi là NGUYÊN nhân.",
+    "mnemonic_en": "A spring flowing from under a cliff (厂) - ORIGIN.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l46_v007",
+        "sourceSenseId": "n4_l46_s007"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 36,
+    "character": "輸",
+    "strokeCount": 16,
+    "onyomi": "YU",
+    "kunyomi": "",
+    "meaning": "Du (vận chuyển)",
+    "meaningEn": "Transport",
+    "mnemonic_vi": "Chiếc xe (Xa 車) chở vật phẩm đi theo nhóm (Du 兪) để VẬN CHUYỂN.",
+    "mnemonic_en": "A vehicle (車) used for TRANSPORTING goods.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l36_v054",
+        "sourceSenseId": "n4_l36_s054"
+      },
+      {
+        "sourceVocabId": "n4_l36_v055",
+        "sourceSenseId": "n4_l36_s055"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 36,
+    "character": "呼",
+    "strokeCount": 8,
+    "onyomi": "KO",
+    "kunyomi": "yo-bu",
+    "meaning": "Hô (gọi)",
+    "meaningEn": "Call",
+    "mnemonic_vi": "Dùng Miệng (Khẩu 口) để hét to (Hồ 乎) là GỌI.",
+    "mnemonic_en": "Using the mouth (口) to give a loud CALL.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l41_v057",
+        "sourceSenseId": "n4_l41_s057"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 36,
+    "character": "頼",
+    "strokeCount": 16,
+    "onyomi": "RAI",
+    "kunyomi": "tano-mu",
+    "meaning": "Lại (nhờ cậy)",
+    "meaningEn": "Request, Rely",
+    "mnemonic_vi": "Bó lúa (Thúc 束) quý giá ngang vỏ sò (Bối 貝) nên cần NHỜ CẬY bảo vệ.",
+    "mnemonic_en": "Counting on someone to guard the bundle (束).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l37_v006",
+        "sourceSenseId": "n4_l37_s006"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 36,
+    "character": "注",
+    "strokeCount": 8,
+    "onyomi": "CHUU",
+    "kunyomi": "soso-gu",
+    "meaning": "Chú (rót, chú ý)",
+    "meaningEn": "Pour, Caution",
+    "mnemonic_vi": "Rót Nước (Thủy 氵) vào đèn (Chủ 主) cần sự CHÚ Ý.",
+    "mnemonic_en": "Pouring water (氵) with focus like a candle flame (主).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l35_v049",
+        "sourceSenseId": "n4_l35_s049"
+      },
+      {
+        "sourceVocabId": "n4_l36_v057",
+        "sourceSenseId": "n4_l36_s057"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 36,
+    "character": "招",
+    "strokeCount": 8,
+    "onyomi": "SHOU",
+    "kunyomi": "mane-ku",
+    "meaning": "Chiêu (mời)",
+    "meaningEn": "Invite",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) cầm đao (Chiêu 召) để MỜI khách.",
+    "mnemonic_en": "Using a hand (扌) to beckon or INVITE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l37_v005",
+        "sourceSenseId": "n4_l37_s005"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

@@ -30,7 +30,7 @@ class ContentDatabase extends _$ContentDatabase {
     : super(executor ?? _openContentConnection());
 
   @override
-  int get schemaVersion => 18;
+  int get schemaVersion => 19;
 
   @override
   MigrationStrategy get migration {
@@ -87,6 +87,12 @@ class ContentDatabase extends _$ContentDatabase {
         }
         if (from < 18) {
           // Backfill users who seeded during path-transition versions.
+          await _reseedMinnaVocabulary();
+        }
+        if (from < 19) {
+          await _addColumn(m, vocab, vocab.sourceVocabId);
+          await _addColumn(m, vocab, vocab.sourceSenseId);
+          // Populate new source IDs for existing installs.
           await _reseedMinnaVocabulary();
         }
       },
@@ -338,6 +344,8 @@ class ContentDatabase extends _$ContentDatabase {
           term: item['term'] as String,
           reading: Value(item['reading'] as String?),
           kanjiMeaning: Value(item['kanjiMeaning'] as String?),
+          sourceVocabId: Value(item['sourceVocabId'] as String?),
+          sourceSenseId: Value(item['sourceSenseId'] as String?),
           meaning: item['meaning_vi'] as String,
           meaningEn: Value(item['meaning_en'] as String?),
           level: item['level'] as String,
@@ -446,6 +454,8 @@ class ContentDatabase extends _$ContentDatabase {
           'term': term,
           'reading': _readNullableText(lemma, 'reading'),
           'kanjiMeaning': _readNullableText(lemma, 'kanjiMeaning'),
+          'sourceVocabId': vocabId,
+          'sourceSenseId': senseId,
           'meaning_vi': meaningVi,
           'meaning_en': _readNullableText(sense, 'meaningEn'),
           'level': level,
@@ -481,6 +491,8 @@ class ContentDatabase extends _$ContentDatabase {
         return;
       }
       final kanjiMeaning = _readNullableText(raw, 'kanjiMeaning');
+      final sourceVocabId = _readNullableText(raw, 'sourceVocabId');
+      final sourceSenseId = _readNullableText(raw, 'sourceSenseId');
       final meaningEn = _readNullableText(raw, 'meaning_en');
       final rowLevel = _firstNonEmpty([_readText(raw, 'level'), level]);
       final tags = _firstNonEmpty([_readText(raw, 'tags'), 'minna_$lessonId']);
@@ -489,6 +501,8 @@ class ContentDatabase extends _$ContentDatabase {
         'term': term,
         'reading': reading,
         'kanjiMeaning': kanjiMeaning,
+        'sourceVocabId': sourceVocabId,
+        'sourceSenseId': sourceSenseId,
         'meaning_vi': meaningVi,
         'meaning_en': meaningEn,
         'level': rowLevel,
@@ -570,13 +584,15 @@ class ContentDatabase extends _$ContentDatabase {
     final term = _readText(row, 'term');
     final reading = _readText(row, 'reading');
     final kanjiMeaning = _readText(row, 'kanjiMeaning');
+    final sourceVocabId = _readText(row, 'sourceVocabId');
+    final sourceSenseId = _readText(row, 'sourceSenseId');
     final meaningVi = _firstNonEmpty([
       _readText(row, 'meaning_vi'),
       _readText(row, 'meaning'),
     ]);
     final meaningEn = _readText(row, 'meaning_en');
     final level = _readText(row, 'level');
-    return '$term|$reading|$kanjiMeaning|$meaningVi|$meaningEn|$level';
+    return '$term|$reading|$kanjiMeaning|$sourceVocabId|$sourceSenseId|$meaningVi|$meaningEn|$level';
   }
 
   bool _containsPlaceholder(String? value) {
@@ -649,6 +665,8 @@ class _SeedVocabAggregate {
     required this.term,
     required this.reading,
     required this.kanjiMeaning,
+    required this.sourceVocabId,
+    required this.sourceSenseId,
     required this.meaningVi,
     required this.meaningEn,
     required this.level,
@@ -660,6 +678,8 @@ class _SeedVocabAggregate {
   final String term;
   final String? reading;
   final String? kanjiMeaning;
+  final String? sourceVocabId;
+  final String? sourceSenseId;
   final String meaningVi;
   final String? meaningEn;
   final String level;
@@ -670,6 +690,8 @@ class _SeedVocabAggregate {
       term: row['term'] as String,
       reading: row['reading'] as String?,
       kanjiMeaning: row['kanjiMeaning'] as String?,
+      sourceVocabId: row['sourceVocabId'] as String?,
+      sourceSenseId: row['sourceSenseId'] as String?,
       meaningVi: row['meaning_vi'] as String,
       meaningEn: row['meaning_en'] as String?,
       level: row['level'] as String,
@@ -686,6 +708,8 @@ class _SeedVocabAggregate {
       'term': term,
       'reading': reading,
       'kanjiMeaning': kanjiMeaning,
+      'sourceVocabId': sourceVocabId,
+      'sourceSenseId': sourceSenseId,
       'meaning_vi': meaningVi,
       'meaning_en': meaningEn,
       'level': level,

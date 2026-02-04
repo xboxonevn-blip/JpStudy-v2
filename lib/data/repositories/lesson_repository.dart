@@ -1164,25 +1164,7 @@ class LessonRepository {
     final rows = await (_contentDb.select(
       _contentDb.kanji,
     )..where((tbl) => tbl.lessonId.equals(lessonId))).get();
-
-    return rows.map((row) {
-      final examplesList = (json.decode(row.examplesJson) as List)
-          .map((e) => KanjiExample.fromJson(e))
-          .toList();
-
-      return KanjiItem(
-        id: row.id,
-        lessonId: row.lessonId,
-        character: row.character,
-        strokeCount: row.strokeCount,
-        onyomi: row.onyomi,
-        kunyomi: row.kunyomi,
-        meaning: row.meaning,
-        meaningEn: row.meaningEn,
-        examples: examplesList,
-        jlptLevel: row.jlptLevel,
-      );
-    }).toList();
+    return _mapKanjiRows(rows);
   }
 
   Future<List<KanjiItem>> fetchKanjiByIds(List<int> ids) async {
@@ -1190,10 +1172,85 @@ class LessonRepository {
     final rows = await (_contentDb.select(
       _contentDb.kanji,
     )..where((tbl) => tbl.id.isIn(ids))).get();
+    return _mapKanjiRows(rows);
+  }
 
-    return rows.map((row) {
-      final examplesList = (json.decode(row.examplesJson) as List)
-          .map((e) => KanjiExample.fromJson(e))
+  Future<List<KanjiItem>> fetchKanjiByLevel(String level) async {
+    final rows =
+        await (_contentDb.select(_contentDb.kanji)..where((tbl) {
+              return tbl.jlptLevel.equals(level);
+            }))
+            .get();
+    rows.sort((a, b) {
+      final byLesson = a.lessonId.compareTo(b.lessonId);
+      if (byLesson != 0) return byLesson;
+      return a.id.compareTo(b.id);
+    });
+    return _mapKanjiRows(rows);
+  }
+
+  Future<List<KanjiItem>> _mapKanjiRows(List<KanjiData> rows) async {
+    if (rows.isEmpty) return const [];
+
+    final sourceSenseIds = <String>{};
+    final sourceVocabIds = <String>{};
+    final parsed = <({KanjiData row, List<KanjiExample> examples})>[];
+
+    for (final row in rows) {
+      final examples = _decodeKanjiExamples(row.examplesJson);
+      for (final ex in examples) {
+        final senseId = ex.sourceSenseId?.trim();
+        final vocabId = ex.sourceVocabId?.trim();
+        if (senseId != null && senseId.isNotEmpty) {
+          sourceSenseIds.add(senseId);
+        }
+        if (vocabId != null && vocabId.isNotEmpty) {
+          sourceVocabIds.add(vocabId);
+        }
+      }
+      parsed.add((row: row, examples: examples));
+    }
+
+    final linkedVocabBySenseId = <String, VocabData>{};
+    final linkedVocabByVocabId = <String, VocabData>{};
+
+    if (sourceSenseIds.isNotEmpty || sourceVocabIds.isNotEmpty) {
+      final query = _contentDb.select(_contentDb.vocab);
+      if (sourceSenseIds.isNotEmpty && sourceVocabIds.isNotEmpty) {
+        query.where(
+          (tbl) =>
+              tbl.sourceSenseId.isIn(sourceSenseIds.toList()) |
+              tbl.sourceVocabId.isIn(sourceVocabIds.toList()),
+        );
+      } else if (sourceSenseIds.isNotEmpty) {
+        query.where((tbl) => tbl.sourceSenseId.isIn(sourceSenseIds.toList()));
+      } else {
+        query.where((tbl) => tbl.sourceVocabId.isIn(sourceVocabIds.toList()));
+      }
+
+      final linkedRows = await query.get();
+      for (final vocab in linkedRows) {
+        final senseId = vocab.sourceSenseId?.trim();
+        final vocabId = vocab.sourceVocabId?.trim();
+        if (senseId != null && senseId.isNotEmpty) {
+          linkedVocabBySenseId.putIfAbsent(senseId, () => vocab);
+        }
+        if (vocabId != null && vocabId.isNotEmpty) {
+          linkedVocabByVocabId.putIfAbsent(vocabId, () => vocab);
+        }
+      }
+    }
+
+    return parsed.map((entry) {
+      final row = entry.row;
+      final examples = entry.examples
+          .map(
+            (example) => _resolveKanjiExampleFromVocab(
+              example: example,
+              linkedVocabBySenseId: linkedVocabBySenseId,
+              linkedVocabByVocabId: linkedVocabByVocabId,
+            ),
+          )
           .toList();
 
       return KanjiItem(
@@ -1205,10 +1262,83 @@ class LessonRepository {
         kunyomi: row.kunyomi,
         meaning: row.meaning,
         meaningEn: row.meaningEn,
-        examples: examplesList,
+        examples: examples,
         jlptLevel: row.jlptLevel,
       );
     }).toList();
+  }
+
+  List<KanjiExample> _decodeKanjiExamples(String examplesJson) {
+    dynamic decoded;
+    try {
+      decoded = json.decode(examplesJson);
+    } catch (_) {
+      return const [];
+    }
+
+    if (decoded is! List) return const [];
+    return decoded
+        .whereType<dynamic>()
+        .map((item) {
+          if (item is Map<String, dynamic>) {
+            return KanjiExample.fromJson(item);
+          }
+          if (item is Map) {
+            final normalized = item.map(
+              (key, value) => MapEntry(key.toString(), value),
+            );
+            return KanjiExample.fromJson(normalized);
+          }
+          return const KanjiExample();
+        })
+        .where((example) => _isUsableKanjiExample(example))
+        .toList();
+  }
+
+  bool _isUsableKanjiExample(KanjiExample example) {
+    return example.word.trim().isNotEmpty ||
+        example.reading.trim().isNotEmpty ||
+        example.meaning.trim().isNotEmpty ||
+        example.hasSourceRef;
+  }
+
+  KanjiExample _resolveKanjiExampleFromVocab({
+    required KanjiExample example,
+    required Map<String, VocabData> linkedVocabBySenseId,
+    required Map<String, VocabData> linkedVocabByVocabId,
+  }) {
+    VocabData? linked;
+    final senseId = example.sourceSenseId?.trim();
+    if (senseId != null && senseId.isNotEmpty) {
+      linked = linkedVocabBySenseId[senseId];
+    }
+
+    final vocabId = example.sourceVocabId?.trim();
+    if (linked == null && vocabId != null && vocabId.isNotEmpty) {
+      linked = linkedVocabByVocabId[vocabId];
+    }
+
+    if (linked == null) {
+      return example;
+    }
+
+    final word = linked.term.trim().isEmpty ? example.word : linked.term;
+    final reading = (linked.reading ?? '').trim().isEmpty
+        ? example.reading
+        : linked.reading!;
+    final meaning = linked.meaning.trim().isEmpty
+        ? example.meaning
+        : linked.meaning;
+    final meaningEn = (linked.meaningEn ?? '').trim().isEmpty
+        ? example.meaningEn
+        : linked.meaningEn;
+
+    return example.resolvedWith(
+      word: word,
+      reading: reading,
+      meaning: meaning,
+      meaningEn: meaningEn,
+    );
   }
 
   Future<List<KanjiItem>> fetchDueKanji(int lessonId) async {

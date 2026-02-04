@@ -1,114 +1,100 @@
 [
-    {
-        "lessonId": 49,
-        "character": "様",
-        "strokeCount": 14,
-        "onyomi": "YOU",
-        "kunyomi": "sama",
-        "meaning": "Dạng (ngài, hình dạng)",
-        "meaningEn": "Mr./Ms., Appearance",
-        "mnemonic_vi": "Dùng Cây (Mộc 木) để tạc hình con cừu (Dương 羊) có hình DẠNG đẹp.",
-        "mnemonic_en": "A tree (木) carved into the shape of a sheep (羊) - APPEARANCE.",
-        "examples": [
-            {
-                "word": "〜様",
-                "reading": "〜さま",
-                "meaning": "Ngài ~",
-                "meaningEn": "Mr./Ms. ~"
-            },
-            {
-                "word": "様子",
-                "reading": "ようす",
-                "meaning": "Tình trạng, dáng vẻ",
-                "meaningEn": "Situation, Appearance"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 49,
-        "character": "拝",
-        "strokeCount": 8,
-        "onyomi": "HAI",
-        "kunyomi": "oga-mu",
-        "meaning": "Bái (khiêm nhường)",
-        "meaningEn": "Worship, Humble",
-        "mnemonic_vi": "Dùng Tay (Thủ 扌) chắp lại để BÁI lễ.",
-        "mnemonic_en": "Using hands (扌) to WORSHIP.",
-        "examples": [
-            {
-                "word": "拝見します",
-                "reading": "はいけんします",
-                "meaning": "Xem (khiêm nhường)",
-                "meaningEn": "See (Humble)"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 49,
-        "character": "伺",
-        "strokeCount": 7,
-        "onyomi": "SHI",
-        "kunyomi": "ukaga-u",
-        "meaning": "Tứ (hỏi, đến thăm)",
-        "meaningEn": "Visit, Ask (Humble)",
-        "mnemonic_vi": "Người (Nhân 亻) đứng đợi một cách tôn kính để HỎI.",
-        "mnemonic_en": "A person (亻) waiting respectfully to ASK.",
-        "examples": [
-            {
-                "word": "伺います",
-                "reading": "うかがいます",
-                "meaning": "Đến thăm, hỏi (khiêm nhường)",
-                "meaningEn": "Visit, Ask (Humble)"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 49,
-        "character": "召",
-        "strokeCount": 5,
-        "onyomi": "SHOU",
-        "kunyomi": "me-su",
-        "meaning": "Triệu (ăn uống - tôn kính)",
-        "meaningEn": "Eat, Wear (Honorific)",
-        "mnemonic_vi": "Mở miệng (Khẩu 口) dùng đao (Chiêu 召) để mời bậc trên ĂN - tôn kính.",
-        "mnemonic_en": "Inviting (召) someone to eat with their mouth (口).",
-        "examples": [
-            {
-                "word": "召し上がります",
-                "reading": "めしあがります",
-                "meaning": "Ăn, uống (tôn kính)",
-                "meaningEn": "Eat, Drink (Honorific)"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 49,
-        "character": "存",
-        "strokeCount": 6,
-        "onyomi": "ZON, SON",
-        "kunyomi": "",
-        "meaning": "Tồn (biết - khiêm nhường, tồn tại)",
-        "meaningEn": "Know (Humble), Exist",
-        "mnemonic_vi": "Đứa trẻ (Tử 子) đứng bên gác nhỏ - sự TỒN TẠI.",
-        "mnemonic_en": "A child (子) existing in a place.",
-        "examples": [
-            {
-                "word": "ご存じです",
-                "reading": "ごぞんじです",
-                "meaning": "Biết (tôn kính)",
-                "meaningEn": "Know (Honorific)"
-            },
-            {
-                "word": "存じています",
-                "reading": "ぞんじています",
-                "meaning": "Biết (khiêm nhường)",
-                "meaningEn": "Know (Humble)"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 49,
+    "character": "様",
+    "strokeCount": 14,
+    "onyomi": "YOU",
+    "kunyomi": "sama",
+    "meaning": "Dạng (ngài, hình dạng)",
+    "meaningEn": "Mr./Ms., Appearance",
+    "mnemonic_vi": "Dùng Cây (Mộc 木) để tạc hình con cừu (Dương 羊) có hình DẠNG đẹp.",
+    "mnemonic_en": "A tree (木) carved into the shape of a sheep (羊) - APPEARANCE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l49_v038",
+        "sourceSenseId": "n4_l49_s038"
+      },
+      {
+        "sourceVocabId": "n4_l40_v047",
+        "sourceSenseId": "n4_l40_s047"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 49,
+    "character": "拝",
+    "strokeCount": 8,
+    "onyomi": "HAI",
+    "kunyomi": "oga-mu",
+    "meaning": "Bái (khiêm nhường)",
+    "meaningEn": "Worship, Humble",
+    "mnemonic_vi": "Dùng Tay (Thủ 扌) chắp lại để BÁI lễ.",
+    "mnemonic_en": "Using hands (扌) to WORSHIP.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l50_v006",
+        "sourceSenseId": "n4_l50_s006"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 49,
+    "character": "伺",
+    "strokeCount": 7,
+    "onyomi": "SHI",
+    "kunyomi": "ukaga-u",
+    "meaning": "Tứ (hỏi, đến thăm)",
+    "meaningEn": "Visit, Ask (Humble)",
+    "mnemonic_vi": "Người (Nhân 亻) đứng đợi một cách tôn kính để HỎI.",
+    "mnemonic_en": "A person (亻) waiting respectfully to ASK.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l39_v039",
+        "sourceSenseId": "n4_l39_s039"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 49,
+    "character": "召",
+    "strokeCount": 5,
+    "onyomi": "SHOU",
+    "kunyomi": "me-su",
+    "meaning": "Triệu (ăn uống - tôn kính)",
+    "meaningEn": "Eat, Wear (Honorific)",
+    "mnemonic_vi": "Mở miệng (Khẩu 口) dùng đao (Chiêu 召) để mời bậc trên ĂN - tôn kính.",
+    "mnemonic_en": "Inviting (召) someone to eat with their mouth (口).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l49_v006",
+        "sourceSenseId": "n4_l49_s006"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 49,
+    "character": "存",
+    "strokeCount": 6,
+    "onyomi": "ZON, SON",
+    "kunyomi": "",
+    "meaning": "Tồn (biết - khiêm nhường, tồn tại)",
+    "meaningEn": "Know (Humble), Exist",
+    "mnemonic_vi": "Đứa trẻ (Tử 子) đứng bên gác nhỏ - sự TỒN TẠI.",
+    "mnemonic_en": "A child (子) existing in a place.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l49_v039",
+        "sourceSenseId": "n4_l49_s039"
+      },
+      {
+        "sourceVocabId": "n4_l49_v040",
+        "sourceSenseId": "n4_l49_s040"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

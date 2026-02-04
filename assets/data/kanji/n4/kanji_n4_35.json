@@ -1,106 +1,90 @@
 [
-    {
-        "lessonId": 35,
-        "character": "文",
-        "strokeCount": 4,
-        "onyomi": "BUN, MON",
-        "kunyomi": "",
-        "meaning": "Văn (văn chương)",
-        "meaningEn": "Sentence, Literature",
-        "mnemonic_vi": "Một người đang đứng dang chân để viết VĂN.",
-        "mnemonic_en": "A person displaying their thoughts - LITERATURE.",
-        "examples": [
-            {
-                "word": "作文",
-                "reading": "さくぶん",
-                "meaning": "Bài văn",
-                "meaningEn": "Composition"
-            },
-            {
-                "word": "文学",
-                "reading": "ぶんがく",
-                "meaning": "Văn học",
-                "meaningEn": "Literature"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 35,
-        "character": "法",
-        "strokeCount": 8,
-        "onyomi": "HOU",
-        "kunyomi": "",
-        "meaning": "Pháp (phương pháp)",
-        "meaningEn": "Law, Method",
-        "mnemonic_vi": "Lẽ phải (Khứ 去) như dòng Nước (Thủy 氵) chảy - PHÁP luật.",
-        "mnemonic_en": "The flow (氵) of what is right (去) - LAW.",
-        "examples": [
-            {
-                "word": "文法",
-                "reading": "ぶんぽう",
-                "meaning": "Ngữ pháp",
-                "meaningEn": "Grammar"
-            },
-            {
-                "word": "方法",
-                "reading": "ほうほう",
-                "meaning": "Phương pháp",
-                "meaningEn": "Method"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 35,
-        "character": "意",
-        "strokeCount": 13,
-        "onyomi": "I",
-        "kunyomi": "",
-        "meaning": "Ý (ý nghĩa)",
-        "meaningEn": "Mind, Meaning",
-        "mnemonic_vi": "Âm thanh (Âm 音) phát ra từ trái tim (Tâm 心) là Ý nghĩa.",
-        "mnemonic_en": "Sounds (音) from the heart (心) carry MEANING.",
-        "examples": [
-            {
-                "word": "意味",
-                "reading": "いみ",
-                "meaning": "Ý nghĩa",
-                "meaningEn": "Meaning"
-            },
-            {
-                "word": "注意",
-                "reading": "ちゅうい",
-                "meaning": "Chú ý",
-                "meaningEn": "Caution"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 35,
-        "character": "味",
-        "strokeCount": 8,
-        "onyomi": "MI",
-        "kunyomi": "aji",
-        "meaning": "Vị (hương vị)",
-        "meaningEn": "Taste",
-        "mnemonic_vi": "Dùng Miệng (Khẩu 口) để nếm vật chưa (Vị 未) chín - HƯƠNG VỊ.",
-        "mnemonic_en": "Using the mouth (口) for something not yet (未) ripe - TASTE.",
-        "examples": [
-            {
-                "word": "味",
-                "reading": "あじ",
-                "meaning": "Vị",
-                "meaningEn": "Taste"
-            },
-            {
-                "word": "意味",
-                "reading": "いみ",
-                "meaning": "Ý nghĩa",
-                "meaningEn": "Meaning"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 35,
+    "character": "文",
+    "strokeCount": 4,
+    "onyomi": "BUN, MON",
+    "kunyomi": "",
+    "meaning": "Văn (văn chương)",
+    "meaningEn": "Sentence, Literature",
+    "mnemonic_vi": "Một người đang đứng dang chân để viết VĂN.",
+    "mnemonic_en": "A person displaying their thoughts - LITERATURE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l31_v008",
+        "sourceSenseId": "n4_l31_s008"
+      },
+      {
+        "sourceVocabId": "n4_l47_v018",
+        "sourceSenseId": "n4_l47_s018"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 35,
+    "character": "法",
+    "strokeCount": 8,
+    "onyomi": "HOU",
+    "kunyomi": "",
+    "meaning": "Pháp (phương pháp)",
+    "meaningEn": "Law, Method",
+    "mnemonic_vi": "Lẽ phải (Khứ 去) như dòng Nước (Thủy 氵) chảy - PHÁP luật.",
+    "mnemonic_en": "The flow (氵) of what is right (去) - LAW.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l41_v014",
+        "sourceSenseId": "n4_l41_s014"
+      },
+      {
+        "sourceVocabId": "n4_l35_v024",
+        "sourceSenseId": "n4_l35_s024"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 35,
+    "character": "意",
+    "strokeCount": 13,
+    "onyomi": "I",
+    "kunyomi": "",
+    "meaning": "Ý (ý nghĩa)",
+    "meaningEn": "Mind, Meaning",
+    "mnemonic_vi": "Âm thanh (Âm 音) phát ra từ trái tim (Tâm 心) là Ý nghĩa.",
+    "mnemonic_en": "Sounds (音) from the heart (心) carry MEANING.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l24_v012",
+        "sourceSenseId": "n5_l24_s012"
+      },
+      {
+        "sourceVocabId": "n4_l35_v049",
+        "sourceSenseId": "n4_l35_s049"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 35,
+    "character": "味",
+    "strokeCount": 8,
+    "onyomi": "MI",
+    "kunyomi": "aji",
+    "meaning": "Vị (hương vị)",
+    "meaningEn": "Taste",
+    "mnemonic_vi": "Dùng Miệng (Khẩu 口) để nếm vật chưa (Vị 未) chín - HƯƠNG VỊ.",
+    "mnemonic_en": "Using the mouth (口) for something not yet (未) ripe - TASTE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l28_v019",
+        "sourceSenseId": "n4_l28_s019"
+      },
+      {
+        "sourceVocabId": "n5_l24_v012",
+        "sourceSenseId": "n5_l24_s012"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

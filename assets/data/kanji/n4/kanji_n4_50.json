@@ -1,28 +1,24 @@
 [
-    {
-        "lessonId": 50,
-        "character": "参",
-        "strokeCount": 8,
-        "onyomi": "SAN",
-        "kunyomi": "mai-rimasu",
-        "meaning": "Tham (tham gia, đi)",
-        "meaningEn": "Participate, Visit",
-        "mnemonic_vi": "Những ngôi sao trên trời rủ nhau THAM GIA buổi lễ.",
-        "mnemonic_en": "Stars in the sky PARTICIPATING together.",
-        "examples": [
-            {
-                "word": "参ります",
-                "reading": "まいります",
-                "meaning": "Đi, đến (khiêm nhường ngữ)",
-                "meaningEn": "Go, Come (Humble)"
-            },
-            {
-                "word": "参加します",
-                "reading": "さんかします",
-                "meaning": "Tham gia",
-                "meaningEn": "Participate"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 50,
+    "character": "参",
+    "strokeCount": 8,
+    "onyomi": "SAN",
+    "kunyomi": "mai-rimasu",
+    "meaning": "Tham (tham gia, đi)",
+    "meaningEn": "Participate, Visit",
+    "mnemonic_vi": "Những ngôi sao trên trời rủ nhau THAM GIA buổi lễ.",
+    "mnemonic_en": "Stars in the sky PARTICIPATING together.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l50_v001",
+        "sourceSenseId": "n4_l50_s001"
+      },
+      {
+        "sourceVocabId": "n4_l38_v047",
+        "sourceSenseId": "n4_l38_s047"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

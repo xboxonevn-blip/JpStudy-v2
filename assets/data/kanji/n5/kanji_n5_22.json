@@ -1,126 +1,108 @@
 [
-    {
-        "lessonId": 22,
-        "character": "特",
-        "strokeCount": 10,
-        "onyomi": "TOKU",
-        "kunyomi": "",
-        "meaning": "Đặc (đặc biệt)",
-        "meaningEn": "Special",
-        "mnemonic_vi": "Con Bò (Ngưu 牛) ở trong Chùa (Tự 寺) là một điều ĐẶC BIỆT.",
-        "mnemonic_en": "A Cow (牛) in a Temple (寺) is EXTRA SPECIAL.",
-        "examples": [
-            {
-                "word": "特別",
-                "reading": "とくべつ",
-                "meaning": "Đặc biệt",
-                "meaningEn": "Special"
-            },
-            {
-                "word": "急行",
-                "reading": "きゅうこう",
-                "meaning": "Tàu tốc hành",
-                "meaningEn": "Express train"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 22,
-        "character": "急",
-        "strokeCount": 9,
-        "onyomi": "KYUU",
-        "kunyomi": "iso-gu",
-        "meaning": "Cấp (khẩn cấp, vội)",
-        "meaningEn": "Hurry, Emergency",
-        "mnemonic_vi": "Tay cầm cây quạt che chắn cho Trái tim (Tâm 心) đang VỘI vã.",
-        "mnemonic_en": "Heart (心) rushing in a hurry.",
-        "examples": [
-            {
-                "word": "急ぎます",
-                "reading": "いそぎます",
-                "meaning": "Vội, gấp",
-                "meaningEn": "Hurry"
-            },
-            {
-                "word": "急に",
-                "reading": "きゅうに",
-                "meaning": "Đột nhiên",
-                "meaningEn": "Suddenly"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 22,
-        "character": "線",
-        "strokeCount": 15,
-        "onyomi": "SEN",
-        "kunyomi": "",
-        "meaning": "Tuyến (đường dây)",
-        "meaningEn": "Line",
-        "mnemonic_vi": "Sợi tơ (Mịch 糸) trắng (Bạch 白) chảy qua như dòng suối (Thủy 水) tạo ra đường TUYẾN.",
-        "mnemonic_en": "A white (白) thread (糸) like flowing water (水) forming a LINE.",
-        "examples": [
-            {
-                "word": "線",
-                "reading": "せん",
-                "meaning": "Đường dây, tuyến",
-                "meaningEn": "Line"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 22,
-        "character": "回",
-        "strokeCount": 6,
-        "onyomi": "KAI",
-        "kunyomi": "mawa-ru",
-        "meaning": "Hồi (xoay, lần)",
-        "meaningEn": "Turn, Times",
-        "mnemonic_vi": "Cái vòng nhỏ nằm trong cái vòng lớn - XOAY tròn.",
-        "mnemonic_en": "A circle within a circle representing a TURN.",
-        "examples": [
-            {
-                "word": "回します",
-                "reading": "まわします",
-                "meaning": "Vặn, xoay",
-                "meaningEn": "Turn"
-            },
-            {
-                "word": "一回",
-                "reading": "いっかい",
-                "meaning": "Một lần",
-                "meaningEn": "One time"
-            }
-        ],
-        "jlptLevel": "N5"
-    },
-    {
-        "lessonId": 22,
-        "character": "転",
-        "strokeCount": 11,
-        "onyomi": "TEN",
-        "kunyomi": "koro-bu",
-        "meaning": "Chuyển (lăn, chuyển động)",
-        "meaningEn": "Revolve, Turn",
-        "mnemonic_vi": "Chiếc xe (Xa 車) CHUYỂN động nhờ bánh xe quay tròn.",
-        "mnemonic_en": "A vehicle (車) turning its wheels to REVOLVE.",
-        "examples": [
-            {
-                "word": "運転します",
-                "reading": "うんてんします",
-                "meaning": "Lái xe",
-                "meaningEn": "Drive"
-            },
-            {
-                "word": "自転車",
-                "reading": "じてんしゃ",
-                "meaning": "Xe đạp",
-                "meaningEn": "Bicycle"
-            }
-        ],
-        "jlptLevel": "N5"
-    }
+  {
+    "lessonId": 22,
+    "character": "特",
+    "strokeCount": 10,
+    "onyomi": "TOKU",
+    "kunyomi": "",
+    "meaning": "Đặc (đặc biệt)",
+    "meaningEn": "Special",
+    "mnemonic_vi": "Con Bò (Ngưu 牛) ở trong Chùa (Tự 寺) là một điều ĐẶC BIỆT.",
+    "mnemonic_en": "A Cow (牛) in a Temple (寺) is EXTRA SPECIAL.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l36_v022",
+        "sourceSenseId": "n4_l36_s022"
+      },
+      {
+        "sourceVocabId": "n5_l05_v050",
+        "sourceSenseId": "n5_l05_s050"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 22,
+    "character": "急",
+    "strokeCount": 9,
+    "onyomi": "KYUU",
+    "kunyomi": "iso-gu",
+    "meaning": "Cấp (khẩn cấp, vội)",
+    "meaningEn": "Hurry, Emergency",
+    "mnemonic_vi": "Tay cầm cây quạt che chắn cho Trái tim (Tâm 心) đang VỘI vã.",
+    "mnemonic_en": "Heart (心) rushing in a hurry.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l14_v005",
+        "sourceSenseId": "n5_l14_s005"
+      },
+      {
+        "sourceVocabId": "n4_l40_v054",
+        "sourceSenseId": "n4_l40_s054"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 22,
+    "character": "線",
+    "strokeCount": 15,
+    "onyomi": "SEN",
+    "kunyomi": "",
+    "meaning": "Tuyến (đường dây)",
+    "meaningEn": "Line",
+    "mnemonic_vi": "Sợi tơ (Mịch 糸) trắng (Bạch 白) chảy qua như dòng suối (Thủy 水) tạo ra đường TUYẾN.",
+    "mnemonic_en": "A white (白) thread (糸) like flowing water (水) forming a LINE.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l34_v018",
+        "sourceSenseId": "n4_l34_s018"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 22,
+    "character": "回",
+    "strokeCount": 6,
+    "onyomi": "KAI",
+    "kunyomi": "mawa-ru",
+    "meaning": "Hồi (xoay, lần)",
+    "meaningEn": "Turn, Times",
+    "mnemonic_vi": "Cái vòng nhỏ nằm trong cái vòng lớn - XOAY tròn.",
+    "mnemonic_en": "A circle within a circle representing a TURN.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l23_v002",
+        "sourceSenseId": "n5_l23_s002"
+      },
+      {
+        "sourceVocabId": "n5_l22_v028",
+        "sourceSenseId": "n5_l22_s028"
+      }
+    ],
+    "jlptLevel": "N5"
+  },
+  {
+    "lessonId": 22,
+    "character": "転",
+    "strokeCount": 11,
+    "onyomi": "TEN",
+    "kunyomi": "koro-bu",
+    "meaning": "Chuyển (lăn, chuyển động)",
+    "meaningEn": "Revolve, Turn",
+    "mnemonic_vi": "Chiếc xe (Xa 車) CHUYỂN động nhờ bánh xe quay tròn.",
+    "mnemonic_en": "A vehicle (車) turning its wheels to REVOLVE.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l18_v008",
+        "sourceSenseId": "n5_l18_s008"
+      },
+      {
+        "sourceVocabId": "n5_l05_v014",
+        "sourceSenseId": "n5_l05_s014"
+      }
+    ],
+    "jlptLevel": "N5"
+  }
 ]

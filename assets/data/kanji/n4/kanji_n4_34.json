@@ -1,94 +1,82 @@
 [
-    {
-        "lessonId": 34,
-        "character": "以",
-        "strokeCount": 5,
-        "onyomi": "I",
-        "kunyomi": "",
-        "meaning": "Dĩ (lấy làm mốc)",
-        "meaningEn": "By means of",
-        "mnemonic_vi": "Người dùng cày lúa lấy làm mốc.",
-        "mnemonic_en": "Using a person and a tool as a reference point.",
-        "examples": [
-            {
-                "word": "以上",
-                "reading": "いじょう",
-                "meaning": "Trở lên, xin hết",
-                "meaningEn": "More than, That's all"
-            },
-            {
-                "word": "以外",
-                "reading": "いがい",
-                "meaning": "Ngoài ra",
-                "meaningEn": "Except"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 34,
-        "character": "屋",
-        "strokeCount": 9,
-        "onyomi": "OKU",
-        "kunyomi": "ya",
-        "meaning": "Ốc (nhà, cửa hàng)",
-        "meaningEn": "Shop, Roof",
-        "mnemonic_vi": "Xác chết (Xác 尸) đến (Chí 至) ngôi nhà - Ốc (nhà).",
-        "mnemonic_en": "A house/shop where people arrive (至).",
-        "examples": [
-            {
-                "word": "部屋",
-                "reading": "へや",
-                "meaning": "Căn phòng",
-                "meaningEn": "Room"
-            },
-            {
-                "word": "本屋",
-                "reading": "ほんや",
-                "meaning": "Hiệu sách",
-                "meaningEn": "Bookstore"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 34,
-        "character": "運",
-        "strokeCount": 12,
-        "onyomi": "UN",
-        "kunyomi": "hako-bu",
-        "meaning": "Vận (vận chuyển)",
-        "meaningEn": "Transport, Luck",
-        "mnemonic_vi": "Đi (Sước 辶) trên đường với Quân (軍) lương - VẬN chuyển.",
-        "mnemonic_en": "Carrying military goods (軍) on the road (辶).",
-        "examples": [
-            {
-                "word": "運動",
-                "reading": "うんどう",
-                "meaning": "Vận động",
-                "meaningEn": "Exercise"
-            }
-        ],
-        "jlptLevel": "N4"
-    },
-    {
-        "lessonId": 34,
-        "character": "考",
-        "strokeCount": 6,
-        "onyomi": "KOU",
-        "kunyomi": "kan-gaeru",
-        "meaning": "Khảo (suy nghĩ)",
-        "meaningEn": "Think",
-        "mnemonic_vi": "Người già SUY NGHĨ cạnh cây gậy.",
-        "mnemonic_en": "An elder thinking over time.",
-        "examples": [
-            {
-                "word": "考えます",
-                "reading": "かんがえます",
-                "meaning": "Suy nghĩ",
-                "meaningEn": "Think"
-            }
-        ],
-        "jlptLevel": "N4"
-    }
+  {
+    "lessonId": 34,
+    "character": "以",
+    "strokeCount": 5,
+    "onyomi": "I",
+    "kunyomi": "",
+    "meaning": "Dĩ (lấy làm mốc)",
+    "meaningEn": "By means of",
+    "mnemonic_vi": "Người dùng cày lúa lấy làm mốc.",
+    "mnemonic_en": "Using a person and a tool as a reference point.",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l34_v055",
+        "sourceSenseId": "n4_l34_s055"
+      },
+      {
+        "sourceVocabId": "n4_l34_v056",
+        "sourceSenseId": "n4_l34_s056"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 34,
+    "character": "屋",
+    "strokeCount": 9,
+    "onyomi": "OKU",
+    "kunyomi": "ya",
+    "meaning": "Ốc (nhà, cửa hàng)",
+    "meaningEn": "Shop, Roof",
+    "mnemonic_vi": "Xác chết (Xác 尸) đến (Chí 至) ngôi nhà - Ốc (nhà).",
+    "mnemonic_en": "A house/shop where people arrive (至).",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l03_v015",
+        "sourceSenseId": "n5_l03_s015"
+      },
+      {
+        "sourceVocabId": "n5_l10_v027",
+        "sourceSenseId": "n5_l10_s027"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 34,
+    "character": "運",
+    "strokeCount": 12,
+    "onyomi": "UN",
+    "kunyomi": "hako-bu",
+    "meaning": "Vận (vận chuyển)",
+    "meaningEn": "Transport, Luck",
+    "mnemonic_vi": "Đi (Sước 辶) trên đường với Quân (軍) lương - VẬN chuyển.",
+    "mnemonic_en": "Carrying military goods (軍) on the road (辶).",
+    "examples": [
+      {
+        "sourceVocabId": "n4_l34_v057",
+        "sourceSenseId": "n4_l34_s057"
+      }
+    ],
+    "jlptLevel": "N4"
+  },
+  {
+    "lessonId": 34,
+    "character": "考",
+    "strokeCount": 6,
+    "onyomi": "KOU",
+    "kunyomi": "kan-gaeru",
+    "meaning": "Khảo (suy nghĩ)",
+    "meaningEn": "Think",
+    "mnemonic_vi": "Người già SUY NGHĨ cạnh cây gậy.",
+    "mnemonic_en": "An elder thinking over time.",
+    "examples": [
+      {
+        "sourceVocabId": "n5_l25_v001",
+        "sourceSenseId": "n5_l25_s001"
+      }
+    ],
+    "jlptLevel": "N4"
+  }
 ]

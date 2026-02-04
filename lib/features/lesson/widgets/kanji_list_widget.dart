@@ -146,34 +146,46 @@ class KanjiListWidget extends ConsumerWidget {
                             language == AppLanguage.en ? 'Examples:' : 'Ví dụ:',
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          ...item.examples.map(
-                            (ex) => Padding(
+                          ...item.examples.map((ex) {
+                            final displayWord = ex.word.trim().isNotEmpty
+                                ? ex.word
+                                : (ex.sourceSenseId ?? ex.sourceVocabId ?? '-');
+                            final displayReading = ex.reading.trim();
+                            final resolvedMeaning = language == AppLanguage.en
+                                ? (ex.meaningEn ?? ex.meaning)
+                                : ex.meaning;
+                            final displayMeaning =
+                                resolvedMeaning.trim().isNotEmpty
+                                ? resolvedMeaning
+                                : '-';
+
+                            return Padding(
                               padding: const EdgeInsets.symmetric(vertical: 4),
                               child: Row(
                                 children: [
                                   Text(
-                                    ex.word,
+                                    displayWord,
                                     style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
-                                  Text('(${ex.reading})'),
+                                  if (displayReading.isNotEmpty) ...[
+                                    const SizedBox(width: 8),
+                                    Text('($displayReading)'),
+                                  ],
                                   const Spacer(),
                                   Flexible(
                                     child: Text(
-                                      language == AppLanguage.en
-                                          ? (ex.meaningEn ?? ex.meaning)
-                                          : ex.meaning,
+                                      displayMeaning,
                                       textAlign: TextAlign.right,
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                          ),
+                            );
+                          }),
                         ],
                       ],
                     ),

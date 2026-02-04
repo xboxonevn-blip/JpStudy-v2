@@ -1,0 +1,387 @@
+{
+  "summary": {
+    "overridesDeclared": 74,
+    "rowsUpdated": 63,
+    "missingVocabIds": []
+  },
+  "sampleChanges": [
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_02\\sense.json",
+      "vocabId": "n5_l02_v061",
+      "old": "1000 ri, (a) khoảng cách xa",
+      "new": "ngàn dặm, quãng đường xa"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_03\\sense.json",
+      "vocabId": "n5_l03_v054",
+      "old": "thượng nguồn sông, thượng nguồn",
+      "new": "thượng nguồn sông"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_07\\sense.json",
+      "vocabId": "n5_l07_v062",
+      "old": "nợ, cho vay",
+      "new": "nợ, khoản vay"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_08\\sense.json",
+      "vocabId": "n5_l08_v075",
+      "old": "thời cổ đại, thời cổ đại",
+      "new": "thời cổ đại"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_10\\sense.json",
+      "vocabId": "n5_l10_v054",
+      "old": "trái và phải, phải và trái",
+      "new": "trái phải, tả hữu"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_11\\sense.json",
+      "vocabId": "n5_l11_v069",
+      "old": "khoa tai mũi họng, khoa tai mũi họng",
+      "new": "khoa tai mũi họng"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_13\\sense.json",
+      "vocabId": "n5_l13_v054",
+      "old": "sự đồng cảm, lòng trắc ẩn",
+      "new": "đồng cảm, cảm thông"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_15\\sense.json",
+      "vocabId": "n5_l15_v042",
+      "old": "có lẽ, có thể",
+      "new": "có lẽ, chắc là"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_15\\sense.json",
+      "vocabId": "n5_l15_v044",
+      "old": "hấp tấp, thiếu suy nghĩ",
+      "new": "khinh suất, hấp tấp"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_16\\sense.json",
+      "vocabId": "n5_l16_v071",
+      "old": "tuyên bố, tuyên bố",
+      "new": "tuyên bố"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_16\\sense.json",
+      "vocabId": "n5_l16_v073",
+      "old": "(bên ngoài) vẻ ngoài, đặc điểm",
+      "new": "diện mạo, nét mặt"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_17\\sense.json",
+      "vocabId": "n5_l17_v047",
+      "old": "liên tục, từ đầu đến cuối",
+      "new": "suốt từ đầu đến cuối"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_17\\sense.json",
+      "vocabId": "n5_l17_v048",
+      "old": "kết thúc, đóng lại",
+      "new": "kết thúc"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_18\\sense.json",
+      "vocabId": "n5_l18_v041",
+      "old": "chạy (ô tô, xe buýt, v.v.), đi du lịch",
+      "new": "vận hành, chạy (xe cộ)"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_20\\sense.json",
+      "vocabId": "n5_l20_v036",
+      "old": "cửa chớp chống bão trượt",
+      "new": "cửa chớp chống bão"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_20\\sense.json",
+      "vocabId": "n5_l20_v037",
+      "old": "lở tuyết, lở tuyết",
+      "new": "lở tuyết"
+    },
+    {
+      "file": "assets\\data\\vocab\\n5\\lesson_21\\sense.json",
+      "vocabId": "n5_l21_v054",
+      "old": "sự phân biệt, sự khác biệt",
+      "new": "phân biệt, phân loại"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_27\\sense.json",
+      "vocabId": "n4_l27_v063",
+      "old": "thấm vào, đắm chìm trong",
+      "new": "mê mải, say mê"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_27\\sense.json",
+      "vocabId": "n4_l27_v064",
+      "old": "chăn nuôi, chăn nuôi",
+      "new": "chăn nuôi, gây nuôi"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_28\\sense.json",
+      "vocabId": "n4_l28_v061",
+      "old": "tuyệt vời, vĩ đại",
+      "new": "vĩ đại"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_28\\sense.json",
+      "vocabId": "n4_l28_v062",
+      "old": "cuộc bầu cử",
+      "new": "bầu cử"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_29\\sense.json",
+      "vocabId": "n4_l29_v064",
+      "old": "(hoàn toàn) sự hủy diệt, sự tiêu diệt",
+      "new": "hủy diệt hoàn toàn"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_29\\sense.json",
+      "vocabId": "n4_l29_v065",
+      "old": "sự ô nhiễm, sự ô nhiễm",
+      "new": "ô nhiễm"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_29\\sense.json",
+      "vocabId": "n4_l29_v067",
+      "old": "trượt (trong một kỳ thi), không tiến bộ (sang năm sau)",
+      "new": "trượt kỳ thi, lưu ban"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_29\\sense.json",
+      "vocabId": "n4_l29_v068",
+      "old": "kết thúc (một buổi lễ, sự kiện, cuộc họp, v.v.)",
+      "new": "bế mạc"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_30\\sense.json",
+      "vocabId": "n4_l30_v069",
+      "old": "hàng cây ven đường, hàng cây",
+      "new": "hàng cây"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_30\\sense.json",
+      "vocabId": "n4_l30_v070",
+      "old": "đảo ngược tiền, quỹ, hoa hồng",
+      "new": "hoàn tiền, hoàn quỹ"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_30\\sense.json",
+      "vocabId": "n4_l30_v071",
+      "old": "thực vật, thảm thực vật",
+      "new": "thực vật"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_30\\sense.json",
+      "vocabId": "n4_l30_v072",
+      "old": "quyết định, quyết tâm",
+      "new": "quyết định"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_30\\sense.json",
+      "vocabId": "n4_l30_v073",
+      "old": "trang trí, sắp xếp",
+      "new": "trang trí"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_31\\sense.json",
+      "vocabId": "n4_l31_v051",
+      "old": "lần lượt, lần lượt",
+      "new": "liên tiếp, nối tiếp"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_32\\sense.json",
+      "vocabId": "n4_l32_v070",
+      "old": "sự tĩnh lặng, nghỉ ngơi",
+      "new": "tĩnh chỉ, đứng yên"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_36\\sense.json",
+      "vocabId": "n4_l36_v064",
+      "old": "thở, hô hấp",
+      "new": "hô hấp"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_36\\sense.json",
+      "vocabId": "n4_l36_v065",
+      "old": "không đáng tin cậy, không đáng tin cậy",
+      "new": "không đáng tin cậy"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_37\\sense.json",
+      "vocabId": "n4_l37_v055",
+      "old": "100.000, trăm nghìn",
+      "new": "mười vạn (100.000)"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_37\\sense.json",
+      "vocabId": "n4_l37_v056",
+      "old": "một số, ít",
+      "new": "một ít, đôi chút"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_37\\sense.json",
+      "vocabId": "n4_l37_v057",
+      "old": "bắt đầu mưa, bắt đầu có tuyết",
+      "new": "bắt đầu mưa hoặc tuyết rơi"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_39\\sense.json",
+      "vocabId": "n4_l39_v060",
+      "old": "(doanh nghiệp) phá sản, vỡ nợ",
+      "new": "phá sản"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_39\\sense.json",
+      "vocabId": "n4_l39_v061",
+      "old": "xác chết, thi thể",
+      "new": "thi thể"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_39\\sense.json",
+      "vocabId": "n4_l39_v062",
+      "old": "yakiniku, món thịt nướng Nhật Bản tương tự thịt nướng Hàn Quốc",
+      "new": "thịt nướng yakiniku"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_41\\sense.json",
+      "vocabId": "n4_l41_v075",
+      "old": "khó khăn, gian khổ",
+      "new": "khó khăn, gian nan"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_41\\sense.json",
+      "vocabId": "n4_l41_v076",
+      "old": "(bằng văn bản) đơn xin, văn bản yêu cầu",
+      "new": "đơn nguyện vọng, đơn yêu cầu"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_42\\sense.json",
+      "vocabId": "n4_l42_v076",
+      "old": "đóng gói, gói",
+      "new": "đóng gói, bao bì"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_42\\sense.json",
+      "vocabId": "n4_l42_v077",
+      "old": "mặc quần áo dày, mặc ấm",
+      "new": "mặc đồ dày, mặc ấm"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_42\\sense.json",
+      "vocabId": "n4_l42_v078",
+      "old": "sôi sục, sôi sùng sục",
+      "new": "sôi sục"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_42\\sense.json",
+      "vocabId": "n4_l42_v079",
+      "old": "chủng tộc hỗn hợp, nguồn gốc hỗn hợp",
+      "new": "dòng máu lai, lai chủng"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_42\\sense.json",
+      "vocabId": "n4_l42_v080",
+      "old": "mờ mịt, ảm đạm",
+      "new": "lờ mờ, tối mờ"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_43\\sense.json",
+      "vocabId": "n4_l43_v043",
+      "old": "tăng, tăng",
+      "new": "gia tăng"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_43\\sense.json",
+      "vocabId": "n4_l43_v044",
+      "old": "giảm, giảm",
+      "new": "giảm bớt"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_44\\sense.json",
+      "vocabId": "n4_l44_v053",
+      "old": "khóc (ví dụ như một đứa bé), nức nở",
+      "new": "tiếng khóc"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_44\\sense.json",
+      "vocabId": "n4_l44_v054",
+      "old": "buồn ngủ, buồn ngủ",
+      "new": "cơn buồn ngủ"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_44\\sense.json",
+      "vocabId": "n4_l44_v055",
+      "old": "khuôn mặt tươi cười, nụ cười",
+      "new": "nét mặt tươi cười"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_45\\sense.json",
+      "vocabId": "n4_l45_v052",
+      "old": "đòn, cú sốc",
+      "new": "đả kích, cú đánh"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_45\\sense.json",
+      "vocabId": "n4_l45_v053",
+      "old": "sự bỏ phiếu, lá phiếu",
+      "new": "bỏ phiếu"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_45\\sense.json",
+      "vocabId": "n4_l45_v054",
+      "old": "nghi ngờ, câu hỏi",
+      "new": "nghi vấn, câu hỏi"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_46\\sense.json",
+      "vocabId": "n4_l46_v047",
+      "old": "sự phá hủy, sự gián đoạn",
+      "new": "phá hủy"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_47\\sense.json",
+      "vocabId": "n4_l47_v052",
+      "old": "hét lên (trong cơn tức giận), hét lên",
+      "new": "quát tháo"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_47\\sense.json",
+      "vocabId": "n4_l47_v053",
+      "old": "bi kịch, bi kịch",
+      "new": "bi kịch"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_47\\sense.json",
+      "vocabId": "n4_l47_v054",
+      "old": "nhóm, khối lượng",
+      "new": "tập thể, nhóm"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_47\\sense.json",
+      "vocabId": "n4_l47_v055",
+      "old": "điều kỳ diệu, phép lạ",
+      "new": "điều kỳ lạ, kỳ tích"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_48\\sense.json",
+      "vocabId": "n4_l48_v039",
+      "old": "báo cáo, thông báo",
+      "new": "đơn trình báo, thông báo"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_48\\sense.json",
+      "vocabId": "n4_l48_v040",
+      "old": "chim di cư, chim đi qua",
+      "new": "chim di trú"
+    },
+    {
+      "file": "assets\\data\\vocab\\n4\\lesson_49\\sense.json",
+      "vocabId": "n4_l49_v045",
+      "old": "đang chờ đợi (ai đó)",
+      "new": "hầu hạ, phục vụ"
+    }
+  ]
+}

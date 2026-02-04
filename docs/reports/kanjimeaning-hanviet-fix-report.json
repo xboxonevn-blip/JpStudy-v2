@@ -1,103 +1,18 @@
 {
   "summary": {
     "files_processed": 50,
-    "rows_processed": 2535,
-    "rows_with_kanji": 1929,
-    "rows_fixed": 12,
+    "rows_processed": 2805,
+    "rows_with_kanji": 2199,
+    "rows_fixed": 0,
     "rows_kept_unresolved": 0,
     "rows_cleared_nonkanji": 0
   },
   "unresolvedCharCount": 0,
   "unresolvedTop": [],
-  "sampleChanges": [
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_03\\master.json",
-      "vocabId": "n5_l03_v053",
-      "term": "新大阪",
-      "old": "tân đại bản",
-      "new": "tân đại phản"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_05\\master.json",
-      "vocabId": "n5_l05_v011",
-      "term": "新幹線",
-      "old": "tân can tuyến",
-      "new": "tân cán tuyến"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_06\\master.json",
-      "vocabId": "n5_l06_v017",
-      "term": "卵",
-      "old": "côn",
-      "new": "noãn"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_10\\master.json",
-      "vocabId": "n5_l10_v020",
-      "term": "棚",
-      "old": "bành",
-      "new": "bằng"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_14\\master.json",
-      "vocabId": "n5_l14_v038",
-      "term": "真っ直ぐ",
-      "old": "chân trị",
-      "new": "chân trực"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_15\\master.json",
-      "vocabId": "n5_l15_v028",
-      "term": "大阪",
-      "old": "đại bản",
-      "new": "đại phản"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_20\\master.json",
-      "vocabId": "n5_l20_v003",
-      "term": "直します",
-      "old": "trị",
-      "new": "trực"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_21\\master.json",
-      "vocabId": "n5_l21_v046",
-      "term": "大阪府",
-      "old": "đại bản phủ",
-      "new": "đại phản phủ"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_22\\master.json",
-      "vocabId": "n5_l22_v002",
-      "term": "履きます",
-      "old": "lí",
-      "new": "lý"
-    },
-    {
-      "file": "assets\\data\\vocab\\n5\\lesson_22\\master.json",
-      "vocabId": "n5_l22_v020",
-      "term": "履きます",
-      "old": "lí",
-      "new": "lý"
-    },
-    {
-      "file": "assets\\data\\vocab\\n4\\lesson_26\\master.json",
-      "vocabId": "n4_l26_v061",
-      "term": "大阪弁（方言）",
-      "old": "đại bản biền phương ngôn",
-      "new": "đại phản biền phương ngôn"
-    },
-    {
-      "file": "assets\\data\\vocab\\n4\\lesson_34\\master.json",
-      "vocabId": "n4_l34_v053",
-      "term": "鶏肉",
-      "old": "thịt gà",
-      "new": "kê nhục"
-    }
-  ],
+  "sampleChanges": [],
   "source": {
     "assetKanjiMapSize": 295,
-    "manualOverrideMapSize": 159,
+    "manualOverrideMapSize": 160,
     "manualOverridePath": "tooling\\hanviet_manual_overrides.json",
     "unihanVersion": "12.1.0",
     "unihanCache": "tooling\\.cache\\unihan-json-12.1.0.tar.gz",

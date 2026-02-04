@@ -1564,6 +1564,325 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get handwritingModeLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice mode';
+      case AppLanguage.vi:
+        return 'Chế độ luyện';
+      case AppLanguage.ja:
+        return '練習モード';
+    }
+  }
+
+  String get handwritingModeSingleLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Single';
+      case AppLanguage.vi:
+        return 'Từ đơn';
+      case AppLanguage.ja:
+        return '単体';
+    }
+  }
+
+  String get handwritingModeCompoundLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Compound';
+      case AppLanguage.vi:
+        return 'Từ ghép';
+      case AppLanguage.ja:
+        return '熟語';
+    }
+  }
+
+  String get handwritingModeMixedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mixed';
+      case AppLanguage.vi:
+        return 'Trộn';
+      case AppLanguage.ja:
+        return 'ミックス';
+    }
+  }
+
+  String get handwritingCompoundHintLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Compound mode: draw each kanji from left to right.';
+      case AppLanguage.vi:
+        return 'Chế độ từ ghép: viết từng kanji từ trái sang phải.';
+      case AppLanguage.ja:
+        return '熟語モード：左から右へ1文字ずつ書きます。';
+    }
+  }
+
+  String get handwritingStrokeGuideTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Stroke order guide';
+      case AppLanguage.vi:
+        return 'Hướng dẫn thứ tự nét';
+      case AppLanguage.ja:
+        return '筆順ガイド';
+    }
+  }
+
+  String get handwritingWriteOrderByCharacterLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Write order by character';
+      case AppLanguage.vi:
+        return 'Thứ tự viết theo từng ký tự';
+      case AppLanguage.ja:
+        return '文字ごとの書き順';
+    }
+  }
+
+  String get handwritingNoStrokeTemplateLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No stroke template available yet.';
+      case AppLanguage.vi:
+        return 'Chưa có mẫu nét cho ký tự này.';
+      case AppLanguage.ja:
+        return 'この文字の筆順テンプレートは未登録です。';
+    }
+  }
+
+  String handwritingStrokeShortLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$count strokes';
+      case AppLanguage.vi:
+        return '$count nét';
+      case AppLanguage.ja:
+        return '$count画';
+    }
+  }
+
+  String handwritingStrokeStepPrefix(int index) {
+    switch (this) {
+      case AppLanguage.en:
+        return '$index';
+      case AppLanguage.vi:
+        return 'Nét $index';
+      case AppLanguage.ja:
+        return '$index画目';
+    }
+  }
+
+  String get handwritingAnimateLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Animate';
+      case AppLanguage.vi:
+        return 'Mô phỏng';
+      case AppLanguage.ja:
+        return 'アニメ開始';
+    }
+  }
+
+  String get handwritingPauseLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Pause';
+      case AppLanguage.vi:
+        return 'Tạm dừng';
+      case AppLanguage.ja:
+        return '一時停止';
+    }
+  }
+
+  String get handwritingReplayLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Replay';
+      case AppLanguage.vi:
+        return 'Phát lại';
+      case AppLanguage.ja:
+        return '最初から';
+    }
+  }
+
+  String handwritingStrokeStepCounterLabel(int current, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Stroke $current/$total';
+      case AppLanguage.vi:
+        return 'Nét $current/$total';
+      case AppLanguage.ja:
+        return '$current/$total画';
+    }
+  }
+
+  String get handwritingAnimationSpeedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Speed';
+      case AppLanguage.vi:
+        return 'Tốc độ';
+      case AppLanguage.ja:
+        return '速度';
+    }
+  }
+
+  String get handwritingShowNumbersLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Stroke numbers';
+      case AppLanguage.vi:
+        return 'Số thứ tự nét';
+      case AppLanguage.ja:
+        return '画数表示';
+    }
+  }
+
+  String get handwritingHighlightRadicalLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Highlight radical';
+      case AppLanguage.vi:
+        return 'Tô nổi bật bộ thủ';
+      case AppLanguage.ja:
+        return '部首を強調';
+    }
+  }
+
+  String get handwritingNoRadicalDataLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No radical data for this kanji.';
+      case AppLanguage.vi:
+        return 'Kanji này chưa có dữ liệu bộ thủ.';
+      case AppLanguage.ja:
+        return 'この漢字には部首データがありません。';
+    }
+  }
+
+  String handwritingWordProgressLabel(int done, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Word progress: $done/$total';
+      case AppLanguage.vi:
+        return 'Tiến độ từ: $done/$total';
+      case AppLanguage.ja:
+        return '単語進捗: $done/$total';
+    }
+  }
+
+  String handwritingCharacterProgressLabel(int done, int total) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Character progress: $done/$total';
+      case AppLanguage.vi:
+        return 'Tiến độ chữ: $done/$total';
+      case AppLanguage.ja:
+        return '文字進捗: $done/$total';
+    }
+  }
+
+  String get handwritingStatusNewLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'New';
+      case AppLanguage.vi:
+        return 'Mới';
+      case AppLanguage.ja:
+        return '新規';
+    }
+  }
+
+  String get handwritingStatusReviewLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Review';
+      case AppLanguage.vi:
+        return 'Ôn tập';
+      case AppLanguage.ja:
+        return '復習';
+    }
+  }
+
+  String get handwritingStatusWeakLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Weak';
+      case AppLanguage.vi:
+        return 'Yếu';
+      case AppLanguage.ja:
+        return '弱点';
+    }
+  }
+
+  String get handwritingAdvancedOptionsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Advanced';
+      case AppLanguage.vi:
+        return 'Nâng cao';
+      case AppLanguage.ja:
+        return '詳細';
+    }
+  }
+
+  String get handwritingHideAdvancedOptionsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Hide advanced';
+      case AppLanguage.vi:
+        return 'Ẩn nâng cao';
+      case AppLanguage.ja:
+        return '詳細を閉じる';
+    }
+  }
+
+  String get handwritingShowScoringDetailsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Show scoring details';
+      case AppLanguage.vi:
+        return 'Hiện chi tiết điểm';
+      case AppLanguage.ja:
+        return '採点詳細を表示';
+    }
+  }
+
+  String get handwritingHideScoringDetailsLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Hide scoring details';
+      case AppLanguage.vi:
+        return 'Ẩn chi tiết điểm';
+      case AppLanguage.ja:
+        return '採点詳細を非表示';
+    }
+  }
+
+  String get handwritingRetryWrongCharactersLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Retry wrong characters';
+      case AppLanguage.vi:
+        return 'Luyện lại chữ sai';
+      case AppLanguage.ja:
+        return '誤答文字を再練習';
+    }
+  }
+
+  String get handwritingRetryWrongCharactersHintLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Focus on the highlighted characters first.';
+      case AppLanguage.vi:
+        return 'Tập trung vào các chữ được tô đậm trước.';
+      case AppLanguage.ja:
+        return '先に強調された文字を練習しましょう。';
+    }
+  }
+
   String get handwritingShowGuideLabel {
     switch (this) {
       case AppLanguage.en:
@@ -1924,6 +2243,28 @@ extension AppLanguageLabels on AppLanguage {
         return 'C\xe0i \u0111\u1eb7t';
       case AppLanguage.ja:
         return '\u8a2d\u5b9a';
+    }
+  }
+
+  String get handwritingStrokeGuideDefaultLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Stroke guide open by default';
+      case AppLanguage.vi:
+        return 'Mở hướng dẫn nét mặc định';
+      case AppLanguage.ja:
+        return '筆順ガイドを既定で開く';
+    }
+  }
+
+  String get handwritingStrokeGuideDefaultHint {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Enable for beginners, disable for faster practice.';
+      case AppLanguage.vi:
+        return 'Bật cho người mới, tắt để luyện nhanh hơn.';
+      case AppLanguage.ja:
+        return '初心者はオン、素早く練習したい場合はオフ。';
     }
   }
 
@@ -2848,6 +3189,83 @@ extension AppLanguageLabels on AppLanguage {
         return 'Hán tự';
       case AppLanguage.ja:
         return '漢字';
+    }
+  }
+
+  String get kanjiWritingGuideTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Writing Guide';
+      case AppLanguage.vi:
+        return 'Hướng dẫn viết';
+      case AppLanguage.ja:
+        return '書き方ガイド';
+    }
+  }
+
+  String kanjiWritingSingleLabel(String character, int strokeCount) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Single: $character ($strokeCount strokes)';
+      case AppLanguage.vi:
+        return 'Từ đơn: $character ($strokeCount nét)';
+      case AppLanguage.ja:
+        return '単体: $character（$strokeCount画）';
+    }
+  }
+
+  String get kanjiWritingNoCompoundLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No supported compound examples in this lesson yet.';
+      case AppLanguage.vi:
+        return 'Chưa có ví dụ từ ghép phù hợp trong bài này.';
+      case AppLanguage.ja:
+        return 'このレッスンには対応する熟語例がまだありません。';
+    }
+  }
+
+  String get kanjiPracticeWritingLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Practice writing';
+      case AppLanguage.vi:
+        return 'Luyện viết';
+      case AppLanguage.ja:
+        return '書き取り練習';
+    }
+  }
+
+  String get kanjiExamplesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Examples';
+      case AppLanguage.vi:
+        return 'Ví dụ';
+      case AppLanguage.ja:
+        return '例';
+    }
+  }
+
+  String get kanjiListEmptyLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No kanji data for this lesson.';
+      case AppLanguage.vi:
+        return 'Chưa có dữ liệu kanji cho bài này.';
+      case AppLanguage.ja:
+        return 'このレッスンの漢字データはありません。';
+    }
+  }
+
+  String kanjiListLoadErrorLabel(String error) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Failed to load kanji: $error';
+      case AppLanguage.vi:
+        return 'Lỗi tải dữ liệu kanji: $error';
+      case AppLanguage.ja:
+        return '漢字データの読み込みに失敗しました: $error';
     }
   }
 

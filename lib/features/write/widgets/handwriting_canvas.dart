@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 class HandwritingCanvas extends StatelessWidget {
@@ -9,6 +11,7 @@ class HandwritingCanvas extends StatelessWidget {
     required this.onStrokeEnd,
     required this.showGuide,
     required this.guideText,
+    this.guideSlotCount = 1,
     this.enabled = true,
   });
 
@@ -18,6 +21,7 @@ class HandwritingCanvas extends StatelessWidget {
   final VoidCallback onStrokeEnd;
   final bool showGuide;
   final String guideText;
+  final int guideSlotCount;
   final bool enabled;
 
   @override
@@ -36,6 +40,7 @@ class HandwritingCanvas extends StatelessWidget {
           strokes: strokes,
           showGuide: showGuide,
           guideText: guideText,
+          guideSlotCount: guideSlotCount,
           textStyle: Theme.of(context).textTheme.displayMedium,
         ),
         size: Size.infinite,
@@ -49,12 +54,14 @@ class _HandwritingPainter extends CustomPainter {
     required this.strokes,
     required this.showGuide,
     required this.guideText,
+    required this.guideSlotCount,
     required this.textStyle,
   });
 
   final List<List<Offset>> strokes;
   final bool showGuide;
   final String guideText;
+  final int guideSlotCount;
   final TextStyle? textStyle;
 
   @override
@@ -70,20 +77,31 @@ class _HandwritingPainter extends CustomPainter {
     final paint = Paint()
       ..color = const Color(0xFFE5E7EB)
       ..strokeWidth = 1;
-    final thirdW = size.width / 3;
+    final slotCount = math.max(1, guideSlotCount);
+    final slotWidth = size.width / slotCount;
     final thirdH = size.height / 3;
-    for (int i = 1; i < 3; i++) {
+
+    for (int row = 1; row < 3; row++) {
       canvas.drawLine(
-        Offset(thirdW * i, 0),
-        Offset(thirdW * i, size.height),
-        paint,
-      );
-      canvas.drawLine(
-        Offset(0, thirdH * i),
-        Offset(size.width, thirdH * i),
+        Offset(0, thirdH * row),
+        Offset(size.width, thirdH * row),
         paint,
       );
     }
+
+    for (int slot = 0; slot < slotCount; slot++) {
+      final startX = slot * slotWidth;
+      for (int col = 1; col < 3; col++) {
+        final x = startX + (slotWidth * col / 3);
+        canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+      }
+    }
+
+    for (int slot = 1; slot < slotCount; slot++) {
+      final x = slot * slotWidth;
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+
     final borderPaint = Paint()
       ..color = const Color(0xFFE5E7EB)
       ..style = PaintingStyle.stroke
@@ -92,21 +110,49 @@ class _HandwritingPainter extends CustomPainter {
   }
 
   void _drawGuide(Canvas canvas, Size size) {
+    final slotCount = math.max(1, guideSlotCount);
+    final characters = guideText.runes
+        .map(String.fromCharCode)
+        .toList(growable: false);
+    final color = const Color(0xFF1F2937).withValues(alpha: 0.12);
+
+    if (slotCount <= 1 || characters.length <= 1) {
+      final style = (textStyle ?? const TextStyle()).copyWith(
+        fontSize: size.shortestSide * 0.6,
+        color: color,
+        fontWeight: FontWeight.w600,
+      );
+      final painter = TextPainter(
+        text: TextSpan(text: guideText, style: style),
+        textAlign: TextAlign.center,
+        textDirection: TextDirection.ltr,
+      )..layout(maxWidth: size.width);
+      final offset = Offset(
+        (size.width - painter.width) / 2,
+        (size.height - painter.height) / 2,
+      );
+      painter.paint(canvas, offset);
+      return;
+    }
+
+    final slotWidth = size.width / slotCount;
+    final fontSize = math.min(size.height, slotWidth) * 0.58;
     final style = (textStyle ?? const TextStyle()).copyWith(
-      fontSize: size.shortestSide * 0.6,
-      color: const Color(0xFF1F2937).withValues(alpha: 0.12),
+      fontSize: fontSize,
+      color: color,
       fontWeight: FontWeight.w600,
     );
-    final painter = TextPainter(
-      text: TextSpan(text: guideText, style: style),
-      textAlign: TextAlign.center,
-      textDirection: TextDirection.ltr,
-    )..layout(maxWidth: size.width);
-    final offset = Offset(
-      (size.width - painter.width) / 2,
-      (size.height - painter.height) / 2,
-    );
-    painter.paint(canvas, offset);
+    final guideCount = math.min(slotCount, characters.length);
+    for (var i = 0; i < guideCount; i++) {
+      final painter = TextPainter(
+        text: TextSpan(text: characters[i], style: style),
+        textAlign: TextAlign.center,
+        textDirection: TextDirection.ltr,
+      )..layout(maxWidth: slotWidth);
+      final dx = (slotWidth * i) + ((slotWidth - painter.width) / 2);
+      final dy = (size.height - painter.height) / 2;
+      painter.paint(canvas, Offset(dx, dy));
+    }
   }
 
   void _drawStrokes(Canvas canvas) {
@@ -130,6 +176,7 @@ class _HandwritingPainter extends CustomPainter {
   bool shouldRepaint(covariant _HandwritingPainter oldDelegate) {
     return oldDelegate.strokes != strokes ||
         oldDelegate.showGuide != showGuide ||
-        oldDelegate.guideText != guideText;
+        oldDelegate.guideText != guideText ||
+        oldDelegate.guideSlotCount != guideSlotCount;
   }
 }

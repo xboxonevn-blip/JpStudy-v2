@@ -28,21 +28,30 @@ class KanjiStrokeTemplateService {
     return _templates?[character];
   }
 
+  Future<Map<String, KanjiStrokeTemplate>> getAllTemplates() async {
+    await _ensureLoaded();
+    return _templates ?? const {};
+  }
+
   Future<void> _ensureLoaded() async {
     if (_templates != null) return;
     if (debugTemplateOverrides != null) {
       _templates = debugTemplateOverrides;
       return;
     }
-    final raw = (await rootBundle.loadString(_assetPath)).replaceFirst(
-      '\uFEFF',
-      '',
-    );
+    final raw = (await rootBundle.loadString(
+      _assetPath,
+    )).replaceFirst('\uFEFF', '');
     final decoded = jsonDecode(raw) as List<dynamic>;
     final templates = decoded
-        .map((entry) => KanjiStrokeTemplate.fromJson(entry as Map<String, dynamic>))
+        .map(
+          (entry) =>
+              KanjiStrokeTemplate.fromJson(entry as Map<String, dynamic>),
+        )
         .toList();
-    _templates = {for (final template in templates) template.character: template};
+    _templates = {
+      for (final template in templates) template.character: template,
+    };
   }
 }
 
@@ -83,10 +92,7 @@ class KanjiStrokeTemplate {
 }
 
 class StrokeTemplate {
-  const StrokeTemplate({
-    required this.start,
-    required this.end,
-  });
+  const StrokeTemplate({required this.start, required this.end});
 
   final Point<double> start;
   final Point<double> end;

@@ -369,6 +369,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
         builder: (context) => HandwritingPracticeScreen(
           lessonTitle: language.ghostKanjiTitle,
           items: items,
+          includeCompoundWords: false,
         ),
       ),
     );

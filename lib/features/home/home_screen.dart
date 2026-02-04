@@ -27,6 +27,8 @@ const _prefDailyReminderLast = 'notifications.daily.last';
 const _prefAutoBackup = 'backup.auto.enabled';
 const _prefAutoBackupTime = 'backup.auto.time';
 const _prefAutoBackupLast = 'backup.auto.last';
+const _prefStrokeGuideDefaultExpanded =
+    'write.handwriting.strokeGuide.defaultExpanded';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -141,6 +143,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 NotificationService.instance.isSupported;
             final themeMode = ref.watch(themeModeProvider);
             var reminderEnabled = prefs.getBool(_prefDailyReminder) ?? false;
+            var strokeGuideDefaultExpanded =
+                prefs.getBool(_prefStrokeGuideDefaultExpanded) ?? true;
             if (_prefs == null) {
               _prefs = prefs;
               _reminderEnabled = reminderEnabled;
@@ -215,6 +219,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               .setThemeMode(
                                 value ? ThemeMode.dark : ThemeMode.light,
                               );
+                          setModalState(() {});
+                        },
+                      ),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(
+                          language.handwritingStrokeGuideDefaultLabel,
+                        ),
+                        subtitle: Text(
+                          language.handwritingStrokeGuideDefaultHint,
+                        ),
+                        value: strokeGuideDefaultExpanded,
+                        onChanged: (value) async {
+                          strokeGuideDefaultExpanded = value;
+                          await prefs.setBool(
+                            _prefStrokeGuideDefaultExpanded,
+                            value,
+                          );
                           setModalState(() {});
                         },
                       ),

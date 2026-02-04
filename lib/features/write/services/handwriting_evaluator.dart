@@ -21,6 +21,7 @@ class HandwritingEvaluationResult {
     required this.usedTemplate,
     required this.templateQuality,
     required this.isCorrect,
+    this.characterResults = const [],
   });
 
   final int expectedStrokes;
@@ -33,6 +34,25 @@ class HandwritingEvaluationResult {
   final bool usedTemplate;
   final String templateQuality;
   final bool isCorrect;
+  final List<HandwritingCharacterResult> characterResults;
+}
+
+class HandwritingCharacterResult {
+  const HandwritingCharacterResult({
+    required this.character,
+    required this.expectedStrokes,
+    required this.drawnStrokes,
+    required this.score,
+    required this.isCorrect,
+    this.kanjiId,
+  });
+
+  final String character;
+  final int expectedStrokes;
+  final int drawnStrokes;
+  final double score;
+  final bool isCorrect;
+  final int? kanjiId;
 }
 
 class HandwritingEvaluator {

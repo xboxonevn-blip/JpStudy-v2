@@ -1375,6 +1375,13 @@ class LessonRepository {
     return _db.kanjiSrsDao.getSrsState(kanjiId);
   }
 
+  Future<Map<int, KanjiSrsStateData>> getKanjiSrsStatesForIds(
+    List<int> kanjiIds,
+  ) async {
+    final states = await _db.kanjiSrsDao.getStatesForIds(kanjiIds);
+    return {for (final state in states) state.kanjiId: state};
+  }
+
   Future<void> ensureKanjiSrsState(int kanjiId) async {
     final existing = await _db.kanjiSrsDao.getSrsState(kanjiId);
     if (existing == null) {

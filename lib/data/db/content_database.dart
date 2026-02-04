@@ -30,7 +30,7 @@ class ContentDatabase extends _$ContentDatabase {
     : super(executor ?? _openContentConnection());
 
   @override
-  int get schemaVersion => 17;
+  int get schemaVersion => 18;
 
   @override
   MigrationStrategy get migration {
@@ -85,6 +85,13 @@ class ContentDatabase extends _$ContentDatabase {
           await _addColumn(m, kanji, kanji.mnemonicEn);
           await _reseedMinnaKanji();
         }
+        if (from < 18) {
+          // Backfill users who seeded during path-transition versions.
+          await _reseedMinnaVocabulary();
+        }
+      },
+      beforeOpen: (details) async {
+        await _ensureMinnaVocabularySeeded();
       },
     );
   }
@@ -97,6 +104,19 @@ class ContentDatabase extends _$ContentDatabase {
 
     // Seed new vocabulary
     await _seedMinnaVocabulary();
+  }
+
+  Future<void> _ensureMinnaVocabularySeeded() async {
+    final minnaCountExpr = vocab.id.count();
+    final query =
+        selectOnly(vocab)
+          ..addColumns([minnaCountExpr])
+          ..where(vocab.tags.like('%minna_%'));
+    final row = await query.getSingle();
+    final minnaCount = row.read(minnaCountExpr) ?? 0;
+    if (minnaCount == 0) {
+      await _seedMinnaVocabulary();
+    }
   }
 
   Future<void> _seedMinnaVocabulary() async {

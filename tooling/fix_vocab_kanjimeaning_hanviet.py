@@ -27,6 +27,7 @@ KANJI_ROOT = ROOT / "assets" / "data" / "kanji"
 REPORT_PATH = ROOT / "docs" / "reports" / "kanjimeaning-hanviet-fix-report.json"
 CACHE_DIR = ROOT / "tooling" / ".cache"
 HVDIC_CACHE_PATH = CACHE_DIR / "hvdic_hanviet_cache.json"
+MANUAL_OVERRIDES_PATH = ROOT / "tooling" / "hanviet_manual_overrides.json"
 
 UNIHAN_VERSION = "12.1.0"
 UNIHAN_RELEASE_URL = (
@@ -126,6 +127,25 @@ def _load_hvdic_cache() -> Dict[str, List[str]]:
     return out
 
 
+def _load_manual_overrides() -> Dict[str, List[str]]:
+    if not MANUAL_OVERRIDES_PATH.exists():
+        return {}
+    try:
+        raw = json.loads(MANUAL_OVERRIDES_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    if not isinstance(raw, dict):
+        return {}
+    out: Dict[str, List[str]] = {}
+    for key, value in raw.items():
+        if not isinstance(key, str) or len(key) != 1 or not isinstance(value, list):
+            continue
+        tokens = [_norm(token).lower() for token in value if _norm(token)]
+        if tokens:
+            out[key] = list(dict.fromkeys(tokens))
+    return out
+
+
 def _save_hvdic_cache(cache: Dict[str, List[str]]) -> None:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     HVDIC_CACHE_PATH.write_text(
@@ -190,6 +210,7 @@ def _choose_best_option(options: List[str], old_tokens: Iterable[str]) -> str:
 
 def main() -> int:
     asset_map = _load_asset_kanji_map()
+    manual_overrides = _load_manual_overrides()
     unihan_map, variant_maps = _load_unihan_maps()
     hvdic_cache = _load_hvdic_cache()
     hvdic_context = ssl._create_unverified_context()
@@ -197,6 +218,8 @@ def main() -> int:
 
     @lru_cache(maxsize=None)
     def resolve_char(char: str, depth: int = 0):
+        if char in manual_overrides:
+            return manual_overrides[char]
         if char in asset_map:
             return asset_map[char]
         if char in unihan_map:
@@ -323,6 +346,8 @@ def main() -> int:
         "sampleChanges": sample_changes,
         "source": {
             "assetKanjiMapSize": len(asset_map),
+            "manualOverrideMapSize": len(manual_overrides),
+            "manualOverridePath": str(MANUAL_OVERRIDES_PATH.relative_to(ROOT)),
             "unihanVersion": UNIHAN_VERSION,
             "unihanCache": str(UNIHAN_CACHE_PATH.relative_to(ROOT)),
             "hvdicCache": str(HVDIC_CACHE_PATH.relative_to(ROOT)),

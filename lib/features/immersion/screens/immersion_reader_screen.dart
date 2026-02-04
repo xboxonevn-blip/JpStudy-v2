@@ -29,6 +29,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
   static const String _immersionLevel = 'IMMERSION';
 
   bool _showFurigana = true;
+  bool _showTranslation = true;
   bool _isAutoScrolling = false;
   Future<ImmersionArticle?>? _detailFuture;
   Set<String> _savedTokens = {};
@@ -952,6 +953,19 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
             ),
           ),
           IconButton(
+            tooltip: language.immersionTranslateLabel,
+            onPressed: () {
+              setState(() {
+                _showTranslation = !_showTranslation;
+              });
+            },
+            icon: Icon(
+              _showTranslation
+                  ? Icons.translate_rounded
+                  : Icons.translate_outlined,
+            ),
+          ),
+          IconButton(
             tooltip: language.immersionAutoScrollLabel,
             onPressed: _toggleAutoScroll,
             icon: Icon(
@@ -1075,7 +1089,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                 },
               ),
             ],
-            if (article.translation != null) ...[
+            if (article.translation != null && _showTranslation) ...[
               const SizedBox(height: 8),
               Container(
                 padding: const EdgeInsets.all(14),

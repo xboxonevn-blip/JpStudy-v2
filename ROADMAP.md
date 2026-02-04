@@ -11,8 +11,8 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 | :--- | :--- | :--- | :--- |
 | **Phase 1** | **Foundation** (Anki Logic) | ✅ 100% | Completed |
 | **Phase 2** | **Structure & Visuals** (LingoDeer + Clay UI) | ✅ 100% | Completed |
-| **Phase 3** | **Smart Immersion** (FSRS + Handwriting) | 🚧 98% | Feb 2026 |
-| **Phase 4** | **Cloud** (Sync) | 🧪 10% | Q2 2026 |
+| **Phase 3** | **Smart Immersion** (FSRS + Handwriting) | 🚧 84% | Feb 2026 |
+| **Phase 4** | **Cloud** (Sync) | 🧪 18% | Q2 2026 |
 
 ---
 
@@ -38,7 +38,7 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
     *   [x] **Retrievability:** Hiển thị xác suất nhớ trước khi chọn mức độ.
 
 3.  **✍️ Advanced Handwriting (Trọng tâm hiện tại):**
-    *   [ ] **Stroke Check v2:** Kiểm tra thứ tự nét + shape matching chính xác hơn theo quality tier (manual/curated/generated), có benchmark false-positive/false-negative.
+    *   [x] **Stroke Check v2:** Kiểm tra thứ tự nét + shape matching chính xác hơn theo quality tier (manual/curated/generated), có benchmark false-positive/false-negative.
     *   [x] **Template Engine (Starter):** Tạo engine chấm theo template nét chuẩn + bộ template khởi đầu cho Kanji phổ biến.
     *   [x] **N5 Template Coverage:** Đã phủ template cho toàn bộ Kanji N5 (manual + generated baseline).
     *   [x] **N5 Manual Pack v1:** Nâng cấp bộ template thủ công cho nhóm Kanji nền tảng tần suất cao.
@@ -85,6 +85,7 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
     *   [ ] **Conflict Management:** Cơ chế "Last Modified Wins" + Backup version trước khi ghi đè để an toàn.
     *   [ ] **Manual Sync:** Nút "Upload to Cloud" và "Download from Cloud" chủ động.
     *   [x] **Export/Import:** Xuất/Nhập dữ liệu tiến độ (JSON/Zip).
+    *   [x] **Local Auto Backup (Offline):** Backup JSON tự động mỗi ngày vào thư mục local, tự dọn giữ 7 bản gần nhất.
 
 2.  **🔐 Security & Privacy:**
     *   [ ] **Encrypted Token:** Lưu Refresh Token an toàn trong Secure Storage.
@@ -102,36 +103,36 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 | **Ghost Practice** | ✅ Done | Gamified with particles. |
 | **Mock Exam** | ✅ Done | Timer, Scoring, Review. |
 | **Immersion Reader Enhancements** | ✅ Done | Read-status + Auto-scroll + SRS add-word + NHK fallback về local + timeout mạng. |
-| **Handwriting Check** | 🚧 Partial | Đã có chấm điểm stroke/shape/order heuristic; cần dữ liệu nét chuẩn để tăng độ chính xác. |
+| **Handwriting Check** | ✅ Done | Đã chốt Stroke Check v2: benchmark offline theo tier + regression 20+ ca nét sai + walkthrough test xác nhận update SRS/Mistake. |
 
 ---
 
 ## 🧪 UI Walkthrough Checklists
 > **QA Owner:** Project maintainer
-> **Next full walkthrough target:** 2026-02-05
+> **Next full walkthrough target:** 2026-02-12
 
 
 ### Ghost Review
-- [ ] Mở Ghost Review từ Practice Hub hoặc banner.
-- [ ] Kiểm tra hiển thị ngữ cảnh (prompt/đáp án/nguồn).
-- [ ] Bấm Practice và xác nhận lỗi giảm sau khi làm đúng.
+- [x] Mở Ghost Review từ Practice Hub hoặc banner.
+- [x] Kiểm tra hiển thị ngữ cảnh (prompt/đáp án/nguồn).
+- [x] Bấm Practice và xác nhận lỗi giảm sau khi làm đúng.
 
 ### Immersion Reader
-- [ ] Mở Immersion Reader (NHK/Local), tải bài.
-    - [ ] Khi NHK lỗi, tự fallback về Local và hiển thị cảnh báo rõ ràng.
-    - [ ] Tap từ để tra nghĩa; thêm vào SRS; kiểm tra trạng thái đã lưu.
-    - [ ] Bật/tắt Furigana và bản dịch.
-    - [ ] Đánh dấu đã học (Mark as Learned).
-    - [ ] Thử tính năng tự động cuộn (Auto Scroll).
+- [x] Mở Immersion Reader (NHK/Local), tải bài.
+    - [x] Khi NHK lỗi, tự fallback về Local và hiển thị cảnh báo rõ ràng.
+    - [x] Tap từ để tra nghĩa; thêm vào SRS; kiểm tra trạng thái đã lưu.
+    - [x] Bật/tắt Furigana và bản dịch.
+    - [x] Đánh dấu đã học (Mark as Learned).
+    - [x] Thử tính năng tự động cuộn (Auto Scroll).
 
 ### Handwriting
-- [ ] Vào Write Mode ở Handwriting.
-- [ ] Vẽ nét, kiểm tra kết quả; xác nhận SRS cập nhật.
-- [ ] Sai thì tạo Mistake (Kanji).
+- [x] Vào Write Mode ở Handwriting.
+- [x] Vẽ nét, kiểm tra kết quả; xác nhận SRS cập nhật.
+- [x] Sai thì tạo Mistake (Kanji).
 
 ### Mock Exam
-- [ ] Bắt đầu đề N5/N4; kiểm tra timer và flow.
-- [ ] Hoàn thành; xem điểm & resume session.
+- [x] Bắt đầu đề N5/N4; kiểm tra timer và flow.
+- [x] Hoàn thành; xem điểm & resume session.
 
 ## 🚀 Next Priority Tasks (Now / Next / Later)
 
@@ -139,10 +140,10 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 1. 🔥 **Đóng Phase 3 - Stroke Check v2 (ưu tiên cao nhất)**
    - Scope: nâng độ chính xác kiểm tra thứ tự nét + shape matching cho nhóm N5/N4 manual/curated.
    - DoD:
-     - [ ] Có bộ metric offline: Top-1 pass rate, false-positive rate theo từng quality tier.
-     - [ ] Tune ngưỡng chấm theo tier `manual/curated/generated` có benchmark trước/sau.
-     - [ ] Bổ sung test regression cho 20+ ca nét sai điển hình (order/shape/start-end).
-     - [ ] QA walkthrough Handwriting pass toàn bộ checklist ở phần bên dưới.
+     - [x] Có bộ metric offline: Top-1 pass rate, false-positive rate theo từng quality tier.
+     - [x] Tune ngưỡng chấm theo tier `manual/curated/generated` có benchmark trước/sau.
+     - [x] Bổ sung test regression cho 20+ ca nét sai điển hình (order/shape/start-end).
+     - [x] QA walkthrough Handwriting pass toàn bộ checklist ở phần bên dưới.
 
 ### NEXT (2026-02-10 -> 2026-02-24)
 2. ☁️ **Google Drive Backup MVP (Android/Windows)**
@@ -163,7 +164,14 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 
 ---
 
-## 🧾 Latest Update (2026-02-03)
+## 🧾 Latest Update (2026-02-04)
+- ✅ UI Walkthrough Checklist: thêm test `test/features/ui/ghost_review_walkthrough_test.dart`, `test/features/ui/immersion_walkthrough_test.dart`, `test/features/ui/mock_exam_walkthrough_test.dart` để chốt toàn bộ checklist Ghost/Immersion/Mock.
+- ✅ Immersion Reader: bổ sung toggle hiển thị bản dịch trong AppBar để walkthrough có thể bật/tắt trực tiếp.
+- ✅ Test Mode: sửa lifecycle `dispose()` ở `TestScreen` để tránh đọc provider sau khi widget đã dispose.
+- ✅ Stroke Check v2: tách `HandwritingEvaluator` để gom logic chấm điểm + threshold tier (`legacy` vs `v2`) phục vụ tune có kiểm soát.
+- ✅ QA offline: thêm benchmark test `test/features/write/handwriting_stroke_check_v2_benchmark_test.dart` đo Top-1 pass rate / false-positive rate theo tier và so sánh trước-sau.
+- ✅ Regression: thêm test `test/features/write/handwriting_evaluator_regression_test.dart` với 20+ ca nét sai điển hình (order/shape/start-end) cho manual tier.
+- ✅ Walkthrough QA: thêm widget test `test/features/write/handwriting_walkthrough_test.dart` xác nhận vào Write Mode, chấm sai thì cập nhật Kanji SRS và tạo Mistake nguồn `handwriting`.
 - ✅ Immersion Reader: thêm fallback local khi NHK không khả dụng, đặt Local làm nguồn mặc định, thêm timeout mạng để tránh treo.
 - ✅ Immersion UI: sửa lỗi vùng header/top bar bị nền đen ở màn Immersion Home + Reader (đồng bộ `Scaffold/AppBar` theo theme sáng/tối).
 - ✅ Immersion nguồn đọc: thêm fallback online từ Watanoc (WordPress JSON) khi NHK Easy API trả lỗi xác thực, giúp vẫn có bài mới để đọc.
@@ -202,3 +210,22 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 - ✅ QA: thêm ngưỡng kiểm tra curated/manual seed cho N4 để tránh regress rollout tier.
 - ✅ Backup JSON: mở rộng export/import thêm mistakes, grammar/kanji SRS, progress, attempts, sessions, settings.
 - ✅ Kanji Ghost: thêm nhóm luyện theo lesson trong Mistake Bank để luyện tập trung.
+
+---
+
+## 🔎 Audit Refresh (2026-02-04)
+
+### ✅ Đã xác nhận trong code
+- UI walkthrough checklist Ghost/Immersion/Handwriting/Mock đã có widget test tương ứng và pass.
+- Ghost auto-trigger + lưu ngữ cảnh lỗi đã chạy ở Learn/Review/Test/Grammar/Handwriting.
+- FSRS đã thay cho SM-2 ở vocab/grammar/kanji; retrievability đang hiển thị trong Lesson Review + Term Review.
+- Immersion Reader có mark-as-read, auto-scroll, mini quiz history, unknown queue, Add-all-to-SRS, và fallback nhiều nguồn (NHK/Watanoc/MATCHA/Tadoku).
+- Handwriting template đã phủ N5+N4; dùng quality tier `manual/curated/generated`; số lượng hiện tại: `total=295` (`manual=69`, `curated=13`, `generated=213`).
+- Backup hiện có: Export/Import JSON + Auto-backup local theo lịch.
+- Trạng thái build hiện tại: `flutter analyze` sạch lỗi, `flutter test` pass (24 tests) tại ngày 2026-02-04.
+
+### ⏳ Chưa làm / chưa đóng
+- Zen Match redesign chưa triển khai (Bento UI, Tap-first flow, ưu tiên SRS yếu + Ghost hint).
+- Phase 3.5 Yokai Garden chưa có code khởi tạo.
+- Cloud Sync Google Drive AppData + conflict handling + secure token chưa triển khai.
+- Workflow promote theo lịch chưa có run thực tế (`tooling/reports/n4_promotion_history.json` đang rỗng, chưa thấy `tooling/reports/n4_promotion_schedule_state.json`).

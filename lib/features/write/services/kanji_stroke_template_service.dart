@@ -9,9 +9,19 @@ class KanjiStrokeTemplateService {
   static final KanjiStrokeTemplateService instance =
       KanjiStrokeTemplateService._();
 
+  // Test-only override to avoid rootBundle dependency in widget tests.
+  static Map<String, KanjiStrokeTemplate>? debugTemplateOverrides;
+
   static const _assetPath = 'assets/data/kanji/stroke_templates.json';
 
   Map<String, KanjiStrokeTemplate>? _templates;
+
+  static void setDebugTemplateOverrides(
+    Map<String, KanjiStrokeTemplate>? templates,
+  ) {
+    debugTemplateOverrides = templates;
+    instance._templates = templates;
+  }
 
   Future<KanjiStrokeTemplate?> getTemplate(String character) async {
     await _ensureLoaded();
@@ -20,6 +30,10 @@ class KanjiStrokeTemplateService {
 
   Future<void> _ensureLoaded() async {
     if (_templates != null) return;
+    if (debugTemplateOverrides != null) {
+      _templates = debugTemplateOverrides;
+      return;
+    }
     final raw = (await rootBundle.loadString(_assetPath)).replaceFirst(
       '\uFEFF',
       '',

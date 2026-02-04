@@ -75,7 +75,8 @@ class _TestScreenState extends ConsumerState<TestScreen> {
   @override
   void dispose() {
     _timer?.cancel();
-    _persistSession();
+    // Session state is already persisted on interactions/navigation actions.
+    // Avoid provider reads during dispose to prevent invalid ref access.
     super.dispose();
   }
 

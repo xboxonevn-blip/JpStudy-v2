@@ -166,6 +166,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     AppLanguage language,
   ) {
     final vocabIds = <int>{};
+    final preferContentVocabIds = <int>{};
     final grammarIds = <int>{};
     final kanjiIds = <int>{};
     final kanjiByLesson = <int, List<int>>{};
@@ -173,6 +174,11 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     for (final m in mistakes) {
       if (m.type == 'vocab') {
         vocabIds.add(m.itemId);
+        final extra = _parseExtraJson(m.extraJson);
+        final vocabSource = (extra['vocabSource'] ?? '').toString().trim();
+        if (vocabSource == 'content') {
+          preferContentVocabIds.add(m.itemId);
+        }
       } else if (m.type == 'grammar') {
         grammarIds.add(m.itemId);
       } else if (m.type == 'kanji') {
@@ -195,6 +201,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
             vocabIds.toList(),
             details,
             language,
+            preferContentIds: preferContentVocabIds,
           ),
         ),
       );
@@ -278,22 +285,53 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     BuildContext context,
     List<int> vocabIds,
     _MistakeDetails details,
-    AppLanguage language,
-  ) async {
+    AppLanguage language, {
+    required Set<int> preferContentIds,
+  }) async {
     final items = <VocabItem>[];
     for (final id in vocabIds) {
       final term = details.vocab[id];
-      if (term == null) continue;
-      items.add(
-        VocabItem(
-          id: term.id,
-          term: term.term,
-          reading: term.reading,
-          meaning: term.definition,
-          meaningEn: term.definitionEn,
-          level: 'Unknown',
-        ),
-      );
+      final fallback = details.vocabFallback[id];
+      if (term == null && fallback == null) continue;
+      final preferContent = preferContentIds.contains(id);
+
+      if (preferContent && fallback != null) {
+        items.add(
+          VocabItem(
+            id: fallback.id,
+            term: fallback.term,
+            reading: fallback.reading,
+            meaning: fallback.meaning,
+            meaningEn: fallback.meaningEn,
+            kanjiMeaning: fallback.kanjiMeaning,
+            level: fallback.level,
+          ),
+        );
+      } else if (term != null) {
+        items.add(
+          VocabItem(
+            id: term.id,
+            term: term.term,
+            reading: term.reading,
+            meaning: term.definition,
+            meaningEn: term.definitionEn,
+            kanjiMeaning: term.kanjiMeaning,
+            level: 'Unknown',
+          ),
+        );
+      } else if (fallback != null) {
+        items.add(
+          VocabItem(
+            id: fallback.id,
+            term: fallback.term,
+            reading: fallback.reading,
+            meaning: fallback.meaning,
+            meaningEn: fallback.meaningEn,
+            kanjiMeaning: fallback.kanjiMeaning,
+            level: fallback.level,
+          ),
+        );
+      }
     }
 
     if (items.isEmpty || !context.mounted) return;
@@ -341,12 +379,21 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     AppDatabase db,
     LessonRepository lessonRepo,
   ) async {
-    final vocabIds = <int>{};
+    final lessonVocabIds = <int>{};
+    final contentVocabIds = <int>{};
     final grammarIds = <int>{};
     final kanjiIds = <int>{};
     for (final mistake in mistakes) {
       if (mistake.type == 'vocab') {
-        vocabIds.add(mistake.itemId);
+        final extra = _parseExtraJson(mistake.extraJson);
+        final vocabSource = (extra['vocabSource'] ?? '').toString().trim();
+        if (vocabSource == 'content') {
+          contentVocabIds.add(mistake.itemId);
+        } else {
+          // Legacy rows (without vocabSource) are treated as lesson first
+          // and can still fallback to content lookup when missing.
+          lessonVocabIds.add(mistake.itemId);
+        }
       } else if (mistake.type == 'grammar') {
         grammarIds.add(mistake.itemId);
       } else if (mistake.type == 'kanji') {
@@ -355,12 +402,26 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     }
 
     final vocabMap = <int, UserLessonTermData>{};
-    if (vocabIds.isNotEmpty) {
+    if (lessonVocabIds.isNotEmpty) {
       final terms = await (db.select(
         db.userLessonTerm,
-      )..where((t) => t.id.isIn(vocabIds.toList()))).get();
+      )..where((t) => t.id.isIn(lessonVocabIds.toList()))).get();
       for (final term in terms) {
         vocabMap[term.id] = term;
+      }
+    }
+
+    final vocabFallbackMap = <int, VocabItem>{};
+    final fallbackIds = <int>{
+      ...contentVocabIds,
+      ...lessonVocabIds.where((id) => !vocabMap.containsKey(id)),
+    }.toList();
+    if (fallbackIds.isNotEmpty) {
+      final fallbackItems = await lessonRepo.fetchContentVocabByIds(
+        fallbackIds,
+      );
+      for (final item in fallbackItems) {
+        vocabFallbackMap[item.id] = item;
       }
     }
 
@@ -384,6 +445,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
 
     return _MistakeDetails(
       vocab: vocabMap,
+      vocabFallback: vocabFallbackMap,
       grammar: grammarMap,
       kanji: kanjiMap,
     );
@@ -396,16 +458,23 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
   ) {
     final remainingLabel = language.mistakeRemainingLabel(mistake.wrongCount);
     if (mistake.type == 'vocab') {
-      final term = details.vocab[mistake.itemId];
-      final meaning = _resolveMeaning(
-        language,
-        term?.definition ?? '',
-        term?.definitionEn,
-      );
-      final reading = (term?.reading ?? '').trim();
-      final title = term == null
+      final extra = _parseExtraJson(mistake.extraJson);
+      final preferContent =
+          (extra['vocabSource'] ?? '').toString().trim() == 'content';
+      final term = preferContent ? null : details.vocab[mistake.itemId];
+      final fallback = details.vocabFallback[mistake.itemId];
+      final meaning = term != null
+          ? _resolveMeaning(language, term.definition, term.definitionEn)
+          : _resolveMeaning(
+              language,
+              fallback?.meaning ?? '',
+              fallback?.meaningEn,
+            );
+      final reading = (term?.reading ?? fallback?.reading ?? '').trim();
+      final termText = term?.term ?? fallback?.term;
+      final title = termText == null
           ? language.mistakeItemIdLabel(mistake.itemId)
-          : '${term.term}${reading.isNotEmpty ? ' - $reading' : ''}';
+          : '$termText${reading.isNotEmpty ? ' - $reading' : ''}';
       final subtitle = meaning.isNotEmpty
           ? '$meaning - $remainingLabel'
           : remainingLabel;
@@ -512,6 +581,10 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
         return language.mistakeSourceGrammarPracticeLabel;
       case 'handwriting':
         return language.mistakeSourceHandwritingLabel;
+      case 'match_game':
+        return language.practiceMatchLabel;
+      case 'kanji_dash':
+        return language.practiceKanjiDashLabel;
       default:
         return (source ?? '').trim();
     }
@@ -558,11 +631,13 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
 
 class _MistakeDetails {
   final Map<int, UserLessonTermData> vocab;
+  final Map<int, VocabItem> vocabFallback;
   final Map<int, GrammarPoint> grammar;
   final Map<int, KanjiItem> kanji;
 
   const _MistakeDetails({
     this.vocab = const {},
+    this.vocabFallback = const {},
     this.grammar = const {},
     this.kanji = const {},
   });

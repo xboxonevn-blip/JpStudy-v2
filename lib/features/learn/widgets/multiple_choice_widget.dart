@@ -42,10 +42,10 @@ class MultipleChoiceWidget extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              if (question.targetItem.reading != null) ...[
+              if (question.targetItem.hasDisplayReading) ...[
                 const SizedBox(height: 8),
                 Text(
-                  question.targetItem.reading!,
+                  question.targetItem.reading!.trim(),
                   style: TextStyle(fontSize: 20, color: Colors.grey[600]),
                   textAlign: TextAlign.center,
                 ),

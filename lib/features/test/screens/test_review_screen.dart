@@ -199,10 +199,9 @@ class _ReviewCard extends StatelessWidget {
               question.targetItem.term,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            if (question.targetItem.reading != null &&
-                question.targetItem.reading!.trim().isNotEmpty)
+            if (question.targetItem.hasDisplayReading)
               Text(
-                question.targetItem.reading!,
+                question.targetItem.reading!.trim(),
                 style: TextStyle(color: Colors.grey[600]),
               ),
             const SizedBox(height: 8),

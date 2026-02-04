@@ -59,12 +59,36 @@ Xây dựng nền tảng học tiếng Nhật "All-in-One", kết hợp thuật 
 
 ---
 
-### ☁️ Phase 4: Cloud Ecosystem
-**Mục tiêu:** Mở rộng trải nghiệm đa nền tảng
+### 🌸 Phase 3.5: Yokai Garden (Living Ecosystem)
+**Mục tiêu:** Nâng tầm Gamification thành hệ thống "Pet Companion" (Yokai) sống động, tạo kết nối cảm xúc và động lực học tập.
 
-1.  **☁️ Cloud Sync (Free):**
-    *   [ ] **Google Drive Backup:** Sync file database qua Google Drive API (Android/Windows).
+1.  **👻 Spirit Companions (Hệ thống Yêu quái):**
+    *   [ ] **Collection:** Thu thập các Yokai (Kitsune, Tanuki, Kodama...) thông qua việc hoàn thành các mốc học tập (Milestones).
+    *   [ ] **Study Buffs:** Mỗi Yokai mang lại hiệu ứng thụ động (Kitsune: +XP Kanji, Rùa Genbu: +5s Timer).
+    *   [ ] **Evolution:** Yokai lớn lên và thay đổi hình dạng dựa trên Streak và số lượng bài học đã làm.
+
+2.  **🏯 Garden Habitat (Môi trường sống):**
+    *   [ ] **Dynamic Decor:** Trang trí khu vườn để thu hút các loại Yokai khác nhau (như Neko Atsume).
+    *   [ ] **Real-time Vibe:** Thời tiết/Ánh sáng trong vườn thay đổi theo thời gian thực của người dùng.
+
+3.  **💎 Economy & Interaction:**
+    *   [ ] **Spirit Orbs (SO):** Dùng để mua thức ăn và vật phẩm cho Yokai.
+    *   [ ] **Interactions:** Chạm vào Yokai để tương tác (Animation + Voice line động viên).
+
+---
+
+### ☁️ Phase 4: Cloud Ecosystem
+**Mục tiêu:** Đồng bộ đa nền tảng (Windows <-> Android) an toàn và chi phí thấp.
+
+1.  **☁️ Cloud Sync (Google Drive AppData):**
+    *   [ ] **Implementation:** Sử dụng Google Drive App Data folder (ẩn với user) để lưu file database SQLite.
+    *   [ ] **Conflict Management:** Cơ chế "Last Modified Wins" + Backup version trước khi ghi đè để an toàn.
+    *   [ ] **Manual Sync:** Nút "Upload to Cloud" và "Download from Cloud" chủ động.
     *   [x] **Export/Import:** Xuất/Nhập dữ liệu tiến độ (JSON/Zip).
+
+2.  **🔐 Security & Privacy:**
+    *   [ ] **Encrypted Token:** Lưu Refresh Token an toàn trong Secure Storage.
+    *   [ ] **No Proprietary Server:** User sở hữu 100% dữ liệu trên Drive cá nhân.
 
 
 ---

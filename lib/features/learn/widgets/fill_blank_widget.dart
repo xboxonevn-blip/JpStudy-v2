@@ -59,10 +59,10 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                 textAlign: TextAlign.center,
               ),
               if (widget.question.expectsReading != true &&
-                  widget.question.targetItem.reading != null) ...[
+                  widget.question.targetItem.hasDisplayReading) ...[
                 const SizedBox(height: 8),
                 Text(
-                  widget.question.targetItem.reading!,
+                  widget.question.targetItem.reading!.trim(),
                   style: TextStyle(fontSize: 20, color: Colors.grey[600]),
                   textAlign: TextAlign.center,
                 ),

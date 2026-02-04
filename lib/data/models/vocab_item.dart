@@ -1,4 +1,5 @@
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/utils/japanese_text.dart';
 
 class VocabItem {
   const VocabItem({
@@ -24,6 +25,8 @@ class VocabItem {
   final String? mnemonicEn;
   final String level;
   final List<String>? tags;
+
+  bool get hasDisplayReading => shouldShowReading(term: term, reading: reading);
 
   String displayMeaning(AppLanguage language) {
     final english = meaningEn?.trim() ?? '';

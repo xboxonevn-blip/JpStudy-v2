@@ -8,9 +8,11 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/core/widgets/juicy_button.dart';
+import 'package:jpstudy/data/models/mistake_context.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/content_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
 
 class KanjiDashScreen extends ConsumerStatefulWidget {
   const KanjiDashScreen({super.key});
@@ -29,6 +31,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   VocabItem? _currentQuestion;
   List<String> _options = [];
   List<VocabItem> _vocabPool = [];
+  final Map<int, int?> _resolvedTermIdByContentId = {};
 
   @override
   void dispose() {
@@ -91,9 +94,17 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   }
 
   void _handleAnswer(String selectedMeaning) {
-    if (!_isGameActive) return;
+    final question = _currentQuestion;
+    if (!_isGameActive || question == null) return;
 
-    final isCorrect = selectedMeaning == _currentQuestion!.meaning;
+    final isCorrect = selectedMeaning == question.meaning;
+    unawaited(
+      _recordAnswerOutcome(
+        question,
+        isCorrect: isCorrect,
+        userAnswer: selectedMeaning,
+      ),
+    );
 
     if (isCorrect) {
       HapticFeedback.mediumImpact();
@@ -109,6 +120,58 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
         _timeLeft -= 2.0; // Penalty for wrong answer
       });
     }
+  }
+
+  Future<int?> _resolveUserTermId(VocabItem item) async {
+    if (_resolvedTermIdByContentId.containsKey(item.id)) {
+      return _resolvedTermIdByContentId[item.id];
+    }
+    final termId = await ref
+        .read(lessonRepositoryProvider)
+        .resolveUserTermIdForContentVocabId(item.id);
+    _resolvedTermIdByContentId[item.id] = termId;
+    return termId;
+  }
+
+  Future<void> _recordAnswerOutcome(
+    VocabItem item, {
+    required bool isCorrect,
+    required String userAnswer,
+  }) async {
+    final lessonRepo = ref.read(lessonRepositoryProvider);
+    final contentRepo = ref.read(contentRepositoryProvider);
+    final mistakeRepo = ref.read(mistakeRepositoryProvider);
+    final language = ref.read(appLanguageProvider);
+    final meaning = item.displayMeaning(language).trim();
+    final reading = (item.reading ?? '').trim();
+    final prompt = reading.isEmpty ? item.term : '${item.term} - $reading';
+
+    await contentRepo.updateProgress(item.id, isCorrect);
+
+    final termId = await _resolveUserTermId(item);
+    if (termId != null) {
+      await lessonRepo.saveTermReview(
+        termId: termId,
+        quality: isCorrect ? 3 : 1,
+      );
+    }
+
+    if (isCorrect) {
+      await mistakeRepo.markCorrect(type: 'vocab', itemId: item.id);
+      return;
+    }
+
+    await mistakeRepo.addMistake(
+      type: 'vocab',
+      itemId: item.id,
+      context: MistakeContext(
+        prompt: prompt,
+        correctAnswer: meaning,
+        userAnswer: userAnswer,
+        source: 'kanji_dash',
+        extra: const {'vocabSource': 'content'},
+      ),
+    );
   }
 
   void _endGame() {

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:jpstudy/core/app_language.dart';
 
 /// Confidence level enum for SRS reviews
 enum ConfidenceLevel {
-  again(1, 'Again', Colors.red, Icons.replay),
-  hard(2, 'Hard', Colors.orange, Icons.trending_down),
-  good(3, 'Good', Colors.blue, Icons.check),
-  easy(4, 'Easy', Colors.green, Icons.bolt);
+  again(1, Colors.red, Icons.replay),
+  hard(2, Colors.orange, Icons.trending_down),
+  good(3, Colors.blue, Icons.check),
+  easy(4, Colors.green, Icons.bolt);
 
   final int value;
-  final String label;
   final Color color;
   final IconData icon;
 
-  const ConfidenceLevel(this.value, this.label, this.color, this.icon);
+  const ConfidenceLevel(this.value, this.color, this.icon);
 }
 
 /// Widget for selecting confidence/difficulty rating
@@ -21,10 +21,12 @@ class ConfidenceRatingWidget extends StatelessWidget {
   final ConfidenceLevel? selected;
   final bool showLabels;
   final bool compact;
+  final AppLanguage language;
 
   const ConfidenceRatingWidget({
     super.key,
     required this.onSelect,
+    required this.language,
     this.selected,
     this.showLabels = true,
     this.compact = false,
@@ -42,7 +44,7 @@ class ConfidenceRatingWidget extends StatelessWidget {
             icon: Icon(level.icon),
             color: isSelected ? level.color : Colors.grey,
             iconSize: 28,
-            tooltip: level.label,
+            tooltip: _labelFor(level),
           );
         }).toList(),
       );
@@ -85,7 +87,7 @@ class ConfidenceRatingWidget extends StatelessWidget {
               if (showLabels) ...[
                 const SizedBox(height: 4),
                 Text(
-                  level.label,
+                  _labelFor(level),
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w600,
@@ -98,6 +100,19 @@ class ConfidenceRatingWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String _labelFor(ConfidenceLevel level) {
+    switch (level) {
+      case ConfidenceLevel.again:
+        return language.reviewAgainLabel;
+      case ConfidenceLevel.hard:
+        return language.reviewHardLabel;
+      case ConfidenceLevel.good:
+        return language.reviewGoodLabel;
+      case ConfidenceLevel.easy:
+        return language.reviewEasyLabel;
+    }
   }
 }
 

@@ -44,10 +44,17 @@ final continueActionProvider = StreamProvider<ContinueAction>((ref) async* {
 
   // Priority 3: Kanji Due
   if (dashboard.kanjiDue > 0) {
+    int? dueLessonId;
+    if (level != null) {
+      dueLessonId = await lessonRepo.findFirstLessonWithDueKanji(
+        level.shortLabel,
+      );
+    }
     yield ContinueAction(
       type: ContinueActionType.kanjiReview,
       label: language.reviewKanjiLabel,
       count: dashboard.kanjiDue,
+      data: dueLessonId,
     );
     return;
   }

@@ -108,14 +108,33 @@ class ContentDatabase extends _$ContentDatabase {
 
   Future<void> _ensureMinnaVocabularySeeded() async {
     final minnaCountExpr = vocab.id.count();
-    final query =
-        selectOnly(vocab)
-          ..addColumns([minnaCountExpr])
-          ..where(vocab.tags.like('%minna_%'));
+    final query = selectOnly(vocab)
+      ..addColumns([minnaCountExpr])
+      ..where(vocab.tags.like('%minna_%'));
     final row = await query.getSingle();
     final minnaCount = row.read(minnaCountExpr) ?? 0;
     if (minnaCount == 0) {
       await _seedMinnaVocabulary();
+      return;
+    }
+
+    // Self-heal old seeded DBs that still contain placeholder/garbled rows.
+    final corruptedCountExpr = vocab.id.count();
+    final corruptedQuery = selectOnly(vocab)
+      ..addColumns([corruptedCountExpr])
+      ..where(vocab.tags.like('%minna_%'))
+      ..where(
+        vocab.term.like('%?%') |
+            vocab.reading.like('%?%') |
+            vocab.term.like('%ã%') |
+            vocab.reading.like('%ã%') |
+            vocab.term.like('%Ã%') |
+            vocab.reading.like('%Ã%'),
+      );
+    final corruptedRow = await corruptedQuery.getSingle();
+    final corruptedCount = corruptedRow.read(corruptedCountExpr) ?? 0;
+    if (corruptedCount > 0) {
+      await _reseedMinnaVocabulary();
     }
   }
 
@@ -353,8 +372,7 @@ class ContentDatabase extends _$ContentDatabase {
   }) async {
     final levelLower = level.toLowerCase();
     final paddedLessonId = lessonId.toString().padLeft(2, '0');
-    final basePath =
-        'assets/data/vocab/$levelLower/lesson_$paddedLessonId';
+    final basePath = 'assets/data/vocab/$levelLower/lesson_$paddedLessonId';
 
     try {
       final masterJson = await rootBundle.loadString('$basePath/master.json');
@@ -459,6 +477,9 @@ class ContentDatabase extends _$ContentDatabase {
       if (term.isEmpty || meaningVi.isEmpty) return;
 
       final reading = _readNullableText(raw, 'reading');
+      if (_containsPlaceholder(term) || _containsPlaceholder(reading)) {
+        return;
+      }
       final kanjiMeaning = _readNullableText(raw, 'kanjiMeaning');
       final meaningEn = _readNullableText(raw, 'meaning_en');
       final rowLevel = _firstNonEmpty([_readText(raw, 'level'), level]);
@@ -556,6 +577,10 @@ class ContentDatabase extends _$ContentDatabase {
     final meaningEn = _readText(row, 'meaning_en');
     final level = _readText(row, 'level');
     return '$term|$reading|$kanjiMeaning|$meaningVi|$meaningEn|$level';
+  }
+
+  bool _containsPlaceholder(String? value) {
+    return (value ?? '').contains('?');
   }
 
   Future<void> _addColumn<T extends Object>(

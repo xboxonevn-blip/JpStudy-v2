@@ -865,7 +865,7 @@ class _TermCard extends StatelessWidget {
             children: [
               Expanded(
                 child: _TermField(
-                  label: 'Kanji / Word',
+                  label: language.termLabel,
                   initialValue: term.term,
                   onChanged: onTermChanged,
                 ),
@@ -873,7 +873,7 @@ class _TermCard extends StatelessWidget {
               const SizedBox(width: 12),
               Expanded(
                 child: _TermField(
-                  label: 'Kanji Meaning',
+                  label: language.kanjiMeaningLabel,
                   initialValue: term.kanjiMeaning,
                   onChanged: onKanjiMeaningChanged,
                 ),
@@ -887,7 +887,7 @@ class _TermCard extends StatelessWidget {
             children: [
               Expanded(
                 child: _TermField(
-                  label: 'Reading (Kana)',
+                  label: language.readingLabel,
                   initialValue: term.reading,
                   onChanged: onReadingChanged,
                 ),
@@ -899,7 +899,7 @@ class _TermCard extends StatelessWidget {
             children: [
               Expanded(
                 child: _TermField(
-                  label: 'Meaning',
+                  label: language.meaningLabel,
                   initialValue: term.definition,
                   onChanged: onDefinitionChanged,
                 ),
@@ -907,7 +907,7 @@ class _TermCard extends StatelessWidget {
               const SizedBox(width: 12),
               Expanded(
                 child: _TermField(
-                  label: 'Meaning (EN)',
+                  label: language.meaningEnLabel,
                   initialValue: term.definitionEn,
                   onChanged: onDefinitionEnChanged,
                 ),

@@ -476,18 +476,28 @@ class LessonRepository {
       _contentDb.vocab,
     )..where((tbl) => tbl.level.equals(level))).get();
 
-    return items.map((item) {
-      return VocabItem(
-        id: item.id,
-        term: item.term,
-        reading: item.reading ?? '',
-        meaning: item.meaning,
-        meaningEn: item.meaningEn,
-        kanjiMeaning: item.kanjiMeaning,
-        level: item.level,
-        tags: item.tags?.split(','),
-      );
-    }).toList();
+    return items.map(_mapContentVocabToItem).toList();
+  }
+
+  Future<List<VocabItem>> fetchContentVocabByIds(List<int> ids) async {
+    if (ids.isEmpty) return const [];
+    final rows = await (_contentDb.select(
+      _contentDb.vocab,
+    )..where((tbl) => tbl.id.isIn(ids))).get();
+    return rows.map(_mapContentVocabToItem).toList();
+  }
+
+  VocabItem _mapContentVocabToItem(VocabData item) {
+    return VocabItem(
+      id: item.id,
+      term: item.term,
+      reading: item.reading ?? '',
+      meaning: item.meaning,
+      meaningEn: item.meaningEn,
+      kanjiMeaning: item.kanjiMeaning,
+      level: item.level,
+      tags: item.tags?.split(','),
+    );
   }
 
   Future<Map<int, int>> _fetchDueCounts(List<int> lessonIds) async {
@@ -580,7 +590,12 @@ class LessonRepository {
 
   Future<List<UserLessonTermData>> fetchTerms(int lessonId) {
     return (_db.select(_db.userLessonTerm)
-          ..where((tbl) => tbl.lessonId.equals(lessonId))
+          ..where(
+            (tbl) =>
+                tbl.lessonId.equals(lessonId) &
+                tbl.term.like('%?%').not() &
+                tbl.reading.like('%?%').not(),
+          )
           ..orderBy([(tbl) => OrderingTerm(expression: tbl.orderIndex)]))
         .get();
   }
@@ -716,6 +731,8 @@ class LessonRepository {
     var vocabList =
         await (_contentDb.select(_contentDb.vocab)..where((tbl) {
               return tbl.level.equals(dbLevel) &
+                  tbl.term.like('%?%').not() &
+                  tbl.reading.like('%?%').not() &
                   (tbl.tags.like('minna_$idStr,%') |
                       tbl.tags.equals('minna_$idStr') |
                       tbl.tags.like('%,minna_$idStr,%') |
@@ -737,7 +754,12 @@ class LessonRepository {
 
       vocabList =
           await (_contentDb.select(_contentDb.vocab)
-                ..where((tbl) => tbl.level.equals(dbLevel))
+                ..where(
+                  (tbl) =>
+                      tbl.level.equals(dbLevel) &
+                      tbl.term.like('%?%').not() &
+                      tbl.reading.like('%?%').not(),
+                )
                 ..limit(limit, offset: offset))
               .get();
     }
@@ -933,10 +955,9 @@ class LessonRepository {
         final lessonTag =
             int.tryParse((mapRow['lessonId'] ?? '').toString().trim()) ??
             lessonId;
-        final extraTag =
-            (mapRow['tag'] ?? sense['tag'] ?? lemma['tag'] ?? '')
-                .toString()
-                .trim();
+        final extraTag = (mapRow['tag'] ?? sense['tag'] ?? lemma['tag'] ?? '')
+            .toString()
+            .trim();
         final tags = extraTag.isEmpty
             ? 'minna_$lessonTag'
             : 'minna_$lessonTag,$extraTag';
@@ -1204,6 +1225,22 @@ class LessonRepository {
     }).toList();
   }
 
+  Future<int?> findFirstLessonWithDueKanji(String level) async {
+    final dueStates = await _db.kanjiSrsDao.getDueReviews();
+    if (dueStates.isEmpty) return null;
+
+    final dueIds = dueStates.map((state) => state.kanjiId).toList();
+    final rows =
+        await (_contentDb.select(_contentDb.kanji)..where((tbl) {
+              return tbl.id.isIn(dueIds) & tbl.jlptLevel.equals(level);
+            }))
+            .get();
+    if (rows.isEmpty) return null;
+
+    rows.sort((a, b) => a.lessonId.compareTo(b.lessonId));
+    return rows.first.lessonId;
+  }
+
   Future<KanjiSrsStateData?> getKanjiSrsState(int kanjiId) {
     return _db.kanjiSrsDao.getSrsState(kanjiId);
   }
@@ -1364,6 +1401,121 @@ class LessonRepository {
           ..where((tbl) => tbl.term.equals(term))
           ..where((tbl) => tbl.reading.equals(normalizedReading)))
         .getSingleOrNull();
+  }
+
+  /// Resolve a content vocab id to the seeded user term id used by SRS.
+  /// Returns null when the vocab item has not been seeded yet.
+  Future<int?> resolveUserTermIdForContentVocabId(int contentVocabId) async {
+    final source = await (_contentDb.select(
+      _contentDb.vocab,
+    )..where((tbl) => tbl.id.equals(contentVocabId))).getSingleOrNull();
+    if (source == null) {
+      return null;
+    }
+
+    return _resolveUserTermId(
+      term: source.term,
+      reading: source.reading,
+      meaningVi: source.meaning,
+      meaningEn: source.meaningEn,
+      level: source.level,
+    );
+  }
+
+  Future<int?> _resolveUserTermId({
+    required String term,
+    String? reading,
+    String? meaningVi,
+    String? meaningEn,
+    String? level,
+  }) async {
+    final normalizedTerm = term.trim();
+    if (normalizedTerm.isEmpty) {
+      return null;
+    }
+
+    final normalizedReading = (reading ?? '').trim();
+    final normalizedMeaningVi = (meaningVi ?? '').trim();
+    final normalizedMeaningEn = (meaningEn ?? '').trim();
+    final normalizedLevel = (level ?? '').trim().toUpperCase();
+
+    Future<List<UserLessonTermData>> queryCandidates({
+      required bool strictReading,
+      required bool filterByLevel,
+    }) async {
+      final query = _db.select(_db.userLessonTerm).join([
+        innerJoin(
+          _db.userLesson,
+          _db.userLesson.id.equalsExp(_db.userLessonTerm.lessonId),
+        ),
+      ]);
+
+      query.where(_db.userLessonTerm.term.equals(normalizedTerm));
+      if (strictReading) {
+        query.where(_db.userLessonTerm.reading.equals(normalizedReading));
+      }
+      if (filterByLevel && normalizedLevel.isNotEmpty) {
+        query.where(_db.userLesson.level.equals(normalizedLevel));
+      }
+
+      query.orderBy([
+        OrderingTerm(expression: _db.userLesson.id),
+        OrderingTerm(expression: _db.userLessonTerm.orderIndex),
+      ]);
+
+      final rows = await query.get();
+      return rows.map((row) => row.readTable(_db.userLessonTerm)).toList();
+    }
+
+    var candidates = await queryCandidates(
+      strictReading: true,
+      filterByLevel: true,
+    );
+
+    if (candidates.isEmpty) {
+      candidates = await queryCandidates(
+        strictReading: true,
+        filterByLevel: false,
+      );
+    }
+
+    if (candidates.isEmpty && normalizedReading.isNotEmpty) {
+      candidates = await queryCandidates(
+        strictReading: false,
+        filterByLevel: true,
+      );
+    }
+
+    if (candidates.isEmpty && normalizedReading.isNotEmpty) {
+      candidates = await queryCandidates(
+        strictReading: false,
+        filterByLevel: false,
+      );
+    }
+
+    if (candidates.isEmpty) {
+      return null;
+    }
+
+    if (normalizedMeaningVi.isNotEmpty) {
+      final viMatch = candidates
+          .where((item) => item.definition.trim() == normalizedMeaningVi)
+          .toList();
+      if (viMatch.isNotEmpty) {
+        return viMatch.first.id;
+      }
+    }
+
+    if (normalizedMeaningEn.isNotEmpty) {
+      final enMatch = candidates
+          .where((item) => item.definitionEn.trim() == normalizedMeaningEn)
+          .toList();
+      if (enMatch.isNotEmpty) {
+        return enMatch.first.id;
+      }
+    }
+
+    return candidates.first.id;
   }
 
   Future<void> updateTerm(
@@ -1827,6 +1979,8 @@ class LessonRepository {
     ]);
     query
       ..where(_db.userLessonTerm.lessonId.equals(lessonId))
+      ..where(_db.userLessonTerm.term.like('%?%').not())
+      ..where(_db.userLessonTerm.reading.like('%?%').not())
       ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now))
       ..orderBy([OrderingTerm(expression: _db.userLessonTerm.orderIndex)]);
     return query.map((row) => row.readTable(_db.userLessonTerm)).get();
@@ -1841,6 +1995,8 @@ class LessonRepository {
       ),
     ]);
     query
+      ..where(_db.userLessonTerm.term.like('%?%').not())
+      ..where(_db.userLessonTerm.reading.like('%?%').not())
       ..where(_db.srsState.nextReviewAt.isSmallerOrEqualValue(now))
       ..orderBy([OrderingTerm(expression: _db.srsState.nextReviewAt)]);
     return query.map((row) => row.readTable(_db.userLessonTerm)).get();

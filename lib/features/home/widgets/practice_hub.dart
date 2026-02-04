@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
-import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
+import 'package:jpstudy/features/home/models/practice_destination.dart';
 
 import '../providers/dashboard_provider.dart';
 
@@ -20,53 +20,11 @@ class PracticeHub extends ConsumerWidget {
     final dashboard = ref.watch(dashboardProvider).valueOrNull;
     final mistakeCount = dashboard?.totalMistakeCount ?? 0;
 
-    final tiles = <_PracticeTileData>[
-      _PracticeTileData(
-        title: language.practiceMatchLabel,
-        subtitle: language.practiceMatchSubtitle,
-        icon: Icons.extension_rounded,
-        color: const Color(0xFF0EA5E9),
-        onTap: () => context.push('/match'),
-      ),
-      _PracticeTileData(
-        title: language.practiceGhostLabel,
-        subtitle: language.practiceGhostSubtitle,
-        icon: Icons.auto_fix_high_rounded,
-        color: const Color(0xFFF43F5E),
-        badgeCount: ghostCount > 0 ? ghostCount : null,
-        onTap: () =>
-            context.push('/grammar-practice', extra: GrammarPracticeMode.ghost),
-      ),
-      _PracticeTileData(
-        title: language.practiceKanjiDashLabel,
-        subtitle: language.practiceKanjiDashSubtitle,
-        icon: Icons.flash_on_rounded,
-        color: const Color(0xFFF59E0B),
-        onTap: () => context.push('/kanji-dash'),
-      ),
-      _PracticeTileData(
-        title: language.practiceExamLabel,
-        subtitle: language.practiceExamSubtitle,
-        icon: Icons.quiz_rounded,
-        color: const Color(0xFF14B8A6),
-        onTap: () => context.push('/exam'),
-      ),
-      _PracticeTileData(
-        title: language.practiceImmersionLabel,
-        subtitle: language.practiceImmersionSubtitle,
-        icon: Icons.newspaper_rounded,
-        color: const Color(0xFF2563EB),
-        onTap: () => context.push('/immersion'),
-      ),
-      _PracticeTileData(
-        title: language.practiceMistakesLabel,
-        subtitle: language.practiceMistakesSubtitle,
-        icon: Icons.warning_amber_rounded,
-        color: const Color(0xFFDC2626),
-        badgeCount: mistakeCount > 0 ? mistakeCount : null,
-        onTap: () => context.push('/mistakes'),
-      ),
-    ];
+    final tiles = buildPracticeDestinations(
+      language: language,
+      ghostCount: ghostCount,
+      mistakeCount: mistakeCount,
+    );
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
@@ -157,7 +115,16 @@ class PracticeHub extends ConsumerWidget {
                     ),
                     itemBuilder: (context, index) {
                       final item = tiles[index];
-                      return _PracticeTile(item: item);
+                      return _PracticeTile(
+                        item: item,
+                        onTap: () {
+                          if (item.extra != null) {
+                            context.push(item.route, extra: item.extra);
+                          } else {
+                            context.push(item.route);
+                          }
+                        },
+                      );
                     },
                   );
                 },
@@ -170,28 +137,11 @@ class PracticeHub extends ConsumerWidget {
   }
 }
 
-class _PracticeTileData {
-  const _PracticeTileData({
-    required this.title,
-    required this.subtitle,
-    required this.icon,
-    required this.color,
-    required this.onTap,
-    this.badgeCount,
-  });
-
-  final String title;
-  final String subtitle;
-  final IconData icon;
-  final Color color;
-  final VoidCallback onTap;
-  final int? badgeCount;
-}
-
 class _PracticeTile extends StatelessWidget {
-  const _PracticeTile({required this.item});
+  const _PracticeTile({required this.item, required this.onTap});
 
-  final _PracticeTileData item;
+  final PracticeDestination item;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -200,7 +150,7 @@ class _PracticeTile extends StatelessWidget {
       borderRadius: BorderRadius.circular(16),
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
-        onTap: item.onTap,
+        onTap: onTap,
         child: Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(

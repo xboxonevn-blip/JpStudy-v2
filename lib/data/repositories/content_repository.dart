@@ -8,7 +8,13 @@ final vocabPreviewProvider = FutureProvider.family<List<VocabData>, String>((
   level,
 ) async {
   final db = ref.watch(contentDatabaseProvider);
-  final query = db.select(db.vocab)..where((tbl) => tbl.level.equals(level));
+  final query = db.select(db.vocab)
+    ..where(
+      (tbl) =>
+          tbl.level.equals(level) &
+          tbl.term.like('%?%').not() &
+          tbl.reading.like('%?%').not(),
+    );
   final result = await query.get();
   // DEBUG: Check for specific Minna words
   // final debugTerms = ['私', '見ます', '探します', '食べる'];

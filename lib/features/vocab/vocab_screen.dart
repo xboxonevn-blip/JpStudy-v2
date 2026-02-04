@@ -5,6 +5,7 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/core/utils/japanese_text.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/content_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
@@ -151,6 +152,14 @@ class _ListView extends StatelessWidget {
           );
         }
         final item = items[index - 1];
+        final meaningText = language == AppLanguage.en
+            ? (item.meaningEn ?? item.meaning)
+            : item.meaning;
+        final showReading = shouldShowReading(
+          term: item.term,
+          reading: item.reading,
+        );
+
         return Padding(
           padding: const EdgeInsets.only(bottom: 12),
           child: ClayCard(
@@ -166,11 +175,9 @@ class _ListView extends StatelessWidget {
                 ),
               ),
               subtitle: Text(
-                item.reading == null || item.reading!.isEmpty
-                    ? (language == AppLanguage.en
-                          ? (item.meaningEn ?? item.meaning)
-                          : item.meaning)
-                    : '${item.reading} • ${language == AppLanguage.en ? (item.meaningEn ?? item.meaning) : item.meaning}',
+                showReading
+                    ? '${item.reading!.trim()} • $meaningText'
+                    : meaningText,
                 style: TextStyle(color: AppThemeV2.textSub),
               ),
             ),

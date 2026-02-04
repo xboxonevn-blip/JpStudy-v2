@@ -305,7 +305,12 @@ class _ContinueButtonState extends ConsumerState<ContinueButton> {
         context.push('/vocab/review');
         break;
       case ContinueActionType.kanjiReview:
-        context.push('/kanji-dash');
+        final lessonId = action.data;
+        if (lessonId is int) {
+          context.push('/lesson/$lessonId');
+        } else {
+          context.push('/kanji-dash');
+        }
         break;
       case ContinueActionType.fixMistakes:
         context.push('/mistakes');

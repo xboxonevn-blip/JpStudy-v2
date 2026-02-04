@@ -139,7 +139,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
               ],
               const SizedBox(height: 16),
               Text(
-                'Tap to flip',
+                widget.language.tapToFlipLabel,
                 style: Theme.of(
                   context,
                 ).textTheme.bodySmall?.copyWith(color: Colors.grey),
@@ -157,10 +157,9 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (widget.item.reading != null &&
-              widget.item.reading!.isNotEmpty) ...[
+          if (widget.item.hasDisplayReading) ...[
             Text(
-              widget.item.reading!,
+              widget.item.reading!.trim(),
               style: Theme.of(
                 context,
               ).textTheme.headlineSmall?.copyWith(fontStyle: FontStyle.italic),

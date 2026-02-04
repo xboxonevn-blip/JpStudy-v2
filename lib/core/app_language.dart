@@ -1289,6 +1289,83 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get meaningLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Meaning';
+      case AppLanguage.vi:
+        return 'Ngh\u0129a';
+      case AppLanguage.ja:
+        return '\u610f\u5473';
+    }
+  }
+
+  String get meaningEnLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Meaning EN';
+      case AppLanguage.vi:
+        return 'Ngh\u0129a (Anh)';
+      case AppLanguage.ja:
+        return '\u82f1\u8a9e\u306e\u610f\u5473';
+    }
+  }
+
+  String get kanjiMeaningLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Kanji Meaning';
+      case AppLanguage.vi:
+        return 'Ngh\u0129a Kanji';
+      case AppLanguage.ja:
+        return '\u6f22\u5b57\u306e\u610f\u5473';
+    }
+  }
+
+  String get tapToFlipLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Tap to flip';
+      case AppLanguage.vi:
+        return 'Ch\u1ea1m \u0111\u1ec3 l\u1eadt th\u1ebb';
+      case AppLanguage.ja:
+        return '\u30bf\u30c3\u30d7\u3057\u3066\u88cf\u9762\u3092\u8868\u793a';
+    }
+  }
+
+  String get learnedLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Learned';
+      case AppLanguage.vi:
+        return '\u0110\u00e3 h\u1ecdc';
+      case AppLanguage.ja:
+        return '\u7fd2\u5f97\u6e08\u307f';
+    }
+  }
+
+  String get starLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Star';
+      case AppLanguage.vi:
+        return '\u0110\u00e1nh d\u1ea5u sao';
+      case AppLanguage.ja:
+        return '\u661f\u4ed8\u304d';
+    }
+  }
+
+  String get editLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Edit';
+      case AppLanguage.vi:
+        return 'Ch\u1ec9nh s\u1eeda';
+      case AppLanguage.ja:
+        return '\u7de8\u96c6';
+    }
+  }
+
   String get confirmDeleteTermTitle {
     switch (this) {
       case AppLanguage.en:
@@ -1803,6 +1880,28 @@ extension AppLanguageLabels on AppLanguage {
         return 'T\u1ef1 \u0111\u1ed9ng';
       case AppLanguage.ja:
         return '\u81ea\u52d5';
+    }
+  }
+
+  String get autoPlayLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Auto Play';
+      case AppLanguage.vi:
+        return 'T\u1ef1 ch\u1ea1y';
+      case AppLanguage.ja:
+        return '\u81ea\u52d5\u518d\u751f';
+    }
+  }
+
+  String get pauseLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Pause';
+      case AppLanguage.vi:
+        return 'T\u1ea1m d\u1eebng';
+      case AppLanguage.ja:
+        return '\u4e00\u6642\u505c\u6b62';
     }
   }
 

@@ -144,6 +144,7 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen>
                         ),
                       ),
                     ConfidenceRatingWidget(
+                      language: language,
                       onSelect: (level) => _handleRating(
                         level,
                         currentTermData,
@@ -160,7 +161,7 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen>
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(child: Text('Error: $error')),
+        error: (error, stack) => Center(child: Text(language.loadErrorLabel)),
       ),
     );
   }

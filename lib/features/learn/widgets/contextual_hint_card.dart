@@ -18,6 +18,7 @@ class ContextualHintCard extends StatelessWidget {
     final meaning = item.displayMeaning(language);
     final lines = _buildContextLines(meaning, language);
     final reading = item.reading?.trim() ?? '';
+    final showReading = item.hasDisplayReading;
 
     return Container(
       width: double.infinity,
@@ -50,7 +51,7 @@ class ContextualHintCard extends StatelessWidget {
             lines.jp,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           ),
-          if (reading.isNotEmpty) ...[
+          if (showReading) ...[
             const SizedBox(height: 6),
             Text(reading, style: const TextStyle(color: Color(0xFF6B7390))),
           ],

@@ -581,6 +581,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
   Future<void> _submitTest() async {
     _timer?.cancel();
     _session.completedAt = DateTime.now();
+    final vocabSource = widget.lessonId < 0 ? 'content' : 'lesson';
 
     final mistakeRepo = ref.read(mistakeRepositoryProvider);
     for (int i = 0; i < _session.questions.length; i++) {
@@ -595,7 +596,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
             correctAnswer: question.correctAnswer,
             userAnswer: answer?.userAnswer,
             source: 'test',
-            extra: {'type': question.type.name},
+            extra: {'type': question.type.name, 'vocabSource': vocabSource},
           ),
         );
       } else {

@@ -8,10 +8,12 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/widgets/juicy_button.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/data/models/mistake_context.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/content_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/games/match_game/logic/match_engine.dart';
+import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
 
 class MatchGameScreen extends ConsumerStatefulWidget {
   const MatchGameScreen({super.key});
@@ -40,6 +42,8 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
   int _burstId = 0;
   Size _lastBoardSize = Size.zero;
   List<VocabItem> _currentItems = [];
+  final Map<int, VocabItem> _currentItemById = {};
+  final Map<int, int?> _resolvedTermIdByContentId = {};
 
   @override
   void dispose() {
@@ -59,6 +63,9 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
     final engine = MatchEngine(allVocab);
     setState(() {
       _currentItems = allVocab;
+      _currentItemById
+        ..clear()
+        ..addEntries(allVocab.map((item) => MapEntry(item.id, item)));
       _cards = engine.generateGame(6); // 6 pairs = 12 cards
       _selectedCard = null;
       _isGameActive = true;
@@ -137,6 +144,10 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         _spawnParticles();
         // Save Progress (Correct)
         ref.read(contentRepositoryProvider).updateProgress(first.vocabId, true);
+        final item = _currentItemById[first.vocabId];
+        if (item != null) {
+          unawaited(_recordVocabOutcome(item, isCorrect: true));
+        }
 
         _checkWinCondition();
       } else {
@@ -158,6 +169,26 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
         ref
             .read(contentRepositoryProvider)
             .updateProgress(second.vocabId, false);
+        final firstItem = _currentItemById[first.vocabId];
+        if (firstItem != null) {
+          unawaited(
+            _recordVocabOutcome(
+              firstItem,
+              isCorrect: false,
+              userAnswer: second.content,
+            ),
+          );
+        }
+        final secondItem = _currentItemById[second.vocabId];
+        if (secondItem != null) {
+          unawaited(
+            _recordVocabOutcome(
+              secondItem,
+              isCorrect: false,
+              userAnswer: first.content,
+            ),
+          );
+        }
 
         Future.delayed(const Duration(milliseconds: 800), () {
           if (mounted) {
@@ -218,6 +249,55 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
     final totalXp = baseXp + comboBonus + timeBonus;
 
     ref.read(lessonRepositoryProvider).recordStudyActivity(xpDelta: totalXp);
+  }
+
+  Future<int?> _resolveUserTermId(VocabItem item) async {
+    if (_resolvedTermIdByContentId.containsKey(item.id)) {
+      return _resolvedTermIdByContentId[item.id];
+    }
+    final termId = await ref
+        .read(lessonRepositoryProvider)
+        .resolveUserTermIdForContentVocabId(item.id);
+    _resolvedTermIdByContentId[item.id] = termId;
+    return termId;
+  }
+
+  Future<void> _recordVocabOutcome(
+    VocabItem item, {
+    required bool isCorrect,
+    String? userAnswer,
+  }) async {
+    final lessonRepo = ref.read(lessonRepositoryProvider);
+    final mistakeRepo = ref.read(mistakeRepositoryProvider);
+    final language = ref.read(appLanguageProvider);
+    final meaning = item.displayMeaning(language).trim();
+
+    final termId = await _resolveUserTermId(item);
+    if (termId != null) {
+      await lessonRepo.saveTermReview(
+        termId: termId,
+        quality: isCorrect ? 3 : 1,
+      );
+    }
+
+    if (isCorrect) {
+      await mistakeRepo.markCorrect(type: 'vocab', itemId: item.id);
+      return;
+    }
+
+    final reading = (item.reading ?? '').trim();
+    final prompt = reading.isEmpty ? item.term : '${item.term} - $reading';
+    await mistakeRepo.addMistake(
+      type: 'vocab',
+      itemId: item.id,
+      context: MistakeContext(
+        prompt: prompt,
+        correctAnswer: meaning,
+        userAnswer: userAnswer,
+        source: 'match_game',
+        extra: const {'vocabSource': 'content'},
+      ),
+    );
   }
 
   void _spawnParticles() {

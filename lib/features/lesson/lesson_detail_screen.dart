@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
+import 'package:jpstudy/core/utils/japanese_text.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/models/mistake_context.dart';
@@ -312,6 +313,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                         const SizedBox(height: 24),
                         if (totalTerms > 0)
                           _FlashcardControls(
+                            language: language,
                             isShuffle: _shuffle,
                             isAutoPlay: _isAutoPlay,
                             onShuffle: _toggleShuffle,
@@ -1161,7 +1163,10 @@ class _ReviewActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return enabled
-        ? ConfidenceRatingWidget(onSelect: (level) => onRate?.call(level))
+        ? ConfidenceRatingWidget(
+            language: language,
+            onSelect: (level) => onRate?.call(level),
+          )
         : const SizedBox.shrink();
   }
 }
@@ -1520,7 +1525,7 @@ class _LessonCard extends StatelessWidget {
                               ? const Color(0xFF22C55E)
                               : const Color(0xFF8F9BB3),
                         ),
-                        tooltip: 'Learned',
+                        tooltip: language.learnedLabel,
                         padding: EdgeInsets.zero,
                         constraints: const BoxConstraints(),
                       ),
@@ -1536,7 +1541,7 @@ class _LessonCard extends StatelessWidget {
                             : const Color(0xFF8F9BB3),
                         size: 26,
                       ),
-                      tooltip: 'Star',
+                      tooltip: language.starLabel,
                       padding: EdgeInsets.zero,
                       constraints: const BoxConstraints(),
                     ),
@@ -1548,7 +1553,7 @@ class _LessonCard extends StatelessWidget {
                         color: Color(0xFF8F9BB3),
                         size: 22,
                       ),
-                      tooltip: 'Edit',
+                      tooltip: language.editLabel,
                       padding: EdgeInsets.zero,
                       constraints: const BoxConstraints(),
                     ),
@@ -1635,9 +1640,7 @@ class _CardContent extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              child: const Text(
-                'Start Learning',
-              ), // Localize if possible, but hardcode for now as req
+              child: Text(language.startLearningLabel),
             ),
           ],
         );
@@ -1662,6 +1665,10 @@ class _CardContent extends StatelessWidget {
     final frontHint = compactHint
         ? _compactHint(hintMeaning, resolvedTerm.id)
         : hintMeaning;
+    final showReading = shouldShowReading(
+      term: resolvedTerm.term,
+      reading: resolvedTerm.reading,
+    );
 
     final front = _CardFace(
       key: const ValueKey(false),
@@ -1669,7 +1676,7 @@ class _CardContent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Term',
+            language.termLabel,
             style: const TextStyle(
               fontSize: 12,
               color: Color(0xFF8F9BB3),
@@ -1686,37 +1693,27 @@ class _CardContent extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 20),
-          Text(
-            'Reading',
-            style: const TextStyle(
-              fontSize: 12,
-              color: Color(0xFF8F9BB3),
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          if (resolvedTerm.reading.isNotEmpty) ...[
-            const SizedBox(height: 8),
+          if (showReading) ...[
+            const SizedBox(height: 20),
             Text(
-              resolvedTerm.reading,
-              style: const TextStyle(fontSize: 18, color: Color(0xFF6B7390)),
-              textAlign: TextAlign.center,
-            ),
-          ] else ...[
-            const SizedBox(height: 8),
-            Text(
-              '-',
+              language.readingLabel,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 12,
                 color: Color(0xFF8F9BB3),
+                fontWeight: FontWeight.w600,
               ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              resolvedTerm.reading.trim(),
+              style: const TextStyle(fontSize: 18, color: Color(0xFF6B7390)),
               textAlign: TextAlign.center,
             ),
           ],
           if (showHints && frontHint.trim().isNotEmpty) ...[
             const SizedBox(height: 20),
-            const Text(
-              'Meaning',
+            Text(
+              language.meaningLabel,
               style: TextStyle(
                 fontSize: 12,
                 color: Color(0xFF8F9BB3),
@@ -1740,7 +1737,9 @@ class _CardContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          language == AppLanguage.en ? 'Meaning EN' : 'Meaning',
+          language == AppLanguage.en
+              ? language.meaningEnLabel
+              : language.meaningLabel,
           style: const TextStyle(
             fontSize: 12,
             color: Color(0xFF8F9BB3),
@@ -1756,8 +1755,8 @@ class _CardContent extends StatelessWidget {
         if (language == AppLanguage.vi &&
             resolvedTerm.kanjiMeaning.trim().isNotEmpty) ...[
           const SizedBox(height: 20),
-          const Text(
-            'Kanji Meaning',
+          Text(
+            language.kanjiMeaningLabel,
             style: TextStyle(
               fontSize: 12,
               color: Color(0xFF8F9BB3),
@@ -1831,7 +1830,6 @@ class _CardContent extends StatelessWidget {
     final start = maxStart <= 0 ? 0 : ((seed.abs() ~/ 11) % (maxStart + 1));
     return compact.substring(start, start + take);
   }
-
 }
 
 class _CardFace extends StatelessWidget {
@@ -1892,6 +1890,7 @@ class _ShortcutBar extends StatelessWidget {
 
 class _FlashcardControls extends StatelessWidget {
   const _FlashcardControls({
+    required this.language,
     required this.isShuffle,
     required this.isAutoPlay,
     required this.onShuffle,
@@ -1900,6 +1899,7 @@ class _FlashcardControls extends StatelessWidget {
     required this.onNext,
   });
 
+  final AppLanguage language;
   final bool isShuffle;
   final bool isAutoPlay;
   final VoidCallback onShuffle;
@@ -1934,7 +1934,7 @@ class _FlashcardControls extends StatelessWidget {
                   ? const Color(0xFF4255FF)
                   : const Color(0xFF6B7390),
             ),
-            tooltip: 'Shuffle',
+            tooltip: language.shuffleLabel,
           ),
           const SizedBox(width: 8),
           Container(width: 1, height: 24, color: const Color(0xFFE1E6F0)),
@@ -1943,7 +1943,7 @@ class _FlashcardControls extends StatelessWidget {
             onPressed: onPrev,
             icon: const Icon(Icons.arrow_back_rounded, size: 28),
             color: const Color(0xFF1C2440),
-            tooltip: 'Previous',
+            tooltip: language.previousLabel,
           ),
           const SizedBox(width: 4),
           IconButton(
@@ -1954,14 +1954,14 @@ class _FlashcardControls extends StatelessWidget {
               size: 52,
             ),
             padding: EdgeInsets.zero,
-            tooltip: isAutoPlay ? 'Pause' : 'Auto Play',
+            tooltip: isAutoPlay ? language.pauseLabel : language.autoPlayLabel,
           ),
           const SizedBox(width: 4),
           IconButton(
             onPressed: onNext,
             icon: const Icon(Icons.arrow_forward_rounded, size: 28),
             color: const Color(0xFF1C2440),
-            tooltip: 'Next',
+            tooltip: language.nextLabel,
           ),
         ],
       ),

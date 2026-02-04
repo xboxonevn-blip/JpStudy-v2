@@ -5,15 +5,17 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/features/common/widgets/japanese_background.dart';
+import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/home/models/lesson_node.dart';
+import 'package:jpstudy/features/home/models/practice_destination.dart';
 import 'package:jpstudy/features/home/models/unit.dart';
+import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/home/viewmodels/learning_path_viewmodel.dart';
 import 'package:jpstudy/features/home/widgets/continue_button.dart';
 import 'package:jpstudy/features/home/widgets/ghost_review_banner.dart';
 import 'package:jpstudy/features/home/widgets/mini_dashboard.dart';
 import 'package:jpstudy/features/home/widgets/practice_hub.dart';
 import 'package:jpstudy/features/home/widgets/unit_map_widget.dart';
-import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 import 'package:jpstudy/features/test/widgets/practice_test_dashboard.dart';
 
 class LearningPathScreen extends ConsumerWidget {
@@ -24,6 +26,11 @@ class LearningPathScreen extends ConsumerWidget {
     final pathState = ref.watch(learningPathViewModelProvider);
     final selectedLevel = ref.watch(studyLevelProvider);
     final language = ref.watch(appLanguageProvider);
+    final ghostCount = ref
+        .watch(grammarGhostCountProvider)
+        .maybeWhen(data: (count) => count, orElse: () => 0);
+    final dashboard = ref.watch(dashboardProvider).valueOrNull;
+    final mistakeCount = dashboard?.totalMistakeCount ?? 0;
 
     return pathState.when(
       data: (allUnits) {
@@ -43,8 +50,20 @@ class LearningPathScreen extends ConsumerWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 68),
                   child: isDesktop
-                      ? _buildDesktopLayout(context, units, language)
-                      : _buildMobileLayout(context, units, language),
+                      ? _buildDesktopLayout(
+                          context,
+                          units,
+                          language,
+                          ghostCount: ghostCount,
+                          mistakeCount: mistakeCount,
+                        )
+                      : _buildMobileLayout(
+                          context,
+                          units,
+                          language,
+                          ghostCount: ghostCount,
+                          mistakeCount: mistakeCount,
+                        ),
                 ),
               ),
             );
@@ -59,11 +78,20 @@ class LearningPathScreen extends ConsumerWidget {
   Widget _buildMobileLayout(
     BuildContext context,
     List<Unit> units,
-    AppLanguage language,
-  ) {
+    AppLanguage language, {
+    required int ghostCount,
+    required int mistakeCount,
+  }) {
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(child: _buildFocusCard(context, language)),
+        SliverToBoxAdapter(
+          child: _buildFocusCard(
+            context,
+            language,
+            ghostCount: ghostCount,
+            mistakeCount: mistakeCount,
+          ),
+        ),
         const SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.fromLTRB(0, 8, 0, 10),
@@ -102,8 +130,10 @@ class LearningPathScreen extends ConsumerWidget {
   Widget _buildDesktopLayout(
     BuildContext context,
     List<Unit> units,
-    AppLanguage language,
-  ) {
+    AppLanguage language, {
+    required int ghostCount,
+    required int mistakeCount,
+  }) {
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 1520),
@@ -111,7 +141,13 @@ class LearningPathScreen extends ConsumerWidget {
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
           child: Column(
             children: [
-              _buildFocusCard(context, language, compact: true),
+              _buildFocusCard(
+                context,
+                language,
+                compact: true,
+                ghostCount: ghostCount,
+                mistakeCount: mistakeCount,
+              ),
               const SizedBox(height: 8),
               const MiniDashboard(),
               const SizedBox(height: 10),
@@ -168,13 +204,20 @@ class LearningPathScreen extends ConsumerWidget {
     BuildContext context,
     AppLanguage language, {
     bool compact = false,
+    required int ghostCount,
+    required int mistakeCount,
   }) {
     return Padding(
       padding: EdgeInsets.fromLTRB(16, compact ? 0 : 6, 16, 6),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () => _openQuickPracticeSheet(context, language),
+          onTap: () => _openQuickPracticeSheet(
+            context,
+            language,
+            ghostCount: ghostCount,
+            mistakeCount: mistakeCount,
+          ),
           borderRadius: BorderRadius.circular(24),
           child: Ink(
             width: double.infinity,
@@ -245,7 +288,12 @@ class LearningPathScreen extends ConsumerWidget {
                   ),
                   child: IconButton(
                     tooltip: language.practiceHubTitle,
-                    onPressed: () => _openQuickPracticeSheet(context, language),
+                    onPressed: () => _openQuickPracticeSheet(
+                      context,
+                      language,
+                      ghostCount: ghostCount,
+                      mistakeCount: mistakeCount,
+                    ),
                     icon: const Icon(
                       Icons.tune_rounded,
                       color: Color(0xFFBAE6FD),
@@ -263,47 +311,15 @@ class LearningPathScreen extends ConsumerWidget {
 
   Future<void> _openQuickPracticeSheet(
     BuildContext context,
-    AppLanguage language,
-  ) async {
-    final items = <_QuickPracticeItem>[
-      _QuickPracticeItem(
-        label: language.practiceMatchLabel,
-        subtitle: language.practiceMatchSubtitle,
-        icon: Icons.extension_rounded,
-        route: '/match',
-      ),
-      _QuickPracticeItem(
-        label: language.practiceGhostLabel,
-        subtitle: language.practiceGhostSubtitle,
-        icon: Icons.auto_fix_high_rounded,
-        route: '/grammar-practice',
-        extra: GrammarPracticeMode.ghost,
-      ),
-      _QuickPracticeItem(
-        label: language.practiceKanjiDashLabel,
-        subtitle: language.practiceKanjiDashSubtitle,
-        icon: Icons.flash_on_rounded,
-        route: '/kanji-dash',
-      ),
-      _QuickPracticeItem(
-        label: language.practiceExamLabel,
-        subtitle: language.practiceExamSubtitle,
-        icon: Icons.quiz_rounded,
-        route: '/exam',
-      ),
-      _QuickPracticeItem(
-        label: language.practiceImmersionLabel,
-        subtitle: language.practiceImmersionSubtitle,
-        icon: Icons.newspaper_rounded,
-        route: '/immersion',
-      ),
-      _QuickPracticeItem(
-        label: language.practiceMistakesLabel,
-        subtitle: language.practiceMistakesSubtitle,
-        icon: Icons.warning_amber_rounded,
-        route: '/mistakes',
-      ),
-    ];
+    AppLanguage language, {
+    required int ghostCount,
+    required int mistakeCount,
+  }) async {
+    final items = buildPracticeDestinations(
+      language: language,
+      ghostCount: ghostCount,
+      mistakeCount: mistakeCount,
+    );
 
     await showModalBottomSheet<void>(
       context: context,
@@ -329,11 +345,30 @@ class LearningPathScreen extends ConsumerWidget {
                 (item) => ListTile(
                   leading: CircleAvatar(
                     backgroundColor: const Color(0xFFE6F0FF),
-                    child: Icon(item.icon, color: const Color(0xFF2563EB)),
+                    child: Icon(item.icon, color: item.color),
                   ),
-                  title: Text(item.label),
+                  title: Text(item.title),
                   subtitle: Text(item.subtitle),
-                  trailing: const Icon(Icons.chevron_right_rounded),
+                  trailing: item.badgeCount == null
+                      ? const Icon(Icons.chevron_right_rounded)
+                      : Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 3,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFEF4444),
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          child: Text(
+                            '${item.badgeCount}',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ),
                   onTap: () {
                     Navigator.of(sheetContext).pop();
                     if (item.extra != null) {
@@ -373,20 +408,4 @@ class LearningPathScreen extends ConsumerWidget {
       ],
     );
   }
-}
-
-class _QuickPracticeItem {
-  const _QuickPracticeItem({
-    required this.label,
-    required this.subtitle,
-    required this.icon,
-    required this.route,
-    this.extra,
-  });
-
-  final String label;
-  final String subtitle;
-  final IconData icon;
-  final String route;
-  final Object? extra;
 }

@@ -1648,6 +1648,11 @@ class _CardContent extends StatelessWidget {
     }
 
     final showBack = isFlipped && resolvedTerm.definition.trim().isNotEmpty;
+    final hintMeaning = switch (language) {
+      AppLanguage.en => resolvedTerm.definitionEn,
+      AppLanguage.vi => resolvedTerm.definition,
+      AppLanguage.ja => resolvedTerm.definition,
+    };
 
     final front = _CardFace(
       key: const ValueKey(false),
@@ -1699,15 +1704,28 @@ class _CardContent extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ],
+          if (showHints && hintMeaning.trim().isNotEmpty) ...[
+            const SizedBox(height: 20),
+            const Text(
+              'Meaning',
+              style: TextStyle(
+                fontSize: 12,
+                color: Color(0xFF8F9BB3),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              hintMeaning,
+              style: const TextStyle(fontSize: 16, color: Color(0xFF4D5877)),
+              textAlign: TextAlign.center,
+            ),
+          ],
         ],
       ),
     );
 
-    final backMeaning = switch (language) {
-      AppLanguage.en => resolvedTerm.definitionEn,
-      AppLanguage.vi => resolvedTerm.definition,
-      AppLanguage.ja => resolvedTerm.definition,
-    };
+    final backMeaning = hintMeaning;
 
     final backContent = Column(
       mainAxisAlignment: MainAxisAlignment.center,

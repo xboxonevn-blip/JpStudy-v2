@@ -272,6 +272,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                                     termsAsync: activeTermsAsync,
                                     term: currentTerm,
                                     showHints: _showHints,
+                                    compactHint: _mode == _LessonMode.review,
                                     isFlipped: isFlipped,
                                     trackProgress: _trackProgress,
                                     isStarred: isStarred,
@@ -1443,6 +1444,7 @@ class _LessonCard extends StatelessWidget {
     required this.termsAsync,
     required this.term,
     required this.showHints,
+    required this.compactHint,
     required this.isFlipped,
     required this.trackProgress,
     required this.isStarred,
@@ -1460,6 +1462,7 @@ class _LessonCard extends StatelessWidget {
   final AsyncValue<List<UserLessonTermData>> termsAsync;
   final UserLessonTermData? term;
   final bool showHints;
+  final bool compactHint;
   final bool isFlipped;
   final bool trackProgress;
   final bool isStarred;
@@ -1563,6 +1566,7 @@ class _LessonCard extends StatelessWidget {
                   termsAsync: termsAsync,
                   term: term,
                   showHints: showHints,
+                  compactHint: compactHint,
                   isFlipped: isFlipped,
                   emptyLabel: emptyLabel,
                   onStartLearning: onStartLearning,
@@ -1583,6 +1587,7 @@ class _CardContent extends StatelessWidget {
     required this.termsAsync,
     required this.term,
     required this.showHints,
+    required this.compactHint,
     required this.isFlipped,
     required this.emptyLabel,
     this.onStartLearning,
@@ -1592,6 +1597,7 @@ class _CardContent extends StatelessWidget {
   final AsyncValue<List<UserLessonTermData>> termsAsync;
   final UserLessonTermData? term;
   final bool showHints;
+  final bool compactHint;
   final bool isFlipped;
   final String? emptyLabel;
   final VoidCallback? onStartLearning;
@@ -1653,6 +1659,9 @@ class _CardContent extends StatelessWidget {
       AppLanguage.vi => resolvedTerm.definition,
       AppLanguage.ja => resolvedTerm.definition,
     };
+    final frontHint = compactHint
+        ? _compactHint(hintMeaning, resolvedTerm.id)
+        : hintMeaning;
 
     final front = _CardFace(
       key: const ValueKey(false),
@@ -1704,7 +1713,7 @@ class _CardContent extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ],
-          if (showHints && hintMeaning.trim().isNotEmpty) ...[
+          if (showHints && frontHint.trim().isNotEmpty) ...[
             const SizedBox(height: 20),
             const Text(
               'Meaning',
@@ -1716,7 +1725,7 @@ class _CardContent extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              hintMeaning,
+              frontHint,
               style: const TextStyle(fontSize: 16, color: Color(0xFF4D5877)),
               textAlign: TextAlign.center,
             ),
@@ -1808,6 +1817,19 @@ class _CardContent extends StatelessWidget {
       },
       child: showBack ? back : front,
     );
+  }
+
+  String _compactHint(String meaning, int seed) {
+    final clean = meaning.replaceAll('\n', ' ').trim();
+    if (clean.isEmpty) return '';
+    final compact = clean.replaceAll(RegExp(r'\s+'), '');
+    if (compact.isEmpty) return '';
+
+    var take = compact.length <= 2 ? compact.length : (seed.abs() % 2) + 2;
+    if (take > compact.length) take = compact.length;
+    final maxStart = compact.length - take;
+    final start = maxStart <= 0 ? 0 : ((seed.abs() ~/ 11) % (maxStart + 1));
+    return compact.substring(start, start + take);
   }
 
 }

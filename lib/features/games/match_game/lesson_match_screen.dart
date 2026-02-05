@@ -40,6 +40,21 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
   int _combo = 0;
   int _maxCombo = 0;
 
+  String _meaningForLanguage(
+    AppLanguage language, {
+    required String meaningVi,
+    required String? meaningEn,
+  }) {
+    final english = meaningEn?.trim() ?? '';
+    switch (language) {
+      case AppLanguage.vi:
+        return meaningVi;
+      case AppLanguage.en:
+      case AppLanguage.ja:
+        return english.isNotEmpty ? english : meaningVi;
+    }
+  }
+
   @override
   void dispose() {
     _timer?.cancel();
@@ -384,11 +399,11 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
             id: term.id,
             term: term.term,
             reading: term.reading,
-            meaning: language == AppLanguage.vi
-                ? term.definition
-                : (term.definitionEn.isNotEmpty
-                      ? term.definitionEn
-                      : term.definition),
+            meaning: _meaningForLanguage(
+              language,
+              meaningVi: term.definition,
+              meaningEn: term.definitionEn,
+            ),
             meaningEn: term.definitionEn,
             level: 'N5',
           ),

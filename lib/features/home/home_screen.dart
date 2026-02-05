@@ -201,8 +201,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       ),
                       ListTile(
                         leading: const Icon(Icons.design_services_outlined),
-                        title: const Text('Design Lab'),
-                        subtitle: const Text('UI/UX process playground'),
+                        title: Text(language.designLabLabel),
+                        subtitle: Text(language.designLabSubtitle),
                         onTap: () {
                           Navigator.of(context).pop();
                           context.push('/design-lab');

@@ -101,9 +101,8 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
 
   int get _completedStrokes {
     if (_strokeCount == 0) return 0;
-    final isLastStroke = _currentStrokeIndex == _strokeCount - 1;
-    if (!_isPlaying && isLastStroke && _controller.value >= 1.0) {
-      return _strokeCount;
+    if (!_isPlaying && _controller.value >= 1.0) {
+      return (_currentStrokeIndex + 1).clamp(0, _strokeCount);
     }
     return _currentStrokeIndex.clamp(0, _strokeCount);
   }
@@ -167,6 +166,29 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
     _startPlayback(restart: true);
   }
 
+  void _jumpToStep(int step) {
+    if (_strokeCount == 0) return;
+    final clampedStep = step.clamp(1, _strokeCount);
+    _controller.stop();
+    setState(() {
+      _isPlaying = false;
+      _currentStrokeIndex = clampedStep - 1;
+      _controller.value = 1.0;
+    });
+  }
+
+  void _previousStroke() {
+    if (_strokeCount == 0) return;
+    final previousStep = (_displayStep - 1).clamp(1, _strokeCount);
+    _jumpToStep(previousStep);
+  }
+
+  void _nextStroke() {
+    if (_strokeCount == 0) return;
+    final nextStep = (_displayStep + 1).clamp(1, _strokeCount);
+    _jumpToStep(nextStep);
+  }
+
   void _setSpeed(double speed) {
     if (_speedMultiplier == speed) return;
     final wasPlaying = _isPlaying;
@@ -194,6 +216,9 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
     final animationButtonLabel = _isPlaying
         ? widget.language.handwritingPauseLabel
         : widget.language.handwritingAnimateLabel;
+    final stepProgress = _strokeCount == 0
+        ? 0.0
+        : (_displayStep / _strokeCount).clamp(0.0, 1.0).toDouble();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -216,23 +241,10 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
           ),
         ),
         const SizedBox(height: 8),
-        Row(
-          children: [
-            FilledButton.tonalIcon(
-              onPressed: _playOrPause,
-              icon: Icon(
-                _isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
-              ),
-              label: Text(animationButtonLabel),
-            ),
-            const SizedBox(width: 8),
-            IconButton.outlined(
-              onPressed: _replay,
-              icon: const Icon(Icons.replay_rounded),
-              tooltip: widget.language.handwritingReplayLabel,
-            ),
-            const Spacer(),
-            Text(
+        LayoutBuilder(
+          builder: (context, constraints) {
+            final isCompact = constraints.maxWidth < 340;
+            final counter = Text(
               widget.language.handwritingStrokeStepCounterLabel(
                 _displayStep,
                 _strokeCount,
@@ -242,47 +254,137 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
                 fontWeight: FontWeight.w600,
                 color: Color(0xFF4D587A),
               ),
-            ),
-          ],
+            );
+
+            if (isCompact) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Wrap(
+                    spacing: 6,
+                    runSpacing: 6,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Tooltip(
+                        message: animationButtonLabel,
+                        child: FilledButton.tonal(
+                          onPressed: _playOrPause,
+                          child: Icon(
+                            _isPlaying
+                                ? Icons.pause_rounded
+                                : Icons.play_arrow_rounded,
+                          ),
+                        ),
+                      ),
+                      IconButton.outlined(
+                        onPressed: _replay,
+                        icon: const Icon(Icons.replay_rounded),
+                        tooltip: widget.language.handwritingReplayLabel,
+                      ),
+                      IconButton.outlined(
+                        onPressed: _strokeCount <= 1 || _displayStep <= 1
+                            ? null
+                            : _previousStroke,
+                        icon: const Icon(Icons.skip_previous_rounded),
+                        tooltip: widget.language.handwritingPrevStrokeLabel,
+                      ),
+                      IconButton.outlined(
+                        onPressed:
+                            _strokeCount <= 1 || _displayStep >= _strokeCount
+                            ? null
+                            : _nextStroke,
+                        icon: const Icon(Icons.skip_next_rounded),
+                        tooltip: widget.language.handwritingNextStrokeLabel,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 4),
+                  counter,
+                ],
+              );
+            }
+
+            return Row(
+              children: [
+                FilledButton.tonalIcon(
+                  onPressed: _playOrPause,
+                  icon: Icon(
+                    _isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
+                  ),
+                  label: Text(animationButtonLabel),
+                ),
+                const SizedBox(width: 8),
+                IconButton.outlined(
+                  onPressed: _replay,
+                  icon: const Icon(Icons.replay_rounded),
+                  tooltip: widget.language.handwritingReplayLabel,
+                ),
+                const SizedBox(width: 6),
+                IconButton.outlined(
+                  onPressed: _strokeCount <= 1 || _displayStep <= 1
+                      ? null
+                      : _previousStroke,
+                  icon: const Icon(Icons.skip_previous_rounded),
+                  tooltip: widget.language.handwritingPrevStrokeLabel,
+                ),
+                IconButton.outlined(
+                  onPressed: _strokeCount <= 1 || _displayStep >= _strokeCount
+                      ? null
+                      : _nextStroke,
+                  icon: const Icon(Icons.skip_next_rounded),
+                  tooltip: widget.language.handwritingNextStrokeLabel,
+                ),
+                const Spacer(),
+                counter,
+              ],
+            );
+          },
         ),
         const SizedBox(height: 8),
-        Wrap(
-          spacing: 6,
-          runSpacing: 6,
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            Text(
-              widget.language.handwritingAnimationSpeedLabel,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF4D587A),
-              ),
+        LinearProgressIndicator(
+          value: stepProgress,
+          minHeight: 4,
+          backgroundColor: const Color(0xFFE2E8F0),
+        ),
+        const SizedBox(height: 8),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton.icon(
+            onPressed: () {
+              setState(() {
+                _showAdvancedOptions = !_showAdvancedOptions;
+              });
+            },
+            icon: Icon(
+              _showAdvancedOptions ? Icons.tune_rounded : Icons.tune_outlined,
             ),
-            for (final speed in _speedOptions)
-              ChoiceChip(
-                label: Text(_speedLabel(speed)),
-                selected: _speedMultiplier == speed,
-                onSelected: (_) => _setSpeed(speed),
-              ),
-            TextButton.icon(
-              onPressed: () {
-                setState(() {
-                  _showAdvancedOptions = !_showAdvancedOptions;
-                });
-              },
-              icon: Icon(
-                _showAdvancedOptions
-                    ? Icons.tune_rounded
-                    : Icons.tune_outlined,
-              ),
-              label: Text(
-                _showAdvancedOptions
-                    ? widget.language.handwritingHideAdvancedOptionsLabel
-                    : widget.language.handwritingAdvancedOptionsLabel,
-              ),
+            label: Text(
+              _showAdvancedOptions
+                  ? widget.language.handwritingHideAdvancedOptionsLabel
+                  : widget.language.handwritingAdvancedOptionsLabel,
             ),
-            if (_showAdvancedOptions)
+          ),
+        ),
+        if (_showAdvancedOptions)
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              Text(
+                widget.language.handwritingAnimationSpeedLabel,
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF4D587A),
+                ),
+              ),
+              for (final speed in _speedOptions)
+                ChoiceChip(
+                  label: Text(_speedLabel(speed)),
+                  selected: _speedMultiplier == speed,
+                  onSelected: (_) => _setSpeed(speed),
+                ),
               FilterChip(
                 label: Text(widget.language.handwritingShowNumbersLabel),
                 selected: _showStrokeNumbers,
@@ -292,7 +394,6 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
                   });
                 },
               ),
-            if (_showAdvancedOptions)
               FilterChip(
                 label: Text(widget.language.handwritingHighlightRadicalLabel),
                 selected: _highlightRadical,
@@ -307,8 +408,8 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
                     ? widget.language.handwritingHighlightRadicalLabel
                     : widget.language.handwritingNoRadicalDataLabel,
               ),
-          ],
-        ),
+            ],
+          ),
       ],
     );
   }

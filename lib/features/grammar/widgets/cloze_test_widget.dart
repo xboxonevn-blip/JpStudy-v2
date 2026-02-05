@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:jpstudy/core/app_language.dart';
 import '../../common/widgets/clay_button.dart';
 import '../../common/widgets/clay_card.dart';
 import '../../../theme/app_theme_v2.dart';
 
 class ClozeTestWidget extends StatefulWidget {
+  final AppLanguage language;
   final String sentenceTemplate; // e.g., "私は {blank} です。"
   final List<String> options;
   final String correctOption;
@@ -12,6 +14,7 @@ class ClozeTestWidget extends StatefulWidget {
 
   const ClozeTestWidget({
     super.key,
+    required this.language,
     required this.sentenceTemplate,
     required this.options,
     required this.correctOption,
@@ -161,7 +164,12 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
         SizedBox(
           width: double.infinity,
           child: ClayButton(
-            label: 'CHECK ANSWER',
+            label: _tr(
+              widget.language,
+              en: 'Check Answer',
+              vi: 'Kiểm tra đáp án',
+              ja: '答えを確認',
+            ),
             onPressed: _selectedOption == null || _isCorrect != null
                 ? null
                 : _check,
@@ -171,5 +179,21 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
         ),
       ],
     );
+  }
+
+  String _tr(
+    AppLanguage language, {
+    required String en,
+    required String vi,
+    required String ja,
+  }) {
+    switch (language) {
+      case AppLanguage.en:
+        return en;
+      case AppLanguage.vi:
+        return vi;
+      case AppLanguage.ja:
+        return ja;
+    }
   }
 }

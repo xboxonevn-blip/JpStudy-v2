@@ -1,80 +1,67 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
 
-import '../../../data/repositories/grammar_repository.dart';
 import '../../../data/db/app_database.dart';
+import '../../../data/repositories/grammar_repository.dart';
 import '../widgets/grammar_example_widget.dart';
 
-class GrammarDetailScreen extends ConsumerStatefulWidget {
-  final int grammarId;
-
+class GrammarDetailScreen extends ConsumerWidget {
   const GrammarDetailScreen({super.key, required this.grammarId});
 
-  @override
-  ConsumerState<GrammarDetailScreen> createState() =>
-      _GrammarDetailScreenState();
-}
-
-class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
-  bool _showVietnamese = true; // Default to showing VI if available
+  final int grammarId;
 
   @override
-  Widget build(BuildContext context) {
-    final grammarAsync = ref.watch(grammarDetailProvider(widget.grammarId));
+  Widget build(BuildContext context, WidgetRef ref) {
+    final language = ref.watch(appLanguageProvider);
+    final grammarAsync = ref.watch(grammarDetailProvider(grammarId));
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Grammar Point'),
-        actions: [
-          IconButton(
-            icon: Icon(_showVietnamese ? Icons.language : Icons.translate),
-            tooltip: 'Toggle Language',
-            onPressed: () {
-              setState(() {
-                _showVietnamese = !_showVietnamese;
-              });
-            },
-          ),
-        ],
-      ),
+      appBar: AppBar(title: Text(_title(language))),
       body: grammarAsync.when(
         data: (data) {
           if (data == null) {
-            return const Center(child: Text('Grammar point not found'));
+            return Center(child: Text(_notFound(language)));
           }
+
           final point = data.point;
           final examples = data.examples;
+          final meaning = _resolveMeaning(point, language);
+          final connection = _resolveConnection(point, language);
+          final explanation = _resolveExplanation(point, language);
 
           return SingleChildScrollView(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _buildHeader(point),
+                _buildHeader(context, point, meaning),
                 const SizedBox(height: 24),
-                _buildSectionTitle('Connection / Cấu trúc'),
+                _buildSectionTitle(context, language.grammarConnectionLabel),
                 const SizedBox(height: 8),
                 Text(
-                  point.connection,
+                  connection,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontFamily: 'RobotoMono',
                     color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 const SizedBox(height: 24),
-                _buildSectionTitle('Explanation / Giải thích'),
+                _buildSectionTitle(context, language.grammarExplanationLabel),
                 const SizedBox(height: 8),
-                _buildExplanation(point),
+                _buildExplanationCard(context, explanation),
                 const SizedBox(height: 24),
-                _buildSectionTitle('Examples / Ví dụ'),
+                _buildSectionTitle(context, language.grammarExamplesLabel),
                 const SizedBox(height: 8),
-                _buildExamples(examples),
+                _buildExamples(examples, language),
               ],
             ),
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, stack) => Center(child: Text('Error: $err')),
+        error: (err, stack) =>
+            Center(child: Text('${language.loadErrorLabel}: $err')),
       ),
       floatingActionButton: grammarAsync.when(
         data: (data) {
@@ -83,17 +70,15 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
             onPressed: () async {
               await ref
                   .read(grammarRepositoryProvider)
-                  .markAsLearned(widget.grammarId);
-              // Refresh provider
-              ref.invalidate(grammarDetailProvider(widget.grammarId));
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Added to your review list!')),
-                );
-              }
+                  .markAsLearned(grammarId);
+              ref.invalidate(grammarDetailProvider(grammarId));
+              if (!context.mounted) return;
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(_markedToast(language))));
             },
             icon: const Icon(Icons.check),
-            label: const Text('Mark Learned'),
+            label: Text(_markLearnedLabel(language)),
           );
         },
         loading: () => null,
@@ -102,7 +87,11 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
     );
   }
 
-  Widget _buildHeader(GrammarPoint point) {
+  Widget _buildHeader(
+    BuildContext context,
+    GrammarPoint point,
+    String meaning,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -135,7 +124,7 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
         ),
         const SizedBox(height: 8),
         Text(
-          _showVietnamese ? (point.meaningVi ?? point.meaning) : point.meaning,
+          meaning,
           style: Theme.of(
             context,
           ).textTheme.titleLarge?.copyWith(color: Colors.grey[700]),
@@ -144,7 +133,7 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
     );
   }
 
-  Widget _buildExplanation(GrammarPoint point) {
+  Widget _buildExplanationCard(BuildContext context, String explanation) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -154,22 +143,11 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Theme.of(context).colorScheme.outlineVariant),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (!_showVietnamese || point.explanationVi == null)
-            Text(point.explanation),
-
-          if (_showVietnamese && point.explanationVi != null) ...[
-            if (!_showVietnamese) const Divider(height: 24),
-            Text(point.explanationVi!),
-          ],
-        ],
-      ),
+      child: Text(explanation),
     );
   }
 
-  Widget _buildExamples(List<GrammarExample> examples) {
+  Widget _buildExamples(List<GrammarExample> examples, AppLanguage language) {
     return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -178,16 +156,18 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
       itemBuilder: (context, index) {
         final ex = examples[index];
         return GrammarExampleWidget(
+          language: language,
           japanese: ex.japanese,
           translation: ex.translation,
           translationVi: ex.translationVi,
-          showVietnamese: _showVietnamese,
+          translationEn: ex.translationEn,
+          showVietnamese: true,
         );
       },
     );
   }
 
-  Widget _buildSectionTitle(String title) {
+  Widget _buildSectionTitle(BuildContext context, String title) {
     return Text(
       title.toUpperCase(),
       style: Theme.of(context).textTheme.labelLarge?.copyWith(
@@ -196,6 +176,62 @@ class _GrammarDetailScreenState extends ConsumerState<GrammarDetailScreen> {
         letterSpacing: 1.2,
       ),
     );
+  }
+
+  String _resolveMeaning(GrammarPoint point, AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => (point.meaningEn ?? point.meaning).trim(),
+      AppLanguage.vi => (point.meaningVi ?? point.meaning).trim(),
+      AppLanguage.ja => point.meaning.trim(),
+    };
+  }
+
+  String _resolveConnection(GrammarPoint point, AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => (point.connectionEn ?? point.connection).trim(),
+      AppLanguage.vi => point.connection.trim(),
+      AppLanguage.ja => point.connection.trim(),
+    };
+  }
+
+  String _resolveExplanation(GrammarPoint point, AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => (point.explanationEn ?? point.explanation).trim(),
+      AppLanguage.vi => (point.explanationVi ?? point.explanation).trim(),
+      AppLanguage.ja => point.explanation.trim(),
+    };
+  }
+
+  String _title(AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => 'Grammar Point',
+      AppLanguage.vi => 'Điểm ngữ pháp',
+      AppLanguage.ja => '文法ポイント',
+    };
+  }
+
+  String _notFound(AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => 'Grammar point not found.',
+      AppLanguage.vi => 'Không tìm thấy điểm ngữ pháp.',
+      AppLanguage.ja => '文法ポイントが見つかりません。',
+    };
+  }
+
+  String _markLearnedLabel(AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => 'Mark Learned',
+      AppLanguage.vi => 'Đánh dấu đã học',
+      AppLanguage.ja => '学習済みにする',
+    };
+  }
+
+  String _markedToast(AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => 'Added to your review list.',
+      AppLanguage.vi => 'Đã thêm vào danh sách ôn tập.',
+      AppLanguage.ja => '復習リストに追加しました。',
+    };
   }
 }
 

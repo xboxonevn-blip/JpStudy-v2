@@ -59,7 +59,7 @@ List<PracticeDestination> buildPracticeDestinations({
       route: '/practice/handwriting',
     ),
     PracticeDestination(
-      title: 'JLPT ${language.practiceExamLabel}',
+      title: language.practiceExamCardLabel,
       subtitle: language.practiceExamSubtitle,
       icon: Icons.quiz_rounded,
       color: const Color(0xFF14B8A6),

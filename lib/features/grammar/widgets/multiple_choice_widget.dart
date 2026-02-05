@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/theme/app_theme_v2.dart';
 import '../../common/widgets/clay_button.dart';
 
 class MultipleChoiceWidget extends StatefulWidget {
+  final AppLanguage language;
   final String question;
   final List<String> options;
   final String correctAnswer;
@@ -11,6 +13,7 @@ class MultipleChoiceWidget extends StatefulWidget {
 
   const MultipleChoiceWidget({
     super.key,
+    required this.language,
     required this.question,
     required this.options,
     required this.correctAnswer,

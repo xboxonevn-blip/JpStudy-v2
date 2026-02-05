@@ -163,14 +163,19 @@ void main() {
       );
       await tester.tap(find.text(AppLanguage.en.handwritingCheckLabel));
       await tester.pumpAndSettle();
-      expect(find.text(AppLanguage.en.nextLabel), findsOneWidget);
+      expect(
+        find.text(AppLanguage.en.handwritingPracticeWrongFirstLabel),
+        findsOneWidget,
+      );
       expect(
         find.text(AppLanguage.en.handwritingRetryWrongCharactersLabel),
         findsOneWidget,
       );
 
-      await tester.ensureVisible(find.text(AppLanguage.en.nextLabel));
-      await tester.tap(find.text(AppLanguage.en.nextLabel));
+      await tester.ensureVisible(
+        find.text(AppLanguage.en.handwritingPracticeWrongFirstLabel),
+      );
+      await tester.tap(find.text(AppLanguage.en.handwritingPracticeWrongFirstLabel));
       await tester.pumpAndSettle();
 
       final srs = await db.kanjiSrsDao.getSrsState(kanjiId);

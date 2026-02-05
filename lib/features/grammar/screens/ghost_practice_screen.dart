@@ -197,7 +197,6 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
-    final isVietnamese = language == AppLanguage.vi;
 
     return Scaffold(
       backgroundColor: AppThemeV2.surface,
@@ -220,7 +219,9 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                 return const Center(child: CircularProgressIndicator());
               }
               if (snapshot.hasError) {
-                return Center(child: Text('Error: ${snapshot.error}'));
+                return Center(
+                  child: Text('${language.loadErrorLabel}: ${snapshot.error}'),
+                );
               }
 
               final quizItems = snapshot.data!;
@@ -232,9 +233,11 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
 
               final item = quizItems[_currentIndex];
               final target = item.target;
-              final questionText = isVietnamese
-                  ? (target.explanationVi ?? target.explanation)
-                  : (target.explanationEn ?? target.explanation);
+              final questionText = switch (language) {
+                AppLanguage.en => target.explanationEn ?? target.explanation,
+                AppLanguage.vi => target.explanationVi ?? target.explanation,
+                AppLanguage.ja => target.explanation,
+              };
 
               return Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -379,7 +382,9 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                           TextButton.icon(
                             onPressed: () => _markAsMastered(target.id),
                             icon: const Icon(Icons.check_circle_outline),
-                            label: Text(language.ghostPracticeMarkMasteredLabel),
+                            label: Text(
+                              language.ghostPracticeMarkMasteredLabel,
+                            ),
                             style: TextButton.styleFrom(
                               foregroundColor: Colors.green,
                             ),

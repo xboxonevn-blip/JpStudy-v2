@@ -3,6 +3,7 @@ import 'package:jpstudy/features/exam/exam_screen.dart';
 import 'package:jpstudy/features/grammar/grammar_screen.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_detail_screen.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
+import 'package:jpstudy/features/grammar/services/grammar_question_generator.dart';
 import 'package:jpstudy/features/home/home_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_detail_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_edit_screen.dart';
@@ -63,18 +64,78 @@ class AppRouter {
         builder: (context, state) {
           List<int>? ids;
           GrammarPracticeMode mode = GrammarPracticeMode.normal;
+          GrammarSessionType sessionType = GrammarSessionType.mastery;
+          GrammarPracticeBlueprint blueprint = GrammarPracticeBlueprint.quiz;
+          GrammarGoalProfile goalProfile = GrammarGoalProfile.balanced;
+          List<GrammarQuestionType>? allowedTypes;
 
           if (state.extra is List<int>) {
             ids = state.extra as List<int>;
           } else if (state.extra is GrammarPracticeMode) {
             mode = state.extra as GrammarPracticeMode;
+            if (mode == GrammarPracticeMode.ghost) {
+              blueprint = GrammarPracticeBlueprint.drill;
+              sessionType = GrammarSessionType.quick;
+              goalProfile = GrammarGoalProfile.balanced;
+            }
           } else if (state.extra is Map) {
             final map = state.extra as Map;
             ids = map['ids'];
             mode = map['mode'] ?? GrammarPracticeMode.normal;
+            sessionType = map['sessionType'] ?? GrammarSessionType.mastery;
+            final rawBlueprint = map['blueprint'];
+            if (rawBlueprint is GrammarPracticeBlueprint) {
+              blueprint = rawBlueprint;
+            } else if (rawBlueprint is String) {
+              final parsed = GrammarPracticeBlueprint.values.where(
+                (value) => value.name == rawBlueprint,
+              );
+              if (parsed.isNotEmpty) {
+                blueprint = parsed.first;
+              }
+            }
+            final rawGoal = map['goalProfile'];
+            if (rawGoal is GrammarGoalProfile) {
+              goalProfile = rawGoal;
+            } else if (rawGoal is String) {
+              final parsed = GrammarGoalProfile.values.where(
+                (value) => value.name == rawGoal,
+              );
+              if (parsed.isNotEmpty) {
+                goalProfile = parsed.first;
+              }
+            }
+            final rawAllowed = map['allowedTypes'];
+            if (rawAllowed is List<GrammarQuestionType>) {
+              allowedTypes = rawAllowed;
+            } else if (rawAllowed is List) {
+              final parsed = <GrammarQuestionType>[];
+              for (final value in rawAllowed) {
+                if (value is GrammarQuestionType) {
+                  parsed.add(value);
+                } else if (value is String) {
+                  final match = GrammarQuestionType.values.where(
+                    (type) => type.name == value,
+                  );
+                  if (match.isNotEmpty) {
+                    parsed.add(match.first);
+                  }
+                }
+              }
+              if (parsed.isNotEmpty) {
+                allowedTypes = parsed;
+              }
+            }
           }
 
-          return GrammarPracticeScreen(initialIds: ids, mode: mode);
+          return GrammarPracticeScreen(
+            initialIds: ids,
+            mode: mode,
+            sessionType: sessionType,
+            blueprint: blueprint,
+            goalProfile: goalProfile,
+            allowedTypes: allowedTypes,
+          );
         },
       ),
       GoRoute(

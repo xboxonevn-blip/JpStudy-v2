@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:jpstudy/core/app_language.dart';
-import 'package:jpstudy/data/repositories/lesson_repository.dart';
-import 'package:jpstudy/data/db/app_database.dart';
 import 'package:go_router/go_router.dart';
-import 'package:jpstudy/features/common/widgets/clay_button.dart';
-import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 
-class GrammarListWidget extends ConsumerWidget {
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/features/grammar/grammar_providers.dart';
+import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
+import 'package:jpstudy/features/grammar/services/grammar_question_generator.dart';
+
+enum _GrammarLessonViewMode { learn, drill, quiz }
+
+class GrammarListWidget extends ConsumerStatefulWidget {
   const GrammarListWidget({
     super.key,
     required this.lessonId,
@@ -20,64 +24,697 @@ class GrammarListWidget extends ConsumerWidget {
   final AppLanguage language;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<GrammarListWidget> createState() => _GrammarListWidgetState();
+}
+
+class _GrammarListWidgetState extends ConsumerState<GrammarListWidget> {
+  _GrammarLessonViewMode _viewMode = _GrammarLessonViewMode.learn;
+
+  @override
+  Widget build(BuildContext context) {
     final grammarAsync = ref.watch(
-      lessonGrammarProvider(LessonTermsArgs(lessonId, level, '')),
+      lessonGrammarProvider(LessonTermsArgs(widget.lessonId, widget.level, '')),
     );
+    final dueAsync = ref.watch(grammarDueCountProvider);
+    final ghostAsync = ref.watch(grammarGhostCountProvider);
 
     return grammarAsync.when(
       data: (grammarList) {
         if (grammarList.isEmpty) {
           return Center(
             child: Text(
-              language == AppLanguage.vi
-                  ? 'Chưa có dữ liệu ngữ pháp.'
-                  : 'No grammar data available.',
+              _tr(
+                widget.language,
+                en: 'No grammar data available.',
+                vi: 'Chưa có dữ liệu ngữ pháp.',
+                ja: '文法データがありません。',
+              ),
               style: const TextStyle(color: Colors.grey),
             ),
           );
         }
 
-        return ListView.builder(
-          padding: const EdgeInsets.all(16),
-          itemCount: grammarList.length + 1, // +1 for the button
-          itemBuilder: (context, index) {
-            if (index == 0) {
-              // Practice Button
-              return Padding(
-                padding: const EdgeInsets.only(bottom: 16),
-                child: ClayButton(
-                  label: language == AppLanguage.vi
-                      ? 'Làm Bài Tập & Quiz'
-                      : 'Exercises & Quiz',
-                  icon: Icons.model_training,
-                  style: ClayButtonStyle.primary,
-                  onPressed: () {
-                    final ids = grammarList.map((e) => e.point.id).toList();
-                    context.push(
-                      '/grammar-practice',
-                      extra: {'ids': ids, 'mode': GrammarPracticeMode.normal},
-                    );
-                  },
-                ),
-              );
-            }
+        final ids = grammarList
+            .map((entry) => entry.point.id)
+            .toList(growable: false);
+        final mastered = grammarList
+            .where((entry) => entry.point.isLearned)
+            .length;
+        final totalExamples = grammarList.fold<int>(
+          0,
+          (sum, entry) => sum + entry.examples.length,
+        );
 
-            final data = grammarList[index - 1];
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 16),
-              child: _GrammarPointCard(
-                index: index,
-                data: data,
-                language: language,
+        final dueCount = dueAsync.valueOrNull ?? 0;
+        final ghostCount = ghostAsync.valueOrNull ?? 0;
+
+        return Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 10),
+              child: _GrammarLessonHeader(
+                language: widget.language,
+                mode: _viewMode,
+                mastered: mastered,
+                total: grammarList.length,
+                dueCount: dueCount,
+                ghostCount: ghostCount,
+                totalExamples: totalExamples,
+                onModeChanged: (mode) {
+                  setState(() {
+                    _viewMode = mode;
+                  });
+                },
+                onStartQuick: () {
+                  _startPractice(
+                    context,
+                    ids,
+                    sessionType: GrammarSessionType.quick,
+                    blueprint: GrammarPracticeBlueprint.quiz,
+                    goalProfile: GrammarGoalProfile.balanced,
+                  );
+                },
+                onStartMastery: () {
+                  _startPractice(
+                    context,
+                    ids,
+                    sessionType: GrammarSessionType.mastery,
+                    blueprint: _viewMode == _GrammarLessonViewMode.learn
+                        ? GrammarPracticeBlueprint.learn
+                        : GrammarPracticeBlueprint.quiz,
+                    goalProfile: GrammarGoalProfile.balanced,
+                  );
+                },
+                onStartMock: () {
+                  _startPractice(
+                    context,
+                    ids,
+                    sessionType: GrammarSessionType.mock,
+                    blueprint: GrammarPracticeBlueprint.quiz,
+                    goalProfile: GrammarGoalProfile.balanced,
+                  );
+                },
+                onStartDrillSentence: () {
+                  _startPractice(
+                    context,
+                    ids,
+                    sessionType: GrammarSessionType.quick,
+                    blueprint: GrammarPracticeBlueprint.drill,
+                    goalProfile: GrammarGoalProfile.balanced,
+                    allowedTypes: const [
+                      GrammarQuestionType.sentenceBuilder,
+                      GrammarQuestionType.cloze,
+                      GrammarQuestionType.transformation,
+                    ],
+                  );
+                },
+                onStartDrillContext: () {
+                  _startPractice(
+                    context,
+                    ids,
+                    sessionType: GrammarSessionType.quick,
+                    blueprint: GrammarPracticeBlueprint.drill,
+                    goalProfile: GrammarGoalProfile.balanced,
+                    allowedTypes: const [
+                      GrammarQuestionType.contextChoice,
+                      GrammarQuestionType.pairContrast,
+                      GrammarQuestionType.reverseMultipleChoice,
+                      GrammarQuestionType.multipleChoice,
+                    ],
+                  );
+                },
+                onStartDrillFix: () {
+                  _startPractice(
+                    context,
+                    ids,
+                    sessionType: GrammarSessionType.quick,
+                    blueprint: GrammarPracticeBlueprint.drill,
+                    goalProfile: GrammarGoalProfile.balanced,
+                    allowedTypes: const [
+                      GrammarQuestionType.errorCorrection,
+                      GrammarQuestionType.errorReason,
+                      GrammarQuestionType.cloze,
+                    ],
+                  );
+                },
+                onStartGhostDrill: ghostCount <= 0
+                    ? null
+                    : () {
+                        context.push(
+                          '/grammar-practice',
+                          extra: {
+                            'mode': GrammarPracticeMode.ghost,
+                            'sessionType': GrammarSessionType.quick,
+                            'blueprint': GrammarPracticeBlueprint.drill,
+                            'goalProfile': GrammarGoalProfile.balanced,
+                          },
+                        );
+                      },
               ),
-            );
-          },
+            ),
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+                itemCount: grammarList.length,
+                itemBuilder: (context, index) {
+                  final data = grammarList[index];
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 14),
+                    child: _GrammarPointCard(
+                      index: index + 1,
+                      data: data,
+                      language: widget.language,
+                      onPracticePoint: () {
+                        _startPractice(
+                          context,
+                          [data.point.id],
+                          sessionType: GrammarSessionType.quick,
+                          blueprint: GrammarPracticeBlueprint.drill,
+                          goalProfile: GrammarGoalProfile.balanced,
+                          allowedTypes: const [
+                            GrammarQuestionType.cloze,
+                            GrammarQuestionType.errorCorrection,
+                            GrammarQuestionType.errorReason,
+                            GrammarQuestionType.transformation,
+                            GrammarQuestionType.multipleChoice,
+                          ],
+                        );
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (err, stack) => Center(child: Text('Error: $err')),
+      error: (err, stack) => Center(
+        child: Text(
+          _tr(
+            widget.language,
+            en: 'Error: $err',
+            vi: 'Lỗi: $err',
+            ja: 'エラー: $err',
+          ),
+        ),
+      ),
     );
+  }
+
+  void _startPractice(
+    BuildContext context,
+    List<int> ids, {
+    required GrammarSessionType sessionType,
+    required GrammarPracticeBlueprint blueprint,
+    required GrammarGoalProfile goalProfile,
+    GrammarPracticeMode mode = GrammarPracticeMode.normal,
+    List<GrammarQuestionType>? allowedTypes,
+  }) {
+    context.push(
+      '/grammar-practice',
+      extra: {
+        'ids': ids,
+        'mode': mode,
+        'sessionType': sessionType,
+        'blueprint': blueprint,
+        'goalProfile': goalProfile,
+        if (allowedTypes != null) 'allowedTypes': allowedTypes,
+      },
+    );
+  }
+}
+
+class _GrammarLessonHeader extends StatelessWidget {
+  const _GrammarLessonHeader({
+    required this.language,
+    required this.mode,
+    required this.mastered,
+    required this.total,
+    required this.dueCount,
+    required this.ghostCount,
+    required this.totalExamples,
+    required this.onModeChanged,
+    required this.onStartQuick,
+    required this.onStartMastery,
+    required this.onStartMock,
+    required this.onStartDrillSentence,
+    required this.onStartDrillContext,
+    required this.onStartDrillFix,
+    this.onStartGhostDrill,
+  });
+
+  final AppLanguage language;
+  final _GrammarLessonViewMode mode;
+  final int mastered;
+  final int total;
+  final int dueCount;
+  final int ghostCount;
+  final int totalExamples;
+  final ValueChanged<_GrammarLessonViewMode> onModeChanged;
+  final VoidCallback onStartQuick;
+  final VoidCallback onStartMastery;
+  final VoidCallback onStartMock;
+  final VoidCallback onStartDrillSentence;
+  final VoidCallback onStartDrillContext;
+  final VoidCallback onStartDrillFix;
+  final VoidCallback? onStartGhostDrill;
+
+  @override
+  Widget build(BuildContext context) {
+    final masteryPercent = total == 0 ? 0 : ((mastered / total) * 100).round();
+
+    return Container(
+      padding: const EdgeInsets.fromLTRB(14, 14, 14, 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
+        boxShadow: const [
+          BoxShadow(
+            color: Color(0x0B334155),
+            blurRadius: 12,
+            offset: Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            _tr(
+              language,
+              en: 'Grammar Learning Hub',
+              vi: 'Trung tâm học ngữ pháp',
+              ja: '文法学習ハブ',
+            ),
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w800,
+              color: Color(0xFF1E293B),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Wrap(
+            spacing: 8,
+            runSpacing: 6,
+            children: [
+              _chip(
+                _tr(
+                  language,
+                  en: 'Mastered $mastered/$total',
+                  vi: 'Đã nắm $mastered/$total',
+                  ja: '習得済み $mastered/$total',
+                ),
+                const Color(0xFF166534),
+                const Color(0xFFF0FDF4),
+              ),
+              _chip(
+                _tr(
+                  language,
+                  en: 'Mastery $masteryPercent%',
+                  vi: 'Tiến độ $masteryPercent%',
+                  ja: '習得度 $masteryPercent%',
+                ),
+                const Color(0xFF1E3A8A),
+                const Color(0xFFEFF6FF),
+              ),
+              _chip(
+                _tr(
+                  language,
+                  en: 'Due $dueCount',
+                  vi: 'Đến hạn $dueCount',
+                  ja: '期限 $dueCount',
+                ),
+                const Color(0xFF92400E),
+                const Color(0xFFFFFBEB),
+              ),
+              _chip(
+                _tr(
+                  language,
+                  en: 'Weak $ghostCount',
+                  vi: 'Yếu $ghostCount',
+                  ja: '弱点 $ghostCount',
+                ),
+                const Color(0xFF991B1B),
+                const Color(0xFFFEF2F2),
+              ),
+              _chip(
+                _tr(
+                  language,
+                  en: 'Examples $totalExamples',
+                  vi: 'Ví dụ $totalExamples',
+                  ja: '例文 $totalExamples',
+                ),
+                const Color(0xFF0F766E),
+                const Color(0xFFF0FDFA),
+              ),
+              _chip(
+                _tr(
+                  language,
+                  en: 'Goal Balanced',
+                  vi: 'Mục tiêu Cân bằng',
+                  ja: '目標 バランス重視',
+                ),
+                const Color(0xFF4338CA),
+                const Color(0xFFEEF2FF),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          SegmentedButton<_GrammarLessonViewMode>(
+            segments: [
+              ButtonSegment(
+                value: _GrammarLessonViewMode.learn,
+                label: Text(
+                  _tr(language, en: 'Learn', vi: 'Học', ja: '学習'),
+                ),
+              ),
+              ButtonSegment(
+                value: _GrammarLessonViewMode.drill,
+                label: Text(
+                  _tr(language, en: 'Drill', vi: 'Luyện', ja: 'ドリル'),
+                ),
+              ),
+              ButtonSegment(
+                value: _GrammarLessonViewMode.quiz,
+                label: Text(_tr(language, en: 'Quiz', vi: 'Kiểm tra', ja: 'クイズ')),
+              ),
+            ],
+            selected: {mode},
+            onSelectionChanged: (next) {
+              if (next.isEmpty) return;
+              onModeChanged(next.first);
+            },
+          ),
+          const SizedBox(height: 12),
+          _buildModeSpotlight(),
+          const SizedBox(height: 10),
+          if (mode == _GrammarLessonViewMode.learn)
+            _buildLearnActions()
+          else if (mode == _GrammarLessonViewMode.drill)
+            _buildDrillActions()
+          else
+            _buildQuizActions(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildLearnActions() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          _tr(
+            language,
+            en: 'Study the grammar cards below, then start the mastery flow.',
+            vi: 'Học các thẻ ngữ pháp bên dưới rồi bắt đầu lộ trình mastery.',
+            ja: '下の文法カードを確認してから、習得フローを開始してください。',
+          ),
+          style: const TextStyle(fontSize: 12, color: Color(0xFF64748B)),
+        ),
+        const SizedBox(height: 10),
+        SizedBox(
+          width: double.infinity,
+          child: FilledButton.icon(
+            onPressed: onStartMastery,
+            icon: const Icon(Icons.school_rounded),
+            label: Text(
+              _tr(
+                language,
+                en: 'Start Learn Flow (25)',
+                vi: 'Bắt đầu luồng Học (25)',
+                ja: '学習フロー開始（25）',
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDrillActions() {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        OutlinedButton.icon(
+          onPressed: onStartDrillSentence,
+          icon: const Icon(Icons.sort_by_alpha_rounded),
+          label: Text(
+            _tr(
+              language,
+              en: 'Sentence + Transform',
+              vi: 'Sắp câu + Biến đổi',
+              ja: '並び替え + 変換',
+            ),
+          ),
+        ),
+        OutlinedButton.icon(
+          onPressed: onStartDrillContext,
+          icon: const Icon(Icons.auto_stories_rounded),
+          label: Text(
+            _tr(
+              language,
+              en: 'Context + Contrast',
+              vi: 'Ngữ cảnh + Đối chiếu',
+              ja: '文脈 + 対比',
+            ),
+          ),
+        ),
+        OutlinedButton.icon(
+          onPressed: onStartDrillFix,
+          icon: const Icon(Icons.build_circle_outlined),
+          label: Text(
+            _tr(
+              language,
+              en: 'Fix + Reason Drill',
+              vi: 'Sửa lỗi + Lý do',
+              ja: '修正 + 理由ドリル',
+            ),
+          ),
+        ),
+        OutlinedButton.icon(
+          onPressed: onStartGhostDrill,
+          icon: const Icon(Icons.warning_amber_rounded),
+          label: Text(
+            _tr(
+              language,
+              en: 'Weak Queue ($ghostCount)',
+              vi: 'Hàng đợi yếu ($ghostCount)',
+              ja: '弱点キュー ($ghostCount)',
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildQuizActions() {
+    return Column(
+      children: [
+        _quizTile(
+          title: _tr(language, en: 'Quick 10', vi: 'Quick 10', ja: 'クイック10'),
+          subtitle: _tr(
+            language,
+            en: '2-3 minutes, exam-like mixed set.',
+            vi: '2-3 phút, bộ câu hỏi trộn kiểu thi thật.',
+            ja: '2〜3分、試験に近いミックス問題。',
+          ),
+          icon: Icons.flash_on_rounded,
+          color: const Color(0xFF2563EB),
+          onTap: onStartQuick,
+        ),
+        const SizedBox(height: 8),
+        _quizTile(
+          title: _tr(
+            language,
+            en: 'Lesson Mastery 25',
+            vi: 'Mastery Bài học 25',
+            ja: 'レッスン習得25',
+          ),
+          subtitle: _tr(
+            language,
+            en: 'Balanced coverage for this lesson.',
+            vi: 'Độ phủ cân bằng cho bài học này.',
+            ja: 'このレッスンをバランス良く網羅。',
+          ),
+          icon: Icons.checklist_rounded,
+          color: const Color(0xFF0F766E),
+          onTap: onStartMastery,
+        ),
+        const SizedBox(height: 8),
+        _quizTile(
+          title: _tr(
+            language,
+            en: 'JLPT Mini Mock',
+            vi: 'JLPT Mini Mock',
+            ja: 'JLPT ミニ模試',
+          ),
+          subtitle: _tr(
+            language,
+            en: 'Timed grammar set with no long hints.',
+            vi: 'Bộ ngữ pháp có giới hạn thời gian, không gợi ý dài.',
+            ja: '時間制限あり、長いヒントなしの文法セット。',
+          ),
+          icon: Icons.timer_rounded,
+          color: const Color(0xFFB45309),
+          onTap: onStartMock,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildModeSpotlight() {
+    final color = switch (mode) {
+      _GrammarLessonViewMode.learn => const Color(0xFF1D4ED8),
+      _GrammarLessonViewMode.drill => const Color(0xFFB45309),
+      _GrammarLessonViewMode.quiz => const Color(0xFF7C3AED),
+    };
+    final icon = switch (mode) {
+      _GrammarLessonViewMode.learn => Icons.menu_book_rounded,
+      _GrammarLessonViewMode.drill => Icons.fitness_center_rounded,
+      _GrammarLessonViewMode.quiz => Icons.fact_check_rounded,
+    };
+    final message = switch (mode) {
+      _GrammarLessonViewMode.learn =>
+        _tr(
+          language,
+          en: 'Learn: understand pattern and usage with guided hints.',
+          vi: 'Học: hiểu mẫu câu và cách dùng với gợi ý định hướng.',
+          ja: '学習: ガイド付きヒントで文型と使い方を理解。',
+        ),
+      _GrammarLessonViewMode.drill =>
+        _tr(
+          language,
+          en: 'Drill: focus weak points and fix repeated mistakes.',
+          vi: 'Luyện: tập trung điểm yếu và sửa lỗi lặp lại.',
+          ja: 'ドリル: 弱点に集中し、繰り返すミスを修正。',
+        ),
+      _GrammarLessonViewMode.quiz =>
+        _tr(
+          language,
+          en: 'Quiz: exam-focused flow with less guidance.',
+          vi: 'Kiểm tra: luồng bám sát thi cử với ít hướng dẫn hơn.',
+          ja: 'クイズ: 試験重視のフロー（ガイダンス少なめ）。',
+        ),
+    };
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.10),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: color.withValues(alpha: 0.35)),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, size: 18, color: color),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              message,
+              style: TextStyle(
+                color: color,
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _quizTile({
+    required String title,
+    required String subtitle,
+    required IconData icon,
+    required Color color,
+    required VoidCallback onTap,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: const Color(0xFFE2E8F0)),
+          color: Colors.white,
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 34,
+              height: 34,
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Icon(icon, color: color, size: 18),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF1F2937),
+                    ),
+                  ),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF64748B),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: Color(0xFF94A3B8)),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _chip(String label, Color fg, Color bg) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: fg),
+      ),
+    );
+  }
+
+  String _tr(
+    AppLanguage language, {
+    required String en,
+    required String vi,
+    required String ja,
+  }) {
+    switch (language) {
+      case AppLanguage.en:
+        return en;
+      case AppLanguage.vi:
+        return vi;
+      case AppLanguage.ja:
+        return ja;
+    }
   }
 }
 
@@ -86,79 +723,49 @@ class _GrammarPointCard extends StatelessWidget {
     required this.index,
     required this.data,
     required this.language,
+    required this.onPracticePoint,
   });
 
   final int index;
   final GrammarPointData data;
   final AppLanguage language;
+  final VoidCallback onPracticePoint;
 
   @override
   Widget build(BuildContext context) {
     final point = data.point;
-    final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
-
-    // Determine Display Values based on Language
-    String title = point.grammarPoint;
-    String structure = point.connection;
-    String meaning = point.grammarPoint; // Fallback
-    String explanation = '';
-
-    switch (language) {
-      case AppLanguage.vi:
-        title = point.grammarPoint;
-        meaning = point.meaningVi ?? point.meaning;
-        explanation = point.explanationVi ?? point.explanation;
-        break;
-      case AppLanguage.en:
-        title = point.titleEn ?? point.grammarPoint;
-        structure = point.connectionEn ?? point.connection;
-        meaning = point.meaningEn ?? point.meaning;
-        explanation = point.explanationEn ?? point.explanation;
-        break;
-      case AppLanguage.ja:
-        title = point.grammarPoint;
-        explanation = point.connection;
-        break;
-    }
-
-    // Fallbacks
-    if (explanation.isEmpty) explanation = point.explanation;
-
-    // Clean up structure for display
-    final displayStructure = language == AppLanguage.en
-        ? structure
-        : _formatStructure(structure, language);
+    final structure = _resolveStructure(point);
+    final meaning = _resolveMeaning(point);
+    final explanation = _resolveExplanation(point);
+    final mastery = point.isLearned ? 1.0 : 0.25;
 
     return Card(
       elevation: 0,
-      color: colorScheme.surfaceContainer,
+      color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(
-          color: colorScheme.outlineVariant.withValues(alpha: 0.5),
-        ),
+        side: const BorderSide(color: Color(0xFFE2E8F0)),
       ),
       clipBehavior: Clip.antiAlias,
       child: ExpansionTile(
-        tilePadding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+        tilePadding: const EdgeInsets.fromLTRB(14, 12, 14, 10),
         expandedCrossAxisAlignment: CrossAxisAlignment.start,
-        childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-        shape: const Border(), // Remove default borders
+        childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+        shape: const Border(),
         collapsedShape: const Border(),
         leading: Container(
           width: 40,
           height: 40,
           decoration: BoxDecoration(
-            color: colorScheme.primaryContainer,
+            color: const Color(0xFFEFF6FF),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Center(
             child: Text(
               '$index',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: colorScheme.onPrimaryContainer,
+              style: const TextStyle(
+                fontWeight: FontWeight.w800,
+                color: Color(0xFF1E3A8A),
                 fontSize: 16,
               ),
             ),
@@ -167,192 +774,157 @@ class _GrammarPointCard extends StatelessWidget {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
               children: [
-                _buildChip(
-                  context,
+                _pill(
                   point.jlptLevel,
-                  colorScheme.tertiaryContainer,
-                  colorScheme.onTertiaryContainer,
+                  fg: const Color(0xFF7F1D1D),
+                  bg: const Color(0xFFFEE2E2),
                 ),
-                const SizedBox(width: 8),
-                if (point.isLearned)
-                  _buildChip(
-                    context,
-                    'Mastered',
-                    Colors.green.shade100,
-                    Colors.green.shade900,
-                  )
-                else
-                  _buildChip(
-                    context,
-                    'New',
-                    colorScheme.secondaryContainer,
-                    colorScheme.onSecondaryContainer,
+                _pill(
+                  point.isLearned
+                      ? _tr(
+                          language,
+                          en: 'Mastered',
+                          vi: 'Đã nắm',
+                          ja: '習得済み',
+                        )
+                      : _tr(
+                          language,
+                          en: 'Learning',
+                          vi: 'Đang học',
+                          ja: '学習中',
+                        ),
+                  fg: point.isLearned
+                      ? const Color(0xFF166534)
+                      : const Color(0xFF1E3A8A),
+                  bg: point.isLearned
+                      ? const Color(0xFFF0FDF4)
+                      : const Color(0xFFEFF6FF),
+                ),
+                _pill(
+                  _tr(
+                    language,
+                    en: '${data.examples.length} Examples',
+                    vi: '${data.examples.length} Ví dụ',
+                    ja: '例文 ${data.examples.length}',
                   ),
+                  fg: const Color(0xFF0F766E),
+                  bg: const Color(0xFFF0FDFA),
+                ),
               ],
             ),
             const SizedBox(height: 8),
             Text(
-              language == AppLanguage.en
-                  ? title
-                  : _formatStructure(title, language),
-              style: theme.textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.bold,
-                color: colorScheme.onSurface,
+              point.grammarPoint,
+              style: const TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w800,
+                color: Color(0xFF0F172A),
+                height: 1.1,
               ),
             ),
-          ],
-        ),
-        subtitle: Padding(
-          padding: const EdgeInsets.only(top: 8),
-          child: Text(
-            meaning,
-            style: theme.textTheme.bodyMedium?.copyWith(
-              color: colorScheme.onSurfaceVariant,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ),
-        children: [
-          const Divider(height: 32),
-
-          // Structure Section
-          if (displayStructure.isNotEmpty) ...[
-            _buildSectionHeader(
-              context,
-              language == AppLanguage.vi ? 'Cấu trúc' : 'Structure',
-              Icons.account_tree_outlined,
+            const SizedBox(height: 6),
+            Text(
+              meaning,
+              style: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF334155),
+              ),
             ),
             const SizedBox(height: 8),
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: colorScheme.surfaceContainerHigh,
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(
-                  color: colorScheme.outlineVariant.withValues(alpha: 0.5),
-                ),
-              ),
-              child: Text(
-                displayStructure,
-                style: const TextStyle(
-                  fontFamily: 'Courier',
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
-                ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
+                value: mastery,
+                minHeight: 6,
+                backgroundColor: const Color(0xFFE2E8F0),
+                color: point.isLearned
+                    ? const Color(0xFF16A34A)
+                    : const Color(0xFF2563EB),
               ),
             ),
-            const SizedBox(height: 24),
           ],
-
-          // Explanation Section
-          _buildSectionHeader(
-            context,
-            language == AppLanguage.vi ? 'Giải thích' : 'Explanation',
-            Icons.info_outline,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            explanation,
-            style: theme.textTheme.bodyMedium?.copyWith(
-              height: 1.6,
-              color: colorScheme.onSurface,
-            ),
-          ),
-          const SizedBox(height: 24),
-
-          // Examples Section
+        ),
+        children: [
+          const Divider(height: 24),
+          _sectionLabel(language.grammarConnectionLabel),
+          const SizedBox(height: 6),
+          _contentBlock(structure, monospace: true),
+          const SizedBox(height: 14),
+          _sectionLabel(language.grammarExplanationLabel),
+          const SizedBox(height: 6),
+          _contentBlock(explanation),
           if (data.examples.isNotEmpty) ...[
-            _buildSectionHeader(
-              context,
-              language == AppLanguage.vi ? 'Ví dụ' : 'Examples',
-              Icons.format_quote_rounded,
-            ),
-            const SizedBox(height: 12),
-            ...data.examples.map(
-              (ex) => _buildExampleItem(context, ex, language),
-            ),
+            const SizedBox(height: 14),
+            _sectionLabel(language.grammarExamplesLabel),
+            const SizedBox(height: 8),
+            ...data.examples
+                .take(4)
+                .map(
+                  (example) => Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: _exampleBlock(example, language),
+                  ),
+                ),
           ],
-
-          // Action Section (Optional: Mark as learned if needed in future, hidden for now as it's implied by Lesson)
+          const SizedBox(height: 6),
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.tonalIcon(
+              onPressed: onPracticePoint,
+              icon: const Icon(Icons.fitness_center_rounded),
+              label: Text(
+                _tr(
+                  language,
+                  en: 'Drill this grammar point',
+                  vi: 'Luyện điểm ngữ pháp này',
+                  ja: 'この文法をドリルする',
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildChip(BuildContext context, String label, Color bg, Color fg) {
+  Widget _exampleBlock(GrammarExample ex, AppLanguage language) {
+    final translation = switch (language) {
+      AppLanguage.vi => ex.translationVi ?? ex.translation,
+      AppLanguage.en => ex.translationEn ?? ex.translation,
+      AppLanguage.ja => ex.translation,
+    };
+
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
       decoration: BoxDecoration(
-        color: bg,
-        borderRadius: BorderRadius.circular(6),
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
       ),
-      child: Text(
-        label.toUpperCase(),
-        style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: fg),
-      ),
-    );
-  }
-
-  Widget _buildSectionHeader(
-    BuildContext context,
-    String title,
-    IconData icon,
-  ) {
-    final color = Theme.of(context).colorScheme.primary;
-    return Row(
-      children: [
-        Icon(icon, size: 18, color: color),
-        const SizedBox(width: 8),
-        Text(
-          title.toUpperCase(),
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-            color: color,
-            letterSpacing: 1.0,
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildExampleItem(
-    BuildContext context,
-    GrammarExample ex,
-    AppLanguage language,
-  ) {
-    String translation = '';
-    switch (language) {
-      case AppLanguage.vi:
-        translation = ex.translationVi ?? ex.translation;
-        break;
-      case AppLanguage.en:
-        translation = ex.translationEn ?? ex.translation;
-        break;
-      case AppLanguage.ja:
-        translation = '';
-        break;
-    }
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             ex.japanese,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: Color(0xFF0F172A),
+            ),
           ),
-          if (translation.isNotEmpty) ...[
+          if (translation.trim().isNotEmpty) ...[
             const SizedBox(height: 4),
             Text(
               translation,
-              style: TextStyle(
-                fontSize: 14,
-                color: Theme.of(context).colorScheme.outline,
+              style: const TextStyle(
+                fontSize: 13,
+                color: Color(0xFF64748B),
                 fontStyle: FontStyle.italic,
               ),
             ),
@@ -362,19 +934,99 @@ class _GrammarPointCard extends StatelessWidget {
     );
   }
 
-  String _formatStructure(String text, AppLanguage language) {
-    if (language == AppLanguage.vi) return text;
-    // Simple filter to keep it clean - logic remains similar but simplified regex for robustness
-    // Only keeping characters, Basic punctuations, and Japanese characters
-    // Removing parentheses content that looks localized if needed
-    // For now, reusing the previous logic logic implicitly or simplified:
-    return text
-        .replaceAll(
-          RegExp(
-            r'\([^)]*[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđĐ]+[^)]*\)',
-          ),
-          '',
-        )
-        .trim();
+  Widget _sectionLabel(String text) {
+    return Text(
+      text,
+      style: const TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w800,
+        letterSpacing: 0.25,
+        color: Color(0xFF1E3A8A),
+      ),
+    );
+  }
+
+  Widget _contentBlock(String text, {bool monospace = false}) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 14,
+          height: 1.5,
+          color: const Color(0xFF1E293B),
+          fontFamily: monospace ? 'Courier' : null,
+          fontWeight: monospace ? FontWeight.w600 : FontWeight.w500,
+        ),
+      ),
+    );
+  }
+
+  Widget _pill(String text, {required Color fg, required Color bg}) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(fontSize: 10, fontWeight: FontWeight.w800, color: fg),
+      ),
+    );
+  }
+
+  String _resolveMeaning(GrammarPoint point) {
+    switch (language) {
+      case AppLanguage.vi:
+        return point.meaningVi ?? point.meaning;
+      case AppLanguage.en:
+        return point.meaningEn ?? point.meaning;
+      case AppLanguage.ja:
+        return point.meaning;
+    }
+  }
+
+  String _resolveStructure(GrammarPoint point) {
+    switch (language) {
+      case AppLanguage.en:
+        return point.connectionEn ?? point.connection;
+      case AppLanguage.vi:
+      case AppLanguage.ja:
+        return point.connection;
+    }
+  }
+
+  String _resolveExplanation(GrammarPoint point) {
+    switch (language) {
+      case AppLanguage.vi:
+        return point.explanationVi ?? point.explanation;
+      case AppLanguage.en:
+        return point.explanationEn ?? point.explanation;
+      case AppLanguage.ja:
+        return point.explanation;
+    }
+  }
+}
+
+String _tr(
+  AppLanguage language, {
+  required String en,
+  required String vi,
+  required String ja,
+}) {
+  switch (language) {
+    case AppLanguage.en:
+      return en;
+    case AppLanguage.vi:
+      return vi;
+    case AppLanguage.ja:
+      return ja;
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
 
 import '../providers/test_providers.dart';
 import '../services/test_history_service.dart';
@@ -18,9 +20,12 @@ class TestHistoryScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final historyService = ref.watch(testHistoryServiceProvider);
+    final language = ref.watch(appLanguageProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text('History: $lessonTitle')),
+      appBar: AppBar(
+        title: Text('${language.attemptHistoryLabel}: $lessonTitle'),
+      ),
       body: FutureBuilder<_HistoryData>(
         future: _loadData(historyService),
         builder: (context, snapshot) {
@@ -29,14 +34,14 @@ class TestHistoryScreen extends ConsumerWidget {
           }
 
           if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(child: Text(language.loadErrorLabel));
           }
 
           final data = snapshot.data!;
           final history = data.history;
 
           if (history.isEmpty) {
-            return _buildEmptyState();
+            return _buildEmptyState(language);
           }
 
           return SingleChildScrollView(
@@ -50,17 +55,18 @@ class TestHistoryScreen extends ConsumerWidget {
                   history.length,
                   data.bestScore,
                   data.averageScore,
+                  language,
                 ),
                 const SizedBox(height: 24),
 
                 // Progress chart
                 if (data.progressData.length >= 2) ...[
-                  _buildProgressChart(context, data.progressData),
+                  _buildProgressChart(context, data.progressData, language),
                   const SizedBox(height: 24),
                 ],
 
                 // History list
-                _buildHistoryList(context, history),
+                _buildHistoryList(context, history, language),
               ],
             ),
           );
@@ -87,21 +93,21 @@ class TestHistoryScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildEmptyState() {
-    return const Center(
+  Widget _buildEmptyState(AppLanguage language) {
+    return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.history, size: 64, color: Colors.grey),
-          SizedBox(height: 16),
+          const Icon(Icons.history, size: 64, color: Colors.grey),
+          const SizedBox(height: 16),
           Text(
-            'No test history yet',
-            style: TextStyle(fontSize: 18, color: Colors.grey),
+            language.attemptHistoryEmptyLabel,
+            style: const TextStyle(fontSize: 18, color: Colors.grey),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
-            'Complete a test to see your progress',
-            style: TextStyle(color: Colors.grey),
+            language.testHistoryEmptyHintLabel,
+            style: const TextStyle(color: Colors.grey),
           ),
         ],
       ),
@@ -113,13 +119,14 @@ class TestHistoryScreen extends ConsumerWidget {
     int testCount,
     TestHistoryRecord? bestScore,
     double averageScore,
+    AppLanguage language,
   ) {
     return Row(
       children: [
         Expanded(
           child: _StatCard(
             icon: Icons.quiz,
-            label: 'Tests Taken',
+            label: language.testHistoryTestsTakenLabel,
             value: testCount.toString(),
             color: Colors.blue,
           ),
@@ -128,7 +135,7 @@ class TestHistoryScreen extends ConsumerWidget {
         Expanded(
           child: _StatCard(
             icon: Icons.emoji_events,
-            label: 'Best Score',
+            label: language.testHistoryBestScoreLabel,
             value: bestScore != null ? '${bestScore.score.toInt()}%' : '-',
             color: Colors.amber,
           ),
@@ -137,7 +144,7 @@ class TestHistoryScreen extends ConsumerWidget {
         Expanded(
           child: _StatCard(
             icon: Icons.analytics,
-            label: 'Average',
+            label: language.testHistoryAverageLabel,
             value: '${averageScore.toInt()}%',
             color: Colors.green,
           ),
@@ -146,7 +153,11 @@ class TestHistoryScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildProgressChart(BuildContext context, List<ProgressPoint> data) {
+  Widget _buildProgressChart(
+    BuildContext context,
+    List<ProgressPoint> data,
+    AppLanguage language,
+  ) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -156,9 +167,9 @@ class TestHistoryScreen extends ConsumerWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Progress Over Time',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          Text(
+            language.testHistoryProgressOverTimeLabel,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 16),
 
@@ -206,11 +217,11 @@ class TestHistoryScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Oldest',
+                language.testHistoryOldestLabel,
                 style: TextStyle(fontSize: 10, color: Colors.grey[600]),
               ),
               Text(
-                'Latest',
+                language.testHistoryLatestLabel,
                 style: TextStyle(fontSize: 10, color: Colors.grey[600]),
               ),
             ],
@@ -223,13 +234,14 @@ class TestHistoryScreen extends ConsumerWidget {
   Widget _buildHistoryList(
     BuildContext context,
     List<TestHistoryRecord> history,
+    AppLanguage language,
   ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Test History',
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        Text(
+          language.attemptHistoryLabel,
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 12),
         ...history.asMap().entries.map((entry) {

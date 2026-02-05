@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:jpstudy/core/app_language.dart';
 
 class GrammarExampleWidget extends StatelessWidget {
+  final AppLanguage language;
   final String japanese;
   final String translation;
   final String? translationVi;
+  final String? translationEn;
   final bool showVietnamese;
 
   const GrammarExampleWidget({
     super.key,
+    required this.language,
     required this.japanese,
     required this.translation,
     this.translationVi,
+    this.translationEn,
     this.showVietnamese = true,
   });
 
@@ -35,7 +40,7 @@ class GrammarExampleWidget extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          showVietnamese ? (translationVi ?? translation) : translation,
+          _resolveTranslation(),
           style: TextStyle(
             fontSize: 16,
             color: Theme.of(context).colorScheme.onSurfaceVariant,
@@ -44,5 +49,19 @@ class GrammarExampleWidget extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  String _resolveTranslation() {
+    if (!showVietnamese) {
+      return translation;
+    }
+    switch (language) {
+      case AppLanguage.en:
+        return (translationEn ?? translation).trim();
+      case AppLanguage.vi:
+        return (translationVi ?? translation).trim();
+      case AppLanguage.ja:
+        return translation.trim();
+    }
   }
 }

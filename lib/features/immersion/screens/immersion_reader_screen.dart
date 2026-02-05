@@ -261,14 +261,17 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
   String? _quizMeaning(ImmersionToken token, AppLanguage language) {
     final vi = token.meaningVi?.trim();
     final en = token.meaningEn?.trim();
-    if (language == AppLanguage.en) {
-      if (en != null && en.isNotEmpty) return en;
-      if (vi != null && vi.isNotEmpty) return vi;
-      return null;
+    switch (language) {
+      case AppLanguage.vi:
+        if (vi != null && vi.isNotEmpty) return vi;
+        if (en != null && en.isNotEmpty) return en;
+        return null;
+      case AppLanguage.en:
+      case AppLanguage.ja:
+        if (en != null && en.isNotEmpty) return en;
+        if (vi != null && vi.isNotEmpty) return vi;
+        return null;
     }
-    if (vi != null && vi.isNotEmpty) return vi;
-    if (en != null && en.isNotEmpty) return en;
-    return null;
   }
 
   String _quizMeaningPrompt(AppLanguage language, String surface) {
@@ -276,20 +279,20 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'What does "$surface" mean?';
       case AppLanguage.vi:
-        return '“$surface” có nghĩa là gì?';
+        return '"$surface" c\u00f3 ngh\u0129a l\u00e0 g\u00ec?';
       case AppLanguage.ja:
-        return '「$surface」の意味は？';
+        return '\u300c$surface\u300d\u306e\u610f\u5473\u306f\uff1f';
     }
   }
 
   String _quizClozePrompt(AppLanguage language, String context) {
     switch (language) {
       case AppLanguage.en:
-        return 'Choose the best word for this blank:\n$context';
+        return 'Choose the best word for this blank:\\n$context';
       case AppLanguage.vi:
-        return 'Chọn từ phù hợp cho chỗ trống:\n$context';
+        return 'Ch\u1ecdn t\u1eeb ph\u00f9 h\u1ee3p cho ch\u1ed7 tr\u1ed1ng:\\n$context';
       case AppLanguage.ja:
-        return '空欄に入る語を選んでください:\n$context';
+        return '\u7a7a\u6b04\u306b\u5165\u308b\u8a9e\u3092\u9078\u3093\u3067\u304f\u3060\u3055\u3044:\n$context';
     }
   }
 
@@ -298,9 +301,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Mini Quiz';
       case AppLanguage.vi:
-        return 'Mini Quiz';
+        return 'B\u00e0i ki\u1ec3m tra nhanh';
       case AppLanguage.ja:
-        return 'ミニクイズ';
+        return '\u30df\u30cb\u30af\u30a4\u30ba';
     }
   }
 
@@ -309,9 +312,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return '2-3 quick questions to confirm understanding.';
       case AppLanguage.vi:
-        return '2-3 câu nhanh để kiểm tra mức hiểu bài.';
+        return '2-3 c\u00e2u ng\u1eafn \u0111\u1ec3 ki\u1ec3m tra m\u1ee9c \u0111\u1ed9 hi\u1ec3u b\u00e0i.';
       case AppLanguage.ja:
-        return '理解度を確認する2〜3問の小テストです。';
+        return '\u7406\u89e3\u5ea6\u3092\u78ba\u8a8d\u3059\u308b\u305f\u3081\u306e2-3\u554f\u3067\u3059\u3002';
     }
   }
 
@@ -320,9 +323,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Check answers';
       case AppLanguage.vi:
-        return 'Chấm điểm';
+        return 'Ch\u1ea5m \u0111i\u1ec3m';
       case AppLanguage.ja:
-        return '答え合わせ';
+        return '\u7b54\u3048\u5408\u308f\u305b';
     }
   }
 
@@ -331,9 +334,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Try again';
       case AppLanguage.vi:
-        return 'Làm lại';
+        return 'L\u00e0m l\u1ea1i';
       case AppLanguage.ja:
-        return 'もう一度';
+        return '\u3082\u3046\u4e00\u5ea6';
     }
   }
 
@@ -342,9 +345,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Score: $correct/$total';
       case AppLanguage.vi:
-        return 'Điểm: $correct/$total';
+        return '\u0110i\u1ec3m: $correct/$total';
       case AppLanguage.ja:
-        return 'スコア: $correct/$total';
+        return '\u30b9\u30b3\u30a2: $correct/$total';
     }
   }
 
@@ -353,9 +356,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'History';
       case AppLanguage.vi:
-        return 'Lịch sử';
+        return 'L\u1ecbch s\u1eed';
       case AppLanguage.ja:
-        return '履歴';
+        return '\u5c65\u6b74';
     }
   }
 
@@ -364,9 +367,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'No attempts yet.';
       case AppLanguage.vi:
-        return 'Chưa có lần làm nào.';
+        return 'Ch\u01b0a c\u00f3 l\u1ea7n l\u00e0m n\u00e0o.';
       case AppLanguage.ja:
-        return 'まだ履歴がありません。';
+        return '\u307e\u3060\u5c65\u6b74\u304c\u3042\u308a\u307e\u305b\u3093\u3002';
     }
   }
 
@@ -375,9 +378,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Saved result: $correct/$total';
       case AppLanguage.vi:
-        return 'Đã lưu kết quả: $correct/$total';
+        return '\u0110\u00e3 l\u01b0u k\u1ebft qu\u1ea3: $correct/$total';
       case AppLanguage.ja:
-        return '結果を保存しました: $correct/$total';
+        return '\u7d50\u679c\u3092\u4fdd\u5b58\u3057\u307e\u3057\u305f: $correct/$total';
     }
   }
 
@@ -386,9 +389,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Day';
       case AppLanguage.vi:
-        return 'Ngày';
+        return 'Ng\u00e0y';
       case AppLanguage.ja:
-        return '日';
+        return '\u65e5';
     }
   }
 
@@ -397,9 +400,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Week';
       case AppLanguage.vi:
-        return 'Tuần';
+        return 'Tu\u1ea7n';
       case AppLanguage.ja:
-        return '週';
+        return '\u9031';
     }
   }
 
@@ -408,9 +411,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'All';
       case AppLanguage.vi:
-        return 'Tất cả';
+        return 'T\u1ea5t c\u1ea3';
       case AppLanguage.ja:
-        return 'すべて';
+        return '\u3059\u3079\u3066';
     }
   }
 
@@ -419,9 +422,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Progress chart';
       case AppLanguage.vi:
-        return 'Biểu đồ tiến bộ';
+        return 'Bi\u1ec3u \u0111\u1ed3 ti\u1ebfn b\u1ed9';
       case AppLanguage.ja:
-        return '進捗チャート';
+        return '\u9032\u6357\u30c1\u30e3\u30fc\u30c8';
     }
   }
 
@@ -430,9 +433,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'No progress data for this filter.';
       case AppLanguage.vi:
-        return 'Chưa có dữ liệu theo bộ lọc này.';
+        return 'Ch\u01b0a c\u00f3 d\u1eef li\u1ec7u theo b\u1ed9 l\u1ecdc n\u00e0y.';
       case AppLanguage.ja:
-        return 'このフィルターのデータはまだありません。';
+        return '\u3053\u306e\u30d5\u30a3\u30eb\u30bf\u30fc\u306e\u30c7\u30fc\u30bf\u306f\u307e\u3060\u3042\u308a\u307e\u305b\u3093\u3002';
     }
   }
 
@@ -458,11 +461,11 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     final bestText = (bestPercent * 100).round();
     switch (language) {
       case AppLanguage.en:
-        return 'Avg $avgPercent% • Best $bestText%';
+        return 'Avg $avgPercent% | Best $bestText%';
       case AppLanguage.vi:
-        return 'TB $avgPercent% • Cao nhất $bestText%';
+        return 'TB $avgPercent% | Cao nh\u1ea5t $bestText%';
       case AppLanguage.ja:
-        return '平均 $avgPercent% ・ 最高 $bestText%';
+        return '\u5e73\u5747 $avgPercent% | \u6700\u9ad8 $bestText%';
     }
   }
 
@@ -570,9 +573,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Unknown words queue ($count)';
       case AppLanguage.vi:
-        return 'Hàng đợi từ chưa chắc ($count)';
+        return 'H\u00e0ng \u0111\u1ee3i t\u1eeb ch\u01b0a ch\u1eafc ($count)';
       case AppLanguage.ja:
-        return '未知語キュー ($count)';
+        return '\u672a\u77e5\u8a9e\u30ad\u30e5\u30fc ($count)';
     }
   }
 
@@ -581,9 +584,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Tapped words are stored here for quick review.';
       case AppLanguage.vi:
-        return 'Các từ đã chạm sẽ lưu ở đây để ôn nhanh cuối bài.';
+        return 'C\u00e1c t\u1eeb \u0111\u00e3 ch\u1ea1m s\u1ebd l\u01b0u \u1edf \u0111\u00e2y \u0111\u1ec3 \u00f4n nhanh cu\u1ed1i b\u00e0i.';
       case AppLanguage.ja:
-        return 'タップした語をここに集めて後でまとめて復習できます。';
+        return '\u30bf\u30c3\u30d7\u3057\u305f\u8a9e\u3092\u3053\u3053\u306b\u96c6\u3081\u3066\u3001\u5f8c\u3067\u307e\u3068\u3081\u3066\u5fa9\u7fd2\u3067\u304d\u307e\u3059\u3002';
     }
   }
 
@@ -592,9 +595,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Review queue';
       case AppLanguage.vi:
-        return 'Xem hàng đợi';
+        return 'Xem h\u00e0ng \u0111\u1ee3i';
       case AppLanguage.ja:
-        return 'キューを見る';
+        return '\u30ad\u30e5\u30fc\u3092\u898b\u308b';
     }
   }
 
@@ -603,9 +606,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Add all to SRS';
       case AppLanguage.vi:
-        return 'Thêm tất cả vào SRS';
+        return 'Th\u00eam t\u1ea5t c\u1ea3 v\u00e0o SRS';
       case AppLanguage.ja:
-        return 'すべてSRSに追加';
+        return '\u3059\u3079\u3066SRS\u306b\u8ffd\u52a0';
     }
   }
 
@@ -614,9 +617,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Clear queue';
       case AppLanguage.vi:
-        return 'Xóa hàng đợi';
+        return 'X\u00f3a h\u00e0ng \u0111\u1ee3i';
       case AppLanguage.ja:
-        return 'キューをクリア';
+        return '\u30ad\u30e5\u30fc\u3092\u30af\u30ea\u30a2';
     }
   }
 
@@ -630,9 +633,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
       case AppLanguage.en:
         return 'Processed $total words (new: $added, existing: $existed).';
       case AppLanguage.vi:
-        return 'Đã xử lý $total từ (mới: $added, đã có: $existed).';
+        return '\u0110\u00e3 x\u1eed l\u00fd $total t\u1eeb (m\u1edbi: $added, \u0111\u00e3 c\u00f3: $existed).';
       case AppLanguage.ja:
-        return '$total語を処理しました（新規: $added、既存: $existed）。';
+        return '$total\u8a9e\u3092\u51e6\u7406\u3057\u307e\u3057\u305f\uff08\u65b0\u898f: $added\u3001\u65e2\u5b58: $existed\uff09\u3002';
     }
   }
 
@@ -773,7 +776,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                                 if (token.reading?.isNotEmpty == true)
                                   token.reading!,
                                 if (meaning.isNotEmpty) meaning,
-                              ].join(' • '),
+                              ].join(' | '),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                             ),
@@ -1006,6 +1009,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                 subtitle: _unknownQueueSubtitle(language),
                 reviewLabel: _unknownQueueReviewLabel(language),
                 addAllLabel: _unknownQueueAddAllLabel(language),
+                clearLabel: _unknownQueueClearLabel(language),
                 onReview: () => _showUnknownQueue(language),
                 onAddAll: () => _addAllUnknownToSrs(language),
                 onClear: _clearUnknownQueue,
@@ -1041,7 +1045,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                 historyItems: filteredHistory
                     .map(
                       (attempt) =>
-                          '${attempt.correct}/${attempt.total} • ${MaterialLocalizations.of(context).formatShortDate(attempt.attemptedAt)}',
+                          '${attempt.correct}/${attempt.total} | ${MaterialLocalizations.of(context).formatShortDate(attempt.attemptedAt)}',
                     )
                     .toList(),
                 progressTitle: _quizProgressTitle(language),
@@ -1136,13 +1140,7 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
     if (!isSaved) {
       _queueUnknownToken(token);
     }
-    final meaning = language == AppLanguage.en
-        ? (token.meaningEn?.trim().isNotEmpty == true
-              ? token.meaningEn!
-              : token.meaningVi ?? '')
-        : (token.meaningVi?.trim().isNotEmpty == true
-              ? token.meaningVi!
-              : token.meaningEn ?? '');
+    final meaning = _quizMeaning(token, language) ?? '';
 
     await showModalBottomSheet<void>(
       context: context,
@@ -1473,6 +1471,7 @@ class _UnknownQueueCard extends StatelessWidget {
     required this.subtitle,
     required this.reviewLabel,
     required this.addAllLabel,
+    required this.clearLabel,
     required this.onReview,
     required this.onAddAll,
     required this.onClear,
@@ -1482,6 +1481,7 @@ class _UnknownQueueCard extends StatelessWidget {
   final String subtitle;
   final String reviewLabel;
   final String addAllLabel;
+  final String clearLabel;
   final VoidCallback onReview;
   final VoidCallback onAddAll;
   final VoidCallback onClear;
@@ -1516,7 +1516,7 @@ class _UnknownQueueCard extends StatelessWidget {
                 ),
               ),
               IconButton(
-                tooltip: 'Clear',
+                tooltip: clearLabel,
                 onPressed: onClear,
                 icon: const Icon(Icons.delete_outline_rounded),
               ),

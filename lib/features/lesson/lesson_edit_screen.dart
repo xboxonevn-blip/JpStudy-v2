@@ -659,9 +659,9 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                const Text(
-                  'Tap a snippet to copy it to the clipboard.',
-                  style: TextStyle(color: Color(0xFF6B7390)),
+                Text(
+                  language.keyboardHelperCopyHintLabel,
+                  style: const TextStyle(color: Color(0xFF6B7390)),
                 ),
                 const SizedBox(height: 16),
                 Wrap(
@@ -674,7 +674,11 @@ class _LessonEditScreenState extends ConsumerState<LessonEditScreen> {
                         onPressed: () async {
                           await Clipboard.setData(ClipboardData(text: snippet));
                           messenger.showSnackBar(
-                            SnackBar(content: Text('Copied "$snippet".')),
+                            SnackBar(
+                              content: Text(
+                                language.copiedSnippetLabel(snippet),
+                              ),
+                            ),
                           );
                         },
                       ),

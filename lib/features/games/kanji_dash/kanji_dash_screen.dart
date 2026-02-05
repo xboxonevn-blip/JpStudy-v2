@@ -33,6 +33,21 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   List<VocabItem> _vocabPool = [];
   final Map<int, int?> _resolvedTermIdByContentId = {};
 
+  String _meaningForLanguage(
+    AppLanguage language, {
+    required String meaningVi,
+    required String? meaningEn,
+  }) {
+    final english = meaningEn?.trim() ?? '';
+    switch (language) {
+      case AppLanguage.vi:
+        return meaningVi;
+      case AppLanguage.en:
+      case AppLanguage.ja:
+        return english.isNotEmpty ? english : meaningVi;
+    }
+  }
+
   @override
   void dispose() {
     _timer?.cancel();
@@ -209,7 +224,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
     return vocabAsync.when(
       data: (dataItems) {
         if (dataItems.isEmpty) {
-          return Center(child: Text(language.noVocabFoundLabel));
+          return Center(child: Text(language.kanjiDashNoVocab));
         }
 
         final items = dataItems
@@ -255,7 +270,7 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
         return _buildGame();
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (e, s) => Center(child: Text('Error: $e')),
+      error: (e, s) => Center(child: Text(language.loadErrorLabel)),
     );
   }
 
@@ -400,10 +415,11 @@ class _KanjiDashScreenState extends ConsumerState<KanjiDashScreen> {
   }
 
   VocabItem _mapToVocabItem(dynamic source, AppLanguage language) {
-    final meaningEn = (source.meaningEn ?? '').toString().trim();
-    final meaning = language == AppLanguage.en
-        ? (meaningEn.isNotEmpty ? meaningEn : source.meaning)
-        : source.meaning;
+    final meaning = _meaningForLanguage(
+      language,
+      meaningVi: (source.meaning ?? '').toString(),
+      meaningEn: source.meaningEn?.toString(),
+    );
     return VocabItem(
       id: source.id,
       term: source.term,

@@ -18,6 +18,10 @@ import '../widgets/kanji_stroke_animator.dart';
 
 const _prefStrokeGuideDefaultExpanded =
     'write.handwriting.strokeGuide.defaultExpanded';
+const _screenBackgroundColor = Color(0xFFF3F5FA);
+const _surfaceCardColor = Color(0xFFFFFFFF);
+const _surfaceBorderColor = Color(0xFFE3E8F4);
+const _surfaceMutedTextColor = Color(0xFF616B87);
 
 class HandwritingPracticeScreen extends ConsumerStatefulWidget {
   const HandwritingPracticeScreen({
@@ -41,6 +45,7 @@ class HandwritingPracticeScreen extends ConsumerStatefulWidget {
 }
 
 enum _HandwritingPracticeMode { single, compound, mixed }
+
 enum _LearningState { newItem, review, weak }
 
 class _HandwritingPracticeScreenState
@@ -113,8 +118,19 @@ class _HandwritingPracticeScreenState
     final meaning = _resolveMeaning(target, language);
 
     return Scaffold(
+      backgroundColor: _screenBackgroundColor,
       appBar: AppBar(
         title: Text('${language.handwritingLabel}: ${widget.lessonTitle}'),
+      ),
+      bottomNavigationBar: Material(
+        color: _surfaceCardColor,
+        elevation: 10,
+        shadowColor: const Color(0x17273854),
+        child: SafeArea(
+          top: false,
+          minimum: const EdgeInsets.fromLTRB(16, 10, 16, 12),
+          child: _buildActionButtons(language),
+        ),
       ),
       body: SafeArea(
         child: LayoutBuilder(
@@ -128,7 +144,7 @@ class _HandwritingPracticeScreenState
             final maxCanvasWidth = max(
               180.0,
               isWideLayout
-                  ? (constraints.maxWidth - horizontalPadding - paneGap) * 0.55
+                  ? (constraints.maxWidth - horizontalPadding - paneGap) * 0.70
                   : constraints.maxWidth - horizontalPadding,
             );
             final preferredSlotSide = min(
@@ -172,6 +188,7 @@ class _HandwritingPracticeScreenState
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _buildProgress(language, target, progress),
+                  _buildSessionMiniBar(language, progress),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
                     child: Text(
@@ -215,7 +232,10 @@ class _HandwritingPracticeScreenState
                                 ),
                               ),
                               const SizedBox(width: 16),
-                              Expanded(flex: 6, child: guidePanel),
+                              Expanded(
+                                flex: 3,
+                                child: SingleChildScrollView(child: guidePanel),
+                              ),
                             ],
                           )
                         : Column(
@@ -255,89 +275,178 @@ class _HandwritingPracticeScreenState
         : (progressStats.doneCharacters / progressStats.totalCharacters);
     final badge = _buildLearningStateBadge(language, target.learningState);
 
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text(
-                  language.handwritingWordProgressLabel(
-                    _currentIndex + 1,
-                    _targets.length,
-                  ),
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Color(0xFF6B7390),
-                    fontWeight: FontWeight.w600,
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+        decoration: BoxDecoration(
+          color: _surfaceCardColor,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: _surfaceBorderColor),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x0B2F3A59),
+              blurRadius: 14,
+              offset: Offset(0, 6),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    language.handwritingWordProgressLabel(
+                      _currentIndex + 1,
+                      _targets.length,
+                    ),
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF27314B),
+                    ),
                   ),
                 ),
+                badge,
+              ],
+            ),
+            const SizedBox(height: 10),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
+                value: wordProgress,
+                minHeight: 8,
+                backgroundColor: const Color(0xFFE5EAF4),
+                color: const Color(0xFF1D4ED8),
               ),
-              badge,
-            ],
-          ),
-        ),
-        LinearProgressIndicator(
-          value: wordProgress,
-          minHeight: 6,
-          backgroundColor: Colors.grey[200],
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text(
-                  language.handwritingCharacterProgressLabel(
-                    progressStats.doneCharacters,
-                    progressStats.totalCharacters,
-                  ),
-                  style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              language.handwritingCharacterProgressLabel(
+                progressStats.doneCharacters,
+                progressStats.totalCharacters,
+              ),
+              style: const TextStyle(
+                fontSize: 12,
+                color: _surfaceMutedTextColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 6),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
+                value: characterProgress,
+                minHeight: 6,
+                backgroundColor: const Color(0xFFE5EAF4),
+                color: const Color(0xFF0F766E),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 8,
+              runSpacing: 6,
+              children: [
+                _buildStatusCountChip(
+                  label: language.handwritingStatusNewLabel,
+                  count: progressStats.newItems,
+                  color: const Color(0xFF2563EB),
                 ),
+                _buildStatusCountChip(
+                  label: language.handwritingStatusReviewLabel,
+                  count: progressStats.reviewItems,
+                  color: const Color(0xFF4D7C0F),
+                ),
+                _buildStatusCountChip(
+                  label: language.handwritingStatusWeakLabel,
+                  count: progressStats.weakItems,
+                  color: const Color(0xFFB91C1C),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(
+              language.practiceProgressLabel(
+                _currentIndex + 1,
+                _targets.length,
               ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 4),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: LinearProgressIndicator(
-            value: characterProgress,
-            minHeight: 4,
-            backgroundColor: Colors.grey[200],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-          child: Wrap(
-            spacing: 8,
-            runSpacing: 6,
-            children: [
-              _buildStatusCountChip(
-                label: language.handwritingStatusNewLabel,
-                count: progressStats.newItems,
-                color: const Color(0xFF2563EB),
+              style: const TextStyle(
+                fontSize: 12,
+                color: _surfaceMutedTextColor,
               ),
-              _buildStatusCountChip(
-                label: language.handwritingStatusReviewLabel,
-                count: progressStats.reviewItems,
-                color: const Color(0xFF4D7C0F),
-              ),
-              _buildStatusCountChip(
-                label: language.handwritingStatusWeakLabel,
-                count: progressStats.weakItems,
-                color: const Color(0xFFB91C1C),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-        const SizedBox(height: 8),
-        Text(
-          language.practiceProgressLabel(_currentIndex + 1, _targets.length),
-          style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
+      ),
+    );
+  }
+
+  Widget _buildSessionMiniBar(
+    AppLanguage language,
+    _ProgressStats progressStats,
+  ) {
+    final completedTargetCount = _checked ? (_currentIndex + 1) : _currentIndex;
+    final remaining = max(0, _targets.length - completedTargetCount);
+    final weakButton = FilledButton.tonalIcon(
+      onPressed: progressStats.weakItems <= 0
+          ? null
+          : () => _practiceWeakItems(limit: 10),
+      icon: const Icon(Icons.fitness_center_rounded, size: 18),
+      label: Text(language.handwritingPracticeWeakSetLabel(10)),
+    );
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: _surfaceCardColor,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: _surfaceBorderColor),
         ),
-      ],
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final isCompact = constraints.maxWidth < 720;
+            final chips = Wrap(
+              spacing: 8,
+              runSpacing: 6,
+              children: [
+                _buildStatusCountChip(
+                  label: language.correctLabel,
+                  count: _correctCount,
+                  color: const Color(0xFF15803D),
+                ),
+                _buildStatusCountChip(
+                  label: language.handwritingRemainingLabel,
+                  count: remaining,
+                  color: const Color(0xFF334155),
+                ),
+                _buildStatusCountChip(
+                  label: language.handwritingStatusWeakLabel,
+                  count: progressStats.weakItems,
+                  color: const Color(0xFFB91C1C),
+                ),
+              ],
+            );
+            if (isCompact) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [chips, const SizedBox(height: 10), weakButton],
+              );
+            }
+
+            return Row(
+              children: [
+                Expanded(child: chips),
+                const SizedBox(width: 12),
+                weakButton,
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 
@@ -351,58 +460,76 @@ class _HandwritingPracticeScreenState
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Align(
-          alignment: Alignment.centerLeft,
-          child: SizedBox(
-            width: canvasWidth,
-            height: canvasHeight,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Listener(
-                onPointerDown: (_) {
-                  if (_canvasPointerActive) return;
-                  setState(() {
-                    _canvasPointerActive = true;
-                  });
-                },
-                onPointerUp: (_) {
-                  if (!_canvasPointerActive) return;
-                  setState(() {
-                    _canvasPointerActive = false;
-                  });
-                },
-                onPointerCancel: (_) {
-                  if (!_canvasPointerActive) return;
-                  setState(() {
-                    _canvasPointerActive = false;
-                  });
-                },
-                child: HandwritingCanvas(
-                  strokes: _strokes,
-                  showGuide: _showGuide,
-                  guideText: target.text,
-                  guideSlotCount: slotCount,
-                  enabled: !_checked,
-                  onStrokeStart: _handleStrokeStart,
-                  onStrokeUpdate: _handleStrokeUpdate,
-                  onStrokeEnd: _handleStrokeEnd,
+        Container(
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: _surfaceCardColor,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: _surfaceBorderColor),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0x0B2F3A59),
+                blurRadius: 12,
+                offset: Offset(0, 5),
+              ),
+            ],
+          ),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: SizedBox(
+              width: canvasWidth,
+              height: canvasHeight,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(14),
+                child: Listener(
+                  onPointerDown: (_) {
+                    if (_canvasPointerActive) return;
+                    setState(() {
+                      _canvasPointerActive = true;
+                    });
+                  },
+                  onPointerUp: (_) {
+                    if (!_canvasPointerActive) return;
+                    setState(() {
+                      _canvasPointerActive = false;
+                    });
+                  },
+                  onPointerCancel: (_) {
+                    if (!_canvasPointerActive) return;
+                    setState(() {
+                      _canvasPointerActive = false;
+                    });
+                  },
+                  child: HandwritingCanvas(
+                    strokes: _strokes,
+                    showGuide: _showGuide,
+                    guideText: target.text,
+                    guideSlotCount: slotCount,
+                    enabled: !_checked,
+                    onStrokeStart: _handleStrokeStart,
+                    onStrokeUpdate: _handleStrokeUpdate,
+                    onStrokeEnd: _handleStrokeEnd,
+                  ),
                 ),
               ),
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
+        const SizedBox(height: 10),
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: _surfaceCardColor,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: _surfaceBorderColor),
+          ),
           child: _buildControls(language, target),
         ),
-        if (_evaluation != null) _buildResult(language, _evaluation!),
-        SafeArea(
-          top: false,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 12, bottom: 4),
-            child: _buildActionButtons(language),
-          ),
-        ),
+        if (_evaluation != null) ...[
+          const SizedBox(height: 10),
+          _buildResult(language, _evaluation!),
+        ],
       ],
     );
   }
@@ -425,23 +552,35 @@ class _HandwritingPracticeScreenState
         ),
     ];
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          language.handwritingModeLabel,
-          style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
-        ),
-        const SizedBox(height: 8),
-        SegmentedButton<_HandwritingPracticeMode>(
-          segments: segments,
-          selected: {_practiceMode},
-          onSelectionChanged: (selection) {
-            if (selection.isEmpty) return;
-            _setPracticeMode(selection.first);
-          },
-        ),
-      ],
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: _surfaceCardColor,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _surfaceBorderColor),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            language.handwritingModeLabel,
+            style: const TextStyle(
+              fontSize: 12,
+              color: _surfaceMutedTextColor,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 8),
+          SegmentedButton<_HandwritingPracticeMode>(
+            segments: segments,
+            selected: {_practiceMode},
+            onSelectionChanged: (selection) {
+              if (selection.isEmpty) return;
+              _setPracticeMode(selection.first);
+            },
+          ),
+        ],
+      ),
     );
   }
 
@@ -530,55 +669,92 @@ class _HandwritingPracticeScreenState
 
   Widget _buildControls(AppLanguage language, _PracticeTarget target) {
     final drawnStrokes = _strokeCount;
+    final expectedStrokes = max(1, target.expectedStrokes);
+    final strokeFill = (drawnStrokes / expectedStrokes)
+        .clamp(0.0, 1.0)
+        .toDouble();
+    final strokeDelta = (drawnStrokes - expectedStrokes).abs();
+    final meterColor = strokeDelta == 0
+        ? const Color(0xFF15803D)
+        : strokeDelta <= 2
+        ? const Color(0xFFB45309)
+        : const Color(0xFFB91C1C);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          language.handwritingStrokeCountLabel(target.expectedStrokes),
-          style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                language.handwritingStrokeCountLabel(target.expectedStrokes),
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: _surfaceMutedTextColor,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: meterColor.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(999),
+                border: Border.all(color: meterColor.withValues(alpha: 0.35)),
+              ),
+              child: Text(
+                language.handwritingStrokesDrawnLabel(drawnStrokes),
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                  color: meterColor,
+                ),
+              ),
+            ),
+          ],
         ),
         if (target.isCompound)
           Padding(
-            padding: const EdgeInsets.only(top: 4),
+            padding: const EdgeInsets.only(top: 6),
             child: Text(
               language.handwritingCompoundHintLabel,
-              style: const TextStyle(fontSize: 12, color: Color(0xFF6B7390)),
+              style: const TextStyle(
+                fontSize: 12,
+                color: _surfaceMutedTextColor,
+              ),
             ),
           ),
-        const SizedBox(height: 4),
-        Text(
-          language.handwritingStrokesDrawnLabel(drawnStrokes),
-          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+        const SizedBox(height: 10),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(999),
+          child: LinearProgressIndicator(
+            value: strokeFill,
+            minHeight: 6,
+            backgroundColor: const Color(0xFFE5EAF4),
+            color: meterColor,
+          ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 10),
         Wrap(
           spacing: 8,
           runSpacing: 8,
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Switch(
-                  value: _showGuide,
-                  onChanged: (value) {
-                    setState(() {
-                      _showGuide = value;
-                    });
-                  },
-                ),
-                Text(
-                  language.handwritingShowGuideLabel,
-                  style: const TextStyle(fontSize: 12),
-                ),
-              ],
+            FilterChip(
+              label: Text(language.handwritingShowGuideLabel),
+              selected: _showGuide,
+              onSelected: (value) {
+                setState(() {
+                  _showGuide = value;
+                });
+              },
             ),
-            TextButton.icon(
+            OutlinedButton.icon(
               onPressed: _strokes.isEmpty ? null : _undoStroke,
               icon: const Icon(Icons.undo_rounded),
               label: Text(language.handwritingUndoLabel),
             ),
-            TextButton.icon(
+            OutlinedButton.icon(
               onPressed: _strokes.isEmpty ? null : _clearCanvas,
               icon: const Icon(Icons.delete_outline_rounded),
               label: Text(language.handwritingClearLabel),
@@ -593,23 +769,21 @@ class _HandwritingPracticeScreenState
     AppLanguage language,
     HandwritingEvaluationResult evaluation,
   ) {
-    final color = evaluation.isCorrect ? Colors.green : Colors.red;
+    final color = evaluation.isCorrect
+        ? const Color(0xFF15803D)
+        : const Color(0xFFB91C1C);
+    final surfaceColor = evaluation.isCorrect
+        ? const Color(0xFFF0FDF4)
+        : const Color(0xFFFEF2F2);
     final characterResults = evaluation.characterResults;
-    final wrongCharacters = characterResults
-        .where((result) => !result.isCorrect)
-        .toList(growable: false);
-    final retryableIds = wrongCharacters
-        .map((result) => result.kanjiId)
-        .whereType<int>()
-        .toSet()
-        .toList(growable: false);
+    final retryableIds = _retryableKanjiIdsFromEvaluation(evaluation);
 
     return Container(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.fromLTRB(12, 12, 12, 10),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withValues(alpha: 0.5)),
+        color: surfaceColor,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: color.withValues(alpha: 0.35)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -626,17 +800,33 @@ class _HandwritingPracticeScreenState
                   evaluation.isCorrect
                       ? language.correctLabel
                       : language.incorrectLabel,
-                  style: TextStyle(color: color, fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                    color: color,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14,
+                  ),
                 ),
               ),
-              Text(
-                '${evaluation.drawnStrokes}/${evaluation.expectedStrokes}',
-                style: TextStyle(color: color, fontWeight: FontWeight.bold),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: color.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(999),
+                  border: Border.all(color: color.withValues(alpha: 0.35)),
+                ),
+                child: Text(
+                  '${evaluation.drawnStrokes}/${evaluation.expectedStrokes}',
+                  style: TextStyle(
+                    color: color,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 12,
+                  ),
+                ),
               ),
             ],
           ),
           if (characterResults.isNotEmpty) ...[
-            const SizedBox(height: 8),
+            const SizedBox(height: 10),
             Wrap(
               spacing: 6,
               runSpacing: 6,
@@ -656,7 +846,7 @@ class _HandwritingPracticeScreenState
             ),
           ],
           if (!_showScoringDetails) ...[
-            const SizedBox(height: 6),
+            const SizedBox(height: 8),
             TextButton(
               onPressed: () {
                 setState(() {
@@ -666,7 +856,7 @@ class _HandwritingPracticeScreenState
               child: Text(language.handwritingShowScoringDetailsLabel),
             ),
           ] else ...[
-            const SizedBox(height: 6),
+            const SizedBox(height: 8),
             Text(
               [
                 'S ${evaluation.score.toStringAsFixed(2)}',
@@ -680,7 +870,7 @@ class _HandwritingPracticeScreenState
               style: const TextStyle(
                 fontSize: 11,
                 fontFeatures: [FontFeature.tabularFigures()],
-                color: Color(0xFF4D587A),
+                color: _surfaceMutedTextColor,
               ),
             ),
             Align(
@@ -698,12 +888,15 @@ class _HandwritingPracticeScreenState
           if (!evaluation.isCorrect &&
               characterResults.isNotEmpty &&
               retryableIds.isNotEmpty) ...[
-            const SizedBox(height: 4),
+            const SizedBox(height: 6),
             Text(
               language.handwritingRetryWrongCharactersHintLabel,
-              style: const TextStyle(fontSize: 12, color: Color(0xFF4D587A)),
+              style: const TextStyle(
+                fontSize: 12,
+                color: _surfaceMutedTextColor,
+              ),
             ),
-            const SizedBox(height: 4),
+            const SizedBox(height: 6),
             FilledButton.tonalIcon(
               onPressed: () {
                 _practiceWrongCharacters(retryableIds);
@@ -727,6 +920,8 @@ class _HandwritingPracticeScreenState
           icon: const Icon(Icons.check_circle_outline),
           label: Text(language.handwritingCheckLabel),
           style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF1D4ED8),
+            foregroundColor: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(14),
             ),
@@ -734,6 +929,9 @@ class _HandwritingPracticeScreenState
         ),
       );
     }
+
+    final retryableIds = _retryableKanjiIdsFromEvaluation(_evaluation);
+    final hasWrongQueue = retryableIds.isNotEmpty;
 
     return Row(
       children: [
@@ -743,6 +941,8 @@ class _HandwritingPracticeScreenState
             icon: const Icon(Icons.refresh),
             label: Text(language.retryLabel),
             style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF334155),
+              side: const BorderSide(color: Color(0xFFCBD5E1)),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(14),
               ),
@@ -753,9 +953,21 @@ class _HandwritingPracticeScreenState
         Expanded(
           child: ElevatedButton.icon(
             onPressed: _next,
-            icon: const Icon(Icons.arrow_forward_rounded),
-            label: Text(language.nextLabel),
+            icon: Icon(
+              hasWrongQueue
+                  ? Icons.priority_high_rounded
+                  : Icons.arrow_forward_rounded,
+            ),
+            label: Text(
+              hasWrongQueue
+                  ? language.handwritingPracticeWrongFirstLabel
+                  : language.nextLabel,
+            ),
             style: ElevatedButton.styleFrom(
+              backgroundColor: hasWrongQueue
+                  ? const Color(0xFFB91C1C)
+                  : const Color(0xFF1D4ED8),
+              foregroundColor: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(14),
               ),
@@ -764,6 +976,20 @@ class _HandwritingPracticeScreenState
         ),
       ],
     );
+  }
+
+  List<int> _retryableKanjiIdsFromEvaluation(
+    HandwritingEvaluationResult? evaluation,
+  ) {
+    if (evaluation == null) {
+      return const [];
+    }
+    return evaluation.characterResults
+        .where((result) => !result.isCorrect)
+        .map((result) => result.kanjiId)
+        .whereType<int>()
+        .toSet()
+        .toList(growable: false);
   }
 
   void _handleStrokeStart(Offset point) {
@@ -869,6 +1095,11 @@ class _HandwritingPracticeScreenState
 
   Future<void> _next() async {
     await _commitReviewIfNeeded();
+    final retryableIds = _retryableKanjiIdsFromEvaluation(_evaluation);
+    if (retryableIds.isNotEmpty) {
+      await _practiceWrongCharacters(retryableIds);
+      return;
+    }
     if (_currentIndex >= _targets.length - 1) {
       await _showSummary();
       return;
@@ -930,6 +1161,47 @@ class _HandwritingPracticeScreenState
         retryTargets,
         preferredKanjiId: firstKanjiId,
       );
+      _checked = false;
+      _evaluation = null;
+      _strokes = [];
+      _hasCommitted = false;
+      _showScoringDetails = false;
+      _guideCharacterIndex = 0;
+      _highlightedGuideIndexes.clear();
+    });
+    await _loadTemplatesForCurrentTarget();
+  }
+
+  Future<void> _practiceWeakItems({int limit = 10}) async {
+    final weakTargets = _allTargets
+        .where(
+          (target) =>
+              !target.isCompound && target.learningState == _LearningState.weak,
+        )
+        .toList(growable: false);
+    if (weakTargets.isEmpty) {
+      if (!mounted) return;
+      final language = ref.read(appLanguageProvider);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(language.handwritingNoWeakItemsLabel)),
+      );
+      return;
+    }
+
+    final uniqueByKanji = <int, _PracticeTarget>{};
+    for (final target in weakTargets) {
+      uniqueByKanji.putIfAbsent(target.primaryKanjiId, () => target);
+      if (uniqueByKanji.length >= limit) break;
+    }
+    final selectedTargets = uniqueByKanji.values.toList(growable: false);
+    if (selectedTargets.isEmpty) {
+      return;
+    }
+
+    setState(() {
+      _practiceMode = _HandwritingPracticeMode.single;
+      _targets = selectedTargets;
+      _currentIndex = 0;
       _checked = false;
       _evaluation = null;
       _strokes = [];
@@ -1606,13 +1878,14 @@ class _PracticeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final item = target.anchorItem;
+    final kanjiFontSize = target.text.runes.length > 2 ? 34.0 : 42.0;
 
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFE8ECF5)),
+        border: Border.all(color: _surfaceBorderColor),
         boxShadow: const [
           BoxShadow(
             color: Color(0x0A2E3A59),
@@ -1625,7 +1898,12 @@ class _PracticeHeader extends StatelessWidget {
         children: [
           Text(
             target.text,
-            style: const TextStyle(fontSize: 42, fontWeight: FontWeight.w700),
+            style: TextStyle(
+              fontSize: kanjiFontSize,
+              fontWeight: FontWeight.w800,
+              color: const Color(0xFF334155),
+              height: 1.05,
+            ),
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -1633,10 +1911,21 @@ class _PracticeHeader extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
+                  language.meaningLabel,
+                  style: const TextStyle(
+                    fontSize: 11,
+                    letterSpacing: 0.2,
+                    color: _surfaceMutedTextColor,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
                   meaning,
                   style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xFF1F2937),
                   ),
                 ),
                 if (target.reading.trim().isNotEmpty) ...[
@@ -1645,14 +1934,14 @@ class _PracticeHeader extends StatelessWidget {
                     target.reading,
                     style: const TextStyle(
                       fontSize: 12,
-                      color: Color(0xFF6B7390),
+                      color: _surfaceMutedTextColor,
                     ),
                   ),
                 ],
                 if (!target.isCompound &&
                     ((item.kunyomi ?? '').isNotEmpty ||
                         (item.onyomi ?? '').isNotEmpty)) ...[
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 6),
                   Text(
                     [
                       if ((item.kunyomi ?? '').isNotEmpty) item.kunyomi!,
@@ -1660,16 +1949,30 @@ class _PracticeHeader extends StatelessWidget {
                     ].join(' - '),
                     style: const TextStyle(
                       fontSize: 12,
-                      color: Color(0xFF6B7390),
+                      color: _surfaceMutedTextColor,
                     ),
                   ),
                 ],
                 const SizedBox(height: 6),
-                Text(
-                  language.handwritingStrokeCountLabel(target.expectedStrokes),
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Color(0xFF6B7390),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFEFF6FF),
+                    borderRadius: BorderRadius.circular(999),
+                    border: Border.all(color: const Color(0xFFBFDBFE)),
+                  ),
+                  child: Text(
+                    language.handwritingStrokeCountLabel(
+                      target.expectedStrokes,
+                    ),
+                    style: const TextStyle(
+                      fontSize: 11,
+                      color: Color(0xFF1E3A8A),
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ],
@@ -1714,11 +2017,18 @@ class _StrokeGuidePanel extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.only(bottom: 8),
+      margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
-        color: const Color(0xFFF7F9FF),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFDDE5FF)),
+        color: _surfaceCardColor,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _surfaceBorderColor),
+        boxShadow: const [
+          BoxShadow(
+            color: Color(0x082E3A59),
+            blurRadius: 10,
+            offset: Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         children: [
@@ -1726,7 +2036,7 @@ class _StrokeGuidePanel extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             onTap: () => onExpandedChanged(!isExpanded),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
               child: Row(
                 children: [
                   Expanded(
@@ -1735,14 +2045,17 @@ class _StrokeGuidePanel extends StatelessWidget {
                       children: [
                         Text(
                           language.handwritingStrokeGuideTitle,
-                          style: const TextStyle(fontWeight: FontWeight.w700),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFF27314B),
+                          ),
                         ),
                         if (target.isCompound)
                           Text(
                             language.handwritingWriteOrderByCharacterLabel,
                             style: const TextStyle(
                               fontSize: 12,
-                              color: Color(0xFF6B7390),
+                              color: _surfaceMutedTextColor,
                             ),
                           ),
                       ],
@@ -1765,50 +2078,104 @@ class _StrokeGuidePanel extends StatelessWidget {
                 children: [
                   if (target.characterGuides.length > 1)
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 8),
-                      child: Wrap(
-                        spacing: 6,
-                        runSpacing: 6,
+                      padding: const EdgeInsets.only(bottom: 6),
+                      child: Row(
                         children: [
-                          for (var i = 0; i < target.characterGuides.length; i++)
-                            ChoiceChip(
-                              label: Text(
-                                '${i + 1}. ${target.characterGuides[i].character}',
-                              ),
-                              selected: i == safeSelectedIndex,
-                              onSelected: onGuideIndexChanged == null
-                                  ? null
-                                  : (_) => onGuideIndexChanged!(i),
-                              avatar: highlightedGuideIndexes.contains(i)
-                                  ? const Icon(
-                                      Icons.priority_high_rounded,
-                                      size: 16,
-                                      color: Color(0xFFB91C1C),
+                          IconButton.outlined(
+                            onPressed:
+                                onGuideIndexChanged == null ||
+                                    safeSelectedIndex <= 0
+                                ? null
+                                : () => onGuideIndexChanged!(
+                                    safeSelectedIndex - 1,
+                                  ),
+                            icon: const Icon(Icons.chevron_left_rounded),
+                            tooltip: language.handwritingPrevCharacterLabel,
+                          ),
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Text(
+                                  language
+                                      .handwritingGuideCharacterCounterLabel(
+                                        safeSelectedIndex + 1,
+                                        target.characterGuides.length,
+                                      ),
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    color: Color(0xFF4D587A),
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                const SizedBox(height: 6),
+                                Wrap(
+                                  spacing: 6,
+                                  runSpacing: 6,
+                                  alignment: WrapAlignment.center,
+                                  children: [
+                                    for (
+                                      var i = 0;
+                                      i < target.characterGuides.length;
+                                      i++
                                     )
-                                  : null,
+                                      ChoiceChip(
+                                        label: Text(
+                                          '${i + 1}. ${target.characterGuides[i].character}',
+                                        ),
+                                        selected: i == safeSelectedIndex,
+                                        onSelected: onGuideIndexChanged == null
+                                            ? null
+                                            : (_) => onGuideIndexChanged!(i),
+                                        avatar:
+                                            highlightedGuideIndexes.contains(i)
+                                            ? const Icon(
+                                                Icons.priority_high_rounded,
+                                                size: 16,
+                                                color: Color(0xFFB91C1C),
+                                              )
+                                            : null,
+                                      ),
+                                  ],
+                                ),
+                              ],
                             ),
+                          ),
+                          IconButton.outlined(
+                            onPressed:
+                                onGuideIndexChanged == null ||
+                                    safeSelectedIndex >=
+                                        target.characterGuides.length - 1
+                                ? null
+                                : () => onGuideIndexChanged!(
+                                    safeSelectedIndex + 1,
+                                  ),
+                            icon: const Icon(Icons.chevron_right_rounded),
+                            tooltip: language.handwritingNextCharacterLabel,
+                          ),
                         ],
                       ),
                     ),
-                  for (var i = 0; i < target.characterGuides.length; i++)
+                  if (target.characterGuides.isNotEmpty)
                     _CharacterStrokeGuide(
-                      index: i,
-                      guide: target.characterGuides[i],
+                      index: safeSelectedIndex,
+                      guide: target.characterGuides[safeSelectedIndex],
                       template:
                           templatesByCharacter[target
-                              .characterGuides[i]
+                              .characterGuides[safeSelectedIndex]
                               .character],
                       vectorTemplate:
                           vectorsByCharacter[target
-                              .characterGuides[i]
+                              .characterGuides[safeSelectedIndex]
                               .character],
                       showCharacterOrder: target.isCompound,
                       language: language,
-                      isSelected: i == safeSelectedIndex,
-                      isHighlighted: highlightedGuideIndexes.contains(i),
+                      isSelected: true,
+                      isHighlighted: highlightedGuideIndexes.contains(
+                        safeSelectedIndex,
+                      ),
                       onTap: onGuideIndexChanged == null
                           ? null
-                          : () => onGuideIndexChanged!(i),
+                          : () => onGuideIndexChanged!(safeSelectedIndex),
                     ),
                 ],
               ),
@@ -1850,6 +2217,10 @@ class _CharacterStrokeGuide extends StatelessWidget {
     final backgroundColor = isSelected
         ? const Color(0xFFF1F5FF)
         : (isHighlighted ? const Color(0xFFFFF4F4) : Colors.white);
+    final title = showCharacterOrder
+        ? '${index + 1}. ${guide.character}'
+        : guide.character;
+    final subtitle = language.handwritingStrokeShortLabel(guide.strokeCount);
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
@@ -1865,32 +2236,105 @@ class _CharacterStrokeGuide extends StatelessWidget {
               color: backgroundColor,
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: borderColor),
+              boxShadow: isSelected
+                  ? const [
+                      BoxShadow(
+                        color: Color(0x121D4ED8),
+                        blurRadius: 8,
+                        offset: Offset(0, 3),
+                      ),
+                    ]
+                  : const [],
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  '${showCharacterOrder ? '${index + 1}. ' : ''}'
-                  '${guide.character} - ${language.handwritingStrokeShortLabel(guide.strokeCount)}',
-                  style: const TextStyle(fontWeight: FontWeight.w600),
+                Row(
+                  children: [
+                    Expanded(
+                      child: RichText(
+                        text: TextSpan(
+                          style: const TextStyle(
+                            color: Color(0xFF1F2937),
+                            fontWeight: FontWeight.w700,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: title,
+                              style: const TextStyle(fontSize: 18, height: 1.1),
+                            ),
+                            TextSpan(
+                              text: '  -  $subtitle',
+                              style: const TextStyle(
+                                fontSize: 12,
+                                color: _surfaceMutedTextColor,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 6),
-                if (vectorTemplate != null && vectorTemplate!.strokes.isNotEmpty)
-                  KanjiStrokeAnimator(
-                    language: language,
-                    vectorTemplate: vectorTemplate,
+                const SizedBox(height: 8),
+                if (vectorTemplate != null &&
+                    vectorTemplate!.strokes.isNotEmpty)
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: const Color(0xFFDDE4F5)),
+                    ),
+                    child: KanjiStrokeAnimator(
+                      language: language,
+                      vectorTemplate: vectorTemplate,
+                    ),
                   )
                 else if (template != null && template!.strokes.isNotEmpty)
-                  KanjiStrokeAnimator(
-                    language: language,
-                    linearTemplate: template,
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: const Color(0xFFDDE4F5)),
+                    ),
+                    child: KanjiStrokeAnimator(
+                      language: language,
+                      linearTemplate: template,
+                    ),
                   )
                 else
-                  Text(
-                    language.handwritingNoStrokeTemplateLabel,
-                    style: const TextStyle(
-                      fontSize: 12,
-                      color: Color(0xFF6B7390),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 8,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF8FAFC),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: const Color(0xFFE2E8F0)),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.info_outline_rounded,
+                          size: 16,
+                          color: _surfaceMutedTextColor,
+                        ),
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: Text(
+                            language.handwritingNoStrokeTemplateLabel,
+                            style: const TextStyle(
+                              fontSize: 12,
+                              color: _surfaceMutedTextColor,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
               ],
@@ -1976,25 +2420,56 @@ class _CharacterResultChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isWrong = !result.isCorrect;
-    final borderColor = isWrong
+    final accentColor = isWrong
         ? const Color(0xFFB91C1C)
         : const Color(0xFF15803D);
-    return ActionChip(
-      onPressed: onTap,
-      avatar: Icon(
-        isWrong ? Icons.close_rounded : Icons.check_rounded,
-        size: 16,
-        color: borderColor,
-      ),
-      side: BorderSide(color: borderColor.withValues(alpha: selected ? 0.9 : 0.5)),
-      backgroundColor: selected
-          ? borderColor.withValues(alpha: 0.18)
-          : borderColor.withValues(alpha: 0.08),
-      label: Text(
-        '${index + 1}.${result.character} ${result.drawnStrokes}/${result.expectedStrokes}',
-        style: TextStyle(
-          fontWeight: FontWeight.w600,
-          color: borderColor,
+    final backgroundColor = selected
+        ? accentColor.withValues(alpha: 0.18)
+        : accentColor.withValues(alpha: 0.10);
+
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(999),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: BorderRadius.circular(999),
+            border: Border.all(
+              color: accentColor.withValues(alpha: selected ? 0.85 : 0.40),
+              width: selected ? 1.4 : 1,
+            ),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                isWrong ? Icons.close_rounded : Icons.check_rounded,
+                size: 16,
+                color: accentColor,
+              ),
+              const SizedBox(width: 6),
+              Text(
+                '${index + 1}.${result.character}',
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: accentColor,
+                ),
+              ),
+              const SizedBox(width: 6),
+              Text(
+                '${result.drawnStrokes}/${result.expectedStrokes}',
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w600,
+                  color: accentColor.withValues(alpha: 0.92),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

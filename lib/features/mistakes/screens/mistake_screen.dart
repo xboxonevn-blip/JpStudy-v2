@@ -39,7 +39,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
             return const Center(child: CircularProgressIndicator());
           }
           if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(child: Text(language.loadErrorLabel));
           }
 
           final allMistakes = snapshot.data ?? [];
@@ -77,7 +77,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
                 return const Center(child: CircularProgressIndicator());
               }
               if (detailSnapshot.hasError) {
-                return Center(child: Text('Error: ${detailSnapshot.error}'));
+                return Center(child: Text(language.loadErrorLabel));
               }
 
               final details = detailSnapshot.data ?? const _MistakeDetails();
@@ -236,7 +236,7 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
             _buildPracticeButton(
               icon: Icons.layers_clear_rounded,
               label:
-                  '${language.practiceKanjiMistakesLabel(ids.length)} • '
+                  '${language.practiceKanjiMistakesLabel(ids.length)} | '
                   '${language.lessonLabel} $lessonId',
               onPressed: () =>
                   _startKanjiPractice(context, ids, details, language),
@@ -505,10 +505,15 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     }
 
     final grammar = details.grammar[mistake.itemId];
+    final grammarPreferred = switch (language) {
+      AppLanguage.vi => grammar?.meaningVi,
+      AppLanguage.en => grammar?.meaningEn,
+      AppLanguage.ja => grammar?.meaning,
+    };
     final meaning = _resolveMeaning(
       language,
       grammar?.meaning ?? '',
-      language == AppLanguage.vi ? grammar?.meaningVi : grammar?.meaningEn,
+      grammarPreferred,
     );
     final title = grammar == null
         ? language.mistakeItemIdLabel(mistake.itemId)

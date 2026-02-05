@@ -35,7 +35,7 @@ class KanjiListWidget extends ConsumerWidget {
           itemBuilder: (context, index) {
             final item = items[index];
             final primaryMeaning = _primaryMeaning(item, language);
-            final subtitle = _subtitle(item);
+            final subtitle = _subtitle(item, language);
             final compounds = _compoundGuides(
               item,
               characterIndex: characterIndex,
@@ -276,8 +276,11 @@ class KanjiListWidget extends ConsumerWidget {
     return item.meaning;
   }
 
-  String _subtitle(KanjiItem item) {
-    return 'On: ${item.onyomi ?? '-'} | Kun: ${item.kunyomi ?? '-'}';
+  String _subtitle(KanjiItem item, AppLanguage language) {
+    final onyomi = (item.onyomi ?? '').trim();
+    final kunyomi = (item.kunyomi ?? '').trim();
+    return '${language.kanjiOnyomiLabel}: ${onyomi.isNotEmpty ? onyomi : '-'}'
+        ' | ${language.kanjiKunyomiLabel}: ${kunyomi.isNotEmpty ? kunyomi : '-'}';
   }
 
   String _exampleMeaning(KanjiExample example, AppLanguage language) {

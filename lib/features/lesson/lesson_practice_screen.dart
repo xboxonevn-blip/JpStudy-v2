@@ -58,15 +58,17 @@ class LessonPracticeScreen extends ConsumerWidget {
             const Icon(Icons.handyman, size: 64, color: Colors.orange),
             const SizedBox(height: 16),
             Text(
-              '${_modeLabel(language, mode)} temporarily disabled',
+              language.lessonModeTemporarilyDisabledLabel(
+                _modeLabel(language, mode),
+              ),
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 8),
-            const Text('Performing strict cleanup for Windows stability.'),
+            Text(language.lessonPracticeMaintenanceLabel),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => context.pop(),
-              child: const Text('Back to Lesson'),
+              child: Text(language.backToLessonLabel),
             ),
           ],
         ),

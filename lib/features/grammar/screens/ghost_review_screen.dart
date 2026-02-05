@@ -101,7 +101,8 @@ class GhostReviewScreen extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, stack) => Center(child: Text('Error: $err')),
+        error: (err, stack) =>
+            Center(child: Text('${language.loadErrorLabel}: $err')),
       ),
       floatingActionButton: ghostsAsync.valueOrNull?.isNotEmpty == true
           ? Container(
@@ -151,14 +152,21 @@ class _GhostClayCardState extends State<_GhostClayCard> {
   Widget build(BuildContext context) {
     final point = widget.data.point;
     final language = widget.language;
-    final isVietnamese = language == AppLanguage.vi;
-    final title = isVietnamese
-        ? point.meaningVi
-        : point.titleEn ?? point.grammarPoint;
-    final explanation = isVietnamese
-        ? point.explanationVi
-        : point.explanationEn;
-    final connection = isVietnamese ? point.connection : point.connectionEn;
+    final title = switch (language) {
+      AppLanguage.en => point.titleEn ?? point.grammarPoint,
+      AppLanguage.vi => point.meaningVi ?? point.meaning,
+      AppLanguage.ja => point.meaning,
+    };
+    final explanation = switch (language) {
+      AppLanguage.en => point.explanationEn ?? point.explanation,
+      AppLanguage.vi => point.explanationVi ?? point.explanation,
+      AppLanguage.ja => point.explanation,
+    };
+    final connection = switch (language) {
+      AppLanguage.en => point.connectionEn ?? point.connection,
+      AppLanguage.vi => point.connection,
+      AppLanguage.ja => point.connection,
+    };
 
     return ClayCard(
       color: Colors.white,
@@ -195,7 +203,7 @@ class _GhostClayCardState extends State<_GhostClayCard> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      title ?? '',
+                      title,
                       style: const TextStyle(
                         fontSize: 14,
                         color: AppThemeV2.textSub,
@@ -220,7 +228,7 @@ class _GhostClayCardState extends State<_GhostClayCard> {
             ),
             _buildLabel(language.grammarConnectionLabel),
             Text(
-              connection ?? '',
+              connection,
               style: const TextStyle(
                 fontFamily: 'Monospace',
                 color: AppThemeV2.textMain,
@@ -229,7 +237,7 @@ class _GhostClayCardState extends State<_GhostClayCard> {
             const SizedBox(height: 16),
             _buildLabel(language.grammarExplanationLabel),
             Text(
-              explanation ?? '',
+              explanation,
               style: const TextStyle(color: AppThemeV2.textMain, height: 1.4),
             ),
             if (widget.mistake != null) ...[
@@ -260,9 +268,11 @@ class _GhostClayCardState extends State<_GhostClayCard> {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        isVietnamese
-                            ? ex.translationVi ?? ex.translation
-                            : ex.translationEn ?? ex.translation,
+                        switch (language) {
+                          AppLanguage.en => ex.translationEn ?? ex.translation,
+                          AppLanguage.vi => ex.translationVi ?? ex.translation,
+                          AppLanguage.ja => ex.translation,
+                        },
                         style: TextStyle(
                           fontSize: 13,
                           color: AppThemeV2.textSub,

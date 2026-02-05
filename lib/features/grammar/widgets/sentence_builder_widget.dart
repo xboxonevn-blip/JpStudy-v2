@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:jpstudy/core/app_language.dart';
 import '../../common/widgets/clay_button.dart';
 import '../../common/widgets/clay_card.dart';
 import '../../../theme/app_theme_v2.dart';
 
 class SentenceBuilderWidget extends StatefulWidget {
+  final AppLanguage language;
   final String prompt;
   final String correctSentence;
   final List<String> shuffledWords;
@@ -13,6 +15,7 @@ class SentenceBuilderWidget extends StatefulWidget {
 
   const SentenceBuilderWidget({
     super.key,
+    required this.language,
     required this.prompt,
     required this.correctSentence,
     required this.shuffledWords,
@@ -102,7 +105,12 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
               child: Column(
                 children: [
                   Text(
-                    'Arrange the sentence:',
+                    _tr(
+                      widget.language,
+                      en: 'Arrange the sentence:',
+                      vi: 'Sắp xếp câu:',
+                      ja: '文を並び替えてください:',
+                    ),
                     style: TextStyle(
                       color: AppThemeV2.textSub,
                       fontSize: 12,
@@ -164,7 +172,12 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
               children: [
                 Expanded(
                   child: ClayButton(
-                    label: 'Reset',
+                    label: _tr(
+                      widget.language,
+                      en: 'Reset',
+                      vi: 'Làm lại',
+                      ja: 'リセット',
+                    ),
                     icon: Icons.refresh,
                     style: ClayButtonStyle.neutral,
                     onPressed: _reset,
@@ -174,7 +187,12 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                 const SizedBox(width: 16),
                 Expanded(
                   child: ClayButton(
-                    label: 'Check',
+                    label: _tr(
+                      widget.language,
+                      en: 'Check',
+                      vi: 'Kiểm tra',
+                      ja: '確認',
+                    ),
                     icon: Icons.check_circle,
                     style: _isLastCorrect == true
                         ? ClayButtonStyle.secondary
@@ -207,7 +225,19 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      _isLastCorrect! ? 'CORRECT!' : 'TRY AGAIN',
+                      _isLastCorrect!
+                          ? _tr(
+                              widget.language,
+                              en: 'CORRECT!',
+                              vi: 'ĐÚNG!',
+                              ja: '正解！',
+                            )
+                          : _tr(
+                              widget.language,
+                              en: 'TRY AGAIN',
+                              vi: 'THỬ LẠI',
+                              ja: 'もう一度',
+                            ),
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.w900,
@@ -222,6 +252,22 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
           ),
       ],
     );
+  }
+
+  String _tr(
+    AppLanguage language, {
+    required String en,
+    required String vi,
+    required String ja,
+  }) {
+    switch (language) {
+      case AppLanguage.en:
+        return en;
+      case AppLanguage.vi:
+        return vi;
+      case AppLanguage.ja:
+        return ja;
+    }
   }
 }
 

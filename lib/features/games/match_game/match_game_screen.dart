@@ -45,6 +45,21 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
   final Map<int, VocabItem> _currentItemById = {};
   final Map<int, int?> _resolvedTermIdByContentId = {};
 
+  String _meaningForLanguage(
+    AppLanguage language, {
+    required String meaningVi,
+    required String? meaningEn,
+  }) {
+    final english = meaningEn?.trim() ?? '';
+    switch (language) {
+      case AppLanguage.vi:
+        return meaningVi;
+      case AppLanguage.en:
+      case AppLanguage.ja:
+        return english.isNotEmpty ? english : meaningVi;
+    }
+  }
+
   @override
   void dispose() {
     _timer?.cancel();
@@ -370,10 +385,11 @@ class _MatchGameScreenState extends ConsumerState<MatchGameScreen> {
 
         // Map to VocabItem
         final items = dataItems.map((e) {
-          final meaningEn = e.meaningEn?.trim() ?? '';
-          final meaning = language == AppLanguage.vi
-              ? e.meaning
-              : (meaningEn.isNotEmpty ? meaningEn : e.meaning);
+          final meaning = _meaningForLanguage(
+            language,
+            meaningVi: e.meaning,
+            meaningEn: e.meaningEn,
+          );
           return VocabItem(
             id: e.id,
             term: e.term,

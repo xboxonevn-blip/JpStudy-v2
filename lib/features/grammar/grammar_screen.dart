@@ -34,7 +34,14 @@ class GrammarScreen extends ConsumerWidget {
                 children: [
                   const Icon(Icons.auto_stories, size: 64, color: Colors.grey),
                   const SizedBox(height: 16),
-                  Text('No grammar points for $levelStr yet.'),
+                  Text(
+                    _tr(
+                      language,
+                      en: 'No grammar points for $levelStr yet.',
+                      vi: 'Chưa có điểm ngữ pháp cho $levelStr.',
+                      ja: '$levelStr の文法ポイントはまだありません。',
+                    ),
+                  ),
                 ],
               ),
             );
@@ -168,7 +175,11 @@ class GrammarScreen extends ConsumerWidget {
                           fontSize: 18,
                         ),
                       ),
-                      subtitle: Text(point.meaning),
+                      subtitle: Text(switch (language) {
+                        AppLanguage.en => point.meaningEn ?? point.meaning,
+                        AppLanguage.vi => point.meaningVi ?? point.meaning,
+                        AppLanguage.ja => point.meaning,
+                      }),
                       trailing: point.isLearned
                           ? const Icon(Icons.check_circle, color: Colors.green)
                           : Icon(Icons.chevron_right, color: Colors.grey[400]),
@@ -181,7 +192,8 @@ class GrammarScreen extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, stack) => Center(child: Text('Error: $err')),
+        error: (err, stack) =>
+            Center(child: Text('${language.loadErrorLabel}: $err')),
       ),
       floatingActionButton: ref
           .watch(grammarDueCountProvider)
@@ -190,7 +202,7 @@ class GrammarScreen extends ConsumerWidget {
                 ? FloatingActionButton.extended(
                     onPressed: () => context.push('/grammar-practice'),
                     icon: const Icon(Icons.psychology),
-                    label: Text('Review ($count)'),
+                    label: Text(language.reviewCountLabel(count)),
                     backgroundColor: Colors.orange[700],
                     foregroundColor: Colors.white,
                   )
@@ -199,5 +211,21 @@ class GrammarScreen extends ConsumerWidget {
             error: (_, _) => null,
           ),
     );
+  }
+
+  String _tr(
+    AppLanguage language, {
+    required String en,
+    required String vi,
+    required String ja,
+  }) {
+    switch (language) {
+      case AppLanguage.en:
+        return en;
+      case AppLanguage.vi:
+        return vi;
+      case AppLanguage.ja:
+        return ja;
+    }
   }
 }

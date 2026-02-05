@@ -130,7 +130,7 @@ class GrammarQuestionGenerator {
               question: _tr(
                 language,
                 en: 'Arrange the sentence.',
-                vi: 'Sắp xếp câu.',
+                vi: 'Ghép thành câu hoàn chỉnh.',
                 ja: '文を並び替えてください。',
               ),
               correctAnswer: example.japanese,
@@ -142,7 +142,7 @@ class GrammarQuestionGenerator {
               feedback: _tr(
                 language,
                 en: 'Target pattern: ${point.grammarPoint}. ${pointExplanation.trim()}',
-                vi: 'Mẫu cần dùng: ${point.grammarPoint}. ${pointExplanation.trim()}',
+                vi: 'Mẫu ngữ pháp: ${point.grammarPoint}. ${pointExplanation.trim()}',
                 ja: '使うべき文型: ${point.grammarPoint}。${pointExplanation.trim()}',
               ),
             ),
@@ -254,7 +254,7 @@ class GrammarQuestionGenerator {
     final questionText = _tr(
       language,
       en: 'Which pattern matches: "$pointMeaning"?',
-      vi: 'Mẫu ngữ pháp nào phù hợp với ý nghĩa: "$pointMeaning"?',
+      vi: 'Mẫu nào có nghĩa là: "$pointMeaning"?',
       ja: '「$pointMeaning」に合う文型はどれですか？',
     );
 
@@ -271,7 +271,7 @@ class GrammarQuestionGenerator {
       feedback: _tr(
         language,
         en: 'Use ${point.grammarPoint} when you mean: $pointMeaning.',
-        vi: 'Dùng ${point.grammarPoint} khi bạn muốn diễn đạt: $pointMeaning.',
+        vi: 'Dùng ${point.grammarPoint} để diễn đạt: $pointMeaning.',
         ja: '$pointMeaning を表すときは ${point.grammarPoint} を使います。',
       ),
     );
@@ -299,7 +299,7 @@ class GrammarQuestionGenerator {
     final questionText = _tr(
       language,
       en: 'What is the best meaning of "${point.grammarPoint}"?',
-      vi: 'Ý nghĩa phù hợp nhất của "${point.grammarPoint}" là gì?',
+      vi: '"${point.grammarPoint}" có nghĩa là gì?',
       ja: '「${point.grammarPoint}」の意味として最も適切なのはどれですか？',
     );
 
@@ -336,7 +336,7 @@ class GrammarQuestionGenerator {
     final questionText = _tr(
       language,
       en: 'Contrast drill\nA: ${point.grammarPoint}  vs  B: ${contrast.grammarPoint}\nContext: $context\nWhich pattern fits better?',
-      vi: 'Bài tập phân biệt\nA: ${point.grammarPoint}  vs  B: ${contrast.grammarPoint}\nNgữ cảnh: $context\nChọn mẫu phù hợp hơn.',
+      vi: 'Phân biệt mẫu\nA: ${point.grammarPoint}  vs  B: ${contrast.grammarPoint}\nNgữ cảnh: $context\nChọn đáp án phù hợp.',
       ja: '対比ドリル\nA: ${point.grammarPoint}  vs  B: ${contrast.grammarPoint}\n文脈: $context\nより適切な文型はどれですか？',
     );
 

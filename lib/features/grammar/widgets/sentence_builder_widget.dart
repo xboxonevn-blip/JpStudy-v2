@@ -108,7 +108,7 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                     _tr(
                       widget.language,
                       en: 'Arrange the sentence:',
-                      vi: 'Sắp xếp câu:',
+                      vi: 'Ghép câu hoàn chỉnh:',
                       ja: '文を並び替えてください:',
                     ),
                     style: TextStyle(
@@ -175,7 +175,7 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                     label: _tr(
                       widget.language,
                       en: 'Reset',
-                      vi: 'Làm lại',
+                      vi: 'Xóa & làm lại',
                       ja: 'リセット',
                     ),
                     icon: Icons.refresh,
@@ -229,13 +229,13 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                           ? _tr(
                               widget.language,
                               en: 'CORRECT!',
-                              vi: 'ĐÚNG!',
+                              vi: 'CHÍNH XÁC!',
                               ja: '正解！',
                             )
                           : _tr(
                               widget.language,
                               en: 'TRY AGAIN',
-                              vi: 'THỬ LẠI',
+                              vi: 'THỬ LẠI NHÉ!',
                               ja: 'もう一度',
                             ),
                       style: TextStyle(

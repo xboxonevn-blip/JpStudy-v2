@@ -595,21 +595,21 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
   }) {
     if (_blueprint == GrammarPracticeBlueprint.quiz) {
       return isCorrect
-          ? _tr(language, en: 'Correct.', vi: 'Đúng.', ja: '正解です。')
+          ? _tr(language, en: 'Correct.', vi: 'Đúng rồi!', ja: '正解です。')
           : _tr(
               language,
               en: 'Incorrect. Correct: ${question.correctAnswer}',
-              vi: 'Sai. Đáp án đúng: ${question.correctAnswer}',
+              vi: 'Sai rồi! Đáp án: ${question.correctAnswer}',
               ja: '不正解です。正解: ${question.correctAnswer}',
             );
     }
 
     final base = isCorrect
-        ? _tr(language, en: 'Correct.', vi: 'Đúng.', ja: '正解です。')
+        ? _tr(language, en: 'Correct.', vi: 'Đúng rồi!', ja: '正解です。')
         : _tr(
             language,
             en: 'Not correct. Correct answer: ${question.correctAnswer}',
-            vi: 'Chưa đúng. Đáp án đúng: ${question.correctAnswer}',
+            vi: 'Chưa đúng. Đáp án: ${question.correctAnswer}',
             ja: '不正解です。正解: ${question.correctAnswer}',
           );
 
@@ -643,7 +643,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
                   _tr(
                     language,
                     en: 'Time is up.',
-                    vi: 'Hết giờ.',
+                    vi: 'Hết thời gian!',
                     ja: '時間切れです。',
                   ),
                   style: const TextStyle(
@@ -657,7 +657,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
                 _tr(
                   language,
                   en: 'Accuracy: $percent%  |  Wrong: $wrong',
-                  vi: 'Độ chính xác: $percent%  |  Sai: $wrong',
+                  vi: 'Chính xác: $percent%  |  Sai: $wrong',
                   ja: '正答率: $percent%  |  不正解: $wrong',
                 ),
               ),
@@ -667,7 +667,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
                   _tr(
                     language,
                     en: 'Weak grammar points: ${_wrongPointIds.length}',
-                    vi: 'Điểm ngữ pháp yếu: ${_wrongPointIds.length}',
+                    vi: 'Mẫu ngữ pháp còn yếu: ${_wrongPointIds.length}',
                     ja: '弱点の文法: ${_wrongPointIds.length}',
                   ),
                   style: const TextStyle(fontWeight: FontWeight.w600),
@@ -687,7 +687,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
                   _tr(
                     language,
                     en: 'Practice Weak Now',
-                    vi: 'Luyện phần yếu ngay',
+                    vi: 'Luyện lại ngay',
                     ja: '弱点を今すぐ練習',
                   ),
                 ),
@@ -726,7 +726,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
       return _tr(
         language,
         en: 'Weak Grammar Drill',
-        vi: 'Luyện ngữ pháp yếu',
+        vi: 'Luyện điểm yếu',
         ja: '弱点文法ドリル',
       );
     }
@@ -735,21 +735,21 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
         return _tr(
           language,
           en: 'Quick 10 Grammar',
-          vi: 'Ngữ pháp nhanh 10 câu',
+          vi: 'Nhanh 10 câu',
           ja: '文法クイック10',
         );
       case GrammarSessionType.mastery:
         return _tr(
           language,
           en: 'Lesson Mastery Grammar',
-          vi: 'Thành thạo ngữ pháp bài học',
+          vi: 'Thành thạo bài học',
           ja: 'レッスン文法マスタリー',
         );
       case GrammarSessionType.mock:
         return _tr(
           language,
           en: 'JLPT Mini Mock Grammar',
-          vi: 'Ngữ pháp JLPT Mini Mock',
+          vi: 'Thi thử JLPT',
           ja: 'JLPT文法ミニ模試',
         );
     }
@@ -830,19 +830,19 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
       GrammarPracticeBlueprint.learn => _tr(
         language,
         en: 'Learn mode: recognition first, hints enabled.',
-        vi: 'Chế độ học: ưu tiên nhận biết, có gợi ý.',
+        vi: 'Chế độ Học: Làm quen mẫu câu, có gợi ý.',
         ja: '学習モード: まず認識重視、ヒントあり。',
       ),
       GrammarPracticeBlueprint.drill => _tr(
         language,
         en: 'Drill mode: fix weak patterns with detailed feedback.',
-        vi: 'Chế độ luyện: sửa điểm yếu với phản hồi chi tiết.',
+        vi: 'Chế độ Luyện: Sửa lỗi, phản hồi kỹ.',
         ja: 'ドリルモード: 詳細なフィードバックで弱点を補強。',
       ),
       GrammarPracticeBlueprint.quiz => _tr(
         language,
         en: 'Quiz mode: exam-like flow, no long hints.',
-        vi: 'Chế độ kiểm tra: bám sát thi thật, ít gợi ý dài.',
+        vi: 'Chế độ Kiểm tra: Sát thi thật, ít gợi ý.',
         ja: 'クイズモード: 試験に近い流れ、長いヒントなし。',
       ),
     };
@@ -850,19 +850,19 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
       GrammarGoalProfile.balanced => _tr(
         language,
         en: 'Goal: Balanced JLPT',
-        vi: 'Mục tiêu: JLPT cân bằng',
+        vi: 'Mục tiêu: Toàn diện',
         ja: '目標: JLPTバランス重視',
       ),
       GrammarGoalProfile.accuracy => _tr(
         language,
         en: 'Goal: Accuracy first',
-        vi: 'Mục tiêu: Ưu tiên độ chính xác',
+        vi: 'Mục tiêu: Độ chính xác',
         ja: '目標: 正確さ優先',
       ),
       GrammarGoalProfile.speed => _tr(
         language,
         en: 'Goal: Speed first',
-        vi: 'Mục tiêu: Ưu tiên tốc độ',
+        vi: 'Mục tiêu: Tốc độ',
         ja: '目標: 速度優先',
       ),
     };
@@ -939,7 +939,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
                 label: _tr(
                   language,
                   en: 'Score $_score',
-                  vi: 'Điểm $_score',
+                  vi: 'Điểm: $_score',
                   ja: 'スコア $_score',
                 ),
                 fg: const Color(0xFF1E3A8A),
@@ -1031,7 +1031,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
             _tr(
               language,
               en: 'Remaining $mm:$ss',
-              vi: 'Còn lại $mm:$ss',
+              vi: 'Còn $mm:$ss',
               ja: '残り $mm:$ss',
             ),
             style: TextStyle(

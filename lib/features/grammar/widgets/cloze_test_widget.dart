@@ -167,7 +167,7 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
             label: _tr(
               widget.language,
               en: 'Check Answer',
-              vi: 'Kiểm tra đáp án',
+              vi: 'Xem đáp án',
               ja: '答えを確認',
             ),
             onPressed: _selectedOption == null || _isCorrect != null

@@ -305,7 +305,7 @@ class _GrammarLessonHeader extends StatelessWidget {
             _tr(
               language,
               en: 'Grammar Learning Hub',
-              vi: 'Trung tâm học ngữ pháp',
+              vi: 'Khu vực học Ngữ pháp',
               ja: '文法学習ハブ',
             ),
             style: const TextStyle(
@@ -323,7 +323,7 @@ class _GrammarLessonHeader extends StatelessWidget {
                 _tr(
                   language,
                   en: 'Mastered $mastered/$total',
-                  vi: 'Đã nắm $mastered/$total',
+                  vi: 'Thuộc $mastered/$total',
                   ja: '習得済み $mastered/$total',
                 ),
                 const Color(0xFF166534),
@@ -333,7 +333,7 @@ class _GrammarLessonHeader extends StatelessWidget {
                 _tr(
                   language,
                   en: 'Mastery $masteryPercent%',
-                  vi: 'Tiến độ $masteryPercent%',
+                  vi: 'Nắm chắc $masteryPercent%',
                   ja: '習得度 $masteryPercent%',
                 ),
                 const Color(0xFF1E3A8A),
@@ -343,7 +343,7 @@ class _GrammarLessonHeader extends StatelessWidget {
                 _tr(
                   language,
                   en: 'Due $dueCount',
-                  vi: 'Đến hạn $dueCount',
+                  vi: 'Cần ôn $dueCount',
                   ja: '期限 $dueCount',
                 ),
                 const Color(0xFF92400E),
@@ -353,7 +353,7 @@ class _GrammarLessonHeader extends StatelessWidget {
                 _tr(
                   language,
                   en: 'Weak $ghostCount',
-                  vi: 'Yếu $ghostCount',
+                  vi: 'Điểm yếu $ghostCount',
                   ja: '弱点 $ghostCount',
                 ),
                 const Color(0xFF991B1B),
@@ -363,7 +363,7 @@ class _GrammarLessonHeader extends StatelessWidget {
                 _tr(
                   language,
                   en: 'Examples $totalExamples',
-                  vi: 'Ví dụ $totalExamples',
+                  vi: '$totalExamples ví dụ',
                   ja: '例文 $totalExamples',
                 ),
                 const Color(0xFF0F766E),
@@ -373,7 +373,7 @@ class _GrammarLessonHeader extends StatelessWidget {
                 _tr(
                   language,
                   en: 'Goal Balanced',
-                  vi: 'Mục tiêu Cân bằng',
+                  vi: 'Mục tiêu: Toàn diện',
                   ja: '目標 バランス重視',
                 ),
                 const Color(0xFF4338CA),
@@ -429,7 +429,7 @@ class _GrammarLessonHeader extends StatelessWidget {
           _tr(
             language,
             en: 'Study the grammar cards below, then start the mastery flow.',
-            vi: 'Học các thẻ ngữ pháp bên dưới rồi bắt đầu lộ trình mastery.',
+            vi: 'Xem các thẻ ngữ pháp bên dưới, rồi bắt đầu luyện.',
             ja: '下の文法カードを確認してから、習得フローを開始してください。',
           ),
           style: const TextStyle(fontSize: 12, color: Color(0xFF64748B)),
@@ -444,7 +444,7 @@ class _GrammarLessonHeader extends StatelessWidget {
               _tr(
                 language,
                 en: 'Start Learn Flow (25)',
-                vi: 'Bắt đầu luồng Học (25)',
+                vi: 'Bắt đầu học (25 câu)',
                 ja: '学習フロー開始（25）',
               ),
             ),
@@ -466,7 +466,7 @@ class _GrammarLessonHeader extends StatelessWidget {
             _tr(
               language,
               en: 'Sentence + Transform',
-              vi: 'Sắp câu + Biến đổi',
+              vi: 'Ghép câu + Biến đổi',
               ja: '並び替え + 変換',
             ),
           ),
@@ -478,7 +478,7 @@ class _GrammarLessonHeader extends StatelessWidget {
             _tr(
               language,
               en: 'Context + Contrast',
-              vi: 'Ngữ cảnh + Đối chiếu',
+              vi: 'Chọn theo ngữ cảnh',
               ja: '文脈 + 対比',
             ),
           ),
@@ -490,7 +490,7 @@ class _GrammarLessonHeader extends StatelessWidget {
             _tr(
               language,
               en: 'Fix + Reason Drill',
-              vi: 'Sửa lỗi + Lý do',
+              vi: 'Tìm lỗi + Giải thích',
               ja: '修正 + 理由ドリル',
             ),
           ),
@@ -502,7 +502,7 @@ class _GrammarLessonHeader extends StatelessWidget {
             _tr(
               language,
               en: 'Weak Queue ($ghostCount)',
-              vi: 'Hàng đợi yếu ($ghostCount)',
+              vi: 'Luyện điểm yếu ($ghostCount)',
               ja: '弱点キュー ($ghostCount)',
             ),
           ),
@@ -519,7 +519,7 @@ class _GrammarLessonHeader extends StatelessWidget {
           subtitle: _tr(
             language,
             en: '2-3 minutes, exam-like mixed set.',
-            vi: '2-3 phút, bộ câu hỏi trộn kiểu thi thật.',
+            vi: '2-3 phút, dạng câu hỏi như thi thật.',
             ja: '2〜3分、試験に近いミックス問題。',
           ),
           icon: Icons.flash_on_rounded,
@@ -531,13 +531,13 @@ class _GrammarLessonHeader extends StatelessWidget {
           title: _tr(
             language,
             en: 'Lesson Mastery 25',
-            vi: 'Mastery Bài học 25',
+            vi: 'Thành thạo bài học (25 câu)',
             ja: 'レッスン習得25',
           ),
           subtitle: _tr(
             language,
             en: 'Balanced coverage for this lesson.',
-            vi: 'Độ phủ cân bằng cho bài học này.',
+            vi: 'Ôn toàn diện bài học này.',
             ja: 'このレッスンをバランス良く網羅。',
           ),
           icon: Icons.checklist_rounded,
@@ -555,7 +555,7 @@ class _GrammarLessonHeader extends StatelessWidget {
           subtitle: _tr(
             language,
             en: 'Timed grammar set with no long hints.',
-            vi: 'Bộ ngữ pháp có giới hạn thời gian, không gợi ý dài.',
+            vi: 'Có giới hạn thời gian, không gợi ý.',
             ja: '時間制限あり、長いヒントなしの文法セット。',
           ),
           icon: Icons.timer_rounded,
@@ -582,21 +582,21 @@ class _GrammarLessonHeader extends StatelessWidget {
         _tr(
           language,
           en: 'Learn: understand pattern and usage with guided hints.',
-          vi: 'Học: hiểu mẫu câu và cách dùng với gợi ý định hướng.',
+          vi: 'Học: Làm quen mẫu câu, có gợi ý hỗ trợ.',
           ja: '学習: ガイド付きヒントで文型と使い方を理解。',
         ),
       _GrammarLessonViewMode.drill =>
         _tr(
           language,
           en: 'Drill: focus weak points and fix repeated mistakes.',
-          vi: 'Luyện: tập trung điểm yếu và sửa lỗi lặp lại.',
+          vi: 'Luyện: Sửa điểm yếu, phản hồi chi tiết.',
           ja: 'ドリル: 弱点に集中し、繰り返すミスを修正。',
         ),
       _GrammarLessonViewMode.quiz =>
         _tr(
           language,
           en: 'Quiz: exam-focused flow with less guidance.',
-          vi: 'Kiểm tra: luồng bám sát thi cử với ít hướng dẫn hơn.',
+          vi: 'Kiểm tra: Sát thi thật, ít gợi ý.',
           ja: 'クイズ: 試験重視のフロー（ガイダンス少なめ）。',
         ),
     };
@@ -788,7 +788,7 @@ class _GrammarPointCard extends StatelessWidget {
                       ? _tr(
                           language,
                           en: 'Mastered',
-                          vi: 'Đã nắm',
+                          vi: 'Đã thuộc',
                           ja: '習得済み',
                         )
                       : _tr(
@@ -808,7 +808,7 @@ class _GrammarPointCard extends StatelessWidget {
                   _tr(
                     language,
                     en: '${data.examples.length} Examples',
-                    vi: '${data.examples.length} Ví dụ',
+                    vi: '${data.examples.length} ví dụ',
                     ja: '例文 ${data.examples.length}',
                   ),
                   fg: const Color(0xFF0F766E),

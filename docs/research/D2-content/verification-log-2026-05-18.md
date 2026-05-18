@@ -651,3 +651,28 @@ Tagging: added file-level and entry-level `vi-source-verified`, replaced old `ap
 Runtime note: bumped content DB Kanji seed revision from `29` to `30` and added an N2 lesson-04 sentinel for `甘` so existing browsers reseed this metadata.
 
 Live proof after deploy: normal reload fetched `main.dart.js` from the network, then VI/N2 Kanji search for `甘` opened the detail modal with `Cam (ngọt; dễ dãi; nuông chiều)`, Hán-Việt `Cam`, on `カン`, kun `あま.い, あま.える, あま.やかす, うま.い`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 5 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Hán-Việt readings where present, old JLPT tier, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context in `assets/data/content/vocab/n2/ShinKanzen/tanos_n2_01.json`, used only to choose example words and cross-check the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `争` | KANJIDIC2 readings `ソウ`, `あらそ.う`, meanings `contend`, `dispute`, `argue`; Unihan `kVietnamese=tranh`; local context `争う` | Rewrote display to `Tranh (tranh chấp; cạnh tranh; cãi nhau)`, added on/kun readings, direct example `争う`, search text, and dispute/competition related kanji. |
+| `改` | KANJIDIC2 `Cải`, readings `カイ`, `あらた.める/あらた.まる`, meanings `reformation`, `change`, `renew`; Unihan `kVietnamese=cải`; local context `改めて` | Rewrote display to `Cải (sửa đổi; cải thiện; kiểm tra lại)`, direct example `改めて`, search text, and change/improvement related kanji. |
+| `著` | KANJIDIC2 `Trứ`, readings `チョ/チャク`, `あらわ.す/いちじる.しい`, meanings `renowned`, `publish`, `write`; local context `著す` | Rewrote display to `Trứ (viết; xuất bản; nổi bật)`, direct example `著す`, search text, and writing/author related kanji. |
+| `有` | KANJIDIC2 `Hữu`, readings `ユウ/ウ`, `あ.る`, meanings `possess`, `have`, `exist`; Unihan `kVietnamese=hữu`; local context `有難い` | Corrected the row away from the generated `grateful` word gloss to `Hữu (có; tồn tại; sở hữu)`, direct example `有難い`, search text, and existence/opposite related kanji. |
+| `難` | KANJIDIC2 `Nan`, readings `ナン`, `むずか.しい/-にく.い`, meanings `difficult`, `trouble`, `accident`; Unihan `kVietnamese=nan`; local context `有難い` | Corrected the row away from the generated `grateful` word gloss to `Nan (khó; tai nạn; vấn đề)`, direct example `有難い`, search text, and difficulty/trouble related kanji. |
+| `在` | KANJIDIC2 `Tại`, readings `ザイ`, `あ.る`, meanings `exist`, `be located`; Unihan `kVietnamese=tại`; local context `在る` | Rewrote display to `Tại (ở; tồn tại; hiện diện)`, direct example `在る`, search text, and existence/place related kanji. |
+| `安` | KANJIDIC2 `An`, readings `アン`, `やす.い/やす.らか`, meanings `relax`, `cheap`, `low`; Unihan `kVietnamese=an`; local context `安易` | Rewrote display to `An (yên ổn; rẻ; dễ)`, direct example `安易`, search text, and ease/safety related kanji. |
+| `易` | KANJIDIC2 `Dịch`, readings `エキ/イ`, `やさ.しい/やす.い`, meanings `easy`, `simple`, `divination`; Unihan `kVietnamese=dịch`; local context `安易` | Rewrote display to `Dịch (dễ; đơn giản; bói dịch)`, direct example `安易`, search text, and easy/change/divination related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user`/`kanji-metadata-approved` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `30` to `31` and added an N2 lesson-05 sentinel for `争` so existing browsers reseed the changed metadata.
+
+Live proof after deploy: the first already-open Playwright tab still had an old Flutter runtime in memory; a normal reload fetched the no-cache shell and triggered the revision-31 reseed. VI/N2 Kanji search for `争` then opened the detail modal with `Tranh (tranh chấp; cạnh tranh; cãi nhau)`, Hán-Việt `Tranh`, on `ソウ`, kun `あらそ.う, いか.でか`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.

@@ -257,6 +257,17 @@ for `甘`. Local coverage audit reduced N2 incomplete current entries from
 search opened `甘` with `Cam (ngọt; dễ dãi; nuông chiều)` plus console
 warnings/errors `0`.
 
+Kanji content expansion update: N2 lesson 05 is now source-verified against
+KANJIDIC2, Unihan where available, and existing N2 vocabulary context. Commit
+`c33fb9a1` rewrites the eight lesson entries (`争`, `改`, `著`, `有`, `難`,
+`在`, `安`, `易`) into learner-ready Vietnamese, corrects `有`/`難` away from
+the generated `grateful` word gloss, fills readings/search/related-kanji
+metadata, bumps the Kanji seed revision to `31`, and adds a lesson-05 sentinel
+for `争`. Local coverage audit reduced N2 incomplete current entries from
+`168` to `160`; full Flutter tests passed (`2340`). After deploy, live VI/N2
+search opened `争` with `Tranh (tranh chấp; cạnh tranh; cãi nhau)` plus
+console warnings/errors `0`.
+
 ## Verdict
 
 Implementation, docs, tooling, CI/deploy, and N4-N1 live direct-route fallback work are substantially complete. The active goal is not complete because the stopping condition includes external legal/ops proof gates that remain missing.

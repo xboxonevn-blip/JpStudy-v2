@@ -551,3 +551,26 @@ Sources consulted:
 Tagging: replaced the lesson-25 file-level `vi-human-approved` with `vi-source-verified` and added entry-level `vi-source-verified` to all eight edited entries. No `vi-human-approved` tag was added.
 
 Live proof after deploy: VI/N3 Kanji search for `際` opened the lesson-25 detail modal with `Tế (dịp; ranh giới; khi)`, Hán-Việt `Tế`, and the QUARTET 25 global-issues/volunteering mnemonic. This was verified after bypassing the stale service-worker cache while preserving IndexedDB, so the existing browser DB upgraded from seed revision 25 to 26. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 1 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, JLPT legacy tier, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context in `assets/data/content/vocab/n2/ShinKanzen/tanos_n2_01.json`, used only to choose example words, not as a learner-facing translation source.
+
+| Item | Sources | Change |
+|---|---|---|
+| `遭` | KANJIDIC2 readings `ソウ`, `あ.う`, meanings `encounter`, `meet`; Unihan `kVietnamese=tao`, `kDefinition=come across, meet with, encounter`; local context `遭う` | Rewrote display to `Tao (gặp phải; gặp chuyện không may)`, added readings/search text, direct example `遭う`, and related kanji. |
+| `扇` | KANJIDIC2 readings `セン`, `おうぎ`, meanings `fan`, `folding fan`; Unihan `kVietnamese=phiến`, `kJapanese=セン おうぎ あおぐ`; local context `扇ぐ` | Rewrote display to `Phiến (quạt; quạt xếp)`, added `あお.ぐ` for the local verb example, normalized search text, and related kanji. |
+| `青` | KANJIDIC2 readings `セイ/ショウ`, `あお`, meaning `blue`; Unihan `kVietnamese=thanh`, `kDefinition=blue, green; young`; local context `青白い` | Rewrote display to `Thanh (xanh; xanh xao; trẻ)`, direct example `青白い`, search text, and color/brightness related kanji. |
+| `白` | KANJIDIC2 readings `ハク/ビャク`, `しろ`, meaning `white`; Unihan `kVietnamese=bạch`, `kDefinition=white; pure, unblemished; bright`; local context `青白い` | Rewrote display to `Bạch (trắng; sáng; tinh khiết)`, direct example `青白い`, search text, and color/brightness related kanji. |
+| `明` | KANJIDIC2 readings `メイ/ミョウ/ミン`, meanings `bright`, `light`; Unihan `kVietnamese=minh`, `kDefinition=bright, light, brilliant; clear`; local context `明け方` | Rewrote display to `Minh (sáng; rõ ràng; minh bạch)`, replaced the confusing `明き` example with `明け方`, and linked light/dark related kanji. |
+| `飽` | KANJIDIC2 readings `ホウ`, `あ.きる`, meanings `sated`, `tired of`, `bored`; Unihan has no `kVietnamese` for this codepoint but confirms `kDefinition=eat heartily; eat one's fill`; existing D2 spot-check had HV `Bão` | Rewrote display to `Bão (chán; no; ngấy)`, direct example `飽くまで`, search text, and food/fullness related kanji. |
+| `方` | KANJIDIC2 readings `ホウ`, `かた/-がた`, meanings `direction`, `person`, `alternative`; Unihan `kVietnamese=phương`, `kDefinition=a square, rectangle; a region; local`; local context `明け方` | Rewrote display to `Phương (phương hướng; phía; cách; người)`, direct example `明け方`, search text, and direction/place related kanji. |
+| `揚` | KANJIDIC2 readings `ヨウ`, `あ.げる`, meanings `raise`, `hoist`, `fry in deep fat`; Unihan `kVietnamese=dương`, `kDefinition=scatter, spread; praise`; local context `揚げる` | Rewrote display to `Dương (nâng lên; giương lên; chiên ngập dầu)`, direct example `揚げる`, search text, and movement/oil related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `26` to `27` and added an N2 lesson-01 sentinel for `遭` so existing browsers reseed this metadata.

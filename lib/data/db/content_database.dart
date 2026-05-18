@@ -13,9 +13,16 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 26;
+const _kanjiSeedRevision = 27;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 1,
+    character: '遭',
+    meaning: 'Tao (gặp phải; gặp chuyện không may)',
+    decompositionContains: '"hanViet":"Tao"',
+  ),
   _KanjiSeedSentinel(
     level: 'N3',
     lessonId: 17,

@@ -8,7 +8,7 @@
   "lessonId": 1,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k001",
@@ -18,37 +18,46 @@
       "strokeCount": 14,
       "labels": {
         "hanViet": "Tao",
-        "meaningVi": "to meet, to encounter (undesirable nuance)",
-        "meaningViDisplay": "遭 (to meet, to encounter (undesirable nuance))",
-        "meaningEn": "to meet, to encounter (undesirable nuance)"
+        "meaningVi": "gặp phải; gặp chuyện không may",
+        "meaningViDisplay": "Tao (gặp phải; gặp chuyện không may)",
+        "meaningEn": "encounter, meet, often unpleasant"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ"
+        ],
         "kunyomi": [
-          "あう"
+          "あ.う",
+          "あ.わせる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 遭う (to meet, to encounter (undesirable nuance)).",
-        "en": "Appears in JLPT N2 vocabulary: 遭う (to meet, to encounter (undesirable nuance))."
+        "vi": "遭 dùng khi gặp phải một việc không mong muốn, như 遭う: gặp chuyện rắc rối.",
+        "en": "遭 marks an encounter, often with an unpleasant event, as in 遭う."
       },
       "decomposition": {
         "hanViet": "Tao",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "会",
+          "向",
+          "方",
+          "明"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tao",
-        "meaningViNoAccent": "to meet, to encounter (undesirable nuance)",
-        "meaningEnNoAccent": "to meet, to encounter (undesirable nuance)"
+        "meaningViNoAccent": "gap phai; gap chuyen khong may",
+        "meaningEnNoAccent": "encounter, meet, often unpleasant"
       },
       "examples": [
         {
           "word": "遭う",
           "reading": "あう",
-          "meaning": "to meet, to encounter (undesirable nuance)"
+          "meaning": "gặp phải; gặp chuyện không may",
+          "meaningEn": "to encounter, often something unpleasant"
         }
       ],
       "tags": [
@@ -56,9 +65,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k002",
@@ -68,37 +78,46 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Phiến",
-        "meaningVi": "to fan, to flap",
-        "meaningViDisplay": "扇 (to fan, to flap)",
-        "meaningEn": "to fan, to flap"
+        "meaningVi": "quạt; quạt xếp",
+        "meaningViDisplay": "Phiến (quạt; quạt xếp)",
+        "meaningEn": "fan, folding fan"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "あおぐ"
+          "おうぎ",
+          "あお.ぐ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 扇ぐ (to fan, to flap).",
-        "en": "Appears in JLPT N2 vocabulary: 扇ぐ (to fan, to flap)."
+        "vi": "扇 là cái quạt; động từ 扇ぐ là quạt cho gió lên.",
+        "en": "扇 is a fan; 扇ぐ means to fan air toward someone or something."
       },
       "decomposition": {
         "hanViet": "Phiến",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "戸",
+          "方",
+          "揚",
+          "青"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phien",
-        "meaningViNoAccent": "to fan, to flap",
-        "meaningEnNoAccent": "to fan, to flap"
+        "meaningViNoAccent": "quat; quat xep",
+        "meaningEnNoAccent": "fan, folding fan"
       },
       "examples": [
         {
           "word": "扇ぐ",
           "reading": "あおぐ",
-          "meaning": "to fan, to flap"
+          "meaning": "quạt; phe phẩy",
+          "meaningEn": "to fan"
         }
       ],
       "tags": [
@@ -106,9 +125,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k003",
@@ -118,37 +138,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Thanh",
-        "meaningVi": "pale, pallid",
-        "meaningViDisplay": "青 (pale, pallid)",
-        "meaningEn": "pale, pallid"
+        "meaningVi": "xanh; xanh xao; trẻ",
+        "meaningViDisplay": "Thanh (xanh; xanh xao; trẻ)",
+        "meaningEn": "blue, green, young"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "あおじろい"
+          "あお",
+          "あお.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 青白い (pale, pallid).",
-        "en": "Appears in JLPT N2 vocabulary: 青白い (pale, pallid)."
+        "vi": "青 là màu xanh; trong 青白い, sắc xanh đi với 白 để chỉ vẻ mặt tái xanh.",
+        "en": "青 is blue or green; in 青白い it helps describe a pale, bluish face."
       },
       "decomposition": {
         "hanViet": "Thanh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "白",
+          "色",
+          "明",
+          "若"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thanh",
-        "meaningViNoAccent": "pale, pallid",
-        "meaningEnNoAccent": "pale, pallid"
+        "meaningViNoAccent": "xanh; xanh xao; tre",
+        "meaningEnNoAccent": "blue, green, young"
       },
       "examples": [
         {
           "word": "青白い",
           "reading": "あおじろい",
-          "meaning": "pale, pallid"
+          "meaning": "tái xanh; xanh xao",
+          "meaningEn": "pale, pallid"
         }
       ],
       "tags": [
@@ -156,9 +186,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k004",
@@ -168,37 +199,47 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Bạch",
-        "meaningVi": "pale, pallid",
-        "meaningViDisplay": "白 (pale, pallid)",
-        "meaningEn": "pale, pallid"
+        "meaningVi": "trắng; sáng; tinh khiết",
+        "meaningViDisplay": "Bạch (trắng; sáng; tinh khiết)",
+        "meaningEn": "white, pure, bright"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ハク",
+          "ビャク"
+        ],
         "kunyomi": [
-          "あおじろい"
+          "しろ",
+          "しろ.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 青白い (pale, pallid).",
-        "en": "Appears in JLPT N2 vocabulary: 青白い (pale, pallid)."
+        "vi": "白 là màu trắng; trong 青白い, chữ này nhấn sắc mặt nhợt nhạt.",
+        "en": "白 is white; in 青白い it adds the pale, bloodless nuance."
       },
       "decomposition": {
         "hanViet": "Bạch",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "青",
+          "色",
+          "明",
+          "日"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bach",
-        "meaningViNoAccent": "pale, pallid",
-        "meaningEnNoAccent": "pale, pallid"
+        "meaningViNoAccent": "trang; sang; tinh khiet",
+        "meaningEnNoAccent": "white, pure, bright"
       },
       "examples": [
         {
           "word": "青白い",
           "reading": "あおじろい",
-          "meaning": "pale, pallid"
+          "meaning": "tái xanh; nhợt nhạt",
+          "meaningEn": "pale, pallid"
         }
       ],
       "tags": [
@@ -206,9 +247,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k005",
@@ -218,37 +260,50 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Minh",
-        "meaningVi": "room, time to spare, emptiness",
-        "meaningViDisplay": "明 (room, time to spare, emptiness)",
-        "meaningEn": "room, time to spare, emptiness"
+        "meaningVi": "sáng; rõ ràng; minh bạch",
+        "meaningViDisplay": "Minh (sáng; rõ ràng; minh bạch)",
+        "meaningEn": "bright, clear"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "メイ",
+          "ミョウ",
+          "ミン"
+        ],
         "kunyomi": [
-          "あき"
+          "あ.かり",
+          "あか.るい",
+          "あ.ける",
+          "あ.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 明き (room, time to spare, emptiness).",
-        "en": "Appears in JLPT N2 vocabulary: 明き (room, time to spare, emptiness)."
+        "vi": "日 và 月 cùng gợi ánh sáng; 明 dùng cho ý sáng, rõ, minh bạch.",
+        "en": "日 and 月 suggest light; 明 is used for brightness and clarity."
       },
       "decomposition": {
         "hanViet": "Minh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "日",
+          "月",
+          "暗",
+          "白"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Minh",
-        "meaningViNoAccent": "room, time to spare, emptiness",
-        "meaningEnNoAccent": "room, time to spare, emptiness"
+        "meaningViNoAccent": "sang; ro rang; minh bach",
+        "meaningEnNoAccent": "bright, clear"
       },
       "examples": [
         {
-          "word": "明き",
-          "reading": "あき",
-          "meaning": "room, time to spare, emptiness"
+          "word": "明け方",
+          "reading": "あけがた",
+          "meaning": "rạng sáng",
+          "meaningEn": "dawn"
         }
       ],
       "tags": [
@@ -256,9 +311,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k006",
@@ -268,37 +324,47 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Bão",
-        "meaningVi": "to the end, to the last, stubbornly",
-        "meaningViDisplay": "飽 (to the end, to the last, stubbornly)",
-        "meaningEn": "to the end, to the last, stubbornly"
+        "meaningVi": "chán; no; ngấy",
+        "meaningViDisplay": "Bão (chán; no; ngấy)",
+        "meaningEn": "sated, tired of, bored"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ホウ"
+        ],
         "kunyomi": [
-          "あくまで"
+          "あ.きる",
+          "あ.かす",
+          "あ.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 飽くまで (to the end, to the last, stubbornly).",
-        "en": "Appears in JLPT N2 vocabulary: 飽くまで (to the end, to the last, stubbornly)."
+        "vi": "Bộ 食 gợi ăn uống; 飽 là ăn đủ đến mức no hoặc chán ngấy.",
+        "en": "The food radical points to being full; 飽 also extends to being tired of something."
       },
       "decomposition": {
         "hanViet": "Bão",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "食",
+          "包",
+          "油",
+          "方"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bao",
-        "meaningViNoAccent": "to the end, to the last, stubbornly",
-        "meaningEnNoAccent": "to the end, to the last, stubbornly"
+        "meaningViNoAccent": "chan; no; ngay",
+        "meaningEnNoAccent": "sated, tired of, bored"
       },
       "examples": [
         {
           "word": "飽くまで",
           "reading": "あくまで",
-          "meaning": "to the end, to the last, stubbornly"
+          "meaning": "đến cùng; triệt để",
+          "meaningEn": "to the end, persistently"
         }
       ],
       "tags": [
@@ -306,7 +372,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +385,47 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Phương",
-        "meaningVi": "dawn",
-        "meaningViDisplay": "方 (dawn)",
-        "meaningEn": "dawn"
+        "meaningVi": "phương hướng; phía; cách; người",
+        "meaningViDisplay": "Phương (phương hướng; phía; cách; người)",
+        "meaningEn": "direction, person, way"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ホウ"
+        ],
         "kunyomi": [
-          "あけがた"
+          "かた",
+          "-かた",
+          "-がた"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 明け方 (dawn).",
-        "en": "Appears in JLPT N2 vocabulary: 明け方 (dawn)."
+        "vi": "方 chỉ phương hướng hoặc phía; trong 明け方, nó chỉ khoảng phía rạng sáng.",
+        "en": "方 points to a direction, side, person, or way; in 明け方 it marks the time around dawn."
       },
       "decomposition": {
         "hanViet": "Phương",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "向",
+          "明",
+          "所",
+          "会"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phuong",
-        "meaningViNoAccent": "dawn",
-        "meaningEnNoAccent": "dawn"
+        "meaningViNoAccent": "phuong huong; phia; cach; nguoi",
+        "meaningEnNoAccent": "direction, person, way"
       },
       "examples": [
         {
           "word": "明け方",
           "reading": "あけがた",
-          "meaning": "dawn"
+          "meaning": "rạng sáng",
+          "meaningEn": "dawn"
         }
       ],
       "tags": [
@@ -356,9 +433,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k008",
@@ -368,37 +446,46 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Dương",
-        "meaningVi": "to lift, to fry",
-        "meaningViDisplay": "揚 (to lift, to fry)",
-        "meaningEn": "to lift, to fry"
+        "meaningVi": "nâng lên; giương lên; chiên ngập dầu",
+        "meaningViDisplay": "Dương (nâng lên; giương lên; chiên ngập dầu)",
+        "meaningEn": "raise, hoist, deep-fry"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヨウ"
+        ],
         "kunyomi": [
-          "あげる"
+          "あ.げる",
+          "あ.がる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 揚げる (to lift, to fry).",
-        "en": "Appears in JLPT N2 vocabulary: 揚げる (to lift, to fry)."
+        "vi": "揚 dùng cho hành động nâng lên hoặc thả vào dầu để chiên.",
+        "en": "揚 covers raising something up and deep-frying it in oil."
       },
       "decomposition": {
         "hanViet": "Dương",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "上",
+          "油",
+          "手",
+          "方"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Duong",
-        "meaningViNoAccent": "to lift, to fry",
-        "meaningEnNoAccent": "to lift, to fry"
+        "meaningViNoAccent": "nang len; giong len; chien ngap dau",
+        "meaningEnNoAccent": "raise, hoist, deep-fry"
       },
       "examples": [
         {
           "word": "揚げる",
           "reading": "あげる",
-          "meaning": "to lift, to fry"
+          "meaning": "chiên ngập dầu; nâng lên",
+          "meaningEn": "to fry, to lift"
         }
       ],
       "tags": [
@@ -406,14 +493,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

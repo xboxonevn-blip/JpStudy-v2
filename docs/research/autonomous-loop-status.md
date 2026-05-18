@@ -429,3 +429,10 @@
 - Live fresh-IDB proof: deleted the live `content` IndexedDB while preserving normal Hosting, opened VI/N3 `/#/kanji`, and saw the grid render `203` entries. Direct `/#/practice/handwriting` rendered `Viết tay: N3 — Học kanji mới` with real kanji and stroke guidance. Console errors/warnings after filtering external antivirus noise: `0`.
 - Live language/level sanity: isolated-context route loads for VI/EN/JA across N5-N1 reported the seeded locale/level correctly after re-running polluted rows in isolated contexts, with app console errors `0` and request failures `0`.
 - Status: verified fixed / not reproduced. Remaining kanji work is QA-B-002 content completeness and QA-A-011 Japanese definition data, not app-wide kanji loading.
+
+## 2026-05-18 N2 Kanji Lesson 1 Completeness Patch
+
+- Source-verified all eight N2 lesson-01 kanji (`遭`, `扇`, `青`, `白`, `明`, `飽`, `方`, `揚`) against local KANJIDIC2, Unihan, and the existing N2 vocabulary examples.
+- Rewrote English-like `meaningVi` fields into learner-ready Vietnamese, filled readings/search text, added non-empty `relatedKanji`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `27` and added an N2 lesson-01 sentinel for `遭` so existing browsers reseed the changed metadata.
+- Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `200` to `192`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, and full `flutter test` passed (`2340`).

@@ -574,3 +574,5 @@ Sources consulted:
 Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
 
 Runtime note: bumped content DB Kanji seed revision from `26` to `27` and added an N2 lesson-01 sentinel for `遭` so existing browsers reseed this metadata.
+
+Live proof after deploy: VI/N2 Kanji grid loaded `200` entries. Opening `遭` showed `Tao (gặp phải; gặp chuyện không may)`, Hán-Việt `Tao`, on `ソウ`, kun `あ.う, あ.わせる`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.

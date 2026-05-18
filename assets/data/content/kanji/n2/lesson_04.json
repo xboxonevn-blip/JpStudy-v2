@@ -8,7 +8,7 @@
   "lessonId": 4,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k025",
@@ -18,37 +18,48 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Cam",
-        "meaningVi": "to pamper, to spoil",
-        "meaningViDisplay": "甘 (to pamper, to spoil)",
-        "meaningEn": "to pamper, to spoil"
+        "meaningVi": "ngọt; dễ dãi; nuông chiều",
+        "meaningViDisplay": "Cam (ngọt; dễ dãi; nuông chiều)",
+        "meaningEn": "sweet, pamper, indulgent"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カン"
+        ],
         "kunyomi": [
-          "あまやかす"
+          "あま.い",
+          "あま.える",
+          "あま.やかす",
+          "うま.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 甘やかす (to pamper, to spoil).",
-        "en": "Appears in JLPT N2 vocabulary: 甘やかす (to pamper, to spoil)."
+        "vi": "甘 là vị ngọt; trong 甘やかす, sắc thái chuyển thành nuông chiều đến mức dễ dãi.",
+        "en": "甘 means sweet; in 甘やかす it extends to pampering or spoiling someone."
       },
       "decomposition": {
         "hanViet": "Cam",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "味",
+          "糖",
+          "優",
+          "子"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cam",
-        "meaningViNoAccent": "to pamper, to spoil",
-        "meaningEnNoAccent": "to pamper, to spoil"
+        "meaningViNoAccent": "ngot; de dai; nuong chieu",
+        "meaningEnNoAccent": "sweet, pamper, indulgent"
       },
       "examples": [
         {
           "word": "甘やかす",
           "reading": "あまやかす",
-          "meaning": "to pamper, to spoil"
+          "meaning": "nuông chiều; chiều hư",
+          "meaningEn": "to pamper, to spoil"
         }
       ],
       "tags": [
@@ -56,9 +67,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k026",
@@ -68,37 +80,48 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Dư",
-        "meaningVi": "to remain, to be left over, to be in excess, to be too many",
-        "meaningViDisplay": "余 (to remain, to be left over, to be in excess, to be too many)",
-        "meaningEn": "to remain, to be left over, to be in excess, to be too many"
+        "meaningVi": "thừa; còn lại; phần dư",
+        "meaningViDisplay": "Dư (thừa; còn lại; phần dư)",
+        "meaningEn": "surplus, remainder, too much"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヨ"
+        ],
         "kunyomi": [
-          "あまる"
+          "あま.る",
+          "あま.り",
+          "あま.す",
+          "あんま.り"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 余る (to remain, to be left over, to be in excess, to be too many).",
-        "en": "Appears in JLPT N2 vocabulary: 余る (to remain, to be left over, to be in excess, to be too many)."
+        "vi": "余 là phần còn dư; 余る dùng khi đồ, thời gian hoặc số lượng còn thừa ra.",
+        "en": "余 marks surplus or remainder; 余る is to be left over or be more than needed."
       },
       "decomposition": {
         "hanViet": "Dư",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "残",
+          "過",
+          "多",
+          "分"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Du",
-        "meaningViNoAccent": "to remain, to be left over, to be in excess, to be too many",
-        "meaningEnNoAccent": "to remain, to be left over, to be in excess, to be too many"
+        "meaningViNoAccent": "thua; con lai; phan du",
+        "meaningEnNoAccent": "surplus, remainder, too much"
       },
       "examples": [
         {
           "word": "余る",
           "reading": "あまる",
-          "meaning": "to remain, to be left over, to be in excess, to be too many"
+          "meaning": "thừa ra; còn dư",
+          "meaningEn": "to remain, to be left over"
         }
       ],
       "tags": [
@@ -106,9 +129,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k027",
@@ -118,37 +142,46 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Biên",
-        "meaningVi": "knitting, web",
-        "meaningViDisplay": "編 (knitting, web)",
-        "meaningEn": "knitting, web"
+        "meaningVi": "biên soạn; đan; phần sách",
+        "meaningViDisplay": "Biên (biên soạn; đan; phần sách)",
+        "meaningEn": "compile, knit, edit"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヘン"
+        ],
         "kunyomi": [
-          "あみもの"
+          "あ.む",
+          "-あ.み"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 編物 (knitting, web).",
-        "en": "Appears in JLPT N2 vocabulary: 編物 (knitting, web)."
+        "vi": "編 gắn với việc đan hoặc biên soạn; 編物 là đồ đan, còn 編集 là biên tập.",
+        "en": "編 covers knitting and compiling/editing; 編物 is knitted work, 編集 is editing."
       },
       "decomposition": {
         "hanViet": "Biên",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "物",
+          "糸",
+          "集",
+          "書"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bien",
-        "meaningViNoAccent": "knitting, web",
-        "meaningEnNoAccent": "knitting, web"
+        "meaningViNoAccent": "bien soan; dan; phan sach",
+        "meaningEnNoAccent": "compile, knit, edit"
       },
       "examples": [
         {
           "word": "編物",
           "reading": "あみもの",
-          "meaning": "knitting, web"
+          "meaning": "đồ đan; việc đan",
+          "meaningEn": "knitting, knitted work"
         }
       ],
       "tags": [
@@ -156,9 +189,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k028",
@@ -168,37 +202,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Vật",
-        "meaningVi": "knitting, web",
-        "meaningViDisplay": "物 (knitting, web)",
-        "meaningEn": "knitting, web"
+        "meaningVi": "vật; đồ vật; sự vật",
+        "meaningViDisplay": "Vật (vật; đồ vật; sự vật)",
+        "meaningEn": "thing, object, matter"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ブツ",
+          "モツ"
+        ],
         "kunyomi": [
-          "あみもの"
+          "もの",
+          "もの-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 編物 (knitting, web).",
-        "en": "Appears in JLPT N2 vocabulary: 編物 (knitting, web)."
+        "vi": "物 là đồ vật hoặc sự vật; trong 編物, nó chỉ một món đồ được đan.",
+        "en": "物 means thing or object; in 編物 it is the knitted object."
       },
       "decomposition": {
         "hanViet": "Vật",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "編",
+          "品",
+          "事",
+          "者"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vat",
-        "meaningViNoAccent": "knitting, web",
-        "meaningEnNoAccent": "knitting, web"
+        "meaningViNoAccent": "vat; do vat; su vat",
+        "meaningEnNoAccent": "thing, object, matter"
       },
       "examples": [
         {
           "word": "編物",
           "reading": "あみもの",
-          "meaning": "knitting, web"
+          "meaning": "đồ đan; việc đan",
+          "meaningEn": "knitting, knitted work"
         }
       ],
       "tags": [
@@ -206,9 +250,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k029",
@@ -218,37 +263,47 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Nguy",
-        "meaningVi": "dangerous, critical, grave",
-        "meaningViDisplay": "危 (dangerous, critical, grave)",
-        "meaningEn": "dangerous, critical, grave"
+        "meaningVi": "nguy hiểm; nguy cấp; bất an",
+        "meaningViDisplay": "Nguy (nguy hiểm; nguy cấp; bất an)",
+        "meaningEn": "dangerous, precarious, uneasy"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ"
+        ],
         "kunyomi": [
-          "あやうい"
+          "あぶ.ない",
+          "あや.うい",
+          "あや.ぶむ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 危うい (dangerous, critical, grave).",
-        "en": "Appears in JLPT N2 vocabulary: 危うい (dangerous, critical, grave)."
+        "vi": "危 báo hiệu nguy hiểm hoặc trạng thái mong manh; 危うい là tình huống dễ thành nguy.",
+        "en": "危 signals danger or precariousness; 危うい describes something at risk."
       },
       "decomposition": {
         "hanViet": "Nguy",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "安",
+          "険",
+          "急",
+          "命"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nguy",
-        "meaningViNoAccent": "dangerous, critical, grave",
-        "meaningEnNoAccent": "dangerous, critical, grave"
+        "meaningViNoAccent": "nguy hiem; nguy cap; bat an",
+        "meaningEnNoAccent": "dangerous, precarious, uneasy"
       },
       "examples": [
         {
           "word": "危うい",
           "reading": "あやうい",
-          "meaning": "dangerous, critical, grave"
+          "meaning": "nguy hiểm; mong manh",
+          "meaningEn": "dangerous, precarious"
         }
       ],
       "tags": [
@@ -256,9 +311,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k030",
@@ -268,37 +324,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Quái",
-        "meaningVi": "suspicious, dubious, doubtful",
-        "meaningViDisplay": "怪 (suspicious, dubious, doubtful)",
-        "meaningEn": "suspicious, dubious, doubtful"
+        "meaningVi": "đáng ngờ; kỳ lạ; bí ẩn",
+        "meaningViDisplay": "Quái (đáng ngờ; kỳ lạ; bí ẩn)",
+        "meaningEn": "suspicious, strange, mysterious"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カイ",
+          "ケ"
+        ],
         "kunyomi": [
-          "あやしい"
+          "あや.しい",
+          "あや.しむ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 怪しい (suspicious, dubious, doubtful).",
-        "en": "Appears in JLPT N2 vocabulary: 怪しい (suspicious, dubious, doubtful)."
+        "vi": "怪 mang cảm giác quái lạ hoặc đáng nghi; 怪しい dùng cho người/vật có dấu hiệu không tin được.",
+        "en": "怪 carries a strange or suspicious feel; 怪しい describes something questionable."
       },
       "decomposition": {
         "hanViet": "Quái",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "疑",
+          "不",
+          "奇",
+          "謎"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Quai",
-        "meaningViNoAccent": "suspicious, dubious, doubtful",
-        "meaningEnNoAccent": "suspicious, dubious, doubtful"
+        "meaningViNoAccent": "dang ngo; ky la; bi an",
+        "meaningEnNoAccent": "suspicious, strange, mysterious"
       },
       "examples": [
         {
           "word": "怪しい",
           "reading": "あやしい",
-          "meaning": "suspicious, dubious, doubtful"
+          "meaning": "đáng ngờ; kỳ lạ",
+          "meaningEn": "suspicious, dubious"
         }
       ],
       "tags": [
@@ -306,7 +372,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +385,50 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Hoang",
-        "meaningVi": "rough, rude, wild",
-        "meaningViDisplay": "荒 (rough, rude, wild)",
-        "meaningEn": "rough, rude, wild"
+        "meaningVi": "hoang vu; thô bạo; dữ dội",
+        "meaningViDisplay": "Hoang (hoang vu; thô bạo; dữ dội)",
+        "meaningEn": "rough, wild, laid waste"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ"
+        ],
         "kunyomi": [
-          "あらい"
+          "あ.らす",
+          "あ.れる",
+          "あら.い",
+          "すさ.ぶ",
+          "すさ.む",
+          "あ.らし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 荒い (rough, rude, wild).",
-        "en": "Appears in JLPT N2 vocabulary: 荒い (rough, rude, wild)."
+        "vi": "荒 gợi cảnh hoang hoặc dữ; 荒い thường tả cách làm thô bạo, xù xì hoặc dữ dằn.",
+        "en": "荒 evokes roughness or wildness; 荒い can describe rough handling or texture."
       },
       "decomposition": {
         "hanViet": "Hoang",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "暴",
+          "乱",
+          "野",
+          "粗"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoang",
-        "meaningViNoAccent": "rough, rude, wild",
-        "meaningEnNoAccent": "rough, rude, wild"
+        "meaningViNoAccent": "hoang vu; tho bao; du doi",
+        "meaningEnNoAccent": "rough, wild, laid waste"
       },
       "examples": [
         {
           "word": "荒い",
           "reading": "あらい",
-          "meaning": "rough, rude, wild"
+          "meaning": "thô bạo; xù xì; dữ dằn",
+          "meaningEn": "rough, rude, wild"
         }
       ],
       "tags": [
@@ -356,9 +436,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k032",
@@ -368,37 +449,46 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Thô",
-        "meaningVi": "coarse, rough",
-        "meaningViDisplay": "粗 (coarse, rough)",
-        "meaningEn": "coarse, rough"
+        "meaningVi": "thô; sơ sài; không mịn",
+        "meaningViDisplay": "Thô (thô; sơ sài; không mịn)",
+        "meaningEn": "coarse, rough, crude"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソ"
+        ],
         "kunyomi": [
-          "あらい"
+          "あら.い",
+          "あら-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 粗い (coarse, rough).",
-        "en": "Appears in JLPT N2 vocabulary: 粗い (coarse, rough)."
+        "vi": "粗 là độ thô hoặc sơ sài; 粗い thường dùng cho hạt, bề mặt, cách làm chưa tinh.",
+        "en": "粗 means coarse or crude; 粗い describes rough texture or imprecise work."
       },
       "decomposition": {
         "hanViet": "Thô",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "荒",
+          "米",
+          "細",
+          "雑"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tho",
-        "meaningViNoAccent": "coarse, rough",
-        "meaningEnNoAccent": "coarse, rough"
+        "meaningViNoAccent": "tho; so sai; khong min",
+        "meaningEnNoAccent": "coarse, rough, crude"
       },
       "examples": [
         {
           "word": "粗い",
           "reading": "あらい",
-          "meaning": "coarse, rough"
+          "meaning": "thô; không mịn; sơ sài",
+          "meaningEn": "coarse, rough"
         }
       ],
       "tags": [
@@ -406,14 +496,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

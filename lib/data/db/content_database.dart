@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 29;
+const _kanjiSeedRevision = 30;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -36,6 +36,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '圧',
     meaning: 'Áp (áp lực; nén; ép)',
     decompositionContains: '"hanViet":"Áp"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 4,
+    character: '甘',
+    meaning: 'Cam (ngọt; dễ dãi; nuông chiều)',
+    decompositionContains: '"hanViet":"Cam"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

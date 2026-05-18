@@ -246,6 +246,17 @@ headers showed `main.dart.js=no-cache` and content JSON `no-cache`; normal
 reload fetched `main.dart.js` from network, and VI/N2 search opened `圧` with
 `Áp (áp lực; nén; ép)` plus console warnings/errors `0`.
 
+Kanji content expansion update: N2 lesson 04 is now source-verified against
+KANJIDIC2, Unihan where available, and existing N2 vocabulary context. Commit
+`2683dea2` rewrites the eight lesson entries (`甘`, `余`, `編`, `物`, `危`,
+`怪`, `荒`, `粗`) into learner-ready Vietnamese, corrects `物` away from the
+wrong `knitting, web` source gloss, fills readings/search/related-kanji
+metadata, bumps the Kanji seed revision to `30`, and adds a lesson-04 sentinel
+for `甘`. Local coverage audit reduced N2 incomplete current entries from
+`176` to `168`; full Flutter tests passed (`2340`). After deploy, live VI/N2
+search opened `甘` with `Cam (ngọt; dễ dãi; nuông chiều)` plus console
+warnings/errors `0`.
+
 ## Verdict
 
 Implementation, docs, tooling, CI/deploy, and N4-N1 live direct-route fallback work are substantially complete. The active goal is not complete because the stopping condition includes external legal/ops proof gates that remain missing.

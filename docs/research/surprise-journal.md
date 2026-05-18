@@ -649,3 +649,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N2 lesson-03 live proof still showed stale `圧` metadata after deploy because the browser reused an old `main.dart.js` bundle that did not contain the new Kanji seed sentinel, while Hosting already served the updated JSON asset.
 - Delta: -25 percentage points on confidence that bounded max-age is safe for unversioned Flutter web app-shell files during rapid content migration work.
 - Updated belief: un-fingerprinted app shell and content inventory assets must revalidate (`Cache-Control: no-cache`); keep long cache only for heavy runtime files that do not encode content/seed logic, such as `sqlite3.wasm` and `drift_worker.js`.
+
+## 2026-05-18 - Compound-derived Kanji can inherit the wrong word gloss
+
+- Prior belief: generated Kanji entries from JLPT vocabulary compounds mostly needed fluency/readings cleanup, not semantic correction for common component Kanji.
+- Actual observation: N2 lesson 04 assigned the compound gloss `knitting, web` from `編物` to `物`, even though KANJIDIC2/Unihan both define `物` as thing/object/matter.
+- Delta: -20 percentage points on confidence that compound-derived Kanji meanings are safe without per-character source verification.
+- Updated belief: every component Kanji in compound-derived lessons must be checked against character-level sources; compound glosses can inform examples but cannot be copied into each component's meaning.

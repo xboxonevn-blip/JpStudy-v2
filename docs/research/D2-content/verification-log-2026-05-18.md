@@ -626,3 +626,28 @@ Tagging: added file-level and entry-level `vi-source-verified`, replaced old `ap
 Runtime note: bumped content DB Kanji seed revision from `28` to `29` and added an N2 lesson-03 sentinel for `圧` so existing browsers reseed this metadata.
 
 Live proof after deploy: initial verification exposed a Hosting cache regression, not a content-data miss. The deployed asset already contained `Áp (áp lực; nén; ép)`, but the browser reused an old `main.dart.js` bundle whose Kanji seed sentinels stopped before lesson 03. Commit `dff7a998` changed non-fingerprinted Flutter shell files plus content assets to `Cache-Control: no-cache` while keeping `sqlite3.wasm` and `drift_worker.js` on `public, max-age=2592000`. After redeploy, a normal reload fetched `main.dart.js` from the network and VI/N2 search for `圧` opened the detail modal with `Áp (áp lực; nén; ép)`, Hán-Việt `Áp`, on `アツ, エン, オウ`, kun `お.す, へ.す, おさ.える`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 4 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Hán-Việt readings where present, old JLPT tier, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context in `assets/data/content/vocab/n2/ShinKanzen/tanos_n2_01.json`, used only to choose example words and cross-check the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `甘` | KANJIDIC2 `Cam`, readings `カン`, `あま.い/あま.える/あま.やかす/うま.い`, meanings `sweet`, `pamper`; Unihan `kVietnamese=cam`, `kDefinition=sweetness; sweet, tasty`; local context `甘やかす` | Rewrote display to `Cam (ngọt; dễ dãi; nuông chiều)`, added readings/search text, direct example `甘やかす`, and related kanji. |
+| `余` | KANJIDIC2 `Dư`, readings `ヨ`, `あま.る/あま.り/あま.す/あんま.り`, meanings `too much`, `surplus`, `remainder`; Unihan `kVietnamese=dư`; local context `余る` | Rewrote display to `Dư (thừa; còn lại; phần dư)`, direct example `余る`, search text, and surplus/remainder related kanji. |
+| `編` | KANJIDIC2 `Biên`, readings `ヘン`, `あ.む/-あ.み`, meanings `compilation`, `knit`, `editing`; Unihan `kVietnamese=biên`; local context `編物` | Rewrote display to `Biên (biên soạn; đan; phần sách)`, direct example `編物`, search text, and edit/knit related kanji. |
+| `物` | KANJIDIC2 `Vật`, readings `ブツ/モツ`, `もの`, meanings `thing`, `object`, `matter`; Unihan `kVietnamese=vật`; local context `編物` | Corrected the wrong source gloss from `knitting, web` to `Vật (vật; đồ vật; sự vật)`, direct example `編物`, search text, and object/thing related kanji. |
+| `危` | KANJIDIC2 `Nguy`, readings `キ`, `あぶ.ない/あや.うい/あや.ぶむ`, meanings `dangerous`, `fear`, `uneasy`; Unihan `kVietnamese=nguy`; local context `危うい` | Rewrote display to `Nguy (nguy hiểm; nguy cấp; bất an)`, direct example `危うい`, search text, and danger/safety related kanji. |
+| `怪` | KANJIDIC2 `Quái`, readings `カイ/ケ`, `あや.しい/あや.しむ`, meanings `suspicious`, `mystery`, `apparition`; Unihan `kDefinition=strange, unusual, peculiar`; local context `怪しい` | Rewrote display to `Quái (đáng ngờ; kỳ lạ; bí ẩn)`, added readings/search text, direct example `怪しい`, and mystery/suspicion related kanji. |
+| `荒` | KANJIDIC2 `Hoang`, readings `コウ`, `あ.らす/あ.れる/あら.い/すさ.ぶ/すさ.む/あ.らし`, meanings `laid waste`, `rough`, `wild`; Unihan `kVietnamese=hoang`; local context `荒い` | Rewrote display to `Hoang (hoang vu; thô bạo; dữ dội)`, direct example `荒い`, search text, and rough/wild related kanji. |
+| `粗` | KANJIDIC2 `Thô`, readings `ソ`, `あら.い/あら-`, meanings `coarse`, `rough`, `rugged`; Unihan `kVietnamese=thô`; local context `粗い` | Rewrote display to `Thô (thô; sơ sài; không mịn)`, direct example `粗い`, search text, and coarse/fine related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user`/`kanji-metadata-approved` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `29` to `30` and added an N2 lesson-04 sentinel for `甘` so existing browsers reseed this metadata.
+
+Live proof after deploy: normal reload fetched `main.dart.js` from the network, then VI/N2 Kanji search for `甘` opened the detail modal with `Cam (ngọt; dễ dãi; nuông chiều)`, Hán-Việt `Cam`, on `カン`, kun `あま.い, あま.える, あま.やかす, うま.い`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.

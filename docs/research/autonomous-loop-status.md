@@ -452,3 +452,11 @@
 - Bumped content DB Kanji seed revision to `29` and added an N2 lesson-03 sentinel for `圧` so existing browsers reseed the changed metadata.
 - Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `184` to `176`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed, and full `flutter test` passed (`2340`).
 - Live proof first found a Hosting cache regression: `main.dart.js` was cached for one day and kept running the previous bundle without the `圧` sentinel. Commit `dff7a998` changed non-fingerprinted Flutter shell/content assets to revalidate and kept only heavy runtime files on long cache. Verified `npm run test:research-tooling`, built/deployed, confirmed live headers, then normal reload fetched `main.dart.js` from network. VI/N2 search `圧` opened `Áp (áp lực; nén; ép)` with Hán-Việt `Áp`, on `アツ, エン, オウ`, kun `お.す, へ.す, おさ.える`; console warnings/errors `0`.
+
+## 2026-05-18 N2 Kanji Lesson 4 Completeness Patch
+
+- Source-verified all eight N2 lesson-04 kanji (`甘`, `余`, `編`, `物`, `危`, `怪`, `荒`, `粗`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote English-like `meaningVi` fields into learner-ready Vietnamese, corrected `物` from the wrong `knitting, web` source gloss to object/thing meaning, filled readings/search text, added non-empty `relatedKanji`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `30` and added an N2 lesson-04 sentinel for `甘` so existing browsers reseed the changed metadata.
+- Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `176` to `168`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed, and full `flutter test` passed (`2340`).
+- Built/deployed `2683dea2` to Firebase Hosting. Live proof with normal cache: VI/N2 search `甘` opened `Cam (ngọt; dễ dãi; nuông chiều)` with Hán-Việt `Cam`, on `カン`, kun `あま.い, あま.える, あま.やかす, うま.い`; console warnings/errors `0`.

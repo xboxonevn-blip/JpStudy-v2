@@ -576,3 +576,26 @@ Tagging: added file-level and entry-level `vi-source-verified`, replaced old `ap
 Runtime note: bumped content DB Kanji seed revision from `26` to `27` and added an N2 lesson-01 sentinel for `遭` so existing browsers reseed this metadata.
 
 Live proof after deploy: VI/N2 Kanji grid loaded `200` entries. Opening `遭` showed `Tao (gặp phải; gặp chuyện không may)`, Hán-Việt `Tao`, on `ソウ`, kun `あ.う, あ.わせる`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 2 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Hán-Việt readings where present, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese` cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context in `assets/data/content/vocab/n2/ShinKanzen/tanos_n2_01.json`, used only to choose example words and cross-check the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `挙` | KANJIDIC2 readings `キョ`, `あ.げる/あ.がる/こぞ.る`, meanings `raise`, `plan`, `project`, `actions`; local context `挙げる` | Rewrote display to `Cử (giơ lên; nêu ra; tổ chức; hành động)`, added readings/search text, direct example `挙げる`, and related kanji. |
+| `憧` | KANJIDIC2 readings `ショウ/トウ/ドウ`, `あこが.れる`, meanings `yearn after`, `long for`, `admire`; local context `憧れる` | Rewrote display to `Sung (ngưỡng mộ; khao khát; hướng tới)`, added readings/search text, direct example `憧れる`, and related kanji. |
+| `足` | KANJIDIC2 `Túc`, readings `ソク`, `あし/た.りる/た.る/た.す`, meanings `leg`, `foot`, `sufficient`; Unihan `kVietnamese=túc`; local context `足跡` | Rewrote display to `Túc (chân; bàn chân; đủ)`, direct example `足跡`, search text, and foot/movement related kanji. |
+| `跡` | KANJIDIC2 `Tích`, readings `セキ`, `あと`, meanings `tracks`, `mark`, `impression`; Unihan `kVietnamese=tích`; local context `足跡` | Rewrote display to `Tích (dấu vết; vết tích; dấu chân)`, direct example `足跡`, search text, and trace/mark related kanji. |
+| `味` | KANJIDIC2 `Vị`, readings `ミ`, `あじ/あじ.わう`, meanings `flavor`, `taste`; Unihan `kVietnamese=vị`; local context `味わう` | Rewrote display to `Vị (vị; mùi vị; thưởng thức)`, direct example `味わう`, search text, and taste/food related kanji. |
+| `預` | KANJIDIC2 `Dự`, readings `ヨ`, `あず.ける/あず.かる`, meanings `deposit`, `custody`, `entrust`; Unihan `kVietnamese=dự`; local context `預かる` | Rewrote display to `Dự (gửi giữ; nhận giữ; giao phó)`, direct example `預かる`, search text, and custody/responsibility related kanji. |
+| `暖` | KANJIDIC2 `Noãn`, readings `ダン/ノン`, `あたた.か/あたた.まる/あたた.める`, meaning `warmth`; local context `暖まる` | Rewrote display to `Noãn (ấm; hơi ấm; làm ấm)`, direct example `暖まる`, search text, and warmth/weather related kanji. |
+| `厚` | KANJIDIC2 `Hậu`, readings `コウ`, `あつ.い`, meanings `thick`, `kind`, `brazen`, `shameless`; local context `厚かましい` | Rewrote display to `Hậu (dày; nồng hậu; trơ trẽn)`, direct example `厚かましい`, search text, and nuance-related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `27` to `28` and added an N2 lesson-02 sentinel for `挙` so existing browsers reseed this metadata.

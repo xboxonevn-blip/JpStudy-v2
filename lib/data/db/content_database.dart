@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 27;
+const _kanjiSeedRevision = 28;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -22,6 +22,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '遭',
     meaning: 'Tao (gặp phải; gặp chuyện không may)',
     decompositionContains: '"hanViet":"Tao"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 2,
+    character: '挙',
+    meaning: 'Cử (giơ lên; nêu ra; tổ chức; hành động)',
+    decompositionContains: '"hanViet":"Cử"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

@@ -224,6 +224,13 @@ bumps the Kanji seed revision to `24`, and adds a lesson-23 sentinel for `歴`.
 Local coverage audit reduced N3 incomplete current entries from `23` to `16`;
 live proof opened `歴` with `Lịch (lịch sử; trải qua; quá trình)`.
 
+Kanji content expansion update: N2 lesson 02 is now source-verified against
+KANJIDIC2, Unihan where available, and existing N2 vocabulary context. The
+local patch fills Vietnamese display/search/readings/related-kanji metadata
+for all eight entries, bumps the Kanji seed revision to `28`, and adds a
+lesson-02 sentinel for `挙`. Local coverage audit reduced N2 incomplete
+current entries from `192` to `184`; live proof remains pending until deploy.
+
 ## Verdict
 
 Implementation, docs, tooling, CI/deploy, and N4-N1 live direct-route fallback work are substantially complete. The active goal is not complete because the stopping condition includes external legal/ops proof gates that remain missing.

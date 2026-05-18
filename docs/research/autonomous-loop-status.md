@@ -436,3 +436,10 @@
 - Rewrote English-like `meaningVi` fields into learner-ready Vietnamese, filled readings/search text, added non-empty `relatedKanji`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
 - Bumped content DB Kanji seed revision to `27` and added an N2 lesson-01 sentinel for `遭` so existing browsers reseed the changed metadata.
 - Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `200` to `192`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, and full `flutter test` passed (`2340`).
+
+## 2026-05-18 N2 Kanji Lesson 2 Completeness Patch
+
+- Source-verified all eight N2 lesson-02 kanji (`挙`, `憧`, `足`, `跡`, `味`, `預`, `暖`, `厚`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote English-like `meaningVi` fields into learner-ready Vietnamese, filled readings/search text, added non-empty `relatedKanji`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `28` and added an N2 lesson-02 sentinel for `挙` so existing browsers reseed the changed metadata.
+- Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `192` to `184`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed after updating the cache-header expectation for the new Hosting policy, and full `flutter test` passed (`2340`). Live proof remains pending until deploy.

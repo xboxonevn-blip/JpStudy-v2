@@ -8,7 +8,7 @@
   "lessonId": 2,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k009",
@@ -18,37 +18,47 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Cử",
-        "meaningVi": "to raise, to fly",
-        "meaningViDisplay": "挙 (to raise, to fly)",
-        "meaningEn": "to raise, to fly"
+        "meaningVi": "giơ lên; nêu ra; tổ chức; hành động",
+        "meaningViDisplay": "Cử (giơ lên; nêu ra; tổ chức; hành động)",
+        "meaningEn": "raise, plan, project, action"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キョ"
+        ],
         "kunyomi": [
-          "あげる"
+          "あ.げる",
+          "あ.がる",
+          "こぞ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 挙げる (to raise, to fly).",
-        "en": "Appears in JLPT N2 vocabulary: 挙げる (to raise, to fly)."
+        "vi": "挙 dùng khi đưa lên hoặc nêu ra một ý; trong 挙げる, nghĩa thường là giơ lên hoặc nêu ví dụ.",
+        "en": "挙 covers raising something or putting an idea forward, as in 挙げる."
       },
       "decomposition": {
         "hanViet": "Cử",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "上",
+          "手",
+          "揚",
+          "方"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cu",
-        "meaningViNoAccent": "to raise, to fly",
-        "meaningEnNoAccent": "to raise, to fly"
+        "meaningViNoAccent": "gio len; neu ra; to chuc; hanh dong",
+        "meaningEnNoAccent": "raise, plan, project, action"
       },
       "examples": [
         {
           "word": "挙げる",
           "reading": "あげる",
-          "meaning": "to raise, to fly"
+          "meaning": "giơ lên; nêu ra",
+          "meaningEn": "to raise, to mention"
         }
       ],
       "tags": [
@@ -56,7 +66,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,37 +79,47 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Sung",
-        "meaningVi": "to long for, to yearn after, to admire",
-        "meaningViDisplay": "憧 (to long for, to yearn after, to admire)",
-        "meaningEn": "to long for, to yearn after, to admire"
+        "meaningVi": "ngưỡng mộ; khao khát; hướng tới",
+        "meaningViDisplay": "Sung (ngưỡng mộ; khao khát; hướng tới)",
+        "meaningEn": "yearn after, long for, admire"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ",
+          "トウ",
+          "ドウ"
+        ],
         "kunyomi": [
-          "あこがれる"
+          "あこが.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 憧れる (to long for, to yearn after, to admire).",
-        "en": "Appears in JLPT N2 vocabulary: 憧れる (to long for, to yearn after, to admire)."
+        "vi": "憧 diễn tả sự hướng lòng về điều mình ngưỡng mộ, như 憧れる: ao ước, ngưỡng mộ.",
+        "en": "憧 points to longing for or admiring something, as in 憧れる."
       },
       "decomposition": {
         "hanViet": "Sung",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "心",
+          "童",
+          "望",
+          "慕"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Sung",
-        "meaningViNoAccent": "to long for, to yearn after, to admire",
-        "meaningEnNoAccent": "to long for, to yearn after, to admire"
+        "meaningViNoAccent": "nguong mo; khao khat; huong toi",
+        "meaningEnNoAccent": "yearn after, long for, admire"
       },
       "examples": [
         {
           "word": "憧れる",
           "reading": "あこがれる",
-          "meaning": "to long for, to yearn after, to admire"
+          "meaning": "ngưỡng mộ; khao khát",
+          "meaningEn": "to long for, to admire"
         }
       ],
       "tags": [
@@ -106,7 +127,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,37 +140,48 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Túc",
-        "meaningVi": "footprints",
-        "meaningViDisplay": "足 (footprints)",
-        "meaningEn": "footprints"
+        "meaningVi": "chân; bàn chân; đủ",
+        "meaningViDisplay": "Túc (chân; bàn chân; đủ)",
+        "meaningEn": "leg, foot, sufficient"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソク"
+        ],
         "kunyomi": [
-          "あしあと"
+          "あし",
+          "た.りる",
+          "た.る",
+          "た.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 足跡 (footprints).",
-        "en": "Appears in JLPT N2 vocabulary: 足跡 (footprints)."
+        "vi": "足 là chân; khi đi cùng 跡 trong 足跡, nó tạo nghĩa dấu chân.",
+        "en": "足 means foot or leg; with 跡 in 足跡 it forms 'footprint'."
       },
       "decomposition": {
         "hanViet": "Túc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "跡",
+          "走",
+          "路",
+          "歩"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tuc",
-        "meaningViNoAccent": "footprints",
-        "meaningEnNoAccent": "footprints"
+        "meaningViNoAccent": "chan; ban chan; du",
+        "meaningEnNoAccent": "leg, foot, sufficient"
       },
       "examples": [
         {
           "word": "足跡",
           "reading": "あしあと",
-          "meaning": "footprints"
+          "meaning": "dấu chân",
+          "meaningEn": "footprints"
         }
       ],
       "tags": [
@@ -156,9 +189,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k012",
@@ -168,37 +202,45 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Tích",
-        "meaningVi": "footprints",
-        "meaningViDisplay": "跡 (footprints)",
-        "meaningEn": "footprints"
+        "meaningVi": "dấu vết; vết tích; dấu chân",
+        "meaningViDisplay": "Tích (dấu vết; vết tích; dấu chân)",
+        "meaningEn": "tracks, mark, impression"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セキ"
+        ],
         "kunyomi": [
-          "あしあと"
+          "あと"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 足跡 (footprints).",
-        "en": "Appears in JLPT N2 vocabulary: 足跡 (footprints)."
+        "vi": "跡 là dấu vết còn lại; 足跡 là vết do chân để lại.",
+        "en": "跡 is a trace or mark left behind; 足跡 is a footprint."
       },
       "decomposition": {
         "hanViet": "Tích",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "足",
+          "残",
+          "印",
+          "歩"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tich",
-        "meaningViNoAccent": "footprints",
-        "meaningEnNoAccent": "footprints"
+        "meaningViNoAccent": "dau vet; vet tich; dau chan",
+        "meaningEnNoAccent": "tracks, mark, impression"
       },
       "examples": [
         {
           "word": "足跡",
           "reading": "あしあと",
-          "meaning": "footprints"
+          "meaning": "dấu chân",
+          "meaningEn": "footprints"
         }
       ],
       "tags": [
@@ -206,9 +248,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k013",
@@ -218,37 +261,46 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Vị",
-        "meaningVi": "to taste, to savor, to relish",
-        "meaningViDisplay": "味 (to taste, to savor, to relish)",
-        "meaningEn": "to taste, to savor, to relish"
+        "meaningVi": "vị; mùi vị; thưởng thức",
+        "meaningViDisplay": "Vị (vị; mùi vị; thưởng thức)",
+        "meaningEn": "flavor, taste"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ミ"
+        ],
         "kunyomi": [
-          "あじわう"
+          "あじ",
+          "あじ.わう"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 味わう (to taste, to savor, to relish).",
-        "en": "Appears in JLPT N2 vocabulary: 味わう (to taste, to savor, to relish)."
+        "vi": "味 là vị của món ăn; 味わう mở rộng thành nếm, thưởng thức hoặc cảm nhận.",
+        "en": "味 is flavor or taste; 味わう extends to tasting, savoring, or experiencing."
       },
       "decomposition": {
         "hanViet": "Vị",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "口",
+          "食",
+          "未",
+          "感"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vi",
-        "meaningViNoAccent": "to taste, to savor, to relish",
-        "meaningEnNoAccent": "to taste, to savor, to relish"
+        "meaningViNoAccent": "vi; mui vi; thuong thuc",
+        "meaningEnNoAccent": "flavor, taste"
       },
       "examples": [
         {
           "word": "味わう",
           "reading": "あじわう",
-          "meaning": "to taste, to savor, to relish"
+          "meaning": "nếm; thưởng thức; cảm nhận",
+          "meaningEn": "to taste, to savor"
         }
       ],
       "tags": [
@@ -256,9 +308,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k014",
@@ -268,37 +321,46 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Dự",
-        "meaningVi": "to keep in custody, to receive on deposit, to take charge of",
-        "meaningViDisplay": "預 (to keep in custody, to receive on deposit, to take charge of)",
-        "meaningEn": "to keep in custody, to receive on deposit, to take charge of"
+        "meaningVi": "gửi giữ; nhận giữ; giao phó",
+        "meaningViDisplay": "Dự (gửi giữ; nhận giữ; giao phó)",
+        "meaningEn": "deposit, custody, entrust"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヨ"
+        ],
         "kunyomi": [
-          "あずかる"
+          "あず.ける",
+          "あず.かる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 預かる (to keep in custody, to receive on deposit, to take charge of).",
-        "en": "Appears in JLPT N2 vocabulary: 預かる (to keep in custody, to receive on deposit, to take charge of)."
+        "vi": "預 gắn với việc gửi hoặc nhận giữ; 預かる là nhận giữ, phụ trách tạm thời.",
+        "en": "預 is about depositing or keeping in custody; 預かる means to keep or take charge of."
       },
       "decomposition": {
         "hanViet": "Dự",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "予",
+          "頁",
+          "任",
+          "保"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Du",
-        "meaningViNoAccent": "to keep in custody, to receive on deposit, to take charge of",
-        "meaningEnNoAccent": "to keep in custody, to receive on deposit, to take charge of"
+        "meaningViNoAccent": "gui giu; nhan giu; giao pho",
+        "meaningEnNoAccent": "deposit, custody, entrust"
       },
       "examples": [
         {
           "word": "預かる",
           "reading": "あずかる",
-          "meaning": "to keep in custody, to receive on deposit, to take charge of"
+          "meaning": "giữ hộ; nhận giữ; phụ trách",
+          "meaningEn": "to keep in custody, to take charge of"
         }
       ],
       "tags": [
@@ -306,9 +368,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k015",
@@ -318,37 +381,49 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Noãn",
-        "meaningVi": "to warm up, to get warm",
-        "meaningViDisplay": "暖 (to warm up, to get warm)",
-        "meaningEn": "to warm up, to get warm"
+        "meaningVi": "ấm; hơi ấm; làm ấm",
+        "meaningViDisplay": "Noãn (ấm; hơi ấm; làm ấm)",
+        "meaningEn": "warmth, warm"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ダン",
+          "ノン"
+        ],
         "kunyomi": [
-          "あたたまる"
+          "あたた.か",
+          "あたた.かい",
+          "あたた.まる",
+          "あたた.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 暖まる (to warm up, to get warm).",
-        "en": "Appears in JLPT N2 vocabulary: 暖まる (to warm up, to get warm)."
+        "vi": "暖 có bộ 日 gợi hơi ấm; 暖まる là trở nên ấm hơn.",
+        "en": "暖 points to warmth; 暖まる means to become warm."
       },
       "decomposition": {
         "hanViet": "Noãn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "日",
+          "温",
+          "寒",
+          "暑"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Noan",
-        "meaningViNoAccent": "to warm up, to get warm",
-        "meaningEnNoAccent": "to warm up, to get warm"
+        "meaningViNoAccent": "am; hoi am; lam am",
+        "meaningEnNoAccent": "warmth, warm"
       },
       "examples": [
         {
           "word": "暖まる",
           "reading": "あたたまる",
-          "meaning": "to warm up, to get warm"
+          "meaning": "ấm lên; trở nên ấm",
+          "meaningEn": "to warm up, to get warm"
         }
       ],
       "tags": [
@@ -356,7 +431,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +444,46 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Hậu",
-        "meaningVi": "impudent, shameless, brazen",
-        "meaningViDisplay": "厚 (impudent, shameless, brazen)",
-        "meaningEn": "impudent, shameless, brazen"
+        "meaningVi": "dày; nồng hậu; trơ trẽn",
+        "meaningViDisplay": "Hậu (dày; nồng hậu; trơ trẽn)",
+        "meaningEn": "thick, kind, brazen"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ"
+        ],
         "kunyomi": [
-          "あつかましい"
+          "あつ.い",
+          "あか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 厚かましい (impudent, shameless, brazen).",
-        "en": "Appears in JLPT N2 vocabulary: 厚かましい (impudent, shameless, brazen)."
+        "vi": "厚 vốn là dày hoặc nồng hậu; trong 厚かましい, sắc thái chuyển thành mặt dày, trơ trẽn.",
+        "en": "厚 can mean thick or cordial; in 厚かましい it takes the nuance of brazen shamelessness."
       },
       "decomposition": {
         "hanViet": "Hậu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "原",
+          "温",
+          "重",
+          "恥"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hau",
-        "meaningViNoAccent": "impudent, shameless, brazen",
-        "meaningEnNoAccent": "impudent, shameless, brazen"
+        "meaningViNoAccent": "day; nong hau; tro tren",
+        "meaningEnNoAccent": "thick, kind, brazen"
       },
       "examples": [
         {
           "word": "厚かましい",
           "reading": "あつかましい",
-          "meaning": "impudent, shameless, brazen"
+          "meaning": "trơ trẽn; mặt dày; không biết ngại",
+          "meaningEn": "impudent, shameless, brazen"
         }
       ],
       "tags": [
@@ -406,14 +491,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

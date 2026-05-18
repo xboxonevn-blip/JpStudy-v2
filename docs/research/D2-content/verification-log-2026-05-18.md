@@ -676,3 +676,28 @@ Tagging: added file-level and entry-level `vi-source-verified`, replaced old `ap
 Runtime note: bumped content DB Kanji seed revision from `30` to `31` and added an N2 lesson-05 sentinel for `争` so existing browsers reseed the changed metadata.
 
 Live proof after deploy: the first already-open Playwright tab still had an old Flutter runtime in memory; a normal reload fetched the no-cache shell and triggered the revision-31 reseed. VI/N2 Kanji search for `争` then opened the detail modal with `Tranh (tranh chấp; cạnh tranh; cãi nhau)`, Hán-Việt `Tranh`, on `ソウ`, kun `あらそ.う, いか.でか`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 6 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Hán-Việt readings where present, old JLPT tier, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context in `assets/data/content/vocab/n2/ShinKanzen/tanos_n2_01.json`, used only to choose example words and cross-check the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `案` | KANJIDIC2 `Án`, readings `アン`, `つくえ`, meanings `plan`, `suggestion`, `idea`; Unihan `kVietnamese=an án yên`, `kDefinition=table, bench; legal case`; local context `案外` | Rewrote display to `Án (ý tưởng; phương án; vụ việc)`, direct example `案外`, search text, and planning/expectation related kanji. |
+| `外` | KANJIDIC2 `Ngoại`, readings `ガイ/ゲ`, `そと/ほか/...`, meaning `outside`; Unihan `kVietnamese=ngoại`, `kDefinition=out, outside, external; foreign`; local context `案外` | Corrected the row away from the generated `unexpectedly` word gloss to `Ngoại (bên ngoài; khác; nước ngoài)`, direct example `案外`, search text, and outside/foreign related kanji. |
+| `言` | KANJIDIC2 `Ngôn`, readings `ゲン/ゴン`, `い.う/こと`, meanings `say`, `word`; Unihan `kVietnamese=ngôn`, `kDefinition=words, speech; speak, say`; local context `言い出す` | Rewrote display to `Ngôn (nói; lời nói; ngôn từ)`, direct example `言い出す`, search text, and speech related kanji. |
+| `出` | KANJIDIC2 `Xuất`, readings `シュツ/スイ`, `で.る/だ.す/...`, meanings `exit`, `leave`, `put out`; Unihan `kVietnamese=xuất`; local context `言い出す` | Corrected the row away from the generated `to start talking` word gloss to `Xuất (ra; đưa ra; bắt đầu)`, direct example `言い出す`, search text, and exit/output related kanji. |
+| `付` | KANJIDIC2 `Phó`, readings `フ`, `つ.ける/...`, meanings `adhere`, `attach`, `append`; Unihan `kVietnamese=phó`, `kDefinition=give, deliver, pay, hand over; entrust`; local context `言い付ける` | Rewrote display to `Phó (gắn; thêm; giao phó)`, direct example `言い付ける`, search text, and attach/order related kanji. |
+| `意` | KANJIDIC2 `Ý`, reading `イ`, meanings `idea`, `mind`, `thought`; Unihan `kVietnamese=ý`; local context `意義` | Rewrote display to `Ý (ý nghĩ; ý nghĩa; ý định)`, direct example `意義`, search text, and thought/meaning related kanji. |
+| `義` | KANJIDIC2 `Nghĩa`, reading `ギ`, meanings `righteousness`, `justice`, `meaning`; Unihan `kVietnamese=nghĩa`; local context `意義` | Rewrote display to `Nghĩa (nghĩa lý; chính nghĩa; đạo nghĩa)`, direct example `意義`, search text, and justice/meaning related kanji. |
+| `生` | KANJIDIC2 `Sinh`, readings `セイ/ショウ`, many life/birth kun readings, meanings `life`, `birth`; Unihan `kVietnamese=sinh`; local context `生き生き` | Corrected the row away from the generated `vividly/lively` word gloss to `Sinh (sống; sinh ra; sự sống)`, direct example `生き生き`, search text, and life/death related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user`/`kanji-metadata-approved` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `31` to `32` and added an N2 lesson-06 sentinel for `案` so existing browsers reseed the changed metadata.
+
+Live proof after deploy: normal reload fetched the no-cache shell and triggered the revision-32 reseed. VI/N2 Kanji search for `案` opened the detail modal with `Án (ý tưởng; phương án; vụ việc)`, Hán-Việt `Án`, on `アン`, kun `つくえ`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.

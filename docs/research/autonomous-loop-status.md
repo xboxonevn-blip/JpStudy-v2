@@ -468,3 +468,11 @@
 - Bumped content DB Kanji seed revision to `31` and added an N2 lesson-05 sentinel for `争` so existing browsers reseed the changed metadata.
 - Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `168` to `160`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed, and full `flutter test` passed (`2340`).
 - Built/deployed `c33fb9a1` to Firebase Hosting. Live proof after normal reload: VI/N2 search `争` opened `Tranh (tranh chấp; cạnh tranh; cãi nhau)` with Hán-Việt `Tranh`, on `ソウ`, kun `あらそ.う, いか.でか`; console warnings/errors `0`.
+
+## 2026-05-18 N2 Kanji Lesson 6 Completeness Patch
+
+- Source-verified all eight N2 lesson-06 kanji (`案`, `外`, `言`, `出`, `付`, `意`, `義`, `生`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote English-like or word-gloss-derived Vietnamese into learner-ready Kanji meanings, including correcting `外` away from `unexpectedly`, `出` away from `to start talking`, and `生` away from `vividly/lively`; filled readings/search text, added non-empty `relatedKanji`, replaced old `approved-by-user`/`kanji-metadata-approved` metadata with `vi-editorial-codex-pass`, and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `32` and added an N2 lesson-06 sentinel for `案` so existing browsers reseed the changed metadata.
+- Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `160` to `152`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed, and full `flutter test` passed (`2340`).
+- Built/deployed `4358efd3` to Firebase Hosting. Live proof after normal reload: VI/N2 search `案` opened `Án (ý tưởng; phương án; vụ việc)` with Hán-Việt `Án`, on `アン`, kun `つくえ`; console warnings/errors `0`.

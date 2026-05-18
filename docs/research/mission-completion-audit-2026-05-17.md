@@ -268,6 +268,17 @@ for `争`. Local coverage audit reduced N2 incomplete current entries from
 search opened `争` with `Tranh (tranh chấp; cạnh tranh; cãi nhau)` plus
 console warnings/errors `0`.
 
+Kanji content expansion update: N2 lesson 06 is now source-verified against
+KANJIDIC2, Unihan where available, and existing N2 vocabulary context. Commit
+`4358efd3` rewrites the eight lesson entries (`案`, `外`, `言`, `出`, `付`,
+`意`, `義`, `生`) into learner-ready Vietnamese, corrects generated word-gloss
+drift in `外`, `出`, and `生`, fills readings/search/related-kanji metadata,
+bumps the Kanji seed revision to `32`, and adds a lesson-06 sentinel for `案`.
+Local coverage audit reduced N2 incomplete current entries from `160` to
+`152`; full Flutter tests passed (`2340`). After deploy, live VI/N2 search
+opened `案` with `Án (ý tưởng; phương án; vụ việc)` plus console
+warnings/errors `0`.
+
 ## Verdict
 
 Implementation, docs, tooling, CI/deploy, and N4-N1 live direct-route fallback work are substantially complete. The active goal is not complete because the stopping condition includes external legal/ops proof gates that remain missing.

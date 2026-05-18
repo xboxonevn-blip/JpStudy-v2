@@ -279,6 +279,17 @@ Local coverage audit reduced N2 incomplete current entries from `160` to
 opened `案` with `Án (ý tưởng; phương án; vụ việc)` plus console
 warnings/errors `0`.
 
+Kanji content expansion update: N2 lesson 07 is now source-verified against
+KANJIDIC2, Unihan where available, and existing N2 vocabulary context. Commit
+`ec6a8a35` rewrites the eight lesson entries (`育`, `児`, `幾`, `分`, `花`,
+`以`, `後`, `降`) into learner-ready Vietnamese, corrects generated word-gloss
+fallback drift in `育`, `分`, and `後`, fills readings/search/related-kanji
+metadata, bumps the Kanji seed revision to `33`, and adds a lesson-07 sentinel
+for `育`. Local coverage audit reduced N2 incomplete current entries from
+`152` to `144`; full Flutter tests passed (`2340`). After deploy and a fresh
+live `content` IndexedDB, VI/N2 search opened `育` with
+`Dục (nuôi dạy; phát triển; giáo dục)` plus console warnings/errors `0`.
+
 ## Verdict
 
 Implementation, docs, tooling, CI/deploy, and N4-N1 live direct-route fallback work are substantially complete. The active goal is not complete because the stopping condition includes external legal/ops proof gates that remain missing.

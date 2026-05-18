@@ -701,3 +701,28 @@ Tagging: added file-level and entry-level `vi-source-verified`, replaced old `ap
 Runtime note: bumped content DB Kanji seed revision from `31` to `32` and added an N2 lesson-06 sentinel for `案` so existing browsers reseed the changed metadata.
 
 Live proof after deploy: normal reload fetched the no-cache shell and triggered the revision-32 reseed. VI/N2 Kanji search for `案` opened the detail modal with `Án (ý tưởng; phương án; vụ việc)`, Hán-Việt `Án`, on `アン`, kun `つくえ`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 7 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, old JLPT tier, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context in `assets/data/content/vocab/n2/ShinKanzen/tanos_n2_01.json`, used only to choose example words and cross-check the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `育` | KANJIDIC2 `Dục`, readings `イク`, `そだ.つ/そだ.ち/そだ.てる/はぐく.む`, meanings `bring up`, `grow up`; Unihan `kVietnamese=dục`; local context `育児` | Corrected the row away from generated `childcare` word-gloss fallback to `Dục (nuôi dạy; phát triển; giáo dục)`, added readings/search text, direct example `育児`, and related kanji. |
+| `児` | KANJIDIC2 `Nhi`, readings `ジ/ニ/ゲイ`, meanings `newborn babe`, `child`; Unihan `kVietnamese=nhi`; local context `育児` | Rewrote display to `Nhi (trẻ em; trẻ nhỏ; nhi đồng)`, added readings/search text, direct example `育児`, and child/family related kanji. |
+| `幾` | KANJIDIC2 `Kỷ`, readings `キ`, `いく-`, meanings `how many`, `some`; Unihan `kVietnamese=kỷ`; local context `幾分` | Rewrote display to `Kỷ (bao nhiêu; vài; phần nào)`, added readings/search text, direct example `幾分`, and quantity related kanji. |
+| `分` | KANJIDIC2 `Phân`, readings `ブン/フン/ブ`, `わ.ける/...`, meanings `part`, `minute`, `degree`; Unihan `kVietnamese=phân`; local context `幾分` | Corrected the row away from the generated `somewhat` word gloss to `Phân (phần; chia; phút)`, added readings/search text, direct example `幾分`, and part/time related kanji. |
+| `花` | KANJIDIC2 `Hoa`, readings `カ/ケ`, `はな`, meaning `flower`; Unihan `kVietnamese=hoa`; local context `生け花` | Rewrote display to `Hoa (hoa; bông hoa)`, added readings/search text, direct example `生け花`, and art/nature related kanji. |
+| `以` | KANJIDIC2 `Dĩ`, reading `イ`, meanings `by means of`, `because`, `compared with`; Unihan `kVietnamese=dĩ`; local context `以後` | Rewrote display to `Dĩ (lấy làm mốc; từ đó; bằng)`, added readings/search text, direct example `以後`, and boundary/time related kanji. |
+| `後` | KANJIDIC2 `Hậu`, readings `ゴ/コウ`, `のち/うし.ろ/あと/...`, meanings `behind`, `afterwards`; Unihan `kVietnamese=hậu`; local context `以後` | Corrected the row away from generated `after this` word-gloss fallback to `Hậu (sau; phía sau; về sau)`, added readings/search text, direct example `以後`, and time/order related kanji. |
+| `降` | KANJIDIC2 `Giáng`, readings `コウ/ゴ`, `お.りる/ふ.る`, meanings `descend`, `rain`, `surrender`; Unihan `kVietnamese=giáng`; local context `以降` | Rewrote display to `Giáng (xuống; rơi; đầu hàng)`, added readings/search text, direct example `以降`, and movement/weather related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `32` to `33` and added an N2 lesson-07 sentinel for `育` so existing browsers reseed the changed metadata.
+
+Live proof after deploy: the already-open Playwright tab initially reused stale cached lesson data, so `育` showed the generated `育児` fallback. With cache disabled and a fresh live `content` IndexedDB, VI/N2 Kanji search for `育` opened the detail modal with `Dục (nuôi dạy; phát triển; giáo dục)`, Hán-Việt `Dục`, on `イク`, kun `そだ.つ, そだ.ち, そだ.てる, はぐく.む`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.

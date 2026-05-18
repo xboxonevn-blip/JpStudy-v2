@@ -8,7 +8,7 @@
   "lessonId": 6,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k041",
@@ -17,38 +17,46 @@
       "character": "案",
       "strokeCount": 10,
       "labels": {
-        "hanViet": "An Án Yên",
-        "meaningVi": "unexpectedly",
-        "meaningViDisplay": "案 (unexpectedly)",
-        "meaningEn": "unexpectedly"
+        "hanViet": "Án",
+        "meaningVi": "ý tưởng; phương án; vụ việc",
+        "meaningViDisplay": "Án (ý tưởng; phương án; vụ việc)",
+        "meaningEn": "plan, proposal, idea"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アン"
+        ],
         "kunyomi": [
-          "あんがい"
+          "つくえ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 案外 (unexpectedly).",
-        "en": "Appears in JLPT N2 vocabulary: 案外 (unexpectedly)."
+        "vi": "案 là phương án hoặc ý tưởng được đặt ra; 案外 là việc xảy ra ngoài dự tính nên thành 'bất ngờ'.",
+        "en": "案 means a plan or proposal; 案外 is outside the expected plan, so it means unexpectedly."
       },
       "decomposition": {
-        "hanViet": "An Án Yên",
+        "hanViet": "Án",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "考",
+          "計",
+          "提",
+          "外"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "An An Yen",
-        "meaningViNoAccent": "unexpectedly",
-        "meaningEnNoAccent": "unexpectedly"
+        "hanVietNoAccent": "An",
+        "meaningViNoAccent": "y tuong; phuong an; vu viec",
+        "meaningEnNoAccent": "plan, proposal, idea"
       },
       "examples": [
         {
           "word": "案外",
           "reading": "あんがい",
-          "meaning": "unexpectedly"
+          "meaning": "bất ngờ; ngoài dự đoán",
+          "meaningEn": "unexpectedly"
         }
       ],
       "tags": [
@@ -56,10 +64,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k042",
@@ -69,37 +77,50 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Ngoại",
-        "meaningVi": "unexpectedly",
-        "meaningViDisplay": "外 (unexpectedly)",
-        "meaningEn": "unexpectedly"
+        "meaningVi": "bên ngoài; khác; nước ngoài",
+        "meaningViDisplay": "Ngoại (bên ngoài; khác; nước ngoài)",
+        "meaningEn": "outside, external, foreign"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ガイ",
+          "ゲ"
+        ],
         "kunyomi": [
-          "あんがい"
+          "そと",
+          "ほか",
+          "はず.す",
+          "はず.れる",
+          "と-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 案外 (unexpectedly).",
-        "en": "Appears in JLPT N2 vocabulary: 案外 (unexpectedly)."
+        "vi": "外 là bên ngoài hoặc thứ khác; 案外 là kết quả nằm ngoài phương án/dự đoán ban đầu.",
+        "en": "外 means outside or other; 案外 is outside the expected plan."
       },
       "decomposition": {
         "hanViet": "Ngoại",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "内",
+          "国",
+          "案",
+          "海"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ngoai",
-        "meaningViNoAccent": "unexpectedly",
-        "meaningEnNoAccent": "unexpectedly"
+        "meaningViNoAccent": "ben ngoai; khac; nuoc ngoai",
+        "meaningEnNoAccent": "outside, external, foreign"
       },
       "examples": [
         {
           "word": "案外",
           "reading": "あんがい",
-          "meaning": "unexpectedly"
+          "meaning": "bất ngờ; ngoài dự đoán",
+          "meaningEn": "unexpectedly"
         }
       ],
       "tags": [
@@ -107,10 +128,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k043",
@@ -120,37 +141,47 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Ngôn",
-        "meaningVi": "to start talking, to speak, to tell, to propose, to suggest, to break the ice",
-        "meaningViDisplay": "言 (to start talking, to speak, to tell, to propose, to suggest, to break the ice)",
-        "meaningEn": "to start talking, to speak, to tell, to propose, to suggest, to break the ice"
+        "meaningVi": "nói; lời nói; ngôn từ",
+        "meaningViDisplay": "Ngôn (nói; lời nói; ngôn từ)",
+        "meaningEn": "say, word, speech"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゲン",
+          "ゴン"
+        ],
         "kunyomi": [
-          "いいだす"
+          "い.う",
+          "こと"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 言い出す (to start talking, to speak, to tell, to propose, to suggest, to break the ice).",
-        "en": "Appears in JLPT N2 vocabulary: 言い出す (to start talking, to speak, to tell, to propose, to suggest, to break the ice)."
+        "vi": "言 là lời nói; trong 言い出す, nó nhấn mạnh việc bắt đầu nói hoặc nêu ra một ý.",
+        "en": "言 means words or speech; in 言い出す it marks starting to say or propose something."
       },
       "decomposition": {
         "hanViet": "Ngôn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "語",
+          "話",
+          "説",
+          "出"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ngon",
-        "meaningViNoAccent": "to start talking, to speak, to tell, to propose, to suggest, to break the ice",
-        "meaningEnNoAccent": "to start talking, to speak, to tell, to propose, to suggest, to break the ice"
+        "meaningViNoAccent": "noi; loi noi; ngon tu",
+        "meaningEnNoAccent": "say, word, speech"
       },
       "examples": [
         {
           "word": "言い出す",
           "reading": "いいだす",
-          "meaning": "to start talking, to speak, to tell, to propose, to suggest, to break the ice"
+          "meaning": "bắt đầu nói; đề xuất; khơi mào",
+          "meaningEn": "to start talking, to propose"
         }
       ],
       "tags": [
@@ -158,10 +189,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k044",
@@ -171,37 +202,51 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Xuất",
-        "meaningVi": "to start talking, to speak, to tell, to propose, to suggest, to break the ice",
-        "meaningViDisplay": "出 (to start talking, to speak, to tell, to propose, to suggest, to break the ice)",
-        "meaningEn": "to start talking, to speak, to tell, to propose, to suggest, to break the ice"
+        "meaningVi": "ra; đưa ra; bắt đầu",
+        "meaningViDisplay": "Xuất (ra; đưa ra; bắt đầu)",
+        "meaningEn": "exit, leave, put out"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュツ",
+          "スイ"
+        ],
         "kunyomi": [
-          "いいだす"
+          "で.る",
+          "-で",
+          "だ.す",
+          "-だ.す",
+          "い.でる",
+          "い.だす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 言い出す (to start talking, to speak, to tell, to propose, to suggest, to break the ice).",
-        "en": "Appears in JLPT N2 vocabulary: 言い出す (to start talking, to speak, to tell, to propose, to suggest, to break the ice)."
+        "vi": "出 là đi ra hoặc đưa ra; 言い出す là đưa lời nói ra, tức bắt đầu nói hoặc đề xuất.",
+        "en": "出 means go out or put out; 言い出す is to put words out, i.e. start saying or proposing."
       },
       "decomposition": {
         "hanViet": "Xuất",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "入",
+          "言",
+          "発",
+          "外"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Xuat",
-        "meaningViNoAccent": "to start talking, to speak, to tell, to propose, to suggest, to break the ice",
-        "meaningEnNoAccent": "to start talking, to speak, to tell, to propose, to suggest, to break the ice"
+        "meaningViNoAccent": "ra; dua ra; bat dau",
+        "meaningEnNoAccent": "exit, leave, put out"
       },
       "examples": [
         {
           "word": "言い出す",
           "reading": "いいだす",
-          "meaning": "to start talking, to speak, to tell, to propose, to suggest, to break the ice"
+          "meaning": "bắt đầu nói; đề xuất; khơi mào",
+          "meaningEn": "to start talking, to propose"
         }
       ],
       "tags": [
@@ -209,10 +254,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k045",
@@ -222,37 +267,59 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Phó",
-        "meaningVi": "to tell, to tell on (someone), to order",
-        "meaningViDisplay": "付 (to tell, to tell on (someone), to order)",
-        "meaningEn": "to tell, to tell on (someone), to order"
+        "meaningVi": "gắn; thêm; giao phó",
+        "meaningViDisplay": "Phó (gắn; thêm; giao phó)",
+        "meaningEn": "attach, append, hand over"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "フ"
+        ],
         "kunyomi": [
-          "いいつける"
+          "つ.ける",
+          "-つ.ける",
+          "-づ.ける",
+          "つ.け",
+          "つ.け-",
+          "-つ.け",
+          "-づ.け",
+          "-づけ",
+          "つ.く",
+          "-づ.く",
+          "つ.き",
+          "-つ.き",
+          "-つき",
+          "-づ.き",
+          "-づき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 言い付ける (to tell, to tell on (someone), to order).",
-        "en": "Appears in JLPT N2 vocabulary: 言い付ける (to tell, to tell on (someone), to order)."
+        "vi": "付 là gắn thêm hoặc giao cho; 言い付ける là gắn lời chỉ thị cho ai đó nên có nghĩa ra lệnh hoặc truyền đạt.",
+        "en": "付 means attach or entrust; 言い付ける attaches an instruction to someone, so it means order or tell."
       },
       "decomposition": {
         "hanViet": "Phó",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "着",
+          "加",
+          "言",
+          "任"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Pho",
-        "meaningViNoAccent": "to tell, to tell on (someone), to order",
-        "meaningEnNoAccent": "to tell, to tell on (someone), to order"
+        "meaningViNoAccent": "gan; them; giao pho",
+        "meaningEnNoAccent": "attach, append, hand over"
       },
       "examples": [
         {
           "word": "言い付ける",
           "reading": "いいつける",
-          "meaning": "to tell, to tell on (someone), to order"
+          "meaning": "truyền đạt; ra lệnh; mách với ai",
+          "meaningEn": "to tell, to order, to tell on someone"
         }
       ],
       "tags": [
@@ -260,10 +327,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k046",
@@ -273,37 +340,43 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Ý",
-        "meaningVi": "meaning, significance",
-        "meaningViDisplay": "意 (meaning, significance)",
-        "meaningEn": "meaning, significance"
+        "meaningVi": "ý nghĩ; ý nghĩa; ý định",
+        "meaningViDisplay": "Ý (ý nghĩ; ý nghĩa; ý định)",
+        "meaningEn": "idea, mind, intention"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "いぎ"
-        ]
+        "onyomi": [
+          "イ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 意義 (meaning, significance).",
-        "en": "Appears in JLPT N2 vocabulary: 意義 (meaning, significance)."
+        "vi": "意 là ý nghĩ hoặc dụng ý trong đầu; 意義 là ý nghĩa và giá trị của một việc.",
+        "en": "意 means idea, mind, or intention; 意義 is the significance or value of something."
       },
       "decomposition": {
         "hanViet": "Ý",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "心",
+          "思",
+          "義",
+          "味"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Y",
-        "meaningViNoAccent": "meaning, significance",
-        "meaningEnNoAccent": "meaning, significance"
+        "meaningViNoAccent": "y nghi; y nghia; y dinh",
+        "meaningEnNoAccent": "idea, mind, intention"
       },
       "examples": [
         {
           "word": "意義",
           "reading": "いぎ",
-          "meaning": "meaning, significance"
+          "meaning": "ý nghĩa; tầm quan trọng",
+          "meaningEn": "meaning, significance"
         }
       ],
       "tags": [
@@ -311,10 +384,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k047",
@@ -324,37 +397,43 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Nghĩa",
-        "meaningVi": "meaning, significance",
-        "meaningViDisplay": "義 (meaning, significance)",
-        "meaningEn": "meaning, significance"
+        "meaningVi": "nghĩa lý; chính nghĩa; đạo nghĩa",
+        "meaningViDisplay": "Nghĩa (nghĩa lý; chính nghĩa; đạo nghĩa)",
+        "meaningEn": "meaning, justice, righteousness"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "いぎ"
-        ]
+        "onyomi": [
+          "ギ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 意義 (meaning, significance).",
-        "en": "Appears in JLPT N2 vocabulary: 意義 (meaning, significance)."
+        "vi": "義 là nghĩa lý hoặc điều đúng; trong 意義, nó kết hợp với 意 để chỉ ý nghĩa/tầm quan trọng.",
+        "en": "義 means meaning, justice, or righteousness; in 意義 it combines with 意 for significance."
       },
       "decomposition": {
         "hanViet": "Nghĩa",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "意",
+          "正",
+          "理",
+          "道"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nghia",
-        "meaningViNoAccent": "meaning, significance",
-        "meaningEnNoAccent": "meaning, significance"
+        "meaningViNoAccent": "nghia ly; chinh nghia; dao nghia",
+        "meaningEnNoAccent": "meaning, justice, righteousness"
       },
       "examples": [
         {
           "word": "意義",
           "reading": "いぎ",
-          "meaning": "meaning, significance"
+          "meaning": "ý nghĩa; tầm quan trọng",
+          "meaningEn": "meaning, significance"
         }
       ],
       "tags": [
@@ -362,10 +441,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k048",
@@ -375,37 +454,63 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Sinh",
-        "meaningVi": "vividly, lively",
-        "meaningViDisplay": "生 (vividly, lively)",
-        "meaningEn": "vividly, lively"
+        "meaningVi": "sống; sinh ra; sự sống",
+        "meaningViDisplay": "Sinh (sống; sinh ra; sự sống)",
+        "meaningEn": "life, birth, genuine"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いきいき"
+          "い.きる",
+          "い.かす",
+          "い.ける",
+          "う.まれる",
+          "うま.れる",
+          "う.まれ",
+          "うまれ",
+          "う.む",
+          "お.う",
+          "は.える",
+          "は.やす",
+          "き",
+          "なま",
+          "なま-",
+          "な.る",
+          "な.す",
+          "む.す",
+          "-う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 生き生き (vividly, lively).",
-        "en": "Appears in JLPT N2 vocabulary: 生き生き (vividly, lively)."
+        "vi": "生 là sống hoặc sinh ra; 生き生き mô tả trạng thái sống động, đầy sức sống.",
+        "en": "生 means life or birth; 生き生き describes something lively and full of life."
       },
       "decomposition": {
         "hanViet": "Sinh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "活",
+          "命",
+          "育",
+          "死"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Sinh",
-        "meaningViNoAccent": "vividly, lively",
-        "meaningEnNoAccent": "vividly, lively"
+        "meaningViNoAccent": "song; sinh ra; su song",
+        "meaningEnNoAccent": "life, birth, genuine"
       },
       "examples": [
         {
           "word": "生き生き",
           "reading": "いきいき",
-          "meaning": "vividly, lively"
+          "meaning": "sinh động; đầy sức sống",
+          "meaningEn": "vividly, lively"
         }
       ],
       "tags": [
@@ -413,15 +518,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

@@ -624,3 +624,5 @@ Sources consulted:
 Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
 
 Runtime note: bumped content DB Kanji seed revision from `28` to `29` and added an N2 lesson-03 sentinel for `圧` so existing browsers reseed this metadata.
+
+Live proof after deploy: initial verification exposed a Hosting cache regression, not a content-data miss. The deployed asset already contained `Áp (áp lực; nén; ép)`, but the browser reused an old `main.dart.js` bundle whose Kanji seed sentinels stopped before lesson 03. Commit `dff7a998` changed non-fingerprinted Flutter shell files plus content assets to `Cache-Control: no-cache` while keeping `sqlite3.wasm` and `drift_worker.js` on `public, max-age=2592000`. After redeploy, a normal reload fetched `main.dart.js` from the network and VI/N2 search for `圧` opened the detail modal with `Áp (áp lực; nén; ép)`, Hán-Việt `Áp`, on `アツ, エン, オウ`, kun `お.す, へ.す, おさ.える`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.

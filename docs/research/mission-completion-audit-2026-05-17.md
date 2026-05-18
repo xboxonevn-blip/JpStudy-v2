@@ -237,7 +237,14 @@ KANJIDIC2, Unihan where available, and existing N2 vocabulary context. The
 local patch fills Vietnamese display/search/readings/related-kanji metadata
 for all eight entries, bumps the Kanji seed revision to `29`, and adds a
 lesson-03 sentinel for `圧`. Local coverage audit reduced N2 incomplete
-current entries from `184` to `176`; live proof remains pending until deploy.
+current entries from `184` to `176`. Initial live proof found a Hosting cache
+regression: the browser reused an old non-fingerprinted `main.dart.js`, so the
+latest sentinel was not running even though the JSON asset was current. Commit
+`dff7a998` now makes Flutter shell/content assets revalidate while keeping
+`sqlite3.wasm` and `drift_worker.js` on long cache. After redeploy, live
+headers showed `main.dart.js=no-cache` and content JSON `no-cache`; normal
+reload fetched `main.dart.js` from network, and VI/N2 search opened `圧` with
+`Áp (áp lực; nén; ép)` plus console warnings/errors `0`.
 
 ## Verdict
 

@@ -642,3 +642,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: lesson-25 proof initially kept rendering stale `際` metadata until the service worker and Cache Storage were cleared and the app was reloaded, while preserving IndexedDB.
 - Delta: -15 percentage points on confidence that URL cache-busting alone bypasses Flutter web shell caching.
 - Updated belief: live proof for content DB seed migrations should explicitly bypass the service worker/web cache but keep IndexedDB, so verification tests both the newest bundle and the existing-user migration path.
+
+## 2026-05-18 - Non-fingerprinted Flutter JS cannot use fixed max-age
+
+- Prior belief: a one-day cache on `main.dart.js`, `flutter_bootstrap.js`, and content JSON was a safe bandwidth optimization because `index.html` and service-worker metadata stayed fresh.
+- Actual observation: N2 lesson-03 live proof still showed stale `圧` metadata after deploy because the browser reused an old `main.dart.js` bundle that did not contain the new Kanji seed sentinel, while Hosting already served the updated JSON asset.
+- Delta: -25 percentage points on confidence that bounded max-age is safe for unversioned Flutter web app-shell files during rapid content migration work.
+- Updated belief: un-fingerprinted app shell and content inventory assets must revalidate (`Cache-Control: no-cache`); keep long cache only for heavy runtime files that do not encode content/seed logic, such as `sqlite3.wasm` and `drift_worker.js`.

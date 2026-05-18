@@ -8,7 +8,7 @@
   "lessonId": 8,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k057",
@@ -18,37 +18,45 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Dũng",
-        "meaningVi": "brave, valiant, gallant, courageous",
-        "meaningViDisplay": "勇 (brave, valiant, gallant, courageous)",
-        "meaningEn": "brave, valiant, gallant, courageous"
+        "meaningVi": "dũng cảm; can đảm; khí phách",
+        "meaningViDisplay": "Dũng (dũng cảm; can đảm; khí phách)",
+        "meaningEn": "courage, bravery, heroic spirit"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ユウ"
+        ],
         "kunyomi": [
-          "いさましい"
+          "いさ.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 勇ましい (brave, valiant, gallant, courageous).",
-        "en": "Appears in JLPT N2 vocabulary: 勇ましい (brave, valiant, gallant, courageous)."
+        "vi": "勇 là lòng dũng cảm hoặc khí phách; 勇ましい tả dáng vẻ can đảm, hào hùng.",
+        "en": "勇 means courage or bravery; 勇ましい describes a brave or gallant quality."
       },
       "decomposition": {
         "hanViet": "Dũng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "気",
+          "敢",
+          "雄",
+          "士"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dung",
-        "meaningViNoAccent": "brave, valiant, gallant, courageous",
-        "meaningEnNoAccent": "brave, valiant, gallant, courageous"
+        "meaningViNoAccent": "dung cam; can dam; khi phach",
+        "meaningEnNoAccent": "courage, bravery, heroic spirit"
       },
       "examples": [
         {
           "word": "勇ましい",
           "reading": "いさましい",
-          "meaning": "brave, valiant, gallant, courageous"
+          "meaning": "dũng cảm; hào hùng; can đảm",
+          "meaningEn": "brave, valiant, courageous"
         }
       ],
       "tags": [
@@ -56,9 +64,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k058",
@@ -68,37 +77,48 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Y",
-        "meaningVi": "necessities of life (food,  clothing,  etc.)",
-        "meaningViDisplay": "衣 (necessities of life (food,  clothing,  etc.))",
-        "meaningEn": "necessities of life (food,  clothing,  etc.)"
+        "meaningVi": "áo quần; y phục; lớp phủ",
+        "meaningViDisplay": "Y (áo quần; y phục; lớp phủ)",
+        "meaningEn": "garment, clothing, cover"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ",
+          "エ"
+        ],
         "kunyomi": [
-          "いしょくじゅう"
+          "ころも",
+          "きぬ",
+          "-ぎ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 衣食住 (necessities of life (food,  clothing,  etc.)).",
-        "en": "Appears in JLPT N2 vocabulary: 衣食住 (necessities of life (food,  clothing,  etc.))."
+        "vi": "衣 là y phục, áo quần; trong 衣食住, nó đứng cho nhu cầu mặc.",
+        "en": "衣 means clothing or garments; in 衣食住 it represents clothing as a basic need."
       },
       "decomposition": {
         "hanViet": "Y",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "食",
+          "住",
+          "服",
+          "装"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Y",
-        "meaningViNoAccent": "necessities of life (food,  clothing,  etc.)",
-        "meaningEnNoAccent": "necessities of life (food,  clothing,  etc.)"
+        "meaningViNoAccent": "ao quan; y phuc; lop phu",
+        "meaningEnNoAccent": "garment, clothing, cover"
       },
       "examples": [
         {
           "word": "衣食住",
           "reading": "いしょくじゅう",
-          "meaning": "necessities of life (food,  clothing,  etc.)"
+          "meaning": "ăn mặc ở; nhu cầu thiết yếu của đời sống",
+          "meaningEn": "necessities of life"
         }
       ],
       "tags": [
@@ -106,9 +126,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k059",
@@ -118,37 +139,49 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Thực",
-        "meaningVi": "necessities of life (food,  clothing,  etc.)",
-        "meaningViDisplay": "食 (necessities of life (food,  clothing,  etc.))",
-        "meaningEn": "necessities of life (food,  clothing,  etc.)"
+        "meaningVi": "ăn; thức ăn; bữa ăn",
+        "meaningViDisplay": "Thực (ăn; thức ăn; bữa ăn)",
+        "meaningEn": "eat, food, meal"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショク",
+          "ジキ"
+        ],
         "kunyomi": [
-          "いしょくじゅう"
+          "く.う",
+          "く.らう",
+          "た.べる",
+          "は.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 衣食住 (necessities of life (food,  clothing,  etc.)).",
-        "en": "Appears in JLPT N2 vocabulary: 衣食住 (necessities of life (food,  clothing,  etc.))."
+        "vi": "食 là ăn hoặc thức ăn; trong 衣食住, nó đứng cho nhu cầu ăn uống.",
+        "en": "食 means eating or food; in 衣食住 it represents food as a basic need."
       },
       "decomposition": {
         "hanViet": "Thực",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "衣",
+          "住",
+          "飲",
+          "飯"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thuc",
-        "meaningViNoAccent": "necessities of life (food,  clothing,  etc.)",
-        "meaningEnNoAccent": "necessities of life (food,  clothing,  etc.)"
+        "meaningViNoAccent": "an; thuc an; bua an",
+        "meaningEnNoAccent": "eat, food, meal"
       },
       "examples": [
         {
           "word": "衣食住",
           "reading": "いしょくじゅう",
-          "meaning": "necessities of life (food,  clothing,  etc.)"
+          "meaning": "ăn mặc ở; nhu cầu thiết yếu của đời sống",
+          "meaningEn": "necessities of life"
         }
       ],
       "tags": [
@@ -156,7 +189,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,37 +202,49 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Trú",
-        "meaningVi": "necessities of life (food,  clothing,  etc.)",
-        "meaningViDisplay": "住 (necessities of life (food,  clothing,  etc.))",
-        "meaningEn": "necessities of life (food,  clothing,  etc.)"
+        "meaningVi": "sống; cư trú; ở",
+        "meaningViDisplay": "Trú (sống; cư trú; ở)",
+        "meaningEn": "dwell, reside, live"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジュウ",
+          "ヂュウ",
+          "チュウ"
+        ],
         "kunyomi": [
-          "いしょくじゅう"
+          "す.む",
+          "す.まう",
+          "-ず.まい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 衣食住 (necessities of life (food,  clothing,  etc.)).",
-        "en": "Appears in JLPT N2 vocabulary: 衣食住 (necessities of life (food,  clothing,  etc.))."
+        "vi": "住 là sống hoặc cư trú; trong 衣食住, nó đứng cho nhu cầu chỗ ở.",
+        "en": "住 means to live or reside; in 衣食住 it represents housing as a basic need."
       },
       "decomposition": {
         "hanViet": "Trú",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "衣",
+          "食",
+          "居",
+          "宅"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tru",
-        "meaningViNoAccent": "necessities of life (food,  clothing,  etc.)",
-        "meaningEnNoAccent": "necessities of life (food,  clothing,  etc.)"
+        "meaningViNoAccent": "song; cu tru; o",
+        "meaningEnNoAccent": "dwell, reside, live"
       },
       "examples": [
         {
           "word": "衣食住",
           "reading": "いしょくじゅう",
-          "meaning": "necessities of life (food,  clothing,  etc.)"
+          "meaning": "ăn mặc ở; nhu cầu thiết yếu của đời sống",
+          "meaningEn": "necessities of life"
         }
       ],
       "tags": [
@@ -206,9 +252,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k061",
@@ -218,37 +265,44 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Địa",
-        "meaningVi": "malicious, ill-tempered, unkind",
-        "meaningViDisplay": "地 (malicious, ill-tempered, unkind)",
-        "meaningEn": "malicious, ill-tempered, unkind"
+        "meaningVi": "đất; mặt đất; vùng đất",
+        "meaningViDisplay": "Địa (đất; mặt đất; vùng đất)",
+        "meaningEn": "ground, earth, region"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "いじわる"
-        ]
+        "onyomi": [
+          "チ",
+          "ジ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 意地悪 (malicious, ill-tempered, unkind).",
-        "en": "Appears in JLPT N2 vocabulary: 意地悪 (malicious, ill-tempered, unkind)."
+        "vi": "地 là đất hoặc vùng đất; trong 意地悪, chữ này nằm trong thành ngữ chỉ tính cách xấu.",
+        "en": "地 means ground or region; in 意地悪 it is part of an idiom for a mean disposition."
       },
       "decomposition": {
         "hanViet": "Địa",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "土",
+          "域",
+          "意",
+          "悪"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đia",
-        "meaningViNoAccent": "malicious, ill-tempered, unkind",
-        "meaningEnNoAccent": "malicious, ill-tempered, unkind"
+        "hanVietNoAccent": "Dia",
+        "meaningViNoAccent": "dat; mat dat; vung dat",
+        "meaningEnNoAccent": "ground, earth, region"
       },
       "examples": [
         {
           "word": "意地悪",
           "reading": "いじわる",
-          "meaning": "malicious, ill-tempered, unkind"
+          "meaning": "xấu tính; độc ác; không tử tế",
+          "meaningEn": "malicious, ill-tempered, unkind"
         }
       ],
       "tags": [
@@ -256,9 +310,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k062",
@@ -268,45 +323,60 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Ác",
-        "meaningVi": "malicious, ill-tempered, unkind",
-        "meaningViDisplay": "悪 (malicious, ill-tempered, unkind)",
-        "meaningEn": "malicious, ill-tempered, unkind"
+        "meaningVi": "xấu; ác; sai trái",
+        "meaningViDisplay": "Ác (xấu; ác; sai trái)",
+        "meaningEn": "bad, evil, wrong"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アク",
+          "オ"
+        ],
         "kunyomi": [
-          "いじわる"
+          "わる.い",
+          "わる-",
+          "あ.し",
+          "にく.い",
+          "-にく.い",
+          "にく.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 意地悪 (malicious, ill-tempered, unkind).",
-        "en": "Appears in JLPT N2 vocabulary: 意地悪 (malicious, ill-tempered, unkind)."
+        "vi": "悪 là xấu hoặc ác; trong 意地悪, nó góp nghĩa xấu tính, không tử tế.",
+        "en": "悪 means bad, evil, or wrong; in 意地悪 it marks a mean or unkind character."
       },
       "decomposition": {
         "hanViet": "Ác",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "善",
+          "意",
+          "地",
+          "罪"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ac",
-        "meaningViNoAccent": "malicious, ill-tempered, unkind",
-        "meaningEnNoAccent": "malicious, ill-tempered, unkind"
+        "meaningViNoAccent": "xau; ac; sai trai",
+        "meaningEnNoAccent": "bad, evil, wrong"
       },
       "examples": [
         {
           "word": "意地悪",
           "reading": "いじわる",
-          "meaning": "malicious, ill-tempered, unkind"
+          "meaning": "xấu tính; độc ác; không tử tế",
+          "meaningEn": "malicious, ill-tempered, unkind"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +388,47 @@
       "strokeCount": 1,
       "labels": {
         "hanViet": "Nhất",
-        "meaningVi": "once, tentatively, in outline, for the time being",
-        "meaningViDisplay": "一 (once, tentatively, in outline, for the time being)",
-        "meaningEn": "once, tentatively, in outline, for the time being"
+        "meaningVi": "một; đầu tiên; thống nhất",
+        "meaningViDisplay": "Nhất (một; đầu tiên; thống nhất)",
+        "meaningEn": "one, first, unity"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イチ",
+          "イツ"
+        ],
         "kunyomi": [
-          "いちおう"
+          "ひと-",
+          "ひと.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一応 (once, tentatively, in outline, for the time being).",
-        "en": "Appears in JLPT N2 vocabulary: 一応 (once, tentatively, in outline, for the time being)."
+        "vi": "一 là một hoặc đầu tiên; trong 一応, nó gợi một mức tạm thời, trước mắt.",
+        "en": "一 means one or first; in 一応 it helps form the idea of a tentative first pass."
       },
       "decomposition": {
         "hanViet": "Nhất",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "応",
+          "初",
+          "単",
+          "同"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhat",
-        "meaningViNoAccent": "once, tentatively, in outline, for the time being",
-        "meaningEnNoAccent": "once, tentatively, in outline, for the time being"
+        "meaningViNoAccent": "mot; dau tien; thong nhat",
+        "meaningEnNoAccent": "one, first, unity"
       },
       "examples": [
         {
           "word": "一応",
           "reading": "いちおう",
-          "meaning": "once, tentatively, in outline, for the time being"
+          "meaning": "tạm thời; đại khái; trước mắt",
+          "meaningEn": "tentatively, for the time being"
         }
       ],
       "tags": [
@@ -356,9 +436,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k064",
@@ -368,37 +449,49 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Ứng",
-        "meaningVi": "once, tentatively, in outline, for the time being",
-        "meaningViDisplay": "応 (once, tentatively, in outline, for the time being)",
-        "meaningEn": "once, tentatively, in outline, for the time being"
+        "meaningVi": "đáp lại; thích ứng; ứng với",
+        "meaningViDisplay": "Ứng (đáp lại; thích ứng; ứng với)",
+        "meaningEn": "answer, respond, apply"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "オウ",
+          "ヨウ",
+          "-ノウ"
+        ],
         "kunyomi": [
-          "いちおう"
+          "あた.る",
+          "まさに",
+          "こた.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一応 (once, tentatively, in outline, for the time being).",
-        "en": "Appears in JLPT N2 vocabulary: 一応 (once, tentatively, in outline, for the time being)."
+        "vi": "応 là đáp lại hoặc ứng với; trong 一応, nó tạo sắc thái tạm xem là được, trước mắt.",
+        "en": "応 means answer, respond, or apply; in 一応 it forms a tentative or provisional sense."
       },
       "decomposition": {
         "hanViet": "Ứng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "答",
+          "対",
+          "一",
+          "反"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ung",
-        "meaningViNoAccent": "once, tentatively, in outline, for the time being",
-        "meaningEnNoAccent": "once, tentatively, in outline, for the time being"
+        "meaningViNoAccent": "dap lai; thich ung; ung voi",
+        "meaningEnNoAccent": "answer, respond, apply"
       },
       "examples": [
         {
           "word": "一応",
           "reading": "いちおう",
-          "meaning": "once, tentatively, in outline, for the time being"
+          "meaning": "tạm thời; đại khái; trước mắt",
+          "meaningEn": "tentatively, for the time being"
         }
       ],
       "tags": [
@@ -406,14 +499,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

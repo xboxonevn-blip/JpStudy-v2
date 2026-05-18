@@ -484,3 +484,10 @@
 - Bumped content DB Kanji seed revision to `33` and added an N2 lesson-07 sentinel for `育` so existing browsers reseed the changed metadata.
 - Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `152` to `144`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed, and full `flutter test` passed (`2340`).
 - Built/deployed `ec6a8a35` to Firebase Hosting. Live proof after fresh live `content` IndexedDB: VI/N2 search for `育` opened `Dục (nuôi dạy; phát triển; giáo dục)` with Hán-Việt `Dục`, on `イク`, kun `そだ.つ, そだ.ち, そだ.てる, はぐく.む`; console warnings/errors `0`.
+
+## 2026-05-19 N2 Kanji Lesson 8 Completeness Patch
+
+- Source-verified all eight N2 lesson-08 kanji (`勇`, `衣`, `食`, `住`, `地`, `悪`, `一`, `応`) against local KANJIDIC2, Unihan where available, variant Unihan for `応`/`應`, and existing N2 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including correcting `地` away from `malicious`, `一`/`応` away from `tentatively`, and `衣`/`食`/`住` away from the whole-word `衣食住` gloss; filled readings/search text, added non-empty `relatedKanji`, removed old approval metadata, and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `34` and added an N2 lesson-08 sentinel for `勇` so existing browsers reseed the changed metadata.
+- Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `144` to `136`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`).

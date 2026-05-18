@@ -726,3 +726,29 @@ Tagging: added file-level and entry-level `vi-source-verified`, kept `vi-editori
 Runtime note: bumped content DB Kanji seed revision from `32` to `33` and added an N2 lesson-07 sentinel for `育` so existing browsers reseed the changed metadata.
 
 Live proof after deploy: the already-open Playwright tab initially reused stale cached lesson data, so `育` showed the generated `育児` fallback. With cache disabled and a fresh live `content` IndexedDB, VI/N2 Kanji search for `育` opened the detail modal with `Dục (nuôi dạy; phát triển; giáo dục)`, Hán-Việt `Dục`, on `イク`, kun `そだ.つ, そだ.ち, そだ.てる, はぐく.む`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 8 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, old JLPT tier, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese` when present, `kDefinition`, and Japanese-reading cross-checks.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `勇ましい`, `衣食住`, `意地悪`, and `一応`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+- Existing source-verified JpStudy lower-level kanji rows for continuity where Unihan lacks a direct `kVietnamese` value on the Japanese codepoint (`食`); `応` cross-checked through traditional variant `應`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `勇` | KANJIDIC2 readings `ユウ`, `いさ.む`, meanings `courage`, `bravery`; Unihan `kVietnamese=dũng`, `kDefinition=brave, courageous, fierce`; local context `勇ましい` | Rewrote display to `Dũng (dũng cảm; can đảm; khí phách)`, added readings/search text, direct example `勇ましい`, and courage-related kanji. |
+| `衣` | KANJIDIC2 readings `イ/エ`, `ころも/きぬ/-ぎ`, meanings `garment`, `clothes`; Unihan `kVietnamese=y`, `kDefinition=clothes, clothing`; local context `衣食住` | Rewrote display to `Y (áo quần; y phục; lớp phủ)`, added readings/search text, direct example `衣食住`, and clothing/life-necessity related kanji. |
+| `食` | KANJIDIC2 readings `ショク/ジキ`, `く.う/く.らう/た.べる/は.む`, meanings `eat`, `food`; Unihan `kDefinition=eat; meal; food`; local source-verified content keeps Hán-Việt `Thực`; local context `衣食住` | Rewrote display to `Thực (ăn; thức ăn; bữa ăn)`, added readings/search text, direct example `衣食住`, and food-related kanji. |
+| `住` | KANJIDIC2 readings `ジュウ/ヂュウ/チュウ`, `す.む/す.まう/-ず.まい`, meanings `dwell`, `reside`; Unihan `kVietnamese=trú`, `kDefinition=reside, live at`; local context `衣食住` | Rewrote display to `Trú (sống; cư trú; ở)`, added readings/search text, direct example `衣食住`, and housing-related kanji. |
+| `地` | KANJIDIC2 readings `チ/ジ`, meanings `ground`, `earth`; Unihan `kVietnamese=địa`, `kDefinition=earth; soil, ground; region`; local context `意地悪` | Corrected the row away from generated `malicious` word-gloss fallback to `Địa (đất; mặt đất; vùng đất)`, normalized no-accent search text, and added land/idiom related kanji. |
+| `悪` | KANJIDIC2 readings `アク/オ`, `わる.い/...`, meanings `bad`, `evil`, `wrong`; Unihan `kVietnamese=ác`, `kDefinition=evil, wicked, bad`; local context `意地悪` | Rewrote display to `Ác (xấu; ác; sai trái)`, added readings/search text, direct example `意地悪`, and polarity/morality related kanji. |
+| `一` | KANJIDIC2 readings `イチ/イツ`, `ひと-/ひと.つ`, meanings `one`; Unihan `kVietnamese=nhất`, `kDefinition=one; a, an; alone`; local context `一応` | Corrected the row away from generated `tentatively` word-gloss fallback to `Nhất (một; đầu tiên; thống nhất)`, added readings/search text, direct example `一応`, and number/initial related kanji. |
+| `応` | KANJIDIC2 readings `オウ/ヨウ/-ノウ`, `あた.る/まさに/こた.える`, meanings `apply`, `answer`, `reply`; Unihan direct codepoint has `kDefinition=should, ought to, must`, traditional variant `應` has `kVietnamese=ứng`; local context `一応` | Rewrote display to `Ứng (đáp lại; thích ứng; ứng với)`, added readings/search text, direct example `一応`, and response/interaction related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, kept `vi-editorial-codex-pass`, removed old approval markers, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `33` to `34` and added an N2 lesson-08 sentinel for `勇` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `144` to `136`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed `54`, and full `flutter test` passed (`2340`).

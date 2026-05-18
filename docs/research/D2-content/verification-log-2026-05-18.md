@@ -599,3 +599,5 @@ Sources consulted:
 Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
 
 Runtime note: bumped content DB Kanji seed revision from `27` to `28` and added an N2 lesson-02 sentinel for `挙` so existing browsers reseed this metadata.
+
+Live proof after deploy: VI/N2 Kanji search for `挙` opened the detail modal with `Cử (giơ lên; nêu ra; tổ chức; hành động)`, Hán-Việt `Cử`, on `キョ`, kun `あ.げる, あ.がる, こぞ.る`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.

@@ -229,7 +229,8 @@ KANJIDIC2, Unihan where available, and existing N2 vocabulary context. The
 local patch fills Vietnamese display/search/readings/related-kanji metadata
 for all eight entries, bumps the Kanji seed revision to `28`, and adds a
 lesson-02 sentinel for `挙`. Local coverage audit reduced N2 incomplete
-current entries from `192` to `184`; live proof remains pending until deploy.
+current entries from `192` to `184`; live proof opened `挙` with
+`Cử (giơ lên; nêu ra; tổ chức; hành động)` and console errors/warnings `0`.
 
 ## Verdict
 

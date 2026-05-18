@@ -17,7 +17,7 @@ function cacheControlFor(source) {
   return header.value;
 }
 
-test('Flutter web shell stays fresh while runtime/content assets use bounded cache', () => {
+test('Flutter web shell and content assets revalidate while heavy runtime assets use bounded cache', () => {
   for (const source of [
     'index.html',
     'flutter_service_worker.js',
@@ -36,7 +36,7 @@ test('Flutter web shell stays fresh while runtime/content assets use bounded cac
     'assets/assets/data/content/**',
     'assets/AssetManifest*',
   ]) {
-    assert.equal(cacheControlFor(source), 'public, max-age=86400');
+    assert.equal(cacheControlFor(source), 'no-cache');
   }
 
   for (const source of ['sqlite3.wasm', 'drift_worker.js']) {

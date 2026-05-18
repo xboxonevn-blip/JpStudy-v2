@@ -232,6 +232,13 @@ lesson-02 sentinel for `挙`. Local coverage audit reduced N2 incomplete
 current entries from `192` to `184`; live proof opened `挙` with
 `Cử (giơ lên; nêu ra; tổ chức; hành động)` and console errors/warnings `0`.
 
+Kanji content expansion update: N2 lesson 03 is now source-verified against
+KANJIDIC2, Unihan where available, and existing N2 vocabulary context. The
+local patch fills Vietnamese display/search/readings/related-kanji metadata
+for all eight entries, bumps the Kanji seed revision to `29`, and adds a
+lesson-03 sentinel for `圧`. Local coverage audit reduced N2 incomplete
+current entries from `184` to `176`; live proof remains pending until deploy.
+
 ## Verdict
 
 Implementation, docs, tooling, CI/deploy, and N4-N1 live direct-route fallback work are substantially complete. The active goal is not complete because the stopping condition includes external legal/ops proof gates that remain missing.

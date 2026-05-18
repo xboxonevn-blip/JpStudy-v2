@@ -444,3 +444,10 @@
 - Bumped content DB Kanji seed revision to `28` and added an N2 lesson-02 sentinel for `挙` so existing browsers reseed the changed metadata.
 - Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `192` to `184`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed after updating the cache-header expectation for the new Hosting policy, and full `flutter test` passed (`2340`).
 - Built and deployed `8da8be00` to Firebase Hosting. Live proof after cache/service-worker cleanup: VI/N2 Kanji search for `挙` opened detail showing `Cử (giơ lên; nêu ra; tổ chức; hành động)` plus Hán-Việt `Cử`, on `キョ`, kun `あ.げる, あ.がる, こぞ.る`; console warnings/errors `0`.
+
+## 2026-05-18 N2 Kanji Lesson 3 Completeness Patch
+
+- Source-verified all eight N2 lesson-03 kanji (`圧`, `縮`, `宛`, `名`, `暴`, `脂`, `雨`, `戸`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote English-like `meaningVi` fields into learner-ready Vietnamese, filled readings/search text, added non-empty `relatedKanji`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `29` and added an N2 lesson-03 sentinel for `圧` so existing browsers reseed the changed metadata.
+- Verified locally: JSON parse passed, coverage audit reduced N2 incomplete current entries from `184` to `176`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed, and full `flutter test` passed (`2340`). Live proof remains pending until deploy.

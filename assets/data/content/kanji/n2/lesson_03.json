@@ -8,7 +8,7 @@
   "lessonId": 3,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k017",
@@ -18,37 +18,49 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Áp",
-        "meaningVi": "compression, condensation, pressure",
-        "meaningViDisplay": "圧 (compression, condensation, pressure)",
-        "meaningEn": "compression, condensation, pressure"
+        "meaningVi": "áp lực; nén; ép",
+        "meaningViDisplay": "Áp (áp lực; nén; ép)",
+        "meaningEn": "pressure, push, compress"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アツ",
+          "エン",
+          "オウ"
+        ],
         "kunyomi": [
-          "あっしゅく"
+          "お.す",
+          "へ.す",
+          "おさ.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 圧縮 (compression, condensation, pressure).",
-        "en": "Appears in JLPT N2 vocabulary: 圧縮 (compression, condensation, pressure)."
+        "vi": "圧 là sức ép hoặc áp lực; trong 圧縮, nó nhấn ý ép lại cho nhỏ hơn.",
+        "en": "圧 marks pressure or force; in 圧縮 it points to compressing something."
       },
       "decomposition": {
         "hanViet": "Áp",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "縮",
+          "押",
+          "力",
+          "重"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ap",
-        "meaningViNoAccent": "compression, condensation, pressure",
-        "meaningEnNoAccent": "compression, condensation, pressure"
+        "meaningViNoAccent": "ap luc; nen; ep",
+        "meaningEnNoAccent": "pressure, push, compress"
       },
       "examples": [
         {
           "word": "圧縮",
           "reading": "あっしゅく",
-          "meaning": "compression, condensation, pressure"
+          "meaning": "sự nén; nén lại",
+          "meaningEn": "compression"
         }
       ],
       "tags": [
@@ -56,7 +68,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,37 +81,49 @@
       "strokeCount": 17,
       "labels": {
         "hanViet": "Súc",
-        "meaningVi": "compression, condensation, pressure",
-        "meaningViDisplay": "縮 (compression, condensation, pressure)",
-        "meaningEn": "compression, condensation, pressure"
+        "meaningVi": "co lại; rút ngắn; nén lại",
+        "meaningViDisplay": "Súc (co lại; rút ngắn; nén lại)",
+        "meaningEn": "shrink, contract, reduce"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュク"
+        ],
         "kunyomi": [
-          "あっしゅく"
+          "ちぢ.む",
+          "ちぢ.まる",
+          "ちぢ.める",
+          "ちぢ.れる",
+          "ちぢ.らす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 圧縮 (compression, condensation, pressure).",
-        "en": "Appears in JLPT N2 vocabulary: 圧縮 (compression, condensation, pressure)."
+        "vi": "縮 là co lại hoặc rút ngắn; 圧縮 là ép để vật bị nén nhỏ lại.",
+        "en": "縮 means shrink or reduce; 圧縮 is compression through pressure."
       },
       "decomposition": {
         "hanViet": "Súc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "圧",
+          "糸",
+          "短",
+          "小"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Suc",
-        "meaningViNoAccent": "compression, condensation, pressure",
-        "meaningEnNoAccent": "compression, condensation, pressure"
+        "meaningViNoAccent": "co lai; rut ngan; nen lai",
+        "meaningEnNoAccent": "shrink, contract, reduce"
       },
       "examples": [
         {
           "word": "圧縮",
           "reading": "あっしゅく",
-          "meaning": "compression, condensation, pressure"
+          "meaning": "sự nén; nén lại",
+          "meaningEn": "compression"
         }
       ],
       "tags": [
@@ -106,7 +131,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,37 +144,48 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Uyển",
-        "meaningVi": "address, direction",
-        "meaningViDisplay": "宛 (address, direction)",
-        "meaningEn": "address, direction"
+        "meaningVi": "địa chỉ; gửi đến; giống như",
+        "meaningViDisplay": "Uyển (địa chỉ; gửi đến; giống như)",
+        "meaningEn": "address, just like"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン"
+        ],
         "kunyomi": [
-          "あてな"
+          "あ.てる",
+          "-あて",
+          "-づつ",
+          "あたか.も"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 宛名 (address, direction).",
-        "en": "Appears in JLPT N2 vocabulary: 宛名 (address, direction)."
+        "vi": "宛 gắn với nơi gửi đến; 宛名 là phần tên/địa chỉ người nhận trên thư.",
+        "en": "宛 points to an addressee or destination; 宛名 is the addressee name/address."
       },
       "decomposition": {
         "hanViet": "Uyển",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "名",
+          "住",
+          "所",
+          "送"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Uyen",
-        "meaningViNoAccent": "address, direction",
-        "meaningEnNoAccent": "address, direction"
+        "meaningViNoAccent": "dia chi; gui den; giong nhu",
+        "meaningEnNoAccent": "address, just like"
       },
       "examples": [
         {
           "word": "宛名",
           "reading": "あてな",
-          "meaning": "address, direction"
+          "meaning": "tên và địa chỉ người nhận",
+          "meaningEn": "addressee name/address"
         }
       ],
       "tags": [
@@ -156,9 +193,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k020",
@@ -168,37 +206,47 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Danh",
-        "meaningVi": "address, direction",
-        "meaningViDisplay": "名 (address, direction)",
-        "meaningEn": "address, direction"
+        "meaningVi": "tên; danh tiếng; nổi tiếng",
+        "meaningViDisplay": "Danh (tên; danh tiếng; nổi tiếng)",
+        "meaningEn": "name, noted, reputation"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "メイ",
+          "ミョウ"
+        ],
         "kunyomi": [
-          "あてな"
+          "な",
+          "-な"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 宛名 (address, direction).",
-        "en": "Appears in JLPT N2 vocabulary: 宛名 (address, direction)."
+        "vi": "名 là tên; trong 宛名, chữ này là tên người nhận ghi trên thư.",
+        "en": "名 means name; in 宛名 it is the name/address of the addressee."
       },
       "decomposition": {
         "hanViet": "Danh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "宛",
+          "氏",
+          "記",
+          "号"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Danh",
-        "meaningViNoAccent": "address, direction",
-        "meaningEnNoAccent": "address, direction"
+        "meaningViNoAccent": "ten; danh tieng; noi tieng",
+        "meaningEnNoAccent": "name, noted, reputation"
       },
       "examples": [
         {
           "word": "宛名",
           "reading": "あてな",
-          "meaning": "address, direction"
+          "meaning": "tên và địa chỉ người nhận",
+          "meaningEn": "addressee name/address"
         }
       ],
       "tags": [
@@ -206,9 +254,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k021",
@@ -218,37 +267,47 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Bạo",
-        "meaningVi": "to act violently, to rage, to struggle, to be riotous",
-        "meaningViDisplay": "暴 (to act violently, to rage, to struggle, to be riotous)",
-        "meaningEn": "to act violently, to rage, to struggle, to be riotous"
+        "meaningVi": "bạo lực; dữ dội; nổi loạn",
+        "meaningViDisplay": "Bạo (bạo lực; dữ dội; nổi loạn)",
+        "meaningEn": "violence, force, outburst"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ボウ",
+          "バク"
+        ],
         "kunyomi": [
-          "あばれる"
+          "あば.く",
+          "あば.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 暴れる (to act violently, to rage, to struggle, to be riotous).",
-        "en": "Appears in JLPT N2 vocabulary: 暴れる (to act violently, to rage, to struggle, to be riotous)."
+        "vi": "暴 chỉ sự dữ dội hoặc bạo lực; 暴れる là làm ầm ĩ, vùng vẫy hoặc nổi loạn.",
+        "en": "暴 marks violence or a forceful outburst; 暴れる is to act violently or rampage."
       },
       "decomposition": {
         "hanViet": "Bạo",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "乱",
+          "力",
+          "怒",
+          "荒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bao",
-        "meaningViNoAccent": "to act violently, to rage, to struggle, to be riotous",
-        "meaningEnNoAccent": "to act violently, to rage, to struggle, to be riotous"
+        "meaningViNoAccent": "bao luc; du doi; noi loan",
+        "meaningEnNoAccent": "violence, force, outburst"
       },
       "examples": [
         {
           "word": "暴れる",
           "reading": "あばれる",
-          "meaning": "to act violently, to rage, to struggle, to be riotous"
+          "meaning": "nổi loạn; làm ầm ĩ; vùng vẫy",
+          "meaningEn": "to act violently, to rage"
         }
       ],
       "tags": [
@@ -256,9 +315,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k022",
@@ -268,37 +328,45 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Chỉ",
-        "meaningVi": "fat, tallow, lard",
-        "meaningViDisplay": "脂 (fat, tallow, lard)",
-        "meaningEn": "fat, tallow, lard"
+        "meaningVi": "mỡ; chất béo; dầu mỡ",
+        "meaningViDisplay": "Chỉ (mỡ; chất béo; dầu mỡ)",
+        "meaningEn": "fat, grease, lard"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
           "あぶら"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 脂 (fat, tallow, lard).",
-        "en": "Appears in JLPT N2 vocabulary: 脂 (fat, tallow, lard)."
+        "vi": "脂 là mỡ hoặc chất béo trong cơ thể/thực phẩm, khác với 油 là dầu dạng lỏng.",
+        "en": "脂 is fat or grease, often animal/body fat; 油 is usually liquid oil."
       },
       "decomposition": {
         "hanViet": "Chỉ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "月",
+          "油",
+          "肉",
+          "食"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chi",
-        "meaningViNoAccent": "fat, tallow, lard",
-        "meaningEnNoAccent": "fat, tallow, lard"
+        "meaningViNoAccent": "mo; chat beo; dau mo",
+        "meaningEnNoAccent": "fat, grease, lard"
       },
       "examples": [
         {
           "word": "脂",
           "reading": "あぶら",
-          "meaning": "fat, tallow, lard"
+          "meaning": "mỡ; chất béo",
+          "meaningEn": "fat, grease"
         }
       ],
       "tags": [
@@ -306,7 +374,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +387,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Vũ",
-        "meaningVi": "sliding storm door",
-        "meaningViDisplay": "雨 (sliding storm door)",
-        "meaningEn": "sliding storm door"
+        "meaningVi": "mưa",
+        "meaningViDisplay": "Vũ (mưa)",
+        "meaningEn": "rain"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ウ"
+        ],
         "kunyomi": [
-          "あまど"
+          "あめ",
+          "あま-",
+          "-さめ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 雨戸 (sliding storm door).",
-        "en": "Appears in JLPT N2 vocabulary: 雨戸 (sliding storm door)."
+        "vi": "雨 là mưa; 雨戸 là cửa dùng để chắn mưa gió.",
+        "en": "雨 means rain; 雨戸 is a storm shutter used against rain and wind."
       },
       "decomposition": {
         "hanViet": "Vũ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "戸",
+          "雲",
+          "雪",
+          "風"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vu",
-        "meaningViNoAccent": "sliding storm door",
-        "meaningEnNoAccent": "sliding storm door"
+        "meaningViNoAccent": "mua",
+        "meaningEnNoAccent": "rain"
       },
       "examples": [
         {
           "word": "雨戸",
           "reading": "あまど",
-          "meaning": "sliding storm door"
+          "meaning": "cửa chớp chống mưa",
+          "meaningEn": "sliding storm door"
         }
       ],
       "tags": [
@@ -356,7 +435,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +448,45 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Hộ",
-        "meaningVi": "sliding storm door",
-        "meaningViDisplay": "戸 (sliding storm door)",
-        "meaningEn": "sliding storm door"
+        "meaningVi": "cửa; hộ gia đình; bộ cửa",
+        "meaningViDisplay": "Hộ (cửa; hộ gia đình; bộ cửa)",
+        "meaningEn": "door, house counter, door radical"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コ"
+        ],
         "kunyomi": [
-          "あまど"
+          "と"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 雨戸 (sliding storm door).",
-        "en": "Appears in JLPT N2 vocabulary: 雨戸 (sliding storm door)."
+        "vi": "戸 là cửa; trong 雨戸, nó chỉ tấm cửa chớp để che mưa gió.",
+        "en": "戸 means door; in 雨戸 it is the shutter door used for storms."
       },
       "decomposition": {
         "hanViet": "Hộ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "雨",
+          "門",
+          "扉",
+          "家"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ho",
-        "meaningViNoAccent": "sliding storm door",
-        "meaningEnNoAccent": "sliding storm door"
+        "meaningViNoAccent": "cua; ho gia dinh; bo cua",
+        "meaningEnNoAccent": "door, house counter, door radical"
       },
       "examples": [
         {
           "word": "雨戸",
           "reading": "あまど",
-          "meaning": "sliding storm door"
+          "meaning": "cửa chớp chống mưa",
+          "meaningEn": "sliding storm door"
         }
       ],
       "tags": [
@@ -406,14 +494,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

@@ -601,3 +601,26 @@ Tagging: added file-level and entry-level `vi-source-verified`, replaced old `ap
 Runtime note: bumped content DB Kanji seed revision from `27` to `28` and added an N2 lesson-02 sentinel for `挙` so existing browsers reseed this metadata.
 
 Live proof after deploy: VI/N2 Kanji search for `挙` opened the detail modal with `Cử (giơ lên; nêu ra; tổ chức; hành động)`, Hán-Việt `Cử`, on `キョ`, kun `あ.げる, あ.がる, こぞ.る`, and the rewritten Vietnamese mnemonic. Console errors/warnings after the interaction: `0`.
+
+## Kanji N2 Lesson 3 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Hán-Việt readings where present, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese` cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context in `assets/data/content/vocab/n2/ShinKanzen/tanos_n2_01.json`, used only to choose example words and cross-check the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `圧` | KANJIDIC2 readings `アツ/エン/オウ`, `お.す/へ.す/おさ.える`, meanings `pressure`, `push`, `overwhelm`; local context `圧縮` | Rewrote display to `Áp (áp lực; nén; ép)`, added readings/search text, direct example `圧縮`, and related kanji. |
+| `縮` | KANJIDIC2 `Súc`, readings `シュク`, `ちぢ.む/...`, meanings `shrink`, `contract`, `reduce`; local context `圧縮` | Rewrote display to `Súc (co lại; rút ngắn; nén lại)`, direct example `圧縮`, search text, and compression/size related kanji. |
+| `宛` | KANJIDIC2 `Uyển/Uyên`, readings `エン`, `あ.てる`, meanings `address`, `just like`; Unihan `kVietnamese=uyển`; local context `宛名` | Rewrote display to `Uyển (địa chỉ; gửi đến; giống như)`, direct example `宛名`, search text, and mailing/address related kanji. |
+| `名` | KANJIDIC2 `Danh`, readings `メイ/ミョウ`, `な`, meanings `name`, `reputation`; Unihan `kVietnamese=danh`; local context `宛名` | Rewrote display to `Danh (tên; danh tiếng; nổi tiếng)`, direct example `宛名`, search text, and name/record related kanji. |
+| `暴` | KANJIDIC2 `Bạo/Bộc`, readings `ボウ/バク`, `あば.れる`, meanings `violence`, `force`, `outburst`; Unihan `kVietnamese=bạo`; local context `暴れる` | Rewrote display to `Bạo (bạo lực; dữ dội; nổi loạn)`, direct example `暴れる`, search text, and violence/anger related kanji. |
+| `脂` | KANJIDIC2 `Chi`, readings `シ`, `あぶら`, meanings `fat`, `grease`, `lard`; local context `脂` | Rewrote display to `Chỉ (mỡ; chất béo; dầu mỡ)`, direct example `脂`, search text, and food/fat related kanji. |
+| `雨` | KANJIDIC2 `Vũ/Vú`, readings `ウ`, `あめ/あま-`, meaning `rain`; local context `雨戸` | Rewrote display to `Vũ (mưa)`, direct example `雨戸`, search text, and weather/door related kanji. |
+| `戸` | KANJIDIC2 `Hộ/Họ`, readings `コ`, `と`, meanings `door`, `house counter`, `door radical`; local context `雨戸` | Rewrote display to `Hộ (cửa; hộ gia đình; bộ cửa)`, direct example `雨戸`, search text, and door/house related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, replaced old `approved-by-user` metadata with `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `28` to `29` and added an N2 lesson-03 sentinel for `圧` so existing browsers reseed this metadata.

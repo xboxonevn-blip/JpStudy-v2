@@ -1017,101 +1017,235 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
     final answeredCount = _answers.length;
 
     return JapaneseBackground(
-      child: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
-        children: [
-          _MockHero(
-            title:
-                '${_romajiLabel(_currentSection)} • ${_sectionTitle(language, _currentSection)}',
-            subtitle:
-                '${_sectionIndex + 1}/${_sections.length} • ${_questionIndex + 1}/${_currentSection.questions.length}',
-            icon: Icons.timer_outlined,
-            accent: _sectionColor(context, question.area),
-            trailing: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                _TimerBadge(
-                  label: _formatTimer(_sectionSeconds),
-                  danger: _sectionSeconds <= 60,
-                ),
-                const SizedBox(width: 8),
-                _TimerBadge(label: _formatTimer(_totalSeconds), danger: false),
-              ],
-            ),
-          ),
-          const SizedBox(height: 12),
-          AppSectionCard(
-            padding: const EdgeInsets.all(AppSpacing.lg),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AppProgressStrip(
-                  value: answeredCount == 0
-                      ? 0.04
-                      : answeredCount / _totalQuestions,
-                  label: _tr(
-                    language,
-                    '${_progressSummaryLabel(language)} • $answeredCount/$_totalQuestions answered',
-                    '${_progressSummaryLabel(language)} • $answeredCount/$_totalQuestions đã làm',
-                    '${_progressSummaryLabel(language)} • $answeredCount/$_totalQuestions 回答済み',
-                  ),
-                ),
-                const SizedBox(height: 12),
-                Wrap(
-                  spacing: 8,
-                  runSpacing: 8,
-                  children: _sections.asMap().entries.map((entry) {
-                    final active = entry.key == _sectionIndex;
-                    return _MiniSectionChip(
-                      label: _romajiLabel(entry.value),
-                      active: active,
-                    );
-                  }).toList(),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 12),
-          _MockQuestionCard(
-            language: language,
-            areaLabel: _areaLabel(language, question.area),
-            prompt: question.prompt,
-            options: question.options,
-            contextTitle: question.contextTitle,
-            contextBody: question.contextBody,
-            selectedIndex: selected,
-            sourceLabel: question.sourceLabel,
-            onConfirm: (index) {
-              setState(() {
-                _answers[question.id] = index;
-              });
-            },
-          ),
-          const SizedBox(height: 12),
-          Row(
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final compact =
+              constraints.maxWidth < 700 || constraints.maxHeight < 620;
+          if (compact) {
+            return _buildCompactActiveView(
+              context,
+              language,
+              question,
+              selected,
+              answeredCount,
+            );
+          }
+          return ListView(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
             children: [
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: _finishExam,
-                  icon: const Icon(Icons.flag_rounded),
-                  label: Text(_finishNowLabel(language)),
+              _MockHero(
+                title:
+                    '${_romajiLabel(_currentSection)} • ${_sectionTitle(language, _currentSection)}',
+                subtitle:
+                    '${_sectionIndex + 1}/${_sections.length} • ${_questionIndex + 1}/${_currentSection.questions.length}',
+                icon: Icons.timer_outlined,
+                accent: _sectionColor(context, question.area),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _TimerBadge(
+                      label: _formatTimer(_sectionSeconds),
+                      danger: _sectionSeconds <= 60,
+                    ),
+                    const SizedBox(width: 8),
+                    _TimerBadge(
+                      label: _formatTimer(_totalSeconds),
+                      danger: false,
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: FilledButton.icon(
-                  onPressed: _nextQuestion,
-                  icon: const Icon(Icons.navigate_next_rounded),
-                  label: Text(
-                    _sectionIndex == _sections.length - 1 &&
-                            _questionIndex ==
-                                _currentSection.questions.length - 1
-                        ? _submitLabel(language)
-                        : _nextLabel(language),
-                  ),
+              const SizedBox(height: 12),
+              AppSectionCard(
+                padding: const EdgeInsets.all(AppSpacing.lg),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AppProgressStrip(
+                      value: answeredCount == 0
+                          ? 0.04
+                          : answeredCount / _totalQuestions,
+                      label: _tr(
+                        language,
+                        '${_progressSummaryLabel(language)} • $answeredCount/$_totalQuestions answered',
+                        '${_progressSummaryLabel(language)} • $answeredCount/$_totalQuestions đã làm',
+                        '${_progressSummaryLabel(language)} • $answeredCount/$_totalQuestions 回答済み',
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: _sections.asMap().entries.map((entry) {
+                        final active = entry.key == _sectionIndex;
+                        return _MiniSectionChip(
+                          label: _romajiLabel(entry.value),
+                          active: active,
+                        );
+                      }).toList(),
+                    ),
+                  ],
                 ),
+              ),
+              const SizedBox(height: 12),
+              _MockQuestionCard(
+                language: language,
+                areaLabel: _areaLabel(language, question.area),
+                prompt: question.prompt,
+                options: question.options,
+                contextTitle: question.contextTitle,
+                contextBody: question.contextBody,
+                selectedIndex: selected,
+                sourceLabel: question.sourceLabel,
+                onConfirm: (index) {
+                  setState(() {
+                    _answers[question.id] = index;
+                  });
+                },
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: _finishExam,
+                      icon: const Icon(Icons.flag_rounded),
+                      label: Text(_finishNowLabel(language)),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: FilledButton.icon(
+                      onPressed: _nextQuestion,
+                      icon: const Icon(Icons.navigate_next_rounded),
+                      label: Text(
+                        _sectionIndex == _sections.length - 1 &&
+                                _questionIndex ==
+                                    _currentSection.questions.length - 1
+                            ? _submitLabel(language)
+                            : _nextLabel(language),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildCompactActiveView(
+    BuildContext context,
+    AppLanguage language,
+    JlptMockQuestion question,
+    int? selected,
+    int answeredCount,
+  ) {
+    final palette = context.appPalette;
+    final sectionLabel =
+        '${_romajiLabel(_currentSection)} • ${_sectionTitle(language, _currentSection)}';
+    final questionLabel =
+        '${_sectionIndex + 1}/${_sections.length} • ${_questionIndex + 1}/${_currentSection.questions.length}';
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 8, 12, 10),
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
+            decoration: BoxDecoration(
+              color: palette.elevated.withValues(alpha: 0.96),
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(color: palette.outlineSoft),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            sectionLabel,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: palette.ink,
+                              height: 1.15,
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            '$questionLabel • $answeredCount/$_totalQuestions',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700,
+                              color: palette.ink.withValues(alpha: 0.62),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      visualDensity: VisualDensity.compact,
+                      tooltip: _finishNowLabel(language),
+                      onPressed: _finishExam,
+                      icon: const Icon(Icons.flag_rounded, size: 20),
+                    ),
+                    FilledButton(
+                      style: FilledButton.styleFrom(
+                        minimumSize: const Size(70, 34),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        visualDensity: VisualDensity.compact,
+                      ),
+                      onPressed: _nextQuestion,
+                      child: Text(
+                        _sectionIndex == _sections.length - 1 &&
+                                _questionIndex ==
+                                    _currentSection.questions.length - 1
+                            ? _submitLabel(language)
+                            : _nextLabel(language),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(999),
+                  child: LinearProgressIndicator(
+                    value: answeredCount == 0
+                        ? 0.04
+                        : answeredCount / _totalQuestions,
+                    minHeight: 5,
+                    backgroundColor: palette.base,
+                    color: _sectionColor(context, question.area),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          Expanded(
+            child: _MockQuestionCard(
+              language: language,
+              areaLabel: _areaLabel(language, question.area),
+              prompt: question.prompt,
+              options: question.options,
+              contextTitle: question.contextTitle,
+              contextBody: question.contextBody,
+              selectedIndex: selected,
+              sourceLabel: question.sourceLabel,
+              compact: true,
+              onConfirm: (index) {
+                setState(() {
+                  _answers[question.id] = index;
+                });
+              },
+            ),
           ),
         ],
       ),
@@ -1822,6 +1956,7 @@ class _MockQuestionCard extends StatelessWidget {
     this.contextTitle,
     this.contextBody,
     this.sourceLabel,
+    this.compact = false,
     required this.onConfirm,
   });
 
@@ -1833,16 +1968,17 @@ class _MockQuestionCard extends StatelessWidget {
   final String? contextTitle;
   final String? contextBody;
   final String? sourceLabel;
+  final bool compact;
   final ValueChanged<int> onConfirm;
 
   @override
   Widget build(BuildContext context) {
     final palette = context.appPalette;
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(compact ? 10 : 16),
       decoration: BoxDecoration(
         color: palette.elevated,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(compact ? 18 : 20),
         border: Border.all(color: palette.outlineSoft),
       ),
       child: Column(
@@ -1891,10 +2027,10 @@ class _MockQuestionCard extends StatelessWidget {
             ],
           ),
           if (contextBody != null && contextBody!.trim().isNotEmpty) ...[
-            const SizedBox(height: 12),
+            SizedBox(height: compact ? 8 : 12),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(14),
+              padding: EdgeInsets.all(compact ? 10 : 14),
               decoration: BoxDecoration(
                 color: palette.base,
                 borderRadius: BorderRadius.circular(16),
@@ -1917,9 +2053,11 @@ class _MockQuestionCard extends StatelessWidget {
                   ],
                   Text(
                     contextBody!,
+                    maxLines: compact ? 3 : null,
+                    overflow: compact ? TextOverflow.ellipsis : null,
                     style: TextStyle(
                       color: palette.ink.withValues(alpha: 0.86),
-                      height: 1.5,
+                      height: compact ? 1.32 : 1.5,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -1927,28 +2065,41 @@ class _MockQuestionCard extends StatelessWidget {
               ),
             ),
           ],
-          const SizedBox(height: 12),
+          SizedBox(height: compact ? 8 : 12),
           Text(
             prompt,
+            maxLines: compact ? 2 : null,
+            overflow: compact ? TextOverflow.ellipsis : null,
             style: TextStyle(
               fontWeight: FontWeight.w800,
-              height: 1.4,
+              height: compact ? 1.24 : 1.4,
               color: palette.ink,
             ),
           ),
-          const SizedBox(height: 12),
-          SharedAnswerSelection(
-            questionKey: Object.hash(prompt, Object.hashAll(options)),
-            options: options,
-            selectedIndex: selectedIndex,
-            keyPrefix: 'jlpt_mock_answer',
-            confirmLabel: _confirmLabel(language),
-            onConfirm: onConfirm,
-            optionBuilder: (context, option) =>
-                _MockOptionTile(key: option.key, option: option),
-          ),
+          SizedBox(height: compact ? 8 : 12),
+          if (compact)
+            Expanded(child: _buildAnswerSelection())
+          else
+            _buildAnswerSelection(),
         ],
       ),
+    );
+  }
+
+  Widget _buildAnswerSelection() {
+    return SharedAnswerSelection(
+      questionKey: Object.hash(prompt, Object.hashAll(options)),
+      options: options,
+      selectedIndex: selectedIndex,
+      forceCompact: compact,
+      fillAvailable: compact,
+      keyPrefix: 'jlpt_mock_answer',
+      confirmLabel: _confirmLabel(language),
+      confirmMinHeight: compact ? 36 : 48,
+      spacing: compact ? 6 : 8,
+      onConfirm: onConfirm,
+      optionBuilder: (context, option) =>
+          _MockOptionTile(key: option.key, option: option),
     );
   }
 
@@ -1976,15 +2127,18 @@ class _MockOptionTile extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: option.onTap,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(option.compact ? 12 : 14),
         child: Container(
           width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          padding: EdgeInsets.symmetric(
+            horizontal: option.compact ? 10 : 12,
+            vertical: option.compact ? 7 : 12,
+          ),
           decoration: BoxDecoration(
             color: option.isSelected
                 ? palette.primary.withValues(alpha: 0.12)
                 : palette.base,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(option.compact ? 12 : 14),
             border: Border.all(
               color: option.isSelected
                   ? palette.primary.withValues(alpha: 0.35)
@@ -1994,8 +2148,8 @@ class _MockOptionTile extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 28,
-                height: 28,
+                width: option.compact ? 24 : 28,
+                height: option.compact ? 24 : 28,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: option.isSelected
@@ -2011,6 +2165,7 @@ class _MockOptionTile extends StatelessWidget {
                 child: Text(
                   option.marker,
                   style: TextStyle(
+                    fontSize: option.compact ? 12 : null,
                     color: option.isSelected
                         ? palette.primary
                         : palette.ink.withValues(alpha: 0.72),
@@ -2022,17 +2177,20 @@ class _MockOptionTile extends StatelessWidget {
               Expanded(
                 child: Text(
                   option.label,
+                  maxLines: option.compact ? 2 : null,
+                  overflow: option.compact ? TextOverflow.ellipsis : null,
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     color: palette.ink,
                   ),
                 ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: option.compact ? 8 : 10),
               Icon(
                 option.isSelected
                     ? Icons.radio_button_checked_rounded
                     : Icons.radio_button_unchecked_rounded,
+                size: option.compact ? 20 : 24,
                 color: option.isSelected
                     ? palette.primary
                     : palette.ink.withValues(alpha: 0.44),

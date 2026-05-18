@@ -8,7 +8,7 @@
   "lessonId": 7,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k049",
@@ -18,37 +18,48 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Dục",
-        "meaningVi": "childcare, nursing, upbringing",
-        "meaningViDisplay": "育 (childcare, nursing, upbringing)",
-        "meaningEn": "childcare, nursing, upbringing"
+        "meaningVi": "nuôi dạy; phát triển; giáo dục",
+        "meaningViDisplay": "Dục (nuôi dạy; phát triển; giáo dục)",
+        "meaningEn": "raise, rear, grow up"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イク"
+        ],
         "kunyomi": [
-          "いくじ"
+          "そだ.つ",
+          "そだ.ち",
+          "そだ.てる",
+          "はぐく.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 育児 (childcare, nursing, upbringing).",
-        "en": "Appears in JLPT N2 vocabulary: 育児 (childcare, nursing, upbringing)."
+        "vi": "育 là nuôi dạy hoặc phát triển; 育児 là việc chăm sóc và nuôi dạy trẻ.",
+        "en": "育 means raise, rear, or grow; 育児 is childcare and upbringing."
       },
       "decomposition": {
         "hanViet": "Dục",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "生",
+          "児",
+          "教",
+          "成"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Duc",
-        "meaningViNoAccent": "childcare, nursing, upbringing",
-        "meaningEnNoAccent": "childcare, nursing, upbringing"
+        "meaningViNoAccent": "nuoi day; phat trien; giao duc",
+        "meaningEnNoAccent": "raise, rear, grow up"
       },
       "examples": [
         {
           "word": "育児",
           "reading": "いくじ",
-          "meaning": "childcare, nursing, upbringing"
+          "meaning": "chăm sóc trẻ; nuôi dạy trẻ",
+          "meaningEn": "childcare, upbringing"
         }
       ],
       "tags": [
@@ -56,9 +67,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k050",
@@ -68,37 +80,49 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Nhi",
-        "meaningVi": "childcare, nursing, upbringing",
-        "meaningViDisplay": "児 (childcare, nursing, upbringing)",
-        "meaningEn": "childcare, nursing, upbringing"
+        "meaningVi": "trẻ em; trẻ nhỏ; nhi đồng",
+        "meaningViDisplay": "Nhi (trẻ em; trẻ nhỏ; nhi đồng)",
+        "meaningEn": "child, newborn, young"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジ",
+          "ニ",
+          "ゲイ"
+        ],
         "kunyomi": [
-          "いくじ"
+          "こ",
+          "-こ",
+          "-っこ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 育児 (childcare, nursing, upbringing).",
-        "en": "Appears in JLPT N2 vocabulary: 育児 (childcare, nursing, upbringing)."
+        "vi": "児 là trẻ nhỏ; trong 育児, chữ này chỉ đối tượng được chăm sóc và nuôi dạy.",
+        "en": "児 means child; in 育児 it is the child being cared for and raised."
       },
       "decomposition": {
         "hanViet": "Nhi",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "子",
+          "育",
+          "幼",
+          "童"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhi",
-        "meaningViNoAccent": "childcare, nursing, upbringing",
-        "meaningEnNoAccent": "childcare, nursing, upbringing"
+        "meaningViNoAccent": "tre em; tre nho; nhi dong",
+        "meaningEnNoAccent": "child, newborn, young"
       },
       "examples": [
         {
           "word": "育児",
           "reading": "いくじ",
-          "meaning": "childcare, nursing, upbringing"
+          "meaning": "chăm sóc trẻ; nuôi dạy trẻ",
+          "meaningEn": "childcare, upbringing"
         }
       ],
       "tags": [
@@ -106,7 +130,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,37 +143,47 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Kỷ",
-        "meaningVi": "somewhat",
-        "meaningViDisplay": "幾 (somewhat)",
-        "meaningEn": "somewhat"
+        "meaningVi": "bao nhiêu; vài; phần nào",
+        "meaningViDisplay": "Kỷ (bao nhiêu; vài; phần nào)",
+        "meaningEn": "how many, several, some"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ"
+        ],
         "kunyomi": [
-          "いくぶん"
+          "いく-",
+          "いく.つ",
+          "いく.ら"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 幾分 (somewhat).",
-        "en": "Appears in JLPT N2 vocabulary: 幾分 (somewhat)."
+        "vi": "幾 hỏi hoặc chỉ một lượng chưa xác định; 幾分 là 'một phần nào đó, ít nhiều'.",
+        "en": "幾 asks or marks an indefinite amount; 幾分 means somewhat or to some degree."
       },
       "decomposition": {
         "hanViet": "Kỷ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "数",
+          "何",
+          "分",
+          "少"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ky",
-        "meaningViNoAccent": "somewhat",
-        "meaningEnNoAccent": "somewhat"
+        "meaningViNoAccent": "bao nhieu; vai; phan nao",
+        "meaningEnNoAccent": "how many, several, some"
       },
       "examples": [
         {
           "word": "幾分",
           "reading": "いくぶん",
-          "meaning": "somewhat"
+          "meaning": "phần nào; ít nhiều",
+          "meaningEn": "somewhat"
         }
       ],
       "tags": [
@@ -156,7 +191,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,37 +204,51 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Phân",
-        "meaningVi": "somewhat",
-        "meaningViDisplay": "分 (somewhat)",
-        "meaningEn": "somewhat"
+        "meaningVi": "phần; chia; hiểu",
+        "meaningViDisplay": "Phân (phần; chia; hiểu)",
+        "meaningEn": "part, divide, understand"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ブン",
+          "フン",
+          "ブ"
+        ],
         "kunyomi": [
-          "いくぶん"
+          "わ.ける",
+          "わ.け",
+          "わ.かれる",
+          "わ.かる",
+          "わ.かつ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 幾分 (somewhat).",
-        "en": "Appears in JLPT N2 vocabulary: 幾分 (somewhat)."
+        "vi": "分 là phần hoặc sự chia ra; trong 幾分, nó chỉ một phần mức độ nên thành 'phần nào'.",
+        "en": "分 means a part or division; in 幾分 it marks a degree or portion, hence somewhat."
       },
       "decomposition": {
         "hanViet": "Phân",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "半",
+          "部",
+          "幾",
+          "別"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phan",
-        "meaningViNoAccent": "somewhat",
-        "meaningEnNoAccent": "somewhat"
+        "meaningViNoAccent": "phan; chia; hieu",
+        "meaningEnNoAccent": "part, divide, understand"
       },
       "examples": [
         {
           "word": "幾分",
           "reading": "いくぶん",
-          "meaning": "somewhat"
+          "meaning": "phần nào; ít nhiều",
+          "meaningEn": "somewhat"
         }
       ],
       "tags": [
@@ -206,9 +256,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k053",
@@ -218,37 +269,46 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Hoa",
-        "meaningVi": "(1) flower arrangement",
-        "meaningViDisplay": "花 ((1) flower arrangement)",
-        "meaningEn": "(1) flower arrangement"
+        "meaningVi": "hoa; bông hoa",
+        "meaningViDisplay": "Hoa (hoa; bông hoa)",
+        "meaningEn": "flower, blossom"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ",
+          "ケ"
+        ],
         "kunyomi": [
-          "いけばな"
+          "はな"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 生け花 ((1) flower arrangement).",
-        "en": "Appears in JLPT N2 vocabulary: 生け花 ((1) flower arrangement)."
+        "vi": "花 là hoa; 生け花 là nghệ thuật cắm và sắp đặt hoa.",
+        "en": "花 means flower; 生け花 is the art of arranging flowers."
       },
       "decomposition": {
         "hanViet": "Hoa",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "生",
+          "草",
+          "色",
+          "芸"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoa",
-        "meaningViNoAccent": "(1) flower arrangement",
-        "meaningEnNoAccent": "(1) flower arrangement"
+        "meaningViNoAccent": "hoa; bong hoa",
+        "meaningEnNoAccent": "flower, blossom"
       },
       "examples": [
         {
           "word": "生け花",
           "reading": "いけばな",
-          "meaning": "(1) flower arrangement"
+          "meaning": "nghệ thuật cắm hoa",
+          "meaningEn": "flower arrangement"
         }
       ],
       "tags": [
@@ -256,49 +316,58 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k054",
       "lessonId": 7,
       "level": "N2",
       "character": "以",
-      "strokeCount": 4,
+      "strokeCount": 5,
       "labels": {
         "hanViet": "Dĩ",
-        "meaningVi": "after this, from now on, hereafter, thereafter",
-        "meaningViDisplay": "以 (after this, from now on, hereafter, thereafter)",
-        "meaningEn": "after this, from now on, hereafter, thereafter"
+        "meaningVi": "lấy làm mốc; bởi; từ",
+        "meaningViDisplay": "Dĩ (lấy làm mốc; bởi; từ)",
+        "meaningEn": "by means of, from, in view of"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いご"
+          "もっ.て"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 以後 (after this, from now on, hereafter, thereafter).",
-        "en": "Appears in JLPT N2 vocabulary: 以後 (after this, from now on, hereafter, thereafter)."
+        "vi": "以 đặt một mốc hoặc phương tiện; 以後 là từ mốc đó về sau.",
+        "en": "以 sets a means or reference point; 以後 means after that point."
       },
       "decomposition": {
         "hanViet": "Dĩ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "後",
+          "降",
+          "前",
+          "上"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Di",
-        "meaningViNoAccent": "after this, from now on, hereafter, thereafter",
-        "meaningEnNoAccent": "after this, from now on, hereafter, thereafter"
+        "meaningViNoAccent": "lay lam moc; boi; tu",
+        "meaningEnNoAccent": "by means of, from, in view of"
       },
       "examples": [
         {
           "word": "以後",
           "reading": "いご",
-          "meaning": "after this, from now on, hereafter, thereafter"
+          "meaning": "từ nay về sau; sau đó",
+          "meaningEn": "after this, from now on"
         }
       ],
       "tags": [
@@ -306,7 +375,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +388,50 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Hậu",
-        "meaningVi": "after this, from now on, hereafter, thereafter",
-        "meaningViDisplay": "後 (after this, from now on, hereafter, thereafter)",
-        "meaningEn": "after this, from now on, hereafter, thereafter"
+        "meaningVi": "sau; phía sau; về sau",
+        "meaningViDisplay": "Hậu (sau; phía sau; về sau)",
+        "meaningEn": "behind, later, after"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゴ",
+          "コウ"
+        ],
         "kunyomi": [
-          "いご"
+          "のち",
+          "うし.ろ",
+          "うしろ",
+          "あと",
+          "おく.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 以後 (after this, from now on, hereafter, thereafter).",
-        "en": "Appears in JLPT N2 vocabulary: 以後 (after this, from now on, hereafter, thereafter)."
+        "vi": "後 là phía sau hoặc thời điểm sau; 以後 là sau mốc đã nêu.",
+        "en": "後 means behind or later; 以後 means after the stated point."
       },
       "decomposition": {
         "hanViet": "Hậu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "前",
+          "以",
+          "降",
+          "遅"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hau",
-        "meaningViNoAccent": "after this, from now on, hereafter, thereafter",
-        "meaningEnNoAccent": "after this, from now on, hereafter, thereafter"
+        "meaningViNoAccent": "sau; phia sau; ve sau",
+        "meaningEnNoAccent": "behind, later, after"
       },
       "examples": [
         {
           "word": "以後",
           "reading": "いご",
-          "meaning": "after this, from now on, hereafter, thereafter"
+          "meaning": "từ nay về sau; sau đó",
+          "meaningEn": "after this, from now on"
         }
       ],
       "tags": [
@@ -356,49 +439,64 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k056",
       "lessonId": 7,
       "level": "N2",
       "character": "降",
-      "strokeCount": 8,
+      "strokeCount": 10,
       "labels": {
         "hanViet": "Giáng",
-        "meaningVi": "on and after, hereafter, thereafter",
-        "meaningViDisplay": "降 (on and after, hereafter, thereafter)",
-        "meaningEn": "on and after, hereafter, thereafter"
+        "meaningVi": "xuống; rơi; kể từ sau",
+        "meaningViDisplay": "Giáng (xuống; rơi; kể từ sau)",
+        "meaningEn": "descend, fall, after"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ",
+          "ゴ"
+        ],
         "kunyomi": [
-          "いこう"
+          "お.りる",
+          "お.ろす",
+          "ふ.る",
+          "ふ.り",
+          "くだ.る",
+          "くだ.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 以降 (on and after, hereafter, thereafter).",
-        "en": "Appears in JLPT N2 vocabulary: 以降 (on and after, hereafter, thereafter)."
+        "vi": "降 là đi xuống hoặc rơi xuống; trong 以降, nó mở rộng thành 'từ mốc đó trở đi'.",
+        "en": "降 means descend or fall; in 以降 it extends to 'from that point onward'."
       },
       "decomposition": {
         "hanViet": "Giáng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "以",
+          "後",
+          "下",
+          "雨"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Giang",
-        "meaningViNoAccent": "on and after, hereafter, thereafter",
-        "meaningEnNoAccent": "on and after, hereafter, thereafter"
+        "meaningViNoAccent": "xuong; roi; ke tu sau",
+        "meaningEnNoAccent": "descend, fall, after"
       },
       "examples": [
         {
           "word": "以降",
           "reading": "いこう",
-          "meaning": "on and after, hereafter, thereafter"
+          "meaning": "từ đó trở đi; kể từ sau",
+          "meaningEn": "on and after, thereafter"
         }
       ],
       "tags": [
@@ -406,14 +504,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

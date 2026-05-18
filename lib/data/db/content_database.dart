@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 32;
+const _kanjiSeedRevision = 33;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -57,6 +57,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '案',
     meaning: 'Án (ý tưởng; phương án; vụ việc)',
     decompositionContains: '"hanViet":"Án"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 7,
+    character: '育',
+    meaning: 'Dục (nuôi dạy; phát triển; giáo dục)',
+    decompositionContains: '"hanViet":"Dục"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

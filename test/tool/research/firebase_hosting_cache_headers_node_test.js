@@ -17,20 +17,29 @@ function cacheControlFor(source) {
   return header.value;
 }
 
-test('Flutter web shell and mutable content assets are not cached for an hour', () => {
+test('Flutter web shell stays fresh while runtime/content assets use bounded cache', () => {
   for (const source of [
     'index.html',
-    'main.dart.js',
-    'flutter_bootstrap.js',
-    'flutter.js',
     'flutter_service_worker.js',
     'version.json',
-    'assets/assets/data/content/**',
-    'assets/AssetManifest*',
   ]) {
     assert.equal(
       cacheControlFor(source),
       'no-cache, no-store, must-revalidate',
     );
+  }
+
+  for (const source of [
+    'main.dart.js',
+    'flutter_bootstrap.js',
+    'flutter.js',
+    'assets/assets/data/content/**',
+    'assets/AssetManifest*',
+  ]) {
+    assert.equal(cacheControlFor(source), 'public, max-age=86400');
+  }
+
+  for (const source of ['sqlite3.wasm', 'drift_worker.js']) {
+    assert.equal(cacheControlFor(source), 'public, max-age=2592000');
   }
 });

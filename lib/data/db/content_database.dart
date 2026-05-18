@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 30;
+const _kanjiSeedRevision = 31;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -43,6 +43,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '甘',
     meaning: 'Cam (ngọt; dễ dãi; nuông chiều)',
     decompositionContains: '"hanViet":"Cam"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 5,
+    character: '争',
+    meaning: 'Tranh (tranh chấp; cạnh tranh; cãi nhau)',
+    decompositionContains: '"hanViet":"Tranh"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

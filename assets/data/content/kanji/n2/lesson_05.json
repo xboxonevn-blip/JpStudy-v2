@@ -8,7 +8,7 @@
   "lessonId": 5,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k033",
@@ -18,37 +18,46 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Tranh",
-        "meaningVi": "to dispute, to argue, to be at variance, to compete",
-        "meaningViDisplay": "争 (to dispute, to argue, to be at variance, to compete)",
-        "meaningEn": "to dispute, to argue, to be at variance, to compete"
+        "meaningVi": "tranh chấp; cạnh tranh; cãi nhau",
+        "meaningViDisplay": "Tranh (tranh chấp; cạnh tranh; cãi nhau)",
+        "meaningEn": "contend, dispute, compete"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ"
+        ],
         "kunyomi": [
-          "あらそう"
+          "あらそ.う",
+          "いか.でか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 争う (to dispute, to argue, to be at variance, to compete).",
-        "en": "Appears in JLPT N2 vocabulary: 争う (to dispute, to argue, to be at variance, to compete)."
+        "vi": "争 là tranh chấp hoặc cạnh tranh; 争う dùng khi hai bên cãi, giành hoặc thi nhau.",
+        "en": "争 means to contend or dispute; 争う is to argue, compete, or fight over something."
       },
       "decomposition": {
         "hanViet": "Tranh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "競",
+          "戦",
+          "論",
+          "勝"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tranh",
-        "meaningViNoAccent": "to dispute, to argue, to be at variance, to compete",
-        "meaningEnNoAccent": "to dispute, to argue, to be at variance, to compete"
+        "meaningViNoAccent": "tranh chap; canh tranh; cai nhau",
+        "meaningEnNoAccent": "contend, dispute, compete"
       },
       "examples": [
         {
           "word": "争う",
           "reading": "あらそう",
-          "meaning": "to dispute, to argue, to be at variance, to compete"
+          "meaning": "tranh chấp; cạnh tranh",
+          "meaningEn": "to dispute, to compete"
         }
       ],
       "tags": [
@@ -56,7 +65,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,37 +78,46 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Cải",
-        "meaningVi": "another time, again, over again, anew, formally",
-        "meaningViDisplay": "改 (another time, again, over again, anew, formally)",
-        "meaningEn": "another time, again, over again, anew, formally"
+        "meaningVi": "sửa đổi; cải thiện; kiểm tra lại",
+        "meaningViDisplay": "Cải (sửa đổi; cải thiện; kiểm tra lại)",
+        "meaningEn": "change, renew, inspect"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カイ"
+        ],
         "kunyomi": [
-          "あらためて"
+          "あらた.める",
+          "あらた.まる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 改めて (another time, again, over again, anew, formally).",
-        "en": "Appears in JLPT N2 vocabulary: 改めて (another time, again, over again, anew, formally)."
+        "vi": "改 là thay đổi hoặc sửa lại; 改めて dùng khi làm lại, nói lại hoặc xác nhận một cách chính thức.",
+        "en": "改 means change or revise; 改めて marks doing or saying something again/formally."
       },
       "decomposition": {
         "hanViet": "Cải",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "新",
+          "変",
+          "善",
+          "検"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cai",
-        "meaningViNoAccent": "another time, again, over again, anew, formally",
-        "meaningEnNoAccent": "another time, again, over again, anew, formally"
+        "meaningViNoAccent": "sua doi; cai thien; kiem tra lai",
+        "meaningEnNoAccent": "change, renew, inspect"
       },
       "examples": [
         {
           "word": "改めて",
           "reading": "あらためて",
-          "meaning": "another time, again, over again, anew, formally"
+          "meaning": "lại lần nữa; chính thức",
+          "meaningEn": "again, anew, formally"
         }
       ],
       "tags": [
@@ -106,7 +125,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,37 +138,47 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Trứ",
-        "meaningVi": "to write, to publish",
-        "meaningViDisplay": "著 (to write, to publish)",
-        "meaningEn": "to write, to publish"
+        "meaningVi": "viết; xuất bản; nổi bật",
+        "meaningViDisplay": "Trứ (viết; xuất bản; nổi bật)",
+        "meaningEn": "write, publish, remarkable"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チョ",
+          "チャク"
+        ],
         "kunyomi": [
-          "あらわす"
+          "あらわ.す",
+          "いちじる.しい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 著す (to write, to publish).",
-        "en": "Appears in JLPT N2 vocabulary: 著す (to write, to publish)."
+        "vi": "著 là viết ra hoặc công bố tác phẩm; nghĩa khác là nổi bật trong 著しい.",
+        "en": "著 covers writing/publishing, and also being remarkable as in 著しい."
       },
       "decomposition": {
         "hanViet": "Trứ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "書",
+          "作",
+          "名",
+          "者"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tru",
-        "meaningViNoAccent": "to write, to publish",
-        "meaningEnNoAccent": "to write, to publish"
+        "meaningViNoAccent": "viet; xuat ban; noi bat",
+        "meaningEnNoAccent": "write, publish, remarkable"
       },
       "examples": [
         {
           "word": "著す",
           "reading": "あらわす",
-          "meaning": "to write, to publish"
+          "meaning": "viết; biên soạn và xuất bản",
+          "meaningEn": "to write, to publish"
         }
       ],
       "tags": [
@@ -156,9 +186,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k036",
@@ -168,37 +199,46 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Hữu",
-        "meaningVi": "grateful, thankful, welcome, appreciated, evoking gratitude",
-        "meaningViDisplay": "有 (grateful, thankful, welcome, appreciated, evoking gratitude)",
-        "meaningEn": "grateful, thankful, welcome, appreciated, evoking gratitude"
+        "meaningVi": "có; tồn tại; sở hữu",
+        "meaningViDisplay": "Hữu (có; tồn tại; sở hữu)",
+        "meaningEn": "have, exist, possess"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ユウ",
+          "ウ"
+        ],
         "kunyomi": [
-          "ありがたい"
+          "あ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 有難い (grateful, thankful, welcome, appreciated, evoking gratitude).",
-        "en": "Appears in JLPT N2 vocabulary: 有難い (grateful, thankful, welcome, appreciated, evoking gratitude)."
+        "vi": "有 là có hoặc tồn tại; 有難い vốn là thứ khó có nên đáng quý, từ đó thành 'biết ơn'.",
+        "en": "有 means have or exist; 有難い literally suggests something hard to have, hence appreciated."
       },
       "decomposition": {
         "hanViet": "Hữu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "無",
+          "在",
+          "持",
+          "難"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Huu",
-        "meaningViNoAccent": "grateful, thankful, welcome, appreciated, evoking gratitude",
-        "meaningEnNoAccent": "grateful, thankful, welcome, appreciated, evoking gratitude"
+        "meaningViNoAccent": "co; ton tai; so huu",
+        "meaningEnNoAccent": "have, exist, possess"
       },
       "examples": [
         {
           "word": "有難い",
           "reading": "ありがたい",
-          "meaning": "grateful, thankful, welcome, appreciated, evoking gratitude"
+          "meaning": "biết ơn; quý hóa; đáng mừng",
+          "meaningEn": "grateful, appreciated"
         }
       ],
       "tags": [
@@ -206,9 +246,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k037",
@@ -218,37 +259,50 @@
       "strokeCount": 19,
       "labels": {
         "hanViet": "Nan",
-        "meaningVi": "grateful, thankful, welcome, appreciated, evoking gratitude",
-        "meaningViDisplay": "難 (grateful, thankful, welcome, appreciated, evoking gratitude)",
-        "meaningEn": "grateful, thankful, welcome, appreciated, evoking gratitude"
+        "meaningVi": "khó; tai nạn; vấn đề",
+        "meaningViDisplay": "Nan (khó; tai nạn; vấn đề)",
+        "meaningEn": "difficult, trouble, accident"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ナン"
+        ],
         "kunyomi": [
-          "ありがたい"
+          "かた.い",
+          "-がた.い",
+          "むずか.しい",
+          "むづか.しい",
+          "むつか.しい",
+          "-にく.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 有難い (grateful, thankful, welcome, appreciated, evoking gratitude).",
-        "en": "Appears in JLPT N2 vocabulary: 有難い (grateful, thankful, welcome, appreciated, evoking gratitude)."
+        "vi": "難 là khó khăn hoặc nạn; trong 有難い, ý gốc là 'khó có được' nên thành đáng quý.",
+        "en": "難 means difficult or trouble; in 有難い it contributes the sense 'hard to have'."
       },
       "decomposition": {
         "hanViet": "Nan",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "有",
+          "困",
+          "易",
+          "災"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nan",
-        "meaningViNoAccent": "grateful, thankful, welcome, appreciated, evoking gratitude",
-        "meaningEnNoAccent": "grateful, thankful, welcome, appreciated, evoking gratitude"
+        "meaningViNoAccent": "kho; tai nan; van de",
+        "meaningEnNoAccent": "difficult, trouble, accident"
       },
       "examples": [
         {
           "word": "有難い",
           "reading": "ありがたい",
-          "meaning": "grateful, thankful, welcome, appreciated, evoking gratitude"
+          "meaning": "biết ơn; quý hóa; đáng mừng",
+          "meaningEn": "grateful, appreciated"
         }
       ],
       "tags": [
@@ -256,9 +310,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k038",
@@ -268,37 +323,45 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Tại",
-        "meaningVi": "to live, to be",
-        "meaningViDisplay": "在 (to live, to be)",
-        "meaningEn": "to live, to be"
+        "meaningVi": "ở; tồn tại; hiện diện",
+        "meaningViDisplay": "Tại (ở; tồn tại; hiện diện)",
+        "meaningEn": "exist, be located in"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ザイ"
+        ],
         "kunyomi": [
-          "ある"
+          "あ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 在る (to live, to be).",
-        "en": "Appears in JLPT N2 vocabulary: 在る (to live, to be)."
+        "vi": "在 nhấn mạnh việc tồn tại hoặc có mặt ở nơi nào đó; 在る là dạng trang trọng của 'có/tồn tại'.",
+        "en": "在 emphasizes existence or presence in a place; 在る is a formal 'exist/be'."
       },
       "decomposition": {
         "hanViet": "Tại",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "有",
+          "存",
+          "住",
+          "場"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tai",
-        "meaningViNoAccent": "to live, to be",
-        "meaningEnNoAccent": "to live, to be"
+        "meaningViNoAccent": "o; ton tai; hien dien",
+        "meaningEnNoAccent": "exist, be located in"
       },
       "examples": [
         {
           "word": "在る",
           "reading": "ある",
-          "meaning": "to live, to be"
+          "meaning": "tồn tại; có mặt",
+          "meaningEn": "to exist, to be"
         }
       ],
       "tags": [
@@ -306,9 +369,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k039",
@@ -318,37 +382,48 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "An",
-        "meaningVi": "easy-going",
-        "meaningViDisplay": "安 (easy-going)",
-        "meaningEn": "easy-going"
+        "meaningVi": "yên ổn; rẻ; dễ",
+        "meaningViDisplay": "An (yên ổn; rẻ; dễ)",
+        "meaningEn": "peaceful, cheap, easy"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アン"
+        ],
         "kunyomi": [
-          "あんい"
+          "やす.い",
+          "やす.まる",
+          "やす",
+          "やす.らか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 安易 (easy-going).",
-        "en": "Appears in JLPT N2 vocabulary: 安易 (easy-going)."
+        "vi": "安 là yên ổn hoặc dễ chịu; trong 安易, nó góp sắc thái 'dễ' nhưng hơi hời hợt.",
+        "en": "安 means peaceful, cheap, or easy; in 安易 it contributes an 'easy' nuance."
       },
       "decomposition": {
         "hanViet": "An",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "易",
+          "全",
+          "心",
+          "価"
+        ]
       },
       "search": {
         "hanVietNoAccent": "An",
-        "meaningViNoAccent": "easy-going",
-        "meaningEnNoAccent": "easy-going"
+        "meaningViNoAccent": "yen on; re; de",
+        "meaningEnNoAccent": "peaceful, cheap, easy"
       },
       "examples": [
         {
           "word": "安易",
           "reading": "あんい",
-          "meaning": "easy-going"
+          "meaning": "dễ dãi; đơn giản quá mức",
+          "meaningEn": "easy-going, careless"
         }
       ],
       "tags": [
@@ -356,9 +431,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k040",
@@ -368,37 +444,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Dịch",
-        "meaningVi": "easy-going",
-        "meaningViDisplay": "易 (easy-going)",
-        "meaningEn": "easy-going"
+        "meaningVi": "dễ; đơn giản; bói dịch",
+        "meaningViDisplay": "Dịch (dễ; đơn giản; bói dịch)",
+        "meaningEn": "easy, simple, divination"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エキ",
+          "イ"
+        ],
         "kunyomi": [
-          "あんい"
+          "やさ.しい",
+          "やす.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 安易 (easy-going).",
-        "en": "Appears in JLPT N2 vocabulary: 安易 (easy-going)."
+        "vi": "易 là dễ hoặc đơn giản; trong 安易, nó chỉ cách nghĩ quá dễ dãi, thiếu cẩn trọng.",
+        "en": "易 means easy or simple; in 安易 it marks an overly easy/careless approach."
       },
       "decomposition": {
         "hanViet": "Dịch",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "安",
+          "簡",
+          "変",
+          "占"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dich",
-        "meaningViNoAccent": "easy-going",
-        "meaningEnNoAccent": "easy-going"
+        "meaningViNoAccent": "de; don gian; boi dich",
+        "meaningEnNoAccent": "easy, simple, divination"
       },
       "examples": [
         {
           "word": "安易",
           "reading": "あんい",
-          "meaning": "easy-going"
+          "meaning": "dễ dãi; đơn giản quá mức",
+          "meaningEn": "easy-going, careless"
         }
       ],
       "tags": [
@@ -406,14 +492,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

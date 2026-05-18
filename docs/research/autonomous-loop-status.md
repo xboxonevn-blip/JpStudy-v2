@@ -421,3 +421,11 @@
 - Added a compact active layout for JLPT Mock Pro that removes the tall hero/progress chrome on small viewports, keeps navigation controls in a slim header, and gives the shared answer component bounded height.
 - Verified locally after the compact fix: focused JLPT/grammar/learn/test quiz suites passed, `flutter analyze lib test` was clean, UI string guard reported `0`, taxonomy guard passed, and full `flutter test` passed (`2340`). Live post-deploy proof for the compact mobile fix is still pending.
 - Deployed `ea48dd17` to Firebase Hosting. Live proof after cache bypass: mobile `390x640` JLPT Mock Pro showed all four answer choices and `Answer` in one viewport; selecting did not commit until `Answer`; commit changed progress from `0/18` to `1/18`; console warnings/errors after this check were `0`. Desktop still shows the 2x2 answer grid and `Answer` in the active question view.
+
+## 2026-05-18 Kanji Data Load Regression Recheck
+
+- Re-ran the new owner P0 report before continuing content work. No new code change was needed: QA-A-013/014/015 already cover the reported failure class.
+- Local regression proof: `flutter test test\data\db\content_database_lazy_seed_test.dart --reporter expanded` passed all 12 cases, including fresh DB, pre-v33 upgrade, v34 missing `meaning_ja`, stale seed revision, partial current-version DB, full-count stale sentinel, duplicate sentinel, runtime repair, and healthy no-op. `flutter test test\data\content\kanji_runtime_reachability_test.dart --reporter expanded` passed.
+- Live fresh-IDB proof: deleted the live `content` IndexedDB while preserving normal Hosting, opened VI/N3 `/#/kanji`, and saw the grid render `203` entries. Direct `/#/practice/handwriting` rendered `Viết tay: N3 — Học kanji mới` with real kanji and stroke guidance. Console errors/warnings after filtering external antivirus noise: `0`.
+- Live language/level sanity: isolated-context route loads for VI/EN/JA across N5-N1 reported the seeded locale/level correctly after re-running polluted rows in isolated contexts, with app console errors `0` and request failures `0`.
+- Status: verified fixed / not reproduced. Remaining kanji work is QA-B-002 content completeness and QA-A-011 Japanese definition data, not app-wide kanji loading.

@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 38;
+const _kanjiSeedRevision = 39;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -99,6 +99,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '力',
     meaning: 'Lực (sức mạnh; lực; năng lực)',
     decompositionContains: '"hanViet":"Lực"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 13,
+    character: '持',
+    meaning: 'Trì (cầm; giữ; mang; duy trì)',
+    decompositionContains: '"hanViet":"Trì"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

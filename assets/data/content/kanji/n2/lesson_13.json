@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 13,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k097",
@@ -18,37 +18,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Trì",
-        "meaningVi": "to take (be in) charge of",
-        "meaningViDisplay": "持 (to take (be in) charge of)",
-        "meaningEn": "to take (be in) charge of"
+        "meaningVi": "cầm; giữ; mang; duy trì",
+        "meaningViDisplay": "Trì (cầm; giữ; mang; duy trì)",
+        "meaningEn": "hold, have, carry"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジ"
+        ],
         "kunyomi": [
-          "うけもつ"
+          "も.つ",
+          "-も.ち",
+          "も.てる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 受け持つ (to take (be in) charge of).",
-        "en": "Appears in JLPT N2 vocabulary: 受け持つ (to take (be in) charge of)."
+        "vi": "持 là cầm/giữ trong tay hoặc giữ trách nhiệm; 受け持つ là nhận phần việc để phụ trách.",
+        "en": "持 means to hold or carry; in 受け持つ it becomes taking charge of a responsibility."
       },
       "decomposition": {
         "hanViet": "Trì",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "手",
+          "受",
+          "保",
+          "維"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tri",
-        "meaningViNoAccent": "to take (be in) charge of",
-        "meaningEnNoAccent": "to take (be in) charge of"
+        "meaningViNoAccent": "cam; giu; mang; duy tri",
+        "meaningEnNoAccent": "hold, have, carry"
       },
       "examples": [
         {
           "word": "受け持つ",
           "reading": "うけもつ",
-          "meaning": "to take (be in) charge of"
+          "meaning": "phụ trách; đảm nhiệm",
+          "meaningEn": "to take charge of"
         }
       ],
       "tags": [
@@ -56,9 +66,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k098",
@@ -68,45 +79,58 @@
       "strokeCount": 16,
       "labels": {
         "hanViet": "Bạc",
-        "meaningVi": "dim, gloomy",
-        "meaningViDisplay": "薄 (dim, gloomy)",
-        "meaningEn": "dim, gloomy"
+        "meaningVi": "mỏng; nhạt; loãng; yếu",
+        "meaningViDisplay": "Bạc (mỏng; nhạt; loãng; yếu)",
+        "meaningEn": "thin, dilute, weak"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ハク"
+        ],
         "kunyomi": [
-          "うすぐらい"
+          "うす.い",
+          "うす-",
+          "うす.める",
+          "うす.まる",
+          "うす.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 薄暗い (dim, gloomy).",
-        "en": "Appears in JLPT N2 vocabulary: 薄暗い (dim, gloomy)."
+        "vi": "薄 là mỏng/nhạt hoặc yếu; trong 薄暗い, ánh sáng mỏng đi nên thành lờ mờ.",
+        "en": "薄 means thin, faint, or diluted; in 薄暗い the light is thin, so it feels dim."
       },
       "decomposition": {
         "hanViet": "Bạc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "厚",
+          "暗",
+          "淡",
+          "草"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bac",
-        "meaningViNoAccent": "dim, gloomy",
-        "meaningEnNoAccent": "dim, gloomy"
+        "meaningViNoAccent": "mong; nhat; loang; yeu",
+        "meaningEnNoAccent": "thin, dilute, weak"
       },
       "examples": [
         {
           "word": "薄暗い",
           "reading": "うすぐらい",
-          "meaning": "dim, gloomy"
+          "meaning": "lờ mờ; âm u",
+          "meaningEn": "dim, gloomy"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,37 +142,47 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Ám",
-        "meaningVi": "dim, gloomy",
-        "meaningViDisplay": "暗 (dim, gloomy)",
-        "meaningEn": "dim, gloomy"
+        "meaningVi": "tối; u ám; mờ",
+        "meaningViDisplay": "Ám (tối; u ám; mờ)",
+        "meaningEn": "dark, obscure, gloomy"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アン"
+        ],
         "kunyomi": [
-          "うすぐらい"
+          "くら.い",
+          "くら.む",
+          "くれ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 薄暗い (dim, gloomy).",
-        "en": "Appears in JLPT N2 vocabulary: 薄暗い (dim, gloomy)."
+        "vi": "暗 là tối hoặc mờ; 薄暗い là tối nhẹ, chưa tối hẳn nhưng ánh sáng đã yếu.",
+        "en": "暗 means dark or obscure; 薄暗い is a lightly dark, dim state."
       },
       "decomposition": {
         "hanViet": "Ám",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "明",
+          "薄",
+          "夜",
+          "黒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Am",
-        "meaningViNoAccent": "dim, gloomy",
-        "meaningEnNoAccent": "dim, gloomy"
+        "meaningViNoAccent": "toi; u am; mo",
+        "meaningEnNoAccent": "dark, obscure, gloomy"
       },
       "examples": [
         {
           "word": "薄暗い",
           "reading": "うすぐらい",
-          "meaning": "dim, gloomy"
+          "meaning": "lờ mờ; âm u",
+          "meaningEn": "dim, gloomy"
         }
       ],
       "tags": [
@@ -156,9 +190,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k100",
@@ -168,37 +203,47 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Đả",
-        "meaningVi": "business meeting, previous arrangement, appointment",
-        "meaningViDisplay": "打 (business meeting, previous arrangement, appointment)",
-        "meaningEn": "business meeting, previous arrangement, appointment"
+        "meaningVi": "đánh; gõ; đập",
+        "meaningViDisplay": "Đả (đánh; gõ; đập)",
+        "meaningEn": "strike, hit, knock"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ダ"
+        ],
         "kunyomi": [
-          "うちあわせ"
+          "う.つ",
+          "う.ち-",
+          "ぶ.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 打合せ (business meeting, previous arrangement, appointment).",
-        "en": "Appears in JLPT N2 vocabulary: 打合せ (business meeting, previous arrangement, appointment)."
+        "vi": "打 là đánh/gõ; trong 打合せ, nghĩa mở rộng là cùng nhau 'đánh nhịp' để bàn bạc trước.",
+        "en": "打 means to strike or hit; in 打合せ it extends to coordinating or meeting beforehand."
       },
       "decomposition": {
         "hanViet": "Đả",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "手",
+          "合",
+          "撃",
+          "投"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đa",
-        "meaningViNoAccent": "business meeting, previous arrangement, appointment",
-        "meaningEnNoAccent": "business meeting, previous arrangement, appointment"
+        "hanVietNoAccent": "Da",
+        "meaningViNoAccent": "danh; go; dap",
+        "meaningEnNoAccent": "strike, hit, knock"
       },
       "examples": [
         {
           "word": "打合せ",
           "reading": "うちあわせ",
-          "meaning": "business meeting, previous arrangement, appointment"
+          "meaning": "cuộc họp bàn; sắp xếp trước; cuộc hẹn",
+          "meaningEn": "business meeting, previous arrangement, appointment"
         }
       ],
       "tags": [
@@ -206,9 +251,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k101",
@@ -218,37 +264,48 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Hợp",
-        "meaningVi": "business meeting, previous arrangement, appointment",
-        "meaningViDisplay": "合 (business meeting, previous arrangement, appointment)",
-        "meaningEn": "business meeting, previous arrangement, appointment"
+        "meaningVi": "hợp lại; kết hợp; phù hợp",
+        "meaningViDisplay": "Hợp (hợp lại; kết hợp; phù hợp)",
+        "meaningEn": "join, fit, suit"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゴウ",
+          "ガッ",
+          "カッ"
+        ],
         "kunyomi": [
-          "うちあわせ"
+          "あ.う",
+          "あ.わせる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 打合せ (business meeting, previous arrangement, appointment).",
-        "en": "Appears in JLPT N2 vocabulary: 打合せ (business meeting, previous arrangement, appointment)."
+        "vi": "合 là hợp lại hoặc khớp với nhau; 打合せ là buổi gặp để thống nhất trước.",
+        "en": "合 means to fit or join together; 打合せ is a meeting to align things beforehand."
       },
       "decomposition": {
         "hanViet": "Hợp",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "打",
+          "会",
+          "組",
+          "適"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hop",
-        "meaningViNoAccent": "business meeting, previous arrangement, appointment",
-        "meaningEnNoAccent": "business meeting, previous arrangement, appointment"
+        "meaningViNoAccent": "hop lai; ket hop; phu hop",
+        "meaningEnNoAccent": "join, fit, suit"
       },
       "examples": [
         {
           "word": "打合せ",
           "reading": "うちあわせ",
-          "meaning": "business meeting, previous arrangement, appointment"
+          "meaning": "cuộc họp bàn; sắp xếp trước; cuộc hẹn",
+          "meaningEn": "business meeting, previous arrangement, appointment"
         }
       ],
       "tags": [
@@ -256,9 +313,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k102",
@@ -268,37 +326,46 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Tiêu",
-        "meaningVi": "to deny, to negate, to contradict",
-        "meaningViDisplay": "消 (to deny, to negate, to contradict)",
-        "meaningEn": "to deny, to negate, to contradict"
+        "meaningVi": "tắt; biến mất; xóa bỏ",
+        "meaningViDisplay": "Tiêu (tắt; biến mất; xóa bỏ)",
+        "meaningEn": "extinguish, disappear, cancel"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ"
+        ],
         "kunyomi": [
-          "うちけす"
+          "き.える",
+          "け.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 打ち消す (to deny, to negate, to contradict).",
-        "en": "Appears in JLPT N2 vocabulary: 打ち消す (to deny, to negate, to contradict)."
+        "vi": "消 là tắt đi, biến mất hoặc xóa bỏ; 打ち消す là xóa/phủ định một điều vừa nói.",
+        "en": "消 means to extinguish, disappear, or erase; 打ち消す is to negate or cancel out a statement."
       },
       "decomposition": {
         "hanViet": "Tiêu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "水",
+          "火",
+          "打",
+          "滅"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tieu",
-        "meaningViNoAccent": "to deny, to negate, to contradict",
-        "meaningEnNoAccent": "to deny, to negate, to contradict"
+        "meaningViNoAccent": "tat; bien mat; xoa bo",
+        "meaningEnNoAccent": "extinguish, disappear, cancel"
       },
       "examples": [
         {
           "word": "打ち消す",
           "reading": "うちけす",
-          "meaning": "to deny, to negate, to contradict"
+          "meaning": "phủ nhận; bác bỏ; xóa bỏ",
+          "meaningEn": "to deny, to negate, to contradict"
         }
       ],
       "tags": [
@@ -306,9 +373,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k103",
@@ -318,37 +386,45 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Thảo",
-        "meaningVi": "to attack, to avenge",
-        "meaningViDisplay": "討 (to attack, to avenge)",
-        "meaningEn": "to attack, to avenge"
+        "meaningVi": "đánh dẹp; tấn công; thảo phạt",
+        "meaningViDisplay": "Thảo (đánh dẹp; tấn công; thảo phạt)",
+        "meaningEn": "attack, defeat, chastise"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "トウ"
+        ],
         "kunyomi": [
-          "うつ"
+          "う.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 討つ (to attack, to avenge).",
-        "en": "Appears in JLPT N2 vocabulary: 討つ (to attack, to avenge)."
+        "vi": "討 là đánh dẹp hoặc thảo phạt; 討つ dùng cho việc tấn công để trừng phạt hoặc trả thù.",
+        "en": "討 means to attack, defeat, or punish; 討つ is attacking to avenge or subdue."
       },
       "decomposition": {
         "hanViet": "Thảo",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "言",
+          "打",
+          "攻",
+          "戦"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thao",
-        "meaningViNoAccent": "to attack, to avenge",
-        "meaningEnNoAccent": "to attack, to avenge"
+        "meaningViNoAccent": "danh dep; tan cong; thao phat",
+        "meaningEnNoAccent": "attack, defeat, chastise"
       },
       "examples": [
         {
           "word": "討つ",
           "reading": "うつ",
-          "meaning": "to attack, to avenge"
+          "meaning": "tấn công; trả thù",
+          "meaningEn": "to attack, to avenge"
         }
       ],
       "tags": [
@@ -356,9 +432,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k104",
@@ -368,37 +445,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Ánh",
-        "meaningVi": "to project, to reflect, to cast (shadow)",
-        "meaningViDisplay": "映 (to project, to reflect, to cast (shadow))",
-        "meaningEn": "to project, to reflect, to cast (shadow)"
+        "meaningVi": "phản chiếu; chiếu lên; hiện hình",
+        "meaningViDisplay": "Ánh (phản chiếu; chiếu lên; hiện hình)",
+        "meaningEn": "reflect, project"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エイ"
+        ],
         "kunyomi": [
-          "うつす"
+          "うつ.る",
+          "うつ.す",
+          "は.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 映す (to project, to reflect, to cast (shadow)).",
-        "en": "Appears in JLPT N2 vocabulary: 映す (to project, to reflect, to cast (shadow))."
+        "vi": "映 là ánh/hình được chiếu hoặc phản chiếu; 映す là chiếu, phản chiếu hoặc làm hiện hình.",
+        "en": "映 is reflection or projection; 映す means to project or reflect an image."
       },
       "decomposition": {
         "hanViet": "Ánh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "日",
+          "写",
+          "影",
+          "照"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Anh",
-        "meaningViNoAccent": "to project, to reflect, to cast (shadow)",
-        "meaningEnNoAccent": "to project, to reflect, to cast (shadow)"
+        "meaningViNoAccent": "phan chieu; chieu len; hien hinh",
+        "meaningEnNoAccent": "reflect, project"
       },
       "examples": [
         {
           "word": "映す",
           "reading": "うつす",
-          "meaning": "to project, to reflect, to cast (shadow)"
+          "meaning": "chiếu; phản chiếu; trình chiếu",
+          "meaningEn": "to project, to reflect, to cast"
         }
       ],
       "tags": [
@@ -406,14 +493,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, Vietnamese readings, stroke counts, and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

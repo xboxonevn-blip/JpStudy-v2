@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 25,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; word-level example readings no longer masquerade as kanji kunyomi.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k193",
@@ -18,47 +18,62 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Quang",
-        "meaningVi": "ánh sáng; chiếu sáng",
-        "meaningViDisplay": "光 (ánh sáng; chiếu sáng)",
-        "meaningEn": "light, brilliant, shine; only"
+        "meaningVi": "ánh sáng; chiếu sáng; tỏa sáng",
+        "meaningViDisplay": "Quang (ánh sáng; chiếu sáng; tỏa sáng)",
+        "meaningEn": "ray; light"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ"
+        ],
         "kunyomi": [
-          "いなびかり"
+          "ひか.る",
+          "ひかり"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 光 nghĩa là ánh sáng; chiếu sáng. Ví dụ JLPT N1: 稲光 ((flash of) lightning).",
-        "en": "Kanji 光 means light, brilliant, shine; only. JLPT N1 example: 稲光 ((flash of) lightning)."
+        "vi": "光 là ánh sáng hoặc sự tỏa sáng; 稲光 là ánh chớp lóe lên.",
+        "en": "光 means light or shine; 稲光 is a flash of lightning."
       },
       "decomposition": {
         "hanViet": "Quang",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "小",
+          "儿"
+        ],
+        "componentNames": [
+          "tiểu/nhỏ",
+          "nhân/người"
+        ],
+        "relatedKanji": [
+          "明",
+          "照",
+          "輝",
+          "稲"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Quang",
-        "meaningViNoAccent": "anh sang; chieu sang",
-        "meaningEnNoAccent": "light, brilliant, shine; only"
+        "meaningViNoAccent": "anh sang; chieu sang; toa sang",
+        "meaningEnNoAccent": "ray; light"
       },
       "examples": [
         {
           "word": "稲光",
           "reading": "いなびかり",
-          "meaning": "(flash of) lightning"
+          "meaning": "tia chớp; ánh chớp",
+          "meaningEn": "(flash of) lightning"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k194",
@@ -68,47 +83,63 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Cổ",
-        "meaningVi": "cũ; cổ xưa",
-        "meaningViDisplay": "古 (cũ; cổ xưa)",
-        "meaningEn": "old, classic, ancient"
+        "meaningVi": "cũ; cổ xưa; thời xưa",
+        "meaningViDisplay": "Cổ (cũ; cổ xưa; thời xưa)",
+        "meaningEn": "old; ancient"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コ"
+        ],
         "kunyomi": [
-          "いにしえ"
+          "ふる.い",
+          "ふる-",
+          "-ふる.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 古 nghĩa là cũ; cổ xưa. Ví dụ JLPT N1: 古 (antiquity, ancient times).",
-        "en": "Kanji 古 means old, classic, ancient. JLPT N1 example: 古 (antiquity, ancient times)."
+        "vi": "古 chỉ cái cũ hoặc thời xưa; 古 đọc いにしえ trong văn trang trọng để nói thời cổ.",
+        "en": "古 means old or ancient; いにしえ refers to ancient times."
       },
       "decomposition": {
         "hanViet": "Cổ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "十",
+          "口"
+        ],
+        "componentNames": [
+          "thập/mười",
+          "khẩu/miệng"
+        ],
+        "relatedKanji": [
+          "昔",
+          "旧",
+          "故",
+          "今"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Co",
-        "meaningViNoAccent": "cu; co xua",
-        "meaningEnNoAccent": "old, classic, ancient"
+        "meaningViNoAccent": "cu; co xua; thoi xua",
+        "meaningEnNoAccent": "old; ancient"
       },
       "examples": [
         {
           "word": "古",
           "reading": "いにしえ",
-          "meaning": "antiquity, ancient times"
+          "meaning": "thời xưa; cổ đại",
+          "meaningEn": "antiquity; ancient times"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k195",
@@ -118,45 +149,59 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Kỳ",
-        "meaningVi": "cầu nguyện",
-        "meaningViDisplay": "祈 (cầu nguyện)",
-        "meaningEn": "pray; entreat, beseech"
+        "meaningVi": "cầu nguyện; khẩn cầu",
+        "meaningViDisplay": "Kỳ (cầu nguyện; khẩn cầu)",
+        "meaningEn": "pray; wish"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ"
+        ],
         "kunyomi": [
-          "いのり"
+          "いの.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 祈 nghĩa là cầu nguyện. Ví dụ JLPT N1: 祈り (lời cầu nguyện, sự cầu xin).",
-        "en": "Kanji 祈 means pray; entreat, beseech. JLPT N1 example: 祈り (lời cầu nguyện, sự cầu xin)."
+        "vi": "祈 là cầu nguyện hoặc gửi gắm điều ước; 祈り là lời cầu nguyện.",
+        "en": "祈 means to pray or wish; 祈り is a prayer."
       },
       "decomposition": {
         "hanViet": "Kỳ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "礻",
+          "斤"
+        ],
+        "componentNames": [
+          "thị/thần linh",
+          "cân/rìu"
+        ],
+        "relatedKanji": [
+          "願",
+          "神",
+          "祝",
+          "祷"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ky",
-        "meaningViNoAccent": "cau nguyen",
-        "meaningEnNoAccent": "pray; entreat, beseech"
+        "meaningViNoAccent": "cau nguyen; khan cau",
+        "meaningEnNoAccent": "pray; wish"
       },
       "examples": [
         {
           "word": "祈り",
           "reading": "いのり",
-          "meaning": "lời cầu nguyện, sự cầu xin"
+          "meaning": "lời cầu nguyện; sự cầu xin",
+          "meaningEn": "lời cầu nguyện, sự cầu xin"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -169,44 +214,58 @@
       "labels": {
         "hanViet": "Hãn",
         "meaningVi": "tiếng ngáy",
-        "meaningViDisplay": "鼾 (tiếng ngáy)",
-        "meaningEn": "snore loudly"
+        "meaningViDisplay": "Hãn (tiếng ngáy)",
+        "meaningEn": "snoring"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カン"
+        ],
         "kunyomi": [
           "いびき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 鼾 nghĩa là tiếng ngáy. Ví dụ JLPT N1: 鼾 (tiếng ngáy).",
-        "en": "Kanji 鼾 means snore loudly. JLPT N1 example: 鼾 (tiếng ngáy)."
+        "vi": "鼾 là tiếng ngáy; chữ này hiếm nhưng xuất hiện trực tiếp trong từ 鼾/いびき.",
+        "en": "鼾 means snoring and appears directly as いびき."
       },
       "decomposition": {
         "hanViet": "Hãn",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "鼻",
+          "干"
+        ],
+        "componentNames": [
+          "tị/mũi",
+          "can/khô"
+        ],
+        "relatedKanji": [
+          "鼻",
+          "眠",
+          "声",
+          "息"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Han",
         "meaningViNoAccent": "tieng ngay",
-        "meaningEnNoAccent": "snore loudly"
+        "meaningEnNoAccent": "snoring"
       },
       "examples": [
         {
           "word": "鼾",
           "reading": "いびき",
-          "meaning": "tiếng ngáy"
+          "meaning": "tiếng ngáy",
+          "meaningEn": "tiếng ngáy"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,47 +277,62 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Kim",
-        "meaningVi": "bây giờ; hiện nay",
-        "meaningViDisplay": "今 (bây giờ; hiện nay)",
-        "meaningEn": "now, today, modern era"
+        "meaningVi": "nay; hiện tại; bây giờ",
+        "meaningViDisplay": "Kim (nay; hiện tại; bây giờ)",
+        "meaningEn": "now"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コン",
+          "キン"
+        ],
         "kunyomi": [
-          "いまさら"
+          "いま"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 今 nghĩa là bây giờ; hiện nay. Ví dụ JLPT N1: 今更 (now, at this late hour).",
-        "en": "Kanji 今 means now, today, modern era. JLPT N1 example: 今更 (now, at this late hour)."
+        "vi": "今 là hiện tại hoặc bây giờ; 今更 diễn tả “đến giờ này mới...”.",
+        "en": "今 means now; 今更 means at this late point."
       },
       "decomposition": {
         "hanViet": "Kim",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "人",
+          "一"
+        ],
+        "componentNames": [
+          "nhân/người",
+          "nhất/một"
+        ],
+        "relatedKanji": [
+          "現",
+          "時",
+          "更",
+          "未"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Kim",
-        "meaningViNoAccent": "bay gio; hien nay",
-        "meaningEnNoAccent": "now, today, modern era"
+        "meaningViNoAccent": "nay; hien tai; bay gio",
+        "meaningEnNoAccent": "now"
       },
       "examples": [
         {
           "word": "今更",
           "reading": "いまさら",
-          "meaning": "now, at this late hour"
+          "meaning": "bây giờ mới; đến lúc này",
+          "meaningEn": "now; at this late hour"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k198",
@@ -267,48 +341,65 @@
       "character": "更",
       "strokeCount": 7,
       "labels": {
-        "hanViet": "Canh Cành Cánh Ngạnh",
-        "meaningVi": "hơn nữa; thay đổi",
-        "meaningViDisplay": "更 (hơn nữa; thay đổi)",
-        "meaningEn": "more, still further, much more; to change, alter"
+        "hanViet": "Canh",
+        "meaningVi": "thêm nữa; thay đổi; đổi mới",
+        "meaningViDisplay": "Canh (thêm nữa; thay đổi; đổi mới)",
+        "meaningEn": "again; further; renew; grow late"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ"
+        ],
         "kunyomi": [
-          "いまさら"
+          "さら",
+          "さら.に",
+          "ふ.ける",
+          "ふ.かす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 更 nghĩa là hơn nữa; thay đổi. Ví dụ JLPT N1: 今更 (now, at this late hour).",
-        "en": "Kanji 更 means more, still further, much more; to change, alter. JLPT N1 example: 今更 (now, at this late hour)."
+        "vi": "更 là thêm nữa hoặc thay đổi; 今更 dùng khi nói điều gì đã muộn hoặc không còn phù hợp để làm.",
+        "en": "更 means further, again, or renew; 今更 means now, at this late point."
       },
       "decomposition": {
-        "hanViet": "Canh Cành Cánh Ngạnh",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Canh",
+        "structure": "compound",
+        "components": [
+          "曰",
+          "攵"
+        ],
+        "componentNames": [
+          "viết/nói",
+          "phộc/đánh"
+        ],
+        "relatedKanji": [
+          "改",
+          "新",
+          "今",
+          "変"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Canh Canh Canh Nganh",
-        "meaningViNoAccent": "hon nua; thay đoi",
-        "meaningEnNoAccent": "more, still further, much more; to change, alter"
+        "hanVietNoAccent": "Canh",
+        "meaningViNoAccent": "them nua; thay doi; doi moi",
+        "meaningEnNoAccent": "again; further; renew; grow late"
       },
       "examples": [
         {
           "word": "今更",
           "reading": "いまさら",
-          "meaning": "now, at this late hour"
+          "meaning": "bây giờ mới; đến lúc này",
+          "meaningEn": "now; at this late hour"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k199",
@@ -317,48 +408,63 @@
       "character": "未",
       "strokeCount": 5,
       "labels": {
-        "hanViet": "Mùi",
-        "meaningVi": "chưa; vị chi",
-        "meaningViDisplay": "未 (chưa; vị chi)",
-        "meaningEn": "not yet; eighth earthly branch"
+        "hanViet": "Vị",
+        "meaningVi": "chưa; chưa hoàn thành; tương lai",
+        "meaningViDisplay": "Vị (chưa; chưa hoàn thành; tương lai)",
+        "meaningEn": "not yet; still; sign of the ram"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ミ",
+          "ビ"
+        ],
         "kunyomi": [
-          "いまだ"
+          "いま.だ",
+          "ま.だ",
+          "ひつじ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 未 nghĩa là chưa; vị chi. Ví dụ JLPT N1: 未だ (as yet, hitherto, not yet (neg)).",
-        "en": "Kanji 未 means not yet; eighth earthly branch. JLPT N1 example: 未だ (as yet, hitherto, not yet (neg))."
+        "vi": "未 là “chưa” hoặc điều còn ở phía trước; 未だ nghĩa là vẫn chưa hoặc cho đến nay.",
+        "en": "未 means not yet; 未だ means still not or as yet."
       },
       "decomposition": {
-        "hanViet": "Mùi",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Vị",
+        "structure": "single",
+        "components": [
+          "未"
+        ],
+        "componentNames": [
+          "vị/chưa"
+        ],
+        "relatedKanji": [
+          "末",
+          "来",
+          "今",
+          "将"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Mui",
-        "meaningViNoAccent": "chua; vi chi",
-        "meaningEnNoAccent": "not yet; eighth earthly branch"
+        "hanVietNoAccent": "Vi",
+        "meaningViNoAccent": "chua; chua hoan thanh; tuong lai",
+        "meaningEnNoAccent": "not yet; still; sign of the ram"
       },
       "examples": [
         {
           "word": "未だ",
           "reading": "いまだ",
-          "meaning": "as yet, hitherto, not yet (neg)"
+          "meaning": "vẫn chưa; cho đến nay",
+          "meaningEn": "as yet; still not"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k200",
@@ -368,47 +474,59 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Dân",
-        "meaningVi": "dân; công dân",
-        "meaningViDisplay": "民 (dân; công dân)",
-        "meaningEn": "people, subjects, citizens"
+        "meaningVi": "người dân; dân chúng; công dân",
+        "meaningViDisplay": "Dân (người dân; dân chúng; công dân)",
+        "meaningEn": "people; nation; subjects"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ミン"
+        ],
         "kunyomi": [
-          "いみん"
+          "たみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 民 nghĩa là dân; công dân. Ví dụ JLPT N1: 移民 (emigration, immigration, emigrant, immigrant).",
-        "en": "Kanji 民 means people, subjects, citizens. JLPT N1 example: 移民 (emigration, immigration, emigrant, immigrant)."
+        "vi": "民 là người dân hoặc dân chúng; 移民 là người di cư/nhập cư hoặc việc di dân.",
+        "en": "民 means people or citizens; 移民 means migrant or migration."
       },
       "decomposition": {
         "hanViet": "Dân",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "民"
+        ],
+        "componentNames": [
+          "dân/người dân"
+        ],
+        "relatedKanji": [
+          "人",
+          "国",
+          "市",
+          "移"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dan",
-        "meaningViNoAccent": "dan; cong dan",
-        "meaningEnNoAccent": "people, subjects, citizens"
+        "meaningViNoAccent": "nguoi dan; dan chung; cong dan",
+        "meaningEnNoAccent": "people; nation; subjects"
       },
       "examples": [
         {
           "word": "移民",
           "reading": "いみん",
-          "meaning": "emigration, immigration, emigrant, immigrant"
+          "meaning": "di dân; người di cư/nhập cư",
+          "meaningEn": "emigration; immigration; emigrant; immigrant"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [

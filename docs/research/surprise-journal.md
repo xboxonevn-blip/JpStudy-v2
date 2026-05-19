@@ -712,3 +712,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: the owner correctly tightened the loop: a deployed JSON can be correct while the running app still renders stale IndexedDB or old runtime state. For N1 lessons 18-22, the meaningful proof was the rendered VI/N1 Kanji UI search/detail path (`議` detail and `別` grid), with normal browser cache enabled.
 - Delta: -20 percentage points on confidence that raw asset fetch proves user-visible content correctness.
 - Updated belief: every batch live proof must include at least one real UI render path for the changed data, plus normal-cache headers. JSON fetch remains a supporting artifact, not the proof by itself.
+
+## 2026-05-19 - Unihan readings can be historically correct but pedagogically wrong
+
+- Prior belief: when Unihan `kVietnamese` existed, it was usually safe as the learner-facing Hán-Việt label after title-casing.
+- Actual observation: N1 lessons 23-25 surfaced `挑 -> vẹo` and `未 -> mùi`. Both are source data, but they are the wrong learning signal for Japanese kanji in `挑む` and `未だ`; the app needs `Khiêu` and `Vị` for the learner-facing Hán-Việt layer.
+- Delta: -20 percentage points on confidence that Unihan can be applied mechanically even when present.
+- Updated belief: `kVietnamese` is evidence, not the UI label. Conflicts with established Sino-Vietnamese learner usage must be resolved explicitly and documented in the verification log.

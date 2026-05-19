@@ -1735,3 +1735,48 @@ Runtime note: bumped content DB Kanji seed revision from `68` to `69` and added 
 Verification: JSON parse passed; old approval-tag grep returned no matches; related-kanji shape check passed; coverage audit reduced N1 incomplete current entries from `64` to `24`; focused DB/reachability/taxonomy/upper-JLPT tests passed (`45`); `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache header guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: production browser used normal cache and rendered the actual Kanji UI, not only raw JSON. In VI/N1 `/#/kanji`, clicking the N1 level chip loaded the N1 grid. Typing `議` into the app search rendered `Học chữ 議, Hán-Việt Nghị, âm On ギ, âm Kun はか.る, cấp N1`; opening the detail modal rendered `Nghị (bàn luận; nghị sự; ý kiến)` and the mnemonic `議 là bàn bạc và nghị luận...`. Typing `別` rendered `Học chữ 別, Hán-Việt Biệt, âm On ベツ, âm Kun わか.れる, わ.ける, cấp N1`, and the stale `Biết` label was absent. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `lesson_18.json`, and `lesson_22.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. Current page console errors/warnings: `0`.
+
+## Kanji N1 Lessons 23-25 Completeness Batch
+
+Owner loop update continues: lessons 23-25 close the remaining current N1 completeness debt as one source-verified batch. Gate/deploy/live proof is run once for the batch, with normal browser cache and rendered app UI required.
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese learner-facing stroke counts, on/kun readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt`, `.codex/sources/Unihan/Unihan_DictionaryLikeData.txt`, and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`.
+- Existing verified app rows for duplicate kanji (`目`, `律`, `連`, `挙`, `切`, `帯`, `民`) and the local vocabulary-derived examples from lessons 23-25.
+
+| Item | Sources | Change |
+|---|---|---|
+| `目` | KANJIDIC2 `モク/ボク`, `め/-め/ま-`; existing N3 row; local `一目` | Aligned to `Mục (mắt; mục; điểm)`, replaced word-level `いちもく`, and translated `一目` as `một cái nhìn; thoáng thấy`. |
+| `律` | KANJIDIC2 `リツ/リチ/レツ`; existing N3 row; local `一律` | Aligned to `Luật (luật lệ; quy tắc; nhịp điệu)` and translated `一律` as `đồng loạt; thống nhất; như nhau`. |
+| `連` | KANJIDIC2 `レン`, `つら.なる/つら.ねる/つ.れる`; existing N3 row; local `一連` | Aligned to `Liên (liên kết; nối liền; liên tục)` and translated `一連` as `một chuỗi; một loạt`. |
+| `括` | KANJIDIC2 `カツ`, `くく.る`; Unihan `quát`; local `一括` | Rewrote to `Quát (gộp lại; bao gồm; buộc lại)` and translated `一括` as `gộp chung; xử lý một lượt`. |
+| `挙` | KANJIDIC2 `キョ`, `あ.げる/あ.がる/こぞ.る`; existing N2 row; local `一挙に` | Aligned to `Cử (giơ lên; nêu ra; hành động)` and translated `一挙に` as `trong một lần; một lượt`. |
+| `切` | KANJIDIC2 `セツ/サイ`, `き.る/...`; existing N2 row; local `一切` | Aligned to `Thiết (cắt; đứt; dứt khoát)` and translated `一切` as `tất cả; hoàn toàn; không hề`. |
+| `心` | KANJIDIC2/Unihan `シン`, `こころ`, `tâm`; local `一心` | Rewrote to `Tâm (tim; tâm trí; tấm lòng)` and translated `一心` as `toàn tâm; một lòng`. |
+| `帯` | KANJIDIC2 `タイ`, `お.びる/おび`; existing N2 row; local `一帯` | Aligned to `Đới (đai; dải; vùng/đới)` and translated `一帯` as `cả vùng; khu vực`. |
+| `敗` | KANJIDIC2/Unihan `ハイ`, `やぶ.れる`, `bại`; local `一敗` | Rewrote to `Bại (thua; thất bại; bị đánh bại)` and translated `一敗` as `một trận thua`. |
+| `時` | KANJIDIC2/Unihan `ジ`, `とき/-どき`, `thì`; local `何時` | Rewrote to `Thì (thời gian; lúc; thời điểm)` and translated `何時/いつ` as `khi nào; lúc nào`. |
+| `図` | KANJIDIC2 `ズ/ト`, `え/はか.る`; local `意図` | Rewrote to `Đồ (bản đồ; sơ đồ; kế hoạch)` and translated `意図` as `ý định; mục đích`. |
+| `営` | KANJIDIC2 stroke `12`, `エイ`, `いとな.む/いとな.み`; local `営む` | Preferred KANJIDIC2 Japanese stroke count over Unihan `11`, rewrote to `Doanh (điều hành; kinh doanh; doanh trại)`, and translated `営む`. |
+| `暇` | KANJIDIC2/Unihan `カ`, `ひま/いとま`, `hạ`; local `暇` | Rewrote to `Hạ (thời gian rảnh; nghỉ; nhàn rỗi)` and translated `暇/いとま` as `thời gian rảnh; nghỉ phép`. |
+| `動` | KANJIDIC2/Unihan `ドウ`, `うご.く/うご.かす`, `động`; local `異動` | Rewrote to `Động (chuyển động; thay đổi; hành động)` and translated `異動` as `thuyên chuyển; thay đổi vị trí`. |
+| `挑` | KANJIDIC2 `チョウ`, `いど.む`; Unihan raw `vẹo`; local `挑む` | Corrected learner-facing Hán-Việt from raw `Vẹo` to `Khiêu`, rewrote to `Khiêu (thách thức; khiêu chiến; đương đầu)`, and translated `挑む`. |
+| `稲` | KANJIDIC2 stroke `14`, `トウ/テ`, `いね/いな-`; Unihan definition; local `稲光` | Kept owner-verified `Đạo (lúa; cây lúa)`, preserved the corrected rice-plant meaning, and translated `稲光` as `tia chớp; ánh chớp`. |
+| `光` | KANJIDIC2/Unihan `コウ`, `ひか.る/ひかり`, `quang`; local `稲光` | Rewrote to `Quang (ánh sáng; chiếu sáng; tỏa sáng)` and translated `稲光` as `tia chớp; ánh chớp`. |
+| `古` | KANJIDIC2/Unihan `コ`, `ふる.い/...`, `cổ`; local `古/いにしえ` | Rewrote to `Cổ (cũ; cổ xưa; thời xưa)` and translated the example as `thời xưa; cổ đại`. |
+| `祈` | KANJIDIC2 `キ`, `いの.る`; local `祈り` | Rewrote to `Kỳ (cầu nguyện; khẩn cầu)` and translated `祈り` as `lời cầu nguyện; sự cầu xin`. |
+| `鼾` | KANJIDIC2 `カン`, `いびき`; Unihan definition; local `鼾` | Rewrote to `Hãn (tiếng ngáy)`, filled readings/components, and translated the example as `tiếng ngáy`. |
+| `今` | KANJIDIC2/Unihan `コン/キン`, `いま`, `kim`; local `今更` | Rewrote to `Kim (nay; hiện tại; bây giờ)` and translated `今更` as `bây giờ mới; đến lúc này`. |
+| `更` | KANJIDIC2 `コウ`, `さら/さらに/ふ.ける`; Unihan multi-reading; local `今更` | Normalized learner-facing display to `Canh (thêm nữa; thay đổi; đổi mới)` instead of exposing all raw Hán-Việt variants. |
+| `未` | KANJIDIC2 `ミ/ビ`, `いま.だ/ま.だ/ひつじ`; Unihan raw `mùi`; local `未だ` | Corrected learner-facing display from branch-name `Mùi` to `Vị`, rewrote to `Vị (chưa; chưa hoàn thành; tương lai)`, and translated `未だ`. |
+| `民` | KANJIDIC2/Unihan `ミン`, `たみ`, `dân`; existing N3 row; local `移民` | Aligned to `Dân (người dân; dân chúng; công dân)` and translated `移民` as `di dân; người di cư/nhập cư`. |
+
+Tagging: all twenty-four entries now carry `vi-source-verified`; old `approved-by-user`, `kanji-metadata-approved`, `unihan-kanji-checked`, and `source-derived-unihan-approved` metadata were removed. No `vi-human-approved` tag was added.
+
+Runtime note: bumped content DB Kanji seed revision from `69` to `70` so existing browsers reseed the changed metadata. No new per-lesson sentinels were added because the revision bump is sufficient for this batch.
+
+Verification: JSON parse passed; old approval-tag grep returned no matches; no accented search-normalization values remained; related-kanji shape check passed; coverage audit reduced N1 incomplete current entries `24 -> 0`; focused DB/reachability/taxonomy/upper-JLPT tests passed (`47`); `flutter analyze lib test` clean; UI string guard `0`; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed.
+
+Live proof after deploy: production browser used normal cache and rendered the actual VI/N1 Kanji UI. Searching `挑` opened the detail modal with `Khiêu (thách thức; khiêu chiến; đương đầu)`, on `チョウ`, kun `いど.む`, and Hán-Việt `Khiêu`. Searching `未` opened `Vị (chưa; chưa hoàn thành; tương lai)`, on `ミ, ビ`, kun `いま.だ, ま.だ, ひつじ`, and Hán-Việt `Vị`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `lesson_23.json`, and `lesson_25.json`. New console warnings/errors after the interaction: `0`.

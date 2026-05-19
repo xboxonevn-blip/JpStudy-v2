@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 23,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; word-level example readings no longer masquerade as kanji kunyomi.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k177",
@@ -18,47 +18,62 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Mục",
-        "meaningVi": "mắt; mục; nhìn",
-        "meaningViDisplay": "目 (mắt; mục; nhìn)",
-        "meaningEn": "eye; look, see; division, topic; Kangxi radical 109"
+        "meaningVi": "mắt; mục; điểm",
+        "meaningViDisplay": "Mục (mắt; mục; điểm)",
+        "meaningEn": "eye; class; look; insight"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "モク",
+          "ボク"
+        ],
         "kunyomi": [
-          "いちもく"
+          "め",
+          "-め",
+          "ま-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 目 nghĩa là mắt; mục; nhìn. Ví dụ JLPT N1: 一目 (a glance, a look, a glimpse).",
-        "en": "Kanji 目 means eye; look, see; division, topic; Kangxi radical 109. JLPT N1 example: 一目 (a glance, a look, a glimpse)."
+        "vi": "目 là con mắt hoặc một mục/điểm trong danh sách; 一目 nghĩa là nhìn thoáng qua một lần.",
+        "en": "目 means an eye or an item; 一目 means a glance."
       },
       "decomposition": {
         "hanViet": "Mục",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "目"
+        ],
+        "componentNames": [
+          "mục/mắt"
+        ],
+        "relatedKanji": [
+          "眼",
+          "見",
+          "的",
+          "標"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Muc",
-        "meaningViNoAccent": "mat; muc; nhin",
-        "meaningEnNoAccent": "eye; look, see; division, topic; Kangxi radical 109"
+        "meaningViNoAccent": "mat; muc; diem",
+        "meaningEnNoAccent": "eye; class; look; insight"
       },
       "examples": [
         {
           "word": "一目",
           "reading": "いちもく",
-          "meaning": "a glance, a look, a glimpse"
+          "meaning": "một cái nhìn; thoáng thấy",
+          "meaningEn": "a glance, a look, a glimpse"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k178",
@@ -68,47 +83,61 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Luật",
-        "meaningVi": "luật; quy tắc",
-        "meaningViDisplay": "律 (luật; quy tắc)",
-        "meaningEn": "statute, principle, regulation"
+        "meaningVi": "luật lệ; quy tắc; nhịp điệu",
+        "meaningViDisplay": "Luật (luật lệ; quy tắc; nhịp điệu)",
+        "meaningEn": "rhythm; law; regulation; control"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "いちりつ"
-        ]
+        "onyomi": [
+          "リツ",
+          "リチ",
+          "レツ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji 律 nghĩa là luật; quy tắc. Ví dụ JLPT N1: 一律 (evenness, uniformity, monotony, equality).",
-        "en": "Kanji 律 means statute, principle, regulation. JLPT N1 example: 一律 (evenness, uniformity, monotony, equality)."
+        "vi": "律 chỉ luật lệ hoặc nhịp điệu có trật tự; 一律 nhấn mạnh sự đồng đều.",
+        "en": "律 means law, regulation, or rhythm; 一律 means uniform."
       },
       "decomposition": {
         "hanViet": "Luật",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "彳",
+          "聿"
+        ],
+        "componentNames": [
+          "xích/bước chân",
+          "duật/bút"
+        ],
+        "relatedKanji": [
+          "法",
+          "規",
+          "則",
+          "制"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Luat",
-        "meaningViNoAccent": "luat; quy tac",
-        "meaningEnNoAccent": "statute, principle, regulation"
+        "meaningViNoAccent": "luat le; quy tac; nhip dieu",
+        "meaningEnNoAccent": "rhythm; law; regulation; control"
       },
       "examples": [
         {
           "word": "一律",
           "reading": "いちりつ",
-          "meaning": "evenness, uniformity, monotony, equality"
+          "meaning": "đồng loạt; thống nhất; như nhau",
+          "meaningEn": "evenness, uniformity, monotony, equality"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k179",
@@ -118,47 +147,64 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Liên",
-        "meaningVi": "liên kết; liên tiếp",
-        "meaningViDisplay": "連 (liên kết; liên tiếp)",
-        "meaningEn": "join, connect; continuous; even"
+        "meaningVi": "liên kết; nối liền; liên tục",
+        "meaningViDisplay": "Liên (liên kết; nối liền; liên tục)",
+        "meaningEn": "join; connect; take along"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "レン"
+        ],
         "kunyomi": [
-          "いちれん"
+          "つら.なる",
+          "つら.ねる",
+          "つ.れる",
+          "-づ.れ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 連 nghĩa là liên kết; liên tiếp. Ví dụ JLPT N1: 一連 (a series, a chain, a ream (of paper)).",
-        "en": "Kanji 連 means join, connect; continuous; even. JLPT N1 example: 一連 (a series, a chain, a ream (of paper))."
+        "vi": "連 là nối các phần lại thành chuỗi; 一連 là một chuỗi sự việc hoặc đồ vật.",
+        "en": "連 means to connect or take along; 一連 means a series."
       },
       "decomposition": {
         "hanViet": "Liên",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "surround",
+        "components": [
+          "辶",
+          "車"
+        ],
+        "componentNames": [
+          "sước/đi",
+          "xa/xe"
+        ],
+        "relatedKanji": [
+          "続",
+          "絡",
+          "結",
+          "帯"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Lien",
-        "meaningViNoAccent": "lien ket; lien tiep",
-        "meaningEnNoAccent": "join, connect; continuous; even"
+        "meaningViNoAccent": "lien ket; noi lien; lien tuc",
+        "meaningEnNoAccent": "join; connect; take along"
       },
       "examples": [
         {
           "word": "一連",
           "reading": "いちれん",
-          "meaning": "a series, a chain, a ream (of paper)"
+          "meaning": "một chuỗi; một loạt",
+          "meaningEn": "a series, a chain, a ream (of paper)"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k180",
@@ -168,47 +214,61 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Quát",
-        "meaningVi": "gộp; bao gồm",
-        "meaningViDisplay": "括 (gộp; bao gồm)",
-        "meaningEn": "include, embrace, enclose"
+        "meaningVi": "gộp lại; bao gồm; buộc lại",
+        "meaningViDisplay": "Quát (gộp lại; bao gồm; buộc lại)",
+        "meaningEn": "fasten; tie up; include"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カツ"
+        ],
         "kunyomi": [
-          "いっかつ"
+          "くく.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 括 nghĩa là gộp; bao gồm. Ví dụ JLPT N1: 一括 (all together, batch, one lump, one bundle, summing up).",
-        "en": "Kanji 括 means include, embrace, enclose. JLPT N1 example: 一括 (all together, batch, one lump, one bundle, summing up)."
+        "vi": "括 là gom hoặc buộc nhiều thứ lại; 一括 là xử lý gộp trong một lượt.",
+        "en": "括 means to bundle or include; 一括 means in one batch."
       },
       "decomposition": {
         "hanViet": "Quát",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "扌",
+          "舌"
+        ],
+        "componentNames": [
+          "thủ/tay",
+          "thiệt/lưỡi"
+        ],
+        "relatedKanji": [
+          "含",
+          "包",
+          "束",
+          "結"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Quat",
-        "meaningViNoAccent": "gop; bao gom",
-        "meaningEnNoAccent": "include, embrace, enclose"
+        "meaningViNoAccent": "gop lai; bao gom; buoc lai",
+        "meaningEnNoAccent": "fasten; tie up; include"
       },
       "examples": [
         {
           "word": "一括",
           "reading": "いっかつ",
-          "meaning": "all together, batch, one lump, one bundle, summing up"
+          "meaning": "gộp chung; xử lý một lượt",
+          "meaningEn": "all together, batch, one lump, one bundle, summing up"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k181",
@@ -218,45 +278,61 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Cử",
-        "meaningVi": "nâng lên; đề cử",
-        "meaningViDisplay": "挙 (nâng lên; đề cử)",
-        "meaningEn": "raise, lift up; recommend"
+        "meaningVi": "giơ lên; nêu ra; hành động",
+        "meaningViDisplay": "Cử (giơ lên; nêu ra; hành động)",
+        "meaningEn": "raise; plan; project; behavior"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キョ"
+        ],
         "kunyomi": [
-          "いっきょに"
+          "あ.げる",
+          "あ.がる",
+          "こぞ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 挙 nghĩa là nâng lên; đề cử. Ví dụ JLPT N1: 一挙に (một lần, một lượt, chỉ một cú).",
-        "en": "Kanji 挙 means raise, lift up; recommend. JLPT N1 example: 一挙に (một lần, một lượt, chỉ một cú)."
+        "vi": "挙 là đưa lên hoặc nêu ra; 一挙に diễn tả việc làm xong trong một lượt.",
+        "en": "挙 means to raise or put forward; 一挙に means all at once."
       },
       "decomposition": {
         "hanViet": "Cử",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "興",
+          "手"
+        ],
+        "componentNames": [
+          "hưng/nâng lên",
+          "thủ/tay"
+        ],
+        "relatedKanji": [
+          "上",
+          "手",
+          "揚",
+          "方"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cu",
-        "meaningViNoAccent": "nang len; đe cu",
-        "meaningEnNoAccent": "raise, lift up; recommend"
+        "meaningViNoAccent": "gio len; neu ra; hanh dong",
+        "meaningEnNoAccent": "raise; plan; project; behavior"
       },
       "examples": [
         {
           "word": "一挙に",
           "reading": "いっきょに",
-          "meaning": "một lần, một lượt, chỉ một cú"
+          "meaning": "trong một lần; một lượt",
+          "meaningEn": "một lần, một lượt, chỉ một cú"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,47 +344,66 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Thiết",
-        "meaningVi": "cắt; tất cả",
-        "meaningViDisplay": "切 (cắt; tất cả)",
-        "meaningEn": "cut, mince, slice, carve"
+        "meaningVi": "cắt; đứt; dứt khoát",
+        "meaningViDisplay": "Thiết (cắt; đứt; dứt khoát)",
+        "meaningEn": "cut; cutoff; sharp"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セツ",
+          "サイ"
+        ],
         "kunyomi": [
-          "いっさい"
+          "き.る",
+          "-き.る",
+          "き.り",
+          "き.れる",
+          "-き.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 切 nghĩa là cắt; tất cả. Ví dụ JLPT N1: 一切 (all, everything, without exception, the whole, entirely, absolutely).",
-        "en": "Kanji 切 means cut, mince, slice, carve. JLPT N1 example: 一切 (all, everything, without exception, the whole, entirely, absolutely)."
+        "vi": "切 là cắt rời hoặc dứt khoát; 一切 có nghĩa tất cả, hoặc “không hề” trong câu phủ định.",
+        "en": "切 means cut or sharp; 一切 means all, or not at all with negatives."
       },
       "decomposition": {
         "hanViet": "Thiết",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "七",
+          "刀"
+        ],
+        "componentNames": [
+          "thất/bảy",
+          "đao/dao"
+        ],
+        "relatedKanji": [
+          "刀",
+          "断",
+          "終",
+          "売"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thiet",
-        "meaningViNoAccent": "cat; tat ca",
-        "meaningEnNoAccent": "cut, mince, slice, carve"
+        "meaningViNoAccent": "cat; dut; dut khoat",
+        "meaningEnNoAccent": "cut; cutoff; sharp"
       },
       "examples": [
         {
           "word": "一切",
           "reading": "いっさい",
-          "meaning": "all, everything, without exception, the whole, entirely, absolutely"
+          "meaning": "tất cả; hoàn toàn; không hề",
+          "meaningEn": "all; everything; without exception"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k183",
@@ -318,47 +413,60 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Tâm",
-        "meaningVi": "tim; tâm trí",
-        "meaningViDisplay": "心 (tim; tâm trí)",
-        "meaningEn": "heart; mind, intelligence; soul; 5th lunar mansion, determinative star α Scorpii (Antares)"
+        "meaningVi": "tim; tâm trí; tấm lòng",
+        "meaningViDisplay": "Tâm (tim; tâm trí; tấm lòng)",
+        "meaningEn": "heart; mind; spirit"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シン"
+        ],
         "kunyomi": [
-          "いっしん"
+          "こころ",
+          "-ごころ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 心 nghĩa là tim; tâm trí. Ví dụ JLPT N1: 一心 (one mind, wholeheartedness, the whole heart).",
-        "en": "Kanji 心 means heart; mind, intelligence; soul; 5th lunar mansion, determinative star α Scorpii (Antares). JLPT N1 example: 一心 (one mind, wholeheartedness, the whole heart)."
+        "vi": "心 là trái tim và tâm trí; 一心 là dồn hết lòng vào một việc.",
+        "en": "心 means heart or mind; 一心 means wholeheartedness."
       },
       "decomposition": {
         "hanViet": "Tâm",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "心"
+        ],
+        "componentNames": [
+          "tâm/tim"
+        ],
+        "relatedKanji": [
+          "思",
+          "意",
+          "感",
+          "情"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tam",
-        "meaningViNoAccent": "tim; tam tri",
-        "meaningEnNoAccent": "heart; mind, intelligence; soul; 5th lunar mansion, determinative star α Scorpii (Antares)"
+        "meaningViNoAccent": "tim; tam tri; tam long",
+        "meaningEnNoAccent": "heart; mind; spirit"
       },
       "examples": [
         {
           "word": "一心",
           "reading": "いっしん",
-          "meaning": "one mind, wholeheartedness, the whole heart"
+          "meaning": "toàn tâm; một lòng",
+          "meaningEn": "one mind, wholeheartedness, the whole heart"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k184",
@@ -368,45 +476,60 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Đới",
-        "meaningVi": "đai; dải; vùng",
-        "meaningViDisplay": "帯 (đai; dải; vùng)",
-        "meaningEn": "belt"
+        "meaningVi": "đai; dải; vùng/đới",
+        "meaningViDisplay": "Đới (đai; dải; vùng/đới)",
+        "meaningEn": "sash; belt; zone; region"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タイ"
+        ],
         "kunyomi": [
-          "いったい"
+          "お.びる",
+          "おび"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 帯 nghĩa là đai; dải; vùng. Ví dụ JLPT N1: 一帯 (vùng, khu vực, dải).",
-        "en": "Kanji 帯 means belt. JLPT N1 example: 一帯 (vùng, khu vực, dải)."
+        "vi": "帯 là dải hoặc vùng kéo dài; 一帯 chỉ cả một khu vực.",
+        "en": "帯 means belt, band, or zone; 一帯 means an entire area."
       },
       "decomposition": {
         "hanViet": "Đới",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "巾",
+          "冖"
+        ],
+        "componentNames": [
+          "cân/khăn",
+          "mịch/mái che"
+        ],
+        "relatedKanji": [
+          "地",
+          "域",
+          "温",
+          "寒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Doi",
-        "meaningViNoAccent": "đai; dai; vung",
-        "meaningEnNoAccent": "belt"
+        "meaningViNoAccent": "dai; dai; vung/doi",
+        "meaningEnNoAccent": "sash; belt; zone; region"
       },
       "examples": [
         {
           "word": "一帯",
           "reading": "いったい",
-          "meaning": "vùng, khu vực, dải"
+          "meaning": "cả vùng; khu vực",
+          "meaningEn": "vùng, khu vực, dải"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }

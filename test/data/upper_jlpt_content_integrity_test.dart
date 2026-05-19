@@ -200,7 +200,7 @@ void main() {
             final entry = _kanjiEntryByCharacter(level, '稲');
             final labels = entry['labels'] as Map<String, dynamic>;
             expect(labels['meaningVi'], 'lúa; cây lúa');
-            expect(labels['meaningViDisplay'], '稲 (lúa; cây lúa)');
+            expect(labels['meaningViDisplay'], 'Đạo (lúa; cây lúa)');
             expect(labels['meaningVi'], isNot(contains('tia chớp')));
           }
         },

@@ -743,3 +743,11 @@
 - Bumped content DB Kanji seed revision to `64` and added an N1 lesson-13 sentinel for `示` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `104` to `96`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, hosting cache header guard passed, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
 - Live proof used normal browser cache: page-context fetch of deployed `lesson_13.json` returned `Cache-Control: no-cache`; `示` returned `Thị (chỉ ra; biểu thị; cho thấy)`, on `ジ/シ`, kun `しめ.す`, example `暗示/あんじ = gợi ý ngầm; ám chỉ`, and `vi-source-verified`; current page console errors/warnings `0`.
+
+## 2026-05-19 N1 Kanji Lesson 14 Completeness Patch
+
+- Source-verified all eight N1 lesson-14 kanji (`安`, `静`, `定`, `余`, `依`, `良`, `伊`, `井`) against local KANJIDIC2, Unihan where available, existing verified duplicate rows, and vocabulary examples.
+- Corrected generated metadata, including replacing word-level readings (`あんせい`, `あんのじょう`, `あんまり`, `いい`) with source-backed Kanji readings, replacing bare `依/い` with `依存`, replacing suspicious generated `伊井/いい` examples with `伊豆/いず` and `井戸/いど`, removing old approval metadata, and adding truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `65` and added an N1 lesson-14 sentinel for `伊` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `96` to `88`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, hosting cache header guard passed, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
+- Live proof used normal browser cache: page-context fetch of deployed `lesson_14.json` returned `Cache-Control: no-cache`; `伊` returned `Y (Ý; người ấy; dùng trong tên riêng)`, on `イ`, kun `かれ`, example `伊豆/いず = Izu; địa danh ở Nhật`, and `vi-source-verified`; old approval tags were absent; current page console errors/warnings `0`.

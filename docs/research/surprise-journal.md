@@ -698,3 +698,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N1 lesson 5 linked `日` to `悪日` with reading `あくび`, which conflicts with the word's meaning and with normal `あくび` usage. Reusing it would have made the kanji example look source-verified while still teaching a bad reading.
 - Delta: -15 percentage points on confidence that vocab-derived examples are safe without a quick reading sanity check.
 - Updated belief: examples should be treated as context, not authority. If a linked example has suspicious reading/meaning alignment, choose another reachable example or leave the issue for a separate vocab cleanup.
+
+## 2026-05-19 - Imported vocab can invent Kanji compounds
+
+- Prior belief: suspicious vocab-derived examples were mostly reading/gloss mismatches inside otherwise real terms.
+- Actual observation: N1 lesson 14 linked both `伊` and `井` to `伊井/いい` with gloss `that one, Italy`; the row appears to be a generated or imported artifact rather than a useful learner example. Source-verifying those kanji required replacing it with real reachable examples `伊豆/いず` and `井戸/いど`.
+- Delta: -15 percentage points on confidence that imported upper-JLPT vocab rows are safe example anchors.
+- Updated belief: kanji source verification must validate that each example term is a real, pedagogically useful word, not only that the character appears in the string.

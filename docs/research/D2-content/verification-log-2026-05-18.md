@@ -1566,3 +1566,30 @@ Runtime note: bumped content DB Kanji seed revision from `63` to `64` and added 
 Verification: coverage audit reduced N1 incomplete current entries from `104` to `96`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `f66f53e0` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_13.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; `示` showed `Thị (chỉ ra; biểu thị; cho thấy)`, on `ジ/シ`, kun `しめ.す`, and example `暗示/あんじ = gợi ý ngầm; ám chỉ`. Current page console errors/warnings: `0`.
+
+## Kanji N1 Lesson 14 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and Vietnamese readings where Unihan was absent or unsuitable.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, `kJapanese`, and `kTotalStrokes`; `静` has no Unihan `kVietnamese`, so KANJIDIC2 readings `Tĩnh/Tịnh` were used.
+- Existing verified duplicate rows for `安`, `定`, `余`, and `井`, plus vocabulary examples for `安静`, `案の定`, `余り`, `依存`, `良い`, `伊豆`, and `井戸`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `安` | KANJIDIC2/Unihan readings `アン`, `やす.い/...`; existing N2/N3/N5 rows; local context `安静` | Aligned to `An (yên ổn; an toàn; rẻ)`, replaced word-level `あんせい` as a kanji reading, and translated `安静` as `nghỉ ngơi; tĩnh dưỡng`. |
+| `静` | KANJIDIC2 readings `セイ/ジョウ`, `しず-...`; Unihan definition/strokes; local context `安静` | Rewrote to `Tĩnh (yên tĩnh; tĩnh lặng; điềm tĩnh)`, added source-backed readings/components, and used the shared `安静` example. |
+| `定` | KANJIDIC2/Unihan readings `テイ/ジョウ`, `さだ.める/...`; existing verified N2 row; local context `案の定` | Aligned to `Định (quyết định; cố định; ổn định)`, replaced word-level `あんのじょう`, and translated `案の定` as `quả nhiên; đúng như dự đoán`. |
+| `余` | KANJIDIC2/Unihan readings `ヨ`, `あま.る/.../あんま.り`; existing verified N2 row; local context `余り` | Aligned to `Dư (thừa; còn lại; phần dư)`, replaced the truncated gloss, and translated `余り` as `không mấy; quá; phần dư`. |
+| `依` | KANJIDIC2/Unihan readings `イ/エ`, `よ.る`; local context `依存` | Rewrote to `Y (dựa vào; nương theo; phụ thuộc)`, replaced bare `依/い`, and used `依存` as the clearer example. |
+| `良` | KANJIDIC2/Unihan reading `リョウ`, `よ.い/い.い`; existing N5 row; local context `良い` | Rewrote to `Lương (tốt; lương thiện; phẩm chất tốt)`, filled source-backed readings, and kept `良い` as the example. |
+| `伊` | KANJIDIC2/Unihan reading `イ`, `かれ`; local N4 vocabulary context `伊豆` | Rewrote to `Y (Ý; người ấy; dùng trong tên riêng)` and replaced the suspicious generated `伊井/いい` source row with `伊豆/いず`. |
+| `井` | KANJIDIC2/Unihan readings `セイ/ショウ`, `い`; existing verified N2 row; local context `井戸` | Aligned to `Tỉnh (giếng; hầm; miệng giếng)` and replaced the suspicious generated `伊井/いい` example with `井戸/いど`. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved`/`unihan-kanji-checked` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `64` to `65` and added an N1 lesson-14 sentinel for `伊` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit reduced N1 incomplete current entries from `96` to `88`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `66694ebe` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_14.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; old approval tags were absent; `伊` showed `Y (Ý; người ấy; dùng trong tên riêng)`, on `イ`, kun `かれ`, and example `伊豆/いず = Izu; địa danh ở Nhật`. Current page console errors/warnings: `0`.

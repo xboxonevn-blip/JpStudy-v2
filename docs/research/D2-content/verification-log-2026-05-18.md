@@ -890,3 +890,30 @@ Runtime note: bumped content DB Kanji seed revision from `38` to `39` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `104` to `96`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`). Release web build succeeded before deploy.
 
 Live proof after deploy: after `0601e111` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-39 metadata. Filtering `持` showed the updated N2 lesson-13 card; opening it showed `Trì (cầm; giữ; mang; duy trì)`, Hán-Việt `Trì`, on `ジ`, kun `も.つ, -も.ち, も.てる`, stroke count `9`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 14 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `写る`, `有無`, `埋める`, `敬う`, `裏返す`, `裏口`, and `占う`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `写` | KANJIDIC2 readings `シャ/ジャ`, `うつ.す/うつ.る/うつ-/うつ.し`, Vietnamese `Tả`, meanings `copy`, `be photographed`, `describe`; Unihan `kDefinition=write; draw, sketch; compose`; local context `写る` | Corrected the row away from whole-word `to be photographed` fallback to `Tả (chụp lại; sao chép; phản chiếu)`, added readings/search text, direct example `写る`, and image/reflection related kanji. |
+| `無` | KANJIDIC2 readings `ム/ブ`, `な.い`, Vietnamese `Vô/Mô`, meanings `nothingness`, `none`, `not`; Unihan `kVietnamese=vô`; local context `有無` plus source-verified N3 `無` | Reused the verified meaning family and rewrote display to `Vô (không; không có; vô)`, added readings/search text, direct example `有無`, and absence/opposition related kanji. |
+| `埋` | KANJIDIC2 reading `マイ`, bury/fill kunyomi, Vietnamese `Mai`, meanings `bury`, `be filled up`, `embedded`; Unihan `kVietnamese=mai`, `kDefinition=bury, secrete, conceal`; local context `埋める` | Rewrote display to `Mai (chôn; lấp; bị vùi)`, added readings/search text, direct example `埋める`, and earth/bury related kanji. |
+| `敬` | KANJIDIC2 readings `ケイ/キョウ`, `うやま.う`, Vietnamese `Kính`, meanings `awe`, `respect`, `honor`, `revere`; Unihan `kVietnamese=kính`; local context `敬う` | Rewrote display to `Kính (kính trọng; tôn trọng; kính cẩn)`, added readings/search text, direct example `敬う`, and respect/politeness related kanji. |
+| `裏` | KANJIDIC2 reading `リ`, `うら`, Vietnamese `Lý`, meanings `back`, `reverse`, `inside`, `lining`; Unihan `kDefinition=inside, interior, within`; local context `裏返す` | Corrected the row away from whole-word `turn inside out` fallback to `Lý (mặt sau; bên trong; lớp lót)`, added readings/search text, direct example `裏返す`, and back/inside related kanji. |
+| `返` | KANJIDIC2 reading `ヘン`, `かえ.す/かえ.る`, Vietnamese `Phản`, meanings `return`, `answer`, `repay`; Unihan `kVietnamese=phản`; local context `裏返す` plus source-verified N3 `返` | Corrected the row away from whole-word `turn inside out` fallback to `Phản (trả lại; quay lại; đáp lại)`, added readings/search text, direct example `裏返す`, and return/answer related kanji. |
+| `口` | KANJIDIC2 readings `コウ/ク`, `くち`, Vietnamese `Khẩu`, meaning `mouth`; Unihan `kVietnamese=khẩu`, `kDefinition=mouth; open end; entrance, gate`; local context `裏口` plus lower-level `口` | Corrected the row away from whole-word `backdoor` fallback to `Khẩu (miệng; cửa vào; lối vào)`, added readings/search text, direct example `裏口`, and mouth/entrance related kanji. |
+| `占` | KANJIDIC2 reading `セン`, `し.める/うらな.う`, Vietnamese `Chiêm/Chiếm`, meanings `fortune-telling`, `forecasting`, `occupy`; Unihan `kVietnamese=chiêm`; local context `占う` | Rewrote display to `Chiêm (bói; dự đoán; chiếm giữ)`, added readings/search text, direct example `占う`, and divination/forecast related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `39` to `40` and added an N2 lesson-14 sentinel for `写` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `96` to `88`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
+
+Live proof after deploy: after `133d038d` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-40 metadata. Filtering `写` showed the updated N2 lesson-14 card; opening it showed `Tả (chụp lại; sao chép; phản chiếu)`, Hán-Việt `Tả`, on `シャ, ジャ`, kun `うつ.す, うつ.る, うつ-, うつ.し`, stroke count `5`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

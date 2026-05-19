@@ -1852,3 +1852,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/source-tag check passed (`38` items, `0` missing `vi-source-verified`); focused DB/grammar-seeder/manifest/taxonomy/upper-JLPT/practice-bank tests passed (`50`); `flutter analyze lib test` clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was intentionally skipped under Directive C because this batch does not complete the N2 grammar level and the Dart change was a revision bump only.
 
 Live proof after deploy: the existing production browser used normal cache. The rendered N2 Grammar UI loaded the grammar list, showed the corrected `Verb-dictionary form + ばかりだ` row, and opening it rendered `KẾT NỐI: Verb-dictionary form + ばかりだ` plus the explanation sentence containing `Cấu trúc: V辞書形 + ばかりだ.` Page-context/network proof showed `Cache-Control: no-cache` for `main.dart.js`, `grammar_n2_19.json`, and `grammar_n2_20.json`. New console warnings/errors after the interaction: `0`.
+
+## Grammar N2 Lessons 21-25 Source-Verified Batch
+
+This batch covers all 39 grammar points in `grammar_n2_21.json` through `grammar_n2_25.json`. Sources consulted for the batch: local Hanabira grammar import JSON, AmgiDex JLPT N2 grammar list, AI Japanese Tutor JLPT N2 grammar list, MLC Japanese notes where the point appears, and targeted online formation checks from JLPT Sensei/Japanese grammar references for the corrected points. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N2-21 | `ものだから`, `ものではない`, `ものなら`, `ものの`, `も～ば～も`, `も同然だ`, `やら～やら`, `ようがない` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `ものなら` to V可能形 + `ものなら` and `も同然だ` to noun / Vた・Vない + `も同然だ`. |
+| N2-22 | `よりほかない`, `わけがない`, `わけだ`, `わけではない`, `わけにはいかない`, `をきっかけに`, `を～として`, `を中心に` | Checked usage/formation and tagged each item `vi-source-verified`; corrected the `わけ` family noun/na-adjective attachments and added Vない + `わけにはいかない`. |
+| N2-23 | `を問わず`, `を込めて`, `を通じて`, `を頼りに`, `一方`, `一方だ`, `上で` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `上で` to V辞書形 / Vた / Nの + `上で`. |
+| N2-24 | `上に`, `上は`, `以上`, `以来`, `切る`, `反面`, `向け`, `恐れがある` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `上は`, `以上`, `以来`, and `恐れがある` structures. |
+| N2-25 | `折には`, `末`, `次第`, `次第で`, `次第です`, `気味`, `限り`, `際に` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `末`, `次第です`, `気味`, and `際に` structures. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `16` so existing browsers reseed the changed N2 grammar rows. This completes the current N2 grammar pass.
+
+Verification: JSON parse/source-tag check passed (`39` items, `0` missing `vi-source-verified`); focused DB/repository/taxonomy/practice-bank tests passed (`32`); `flutter analyze lib test` clean; literal-route guard clean; content status machine/open-review `0`; full `flutter test` passed (`2343`) because N2 grammar level is now complete; release web build passed; Firebase Hosting deploy completed.
+
+Live proof after deploy: the existing production browser used normal cache. The rendered N2 Grammar UI opened `/#/grammar/175` and showed `KẾT NỐI: Verb-dictionary form + 上で, Verb-た form + 上で, Noun + の上で`, then opened `/#/grammar/185` and showed `KẾT NỐI: Verb-た form + 末(に), Noun + の末(に)`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n2_23.json`, and `grammar_n2_25.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.

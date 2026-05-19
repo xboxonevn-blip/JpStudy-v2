@@ -824,3 +824,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `15`.
 - Verified under Directive C: JSON/source-tag check `38/38`, focused suite `50/50`, `flutter analyze lib test` clean, literal-route guard clean, content status machine/open-review `0`, release build pass, deploy pass. Full `flutter test` deferred until N2 grammar level completion or non-trivial Dart logic.
 - Live proof: existing production browser, normal cache. The real N2 Grammar UI rendered the corrected `Verb-dictionary form + ばかりだ` list row and detail `KẾT NỐI`, including `Cấu trúc: V辞書形 + ばかりだ.` `main.dart.js`, `grammar_n2_19.json`, and `grammar_n2_20.json` returned `Cache-Control: no-cache`; console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N2 Lessons 21-25 Batch
+
+- Source-verified 39 N2 grammar points in lessons 21-25; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected/clarified formations and explanations for `ものなら`, `も同然だ`, `わけがない`, `わけだ`, `わけではない`, `わけにはいかない`, `上で`, `上は`, `以上`, `以来`, `恐れがある`, `末`, `次第です`, `気味`, and `際に`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `16`; this completes the N2 grammar verification pass.
+- Verified under Directive C: JSON/source-tag check `39/39`, focused suite `32/32`, `flutter analyze lib test` clean, literal-route guard clean, content status machine/open-review `0`, full `flutter test` passed (`2343`) because N2 grammar level is now complete, release build pass, and Firebase Hosting deploy pass.
+- Live proof: existing production browser, normal cache. The real N2 Grammar UI rendered `/#/grammar/175` with `KẾT NỐI: Verb-dictionary form + 上で, Verb-た form + 上で, Noun + の上で` and `/#/grammar/185` with `KẾT NỐI: Verb-た form + 末(に), Noun + の末(に)`. Page-context `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n2_23.json`, and `grammar_n2_25.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`; console warnings/errors `0`.

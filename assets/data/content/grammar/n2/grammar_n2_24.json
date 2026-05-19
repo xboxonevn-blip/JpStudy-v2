@@ -11,7 +11,8 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
@@ -24,15 +25,16 @@
     "lessonId": 24,
     "title": "～上は",
     "titleEn": "Expresses now that, since, or once",
-    "structure": "Verb-casual + 上は, い-Adjective + 上は, な-Adjective + な上は, Noun + の上は",
-    "structureEn": "Verb-casual + 上は, い-Adjective + 上は, な-Adjective + な上は, Noun + の上は",
-    "explanation": "Dùng khi đã rơi vào điều kiện/tình huống A thì phải làm hoặc chấp nhận B. Sắc thái quyết tâm/trách nhiệm: “một khi đã... thì...”. Cấu trúc: Verb-casual + 上は, い-Adjective + 上は, な-Adjective + な上は, Noun + の上は.",
+    "structure": "Verb-dictionary form + 上は, Verb-た form + 上は, Noun + である上は",
+    "structureEn": "Verb-dictionary form + 上は, Verb-た form + 上は, Noun + である上は",
+    "explanation": "Dùng khi đã rơi vào điều kiện/tình huống A thì phải làm hoặc chấp nhận B. Sắc thái quyết tâm/trách nhiệm: “một khi đã... thì...”. Cấu trúc: V辞書形 + 上は / Vた + 上は / N + である上は.",
     "explanationEn": "The ～上は grammar point is used to express that since a certain condition or situation exists, a certain action or result follows. It can be translated as now that, since, or once in English. The formation differs depending on whether it is used with a verb, い-adjective, な-adjective, or noun",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
@@ -45,15 +47,16 @@
     "lessonId": 24,
     "title": "～以上",
     "titleEn": "Expresses since or as long as in a conditional context",
-    "structure": "Verb-casual + 以上, い-Adjective + 以上, な-Adjective + な以上, Noun + の以上",
-    "structureEn": "Verb-casual + 以上, い-Adjective + 以上, な-Adjective + な以上, Noun + の以上",
-    "explanation": "Dùng khi một điều kiện đã đúng thì kết quả, trách nhiệm hoặc hành động phía sau là điều tất yếu. Có thể hiểu là “một khi đã...”, “vì đã...”. Cấu trúc: Verb-casual + 以上, い-Adjective + 以上, な-Adjective + な以上, Noun + の以上.",
+    "structure": "Verb-casual + 以上, い-Adjective + 以上, な-Adjective + な/である以上, Noun + である以上",
+    "structureEn": "Verb-casual + 以上, い-Adjective + 以上, な-Adjective + な/である以上, Noun + である以上",
+    "explanation": "Dùng khi một điều kiện đã đúng thì kết quả, trách nhiệm hoặc hành động phía sau là điều tất yếu. Có thể hiểu là “một khi đã...”, “vì đã...”. Cấu trúc: V普通形 + 以上 / いA + 以上 / なA + な・である以上 / N + である以上.",
     "explanationEn": "The ～以上 grammar point is used to express a condition or requirement, and it can be translated as since, as long as, or if. It often emphasizes that if a certain condition is met, a certain action or consequence will follow",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
@@ -66,15 +69,16 @@
     "lessonId": 24,
     "title": "～以来",
     "titleEn": "Indicates something happening since, ever since, or after a particular time",
-    "structure": "Verb-past + 以来, い-Adjective + 以来, Noun + 以来",
-    "structureEn": "Verb-past + 以来, い-Adjective + 以来, Noun + 以来",
-    "explanation": "Dùng để nói một trạng thái hoặc hành động tiếp diễn liên tục từ một mốc trong quá khứ đến hiện tại. Có thể hiểu là “kể từ khi...”. Cấu trúc: Verb-past + 以来, い-Adjective + 以来, Noun + 以来.",
+    "structure": "Verb-て form + 以来, Noun + 以来",
+    "structureEn": "Verb-て form + 以来, Noun + 以来",
+    "explanation": "Dùng để nói một trạng thái hoặc hành động tiếp diễn liên tục từ một mốc trong quá khứ đến hiện tại. Có thể hiểu là “kể từ khi...”. Cấu trúc: Vて + 以来 / N + 以来.",
     "explanationEn": "The ～以来 grammar point is used to express a period of time that has continued uninterrupted since a certain point in the past. It can be translated as since, ever since, or after. The formation differs depending on whether it is used with a verb, an adjective, or a noun",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
@@ -95,7 +99,8 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
@@ -116,7 +121,8 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
@@ -137,7 +143,8 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
@@ -150,15 +157,16 @@
     "lessonId": 24,
     "title": "～恐れがある",
     "titleEn": "Express a concern or fear that something undesirable might occur",
-    "structure": "Verb-dictionary form + 恐れがある",
-    "structureEn": "Verb-dictionary form + 恐れがある",
-    "explanation": "Dùng để nói có nguy cơ hoặc khả năng xảy ra điều không mong muốn. Sắc thái trang trọng, hay gặp trong cảnh báo, tin tức, văn bản. Cấu trúc: Verb-dictionary form + 恐れがある.",
+    "structure": "Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある",
+    "structureEn": "Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある",
+    "explanation": "Dùng để nói có nguy cơ hoặc khả năng xảy ra điều không mong muốn. Sắc thái trang trọng, hay gặp trong cảnh báo, tin tức, văn bản. Cấu trúc: V辞書形・Vない + 恐れがある / N + の恐れがある.",
     "explanationEn": "The ～恐れがある grammar point indicates that there is a concern or fear that something undesirable or negative might happen. It is often used for potential problems or risks, and can be translated as there is a risk or there is a possibility",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",

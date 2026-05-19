@@ -4,13 +4,17 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/grammar_repository.dart';
+import 'package:jpstudy/data/seeds/grammar_seeder.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 GrammarPointsCompanion _point({
   required int id,
   required String grammarPoint,
   String level = 'N5',
+  int? lessonId,
 }) => GrammarPointsCompanion.insert(
   id: Value(id),
+  lessonId: lessonId == null ? const Value.absent() : Value(lessonId),
   grammarPoint: grammarPoint,
   meaning: 'meaning $id',
   connection: 'conn $id',
@@ -19,6 +23,8 @@ GrammarPointsCompanion _point({
 );
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   late AppDatabase db;
   late GrammarRepository repository;
 
@@ -28,6 +34,39 @@ void main() {
   });
 
   tearDown(() => db.close());
+
+  test(
+    'fetchPointsByLevel reseeds stale existing grammar for active level',
+    () async {
+      SharedPreferences.setMockInitialValues({
+        GrammarSeeder.versionKeyForLevel('N2'): 11,
+      });
+      await db
+          .into(db.grammarPoints)
+          .insert(
+            _point(
+              id: 9001,
+              grammarPoint: 'Verb ことなく',
+              level: 'N2',
+              lessonId: 5,
+            ).copyWith(
+              connection: const Value('Verb-stem + ことなく'),
+              explanation: const Value('stale explanation'),
+            ),
+          );
+
+      final points = await repository.fetchPointsByLevel('N2');
+      final point = points.singleWhere((p) => p.connection.contains('ことなく'));
+      final prefs = await SharedPreferences.getInstance();
+
+      expect(point.connection, 'Verb-dictionary form + ことなく');
+      expect(point.explanation, contains('V辞書形 + ことなく'));
+      expect(
+        prefs.getInt(GrammarSeeder.versionKeyForLevel('N2')),
+        GrammarSeeder.kGrammarDataVersion,
+      );
+    },
+  );
 
   // ── fetchPointsByIds ──────────────────────────────────────────────────────
 

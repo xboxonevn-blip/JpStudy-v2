@@ -9,11 +9,32 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
+import 'package:jpstudy/data/seeds/grammar_seeder.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 import 'package:jpstudy/features/grammar/services/grammar_question_generator.dart';
 import 'package:jpstudy/features/grammar/widgets/multiple_choice_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  setUp(() {
+    SharedPreferences.setMockInitialValues({
+      GrammarSeeder.versionKeyForLevel('N4'): GrammarSeeder.kGrammarDataVersion,
+      GrammarSeeder.versionKeyForLevel('N5'): GrammarSeeder.kGrammarDataVersion,
+    });
+  });
+
+  Future<void> pumpUntilFound(
+    WidgetTester tester,
+    Finder finder, {
+    int maxPumps = 30,
+  }) async {
+    for (var i = 0; i < maxPumps; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+      if (finder.evaluate().isNotEmpty) return;
+    }
+    fail('Timed out waiting for $finder');
+  }
+
   Future<int> seedPoint(
     AppDatabase db, {
     required int lessonId,
@@ -145,16 +166,14 @@ void main() {
         ),
       );
 
-      await tester.pumpAndSettle();
-
-      expect(
-        find.byWidgetPredicate(
-          (widget) =>
-              widget is Text &&
-              (widget.data?.startsWith('Question 1 of ') ?? false),
-        ),
-        findsOneWidget,
+      final questionFinder = find.byWidgetPredicate(
+        (widget) =>
+            widget is Text &&
+            (widget.data?.startsWith('Question 1 of ') ?? false),
       );
+      await pumpUntilFound(tester, questionFinder);
+
+      expect(questionFinder, findsOneWidget);
       expect(find.text('Pattern'), findsOneWidget);
       expect(find.text('Session: Mastery'), findsNothing);
       expect(find.text('Source: Practice queue'), findsNothing);
@@ -234,7 +253,7 @@ void main() {
       ),
     );
 
-    await tester.pumpAndSettle();
+    await pumpUntilFound(tester, find.text('Question 1 of 5'));
 
     expect(find.text('Practice check'), findsWidgets);
     expect(find.text('Question 1 of 5'), findsOneWidget);
@@ -307,7 +326,7 @@ void main() {
       ),
     );
 
-    await tester.pumpAndSettle();
+    await pumpUntilFound(tester, find.byType(MultipleChoiceWidget));
 
     for (var i = 0; i < 5; i++) {
       final widget = tester.widget<MultipleChoiceWidget>(
@@ -318,7 +337,7 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('grammar_mc_confirm')));
       await tester.pump(const Duration(milliseconds: 950));
     }
-    await tester.pumpAndSettle();
+    await tester.pump(const Duration(milliseconds: 1200));
 
     expect(find.textContaining('Practice check passed'), findsOneWidget);
     final point = await (db.select(

@@ -792,3 +792,11 @@
 - Key corrections: `挑 -> Khiêu`, `未 -> Vị`, `営` Japanese stroke count `12`, `稲` keeps owner-fixed `Đạo (lúa; cây lúa)`.
 - Gate matched Directive C: focused DB/reachability/taxonomy/upper-JLPT tests `47/47`, coverage audit N1 incomplete `24 -> 0`, analyze clean, UI string `0`, content status machine/open-review `0`, release build pass. Full `flutter test` was run once before Directive C arrived and passed `2340`; future content batches should not repeat it unless level/logic criteria apply.
 - Deployed `hosting:jpstudy`. Live proof used normal browser cache and real UI: VI/N1 `/#/kanji` detail for `挑` rendered `Khiêu (thách thức; khiêu chiến; đương đầu)`; detail for `未` rendered `Vị (chưa; chưa hoàn thành; tương lai)`. Page-context `cache: default` returned `no-cache` for `main.dart.js`, `lesson_23.json`, `lesson_25.json`; new console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N2 Lessons 1-5 Batch
+
+- Source-verified 38 N2 grammar points in lessons 1-5; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected `ことなく` formation/explanation to `Verb-dictionary form + ことなく` / `V辞書形 + ことなく`.
+- Fixed user-visible grammar reseed path: `GrammarSeeder` revision `12`, `fetchPointsByLevel` now invokes the versioned seeder, and seed-key matching no longer collapses unrelated Japanese grammar keys.
+- Verified: focused suite `68/68`, `flutter analyze lib test` clean, content status machine/open-review `0`, full `flutter test` `2343/2343`, release build pass, deploy pass.
+- Live proof: existing production browser, normal cache, no IndexedDB clear. `/#/grammar` at N2 upgraded `flutter.grammar_data_version_N2` to `12`; searching/opening `ことなく` rendered `Verb-dictionary form + ことなく` and `Cấu trúc: V辞書形 + ことなく.` Console warnings/errors `0`.

@@ -15,6 +15,8 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 70;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
+const _grammarSeedRevision = 12;
+const _grammarSeedRevisionKey = 'grammarSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
     level: 'N2',
@@ -440,6 +442,10 @@ class ContentDatabase extends _$ContentDatabase {
         await _seedMinnaVocabularyForActiveLevel();
         await _seedHajimeteVocabularyForActiveLevel();
         await _seedMinnaGrammarForActiveLevel();
+        await _markContentRevision(
+          _grammarSeedRevisionKey,
+          _grammarSeedRevision,
+        );
         await _seedMinnaKanji();
         await _createContentIndexes();
       },
@@ -556,6 +562,7 @@ class ContentDatabase extends _$ContentDatabase {
       },
       beforeOpen: (details) async {
         await _ensureKanjiContentCurrent();
+        await _ensureGrammarSeedRevision();
         // All four checks are independent — run them concurrently so the
         // content DB is ready in the time of the single slowest check.
         await Future.wait([
@@ -600,12 +607,7 @@ class ContentDatabase extends _$ContentDatabase {
   }
 
   Future<bool> _ensureKanjiSeedRevision() async {
-    await customStatement(
-      'CREATE TABLE IF NOT EXISTS content_meta ('
-      'key TEXT NOT NULL PRIMARY KEY, '
-      'value TEXT NOT NULL'
-      ')',
-    );
+    await _ensureContentMetaTable();
     final revisionRows = await customSelect(
       "SELECT value FROM content_meta WHERE key = '$_kanjiSeedRevisionKey' "
       'LIMIT 1',
@@ -630,6 +632,41 @@ class ContentDatabase extends _$ContentDatabase {
       "('$_kanjiSeedRevisionKey', '$_kanjiSeedRevision')",
     );
     return repaired;
+  }
+
+  Future<void> _ensureContentMetaTable() {
+    return customStatement(
+      'CREATE TABLE IF NOT EXISTS content_meta ('
+      'key TEXT NOT NULL PRIMARY KEY, '
+      'value TEXT NOT NULL'
+      ')',
+    );
+  }
+
+  Future<void> _markContentRevision(String key, int revision) async {
+    await _ensureContentMetaTable();
+    await customStatement(
+      "INSERT OR REPLACE INTO content_meta (key, value) VALUES "
+      "('$key', '$revision')",
+    );
+  }
+
+  Future<bool> _ensureGrammarSeedRevision() async {
+    await _ensureContentMetaTable();
+    final revisionRows = await customSelect(
+      "SELECT value FROM content_meta WHERE key = '$_grammarSeedRevisionKey' "
+      'LIMIT 1',
+    ).get();
+    final storedRevision = revisionRows.isEmpty
+        ? null
+        : int.tryParse('${revisionRows.single.data['value']}');
+    if (storedRevision != null && storedRevision >= _grammarSeedRevision) {
+      return false;
+    }
+
+    await _seedMinnaGrammar();
+    await _markContentRevision(_grammarSeedRevisionKey, _grammarSeedRevision);
+    return true;
   }
 
   // ... (reseed methods)

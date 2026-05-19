@@ -14,7 +14,7 @@ class GrammarSeeder {
   final GrammarDao _dao;
 
   // Tăng version này lên khi thay đổi file JSON data
-  static const int kGrammarDataVersion = 11;
+  static const int kGrammarDataVersion = 12;
   static const String kKeyGrammarVersion = 'grammar_data_version';
 
   static String versionKeyForLevel(String level) =>
@@ -138,12 +138,12 @@ class GrammarSeeder {
     final exJson = lessonData.ex;
 
     // Hoist: fetch existing points ONCE per lesson, not once per grammar item.
-    final existingPoints = await (_dao.db.select(
-      _dao.db.grammarPoints,
-    )..where(
-          (tbl) => tbl.lessonId.equals(lessonId) & tbl.jlptLevel.equals(level),
-        ))
-        .get();
+    final existingPoints =
+        await (_dao.db.select(_dao.db.grammarPoints)..where(
+              (tbl) =>
+                  tbl.lessonId.equals(lessonId) & tbl.jlptLevel.equals(level),
+            ))
+            .get();
 
     for (final item in defJson) {
       final rawGrammarPoint = item['grammarPoint'] as String?;
@@ -329,16 +329,14 @@ class GrammarSeeder {
     final raw = (rawValue ?? '').trim();
     if (raw.isEmpty) return const <String>{};
 
-    final normalized = stripNonCanonicalGrammarNotes(
-      raw,
-    ).replaceAll(RegExp(r'[~?]'), '?').trim();
+    final normalized = stripNonCanonicalGrammarNotes(raw).trim();
     final compact = normalized
         .toLowerCase()
-        .replaceAll(RegExp(r'[\s\u3000\(\)?\[\]?:?,?.?/?\-\+]+'), '')
+        .replaceAll(RegExp(r'[\s\u3000()\[\]{}:;,.!?/\\\-+・、。〜～]+'), '')
         .trim();
-    final japaneseCore = normalized
-        .replaceAll(RegExp(r'[^?-?-?-?]'), '')
-        .trim();
+    final japaneseCore = RegExp(
+      r'[\u3040-\u30ff\u3400-\u9fff々〆ヵヶー]+',
+    ).allMatches(normalized).map((match) => match.group(0) ?? '').join();
 
     return <String>{raw, normalized, compact, japaneseCore}
       ..removeWhere((value) => value.isEmpty);

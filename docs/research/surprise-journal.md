@@ -719,3 +719,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N1 lessons 23-25 surfaced `挑 -> vẹo` and `未 -> mùi`. Both are source data, but they are the wrong learning signal for Japanese kanji in `挑む` and `未だ`; the app needs `Khiêu` and `Vị` for the learner-facing Hán-Việt layer.
 - Delta: -20 percentage points on confidence that Unihan can be applied mechanically even when present.
 - Updated belief: `kVietnamese` is evidence, not the UI label. Conflicts with established Sino-Vietnamese learner usage must be resolved explicitly and documented in the verification log.
+
+## 2026-05-19 - Grammar content has two runtime seed paths
+
+- Prior belief: bumping the content DB grammar revision would make edited grammar JSON visible to returning users.
+- Actual observation: after deploy, the live Grammar UI still rendered stale `Verb-stem + ことなく`; the screen reads from `AppDatabase` via `GrammarSeeder`, while the earlier revision bump only covered `ContentDatabase`.
+- Delta: -25 percentage points on confidence that a single content reseed path covers every user-facing surface.
+- Updated belief: every content batch must trace the exact screen repository/DB path before choosing the reseed mechanism. Rendered UI proof caught the mismatch; JSON/content-DB tests alone did not.

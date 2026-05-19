@@ -218,6 +218,70 @@ void main() {
     expect(revisionRow.data['value'], '70');
   });
 
+  test('grammar seed revision reseeds current-version stale grammar', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({'onboarding.level': 'N2'});
+    final tempDir = await Directory.systemTemp.createTemp(
+      'jpstudy_content_db_current_stale_grammar_',
+    );
+    addTearDown(() async {
+      if (await tempDir.exists()) {
+        await tempDir.delete(recursive: true);
+      }
+    });
+    final file = File('${tempDir.path}/content.db');
+    await _createLegacyKanjiDb(file, userVersion: 35, contentMetaRevision: 70);
+    await _insertStaleGrammarSeed(file);
+
+    final db = ContentDatabase(executor: NativeDatabase(file));
+    addTearDown(db.close);
+
+    final row =
+        await (db.select(db.grammarPoint)
+              ..where(
+                (tbl) => tbl.level.equals('N2') & tbl.title.equals('Verb ことなく'),
+              )
+              ..limit(1))
+            .getSingle();
+    final revisionRow = await db
+        .customSelect(
+          "SELECT value FROM content_meta WHERE key = 'grammarSeedRevision'",
+        )
+        .getSingle();
+
+    expect(row.structure, 'Verb-dictionary form + ことなく');
+    expect(row.explanation, contains('V辞書形 + ことなく'));
+    expect(row.tags, contains('vi-source-verified'));
+    expect(revisionRow.data['value'], '12');
+  });
+
+  test(
+    'new DB marks grammar seed revision without eager all-level seed',
+    () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+      final db = ContentDatabase(executor: NativeDatabase.memory());
+      addTearDown(db.close);
+
+      final revisionRow = await db
+          .customSelect(
+            "SELECT value FROM content_meta WHERE key = 'grammarSeedRevision'",
+          )
+          .getSingle();
+      final levelCol = db.grammarPoint.level;
+      final rows =
+          await (db.selectOnly(db.grammarPoint)
+                ..addColumns([levelCol])
+                ..groupBy([levelCol]))
+              .get();
+
+      expect(revisionRow.data['value'], '12');
+      expect({
+        for (final row in rows) row.read(levelCol),
+      }, unorderedEquals(['N5']));
+    },
+  );
+
   test(
     'current-version partial kanji DB reseeds missing level coverage',
     () async {
@@ -427,7 +491,7 @@ INSERT INTO kanji (
       );
       await db.customStatement(
         "INSERT OR REPLACE INTO content_meta (key, value) "
-      "VALUES ('kanjiSeedRevision', '70')",
+        "VALUES ('kanjiSeedRevision', '70')",
       );
 
       final repaired = await db.ensureKanjiContentCurrent();
@@ -491,6 +555,29 @@ INSERT INTO kanji (
         ['dummy_$i', level],
       );
     }
+  } finally {
+    sqlite.close();
+  }
+  return Future.value();
+}
+
+Future<void> _insertStaleGrammarSeed(File file) {
+  final sqlite = sqlite3.open(file.path);
+  try {
+    sqlite.execute('''
+INSERT INTO grammar_point (
+  id, lesson_id, title, title_en, structure, structure_en, explanation,
+  explanation_en, level, tags
+) VALUES (
+  9001, 5, 'Verb ことなく', 'stale', 'Verb-stem + ことなく',
+  'Verb-stem + ことなく', 'stale explanation', 'stale explanation',
+  'N2', 'source-hanabira,n2-grammar-import,vi-editorial-codex-pass'
+);
+''');
+    sqlite.execute('''
+INSERT OR REPLACE INTO content_meta (key, value)
+VALUES ('grammarSeedRevision', '11');
+''');
   } finally {
     sqlite.close();
   }

@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
+import 'package:jpstudy/data/seeds/grammar_seeder.dart';
 import 'package:jpstudy/features/common/widgets/clay_card.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/grammar/grammar_screen.dart';
@@ -16,8 +17,27 @@ import 'package:jpstudy/features/grammar/widgets/cloze_test_widget.dart';
 import 'package:jpstudy/features/grammar/widgets/multiple_choice_widget.dart'
     as grammar_widgets;
 import 'package:jpstudy/features/grammar/widgets/sentence_builder_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  setUp(() {
+    SharedPreferences.setMockInitialValues({
+      GrammarSeeder.versionKeyForLevel('N5'): GrammarSeeder.kGrammarDataVersion,
+    });
+  });
+
+  Future<void> pumpUntilFound(
+    WidgetTester tester,
+    Finder finder, {
+    int maxPumps = 30,
+  }) async {
+    for (var i = 0; i < maxPumps; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+      if (finder.evaluate().isNotEmpty) return;
+    }
+    fail('Timed out waiting for $finder');
+  }
+
   Future<int> seedGhostGrammar(AppDatabase db) async {
     final grammarId = await db
         .into(db.grammarPoints)
@@ -167,9 +187,19 @@ void main() {
       ),
     );
 
-    await tester.pumpAndSettle();
+    await pumpUntilFound(
+      tester,
+      find.text(AppLanguage.en.ghostReviewBannerActionLabel),
+    );
     await tester.tap(find.text(AppLanguage.en.ghostReviewBannerActionLabel));
-    await tester.pumpAndSettle();
+    await pumpUntilFound(
+      tester,
+      find.byWidgetPredicate(
+        (widget) =>
+            widget is Text &&
+            (widget.data?.startsWith('Question 1 of ') ?? false),
+      ),
+    );
 
     expect(find.byType(GrammarPracticeScreen), findsOneWidget);
     expect(
@@ -235,7 +265,7 @@ void main() {
         ),
       );
 
-      await tester.pumpAndSettle();
+      await pumpUntilFound(tester, find.byType(GrammarPracticeScreen));
       await answerCurrentQuestionCorrectly(tester);
       await tester.pump(const Duration(milliseconds: 200));
 

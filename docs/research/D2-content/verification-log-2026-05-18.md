@@ -1780,3 +1780,21 @@ Runtime note: bumped content DB Kanji seed revision from `69` to `70` so existin
 Verification: JSON parse passed; old approval-tag grep returned no matches; no accented search-normalization values remained; related-kanji shape check passed; coverage audit reduced N1 incomplete current entries `24 -> 0`; focused DB/reachability/taxonomy/upper-JLPT tests passed (`47`); `flutter analyze lib test` clean; UI string guard `0`; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed.
 
 Live proof after deploy: production browser used normal cache and rendered the actual VI/N1 Kanji UI. Searching `挑` opened the detail modal with `Khiêu (thách thức; khiêu chiến; đương đầu)`, on `チョウ`, kun `いど.む`, and Hán-Việt `Khiêu`. Searching `未` opened `Vị (chưa; chưa hoàn thành; tương lai)`, on `ミ, ビ`, kun `いま.だ, ま.だ, ひつじ`, and Hán-Việt `Vị`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `lesson_23.json`, and `lesson_25.json`. New console warnings/errors after the interaction: `0`.
+
+## Grammar N2 Lessons 1-5 Source-Verified Batch
+
+Owner loop moved to QA-B-001 grammar-first. This batch covers all 38 grammar points in `grammar_n2_1.json` through `grammar_n2_5.json`. Sources consulted for the batch: local Hanabira grammar import JSON, AmgiDex JLPT N2 grammar list, AI Japanese Tutor JLPT N2 grammar list, and MLC Japanese notes where the point appears. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N2-1 | `あるいは`, `おまけに`, `さて`, `しかも`, `したがって`, `すなわち`, `すると` | Checked connector meaning/usage and tagged each item `vi-source-verified`. |
+| N2-2 | `そういえば`, `そこで`, `それが`, `それで`, `それでも`, `それなのに`, `それなら`, `それはそうと` | Checked discourse-flow usage and tagged each item `vi-source-verified`. |
+| N2-3 | `だが`, `ただ`, `ただし`, `だって`, `ちなみに`, `ということは`, `というのは` | Checked contrast/explanation usage and tagged each item `vi-source-verified`. |
+| N2-4 | `なお`, `もっとも`, `要するに`, `につき`, `にて`, `のことだから`, `をはじめ`, `をはじめとして` | Checked formal connector/case-particle usage and tagged each item `vi-source-verified`. |
+| N2-5 | `をはじめとする`, `をめぐって`, `をめぐる`, `をもとに`, `をもとにして`, `ことなく`, `ないことには`, `あげく` | Checked formation/meaning and tagged each item `vi-source-verified`; corrected `ことなく` formation from `Verb-stem + ことなく` to `Verb-dictionary form + ことなく` with VI explanation `V辞書形 + ことなく`. |
+
+Runtime note: the rendered Grammar UI uses `AppDatabase`/`GrammarSeeder`, not `ContentDatabase`. The first live proof after deploy still showed stale `Verb-stem + ことなく`, proving the content DB revision alone did not reseed the user-visible grammar table. The fix bumps `GrammarSeeder.kGrammarDataVersion` to `12`, makes `fetchPointsByLevel` call the seeder every time while preserving the seeder's version/count skip, and tightens seed-key matching so Japanese-core keys do not falsely match unrelated grammar points.
+
+Verification: focused DB/taxonomy/upper-JLPT/practice-bank/widget tests passed (`68`); `flutter analyze lib test` clean; content status machine/open-review `0`; full `flutter test` passed (`2343`); release web build passed; Firebase Hosting deploy completed.
+
+Live proof after deploy: the existing production browser was not reset and used normal cache. Reloading `https://jpstudy.web.app/#/grammar` upgraded `flutter.grammar_data_version_N2` to `12`. Searching `ことなく` rendered `Verb-dictionary form + ことなく`; opening the detail screen rendered `KẾT NỐI: Verb-dictionary form + ことなく` and the explanation sentence containing `Cấu trúc: V辞書形 + ことなく.` New console warnings/errors after the interaction: `0`.

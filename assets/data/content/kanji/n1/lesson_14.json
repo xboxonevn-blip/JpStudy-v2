@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 14,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 安, 定, 余, and 井 align with existing verified duplicate rows, 静 uses KANJIDIC2 Vietnamese readings because Unihan has no kVietnamese value, and 伊/井 examples avoid the suspicious generated 伊井 vocabulary row.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k105",
@@ -18,47 +18,64 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "An",
-        "meaningVi": "yên ổn; bình an",
-        "meaningViDisplay": "安 (yên ổn; bình an)",
-        "meaningEn": "peaceful, tranquil, quiet"
+        "meaningVi": "yên ổn; an toàn; rẻ",
+        "meaningViDisplay": "An (yên ổn; an toàn; rẻ)",
+        "meaningEn": "peaceful; safe; inexpensive"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アン"
+        ],
         "kunyomi": [
-          "あんせい"
+          "やす.い",
+          "やす.まる",
+          "やす",
+          "やす.らか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 安 nghĩa là yên ổn; bình an. Ví dụ JLPT N1: 安静 (rest).",
-        "en": "Kanji 安 means peaceful, tranquil, quiet. JLPT N1 example: 安静 (rest)."
+        "vi": "安 có mái nhà và người nữ, gợi cảm giác yên ổn; trong 安静, nghĩa là nghỉ ngơi trong trạng thái yên tĩnh.",
+        "en": "安 evokes peace or safety; in 安静 it means resting quietly."
       },
       "decomposition": {
         "hanViet": "An",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "宀",
+          "女"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "nữ/phụ nữ"
+        ],
+        "relatedKanji": [
+          "静",
+          "定",
+          "易",
+          "女"
+        ]
       },
       "search": {
         "hanVietNoAccent": "An",
-        "meaningViNoAccent": "yen on; binh an",
-        "meaningEnNoAccent": "peaceful, tranquil, quiet"
+        "meaningViNoAccent": "yen on; an toan; re",
+        "meaningEnNoAccent": "peaceful; safe; inexpensive"
       },
       "examples": [
         {
           "word": "安静",
           "reading": "あんせい",
-          "meaning": "rest"
+          "meaning": "nghỉ ngơi; tĩnh dưỡng",
+          "meaningEn": "rest; quiet rest"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k106",
@@ -68,45 +85,64 @@
       "strokeCount": 14,
       "labels": {
         "hanViet": "Tĩnh",
-        "meaningVi": "yên tĩnh; tĩnh lặng",
-        "meaningViDisplay": "静 (yên tĩnh; tĩnh lặng)",
-        "meaningEn": "quiet, still, motionless; gentle"
+        "meaningVi": "yên tĩnh; tĩnh lặng; điềm tĩnh",
+        "meaningViDisplay": "Tĩnh (yên tĩnh; tĩnh lặng; điềm tĩnh)",
+        "meaningEn": "quiet; still; gentle"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "ジョウ"
+        ],
         "kunyomi": [
-          "あんせい"
+          "しず-",
+          "しず.か",
+          "しず.まる",
+          "しず.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 静 nghĩa là yên tĩnh; tĩnh lặng. Ví dụ JLPT N1: 安静 (nghỉ ngơi, yên tĩnh).",
-        "en": "Kanji 静 means quiet, still, motionless; gentle. JLPT N1 example: 安静 (nghỉ ngơi, yên tĩnh)."
+        "vi": "静 là trạng thái yên tĩnh hoặc lắng xuống; 安静 nhấn mạnh việc nằm nghỉ yên để hồi phục.",
+        "en": "静 means quiet or still; 安静 is quiet rest for recovery."
       },
       "decomposition": {
         "hanViet": "Tĩnh",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "青",
+          "争"
+        ],
+        "componentNames": [
+          "thanh/xanh",
+          "tranh/giành"
+        ],
+        "relatedKanji": [
+          "安",
+          "清",
+          "青",
+          "動"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tinh",
-        "meaningViNoAccent": "yen tinh; tinh lang",
-        "meaningEnNoAccent": "quiet, still, motionless; gentle"
+        "meaningViNoAccent": "yen tinh; tinh lang; diem tinh",
+        "meaningEnNoAccent": "quiet; still; gentle"
       },
       "examples": [
         {
           "word": "安静",
           "reading": "あんせい",
-          "meaning": "nghỉ ngơi, yên tĩnh"
+          "meaning": "nghỉ ngơi; tĩnh dưỡng",
+          "meaningEn": "rest; quiet rest"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,47 +154,64 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Định",
-        "meaningVi": "quyết định; ổn định",
-        "meaningViDisplay": "定 (quyết định; ổn định)",
-        "meaningEn": "decide, settle, fix"
+        "meaningVi": "quyết định; cố định; ổn định",
+        "meaningViDisplay": "Định (quyết định; cố định; ổn định)",
+        "meaningEn": "decide; settle; fix"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "テイ",
+          "ジョウ"
+        ],
         "kunyomi": [
-          "あんのじょう"
+          "さだ.める",
+          "さだ.まる",
+          "さだ.か"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 定 nghĩa là quyết định; ổn định. Ví dụ JLPT N1: 案の定 (sure enough, as usual).",
-        "en": "Kanji 定 means decide, settle, fix. JLPT N1 example: 案の定 (sure enough, as usual)."
+        "vi": "定 là điều đã được định rõ hoặc ổn định; 案の定 nghĩa là đúng như đã đoán.",
+        "en": "定 means fixed or settled; 案の定 means just as expected."
       },
       "decomposition": {
         "hanViet": "Định",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "宀",
+          "正"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "chính/đúng"
+        ],
+        "relatedKanji": [
+          "案",
+          "安",
+          "決",
+          "確"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đinh",
-        "meaningViNoAccent": "quyet đinh; on đinh",
-        "meaningEnNoAccent": "decide, settle, fix"
+        "hanVietNoAccent": "Dinh",
+        "meaningViNoAccent": "quyet dinh; co dinh; on dinh",
+        "meaningEnNoAccent": "decide; settle; fix"
       },
       "examples": [
         {
           "word": "案の定",
           "reading": "あんのじょう",
-          "meaning": "sure enough, as usual"
+          "meaning": "quả nhiên; đúng như dự đoán",
+          "meaningEn": "sure enough; as expected"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k108",
@@ -168,47 +221,62 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Dư",
-        "meaningVi": "dư; thừa; phần còn lại",
-        "meaningViDisplay": "余 (dư; thừa; phần còn lại)",
-        "meaningEn": "I, my, me; surname; surplus"
+        "meaningVi": "thừa; còn lại; phần dư",
+        "meaningViDisplay": "Dư (thừa; còn lại; phần dư)",
+        "meaningEn": "surplus; remainder; too much"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヨ"
+        ],
         "kunyomi": [
-          "あんまり"
+          "あま.る",
+          "あま.り",
+          "あま.す",
+          "あんま.り"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 余 nghĩa là dư; thừa; phần còn lại. Ví dụ JLPT N1: 余り (not very (this form only used as adverb), not much, remainder, rest, remnant, surplus, balance, excess, rema).",
-        "en": "Kanji 余 means I, my, me; surname; surplus. JLPT N1 example: 余り (not very (this form only used as adverb), not much, remainder, rest, remnant, surplus, balance, excess, rema)."
+        "vi": "余 là phần còn dư; 余り có thể là phần dư, mức quá nhiều, hoặc trạng từ phủ định như không mấy.",
+        "en": "余 marks surplus; 余り can be a remainder, excess, or an adverb like not very."
       },
       "decomposition": {
         "hanViet": "Dư",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "余"
+        ],
+        "componentNames": [
+          "dư/thừa"
+        ],
+        "relatedKanji": [
+          "残",
+          "過",
+          "多",
+          "分"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Du",
-        "meaningViNoAccent": "du; thua; phan con lai",
-        "meaningEnNoAccent": "I, my, me; surname; surplus"
+        "meaningViNoAccent": "thua; con lai; phan du",
+        "meaningEnNoAccent": "surplus; remainder; too much"
       },
       "examples": [
         {
           "word": "余り",
           "reading": "あんまり",
-          "meaning": "not very (this form only used as adverb), not much, remainder, rest, remnant, surplus, balance, excess, rema"
+          "meaning": "không mấy; quá; phần dư",
+          "meaningEn": "not very; too much; remainder"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k109",
@@ -218,47 +286,62 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Y",
-        "meaningVi": "dựa vào; tuân theo",
-        "meaningViDisplay": "依 (dựa vào; tuân theo)",
-        "meaningEn": "rely on, be set in; consent, obey a wish"
+        "meaningVi": "dựa vào; nương theo; phụ thuộc",
+        "meaningViDisplay": "Y (dựa vào; nương theo; phụ thuộc)",
+        "meaningEn": "rely on; depend on; follow"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ",
+          "エ"
+        ],
         "kunyomi": [
-          "い"
+          "よ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 依 nghĩa là dựa vào; tuân theo. Ví dụ JLPT N1: 依 (depending on).",
-        "en": "Kanji 依 means rely on, be set in; consent, obey a wish. JLPT N1 example: 依 (depending on)."
+        "vi": "依 có bộ nhân và áo, gợi ý nương dựa vào ai hay điều gì; 依存 là sự phụ thuộc.",
+        "en": "依 means relying on or depending on something; 依存 is dependence."
       },
       "decomposition": {
         "hanViet": "Y",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "衣"
+        ],
+        "componentNames": [
+          "người",
+          "áo/y"
+        ],
+        "relatedKanji": [
+          "存",
+          "頼",
+          "従",
+          "然"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Y",
-        "meaningViNoAccent": "dua vao; tuan theo",
-        "meaningEnNoAccent": "rely on, be set in; consent, obey a wish"
+        "meaningViNoAccent": "dua vao; nuong theo; phu thuoc",
+        "meaningEnNoAccent": "rely on; depend on; follow"
       },
       "examples": [
         {
-          "word": "依",
-          "reading": "い",
-          "meaning": "depending on"
+          "word": "依存",
+          "reading": "いそん",
+          "meaning": "sự phụ thuộc",
+          "meaningEn": "dependence; reliance"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k110",
@@ -268,47 +351,62 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Lương",
-        "meaningVi": "tốt; hiền lành",
-        "meaningViDisplay": "良 (tốt; hiền lành)",
-        "meaningEn": "good, virtuous, respectable"
+        "meaningVi": "tốt; lương thiện; phẩm chất tốt",
+        "meaningViDisplay": "Lương (tốt; lương thiện; phẩm chất tốt)",
+        "meaningEn": "good; virtuous; respectable"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "リョウ"
+        ],
         "kunyomi": [
-          "いい"
+          "よ.い",
+          "-よ.い",
+          "い.い",
+          "-い.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 良 nghĩa là tốt; hiền lành. Ví dụ JLPT N1: 良い (good).",
-        "en": "Kanji 良 means good, virtuous, respectable. JLPT N1 example: 良い (good)."
+        "vi": "良 là tốt hoặc có phẩm chất tốt; 良い là cách đọc quen thuộc nghĩa là tốt.",
+        "en": "良 means good or virtuous; 良い is the familiar word for good."
       },
       "decomposition": {
         "hanViet": "Lương",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "良"
+        ],
+        "componentNames": [
+          "lương/tốt"
+        ],
+        "relatedKanji": [
+          "善",
+          "好",
+          "悪",
+          "優"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Luong",
-        "meaningViNoAccent": "tot; hien lanh",
-        "meaningEnNoAccent": "good, virtuous, respectable"
+        "meaningViNoAccent": "tot; luong thien; pham chat tot",
+        "meaningEnNoAccent": "good; virtuous; respectable"
       },
       "examples": [
         {
           "word": "良い",
           "reading": "いい",
-          "meaning": "good"
+          "meaning": "tốt",
+          "meaningEn": "good"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k111",
@@ -318,47 +416,61 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Y",
-        "meaningVi": "người ấy; Ý",
-        "meaningViDisplay": "伊 (người ấy; Ý)",
-        "meaningEn": "third person pronoun; he, she, this, that"
+        "meaningVi": "Ý; người ấy; dùng trong tên riêng",
+        "meaningViDisplay": "Y (Ý; người ấy; dùng trong tên riêng)",
+        "meaningEn": "Italy; he/she; name element"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いい"
+          "かれ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 伊 nghĩa là người ấy; Ý. Ví dụ JLPT N1: 伊井 (that one, Italy).",
-        "en": "Kanji 伊 means third person pronoun; he, she, this, that. JLPT N1 example: 伊井 (that one, Italy)."
+        "vi": "伊 thường gặp trong tên riêng hoặc cách viết tắt liên quan đến Ý; 伊豆 là địa danh Izu.",
+        "en": "伊 often appears in names or as an Italy-related abbreviation; 伊豆 is Izu."
       },
       "decomposition": {
         "hanViet": "Y",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "尹"
+        ],
+        "componentNames": [
+          "người",
+          "doãn"
+        ],
+        "relatedKanji": [
+          "豆",
+          "人",
+          "井",
+          "彼"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Y",
-        "meaningViNoAccent": "nguoi ay; Y",
-        "meaningEnNoAccent": "third person pronoun; he, she, this, that"
+        "meaningViNoAccent": "Y; nguoi ay; dung trong ten rieng",
+        "meaningEnNoAccent": "Italy; he/she; name element"
       },
       "examples": [
         {
-          "word": "伊井",
-          "reading": "いい",
-          "meaning": "that one, Italy"
+          "word": "伊豆",
+          "reading": "いず",
+          "meaning": "Izu; địa danh ở Nhật",
+          "meaningEn": "Izu; Japanese place name"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k112",
@@ -368,52 +480,68 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Tỉnh",
-        "meaningVi": "giếng; hầm",
-        "meaningViDisplay": "井 (giếng; hầm)",
-        "meaningEn": "well, mine shaft, pit; surname; 22nd lunar mansion, determinative star μ Geminorum (Tejat); hexagram ䷯"
+        "meaningVi": "giếng; hầm; miệng giếng",
+        "meaningViDisplay": "Tỉnh (giếng; hầm; miệng giếng)",
+        "meaningEn": "well; mine shaft; pit"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いい"
+          "い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 井 nghĩa là giếng; hầm. Ví dụ JLPT N1: 伊井 (that one, Italy).",
-        "en": "Kanji 井 means well, mine shaft, pit; surname; 22nd lunar mansion, determinative star μ Geminorum (Tejat); hexagram ䷯. JLPT N1 example: 伊井 (that one, Italy)."
+        "vi": "井 là hình giếng nước nhìn từ trên xuống; 井戸 nghĩa là giếng nước.",
+        "en": "井 resembles a well seen from above; 井戸 is a water well."
       },
       "decomposition": {
         "hanViet": "Tỉnh",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "井"
+        ],
+        "componentNames": [
+          "tỉnh/giếng"
+        ],
+        "relatedKanji": [
+          "戸",
+          "水",
+          "泉",
+          "掘"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tinh",
-        "meaningViNoAccent": "gieng; ham",
-        "meaningEnNoAccent": "well, mine shaft, pit; surname; 22nd lunar mansion, determinative star μ Geminorum (Tejat); hexagram ䷯"
+        "meaningViNoAccent": "gieng; ham; mieng gieng",
+        "meaningEnNoAccent": "well; mine shaft; pit"
       },
       "examples": [
         {
-          "word": "伊井",
-          "reading": "いい",
-          "meaning": "that one, Italy"
+          "word": "井戸",
+          "reading": "いど",
+          "meaning": "giếng nước",
+          "meaningEn": "water well"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

@@ -917,3 +917,30 @@ Runtime note: bumped content DB Kanji seed revision from `39` to `40` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `96` to `88`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
 
 Live proof after deploy: after `133d038d` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-40 metadata. Filtering `写` showed the updated N2 lesson-14 card; opening it showed `Tả (chụp lại; sao chép; phản chiếu)`, Hán-Việt `Tả`, on `シャ, ジャ`, kun `うつ.す, うつ.る, うつ-, うつ.し`, stroke count `5`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 15 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `恨み`, `羨ましい`, `売上`, `売り切れ`, `売行き`, and `運河`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `恨` | KANJIDIC2 reading `コン`, `うら.む/うら.めしい`, Vietnamese `Hận`, meanings `regret`, `bear a grudge`, `resentment`, `hatred`; Unihan `kVietnamese=hận`, `kDefinition=hatred, dislike; resent, hate`; local context `恨み` | Rewrote display to `Hận (oán hận; thù hằn; nỗi hận)`, added readings/search text, direct example `恨み`, and emotion/resentment related kanji. |
+| `羨` | KANJIDIC2 readings `セン/エン`, `うらや.む/あまり`, Vietnamese `Tiện`, meanings `envious`, `jealous`, `covet`; Unihan `kDefinition=envy, admire; praise; covet`; local context `羨ましい` | Rewrote display to `Tiện (ghen tị; ao ước; thèm muốn)`, added readings/search text, direct example `羨ましい`, and envy/desire related kanji. |
+| `売` | KANJIDIC2 reading `バイ`, `う.る/う.れる`, Vietnamese `Mại`, meaning `sell`; Unihan `kDefinition=sell`; local context `売上` plus source-verified lower-level `売` | Corrected the row away from whole-word `amount sold, proceeds` fallback to `Mại (bán; buôn bán)`, added readings/search text, direct example `売上`, and commerce related kanji. |
+| `上` | KANJIDIC2 readings `ジョウ/ショウ/シャン`, upper/up kunyomi, Vietnamese `Thượng`, meanings `above`, `up`; Unihan `kVietnamese=thượng`, `kDefinition=top; superior, highest; go up`; local context `売上` | Corrected the row away from whole-word `amount sold, proceeds` fallback to `Thượng (trên; lên; tăng)`, added readings/search text, direct example `売上`, and up/down related kanji. |
+| `切` | KANJIDIC2 readings `セツ/サイ`, cut-off kunyomi, Vietnamese `Thiết`, meanings `cut`, `cutoff`, `sharp`; Unihan `kVietnamese=thiết`, `kDefinition=cut, mince, slice, carve`; local context `売り切れ` | Corrected the row away from whole-word `sold-out` fallback to `Thiết (cắt; đứt; sắc bén)`, added readings/search text, direct example `売り切れ`, and cut/end related kanji. |
+| `行` | KANJIDIC2 readings `コウ/ギョウ/アン`, go/carry-out kunyomi, Vietnamese `Hành/Hàng`, meanings `going`, `journey`, `carry out`, `line`; Unihan `kDefinition=go; walk; move, travel`; local context `売行き` plus source-verified N3/N5 `行` | Corrected the row away from whole-word `sales` fallback to learner-facing `Hành (đi; thực hiện; hàng lối)`, added readings/search text, direct example `売行き`, and movement/route related kanji. |
+| `運` | KANJIDIC2 reading `ウン`, `はこ.ぶ`, Vietnamese `Vận`, meanings `carry`, `luck`, `transport`, `advance`; Unihan `kVietnamese=vận`, `kDefinition=luck, fortune; ship, transport`; local context `運河` plus source-verified lower-level `運` | Corrected the row away from whole-word `canal` fallback to `Vận (vận chuyển; vận may; chuyển động)`, added readings/search text, direct example `運河`, and transport/path related kanji. |
+| `河` | KANJIDIC2 reading `カ`, `かわ`, Vietnamese `Hà`, meaning `river`; Unihan `kVietnamese=hà`, `kDefinition=river; stream; the Yellow River`; local context `運河` | Corrected the row away from whole-word `canal` fallback to `Hà (sông; dòng sông)`, added readings/search text, direct example `運河`, and river/water related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `40` to `41` and added an N2 lesson-15 sentinel for `恨` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `88` to `80`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
+
+Live proof after deploy: after `8d39fa0c` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-41 metadata. Filtering `恨` showed the updated N2 lesson-15 card; opening it showed `Hận (oán hận; thù hằn; nỗi hận)`, Hán-Việt `Hận`, on `コン`, kun `うら.む, うら.めしい`, stroke count `9`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

@@ -836,3 +836,30 @@ Runtime note: bumped content DB Kanji seed revision from `36` to `37` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `120` to `112`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`).
 
 Live proof after deploy: after `fadf79fb` was deployed to Firebase Hosting, a CDP cache-disabled VI/N2 `/#/kanji` session loaded the revision-37 metadata. Filtering `妹` showed the updated N2 lesson-11 card; opening it showed `Muội (em gái; người em nữ)`, Hán-Việt `Muội`, on `マイ`, kun `いもうと`, stroke count `8`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 12 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context for `引力`, `植木`, `飢える`, `浮ぶ`, `承る`, and `受取`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `力` | KANJIDIC2 readings `リョク/リキ`, `ちから`, Vietnamese `Lực`, meanings `power`, `strength`; Unihan `kVietnamese=lực`, `kDefinition=power, capability, influence`; local context `引力` | Corrected the row away from whole-word `gravity` fallback to `Lực (sức mạnh; lực; năng lực)`, added readings/search text, direct example `引力`, and power/force related kanji. |
+| `植` | KANJIDIC2 reading `ショク`, `う.える/う.わる`, Vietnamese `Thực/Trĩ`, meaning `plant`; Unihan `kVietnamese=thực`, `kDefinition=plant, trees, plants; grow`; local context `植木` | Corrected the row away from whole-word `garden shrubs, trees, potted plant` fallback to `Thực (trồng; cây trồng; thực vật)`, added readings/search text, direct example `植木`, and plant/tree related kanji. |
+| `木` | KANJIDIC2 readings `ボク/モク`, `き/こ-`, Vietnamese `Mộc`, meanings `tree`, `wood`; Unihan `kVietnamese=mộc`, `kDefinition=tree; wood`; local context `植木` plus lower-level `木` | Corrected the row away from whole-word `garden shrubs, trees, potted plant` fallback to `Mộc (cây; gỗ; thân cây)`, added readings/search text, direct example `植木`, and tree/wood related kanji. |
+| `飢` | KANJIDIC2 reading `キ`, `う.える`, Vietnamese `Cơ`, meanings `hungry`, `starve`; Unihan `kVietnamese=cơ`, `kDefinition=hunger, starving; hungry; a famine`; local context `飢える` | Rewrote display to `Cơ (đói; đói khát; nạn đói)`, added readings/search text, direct example `飢える`, and hunger/food related kanji. |
+| `浮` | KANJIDIC2 reading `フ`, `う.く/う.かれる/う.かぶ/う.かべる`, Vietnamese `Phù`, meanings `floating`, `float`, `rise to surface`; Unihan `kVietnamese=phù`, `kDefinition=to float, drift, waft`; local context `浮ぶ` | Rewrote display to `Phù (nổi; trôi; hiện lên)`, added readings/search text, direct example `浮ぶ`, and water/float related kanji. |
+| `承` | KANJIDIC2 readings `ショウ/ジョウ`, `うけたまわ.る/う.ける`, Vietnamese `Thừa`, meanings `acquiesce`, `hear`, `receive`; Unihan `kVietnamese=thừa`, `kDefinition=inherit, receive; succeed`; local context `承る` | Corrected the row away from whole-word humble-gloss fallback to `Thừa (tiếp nhận; thừa nhận; kính nghe)`, added readings/search text, direct example `承る`, and receive/acknowledge related kanji. |
+| `受` | KANJIDIC2 reading `ジュ`, `う.ける/う.かる`, Vietnamese `Thụ`, meanings `accept`, `undergo`, `receive`; Unihan `kVietnamese=thụ`, `kDefinition=receive, accept, get; bear, stand`; local context `受取` | Corrected the row away from whole-word `receipt` fallback to `Thụ (nhận; tiếp nhận; chịu)`, added readings/search text, direct example `受取`, and receive/pass related kanji. |
+| `取` | KANJIDIC2 reading `シュ`, `と.る`, Vietnamese `Thủ`, meanings `take`, `fetch`, `take up`; Unihan `kVietnamese=thủ`, `kDefinition=take, receive, obtain; select`; local context `受取` | Corrected the row away from whole-word `receipt` fallback to `Thủ (lấy; nhận; chọn)`, added readings/search text, direct example `受取`, and take/receive related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `37` to `38` and added an N2 lesson-12 sentinel for `力` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `112` to `104`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`).
+
+Live proof after deploy: after `ce8ff3a6` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-38 metadata. Filtering `承` showed the updated N2 lesson-12 card; opening it showed `Thừa (tiếp nhận; thừa nhận; kính nghe)`, Hán-Việt `Thừa`, on `ショウ, ジョウ`, kun `うけたまわ.る, う.ける`, stroke count `8`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

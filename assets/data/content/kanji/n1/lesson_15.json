@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 15,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 否 and 主 use learner-facing KANJIDIC2 Vietnamese readings over less useful raw Unihan values, and duplicate rows for 言, 訳, and 出 were aligned with existing verified app entries.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k113",
@@ -17,48 +17,64 @@
       "character": "否",
       "strokeCount": 7,
       "labels": {
-        "hanViet": "Bĩ",
-        "meaningVi": "không; phủ định",
-        "meaningViDisplay": "否 (không; phủ định)",
-        "meaningEn": "not, no, negative; final particle; hexagram ䷋"
+        "hanViet": "Phủ",
+        "meaningVi": "không; phủ định; từ chối",
+        "meaningViDisplay": "Phủ (không; phủ định; từ chối)",
+        "meaningEn": "not; no; negative"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヒ"
+        ],
         "kunyomi": [
-          "いいえ"
+          "いな",
+          "いや"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 否 nghĩa là không; phủ định. Ví dụ JLPT N1: 否 (no, nay, yes, well).",
-        "en": "Kanji 否 means not, no, negative; final particle; hexagram ䷋. JLPT N1 example: 否 (no, nay, yes, well)."
+        "vi": "否 là phủ nhận hoặc nói không; 拒否 dùng khi từ chối hay bác bỏ điều gì.",
+        "en": "否 means no or negation; 拒否 is refusal or rejection."
       },
       "decomposition": {
-        "hanViet": "Bĩ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Phủ",
+        "structure": "top-bottom",
+        "components": [
+          "不",
+          "口"
+        ],
+        "componentNames": [
+          "bất/không",
+          "miệng"
+        ],
+        "relatedKanji": [
+          "拒",
+          "決",
+          "不",
+          "認"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Bi",
-        "meaningViNoAccent": "khong; phu đinh",
-        "meaningEnNoAccent": "not, no, negative; final particle; hexagram ䷋"
+        "hanVietNoAccent": "Phu",
+        "meaningViNoAccent": "khong; phu dinh; tu choi",
+        "meaningEnNoAccent": "not; no; negative"
       },
       "examples": [
         {
-          "word": "否",
-          "reading": "いいえ",
-          "meaning": "no, nay, yes, well"
+          "word": "拒否",
+          "reading": "きょひ",
+          "meaning": "từ chối; bác bỏ; phủ nhận",
+          "meaningEn": "refusal; rejection; denial"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k114",
@@ -68,47 +84,62 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Gia",
-        "meaningVi": "thêm; tăng",
-        "meaningViDisplay": "加 (thêm; tăng)",
-        "meaningEn": "add to, increase, augment"
+        "meaningVi": "thêm; tăng; cộng vào",
+        "meaningViDisplay": "Gia (thêm; tăng; cộng vào)",
+        "meaningEn": "add; increase; augment"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ"
+        ],
         "kunyomi": [
-          "いいかげん"
+          "くわ.える",
+          "くわ.わる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 加 nghĩa là thêm; tăng. Ví dụ JLPT N1: いい加減 (moderate, right, random, not thorough, vague, irresponsible, halfhearted).",
-        "en": "Kanji 加 means add to, increase, augment. JLPT N1 example: いい加減 (moderate, right, random, not thorough, vague, irresponsible, halfhearted)."
+        "vi": "加 là thêm vào hoặc làm tăng; 追加 là phần thêm hoặc việc bổ sung.",
+        "en": "加 means to add or increase; 追加 is an addition or supplement."
       },
       "decomposition": {
         "hanViet": "Gia",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "力",
+          "口"
+        ],
+        "componentNames": [
+          "lực/sức",
+          "miệng"
+        ],
+        "relatedKanji": [
+          "追",
+          "増",
+          "減",
+          "算"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Gia",
-        "meaningViNoAccent": "them; tang",
-        "meaningEnNoAccent": "add to, increase, augment"
+        "meaningViNoAccent": "them; tang; cong vao",
+        "meaningEnNoAccent": "add; increase; augment"
       },
       "examples": [
         {
-          "word": "いい加減",
-          "reading": "いいかげん",
-          "meaning": "moderate, right, random, not thorough, vague, irresponsible, halfhearted"
+          "word": "追加",
+          "reading": "ついか",
+          "meaning": "thêm vào; bổ sung",
+          "meaningEn": "addition; supplement"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k115",
@@ -118,47 +149,62 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Giảm",
-        "meaningVi": "giảm; trừ bớt",
-        "meaningViDisplay": "減 (giảm; trừ bớt)",
-        "meaningEn": "decrease, subtract, diminish"
+        "meaningVi": "giảm; trừ bớt; suy giảm",
+        "meaningViDisplay": "Giảm (giảm; trừ bớt; suy giảm)",
+        "meaningEn": "decrease; subtract; diminish"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゲン"
+        ],
         "kunyomi": [
-          "いいかげん"
+          "へ.る",
+          "へ.らす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 減 nghĩa là giảm; trừ bớt. Ví dụ JLPT N1: いい加減 (moderate, right, random, not thorough, vague, irresponsible, halfhearted).",
-        "en": "Kanji 減 means decrease, subtract, diminish. JLPT N1 example: いい加減 (moderate, right, random, not thorough, vague, irresponsible, halfhearted)."
+        "vi": "減 là làm ít đi hoặc giảm xuống; 減少 là sự giảm bớt về số lượng hay mức độ.",
+        "en": "減 means decrease or reduce; 減少 is a decrease or decline."
       },
       "decomposition": {
         "hanViet": "Giảm",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "咸"
+        ],
+        "componentNames": [
+          "nước",
+          "hàm/đều"
+        ],
+        "relatedKanji": [
+          "少",
+          "加",
+          "増",
+          "消"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Giam",
-        "meaningViNoAccent": "giam; tru bot",
-        "meaningEnNoAccent": "decrease, subtract, diminish"
+        "meaningViNoAccent": "giam; tru bot; suy giam",
+        "meaningEnNoAccent": "decrease; subtract; diminish"
       },
       "examples": [
         {
-          "word": "いい加減",
-          "reading": "いいかげん",
-          "meaning": "moderate, right, random, not thorough, vague, irresponsible, halfhearted"
+          "word": "減少",
+          "reading": "げんしょう",
+          "meaning": "giảm; suy giảm",
+          "meaningEn": "decrease; reduction; decline"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k116",
@@ -168,47 +214,61 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Ngôn",
-        "meaningVi": "lời nói; nói",
-        "meaningViDisplay": "言 (lời nói; nói)",
-        "meaningEn": "words, speech; speak, say; Kangxi radical 149"
+        "meaningVi": "nói; lời nói; ngôn từ",
+        "meaningViDisplay": "Ngôn (nói; lời nói; ngôn từ)",
+        "meaningEn": "words; speech; say"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゲン",
+          "ゴン"
+        ],
         "kunyomi": [
-          "いいわけ"
+          "い.う",
+          "こと"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 言 nghĩa là lời nói; nói. Ví dụ JLPT N1: 言い訳 (excuse, explanation).",
-        "en": "Kanji 言 means words, speech; speak, say; Kangxi radical 149. JLPT N1 example: 言い訳 (excuse, explanation)."
+        "vi": "言 là lời nói; trong 言い訳, lời nói được dùng để giải thích hoặc bào chữa.",
+        "en": "言 means words or speech; in 言い訳 it is the words used for an excuse or explanation."
       },
       "decomposition": {
         "hanViet": "Ngôn",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "言"
+        ],
+        "componentNames": [
+          "ngôn/lời nói"
+        ],
+        "relatedKanji": [
+          "訳",
+          "語",
+          "話",
+          "説"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ngon",
-        "meaningViNoAccent": "loi noi; noi",
-        "meaningEnNoAccent": "words, speech; speak, say; Kangxi radical 149"
+        "meaningViNoAccent": "noi; loi noi; ngon tu",
+        "meaningEnNoAccent": "words; speech; say"
       },
       "examples": [
         {
           "word": "言い訳",
           "reading": "いいわけ",
-          "meaning": "excuse, explanation"
+          "meaning": "lời bào chữa; lời giải thích",
+          "meaningEn": "excuse; explanation"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k117",
@@ -218,45 +278,60 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Dịch",
-        "meaningVi": "dịch; lý do",
-        "meaningViDisplay": "訳 (dịch; lý do)",
-        "meaningEn": "translate; decode; encode"
+        "meaningVi": "dịch thuật; lý do; hoàn cảnh",
+        "meaningViDisplay": "Dịch (dịch thuật; lý do; hoàn cảnh)",
+        "meaningEn": "translate; reason; circumstances"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヤク"
+        ],
         "kunyomi": [
-          "いいわけ"
+          "わけ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 訳 nghĩa là dịch; lý do. Ví dụ JLPT N1: 言い訳 (lý do, lời giải thích, cớ).",
-        "en": "Kanji 訳 means translate; decode; encode. JLPT N1 example: 言い訳 (lý do, lời giải thích, cớ)."
+        "vi": "訳 vừa là dịch thuật vừa là lý do/hoàn cảnh; 言い訳 là lời bào chữa hoặc lời giải thích.",
+        "en": "訳 can mean translation or reason; 言い訳 is an excuse or explanation."
       },
       "decomposition": {
         "hanViet": "Dịch",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "言",
+          "尺"
+        ],
+        "componentNames": [
+          "ngôn/lời nói",
+          "xích/thước"
+        ],
+        "relatedKanji": [
+          "言",
+          "翻",
+          "語",
+          "理"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dich",
-        "meaningViNoAccent": "dich; ly do",
-        "meaningEnNoAccent": "translate; decode; encode"
+        "meaningViNoAccent": "dich thuat; ly do; hoan canh",
+        "meaningEnNoAccent": "translate; reason; circumstances"
       },
       "examples": [
         {
           "word": "言い訳",
           "reading": "いいわけ",
-          "meaning": "lý do, lời giải thích, cớ"
+          "meaning": "lời bào chữa; lời giải thích",
+          "meaningEn": "excuse; explanation"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,47 +343,64 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Gia",
-        "meaningVi": "nhà; gia đình",
-        "meaningViDisplay": "家 (nhà; gia đình)",
-        "meaningEn": "house, home, residence; family"
+        "meaningVi": "nhà; gia đình; người chuyên môn",
+        "meaningViDisplay": "Gia (nhà; gia đình; người chuyên môn)",
+        "meaningEn": "house; home; family"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ",
+          "ケ"
+        ],
         "kunyomi": [
-          "いえで"
+          "いえ",
+          "や",
+          "うち"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 家 nghĩa là nhà; gia đình. Ví dụ JLPT N1: 家出 (running away from home, leaving home).",
-        "en": "Kanji 家 means house, home, residence; family. JLPT N1 example: 家出 (running away from home, leaving home)."
+        "vi": "家 là nhà hoặc gia đình; 家出 là việc bỏ nhà đi.",
+        "en": "家 means house or family; 家出 is running away from home."
       },
       "decomposition": {
         "hanViet": "Gia",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "宀",
+          "豕"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "thỉ/lợn"
+        ],
+        "relatedKanji": [
+          "出",
+          "主",
+          "屋",
+          "族"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Gia",
-        "meaningViNoAccent": "nha; gia đinh",
-        "meaningEnNoAccent": "house, home, residence; family"
+        "meaningViNoAccent": "nha; gia dinh; nguoi chuyen mon",
+        "meaningEnNoAccent": "house; home; family"
       },
       "examples": [
         {
           "word": "家出",
           "reading": "いえで",
-          "meaning": "running away from home, leaving home"
+          "meaning": "bỏ nhà đi",
+          "meaningEn": "running away from home"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k119",
@@ -318,47 +410,65 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Xuất",
-        "meaningVi": "ra; xuất hiện",
-        "meaningViDisplay": "出 (ra; xuất hiện)",
-        "meaningEn": "go out, send out; stand; produce"
+        "meaningVi": "ra; đưa ra; xuất hiện",
+        "meaningViDisplay": "Xuất (ra; đưa ra; xuất hiện)",
+        "meaningEn": "go out; send out; produce"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュツ",
+          "スイ"
+        ],
         "kunyomi": [
-          "いえで"
+          "で.る",
+          "-で",
+          "だ.す",
+          "-だ.す",
+          "い.でる",
+          "い.だす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 出 nghĩa là ra; xuất hiện. Ví dụ JLPT N1: 家出 (running away from home, leaving home).",
-        "en": "Kanji 出 means go out, send out; stand; produce. JLPT N1 example: 家出 (running away from home, leaving home)."
+        "vi": "出 là đi ra hoặc đưa ra; trong 家出, nghĩa là rời khỏi nhà.",
+        "en": "出 means to go out or put out; in 家出 it means leaving home."
       },
       "decomposition": {
         "hanViet": "Xuất",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "出"
+        ],
+        "componentNames": [
+          "xuất/ra"
+        ],
+        "relatedKanji": [
+          "入",
+          "家",
+          "発",
+          "外"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Xuat",
-        "meaningViNoAccent": "ra; xuat hien",
-        "meaningEnNoAccent": "go out, send out; stand; produce"
+        "meaningViNoAccent": "ra; dua ra; xuat hien",
+        "meaningEnNoAccent": "go out; send out; produce"
       },
       "examples": [
         {
           "word": "家出",
           "reading": "いえで",
-          "meaning": "running away from home, leaving home"
+          "meaning": "bỏ nhà đi",
+          "meaningEn": "running away from home"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k120",
@@ -367,53 +477,73 @@
       "character": "主",
       "strokeCount": 5,
       "labels": {
-        "hanViet": "Chúa",
-        "meaningVi": "chủ; chính",
-        "meaningViDisplay": "主 (chủ; chính)",
-        "meaningEn": "master, chief owner; host; lord"
+        "hanViet": "Chủ",
+        "meaningVi": "chủ; chính; người đứng đầu",
+        "meaningViDisplay": "Chủ (chủ; chính; người đứng đầu)",
+        "meaningEn": "master; main; host"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュ",
+          "ス",
+          "シュウ"
+        ],
         "kunyomi": [
-          "いえぬし"
+          "ぬし",
+          "おも",
+          "あるじ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 主 nghĩa là chủ; chính. Ví dụ JLPT N1: 家主 (landlord).",
-        "en": "Kanji 主 means master, chief owner; host; lord. JLPT N1 example: 家主 (landlord)."
+        "vi": "主 là chủ hoặc phần chính; 家主 là chủ nhà.",
+        "en": "主 means owner or main; 家主 is a landlord or house owner."
       },
       "decomposition": {
-        "hanViet": "Chúa",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Chủ",
+        "structure": "single",
+        "components": [
+          "主"
+        ],
+        "componentNames": [
+          "chủ/người đứng đầu"
+        ],
+        "relatedKanji": [
+          "家",
+          "君",
+          "語",
+          "権"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Chua",
-        "meaningViNoAccent": "chu; chinh",
-        "meaningEnNoAccent": "master, chief owner; host; lord"
+        "hanVietNoAccent": "Chu",
+        "meaningViNoAccent": "chu; chinh; nguoi dung dau",
+        "meaningEnNoAccent": "master; main; host"
       },
       "examples": [
         {
           "word": "家主",
           "reading": "いえぬし",
-          "meaning": "landlord"
+          "meaning": "chủ nhà",
+          "meaningEn": "landlord"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

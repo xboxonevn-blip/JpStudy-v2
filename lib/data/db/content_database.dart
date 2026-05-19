@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 49;
+const _kanjiSeedRevision = 50;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -176,6 +176,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '教',
     meaning: 'Giáo (dạy; giáo dục; giáo lý)',
     decompositionContains: '"hanViet":"Giáo"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 24,
+    character: '母',
+    meaning: 'Mẫu (mẹ; mẫu thân; bậc nữ lớn tuổi)',
+    decompositionContains: '"hanViet":"Mẫu"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 24,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 込 is kokuji and uses the KANJIDIC2 Vietnamese reading because Unihan has no kVietnamese value.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k185",
@@ -18,37 +18,46 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Mẫu",
-        "meaningVi": "(hon) aunt",
-        "meaningViDisplay": "母 ((hon) aunt)",
-        "meaningEn": "(hon) aunt"
+        "meaningVi": "mẹ; mẫu thân; bậc nữ lớn tuổi",
+        "meaningViDisplay": "Mẫu (mẹ; mẫu thân; bậc nữ lớn tuổi)",
+        "meaningEn": "mother"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ボ"
+        ],
         "kunyomi": [
-          "おばさん"
+          "はは",
+          "も"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 伯母さん ((hon) aunt).",
-        "en": "Appears in JLPT N2 vocabulary: 伯母さん ((hon) aunt)."
+        "vi": "母 là mẹ; trong 伯母さん, chữ này góp phần tạo nghĩa người cô, dì hoặc bác gái trong gia đình.",
+        "en": "母 means mother; in 伯母さん it helps form the family term for aunt."
       },
       "decomposition": {
         "hanViet": "Mẫu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "父",
+          "親",
+          "女",
+          "伯"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Mau",
-        "meaningViNoAccent": "(hon) aunt",
-        "meaningEnNoAccent": "(hon) aunt"
+        "meaningViNoAccent": "me; mau than; bac nu lon tuoi",
+        "meaningEnNoAccent": "mother"
       },
       "examples": [
         {
           "word": "伯母さん",
           "reading": "おばさん",
-          "meaning": "(hon) aunt"
+          "meaning": "cô; dì; bác gái",
+          "meaningEn": "aunt"
         }
       ],
       "tags": [
@@ -56,9 +65,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k186",
@@ -68,45 +78,58 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Tham",
-        "meaningVi": "worship, shrine visit",
-        "meaningViDisplay": "参 (worship, shrine visit)",
-        "meaningEn": "worship, shrine visit"
+        "meaningVi": "tham gia; đi lễ; viếng thăm",
+        "meaningViDisplay": "Tham (tham gia; đi lễ; viếng thăm)",
+        "meaningEn": "take part in, visit, worship"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "サン",
+          "シン"
+        ],
         "kunyomi": [
-          "おまいり"
+          "まい.る",
+          "まい-",
+          "まじわる",
+          "みつ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: お参り (worship, shrine visit).",
-        "en": "Appears in JLPT N2 vocabulary: お参り (worship, shrine visit)."
+        "vi": "参 là tham dự hoặc đi đến nơi tôn nghiêm; trong お参り, nó chỉ việc đi lễ, viếng đền chùa.",
+        "en": "参 means taking part or respectfully visiting; in お参り it means a shrine or temple visit."
       },
       "decomposition": {
         "hanViet": "Tham",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "加",
+          "会",
+          "社",
+          "寺"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tham",
-        "meaningViNoAccent": "worship, shrine visit",
-        "meaningEnNoAccent": "worship, shrine visit"
+        "meaningViNoAccent": "tham gia; di le; vieng tham",
+        "meaningEnNoAccent": "take part in, visit, worship"
       },
       "examples": [
         {
           "word": "お参り",
           "reading": "おまいり",
-          "meaning": "worship, shrine visit"
+          "meaning": "đi lễ; viếng đền/chùa",
+          "meaningEn": "worship, shrine visit"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,37 +141,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Tư",
-        "meaningVi": "unexpected, casual",
-        "meaningViDisplay": "思 (unexpected, casual)",
-        "meaningEn": "unexpected, casual"
+        "meaningVi": "nghĩ; suy nghĩ; ý nghĩ",
+        "meaningViDisplay": "Tư (nghĩ; suy nghĩ; ý nghĩ)",
+        "meaningEn": "think, consider, ponder"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
-          "おもいがけない"
+          "おも.う",
+          "おもえら.く",
+          "おぼ.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 思い掛けない (unexpected, casual).",
-        "en": "Appears in JLPT N2 vocabulary: 思い掛けない (unexpected, casual)."
+        "vi": "思 là suy nghĩ trong lòng; 思い掛けない là điều không nghĩ tới nên xảy ra bất ngờ.",
+        "en": "思 means thinking; 思い掛けない describes something unexpected because it was not thought of."
       },
       "decomposition": {
         "hanViet": "Tư",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "心",
+          "想",
+          "考",
+          "意"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tu",
-        "meaningViNoAccent": "unexpected, casual",
-        "meaningEnNoAccent": "unexpected, casual"
+        "meaningViNoAccent": "nghi; suy nghi; y nghi",
+        "meaningEnNoAccent": "think, consider, ponder"
       },
       "examples": [
         {
           "word": "思い掛けない",
           "reading": "おもいがけない",
-          "meaning": "unexpected, casual"
+          "meaning": "bất ngờ; không ngờ",
+          "meaningEn": "unexpected"
         }
       ],
       "tags": [
@@ -156,9 +189,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k188",
@@ -167,46 +201,57 @@
       "character": "込",
       "strokeCount": 5,
       "labels": {
-        "hanViet": "Nhập",
-        "meaningVi": "to be under impression that, to be convinced that",
-        "meaningViDisplay": "込 (to be under impression that, to be convinced that)",
-        "meaningEn": "to be under impression that, to be convinced that"
+        "hanViet": "Liêu",
+        "meaningVi": "đi vào; chen vào; đầy ắp",
+        "meaningViDisplay": "Liêu (đi vào; chen vào; đầy ắp)",
+        "meaningEn": "crowded, mixture, included"
       },
       "readings": {
         "onyomi": [],
         "kunyomi": [
-          "おもいこむ"
+          "-こ.む",
+          "こ.む",
+          "こ.み",
+          "-こ.み",
+          "こ.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 思い込む (to be under impression that, to be convinced that).",
-        "en": "Appears in JLPT N2 vocabulary: 思い込む (to be under impression that, to be convinced that)."
+        "vi": "込 là đi vào hoặc dồn vào bên trong; trong 思い込む, nó diễn tả ý nghĩ đã ăn sâu thành niềm tin chắc.",
+        "en": "込 means going or crowding in; in 思い込む it marks a thought becoming firmly lodged as a belief."
       },
       "decomposition": {
-        "hanViet": "Nhập",
+        "hanViet": "Liêu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "入",
+          "中",
+          "詰",
+          "混"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Nhap",
-        "meaningViNoAccent": "to be under impression that, to be convinced that",
-        "meaningEnNoAccent": "to be under impression that, to be convinced that"
+        "hanVietNoAccent": "Lieu",
+        "meaningViNoAccent": "di vao; chen vao; day ap",
+        "meaningEnNoAccent": "crowded, mixture, included"
       },
       "examples": [
         {
           "word": "思い込む",
           "reading": "おもいこむ",
-          "meaning": "to be under impression that, to be convinced that"
+          "meaning": "tin chắc; đinh ninh",
+          "meaningEn": "to be convinced, to be under the impression"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,37 +263,52 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Trọng",
-        "meaningVi": "heavy, massive, serious",
-        "meaningViDisplay": "重 (heavy, massive, serious)",
-        "meaningEn": "heavy, massive, serious"
+        "meaningVi": "nặng; quan trọng; chồng lên",
+        "meaningViDisplay": "Trọng (nặng; quan trọng; chồng lên)",
+        "meaningEn": "heavy, important, pile up"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジュウ",
+          "チョウ"
+        ],
         "kunyomi": [
-          "おもたい"
+          "え",
+          "おも.い",
+          "おも.り",
+          "おも.なう",
+          "かさ.ねる",
+          "かさ.なる",
+          "おも"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 重たい (heavy, massive, serious).",
-        "en": "Appears in JLPT N2 vocabulary: 重たい (heavy, massive, serious)."
+        "vi": "重 là nặng hoặc quan trọng; 重たい dùng nghĩa trực tiếp là nặng nề, nghiêm trọng.",
+        "en": "重 means heavy or important; 重たい uses the direct sense of heavy or serious."
       },
       "decomposition": {
         "hanViet": "Trọng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "軽",
+          "量",
+          "要",
+          "再"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Trong",
-        "meaningViNoAccent": "heavy, massive, serious",
-        "meaningEnNoAccent": "heavy, massive, serious"
+        "meaningViNoAccent": "nang; quan trong; chong len",
+        "meaningEnNoAccent": "heavy, important, pile up"
       },
       "examples": [
         {
           "word": "重たい",
           "reading": "おもたい",
-          "meaning": "heavy, massive, serious"
+          "meaning": "nặng; nghiêm trọng",
+          "meaningEn": "heavy, massive, serious"
         }
       ],
       "tags": [
@@ -256,9 +316,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k190",
@@ -268,37 +329,48 @@
       "strokeCount": 16,
       "labels": {
         "hanViet": "Thân",
-        "meaningVi": "thumb",
-        "meaningViDisplay": "親 (thumb)",
-        "meaningEn": "thumb"
+        "meaningVi": "cha mẹ; người thân; thân thiết",
+        "meaningViDisplay": "Thân (cha mẹ; người thân; thân thiết)",
+        "meaningEn": "parent, relative, intimacy"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シン"
+        ],
         "kunyomi": [
-          "おやゆび"
+          "おや",
+          "おや-",
+          "した.しい",
+          "した.しむ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 親指 (thumb).",
-        "en": "Appears in JLPT N2 vocabulary: 親指 (thumb)."
+        "vi": "親 là cha mẹ hoặc sự thân gần; trong 親指, chữ này ví ngón cái như ngón “cha mẹ” của bàn tay.",
+        "en": "親 means parent or intimacy; in 親指 it names the thumb as the parent finger."
       },
       "decomposition": {
         "hanViet": "Thân",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "母",
+          "父",
+          "近",
+          "指"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Than",
-        "meaningViNoAccent": "thumb",
-        "meaningEnNoAccent": "thumb"
+        "meaningViNoAccent": "cha me; nguoi than; than thiet",
+        "meaningEnNoAccent": "parent, relative, intimacy"
       },
       "examples": [
         {
           "word": "親指",
           "reading": "おやゆび",
-          "meaning": "thumb"
+          "meaning": "ngón cái",
+          "meaningEn": "thumb"
         }
       ],
       "tags": [
@@ -306,9 +378,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k191",
@@ -318,37 +391,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Chỉ",
-        "meaningVi": "thumb",
-        "meaningViDisplay": "指 (thumb)",
-        "meaningEn": "thumb"
+        "meaningVi": "ngón tay; chỉ ra; hướng dẫn",
+        "meaningViDisplay": "Chỉ (ngón tay; chỉ ra; hướng dẫn)",
+        "meaningEn": "finger, point to, indicate"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
-          "おやゆび"
+          "ゆび",
+          "さ.す",
+          "-さ.し"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 親指 (thumb).",
-        "en": "Appears in JLPT N2 vocabulary: 親指 (thumb)."
+        "vi": "指 là ngón tay hoặc hành động chỉ ra; trong 親指, nó gọi tên một ngón tay cụ thể là ngón cái.",
+        "en": "指 means finger or pointing; in 親指 it names a specific finger, the thumb."
       },
       "decomposition": {
         "hanViet": "Chỉ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "手",
+          "親",
+          "示",
+          "導"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chi",
-        "meaningViNoAccent": "thumb",
-        "meaningEnNoAccent": "thumb"
+        "meaningViNoAccent": "ngon tay; chi ra; huong dan",
+        "meaningEnNoAccent": "finger, point to, indicate"
       },
       "examples": [
         {
           "word": "親指",
           "reading": "おやゆび",
-          "meaning": "thumb"
+          "meaning": "ngón cái",
+          "meaningEn": "thumb"
         }
       ],
       "tags": [
@@ -356,9 +439,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k192",
@@ -368,52 +452,67 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Tá",
-        "meaningVi": "to sell wholesale, grated (vegetables)",
-        "meaningViDisplay": "卸 (to sell wholesale, grated (vegetables))",
-        "meaningEn": "to sell wholesale, grated (vegetables)"
+        "meaningVi": "bán buôn; hạ xuống; gỡ xuống",
+        "meaningViDisplay": "Tá (bán buôn; hạ xuống; gỡ xuống)",
+        "meaningEn": "wholesale, lay down, unload"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シャ"
+        ],
         "kunyomi": [
-          "おろす"
+          "おろ.す",
+          "おろし",
+          "おろ.し"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 卸す (to sell wholesale, grated (vegetables)).",
-        "en": "Appears in JLPT N2 vocabulary: 卸す (to sell wholesale, grated (vegetables))."
+        "vi": "卸 gắn với việc đưa hàng xuống hoặc bán sỉ; 卸す trong từ vựng N2 có nghĩa bán buôn hoặc bào nhỏ.",
+        "en": "卸 relates to unloading or wholesale; 卸す can mean selling wholesale or grating food."
       },
       "decomposition": {
         "hanViet": "Tá",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "商",
+          "売",
+          "下",
+          "荷"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ta",
-        "meaningViNoAccent": "to sell wholesale, grated (vegetables)",
-        "meaningEnNoAccent": "to sell wholesale, grated (vegetables)"
+        "meaningViNoAccent": "ban buon; ha xuong; go xuong",
+        "meaningEnNoAccent": "wholesale, lay down, unload"
       },
       "examples": [
         {
           "word": "卸す",
           "reading": "おろす",
-          "meaning": "to sell wholesale, grated (vegetables)"
+          "meaning": "bán buôn; bào nhỏ",
+          "meaningEn": "to sell wholesale, to grate"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N2 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

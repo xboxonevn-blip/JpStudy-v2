@@ -596,3 +596,10 @@
 - Bumped content DB Kanji seed revision to `47` and added an N2 lesson-21 sentinel for `補` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `40` to `32`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
 - Built/deployed `3de785e8` to Firebase Hosting. Live proof in VI/N2 production browser: `/#/kanji` loaded without Kanji data failure; no-store fetch of deployed `lesson_21.json` showed `補` as `Bổ (bổ sung; bù đắp; hỗ trợ)`, Hán-Việt `Bổ`, on `ホ`, kun `おぎな.う`, stroke count `12`; console warnings/errors `0`.
+
+## 2026-05-19 QA-A-017 Hosting Cache Regression
+
+- Owner audit confirmed the one-day cache policy had returned for non-fingerprinted app-shell/content files, invalidating earlier live proofs that used CDP cache-disabled checks.
+- Fixed and pushed `feeaca64`: `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `assets/AssetManifest*`, and `assets/assets/data/content/**` revalidate with `Cache-Control: no-cache`; `sqlite3.wasm` and `drift_worker.js` keep `public, max-age=2592000`.
+- Deployed Firebase Hosting. Header proof with cache-busted live requests: app-shell/content assets returned `no-cache`; wasm/worker returned `public, max-age=2592000`.
+- Verification caveat: browsers that already stored a previous `max-age=86400` response for the same unversioned URL may remain stale until that cached response expires; all future responses now prevent another 24h stale window.

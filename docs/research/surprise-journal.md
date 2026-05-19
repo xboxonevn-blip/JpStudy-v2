@@ -677,3 +677,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N2 lesson 18 had `延` and `突` stroke counts from Unihan-style totals, while KANJIDIC2 gives the Japanese learner-facing counts used by the app's kanji readings/meanings. Keeping the old counts would make the detail screen inconsistent with the Japanese-source metadata.
 - Delta: -15 percentage points on confidence that one stroke-count source can be applied mechanically across Japanese kanji lessons.
 - Updated belief: for learner-facing Japanese kanji cards, prefer KANJIDIC2 stroke counts/readings and use Unihan as a cross-check plus Hán-Việt source, documenting conflicts in the verification log.
+
+## 2026-05-19 - Cache-disabled live proof can hide real-user cache regressions
+
+- Prior belief: CDP cache-disabled live proof was acceptable for verifying rapid content deploys because it proved the newest Hosting artifact and current IndexedDB migration path.
+- Actual observation: the proof was true but incomplete: returning users with `public, max-age=86400` on unversioned Flutter/content URLs could still run old code or seed old JSON for up to 24h. The verification mode bypassed the exact failure mode users had.
+- Delta: -30 percentage points on confidence that cache-disabled proof alone is sufficient for production readiness.
+- Updated belief: live proof must include normal-cache header checks and at least one non-cache-disabled browser path; use CDP cache-disabled only as a diagnostic/control, not as the primary user-facing proof.

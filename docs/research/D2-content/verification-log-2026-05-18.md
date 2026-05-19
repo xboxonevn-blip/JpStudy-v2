@@ -1269,3 +1269,30 @@ Runtime note: bumped content DB Kanji seed revision from `52` to `53` and added 
 Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `192` to `184`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `5a9620ac` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_02.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `柄` showed `Bính (hoa văn; tính chất; tay cầm)`, Hán-Việt `Bính`, on `ヘイ`, kun `がら/え/つか`, stroke count `9`, and example `間柄` = `mối quan hệ`.
+
+## Kanji N1 Lesson 3 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `亜` has no Unihan `kVietnamese`, so the learner-facing Hán-Việt value keeps the established `Á` reading.
+- Existing N1 ShinKanzen/Tanos and Hajimete vocabulary context for `亜科`, `銅`, `証`, `赤字`, `明かす`, and `明白`, used only to choose examples and verify learner-facing glosses. The existing `明白` example reading was corrected to `めいはく` for the kanji example.
+
+| Item | Sources | Change |
+|---|---|---|
+| `亜` | KANJIDIC2 reading `ア`, `つ.ぐ`, meanings `Asia`, `rank next`, `-ous`; Unihan `kDefinition=Asia; second`; local context `亜科` | Rewrote to `Á (châu Á; thứ hai; phụ/á)`, added readings/search text, direct example `亜科`, and category/rank related kanji. |
+| `科` | KANJIDIC2 reading `カ`, meanings `department`, `course`, `section`; Unihan `kVietnamese=khoa`; local context `亜科` | Rewrote to `Khoa (khoa; ngành; bộ môn; mục)`, added readings/search text, direct example `亜科`, and study/category related kanji. |
+| `銅` | KANJIDIC2 reading `ドウ`, `あかがね`, meaning `copper`; Unihan `kVietnamese=đồng`; local context `銅` | Added source-backed readings, natural Vietnamese meaning, direct example, and metal related kanji. |
+| `証` | KANJIDIC2 reading `ショウ`, `あかし`, meanings `evidence`, `proof`, `certificate`; Unihan `kVietnamese=chứng`; local context `証` | Rewrote to `Chứng (bằng chứng; chứng nhận; xác minh)`, added readings/search text, direct example, and proof/recognition related kanji. |
+| `赤` | KANJIDIC2 readings `セキ/シャク`, red meanings; Unihan `kVietnamese=xích`; local context `赤字` | Rewrote to `Xích (đỏ; màu đỏ; thâm hụt)`, added readings/search text, example `赤字`, and color/contrast related kanji. |
+| `字` | KANJIDIC2 reading `ジ`, character/letter meanings; Unihan `kVietnamese=tự`; local context `赤字` | Rewrote to `Tự (chữ; ký tự; tên chữ)`, added readings/search text, example `赤字`, and writing related kanji. |
+| `明` | KANJIDIC2 readings `メイ/ミョウ/ミン`, bright/light meanings; Unihan `kVietnamese=minh`; local context `明かす` | Rewrote to `Minh (sáng; rõ ràng; làm sáng tỏ)`, fixed the example gloss for `明かす`, and added source-backed readings/related kanji. |
+| `白` | KANJIDIC2 readings `ハク/ビャク`, white meanings; Unihan `kVietnamese=bạch`; local context `明白` | Rewrote to `Bạch (trắng; trong sạch; rõ ràng)`, corrected the example reading to `めいはく`, and added source-backed readings/related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `53` to `54` and added an N1 lesson-3 sentinel for `亜` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `184` to `176`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `8610360c` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_03.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `亜` showed `Á (châu Á; thứ hai; phụ/á)`, Hán-Việt `Á`, on `ア`, kun `つ.ぐ`, stroke count `7`, and example `亜科` = `phân họ; nhóm phân loại phụ`. Console errors/warnings: `0`.

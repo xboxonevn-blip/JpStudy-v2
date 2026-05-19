@@ -1539,3 +1539,30 @@ Runtime note: bumped content DB Kanji seed revision from `62` to `63` and added 
 Verification: coverage audit reduced N1 incomplete current entries from `112` to `104`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `13164fac` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_12.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; `粗` showed `Thô (thô; sơ sài; thô ráp)`, on `ソ`, kun `あら.い/あら-`, and example `粗筋/あらすじ = tóm tắt; cốt truyện khái quát`. Current page console errors/warnings: `0`.
+
+## Kanji N1 Lesson 13 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and Vietnamese readings where Unihan was absent or unsuitable.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `示` and `案` keep learner-facing KANJIDIC2/app readings instead of bundled multi-reading Unihan phrases.
+- Existing verified duplicate rows plus N1 vocabulary examples for `有様`, `或る`, `慌ただしい`, `暗殺`, `暗算`, `暗示`, and `案`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `様` | KANJIDIC2 readings `ヨウ/ショウ`, `さま/さん`; local context `有様` | Rewrote to `Dạng (dáng vẻ; kiểu; tình trạng)`, replaced word-derived fallback reading, and translated `有様` as `tình trạng; hoàn cảnh; thực trạng`. |
+| `或` | KANJIDIC2 readings `ワク/コク/イキ`, `あ.る/あるい/あるいは`; local context `或る` | Rewrote to `Hoặc (hoặc; nào đó; có thể)`, added source-backed readings/components, and translated `或る` as `một... nào đó`. |
+| `慌` | KANJIDIC2 reading `コウ`, `あわ.てる/あわ.ただしい`; Unihan `kVietnamese=hoảng`; local context `慌ただしい` | Rewrote to `Hoảng (hoảng hốt; bối rối; vội vã)`, replaced word-level reading, and translated the example naturally. |
+| `暗` | KANJIDIC2 reading `アン`, `くら.い/...`; Unihan `kVietnamese=ám`; local context `暗殺` | Rewrote to `Ám (tối; u ám; bí mật)`, replaced word-level `あんさつ` as a kanji reading, and translated `暗殺` as `vụ ám sát`. |
+| `殺` | KANJIDIC2 readings `サツ/サイ/セツ`, `ころ.す/...`; Unihan `kVietnamese=sát`; local context `暗殺` | Rewrote to `Sát (giết; sát hại; giảm bớt)`, filled source-backed readings/components, and kept the `暗殺` example. |
+| `算` | KANJIDIC2 reading `サン`, `そろ`; Unihan `kVietnamese=toán`; local context `暗算` | Rewrote to `Toán (tính toán; phép tính; dự tính)`, replaced word-level `あんざん`, and translated `暗算` as `tính nhẩm`. |
+| `示` | KANJIDIC2 readings `ジ/シ`, `しめ.す`; local context `暗示` | Corrected learner-facing Hán-Việt from generated `Kì Thị` to `Thị`, rewrote to `Thị (chỉ ra; biểu thị; cho thấy)`, and translated `暗示` as `gợi ý ngầm; ám chỉ`. |
+| `案` | KANJIDIC2 readings `アン`, no learner-facing kun; existing verified app convention | Corrected generated `An Án Yên` to learner-facing `Án`, rewrote to `Án (ý tưởng; phương án; vụ việc)`, and removed unsupported word-derived readings. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `63` to `64` and added an N1 lesson-13 sentinel for `示` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit reduced N1 incomplete current entries from `104` to `96`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `f66f53e0` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_13.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; `示` showed `Thị (chỉ ra; biểu thị; cho thấy)`, on `ジ/シ`, kun `しめ.す`, and example `暗示/あんじ = gợi ý ngầm; ám chỉ`. Current page console errors/warnings: `0`.

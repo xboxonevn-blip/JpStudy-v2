@@ -999,3 +999,30 @@ Runtime note: bumped content DB Kanji seed revision from `42` to `43` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `72` to `64`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
 
 Live proof after deploy: after `88aca79a` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `宴` showed the updated two-card keyword result (`宴`, `会`); opening `宴` showed `Yến (yến; tiệc; yến tiệc; tiệc rượu)`, Hán-Việt `Yến`, on `エン`, kun `うたげ`, stroke count `10`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 18 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and stroke cross-checks.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `遠足`, `延長`, `煙突`, `追い掛ける`, and `追い越す`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `遠` | KANJIDIC2 readings `エン/オン`, `とお.い`, Vietnamese `Viễn/Viển`, meanings `distant`, `far`; Unihan `kVietnamese=viễn`; local context `遠足` | Corrected the row away from whole-word `trip, hike, picnic` fallback to `Viễn (viễn; xa; xa xôi; cách xa)`, added readings/search text, direct example `遠足`, and distance/travel related kanji. |
+| `延` | KANJIDIC2 reading `エン`, stretch/prolong kunyomi, Vietnamese `Duyên`, meanings `prolong`, `stretching`; Unihan has divergent `kVietnamese=dang`, so the learner-facing label follows KANJIDIC2; local context `延長` | Corrected `Dang` and whole-word extension fallback to `Duyên (duyên; kéo dài; gia hạn; duỗi ra)`, corrected stroke count to KANJIDIC2 Japanese count `8`, added readings/search text, direct example `延長`, and extend/time related kanji. |
+| `長` | KANJIDIC2 reading `チョウ`, `なが.い/おさ`, Vietnamese `Trường/Trưởng/Trướng`, meanings `long`, `leader`, `senior`; Unihan `kVietnamese=trường`; local context `延長` | Corrected the row away from whole-word extension fallback to `Trường (trường; dài; độ dài; người đứng đầu)`, added readings/search text, direct example `延長`, and long/short related kanji. |
+| `煙` | KANJIDIC2 reading `エン`, smoke kunyomi, Vietnamese `Yên`, meaning `smoke`; Unihan `kDefinition=smoke, soot; opium; tobacco, cigarettes`; local context `煙突` | Corrected the row away from whole-word `chimney` fallback to `Yên (yên; khói; khói thuốc)`, added readings/search text, direct example `煙突`, and smoke/fire related kanji. |
+| `突` | KANJIDIC2 reading `トツ`, `つ.く`, Vietnamese `Đột`, meanings `thrust`, `pierce`, `sudden`; Unihan stroke cross-check differs, so the Japanese learner count follows KANJIDIC2 `8`; local context `煙突` | Corrected the row away from whole-word `chimney` fallback to `Đột (đột; đâm; lao vào; đột ngột)`, added readings/search text, direct example `煙突`, and protrude/collision related kanji. |
+| `追` | KANJIDIC2 reading `ツイ`, `お.う`, Vietnamese `Truy`, meanings `chase`, `follow`, `pursue`; Unihan `kVietnamese=truy`; local context `追い掛ける` | Corrected the row away from whole-word chase verb fallback to `Truy (truy; đuổi theo; truy đuổi; theo sau)`, added readings/search text, direct example `追い掛ける`, and chase/movement related kanji. |
+| `掛` | KANJIDIC2 readings `カイ/ケイ`, hang/suspend kunyomi, Vietnamese `Quải`; Unihan lists `quẩy`, so the learner-facing label follows KANJIDIC2; local context `追い掛ける` | Corrected `Quẩy` and whole-word chase verb fallback to `Quải (quải; treo; móc; bắt đầu làm)`, added readings/search text, direct example `追い掛ける`, and hand/hang related kanji. |
+| `越` | KANJIDIC2 readings `エツ/オツ`, `こ.す/こ.える`, Vietnamese `Việt/Hoạt`, meanings `surpass`, `cross over`, `exceed`; Unihan `kVietnamese=việt`; local context `追い越す` | Corrected the row away from whole-word passing verb fallback to `Việt (việt; vượt qua; băng qua; vượt hơn)`, added readings/search text, direct example `追い越す`, and surpass/crossing related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `43` to `44` and added an N2 lesson-18 sentinel for `遠` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `64` to `56`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
+
+Live proof after deploy: after `1dc4252f` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `遠` showed the updated one-card keyword result; opening `遠` showed `Viễn (viễn; xa; xa xôi; cách xa)`, Hán-Việt `Viễn`, on `エン, オン`, kun `とお.い`, stroke count `13`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

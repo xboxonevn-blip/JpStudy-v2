@@ -670,3 +670,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: Unihan lists `液` as `giá`, but learner-facing Vietnamese and open Wiktionary cross-checks support `Dịch` for the kanji in `液体`/`dịch`. Using the raw Unihan value would make a common N2 liquid term look wrong to Vietnamese learners.
 - Delta: -15 percentage points on confidence that one Hán-Việt source can be applied mechanically.
 - Updated belief: Unihan remains the default open source, but common learner-facing conflicts should be resolved with an explicit second open-source check and documented in the verification log.
+
+## 2026-05-19 - Japanese stroke counts need KANJIDIC2 priority
+
+- Prior belief: Unihan `kTotalStrokes` was good enough as the stroke-count authority for imported kanji rows when it was already present in the source data.
+- Actual observation: N2 lesson 18 had `延` and `突` stroke counts from Unihan-style totals, while KANJIDIC2 gives the Japanese learner-facing counts used by the app's kanji readings/meanings. Keeping the old counts would make the detail screen inconsistent with the Japanese-source metadata.
+- Delta: -15 percentage points on confidence that one stroke-count source can be applied mechanically across Japanese kanji lessons.
+- Updated belief: for learner-facing Japanese kanji cards, prefer KANJIDIC2 stroke counts/readings and use Unihan as a cross-check plus Hán-Việt source, documenting conflicts in the verification log.

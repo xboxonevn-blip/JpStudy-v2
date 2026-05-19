@@ -564,3 +564,11 @@
 - Bumped content DB Kanji seed revision to `43` and added an N2 lesson-17 sentinel for `宴` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, no false approval/draft tags remain in lesson 17, coverage audit reduced N2 incomplete current entries from `72` to `64`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
 - Built/deployed `88aca79a` to Firebase Hosting. Live proof in VI/N2 `/#/kanji`: filtering `宴` showed `宴` and `会`; opening `宴` showed `Yến (yến; tiệc; yến tiệc; tiệc rượu)`, Hán-Việt `Yến`, on `エン`, kun `うたげ`, stroke count `10`; console warnings/errors `0`.
+
+## 2026-05-19 N2 Kanji Lesson 18 Completeness Patch
+
+- Source-verified all eight N2 lesson-18 kanji (`遠`, `延`, `長`, `煙`, `突`, `追`, `掛`, `越`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including correcting `遠` away from whole-word `trip`, `延`/`長` away from whole-word extension fallback, `煙`/`突` away from whole-word `chimney`, and `追`/`掛`/`越` away from whole-word chase/pass verbs; removed old approval metadata and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `44` and added an N2 lesson-18 sentinel for `遠` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, no false approval/draft tags remain in lesson 18, coverage audit reduced N2 incomplete current entries from `64` to `56`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
+- Built/deployed `1dc4252f` to Firebase Hosting. Live proof in VI/N2 `/#/kanji`: filtering `遠` showed the updated card, and opening it showed `Viễn (viễn; xa; xa xôi; cách xa)`, Hán-Việt `Viễn`, on `エン, オン`, kun `とお.い`, stroke count `13`; console warnings/errors `0`.

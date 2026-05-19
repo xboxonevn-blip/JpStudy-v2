@@ -934,3 +934,13 @@
 - Verified locally: focused Foundations/Mistakes/JLPT/Home suites passed, English plural-risk guard passed, UI string literal guard reported `0`, `flutter analyze lib test` clean, and full `flutter test` passed with `2351`.
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live proof: fresh VI/N5 Foundations opened Hiragana, opened the `あ` sheet, verified `3 nét`, verified no self-attestation CTA, opened `Luyện bảng chữ`, and reached the live quiz with `1/10` counter. `main.dart.js` returned `Cache-Control: no-cache` and had no stale `Tôi đã thuộc`, `I know this`, `D1 `/`D3 `/`D7 `, `66 yoon`, or `32 rules` strings. Unexpected console warnings/errors and unexpected HTTP 4xx/5xx were `0`; known headless App Check 403/throttle noise remained.
+
+## 2026-05-20 QA-C-001 Conjugation Phase 0
+
+- Wrote `docs/research/conjugation-feature-design-2026-05-19.md` for the owner-requested conjugation feature.
+- Phase 0 covers JMdict POS/source policy, app/schema/SRS audit, IA/routes, content/user data models, pure Dart engine plan, form coverage, drill model, Grammar/Vocab/Kanji cross-links, and implementation/live-proof gates.
+- Directive D code audit found a connected defect: Vocab detail currently uses suffix-guessed `_conjugationLines` and a generic `ます grammar` action. Logged it as QA-C-002; implementation must replace it with JMdict POS-backed forms and scoped practice.
+- Verified doc batch: `git diff --check`, no placeholder strings in the new design doc, and no app/assets/test diff added `vi-human-approved`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live smoke: `https://jpstudy.web.app/?codexFresh=conj-phase0-20260520#/` booted, main nav rendered, `main.dart.js` returned `Cache-Control: no-cache`, and screenshot saved as `output/playwright/live-conjugation-phase0-home-smoke.png`. Console had one known report-only Google frame-ancestor message from the App Check/reCAPTCHA path, not a Flutter app exception.
+- No `vi-human-approved` tag was added.

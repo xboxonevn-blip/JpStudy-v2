@@ -627,3 +627,11 @@
 - Bumped content DB Kanji seed revision to `50` and added an N2 lesson-24 sentinel for `母` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `16` to `8`, focused DB/reachability/taxonomy/upper-JLPT tests passed, and release web build passed.
 - Built/deployed `af3776a4` to Firebase Hosting. Live proof: VI/N2 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_24.json` returned `Cache-Control: no-cache`, and `母` showed `Mẫu (mẹ; mẫu thân; bậc nữ lớn tuổi)`, Hán-Việt `Mẫu`, on `ボ`, kun `はは/も`, stroke count `5`; console warnings/errors `0`.
+
+## 2026-05-19 N2 Kanji Lesson 25 Completeness Patch
+
+- Source-verified all eight N2 lesson-25 kanji (`恩`, `恵`, `温`, `室`, `泉`, `帯`, `中`, `人`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including correcting `恩`/`恵` away from whole-word grace fallback, `温`/`室` away from whole-word greenhouse fallback, `泉` away from onsen fallback, `帯` away from temperate-zone fallback, `中` away from formal-address suffix fallback, and `人` away from whole-word woman fallback; removed old approval metadata and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `51` and added an N2 lesson-25 sentinel for `恩` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `8` to `0`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
+- Built/deployed `3448965e` to Firebase Hosting. Live proof: VI/N2 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_25.json` returned `Cache-Control: no-cache`, and `恩` showed `Ân (ơn nghĩa; lòng tốt; ân huệ)`, Hán-Việt `Ân`, on `オン`, stroke count `10`; console warnings/errors `0`.

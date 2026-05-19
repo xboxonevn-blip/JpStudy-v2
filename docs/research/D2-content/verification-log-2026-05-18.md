@@ -1188,3 +1188,30 @@ Runtime note: bumped content DB Kanji seed revision from `49` to `50` and added 
 Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `16` to `8`, focused DB/reachability/taxonomy/upper-JLPT tests passed, release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `af3776a4` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_24.json` returned `Cache-Control: no-cache`; `母` showed `Mẫu (mẹ; mẫu thân; bậc nữ lớn tuổi)`, Hán-Việt `Mẫu`, on `ボ`, kun `はは/も`, stroke count `5`, and example `伯母さん` = `cô; dì; bác gái`. Current-tab console warnings/errors: `0`.
+
+## Kanji N2 Lesson 25 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `恵` and `帯` have no Unihan `kVietnamese`, so the learner-facing Hán-Việt values keep established readings.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `恩恵`, `温室`, `温泉`, `温帯`, `御中`, and `女の人`, used only to choose examples and verify learner-facing glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `恩` | KANJIDIC2 reading `オン`, meanings `grace`, `kindness`, `favor`; Unihan `kVietnamese=ân`; local context `恩恵` | Corrected the row away from whole-word grace/favor fallback to `Ân (ơn nghĩa; lòng tốt; ân huệ)`, added readings/search text, direct example `恩恵`, and grace/kindness related kanji. |
+| `恵` | KANJIDIC2 readings `ケイ/エ`, `めぐ.む/めぐ.み`, meanings `favor`, `blessing`, `kindness`; no Unihan `kVietnamese`; local context `恩恵` | Rewrote to `Huệ (ban ơn; ân huệ; phúc lành)`, added readings/search text, direct example `恩恵`, and blessing related kanji. |
+| `温` | KANJIDIC2 reading `オン`, warm kunyomi, meaning `warm`; Unihan `kVietnamese=ồn`, but learner-facing Sino-Vietnamese is `Ôn`; local contexts `温室`, `温泉`, `温帯` | Corrected the row away from whole-word greenhouse fallback to `Ôn (ấm; làm ấm; ôn hòa)`, added readings/search text, direct example `温室`, and warmth-related kanji. |
+| `室` | KANJIDIC2 reading `シツ`, `むろ`, meanings `room`, `chamber`, `greenhouse`; Unihan `kVietnamese=thất`; local context `温室` | Corrected the row away from whole-word greenhouse fallback to `Thất (phòng; buồng; nhà kính)`, added readings/search text, direct example `温室`, and room/building related kanji. |
+| `泉` | KANJIDIC2 reading `セン`, `いずみ`, meanings `spring`, `fountain`; Unihan `kVietnamese=tuyền`; local context `温泉` | Corrected the row away from whole-word onsen fallback to `Tuyền (suối; nguồn nước; suối nóng)`, added readings/search text, direct example `温泉`, and water-source related kanji. |
+| `帯` | KANJIDIC2 reading `タイ`, `お.びる/おび`, meanings `belt`, `sash`, `zone`; no Unihan `kVietnamese`; local context `温帯` | Corrected the row away from whole-word temperate-zone fallback to `Đới (đai; dải; vùng/đới)`, added readings/search text, direct example `温帯`, and zone/climate related kanji. |
+| `中` | KANJIDIC2 reading `チュウ`, `なか/うち/あた.る`, meanings `middle`, `inside`, `center`; Unihan `kVietnamese=trung`; local context `御中` | Corrected the row away from whole-word address suffix fallback to `Trung (giữa; bên trong; trung tâm)`, added readings/search text, direct example `御中`, and inside/middle related kanji. |
+| `人` | KANJIDIC2 readings `ジン/ニン`, `ひと/-り/-と`, meaning `person`; Unihan `kVietnamese=nhân`; local context `女の人` | Corrected the row away from whole-word woman fallback to `Nhân (người; con người)`, added readings/search text, direct example `女の人`, and people-related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `50` to `51` and added an N2 lesson-25 sentinel for `恩` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `8` to `0`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `3448965e` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_25.json` returned `Cache-Control: no-cache` and `importStatus=source-verified`; `恩` showed `Ân (ơn nghĩa; lòng tốt; ân huệ)`, Hán-Việt `Ân`, on `オン`, stroke count `10`, and example `恩恵` = `ân huệ; lợi ích; phúc lành`. Current-tab console warnings/errors: `0`.

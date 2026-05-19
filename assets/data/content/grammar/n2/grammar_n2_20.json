@@ -11,12 +11,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -32,12 +34,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -45,20 +49,22 @@
     "lessonId": 20,
     "title": "～ままに",
     "titleEn": "Act according to; leave as is; unchanged",
-    "structure": "Verb-て + まま, い-Adjective + のまま, な-Adjective + なまま, Noun + のまま",
-    "structureEn": "Verb-て + まま, い-Adjective + のまま, な-Adjective + なまま, Noun + のまま",
-    "explanation": "Dùng để nói giữ nguyên trạng thái, làm theo đúng tình trạng/ý muốn đang có, hoặc để sự việc diễn ra tự nhiên không thay đổi. Cấu trúc: Verb-て + まま, い-Adjective + のまま, な-Adjective + なまま, Noun + のまま.",
-    "explanationEn": "The ～ままに grammar point is used to express leaving something in its current state or doing something exactly as is. It can also imply doing something naturally or without altering the circumstances. Depending on the part of speech, different particles are used: Verb-て + まま, い-Adjective + のまま, な-Adjective + なまま, Noun + のまま",
+    "structure": "Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに",
+    "structureEn": "Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに",
+    "explanation": "Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có. Có thể hiểu là “theo đúng”, “cứ như”, “để mặc theo”. Cấu trúc: V辞書形, V受身 hoặc danh từ + のままに.",
+    "explanationEn": "The ～ままに grammar point expresses doing something as directed by a state, will, order, or natural flow. It commonly follows a dictionary-form verb, a passive-form verb, or Noun + の.",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -66,20 +72,22 @@
     "lessonId": 20,
     "title": "～もかまわず",
     "titleEn": "Express indifference or disregard; without hesitating, without worrying about",
-    "structure": "Verb-dictionary form + もかまわず, Noun + もかまわず",
-    "structureEn": "Verb-dictionary form + もかまわず, Noun + もかまわず",
-    "explanation": "Dùng khi bất chấp hậu quả, ánh nhìn xung quanh hoặc điều kiện bên ngoài mà vẫn làm. Có thể hiểu là “không bận tâm đến”, “bất chấp”. Cấu trúc: Verb-dictionary form + もかまわず, Noun + もかまわず.",
-    "explanationEn": "The ～もかまわず grammar point is used to express indifference or disregard toward possible consequences or external factors. It can be translated as without hesitating, without worrying about, or regardless of. It attaches to verbs in their dictionary form or nouns",
+    "structure": "Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず",
+    "structureEn": "Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず",
+    "explanation": "Dùng khi bất chấp hậu quả, ánh nhìn xung quanh hoặc điều kiện bên ngoài mà vẫn làm. Có thể hiểu là “không bận tâm đến”, “bất chấp”. Cấu trúc thường gặp: danh từ hoặc V辞書形 + もかまわず; cũng có dạng danh từ hóa V普通形 + のもかまわず.",
+    "explanationEn": "The ～もかまわず grammar point is used to express indifference or disregard toward possible consequences or external factors. It commonly follows a noun or dictionary-form verb, and can also follow a nominalized plain-form verb with の.",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -95,12 +103,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -116,12 +126,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -137,12 +149,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   }

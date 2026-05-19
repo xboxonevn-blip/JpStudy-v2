@@ -15,7 +15,7 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 70;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
-const _grammarSeedRevision = 14;
+const _grammarSeedRevision = 15;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(

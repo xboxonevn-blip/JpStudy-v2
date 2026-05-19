@@ -1,5 +1,15 @@
 ﻿# Agent Notes
 
+## Free web / cost-control reference
+
+Before changing hosting, Firebase usage, cloud sync, bundled content, or
+external content sources, read `docs/free-web-stack-reference.md`.
+
+## JLPT exam / audio source reference
+
+Before changing JLPT mock exams, listening/audio, scoring, answer sheets, or
+exam-source imports, read `docs/jlpt-exam-source-reference.md`.
+
 ## Test account
 
 Use this Firebase Auth account only for manual QA/test login flows:

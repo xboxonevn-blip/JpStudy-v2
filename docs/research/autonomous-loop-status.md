@@ -816,3 +816,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `14`.
 - Verified under Directive C: JSON/tag check `38/38`, focused suite `62/62`, `flutter analyze lib test` clean, UI string guard `0`, content status machine/open-review `0`, release build pass, deploy pass. Full `flutter test` deferred until N2 grammar level completion or non-trivial Dart logic.
 - Live proof: existing production browser, normal cache. A normal reload upgraded `flutter.grammar_data_version_N2` to `14`; searching/opening `ながら` rendered the corrected structure and explanation. Console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N2 Lessons 16-20 Batch
+
+- Source-verified 38 N2 grammar points in lessons 16-20; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected formations/explanations for `にともなって`, `にほかならない`, `により`, `に決まっている`, `に関わって`, `に際して`, `の下で`, `ばかりだ`, `ば～というものでもない`, `ままに`, and `もかまわず`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `15`.
+- Verified under Directive C: JSON/source-tag check `38/38`, focused suite `50/50`, `flutter analyze lib test` clean, literal-route guard clean, content status machine/open-review `0`, release build pass, deploy pass. Full `flutter test` deferred until N2 grammar level completion or non-trivial Dart logic.
+- Live proof: existing production browser, normal cache. The real N2 Grammar UI rendered the corrected `Verb-dictionary form + ばかりだ` list row and detail `KẾT NỐI`, including `Cấu trúc: V辞書形 + ばかりだ.` `main.dart.js`, `grammar_n2_19.json`, and `grammar_n2_20.json` returned `Cache-Control: no-cache`; console warnings/errors `0`.

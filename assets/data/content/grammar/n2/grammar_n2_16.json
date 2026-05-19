@@ -3,20 +3,22 @@
     "lessonId": 16,
     "title": "～にともなって",
     "titleEn": "Expresses along with or as a result of; indicates that one event occurs along with another",
-    "structure": "Noun (event) + にともなって, Verb-casual + にともなって",
-    "structureEn": "Noun (event) + にともなって, Verb-casual + にともなって",
-    "explanation": "Dùng khi một sự việc xảy ra cùng với sự thay đổi hoặc diễn biến khác, hoặc là hệ quả đi kèm của nó. Có thể hiểu là “cùng với”, “theo đó”, “kéo theo”. Cấu trúc: Noun (event) + にともなって, Verb-casual + にともなって.",
+    "structure": "Noun + にともなって / Verb-dictionary form + にともなって",
+    "structureEn": "Noun + にともなって / Verb-dictionary form + にともなって",
+    "explanation": "Dùng khi một sự việc xảy ra cùng với sự thay đổi hoặc diễn biến khác, hoặc là hệ quả đi kèm của nó. Có thể hiểu là “cùng với”, “theo đó”, “kéo theo”. Cấu trúc: danh từ hoặc V辞書形 + にともなって.",
     "explanationEn": "The ～にともなって grammar point is used to indicate that one event occurs along with another event, or as a result of another event. It can be translated as along with, as a result of, or in accordance with in English",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -24,20 +26,22 @@
     "lessonId": 16,
     "title": "～にほかならない",
     "titleEn": "Express that something is nothing but or none other than",
-    "structure": "Verb-plain + にほかならない, い-Adjective + にほかならない, な-Adjective + にほかならない, Noun + にほかならない",
-    "structureEn": "Verb-plain + にほかならない, い-Adjective + にほかならない, な-Adjective + にほかならない, Noun + にほかならない",
-    "explanation": "Dùng để nhấn mạnh rằng sự việc chính là điều được nêu, không gì khác. Sắc thái khẳng định mạnh: “chính là”, “không gì khác ngoài”. Cấu trúc: Verb-plain + にほかならない, い-Adjective + にほかならない, な-Adjective + にほかならない, Noun + にほかならない.",
-    "explanationEn": "The ～にほかならない grammar point is used to emphasize that something is no more or no less than what is specified. It can be seen as a strong way to say that something is nothing but or none other than",
+    "structure": "Noun + にほかならない",
+    "structureEn": "Noun + にほかならない",
+    "explanation": "Dùng để nhấn mạnh rằng sự việc chính là điều được nêu, không gì khác. Sắc thái khẳng định mạnh: “chính là”, “không gì khác ngoài”. Cấu trúc: danh từ + にほかならない; cũng hay gặp dạng “～からにほかならない” khi nêu nguyên nhân.",
+    "explanationEn": "The ～にほかならない grammar point is used with nouns to emphasize that something is no more or no less than what is specified. It can mean nothing but or none other than. It also commonly appears as ～からにほかならない when emphasizing a reason.",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -53,12 +57,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -66,20 +72,22 @@
     "lessonId": 16,
     "title": "～により",
     "titleEn": "Indicates the reason, method, or means by which something happens; by, through, due to",
-    "structure": "Noun + により, Verb + により",
-    "structureEn": "Noun + により, Verb + により",
-    "explanation": "Dùng trong văn trang trọng để nêu nguyên nhân, phương tiện, cách thức hoặc tác nhân khiến một việc xảy ra. Có thể hiểu là “do”, “bởi”, “thông qua”, “bằng”. Cấu trúc: Noun + により, Verb + により.",
-    "explanationEn": "The ～により grammar point is used to indicate the reason, method, or means by which something happens or is done. It can be often translated as by, through, or due to in English. It can be attached directly to nouns or verbs in plain form",
+    "structure": "Noun + により / Verb-dictionary form + ことにより",
+    "structureEn": "Noun + により / Verb-dictionary form + ことにより",
+    "explanation": "Dùng trong văn trang trọng để nêu nguyên nhân, phương tiện, cách thức hoặc tác nhân khiến một việc xảy ra. Có thể hiểu là “do”, “bởi”, “thông qua”, “bằng”. Cấu trúc: danh từ + により; khi đi với động từ thường danh từ hóa thành V辞書形 + ことにより.",
+    "explanationEn": "The ～により grammar point is used to indicate the reason, method, or means by which something happens or is done. It follows a noun; when a verb idea is used, it is normally nominalized as Verb-dictionary form + ことにより.",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -95,12 +103,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -116,12 +126,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -137,12 +149,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -158,12 +172,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   }

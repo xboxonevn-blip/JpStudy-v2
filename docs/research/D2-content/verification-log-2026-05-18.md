@@ -1834,3 +1834,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/tag check passed (`38` items, `0` missing `vi-source-verified`); focused DB/taxonomy/upper-JLPT/practice-bank tests passed (`62`); `flutter analyze lib test` clean; UI string guard `0`; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was intentionally skipped under Directive C because this batch does not complete the N2 grammar level and the Dart change was a revision bump only.
 
 Live proof after deploy: the existing production browser used normal cache. A normal reload upgraded `flutter.grammar_data_version_N2` from `13` to `14`. Searching `ながら` rendered `Verb-ます stem + ながら / い-Adjective + ながら / な-Adjective + ながら / Noun + ながら`; opening the detail screen rendered that same `KẾT NỐI` plus the Vietnamese explanation including the simultaneous-action and contrast uses. New console warnings/errors after the interaction: `0`.
+
+## Grammar N2 Lessons 16-20 Source-Verified Batch
+
+This batch covers all 38 grammar points in `grammar_n2_16.json` through `grammar_n2_20.json`. Sources consulted for the batch: local Hanabira grammar import JSON, AmgiDex JLPT N2 grammar list, AI Japanese Tutor JLPT N2 grammar list, MLC Japanese notes where the point appears, and targeted online formation checks for the corrected points. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N2-16 | `にともなって`, `にほかならない`, `にもかかわらず`, `により`, `にわたって`, `に先立ち`, `に反して`, `に基づいて` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `にともなって` to noun / V辞書形, `にほかならない` to noun + pattern with `からにほかならない` note, and `により` to noun / V辞書形 + `ことにより`. |
+| N2-17 | `に対して`, `に応えて`, `に応じて`, `に決まっている`, `に沿って`, `に過ぎない`, `に関わって` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `に決まっている` and narrowed `に関わって` to noun-based usage. |
+| N2-18 | `に限り`, `に際して`, `ねばならない`, `のみならず～も`, `のももっともだ`, `の上では`, `の下で`, `ばかりか〜も` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `に際して` to noun / V辞書形 and `の下で` to noun + `の下で`. |
+| N2-19 | `ばかりだ`, `ばかりに`, `ば～というものでもない`, `はともかく～は`, `はまだしも`, `はもとより`, `は抜きにして`, `べきではない` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `ばかりだ` to V辞書形 + `ばかりだ` for one-direction change and broadened `ば～というものでもない` to verb/adjective/noun conditionals. |
+| N2-20 | `まい`, `まで～て`, `ままに`, `もかまわず`, `ものか`, `ものがある`, `ものだ` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `ままに` to V辞書形 / V受身 / noun + `のままに`, and `もかまわず` to noun / V辞書形 / nominalized V普通形 + `もかまわず`. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `15` so existing browsers reseed the changed N2 grammar rows. No per-lesson sentinel was added; the shared revision bump is sufficient for this grammar batch.
+
+Verification: JSON parse/source-tag check passed (`38` items, `0` missing `vi-source-verified`); focused DB/grammar-seeder/manifest/taxonomy/upper-JLPT/practice-bank tests passed (`50`); `flutter analyze lib test` clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was intentionally skipped under Directive C because this batch does not complete the N2 grammar level and the Dart change was a revision bump only.
+
+Live proof after deploy: the existing production browser used normal cache. The rendered N2 Grammar UI loaded the grammar list, showed the corrected `Verb-dictionary form + ばかりだ` row, and opening it rendered `KẾT NỐI: Verb-dictionary form + ばかりだ` plus the explanation sentence containing `Cấu trúc: V辞書形 + ばかりだ.` Page-context/network proof showed `Cache-Control: no-cache` for `main.dart.js`, `grammar_n2_19.json`, and `grammar_n2_20.json`. New console warnings/errors after the interaction: `0`.

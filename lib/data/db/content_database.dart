@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 61;
+const _kanjiSeedRevision = 62;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -260,6 +260,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '油',
     meaning: 'Du (dầu; chất béo; sơn dầu)',
     decompositionContains: '"hanViet":"Du"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 11,
+    character: '予',
+    meaning: 'Dự (trước; dự tính; chuẩn bị)',
+    decompositionContains: '"hanViet":"Dự"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

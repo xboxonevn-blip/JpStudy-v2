@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 11,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 操, 誤, 歩, and 予 use learner-facing KANJIDIC2 or existing verified Hán-Việt readings where Unihan is absent or unsuitable.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k081",
@@ -18,47 +18,60 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Địa",
-        "meaningVi": "đất; mặt đất; vùng",
-        "meaningViDisplay": "地 (đất; mặt đất; vùng)",
-        "meaningEn": "earth; soil, ground; region"
+        "meaningVi": "đất; mặt đất; vùng đất",
+        "meaningViDisplay": "Địa (đất; mặt đất; vùng đất)",
+        "meaningEn": "ground; earth"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "あめつち"
-        ]
+        "onyomi": [
+          "チ",
+          "ジ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji 地 nghĩa là đất; mặt đất; vùng. Ví dụ JLPT N1: 天地 (heaven and earth, the universe, nature, top and bottom, realm, sphere, world).",
-        "en": "Kanji 地 means earth; soil, ground; region. JLPT N1 example: 天地 (heaven and earth, the universe, nature, top and bottom, realm, sphere, world)."
+        "vi": "地 là đất hoặc mặt đất; 天地 ghép trời với đất để chỉ trời đất, vũ trụ.",
+        "en": "地 means ground or earth; 天地 combines heaven and earth for the whole world."
       },
       "decomposition": {
         "hanViet": "Địa",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "土",
+          "也"
+        ],
+        "componentNames": [
+          "đất",
+          "cũng/vậy"
+        ],
+        "relatedKanji": [
+          "天",
+          "土",
+          "場",
+          "域"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đia",
-        "meaningViNoAccent": "đat; mat đat; vung",
-        "meaningEnNoAccent": "earth; soil, ground; region"
+        "hanVietNoAccent": "Dia",
+        "meaningViNoAccent": "dat; mat dat; vung dat",
+        "meaningEnNoAccent": "ground; earth"
       },
       "examples": [
         {
           "word": "天地",
           "reading": "あめつち",
-          "meaning": "heaven and earth, the universe, nature, top and bottom, realm, sphere, world"
+          "meaning": "trời đất; vũ trụ; tự nhiên",
+          "meaningEn": "heaven and earth; the universe; nature"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k082",
@@ -68,45 +81,62 @@
       "strokeCount": 16,
       "labels": {
         "hanViet": "Thao",
-        "meaningVi": "điều khiển; thao tác",
-        "meaningViDisplay": "操 (điều khiển; thao tác)",
-        "meaningEn": "conduct, run, control, manage"
+        "meaningVi": "điều khiển; thao túng; vận hành",
+        "meaningViDisplay": "Thao (điều khiển; thao túng; vận hành)",
+        "meaningEn": "maneuver; manipulate; operate"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ",
+          "サン"
+        ],
         "kunyomi": [
-          "あやつる"
+          "みさお",
+          "あやつ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 操 nghĩa là điều khiển; thao tác. Ví dụ JLPT N1: 操る (điều khiển, thao tác, giật dây).",
-        "en": "Kanji 操 means conduct, run, control, manage. JLPT N1 example: 操る (điều khiển, thao tác, giật dây)."
+        "vi": "操 gắn với thao tác bằng tay; 操る là điều khiển hoặc thao túng một vật hay tình huống.",
+        "en": "操 is tied to handling or control; 操る means to operate or manipulate something."
       },
       "decomposition": {
         "hanViet": "Thao",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "扌",
+          "喿"
+        ],
+        "componentNames": [
+          "tay",
+          "ồn ào/nhóm cây"
+        ],
+        "relatedKanji": [
+          "作",
+          "制",
+          "縦",
+          "動"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thao",
-        "meaningViNoAccent": "đieu khien; thao tac",
-        "meaningEnNoAccent": "conduct, run, control, manage"
+        "meaningViNoAccent": "dieu khien; thao tung; van hanh",
+        "meaningEnNoAccent": "maneuver; manipulate; operate"
       },
       "examples": [
         {
           "word": "操る",
           "reading": "あやつる",
-          "meaning": "điều khiển, thao tác, giật dây"
+          "meaning": "điều khiển; thao túng; vận hành",
+          "meaningEn": "to manipulate; to operate"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,97 +148,132 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Nguy",
-        "meaningVi": "nguy hiểm; bấp bênh",
-        "meaningViDisplay": "危 (nguy hiểm; bấp bênh)",
-        "meaningEn": "dangerous, precarious; high; 12th lunar mansion, determinative star α Aquarii (Sadalmelik)"
+        "meaningVi": "nguy hiểm; bất an; đáng lo",
+        "meaningViDisplay": "Nguy (nguy hiểm; bất an; đáng lo)",
+        "meaningEn": "dangerous; fear; uneasy"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ"
+        ],
         "kunyomi": [
-          "あやぶむ"
+          "あぶ.ない",
+          "あや.うい",
+          "あや.ぶむ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 危 nghĩa là nguy hiểm; bấp bênh. Ví dụ JLPT N1: 危ぶむ (to fear, to have misgivings, to be doubtful, to mistrust).",
-        "en": "Kanji 危 means dangerous, precarious; high; 12th lunar mansion, determinative star α Aquarii (Sadalmelik). JLPT N1 example: 危ぶむ (to fear, to have misgivings, to be doubtful, to mistrust)."
+        "vi": "危 là nguy hiểm hoặc cảm giác bất an; 危ぶむ là lo ngại vì thấy rủi ro.",
+        "en": "危 means danger or uneasiness; 危ぶむ means to fear or have misgivings."
       },
       "decomposition": {
         "hanViet": "Nguy",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "⺈",
+          "厄"
+        ],
+        "componentNames": [
+          "người cúi",
+          "ách/nạn"
+        ],
+        "relatedKanji": [
+          "険",
+          "安",
+          "疑",
+          "恐"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nguy",
-        "meaningViNoAccent": "nguy hiem; bap benh",
-        "meaningEnNoAccent": "dangerous, precarious; high; 12th lunar mansion, determinative star α Aquarii (Sadalmelik)"
+        "meaningViNoAccent": "nguy hiem; bat an; dang lo",
+        "meaningEnNoAccent": "dangerous; fear; uneasy"
       },
       "examples": [
         {
           "word": "危ぶむ",
           "reading": "あやぶむ",
-          "meaning": "to fear, to have misgivings, to be doubtful, to mistrust"
+          "meaning": "lo ngại; nghi ngờ; không yên tâm",
+          "meaningEn": "to fear; to have misgivings"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k084",
       "lessonId": 11,
       "level": "N1",
       "character": "過",
-      "strokeCount": 11,
+      "strokeCount": 12,
       "labels": {
         "hanViet": "Quá",
-        "meaningVi": "đi qua; lỗi lầm; quá mức",
-        "meaningViDisplay": "過 (đi qua; lỗi lầm; quá mức)",
-        "meaningEn": "pass, pass through, go across"
+        "meaningVi": "vượt quá; đi qua; lỗi lầm",
+        "meaningViDisplay": "Quá (vượt quá; đi qua; lỗi lầm)",
+        "meaningEn": "overdo; exceed; go beyond; error"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ"
+        ],
         "kunyomi": [
-          "あやまち"
+          "す.ぎる",
+          "す.ごす",
+          "あやま.ち",
+          "あやま.つ",
+          "よぎ.る",
+          "よ.ぎる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 過 nghĩa là đi qua; lỗi lầm; quá mức. Ví dụ JLPT N1: 過ち (fault, error, indiscretion).",
-        "en": "Kanji 過 means pass, pass through, go across. JLPT N1 example: 過ち (fault, error, indiscretion)."
+        "vi": "過 là đi qua hoặc vượt quá giới hạn; 過ち là lỗi lầm khi đã đi sai hướng.",
+        "en": "過 means to pass or exceed; 過ち is an error after going the wrong way."
       },
       "decomposition": {
         "hanViet": "Quá",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "辶",
+          "咼"
+        ],
+        "componentNames": [
+          "đi/chuyển động",
+          "quai/lệch"
+        ],
+        "relatedKanji": [
+          "越",
+          "失",
+          "誤",
+          "通"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Qua",
-        "meaningViNoAccent": "đi qua; loi lam; qua muc",
-        "meaningEnNoAccent": "pass, pass through, go across"
+        "meaningViNoAccent": "vuot qua; di qua; loi lam",
+        "meaningEnNoAccent": "overdo; exceed; go beyond; error"
       },
       "examples": [
         {
           "word": "過ち",
           "reading": "あやまち",
-          "meaning": "fault, error, indiscretion"
+          "meaning": "lỗi lầm; sai sót; lỡ lầm",
+          "meaningEn": "fault; error; indiscretion"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k085",
@@ -218,45 +283,61 @@
       "strokeCount": 14,
       "labels": {
         "hanViet": "Ngộ",
-        "meaningVi": "sai; nhầm lẫn",
-        "meaningViDisplay": "誤 (sai; nhầm lẫn)",
-        "meaningEn": "err, make mistake; interfere"
+        "meaningVi": "sai; nhầm lẫn; mắc lỗi",
+        "meaningViDisplay": "Ngộ (sai; nhầm lẫn; mắc lỗi)",
+        "meaningEn": "mistake; err; do wrong; mislead"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゴ"
+        ],
         "kunyomi": [
-          "あやまる"
+          "あやま.る",
+          "-あやま.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 誤 nghĩa là sai; nhầm lẫn. Ví dụ JLPT N1: 誤る (nhầm lẫn, mắc lỗi).",
-        "en": "Kanji 誤 means err, make mistake; interfere. JLPT N1 example: 誤る (nhầm lẫn, mắc lỗi)."
+        "vi": "誤 có bộ ngôn 言, nên thường là nói/nghĩ sai hoặc gây nhầm lẫn.",
+        "en": "誤 includes the speech radical 言, so it often marks wrong words, mistakes, or misleading."
       },
       "decomposition": {
         "hanViet": "Ngộ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "言",
+          "呉"
+        ],
+        "componentNames": [
+          "lời nói",
+          "Ngô"
+        ],
+        "relatedKanji": [
+          "語",
+          "過",
+          "錯",
+          "正"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ngo",
-        "meaningViNoAccent": "sai; nham lan",
-        "meaningEnNoAccent": "err, make mistake; interfere"
+        "meaningViNoAccent": "sai; nham lan; mac loi",
+        "meaningEnNoAccent": "mistake; err; do wrong; mislead"
       },
       "examples": [
         {
           "word": "誤る",
           "reading": "あやまる",
-          "meaning": "nhầm lẫn, mắc lỗi"
+          "meaning": "mắc lỗi; phạm sai lầm; nhầm lẫn",
+          "meaningEn": "to make a mistake"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,45 +349,63 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Bộ",
-        "meaningVi": "bước; đi bộ",
-        "meaningViDisplay": "歩 (bước; đi bộ)",
-        "meaningEn": "step"
+        "meaningVi": "bước; đi bộ; tiến triển",
+        "meaningViDisplay": "Bộ (bước; đi bộ; tiến triển)",
+        "meaningEn": "walk; counter for steps"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ホ",
+          "ブ",
+          "フ"
+        ],
         "kunyomi": [
-          "あゆみ"
+          "ある.く",
+          "あゆ.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 歩 nghĩa là bước; đi bộ. Ví dụ JLPT N1: 歩み (bước đi, sự tiến triển).",
-        "en": "Kanji 歩 means step. JLPT N1 example: 歩み (bước đi, sự tiến triển)."
+        "vi": "歩 là bước đi; 歩み cũng có thể chỉ tiến trình từng bước.",
+        "en": "歩 means walking or steps; 歩み can also mean a step-by-step course of progress."
       },
       "decomposition": {
         "hanViet": "Bộ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "止",
+          "少"
+        ],
+        "componentNames": [
+          "dừng/chân",
+          "ít"
+        ],
+        "relatedKanji": [
+          "走",
+          "進",
+          "道",
+          "足"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bo",
-        "meaningViNoAccent": "buoc; đi bo",
-        "meaningEnNoAccent": "step"
+        "meaningViNoAccent": "buoc; di bo; tien trien",
+        "meaningEnNoAccent": "walk; counter for steps"
       },
       "examples": [
         {
           "word": "歩み",
           "reading": "あゆみ",
-          "meaning": "bước đi, sự tiến triển"
+          "meaning": "bước đi; tiến trình",
+          "meaningEn": "walking; progress"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -317,48 +416,62 @@
       "character": "予",
       "strokeCount": 4,
       "labels": {
-        "hanViet": "Nhừ",
-        "meaningVi": "trước; dự bị",
-        "meaningViDisplay": "予 (trước; dự bị)",
-        "meaningEn": "I, me; to give"
+        "hanViet": "Dự",
+        "meaningVi": "trước; dự tính; chuẩn bị",
+        "meaningViDisplay": "Dự (trước; dự tính; chuẩn bị)",
+        "meaningEn": "beforehand; previous"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヨ",
+          "シャ"
+        ],
         "kunyomi": [
-          "あらかじめ"
+          "あらかじ.め"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 予 nghĩa là trước; dự bị. Ví dụ JLPT N1: 予め (beforehand, in advance, previously).",
-        "en": "Kanji 予 means I, me; to give. JLPT N1 example: 予め (beforehand, in advance, previously)."
+        "vi": "予 trong bài học nên nhớ theo nhóm dự định/dự bị; 予め nghĩa là chuẩn bị hoặc biết từ trước.",
+        "en": "予 is useful in words about preparing beforehand; 予め means beforehand or in advance."
       },
       "decomposition": {
-        "hanViet": "Nhừ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Dự",
+        "structure": "single",
+        "components": [
+          "予"
+        ],
+        "componentNames": [
+          "dự/trước"
+        ],
+        "relatedKanji": [
+          "定",
+          "約",
+          "習",
+          "想"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Nhu",
-        "meaningViNoAccent": "truoc; du bi",
-        "meaningEnNoAccent": "I, me; to give"
+        "hanVietNoAccent": "Du",
+        "meaningViNoAccent": "truoc; du tinh; chuan bi",
+        "meaningEnNoAccent": "beforehand; previous"
       },
       "examples": [
         {
           "word": "予め",
           "reading": "あらかじめ",
-          "meaning": "beforehand, in advance, previously"
+          "meaning": "trước; từ trước; trước đó",
+          "meaningEn": "beforehand; in advance; previously"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k088",
@@ -368,52 +481,78 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Hoang",
-        "meaningVi": "hoang vu; làm hư hại",
-        "meaningViDisplay": "荒 (hoang vu; làm hư hại)",
-        "meaningEn": "wasteland, desert; uncultivated"
+        "meaningVi": "hoang vu; thô bạo; dữ dội",
+        "meaningViDisplay": "Hoang (hoang vu; thô bạo; dữ dội)",
+        "meaningEn": "laid waste; rough; rude; wild"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ"
+        ],
         "kunyomi": [
-          "あらす"
+          "あ.らす",
+          "あ.れる",
+          "あら.い",
+          "すさ.ぶ",
+          "すさ.む",
+          "あ.らし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 荒 nghĩa là hoang vu; làm hư hại. Ví dụ JLPT N1: 荒らす (to lay waste, to devastate, to damage, to invade, to break into).",
-        "en": "Kanji 荒 means wasteland, desert; uncultivated. JLPT N1 example: 荒らす (to lay waste, to devastate, to damage, to invade, to break into)."
+        "vi": "荒 là hoang vu hoặc dữ dội; 荒らす là làm nơi nào đó rối tung, hư hại.",
+        "en": "荒 means wild, rough, or laid waste; 荒らす means to devastate or mess up a place."
       },
       "decomposition": {
         "hanViet": "Hoang",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "艹",
+          "亡",
+          "川"
+        ],
+        "componentNames": [
+          "cỏ",
+          "mất/vong",
+          "dòng sông"
+        ],
+        "relatedKanji": [
+          "乱",
+          "暴",
+          "廃",
+          "草"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoang",
-        "meaningViNoAccent": "hoang vu; lam hu hai",
-        "meaningEnNoAccent": "wasteland, desert; uncultivated"
+        "meaningViNoAccent": "hoang vu; tho bao; du doi",
+        "meaningEnNoAccent": "laid waste; rough; rude; wild"
       },
       "examples": [
         {
           "word": "荒らす",
           "reading": "あらす",
-          "meaning": "to lay waste, to devastate, to damage, to invade, to break into"
+          "meaning": "tàn phá; làm hư hại; quấy phá",
+          "meaningEn": "to lay waste; to devastate; to damage"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing verified duplicate rows for 予, 危, 荒, 地, and 歩",
+    "Existing N1 vocabulary examples for 天地, 操る, 危ぶむ, 過ち, 誤る, 歩み, 予め, and 荒らす"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

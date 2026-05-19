@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 10,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 油, 絵, 炙, and 雨 use learner-facing KANJIDIC2 Hán-Việt readings where Unihan is absent or unsuitable.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k073",
@@ -17,48 +17,64 @@
       "character": "油",
       "strokeCount": 8,
       "labels": {
-        "hanViet": "Dầu",
-        "meaningVi": "dầu; mỡ",
-        "meaningViDisplay": "油 (dầu; mỡ)",
-        "meaningEn": "oil, fat, grease, lard; paints"
+        "hanViet": "Du",
+        "meaningVi": "dầu; chất béo; sơn dầu",
+        "meaningViDisplay": "Du (dầu; chất béo; sơn dầu)",
+        "meaningEn": "oil; fat"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ユ",
+          "ユウ"
+        ],
         "kunyomi": [
-          "あぶらえ"
+          "あぶら"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 油 nghĩa là dầu; mỡ. Ví dụ JLPT N1: 油絵 (oil painting).",
-        "en": "Kanji 油 means oil, fat, grease, lard; paints. JLPT N1 example: 油絵 (oil painting)."
+        "vi": "油 là dầu hoặc chất béo; trong 油絵, chữ này chỉ chất liệu sơn dầu.",
+        "en": "油 means oil or fat; in 油絵 it marks oil as the painting medium."
       },
       "decomposition": {
-        "hanViet": "Dầu",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Du",
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "由"
+        ],
+        "componentNames": [
+          "nước",
+          "do/bởi"
+        ],
+        "relatedKanji": [
+          "絵",
+          "脂",
+          "液",
+          "水"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Dau",
-        "meaningViNoAccent": "dau; mo",
-        "meaningEnNoAccent": "oil, fat, grease, lard; paints"
+        "hanVietNoAccent": "Du",
+        "meaningViNoAccent": "dau; chat beo; son dau",
+        "meaningEnNoAccent": "oil; fat"
       },
       "examples": [
         {
           "word": "油絵",
           "reading": "あぶらえ",
-          "meaning": "oil painting"
+          "meaning": "tranh sơn dầu",
+          "meaningEn": "oil painting"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k074",
@@ -68,45 +84,59 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Hội",
-        "meaningVi": "tranh; vẽ",
-        "meaningViDisplay": "絵 (tranh; vẽ)",
-        "meaningEn": "draw, sketch, paint"
+        "meaningVi": "tranh; hình vẽ; hội họa",
+        "meaningViDisplay": "Hội (tranh; hình vẽ; hội họa)",
+        "meaningEn": "picture; drawing; painting; sketch"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "あぶらえ"
-        ]
+        "onyomi": [
+          "カイ",
+          "エ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji 絵 nghĩa là tranh; vẽ. Ví dụ JLPT N1: 油絵 (tranh, tranh vẽ, tranh sơn dầu).",
-        "en": "Kanji 絵 means draw, sketch, paint. JLPT N1 example: 油絵 (tranh, tranh vẽ, tranh sơn dầu)."
+        "vi": "絵 là tranh hoặc hình vẽ; 油絵 là tranh vẽ bằng sơn dầu.",
+        "en": "絵 means a picture or painting; 油絵 is a painting made with oil colors."
       },
       "decomposition": {
         "hanViet": "Hội",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "糸",
+          "会"
+        ],
+        "componentNames": [
+          "sợi chỉ",
+          "hội"
+        ],
+        "relatedKanji": [
+          "画",
+          "図",
+          "色",
+          "油"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoi",
-        "meaningViNoAccent": "tranh; ve",
-        "meaningEnNoAccent": "draw, sketch, paint"
+        "meaningViNoAccent": "tranh; hinh ve; hoi hoa",
+        "meaningEnNoAccent": "picture; drawing; painting; sketch"
       },
       "examples": [
         {
           "word": "油絵",
           "reading": "あぶらえ",
-          "meaning": "tranh, tranh vẽ, tranh sơn dầu"
+          "meaning": "tranh sơn dầu",
+          "meaningEn": "oil painting"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,45 +148,61 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Chích",
-        "meaningVi": "nướng; hơ nóng",
-        "meaningViDisplay": "炙 (nướng; hơ nóng)",
-        "meaningEn": "roast, broil; toast; cauterize"
+        "meaningVi": "nướng; hơ lửa; làm cháy sém",
+        "meaningViDisplay": "Chích (nướng; hơ lửa; làm cháy sém)",
+        "meaningEn": "roast; broil; toast; cauterize"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シャ",
+          "セキ"
+        ],
         "kunyomi": [
-          "あぶる"
+          "あぶ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 炙 nghĩa là nướng; hơ nóng. Ví dụ JLPT N1: 炙る (nướng, hơ, làm cháy sém).",
-        "en": "Kanji 炙 means roast, broil; toast; cauterize. JLPT N1 example: 炙る (nướng, hơ, làm cháy sém)."
+        "vi": "炙 đặt thịt phía trên lửa; 炙る là hơ/nướng cho bề mặt cháy sém.",
+        "en": "炙 places meat over fire; 炙る means to roast or sear the surface."
       },
       "decomposition": {
         "hanViet": "Chích",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "肉",
+          "火"
+        ],
+        "componentNames": [
+          "thịt",
+          "lửa"
+        ],
+        "relatedKanji": [
+          "焼",
+          "火",
+          "肉",
+          "炒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chich",
-        "meaningViNoAccent": "nuong; ho nong",
-        "meaningEnNoAccent": "roast, broil; toast; cauterize"
+        "meaningViNoAccent": "nuong; ho lua; lam chay sem",
+        "meaningEnNoAccent": "roast; broil; toast; cauterize"
       },
       "examples": [
         {
           "word": "炙る",
           "reading": "あぶる",
-          "meaning": "nướng, hơ, làm cháy sém"
+          "meaning": "hơ lửa; nướng; làm cháy sém",
+          "meaningEn": "to roast; to sear"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,47 +214,62 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Cam",
-        "meaningVi": "ngọt; nuông chiều",
-        "meaningViDisplay": "甘 (ngọt; nuông chiều)",
-        "meaningEn": "sweetness; sweet, tasty"
+        "meaningVi": "ngọt; dễ dãi; nuông chiều",
+        "meaningViDisplay": "Cam (ngọt; dễ dãi; nuông chiều)",
+        "meaningEn": "sweet; pamper; indulgent"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カン"
+        ],
         "kunyomi": [
-          "あまえる"
+          "あま.い",
+          "あま.える",
+          "あま.やかす",
+          "うま.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 甘 nghĩa là ngọt; nuông chiều. Ví dụ JLPT N1: 甘える (to behave like a spoiled child, to fawn on).",
-        "en": "Kanji 甘 means sweetness; sweet, tasty. JLPT N1 example: 甘える (to behave like a spoiled child, to fawn on)."
+        "vi": "甘 là vị ngọt; 甘える mở rộng thành dựa dẫm hoặc nhõng nhẽo vì được chiều.",
+        "en": "甘 means sweet; 甘える extends to leaning on someone's indulgence."
       },
       "decomposition": {
         "hanViet": "Cam",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "甘"
+        ],
+        "componentNames": [
+          "ngọt"
+        ],
+        "relatedKanji": [
+          "味",
+          "糖",
+          "優",
+          "子"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cam",
-        "meaningViNoAccent": "ngot; nuong chieu",
-        "meaningEnNoAccent": "sweetness; sweet, tasty"
+        "meaningViNoAccent": "ngot; de dai; nuong chieu",
+        "meaningEnNoAccent": "sweet; pamper; indulgent"
       },
       "examples": [
         {
           "word": "甘える",
           "reading": "あまえる",
-          "meaning": "to behave like a spoiled child, to fawn on"
+          "meaning": "dựa dẫm; nhõng nhẽo; được chiều",
+          "meaningEn": "to behave like a spoiled child; to depend on"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k077",
@@ -219,44 +280,59 @@
       "labels": {
         "hanViet": "Vũ",
         "meaningVi": "mưa",
-        "meaningViDisplay": "雨 (mưa)",
-        "meaningEn": "rain; rainy; Kangxi radical 173"
+        "meaningViDisplay": "Vũ (mưa)",
+        "meaningEn": "rain"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ウ"
+        ],
         "kunyomi": [
-          "あまぐ"
+          "あめ",
+          "あま-",
+          "-さめ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 雨 nghĩa là mưa. Ví dụ JLPT N1: 雨具 (đồ đi mưa).",
-        "en": "Kanji 雨 means rain; rainy; Kangxi radical 173. JLPT N1 example: 雨具 (đồ đi mưa)."
+        "vi": "雨 là mưa; 雨具 là đồ dùng để che mưa.",
+        "en": "雨 means rain; 雨具 is gear used against rain."
       },
       "decomposition": {
         "hanViet": "Vũ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "雨"
+        ],
+        "componentNames": [
+          "mưa"
+        ],
+        "relatedKanji": [
+          "雲",
+          "雪",
+          "風",
+          "具"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vu",
         "meaningViNoAccent": "mua",
-        "meaningEnNoAccent": "rain; rainy; Kangxi radical 173"
+        "meaningEnNoAccent": "rain"
       },
       "examples": [
         {
           "word": "雨具",
           "reading": "あまぐ",
-          "meaning": "đồ đi mưa"
+          "meaning": "đồ đi mưa",
+          "meaningEn": "rain gear"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,47 +344,62 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Cụ",
-        "meaningVi": "dụng cụ; chuẩn bị",
-        "meaningViDisplay": "具 (dụng cụ; chuẩn bị)",
-        "meaningEn": "tool, implement; draw up, write"
+        "meaningVi": "dụng cụ; thành phần; phương tiện",
+        "meaningViDisplay": "Cụ (dụng cụ; thành phần; phương tiện)",
+        "meaningEn": "tool; utensil; means; ingredients"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "グ"
+        ],
         "kunyomi": [
-          "あまぐ"
+          "そな.える",
+          "つぶさ.に"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 具 nghĩa là dụng cụ; chuẩn bị. Ví dụ JLPT N1: 雨具 (rain gear).",
-        "en": "Kanji 具 means tool, implement; draw up, write. JLPT N1 example: 雨具 (rain gear)."
+        "vi": "具 là dụng cụ hoặc thành phần; trong 雨具, chữ này chỉ đồ dùng để đi mưa.",
+        "en": "具 means tool or equipment; in 雨具 it marks rain gear."
       },
       "decomposition": {
         "hanViet": "Cụ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "目",
+          "八"
+        ],
+        "componentNames": [
+          "mắt",
+          "bát"
+        ],
+        "relatedKanji": [
+          "道",
+          "器",
+          "用",
+          "雨"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cu",
-        "meaningViNoAccent": "dung cu; chuan bi",
-        "meaningEnNoAccent": "tool, implement; draw up, write"
+        "meaningViNoAccent": "dung cu; thanh phan; phuong tien",
+        "meaningEnNoAccent": "tool; utensil; means; ingredients"
       },
       "examples": [
         {
           "word": "雨具",
           "reading": "あまぐ",
-          "meaning": "rain gear"
+          "meaning": "đồ đi mưa",
+          "meaningEn": "rain gear"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k079",
@@ -318,47 +409,61 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Thiên",
-        "meaningVi": "trời; thiên đường",
-        "meaningViDisplay": "天 (trời; thiên đường)",
-        "meaningEn": "sky, heaven; god, celestial"
+        "meaningVi": "trời; bầu trời; thiên/hoàng gia",
+        "meaningViDisplay": "Thiên (trời; bầu trời; thiên/hoàng gia)",
+        "meaningEn": "heavens; sky; imperial"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "テン"
+        ],
         "kunyomi": [
-          "あまつ"
+          "あまつ",
+          "あめ",
+          "あま-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 天 nghĩa là trời; thiên đường. Ví dụ JLPT N1: 天 (heavenly, imperial).",
-        "en": "Kanji 天 means sky, heaven; god, celestial. JLPT N1 example: 天 (heavenly, imperial)."
+        "vi": "天 là trời hoặc bầu trời; 天地 ghép thành trời đất, vũ trụ.",
+        "en": "天 means heaven or sky; 天地 combines it with earth for the whole world."
       },
       "decomposition": {
         "hanViet": "Thiên",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "天"
+        ],
+        "componentNames": [
+          "trời"
+        ],
+        "relatedKanji": [
+          "地",
+          "空",
+          "雨",
+          "日"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thien",
-        "meaningViNoAccent": "troi; thien đuong",
-        "meaningEnNoAccent": "sky, heaven; god, celestial"
+        "meaningViNoAccent": "troi; bau troi; thien/hoang gia",
+        "meaningEnNoAccent": "heavens; sky; imperial"
       },
       "examples": [
         {
-          "word": "天",
-          "reading": "あまつ",
-          "meaning": "heavenly, imperial"
+          "word": "天地",
+          "reading": "あめつち",
+          "meaning": "trời đất; vũ trụ; tự nhiên",
+          "meaningEn": "heaven and earth; the universe"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k080",
@@ -369,51 +474,69 @@
       "labels": {
         "hanViet": "Võng",
         "meaningVi": "lưới; mạng lưới",
-        "meaningViDisplay": "網 (lưới; mạng lưới)",
-        "meaningEn": "net, web; network"
+        "meaningViDisplay": "Võng (lưới; mạng lưới)",
+        "meaningEn": "netting; network"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "モウ"
+        ],
         "kunyomi": [
           "あみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 網 nghĩa là lưới; mạng lưới. Ví dụ JLPT N1: 網 (net, network).",
-        "en": "Kanji 網 means net, web; network. JLPT N1 example: 網 (net, network)."
+        "vi": "網 là lưới hoặc mạng lưới; từ này cũng dùng cho mạng/đường dây liên kết.",
+        "en": "網 means a net or network, including connected systems."
       },
       "decomposition": {
         "hanViet": "Võng",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "糸",
+          "岡"
+        ],
+        "componentNames": [
+          "sợi chỉ",
+          "cương"
+        ],
+        "relatedKanji": [
+          "綱",
+          "線",
+          "絡",
+          "漁"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vong",
         "meaningViNoAccent": "luoi; mang luoi",
-        "meaningEnNoAccent": "net, web; network"
+        "meaningEnNoAccent": "netting; network"
       },
       "examples": [
         {
           "word": "網",
           "reading": "あみ",
-          "meaning": "net, network"
+          "meaning": "lưới; mạng lưới",
+          "meaningEn": "net; network"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 and lower-level vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

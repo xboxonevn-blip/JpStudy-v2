@@ -252,7 +252,7 @@ void main() {
     expect(row.structure, 'Verb-dictionary form + ことなく');
     expect(row.explanation, contains('V辞書形 + ことなく'));
     expect(row.tags, contains('vi-source-verified'));
-    expect(revisionRow.data['value'], '24');
+    expect(revisionRow.data['value'], '25');
   });
 
   test(
@@ -275,7 +275,7 @@ void main() {
                 ..groupBy([levelCol]))
               .get();
 
-      expect(revisionRow.data['value'], '24');
+      expect(revisionRow.data['value'], '25');
       expect({
         for (final row in rows) row.read(levelCol),
       }, unorderedEquals(['N5']));

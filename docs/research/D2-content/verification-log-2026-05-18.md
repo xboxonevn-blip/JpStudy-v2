@@ -1458,3 +1458,30 @@ Runtime note: bumped content DB Kanji seed revision from `59` to `60` and added 
 Verification: the owner cache audit was rechecked first. Current `firebase.json` and live Hosting return `Cache-Control: no-cache` for `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `assets/AssetManifest*`, and `assets/assets/data/content/**`; `sqlite3.wasm` and `drift_worker.js` remain `public, max-age=2592000`. The hosting cache guard test passed. Coverage audit reduced N1 incomplete current entries from `136` to `128`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `e35ae6ac` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_09.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; `力` showed `Lực (sức mạnh; lực; năng lực)`, on `リョク/リキ/リイ`, kun `ちから`, and `vi-source-verified`. `main.dart.js` and `AssetManifest.json` returned `no-cache`, while `sqlite3.wasm` returned `public, max-age=2592000`. Console errors/warnings for the current live page: `0`.
+
+## Kanji N1 Lesson 10 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and Vietnamese readings where Unihan was absent or unsuitable.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `油` is normalized to learner-facing `Du` even though Unihan also lists the vernacular Vietnamese form `dầu`, and `絵`, `炙`, and `雨` rely on KANJIDIC2 Vietnamese readings.
+- Existing verified duplicate rows for `甘`, `雨`, `絵`, and `具`, plus N1 vocabulary context for `油絵`, `炙る`, `甘える`, `雨具`, `天地`, and `網`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `油` | KANJIDIC2 readings `ユ/ユウ`, `あぶら`; Unihan `kTotalStrokes=8`; local context `油絵` | Rewrote to `Du (dầu; chất béo; sơn dầu)`, replaced word-level `あぶらえ` as a kanji reading, and translated `油絵` as `tranh sơn dầu`. |
+| `絵` | KANJIDIC2 readings `カイ/エ`; existing verified N2 row; local context `油絵` | Rewrote to `Hội (tranh; hình vẽ; hội họa)`, kept source-backed on readings with no fake kun reading, and translated the shared `油絵` example. |
+| `炙` | KANJIDIC2 readings `シャ/セキ`, `あぶ.る`; local context `炙る` | Rewrote to `Chích (nướng; hơ lửa; làm cháy sém)`, added readings/components/related kanji, and translated `炙る` as `hơ lửa; nướng; làm cháy sém`. |
+| `甘` | KANJIDIC2 reading `カン`, `あま.い/あま.える/あま.やかす/うま.い`; existing verified N2 row | Aligned to `Cam (ngọt; dễ dãi; nuông chiều)`, replaced word-level `あまえる` as a kanji reading, and translated `甘える` naturally. |
+| `雨` | KANJIDIC2 reading `ウ`, `あめ/あま-/-さめ`; existing verified N2 row; local context `雨具` | Aligned to `Vũ (mưa)`, replaced word-level `あまぐ` as a kanji reading, and translated `雨具` as `đồ đi mưa`. |
+| `具` | KANJIDIC2 reading `グ`, `そな.える/つぶさ.に`; Unihan `kVietnamese=cụ`; existing verified N2 row | Rewrote to `Cụ (dụng cụ; thành phần; phương tiện)`, replaced word-level `あまぐ` as a kanji reading, and used `雨具` as the example. |
+| `天` | KANJIDIC2 reading `テン`, `あまつ/あめ/あま-`; Unihan `kVietnamese=thiên`; local context `天地` | Rewrote to `Thiên (trời; bầu trời; thiên/hoàng gia)`, replaced bare `天/あまつ` with clearer `天地/あめつち`, and added related sky/earth kanji. |
+| `網` | KANJIDIC2 reading `モウ`, `あみ`; Unihan `kVietnamese=võng`; local context `網` | Rewrote to `Võng (lưới; mạng lưới)`, added source-backed readings/components/related kanji, and translated the example as `lưới; mạng lưới`. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `60` to `61` and added an N1 lesson-10 sentinel for `油` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit reduced N1 incomplete current entries from `128` to `120`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `ac75b039` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_10.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; `油` showed `Du (dầu; chất béo; sơn dầu)`, on `ユ/ユウ`, kun `あぶら`, and `vi-source-verified`. `main.dart.js` and `AssetManifest.json` returned `no-cache`, while `sqlite3.wasm` returned `public, max-age=2592000`. Console errors/warnings for the current live page: `0`.

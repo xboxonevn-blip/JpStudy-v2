@@ -635,3 +635,11 @@
 - Bumped content DB Kanji seed revision to `51` and added an N2 lesson-25 sentinel for `恩` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `8` to `0`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
 - Built/deployed `3448965e` to Firebase Hosting. Live proof: VI/N2 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_25.json` returned `Cache-Control: no-cache`, and `恩` showed `Ân (ơn nghĩa; lòng tốt; ân huệ)`, Hán-Việt `Ân`, on `オン`, stroke count `10`; console warnings/errors `0`.
+
+## 2026-05-19 N1 Kanji Lesson 1 Completeness Patch
+
+- Source-verified all eight N1 lesson-1 kanji (`嗚`, `呼`, `相`, `変`, `愛`, `想`, `対`, `間`) against local KANJIDIC2, Unihan where available, and existing N1 vocabulary examples.
+- Rewrote/filled generated metadata, including removing old approval tags, adding source-backed readings and related kanji, fixing `変/愛/対` no-Unihan cases with established learner-facing Hán-Việt, and adding truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `52` and added an N1 lesson-1 sentinel for `嗚` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, coverage audit reduced N1 incomplete current entries from `200` to `192`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
+- Built/deployed `dbc11327` to Firebase Hosting. Live proof: VI/N1 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_01.json` returned `Cache-Control: no-cache`, and `嗚` showed `Ô (than khóc; tiếng kêu than; chao ôi)`, Hán-Việt `Ô`, on `ウ/オ`, kun `ああ`, stroke count `13`; console warnings/errors `0`.

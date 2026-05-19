@@ -1215,3 +1215,30 @@ Runtime note: bumped content DB Kanji seed revision from `50` to `51` and added 
 Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `8` to `0`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `3448965e` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_25.json` returned `Cache-Control: no-cache` and `importStatus=source-verified`; `恩` showed `Ân (ơn nghĩa; lòng tốt; ân huệ)`, Hán-Việt `Ân`, on `オン`, stroke count `10`, and example `恩恵` = `ân huệ; lợi ích; phúc lành`. Current-tab console warnings/errors: `0`.
+
+## Kanji N1 Lesson 1 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `変`, `愛`, and `対` have no Unihan `kVietnamese`, so learner-facing Hán-Việt keeps established readings.
+- Existing N1 ShinKanzen/Tanos and Hajimete vocabulary context for `嗚呼`, `相変わらず`, `愛想`, `相対`, and `間柄`, used only to choose examples and verify learner-facing glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `嗚` | KANJIDIC2 readings `ウ/オ`, `ああ`, meanings `weep`, `ah`, `alas`; Unihan `kVietnamese=ô`; local context `嗚呼` | Rewrote to `Ô (than khóc; tiếng kêu than; chao ôi)`, added readings/search text, direct example `嗚呼`, and exclamation/crying related kanji. |
+| `呼` | KANJIDIC2 reading `コ`, `よ.ぶ`, meanings `call`, `invite`; Unihan `kVietnamese=hô`; local context `嗚呼` | Rewrote to `Hô (gọi; hô lên; mời gọi)`, added readings/search text, direct example `嗚呼`, and calling related kanji. |
+| `相` | KANJIDIC2 readings `ソウ/ショウ`, `あい-`, meanings `mutual`, `together`, `aspect`; Unihan `kVietnamese=tương`; local contexts `相変わらず`, `相対` | Kept learner meaning but added source-backed readings, example glosses, and related kanji. |
+| `変` | KANJIDIC2 reading `ヘン`, change/strange meanings; no Unihan `kVietnamese`; local context `相変わらず` | Rewrote display to `Biến (thay đổi; biến đổi; khác thường)`, fixed no-accent search text, added readings, example gloss, and change-related kanji. |
+| `愛` | KANJIDIC2 reading `アイ`, love/affection meanings; no Unihan `kVietnamese`; local context `愛想` | Rewrote to `Ái (yêu; yêu mến; tình cảm)`, added readings/search text, direct example `愛想`, and affection related kanji. |
+| `想` | KANJIDIC2 readings `ソウ/ソ`, `おも.う`, meanings `idea`, `thought`; Unihan `kVietnamese=tưởng`; local context `愛想` | Rewrote to `Tưởng (ý nghĩ; tưởng tượng; suy tưởng)`, added readings/search text, direct example `愛想`, and thought related kanji. |
+| `対` | KANJIDIC2 readings `タイ/ツイ`, opposition/comparison meanings; no Unihan `kVietnamese`; local context `相対` | Rewrote to `Đối (đối nhau; đối diện; so sánh/chống lại)`, added readings/search text, direct example `相対`, and comparison/opposition related kanji. |
+| `間` | KANJIDIC2 readings `カン/ケン`, `あいだ/ま/あい`, meanings `interval`, `space`; Unihan `kVietnamese=gian`; local context `間柄` | Rewrote display to `Gian (khoảng giữa; không gian; quan hệ)`, added readings/search text, direct example `間柄`, and relation/interval related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `51` to `52` and added an N1 lesson-1 sentinel for `嗚` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit reduced N1 incomplete current entries from `200` to `192`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `dbc11327` was deployed to Firebase Hosting, a VI/N1 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n1/lesson_01.json` returned `Cache-Control: no-cache` and `importStatus=source-verified`; `嗚` showed `Ô (than khóc; tiếng kêu than; chao ôi)`, Hán-Việt `Ô`, on `ウ/オ`, kun `ああ`, stroke count `13`, and example `嗚呼` = `ôi; chao ôi; than ôi`. Current-tab console warnings/errors: `0`.

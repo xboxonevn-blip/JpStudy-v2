@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 2,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 憎 has no Unihan kVietnamese value, and KANJIDIC2 Japanese stroke counts are used where they differ from Unihan.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k009",
@@ -18,37 +18,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Bính",
-        "meaningVi": "cán; tay cầm; tư cách",
-        "meaningViDisplay": "柄 (cán; tay cầm; tư cách)",
-        "meaningEn": "handle, lever, knob; authority"
+        "meaningVi": "hoa văn; tính chất; tay cầm",
+        "meaningViDisplay": "Bính (hoa văn; tính chất; tay cầm)",
+        "meaningEn": "pattern, nature, handle"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヘイ"
+        ],
         "kunyomi": [
-          "あいだがら"
+          "がら",
+          "え",
+          "つか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 柄 nghĩa là cán; tay cầm; tư cách. Ví dụ JLPT N1: 間柄 (relation(ship)).",
-        "en": "Kanji 柄 means handle, lever, knob; authority. JLPT N1 example: 間柄 (relation(ship))."
+        "vi": "柄 là tính chất, mẫu/hoa văn hoặc tay cầm; trong 間柄, nó chỉ sắc thái quan hệ giữa người với người.",
+        "en": "柄 means pattern, nature, or handle; in 間柄 it marks the character of a relationship."
       },
       "decomposition": {
         "hanViet": "Bính",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "間",
+          "関",
+          "係",
+          "格"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Binh",
-        "meaningViNoAccent": "can; tay cam; tu cach",
-        "meaningEnNoAccent": "handle, lever, knob; authority"
+        "meaningViNoAccent": "hoa van; tinh chat; tay cam",
+        "meaningEnNoAccent": "pattern, nature, handle"
       },
       "examples": [
         {
           "word": "間柄",
           "reading": "あいだがら",
-          "meaning": "relation(ship)"
+          "meaning": "mối quan hệ",
+          "meaningEn": "relationship"
         }
       ],
       "tags": [
@@ -56,49 +66,61 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k010",
       "lessonId": 2,
       "level": "N1",
       "character": "憎",
-      "strokeCount": 15,
+      "strokeCount": 14,
       "labels": {
         "hanViet": "Tăng",
         "meaningVi": "ghét; căm ghét; sự thù ghét",
-        "meaningViDisplay": "憎 (ghét; căm ghét; sự thù ghét)",
-        "meaningEn": "hate, detest, abhor; hatred"
+        "meaningViDisplay": "Tăng (ghét; căm ghét; sự thù ghét)",
+        "meaningEn": "hate, detest, hatred"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゾウ"
+        ],
         "kunyomi": [
-          "あいにく"
+          "にく.む",
+          "にく.い",
+          "にく.らしい",
+          "にく.しみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 憎 nghĩa là ghét; căm ghét; sự thù ghét. Ví dụ JLPT N1: 愛憎 (yêu ghét, thiện cảm và ác cảm).",
-        "en": "Kanji 憎 means hate, detest, abhor; hatred. JLPT N1 example: 愛憎 (yêu ghét, thiện cảm và ác cảm)."
+        "vi": "憎 là ghét hoặc căm ghét; 愛憎 ghép yêu và ghét thành cảm xúc yêu-ghét lẫn lộn.",
+        "en": "憎 means hate or detest; 愛憎 pairs love and hate as mixed feelings."
       },
       "decomposition": {
         "hanViet": "Tăng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "愛",
+          "嫌",
+          "恨",
+          "怒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tang",
         "meaningViNoAccent": "ghet; cam ghet; su thu ghet",
-        "meaningEnNoAccent": "hate, detest, abhor; hatred"
+        "meaningEnNoAccent": "hate, detest, hatred"
       },
       "examples": [
         {
           "word": "愛憎",
-          "reading": "あいにく",
-          "meaning": "yêu ghét, thiện cảm và ác cảm"
+          "reading": "あいぞう",
+          "meaning": "yêu ghét; thiện cảm và ác cảm",
+          "meaningEn": "love and hate, likes and dislikes"
         }
       ],
       "tags": [
@@ -106,7 +128,9 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,37 +142,55 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Hợp",
-        "meaningVi": "hợp; kết hợp; tham gia",
-        "meaningViDisplay": "合 (hợp; kết hợp; tham gia)",
-        "meaningEn": "combine, unite, join; gather"
+        "meaningVi": "hợp; kết hợp; khớp",
+        "meaningViDisplay": "Hợp (hợp; kết hợp; khớp)",
+        "meaningEn": "fit, join, combine"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゴウ",
+          "ガッ",
+          "カッ"
+        ],
         "kunyomi": [
-          "あいま"
+          "あ.う",
+          "-あ.う",
+          "あ.い",
+          "あい-",
+          "-あ.い",
+          "-あい",
+          "あ.わす",
+          "あ.わせる",
+          "-あ.わせる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 合 nghĩa là hợp; kết hợp; tham gia. Ví dụ JLPT N1: 合間 (interval).",
-        "en": "Kanji 合 means combine, unite, join; gather. JLPT N1 example: 合間 (interval)."
+        "vi": "合 là hợp lại hoặc khớp với nhau; 合間 là khoảng chen giữa hai việc.",
+        "en": "合 means to fit or join; 合間 is the interval fitted between activities."
       },
       "decomposition": {
         "hanViet": "Hợp",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "間",
+          "会",
+          "結",
+          "適"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hop",
-        "meaningViNoAccent": "hop; ket hop; tham gia",
-        "meaningEnNoAccent": "combine, unite, join; gather"
+        "meaningViNoAccent": "hop; ket hop; khop",
+        "meaningEnNoAccent": "fit, join, combine"
       },
       "examples": [
         {
           "word": "合間",
           "reading": "あいま",
-          "meaning": "interval"
+          "meaning": "khoảng nghỉ; khoảng giữa",
+          "meaningEn": "interval"
         }
       ],
       "tags": [
@@ -156,9 +198,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k012",
@@ -168,37 +211,45 @@
       "strokeCount": 17,
       "labels": {
         "hanViet": "Áy",
-        "meaningVi": "mờ; không rõ",
-        "meaningViDisplay": "曖 (mờ; không rõ)",
+        "meaningVi": "mờ tối; không rõ; mơ hồ",
+        "meaningViDisplay": "Áy (mờ tối; không rõ; mơ hồ)",
         "meaningEn": "obscure, dim, ambiguous, vague"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アイ"
+        ],
         "kunyomi": [
-          "あいまい"
+          "くら.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 曖 nghĩa là mờ; không rõ. Ví dụ JLPT N1: 曖昧 (vague, ambiguous).",
-        "en": "Kanji 曖 means obscure, dim, ambiguous, vague. JLPT N1 example: 曖昧 (vague, ambiguous)."
+        "vi": "曖 là mờ tối, không rõ; trong 曖昧, nó tạo sắc thái mơ hồ, lấp lửng.",
+        "en": "曖 means dim or unclear; in 曖昧 it forms the sense of vagueness or ambiguity."
       },
       "decomposition": {
         "hanViet": "Áy",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "昧",
+          "暗",
+          "不",
+          "明"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ay",
-        "meaningViNoAccent": "mo; khong ro",
+        "meaningViNoAccent": "mo toi; khong ro; mo ho",
         "meaningEnNoAccent": "obscure, dim, ambiguous, vague"
       },
       "examples": [
         {
           "word": "曖昧",
           "reading": "あいまい",
-          "meaning": "vague, ambiguous"
+          "meaning": "mơ hồ; lấp lửng; không rõ ràng",
+          "meaningEn": "vague, ambiguous"
         }
       ],
       "tags": [
@@ -206,9 +257,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k013",
@@ -218,37 +270,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Muội",
-        "meaningVi": "tối; mờ; không rõ",
-        "meaningViDisplay": "昧 (tối; mờ; không rõ)",
-        "meaningEn": "obscure, dark; darken"
+        "meaningVi": "mờ tối; ngu muội; không rõ",
+        "meaningViDisplay": "Muội (mờ tối; ngu muội; không rõ)",
+        "meaningEn": "dark, obscure, foolish"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "マイ",
+          "バイ"
+        ],
         "kunyomi": [
-          "あいまい"
+          "くら.い",
+          "むさぼ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 昧 nghĩa là tối; mờ; không rõ. Ví dụ JLPT N1: 曖昧 (vague, ambiguous).",
-        "en": "Kanji 昧 means obscure, dark; darken. JLPT N1 example: 曖昧 (vague, ambiguous)."
+        "vi": "昧 là tối, mờ hoặc thiếu sáng suốt; trong 曖昧, nó làm nghĩa “không rõ ràng” mạnh hơn.",
+        "en": "昧 means dark, obscure, or foolish; in 曖昧 it strengthens the sense of unclear ambiguity."
       },
       "decomposition": {
         "hanViet": "Muội",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "曖",
+          "暗",
+          "迷",
+          "愚"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Muoi",
-        "meaningViNoAccent": "toi; mo; khong ro",
-        "meaningEnNoAccent": "obscure, dark; darken"
+        "meaningViNoAccent": "mo toi; ngu muoi; khong ro",
+        "meaningEnNoAccent": "dark, obscure, foolish"
       },
       "examples": [
         {
           "word": "曖昧",
           "reading": "あいまい",
-          "meaning": "vague, ambiguous"
+          "meaning": "mơ hồ; lấp lửng; không rõ ràng",
+          "meaningEn": "vague, ambiguous"
         }
       ],
       "tags": [
@@ -256,49 +318,60 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k014",
       "lessonId": 2,
       "level": "N1",
       "character": "敢",
-      "strokeCount": 11,
+      "strokeCount": 12,
       "labels": {
         "hanViet": "Cám",
-        "meaningVi": "dám; can đảm",
-        "meaningViDisplay": "敢 (dám; can đảm)",
-        "meaningEn": "to dare, venture; bold, brave"
+        "meaningVi": "dám; can đảm; táo bạo",
+        "meaningViDisplay": "Cám (dám; can đảm; táo bạo)",
+        "meaningEn": "daring, brave, bold"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カン"
+        ],
         "kunyomi": [
-          "あえて"
+          "あ.えて",
+          "あ.えない",
+          "あ.えず"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 敢 nghĩa là dám; can đảm. Ví dụ JLPT N1: 敢えて (dare (to do), challenge (to do)).",
-        "en": "Kanji 敢 means to dare, venture; bold, brave. JLPT N1 example: 敢えて (dare (to do), challenge (to do))."
+        "vi": "敢 là dám làm hoặc táo bạo; 敢えて diễn tả việc cố ý/dám làm dù không dễ.",
+        "en": "敢 means daring or bold; 敢えて expresses daring or deliberately doing something despite difficulty."
       },
       "decomposition": {
         "hanViet": "Cám",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "勇",
+          "挑",
+          "果",
+          "決"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cam",
-        "meaningViNoAccent": "dam; can đam",
-        "meaningEnNoAccent": "to dare, venture; bold, brave"
+        "meaningViNoAccent": "dam; can dam; tao bao",
+        "meaningEnNoAccent": "daring, brave, bold"
       },
       "examples": [
         {
           "word": "敢えて",
           "reading": "あえて",
-          "meaning": "dare (to do), challenge (to do)"
+          "meaning": "dám; cố ý; cả gan",
+          "meaningEn": "dare to, venture to, deliberately"
         }
       ],
       "tags": [
@@ -306,9 +379,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k015",
@@ -319,36 +393,48 @@
       "labels": {
         "hanViet": "Ngưỡng",
         "meaningVi": "ngẩng nhìn; kính trọng; dựa vào",
-        "meaningViDisplay": "仰 (ngẩng nhìn; kính trọng; dựa vào)",
-        "meaningEn": "raise the head to look; look up to, rely on, admire"
+        "meaningViDisplay": "Ngưỡng (ngẩng nhìn; kính trọng; dựa vào)",
+        "meaningEn": "look up to, depend on, respect"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ギョウ",
+          "コウ"
+        ],
         "kunyomi": [
-          "あおぐ"
+          "あお.ぐ",
+          "おお.せ",
+          "お.っしゃる",
+          "おっしゃ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 仰 nghĩa là ngẩng nhìn; kính trọng; dựa vào. Ví dụ JLPT N1: 仰ぐ (to look up (to), to respect, to depend on, to ask for, to seek, to revere, to drink, to take).",
-        "en": "Kanji 仰 means raise the head to look; look up to, rely on, admire. JLPT N1 example: 仰ぐ (to look up (to), to respect, to depend on, to ask for, to seek, to revere, to drink, to take)."
+        "vi": "仰 là ngẩng nhìn, kính trọng hoặc nhờ cậy; 仰ぐ dùng cho việc ngước nhìn, tôn kính, hoặc trông cậy.",
+        "en": "仰 means looking up, respecting, or relying on; 仰ぐ covers looking up to someone or depending on them."
       },
       "decomposition": {
         "hanViet": "Ngưỡng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "尊",
+          "頼",
+          "敬",
+          "見"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nguong",
-        "meaningViNoAccent": "ngang nhin; kinh trong; dua vao",
-        "meaningEnNoAccent": "raise the head to look; look up to, rely on, admire"
+        "meaningViNoAccent": "nguoc nhin; kinh trong; dua vao",
+        "meaningEnNoAccent": "look up to, depend on, respect"
       },
       "examples": [
         {
           "word": "仰ぐ",
           "reading": "あおぐ",
-          "meaning": "to look up (to), to respect, to depend on, to ask for, to seek, to revere, to drink, to take"
+          "meaning": "ngước nhìn; kính trọng; trông cậy",
+          "meaningEn": "to look up to, respect, depend on"
         }
       ],
       "tags": [
@@ -356,9 +442,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k016",
@@ -368,37 +455,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Cáu",
-        "meaningVi": "bụi bẩn; vết bẩn",
-        "meaningViDisplay": "垢 (bụi bẩn; vết bẩn)",
-        "meaningEn": "dirt, filth, stains; dirty"
+        "meaningVi": "bụi bẩn; cáu bẩn; vết bẩn",
+        "meaningViDisplay": "Cáu (bụi bẩn; cáu bẩn; vết bẩn)",
+        "meaningEn": "dirt, grime, stain"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ",
+          "ク"
+        ],
         "kunyomi": [
-          "あか"
+          "あか",
+          "はじ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 垢 nghĩa là bụi bẩn; vết bẩn. Ví dụ JLPT N1: 垢 (dirt, filth).",
-        "en": "Kanji 垢 means dirt, filth, stains; dirty. JLPT N1 example: 垢 (dirt, filth)."
+        "vi": "垢 là cáu bẩn hoặc vết bẩn bám lại; từ 垢 dùng trực tiếp cho bụi bẩn/cáu bẩn.",
+        "en": "垢 means grime or dirt that clings; 垢 itself is used for dirt or filth."
       },
       "decomposition": {
         "hanViet": "Cáu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "汚",
+          "塵",
+          "清",
+          "洗"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cau",
-        "meaningViNoAccent": "bui ban; vet ban",
-        "meaningEnNoAccent": "dirt, filth, stains; dirty"
+        "meaningViNoAccent": "bui ban; cau ban; vet ban",
+        "meaningEnNoAccent": "dirt, grime, stain"
       },
       "examples": [
         {
           "word": "垢",
           "reading": "あか",
-          "meaning": "dirt, filth"
+          "meaning": "bụi bẩn; cáu bẩn",
+          "meaningEn": "dirt, filth"
         }
       ],
       "tags": [
@@ -406,14 +503,19 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

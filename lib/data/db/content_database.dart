@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 52;
+const _kanjiSeedRevision = 53;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -197,6 +197,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '嗚',
     meaning: 'Ô (than khóc; tiếng kêu than; chao ôi)',
     decompositionContains: '"hanViet":"Ô"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 2,
+    character: '柄',
+    meaning: 'Bính (hoa văn; tính chất; tay cầm)',
+    decompositionContains: '"hanViet":"Bính"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

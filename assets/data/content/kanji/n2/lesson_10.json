@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 10,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k073",
@@ -18,37 +18,48 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Định",
-        "meaningVi": "fixed, settled, definite",
-        "meaningViDisplay": "定 (fixed, settled, definite)",
-        "meaningEn": "fixed, settled, definite"
+        "meaningVi": "quyết định; cố định; ổn định",
+        "meaningViDisplay": "Định (quyết định; cố định; ổn định)",
+        "meaningEn": "determine, fix, establish, decide"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "テイ",
+          "ジョウ"
+        ],
         "kunyomi": [
-          "いってい"
+          "さだ.める",
+          "さだ.まる",
+          "さだ.か"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一定 (fixed, settled, definite).",
-        "en": "Appears in JLPT N2 vocabulary: 一定 (fixed, settled, definite)."
+        "vi": "定 là quyết định hoặc cố định một trạng thái; 一定 chỉ mức ổn định hoặc nhất định.",
+        "en": "定 means to determine or fix a state; 一定 describes something fixed, definite, or constant."
       },
       "decomposition": {
         "hanViet": "Định",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "決",
+          "安",
+          "確",
+          "約"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đinh",
-        "meaningViNoAccent": "fixed, settled, definite",
-        "meaningEnNoAccent": "fixed, settled, definite"
+        "hanVietNoAccent": "Dinh",
+        "meaningViNoAccent": "quyet dinh; co dinh; on dinh",
+        "meaningEnNoAccent": "determine, fix, establish, decide"
       },
       "examples": [
         {
           "word": "一定",
           "reading": "いってい",
-          "meaning": "fixed, settled, definite"
+          "meaning": "cố định; nhất định; ổn định",
+          "meaningEn": "fixed, definite, constant"
         }
       ],
       "tags": [
@@ -56,9 +67,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k074",
@@ -67,38 +79,47 @@
       "character": "移",
       "strokeCount": 11,
       "labels": {
-        "hanViet": "Dời",
-        "meaningVi": "moving, transfer, demise",
-        "meaningViDisplay": "移 (moving, transfer, demise)",
-        "meaningEn": "moving, transfer, demise"
+        "hanViet": "Di",
+        "meaningVi": "di chuyển; chuyển dời; thay đổi",
+        "meaningViDisplay": "Di (di chuyển; chuyển dời; thay đổi)",
+        "meaningEn": "move, shift, transfer, change"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いてん"
+          "うつ.る",
+          "うつ.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 移転 (moving, transfer, demise).",
-        "en": "Appears in JLPT N2 vocabulary: 移転 (moving, transfer, demise)."
+        "vi": "移 là di chuyển hoặc chuyển sang nơi/trạng thái khác; 移転 dùng cho việc chuyển địa điểm.",
+        "en": "移 means to move or shift to another place or state; 移転 is relocation or transfer."
       },
       "decomposition": {
-        "hanViet": "Dời",
+        "hanViet": "Di",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "動",
+          "転",
+          "変",
+          "引"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Doi",
-        "meaningViNoAccent": "moving, transfer, demise",
-        "meaningEnNoAccent": "moving, transfer, demise"
+        "hanVietNoAccent": "Di",
+        "meaningViNoAccent": "di chuyen; chuyen doi; thay doi",
+        "meaningEnNoAccent": "move, shift, transfer, change"
       },
       "examples": [
         {
           "word": "移転",
           "reading": "いてん",
-          "meaning": "moving, transfer, demise"
+          "meaning": "chuyển địa điểm; chuyển giao; chuyển đi",
+          "meaningEn": "relocation, transfer"
         }
       ],
       "tags": [
@@ -106,9 +127,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k075",
@@ -118,37 +140,52 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Chuyển",
-        "meaningVi": "moving, transfer, demise",
-        "meaningViDisplay": "転 (moving, transfer, demise)",
-        "meaningEn": "moving, transfer, demise"
+        "meaningVi": "xoay; chuyển đổi; chuyển chỗ",
+        "meaningViDisplay": "Chuyển (xoay; chuyển đổi; chuyển chỗ)",
+        "meaningEn": "turn, revolve, change, transfer"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "テン"
+        ],
         "kunyomi": [
-          "いてん"
+          "ころ.がる",
+          "ころ.げる",
+          "ころ.がす",
+          "ころ.ぶ",
+          "まろ.ぶ",
+          "うたた",
+          "うつ.る",
+          "くる.めく"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 移転 (moving, transfer, demise).",
-        "en": "Appears in JLPT N2 vocabulary: 移転 (moving, transfer, demise)."
+        "vi": "転 có trục nghĩa xoay, lăn rồi chuyển đổi; trong 移転, nó nhấn mạnh sự chuyển sang chỗ khác.",
+        "en": "転 centers on turning or rolling, then extends to change or transfer; in 移転 it marks relocation."
       },
       "decomposition": {
         "hanViet": "Chuyển",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "車",
+          "移",
+          "回",
+          "変"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chuyen",
-        "meaningViNoAccent": "moving, transfer, demise",
-        "meaningEnNoAccent": "moving, transfer, demise"
+        "meaningViNoAccent": "xoay; chuyen doi; chuyen cho",
+        "meaningEnNoAccent": "turn, revolve, change, transfer"
       },
       "examples": [
         {
           "word": "移転",
           "reading": "いてん",
-          "meaning": "moving, transfer, demise"
+          "meaning": "chuyển địa điểm; chuyển giao; chuyển đi",
+          "meaningEn": "relocation, transfer"
         }
       ],
       "tags": [
@@ -156,7 +193,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,37 +206,46 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Tỉnh",
-        "meaningVi": "water well",
-        "meaningViDisplay": "井 (water well)",
-        "meaningEn": "water well"
+        "meaningVi": "giếng; hầm; miệng giếng",
+        "meaningViDisplay": "Tỉnh (giếng; hầm; miệng giếng)",
+        "meaningEn": "well, mine shaft, pit"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いど"
+          "い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 井戸 (water well).",
-        "en": "Appears in JLPT N2 vocabulary: 井戸 (water well)."
+        "vi": "井 là giếng hoặc hố sâu; 井戸 là giếng nước quen thuộc trong đời sống.",
+        "en": "井 means a well or pit; 井戸 is the everyday word for a water well."
       },
       "decomposition": {
         "hanViet": "Tỉnh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "水",
+          "戸",
+          "泉",
+          "掘"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tinh",
-        "meaningViNoAccent": "water well",
-        "meaningEnNoAccent": "water well"
+        "meaningViNoAccent": "gieng; ham; mieng gieng",
+        "meaningEnNoAccent": "well, mine shaft, pit"
       },
       "examples": [
         {
           "word": "井戸",
           "reading": "いど",
-          "meaning": "water well"
+          "meaning": "giếng nước",
+          "meaningEn": "water well"
         }
       ],
       "tags": [
@@ -206,49 +253,59 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k077",
       "lessonId": 10,
       "level": "N2",
       "character": "緯",
-      "strokeCount": 15,
+      "strokeCount": 16,
       "labels": {
         "hanViet": "Vĩ",
-        "meaningVi": "latitude (nav.)",
-        "meaningViDisplay": "緯 (latitude (nav.))",
-        "meaningEn": "latitude (nav.)"
+        "meaningVi": "vĩ tuyến; sợi ngang; chiều ngang",
+        "meaningViDisplay": "Vĩ (vĩ tuyến; sợi ngang; chiều ngang)",
+        "meaningEn": "latitude, horizontal thread, woof"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いど"
+          "よこいと",
+          "ぬき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 緯度 (latitude (nav.)).",
-        "en": "Appears in JLPT N2 vocabulary: 緯度 (latitude (nav.))."
+        "vi": "緯 vốn là sợi ngang trong dệt vải, rồi mở rộng sang vĩ tuyến; 緯度 là vĩ độ.",
+        "en": "緯 is the horizontal thread in weaving and extends to latitude; 緯度 means latitude."
       },
       "decomposition": {
         "hanViet": "Vĩ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "経",
+          "度",
+          "線",
+          "地"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vi",
-        "meaningViNoAccent": "latitude (nav.)",
-        "meaningEnNoAccent": "latitude (nav.)"
+        "meaningViNoAccent": "vi tuyen; soi ngang; chieu ngang",
+        "meaningEnNoAccent": "latitude, horizontal thread, woof"
       },
       "examples": [
         {
           "word": "緯度",
           "reading": "いど",
-          "meaning": "latitude (nav.)"
+          "meaning": "vĩ độ",
+          "meaningEn": "latitude"
         }
       ],
       "tags": [
@@ -256,9 +313,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k078",
@@ -268,37 +326,48 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Độ",
-        "meaningVi": "latitude (nav.)",
-        "meaningViDisplay": "度 (latitude (nav.))",
-        "meaningEn": "latitude (nav.)"
+        "meaningVi": "mức độ; lần; đo lường",
+        "meaningViDisplay": "Độ (mức độ; lần; đo lường)",
+        "meaningEn": "degree, occurrence, time, measure"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ド",
+          "ト",
+          "タク"
+        ],
         "kunyomi": [
-          "いど"
+          "たび",
+          "-た.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 緯度 (latitude (nav.)).",
-        "en": "Appears in JLPT N2 vocabulary: 緯度 (latitude (nav.))."
+        "vi": "度 chỉ mức đo, độ hoặc một lần xảy ra; trong 緯度, nó là đơn vị đo vị trí địa lý.",
+        "en": "度 marks degree, measure, or occurrence; in 緯度 it is the measured coordinate."
       },
       "decomposition": {
         "hanViet": "Độ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "測",
+          "緯",
+          "温",
+          "量"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đo",
-        "meaningViNoAccent": "latitude (nav.)",
-        "meaningEnNoAccent": "latitude (nav.)"
+        "hanVietNoAccent": "Do",
+        "meaningViNoAccent": "muc do; lan; do luong",
+        "meaningEnNoAccent": "degree, occurrence, time, measure"
       },
       "examples": [
         {
           "word": "緯度",
           "reading": "いど",
-          "meaning": "latitude (nav.)"
+          "meaning": "vĩ độ",
+          "meaningEn": "latitude"
         }
       ],
       "tags": [
@@ -306,9 +375,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k079",
@@ -318,37 +388,49 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Tòng",
-        "meaningVi": "cousin (female)",
-        "meaningViDisplay": "従 (cousin (female))",
-        "meaningEn": "cousin (female)"
+        "meaningVi": "đi theo; tuân theo; phụ thuộc",
+        "meaningViDisplay": "Tòng (đi theo; tuân theo; phụ thuộc)",
+        "meaningEn": "follow, obey, accompany, subordinate"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジュウ",
+          "ショウ",
+          "ジュ"
+        ],
         "kunyomi": [
-          "いとこ"
+          "したが.う",
+          "したが.える",
+          "より"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 従姉妹 (cousin (female)).",
-        "en": "Appears in JLPT N2 vocabulary: 従姉妹 (cousin (female))."
+        "vi": "従 là đi theo hoặc tuân theo; trong 従姉妹, nó chỉ nhánh họ hàng phụ.",
+        "en": "従 means to follow or obey; in 従姉妹 it marks a collateral family relation."
       },
       "decomposition": {
         "hanViet": "Tòng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "順",
+          "伴",
+          "服",
+          "主"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tong",
-        "meaningViNoAccent": "cousin (female)",
-        "meaningEnNoAccent": "cousin (female)"
+        "meaningViNoAccent": "di theo; tuan theo; phu thuoc",
+        "meaningEnNoAccent": "follow, obey, accompany, subordinate"
       },
       "examples": [
         {
           "word": "従姉妹",
           "reading": "いとこ",
-          "meaning": "cousin (female)"
+          "meaning": "chị/em họ gái",
+          "meaningEn": "female cousin"
         }
       ],
       "tags": [
@@ -356,7 +438,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -367,38 +450,47 @@
       "character": "姉",
       "strokeCount": 7,
       "labels": {
-        "hanViet": "Chị",
-        "meaningVi": "cousin (female)",
-        "meaningViDisplay": "姉 (cousin (female))",
-        "meaningEn": "cousin (female)"
+        "hanViet": "Tỷ",
+        "meaningVi": "chị gái; người chị",
+        "meaningViDisplay": "Tỷ (chị gái; người chị)",
+        "meaningEn": "elder sister"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
-          "いとこ"
+          "あね",
+          "はは"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 従姉妹 (cousin (female)).",
-        "en": "Appears in JLPT N2 vocabulary: 従姉妹 (cousin (female))."
+        "vi": "姉 là chị gái; trong 従姉妹, chữ này góp nghĩa họ hàng nữ.",
+        "en": "姉 means elder sister; in 従姉妹 it contributes the female-relative sense."
       },
       "decomposition": {
-        "hanViet": "Chị",
+        "hanViet": "Tỷ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "妹",
+          "兄",
+          "弟",
+          "女"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Chi",
-        "meaningViNoAccent": "cousin (female)",
-        "meaningEnNoAccent": "cousin (female)"
+        "hanVietNoAccent": "Ty",
+        "meaningViNoAccent": "chi gai; nguoi chi",
+        "meaningEnNoAccent": "elder sister"
       },
       "examples": [
         {
           "word": "従姉妹",
           "reading": "いとこ",
-          "meaning": "cousin (female)"
+          "meaning": "chị/em họ gái",
+          "meaningEn": "female cousin"
         }
       ],
       "tags": [
@@ -406,14 +498,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, Vietnamese readings, stroke counts, and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

@@ -782,3 +782,28 @@ Runtime note: bumped content DB Kanji seed revision from `34` to `35` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `136` to `128`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed `54`, and full `flutter test` passed (`2340`).
 
 Live proof after deploy: after `cfe2184e` was deployed to Firebase Hosting, the first normal Playwright reload still used the cached old Flutter runtime and showed stale lesson-09 readings. With CDP HTTP cache disabled (no global `Cache-Control` request header), a cache-busted VI/N2 `/#/kanji` session loaded the revision-35 metadata, filtering `段` showed the N2 lesson-09 card with on `ダン, タン`, and opening it showed `Đoạn (bậc; đoạn; cấp độ)`, Hán-Việt `Đoạn`, on `ダン, タン`, stroke count `9`, and the rewritten Vietnamese mnemonic. Console warnings/errors after the interaction: `0`.
+
+## Kanji N2 Lesson 10 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `一定`, `移転`, `井戸`, `緯度`, and `従姉妹`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `定` | KANJIDIC2 readings `テイ/ジョウ`, `さだ.める/さだ.まる/さだ.か`, meanings `determine`, `fix`, `establish`, `decide`; Unihan `kVietnamese=định`, `kDefinition=decide, settle, fix`; local context `一定` | Rewrote display to `Định (quyết định; cố định; ổn định)`, added readings/search text, direct example `一定`, and decision/stability related kanji. |
+| `移` | KANJIDIC2 readings `イ`, `うつ.る/うつ.す`, Vietnamese `Di/Dị/Sỉ`; Unihan `kVietnamese=dời`, `kDefinition=change place, shift; move about`; local context `移転` | Corrected Hán-Việt from the meaning gloss `Dời` to learner-facing `Di`, rewrote display to `Di (di chuyển; chuyển dời; thay đổi)`, added readings/search text, direct example `移転`, and movement/change related kanji. |
+| `転` | KANJIDIC2 reading `テン`, movement/turning kunyomi, Vietnamese `Chuyển`; Unihan `kDefinition=shift, move, turn`; local context `移転` plus existing N5 `転` | Rewrote display to `Chuyển (xoay; chuyển đổi; chuyển chỗ)`, added readings/search text, direct example `移転`, and vehicle/turn/change related kanji. |
+| `井` | KANJIDIC2 readings `セイ/ショウ`, `い`, Vietnamese `Tỉnh`; Unihan `kVietnamese=tỉnh`, `kDefinition=well, mine shaft, pit`; local context `井戸` | Rewrote display to `Tỉnh (giếng; hầm; miệng giếng)`, added readings/search text, direct example `井戸`, and water/well related kanji. |
+| `緯` | KANJIDIC2 stroke count `16`, reading `イ`, `よこいと/ぬき`, Vietnamese `Vĩ`; Unihan `kVietnamese=vĩ`, `kDefinition=woof; parallels of latitude`; local context `緯度` | Corrected stroke count from `15` to `16`, rewrote display to `Vĩ (vĩ tuyến; sợi ngang; chiều ngang)`, added readings/search text, direct example `緯度`, and latitude/thread related kanji. |
+| `度` | KANJIDIC2 readings `ド/ト/タク`, `たび/-た.い`, Vietnamese `Độ/Đạc`; Unihan `kVietnamese=độ`, `kDefinition=degree, system; manner; to consider`; local context `緯度` | Corrected the row away from whole-word `latitude` fallback to `Độ (mức độ; lần; đo lường)`, added readings/search text, direct example `緯度`, and measure/degree related kanji. |
+| `従` | KANJIDIC2 readings `ジュウ/ショウ/ジュ`, `したが.う/したが.える/より`, Vietnamese `Tòng/Tùng/Tường`; Unihan `kDefinition=from, by, since, whence, through`; local context `従姉妹` | Corrected the row away from whole-word `female cousin` fallback to `Tòng (đi theo; tuân theo; phụ thuộc)`, added readings/search text, direct example `従姉妹`, and follow/subordinate related kanji. |
+| `姉` | KANJIDIC2 reading `シ`, `あね/はは`, Vietnamese `Tỉ/Tỷ/Chị`; Unihan `kVietnamese=chị`, `kDefinition=elder sister`; local lower-level source keeps learner-facing `Tỷ` | Corrected Hán-Việt display from plain `Chị` to `Tỷ`, rewrote display to `Tỷ (chị gái; người chị)`, added readings/search text, direct example `従姉妹`, and sibling/female related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `35` to `36` and added an N2 lesson-10 sentinel for `定` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `128` to `120`, focused DB/reachability/taxonomy/upper-JLPT tests passed after updating the upper-JLPT integrity guard to accept the newer `source-verified` import status, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`).

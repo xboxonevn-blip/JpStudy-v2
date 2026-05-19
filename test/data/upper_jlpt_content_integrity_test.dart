@@ -250,7 +250,10 @@ void main() {
         )) {
           final decoded =
               jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
-          expect(decoded['importStatus'], 'source-derived-unihan-approved');
+          expect(
+            decoded['importStatus'],
+            anyOf('source-derived-unihan-approved', 'source-verified'),
+          );
           final entries = decoded['entries'] as List<dynamic>;
           for (final rawEntry in entries) {
             final entry = rawEntry as Map<String, dynamic>;

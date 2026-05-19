@@ -1080,3 +1080,30 @@ Runtime note: bumped content DB Kanji seed revision from `45` to `46` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `48` to `40`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
 
 Live proof after deploy: after `1ed515fd` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `米` showed keyword results; opening `米` showed `Mễ (mễ; gạo; lúa gạo; Hoa Kỳ)`, Hán-Việt `Mễ`, on `ベイ, マイ, メエトル`, kun `こめ, よね`, stroke count `6`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 21 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `仮` and `怠` have no Unihan `kVietnamese`, so the learner-facing Hán-Việt values keep established local readings.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `補う`, `屋外`, `送り仮名`, `怠る`, `押える`, `納める`, and `治める`, used only to choose examples and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `補` | KANJIDIC2 reading `ホ`, `おぎな.う`, meanings `supplement`, `supply`, `compensate`; Unihan `kVietnamese=bổ`; local context `補う` | Corrected the row away from whole-word `to compensate for` fallback to `Bổ (bổ sung; bù đắp; hỗ trợ)`, added readings/search text, direct example `補う`, and supplement/supply related kanji. |
+| `屋` | KANJIDIC2 reading `オク`, `や`, meanings `roof`, `house`, `shop`; Unihan `kVietnamese=ốc`; local context `屋外` | Corrected the row away from whole-word `outdoors` fallback to `Ốc (nhà; cửa hàng; mái nhà)`, added readings/search text, direct example `屋外`, and house/outside related kanji. |
+| `送` | KANJIDIC2 reading `ソウ`, `おく.る`, meanings `escort`, `send`; Unihan `kVietnamese=tống`; local context `送り仮名` | Corrected the row away from whole-word okurigana fallback to `Tống (gửi đi; đưa tiễn; chuyển đi)`, added readings/search text, direct example `送り仮名`, and send/return/kana related kanji. |
+| `仮` | KANJIDIC2 readings `カ/ケ`, `かり/かり-`, meanings `sham`, `temporary`, `interim`, `informal`; Unihan has no `kVietnamese`; local context `送り仮名` | Rewrote display to `Giả (tạm; giả định; không chính thức)`, added readings/search text, direct example `送り仮名`, and kana-related neighbors. |
+| `怠` | KANJIDIC2 reading `タイ`, `おこた.る/なま.ける`, meanings `neglect`, `laziness`; Unihan has no `kVietnamese`; local context `怠る` | Corrected the row away from overlong English verb fallback to `Đãi (lơ là; sao nhãng; lười biếng)`, added readings/search text, direct example `怠る`, and attention/effort related kanji. |
+| `押` | KANJIDIC2 reading `オウ`, press/push kunyomi, meanings `push`, `stop`, `check`, `subdue`; Unihan `kVietnamese=áp`; local context `押える` | Corrected the row away from whole-word verb fallback to `Áp (ấn; đẩy; đè xuống; kìm giữ)`, added readings/search text, direct example `押える`, and hand/pressure related kanji. |
+| `納` | KANJIDIC2 readings `ノウ/ナッ/ナ/ナン/トウ`, `おさ.める/おさ.まる`, meanings `settlement`, `obtain`, `pay`, `supply`, `store`; Unihan `kVietnamese=nạp`; local context `納める` | Corrected the row away from whole-word verb fallback to `Nạp (nộp; thu nhận; cất giữ; chấp nhận)`, added readings/search text, direct example `納める`, and collect/tax/supply related kanji. |
+| `治` | KANJIDIC2 readings `ジ/チ`, govern/heal kunyomi, meanings `rule`, `cure`, `heal`, `calm down`; Unihan `kVietnamese=trị`; local context `治める` | Corrected the row away from whole-word govern verb fallback to `Trị (cai trị; chữa trị; ổn định)`, added readings/search text, direct example `治める`, and politics/treatment related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `46` to `47` and added an N2 lesson-21 sentinel for `補` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `40` to `32`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `3de785e8` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A no-store browser fetch of the deployed asset `/assets/assets/data/content/kanji/n2/lesson_21.json` returned `importStatus=source-verified`; `補` showed `Bổ (bổ sung; bù đắp; hỗ trợ)`, Hán-Việt `Bổ`, on `ホ`, kun `おぎな.う`, stroke count `12`, and example `補う` = `bù đắp; bổ sung`. Current-tab console warnings/errors: `0`.

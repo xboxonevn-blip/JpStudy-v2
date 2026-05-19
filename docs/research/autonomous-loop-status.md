@@ -588,3 +588,11 @@
 - Bumped content DB Kanji seed revision to `46` and added an N2 lesson-20 sentinel for `米` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, no false approval/draft tags remain in lesson 20, coverage audit reduced N2 incomplete current entries from `48` to `40`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
 - Built/deployed `1ed515fd` to Firebase Hosting. Live proof in VI/N2 `/#/kanji`: filtering `米` showed the updated card, and opening it showed `Mễ (mễ; gạo; lúa gạo; Hoa Kỳ)`, Hán-Việt `Mễ`, on `ベイ, マイ, メエトル`, kun `こめ, よね`, stroke count `6`; console warnings/errors `0`.
+
+## 2026-05-19 N2 Kanji Lesson 21 Completeness Patch
+
+- Source-verified all eight N2 lesson-21 kanji (`補`, `屋`, `送`, `仮`, `怠`, `押`, `納`, `治`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including correcting `補` away from whole-word `to compensate for`, `屋` away from `outdoors`, `送`/`仮` away from okurigana fallback, `怠` away from an overlong English verb gloss, and `押`/`納`/`治` away from whole-word verb fallbacks; removed old approval metadata and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `47` and added an N2 lesson-21 sentinel for `補` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `40` to `32`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
+- Built/deployed `3de785e8` to Firebase Hosting. Live proof in VI/N2 production browser: `/#/kanji` loaded without Kanji data failure; no-store fetch of deployed `lesson_21.json` showed `補` as `Bổ (bổ sung; bù đắp; hỗ trợ)`, Hán-Việt `Bổ`, on `ホ`, kun `おぎな.う`, stroke count `12`; console warnings/errors `0`.

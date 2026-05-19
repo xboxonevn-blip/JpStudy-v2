@@ -808,3 +808,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `13`.
 - Verified under Directive C: JSON/tag check `38/38`, focused suite `62/62`, `flutter analyze lib test` clean, UI string guard `0`, content status machine/open-review `0`, release build pass, deploy pass. Full `flutter test` intentionally deferred until N2 grammar level completion or next non-trivial Dart logic change.
 - Live proof: existing production browser, normal cache. `/#/grammar` at N2 upgraded `flutter.grammar_data_version_N2` to `13`; searching/opening `っこない` rendered `Verb-ます stem + っこない` and `Cấu trúc: Vます bỏ ます + っこない.` Console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N2 Lessons 11-15 Batch
+
+- Source-verified 38 N2 grammar points in lessons 11-15; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected formations/explanations for `っぽい`, `てかなわない`, `とおり`, `ないことはない`, `ないこともない`, `ながら`, `にあたり`, and `にしたがって`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `14`.
+- Verified under Directive C: JSON/tag check `38/38`, focused suite `62/62`, `flutter analyze lib test` clean, UI string guard `0`, content status machine/open-review `0`, release build pass, deploy pass. Full `flutter test` deferred until N2 grammar level completion or non-trivial Dart logic.
+- Live proof: existing production browser, normal cache. A normal reload upgraded `flutter.grammar_data_version_N2` to `14`; searching/opening `ながら` rendered the corrected structure and explanation. Console warnings/errors `0`.

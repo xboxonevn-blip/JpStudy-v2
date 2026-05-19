@@ -1816,3 +1816,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/tag check passed (`38` items, `0` missing `vi-source-verified`); focused DB/taxonomy/upper-JLPT/practice-bank tests passed (`62`); `flutter analyze lib test` clean; UI string guard `0`; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was intentionally skipped for this content/revision batch under Directive C because it was already run after the previous non-trivial grammar seeding logic change and this batch did not complete the full level.
 
 Live proof after deploy: the existing production browser used normal cache. Reloading `https://jpstudy.web.app/#/grammar` upgraded `flutter.grammar_data_version_N2` from `12` to `13`. Searching `っこない` rendered `Verb-ます stem + っこない`; opening the detail screen rendered `KẾT NỐI: Verb-ます stem + っこない` and the explanation sentence containing `Cấu trúc: Vます bỏ ます + っこない.` New console warnings/errors after the interaction: `0`.
+
+## Grammar N2 Lessons 11-15 Source-Verified Batch
+
+This batch covers all 38 grammar points in `grammar_n2_11.json` through `grammar_n2_15.json`. Sources consulted for the batch: local Hanabira grammar import JSON, AmgiDex JLPT N2 grammar list, AI Japanese Tutor JLPT N2 grammar list, MLC Japanese notes where the point appears, and targeted online formation checks for the corrected points. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N2-11 | `っぱなし`, `っぽい`, `ていられない`, `てかなわない`, `てならない`, `てしょうがない`, `てたまらない`, `ても始まらない` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `っぽい` to noun / Vます stem / adjective stem + `っぽい`, and `てかなわない` to Vて / いAdjくて / なAdjで + `かなわない`. |
+| N2-12 | `ても差し支えない`, `てもやむを得ない`, `ては`, `というか`, `というものだ`, `というものではない`, `というより` | Checked usage/formation and tagged each item `vi-source-verified`. |
+| N2-13 | `どうにか～ないものか`, `とおり`, `とか`, `ところ`, `どころか`, `どころではない`, `としたら`, `としても` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `とおり` to V辞書形/Vた形 + `とおり`, noun + `のとおり` / `どおり`. |
+| N2-14 | `とともに`, `とは限らない`, `ないことはない`, `ないこともない`, `ないではいられない`, `ながら`, `にあたり` | Checked usage/formation and tagged each item `vi-source-verified`; broadened the double-negative patterns to verb/adjective/noun negative forms, corrected `ながら` to simultaneous-action and contrast uses, and corrected `にあたり` to V辞書形 / noun + `にあたり`. |
+| N2-15 | `において`, `にかかわらず`, `にかけては`, `にしたがって`, `にしたら`, `にしろ`, `にすぎない`, `に相違ない` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `にしたがって` to V辞書形 / noun + `にしたがって`. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `14` so existing browsers reseed the changed N2 grammar rows. No per-lesson sentinel was added; the shared revision bump is sufficient for this grammar batch.
+
+Verification: JSON parse/tag check passed (`38` items, `0` missing `vi-source-verified`); focused DB/taxonomy/upper-JLPT/practice-bank tests passed (`62`); `flutter analyze lib test` clean; UI string guard `0`; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was intentionally skipped under Directive C because this batch does not complete the N2 grammar level and the Dart change was a revision bump only.
+
+Live proof after deploy: the existing production browser used normal cache. A normal reload upgraded `flutter.grammar_data_version_N2` from `13` to `14`. Searching `ながら` rendered `Verb-ます stem + ながら / い-Adjective + ながら / な-Adjective + ながら / Noun + ながら`; opening the detail screen rendered that same `KẾT NỐI` plus the Vietnamese explanation including the simultaneous-action and contrast uses. New console warnings/errors after the interaction: `0`.

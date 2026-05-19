@@ -11,12 +11,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -24,20 +26,22 @@
     "lessonId": 11,
     "title": "～っぽい",
     "titleEn": "Indicates that something has the appearance, characteristics, or behavior of something else",
-    "structure": "Noun + っぽい, Verb-casual + っぽい, い-Adjective + っぽい, な-Adjective + っぽい",
-    "structureEn": "Noun + っぽい, Verb-casual + っぽい, い-Adjective + っぽい, な-Adjective + っぽい",
-    "explanation": "Dùng để nói một người/vật có vẻ, đặc điểm hoặc cảm giác giống với điều được nêu. Có thể hiểu là “có vẻ...”, “hơi...”, “mang tính...”. Cấu trúc: Noun + っぽい, Verb-casual + っぽい, い-Adjective + っぽい, な-Adjective + っぽい.",
+    "structure": "Noun + っぽい, Verb-ます stem + っぽい, い-Adjective stem + っぽい, な-Adjective stem + っぽい",
+    "structureEn": "Noun + っぽい, Verb-ます stem + っぽい, い-Adjective stem + っぽい, な-Adjective stem + っぽい",
+    "explanation": "Dùng để nói một người/vật có vẻ, đặc điểm hoặc cảm giác giống với điều được nêu. Có thể hiểu là “có vẻ...”, “hơi...”, “mang tính...”. Cấu trúc: danh từ, thân Vます, gốc tính từ + っぽい.",
     "explanationEn": "The ～っぽい grammar point is used when something or someone appears to have characteristics, traits, or a vibe that resemble something else. It can mean looks like, seems like, or has the quality of",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -53,12 +57,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -66,20 +72,22 @@
     "lessonId": 11,
     "title": "～てかなわない",
     "titleEn": "Expresses that something cannot be endured, tolerated, or is unbearable",
-    "structure": "Adjective (〜く / 〜で) + て + かなわない / Verb phrase (reworded to an adjective/negative) + て + かなわない",
-    "structureEn": "Adjective (〜く / 〜で) + て + かなわない / Verb phrase (reworded to an adjective/negative) + て + かなわない",
-    "explanation": "Dùng để nói một cảm giác hoặc tình trạng mạnh đến mức khó chịu, không chịu nổi. Thường đi với tính từ như nóng, ồn, buồn ngủ. Cấu trúc: Adjective (〜く / 〜で) + て + かなわない / Verb phrase (reworded to an adjective/negative) + て + かなわない.",
-    "explanationEn": "The ～てかなわない grammar point is typically used with adjectives (or a rephrased verb) in 〜て form to show an unbearable situation or feeling. It means you can’t stand or can’t endure something. It often appears with expressions like 「暑くてかなわない」「うるさくてかなわない」 and so on",
+    "structure": "Verb-て form + かなわない / い-Adjectiveくて + かなわない / な-Adjectiveで + かなわない",
+    "structureEn": "Verb-て form + かなわない / い-Adjectiveくて + かなわない / な-Adjectiveで + かなわない",
+    "explanation": "Dùng để nói một cảm giác hoặc tình trạng mạnh đến mức khó chịu, không chịu nổi. Thường đi với tính từ như nóng, ồn, buồn ngủ. Cấu trúc: Vて, tính từ い đổi thành くて, hoặc tính từ な đổi thành で + かなわない.",
+    "explanationEn": "The ～てかなわない grammar point is used with verbs or adjectives in て form to show an unbearable situation or feeling. It means you cannot stand or endure something, as in 「暑くてかなわない」 or 「眠くてかなわない」.",
     "level": "N2",
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -95,12 +103,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -116,12 +126,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -137,12 +149,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   },
@@ -158,12 +172,14 @@
     "tags": [
       "source-hanabira",
       "n2-grammar-import",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ],
     "editorialSources": [
       "Hanabira grammar JSON (source import)",
-      "JLPT Vietnam / JLPT Sensei Vietnam (manual QA reference only)",
-      "JLPT Global / JLPT Sensei / Practice Japanese (manual QA reference only)"
+      "AmgiDex JLPT N2 grammar list (manual verification)",
+      "AI Japanese Tutor JLPT N2 grammar list (manual verification)",
+      "MLC Japanese grammar notes for applicable patterns (manual verification)"
     ],
     "explanationViStatus": "vi-editorial-codex-pass"
   }

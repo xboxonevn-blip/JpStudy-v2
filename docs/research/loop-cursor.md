@@ -11,7 +11,7 @@ Current policy:
 
 Current position:
 - QA-B-002 current N1 kanji lessons 01-25: source-verified, deployed, live-rendered; current-entry incomplete count `0`.
-- QA-B-001 grammar: N2 lessons 01-10 source-verified, deployed, live-rendered; AppDatabase grammar reseed revision is `13`.
-- Next batch: QA-B-001 grammar N2 lessons 11-15.
+- QA-B-001 grammar: N2 lessons 01-15 source-verified, deployed, live-rendered; AppDatabase grammar reseed revision is `14`.
+- Next batch: QA-B-001 grammar N2 lessons 16-20.
 - Then continue grammar first across remaining N5-N1, then vocab.
 - Deferred after QA-B-001: QA-B-002 expansion to JLPT-complete kanji coverage + 214 radicals.

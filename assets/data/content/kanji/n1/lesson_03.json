@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 3,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 亜 has no Unihan kVietnamese value, so the learner-facing Sino-Vietnamese reading keeps the established Á reading.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k017",
@@ -18,37 +18,45 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Á",
-        "meaningVi": "Á; thứ hai; á cấp",
-        "meaningViDisplay": "亜 (Á; thứ hai; á cấp)",
-        "meaningEn": "Asia; second"
+        "meaningVi": "châu Á; thứ hai; phụ/á",
+        "meaningViDisplay": "Á (châu Á; thứ hai; phụ/á)",
+        "meaningEn": "Asia, next rank, sub-"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ア"
+        ],
         "kunyomi": [
-          "あか"
+          "つ.ぐ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 亜 nghĩa là Á; thứ hai; á cấp. Ví dụ JLPT N1: 亜科 (phân bộ, phân họ, nhóm phụ).",
-        "en": "Kanji 亜 means Asia; second. JLPT N1 example: 亜科 (phân bộ, phân họ, nhóm phụ)."
+        "vi": "亜 chỉ châu Á hoặc nghĩa đứng sau/phụ; trong 亜科, nó tạo nghĩa một nhóm phân loại phụ.",
+        "en": "亜 means Asia or a secondary/sub rank; in 亜科 it marks a subordinate taxonomic group."
       },
       "decomposition": {
         "hanViet": "Á",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "科",
+          "次",
+          "後",
+          "欧"
+        ]
       },
       "search": {
         "hanVietNoAccent": "A",
-        "meaningViNoAccent": "A; thu hai; a cap",
-        "meaningEnNoAccent": "Asia; second"
+        "meaningViNoAccent": "chau A; thu hai; phu/a",
+        "meaningEnNoAccent": "Asia, next rank, sub-"
       },
       "examples": [
         {
           "word": "亜科",
           "reading": "あか",
-          "meaning": "phân bộ, phân họ, nhóm phụ"
+          "meaning": "phân họ; nhóm phân loại phụ",
+          "meaningEn": "subfamily, suborder"
         }
       ],
       "tags": [
@@ -56,7 +64,8 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,37 +77,43 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Khoa",
-        "meaningVi": "khoa; ngành; mục",
-        "meaningViDisplay": "科 (khoa; ngành; mục)",
-        "meaningEn": "section, department, science"
+        "meaningVi": "khoa; ngành; bộ môn; mục",
+        "meaningViDisplay": "Khoa (khoa; ngành; bộ môn; mục)",
+        "meaningEn": "department, course, section"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "あか"
-        ]
+        "onyomi": [
+          "カ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji 科 nghĩa là khoa; ngành; mục. Ví dụ JLPT N1: 亜科 (suborder, subfamily).",
-        "en": "Kanji 科 means section, department, science. JLPT N1 example: 亜科 (suborder, subfamily)."
+        "vi": "科 là khoa, ngành hoặc mục phân loại; 亜科 là cấp phân loại nhỏ hơn trong một khoa/họ.",
+        "en": "科 means a department, course, or category; 亜科 is a subordinate scientific category."
       },
       "decomposition": {
         "hanViet": "Khoa",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "亜",
+          "学",
+          "理",
+          "部"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Khoa",
-        "meaningViNoAccent": "khoa; nganh; muc",
-        "meaningEnNoAccent": "section, department, science"
+        "meaningViNoAccent": "khoa; nganh; bo mon; muc",
+        "meaningEnNoAccent": "department, course, section"
       },
       "examples": [
         {
           "word": "亜科",
           "reading": "あか",
-          "meaning": "suborder, subfamily"
+          "meaning": "phân họ; nhóm phân loại phụ",
+          "meaningEn": "subfamily, suborder"
         }
       ],
       "tags": [
@@ -106,9 +121,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k019",
@@ -119,36 +135,44 @@
       "labels": {
         "hanViet": "Đồng",
         "meaningVi": "đồng; kim loại đồng",
-        "meaningViDisplay": "銅 (đồng; kim loại đồng)",
-        "meaningEn": "copper (element 29, Cu); brass, bronze"
+        "meaningViDisplay": "Đồng (đồng; kim loại đồng)",
+        "meaningEn": "copper"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ドウ"
+        ],
         "kunyomi": [
           "あかがね"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 銅 nghĩa là đồng; kim loại đồng. Ví dụ JLPT N1: 銅 (copper).",
-        "en": "Kanji 銅 means copper (element 29, Cu); brass, bronze. JLPT N1 example: 銅 (copper)."
+        "vi": "銅 là kim loại đồng; cách đọc あかがね là từ cổ/thuần Nhật chỉ đồng đỏ.",
+        "en": "銅 means copper; あかがね is the native Japanese reading for the reddish metal."
       },
       "decomposition": {
         "hanViet": "Đồng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "金",
+          "鉄",
+          "銀",
+          "鉛"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đong",
-        "meaningViNoAccent": "đong; kim loai đong",
-        "meaningEnNoAccent": "copper (element 29, Cu); brass, bronze"
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "dong; kim loai dong",
+        "meaningEnNoAccent": "copper"
       },
       "examples": [
         {
           "word": "銅",
           "reading": "あかがね",
-          "meaning": "copper"
+          "meaning": "đồng",
+          "meaningEn": "copper"
         }
       ],
       "tags": [
@@ -156,9 +180,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k020",
@@ -168,37 +193,45 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Chứng",
-        "meaningVi": "chứng cứ; chứng minh",
-        "meaningViDisplay": "証 (chứng cứ; chứng minh)",
-        "meaningEn": "prove, confirm, verify; proof"
+        "meaningVi": "bằng chứng; chứng nhận; xác minh",
+        "meaningViDisplay": "Chứng (bằng chứng; chứng nhận; xác minh)",
+        "meaningEn": "evidence, proof, certificate"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ"
+        ],
         "kunyomi": [
           "あかし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 証 nghĩa là chứng cứ; chứng minh. Ví dụ JLPT N1: 証 (proof, evidence).",
-        "en": "Kanji 証 means prove, confirm, verify; proof. JLPT N1 example: 証 (proof, evidence)."
+        "vi": "証 là chứng cứ hoặc sự xác nhận; đọc あかし khi dùng trực tiếp như “bằng chứng”.",
+        "en": "証 means evidence, proof, or certification; あかし is used when it directly means proof."
       },
       "decomposition": {
         "hanViet": "Chứng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "言",
+          "拠",
+          "明",
+          "認"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chung",
-        "meaningViNoAccent": "chung cu; chung minh",
-        "meaningEnNoAccent": "prove, confirm, verify; proof"
+        "meaningViNoAccent": "bang chung; chung nhan; xac minh",
+        "meaningEnNoAccent": "evidence, proof, certificate"
       },
       "examples": [
         {
           "word": "証",
           "reading": "あかし",
-          "meaning": "proof, evidence"
+          "meaning": "bằng chứng",
+          "meaningEn": "proof, evidence"
         }
       ],
       "tags": [
@@ -206,9 +239,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k021",
@@ -218,37 +252,50 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Xích",
-        "meaningVi": "màu đỏ; trần trụi",
-        "meaningViDisplay": "赤 (màu đỏ; trần trụi)",
-        "meaningEn": "red; bare; Kangxi radical 155"
+        "meaningVi": "đỏ; màu đỏ; thâm hụt",
+        "meaningViDisplay": "Xích (đỏ; màu đỏ; thâm hụt)",
+        "meaningEn": "red"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セキ",
+          "シャク"
+        ],
         "kunyomi": [
-          "あかじ"
+          "あか",
+          "あか-",
+          "あか.い",
+          "あか.らむ",
+          "あか.らめる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 赤 nghĩa là màu đỏ; trần trụi. Ví dụ JLPT N1: 赤字 (deficit, go in the red).",
-        "en": "Kanji 赤 means red; bare; Kangxi radical 155. JLPT N1 example: 赤字 (deficit, go in the red)."
+        "vi": "赤 là màu đỏ; trong 赤字, màu đỏ được dùng cho số âm hoặc khoản thâm hụt.",
+        "en": "赤 means red; in 赤字, red marks a deficit or negative balance."
       },
       "decomposition": {
         "hanViet": "Xích",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "字",
+          "紅",
+          "色",
+          "白"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Xich",
-        "meaningViNoAccent": "mau đo; tran trui",
-        "meaningEnNoAccent": "red; bare; Kangxi radical 155"
+        "meaningViNoAccent": "do; mau do; tham hut",
+        "meaningEnNoAccent": "red"
       },
       "examples": [
         {
           "word": "赤字",
           "reading": "あかじ",
-          "meaning": "deficit, go in the red"
+          "meaning": "thâm hụt; lỗ",
+          "meaningEn": "deficit, in the red"
         }
       ],
       "tags": [
@@ -256,9 +303,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k022",
@@ -268,37 +316,47 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Tự",
-        "meaningVi": "chữ; ký tự",
-        "meaningViDisplay": "字 (chữ; ký tự)",
-        "meaningEn": "letter, character, word"
+        "meaningVi": "chữ; ký tự; tên chữ",
+        "meaningViDisplay": "Tự (chữ; ký tự; tên chữ)",
+        "meaningEn": "character, letter, word"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジ"
+        ],
         "kunyomi": [
-          "あかじ"
+          "あざ",
+          "あざな",
+          "-な"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 字 nghĩa là chữ; ký tự. Ví dụ JLPT N1: 赤字 (deficit, go in the red).",
-        "en": "Kanji 字 means letter, character, word. JLPT N1 example: 赤字 (deficit, go in the red)."
+        "vi": "字 là chữ hoặc ký tự; trong 赤字, nó chỉ con số/chữ được ghi đỏ để biểu thị thâm hụt.",
+        "en": "字 means a character or written mark; in 赤字 it refers to figures written in red for a deficit."
       },
       "decomposition": {
         "hanViet": "Tự",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "文",
+          "名",
+          "書",
+          "赤"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tu",
-        "meaningViNoAccent": "chu; ky tu",
-        "meaningEnNoAccent": "letter, character, word"
+        "meaningViNoAccent": "chu; ky tu; ten chu",
+        "meaningEnNoAccent": "character, letter, word"
       },
       "examples": [
         {
           "word": "赤字",
           "reading": "あかじ",
-          "meaning": "deficit, go in the red"
+          "meaning": "thâm hụt; lỗ",
+          "meaningEn": "deficit, in the red"
         }
       ],
       "tags": [
@@ -306,9 +364,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k023",
@@ -318,37 +377,56 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Minh",
-        "meaningVi": "sáng; rõ ràng",
-        "meaningViDisplay": "明 (sáng; rõ ràng)",
-        "meaningEn": "bright, light, brilliant; clear"
+        "meaningVi": "sáng; rõ ràng; làm sáng tỏ",
+        "meaningViDisplay": "Minh (sáng; rõ ràng; làm sáng tỏ)",
+        "meaningEn": "bright, light, clear"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "メイ",
+          "ミョウ",
+          "ミン"
+        ],
         "kunyomi": [
-          "あかす"
+          "あ.かり",
+          "あか.るい",
+          "あか.るむ",
+          "あか.らむ",
+          "あき.らか",
+          "あ.ける",
+          "-あ.け",
+          "あ.く",
+          "あ.くる",
+          "あ.かす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 明 nghĩa là sáng; rõ ràng. Ví dụ JLPT N1: 明かす (to pass, spend, to reveal, to divulge).",
-        "en": "Kanji 明 means bright, light, brilliant; clear. JLPT N1 example: 明かす (to pass, spend, to reveal, to divulge)."
+        "vi": "明 ghép sắc thái sáng/rõ; 明かす là làm sáng tỏ hoặc tiết lộ điều đang bị che giấu.",
+        "en": "明 carries brightness and clarity; 明かす means to clarify or reveal something hidden."
       },
       "decomposition": {
         "hanViet": "Minh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "日",
+          "月",
+          "暗",
+          "白"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Minh",
-        "meaningViNoAccent": "sang; ro rang",
-        "meaningEnNoAccent": "bright, light, brilliant; clear"
+        "meaningViNoAccent": "sang; ro rang; lam sang to",
+        "meaningEnNoAccent": "bright, light, clear"
       },
       "examples": [
         {
           "word": "明かす",
           "reading": "あかす",
-          "meaning": "to pass, spend, to reveal, to divulge"
+          "meaning": "tiết lộ; làm sáng tỏ; thức qua đêm",
+          "meaningEn": "to reveal, make clear, spend the night"
         }
       ],
       "tags": [
@@ -356,9 +434,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k024",
@@ -368,37 +447,48 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Bạch",
-        "meaningVi": "trắng; rõ ràng",
-        "meaningViDisplay": "白 (trắng; rõ ràng)",
-        "meaningEn": "white; pure, unblemished; bright"
+        "meaningVi": "trắng; trong sạch; rõ ràng",
+        "meaningViDisplay": "Bạch (trắng; trong sạch; rõ ràng)",
+        "meaningEn": "white, pure, bright"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ハク",
+          "ビャク"
+        ],
         "kunyomi": [
-          "あからさま"
+          "しろ",
+          "しら-",
+          "しろ.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 白 nghĩa là trắng; rõ ràng. Ví dụ JLPT N1: 明白 (obvious, overt, plainly, frankly).",
-        "en": "Kanji 白 means white; pure, unblemished; bright. JLPT N1 example: 明白 (obvious, overt, plainly, frankly)."
+        "vi": "白 là trắng hoặc rõ ràng; trong 明白, nó nhấn mạnh nghĩa rõ ràng, hiển nhiên.",
+        "en": "白 means white or clear; in 明白 it reinforces the sense of obvious clarity."
       },
       "decomposition": {
         "hanViet": "Bạch",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "明",
+          "赤",
+          "黒",
+          "清"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bach",
-        "meaningViNoAccent": "trang; ro rang",
-        "meaningEnNoAccent": "white; pure, unblemished; bright"
+        "meaningViNoAccent": "trang; trong sach; ro rang",
+        "meaningEnNoAccent": "white, pure, bright"
       },
       "examples": [
         {
           "word": "明白",
-          "reading": "あからさま",
-          "meaning": "obvious, overt, plainly, frankly"
+          "reading": "めいはく",
+          "meaning": "rõ ràng; hiển nhiên",
+          "meaningEn": "clear, obvious"
         }
       ],
       "tags": [
@@ -406,14 +496,19 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 53;
+const _kanjiSeedRevision = 54;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -204,6 +204,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '柄',
     meaning: 'Bính (hoa văn; tính chất; tay cầm)',
     decompositionContains: '"hanViet":"Bính"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 3,
+    character: '亜',
+    meaning: 'Á (châu Á; thứ hai; phụ/á)',
+    decompositionContains: '"hanViet":"Á"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

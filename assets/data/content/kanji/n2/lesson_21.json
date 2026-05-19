@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 21,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 仮 and 怠 keep established Sino-Vietnamese readings where Unihan has no kVietnamese value.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k161",
@@ -18,37 +18,45 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Bổ",
-        "meaningVi": "to compensate for",
-        "meaningViDisplay": "補 (to compensate for)",
-        "meaningEn": "to compensate for"
+        "meaningVi": "bổ; bổ sung; bù đắp; hỗ trợ",
+        "meaningViDisplay": "Bổ (bổ sung; bù đắp; hỗ trợ)",
+        "meaningEn": "supplement, supply, compensate, assistant"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ホ"
+        ],
         "kunyomi": [
-          "おぎなう"
+          "おぎな.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 補う (to compensate for).",
-        "en": "Appears in JLPT N2 vocabulary: 補う (to compensate for)."
+        "vi": "補 là bổ sung hoặc bù đắp; trong 補う, nó nhấn mạnh việc thêm vào để bù phần thiếu.",
+        "en": "補 means to supplement or make up for something; in 補う it adds what is missing."
       },
       "decomposition": {
         "hanViet": "Bổ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "給",
+          "納",
+          "収",
+          "足"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bo",
-        "meaningViNoAccent": "to compensate for",
-        "meaningEnNoAccent": "to compensate for"
+        "meaningViNoAccent": "bo; bo sung; bu dap; ho tro",
+        "meaningEnNoAccent": "supplement, supply, compensate, assistant"
       },
       "examples": [
         {
           "word": "補う",
           "reading": "おぎなう",
-          "meaning": "to compensate for"
+          "meaning": "bù đắp; bổ sung",
+          "meaningEn": "to compensate for"
         }
       ],
       "tags": [
@@ -56,9 +64,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k162",
@@ -68,37 +77,45 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Ốc",
-        "meaningVi": "outdoors",
-        "meaningViDisplay": "屋 (outdoors)",
-        "meaningEn": "outdoors"
+        "meaningVi": "ốc; nhà; cửa hàng; mái nhà",
+        "meaningViDisplay": "Ốc (nhà; cửa hàng; mái nhà)",
+        "meaningEn": "roof, house, shop, dealer"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "オク"
+        ],
         "kunyomi": [
-          "おくがい"
+          "や"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 屋外 (outdoors).",
-        "en": "Appears in JLPT N2 vocabulary: 屋外 (outdoors)."
+        "vi": "屋 là nhà hoặc cửa hàng; trong 屋外, nó đối lập với không gian bên trong nhà.",
+        "en": "屋 means house or shop; in 屋外 it contrasts the outdoors with the inside of a building."
       },
       "decomposition": {
         "hanViet": "Ốc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "外",
+          "家",
+          "室",
+          "名"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Oc",
-        "meaningViNoAccent": "outdoors",
-        "meaningEnNoAccent": "outdoors"
+        "meaningViNoAccent": "oc; nha; cua hang; mai nha",
+        "meaningEnNoAccent": "roof, house, shop, dealer"
       },
       "examples": [
         {
           "word": "屋外",
           "reading": "おくがい",
-          "meaning": "outdoors"
+          "meaning": "ngoài trời",
+          "meaningEn": "outdoors"
         }
       ],
       "tags": [
@@ -106,9 +123,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k163",
@@ -118,37 +136,45 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Tống",
-        "meaningVi": "part of word written in kana",
-        "meaningViDisplay": "送 (part of word written in kana)",
-        "meaningEn": "part of word written in kana"
+        "meaningVi": "tống; gửi đi; đưa tiễn; chuyển đi",
+        "meaningViDisplay": "Tống (gửi đi; đưa tiễn; chuyển đi)",
+        "meaningEn": "escort, send"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ"
+        ],
         "kunyomi": [
-          "おくりがな"
+          "おく.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 送り仮名 (part of word written in kana).",
-        "en": "Appears in JLPT N2 vocabulary: 送り仮名 (part of word written in kana)."
+        "vi": "送 là gửi đi hoặc đưa tiễn; trong 送り仮名, nó chỉ phần kana được gửi kèm sau kanji.",
+        "en": "送 means to send or escort; in 送り仮名 it points to kana sent along after a kanji."
       },
       "decomposition": {
         "hanViet": "Tống",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "配",
+          "返",
+          "仮",
+          "名"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tong",
-        "meaningViNoAccent": "part of word written in kana",
-        "meaningEnNoAccent": "part of word written in kana"
+        "meaningViNoAccent": "tong; gui di; dua tien; chuyen di",
+        "meaningEnNoAccent": "escort, send"
       },
       "examples": [
         {
           "word": "送り仮名",
           "reading": "おくりがな",
-          "meaning": "part of word written in kana"
+          "meaning": "okurigana; phần kana đi kèm chữ Hán",
+          "meaningEn": "kana suffix attached to a kanji stem"
         }
       ],
       "tags": [
@@ -156,9 +182,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k164",
@@ -168,45 +195,56 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Giả",
-        "meaningVi": "part of word written in kana",
-        "meaningViDisplay": "仮 (part of word written in kana)",
-        "meaningEn": "part of word written in kana"
+        "meaningVi": "giả; tạm; giả định; không chính thức",
+        "meaningViDisplay": "Giả (tạm; giả định; không chính thức)",
+        "meaningEn": "sham, temporary, interim, assumed, informal"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ",
+          "ケ"
+        ],
         "kunyomi": [
-          "おくりがな"
+          "かり",
+          "かり-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 送り仮名 (part of word written in kana).",
-        "en": "Appears in JLPT N2 vocabulary: 送り仮名 (part of word written in kana)."
+        "vi": "仮 là tạm hoặc giả định; trong 送り仮名, nó nằm trong chữ 仮名, tức kana đối lập với chữ Hán.",
+        "en": "仮 means temporary or provisional; in 送り仮名 it is part of 仮名, kana as opposed to kanji."
       },
       "decomposition": {
         "hanViet": "Giả",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "名",
+          "平",
+          "送",
+          "外"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Gia",
-        "meaningViNoAccent": "part of word written in kana",
-        "meaningEnNoAccent": "part of word written in kana"
+        "meaningViNoAccent": "gia; tam; gia dinh; khong chinh thuc",
+        "meaningEnNoAccent": "sham, temporary, interim, assumed, informal"
       },
       "examples": [
         {
           "word": "送り仮名",
           "reading": "おくりがな",
-          "meaning": "part of word written in kana"
+          "meaning": "okurigana; phần kana đi kèm chữ Hán",
+          "meaningEn": "kana suffix attached to a kanji stem"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,45 +256,55 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Đãi",
-        "meaningVi": "to neglect, to be off guard, to be feeling better",
-        "meaningViDisplay": "怠 (to neglect, to be off guard, to be feeling better)",
-        "meaningEn": "to neglect, to be off guard, to be feeling better"
+        "meaningVi": "đãi; lười biếng; lơ là; sao nhãng",
+        "meaningViDisplay": "Đãi (lơ là; sao nhãng; lười biếng)",
+        "meaningEn": "neglect, laziness"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タイ"
+        ],
         "kunyomi": [
-          "おこたる"
+          "おこた.る",
+          "なま.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 怠る (to neglect, to be off guard, to be feeling better).",
-        "en": "Appears in JLPT N2 vocabulary: 怠る (to neglect, to be off guard, to be feeling better)."
+        "vi": "怠 có 心 bên dưới, gợi trạng thái tâm lười hoặc thiếu chú ý; trong 怠る là lơ là việc cần làm.",
+        "en": "怠 carries the heart component and suggests neglect or laziness; in 怠る it means to neglect a duty."
       },
       "decomposition": {
         "hanViet": "Đãi",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "心",
+          "意",
+          "急",
+          "労"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dai",
-        "meaningViNoAccent": "to neglect, to be off guard, to be feeling better",
-        "meaningEnNoAccent": "to neglect, to be off guard, to be feeling better"
+        "meaningViNoAccent": "dai; luoi bieng; lo la; sao nhang",
+        "meaningEnNoAccent": "neglect, laziness"
       },
       "examples": [
         {
           "word": "怠る",
           "reading": "おこたる",
-          "meaning": "to neglect, to be off guard, to be feeling better"
+          "meaning": "sao nhãng; lơ là; chủ quan",
+          "meaningEn": "to neglect, to be off guard"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,37 +316,49 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Áp",
-        "meaningVi": "to stop, to restrain, to seize, to repress, to suppress, to press down",
-        "meaningViDisplay": "押 (to stop, to restrain, to seize, to repress, to suppress, to press down)",
-        "meaningEn": "to stop, to restrain, to seize, to repress, to suppress, to press down"
+        "meaningVi": "áp; ấn; đẩy; đè xuống; kìm giữ",
+        "meaningViDisplay": "Áp (ấn; đẩy; đè xuống; kìm giữ)",
+        "meaningEn": "push, press, stop, check, subdue"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "オウ"
+        ],
         "kunyomi": [
-          "おさえる"
+          "お.す",
+          "お.し-",
+          "お.っ-",
+          "お.さえる",
+          "おさ.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 押える (to stop, to restrain, to seize, to repress, to suppress, to press down).",
-        "en": "Appears in JLPT N2 vocabulary: 押える (to stop, to restrain, to seize, to repress, to suppress, to press down)."
+        "vi": "押 là dùng tay ấn hoặc giữ lại; trong 押える, nó nhấn mạnh hành động đè xuống/kìm lại.",
+        "en": "押 means to push, press, or hold down; in 押える it focuses on restraining or pressing down."
       },
       "decomposition": {
         "hanViet": "Áp",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "手",
+          "圧",
+          "足",
+          "急"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ap",
-        "meaningViNoAccent": "to stop, to restrain, to seize, to repress, to suppress, to press down",
-        "meaningEnNoAccent": "to stop, to restrain, to seize, to repress, to suppress, to press down"
+        "meaningViNoAccent": "ap; an; day; de xuong; kim giu",
+        "meaningEnNoAccent": "push, press, stop, check, subdue"
       },
       "examples": [
         {
           "word": "押える",
           "reading": "おさえる",
-          "meaning": "to stop, to restrain, to seize, to repress, to suppress, to press down"
+          "meaning": "giữ lại; kìm chế; đè xuống",
+          "meaningEn": "to stop, restrain, press down"
         }
       ],
       "tags": [
@@ -306,9 +366,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k167",
@@ -318,37 +379,51 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Nạp",
-        "meaningVi": "to obtain, to reap, to pay, to supply, to accept",
-        "meaningViDisplay": "納 (to obtain, to reap, to pay, to supply, to accept)",
-        "meaningEn": "to obtain, to reap, to pay, to supply, to accept"
+        "meaningVi": "nạp; nộp; thu nhận; cất giữ; chấp nhận",
+        "meaningViDisplay": "Nạp (nộp; thu nhận; cất giữ; chấp nhận)",
+        "meaningEn": "settlement, obtain, reap, pay, supply, store"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ノウ",
+          "ナッ",
+          "ナ",
+          "ナン",
+          "トウ"
+        ],
         "kunyomi": [
-          "おさめる"
+          "おさ.める",
+          "-おさ.める",
+          "おさ.まる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 納める (to obtain, to reap, to pay, to supply, to accept).",
-        "en": "Appears in JLPT N2 vocabulary: 納める (to obtain, to reap, to pay, to supply, to accept)."
+        "vi": "納 là nộp vào hoặc thu nhận; trong 納める, nó có thể là nộp tiền, giao hàng, hoặc cất vào đúng chỗ.",
+        "en": "納 means to submit, receive, or store; in 納める it can mean to pay, supply, or put away."
       },
       "decomposition": {
         "hanViet": "Nạp",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "収",
+          "税",
+          "入",
+          "給"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nap",
-        "meaningViNoAccent": "to obtain, to reap, to pay, to supply, to accept",
-        "meaningEnNoAccent": "to obtain, to reap, to pay, to supply, to accept"
+        "meaningViNoAccent": "nap; nop; thu nhan; cat giu; chap nhan",
+        "meaningEnNoAccent": "settlement, obtain, reap, pay, supply, store"
       },
       "examples": [
         {
           "word": "納める",
           "reading": "おさめる",
-          "meaning": "to obtain, to reap, to pay, to supply, to accept"
+          "meaning": "nộp; thu nộp; cất vào; chấp nhận",
+          "meaningEn": "to pay, supply, accept, store"
         }
       ],
       "tags": [
@@ -356,9 +431,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k168",
@@ -368,37 +444,49 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Trị",
-        "meaningVi": "(1) to govern, to manage, (2) to subdue",
-        "meaningViDisplay": "治 ((1) to govern, to manage, (2) to subdue)",
-        "meaningEn": "(1) to govern, to manage, (2) to subdue"
+        "meaningVi": "trị; cai trị; chữa trị; ổn định",
+        "meaningViDisplay": "Trị (cai trị; chữa trị; ổn định)",
+        "meaningEn": "rule, cure, heal, calm down, govern"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジ",
+          "チ"
+        ],
         "kunyomi": [
-          "おさめる"
+          "おさ.める",
+          "おさ.まる",
+          "なお.る",
+          "なお.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 治める ((1) to govern, to manage, (2) to subdue).",
-        "en": "Appears in JLPT N2 vocabulary: 治める ((1) to govern, to manage, (2) to subdue)."
+        "vi": "治 là cai trị hoặc chữa trị; trong 治める, nó nghiêng về việc trị vì/quản lý cho yên ổn.",
+        "en": "治 means to rule or heal; in 治める it leans toward governing or bringing under control."
       },
       "decomposition": {
         "hanViet": "Trị",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "政",
+          "療",
+          "国",
+          "平"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tri",
-        "meaningViNoAccent": "(1) to govern, to manage, (2) to subdue",
-        "meaningEnNoAccent": "(1) to govern, to manage, (2) to subdue"
+        "meaningViNoAccent": "tri; cai tri; chua tri; on dinh",
+        "meaningEnNoAccent": "rule, cure, heal, calm down, govern"
       },
       "examples": [
         {
           "word": "治める",
           "reading": "おさめる",
-          "meaning": "(1) to govern, to manage, (2) to subdue"
+          "meaning": "cai trị; quản lý; khuất phục",
+          "meaningEn": "to govern, manage, subdue"
         }
       ],
       "tags": [
@@ -406,14 +494,19 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "Unicode Unihan kVietnamese",
+    "JpStudy N2 vocab context"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

@@ -856,3 +856,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `20`.
 - Verified under Directive C: JSON/source-tag check `20/20`, focused suite `63/63`, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N3 grammar level completion.
 - Live proof: existing production browser, normal cache. The real N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `20`; opening `せいで` rendered `KẾT NỐI: V普通形 / いA / なAな / Nの + せいで`, and opening `ないことはない` rendered `KẾT NỐI: Vない / いAくない / なAではない / Nではない + ことはない`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n3_11.json`, `grammar_n3_13.json`, and `grammar_n3_15.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N3 Lessons 16-20 Batch
+
+- Source-verified 20 N3 grammar points in lessons 16-20; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected/clarified formations and explanations for `続ける`, `きる`, `抜く`, `という`, `といわれている`, `ことから`, `とされている`, `べきだ`, `べきではない`, `たとたん`, `ついでに`, `際に`, `気がする`, `ものだ`, `わけだ`, and `に決まっている`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `21`.
+- Verified under Directive C: JSON/source-tag check `20/20`, focused suite `63/63`, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N3 grammar level completion.
+- Live proof: existing production browser, normal cache. The real N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `21`; opening `べきだ` rendered `KẾT NỐI: V辞書 + べきだ（する→するべき・すべき）`, and opening `わけだ` rendered `KẾT NỐI: V普通形 / いA / なAな / Nな・Nである + わけだ`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n3_16.json`, `grammar_n3_18.json`, and `grammar_n3_20.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.

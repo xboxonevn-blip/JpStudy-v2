@@ -1924,3 +1924,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved`); focused DB/manifest/taxonomy/upper-JLPT/practice-bank/repository tests passed (`63`); `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N3 grammar level completion.
 
 Live proof after deploy: the existing production browser used normal cache. The rendered N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `20`. Opening `せいで` rendered `KẾT NỐI: V普通形 / いA / なAな / Nの + せいで`; opening `ないことはない` rendered `KẾT NỐI: Vない / いAくない / なAではない / Nではない + ことはない`; the list also rendered corrected rows such as `ばかりか`, `ことがある`, `といい`, and `てもらう`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n3_11.json`, `grammar_n3_13.json`, and `grammar_n3_15.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.
+
+## Grammar N3 Lessons 16-20 Source-Verified Batch
+
+This batch covers all 20 grammar points in `grammar_n3_16.json` through `grammar_n3_20.json`. Sources consulted for the batch: local N3 scaffold JSON, AmgiDex JLPT N3 grammar list, AI Japanese Tutor JLPT N3 grammar list, MLC Japanese notes where the point appears, and targeted online formation checks from Japanese grammar references for corrected points. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N3-16 | `ために`, `続ける`, `きる`, `抜く` | Checked purpose/continuative/completion/perseverance usage and tagged each item `vi-source-verified`; corrected `続ける`, `きる`, and `抜く` to `Vます語幹`. |
+| N3-17 | `という`, `といわれている`, `ことから`, `とされている` | Checked naming/report/inference/convention usage and tagged each item `vi-source-verified`; broadened plain-form, adjective, and noun attachments. |
+| N3-18 | `べきだ`, `べきではない`, `はずだ`, `はずがない` | Checked obligation/expectation usage and tagged each item `vi-source-verified`; added the `する -> するべき / すべき` exception for `べき`. |
+| N3-19 | `たとたん`, `うちに`, `ついでに`, `際に` | Checked timing/opportunity/formal-occasion usage and tagged each item `vi-source-verified`; added optional `に` for `とたん` and noun/past-verb attachments where appropriate. |
+| N3-20 | `気がする`, `ものだ`, `わけだ`, `に決まっている` | Checked intuition/general-truth/conclusion/certainty usage and tagged each item `vi-source-verified`; clarified adjective/noun attachments and plain-form scope. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `21` so existing browsers reseed the changed N3 grammar rows.
+
+Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved`); focused DB/manifest/taxonomy/upper-JLPT/practice-bank/repository tests passed (`63`); `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N3 grammar level completion.
+
+Live proof after deploy: the existing production browser used normal cache. The rendered N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `21`. Opening `べきだ` rendered `KẾT NỐI: V辞書 + べきだ（する→するべき・すべき）`; opening `わけだ` rendered `KẾT NỐI: V普通形 / いA / なAな / Nな・Nである + わけだ`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n3_16.json`, `grammar_n3_18.json`, and `grammar_n3_20.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.

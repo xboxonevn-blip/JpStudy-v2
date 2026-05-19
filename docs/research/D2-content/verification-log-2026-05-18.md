@@ -1026,3 +1026,30 @@ Runtime note: bumped content DB Kanji seed revision from `43` to `44` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `64` to `56`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
 
 Live proof after deploy: after `1dc4252f` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `遠` showed the updated one-card keyword result; opening `遠` showed `Viễn (viễn; xa; xa xôi; cách xa)`, Hán-Việt `Viễn`, on `エン, オン`, kun `とお.い`, stroke count `13`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 19 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and stroke cross-checks.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `応援`, `王女`, `応接`, `応対`, `往復`, and `欧米`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `援` | KANJIDIC2 reading `エン`, Vietnamese `Viên/Viện`, meanings `abet`, `help`, `save`; Unihan `kVietnamese=viện`; local context `応援` | Corrected the row away from whole-word `aid, assistance, help, reinforcement` fallback to `Viện (viện; hỗ trợ; viện trợ; cứu giúp)`, added readings/search text, direct example `応援`, and support-related kanji. |
+| `王` | KANJIDIC2 readings `オウ/-ノウ`, Vietnamese `Vương/Vượng`, meanings `king`, `rule`, `magnate`; Unihan `kVietnamese=vương`; local context `王女` | Corrected the row away from whole-word `princess` fallback to `Vương (vương; vua; hoàng gia; người cai trị)`, added readings/search text, direct example `王女`, and royal-related kanji. |
+| `女` | KANJIDIC2 readings `ジョ/ニョ/ニョウ`, `おんな/め`, learner-facing Vietnamese `Nữ`; Unihan lists a less useful `nữa`; local context `王女` | Corrected `Nữa` and whole-word princess fallback to `Nữ (nữ; phụ nữ; con gái; giống cái)`, added readings/search text, direct example `王女`, and female/family related kanji. |
+| `接` | KANJIDIC2 readings `セツ/ショウ`, `つ.ぐ`, Vietnamese `Tiếp`, meanings `touch`, `contact`, `adjoin`, `piece together`; Unihan `kVietnamese=tiếp`; local context `応接` | Corrected the row away from whole-word `reception` fallback to `Tiếp (tiếp; tiếp xúc; nối liền; tiếp đãi)`, added readings/search text, direct example `応接`, and contact-related kanji. |
+| `対` | KANJIDIC2 readings `タイ/ツイ`, Vietnamese `Đối`, meanings `vis-a-vis`, `opposite`, `versus`, `compare`; local context `応対` | Corrected the row away from whole-word `receiving, dealing with` fallback to `Đối (đối; đối diện; đối với; so sánh)`, added readings/search text, direct example `応対`, and comparison/opposition related kanji. |
+| `往` | KANJIDIC2 reading `オウ`, `ゆ.く/い.く/いにしえ`, Vietnamese `Vãng`, meanings `journey`, `travel`, `going`, `formerly`; Unihan `kVietnamese=vãng`; local context `往復` | Corrected the row away from whole-word round-trip fallback to `Vãng (vãng; đi; đi qua; quá khứ)`, added readings/search text, direct example `往復`, and travel/return related kanji. |
+| `復` | KANJIDIC2 reading `フク`, `また`, Vietnamese `Phục/Phúc`, meanings `restore`, `return to`, `resume`; local context `往復` | Corrected the row away from whole-word round-trip fallback to `Phục (phục; trở lại; khôi phục; lặp lại)`, added readings/search text, direct example `往復`, and return/restore related kanji. |
+| `欧` | KANJIDIC2 reading `オウ`, Vietnamese `Âu`, meaning `Europe`; local context `欧米` | Corrected the row away from whole-word `Europe and America, the West` fallback to `Âu (Âu; châu Âu; phương Tây)`, added readings/search text, direct example `欧米`, and West/Europe related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `44` to `45` and added an N2 lesson-19 sentinel for `援` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `56` to `48`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
+
+Live proof after deploy: after `6e758b11` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `援` showed the updated one-card keyword result; opening `援` showed `Viện (viện; hỗ trợ; viện trợ; cứu giúp)`, Hán-Việt `Viện`, on `エン`, stroke count `12`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

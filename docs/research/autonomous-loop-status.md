@@ -572,3 +572,11 @@
 - Bumped content DB Kanji seed revision to `44` and added an N2 lesson-18 sentinel for `遠` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, no false approval/draft tags remain in lesson 18, coverage audit reduced N2 incomplete current entries from `64` to `56`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
 - Built/deployed `1dc4252f` to Firebase Hosting. Live proof in VI/N2 `/#/kanji`: filtering `遠` showed the updated card, and opening it showed `Viễn (viễn; xa; xa xôi; cách xa)`, Hán-Việt `Viễn`, on `エン, オン`, kun `とお.い`, stroke count `13`; console warnings/errors `0`.
+
+## 2026-05-19 N2 Kanji Lesson 19 Completeness Patch
+
+- Source-verified all eight N2 lesson-19 kanji (`援`, `王`, `女`, `接`, `対`, `往`, `復`, `欧`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including correcting `援` away from whole-word help fallback, `王`/`女` away from whole-word `princess`, `接` away from `reception`, `対` away from `receiving, dealing with`, `往`/`復` away from whole-word round-trip fallback, and `欧` away from whole-word `Europe and America`; removed old approval metadata and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `45` and added an N2 lesson-19 sentinel for `援` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, no false approval/draft tags remain in lesson 19, coverage audit reduced N2 incomplete current entries from `56` to `48`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
+- Built/deployed `6e758b11` to Firebase Hosting. Live proof in VI/N2 `/#/kanji`: filtering `援` showed the updated card, and opening it showed `Viện (viện; hỗ trợ; viện trợ; cứu giúp)`, Hán-Việt `Viện`, on `エン`, stroke count `12`; console warnings/errors `0`.

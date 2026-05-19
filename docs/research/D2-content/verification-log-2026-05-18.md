@@ -1377,3 +1377,30 @@ Runtime note: bumped content DB Kanji seed revision from `56` to `57` and added 
 Verification: coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `160` to `152`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `95534f80` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, and `/assets/assets/data/content/kanji/n1/lesson_06.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `浅` showed `Thiển (nông; cạn; hời hợt)`, on `セン`, kun `あさ.い`, stroke count `9`, and `vi-source-verified`. Console errors/warnings: `0`.
+
+## Kanji N1 Lesson 7 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `処` and `当` have no Unihan `kVietnamese`, so learner-facing Hán-Việt uses established readings.
+- Existing N1 and lower-level vocabulary context for `処理`, `値`, `私`, `当たり`, `当たり前`, `他人`, `方法`, and `此れ`, used only to choose examples and verify learner-facing glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `処` | KANJIDIC2 reading `ショ`, `ところ/-こ/お.る`; local lower-level `処理` | Rewrote to `Xử (xử lý; giải quyết; nơi chốn)`, replaced the sensitive/awkward `彼処` example with `処理`, and added source-backed readings/components/related kanji. |
+| `値` | KANJIDIC2 reading `チ`, `ね/あたい`; Unihan `kVietnamese=trị`; local context `値` | Rewrote display to `Trị (giá trị; giá cả)`, added readings/components/related kanji, and translated the example as `giá trị; giá cả; công lao`. |
+| `私` | KANJIDIC2 reading `シ`, `わたくし/わたし`; Unihan `kVietnamese=tư`; local context `私/あたし` | Rewrote display to `Tư (riêng tư; tôi)`, replaced word-level `あたし` as a kanji reading with source-backed readings, and kept `あたし` only as the example reading. |
+| `当` | KANJIDIC2 reading `トウ`, hit/right meanings; local context `当たり` | Rewrote to `Đương (trúng; đúng; phù hợp; đảm nhận)`, added readings/components/related kanji, and translated `当たり` naturally. |
+| `前` | KANJIDIC2 reading `ゼン`, `まえ/-まえ`; Unihan `kVietnamese=tiền`; local context `当たり前` | Rewrote display to `Tiền (trước; phía trước)`, replaced word-level `あたりまえ` as a kanji reading with source-backed readings, and translated the example as `bình thường; hiển nhiên; hợp lý`. |
+| `他` | KANJIDIC2 reading `タ`, `ほか`; Unihan `kVietnamese=tha`; local context `他人` | Rewrote display to `Tha (khác; người khác)`, corrected the example reading to the common `たにん`, and added readings/components/related kanji. |
+| `方` | KANJIDIC2 reading `ホウ`, `かた/-かた/-がた`; Unihan `kVietnamese=phương`; lower-level context `方法` | Rewrote to `Phương (phương hướng; cách; người)`, replaced the ateji `彼方此方` example with `方法`, and added source-backed readings/relations. |
+| `此` | KANJIDIC2 reading `シ`, `これ/この/ここ`; Unihan `kVietnamese=thử`; local context `此れ` | Rewrote display to `Thử (này; đây)`, replaced word-level `あちこち` as a kanji reading with source-backed readings, and used `此れ/これ` as the example. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `57` to `58` and added an N1 lesson-7 sentinel for `処` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `152` to `144`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `191e6db2` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, and `/assets/assets/data/content/kanji/n1/lesson_07.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `処` showed `Xử (xử lý; giải quyết; nơi chốn)`, on `ショ`, kun `ところ/-こ/お.る`, stroke count `5`, and example `処理/しょり = xử lý`. Console errors/warnings: `0`.

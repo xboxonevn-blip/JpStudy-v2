@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 12,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 筋 uses learner-facing KANJIDIC2 Hán-Việt, and 有/難 use clearer existing vocabulary examples instead of the ateji phrase 有難う.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k089",
@@ -18,47 +18,62 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Thô",
-        "meaningVi": "thô; sơ lược",
-        "meaningViDisplay": "粗 (thô; sơ lược)",
-        "meaningEn": "rough, thick, course; rude"
+        "meaningVi": "thô; sơ sài; thô ráp",
+        "meaningViDisplay": "Thô (thô; sơ sài; thô ráp)",
+        "meaningEn": "coarse; rough; rugged"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソ"
+        ],
         "kunyomi": [
-          "あらすじ"
+          "あら.い",
+          "あら-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 粗 nghĩa là thô; sơ lược. Ví dụ JLPT N1: 粗筋 (outline, summary).",
-        "en": "Kanji 粗 means rough, thick, course; rude. JLPT N1 example: 粗筋 (outline, summary)."
+        "vi": "粗 là thô hoặc sơ sài; trong 粗筋, chữ này gợi phần tóm lược còn chưa đi vào chi tiết.",
+        "en": "粗 means coarse or rough; in 粗筋 it points to a broad outline before details."
       },
       "decomposition": {
         "hanViet": "Thô",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "米",
+          "且"
+        ],
+        "componentNames": [
+          "gạo",
+          "vả/lại"
+        ],
+        "relatedKanji": [
+          "筋",
+          "細",
+          "略",
+          "荒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tho",
-        "meaningViNoAccent": "tho; so luoc",
-        "meaningEnNoAccent": "rough, thick, course; rude"
+        "meaningViNoAccent": "tho; so sai; tho rap",
+        "meaningEnNoAccent": "coarse; rough; rugged"
       },
       "examples": [
         {
           "word": "粗筋",
           "reading": "あらすじ",
-          "meaning": "outline, summary"
+          "meaning": "tóm tắt; cốt truyện khái quát",
+          "meaningEn": "outline; summary"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k090",
@@ -67,48 +82,63 @@
       "character": "筋",
       "strokeCount": 12,
       "labels": {
-        "hanViet": "Gân",
-        "meaningVi": "gân; mạch; cốt truyện",
-        "meaningViDisplay": "筋 (gân; mạch; cốt truyện)",
-        "meaningEn": "muscles; tendons"
+        "hanViet": "Cân",
+        "meaningVi": "gân; cơ; mạch; cốt truyện",
+        "meaningViDisplay": "Cân (gân; cơ; mạch; cốt truyện)",
+        "meaningEn": "muscle; sinew; tendon; plot"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キン"
+        ],
         "kunyomi": [
-          "あらすじ"
+          "すじ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 筋 nghĩa là gân; mạch; cốt truyện. Ví dụ JLPT N1: 粗筋 (outline, summary).",
-        "en": "Kanji 筋 means muscles; tendons. JLPT N1 example: 粗筋 (outline, summary)."
+        "vi": "筋 là gân hoặc đường mạch; trong 粗筋, chữ này chuyển nghĩa thành mạch truyện.",
+        "en": "筋 means sinew or line; in 粗筋 it extends to the thread or plot of a story."
       },
       "decomposition": {
-        "hanViet": "Gân",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Cân",
+        "structure": "top-bottom",
+        "components": [
+          "竹",
+          "肋"
+        ],
+        "componentNames": [
+          "tre",
+          "xương sườn/gân"
+        ],
+        "relatedKanji": [
+          "粗",
+          "肉",
+          "線",
+          "骨"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Gan",
-        "meaningViNoAccent": "gan; mach; cot truyen",
-        "meaningEnNoAccent": "muscles; tendons"
+        "hanVietNoAccent": "Can",
+        "meaningViNoAccent": "gan; co; mach; cot truyen",
+        "meaningEnNoAccent": "muscle; sinew; tendon; plot"
       },
       "examples": [
         {
           "word": "粗筋",
           "reading": "あらすじ",
-          "meaning": "outline, summary"
+          "meaning": "tóm tắt; cốt truyện khái quát",
+          "meaningEn": "outline; summary"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k091",
@@ -118,45 +148,63 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Tranh",
-        "meaningVi": "tranh chấp; cạnh tranh",
-        "meaningViDisplay": "争 (tranh chấp; cạnh tranh)",
-        "meaningEn": "dispute, fight, contend, strive"
+        "meaningVi": "tranh chấp; cạnh tranh; cãi nhau",
+        "meaningViDisplay": "Tranh (tranh chấp; cạnh tranh; cãi nhau)",
+        "meaningEn": "contend; dispute; argue"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ"
+        ],
         "kunyomi": [
-          "あらそい"
+          "あらそ.う",
+          "いか.でか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 争 nghĩa là tranh chấp; cạnh tranh. Ví dụ JLPT N1: 争い (tranh chấp, xung đột, cạnh tranh).",
-        "en": "Kanji 争 means dispute, fight, contend, strive. JLPT N1 example: 争い (tranh chấp, xung đột, cạnh tranh)."
+        "vi": "争 là tranh giành hoặc cãi nhau; 争い là một cuộc tranh chấp hay xung đột.",
+        "en": "争 means to contend or dispute; 争い is a dispute, quarrel, or conflict."
       },
       "decomposition": {
         "hanViet": "Tranh",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "⺈",
+          "ヨ",
+          "亅"
+        ],
+        "componentNames": [
+          "người cúi",
+          "bàn tay",
+          "móc"
+        ],
+        "relatedKanji": [
+          "競",
+          "戦",
+          "論",
+          "勝"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tranh",
-        "meaningViNoAccent": "tranh chap; canh tranh",
-        "meaningEnNoAccent": "dispute, fight, contend, strive"
+        "meaningViNoAccent": "tranh chap; canh tranh; cai nhau",
+        "meaningEnNoAccent": "contend; dispute; argue"
       },
       "examples": [
         {
           "word": "争い",
           "reading": "あらそい",
-          "meaning": "tranh chấp, xung đột, cạnh tranh"
+          "meaning": "sự tranh chấp; xung đột; cạnh tranh",
+          "meaningEn": "dispute; conflict; rivalry"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,45 +216,61 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Cải",
-        "meaningVi": "sửa đổi; cải thiện",
-        "meaningViDisplay": "改 (sửa đổi; cải thiện)",
-        "meaningEn": "change, alter; improve, remodel"
+        "meaningVi": "sửa đổi; cải thiện; kiểm tra lại",
+        "meaningViDisplay": "Cải (sửa đổi; cải thiện; kiểm tra lại)",
+        "meaningEn": "change; renew; inspect"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カイ"
+        ],
         "kunyomi": [
-          "あらたまる"
+          "あらた.める",
+          "あらた.まる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 改 nghĩa là sửa đổi; cải thiện. Ví dụ JLPT N1: 改まる (đổi mới, sửa đổi, trở nên trang trọng).",
-        "en": "Kanji 改 means change, alter; improve, remodel. JLPT N1 example: 改まる (đổi mới, sửa đổi, trở nên trang trọng)."
+        "vi": "改 là sửa đổi hoặc chỉnh lại; 改まる là trạng thái được đổi mới hay trở nên trang trọng hơn.",
+        "en": "改 means to change or revise; 改まる is to be renewed or become formal."
       },
       "decomposition": {
         "hanViet": "Cải",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "己",
+          "攵"
+        ],
+        "componentNames": [
+          "bản thân",
+          "đánh/sửa"
+        ],
+        "relatedKanji": [
+          "変",
+          "革",
+          "修",
+          "新"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cai",
-        "meaningViNoAccent": "sua đoi; cai thien",
-        "meaningEnNoAccent": "change, alter; improve, remodel"
+        "meaningViNoAccent": "sua doi; cai thien; kiem tra lai",
+        "meaningEnNoAccent": "change; renew; inspect"
       },
       "examples": [
         {
           "word": "改まる",
           "reading": "あらたまる",
-          "meaning": "đổi mới, sửa đổi, trở nên trang trọng"
+          "meaning": "được đổi mới; trở nên trang trọng",
+          "meaningEn": "to be renewed; to become formal"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,47 +282,62 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Phàm",
-        "meaningVi": "thường; tất cả",
-        "meaningViDisplay": "凡 (thường; tất cả)",
-        "meaningEn": "all, any, every; ordinary, common"
+        "meaningVi": "phàm; bình thường; nói chung",
+        "meaningViDisplay": "Phàm (phàm; bình thường; nói chung)",
+        "meaningEn": "ordinary; commonplace; mediocre"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ボン",
+          "ハン"
+        ],
         "kunyomi": [
-          "あらゆる"
+          "およ.そ",
+          "おうよ.そ",
+          "すべ.て"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 凡 nghĩa là thường; tất cả. Ví dụ JLPT N1: 凡ゆる (all, every).",
-        "en": "Kanji 凡 means all, any, every; ordinary, common. JLPT N1 example: 凡ゆる (all, every)."
+        "vi": "凡 là bình thường hoặc đại khái; 凡ゆる mở rộng thành mọi/tất cả.",
+        "en": "凡 means ordinary or general; 凡ゆる extends to all or every."
       },
       "decomposition": {
         "hanViet": "Phàm",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "凡"
+        ],
+        "componentNames": [
+          "phàm"
+        ],
+        "relatedKanji": [
+          "普",
+          "通",
+          "全",
+          "並"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Pham",
-        "meaningViNoAccent": "thuong; tat ca",
-        "meaningEnNoAccent": "all, any, every; ordinary, common"
+        "meaningViNoAccent": "pham; binh thuong; noi chung",
+        "meaningEnNoAccent": "ordinary; commonplace; mediocre"
       },
       "examples": [
         {
           "word": "凡ゆる",
           "reading": "あらゆる",
-          "meaning": "all, every"
+          "meaning": "mọi; tất cả",
+          "meaningEn": "all; every"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k094",
@@ -268,47 +347,64 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Hiện",
-        "meaningVi": "hiện ra; biểu hiện",
-        "meaningViDisplay": "現 (hiện ra; biểu hiện)",
-        "meaningEn": "appear, manifest, become visible"
+        "meaningVi": "hiện tại; thực tế; xuất hiện",
+        "meaningViDisplay": "Hiện (hiện tại; thực tế; xuất hiện)",
+        "meaningEn": "present; existing; actual"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゲン"
+        ],
         "kunyomi": [
-          "あらわれ"
+          "あらわ.れる",
+          "あらわ.す",
+          "うつつ",
+          "うつ.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 現 nghĩa là hiện ra; biểu hiện. Ví dụ JLPT N1: 現われ (embodiment, materialization).",
-        "en": "Kanji 現 means appear, manifest, become visible. JLPT N1 example: 現われ (embodiment, materialization)."
+        "vi": "現 là cái đang hiện ra hoặc tồn tại trong thực tế; 現われ là sự biểu hiện ra ngoài.",
+        "en": "現 means what is present or actual; 現われ is an outward manifestation."
       },
       "decomposition": {
         "hanViet": "Hiện",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "王",
+          "見"
+        ],
+        "componentNames": [
+          "ngọc/vua",
+          "nhìn thấy"
+        ],
+        "relatedKanji": [
+          "見",
+          "実",
+          "在",
+          "表"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hien",
-        "meaningViNoAccent": "hien ra; bieu hien",
-        "meaningEnNoAccent": "appear, manifest, become visible"
+        "meaningViNoAccent": "hien tai; thuc te; xuat hien",
+        "meaningEnNoAccent": "present; existing; actual"
       },
       "examples": [
         {
           "word": "現われ",
           "reading": "あらわれ",
-          "meaning": "embodiment, materialization"
+          "meaning": "biểu hiện; sự hiện ra",
+          "meaningEn": "manifestation; appearance"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k095",
@@ -318,47 +414,62 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Hữu",
-        "meaningVi": "có; tồn tại",
-        "meaningViDisplay": "有 (có; tồn tại)",
-        "meaningEn": "have, own, possess; exist"
+        "meaningVi": "có; tồn tại; sở hữu",
+        "meaningViDisplay": "Hữu (có; tồn tại; sở hữu)",
+        "meaningEn": "possess; have; exist"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ユウ",
+          "ウ"
+        ],
         "kunyomi": [
-          "ありがとう"
+          "あ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 有 nghĩa là có; tồn tại. Ví dụ JLPT N1: 有難う (Thank you).",
-        "en": "Kanji 有 means have, own, possess; exist. JLPT N1 example: 有難う (Thank you)."
+        "vi": "有 là có hoặc tồn tại; 有無 hỏi xem có hay không.",
+        "en": "有 means to have or exist; 有無 asks whether something exists or not."
       },
       "decomposition": {
         "hanViet": "Hữu",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "𠂇",
+          "月"
+        ],
+        "componentNames": [
+          "tay/phải",
+          "thịt/trăng"
+        ],
+        "relatedKanji": [
+          "無",
+          "在",
+          "持",
+          "存"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Huu",
-        "meaningViNoAccent": "co; ton tai",
-        "meaningEnNoAccent": "have, own, possess; exist"
+        "meaningViNoAccent": "co; ton tai; so huu",
+        "meaningEnNoAccent": "possess; have; exist"
       },
       "examples": [
         {
-          "word": "有難う",
-          "reading": "ありがとう",
-          "meaning": "Thank you"
+          "word": "有無",
+          "reading": "うむ",
+          "meaning": "có hay không; sự tồn tại",
+          "meaningEn": "presence or absence"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k096",
@@ -368,52 +479,76 @@
       "strokeCount": 19,
       "labels": {
         "hanViet": "Nan",
-        "meaningVi": "khó; gian nan",
-        "meaningViDisplay": "難 (khó; gian nan)",
-        "meaningEn": "difficult, arduous, hard; unable"
+        "meaningVi": "khó; gian nan; tai nạn",
+        "meaningViDisplay": "Nan (khó; gian nan; tai nạn)",
+        "meaningEn": "difficult; trouble; accident"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ナン"
+        ],
         "kunyomi": [
-          "ありがとう"
+          "かた.い",
+          "-がた.い",
+          "むずか.しい",
+          "むづか.しい",
+          "むつか.しい",
+          "-にく.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 難 nghĩa là khó; gian nan. Ví dụ JLPT N1: 有難う (Thank you).",
-        "en": "Kanji 難 means difficult, arduous, hard; unable. JLPT N1 example: 有難う (Thank you)."
+        "vi": "難 là khó hoặc nạn; 困難 là tình huống khó khăn, gian nan.",
+        "en": "難 means difficulty or trouble; 困難 is a difficult or challenging situation."
       },
       "decomposition": {
         "hanViet": "Nan",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "𦰩",
+          "隹"
+        ],
+        "componentNames": [
+          "khó/hiếm",
+          "chim đuôi ngắn"
+        ],
+        "relatedKanji": [
+          "困",
+          "易",
+          "有",
+          "災"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nan",
-        "meaningViNoAccent": "kho; gian nan",
-        "meaningEnNoAccent": "difficult, arduous, hard; unable"
+        "meaningViNoAccent": "kho; gian nan; tai nan",
+        "meaningEnNoAccent": "difficult; trouble; accident"
       },
       "examples": [
         {
-          "word": "有難う",
-          "reading": "ありがとう",
-          "meaning": "Thank you"
+          "word": "困難",
+          "reading": "こんなん",
+          "meaning": "khó khăn; gian nan",
+          "meaningEn": "difficulty; hardship"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing verified duplicate rows for 粗, 争, 改, 凡, 有, and 難",
+    "Existing vocabulary examples for 粗筋, 争い, 改まる, 凡ゆる, 現われ, 有無, and 困難"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

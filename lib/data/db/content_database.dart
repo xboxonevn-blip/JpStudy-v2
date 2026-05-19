@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 42;
+const _kanjiSeedRevision = 43;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -127,6 +127,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '英',
     meaning: 'Anh (Anh; nước Anh; tiếng Anh; ưu tú)',
     decompositionContains: '"hanViet":"Anh"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 17,
+    character: '宴',
+    meaning: 'Yến (yến; tiệc; yến tiệc; tiệc rượu)',
+    decompositionContains: '"hanViet":"Yến"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

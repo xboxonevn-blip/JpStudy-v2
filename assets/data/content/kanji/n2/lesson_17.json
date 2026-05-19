@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 17,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k129",
@@ -18,37 +18,45 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Yến",
-        "meaningVi": "party, banquet",
-        "meaningViDisplay": "宴 (party, banquet)",
-        "meaningEn": "party, banquet"
+        "meaningVi": "yến; tiệc; yến tiệc; tiệc rượu",
+        "meaningViDisplay": "Yến (yến; tiệc; yến tiệc; tiệc rượu)",
+        "meaningEn": "banquet, feast, party"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン"
+        ],
         "kunyomi": [
-          "えんかい"
+          "うたげ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 宴会 (party, banquet).",
-        "en": "Appears in JLPT N2 vocabulary: 宴会 (party, banquet)."
+        "vi": "宴 là bữa tiệc hoặc yến tiệc; trong 宴会, nó nhấn mạnh không khí đãi tiệc.",
+        "en": "宴 means a banquet or feast; in 宴会 it highlights the party/banquet setting."
       },
       "decomposition": {
         "hanViet": "Yến",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "会",
+          "酒",
+          "食",
+          "楽"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Yen",
-        "meaningViNoAccent": "party, banquet",
-        "meaningEnNoAccent": "party, banquet"
+        "meaningViNoAccent": "yen; tiec; yen tiec; tiec ruou",
+        "meaningEnNoAccent": "banquet, feast, party"
       },
       "examples": [
         {
           "word": "宴会",
           "reading": "えんかい",
-          "meaning": "party, banquet"
+          "meaning": "tiệc; yến tiệc",
+          "meaningEn": "party, banquet"
         }
       ],
       "tags": [
@@ -56,9 +64,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k130",
@@ -68,37 +77,48 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Hội",
-        "meaningVi": "party, banquet",
-        "meaningViDisplay": "会 (party, banquet)",
-        "meaningEn": "party, banquet"
+        "meaningVi": "hội; gặp gỡ; cuộc họp; hội nhóm",
+        "meaningViDisplay": "Hội (hội; gặp gỡ; cuộc họp; hội nhóm)",
+        "meaningEn": "meeting, meet, party, association"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カイ",
+          "エ"
+        ],
         "kunyomi": [
-          "えんかい"
+          "あ.う",
+          "あ.わせる",
+          "あつ.まる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 宴会 (party, banquet).",
-        "en": "Appears in JLPT N2 vocabulary: 宴会 (party, banquet)."
+        "vi": "会 là gặp nhau, cuộc họp hoặc hội nhóm; trong 宴会, nó là buổi tụ họp để dự tiệc.",
+        "en": "会 means meeting, gathering, or association; in 宴会 it is the gathering part of a banquet."
       },
       "decomposition": {
         "hanViet": "Hội",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "宴",
+          "合",
+          "社",
+          "集"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoi",
-        "meaningViNoAccent": "party, banquet",
-        "meaningEnNoAccent": "party, banquet"
+        "meaningViNoAccent": "hoi; gap go; cuoc hop; hoi nhom",
+        "meaningEnNoAccent": "meeting, meet, party, association"
       },
       "examples": [
         {
           "word": "宴会",
           "reading": "えんかい",
-          "meaning": "party, banquet"
+          "meaning": "tiệc; yến tiệc",
+          "meaningEn": "party, banquet"
         }
       ],
       "tags": [
@@ -106,9 +126,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k131",
@@ -118,37 +139,45 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Viên",
-        "meaningVi": "horticulture, gardening",
-        "meaningViDisplay": "園 (horticulture, gardening)",
-        "meaningEn": "horticulture, gardening"
+        "meaningVi": "viên; vườn; công viên; khu vườn",
+        "meaningViDisplay": "Viên (viên; vườn; công viên; khu vườn)",
+        "meaningEn": "park, garden, yard, farm"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン"
+        ],
         "kunyomi": [
-          "えんげい"
+          "その"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 園芸 (horticulture, gardening).",
-        "en": "Appears in JLPT N2 vocabulary: 園芸 (horticulture, gardening)."
+        "vi": "園 là khu vườn, công viên hoặc trang trại nhỏ; trong 園芸, nó là không gian trồng cây.",
+        "en": "園 means garden, park, or yard; in 園芸 it is the garden space for growing plants."
       },
       "decomposition": {
         "hanViet": "Viên",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "庭",
+          "公",
+          "花",
+          "芸"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vien",
-        "meaningViNoAccent": "horticulture, gardening",
-        "meaningEnNoAccent": "horticulture, gardening"
+        "meaningViNoAccent": "vien; vuon; cong vien; khu vuon",
+        "meaningEnNoAccent": "park, garden, yard, farm"
       },
       "examples": [
         {
           "word": "園芸",
           "reading": "えんげい",
-          "meaning": "horticulture, gardening"
+          "meaning": "làm vườn; nghề trồng cây cảnh",
+          "meaningEn": "horticulture, gardening"
         }
       ],
       "tags": [
@@ -156,9 +185,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k132",
@@ -168,45 +198,57 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Nghệ",
-        "meaningVi": "horticulture, gardening",
-        "meaningViDisplay": "芸 (horticulture, gardening)",
-        "meaningEn": "horticulture, gardening"
+        "meaningVi": "nghệ; nghệ thuật; kỹ nghệ; kỹ thuật",
+        "meaningViDisplay": "Nghệ (nghệ; nghệ thuật; kỹ nghệ; kỹ thuật)",
+        "meaningEn": "technique, art, craft, performance"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゲイ",
+          "ウン"
+        ],
         "kunyomi": [
-          "えんげい"
+          "う.える",
+          "のり",
+          "わざ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 園芸 (horticulture, gardening).",
-        "en": "Appears in JLPT N2 vocabulary: 園芸 (horticulture, gardening)."
+        "vi": "芸 chỉ kỹ nghệ, nghệ thuật hoặc kỹ thuật; trong 園芸, nó là kỹ thuật chăm sóc vườn cây.",
+        "en": "芸 means art, craft, or technique; in 園芸 it is the technique of gardening."
       },
       "decomposition": {
         "hanViet": "Nghệ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "園",
+          "技",
+          "術",
+          "才"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nghe",
-        "meaningViNoAccent": "horticulture, gardening",
-        "meaningEnNoAccent": "horticulture, gardening"
+        "meaningViNoAccent": "nghe; nghe thuat; ky nghe; ky thuat",
+        "meaningEnNoAccent": "technique, art, craft, performance"
       },
       "examples": [
         {
           "word": "園芸",
           "reading": "えんげい",
-          "meaning": "horticulture, gardening"
+          "meaning": "làm vườn; nghề trồng cây cảnh",
+          "meaningEn": "horticulture, gardening"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,37 +260,44 @@
       "strokeCount": 14,
       "labels": {
         "hanViet": "Diễn",
-        "meaningVi": "play (theatrical)",
-        "meaningViDisplay": "演 (play (theatrical))",
-        "meaningEn": "play (theatrical)"
+        "meaningVi": "diễn; biểu diễn; diễn xuất; trình bày",
+        "meaningViDisplay": "Diễn (diễn; biểu diễn; diễn xuất; trình bày)",
+        "meaningEn": "performance, act, play, stage"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン"
+        ],
         "kunyomi": [
-          "えんげき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 演劇 (play (theatrical)).",
-        "en": "Appears in JLPT N2 vocabulary: 演劇 (play (theatrical))."
+        "vi": "演 là biểu diễn hoặc trình bày trước người khác; trong 演劇, nó là phần diễn xuất trên sân khấu.",
+        "en": "演 means to perform or present; in 演劇 it is the act of theatrical performance."
       },
       "decomposition": {
         "hanViet": "Diễn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "劇",
+          "舞",
+          "説",
+          "表"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dien",
-        "meaningViNoAccent": "play (theatrical)",
-        "meaningEnNoAccent": "play (theatrical)"
+        "meaningViNoAccent": "dien; bieu dien; dien xuat; trinh bay",
+        "meaningEnNoAccent": "performance, act, play, stage"
       },
       "examples": [
         {
           "word": "演劇",
           "reading": "えんげき",
-          "meaning": "play (theatrical)"
+          "meaning": "kịch; sân khấu",
+          "meaningEn": "theatre, drama, play"
         }
       ],
       "tags": [
@@ -256,9 +305,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k134",
@@ -268,37 +318,44 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Kịch",
-        "meaningVi": "play (theatrical)",
-        "meaningViDisplay": "劇 (play (theatrical))",
-        "meaningEn": "play (theatrical)"
+        "meaningVi": "kịch; sân khấu; vở kịch",
+        "meaningViDisplay": "Kịch (kịch; sân khấu; vở kịch)",
+        "meaningEn": "drama, play, theatre"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゲキ"
+        ],
         "kunyomi": [
-          "えんげき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 演劇 (play (theatrical)).",
-        "en": "Appears in JLPT N2 vocabulary: 演劇 (play (theatrical))."
+        "vi": "劇 là kịch hoặc vở diễn; trong 演劇, nó chỉ loại hình sân khấu/kịch nghệ.",
+        "en": "劇 means drama or play; in 演劇 it marks theatrical drama."
       },
       "decomposition": {
         "hanViet": "Kịch",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "演",
+          "舞",
+          "場",
+          "戯"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Kich",
-        "meaningViNoAccent": "play (theatrical)",
-        "meaningEnNoAccent": "play (theatrical)"
+        "meaningViNoAccent": "kich; san khau; vo kich",
+        "meaningEnNoAccent": "drama, play, theatre"
       },
       "examples": [
         {
           "word": "演劇",
           "reading": "えんげき",
-          "meaning": "play (theatrical)"
+          "meaning": "kịch; sân khấu",
+          "meaningEn": "theatre, drama, play"
         }
       ],
       "tags": [
@@ -306,9 +363,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k135",
@@ -318,45 +376,58 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Viên",
-        "meaningVi": "circumference",
-        "meaningViDisplay": "円 (circumference)",
-        "meaningEn": "circumference"
+        "meaningVi": "viên; tròn; đồng yên; vòng tròn",
+        "meaningViDisplay": "Viên (viên; tròn; đồng yên; vòng tròn)",
+        "meaningEn": "circle, yen, round"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン"
+        ],
         "kunyomi": [
-          "えんしゅう"
+          "まる.い",
+          "まる",
+          "まど",
+          "まど.か",
+          "まろ.やか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 円周 (circumference).",
-        "en": "Appears in JLPT N2 vocabulary: 円周 (circumference)."
+        "vi": "円 là hình tròn hoặc đồng yên; trong 円周, nó là đường tròn đang được đo chu vi.",
+        "en": "円 means circle or yen; in 円周 it is the circle whose circumference is measured."
       },
       "decomposition": {
         "hanViet": "Viên",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "周",
+          "丸",
+          "金",
+          "貨"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vien",
-        "meaningViNoAccent": "circumference",
-        "meaningEnNoAccent": "circumference"
+        "meaningViNoAccent": "vien; tron; dong yen; vong tron",
+        "meaningEnNoAccent": "circle, yen, round"
       },
       "examples": [
         {
           "word": "円周",
           "reading": "えんしゅう",
-          "meaning": "circumference"
+          "meaning": "chu vi",
+          "meaningEn": "circumference"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +439,45 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Chu",
-        "meaningVi": "circumference",
-        "meaningViDisplay": "周 (circumference)",
-        "meaningEn": "circumference"
+        "meaningVi": "chu; chu vi; vòng quanh; xung quanh",
+        "meaningViDisplay": "Chu (chu; chu vi; vòng quanh; xung quanh)",
+        "meaningEn": "circumference, circuit, lap"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュウ"
+        ],
         "kunyomi": [
-          "えんしゅう"
+          "まわ.り"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 円周 (circumference).",
-        "en": "Appears in JLPT N2 vocabulary: 円周 (circumference)."
+        "vi": "周 là vòng quanh hoặc chu vi; trong 円周, nó là độ dài đi quanh đường tròn.",
+        "en": "周 means around, circuit, or circumference; in 円周 it is the measure around a circle."
       },
       "decomposition": {
         "hanViet": "Chu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "円",
+          "囲",
+          "回",
+          "辺"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chu",
-        "meaningViNoAccent": "circumference",
-        "meaningEnNoAccent": "circumference"
+        "meaningViNoAccent": "chu; chu vi; vong quanh; xung quanh",
+        "meaningEnNoAccent": "circumference, circuit, lap"
       },
       "examples": [
         {
           "word": "円周",
           "reading": "えんしゅう",
-          "meaning": "circumference"
+          "meaning": "chu vi",
+          "meaningEn": "circumference"
         }
       ],
       "tags": [
@@ -406,14 +485,17 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "Unicode Unihan kVietnamese",
+    "JpStudy N2 vocab context"
   ],
   "tags": []
 }

@@ -863,3 +863,30 @@ Runtime note: bumped content DB Kanji seed revision from `37` to `38` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `112` to `104`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`).
 
 Live proof after deploy: after `ce8ff3a6` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-38 metadata. Filtering `承` showed the updated N2 lesson-12 card; opening it showed `Thừa (tiếp nhận; thừa nhận; kính nghe)`, Hán-Việt `Thừa`, on `ショウ, ジョウ`, kun `うけたまわ.る, う.ける`, stroke count `8`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 13 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos vocabulary context for `持つ`, `薄い`, `暗い`, `打つ`, `合う`, `消える`, `討つ`, and `映る`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `持` | KANJIDIC2 readings `ジ`, `も.つ/-も.ち/も.てる`, Vietnamese `Trì`, meanings `hold`, `have`; Unihan `kVietnamese=trì`, `kDefinition=sustain, support; hold, grasp`; local context `持つ` | Corrected the row away from whole-word fallback to `Trì (cầm; giữ; mang; duy trì)`, added readings/search text, direct example `持つ`, and hand/hold related kanji. |
+| `薄` | KANJIDIC2 reading `ハク`, `うす.い/うす-/-うす/うす.める/うす.まる/うす.らぐ/うす.ら-`, Vietnamese `Bạc`, meanings `dilute`, `thin`, `weak`; Unihan `kVietnamese=bạc`, `kDefinition=thin, slight, weak`; local context `薄い` | Rewrote display to `Bạc (mỏng; nhạt; yếu)`, added readings/search text, direct example `薄い`, and thin/weak related kanji. |
+| `暗` | KANJIDIC2 reading `アン`, `くら.い/くら.む/くれ.る`, Vietnamese `Ám`, meanings `darkness`, `disappear`, `shade`; Unihan `kVietnamese=ám`, `kDefinition=dark, obscure`; local context `暗い` | Rewrote display to `Ám (tối; u ám; không rõ)`, added readings/search text, direct example `暗い`, and dark/light related kanji. |
+| `打` | KANJIDIC2 reading `ダ/ダース`, `う.つ/う.ち-/ぶ.つ`, Vietnamese `Đả`, meanings `strike`, `hit`; Unihan `kVietnamese=đả`, `kDefinition=strike, hit, beat`; local context `打つ` | Rewrote display to `Đả (đánh; gõ; tấn công)`, added readings/search text, direct example `打つ`, and hand/action related kanji. |
+| `合` | KANJIDIC2 readings `ゴウ/ガッ/カッ`, `あ.う/-あ.う/あ.い/あい-/あ.わす/あ.わせる/-あ.わせる`, Vietnamese `Hợp`, meanings `fit`, `suit`, `join`; Unihan `kVietnamese=hợp`, `kDefinition=combine, unite, join`; local context `合う` | Corrected the row away from whole-word context to `Hợp (hợp; kết hợp; phù hợp)`, added readings/search text, direct example `合う`, and join/fit related kanji. |
+| `消` | KANJIDIC2 reading `ショウ`, `き.える/け.す`, Vietnamese `Tiêu`, meanings `extinguish`, `turn off`, `cancel`; Unihan `kVietnamese=tiêu`, `kDefinition=vanish, die out; melt away`; local context `消える` | Rewrote display to `Tiêu (biến mất; dập tắt; xóa đi)`, added readings/search text, direct example `消える`, and vanish/remove related kanji. |
+| `討` | KANJIDIC2 reading `トウ`, `う.つ`, Vietnamese `Thảo`, meanings `chastise`, `attack`, `defeat`; Unihan `kVietnamese=thảo`, `kDefinition=to discuss; ask for, demand; beg`; local context `討つ` | Rewrote display to `Thảo (đánh dẹp; thảo phạt; bàn luận)`, added readings/search text, direct example `討つ`, and attack/discuss related kanji. |
+| `映` | KANJIDIC2 reading `エイ`, `うつ.る/うつ.す/は.える/-ば.え`, Vietnamese `Ánh`, meanings `reflect`, `projection`; Unihan `kVietnamese=ánh`, `kDefinition=project; reflect light`; local context `映る` | Rewrote display to `Ánh (phản chiếu; chiếu hình; nổi bật)`, added readings/search text, direct example `映る`, and light/image related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `38` to `39` and added an N2 lesson-13 sentinel for `持` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `104` to `96`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`). Release web build succeeded before deploy.
+
+Live proof after deploy: after `0601e111` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-39 metadata. Filtering `持` showed the updated N2 lesson-13 card; opening it showed `Trì (cầm; giữ; mang; duy trì)`, Hán-Việt `Trì`, on `ジ`, kun `も.つ, -も.ち, も.てる`, stroke count `9`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

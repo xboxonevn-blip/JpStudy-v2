@@ -800,3 +800,11 @@
 - Fixed user-visible grammar reseed path: `GrammarSeeder` revision `12`, `fetchPointsByLevel` now invokes the versioned seeder, and seed-key matching no longer collapses unrelated Japanese grammar keys.
 - Verified: focused suite `68/68`, `flutter analyze lib test` clean, content status machine/open-review `0`, full `flutter test` `2343/2343`, release build pass, deploy pass.
 - Live proof: existing production browser, normal cache, no IndexedDB clear. `/#/grammar` at N2 upgraded `flutter.grammar_data_version_N2` to `12`; searching/opening `ことなく` rendered `Verb-dictionary form + ことなく` and `Cấu trúc: V辞書形 + ことなく.` Console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N2 Lessons 6-10 Batch
+
+- Source-verified 38 N2 grammar points in lessons 6-10; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected `っこない` formation/explanation to `Verb-ます stem + っこない` / `Vます bỏ ます + っこない`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `13`.
+- Verified under Directive C: JSON/tag check `38/38`, focused suite `62/62`, `flutter analyze lib test` clean, UI string guard `0`, content status machine/open-review `0`, release build pass, deploy pass. Full `flutter test` intentionally deferred until N2 grammar level completion or next non-trivial Dart logic change.
+- Live proof: existing production browser, normal cache. `/#/grammar` at N2 upgraded `flutter.grammar_data_version_N2` to `13`; searching/opening `っこない` rendered `Verb-ます stem + っこない` and `Cấu trúc: Vます bỏ ます + っこない.` Console warnings/errors `0`.

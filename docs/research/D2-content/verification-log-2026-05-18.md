@@ -1798,3 +1798,21 @@ Runtime note: the rendered Grammar UI uses `AppDatabase`/`GrammarSeeder`, not `C
 Verification: focused DB/taxonomy/upper-JLPT/practice-bank/widget tests passed (`68`); `flutter analyze lib test` clean; content status machine/open-review `0`; full `flutter test` passed (`2343`); release web build passed; Firebase Hosting deploy completed.
 
 Live proof after deploy: the existing production browser was not reset and used normal cache. Reloading `https://jpstudy.web.app/#/grammar` upgraded `flutter.grammar_data_version_N2` to `12`. Searching `ことなく` rendered `Verb-dictionary form + ことなく`; opening the detail screen rendered `KẾT NỐI: Verb-dictionary form + ことなく` and the explanation sentence containing `Cấu trúc: V辞書形 + ことなく.` New console warnings/errors after the interaction: `0`.
+
+## Grammar N2 Lessons 6-10 Source-Verified Batch
+
+This batch covers all 38 grammar points in `grammar_n2_6.json` through `grammar_n2_10.json`. Sources consulted for the batch: local Hanabira grammar import JSON, AmgiDex JLPT N2 grammar list, AI Japanese Tutor JLPT N2 grammar list, and MLC Japanese notes where the point appears. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N2-6 | `あまり`, `うちに`, `がい`, `かいがあって`, `かいもなく`, `かける`, `がち` | Checked usage/formation and tagged each item `vi-source-verified`. |
+| N2-7 | `か～ないかのうちに`, `かねない`, `かねる`, `かのようだ`, `か～まいか`, `からこそ`, `からして`, `からすると` | Checked usage/formation and tagged each item `vi-source-verified`. |
+| N2-8 | `からといって`, `から～にかけて`, `からには`, `から見ると`, `から言うと`, `くせに`, `ことから`, `ことに` | Checked usage/formation and tagged each item `vi-source-verified`. |
+| N2-9 | `ことになっている`, `さえ～ば`, `ざるを得ない`, `ずにはいられない`, `そうにない`, `たかと思ったら`, `たきり` | Checked usage/formation and tagged each item `vi-source-verified`. |
+| N2-10 | `だけあって`, `だけましだ`, `たところ`, `たとたん`, `だらけ`, `っこない`, `つつ`, `つつある` | Checked usage/formation and tagged each item `vi-source-verified`; corrected `っこない` formation from `Verb-negative stem + っこない` to `Verb-ます stem + っこない` with VI explanation `Vます bỏ ます + っこない`. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `13` so existing browsers reseed the changed N2 grammar rows.
+
+Verification: JSON parse/tag check passed (`38` items, `0` missing `vi-source-verified`); focused DB/taxonomy/upper-JLPT/practice-bank tests passed (`62`); `flutter analyze lib test` clean; UI string guard `0`; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was intentionally skipped for this content/revision batch under Directive C because it was already run after the previous non-trivial grammar seeding logic change and this batch did not complete the full level.
+
+Live proof after deploy: the existing production browser used normal cache. Reloading `https://jpstudy.web.app/#/grammar` upgraded `flutter.grammar_data_version_N2` from `12` to `13`. Searching `っこない` rendered `Verb-ます stem + っこない`; opening the detail screen rendered `KẾT NỐI: Verb-ます stem + っこない` and the explanation sentence containing `Cấu trúc: Vます bỏ ます + っこない.` New console warnings/errors after the interaction: `0`.

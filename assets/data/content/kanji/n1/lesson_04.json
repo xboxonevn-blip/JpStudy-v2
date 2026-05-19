@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 4,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 諦 and 悪 have no Unihan kVietnamese values, so learner-facing Sino-Vietnamese readings keep established values.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k025",
@@ -18,37 +18,53 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Thượng",
-        "meaningVi": "trên; đi lên; cấp trên",
-        "meaningViDisplay": "上 (trên; đi lên; cấp trên)",
-        "meaningEn": "top; superior, highest; go up, send up"
+        "meaningVi": "trên; lên; tăng",
+        "meaningViDisplay": "Thượng (trên; lên; tăng)",
+        "meaningEn": "above, up"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジョウ",
+          "ショウ",
+          "シャン"
+        ],
         "kunyomi": [
-          "あがり"
+          "うえ",
+          "うわ-",
+          "かみ",
+          "あ.げる",
+          "あ.がる",
+          "あ.がり",
+          "のぼ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 上 nghĩa là trên; đi lên; cấp trên. Ví dụ JLPT N1: 上がり (1. slope, advance income, crop yield, ascent, rise, advance, death, spinning, completion, stop, finish, after).",
-        "en": "Kanji 上 means top; superior, highest; go up, send up. JLPT N1 example: 上がり (1. slope, advance income, crop yield, ascent, rise, advance, death, spinning, completion, stop, finish, after)."
+        "vi": "上 là ở trên hoặc đi lên; 上がり có thể chỉ sự tăng lên, phần thu được, hoặc lúc hoàn tất.",
+        "en": "上 means above or upward; 上がり can mark a rise, proceeds, or completion."
       },
       "decomposition": {
         "hanViet": "Thượng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "下",
+          "高",
+          "登",
+          "売"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thuong",
-        "meaningViNoAccent": "tren; đi len; cap tren",
-        "meaningEnNoAccent": "top; superior, highest; go up, send up"
+        "meaningViNoAccent": "tren; len; tang",
+        "meaningEnNoAccent": "above, up"
       },
       "examples": [
         {
           "word": "上がり",
           "reading": "あがり",
-          "meaning": "1. slope, advance income, crop yield, ascent, rise, advance, death, spinning, completion, stop, finish, after"
+          "meaning": "sự tăng; phần thu; lúc hoàn tất",
+          "meaningEn": "rise, proceeds, completion"
         }
       ],
       "tags": [
@@ -56,9 +72,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k026",
@@ -68,37 +85,45 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Thương",
-        "meaningVi": "buôn bán; thương mại",
-        "meaningViDisplay": "商 (buôn bán; thương mại)",
-        "meaningEn": "commerce, business, trade"
+        "meaningVi": "buôn bán; thương mại; thương nhân",
+        "meaningViDisplay": "Thương (buôn bán; thương mại; thương nhân)",
+        "meaningEn": "commerce, trade, merchant"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ"
+        ],
         "kunyomi": [
-          "あきうど"
+          "あきな.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 商 nghĩa là buôn bán; thương mại. Ví dụ JLPT N1: 商人 (trader, shopkeeper, merchant).",
-        "en": "Kanji 商 means commerce, business, trade. JLPT N1 example: 商人 (trader, shopkeeper, merchant)."
+        "vi": "商 liên quan đến buôn bán và thương mại; 商人 là người làm nghề buôn bán.",
+        "en": "商 relates to commerce and trade; 商人 is a merchant."
       },
       "decomposition": {
         "hanViet": "Thương",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "売",
+          "買",
+          "店",
+          "人"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thuong",
-        "meaningViNoAccent": "buon ban; thuong mai",
-        "meaningEnNoAccent": "commerce, business, trade"
+        "meaningViNoAccent": "buon ban; thuong mai; thuong nhan",
+        "meaningEnNoAccent": "commerce, trade, merchant"
       },
       "examples": [
         {
           "word": "商人",
           "reading": "あきうど",
-          "meaning": "trader, shopkeeper, merchant"
+          "meaning": "thương nhân; người buôn bán",
+          "meaningEn": "merchant, trader"
         }
       ],
       "tags": [
@@ -106,9 +131,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k027",
@@ -118,37 +144,48 @@
       "strokeCount": 2,
       "labels": {
         "hanViet": "Nhân",
-        "meaningVi": "người; nhân loại",
-        "meaningViDisplay": "人 (người; nhân loại)",
-        "meaningEn": "man; people; mankind; someone else"
+        "meaningVi": "người; con người",
+        "meaningViDisplay": "Nhân (người; con người)",
+        "meaningEn": "person"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジン",
+          "ニン"
+        ],
         "kunyomi": [
-          "あきうど"
+          "ひと",
+          "-り",
+          "-と"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 人 nghĩa là người; nhân loại. Ví dụ JLPT N1: 商人 (trader, shopkeeper, merchant).",
-        "en": "Kanji 人 means man; people; mankind; someone else. JLPT N1 example: 商人 (trader, shopkeeper, merchant)."
+        "vi": "人 là người hoặc con người; trong 商人, nó chỉ người làm nghề buôn bán.",
+        "en": "人 means a person; in 商人 it marks the person who trades."
       },
       "decomposition": {
         "hanViet": "Nhân",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "商",
+          "者",
+          "民",
+          "女"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhan",
-        "meaningViNoAccent": "nguoi; nhan loai",
-        "meaningEnNoAccent": "man; people; mankind; someone else"
+        "meaningViNoAccent": "nguoi; con nguoi",
+        "meaningEnNoAccent": "person"
       },
       "examples": [
         {
           "word": "商人",
           "reading": "あきうど",
-          "meaning": "trader, shopkeeper, merchant"
+          "meaning": "thương nhân; người buôn bán",
+          "meaningEn": "merchant, trader"
         }
       ],
       "tags": [
@@ -156,9 +193,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k028",
@@ -169,36 +207,50 @@
       "labels": {
         "hanViet": "Không",
         "meaningVi": "trống; bầu trời; không gian",
-        "meaningViDisplay": "空 (trống; bầu trời; không gian)",
-        "meaningEn": "empty, hollow, bare, deserted"
+        "meaningViDisplay": "Không (trống; bầu trời; không gian)",
+        "meaningEn": "empty, sky, void, vacant"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "クウ"
+        ],
         "kunyomi": [
-          "あきま"
+          "そら",
+          "あ.く",
+          "あ.き",
+          "あ.ける",
+          "から",
+          "す.く",
+          "むな.しい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 空 nghĩa là trống; bầu trời; không gian. Ví dụ JLPT N1: 空間 (vacancy, room for rent or lease).",
-        "en": "Kanji 空 means empty, hollow, bare, deserted. JLPT N1 example: 空間 (vacancy, room for rent or lease)."
+        "vi": "空 vừa là bầu trời vừa là khoảng trống; 空間 đọc くうかん nghĩa là không gian/khoảng không.",
+        "en": "空 means sky or emptiness; 空間 is read くうかん and means space."
       },
       "decomposition": {
         "hanViet": "Không",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "間",
+          "天",
+          "虚",
+          "室"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Khong",
         "meaningViNoAccent": "trong; bau troi; khong gian",
-        "meaningEnNoAccent": "empty, hollow, bare, deserted"
+        "meaningEnNoAccent": "empty, sky, void, vacant"
       },
       "examples": [
         {
           "word": "空間",
-          "reading": "あきま",
-          "meaning": "vacancy, room for rent or lease"
+          "reading": "くうかん",
+          "meaning": "không gian; khoảng không",
+          "meaningEn": "space"
         }
       ],
       "tags": [
@@ -206,9 +258,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k029",
@@ -218,37 +271,48 @@
       "strokeCount": 16,
       "labels": {
         "hanViet": "Đế",
-        "meaningVi": "xét kỹ; chú ý",
-        "meaningViDisplay": "諦 (xét kỹ; chú ý)",
-        "meaningEn": "careful, attentive"
+        "meaningVi": "chân lý; sáng tỏ; từ bỏ",
+        "meaningViDisplay": "Đế (chân lý; sáng tỏ; từ bỏ)",
+        "meaningEn": "truth, clarity, abandon, give up"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "テイ",
+          "タイ"
+        ],
         "kunyomi": [
-          "あきらめ"
+          "あきら.める",
+          "つまびらか",
+          "まこと"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 諦 nghĩa là xét kỹ; chú ý. Ví dụ JLPT N1: 諦め (sự từ bỏ, chấp nhận, cam chịu).",
-        "en": "Kanji 諦 means careful, attentive. JLPT N1 example: 諦め (sự từ bỏ, chấp nhận, cam chịu)."
+        "vi": "諦 gắn với chân lý/sự sáng tỏ; trong 諦め, nghĩa hiện đại là từ bỏ và chấp nhận thực tế.",
+        "en": "諦 relates to truth or clarity; in 諦め it means giving up or accepting reality."
       },
       "decomposition": {
         "hanViet": "Đế",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "真",
+          "言",
+          "断",
+          "決"
+        ]
       },
       "search": {
         "hanVietNoAccent": "De",
-        "meaningViNoAccent": "xet ky; chu y",
-        "meaningEnNoAccent": "careful, attentive"
+        "meaningViNoAccent": "chan ly; sang to; tu bo",
+        "meaningEnNoAccent": "truth, clarity, abandon, give up"
       },
       "examples": [
         {
           "word": "諦め",
           "reading": "あきらめ",
-          "meaning": "sự từ bỏ, chấp nhận, cam chịu"
+          "meaning": "sự từ bỏ; sự chấp nhận",
+          "meaningEn": "resignation, acceptance"
         }
       ],
       "tags": [
@@ -256,7 +320,8 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,37 +333,48 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Ngốc",
-        "meaningVi": "ngốc; đờ đẫn; kinh ngạc",
-        "meaningViDisplay": "呆 (ngốc; đờ đẫn; kinh ngạc)",
-        "meaningEn": "dull; dull-minded, simple, stupid"
+        "meaningVi": "ngốc; đờ đẫn; sửng sốt",
+        "meaningViDisplay": "Ngốc (ngốc; đờ đẫn; sửng sốt)",
+        "meaningEn": "amazed, shocked, dull"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ホウ"
+        ],
         "kunyomi": [
-          "あきれる"
+          "ほけ.る",
+          "ぼ.ける",
+          "あき.れる",
+          "おろか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 呆 nghĩa là ngốc; đờ đẫn; kinh ngạc. Ví dụ JLPT N1: 呆れる (to be amazed, to be shocked).",
-        "en": "Kanji 呆 means dull; dull-minded, simple, stupid. JLPT N1 example: 呆れる (to be amazed, to be shocked)."
+        "vi": "呆 diễn tả trạng thái ngây ra, đờ đẫn hoặc sửng sốt; 呆れる là kinh ngạc/chán ngán đến mức cạn lời.",
+        "en": "呆 marks being stunned, dull, or amazed; 呆れる is being shocked or dumbfounded."
       },
       "decomposition": {
         "hanViet": "Ngốc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "驚",
+          "愚",
+          "口",
+          "失"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ngoc",
-        "meaningViNoAccent": "ngoc; đo đan; kinh ngac",
-        "meaningEnNoAccent": "dull; dull-minded, simple, stupid"
+        "meaningViNoAccent": "ngoc; do dan; sung sot",
+        "meaningEnNoAccent": "amazed, shocked, dull"
       },
       "examples": [
         {
           "word": "呆れる",
           "reading": "あきれる",
-          "meaning": "to be amazed, to be shocked"
+          "meaning": "kinh ngạc; sửng sốt; chán ngán",
+          "meaningEn": "to be amazed, shocked"
         }
       ],
       "tags": [
@@ -306,9 +382,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k031",
@@ -318,37 +395,51 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Ác",
-        "meaningVi": "xấu; ác; điều ác",
-        "meaningViDisplay": "悪 (xấu; ác; điều ác)",
-        "meaningEn": "evil, wicked, bad, foul"
+        "meaningVi": "xấu; ác; sai trái",
+        "meaningViDisplay": "Ác (xấu; ác; sai trái)",
+        "meaningEn": "bad, vice, evil, wrong"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アク",
+          "オ"
+        ],
         "kunyomi": [
-          "あく"
+          "わる.い",
+          "わる-",
+          "あ.し",
+          "にく.い",
+          "-にく.い",
+          "にく.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 悪 nghĩa là xấu; ác; điều ác. Ví dụ JLPT N1: 悪 (cái ác, điều xấu, sự xấu xa).",
-        "en": "Kanji 悪 means evil, wicked, bad, foul. JLPT N1 example: 悪 (cái ác, điều xấu, sự xấu xa)."
+        "vi": "悪 là xấu, ác hoặc sai trái; 悪 đọc あく khi nói chung về cái ác/sự xấu xa.",
+        "en": "悪 means bad, evil, or wrong; 悪 read あく refers to evil or wrongdoing."
       },
       "decomposition": {
         "hanViet": "Ác",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "善",
+          "罪",
+          "害",
+          "嫌"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ac",
-        "meaningViNoAccent": "xau; ac; đieu ac",
-        "meaningEnNoAccent": "evil, wicked, bad, foul"
+        "meaningViNoAccent": "xau; ac; sai trai",
+        "meaningEnNoAccent": "bad, vice, evil, wrong"
       },
       "examples": [
         {
           "word": "悪",
           "reading": "あく",
-          "meaning": "cái ác, điều xấu, sự xấu xa"
+          "meaning": "điều ác; sự xấu xa",
+          "meaningEn": "evil, wickedness"
         }
       ],
       "tags": [
@@ -356,7 +447,8 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +460,45 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Hôi",
-        "meaningVi": "tro; bụi",
-        "meaningViDisplay": "灰 (tro; bụi)",
-        "meaningEn": "ashes; dust; lime, mortar"
+        "meaningVi": "tro; bụi tro; nước tro",
+        "meaningViDisplay": "Hôi (tro; bụi tro; nước tro)",
+        "meaningEn": "ashes, dust, lye"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カイ"
+        ],
         "kunyomi": [
-          "あく"
+          "はい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 灰 nghĩa là tro; bụi. Ví dụ JLPT N1: 灰 (puckery juice).",
-        "en": "Kanji 灰 means ashes; dust; lime, mortar. JLPT N1 example: 灰 (puckery juice)."
+        "vi": "灰 là tro hoặc bụi tro; 灰皿 là cái gạt tàn, vật chứa tro thuốc lá.",
+        "en": "灰 means ash or ash dust; 灰皿 is an ashtray, a dish for ashes."
       },
       "decomposition": {
         "hanViet": "Hôi",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "火",
+          "煙",
+          "皿",
+          "塵"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoi",
-        "meaningViNoAccent": "tro; bui",
-        "meaningEnNoAccent": "ashes; dust; lime, mortar"
+        "meaningViNoAccent": "tro; bui tro; nuoc tro",
+        "meaningEnNoAccent": "ashes, dust, lye"
       },
       "examples": [
         {
-          "word": "灰",
-          "reading": "あく",
-          "meaning": "puckery juice"
+          "word": "灰皿",
+          "reading": "はいざら",
+          "meaning": "cái gạt tàn",
+          "meaningEn": "ashtray"
         }
       ],
       "tags": [
@@ -406,14 +506,19 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

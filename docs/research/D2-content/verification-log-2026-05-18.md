@@ -944,3 +944,31 @@ Runtime note: bumped content DB Kanji seed revision from `40` to `41` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `88` to `80`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
 
 Live proof after deploy: after `8d39fa0c` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-41 metadata. Filtering `恨` showed the updated N2 lesson-15 card; opening it showed `Hận (oán hận; thù hằn; nỗi hận)`, Hán-Việt `Hận`, on `コン`, kun `うら.む, うら.めしい`, stroke count `9`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 16 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, Japanese-reading cross-checks, and `kTotalStrokes`.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `英文`, `英和`, `液体`, `絵の具`, and `偉い`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+- Wiktionary spot-check for `液` (`https://en.wiktionary.org/wiki/%E6%B6%B2`, `https://ja.wiktionary.org/wiki/%E6%B6%B2`, `https://vi.wiktionary.org/wiki/%E6%B6%B2`): the open entries list Vietnamese/Hán-Nôm readings including `giá` and `dịch`; this resolved the learner-facing Hán-Việt label to `Dịch` despite Unihan's `kVietnamese=giá`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `英` | KANJIDIC2 reading `エイ`, `はなぶさ`, meanings `England`, `English`, `hero`, `outstanding`; Unihan `kVietnamese=anh`; local context `英文` | Corrected the row away from whole-word `sentence in English` fallback to `Anh (Anh; nước Anh; tiếng Anh; ưu tú)`, added readings/search text, direct example `英文`, and English/language related kanji. |
+| `文` | KANJIDIC2 readings `ブン/モン`, `ふみ/あや`, meanings `sentence`, `literature`, `writing`; Unihan `kVietnamese=văn`; local context `英文` | Rewrote display to `Văn (văn; chữ viết; câu văn; văn chương)`, added readings/search text, direct example `英文`, and writing/language related kanji. |
+| `和` | KANJIDIC2 readings `ワ/オ/カ`, harmony/Japanese-style kunyomi, meanings `harmony`, `Japanese style`, `peace`, `Japan`; Unihan `kVietnamese=hoà`; local context `英和` | Corrected the row away from whole-word `English-Japanese dictionary` fallback to `Hoà (hòa; hòa hợp; Nhật Bản; kiểu Nhật)`, added readings/search text, direct example `英和`, and Japan/harmony related kanji. |
+| `液` | KANJIDIC2 reading `エキ`, meanings `fluid`, `liquid`, `juice`, `sap`; Unihan `kTotalStrokes=11`; Wiktionary cross-check for learner-facing `Dịch`; local context `液体` | Corrected the row away from English `liquid, fluid` and Unihan-only `Giá` to learner-facing `Dịch (dịch; chất lỏng; chất dịch)`, added readings/search text, direct example `液体`, and liquid/water related kanji. |
+| `体` | KANJIDIC2 readings `タイ/テイ`, `からだ/かたち`, meanings `body`, `substance`, `object`; Unihan `kVietnamese=thể`; local context `液体` | Corrected the row away from whole-word `liquid, fluid` fallback to `Thể (thể; thân thể; cơ thể; vật thể)`, added readings/search text, direct example `液体`, and body/form related kanji. |
+| `絵` | KANJIDIC2 readings `カイ/エ`, meanings `picture`, `drawing`, `painting`; Unihan Japanese reading cross-check; local context `絵の具` | Rewrote display to `Hội (hội; tranh; hình vẽ; hội họa)`, added readings/search text, direct example `絵の具`, and picture/color related kanji. |
+| `具` | KANJIDIC2 reading `グ`, `そな.える/つぶさ.に`, meanings `tool`, `utensil`, `means`, `ingredients`; Unihan `kVietnamese=cụ`; local context `絵の具` | Corrected the row away from whole-word `colors, paints` fallback to `Cụ (cụ; dụng cụ; thành phần; phương tiện)`, added readings/search text, direct example `絵の具`, and tool/use related kanji. |
+| `偉` | KANJIDIC2 reading `イ`, `えら.い`, meanings `admirable`, `great`, `remarkable`, `famous`; Unihan `kVietnamese=vĩ`, `kTotalStrokes=11`; local context `偉い` | Rewrote display to `Vĩ (vĩ; vĩ đại; nổi bật; đáng nể)`, added readings/search text, direct example `偉い`, and greatness/person related kanji. |
+
+Tagging: added entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `41` to `42` and added an N2 lesson-16 sentinel for `英` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `80` to `72`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
+
+Live proof after deploy: after `1f97e53b` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-42 metadata. Filtering `英` showed the updated N2 lesson-16 card with `Học chữ 英, Hán-Việt Anh, âm On エイ, âm Kun はなぶさ`; opening it showed `Anh (Anh; nước Anh; tiếng Anh; ưu tú)`, Hán-Việt `Anh`, on `エイ`, kun `はなぶさ`, stroke count `8`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

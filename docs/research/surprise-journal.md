@@ -663,3 +663,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N2 lesson 09 live proof initially showed stale `段` readings (`On -`, `Kun いちだんと`) even though Hosting served the updated JSON, because the browser reused the one-day cached Flutter runtime/content path. CDP `Network.setCacheDisabled` then loaded revision 35 and showed the updated `段` detail.
 - Delta: -20 percentage points on confidence that normal reloads can prove just-deployed content seed migrations under the current Hosting cache policy.
 - Updated belief: while app-shell/content assets use bounded cache, live proof for seed migrations must explicitly disable browser HTTP cache or use a truly fresh context before interpreting stale UI as a data/runtime defect.
+
+## 2026-05-19 - Unihan Hán-Việt can conflict with learner-facing Vietnamese
+
+- Prior belief: `kVietnamese` was usually sufficient as the Hán-Việt label for common kanji during source-verification batches.
+- Actual observation: Unihan lists `液` as `giá`, but learner-facing Vietnamese and open Wiktionary cross-checks support `Dịch` for the kanji in `液体`/`dịch`. Using the raw Unihan value would make a common N2 liquid term look wrong to Vietnamese learners.
+- Delta: -15 percentage points on confidence that one Hán-Việt source can be applied mechanically.
+- Updated belief: Unihan remains the default open source, but common learner-facing conflicts should be resolved with an explicit second open-source check and documented in the verification log.

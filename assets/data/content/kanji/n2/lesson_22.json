@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 22,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 父 keeps the established Sino-Vietnamese reading where Unihan has no kVietnamese value.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k169",
@@ -18,37 +18,46 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Tiếc",
-        "meaningVi": "regrettable, disappointing, precious",
-        "meaningViDisplay": "惜 (regrettable, disappointing, precious)",
-        "meaningEn": "regrettable, disappointing, precious"
+        "meaningVi": "tiếc; đáng tiếc; trân trọng; không nỡ",
+        "meaningViDisplay": "Tiếc (đáng tiếc; trân trọng; không nỡ)",
+        "meaningEn": "pity, regret, be sparing of, precious"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セキ"
+        ],
         "kunyomi": [
-          "おしい"
+          "お.しい",
+          "お.しむ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 惜しい (regrettable, disappointing, precious).",
-        "en": "Appears in JLPT N2 vocabulary: 惜しい (regrettable, disappointing, precious)."
+        "vi": "惜 là tiếc hoặc không nỡ buông bỏ; trong 惜しい, nó diễn tả điều đáng tiếc hay quá quý để bỏ phí.",
+        "en": "惜 means regret or reluctance to waste something; in 惜しい it marks something regrettable or precious."
       },
       "decomposition": {
         "hanViet": "Tiếc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "心",
+          "意",
+          "悪",
+          "急"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tiec",
-        "meaningViNoAccent": "regrettable, disappointing, precious",
-        "meaningEnNoAccent": "regrettable, disappointing, precious"
+        "meaningViNoAccent": "tiec; dang tiec; tran trong; khong no",
+        "meaningEnNoAccent": "pity, regret, be sparing of, precious"
       },
       "examples": [
         {
           "word": "惜しい",
           "reading": "おしい",
-          "meaning": "regrettable, disappointing, precious"
+          "meaning": "đáng tiếc; phí; quý giá",
+          "meaningEn": "regrettable, disappointing, precious"
         }
       ],
       "tags": [
@@ -56,9 +65,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k170",
@@ -68,37 +78,48 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Ngự",
-        "meaningVi": "bow",
-        "meaningViDisplay": "御 (bow)",
-        "meaningEn": "bow"
+        "meaningVi": "ngự; kính ngữ; điều khiển; cai quản",
+        "meaningViDisplay": "Ngự (kính ngữ; điều khiển; cai quản)",
+        "meaningEn": "honorable, manipulate, govern"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ギョ",
+          "ゴ"
+        ],
         "kunyomi": [
-          "おじぎ"
+          "おん-",
+          "お-",
+          "み-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 御辞儀 (bow).",
-        "en": "Appears in JLPT N2 vocabulary: 御辞儀 (bow)."
+        "vi": "御 thường làm tiền tố kính ngữ; trong 御辞儀, nó làm sắc thái cúi chào trở nên lịch sự.",
+        "en": "御 often acts as an honorific prefix; in 御辞儀 it gives the bow a polite, respectful tone."
       },
       "decomposition": {
         "hanViet": "Ngự",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "辞",
+          "儀",
+          "礼",
+          "治"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ngu",
-        "meaningViNoAccent": "bow",
-        "meaningEnNoAccent": "bow"
+        "meaningViNoAccent": "ngu; kinh ngu; dieu khien; cai quan",
+        "meaningEnNoAccent": "honorable, manipulate, govern"
       },
       "examples": [
         {
           "word": "御辞儀",
           "reading": "おじぎ",
-          "meaning": "bow"
+          "meaning": "cúi chào",
+          "meaningEn": "bow"
         }
       ],
       "tags": [
@@ -106,9 +127,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k171",
@@ -118,37 +140,46 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Từ",
-        "meaningVi": "bow",
-        "meaningViDisplay": "辞 (bow)",
-        "meaningEn": "bow"
+        "meaningVi": "từ; lời nói; thuật ngữ; từ chức",
+        "meaningViDisplay": "Từ (lời nói; thuật ngữ; từ chức)",
+        "meaningEn": "resign, word, term, expression"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジ"
+        ],
         "kunyomi": [
-          "おじぎ"
+          "や.める",
+          "いな.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 御辞儀 (bow).",
-        "en": "Appears in JLPT N2 vocabulary: 御辞儀 (bow)."
+        "vi": "辞 liên quan đến lời nói, cách diễn đạt hoặc từ chức; trong 御辞儀, chữ này nằm trong cụm chỉ lời/lễ cúi chào.",
+        "en": "辞 relates to words, expressions, or resigning; in 御辞儀 it is part of the set phrase for bowing."
       },
       "decomposition": {
         "hanViet": "Từ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "言",
+          "文",
+          "説",
+          "御"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tu",
-        "meaningViNoAccent": "bow",
-        "meaningEnNoAccent": "bow"
+        "meaningViNoAccent": "tu; loi noi; thuat ngu; tu chuc",
+        "meaningEnNoAccent": "resign, word, term, expression"
       },
       "examples": [
         {
           "word": "御辞儀",
           "reading": "おじぎ",
-          "meaning": "bow"
+          "meaning": "cúi chào",
+          "meaningEn": "bow"
         }
       ],
       "tags": [
@@ -156,9 +187,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k172",
@@ -168,37 +200,43 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Nghi",
-        "meaningVi": "bow",
-        "meaningViDisplay": "儀 (bow)",
-        "meaningEn": "bow"
+        "meaningVi": "nghi; nghi lễ; phép tắc; nghi thức",
+        "meaningViDisplay": "Nghi (nghi lễ; phép tắc; nghi thức)",
+        "meaningEn": "ceremony, rule, affair, case, matter"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "おじぎ"
-        ]
+        "onyomi": [
+          "ギ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 御辞儀 (bow).",
-        "en": "Appears in JLPT N2 vocabulary: 御辞儀 (bow)."
+        "vi": "儀 là nghi lễ hoặc phép tắc; trong 御辞儀, nó chỉ nghi thức cúi chào đúng phép.",
+        "en": "儀 means ceremony or formal manners; in 御辞儀 it is the ritual act of bowing."
       },
       "decomposition": {
         "hanViet": "Nghi",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "礼",
+          "御",
+          "辞",
+          "人"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nghi",
-        "meaningViNoAccent": "bow",
-        "meaningEnNoAccent": "bow"
+        "meaningViNoAccent": "nghi; nghi le; phep tac; nghi thuc",
+        "meaningEnNoAccent": "ceremony, rule, affair, case, matter"
       },
       "examples": [
         {
           "word": "御辞儀",
           "reading": "おじぎ",
-          "meaning": "bow"
+          "meaning": "cúi chào",
+          "meaningEn": "bow"
         }
       ],
       "tags": [
@@ -206,9 +244,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k173",
@@ -218,37 +257,43 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Bá",
-        "meaningVi": "middle-aged gentleman, uncle",
-        "meaningViDisplay": "伯 (middle-aged gentleman, uncle)",
-        "meaningEn": "middle-aged gentleman, uncle"
+        "meaningVi": "bá; bác trai; bậc trưởng; tước bá",
+        "meaningViDisplay": "Bá (bác trai; bậc trưởng; tước bá)",
+        "meaningEn": "chief, count, earl, uncle, Brazil"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "おじさん"
-        ]
+        "onyomi": [
+          "ハク"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 伯父さん (middle-aged gentleman, uncle).",
-        "en": "Appears in JLPT N2 vocabulary: 伯父さん (middle-aged gentleman, uncle)."
+        "vi": "伯 chỉ vai lớn tuổi/bậc trưởng; trong 伯父さん, nó là bác trai hoặc người đàn ông trung niên.",
+        "en": "伯 marks an elder male or senior rank; in 伯父さん it means an uncle or middle-aged man."
       },
       "decomposition": {
         "hanViet": "Bá",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "父",
+          "叔",
+          "人",
+          "白"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ba",
-        "meaningViNoAccent": "middle-aged gentleman, uncle",
-        "meaningEnNoAccent": "middle-aged gentleman, uncle"
+        "meaningViNoAccent": "ba; bac trai; bac truong; tuoc ba",
+        "meaningEnNoAccent": "chief, count, earl, uncle, brazil"
       },
       "examples": [
         {
           "word": "伯父さん",
           "reading": "おじさん",
-          "meaning": "middle-aged gentleman, uncle"
+          "meaning": "bác trai; chú/bác; người đàn ông trung niên",
+          "meaningEn": "uncle, middle-aged gentleman"
         }
       ],
       "tags": [
@@ -256,9 +301,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k174",
@@ -268,45 +314,54 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Phụ",
-        "meaningVi": "middle-aged gentleman, uncle",
-        "meaningViDisplay": "父 (middle-aged gentleman, uncle)",
-        "meaningEn": "middle-aged gentleman, uncle"
+        "meaningVi": "phụ; cha; bố",
+        "meaningViDisplay": "Phụ (cha; bố)",
+        "meaningEn": "father"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "フ"
+        ],
         "kunyomi": [
-          "おじさん"
+          "ちち"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 伯父さん (middle-aged gentleman, uncle).",
-        "en": "Appears in JLPT N2 vocabulary: 伯父さん (middle-aged gentleman, uncle)."
+        "vi": "父 là cha; trong 伯父さん và 叔父さん, nó xác định vai chú/bác thuộc nhánh nam trong gia đình.",
+        "en": "父 means father; in 伯父さん and 叔父さん it marks the male-family uncle relation."
       },
       "decomposition": {
         "hanViet": "Phụ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "母",
+          "親",
+          "兄",
+          "伯"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phu",
-        "meaningViNoAccent": "middle-aged gentleman, uncle",
-        "meaningEnNoAccent": "middle-aged gentleman, uncle"
+        "meaningViNoAccent": "phu; cha; bo",
+        "meaningEnNoAccent": "father"
       },
       "examples": [
         {
           "word": "伯父さん",
           "reading": "おじさん",
-          "meaning": "middle-aged gentleman, uncle"
+          "meaning": "bác trai; chú/bác",
+          "meaningEn": "uncle, middle-aged gentleman"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +373,48 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Tiểu",
-        "meaningVi": "middle-aged gentleman, uncle",
-        "meaningViDisplay": "小 (middle-aged gentleman, uncle)",
-        "meaningEn": "middle-aged gentleman, uncle"
+        "meaningVi": "tiểu; nhỏ; bé; ít",
+        "meaningViDisplay": "Tiểu (nhỏ; bé; ít)",
+        "meaningEn": "little, small"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ"
+        ],
         "kunyomi": [
-          "おじさん"
+          "ちい.さい",
+          "こ-",
+          "お-",
+          "さ-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 小父さん (middle-aged gentleman, uncle).",
-        "en": "Appears in JLPT N2 vocabulary: 小父さん (middle-aged gentleman, uncle)."
+        "vi": "小 là nhỏ; trong 小父さん, chữ này góp vào cách viết chỉ người đàn ông lớn tuổi/ông chú theo sắc thái thông dụng.",
+        "en": "小 means small; in 小父さん it appears in a common spelling for uncle or a middle-aged man."
       },
       "decomposition": {
         "hanViet": "Tiểu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "大",
+          "少",
+          "子",
+          "父"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tieu",
-        "meaningViNoAccent": "middle-aged gentleman, uncle",
-        "meaningEnNoAccent": "middle-aged gentleman, uncle"
+        "meaningViNoAccent": "tieu; nho; be; it",
+        "meaningEnNoAccent": "little, small"
       },
       "examples": [
         {
           "word": "小父さん",
           "reading": "おじさん",
-          "meaning": "middle-aged gentleman, uncle"
+          "meaning": "chú/bác; người đàn ông trung niên",
+          "meaningEn": "uncle, middle-aged gentleman"
         }
       ],
       "tags": [
@@ -356,9 +422,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k176",
@@ -368,37 +435,45 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Thúc",
-        "meaningVi": "middle-aged gentleman, uncle",
-        "meaningViDisplay": "叔 (middle-aged gentleman, uncle)",
-        "meaningEn": "middle-aged gentleman, uncle"
+        "meaningVi": "thúc; chú; em trai của cha; trẻ tuổi",
+        "meaningViDisplay": "Thúc (chú; em trai của cha; trẻ tuổi)",
+        "meaningEn": "uncle, youth"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュク"
+        ],
         "kunyomi": [
-          "おじさん"
+          "おじ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 叔父さん (middle-aged gentleman, uncle).",
-        "en": "Appears in JLPT N2 vocabulary: 叔父さん (middle-aged gentleman, uncle)."
+        "vi": "叔 chỉ chú hoặc vai nhỏ hơn trong họ hàng; trong 叔父さん, nó là chú/cậu thuộc nhánh em.",
+        "en": "叔 marks a younger uncle or junior relative; in 叔父さん it is the younger-uncle spelling."
       },
       "decomposition": {
         "hanViet": "Thúc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "父",
+          "伯",
+          "弟",
+          "親"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thuc",
-        "meaningViNoAccent": "middle-aged gentleman, uncle",
-        "meaningEnNoAccent": "middle-aged gentleman, uncle"
+        "meaningViNoAccent": "thuc; chu; em trai cua cha; tre tuoi",
+        "meaningEnNoAccent": "uncle, youth"
       },
       "examples": [
         {
           "word": "叔父さん",
           "reading": "おじさん",
-          "meaning": "middle-aged gentleman, uncle"
+          "meaning": "chú/cậu/bác; người đàn ông trung niên",
+          "meaningEn": "uncle, middle-aged gentleman"
         }
       ],
       "tags": [
@@ -406,14 +481,19 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "Unicode Unihan kVietnamese",
+    "JpStudy N2 vocab context"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

@@ -1431,3 +1431,30 @@ Runtime note: bumped content DB Kanji seed revision from `58` to `59` and added 
 Verification: coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `144` to `136`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `57cdbac4` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, and `/assets/assets/data/content/kanji/n1/lesson_08.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `化` showed `Hóa (biến đổi; biến hóa; -hóa)`, on `カ/ケ`, kun `ば.ける/ば.かす/ふ.ける/け.する`, stroke count `4`, and example `悪化/あっか = sự xấu đi; trở nên nghiêm trọng hơn`. Console errors/warnings: `0`.
+
+## Kanji N1 Lesson 9 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and Vietnamese readings where Unihan was absent or unsuitable for learner-facing Hán-Việt.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `継` and `溢` have no Unihan `kVietnamese`, and `女` is normalized to KANJIDIC2 learner-facing `Nữ` instead of Unihan `Nữa`.
+- Existing verified duplicate rows for `力`, `宛`, `跡`, and `女`, plus N1 vocabulary context for `圧力`, `跡継ぎ`, `後回し`, `貴い`, `女性`, and `溢れる`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `力` | KANJIDIC2 readings `リョク/リキ/リイ`, `ちから`; Unihan `kVietnamese=lực`; existing verified N2 row | Rewrote to `Lực (sức mạnh; lực; năng lực)`, replaced word-level `あつりょく` as a kanji reading with source-backed readings, and translated `圧力` as `áp lực; sức ép`. |
+| `宛` | KANJIDIC2 reading `エン`, `あ.てる/-あて/-づつ/あたか.も`; Unihan `kVietnamese=uyển`; existing verified N2 row | Rewrote to `Uyển (địa chỉ; gửi đến; giống như)`, replaced bare `宛/あて` example with `宛名/あてな`, and filled readings/components/related kanji. |
+| `跡` | KANJIDIC2 reading `セキ`, `あと`; Unihan `kVietnamese=tích`; existing verified N2 row | Rewrote to `Tích (dấu vết; vết tích; dấu chân)`, replaced word-level `あとつぎ` as a kanji reading, and used `足跡/あしあと` as the clearer learner example. |
+| `継` | KANJIDIC2 reading `ケイ`, `つ.ぐ/まま-`; no Unihan `kVietnamese`; local context `跡継ぎ` | Rewrote to `Kế (kế tục; nối tiếp; thừa kế)`, replaced word-level `あとつぎ` as a kanji reading, and kept `跡継ぎ` as the usage example. |
+| `回` | KANJIDIC2 readings `カイ/エ`, `まわ.る/.../か.える`; Unihan `kVietnamese=hồi`; local context `後回し` | Rewrote to `Hồi (lần; vòng; quay)`, replaced word-level `あとまわし` as a kanji reading, and translated `後回し` as `để sau; trì hoãn`. |
+| `貴` | KANJIDIC2 reading `キ`, `たっと.い/とうと.い/たっと.ぶ/とうと.ぶ`; Unihan `kVietnamese=quý` | Rewrote to `Quý (quý giá; đáng trọng; cao quý)`, replaced the `貴女/あなた` word-reading example with `貴い/たっとい`, and filled source-backed readings. |
+| `女` | KANJIDIC2 readings `ジョ/ニョ/ニョウ`, `おんな/め`; existing verified row uses `Nữ` | Corrected learner-facing Hán-Việt from `Nữa` to `Nữ`, replaced word-level `あなた` as a kanji reading, and used `女性/じょせい` as the example. |
+| `溢` | KANJIDIC2 reading `イツ`, `こぼ.れる/あふ.れる/み.ちる`; no Unihan `kVietnamese`; local context `溢れる` | Rewrote to `Dật (tràn; tràn ngập; đầy ắp)`, added source-backed readings/components/related kanji, and translated `溢れる` naturally. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `59` to `60` and added an N1 lesson-9 sentinel for `力` so existing browsers reseed the changed metadata.
+
+Verification: the owner cache audit was rechecked first. Current `firebase.json` and live Hosting return `Cache-Control: no-cache` for `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `assets/AssetManifest*`, and `assets/assets/data/content/**`; `sqlite3.wasm` and `drift_worker.js` remain `public, max-age=2592000`. The hosting cache guard test passed. Coverage audit reduced N1 incomplete current entries from `136` to `128`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `e35ae6ac` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_09.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; `力` showed `Lực (sức mạnh; lực; năng lực)`, on `リョク/リキ/リイ`, kun `ちから`, and `vi-source-verified`. `main.dart.js` and `AssetManifest.json` returned `no-cache`, while `sqlite3.wasm` returned `public, max-age=2592000`. Console errors/warnings for the current live page: `0`.

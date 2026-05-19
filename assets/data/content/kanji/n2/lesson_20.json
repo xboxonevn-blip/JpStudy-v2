@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 20,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 拝 uses learner-facing Bái for the Japanese shinjitai of 拜.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k153",
@@ -18,45 +18,57 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Mễ",
-        "meaningVi": "Europe and America, the West",
-        "meaningViDisplay": "米 (Europe and America, the West)",
-        "meaningEn": "Europe and America, the West"
+        "meaningVi": "mễ; gạo; lúa gạo; Hoa Kỳ",
+        "meaningViDisplay": "Mễ (mễ; gạo; lúa gạo; Hoa Kỳ)",
+        "meaningEn": "rice, USA, metre"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ベイ",
+          "マイ",
+          "メエトル"
+        ],
         "kunyomi": [
-          "おうべい"
+          "こめ",
+          "よね"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 欧米 (Europe and America, the West).",
-        "en": "Appears in JLPT N2 vocabulary: 欧米 (Europe and America, the West)."
+        "vi": "米 là gạo, nhưng trong 欧米 nó được dùng với nghĩa Mỹ/Hoa Kỳ trong cụm Âu Mỹ.",
+        "en": "米 means rice, but in 欧米 it represents America/USA in the Europe-America pair."
       },
       "decomposition": {
         "hanViet": "Mễ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "欧",
+          "飯",
+          "稲",
+          "国"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Me",
-        "meaningViNoAccent": "europe and america, the west",
-        "meaningEnNoAccent": "europe and america, the west"
+        "meaningViNoAccent": "me; gao; lua gao; hoa ky",
+        "meaningEnNoAccent": "rice, usa, metre"
       },
       "examples": [
         {
           "word": "欧米",
           "reading": "おうべい",
-          "meaning": "Europe and America, the West"
+          "meaning": "Âu Mỹ; phương Tây",
+          "meaningEn": "Europe and America, the West"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,37 +80,45 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Dụng",
-        "meaningVi": "application, put to practical use",
-        "meaningViDisplay": "用 (application, put to practical use)",
-        "meaningEn": "application, put to practical use"
+        "meaningVi": "dụng; dùng; sử dụng; công dụng",
+        "meaningViDisplay": "Dụng (dụng; dùng; sử dụng; công dụng)",
+        "meaningEn": "use, utilize, employ, service"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヨウ"
+        ],
         "kunyomi": [
-          "おうよう"
+          "もち.いる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 応用 (application, put to practical use).",
-        "en": "Appears in JLPT N2 vocabulary: 応用 (application, put to practical use)."
+        "vi": "用 là dùng hoặc áp dụng; trong 応用, nó là việc đưa kiến thức vào sử dụng thực tế.",
+        "en": "用 means to use or apply; in 応用 it is putting knowledge to practical use."
       },
       "decomposition": {
         "hanViet": "Dụng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "応",
+          "利",
+          "使",
+          "役"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dung",
-        "meaningViNoAccent": "application, put to practical use",
-        "meaningEnNoAccent": "application, put to practical use"
+        "meaningViNoAccent": "dung; dung; su dung; cong dung",
+        "meaningEnNoAccent": "use, utilize, employ, service"
       },
       "examples": [
         {
           "word": "応用",
           "reading": "おうよう",
-          "meaning": "application, put to practical use"
+          "meaning": "ứng dụng; áp dụng thực tế",
+          "meaningEn": "application, put to practical use"
         }
       ],
       "tags": [
@@ -106,9 +126,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k155",
@@ -118,37 +139,48 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Đại",
-        "meaningVi": "main street",
-        "meaningViDisplay": "大 (main street)",
-        "meaningEn": "main street"
+        "meaningVi": "đại; lớn; to; rộng",
+        "meaningViDisplay": "Đại (đại; lớn; to; rộng)",
+        "meaningEn": "large, big, great"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ダイ",
+          "タイ"
+        ],
         "kunyomi": [
-          "おおどおり"
+          "おお-",
+          "おお.きい",
+          "-おお.いに"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 大通り (main street).",
-        "en": "Appears in JLPT N2 vocabulary: 大通り (main street)."
+        "vi": "大 là lớn; trong 大通り, nó làm nổi bật con đường lớn/đại lộ.",
+        "en": "大 means big or large; in 大通り it marks a large main street."
       },
       "decomposition": {
         "hanViet": "Đại",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "小",
+          "通",
+          "広",
+          "多"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đai",
-        "meaningViNoAccent": "main street",
-        "meaningEnNoAccent": "main street"
+        "hanVietNoAccent": "Dai",
+        "meaningViNoAccent": "dai; lon; to; rong",
+        "meaningEnNoAccent": "large, big, great"
       },
       "examples": [
         {
           "word": "大通り",
           "reading": "おおどおり",
-          "meaning": "main street"
+          "meaning": "đại lộ; đường lớn",
+          "meaningEn": "main street"
         }
       ],
       "tags": [
@@ -156,9 +188,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k156",
@@ -168,37 +201,49 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Thông",
-        "meaningVi": "main street",
-        "meaningViDisplay": "通 (main street)",
-        "meaningEn": "main street"
+        "meaningVi": "thông; đi qua; lưu thông; đường phố",
+        "meaningViDisplay": "Thông (thông; đi qua; lưu thông; đường phố)",
+        "meaningEn": "pass through, traffic, avenue, commute"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ツウ",
+          "ツ"
+        ],
         "kunyomi": [
-          "おおどおり"
+          "とお.る",
+          "とお.り",
+          "-どお.り",
+          "かよ.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 大通り (main street).",
-        "en": "Appears in JLPT N2 vocabulary: 大通り (main street)."
+        "vi": "通 là đi qua hoặc lưu thông; trong 大通り, nó chỉ con đường cho người/xe qua lại.",
+        "en": "通 means passing through or traffic; in 大通り it is the street people and vehicles pass along."
       },
       "decomposition": {
         "hanViet": "Thông",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "大",
+          "道",
+          "路",
+          "交"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thong",
-        "meaningViNoAccent": "main street",
-        "meaningEnNoAccent": "main street"
+        "meaningViNoAccent": "thong; di qua; luu thong; duong pho",
+        "meaningEnNoAccent": "pass through, traffic, avenue, commute"
       },
       "examples": [
         {
           "word": "大通り",
           "reading": "おおどおり",
-          "meaning": "main street"
+          "meaning": "đại lộ; đường lớn",
+          "meaningEn": "main street"
         }
       ],
       "tags": [
@@ -206,9 +251,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k157",
@@ -218,37 +264,48 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Phàm",
-        "meaningVi": "about, roughly, as a rule, approximately",
-        "meaningViDisplay": "凡 (about, roughly, as a rule, approximately)",
-        "meaningEn": "about, roughly, as a rule, approximately"
+        "meaningVi": "phàm; bình thường; đại khái; nói chung",
+        "meaningViDisplay": "Phàm (phàm; bình thường; đại khái; nói chung)",
+        "meaningEn": "ordinary, commonplace, mediocre"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ボン",
+          "ハン"
+        ],
         "kunyomi": [
-          "おおよそ"
+          "およ.そ",
+          "おうよ.そ",
+          "すべ.て"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 大凡 (about, roughly, as a rule, approximately).",
-        "en": "Appears in JLPT N2 vocabulary: 大凡 (about, roughly, as a rule, approximately)."
+        "vi": "凡 là bình thường hoặc đại khái; trong 大凡, nó mang sắc thái 'ước chừng/nói chung'.",
+        "en": "凡 means ordinary or general; in 大凡 it gives the sense of roughly or generally."
       },
       "decomposition": {
         "hanViet": "Phàm",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "大",
+          "普",
+          "常",
+          "平"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Pham",
-        "meaningViNoAccent": "about, roughly, as a rule, approximately",
-        "meaningEnNoAccent": "about, roughly, as a rule, approximately"
+        "meaningViNoAccent": "pham; binh thuong; dai khai; noi chung",
+        "meaningEnNoAccent": "ordinary, commonplace, mediocre"
       },
       "examples": [
         {
           "word": "大凡",
           "reading": "おおよそ",
-          "meaning": "about, roughly, as a rule, approximately"
+          "meaning": "khoảng; xấp xỉ; nói chung",
+          "meaningEn": "about, roughly, as a rule, approximately"
         }
       ],
       "tags": [
@@ -256,9 +313,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k158",
@@ -268,45 +326,57 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Quy",
-        "meaningVi": "return, welcome",
-        "meaningViDisplay": "帰 (return, welcome)",
-        "meaningEn": "return, welcome"
+        "meaningVi": "quy; trở về; quay lại; quy về",
+        "meaningViDisplay": "Quy (quy; trở về; quay lại; quy về)",
+        "meaningEn": "return, homecoming, revert"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ"
+        ],
         "kunyomi": [
-          "おかえり"
+          "かえ.る",
+          "かえ.す",
+          "おく.る",
+          "とつ.ぐ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: お帰り (return, welcome).",
-        "en": "Appears in JLPT N2 vocabulary: お帰り (return, welcome)."
+        "vi": "帰 là trở về; trong お帰り, nó là lời chào khi ai đó quay về.",
+        "en": "帰 means to return; in お帰り it appears in the greeting used when someone comes home."
       },
       "decomposition": {
         "hanViet": "Quy",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "戻",
+          "復",
+          "家",
+          "来"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Quy",
-        "meaningViNoAccent": "return, welcome",
-        "meaningEnNoAccent": "return, welcome"
+        "meaningViNoAccent": "quy; tro ve; quay lai; quy ve",
+        "meaningEnNoAccent": "return, homecoming, revert"
       },
       "examples": [
         {
           "word": "お帰り",
           "reading": "おかえり",
-          "meaning": "return, welcome"
+          "meaning": "sự trở về; lời chào mừng về",
+          "meaningEn": "return, welcome"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,45 +388,55 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Bái",
-        "meaningVi": "to worship, to beg, to make a supplication",
-        "meaningViDisplay": "拝 (to worship, to beg, to make a supplication)",
-        "meaningEn": "to worship, to beg, to make a supplication"
+        "meaningVi": "bái; lễ bái; cúi lạy; cầu xin",
+        "meaningViDisplay": "Bái (bái; lễ bái; cúi lạy; cầu xin)",
+        "meaningEn": "worship, bow, pray to"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ハイ"
+        ],
         "kunyomi": [
-          "おがむ"
+          "おが.む",
+          "おろが.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 拝む (to worship, to beg, to make a supplication).",
-        "en": "Appears in JLPT N2 vocabulary: 拝む (to worship, to beg, to make a supplication)."
+        "vi": "拝 là bái/lễ bái hoặc cầu xin; trong 拝む, nó là hành động chắp tay cầu khấn.",
+        "en": "拝 means to bow, worship, or pray; in 拝む it is the act of praying or making supplication."
       },
       "decomposition": {
         "hanViet": "Bái",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "礼",
+          "祈",
+          "神",
+          "手"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bai",
-        "meaningViNoAccent": "to worship, to beg, to make a supplication",
-        "meaningEnNoAccent": "to worship, to beg, to make a supplication"
+        "meaningViNoAccent": "bai; le bai; cui lay; cau xin",
+        "meaningEnNoAccent": "worship, bow, pray to"
       },
       "examples": [
         {
           "word": "拝む",
           "reading": "おがむ",
-          "meaning": "to worship, to beg, to make a supplication"
+          "meaning": "lễ bái; cầu xin; khẩn cầu",
+          "meaningEn": "to worship, to beg, to make a supplication"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +448,50 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Đại",
-        "meaningVi": "second helping, another cup",
-        "meaningViDisplay": "代 (second helping, another cup)",
-        "meaningEn": "second helping, another cup"
+        "meaningVi": "đại; thay thế; đời; thế hệ",
+        "meaningViDisplay": "Đại (đại; thay thế; đời; thế hệ)",
+        "meaningEn": "substitute, replace, generation, age"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ダイ",
+          "タイ"
+        ],
         "kunyomi": [
-          "おかわり"
+          "か.わる",
+          "か.える",
+          "かわ.り",
+          "よ",
+          "しろ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: お代わり (second helping, another cup).",
-        "en": "Appears in JLPT N2 vocabulary: お代わり (second helping, another cup)."
+        "vi": "代 là thay thế hoặc một đời/thế hệ; trong お代わり, nó gợi phần thay thêm/phần nữa.",
+        "en": "代 means substitute or generation; in お代わり it suggests another serving replacing the previous one."
       },
       "decomposition": {
         "hanViet": "Đại",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "替",
+          "世",
+          "時",
+          "人"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đai",
-        "meaningViNoAccent": "second helping, another cup",
-        "meaningEnNoAccent": "second helping, another cup"
+        "hanVietNoAccent": "Dai",
+        "meaningViNoAccent": "dai; thay the; doi; the he",
+        "meaningEnNoAccent": "substitute, replace, generation, age"
       },
       "examples": [
         {
           "word": "お代わり",
           "reading": "おかわり",
-          "meaning": "second helping, another cup"
+          "meaning": "thêm phần nữa; thêm chén nữa",
+          "meaningEn": "second helping, another cup"
         }
       ],
       "tags": [
@@ -406,14 +499,19 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "Unicode Unihan kVietnamese",
+    "JpStudy N2 vocab context"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

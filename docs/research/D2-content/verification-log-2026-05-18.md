@@ -1053,3 +1053,30 @@ Runtime note: bumped content DB Kanji seed revision from `44` to `45` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `56` to `48`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
 
 Live proof after deploy: after `6e758b11` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `援` showed the updated one-card keyword result; opening `援` showed `Viện (viện; hỗ trợ; viện trợ; cứu giúp)`, Hán-Việt `Viện`, on `エン`, stroke count `12`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 20 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and stroke cross-checks.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `欧米`, `応用`, `大通り`, `大凡`, `お帰り`, `拝む`, and `お代わり`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `米` | KANJIDIC2 readings `ベイ/マイ/メエトル`, `こめ/よね`, Vietnamese `Mễ`, meanings `rice`, `USA`, `metre`; Unihan `kDefinition=hulled or husked uncooked rice`; local context `欧米` | Corrected the row away from whole-word `Europe and America, the West` fallback to `Mễ (mễ; gạo; lúa gạo; Hoa Kỳ)`, added readings/search text, direct example `欧米`, and rice/USA related kanji. |
+| `用` | KANJIDIC2 reading `ヨウ`, `もち.いる`, Vietnamese `Dụng`, meanings `utilize`, `use`, `employ`; Unihan `kVietnamese=dụng`; local context `応用` | Corrected the row away from whole-word `application, put to practical use` fallback to `Dụng (dụng; dùng; sử dụng; công dụng)`, added readings/search text, direct example `応用`, and use/application related kanji. |
+| `大` | KANJIDIC2 readings `ダイ/タイ`, large/big kunyomi, Vietnamese `Đại/Thái`, meanings `large`, `big`; Unihan `kVietnamese=đại`; local context `大通り` | Corrected the row away from whole-word `main street` fallback to `Đại (đại; lớn; to; rộng)`, added readings/search text, direct example `大通り`, and size/street related kanji. |
+| `通` | KANJIDIC2 readings `ツウ/ツ`, pass-through kunyomi, Vietnamese `Thông`, meanings `traffic`, `pass through`, `avenue`, `commute`; Unihan `kVietnamese=thông`; local context `大通り` | Corrected the row away from whole-word `main street` fallback to `Thông (thông; đi qua; lưu thông; đường phố)`, added readings/search text, direct example `大通り`, and traffic/road related kanji. |
+| `凡` | KANJIDIC2 readings `ボン/ハン`, `およ.そ/おうよ.そ/すべ.て`, Vietnamese `Phàm`, meanings `ordinary`, `commonplace`, `mediocre`; Unihan `kVietnamese=phàm`; local context `大凡` | Corrected the row away from whole-word approximate fallback to `Phàm (phàm; bình thường; đại khái; nói chung)`, added readings/search text, direct example `大凡`, and ordinary/general related kanji. |
+| `帰` | KANJIDIC2 reading `キ`, return kunyomi, Vietnamese `Quy`, meanings `homecoming`, `arrive at`, `lead to`; Unihan `kDefinition=return; return to, revert to`; local context `お帰り` | Corrected the row away from whole-word greeting fallback to `Quy (quy; trở về; quay lại; quy về)`, added readings/search text, direct example `お帰り`, and return/home related kanji. |
+| `拝` | KANJIDIC2 reading `ハイ`, `おが.む/おろが.む`, Vietnamese source variant `Bài`; Unihan `kDefinition=do obeisance, bow, kowtow`; local context `拝む` | Kept learner-facing `Bái` for the Japanese shinjitai of `拜`, corrected the row away from whole-word verb fallback to `Bái (bái; lễ bái; cúi lạy; cầu xin)`, added readings/search text, direct example `拝む`, and prayer/respect related kanji. |
+| `代` | KANJIDIC2 readings `ダイ/タイ`, substitute/generation kunyomi, Vietnamese `Đại`, meanings `substitute`, `replace`, `generation`, `fee`; Unihan `kVietnamese=đại`; local context `お代わり` | Corrected the row away from whole-word second-helping fallback to `Đại (đại; thay thế; đời; thế hệ)`, added readings/search text, direct example `お代わり`, and replacement/generation related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `45` to `46` and added an N2 lesson-20 sentinel for `米` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `48` to `40`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
+
+Live proof after deploy: after `1ed515fd` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `米` showed keyword results; opening `米` showed `Mễ (mễ; gạo; lúa gạo; Hoa Kỳ)`, Hán-Việt `Mễ`, on `ベイ, マイ, メエトル`, kun `こめ, よね`, stroke count `6`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

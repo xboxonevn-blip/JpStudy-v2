@@ -1960,3 +1960,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved`); focused DB/manifest/taxonomy/upper-JLPT/practice-bank/repository tests passed; `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; full `flutter test` passed (`2343`) because N3 grammar is now complete; release web build passed; Firebase Hosting deploy completed.
 
 Live proof after deploy: production browser used normal cache. The rendered N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `22`. The list rendered corrected rows for `N1 + から + N2 + にかけて`, `N + ほど + いAくない / なAではない / Vない`, `V普通形 / いA / なAな / N + ばかりでなく`, and `どんなに + Vても / いAくても / なAでも / Nでも`; opening `ばかりでなく` rendered the corrected `KẾT NỐI`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n3_21.json`, `grammar_n3_24.json`, and `grammar_n3_25.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.
+
+## Grammar N4 Lessons 26-30 Source-Verified Batch
+
+This batch covers all 20 grammar points in `grammar_n4_26.json` through `grammar_n4_30.json`. Sources consulted for the batch: local N4 curriculum JSON/examples, JLPT Mastery N4 grammar category list, AI Japanese Tutor `んです`, JLPT Sensei `ながら`/`ておく`, Bunpro `ておく`, JLPTBooks/JapaneseAZ/Enuncia notes for `てある`, and cross-checks against the app's N4 examples. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N4-26 | `んです`, `Vていただけませんか`, `Vたらいいですか`, `んですが` | Replaced old `vi-human-approved` with `vi-source-verified`; clarified plain-form attachments for `んです/んですが`, polite request formation, and question-word `Vたらいいですか`. |
+| N4-27 | Potential form, `しか〜ません`, `見える`, `聞こえる` | Replaced old approval tag with source verification; clarified `N + しか + Vない`. |
+| N4-28 | `ながら`, habitual `Vています`, `し`, `間に` | Replaced old approval tag with source verification; corrected `ながら` to `Vます語幹`, and broadened `し` to verb/adjective/noun plain forms. |
+| N4-29 | Result-state `Vています`, `てしまいました`, `ちゃいました`, `まだ〜ています` | Replaced old approval tag with source verification; clarified intransitive result-state `ている`, `てしまう`, and spoken `ちゃう/じゃう` contraction. |
+| N4-30 | `てあります`, `ておきます`, `ておいてください`, `ておきます` | Replaced old approval tag with source verification; clarified transitive-result `てある` and preparation `ておく`. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `24` so existing browsers reseed the changed N4 grammar rows. Revision `23` was superseded during live proof because bracket notes with `なA/N` were stripped by the canonicalizer; final data uses `な形容詞 / 名詞`.
+
+Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved` in the edited grammar files); focused DB/manifest/taxonomy/upper-JLPT/practice-bank/repository tests passed; `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N4 grammar level completion.
+
+Live proof after deploy: production browser used normal cache. The rendered N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `24`. The list rendered `普通形 + んです（な形容詞 / 名詞 + なんです）`, `V普通形 / いA / なAだ / Nだ + し`, `Nが + 他動詞て形 + あります`, and `Vて + おきます`; opening `Nが + 他動詞て形 + あります` rendered the corrected `KẾT NỐI`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n4_26.json`, `grammar_n4_29.json`, and `grammar_n4_30.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.

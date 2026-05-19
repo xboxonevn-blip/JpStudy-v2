@@ -1323,3 +1323,30 @@ Runtime note: bumped content DB Kanji seed revision from `54` to `55` and added 
 Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `176` to `168`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `b27a84cd` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_04.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `上` showed `Thượng (trên; lên; tăng)`, Hán-Việt `Thượng`, on `ジョウ/ショウ/シャン`, stroke count `3`, and `灰` showed example `灰皿/はいざら` = `cái gạt tàn`. Console errors/warnings: `0`.
+
+## Kanji N1 Lesson 5 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `憧`, `顎`, and `寝` have no Unihan `kVietnamese`, so learner-facing Hán-Việt keeps established values.
+- Existing N1 ShinKanzen/Tanos and Hajimete vocabulary context for `明後日`, `憧れ`, `顎`, `麻`, and `朝寝坊`, used only to choose examples and verify learner-facing glosses. The suspicious generated `悪日/あくび` example was not reused for `日`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `日` | KANJIDIC2 readings `ニチ/ジツ`, `ひ/-び/-か`, meanings `day`, `sun`, `Japan`; Unihan `kVietnamese=nhật`; local context `明後日` | Rewrote to `Nhật (ngày; mặt trời; Nhật Bản)`, replaced the suspicious `悪日/あくび` example with `明後日`, and added readings/related kanji. |
+| `憧` | KANJIDIC2 readings `ショウ/トウ/ドウ`, `あこが.れる`, meanings `yearn after`, `long for`, `admire`; no Unihan `kVietnamese`; existing verified N2 row | Aligned to `Sung (ngưỡng mộ; khao khát; hướng tới)`, added source-backed readings/components, and example `憧れ`. |
+| `顎` | KANJIDIC2 reading `ガク`, `あご/あぎと`, meanings `jaw`, `chin`; no Unihan `kVietnamese`; local context `顎` | Rewrote display to `Ngạc (cằm; hàm)`, added readings/components, direct example, and face-related kanji. |
+| `麻` | KANJIDIC2 readings `マ/マア`, `あさ`, meanings `hemp`, `flax`, `numb`; Unihan `kVietnamese=ma`; local context `麻`, `麻痺` | Rewrote to `Ma (gai dầu; lanh; tê)`, added readings/search text, and related kanji. |
+| `後` | KANJIDIC2 readings `ゴ/コウ`, `のち/うし.ろ/あと/おく.れる`; Unihan `kVietnamese=hậu`; local context `明後日` | Rewrote to `Hậu (sau; phía sau; muộn)`, replaced word-level `あさって` as a kanji reading with source-backed readings, and kept `明後日` as example. |
+| `朝` | KANJIDIC2 reading `チョウ`, `あさ`; Unihan `kVietnamese=triều`; local context `朝寝坊` | Rewrote to `Triều (buổi sáng; triều đại)`, replaced word-level `あさねぼう` as a kanji reading with `あさ`, and added time-related kanji. |
+| `寝` | KANJIDIC2 reading `シン`, `ね.る/ね.かす/い.ぬ/みたまや/や.める`; no Unihan `kVietnamese`; local context `朝寝坊` | Rewrote to `Tẩm (ngủ; nằm nghỉ; phòng ngủ)`, added source-backed readings/components, and example `朝寝坊`. |
+| `坊` | KANJIDIC2 readings `ボウ/ボッ`, meanings `boy`, `priest's residence`, `priest`; Unihan `kVietnamese=phường`; local context `朝寝坊` | Rewrote to `Phường (nhà sư; cậu bé; phường)`, replaced word-level `あさねぼう` as a kanji reading with source-backed on-readings, and added related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `55` to `56` and added an N1 lesson-5 sentinel for `日` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `168` to `160`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `69a404f9` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_05.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `日` showed `Nhật (ngày; mặt trời; Nhật Bản)`, Hán-Việt `Nhật`, on `ニチ/ジツ`, kun `ひ/-び/-か`, stroke count `4`, and example `明後日/あさって` = `ngày mốt`. `顎` showed `Ngạc (cằm; hàm)` and `寝` showed `Tẩm (ngủ; nằm nghỉ; phòng ngủ)`. Console errors/warnings: `0`.

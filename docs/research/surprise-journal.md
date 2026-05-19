@@ -691,3 +691,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N2 lesson 23 had `着` with no Unihan `kVietnamese` and a KANJIDIC2 Vietnamese reading that conflicted with established learner-facing app rows, while `伝` similarly needed the app's established `Truyền` reading rather than a mechanical source value.
 - Delta: -15 percentage points on confidence that a single open source can be applied mechanically for Vietnamese labels.
 - Updated belief: Hán-Việt source verification needs conflict handling: prefer established verified app rows for learner-facing shinjitai labels when open sources diverge, and document the decision in the verification log.
+
+## 2026-05-19 - Vocab-derived examples can carry source reading errors
+
+- Prior belief: imported N1 vocabulary examples were generally safe as local usage context once the kanji character facts came from KANJIDIC2/Unihan.
+- Actual observation: N1 lesson 5 linked `日` to `悪日` with reading `あくび`, which conflicts with the word's meaning and with normal `あくび` usage. Reusing it would have made the kanji example look source-verified while still teaching a bad reading.
+- Delta: -15 percentage points on confidence that vocab-derived examples are safe without a quick reading sanity check.
+- Updated belief: examples should be treated as context, not authority. If a linked example has suspicious reading/meaning alignment, choose another reachable example or leave the issue for a separate vocab cleanup.

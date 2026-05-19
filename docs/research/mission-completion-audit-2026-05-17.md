@@ -292,14 +292,15 @@ live `content` IndexedDB, VI/N2 search opened `育` with
 
 Kanji content expansion update: N2 lesson 08 is now source-verified against
 KANJIDIC2, Unihan where available, variant Unihan for `応`/`應`, and existing
-N2 vocabulary context. The local patch rewrites the eight lesson entries
+N2 vocabulary context. Commit `c297667f` rewrites the eight lesson entries
 (`勇`, `衣`, `食`, `住`, `地`, `悪`, `一`, `応`) into learner-ready Vietnamese,
 corrects generated word-gloss fallback drift in `地`, `一`, `応`, and the
 `衣食住` component rows, fills readings/search/related-kanji metadata, bumps
 the Kanji seed revision to `34`, and adds a lesson-08 sentinel for `勇`. Local
 coverage audit reduced N2 incomplete current entries from `144` to `136`; full
-Flutter tests passed (`2340`). Live proof is pending deploy for this local
-patch.
+Flutter tests passed (`2340`). After deploy, live VI/N2 search opened `勇`
+with `Dũng (dũng cảm; can đảm; khí phách)`, Hán-Việt `Dũng`, on `ユウ`, and
+kun `いさ.む`.
 
 ## Verdict
 

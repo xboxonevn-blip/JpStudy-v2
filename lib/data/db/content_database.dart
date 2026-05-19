@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 34;
+const _kanjiSeedRevision = 35;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -71,6 +71,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '勇',
     meaning: 'Dũng (dũng cảm; can đảm; khí phách)',
     decompositionContains: '"hanViet":"Dũng"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 9,
+    character: '段',
+    meaning: 'Đoạn (bậc; đoạn; cấp độ)',
+    decompositionContains: '"hanViet":"Đoạn"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

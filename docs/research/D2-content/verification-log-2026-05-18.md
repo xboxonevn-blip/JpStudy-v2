@@ -754,3 +754,29 @@ Runtime note: bumped content DB Kanji seed revision from `33` to `34` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `144` to `136`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed `54`, and full `flutter test` passed (`2340`).
 
 Live proof after deploy: after `c297667f` was deployed to Firebase Hosting, a cache-busted VI/N2 `/#/kanji` session loaded the N2 grid, filtering `勇` showed a single result, and opening it showed `Dũng (dũng cảm; can đảm; khí phách)`, Hán-Việt `Dũng`, on `ユウ`, kun `いさ.む`, and the rewritten Vietnamese mnemonic. Screenshot artifacts captured the filtered card and detail modal. Console note: the long-lived MCP browser had stale `Cache-Control`/CanvasKit noise from an earlier failed verification attempt, and a separate fresh headless context produced a generic Flutter `pageerror` while still seeding, so this entry claims visible deployed-content correctness, not a clean-console proof.
+
+## Kanji N2 Lesson 9 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, old JLPT tier, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `一段と`, `一流`, `佚`, `一昨日`, `一昨年`, `一斉`, and `一旦`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+- Wiktionary cross-check for the common Hán-Việt reading of `年` as `niên` (`https://en.wiktionary.org/wiki/%E5%B9%B4`, `https://en.wiktionary.org/wiki/ni%C3%AAn`), because Unihan currently lists `nên`, which is less useful for learner-facing Vietnamese compounds.
+
+| Item | Sources | Change |
+|---|---|---|
+| `段` | KANJIDIC2 readings `ダン/タン`, meanings `grade`, `steps`, `stairs`; Unihan `kVietnamese=đoạn`, `kDefinition=section, piece, division`; local context `一段と` | Corrected the row away from generated `greater, more` word-gloss fallback to `Đoạn (bậc; đoạn; cấp độ)`, added readings/search text, direct example `一段と`, and level/step related kanji. |
+| `流` | KANJIDIC2 readings `リュウ/ル`, `なが.れる/...`, meanings `current`, `flow`; Unihan `kVietnamese=lưu`, `kDefinition=flow, circulate, drift; class`; local context `一流` plus existing source-verified N3 `流` | Kept the verified kanji meaning `Lưu (dòng chảy; lưu hành; trôi)`, added class/rank usage in mnemonic, direct example `一流`, and flow/route related kanji. |
+| `佚` | KANJIDIC2 readings `イツ/テツ`, `たのし.む/のが.れる`, meanings `lost`, `hide`, `peace`; Unihan `kVietnamese=dật`, `kDefinition=indulge in pleasures; flee`; local context `佚` | Rewrote display to `Dật (thất lạc; ẩn đi; nhàn tản)`, added readings/search text, direct example `佚`, and lost/escape related kanji. |
+| `昨` | KANJIDIC2 reading `サク`, meanings `yesterday`, `previous`; Unihan `kDefinition=yesterday; in former times, past`; local context `一昨日` | Corrected the row away from generated `day before yesterday` word-gloss fallback to `Tạc (hôm qua; trước đó; quá khứ)`, direct example `一昨日`, search text, and time related kanji. |
+| `日` | KANJIDIC2 readings `ニチ/ジツ`, `ひ/-び/-か`, meanings `day`, `sun`, `Japan`; Unihan `kVietnamese=nhật`; local lower-level source-verified row | Corrected the row away from generated `day before yesterday` word-gloss fallback to `Nhật (ngày; mặt trời; Nhật Bản)`, direct example `一昨日`, search text, and day/time related kanji. |
+| `年` | KANJIDIC2 reading `ネン`, `とし`, meanings `year`, `counter for years`; Unihan `kDefinition=year; new-years; person's age`; Wiktionary Hán-Việt `niên`; local context `一昨年` | Corrected Hán-Việt display from `Nên` to learner-facing `Niên`, rewrote display to `Niên (năm; tuổi; niên đại)`, direct example `一昨年`, search text, and year/time related kanji. |
+| `斉` | KANJIDIC2 readings `セイ/サイ`, `そろ.う/ひと.しい/...`, meanings `adjusted`, `alike`, `equal`; Unihan `kDefinition=even, uniform, of equal length`; local context `一斉` | Rewrote display to `Tề (đồng đều; ngang nhau; cùng lúc)`, added readings/search text, direct example `一斉`, and equality/order related kanji. |
+| `旦` | KANJIDIC2 readings `タン/ダン`, morning-related kun readings, meanings `daybreak`, `dawn`, `morning`; Unihan `kVietnamese=đán`; local context `一旦` | Corrected the row away from generated `once, temporarily` word-gloss fallback to `Đán (bình minh; buổi sáng; một lúc)`, direct example `一旦`, search text, and morning/time related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `34` to `35` and added an N2 lesson-09 sentinel for `段` so existing browsers reseed the changed metadata.
+
+Verification so far: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `136` to `128`, and focused DB/reachability/taxonomy/upper-JLPT tests passed.

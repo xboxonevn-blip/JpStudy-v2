@@ -8,7 +8,7 @@
   "lessonId": 9,
   "entryCount": 8,
   "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k065",
@@ -18,37 +18,44 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Đoạn",
-        "meaningVi": "greater, more, further, still more",
-        "meaningViDisplay": "段 (greater, more, further, still more)",
-        "meaningEn": "greater, more, further, still more"
+        "meaningVi": "bậc; đoạn; cấp độ",
+        "meaningViDisplay": "Đoạn (bậc; đoạn; cấp độ)",
+        "meaningEn": "grade, steps, stairs, section"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "いちだんと"
-        ]
+        "onyomi": [
+          "ダン",
+          "タン"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一段と (greater, more, further, still more).",
-        "en": "Appears in JLPT N2 vocabulary: 一段と (greater, more, further, still more)."
+        "vi": "段 chỉ bậc, nấc hoặc một đoạn; 一段と dùng khi mức độ tăng rõ rệt.",
+        "en": "段 means a step, grade, or section; 一段と describes something becoming noticeably more intense."
       },
       "decomposition": {
         "hanViet": "Đoạn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "階",
+          "級",
+          "差",
+          "上"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đoan",
-        "meaningViNoAccent": "greater, more, further, still more",
-        "meaningEnNoAccent": "greater, more, further, still more"
+        "hanVietNoAccent": "Doan",
+        "meaningViNoAccent": "bac; doan; cap do",
+        "meaningEnNoAccent": "grade, steps, stairs, section"
       },
       "examples": [
         {
           "word": "一段と",
           "reading": "いちだんと",
-          "meaning": "greater, more, further, still more"
+          "meaning": "hơn hẳn; càng thêm; ở mức cao hơn",
+          "meaningEn": "greater, more, further, still more"
         }
       ],
       "tags": [
@@ -56,9 +63,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k066",
@@ -68,37 +76,49 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Lưu",
-        "meaningVi": "first class, top grade, foremost, top-notch",
-        "meaningViDisplay": "流 (first class, top grade, foremost, top-notch)",
-        "meaningEn": "first class, top grade, foremost, top-notch"
+        "meaningVi": "dòng chảy; lưu hành; trôi",
+        "meaningViDisplay": "Lưu (dòng chảy; lưu hành; trôi)",
+        "meaningEn": "current, flow, circulate, class"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "リュウ",
+          "ル"
+        ],
         "kunyomi": [
-          "いちりゅう"
+          "なが.れる",
+          "なが.れ",
+          "なが.す",
+          "-なが.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一流 (first class, top grade, foremost, top-notch).",
-        "en": "Appears in JLPT N2 vocabulary: 一流 (first class, top grade, foremost, top-notch)."
+        "vi": "流 là dòng chảy hoặc sự lưu hành; trong 一流, nó mở rộng sang nghĩa dòng/phái hay hạng.",
+        "en": "流 means flow or circulation; in 一流 it extends to class, style, or rank."
       },
       "decomposition": {
         "hanViet": "Lưu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "水",
+          "川",
+          "行",
+          "通"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Luu",
-        "meaningViNoAccent": "first class, top grade, foremost, top-notch",
-        "meaningEnNoAccent": "first class, top grade, foremost, top-notch"
+        "meaningViNoAccent": "dong chay; luu hanh; troi",
+        "meaningEnNoAccent": "current, flow, circulate, class"
       },
       "examples": [
         {
           "word": "一流",
           "reading": "いちりゅう",
-          "meaning": "first class, top grade, foremost, top-notch"
+          "meaning": "hạng nhất; hàng đầu; xuất sắc",
+          "meaningEn": "first class, top grade, foremost, top-notch"
         }
       ],
       "tags": [
@@ -106,9 +126,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k067",
@@ -118,37 +139,47 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Dật",
-        "meaningVi": "be lost, peace, hide, mistake, beautiful, in turn",
-        "meaningViDisplay": "佚 (be lost, peace, hide, mistake, beautiful, in turn)",
-        "meaningEn": "be lost, peace, hide, mistake, beautiful, in turn"
+        "meaningVi": "thất lạc; ẩn đi; nhàn tản",
+        "meaningViDisplay": "Dật (thất lạc; ẩn đi; nhàn tản)",
+        "meaningEn": "lost, hidden, at ease, escape"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イツ",
+          "テツ"
+        ],
         "kunyomi": [
-          "いつ"
+          "たのし.む",
+          "のが.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 佚 (be lost, peace, hide, mistake, beautiful, in turn).",
-        "en": "Appears in JLPT N2 vocabulary: 佚 (be lost, peace, hide, mistake, beautiful, in turn)."
+        "vi": "佚 là chữ hiếm, chỉ thất lạc, ẩn đi hoặc trạng thái nhàn tản; nhớ gần với ý rời khỏi trật tự thông thường.",
+        "en": "佚 is a rare kanji for being lost, hidden, or at ease; remember it as slipping away from the ordinary order."
       },
       "decomposition": {
         "hanViet": "Dật",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "失",
+          "逸",
+          "隠",
+          "楽"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dat",
-        "meaningViNoAccent": "be lost, peace, hide, mistake, beautiful, in turn",
-        "meaningEnNoAccent": "be lost, peace, hide, mistake, beautiful, in turn"
+        "meaningViNoAccent": "that lac; an di; nhan tan",
+        "meaningEnNoAccent": "lost, hidden, at ease, escape"
       },
       "examples": [
         {
           "word": "佚",
           "reading": "いつ",
-          "meaning": "be lost, peace, hide, mistake, beautiful, in turn"
+          "meaning": "thất lạc; nhàn hạ; ẩn đi",
+          "meaningEn": "lost, hidden, at ease"
         }
       ],
       "tags": [
@@ -156,9 +187,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k068",
@@ -168,37 +200,43 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Tạc",
-        "meaningVi": "day before yesterday",
-        "meaningViDisplay": "昨 (day before yesterday)",
-        "meaningEn": "day before yesterday"
+        "meaningVi": "hôm qua; trước đó; quá khứ",
+        "meaningViDisplay": "Tạc (hôm qua; trước đó; quá khứ)",
+        "meaningEn": "yesterday, previous"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "いっさくじつ"
-        ]
+        "onyomi": [
+          "サク"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一昨日 (day before yesterday).",
-        "en": "Appears in JLPT N2 vocabulary: 一昨日 (day before yesterday)."
+        "vi": "昨 gắn với ngày đã qua; 一昨日 là ngày trước hôm qua, tức hôm kia.",
+        "en": "昨 points to a day already past; 一昨日 means the day before yesterday."
       },
       "decomposition": {
         "hanViet": "Tạc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "日",
+          "前",
+          "今",
+          "年"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tac",
-        "meaningViNoAccent": "day before yesterday",
-        "meaningEnNoAccent": "day before yesterday"
+        "meaningViNoAccent": "hom qua; truoc do; qua khu",
+        "meaningEnNoAccent": "yesterday, previous"
       },
       "examples": [
         {
           "word": "一昨日",
           "reading": "いっさくじつ",
-          "meaning": "day before yesterday"
+          "meaning": "hôm kia",
+          "meaningEn": "day before yesterday"
         }
       ],
       "tags": [
@@ -206,7 +244,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,37 +257,48 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Nhật",
-        "meaningVi": "day before yesterday",
-        "meaningViDisplay": "日 (day before yesterday)",
-        "meaningEn": "day before yesterday"
+        "meaningVi": "ngày; mặt trời; Nhật Bản",
+        "meaningViDisplay": "Nhật (ngày; mặt trời; Nhật Bản)",
+        "meaningEn": "day, sun, Japan"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ニチ",
+          "ジツ"
+        ],
         "kunyomi": [
-          "いっさくじつ"
+          "ひ",
+          "-び",
+          "-か"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一昨日 (day before yesterday).",
-        "en": "Appears in JLPT N2 vocabulary: 一昨日 (day before yesterday)."
+        "vi": "日 là ngày hoặc mặt trời; trong 一昨日, nó đánh dấu mốc ngày.",
+        "en": "日 means day or sun; in 一昨日 it marks the day unit."
       },
       "decomposition": {
         "hanViet": "Nhật",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "月",
+          "明",
+          "時",
+          "年"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhat",
-        "meaningViNoAccent": "day before yesterday",
-        "meaningEnNoAccent": "day before yesterday"
+        "meaningViNoAccent": "ngay; mat troi; Nhat Ban",
+        "meaningEnNoAccent": "day, sun, Japan"
       },
       "examples": [
         {
           "word": "一昨日",
           "reading": "いっさくじつ",
-          "meaning": "day before yesterday"
+          "meaning": "hôm kia",
+          "meaningEn": "day before yesterday"
         }
       ],
       "tags": [
@@ -256,9 +306,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k070",
@@ -267,38 +318,46 @@
       "character": "年",
       "strokeCount": 6,
       "labels": {
-        "hanViet": "Nên",
-        "meaningVi": "year before last",
-        "meaningViDisplay": "年 (year before last)",
-        "meaningEn": "year before last"
+        "hanViet": "Niên",
+        "meaningVi": "năm; tuổi; niên đại",
+        "meaningViDisplay": "Niên (năm; tuổi; niên đại)",
+        "meaningEn": "year, age, era"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ネン"
+        ],
         "kunyomi": [
-          "いっさくねん"
+          "とし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一昨年 (year before last).",
-        "en": "Appears in JLPT N2 vocabulary: 一昨年 (year before last)."
+        "vi": "年 là năm hoặc tuổi; 一昨年 là năm trước năm ngoái, tức năm kia.",
+        "en": "年 means year or age; 一昨年 means the year before last."
       },
       "decomposition": {
-        "hanViet": "Nên",
+        "hanViet": "Niên",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "日",
+          "月",
+          "時",
+          "代"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Nen",
-        "meaningViNoAccent": "year before last",
-        "meaningEnNoAccent": "year before last"
+        "hanVietNoAccent": "Nien",
+        "meaningViNoAccent": "nam; tuoi; nien dai",
+        "meaningEnNoAccent": "year, age, era"
       },
       "examples": [
         {
           "word": "一昨年",
           "reading": "いっさくねん",
-          "meaning": "year before last"
+          "meaning": "năm kia",
+          "meaningEn": "year before last"
         }
       ],
       "tags": [
@@ -306,9 +365,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k071",
@@ -318,37 +378,50 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Tề",
-        "meaningVi": "simultaneous, all at once",
-        "meaningViDisplay": "斉 (simultaneous, all at once)",
-        "meaningEn": "simultaneous, all at once"
+        "meaningVi": "đồng đều; ngang nhau; cùng lúc",
+        "meaningViDisplay": "Tề (đồng đều; ngang nhau; cùng lúc)",
+        "meaningEn": "equal, uniform, simultaneous"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "サイ"
+        ],
         "kunyomi": [
-          "いっせい"
+          "そろ.う",
+          "ひと.しい",
+          "ひと.しく",
+          "あたる",
+          "はやい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一斉 (simultaneous, all at once).",
-        "en": "Appears in JLPT N2 vocabulary: 一斉 (simultaneous, all at once)."
+        "vi": "斉 gợi ý sự đều nhau hoặc cùng lúc; 一斉 là hành động xảy ra đồng loạt.",
+        "en": "斉 suggests equality or uniform timing; 一斉 is something happening all at once."
       },
       "decomposition": {
         "hanViet": "Tề",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "同",
+          "等",
+          "整",
+          "列"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Te",
-        "meaningViNoAccent": "simultaneous, all at once",
-        "meaningEnNoAccent": "simultaneous, all at once"
+        "meaningViNoAccent": "dong deu; ngang nhau; cung luc",
+        "meaningEnNoAccent": "equal, uniform, simultaneous"
       },
       "examples": [
         {
           "word": "一斉",
           "reading": "いっせい",
-          "meaning": "simultaneous, all at once"
+          "meaning": "đồng loạt; cùng một lúc",
+          "meaningEn": "simultaneous, all at once"
         }
       ],
       "tags": [
@@ -356,7 +429,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +442,50 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Đán",
-        "meaningVi": "once, for a moment, one morning, temporarily",
-        "meaningViDisplay": "旦 (once, for a moment, one morning, temporarily)",
-        "meaningEn": "once, for a moment, one morning, temporarily"
+        "meaningVi": "bình minh; buổi sáng; một lúc",
+        "meaningViDisplay": "Đán (bình minh; buổi sáng; một lúc)",
+        "meaningEn": "dawn, morning, daybreak"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タン",
+          "ダン"
+        ],
         "kunyomi": [
-          "いったん"
+          "あき.らか",
+          "あきら",
+          "ただし",
+          "あさ",
+          "あした"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 一旦 (once, for a moment, one morning, temporarily).",
-        "en": "Appears in JLPT N2 vocabulary: 一旦 (once, for a moment, one morning, temporarily)."
+        "vi": "旦 vốn là bình minh, mặt trời lên khỏi đường chân trời; trong 一旦, nghĩa chuyển sang một mốc tạm thời.",
+        "en": "旦 originally means dawn, the sun over the horizon; in 一旦 it shifts to a temporary point in time."
       },
       "decomposition": {
         "hanViet": "Đán",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "日",
+          "朝",
+          "明",
+          "時"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đan",
-        "meaningViNoAccent": "once, for a moment, one morning, temporarily",
-        "meaningEnNoAccent": "once, for a moment, one morning, temporarily"
+        "hanVietNoAccent": "Dan",
+        "meaningViNoAccent": "binh minh; buoi sang; mot luc",
+        "meaningEnNoAccent": "dawn, morning, daybreak"
       },
       "examples": [
         {
           "word": "一旦",
           "reading": "いったん",
-          "meaning": "once, for a moment, one morning, temporarily"
+          "meaning": "một khi; tạm thời; trong chốc lát",
+          "meaningEn": "once, for a moment, temporarily"
         }
       ],
       "tags": [
@@ -406,14 +493,19 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only",
+    "Wiktionary Hán-Việt cross-check for 年 -> niên"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

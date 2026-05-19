@@ -684,3 +684,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: the proof was true but incomplete: returning users with `public, max-age=86400` on unversioned Flutter/content URLs could still run old code or seed old JSON for up to 24h. The verification mode bypassed the exact failure mode users had.
 - Delta: -30 percentage points on confidence that cache-disabled proof alone is sufficient for production readiness.
 - Updated belief: live proof must include normal-cache header checks and at least one non-cache-disabled browser path; use CDP cache-disabled only as a diagnostic/control, not as the primary user-facing proof.
+
+## 2026-05-19 - Hán-Việt source conflicts are common in shinjitai rows
+
+- Prior belief: KANJIDIC2 Vietnamese readings plus Unihan `kVietnamese` would usually agree for common N2 kanji rows.
+- Actual observation: N2 lesson 23 had `着` with no Unihan `kVietnamese` and a KANJIDIC2 Vietnamese reading that conflicted with established learner-facing app rows, while `伝` similarly needed the app's established `Truyền` reading rather than a mechanical source value.
+- Delta: -15 percentage points on confidence that a single open source can be applied mechanically for Vietnamese labels.
+- Updated belief: Hán-Việt source verification needs conflict handling: prefer established verified app rows for learner-facing shinjitai labels when open sources diverge, and document the decision in the verification log.

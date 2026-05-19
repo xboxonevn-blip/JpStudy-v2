@@ -1134,3 +1134,30 @@ Runtime note: bumped content DB Kanji seed revision from `47` to `48` and added 
 Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `32` to `24`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `5dd4c6e0` and the QA-A-017 header redeploy were on Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_22.json` returned `Cache-Control: no-cache`, `lessonId=22`, and `count=8`; `惜` showed `Tiếc (đáng tiếc; trân trọng; không nỡ)`, Hán-Việt `Tiếc`, on `セキ`, kun `お.しい/お.しむ`, stroke count `11`, and example `惜しい` = `đáng tiếc; phí; quý giá`. The same proof confirmed `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `AssetManifest`, and content JSON all revalidate with `no-cache`, while `sqlite3.wasm` and `drift_worker.js` keep `public, max-age=2592000`. Current-tab console warnings/errors: `0`.
+
+## Kanji N2 Lesson 23 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `着` lacks Unihan `kVietnamese`, and `伝` lacks Unihan `kVietnamese`, so both keep established learner-facing Hán-Việt readings from existing verified app data.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `教わる`, `落着く`, `御手洗`, `お手伝いさん`, `驚かす`, and `各々`, used only to choose examples and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `教` | KANJIDIC2 reading `キョウ`, `おし.える/おそ.わる`, meanings `teach`, `faith`, `doctrine`; Unihan `kVietnamese=giáo`; local context `教わる` | Corrected the row away from whole-word `to be taught` fallback to `Giáo (dạy; giáo dục; giáo lý)`, added readings/search text, direct example `教わる`, and education-related kanji. |
+| `落` | KANJIDIC2 reading `ラク`, fall/drop meanings; Unihan `kVietnamese=lạc`; local context `落着く` | Corrected the row away from whole-word calm-down fallback to `Lạc (rơi; rụng; lắng xuống)`, added readings/search text, direct example `落着く`, and fall/settle related kanji. |
+| `着` | KANJIDIC2 readings `チャク/ジャク`, wearing/arriving meanings; Unihan has no `kVietnamese`; local verified rows use `Trước`; local context `落着く` | Corrected the row away from whole-word calm-down fallback to `Trước (mặc; đến nơi; bám vào)`, corrected stroke count to KANJIDIC2 Japanese count `12`, added readings/search text, direct example `落着く`, and clothing/arrival related kanji. |
+| `手` | KANJIDIC2 readings `シュ/ズ`, `て`, meaning `hand`; Unihan `kVietnamese=thủ`; local context `御手洗` | Corrected the row away from whole-word purification-font fallback to `Thủ (tay; người làm; kỹ năng)`, added readings/search text, direct example `御手洗`, and hand/action related kanji. |
+| `洗` | KANJIDIC2 reading `セン`, `あら.う`, wash/probe meanings; Unihan `kVietnamese=tẩy`; local context `御手洗` | Corrected the row away from whole-word purification-font fallback to `Tẩy (rửa; gột; làm sạch)`, added readings/search text, direct example `御手洗`, and water/cleaning related kanji. |
+| `伝` | KANJIDIC2 readings `デン/テン`, transmit/communicate/tradition meanings; Unihan has no `kVietnamese`; local verified rows use `Truyền`; local context `お手伝いさん` | Corrected the row away from whole-word `maid` fallback to `Truyền (truyền đạt; truyền lại; truyền thống)`, added readings/search text, direct example `お手伝いさん`, and communication/tradition related kanji. |
+| `驚` | KANJIDIC2 reading `キョウ`, surprise/fright meanings; Unihan `kVietnamese=kinh`; local context `驚かす` | Corrected the row away from whole-word causative verb fallback to `Kinh (ngạc nhiên; kinh sợ; làm giật mình)`, added readings/search text, direct example `驚かす`, and surprise/fear related kanji. |
+| `各` | KANJIDIC2 reading `カク`, `おのおの`, each/every meanings; Unihan `kVietnamese=các`; local context `各々` | Corrected the row away from long English list fallback to `Các (mỗi; từng; mỗi người)`, added readings/search text, direct example `各々`, and each/all related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `48` to `49` and added an N2 lesson-23 sentinel for `教` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `24` to `16`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `00cd8047` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_23.json` returned `Cache-Control: no-cache`, `lessonId=23`, and `count=8`; `教` showed `Giáo (dạy; giáo dục; giáo lý)`, Hán-Việt `Giáo`, on `キョウ`, kun `おし.える/おそ.わる`, stroke count `11`, and example `教わる` = `được dạy`. The same proof confirmed `main.dart.js` and content JSON revalidate with `no-cache`, while `sqlite3.wasm` and `drift_worker.js` keep `public, max-age=2592000`. Current-tab console warnings/errors: `0`.

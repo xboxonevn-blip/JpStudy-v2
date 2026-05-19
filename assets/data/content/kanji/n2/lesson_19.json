@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 19,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 女 uses the learner-facing Sino-Vietnamese reading from KANJIDIC2 because Unihan lists a less suitable variant.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k145",
@@ -18,37 +18,43 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Viện",
-        "meaningVi": "aid, assistance, help, reinforcement",
-        "meaningViDisplay": "援 (aid, assistance, help, reinforcement)",
-        "meaningEn": "aid, assistance, help, reinforcement"
+        "meaningVi": "viện; hỗ trợ; viện trợ; cứu giúp",
+        "meaningViDisplay": "Viện (viện; hỗ trợ; viện trợ; cứu giúp)",
+        "meaningEn": "aid, help, rescue, assistance"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "おうえん"
-        ]
+        "onyomi": [
+          "エン"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 応援 (aid, assistance, help, reinforcement).",
-        "en": "Appears in JLPT N2 vocabulary: 応援 (aid, assistance, help, reinforcement)."
+        "vi": "援 là giúp đỡ hoặc viện trợ; trong 応援, nó là phần hỗ trợ/cổ vũ dành cho người khác.",
+        "en": "援 means aid or support; in 応援 it is the support or cheering given to someone."
       },
       "decomposition": {
         "hanViet": "Viện",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "応",
+          "助",
+          "救",
+          "支"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vien",
-        "meaningViNoAccent": "aid, assistance, help, reinforcement",
-        "meaningEnNoAccent": "aid, assistance, help, reinforcement"
+        "meaningViNoAccent": "vien; ho tro; vien tro; cuu giup",
+        "meaningEnNoAccent": "aid, help, rescue, assistance"
       },
       "examples": [
         {
           "word": "応援",
           "reading": "おうえん",
-          "meaning": "aid, assistance, help, reinforcement"
+          "meaning": "cổ vũ; hỗ trợ; viện trợ",
+          "meaningEn": "aid, assistance, help, reinforcement"
         }
       ],
       "tags": [
@@ -56,9 +62,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k146",
@@ -68,37 +75,44 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Vương",
-        "meaningVi": "princess",
-        "meaningViDisplay": "王 (princess)",
-        "meaningEn": "princess"
+        "meaningVi": "vương; vua; hoàng gia; người cai trị",
+        "meaningViDisplay": "Vương (vương; vua; hoàng gia; người cai trị)",
+        "meaningEn": "king, ruler, royal"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "おうじょ"
-        ]
+        "onyomi": [
+          "オウ",
+          "-ノウ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 王女 (princess).",
-        "en": "Appears in JLPT N2 vocabulary: 王女 (princess)."
+        "vi": "王 là vua hoặc hoàng gia; trong 王女, nó là phần 'vương' chỉ dòng dõi hoàng tộc.",
+        "en": "王 means king or royal; in 王女 it marks the royal side of a princess."
       },
       "decomposition": {
         "hanViet": "Vương",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "女",
+          "国",
+          "皇",
+          "主"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vuong",
-        "meaningViNoAccent": "princess",
-        "meaningEnNoAccent": "princess"
+        "meaningViNoAccent": "vuong; vua; hoang gia; nguoi cai tri",
+        "meaningEnNoAccent": "king, ruler, royal"
       },
       "examples": [
         {
           "word": "王女",
           "reading": "おうじょ",
-          "meaning": "princess"
+          "meaning": "công chúa",
+          "meaningEn": "princess"
         }
       ],
       "tags": [
@@ -106,9 +120,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k147",
@@ -117,38 +132,49 @@
       "character": "女",
       "strokeCount": 3,
       "labels": {
-        "hanViet": "Nữa",
-        "meaningVi": "princess",
-        "meaningViDisplay": "女 (princess)",
-        "meaningEn": "princess"
+        "hanViet": "Nữ",
+        "meaningVi": "nữ; phụ nữ; con gái; giống cái",
+        "meaningViDisplay": "Nữ (nữ; phụ nữ; con gái; giống cái)",
+        "meaningEn": "woman, female"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジョ",
+          "ニョ",
+          "ニョウ"
+        ],
         "kunyomi": [
-          "おうじょ"
+          "おんな",
+          "め"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 王女 (princess).",
-        "en": "Appears in JLPT N2 vocabulary: 王女 (princess)."
+        "vi": "女 là nữ hoặc phụ nữ; trong 王女, nó là phần 'nữ' của công chúa.",
+        "en": "女 means woman or female; in 王女 it is the female side of princess."
       },
       "decomposition": {
-        "hanViet": "Nữa",
+        "hanViet": "Nữ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "王",
+          "子",
+          "婦",
+          "母"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Nua",
-        "meaningViNoAccent": "princess",
-        "meaningEnNoAccent": "princess"
+        "hanVietNoAccent": "Nu",
+        "meaningViNoAccent": "nu; phu nu; con gai; giong cai",
+        "meaningEnNoAccent": "woman, female"
       },
       "examples": [
         {
           "word": "王女",
           "reading": "おうじょ",
-          "meaning": "princess"
+          "meaning": "công chúa",
+          "meaningEn": "princess"
         }
       ],
       "tags": [
@@ -156,9 +182,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k148",
@@ -168,37 +195,46 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Tiếp",
-        "meaningVi": "reception",
-        "meaningViDisplay": "接 (reception)",
-        "meaningEn": "reception"
+        "meaningVi": "tiếp; tiếp xúc; nối liền; tiếp đãi",
+        "meaningViDisplay": "Tiếp (tiếp; tiếp xúc; nối liền; tiếp đãi)",
+        "meaningEn": "touch, contact, connect, receive"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セツ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "おうせつ"
+          "つ.ぐ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 応接 (reception).",
-        "en": "Appears in JLPT N2 vocabulary: 応接 (reception)."
+        "vi": "接 là chạm vào, nối hoặc tiếp đãi; trong 応接, nó là việc tiếp khách/đón tiếp.",
+        "en": "接 means contact, connect, or receive guests; in 応接 it is receiving visitors."
       },
       "decomposition": {
         "hanViet": "Tiếp",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "応",
+          "触",
+          "続",
+          "近"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tiep",
-        "meaningViNoAccent": "reception",
-        "meaningEnNoAccent": "reception"
+        "meaningViNoAccent": "tiep; tiep xuc; noi lien; tiep dai",
+        "meaningEnNoAccent": "touch, contact, connect, receive"
       },
       "examples": [
         {
           "word": "応接",
           "reading": "おうせつ",
-          "meaning": "reception"
+          "meaning": "tiếp khách; lễ tân",
+          "meaningEn": "reception"
         }
       ],
       "tags": [
@@ -206,9 +242,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k149",
@@ -218,45 +255,57 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Đối",
-        "meaningVi": "receiving, dealing with",
-        "meaningViDisplay": "対 (receiving, dealing with)",
-        "meaningEn": "receiving, dealing with"
+        "meaningVi": "đối; đối diện; đối với; so sánh",
+        "meaningViDisplay": "Đối (đối; đối diện; đối với; so sánh)",
+        "meaningEn": "opposite, versus, compare, facing"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タイ",
+          "ツイ"
+        ],
         "kunyomi": [
-          "おうたい"
+          "む.かう",
+          "こた.える",
+          "あいて"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 応対 (receiving, dealing with).",
-        "en": "Appears in JLPT N2 vocabulary: 応対 (receiving, dealing with)."
+        "vi": "対 là đối diện, đối với hoặc so sánh; trong 応対, nó chỉ cách ứng xử với người đối diện.",
+        "en": "対 means facing, versus, or compare; in 応対 it points to dealing with the person opposite you."
       },
       "decomposition": {
         "hanViet": "Đối",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "応",
+          "象",
+          "比",
+          "反"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Doi",
-        "meaningViNoAccent": "receiving, dealing with",
-        "meaningEnNoAccent": "receiving, dealing with"
+        "meaningViNoAccent": "doi; doi dien; doi voi; so sanh",
+        "meaningEnNoAccent": "opposite, versus, compare, facing"
       },
       "examples": [
         {
           "word": "応対",
           "reading": "おうたい",
-          "meaning": "receiving, dealing with"
+          "meaning": "tiếp đón; ứng đối",
+          "meaningEn": "receiving, dealing with"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,37 +317,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Vãng",
-        "meaningVi": "(col) round trip, coming and going, return ticket",
-        "meaningViDisplay": "往 ((col) round trip, coming and going, return ticket)",
-        "meaningEn": "(col) round trip, coming and going, return ticket"
+        "meaningVi": "vãng; đi; đi qua; quá khứ",
+        "meaningViDisplay": "Vãng (vãng; đi; đi qua; quá khứ)",
+        "meaningEn": "go, travel, journey, formerly"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "オウ"
+        ],
         "kunyomi": [
-          "おうふく"
+          "ゆ.く",
+          "い.く",
+          "いにしえ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 往復 ((col) round trip, coming and going, return ticket).",
-        "en": "Appears in JLPT N2 vocabulary: 往復 ((col) round trip, coming and going, return ticket)."
+        "vi": "往 là đi hoặc hướng đi qua; trong 往復, nó là chiều đi của một hành trình khứ hồi.",
+        "en": "往 means going or traveling; in 往復 it is the outward trip in a round trip."
       },
       "decomposition": {
         "hanViet": "Vãng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "復",
+          "行",
+          "来",
+          "路"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vang",
-        "meaningViNoAccent": "(col) round trip, coming and going, return ticket",
-        "meaningEnNoAccent": "(col) round trip, coming and going, return ticket"
+        "meaningViNoAccent": "vang; di; di qua; qua khu",
+        "meaningEnNoAccent": "go, travel, journey, formerly"
       },
       "examples": [
         {
           "word": "往復",
           "reading": "おうふく",
-          "meaning": "(col) round trip, coming and going, return ticket"
+          "meaning": "khứ hồi; đi và về; vé khứ hồi",
+          "meaningEn": "round trip, coming and going, return ticket"
         }
       ],
       "tags": [
@@ -306,9 +365,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k151",
@@ -318,45 +378,54 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Phục",
-        "meaningVi": "(col) round trip, coming and going, return ticket",
-        "meaningViDisplay": "復 ((col) round trip, coming and going, return ticket)",
-        "meaningEn": "(col) round trip, coming and going, return ticket"
+        "meaningVi": "phục; trở lại; khôi phục; lặp lại",
+        "meaningViDisplay": "Phục (phục; trở lại; khôi phục; lặp lại)",
+        "meaningEn": "restore, return to, resume, repeat"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "フク"
+        ],
         "kunyomi": [
-          "おうふく"
+          "また"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 往復 ((col) round trip, coming and going, return ticket).",
-        "en": "Appears in JLPT N2 vocabulary: 往復 ((col) round trip, coming and going, return ticket)."
+        "vi": "復 là quay lại hoặc khôi phục; trong 往復, nó là chiều trở về của chuyến đi.",
+        "en": "復 means return or restore; in 往復 it is the return leg of a round trip."
       },
       "decomposition": {
         "hanViet": "Phục",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "往",
+          "回",
+          "帰",
+          "旧"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phuc",
-        "meaningViNoAccent": "(col) round trip, coming and going, return ticket",
-        "meaningEnNoAccent": "(col) round trip, coming and going, return ticket"
+        "meaningViNoAccent": "phuc; tro lai; khoi phuc; lap lai",
+        "meaningEnNoAccent": "restore, return to, resume, repeat"
       },
       "examples": [
         {
           "word": "往復",
           "reading": "おうふく",
-          "meaning": "(col) round trip, coming and going, return ticket"
+          "meaning": "khứ hồi; đi và về; vé khứ hồi",
+          "meaningEn": "round trip, coming and going, return ticket"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,52 +437,66 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Âu",
-        "meaningVi": "Europe and America, the West",
-        "meaningViDisplay": "欧 (Europe and America, the West)",
-        "meaningEn": "Europe and America, the West"
+        "meaningVi": "Âu; châu Âu; phương Tây",
+        "meaningViDisplay": "Âu (Âu; châu Âu; phương Tây)",
+        "meaningEn": "Europe, European, the West"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "オウ"
+        ],
         "kunyomi": [
-          "おうべい"
+          "うた.う",
+          "は.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 欧米 (Europe and America, the West).",
-        "en": "Appears in JLPT N2 vocabulary: 欧米 (Europe and America, the West)."
+        "vi": "欧 là châu Âu hoặc phương Tây; trong 欧米, nó là phần Âu của cụm Âu Mỹ.",
+        "en": "欧 means Europe or the West; in 欧米 it is the Europe side of Europe and America."
       },
       "decomposition": {
         "hanViet": "Âu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "米",
+          "西",
+          "州",
+          "英"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Au",
-        "meaningViNoAccent": "europe and america, the west",
-        "meaningEnNoAccent": "europe and america, the west"
+        "meaningViNoAccent": "au; chau au; phuong tay",
+        "meaningEnNoAccent": "europe, european, the west"
       },
       "examples": [
         {
           "word": "欧米",
           "reading": "おうべい",
-          "meaning": "Europe and America, the West"
+          "meaning": "Âu Mỹ; phương Tây",
+          "meaningEn": "Europe and America, the West"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "Unicode Unihan kVietnamese",
+    "JpStudy N2 vocab context"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

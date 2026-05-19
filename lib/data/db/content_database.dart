@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 44;
+const _kanjiSeedRevision = 45;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -141,6 +141,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '遠',
     meaning: 'Viễn (viễn; xa; xa xôi; cách xa)',
     decompositionContains: '"hanViet":"Viễn"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 19,
+    character: '援',
+    meaning: 'Viện (viện; hỗ trợ; viện trợ; cứu giúp)',
+    decompositionContains: '"hanViet":"Viện"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

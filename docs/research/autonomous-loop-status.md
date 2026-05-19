@@ -643,3 +643,11 @@
 - Bumped content DB Kanji seed revision to `52` and added an N1 lesson-1 sentinel for `嗚` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, coverage audit reduced N1 incomplete current entries from `200` to `192`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
 - Built/deployed `dbc11327` to Firebase Hosting. Live proof: VI/N1 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_01.json` returned `Cache-Control: no-cache`, and `嗚` showed `Ô (than khóc; tiếng kêu than; chao ôi)`, Hán-Việt `Ô`, on `ウ/オ`, kun `ああ`, stroke count `13`; console warnings/errors `0`.
+
+## 2026-05-19 N1 Kanji Lesson 2 Completeness Patch
+
+- Source-verified all eight N1 lesson-2 kanji (`柄`, `憎`, `合`, `曖`, `昧`, `敢`, `仰`, `垢`) against local KANJIDIC2, Unihan where available, and existing N1 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including fixing `柄` away from handle-only gloss, correcting `憎` stroke count and `愛憎` reading, correcting `敢` stroke count, adding source-backed readings/related kanji, and adding truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `53` and added an N1 lesson-2 sentinel for `柄` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `192` to `184`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
+- Built/deployed `5a9620ac` to Firebase Hosting. Live proof used normal browser cache: shell/content assets returned `Cache-Control: no-cache`, wasm/worker remained `public, max-age=2592000`, and deployed `lesson_02.json` returned `柄` as `Bính (hoa văn; tính chất; tay cầm)` with on `ヘイ`, kun `がら/え/つか`, stroke count `9`.

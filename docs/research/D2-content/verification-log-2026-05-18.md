@@ -1242,3 +1242,30 @@ Runtime note: bumped content DB Kanji seed revision from `51` to `52` and added 
 Verification: JSON parse passed, coverage audit reduced N1 incomplete current entries from `200` to `192`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `dbc11327` was deployed to Firebase Hosting, a VI/N1 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n1/lesson_01.json` returned `Cache-Control: no-cache` and `importStatus=source-verified`; `嗚` showed `Ô (than khóc; tiếng kêu than; chao ôi)`, Hán-Việt `Ô`, on `ウ/オ`, kun `ああ`, stroke count `13`, and example `嗚呼` = `ôi; chao ôi; than ôi`. Current-tab console warnings/errors: `0`.
+
+## Kanji N1 Lesson 2 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `憎` has no Unihan `kVietnamese`, and KANJIDIC2 Japanese stroke counts are used where they differ from Unihan.
+- Existing N1 ShinKanzen/Tanos and Hajimete vocabulary context for `間柄`, `愛憎`, `合間`, `曖昧`, `敢えて`, `仰ぐ`, and `垢`, used only to choose examples and verify learner-facing glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `柄` | KANJIDIC2 reading `ヘイ`, `がら/え/つか`, meanings `pattern`, `nature`, `handle`; Unihan `kVietnamese=bính`; local context `間柄` | Corrected the generated row to `Bính (hoa văn; tính chất; tay cầm)`, added readings/search text, direct example `間柄`, and relation/pattern related kanji. |
+| `憎` | KANJIDIC2 reading `ゾウ`, hate/detest meanings, stroke count `14`; no Unihan `kVietnamese`; local context `愛憎` | Kept learner Hán-Việt `Tăng`, corrected stroke count and wrong `愛憎` reading from `あいにく` to `あいぞう`, added readings, example gloss, and emotion related kanji. |
+| `合` | KANJIDIC2 readings `ゴウ/ガッ/カッ`, join/fit meanings; Unihan `kVietnamese=hợp`; local context `合間` | Rewrote to `Hợp (hợp; kết hợp; khớp)`, added readings/search text, direct example `合間`, and join/fit related kanji. |
+| `曖` | KANJIDIC2 reading `アイ`, `くら.い`, ambiguous/dim meanings; Unihan `kVietnamese=áy`; local context `曖昧` | Rewrote to `Áy (mờ tối; không rõ; mơ hồ)`, added readings/search text, example `曖昧`, and ambiguity related kanji. |
+| `昧` | KANJIDIC2 readings `マイ/バイ`, dark/foolish meanings; Unihan `kVietnamese=muội`; local context `曖昧` | Rewrote to `Muội (mờ tối; ngu muội; không rõ)`, added readings/search text, example `曖昧`, and related kanji. |
+| `敢` | KANJIDIC2 reading `カン`, daring/brave meanings, stroke count `12`; Unihan `kVietnamese=cám`; local context `敢えて` | Corrected stroke count and rewrote to `Cám (dám; can đảm; táo bạo)`, added readings/search text, example `敢えて`, and courage/decision related kanji. |
+| `仰` | KANJIDIC2 readings `ギョウ/コウ`, look-up/respect/depend meanings; Unihan `kVietnamese=ngưỡng`; local context `仰ぐ` | Added source-backed readings, corrected no-accent search text, direct example `仰ぐ`, and respect/dependence related kanji. |
+| `垢` | KANJIDIC2 readings `コウ/ク`, `あか/はじ`, dirt/grime meanings; Unihan `kVietnamese=cáu`; local context `垢` | Rewrote to `Cáu (bụi bẩn; cáu bẩn; vết bẩn)`, added readings/search text, direct example `垢`, and cleanliness/dirt related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `52` to `53` and added an N1 lesson-2 sentinel for `柄` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `192` to `184`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `5a9620ac` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_02.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `柄` showed `Bính (hoa văn; tính chất; tay cầm)`, Hán-Việt `Bính`, on `ヘイ`, kun `がら/え/つか`, stroke count `9`, and example `間柄` = `mối quan hệ`.

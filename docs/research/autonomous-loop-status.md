@@ -603,3 +603,11 @@
 - Fixed and pushed `feeaca64`: `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `assets/AssetManifest*`, and `assets/assets/data/content/**` revalidate with `Cache-Control: no-cache`; `sqlite3.wasm` and `drift_worker.js` keep `public, max-age=2592000`.
 - Deployed Firebase Hosting. Header proof with cache-busted live requests: app-shell/content assets returned `no-cache`; wasm/worker returned `public, max-age=2592000`.
 - Verification caveat: browsers that already stored a previous `max-age=86400` response for the same unversioned URL may remain stale until that cached response expires; all future responses now prevent another 24h stale window.
+
+## 2026-05-19 N2 Kanji Lesson 22 Completeness Patch
+
+- Source-verified all eight N2 lesson-22 kanji (`惜`, `御`, `辞`, `儀`, `伯`, `父`, `小`, `叔`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including correcting `惜` away from whole-word adjective fallback, `御`/`辞`/`儀` away from whole-word `bow`, and `伯`/`父`/`小`/`叔` away from uncle/person phrase fallbacks; removed old approval metadata and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `48` and added an N2 lesson-22 sentinel for `惜` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `32` to `24`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
+- Built/deployed `5dd4c6e0` to Firebase Hosting. Live proof after QA-A-017 header redeploy: VI/N2 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_22.json` returned `Cache-Control: no-cache`, and `惜` showed `Tiếc (đáng tiếc; trân trọng; không nỡ)`, Hán-Việt `Tiếc`, on `セキ`, kun `お.しい/お.しむ`, stroke count `11`; console warnings/errors `0`.

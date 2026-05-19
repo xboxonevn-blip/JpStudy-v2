@@ -1107,3 +1107,30 @@ Runtime note: bumped content DB Kanji seed revision from `46` to `47` and added 
 Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `40` to `32`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `3de785e8` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A no-store browser fetch of the deployed asset `/assets/assets/data/content/kanji/n2/lesson_21.json` returned `importStatus=source-verified`; `補` showed `Bổ (bổ sung; bù đắp; hỗ trợ)`, Hán-Việt `Bổ`, on `ホ`, kun `おぎな.う`, stroke count `12`, and example `補う` = `bù đắp; bổ sung`. Current-tab console warnings/errors: `0`.
+
+## Kanji N2 Lesson 22 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `父` has no Unihan `kVietnamese`, so the learner-facing Hán-Việt value keeps the established Sino-Vietnamese reading.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `惜しい`, `御辞儀`, `伯父さん`, `小父さん`, and `叔父さん`, used only to choose examples and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `惜` | KANJIDIC2 reading `セキ`, `お.しい/お.しむ`, meanings `pity`, `regret`, `be sparing of`; Unihan `kVietnamese=tiếc`; local context `惜しい` | Corrected the row away from the whole-word adjective fallback to `Tiếc (đáng tiếc; trân trọng; không nỡ)`, added readings/search text, direct example `惜しい`, and regret/heart related kanji. |
+| `御` | KANJIDIC2 readings `ギョ/ゴ`, honorific prefix meanings; Unihan `kVietnamese=ngự`; local context `御辞儀` | Corrected the row away from whole-word `bow` fallback to `Ngự (kính ngữ; điều khiển; cai quản)`, added readings/search text, direct example `御辞儀`, and polite/ritual related kanji. |
+| `辞` | KANJIDIC2 reading `ジ`, word/resign meanings; Unihan `kVietnamese=từ`; local context `御辞儀` | Corrected the row away from whole-word `bow` fallback to `Từ (lời nói; thuật ngữ; từ chức)`, added readings/search text, direct example `御辞儀`, and language/expression related kanji. |
+| `儀` | KANJIDIC2 reading `ギ`, ceremony/rite meanings; Unihan `kVietnamese=nghi`; local context `御辞儀` | Corrected the row away from whole-word `bow` fallback to `Nghi (nghi lễ; phép tắc; nghi thức)`, added readings/search text, direct example `御辞儀`, and ritual/manners related kanji. |
+| `伯` | KANJIDIC2 reading `ハク`, chief/earl/uncle meanings; Unihan `kVietnamese=bá`; local context `伯父さん` | Corrected the row away from whole-word `uncle` fallback to `Bá (bác trai; bậc trưởng; tước bá)`, added readings/search text, direct example `伯父さん`, and family/rank related kanji. |
+| `父` | KANJIDIC2 reading `フ`, `ちち`, meaning `father`; no Unihan `kVietnamese`; local context `伯父さん` | Corrected the row away from whole-word `uncle` fallback to `Phụ (cha; bố)`, added readings/search text, direct example `伯父さん`, and parent/family related kanji. |
+| `小` | KANJIDIC2 reading `ショウ`, small kunyomi, meanings `little`, `small`; Unihan `kVietnamese=tiểu`; local context `小父さん` | Corrected the row away from whole-word `middle-aged gentleman` fallback to `Tiểu (nhỏ; bé; ít)`, added readings/search text, direct example `小父さん`, and size/child related kanji. |
+| `叔` | KANJIDIC2 reading `シュク`, uncle/youth meanings; Unihan `kVietnamese=thúc`; local context `叔父さん` | Corrected the row away from whole-word `uncle` fallback to `Thúc (chú; em trai của cha; trẻ tuổi)`, added readings/search text, direct example `叔父さん`, and younger-family related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `47` to `48` and added an N2 lesson-22 sentinel for `惜` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `32` to `24`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `5dd4c6e0` and the QA-A-017 header redeploy were on Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_22.json` returned `Cache-Control: no-cache`, `lessonId=22`, and `count=8`; `惜` showed `Tiếc (đáng tiếc; trân trọng; không nỡ)`, Hán-Việt `Tiếc`, on `セキ`, kun `お.しい/お.しむ`, stroke count `11`, and example `惜しい` = `đáng tiếc; phí; quý giá`. The same proof confirmed `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `AssetManifest`, and content JSON all revalidate with `no-cache`, while `sqlite3.wasm` and `drift_worker.js` keep `public, max-age=2592000`. Current-tab console warnings/errors: `0`.

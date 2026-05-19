@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 39;
+const _kanjiSeedRevision = 40;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -106,6 +106,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '持',
     meaning: 'Trì (cầm; giữ; mang; duy trì)',
     decompositionContains: '"hanViet":"Trì"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 14,
+    character: '写',
+    meaning: 'Tả (chụp lại; sao chép; phản chiếu)',
+    decompositionContains: '"hanViet":"Tả"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

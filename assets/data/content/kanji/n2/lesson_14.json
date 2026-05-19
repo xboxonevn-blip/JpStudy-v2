@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 14,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k105",
@@ -18,45 +18,58 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Tả",
-        "meaningVi": "to be photographed, to be projected",
-        "meaningViDisplay": "写 (to be photographed, to be projected)",
-        "meaningEn": "to be photographed, to be projected"
+        "meaningVi": "chụp lại; sao chép; phản chiếu",
+        "meaningViDisplay": "Tả (chụp lại; sao chép; phản chiếu)",
+        "meaningEn": "copy, be photographed, describe"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シャ",
+          "ジャ"
+        ],
         "kunyomi": [
-          "うつる"
+          "うつ.す",
+          "うつ.る",
+          "うつ-",
+          "うつ.し"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 写る (to be photographed, to be projected).",
-        "en": "Appears in JLPT N2 vocabulary: 写る (to be photographed, to be projected)."
+        "vi": "写 là chép lại hoặc làm hình hiện lên; 写る là được chụp/hiện trong ảnh.",
+        "en": "写 means to copy or make an image appear; 写る means to be photographed or appear in an image."
       },
       "decomposition": {
         "hanViet": "Tả",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "真",
+          "映",
+          "撮",
+          "影"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ta",
-        "meaningViNoAccent": "to be photographed, to be projected",
-        "meaningEnNoAccent": "to be photographed, to be projected"
+        "meaningViNoAccent": "chup lai; sao chep; phan chieu",
+        "meaningEnNoAccent": "copy, be photographed, describe"
       },
       "examples": [
         {
           "word": "写る",
           "reading": "うつる",
-          "meaning": "to be photographed, to be projected"
+          "meaning": "hiện trong ảnh; được chụp",
+          "meaningEn": "to be photographed, to appear in a photo"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,37 +81,46 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Vô",
-        "meaningVi": "yes or no, existence, flag indicator (comp), presence or absence marker",
-        "meaningViDisplay": "無 (yes or no, existence, flag indicator (comp), presence or absence marker)",
-        "meaningEn": "yes or no, existence, flag indicator (comp), presence or absence marker"
+        "meaningVi": "không; không có; vô",
+        "meaningViDisplay": "Vô (không; không có; vô)",
+        "meaningEn": "nothingness, none, not"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ム",
+          "ブ"
+        ],
         "kunyomi": [
-          "うむ"
+          "な.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 有無 (yes or no, existence, flag indicator (comp), presence or absence marker).",
-        "en": "Appears in JLPT N2 vocabulary: 有無 (yes or no, existence, flag indicator (comp), presence or absence marker)."
+        "vi": "無 là không có; trong 有無, cặp 有/無 hỏi xem có hay không.",
+        "en": "無 means absence or not having; in 有無, 有/無 asks whether something is present or absent."
       },
       "decomposition": {
         "hanViet": "Vô",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "有",
+          "不",
+          "空",
+          "欠"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vo",
-        "meaningViNoAccent": "yes or no, existence, flag indicator (comp), presence or absence marker",
-        "meaningEnNoAccent": "yes or no, existence, flag indicator (comp), presence or absence marker"
+        "meaningViNoAccent": "khong; khong co; vo",
+        "meaningEnNoAccent": "nothingness, none, not"
       },
       "examples": [
         {
           "word": "有無",
           "reading": "うむ",
-          "meaning": "yes or no, existence, flag indicator (comp), presence or absence marker"
+          "meaning": "có hay không; sự có mặt hay vắng mặt",
+          "meaningEn": "presence or absence"
         }
       ],
       "tags": [
@@ -106,9 +128,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k107",
@@ -118,37 +141,50 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Mai",
-        "meaningVi": "to bury, to fill up, to fill (a seat,  a vacant position)",
-        "meaningViDisplay": "埋 (to bury, to fill up, to fill (a seat,  a vacant position))",
-        "meaningEn": "to bury, to fill up, to fill (a seat,  a vacant position)"
+        "meaningVi": "chôn; lấp; bị vùi",
+        "meaningViDisplay": "Mai (chôn; lấp; bị vùi)",
+        "meaningEn": "bury, be filled up, embedded"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "マイ"
+        ],
         "kunyomi": [
-          "うめる"
+          "う.める",
+          "う.まる",
+          "う.もれる",
+          "うず.める",
+          "うず.まる",
+          "い.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 埋める (to bury, to fill up, to fill (a seat,  a vacant position)).",
-        "en": "Appears in JLPT N2 vocabulary: 埋める (to bury, to fill up, to fill (a seat,  a vacant position))."
+        "vi": "埋 gắn với đất và việc chôn/lấp; 埋める là lấp đầy hoặc chôn xuống.",
+        "en": "埋 is tied to earth and burying or filling; 埋める means to bury or fill in."
       },
       "decomposition": {
         "hanViet": "Mai",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "土",
+          "穴",
+          "塞",
+          "沈"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Mai",
-        "meaningViNoAccent": "to bury, to fill up, to fill (a seat,  a vacant position)",
-        "meaningEnNoAccent": "to bury, to fill up, to fill (a seat,  a vacant position)"
+        "meaningViNoAccent": "chon; lap; bi vui",
+        "meaningEnNoAccent": "bury, be filled up, embedded"
       },
       "examples": [
         {
           "word": "埋める",
           "reading": "うめる",
-          "meaning": "to bury, to fill up, to fill (a seat,  a vacant position)"
+          "meaning": "chôn; lấp đầy",
+          "meaningEn": "to bury, to fill in"
         }
       ],
       "tags": [
@@ -156,9 +192,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k108",
@@ -168,37 +205,46 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Kính",
-        "meaningVi": "to show respect, to honour",
-        "meaningViDisplay": "敬 (to show respect, to honour)",
-        "meaningEn": "to show respect, to honour"
+        "meaningVi": "kính trọng; tôn trọng; kính cẩn",
+        "meaningViDisplay": "Kính (kính trọng; tôn trọng; kính cẩn)",
+        "meaningEn": "respect, honor, revere"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ケイ",
+          "キョウ"
+        ],
         "kunyomi": [
-          "うやまう"
+          "うやま.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 敬う (to show respect, to honour).",
-        "en": "Appears in JLPT N2 vocabulary: 敬う (to show respect, to honour)."
+        "vi": "敬 là giữ thái độ kính trọng; 敬う là kính trọng một người hoặc điều đáng quý.",
+        "en": "敬 means respectful regard; 敬う is to respect or revere someone or something worthy."
       },
       "decomposition": {
         "hanViet": "Kính",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "尊",
+          "礼",
+          "慎",
+          "謙"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Kinh",
-        "meaningViNoAccent": "to show respect, to honour",
-        "meaningEnNoAccent": "to show respect, to honour"
+        "meaningViNoAccent": "kinh trong; ton trong; kinh can",
+        "meaningEnNoAccent": "respect, honor, revere"
       },
       "examples": [
         {
           "word": "敬う",
           "reading": "うやまう",
-          "meaning": "to show respect, to honour"
+          "meaning": "kính trọng; tôn kính",
+          "meaningEn": "to respect, to honor"
         }
       ],
       "tags": [
@@ -206,9 +252,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k109",
@@ -218,45 +265,54 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Lý",
-        "meaningVi": "to turn inside out, to turn (something) over",
-        "meaningViDisplay": "裏 (to turn inside out, to turn (something) over)",
-        "meaningEn": "to turn inside out, to turn (something) over"
+        "meaningVi": "mặt sau; bên trong; lớp lót",
+        "meaningViDisplay": "Lý (mặt sau; bên trong; lớp lót)",
+        "meaningEn": "back, reverse, inside, lining"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "リ"
+        ],
         "kunyomi": [
-          "うらがえす"
+          "うら"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 裏返す (to turn inside out, to turn (something) over).",
-        "en": "Appears in JLPT N2 vocabulary: 裏返す (to turn inside out, to turn (something) over)."
+        "vi": "裏 là mặt khuất/mặt trong; 裏返す là lật sang mặt trái hoặc mặt sau.",
+        "en": "裏 is the hidden or inside side; 裏返す means to turn something over or inside out."
       },
       "decomposition": {
         "hanViet": "Lý",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "表",
+          "内",
+          "返",
+          "面"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ly",
-        "meaningViNoAccent": "to turn inside out, to turn (something) over",
-        "meaningEnNoAccent": "to turn inside out, to turn (something) over"
+        "meaningViNoAccent": "mat sau; ben trong; lop lot",
+        "meaningEnNoAccent": "back, reverse, inside, lining"
       },
       "examples": [
         {
           "word": "裏返す",
           "reading": "うらがえす",
-          "meaning": "to turn inside out, to turn (something) over"
+          "meaning": "lật mặt trái; lộn ngược",
+          "meaningEn": "to turn inside out, to turn over"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,37 +324,48 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Phản",
-        "meaningVi": "to turn inside out, to turn (something) over",
-        "meaningViDisplay": "返 (to turn inside out, to turn (something) over)",
-        "meaningEn": "to turn inside out, to turn (something) over"
+        "meaningVi": "trả lại; quay lại; đáp lại",
+        "meaningViDisplay": "Phản (trả lại; quay lại; đáp lại)",
+        "meaningEn": "return, answer, repay"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヘン"
+        ],
         "kunyomi": [
-          "うらがえす"
+          "かえ.す",
+          "-かえ.す",
+          "かえ.る",
+          "-かえ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 裏返す (to turn inside out, to turn (something) over).",
-        "en": "Appears in JLPT N2 vocabulary: 裏返す (to turn inside out, to turn (something) over)."
+        "vi": "返 là quay/trả ngược về; trong 裏返す, vật được lật trở lại sang mặt kia.",
+        "en": "返 means returning or turning back; in 裏返す, an item is turned over to the other side."
       },
       "decomposition": {
         "hanViet": "Phản",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "帰",
+          "戻",
+          "答",
+          "裏"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phan",
-        "meaningViNoAccent": "to turn inside out, to turn (something) over",
-        "meaningEnNoAccent": "to turn inside out, to turn (something) over"
+        "meaningViNoAccent": "tra lai; quay lai; dap lai",
+        "meaningEnNoAccent": "return, answer, repay"
       },
       "examples": [
         {
           "word": "裏返す",
           "reading": "うらがえす",
-          "meaning": "to turn inside out, to turn (something) over"
+          "meaning": "lật mặt trái; lộn ngược",
+          "meaningEn": "to turn inside out, to turn over"
         }
       ],
       "tags": [
@@ -306,9 +373,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k111",
@@ -318,37 +386,46 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Khẩu",
-        "meaningVi": "backdoor, rear entrance",
-        "meaningViDisplay": "口 (backdoor, rear entrance)",
-        "meaningEn": "backdoor, rear entrance"
+        "meaningVi": "miệng; cửa vào; lối vào",
+        "meaningViDisplay": "Khẩu (miệng; cửa vào; lối vào)",
+        "meaningEn": "mouth, open end, entrance"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ",
+          "ク"
+        ],
         "kunyomi": [
-          "うらぐち"
+          "くち"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 裏口 (backdoor, rear entrance).",
-        "en": "Appears in JLPT N2 vocabulary: 裏口 (backdoor, rear entrance)."
+        "vi": "口 là miệng hoặc cửa/lối vào; 裏口 là lối vào phía sau.",
+        "en": "口 means mouth or entrance; 裏口 is a rear entrance."
       },
       "decomposition": {
         "hanViet": "Khẩu",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "門",
+          "入",
+          "問",
+          "味"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Khau",
-        "meaningViNoAccent": "backdoor, rear entrance",
-        "meaningEnNoAccent": "backdoor, rear entrance"
+        "meaningViNoAccent": "mieng; cua vao; loi vao",
+        "meaningEnNoAccent": "mouth, open end, entrance"
       },
       "examples": [
         {
           "word": "裏口",
           "reading": "うらぐち",
-          "meaning": "backdoor, rear entrance"
+          "meaning": "cửa sau; lối vào phía sau",
+          "meaningEn": "back door, rear entrance"
         }
       ],
       "tags": [
@@ -356,9 +433,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k112",
@@ -368,37 +446,46 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Chiêm",
-        "meaningVi": "to forecast, to predict",
-        "meaningViDisplay": "占 (to forecast, to predict)",
-        "meaningEn": "to forecast, to predict"
+        "meaningVi": "bói; dự đoán; chiếm giữ",
+        "meaningViDisplay": "Chiêm (bói; dự đoán; chiếm giữ)",
+        "meaningEn": "fortune-telling, forecasting, occupy"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "うらなう"
+          "し.める",
+          "うらな.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 占う (to forecast, to predict).",
-        "en": "Appears in JLPT N2 vocabulary: 占う (to forecast, to predict)."
+        "vi": "占 vừa chỉ bói/dự đoán, vừa có nghĩa chiếm giữ; 占う dùng cho bói hoặc dự đoán.",
+        "en": "占 can mean divining or occupying; 占う is to tell fortunes or forecast."
       },
       "decomposition": {
         "hanViet": "Chiêm",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "卜",
+          "予",
+          "兆",
+          "告"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chiem",
-        "meaningViNoAccent": "to forecast, to predict",
-        "meaningEnNoAccent": "to forecast, to predict"
+        "meaningViNoAccent": "boi; du doan; chiem giu",
+        "meaningEnNoAccent": "fortune-telling, forecasting, occupy"
       },
       "examples": [
         {
           "word": "占う",
           "reading": "うらなう",
-          "meaning": "to forecast, to predict"
+          "meaning": "bói; dự đoán",
+          "meaningEn": "to tell fortunes, to forecast"
         }
       ],
       "tags": [
@@ -406,14 +493,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, Vietnamese readings, stroke counts, and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

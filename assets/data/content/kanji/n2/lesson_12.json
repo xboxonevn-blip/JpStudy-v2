@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 12,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k089",
@@ -18,37 +18,46 @@
       "strokeCount": 2,
       "labels": {
         "hanViet": "Lực",
-        "meaningVi": "gravity",
-        "meaningViDisplay": "力 (gravity)",
-        "meaningEn": "gravity"
+        "meaningVi": "sức mạnh; lực; năng lực",
+        "meaningViDisplay": "Lực (sức mạnh; lực; năng lực)",
+        "meaningEn": "power, strength, force"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "リョク",
+          "リキ"
+        ],
         "kunyomi": [
-          "いんりょく"
+          "ちから"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 引力 (gravity).",
-        "en": "Appears in JLPT N2 vocabulary: 引力 (gravity)."
+        "vi": "力 là sức mạnh hoặc lực tác động; trong 引力, chữ này chỉ lực hút.",
+        "en": "力 means power or force; in 引力 it marks the pulling force of gravity."
       },
       "decomposition": {
         "hanViet": "Lực",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "引",
+          "強",
+          "勢",
+          "能"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Luc",
-        "meaningViNoAccent": "gravity",
-        "meaningEnNoAccent": "gravity"
+        "meaningViNoAccent": "suc manh; luc; nang luc",
+        "meaningEnNoAccent": "power, strength, force"
       },
       "examples": [
         {
           "word": "引力",
           "reading": "いんりょく",
-          "meaning": "gravity"
+          "meaning": "lực hấp dẫn",
+          "meaningEn": "gravity"
         }
       ],
       "tags": [
@@ -56,10 +65,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k090",
@@ -69,37 +78,46 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Thực",
-        "meaningVi": "garden shrubs, trees, potted plant",
-        "meaningViDisplay": "植 (garden shrubs, trees, potted plant)",
-        "meaningEn": "garden shrubs, trees, potted plant"
+        "meaningVi": "trồng; cây trồng; thực vật",
+        "meaningViDisplay": "Thực (trồng; cây trồng; thực vật)",
+        "meaningEn": "plant, grow"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショク"
+        ],
         "kunyomi": [
-          "うえき"
+          "う.える",
+          "う.わる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 植木 (garden shrubs, trees, potted plant).",
-        "en": "Appears in JLPT N2 vocabulary: 植木 (garden shrubs, trees, potted plant)."
+        "vi": "植 gắn với việc trồng cây; trong 植木, chữ này nhấn mạnh cây được trồng/chăm trong vườn.",
+        "en": "植 is planting or growing plants; in 植木 it points to cultivated garden plants."
       },
       "decomposition": {
         "hanViet": "Thực",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "木",
+          "草",
+          "花",
+          "根"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thuc",
-        "meaningViNoAccent": "garden shrubs, trees, potted plant",
-        "meaningEnNoAccent": "garden shrubs, trees, potted plant"
+        "meaningViNoAccent": "trong; cay trong; thuc vat",
+        "meaningEnNoAccent": "plant, grow"
       },
       "examples": [
         {
           "word": "植木",
           "reading": "うえき",
-          "meaning": "garden shrubs, trees, potted plant"
+          "meaning": "cây cảnh; cây trồng chậu",
+          "meaningEn": "garden shrubs, trees, potted plant"
         }
       ],
       "tags": [
@@ -107,10 +125,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k091",
@@ -120,37 +138,47 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Mộc",
-        "meaningVi": "garden shrubs, trees, potted plant",
-        "meaningViDisplay": "木 (garden shrubs, trees, potted plant)",
-        "meaningEn": "garden shrubs, trees, potted plant"
+        "meaningVi": "cây; gỗ; thân cây",
+        "meaningViDisplay": "Mộc (cây; gỗ; thân cây)",
+        "meaningEn": "tree, wood"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ボク",
+          "モク"
+        ],
         "kunyomi": [
-          "うえき"
+          "き",
+          "こ-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 植木 (garden shrubs, trees, potted plant).",
-        "en": "Appears in JLPT N2 vocabulary: 植木 (garden shrubs, trees, potted plant)."
+        "vi": "木 là cây hoặc gỗ; trong 植木, chữ này là phần cây được trồng.",
+        "en": "木 means tree or wood; in 植木 it is the tree being planted."
       },
       "decomposition": {
         "hanViet": "Mộc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "林",
+          "森",
+          "植",
+          "材"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Moc",
-        "meaningViNoAccent": "garden shrubs, trees, potted plant",
-        "meaningEnNoAccent": "garden shrubs, trees, potted plant"
+        "meaningViNoAccent": "cay; go; than cay",
+        "meaningEnNoAccent": "tree, wood"
       },
       "examples": [
         {
           "word": "植木",
           "reading": "うえき",
-          "meaning": "garden shrubs, trees, potted plant"
+          "meaning": "cây cảnh; cây trồng chậu",
+          "meaningEn": "garden shrubs, trees, potted plant"
         }
       ],
       "tags": [
@@ -158,10 +186,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k092",
@@ -171,37 +199,45 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Cơ",
-        "meaningVi": "to starve",
-        "meaningViDisplay": "飢 (to starve)",
-        "meaningEn": "to starve"
+        "meaningVi": "đói; đói khát; nạn đói",
+        "meaningViDisplay": "Cơ (đói; đói khát; nạn đói)",
+        "meaningEn": "hungry, starve"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ"
+        ],
         "kunyomi": [
-          "うえる"
+          "う.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 飢える (to starve).",
-        "en": "Appears in JLPT N2 vocabulary: 飢える (to starve)."
+        "vi": "飢 chỉ trạng thái đói khát nghiêm trọng; 飢える là bị đói hoặc thiếu thốn đến mức khổ sở.",
+        "en": "飢 marks severe hunger or starvation; 飢える means to starve or hunger badly."
       },
       "decomposition": {
         "hanViet": "Cơ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "食",
+          "餓",
+          "腹",
+          "貧"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Co",
-        "meaningViNoAccent": "to starve",
-        "meaningEnNoAccent": "to starve"
+        "meaningViNoAccent": "doi; doi khat; nan doi",
+        "meaningEnNoAccent": "hungry, starve"
       },
       "examples": [
         {
           "word": "飢える",
           "reading": "うえる",
-          "meaning": "to starve"
+          "meaning": "đói lả; chết đói",
+          "meaningEn": "to starve"
         }
       ],
       "tags": [
@@ -209,10 +245,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k093",
@@ -222,37 +258,48 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Phù",
-        "meaningVi": "to float, to rise to surface, to come to mind",
-        "meaningViDisplay": "浮 (to float, to rise to surface, to come to mind)",
-        "meaningEn": "to float, to rise to surface, to come to mind"
+        "meaningVi": "nổi; trôi; hiện lên",
+        "meaningViDisplay": "Phù (nổi; trôi; hiện lên)",
+        "meaningEn": "float, rise to surface"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "フ"
+        ],
         "kunyomi": [
-          "うかぶ"
+          "う.く",
+          "う.かれる",
+          "う.かぶ",
+          "う.かべる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 浮ぶ (to float, to rise to surface, to come to mind).",
-        "en": "Appears in JLPT N2 vocabulary: 浮ぶ (to float, to rise to surface, to come to mind)."
+        "vi": "浮 là nổi lên trên mặt nước hoặc hiện lên trong đầu; 浮ぶ/浮かぶ dùng cả nghĩa nổi và nảy ra ý nghĩ.",
+        "en": "浮 means floating or rising to the surface; 浮ぶ/浮かぶ also means a thought comes to mind."
       },
       "decomposition": {
         "hanViet": "Phù",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "水",
+          "流",
+          "泳",
+          "沈"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phu",
-        "meaningViNoAccent": "to float, to rise to surface, to come to mind",
-        "meaningEnNoAccent": "to float, to rise to surface, to come to mind"
+        "meaningViNoAccent": "noi; troi; hien len",
+        "meaningEnNoAccent": "float, rise to surface"
       },
       "examples": [
         {
           "word": "浮ぶ",
           "reading": "うかぶ",
-          "meaning": "to float, to rise to surface, to come to mind"
+          "meaning": "nổi lên; hiện ra; nảy ra trong đầu",
+          "meaningEn": "to float, to rise to surface, to come to mind"
         }
       ],
       "tags": [
@@ -260,10 +307,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k094",
@@ -273,37 +320,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Thừa",
-        "meaningVi": "(hum) to hear, to be told, to know",
-        "meaningViDisplay": "承 ((hum) to hear, to be told, to know)",
-        "meaningEn": "(hum) to hear, to be told, to know"
+        "meaningVi": "tiếp nhận; thừa nhận; kính nghe",
+        "meaningViDisplay": "Thừa (tiếp nhận; thừa nhận; kính nghe)",
+        "meaningEn": "acquiesce, receive, hear"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ",
+          "ジョウ"
+        ],
         "kunyomi": [
-          "うけたまわる"
+          "うけたまわ.る",
+          "う.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 承る ((hum) to hear, to be told, to know).",
-        "en": "Appears in JLPT N2 vocabulary: 承る ((hum) to hear, to be told, to know)."
+        "vi": "承 là tiếp nhận hoặc chấp thuận; 承る là cách nói kính ngữ khi nghe/nhận lời.",
+        "en": "承 means to receive, accept, or be informed; 承る is the humble form for hearing or receiving."
       },
       "decomposition": {
         "hanViet": "Thừa",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "受",
+          "聞",
+          "認",
+          "継"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thua",
-        "meaningViNoAccent": "(hum) to hear, to be told, to know",
-        "meaningEnNoAccent": "(hum) to hear, to be told, to know"
+        "meaningViNoAccent": "tiep nhan; thua nhan; kinh nghe",
+        "meaningEnNoAccent": "acquiesce, receive, hear"
       },
       "examples": [
         {
           "word": "承る",
           "reading": "うけたまわる",
-          "meaning": "(hum) to hear, to be told, to know"
+          "meaning": "kính nghe; được cho biết; tiếp nhận",
+          "meaningEn": "(humble) to hear, to be told, to know"
         }
       ],
       "tags": [
@@ -311,10 +368,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k095",
@@ -324,37 +381,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Thụ",
-        "meaningVi": "receipt",
-        "meaningViDisplay": "受 (receipt)",
-        "meaningEn": "receipt"
+        "meaningVi": "nhận; tiếp nhận; chịu",
+        "meaningViDisplay": "Thụ (nhận; tiếp nhận; chịu)",
+        "meaningEn": "receive, accept, undergo"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジュ"
+        ],
         "kunyomi": [
-          "うけとり"
+          "う.ける",
+          "-う.け",
+          "う.かる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 受取 (receipt).",
-        "en": "Appears in JLPT N2 vocabulary: 受取 (receipt)."
+        "vi": "受 là nhận hoặc chịu một việc gì; trong 受取, chữ này là phần nhận.",
+        "en": "受 means to receive, accept, or undergo; in 受取 it marks the receiving side."
       },
       "decomposition": {
         "hanViet": "Thụ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "取",
+          "承",
+          "授",
+          "渡"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thu",
-        "meaningViNoAccent": "receipt",
-        "meaningEnNoAccent": "receipt"
+        "meaningViNoAccent": "nhan; tiep nhan; chiu",
+        "meaningEnNoAccent": "receive, accept, undergo"
       },
       "examples": [
         {
           "word": "受取",
           "reading": "うけとり",
-          "meaning": "receipt"
+          "meaning": "biên nhận; việc nhận hàng",
+          "meaningEn": "receipt"
         }
       ],
       "tags": [
@@ -362,10 +429,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k096",
@@ -375,37 +442,48 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Thủ",
-        "meaningVi": "receipt",
-        "meaningViDisplay": "取 (receipt)",
-        "meaningEn": "receipt"
+        "meaningVi": "lấy; nhận; chọn",
+        "meaningViDisplay": "Thủ (lấy; nhận; chọn)",
+        "meaningEn": "take, fetch, select"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュ"
+        ],
         "kunyomi": [
-          "うけとり"
+          "と.る",
+          "と.り",
+          "とり",
+          "-ど.り"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 受取 (receipt).",
-        "en": "Appears in JLPT N2 vocabulary: 受取 (receipt)."
+        "vi": "取 là lấy hoặc nhận lấy; trong 受取, chữ này là phần lấy/nhận vật hoặc giấy tờ.",
+        "en": "取 means to take or fetch; in 受取 it is the act of receiving or taking something."
       },
       "decomposition": {
         "hanViet": "Thủ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "受",
+          "手",
+          "採",
+          "得"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thu",
-        "meaningViNoAccent": "receipt",
-        "meaningEnNoAccent": "receipt"
+        "meaningViNoAccent": "lay; nhan; chon",
+        "meaningEnNoAccent": "take, fetch, select"
       },
       "examples": [
         {
           "word": "受取",
           "reading": "うけとり",
-          "meaning": "receipt"
+          "meaning": "biên nhận; việc nhận hàng",
+          "meaningEn": "receipt"
         }
       ],
       "tags": [
@@ -413,15 +491,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved",
-        "vi-human-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, Vietnamese readings, stroke counts, and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

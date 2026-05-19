@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 37;
+const _kanjiSeedRevision = 38;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -92,6 +92,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '妹',
     meaning: 'Muội (em gái; người em nữ)',
     decompositionContains: '"hanViet":"Muội"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 12,
+    character: '力',
+    meaning: 'Lực (sức mạnh; lực; năng lực)',
+    decompositionContains: '"hanViet":"Lực"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

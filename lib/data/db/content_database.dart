@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 59;
+const _kanjiSeedRevision = 60;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -246,6 +246,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '化',
     meaning: 'Hóa (biến đổi; biến hóa; -hóa)',
     decompositionContains: '"hanViet":"Hóa"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 9,
+    character: '力',
+    meaning: 'Lực (sức mạnh; lực; năng lực)',
+    decompositionContains: '"hanViet":"Lực"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

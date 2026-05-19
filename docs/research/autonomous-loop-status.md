@@ -864,3 +864,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `21`.
 - Verified under Directive C: JSON/source-tag check `20/20`, focused suite `63/63`, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N3 grammar level completion.
 - Live proof: existing production browser, normal cache. The real N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `21`; opening `べきだ` rendered `KẾT NỐI: V辞書 + べきだ（する→するべき・すべき）`, and opening `わけだ` rendered `KẾT NỐI: V普通形 / いA / なAな / Nな・Nである + わけだ`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n3_16.json`, `grammar_n3_18.json`, and `grammar_n3_20.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N3 Lessons 21-25 Batch
+
+- Source-verified 20 N3 grammar points in lessons 21-25; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected/clarified formations and explanations for `つつある`, `にかけて`, `ほど〜ない`, `というより`, `ばかりでなく`, and `どんなに〜ても`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `22`; this completes the current N3 grammar pass.
+- Verified under Directive C: JSON/source-tag check `20/20`, focused suite passed, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, full `flutter test` passed (`2343`) because N3 grammar level is now complete, release build pass, and Firebase Hosting deploy pass.
+- Live proof: production browser with normal cache. The real N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `22`; the list rendered `N1 + から + N2 + にかけて`, `N + ほど + いAくない / なAではない / Vない`, `V普通形 / いA / なAな / N + ばかりでなく`, and `どんなに + Vても / いAくても / なAでも / Nでも`. Opening `ばかりでなく` rendered the corrected `KẾT NỐI`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n3_21.json`, `grammar_n3_24.json`, and `grammar_n3_25.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.

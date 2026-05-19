@@ -14,7 +14,7 @@ class GrammarSeeder {
   final GrammarDao _dao;
 
   // Tăng version này lên khi thay đổi file JSON data
-  static const int kGrammarDataVersion = 21;
+  static const int kGrammarDataVersion = 22;
   static const String kKeyGrammarVersion = 'grammar_data_version';
 
   static String versionKeyForLevel(String level) =>

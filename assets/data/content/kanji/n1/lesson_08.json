@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 8,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 気, 圧, and 誂 have no Unihan kVietnamese values, so learner-facing Hán-Việt values use established readings.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k057",
@@ -17,48 +17,66 @@
       "character": "化",
       "strokeCount": 4,
       "labels": {
-        "hanViet": "Hoá",
-        "meaningVi": "biến hóa; chuyển đổi",
-        "meaningViDisplay": "化 (biến hóa; chuyển đổi)",
-        "meaningEn": "change, convert, reform; -ize"
+        "hanViet": "Hóa",
+        "meaningVi": "biến đổi; biến hóa; -hóa",
+        "meaningViDisplay": "Hóa (biến đổi; biến hóa; -hóa)",
+        "meaningEn": "change; transform; -ization"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ",
+          "ケ"
+        ],
         "kunyomi": [
-          "あっか"
+          "ば.ける",
+          "ば.かす",
+          "ふ.ける",
+          "け.する"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 化 nghĩa là biến hóa; chuyển đổi. Ví dụ JLPT N1: 悪化 (deterioration, growing worse, aggravation, degeneration, corruption).",
-        "en": "Kanji 化 means change, convert, reform; -ize. JLPT N1 example: 悪化 (deterioration, growing worse, aggravation, degeneration, corruption)."
+        "vi": "化 diễn tả sự biến đổi hoặc hậu tố '-hóa'; trong 悪化, trạng thái chuyển xấu đi.",
+        "en": "化 marks change or -ization; in 悪化, a condition changes for the worse."
       },
       "decomposition": {
-        "hanViet": "Hoá",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Hóa",
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "匕"
+        ],
+        "componentNames": [
+          "người",
+          "thìa"
+        ],
+        "relatedKanji": [
+          "変",
+          "改",
+          "代",
+          "転"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoa",
-        "meaningViNoAccent": "bien hoa; chuyen đoi",
-        "meaningEnNoAccent": "change, convert, reform; -ize"
+        "meaningViNoAccent": "bien doi; bien hoa; -hoa",
+        "meaningEnNoAccent": "change; transform; -ization"
       },
       "examples": [
         {
           "word": "悪化",
           "reading": "あっか",
-          "meaning": "deterioration, growing worse, aggravation, degeneration, corruption"
+          "meaning": "sự xấu đi; trở nên nghiêm trọng hơn",
+          "meaningEn": "deterioration; growing worse"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k058",
@@ -68,45 +86,62 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Khí",
-        "meaningVi": "khí; hơi; tinh thần",
-        "meaningViDisplay": "気 (khí; hơi; tinh thần)",
-        "meaningEn": "air, gas, steam, vapor; spirit"
+        "meaningVi": "khí; tinh thần; tâm trạng",
+        "meaningViDisplay": "Khí (khí; tinh thần; tâm trạng)",
+        "meaningEn": "spirit; mind; air; mood"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ",
+          "ケ"
+        ],
         "kunyomi": [
-          "あっけない"
+          "いき",
+          "き"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 気 nghĩa là khí; hơi; tinh thần. Ví dụ JLPT N1: 呆気ない (nhạt nhẽo, hụt hẫng, không đủ).",
-        "en": "Kanji 気 means air, gas, steam, vapor; spirit. JLPT N1 example: 呆気ない (nhạt nhẽo, hụt hẫng, không đủ)."
+        "vi": "気 chỉ khí, tinh thần hoặc bầu không khí/tâm trạng; 呆気ない diễn tả cảm giác hụt hẫng vì việc kết thúc quá nhanh hoặc không đủ.",
+        "en": "気 means spirit, air, or mood; 呆気ない describes something disappointingly quick or insufficient."
       },
       "decomposition": {
         "hanViet": "Khí",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "气",
+          "㐅"
+        ],
+        "componentNames": [
+          "khí",
+          "dấu chéo"
+        ],
+        "relatedKanji": [
+          "心",
+          "空",
+          "雰",
+          "息"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Khi",
         "meaningViNoAccent": "khi; hoi; tinh than",
-        "meaningEnNoAccent": "air, gas, steam, vapor; spirit"
+        "meaningEnNoAccent": "spirit; mind; air; mood"
       },
       "examples": [
         {
           "word": "呆気ない",
           "reading": "あっけない",
-          "meaning": "nhạt nhẽo, hụt hẫng, không đủ"
+          "meaning": "hụt hẫng; chóng vánh; không thỏa đáng",
+          "meaningEn": "not enough; too quick; anticlimactic"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,47 +153,60 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Khẩu",
-        "meaningVi": "miệng; cửa vào",
-        "meaningViDisplay": "口 (miệng; cửa vào)",
-        "meaningEn": "mouth; open end; entrance, gate"
+        "meaningVi": "miệng; cửa vào; lối vào",
+        "meaningViDisplay": "Khẩu (miệng; cửa vào; lối vào)",
+        "meaningEn": "mouth; entrance"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ",
+          "ク"
+        ],
         "kunyomi": [
-          "あっこう"
+          "くち"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 口 nghĩa là miệng; cửa vào. Ví dụ JLPT N1: 悪口 (abuse, insult, slander, evil speaking).",
-        "en": "Kanji 口 means mouth; open end; entrance, gate. JLPT N1 example: 悪口 (abuse, insult, slander, evil speaking)."
+        "vi": "口 là miệng hoặc lối vào; 悪口 là lời nói xấu, xúc phạm người khác.",
+        "en": "口 means mouth or entrance; 悪口 means abusive or slanderous speech."
       },
       "decomposition": {
         "hanViet": "Khẩu",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "口"
+        ],
+        "componentNames": [
+          "miệng"
+        ],
+        "relatedKanji": [
+          "言",
+          "語",
+          "話",
+          "舌"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Khau",
         "meaningViNoAccent": "mieng; cua vao",
-        "meaningEnNoAccent": "mouth; open end; entrance, gate"
+        "meaningEnNoAccent": "mouth; entrance"
       },
       "examples": [
         {
           "word": "悪口",
           "reading": "あっこう",
-          "meaning": "abuse, insult, slander, evil speaking"
+          "meaning": "nói xấu; xúc phạm; vu khống",
+          "meaningEn": "abuse; insult; slander"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k060",
@@ -168,45 +216,64 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Áp",
-        "meaningVi": "áp lực; ép",
-        "meaningViDisplay": "圧 (áp lực; ép)",
-        "meaningEn": "(same as 壓) to press; to oppress; to crush; pressure"
+        "meaningVi": "áp lực; nén; ép",
+        "meaningViDisplay": "Áp (áp lực; nén; ép)",
+        "meaningEn": "pressure; push; oppress"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アツ",
+          "エン",
+          "オウ"
+        ],
         "kunyomi": [
-          "あっぱく"
+          "お.す",
+          "へ.す",
+          "おさ.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 圧 nghĩa là áp lực; ép. Ví dụ JLPT N1: 圧迫 (áp lực, cưỡng ép, áp bức).",
-        "en": "Kanji 圧 means (same as 壓) to press; to oppress; to crush; pressure. JLPT N1 example: 圧迫 (áp lực, cưỡng ép, áp bức)."
+        "vi": "圧 là áp lực hoặc hành động nén/ép; 圧迫 nói về sức ép, sự cưỡng ép hoặc áp bức.",
+        "en": "圧 means pressure or pressing; 圧迫 is pressure, coercion, or oppression."
       },
       "decomposition": {
         "hanViet": "Áp",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "enclosure",
+        "components": [
+          "厂",
+          "土"
+        ],
+        "componentNames": [
+          "vách đá",
+          "đất"
+        ],
+        "relatedKanji": [
+          "迫",
+          "押",
+          "力",
+          "重"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ap",
-        "meaningViNoAccent": "ap luc; ep",
-        "meaningEnNoAccent": "(same as 壓) to press; to oppress; to crush; pressure"
+        "meaningViNoAccent": "ap luc; nen; ep",
+        "meaningEnNoAccent": "pressure; push; oppress"
       },
       "examples": [
         {
           "word": "圧迫",
           "reading": "あっぱく",
-          "meaning": "áp lực, cưỡng ép, áp bức"
+          "meaning": "áp lực; sự ép buộc; áp bức",
+          "meaningEn": "pressure; coercion; oppression"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,47 +285,61 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Bách",
-        "meaningVi": "ép buộc; bức bách",
-        "meaningViDisplay": "迫 (ép buộc; bức bách)",
-        "meaningEn": "coerce, force, compel; urgent"
+        "meaningVi": "bức bách; ép buộc; cận kề",
+        "meaningViDisplay": "Bách (bức bách; ép buộc; cận kề)",
+        "meaningEn": "urge; force; imminent"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ハク"
+        ],
         "kunyomi": [
-          "あっぱく"
+          "せま.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 迫 nghĩa là ép buộc; bức bách. Ví dụ JLPT N1: 圧迫 (pressure, coercion, oppression).",
-        "en": "Kanji 迫 means coerce, force, compel; urgent. JLPT N1 example: 圧迫 (pressure, coercion, oppression)."
+        "vi": "迫 có bộ sước, gợi sự tiến sát hoặc thúc ép; trong 圧迫, nó bổ sung sắc thái bị ép sát, áp bức.",
+        "en": "迫 has the movement radical and suggests closing in or forcing; in 圧迫 it adds coercive pressure."
       },
       "decomposition": {
         "hanViet": "Bách",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "辶",
+          "白"
+        ],
+        "componentNames": [
+          "đi",
+          "bạch"
+        ],
+        "relatedKanji": [
+          "圧",
+          "近",
+          "追",
+          "急"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bach",
-        "meaningViNoAccent": "ep buoc; buc bach",
-        "meaningEnNoAccent": "coerce, force, compel; urgent"
+        "meaningViNoAccent": "buc bach; ep buoc; can ke",
+        "meaningEnNoAccent": "urge; force; imminent"
       },
       "examples": [
         {
           "word": "圧迫",
           "reading": "あっぱく",
-          "meaning": "pressure, coercion, oppression"
+          "meaning": "áp lực; sự ép buộc; áp bức",
+          "meaningEn": "pressure; coercion; oppression"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k062",
@@ -269,46 +350,64 @@
       "labels": {
         "hanViet": "Gắp",
         "meaningVi": "xử lý; tiếp nhận",
-        "meaningViDisplay": "扱 (xử lý; tiếp nhận)",
-        "meaningEn": "collect, draw in, gather; receive"
+        "meaningViDisplay": "Gắp (xử lý; đối xử; tiếp nhận)",
+        "meaningEn": "handle; treat; deal with"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ",
+          "キュウ"
+        ],
         "kunyomi": [
-          "あつかい"
+          "あつか.い",
+          "あつか.う",
+          "あつか.る",
+          "こ.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 扱 nghĩa là xử lý; tiếp nhận. Ví dụ JLPT N1: 扱い (treatment, service).",
-        "en": "Kanji 扱 means collect, draw in, gather; receive. JLPT N1 example: 扱い (treatment, service)."
+        "vi": "扱 thường gặp trong 扱う/扱い, nghĩa là xử lý, đối xử hoặc phục vụ; Hán-Việt giữ theo Unihan là Gắp.",
+        "en": "扱 appears in 扱う/扱い and means handling, treating, or service."
       },
       "decomposition": {
         "hanViet": "Gắp",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "扌",
+          "及"
+        ],
+        "componentNames": [
+          "tay",
+          "cập"
+        ],
+        "relatedKanji": [
+          "処",
+          "取",
+          "受",
+          "接"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Gap",
-        "meaningViNoAccent": "xu ly; tiep nhan",
-        "meaningEnNoAccent": "collect, draw in, gather; receive"
+        "meaningViNoAccent": "xu ly; doi xu; tiep nhan",
+        "meaningEnNoAccent": "handle; treat; deal with"
       },
       "examples": [
         {
           "word": "扱い",
           "reading": "あつかい",
-          "meaning": "treatment, service"
+          "meaning": "cách xử lý; cách đối xử; dịch vụ",
+          "meaningEn": "treatment; handling; service"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k063",
@@ -318,47 +417,63 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Tập",
-        "meaningVi": "tập hợp; thu gom",
-        "meaningViDisplay": "集 (tập hợp; thu gom)",
-        "meaningEn": "assemble, collect together"
+        "meaningVi": "tập hợp; thu thập; tụ họp",
+        "meaningViDisplay": "Tập (tập hợp; thu thập; tụ họp)",
+        "meaningEn": "gather; collect; meet"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュウ"
+        ],
         "kunyomi": [
-          "あつまる"
+          "あつ.まる",
+          "あつ.める",
+          "つど.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 集 nghĩa là tập hợp; thu gom. Ví dụ JLPT N1: 集まる (to gather, to collect, to assemble).",
-        "en": "Kanji 集 means assemble, collect together. JLPT N1 example: 集まる (to gather, to collect, to assemble)."
+        "vi": "集 gợi hình ảnh chim tụ lại trên cây, nên nghĩa chính là tập hợp, thu thập hoặc tụ họp.",
+        "en": "集 suggests birds gathering on a tree, so it means to gather, collect, or meet."
       },
       "decomposition": {
         "hanViet": "Tập",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "隹",
+          "木"
+        ],
+        "componentNames": [
+          "chim đuôi ngắn",
+          "cây"
+        ],
+        "relatedKanji": [
+          "合",
+          "会",
+          "群",
+          "取"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tap",
-        "meaningViNoAccent": "tap hop; thu gom",
-        "meaningEnNoAccent": "assemble, collect together"
+        "meaningViNoAccent": "tap hop; thu thap; tu hop",
+        "meaningEnNoAccent": "gather; collect; meet"
       },
       "examples": [
         {
           "word": "集まる",
           "reading": "あつまる",
-          "meaning": "to gather, to collect, to assemble"
+          "meaning": "tập hợp; tụ lại",
+          "meaningEn": "to gather; to assemble"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k064",
@@ -369,51 +484,71 @@
       "labels": {
         "hanViet": "Điệu",
         "meaningVi": "đặt làm riêng; đặt hàng",
-        "meaningViDisplay": "誂 (đặt làm riêng; đặt hàng)",
-        "meaningEn": "tempt"
+        "meaningViDisplay": "Điệu (đặt làm riêng; đặt hàng)",
+        "meaningEn": "order; have made to order"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チョウ"
+        ],
         "kunyomi": [
-          "あつらえる"
+          "あつら.える",
+          "いど.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 誂 nghĩa là đặt làm riêng; đặt hàng. Ví dụ JLPT N1: 誂える (đặt hàng, yêu cầu làm riêng).",
-        "en": "Kanji 誂 means tempt. JLPT N1 example: 誂える (đặt hàng, yêu cầu làm riêng)."
+        "vi": "誂 gồm bộ ngôn và 兆; 誂える nghĩa là đặt làm riêng hoặc yêu cầu làm theo đơn đặt hàng.",
+        "en": "誂 combines speech with 兆; 誂える means to order or have something made to order."
       },
       "decomposition": {
         "hanViet": "Điệu",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "言",
+          "兆"
+        ],
+        "componentNames": [
+          "lời nói",
+          "triệu; điềm"
+        ],
+        "relatedKanji": [
+          "注",
+          "文",
+          "頼",
+          "言"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dieu",
-        "meaningViNoAccent": "đat lam rieng; đat hang",
-        "meaningEnNoAccent": "tempt"
+        "meaningViNoAccent": "dat lam rieng; dat hang",
+        "meaningEnNoAccent": "order; have made to order"
       },
       "examples": [
         {
           "word": "誂える",
           "reading": "あつらえる",
-          "meaning": "đặt hàng, yêu cầu làm riêng"
+          "meaning": "đặt làm riêng; đặt hàng",
+          "meaningEn": "to order; to have made to order"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 and lower-level vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

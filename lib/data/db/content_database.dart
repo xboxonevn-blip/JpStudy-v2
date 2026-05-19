@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 58;
+const _kanjiSeedRevision = 59;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -239,6 +239,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '処',
     meaning: 'Xử (xử lý; giải quyết; nơi chốn)',
     decompositionContains: '"hanViet":"Xử"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 8,
+    character: '化',
+    meaning: 'Hóa (biến đổi; biến hóa; -hóa)',
+    decompositionContains: '"hanViet":"Hóa"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

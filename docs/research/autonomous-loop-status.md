@@ -693,3 +693,11 @@
 - Bumped content DB Kanji seed revision to `58` and added an N1 lesson-7 sentinel for `処` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `152` to `144`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
 - Live proof used normal browser cache: shell/content assets returned `Cache-Control: no-cache`, wasm/worker remained `public, max-age=2592000`, deployed `lesson_07.json` returned `処` as `Xử (xử lý; giải quyết; nơi chốn)` with on `ショ`, kun `ところ/-こ/お.る`, stroke count `5`, and example `処理/しょり = xử lý`; console errors/warnings `0`.
+
+## 2026-05-19 N1 Kanji Lesson 8 Completeness Patch
+
+- Source-verified all eight N1 lesson-8 kanji (`化`, `気`, `口`, `圧`, `迫`, `扱`, `集`, `誂`) against local KANJIDIC2, Unihan where available, existing verified duplicate rows, and existing vocabulary examples.
+- Corrected generated metadata, including replacing word-level readings with source-backed kanji readings, aligning duplicate `化`, `口`, and `圧` with verified rows, correcting `誂` away from the misleading English `tempt` gloss, removing old approval metadata, and adding truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `59` and added an N1 lesson-8 sentinel for `化` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `144` to `136`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
+- Live proof used normal browser cache: shell/content assets returned `Cache-Control: no-cache`, wasm/worker remained `public, max-age=2592000`, deployed `lesson_08.json` returned `化` as `Hóa (biến đổi; biến hóa; -hóa)` with on `カ/ケ`, kun `ば.ける/ば.かす/ふ.ける/け.する`, stroke count `4`, and example `悪化/あっか = sự xấu đi; trở nên nghiêm trọng hơn`; console errors/warnings `0`.

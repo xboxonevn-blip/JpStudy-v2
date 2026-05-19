@@ -1404,3 +1404,30 @@ Runtime note: bumped content DB Kanji seed revision from `57` to `58` and added 
 Verification: coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `152` to `144`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `191e6db2` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, and `/assets/assets/data/content/kanji/n1/lesson_07.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `処` showed `Xử (xử lý; giải quyết; nơi chốn)`, on `ショ`, kun `ところ/-こ/お.る`, stroke count `5`, and example `処理/しょり = xử lý`. Console errors/warnings: `0`.
+
+## Kanji N1 Lesson 8 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `気`, `圧`, and `誂` have no Unihan `kVietnamese`, so learner-facing Hán-Việt values use established readings.
+- Existing verified duplicate kanji rows for `化`, `口`, and `圧`, plus N1 vocabulary context for `悪化`, `呆気ない`, `悪口`, `圧迫`, `扱い`, `集まる`, and `誂える`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `化` | KANJIDIC2 readings `カ/ケ`, `ば.ける/ば.かす/ふ.ける/け.する`; existing verified N3 row | Aligned to `Hóa (biến đổi; biến hóa; -hóa)`, replaced word-level `あっか` as a kanji reading with source-backed readings, and translated `悪化` naturally. |
+| `気` | KANJIDIC2 readings `キ/ケ`, `いき/き`; no Unihan `kVietnamese`; local context `呆気ない` | Rewrote to `Khí (khí; tinh thần; tâm trạng)`, added readings/components/related kanji, and translated `呆気ない` as `hụt hẫng; chóng vánh; không thỏa đáng`. |
+| `口` | KANJIDIC2 readings `コウ/ク`, `くち`; existing verified N2 row | Aligned to `Khẩu (miệng; cửa vào; lối vào)`, replaced word-level `あっこう` as a kanji reading, and translated `悪口` as `nói xấu; xúc phạm; vu khống`. |
+| `圧` | KANJIDIC2 readings `アツ/エン/オウ`; existing verified N2 row | Aligned to `Áp (áp lực; nén; ép)`, added readings/components/related kanji, and kept `圧迫` as the example. |
+| `迫` | KANJIDIC2 reading `ハク`, `せま.る`; Unihan `kVietnamese=bách`; local context `圧迫` | Rewrote to `Bách (bức bách; ép buộc; cận kề)`, added readings/components/related kanji, and translated `圧迫` consistently. |
+| `扱` | KANJIDIC2 readings `ソウ/キュウ`, `あつか.い/あつか.う/あつか.る/こ.く`; Unihan `kVietnamese=gắp`; local context `扱い` | Rewrote display to `Gắp (xử lý; đối xử; tiếp nhận)`, added readings/components/related kanji, and translated `扱い` as `cách xử lý; cách đối xử; dịch vụ`. |
+| `集` | KANJIDIC2 reading `シュウ`, `あつ.まる/あつ.める/つど.う`; Unihan `kVietnamese=tập`; local context `集まる` | Rewrote to `Tập (tập hợp; thu thập; tụ họp)`, added source-backed readings/components, and translated `集まる` as `tập hợp; tụ lại`. |
+| `誂` | KANJIDIC2 reading `チョウ`, `あつら.える/いど.む`; no Unihan `kVietnamese`; local context `誂える` | Corrected the misleading English `tempt` gloss to order/made-to-order, kept learner-facing `Điệu`, and translated `誂える` as `đặt làm riêng; đặt hàng`. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `58` to `59` and added an N1 lesson-8 sentinel for `化` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `144` to `136`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `57cdbac4` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, and `/assets/assets/data/content/kanji/n1/lesson_08.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `化` showed `Hóa (biến đổi; biến hóa; -hóa)`, on `カ/ケ`, kun `ば.ける/ば.かす/ふ.ける/け.する`, stroke count `4`, and example `悪化/あっか = sự xấu đi; trở nên nghiêm trọng hơn`. Console errors/warnings: `0`.

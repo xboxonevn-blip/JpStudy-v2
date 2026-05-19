@@ -718,3 +718,11 @@
 - Bumped content DB Kanji seed revision to `61` and added an N1 lesson-10 sentinel for `油` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `128` to `120`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, hosting cache header guard passed, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
 - Live proof used normal browser cache: page-context fetch of deployed `lesson_10.json` returned `Cache-Control: no-cache`; `油` returned `Du (dầu; chất béo; sơn dầu)`, on `ユ/ユウ`, kun `あぶら`, and `vi-source-verified`; current page console errors/warnings `0`.
+
+## 2026-05-19 N1 Kanji Lesson 11 Completeness Patch
+
+- Source-verified all eight N1 lesson-11 kanji (`地`, `操`, `危`, `過`, `誤`, `歩`, `予`, `荒`) against local KANJIDIC2, Unihan where available, existing verified duplicate rows, and vocabulary examples.
+- Corrected generated metadata, including replacing word-level readings (`あめつち`, `あやつる`, `あやぶむ`, `あやまち`, `あやまる`, `あゆみ`, `あらかじめ`, `あらす`) with source-backed kanji readings, correcting learner-facing `予` from generated `Nhừ` to `Dự`, removing old approval metadata, and adding truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `62` and added an N1 lesson-11 sentinel for `予` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `120` to `112`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, hosting cache header guard passed, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
+- Live proof used normal browser cache: page-context fetch of deployed `lesson_11.json` returned `Cache-Control: no-cache`; `予` returned `Dự (trước; dự tính; chuẩn bị)`, on `ヨ/シャ`, kun `あらかじ.め`, and `vi-source-verified`; current page console errors/warnings `0`.

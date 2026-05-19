@@ -1485,3 +1485,30 @@ Runtime note: bumped content DB Kanji seed revision from `60` to `61` and added 
 Verification: coverage audit reduced N1 incomplete current entries from `128` to `120`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `ac75b039` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_10.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; `油` showed `Du (dầu; chất béo; sơn dầu)`, on `ユ/ユウ`, kun `あぶら`, and `vi-source-verified`. `main.dart.js` and `AssetManifest.json` returned `no-cache`, while `sqlite3.wasm` returned `public, max-age=2592000`. Console errors/warnings for the current live page: `0`.
+
+## Kanji N1 Lesson 11 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and Vietnamese readings where Unihan was absent or unsuitable.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `操`, `誤`, and `歩` have no Unihan `kVietnamese`, and `予` keeps the existing learner-facing `Dự` instead of Unihan `nhừ`.
+- Existing verified duplicate rows for `地`, `危`, `荒`, `歩`, and `予`, plus N1 vocabulary context for `天地`, `操る`, `危ぶむ`, `過ち`, `誤る`, `歩み`, `予め`, and `荒らす`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `地` | KANJIDIC2 readings `チ/ジ`; Unihan `kVietnamese=địa`; existing verified N2/N5 rows | Rewrote to `Địa (đất; mặt đất; vùng đất)`, replaced word-level `あめつち` as a kanji reading, and translated `天地` as `trời đất; vũ trụ; tự nhiên`. |
+| `操` | KANJIDIC2 readings `ソウ/サン`, `みさお/あやつ.る`; local context `操る` | Rewrote to `Thao (điều khiển; thao túng; vận hành)`, filled source-backed readings/components, and translated `操る` as `điều khiển; thao túng; vận hành`. |
+| `危` | KANJIDIC2 reading `キ`, `あぶ.ない/あや.うい/あや.ぶむ`; Unihan `kVietnamese=nguy`; existing verified N2 row | Aligned to `Nguy (nguy hiểm; bất an; đáng lo)`, replaced word-level `あやぶむ` as a kanji reading, and translated `危ぶむ` naturally. |
+| `過` | KANJIDIC2 reading `カ`, `す.ぎる/.../あやま.ち`; Unihan `kVietnamese=quá`; local context `過ち` | Rewrote to `Quá (vượt quá; đi qua; lỗi lầm)`, used Japanese stroke count `12`, and translated `過ち` as `lỗi lầm; sai sót; lỡ lầm`. |
+| `誤` | KANJIDIC2 reading `ゴ`, `あやま.る`; local context `誤る` | Rewrote to `Ngộ (sai; nhầm lẫn; mắc lỗi)`, filled source-backed readings/components, and translated `誤る` as `mắc lỗi; phạm sai lầm; nhầm lẫn`. |
+| `歩` | KANJIDIC2 readings `ホ/ブ/フ`, `ある.く/あゆ.む`; existing verified N5 row | Rewrote to `Bộ (bước; đi bộ; tiến triển)`, replaced word-level `あゆみ` as a kanji reading, and translated `歩み` as `bước đi; tiến trình`. |
+| `予` | KANJIDIC2 readings `ヨ/シャ`, `あらかじ.め`; existing verified N3 row; local context `予め` | Corrected learner-facing Hán-Việt from generated `Nhừ` to `Dự`, kept source-backed readings, and translated `予め` as `trước; từ trước; trước đó`. |
+| `荒` | KANJIDIC2 reading `コウ`, `あ.らす/...`; Unihan `kVietnamese=hoang`; existing verified N2 row | Aligned to `Hoang (hoang vu; thô bạo; dữ dội)`, replaced word-level `あらす` as a kanji reading, and translated `荒らす` as `tàn phá; làm hư hại; quấy phá`. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `61` to `62` and added an N1 lesson-11 sentinel for `予` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit reduced N1 incomplete current entries from `120` to `112`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `f04728a9` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_11.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; `予` showed `Dự (trước; dự tính; chuẩn bị)`, on `ヨ/シャ`, kun `あらかじ.め`, and example `予め/あらかじめ = trước; từ trước; trước đó`. Current page console errors/warnings: `0`.

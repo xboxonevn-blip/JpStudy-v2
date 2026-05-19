@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 67;
+const _kanjiSeedRevision = 68;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -302,6 +302,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '歪',
     meaning: 'Oai (méo; lệch; vặn vẹo)',
     decompositionContains: '"hanViet":"Oai"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 17,
+    character: '緯',
+    meaning: 'Vĩ (vĩ tuyến; sợi ngang; chiều ngang)',
+    decompositionContains: '"hanViet":"Vĩ"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

@@ -215,7 +215,7 @@ void main() {
 
     expect(row.meaning, 'Kỹ (kỹ năng; kỹ thuật; tài nghệ)');
     expect(row.decompositionJson, contains('"hanViet":"Kỹ"'));
-    expect(revisionRow.data['value'], '36');
+    expect(revisionRow.data['value'], '37');
   });
 
   test(
@@ -391,7 +391,7 @@ INSERT INTO kanji (
       );
       await db.customStatement(
         "INSERT OR REPLACE INTO content_meta (key, value) "
-        "VALUES ('kanjiSeedRevision', '36')",
+        "VALUES ('kanjiSeedRevision', '37')",
       );
 
       final repaired = await db.ensureKanjiContentCurrent();
@@ -427,7 +427,7 @@ INSERT INTO kanji (
       );
       await db.customStatement(
         "INSERT OR REPLACE INTO content_meta (key, value) "
-        "VALUES ('kanjiSeedRevision', '36')",
+        "VALUES ('kanjiSeedRevision', '37')",
       );
 
       final repaired = await db.ensureKanjiContentCurrent();

@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 11,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k081",
@@ -18,37 +18,45 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Muội",
-        "meaningVi": "cousin (female)",
-        "meaningViDisplay": "妹 (cousin (female))",
-        "meaningEn": "cousin (female)"
+        "meaningVi": "em gái; người em nữ",
+        "meaningViDisplay": "Muội (em gái; người em nữ)",
+        "meaningEn": "younger sister"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "マイ"
+        ],
         "kunyomi": [
-          "いとこ"
+          "いもうと"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 従姉妹 (cousin (female)).",
-        "en": "Appears in JLPT N2 vocabulary: 従姉妹 (cousin (female))."
+        "vi": "妹 là em gái; trong 従姉妹, chữ này góp nghĩa họ hàng nữ ở nhánh phụ.",
+        "en": "妹 means younger sister; in 従姉妹 it contributes the female-relative sense."
       },
       "decomposition": {
         "hanViet": "Muội",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "姉",
+          "兄",
+          "弟",
+          "女"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Muoi",
-        "meaningViNoAccent": "cousin (female)",
-        "meaningEnNoAccent": "cousin (female)"
+        "meaningViNoAccent": "em gai; nguoi em nu",
+        "meaningEnNoAccent": "younger sister"
       },
       "examples": [
         {
           "word": "従姉妹",
           "reading": "いとこ",
-          "meaning": "cousin (female)"
+          "meaning": "chị/em họ gái",
+          "meaningEn": "female cousin"
         }
       ],
       "tags": [
@@ -56,9 +64,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k082",
@@ -68,37 +77,47 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Uy",
-        "meaningVi": "to be proud, to swagger",
-        "meaningViDisplay": "威 (to be proud, to swagger)",
-        "meaningEn": "to be proud, to swagger"
+        "meaningVi": "uy thế; oai nghiêm; đe dọa",
+        "meaningViDisplay": "Uy (uy thế; oai nghiêm; đe dọa)",
+        "meaningEn": "dignity, majesty, intimidate, threaten"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いばる"
+          "おど.す",
+          "おど.し",
+          "おど.かす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 威張る (to be proud, to swagger).",
-        "en": "Appears in JLPT N2 vocabulary: 威張る (to be proud, to swagger)."
+        "vi": "威 là uy thế hoặc sức ép khiến người khác sợ; 威張る là lên mặt vì tự cho mình có uy.",
+        "en": "威 is intimidating authority or dignity; 威張る means acting superior because of that authority."
       },
       "decomposition": {
         "hanViet": "Uy",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "力",
+          "厳",
+          "怖",
+          "脅"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Uy",
-        "meaningViNoAccent": "to be proud, to swagger",
-        "meaningEnNoAccent": "to be proud, to swagger"
+        "meaningViNoAccent": "uy the; oai nghiem; de doa",
+        "meaningEnNoAccent": "dignity, majesty, intimidate, threaten"
       },
       "examples": [
         {
           "word": "威張る",
           "reading": "いばる",
-          "meaning": "to be proud, to swagger"
+          "meaning": "kiêu ngạo; lên mặt",
+          "meaningEn": "to be proud, to swagger"
         }
       ],
       "tags": [
@@ -106,9 +125,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k083",
@@ -118,37 +138,47 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Trương",
-        "meaningVi": "to be proud, to swagger",
-        "meaningViDisplay": "張 (to be proud, to swagger)",
-        "meaningEn": "to be proud, to swagger"
+        "meaningVi": "căng ra; trải rộng; dựng lên",
+        "meaningViDisplay": "Trương (căng ra; trải rộng; dựng lên)",
+        "meaningEn": "stretch, spread, put up, extend"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チョウ"
+        ],
         "kunyomi": [
-          "いばる"
+          "は.る",
+          "-は.り",
+          "-ば.り"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 威張る (to be proud, to swagger).",
-        "en": "Appears in JLPT N2 vocabulary: 威張る (to be proud, to swagger)."
+        "vi": "張 là căng dây, trải rộng hoặc dựng lên; trong 威張る, nét nghĩa mở rộng thành phô trương/lên mặt.",
+        "en": "張 means to stretch, spread, or put up; in 威張る it extends to swaggering or putting on airs."
       },
       "decomposition": {
         "hanViet": "Trương",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "弓",
+          "引",
+          "広",
+          "緊"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Truong",
-        "meaningViNoAccent": "to be proud, to swagger",
-        "meaningEnNoAccent": "to be proud, to swagger"
+        "meaningViNoAccent": "cang ra; trai rong; dung len",
+        "meaningEnNoAccent": "stretch, spread, put up, extend"
       },
       "examples": [
         {
           "word": "威張る",
           "reading": "いばる",
-          "meaning": "to be proud, to swagger"
+          "meaning": "kiêu ngạo; lên mặt",
+          "meaningEn": "to be proud, to swagger"
         }
       ],
       "tags": [
@@ -156,9 +186,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k084",
@@ -168,37 +199,48 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Hiềm",
-        "meaningVi": "to hate, to dislike",
-        "meaningViDisplay": "嫌 (to hate, to dislike)",
-        "meaningEn": "to hate, to dislike"
+        "meaningVi": "ghét; chán ghét; không ưa",
+        "meaningViDisplay": "Hiềm (ghét; chán ghét; không ưa)",
+        "meaningEn": "dislike, detest, hate"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ケン",
+          "ゲン"
+        ],
         "kunyomi": [
-          "いやがる"
+          "きら.う",
+          "きら.い",
+          "いや"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 嫌がる (to hate, to dislike).",
-        "en": "Appears in JLPT N2 vocabulary: 嫌がる (to hate, to dislike)."
+        "vi": "嫌 là cảm giác ghét hoặc không ưa; 嫌がる là tỏ ra ghét/không muốn làm gì.",
+        "en": "嫌 means dislike or aversion; 嫌がる is showing that dislike or reluctance."
       },
       "decomposition": {
         "hanViet": "Hiềm",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "悪",
+          "好",
+          "怒",
+          "疑"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hiem",
-        "meaningViNoAccent": "to hate, to dislike",
-        "meaningEnNoAccent": "to hate, to dislike"
+        "meaningViNoAccent": "ghet; chan ghet; khong ua",
+        "meaningEnNoAccent": "dislike, detest, hate"
       },
       "examples": [
         {
           "word": "嫌がる",
           "reading": "いやがる",
-          "meaning": "to hate, to dislike"
+          "meaning": "ghét; tỏ ra không thích",
+          "meaningEn": "to hate, to dislike"
         }
       ],
       "tags": [
@@ -206,9 +248,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k085",
@@ -218,37 +261,47 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Tiên",
-        "meaningVi": "to parch, to fry",
-        "meaningViDisplay": "煎 (to parch, to fry)",
-        "meaningEn": "to parch, to fry"
+        "meaningVi": "rang; sao; sắc thuốc",
+        "meaningViDisplay": "Tiên (rang; sao; sắc thuốc)",
+        "meaningEn": "parch, roast, boil, decoct"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "いる"
+          "せん.じる",
+          "い.る",
+          "に.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 煎る (to parch, to fry).",
-        "en": "Appears in JLPT N2 vocabulary: 煎る (to parch, to fry)."
+        "vi": "煎 gắn với lửa/nhiệt để rang, sao hoặc sắc; 煎る là rang/sao bằng nhiệt khô.",
+        "en": "煎 is heating to roast, parch, or decoct; 煎る means roasting or parching."
       },
       "decomposition": {
         "hanViet": "Tiên",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "火",
+          "茶",
+          "焼",
+          "炒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tien",
-        "meaningViNoAccent": "to parch, to fry",
-        "meaningEnNoAccent": "to parch, to fry"
+        "meaningViNoAccent": "rang; sao; sac thuoc",
+        "meaningEnNoAccent": "parch, roast, boil, decoct"
       },
       "examples": [
         {
           "word": "煎る",
           "reading": "いる",
-          "meaning": "to parch, to fry"
+          "meaning": "rang; sao; chiên",
+          "meaningEn": "to parch, to fry"
         }
       ],
       "tags": [
@@ -256,7 +309,8 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -268,37 +322,47 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Sao",
-        "meaningVi": "",
-        "meaningViDisplay": "炒 ()",
-        "meaningEn": ""
+        "meaningVi": "xào; rang; sao",
+        "meaningViDisplay": "Sao (xào; rang; sao)",
+        "meaningEn": "fry, saute, roast, parch"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いる"
+          "い.る",
+          "いた.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 炒る ().",
-        "en": "Appears in JLPT N2 vocabulary: 炒る ()."
+        "vi": "炒 là nấu bằng lửa mạnh như xào hoặc rang; 炒る dùng cho rang khô hạt hoặc nguyên liệu.",
+        "en": "炒 is cooking with strong heat such as frying or roasting; 炒る is dry-roasting ingredients."
       },
       "decomposition": {
         "hanViet": "Sao",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "火",
+          "煎",
+          "焼",
+          "料"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Sao",
-        "meaningViNoAccent": "",
-        "meaningEnNoAccent": ""
+        "meaningViNoAccent": "xao; rang; sao",
+        "meaningEnNoAccent": "fry, saute, roast, parch"
       },
       "examples": [
         {
           "word": "炒る",
           "reading": "いる",
-          "meaning": ""
+          "meaning": "rang; xào; rang khô",
+          "meaningEn": "to roast, to parch"
         }
       ],
       "tags": [
@@ -306,9 +370,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k087",
@@ -318,37 +383,51 @@
       "strokeCount": 2,
       "labels": {
         "hanViet": "Nhập",
-        "meaningVi": "container, case, receptacle",
-        "meaningViDisplay": "入 (container, case, receptacle)",
-        "meaningEn": "container, case, receptacle"
+        "meaningVi": "vào; cho vào; nhận vào",
+        "meaningViDisplay": "Nhập (vào; cho vào; nhận vào)",
+        "meaningEn": "enter, insert, put in"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ニュウ",
+          "ジュ"
+        ],
         "kunyomi": [
-          "いれもの"
+          "い.る",
+          "-い.る",
+          "-い.り",
+          "い.れる",
+          "-い.れ",
+          "はい.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 入れ物 (container, case, receptacle).",
-        "en": "Appears in JLPT N2 vocabulary: 入れ物 (container, case, receptacle)."
+        "vi": "入 là đi vào hoặc cho vào; 入れ物 là vật để cho đồ vào, tức đồ chứa.",
+        "en": "入 means to enter or put in; 入れ物 is something you put things into, a container."
       },
       "decomposition": {
         "hanViet": "Nhập",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "出",
+          "内",
+          "口",
+          "込"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhap",
-        "meaningViNoAccent": "container, case, receptacle",
-        "meaningEnNoAccent": "container, case, receptacle"
+        "meaningViNoAccent": "vao; cho vao; nhan vao",
+        "meaningEnNoAccent": "enter, insert, put in"
       },
       "examples": [
         {
           "word": "入れ物",
           "reading": "いれもの",
-          "meaning": "container, case, receptacle"
+          "meaning": "vật đựng; hộp; đồ chứa",
+          "meaningEn": "container, case, receptacle"
         }
       ],
       "tags": [
@@ -356,9 +435,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k088",
@@ -368,37 +448,46 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Dẫn",
-        "meaningVi": "gravity",
-        "meaningViDisplay": "引 (gravity)",
-        "meaningEn": "gravity"
+        "meaningVi": "kéo; dẫn; trích dẫn",
+        "meaningViDisplay": "Dẫn (kéo; dẫn; trích dẫn)",
+        "meaningEn": "pull, draw, attract, quote"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イン"
+        ],
         "kunyomi": [
-          "いんりょく"
+          "ひ.く",
+          "ひ.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 引力 (gravity).",
-        "en": "Appears in JLPT N2 vocabulary: 引力 (gravity)."
+        "vi": "引 là kéo hoặc dẫn về phía mình; 引力 là lực kéo/hút nên nghĩa là lực hấp dẫn.",
+        "en": "引 means to pull or draw toward; 引力 is a pulling force, hence gravity."
       },
       "decomposition": {
         "hanViet": "Dẫn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "入",
+          "張",
+          "力",
+          "弓"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dan",
-        "meaningViNoAccent": "gravity",
-        "meaningEnNoAccent": "gravity"
+        "meaningViNoAccent": "keo; dan; trich dan",
+        "meaningEnNoAccent": "pull, draw, attract, quote"
       },
       "examples": [
         {
           "word": "引力",
           "reading": "いんりょく",
-          "meaning": "gravity"
+          "meaning": "lực hấp dẫn",
+          "meaningEn": "gravity"
         }
       ],
       "tags": [
@@ -406,14 +495,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, Vietnamese readings, stroke counts, and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

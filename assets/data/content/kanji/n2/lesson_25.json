@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 25,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 恵 and 帯 have no Unihan kVietnamese value, so learner-facing Hán-Việt keeps established readings.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k193",
@@ -18,37 +18,43 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Ân",
-        "meaningVi": "grace, favor, blessing, benefit",
-        "meaningViDisplay": "恩 (grace, favor, blessing, benefit)",
-        "meaningEn": "grace, favor, blessing, benefit"
+        "meaningVi": "ơn nghĩa; lòng tốt; ân huệ",
+        "meaningViDisplay": "Ân (ơn nghĩa; lòng tốt; ân huệ)",
+        "meaningEn": "grace, kindness, favor"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "おんけい"
-        ]
+        "onyomi": [
+          "オン"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 恩恵 (grace, favor, blessing, benefit).",
-        "en": "Appears in JLPT N2 vocabulary: 恩恵 (grace, favor, blessing, benefit)."
+        "vi": "恩 là ơn nghĩa hoặc lòng tốt nhận được; trong 恩恵, nó nhấn mạnh phần ân huệ, lợi ích được ban cho.",
+        "en": "恩 means grace or kindness received; in 恩恵 it highlights the favor or benefit granted."
       },
       "decomposition": {
         "hanViet": "Ân",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "恵",
+          "徳",
+          "情",
+          "報"
+        ]
       },
       "search": {
         "hanVietNoAccent": "An",
-        "meaningViNoAccent": "grace, favor, blessing, benefit",
-        "meaningEnNoAccent": "grace, favor, blessing, benefit"
+        "meaningViNoAccent": "on nghia; long tot; an hue",
+        "meaningEnNoAccent": "grace, kindness, favor"
       },
       "examples": [
         {
           "word": "恩恵",
           "reading": "おんけい",
-          "meaning": "grace, favor, blessing, benefit"
+          "meaning": "ân huệ; lợi ích; phúc lành",
+          "meaningEn": "grace, favor, blessing, benefit"
         }
       ],
       "tags": [
@@ -56,9 +62,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k194",
@@ -68,45 +75,56 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Huệ",
-        "meaningVi": "grace, favor, blessing, benefit",
-        "meaningViDisplay": "恵 (grace, favor, blessing, benefit)",
-        "meaningEn": "grace, favor, blessing, benefit"
+        "meaningVi": "ban ơn; ân huệ; phúc lành",
+        "meaningViDisplay": "Huệ (ban ơn; ân huệ; phúc lành)",
+        "meaningEn": "favor, blessing, kindness"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ケイ",
+          "エ"
+        ],
         "kunyomi": [
-          "おんけい"
+          "めぐ.む",
+          "めぐ.み"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 恩恵 (grace, favor, blessing, benefit).",
-        "en": "Appears in JLPT N2 vocabulary: 恩恵 (grace, favor, blessing, benefit)."
+        "vi": "恵 là sự ban ơn hoặc điều may mắn nhận được; trong 恩恵, chữ này bổ sung nghĩa lợi ích, phúc lành.",
+        "en": "恵 means favor or blessing; in 恩恵 it adds the sense of benefit or grace received."
       },
       "decomposition": {
         "hanViet": "Huệ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "恩",
+          "福",
+          "幸",
+          "徳"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hue",
-        "meaningViNoAccent": "grace, favor, blessing, benefit",
-        "meaningEnNoAccent": "grace, favor, blessing, benefit"
+        "meaningViNoAccent": "ban on; an hue; phuc lanh",
+        "meaningEnNoAccent": "favor, blessing, kindness"
       },
       "examples": [
         {
           "word": "恩恵",
           "reading": "おんけい",
-          "meaning": "grace, favor, blessing, benefit"
+          "meaning": "ân huệ; lợi ích; phúc lành",
+          "meaningEn": "grace, favor, blessing, benefit"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -117,38 +135,50 @@
       "character": "温",
       "strokeCount": 12,
       "labels": {
-        "hanViet": "Ồn",
-        "meaningVi": "greenhouse",
-        "meaningViDisplay": "温 (greenhouse)",
-        "meaningEn": "greenhouse"
+        "hanViet": "Ôn",
+        "meaningVi": "ấm; làm ấm; ôn hòa",
+        "meaningViDisplay": "Ôn (ấm; làm ấm; ôn hòa)",
+        "meaningEn": "warm"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "オン"
+        ],
         "kunyomi": [
-          "おんしつ"
+          "あたた.か",
+          "あたた.かい",
+          "あたた.まる",
+          "あたた.める",
+          "ぬく"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 温室 (greenhouse).",
-        "en": "Appears in JLPT N2 vocabulary: 温室 (greenhouse)."
+        "vi": "温 là hơi ấm hoặc trạng thái ấm áp; trong 温室, nó chỉ căn phòng được giữ ấm để trồng cây.",
+        "en": "温 means warmth; in 温室 it marks a room kept warm for plants."
       },
       "decomposition": {
-        "hanViet": "Ồn",
+        "hanViet": "Ôn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "暖",
+          "熱",
+          "室",
+          "泉"
+        ]
       },
       "search": {
         "hanVietNoAccent": "On",
-        "meaningViNoAccent": "greenhouse",
-        "meaningEnNoAccent": "greenhouse"
+        "meaningViNoAccent": "am; lam am; on hoa",
+        "meaningEnNoAccent": "warm"
       },
       "examples": [
         {
           "word": "温室",
           "reading": "おんしつ",
-          "meaning": "greenhouse"
+          "meaning": "nhà kính",
+          "meaningEn": "greenhouse"
         }
       ],
       "tags": [
@@ -156,9 +186,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k196",
@@ -168,37 +199,45 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Thất",
-        "meaningVi": "greenhouse",
-        "meaningViDisplay": "室 (greenhouse)",
-        "meaningEn": "greenhouse"
+        "meaningVi": "phòng; buồng; nhà kính",
+        "meaningViDisplay": "Thất (phòng; buồng; nhà kính)",
+        "meaningEn": "room, chamber, greenhouse"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シツ"
+        ],
         "kunyomi": [
-          "おんしつ"
+          "むろ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 温室 (greenhouse).",
-        "en": "Appears in JLPT N2 vocabulary: 温室 (greenhouse)."
+        "vi": "室 là phòng hoặc buồng kín; trong 温室, nó là căn phòng/nhà kính được giữ ấm.",
+        "en": "室 means room or chamber; in 温室 it is the enclosed warm room, a greenhouse."
       },
       "decomposition": {
         "hanViet": "Thất",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "部",
+          "屋",
+          "家",
+          "温"
+        ]
       },
       "search": {
         "hanVietNoAccent": "That",
-        "meaningViNoAccent": "greenhouse",
-        "meaningEnNoAccent": "greenhouse"
+        "meaningViNoAccent": "phong; buong; nha kinh",
+        "meaningEnNoAccent": "room, chamber, greenhouse"
       },
       "examples": [
         {
           "word": "温室",
           "reading": "おんしつ",
-          "meaning": "greenhouse"
+          "meaning": "nhà kính",
+          "meaningEn": "greenhouse"
         }
       ],
       "tags": [
@@ -206,9 +245,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k197",
@@ -218,37 +258,45 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Tuyền",
-        "meaningVi": "spa, hot spring, onsen",
-        "meaningViDisplay": "泉 (spa, hot spring, onsen)",
-        "meaningEn": "spa, hot spring, onsen"
+        "meaningVi": "suối; nguồn nước; suối nóng",
+        "meaningViDisplay": "Tuyền (suối; nguồn nước; suối nóng)",
+        "meaningEn": "spring, fountain"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "おんせん"
+          "いずみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 温泉 (spa, hot spring, onsen).",
-        "en": "Appears in JLPT N2 vocabulary: 温泉 (spa, hot spring, onsen)."
+        "vi": "泉 là suối hoặc nguồn nước; trong 温泉, nó là suối nước nóng.",
+        "en": "泉 means spring or fountain; in 温泉 it forms hot spring."
       },
       "decomposition": {
         "hanViet": "Tuyền",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "水",
+          "源",
+          "温",
+          "湯"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tuyen",
-        "meaningViNoAccent": "spa, hot spring, onsen",
-        "meaningEnNoAccent": "spa, hot spring, onsen"
+        "meaningViNoAccent": "suoi; nguon nuoc; suoi nong",
+        "meaningEnNoAccent": "spring, fountain"
       },
       "examples": [
         {
           "word": "温泉",
           "reading": "おんせん",
-          "meaning": "spa, hot spring, onsen"
+          "meaning": "suối nước nóng; onsen",
+          "meaningEn": "hot spring, onsen"
         }
       ],
       "tags": [
@@ -256,9 +304,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k198",
@@ -268,45 +317,55 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Đới",
-        "meaningVi": "temperate zone",
-        "meaningViDisplay": "帯 (temperate zone)",
-        "meaningEn": "temperate zone"
+        "meaningVi": "đai; dải; vùng/đới",
+        "meaningViDisplay": "Đới (đai; dải; vùng/đới)",
+        "meaningEn": "belt, sash, zone"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タイ"
+        ],
         "kunyomi": [
-          "おんたい"
+          "お.びる",
+          "おび"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 温帯 (temperate zone).",
-        "en": "Appears in JLPT N2 vocabulary: 温帯 (temperate zone)."
+        "vi": "帯 là đai hoặc vùng kéo dài như một dải; trong 温帯, nó chỉ vùng khí hậu ôn đới.",
+        "en": "帯 means belt or zone; in 温帯 it marks the temperate climate zone."
       },
       "decomposition": {
         "hanViet": "Đới",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "地",
+          "域",
+          "温",
+          "寒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Doi",
-        "meaningViNoAccent": "temperate zone",
-        "meaningEnNoAccent": "temperate zone"
+        "meaningViNoAccent": "dai; dai; vung/doi",
+        "meaningEnNoAccent": "belt, sash, zone"
       },
       "examples": [
         {
           "word": "温帯",
           "reading": "おんたい",
-          "meaning": "temperate zone"
+          "meaning": "ôn đới",
+          "meaningEn": "temperate zone"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +377,47 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Trung",
-        "meaningVi": "and Company, Messrs.",
-        "meaningViDisplay": "中 (and Company, Messrs.)",
-        "meaningEn": "and Company, Messrs."
+        "meaningVi": "giữa; bên trong; trung tâm",
+        "meaningViDisplay": "Trung (giữa; bên trong; trung tâm)",
+        "meaningEn": "middle, inside, center"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チュウ"
+        ],
         "kunyomi": [
-          "おんちゅう"
+          "なか",
+          "うち",
+          "あた.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 御中 (and Company, Messrs.).",
-        "en": "Appears in JLPT N2 vocabulary: 御中 (and Company, Messrs.)."
+        "vi": "中 là ở giữa hoặc bên trong; trong 御中, nó dùng trong cách ghi địa chỉ gửi đến một tổ chức/cơ quan.",
+        "en": "中 means middle or inside; in 御中 it is part of a formal address to an organization."
       },
       "decomposition": {
         "hanViet": "Trung",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "内",
+          "央",
+          "間",
+          "御"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Trung",
-        "meaningViNoAccent": "and company, messrs.",
-        "meaningEnNoAccent": "and company, messrs."
+        "meaningViNoAccent": "giua; ben trong; trung tam",
+        "meaningEnNoAccent": "middle, inside, center"
       },
       "examples": [
         {
           "word": "御中",
           "reading": "おんちゅう",
-          "meaning": "and Company, Messrs."
+          "meaning": "kính gửi quý công ty/quý cơ quan",
+          "meaningEn": "and Company, Messrs."
         }
       ],
       "tags": [
@@ -356,9 +425,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k200",
@@ -368,37 +438,48 @@
       "strokeCount": 2,
       "labels": {
         "hanViet": "Nhân",
-        "meaningVi": "woman",
-        "meaningViDisplay": "人 (woman)",
-        "meaningEn": "woman"
+        "meaningVi": "người; con người",
+        "meaningViDisplay": "Nhân (người; con người)",
+        "meaningEn": "person, people"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジン",
+          "ニン"
+        ],
         "kunyomi": [
-          "おんなのひと"
+          "ひと",
+          "-り",
+          "-と"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 女の人 (woman).",
-        "en": "Appears in JLPT N2 vocabulary: 女の人 (woman)."
+        "vi": "人 là người; trong 女の人, chữ này chỉ một người thuộc nhóm nữ giới.",
+        "en": "人 means person; in 女の人 it identifies the person as a woman."
       },
       "decomposition": {
         "hanViet": "Nhân",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "女",
+          "男",
+          "者",
+          "民"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhan",
-        "meaningViNoAccent": "woman",
-        "meaningEnNoAccent": "woman"
+        "meaningViNoAccent": "nguoi; con nguoi",
+        "meaningEnNoAccent": "person, people"
       },
       "examples": [
         {
           "word": "女の人",
           "reading": "おんなのひと",
-          "meaning": "woman"
+          "meaning": "phụ nữ; người phụ nữ",
+          "meaningEn": "woman"
         }
       ],
       "tags": [
@@ -406,14 +487,19 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N2 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

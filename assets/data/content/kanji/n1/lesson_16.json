@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 16,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 歪 uses learner-facing KANJIDIC2 Hán-Việt Oai instead of the less useful raw Unihan Quay, and 域 uses the clearer 領域 vocabulary context.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k121",
@@ -18,47 +18,62 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Như",
-        "meaningVi": "như; giống như",
-        "meaningViDisplay": "如 (như; giống như)",
-        "meaningEn": "if, supposing; as if; like, as"
+        "meaningVi": "như; giống như; theo kiểu",
+        "meaningViDisplay": "Như (như; giống như; theo kiểu)",
+        "meaningEn": "likeness; as if; according to"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジョ",
+          "ニョ"
+        ],
         "kunyomi": [
-          "いかが"
+          "ごと.し"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 如 nghĩa là như; giống như. Ví dụ JLPT N1: 如何 (how, in what way).",
-        "en": "Kanji 如 means if, supposing; as if; like, as. JLPT N1 example: 如何 (how, in what way)."
+        "vi": "如 là giống như hoặc theo như; 如何 dùng khi hỏi cách thức hay tình trạng.",
+        "en": "如 means like or as if; 如何 asks how or in what way."
       },
       "decomposition": {
         "hanViet": "Như",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "女",
+          "口"
+        ],
+        "componentNames": [
+          "nữ/người phụ nữ",
+          "khẩu/miệng"
+        ],
+        "relatedKanji": [
+          "何",
+          "似",
+          "若",
+          "女"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhu",
-        "meaningViNoAccent": "nhu; giong nhu",
-        "meaningEnNoAccent": "if, supposing; as if; like, as"
+        "meaningViNoAccent": "nhu; giong nhu; theo kieu",
+        "meaningEnNoAccent": "likeness; as if; according to"
       },
       "examples": [
         {
           "word": "如何",
           "reading": "いかが",
-          "meaning": "how, in what way"
+          "meaning": "như thế nào; bằng cách nào",
+          "meaningEn": "how; in what way"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k122",
@@ -68,45 +83,62 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Hà",
-        "meaningVi": "gì; tại sao; như thế nào",
-        "meaningViDisplay": "何 (gì; tại sao; như thế nào)",
-        "meaningEn": "what, why, where, which, how"
+        "meaningVi": "gì; điều gì; bao nhiêu",
+        "meaningViDisplay": "Hà (gì; điều gì; bao nhiêu)",
+        "meaningEn": "what; why; how; which"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ"
+        ],
         "kunyomi": [
-          "いかが"
+          "なに",
+          "なん",
+          "なに-",
+          "なん-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 何 nghĩa là gì; tại sao; như thế nào. Ví dụ JLPT N1: 如何 (như thế nào, bằng cách nào).",
-        "en": "Kanji 何 means what, why, where, which, how. JLPT N1 example: 如何 (như thế nào, bằng cách nào)."
+        "vi": "何 là từ để hỏi về sự vật, lý do hoặc cách thức; trong 如何 nó góp nghĩa hỏi 'như thế nào'.",
+        "en": "何 is an interrogative kanji for what, why, or how; in 如何 it helps ask how something is."
       },
       "decomposition": {
         "hanViet": "Hà",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "可"
+        ],
+        "componentNames": [
+          "nhân/người",
+          "khả/có thể"
+        ],
+        "relatedKanji": [
+          "人",
+          "問",
+          "誰",
+          "如"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ha",
-        "meaningViNoAccent": "gi; tai sao; nhu the nao",
-        "meaningEnNoAccent": "what, why, where, which, how"
+        "meaningViNoAccent": "gi; dieu gi; bao nhieu",
+        "meaningEnNoAccent": "what; why; how; which"
       },
       "examples": [
         {
           "word": "如何",
           "reading": "いかが",
-          "meaning": "như thế nào, bằng cách nào"
+          "meaning": "như thế nào; bằng cách nào",
+          "meaningEn": "how; in what way"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,47 +150,77 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Sinh",
-        "meaningVi": "sống; sinh ra",
-        "meaningViDisplay": "生 (sống; sinh ra)",
-        "meaningEn": "life, living, lifetime; birth"
+        "meaningVi": "sống; sinh ra; sự sống",
+        "meaningViDisplay": "Sinh (sống; sinh ra; sự sống)",
+        "meaningEn": "life; birth; genuine"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いかす"
+          "い.きる",
+          "い.かす",
+          "い.ける",
+          "う.まれる",
+          "うま.れる",
+          "う.まれ",
+          "うまれ",
+          "う.む",
+          "お.う",
+          "は.える",
+          "は.やす",
+          "き",
+          "なま",
+          "なま-",
+          "な.る",
+          "な.す",
+          "む.す",
+          "-う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 生 nghĩa là sống; sinh ra. Ví dụ JLPT N1: 生かす (to revive, to resuscitate, to make use of).",
-        "en": "Kanji 生 means life, living, lifetime; birth. JLPT N1 example: 生かす (to revive, to resuscitate, to make use of)."
+        "vi": "生 là sự sống, sinh ra hoặc làm cho điều gì trở nên hữu dụng; 生かす là tận dụng hoặc làm sống lại.",
+        "en": "生 points to life, birth, or making something useful; 生かす means to make use of or revive."
       },
       "decomposition": {
         "hanViet": "Sinh",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "生"
+        ],
+        "componentNames": [
+          "sinh/sự sống"
+        ],
+        "relatedKanji": [
+          "活",
+          "命",
+          "育",
+          "死"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Sinh",
-        "meaningViNoAccent": "song; sinh ra",
-        "meaningEnNoAccent": "life, living, lifetime; birth"
+        "meaningViNoAccent": "song; sinh ra; su song",
+        "meaningEnNoAccent": "life; birth; genuine"
       },
       "examples": [
         {
           "word": "生かす",
           "reading": "いかす",
-          "meaning": "to revive, to resuscitate, to make use of"
+          "meaning": "tận dụng; làm sống lại",
+          "meaningEn": "make use of; revive"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k124",
@@ -168,47 +230,63 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Lôi",
-        "meaningVi": "sấm; sét",
-        "meaningViDisplay": "雷 (sấm; sét)",
+        "meaningVi": "sấm; sét; tiếng sấm",
+        "meaningViDisplay": "Lôi (sấm; sét; tiếng sấm)",
         "meaningEn": "thunder"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ライ"
+        ],
         "kunyomi": [
-          "いかずち"
+          "かみなり",
+          "いかずち",
+          "いかづち"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 雷 nghĩa là sấm; sét. Ví dụ JLPT N1: 雷 (thunder).",
-        "en": "Kanji 雷 means thunder. JLPT N1 example: 雷 (thunder)."
+        "vi": "雷 gồm mưa ở trên và ruộng ở dưới, gợi cảnh sấm sét vang lên trong cơn mưa.",
+        "en": "雷 combines rain with a field below, evoking thunder rolling through a storm."
       },
       "decomposition": {
         "hanViet": "Lôi",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "雨",
+          "田"
+        ],
+        "componentNames": [
+          "vũ/mưa",
+          "điền/ruộng"
+        ],
+        "relatedKanji": [
+          "雨",
+          "電",
+          "鳴",
+          "震"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Loi",
-        "meaningViNoAccent": "sam; set",
+        "meaningViNoAccent": "sam; set; tieng sam",
         "meaningEnNoAccent": "thunder"
       },
       "examples": [
         {
           "word": "雷",
           "reading": "いかずち",
-          "meaning": "thunder"
+          "meaning": "sấm sét; tiếng sấm",
+          "meaningEn": "thunder"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k125",
@@ -218,47 +296,63 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Nộ",
-        "meaningVi": "giận dữ",
-        "meaningViDisplay": "怒 (giận dữ)",
-        "meaningEn": "anger, rage, passion; angry"
+        "meaningVi": "giận dữ; nổi giận; phẫn nộ",
+        "meaningViDisplay": "Nộ (giận dữ; nổi giận; phẫn nộ)",
+        "meaningEn": "anger; rage; angry"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ド",
+          "ヌ"
+        ],
         "kunyomi": [
-          "いかり"
+          "いか.る",
+          "おこ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 怒 nghĩa là giận dữ. Ví dụ JLPT N1: 怒り (anger, hatred).",
-        "en": "Kanji 怒 means anger, rage, passion; angry. JLPT N1 example: 怒り (anger, hatred)."
+        "vi": "怒 đặt trái tim dưới 奴, gợi cảm xúc bị dồn nén thành cơn giận.",
+        "en": "怒 places heart below 奴, suggesting emotion pushed into anger."
       },
       "decomposition": {
         "hanViet": "Nộ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "奴",
+          "心"
+        ],
+        "componentNames": [
+          "nô/nô lệ",
+          "tâm/trái tim"
+        ],
+        "relatedKanji": [
+          "心",
+          "感",
+          "情",
+          "憤"
+        ]
       },
       "search": {
         "hanVietNoAccent": "No",
-        "meaningViNoAccent": "gian du",
-        "meaningEnNoAccent": "anger, rage, passion; angry"
+        "meaningViNoAccent": "gian du; noi gian; phan no",
+        "meaningEnNoAccent": "anger; rage; angry"
       },
       "examples": [
         {
           "word": "怒り",
           "reading": "いかり",
-          "meaning": "anger, hatred"
+          "meaning": "sự giận dữ; cơn phẫn nộ",
+          "meaningEn": "anger; rage"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k126",
@@ -267,48 +361,67 @@
       "character": "歪",
       "strokeCount": 9,
       "labels": {
-        "hanViet": "Quay",
-        "meaningVi": "méo; lệch; cong vẹo",
-        "meaningViDisplay": "歪 (méo; lệch; cong vẹo)",
-        "meaningEn": "slant; inclined; askew, awry"
+        "hanViet": "Oai",
+        "meaningVi": "méo; lệch; vặn vẹo",
+        "meaningViDisplay": "Oai (méo; lệch; vặn vẹo)",
+        "meaningEn": "warped; crooked; distorted"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ワイ",
+          "エ"
+        ],
         "kunyomi": [
-          "いがむ"
+          "いが.む",
+          "いびつ",
+          "ひず.む",
+          "ゆが.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 歪 nghĩa là méo; lệch; cong vẹo. Ví dụ JLPT N1: 歪む (to warp, to swerve, to deflect, to be crooked, to be distorted, to be bent, to incline, to slant, to be perv).",
-        "en": "Kanji 歪 means slant; inclined; askew, awry. JLPT N1 example: 歪む (to warp, to swerve, to deflect, to be crooked, to be distorted, to be bent, to incline, to slant, to be perv)."
+        "vi": "歪 ghép không đúng và chính thẳng, gợi một vật bị lệch khỏi dạng chuẩn.",
+        "en": "歪 combines not and correct, suggesting something bent away from its proper shape."
       },
       "decomposition": {
-        "hanViet": "Quay",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Oai",
+        "structure": "top-bottom",
+        "components": [
+          "不",
+          "正"
+        ],
+        "componentNames": [
+          "bất/không",
+          "chính/đúng"
+        ],
+        "relatedKanji": [
+          "正",
+          "曲",
+          "傾",
+          "乱"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Quay",
-        "meaningViNoAccent": "meo; lech; cong veo",
-        "meaningEnNoAccent": "slant; inclined; askew, awry"
+        "hanVietNoAccent": "Oai",
+        "meaningViNoAccent": "meo; lech; van veo",
+        "meaningEnNoAccent": "warped; crooked; distorted"
       },
       "examples": [
         {
           "word": "歪む",
           "reading": "いがむ",
-          "meaning": "to warp, to swerve, to deflect, to be crooked, to be distorted, to be bent, to incline, to slant, to be perv"
+          "meaning": "bị cong; bị méo; bị bóp méo",
+          "meaningEn": "warp; distort; bend"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k127",
@@ -318,45 +431,59 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Túy",
-        "meaningVi": "tinh túy; thuần khiết",
-        "meaningViDisplay": "粋 (tinh túy; thuần khiết)",
-        "meaningEn": "pure; unadulterated; select"
+        "meaningVi": "tinh túy; thanh lịch; thuần khiết",
+        "meaningViDisplay": "Túy (tinh túy; thanh lịch; thuần khiết)",
+        "meaningEn": "chic; style; purity; essence"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "スイ"
+        ],
         "kunyomi": [
           "いき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 粋 nghĩa là tinh túy; thuần khiết. Ví dụ JLPT N1: 粋 (tinh túy, phong cách, thanh lịch).",
-        "en": "Kanji 粋 means pure; unadulterated; select. JLPT N1 example: 粋 (tinh túy, phong cách, thanh lịch)."
+        "vi": "粋 chỉ phần được chọn lọc và tinh tế; trong văn cảnh N1 thường mang sắc thái thanh lịch.",
+        "en": "粋 points to something refined or selected, often with a sense of stylish elegance."
       },
       "decomposition": {
         "hanViet": "Túy",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "米",
+          "卆"
+        ],
+        "componentNames": [
+          "mễ/gạo",
+          "tốt/dạng cấu tạo"
+        ],
+        "relatedKanji": [
+          "純",
+          "精",
+          "雅",
+          "米"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tuy",
-        "meaningViNoAccent": "tinh tuy; thuan khiet",
-        "meaningEnNoAccent": "pure; unadulterated; select"
+        "meaningViNoAccent": "tinh tuy; thanh lich; thuan khiet",
+        "meaningEnNoAccent": "chic; style; purity; essence"
       },
       "examples": [
         {
           "word": "粋",
           "reading": "いき",
-          "meaning": "tinh túy, phong cách, thanh lịch"
+          "meaning": "thanh lịch; tinh tế; tinh túy",
+          "meaningEn": "chic; stylish; refined"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,52 +495,67 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Vực",
-        "meaningVi": "vùng; khu vực; ranh giới",
-        "meaningViDisplay": "域 (vùng; khu vực; ranh giới)",
-        "meaningEn": "district, region, boundary; land"
+        "meaningVi": "vùng; khu vực; ranh giới; lĩnh vực",
+        "meaningViDisplay": "Vực (vùng; khu vực; ranh giới; lĩnh vực)",
+        "meaningEn": "region; district; boundary; domain"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "いきがい"
-        ]
+        "onyomi": [
+          "イキ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji 域 nghĩa là vùng; khu vực; ranh giới. Ví dụ JLPT N1: 域外 (outside the area).",
-        "en": "Kanji 域 means district, region, boundary; land. JLPT N1 example: 域外 (outside the area)."
+        "vi": "域 là một vùng có ranh giới; 領域 dùng cho khu vực, miền hoặc lĩnh vực chuyên môn.",
+        "en": "域 marks a bounded area; 領域 is an area, domain, or field."
       },
       "decomposition": {
         "hanViet": "Vực",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "土",
+          "或"
+        ],
+        "componentNames": [
+          "thổ/đất",
+          "hoặc/vùng bao"
+        ],
+        "relatedKanji": [
+          "領",
+          "地",
+          "境",
+          "外"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vuc",
-        "meaningViNoAccent": "vung; khu vuc; ranh gioi",
-        "meaningEnNoAccent": "district, region, boundary; land"
+        "meaningViNoAccent": "vung; khu vuc; ranh gioi; linh vuc",
+        "meaningEnNoAccent": "region; district; boundary; domain"
       },
       "examples": [
         {
-          "word": "域外",
-          "reading": "いきがい",
-          "meaning": "outside the area"
+          "word": "領域",
+          "reading": "りょういき",
+          "meaning": "khu vực; lĩnh vực; miền",
+          "meaningEn": "area; domain; field"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
     "Unicode Unihan kVietnamese"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

@@ -2014,3 +2014,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved` in the edited grammar files); focused DB/repository/screen tests passed (`48`); `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N4 grammar level completion.
 
 Live proof after deploy: production browser used normal cache. The rendered N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `26`. Searching `かどうか` rendered corrected rows including `V普通形 / いA / なA語幹 / N + かどうか`; opening the first result rendered the corrected `KẾT NỐI` and examples. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n4_36.json`, `grammar_n4_39.json`, and `grammar_n4_40.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.
+
+## Grammar N4 Lessons 41-45 Source-Verified Batch
+
+This batch covers all 20 grammar points in `grammar_n4_41.json` through `grammar_n4_45.json`. Sources consulted for the batch: local N4 curriculum JSON/examples, JLPT Mastery N4 grammar category list, AI Japanese Tutor and JLPT Sensei notes for giving/receiving, `ために`, `のに`, `そうだ`, `てくる/ていく`, `すぎる`, `やすい/にくい`, state-change expressions, `場合`, `とき`, and `ても`, plus cross-checks against the app's N4 examples. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N4-41 | `やる`, `くださる`, `いただく`, `てくださる` | Replaced old `vi-human-approved` with `vi-source-verified`; clarified giver/recipient particles and honorific/humble direction. |
+| N4-42 | Purpose `ために`, usage `のに`, reason `ために`, `ように` | Replaced old approval tag with source verification; corrected purpose `ために`, noun usage with `N + に`, reason `ために`, and English notation. |
+| N4-43 | Appearance `そうです`, `Vてきます`, `ていく`, `そうだ` | Replaced old approval tag with source verification; corrected `そうだ` to verb/adjective stems and normalized `Vて + きます/いきます`. |
+| N4-44 | `すぎます`, `やすい/にくい`, `く/にします`, `く/になります` | Replaced old approval tag with source verification; corrected stems and adjective/noun state-change notation. |
+| N4-45 | `場合は`, contrast `のに`, `とき`, `ても` | Replaced old approval tag with source verification; clarified plain-form/adjective/noun attachments and concessive `ても/でも`. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `28` so existing browsers reseed the changed N4 grammar rows.
+
+Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved` in the edited grammar files); focused DB/repository/screen tests passed (`48`); `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N4 grammar level completion.
+
+Live proof after deploy: production browser used normal cache. The rendered N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `28`. Searching `すぎ` rendered the corrected row `Vます語幹 / いA語幹 / なA語幹 + すぎます`; opening the result rendered the corrected `KẾT NỐI` and examples. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n4_41.json`, `grammar_n4_44.json`, and `grammar_n4_45.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.

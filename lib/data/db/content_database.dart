@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 63;
+const _kanjiSeedRevision = 64;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -274,6 +274,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '粗',
     meaning: 'Thô (thô; sơ sài; thô ráp)',
     decompositionContains: '"hanViet":"Thô"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 13,
+    character: '示',
+    meaning: 'Thị (chỉ ra; biểu thị; cho thấy)',
+    decompositionContains: '"hanViet":"Thị"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 13,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 示 and 案 use learner-facing KANJIDIC2 readings instead of bundled multi-reading Unihan phrases.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k097",
@@ -18,45 +18,62 @@
       "strokeCount": 14,
       "labels": {
         "hanViet": "Dạng",
-        "meaningVi": "dáng vẻ; kiểu; dạng",
-        "meaningViDisplay": "様 (dáng vẻ; kiểu; dạng)",
-        "meaningEn": "shape, form, pattern, style"
+        "meaningVi": "dáng vẻ; kiểu; tình trạng",
+        "meaningViDisplay": "Dạng (dáng vẻ; kiểu; tình trạng)",
+        "meaningEn": "way; manner; situation; polite suffix"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヨウ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "ありさま"
+          "さま",
+          "さん"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 様 nghĩa là dáng vẻ; kiểu; dạng. Ví dụ JLPT N1: 有様 (tình trạng, dáng vẻ, hoàn cảnh).",
-        "en": "Kanji 様 means shape, form, pattern, style. JLPT N1 example: 有様 (tình trạng, dáng vẻ, hoàn cảnh)."
+        "vi": "様 là dáng vẻ hoặc tình trạng; 有様 nói về trạng thái hay hoàn cảnh thực tế của sự việc.",
+        "en": "様 means manner or situation; 有様 describes the actual state or circumstances."
       },
       "decomposition": {
         "hanViet": "Dạng",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "木",
+          "羊"
+        ],
+        "componentNames": [
+          "cây/gỗ",
+          "dương/cừu"
+        ],
+        "relatedKanji": [
+          "有",
+          "形",
+          "態",
+          "状"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dang",
-        "meaningViNoAccent": "dang ve; kieu; dang",
-        "meaningEnNoAccent": "shape, form, pattern, style"
+        "meaningViNoAccent": "dang ve; kieu; tinh trang",
+        "meaningEnNoAccent": "way; manner; situation; polite suffix"
       },
       "examples": [
         {
           "word": "有様",
           "reading": "ありさま",
-          "meaning": "tình trạng, dáng vẻ, hoàn cảnh"
+          "meaning": "tình trạng; hoàn cảnh; thực trạng",
+          "meaningEn": "state; condition; circumstances"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,47 +85,65 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Hoặc",
-        "meaningVi": "hoặc; nào đó",
-        "meaningViDisplay": "或 (hoặc; nào đó)",
-        "meaningEn": "or, either, else; perhaps, maybe"
+        "meaningVi": "hoặc; nào đó; có thể",
+        "meaningViDisplay": "Hoặc (hoặc; nào đó; có thể)",
+        "meaningEn": "some; one; or; possibly"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ワク",
+          "コク",
+          "イキ"
+        ],
         "kunyomi": [
-          "ある"
+          "あ.る",
+          "あるい",
+          "あるいは"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 或 nghĩa là hoặc; nào đó. Ví dụ JLPT N1: 或る (a certain..., some...).",
-        "en": "Kanji 或 means or, either, else; perhaps, maybe. JLPT N1 example: 或る (a certain..., some...)."
+        "vi": "或 dùng cho ý một điều nào đó hoặc một khả năng khác; 或る nghĩa là một/nào đó.",
+        "en": "或 marks some possibility or alternative; 或る means a certain or some."
       },
       "decomposition": {
         "hanViet": "Hoặc",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "surround",
+        "components": [
+          "戈",
+          "口"
+        ],
+        "componentNames": [
+          "qua/vũ khí",
+          "miệng"
+        ],
+        "relatedKanji": [
+          "域",
+          "惑",
+          "有",
+          "某"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoac",
-        "meaningViNoAccent": "hoac; nao đo",
-        "meaningEnNoAccent": "or, either, else; perhaps, maybe"
+        "meaningViNoAccent": "hoac; nao do; co the",
+        "meaningEnNoAccent": "some; one; or; possibly"
       },
       "examples": [
         {
           "word": "或る",
           "reading": "ある",
-          "meaning": "a certain..., some..."
+          "meaning": "một... nào đó",
+          "meaningEn": "a certain; some"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k099",
@@ -118,47 +153,62 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Hoảng",
-        "meaningVi": "hoảng; vội vã",
-        "meaningViDisplay": "慌 (hoảng; vội vã)",
-        "meaningEn": "nervous, panicky, frantic"
+        "meaningVi": "hoảng hốt; bối rối; vội vã",
+        "meaningViDisplay": "Hoảng (hoảng hốt; bối rối; vội vã)",
+        "meaningEn": "disconcerted; confused; panicky"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ"
+        ],
         "kunyomi": [
-          "あわただしい"
+          "あわ.てる",
+          "あわ.ただしい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 慌 nghĩa là hoảng; vội vã. Ví dụ JLPT N1: 慌ただしい (busy, hurried, confused, flurried).",
-        "en": "Kanji 慌 means nervous, panicky, frantic. JLPT N1 example: 慌ただしい (busy, hurried, confused, flurried)."
+        "vi": "慌 có bộ tâm, nên gắn với trạng thái tinh thần hoảng hốt hoặc vội vã.",
+        "en": "慌 has the heart radical, tying it to panic, confusion, or haste."
       },
       "decomposition": {
         "hanViet": "Hoảng",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "忄",
+          "荒"
+        ],
+        "componentNames": [
+          "tâm trạng",
+          "hoang"
+        ],
+        "relatedKanji": [
+          "急",
+          "忙",
+          "荒",
+          "恐"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoang",
-        "meaningViNoAccent": "hoang; voi va",
-        "meaningEnNoAccent": "nervous, panicky, frantic"
+        "meaningViNoAccent": "hoang hot; boi roi; voi va",
+        "meaningEnNoAccent": "disconcerted; confused; panicky"
       },
       "examples": [
         {
           "word": "慌ただしい",
           "reading": "あわただしい",
-          "meaning": "busy, hurried, confused, flurried"
+          "meaning": "bận rộn; vội vã; bối rối",
+          "meaningEn": "busy; hurried; flurried"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k100",
@@ -168,47 +218,63 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Ám",
-        "meaningVi": "tối; bí mật",
-        "meaningViDisplay": "暗 (tối; bí mật)",
-        "meaningEn": "dark; obscure; in secret, covert"
+        "meaningVi": "tối; u ám; bí mật",
+        "meaningViDisplay": "Ám (tối; u ám; bí mật)",
+        "meaningEn": "dark; obscure; covert"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アン"
+        ],
         "kunyomi": [
-          "あんさつ"
+          "くら.い",
+          "くら.む",
+          "くれ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 暗 nghĩa là tối; bí mật. Ví dụ JLPT N1: 暗殺 (assassination).",
-        "en": "Kanji 暗 means dark; obscure; in secret, covert. JLPT N1 example: 暗殺 (assassination)."
+        "vi": "暗 là tối hoặc bí mật; 暗殺 là hành động ám sát trong bóng tối.",
+        "en": "暗 means dark or secret; 暗殺 is assassination carried out covertly."
       },
       "decomposition": {
         "hanViet": "Ám",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "日",
+          "音"
+        ],
+        "componentNames": [
+          "mặt trời",
+          "âm/thanh"
+        ],
+        "relatedKanji": [
+          "明",
+          "殺",
+          "算",
+          "示"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Am",
-        "meaningViNoAccent": "toi; bi mat",
-        "meaningEnNoAccent": "dark; obscure; in secret, covert"
+        "meaningViNoAccent": "toi; u am; bi mat",
+        "meaningEnNoAccent": "dark; obscure; covert"
       },
       "examples": [
         {
           "word": "暗殺",
           "reading": "あんさつ",
-          "meaning": "assassination"
+          "meaning": "vụ ám sát",
+          "meaningEn": "assassination"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k101",
@@ -218,47 +284,66 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Sát",
-        "meaningVi": "giết; giảm bớt",
-        "meaningViDisplay": "殺 (giết; giảm bớt)",
-        "meaningEn": "kill, slaughter, murder; hurt; to pare off, reduce, clip"
+        "meaningVi": "giết; sát hại; giảm bớt",
+        "meaningViDisplay": "Sát (giết; sát hại; giảm bớt)",
+        "meaningEn": "kill; murder; reduce"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "サツ",
+          "サイ",
+          "セツ"
+        ],
         "kunyomi": [
-          "あんさつ"
+          "ころ.す",
+          "-ごろ.し",
+          "そ.ぐ",
+          "あや.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 殺 nghĩa là giết; giảm bớt. Ví dụ JLPT N1: 暗殺 (assassination).",
-        "en": "Kanji 殺 means kill, slaughter, murder; hurt; to pare off, reduce, clip. JLPT N1 example: 暗殺 (assassination)."
+        "vi": "殺 là giết hoặc làm giảm bớt; trong 暗殺, nghĩa chính là ám sát.",
+        "en": "殺 means to kill or reduce; in 暗殺 it means assassination."
       },
       "decomposition": {
         "hanViet": "Sát",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "杀",
+          "殳"
+        ],
+        "componentNames": [
+          "giết",
+          "thù/vũ khí"
+        ],
+        "relatedKanji": [
+          "暗",
+          "死",
+          "減",
+          "害"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Sat",
-        "meaningViNoAccent": "giet; giam bot",
-        "meaningEnNoAccent": "kill, slaughter, murder; hurt; to pare off, reduce, clip"
+        "meaningViNoAccent": "giet; sat hai; giam bot",
+        "meaningEnNoAccent": "kill; murder; reduce"
       },
       "examples": [
         {
           "word": "暗殺",
           "reading": "あんさつ",
-          "meaning": "assassination"
+          "meaning": "vụ ám sát",
+          "meaningEn": "assassination"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k102",
@@ -268,47 +353,63 @@
       "strokeCount": 14,
       "labels": {
         "hanViet": "Toán",
-        "meaningVi": "tính toán; dự tính",
-        "meaningViDisplay": "算 (tính toán; dự tính)",
-        "meaningEn": "count, calculate, figure; plan"
+        "meaningVi": "tính toán; phép tính; dự tính",
+        "meaningViDisplay": "Toán (tính toán; phép tính; dự tính)",
+        "meaningEn": "calculate; number; plan"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "サン"
+        ],
         "kunyomi": [
-          "あんざん"
+          "そろ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 算 nghĩa là tính toán; dự tính. Ví dụ JLPT N1: 暗算 (mental arithmetic).",
-        "en": "Kanji 算 means count, calculate, figure; plan. JLPT N1 example: 暗算 (mental arithmetic)."
+        "vi": "算 là tính toán; 暗算 là tính nhẩm, làm phép tính trong đầu.",
+        "en": "算 means calculation; 暗算 is mental arithmetic."
       },
       "decomposition": {
         "hanViet": "Toán",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "竹",
+          "目",
+          "廾"
+        ],
+        "componentNames": [
+          "tre",
+          "mắt",
+          "hai tay"
+        ],
+        "relatedKanji": [
+          "数",
+          "計",
+          "暗",
+          "策"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Toan",
-        "meaningViNoAccent": "tinh toan; du tinh",
-        "meaningEnNoAccent": "count, calculate, figure; plan"
+        "meaningViNoAccent": "tinh toan; phep tinh; du tinh",
+        "meaningEnNoAccent": "calculate; number; plan"
       },
       "examples": [
         {
           "word": "暗算",
           "reading": "あんざん",
-          "meaning": "mental arithmetic"
+          "meaning": "tính nhẩm",
+          "meaningEn": "mental arithmetic"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k103",
@@ -317,48 +418,62 @@
       "character": "示",
       "strokeCount": 5,
       "labels": {
-        "hanViet": "Kì Thị",
-        "meaningVi": "chỉ ra; biểu thị",
-        "meaningViDisplay": "示 (chỉ ra; biểu thị)",
-        "meaningEn": "show, manifest; demonstrate; Kangxi radical 113"
+        "hanViet": "Thị",
+        "meaningVi": "chỉ ra; biểu thị; cho thấy",
+        "meaningViDisplay": "Thị (chỉ ra; biểu thị; cho thấy)",
+        "meaningEn": "show; indicate; express"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジ",
+          "シ"
+        ],
         "kunyomi": [
-          "あんじ"
+          "しめ.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 示 nghĩa là chỉ ra; biểu thị. Ví dụ JLPT N1: 暗示 (hint, suggestion).",
-        "en": "Kanji 示 means show, manifest; demonstrate; Kangxi radical 113. JLPT N1 example: 暗示 (hint, suggestion)."
+        "vi": "示 là chỉ ra hoặc biểu thị; 暗示 là gợi ý ngầm, không nói thẳng.",
+        "en": "示 means to show or indicate; 暗示 is an indirect hint or suggestion."
       },
       "decomposition": {
-        "hanViet": "Kì Thị",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Thị",
+        "structure": "single",
+        "components": [
+          "示"
+        ],
+        "componentNames": [
+          "thị/chỉ ra"
+        ],
+        "relatedKanji": [
+          "指",
+          "表",
+          "暗",
+          "神"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Ki Thi",
-        "meaningViNoAccent": "chi ra; bieu thi",
-        "meaningEnNoAccent": "show, manifest; demonstrate; Kangxi radical 113"
+        "hanVietNoAccent": "Thi",
+        "meaningViNoAccent": "chi ra; bieu thi; cho thay",
+        "meaningEnNoAccent": "show; indicate; express"
       },
       "examples": [
         {
           "word": "暗示",
           "reading": "あんじ",
-          "meaning": "hint, suggestion"
+          "meaning": "gợi ý ngầm; ám chỉ",
+          "meaningEn": "hint; suggestion"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k104",
@@ -367,53 +482,72 @@
       "character": "案",
       "strokeCount": 10,
       "labels": {
-        "hanViet": "An Án Yên",
-        "meaningVi": "phương án; bàn; vụ việc",
-        "meaningViDisplay": "案 (phương án; bàn; vụ việc)",
-        "meaningEn": "table, bench; legal case"
+        "hanViet": "Án",
+        "meaningVi": "ý tưởng; phương án; vụ việc",
+        "meaningViDisplay": "Án (ý tưởng; phương án; vụ việc)",
+        "meaningEn": "plan; suggestion; idea; case"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アン"
+        ],
         "kunyomi": [
-          "あんじる"
+          "つくえ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 案 nghĩa là phương án; bàn; vụ việc. Ví dụ JLPT N1: 案じる (to be anxious, to ponder).",
-        "en": "Kanji 案 means table, bench; legal case. JLPT N1 example: 案じる (to be anxious, to ponder)."
+        "vi": "案 là ý tưởng hoặc phương án; 案じる là lo nghĩ, cân nhắc trong đầu.",
+        "en": "案 means a plan or idea; 案じる means to worry or ponder."
       },
       "decomposition": {
-        "hanViet": "An Án Yên",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Án",
+        "structure": "top-bottom",
+        "components": [
+          "安",
+          "木"
+        ],
+        "componentNames": [
+          "an/yên",
+          "cây/gỗ"
+        ],
+        "relatedKanji": [
+          "考",
+          "計",
+          "安",
+          "案"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "An An Yen",
-        "meaningViNoAccent": "phuong an; ban; vu viec",
-        "meaningEnNoAccent": "table, bench; legal case"
+        "hanVietNoAccent": "An",
+        "meaningViNoAccent": "y tuong; phuong an; vu viec",
+        "meaningEnNoAccent": "plan; suggestion; idea; case"
       },
       "examples": [
         {
           "word": "案じる",
           "reading": "あんじる",
-          "meaning": "to be anxious, to ponder"
+          "meaning": "lo lắng; suy ngẫm",
+          "meaningEn": "to be anxious; to ponder"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing verified duplicate rows for 様, 暗, and 案",
+    "Existing vocabulary examples for 有様, 或る, 慌ただしい, 暗殺, 暗算, 暗示, and 案じる"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

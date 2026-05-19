@@ -1620,3 +1620,30 @@ Runtime note: bumped content DB Kanji seed revision from `65` to `66` and added 
 Verification: owner cache audit was rechecked first. Current `firebase.json` and live Firebase Hosting return `Cache-Control: no-cache` for `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `assets/AssetManifest*`, and `assets/assets/data/content/**`; `sqlite3.wasm` remains `public, max-age=2592000`. Coverage audit reduced N1 incomplete current entries from `88` to `80`; focused DB/reachability/taxonomy/upper-JLPT tests passed; hosting cache header guard passed; release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `18e84e51` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_15.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; old approval tags were absent; `否` showed `Phủ (không; phủ định; từ chối)`, on `ヒ`, kun `いな/いや`, and example `拒否/きょひ = từ chối; bác bỏ; phủ nhận`. Current page console errors/warnings: `0`.
+
+## Kanji N1 Lesson 16 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and learner-facing Vietnamese readings where Unihan was absent or too broad.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt`, `.codex/sources/Unihan/Unihan_DictionaryLikeData.txt`, and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, `kJapanese`, and `kTotalStrokes`; `歪` uses learner-facing KANJIDIC2 `Oai` instead of raw Unihan `quay`.
+- Existing verified duplicate rows for `何`, `生`, and `怒`, plus vocabulary examples for `如何`, `生かす`, `雷`, `怒り`, `歪む`, `粋`, and `領域`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `如` | KANJIDIC2 readings `ジョ/ニョ`, `ごと.し`; Unihan `kVietnamese=như`; local context `如何` | Rewrote to `Như (như; giống như; theo kiểu)`, replaced word-level `いかが` as a kanji reading, and translated `如何` as `như thế nào; bằng cách nào`. |
+| `何` | KANJIDIC2 reading `カ`, `なに/なん`; existing verified N5 rows; local context `如何` | Rewrote to `Hà (gì; điều gì; bao nhiêu)`, replaced word-level `いかが`, and added source-backed components/relations. |
+| `生` | KANJIDIC2 readings `セイ/ショウ` plus broad kun set; Unihan `kVietnamese=sinh`; existing verified N2 row | Aligned to `Sinh (sống; sinh ra; sự sống)`, replaced word-level `いかす` as the only reading, and translated `生かす` as `tận dụng; làm sống lại`. |
+| `雷` | KANJIDIC2 reading `ライ`, `かみなり/いかずち/いかづち`; Unihan `kVietnamese=lôi`; local context `雷` | Rewrote to `Lôi (sấm; sét; tiếng sấm)`, filled source-backed readings/components, and translated the example as `sấm sét; tiếng sấm`. |
+| `怒` | KANJIDIC2 readings `ド/ヌ`, `いか.る/おこ.る`; existing verified N3/N4 rows; local context `怒り` | Aligned to `Nộ (giận dữ; nổi giận; phẫn nộ)`, replaced word-level `いかり`, and translated `怒り` as `sự giận dữ; cơn phẫn nộ`. |
+| `歪` | KANJIDIC2 readings `ワイ/エ`, `いが.む/いびつ/ひず.む/ゆが.む`; Unihan `kDefinition=slant; inclined; askew, awry`; local context `歪む` | Corrected Hán-Việt from generated `Quay` to learner-facing `Oai`, rewrote to `Oai (méo; lệch; vặn vẹo)`, and removed the awkward generated English gloss. |
+| `粋` | KANJIDIC2 reading `スイ`, `いき`; local context `粋` | Rewrote to `Túy (tinh túy; thanh lịch; thuần khiết)`, filled source-backed readings/components, and translated `粋` as `thanh lịch; tinh tế; tinh túy`. |
+| `域` | KANJIDIC2 reading `イキ`; Unihan `kVietnamese=vực`; local contexts `域外` and `領域` | Rewrote to `Vực (vùng; khu vực; ranh giới; lĩnh vực)`, replaced the less useful `域外` example with clearer `領域`, and filled related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved`/`unihan-kanji-checked` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `66` to `67` and added an N1 lesson-16 sentinel for `歪` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed; old approval-tag grep returned no matches; coverage audit reduced N1 incomplete current entries from `80` to `72`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache header guard passed; release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `b124248f` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_16.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; old approval tags were absent; `歪` showed `Oai (méo; lệch; vặn vẹo)`, on `ワイ/エ`, kun `いが.む/いびつ/ひず.む/ゆが.む`, and example `歪む/いがむ = bị cong; bị méo; bị bóp méo`. Current page console errors/warnings: `0`.

@@ -760,3 +760,11 @@
 - Bumped content DB Kanji seed revision to `66` and added an N1 lesson-15 sentinel for `否` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `88` to `80`, focused DB/reachability/taxonomy/upper-JLPT tests passed (`45`), hosting cache header guard passed, and release web build passed.
 - Built/deployed `18e84e51` to Firebase Hosting. Live proof used normal browser cache: page-context fetch of deployed `lesson_15.json` returned `Cache-Control: no-cache`; `否` returned `Phủ (không; phủ định; từ chối)`, on `ヒ`, kun `いな/いや`, example `拒否/きょひ = từ chối; bác bỏ; phủ nhận`, and `vi-source-verified`; old approval tags were absent; current page console errors/warnings `0`.
+
+## 2026-05-19 N1 Kanji Lesson 16 Completeness Patch
+
+- Source-verified all eight N1 lesson-16 kanji (`如`, `何`, `生`, `雷`, `怒`, `歪`, `粋`, `域`) against local KANJIDIC2, Unihan where available, existing verified duplicate rows, and vocabulary examples.
+- Corrected generated metadata, including learner-facing `歪 -> Oai`, replacing word-level readings (`いかが`, `いかす`, `いかり`, `いきがい`) with source-backed Kanji readings, replacing `域外` with clearer `領域`, removing old approval metadata, and adding truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `67` and added an N1 lesson-16 sentinel for `歪` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, old approval-tag grep returned no matches, coverage audit reduced N1 incomplete current entries from `80` to `72`, focused DB/reachability/taxonomy/upper-JLPT tests passed (`45`), `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, hosting cache guard passed, and release web build passed.
+- Built/deployed `b124248f` to Firebase Hosting. Live proof used normal browser cache: page-context fetch of deployed `lesson_16.json` returned `Cache-Control: no-cache`; `歪` returned `Oai (méo; lệch; vặn vẹo)`, on `ワイ/エ`, kun `いが.む/いびつ/ひず.む/ゆが.む`, example `歪む/いがむ = bị cong; bị méo; bị bóp méo`, and `vi-source-verified`; old approval tags were absent; current page console errors/warnings `0`.

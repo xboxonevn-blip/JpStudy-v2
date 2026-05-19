@@ -972,3 +972,30 @@ Runtime note: bumped content DB Kanji seed revision from `41` to `42` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `80` to `72`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
 
 Live proof after deploy: after `1f97e53b` was deployed to Firebase Hosting, a CDP cache-disabled and service-worker-bypassed VI/N2 `/#/kanji` session loaded the revision-42 metadata. Filtering `英` showed the updated N2 lesson-16 card with `Học chữ 英, Hán-Việt Anh, âm On エイ, âm Kun はなぶさ`; opening it showed `Anh (Anh; nước Anh; tiếng Anh; ưu tú)`, Hán-Việt `Anh`, on `エイ`, kun `はなぶさ`, stroke count `8`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.
+
+## Kanji N2 Lesson 17 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `宴会`, `園芸`, `演劇`, and `円周`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `宴` | KANJIDIC2 reading `エン`, `うたげ`, meanings `banquet`, `feast`, `party`; Unihan `kVietnamese=yến`; local context `宴会` | Corrected the row away from whole-word `party, banquet` fallback to `Yến (yến; tiệc; yến tiệc; tiệc rượu)`, added readings/search text, direct example `宴会`, and banquet-related kanji. |
+| `会` | KANJIDIC2 readings `カイ/エ`, meeting/meet kunyomi, Vietnamese `Hội`, meanings `meeting`, `meet`, `party`, `association`; Unihan `kVietnamese=hội`; local context `宴会` | Corrected the row away from whole-word banquet fallback to `Hội (hội; gặp gỡ; cuộc họp; hội nhóm)`, added readings/search text, direct example `宴会`, and gathering-related kanji. |
+| `園` | KANJIDIC2 reading `エン`, `その`, Vietnamese `Viên`, meanings `park`, `garden`, `yard`, `farm`; Unihan `kVietnamese=viên`; local context `園芸` | Corrected the row away from whole-word horticulture fallback to `Viên (viên; vườn; công viên; khu vườn)`, added readings/search text, direct example `園芸`, and garden-related kanji. |
+| `芸` | KANJIDIC2 readings `ゲイ/ウン`, technique/art/craft meanings, Vietnamese `Nghệ`; Unihan cross-check; local context `園芸` | Rewrote display to `Nghệ (nghệ; nghệ thuật; kỹ nghệ; kỹ thuật)`, added readings/search text, direct example `園芸`, and art/technique related kanji. |
+| `演` | KANJIDIC2 reading `エン`, meanings `performance`, `act`, `play`; Unihan `kVietnamese=diễn`; local context `演劇` | Corrected the row away from whole-word theatrical-play fallback to `Diễn (diễn; biểu diễn; diễn xuất; trình bày)`, added readings/search text, direct example `演劇`, and performance-related kanji. |
+| `劇` | KANJIDIC2 reading `ゲキ`, Vietnamese `Kịch`, meanings `drama`, `play`, `theatre`; Unihan `kVietnamese=kịch`; local context `演劇` | Corrected the row away from whole-word theatrical-play fallback to `Kịch (kịch; sân khấu; vở kịch)`, added readings/search text, direct example `演劇`, and theatre-related kanji. |
+| `円` | KANJIDIC2 reading `エン`, round/circle/yuan/yen meanings, Vietnamese `Viên`; Unihan `kVietnamese=viên`; local context `円周` | Corrected the row away from whole-word circumference fallback to `Viên (viên; tròn; đồng yên; vòng tròn)`, added readings/search text, direct example `円周`, and circle/money related kanji. |
+| `周` | KANJIDIC2 reading `シュウ`, `まわ.り`, Vietnamese `Chu`, meanings `circumference`, `circuit`, `lap`; Unihan `kVietnamese=chu`; local context `円周` | Corrected the row away from whole-word circumference fallback to `Chu (chu; chu vi; vòng quanh; xung quanh)`, added readings/search text, direct example `円周`, and around/circuit related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `42` to `43` and added an N2 lesson-17 sentinel for `宴` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `72` to `64`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), and release web build succeeded.
+
+Live proof after deploy: after `88aca79a` was deployed to Firebase Hosting, VI/N2 `/#/kanji` loaded the Kanji explore surface. Filtering `宴` showed the updated two-card keyword result (`宴`, `会`); opening `宴` showed `Yến (yến; tiệc; yến tiệc; tiệc rượu)`, Hán-Việt `Yến`, on `エン`, kun `うたげ`, stroke count `10`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

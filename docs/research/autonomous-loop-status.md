@@ -726,3 +726,11 @@
 - Bumped content DB Kanji seed revision to `62` and added an N1 lesson-11 sentinel for `予` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `120` to `112`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, hosting cache header guard passed, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
 - Live proof used normal browser cache: page-context fetch of deployed `lesson_11.json` returned `Cache-Control: no-cache`; `予` returned `Dự (trước; dự tính; chuẩn bị)`, on `ヨ/シャ`, kun `あらかじ.め`, and `vi-source-verified`; current page console errors/warnings `0`.
+
+## 2026-05-19 N1 Kanji Lesson 12 Completeness Patch
+
+- Source-verified all eight N1 lesson-12 kanji (`粗`, `筋`, `争`, `改`, `凡`, `現`, `有`, `難`) against local KANJIDIC2, Unihan where available, existing verified duplicate rows, and vocabulary examples.
+- Corrected generated metadata, including replacing word-level readings (`あらすじ`, `あらそい`, `あらたまる`, `あらゆる`, `あらわれ`, `ありがとう`) with source-backed kanji readings, correcting `筋` from vernacular `Gân` to learner-facing Hán-Việt `Cân`, replacing ateji `有難う` examples with clearer `有無`/`困難`, removing old approval metadata, and adding truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `63` and added an N1 lesson-12 sentinel for `粗` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: coverage audit reduced N1 incomplete current entries from `112` to `104`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, hosting cache header guard passed, full `flutter test` passed (`2340`), release web build passed, and Firebase Hosting deploy completed.
+- Live proof used normal browser cache: page-context fetch of deployed `lesson_12.json` returned `Cache-Control: no-cache`; `粗` returned `Thô (thô; sơ sài; thô ráp)`, on `ソ`, kun `あら.い/あら-`, and `vi-source-verified`; current page console errors/warnings `0`.

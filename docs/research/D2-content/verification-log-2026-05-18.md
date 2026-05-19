@@ -1512,3 +1512,30 @@ Runtime note: bumped content DB Kanji seed revision from `61` to `62` and added 
 Verification: coverage audit reduced N1 incomplete current entries from `120` to `112`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `f04728a9` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_11.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; `予` showed `Dự (trước; dự tính; chuẩn bị)`, on `ヨ/シャ`, kun `あらかじ.め`, and example `予め/あらかじめ = trước; từ trước; trước đó`. Current page console errors/warnings: `0`.
+
+## Kanji N1 Lesson 12 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and Vietnamese readings where Unihan was absent or unsuitable.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `筋` uses learner-facing KANJIDIC2 `Cân` instead of Unihan vernacular `gân`.
+- Existing verified duplicate rows for `粗`, `争`, `改`, `凡`, `有`, and `難`, plus vocabulary examples for `粗筋`, `争い`, `改まる`, `凡ゆる`, `現われ`, `有無`, and `困難`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `粗` | KANJIDIC2 reading `ソ`, `あら.い/あら-`; Unihan `kVietnamese=thô`; existing verified N2 row | Aligned to `Thô (thô; sơ sài; thô ráp)`, replaced word-level `あらすじ` as a kanji reading, and translated `粗筋` as `tóm tắt; cốt truyện khái quát`. |
+| `筋` | KANJIDIC2 reading `キン`, `すじ`; local context `粗筋` | Corrected Hán-Việt from vernacular `Gân` to learner-facing `Cân`, added source-backed readings/components/related kanji, and kept `粗筋` as the example. |
+| `争` | KANJIDIC2 reading `ソウ`, `あらそ.う/いか.でか`; existing verified N2/N3 rows | Aligned to `Tranh (tranh chấp; cạnh tranh; cãi nhau)`, replaced word-level `あらそい` as a kanji reading, and translated `争い` naturally. |
+| `改` | KANJIDIC2 reading `カイ`, `あらた.める/あらた.まる`; existing verified N2 row | Aligned to `Cải (sửa đổi; cải thiện; kiểm tra lại)`, replaced word-level `あらたまる` as a kanji reading, and translated `改まる` as `được đổi mới; trở nên trang trọng`. |
+| `凡` | KANJIDIC2 readings `ボン/ハン`, `およ.そ/おうよ.そ/すべ.て`; Unihan `kVietnamese=phàm`; existing verified N2 row | Rewrote to `Phàm (phàm; bình thường; nói chung)`, replaced word-level `あらゆる` as a kanji reading, and translated `凡ゆる` as `mọi; tất cả`. |
+| `現` | KANJIDIC2 reading `ゲン`, `あらわ.れる/あらわ.す/うつつ/うつ.つ`; Unihan `kVietnamese=hiện` | Rewrote to `Hiện (hiện tại; thực tế; xuất hiện)`, replaced word-level `あらわれ` as a kanji reading, and translated `現われ` as `biểu hiện; sự hiện ra`. |
+| `有` | KANJIDIC2 readings `ユウ/ウ`, `あ.る`; Unihan `kVietnamese=hữu`; existing verified N2 row | Aligned to `Hữu (có; tồn tại; sở hữu)`, replaced ateji `有難う` with clearer `有無/うむ`, and added source-backed readings. |
+| `難` | KANJIDIC2 reading `ナン`, `かた.い/.../-にく.い`; Unihan `kVietnamese=nan`; existing verified N2/N3 rows | Aligned to `Nan (khó; gian nan; tai nạn)`, replaced ateji `有難う` with clearer `困難/こんなん`, and kept repo-standard stroke count `19`. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `62` to `63` and added an N1 lesson-12 sentinel for `粗` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit reduced N1 incomplete current entries from `112` to `104`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `13164fac` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_12.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; `粗` showed `Thô (thô; sơ sài; thô ráp)`, on `ソ`, kun `あら.い/あら-`, and example `粗筋/あらすじ = tóm tắt; cốt truyện khái quát`. Current page console errors/warnings: `0`.

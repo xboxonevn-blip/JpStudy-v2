@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 57;
+const _kanjiSeedRevision = 58;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -232,6 +232,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '浅',
     meaning: 'Thiển (nông; cạn; hời hợt)',
     decompositionContains: '"hanViet":"Thiển"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 7,
+    character: '処',
+    meaning: 'Xử (xử lý; giải quyết; nơi chốn)',
+    decompositionContains: '"hanViet":"Xử"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

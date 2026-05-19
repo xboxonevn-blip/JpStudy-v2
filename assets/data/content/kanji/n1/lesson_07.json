@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 7,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 処 and 当 have no Unihan kVietnamese values, so learner-facing Hán-Việt values use established readings.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k049",
@@ -18,45 +18,62 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Xử",
-        "meaningVi": "nơi chốn; chỗ",
-        "meaningViDisplay": "処 (nơi chốn; chỗ)",
-        "meaningEn": "place, locale; department"
+        "meaningVi": "xử lý; giải quyết; nơi chốn",
+        "meaningViDisplay": "Xử (xử lý; giải quyết; nơi chốn)",
+        "meaningEn": "deal with; handle; place"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショ"
+        ],
         "kunyomi": [
-          "あそこ"
+          "ところ",
+          "-こ",
+          "お.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 処 nghĩa là nơi chốn; chỗ. Ví dụ JLPT N1: 彼処 (chỗ đó, nơi đó).",
-        "en": "Kanji 処 means place, locale; department. JLPT N1 example: 彼処 (chỗ đó, nơi đó)."
+        "vi": "処 vừa chỉ chỗ/nơi, vừa dùng trong các từ như 処理 để nói việc xử lý, giải quyết một vấn đề.",
+        "en": "処 can mean a place, and in words like 処理 it means handling or processing a matter."
       },
       "decomposition": {
         "hanViet": "Xử",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "夂",
+          "几"
+        ],
+        "componentNames": [
+          "bước chậm",
+          "kỷ; ghế"
+        ],
+        "relatedKanji": [
+          "所",
+          "場",
+          "理",
+          "置"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Xu",
-        "meaningViNoAccent": "noi chon; cho",
-        "meaningEnNoAccent": "place, locale; department"
+        "meaningViNoAccent": "xu ly; giai quyet; noi chon",
+        "meaningEnNoAccent": "deal with; handle; place"
       },
       "examples": [
         {
-          "word": "彼処",
-          "reading": "あそこ",
-          "meaning": "chỗ đó, nơi đó"
+          "word": "処理",
+          "reading": "しょり",
+          "meaning": "xử lý",
+          "meaningEn": "processing; handling"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -69,46 +86,61 @@
       "labels": {
         "hanViet": "Trị",
         "meaningVi": "giá trị; giá cả",
-        "meaningViDisplay": "値 (giá trị; giá cả)",
-        "meaningEn": "price, cost, worth"
+        "meaningViDisplay": "Trị (giá trị; giá cả)",
+        "meaningEn": "price; cost; value"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チ"
+        ],
         "kunyomi": [
+          "ね",
           "あたい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 値 nghĩa là giá trị; giá cả. Ví dụ JLPT N1: 値 (value, price, cost, worth, merit).",
-        "en": "Kanji 値 means price, cost, worth. JLPT N1 example: 値 (value, price, cost, worth, merit)."
+        "vi": "値 gồm bộ nhân và 直, thường nói về giá tiền hoặc giá trị của một vật, việc hay hành động.",
+        "en": "値 combines the person radical with 直 and refers to price, cost, or value."
       },
       "decomposition": {
         "hanViet": "Trị",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "直"
+        ],
+        "componentNames": [
+          "người",
+          "trực; thẳng"
+        ],
+        "relatedKanji": [
+          "価",
+          "費",
+          "額",
+          "直"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tri",
         "meaningViNoAccent": "gia tri; gia ca",
-        "meaningEnNoAccent": "price, cost, worth"
+        "meaningEnNoAccent": "price; cost; value"
       },
       "examples": [
         {
           "word": "値",
           "reading": "あたい",
-          "meaning": "value, price, cost, worth, merit"
+          "meaning": "giá trị; giá cả; công lao",
+          "meaningEn": "value; price; worth; merit"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k051",
@@ -119,25 +151,39 @@
       "labels": {
         "hanViet": "Tư",
         "meaningVi": "riêng tư; tôi",
-        "meaningViDisplay": "私 (riêng tư; tôi)",
-        "meaningEn": "private, personal; secret"
+        "meaningViDisplay": "Tư (riêng tư; tôi)",
+        "meaningEn": "private; I; me"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
-          "あたし"
+          "わたくし",
+          "わたし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 私 nghĩa là riêng tư; tôi. Ví dụ JLPT N1: 私 (I (fem)).",
-        "en": "Kanji 私 means private, personal; secret. JLPT N1 example: 私 (I (fem))."
+        "vi": "私 có nghĩa gốc là riêng tư, rồi dùng làm đại từ 'tôi'; あたし là cách nói thân mật, thường của nữ.",
+        "en": "私 means private and is also the pronoun I/me; あたし is a casual feminine-leaning reading."
       },
       "decomposition": {
         "hanViet": "Tư",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "禾",
+          "厶"
+        ],
+        "componentNames": [
+          "lúa",
+          "tư"
+        ],
+        "relatedKanji": [
+          "公",
+          "個",
+          "自",
+          "秘"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tu",
@@ -148,17 +194,18 @@
         {
           "word": "私",
           "reading": "あたし",
-          "meaning": "I (fem)"
+          "meaning": "tôi (cách nói thân mật, thường của nữ)",
+          "meaningEn": "I; me"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k052",
@@ -168,45 +215,64 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Đương",
-        "meaningVi": "đảm nhận; đúng; trúng",
-        "meaningViDisplay": "当 (đảm nhận; đúng; trúng)",
-        "meaningEn": "bear, accept, undertake; just"
+        "meaningVi": "trúng; đúng; phù hợp; đảm nhận",
+        "meaningViDisplay": "Đương (trúng; đúng; phù hợp; đảm nhận)",
+        "meaningEn": "hit; right; appropriate"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "トウ"
+        ],
         "kunyomi": [
-          "あたり"
+          "あ.たる",
+          "あ.たり",
+          "あ.てる",
+          "あ.て",
+          "まさ.に"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 当 nghĩa là đảm nhận; đúng; trúng. Ví dụ JLPT N1: 当たり (sự trúng, thành công, vùng lân cận).",
-        "en": "Kanji 当 means bear, accept, undertake; just. JLPT N1 example: 当たり (sự trúng, thành công, vùng lân cận)."
+        "vi": "当 diễn tả sự trúng/đúng mục tiêu, hợp với tình huống; 当たり là cú trúng hoặc khu vực lân cận.",
+        "en": "当 expresses hitting the mark or being appropriate; 当たり can mean a hit or nearby area."
       },
       "decomposition": {
         "hanViet": "Đương",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "⺌",
+          "彐"
+        ],
+        "componentNames": [
+          "nhỏ",
+          "tay"
+        ],
+        "relatedKanji": [
+          "的",
+          "適",
+          "本",
+          "前"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Duong",
-        "meaningViNoAccent": "đam nhan; đung; trung",
-        "meaningEnNoAccent": "bear, accept, undertake; just"
+        "meaningViNoAccent": "trung; dung; phu hop; dam nhan",
+        "meaningEnNoAccent": "hit; right; appropriate"
       },
       "examples": [
         {
           "word": "当たり",
           "reading": "あたり",
-          "meaning": "sự trúng, thành công, vùng lân cận"
+          "meaning": "sự trúng; thành công; khu vực lân cận",
+          "meaningEn": "hit; success; vicinity"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -219,46 +285,61 @@
       "labels": {
         "hanViet": "Tiền",
         "meaningVi": "trước; phía trước",
-        "meaningViDisplay": "前 (trước; phía trước)",
-        "meaningEn": "in front, forward; preceding"
+        "meaningViDisplay": "Tiền (trước; phía trước)",
+        "meaningEn": "in front; before"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゼン"
+        ],
         "kunyomi": [
-          "あたりまえ"
+          "まえ",
+          "-まえ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 前 nghĩa là trước; phía trước. Ví dụ JLPT N1: 当たり前 (usual, common, ordinary, natural, reasonable, obvious).",
-        "en": "Kanji 前 means in front, forward; preceding. JLPT N1 example: 当たり前 (usual, common, ordinary, natural, reasonable, obvious)."
+        "vi": "前 chỉ phía trước hoặc thời điểm trước; trong 当たり前, chữ này góp vào nghĩa 'điều hiển nhiên, bình thường'.",
+        "en": "前 means in front or before; in 当たり前 it contributes to the idea of something obvious or normal."
       },
       "decomposition": {
         "hanViet": "Tiền",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "月",
+          "刂"
+        ],
+        "componentNames": [
+          "thịt/trăng",
+          "dao"
+        ],
+        "relatedKanji": [
+          "後",
+          "先",
+          "上",
+          "下"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tien",
         "meaningViNoAccent": "truoc; phia truoc",
-        "meaningEnNoAccent": "in front, forward; preceding"
+        "meaningEnNoAccent": "in front; before"
       },
       "examples": [
         {
           "word": "当たり前",
           "reading": "あたりまえ",
-          "meaning": "usual, common, ordinary, natural, reasonable, obvious"
+          "meaning": "bình thường; hiển nhiên; hợp lý",
+          "meaningEn": "usual; ordinary; obvious"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k054",
@@ -269,46 +350,60 @@
       "labels": {
         "hanViet": "Tha",
         "meaningVi": "khác; người khác",
-        "meaningViDisplay": "他 (khác; người khác)",
-        "meaningEn": "other, another; he, she, it"
+        "meaningViDisplay": "Tha (khác; người khác)",
+        "meaningEn": "other; another"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タ"
+        ],
         "kunyomi": [
-          "あだびと"
+          "ほか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 他 nghĩa là khác; người khác. Ví dụ JLPT N1: 他人 (another person, unrelated person, outsider, stranger).",
-        "en": "Kanji 他 means other, another; he, she, it. JLPT N1 example: 他人 (another person, unrelated person, outsider, stranger)."
+        "vi": "他 có bộ nhân, dùng để chỉ người/vật khác hoặc phần còn lại; 他人 là người khác, người không liên quan.",
+        "en": "他 has the person radical and means other or another; 他人 means another person or outsider."
       },
       "decomposition": {
         "hanViet": "Tha",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "也"
+        ],
+        "componentNames": [
+          "người",
+          "dã/cũng"
+        ],
+        "relatedKanji": [
+          "人",
+          "私",
+          "別",
+          "外"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tha",
         "meaningViNoAccent": "khac; nguoi khac",
-        "meaningEnNoAccent": "other, another; he, she, it"
+        "meaningEnNoAccent": "other; another"
       },
       "examples": [
         {
           "word": "他人",
-          "reading": "あだびと",
-          "meaning": "another person, unrelated person, outsider, stranger"
+          "reading": "たにん",
+          "meaning": "người khác; người không liên quan; người ngoài",
+          "meaningEn": "another person; outsider"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k055",
@@ -318,47 +413,61 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Phương",
-        "meaningVi": "phương hướng; vùng; cách",
-        "meaningViDisplay": "方 (phương hướng; vùng; cách)",
-        "meaningEn": "a square, rectangle; a region; local"
+        "meaningVi": "phương hướng; cách; người",
+        "meaningViDisplay": "Phương (phương hướng; cách; người)",
+        "meaningEn": "direction; person; way"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ホウ"
+        ],
         "kunyomi": [
-          "あちこち"
+          "かた",
+          "-かた",
+          "-がた"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 方 nghĩa là phương hướng; vùng; cách. Ví dụ JLPT N1: 彼方此方 (here and there).",
-        "en": "Kanji 方 means a square, rectangle; a region; local. JLPT N1 example: 彼方此方 (here and there)."
+        "vi": "方 vừa chỉ phương hướng, vừa chỉ cách làm hoặc người; 方法 là phương pháp, cách làm.",
+        "en": "方 can mean direction, method, or person; 方法 means method or way."
       },
       "decomposition": {
         "hanViet": "Phương",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "方"
+        ],
+        "componentNames": [
+          "phương hướng"
+        ],
+        "relatedKanji": [
+          "向",
+          "法",
+          "道",
+          "角"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phuong",
-        "meaningViNoAccent": "phuong huong; vung; cach",
-        "meaningEnNoAccent": "a square, rectangle; a region; local"
+        "meaningViNoAccent": "phuong huong; cach; nguoi",
+        "meaningEnNoAccent": "direction; person; way"
       },
       "examples": [
         {
-          "word": "彼方此方",
-          "reading": "あちこち",
-          "meaning": "here and there"
+          "word": "方法",
+          "reading": "ほうほう",
+          "meaning": "phương pháp; cách làm",
+          "meaningEn": "method; way"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k056",
@@ -369,51 +478,71 @@
       "labels": {
         "hanViet": "Thử",
         "meaningVi": "này; đây",
-        "meaningViDisplay": "此 (này; đây)",
-        "meaningEn": "this, these; in this case, then"
+        "meaningViDisplay": "Thử (này; đây)",
+        "meaningEn": "this; current"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
-          "あちこち"
+          "これ",
+          "この",
+          "ここ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 此 nghĩa là này; đây. Ví dụ JLPT N1: 彼方此方 (here and there).",
-        "en": "Kanji 此 means this, these; in this case, then. JLPT N1 example: 彼方此方 (here and there)."
+        "vi": "此 là chữ cổ/trang trọng cho 'này, đây'; 此れ đọc là これ, nghĩa là 'cái này'.",
+        "en": "此 is an older/formal character for this or here; 此れ is read これ and means this."
       },
       "decomposition": {
         "hanViet": "Thử",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "止",
+          "匕"
+        ],
+        "componentNames": [
+          "dừng",
+          "thìa"
+        ],
+        "relatedKanji": [
+          "彼",
+          "方",
+          "是",
+          "今"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thu",
-        "meaningViNoAccent": "nay; đay",
-        "meaningEnNoAccent": "this, these; in this case, then"
+        "meaningViNoAccent": "nay; day",
+        "meaningEnNoAccent": "this; current"
       },
       "examples": [
         {
-          "word": "彼方此方",
-          "reading": "あちこち",
-          "meaning": "here and there"
+          "word": "此れ",
+          "reading": "これ",
+          "meaning": "cái này",
+          "meaningEn": "this"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 and lower-level vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

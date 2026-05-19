@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 15,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k113",
@@ -18,37 +18,46 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Hận",
-        "meaningVi": "resentment",
-        "meaningViDisplay": "恨 (resentment)",
-        "meaningEn": "resentment"
+        "meaningVi": "oán hận; thù hằn; nỗi hận",
+        "meaningViDisplay": "Hận (oán hận; thù hằn; nỗi hận)",
+        "meaningEn": "resentment, grudge, hatred"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コン"
+        ],
         "kunyomi": [
-          "うらみ"
+          "うら.む",
+          "うら.めしい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 恨み (resentment).",
-        "en": "Appears in JLPT N2 vocabulary: 恨み (resentment)."
+        "vi": "恨 có bộ tâm, chỉ cảm giác oán hận giữ trong lòng; 恨み là nỗi hận hoặc sự oán trách.",
+        "en": "恨 contains the heart radical and points to resentment kept inside; 恨み is a grudge or resentment."
       },
       "decomposition": {
         "hanViet": "Hận",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "怨",
+          "憎",
+          "心",
+          "怒"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Han",
-        "meaningViNoAccent": "resentment",
-        "meaningEnNoAccent": "resentment"
+        "meaningViNoAccent": "oan han; thu han; noi han",
+        "meaningEnNoAccent": "resentment, grudge, hatred"
       },
       "examples": [
         {
           "word": "恨み",
           "reading": "うらみ",
-          "meaning": "resentment"
+          "meaning": "nỗi oán hận; sự thù hằn",
+          "meaningEn": "resentment, grudge"
         }
       ],
       "tags": [
@@ -56,9 +65,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k114",
@@ -68,45 +78,56 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Tiện",
-        "meaningVi": "envious, enviable",
-        "meaningViDisplay": "羨 (envious, enviable)",
-        "meaningEn": "envious, enviable"
+        "meaningVi": "ghen tị; ao ước; thèm muốn",
+        "meaningViDisplay": "Tiện (ghen tị; ao ước; thèm muốn)",
+        "meaningEn": "envy, admire, covet"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン",
+          "エン"
+        ],
         "kunyomi": [
-          "うらやましい"
+          "うらや.む",
+          "あまり"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 羨ましい (envious, enviable).",
-        "en": "Appears in JLPT N2 vocabulary: 羨ましい (envious, enviable)."
+        "vi": "羨 diễn tả cảm giác nhìn điều tốt của người khác và thấy ao ước; 羨ましい là đáng ghen tị/đáng ao ước.",
+        "en": "羨 describes looking at another's good fortune and wishing for it; 羨ましい means enviable."
       },
       "decomposition": {
         "hanViet": "Tiện",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "慕",
+          "欲",
+          "嫉",
+          "美"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tien",
-        "meaningViNoAccent": "envious, enviable",
-        "meaningEnNoAccent": "envious, enviable"
+        "meaningViNoAccent": "ghen ti; ao uoc; them muon",
+        "meaningEnNoAccent": "envy, admire, covet"
       },
       "examples": [
         {
           "word": "羨ましい",
           "reading": "うらやましい",
-          "meaning": "envious, enviable"
+          "meaning": "đáng ghen tị; đáng ao ước",
+          "meaningEn": "enviable"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,45 +139,55 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Mại",
-        "meaningVi": "amount sold, proceeds",
-        "meaningViDisplay": "売 (amount sold, proceeds)",
-        "meaningEn": "amount sold, proceeds"
+        "meaningVi": "bán; buôn bán",
+        "meaningViDisplay": "Mại (bán; buôn bán)",
+        "meaningEn": "sell"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "バイ"
+        ],
         "kunyomi": [
-          "うりあげ"
+          "う.る",
+          "う.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 売上 (amount sold, proceeds).",
-        "en": "Appears in JLPT N2 vocabulary: 売上 (amount sold, proceeds)."
+        "vi": "売 là bán hàng; trong 売上, ý bán hàng mở rộng thành doanh thu.",
+        "en": "売 means to sell; in 売上 the selling action extends to sales revenue."
       },
       "decomposition": {
         "hanViet": "Mại",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "買",
+          "商",
+          "店",
+          "金"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Mai",
-        "meaningViNoAccent": "amount sold, proceeds",
-        "meaningEnNoAccent": "amount sold, proceeds"
+        "meaningViNoAccent": "ban; buon ban",
+        "meaningEnNoAccent": "sell"
       },
       "examples": [
         {
           "word": "売上",
           "reading": "うりあげ",
-          "meaning": "amount sold, proceeds"
+          "meaning": "doanh thu; khoản thu bán hàng",
+          "meaningEn": "sales, proceeds"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,37 +199,52 @@
       "strokeCount": 3,
       "labels": {
         "hanViet": "Thượng",
-        "meaningVi": "amount sold, proceeds",
-        "meaningViDisplay": "上 (amount sold, proceeds)",
-        "meaningEn": "amount sold, proceeds"
+        "meaningVi": "trên; lên; tăng",
+        "meaningViDisplay": "Thượng (trên; lên; tăng)",
+        "meaningEn": "above, up"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジョウ",
+          "ショウ",
+          "シャン"
+        ],
         "kunyomi": [
-          "うりあげ"
+          "うえ",
+          "うわ-",
+          "かみ",
+          "あ.げる",
+          "あ.がる",
+          "のぼ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 売上 (amount sold, proceeds).",
-        "en": "Appears in JLPT N2 vocabulary: 売上 (amount sold, proceeds)."
+        "vi": "上 là phía trên hoặc đi lên; trong 売上, tiền bán hàng được cộng lên thành doanh thu.",
+        "en": "上 means above or up; in 売上, sales are added up into revenue."
       },
       "decomposition": {
         "hanViet": "Thượng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "下",
+          "高",
+          "登",
+          "売"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thuong",
-        "meaningViNoAccent": "amount sold, proceeds",
-        "meaningEnNoAccent": "amount sold, proceeds"
+        "meaningViNoAccent": "tren; len; tang",
+        "meaningEnNoAccent": "above, up"
       },
       "examples": [
         {
           "word": "売上",
           "reading": "うりあげ",
-          "meaning": "amount sold, proceeds"
+          "meaning": "doanh thu; khoản thu bán hàng",
+          "meaningEn": "sales, proceeds"
         }
       ],
       "tags": [
@@ -206,9 +252,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k117",
@@ -218,37 +265,50 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Thiết",
-        "meaningVi": "sold-out",
-        "meaningViDisplay": "切 (sold-out)",
-        "meaningEn": "sold-out"
+        "meaningVi": "cắt; đứt; sắc bén",
+        "meaningViDisplay": "Thiết (cắt; đứt; sắc bén)",
+        "meaningEn": "cut, cutoff, sharp"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セツ",
+          "サイ"
+        ],
         "kunyomi": [
-          "うりきれ"
+          "き.る",
+          "-き.る",
+          "き.り",
+          "き.れる",
+          "-き.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 売り切れ (sold-out).",
-        "en": "Appears in JLPT N2 vocabulary: 売り切れ (sold-out)."
+        "vi": "切 là cắt/đứt; 売り切れ là hàng đã bị bán hết, không còn để bán.",
+        "en": "切 means cutting off; 売り切れ is stock cut off by being sold out."
       },
       "decomposition": {
         "hanViet": "Thiết",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "刀",
+          "断",
+          "終",
+          "売"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thiet",
-        "meaningViNoAccent": "sold-out",
-        "meaningEnNoAccent": "sold-out"
+        "meaningViNoAccent": "cat; dut; sac ben",
+        "meaningEnNoAccent": "cut, cutoff, sharp"
       },
       "examples": [
         {
           "word": "売り切れ",
           "reading": "うりきれ",
-          "meaning": "sold-out"
+          "meaning": "hết hàng; đã bán hết",
+          "meaningEn": "sold out"
         }
       ],
       "tags": [
@@ -256,9 +316,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k118",
@@ -267,38 +328,51 @@
       "character": "行",
       "strokeCount": 6,
       "labels": {
-        "hanViet": "Hàng",
-        "meaningVi": "sales",
-        "meaningViDisplay": "行 (sales)",
-        "meaningEn": "sales"
+        "hanViet": "Hành",
+        "meaningVi": "đi; thực hiện; hàng lối",
+        "meaningViDisplay": "Hành (đi; thực hiện; hàng lối)",
+        "meaningEn": "go, journey, carry out"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ",
+          "ギョウ",
+          "アン"
+        ],
         "kunyomi": [
-          "うれゆき"
+          "い.く",
+          "ゆ.く",
+          "-ゆ.き",
+          "おこな.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 売行き (sales).",
-        "en": "Appears in JLPT N2 vocabulary: 売行き (sales)."
+        "vi": "行 là đi hoặc tiến hành; trong 売行き, nó chỉ chiều hướng/hành trình của việc bán hàng.",
+        "en": "行 means going or carrying out; in 売行き it describes how sales are moving."
       },
       "decomposition": {
-        "hanViet": "Hàng",
+        "hanViet": "Hành",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "道",
+          "歩",
+          "流",
+          "旅"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Hang",
-        "meaningViNoAccent": "sales",
-        "meaningEnNoAccent": "sales"
+        "hanVietNoAccent": "Hanh",
+        "meaningViNoAccent": "di; thuc hien; hang loi",
+        "meaningEnNoAccent": "go, journey, carry out"
       },
       "examples": [
         {
           "word": "売行き",
           "reading": "うれゆき",
-          "meaning": "sales"
+          "meaning": "tình hình bán; sức bán",
+          "meaningEn": "sales, demand"
         }
       ],
       "tags": [
@@ -306,9 +380,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k119",
@@ -318,37 +393,45 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Vận",
-        "meaningVi": "canal, waterway",
-        "meaningViDisplay": "運 (canal, waterway)",
-        "meaningEn": "canal, waterway"
+        "meaningVi": "vận chuyển; vận may; chuyển động",
+        "meaningViDisplay": "Vận (vận chuyển; vận may; chuyển động)",
+        "meaningEn": "carry, luck, transport"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ウン"
+        ],
         "kunyomi": [
-          "うんが"
+          "はこ.ぶ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 運河 (canal, waterway).",
-        "en": "Appears in JLPT N2 vocabulary: 運河 (canal, waterway)."
+        "vi": "運 là vận chuyển hoặc vận may; trong 運河, nghĩa vận chuyển gắn với tuyến nước để tàu đi lại.",
+        "en": "運 means transport or fortune; in 運河 it supports the idea of a water route for transport."
       },
       "decomposition": {
         "hanViet": "Vận",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "軍",
+          "送",
+          "通",
+          "河"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Van",
-        "meaningViNoAccent": "canal, waterway",
-        "meaningEnNoAccent": "canal, waterway"
+        "meaningViNoAccent": "van chuyen; van may; chuyen dong",
+        "meaningEnNoAccent": "carry, luck, transport"
       },
       "examples": [
         {
           "word": "運河",
           "reading": "うんが",
-          "meaning": "canal, waterway"
+          "meaning": "kênh đào; đường thủy",
+          "meaningEn": "canal, waterway"
         }
       ],
       "tags": [
@@ -356,9 +439,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k120",
@@ -368,37 +452,45 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Hà",
-        "meaningVi": "canal, waterway",
-        "meaningViDisplay": "河 (canal, waterway)",
-        "meaningEn": "canal, waterway"
+        "meaningVi": "sông; dòng sông",
+        "meaningViDisplay": "Hà (sông; dòng sông)",
+        "meaningEn": "river"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ"
+        ],
         "kunyomi": [
-          "うんが"
+          "かわ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 運河 (canal, waterway).",
-        "en": "Appears in JLPT N2 vocabulary: 運河 (canal, waterway)."
+        "vi": "河 là sông; 運河 là dòng nước đào để vận chuyển, tức kênh đào.",
+        "en": "河 means river; 運河 is a constructed waterway for transport, a canal."
       },
       "decomposition": {
         "hanViet": "Hà",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "川",
+          "江",
+          "海",
+          "運"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ha",
-        "meaningViNoAccent": "canal, waterway",
-        "meaningEnNoAccent": "canal, waterway"
+        "meaningViNoAccent": "song; dong song",
+        "meaningEnNoAccent": "river"
       },
       "examples": [
         {
           "word": "運河",
           "reading": "うんが",
-          "meaning": "canal, waterway"
+          "meaning": "kênh đào; đường thủy",
+          "meaningEn": "canal, waterway"
         }
       ],
       "tags": [
@@ -406,14 +498,18 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, Vietnamese readings, stroke counts, and English meanings",
+    "Unicode Unihan kDefinition and kVietnamese where available",
+    "Existing N2 vocabulary context for examples only"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

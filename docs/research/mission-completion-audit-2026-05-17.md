@@ -302,6 +302,19 @@ Flutter tests passed (`2340`). After deploy, live VI/N2 search opened `勇`
 with `Dũng (dũng cảm; can đảm; khí phách)`, Hán-Việt `Dũng`, on `ユウ`, and
 kun `いさ.む`.
 
+Kanji content expansion update: N2 lesson 09 is now source-verified against
+KANJIDIC2, Unihan where available, existing N2 vocabulary context, and a
+Wiktionary Hán-Việt cross-check for learner-facing `年 -> Niên`. Commit
+`cfe2184e` rewrites the eight lesson entries (`段`, `流`, `佚`, `昨`, `日`,
+`年`, `斉`, `旦`) into learner-ready Vietnamese, corrects generated word-gloss
+fallback drift in `段`, `昨`, `日`, `年`, and `旦`, fills
+readings/search/related-kanji metadata, bumps the Kanji seed revision to `35`,
+and adds a lesson-09 sentinel for `段`. Local coverage audit reduced N2
+incomplete current entries from `136` to `128`; full Flutter tests passed
+(`2340`). After deploy with CDP cache disabled, live VI/N2 search opened `段`
+with `Đoạn (bậc; đoạn; cấp độ)`, Hán-Việt `Đoạn`, and on `ダン, タン`;
+console warnings/errors were `0`.
+
 ## Verdict
 
 Implementation, docs, tooling, CI/deploy, and N4-N1 live direct-route fallback work are substantially complete. The active goal is not complete because the stopping condition includes external legal/ops proof gates that remain missing.

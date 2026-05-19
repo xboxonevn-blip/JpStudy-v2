@@ -656,3 +656,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N2 lesson 04 assigned the compound gloss `knitting, web` from `編物` to `物`, even though KANJIDIC2/Unihan both define `物` as thing/object/matter.
 - Delta: -20 percentage points on confidence that compound-derived Kanji meanings are safe without per-character source verification.
 - Updated belief: every component Kanji in compound-derived lessons must be checked against character-level sources; compound glosses can inform examples but cannot be copied into each component's meaning.
+
+## 2026-05-19 - One-day app-shell cache returned during rapid content migrations
+
+- Prior belief: after the cache-header update, deploy proof could still rely on URL cache-busting plus normal Playwright reloads.
+- Actual observation: N2 lesson 09 live proof initially showed stale `段` readings (`On -`, `Kun いちだんと`) even though Hosting served the updated JSON, because the browser reused the one-day cached Flutter runtime/content path. CDP `Network.setCacheDisabled` then loaded revision 35 and showed the updated `段` detail.
+- Delta: -20 percentage points on confidence that normal reloads can prove just-deployed content seed migrations under the current Hosting cache policy.
+- Updated belief: while app-shell/content assets use bounded cache, live proof for seed migrations must explicitly disable browser HTTP cache or use a truly fresh context before interpreting stale UI as a data/runtime defect.

@@ -779,4 +779,6 @@ Tagging: added file-level and entry-level `vi-source-verified`, removed old `app
 
 Runtime note: bumped content DB Kanji seed revision from `34` to `35` and added an N2 lesson-09 sentinel for `段` so existing browsers reseed the changed metadata.
 
-Verification so far: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `136` to `128`, and focused DB/reachability/taxonomy/upper-JLPT tests passed.
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `136` to `128`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed `54`, and full `flutter test` passed (`2340`).
+
+Live proof after deploy: after `cfe2184e` was deployed to Firebase Hosting, the first normal Playwright reload still used the cached old Flutter runtime and showed stale lesson-09 readings. With CDP HTTP cache disabled (no global `Cache-Control` request header), a cache-busted VI/N2 `/#/kanji` session loaded the revision-35 metadata, filtering `段` showed the N2 lesson-09 card with on `ダン, タン`, and opening it showed `Đoạn (bậc; đoạn; cấp độ)`, Hán-Việt `Đoạn`, on `ダン, タン`, stroke count `9`, and the rewritten Vietnamese mnemonic. Console warnings/errors after the interaction: `0`.

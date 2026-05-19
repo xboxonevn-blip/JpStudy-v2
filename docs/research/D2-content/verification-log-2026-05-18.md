@@ -1296,3 +1296,30 @@ Runtime note: bumped content DB Kanji seed revision from `53` to `54` and added 
 Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `184` to `176`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `8610360c` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_03.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `亜` showed `Á (châu Á; thứ hai; phụ/á)`, Hán-Việt `Á`, on `ア`, kun `つ.ぐ`, stroke count `7`, and example `亜科` = `phân họ; nhóm phân loại phụ`. Console errors/warnings: `0`.
+
+## Kanji N1 Lesson 4 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `諦` and `悪` have no Unihan `kVietnamese`, so learner-facing Hán-Việt keeps established readings.
+- Existing N1 ShinKanzen/Tanos and Hajimete vocabulary context for `上がり`, `商人`, `空間`, `諦め`, `呆れる`, `悪`, and `灰皿`, used only to choose examples and verify learner-facing glosses. Generated fallback readings for `空間` and `灰` were corrected where they came from word-level import drift.
+
+| Item | Sources | Change |
+|---|---|---|
+| `上` | KANJIDIC2 readings `ジョウ/ショウ/シャン`, `うえ/あ.がる/のぼ.る`; Unihan `kVietnamese=thượng`; local context `上がり` | Rewrote to `Thượng (trên; lên; tăng)`, added source-backed readings, example gloss, and related kanji. |
+| `商` | KANJIDIC2 reading `ショウ`, `あきな.う`; Unihan `kVietnamese=thương`; local context `商人` | Rewrote to `Thương (buôn bán; thương mại; thương nhân)`, added readings/search text, example `商人`, and commerce related kanji. |
+| `人` | KANJIDIC2 readings `ジン/ニン`, `ひと`; Unihan `kVietnamese=nhân`; local context `商人` | Aligned with verified lower-level row as `Nhân (người; con người)`, added readings and example context. |
+| `空` | KANJIDIC2 reading `クウ`, empty/sky meanings; Unihan `kVietnamese=không`; local context `空間` | Rewrote to `Không (trống; bầu trời; không gian)`, corrected example reading to `くうかん`, and added source-backed readings/related kanji. |
+| `諦` | KANJIDIC2 readings `テイ/タイ`, truth/clarity/abandon meanings; no Unihan `kVietnamese`; local context `諦め` | Rewrote to `Đế (chân lý; sáng tỏ; từ bỏ)`, added readings/search text, and example `諦め`. |
+| `呆` | KANJIDIC2 reading `ホウ`, amazed/shocked meanings; Unihan `kVietnamese=ngốc`; local context `呆れる` | Rewrote to `Ngốc (ngốc; đờ đẫn; sửng sốt)`, added readings/search text, and natural example gloss. |
+| `悪` | KANJIDIC2 readings `アク/オ`, bad/evil meanings; no Unihan `kVietnamese`; existing verified N2 row | Aligned to `Ác (xấu; ác; sai trái)`, added readings/search text, direct example `悪`, and related kanji. |
+| `灰` | KANJIDIC2 reading `カイ`, `はい`, ash meanings; Unihan `kVietnamese=hôi`; local context `灰皿` | Rewrote to `Hôi (tro; bụi tro; nước tro)`, corrected example from `灰/あく` fallback to `灰皿/はいざら`, and added related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `54` to `55` and added an N1 lesson-4 sentinel for `上` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `176` to `168`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `b27a84cd` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_04.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `上` showed `Thượng (trên; lên; tăng)`, Hán-Việt `Thượng`, on `ジョウ/ショウ/シャン`, stroke count `3`, and `灰` showed example `灰皿/はいざら` = `cái gạt tàn`. Console errors/warnings: `0`.

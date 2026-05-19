@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 1,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 変, 愛, and 対 have no Unihan kVietnamese value, so learner-facing Hán-Việt keeps established readings.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k001",
@@ -18,37 +18,46 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Ô",
-        "meaningVi": "tiếng khóc; tiếng nức nở",
-        "meaningViDisplay": "嗚 (tiếng khóc; tiếng nức nở)",
-        "meaningEn": "sound of crying, sobbing"
+        "meaningVi": "than khóc; tiếng kêu than; chao ôi",
+        "meaningViDisplay": "Ô (than khóc; tiếng kêu than; chao ôi)",
+        "meaningEn": "weep, ah, alas"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ウ",
+          "オ"
+        ],
         "kunyomi": [
           "ああ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 嗚 nghĩa là tiếng khóc; tiếng nức nở. Ví dụ JLPT N1: 嗚呼 (Ah!, Oh!, Alas!).",
-        "en": "Kanji 嗚 means sound of crying, sobbing. JLPT N1 example: 嗚呼 (Ah!, Oh!, Alas!)."
+        "vi": "嗚 là tiếng kêu than hoặc tiếng khóc; trong 嗚呼, nó ghi cảm thán “ôi/chao ôi”.",
+        "en": "嗚 marks weeping or an exclamation; in 嗚呼 it writes the interjection ah or alas."
       },
       "decomposition": {
         "hanViet": "Ô",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "呼",
+          "泣",
+          "鳴",
+          "嘆"
+        ]
       },
       "search": {
         "hanVietNoAccent": "O",
-        "meaningViNoAccent": "tieng khoc; tieng nuc no",
-        "meaningEnNoAccent": "sound of crying, sobbing"
+        "meaningViNoAccent": "than khoc; tieng keu than; chao oi",
+        "meaningEnNoAccent": "weep, ah, alas"
       },
       "examples": [
         {
           "word": "嗚呼",
           "reading": "ああ",
-          "meaning": "Ah!, Oh!, Alas!"
+          "meaning": "ôi; chao ôi; than ôi",
+          "meaningEn": "Ah!, Oh!, Alas!"
         }
       ],
       "tags": [
@@ -56,9 +65,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k002",
@@ -69,36 +79,45 @@
       "labels": {
         "hanViet": "Hô",
         "meaningVi": "thở ra; gọi; hô",
-        "meaningViDisplay": "呼 (thở ra; gọi; hô)",
-        "meaningEn": "breathe sigh, exhale; call, shout"
+        "meaningVi": "gọi; hô lên; mời gọi",
+        "meaningViDisplay": "Hô (gọi; hô lên; mời gọi)",
+        "meaningEn": "call, call out to, invite"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コ"
+        ],
         "kunyomi": [
-          "ああ"
+          "よ.ぶ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 呼 nghĩa là thở ra; gọi; hô. Ví dụ JLPT N1: 嗚呼 (Ah!, Oh!, Alas!).",
-        "en": "Kanji 呼 means breathe sigh, exhale; call, shout. JLPT N1 example: 嗚呼 (Ah!, Oh!, Alas!)."
+        "vi": "呼 là gọi hoặc hô lên; trong 嗚呼, chữ này dùng theo âm trong một từ cảm thán.",
+        "en": "呼 means to call; in 嗚呼 it is used phonetically in an exclamation."
       },
       "decomposition": {
         "hanViet": "Hô",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "嗚",
+          "叫",
+          "吸",
+          "名"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ho",
-        "meaningViNoAccent": "tho ra; goi; ho",
-        "meaningEnNoAccent": "breathe sigh, exhale; call, shout"
+        "meaningViNoAccent": "goi; ho len; moi goi",
+        "meaningEnNoAccent": "call, call out to, invite"
       },
       "examples": [
         {
           "word": "嗚呼",
           "reading": "ああ",
-          "meaning": "Ah!, Oh!, Alas!"
+          "meaning": "ôi; chao ôi; than ôi",
+          "meaningEn": "Ah!, Oh!, Alas!"
         }
       ],
       "tags": [
@@ -106,9 +125,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k003",
@@ -119,36 +139,45 @@
       "labels": {
         "hanViet": "Tương",
         "meaningVi": "lẫn nhau; cùng nhau; dáng vẻ",
-        "meaningViDisplay": "相 (lẫn nhau; cùng nhau; dáng vẻ)",
-        "meaningEn": "mutual, reciprocal, each other"
+        "meaningViDisplay": "Tương (lẫn nhau; cùng nhau; dáng vẻ)",
+        "meaningEn": "mutual, together, aspect"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "あい"
+          "あい-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 相 nghĩa là lẫn nhau; cùng nhau; dáng vẻ. Ví dụ JLPT N1: 相 (together, mutually, fellow).",
-        "en": "Kanji 相 means mutual, reciprocal, each other. JLPT N1 example: 相 (together, mutually, fellow)."
+        "vi": "相 là cùng nhau hoặc quan hệ hai bên; trong các từ như 相変わらず và 相対, nó gợi ý sự đối chiếu/quan hệ qua lại.",
+        "en": "相 means mutual relation or aspect; in words like 相変わらず and 相対 it marks relation or comparison."
       },
       "decomposition": {
         "hanViet": "Tương",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "互",
+          "対",
+          "間",
+          "変"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tuong",
         "meaningViNoAccent": "lan nhau; cung nhau; dang ve",
-        "meaningEnNoAccent": "mutual, reciprocal, each other"
+        "meaningEnNoAccent": "mutual, together, aspect"
       },
       "examples": [
         {
           "word": "相",
           "reading": "あい",
-          "meaning": "together, mutually, fellow"
+          "meaning": "cùng; lẫn nhau; đồng-",
+          "meaningEn": "together, mutually, fellow"
         }
       ],
       "tags": [
@@ -156,9 +185,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k004",
@@ -169,36 +199,46 @@
       "labels": {
         "hanViet": "Biến",
         "meaningVi": "thay đổi; biến đổi; khác thường",
-        "meaningViDisplay": "変 (thay đổi; biến đổi; khác thường)",
-        "meaningEn": "change, transform, alter; rebel"
+        "meaningViDisplay": "Biến (thay đổi; biến đổi; khác thường)",
+        "meaningEn": "change, unusual, strange"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヘン"
+        ],
         "kunyomi": [
-          "あいかわらず"
+          "か.わる",
+          "か.わり",
+          "か.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 変 nghĩa là thay đổi; biến đổi; khác thường. Ví dụ JLPT N1: 相変わらず (vẫn như trước, như thường lệ, không đổi).",
-        "en": "Kanji 変 means change, transform, alter; rebel. JLPT N1 example: 相変わらず (vẫn như trước, như thường lệ, không đổi)."
+        "vi": "変 là thay đổi hoặc khác thường; 相変わらず nghĩa là trạng thái vẫn không thay đổi như trước.",
+        "en": "変 means change or unusual; 相変わらず says the state remains unchanged as before."
       },
       "decomposition": {
         "hanViet": "Biến",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "化",
+          "改",
+          "異",
+          "相"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bien",
-        "meaningViNoAccent": "thay đoi; bien đoi; khac thuong",
-        "meaningEnNoAccent": "change, transform, alter; rebel"
+        "meaningViNoAccent": "thay doi; bien doi; khac thuong",
+        "meaningEnNoAccent": "change, unusual, strange"
       },
       "examples": [
         {
           "word": "相変わらず",
           "reading": "あいかわらず",
-          "meaning": "vẫn như trước, như thường lệ, không đổi"
+          "meaning": "vẫn như trước; như thường lệ; không đổi",
+          "meaningEn": "as ever, as usual, unchanged"
         }
       ],
       "tags": [
@@ -206,7 +246,9 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -219,36 +261,49 @@
       "labels": {
         "hanViet": "Ái",
         "meaningVi": "yêu; yêu mến",
-        "meaningViDisplay": "愛 (yêu; yêu mến)",
-        "meaningEn": "love, be fond of, like"
+        "meaningVi": "yêu; yêu mến; tình cảm",
+        "meaningViDisplay": "Ái (yêu; yêu mến; tình cảm)",
+        "meaningEn": "love, affection, favorite"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "アイ"
+        ],
         "kunyomi": [
-          "あいそ"
+          "いと.しい",
+          "かな.しい",
+          "め.でる",
+          "お.しむ",
+          "まな"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 愛 nghĩa là yêu; yêu mến. Ví dụ JLPT N1: 愛想 (sự niềm nở, thiện cảm, phép xã giao).",
-        "en": "Kanji 愛 means love, be fond of, like. JLPT N1 example: 愛想 (sự niềm nở, thiện cảm, phép xã giao)."
+        "vi": "愛 là tình yêu hoặc thiện cảm; trong 愛想, nó góp nghĩa thái độ dễ mến, niềm nở với người khác.",
+        "en": "愛 means love or affection; in 愛想 it contributes the sense of friendliness or sociability."
       },
       "decomposition": {
         "hanViet": "Ái",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "恋",
+          "情",
+          "好",
+          "想"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ai",
-        "meaningViNoAccent": "yeu; yeu men",
-        "meaningEnNoAccent": "love, be fond of, like"
+        "meaningViNoAccent": "yeu; yeu men; tinh cam",
+        "meaningEnNoAccent": "love, affection, favorite"
       },
       "examples": [
         {
           "word": "愛想",
           "reading": "あいそ",
-          "meaning": "sự niềm nở, thiện cảm, phép xã giao"
+          "meaning": "sự niềm nở; thiện cảm; phép xã giao",
+          "meaningEn": "civility, sociability, friendliness"
         }
       ],
       "tags": [
@@ -256,7 +311,9 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -269,36 +326,46 @@
       "labels": {
         "hanViet": "Tưởng",
         "meaningVi": "nghĩ; tưởng tượng; dự định",
-        "meaningViDisplay": "想 (nghĩ; tưởng tượng; dự định)",
-        "meaningEn": "think, speculate, plan, consider"
+        "meaningVi": "ý nghĩ; tưởng tượng; suy tưởng",
+        "meaningViDisplay": "Tưởng (ý nghĩ; tưởng tượng; suy tưởng)",
+        "meaningEn": "idea, thought, conception"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ",
+          "ソ"
+        ],
         "kunyomi": [
-          "あいそ"
+          "おも.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 想 nghĩa là nghĩ; tưởng tượng; dự định. Ví dụ JLPT N1: 愛想 (civility, courtesy, compliments, sociability, graces).",
-        "en": "Kanji 想 means think, speculate, plan, consider. JLPT N1 example: 愛想 (civility, courtesy, compliments, sociability, graces)."
+        "vi": "想 là ý nghĩ hoặc sự tưởng tượng; trong 愛想, chữ này góp phần tạo nghĩa thái độ/thiện cảm trong giao tiếp.",
+        "en": "想 means thought or conception; in 愛想 it helps form the idea of social feeling or friendliness."
       },
       "decomposition": {
         "hanViet": "Tưởng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "思",
+          "考",
+          "意",
+          "愛"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tuong",
-        "meaningViNoAccent": "nghi; tuong tuong; du đinh",
-        "meaningEnNoAccent": "think, speculate, plan, consider"
+        "meaningViNoAccent": "y nghi; tuong tuong; suy tuong",
+        "meaningEnNoAccent": "idea, thought, conception"
       },
       "examples": [
         {
           "word": "愛想",
           "reading": "あいそ",
-          "meaning": "civility, courtesy, compliments, sociability, graces"
+          "meaning": "sự niềm nở; thiện cảm; phép xã giao",
+          "meaningEn": "civility, sociability, friendliness"
         }
       ],
       "tags": [
@@ -306,9 +373,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k007",
@@ -318,37 +386,51 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Đối",
-        "meaningVi": "đối diện; đối lập; đúng",
-        "meaningViDisplay": "対 (đối diện; đối lập; đúng)",
-        "meaningEn": "correct, right; facing, opposed"
+        "meaningVi": "đối nhau; đối diện; so sánh/chống lại",
+        "meaningViDisplay": "Đối (đối nhau; đối diện; so sánh/chống lại)",
+        "meaningEn": "opposite, versus, compare"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タイ",
+          "ツイ"
+        ],
         "kunyomi": [
-          "あいたい"
+          "あいて",
+          "こた.える",
+          "そろ.い",
+          "つれあ.い",
+          "なら.ぶ",
+          "むか.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 対 nghĩa là đối diện; đối lập; đúng. Ví dụ JLPT N1: 相対 (đối diện, đối đầu, giữa hai bên).",
-        "en": "Kanji 対 means correct, right; facing, opposed. JLPT N1 example: 相対 (đối diện, đối đầu, giữa hai bên)."
+        "vi": "対 là hai bên đối nhau hoặc đem ra so sánh; trong 相対, nó nhấn mạnh quan hệ giữa hai phía.",
+        "en": "対 means opposition or comparison; in 相対 it marks a relation between two sides."
       },
       "decomposition": {
         "hanViet": "Đối",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "相",
+          "反",
+          "比",
+          "向"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Doi",
-        "meaningViNoAccent": "đoi dien; đoi lap; đung",
-        "meaningEnNoAccent": "correct, right; facing, opposed"
+        "meaningViNoAccent": "doi nhau; doi dien; so sanh/chong lai",
+        "meaningEnNoAccent": "opposite, versus, compare"
       },
       "examples": [
         {
           "word": "相対",
           "reading": "あいたい",
-          "meaning": "đối diện, đối đầu, giữa hai bên"
+          "meaning": "tương đối; quan hệ giữa hai bên",
+          "meaningEn": "relative, face-to-face, between two sides"
         }
       ],
       "tags": [
@@ -356,7 +438,9 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -369,36 +453,47 @@
       "labels": {
         "hanViet": "Gian",
         "meaningVi": "khoảng giữa; không gian; quan hệ",
-        "meaningViDisplay": "間 (khoảng giữa; không gian; quan hệ)",
-        "meaningEn": "interval, space; place, between"
+        "meaningViDisplay": "Gian (khoảng giữa; không gian; quan hệ)",
+        "meaningEn": "interval, space"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カン",
+          "ケン"
+        ],
         "kunyomi": [
-          "あいだがら"
+          "あいだ",
+          "ま",
+          "あい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 間 nghĩa là khoảng giữa; không gian; quan hệ. Ví dụ JLPT N1: 間柄 (relation(ship)).",
-        "en": "Kanji 間 means interval, space; place, between. JLPT N1 example: 間柄 (relation(ship))."
+        "vi": "間 là khoảng giữa hoặc quan hệ giữa hai phía; 間柄 dùng để nói về mối quan hệ giữa người với người.",
+        "en": "間 means interval or relation between sides; 間柄 refers to the relationship between people."
       },
       "decomposition": {
         "hanViet": "Gian",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "中",
+          "関",
+          "係",
+          "柄"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Gian",
         "meaningViNoAccent": "khoang giua; khong gian; quan he",
-        "meaningEnNoAccent": "interval, space; place, between"
+        "meaningEnNoAccent": "interval, space"
       },
       "examples": [
         {
           "word": "間柄",
           "reading": "あいだがら",
-          "meaning": "relation(ship)"
+          "meaning": "mối quan hệ",
+          "meaningEn": "relationship"
         }
       ],
       "tags": [
@@ -406,14 +501,19 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

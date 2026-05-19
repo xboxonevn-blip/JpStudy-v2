@@ -1161,3 +1161,30 @@ Runtime note: bumped content DB Kanji seed revision from `48` to `49` and added 
 Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `24` to `16`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `00cd8047` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_23.json` returned `Cache-Control: no-cache`, `lessonId=23`, and `count=8`; `教` showed `Giáo (dạy; giáo dục; giáo lý)`, Hán-Việt `Giáo`, on `キョウ`, kun `おし.える/おそ.わる`, stroke count `11`, and example `教わる` = `được dạy`. The same proof confirmed `main.dart.js` and content JSON revalidate with `no-cache`, while `sqlite3.wasm` and `drift_worker.js` keep `public, max-age=2592000`. Current-tab console warnings/errors: `0`.
+
+## Kanji N2 Lesson 24 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `込` is kokuji and keeps the KANJIDIC2 Vietnamese reading because Unihan has no `kVietnamese`.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `伯母さん`, `お参り`, `思い掛けない`, `思い込む`, `重たい`, `親指`, and `卸す`, used only to choose examples and verify learner-facing glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `母` | KANJIDIC2 reading `ボ`, `はは/も`, meaning `mother`; Unihan `kVietnamese=mẫu`; local context `伯母さん` | Corrected the row away from whole-word aunt fallback to `Mẫu (mẹ; mẫu thân; bậc nữ lớn tuổi)`, added readings/search text, direct example `伯母さん`, and family related kanji. |
+| `参` | KANJIDIC2 readings `サン/シン`, `まい.る`, meanings `participate`, `worship`; Unihan `kVietnamese=tham`; local context `お参り` | Rewrote to `Tham (tham gia; đi lễ; viếng thăm)`, added readings/search text, direct example `お参り`, and visit/ritual related kanji. |
+| `思` | KANJIDIC2 reading `シ`, `おも.う`, meanings `think`, `consider`; Unihan `kVietnamese=tư`; local context `思い掛けない` | Corrected the row away from whole-word unexpected fallback to `Tư (nghĩ; suy nghĩ; ý nghĩ)`, added readings/search text, direct example `思い掛けない`, and thought related kanji. |
+| `込` | KANJIDIC2 kunyomi `こ.む/こ.める`, meanings `crowded`, `included`; no Unihan `kVietnamese`; local context `思い込む` | Corrected the row away from `Nhập`/whole-word convinced fallback to `Liêu (đi vào; chen vào; đầy ắp)`, added readings/search text, direct example `思い込む`, and inside/crowding related kanji. |
+| `重` | KANJIDIC2 readings `ジュウ/チョウ`, heavy/important meanings; Unihan `kVietnamese=trọng`; local context `重たい` | Rewrote to `Trọng (nặng; quan trọng; chồng lên)`, added readings/search text, direct example `重たい`, and weight/importance related kanji. |
+| `親` | KANJIDIC2 reading `シン`, parent/intimacy meanings; Unihan `kVietnamese=thân`; local context `親指` | Corrected the row away from whole-word thumb fallback to `Thân (cha mẹ; người thân; thân thiết)`, added readings/search text, direct example `親指`, and family/finger related kanji. |
+| `指` | KANJIDIC2 reading `シ`, `ゆび/さ.す`, meanings `finger`, `point to`; Unihan `kVietnamese=chỉ`; local context `親指` | Corrected the row away from whole-word thumb fallback to `Chỉ (ngón tay; chỉ ra; hướng dẫn)`, added readings/search text, direct example `親指`, and hand/pointing related kanji. |
+| `卸` | KANJIDIC2 reading `シャ`, `おろ.す`, meanings `wholesale`, `unload`; Unihan `kVietnamese=tá`; local context `卸す` | Rewrote to `Tá (bán buôn; hạ xuống; gỡ xuống)`, added readings/search text, direct example `卸す`, and commerce/unload related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `49` to `50` and added an N2 lesson-24 sentinel for `母` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, coverage audit reduced N2 incomplete current entries from `16` to `8`, focused DB/reachability/taxonomy/upper-JLPT tests passed, release web build succeeded, and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `af3776a4` was deployed to Firebase Hosting, a VI/N2 production browser session loaded `/#/kanji` without Kanji data failure. A normal-cache browser fetch of deployed `/assets/assets/data/content/kanji/n2/lesson_24.json` returned `Cache-Control: no-cache`; `母` showed `Mẫu (mẹ; mẫu thân; bậc nữ lớn tuổi)`, Hán-Việt `Mẫu`, on `ボ`, kun `はは/も`, stroke count `5`, and example `伯母さん` = `cô; dì; bác gái`. Current-tab console warnings/errors: `0`.

@@ -619,3 +619,11 @@
 - Bumped content DB Kanji seed revision to `49` and added an N2 lesson-23 sentinel for `教` so existing browsers reseed the changed metadata.
 - Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `24` to `16`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` clean, UI string guard `0`, content status report machine/open-review `0`, node research tooling passed (`54`), full `flutter test` (`2340`), and release web build passed.
 - Built/deployed `00cd8047` to Firebase Hosting. Live proof: VI/N2 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_23.json` returned `Cache-Control: no-cache`, and `教` showed `Giáo (dạy; giáo dục; giáo lý)`, Hán-Việt `Giáo`, on `キョウ`, kun `おし.える/おそ.わる`, stroke count `11`; console warnings/errors `0`.
+
+## 2026-05-19 N2 Kanji Lesson 24 Completeness Patch
+
+- Source-verified all eight N2 lesson-24 kanji (`母`, `参`, `思`, `込`, `重`, `親`, `指`, `卸`) against local KANJIDIC2, Unihan where available, and existing N2 vocabulary examples.
+- Rewrote generated word-gloss fallback rows into learner-ready Kanji meanings, including correcting `母` away from whole-word aunt fallback, `思`/`込` away from whole-word unexpected/convinced fallbacks, `親`/`指` away from whole-word thumb fallback, and `卸` away from whole-word wholesale/grated fallback; removed old approval metadata and added truthful `vi-source-verified`. No `vi-human-approved` tag was added.
+- Bumped content DB Kanji seed revision to `50` and added an N2 lesson-24 sentinel for `母` so existing browsers reseed the changed metadata.
+- Verified locally before deploy: JSON parse passed, coverage audit reduced N2 incomplete current entries from `16` to `8`, focused DB/reachability/taxonomy/upper-JLPT tests passed, and release web build passed.
+- Built/deployed `af3776a4` to Firebase Hosting. Live proof: VI/N2 `/#/kanji` loaded without Kanji data failure; normal-cache fetch of deployed `lesson_24.json` returned `Cache-Control: no-cache`, and `母` showed `Mẫu (mẹ; mẫu thân; bậc nữ lớn tuổi)`, Hán-Việt `Mẫu`, on `ボ`, kun `はは/も`, stroke count `5`; console warnings/errors `0`.

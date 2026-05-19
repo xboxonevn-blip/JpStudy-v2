@@ -1,0 +1,16 @@
+enum ConjugationForm {
+  dictionary,
+  masu,
+  nai,
+  ta,
+  te,
+  ba,
+  tara,
+  volitional,
+  potential,
+  passive,
+  causative,
+  causativePassive,
+  imperative,
+  adverbial,
+}

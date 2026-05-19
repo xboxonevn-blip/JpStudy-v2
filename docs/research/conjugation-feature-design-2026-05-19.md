@@ -336,10 +336,10 @@ Mistakes/Weakness:
 - Create: `lib/core/conjugation/conjugation_exceptions.dart`
 - Test: `test/core/conjugation/japanese_conjugator_test.dart`
 
-- [ ] Add RED fixtures for the minimum list in "Engine Rules".
-- [ ] Implement POS normalization and generation.
-- [ ] Run: `flutter test test/core/conjugation/japanese_conjugator_test.dart`
-- [ ] Expected: all fixture cases pass, including `待つ -> 待って`, `行く -> 行って`, `帰る -> 帰って`, `起きる -> 起きて`, `いい -> よかった`.
+- [x] Add RED fixtures for the minimum list in "Engine Rules".
+- [x] Implement POS normalization and generation.
+- [x] Run: `flutter test test/core/conjugation/japanese_conjugator_test.dart`
+- [x] Expected: all fixture cases pass, including `待つ -> 待って`, `行く -> 行って`, `帰る -> 帰って`, `起きる -> 起きて`, `いい -> よかった`.
 
 ### Task 2: Source Metadata Generator
 

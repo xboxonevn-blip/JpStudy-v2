@@ -944,3 +944,13 @@
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live smoke: `https://jpstudy.web.app/?codexFresh=conj-phase0-20260520#/` booted, main nav rendered, `main.dart.js` returned `Cache-Control: no-cache`, and screenshot saved as `output/playwright/live-conjugation-phase0-home-smoke.png`. Console had one known report-only Google frame-ancestor message from the App Check/reCAPTCHA path, not a Flutter app exception.
 - No `vi-human-approved` tag was added.
+
+## 2026-05-20 QA-C-001 Conjugation Engine Slice
+
+- TDD RED: added `test/core/conjugation/japanese_conjugator_test.dart`; it failed because `lib/core/conjugation/*` did not exist.
+- GREEN: added pure Dart engine files under `lib/core/conjugation/` for JMdict POS normalization and deterministic forms.
+- Covered fixtures: godan endings, `行く`, ichidan/godan `る` contrast, `する`, `勉強する`, `来る`, `ある`, `高い`, `いい`, and `静か`.
+- Verified: focused conjugation test passed `6/6`, `flutter analyze lib test` reported no issues, UI string literal guard reported `0`, and full `flutter test` passed `2357/2357`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live smoke: `https://jpstudy.web.app/?codexFresh=conj-engine-20260520#/` booted, main nav rendered, `main.dart.js` returned `Cache-Control: no-cache`, console errors/warnings were `0`, and screenshot saved as `output/playwright/live-conjugation-engine-home-smoke.png`.
+- Remaining QA-C-001 work: source metadata builder, content DB lemma table, conjugation SRS/mistakes, Vocab/Grammar/Kanji UI integration, deploy/live proof of learner flows.

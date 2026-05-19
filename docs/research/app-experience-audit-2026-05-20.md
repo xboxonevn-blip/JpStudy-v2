@@ -49,6 +49,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-kana-sheet-vi-fixed.png`
 - `output/playwright/live-kana-quiz-from-sheet-vi-fixed.png`
 - `output/playwright/live-conjugation-phase0-home-smoke.png`
+- `output/playwright/live-conjugation-engine-home-smoke.png`
 
 ## Notes For Next Sweep
 

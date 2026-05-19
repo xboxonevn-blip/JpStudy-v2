@@ -1593,3 +1593,30 @@ Runtime note: bumped content DB Kanji seed revision from `64` to `65` and added 
 Verification: coverage audit reduced N1 incomplete current entries from `96` to `88`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache guard passed; full `flutter test` passed (`2340`); release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `66694ebe` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_14.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; old approval tags were absent; `伊` showed `Y (Ý; người ấy; dùng trong tên riêng)`, on `イ`, kun `かれ`, and example `伊豆/いず = Izu; địa danh ở Nhật`. Current page console errors/warnings: `0`.
+
+## Kanji N1 Lesson 15 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and learner-facing Vietnamese readings where Unihan was absent or too broad.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `否` keeps learner-facing `Phủ` instead of the less useful raw Unihan reading.
+- Existing verified duplicate rows plus vocabulary examples for `拒否`, `追加`, `減少`, `言い訳`, `家出`, `出費`, and `主人公`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `否` | KANJIDIC2 reading `ヒ`, `いな/いや`; local context `拒否` | Corrected learner-facing Hán-Việt from generated `Bĩ` to `Phủ`, rewrote to `Phủ (không; phủ định; từ chối)`, and translated `拒否` as `từ chối; bác bỏ; phủ nhận`. |
+| `加` | KANJIDIC2 reading `カ`, `くわ.える/くわ.わる`; Unihan `kVietnamese=gia`; local context `追加` | Rewrote to `Gia (thêm; tăng; cộng vào)`, replaced word-level `いいかげん` as a kanji reading, and used `追加` as the example. |
+| `減` | KANJIDIC2 reading `ゲン`, `へ.る/へ.らす`; Unihan `kVietnamese=giảm`; local context `減少` | Rewrote to `Giảm (giảm; trừ bớt; suy giảm)`, replaced word-level `いいかげん`, and translated `減少` naturally. |
+| `言` | KANJIDIC2 readings `ゲン/ゴン`, `い.う/こと`; existing verified duplicate rows; local context `言い訳` | Rewrote to `Ngôn (nói; lời nói; ngôn từ)`, replaced word-level `いいわけ`, and translated the example as `lời bào chữa; lời giải thích`. |
+| `訳` | KANJIDIC2 reading `ヤク`, `わけ`; local context `言い訳` | Rewrote to `Dịch (dịch thuật; lý do; hoàn cảnh)`, added source-backed components/relations, and kept `言い訳` as the example. |
+| `家` | KANJIDIC2 readings `カ/ケ`, `いえ/や/うち`; Unihan `kVietnamese=gia`; local context `家出` | Rewrote to `Gia (nhà; gia đình; người chuyên môn)`, replaced word-level `いえで`, and translated `家出` as `bỏ nhà đi`. |
+| `出` | KANJIDIC2 readings `シュツ/スイ`, `で.る/だ.す`; existing verified duplicate rows; local context `出費` | Rewrote to `Xuất (ra; đưa ra; xuất hiện)`, replaced word-level `いえで`, and used clearer expense context. |
+| `主` | KANJIDIC2 readings `シュ/ス/シュウ`, `ぬし/おも/あるじ`; local context `主人公` | Corrected learner-facing Hán-Việt to `Chủ`, rewrote to `Chủ (chính; chủ; người đứng đầu)`, and translated `主人公` as `nhân vật chính`. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved`/`unihan-kanji-checked` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `65` to `66` and added an N1 lesson-15 sentinel for `否` so existing browsers reseed the changed metadata.
+
+Verification: owner cache audit was rechecked first. Current `firebase.json` and live Firebase Hosting return `Cache-Control: no-cache` for `main.dart.js`, `flutter_bootstrap.js`, `flutter.js`, `assets/AssetManifest*`, and `assets/assets/data/content/**`; `sqlite3.wasm` remains `public, max-age=2592000`. Coverage audit reduced N1 incomplete current entries from `88` to `80`; focused DB/reachability/taxonomy/upper-JLPT tests passed; hosting cache header guard passed; release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `18e84e51` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_15.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; old approval tags were absent; `否` showed `Phủ (không; phủ định; từ chối)`, on `ヒ`, kun `いな/いや`, and example `拒否/きょひ = từ chối; bác bỏ; phủ nhận`. Current page console errors/warnings: `0`.

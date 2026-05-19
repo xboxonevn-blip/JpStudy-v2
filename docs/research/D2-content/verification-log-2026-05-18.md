@@ -1906,3 +1906,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved`); focused DB/manifest/taxonomy/upper-JLPT/practice-bank/repository tests passed (`63`); `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N3 grammar level completion.
 
 Live proof after deploy: the existing production browser used normal cache. The rendered N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `19`. Opening `すぎる` rendered `KẾT NỐI: Vます語幹 / いA語幹 / なA + すぎる`; opening `かえって` rendered `KẾT NỐI: かえって + 文`; the list also rendered corrected N3-7/N3-9 rows such as `おそれがある`, `ようだ`, and `そうだ（伝聞）`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n3_6.json`, and `grammar_n3_8.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.
+
+## Grammar N3 Lessons 11-15 Source-Verified Batch
+
+This batch covers all 20 grammar points in `grammar_n3_11.json` through `grammar_n3_15.json`. Sources consulted for the batch: local N3 scaffold JSON, AmgiDex JLPT N3 grammar list, AI Japanese Tutor JLPT N3 grammar list, MLC Japanese notes where the point appears, and targeted online formation checks from Japanese grammar references for corrected points. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N3-11 | `せいで`, `おかげで`, `ため（理由）`, `可能性がある` | Checked cause/reason/possibility usage and tagged each item `vi-source-verified`; broadened adjective/noun attachments and clarified `可能性がある` nominal/`である` forms. |
+| N3-12 | `ほど`, `くらい・ぐらい`, `さ`, `ばかりか` | Checked degree/approximation/nominalizer/not-only usage and tagged each item `vi-source-verified`; corrected adjective attachments, `さ` stem formation, and `ばかりか` plain-form attachments. |
+| N3-13 | `ことがある`, `たことがある`, `ないことはない`, `ないこともない` | Checked occasional-action/experience/double-negative usage and tagged each item `vi-source-verified`; added `Vない` to `ことがある` and broadened double-negative forms to verbs, adjectives, and nouns. |
+| N3-14 | `たらいい`, `といい`, `ばよかった`, `といいな` | Checked advice/hope/regret usage and tagged each item `vi-source-verified`; broadened `といい`/`といいな` to adjective/noun plain forms and clarified `ばよかった` regret forms. |
+| N3-15 | `てほしい`, `てもらいたい`, `てくれると助かる`, `てもらう` | Checked request/help-receiving usage and tagged each item `vi-source-verified`. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `20` so existing browsers reseed the changed N3 grammar rows.
+
+Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved`); focused DB/manifest/taxonomy/upper-JLPT/practice-bank/repository tests passed (`63`); `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N3 grammar level completion.
+
+Live proof after deploy: the existing production browser used normal cache. The rendered N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `20`. Opening `せいで` rendered `KẾT NỐI: V普通形 / いA / なAな / Nの + せいで`; opening `ないことはない` rendered `KẾT NỐI: Vない / いAくない / なAではない / Nではない + ことはない`; the list also rendered corrected rows such as `ばかりか`, `ことがある`, `といい`, and `てもらう`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n3_11.json`, `grammar_n3_13.json`, and `grammar_n3_15.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.

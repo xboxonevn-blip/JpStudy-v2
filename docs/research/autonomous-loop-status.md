@@ -848,3 +848,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `19`. Revision `18` reached the browser during the in-progress batch, so final revision `19` forces existing browsers to reseed the post-proof `すぎる`/`かえって` corrections.
 - Verified under Directive C: JSON/source-tag check `20/20`, focused suite `63/63`, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N3 grammar level completion.
 - Live proof: existing production browser, normal cache. The real N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `19`; opening `すぎる` rendered `KẾT NỐI: Vます語幹 / いA語幹 / なA + すぎる`, and opening `かえって` rendered `KẾT NỐI: かえって + 文`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n3_6.json`, and `grammar_n3_8.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N3 Lessons 11-15 Batch
+
+- Source-verified 20 N3 grammar points in lessons 11-15; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected/clarified formations and explanations for `せいで`, `おかげで`, `ため`, `可能性がある`, `ほど`, `くらい/ぐらい`, `さ`, `ばかりか`, `ことがある`, `ないことはない`, `ないこともない`, `といい`, `ばよかった`, and `といいな`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `20`.
+- Verified under Directive C: JSON/source-tag check `20/20`, focused suite `63/63`, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N3 grammar level completion.
+- Live proof: existing production browser, normal cache. The real N3 Grammar UI upgraded `flutter.grammar_data_version_N3` to `20`; opening `せいで` rendered `KẾT NỐI: V普通形 / いA / なAな / Nの + せいで`, and opening `ないことはない` rendered `KẾT NỐI: Vない / いAくない / なAではない / Nではない + ことはない`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n3_11.json`, `grammar_n3_13.json`, and `grammar_n3_15.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.

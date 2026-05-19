@@ -3,59 +3,63 @@
     "lessonId": 12,
     "title": "〜ほど",
     "titleEn": "~ to the extent that / so much that",
-    "structure": "V普通形 / A / N + ほど",
-    "structureEn": "V普通形 / A / N + ほど",
-    "explanation": "Diễn tả mức độ hoặc phạm vi của trạng thái, hành động.",
+    "structure": "V普通形 / いA / なAな / N + ほど",
+    "structureEn": "V-plain / い-Adjective / な-Adjective + な / Noun + ほど",
+    "explanation": "Diễn tả mức độ hoặc phạm vi của trạng thái, hành động: đến mức, tới mức.",
     "explanationEn": "Expresses extent, degree, or scope.",
     "level": "N3",
     "tags": [
       "n3-scaffold",
       "n3-lesson-12",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 12,
     "title": "〜くらい, 〜ぐらい",
     "titleEn": "~ about / to the extent that",
-    "structure": "N / V普通形 + くらい / ぐらい",
-    "structureEn": "N / V普通形 + くらい / ぐらい",
+    "structure": "V普通形 / いA / なAな / N + くらい / ぐらい",
+    "structureEn": "V-plain / い-Adjective / な-Adjective + な / Noun + くらい / ぐらい",
     "explanation": "Diễn tả mức độ xấp xỉ hoặc dùng để nhấn mạnh mức độ.",
     "explanationEn": "Expresses approximation or emphasis on degree.",
     "level": "N3",
     "tags": [
       "n3-scaffold",
       "n3-lesson-12",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 12,
     "title": "〜さ",
     "titleEn": "~ -ness",
-    "structure": "Aい / Aな + さ",
-    "structureEn": "Aい / Aな + さ",
+    "structure": "いA語幹 / なA + さ",
+    "structureEn": "い-Adjective stem / な-Adjective + さ",
     "explanation": "Biến tính từ thành danh từ để nói về mức độ hoặc tính chất.",
     "explanationEn": "Nominalizes adjectives to express quality or degree.",
     "level": "N3",
     "tags": [
       "n3-scaffold",
       "n3-lesson-12",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 12,
     "title": "〜ばかりか",
     "titleEn": "~ not only ... but also",
-    "structure": "N / 普通形 + ばかりか",
-    "structureEn": "N / 普通形 + ばかりか",
-    "explanation": "Diễn tả không chỉ A mà còn cả B.",
+    "structure": "V普通形 / いA / なAな・である / Nである + ばかりか",
+    "structureEn": "V-plain / い-Adjective / な-Adjective + な・である / Noun + である + ばかりか",
+    "explanation": "Diễn tả không chỉ A mà còn cả B; vế sau thường thêm thông tin nổi bật hơn.",
     "explanationEn": "Expresses not only A but also B.",
     "level": "N3",
     "tags": [
       "quality-upgrade",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   }
 ]

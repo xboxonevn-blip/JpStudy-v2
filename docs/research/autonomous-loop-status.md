@@ -888,3 +888,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `25`.
 - Verified under Directive C: JSON/source-tag check `20/20`, banned-tag check clean, focused suite passed, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N4 grammar level completion.
 - Live proof: production browser with normal cache. The real N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `25`; list rows rendered `V普通形 / いA / なA語幹 / N + でしょう`, `命令形 / V辞書 + な`, `Vば / いAければ / なAなら / Nなら`, and `Vても / いAくても / なAでも / Nでも`. Opening `ても` rendered the corrected `KẾT NỐI`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n4_31.json`, `grammar_n4_32.json`, and `grammar_n4_35.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N4 Lessons 36-40 Batch
+
+- Source-verified 20 N4 grammar points in lessons 36-40; replaced old `vi-human-approved` tags with truthful `vi-source-verified`.
+- Corrected/clarified formations for `ように`, `ようになりました`, `ようにしています`, passive forms, nominalization with `の`, cause `て`, `ので`, `ために`, `おかげで`, embedded questions, `かどうか`, and `てみます`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `26`.
+- Verified under Directive C: JSON/source-tag check `20/20`, banned-tag check clean, focused suite `48/48`, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N4 grammar level completion.
+- Live proof: production browser with normal cache. The real N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `26`; searching `かどうか` rendered corrected rows, and opening the first result rendered `KẾT NỐI: V普通形 / いA / なA語幹 / N + かどうか`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n4_36.json`, `grammar_n4_39.json`, and `grammar_n4_40.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.

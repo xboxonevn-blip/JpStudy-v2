@@ -1996,3 +1996,21 @@ Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar 
 Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved` in the edited grammar files); focused DB/manifest/taxonomy/upper-JLPT/practice-bank/repository tests passed; `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N4 grammar level completion.
 
 Live proof after deploy: production browser used normal cache. The rendered N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `25`. The list rendered `V普通形 / いA / なA語幹 / N + でしょう`, `命令形 / V辞書 + な`, `Vば / いAければ / なAなら / Nなら`, and `Vても / いAくても / なAでも / Nでも`; opening `ても` rendered the corrected `KẾT NỐI`. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n4_31.json`, `grammar_n4_32.json`, and `grammar_n4_35.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.
+
+## Grammar N4 Lessons 36-40 Source-Verified Batch
+
+This batch covers all 20 grammar points in `grammar_n4_36.json` through `grammar_n4_40.json`. Sources consulted for the batch: local N4 curriculum JSON/examples, JLPT Mastery N4 grammar category list, AI Japanese Tutor and JLPT Sensei notes for `ように`, passive, nominalization, `ので`, `ために`, `おかげで`, embedded questions, `かどうか`, and `てみる`, plus cross-checks against the app's N4 examples. Sources were used to verify usage/formation; Vietnamese wording remains original app wording, not copied from external references.
+
+| Lesson | Items | Change |
+|---|---|---|
+| N4-36 | `ように`, `ようになりました`, `ようにしています`, `ようにしてください` | Replaced old `vi-human-approved` with `vi-source-verified`; clarified dictionary/negative and potential attachments. |
+| N4-37 | Passive form and passive sentence patterns | Replaced old approval tag with source verification; clarified `受身形` and passive verb structures. |
+| N4-38 | Nominalizing `の`, evaluation, forgetting, and `こと` | Replaced old approval tag with source verification; corrected nominalization to `V辞書 + の...` and `V辞書 + こと`. |
+| N4-39 | Cause/reason `て`, `ので`, `ために`, `おかげで` | Replaced old approval tag with source verification; clarified verb, i-adjective, na-adjective, and noun attachments. |
+| N4-40 | Embedded questions, `かどうか`, `てみます` | Replaced old approval tag with source verification; corrected `かどうか` and question-word embedded forms to distinguish na-adjective stems and nouns. |
+
+Runtime note: bumped `GrammarSeeder.kGrammarDataVersion` and content DB grammar seed revision to `26` so existing browsers reseed the changed N4 grammar rows.
+
+Verification: JSON parse/source-tag check passed (`20` items, `0` missing `vi-source-verified`, `0` `vi-human-approved` in the edited grammar files); focused DB/repository/screen tests passed (`48`); `flutter analyze lib test` clean; UI string guard clean; literal-route guard clean; content status machine/open-review `0`; release web build passed; Firebase Hosting deploy completed. Full `flutter test` was deferred until N4 grammar level completion.
+
+Live proof after deploy: production browser used normal cache. The rendered N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `26`. Searching `かどうか` rendered corrected rows including `V普通形 / いA / なA語幹 / N + かどうか`; opening the first result rendered the corrected `KẾT NỐI` and examples. Page-context fetch with `cache: default` returned `Cache-Control: no-cache` for `main.dart.js`, `grammar_n4_36.json`, `grammar_n4_39.json`, and `grammar_n4_40.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors after the interaction: `0`.

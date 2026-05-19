@@ -1647,3 +1647,30 @@ Runtime note: bumped content DB Kanji seed revision from `66` to `67` and added 
 Verification: JSON parse passed; old approval-tag grep returned no matches; coverage audit reduced N1 incomplete current entries from `80` to `72`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache header guard passed; release web build succeeded; and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `b124248f` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_16.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; old approval tags were absent; `歪` showed `Oai (méo; lệch; vặn vẹo)`, on `ワイ/エ`, kun `いが.む/いびつ/ひず.む/ゆが.む`, and example `歪む/いがむ = bị cong; bị méo; bị bóp méo`. Current page console errors/warnings: `0`.
+
+## Kanji N1 Lesson 17 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, English definitions, and learner-facing Vietnamese readings where Unihan was absent or too broad.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt`, `.codex/sources/Unihan/Unihan_DictionaryLikeData.txt`, and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, `kJapanese`, and `kTotalStrokes`; `行` keeps learner-facing `Hành` over raw multi-reading Unihan, and `緯` uses the KANJIDIC2 Japanese stroke count.
+- Existing verified duplicate rows for `外`, `意`, `込`, `経`, `緯`, `行`, and `成`, plus vocabulary examples for `域外`, `意気込む`, `経緯`, `行き違い`, and `達成`.
+
+| Item | Sources | Change |
+|---|---|---|
+| `外` | KANJIDIC2 readings `ガイ/ゲ`, `そと/ほか/...`; Unihan `kVietnamese=ngoại`; existing N2/N5 rows | Aligned to `Ngoại (bên ngoài; khác; nước ngoài)`, replaced word-level `いきがい`, and translated `域外` as `bên ngoài khu vực`. |
+| `意` | KANJIDIC2 reading `イ`; Unihan `kVietnamese=ý`; existing N2/N4 rows | Aligned to `Ý (ý nghĩ; ý nghĩa; ý định)`, replaced word-level `いきごむ`, and translated `意気込む` naturally. |
+| `込` | KANJIDIC2 readings `こ.む/こ.み/こ.める`; existing N2 row | Rewrote to `Liêu (đi vào; chen vào; dồn vào)`, replaced word-level `いきごむ`, and used `意気込む` as the example. |
+| `経` | KANJIDIC2 readings `ケイ/キョウ/キン`, `へ.る/...`; existing N3 row | Aligned to `Kinh (trải qua; kinh sách; quá trình)`, replaced word-level `いきさつ`, and translated `経緯` as `diễn biến; đầu đuôi sự việc; quá trình`. |
+| `緯` | KANJIDIC2 reading `イ`, `よこいと/ぬき`; existing N2 row | Corrected stroke count from `15` to Japanese source count `16`, rewrote to `Vĩ (vĩ tuyến; sợi ngang; chiều ngang)`, and removed the truncated generated example gloss. |
+| `行` | KANJIDIC2 readings `コウ/ギョウ/アン`, `い.く/ゆ.く/おこな.う`; existing N2/N3/N5 rows | Corrected learner-facing display from generated `Hàng` to app-standard `Hành`, replaced word-level `いきちがい`, and translated `行き違い` naturally. |
+| `違` | KANJIDIC2 reading `イ`, `ちが.う/...`; Unihan `kVietnamese=vi`; local context `行き違い` | Rewrote to `Vi (khác; sai; lệch)`, replaced word-level `いきちがい`, and filled source-backed readings/components. |
+| `成` | KANJIDIC2 readings `セイ/ジョウ`, `な.る/な.す`; Unihan `kVietnamese=thành`; existing N5 row | Rewrote to `Thành (trở thành; hoàn thành; tạo nên)`, replaced ateji `行き成り` with clearer `達成`, and translated it as `đạt được; hoàn thành mục tiêu`. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved`/`unihan-kanji-checked` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `67` to `68` and added an N1 lesson-17 sentinel for `緯` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed; old approval-tag grep returned no matches; coverage audit reduced N1 incomplete current entries from `72` to `64`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; UI string guard reported `0`; content status report machine/open-review counts stayed `0`; hosting cache header guard passed; release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `058501e2` was deployed to Firebase Hosting, a production browser using normal cache fetched `/assets/assets/data/content/kanji/n1/lesson_17.json` from page context with `Cache-Control: no-cache`. The deployed lesson returned `importStatus=source-verified`; all eight entries had `vi-source-verified`; old approval tags were absent; `緯` showed stroke count `16`, `Vĩ (vĩ tuyến; sợi ngang; chiều ngang)`, on `イ`, kun `よこいと/ぬき`, and example `経緯/いきさつ = diễn biến; đầu đuôi sự việc; quá trình`. Current page console errors/warnings: `0`.

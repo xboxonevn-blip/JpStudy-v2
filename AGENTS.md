@@ -1,5 +1,11 @@
 ﻿# Agent Notes
 
+## Agent directives
+
+Before any implementation, audit, QA, content, or live-proof task, read and
+follow `docs/agent-directives.md`. Directive D is mandatory: work connected,
+whole-flow, and learner-facing; do not verify only the field just edited.
+
 ## Free web / cost-control reference
 
 Before changing hosting, Firebase usage, cloud sync, bundled content, or

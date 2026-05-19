@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 23,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 着 and 伝 keep established learner-facing Sino-Vietnamese readings where open sources diverge or omit kVietnamese.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k177",
@@ -18,37 +18,46 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Giáo",
-        "meaningVi": "to be taught",
-        "meaningViDisplay": "教 (to be taught)",
-        "meaningEn": "to be taught"
+        "meaningVi": "dạy; giáo dục; giáo lý",
+        "meaningViDisplay": "Giáo (dạy; giáo dục; giáo lý)",
+        "meaningEn": "teach, faith, doctrine"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キョウ"
+        ],
         "kunyomi": [
-          "おそわる"
+          "おし.える",
+          "おそ.わる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 教わる (to be taught).",
-        "en": "Appears in JLPT N2 vocabulary: 教わる (to be taught)."
+        "vi": "教 là dạy và truyền kiến thức; trong 教わる, chữ này nhấn mạnh việc được ai đó dạy lại.",
+        "en": "教 means teaching or doctrine; in 教わる it marks being taught by someone."
       },
       "decomposition": {
         "hanViet": "Giáo",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "学",
+          "育",
+          "授",
+          "習"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Giao",
-        "meaningViNoAccent": "to be taught",
-        "meaningEnNoAccent": "to be taught"
+        "meaningViNoAccent": "day; giao duc; giao ly",
+        "meaningEnNoAccent": "teach, faith, doctrine"
       },
       "examples": [
         {
           "word": "教わる",
           "reading": "おそわる",
-          "meaning": "to be taught"
+          "meaning": "được dạy",
+          "meaningEn": "to be taught"
         }
       ],
       "tags": [
@@ -56,9 +65,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k178",
@@ -68,37 +78,47 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Lạc",
-        "meaningVi": "to calm down, to settle down",
-        "meaningViDisplay": "落 (to calm down, to settle down)",
-        "meaningEn": "to calm down, to settle down"
+        "meaningVi": "rơi; rụng; lắng xuống",
+        "meaningViDisplay": "Lạc (rơi; rụng; lắng xuống)",
+        "meaningEn": "fall, drop, come down"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ラク"
+        ],
         "kunyomi": [
-          "おちつく"
+          "お.ちる",
+          "お.ち",
+          "お.とす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 落着く (to calm down, to settle down).",
-        "en": "Appears in JLPT N2 vocabulary: 落着く (to calm down, to settle down)."
+        "vi": "落 diễn tả sự rơi xuống hoặc lắng lại; trong 落着く, nghĩa mở rộng là tâm trạng ổn định lại.",
+        "en": "落 means falling or coming down; in 落着く it extends to settling down emotionally."
       },
       "decomposition": {
         "hanViet": "Lạc",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "下",
+          "降",
+          "沈",
+          "着"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Lac",
-        "meaningViNoAccent": "to calm down, to settle down",
-        "meaningEnNoAccent": "to calm down, to settle down"
+        "meaningViNoAccent": "roi; rung; lang xuong",
+        "meaningEnNoAccent": "fall, drop, come down"
       },
       "examples": [
         {
           "word": "落着く",
           "reading": "おちつく",
-          "meaning": "to calm down, to settle down"
+          "meaning": "bình tĩnh lại; ổn định lại",
+          "meaningEn": "to calm down, to settle down"
         }
       ],
       "tags": [
@@ -106,57 +126,71 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k179",
       "lessonId": 23,
       "level": "N2",
       "character": "着",
-      "strokeCount": 11,
+      "strokeCount": 12,
       "labels": {
         "hanViet": "Trước",
-        "meaningVi": "to calm down, to settle down",
-        "meaningViDisplay": "着 (to calm down, to settle down)",
-        "meaningEn": "to calm down, to settle down"
+        "meaningVi": "mặc; đến nơi; bám vào",
+        "meaningViDisplay": "Trước (mặc; đến nơi; bám vào)",
+        "meaningEn": "don, arrive, wear"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チャク",
+          "ジャク"
+        ],
         "kunyomi": [
-          "おちつく"
+          "き.る",
+          "き.せる",
+          "つ.く",
+          "つ.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 落着く (to calm down, to settle down).",
-        "en": "Appears in JLPT N2 vocabulary: 落着く (to calm down, to settle down)."
+        "vi": "着 gắn với mặc vào, đến nơi hoặc bám lại; trong 落着く, nó giúp tạo nghĩa ổn định, lắng xuống.",
+        "en": "着 covers wearing, arriving, or attaching; in 落着く it contributes the sense of settling in place."
       },
       "decomposition": {
         "hanViet": "Trước",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "衣",
+          "服",
+          "到",
+          "落"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Truoc",
-        "meaningViNoAccent": "to calm down, to settle down",
-        "meaningEnNoAccent": "to calm down, to settle down"
+        "meaningViNoAccent": "mac; den noi; bam vao",
+        "meaningEnNoAccent": "don, arrive, wear"
       },
       "examples": [
         {
           "word": "落着く",
           "reading": "おちつく",
-          "meaning": "to calm down, to settle down"
+          "meaning": "bình tĩnh lại; ổn định lại",
+          "meaningEn": "to calm down, to settle down"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,37 +202,49 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Thủ",
-        "meaningVi": "font of purifying water placed at entrance of shrine",
-        "meaningViDisplay": "手 (font of purifying water placed at entrance of shrine)",
-        "meaningEn": "font of purifying water placed at entrance of shrine"
+        "meaningVi": "tay; người làm; kỹ năng",
+        "meaningViDisplay": "Thủ (tay; người làm; kỹ năng)",
+        "meaningEn": "hand"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シュ",
+          "ズ"
+        ],
         "kunyomi": [
-          "おてあらい"
+          "て",
+          "て-",
+          "-て",
+          "た-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 御手洗 (font of purifying water placed at entrance of shrine).",
-        "en": "Appears in JLPT N2 vocabulary: 御手洗 (font of purifying water placed at entrance of shrine)."
+        "vi": "手 là tay; trong 御手洗, chữ này nằm trong cụm chỉ nơi dùng tay để rửa/thanh tẩy.",
+        "en": "手 means hand; in 御手洗 it appears in the phrase for a hand-washing purification basin."
       },
       "decomposition": {
         "hanViet": "Thủ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "指",
+          "持",
+          "打",
+          "押"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thu",
-        "meaningViNoAccent": "font of purifying water placed at entrance of shrine",
-        "meaningEnNoAccent": "font of purifying water placed at entrance of shrine"
+        "meaningViNoAccent": "tay; nguoi lam; ky nang",
+        "meaningEnNoAccent": "hand"
       },
       "examples": [
         {
           "word": "御手洗",
           "reading": "おてあらい",
-          "meaning": "font of purifying water placed at entrance of shrine"
+          "meaning": "bể nước thanh tẩy ở lối vào đền",
+          "meaningEn": "font of purifying water placed at entrance of shrine"
         }
       ],
       "tags": [
@@ -206,9 +252,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k181",
@@ -218,37 +265,45 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Tẩy",
-        "meaningVi": "font of purifying water placed at entrance of shrine",
-        "meaningViDisplay": "洗 (font of purifying water placed at entrance of shrine)",
-        "meaningEn": "font of purifying water placed at entrance of shrine"
+        "meaningVi": "rửa; gột; làm sạch",
+        "meaningViDisplay": "Tẩy (rửa; gột; làm sạch)",
+        "meaningEn": "wash, inquire into, probe"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "おてあらい"
+          "あら.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 御手洗 (font of purifying water placed at entrance of shrine).",
-        "en": "Appears in JLPT N2 vocabulary: 御手洗 (font of purifying water placed at entrance of shrine)."
+        "vi": "洗 là rửa sạch; trong 御手洗, chữ này chỉ hành động rửa tay để thanh tẩy.",
+        "en": "洗 means washing or cleaning; in 御手洗 it points to washing hands for purification."
       },
       "decomposition": {
         "hanViet": "Tẩy",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "水",
+          "清",
+          "浴",
+          "手"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tay",
-        "meaningViNoAccent": "font of purifying water placed at entrance of shrine",
-        "meaningEnNoAccent": "font of purifying water placed at entrance of shrine"
+        "meaningViNoAccent": "rua; got; lam sach",
+        "meaningEnNoAccent": "wash, inquire into, probe"
       },
       "examples": [
         {
           "word": "御手洗",
           "reading": "おてあらい",
-          "meaning": "font of purifying water placed at entrance of shrine"
+          "meaning": "bể nước thanh tẩy ở lối vào đền",
+          "meaningEn": "font of purifying water placed at entrance of shrine"
         }
       ],
       "tags": [
@@ -256,9 +311,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k182",
@@ -268,45 +324,60 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Truyền",
-        "meaningVi": "maid",
-        "meaningViDisplay": "伝 (maid)",
-        "meaningEn": "maid"
+        "meaningVi": "truyền đạt; truyền lại; truyền thống",
+        "meaningViDisplay": "Truyền (truyền đạt; truyền lại; truyền thống)",
+        "meaningEn": "transmit, communicate, tradition"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "デン",
+          "テン"
+        ],
         "kunyomi": [
-          "おてつだいさん"
+          "つた.わる",
+          "つた.える",
+          "つた.う",
+          "つだ.う",
+          "-づた.い",
+          "つて"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: お手伝いさん (maid).",
-        "en": "Appears in JLPT N2 vocabulary: お手伝いさん (maid)."
+        "vi": "伝 là truyền đạt hoặc truyền lại; trong お手伝いさん, nó nằm trong từ chỉ người giúp việc, người hỗ trợ công việc.",
+        "en": "伝 means transmitting or conveying; in お手伝いさん it appears in the word for a helper or maid."
       },
       "decomposition": {
         "hanViet": "Truyền",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "言",
+          "話",
+          "報",
+          "統"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Truyen",
-        "meaningViNoAccent": "maid",
-        "meaningEnNoAccent": "maid"
+        "meaningViNoAccent": "truyen dat; truyen lai; truyen thong",
+        "meaningEnNoAccent": "transmit, communicate, tradition"
       },
       "examples": [
         {
           "word": "お手伝いさん",
           "reading": "おてつだいさん",
-          "meaning": "maid"
+          "meaning": "người giúp việc",
+          "meaningEn": "maid"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +389,46 @@
       "strokeCount": 22,
       "labels": {
         "hanViet": "Kinh",
-        "meaningVi": "to surprise, to frighten, to create a stir",
-        "meaningViDisplay": "驚 (to surprise, to frighten, to create a stir)",
-        "meaningEn": "to surprise, to frighten, to create a stir"
+        "meaningVi": "ngạc nhiên; kinh sợ; làm giật mình",
+        "meaningViDisplay": "Kinh (ngạc nhiên; kinh sợ; làm giật mình)",
+        "meaningEn": "wonder, be surprised, frightened"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キョウ"
+        ],
         "kunyomi": [
-          "おどろかす"
+          "おどろ.く",
+          "おどろ.かす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 驚かす (to surprise, to frighten, to create a stir).",
-        "en": "Appears in JLPT N2 vocabulary: 驚かす (to surprise, to frighten, to create a stir)."
+        "vi": "驚 diễn tả cảm giác bị làm cho giật mình hoặc kinh ngạc; 驚かす là làm người khác ngạc nhiên hay hoảng sợ.",
+        "en": "驚 marks surprise or fright; 驚かす means to surprise or frighten someone."
       },
       "decomposition": {
         "hanViet": "Kinh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "馬",
+          "警",
+          "恐",
+          "感"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Kinh",
-        "meaningViNoAccent": "to surprise, to frighten, to create a stir",
-        "meaningEnNoAccent": "to surprise, to frighten, to create a stir"
+        "meaningViNoAccent": "ngac nhien; kinh so; lam giat minh",
+        "meaningEnNoAccent": "wonder, be surprised, frightened"
       },
       "examples": [
         {
           "word": "驚かす",
           "reading": "おどろかす",
-          "meaning": "to surprise, to frighten, to create a stir"
+          "meaning": "làm ngạc nhiên; làm sợ; gây xôn xao",
+          "meaningEn": "to surprise, to frighten, to create a stir"
         }
       ],
       "tags": [
@@ -356,9 +436,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k184",
@@ -368,37 +449,45 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Các",
-        "meaningVi": "each, every, either, respectively, severally",
-        "meaningViDisplay": "各 (each, every, either, respectively, severally)",
-        "meaningEn": "each, every, either, respectively, severally"
+        "meaningVi": "mỗi; từng; mỗi người",
+        "meaningViDisplay": "Các (mỗi; từng; mỗi người)",
+        "meaningEn": "each, every, either"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カク"
+        ],
         "kunyomi": [
           "おのおの"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 各々 (each, every, either, respectively, severally).",
-        "en": "Appears in JLPT N2 vocabulary: 各々 (each, every, either, respectively, severally)."
+        "vi": "各 chỉ từng đơn vị riêng lẻ; 各々 nhấn mạnh mỗi người hoặc mỗi bên một cách riêng biệt.",
+        "en": "各 means each or every; 各々 emphasizes each person or item separately."
       },
       "decomposition": {
         "hanViet": "Các",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "個",
+          "毎",
+          "別",
+          "皆"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cac",
-        "meaningViNoAccent": "each, every, either, respectively, severally",
-        "meaningEnNoAccent": "each, every, either, respectively, severally"
+        "meaningViNoAccent": "moi; tung; moi nguoi",
+        "meaningEnNoAccent": "each, every, either"
       },
       "examples": [
         {
           "word": "各々",
           "reading": "おのおの",
-          "meaning": "each, every, either, respectively, severally"
+          "meaning": "từng người; mỗi cái; lần lượt",
+          "meaningEn": "each, every, respectively"
         }
       ],
       "tags": [
@@ -406,14 +495,19 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N2 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

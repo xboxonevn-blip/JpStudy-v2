@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 48;
+const _kanjiSeedRevision = 49;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -169,6 +169,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '惜',
     meaning: 'Tiếc (đáng tiếc; trân trọng; không nỡ)',
     decompositionContains: '"hanViet":"Tiếc"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 23,
+    character: '教',
+    meaning: 'Giáo (dạy; giáo dục; giáo lý)',
+    decompositionContains: '"hanViet":"Giáo"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

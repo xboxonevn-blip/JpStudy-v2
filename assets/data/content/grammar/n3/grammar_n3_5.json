@@ -3,59 +3,63 @@
     "lessonId": 5,
     "title": "〜はずだ",
     "titleEn": "~ should / be expected to",
-    "structure": "V普通形 / A / Nの + はずだ",
-    "structureEn": "V普通形 / A / Nの + はずだ",
+    "structure": "V普通形 / いA / なAな / Nの + はずだ",
+    "structureEn": "V-plain / い-Adjective / な-Adjective + な / Noun + の + はずだ",
     "explanation": "Diễn tả suy đoán có căn cứ hoặc điều được kỳ vọng là đúng.",
     "explanationEn": "Expresses an expectation based on reason or evidence.",
     "level": "N3",
     "tags": [
       "n3-scaffold",
       "n3-lesson-5",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 5,
     "title": "〜わけではない",
     "titleEn": "~ it does not mean that",
-    "structure": "V普通形 / A / N + わけではない",
-    "structureEn": "V普通形 / A / N + わけではない",
-    "explanation": "Phủ định một kết luận quá mức hoặc quá khái quát.",
+    "structure": "V普通形 / いA / なAな / Nという・Nである + わけではない",
+    "structureEn": "V-plain / い-Adjective / な-Adjective + な / Noun + という・である + わけではない",
+    "explanation": "Phủ định một kết luận quá mức hoặc quá khái quát: không hẳn là, không có nghĩa là.",
     "explanationEn": "Softly denies an overgeneralized conclusion.",
     "level": "N3",
     "tags": [
       "n3-scaffold",
       "n3-lesson-5",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 5,
     "title": "〜わけにはいかない",
     "titleEn": "~ cannot afford to / cannot possibly",
-    "structure": "V辞書 + わけにはいかない",
-    "structureEn": "V辞書 + わけにはいかない",
-    "explanation": "Diễn tả không thể làm do lý do xã hội, trách nhiệm hoặc đạo đức.",
+    "structure": "V辞書 / Vない + わけにはいかない",
+    "structureEn": "V-dictionary / Vない + わけにはいかない",
+    "explanation": "Diễn tả không thể làm do lý do xã hội, trách nhiệm hoặc đạo đức; Vない + わけにはいかない nghĩa là “không thể không làm”.",
     "explanationEn": "Expresses that one cannot do something for social or practical reasons.",
     "level": "N3",
     "tags": [
       "n3-scaffold",
       "n3-lesson-5",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 5,
     "title": "〜はずがない",
     "titleEn": "~ cannot possibly",
-    "structure": "普通形 + はずがない",
-    "structureEn": "普通形 + はずがない",
+    "structure": "V普通形 / いA / なAな / Nの + はずがない",
+    "structureEn": "V-plain / い-Adjective / な-Adjective + な / Noun + の + はずがない",
     "explanation": "Phủ định mạnh một khả năng dựa trên lý lẽ.",
     "explanationEn": "Strongly denies a possibility based on reason.",
     "level": "N3",
     "tags": [
       "quality-upgrade",
-      "vi-editorial-codex-pass"
+      "vi-editorial-codex-pass",
+      "vi-source-verified"
     ]
   }
 ]

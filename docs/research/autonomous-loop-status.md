@@ -832,3 +832,11 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `16`; this completes the N2 grammar verification pass.
 - Verified under Directive C: JSON/source-tag check `39/39`, focused suite `32/32`, `flutter analyze lib test` clean, literal-route guard clean, content status machine/open-review `0`, full `flutter test` passed (`2343`) because N2 grammar level is now complete, release build pass, and Firebase Hosting deploy pass.
 - Live proof: existing production browser, normal cache. The real N2 Grammar UI rendered `/#/grammar/175` with `KẾT NỐI: Verb-dictionary form + 上で, Verb-た form + 上で, Noun + の上で` and `/#/grammar/185` with `KẾT NỐI: Verb-た form + 末(に), Noun + の末(に)`. Page-context `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n2_23.json`, and `grammar_n2_25.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`; console warnings/errors `0`.
+
+## 2026-05-19 QA-B-001 Grammar N3 Lessons 1-5 Batch
+
+- Source-verified 20 N3 grammar points in lessons 1-5; added truthful `vi-source-verified`, no `vi-human-approved`.
+- Corrected/clarified formations and explanations for `代わりに`, `わりに`, `うちに`, `間に`, `はずだ`, `わけではない`, `わけにはいかない`, and `はずがない`.
+- Bumped AppDatabase and ContentDatabase grammar seed revisions to `17`.
+- Verified under Directive C: JSON/source-tag check `20/20`, focused suite `32/32`, `flutter analyze lib test` clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N3 grammar level completion.
+- Live proof: existing production browser, normal cache. The real N3 Grammar UI rendered the corrected list row and detail for `代わりに` with `KẾT NỐI: V普通形 / いA / なAな / Nの + 代わりに`; it also rendered `わけにはいかない` with `KẾT NỐI: V辞書 / Vない + わけにはいかない`. Page-context `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n3_3.json`, and `grammar_n3_5.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`; console warnings/errors `0`.

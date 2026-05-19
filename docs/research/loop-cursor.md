@@ -11,8 +11,8 @@ Current policy:
 
 Current position:
 - QA-B-002 current N1 kanji lessons 01-25: source-verified, deployed, live-rendered; current-entry incomplete count `0`.
-- QA-B-001 grammar: N2 lessons 01-25 source-verified, deployed, live-rendered; AppDatabase grammar reseed revision is `16`.
+- QA-B-001 grammar: N2 lessons 01-25 and N3 lessons 01-05 source-verified, deployed, live-rendered; AppDatabase grammar reseed revision is `17`.
 - Owner added new Conjugation feature requirement on 2026-05-19. Phase 0 research/design must produce `docs/research/conjugation-feature-design-2026-05-19.md` before implementation slices; queue order still keeps QA-B-001 grammar first.
-- Next batch: QA-B-001 grammar N3 lessons 01-05.
+- Next batch: QA-B-001 grammar N3 lessons 06-10.
 - Then continue grammar first across remaining N3/N4/N5/N1, then vocab.
 - Deferred after QA-B-001: QA-B-002 expansion to JLPT-complete kanji coverage + 214 radicals.

@@ -809,3 +809,30 @@ Runtime note: bumped content DB Kanji seed revision from `35` to `36` and added 
 Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `128` to `120`, focused DB/reachability/taxonomy/upper-JLPT tests passed after updating the upper-JLPT integrity guard to accept the newer `source-verified` import status, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`).
 
 Live proof after deploy: after `da2242bc` was deployed to Firebase Hosting, a CDP cache-disabled VI/N2 `/#/kanji` session loaded the revision-36 metadata. Filtering `定` showed the N2 lesson-10 card with Hán-Việt `Định` and on `テイ, ジョウ`; opening it showed `Định (quyết định; cố định; ổn định)`, Hán-Việt `Định`, on `テイ, ジョウ`, kun `さだ.める, さだ.まる, さだ.か`, stroke count `8`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal: `0`.
+
+## Kanji N2 Lesson 11 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for stroke counts, Japanese readings, Vietnamese readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` for `kVietnamese`, `kDefinition`, and Japanese-reading cross-checks where available.
+- Existing N2 ShinKanzen/Tanos and Hajimete vocabulary context for `従姉妹`, `威張る`, `嫌がる`, `煎る`, `入れ物`, and `引力`, used only to choose example words and verify the already editorial Vietnamese vocab glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `妹` | KANJIDIC2 reading `マイ`, `いもうと`, Vietnamese `Muội`, meaning `younger sister`; Unihan `kVietnamese=muội`; local context `従姉妹` plus existing N5 `妹` | Corrected the row away from whole-word `female cousin` fallback to `Muội (em gái; người em nữ)`, added readings/search text, direct example `従姉妹`, and sibling/female related kanji. |
+| `威` | KANJIDIC2 reading `イ`, `おど.す/おど.し/おど.かす`, meanings `intimidate`, `dignity`, `majesty`; Unihan `kVietnamese=uy`, `kDefinition=pomp, power; powerful`; local context `威張る` | Corrected the row away from whole-word `to be proud, to swagger` fallback to `Uy (uy thế; oai nghiêm; đe dọa)`, added readings/search text, direct example `威張る`, and authority/threat related kanji. |
+| `張` | KANJIDIC2 reading `チョウ`, `は.る/-は.り/-ば.り`, meanings `stretch`, `spread`, `put up`; Unihan `kVietnamese=trương`; local context `威張る` plus source-verified N3 `張` | Reused the verified kanji-level meaning family and rewrote display to `Trương (căng ra; trải rộng; dựng lên)`, added readings/search text, direct example `威張る`, and bow/stretch related kanji. |
+| `嫌` | KANJIDIC2 readings `ケン/ゲン`, `きら.う/きら.い/いや`, meanings `dislike`, `detest`, `hate`; Unihan `kVietnamese=hiềm`; local context `嫌がる` | Rewrote display to `Hiềm (ghét; chán ghét; không ưa)`, added readings/search text, direct example `嫌がる`, and dislike/emotion related kanji. |
+| `煎` | KANJIDIC2 reading `セン`, `せん.じる/い.る/に.る`, Vietnamese `Tiên/Tiễn`, meanings `broil`, `parch`, `roast`, `boil`; Unihan `kDefinition=fry in fat or oil; boil in water`; local context `煎る` | Rewrote display to `Tiên (rang; sao; sắc thuốc)`, added readings/search text, direct example `煎る`, and heat/cooking related kanji. |
+| `炒` | KANJIDIC2 readings `ソウ/ショウ`, `い.る/いた.める`, Vietnamese `Sao`, meanings `broil`, `parch`, `roast`, `fry`; Unihan `kVietnamese=sao`, `kDefinition=fry, saute, roast`; lesson context `炒る` | Filled the previously empty meaning row with `Sao (xào; rang; sao)`, added readings/search text, direct example `炒る`, and heat/cooking related kanji. |
+| `入` | KANJIDIC2 readings `ニュウ/ジュ`, `い.る/い.れる/はい.る`, meanings `enter`, `insert`; Unihan `kVietnamese=nhập`; local context `入れ物` plus existing N5 `入` | Corrected the row away from whole-word `container` fallback to `Nhập (vào; cho vào; nhận vào)`, added readings/search text, direct example `入れ物`, and enter/inside related kanji. |
+| `引` | KANJIDIC2 reading `イン`, `ひ.く/ひ.ける`, meanings `pull`, `draw`, `quote`; Unihan `kVietnamese=dẫn`; local context `引力` plus existing N5 `引` | Corrected the row away from whole-word `gravity` fallback to `Dẫn (kéo; dẫn; trích dẫn)`, added readings/search text, direct example `引力`, and pull/force related kanji. |
+
+Tagging: added file-level and entry-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `36` to `37` and added an N2 lesson-11 sentinel for `妹` so existing browsers reseed the changed metadata.
+
+Verification: JSON parse passed, no false approval/draft tags remained in the file, coverage audit reduced N2 incomplete current entries from `120` to `112`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), and full `flutter test` passed (`2340`).
+
+Live proof after deploy: after `fadf79fb` was deployed to Firebase Hosting, a CDP cache-disabled VI/N2 `/#/kanji` session loaded the revision-37 metadata. Filtering `妹` showed the updated N2 lesson-11 card; opening it showed `Muội (em gái; người em nữ)`, Hán-Việt `Muội`, on `マイ`, kun `いもうと`, stroke count `8`, and the rewritten mnemonic. Console warnings/errors after opening the detail modal in the current tab: `0`.

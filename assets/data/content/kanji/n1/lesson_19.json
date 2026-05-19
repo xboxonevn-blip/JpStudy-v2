@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 19,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; word-level example readings no longer masquerade as kanji kunyomi.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k145",
@@ -18,47 +18,61 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Kiến",
-        "meaningVi": "nhìn; thấy",
-        "meaningViDisplay": "見 (nhìn; thấy)",
-        "meaningEn": "see, observe, behold; perceive; Kangxi radical 147"
+        "meaningVi": "nhìn; thấy; quan điểm",
+        "meaningViDisplay": "Kiến (nhìn; thấy; quan điểm)",
+        "meaningEn": "see, observe, behold; perceive"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ケン"
+        ],
         "kunyomi": [
-          "いけん"
+          "み.る",
+          "み.える",
+          "み.せる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 見 nghĩa là nhìn; thấy. Ví dụ JLPT N1: 異見 (different opinion, objection).",
-        "en": "Kanji 見 means see, observe, behold; perceive; Kangxi radical 147. JLPT N1 example: 異見 (different opinion, objection)."
+        "vi": "見 là nhìn hoặc thấy; 異見 là một quan điểm khác, thường mang sắc thái phản đối.",
+        "en": "見 means see or view; 異見 is a different opinion, often an objection."
       },
       "decomposition": {
         "hanViet": "Kiến",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "見"
+        ],
+        "componentNames": [
+          "kiến/nhìn"
+        ],
+        "relatedKanji": [
+          "視",
+          "観",
+          "意",
+          "異"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Kien",
-        "meaningViNoAccent": "nhin; thay",
-        "meaningEnNoAccent": "see, observe, behold; perceive; Kangxi radical 147"
+        "meaningViNoAccent": "nhin; thay; quan diem",
+        "meaningEnNoAccent": "see, observe, behold; perceive"
       },
       "examples": [
         {
           "word": "異見",
           "reading": "いけん",
-          "meaning": "different opinion, objection"
+          "meaning": "ý kiến khác; dị nghị",
+          "meaningEn": "different opinion; objection"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k146",
@@ -68,47 +82,71 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Hướng",
-        "meaningVi": "hướng; khuynh hướng",
-        "meaningViDisplay": "向 (hướng; khuynh hướng)",
+        "meaningVi": "hướng; quay về; khuynh hướng",
+        "meaningViDisplay": "Hướng (hướng; quay về; khuynh hướng)",
         "meaningEn": "toward, direction, trend"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "コウ"
+        ],
         "kunyomi": [
-          "いこう"
+          "む.く",
+          "む.い",
+          "-む.き",
+          "む.ける",
+          "-む.け",
+          "む.かう",
+          "む.かい",
+          "む.こう",
+          "む.こう-",
+          "むこ",
+          "むか.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 向 nghĩa là hướng; khuynh hướng. Ví dụ JLPT N1: 意向 (intention, idea, inclination).",
-        "en": "Kanji 向 means toward, direction, trend. JLPT N1 example: 意向 (intention, idea, inclination)."
+        "vi": "向 chỉ hướng quay tới; 意向 là ý định hoặc khuynh hướng trong suy nghĩ.",
+        "en": "向 points toward a direction; 意向 is intention or inclination."
       },
       "decomposition": {
         "hanViet": "Hướng",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "丿",
+          "冋"
+        ],
+        "componentNames": [
+          "phiệt/nét phẩy",
+          "quynh/vùng bao"
+        ],
+        "relatedKanji": [
+          "方",
+          "面",
+          "意",
+          "傾"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Huong",
-        "meaningViNoAccent": "huong; khuynh huong",
+        "meaningViNoAccent": "huong; quay ve; khuynh huong",
         "meaningEnNoAccent": "toward, direction, trend"
       },
       "examples": [
         {
           "word": "意向",
           "reading": "いこう",
-          "meaning": "intention, idea, inclination"
+          "meaning": "ý định; khuynh hướng",
+          "meaningEn": "intention; inclination"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k147",
@@ -117,96 +155,125 @@
       "character": "移",
       "strokeCount": 11,
       "labels": {
-        "hanViet": "Dời",
-        "meaningVi": "di chuyển; dời đổi",
-        "meaningViDisplay": "移 (di chuyển; dời đổi)",
+        "hanViet": "Di",
+        "meaningVi": "di chuyển; chuyển đổi; dời đi",
+        "meaningViDisplay": "Di (di chuyển; chuyển đổi; dời đi)",
         "meaningEn": "change place, shift; move about"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いこう"
+          "うつ.る",
+          "うつ.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 移 nghĩa là di chuyển; dời đổi. Ví dụ JLPT N1: 移行 (switching over to).",
-        "en": "Kanji 移 means change place, shift; move about. JLPT N1 example: 移行 (switching over to)."
+        "vi": "移 là chuyển từ chỗ hoặc trạng thái này sang chỗ khác; 移行 là chuyển sang giai đoạn mới.",
+        "en": "移 means move or shift; 移行 is a transition to another state."
       },
       "decomposition": {
-        "hanViet": "Dời",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Di",
+        "structure": "left-right",
+        "components": [
+          "禾",
+          "多"
+        ],
+        "componentNames": [
+          "hòa/lúa",
+          "đa/nhiều"
+        ],
+        "relatedKanji": [
+          "動",
+          "転",
+          "行",
+          "変"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Doi",
-        "meaningViNoAccent": "di chuyen; doi đoi",
+        "hanVietNoAccent": "Di",
+        "meaningViNoAccent": "di chuyen; chuyen doi; doi di",
         "meaningEnNoAccent": "change place, shift; move about"
       },
       "examples": [
         {
           "word": "移行",
           "reading": "いこう",
-          "meaning": "switching over to"
+          "meaning": "chuyển sang; quá trình chuyển đổi",
+          "meaningEn": "transition; migration"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k148",
       "lessonId": 19,
       "level": "N1",
       "character": "碑",
-      "strokeCount": 13,
+      "strokeCount": 14,
       "labels": {
         "hanViet": "Bi",
-        "meaningVi": "bia đá; văn bia",
-        "meaningViDisplay": "碑 (bia đá; văn bia)",
+        "meaningVi": "bia đá; văn bia; mộ bia",
+        "meaningViDisplay": "Bi (bia đá; văn bia; mộ bia)",
         "meaningEn": "stone tablet; gravestone"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヒ"
+        ],
         "kunyomi": [
           "いしぶみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 碑 nghĩa là bia đá; văn bia. Ví dụ JLPT N1: 碑 (bia đá, văn bia).",
-        "en": "Kanji 碑 means stone tablet; gravestone. JLPT N1 example: 碑 (bia đá, văn bia)."
+        "vi": "碑 là bia đá ghi sự kiện, công trạng hoặc dùng làm mộ bia.",
+        "en": "碑 is a stone monument, inscription tablet, or gravestone."
       },
       "decomposition": {
         "hanViet": "Bi",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "石",
+          "卑"
+        ],
+        "componentNames": [
+          "thạch/đá",
+          "ti/thấp"
+        ],
+        "relatedKanji": [
+          "石",
+          "墓",
+          "記",
+          "文"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bi",
-        "meaningViNoAccent": "bia đa; van bia",
+        "meaningViNoAccent": "bia da; van bia; mo bia",
         "meaningEnNoAccent": "stone tablet; gravestone"
       },
       "examples": [
         {
           "word": "碑",
           "reading": "いしぶみ",
-          "meaning": "bia đá, văn bia"
+          "meaning": "bia đá; văn bia",
+          "meaningEn": "stone monument; inscription"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,47 +285,62 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Y",
-        "meaningVi": "quần áo; y phục",
-        "meaningViDisplay": "衣 (quần áo; y phục)",
-        "meaningEn": "clothes, clothing; cover, skin; Kangxi radical 145"
+        "meaningVi": "quần áo; y phục; lớp phủ",
+        "meaningViDisplay": "Y (quần áo; y phục; lớp phủ)",
+        "meaningEn": "clothes, clothing; cover, skin"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ",
+          "エ"
+        ],
         "kunyomi": [
-          "いしょう"
+          "ころも",
+          "きぬ",
+          "-ぎ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 衣 nghĩa là quần áo; y phục. Ví dụ JLPT N1: 衣装 (clothing, costume, outfit, garment, dress).",
-        "en": "Kanji 衣 means clothes, clothing; cover, skin; Kangxi radical 145. JLPT N1 example: 衣装 (clothing, costume, outfit, garment, dress)."
+        "vi": "衣 là y phục hoặc lớp áo bên ngoài; 衣装 là trang phục dùng trong biểu diễn hay sự kiện.",
+        "en": "衣 means clothing or covering; 衣装 is costume or outfit."
       },
       "decomposition": {
         "hanViet": "Y",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "衣"
+        ],
+        "componentNames": [
+          "y/áo"
+        ],
+        "relatedKanji": [
+          "服",
+          "装",
+          "被",
+          "表"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Y",
-        "meaningViNoAccent": "quan ao; y phuc",
-        "meaningEnNoAccent": "clothes, clothing; cover, skin; Kangxi radical 145"
+        "meaningViNoAccent": "quan ao; y phuc; lop phu",
+        "meaningEnNoAccent": "clothes, clothing; cover, skin"
       },
       "examples": [
         {
           "word": "衣装",
           "reading": "いしょう",
-          "meaning": "clothing, costume, outfit, garment, dress"
+          "meaning": "trang phục; y phục; đồ diễn",
+          "meaningEn": "costume; outfit"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k150",
@@ -268,45 +350,61 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Trang",
-        "meaningVi": "trang phục; trang bị",
-        "meaningViDisplay": "装 (trang phục; trang bị)",
-        "meaningEn": "dress, clothes, attire; fill"
+        "meaningVi": "trang phục; trang bị; trang trí",
+        "meaningViDisplay": "Trang (trang phục; trang bị; trang trí)",
+        "meaningEn": "dress, clothes, attire; equip"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いしょう"
+          "よそお.う",
+          "よそお.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 装 nghĩa là trang phục; trang bị. Ví dụ JLPT N1: 衣装 (trang phục, y phục, quần áo).",
-        "en": "Kanji 装 means dress, clothes, attire; fill. JLPT N1 example: 衣装 (trang phục, y phục, quần áo)."
+        "vi": "装 là mặc, trang bị hoặc làm cho bề ngoài chỉnh tề; 衣装 là trang phục.",
+        "en": "装 means dress, equip, or adorn; 衣装 is clothing or costume."
       },
       "decomposition": {
         "hanViet": "Trang",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "壮",
+          "衣"
+        ],
+        "componentNames": [
+          "tráng/mạnh mẽ",
+          "y/áo"
+        ],
+        "relatedKanji": [
+          "衣",
+          "服",
+          "備",
+          "飾"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Trang",
-        "meaningViNoAccent": "trang phuc; trang bi",
-        "meaningEnNoAccent": "dress, clothes, attire; fill"
+        "meaningViNoAccent": "trang phuc; trang bi; trang tri",
+        "meaningEnNoAccent": "dress, clothes, attire; equip"
       },
       "examples": [
         {
           "word": "衣装",
           "reading": "いしょう",
-          "meaning": "trang phục, y phục, quần áo"
+          "meaning": "trang phục; y phục; đồ diễn",
+          "meaningEn": "costume; outfit"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,45 +416,63 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Hà",
-        "meaningVi": "hà khắc; nghiêm khắc",
-        "meaningViDisplay": "苛 (hà khắc; nghiêm khắc)",
+        "meaningVi": "hà khắc; cay nghiệt; làm khổ",
+        "meaningViDisplay": "Hà (hà khắc; cay nghiệt; làm khổ)",
         "meaningEn": "small, petty; harsh, rigorous"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カ"
+        ],
         "kunyomi": [
-          "いじめる"
+          "いじ.める",
+          "さいな.む",
+          "いらだ.つ",
+          "からい",
+          "こまかい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 苛 nghĩa là hà khắc; nghiêm khắc. Ví dụ JLPT N1: 苛める (trêu chọc, hành hạ, bắt nạt).",
-        "en": "Kanji 苛 means small, petty; harsh, rigorous. JLPT N1 example: 苛める (trêu chọc, hành hạ, bắt nạt)."
+        "vi": "苛 mang sắc thái hà khắc hoặc gây khó chịu; 苛める là bắt nạt hay hành hạ.",
+        "en": "苛 suggests harshness or irritation; 苛める means bully or torment."
       },
       "decomposition": {
         "hanViet": "Hà",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "艹",
+          "可"
+        ],
+        "componentNames": [
+          "thảo/cỏ",
+          "khả/có thể"
+        ],
+        "relatedKanji": [
+          "厳",
+          "虐",
+          "苦",
+          "可"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ha",
-        "meaningViNoAccent": "ha khac; nghiem khac",
+        "meaningViNoAccent": "ha khac; cay nghiet; lam kho",
         "meaningEnNoAccent": "small, petty; harsh, rigorous"
       },
       "examples": [
         {
           "word": "苛める",
           "reading": "いじめる",
-          "meaning": "trêu chọc, hành hạ, bắt nạt"
+          "meaning": "bắt nạt; hành hạ",
+          "meaningEn": "bully; torment"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,52 +484,70 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Trú",
-        "meaningVi": "sống; cư trú",
-        "meaningViDisplay": "住 (sống; cư trú)",
+        "meaningVi": "sống; cư trú; ở lại",
+        "meaningViDisplay": "Trú (sống; cư trú; ở lại)",
         "meaningEn": "reside, live at, dwell, lodge; stop"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ジュウ",
+          "ヂュウ",
+          "チュウ"
+        ],
         "kunyomi": [
-          "いじゅう"
+          "す.む",
+          "す.まう",
+          "-ず.まい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 住 nghĩa là sống; cư trú. Ví dụ JLPT N1: 移住 (migration, immigration).",
-        "en": "Kanji 住 means reside, live at, dwell, lodge; stop. JLPT N1 example: 移住 (migration, immigration)."
+        "vi": "住 là sinh sống hoặc cư trú; 移住 là chuyển nơi ở, thường sang vùng hoặc nước khác.",
+        "en": "住 means reside or dwell; 移住 is migration or immigration."
       },
       "decomposition": {
         "hanViet": "Trú",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "主"
+        ],
+        "componentNames": [
+          "nhân/người",
+          "chủ/chính"
+        ],
+        "relatedKanji": [
+          "居",
+          "宅",
+          "移",
+          "民"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tru",
-        "meaningViNoAccent": "song; cu tru",
+        "meaningViNoAccent": "song; cu tru; o lai",
         "meaningEnNoAccent": "reside, live at, dwell, lodge; stop"
       },
       "examples": [
         {
           "word": "移住",
           "reading": "いじゅう",
-          "meaning": "migration, immigration"
+          "meaning": "di cư; chuyển nơi cư trú",
+          "meaningEn": "migration; immigration"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings and Japanese stroke counts",
+    "Unicode Unihan kVietnamese and kDefinition"
   ],
   "tags": []
 }

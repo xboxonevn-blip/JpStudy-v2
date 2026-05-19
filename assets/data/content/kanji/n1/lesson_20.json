@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 20,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; word-level example readings no longer masquerade as kanji kunyomi.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k153",
@@ -19,46 +19,66 @@
       "labels": {
         "hanViet": "Lộng",
         "meaningVi": "nghịch; mân mê; đùa giỡn",
-        "meaningViDisplay": "弄 (nghịch; mân mê; đùa giỡn)",
+        "meaningViDisplay": "Lộng (nghịch; mân mê; đùa giỡn)",
         "meaningEn": "do, play or fiddle with; alley"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ロウ",
+          "ル"
+        ],
         "kunyomi": [
-          "いじる"
+          "いじく.る",
+          "ろう.する",
+          "いじ.る",
+          "ひねく.る",
+          "たわむ.れる",
+          "もてあそ.ぶ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 弄 nghĩa là nghịch; mân mê; đùa giỡn. Ví dụ JLPT N1: 弄る (to touch, to tamper with).",
-        "en": "Kanji 弄 means do, play or fiddle with; alley. JLPT N1 example: 弄る (to touch, to tamper with)."
+        "vi": "弄 là chạm vào, nghịch hoặc thao túng; 弄る thường là sờ mó, chỉnh sửa lung tung.",
+        "en": "弄 means fiddle with or manipulate; 弄る is to touch or tamper with."
       },
       "decomposition": {
         "hanViet": "Lộng",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "王",
+          "廾"
+        ],
+        "componentNames": [
+          "vương/ngọc",
+          "củng/hai tay"
+        ],
+        "relatedKanji": [
+          "戯",
+          "悪",
+          "手",
+          "操"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Long",
-        "meaningViNoAccent": "nghich; man me; đua gion",
+        "meaningViNoAccent": "nghich; man me; dua gion",
         "meaningEnNoAccent": "do, play or fiddle with; alley"
       },
       "examples": [
         {
           "word": "弄る",
           "reading": "いじる",
-          "meaning": "to touch, to tamper with"
+          "meaning": "sờ mó; nghịch; chỉnh sửa lung tung",
+          "meaningEn": "touch; tamper with"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k154",
@@ -68,47 +88,62 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Tính",
-        "meaningVi": "tính chất; giới tính",
-        "meaningViDisplay": "性 (tính chất; giới tính)",
+        "meaningVi": "tính chất; bản tính; giới tính",
+        "meaningViDisplay": "Tính (tính chất; bản tính; giới tính)",
         "meaningEn": "nature, character, sex"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いせい"
+          "さが"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 性 nghĩa là tính chất; giới tính. Ví dụ JLPT N1: 異性 (the opposite sex).",
-        "en": "Kanji 性 means nature, character, sex. JLPT N1 example: 異性 (the opposite sex)."
+        "vi": "性 là bản chất hoặc giới tính; 異性 chỉ người thuộc giới tính khác.",
+        "en": "性 is nature, character, or sex; 異性 means the opposite sex."
       },
       "decomposition": {
         "hanViet": "Tính",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "忄",
+          "生"
+        ],
+        "componentNames": [
+          "tâm/ý nghĩ",
+          "sinh/sống"
+        ],
+        "relatedKanji": [
+          "質",
+          "生",
+          "別",
+          "異"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tinh",
-        "meaningViNoAccent": "tinh chat; gioi tinh",
+        "meaningViNoAccent": "tinh chat; ban tinh; gioi tinh",
         "meaningEnNoAccent": "nature, character, sex"
       },
       "examples": [
         {
           "word": "異性",
           "reading": "いせい",
-          "meaning": "the opposite sex"
+          "meaning": "người khác giới; giới tính khác",
+          "meaningEn": "opposite sex"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k155",
@@ -118,47 +153,62 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Di",
-        "meaningVi": "để lại; bỏ sót",
-        "meaningViDisplay": "遺 (để lại; bỏ sót)",
+        "meaningVi": "để lại; bỏ sót; di lưu",
+        "meaningViDisplay": "Di (để lại; bỏ sót; di lưu)",
         "meaningEn": "lose; articles lost; omit"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ",
+          "ユイ"
+        ],
         "kunyomi": [
-          "いせき"
+          "のこ.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 遺 nghĩa là để lại; bỏ sót. Ví dụ JLPT N1: 遺跡 (historic ruins (remains relics)).",
-        "en": "Kanji 遺 means lose; articles lost; omit. JLPT N1 example: 遺跡 (historic ruins (remains relics))."
+        "vi": "遺 là để lại từ quá khứ hoặc bỏ sót; 遺跡 là dấu tích còn lại của lịch sử.",
+        "en": "遺 means leave behind or omit; 遺跡 is a historical remains site."
       },
       "decomposition": {
         "hanViet": "Di",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "mixed",
+        "components": [
+          "貴",
+          "辶"
+        ],
+        "componentNames": [
+          "quý/quý giá",
+          "sước/đi"
+        ],
+        "relatedKanji": [
+          "跡",
+          "残",
+          "産",
+          "忘"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Di",
-        "meaningViNoAccent": "đe lai; bo sot",
+        "meaningViNoAccent": "de lai; bo sot; di luu",
         "meaningEnNoAccent": "lose; articles lost; omit"
       },
       "examples": [
         {
           "word": "遺跡",
           "reading": "いせき",
-          "meaning": "historic ruins (remains relics)"
+          "meaning": "di tích; dấu tích lịch sử",
+          "meaningEn": "historic ruins; remains"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k156",
@@ -168,47 +218,67 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Nhiên",
-        "meaningVi": "như vậy; đúng vậy",
-        "meaningViDisplay": "然 (như vậy; đúng vậy)",
+        "meaningVi": "như vậy; tự nhiên; trạng thái",
+        "meaningViDisplay": "Nhiên (như vậy; tự nhiên; trạng thái)",
         "meaningEn": "yes, certainly; pledge, promise"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゼン",
+          "ネン"
+        ],
         "kunyomi": [
-          "いぜん"
+          "しか",
+          "しか.り",
+          "しか.し",
+          "さ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 然 nghĩa là như vậy; đúng vậy. Ví dụ JLPT N1: 依然 (still, as yet).",
-        "en": "Kanji 然 means yes, certainly; pledge, promise. JLPT N1 example: 依然 (still, as yet)."
+        "vi": "然 chỉ trạng thái “như vậy”; 依然 là vẫn như cũ, chưa thay đổi.",
+        "en": "然 marks a state of being so; 依然 means still or as before."
       },
       "decomposition": {
         "hanViet": "Nhiên",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "月",
+          "犬",
+          "灬"
+        ],
+        "componentNames": [
+          "nguyệt/thịt",
+          "khuyển/chó",
+          "hỏa/lửa"
+        ],
+        "relatedKanji": [
+          "自",
+          "依",
+          "然",
+          "態"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhien",
-        "meaningViNoAccent": "nhu vay; đung vay",
+        "meaningViNoAccent": "nhu vay; tu nhien; trang thai",
         "meaningEnNoAccent": "yes, certainly; pledge, promise"
       },
       "examples": [
         {
           "word": "依然",
           "reading": "いぜん",
-          "meaning": "still, as yet"
+          "meaning": "vẫn; vẫn như cũ",
+          "meaningEn": "still; as yet"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k157",
@@ -218,47 +288,67 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Tồn",
-        "meaningVi": "tồn tại; còn lại",
-        "meaningViDisplay": "存 (tồn tại; còn lại)",
+        "meaningVi": "tồn tại; còn lại; duy trì",
+        "meaningViDisplay": "Tồn (tồn tại; còn lại; duy trì)",
         "meaningEn": "exist, live, be; survive; remain"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソン",
+          "ゾン"
+        ],
         "kunyomi": [
-          "いそん"
+          "ながら.える",
+          "あ.る",
+          "たも.つ",
+          "と.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 存 nghĩa là tồn tại; còn lại. Ví dụ JLPT N1: 依存 (dependence, dependent, reliance).",
-        "en": "Kanji 存 means exist, live, be; survive; remain. JLPT N1 example: 依存 (dependence, dependent, reliance)."
+        "vi": "存 là tồn tại hoặc giữ lại; 依存 là dựa dẫm, phụ thuộc vào điều gì.",
+        "en": "存 means exist or preserve; 依存 is dependence or reliance."
       },
       "decomposition": {
         "hanViet": "Tồn",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "mixed",
+        "components": [
+          "一",
+          "丨",
+          "子"
+        ],
+        "componentNames": [
+          "nhất/một",
+          "cổn/nét dọc",
+          "tử/con"
+        ],
+        "relatedKanji": [
+          "在",
+          "残",
+          "依",
+          "保"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ton",
-        "meaningViNoAccent": "ton tai; con lai",
+        "meaningViNoAccent": "ton tai; con lai; duy tri",
         "meaningEnNoAccent": "exist, live, be; survive; remain"
       },
       "examples": [
         {
           "word": "依存",
           "reading": "いそん",
-          "meaning": "dependence, dependent, reliance"
+          "meaning": "sự phụ thuộc; lệ thuộc",
+          "meaningEn": "dependence; reliance"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k158",
@@ -267,48 +357,62 @@
       "character": "委",
       "strokeCount": 8,
       "labels": {
-        "hanViet": "Uỷ",
-        "meaningVi": "ủy thác; giao phó",
-        "meaningViDisplay": "委 (ủy thác; giao phó)",
+        "hanViet": "Ủy",
+        "meaningVi": "ủy thác; giao phó; giao nhiệm vụ",
+        "meaningViDisplay": "Ủy (ủy thác; giao phó; giao nhiệm vụ)",
         "meaningEn": "appoint, send, commission"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いたく"
+          "ゆだ.ねる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 委 nghĩa là ủy thác; giao phó. Ví dụ JLPT N1: 委託 (consign (goods (for sale) to a firm), entrust (person with something), commit).",
-        "en": "Kanji 委 means appoint, send, commission. JLPT N1 example: 委託 (consign (goods (for sale) to a firm), entrust (person with something), commit)."
+        "vi": "委 là giao phó cho người khác; 委託 là ủy thác một việc hoặc tài sản.",
+        "en": "委 means entrust or commission; 委託 is entrusting a task or goods."
       },
       "decomposition": {
-        "hanViet": "Uỷ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Ủy",
+        "structure": "top-bottom",
+        "components": [
+          "禾",
+          "女"
+        ],
+        "componentNames": [
+          "hòa/lúa",
+          "nữ/phụ nữ"
+        ],
+        "relatedKanji": [
+          "託",
+          "任",
+          "頼",
+          "務"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Uy",
-        "meaningViNoAccent": "uy thac; giao pho",
+        "meaningViNoAccent": "uy thac; giao pho; giao nhiem vu",
         "meaningEnNoAccent": "appoint, send, commission"
       },
       "examples": [
         {
           "word": "委託",
           "reading": "いたく",
-          "meaning": "consign (goods (for sale) to a firm), entrust (person with something), commit"
+          "meaning": "ủy thác; giao phó",
+          "meaningEn": "entrustment; commission"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k159",
@@ -318,47 +422,63 @@
       "strokeCount": 10,
       "labels": {
         "hanViet": "Thác",
-        "meaningVi": "ủy thác; nhờ cậy",
-        "meaningViDisplay": "託 (ủy thác; nhờ cậy)",
+        "meaningVi": "ủy thác; nhờ cậy; giao phó",
+        "meaningViDisplay": "Thác (ủy thác; nhờ cậy; giao phó)",
         "meaningEn": "entrust, rely on; commission"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タク"
+        ],
         "kunyomi": [
-          "いたく"
+          "かこつ.ける",
+          "かこ.つ",
+          "かこ.つける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 託 nghĩa là ủy thác; nhờ cậy. Ví dụ JLPT N1: 委託 (consign (goods (for sale) to a firm), entrust (person with something), commit).",
-        "en": "Kanji 託 means entrust, rely on; commission. JLPT N1 example: 委託 (consign (goods (for sale) to a firm), entrust (person with something), commit)."
+        "vi": "託 là nhờ hoặc giao cho ai đảm nhận; trong 委託, nó nhấn mạnh việc ủy thác.",
+        "en": "託 means entrust or rely on; in 委託 it emphasizes delegation."
       },
       "decomposition": {
         "hanViet": "Thác",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "言",
+          "乇"
+        ],
+        "componentNames": [
+          "ngôn/lời nói",
+          "thác/gửi gắm"
+        ],
+        "relatedKanji": [
+          "委",
+          "頼",
+          "任",
+          "言"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thac",
-        "meaningViNoAccent": "uy thac; nho cay",
+        "meaningViNoAccent": "uy thac; nho cay; giao pho",
         "meaningEnNoAccent": "entrust, rely on; commission"
       },
       "examples": [
         {
           "word": "委託",
           "reading": "いたく",
-          "meaning": "consign (goods (for sale) to a firm), entrust (person with something), commit"
+          "meaning": "ủy thác; giao phó",
+          "meaningEn": "entrustment; commission"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k160",
@@ -368,52 +488,69 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Hí",
-        "meaningVi": "trò đùa; diễn kịch",
-        "meaningViDisplay": "戯 (trò đùa; diễn kịch)",
+        "meaningVi": "đùa giỡn; vui chơi; trò diễn",
+        "meaningViDisplay": "Hí (đùa giỡn; vui chơi; trò diễn)",
         "meaningEn": "theatrical play, show"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ギ",
+          "ゲ"
+        ],
         "kunyomi": [
-          "いたずら"
+          "たわむ.れる",
+          "ざ.れる",
+          "じゃ.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 戯 nghĩa là trò đùa; diễn kịch. Ví dụ JLPT N1: 悪戯 (trò đùa, nghịch ngợm, trò tinh quái).",
-        "en": "Kanji 戯 means theatrical play, show. JLPT N1 example: 悪戯 (trò đùa, nghịch ngợm, trò tinh quái)."
+        "vi": "戯 chỉ sự đùa nghịch hoặc trò diễn; 悪戯 là trò nghịch ngợm, đôi khi gây phiền.",
+        "en": "戯 means play, frolic, or performance; 悪戯 is mischief or a prank."
       },
       "decomposition": {
         "hanViet": "Hí",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "虚",
+          "戈"
+        ],
+        "componentNames": [
+          "hư/trống rỗng",
+          "qua/vũ khí"
+        ],
+        "relatedKanji": [
+          "弄",
+          "遊",
+          "劇",
+          "悪"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hi",
-        "meaningViNoAccent": "tro đua; dien kich",
+        "meaningViNoAccent": "dua gion; vui choi; tro dien",
         "meaningEnNoAccent": "theatrical play, show"
       },
       "examples": [
         {
           "word": "悪戯",
           "reading": "いたずら",
-          "meaning": "trò đùa, nghịch ngợm, trò tinh quái"
+          "meaning": "trò nghịch; trò tinh quái",
+          "meaningEn": "mischief; prank"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings and Japanese stroke counts",
+    "Unicode Unihan kVietnamese and kDefinition"
   ],
   "tags": []
 }

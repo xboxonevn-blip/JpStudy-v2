@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 22,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; word-level example readings no longer masquerade as kanji kunyomi.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k169",
@@ -18,95 +18,123 @@
       "strokeCount": 1,
       "labels": {
         "hanViet": "Nhất",
-        "meaningVi": "một; duy nhất",
-        "meaningViDisplay": "一 (một; duy nhất)",
+        "meaningVi": "một; duy nhất; trước hết",
+        "meaningViDisplay": "Nhất (một; duy nhất; trước hết)",
         "meaningEn": "one; a, an; alone"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イチ",
+          "イツ"
+        ],
         "kunyomi": [
-          "いちいち"
+          "ひと-",
+          "ひと.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 一 nghĩa là một; duy nhất. Ví dụ JLPT N1: 一々 (one by one, separately).",
-        "en": "Kanji 一 means one; a, an; alone. JLPT N1 example: 一々 (one by one, separately)."
+        "vi": "一 là số một; 一々 nghĩa là từng cái một hoặc từng việc riêng lẻ.",
+        "en": "一 means one; 一々 means one by one or separately."
       },
       "decomposition": {
         "hanViet": "Nhất",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "一"
+        ],
+        "componentNames": [
+          "nhất/một"
+        ],
+        "relatedKanji": [
+          "二",
+          "同",
+          "部",
+          "分"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhat",
-        "meaningViNoAccent": "mot; duy nhat",
+        "meaningViNoAccent": "mot; duy nhat; truoc het",
         "meaningEnNoAccent": "one; a, an; alone"
       },
       "examples": [
         {
           "word": "一々",
           "reading": "いちいち",
-          "meaning": "one by one, separately"
+          "meaning": "từng cái một; từng việc một",
+          "meaningEn": "one by one; separately"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k170",
       "lessonId": 22,
       "level": "N1",
       "character": "概",
-      "strokeCount": 13,
+      "strokeCount": 14,
       "labels": {
         "hanViet": "Khái",
-        "meaningVi": "khái quát; đại thể",
-        "meaningViDisplay": "概 (khái quát; đại thể)",
+        "meaningVi": "khái quát; đại thể; nói chung",
+        "meaningViDisplay": "Khái (khái quát; đại thể; nói chung)",
         "meaningEn": "generally, approximately"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ガイ"
+        ],
         "kunyomi": [
-          "いちがいに"
+          "おおむ.ね"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 概 nghĩa là khái quát; đại thể. Ví dụ JLPT N1: 一概に (nói chung, thường thì, như một quy tắc).",
-        "en": "Kanji 概 means generally, approximately. JLPT N1 example: 一概に (nói chung, thường thì, như một quy tắc)."
+        "vi": "概 là phần đại thể hoặc khái quát; 一概に dùng khi nói “không thể nói chung là...”.",
+        "en": "概 means outline or general idea; 一概に is used for speaking in broad terms."
       },
       "decomposition": {
         "hanViet": "Khái",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "木",
+          "既"
+        ],
+        "componentNames": [
+          "mộc/cây",
+          "ký/đã rồi"
+        ],
+        "relatedKanji": [
+          "要",
+          "略",
+          "全",
+          "一"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Khai",
-        "meaningViNoAccent": "khai quat; đai the",
+        "meaningViNoAccent": "khai quat; dai the; noi chung",
         "meaningEnNoAccent": "generally, approximately"
       },
       "examples": [
         {
           "word": "一概に",
           "reading": "いちがいに",
-          "meaning": "nói chung, thường thì, như một quy tắc"
+          "meaning": "nói chung; vơ đũa cả nắm",
+          "meaningEn": "categorically; generally"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,47 +146,63 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Trứ",
-        "meaningVi": "rõ rệt; nổi bật",
-        "meaningViDisplay": "著 (rõ rệt; nổi bật)",
-        "meaningEn": "manifest; (Cant.) to wear"
+        "meaningVi": "rõ rệt; nổi bật; viết ra",
+        "meaningViDisplay": "Trứ (rõ rệt; nổi bật; viết ra)",
+        "meaningEn": "manifest; remarkable; write"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チョ",
+          "チャク"
+        ],
         "kunyomi": [
-          "いちじるしい"
+          "あらわ.す",
+          "いちじる.しい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 著 nghĩa là rõ rệt; nổi bật. Ví dụ JLPT N1: 著しい (remarkable, considerable).",
-        "en": "Kanji 著 means manifest; (Cant.) to wear. JLPT N1 example: 著しい (remarkable, considerable)."
+        "vi": "著 là rõ rệt hoặc biểu hiện ra; 著しい nghĩa là đáng kể, nổi bật.",
+        "en": "著 means manifest or remarkable; 著しい means remarkable or considerable."
       },
       "decomposition": {
         "hanViet": "Trứ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "艹",
+          "者"
+        ],
+        "componentNames": [
+          "thảo/cỏ",
+          "giả/người"
+        ],
+        "relatedKanji": [
+          "書",
+          "明",
+          "目",
+          "者"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tru",
-        "meaningViNoAccent": "ro ret; noi bat",
-        "meaningEnNoAccent": "manifest; (Cant.) to wear"
+        "meaningViNoAccent": "ro ret; noi bat; viet ra",
+        "meaningEnNoAccent": "manifest; remarkable; write"
       },
       "examples": [
         {
           "word": "著しい",
           "reading": "いちじるしい",
-          "meaning": "remarkable, considerable"
+          "meaning": "rõ rệt; đáng kể; nổi bật",
+          "meaningEn": "remarkable; considerable"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k172",
@@ -168,97 +212,127 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Đồng",
-        "meaningVi": "cùng; giống nhau",
-        "meaningViDisplay": "同 (cùng; giống nhau)",
+        "meaningVi": "cùng; giống nhau; đồng thời",
+        "meaningViDisplay": "Đồng (cùng; giống nhau; đồng thời)",
         "meaningEn": "same, similar; together with"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ドウ"
+        ],
         "kunyomi": [
-          "いちどう"
+          "おな.じ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 同 nghĩa là cùng; giống nhau. Ví dụ JLPT N1: 一同 (all present, all concerned, all of us).",
-        "en": "Kanji 同 means same, similar; together with. JLPT N1 example: 一同 (all present, all concerned, all of us)."
+        "vi": "同 là giống nhau hoặc cùng một nhóm; 一同 chỉ toàn thể những người có mặt hoặc liên quan.",
+        "en": "同 means same or together; 一同 refers to everyone present or concerned."
       },
       "decomposition": {
         "hanViet": "Đồng",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "enclosure",
+        "components": [
+          "冂",
+          "一",
+          "口"
+        ],
+        "componentNames": [
+          "quynh/bao ngoài",
+          "nhất/một",
+          "khẩu/miệng"
+        ],
+        "relatedKanji": [
+          "一",
+          "共",
+          "等",
+          "会"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đong",
-        "meaningViNoAccent": "cung; giong nhau",
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "cung; giong nhau; dong thoi",
         "meaningEnNoAccent": "same, similar; together with"
       },
       "examples": [
         {
           "word": "一同",
           "reading": "いちどう",
-          "meaning": "all present, all concerned, all of us"
+          "meaning": "toàn thể; mọi người có mặt",
+          "meaningEn": "everyone present; all concerned"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k173",
       "lessonId": 22,
       "level": "N1",
       "character": "部",
-      "strokeCount": 10,
+      "strokeCount": 11,
       "labels": {
         "hanViet": "Bộ",
-        "meaningVi": "bộ phận; phần",
-        "meaningViDisplay": "部 (bộ phận; phần)",
+        "meaningVi": "bộ phận; phần; đơn vị",
+        "meaningViDisplay": "Bộ (bộ phận; phần; đơn vị)",
         "meaningEn": "part, division, section"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ブ"
+        ],
         "kunyomi": [
-          "いちぶ"
+          "-べ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 部 nghĩa là bộ phận; phần. Ví dụ JLPT N1: 一部 (1. one copy e.g. of a document, 2. a part, partly, some).",
-        "en": "Kanji 部 means part, division, section. JLPT N1 example: 一部 (1. one copy e.g. of a document, 2. a part, partly, some)."
+        "vi": "部 là phần hoặc đơn vị trong một tổng thể; 一部 là một phần, hoặc một bản của tài liệu.",
+        "en": "部 means part or division; 一部 is a part or one copy of a document."
       },
       "decomposition": {
         "hanViet": "Bộ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "咅",
+          "阝"
+        ],
+        "componentNames": [
+          "bộ/âm phụ",
+          "ấp/vùng đất"
+        ],
+        "relatedKanji": [
+          "分",
+          "全",
+          "課",
+          "門"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bo",
-        "meaningViNoAccent": "bo phan; phan",
+        "meaningViNoAccent": "bo phan; phan; don vi",
         "meaningEnNoAccent": "part, division, section"
       },
       "examples": [
         {
           "word": "一部",
           "reading": "いちぶ",
-          "meaning": "1. one copy e.g. of a document, 2. a part, partly, some"
+          "meaning": "một phần; một bộ/bản",
+          "meaningEn": "part; one copy"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k174",
@@ -268,47 +342,67 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Phân",
-        "meaningVi": "chia; phần",
-        "meaningViDisplay": "分 (chia; phần)",
+        "meaningVi": "chia; phần; hiểu rõ",
+        "meaningViDisplay": "Phân (chia; phần; hiểu rõ)",
         "meaningEn": "divide; small unit of time etc."
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ブン",
+          "フン",
+          "ブ"
+        ],
         "kunyomi": [
-          "いちぶぶん"
+          "わ.ける",
+          "わ.け",
+          "わ.かれる",
+          "わ.かる",
+          "わ.かつ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 分 nghĩa là chia; phần. Ví dụ JLPT N1: 一部分 (a part).",
-        "en": "Kanji 分 means divide; small unit of time etc.. JLPT N1 example: 一部分 (a part)."
+        "vi": "分 là chia ra hoặc phần được chia; 一部分 là một phần của tổng thể.",
+        "en": "分 means divide or a portion; 一部分 is one part of a whole."
       },
       "decomposition": {
         "hanViet": "Phân",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "八",
+          "刀"
+        ],
+        "componentNames": [
+          "bát/tám",
+          "đao/dao"
+        ],
+        "relatedKanji": [
+          "部",
+          "判",
+          "解",
+          "半"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phan",
-        "meaningViNoAccent": "chia; phan",
+        "meaningViNoAccent": "chia; phan; hieu ro",
         "meaningEnNoAccent": "divide; small unit of time etc."
       },
       "examples": [
         {
           "word": "一部分",
           "reading": "いちぶぶん",
-          "meaning": "a part"
+          "meaning": "một phần",
+          "meaningEn": "a part"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k175",
@@ -317,48 +411,65 @@
       "character": "別",
       "strokeCount": 7,
       "labels": {
-        "hanViet": "Biết",
+        "hanViet": "Biệt",
         "meaningVi": "riêng; khác; chia lìa",
-        "meaningViDisplay": "別 (riêng; khác; chia lìa)",
-        "meaningEn": "separate, other; do not"
+        "meaningViDisplay": "Biệt (riêng; khác; chia lìa)",
+        "meaningEn": "separate, other; distinguish"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ベツ"
+        ],
         "kunyomi": [
-          "いちべつ"
+          "わか.れる",
+          "わ.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 別 nghĩa là riêng; khác; chia lìa. Ví dụ JLPT N1: 一別 (parting).",
-        "en": "Kanji 別 means separate, other; do not. JLPT N1 example: 一別 (parting)."
+        "vi": "別 là tách ra hoặc khác với cái còn lại; 一別 là sự chia tay sau khi gặp nhau.",
+        "en": "別 means separate or different; 一別 is parting from someone."
       },
       "decomposition": {
-        "hanViet": "Biết",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Biệt",
+        "structure": "left-right",
+        "components": [
+          "口",
+          "刀",
+          "刂"
+        ],
+        "componentNames": [
+          "khẩu/miệng",
+          "đao/dao",
+          "đao/dao đứng"
+        ],
+        "relatedKanji": [
+          "異",
+          "離",
+          "分",
+          "他"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Biet",
         "meaningViNoAccent": "rieng; khac; chia lia",
-        "meaningEnNoAccent": "separate, other; do not"
+        "meaningEnNoAccent": "separate, other; distinguish"
       },
       "examples": [
         {
           "word": "一別",
           "reading": "いちべつ",
-          "meaning": "parting"
+          "meaning": "sự chia tay; từ biệt",
+          "meaningEn": "parting"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k176",
@@ -369,51 +480,66 @@
       "labels": {
         "hanViet": "Diện",
         "meaningVi": "mặt; bề mặt; phương diện",
-        "meaningViDisplay": "面 (mặt; bề mặt; phương diện)",
-        "meaningEn": "face; surface; plane; side, dimension; Kangxi radical 176"
+        "meaningViDisplay": "Diện (mặt; bề mặt; phương diện)",
+        "meaningEn": "face; surface; plane; side, dimension"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "メン",
+          "ベン"
+        ],
         "kunyomi": [
-          "いちめん"
+          "おも",
+          "おもて",
+          "つら"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 面 nghĩa là mặt; bề mặt; phương diện. Ví dụ JLPT N1: 一面 (một mặt, một khía cạnh, bề mặt).",
-        "en": "Kanji 面 means face; surface; plane; side, dimension; Kangxi radical 176. JLPT N1 example: 一面 (một mặt, một khía cạnh, bề mặt)."
+        "vi": "面 là mặt hoặc phương diện; 一面 có thể là một mặt, một khía cạnh hoặc toàn bề mặt.",
+        "en": "面 means face, surface, or aspect; 一面 can be one side, an aspect, or a whole surface."
       },
       "decomposition": {
         "hanViet": "Diện",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "面"
+        ],
+        "componentNames": [
+          "diện/mặt"
+        ],
+        "relatedKanji": [
+          "顔",
+          "表",
+          "側",
+          "向"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dien",
         "meaningViNoAccent": "mat; be mat; phuong dien",
-        "meaningEnNoAccent": "face; surface; plane; side, dimension; Kangxi radical 176"
+        "meaningEnNoAccent": "face; surface; plane; side, dimension"
       },
       "examples": [
         {
           "word": "一面",
           "reading": "いちめん",
-          "meaning": "một mặt, một khía cạnh, bề mặt"
+          "meaning": "một mặt; một khía cạnh; bề mặt",
+          "meaningEn": "one side; aspect; surface"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings and Japanese stroke counts",
+    "Unicode Unihan kVietnamese and kDefinition"
   ],
   "tags": []
 }

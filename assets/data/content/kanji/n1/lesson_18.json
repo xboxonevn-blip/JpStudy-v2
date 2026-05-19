@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 18,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; word-level example readings no longer masquerade as kanji kunyomi.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k137",
@@ -18,45 +18,61 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Dị",
-        "meaningVi": "khác; lạ",
-        "meaningViDisplay": "異 (khác; lạ)",
+        "meaningVi": "khác; lạ; bất thường",
+        "meaningViDisplay": "Dị (khác; lạ; bất thường)",
         "meaningEn": "different, unusual, strange"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いぎ"
+          "こと",
+          "こと.なる",
+          "け"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 異 nghĩa là khác; lạ. Ví dụ JLPT N1: 異議 (ý kiến phản đối, bất đồng).",
-        "en": "Kanji 異 means different, unusual, strange. JLPT N1 example: 異議 (ý kiến phản đối, bất đồng)."
+        "vi": "異 là khác hoặc bất thường; 異議 là ý kiến phản đối hay dị nghị.",
+        "en": "異 means different or unusual; 異議 is an objection or dissent."
       },
       "decomposition": {
         "hanViet": "Dị",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "田",
+          "共"
+        ],
+        "componentNames": [
+          "điền/ruộng",
+          "cộng/chung"
+        ],
+        "relatedKanji": [
+          "同",
+          "別",
+          "奇",
+          "議"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Di",
-        "meaningViNoAccent": "khac; la",
+        "meaningViNoAccent": "khac; la; bat thuong",
         "meaningEnNoAccent": "different, unusual, strange"
       },
       "examples": [
         {
           "word": "異議",
           "reading": "いぎ",
-          "meaning": "ý kiến phản đối, bất đồng"
+          "meaning": "ý kiến phản đối; dị nghị",
+          "meaningEn": "objection; dissent"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -68,47 +84,61 @@
       "strokeCount": 20,
       "labels": {
         "hanViet": "Nghị",
-        "meaningVi": "nghị luận; bàn bạc",
-        "meaningViDisplay": "議 (nghị luận; bàn bạc)",
+        "meaningVi": "bàn luận; nghị sự; ý kiến",
+        "meaningViDisplay": "Nghị (bàn luận; nghị sự; ý kiến)",
         "meaningEn": "consult, talk over, discuss"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ギ"
+        ],
         "kunyomi": [
-          "いぎ"
+          "はか.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 議 nghĩa là nghị luận; bàn bạc. Ví dụ JLPT N1: 異議 (objection, dissent, protest).",
-        "en": "Kanji 議 means consult, talk over, discuss. JLPT N1 example: 異議 (objection, dissent, protest)."
+        "vi": "議 là bàn bạc và nghị luận; trong 異議, chữ này chỉ ý kiến được nêu ra để phản đối.",
+        "en": "議 means discussion or deliberation; in 異議 it is the opinion raised in dissent."
       },
       "decomposition": {
         "hanViet": "Nghị",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "言",
+          "義"
+        ],
+        "componentNames": [
+          "ngôn/lời nói",
+          "nghĩa/lẽ phải"
+        ],
+        "relatedKanji": [
+          "義",
+          "論",
+          "会",
+          "異"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nghi",
-        "meaningViNoAccent": "nghi luan; ban bac",
+        "meaningViNoAccent": "ban luan; nghi su; y kien",
         "meaningEnNoAccent": "consult, talk over, discuss"
       },
       "examples": [
         {
           "word": "異議",
           "reading": "いぎ",
-          "meaning": "objection, dissent, protest"
+          "meaning": "ý kiến phản đối; dị nghị",
+          "meaningEn": "objection; dissent"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k139",
@@ -118,47 +148,61 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Quân",
-        "meaningVi": "quân đội; quân sự",
-        "meaningViDisplay": "軍 (quân đội; quân sự)",
+        "meaningVi": "quân đội; quân sự; chiến trận",
+        "meaningViDisplay": "Quân (quân đội; quân sự; chiến trận)",
         "meaningEn": "army, military; soldiers, troops"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "グン"
+        ],
         "kunyomi": [
           "いくさ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 軍 nghĩa là quân đội; quân sự. Ví dụ JLPT N1: 軍 (war, battle, campaign, fight).",
-        "en": "Kanji 軍 means army, military; soldiers, troops. JLPT N1 example: 軍 (war, battle, campaign, fight)."
+        "vi": "軍 chỉ quân đội hoặc việc quân sự; cách đọc いくさ xuất hiện trong văn phong cổ với nghĩa chiến trận.",
+        "en": "軍 means army or military; the reading いくさ is an older word for war or battle."
       },
       "decomposition": {
         "hanViet": "Quân",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "冖",
+          "車"
+        ],
+        "componentNames": [
+          "mịch/che phủ",
+          "xa/xe"
+        ],
+        "relatedKanji": [
+          "戦",
+          "兵",
+          "隊",
+          "運"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Quan",
-        "meaningViNoAccent": "quan đoi; quan su",
+        "meaningViNoAccent": "quan doi; quan su; chien tran",
         "meaningEnNoAccent": "army, military; soldiers, troops"
       },
       "examples": [
         {
           "word": "軍",
           "reading": "いくさ",
-          "meaning": "war, battle, campaign, fight"
+          "meaning": "chiến trận; chiến tranh",
+          "meaningEn": "war; battle"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k140",
@@ -168,45 +212,63 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Chiến",
-        "meaningVi": "chiến tranh; chiến đấu",
-        "meaningViDisplay": "戦 (chiến tranh; chiến đấu)",
+        "meaningVi": "chiến tranh; chiến đấu; trận chiến",
+        "meaningViDisplay": "Chiến (chiến tranh; chiến đấu; trận chiến)",
         "meaningEn": "war, fighting, battle"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "いくさ"
+          "いくさ",
+          "たたか.う",
+          "おのの.く",
+          "そよ.ぐ",
+          "わなな.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 戦 nghĩa là chiến tranh; chiến đấu. Ví dụ JLPT N1: 戦 (chiến tranh, trận chiến, cuộc chiến).",
-        "en": "Kanji 戦 means war, fighting, battle. JLPT N1 example: 戦 (chiến tranh, trận chiến, cuộc chiến)."
+        "vi": "戦 là chiến đấu hoặc chiến tranh; 戦 dùng độc lập có thể chỉ một trận chiến.",
+        "en": "戦 means war or fighting; as a word it can mean a battle."
       },
       "decomposition": {
         "hanViet": "Chiến",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "単",
+          "戈"
+        ],
+        "componentNames": [
+          "đơn/đơn lẻ",
+          "qua/vũ khí"
+        ],
+        "relatedKanji": [
+          "軍",
+          "争",
+          "闘",
+          "勝"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chien",
-        "meaningViNoAccent": "chien tranh; chien đau",
+        "meaningViNoAccent": "chien tranh; chien dau; tran chien",
         "meaningEnNoAccent": "war, fighting, battle"
       },
       "examples": [
         {
           "word": "戦",
           "reading": "いくさ",
-          "meaning": "chiến tranh, trận chiến, cuộc chiến"
+          "meaning": "chiến tranh; trận chiến",
+          "meaningEn": "war; battle"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,47 +280,66 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Dục",
-        "meaningVi": "nuôi dưỡng; giáo dục",
-        "meaningViDisplay": "育 (nuôi dưỡng; giáo dục)",
+        "meaningVi": "nuôi dưỡng; giáo dục; phát triển",
+        "meaningViDisplay": "Dục (nuôi dưỡng; giáo dục; phát triển)",
         "meaningEn": "produce, give birth to; educate"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イク"
+        ],
         "kunyomi": [
-          "いくせい"
+          "そだ.つ",
+          "そだ.ち",
+          "そだ.てる",
+          "はぐく.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 育 nghĩa là nuôi dưỡng; giáo dục. Ví dụ JLPT N1: 育成 (rearing, training, nurture, cultivation, promotion).",
-        "en": "Kanji 育 means produce, give birth to; educate. JLPT N1 example: 育成 (rearing, training, nurture, cultivation, promotion)."
+        "vi": "育 nói về nuôi dạy và làm cho phát triển; 育成 là bồi dưỡng hoặc đào tạo.",
+        "en": "育 is to raise, nurture, or grow; 育成 is development or training."
       },
       "decomposition": {
         "hanViet": "Dục",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "亠",
+          "厶",
+          "月"
+        ],
+        "componentNames": [
+          "đầu/nóc",
+          "khư/riêng",
+          "nguyệt/thân thể"
+        ],
+        "relatedKanji": [
+          "教",
+          "児",
+          "成",
+          "養"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Duc",
-        "meaningViNoAccent": "nuoi duong; giao duc",
+        "meaningViNoAccent": "nuoi duong; giao duc; phat trien",
         "meaningEnNoAccent": "produce, give birth to; educate"
       },
       "examples": [
         {
           "word": "育成",
           "reading": "いくせい",
-          "meaning": "rearing, training, nurture, cultivation, promotion"
+          "meaning": "bồi dưỡng; đào tạo; nuôi dưỡng phát triển",
+          "meaningEn": "training; development; nurturing"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k142",
@@ -268,45 +349,61 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Kỷ",
-        "meaningVi": "bao nhiêu; vài",
-        "meaningViDisplay": "幾 (bao nhiêu; vài)",
+        "meaningVi": "bao nhiêu; vài; gần như",
+        "meaningViDisplay": "Kỷ (bao nhiêu; vài; gần như)",
         "meaningEn": "how many? how much?; a few, some"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "キ"
+        ],
         "kunyomi": [
-          "いくた"
+          "いく-",
+          "いく.つ",
+          "いく.ら"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 幾 nghĩa là bao nhiêu; vài. Ví dụ JLPT N1: 幾多 (nhiều, vô số).",
-        "en": "Kanji 幾 means how many? how much?; a few, some. JLPT N1 example: 幾多 (nhiều, vô số)."
+        "vi": "幾 hỏi hoặc chỉ một lượng chưa xác định; 幾多 nhấn mạnh số lượng nhiều.",
+        "en": "幾 asks or marks an indefinite amount; 幾多 emphasizes numerous cases."
       },
       "decomposition": {
         "hanViet": "Kỷ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "mixed",
+        "components": [
+          "幺",
+          "戈"
+        ],
+        "componentNames": [
+          "yêu/nhỏ",
+          "qua/vũ khí"
+        ],
+        "relatedKanji": [
+          "多",
+          "数",
+          "何",
+          "機"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ky",
-        "meaningViNoAccent": "bao nhieu; vai",
+        "meaningViNoAccent": "bao nhieu; vai; gan nhu",
         "meaningEnNoAccent": "how many? how much?; a few, some"
       },
       "examples": [
         {
           "word": "幾多",
           "reading": "いくた",
-          "meaning": "nhiều, vô số"
+          "meaning": "nhiều; vô số",
+          "meaningEn": "many; numerous"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,47 +415,63 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Đa",
-        "meaningVi": "nhiều",
-        "meaningViDisplay": "多 (nhiều)",
+        "meaningVi": "nhiều; đa dạng",
+        "meaningViDisplay": "Đa (nhiều; đa dạng)",
         "meaningEn": "much, many; more than, over"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タ"
+        ],
         "kunyomi": [
-          "いくた"
+          "おお.い",
+          "まさ.に",
+          "まさ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 多 nghĩa là nhiều. Ví dụ JLPT N1: 幾多 (many, numerous).",
-        "en": "Kanji 多 means much, many; more than, over. JLPT N1 example: 幾多 (many, numerous)."
+        "vi": "多 là nhiều; trong 幾多, nó làm rõ nghĩa số lượng lớn.",
+        "en": "多 means many; in 幾多 it reinforces the idea of numerous things."
       },
       "decomposition": {
         "hanViet": "Đa",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "夕",
+          "夕"
+        ],
+        "componentNames": [
+          "tịch/chiều tối",
+          "tịch/chiều tối"
+        ],
+        "relatedKanji": [
+          "少",
+          "幾",
+          "数",
+          "大"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đa",
-        "meaningViNoAccent": "nhieu",
+        "hanVietNoAccent": "Da",
+        "meaningViNoAccent": "nhieu; da dang",
         "meaningEnNoAccent": "much, many; more than, over"
       },
       "examples": [
         {
           "word": "幾多",
           "reading": "いくた",
-          "meaning": "many, numerous"
+          "meaning": "nhiều; vô số",
+          "meaningEn": "many; numerous"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k144",
@@ -368,52 +481,68 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Hoạt",
-        "meaningVi": "sống; hoạt động",
-        "meaningViDisplay": "活 (sống; hoạt động)",
+        "meaningVi": "sống; hoạt động; làm cho sinh động",
+        "meaningViDisplay": "Hoạt (sống; hoạt động; làm cho sinh động)",
         "meaningEn": "live, exist, survive; lively"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カツ"
+        ],
         "kunyomi": [
-          "いける"
+          "い.きる",
+          "い.かす",
+          "い.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 活 nghĩa là sống; hoạt động. Ví dụ JLPT N1: 活ける (to arrange (flowers)).",
-        "en": "Kanji 活 means live, exist, survive; lively. JLPT N1 example: 活ける (to arrange (flowers))."
+        "vi": "活 gắn với sự sống và hoạt động; 活ける dùng trong cách nói cắm hoa.",
+        "en": "活 relates to life and activity; 活ける is used for arranging flowers."
       },
       "decomposition": {
         "hanViet": "Hoạt",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "舌"
+        ],
+        "componentNames": [
+          "thủy/nước",
+          "thiệt/lưỡi"
+        ],
+        "relatedKanji": [
+          "生",
+          "動",
+          "命",
+          "舌"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoat",
-        "meaningViNoAccent": "song; hoat đong",
+        "meaningViNoAccent": "song; hoat dong; lam cho sinh dong",
         "meaningEnNoAccent": "live, exist, survive; lively"
       },
       "examples": [
         {
           "word": "活ける",
           "reading": "いける",
-          "meaning": "to arrange (flowers)"
+          "meaning": "cắm hoa; sắp hoa",
+          "meaningEn": "arrange flowers"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings and Japanese stroke counts",
+    "Unicode Unihan kVietnamese and kDefinition"
   ],
   "tags": []
 }

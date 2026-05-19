@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 68;
+const _kanjiSeedRevision = 69;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -309,6 +309,41 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '緯',
     meaning: 'Vĩ (vĩ tuyến; sợi ngang; chiều ngang)',
     decompositionContains: '"hanViet":"Vĩ"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 18,
+    character: '議',
+    meaning: 'Nghị (bàn luận; nghị sự; ý kiến)',
+    decompositionContains: '"hanViet":"Nghị"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 19,
+    character: '移',
+    meaning: 'Di (di chuyển; chuyển đổi; dời đi)',
+    decompositionContains: '"hanViet":"Di"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 20,
+    character: '託',
+    meaning: 'Thác (ủy thác; nhờ cậy; giao phó)',
+    decompositionContains: '"hanViet":"Thác"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 21,
+    character: '位',
+    meaning: 'Vị (vị trí; cấp bậc; địa vị)',
+    decompositionContains: '"hanViet":"Vị"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 22,
+    character: '別',
+    meaning: 'Biệt (riêng; khác; chia lìa)',
+    decompositionContains: '"hanViet":"Biệt"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

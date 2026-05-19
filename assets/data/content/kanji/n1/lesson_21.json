@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 21,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; word-level example readings no longer masquerade as kanji kunyomi.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k161",
@@ -18,47 +18,62 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Đính",
-        "meaningVi": "đỉnh; đội trên đầu",
-        "meaningViDisplay": "頂 (đỉnh; đội trên đầu)",
+        "meaningVi": "đỉnh; phần trên cùng; nhận kính cẩn",
+        "meaningViDisplay": "Đính (đỉnh; phần trên cùng; nhận kính cẩn)",
         "meaningEn": "top, peak; carry on head; very"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チョウ"
+        ],
         "kunyomi": [
+          "いただ.く",
           "いただき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 頂 nghĩa là đỉnh; đội trên đầu. Ví dụ JLPT N1: 頂 ((top of) head, summit, spire).",
-        "en": "Kanji 頂 means top, peak; carry on head; very. JLPT N1 example: 頂 ((top of) head, summit, spire)."
+        "vi": "頂 là đỉnh hoặc phần cao nhất; 頂 cũng đọc いただき khi nói về đỉnh núi hay đỉnh đầu.",
+        "en": "頂 means top or peak; read いただき for summit or top of the head."
       },
       "decomposition": {
         "hanViet": "Đính",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "丁",
+          "頁"
+        ],
+        "componentNames": [
+          "đinh/đinh",
+          "hiệt/trang đầu"
+        ],
+        "relatedKanji": [
+          "頭",
+          "上",
+          "峰",
+          "戴"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đinh",
-        "meaningViNoAccent": "đinh; đoi tren đau",
+        "hanVietNoAccent": "Dinh",
+        "meaningViNoAccent": "dinh; phan tren cung; nhan kinh can",
         "meaningEnNoAccent": "top, peak; carry on head; very"
       },
       "examples": [
         {
           "word": "頂",
           "reading": "いただき",
-          "meaning": "(top of) head, summit, spire"
+          "meaning": "đỉnh; phần trên cùng",
+          "meaningEn": "summit; top"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k162",
@@ -69,44 +84,60 @@
       "labels": {
         "hanViet": "Đái",
         "meaningVi": "đội lên; nhận kính cẩn",
-        "meaningViDisplay": "戴 (đội lên; nhận kính cẩn)",
+        "meaningViDisplay": "Đái (đội lên; nhận kính cẩn)",
         "meaningEn": "wear on top; support"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タイ"
+        ],
         "kunyomi": [
-          "いただきます"
+          "いただ.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 戴 nghĩa là đội lên; nhận kính cẩn. Ví dụ JLPT N1: 戴きます (lời cảm ơn trước bữa ăn).",
-        "en": "Kanji 戴 means wear on top; support. JLPT N1 example: 戴きます (lời cảm ơn trước bữa ăn)."
+        "vi": "戴 là đội lên đầu hoặc nhận một cách kính cẩn; 戴きます là cách viết trang trọng của いただきます.",
+        "en": "戴 means put on the head or receive respectfully; 戴きます is a formal spelling of いただきます."
       },
       "decomposition": {
         "hanViet": "Đái",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "mixed",
+        "components": [
+          "十",
+          "異",
+          "戈"
+        ],
+        "componentNames": [
+          "thập/mười",
+          "dị/khác",
+          "qua/vũ khí"
+        ],
+        "relatedKanji": [
+          "頂",
+          "受",
+          "礼",
+          "食"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Dai",
-        "meaningViNoAccent": "đoi len; nhan kinh can",
+        "meaningViNoAccent": "doi len; nhan kinh can",
         "meaningEnNoAccent": "wear on top; support"
       },
       "examples": [
         {
           "word": "戴きます",
           "reading": "いただきます",
-          "meaning": "lời cảm ơn trước bữa ăn"
+          "meaning": "xin phép dùng bữa; xin nhận",
+          "meaningEn": "thankfully receive; phrase before eating"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -118,47 +149,59 @@
       "strokeCount": 6,
       "labels": {
         "hanViet": "Chí",
-        "meaningVi": "đến; cực kỳ",
-        "meaningViDisplay": "至 (đến; cực kỳ)",
-        "meaningEn": "reach, arrive; extremely, very; Kangxi radical 133"
+        "meaningVi": "đến; đạt tới; cực kỳ",
+        "meaningViDisplay": "Chí (đến; đạt tới; cực kỳ)",
+        "meaningEn": "reach, arrive; extremely, very"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
-          "いたって"
+          "いた.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 至 nghĩa là đến; cực kỳ. Ví dụ JLPT N1: 至って (very much, exceedingly, extremely).",
-        "en": "Kanji 至 means reach, arrive; extremely, very; Kangxi radical 133. JLPT N1 example: 至って (very much, exceedingly, extremely)."
+        "vi": "至 là đi tới điểm cuối; 至って dùng như trạng từ nghĩa là rất hoặc hết sức.",
+        "en": "至 means reach a point; 至って as an adverb means very or extremely."
       },
       "decomposition": {
         "hanViet": "Chí",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "至"
+        ],
+        "componentNames": [
+          "chí/đến"
+        ],
+        "relatedKanji": [
+          "到",
+          "極",
+          "達",
+          "致"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Chi",
-        "meaningViNoAccent": "đen; cuc ky",
-        "meaningEnNoAccent": "reach, arrive; extremely, very; Kangxi radical 133"
+        "meaningViNoAccent": "den; dat toi; cuc ky",
+        "meaningEnNoAccent": "reach, arrive; extremely, very"
       },
       "examples": [
         {
           "word": "至って",
           "reading": "いたって",
-          "meaning": "very much, exceedingly, extremely"
+          "meaning": "rất; hết sức",
+          "meaningEn": "very; extremely"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k164",
@@ -168,47 +211,64 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Thống",
-        "meaningVi": "đau; buồn; cay đắng",
-        "meaningViDisplay": "痛 (đau; buồn; cay đắng)",
+        "meaningVi": "đau; nhức; đau buồn",
+        "meaningViDisplay": "Thống (đau; nhức; đau buồn)",
         "meaningEn": "pain, ache; sorry, sad; bitter"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ツウ"
+        ],
         "kunyomi": [
-          "いたむ"
+          "いた.い",
+          "いた.む",
+          "いた.ましい",
+          "いた.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 痛 nghĩa là đau; buồn; cay đắng. Ví dụ JLPT N1: 痛む (to hurt, to feel a pain, to be injured).",
-        "en": "Kanji 痛 means pain, ache; sorry, sad; bitter. JLPT N1 example: 痛む (to hurt, to feel a pain, to be injured)."
+        "vi": "痛 là đau về thể chất hoặc đau xót trong lòng; 痛む là bị đau hoặc thấy đau.",
+        "en": "痛 means physical pain or emotional hurt; 痛む is to hurt or ache."
       },
       "decomposition": {
         "hanViet": "Thống",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "mixed",
+        "components": [
+          "疒",
+          "甬"
+        ],
+        "componentNames": [
+          "nạch/bệnh",
+          "dũng/đường thông"
+        ],
+        "relatedKanji": [
+          "病",
+          "苦",
+          "傷",
+          "悼"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thong",
-        "meaningViNoAccent": "đau; buon; cay đang",
+        "meaningViNoAccent": "dau; nhuc; dau buon",
         "meaningEnNoAccent": "pain, ache; sorry, sad; bitter"
       },
       "examples": [
         {
           "word": "痛む",
           "reading": "いたむ",
-          "meaning": "to hurt, to feel a pain, to be injured"
+          "meaning": "đau; nhức; bị tổn thương",
+          "meaningEn": "hurt; ache"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k165",
@@ -218,47 +278,63 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Sao",
-        "meaningVi": "xào; rang",
-        "meaningViDisplay": "炒 (xào; rang)",
+        "meaningVi": "xào; rang; đảo trên lửa",
+        "meaningViDisplay": "Sao (xào; rang; đảo trên lửa)",
         "meaningEn": "fry, saute, roast, boil, cook"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ソウ",
+          "ショウ"
+        ],
         "kunyomi": [
-          "いためる"
+          "い.る",
+          "いた.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 炒 nghĩa là xào; rang. Ví dụ JLPT N1: 炒める (to stir-fry).",
-        "en": "Kanji 炒 means fry, saute, roast, boil, cook. JLPT N1 example: 炒める (to stir-fry)."
+        "vi": "炒 là xào hoặc rang bằng lửa; 炒める là xào thức ăn.",
+        "en": "炒 means fry or roast with heat; 炒める is to stir-fry food."
       },
       "decomposition": {
         "hanViet": "Sao",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "火",
+          "少"
+        ],
+        "componentNames": [
+          "hỏa/lửa",
+          "thiểu/ít"
+        ],
+        "relatedKanji": [
+          "焼",
+          "煮",
+          "火",
+          "料"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Sao",
-        "meaningViNoAccent": "xao; rang",
+        "meaningViNoAccent": "xao; rang; dao tren lua",
         "meaningEnNoAccent": "fry, saute, roast, boil, cook"
       },
       "examples": [
         {
           "word": "炒める",
           "reading": "いためる",
-          "meaning": "to stir-fry"
+          "meaning": "xào",
+          "meaningEn": "stir-fry"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k166",
@@ -268,45 +344,66 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Lao",
-        "meaningVi": "lao động; vất vả",
-        "meaningViDisplay": "労 (lao động; vất vả)",
+        "meaningVi": "lao động; vất vả; chăm sóc",
+        "meaningViDisplay": "Lao (lao động; vất vả; chăm sóc)",
         "meaningEn": "labor, toil, do manual work"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ロウ"
+        ],
         "kunyomi": [
-          "いたわる"
+          "ろう.する",
+          "いたわ.る",
+          "いた.ずき",
+          "ねぎら",
+          "つか.れる",
+          "ねぎら.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 労 nghĩa là lao động; vất vả. Ví dụ JLPT N1: 労る (an ủi, chăm sóc, đối xử tử tế).",
-        "en": "Kanji 労 means labor, toil, do manual work. JLPT N1 example: 労る (an ủi, chăm sóc, đối xử tử tế)."
+        "vi": "労 là lao lực hoặc sự vất vả; 労る là chăm sóc, an ủi hoặc đối xử ân cần.",
+        "en": "労 means labor or toil; 労る is to care for or comfort someone."
       },
       "decomposition": {
         "hanViet": "Lao",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "⺌",
+          "冖",
+          "力"
+        ],
+        "componentNames": [
+          "tiểu/nhỏ",
+          "mịch/che phủ",
+          "lực/sức"
+        ],
+        "relatedKanji": [
+          "働",
+          "苦",
+          "慰",
+          "力"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Lao",
-        "meaningViNoAccent": "lao đong; vat va",
+        "meaningViNoAccent": "lao dong; vat va; cham soc",
         "meaningEnNoAccent": "labor, toil, do manual work"
       },
       "examples": [
         {
           "word": "労る",
           "reading": "いたわる",
-          "meaning": "an ủi, chăm sóc, đối xử tử tế"
+          "meaning": "chăm sóc; an ủi; đối xử ân cần",
+          "meaningEn": "care for; comfort"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,47 +415,61 @@
       "strokeCount": 5,
       "labels": {
         "hanViet": "Thị",
-        "meaningVi": "chợ; thành phố",
-        "meaningViDisplay": "市 (chợ; thành phố)",
+        "meaningVi": "chợ; thành phố; thị trường",
+        "meaningViDisplay": "Thị (chợ; thành phố; thị trường)",
         "meaningEn": "market, fair; city, town; trade"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シ"
+        ],
         "kunyomi": [
           "いち"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 市 nghĩa là chợ; thành phố. Ví dụ JLPT N1: 市 (market, fair).",
-        "en": "Kanji 市 means market, fair; city, town; trade. JLPT N1 example: 市 (market, fair)."
+        "vi": "市 là chợ hoặc thành phố; khi đọc いち, chữ này thường chỉ chợ.",
+        "en": "市 means market or city; read いち when it means a market."
       },
       "decomposition": {
         "hanViet": "Thị",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "亠",
+          "巾"
+        ],
+        "componentNames": [
+          "đầu/nóc",
+          "cân/khăn"
+        ],
+        "relatedKanji": [
+          "町",
+          "場",
+          "都",
+          "商"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thi",
-        "meaningViNoAccent": "cho; thanh pho",
+        "meaningViNoAccent": "cho; thanh pho; thi truong",
         "meaningEnNoAccent": "market, fair; city, town; trade"
       },
       "examples": [
         {
           "word": "市",
           "reading": "いち",
-          "meaning": "market, fair"
+          "meaning": "chợ; phiên chợ",
+          "meaningEn": "market; fair"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k168",
@@ -368,52 +479,67 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Vị",
-        "meaningVi": "vị trí; cấp bậc",
-        "meaningViDisplay": "位 (vị trí; cấp bậc)",
+        "meaningVi": "vị trí; cấp bậc; địa vị",
+        "meaningViDisplay": "Vị (vị trí; cấp bậc; địa vị)",
         "meaningEn": "throne; position, post; rank, status; seat"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "いち"
+          "くらい",
+          "ぐらい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 位 nghĩa là vị trí; cấp bậc. Ví dụ JLPT N1: 位地 (place, situation, position, location).",
-        "en": "Kanji 位 means throne; position, post; rank, status; seat. JLPT N1 example: 位地 (place, situation, position, location)."
+        "vi": "位 là vị trí hoặc thứ bậc; 位置 là vị trí cụ thể của người hoặc vật.",
+        "en": "位 means rank or position; 位置 is the location of something."
       },
       "decomposition": {
         "hanViet": "Vị",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "立"
+        ],
+        "componentNames": [
+          "nhân/người",
+          "lập/đứng"
+        ],
+        "relatedKanji": [
+          "置",
+          "席",
+          "階",
+          "立"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vi",
-        "meaningViNoAccent": "vi tri; cap bac",
+        "meaningViNoAccent": "vi tri; cap bac; dia vi",
         "meaningEnNoAccent": "throne; position, post; rank, status; seat"
       },
       "examples": [
         {
-          "word": "位地",
+          "word": "位置",
           "reading": "いち",
-          "meaning": "place, situation, position, location"
+          "meaning": "vị trí; chỗ đứng",
+          "meaningEn": "position; location"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings and Japanese stroke counts",
+    "Unicode Unihan kVietnamese and kDefinition"
   ],
   "tags": []
 }

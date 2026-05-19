@@ -705,3 +705,10 @@ Phase 4 audit expected deep lesson data-model surgery, but the learner-facing Qu
 - Actual observation: N1 lesson 14 linked both `伊` and `井` to `伊井/いい` with gloss `that one, Italy`; the row appears to be a generated or imported artifact rather than a useful learner example. Source-verifying those kanji required replacing it with real reachable examples `伊豆/いず` and `井戸/いど`.
 - Delta: -15 percentage points on confidence that imported upper-JLPT vocab rows are safe example anchors.
 - Updated belief: kanji source verification must validate that each example term is a real, pedagogically useful word, not only that the character appears in the string.
+
+## 2026-05-19 - JSON proof is not enough for content seed migrations
+
+- Prior belief: after `no-cache` was restored, page-context fetch of deployed JSON plus header checks was enough primary live proof for a content batch.
+- Actual observation: the owner correctly tightened the loop: a deployed JSON can be correct while the running app still renders stale IndexedDB or old runtime state. For N1 lessons 18-22, the meaningful proof was the rendered VI/N1 Kanji UI search/detail path (`議` detail and `別` grid), with normal browser cache enabled.
+- Delta: -20 percentage points on confidence that raw asset fetch proves user-visible content correctness.
+- Updated belief: every batch live proof must include at least one real UI render path for the changed data, plus normal-cache headers. JSON fetch remains a supporting artifact, not the proof by itself.

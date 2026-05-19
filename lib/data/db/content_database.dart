@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 41;
+const _kanjiSeedRevision = 42;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -120,6 +120,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '恨',
     meaning: 'Hận (oán hận; thù hằn; nỗi hận)',
     decompositionContains: '"hanViet":"Hận"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 16,
+    character: '英',
+    meaning: 'Anh (Anh; nước Anh; tiếng Anh; ưu tú)',
+    decompositionContains: '"hanViet":"Anh"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

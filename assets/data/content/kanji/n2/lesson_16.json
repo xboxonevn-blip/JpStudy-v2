@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 16,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k121",
@@ -18,37 +18,45 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Anh",
-        "meaningVi": "sentence in English",
-        "meaningViDisplay": "英 (sentence in English)",
-        "meaningEn": "sentence in English"
+        "meaningVi": "Anh; nước Anh; tiếng Anh; ưu tú",
+        "meaningViDisplay": "Anh (Anh; nước Anh; tiếng Anh; ưu tú)",
+        "meaningEn": "England, English, outstanding, hero"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エイ"
+        ],
         "kunyomi": [
-          "えいぶん"
+          "はなぶさ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 英文 (sentence in English).",
-        "en": "Appears in JLPT N2 vocabulary: 英文 (sentence in English)."
+        "vi": "英 thường chỉ nước Anh, tiếng Anh hoặc sự ưu tú; trong 英文, 英 xác định phần “tiếng Anh” của câu/văn bản.",
+        "en": "英 often means England, English, or outstanding; in 英文 it marks the English-language part of a sentence or text."
       },
       "decomposition": {
         "hanViet": "Anh",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "文",
+          "語",
+          "国",
+          "和"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Anh",
-        "meaningViNoAccent": "sentence in english",
-        "meaningEnNoAccent": "sentence in english"
+        "meaningViNoAccent": "Anh; nuoc Anh; tieng Anh; uu tu",
+        "meaningEnNoAccent": "England, English, outstanding, hero"
       },
       "examples": [
         {
           "word": "英文",
           "reading": "えいぶん",
-          "meaning": "sentence in English"
+          "meaning": "câu tiếng Anh; văn tiếng Anh",
+          "meaningEn": "English sentence, English text"
         }
       ],
       "tags": [
@@ -56,9 +64,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k122",
@@ -68,37 +77,47 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Văn",
-        "meaningVi": "sentence in English",
-        "meaningViDisplay": "文 (sentence in English)",
-        "meaningEn": "sentence in English"
+        "meaningVi": "văn; chữ viết; câu văn; văn chương",
+        "meaningViDisplay": "Văn (văn; chữ viết; câu văn; văn chương)",
+        "meaningEn": "sentence, writing, literature, style"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ブン",
+          "モン"
+        ],
         "kunyomi": [
-          "えいぶん"
+          "ふみ",
+          "あや"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 英文 (sentence in English).",
-        "en": "Appears in JLPT N2 vocabulary: 英文 (sentence in English)."
+        "vi": "文 là chữ viết hoặc câu văn; trong 英文, 文 là phần câu/văn bản được viết bằng tiếng Anh.",
+        "en": "文 means writing or sentence; in 英文 it is the sentence/text written in English."
       },
       "decomposition": {
         "hanViet": "Văn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "英",
+          "字",
+          "章",
+          "語"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Van",
-        "meaningViNoAccent": "sentence in english",
-        "meaningEnNoAccent": "sentence in english"
+        "meaningViNoAccent": "van; chu viet; cau van; van chuong",
+        "meaningEnNoAccent": "sentence, writing, literature, style"
       },
       "examples": [
         {
           "word": "英文",
           "reading": "えいぶん",
-          "meaning": "sentence in English"
+          "meaning": "câu tiếng Anh; văn tiếng Anh",
+          "meaningEn": "English sentence, English text"
         }
       ],
       "tags": [
@@ -106,9 +125,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k123",
@@ -118,37 +138,51 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Hoà",
-        "meaningVi": "English-Japanese (e.g. dictionary)",
-        "meaningViDisplay": "和 (English-Japanese (e.g. dictionary))",
-        "meaningEn": "English-Japanese (e.g. dictionary)"
+        "meaningVi": "hòa; hòa hợp; Nhật Bản; kiểu Nhật",
+        "meaningViDisplay": "Hoà (hòa; hòa hợp; Nhật Bản; kiểu Nhật)",
+        "meaningEn": "harmony, Japanese style, peace, Japan"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ワ",
+          "オ",
+          "カ"
+        ],
         "kunyomi": [
-          "えいわ"
+          "やわ.らぐ",
+          "やわ.らげる",
+          "なご.む",
+          "なご.やか",
+          "あ.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 英和 (English-Japanese (e.g. dictionary)).",
-        "en": "Appears in JLPT N2 vocabulary: 英和 (English-Japanese (e.g. dictionary))."
+        "vi": "和 có nghĩa là hòa hợp và cũng chỉ Nhật Bản/kiểu Nhật; trong 英和, 和 là phần tiếng Nhật của cặp Anh-Nhật.",
+        "en": "和 means harmony and also Japan/Japanese style; in 英和 it marks the Japanese side of English-Japanese."
       },
       "decomposition": {
         "hanViet": "Hoà",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "英",
+          "日",
+          "平",
+          "語"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoa",
-        "meaningViNoAccent": "english-japanese (e.g. dictionary)",
-        "meaningEnNoAccent": "english-japanese (e.g. dictionary)"
+        "meaningViNoAccent": "hoa; hoa hop; Nhat Ban; kieu Nhat",
+        "meaningEnNoAccent": "harmony, Japanese style, peace, Japan"
       },
       "examples": [
         {
           "word": "英和",
           "reading": "えいわ",
-          "meaning": "English-Japanese (e.g. dictionary)"
+          "meaning": "Anh-Nhật; từ điển Anh-Nhật",
+          "meaningEn": "English-Japanese"
         }
       ],
       "tags": [
@@ -156,9 +190,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k124",
@@ -167,38 +202,45 @@
       "character": "液",
       "strokeCount": 11,
       "labels": {
-        "hanViet": "Giá",
-        "meaningVi": "liquid, fluid",
-        "meaningViDisplay": "液 (liquid, fluid)",
-        "meaningEn": "liquid, fluid"
+        "hanViet": "Dịch",
+        "meaningVi": "dịch; chất lỏng; chất dịch",
+        "meaningViDisplay": "Dịch (dịch; chất lỏng; chất dịch)",
+        "meaningEn": "fluid, liquid, juice, sap"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エキ"
+        ],
         "kunyomi": [
-          "えきたい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 液体 (liquid, fluid).",
-        "en": "Appears in JLPT N2 vocabulary: 液体 (liquid, fluid)."
+        "vi": "液 chỉ chất dịch hoặc chất lỏng; trong 液体, nó nhấn mạnh vật chất ở trạng thái lỏng.",
+        "en": "液 points to fluid or liquid; in 液体 it marks matter in a liquid state."
       },
       "decomposition": {
-        "hanViet": "Giá",
+        "hanViet": "Dịch",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "水",
+          "汁",
+          "体",
+          "流"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Gia",
-        "meaningViNoAccent": "liquid, fluid",
-        "meaningEnNoAccent": "liquid, fluid"
+        "hanVietNoAccent": "Dich",
+        "meaningViNoAccent": "dich; chat long; chat dich",
+        "meaningEnNoAccent": "fluid, liquid, juice, sap"
       },
       "examples": [
         {
           "word": "液体",
           "reading": "えきたい",
-          "meaning": "liquid, fluid"
+          "meaning": "chất lỏng; thể lỏng",
+          "meaningEn": "liquid, fluid"
         }
       ],
       "tags": [
@@ -206,9 +248,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k125",
@@ -218,37 +261,47 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Thể",
-        "meaningVi": "liquid, fluid",
-        "meaningViDisplay": "体 (liquid, fluid)",
-        "meaningEn": "liquid, fluid"
+        "meaningVi": "thể; thân thể; cơ thể; vật thể",
+        "meaningViDisplay": "Thể (thể; thân thể; cơ thể; vật thể)",
+        "meaningEn": "body, substance, object, form"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "タイ",
+          "テイ"
+        ],
         "kunyomi": [
-          "えきたい"
+          "からだ",
+          "かたち"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 液体 (liquid, fluid).",
-        "en": "Appears in JLPT N2 vocabulary: 液体 (liquid, fluid)."
+        "vi": "体 là thân thể, vật thể hoặc trạng thái; trong 液体, nó chỉ một vật/chất ở thể lỏng.",
+        "en": "体 means body, object, or state; in 液体 it marks a substance in liquid form."
       },
       "decomposition": {
         "hanViet": "Thể",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "身",
+          "液",
+          "物",
+          "形"
+        ]
       },
       "search": {
         "hanVietNoAccent": "The",
-        "meaningViNoAccent": "liquid, fluid",
-        "meaningEnNoAccent": "liquid, fluid"
+        "meaningViNoAccent": "the; than the; co the; vat the",
+        "meaningEnNoAccent": "body, substance, object, form"
       },
       "examples": [
         {
           "word": "液体",
           "reading": "えきたい",
-          "meaning": "liquid, fluid"
+          "meaning": "chất lỏng; thể lỏng",
+          "meaningEn": "liquid, fluid"
         }
       ],
       "tags": [
@@ -256,9 +309,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k126",
@@ -268,45 +322,54 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Hội",
-        "meaningVi": "colors, paints",
-        "meaningViDisplay": "絵 (colors, paints)",
-        "meaningEn": "colors, paints"
+        "meaningVi": "hội; tranh; hình vẽ; hội họa",
+        "meaningViDisplay": "Hội (hội; tranh; hình vẽ; hội họa)",
+        "meaningEn": "picture, drawing, painting, sketch"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カイ",
+          "エ"
+        ],
         "kunyomi": [
-          "えのぐ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 絵の具 (colors, paints).",
-        "en": "Appears in JLPT N2 vocabulary: 絵の具 (colors, paints)."
+        "vi": "絵 là tranh hoặc hình vẽ; trong 絵の具, nó cho biết đây là màu dùng để vẽ tranh.",
+        "en": "絵 is a picture or drawing; in 絵の具 it marks paints used for drawing."
       },
       "decomposition": {
         "hanViet": "Hội",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "画",
+          "図",
+          "色",
+          "具"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hoi",
-        "meaningViNoAccent": "colors, paints",
-        "meaningEnNoAccent": "colors, paints"
+        "meaningViNoAccent": "hoi; tranh; hinh ve; hoi hoa",
+        "meaningEnNoAccent": "picture, drawing, painting, sketch"
       },
       "examples": [
         {
           "word": "絵の具",
           "reading": "えのぐ",
-          "meaning": "colors, paints"
+          "meaning": "màu vẽ; sơn vẽ",
+          "meaningEn": "paints, colors"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -318,37 +381,46 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Cụ",
-        "meaningVi": "colors, paints",
-        "meaningViDisplay": "具 (colors, paints)",
-        "meaningEn": "colors, paints"
+        "meaningVi": "cụ; dụng cụ; thành phần; phương tiện",
+        "meaningViDisplay": "Cụ (cụ; dụng cụ; thành phần; phương tiện)",
+        "meaningEn": "tool, utensil, means, ingredients"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "グ"
+        ],
         "kunyomi": [
-          "えのぐ"
+          "そな.える",
+          "つぶさ.に"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 絵の具 (colors, paints).",
-        "en": "Appears in JLPT N2 vocabulary: 絵の具 (colors, paints)."
+        "vi": "具 là dụng cụ hoặc thành phần; trong 絵の具, nó là “đồ dùng/thành phần” để vẽ màu.",
+        "en": "具 means tool or ingredient; in 絵の具 it is the material/tool used for paint."
       },
       "decomposition": {
         "hanViet": "Cụ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "道",
+          "器",
+          "用",
+          "絵"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Cu",
-        "meaningViNoAccent": "colors, paints",
-        "meaningEnNoAccent": "colors, paints"
+        "meaningViNoAccent": "cu; dung cu; thanh phan; phuong tien",
+        "meaningEnNoAccent": "tool, utensil, means, ingredients"
       },
       "examples": [
         {
           "word": "絵の具",
           "reading": "えのぐ",
-          "meaning": "colors, paints"
+          "meaning": "màu vẽ; sơn vẽ",
+          "meaningEn": "paints, colors"
         }
       ],
       "tags": [
@@ -356,9 +428,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k128",
@@ -368,37 +441,45 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Vĩ",
-        "meaningVi": "great, celebrated, eminent, terrible, awful, famous, remarkable, excellent",
-        "meaningViDisplay": "偉 (great, celebrated, eminent, terrible, awful, famous, remarkable, excellent)",
-        "meaningEn": "great, celebrated, eminent, terrible, awful, famous, remarkable, excellent"
+        "meaningVi": "vĩ; vĩ đại; nổi bật; đáng nể",
+        "meaningViDisplay": "Vĩ (vĩ; vĩ đại; nổi bật; đáng nể)",
+        "meaningEn": "admirable, great, remarkable, famous, excellent"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "イ"
+        ],
         "kunyomi": [
-          "えらい"
+          "えら.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 偉い (great, celebrated, eminent, terrible, awful, famous, remarkable, excellent).",
-        "en": "Appears in JLPT N2 vocabulary: 偉い (great, celebrated, eminent, terrible, awful, famous, remarkable, excellent)."
+        "vi": "偉 chỉ điều lớn lao hoặc đáng nể; 偉い dùng để khen người giỏi, có công hoặc đáng kính.",
+        "en": "偉 points to greatness or admiration; 偉い praises someone as great, admirable, or accomplished."
       },
       "decomposition": {
         "hanViet": "Vĩ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "優",
+          "大",
+          "名",
+          "人"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vi",
-        "meaningViNoAccent": "great, celebrated, eminent, terrible, awful, famous, remarkable, excellent",
-        "meaningEnNoAccent": "great, celebrated, eminent, terrible, awful, famous, remarkable, excellent"
+        "meaningViNoAccent": "vi; vi dai; noi bat; dang ne",
+        "meaningEnNoAccent": "admirable, great, remarkable, famous, excellent"
       },
       "examples": [
         {
           "word": "偉い",
           "reading": "えらい",
-          "meaning": "great, celebrated, eminent, terrible, awful, famous, remarkable, excellent"
+          "meaning": "đáng nể; vĩ đại; xuất sắc",
+          "meaningEn": "great, admirable, remarkable"
         }
       ],
       "tags": [
@@ -406,14 +487,17 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "Unicode Unihan kVietnamese",
+    "JpStudy N2 vocab context"
   ],
   "tags": []
 }

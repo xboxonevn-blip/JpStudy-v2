@@ -7,8 +7,8 @@
   "level": "N2",
   "lessonId": 18,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
   "entries": [
     {
       "kanjiId": "n2_jlpt_vocab_k137",
@@ -18,37 +18,46 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Viễn",
-        "meaningVi": "trip, hike, picnic",
-        "meaningViDisplay": "遠 (trip, hike, picnic)",
-        "meaningEn": "trip, hike, picnic"
+        "meaningVi": "viễn; xa; xa xôi; cách xa",
+        "meaningViDisplay": "Viễn (viễn; xa; xa xôi; cách xa)",
+        "meaningEn": "distant, far, remote"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン",
+          "オン"
+        ],
         "kunyomi": [
-          "えんそく"
+          "とお.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 遠足 (trip, hike, picnic).",
-        "en": "Appears in JLPT N2 vocabulary: 遠足 (trip, hike, picnic)."
+        "vi": "遠 là xa hoặc cách xa; trong 遠足, nó gợi một chuyến đi ra xa để tham quan/dã ngoại.",
+        "en": "遠 means far or distant; in 遠足 it marks a trip away from the usual place."
       },
       "decomposition": {
         "hanViet": "Viễn",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "近",
+          "足",
+          "道",
+          "距"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vien",
-        "meaningViNoAccent": "trip, hike, picnic",
-        "meaningEnNoAccent": "trip, hike, picnic"
+        "meaningViNoAccent": "vien; xa; xa xoi; cach xa",
+        "meaningEnNoAccent": "distant, far, remote"
       },
       "examples": [
         {
           "word": "遠足",
           "reading": "えんそく",
-          "meaning": "trip, hike, picnic"
+          "meaning": "đi dã ngoại; chuyến tham quan",
+          "meaningEn": "trip, hike, picnic"
         }
       ],
       "tags": [
@@ -56,49 +65,61 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k138",
       "lessonId": 18,
       "level": "N2",
       "character": "延",
-      "strokeCount": 6,
+      "strokeCount": 8,
       "labels": {
-        "hanViet": "Dang",
-        "meaningVi": "extension, elongation, prolongation, lengthening",
-        "meaningViDisplay": "延 (extension, elongation, prolongation, lengthening)",
-        "meaningEn": "extension, elongation, prolongation, lengthening"
+        "hanViet": "Duyên",
+        "meaningVi": "duyên; kéo dài; gia hạn; duỗi ra",
+        "meaningViDisplay": "Duyên (duyên; kéo dài; gia hạn; duỗi ra)",
+        "meaningEn": "prolong, extend, stretch"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン"
+        ],
         "kunyomi": [
-          "えんちょう"
+          "の.びる",
+          "の.べる",
+          "の.べ",
+          "の.ばす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 延長 (extension, elongation, prolongation, lengthening).",
-        "en": "Appears in JLPT N2 vocabulary: 延長 (extension, elongation, prolongation, lengthening)."
+        "vi": "延 là kéo dài hoặc gia hạn; trong 延長, nó là hành động làm cho thời gian/độ dài kéo thêm.",
+        "en": "延 means to extend or prolong; in 延長 it is the act of lengthening time or distance."
       },
       "decomposition": {
-        "hanViet": "Dang",
+        "hanViet": "Duyên",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "長",
+          "伸",
+          "続",
+          "時"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Dang",
-        "meaningViNoAccent": "extension, elongation, prolongation, lengthening",
-        "meaningEnNoAccent": "extension, elongation, prolongation, lengthening"
+        "hanVietNoAccent": "Duyen",
+        "meaningViNoAccent": "duyen; keo dai; gia han; duoi ra",
+        "meaningEnNoAccent": "prolong, extend, stretch"
       },
       "examples": [
         {
           "word": "延長",
           "reading": "えんちょう",
-          "meaning": "extension, elongation, prolongation, lengthening"
+          "meaning": "gia hạn; kéo dài; nối dài",
+          "meaningEn": "extension, elongation, prolongation, lengthening"
         }
       ],
       "tags": [
@@ -106,9 +127,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k139",
@@ -118,37 +140,46 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Trường",
-        "meaningVi": "extension, elongation, prolongation, lengthening",
-        "meaningViDisplay": "長 (extension, elongation, prolongation, lengthening)",
-        "meaningEn": "extension, elongation, prolongation, lengthening"
+        "meaningVi": "trường; dài; độ dài; người đứng đầu",
+        "meaningViDisplay": "Trường (trường; dài; độ dài; người đứng đầu)",
+        "meaningEn": "long, length, leader, senior"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チョウ"
+        ],
         "kunyomi": [
-          "えんちょう"
+          "なが.い",
+          "おさ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 延長 (extension, elongation, prolongation, lengthening).",
-        "en": "Appears in JLPT N2 vocabulary: 延長 (extension, elongation, prolongation, lengthening)."
+        "vi": "長 là dài hoặc người đứng đầu; trong 延長, nó chỉ phần độ dài/thời gian được kéo thêm.",
+        "en": "長 means long, length, or leader; in 延長 it is the length or time being extended."
       },
       "decomposition": {
         "hanViet": "Trường",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "延",
+          "短",
+          "伸",
+          "頭"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Truong",
-        "meaningViNoAccent": "extension, elongation, prolongation, lengthening",
-        "meaningEnNoAccent": "extension, elongation, prolongation, lengthening"
+        "meaningViNoAccent": "truong; dai; do dai; nguoi dung dau",
+        "meaningEnNoAccent": "long, length, leader, senior"
       },
       "examples": [
         {
           "word": "延長",
           "reading": "えんちょう",
-          "meaning": "extension, elongation, prolongation, lengthening"
+          "meaning": "gia hạn; kéo dài; nối dài",
+          "meaningEn": "extension, elongation, prolongation, lengthening"
         }
       ],
       "tags": [
@@ -156,9 +187,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k140",
@@ -168,45 +200,56 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Yên",
-        "meaningVi": "chimney",
-        "meaningViDisplay": "煙 (chimney)",
-        "meaningEn": "chimney"
+        "meaningVi": "yên; khói; khói thuốc",
+        "meaningViDisplay": "Yên (yên; khói; khói thuốc)",
+        "meaningEn": "smoke, soot, tobacco smoke"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エン"
+        ],
         "kunyomi": [
-          "えんとつ"
+          "けむ.る",
+          "けむり",
+          "けむ.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 煙突 (chimney).",
-        "en": "Appears in JLPT N2 vocabulary: 煙突 (chimney)."
+        "vi": "煙 là khói; trong 煙突, nó là phần khói đi ra từ ống khói.",
+        "en": "煙 means smoke; in 煙突 it is the smoke that leaves through a chimney."
       },
       "decomposition": {
         "hanViet": "Yên",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "火",
+          "突",
+          "灰",
+          "燃"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Yen",
-        "meaningViNoAccent": "chimney",
-        "meaningEnNoAccent": "chimney"
+        "meaningViNoAccent": "yen; khoi; khoi thuoc",
+        "meaningEnNoAccent": "smoke, soot, tobacco smoke"
       },
       "examples": [
         {
           "word": "煙突",
           "reading": "えんとつ",
-          "meaning": "chimney"
+          "meaning": "ống khói",
+          "meaningEn": "chimney"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
-        "manual-han-viet-codex-pass",
-        "vi-editorial-codex-pass"
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -215,40 +258,48 @@
       "lessonId": 18,
       "level": "N2",
       "character": "突",
-      "strokeCount": 9,
+      "strokeCount": 8,
       "labels": {
         "hanViet": "Đột",
-        "meaningVi": "chimney",
-        "meaningViDisplay": "突 (chimney)",
-        "meaningEn": "chimney"
+        "meaningVi": "đột; đâm; lao vào; đột ngột",
+        "meaningViDisplay": "Đột (đột; đâm; lao vào; đột ngột)",
+        "meaningEn": "thrust, pierce, sudden"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "トツ"
+        ],
         "kunyomi": [
-          "えんとつ"
+          "つ.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 煙突 (chimney).",
-        "en": "Appears in JLPT N2 vocabulary: 煙突 (chimney)."
+        "vi": "突 là đâm ra hoặc lao vào; trong 煙突, nó gợi phần ống nhô lên để khói thoát ra.",
+        "en": "突 means to thrust or protrude; in 煙突 it suggests the chimney protruding upward."
       },
       "decomposition": {
         "hanViet": "Đột",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "煙",
+          "穴",
+          "衝",
+          "進"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đot",
-        "meaningViNoAccent": "chimney",
-        "meaningEnNoAccent": "chimney"
+        "hanVietNoAccent": "Dot",
+        "meaningViNoAccent": "dot; dam; lao vao; dot ngot",
+        "meaningEnNoAccent": "thrust, pierce, sudden"
       },
       "examples": [
         {
           "word": "煙突",
           "reading": "えんとつ",
-          "meaning": "chimney"
+          "meaning": "ống khói",
+          "meaningEn": "chimney"
         }
       ],
       "tags": [
@@ -256,9 +307,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k142",
@@ -268,37 +320,45 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Truy",
-        "meaningVi": "to chase or run after someone, to run down, to pursue",
-        "meaningViDisplay": "追 (to chase or run after someone, to run down, to pursue)",
-        "meaningEn": "to chase or run after someone, to run down, to pursue"
+        "meaningVi": "truy; đuổi theo; truy đuổi; theo sau",
+        "meaningViDisplay": "Truy (truy; đuổi theo; truy đuổi; theo sau)",
+        "meaningEn": "chase, pursue, follow"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ツイ"
+        ],
         "kunyomi": [
-          "おいかける"
+          "お.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 追い掛ける (to chase or run after someone, to run down, to pursue).",
-        "en": "Appears in JLPT N2 vocabulary: 追い掛ける (to chase or run after someone, to run down, to pursue)."
+        "vi": "追 là đuổi theo hoặc theo sau; trong 追い掛ける, nó là hành động truy đuổi.",
+        "en": "追 means to chase or follow; in 追い掛ける it is the pursuit action."
       },
       "decomposition": {
         "hanViet": "Truy",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "掛",
+          "越",
+          "逃",
+          "進"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Truy",
-        "meaningViNoAccent": "to chase or run after someone, to run down, to pursue",
-        "meaningEnNoAccent": "to chase or run after someone, to run down, to pursue"
+        "meaningViNoAccent": "truy; duoi theo; truy duoi; theo sau",
+        "meaningEnNoAccent": "chase, pursue, follow"
       },
       "examples": [
         {
           "word": "追い掛ける",
           "reading": "おいかける",
-          "meaning": "to chase or run after someone, to run down, to pursue"
+          "meaning": "đuổi theo; truy đuổi",
+          "meaningEn": "to chase or run after someone, to run down, to pursue"
         }
       ],
       "tags": [
@@ -306,9 +366,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k143",
@@ -317,38 +378,49 @@
       "character": "掛",
       "strokeCount": 11,
       "labels": {
-        "hanViet": "Quẩy",
-        "meaningVi": "to chase or run after someone, to run down, to pursue",
-        "meaningViDisplay": "掛 (to chase or run after someone, to run down, to pursue)",
-        "meaningEn": "to chase or run after someone, to run down, to pursue"
+        "hanViet": "Quải",
+        "meaningVi": "quải; treo; móc; bắt đầu làm",
+        "meaningViDisplay": "Quải (quải; treo; móc; bắt đầu làm)",
+        "meaningEn": "hang, suspend, hook, start"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "カイ",
+          "ケイ"
+        ],
         "kunyomi": [
-          "おいかける"
+          "か.ける",
+          "か.かる",
+          "か.かり"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 追い掛ける (to chase or run after someone, to run down, to pursue).",
-        "en": "Appears in JLPT N2 vocabulary: 追い掛ける (to chase or run after someone, to run down, to pursue)."
+        "vi": "掛 là treo, móc hoặc đặt việc gì vào trạng thái đang diễn ra; trong 追い掛ける, nó bổ sung sắc thái bám đuổi liên tục.",
+        "en": "掛 means to hang, hook, or set an action in motion; in 追い掛ける it supports the ongoing chase."
       },
       "decomposition": {
-        "hanViet": "Quẩy",
+        "hanViet": "Quải",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "追",
+          "手",
+          "係",
+          "懸"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Quay",
-        "meaningViNoAccent": "to chase or run after someone, to run down, to pursue",
-        "meaningEnNoAccent": "to chase or run after someone, to run down, to pursue"
+        "hanVietNoAccent": "Quai",
+        "meaningViNoAccent": "quai; treo; moc; bat dau lam",
+        "meaningEnNoAccent": "hang, suspend, hook, start"
       },
       "examples": [
         {
           "word": "追い掛ける",
           "reading": "おいかける",
-          "meaning": "to chase or run after someone, to run down, to pursue"
+          "meaning": "đuổi theo; truy đuổi",
+          "meaningEn": "to chase or run after someone, to run down, to pursue"
         }
       ],
       "tags": [
@@ -356,9 +428,10 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n2_jlpt_vocab_k144",
@@ -368,37 +441,47 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Việt",
-        "meaningVi": "to pass (e.g. car), to outdistance, to outstrip",
-        "meaningViDisplay": "越 (to pass (e.g. car), to outdistance, to outstrip)",
-        "meaningEn": "to pass (e.g. car), to outdistance, to outstrip"
+        "meaningVi": "việt; vượt qua; băng qua; vượt hơn",
+        "meaningViDisplay": "Việt (việt; vượt qua; băng qua; vượt hơn)",
+        "meaningEn": "surpass, cross over, exceed"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "エツ",
+          "オツ"
+        ],
         "kunyomi": [
-          "おいこす"
+          "こ.す",
+          "こ.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji xuất hiện trong từ JLPT N2: 追い越す (to pass (e.g. car), to outdistance, to outstrip).",
-        "en": "Appears in JLPT N2 vocabulary: 追い越す (to pass (e.g. car), to outdistance, to outstrip)."
+        "vi": "越 là vượt qua hoặc băng qua; trong 追い越す, nó là vượt lên phía trước người/vật đang đi trước.",
+        "en": "越 means to surpass or cross over; in 追い越す it is passing ahead of someone or something."
       },
       "decomposition": {
         "hanViet": "Việt",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": []
+        "relatedKanji": [
+          "追",
+          "超",
+          "遠",
+          "境"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Viet",
-        "meaningViNoAccent": "to pass (e.g. car), to outdistance, to outstrip",
-        "meaningEnNoAccent": "to pass (e.g. car), to outdistance, to outstrip"
+        "meaningViNoAccent": "viet; vuot qua; bang qua; vuot hon",
+        "meaningEnNoAccent": "surpass, cross over, exceed"
       },
       "examples": [
         {
           "word": "追い越す",
           "reading": "おいこす",
-          "meaning": "to pass (e.g. car), to outdistance, to outstrip"
+          "meaning": "vượt qua; vượt lên",
+          "meaningEn": "to pass (e.g. car), to outdistance, to outstrip"
         }
       ],
       "tags": [
@@ -406,14 +489,19 @@
         "n2-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
+    "KANJIDIC2 readings and English meanings",
     "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "Unicode Unihan kVietnamese",
+    "JpStudy N2 vocab context"
   ],
-  "tags": []
+  "tags": [
+    "vi-source-verified"
+  ]
 }

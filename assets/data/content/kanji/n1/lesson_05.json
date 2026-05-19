@@ -7,8 +7,8 @@
   "level": "N1",
   "lessonId": 5,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 憧, 顎, and 寝 have no Unihan kVietnamese values, so learner-facing Sino-Vietnamese readings keep established values.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k033",
@@ -18,37 +18,52 @@
       "strokeCount": 4,
       "labels": {
         "hanViet": "Nhật",
-        "meaningVi": "mặt trời; ngày",
-        "meaningViDisplay": "日 (mặt trời; ngày)",
-        "meaningEn": "sun; day; daytime"
+        "meaningVi": "ngày; mặt trời; Nhật Bản",
+        "meaningViDisplay": "Nhật (ngày; mặt trời; Nhật Bản)",
+        "meaningEn": "day; sun; Japan"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ニチ",
+          "ジツ"
+        ],
         "kunyomi": [
-          "あくび"
+          "ひ",
+          "-び",
+          "-か"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 日 nghĩa là mặt trời; ngày. Ví dụ JLPT N1: 悪日 (unlucky day).",
-        "en": "Kanji 日 means sun; day; daytime. JLPT N1 example: 悪日 (unlucky day)."
+        "vi": "日 là hình mặt trời, mở rộng thành ngày tháng và Nhật Bản; gặp trong 明後日: ngày mốt.",
+        "en": "日 depicts the sun and extends to day/date and Japan; it appears in 明後日, the day after tomorrow."
       },
       "decomposition": {
         "hanViet": "Nhật",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "single",
+        "components": [
+          "日"
+        ],
+        "componentNames": [
+          "mặt trời; ngày"
+        ],
+        "relatedKanji": [
+          "月",
+          "明",
+          "時",
+          "朝"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Nhat",
-        "meaningViNoAccent": "mat troi; ngay",
-        "meaningEnNoAccent": "sun; day; daytime"
+        "meaningViNoAccent": "ngay; mat troi; Nhat Ban",
+        "meaningEnNoAccent": "day; sun; Japan"
       },
       "examples": [
         {
-          "word": "悪日",
-          "reading": "あくび",
-          "meaning": "unlucky day"
+          "word": "明後日",
+          "reading": "あさって",
+          "meaning": "ngày mốt",
+          "meaningEn": "day after tomorrow"
         }
       ],
       "tags": [
@@ -56,9 +71,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k034",
@@ -68,45 +84,62 @@
       "strokeCount": 15,
       "labels": {
         "hanViet": "Sung",
-        "meaningVi": "khao khát; ngưỡng mộ",
-        "meaningViDisplay": "憧 (khao khát; ngưỡng mộ)",
-        "meaningEn": "irresolute, indecisive; yearn for"
+        "meaningVi": "ngưỡng mộ; khao khát; hướng tới",
+        "meaningViDisplay": "Sung (ngưỡng mộ; khao khát; hướng tới)",
+        "meaningEn": "yearn after; long for; admire"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ",
+          "トウ",
+          "ドウ"
+        ],
         "kunyomi": [
-          "あこがれ"
+          "あこが.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 憧 nghĩa là khao khát; ngưỡng mộ. Ví dụ JLPT N1: 憧れ (sự ngưỡng mộ, khao khát, mong mỏi).",
-        "en": "Kanji 憧 means irresolute, indecisive; yearn for. JLPT N1 example: 憧れ (sự ngưỡng mộ, khao khát, mong mỏi)."
+        "vi": "憧 mang bộ tâm, diễn tả lòng hướng về điều mình ngưỡng mộ; 憧れ là sự khao khát hoặc ngưỡng mộ.",
+        "en": "憧 contains the heart radical and points to longing or admiration; 憧れ is yearning or aspiration."
       },
       "decomposition": {
         "hanViet": "Sung",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "忄",
+          "童"
+        ],
+        "componentNames": [
+          "tâm đứng",
+          "đồng; trẻ nhỏ"
+        ],
+        "relatedKanji": [
+          "心",
+          "童",
+          "望",
+          "慕"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Sung",
-        "meaningViNoAccent": "khao khat; nguong mo",
-        "meaningEnNoAccent": "irresolute, indecisive; yearn for"
+        "meaningViNoAccent": "nguong mo; khao khat; huong toi",
+        "meaningEnNoAccent": "yearn after; long for; admire"
       },
       "examples": [
         {
           "word": "憧れ",
           "reading": "あこがれ",
-          "meaning": "sự ngưỡng mộ, khao khát, mong mỏi"
+          "meaning": "sự ngưỡng mộ; niềm khao khát",
+          "meaningEn": "yearning; longing; aspiration"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -119,44 +152,60 @@
       "labels": {
         "hanViet": "Ngạc",
         "meaningVi": "cằm; hàm",
-        "meaningViDisplay": "顎 (cằm; hàm)",
-        "meaningEn": "jaw"
+        "meaningViDisplay": "Ngạc (cằm; hàm)",
+        "meaningEn": "jaw; chin"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ガク"
+        ],
         "kunyomi": [
-          "あご"
+          "あご",
+          "あぎと"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 顎 nghĩa là cằm; hàm. Ví dụ JLPT N1: 顎 (cằm, hàm).",
-        "en": "Kanji 顎 means jaw. JLPT N1 example: 顎 (cằm, hàm)."
+        "vi": "顎 có bộ hiệt liên quan đến đầu/mặt, chỉ phần cằm hoặc hàm; trong từ vựng N1 thường gặp là 顎: cái cằm.",
+        "en": "顎 uses the head/face component and means jaw or chin; the N1 vocabulary item 顎 means chin."
       },
       "decomposition": {
         "hanViet": "Ngạc",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "咢",
+          "頁"
+        ],
+        "componentNames": [
+          "ngạc",
+          "đầu; trang"
+        ],
+        "relatedKanji": [
+          "口",
+          "頭",
+          "顔",
+          "頬"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ngac",
         "meaningViNoAccent": "cam; ham",
-        "meaningEnNoAccent": "jaw"
+        "meaningEnNoAccent": "jaw; chin"
       },
       "examples": [
         {
           "word": "顎",
           "reading": "あご",
-          "meaning": "cằm, hàm"
+          "meaning": "cằm; hàm",
+          "meaningEn": "chin; jaw"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -168,37 +217,52 @@
       "strokeCount": 11,
       "labels": {
         "hanViet": "Ma",
-        "meaningVi": "gai dầu; lanh; mè",
-        "meaningViDisplay": "麻 (gai dầu; lanh; mè)",
-        "meaningEn": "hemp, jute, flax; sesame; Kangxi radical 200"
+        "meaningVi": "gai dầu; lanh; tê",
+        "meaningViDisplay": "Ma (gai dầu; lanh; tê)",
+        "meaningEn": "hemp; flax; numb"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "マ",
+          "マア"
+        ],
         "kunyomi": [
           "あさ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 麻 nghĩa là gai dầu; lanh; mè. Ví dụ JLPT N1: 麻 (flax, linen, hemp).",
-        "en": "Kanji 麻 means hemp, jute, flax; sesame; Kangxi radical 200. JLPT N1 example: 麻 (flax, linen, hemp)."
+        "vi": "麻 vốn chỉ cây gai dầu/lanh, rồi mở rộng sang cảm giác tê như trong 麻痺: tê liệt.",
+        "en": "麻 originally refers to hemp or flax, and extends to numbness as in 麻痺, paralysis or numbness."
       },
       "decomposition": {
         "hanViet": "Ma",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "enclosure",
+        "components": [
+          "广",
+          "林"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "rừng"
+        ],
+        "relatedKanji": [
+          "林",
+          "米",
+          "酔",
+          "痺"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Ma",
-        "meaningViNoAccent": "gai dau; lanh; me",
-        "meaningEnNoAccent": "hemp, jute, flax; sesame; Kangxi radical 200"
+        "meaningViNoAccent": "gai dau; lanh; te",
+        "meaningEnNoAccent": "hemp; flax; numb"
       },
       "examples": [
         {
           "word": "麻",
           "reading": "あさ",
-          "meaning": "flax, linen, hemp"
+          "meaning": "lanh; cây gai dầu",
+          "meaningEn": "flax; hemp"
         }
       ],
       "tags": [
@@ -206,9 +270,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k037",
@@ -218,37 +283,58 @@
       "strokeCount": 9,
       "labels": {
         "hanViet": "Hậu",
-        "meaningVi": "sau; phía sau",
-        "meaningViDisplay": "後 (sau; phía sau)",
-        "meaningEn": "behind, rear, after; descendents"
+        "meaningVi": "sau; phía sau; muộn",
+        "meaningViDisplay": "Hậu (sau; phía sau; muộn)",
+        "meaningEn": "behind; after; later"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ゴ",
+          "コウ"
+        ],
         "kunyomi": [
-          "あさって"
+          "のち",
+          "うし.ろ",
+          "うしろ",
+          "あと",
+          "おく.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 後 nghĩa là sau; phía sau. Ví dụ JLPT N1: 明後日 (day after tomorrow).",
-        "en": "Kanji 後 means behind, rear, after; descendents. JLPT N1 example: 明後日 (day after tomorrow)."
+        "vi": "後 chỉ phía sau hoặc thời điểm sau đó; 明後日 là ngày sau ngày mai, tức ngày mốt.",
+        "en": "後 points to what comes behind or after; in 明後日 it marks the day after tomorrow."
       },
       "decomposition": {
         "hanViet": "Hậu",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "彳",
+          "幺",
+          "夂"
+        ],
+        "componentNames": [
+          "bước chân",
+          "nhỏ",
+          "đi chậm"
+        ],
+        "relatedKanji": [
+          "前",
+          "先",
+          "従",
+          "遅"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Hau",
-        "meaningViNoAccent": "sau; phia sau",
-        "meaningEnNoAccent": "behind, rear, after; descendents"
+        "meaningViNoAccent": "sau; phia sau; muon",
+        "meaningEnNoAccent": "behind; after; later"
       },
       "examples": [
         {
           "word": "明後日",
           "reading": "あさって",
-          "meaning": "day after tomorrow"
+          "meaning": "ngày mốt",
+          "meaningEn": "day after tomorrow"
         }
       ],
       "tags": [
@@ -256,9 +342,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k038",
@@ -269,36 +356,50 @@
       "labels": {
         "hanViet": "Triều",
         "meaningVi": "buổi sáng; triều đại",
-        "meaningViDisplay": "朝 (buổi sáng; triều đại)",
-        "meaningEn": "dynasty; morning"
+        "meaningViDisplay": "Triều (buổi sáng; triều đại)",
+        "meaningEn": "morning; dynasty"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "チョウ"
+        ],
         "kunyomi": [
-          "あさねぼう"
+          "あさ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 朝 nghĩa là buổi sáng; triều đại. Ví dụ JLPT N1: 朝寝坊 (oversleeping, late riser).",
-        "en": "Kanji 朝 means dynasty; morning. JLPT N1 example: 朝寝坊 (oversleeping, late riser)."
+        "vi": "朝 là buổi sáng, cũng dùng cho triều đại; 朝寝坊 là ngủ quên hoặc dậy muộn vào buổi sáng.",
+        "en": "朝 means morning and also dynasty; 朝寝坊 describes oversleeping or getting up late."
       },
       "decomposition": {
         "hanViet": "Triều",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "𠦝",
+          "月"
+        ],
+        "componentNames": [
+          "sớm",
+          "trăng; tháng"
+        ],
+        "relatedKanji": [
+          "日",
+          "月",
+          "昼",
+          "夜"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Trieu",
-        "meaningViNoAccent": "buoi sang; trieu đai",
-        "meaningEnNoAccent": "dynasty; morning"
+        "meaningViNoAccent": "buoi sang; trieu dai",
+        "meaningEnNoAccent": "morning; dynasty"
       },
       "examples": [
         {
           "word": "朝寝坊",
           "reading": "あさねぼう",
-          "meaning": "oversleeping, late riser"
+          "meaning": "ngủ quên; dậy muộn",
+          "meaningEn": "oversleeping; late riser"
         }
       ],
       "tags": [
@@ -306,9 +407,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k039",
@@ -318,45 +420,68 @@
       "strokeCount": 13,
       "labels": {
         "hanViet": "Tẩm",
-        "meaningVi": "ngủ; nghỉ",
-        "meaningViDisplay": "寝 (ngủ; nghỉ)",
-        "meaningEn": "sleep, rest; bed chamber"
+        "meaningVi": "ngủ; nằm nghỉ; phòng ngủ",
+        "meaningViDisplay": "Tẩm (ngủ; nằm nghỉ; phòng ngủ)",
+        "meaningEn": "sleep; lie down; rest"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "シン"
+        ],
         "kunyomi": [
-          "あさねぼう"
+          "ね.る",
+          "ね.かす",
+          "い.ぬ",
+          "みたまや",
+          "や.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 寝 nghĩa là ngủ; nghỉ. Ví dụ JLPT N1: 朝寝坊 (ngủ quên, dậy muộn).",
-        "en": "Kanji 寝 means sleep, rest; bed chamber. JLPT N1 example: 朝寝坊 (ngủ quên, dậy muộn)."
+        "vi": "寝 chỉ việc nằm ngủ hoặc nghỉ; trong 朝寝坊, nó gợi cảnh ngủ quá giờ buổi sáng.",
+        "en": "寝 means to sleep, lie down, or rest; in 朝寝坊 it evokes sleeping past the morning alarm."
       },
       "decomposition": {
         "hanViet": "Tẩm",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "宀",
+          "爿",
+          "ヨ",
+          "又"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "giường",
+          "tay",
+          "lại"
+        ],
+        "relatedKanji": [
+          "宿",
+          "眠",
+          "休",
+          "床"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tam",
-        "meaningViNoAccent": "ngu; nghi",
-        "meaningEnNoAccent": "sleep, rest; bed chamber"
+        "meaningViNoAccent": "ngu; nam nghi; phong ngu",
+        "meaningEnNoAccent": "sleep; lie down; rest"
       },
       "examples": [
         {
           "word": "朝寝坊",
           "reading": "あさねぼう",
-          "meaning": "ngủ quên, dậy muộn"
+          "meaning": "ngủ quên; dậy muộn",
+          "meaningEn": "oversleeping; late riser"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +493,50 @@
       "strokeCount": 7,
       "labels": {
         "hanViet": "Phường",
-        "meaningVi": "phường; nhà sư; cậu bé",
-        "meaningViDisplay": "坊 (phường; nhà sư; cậu bé)",
-        "meaningEn": "neighborhood, urban subdivision; (J) priest's residence; (Buddhist) priest; boy"
+        "meaningVi": "nhà sư; cậu bé; phường",
+        "meaningViDisplay": "Phường (nhà sư; cậu bé; phường)",
+        "meaningEn": "boy; Buddhist priest; neighborhood"
       },
       "readings": {
-        "onyomi": [],
-        "kunyomi": [
-          "あさねぼう"
-        ]
+        "onyomi": [
+          "ボウ",
+          "ボッ"
+        ],
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji 坊 nghĩa là phường; nhà sư; cậu bé. Ví dụ JLPT N1: 朝寝坊 (oversleeping, late riser).",
-        "en": "Kanji 坊 means neighborhood, urban subdivision; (J) priest's residence; (Buddhist) priest; boy. JLPT N1 example: 朝寝坊 (oversleeping, late riser)."
+        "vi": "坊 có nghĩa nhà sư hoặc cậu bé; trong 朝寝坊, nghĩa chuyển thành người dậy muộn.",
+        "en": "坊 can mean boy or Buddhist priest; in 朝寝坊 it forms the word for someone who oversleeps."
       },
       "decomposition": {
         "hanViet": "Phường",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "土",
+          "方"
+        ],
+        "componentNames": [
+          "đất",
+          "phương hướng"
+        ],
+        "relatedKanji": [
+          "土",
+          "方",
+          "僧",
+          "町"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Phuong",
-        "meaningViNoAccent": "phuong; nha su; cau be",
-        "meaningEnNoAccent": "neighborhood, urban subdivision; (J) priest's residence; (Buddhist) priest; boy"
+        "meaningViNoAccent": "nha su; cau be; phuong",
+        "meaningEnNoAccent": "boy; Buddhist priest; neighborhood"
       },
       "examples": [
         {
           "word": "朝寝坊",
           "reading": "あさねぼう",
-          "meaning": "oversleeping, late riser"
+          "meaning": "ngủ quên; dậy muộn",
+          "meaningEn": "oversleeping; late riser"
         }
       ],
       "tags": [
@@ -406,14 +544,19 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

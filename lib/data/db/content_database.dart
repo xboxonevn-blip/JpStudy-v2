@@ -13,7 +13,7 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 55;
+const _kanjiSeedRevision = 56;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -218,6 +218,13 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '上',
     meaning: 'Thượng (trên; lên; tăng)',
     decompositionContains: '"hanViet":"Thượng"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 5,
+    character: '日',
+    meaning: 'Nhật (ngày; mặt trời; Nhật Bản)',
+    decompositionContains: '"hanViet":"Nhật"',
   ),
   _KanjiSeedSentinel(
     level: 'N3',

@@ -7,56 +7,71 @@
   "level": "N1",
   "lessonId": 6,
   "entryCount": 8,
-  "importStatus": "source-derived-unihan-approved",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts and Vietnamese readings checked against Unicode Unihan.",
+  "importStatus": "source-verified",
+  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 浅, 笑, and 焦 have no Unihan kVietnamese values, and 東 is normalized to learner-facing Đông.",
   "entries": [
     {
       "kanjiId": "n1_jlpt_vocab_k041",
       "lessonId": 6,
       "level": "N1",
       "character": "浅",
-      "strokeCount": 8,
+      "strokeCount": 9,
       "labels": {
         "hanViet": "Thiển",
         "meaningVi": "nông; cạn; hời hợt",
-        "meaningViDisplay": "浅 (nông; cạn; hời hợt)",
-        "meaningEn": "shallow, not deep; superficial"
+        "meaningViDisplay": "Thiển (nông; cạn; hời hợt)",
+        "meaningEn": "shallow; superficial"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "あさましい"
+          "あさ.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 浅 nghĩa là nông; cạn; hời hợt. Ví dụ JLPT N1: 浅ましい (hèn hạ, đáng xấu hổ, thảm hại).",
-        "en": "Kanji 浅 means shallow, not deep; superficial. JLPT N1 example: 浅ましい (hèn hạ, đáng xấu hổ, thảm hại)."
+        "vi": "浅 có bộ thủy, nghĩa là nước nông hoặc hiểu biết hời hợt; 浅ましい diễn tả điều đáng xấu hổ, hèn hạ.",
+        "en": "浅 has the water radical and means shallow or superficial; 浅ましい describes something shameful or despicable."
       },
       "decomposition": {
         "hanViet": "Thiển",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "戔"
+        ],
+        "componentNames": [
+          "nước",
+          "thiển"
+        ],
+        "relatedKanji": [
+          "水",
+          "深",
+          "薄",
+          "清"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Thien",
         "meaningViNoAccent": "nong; can; hoi hot",
-        "meaningEnNoAccent": "shallow, not deep; superficial"
+        "meaningEnNoAccent": "shallow; superficial"
       },
       "examples": [
         {
           "word": "浅ましい",
           "reading": "あさましい",
-          "meaning": "hèn hạ, đáng xấu hổ, thảm hại"
+          "meaning": "đáng xấu hổ; hèn hạ; đáng khinh",
+          "meaningEn": "shameful; mean; despicable"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -69,36 +84,50 @@
       "labels": {
         "hanViet": "Khi",
         "meaningVi": "lừa dối; đánh lừa",
-        "meaningViDisplay": "欺 (lừa dối; đánh lừa)",
-        "meaningEn": "cheat, double-cross, deceive"
+        "meaningViDisplay": "Khi (lừa dối; đánh lừa)",
+        "meaningEn": "deceit; cheat; delude"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ギ"
+        ],
         "kunyomi": [
-          "あざむく"
+          "あざむ.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 欺 nghĩa là lừa dối; đánh lừa. Ví dụ JLPT N1: 欺く (to deceive).",
-        "en": "Kanji 欺 means cheat, double-cross, deceive. JLPT N1 example: 欺く (to deceive)."
+        "vi": "欺 kết hợp phần 其 với 欠, diễn tả hành vi lừa người khác; 欺く nghĩa là lừa dối.",
+        "en": "欺 combines 其 with 欠 and means to deceive; 欺く is to deceive someone."
       },
       "decomposition": {
         "hanViet": "Khi",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "其",
+          "欠"
+        ],
+        "componentNames": [
+          "kỳ",
+          "thiếu; ngáp"
+        ],
+        "relatedKanji": [
+          "詐",
+          "偽",
+          "騙",
+          "誤"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Khi",
-        "meaningViNoAccent": "lua doi; đanh lua",
-        "meaningEnNoAccent": "cheat, double-cross, deceive"
+        "meaningViNoAccent": "lua doi; danh lua",
+        "meaningEnNoAccent": "deceit; cheat; delude"
       },
       "examples": [
         {
           "word": "欺く",
           "reading": "あざむく",
-          "meaning": "to deceive"
+          "meaning": "lừa dối",
+          "meaningEn": "to deceive"
         }
       ],
       "tags": [
@@ -106,9 +135,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k043",
@@ -118,37 +148,51 @@
       "strokeCount": 17,
       "labels": {
         "hanViet": "Tiên",
-        "meaningVi": "tươi; mới; hiếm",
-        "meaningViDisplay": "鮮 (tươi; mới; hiếm)",
-        "meaningEn": "fresh, new, delicious; rare, few"
+        "meaningVi": "tươi; rực rỡ; rõ nét",
+        "meaningViDisplay": "Tiên (tươi; rực rỡ; rõ nét)",
+        "meaningEn": "fresh; vivid; clear"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "セン"
+        ],
         "kunyomi": [
-          "あざやか"
+          "あざ.やか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 鮮 nghĩa là tươi; mới; hiếm. Ví dụ JLPT N1: 鮮やか (vivid, clear, brilliant).",
-        "en": "Kanji 鮮 means fresh, new, delicious; rare, few. JLPT N1 example: 鮮やか (vivid, clear, brilliant)."
+        "vi": "鮮 gồm cá và dê, gợi sự tươi mới; 鮮やか dùng cho màu sắc hoặc cách thể hiện rực rỡ, rõ nét.",
+        "en": "鮮 combines fish and sheep and suggests freshness; 鮮やか describes vivid color or clear presentation."
       },
       "decomposition": {
         "hanViet": "Tiên",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "魚",
+          "羊"
+        ],
+        "componentNames": [
+          "cá",
+          "dê"
+        ],
+        "relatedKanji": [
+          "魚",
+          "羊",
+          "新",
+          "清"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tien",
-        "meaningViNoAccent": "tuoi; moi; hiem",
-        "meaningEnNoAccent": "fresh, new, delicious; rare, few"
+        "meaningViNoAccent": "tuoi; ruc ro; ro net",
+        "meaningEnNoAccent": "fresh; vivid; clear"
       },
       "examples": [
         {
           "word": "鮮やか",
           "reading": "あざやか",
-          "meaning": "vivid, clear, brilliant"
+          "meaning": "sống động; rõ ràng; rực rỡ",
+          "meaningEn": "vivid; clear; brilliant"
         }
       ],
       "tags": [
@@ -156,9 +200,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k044",
@@ -169,44 +214,60 @@
       "labels": {
         "hanViet": "Tiếu",
         "meaningVi": "cười",
-        "meaningViDisplay": "笑 (cười)",
-        "meaningEn": "smile, laugh, giggle; snicker"
+        "meaningViDisplay": "Tiếu (cười)",
+        "meaningEn": "laugh"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ"
+        ],
         "kunyomi": [
-          "あざわらう"
+          "わら.う",
+          "え.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 笑 nghĩa là cười. Ví dụ JLPT N1: あざ笑う (cười nhạo, chế giễu).",
-        "en": "Kanji 笑 means smile, laugh, giggle; snicker. JLPT N1 example: あざ笑う (cười nhạo, chế giễu)."
+        "vi": "笑 nghĩa là cười; あざ笑う thêm sắc thái cười nhạo, chế giễu người khác.",
+        "en": "笑 means to laugh; あざ笑う adds the nuance of sneering at or ridiculing someone."
       },
       "decomposition": {
         "hanViet": "Tiếu",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "竹",
+          "夭"
+        ],
+        "componentNames": [
+          "tre",
+          "yêu; trẻ"
+        ],
+        "relatedKanji": [
+          "喜",
+          "楽",
+          "泣",
+          "顔"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tieu",
         "meaningViNoAccent": "cuoi",
-        "meaningEnNoAccent": "smile, laugh, giggle; snicker"
+        "meaningEnNoAccent": "laugh"
       },
       "examples": [
         {
           "word": "あざ笑う",
           "reading": "あざわらう",
-          "meaning": "cười nhạo, chế giễu"
+          "meaning": "chế nhạo; cười nhạo",
+          "meaningEn": "to sneer at; to ridicule"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -218,37 +279,52 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Vị",
-        "meaningVi": "vị; mùi; ý nghĩa",
-        "meaningViDisplay": "味 (vị; mùi; ý nghĩa)",
-        "meaningEn": "taste, smell, odor; delicacy"
+        "meaningVi": "vị; hương vị; ý nghĩa",
+        "meaningViDisplay": "Vị (vị; hương vị; ý nghĩa)",
+        "meaningEn": "flavor; taste"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ミ"
+        ],
         "kunyomi": [
-          "あじわい"
+          "あじ",
+          "あじ.わう"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 味 nghĩa là vị; mùi; ý nghĩa. Ví dụ JLPT N1: 味わい (flavour, meaning, significance).",
-        "en": "Kanji 味 means taste, smell, odor; delicacy. JLPT N1 example: 味わい (flavour, meaning, significance)."
+        "vi": "味 có bộ khẩu, chỉ vị nếm rồi mở rộng sang sắc thái, ý nghĩa; 味わい là hương vị hoặc chiều sâu ý nghĩa.",
+        "en": "味 has the mouth radical and means flavor or taste, extending to nuance and meaning; 味わい is flavor or significance."
       },
       "decomposition": {
         "hanViet": "Vị",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "口",
+          "未"
+        ],
+        "componentNames": [
+          "miệng",
+          "chưa"
+        ],
+        "relatedKanji": [
+          "口",
+          "食",
+          "香",
+          "料"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Vi",
-        "meaningViNoAccent": "vi; mui; y nghia",
-        "meaningEnNoAccent": "taste, smell, odor; delicacy"
+        "meaningViNoAccent": "vi; huong vi; y nghia",
+        "meaningEnNoAccent": "flavor; taste"
       },
       "examples": [
         {
           "word": "味わい",
           "reading": "あじわい",
-          "meaning": "flavour, meaning, significance"
+          "meaning": "hương vị; ý nghĩa; tầm quan trọng",
+          "meaningEn": "flavour; meaning; significance"
         }
       ],
       "tags": [
@@ -256,9 +332,10 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k046",
@@ -267,48 +344,63 @@
       "character": "東",
       "strokeCount": 8,
       "labels": {
-        "hanViet": "Đang Đông",
-        "meaningVi": "phía đông",
-        "meaningViDisplay": "東 (phía đông)",
-        "meaningEn": "east, eastern, eastward"
+        "hanViet": "Đông",
+        "meaningVi": "phía đông; miền Đông",
+        "meaningViDisplay": "Đông (phía đông; miền Đông)",
+        "meaningEn": "east"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "トウ"
+        ],
         "kunyomi": [
-          "あずま"
+          "ひがし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 東 nghĩa là phía đông. Ví dụ JLPT N1: 東 (east, Eastern Japan).",
-        "en": "Kanji 東 means east, eastern, eastward. JLPT N1 example: 東 (east, Eastern Japan)."
+        "vi": "東 chỉ hướng đông; trong cách đọc cổ あずま, từ này cũng chỉ miền Đông Nhật Bản.",
+        "en": "東 means east; the older reading あずま can refer to Eastern Japan."
       },
       "decomposition": {
-        "hanViet": "Đang Đông",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "hanViet": "Đông",
+        "structure": "single",
+        "components": [
+          "木",
+          "日"
+        ],
+        "componentNames": [
+          "cây",
+          "mặt trời"
+        ],
+        "relatedKanji": [
+          "西",
+          "南",
+          "北",
+          "京"
+        ]
       },
       "search": {
-        "hanVietNoAccent": "Đang Đong",
-        "meaningViNoAccent": "phia đong",
-        "meaningEnNoAccent": "east, eastern, eastward"
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "phia dong; mien Dong",
+        "meaningEnNoAccent": "east"
       },
       "examples": [
         {
           "word": "東",
           "reading": "あずま",
-          "meaning": "east, Eastern Japan"
+          "meaning": "phía đông; phía đông Nhật Bản",
+          "meaningEn": "east; Eastern Japan"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
       "kanjiId": "n1_jlpt_vocab_k047",
@@ -318,45 +410,65 @@
       "strokeCount": 12,
       "labels": {
         "hanViet": "Tiêu",
-        "meaningVi": "cháy sém; nóng ruột",
-        "meaningViDisplay": "焦 (cháy sém; nóng ruột)",
-        "meaningEn": "burned, scorched; anxious, vexed"
+        "meaningVi": "cháy sém; nôn nóng; sốt ruột",
+        "meaningViDisplay": "Tiêu (cháy sém; nôn nóng; sốt ruột)",
+        "meaningEn": "scorch; hurry; impatient"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ショウ"
+        ],
         "kunyomi": [
-          "あせる"
+          "こ.げる",
+          "こ.がす",
+          "こ.がれる",
+          "あせ.る",
+          "じ.れる",
+          "じ.らす"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 焦 nghĩa là cháy sém; nóng ruột. Ví dụ JLPT N1: 焦る (nôn nóng, sốt ruột, vội vàng).",
-        "en": "Kanji 焦 means burned, scorched; anxious, vexed. JLPT N1 example: 焦る (nôn nóng, sốt ruột, vội vàng)."
+        "vi": "焦 có bộ hỏa ở dưới, chỉ bị cháy sém; nghĩa bóng là nôn nóng, sốt ruột như 焦る.",
+        "en": "焦 has fire at the bottom and means scorched; figuratively it means to be impatient, as in 焦る."
       },
       "decomposition": {
         "hanViet": "Tiêu",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "top-bottom",
+        "components": [
+          "隹",
+          "灬"
+        ],
+        "componentNames": [
+          "chim đuôi ngắn",
+          "lửa"
+        ],
+        "relatedKanji": [
+          "火",
+          "焼",
+          "燃",
+          "急"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Tieu",
-        "meaningViNoAccent": "chay sem; nong ruot",
-        "meaningEnNoAccent": "burned, scorched; anxious, vexed"
+        "meaningViNoAccent": "chay sem; non nong; sot ruot",
+        "meaningEnNoAccent": "scorch; hurry; impatient"
       },
       "examples": [
         {
           "word": "焦る",
           "reading": "あせる",
-          "meaning": "nôn nóng, sốt ruột, vội vàng"
+          "meaning": "vội vàng; thiếu kiên nhẫn",
+          "meaningEn": "to be in a hurry; to be impatient"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass"
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     },
@@ -368,37 +480,53 @@
       "strokeCount": 8,
       "labels": {
         "hanViet": "Bỉ",
-        "meaningVi": "kia; người ấy",
-        "meaningViDisplay": "彼 (kia; người ấy)",
-        "meaningEn": "that, there, those"
+        "meaningVi": "anh ấy; người kia; cái đó",
+        "meaningViDisplay": "Bỉ (anh ấy; người kia; cái đó)",
+        "meaningEn": "he; that; the"
       },
       "readings": {
-        "onyomi": [],
+        "onyomi": [
+          "ヒ"
+        ],
         "kunyomi": [
-          "あそこ"
+          "かれ",
+          "かの",
+          "か.の"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji 彼 nghĩa là kia; người ấy. Ví dụ JLPT N1: 彼処 (1. (uk) there, over there, that place, 2. (X) (col) genitals).",
-        "en": "Kanji 彼 means that, there, those. JLPT N1 example: 彼処 (1. (uk) there, over there, that place, 2. (X) (col) genitals)."
+        "vi": "彼 chỉ người hoặc vật ở phía kia; ví dụ cơ bản 彼 là anh ấy hoặc bạn trai.",
+        "en": "彼 points to someone or something over there; the basic word 彼 means he or boyfriend."
       },
       "decomposition": {
         "hanViet": "Bỉ",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": []
+        "structure": "left-right",
+        "components": [
+          "彳",
+          "皮"
+        ],
+        "componentNames": [
+          "bước chân",
+          "da"
+        ],
+        "relatedKanji": [
+          "此",
+          "方",
+          "他",
+          "女"
+        ]
       },
       "search": {
         "hanVietNoAccent": "Bi",
-        "meaningViNoAccent": "kia; nguoi ay",
-        "meaningEnNoAccent": "that, there, those"
+        "meaningViNoAccent": "anh ay; nguoi kia; cai do",
+        "meaningEnNoAccent": "he; that; the"
       },
       "examples": [
         {
-          "word": "彼処",
-          "reading": "あそこ",
-          "meaning": "1. (uk) there, over there, that place, 2. (X) (col) genitals"
+          "word": "彼",
+          "reading": "かれ",
+          "meaning": "anh ấy; bạn trai",
+          "meaningEn": "he; boyfriend"
         }
       ],
       "tags": [
@@ -406,14 +534,19 @@
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
-        "kanji-metadata-approved"
+        "vi-editorial-codex-pass",
+        "vi-source-verified"
       ],
-      "metadataStatus": "approved-by-user"
+      "metadataStatus": "vi-editorial-codex-pass"
     }
   ],
   "metadataSources": [
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
+    "KANJIDIC2 readings, meanings, and Japanese stroke counts",
+    "Unicode Unihan kVietnamese, kDefinition, and kTotalStrokes",
+    "Existing N1 vocabulary examples for local usage context"
   ],
-  "tags": []
+  "tags": [
+    "vi-editorial-codex-pass",
+    "vi-source-verified"
+  ]
 }

@@ -33,6 +33,7 @@ void main() {
               romaji: 'a',
               row: 'a',
               column: 'a',
+              strokes: 3,
             ),
             KanaEntry(
               order: 2,
@@ -124,7 +125,26 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('kana_cell_base_\u3042')));
       await tester.pump(const Duration(milliseconds: 500));
 
-      expect(find.byKey(const ValueKey('kana_mark_\u3042')), findsOneWidget);
+      expect(find.byKey(const ValueKey('kana_mark_\u3042')), findsNothing);
+      expect(
+        find.byKey(const ValueKey('kana_quiz_from_sheet_\u3042')),
+        findsOneWidget,
+      );
+      expect(find.text('Tôi đã thuộc'), findsNothing);
+      expect(find.textContaining('strokes'), findsNothing);
+      expect(find.text('clear'), findsNothing);
+      expect(find.text('3 nét'), findsOneWidget);
+
+      await tester.tapAt(const Offset(10, 10));
+      await tester.pump(const Duration(milliseconds: 350));
+      await tester.tap(find.byType(Tab).last);
+      await tester.pump(const Duration(milliseconds: 350));
+      await tester.tap(
+        find.byKey(const ValueKey('kana_cell_compound_\u304d\u3083')),
+      );
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(find.text('yoon'), findsNothing);
+      expect(find.text('Âm ghép'), findsWidgets);
 
       await tester.pumpWidget(const SizedBox.shrink());
       await tester.pump();

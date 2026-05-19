@@ -309,8 +309,6 @@ class _KanaCell extends ConsumerWidget {
         return Consumer(
           builder: (context, ref, child) {
             final language = ref.watch(appLanguageProvider);
-            final progress = ref.watch(foundationsProgressProvider);
-            final studied = progress.isStudied(entry.kana);
             return SafeArea(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
@@ -331,29 +329,7 @@ class _KanaCell extends ConsumerWidget {
                     ),
                     const SizedBox(height: 8),
                     FilledButton.icon(
-                      key: ValueKey('kana_mark_${entry.kana}'),
-                      onPressed: () async {
-                        final notifier = ref.read(
-                          foundationsProgressProvider.notifier,
-                        );
-                        if (studied) {
-                          await notifier.unmarkStudied(entry.kana);
-                        } else {
-                          await notifier.markStudied(
-                            entry.kana,
-                            _kanaScriptKey(script, mode),
-                          );
-                        }
-                      },
-                      icon: Icon(
-                        studied
-                            ? Icons.check_circle_rounded
-                            : Icons.radio_button_unchecked_rounded,
-                      ),
-                      label: Text(language.kanaIKnowItLabel),
-                    ),
-                    const SizedBox(height: 12),
-                    OutlinedButton.icon(
+                      key: ValueKey('kana_quiz_from_sheet_${entry.kana}'),
                       onPressed: () => context.openFoundationsQuiz(
                         script: script,
                         view: mode,
@@ -366,8 +342,11 @@ class _KanaCell extends ConsumerWidget {
                       spacing: 8,
                       children: [
                         if (entry.strokes != null)
-                          Chip(label: Text('${entry.strokes} strokes')),
-                        Chip(label: Text(entry.mark ?? 'clear')),
+                          Chip(
+                            label: Text(_strokeLabel(language, entry.strokes!)),
+                          ),
+                        if (entry.mark != null)
+                          Chip(label: Text(_markLabel(language, entry.mark!))),
                       ],
                     ),
                   ],
@@ -415,12 +394,34 @@ class _KanaCellData {
       romaji: entry.romaji,
       row: entry.row,
       column: entry.column,
-      mark: 'yoon',
+      mark: 'compound',
     );
   }
 }
 
-String _kanaScriptKey(KanaScript script, KanaView view) {
-  if (view == KanaView.base) return script.name;
-  return 'compound_';
+String _strokeLabel(AppLanguage language, int count) => switch (language) {
+  AppLanguage.en => '$count ${count == 1 ? 'stroke' : 'strokes'}',
+  AppLanguage.vi => '$count nét',
+  AppLanguage.ja => '$count画',
+};
+
+String _markLabel(AppLanguage language, String mark) {
+  return switch (mark) {
+    'dakuten' => switch (language) {
+      AppLanguage.en => 'Dakuten',
+      AppLanguage.vi => 'Dấu đục',
+      AppLanguage.ja => '濁点',
+    },
+    'handakuten' => switch (language) {
+      AppLanguage.en => 'Handakuten',
+      AppLanguage.vi => 'Dấu bán đục',
+      AppLanguage.ja => '半濁点',
+    },
+    'compound' => switch (language) {
+      AppLanguage.en => 'Compound kana',
+      AppLanguage.vi => 'Âm ghép',
+      AppLanguage.ja => '拗音',
+    },
+    _ => mark,
+  };
 }

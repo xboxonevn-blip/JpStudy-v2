@@ -7810,17 +7810,6 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
-  String get kanaIKnowItLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'I know this';
-      case AppLanguage.vi:
-        return 'Tôi đã thuộc';
-      case AppLanguage.ja:
-        return '覚えた';
-    }
-  }
-
   String get kanaShowRomajiLabel {
     switch (this) {
       case AppLanguage.en:

@@ -31,4 +31,23 @@ void main() {
       '新規',
     );
   });
+
+  test('Vietnamese checkpoint labels are learner-facing', () {
+    final labels = [
+      weaknessDueCheckpointShortLabel(
+        AppLanguage.vi,
+        const Duration(hours: 48),
+      ),
+      weaknessDueCheckpointShortLabel(
+        AppLanguage.vi,
+        const Duration(hours: 96),
+      ),
+      weaknessDueCheckpointShortLabel(AppLanguage.vi, const Duration(days: 8)),
+    ];
+
+    expect(labels.join(' '), isNot(contains('D1')));
+    expect(labels.join(' '), isNot(contains('D3')));
+    expect(labels.join(' '), isNot(contains('D7')));
+    expect(labels, ['1 ngày', '3 ngày', '7 ngày']);
+  });
 }

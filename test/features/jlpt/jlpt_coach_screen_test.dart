@@ -1,4 +1,5 @@
 import 'package:drift/native.dart';
+import 'package:drift/drift.dart' show Value;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -44,23 +45,24 @@ final _router = GoRouter(
   ],
 );
 
-Widget buildCoach(AppDatabase db) => ProviderScope(
-  overrides: [
-    appLanguageProvider.overrideWith(
-      (ref) => AppLanguageController.test(AppLanguage.en),
-    ),
-    studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
-    dashboardProvider.overrideWith((ref) => Stream.value(_kDashboard)),
-    jlptCoachSnapshotProvider.overrideWith((ref) async => null),
-    jlptPrepOverviewProvider(
-      StudyLevel.n5,
-    ).overrideWith((ref) async => _kOverview),
-    mistakeRepositoryProvider.overrideWithValue(
-      MistakeRepository(db.mistakeDao),
-    ),
-  ],
-  child: MaterialApp.router(routerConfig: _router),
-);
+Widget buildCoach(AppDatabase db, {AppLanguage language = AppLanguage.en}) =>
+    ProviderScope(
+      overrides: [
+        appLanguageProvider.overrideWith(
+          (ref) => AppLanguageController.test(language),
+        ),
+        studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
+        dashboardProvider.overrideWith((ref) => Stream.value(_kDashboard)),
+        jlptCoachSnapshotProvider.overrideWith((ref) async => null),
+        jlptPrepOverviewProvider(
+          StudyLevel.n5,
+        ).overrideWith((ref) async => _kOverview),
+        mistakeRepositoryProvider.overrideWithValue(
+          MistakeRepository(db.mistakeDao),
+        ),
+      ],
+      child: MaterialApp.router(routerConfig: _router),
+    );
 
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
@@ -93,6 +95,33 @@ void main() {
     await tester.pump(const Duration(milliseconds: 200));
     expect(find.textContaining('mock'), findsWidgets);
     expect(find.textContaining('Reading'), findsWidgets);
+    await tester.pumpWidget(Container());
+    await tester.pump(const Duration(milliseconds: 100));
+    await db.close();
+  });
+
+  testWidgets('Vietnamese support panel hides internal D1 D3 D7 labels', (
+    tester,
+  ) async {
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    await db.mistakeDao.addMistake('grammar', 1);
+    await (db.update(db.userMistakes)..where((m) => m.itemId.equals(1))).write(
+      UserMistakesCompanion(
+        lastMistakeAt: Value(
+          DateTime.now().subtract(const Duration(hours: 48)),
+        ),
+      ),
+    );
+
+    await tester.pumpWidget(buildCoach(db, language: AppLanguage.vi));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.textContaining('D1'), findsNothing);
+    expect(find.textContaining('D3'), findsNothing);
+    expect(find.textContaining('D7'), findsNothing);
+    expect(find.textContaining('1 ngày'), findsWidgets);
+
     await tester.pumpWidget(Container());
     await tester.pump(const Duration(milliseconds: 100));
     await db.close();

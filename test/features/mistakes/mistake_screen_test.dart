@@ -1,4 +1,5 @@
 import 'package:drift/native.dart';
+import 'package:drift/drift.dart' show Value;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -63,10 +64,11 @@ Widget buildScreen(
   ContentDatabase cdb, {
   LessonRepository? repo,
   StudyLevel? level,
+  AppLanguage language = AppLanguage.en,
 }) => ProviderScope(
   overrides: [
     appLanguageProvider.overrideWith(
-      (ref) => AppLanguageController.test(AppLanguage.en),
+      (ref) => AppLanguageController.test(language),
     ),
     studyLevelProvider.overrideWith((ref) => level),
     databaseProvider.overrideWithValue(db),
@@ -103,6 +105,35 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
     expect(find.text('No mistakes yet'), findsOneWidget);
+    await tester.pumpWidget(Container());
+    await tester.pump(const Duration(milliseconds: 100));
+    await db.close();
+    await cdb.close();
+  });
+
+  testWidgets('Vietnamese due summary hides internal D1 D3 D7 labels', (
+    tester,
+  ) async {
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    final cdb = ContentDatabase(executor: NativeDatabase.memory());
+    await db.mistakeDao.addMistake('grammar', 1);
+    await (db.update(db.userMistakes)..where((m) => m.itemId.equals(1))).write(
+      UserMistakesCompanion(
+        lastMistakeAt: Value(
+          DateTime.now().subtract(const Duration(hours: 48)),
+        ),
+      ),
+    );
+
+    await tester.pumpWidget(buildScreen(db, cdb, language: AppLanguage.vi));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.textContaining('D1'), findsNothing);
+    expect(find.textContaining('D3'), findsNothing);
+    expect(find.textContaining('D7'), findsNothing);
+    expect(find.textContaining('1 ngày'), findsWidgets);
+
     await tester.pumpWidget(Container());
     await tester.pump(const Duration(milliseconds: 100));
     await db.close();

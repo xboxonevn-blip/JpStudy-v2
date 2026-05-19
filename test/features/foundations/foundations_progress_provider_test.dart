@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
+import 'package:jpstudy/features/foundations/providers/kana_review_provider.dart';
 
 void main() {
   ProviderContainer containerWithDb(AppDatabase db) {
@@ -25,15 +26,14 @@ void main() {
     expect(state.percentComplete, 0);
   });
 
-  test('markStudied updates dao-backed percent', () async {
+  test('real kana review grade updates dao-backed percent', () async {
     final db = AppDatabase(executor: NativeDatabase.memory());
     addTearDown(db.close);
     final container = containerWithDb(db);
     addTearDown(container.dispose);
 
-    await container
-        .read(foundationsProgressProvider.notifier)
-        .markStudied('あ', 'hiragana');
+    await container.read(kanaReviewServiceProvider).grade('あ', 'hiragana', 3);
+    await container.read(foundationsProgressProvider.notifier).loadFromDao();
 
     final state = container.read(foundationsProgressProvider);
     expect(state.studied, contains('あ'));

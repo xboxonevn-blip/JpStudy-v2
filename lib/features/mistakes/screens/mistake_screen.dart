@@ -429,9 +429,9 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
           Text(
             _tr(
               language,
-              'Due now: D1 ${buckets.due1d} | D3 ${buckets.due3d} | D7 ${buckets.due7d} | New ${buckets.notDue}',
-              'Đến hạn: D1 ${buckets.due1d} | D3 ${buckets.due3d} | D7 ${buckets.due7d} | Mới ${buckets.notDue}',
-              '期限: D1 ${buckets.due1d} | D3 ${buckets.due3d} | D7 ${buckets.due7d} | 新規 ${buckets.notDue}',
+              'Due now: 1-day ${buckets.due1d} | 3-day ${buckets.due3d} | 7-day ${buckets.due7d} | New ${buckets.notDue}',
+              'Đến hạn: 1 ngày ${buckets.due1d} | 3 ngày ${buckets.due3d} | 7 ngày ${buckets.due7d} | Mới ${buckets.notDue}',
+              '期限: 1日 ${buckets.due1d} | 3日 ${buckets.due3d} | 7日 ${buckets.due7d} | 新規 ${buckets.notDue}',
             ),
             style: TextStyle(
               fontWeight: FontWeight.w700,
@@ -454,12 +454,12 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
       return _tr(language, 'Not due (new)', 'Chưa đến hạn (mới)', '未期限(新規)');
     }
     if (age.inHours < 72) {
-      return _tr(language, 'D1 due', 'Đến hạn D1', 'D1期限');
+      return _tr(language, '1-day due', 'Đến hạn 1 ngày', '1日期限');
     }
     if (age.inHours < 24 * 7) {
-      return _tr(language, 'D3 due', 'Đến hạn D3', 'D3期限');
+      return _tr(language, '3-day due', 'Đến hạn 3 ngày', '3日期限');
     }
-    return _tr(language, 'D7 due', 'Đến hạn D7', 'D7期限');
+    return _tr(language, '7-day due', 'Đến hạn 7 ngày', '7日期限');
   }
 
   String _tr(AppLanguage language, String en, String vi, String ja) {

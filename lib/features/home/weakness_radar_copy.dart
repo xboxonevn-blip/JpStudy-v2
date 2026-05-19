@@ -84,12 +84,24 @@ String weaknessDueCheckpointShortLabel(AppLanguage language, Duration age) {
     };
   }
   if (age.inHours < 72) {
-    return 'D1';
+    return switch (language) {
+      AppLanguage.en => '1-day',
+      AppLanguage.vi => '1 ngày',
+      AppLanguage.ja => '1日',
+    };
   }
   if (age.inHours < 24 * 7) {
-    return 'D3';
+    return switch (language) {
+      AppLanguage.en => '3-day',
+      AppLanguage.vi => '3 ngày',
+      AppLanguage.ja => '3日',
+    };
   }
-  return 'D7';
+  return switch (language) {
+    AppLanguage.en => '7-day',
+    AppLanguage.vi => '7 ngày',
+    AppLanguage.ja => '7日',
+  };
 }
 
 String weaknessRetentionTitle(AppLanguage language) => switch (language) {

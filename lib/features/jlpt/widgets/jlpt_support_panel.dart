@@ -136,15 +136,15 @@ String _weakPointsSubtitle(
 ) => switch (language) {
   AppLanguage.en =>
     buckets.totalDue > 0
-        ? 'D1 ${buckets.due1d} • D3 ${buckets.due3d} • D7 ${buckets.due7d} are ready for repair.'
+        ? '1-day ${buckets.due1d} • 3-day ${buckets.due3d} • 7-day ${buckets.due7d} are ready for repair.'
         : 'No urgent weak points right now. Keep this area for post-mock review.',
   AppLanguage.vi =>
     buckets.totalDue > 0
-        ? 'D1 ${buckets.due1d} • D3 ${buckets.due3d} • D7 ${buckets.due7d} đang chờ xử lý.'
+        ? 'Mốc 1 ngày ${buckets.due1d} • 3 ngày ${buckets.due3d} • 7 ngày ${buckets.due7d} đang chờ xử lý.'
         : 'Chưa có điểm yếu gấp. Giữ phần này để sửa sau mỗi lần thi thử.',
   AppLanguage.ja =>
     buckets.totalDue > 0
-        ? 'D1 ${buckets.due1d} • D3 ${buckets.due3d} • D7 ${buckets.due7d} を補強できます。'
+        ? '1日 ${buckets.due1d} • 3日 ${buckets.due3d} • 7日 ${buckets.due7d} を補強できます。'
         : '今すぐ直す弱点はありません。模試後の補強用に残しておけます。',
 };
 

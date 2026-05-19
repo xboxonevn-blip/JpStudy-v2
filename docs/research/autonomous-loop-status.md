@@ -925,3 +925,12 @@
 - Live headers: `main.dart.js`, `grammar_n4_46.json`, and `grammar_examples/n4/lesson_46.json` returned `Cache-Control: no-cache`; CSP contains reCAPTCHA, `browser.sentry-cdn.com`, and `*.sentry.io`.
 - Live proof: App Check SDK loaded, reCAPTCHA loaded, `firebaseappcheck.googleapis.com` exchange attempted, Auth requests carried `X-Firebase-AppCheck`, and Sentry CDN returned `200`. Headless reCAPTCHA exchange returned `403`, so App Check enforcement remains off.
 - Live proof: fresh VI/N2 direct `/#/grammar/1` rendered real examples for `A あるいは B` and the grammar gate opened `Câu 1/5`; fresh VI/N4 direct `/#/grammar/81` rendered examples for `ところです`, the gate opened `Câu 1/5`, and catalog search `ところです` returned the row instead of an empty state.
+
+## 2026-05-20 Directive D Foundations/Kana Copy Batch
+
+- Fixed QA-A-022: Kana detail sheets no longer expose the self-attestation `Tôi đã thuộc`; the learner must enter the existing Kana quiz gate, and Kana progress/SRS comes from quiz grading.
+- Fixed QA-A-023: learner-facing Mistakes, JLPT support, and Weakness Radar copy no longer exposes internal `D1/D3/D7` checkpoint labels; copy now uses 1-day/3-day/7-day labels across VI/EN/JA.
+- Fixed QA-A-024: Foundations hub and Kana detail copy no longer exposes `Open`, `66 yoon`, `32 rules`, `strokes`, `clear`, or `yoon`; VI hub renders `Mở luyện tập`, `71 ký tự`, `66 âm ghép`, and `32 quy tắc`.
+- Verified locally: focused Foundations/Mistakes/JLPT/Home suites passed, English plural-risk guard passed, UI string literal guard reported `0`, `flutter analyze lib test` clean, and full `flutter test` passed with `2351`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: fresh VI/N5 Foundations opened Hiragana, opened the `あ` sheet, verified `3 nét`, verified no self-attestation CTA, opened `Luyện bảng chữ`, and reached the live quiz with `1/10` counter. `main.dart.js` returned `Cache-Control: no-cache` and had no stale `Tôi đã thuộc`, `I know this`, `D1 `/`D3 `/`D7 `, `66 yoon`, or `32 rules` strings. Unexpected console warnings/errors and unexpected HTTP 4xx/5xx were `0`; known headless App Check 403/throttle noise remained.

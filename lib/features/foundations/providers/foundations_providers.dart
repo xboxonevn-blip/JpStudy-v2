@@ -72,14 +72,4 @@ class FoundationsProgressController extends Notifier<FoundationsProgress> {
     if (!ref.mounted) return;
     state = FoundationsProgress(studied: Set.unmodifiable(studied));
   }
-
-  Future<void> markStudied(String kana, String script) async {
-    await ref.read(kanaReviewServiceProvider).grade(kana, script, 3);
-    await loadFromDao();
-  }
-
-  Future<void> unmarkStudied(String kana) async {
-    // Tier 2 keeps SRS history immutable from UI; no destructive unmark.
-    await loadFromDao();
-  }
 }

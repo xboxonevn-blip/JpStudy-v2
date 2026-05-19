@@ -42,9 +42,10 @@ class FoundationsHubScreen extends ConsumerWidget {
                     SizedBox(
                       width: width,
                       child: _ModuleCard(
+                        language: language,
                         icon: Icons.text_fields_rounded,
                         title: language.foundationsHiraganaLabel,
-                        subtitle: '71 kana',
+                        subtitle: _kanaCountLabel(language, 71),
                         onTap: () =>
                             context.openFoundationsKana(KanaScript.hiragana),
                       ),
@@ -52,9 +53,10 @@ class FoundationsHubScreen extends ConsumerWidget {
                     SizedBox(
                       width: width,
                       child: _ModuleCard(
+                        language: language,
                         icon: Icons.translate_rounded,
                         title: language.foundationsKatakanaLabel,
-                        subtitle: '71 kana',
+                        subtitle: _kanaCountLabel(language, 71),
                         onTap: () =>
                             context.openFoundationsKana(KanaScript.katakana),
                       ),
@@ -62,9 +64,10 @@ class FoundationsHubScreen extends ConsumerWidget {
                     SizedBox(
                       width: width,
                       child: _ModuleCard(
+                        language: language,
                         icon: Icons.grid_view_rounded,
                         title: language.foundationsCompoundsLabel,
-                        subtitle: '66 yoon',
+                        subtitle: _compoundCountLabel(language, 66),
                         onTap: context.openFoundationsCompounds,
                       ),
                     ),
@@ -72,9 +75,10 @@ class FoundationsHubScreen extends ConsumerWidget {
                       SizedBox(
                         width: width,
                         child: _ModuleCard(
+                          language: language,
                           icon: Icons.rule_rounded,
                           title: language.hanVietRulesTitle,
-                          subtitle: '32 rules',
+                          subtitle: _ruleCountLabel(language, 32),
                           onTap: context.openKanjiHanVietRules,
                         ),
                       ),
@@ -145,12 +149,14 @@ class _FoundationsHero extends StatelessWidget {
 
 class _ModuleCard extends StatelessWidget {
   const _ModuleCard({
+    required this.language,
     required this.icon,
     required this.title,
     required this.subtitle,
     required this.onTap,
   });
 
+  final AppLanguage language;
   final IconData icon;
   final String title;
   final String subtitle;
@@ -162,9 +168,34 @@ class _ModuleCard extends StatelessWidget {
       icon: icon,
       title: title,
       subtitle: subtitle,
-      primaryLabel: 'Open',
+      primaryLabel: _modulePrimaryLabel(language),
       onPrimaryTap: onTap,
       compact: true,
     );
   }
 }
+
+String _modulePrimaryLabel(AppLanguage language) => switch (language) {
+  AppLanguage.en => 'Open practice',
+  AppLanguage.vi => 'Mở luyện tập',
+  AppLanguage.ja => '練習を開く',
+};
+
+String _kanaCountLabel(AppLanguage language, int count) => switch (language) {
+  AppLanguage.en => '$count kana',
+  AppLanguage.vi => '$count ký tự',
+  AppLanguage.ja => '$count字',
+};
+
+String _compoundCountLabel(AppLanguage language, int count) =>
+    switch (language) {
+      AppLanguage.en => '$count compound kana',
+      AppLanguage.vi => '$count âm ghép',
+      AppLanguage.ja => '$count拗音',
+    };
+
+String _ruleCountLabel(AppLanguage language, int count) => switch (language) {
+  AppLanguage.en => '$count rules',
+  AppLanguage.vi => '$count quy tắc',
+  AppLanguage.ja => '$count規則',
+};

@@ -2,6 +2,8 @@
 
 Project documentation is grouped by purpose:
 
+- `docs/agent-directives.md`: mandatory agent working directives, including
+  Directive D for connected, whole-flow audit and verification
 - `docs/plans/`: active and historical implementation plans
 - `docs/plans/legacy/`: older plan files kept for reference
 - `docs/reports/`: generated audits, scorecards, and migration reports

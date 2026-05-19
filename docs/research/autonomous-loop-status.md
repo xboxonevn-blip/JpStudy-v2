@@ -904,3 +904,24 @@
 - Bumped AppDatabase and ContentDatabase grammar seed revisions to `28`.
 - Verified under Directive C: JSON/source-tag check `20/20`, banned-tag check clean, focused suite `48/48`, `flutter analyze lib test` clean, UI string guard clean, literal-route guard clean, content status machine/open-review `0`, release build pass, and Firebase Hosting deploy pass. Full `flutter test` deferred until N4 grammar level completion.
 - Live proof: production browser with normal cache. The real N4 Grammar UI upgraded `flutter.grammar_data_version_N4` to `28`; searching `すぎ` rendered the corrected row, and opening the result rendered `KẾT NỐI: Vます語幹 / いA語幹 / なA語幹 + すぎます`. Page-context fetch with `cache: default` returned `no-cache` for `main.dart.js`, `grammar_n4_41.json`, `grammar_n4_44.json`, and `grammar_n4_45.json`; `sqlite3.wasm` and `drift_worker.js` remained `public, max-age=2592000`. New console warnings/errors `0`.
+
+## 2026-05-19 QA-A-018 App Check Deploy Guard
+
+- Owner P1 defect: Firebase Console showed Authentication App Check traffic at `0% verified / 100% unverified`.
+- Confirmed production symptom: live Network did not show App Check token exchange or reCAPTCHA/App Check SDK requests, and Auth requests lacked `X-Firebase-AppCheck`.
+- Added RED/GREEN guard for App Check preload, deploy build key injection, and explicit startup logging when a release web build lacks `JPSTUDY_RECAPTCHA_SITE_KEY`.
+- Implemented shared `tool/deploy/hosting_deploy.js`; all loop deploys must use this helper so deployable web builds abort when `JPSTUDY_RECAPTCHA_SITE_KEY` is empty.
+- Patched CI deploy to use the same helper. Enforcement remains off by owner policy.
+
+## 2026-05-20 App Check, Sentry CSP, and Grammar Surface Batch
+
+- Completed QA-A-018 deploy path: `web/preload.js` now preloads `firebase-app-check.js`, `lib/main.dart` logs missing release App Check keys instead of silently skipping, CI deploy uses `node tool/deploy/hosting_deploy.js`, and the helper redacts tokens while avoiding Windows `shell:true` deploy warnings.
+- Fixed Sentry CSP: Hosting `script-src` includes `https://browser.sentry-cdn.com`, while `connect-src` keeps `https://*.sentry.io`.
+- Fixed upper-level grammar examples: `GrammarSeeder`, `ContentDatabase`, and `findGrammarExamplesForDefinition` now handle object-wrapped flat example rows. Added integrity coverage so every N5-N1 grammar definition must match examples.
+- Fixed direct grammar detail deep links: `GrammarRepository.getGrammarDetail` now seeds the active level before returning not-found for a missing id. RED proof was `/#/grammar/81` in a fresh VI/N4 context.
+- Source-verified N4 grammar lessons 46-50, replaced old `vi-human-approved` tags with truthful `vi-source-verified`, corrected formations/explanations for timing, expectation, hearsay, appearance, causative, honorific, humble, and formal polite patterns, and bumped grammar seed revisions to `29`.
+- Verified locally: `npm run test:research-tooling` passed `61`, `python tooling/audit_ui_string_literals.py --check` reported `0`, `dart run tool\research\content_vi_status_report.dart` scanned `23,444` items with machine/open-review `0`, `flutter analyze lib test` clean, focused Flutter suite passed `72`, and full `flutter test` passed `2347`.
+- Deployed with `node tool\deploy\hosting_deploy.js`; `npm run test:web-resource-smoke` passed against `build/web`.
+- Live headers: `main.dart.js`, `grammar_n4_46.json`, and `grammar_examples/n4/lesson_46.json` returned `Cache-Control: no-cache`; CSP contains reCAPTCHA, `browser.sentry-cdn.com`, and `*.sentry.io`.
+- Live proof: App Check SDK loaded, reCAPTCHA loaded, `firebaseappcheck.googleapis.com` exchange attempted, Auth requests carried `X-Firebase-AppCheck`, and Sentry CDN returned `200`. Headless reCAPTCHA exchange returned `403`, so App Check enforcement remains off.
+- Live proof: fresh VI/N2 direct `/#/grammar/1` rendered real examples for `A あるいは B` and the grammar gate opened `Câu 1/5`; fresh VI/N4 direct `/#/grammar/81` rendered examples for `ところです`, the gate opened `Câu 1/5`, and catalog search `ところです` returned the row instead of an empty state.

@@ -252,7 +252,29 @@ void main() {
     expect(row.structure, 'Verb-dictionary form + ことなく');
     expect(row.explanation, contains('V辞書形 + ことなく'));
     expect(row.tags, contains('vi-source-verified'));
-    expect(revisionRow.data['value'], '28');
+    expect(revisionRow.data['value'], '29');
+  });
+
+  test('content DB seeds flat upper-level grammar examples', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({'onboarding.level': 'N2'});
+    final db = ContentDatabase(executor: NativeDatabase.memory());
+    addTearDown(db.close);
+
+    final point =
+        await (db.select(db.grammarPoint)
+              ..where(
+                (tbl) => tbl.level.equals('N2') & tbl.title.equals('A あるいは B'),
+              )
+              ..limit(1))
+            .getSingle();
+    final examples = await (db.select(
+      db.grammarExample,
+    )..where((tbl) => tbl.grammarPointId.equals(point.id))).get();
+
+    expect(examples, hasLength(4));
+    expect(examples.first.sentence, contains('あるいは'));
+    expect(examples.first.translation, isNotEmpty);
   });
 
   test(
@@ -275,7 +297,7 @@ void main() {
                 ..groupBy([levelCol]))
               .get();
 
-      expect(revisionRow.data['value'], '28');
+      expect(revisionRow.data['value'], '29');
       expect({
         for (final row in rows) row.read(levelCol),
       }, unorderedEquals(['N5']));

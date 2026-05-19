@@ -15,7 +15,7 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 70;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
-const _grammarSeedRevision = 28;
+const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
@@ -1083,7 +1083,13 @@ class ContentDatabase extends _$ContentDatabase {
         List<dynamic> extras = const [];
         try {
           final exStr = await rootBundle.loadString(pair.exPath);
-          extras = json.decode(exStr) as List<dynamic>;
+          final decoded = json.decode(exStr);
+          if (decoded is List<dynamic>) {
+            extras = decoded;
+          } else if (decoded is Map<String, dynamic> &&
+              decoded['examples'] is List<dynamic>) {
+            extras = decoded['examples'] as List<dynamic>;
+          }
         } catch (_) {}
         return (points: points, extras: extras);
       } catch (_) {

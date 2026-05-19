@@ -3,60 +3,60 @@
     "lessonId": 48,
     "title": "Thể Sai khiến (Shieki)",
     "titleEn": "Causative Form (使役形)",
-    "structure": "V (Sai khiến)",
-    "structureEn": "V (Causative)",
-    "explanation": "Thể sai khiến dùng để nói “bắt/cho phép ai làm gì”. Nhóm I đổi âm trước `ます` sang hàng a + `せる`; nhóm II thêm `させる`; `来ます` thành `来させます（こさせます）`, `します` thành `させます`.",
+    "structure": "使役形",
+    "structureEn": "Causative form",
+    "explanation": "Thể sai khiến dùng để nói “bắt/cho phép ai làm gì”. Nhóm I đổi âm cuối hàng `う` sang hàng `あ` + `せる` (`う` -> `わせる`); nhóm II bỏ `る` rồi thêm `させる`; `来る` thành `来させる（こさせる）`, `する` thành `させる`.",
     "explanationViDraft": "Cách chia động từ sang thể Sai khiến (Bắt làm, Cho phép làm). * **Nhóm I**: Chuyển cột `i` thành cột `a` + `せる`.\n* **Nhóm II**: Bỏ `ます` thêm `させる`.\n* **Nhóm III**: `きます` -> `こさせる`; `します` -> `させる`.",
     "explanationEn": "Conjugating verbs to Causative Form (Make/Let do). * **Group I**: Change `i` column to `a` column + `せる`.\n* **Group II**: Drop `ます`, add `させる`.\n* **Group III**: `きます` -> `こさせる`; `します` -> `させる`.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 48,
     "title": "Sai khiến (Bắt buộc/Cho phép)",
     "titleEn": "Causative (Make/Let someone do)",
-    "structure": "N1(người trên) は N2(người dưới) に V (Sai khiến)",
-    "structureEn": "N1 は N2 に V (Causative)",
+    "structure": "N1は + N2を/に + V使役",
+    "structureEn": "N1は + N2を/に + causative verb",
     "explanation": "Mẫu sai khiến nói N1 bắt, sai, cho phép hoặc để N2 làm việc gì. Sắc thái là “bắt” hay “cho” phụ thuộc vào quan hệ và ngữ cảnh.",
     "explanationViDraft": "N1 bắt (hoặc cho phép) N2 làm gì đó. * `部長は加藤さんを大阪へ出張させます`: Trưởng phòng cử anh Kato đi công tác Osaka.",
     "explanationEn": "N1 makes/lets N2 do something. * `部長は加藤さんを大阪へ出張させます`: The department manager sent Mr. Kato on a business trip to Osaka.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 48,
     "title": "Vさせて いただけませんか (Xin phép)",
     "titleEn": "Could you please let me ... (Permission)",
-    "structure": "V (Sai khiến) て いただけませんか",
-    "structureEn": "V-使役形 + ていただけませんか",
+    "structure": "V使役て形 + いただけませんか",
+    "structureEn": "Causative verb te-form + いただけませんか",
     "explanation": "`〜させていただけませんか` là cách xin phép rất lịch sự: “có thể cho tôi được ... không?”. Người nói hạ mình, phù hợp khi nói với khách hàng, cấp trên hoặc người lạ.",
     "explanationViDraft": "Xin phép cho tôi làm gì đó (Lịch sự). * `写真を撮らせていただけませんか`: Cho phép tôi chụp ảnh được không?",
     "explanationEn": "Could you please let me do ...? (Polite). * `写真を撮らせていただけませんか`: Could you please let me take a photo?",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 48,
     "title": "〜させてください",
     "titleEn": "~ please let me do",
-    "structure": "V使役形 + てください",
-    "structureEn": "V使役形 + てください",
+    "structure": "V使役て形 + ください",
+    "structureEn": "Causative verb te-form + ください",
     "explanation": "`〜させてください` dùng để xin phép: “hãy cho tôi được...”. Mức lịch sự vừa phải, thường dùng với giáo viên, cấp trên thân quen hoặc trong tình huống dịch vụ.",
     "explanationViDraft": "Xin phép được làm gì.",
     "explanationEn": "Used to ask permission to do something.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   }
 ]

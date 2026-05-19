@@ -3,60 +3,60 @@
     "lessonId": 49,
     "title": "Kính ngữ (Sonkeigo)",
     "titleEn": "Honorifics (尊敬語)",
-    "structure": "Kính ngữ (Tôn trọng hành động của người khác)",
-    "structureEn": "Honorifics",
+    "structure": "尊敬語: お + Vます語幹 / ご + 漢語名詞 + になります・受身形・特別尊敬語",
+    "structureEn": "Honorifics: お + V-masu stem / ご + Sino-Japanese verbal noun + になります, passive-form honorifics, or special honorific verbs",
     "explanation": "Kính ngữ dùng để nâng hành động hoặc trạng thái của người trên, khách hàng, hoặc người cần tôn trọng. Có thể dùng mẫu `お/ご〜になります`, thể bị động kính ngữ, hoặc động từ kính ngữ đặc biệt.",
-    "explanationViDraft": "Dùng để nói về hành động của người trên (Thầy giáo, cấp trên, khách hàng...). * **Cách 1**: `お, ご + V (bỏ masu) + に なります`.\n* **Cách 2**: Thể Bị động (`られます`).\n* **Cách 3**: Động từ đặc biệt (`いらっしゃいます`, `召し上がります`...).",
-    "explanationEn": "Honorifics (Respecting others' actions). * **Method 1**: `お / ご + V (stem) + に なります`.\n* **Method 2**: Passive form (`られます`).\n* **Method 3**: Special verbs (`いらっしゃいます`, `召し上がります`...).",
+    "explanationViDraft": "Dùng để nói về hành động của người trên (Thầy giáo, cấp trên, khách hàng...). * **Cách 1**: `お + Vます語幹 / ご + 漢語名詞 + に なります`.\n* **Cách 2**: Thể bị động kính ngữ (`れます/られます`).\n* **Cách 3**: Động từ đặc biệt (`いらっしゃいます`, `召し上がります`...).",
+    "explanationEn": "Honorifics (Respecting others' actions). * **Method 1**: `お + V-masu stem / ご + Sino-Japanese verbal noun + に なります`.\n* **Method 2**: Passive-form honorifics (`れます/られます`).\n* **Method 3**: Special verbs (`いらっしゃいます`, `召し上がります`...).",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 49,
     "title": "お, ご ～ ください",
     "titleEn": "Please ... (Honorific request)",
-    "structure": "お V (bỏ masu) / ご N + ください",
-    "structureEn": "お V-stem / ご N + ください",
+    "structure": "お + Vます語幹 / ご + 漢語名詞 + ください",
+    "structureEn": "お + V-masu stem / ご + Sino-Japanese verbal noun + ください",
     "explanation": "`お/ご〜ください` là mẫu yêu cầu lịch sự, dùng khi mời hoặc yêu cầu người nghe làm gì. `お` thường đi với từ gốc Nhật, `ご` thường đi với danh từ Hán Nhật.",
     "explanationViDraft": "Yêu cầu ai đó làm gì (Kính ngữ). * `お入りください`: Xin mời vào.\n* `ご注意ください`: Xin hãy chú ý.",
     "explanationEn": "Please do ... (Honorific request). * `お入りください`: Please come in.\n* `ご注意ください`: Please be careful.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 49,
     "title": "お／ご〜になります",
     "titleEn": "honorific pattern",
-    "structure": "お／ご + Vます-stem + になります",
-    "structureEn": "お／ご + Vます-stem + になります",
+    "structure": "お + Vます語幹 / ご + 漢語名詞 + になります",
+    "structureEn": "お + V-masu stem / ご + Sino-Japanese verbal noun + になります",
     "explanation": "`お/ご〜になります` là mẫu kính ngữ nâng hành động của người khác. Không dùng mẫu này để nói hành động của bản thân hoặc người trong nhóm mình.",
     "explanationViDraft": "Một mẫu kính ngữ cơ bản.",
     "explanationEn": "A basic honorific pattern.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 49,
     "title": "〜れます（尊敬）",
     "titleEn": "honorific passive-like form",
-    "structure": "Vられます",
-    "structureEn": "Vられます",
+    "structure": "尊敬形（Vれる / Vられる）",
+    "structureEn": "Honorific form (V-れる / V-られる)",
     "explanation": "`〜れます/られます` có thể dùng như kính ngữ đơn giản cho hành động của người trên. Hình thức giống bị động, nên cần dựa vào ngữ cảnh để hiểu.",
     "explanationViDraft": "Dùng như kính ngữ cho một số động từ.",
     "explanationEn": "Used as an honorific form for some verbs.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   }
 ]

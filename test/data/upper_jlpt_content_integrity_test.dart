@@ -2,9 +2,45 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:jpstudy/data/utils/grammar_example_matching.dart';
 
 void main() {
   group('upper JLPT local content integrity', () {
+    test('every grammar definition has matching example blocks', () {
+      final missing = <String>[];
+      for (final level in const ['n5', 'n4', 'n3', 'n2', 'n1']) {
+        for (final file in _jsonFiles(
+          Directory('assets/data/content/grammar/$level'),
+        )) {
+          final lessonId = _grammarLessonId(file);
+          final exampleFile = File(
+            'assets/data/content/grammar_examples/$level/lesson_$lessonId.json',
+          );
+          final exampleBlocks = exampleFile.existsSync()
+              ? _readGrammarExampleBlocks(
+                  jsonDecode(exampleFile.readAsStringSync()),
+                )
+              : const <dynamic>[];
+          final definitions = jsonDecode(file.readAsStringSync()) as List;
+          for (final rawPoint in definitions) {
+            final point = rawPoint as Map<String, dynamic>;
+            final examples = findGrammarExamplesForDefinition(
+              exampleBlocks: exampleBlocks,
+              title: point['title'] as String?,
+              grammarPoint: point['grammarPoint'] as String?,
+            );
+            if (examples == null || examples.isEmpty) {
+              missing.add(
+                '$level lesson $lessonId: ${point['title']} -> no examples',
+              );
+            }
+          }
+        }
+      }
+
+      expect(missing, isEmpty, reason: missing.take(40).join('\n'));
+    });
+
     for (final level in const ['n3', 'n2', 'n1']) {
       test(
         '$level grammar/examples/kanji/immersion use local lessons 1-25',
@@ -340,13 +376,25 @@ void main() {
   });
 }
 
+List<dynamic> _readGrammarExampleBlocks(Object? decoded) {
+  if (decoded is List<dynamic>) return decoded;
+  if (decoded is Map<String, dynamic> && decoded['examples'] is List<dynamic>) {
+    return decoded['examples'] as List<dynamic>;
+  }
+  return const <dynamic>[];
+}
+
 Set<int> _grammarLessons(String level) {
   return _jsonFiles(Directory('assets/data/content/grammar/$level')).map((
     file,
   ) {
-    final match = RegExp(r'grammar_n\d_(\d+)\.json$').firstMatch(file.path);
-    return int.parse(match!.group(1)!);
+    return _grammarLessonId(file);
   }).toSet();
+}
+
+int _grammarLessonId(File file) {
+  final match = RegExp(r'grammar_n\d_(\d+)\.json$').firstMatch(file.path);
+  return int.parse(match!.group(1)!);
 }
 
 Set<int> _lessonFileIds(Directory dir) {

@@ -23,13 +23,21 @@ Future<void> main() async {
   // Firebase must be initialized before any FirebaseAuth/Storage call. The
   // app stays usable if init fails (offline-first), but features that depend
   // on the cloud will gracefully no-op.
+  var firebaseInitialized = false;
   try {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
-    await _activateFirebaseAppCheck();
-  } catch (_) {
-    // Swallow: app runs in local-only mode if Firebase is unreachable.
+    firebaseInitialized = true;
+  } catch (e, st) {
+    debugPrint('Firebase initialization failed: $e\n$st');
+  }
+  if (firebaseInitialized) {
+    try {
+      await _activateFirebaseAppCheck();
+    } catch (e, st) {
+      debugPrint('Firebase App Check activation failed: $e\n$st');
+    }
   }
   // Same defence-in-depth as Firebase: if the local notification plugin fails
   // (missing platform settings, sandbox, etc.) the app still boots offline.
@@ -88,7 +96,15 @@ Future<void> main() async {
 Future<void> _activateFirebaseAppCheck() async {
   if (kIsWeb) {
     const siteKey = String.fromEnvironment('JPSTUDY_RECAPTCHA_SITE_KEY');
-    if (siteKey.isEmpty) return;
+    if (siteKey.isEmpty) {
+      if (kReleaseMode) {
+        debugPrint(
+          'WARNING: App Check disabled: JPSTUDY_RECAPTCHA_SITE_KEY is empty '
+          'for this web build.',
+        );
+      }
+      return;
+    }
     await FirebaseAppCheck.instance.activate(
       providerWeb: ReCaptchaV3Provider(siteKey),
     );

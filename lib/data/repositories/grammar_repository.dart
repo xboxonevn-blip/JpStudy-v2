@@ -45,12 +45,13 @@ class GrammarRepository {
   /// Fetch full details for a grammar point (including examples)
   Future<({GrammarPoint point, List<GrammarExample> examples})?>
   getGrammarDetail(int id) async {
-    // Fire both queries concurrently; discard examples if point not found.
-    final pointFuture = _db.grammarDao.getGrammarPoint(id);
-    final examplesFuture = _db.grammarDao.getExamplesForPoint(id);
-    final point = await pointFuture;
+    var point = await _db.grammarDao.getGrammarPoint(id);
+    if (point == null) {
+      await GrammarSeeder(_db.grammarDao).seedGrammarData(_db);
+      point = await _db.grammarDao.getGrammarPoint(id);
+    }
     if (point == null) return null;
-    final examples = await examplesFuture;
+    final examples = await _db.grammarDao.getExamplesForPoint(id);
     return (point: point, examples: examples);
   }
 

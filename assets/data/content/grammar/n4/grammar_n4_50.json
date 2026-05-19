@@ -3,60 +3,60 @@
     "lessonId": 50,
     "title": "Khiêm nhường ngữ (kenjougo)",
     "titleEn": "Humble Language (謙譲語)",
-    "structure": "Khiêm nhường ngữ (diễn đạt hạ mình)",
-    "structureEn": "Humble Language",
+    "structure": "謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語",
+    "structureEn": "Humble language: お + V-masu stem / ご + Sino-Japanese verbal noun + します, or special humble verbs",
     "explanation": "Khiêm nhường ngữ dùng để hạ hành động của mình hoặc nhóm mình khi hành động đó hướng đến người trên hay khách hàng. Mục đích là thể hiện sự tôn trọng đối với đối phương.",
-    "explanationViDraft": "Dùng để nói về hành động của bản thân hoặc người nhà mình đối với người trên. * **Cách 1**: `お, ご + V (bỏ masu) + します`.\n* **Cách 2**: Động từ đặc biệt (`参ります`, `申します`, `拝見します`...).",
-    "explanationEn": "Humble language (Lowering one's own actions). * **Method 1**: `お / ご + V (stem) + します`.\n* **Method 2**: Special verbs (`参ります`, `申します`, `拝見します`...).",
+    "explanationViDraft": "Dùng để nói về hành động của bản thân hoặc người nhà mình đối với người trên. * **Cách 1**: `お + Vます語幹 / ご + 漢語名詞 + します`.\n* **Cách 2**: Động từ đặc biệt (`参ります`, `申します`, `拝見します`...).",
+    "explanationEn": "Humble language (Lowering one's own actions). * **Method 1**: `お + V-masu stem / ご + Sino-Japanese verbal noun + します`.\n* **Method 2**: Special verbs (`参ります`, `申します`, `拝見します`...).",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 50,
     "title": "Teineigo trang trọng",
     "titleEn": "Formal teineigo",
-    "structure": "ございます / ～でございます",
-    "structureEn": "ございます / でございます",
+    "structure": "ございます / N・なA語幹 + でございます",
+    "structureEn": "ございます / Noun or な-Adjective stem + でございます",
     "explanation": "`ございます` là dạng trang trọng hơn `あります`, còn `でございます` trang trọng hơn `です`. Thường gặp trong dịch vụ, thông báo và giao tiếp rất lịch sự.",
     "explanationViDraft": "Đây là cách nói trang trọng hơn của `あります` và `です`. * `あります` -> `ございます`\n* `です` -> `でございます`",
     "explanationEn": "These are more formal polite versions of `あります` and `です`. * `あります` -> `ございます`\n* `です` -> `でございます`",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 50,
     "title": "お／ご〜します",
     "titleEn": "humble pattern",
-    "structure": "お／ご + Vます-stem + します",
-    "structureEn": "お／ご + Vます-stem + します",
+    "structure": "お + Vます語幹 / ご + 漢語名詞 + します",
+    "structureEn": "お + V-masu stem / ご + Sino-Japanese verbal noun + します",
     "explanation": "`お/ご〜します` là mẫu khiêm nhường để nói mình làm việc gì cho hoặc đối với người trên. Không dùng mẫu này để nâng hành động của đối phương.",
     "explanationViDraft": "Một mẫu khiêm nhường ngữ cơ bản.",
     "explanationEn": "A basic humble expression pattern.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   },
   {
     "lessonId": 50,
     "title": "〜でございます",
     "titleEn": "very polite copula",
-    "structure": "N / Aな + でございます",
-    "structureEn": "N / Aな + でございます",
+    "structure": "N / なA語幹 + でございます",
+    "structureEn": "Noun / な-Adjective stem + でございます",
     "explanation": "`〜でございます` là dạng rất trang trọng của `です`, dùng với danh từ hoặc tính từ na. Trong hội thoại thường ngày, mẫu này nghe quá trang trọng.",
     "explanationViDraft": "Cách nói lịch sự cao của です.",
     "explanationEn": "A very polite form of です.",
     "level": "N4",
     "tags": [
       "vi-editorial-codex-pass",
-      "vi-human-approved"
+      "vi-source-verified"
     ]
   }
 ]

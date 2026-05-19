@@ -3,18 +3,26 @@ window.flutterfire_web_sdk_version = firebaseSdkVersion;
 
 async function preloadFirebaseSdk() {
   const base = `https://www.gstatic.com/firebasejs/${firebaseSdkVersion}`;
-  const [firebaseCore, firebaseAuth, firebaseStorage, firebaseAnalytics] =
+  const [
+    firebaseCore,
+    firebaseAuth,
+    firebaseStorage,
+    firebaseAnalytics,
+    firebaseAppCheck,
+  ] =
     await Promise.all([
       import(`${base}/firebase-app.js`),
       import(`${base}/firebase-auth.js`),
       import(`${base}/firebase-storage.js`),
       import(`${base}/firebase-analytics.js`),
+      import(`${base}/firebase-app-check.js`),
     ]);
 
   window.firebase_core = firebaseCore;
   window.firebase_auth = firebaseAuth;
   window.firebase_storage = firebaseStorage;
   window.firebase_analytics = firebaseAnalytics;
+  window.firebase_app_check = firebaseAppCheck;
 }
 
 function setAccessibleViewport() {

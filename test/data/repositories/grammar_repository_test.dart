@@ -68,6 +68,21 @@ void main() {
     },
   );
 
+  test('fetchPointsByLevel seeds flat upper-level grammar examples', () async {
+    SharedPreferences.setMockInitialValues({
+      GrammarSeeder.versionKeyForLevel('N2'): 0,
+    });
+
+    final points = await repository.fetchPointsByLevel('N2');
+    final point = points.singleWhere((p) => p.meaning == 'A あるいは B');
+    final detail = await repository.getGrammarDetail(point.id);
+
+    expect(detail, isNotNull);
+    expect(detail!.examples, hasLength(4));
+    expect(detail.examples.first.japanese, contains('あるいは'));
+    expect(detail.examples.first.translationVi, isNotEmpty);
+  });
+
   // ── fetchPointsByIds ──────────────────────────────────────────────────────
 
   test('fetchPointsByIds returns empty list for empty input', () async {
@@ -132,6 +147,25 @@ void main() {
   });
 
   // ── getGrammarDetail ──────────────────────────────────────────────────────
+
+  test(
+    'getGrammarDetail seeds the active level before resolving a deep link',
+    () async {
+      SharedPreferences.setMockInitialValues({
+        'onboarding.level': 'N4',
+        GrammarSeeder.versionKeyForLevel('N4'): 0,
+      });
+
+      final result = await repository.getGrammarDetail(81);
+
+      expect(result, isNotNull);
+      expect(result!.point.jlptLevel, 'N4');
+      expect(result.point.grammarPoint, 'V辞書 / Vている / Vた + ところです');
+      expect(result.point.meaning, '～ところです (Thời điểm)');
+      expect(result.examples, isNotEmpty);
+      expect(result.examples.first.japanese, contains('ところです'));
+    },
+  );
 
   test('getGrammarDetail returns null for unknown id', () async {
     final result = await repository.getGrammarDetail(999);

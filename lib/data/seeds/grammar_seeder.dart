@@ -14,7 +14,7 @@ class GrammarSeeder {
   final GrammarDao _dao;
 
   // Tăng version này lên khi thay đổi file JSON data
-  static const int kGrammarDataVersion = 28;
+  static const int kGrammarDataVersion = 29;
   static const String kKeyGrammarVersion = 'grammar_data_version';
 
   static String versionKeyForLevel(String level) =>
@@ -110,7 +110,13 @@ class GrammarSeeder {
   Future<List<dynamic>?> _tryLoadJsonList(String path) async {
     try {
       final s = await rootBundle.loadString(path);
-      return json.decode(s) as List<dynamic>;
+      final decoded = json.decode(s);
+      if (decoded is List<dynamic>) return decoded;
+      if (decoded is Map<String, dynamic> &&
+          decoded['examples'] is List<dynamic>) {
+        return decoded['examples'] as List<dynamic>;
+      }
+      return null;
     } catch (_) {
       return null;
     }

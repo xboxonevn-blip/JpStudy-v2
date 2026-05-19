@@ -23,6 +23,7 @@ List<dynamic>? findGrammarExamplesForDefinition({
     return null;
   }
 
+  final flatMatches = <dynamic>[];
   for (final block in exampleBlocks) {
     if (block is! Map) continue;
     final blockKeys = _buildGrammarLabelKeys(block['grammarPoint']?.toString());
@@ -31,11 +32,13 @@ List<dynamic>? findGrammarExamplesForDefinition({
       if (examples is List<dynamic>) {
         return examples;
       }
-      return null;
+      if (block['sentence'] is String) {
+        flatMatches.add(block);
+      }
     }
   }
 
-  return null;
+  return flatMatches.isEmpty ? null : flatMatches;
 }
 
 Set<String> _buildGrammarLabelKeys(String? rawValue) {

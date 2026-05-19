@@ -3,6 +3,12 @@
 > Source of truth for project infrastructure. Read this FIRST before any
 > task that touches deployment, auth, billing, or external services.
 
+## Agent directives
+
+Read and follow `docs/agent-directives.md` before starting any implementation,
+audit, QA, content, or live-proof work. Directive D is mandatory and requires
+connected, whole-flow audit/verification instead of siloed field-only fixes.
+
 ## Hosting sites (primary + disabled default)
 
 JpStudy-v2 deploys only to the primary Firebase Hosting site:

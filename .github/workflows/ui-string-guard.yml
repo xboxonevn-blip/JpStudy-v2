@@ -184,21 +184,9 @@ jobs:
         if: steps.deploy_gate.outputs.enabled == 'true'
         run: npm ci
 
-      - name: Build web for production
+      - name: Build and deploy primary Firebase Hosting target
         if: steps.deploy_gate.outputs.enabled == 'true'
-        shell: bash
-        run: |
-          RELEASE="${GITHUB_SHA::12}"
-          flutter build web --release --base-href=/ \
-            --dart-define=JPSTUDY_RECAPTCHA_SITE_KEY="${JPSTUDY_RECAPTCHA_SITE_KEY}" \
-            --dart-define=JPSTUDY_SENTRY_DSN="${JPSTUDY_SENTRY_DSN}" \
-            --dart-define=JPSTUDY_SENTRY_ENVIRONMENT="${JPSTUDY_SENTRY_ENVIRONMENT}" \
-            --dart-define=JPSTUDY_RELEASE="${RELEASE}" \
-            --dart-define=JPSTUDY_SENTRY_SMOKE_EVENT="${JPSTUDY_SENTRY_SMOKE_EVENT}"
-
-      - name: Deploy primary Firebase Hosting target
-        if: steps.deploy_gate.outputs.enabled == 'true'
-        run: npx firebase deploy --only hosting:jpstudy --project jpstudy-v2 --token "${FIREBASE_TOKEN}" --non-interactive
+        run: node tool/deploy/hosting_deploy.js
 
       - name: Smoke primary and legacy hosting
         if: steps.deploy_gate.outputs.enabled == 'true'

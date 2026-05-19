@@ -1350,3 +1350,30 @@ Runtime note: bumped content DB Kanji seed revision from `55` to `56` and added 
 Verification: JSON parse passed, coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `168` to `160`, focused DB/reachability/taxonomy/upper-JLPT tests passed, `flutter analyze lib test` was clean, UI string guard reported `0`, content status report machine/open-review counts stayed `0`, node research tooling passed (`54`), full `flutter test` passed (`2340`), release web build succeeded, and Firebase Hosting deploy completed.
 
 Live proof after deploy: after `69a404f9` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, `/assets/AssetManifest.bin.json`, and `/assets/assets/data/content/kanji/n1/lesson_05.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `日` showed `Nhật (ngày; mặt trời; Nhật Bản)`, Hán-Việt `Nhật`, on `ニチ/ジツ`, kun `ひ/-び/-か`, stroke count `4`, and example `明後日/あさって` = `ngày mốt`. `顎` showed `Ngạc (cằm; hàm)` and `寝` showed `Tẩm (ngủ; nằm nghỉ; phòng ngủ)`. Console errors/warnings: `0`.
+
+## Kanji N1 Lesson 6 Completeness Batch
+
+Sources consulted:
+
+- KANJIDIC2 local cache `.codex/sources/kanjidic2/kanjidic2.xml` for Japanese stroke counts, readings, and English definitions.
+- Unihan local cache `.codex/sources/Unihan/Unihan_Readings.txt` and `.codex/sources/Unihan/Unihan_IRGSources.txt` for `kVietnamese`, `kDefinition`, and `kTotalStrokes`; `浅`, `笑`, and `焦` have no Unihan `kVietnamese`, so learner-facing values use established source-checked readings.
+- Existing N1 ShinKanzen/Tanos and Hajimete vocabulary context for `浅ましい`, `欺く`, `鮮やか`, `あざ笑う`, `味わい`, `東`, `焦る`, and `彼`, used only to choose examples and verify learner-facing glosses.
+
+| Item | Sources | Change |
+|---|---|---|
+| `浅` | KANJIDIC2 reading `セン`, `あさ.い`, stroke count `9`; local context `浅ましい` | Corrected stroke count from `8` to `9`, rewrote to `Thiển (nông; cạn; hời hợt)`, added readings/components/related kanji, and kept `浅ましい` as the example. |
+| `欺` | KANJIDIC2 reading `ギ`, `あざむ.く`; Unihan `kVietnamese=khi`; local context `欺く` | Rewrote to `Khi (lừa dối; đánh lừa)`, added readings/search text/components, and translated the example as `lừa dối`. |
+| `鮮` | KANJIDIC2 reading `セン`, `あざ.やか`; Unihan `kVietnamese=tiên`; local context `鮮やか` | Rewrote to `Tiên (tươi; rực rỡ; rõ nét)`, added readings/components/related kanji, and translated the example naturally. |
+| `笑` | KANJIDIC2 reading `ショウ`, `わら.う/え.む`; local context `あざ笑う` | Rewrote to `Tiếu (cười)`, replaced word-level `あざわらう` as a kanji reading with source-backed readings, and translated the example as `chế nhạo; cười nhạo`. |
+| `味` | KANJIDIC2 reading `ミ`, `あじ/あじ.わう`; Unihan `kVietnamese=vị`; local context `味わい` | Rewrote to `Vị (vị; hương vị; ý nghĩa)`, added source-backed readings/components, and translated `味わい` as `hương vị; ý nghĩa; tầm quan trọng`. |
+| `東` | KANJIDIC2 reading `トウ`, `ひがし`; Unihan includes the historical `đang đông` reading; local context `東/あずま` | Normalized learner-facing Hán-Việt to `Đông`, added source-backed readings/components, and explained the older `あずま` example as eastern Japan. |
+| `焦` | KANJIDIC2 reading `ショウ`, scorch/impatient meanings; local context `焦る` | Rewrote to `Tiêu (cháy sém; nôn nóng; sốt ruột)`, added readings/components/related kanji, and translated `焦る` as `nôn nóng; sốt ruột; vội vàng`. |
+| `彼` | KANJIDIC2 reading `ヒ`, `かれ/かの`; Unihan `kVietnamese=bỉ`; local context previously used awkward `彼処` | Rewrote to `Bỉ (anh ấy; người kia; phía bên kia)`, used the basic `彼/かれ` example, and added pronoun/distance related kanji. |
+
+Tagging: added entry-level and file-level `vi-source-verified`, removed old `approved-by-user`/`kanji-metadata-approved` metadata, kept `vi-editorial-codex-pass`, and did not add `vi-human-approved`.
+
+Runtime note: bumped content DB Kanji seed revision from `56` to `57` and added an N1 lesson-6 sentinel for `浅` so existing browsers reseed the changed metadata.
+
+Verification: coverage audit kept N2 incomplete current entries at `0` and reduced N1 incomplete current entries from `160` to `152`; focused DB/reachability/taxonomy/upper-JLPT tests passed; `flutter analyze lib test` was clean; release web build succeeded; and Firebase Hosting deploy completed.
+
+Live proof after deploy: after `95534f80` was deployed to Firebase Hosting, a production browser using normal cache fetched `/main.dart.js`, `/flutter_bootstrap.js`, `/flutter.js`, and `/assets/assets/data/content/kanji/n1/lesson_06.json`; all shell/content responses returned `Cache-Control: no-cache`, while `/sqlite3.wasm` and `/drift_worker.js` kept `public, max-age=2592000`. The deployed lesson returned `importStatus=source-verified`; `浅` showed `Thiển (nông; cạn; hời hợt)`, on `セン`, kun `あさ.い`, stroke count `9`, and `vi-source-verified`. Console errors/warnings: `0`.

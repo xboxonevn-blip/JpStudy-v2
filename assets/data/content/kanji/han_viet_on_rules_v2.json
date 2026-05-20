@@ -200,6 +200,773 @@
           }
         ]
       }
+    },
+    {
+      "ruleId": "rule_initial_t_th_to_t_s_sh",
+      "legacyId": "initial-t-th-to-t-s",
+      "section": "2",
+      "parentSection": null,
+      "category": "initial",
+      "title": "Âm đầu là T/Th",
+      "consonants": [
+        "T",
+        "Th"
+      ],
+      "targetRow": "T/S/SH",
+      "targetKana": [
+        "た",
+        "ち",
+        "つ",
+        "て",
+        "と",
+        "だ",
+        "で",
+        "ど",
+        "さ",
+        "し",
+        "す",
+        "せ",
+        "そ",
+        "しゃ",
+        "しゅ",
+        "しょ"
+      ],
+      "percentage": 70,
+      "explanation": "Phụ âm đầu Hán-Việt T/Th thường chuyển sang hàng T, S hoặc SH trong On'yomi.",
+      "legacyConfidence": 0.7,
+      "examples": [
+        {
+          "hanViet": "Thiên",
+          "kanji": "天",
+          "kanjiId": 79,
+          "assetKanjiId": "n1_jlpt_vocab_k079",
+          "level": "N1",
+          "onyomi": "てん",
+          "romaji": "テン",
+          "compound": "天気",
+          "compoundKana": "てんき",
+          "compoundMeaning": "thời tiết",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Tâm",
+          "kanji": "心",
+          "kanjiId": 183,
+          "assetKanjiId": "n1_jlpt_vocab_k183",
+          "level": "N1",
+          "onyomi": "しん",
+          "romaji": "シン",
+          "compound": "安心",
+          "compoundKana": "あんしん",
+          "compoundMeaning": "An tâm",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thông",
+          "kanji": "通",
+          "kanjiId": 356,
+          "assetKanjiId": "n2_jlpt_vocab_k156",
+          "level": "N2",
+          "onyomi": "つう",
+          "romaji": "ツウ",
+          "compound": "普通",
+          "compoundKana": "ふつう",
+          "compoundMeaning": "tàu thường (dừng các ga)",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thể",
+          "kanji": "体",
+          "kanjiId": 325,
+          "assetKanjiId": "n2_jlpt_vocab_k125",
+          "level": "N2",
+          "onyomi": "たい",
+          "romaji": "タイ",
+          "compound": "体",
+          "compoundKana": "からだ",
+          "compoundMeaning": "cơ thể",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thủ",
+          "kanji": "手",
+          "kanjiId": 380,
+          "assetKanjiId": "n2_jlpt_vocab_k180",
+          "level": "N2",
+          "onyomi": "しゅ",
+          "romaji": "シュ",
+          "compound": "お手洗い",
+          "compoundKana": "おてあらい",
+          "compoundMeaning": "phòng tắm",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thất",
+          "kanji": "七",
+          "kanjiId": 765,
+          "assetKanjiId": "n5_l02_k007",
+          "level": "N5",
+          "onyomi": "しち",
+          "romaji": "shichi",
+          "compound": "七",
+          "compoundKana": "なな",
+          "compoundMeaning": "Số 7",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_initial_t_th_to_t_s_sh_三",
+            "kanji": "三",
+            "kanjiId": 760,
+            "assetKanjiId": "n5_l02_k002",
+            "hanViet": "Tam",
+            "correct": "さん",
+            "options": [
+              "さん",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Tam bắt đầu bằng Tam; nhóm Hán-Việt này thường về hàng T/S/SH trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_t_th_to_t_s_sh_千",
+            "kanji": "千",
+            "kanjiId": 770,
+            "assetKanjiId": "n5_l02_k012",
+            "hanViet": "Thiên",
+            "correct": "せん",
+            "options": [
+              "そう",
+              "へん",
+              "あい",
+              "せん"
+            ],
+            "explanation": "Thiên bắt đầu bằng Thiên; nhóm Hán-Việt này thường về hàng T/S/SH trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_t_th_to_t_s_sh_夕",
+            "kanji": "夕",
+            "kanjiId": 888,
+            "assetKanjiId": "n5_l17_k004",
+            "hanViet": "Tịch",
+            "correct": "せき",
+            "options": [
+              "へん",
+              "あい",
+              "せき",
+              "そう"
+            ],
+            "explanation": "Tịch bắt đầu bằng Tịch; nhóm Hán-Việt này thường về hàng T/S/SH trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_t_th_to_t_s_sh_子",
+            "kanji": "子",
+            "kanjiId": 825,
+            "assetKanjiId": "n5_l11_k002",
+            "hanViet": "Tử",
+            "correct": "し",
+            "options": [
+              "あ",
+              "し",
+              "う",
+              "こ"
+            ],
+            "explanation": "Tử bắt đầu bằng Tử; nhóm Hán-Việt này thường về hàng T/S/SH trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_t_th_to_t_s_sh_少",
+            "kanji": "少",
+            "kanjiId": 868,
+            "assetKanjiId": "n5_l15_k005",
+            "hanViet": "Thiểu",
+            "correct": "しょう",
+            "options": [
+              "しょう",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Thiểu bắt đầu bằng Thiểu; nhóm Hán-Việt này thường về hàng T/S/SH trong On'yomi."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_initial_ng_ngh_to_g_gy",
+      "legacyId": "initial-ng-ngh-to-g-gy",
+      "section": "3",
+      "parentSection": null,
+      "category": "initial",
+      "title": "Âm đầu là Ng/Ngh",
+      "consonants": [
+        "Ng",
+        "Ngh"
+      ],
+      "targetRow": "G/GY",
+      "targetKana": [
+        "が",
+        "ぎ",
+        "ぐ",
+        "げ",
+        "ご",
+        "ぎゃ",
+        "ぎゅ",
+        "ぎょ"
+      ],
+      "percentage": 84,
+      "explanation": "Phụ âm đầu Hán-Việt Ng/Ngh thường chuyển sang hàng G hoặc GY trong On'yomi.",
+      "legacyConfidence": 0.84,
+      "examples": [
+        {
+          "hanViet": "Nghiệp",
+          "kanji": "業",
+          "kanjiId": 853,
+          "assetKanjiId": "n5_l13_k010",
+          "level": "N5",
+          "onyomi": "ぎょう",
+          "romaji": "gyou",
+          "compound": "業",
+          "compoundKana": "わざ",
+          "compoundMeaning": "nghề nghiệp",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Ngữ",
+          "kanji": "語",
+          "kanjiId": 433,
+          "assetKanjiId": "n3_l04_k006",
+          "level": "N3",
+          "onyomi": "ご",
+          "romaji": "ゴ",
+          "compound": "英語",
+          "compoundKana": "えいご",
+          "compoundMeaning": "tiếng anh",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nghi",
+          "kanji": "疑",
+          "kanjiId": 717,
+          "assetKanjiId": "n4_l45_k003",
+          "level": "N4",
+          "onyomi": "ぎ",
+          "romaji": "gi",
+          "compound": "疑",
+          "compoundKana": "うたがう",
+          "compoundMeaning": "nghi ngờ",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nghĩa",
+          "kanji": "義",
+          "kanjiId": 247,
+          "assetKanjiId": "n2_jlpt_vocab_k047",
+          "level": "N2",
+          "onyomi": "ぎ",
+          "romaji": "ギ",
+          "compound": "講義",
+          "compoundKana": "こうぎ",
+          "compoundMeaning": "bài giảng",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Ngũ",
+          "kanji": "五",
+          "kanjiId": 763,
+          "assetKanjiId": "n5_l02_k005",
+          "level": "N5",
+          "onyomi": "ご",
+          "romaji": "go",
+          "compound": "五",
+          "compoundKana": "ご",
+          "compoundMeaning": "Số 5",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nguyên",
+          "kanji": "原",
+          "kanjiId": 665,
+          "assetKanjiId": "n4_l36_k003",
+          "level": "N4",
+          "onyomi": "げん",
+          "romaji": "gen",
+          "compound": "原",
+          "compoundKana": "はら",
+          "compoundMeaning": "cánh đồng",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_initial_ng_ngh_to_g_gy_願",
+            "kanji": "願",
+            "kanjiId": 694,
+            "assetKanjiId": "n4_l41_k005",
+            "hanViet": "Nguyện",
+            "correct": "がん",
+            "options": [
+              "がん",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Nguyện bắt đầu bằng Nguyện; nhóm Hán-Việt này thường về hàng G/GY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_ng_ngh_to_g_gy_源",
+            "kanji": "源",
+            "kanjiId": 426,
+            "assetKanjiId": "n3_l03_k007",
+            "hanViet": "Nguyên",
+            "correct": "げん",
+            "options": [
+              "そう",
+              "へん",
+              "あい",
+              "げん"
+            ],
+            "explanation": "Nguyên bắt đầu bằng Nguyên; nhóm Hán-Việt này thường về hàng G/GY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_ng_ngh_to_g_gy_芸",
+            "kanji": "芸",
+            "kanjiId": 332,
+            "assetKanjiId": "n2_jlpt_vocab_k132",
+            "hanViet": "Nghệ",
+            "correct": "げい",
+            "options": [
+              "へん",
+              "あい",
+              "げい",
+              "そう"
+            ],
+            "explanation": "Nghệ bắt đầu bằng Nghệ; nhóm Hán-Việt này thường về hàng G/GY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_ng_ngh_to_g_gy_御",
+            "kanji": "御",
+            "kanjiId": 370,
+            "assetKanjiId": "n2_jlpt_vocab_k170",
+            "hanViet": "Ngự",
+            "correct": "ぎょ",
+            "options": [
+              "あ",
+              "ぎょ",
+              "う",
+              "こ"
+            ],
+            "explanation": "Ngự bắt đầu bằng Ngự; nhóm Hán-Việt này thường về hàng G/GY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_ng_ngh_to_g_gy_儀",
+            "kanji": "儀",
+            "kanjiId": 372,
+            "assetKanjiId": "n2_jlpt_vocab_k172",
+            "hanViet": "Nghi",
+            "correct": "ぎ",
+            "options": [
+              "ぎ",
+              "う",
+              "こ",
+              "あ"
+            ],
+            "explanation": "Nghi bắt đầu bằng Nghi; nhóm Hán-Việt này thường về hàng G/GY trong On'yomi."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_initial_l_to_r",
+      "legacyId": "initial-l-to-r",
+      "section": "4",
+      "parentSection": null,
+      "category": "initial",
+      "title": "Âm đầu là L",
+      "consonants": [
+        "L"
+      ],
+      "targetRow": "R",
+      "targetKana": [
+        "ら",
+        "り",
+        "る",
+        "れ",
+        "ろ",
+        "りゃ",
+        "りゅ",
+        "りょ"
+      ],
+      "percentage": 86,
+      "explanation": "Phụ âm đầu Hán-Việt L thường chuyển sang hàng R trong On'yomi.",
+      "legacyConfidence": 0.86,
+      "examples": [
+        {
+          "hanViet": "Lai",
+          "kanji": "来",
+          "kanjiId": 413,
+          "assetKanjiId": "n3_l02_k002",
+          "level": "N3",
+          "onyomi": "らい",
+          "romaji": "ライ",
+          "compound": "来年",
+          "compoundKana": "らいねん",
+          "compoundMeaning": "năm tới",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Lực",
+          "kanji": "力",
+          "kanjiId": 65,
+          "assetKanjiId": "n1_jlpt_vocab_k065",
+          "level": "N1",
+          "onyomi": "りょく",
+          "romaji": "リョク",
+          "compound": "協力",
+          "compoundKana": "きょうりょく",
+          "compoundMeaning": "Hợp lực",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Lý",
+          "kanji": "理",
+          "kanjiId": 549,
+          "assetKanjiId": "n3_l19_k002",
+          "level": "N3",
+          "onyomi": "り",
+          "romaji": "リ",
+          "compound": "料理",
+          "compoundKana": "りょうり",
+          "compoundMeaning": "ẩm thực",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Liệu",
+          "kanji": "料",
+          "kanjiId": 548,
+          "assetKanjiId": "n3_l19_k001",
+          "level": "N3",
+          "onyomi": "りょう",
+          "romaji": "リョウ",
+          "compound": "料理",
+          "compoundKana": "りょうり",
+          "compoundMeaning": "ẩm thực",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Lương",
+          "kanji": "良",
+          "kanjiId": 110,
+          "assetKanjiId": "n1_jlpt_vocab_k110",
+          "level": "N1",
+          "onyomi": "りょう",
+          "romaji": "リョウ",
+          "compound": "良い",
+          "compoundKana": "よい",
+          "compoundMeaning": "Tốt",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Lập",
+          "kanji": "立",
+          "kanjiId": 858,
+          "assetKanjiId": "n5_l14_k005",
+          "level": "N5",
+          "onyomi": "りつ",
+          "romaji": "ritsu",
+          "compound": "立",
+          "compoundKana": "たつ",
+          "compoundMeaning": "đứng",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_initial_l_to_r_流",
+            "kanji": "流",
+            "kanjiId": 266,
+            "assetKanjiId": "n2_jlpt_vocab_k066",
+            "hanViet": "Lưu",
+            "correct": "りゅう",
+            "options": [
+              "りゅう",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Lưu bắt đầu bằng Lưu; nhóm Hán-Việt này thường về hàng R trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_l_to_r_六",
+            "kanji": "六",
+            "kanjiId": 764,
+            "assetKanjiId": "n5_l02_k006",
+            "hanViet": "Lục",
+            "correct": "ろく",
+            "options": [
+              "そう",
+              "へん",
+              "あい",
+              "ろく"
+            ],
+            "explanation": "Lục bắt đầu bằng Lục; nhóm Hán-Việt này thường về hàng R trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_l_to_r_戻",
+            "kanji": "戻",
+            "kanjiId": 635,
+            "assetKanjiId": "n4_l30_k006",
+            "hanViet": "Lệ",
+            "correct": "れい",
+            "options": [
+              "へん",
+              "あい",
+              "れい",
+              "そう"
+            ],
+            "explanation": "Lệ bắt đầu bằng Lệ; nhóm Hán-Việt này thường về hàng R trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_l_to_r_絡",
+            "kanji": "絡",
+            "kanjiId": 726,
+            "assetKanjiId": "n4_l46_k006",
+            "hanViet": "Lạc",
+            "correct": "らく",
+            "options": [
+              "あい",
+              "らく",
+              "そう",
+              "へん"
+            ],
+            "explanation": "Lạc bắt đầu bằng Lạc; nhóm Hán-Việt này thường về hàng R trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_l_to_r_量",
+            "kanji": "量",
+            "kanjiId": 702,
+            "assetKanjiId": "n4_l42_k007",
+            "hanViet": "Lượng",
+            "correct": "りょう",
+            "options": [
+              "りょう",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Lượng bắt đầu bằng Lượng; nhóm Hán-Việt này thường về hàng R trong On'yomi."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_initial_n_nh_to_n_j_ny",
+      "legacyId": "initial-n-nh-to-n-j",
+      "section": "5",
+      "parentSection": null,
+      "category": "initial",
+      "title": "Âm đầu là N/Nh",
+      "consonants": [
+        "N",
+        "Nh"
+      ],
+      "targetRow": "N/J/NY",
+      "targetKana": [
+        "な",
+        "に",
+        "ぬ",
+        "ね",
+        "の",
+        "じ",
+        "じゃ",
+        "じゅ",
+        "じょ",
+        "にゃ",
+        "にゅ",
+        "にょ"
+      ],
+      "percentage": 76,
+      "explanation": "Phụ âm đầu Hán-Việt N/Nh thường chuyển sang hàng N, J hoặc NY trong On'yomi.",
+      "legacyConfidence": 0.76,
+      "examples": [
+        {
+          "hanViet": "Niên",
+          "kanji": "年",
+          "kanjiId": 270,
+          "assetKanjiId": "n2_jlpt_vocab_k070",
+          "level": "N2",
+          "onyomi": "ねん",
+          "romaji": "ネン",
+          "compound": "年",
+          "compoundKana": "とし",
+          "compoundMeaning": "năm",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhật",
+          "kanji": "日",
+          "kanjiId": 33,
+          "assetKanjiId": "n1_jlpt_vocab_k033",
+          "level": "N1",
+          "onyomi": "にち",
+          "romaji": "ニチ",
+          "compound": "二日",
+          "compoundKana": "ふつか",
+          "compoundMeaning": "hai ngày, ngày thứ hai của tháng",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhân",
+          "kanji": "人",
+          "kanjiId": 27,
+          "assetKanjiId": "n1_jlpt_vocab_k027",
+          "level": "N1",
+          "onyomi": "じん",
+          "romaji": "ジン",
+          "compound": "外国人",
+          "compoundKana": "がいこくじん",
+          "compoundMeaning": "người nước ngoài",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhập",
+          "kanji": "入",
+          "kanjiId": 287,
+          "assetKanjiId": "n2_jlpt_vocab_k087",
+          "level": "N2",
+          "onyomi": "にゅう",
+          "romaji": "ニュウ",
+          "compound": "入る",
+          "compoundKana": "はいる",
+          "compoundMeaning": "đi vào, chứa đựng",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nữ",
+          "kanji": "女",
+          "kanjiId": 71,
+          "assetKanjiId": "n1_jlpt_vocab_k071",
+          "level": "N1",
+          "onyomi": "じょ",
+          "romaji": "ジョ",
+          "compound": "女の子",
+          "compoundKana": "おんなのこ",
+          "compoundMeaning": "cô gái",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhiệt",
+          "kanji": "熱",
+          "kanjiId": 622,
+          "assetKanjiId": "n4_l28_k007",
+          "level": "N4",
+          "onyomi": "ねつ",
+          "romaji": "netsu",
+          "compound": "熱",
+          "compoundKana": "ねつ",
+          "compoundMeaning": "sốt",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_initial_n_nh_to_n_j_ny_任",
+            "kanji": "任",
+            "kanjiId": 443,
+            "assetKanjiId": "n3_l05_k008",
+            "hanViet": "Nhậm",
+            "correct": "にん",
+            "options": [
+              "にん",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Nhậm bắt đầu bằng Nhậm; nhóm Hán-Việt này thường về hàng N/J/NY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_n_nh_to_n_j_ny_二",
+            "kanji": "二",
+            "kanjiId": 759,
+            "assetKanjiId": "n5_l02_k001",
+            "hanViet": "Nhị",
+            "correct": "に",
+            "options": [
+              "う",
+              "こ",
+              "あ",
+              "に"
+            ],
+            "explanation": "Nhị bắt đầu bằng Nhị; nhóm Hán-Việt này thường về hàng N/J/NY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_n_nh_to_n_j_ny_内",
+            "kanji": "内",
+            "kanjiId": 884,
+            "assetKanjiId": "n5_l16_k010",
+            "hanViet": "Nội",
+            "correct": "ない",
+            "options": [
+              "へん",
+              "あい",
+              "ない",
+              "そう"
+            ],
+            "explanation": "Nội bắt đầu bằng Nội; nhóm Hán-Việt này thường về hàng N/J/NY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_n_nh_to_n_j_ny_耳",
+            "kanji": "耳",
+            "kanjiId": 830,
+            "assetKanjiId": "n5_l11_k007",
+            "hanViet": "Nhĩ",
+            "correct": "じ",
+            "options": [
+              "あ",
+              "じ",
+              "う",
+              "こ"
+            ],
+            "explanation": "Nhĩ bắt đầu bằng Nhĩ; nhóm Hán-Việt này thường về hàng N/J/NY trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_n_nh_to_n_j_ny_若",
+            "kanji": "若",
+            "kanjiId": 673,
+            "assetKanjiId": "n4_l37_k003",
+            "hanViet": "Nhược",
+            "correct": "じゃく",
+            "options": [
+              "じゃく",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Nhược bắt đầu bằng Nhược; nhóm Hán-Việt này thường về hàng N/J/NY trong On'yomi."
+          }
+        ]
+      }
     }
   ]
 }

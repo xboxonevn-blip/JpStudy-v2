@@ -143,7 +143,7 @@ void main() {
     },
   );
 
-  test('han viet v2 rules include reference practice for rule 1', () {
+  test('han viet v2 rules include first five reference practice cards', () {
     final asset =
         jsonDecode(rulesV2Asset.readAsStringSync()) as Map<String, dynamic>;
 
@@ -156,6 +156,17 @@ void main() {
 
     final rules = (asset['rules'] as List<dynamic>)
         .cast<Map<String, dynamic>>();
+    expect(rules, hasLength(5));
+    expect(
+      rules.map((rule) => rule['ruleId']),
+      containsAll(<String>[
+        'rule_initial_h_k_gi_c_qu_to_k',
+        'rule_initial_t_th_to_t_s_sh',
+        'rule_initial_ng_ngh_to_g_gy',
+        'rule_initial_l_to_r',
+        'rule_initial_n_nh_to_n_j_ny',
+      ]),
+    );
     final rule = rules.singleWhere(
       (item) => item['ruleId'] == 'rule_initial_h_k_gi_c_qu_to_k',
     );
@@ -176,11 +187,27 @@ void main() {
       expect(options, contains(item['correct']));
     }
 
+    for (final generatedRule in rules) {
+      expect(generatedRule['examples'], hasLength(greaterThanOrEqualTo(4)));
+      final generatedPractice =
+          generatedRule['practice'] as Map<String, dynamic>;
+      expect(generatedPractice['status'], 'ready');
+      final generatedItems = (generatedPractice['items'] as List<dynamic>)
+          .cast<Map<String, dynamic>>();
+      expect(generatedItems, hasLength(5));
+      for (final item in generatedItems) {
+        final options = (item['options'] as List<dynamic>).cast<String>();
+        expect(options, hasLength(4));
+        expect(options.toSet(), hasLength(4));
+        expect(options, contains(item['correct']));
+      }
+    }
+
     final index =
         jsonDecode(File('assets/data/content/index.json').readAsStringSync())
             as Map<String, dynamic>;
     final datasets = index['datasets'] as Map<String, dynamic>;
     expect(datasets, contains('hanVietOnRulesV2'));
-    expect(datasets['hanVietOnRulesV2'], containsPair('rules', 1));
+    expect(datasets['hanVietOnRulesV2'], containsPair('rules', 5));
   });
 }

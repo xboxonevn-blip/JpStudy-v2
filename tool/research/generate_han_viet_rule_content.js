@@ -5,6 +5,40 @@ const RULE1_LEGACY_ID = 'initial-c-k-kh-gi-h-qu-to-k';
 const RULE1_ID = 'rule_initial_h_k_gi_c_qu_to_k';
 
 const TARGET_KANA_K_G = ['か', 'き', 'く', 'け', 'こ', 'が', 'ぎ', 'ぐ', 'げ', 'ご'];
+const TARGET_KANA_T_S_SH = [
+  'た',
+  'ち',
+  'つ',
+  'て',
+  'と',
+  'だ',
+  'で',
+  'ど',
+  'さ',
+  'し',
+  'す',
+  'せ',
+  'そ',
+  'しゃ',
+  'しゅ',
+  'しょ',
+];
+const TARGET_KANA_G_GY = ['が', 'ぎ', 'ぐ', 'げ', 'ご', 'ぎゃ', 'ぎゅ', 'ぎょ'];
+const TARGET_KANA_R = ['ら', 'り', 'る', 'れ', 'ろ', 'りゃ', 'りゅ', 'りょ'];
+const TARGET_KANA_N_J_NY = [
+  'な',
+  'に',
+  'ぬ',
+  'ね',
+  'の',
+  'じ',
+  'じゃ',
+  'じゅ',
+  'じょ',
+  'にゃ',
+  'にゅ',
+  'にょ',
+];
 const INITIALS = [
   'ngh',
   'ng',
@@ -32,6 +66,79 @@ const INITIALS = [
   't',
   'v',
   'x',
+];
+
+const FIRST_BATCH_RULE_SPECS = [
+  {
+    ruleId: RULE1_ID,
+    legacyId: RULE1_LEGACY_ID,
+    section: '1',
+    category: 'initial',
+    title: 'Âm đầu là H/K/Gi/C/Qu',
+    consonants: ['H', 'K', 'Gi', 'C', 'Qu'],
+    targetRow: 'K/G',
+    targetKana: TARGET_KANA_K_G,
+    percentage: 90,
+    explanation:
+      "Phụ âm đầu Hán-Việt H/K/Gi/C/Qu thường chuyển sang hàng K/G trong On'yomi.",
+    priorityKanji: ['校', '学', '行', '会', '何', '国', '海', '工'],
+  },
+  {
+    ruleId: 'rule_initial_t_th_to_t_s_sh',
+    legacyId: 'initial-t-th-to-t-s',
+    section: '2',
+    category: 'initial',
+    title: 'Âm đầu là T/Th',
+    consonants: ['T', 'Th'],
+    targetRow: 'T/S/SH',
+    targetKana: TARGET_KANA_T_S_SH,
+    percentage: 70,
+    explanation:
+      "Phụ âm đầu Hán-Việt T/Th thường chuyển sang hàng T, S hoặc SH trong On'yomi.",
+    priorityKanji: ['天', '心', '通', '体', '手', '田', '正', '社'],
+  },
+  {
+    ruleId: 'rule_initial_ng_ngh_to_g_gy',
+    legacyId: 'initial-ng-ngh-to-g-gy',
+    section: '3',
+    category: 'initial',
+    title: 'Âm đầu là Ng/Ngh',
+    consonants: ['Ng', 'Ngh'],
+    targetRow: 'G/GY',
+    targetKana: TARGET_KANA_G_GY,
+    percentage: 84,
+    explanation:
+      "Phụ âm đầu Hán-Việt Ng/Ngh thường chuyển sang hàng G hoặc GY trong On'yomi.",
+    priorityKanji: ['玉', '牛', '業', '語', '楽', '銀', '疑', '義'],
+  },
+  {
+    ruleId: 'rule_initial_l_to_r',
+    legacyId: 'initial-l-to-r',
+    section: '4',
+    category: 'initial',
+    title: 'Âm đầu là L',
+    consonants: ['L'],
+    targetRow: 'R',
+    targetKana: TARGET_KANA_R,
+    percentage: 86,
+    explanation:
+      "Phụ âm đầu Hán-Việt L thường chuyển sang hàng R trong On'yomi.",
+    priorityKanji: ['来', '力', '理', '料', '良', '林', '立', '流'],
+  },
+  {
+    ruleId: 'rule_initial_n_nh_to_n_j_ny',
+    legacyId: 'initial-n-nh-to-n-j',
+    section: '5',
+    category: 'initial',
+    title: 'Âm đầu là N/Nh',
+    consonants: ['N', 'Nh'],
+    targetRow: 'N/J/NY',
+    targetKana: TARGET_KANA_N_J_NY,
+    percentage: 76,
+    explanation:
+      "Phụ âm đầu Hán-Việt N/Nh thường chuyển sang hàng N, J hoặc NY trong On'yomi.",
+    priorityKanji: ['年', '日', '人', '入', '女', '肉', '熱', '任'],
+  },
 ];
 
 function readJson(file) {
@@ -234,8 +341,8 @@ function levelRank(level) {
   return { N5: 0, N4: 1, N3: 2, N2: 3, N1: 4 }[level] ?? 9;
 }
 
-function rule1Priority(kanji) {
-  const order = ['校', '学', '行', '会', '何', '国', '海', '工'];
+function kanjiPriority(spec, kanji) {
+  const order = spec.priorityKanji || [];
   const index = order.indexOf(kanji);
   return index === -1 ? order.length : index;
 }
@@ -374,11 +481,11 @@ function rotateOptions(correct, distractors, offset) {
   return [...options.slice(shift), ...options.slice(0, shift)];
 }
 
-function buildPracticeItems(candidates, allEntries) {
+function buildPracticeItems(ruleId, spec, candidates, allEntries) {
   return candidates.slice(6, 11).map((entry, index) => {
     const options = rotateOptions(entry.onyomi, optionPoolFor(entry, allEntries), index);
     return {
-      itemId: `${RULE1_ID}_${entry.kanji}`,
+      itemId: `${ruleId}_${entry.kanji}`,
       kanji: entry.kanji,
       kanjiId: entry.orderId,
       assetKanjiId: entry.assetKanjiId,
@@ -387,29 +494,34 @@ function buildPracticeItems(candidates, allEntries) {
       options,
       explanation: `${entry.hanViet} bắt đầu bằng ${firstSyllable(
         entry.hanViet,
-      )}; nhóm Hán-Việt này thường về hàng K/G trong On'yomi.`,
+      )}; nhóm Hán-Việt này thường về hàng ${spec.targetRow} trong On'yomi.`,
     };
   });
 }
 
-function generateHanVietRulesV2({ rootDir = process.cwd() } = {}) {
-  const legacy = readJson(
-    path.join(rootDir, 'assets/data/content/kanji/han_viet_on_rules.json'),
+function normalizeRuleConsonant(value) {
+  return normalizeVietnamese(value).replace(/^d$/, value === 'Đ' ? 'đ' : 'd');
+}
+
+function matchesRuleSpec(entry, spec) {
+  const allowedConsonants = spec.consonants.map(normalizeRuleConsonant);
+  return (
+    allowedConsonants.includes(normalizeRuleConsonant(entry.consonant)) &&
+    spec.targetKana.some((kana) => entry.onyomi.startsWith(kana))
   );
-  const entries = loadKanjiEntries(rootDir);
-  const seenRule1Kanji = new Set();
-  const rule1Candidates = entries
-    .filter((entry) =>
-      ['h', 'k', 'gi', 'c', 'qu'].includes(entry.consonant) &&
-      TARGET_KANA_K_G.includes(entry.onyomi[0]),
-    )
+}
+
+function distinctSortedCandidates(spec, entries) {
+  const seen = new Set();
+  return entries
+    .filter((entry) => matchesRuleSpec(entry, spec))
     .filter((entry) => {
-      if (seenRule1Kanji.has(entry.kanji)) return false;
-      seenRule1Kanji.add(entry.kanji);
+      if (seen.has(entry.kanji)) return false;
+      seen.add(entry.kanji);
       return true;
     })
     .sort((a, b) => {
-      const byPriority = rule1Priority(a.kanji) - rule1Priority(b.kanji);
+      const byPriority = kanjiPriority(spec, a.kanji) - kanjiPriority(spec, b.kanji);
       if (byPriority !== 0) return byPriority;
       const byLevel = levelRank(a.level) - levelRank(b.level);
       if (byLevel !== 0) return byLevel;
@@ -419,8 +531,42 @@ function generateHanVietRulesV2({ rootDir = process.cwd() } = {}) {
       if (byStroke !== 0) return byStroke;
       return a.kanji.localeCompare(b.kanji);
     });
-  const legacyRule = legacy.rules.find((rule) => rule.id === RULE1_LEGACY_ID);
-  const examples = rule1Candidates.slice(0, 6).map(toExample);
+}
+
+function buildRuleV2(spec, legacyRule, entries) {
+  const candidates = distinctSortedCandidates(spec, entries);
+  const examples = candidates.slice(0, 6).map(toExample);
+  return {
+    ruleId: spec.ruleId,
+    legacyId: spec.legacyId,
+    section: spec.section,
+    parentSection: spec.parentSection || null,
+    category: spec.category,
+    title: spec.title,
+    consonants: spec.consonants,
+    targetRow: spec.targetRow,
+    targetKana: spec.targetKana,
+    percentage: spec.percentage,
+    explanation: spec.explanation,
+    legacyConfidence: legacyRule?.confidence || null,
+    examples,
+    subRuleIds: spec.subRuleIds || [],
+    practice: {
+      count: 5,
+      questionTemplate:
+        "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+      status: candidates.length >= 11 ? 'ready' : 'reference_only',
+      items: buildPracticeItems(spec.ruleId, spec, candidates, entries),
+    },
+  };
+}
+
+function generateHanVietRulesV2({ rootDir = process.cwd() } = {}) {
+  const legacy = readJson(
+    path.join(rootDir, 'assets/data/content/kanji/han_viet_on_rules.json'),
+  );
+  const entries = loadKanjiEntries(rootDir);
+  const legacyById = new Map(legacy.rules.map((rule) => [rule.id, rule]));
   return {
     schemaVersion: 2,
     dataset: 'han_viet_on_rules_v2',
@@ -430,32 +576,9 @@ function generateHanVietRulesV2({ rootDir = process.cwd() } = {}) {
       note:
         'Generated from local app kanji/vocab assets and owner-provided local files only; owner-blocked crawl sources are excluded.',
     },
-    rules: [
-      {
-        ruleId: RULE1_ID,
-        legacyId: RULE1_LEGACY_ID,
-        section: '1',
-        parentSection: null,
-        category: 'initial',
-        title: 'Âm đầu là H/K/Gi/C/Qu',
-        consonants: ['H', 'K', 'Gi', 'C', 'Qu'],
-        targetRow: 'K/G',
-        targetKana: TARGET_KANA_K_G,
-        percentage: 90,
-        explanation:
-          "Phụ âm đầu Hán-Việt H/K/Gi/C/Qu thường chuyển sang hàng K/G trong On'yomi.",
-        legacyConfidence: legacyRule?.confidence || null,
-        examples,
-        subRuleIds: [],
-        practice: {
-          count: 5,
-          questionTemplate:
-            "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
-          status: rule1Candidates.length >= 11 ? 'ready' : 'reference_only',
-          items: buildPracticeItems(rule1Candidates, entries),
-        },
-      },
-    ],
+    rules: FIRST_BATCH_RULE_SPECS.map((spec) =>
+      buildRuleV2(spec, legacyById.get(spec.legacyId), entries),
+    ),
   };
 }
 

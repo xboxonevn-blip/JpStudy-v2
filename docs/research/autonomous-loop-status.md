@@ -1156,3 +1156,20 @@
 - Live proof on normal production cache: VI `/kanji/han-viet` rendered the v2 rule card, examples, and practice; answering the five correct options produced five `Đúng` feedbacks and `Đã hiểu rule`; `/review` loaded after the SRS write; EN/JA did not render Hán-Việt content; `main.dart.js` returned `Cache-Control: no-cache`; Flutter/app console errors were `0`.
 - Live artifacts: `output/playwright/live-qaa028-hanviet-phase1-proof.json`, `output/playwright/live-qaa028-hanviet-phase1-initial.png`, `output/playwright/live-qaa028-hanviet-phase1-answered.png`, `output/playwright/live-qaa028-hanviet-phase1-review.png`, `output/playwright/live-qaa028-hanviet-phase1-en-gate.png`, and `output/playwright/live-qaa028-hanviet-phase1-ja-gate.png`.
 - Remaining QA-A-028 work: Phase 2 scale all rules/sub-rules, then Phase 3 kanji-detail/review/personalized interlinks.
+
+## 2026-05-20 QA-A-027 Blocker Resolution Policy
+
+- Owner resolved the QA-A-027 blocker with autonomous policy alpha: keep N5/N3/N2 large-card candidates, re-extract N4/N1 writing-grid PDFs with 200-DPI pixel/vision OCR only, ignore text-layer mnemonic components, and choose the large central target kanji per grid cell.
+- Duplicate policy for canonical master mapping: cross-level duplicates resolve to the lowest JLPT level, then hard owner overrides win for `海 -> N5`, `帰 -> N5`, `銀 -> N3`, `重 -> N3`, and `議 -> N2`.
+- Required outputs when this P0 resumes: `docs/research/canonical/kanji-master-mapping-2026-05-20.json` and `docs/research/canonical/kanji-canonical-open-questions-2026-05-20.md`, then QA-A-026 app kanji MOVE/DEDUPE/MISSING/EXTRA implementation with cross-level duplicate guard and live proof.
+- Current local state when policy arrived: QA-A-028 Phase 2 first 5-rule batch already dirty and deployed for proof. Finish and commit that batch first, then switch to QA-A-027/QA-A-026 P0 chain.
+
+## 2026-05-20 QA-A-028 Han-Viet Rules Redesign Phase 2 Batch 1
+
+- Expanded `han_viet_on_rules_v2.json` from the single reference card to five generated practice cards: `H/K/Gi/C/Qu -> K/G`, `T/Th -> T/S/SH`, `Ng/Ngh -> G/GY`, `L -> R`, and `N/Nh -> N/J/NY`.
+- Batch now has 5 rule cards and 25 generated practice questions, all from local app kanji/vocab assets with banned domains excluded.
+- Verified locally: generator test passed, focused Hán-Việt content/service/screen tests passed, UI string guard `0`, content status machine/open-review `0`, and `git diff --check` clean.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: VI `/kanji/han-viet` showed the first rule, search `Ng/Ngh` showed rule 3 and one answer produced `Đúng`, fresh search `N/Nh` showed rule 5, `main.dart.js` returned `Cache-Control: no-cache`, and Flutter/app console errors were `0`.
+- Live artifacts: `output/playwright/live-qaa028-hanviet-phase2-batch1-proof.json`, `output/playwright/live-qaa028-hanviet-phase2-batch1-initial.png`, `output/playwright/live-qaa028-hanviet-phase2-batch1-ng-answer.png`, and `output/playwright/live-qaa028-hanviet-phase2-batch1-nnh-search.png`.
+- Per owner's latest P0 direction, pause remaining QA-A-028 Phase 2/3 and switch to QA-A-027 blocker resolution + QA-A-026 kanji reclassification after committing this batch.

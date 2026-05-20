@@ -456,6 +456,29 @@ void main() {
     expect(find.text('vocab:1'), findsOneWidget);
   });
 
+  testWidgets('tap top search hit deep-links to vocab detail route', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1440, 1400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(
+      buildSearchRouterApp(
+        repo: _FakeLessonRepository(vocab: _vocab, kanji: _kanji),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    await tester.enterText(find.byType(TextField), 'taberu');
+    await tester.pump(const Duration(milliseconds: 220));
+    await tester.tap(find.text('食べる').first, warnIfMissed: false);
+    await tester.pumpAndSettle();
+
+    expect(find.text('vocab:1'), findsOneWidget);
+  });
+
   testWidgets('tap kanji result deep-links to kanji hub query route', (
     tester,
   ) async {

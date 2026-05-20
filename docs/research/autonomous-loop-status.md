@@ -1019,3 +1019,12 @@
 - Live bundle/header proof: `main.dart.js` returned `200/no-cache`, contained the Vocab detail `Practice forms` path, contained `grammar-conjugation`, and did not contain old `ます grammar`, `Ngữ pháp 〜ます`, or `帰て`.
 - Directive D connected defect logged as QA-A-026: Search `かえる` returned a visible `国へ帰るの` card, but clicking it did not navigate or change the route.
 - Remaining QA-C-001 work: Grammar/Kanji/Daily Plan/Practice Board conjugation entry points plus advanced context/repair/minimal-pair drills.
+
+## 2026-05-20 QA-A-026 Search Top-Hit Navigation Fix
+
+- TDD RED: added `tap top search hit deep-links to vocab detail route`; it failed because tapping the top-hit card stayed on Search.
+- GREEN: factored Search navigation into `_openSearchEntry` and wired `_SearchTopHitCard` to the same vocab/kanji/kana route helper already used by normal result tiles.
+- Verified locally: targeted RED/GREEN test passed, full Search screen suite passed `14/14`, `git diff --check` clean, UI string guard `0`, and `flutter analyze lib test` clean.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: VI/N5 `/#/search`, query `かえる`, top-hit `国へ帰るの` opened the `Chi tiết từ` screen for that result. `main.dart.js` returned `200/no-cache`; console warnings/errors were `0`.
+- Remaining queue: QA-C-001 connected Grammar/Kanji/Daily Plan/Practice Board conjugation entry points, then advanced context/repair/minimal-pair drills unless a higher-priority defect appears.

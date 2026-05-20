@@ -17,7 +17,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Mistakes / JLPT support / Weakness Radar copy | Audited slice | Static audit found internal 1-3-7 labels leaking as `D1/D3/D7`; replaced with learner-facing day labels; live bundle scan found no `D1 `/`D3 `/`D7 ` leaks. |
 | Foundations hub / Kana detail copy | Audited slice | Live route-matrix text + widget audit found `Open`, `yoon`, `rules`, `strokes`, and `clear` leaking; localized/removed; live proof verified hub/grid/sheet/quiz. |
 | Vocab detail conjugation panel | Audited slice | Live VI/N5 proof opened `帰る`, verified examples plus sourced `帰って`/`帰らない` forms, clicked `Luyện chia thể`, reached a scoped 1-item hub, answered practice, and verified noun `学生` hides conjugation UI. |
-| Search result card | Audited slice | Live VI/N5 search `かえる` returned `国へ帰るの`, but clicking the result card did not open detail or change route; logged QA-A-026. |
+| Search result card | Audited slice | Live VI/N5 search `かえる` returned `国へ帰るの`; QA-A-026 fixed the top-hit click so it opens the detail screen. |
 | Conjugation DB metadata | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_lemma` + indexes and `lemmas.json` is `200/no-cache` with `3907` JMdict_e rows. |
 | Conjugation SRS / Mistakes | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_srs_state`, `idx_conjugation_srs_due`, `idx_conjugation_srs_skill`, and Mistakes rendered the empty state cleanly; Home nav CTA returned to dashboard. |
 | Conjugation hub / practice | Audited slice | Live VI/N5 proof opened `/#/grammar/conjugation`, saw `398 mục có nguồn sẵn sàng`, clicked `Luyện chia thể`, selected an answer, confirmed, and saw `Đúng` + `Câu tiếp`; console app errors were `0`. |
@@ -39,7 +39,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-B-001-G-N4-L46-L50 | Grammar content | N4 lessons 46-50 needed source verification plus full detail/example/practice proof. | Fixed + deployed |
 | QA-C-001 | Conjugation feature | Content DB lemma table, exact-skill SRS/mistakes, Grammar-owned hub/practice routes, and Vocab detail entry point are deployed; connected Grammar/Kanji/Daily Plan/Practice Board entry points remain. | Partial fixed + deployed |
 | QA-C-002 | Vocab detail conjugation | Vocab detail exposed generated-looking but suffix-guessed forms and generic grammar CTA. | Fixed + deployed |
-| QA-A-026 | Search navigation | Search result cards can look tappable but fail to open detail; live `かえる` result stayed on `/#/search` after click. | Pending |
+| QA-A-026 | Search navigation | Search top-hit cards could look tappable but fail to open detail; live `かえる` result stayed on `/#/search` after click. | Fixed + deployed |
 
 ## Live Proof Artifacts
 
@@ -75,6 +75,8 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-vocab-kaeru-practice-answer.png`
 - `output/playwright/live-vocab-gakusei-no-conj.png`
 - `output/playwright/live-search-kaeru-results.png`
+- `output/playwright/live-search-kaeru-top-hit-fixed-before.png`
+- `output/playwright/live-search-kaeru-top-hit-fixed-after.png`
 
 ## Notes For Next Sweep
 

@@ -1073,6 +1073,17 @@ class _SearchSection extends StatelessWidget {
   }
 }
 
+void _openSearchEntry(BuildContext context, _SearchEntry entry) {
+  if (entry.id == null) return;
+  if (entry.kind == _SearchKind.vocab || entry.kind == _SearchKind.kana) {
+    context.push(AppRouteLocation.vocabDetail(entry.id));
+    return;
+  }
+  if (entry.kind == _SearchKind.kanji) {
+    context.push(AppRouteLocation.kanji(kanjiId: entry.id));
+  }
+}
+
 class _SearchTopHitCard extends StatelessWidget {
   const _SearchTopHitCard({
     required this.language,
@@ -1088,95 +1099,105 @@ class _SearchTopHitCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final palette = context.appPalette;
     final color = match.entry.kind.colorFor(palette);
+    final radius = BorderRadius.circular(22);
 
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [color.withValues(alpha: 0.16), palette.elevated],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: color.withValues(alpha: 0.24)),
-      ),
-      padding: const EdgeInsets.all(18),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: match.entry.id == null
+            ? null
+            : () => _openSearchEntry(context, match.entry),
+        borderRadius: radius,
+        child: Ink(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [color.withValues(alpha: 0.16), palette.elevated],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: radius,
+            border: Border.all(color: color.withValues(alpha: 0.24)),
+          ),
+          padding: const EdgeInsets.all(18),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 42,
-                height: 42,
-                decoration: BoxDecoration(
-                  color: color.withValues(alpha: 0.14),
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                child: Icon(match.entry.kind.icon, color: color, size: 20),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      _topHitLabel(language),
-                      style: TextStyle(
-                        color: color,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.7,
-                      ),
+              Row(
+                children: [
+                  Container(
+                    width: 42,
+                    height: 42,
+                    decoration: BoxDecoration(
+                      color: color.withValues(alpha: 0.14),
+                      borderRadius: BorderRadius.circular(14),
                     ),
-                    const SizedBox(height: 2),
-                    Text(
-                      summary,
-                      style: TextStyle(
-                        color: palette.ink.withValues(alpha: 0.7),
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                      ),
+                    child: Icon(match.entry.kind.icon, color: color, size: 20),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          _topHitLabel(language),
+                          style: TextStyle(
+                            color: color,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 0.7,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          summary,
+                          style: TextStyle(
+                            color: palette.ink.withValues(alpha: 0.7),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
+                  AppStatusChip(
+                    label: _matchReasonLabel(language, match.reason),
+                    tone: AppStatusTone.primary,
+                  ),
+                ],
+              ),
+              const SizedBox(height: AppSpacing.md),
+              Text(
+                match.entry.title,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900,
+                  color: palette.ink,
                 ),
               ),
-              AppStatusChip(
-                label: _matchReasonLabel(language, match.reason),
-                tone: AppStatusTone.primary,
+              const SizedBox(height: 6),
+              Text(
+                match.entry.subtitle,
+                style: TextStyle(
+                  color: palette.ink.withValues(alpha: 0.7),
+                  fontSize: 13,
+                  height: 1.45,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
+              if ((match.entry.reading ?? '').trim().isNotEmpty) ...[
+                const SizedBox(height: 10),
+                Text(
+                  _readingHint(language, match.entry.reading!),
+                  style: TextStyle(
+                    color: palette.ink.withValues(alpha: 0.7),
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
             ],
           ),
-          const SizedBox(height: AppSpacing.md),
-          Text(
-            match.entry.title,
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w900,
-              color: palette.ink,
-            ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            match.entry.subtitle,
-            style: TextStyle(
-              color: palette.ink.withValues(alpha: 0.7),
-              fontSize: 13,
-              height: 1.45,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          if ((match.entry.reading ?? '').trim().isNotEmpty) ...[
-            const SizedBox(height: 10),
-            Text(
-              _readingHint(language, match.entry.reading!),
-              style: TextStyle(
-                color: palette.ink.withValues(alpha: 0.7),
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ],
-        ],
+        ),
       ),
     );
   }
@@ -1247,24 +1268,13 @@ class _SearchTile extends StatelessWidget {
   final bool compact;
   final String? matchHint;
 
-  void _onTap(BuildContext context) {
-    if (entry.id == null) return;
-    if (entry.kind == _SearchKind.vocab || entry.kind == _SearchKind.kana) {
-      context.push(AppRouteLocation.vocabDetail(entry.id));
-      return;
-    }
-    if (entry.kind == _SearchKind.kanji) {
-      context.push(AppRouteLocation.kanji(kanjiId: entry.id));
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final palette = context.appPalette;
     return Material(
       color: Colors.transparent,
       child: InkWell(
-        onTap: entry.id != null ? () => _onTap(context) : null,
+        onTap: entry.id != null ? () => _openSearchEntry(context, entry) : null,
         borderRadius: BorderRadius.circular(16),
         child: Container(
           decoration: HomeSurface.softPanel(context: context),

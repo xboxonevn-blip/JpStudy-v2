@@ -1759,12 +1759,14 @@ class _KanjiDetailDialogState extends State<_KanjiDetailDialog> {
               const SizedBox(height: 12),
               Consumer(
                 builder: (context, ref, child) {
-                  final rules = ref.watch(hanVietRulesProvider);
+                  final rules = ref.watch(hanVietRulesV2Provider);
                   return rules.maybeWhen(
-                    data: (ruleSet) => HanVietInlinePanel(
-                      rules: ruleSet.rules,
+                    data: (ruleSet) => HanVietRuleMiniPanel(
+                      ruleSet: ruleSet,
                       language: widget.language,
                       kanji: widget.item.character,
+                      hanViet: hanViet,
+                      onyomi: widget.item.onyomi,
                     ),
                     orElse: () => const SizedBox.shrink(),
                   );

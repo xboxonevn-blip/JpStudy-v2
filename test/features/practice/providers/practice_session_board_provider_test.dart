@@ -227,6 +227,30 @@ void main() {
       expect(board.dueCount, 3);
     });
 
+    test('routes due Han-Viet rules to the rule practice page', () {
+      final board = buildPracticeSessionBoard(
+        language: AppLanguage.vi,
+        level: StudyLevel.n5,
+        hanVietRuleDue: 2,
+        dashboard: const DashboardState(
+          streak: 0,
+          todayXp: 0,
+          vocabDue: 0,
+          grammarDue: 0,
+          kanjiDue: 0,
+          vocabMistakeCount: 0,
+          grammarMistakeCount: 0,
+          kanjiMistakeCount: 0,
+          totalMistakeCount: 0,
+        ),
+      );
+
+      expect(board.primaryAction.route, AppRoutePath.kanjiHanViet);
+      expect(board.primaryAction.title, 'Ôn quy tắc Hán-Việt');
+      expect(board.primaryAction.badge, 'Đến hạn');
+      expect(board.dueCount, 2);
+    });
+
     test('Vietnamese review board uses learner-facing copy', () {
       final board = buildPracticeSessionBoard(
         language: AppLanguage.vi,

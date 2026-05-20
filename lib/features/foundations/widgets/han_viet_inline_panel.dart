@@ -65,3 +65,106 @@ class HanVietInlinePanel extends StatelessWidget {
     );
   }
 }
+
+class HanVietRuleMiniPanel extends StatelessWidget {
+  const HanVietRuleMiniPanel({
+    super.key,
+    required this.ruleSet,
+    required this.language,
+    required this.kanji,
+    this.hanViet,
+    this.onyomi,
+  });
+
+  final HanVietRuleSetV2 ruleSet;
+  final AppLanguage language;
+  final String kanji;
+  final String? hanViet;
+  final String? onyomi;
+
+  @override
+  Widget build(BuildContext context) {
+    if (language != AppLanguage.vi) return const SizedBox.shrink();
+    final rules = ruleSet.matchingRulesForKanji(
+      character: kanji,
+      hanViet: hanViet,
+      onyomi: onyomi,
+      limit: 2,
+    );
+    if (rules.isEmpty) return const SizedBox.shrink();
+
+    final palette = Theme.of(context).colorScheme;
+    final primaryRule = rules.first;
+    HanVietRuleExampleV2? example;
+    for (final item in primaryRule.examples) {
+      if (item.kanji == kanji) {
+        example = item;
+        break;
+      }
+    }
+    final exampleText = example == null
+        ? primaryRule.examples
+              .take(2)
+              .map((item) => '${item.hanViet} → ${item.kanji} (${item.onyomi})')
+              .join(' · ')
+        : '${example.hanViet} → ${example.kanji} (${example.onyomi})';
+
+    return Container(
+      key: const ValueKey('kanji_detail_han_viet_rule_panel'),
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: palette.primaryContainer.withValues(alpha: 0.18),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: palette.primary.withValues(alpha: 0.36)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Quy tắc Hán-Việt áp dụng',
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: palette.primary,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            '${primaryRule.section}. ${primaryRule.title}',
+            style: Theme.of(
+              context,
+            ).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w900),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            '${primaryRule.percentage}% → ${primaryRule.targetRow} '
+            '(${primaryRule.targetKana.join('・')})',
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w800),
+          ),
+          if (exampleText.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Text(exampleText),
+          ],
+          const SizedBox(height: 8),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton.icon(
+              key: const ValueKey('han_viet_rule_mini_open_full'),
+              onPressed: () {
+                final router = GoRouter.of(context);
+                Navigator.of(context, rootNavigator: true).pop();
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  router.push(AppRoutePath.kanjiHanViet);
+                });
+              },
+              icon: const Icon(Icons.open_in_new_rounded),
+              label: Text(language.commonMoreAction),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

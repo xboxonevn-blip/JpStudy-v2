@@ -30,7 +30,7 @@ void main() {
 
     final ruleSet = await service.loadHanVietRulesV2();
 
-    expect(ruleSet.rules, hasLength(5));
+    expect(ruleSet.rules, hasLength(32));
     final rule = ruleSet.rules.first;
     expect(rule.ruleId, 'rule_initial_h_k_gi_c_qu_to_k');
     expect(rule.legacyId, 'initial-c-k-kh-gi-h-qu-to-k');

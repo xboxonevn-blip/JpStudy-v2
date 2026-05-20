@@ -1,5 +1,18 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-028 Phase 3 Detail + Review Interlinks
+
+- Added a v2 Hán-Việt rule matcher for kanji detail: exact example/practice kanji wins, then Hán-Việt initial + On-yomi target-kana heuristic.
+- Replaced the old detail-only legacy preview with a VI-only mini-card showing the matching v2 rule, target row/kana, and example mapping; EN/JA detail continues to hide Hán-Việt rule content.
+- Wired the mini-card CTA to the full Kanji-owned Hán-Việt rules/practice screen and fixed a live-caught modal-pop navigation race by deferring the route push one frame after closing the dialog.
+- Added due Hán-Việt rule SRS into the Practice/Review board as a dedicated VI-only action that opens `/kanji/han-viet`.
+- Updated the stale content-service guard so v2 rules are expected at `32` cards after Phase 2 completion.
+- Verified locally: focused Kanji hub, Hán-Việt reference, Practice board, and Hán-Việt SRS DAO tests passed; `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean; full `flutter test --concurrency=1` passed `2414/2414`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: fresh VI `/kanji` search `校` opened detail with `Quy tắc Hán-Việt áp dụng`, rule `1. Âm đầu là H/K/Gi/C/Qu`, target `K/G`, and `Giáo -> 校`; mini-card CTA opened the full Hán-Việt rule practice content. Fresh EN/JA `校` details had no Hán-Việt rule panel or Hán-Việt row leak. `main.dart.js` returned `200/no-cache`; unexpected console warnings/errors were `0` after filtering known headless App Check/WebGL noise.
+- Live artifact: `output/playwright/live-qaa028-hanviet-phase3-proof.json` plus `output/playwright/live-qaa028-phase3-*.png` screenshots.
+- Remaining QA-A-028: personalized rule practice sampling from the user's active kanji pool, then continue to QA-A-029.
+
 ## 2026-05-20 QA-A-028 Phase 2 Final
 
 - Expanded `han_viet_on_rules_v2.json` from `30` to all `32` legacy rule cards.

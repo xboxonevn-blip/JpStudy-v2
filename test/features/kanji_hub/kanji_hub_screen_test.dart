@@ -20,6 +20,8 @@ import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/kanji_hub/kanji_hub_screen.dart';
 import 'package:jpstudy/features/kanji_hub/providers/kanji_home_provider.dart';
+import 'package:jpstudy/features/foundations/models/han_viet_rule.dart';
+import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
 
 class _FakeKanjiHubLessonRepository extends LessonRepository {
   _FakeKanjiHubLessonRepository({
@@ -177,6 +179,12 @@ Widget _buildRoutedSubject({
         builder: (context, state) => Scaffold(
           body: Text('conjugation:${state.pathParameters['contentVocabId']}'),
         ),
+      ),
+      GoRoute(
+        path: AppRoutePath.kanjiHanViet,
+        name: AppRouteName.kanjiHanViet,
+        builder: (context, state) =>
+            const Scaffold(body: Text('han-viet route')),
       ),
     ],
   );
@@ -347,6 +355,55 @@ _FakeKanjiHubLessonRepository _buildRepo({
     ],
   );
 }
+
+const _testHanVietRuleSetV2 = HanVietRuleSetV2(
+  rules: [
+    HanVietRuleV2(
+      ruleId: 'rule_initial_h_k_gi_c_qu_to_k',
+      legacyId: 'initial-c-k-kh-gi-h-qu-to-k',
+      section: '1',
+      category: 'initial',
+      title: 'Âm đầu là H/K/Gi/C/Qu',
+      consonants: ['H', 'K', 'Gi', 'C', 'Qu'],
+      targetRow: 'K/G',
+      targetKana: ['か', 'き', 'く', 'け', 'こ', 'が', 'ぎ', 'ぐ', 'げ', 'ご'],
+      percentage: 90,
+      explanation:
+          "Phụ âm đầu Hán-Việt H/K/Gi/C/Qu thường chuyển sang hàng K/G trong On'yomi.",
+      examples: [
+        HanVietRuleExampleV2(
+          hanViet: 'Giáo',
+          kanji: '校',
+          kanjiId: 10,
+          assetKanjiId: 'test_kanji_10',
+          level: 'N5',
+          onyomi: 'こう',
+          romaji: 'KOU',
+          compound: '学校',
+          compoundKana: 'がっこう',
+          compoundMeaning: 'trường học',
+        ),
+      ],
+      practice: HanVietRulePractice(
+        count: 1,
+        questionTemplate: 'Âm Hán Việt {hanViet} ({kanji}) → On\'yomi nào?',
+        status: 'ready',
+        items: [
+          HanVietRulePracticeItem(
+            itemId: 'rule_initial_h_k_gi_c_qu_to_k_校',
+            kanji: '校',
+            kanjiId: 10,
+            assetKanjiId: 'test_kanji_10',
+            hanViet: 'Giáo',
+            correct: 'こう',
+            options: ['こう', 'たい', 'めい', 'にち'],
+            explanation: 'Giáo bắt đầu bằng Gi nên thường đi với hàng K/G.',
+          ),
+        ],
+      ),
+    ),
+  ],
+);
 
 void main() {
   testWidgets('kanji hub surfaces due/new/explore CTAs first', (tester) async {
@@ -756,6 +813,71 @@ void main() {
     expect(find.text('Liên tưởng mái trường khi học chữ này.'), findsOneWidget);
   });
 
+  testWidgets('Vietnamese kanji detail links the matching Han-Viet v2 rule', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1200, 1400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await _mockRadicalsAsset();
+    final repo = _FakeKanjiHubLessonRepository(
+      n5Kanji: const [
+        KanjiItem(
+          id: 10,
+          lessonId: 1,
+          character: '校',
+          strokeCount: 10,
+          onyomi: 'こう',
+          kunyomi: '',
+          meaning: 'trường học',
+          meaningEn: 'school',
+          examples: [],
+          jlptLevel: 'N5',
+          decomposition: KanjiDecomposition(hanViet: 'Giáo'),
+        ),
+      ],
+      n4Kanji: const [],
+      n3Kanji: const [],
+      n2Kanji: const [],
+      n1Kanji: const [],
+    );
+
+    await tester.pumpWidget(
+      _buildRoutedSubject(
+        repo: repo,
+        language: AppLanguage.vi,
+        overrides: [
+          hanVietRulesV2Provider.overrideWith(
+            (ref) async => _testHanVietRuleSetV2,
+          ),
+        ],
+      ),
+    );
+    await _pumpKanjiHub(tester);
+
+    await tester.tap(find.text('校').first);
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+
+    expect(
+      find.byKey(const ValueKey('kanji_detail_han_viet_rule_panel')),
+      findsOneWidget,
+    );
+    expect(find.text('Quy tắc Hán-Việt áp dụng'), findsOneWidget);
+    expect(find.text('1. Âm đầu là H/K/Gi/C/Qu'), findsOneWidget);
+    expect(find.textContaining('90%'), findsOneWidget);
+    expect(find.textContaining('K/G'), findsWidgets);
+
+    await tester.tap(
+      find.byKey(const ValueKey('han_viet_rule_mini_open_full')),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('han-viet route'), findsOneWidget);
+  });
+
   testWidgets('kanji example word opens sourced conjugation practice', (
     tester,
   ) async {
@@ -843,6 +965,11 @@ void main() {
       );
       expect(
         find.byKey(const ValueKey('han_viet_inline_panel')),
+        findsNothing,
+        reason: 'language=$language',
+      );
+      expect(
+        find.byKey(const ValueKey('kanji_detail_han_viet_rule_panel')),
         findsNothing,
         reason: 'language=$language',
       );

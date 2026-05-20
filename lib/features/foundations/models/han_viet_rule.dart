@@ -243,6 +243,25 @@ class HanVietRuleSetV2 {
 
   final List<HanVietRuleV2> rules;
 
+  List<HanVietRuleV2> matchingRulesForKanji({
+    required String character,
+    String? hanViet,
+    String? onyomi,
+    int limit = 3,
+  }) {
+    final exact = rules.where((rule) => rule.referencesKanji(character));
+    final heuristic = rules.where(
+      (rule) =>
+          !rule.referencesKanji(character) &&
+          rule.matchesHanVietReading(hanViet: hanViet, onyomi: onyomi),
+    );
+    final seen = <String>{};
+    return [...exact, ...heuristic]
+        .where((rule) => seen.add(rule.ruleId))
+        .take(limit)
+        .toList(growable: false);
+  }
+
   factory HanVietRuleSetV2.fromJson(Map<String, dynamic> json) {
     final rules = json['rules'] as List<dynamic>? ?? const [];
     return HanVietRuleSetV2(
@@ -297,6 +316,23 @@ class HanVietRuleV2 {
       for (final example in examples)
         '${example.hanViet} ${example.kanji} ${example.onyomi} ${example.compound}',
     ].join(' ').toLowerCase();
+  }
+
+  bool referencesKanji(String character) {
+    final target = character.trim();
+    if (target.isEmpty) return false;
+    return examples.any((example) => example.kanji == target) ||
+        practice.items.any((item) => item.kanji == target);
+  }
+
+  bool matchesHanVietReading({String? hanViet, String? onyomi}) {
+    final initial = _hanVietInitial(hanViet);
+    if (initial == null) return false;
+    final hasMatchingInitial = consonants.any(
+      (consonant) => _normalizeInitial(consonant) == initial,
+    );
+    if (!hasMatchingInitial) return false;
+    return _onyomiMatchesTargetKana(onyomi, targetKana);
   }
 
   factory HanVietRuleV2.fromJson(Map<String, dynamic> json) {
@@ -453,4 +489,68 @@ String _readText(Map<String, dynamic> json, String key) {
   final value = json[key];
   if (value == null) return '';
   return value.toString().trim();
+}
+
+String? _hanVietInitial(String? hanViet) {
+  final value = _normalizeInitial(hanViet);
+  if (value.isEmpty) return null;
+  const initials = [
+    'ngh',
+    'ng',
+    'nh',
+    'gi',
+    'qu',
+    'th',
+    'tr',
+    'ch',
+    'ph',
+    'kh',
+    'gh',
+    'đ',
+    'd',
+    'v',
+    'x',
+    's',
+    't',
+    'l',
+    'n',
+    'm',
+    'b',
+    'c',
+    'g',
+    'h',
+    'k',
+    'r',
+  ];
+  for (final initial in initials) {
+    if (value.startsWith(initial)) return initial;
+  }
+  return value.substring(0, 1);
+}
+
+String _normalizeInitial(String? value) {
+  return (value ?? '').trim().toLowerCase().replaceAll('Ð', 'đ');
+}
+
+bool _onyomiMatchesTargetKana(String? onyomi, List<String> targetKana) {
+  if (targetKana.isEmpty) return true;
+  final value = _katakanaToHiragana((onyomi ?? '').trim());
+  if (value.isEmpty) return true;
+  final hasKana = RegExp(r'[\u3040-\u30ff]').hasMatch(value);
+  if (!hasKana) return true;
+  return targetKana
+      .map(_katakanaToHiragana)
+      .any((kana) => value.startsWith(kana) || value.contains(' $kana'));
+}
+
+String _katakanaToHiragana(String value) {
+  final buffer = StringBuffer();
+  for (final codeUnit in value.codeUnits) {
+    if (codeUnit >= 0x30a1 && codeUnit <= 0x30f6) {
+      buffer.writeCharCode(codeUnit - 0x60);
+    } else {
+      buffer.writeCharCode(codeUnit);
+    }
+  }
+  return buffer.toString();
 }

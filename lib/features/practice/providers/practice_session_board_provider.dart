@@ -6,6 +6,7 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
@@ -40,6 +41,11 @@ final practiceSessionBoardProvider = Provider<PracticeSessionBoard>((ref) {
   final grammarGhostCount = ref
       .watch(grammarGhostCountProvider)
       .maybeWhen(data: (count) => count, orElse: () => 0);
+  final hanVietRuleDue = language == AppLanguage.vi
+      ? ref
+            .watch(hanVietRuleDueCountProvider)
+            .maybeWhen(data: (count) => count, orElse: () => 0)
+      : 0;
 
   return buildPracticeSessionBoard(
     language: language,
@@ -48,7 +54,14 @@ final practiceSessionBoardProvider = Provider<PracticeSessionBoard>((ref) {
     continueAction: continueAction,
     weaknessItems: weaknessItems,
     grammarGhostCount: grammarGhostCount,
+    hanVietRuleDue: hanVietRuleDue,
   );
+});
+
+final hanVietRuleDueCountProvider = FutureProvider<int>((ref) async {
+  final language = ref.watch(appLanguageProvider);
+  if (language != AppLanguage.vi) return 0;
+  return ref.watch(databaseProvider).hanVietRuleSrsDao.getDueReviewCount();
 });
 
 PracticeSessionBoard buildPracticeSessionBoard({
@@ -59,13 +72,22 @@ PracticeSessionBoard buildPracticeSessionBoard({
   ContinueAction? continueAction,
   List<WeaknessRadarItem> weaknessItems = const [],
   int grammarGhostCount = 0,
+  int hanVietRuleDue = 0,
 }) {
   final vocabDue = dashboard?.vocabDue ?? 0;
   final grammarDue = dashboard?.grammarDue ?? 0;
   final kanjiDue = dashboard?.kanjiDue ?? 0;
   final resolvedConjugationDue =
       conjugationDue ?? dashboard?.conjugationDue ?? 0;
-  final dueCount = vocabDue + grammarDue + kanjiDue + resolvedConjugationDue;
+  final resolvedHanVietRuleDue = language == AppLanguage.vi
+      ? hanVietRuleDue
+      : 0;
+  final dueCount =
+      vocabDue +
+      grammarDue +
+      kanjiDue +
+      resolvedConjugationDue +
+      resolvedHanVietRuleDue;
   final mistakeCount = dashboard?.totalMistakeCount ?? 0;
   final repairCount = mistakeCount + grammarGhostCount;
   final reviewQueueCount = [
@@ -81,6 +103,7 @@ PracticeSessionBoard buildPracticeSessionBoard({
           level: level,
           dashboard: dashboard,
           conjugationDue: resolvedConjugationDue,
+          hanVietRuleDue: resolvedHanVietRuleDue,
           continueAction: continueAction,
         )
       : null;
@@ -88,6 +111,12 @@ PracticeSessionBoard buildPracticeSessionBoard({
       ? _conjugationDueAction(
           language: language,
           conjugationDue: resolvedConjugationDue,
+        )
+      : null;
+  final hanVietRuleDueAction = resolvedHanVietRuleDue > 0
+      ? _hanVietRuleDueAction(
+          language: language,
+          hanVietRuleDue: resolvedHanVietRuleDue,
         )
       : null;
   final dueAction = dueCount == 0
@@ -127,6 +156,7 @@ PracticeSessionBoard buildPracticeSessionBoard({
     primaryAction,
     if (useRecallSprint) specificDueAction,
     conjugationDueAction,
+    hanVietRuleDueAction,
     weaknessAction,
     grammarGhostAction,
     mistakeBankAction,
@@ -161,7 +191,7 @@ PracticeSessionBoard buildPracticeSessionBoard({
             : _l(
                 language,
                 en: '$vocabDue vocab, $grammarDue grammar, $resolvedConjugationDue conjugation, $kanjiDue kanji are live.',
-                vi: '$vocabDue từ vựng, $grammarDue ngữ pháp, $resolvedConjugationDue chia thể, $kanjiDue kanji đang mở.',
+                vi: '$vocabDue từ vựng, $grammarDue ngữ pháp, $resolvedConjugationDue chia thể, $kanjiDue kanji, $resolvedHanVietRuleDue quy tắc Hán-Việt đang mở.',
                 ja: '語彙$vocabDue、文法$grammarDue、活用$resolvedConjugationDue、漢字$kanjiDueが動いています。',
               ),
         icon: Icons.schedule_rounded,
@@ -368,6 +398,7 @@ PracticeSessionAction _specificDueAction({
   required StudyLevel level,
   required DashboardState? dashboard,
   required int conjugationDue,
+  required int hanVietRuleDue,
   required ContinueAction? continueAction,
 }) {
   switch (continueAction?.type) {
@@ -492,6 +523,13 @@ PracticeSessionAction _specificDueAction({
     );
   }
 
+  if (hanVietRuleDue > 0) {
+    return _hanVietRuleDueAction(
+      language: language,
+      hanVietRuleDue: hanVietRuleDue,
+    );
+  }
+
   return PracticeSessionAction(
     id: 'due_reviews',
     title: _l(
@@ -512,6 +550,37 @@ PracticeSessionAction _specificDueAction({
     color: const Color(0xFF2563EB),
     badge: _l(language, en: 'Due now', vi: 'Đến hạn', ja: '期限あり'),
     estimatedMinutes: 5,
+  );
+}
+
+PracticeSessionAction _hanVietRuleDueAction({
+  required AppLanguage language,
+  required int hanVietRuleDue,
+}) {
+  return PracticeSessionAction(
+    id: 'han_viet_rule_due',
+    title: _l(
+      language,
+      en: 'Review Han-Viet rules',
+      vi: 'Ôn quy tắc Hán-Việt',
+      ja: '漢越ルールを復習',
+    ),
+    subtitle: _l(
+      language,
+      en: '$hanVietRuleDue pronunciation-rule cards are due now.',
+      vi: '$hanVietRuleDue thẻ quy tắc âm Hán-Việt đã đến hạn.',
+      ja: '$hanVietRuleDue件の漢越音ルールが期限です。',
+    ),
+    ctaLabel: _l(language, en: 'Open rules', vi: 'Mở rule', ja: 'ルールへ'),
+    route: AppRoutePath.kanjiHanViet,
+    icon: Icons.account_tree_rounded,
+    color: const Color(0xFF0F766E),
+    badge: _l(language, en: 'Due now', vi: 'Đến hạn', ja: '期限あり'),
+    estimatedMinutes: _estimateMinutes(
+      hanVietRuleDue,
+      floor: 5,
+      rateSeconds: 20,
+    ),
   );
 }
 

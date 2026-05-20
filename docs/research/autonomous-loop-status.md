@@ -1008,3 +1008,14 @@
 - Live proof: VI/N5 `/#/grammar/conjugation` rendered `398 mục có nguồn sẵn sàng`; `Luyện chia thể` opened the practice screen; selecting an option enabled `Trả lời`; confirming recorded the review and showed `Đúng` plus `Câu tiếp`. Screenshots saved under `output/playwright/live-conjugation-*.png`.
 - Live bundle/header proof: `main.dart.js` returned `200/no-cache`, contained `grammar-conjugation` and `conjugation_practice`, and did not contain raw `conjugation_hub`; Playwright console had no app warnings/errors, only the known report-only Google frame-ancestor App Check message.
 - Remaining QA-C-001 work: Vocab detail suffix-guess deletion/QA-C-002, scoped Grammar/Kanji CTAs, Daily Plan/Practice Board due conjugation entry points, and advanced context/repair/minimal-pair question families.
+
+## 2026-05-20 QA-C-002 Vocab Detail Conjugation Slice
+
+- Fixed QA-C-002: Vocab detail no longer guesses conjugation from suffixes or shows the generic `ます grammar` chip. It now fetches `ConjugationLemma` by content vocab id and renders `て/ない/た/ます` forms through `JapaneseConjugator`.
+- Vocab detail hides the conjugation panel for nouns and un-sourced rows; sourced rows get a scoped `Luyện chia thể` CTA into `/grammar/conjugation/:contentVocabId`.
+- Verified locally before docs: focused Vocab detail test passed `8/8`, focused Vocab + conjugation suites passed `12/12`, UI string guard `0`, `git diff --check` clean, `flutter analyze lib test` clean, and full `flutter test` passed `2374/2374`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: decoded the live content DB to resolve `帰る` content id `21438` and noun control `学生` id `21556`. VI/N5 `/#/vocab/21438` rendered examples plus sourced `thể て: 帰って` and no fake `帰て`; `Luyện chia thể` opened the scoped one-item hub, practice loaded `Câu 1/5`, selecting `帰って` and confirming showed `Đúng` + `Câu tiếp`. VI/N5 `/#/vocab/21556` rendered `学生` with examples and no `Chia động từ` panel.
+- Live bundle/header proof: `main.dart.js` returned `200/no-cache`, contained the Vocab detail `Practice forms` path, contained `grammar-conjugation`, and did not contain old `ます grammar`, `Ngữ pháp 〜ます`, or `帰て`.
+- Directive D connected defect logged as QA-A-026: Search `かえる` returned a visible `国へ帰るの` card, but clicking it did not navigate or change the route.
+- Remaining QA-C-001 work: Grammar/Kanji/Daily Plan/Practice Board conjugation entry points plus advanced context/repair/minimal-pair drills.

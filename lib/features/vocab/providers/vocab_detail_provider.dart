@@ -5,6 +5,7 @@ import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/db/content_database_provider.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/data/daos/srs_dao.dart';
+import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 
 // ---------------------------------------------------------------------------
 // Models
@@ -16,12 +17,14 @@ class VocabDetail {
     this.srs,
     this.kanjiList = const [],
     this.relatedVocab = const [],
+    this.conjugationLemma,
   });
 
   final VocabData vocab;
   final SrsStateData? srs;
   final List<KanjiData> kanjiList;
   final List<VocabData> relatedVocab;
+  final ConjugationLemmaData? conjugationLemma;
 
   String get srsStageLabel {
     if (srs == null) return 'unstudied';
@@ -42,6 +45,7 @@ final vocabDetailProvider = FutureProvider.family<VocabDetail?, int>((
 ) async {
   final contentDb = ref.watch(contentDatabaseProvider);
   final appDb = ref.watch(databaseProvider);
+  final conjugationRepo = ref.watch(conjugationRepositoryProvider);
 
   // 1. Fetch vocab first (needed to know level + term for downstream queries)
   final vocab = await (contentDb.select(
@@ -55,6 +59,7 @@ final vocabDetailProvider = FutureProvider.family<VocabDetail?, int>((
   final kanjiChars = _extractKanji(vocab.term);
 
   final srsFuture = srsDao.getSrsState(vocabId);
+  final conjugationFuture = conjugationRepo.findByContentVocabId(vocabId);
   final kanjiFuture = kanjiChars.isNotEmpty
       ? (contentDb.select(
           contentDb.kanji,
@@ -69,6 +74,7 @@ final vocabDetailProvider = FutureProvider.family<VocabDetail?, int>((
           .get();
 
   final srs = await srsFuture;
+  final conjugationLemma = await conjugationFuture;
   final kanjiList = await kanjiFuture;
   final related = await relatedFuture;
 
@@ -84,6 +90,7 @@ final vocabDetailProvider = FutureProvider.family<VocabDetail?, int>((
     srs: srs,
     kanjiList: orderedKanji,
     relatedVocab: related,
+    conjugationLemma: conjugationLemma,
   );
 });
 

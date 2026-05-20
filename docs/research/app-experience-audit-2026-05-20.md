@@ -16,7 +16,8 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Kana detail sheet | Audited slice | Static + widget audit found self-attestation button; replaced with Kana quiz gate; live proof opened the quiz from the sheet. |
 | Mistakes / JLPT support / Weakness Radar copy | Audited slice | Static audit found internal 1-3-7 labels leaking as `D1/D3/D7`; replaced with learner-facing day labels; live bundle scan found no `D1 `/`D3 `/`D7 ` leaks. |
 | Foundations hub / Kana detail copy | Audited slice | Live route-matrix text + widget audit found `Open`, `yoon`, `rules`, `strokes`, and `clear` leaking; localized/removed; live proof verified hub/grid/sheet/quiz. |
-| Vocab detail conjugation panel | Audited slice | Code audit found suffix-guessed forms in `_conjugationLines`; logged QA-C-002 and designed JMdict POS-backed replacement under QA-C-001. |
+| Vocab detail conjugation panel | Audited slice | Live VI/N5 proof opened `帰る`, verified examples plus sourced `帰って`/`帰らない` forms, clicked `Luyện chia thể`, reached a scoped 1-item hub, answered practice, and verified noun `学生` hides conjugation UI. |
+| Search result card | Audited slice | Live VI/N5 search `かえる` returned `国へ帰るの`, but clicking the result card did not open detail or change route; logged QA-A-026. |
 | Conjugation DB metadata | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_lemma` + indexes and `lemmas.json` is `200/no-cache` with `3907` JMdict_e rows. |
 | Conjugation SRS / Mistakes | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_srs_state`, `idx_conjugation_srs_due`, `idx_conjugation_srs_skill`, and Mistakes rendered the empty state cleanly; Home nav CTA returned to dashboard. |
 | Conjugation hub / practice | Audited slice | Live VI/N5 proof opened `/#/grammar/conjugation`, saw `398 mục có nguồn sẵn sàng`, clicked `Luyện chia thể`, selected an answer, confirmed, and saw `Đúng` + `Câu tiếp`; console app errors were `0`. |
@@ -36,8 +37,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-024 | Foundations copy/internal labels | Foundations hub and Kana sheet exposed `Open`, `yoon`, `rules`, `strokes`, and `clear`. | Fixed + deployed |
 | QA-A-025 | Onboarding | Fresh language onboarding could hide the continue CTA behind/under the analytics consent banner after selecting a language. | Fixed + deployed |
 | QA-B-001-G-N4-L46-L50 | Grammar content | N4 lessons 46-50 needed source verification plus full detail/example/practice proof. | Fixed + deployed |
-| QA-C-001 | Conjugation feature | Content DB lemma table, exact-skill SRS/mistakes, and Grammar-owned hub/practice routes are deployed; connected Vocab/Grammar/Kanji/Daily Plan/Practice Board entry points remain. | Partial fixed + deployed |
-| QA-C-002 | Vocab detail conjugation | Vocab detail exposes generated-looking but suffix-guessed forms and generic grammar CTA. | Pending |
+| QA-C-001 | Conjugation feature | Content DB lemma table, exact-skill SRS/mistakes, Grammar-owned hub/practice routes, and Vocab detail entry point are deployed; connected Grammar/Kanji/Daily Plan/Practice Board entry points remain. | Partial fixed + deployed |
+| QA-C-002 | Vocab detail conjugation | Vocab detail exposed generated-looking but suffix-guessed forms and generic grammar CTA. | Fixed + deployed |
+| QA-A-026 | Search navigation | Search result cards can look tappable but fail to open detail; live `かえる` result stayed on `/#/search` after click. | Pending |
 
 ## Live Proof Artifacts
 
@@ -67,6 +69,12 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-onboarding-banner-fixed-before.png`
 - `output/playwright/live-onboarding-banner-fixed-level.png`
 - `output/playwright/live-onboarding-banner-fixed-home.png`
+- `output/playwright/live-vocab-kaeru-detail-retry.png`
+- `output/playwright/live-vocab-kaeru-after-cta-click.png`
+- `output/playwright/live-vocab-kaeru-scoped-practice.png`
+- `output/playwright/live-vocab-kaeru-practice-answer.png`
+- `output/playwright/live-vocab-gakusei-no-conj.png`
+- `output/playwright/live-search-kaeru-results.png`
 
 ## Notes For Next Sweep
 

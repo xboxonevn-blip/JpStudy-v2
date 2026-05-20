@@ -3,9 +3,13 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpstudy/app/navigation/app_navigation_extensions.dart';
 import 'package:jpstudy/app/navigation/app_route_locations.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/conjugation/conjugation_class.dart';
+import 'package:jpstudy/core/conjugation/conjugation_form.dart';
+import 'package:jpstudy/core/conjugation/japanese_conjugator.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/utils/japanese_text.dart';
 import 'package:jpstudy/data/db/content_database.dart';
@@ -406,8 +410,10 @@ class _StudyUsageSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final vocab = detail.vocab;
     final examples = _exampleLines(vocab, language);
-    final conjugations = _conjugationLines(vocab);
+    final conjugations = _conjugationLines(detail.conjugationLemma, language);
     final collocations = _collocationLines(vocab);
+    final canPracticeConjugation =
+        detail.conjugationLemma != null && conjugations.isNotEmpty;
 
     return AppSectionCard(
       padding: const EdgeInsets.all(20),
@@ -446,18 +452,20 @@ class _StudyUsageSection extends StatelessWidget {
                   ),
                 ),
               ),
-              ActionChip(
-                avatar: const Icon(Icons.school_rounded, size: 18),
-                label: Text(
-                  _tr(
-                    language,
-                    en: 'ます grammar',
-                    vi: 'Ngữ pháp 〜ます',
-                    ja: 'ます文法',
+              if (canPracticeConjugation)
+                ActionChip(
+                  avatar: const Icon(Icons.swap_horiz_rounded, size: 18),
+                  label: Text(
+                    _tr(
+                      language,
+                      en: 'Practice forms',
+                      vi: 'Luyện chia thể',
+                      ja: '活用練習',
+                    ),
                   ),
+                  onPressed: () =>
+                      context.openConjugationHub(contentVocabId: vocab.id),
                 ),
-                onPressed: () => context.push('/grammar'),
-              ),
             ],
           ),
           const SizedBox(height: 14),
@@ -556,31 +564,83 @@ List<String> _exampleLines(VocabData vocab, AppLanguage language) {
   ];
 }
 
-List<String> _conjugationLines(VocabData vocab) {
-  final term = vocab.term.trim();
-  if (!(term.endsWith('る') || term.endsWith('ます') || term.endsWith('する'))) {
-    return const [];
+List<String> _conjugationLines(
+  ConjugationLemmaData? lemma,
+  AppLanguage language,
+) {
+  if (lemma == null) return const [];
+  final spec = _conjugationSpecFor(lemma);
+  if (spec == null) return const [];
+  final conjugator = JapaneseConjugator();
+  final rows = <String>[];
+  const forms = [
+    ConjugationForm.te,
+    ConjugationForm.nai,
+    ConjugationForm.ta,
+    ConjugationForm.masu,
+  ];
+  for (final form in forms) {
+    try {
+      final surface = conjugator.form(lemma.dictionaryForm, spec, form);
+      rows.add('${_formLabel(language, form)}: $surface');
+    } on UnsupportedError {
+      continue;
+    } on ArgumentError {
+      continue;
+    }
   }
-  if (term.endsWith('ます')) {
-    final stem = term.substring(0, term.length - 2);
-    return [
-      '$stemます · polite',
-      '$stemません · negative',
-      '$stemました · past',
-      '$stemませんでした · past negative',
-    ];
+  return rows;
+}
+
+ConjugationSpec? _conjugationSpecFor(ConjugationLemmaData lemma) {
+  if (lemma.kind == 'verb') {
+    final verbClass = _enumByName(VerbClass.values, lemma.conjugationClass);
+    return verbClass == null ? null : ConjugationSpec.verb(verbClass);
   }
-  if (term.endsWith('する')) {
-    final stem = term.substring(0, term.length - 2);
-    return [
-      '$stemします · masu',
-      '$stemして · te',
-      '$stemした · ta',
-      '$stemしない · nai',
-    ];
+  final adjectiveClass = _enumByName(
+    AdjectiveClass.values,
+    lemma.conjugationClass,
+  );
+  return adjectiveClass == null
+      ? null
+      : ConjugationSpec.adjective(adjectiveClass);
+}
+
+T? _enumByName<T extends Enum>(List<T> values, String name) {
+  for (final value in values) {
+    if (value.name == name) return value;
   }
-  final stem = term.substring(0, term.length - 1);
-  return ['$stemます · masu', '$stemて · te', '$stemた · ta', '$stemない · nai'];
+  return null;
+}
+
+String _formLabel(AppLanguage language, ConjugationForm form) {
+  final key = form.name;
+  return switch (language) {
+    AppLanguage.en => switch (form) {
+      ConjugationForm.te => 'te form',
+      ConjugationForm.nai => 'negative form',
+      ConjugationForm.ta => 'past form',
+      ConjugationForm.masu => 'polite form',
+      ConjugationForm.dictionary => 'dictionary form',
+      _ => '$key form',
+    },
+    AppLanguage.vi => switch (form) {
+      ConjugationForm.te => 'thể て',
+      ConjugationForm.nai => 'thể phủ định',
+      ConjugationForm.ta => 'thể quá khứ',
+      ConjugationForm.masu => 'thể lịch sự',
+      ConjugationForm.dictionary => 'thể từ điển',
+      _ => 'thể $key',
+    },
+    AppLanguage.ja => switch (form) {
+      ConjugationForm.te => 'て形',
+      ConjugationForm.nai => 'ない形',
+      ConjugationForm.ta => 'た形',
+      ConjugationForm.masu => 'ます形',
+      ConjugationForm.dictionary => '辞書形',
+      _ => '$key形',
+    },
+  };
 }
 
 List<String> _collocationLines(VocabData vocab) {

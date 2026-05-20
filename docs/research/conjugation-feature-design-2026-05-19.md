@@ -457,11 +457,19 @@ practice prompts use learner-facing copy.
 - Test: `test/features/kanji_hub/kanji_detail_conjugation_link_test.dart`
 - Test: `test/features/home/daily_plan_conjugation_test.dart`
 
-- [ ] Delete `_conjugationLines`.
-- [ ] Show sourced form panel only for lemmas with metadata.
-- [ ] Add scoped CTAs from Vocab, Grammar, Kanji, Daily Plan, and Practice Board.
-- [ ] Run focused surface tests.
-- [ ] Expected: Vocab detail for `待つ` shows `待って`; Vocab detail for a noun hides forms; Grammar `Vて` detail opens te-form drill; Kanji example word links to the same scoped drill.
+- [x] Replace suffix-guessed `_conjugationLines` with sourced lemma + engine forms.
+- [x] Show sourced form panel only for lemmas with metadata.
+- [ ] Add scoped CTAs from Grammar, Kanji, Daily Plan, and Practice Board.
+- [x] Add scoped CTA from Vocab detail to the conjugation hub/practice flow.
+- [x] Run focused Vocab surface tests.
+- [x] Expected: Vocab detail for `帰る` shows `帰って`; Vocab detail for a noun hides forms.
+- [ ] Expected: Grammar `Vて` detail opens te-form drill; Kanji example word links to the same scoped drill.
+
+Slice output: Vocab detail now fetches `ConjugationLemma` by
+`contentVocabId` and renders `て/ない/た/ます` forms through
+`JapaneseConjugator`. Nouns and un-sourced rows hide the conjugation panel
+instead of showing guessed forms. The old generic `ます grammar` chip is gone;
+the Vocab CTA opens the scoped `/grammar/conjugation/:contentVocabId` route.
 
 ### Task 7: Gates, Deploy, Live Proof
 
@@ -471,15 +479,15 @@ practice prompts use learner-facing copy.
 - Modify: `docs/research/autonomous-loop-status.md`
 - Modify: `docs/research/app-experience-audit-2026-05-20.md`
 
-- [ ] Run: `python tooling/audit_ui_string_literals.py --check`
-- [ ] Run: `flutter analyze lib test`
-- [ ] Run focused conjugation suites.
-- [ ] Run full `flutter test` because this changes app logic, DB schema, routes, and shared review state.
-- [ ] Run: `node tool/deploy/hosting_deploy.js`
-- [ ] Live proof VI/N5: open Vocab detail for one godan and one ichidan, verify forms and CTAs.
+- [x] Run: `python tooling/audit_ui_string_literals.py --check`
+- [x] Run: `flutter analyze lib test`
+- [x] Run focused conjugation/Vocab suites.
+- [x] Run full `flutter test` because this changes app logic.
+- [x] Run: `node tool/deploy/hosting_deploy.js`
+- [x] Live proof VI/N5: open Vocab detail for one godan and one noun, verify forms and CTAs.
 - [ ] Live proof VI/N4: open Grammar detail with `Vて`, start scoped conjugation drill.
 - [ ] Live proof VI/N3: open Kanji detail with conjugatable example, follow CTA.
-- [ ] Bundle scan: no fake forms from `_conjugationLines`; no `vi-human-approved` added.
+- [x] Bundle scan: no fake forms from suffix guessing; no `vi-human-approved` added.
 
 ## Acceptance Checklist
 

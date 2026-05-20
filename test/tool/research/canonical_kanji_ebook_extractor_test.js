@@ -72,6 +72,41 @@ Kiếm                                                          力             
   assert.match(entries[1].writingHint, /đao/);
 });
 
+test('parseWritingGridText prefers target kanji from hint line over mnemonic components', () => {
+  const text = `
+DẬU
+Giờ dậu                                                                          西           一
+                                                              Cảnh phía tây ( ) đẹp nhất ( ) vào giờ Dậu ( )     酉
+
+QUANG
+Ánh sáng                                                               小                    一          儿
+                                                                Tiểu ( ) cô nương có 1 ( ) cặp chân ( ) trắng sáng ( ) 光
+`;
+
+  const entries = parseWritingGridText(text, { level: 'N1', page: 1 });
+
+  assert.deepEqual(
+    entries.map((entry) => entry.kanji),
+    ['酉', '光'],
+  );
+  assert.equal(entries[0].hanViet, 'Dậu');
+  assert.equal(entries[1].meaningVi, 'Ánh sáng');
+});
+
+test('parseWritingGridText chooses first kanji from trailing compound hint', () => {
+  const text = `
+SÁI
+Vẩy nước                                                                     氵           西
+                                                                Em THUỶ ( ) đi TÂY ( ) về ăn mặc rất SÁI LẠC         お洒落 (おしゃれ) - Sành điệu
+`;
+
+  const entries = parseWritingGridText(text, { level: 'N1', page: 1 });
+
+  assert.equal(entries.length, 1);
+  assert.equal(entries[0].kanji, '洒');
+  assert.equal(entries[0].hanViet, 'Sái');
+});
+
 test('formatCanonicalMarkdown includes sources and open gaps', () => {
   const markdown = formatCanonicalMarkdown('N5', [
     {

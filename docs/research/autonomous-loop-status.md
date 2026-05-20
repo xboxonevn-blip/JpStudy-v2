@@ -1,5 +1,15 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-027 Phase 1B/1C
+
+- Re-extracted canonical N4/N1 writing-grid ebooks from local pixel/OCR cache, without accessing banned sites. Parser now chooses the hint-line target kanji when the first row only exposes mnemonic components; regressions cover `酉` vs `西/一`, `光` vs `小/一/儿`, and `洒` from `洒落`.
+- Regenerated `docs/research/canonical/kanji-n4.md` (`193` entries) and `docs/research/canonical/kanji-n1.md` (`1164` entries). Spot samples fixed: N4 `究`, `光`, `王`; N1 `洒`, `酉`.
+- Built `docs/research/canonical/kanji-master-mapping-2026-05-20.json`: `2114` selected kanji, counts `N5=103`, `N4=178`, `N3=316`, `N2=461`, `N1=1056`.
+- Applied owner hard overrides in master mapping: `海 -> N5`, `帰 -> N5`, `銀 -> N3`, `重 -> N3`, `議 -> N2`; canonical keeps `親 -> N4`.
+- Logged conflicts/uncertainties in `docs/research/canonical/kanji-canonical-open-questions-2026-05-20.md` for later owner review. These do not block QA-A-026.
+- Verified: `npm run test:research-tooling` passed `72/72`.
+- Next: QA-A-026 app kanji MOVE/DEDUPE/MISSING/EXTRA diff + implementation from master mapping.
+
 ## 2026-05-17
 
 - Track A P0/P1 seed backlog created in `docs/research/quality-backlog.md`.

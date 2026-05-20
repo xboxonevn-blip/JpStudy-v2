@@ -1,8 +1,8 @@
 # Canonical Kanji N1
 
-Generated: 2026-05-20T13:07:16.885Z
+Generated: 2026-05-20T14:34:12.428Z
 Source: owner-provided local ebook PDFs only; banned websites not accessed.
-Entry count: 762
+Entry count: 1164
 
 ## Extraction Notes
 
@@ -87,14 +87,14 @@ examples:
     reading: うえした
     meaning: cao và thấp; lên và xuống; dỡ và tải; khen và chê
 
-### 西 (Sái)
+### 洒 (Sái)
 
 level: N1
 meaningVi: Vẩy nước
 hanViet: Sái
-onyomi: ["セイ", "サイ", "ス"]
-kunyomi: ["にし"]
-strokeCount: 6
+onyomi: ["シャ", "ソン", "サイ", "セン", "セイ"]
+kunyomi: ["すす.ぐ", "あら.う"]
+strokeCount: 9
 writingHint: Em THUỶ ( ) đi TÂY ( ) về ăn mặc rất SÁI LẠC お洒落 (おしゃれ) - Sành điệu 1 4
 sourcePages: []
 sources:
@@ -105,26 +105,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Sái maps to 31 KANJIDIC2 candidates; kept extracted 西
+  - none
 examples:
-  - word: 西日
-    reading: にしび
-    meaning: mặt trời hướng tây
-  - word: 西日
-    reading: にしび
-    meaning: mặt trời hướng tây
-  - word: 東西
-    reading: とうざい
-    meaning: Đông và Tây, cả nước
+  - word: 洒落
+    reading: しゃらく
+    meaning: thẳng thắn; cởi mở
+  - word: 洒落る
+    reading: しゃれる
+    meaning: nói đùa; chơi chữ; ăn mặc sành điệu
+  - word: お洒落
+    reading: おしゃれ
+    meaning: ăn mặc lịch sự; ai đó ăn mặc lịch sự; có ý thức về thời trang
 
-### 一 (Dậu)
+### 酉 (Dậu)
 
 level: N1
 meaningVi: Giờ dậu
 hanViet: Dậu
-onyomi: ["イチ", "イツ"]
-kunyomi: ["ひと-", "ひと.つ"]
-strokeCount: 1
+onyomi: ["ユウ"]
+kunyomi: ["とり"]
+strokeCount: 7
 writingHint: Cảnh phía tây ( ) đẹp nhất ( ) vào giờ Dậu ( ) 酉 1
 sourcePages: []
 sources:
@@ -133,19 +133,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Dậu maps to 42 KANJIDIC2 candidates; kept extracted 一
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 一挙に
-    reading: いっきょに
-    meaning: một cú sà xuống; bằng một cú sà xuống
-  - word: 一部分
-    reading: いちぶぶん
-    meaning: một phần
-  - word: 一人
-    reading: いちにん
-    meaning: một người
+  - none
 
 ### 叱 (Sất)
 
@@ -197,14 +189,14 @@ openGaps:
 examples:
   - none
 
-### 气 (Khí)
+### 汽 (Khí)
 
 level: N1
 meaningVi: Hơi nước
 hanViet: Khí
-onyomi: ["キ", "ケ"]
-kunyomi: ["いき"]
-strokeCount: 4
+onyomi: ["キ"]
+kunyomi: []
+strokeCount: 7
 writingHint: Nước ( ) chuyển sang thể khí ( ) gọi là hơi nước ( ) 汽 4
 sourcePages: []
 sources:
@@ -213,11 +205,19 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 汽船
+    reading: きせん
+    meaning: tàu hơi nước
+  - word: 汽船
+    reading: きせん
+    meaning: tàu hơi nước
+  - word: 汽車
+    reading: きしゃ
+    meaning: tàu hơi nước
 
 ### 佐 (Tá)
 
@@ -246,14 +246,14 @@ examples:
     reading: さ
     meaning: giúp đỡ
 
-### 石 (Thác)
+### 拓 (Thác)
 
 level: N1
 meaningVi: Khai thác
 hanViet: Thác
-onyomi: ["セキ", "シャク", "コク"]
-kunyomi: ["いし"]
-strokeCount: 5
+onyomi: ["タク"]
+kunyomi: ["ひら.く"]
+strokeCount: 8
 writingHint: Tay ( ) đập đá ( ) để khai thác ( ) 拓 2
 sourcePages: []
 sources:
@@ -264,26 +264,53 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thác maps to 28 KANJIDIC2 candidates; kept extracted 石
+  - none
 examples:
-  - word: 化石
-    reading: かせき
-    meaning: hóa thạch; hóa đá; hóa thạch
-  - word: 岩石
-    reading: がんせき
-    meaning: đá
-  - word: 化石
-    reading: かせき
-    meaning: hóa thạch; hóa đá
+  - word: 開拓
+    reading: かいたく
+    meaning: sự khai hoang (đất hoang); việc trồng trọt; người tiên phong
+  - word: 開拓
+    reading: かいたく
+    meaning: sự khai hoang (đất hoang); việc trồng trọt; người tiên phong
 
-### 面 (Miến)
+### 妬 (Đố)
+
+level: N1
+meaningVi: Đố kỵ
+hanViet: Đố
+onyomi: ["ト", "ツ"]
+kunyomi: ["ねた.む", "そね.む", "つも.る", "ふさ.ぐ"]
+strokeCount: 8
+writingHint: Phụ nữ ( ) ném đá ( ) nhau do đố kỵ ( ) 妬 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 嫉妬
+    reading: しっと
+    meaning: sự ghen tị
+  - word: 妬む
+    reading: ねたむ
+    meaning: ghen tị; ghen tị
+  - word: 嫉妬
+    reading: しっと
+    meaning: sự ghen tị
+
+### 麺 (Miến)
 
 level: N1
 meaningVi: Mì sợi
 hanViet: Miến
 onyomi: ["メン", "ベン"]
-kunyomi: ["おも", "おもて", "つら"]
-strokeCount: 9
+kunyomi: ["むぎこ"]
+strokeCount: 16
 writingHint: Lúa mạch ( ) được ép 2 mặt ( ) thành mì sợi ( ) 麺 2
 sourcePages: []
 sources:
@@ -294,17 +321,16 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Miến maps to 37 KANJIDIC2 candidates; kept extracted 面
+  - none
 examples:
-  - word: 生真面目
-    reading: きまじめ
-    meaning: quá nghiêm túc; người quá nghiêm túc; trung thực; thành thật
-  - word: 一面
-    reading: いちめん
-    meaning: một bên; một giai đoạn; trang đầu; mặt kia; toàn bộ bề mặt
-  - word: 側面
-    reading: そくめん
-    meaning: bên; sườn; bên hông; phía bên
+  - word: カップ麺
+    reading: かっぷめん
+    hanViet: miến
+    meaning: mì cốc, mì ăn liền
+  - word: 麺
+    reading: めん
+    hanViet: miến
+    meaning: mì, sợi mì
 
 ### 矢 (Thỉ)
 
@@ -414,44 +440,37 @@ examples:
     reading: いわゆる
     meaning: cái gọi là; có thể nói như vậy
 
-### 言 (Giá)
+### 辶 (Giá)
 
 level: N1
 meaningVi: Bò
 hanViet: Giá
-onyomi: ["ゲン", "ゴン"]
-kunyomi: ["い.う", "こと"]
-strokeCount: 7
+onyomi: []
+kunyomi: ["しんにょう"]
+strokeCount: 3
 writingHint: Em bé vừa bò ( ) vừa nói ( ) nên đi được rất xa ( 辶) 8 1
 sourcePages: []
 sources:
   level: ebook
   hanViet: ebook_text
   meaningVi: ebook_text
-  readings: kanjidic2_supplement
+  readings: mixed_ebook_kanjidic2
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Giá maps to 61 KANJIDIC2 candidates; kept extracted 言
+  - target kanji ambiguous: Hán-Việt heading Giá maps to 61 KANJIDIC2 candidates; kept extracted 辶
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 伝言
-    reading: つてごと
-    meaning: tin nhắn bằng lời nói; tin đồn; lời nói
-  - word: 発言
-    reading: はつげん
-    meaning: lời nói; lời phát biểu; lời đề nghị
-  - word: 証言
-    reading: しょうげん
-    meaning: bằng chứng; lời chứng
+  - none
 
-### 午 (Xử)
+### 杵 (Xử)
 
 level: N1
 meaningVi: Cái chày
 hanViet: Xử
-onyomi: ["ゴ"]
-kunyomi: ["うま"]
-strokeCount: 4
+onyomi: ["ショ", "ソ"]
+kunyomi: ["きね"]
+strokeCount: 8
 writingHint: Chặt cây ( ) đúng giờ Ngọ ( ) làm chày ( ) 杵 2 5
 sourcePages: []
 sources:
@@ -460,28 +479,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Xử maps to 21 KANJIDIC2 candidates; kept extracted 午
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 正午
-    reading: しょうご
-    meaning: buổi trưa; giữa ngày
-  - word: 午後
-    reading: ごご
-    meaning: buổi chiều
-  - word: 午前
-    reading: ごぜん
-    meaning: buổi sáng
+  - none
 
-### 牛 (Lao)
+### 牢 (Lao)
 
 level: N1
 meaningVi: Nhà tù
 hanViet: Lao
-onyomi: ["ギュウ"]
-kunyomi: ["うし"]
-strokeCount: 4
+onyomi: ["ロウ"]
+kunyomi: ["かた.い", "ひとや"]
+strokeCount: 7
 writingHint: Dưới mái nhà ( ) bò ( ) bị nhốt trong lao ( ) 牢 1
 sourcePages: []
 sources:
@@ -490,20 +501,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lao maps to 27 KANJIDIC2 candidates; kept extracted 牛
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 牛
-    reading: うし
-    meaning: gia súc; bò
-  - word: 牡牛座
-    reading: おうしざ
-    hanViet: mẫu ngưu toà
-    meaning: Chòm sao Kim Ngưu
-  - word: 牛肉
-    reading: ぎゅうにく
-    meaning: thịt bò
+  - none
 
 ### 犀 (Tê)
 
@@ -527,14 +529,14 @@ openGaps:
 examples:
   - none
 
-### 土 (Mẫu)
+### 牡 (Mẫu)
 
 level: N1
 meaningVi: Con đực
 hanViet: Mẫu
-onyomi: ["ド", "ト"]
-kunyomi: ["つち"]
-strokeCount: 3
+onyomi: ["ボ", "ボウ"]
+kunyomi: ["おす", "お-", "おん-"]
+strokeCount: 7
 writingHint: Bò ( ) ở khu đất ( ) kia là con đực ( )牡 3 6
 sourcePages: []
 sources:
@@ -545,26 +547,21 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Mẫu maps to 39 KANJIDIC2 candidates; kept extracted 土
+  - none
 examples:
-  - word: 土産
-    reading: どさん
-    meaning: sản phẩm của đất
-  - word: 土俵
-    reading: どひょう
-    meaning: đấu trường
-  - word: 国土
-    reading: こくど
-    meaning: vương quốc
+  - word: 牡牛座
+    reading: おうしざ
+    hanViet: mẫu ngưu toà
+    meaning: Chòm sao Kim Ngưu
 
-### 今 (Ngâm)
+### 吟 (Ngâm)
 
 level: N1
 meaningVi: Ngâm thơ
 hanViet: Ngâm
-onyomi: ["コン", "キン"]
-kunyomi: ["いま"]
-strokeCount: 4
+onyomi: ["ギン"]
+kunyomi: []
+strokeCount: 7
 writingHint: Miệng ( ) bây giờ ( ) đang ngâm thơ ( ) 吟 4
 sourcePages: []
 sources:
@@ -575,17 +572,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ngâm maps to 10 KANJIDIC2 candidates; kept extracted 今
+  - none
 examples:
-  - word: 今日は
-    reading: こんにちは
-    meaning: xin chào;chúc một ngày tốt lành (id lời chào ban ngày)
-  - word: 今晩は
-    reading: こんばんは
-    meaning: chào buổi tối
-  - word: 今更
-    reading: いまさら
-    meaning: bây giờ; vào giờ muộn thế này
+  - word: 吟味
+    reading: ぎんみ
+    meaning: sự kiểm tra; sự xem xét kỹ lưỡng; sự điều tra cẩn thận
+  - word: 吟味
+    reading: ぎんみ
+    meaning: sự kiểm tra; sự xem xét kỹ lưỡng; sự điều tra cẩn thận
 
 ### 含 (Hạm)
 
@@ -721,15 +715,45 @@ examples:
     reading: せんりょう
     meaning: chiếm đóng;chiếm giữ;sở hữu;có một phòng riêng
 
-### 令 (Linh)
+### 零 (Linh)
 
 level: N1
 meaningVi: Số 0
 hanViet: Linh
 onyomi: ["レイ"]
+kunyomi: ["ぜろ", "こぼ.す", "こぼ.れる"]
+strokeCount: 13
+writingHint: Cầu mưa ( ) bằng lệnh ( ) bài mà mãi 0 linh ( ) 零 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 零す
+    reading: こぼす
+    meaning: đổ
+  - word: 零れる
+    reading: こぼれる
+    meaning: tràn ra; tràn ra
+  - word: 零す
+    reading: こぼす
+    meaning: đổ
+
+### 令 (Linh)
+
+level: N1
+meaningVi: Cái chuông
+hanViet: Linh
+onyomi: ["レイ"]
 kunyomi: []
 strokeCount: 5
-writingHint: Cầu mưa ( ) bằng lệnh ( ) bài mà mãi 0 linh ( ) 零 1
+writingHint: Chuông ( ) vàng ( ) được làm theo lệnh ( ) vua 1 9
 sourcePages: []
 sources:
   level: ebook
@@ -778,14 +802,14 @@ examples:
     reading: ごみ
     meaning: rác; bụi bẩn
 
-### 迷 (Mê)
+### 謎 (Mê)
 
 level: N1
 meaningVi: Điều bí ẩn
 hanViet: Mê
-onyomi: ["メイ"]
-kunyomi: ["まよ.う"]
-strokeCount: 9
+onyomi: ["メイ", "ベイ"]
+kunyomi: ["なぞ"]
+strokeCount: 16
 writingHint: Nói ( ) mê ( ) ra những điều bí ẩn ( ) 謎 1 14 11
 sourcePages: []
 sources:
@@ -798,24 +822,24 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 迷信
-    reading: めいしん
-    meaning: sự mê tín
-  - word: 迷信
-    reading: めいしん
-    meaning: mê tín
-  - word: 迷惑
-    reading: めいわく
-    meaning: rắc rối; phiền toái; khó chịu
+  - word: 謎謎
+    reading: なぞなぞ
+    meaning: câu đố, câu đố, điều bí ẩn
+  - word: 謎謎
+    reading: なぞなぞ
+    meaning: câu đố; bí ẩn
+  - word: 謎
+    reading: なぞ
+    meaning: câu đố; điều bí ẩn
 
-### 奥 (Áo)
+### 襖 (Áo)
 
 level: N1
 meaningVi: Tấm cửa kéo
 hanViet: Áo
 onyomi: ["オウ"]
-kunyomi: ["おく", "おく.まる", "くま"]
-strokeCount: 12
+kunyomi: ["ふすま", "あお"]
+strokeCount: 17
 writingHint: Quần áo ( ) cất ở góc trong cùng ( ) sau tấm cửa kéo ( ) 襖 6
 sourcePages: []
 sources:
@@ -828,16 +852,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 奥
-    reading: おく
-    meaning: nội thất; phần bên trong
-  - word: 奥様
-    reading: おくさま
-    hanViet: áo dạng
-    meaning: vợ (người khác - kính ngữ)
-  - word: 奥さん
-    reading: おくさん
-    meaning: (danh dự) vợ
+  - word: 襖
+    reading: ふすま
+    meaning: màn hình trượt
+  - word: 襖
+    reading: ふすま
+    meaning: cửa trượt fusuma
 
 ### 米 (Kế)
 
@@ -869,14 +889,14 @@ examples:
     reading: おうべい
     meaning: Âu Mỹ; phương Tây
 
-### 歯 (Giảo)
+### 噛 (Giảo)
 
 level: N1
 meaningVi: Cắn, nhai
 hanViet: Giảo
-onyomi: ["シ"]
-kunyomi: ["よわい", "は", "よわ.い", "よわい.する"]
-strokeCount: 12
+onyomi: ["コウ", "ゴウ"]
+kunyomi: ["か.む", "か.じる"]
+strokeCount: 15
 writingHint: Trong miệng ( ) có răng ( ) dùng để cắn ( ) 噛 4
 sourcePages: []
 sources:
@@ -887,27 +907,49 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Giảo maps to 38 KANJIDIC2 candidates; kept extracted 歯
+  - target kanji ambiguous: Hán-Việt heading Giảo maps to 38 KANJIDIC2 candidates; kept extracted 噛
 examples:
-  - word: 歯磨
-    reading: はみがき
-    meaning: kem đánh răng; kem đánh răng
-  - word: 歯科
-    reading: しか
-    meaning: nha khoa
-  - word: 歯科
-    reading: しか
-    meaning: nha khoa
+  - word: 噛み切る
+    reading: かみきる
+    meaning: cắn đứt; gặm xuyên qua
+  - word: 噛る
+    reading: かじる
+    meaning: nhai;cắn;gặm;nhấm nháp;nghiền;nghiền nát;có một chút gì đó
+  - word: 噛る
+    reading: かじる
+    meaning: nhai; cắn; gặm; nhấm nháp; nghiền; nghiền nát; có một chút gì đó
 
-### 刃 (Gạo)
+### 籾 (Gạo)
 
 level: N1
 meaningVi: Thóc
 hanViet: Gạo
-onyomi: ["ジン", "ニン"]
-kunyomi: ["は", "やいば", "き.る"]
-strokeCount: 3
+onyomi: []
+kunyomi: ["もみ"]
+strokeCount: 9
 writingHint: Gạo ( ) vẫn nằm trong lớp vỏ sắc nhọn ( ) gọi là thóc ( ) 籾 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: mixed_ebook_kanjidic2
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 粥 (Chúc)
+
+level: N1
+meaningVi: Cháo
+hanViet: Chúc
+onyomi: ["イク", "シュク", "ジュク"]
+kunyomi: ["かゆ", "かい", "ひさ.ぐ"]
+strokeCount: 12
+writingHint: Dùng 2 cây cung ( ) ép nước gạo ( ) nấu cháo ( ) 粥 7 10
 sourcePages: []
 sources:
   level: ebook
@@ -917,14 +959,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Gạo maps to 5 KANJIDIC2 candidates; kept extracted 刃
+  - none
 examples:
-  - word: 刃
-    reading: は
-    meaning: lưỡi (của một thanh kiếm)
-  - word: 刃
-    reading: は
-    meaning: lưỡi (của một thanh kiếm)
+  - word: 粥
+    reading: かゆ
+    meaning: (gạo) cháo
+  - word: 粥
+    reading: かゆ
+    meaning: (gạo) cháo
 
 ### 神 (Thần)
 
@@ -956,14 +998,14 @@ examples:
     reading: しんせい
     meaning: sự thánh thiện; sự thiêng liêng; phẩm giá
 
-### 申 (Thân)
+### 紳 (Thân)
 
 level: N1
 meaningVi: Đàn ông
 hanViet: Thân
 onyomi: ["シン"]
-kunyomi: ["もう.す", "もう.し-", "さる"]
-strokeCount: 5
+kunyomi: []
+strokeCount: 11
 writingHint: Sợi tơ ( ) quanh thân ( ) người đàn ông ( ) 紳 1 11
 sourcePages: []
 sources:
@@ -976,24 +1018,21 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 申し込み
-    reading: もうしこみ
-    meaning: đơn đăng ký;sự gia nhập;yêu cầu;đăng ký;đề nghị;đề xuất;khởi động;thách thức
-  - word: 申し出る
-    reading: もうしでる
-    meaning: báo cáo;nói;đề nghị;gửi;yêu cầu;đưa ra lời đề nghị;đưa ra thông tin
-  - word: 申出
-    reading: もうしで
-    meaning: đề nghị;yêu cầu;yêu cầu;báo cáo;thông báo
+  - word: 紳士
+    reading: しんし
+    meaning: quý ông
+  - word: 紳士
+    reading: しんし
+    meaning: quý ông
 
-### 金 (Bát)
+### 本 (Bát)
 
 level: N1
 meaningVi: Cái bát
 hanViet: Bát
-onyomi: ["キン", "コン", "ゴン"]
-kunyomi: ["かね", "かな-", "-がね"]
-strokeCount: 8
+onyomi: ["ホン"]
+kunyomi: ["もと"]
+strokeCount: 5
 writingHint: Nhặt được cái bát ( ) vàng ( ) ở Nhật Bản ( ) 本 1 10
 sourcePages: []
 sources:
@@ -1004,26 +1043,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Bát maps to 47 KANJIDIC2 candidates; kept extracted 金
+  - target kanji ambiguous: Hán-Việt heading Bát maps to 47 KANJIDIC2 candidates; kept extracted 本
 examples:
-  - word: 大金
-    reading: たいきん
-    meaning: chi phí lớn
-  - word: 基金
-    reading: ききん
-    meaning: quỹ; quỹ
-  - word: 残金
-    reading: ざんきん
-    meaning: số tiền còn lại
+  - word: 本体
+    reading: ほんたい
+    meaning: chất; hình thức thật; đối tượng thờ cúng
+  - word: 本格
+    reading: ほんかく
+    meaning: sự đúng mực; những quy tắc cơ bản
+  - word: 本能
+    reading: ほんのう
+    meaning: bản năng
 
-### 木 (Hạnh)
+### 口 (Hạnh)
 
 level: N1
 meaningVi: Quả mơ
 hanViet: Hạnh
-onyomi: ["ボク", "モク"]
-kunyomi: ["き", "こ-"]
-strokeCount: 4
+onyomi: ["コウ", "ク"]
+kunyomi: ["くち"]
+strokeCount: 3
 writingHint: Quả mơ ( ) từ trên cây ( ) rơi thẳng vào miệng ( ) 口 2
 sourcePages: []
 sources:
@@ -1034,7 +1073,37 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hạnh maps to 29 KANJIDIC2 candidates; kept extracted 木
+  - target kanji ambiguous: Hán-Việt heading Hạnh maps to 29 KANJIDIC2 candidates; kept extracted 口
+examples:
+  - word: 甘口
+    reading: あまくち
+    meaning: hương vị ngọt ngào; sự dịu dàng; sự xu nịnh; sự ngu ngốc
+  - word: 入口
+    reading: いりくち
+    meaning: lối vào;cổng;sự tiếp cận;miệng
+  - word: 口述
+    reading: こうじゅつ
+    meaning: tuyên bố bằng lời nói
+
+### 木 (Ngốc)
+
+level: N1
+meaningVi: Kẻ ngốc
+hanViet: Ngốc
+onyomi: ["ボク", "モク"]
+kunyomi: ["き", "こ-"]
+strokeCount: 4
+writingHint: Kẻ ngốc ( ) miệng ( ) cây ( ) vàng 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Ngốc maps to 6 KANJIDIC2 candidates; kept extracted 木
 examples:
   - word: 雑木
     reading: ざつぼく
@@ -1076,6 +1145,36 @@ examples:
     reading: いりょう
     meaning: quần áo
 
+### 染 (Nhiễm)
+
+level: N1
+meaningVi: Nhiễm độc
+hanViet: Nhiễm
+onyomi: ["セン"]
+kunyomi: ["そ.める", "そ.まる", "し.みる", "し.み"]
+strokeCount: 9
+writingHint: Nước ( ) bẩn làm 9 ( ) cây ( ) bị nhiễm độc ( ) 染 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 感染
+    reading: かんせん
+    meaning: sự lây nhiễm; sự lây nhiễm
+  - word: 染まる
+    reading: そまる
+    meaning: nhuộm
+  - word: 染みる
+    reading: しみる
+    meaning: xuyên qua; thấm vào
+
 ### 十 (Đấu)
 
 level: N1
@@ -1106,14 +1205,14 @@ examples:
     reading: じっぷん
     meaning: 10 phút
 
-### 音 (Ám)
+### 闇 (Ám)
 
 level: N1
 meaningVi: U ám
 hanViet: Ám
-onyomi: ["オン", "イン", "-ノン"]
-kunyomi: ["おと", "ね"]
-strokeCount: 9
+onyomi: ["アン", "オン"]
+kunyomi: ["やみ", "くら.い"]
+strokeCount: 17
 writingHint: Cổng ( ) vào cõi âm ( ) thật u ám ( ) 闇 2 6
 sourcePages: []
 sources:
@@ -1126,24 +1225,24 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 音
-    reading: ね
-    meaning: âm thanh; nốt nhạc
-  - word: 音色
-    reading: おんいろ
-    meaning: tông màu;chất lượng âm sắc;âm sắc;bản vá tổng hợp
-  - word: 本音
-    reading: ほんね
-    meaning: ý định thực sự; động cơ
+  - word: 無闇に
+    reading: むやみに
+    meaning: một cách vô lý;ngớ ngẩn;liều lĩnh;vô ý;ngẫu nhiên
+  - word: 闇
+    reading: やみ
+    meaning: bóng tối;bóng tối;chợ chợ đen;đen tối;mờ ám;bất hợp pháp
+  - word: 無闇に
+    reading: むやみに
+    meaning: một cách vô lý; ngớ ngẩn; liều lĩnh; vô ý; ngẫu nhiên
 
-### 意 (Ức)
+### 臆 (Ức)
 
 level: N1
 meaningVi: Rụt rè
 hanViet: Ức
-onyomi: ["イ"]
-kunyomi: []
-strokeCount: 13
+onyomi: ["オク", "ヨク"]
+kunyomi: ["むね", "おくする"]
+strokeCount: 17
 writingHint: Nguyệt ( ) có ý kiến ( ) nhưng còn rụt rè ( ) 臆 5
 sourcePages: []
 sources:
@@ -1154,26 +1253,23 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ức maps to 20 KANJIDIC2 candidates; kept extracted 意
+  - none
 examples:
-  - word: 意向
-    reading: いこう
-    meaning: ý định; ý tưởng; khuynh hướng
-  - word: 意気込む
-    reading: いきごむ
-    meaning: nhiệt tình về
-  - word: 決意
-    reading: けつい
-    meaning: quyết định; sự quyết tâm
+  - word: 臆病
+    reading: おくびょう
+    meaning: sự hèn nhát; sự rụt rè
+  - word: 臆病
+    reading: おくびょう
+    meaning: sự hèn nhát; sự rụt rè
 
-### 章 (Chướng)
+### 障 (Chướng)
 
 level: N1
 meaningVi: Chướng ngại
 hanViet: Chướng
 onyomi: ["ショウ"]
-kunyomi: []
-strokeCount: 11
+kunyomi: ["さわ.る"]
+strokeCount: 14
 writingHint: Em Bồ ( ) bụng chương ( ) gây chướng ngại ( )障 4
 sourcePages: []
 sources:
@@ -1186,12 +1282,15 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 章
-    reading: しょう
-    meaning: (1) chương; phần; (2) huy chương
-  - word: 文章
-    reading: ぶんしょう
-    meaning: câu, văn bản
+  - word: 保障
+    reading: ほしょう
+    meaning: sự đảm bảo;sự bảo đảm;sự đảm bảo;sự cam kết;sự bảo đảm
+  - word: 障る
+    reading: さわる
+    meaning: cản trở; can thiệp vào; ảnh hưởng; làm hại ai; có hại cho
+  - word: 気障
+    reading: きざ
+    meaning: sự giả tạo; tự phụ; hợm hĩnh
 
 ### 彰 (Chương)
 
@@ -1237,14 +1336,14 @@ openGaps:
 examples:
   - none
 
-### 立 (Lạp)
+### 拉 (Lạp)
 
 level: N1
 meaningVi: Lôi kéo
 hanViet: Lạp
-onyomi: ["リツ", "リュウ", "リットル"]
-kunyomi: ["た.つ", "-た.つ", "た.ち-", "た.てる", "-た.てる", "た.て-", "たて-", "-た.て"]
-strokeCount: 5
+onyomi: ["ラツ", "ラ", "ロウ"]
+kunyomi: ["らっ.する", "ひし.ぐ", "くだ.く"]
+strokeCount: 8
 writingHint: Tay ( ) không đứng ( ) yên mà còn lôi kéo ( ) 拉 2 4
 sourcePages: []
 sources:
@@ -1253,19 +1352,33 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 立方
-    reading: たちかた
-    meaning: khiêu vũ (geisha)
-  - word: 創立
-    reading: そうりつ
-    meaning: sự thành lập; sự thành lập; tổ chức
-  - word: 公立
-    reading: こうりつ
-    meaning: công cộng (cơ quan)
+  - none
+
+### 笠 (Lạp)
+
+level: N1
+meaningVi: Cái nón
+hanViet: Lạp
+onyomi: ["リュウ"]
+kunyomi: ["かさ"]
+strokeCount: 11
+writingHint: Trúc ( ) đứng ( ) đội nón ( ) 笠 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 活 (Khoát)
 
@@ -1373,15 +1486,42 @@ openGaps:
 examples:
   - none
 
-### 乍 (Trá)
+### 詐 (Trá)
 
 level: N1
 meaningVi: Dối trá
 hanViet: Trá
-onyomi: ["サ", "サク"]
-kunyomi: ["-なが.ら", "たちま.ち"]
-strokeCount: 5
+onyomi: ["サ"]
+kunyomi: ["いつわ.る"]
+strokeCount: 12
 writingHint: Lời nói ( ) bị Ép ( ) là dối trá ( )詐 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 詐欺
+    reading: さぎ
+    meaning: sự lừa đảo; sự lừa gạt
+  - word: 詐欺
+    reading: さぎ
+    meaning: sự lừa đảo; sự lừa gạt
+
+### 閃 (Thiểm)
+
+level: N1
+meaningVi: Tia sáng
+hanViet: Thiểm
+onyomi: ["セン"]
+kunyomi: ["ひらめ.く", "ひらめ.き", "うかが.う"]
+strokeCount: 10
+writingHint: Dưới cổng ( ) người ( ) phát ra tia sáng ( ) 閃 2 6
 sourcePages: []
 sources:
   level: ebook
@@ -1391,70 +1531,9 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trá maps to 38 KANJIDIC2 candidates; kept extracted 乍
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
-
-### 門 (Nhàn)
-
-level: N1
-meaningVi: Nhàn rỗi
-hanViet: Nhàn
-onyomi: ["モン"]
-kunyomi: ["かど", "と"]
-strokeCount: 8
-writingHint: Nhàn rỗi ( ) nên ra cổng ( ) trồng cây ( ) 木 2 6
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nhàn maps to 68 KANJIDIC2 candidates; kept extracted 門
-examples:
-  - word: 門
-    reading: かど
-    meaning: cánh cổng
-  - word: 部門
-    reading: ぶもん
-    meaning: lớp;nhóm;thể loại;khoa;lĩnh vực;chi nhánh
-  - word: 門
-    reading: かど
-    meaning: cánh cổng
-
-### 人 (Thiểm)
-
-level: N1
-meaningVi: Tia sáng
-hanViet: Thiểm
-onyomi: ["ジン", "ニン"]
-kunyomi: ["ひと", "-り", "-と"]
-strokeCount: 2
-writingHint: Dưới cổng ( ) người ( ) phát ra tia sáng ( ) 閃 2 6
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thiểm maps to 38 KANJIDIC2 candidates; kept extracted 人
-examples:
-  - word: 人
-    reading: じん
-    meaning: đàn ông;người;người
-  - word: 人材
-    reading: じんざい
-    meaning: người đàn ông tài năng
-  - word: 一人
-    reading: いちにん
-    meaning: một người
 
 ### 潤 (Nhuận)
 
@@ -1486,15 +1565,86 @@ examples:
     reading: うるおう
     meaning: ẩm ướt, ẩm ướt, bị ướt, hưởng lợi từ, được tưới nước, nhận được lợi ích, ủng hộ, quyến rũ, t
 
-### 束 (Lan)
+### 欄 (Lan)
 
 level: N1
 meaningVi: Lan can
 hanViet: Lan
-onyomi: ["ソク"]
-kunyomi: ["たば", "たば.ねる", "つか", "つか.ねる"]
-strokeCount: 7
+onyomi: []
+kunyomi: []
+strokeCount: 21
 writingHint: Chặt cây ( ) ở cổng ( ) phía đông ( ) để làm lan can ( )欄 2 6 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Lan maps to 66 KANJIDIC2 candidates; kept extracted 欄
+examples:
+  - word: 欄
+    reading: らん
+    meaning: cột văn bản (ví dụ như trong một tờ báo)
+  - word: 欄
+    reading: らん
+    meaning: cột; mục; cột văn bản
+
+### 蘭 (Lan)
+
+level: N1
+meaningVi: Hoa lan
+hanViet: Lan
+onyomi: ["ラン", "ラ"]
+kunyomi: []
+strokeCount: 19
+writingHint: Hoa cỏ ( ) trồng trên cổng ( ) phía đông ( ) là hoa lan ( ) 蘭 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 爛 (Lạn)
+
+level: N1
+meaningVi: Rực rỡ
+hanViet: Lạn
+onyomi: ["ラン"]
+kunyomi: ["ただ.れる"]
+strokeCount: 21
+writingHint: Lửa ( ) ở cổng ( ) phía đông ( ) cháy sáng rực rỡ ( ) 爛 3 6 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 人 (Cập)
+
+level: N1
+meaningVi: Phổ cập
+hanViet: Cập
+onyomi: ["ジン", "ニン"]
+kunyomi: ["ひと", "-り", "-と"]
+strokeCount: 2
+writingHint: Hiện nay người ( ) đi bar (3) khá phổ cập ( ) 及 2
 sourcePages: []
 sources:
   level: ebook
@@ -1504,26 +1654,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lan maps to 66 KANJIDIC2 candidates; kept extracted 束
+  - target kanji ambiguous: Hán-Việt heading Cập maps to 29 KANJIDIC2 candidates; kept extracted 人
 examples:
-  - word: 結束
-    reading: けっそく
-    meaning: sự đoàn kết; sự thống nhất
-  - word: 拘束
-    reading: こうそく
-    meaning: hạn chế; hạn chế
-  - word: 束の間
-    reading: つかのま
-    meaning: khoảnh khắc; thời gian ngắn ngủi; ngắn ngủi; nhất thời
+  - word: 人
+    reading: じん
+    meaning: đàn ông;người;người
+  - word: 人材
+    reading: じんざい
+    meaning: người đàn ông tài năng
+  - word: 一人
+    reading: いちにん
+    meaning: một người
 
-### 及 (Tráp)
+### 扱 (Tráp)
 
 level: N1
 meaningVi: Đối xử
 hanViet: Tráp
-onyomi: ["キュウ"]
-kunyomi: ["およ.ぶ", "およ.び", "および", "およ.ぼす"]
-strokeCount: 3
+onyomi: ["ソウ", "キュウ"]
+kunyomi: ["あつか.い", "あつか.う", "あつか.る", "こ.く"]
+strokeCount: 6
 writingHint: Tay ( ) phổ cập ( ) dùng để đối xử ( ) 扱 2
 sourcePages: []
 sources:
@@ -1534,7 +1684,37 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tráp maps to 19 KANJIDIC2 candidates; kept extracted 及
+  - none
+examples:
+  - word: 扱い
+    reading: あつかい
+    meaning: điều trị; dịch vụ
+  - word: 取り扱い
+    reading: とりあつかい
+    meaning: điều trị; dịch vụ; xử lý; quản lý
+  - word: 取り扱う
+    reading: とりあつかう
+    meaning: xử lý; xử lý; giải quyết
+
+### 及 (Cấp)
+
+level: N1
+meaningVi: Múc nước
+hanViet: Cấp
+onyomi: ["キュウ"]
+kunyomi: ["およ.ぶ", "およ.び", "および", "およ.ぼす"]
+strokeCount: 3
+writingHint: Ở quê múc ( ) nước ( ) giếng là phổ cập ( ) 及 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
 examples:
   - word: 追及
     reading: ついきゅう
@@ -1545,29 +1725,6 @@ examples:
   - word: 及び
     reading: および
     meaning: và;cũng như
-
-### 氵 (Cấp)
-
-level: N1
-meaningVi: Múc nước
-hanViet: Cấp
-onyomi: []
-kunyomi: ["さんずい"]
-strokeCount: 3
-writingHint: Ở quê múc ( ) nước ( ) giếng là phổ cập ( ) 及 1 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: mixed_ebook_kanjidic2
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Cấp maps to 29 KANJIDIC2 candidates; kept extracted 氵
-  - examples missing; fill from ebook/manual pass later
-examples:
-  - none
 
 ### 俗 (Tục)
 
@@ -1653,14 +1810,41 @@ examples:
     reading: なるたけ
     meaning: càng nhiều càng tốt; nếu có thể
 
-### 史 (Lại)
+### 杖 (Trượng)
+
+level: N1
+meaningVi: Cây gậy
+hanViet: Trượng
+onyomi: ["ジョウ"]
+kunyomi: ["つえ"]
+strokeCount: 7
+writingHint: Cây ( ) cao một trượng ( ) là cây gậy ( ) 杖 2 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 杖
+    reading: つえ
+    meaning: mía
+  - word: 杖
+    reading: つえ
+    meaning: mía
+
+### 吏 (Lại)
 
 level: N1
 meaningVi: Nhà lãnh đạo
 hanViet: Lại
-onyomi: ["シ"]
+onyomi: ["リ"]
 kunyomi: []
-strokeCount: 5
+strokeCount: 6
 writingHint: Nắm rõ nhất ( ) về lịch sử ( ) là quan lại ( ) 吏 5
 sourcePages: []
 sources:
@@ -1671,26 +1855,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lại maps to 35 KANJIDIC2 candidates; kept extracted 史
+  - none
 examples:
-  - word: 女史
-    reading: じょし
-    meaning: Cô.
-  - word: 女史
-    reading: じょし
-    meaning: Cô.
-  - word: 歴史
-    reading: れきし
-    meaning: lịch sử
+  - word: 捕吏
+    reading: ほり
+    meaning: cảnh sát
+  - word: 下吏
+    reading: かり
+    meaning: quan chức cấp dưới
+  - word: 下吏
+    reading: かり
+    meaning: quan chức cấp dưới
 
-### 冫 (Dã)
+### 台 (Dã)
 
 level: N1
 meaningVi: Thợ rèn
 hanViet: Dã
-onyomi: ["ヒョウ"]
-kunyomi: ["こおり"]
-strokeCount: 2
+onyomi: ["ダイ", "タイ"]
+kunyomi: ["うてな", "われ", "つかさ"]
+strokeCount: 5
 writingHint: Thợ rèn ( ) nấu chảy băng ( ) ở vũ đài ( ) 台 3
 sourcePages: []
 sources:
@@ -1699,12 +1883,19 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Dã maps to 64 KANJIDIC2 candidates; kept extracted 冫
-  - examples missing; fill from ebook/manual pass later
+  - target kanji ambiguous: Hán-Việt heading Dã maps to 64 KANJIDIC2 candidates; kept extracted 台
 examples:
-  - none
+  - word: 土台
+    reading: どだい
+    meaning: nền tảng; cơ sở; cơ sở
+  - word: 台無し
+    reading: だいなし
+    meaning: lộn xộn; hư hỏng; (đến) không có gì
+  - word: 台本
+    reading: だいほん
+    meaning: kịch bản; kịch bản
 
 ### 怠 (Đãi)
 
@@ -1807,36 +1998,6 @@ openGaps:
 examples:
   - none
 
-### 台 (Di)
-
-level: N1
-meaningVi: Kẹo
-hanViet: Di
-onyomi: ["ダイ", "タイ"]
-kunyomi: ["うてな", "われ", "つかさ"]
-strokeCount: 5
-writingHint: Kẹo ( ) phải ăn ( ) trên vũ đài ( ) mới ngon! 1 10
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - none
-examples:
-  - word: 土台
-    reading: どだい
-    meaning: nền tảng; cơ sở; cơ sở
-  - word: 台無し
-    reading: だいなし
-    meaning: lộn xộn; hư hỏng; (đến) không có gì
-  - word: 台本
-    reading: だいほん
-    meaning: kịch bản; kịch bản
-
 ### 唄 (Bái)
 
 level: N1
@@ -1859,14 +2020,14 @@ openGaps:
 examples:
   - none
 
-### 員 (Vận)
+### 韻 (Vận)
 
 level: N1
 meaningVi: Vần điệu
 hanViet: Vận
 onyomi: ["イン"]
 kunyomi: []
-strokeCount: 10
+strokeCount: 19
 writingHint: Âm thanh ( ) của nhân viên ( ) rất vần điệu ( ) 韻 1 11
 sourcePages: []
 sources:
@@ -1875,28 +2036,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 教員
-    reading: きょういん
-    meaning: đội ngũ giảng viên
-  - word: 行員
-    reading: こういん
-    meaning: nhân viên ngân hàng
-  - word: 動員
-    reading: どういん
-    meaning: huy động
+  - none
 
-### 生 (Sinh)
+### 牲 (Sinh)
 
 level: N1
 meaningVi: Hy sinh
 hanViet: Sinh
-onyomi: ["セイ", "ショウ"]
-kunyomi: ["い.きる", "い.かす", "い.ける", "う.まれる", "うま.れる", "う.まれ", "うまれ", "う.む"]
-strokeCount: 5
+onyomi: ["セイ"]
+kunyomi: []
+strokeCount: 9
 writingHint: Con bò ( ) vừa sinh ( ) ra đã hy sinh ( ) 牲 3 7
 sourcePages: []
 sources:
@@ -1909,15 +2062,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 生温い
-    reading: なまぬるい
-    meaning: lãnh đạm; nửa vời
-  - word: 野生
-    reading: やせい
-    meaning: hoang dã
-  - word: 生
-    reading: き
-    meaning: nguyên chất, không pha loãng, thô, thô
+  - word: 犠牲
+    reading: ぎせい
+    meaning: sự hy sinh
+  - word: 犠牲
+    reading: ぎせい
+    meaning: sự hy sinh
 
 ### 醒 (Tỉnh)
 
@@ -1970,6 +2120,29 @@ examples:
   - word: お産
     reading: おさん
     meaning: (sinh) sinh
+
+### 隆 (Long)
+
+level: N1
+meaningVi: Hưng thịnh
+hanViet: Long
+onyomi: []
+kunyomi: []
+strokeCount: 17
+writingHint: Bồ ( ) sau ( ) sinh ( ) đời sống rất hưng thịnh ( )隆 1 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Long maps to 22 KANJIDIC2 candidates; kept extracted 隆
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 蒔 (Thì)
 
@@ -2100,15 +2273,37 @@ openGaps:
 examples:
   - none
 
-### 支 (Chi)
+### 肢 (Chi)
 
 level: N1
 meaningVi: Tay chân
 hanViet: Chi
 onyomi: ["シ"]
-kunyomi: ["ささ.える", "つか.える", "か.う"]
-strokeCount: 4
+kunyomi: []
+strokeCount: 8
 writingHint: Nguyệt ( ) mở chi nhánh ( ) làm móng tay, móng chân ( ) 肢 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 伎 (Kĩ)
+
+level: N1
+meaningVi: Kỹ nghệ
+hanViet: Kĩ
+onyomi: ["ギ", "キ"]
+kunyomi: ["わざ", "わざおぎ"]
+strokeCount: 6
+writingHint: Người ( ) ở chi nhánh ( ) phải có kỹ nghệ ( ) 伎 1 4
 sourcePages: []
 sources:
   level: ebook
@@ -2118,7 +2313,32 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - none
+  - target kanji ambiguous: Hán-Việt heading Kĩ maps to 115 KANJIDIC2 candidates; kept extracted 伎
+examples:
+  - word: 歌舞伎
+    reading: かぶき
+    hanViet: ca vũ kĩ
+    meaning: kịch Kabuki
+
+### 支 (Kì)
+
+level: N1
+meaningVi: Phân nhánh
+hanViet: Kì
+onyomi: ["シ"]
+kunyomi: ["ささ.える", "つか.える", "か.う"]
+strokeCount: 4
+writingHint: Phân nhánh ( ) núi ( ) thành các chi nhánh ( ) nhỏ 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Kì maps to 115 KANJIDIC2 candidates; kept extracted 支
 examples:
   - word: 収支
     reading: しゅうし
@@ -2266,6 +2486,29 @@ examples:
     reading: でたらめ
     meaning: lời phát biểu vô trách nhiệm; vô nghĩa; ngẫu nhiên; bừa bãi; không có hệ thống
 
+### 埣 (Giọt)
+
+level: N1
+meaningVi: Giọt
+hanViet: Giọt
+onyomi: ["ソツ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Mưa ( ) rơi xuống dưới ( ) thành từng giọt ( )雫 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji repaired from OCR/text component 雫 to 埣 by Hán-Việt heading
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 漏 (Lậu)
 
 level: N1
@@ -2296,14 +2539,14 @@ examples:
     reading: もらす
     meaning: để rò rỉ; để lộ
 
-### 相 (Sương)
+### 霜 (Sương)
 
 level: N1
 meaningVi: Sương muối
 hanViet: Sương
-onyomi: ["ソウ", "ショウ"]
-kunyomi: ["あい-"]
-strokeCount: 9
+onyomi: ["ソウ"]
+kunyomi: ["しも"]
+strokeCount: 17
 writingHint: Mưa ( ) tương tự ( ) như sương muối ( ) 霜 1
 sourcePages: []
 sources:
@@ -2314,17 +2557,11 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Sương maps to 22 KANJIDIC2 candidates; kept extracted 相
+  - none
 examples:
-  - word: 相応
-    reading: そうおう
-    meaning: sự phù hợp; sự phù hợp
-  - word: 相対
-    reading: あいたい
-    meaning: sự đối đầu;đối mặt;giữa chúng ta;không có bên thứ ba;tete-a-tete
-  - word: 相応しい
-    reading: ふさわしい
-    meaning: thích hợp
+  - word: 霜
+    reading: しも
+    meaning: sương giá
 
 ### 搭 (Đáp)
 
@@ -2408,6 +2645,33 @@ examples:
     reading: さら
     meaning: đĩa
 
+### 猛 (Mãnh)
+
+level: N1
+meaningVi: Mãnh liệt
+hanViet: Mãnh
+onyomi: ["モウ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Chó ( ) con ( ) liếm đĩa ( ) thức ăn rất mãnh liệt ( )猛 2 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 猛烈
+    reading: もうれつ
+    meaning: bạo lực; kịch liệt; giận dữ
+  - word: 猛烈
+    reading: もうれつ
+    meaning: bạo lực; kịch liệt; giận dữ
+
 ### 溢 (Dật)
 
 level: N1
@@ -2435,15 +2699,37 @@ examples:
     reading: あふれる
     meaning: tràn ngập
 
-### 新 (Tân)
+### 薪 (Tân)
 
 level: N1
 meaningVi: Củi
 hanViet: Tân
 onyomi: ["シン"]
-kunyomi: ["あたら.しい", "あら.た", "あら-", "にい-"]
-strokeCount: 13
+kunyomi: ["たきぎ", "まき"]
+strokeCount: 16
 writingHint: Cô Thảo ( ) mới ( ) đi lấy củi ( ) về薪 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 忠 (Trung)
+
+level: N1
+meaningVi: Trung thực
+hanViet: Trung
+onyomi: ["チュウ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Người sống ở trung ( ) tâm ( ) rất trung thực ( ) 忠 4
 sourcePages: []
 sources:
   level: ebook
@@ -2455,54 +2741,24 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 新
-    reading: しん
-    meaning: mới
-  - word: 革新
-    reading: かくしん
-    meaning: cải cách; đổi mới
-  - word: 新入生
-    reading: しんにゅうせい
-    meaning: sinh viên năm thứ nhất; sinh viên năm thứ nhất
+  - word: 忠告
+    reading: ちゅうこく
+    meaning: lời khuyên; cảnh báo
+  - word: 忠実
+    reading: ちゅうじつ
+    meaning: sự trung thành; sự trung thành
+  - word: 忠告
+    reading: ちゅうこく
+    meaning: lời khuyên; cảnh báo
 
-### 心 (Trung)
-
-level: N1
-meaningVi: Trung thực
-hanViet: Trung
-onyomi: ["シン"]
-kunyomi: ["こころ", "-ごころ"]
-strokeCount: 4
-writingHint: Người sống ở trung ( ) tâm ( ) rất trung thực ( ) 忠 4
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trung maps to 24 KANJIDIC2 candidates; kept extracted 心
-examples:
-  - word: 心掛ける
-    reading: こころがける
-    meaning: ghi nhớ; nhằm mục đích làm
-  - word: 下心
-    reading: したごころ
-    meaning: ý định bí mật; động cơ
-  - word: 心強い
-    reading: こころづよい
-    meaning: khích lệ; trấn an
-
-### 中 (Xuyến)
+### 串 (Xuyến)
 
 level: N1
 meaningVi: Xiên
 hanViet: Xuyến
-onyomi: ["チュウ"]
-kunyomi: ["なか", "うち", "あた.る"]
-strokeCount: 4
+onyomi: ["カン", "ケン", "セン"]
+kunyomi: ["くし", "つらぬ.く"]
+strokeCount: 7
 writingHint: Miệng ( ) cắn vào trung tâm ( ) miếng thịt xiên ( ) 串 7
 sourcePages: []
 sources:
@@ -2511,28 +2767,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Xuyến maps to 15 KANJIDIC2 candidates; kept extracted 中
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 中和
-    reading: ちゅうわ
-    meaning: trung hòa; chống lại
-  - word: 途中
-    reading: つちゅう
-    meaning: trên đường; trên đường
-  - word: 中腹
-    reading: ちゅうっぱら
-    meaning: bị kích thích; bị xúc phạm
+  - none
 
-### 半 (Bạn)
+### 伴 (Bạn)
 
 level: N1
 meaningVi: Bạn đời
 hanViet: Bạn
-onyomi: ["ハン"]
-kunyomi: ["なか.ば"]
-strokeCount: 5
+onyomi: ["ハン", "バン"]
+kunyomi: ["ともな.う"]
+strokeCount: 7
 writingHint: Người ( ) bán ( ) bạn ( ) 伴 7
 sourcePages: []
 sources:
@@ -2545,15 +2793,56 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 半端
-    reading: はんぱ
-    meaning: phần còn lại;mảnh;bộ không đầy đủ;phân số;tổng lẻ;sự không đầy đủ
-  - word: 半端
-    reading: はんぱ
-    meaning: phần còn lại; mảnh; bộ không đầy đủ; phân số; tổng lẻ; sự không đầy đủ
-  - word: 過半数
-    reading: かはんすう
-    meaning: đa số
+  - word: 伴う
+    reading: ともなう
+    meaning: đi cùng; mang theo; đi cùng; tham gia vào
+  - word: 伴う
+    reading: ともなう
+    meaning: đi cùng; mang theo; tham gia vào
+
+### 畔 (Bạn)
+
+level: N1
+meaningVi: Bờ ruộng
+hanViet: Bạn
+onyomi: ["ハン"]
+kunyomi: ["あぜ", "くろ", "ほとり"]
+strokeCount: 10
+writingHint: Ruộng ( ) bán nửa ( ) cho bạn làm bờ ( ) 畔 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 絆 (Bán)
+
+level: N1
+meaningVi: Gắn bó
+hanViet: Bán
+onyomi: ["ハン"]
+kunyomi: ["きずな", "ほだ.す", "つな.ぐ"]
+strokeCount: 11
+writingHint: Chỉ ( ) bán ( ) cho khách hàng đã gắn bó ( ) 絆 1 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 倹 (Kiệm)
 
@@ -2628,14 +2917,14 @@ openGaps:
 examples:
   - none
 
-### 波 (Bà)
+### 女 (Bà)
 
 level: N1
 meaningVi: Bà già
 hanViet: Bà
-onyomi: ["ハ"]
-kunyomi: ["なみ"]
-strokeCount: 8
+onyomi: ["ジョ", "ニョ", "ニョウ"]
+kunyomi: ["おんな", "め"]
+strokeCount: 3
 writingHint: Bà già ( ) lướt sóng ( ) giỏi như cô gái ( )女 1 6
 sourcePages: []
 sources:
@@ -2646,17 +2935,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - none
+  - target kanji ambiguous: Hán-Việt heading Bà maps to 57 KANJIDIC2 candidates; kept extracted 女
 examples:
-  - word: 短波
-    reading: たんぱ
-    meaning: sóng ngắn
-  - word: 津波
-    reading: つなみ
-    meaning: sóng thần; thủy triều
-  - word: 短波
-    reading: たんぱ
-    meaning: sóng ngắn
+  - word: 少女
+    reading: おとめ
+    meaning: con gái;cô gái trẻ;trinh nữ;thiếu nữ;cô bé
+  - word: 女子
+    reading: おなご
+    meaning: người phụ nữ; cô gái
+  - word: 女史
+    reading: じょし
+    meaning: Cô.
 
 ### 披 (Phi)
 
@@ -2710,14 +2999,14 @@ examples:
     reading: しぼう
     meaning: ước muốn; ước muốn; tham vọng
 
-### 母 (Môi)
+### 苺 (Môi)
 
 level: N1
 meaningVi: Dâu tây
 hanViet: Môi
-onyomi: ["ボ"]
-kunyomi: ["はは", "も"]
-strokeCount: 5
+onyomi: ["バイ", "マイ"]
+kunyomi: ["いちご"]
+strokeCount: 8
 writingHint: Cô Thảo ( ) biết mẹ ( ) thích ăn dâu tây ( ) 苺 2 3
 sourcePages: []
 sources:
@@ -2726,28 +3015,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Môi maps to 19 KANJIDIC2 candidates; kept extracted 母
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 父母
-    reading: ちちはは
-    meaning: cha mẹ; cha mẹ
-  - word: 保母
-    reading: ほぼ
-    meaning: nhân viên chăm sóc ban ngày ở trường mẫu giáo, v.v.
-  - word: 分母
-    reading: ぶんぼ
-    meaning: mẫu số
+  - none
 
-### 毎 (Hối)
+### 悔 (Hối)
 
 level: N1
 meaningVi: Hối hận
 hanViet: Hối
-onyomi: ["マイ"]
-kunyomi: ["ごと", "-ごと.に"]
-strokeCount: 6
+onyomi: ["カイ"]
+kunyomi: ["く.いる", "くや.しい", "く.やむ"]
+strokeCount: 10
 writingHint: Trái tim ( ) mỗi ngày ( ) đều cảm thấy hối hận ( ) 悔 3 4
 sourcePages: []
 sources:
@@ -2758,17 +3039,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hối maps to 62 KANJIDIC2 candidates; kept extracted 毎
+  - target kanji ambiguous: Hán-Việt heading Hối maps to 62 KANJIDIC2 candidates; kept extracted 悔
 examples:
-  - word: 毎
-    reading: ごと
-    meaning: mỗi cái tương ứng
-  - word: 毎
-    reading: ごと
-    meaning: mỗi cái tương ứng
-  - word: 毎度
-    reading: まいど
-    meaning: mỗi lần, lời chào chung của ngành dịch vụ
+  - word: 後悔
+    reading: こうかい
+    meaning: hối tiếc; ăn năn
+  - word: 後悔
+    reading: こうかい
+    meaning: hối tiếc; ăn năn
+  - word: 悔やむ
+    reading: くやむ
+    meaning: than khóc
 
 ### 侮 (Vũ)
 
@@ -2824,14 +3105,14 @@ examples:
     reading: びんかん
     meaning: sự nhạy cảm; tính nhạy cảm; nhạy cảm (với); hòa hợp tốt với
 
-### 糸 (Phồn)
+### 繁 (Phồn)
 
 level: N1
 meaningVi: Phồng thịnh
 hanViet: Phồn
-onyomi: ["シ"]
-kunyomi: ["いと"]
-strokeCount: 6
+onyomi: ["ハン"]
+kunyomi: []
+strokeCount: 17
 writingHint: Cần mẫn ( ) dệt tơ ( ) sẽ có ngày phồn thịnh ( )繁 1
 sourcePages: []
 sources:
@@ -2842,17 +3123,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phồn maps to 3 KANJIDIC2 candidates; kept extracted 糸
+  - target kanji ambiguous: Hán-Việt heading Phồn maps to 3 KANJIDIC2 candidates; kept extracted 繁
 examples:
-  - word: 毛糸
-    reading: けいと
-    meaning: đan len
-  - word: 毛糸
-    reading: けいと
-    meaning: len đan
-  - word: 糸
-    reading: いと
-    meaning: chủ đề
+  - word: 繁殖
+    reading: はんしょく
+    meaning: sinh sản; nhân lên; tăng trưởng; nhân giống
+  - word: 繁栄
+    reading: はんえい
+    meaning: thịnh vượng; thịnh vượng; thịnh vượng; hưng thịnh
+  - word: 繁盛
+    reading: はんじょう
+    meaning: sự thịnh vượng; sự hưng thịnh; sự thịnh vượng
 
 ### 芯 (Tâm)
 
@@ -2881,14 +3162,14 @@ examples:
     reading: しん
     meaning: lõi; tim; bấc; tủy
 
-### 必 (Bí)
+### 秘 (Bí)
 
 level: N1
 meaningVi: Bí mật
 hanViet: Bí
-onyomi: ["ヒツ"]
-kunyomi: ["かなら.ず"]
-strokeCount: 5
+onyomi: ["ヒ"]
+kunyomi: ["ひ.める", "ひそ.か", "かく.す"]
+strokeCount: 10
 writingHint: Cây lúa ( ) tốt tất yếu ( ) phải có bí mật ( ) 秘 1
 sourcePages: []
 sources:
@@ -2899,26 +3180,53 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Bí maps to 78 KANJIDIC2 candidates; kept extracted 必
+  - none
 examples:
-  - word: 必然
-    reading: ひつぜん
-    meaning: tất yếu; cần thiết
-  - word: 必修
-    reading: ひっしゅう
-    meaning: bắt buộc (chủ đề)
-  - word: 必修
-    reading: ひっしゅう
-    meaning: bắt buộc (chủ đề)
+  - word: 神秘
+    reading: しんぴ
+    meaning: bí ẩn
+  - word: 秘書
+    reading: ひしょ
+    meaning: (riêng) thư ký
+  - word: 神秘
+    reading: しんぴ
+    meaning: bí ẩn
 
-### 山 (Mật)
+### 泌 (Bí)
+
+level: N1
+meaningVi: Tiết ra
+hanViet: Bí
+onyomi: ["ヒツ", "ヒ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Nước ( ) tất yếu ( ) phải tiết ra ( ) 泌 1 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 泌み泌み
+    reading: しみじみ
+    meaning: sâu sắc; sâu sắc; chân thành
+  - word: 泌み泌み
+    reading: しみじみ
+    meaning: sâu sắc; chân thành
+
+### 密 (Mật)
 
 level: N1
 meaningVi: Bí mật
 hanViet: Mật
-onyomi: ["サン", "セン"]
-kunyomi: ["やま"]
-strokeCount: 3
+onyomi: ["ミツ"]
+kunyomi: ["ひそ.か"]
+strokeCount: 11
 writingHint: Nhà ( ) tất yếu ( ) xây trên núi ( ) là có chứa bí mật ( )密 1
 sourcePages: []
 sources:
@@ -2929,26 +3237,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Mật maps to 20 KANJIDIC2 candidates; kept extracted 山
+  - none
 examples:
-  - word: 山脈
-    reading: さんみゃく
-    meaning: dãy núi
-  - word: 鉱山
-    reading: こうざん
-    meaning: mỏ (quặng)
-  - word: 山岳
-    reading: さんがく
-    meaning: núi
+  - word: 密か
+    reading: ひそか
+    meaning: bí mật; riêng tư; lén lút
+  - word: 精密
+    reading: せいみつ
+    meaning: chính xác;chính xác;chi tiết;phút;đóng
+  - word: 密度
+    reading: みつど
+    meaning: mật độ
 
-### 虫 (Mật)
+### 蜜 (Mật)
 
 level: N1
 meaningVi: Mật ong
 hanViet: Mật
-onyomi: ["チュウ", "キ"]
-kunyomi: ["むし"]
-strokeCount: 6
+onyomi: ["ミツ", "ビツ"]
+kunyomi: []
+strokeCount: 14
 writingHint: Nhà ( ) tất yếu ( ) nuôi côn trùng ( ) để lấy mật ( )蜜 1
 sourcePages: []
 sources:
@@ -2959,17 +3267,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Mật maps to 20 KANJIDIC2 candidates; kept extracted 虫
+  - none
 examples:
-  - word: 昆虫
-    reading: こんちゅう
-    meaning: côn trùng; sâu bọ
-  - word: 昆虫
-    reading: こんちゅう
-    meaning: côn trùng; sâu bọ
-  - word: 虫歯
-    reading: むしば
-    meaning: sâu răng
+  - word: 蜂蜜
+    reading: はちみつ
+    meaning: em yêu
+  - word: 蜜
+    reading: みつ
+    meaning: mật hoa; mật ong
+  - word: 蜂蜜
+    reading: はちみつ
+    meaning: em yêu
 
 ### 芳 (Phương)
 
@@ -2993,14 +3301,14 @@ openGaps:
 examples:
   - none
 
-### 方 (Phương)
+### 妨 (Phương)
 
 level: N1
 meaningVi: Phương hại
 hanViet: Phương
-onyomi: ["ホウ"]
-kunyomi: ["かた", "-かた", "-がた"]
-strokeCount: 4
+onyomi: ["ボウ"]
+kunyomi: ["さまた.げる"]
+strokeCount: 7
 writingHint: Phụ nữ ( ) đi khắp bốn phương ( ) gây phương hại ( ) 妨 4
 sourcePages: []
 sources:
@@ -3013,15 +3321,15 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 外方
-    reading: そっぽ
-    meaning: nhìn (hoặc rẽ) theo hướng khác
-  - word: 立方
-    reading: たちかた
-    meaning: khiêu vũ (geisha)
-  - word: 目方
-    reading: めかた
-    meaning: trọng lượng
+  - word: 妨害
+    reading: ぼうがい
+    meaning: sự xáo trộn; sự cản trở; sự cản trở; sự gây nhiễu; sự can thiệp
+  - word: 妨害
+    reading: ぼうがい
+    meaning: sự xáo trộn; sự cản trở; sự gây nhiễu; sự can thiệp
+  - word: 妨げる
+    reading: さまたげる
+    meaning: làm phiền, ngăn cản
 
 ### 紡 (Phưởng)
 
@@ -3050,13 +3358,13 @@ examples:
     reading: ぼうせき
     meaning: quay tròn
 
-### 戸 (Phòng)
+### 方 (Phòng)
 
 level: N1
 meaningVi: Căn phòng
 hanViet: Phòng
-onyomi: ["コ"]
-kunyomi: ["と"]
+onyomi: ["ホウ"]
+kunyomi: ["かた", "-かた", "-がた"]
 strokeCount: 4
 writingHint: Căn phòng ( ) có cửa ( ) mở ra khắp bốn phương ( ) 方 1
 sourcePages: []
@@ -3068,17 +3376,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phòng maps to 37 KANJIDIC2 candidates; kept extracted 戸
+  - target kanji ambiguous: Hán-Việt heading Phòng maps to 37 KANJIDIC2 candidates; kept extracted 方
 examples:
-  - word: 戸締り
-    reading: とじまり
-    meaning: đóng lại; đóng chặt các cánh cửa
-  - word: 戸籍
-    reading: こせき
-    meaning: điều tra dân số; sổ hộ khẩu
-  - word: 戸
-    reading: こ
-    meaning: quầy cho ngôi nhà
+  - word: 外方
+    reading: そっぽ
+    meaning: nhìn (hoặc rẽ) theo hướng khác
+  - word: 立方
+    reading: たちかた
+    meaning: khiêu vũ (geisha)
+  - word: 目方
+    reading: めかた
+    meaning: trọng lượng
 
 ### 倣 (Phỏng)
 
@@ -3137,6 +3445,28 @@ examples:
     reading: かたわら
     meaning: bên cạnh; trong khi; gần đây
 
+### 謗 (Báng)
+
+level: N1
+meaningVi: Phỉ báng
+hanViet: Báng
+onyomi: ["ボウ", "ホウ"]
+kunyomi: ["そし.る"]
+strokeCount: 17
+writingHint: Nói ( ) mà đứng ( ) trùm khăn thì bốn phương ( ) đều phỉ báng ( ) 謗 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 傲 (Ngạo)
 
 level: N1
@@ -3164,14 +3494,14 @@ examples:
     reading: おごる
     meaning: tự hào
 
-### 易 (Tràng)
+### 腸 (Tràng)
 
 level: N1
 meaningVi: Đại tràng
 hanViet: Tràng
-onyomi: ["エキ", "イ"]
-kunyomi: ["やさ.しい", "やす.い"]
-strokeCount: 8
+onyomi: ["チョウ"]
+kunyomi: ["はらわた", "わた"]
+strokeCount: 13
 writingHint: Nguyệt ( ) vật vã ( ) vì đau đại tràng ( ) 腸 2 6
 sourcePages: []
 sources:
@@ -3182,17 +3512,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tràng maps to 33 KANJIDIC2 candidates; kept extracted 易
+  - none
 examples:
-  - word: 易い
-    reading: やすい
-    meaning: dễ dàng
-  - word: 簡易
-    reading: かんい
-    meaning: sự đơn giản; sự dễ dàng; gần như-
-  - word: 容易い
-    reading: たやすい
-    meaning: dễ dàng, đơn giản, nhẹ nhàng
+  - word: 腸
+    reading: ちょう
+    meaning: ruột;ruột;ruột
+  - word: 腸
+    reading: ちょう
+    meaning: ruột
 
 ### 揚 (Dương)
 
@@ -3243,14 +3570,36 @@ openGaps:
 examples:
   - none
 
-### 勹 (Ảo)
+### 暢 (Sướng)
+
+level: N1
+meaningVi: Sướng
+hanViet: Sướng
+onyomi: ["チョウ"]
+kunyomi: ["のび.る"]
+strokeCount: 14
+writingHint: Toàn thân ( ) vật vã ( ) vì sướng ( ) 暢 5 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 幻 (Ảo)
 
 level: N1
 meaningVi: Ảo tưởng
 hanViet: Ảo
-onyomi: ["ホウ"]
-kunyomi: ["つつ.む"]
-strokeCount: 2
+onyomi: ["ゲン"]
+kunyomi: ["まぼろし"]
+strokeCount: 4
 writingHint: Yêu ( ) bao ( ) nhiêu rồi mà vẫn ảo tưởng ( ) 幻 1
 sourcePages: []
 sources:
@@ -3261,7 +3610,7 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ảo maps to 23 KANJIDIC2 candidates; kept extracted 勹
+  - target kanji ambiguous: Hán-Việt heading Ảo maps to 23 KANJIDIC2 candidates; kept extracted 幻
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -3293,14 +3642,14 @@ examples:
     reading: こじれる
     meaning: trở nên phức tạp; trở nên tồi tệ hơn
 
-### 分 (Phân)
+### 紛 (Phân)
 
 level: N1
 meaningVi: Phân tâm
 hanViet: Phân
-onyomi: ["ブン", "フン", "ブ"]
-kunyomi: ["わ.ける", "わ.け", "わ.かれる", "わ.かる", "わ.かつ"]
-strokeCount: 4
+onyomi: ["フン"]
+kunyomi: ["まぎ.れる", "-まぎ.れ", "まぎ.らす", "まぎ.らわす", "まぎ.らわしい"]
+strokeCount: 10
 writingHint: Sợi tơ ( ) muốn phân chia ( ) thì không được phân tâm ( ) 紛 1 8
 sourcePages: []
 sources:
@@ -3313,15 +3662,69 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 分業
-    reading: ぶんぎょう
-    meaning: phân công lao động; chuyên môn hóa; sản xuất dây chuyền lắp ráp
-  - word: 分担
-    reading: ぶんたん
-    meaning: sự phân chia; sự chia sẻ
-  - word: 一部分
-    reading: いちぶぶん
-    meaning: một phần
+  - word: 紛れる
+    reading: まぎれる
+    meaning: bị chuyển hướng; trượt vào
+  - word: 紛らわしい
+    reading: まぎらわしい
+    meaning: khó hiểu; gây nhầm lẫn; mơ hồ; mơ hồ
+  - word: 紛争
+    reading: ふんそう
+    meaning: tranh cãi; rắc rối; xung đột
+
+### 雰 (Phân)
+
+level: N1
+meaningVi: Bầu không khí
+hanViet: Phân
+onyomi: ["フン"]
+kunyomi: []
+strokeCount: 12
+writingHint: Mưa ( ) phân chia ( ) ra bầu không khí ( ) 雰 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 雰囲気
+    reading: ふんいき
+    meaning: bầu không khí; tâm trạng; sắc thái chung
+
+### 盆 (Bồn)
+
+level: N1
+meaningVi: Cái khay
+hanViet: Bồn
+onyomi: ["ボン"]
+kunyomi: []
+strokeCount: 9
+writingHint: Phân chia ( ) thức ăn từ đĩa ( ) ra khay ( ) 盆 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 盆
+    reading: ぼん
+    meaning: Lễ hội đèn lồng, Lễ hội của người chết, mâm cỗ
+  - word: 盆地
+    reading: ぼんち
+    meaning: lưu vực (ví dụ: giữa các ngọn núi)
+  - word: 盆
+    reading: ぼん
+    meaning: lễ Obon; khay
 
 ### 刀 (Quả)
 
@@ -3376,15 +3779,89 @@ openGaps:
 examples:
   - none
 
-### 辶 (Dật)
+### 逸 (Dật)
 
 level: N1
 meaningVi: Ẩn dật
 hanViet: Dật
 onyomi: []
 kunyomi: ["しんにょう"]
-strokeCount: 3
+strokeCount: 12
 writingHint: Miễn ( ) là đi xa ( ) để được sống ẩn dật ( ) 逸 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: mixed_ebook_kanjidic2
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Dật maps to 27 KANJIDIC2 candidates; kept extracted 逸
+examples:
+  - word: 逸らす
+    reading: そらす
+    meaning: quay đi; tránh xa
+  - word: 逸らす
+    reading: そらす
+    meaning: quay đi; tránh xa
+  - word: 逸れる
+    reading: それる
+    meaning: đi lạc (rẽ) khỏi chủ đề, lạc lối, lạc lối
+
+### 挽 (Vãn)
+
+level: N1
+meaningVi: Xay
+hanViet: Vãn
+onyomi: ["バン"]
+kunyomi: ["ひ.く"]
+strokeCount: 10
+writingHint: Tay ( ) nàng thì miễn ( ) khỏi cần xay ( ) 挽 2 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 娩 (Vãn)
+
+level: N1
+meaningVi: Sinh đẻ
+hanViet: Vãn
+onyomi: ["ベン"]
+kunyomi: []
+strokeCount: 11
+writingHint: Giá như phụ nữ ( ) được miễn ( ) khỏi cần sinh đẻ ( )娩 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 喰 (San)
+
+level: N1
+meaningVi: Ăn
+hanViet: San
+onyomi: []
+kunyomi: ["く.う", "く.らう"]
+strokeCount: 12
+writingHint: Miệng ( ) mày chỉ biết ăn ( ) ăn ( ) thôi! 喰 4 5
 sourcePages: []
 sources:
   level: ebook
@@ -3394,79 +3871,19 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Dật maps to 27 KANJIDIC2 candidates; kept extracted 辶
+  - target kanji ambiguous: Hán-Việt heading San maps to 76 KANJIDIC2 candidates; kept extracted 喰
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 免 (Vãn)
-
-level: N1
-meaningVi: Xay
-hanViet: Vãn
-onyomi: ["メン"]
-kunyomi: ["まぬかれる"]
-strokeCount: 7
-writingHint: Tay ( ) nàng thì miễn ( ) khỏi cần xay ( ) 挽 2 4 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Vãn maps to 72 KANJIDIC2 candidates; kept extracted 免
-examples:
-  - word: 御免なさい
-    reading: ごめんなさい
-    meaning: Tôi xin lỗi; xin lỗi
-  - word: 免除
-    reading: めんじょ
-    meaning: sự miễn trừ;sự miễn tội;sự giải trừ
-  - word: 免れる
-    reading: まぬかれる
-    meaning: thoát khỏi;được giải cứu khỏi;tránh khỏi;trốn tránh;tránh tránh;được miễn trừ;được nhẹ nhõm
-
-### 食 (San)
-
-level: N1
-meaningVi: Ăn
-hanViet: San
-onyomi: ["ショク", "ジキ"]
-kunyomi: ["く.う", "く.らう", "た.べる", "は.む"]
-strokeCount: 9
-writingHint: Miệng ( ) mày chỉ biết ăn ( ) ăn ( ) thôi! 喰 4 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading San maps to 76 KANJIDIC2 candidates; kept extracted 食
-examples:
-  - word: 定食
-    reading: ていしょく
-    meaning: bữa ăn cố định; đặc biệt (trong ngày)
-  - word: 食い違う
-    reading: くいちがう
-    meaning: vượt qua nhau; chạy ngược lại; khác biệt; xung đột; đi chệch hướng
-  - word: 給食
-    reading: きゅうしょく
-    meaning: bữa trưa ở trường; cung cấp bữa ăn
-
-### 良 (Lang)
+### 狼 (Lang)
 
 level: N1
 meaningVi: Chó sói
 hanViet: Lang
-onyomi: ["リョウ"]
-kunyomi: ["よ.い", "-よ.い", "い.い", "-い.い"]
-strokeCount: 7
+onyomi: ["ロウ"]
+kunyomi: ["おおかみ"]
+strokeCount: 10
 writingHint: Chó ( ) tốt ( ) nhất là chó sói ( ) 狼 1 4
 sourcePages: []
 sources:
@@ -3475,29 +3892,44 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lang maps to 51 KANJIDIC2 candidates; kept extracted 良
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 良質
-    reading: りょうしつ
-    meaning: chất lượng tốt; chất lượng cao
-  - word: 良い
-    reading: いい
-    meaning: tốt
-  - word: 良識
-    reading: りょうしき
-    meaning: ý thức tốt
+  - none
 
-### 月 (Thối)
+### 阝 (Lang)
 
 level: N1
-meaningVi: Đùi
-hanViet: Thối
+meaningVi: Con trai
+hanViet: Lang
+onyomi: []
+kunyomi: ["こざと"]
+strokeCount: 3
+writingHint: Con trai ( ) tốt ( ) nhất với Bồ ( ) 阝 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: mixed_ebook_kanjidic2
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Lang maps to 51 KANJIDIC2 candidates; kept extracted 阝
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 月 (Lãng)
+
+level: N1
+meaningVi: Sáng
+hanViet: Lãng
 onyomi: ["ゲツ", "ガツ"]
 kunyomi: ["つき"]
 strokeCount: 4
-writingHint: Ai nhìn vào đùi ( ) em Nguyệt ( ) đều xin thoái lui ( ) 退 2 11 5
+writingHint: Ánh sáng ( ) tốt ( ) là ánh trăng ( ) 月 1 8
 sourcePages: []
 sources:
   level: ebook
@@ -3507,7 +3939,7 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thối maps to 38 KANJIDIC2 candidates; kept extracted 月
+  - target kanji ambiguous: Hán-Việt heading Lãng maps to 51 KANJIDIC2 candidates; kept extracted 月
 examples:
   - word: 先先月
     reading: せんせんげつ
@@ -3518,6 +3950,145 @@ examples:
   - word: 月並み
     reading: つきなみ
     meaning: hàng tháng; thông thường
+
+### 浪 (Lãng)
+
+level: N1
+meaningVi: Lãng phí
+hanViet: Lãng
+onyomi: ["ロウ"]
+kunyomi: []
+strokeCount: 10
+writingHint: Nước ( ) tốt ( ) nhất đừng lãng phí ( ) 浪 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 浪費
+    reading: ろうひ
+    meaning: lãng phí; lãng phí
+  - word: 浪費
+    reading: ろうひ
+    meaning: lãng phí
+
+### 痕 (Ngân)
+
+level: N1
+meaningVi: Vết sẹo
+hanViet: Ngân
+onyomi: ["コン"]
+kunyomi: ["あと"]
+strokeCount: 11
+writingHint: Chữa bệnh ( ) không tốt ( ) để lại sẹo ( ) 痕 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 恨 (Hận)
+
+level: N1
+meaningVi: Hận thù
+hanViet: Hận
+onyomi: ["コン"]
+kunyomi: ["うら.む", "うら.めしい"]
+strokeCount: 9
+writingHint: Trái tim ( ) không tốt ( ) mang nhiều hận thù ( ) 恨 3 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 恨む
+    reading: うらむ
+    meaning: nguyền rủa, cảm thấy cay đắng
+  - word: 恨み
+    reading: うらみ
+    meaning: oán giận
+  - word: 恨み
+    reading: うらみ
+    meaning: oán giận; mối hận
+
+### 退 (Thối)
+
+level: N1
+meaningVi: Đùi
+hanViet: Thối
+onyomi: ["タイ"]
+kunyomi: ["しりぞ.く", "しりぞ.ける", "ひ.く", "の.く", "の.ける", "ど.く"]
+strokeCount: 9
+writingHint: Ai nhìn vào đùi ( ) em Nguyệt ( ) đều xin thoái lui ( ) 退 2 11 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 後退
+    reading: こうたい
+    meaning: rút lui; lùi lại (BS)
+  - word: 退治
+    reading: たいじ
+    meaning: sự tiêu diệt
+  - word: 退化
+    reading: たいか
+    meaning: thoái hóa; thoái hóa
+
+### 寸 (Tước)
+
+level: N1
+meaningVi: Hầu tước
+hanViet: Tước
+onyomi: ["スン"]
+kunyomi: []
+strokeCount: 3
+writingHint: Hầu tước ( ) đặt móng tay ( ) lên võng ( ) không tốt ( ) nên bị thốn ( ) 寸 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Tước maps to 8 KANJIDIC2 candidates; kept extracted 寸
+examples:
+  - word: 一寸
+    reading: ちょっと
+    meaning: (ateji) (adv int) (uk) chỉ một phút; một thời gian ngắn; một lúc; chỉ một chút; hơi; dễ dàng; dễ dàng; rath
+  - word: 一寸
+    reading: ちょっと
+    meaning: (ateji) (adv int) (uk) chỉ một phút; một thời gian ngắn; một lúc; chỉ một chút; hơi; dễ dàng; rath
+  - word: 寸法
+    reading: すんぽう
+    meaning: đo lường, kích thước, kích thước
 
 ### 郷 (Hương)
 
@@ -3549,14 +4120,14 @@ examples:
     reading: きょうしゅう
     meaning: nỗi nhớ; nỗi nhớ nhà
 
-### 節 (Trất)
+### 櫛 (Trất)
 
 level: N1
 meaningVi: Cái lược
 hanViet: Trất
-onyomi: ["セチ", "セツ"]
-kunyomi: ["ふし"]
-strokeCount: 15
+onyomi: ["シツ"]
+kunyomi: ["くし", "くしけず.る"]
+strokeCount: 17
 writingHint: Cây ( ) tiết kiệm ( ) được để làm lược ( ) 櫛 2 5 8
 sourcePages: []
 sources:
@@ -3567,17 +4138,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trất maps to 23 KANJIDIC2 candidates; kept extracted 節
+  - none
 examples:
-  - word: 節
-    reading: せつ
-    meaning: nút; phần; dịp; thời gian
-  - word: 節
-    reading: せつ
-    meaning: nút; phần; dịp; thời gian
-  - word: 調節
-    reading: ちょうせつ
-    meaning: quy định, điều chỉnh, kiểm soát
+  - word: 櫛
+    reading: くし
+    meaning: lược
+  - word: 櫛
+    reading: くし
+    meaning: lược
 
 ### 羊 (Tường)
 
@@ -3606,14 +4174,14 @@ examples:
     reading: ようもう
     meaning: len; lông cừu
 
-### 羽 (Tường)
+### 翔 (Tường)
 
 level: N1
 meaningVi: Bay vút lên
 hanViet: Tường
-onyomi: ["ウ"]
-kunyomi: ["は", "わ", "はね"]
-strokeCount: 6
+onyomi: ["ショウ"]
+kunyomi: ["かけ.る", "と.ぶ"]
+strokeCount: 12
 writingHint: Dê ( ) xòe lông ( ) tung cánh bay vút lên ( ) 翔 1 2
 sourcePages: []
 sources:
@@ -3622,19 +4190,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tường maps to 54 KANJIDIC2 candidates; kept extracted 羽
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 羽根
-    reading: はね
-    meaning: quả cầu
-  - word: 羽根
-    reading: はね
-    meaning: quả cầu lông; lông vũ
-  - word: 羽
-    reading: はね
-    meaning: quầy cho chim; quầy cho thỏ
+  - none
 
 ### 姜 (Khương)
 
@@ -3708,15 +4268,15 @@ examples:
     reading: うんぬん
     meaning: vân vân; bình luận
 
-### 陰 (Ấm)
+### 陰 (Âm)
 
 level: N1
 meaningVi: Âm u
-hanViet: Ấm
+hanViet: Âm
 onyomi: ["イン"]
 kunyomi: ["かげ", "かげ.る"]
 strokeCount: 11
-writingHint: Cỏ ( ) mọc nơi âm u ( ) chỗ bóng râm ( ) 蔭 2 3
+writingHint: Bồ ( ) ơi! Bây giờ ( ) là 24 giờ ( ) trời rất âm u ( ) 陰 1 4 5
 sourcePages: []
 sources:
   level: ebook
@@ -3738,14 +4298,44 @@ examples:
     reading: ひかげ
     meaning: cái bóng
 
-### 雲 (Đàm)
+### 蔭 (Ấm)
+
+level: N1
+meaningVi: Âm u
+hanViet: Ấm
+onyomi: ["イン", "オン"]
+kunyomi: ["かげ"]
+strokeCount: 14
+writingHint: Cỏ ( ) mọc nơi âm u ( ) chỗ bóng râm ( ) 蔭 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: お蔭様で
+    reading: おかげさまで
+    meaning: Cảm ơn Chúa; cảm ơn bạn
+  - word: お蔭
+    reading: おかげ
+    meaning: (của bạn) sự ủng hộ; sự hỗ trợ
+  - word: お蔭
+    reading: おかげ
+    meaning: (của bạn) sự ủng hộ; sự hỗ trợ
+
+### 曇 (Đàm)
 
 level: N1
 meaningVi: Trời mây
 hanViet: Đàm
-onyomi: ["ウン"]
-kunyomi: ["くも", "-ぐも"]
-strokeCount: 12
+onyomi: ["ドン"]
+kunyomi: ["くも.る"]
+strokeCount: 16
 writingHint: Mặt trời ( ) + mây ( ) = Trời mây ( ) 曇 2
 sourcePages: []
 sources:
@@ -3756,24 +4346,27 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đàm maps to 93 KANJIDIC2 candidates; kept extracted 雲
+  - none
 examples:
-  - word: 雲
-    reading: くも
-    meaning: đám mây
-  - word: 出雲大社
-    reading: いずもたいしゃ
-    hanViet: xuất vân đại xã
-    meaning: Đền Izumo-taisha
+  - word: 曇
+    reading: くもり
+    meaning: mây; trời nhiều mây; bóng tối
+  - word: 曇ります
+    reading: くもります
+    hanViet: đàm
+    meaning: có mây, u ám
+  - word: 曇る
+    reading: くもる
+    meaning: trở nên u ám, trở nên mờ mịt
 
-### 鬼 (Hồn)
+### 魂 (Hồn)
 
 level: N1
 meaningVi: Linh hồn
 hanViet: Hồn
-onyomi: ["キ"]
-kunyomi: ["おに", "おに-"]
-strokeCount: 10
+onyomi: ["コン"]
+kunyomi: ["たましい", "たま"]
+strokeCount: 14
 writingHint: Đúng 24 giờ ( ) quỷ ( ) sẽ nhập hồn ( ) 魂 5
 sourcePages: []
 sources:
@@ -3784,11 +4377,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hồn maps to 25 KANJIDIC2 candidates; kept extracted 鬼
+  - none
 examples:
-  - word: 鬼
-    reading: おに
-    meaning: yêu tinh; quỷ; nó (tức là trong trò chơi đuổi bắt)
+  - word: 魂
+    reading: こん
+    meaning: linh hồn; tinh thần
+  - word: 魂
+    reading: こん
+    meaning: linh hồn; tinh thần
 
 ### 釜 (Phủ)
 
@@ -3896,14 +4492,14 @@ examples:
     reading: しぼる
     meaning: vắt; siết; ép
 
-### 交 (Giao)
+### 鮫 (Giao)
 
 level: N1
 meaningVi: Cá mập
 hanViet: Giao
 onyomi: ["コウ"]
-kunyomi: ["まじ.わる", "まじ.える", "ま.じる", "まじ.る", "ま.ざる", "ま.ぜる", "-か.う", "か.わす"]
-strokeCount: 6
+kunyomi: ["さめ", "みずち"]
+strokeCount: 17
 writingHint: Cá ( ) thích đi giao lưu ( ) là cá mập ( ) 鮫 1 12
 sourcePages: []
 sources:
@@ -3912,19 +4508,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 国交
-    reading: こっこう
-    meaning: quan hệ ngoại giao
-  - word: 交付
-    reading: こうふ
-    meaning: giao hàng; trang bị nội thất (có bản sao)
-  - word: 交わす
-    reading: かわす
-    meaning: trao đổi (tin nhắn); né tránh; đỡ; tránh; quay sang một bên
+  - none
 
 ### 咬 (Giảo)
 
@@ -4038,15 +4626,37 @@ examples:
     reading: おじさん
     meaning: bác/chú/cậu; người đàn ông trung niên
 
-### 泊 (Bạc)
+### 箔 (Bạc)
 
 level: N1
 meaningVi: Dát mỏng
 hanViet: Bạc
 onyomi: ["ハク"]
-kunyomi: ["と.まる", "と.める"]
-strokeCount: 8
+kunyomi: ["すだれ"]
+strokeCount: 14
 writingHint: Trúc ( ) trọ lại ( ) để mua bạc đã dát mỏng ( ) 箔 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 舶 (Bạc)
+
+level: N1
+meaningVi: Thuyền lớn
+hanViet: Bạc
+onyomi: ["ハク"]
+kunyomi: []
+strokeCount: 11
+writingHint: Thuyền ( ) trắng ( ) là thuyền lớn ( ) 舶 1 7
 sourcePages: []
 sources:
   level: ebook
@@ -4058,45 +4668,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 泊
-    reading: はく
-    meaning: quầy tính số đêm lưu trú
-  - word: 泊
-    reading: はく
-    meaning: quầy tính số đêm lưu trú
-  - word: 泊める
-    reading: とめる
-    meaning: cho chỗ ở, chỗ ở
-
-### 白 (Bạc)
-
-level: N1
-meaningVi: Thuyền lớn
-hanViet: Bạc
-onyomi: ["ハク", "ビャク"]
-kunyomi: ["しろ", "しら-", "しろ.い"]
-strokeCount: 5
-writingHint: Thuyền ( ) trắng ( ) là thuyền lớn ( ) 舶 1 7
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Bạc maps to 46 KANJIDIC2 candidates; kept extracted 白
-examples:
-  - word: 蛋白質
-    reading: たんぱくしつ
-    meaning: chất đạm
-  - word: 告白
-    reading: こくはく
-    meaning: sự thú nhận; sự thừa nhận
-  - word: 明白
-    reading: あからさま
-    meaning: rõ ràng; công khai; rõ ràng; thẳng thắn
+  - word: 船舶
+    reading: せんぱく
+    meaning: tàu
+  - word: 船舶
+    reading: せんぱく
+    meaning: tàu
 
 ### 粕 (Phách)
 
@@ -4120,15 +4697,15 @@ openGaps:
 examples:
   - none
 
-### 攵 (Ưu)
+### 柏 (Bách)
 
 level: N1
-meaningVi: Ưu phiền
-hanViet: Ưu
-onyomi: ["ホク"]
-kunyomi: []
-strokeCount: 4
-writingHint: Còn lại 1 ( ) mình ( ) bao trùm ( ) trái tim ( ) sau ( ) những ưu phiền ( ) 憂 1
+meaningVi: Cây sồi
+hanViet: Bách
+onyomi: ["ハク", "ヒャク", "ビャク"]
+kunyomi: ["かしわ"]
+strokeCount: 9
+writingHint: Cây ( ) có gỗ màu trắng ( ) là cây sồi ( ) 柏 2 5
 sourcePages: []
 sources:
   level: ebook
@@ -4138,10 +4715,36 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ưu maps to 10 KANJIDIC2 candidates; kept extracted 攵
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 憂 (Ưu)
+
+level: N1
+meaningVi: Ưu phiền
+hanViet: Ưu
+onyomi: ["ユウ"]
+kunyomi: ["うれ.える", "うれ.い", "う.い", "う.き"]
+strokeCount: 15
+writingHint: Còn lại 1 ( ) mình ( ) bao trùm ( ) trái tim ( ) sau ( ) những ưu phiền ( ) 憂 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 憂鬱
+    reading: ゆううつ
+    meaning: trầm cảm; u sầu; chán nản; u ám
+  - word: 憂鬱
+    reading: ゆううつ
+    meaning: trầm cảm; u sầu; chán nản; u ám
 
 ### 腺 (Tuyến)
 
@@ -4195,15 +4798,37 @@ examples:
     reading: ねだる
     meaning: trêu chọc; dỗ dành; gạ gẫm; đòi hỏi
 
-### 青 (Tĩnh)
+### 靖 (Tĩnh)
 
 level: N1
 meaningVi: Yên tĩnh
 hanViet: Tĩnh
-onyomi: ["セイ", "ショウ"]
-kunyomi: ["あお", "あお-", "あお.い"]
-strokeCount: 8
+onyomi: ["セイ", "ジョウ"]
+kunyomi: ["やす.んじる"]
+strokeCount: 13
 writingHint: Đứng ( ) dưới trời xanh ( ) thật là yên tĩnh ( ) 靖 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 錆 (Thương)
+
+level: N1
+meaningVi: Rỉ sét
+hanViet: Thương
+onyomi: ["ショウ", "セイ"]
+kunyomi: ["さび", "くわ.しい"]
+strokeCount: 16
+writingHint: Vàng ( ) đã chuyển thành màu xanh ( ) do rỉ sét ( ) 錆 10
 sourcePages: []
 sources:
   level: ebook
@@ -4213,17 +4838,39 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tĩnh maps to 67 KANJIDIC2 candidates; kept extracted 青
+  - none
 examples:
-  - word: 青春
-    reading: せいしゅん
-    meaning: tuổi trẻ;mùa xuân của cuộc đời;tuổi thanh xuân
-  - word: 青春
-    reading: せいしゅん
-    meaning: tuổi trẻ; mùa xuân của cuộc đời; tuổi thanh xuân
-  - word: 青白い
-    reading: あおじろい
-    meaning: xanh xao, xanh xao
+  - word: 錆び
+    reading: さび
+    meaning: rỉ sét (màu sắc)
+  - word: 錆び
+    reading: さび
+    meaning: rỉ sét (màu sắc)
+  - word: 錆びる
+    reading: さびる
+    meaning: rỉ sét, trở nên rỉ sét
+
+### 鯖 (Chinh)
+
+level: N1
+meaningVi: Cá thu
+hanViet: Chinh
+onyomi: ["セイ", "ショウ"]
+kunyomi: ["さば"]
+strokeCount: 19
+writingHint: Cá ( ) có màu xanh ( ) là cá thu ( ) 鯖 1 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 揮 (Huy)
 
@@ -4279,14 +4926,14 @@ examples:
     reading: かがやく
     meaning: tỏa sáng; lấp lánh
 
-### 連 (Liên)
+### 蓮 (Liên)
 
 level: N1
 meaningVi: Hoa sen
 hanViet: Liên
 onyomi: ["レン"]
-kunyomi: ["つら.なる", "つら.ねる", "つ.れる", "-づ.れ"]
-strokeCount: 10
+kunyomi: ["はす", "はちす"]
+strokeCount: 13
 writingHint: Cô Thảo ( ) liên tục ( ) hái hoa sen ( )蓮 2 3
 sourcePages: []
 sources:
@@ -4299,15 +4946,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 連帯
-    reading: れんたい
-    meaning: đoàn kết
-  - word: 連邦
-    reading: れんぽう
-    meaning: khối thịnh vượng chung; liên bang các bang
-  - word: 連盟
-    reading: れんめい
-    meaning: liên minh; liên đoàn; liên minh
+  - word: 蓮
+    reading: はす
+    meaning: hoa sen
+  - word: 蓮
+    reading: はす
+    meaning: hoa sen
 
 ### 縺 (Len)
 
@@ -4358,15 +5002,15 @@ examples:
     reading: きる
     meaning: chém đầu; giết bằng kiếm
 
-### 車 (Trận)
+### 日 (Tạm)
 
 level: N1
-meaningVi: Trận địa
-hanViet: Trận
-onyomi: ["シャ"]
-kunyomi: ["くるま"]
-strokeCount: 7
-writingHint: Bồ ( ) cưỡi xe ( ) ra trận ( ) 陣 10
+meaningVi: Tạm thời
+hanViet: Tạm
+onyomi: ["ニチ", "ジツ"]
+kunyomi: ["ひ", "-び", "-か"]
+strokeCount: 4
+writingHint: Tạm thời ( ) chém ( ) gió cả ngày ( ) 日 7 8
 sourcePages: []
 sources:
   level: ebook
@@ -4376,26 +5020,48 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trận maps to 33 KANJIDIC2 candidates; kept extracted 車
+  - target kanji ambiguous: Hán-Việt heading Tạm maps to 55 KANJIDIC2 candidates; kept extracted 日
 examples:
-  - word: 風車
-    reading: かざぐるま
-    meaning: 1. cối xay gió; 2. chong chóng
-  - word: 風車
-    reading: かざぐるま
-    meaning: 1. cối xay gió; 2. chong chóng
-  - word: 下車
-    reading: げしゃ
-    meaning: xuống xe, xuống xe
+  - word: 日の丸
+    reading: ひのまる
+    meaning: lá cờ Nhật Bản
+  - word: 日焼け
+    reading: ひやけ
+    meaning: cháy nắng
+  - word: 日向
+    reading: ひなた
+    meaning: nơi đầy nắng; dưới ánh mặt trời
 
-### 由 (Trục)
+### 陣 (Trận)
+
+level: N1
+meaningVi: Trận địa
+hanViet: Trận
+onyomi: ["ジン"]
+kunyomi: []
+strokeCount: 10
+writingHint: Bồ ( ) cưỡi xe ( ) ra trận ( ) 陣 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 軸 (Trục)
 
 level: N1
 meaningVi: Trục xe
 hanViet: Trục
-onyomi: ["ユ", "ユウ", "ユイ"]
-kunyomi: ["よし", "よ.る"]
-strokeCount: 5
+onyomi: ["ジク"]
+kunyomi: []
+strokeCount: 12
 writingHint: Xe ( ) chạy tự do ( ) quanh trục ( )軸 7
 sourcePages: []
 sources:
@@ -4406,26 +5072,23 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trục maps to 14 KANJIDIC2 candidates; kept extracted 由
+  - none
 examples:
-  - word: 経由
-    reading: けいゆ
-    meaning: nhân tiện; đi qua
-  - word: 不自由
-    reading: ふじゆう
-    meaning: khó chịu; khuyết tật; bất tiện; cơ cực
-  - word: 自由
-    reading: じゆう
-    meaning: sự tự do
+  - word: 軸
+    reading: じく
+    meaning: trục;thân;trục;trục
+  - word: 軸
+    reading: じく
+    meaning: trục; thân
 
-### 九 (Quỹ)
+### 軌 (Quỹ)
 
 level: N1
 meaningVi: Quỹ đạo
 hanViet: Quỹ
-onyomi: ["キュウ", "ク"]
-kunyomi: ["ここの", "ここの.つ"]
-strokeCount: 2
+onyomi: ["キ"]
+kunyomi: []
+strokeCount: 9
 writingHint: Xe ( ) chạy 9 ( ) vòng quanh quỹ đạo ( ) 軌 7 8
 sourcePages: []
 sources:
@@ -4436,17 +5099,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Quỹ maps to 65 KANJIDIC2 candidates; kept extracted 九
+  - none
 examples:
-  - word: 九
-    reading: きゅう
-    meaning: chín
-  - word: 九
-    reading: きゅう / く
-    meaning: chín
-  - word: 九つ
-    reading: ここのつ
-    meaning: chín
+  - word: 軌道
+    reading: きどう
+    meaning: quỹ đạo; đường ray
+  - word: 軌道
+    reading: きどう
+    meaning: quỹ đạo; đường ray
 
 ### 腫 (Thũng)
 
@@ -4475,14 +5135,14 @@ examples:
     reading: はれる
     meaning: sưng lên (do viêm); trở nên sưng tấy
 
-### 重 (Xung)
+### 衝 (Xung)
 
 level: N1
 meaningVi: Xung đột
 hanViet: Xung
-onyomi: ["ジュウ", "チョウ"]
-kunyomi: ["え", "おも.い", "おも.り", "おも.なう", "かさ.ねる", "かさ.なる", "おも"]
-strokeCount: 9
+onyomi: ["ショウ"]
+kunyomi: ["つ.く"]
+strokeCount: 15
 writingHint: Hành ( ) động thận trọng ( ) tránh gây xung đột ( ) 衝 4
 sourcePages: []
 sources:
@@ -4493,7 +5153,59 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Xung maps to 16 KANJIDIC2 candidates; kept extracted 重
+  - none
+examples:
+  - word: 衝撃
+    reading: しょうげき
+    meaning: sốc; va chạm; va chạm; đạn đạo
+  - word: 衝撃
+    reading: しょうげき
+    meaning: sốc; va chạm; đạn đạo
+  - word: 衝突
+    reading: しょうとつ
+    meaning: va chạm; xung đột
+
+### 勲 (Huân)
+
+level: N1
+meaningVi: Huân chương
+hanViet: Huân
+onyomi: ["クン"]
+kunyomi: ["いさお"]
+strokeCount: 15
+writingHint: Chuyển động ( ) trên lửa ( ) nhận được huân chương ( ) 勲 1 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 重 (Đổng)
+
+level: N1
+meaningVi: Đồ cổ
+hanViet: Đổng
+onyomi: ["ジュウ", "チョウ"]
+kunyomi: ["え", "おも.い", "おも.り", "おも.なう", "かさ.ねる", "かさ.なる", "おも"]
+strokeCount: 9
+writingHint: Đồ cổ ( ) của cô Thảo ( ) có trọng ( ) lượng lớn 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Đổng maps to 87 KANJIDIC2 candidates; kept extracted 重
 examples:
   - word: 重宝
     reading: じゅうほう
@@ -4505,14 +5217,36 @@ examples:
     reading: おもなる
     meaning: chính; hiệu trưởng; quan trọng
 
-### 明 (Manh)
+### 薫 (Huân)
+
+level: N1
+meaningVi: Hương thơm
+hanViet: Huân
+onyomi: ["クン"]
+kunyomi: ["かお.る"]
+strokeCount: 16
+writingHint: Cỏ ( ) có trọng ( ) lượng mang đốt ( ) tạo ra hương thơm ( ) 薫 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 萌 (Manh)
 
 level: N1
 meaningVi: Mọc mầm
 hanViet: Manh
-onyomi: ["メイ", "ミョウ", "ミン"]
-kunyomi: ["あ.かり", "あか.るい", "あか.るむ", "あか.らむ", "あき.らか", "あ.ける", "-あ.け", "あ.く"]
-strokeCount: 8
+onyomi: ["ホウ"]
+kunyomi: ["も.える", "きざ.す", "めばえ", "きざ.し"]
+strokeCount: 11
 writingHint: Cỏ ( ) buổi sáng ( ) mọc mầm ( )萌 2 3
 sourcePages: []
 sources:
@@ -4521,19 +5255,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Manh maps to 19 KANJIDIC2 candidates; kept extracted 明
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 明るい
-    reading: あかるい
-    meaning: tươi sáng; vui vẻ
-  - word: 声明
-    reading: せいめい
-    meaning: lời tuyên bố; lời tuyên bố; lời tuyên bố
-  - word: 明後日
-    reading: あさって
-    meaning: ngày mốt
+  - none
 
 ### 宰 (Tể)
 
@@ -4557,14 +5283,14 @@ openGaps:
 examples:
   - none
 
-### 辛 (Chấp)
+### 丸 (Chấp)
 
 level: N1
 meaningVi: Chấp hành
 hanViet: Chấp
-onyomi: ["シン"]
-kunyomi: ["から.い", "つら.い", "-づら.い", "かのと"]
-strokeCount: 7
+onyomi: ["ガン"]
+kunyomi: ["まる", "まる.める", "まる.い"]
+strokeCount: 3
 writingHint: Nếu chấp hành ( ) thì hạnh phúc ( ) sẽ trọn vẹn ( ) 丸 2 9
 sourcePages: []
 sources:
@@ -4575,26 +5301,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Chấp maps to 12 KANJIDIC2 candidates; kept extracted 辛
+  - target kanji ambiguous: Hán-Việt heading Chấp maps to 12 KANJIDIC2 candidates; kept extracted 丸
 examples:
-  - word: 香辛料
-    reading: こうしんりょう
-    meaning: gia vị
-  - word: 辛抱
-    reading: しんぼう
-    meaning: sự kiên nhẫn; sức chịu đựng
-  - word: 辛うじて
-    reading: かろうじて
-    meaning: hầu như không; trong gang tấc; chỉ cần xoay sở để làm được
+  - word: 日の丸
+    reading: ひのまる
+    meaning: lá cờ Nhật Bản
+  - word: 丸で
+    reading: まるで
+    meaning: hoàn toàn;hoàn toàn;hoàn toàn;chẳng hề;như thể;như thể;có thể nói như vậy
+  - word: 真ん丸い
+    reading: まんまるい
+    meaning: hình tròn hoàn hảo
 
-### 手 (Chí)
+### 摯 (Chí)
 
 level: N1
 meaningVi: Mạnh mẽ
 hanViet: Chí
-onyomi: ["シュ", "ズ"]
-kunyomi: ["て", "て-", "-て", "た-"]
-strokeCount: 4
+onyomi: ["シ"]
+kunyomi: ["いた.る", "つか.む", "にえ"]
+strokeCount: 15
 writingHint: Chấp ( ) 1 tay ( ) là người mạnh mẽ ( ) 摯 2 9
 sourcePages: []
 sources:
@@ -4603,28 +5329,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Chí maps to 105 KANJIDIC2 candidates; kept extracted 手
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 手錠
-    reading: てじょう
-    meaning: còng tay; còng tay
-  - word: 手筈
-    reading: てはず
-    meaning: sự sắp xếp; kế hoạch; chương trình
-  - word: 手回し
-    reading: てまわし
-    meaning: sự chuẩn bị; sự sắp xếp
+  - none
 
-### 出 (Chuyết)
+### 拙 (Chuyết)
 
 level: N1
 meaningVi: Vụng về
 hanViet: Chuyết
-onyomi: ["シュツ", "スイ"]
-kunyomi: ["で.る", "-で", "だ.す", "-だ.す", "い.でる", "い.だす"]
-strokeCount: 5
+onyomi: ["セツ"]
+kunyomi: ["つたな.い"]
+strokeCount: 8
 writingHint: Tay ( ) xuất ( ) chiêu trông thật vụng vệ ( ) 拙 2 4
 sourcePages: []
 sources:
@@ -4633,28 +5351,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Chuyết maps to 14 KANJIDIC2 candidates; kept extracted 出
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 脱出
-    reading: だっしゅつ
-    meaning: trốn thoát
-  - word: 出動
-    reading: しゅつどう
-    meaning: chèo thuyền; diễu hành; đi chơi
-  - word: 出鱈目
-    reading: でたらめ
-    meaning: lời phát biểu vô trách nhiệm; vô nghĩa; vô nghĩa; ngẫu nhiên; bừa bãi; không có hệ thống
+  - none
 
-### 屈 (Quật)
+### 堀 (Quật)
 
 level: N1
 meaningVi: Hào nước
 hanViet: Quật
 onyomi: ["クツ"]
-kunyomi: ["かが.む", "かが.める"]
-strokeCount: 8
+kunyomi: ["ほり"]
+strokeCount: 11
 writingHint: Vùng đất ( ) bị che khuất ( ) bởi hào nước ( ) 堀 4
 sourcePages: []
 sources:
@@ -4667,15 +5377,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 窮屈
-    reading: きゅうくつ
-    meaning: hẹp;chặt;cứng;cứng nhắc;khó chịu;trang trọng;bị hạn chế
-  - word: 理屈
-    reading: りくつ
-    meaning: lý thuyết; lý do
-  - word: 屈折
-    reading: くっせつ
-    meaning: sự uốn cong; vết lõm; khúc xạ
+  - word: 堀
+    reading: ほり
+    meaning: hào, kênh
+  - word: 堀
+    reading: ほり
+    meaning: hào; mương
 
 ### 窟 (Quật)
 
@@ -4729,14 +5436,14 @@ examples:
     reading: なお
     meaning: hơn nữa;vẫn;chưa;hơn nữa;vẫn còn nhiều hơn;lớn hơn;xa hơn;ít hơn
 
-### 賞 (Thường)
+### 償 (Thường)
 
 level: N1
 meaningVi: Bồi thường
 hanViet: Thường
 onyomi: ["ショウ"]
-kunyomi: ["ほ.める"]
-strokeCount: 15
+kunyomi: ["つぐな.う"]
+strokeCount: 17
 writingHint: Người ( ) mang tiền thưởng ( ) đi bồi thường ( ) 償 1 4 3 5
 sourcePages: []
 sources:
@@ -4749,15 +5456,45 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 懸賞
-    reading: けんしょう
-    meaning: trao giải thưởng; chiến thắng; phần thưởng
-  - word: 入賞
-    reading: にゅうしょう
-    meaning: giành được giải thưởng hoặc vị trí (trong một cuộc thi)
-  - word: 懸賞
-    reading: けんしょう
-    meaning: trao giải thưởng; chiến thắng; phần thưởng
+  - word: 弁償
+    reading: べんしょう
+    meaning: lời tiếp theo;sự đền bù;sự bồi thường;sự bồi thường;sự hoàn trả
+  - word: 補償
+    reading: ほしょう
+    meaning: sự đền bù; sự đền bù
+  - word: 賠償
+    reading: ばいしょう
+    meaning: sự bồi thường; sự bồi thường; sự đền bù
+
+### 掌 (Chưởng)
+
+level: N1
+meaningVi: Lòng bàn tay
+hanViet: Chưởng
+onyomi: ["ショウ"]
+kunyomi: ["てのひら", "たなごころ"]
+strokeCount: 12
+writingHint: Hòa thượng ( ) tay ( ) tung chưởng ( ) 掌 1 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 掌
+    reading: たなごころ
+    meaning: lòng bàn tay
+  - word: 掌
+    reading: たなごころ
+    meaning: lòng bàn tay
+  - word: 車掌
+    reading: しゃしょう
+    meaning: (tàu hỏa) người soát vé
 
 ### 嘗 (Thường)
 
@@ -4789,14 +5526,14 @@ examples:
     reading: かつて
     meaning: một lần; mãi mãi
 
-### 通 (Thông)
+### 樋 (Thông)
 
 level: N1
 meaningVi: Ống nước mưa
 hanViet: Thông
-onyomi: ["ツウ", "ツ"]
-kunyomi: ["とお.る", "とお.り", "-とお.り", "-どお.り", "とお.す", "とお.し", "-どお.し", "かよ.う"]
-strokeCount: 10
+onyomi: ["トウ"]
+kunyomi: ["ひ", "とい"]
+strokeCount: 14
 writingHint: Dùng cây ( ) để thông ( ) ống nước mưa ( ) 樋 2 12 5
 sourcePages: []
 sources:
@@ -4805,29 +5542,65 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 通りかかる
-    reading: とおりかかる
-    meaning: tình cờ đi ngang qua
-  - word: 流通
-    reading: りゅうつう
-    meaning: lưu thông tiền tệ hoặc hàng hóa; dòng nước hoặc không khí; phân phối
-  - word: 見通し
-    reading: みとおし
-    meaning: quan điểm; tầm nhìn không bị cản trở; tầm nhìn; dự báo; triển vọng; cái nhìn sâu sắc
+  - none
 
-### 用 (Dũng)
+### 桶 (Dũng)
 
 level: N1
 meaningVi: Thùng gỗ 々
 hanViet: Dũng
-onyomi: ["ヨウ"]
-kunyomi: ["もち.いる"]
-strokeCount: 5
+onyomi: ["ヨウ", "トウ"]
+kunyomi: ["おけ"]
+strokeCount: 11
 writingHint: Cây ( ) được ma ( ) sử dụng ( ) làm thùng gỗ ( ) 桶 2 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 猟 (Liệp)
+
+level: N1
+meaningVi: Săn bắn
+hanViet: Liệp
+onyomi: ["リョウ"]
+kunyomi: ["かり", "か.る"]
+strokeCount: 11
+writingHint: Chó ( ) 3 ( ) năm tuổi có thể sử dụng ( ) đi săn bắn ( ) 猟 1 4 5 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 蝋 (Lập)
+
+level: N1
+meaningVi: Sáp, nến
+hanViet: Lập
+onyomi: ["ロウ"]
+kunyomi: ["みつろう", "ろうそく"]
+strokeCount: 14
+writingHint: Côn trùng ( ) 3 ( ) năm tuổi có thể sử dụng ( ) làm sáp ( ) 蝋 8 9
 sourcePages: []
 sources:
   level: ebook
@@ -4837,26 +5610,23 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - none
+  - target kanji ambiguous: Hán-Việt heading Lập maps to 25 KANJIDIC2 candidates; kept extracted 蝋
 examples:
-  - word: 濫用
-    reading: らんよう
-    meaning: sự lạm dụng;sự lạm dụng;sự lạm dụng;sự lạm dụng quá mức
-  - word: 用紙
-    reading: ようし
-    meaning: mẫu trống
-  - word: 兼用
-    reading: けんよう
-    meaning: đa công dụng; sử dụng kết hợp; kết hợp; phục vụ hai mục đích
+  - word: 蝋燭
+    reading: ろうそく
+    meaning: nến
+  - word: 蝋燭
+    reading: ろうそく
+    meaning: nến
 
-### 告 (Khốc)
+### 酷 (Khốc)
 
 level: N1
 meaningVi: Khốc liệt
 hanViet: Khốc
 onyomi: ["コク"]
-kunyomi: ["つ.げる"]
-strokeCount: 7
+kunyomi: ["ひど.い"]
+strokeCount: 14
 writingHint: Giờ Dậu ( ) quảng cáo ( ) rượu rất khốc liệt ( ) 酷 10
 sourcePages: []
 sources:
@@ -4867,26 +5637,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khốc maps to 5 KANJIDIC2 candidates; kept extracted 告
+  - none
 examples:
-  - word: 申告
-    reading: しんこく
-    meaning: báo cáo;tuyên bố;nộp tờ khai;thông báo
-  - word: 忠告
-    reading: ちゅうこく
-    meaning: lời khuyên; cảnh báo
-  - word: 勧告
-    reading: かんこく
-    meaning: lời khuyên; lời khuyên; lời khuyên; lời khuyên
+  - word: 酷い
+    reading: ひどい
+    meaning: tàn nhẫn;khủng khiếp;nghiêm trọng;rất tệ;nghiêm trọng;khủng khiếp;nặng nề;bạo lực
+  - word: 冷酷
+    reading: れいこく
+    meaning: sự tàn nhẫn;sự lạnh lùng;sự tàn nhẫn;sự tàn nhẫn
+  - word: 残酷
+    reading: ざんこく
+    meaning: sự tàn nhẫn; sự khắc nghiệt
 
-### 豕 (Duyên)
+### 縁 (Duyên)
 
 level: N1
 meaningVi: Duyên số
 hanViet: Duyên
-onyomi: ["シ"]
-kunyomi: []
-strokeCount: 7
+onyomi: ["エン", "-ネン"]
+kunyomi: ["ふち", "ふち.どる", "ゆかり", "よすが", "へり", "えにし"]
+strokeCount: 15
 writingHint: Sợi tơ ( ) hồng giúp Em ( ) lợn ( ) nên duyên ( ) 縁 1 7
 sourcePages: []
 sources:
@@ -4895,21 +5665,28 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Duyên maps to 17 KANJIDIC2 candidates; kept extracted 豕
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 縁
+    reading: えん
+    meaning: cơ hội;số phận;số phận;mối quan hệ;sự ràng buộc;kết nối;nghiệp chướng
+  - word: 縁側
+    reading: えんがわ
+    meaning: hiên;hiên nhà;ban công;hành lang rộng mở
+  - word: 縁談
+    reading: えんだん
+    meaning: lời cầu hôn; lời đính hôn
 
-### 家 (Giá)
+### 嫁 (Giá)
 
 level: N1
 meaningVi: Lấy chồng
 hanViet: Giá
-onyomi: ["カ", "ケ"]
-kunyomi: ["いえ", "や", "うち"]
-strokeCount: 10
+onyomi: ["カ"]
+kunyomi: ["よめ", "とつ.ぐ", "い.く", "ゆ.く"]
+strokeCount: 13
 writingHint: Phụ nữ ( ) có gia đình ( ) là đã xuất giá lấy chồng ( ) 嫁 4
 sourcePages: []
 sources:
@@ -4922,25 +5699,25 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 家出
-    reading: いえで
-    meaning: bỏ nhà đi; bỏ nhà đi
-  - word: 実業家
-    reading: じつぎょうか
-    meaning: nhà công nghiệp; doanh nhân
-  - word: 家畜
-    reading: かちく
-    meaning: vật nuôi; vật nuôi; gia súc
+  - word: 花嫁
+    reading: はなよめ
+    meaning: cô dâu
+  - word: 花嫁
+    reading: はなよめ
+    meaning: cô dâu
+  - word: 嫁
+    reading: よめ
+    meaning: cô dâu; con dâu
 
-### 逐 (Toại)
+### 逐 (Trục)
 
 level: N1
-meaningVi: Toại nguyện
-hanViet: Toại
+meaningVi: Trục xuất
+hanViet: Trục
 onyomi: ["チク"]
 kunyomi: []
 strokeCount: 10
-writingHint: 2 (' ') lần bị trục xuất ( ) con lợn đều toại nguyện ( ) 遂 1 2
+writingHint: Lợn ( ) đi xa ( ) quá sẽ bị trục xuất ( ) 逐 8 1
 sourcePages: []
 sources:
   level: ebook
@@ -4950,7 +5727,6 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Toại maps to 11 KANJIDIC2 candidates; kept extracted 逐
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -5012,6 +5788,50 @@ examples:
     reading: ごうか
     meaning: tuyệt vời; lộng lẫy; xa hoa
 
+### 壕 (Hào)
+
+level: N1
+meaningVi: Chiến hào
+hanViet: Hào
+onyomi: ["コウ", "ゴウ"]
+kunyomi: ["ほり"]
+strokeCount: 17
+writingHint: Hiến đất ( ) nhà phú hào ( ) để làm chiến hào ( ) 壕 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 蒙 (Mông)
+
+level: N1
+meaningVi: Mông cổ
+hanViet: Mông
+onyomi: ["モウ", "ボウ"]
+kunyomi: ["こうむ.る", "おお.う", "くら.い"]
+strokeCount: 13
+writingHint: Cô Thảo ( ) trùm khăn ( ) để bắt 1 ( ) con lợn ( ) Mông Cổ ( )蒙 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 建 (Kiện)
 
 level: N1
@@ -5072,6 +5892,36 @@ examples:
     reading: しゅうし
     meaning: Chương trình học thạc sĩ
 
+### 土 (Xá)
+
+level: N1
+meaningVi: Phố xá
+hanViet: Xá
+onyomi: ["ド", "ト"]
+kunyomi: ["つち"]
+strokeCount: 3
+writingHint: Ở phố xá ( ) người ( ) có nhà đất ( 土) thì miệng (ロ) luôn nói cười 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Xá maps to 35 KANJIDIC2 candidates; kept extracted 土
+examples:
+  - word: 土産
+    reading: どさん
+    meaning: sản phẩm của đất
+  - word: 土俵
+    reading: どひょう
+    meaning: đấu trường
+  - word: 国土
+    reading: こくど
+    meaning: vương quốc
+
 ### 克 (Khắc)
 
 level: N1
@@ -5126,14 +5976,14 @@ examples:
     reading: きょうだい
     meaning: (khiêm tốn) anh chị em
 
-### 大 (Trác)
+### 早 (Trác)
 
 level: N1
 meaningVi: Cái bàn
 hanViet: Trác
-onyomi: ["ダイ", "タイ"]
-kunyomi: ["おお-", "おお.きい", "-おお.いに"]
-strokeCount: 3
+onyomi: ["ソウ", "サッ"]
+kunyomi: ["はや.い", "はや", "はや-", "はや.まる", "はや.める", "さ-"]
+strokeCount: 6
 writingHint: Cái bàn ( ) to ( ) cần làm xong sớm ( ) 早 1
 sourcePages: []
 sources:
@@ -5144,26 +5994,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trác maps to 46 KANJIDIC2 candidates; kept extracted 大
+  - target kanji ambiguous: Hán-Việt heading Trác maps to 46 KANJIDIC2 candidates; kept extracted 早
 examples:
-  - word: 大金
-    reading: たいきん
-    meaning: chi phí lớn
-  - word: お大事に
-    reading: おだいじに
-    meaning: Hãy chăm sóc bản thân
-  - word: 盛大
-    reading: せいだい
-    meaning: vĩ đại; thịnh vượng; tráng lệ
+  - word: 最早
+    reading: もはや
+    meaning: đã; bây giờ
+  - word: お早う
+    reading: おはよう
+    meaning: Chào buổi sáng
+  - word: 早急
+    reading: さっきゅう
+    meaning: khẩn cấp
 
-### 卓 (Điệu)
+### 悼 (Điệu)
 
 level: N1
 meaningVi: Truy điệu
 hanViet: Điệu
-onyomi: ["タク"]
-kunyomi: []
-strokeCount: 8
+onyomi: ["トウ"]
+kunyomi: ["いた.む"]
+strokeCount: 11
 writingHint: Trái tim ( ) để lên bàn ( ) mang đi truy điệu ( ) 悼 3 4
 sourcePages: []
 sources:
@@ -5172,22 +6022,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Điệu maps to 92 KANJIDIC2 candidates; kept extracted 卓
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 食卓
-    reading: しょくたく
-    meaning: bàn ăn
+  - none
 
-### 兌 (Duyệt)
+### 悦 (Duyệt)
 
 level: N1
 meaningVi: Mãn nguyện
 hanViet: Duyệt
-onyomi: ["ダ", "エイ", "エツ", "タイ"]
-kunyomi: ["よろこ.ぶ"]
-strokeCount: 7
+onyomi: ["エツ"]
+kunyomi: ["よろこ.ぶ", "よろこ.ばす"]
+strokeCount: 10
 writingHint: Trái tim ( ) mua được tivi ( ) rất mãn nguyện ( ) 悦 3 4 5
 sourcePages: []
 sources:
@@ -5198,20 +6046,19 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Duyệt maps to 7 KANJIDIC2 candidates; kept extracted 兌
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 里 (Lí)
+### 閲 (Duyệt)
 
 level: N1
-meaningVi: Cá chép
-hanViet: Lí
-onyomi: ["リ"]
-kunyomi: ["さと"]
-strokeCount: 7
-writingHint: Cá ( ) mà ông Lí ( ) thích nhất là cá chép ( ) 鯉 1 2
+meaningVi: Kiểm duyệt
+hanViet: Duyệt
+onyomi: ["エツ"]
+kunyomi: ["けみ.する"]
+strokeCount: 15
+writingHint: Muốn đi qua cổng ( ) thì tivi ( ) cần kiểm duyệt ( )閲 2 6
 sourcePages: []
 sources:
   level: ebook
@@ -5221,27 +6068,91 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lí maps to 50 KANJIDIC2 candidates; kept extracted 里
+  - none
 examples:
-  - word: 郷里
-    reading: きょうり
-    meaning: nơi sinh; quê hương
-  - word: 郷里
-    reading: きょうり
-    meaning: nơi sinh; quê hương
-  - word: 千里
-    reading: せんり
-    hanViet: thiên lịa
-    meaning: ngàn dặm, quãng đường xa
+  - word: 閲覧
+    reading: えつらん
+    meaning: kiểm tra; đọc
+  - word: 閲覧
+    reading: えつらん
+    meaning: kiểm tra; đọc
 
-### 量 (Lương)
+### 鯉 (Lí)
+
+level: N1
+meaningVi: Cá chép
+hanViet: Lí
+onyomi: ["リ"]
+kunyomi: ["こい"]
+strokeCount: 18
+writingHint: Cá ( ) mà ông Lí ( ) thích nhất là cá chép ( ) 鯉 1 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Lí maps to 50 KANJIDIC2 candidates; kept extracted 鯉
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 狸 (Li)
+
+level: N1
+meaningVi: Hồ ly, cáo
+hanViet: Li
+onyomi: ["リ", "ライ"]
+kunyomi: ["たぬき"]
+strokeCount: 10
+writingHint: Chó ( ) của ông Lí ( ) biến thành hồ ly ( ) 狸 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 厘 (Li)
+
+level: N1
+meaningVi: Li ti
+hanViet: Li
+onyomi: ["リン"]
+kunyomi: []
+strokeCount: 9
+writingHint: Dưới sườn núi ( ) ông Lí ( ) bé li ti ( ) 厘 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Li maps to 50 KANJIDIC2 candidates; kept extracted 厘
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 糧 (Lương)
 
 level: N1
 meaningVi: Lương thực
 hanViet: Lương
-onyomi: ["リョウ"]
-kunyomi: ["はか.る"]
-strokeCount: 12
+onyomi: ["リョウ", "ロウ"]
+kunyomi: ["かて"]
+strokeCount: 18
 writingHint: Gạo ( ) chiếm số lượng ( ) lớn trong lương thực ( ) 糧 4 8
 sourcePages: []
 sources:
@@ -5254,15 +6165,9 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 熱量
-    reading: ねつりょう
-    meaning: nhiệt độ
-  - word: 微量
-    reading: びりょう
-    meaning: số lượng cực nhỏ; số lượng cực kỳ nhỏ
-  - word: 感無量
-    reading: かんむりょう
-    meaning: cảm giác sâu sắc; cảm giác không thể diễn tả được; tràn ngập cảm xúc
+  - word: 食糧
+    reading: しょくりょう
+    meaning: quy định; khẩu phần
 
 ### 瞳 (Đồng)
 
@@ -5381,6 +6286,33 @@ examples:
     reading: まとまり
     meaning: kết luận; sự giải quyết; sự nhất quán
 
+### 墨 (Mặc)
+
+level: N1
+meaningVi: Mực
+hanViet: Mặc
+onyomi: ["ボク"]
+kunyomi: ["すみ"]
+strokeCount: 15
+writingHint: Bãi màu đen ( ) dưới đất ( ) là mực ( )墨 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Mặc maps to 23 KANJIDIC2 candidates; kept extracted 墨
+examples:
+  - word: 墨
+    reading: すみ
+    meaning: mực
+  - word: 墨
+    reading: すみ
+    meaning: mực tàu; mực viết
+
 ### 犬 (Mặc)
 
 level: N1
@@ -5489,6 +6421,36 @@ examples:
     reading: しょうぼうしょ
     meaning: trạm cứu hỏa
 
+### 煮 (Chử)
+
+level: N1
+meaningVi: Đun nấu
+hanViet: Chử
+onyomi: ["シャ"]
+kunyomi: ["に.る", "に.える", "に.やす"]
+strokeCount: 12
+writingHint: Tác giả ( ) dùng lửa ( ) để đun nấu ( ) 煮 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Chử maps to 56 KANJIDIC2 candidates; kept extracted 煮
+examples:
+  - word: 煮える
+    reading: にえる
+    meaning: đun sôi, nấu, nấu chín
+  - word: 煮る
+    reading: にる
+    meaning: đun sôi, nấu ăn
+  - word: 煮える
+    reading: にえる
+    meaning: sôi; chín; được nấu
+
 ### 著 (Trừ)
 
 level: N1
@@ -5549,6 +6511,66 @@ examples:
     reading: しんじゃ
     meaning: tín đồ;tín đồ;người sùng đạo;Kitô giáo
 
+### 賭 (Đổ)
+
+level: N1
+meaningVi: Đánh bạc
+hanViet: Đổ
+onyomi: ["ト"]
+kunyomi: ["か.ける", "かけ"]
+strokeCount: 15
+writingHint: Bảo bối ( ) bị tác giả ( ) mang đi đánh bạc ( )賭 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 賭け
+    reading: かけ
+    meaning: cá cược; cờ bạc; canh bạc
+  - word: 賭ける
+    reading: かける
+    meaning: đánh cược;đánh cược;đánh cược;đánh bạc;đánh bạc
+  - word: 賭け
+    reading: かけ
+    meaning: cá cược; cờ bạc; canh bạc
+
+### 諸 (Chư)
+
+level: N1
+meaningVi: Chư hầu
+hanViet: Chư
+onyomi: ["ショ"]
+kunyomi: ["もろ", "これ"]
+strokeCount: 16
+writingHint: Đang nói chuyện ( ) với tác giả ( ) chính là chư hầu ( ) 諸 1 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Chư maps to 56 KANJIDIC2 candidates; kept extracted 諸
+examples:
+  - word: 諸君
+    reading: しょくん
+    meaning: Quý ông!; Quý bà!
+  - word: 諸
+    reading: しょ
+    meaning: nhiều; nhiều; nhiều
+  - word: 諸
+    reading: しょ
+    meaning: nhiều
+
 ### 儲 (Trữ)
 
 level: N1
@@ -5579,75 +6601,15 @@ examples:
     reading: もうかる
     meaning: có lời; sinh lợi
 
-### 元 (Ngoạn)
+### 玩 (Ngoạn)
 
 level: N1
 meaningVi: Du ngoạn
 hanViet: Ngoạn
-onyomi: ["ゲン", "ガン"]
-kunyomi: ["もと"]
-strokeCount: 4
+onyomi: ["ガン"]
+kunyomi: ["もちあそ.ぶ", "もてあそ.ぶ"]
+strokeCount: 8
 writingHint: Vua ( ) Nguyên ( ) du ngoạn ( ) đó đây!玩 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ngoạn maps to 15 KANJIDIC2 candidates; kept extracted 元
-examples:
-  - word: 地元
-    reading: じもと
-    meaning: địa phương
-  - word: 元素
-    reading: げんそ
-    meaning: nguyên tố hóa học
-  - word: 元年
-    reading: がんねん
-    meaning: năm đầu tiên (của một triều đại cụ thể)
-
-### 寸 (Quán)
-
-level: N1
-meaningVi: Quán quân
-hanViet: Quán
-onyomi: ["スン"]
-kunyomi: []
-strokeCount: 3
-writingHint: Quán quân ( ) trùm ( ) nguyên ( ) cái vương miện cảm giác hơi thốn ( ) 2
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Quán maps to 92 KANJIDIC2 candidates; kept extracted 寸
-examples:
-  - word: 一寸
-    reading: ちょっと
-    meaning: (ateji) (adv int) (uk) chỉ một phút; một thời gian ngắn; một lúc; chỉ một chút; hơi; dễ dàng; dễ dàng; rath
-  - word: 一寸
-    reading: ちょっと
-    meaning: (ateji) (adv int) (uk) chỉ một phút; một thời gian ngắn; một lúc; chỉ một chút; hơi; dễ dàng; rath
-  - word: 寸法
-    reading: すんぽう
-    meaning: đo lường, kích thước, kích thước
-
-### 古 (Cô)
-
-level: N1
-meaningVi: Mẹ chồng
-hanViet: Cô
-onyomi: ["コ"]
-kunyomi: ["ふる.い", "ふる-", "-ふる.す"]
-strokeCount: 5
-writingHint: Người phụ nữ ( ) hơi cổ ( ) hủ là mẹ chồng ( ) 姑 1 5
 sourcePages: []
 sources:
   level: ebook
@@ -5659,24 +6621,73 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 考古学
-    reading: こうこがく
-    meaning: khảo cổ học
-  - word: 古
-    reading: いにしえ
-    meaning: thời cổ xưa; thời xa xưa
-  - word: 古代
-    reading: こだい
-    meaning: thời cổ đại
+  - word: 玩具
+    reading: おもちゃ
+    meaning: đồ chơi
+  - word: 玩具
+    reading: おもちゃ
+    meaning: đồ chơi
 
-### 固 (Cá)
+### 姑 (Cô)
+
+level: N1
+meaningVi: Mẹ chồng
+hanViet: Cô
+onyomi: ["コ"]
+kunyomi: ["しゅうとめ", "しゅうと", "おば", "しばらく"]
+strokeCount: 8
+writingHint: Người phụ nữ ( ) hơi cổ ( ) hủ là mẹ chồng ( ) 姑 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 故 (Cố)
+
+level: N1
+meaningVi: Sự cố
+hanViet: Cố
+onyomi: ["コ"]
+kunyomi: ["ゆえ", "ふる.い", "もと"]
+strokeCount: 9
+writingHint: Cổ ( ) bị đánh ( ) là sự cố ( ) lớn故 2 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 故人
+    reading: こじん
+    meaning: người đã khuất; người bạn cũ
+  - word: 故
+    reading: こ
+    meaning: người quá cố (đã chết)
+  - word: 何故なら
+    reading: なぜなら
+    meaning: bởi vì
+
+### 箇 (Cá)
 
 level: N1
 meaningVi: Số đếm
 hanViet: Cá
-onyomi: ["コ"]
-kunyomi: ["かた.める", "かた.まる", "かた.まり", "かた.い"]
-strokeCount: 8
+onyomi: ["カ", "コ"]
+kunyomi: []
+strokeCount: 14
 writingHint: Trúc ( ) cố ( ) đếm ( ) 箇 1 4
 sourcePages: []
 sources:
@@ -5687,27 +6698,49 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Cá maps to 23 KANJIDIC2 candidates; kept extracted 固
+  - none
 examples:
-  - word: 固める
-    reading: かためる
-    meaning: làm cứng lại; đóng băng; củng cố
-  - word: 固有
-    reading: こゆう
-    meaning: đặc trưng;truyền thống;đặc biệt;cố hữu;bản địa-
-  - word: 固体
-    reading: こたい
-    meaning: rắn (thân thể)
+  - word: 箇所
+    reading: かしょ
+    meaning: đoạn;địa điểm;điểm;phần
+  - word: 箇箇
+    reading: ここ
+    meaning: cá nhân; riêng biệt
+  - word: 箇条書き
+    reading: かじょうがき
+    meaning: hình thức chia thành từng khoản; sự chia thành từng khoản
+
+### 錮 (Cố)
+
+level: N1
+meaningVi: Phạt tù
+hanViet: Cố
+onyomi: ["コ"]
+kunyomi: ["ふさ.ぐ"]
+strokeCount: 16
+writingHint: Ăn trộm kho vàng ( ) kiên cố ( ) nên bị phạt tù ( ) 錮 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 胡 (Hồ)
 
 level: N1
-meaningVi: Hồ nước
+meaningVi: Hồ tiêu
 hanViet: Hồ
 onyomi: ["ウ", "コ", "ゴ"]
 kunyomi: ["なんぞ"]
 strokeCount: 9
-writingHint: Nước ( ) + hồ ( ) = Hồ nước ( ) 湖 1 5 10
+writingHint: Thời cổ ( ) Nguyệt ( ) rất thích ăn hồ tiêu ( ) 胡 2 7
 sourcePages: []
 sources:
   level: ebook
@@ -5725,6 +6758,79 @@ examples:
   - word: 胡椒
     reading: こしょう
     meaning: tiêu; hạt tiêu
+
+### 湖 (Hồ)
+
+level: N1
+meaningVi: Hồ nước
+hanViet: Hồ
+onyomi: ["コ"]
+kunyomi: ["みずうみ"]
+strokeCount: 12
+writingHint: Nước ( ) + hồ ( ) = Hồ nước ( ) 湖 1 5 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 湖
+    reading: みずうみ
+    meaning: hồ
+
+### 糊 (Hồ)
+
+level: N1
+meaningVi: Hồ dán
+hanViet: Hồ
+onyomi: ["コ", "ゴ", "コツ"]
+kunyomi: ["のり"]
+strokeCount: 15
+writingHint: Dùng gạo ( ) thay hồ ( ) dán ( ) 糊 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 糊
+    reading: のり
+    meaning: dán, tinh bột
+  - word: 糊
+    reading: のり
+    meaning: hồ dán; tinh bột
+
+### 瑚 (Hô)
+
+level: N1
+meaningVi: San hô
+hanViet: Hô
+onyomi: ["コ", "ゴ"]
+kunyomi: []
+strokeCount: 13
+writingHint: Vua ( ) có cả hồ ( ) san hô ( ) 瑚 6 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 据 (Cư)
 
@@ -5756,14 +6862,14 @@ examples:
     reading: すえつける
     meaning: cài đặt; trang bị; gắn kết
 
-### 居 (Cư)
+### 裾 (Cư)
 
 level: N1
 meaningVi: Vạt áo
 hanViet: Cư
 onyomi: ["キョ", "コ"]
-kunyomi: ["い.る", "-い", "お.る"]
-strokeCount: 8
+kunyomi: ["すそ"]
+strokeCount: 13
 writingHint: Y phục ( ) là nơi cư trú ( ) của vạt áo ( ) 裾 1
 sourcePages: []
 sources:
@@ -5776,24 +6882,21 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 居住
-    reading: きょじゅう
-    meaning: nơi cư trú
-  - word: 鳥居
-    reading: とりい
-    meaning: torii (cổng vòm của đền thờ Thần đạo)
-  - word: 隠居
-    reading: いんきょ
-    meaning: người về hưu; người về hưu
+  - word: 裾
+    reading: すそ
+    meaning: (quần) còng; (váy) viền; mép cắt tóc; chân núi
+  - word: 裾
+    reading: すそ
+    meaning: (quần) còng; (váy) viền; mép cắt tóc; chân núi
 
-### 占 (Niêm)
+### 粘 (Niêm)
 
 level: N1
 meaningVi: Chất dính
 hanViet: Niêm
-onyomi: ["セン"]
-kunyomi: ["し.める", "うらな.う"]
-strokeCount: 5
+onyomi: ["ネン"]
+kunyomi: ["ねば.る"]
+strokeCount: 11
 writingHint: Gạo ( ) bị chiếm ( ) để làm chất dính ( ) 粘 4 7
 sourcePages: []
 sources:
@@ -5804,17 +6907,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Niêm maps to 14 KANJIDIC2 candidates; kept extracted 占
+  - none
 examples:
-  - word: 占領
-    reading: せんりょう
-    meaning: chiếm đóng;chiếm giữ;sở hữu;có một phòng riêng
-  - word: 独占
-    reading: どくせん
-    meaning: độc quyền
-  - word: 占領
-    reading: せんりょう
-    meaning: chiếm đóng; chiếm giữ; sở hữu; có một phòng riêng
+  - word: 粘る
+    reading: ねばる
+    meaning: dính; dính chặt; kiên trì; kiên trì; bám vào
+  - word: 粘り
+    reading: ねばり
+    meaning: độ dính; độ nhớt
+  - word: 粘り
+    reading: ねばり
+    meaning: độ dính; độ nhớt
 
 ### 貼 (Thiếp)
 
@@ -5844,6 +6947,58 @@ examples:
     reading: はる
     meaning: dính vào
 
+### 占 (Thiếp)
+
+level: N1
+meaningVi: Sổ tay
+hanViet: Thiếp
+onyomi: ["セン"]
+kunyomi: ["し.める", "うらな.う"]
+strokeCount: 5
+writingHint: Sổ tay ( ) được bọc khăn ( ) lụa chiếm ( ) tỷ lệ lớn 3 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thiếp maps to 15 KANJIDIC2 candidates; kept extracted 占
+examples:
+  - word: 占領
+    reading: せんりょう
+    meaning: chiếm đóng;chiếm giữ;sở hữu;có một phòng riêng
+  - word: 独占
+    reading: どくせん
+    meaning: độc quyền
+  - word: 占領
+    reading: せんりょう
+    meaning: chiếm đóng; chiếm giữ; sở hữu; có một phòng riêng
+
+### 鮎 (Niêm)
+
+level: N1
+meaningVi: Cá hương
+hanViet: Niêm
+onyomi: ["デン", "ネン"]
+kunyomi: ["あゆ", "なまず"]
+strokeCount: 16
+writingHint: Cá ( ) đang xâm chiếm ( ) Trái đất là cá Hương ( ) 鮎 1 12
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 彡 (Điêu)
 
 level: N1
@@ -5867,14 +7022,14 @@ openGaps:
 examples:
   - none
 
-### 周 (Điêu)
+### 鯛 (Điêu)
 
 level: N1
 meaningVi: Cá tráp
 hanViet: Điêu
-onyomi: ["シュウ"]
-kunyomi: ["まわ.り"]
-strokeCount: 8
+onyomi: ["チョウ"]
+kunyomi: ["たい"]
+strokeCount: 19
 writingHint: Cá ( ) miệng chu ( ) ra là cá tráp ( ) 鯛 1 2 13
 sourcePages: []
 sources:
@@ -5883,19 +7038,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Điêu maps to 92 KANJIDIC2 candidates; kept extracted 周
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 周期
-    reading: しゅうき
-    meaning: chu kỳ; chu kỳ
-  - word: 周
-    reading: しゅう
-    meaning: mạch;vòng;chu vi;vùng lân cận;Chou (triều đại)
-  - word: 周
-    reading: しゅう
-    meaning: mạch; vòng; chu vi; vùng lân cận; Chou (triều đại)
+  - none
 
 ### 苛 (Hà)
 
@@ -5927,6 +7074,36 @@ examples:
     reading: いじめる
     meaning: trêu chọc; hành hạ; trừng phạt
 
+### 扇 (Phiến)
+
+level: N1
+meaningVi: Quạt
+hanViet: Phiến
+onyomi: ["セン"]
+kunyomi: ["おうぎ"]
+strokeCount: 10
+writingHint: Đứng dưới cánh cửa ( ) cầm cái lông ( ) quạt quạt ( ) 扇 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 団扇
+    reading: うちわ
+    meaning: quạt
+  - word: 団扇
+    reading: うちわ
+    meaning: quạt
+  - word: 扇ぐ
+    reading: あおぐ
+    meaning: quạt, vỗ
+
 ### 詔 (Chiếu)
 
 level: N1
@@ -5948,6 +7125,33 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 岳 (Nhạc)
+
+level: N1
+meaningVi: Núi cao
+hanViet: Nhạc
+onyomi: ["ガク"]
+kunyomi: ["たけ"]
+strokeCount: 8
+writingHint: Đồi ( ) + núi ( ) = Núi cao ( ) 岳 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 山岳
+    reading: さんがく
+    meaning: núi
+  - word: 山岳
+    reading: さんがく
+    meaning: núi
 
 ### 工 (Công)
 
@@ -5979,14 +7183,14 @@ examples:
     reading: かこう
     meaning: sản xuất; chế biến; xử lý
 
-### 貝 (Cống)
+### 貢 (Cống)
 
 level: N1
 meaningVi: Cống hiến
 hanViet: Cống
-onyomi: ["バイ"]
-kunyomi: ["かい"]
-strokeCount: 7
+onyomi: ["コウ", "ク"]
+kunyomi: ["みつ.ぐ"]
+strokeCount: 10
 writingHint: Công nhân ( ) mang bảo bối ( ) đi cống hiến ( ) 貢 1
 sourcePages: []
 sources:
@@ -5997,17 +7201,11 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Cống maps to 17 KANJIDIC2 candidates; kept extracted 貝
+  - none
 examples:
-  - word: 貝殻
-    reading: かいがら
-    meaning: vỏ
-  - word: 貝殻
-    reading: かいがら
-    meaning: vỏ
-  - word: 貝
-    reading: かい
-    meaning: vỏ, động vật có vỏ
+  - word: 貢献
+    reading: こうけん
+    meaning: đóng góp; dịch vụ
 
 ### 虹 (Hồng)
 
@@ -6036,14 +7234,37 @@ examples:
     reading: にじ
     meaning: cầu vồng
 
-### 空 (Khống)
+### 頁 (Hạng)
+
+level: N1
+meaningVi: Xếp hạng
+hanViet: Hạng
+onyomi: ["ケツ"]
+kunyomi: ["ぺえじ", "おおがい", "かしら"]
+strokeCount: 9
+writingHint: Xếp hạng ( ) công nhân ( ) lên giấy ( ) 頁 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Hạng maps to 36 KANJIDIC2 candidates; kept extracted 頁
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 控 (Khống)
 
 level: N1
 meaningVi: Khống chế
 hanViet: Khống
-onyomi: ["クウ"]
-kunyomi: ["そら", "あ.く", "あ.き", "あ.ける", "から", "す.く", "す.かす", "むな.しい"]
-strokeCount: 8
+onyomi: ["コウ"]
+kunyomi: ["ひか.える", "ひか.え"]
+strokeCount: 11
 writingHint: Tay ( ) không ( ) dễ dàng bị khống chế ( ) 控 2 4
 sourcePages: []
 sources:
@@ -6056,15 +7277,15 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 空ろ
-    reading: うつろ
-    meaning: trống; khoang; rỗng; trống rỗng (khoảng trống)
-  - word: 上空
-    reading: じょうくう
-    meaning: bầu trời; bầu trời; bầu trời cao; không khí trên cao
-  - word: 空間
-    reading: あきま
-    meaning: chỗ trống; phòng cho thuê
+  - word: 控室
+    reading: ひかえしつ
+    meaning: phòng chờ
+  - word: 控える
+    reading: ひかえる
+    meaning: kéo vào; giữ lại; ghi chú; ôn hòa trong
+  - word: 控除
+    reading: こうじょ
+    meaning: trợ cấp; khấu trừ
 
 ### 腔 (Khang)
 
@@ -6148,14 +7369,14 @@ examples:
     reading: きみょう
     meaning: kỳ lạ; tò mò
 
-### 少 (Sa)
+### 沙 (Sa)
 
 level: N1
 meaningVi: Sa thải
 hanViet: Sa
-onyomi: ["ショウ"]
-kunyomi: ["すく.ない", "すこ.し"]
-strokeCount: 4
+onyomi: ["サ", "シャ"]
+kunyomi: ["すな", "よなげる"]
+strokeCount: 7
 writingHint: Nước ( ) thiếu ( ) sẽ bị sa thải ( ) 沙 4
 sourcePages: []
 sources:
@@ -6166,17 +7387,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Sa maps to 27 KANJIDIC2 candidates; kept extracted 少
+  - none
 examples:
-  - word: 少女
-    reading: おとめ
-    meaning: con gái;cô gái trẻ;trinh nữ;thiếu nữ;cô bé
-  - word: 少数
-    reading: しょうすう
-    meaning: thiểu số; số ít
-  - word: 減少
-    reading: げんしょう
-    meaning: giảm; giảm; suy giảm
+  - word: ご無沙汰
+    reading: ごぶさた
+    meaning: không viết hoặc liên lạc trong một thời gian
+  - word: ご無沙汰
+    reading: ごぶさた
+    meaning: không viết hoặc liên lạc trong một thời gian
+  - word: 御無沙汰
+    reading: ごぶさた
+    meaning: không viết hoặc liên lạc trong một thời gian
 
 ### 炒 (Sao)
 
@@ -6227,15 +7448,15 @@ openGaps:
 examples:
   - none
 
-### 央 (Quyết)
+### 少 (Liệt)
 
 level: N1
-meaningVi: Bí quyết
-hanViet: Quyết
-onyomi: ["オウ"]
-kunyomi: []
-strokeCount: 5
-writingHint: Nói chuyện ( ) ở trung ương ( ) cần biết bí quyết ( ) 訣 1 10
+meaningVi: Yếu kém
+hanViet: Liệt
+onyomi: ["ショウ"]
+kunyomi: ["すく.ない", "すこ.し"]
+strokeCount: 4
+writingHint: Thiếu ( ) lực ( ) bị liệt vào hàng yếu kém ( )劣 1
 sourcePages: []
 sources:
   level: ebook
@@ -6245,11 +7466,69 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Quyết maps to 34 KANJIDIC2 candidates; kept extracted 央
+  - target kanji ambiguous: Hán-Việt heading Liệt maps to 16 KANJIDIC2 candidates; kept extracted 少
 examples:
-  - word: 中央
-    reading: ちゅうおう
-    meaning: trung tâm
+  - word: 少女
+    reading: おとめ
+    meaning: con gái;cô gái trẻ;trinh nữ;thiếu nữ;cô bé
+  - word: 少数
+    reading: しょうすう
+    meaning: thiểu số; số ít
+  - word: 減少
+    reading: げんしょう
+    meaning: giảm; giảm; suy giảm
+
+### 貝 (Tân)
+
+level: N1
+meaningVi: Khách quý
+hanViet: Tân
+onyomi: ["バイ"]
+kunyomi: ["かい"]
+strokeCount: 7
+writingHint: Mừng tân gia khách quý ( ) vào nhà ( ) cho 1 ( ) ít ( ) bảo bối ( ) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Tân maps to 84 KANJIDIC2 candidates; kept extracted 貝
+examples:
+  - word: 貝殻
+    reading: かいがら
+    meaning: vỏ
+  - word: 貝殻
+    reading: かいがら
+    meaning: vỏ
+  - word: 貝
+    reading: かい
+    meaning: vỏ, động vật có vỏ
+
+### 訣 (Quyết)
+
+level: N1
+meaningVi: Bí quyết
+hanViet: Quyết
+onyomi: ["ケツ"]
+kunyomi: ["わかれ", "わかれ.る"]
+strokeCount: 11
+writingHint: Nói chuyện ( ) ở trung ương ( ) cần biết bí quyết ( ) 訣 1 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 訟 (Tụng)
 
@@ -6322,14 +7601,36 @@ openGaps:
 examples:
   - none
 
-### 異 (Dực)
+### 恭 (Cung)
+
+level: N1
+meaningVi: Cung kính
+hanViet: Cung
+onyomi: ["キョウ"]
+kunyomi: ["うやうや.しい"]
+strokeCount: 10
+writingHint: Ở nơi công cộng ( ) trái tim ( ) phải biết cung kính ( )恭 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 翼 (Dực)
 
 level: N1
 meaningVi: Cánh chim
 hanViet: Dực
-onyomi: ["イ"]
-kunyomi: ["こと", "こと.なる", "け"]
-strokeCount: 11
+onyomi: ["ヨク"]
+kunyomi: ["つばさ"]
+strokeCount: 17
 writingHint: Lông ( ) dị dạng ( ) vẫn tạo thành cánh ( )翼 1 4
 sourcePages: []
 sources:
@@ -6340,17 +7641,33 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Dực maps to 25 KANJIDIC2 candidates; kept extracted 異
+  - none
 examples:
-  - word: 異見
-    reading: いけん
-    meaning: ý kiến khác nhau; sự phản đối
-  - word: 異論
-    reading: いろん
-    meaning: ý kiến khác nhau; sự phản đối
-  - word: 異議
-    reading: いぎ
-    meaning: phản đối; bất đồng quan điểm; phản đối
+  - word: 翼
+    reading: つばさ
+    meaning: cánh
+
+### 糞 (Phẩn)
+
+level: N1
+meaningVi: Phân
+hanViet: Phẩn
+onyomi: ["フン"]
+kunyomi: ["くそ"]
+strokeCount: 17
+writingHint: Ăn gạo ( ) dị dạng ( ) đi ngoài ra phân ( ) 糞 1 4 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 智 (Trí)
 
@@ -6407,12 +7724,12 @@ examples:
 ### 疾 (Tật)
 
 level: N1
-meaningVi: Ghen ghét
+meaningVi: Bệnh tật
 hanViet: Tật
 onyomi: ["シツ"]
 kunyomi: ["はや.い"]
 strokeCount: 10
-writingHint: Phụ nữ ( ) có tật ( ) hay ghen ghét ( ) 嫉 4
+writingHint: Bị bệnh ( ) do trúng tên ( ) chữa khỏi cũng thành tật ( ) 疾 1
 sourcePages: []
 sources:
   level: ebook
@@ -6430,6 +7747,61 @@ examples:
   - word: 疾っくに
     reading: とっくに
     meaning: đã lâu lắm rồi
+
+### 嫉 (Tật)
+
+level: N1
+meaningVi: Ghen ghét
+hanViet: Tật
+onyomi: ["シツ"]
+kunyomi: ["そね.む", "ねた.む", "にく.む"]
+strokeCount: 13
+writingHint: Phụ nữ ( ) có tật ( ) hay ghen ghét ( ) 嫉 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 嫉妬
+    reading: しっと
+    meaning: sự ghen tị
+  - word: 嫉妬
+    reading: しっと
+    meaning: sự ghen tị
+
+### 挨 (Ai)
+
+level: N1
+meaningVi: Chào hỏi
+hanViet: Ai
+onyomi: ["アイ"]
+kunyomi: ["ひら.く"]
+strokeCount: 10
+writingHint: Tay ( ) cầm 4 ( ) mũi tên ( ) gặp ai cũng chào hỏi ( )挨 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 挨拶
+    reading: あいさつ
+    meaning: lời chào
+  - word: 挨拶
+    reading: あいさつ
+    hanViet: ai tạt
+    meaning: lời chào, chào hỏi
 
 ### 内 (Bính)
 
@@ -6483,6 +7855,33 @@ openGaps:
 examples:
   - none
 
+### 拐 (Quải)
+
+level: N1
+meaningVi: Bắt cóc
+hanViet: Quải
+onyomi: ["カイ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Tay ( ) bịt miệng ( ) kề đao ( ) là bắt cóc ( ) 拐 2 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 拐う
+    reading: さらう
+    meaning: mang đi; bỏ trốn; bắt cóc; bắt cóc
+  - word: 拐う
+    reading: さらう
+    meaning: mang đi; bỏ trốn; bắt cóc
+
 ### 止 (Chỉ)
 
 level: N1
@@ -6513,14 +7912,14 @@ examples:
     reading: やむをえない
     meaning: không thể giúp được; không thể tránh khỏi
 
-### 卩 (Tá)
+### 卸 (Tá)
 
 level: N1
 meaningVi: Bán sĩ
 hanViet: Tá
-onyomi: ["セツ"]
-kunyomi: ["わりふ"]
-strokeCount: 2
+onyomi: ["シャ"]
+kunyomi: ["おろ.す", "おろし", "おろ.し"]
+strokeCount: 9
 writingHint: Buổi trưa ( ) dừng ( ) bán để tiết ( ) kiệm hàng cho bán sỉ ( ) 卸 1
 sourcePages: []
 sources:
@@ -6529,12 +7928,16 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tá maps to 39 KANJIDIC2 candidates; kept extracted 卩
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 卸す
+    reading: おろす
+    meaning: bán sỉ, xay (rau củ)
+  - word: 卸す
+    reading: おろす
+    meaning: bán buôn; bào nhỏ
 
 ### 寛 (Khoan)
 
@@ -6593,15 +7996,37 @@ examples:
     reading: みとおし
     meaning: quan điểm; tầm nhìn không bị cản trở; tầm nhìn; dự báo; triển vọng; cái nhìn sâu sắc
 
-### 規 (Khuy)
+### 窺 (Khuy)
 
 level: N1
 meaningVi: Dòm, ngó
 hanViet: Khuy
 onyomi: ["キ"]
-kunyomi: []
-strokeCount: 11
+kunyomi: ["うかが.う", "のぞく"]
+strokeCount: 16
 writingHint: Cái lỗ ( ) có quy tắc ( ) không được nhòm ngó ( ) 窺 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 系 (Hệ)
+
+level: N1
+meaningVi: Hệ thống
+hanViet: Hệ
+onyomi: ["ケイ"]
+kunyomi: []
+strokeCount: 7
+writingHint: 1 ( ) sợi tơ ( ) cũng tạo nên hệ thống ( ) 系 1
 sourcePages: []
 sources:
   level: ebook
@@ -6611,17 +8036,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khuy maps to 5 KANJIDIC2 candidates; kept extracted 規
+  - none
 examples:
-  - word: 正規
-    reading: せいき
-    meaning: thường xuyên; hợp pháp; chính thức; được thành lập; hợp pháp
-  - word: 規格
-    reading: きかく
-    meaning: tiêu chuẩn; chuẩn mực
-  - word: 規制
-    reading: きせい
-    meaning: quy định
+  - word: 系
+    reading: けい
+    meaning: hệ thống; dòng dõi; nhóm
+  - word: 系
+    reading: けい
+    meaning: hệ thống; dòng dõi; nhóm
+  - word: 体系
+    reading: たいけい
+    meaning: hệ thống, tổ chức
 
 ### 田 (Tốn)
 
@@ -6653,15 +8078,45 @@ examples:
     reading: すいでん
     meaning: (đầy nước) ruộng lúa
 
-### 冖 (Tác)
+### 糸 (Tác)
 
 level: N1
 meaningVi: Tìm kiếm
 hanViet: Tác
-onyomi: ["ベキ"]
-kunyomi: []
-strokeCount: 2
+onyomi: ["シ"]
+kunyomi: ["いと"]
+strokeCount: 6
 writingHint: Tìm kiếm ( ) 10 ( ) khăn trùm ( ) bằng tơ ( ) 糸 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Tác maps to 29 KANJIDIC2 candidates; kept extracted 糸
+examples:
+  - word: 毛糸
+    reading: けいと
+    meaning: đan len
+  - word: 毛糸
+    reading: けいと
+    meaning: len đan
+  - word: 糸
+    reading: いと
+    meaning: chủ đề
+
+### 累 (Loa)
+
+level: N1
+meaningVi: Con ốc
+hanViet: Loa
+onyomi: ["ルイ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Ốc ( ) bắt côn trùng ( ) làm thức ăn tích lũy ( ) 累 8
 sourcePages: []
 sources:
   level: ebook
@@ -6671,7 +8126,7 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tác maps to 29 KANJIDIC2 candidates; kept extracted 冖
+  - target kanji ambiguous: Hán-Việt heading Loa maps to 26 KANJIDIC2 candidates; kept extracted 累
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -6729,14 +8184,14 @@ openGaps:
 examples:
   - none
 
-### 斤 (Cần)
+### 芹 (Cần)
 
 level: N1
 meaningVi: Rau cần
 hanViet: Cần
 onyomi: ["キン"]
-kunyomi: []
-strokeCount: 4
+kunyomi: ["せり"]
+strokeCount: 7
 writingHint: Cô Thảo ( ) cầm rìu ( ) đi cắt rau cần ( ) 芹 2 3
 sourcePages: []
 sources:
@@ -6781,6 +8236,55 @@ examples:
     reading: くっせつ
     meaning: sự uốn cong; vết lõm; khúc xạ
 
+### 逝 (Thệ)
+
+level: N1
+meaningVi: Chết
+hanViet: Thệ
+onyomi: ["セイ"]
+kunyomi: ["ゆ.く", "い.く"]
+strokeCount: 10
+writingHint: Chiết ( ) cây đi xa ( ) sẽ chết ( )逝 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 誓 (Thệ)
+
+level: N1
+meaningVi: Thề
+hanViet: Thệ
+onyomi: ["セイ"]
+kunyomi: ["ちか.う"]
+strokeCount: 14
+writingHint: Chiết ( ) lời ( ) hay ý đẹp để thề ( ) 誓 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 誓う
+    reading: ちかう
+    meaning: thề, thề, tuyên thệ, thề
+  - word: 誓う
+    reading: ちかう
+    meaning: thề; tuyên thệ
+
 ### 匠 (Tượng)
 
 level: N1
@@ -6803,14 +8307,38 @@ openGaps:
 examples:
   - none
 
-### 丶 (Xích)
+### 析 (Tích)
+
+level: N1
+meaningVi: Phân tích
+hanViet: Tích
+onyomi: ["セキ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Chặt cây ( ) bằng rìu ( ) mang đi phân tích ( ) 析 2 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 分析
+    reading: ぶんせき
+    meaning: phân tích
+
+### 斥 (Xích)
 
 level: N1
 meaningVi: Bài xích
 hanViet: Xích
-onyomi: ["チュ"]
-kunyomi: []
-strokeCount: 1
+onyomi: ["セキ"]
+kunyomi: ["しりぞ.ける"]
+strokeCount: 5
 writingHint: Cái rìu ( ) bị ông chủ ( ) bài xích ( ) 斥 1
 sourcePages: []
 sources:
@@ -6821,19 +8349,18 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Xích maps to 8 KANJIDIC2 candidates; kept extracted 丶
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 女 (Lâu)
+### 楼 (Lâu)
 
 level: N1
 meaningVi: Lâu đài
 hanViet: Lâu
-onyomi: ["ジョ", "ニョ", "ニョウ"]
-kunyomi: ["おんな", "め"]
-strokeCount: 3
+onyomi: ["ロウ"]
+kunyomi: ["たかどの"]
+strokeCount: 13
 writingHint: Cây ( ) gạo ( ) người phụ nữ ( ) trồng cạnh lâu đài ( ) 楼 2 8 6
 sourcePages: []
 sources:
@@ -6842,28 +8369,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lâu maps to 27 KANJIDIC2 candidates; kept extracted 女
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 少女
-    reading: おとめ
-    meaning: con gái;cô gái trẻ;trinh nữ;thiếu nữ;cô bé
-  - word: 女子
-    reading: おなご
-    meaning: người phụ nữ; cô gái
-  - word: 女史
-    reading: じょし
-    meaning: Cô.
+  - none
 
-### 未 (Muội)
+### 昧 (Muội)
 
 level: N1
 meaningVi: Ngu muội
 hanViet: Muội
-onyomi: ["ミ", "ビ"]
-kunyomi: ["いま.だ", "ま.だ", "ひつじ"]
-strokeCount: 5
+onyomi: ["マイ", "バイ"]
+kunyomi: ["くら.い", "むさぼ.る"]
+strokeCount: 9
 writingHint: Ngày ( ) tuổi vị thành niên ( ) vẫn còn ngu muội ( ) 昧 7
 sourcePages: []
 sources:
@@ -6874,27 +8393,24 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Muội maps to 6 KANJIDIC2 candidates; kept extracted 未
+  - none
 examples:
-  - word: 未だ
-    reading: いまだ
-    meaning: cho đến nay; chưa (phủ định)
-  - word: 未開
-    reading: みかい
-    meaning: vùng đất hoang vu; vùng lạc hậu; không văn minh
-  - word: 未定
-    reading: みてい
-    meaning: chưa được xác định; chưa quyết định; đang chờ xử lý
+  - word: 曖昧
+    reading: あいまい
+    meaning: mơ hồ; mơ hồ
+  - word: 曖昧
+    reading: あいまい
+    meaning: mơ hồ; không rõ ràng
 
-### 末 (Mạt)
+### 魅 (Mị)
 
 level: N1
-meaningVi: Mạt sát
-hanViet: Mạt
-onyomi: ["マツ", "バツ"]
-kunyomi: ["すえ", "うら", "うれ"]
-strokeCount: 5
-writingHint: Tay ( ) mạt ( ) sát ( ) 抹 2 6
+meaningVi: Ma mị
+hanViet: Mị
+onyomi: ["ミ"]
+kunyomi: []
+strokeCount: 15
+writingHint: Con quỷ ( ) tuổi vị thành niên ( ) rất ma mị ( ) 魅 1 13
 sourcePages: []
 sources:
   level: ebook
@@ -6906,15 +8422,53 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 期末
-    reading: きまつ
-    meaning: cuối kỳ
-  - word: 始末
-    reading: しまつ
-    meaning: quản lý;giao dịch;giải quyết;dọn dẹp sau đó
-  - word: 粉末
-    reading: ふんまつ
-    meaning: bột mịn
+  - word: 魅力
+    reading: みりょく
+    meaning: sự quyến rũ
+
+### 抹 (Mạt)
+
+level: N1
+meaningVi: Mạt sát
+hanViet: Mạt
+onyomi: ["マツ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Tay ( ) mạt ( ) sát ( ) 抹 2 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 沫 (Mạt)
+
+level: N1
+meaningVi: Bọt
+hanViet: Mạt
+onyomi: ["マツ", "バツ"]
+kunyomi: ["あわ", "しぶき", "つばき"]
+strokeCount: 8
+writingHint: Nước ( ) mạt ( ) hạng là nước bọt ( ) 沫 1 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 朱 (Chu)
 
@@ -6941,15 +8495,15 @@ examples:
     hanViet: cho
     meaning: màu đỏ tươi, mào son
 
-### 歹 (Thù)
+### 珠 (Châu)
 
 level: N1
-meaningVi: Đặc thù
-hanViet: Thù
-onyomi: ["ガツ", "ガチ", "タイ"]
-kunyomi: []
-strokeCount: 4
-writingHint: Đặc thù ( ) của chết ngạt ( ) là máu không còn màu đỏ tươi ( )朱 8
+meaningVi: Châu báu
+hanViet: Châu
+onyomi: ["シュ"]
+kunyomi: ["たま"]
+strokeCount: 10
+writingHint: Vua ( ) số đỏ ( ) có rất nhiều châu báu ( ) 珠 8
 sourcePages: []
 sources:
   level: ebook
@@ -6957,12 +8511,16 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thù maps to 122 KANJIDIC2 candidates; kept extracted 歹
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 真珠
+    reading: しんじゅ
+    meaning: ngọc trai
+  - word: 真珠
+    reading: しんじゅ
+    meaning: ngọc trai
 
 ### 非 (Bồi)
 
@@ -7046,15 +8604,15 @@ openGaps:
 examples:
   - none
 
-### 文 (Phỉ)
+### 扉 (Phi)
 
 level: N1
-meaningVi: Văn vẻ
-hanViet: Phỉ
-onyomi: ["ブン", "モン"]
-kunyomi: ["ふみ", "あや"]
-strokeCount: 4
-writingHint: Sự phi thường ( ) của văn học ( ) là sự văn vẻ ( ) 斐 1 5
+meaningVi: Cánh cửa
+hanViet: Phi
+onyomi: ["ヒ"]
+kunyomi: ["とびら"]
+strokeCount: 12
+writingHint: Cánh cửa ( ) phi thường ( ) vẫn chỉ là cánh cửa ( ) 扉 1
 sourcePages: []
 sources:
   level: ebook
@@ -7064,26 +8622,45 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phỉ maps to 66 KANJIDIC2 candidates; kept extracted 文
+  - none
 examples:
-  - word: 本文
-    reading: ほんぶん
-    meaning: văn bản (tài liệu); nội dung (của thư)
-  - word: 文語
-    reading: ぶんご
-    meaning: ngôn ngữ viết; ngôn ngữ văn học
-  - word: 文化財
-    reading: ぶんかざい
-    meaning: tài sản văn hóa; tài sản văn hóa
+  - word: 扉
+    reading: とびら
+    meaning: cửa; mở
+  - word: 扉
+    reading: とびら
+    meaning: cửa; mở
 
-### 息 (Khế)
+### 斐 (Phỉ)
+
+level: N1
+meaningVi: Văn vẻ
+hanViet: Phỉ
+onyomi: ["ヒ", "イ"]
+kunyomi: []
+strokeCount: 12
+writingHint: Sự phi thường ( ) của văn học ( ) là sự văn vẻ ( ) 斐 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 憩 (Khế)
 
 level: N1
 meaningVi: Nghỉ ngơi
 hanViet: Khế
-onyomi: ["ソク"]
-kunyomi: ["いき"]
-strokeCount: 10
+onyomi: ["ケイ"]
+kunyomi: ["いこ.い", "いこ.う"]
+strokeCount: 16
 writingHint: Lè lưỡi ( ) thở ( ) hổn hển mỗi khi nghỉ ngơi ( ) 憩 1 7
 sourcePages: []
 sources:
@@ -7094,17 +8671,49 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khế maps to 24 KANJIDIC2 candidates; kept extracted 息
+  - none
 examples:
-  - word: 窒息
-    reading: ちっそく
-    meaning: sự nghẹt thở
-  - word: 子息
-    reading: しそく
-    meaning: con trai
-  - word: 一息
-    reading: ひといき
-    meaning: sưng húp; một hơi thở; một sự dừng lại; một nỗ lực
+  - word: 休憩
+    reading: きゅうけい
+    meaning: nghỉ; tạm nghỉ
+  - word: 休憩
+    reading: きゅうけい
+    hanViet: Hưu Khế
+    meaning: nghỉ giải lao
+  - word: 休憩します
+    reading: きゅうけいします
+    hanViet: hưu khế
+    meaning: nghỉ giải lao
+
+### 臭 (Xú)
+
+level: N1
+meaningVi: Hôi thối
+hanViet: Xú
+onyomi: ["シュウ"]
+kunyomi: ["くさ.い", "にお.い"]
+strokeCount: 10
+writingHint: Ngời tự cao tự ( ) đại ( ) thường bốc mùi hôi thối ( ) 臭 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Xú maps to 21 KANJIDIC2 candidates; kept extracted 臭
+examples:
+  - word: 生臭い
+    reading: なまぐさい
+    meaning: mùi cá hoặc máu; cá hoặc thịt
+  - word: 生臭い
+    reading: なまぐさい
+    meaning: mùi cá hoặc máu; cá hoặc thịt
+  - word: 面倒臭い
+    reading: めんどうくさい
+    meaning: bận tâm làm, mệt mỏi
 
 ### 嗅 (Khứu)
 
@@ -7133,14 +8742,14 @@ examples:
     reading: かぐ
     meaning: ngửi; đánh hơi
 
-### 干 (Hãn)
+### 鼾 (Hãn)
 
 level: N1
 meaningVi: Ngủ ngáy
 hanViet: Hãn
 onyomi: ["カン"]
-kunyomi: ["ほ.す", "ほ.し-", "-ぼ.し", "ひ.る"]
-strokeCount: 3
+kunyomi: ["いびき"]
+strokeCount: 17
 writingHint: Mũi ( ) khô ( ) là bị ngủ ngáy ( ) 鼾 1
 sourcePages: []
 sources:
@@ -7151,17 +8760,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hãn maps to 59 KANJIDIC2 candidates; kept extracted 干
+  - none
 examples:
-  - word: 干渉
-    reading: かんしょう
-    meaning: sự can thiệp; sự can thiệp
-  - word: 梅干
-    reading: うめぼし
-    meaning: mận khô
-  - word: 干し物
-    reading: ほしもの
-    meaning: giặt khô (quần áo)
+  - word: 鼾
+    reading: いびき
+    meaning: ngáy
+  - word: 鼾
+    reading: いびき
+    meaning: ngáy
 
 ### 客 (Khách)
 
@@ -7193,14 +8799,14 @@ examples:
     reading: じょうかく
     meaning: hành khách
 
-### 各 (Lạc)
+### 酪 (Lạc)
 
 level: N1
 meaningVi: Bơ lạc
 hanViet: Lạc
-onyomi: ["カク"]
-kunyomi: ["おのおの"]
-strokeCount: 6
+onyomi: ["ラク"]
+kunyomi: []
+strokeCount: 13
 writingHint: Giờ Dậu ( ) các vị ( )) uống rượu với bơ lạc ( ) 酪 8 9
 sourcePages: []
 sources:
@@ -7211,26 +8817,45 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lạc maps to 33 KANJIDIC2 candidates; kept extracted 各
+  - none
 examples:
-  - word: 各
-    reading: おのおの
-    meaning: mỗi;mỗi;hoặc;tương ứng;nhiều
-  - word: 各種
-    reading: かくしゅ
-    meaning: đủ loại; đủ loại
-  - word: 各々
-    reading: それぞれ
-    meaning: mỗi;mỗi;hoặc;tương ứng;nhiều
+  - word: 酪農
+    reading: らくのう
+    meaning: sữa (trang trại)
+  - word: 酪農
+    reading: らくのう
+    meaning: sữa (trang trại)
 
-### 路 (Lộ)
+### 賂 (Lộ)
+
+level: N1
+meaningVi: Hối lộ
+hanViet: Lộ
+onyomi: ["ロ"]
+kunyomi: ["まいな.い", "まいな.う"]
+strokeCount: 13
+writingHint: Mang bảo bối ( ) của các vị ( ) đi hối lộ ( ) 賂 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 露 (Lộ)
 
 level: N1
 meaningVi: Sương
 hanViet: Lộ
-onyomi: ["ロ", "ル"]
-kunyomi: ["-じ", "みち"]
-strokeCount: 13
+onyomi: ["ロ", "ロウ"]
+kunyomi: ["つゆ"]
+strokeCount: 21
 writingHint: Mưa ( ) trên đường ( ) lộ ra sương ( ) 露 1
 sourcePages: []
 sources:
@@ -7243,15 +8868,15 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 回路
-    reading: かいろ
-    meaning: mạch (điện)
-  - word: 海路
-    reading: うみじ
-    meaning: tuyến đường biển
-  - word: 経路
-    reading: けいろ
-    meaning: khóa học; lộ trình; kênh
+  - word: 露
+    reading: つゆ
+    meaning: sương
+  - word: 暴露
+    reading: ばくろ
+    meaning: sự tiết lộ; sự phơi bày; sự tiết lộ
+  - word: 露骨
+    reading: ろこつ
+    meaning: 1. thẳng thắn;thẳng thắn;thẳng thắn;thẳng thắn; 2. dễ thấy; lộ liễu; 3. rộng rãi; gợi ý
 
 ### 妥 (Thỏa)
 
@@ -7283,14 +8908,14 @@ examples:
     reading: だきょう
     meaning: thỏa hiệp; nhượng bộ
 
-### 如 (Như)
+### 茹 (Như)
 
 level: N1
 meaningVi: Luộc
 hanViet: Như
 onyomi: ["ジョ", "ニョ"]
-kunyomi: ["ごと.し"]
-strokeCount: 6
+kunyomi: ["ゆ.でる", "う.でる"]
+strokeCount: 9
 writingHint: Cô Thảo ( ) hình như ( ) đang luộc ( ) rau茹 2 3
 sourcePages: []
 sources:
@@ -7303,25 +8928,66 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 如何しても
-    reading: どうしても
-    meaning: bằng mọi cách;bằng mọi giá;bất kể thế nào;rốt cuộc;về lâu dài;thèm muốn;bằng mọi giá;chắc chắn
-  - word: 如何
-    reading: いかが
-    meaning: bằng cách nào; bằng cách nào
-  - word: 突如
-    reading: とつじょ
-    meaning: đột ngột; đột nhiên
+  - word: 茹でる
+    reading: ゆでる
+    meaning: đun sôi
+  - word: 茹でる
+    reading: ゆでる
+    meaning: đun sôi
 
-### 安 (Án)
+### 按 (Án)
 
 level: N1
 meaningVi: An bài
 hanViet: Án
 onyomi: ["アン"]
-kunyomi: ["やす.い", "やす.まる", "やす", "やす.らか"]
-strokeCount: 6
+kunyomi: ["おさ.える", "しら.べる"]
+strokeCount: 9
 writingHint: Tay ( ) an ( ) bài ( ) 按 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 汝 (Nhữ)
+
+level: N1
+meaningVi: Mày
+hanViet: Nhữ
+onyomi: ["ジョ"]
+kunyomi: ["なんじ", "なれ", "い", "うぬ", "いまし", "し", "しゃ", "な"]
+strokeCount: 6
+writingHint: Đây là nước ( ) hoa của phụ nữ ( ) hả mày ( )? 汝 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 奴 (Nô)
+
+level: N1
+meaningVi: Nô lệ
+hanViet: Nô
+onyomi: ["ド"]
+kunyomi: ["やつ", "やっこ"]
+strokeCount: 5
+writingHint: Người phụ nữ ( ) lại ( ) là nô lệ ( ) 奴 1
 sourcePages: []
 sources:
   level: ebook
@@ -7333,25 +8999,22 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 安っぽい
-    reading: やすっぽい
-    meaning: trông rẻ tiền; tầm thường; tầm thường
-  - word: 治安
-    reading: ちあん
-    meaning: trật tự công cộng
-  - word: 安静
-    reading: あんせい
-    meaning: nghỉ ngơi
+  - word: 奴
+    reading: やっこ
+    meaning: người hầu; bạn đồng hành
+  - word: 奴
+    reading: やっこ
+    meaning: người hầu; bạn đồng hành
 
-### 又 (Nô)
+### 肝 (Can)
 
 level: N1
-meaningVi: Nô lệ
-hanViet: Nô
-onyomi: ["ユウ"]
-kunyomi: ["また", "また-", "また.の-"]
-strokeCount: 2
-writingHint: Người phụ nữ ( ) lại ( ) là nô lệ ( ) 奴 1
+meaningVi: Gan
+hanViet: Can
+onyomi: ["カン"]
+kunyomi: ["きも"]
+strokeCount: 7
+writingHint: Nguyệt ( ) bị khô ( ) gan ( ) 肝 2 5
 sourcePages: []
 sources:
   level: ebook
@@ -7361,17 +9024,63 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nô maps to 14 KANJIDIC2 candidates; kept extracted 又
+  - none
 examples:
-  - word: 又は
-    reading: または
-    meaning: hoặc, nếu không
-  - word: 又は
-    reading: または
-    meaning: hoặc; hay là
-  - word: 又
-    reading: また
-    meaning: một lần nữa; và
+  - word: 肝心
+    reading: かんじん
+    meaning: thiết yếu;cơ bản;quan trọng;quan trọng;chính
+  - word: 肝心
+    reading: かんじん
+    meaning: thiết yếu; cơ bản; quan trọng; chính
+
+### 竿 (Can)
+
+level: N1
+meaningVi: Cần câu
+hanViet: Can
+onyomi: ["カン"]
+kunyomi: ["さお"]
+strokeCount: 9
+writingHint: Cây trúc ( ) khô ( ) dùng làm cần câu ( ) 竿 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 竿
+    reading: さお
+    meaning: thanh; cực (ví dụ: để sấy đồ giặt)
+  - word: 竿
+    reading: さお
+    meaning: thanh; cực (ví dụ: để sấy đồ giặt)
+
+### 芋 (Dụ)
+
+level: N1
+meaningVi: Củ khoai
+hanViet: Dụ
+onyomi: ["ウ"]
+kunyomi: ["いも"]
+strokeCount: 6
+writingHint: Cỏ ( ) khô ( ) dùng nướng khoai ( ) 芋 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 迂 (Vu)
 
@@ -7395,15 +9104,15 @@ openGaps:
 examples:
   - none
 
-### 平 (Xứng)
+### 平 (Bình)
 
 level: N1
-meaningVi: Cái cân
-hanViet: Xứng
+meaningVi: Đo đất
+hanViet: Bình
 onyomi: ["ヘイ", "ビョウ", "ヒョウ"]
 kunyomi: ["たい.ら", "たい.らげる", "ひら"]
 strokeCount: 5
-writingHint: Lúa ( ) Bình ( ) mang ra cân ( ) 秤 1 6
+writingHint: Đo ( ) đất ( ) của Bình ( ) 平 2 4
 sourcePages: []
 sources:
   level: ebook
@@ -7413,7 +9122,7 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Xứng maps to 16 KANJIDIC2 candidates; kept extracted 平
+  - none
 examples:
   - word: 平方
     reading: へいほう
@@ -7425,15 +9134,15 @@ examples:
     reading: ならし
     meaning: sự cân bằng;sự cân bằng;trung bình;trung bình
 
-### 匚 (Nặc)
+### 秤 (Xứng)
 
 level: N1
-meaningVi: Nặc danh
-hanViet: Nặc
-onyomi: ["ホウ"]
-kunyomi: []
-strokeCount: 2
-writingHint: Thư nặc danh ( ) giấu trong tủ ( ) của người trẻ ( )若 1
+meaningVi: Cái cân
+hanViet: Xứng
+onyomi: ["ショウ", "ヒン", "ビン"]
+kunyomi: ["はかり"]
+strokeCount: 10
+writingHint: Lúa ( ) Bình ( ) mang ra cân ( ) 秤 1 6
 sourcePages: []
 sources:
   level: ebook
@@ -7441,22 +9150,26 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nặc maps to 7 KANJIDIC2 candidates; kept extracted 匚
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 秤
+    reading: はかり
+    meaning: cân, máy cân
+  - word: 秤
+    reading: はかり
+    meaning: cân; cái cân
 
 ### 若 (Nặc)
 
 level: N1
-meaningVi: Đồng ý
+meaningVi: Nặc danh
 hanViet: Nặc
 onyomi: ["ジャク", "ニャク", "ニャ"]
 kunyomi: ["わか.い", "わか-", "も.しくわ", "も.し", "も.しくは", "ごと.し"]
 strokeCount: 8
-writingHint: Đồng ý ( ) nói chuyện ( ) với người trẻ ( ) 1 9 10
+writingHint: Thư nặc danh ( ) giấu trong tủ ( ) của người trẻ ( )若 1
 sourcePages: []
 sources:
   level: ebook
@@ -7501,14 +9214,74 @@ openGaps:
 examples:
   - none
 
-### 廾 (Táng)
+### 烈 (Liệt)
+
+level: N1
+meaningVi: Mãnh liệt
+hanViet: Liệt
+onyomi: ["レツ"]
+kunyomi: ["はげ.しい"]
+strokeCount: 10
+writingHint: Liệt ( ) thêm lửa ( ) thành mãnh liệt ( ) 烈 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 猛烈
+    reading: もうれつ
+    meaning: bạo lực; kịch liệt; giận dữ
+  - word: 強烈
+    reading: きょうれつ
+    meaning: mạnh mẽ; dữ dội; nghiêm trọng
+  - word: 強烈
+    reading: きょうれつ
+    meaning: mạnh mẽ; dữ dội; nghiêm trọng
+
+### 裂 (Liệt)
+
+level: N1
+meaningVi: Xé rách
+hanViet: Liệt
+onyomi: ["レツ"]
+kunyomi: ["さ.く", "さ.ける", "-ぎ.れ"]
+strokeCount: 12
+writingHint: Liệt ( ) kê những bộ y phục ( ) bị xé rách ( )裂 5 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 破裂
+    reading: はれつ
+    meaning: vụ nổ;vỡ;tách ra
+  - word: 分裂
+    reading: ぶんれつ
+    meaning: chia tay; chia tay; chia tay
+  - word: 裂ける
+    reading: さける
+    meaning: tách ra; xé ra; vỡ ra
+
+### 葬 (Táng)
 
 level: N1
 meaningVi: Mai táng
 hanViet: Táng
-onyomi: ["キョウ", "ク"]
-kunyomi: ["にじゅう"]
-strokeCount: 3
+onyomi: ["ソウ"]
+kunyomi: ["ほうむ.る"]
+strokeCount: 12
 writingHint: Cô Thảo ( ) chết ( ) chắp tay ( ) mai táng ( ) 葬 2 3
 sourcePages: []
 sources:
@@ -7517,12 +9290,19 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Táng maps to 45 KANJIDIC2 candidates; kept extracted 廾
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 葬る
+    reading: ほうむる
+    meaning: chôn; chôn; chôn; gửi vào quên lãng; cất vào tủ
+  - word: 葬る
+    reading: ほうむる
+    meaning: chôn; gửi vào quên lãng; cất vào tủ
+  - word: 葬式
+    reading: そうしき
+    meaning: tang lễ
 
 ### 漬 (Tí)
 
@@ -7570,15 +9350,15 @@ openGaps:
 examples:
   - none
 
-### 丁 (Đính)
+### 丁 (Đinh)
 
 level: N1
-meaningVi: Đính chính
-hanViet: Đính
+meaningVi: Cái đinh
+hanViet: Đinh
 onyomi: ["チョウ", "テイ", "チン", "トウ", "チ"]
 kunyomi: ["ひのと"]
 strokeCount: 2
-writingHint: Nói ( ) chắc như đinh ( ) không cần đính chính ( ) 訂 1
+writingHint: Đinh ( ) vàng ( ) thì vẫn là đinh ( ) 丁 1
 sourcePages: []
 sources:
   level: ebook
@@ -7599,6 +9379,36 @@ examples:
   - word: 丁目
     reading: ちょうめ
     meaning: quận của một thị trấn; khối thành phố (có kích thước không đều)
+
+### 訂 (Đính)
+
+level: N1
+meaningVi: Đính chính
+hanViet: Đính
+onyomi: ["テイ"]
+kunyomi: ["ただ.す"]
+strokeCount: 9
+writingHint: Nói ( ) chắc như đinh ( ) không cần đính chính ( ) 訂 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 改訂
+    reading: かいてい
+    meaning: sửa đổi
+  - word: 訂正
+    reading: ていせい
+    meaning: sửa lại; sửa đổi
+  - word: 改訂
+    reading: かいてい
+    meaning: sửa đổi
 
 ### 寧 (Ninh)
 
@@ -7653,14 +9463,37 @@ openGaps:
 examples:
   - none
 
-### 隹 (Chuy)
+### 隹 (Chuẩn)
+
+level: N1
+meaningVi: Phê chuẩn
+hanViet: Chuẩn
+onyomi: ["サイ", "スイ"]
+kunyomi: ["とり"]
+strokeCount: 8
+writingHint: Phê chuẩn ( ) đóng băng ( ) con chim ( ) 隹 3 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Chuẩn maps to 14 KANJIDIC2 candidates; kept extracted 隹
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 椎 (Chuy)
 
 level: N1
 meaningVi: Cột sống
 hanViet: Chuy
-onyomi: ["サイ", "スイ"]
-kunyomi: ["とり"]
-strokeCount: 8
+onyomi: ["ツイ", "スイ"]
+kunyomi: ["つち", "う.つ"]
+strokeCount: 12
 writingHint: Từ trên cây ( ) chim ( ) bị ngã gãy cả cột sống ( ) 椎 2 5 7
 sourcePages: []
 sources:
@@ -7705,15 +9538,15 @@ examples:
     reading: ようち
     meaning: trẻ con; non nớt
 
-### 維 (La)
+### 推 (Suy)
 
 level: N1
-meaningVi: La bàn
-hanViet: La
-onyomi: ["イ"]
-kunyomi: []
-strokeCount: 14
-writingHint: Võng ( ) của Duy ( ) có đặt la bàn ( ) 羅 2
+meaningVi: Suy tính
+hanViet: Suy
+onyomi: ["スイ"]
+kunyomi: ["お.す"]
+strokeCount: 11
+writingHint: Tay ( ) vừa cầm chim ( ) vừa suy tính ( ) 推 2 4 6
 sourcePages: []
 sources:
   level: ebook
@@ -7723,27 +9556,49 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading La maps to 15 KANJIDIC2 candidates; kept extracted 維
+  - target kanji ambiguous: Hán-Việt heading Suy maps to 13 KANJIDIC2 candidates; kept extracted 推
 examples:
-  - word: 繊維
-    reading: せんい
-    meaning: sợi; chất xơ; dệt may
-  - word: 繊維
-    reading: せんい
-    meaning: sợi; chất xơ; dệt may
-  - word: 維持
-    reading: いじ
-    meaning: bảo trì; bảo quản
+  - word: 類推
+    reading: るいすい
+    meaning: sự so sánh
+  - word: 推測
+    reading: すいそく
+    meaning: phỏng đoán; phỏng đoán
+  - word: 推進
+    reading: すいしん
+    meaning: lực đẩy; động lực
 
-### 焦 (Tiều)
+### 羅 (La)
 
 level: N1
-meaningVi: Đá ngầm
-hanViet: Tiều
+meaningVi: La bàn
+hanViet: La
+onyomi: ["ラ"]
+kunyomi: ["うすもの"]
+strokeCount: 19
+writingHint: Võng ( ) của Duy ( ) có đặt la bàn ( ) 羅 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 焦 (Tiêu)
+
+level: N1
+meaningVi: Cháy
+hanViet: Tiêu
 onyomi: ["ショウ"]
 kunyomi: ["こ.げる", "こ.がす", "こ.がれる", "あせ.る", "じ.れる", "じ.らす"]
 strokeCount: 12
-writingHint: Đá ( ) cháy ( ) ngầm ( ) 礁 6 8
+writingHint: Chim ( ) bị lửa ( ) đốt cháy ( ) 焦 1 3
 sourcePages: []
 sources:
   level: ebook
@@ -7765,15 +9620,59 @@ examples:
     reading: あせる
     meaning: vội vàng; thiếu kiên nhẫn
 
-### 雇 (Cố)
+### 礁 (Tiều)
 
 level: N1
-meaningVi: Hồi tưởng
-hanViet: Cố
-onyomi: ["コ"]
-kunyomi: ["やと.う"]
-strokeCount: 12
-writingHint: Hồi tưởng ( ) lại việc cố thuê mướn ( ) bằng tiền giấy ( ) 頁 1 13
+meaningVi: Đá ngầm
+hanViet: Tiều
+onyomi: ["ショウ"]
+kunyomi: []
+strokeCount: 17
+writingHint: Đá ( ) cháy ( ) ngầm ( ) 礁 6 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 蕉 (Tiêu)
+
+level: N1
+meaningVi: Chuối tiêu
+hanViet: Tiêu
+onyomi: ["ショウ"]
+kunyomi: []
+strokeCount: 15
+writingHint: Cô Thảo ( ) đốt cháy ( ) cả vườn chuối ( ) 蕉 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 躍 (Dược)
+
+level: N1
+meaningVi: Nhảy múa
+hanViet: Dược
+onyomi: ["ヤク"]
+kunyomi: ["おど.る"]
+strokeCount: 21
+writingHint: Chân ( ) 2 Em ( ) chim ( ) đang nhảy múa ( ) 躍 8 11
 sourcePages: []
 sources:
   level: ebook
@@ -7785,15 +9684,138 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 雇用
-    reading: こよう
-    meaning: việc làm (dài hạn); thuê
-  - word: 雇用
-    reading: こよう
-    meaning: việc làm (dài hạn); thuê
-  - word: 雇う
-    reading: やとう
-    meaning: tuyển dụng; thuê
+  - word: 活躍
+    reading: かつやく
+    meaning: hoạt động
+  - word: 活躍
+    reading: かつやく
+    meaning: hoạt động; sự hoạt động tích cực
+
+### 擢 (Trạc)
+
+level: N1
+meaningVi: Đề bạt
+hanViet: Trạc
+onyomi: ["テキ", "タク"]
+kunyomi: ["ぬ.く", "ぬき.んでる"]
+strokeCount: 17
+writingHint: Tay ( ) bắt được 2 Em ( ) chim ( ) nên được đề bạt ( ) 擢 2 4 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 奮 (Phấn)
+
+level: N1
+meaningVi: Hưng phấn
+hanViet: Phấn
+onyomi: ["フン"]
+kunyomi: ["ふる.う"]
+strokeCount: 16
+writingHint: Càng lớn ( ) mỗi lần chim ( ) được ra ruộng ( ) đều thấy rất hưng phấn ( ) 奮 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 興奮
+    reading: こうふん
+    meaning: sự phấn khích;sự kích thích;sự kích động;sự kích động
+  - word: 奮闘
+    reading: ふんとう
+    meaning: sự đấu tranh khó khăn; sự nỗ lực vất vả
+  - word: 興奮
+    reading: こうふん
+    meaning: sự phấn khích; sự kích thích; sự kích động
+
+### 奪 (Đoạt)
+
+level: N1
+meaningVi: Định đoạt
+hanViet: Đoạt
+onyomi: ["ダツ"]
+kunyomi: ["うば.う"]
+strokeCount: 14
+writingHint: Càng lớn ( ) chim ( ) càng cảm thấy thốn ( ) vì không được tự định đoạt ( 奪) số phận 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 略奪
+    reading: りゃくだつ
+    meaning: sự cướp bóc; sự cướp bóc; sự cướp bóc; sự cướp bóc
+  - word: 略奪
+    reading: りゃくだつ
+    meaning: sự cướp bóc
+  - word: 奪う
+    reading: うばう
+    meaning: để cướp đi
+
+### 雀 (Tước)
+
+level: N1
+meaningVi: Chim sẽ
+hanViet: Tước
+onyomi: ["ジャク", "ジャン", "サク", "シャク"]
+kunyomi: ["すずめ"]
+strokeCount: 11
+writingHint: Thiếu ( ) mất con chim ( ) sẻ ( ) 雀 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 隻 (Chích)
+
+level: N1
+meaningVi: Đếm tầu
+hanViet: Chích
+onyomi: ["セキ"]
+kunyomi: []
+strokeCount: 10
+writingHint: Con chim ( ) đang đi lại ( ) là chim chích ( ) 隻 1 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 穫 (Hoạch)
 
@@ -7879,15 +9901,15 @@ examples:
     reading: かんげい
     meaning: chào mừng; tiếp tân
 
-### 幺 (Ủng)
+### 雁 (Nhạn)
 
 level: N1
-meaningVi: Ủng hộ
-hanViet: Ủng
-onyomi: ["ヨウ"]
-kunyomi: ["ちいさい"]
-strokeCount: 3
-writingHint: Ủng hộ ( ) dùng tay ( ) xoa đầu ( ) yêu ( ) thương con chim ( ) 隹 2 4
+meaningVi: Chim nhạn
+hanViet: Nhạn
+onyomi: ["ガン"]
+kunyomi: ["かり", "かりがね"]
+strokeCount: 12
+writingHint: Dưới sườn núi ( ) có người ( ) bắt được con chim ( ) nhạn ( ) 雁 1
 sourcePages: []
 sources:
   level: ebook
@@ -7897,7 +9919,6 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ủng maps to 37 KANJIDIC2 candidates; kept extracted 幺
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -7932,14 +9953,14 @@ examples:
     reading: えいゆう
     meaning: anh hùng; vĩ nhân
 
-### 菓 (Khoả)
+### 裸 (Khoả)
 
 level: N1
 meaningVi: Khoả thân
 hanViet: Khoả
-onyomi: ["カ"]
-kunyomi: []
-strokeCount: 11
+onyomi: ["ラ"]
+kunyomi: ["はだか"]
+strokeCount: 13
 writingHint: Thoát y ( ) kết quả ( ) là khỏa thân ( ) 裸 1 7
 sourcePages: []
 sources:
@@ -7950,27 +9971,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khoả maps to 36 KANJIDIC2 candidates; kept extracted 菓
+  - none
 examples:
-  - word: 菓子
-    reading: かし
-    meaning: bánh ngọt
-  - word: お菓子
-    reading: おかし
-    meaning: đồ ngọt, kẹo
-  - word: お菓子
-    reading: おかし
-    hanViet: quả tử
-    meaning: bánh kẹo
+  - word: 裸足
+    reading: はだし
+    meaning: chân trần
+  - word: 裸足
+    reading: はだし
+    meaning: chân trần
+  - word: 裸
+    reading: はだか
+    meaning: khỏa thân
 
-### 果 (Vị)
+### 彙 (Vị)
 
 level: N1
 meaningVi: Từ vựng
 hanViet: Vị
-onyomi: ["カ"]
-kunyomi: ["は.たす", "はた.す", "-は.たす", "は.てる", "-は.てる", "は.て"]
-strokeCount: 8
+onyomi: ["イ"]
+kunyomi: ["はりねずみ"]
+strokeCount: 13
 writingHint: Kệ ( ) mọi người, mình trùm khăn ( ) học nên kết quả ( ) đã thuộc từ vựng ( ) 彙 1
 sourcePages: []
 sources:
@@ -7981,26 +10001,23 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Vị maps to 54 KANJIDIC2 candidates; kept extracted 果
+  - none
 examples:
-  - word: 成果
-    reading: せいか
-    meaning: kết quả; hoa quả
-  - word: 果て
-    reading: はて
-    meaning: sự kết thúc; sự cực đoan; giới hạn; kết quả
-  - word: 果ない
-    reading: はかない
-    meaning: phù du, thoáng qua, ngắn ngủi, nhất thời, vô ích, hay thay đổi, khốn khổ, trống rỗng, phù du
+  - word: 語彙
+    reading: ごい
+    meaning: từ vựng; thuật ngữ
+  - word: 語彙
+    reading: ごい
+    meaning: từ vựng; thuật ngữ
 
-### 単 (Đàn)
+### 弾 (Đàn)
 
 level: N1
 meaningVi: Viên đạn/đánh đàn
 hanViet: Đàn
-onyomi: ["タン"]
-kunyomi: ["ひとえ"]
-strokeCount: 9
+onyomi: ["ダン", "タン"]
+kunyomi: ["ひ.く", "-ひ.き", "はず.む", "たま", "はじ.く", "はじ.ける", "ただ.す", "はじ.きゆみ"]
+strokeCount: 12
 writingHint: Cung ( ) đơn giản ( ) hơn viên đạn ( ) 弾 5 6
 sourcePages: []
 sources:
@@ -8012,6 +10029,36 @@ sources:
   examples: existing_vocab_supplement
 openGaps:
   - none
+examples:
+  - word: 弾む
+    reading: はずむ
+    meaning: nhảy lên; ràng buộc; nảy lên; bị kích thích; được khuyến khích; trở nên sôi nổi; tự đãi mình; để
+  - word: 弾く
+    reading: はじく
+    meaning: lật; chụp
+  - word: 弾力
+    reading: だんりょく
+    meaning: tính đàn hồi; tính linh hoạt
+
+### 単 (Thiều)
+
+level: N1
+meaningVi: Ve sầu
+hanViet: Thiều
+onyomi: ["タン"]
+kunyomi: ["ひとえ"]
+strokeCount: 9
+writingHint: Ve sầu ( ) là loài côn trùng ( ) sống rất đơn giản ( ) 単 8 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thiều maps to 38 KANJIDIC2 candidates; kept extracted 単
 examples:
   - word: 単独
     reading: たんどく
@@ -8050,72 +10097,15 @@ examples:
     reading: ぜん
     meaning: Thiền (Phật giáo)
 
-### 竹 (Đan)
-
-level: N1
-meaningVi: Tủ
-hanViet: Đan
-onyomi: ["チク"]
-kunyomi: ["たけ"]
-strokeCount: 6
-writingHint: Tủ ( ) trúc ( ) làm cũng đơn giản ( ) 単 1 4 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đan maps to 92 KANJIDIC2 candidates; kept extracted 竹
-examples:
-  - word: 竹
-    reading: たけ
-    meaning: tre, ở giữa (trong hệ thống xếp hạng ba cấp)
-  - word: 竹
-    reading: たけ
-    meaning: tre; trúc
-
-### 王 (Dâm)
+### 淫 (Dâm)
 
 level: N1
 meaningVi: Dâm đảng
 hanViet: Dâm
-onyomi: ["オウ", "-ノウ"]
-kunyomi: []
-strokeCount: 4
-writingHint: Nước ( ) dính ở móng tay ( ) ông vua ( ) dâm đãng ( ) 淫 4
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Dâm maps to 93 KANJIDIC2 candidates; kept extracted 王
-examples:
-  - word: 王女
-    reading: おうじょ
-    meaning: công chúa
-  - word: 国王
-    reading: こくおう
-    meaning: vua
-  - word: 王女
-    reading: おうじょ
-    meaning: công chúa
-
-### 廴 (Đình)
-
-level: N1
-meaningVi: Triều đình
-hanViet: Đình
 onyomi: ["イン"]
-kunyomi: []
-strokeCount: 3
-writingHint: Vua ( ) dẫn ( ) quân vào triều đình ( ) 廷 1
+kunyomi: ["ひた.す", "ほしいまま", "みだ.ら", "みだ.れる", "みだり"]
+strokeCount: 11
+writingHint: Nước ( ) dính ở móng tay ( ) ông vua ( ) dâm đãng ( ) 淫 4
 sourcePages: []
 sources:
   level: ebook
@@ -8125,20 +10115,19 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đình maps to 64 KANJIDIC2 candidates; kept extracted 廴
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 廷 (Đĩnh)
+### 廷 (Đình)
 
 level: N1
-meaningVi: Thuyền nhỏ
-hanViet: Đĩnh
+meaningVi: Triều đình
+hanViet: Đình
 onyomi: ["テイ"]
 kunyomi: []
 strokeCount: 7
-writingHint: Thuyền ( ) đi trong triều đình ( ) là thuyền nhỏ ( ) 艇 1
+writingHint: Vua ( ) dẫn ( ) quân vào triều đình ( ) 廷 1
 sourcePages: []
 sources:
   level: ebook
@@ -8157,14 +10146,58 @@ examples:
     reading: ほうてい
     meaning: phòng xử án
 
-### 京 (Kình)
+### 艇 (Đĩnh)
+
+level: N1
+meaningVi: Thuyền nhỏ
+hanViet: Đĩnh
+onyomi: ["テイ"]
+kunyomi: []
+strokeCount: 13
+writingHint: Thuyền ( ) đi trong triều đình ( ) là thuyền nhỏ ( ) 艇 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 挺 (Đĩnh)
+
+level: N1
+meaningVi: Tình nguyện
+hanViet: Đĩnh
+onyomi: ["チョウ", "テイ"]
+kunyomi: ["ぬ.く"]
+strokeCount: 10
+writingHint: Tay ( ) vào triều đình ( ) làm tình nguyện ( ) 挺 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 鯨 (Kình)
 
 level: N1
 meaningVi: Cá voi
 hanViet: Kình
-onyomi: ["キョウ", "ケイ", "キン"]
-kunyomi: ["みやこ"]
-strokeCount: 8
+onyomi: ["ゲイ"]
+kunyomi: ["くじら"]
+strokeCount: 19
 writingHint: Cá ( ) ở kinh đô ( ) là cá voi ( ) 鯨 1 2 12
 sourcePages: []
 sources:
@@ -8177,24 +10210,43 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 帰京
-    reading: ききょう
-    meaning: trở về Tokyo
-  - word: 帰京
-    reading: ききょう
-    meaning: trở về Tokyo
-  - word: 上京
-    reading: じょうきょう
-    meaning: tiến tới thủ đô (Tokyo)
+  - word: 捕鯨
+    reading: ほげい
+    meaning: săn cá voi; đánh bắt cá voi
+  - word: 捕鯨
+    reading: ほげい
+    meaning: săn cá voi; đánh bắt cá voi
 
-### 景 (Cảnh)
+### 掠 (Lược)
+
+level: N1
+meaningVi: Xâm lược
+hanViet: Lược
+onyomi: ["リャク", "リョウ"]
+kunyomi: ["かす.める", "かす.る", "かす.れる"]
+strokeCount: 11
+writingHint: Tay ( ) vào kinh đô ( ) để xâm lược ( ) 掠 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 憬 (Cảnh)
 
 level: N1
 meaningVi: Cảnh tỉnh
 hanViet: Cảnh
 onyomi: ["ケイ"]
-kunyomi: []
-strokeCount: 12
+kunyomi: ["あこが.れる"]
+strokeCount: 15
 writingHint: Tâm ( ) cảnh ( ) tỉnh ( ) 憬 3 5
 sourcePages: []
 sources:
@@ -8203,19 +10255,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 不景気
-    reading: ふけいき
-    meaning: kinh doanh suy thoái; thời kỳ khó khăn; trầm cảm; u ám; ủ rũ; ủ rũ
-  - word: 背景
-    reading: はいけい
-    meaning: bối cảnh;phong cảnh;bối cảnh;hoàn cảnh
-  - word: 背景
-    reading: はいけい
-    meaning: bối cảnh; phong cảnh; hoàn cảnh
+  - none
 
 ### 撲 (Phác)
 
@@ -8248,14 +10292,14 @@ examples:
     hanViet: tương vục
     meaning: vật Sumo
 
-### 取 (Tùng)
+### 叢 (Tùng)
 
 level: N1
 meaningVi: Bụi cây
 hanViet: Tùng
-onyomi: ["シュ"]
-kunyomi: ["と.る", "と.り", "と.り-", "とり", "-ど.り"]
-strokeCount: 8
+onyomi: ["ソウ", "ス"]
+kunyomi: ["くさむら", "むら.がる", "むら"]
+strokeCount: 18
 writingHint: Xếp hàng ( ) cho dê ( ) vào lấy ( ) bụi cây ( ) 叢 1 2
 sourcePages: []
 sources:
@@ -8264,19 +10308,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tùng maps to 42 KANJIDIC2 candidates; kept extracted 取
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 塵取り
-    reading: ちりとり
-    meaning: người hốt rác
-  - word: 取り立てる
-    reading: とりたてる
-    meaning: thu thập; tống tiền; bổ nhiệm; thăng tiến
-  - word: 書き取る
-    reading: かきとる
-    meaning: viết ra; ghi chép; ghi chép
+  - none
 
 ### 尤 (Vưu)
 
@@ -8332,38 +10368,15 @@ examples:
     reading: しゅうにん
     meaning: nhậm chức, nhậm chức
 
-### 尢 (Chẩm)
+### 枕 (Chẩm)
 
 level: N1
 meaningVi: Cái gối
 hanViet: Chẩm
-onyomi: ["オウ"]
-kunyomi: []
-strokeCount: 3
+onyomi: ["チン", "シン"]
+kunyomi: ["まくら"]
+strokeCount: 8
 writingHint: Cây ( ) không do dự ( ) mang đi làm gối ( ) 枕 7
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Chẩm maps to 27 KANJIDIC2 candidates; kept extracted 尢
-  - examples missing; fill from ebook/manual pass later
-examples:
-  - none
-
-### 耳 (Đam)
-
-level: N1
-meaningVi: Đam mê
-hanViet: Đam
-onyomi: ["ジ"]
-kunyomi: ["みみ"]
-strokeCount: 6
-writingHint: Đã đam mê ( ) thì tai ( ) nghe không do dự ( ) 尢 9
 sourcePages: []
 sources:
   level: ebook
@@ -8373,26 +10386,46 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đam maps to 93 KANJIDIC2 candidates; kept extracted 耳
+  - none
 examples:
-  - word: 耳鼻科
-    reading: じびか
-    meaning: khoa tai mũi họng
-  - word: 初耳
-    reading: はつみみ
-    meaning: điều gì đó được nghe lần đầu tiên
-  - word: 耳鼻科
-    reading: じびか
-    meaning: khoa tai mũi họng
+  - word: 枕
+    reading: まくら
+    meaning: gối, gối đỡ
+  - word: 枕
+    reading: まくら
+    meaning: gối
 
-### 毛 (Sạn)
+### 尢 (Đam)
+
+level: N1
+meaningVi: Đam mê
+hanViet: Đam
+onyomi: ["オウ"]
+kunyomi: []
+strokeCount: 3
+writingHint: Đã đam mê ( ) thì tai ( ) nghe không do dự ( ) 尢 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Đam maps to 93 KANJIDIC2 candidates; kept extracted 尢
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 桟 (Sạn)
 
 level: N1
 meaningVi: Giá để đồ
 hanViet: Sạn
-onyomi: ["モウ"]
-kunyomi: ["け"]
-strokeCount: 4
+onyomi: ["サン", "セン"]
+kunyomi: ["かけはし"]
+strokeCount: 10
 writingHint: Cây ( ) qua 2 lần ( ) làm thành giá để đồ ( ) 桟 8 10
 sourcePages: []
 sources:
@@ -8403,27 +10436,24 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Sạn maps to 76 KANJIDIC2 candidates; kept extracted 毛
+  - none
 examples:
-  - word: 毛皮
-    reading: けがわ
-    meaning: lông, da, tấm da
-  - word: 毛糸
-    reading: けいと
-    meaning: đan len
-  - word: 羊毛
-    reading: ようもう
-    meaning: len
+  - word: 桟橋
+    reading: さんきょう
+    meaning: bến tàu;cầu;cầu cảng;bến tàu
+  - word: 桟橋
+    reading: さんきょう
+    meaning: bến tàu; cầu; cầu cảng
 
-### 小 (Tiêu)
+### 銭 (Tiền)
 
 level: N1
-meaningVi: Chân dung
-hanViet: Tiêu
-onyomi: ["ショウ"]
-kunyomi: ["ちい.さい", "こ-", "お-", "さ-"]
-strokeCount: 3
-writingHint: Chân dung ( ) tiểu ( ) Nguyệt ( ) 月 1
+meaningVi: Tiền bạc
+hanViet: Tiền
+onyomi: ["セン", "ゼン"]
+kunyomi: ["ぜに", "すき"]
+strokeCount: 14
+writingHint: Tiền ( ) qua 2 lần ( ) sử dụng vẫn là tiền ( ) 銭 12 14
 sourcePages: []
 sources:
   level: ebook
@@ -8438,12 +10468,39 @@ examples:
   - word: 小銭
     reading: こぜに
     meaning: tiền xu; tiền lẻ
-  - word: 小切手
-    reading: こぎって
-    meaning: séc; séc
-  - word: 小柄
-    reading: こがら
-    meaning: ngắn (xây dựng)
+  - word: 小銭
+    reading: こぜに
+    meaning: tiền xu; tiền lẻ
+  - word: 金銭
+    reading: きんせん
+    meaning: tiền; tiền mặt
+
+### 践 (Tiễn)
+
+level: N1
+meaningVi: Thực tiễn
+hanViet: Tiễn
+onyomi: ["セン"]
+kunyomi: ["ふ.む"]
+strokeCount: 13
+writingHint: Chân ( ) qua 2 lần ( ) đi thực tiễn ( ) 践 11 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 実践
+    reading: じっせん
+    meaning: thực hành; thực hành
+  - word: 実践
+    reading: じっせん
+    meaning: thực hành
 
 ### 宵 (Tiêu)
 
@@ -8467,14 +10524,14 @@ openGaps:
 examples:
   - none
 
-### 肖 (Tiêu)
+### 硝 (Tiêu)
 
 level: N1
 meaningVi: Diêm tiêu
 hanViet: Tiêu
 onyomi: ["ショウ"]
-kunyomi: ["あやか.る"]
-strokeCount: 7
+kunyomi: []
+strokeCount: 12
 writingHint: Đá ( ) tiêu ( ) biến thành diêm tiêu ( ) 硝 6
 sourcePages: []
 sources:
@@ -8489,14 +10546,44 @@ openGaps:
 examples:
   - none
 
-### 貞 (Trinh)
+### 屑 (Tiết)
+
+level: N1
+meaningVi: Mảnh vụn
+hanViet: Tiết
+onyomi: ["セツ"]
+kunyomi: ["くず", "いさぎよ.い"]
+strokeCount: 10
+writingHint: Xác chết ( ) tiêu ( ) thành mảnh vụn ( ) 屑 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 屑
+    reading: くず
+    meaning: chất thải, phế liệu
+  - word: 紙屑
+    reading: かみくず
+    meaning: giấy vụn
+  - word: 紙屑
+    reading: かみくず
+    meaning: giấy vụn
+
+### 偵 (Trinh)
 
 level: N1
 meaningVi: Trinh thám
 hanViet: Trinh
-onyomi: ["テイ", "ジョウ"]
-kunyomi: ["ただし.い", "さだ"]
-strokeCount: 9
+onyomi: ["テイ"]
+kunyomi: []
+strokeCount: 11
 writingHint: Người ( ) trinh tiết ( ) làm nghề trinh thám ( ) 偵 3
 sourcePages: []
 sources:
@@ -8511,15 +10598,15 @@ openGaps:
 examples:
   - none
 
-### 具 (Cụ)
+### 貫 (Quán)
 
 level: N1
-meaningVi: Sợ hãi
-hanViet: Cụ
-onyomi: ["グ"]
-kunyomi: ["そな.える", "つぶさ.に"]
-strokeCount: 8
-writingHint: Trái tim ( ) cụ ( ) rất sợ hãi ( )惧 3 5
+meaningVi: Nhất quán
+hanViet: Quán
+onyomi: ["カン"]
+kunyomi: ["つらぬ.く", "ぬ.く", "ぬき"]
+strokeCount: 11
+writingHint: Vô ( ) tình mang bảo bối ( ) vào quán ( ) 貫 2
 sourcePages: []
 sources:
   level: ebook
@@ -8531,15 +10618,37 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 敬具
-    reading: けいぐ
-    meaning: Trân trọng của bạn
-  - word: 雨具
-    reading: あまぐ
-    meaning: áo mưa
-  - word: 玩具
-    reading: おもちゃ
-    meaning: đồ chơi
+  - word: 貫く
+    reading: つらぬく
+    meaning: đi qua
+  - word: 貫禄
+    reading: かんろく
+    meaning: sự hiện diện; nhân phẩm
+  - word: 貫禄
+    reading: かんろく
+    meaning: sự hiện diện; nhân phẩm
+
+### 惧 (Cụ)
+
+level: N1
+meaningVi: Sợ hãi
+hanViet: Cụ
+onyomi: ["ク", "グ"]
+kunyomi: ["おそ.れる"]
+strokeCount: 11
+writingHint: Trái tim ( ) cụ ( ) rất sợ hãi ( )惧 3 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 慎 (Thận)
 
@@ -8593,6 +10702,36 @@ openGaps:
 examples:
   - none
 
+### 真 (Điền)
+
+level: N1
+meaningVi: Lấp đầy
+hanViet: Điền
+onyomi: ["シン"]
+kunyomi: ["ま", "ま-", "まこと"]
+strokeCount: 10
+writingHint: Lấp đầy ( ) đất ( ) ở chân ( ) 真 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Điền maps to 74 KANJIDIC2 candidates; kept extracted 真
+examples:
+  - word: 真珠
+    reading: しんじゅ
+    meaning: ngọc trai
+  - word: 真ん中
+    reading: まんなか
+    meaning: ở giữa; trung tâm; ở giữa
+  - word: 真に
+    reading: まことに
+    meaning: thực sự; thực sự; thực sự
+
 ### 惜 (Tích)
 
 level: N1
@@ -8623,14 +10762,14 @@ examples:
     reading: おしい
     meaning: đáng tiếc, đáng thất vọng, quý giá
 
-### 昔 (Thác)
+### 錯 (Thác)
 
 level: N1
 meaningVi: Thác loạn
 hanViet: Thác
-onyomi: ["セキ", "シャク"]
-kunyomi: ["むかし"]
-strokeCount: 8
+onyomi: ["サク", "シャク"]
+kunyomi: []
+strokeCount: 16
 writingHint: Tiền ( ) ngày xưa ( ) để ăn chơi thác loạn ( )錯 10 11
 sourcePages: []
 sources:
@@ -8641,19 +10780,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thác maps to 28 KANJIDIC2 candidates; kept extracted 昔
+  - none
 examples:
-  - word: 昔
-    reading: むかし
-    meaning: ngày xưa, ngày xưa
-  - word: 昔
-    reading: むかし
-    hanViet: tích
-    meaning: ngày xưa
-  - word: 昔話
-    reading: むかしばなし
-    hanViet: tích thoại
-    meaning: truyện cổ tích
+  - word: 錯誤
+    reading: さくご
+    meaning: sai lầm
+  - word: 錯覚
+    reading: さっかく
+    meaning: ảo ảnh quang học; ảo giác
+  - word: 錯誤
+    reading: さくご
+    meaning: sai lầm
 
 ### 措 (Thố)
 
@@ -8682,14 +10819,14 @@ examples:
     reading: そち
     meaning: đo; bước
 
-### 兆 (Khiêu)
+### 跳 (Khiêu)
 
 level: N1
 meaningVi: Khiêu vũ
 hanViet: Khiêu
 onyomi: ["チョウ"]
-kunyomi: ["きざ.す", "きざ.し"]
-strokeCount: 6
+kunyomi: ["は.ねる", "と.ぶ", "-と.び"]
+strokeCount: 13
 writingHint: Chân ( ) nghìn tỷ ( ) đang khiêu vũ ( ) 跳 11
 sourcePages: []
 sources:
@@ -8700,7 +10837,67 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khiêu maps to 20 KANJIDIC2 candidates; kept extracted 兆
+  - none
+examples:
+  - word: 跳ねる
+    reading: はねる
+    meaning: nhảy, nhảy
+  - word: 跳ぶ
+    reading: とぶ
+    meaning: nhảy, bay, nhảy
+  - word: 跳ぶ
+    reading: とぶ
+    meaning: nhảy; bay; bật lên
+
+### 挑 (Khiêu)
+
+level: N1
+meaningVi: Khiêu chiến
+hanViet: Khiêu
+onyomi: ["チョウ"]
+kunyomi: ["いど.む"]
+strokeCount: 9
+writingHint: Tay ( ) cầm nghìn tỷ ( ) đi khiêu chiến ( )挑 4 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Khiêu maps to 20 KANJIDIC2 candidates; kept extracted 挑
+examples:
+  - word: 挑戦
+    reading: ちょうせん
+    meaning: thách thức; thách thức
+  - word: 挑む
+    reading: いどむ
+    meaning: thách thức; đấu tranh; làm tình với
+  - word: 挑む
+    reading: いどむ
+    meaning: thách thức; đấu tranh; làm tình với
+
+### 兆 (Thiếu)
+
+level: N1
+meaningVi: Tầm nhìn
+hanViet: Thiếu
+onyomi: ["チョウ"]
+kunyomi: ["きざ.す", "きざ.し"]
+strokeCount: 6
+writingHint: Tầm nhìn ( ) mắt ( ) nhắm vào nghìn tỷ ( ) 兆 6 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thiếu maps to 38 KANJIDIC2 candidates; kept extracted 兆
 examples:
   - word: 兆し
     reading: きざし
@@ -8712,15 +10909,15 @@ examples:
     reading: きざし
     meaning: dấu hiệu; điềm báo; triệu chứng
 
-### 目 (Thiếu)
+### 桃 (Đào)
 
 level: N1
-meaningVi: Tầm nhìn
-hanViet: Thiếu
-onyomi: ["モク", "ボク"]
-kunyomi: ["め", "-め", "ま-"]
-strokeCount: 5
-writingHint: Tầm nhìn ( ) mắt ( ) nhắm vào nghìn tỷ ( ) 兆 6 9
+meaningVi: Cây đào
+hanViet: Đào
+onyomi: ["トウ"]
+kunyomi: ["もも"]
+strokeCount: 10
+writingHint: Cây ( ) nghìn tỷ ( ) là cây đào ( )桃 8
 sourcePages: []
 sources:
   level: ebook
@@ -8728,19 +10925,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thiếu maps to 38 KANJIDIC2 candidates; kept extracted 目
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 目覚める
-    reading: めざめる
-    meaning: thức dậy
-  - word: 出鱈目
-    reading: でたらめ
-    meaning: lời phát biểu vô trách nhiệm; vô nghĩa; vô nghĩa; ngẫu nhiên; bừa bãi; không có hệ thống
-  - word: 目方
-    reading: めかた
-    meaning: trọng lượng
+  - none
 
 ### 掲 (Yết)
 
@@ -8818,14 +11007,14 @@ openGaps:
 examples:
   - none
 
-### 謁 (Ái)
+### 靄 (Ái)
 
 level: N1
 meaningVi: Sương mù
 hanViet: Ái
-onyomi: ["エツ"]
-kunyomi: []
-strokeCount: 16
+onyomi: ["アイ"]
+kunyomi: ["もや"]
+strokeCount: 24
 writingHint: Mưa ( ) cũng cần yết kiến ( ) sương mù ( ) 靄 1
 sourcePages: []
 sources:
@@ -8836,7 +11025,29 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ái maps to 41 KANJIDIC2 candidates; kept extracted 謁
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 褐 (Hạt)
+
+level: N1
+meaningVi: Màu nâu
+hanViet: Hạt
+onyomi: ["カツ"]
+kunyomi: []
+strokeCount: 14
+writingHint: Y phục ( ) có gắn hạt ( ) màu nâu ( ) 褐 1 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Hạt maps to 22 KANJIDIC2 candidates; kept extracted 褐
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -8893,14 +11104,14 @@ examples:
     reading: べんぎ
     meaning: sự thuận tiện; chỗ ở; lợi thế; sự tiện lợi
 
-### 更 (Ngạnh)
+### 梗 (Ngạnh)
 
 level: N1
 meaningVi: Tắc nghẽn
 hanViet: Ngạnh
-onyomi: ["コウ"]
-kunyomi: ["さら", "さら.に", "ふ.ける", "ふ.かす"]
-strokeCount: 7
+onyomi: ["コウ", "キョウ"]
+kunyomi: ["ふさぐ", "やまにれ", "おおむね"]
+strokeCount: 11
 writingHint: Cây ( ) mới ( ) trồng dễ bị tắc nghẽn ( ) 梗 2 5
 sourcePages: []
 sources:
@@ -8909,28 +11120,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ngạnh maps to 7 KANJIDIC2 candidates; kept extracted 更
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 尚更
-    reading: なおさら
-    meaning: nhiều hơn; vẫn ít hơn
-  - word: 今更
-    reading: いまさら
-    meaning: bây giờ; vào giờ muộn thế này
-  - word: 夜更かし
-    reading: よふかし
-    meaning: thức khuya; thức khuya; thức khuya; diều hâu
+  - none
 
-### 包 (Bào)
+### 胞 (Bào)
 
 level: N1
 meaningVi: Tế bào
 hanViet: Bào
 onyomi: ["ホウ"]
-kunyomi: ["つつ.む", "くる.む"]
-strokeCount: 5
+kunyomi: []
+strokeCount: 9
 writingHint: Nguyệt ( ) có bao ( ) nhiêu tế bào ( ) 胞 2 5
 sourcePages: []
 sources:
@@ -8942,6 +11145,63 @@ sources:
   examples: existing_vocab_supplement
 openGaps:
   - none
+examples:
+  - word: 細胞
+    reading: さいぼう
+    meaning: tế bào (sinh học)
+  - word: 細胞
+    reading: さいぼう
+    meaning: tế bào (sinh học)
+
+### 飽 (Bão)
+
+level: N1
+meaningVi: No,chán/bão hoà
+hanViet: Bão
+onyomi: ["ホウ"]
+kunyomi: ["あ.きる", "あ.かす", "あ.く"]
+strokeCount: 13
+writingHint: Ăn ( ) bao ( ) nhiêu mới no ( )?飽 1 2 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 飽和
+    reading: ほうわ
+    meaning: bão hòa
+  - word: 飽和
+    reading: ほうわ
+    meaning: bão hòa
+  - word: 飽くまで
+    reading: あくまで
+    meaning: đến cùng, đến cuối cùng, kiên quyết
+
+### 包 (Bạc)
+
+level: N1
+meaningVi: Cái cặp
+hanViet: Bạc
+onyomi: ["ホウ"]
+kunyomi: ["つつ.む", "くる.む"]
+strokeCount: 5
+writingHint: Cặp ( ) da ( ) bao ( ) nhiêu tiền? 3 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Bạc maps to 46 KANJIDIC2 candidates; kept extracted 包
 examples:
   - word: 包む
     reading: くるむ
@@ -8976,14 +11236,14 @@ openGaps:
 examples:
   - none
 
-### 可 (Kì)
+### 奇 (Kì)
 
 level: N1
 meaningVi: Kì lạ
 hanViet: Kì
-onyomi: ["カ", "コク"]
-kunyomi: ["-べ.き", "-べ.し"]
-strokeCount: 5
+onyomi: ["キ"]
+kunyomi: ["く.しき", "あや.しい", "くし", "めずら.しい"]
+strokeCount: 8
 writingHint: Cái gì to ( ) đều có khả năng ( ) kỳ lạ ( ) 奇 2
 sourcePages: []
 sources:
@@ -8994,17 +11254,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Kì maps to 115 KANJIDIC2 candidates; kept extracted 可
+  - none
 examples:
-  - word: 可愛らしい
-    reading: かわいらしい
-    meaning: đáng yêu; ngọt ngào
-  - word: 可愛い
-    reading: かわいい
-    meaning: xinh đẹp;dễ thương;đáng yêu;duyên dáng;thân yêu;cưng;thú cưng
-  - word: 可哀想
-    reading: かわいそう
-    meaning: đáng thương; đáng thương; đáng thương
+  - word: 奇数
+    reading: きすう
+    meaning: số lẻ
+  - word: 奇麗
+    reading: きれい
+    meaning: đẹp;sạch sẽ;tốt đẹp;gọn gàng;đẹp;công bằng
+  - word: 奇数
+    reading: きすう
+    meaning: số lẻ
 
 ### 騎 (Kị)
 
@@ -9028,14 +11288,14 @@ openGaps:
 examples:
   - none
 
-### 奇 (Khỉ)
+### 綺 (Khỉ)
 
 level: N1
 meaningVi: Đẹp
 hanViet: Khỉ
 onyomi: ["キ"]
-kunyomi: ["く.しき", "あや.しい", "くし", "めずら.しい"]
-strokeCount: 8
+kunyomi: ["あや"]
+strokeCount: 14
 writingHint: Sợi tơ ( ) kỳ lạ ( ) nhìn thật đẹp ( )綺 1 8
 sourcePages: []
 sources:
@@ -9044,28 +11304,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khỉ maps to 24 KANJIDIC2 candidates; kept extracted 奇
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 奇数
-    reading: きすう
-    meaning: số lẻ
-  - word: 奇麗
-    reading: きれい
-    meaning: đẹp;sạch sẽ;tốt đẹp;gọn gàng;đẹp;công bằng
-  - word: 奇数
-    reading: きすう
-    meaning: số lẻ
+  - none
 
-### 義 (Nghi)
+### 儀 (Nghi)
 
 level: N1
 meaningVi: Lễ nghi
 hanViet: Nghi
 onyomi: ["ギ"]
 kunyomi: []
-strokeCount: 13
+strokeCount: 15
 writingHint: Người nhân ( ) nghĩa ( ) tuân thủ lễ nghi ( ) 儀 4
 sourcePages: []
 sources:
@@ -9076,50 +11328,27 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nghi maps to 33 KANJIDIC2 candidates; kept extracted 義
-examples:
-  - word: 定義
-    reading: ていぎ
-    meaning: độ nét
-  - word: 義理
-    reading: ぎり
-    meaning: nghĩa vụ;tinh thần trách nhiệm;danh dự;sự đoan trang;lịch sự;nợ ân tình;nghĩa vụ xã hội
-  - word: 正義
-    reading: せいぎ
-    meaning: sự công bằng; lẽ phải; sự công bình; ý nghĩa đúng đắn
-
-### 也 (Thi)
-
-level: N1
-meaningVi: Thực thi 𠂉
-hanViet: Thi
-onyomi: ["ヤ", "エ"]
-kunyomi: ["なり", "か", "また"]
-strokeCount: 3
-writingHint: Phương ( ) nằm ( ) thả C ( ) là thực thi ( ) 施 1 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thi maps to 63 KANJIDIC2 candidates; kept extracted 也
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 御辞儀
+    reading: おじぎ
+    meaning: cúi đầu
+  - word: 儀式
+    reading: ぎしき
+    meaning: buổi lễ, nghi thức, nghi thức, dịch vụ
+  - word: 御辞儀
+    reading: おじぎ
+    meaning: cúi chào
 
-### 弓 (Thỉ)
+### 犠 (Hy)
 
 level: N1
-meaningVi: Buông lòng
-hanViet: Thỉ
-onyomi: ["キュウ"]
-kunyomi: ["ゆみ"]
-strokeCount: 3
-writingHint: Buông lỏng ( ) cung ( ) để thả C ( ) 也 5
+meaningVi: Hy sinh
+hanViet: Hy
+onyomi: ["ギ", "キ"]
+kunyomi: ["いけにえ"]
+strokeCount: 17
+writingHint: Bò ( ) vì nghĩa ( ) mà hy sinh ( ) 犠 5 6
 sourcePages: []
 sources:
   level: ebook
@@ -9129,14 +11358,89 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thỉ maps to 63 KANJIDIC2 candidates; kept extracted 弓
+  - target kanji ambiguous: Hán-Việt heading Hy maps to 40 KANJIDIC2 candidates; kept extracted 犠
 examples:
-  - word: 弓
-    reading: ゆみ
-    meaning: cung (và mũi tên)
-  - word: 弓
-    reading: ゆみ
-    meaning: cung (và mũi tên)
+  - word: 犠牲
+    reading: ぎせい
+    meaning: sự hy sinh
+  - word: 犠牲
+    reading: ぎせい
+    meaning: sự hy sinh
+
+### 蟻 (Nghĩ)
+
+level: N1
+meaningVi: Con kiến
+hanViet: Nghĩ
+onyomi: ["ギ"]
+kunyomi: ["あり"]
+strokeCount: 19
+writingHint: Kiến ( ) là loại côn trùng ( ) có tình nghĩa ( ) 蟻 7 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 施 (Thi)
+
+level: N1
+meaningVi: Thực thi 𠂉
+hanViet: Thi
+onyomi: ["シ", "セ"]
+kunyomi: ["ほどこ.す"]
+strokeCount: 9
+writingHint: Phương ( ) nằm ( ) thả C ( ) là thực thi ( ) 施 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 施行
+    reading: しぎょう
+    meaning: 1. thi hành; thi hành; thi hành
+  - word: 施す
+    reading: ほどこす
+    meaning: hiến tặng;cho;tiến hành;áp dụng;thực hiện
+  - word: 施設
+    reading: しせつ
+    meaning: cơ quan; cơ sở; cơ sở; kỹ sư (quân đội)
+
+### 也 (Thỉ)
+
+level: N1
+meaningVi: Buông lòng
+hanViet: Thỉ
+onyomi: ["ヤ", "エ"]
+kunyomi: ["なり", "か", "また"]
+strokeCount: 3
+writingHint: Buông lỏng ( ) cung ( ) để thả C ( ) 也 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thỉ maps to 63 KANJIDIC2 candidates; kept extracted 也
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 嗣 (Tự)
 
@@ -9160,14 +11464,41 @@ openGaps:
 examples:
   - none
 
-### 司 (Tứ)
+### 覗 (Tư)
+
+level: N1
+meaningVi: Nhìn lén
+hanViet: Tư
+onyomi: ["シ"]
+kunyomi: ["のぞ.く", "うかが.う"]
+strokeCount: 12
+writingHint: Quản lý ( ) nhìn ( ) lén ( ) 覗 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 覗く
+    reading: のぞく
+    meaning: nhìn vào,nhìn vào,nhìn vào,nhìn ra
+  - word: 覗く
+    reading: のぞく
+    meaning: nhìn trộm; nhìn vào; thò ra
+
+### 笥 (Tứ)
 
 level: N1
 meaningVi: Từ ngắn kéo
 hanViet: Tứ
-onyomi: ["シ"]
-kunyomi: ["つかさど.る"]
-strokeCount: 5
+onyomi: ["ス", "シ"]
+kunyomi: ["け", "はこ"]
+strokeCount: 11
 writingHint: Trúc ( ) quản lý ( ) tủ ngăn kéo ( )笥 1 4
 sourcePages: []
 sources:
@@ -9180,25 +11511,44 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 上司
-    reading: じょうし
-    meaning: cấp trên; ông chủ
-  - word: 司法
-    reading: しほう
-    meaning: quản lý công lý
-  - word: 司る
-    reading: つかさどる
-    meaning: cai trị; quản lý; quản lý
+  - word: 箪笥
+    reading: たんす
+    meaning: tủ ngăn kéo
+  - word: 箪笥
+    reading: たんす
+    meaning: tủ ngăn kéo
 
-### 商 (Đích)
+### 嫡 (Đích)
 
 level: N1
 meaningVi: Đích tôn
 hanViet: Đích
-onyomi: ["ショウ"]
-kunyomi: ["あきな.う"]
-strokeCount: 11
+onyomi: ["チャク", "テキ"]
+kunyomi: []
+strokeCount: 14
 writingHint: Phụ nữ ( ) thích ( ) đẻ cháu đích tôn ( )嫡 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 摘 (Trích)
+
+level: N1
+meaningVi: Hái
+hanViet: Trích
+onyomi: ["テキ"]
+kunyomi: ["つ.む"]
+strokeCount: 14
+writingHint: Tay ( ) thích ( ) hái ( ) 摘 2 4
 sourcePages: []
 sources:
   level: ebook
@@ -9208,17 +11558,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đích maps to 65 KANJIDIC2 candidates; kept extracted 商
+  - none
 examples:
-  - word: 商人
-    reading: あきうど
-    meaning: người buôn bán; người bán hàng; người buôn bán
-  - word: 商
-    reading: しょう
-    meaning: thương số
-  - word: 商人
-    reading: あきうど
-    meaning: người buôn bán; người bán hàng
+  - word: 摘む
+    reading: つまむ
+    meaning: kẹp; giữ; nhặt lên
+  - word: 指摘
+    reading: してき
+    meaning: chỉ ra; nhận dạng
+  - word: 指摘
+    reading: してき
+    meaning: chỉ ra; nhận dạng
 
 ### 勺 (Điếu)
 
@@ -9243,14 +11593,36 @@ openGaps:
 examples:
   - none
 
-### 東 (Đống)
+### 灼 (Chước)
+
+level: N1
+meaningVi: Đốt nóng
+hanViet: Chước
+onyomi: ["シャク"]
+kunyomi: ["あらた", "やく"]
+strokeCount: 7
+writingHint: Dùng lửa ( ) bắt chước ( ) mọi người để đốt nóng ( ) 灼 3 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 棟 (Đống)
 
 level: N1
 meaningVi: Nóc nhà
 hanViet: Đống
 onyomi: ["トウ"]
-kunyomi: ["ひがし"]
-strokeCount: 8
+kunyomi: ["むね", "むな-"]
+strokeCount: 12
 writingHint: Cây ( ) ở phía đông ( ) chất đống trên nóc nhà ( ) 棟 10
 sourcePages: []
 sources:
@@ -9263,24 +11635,21 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 東
-    reading: あずま
-    meaning: phía đông; phía đông Nhật Bản
-  - word: 東
-    reading: あずま
-    meaning: phía đông; phía đông Nhật Bản
-  - word: 東西
-    reading: とうざい
-    meaning: Đông và Tây, cả nước
+  - word: 棟
+    reading: とう
+    meaning: địa điểm; khu vực; tòa nhà
+  - word: 棟
+    reading: とう
+    meaning: địa điểm; khu vực; tòa nhà
 
-### 火 (Luyện)
+### 東 (Luyện)
 
 level: N1
 meaningVi: Luyện gạch
 hanViet: Luyện
-onyomi: ["カ"]
-kunyomi: ["ひ", "-び", "ほ-"]
-strokeCount: 4
+onyomi: ["トウ"]
+kunyomi: ["ひがし"]
+strokeCount: 8
 writingHint: Luyện gạch ( ) ở lò lửa ( ) phía đông ( ) 東 11
 sourcePages: []
 sources:
@@ -9291,17 +11660,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Luyện maps to 13 KANJIDIC2 candidates; kept extracted 火
+  - target kanji ambiguous: Hán-Việt heading Luyện maps to 13 KANJIDIC2 candidates; kept extracted 東
 examples:
-  - word: 下火
-    reading: したび
-    meaning: cháy thấp; tàn lụi; suy tàn
-  - word: 防火
-    reading: ぼうか
-    meaning: phòng cháy, chữa cháy, chữa cháy
-  - word: 火燵
-    reading: こたつ
-    meaning: bàn có lò sưởi; (orig) lò than trong giếng sàn
+  - word: 東
+    reading: あずま
+    meaning: phía đông; phía đông Nhật Bản
+  - word: 東
+    reading: あずま
+    meaning: phía đông; phía đông Nhật Bản
+  - word: 東西
+    reading: とうざい
+    meaning: Đông và Tây, cả nước
 
 ### 陳 (Trần)
 
@@ -9330,14 +11699,14 @@ examples:
     reading: ちんれつ
     meaning: triển lãm; trưng bày
 
-### 歩 (Thiệp)
+### 渉 (Thiệp)
 
 level: N1
 meaningVi: Giao thiệp
 hanViet: Thiệp
-onyomi: ["ホ", "ブ", "フ"]
-kunyomi: ["ある.く", "あゆ.む"]
-strokeCount: 8
+onyomi: ["ショウ"]
+kunyomi: ["わた.る"]
+strokeCount: 11
 writingHint: Thủy ( ) đi bộ ( ) lên đưa thiệp ( ) mời 渉 4
 sourcePages: []
 sources:
@@ -9348,40 +11717,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thiệp maps to 15 KANJIDIC2 candidates; kept extracted 歩
-examples:
-  - word: 歩む
-    reading: あゆむ
-    meaning: đi bộ; đi bộ
-  - word: 歩み
-    reading: あゆみ
-    meaning: đi bộ
-  - word: 徒歩
-    reading: とほ
-    meaning: đi bộ; đi bộ
-
-### 頁 (Tần)
-
-level: N1
-meaningVi: Tần suất
-hanViet: Tần
-onyomi: ["ケツ"]
-kunyomi: ["ぺえじ", "おおがい", "かしら"]
-strokeCount: 9
-writingHint: Tần suất ( ) đi bộ ( ) nhặt được tiền giấy ( ) rất cao 1 9
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tần maps to 84 KANJIDIC2 candidates; kept extracted 頁
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 干渉
+    reading: かんしょう
+    meaning: sự can thiệp; sự can thiệp
+  - word: 交渉
+    reading: こうしょう
+    meaning: đàm phán; thảo luận; kết nối
+  - word: 干渉
+    reading: かんしょう
+    meaning: sự can thiệp
 
 ### 瀕 (Tân)
 
@@ -9432,14 +11778,44 @@ examples:
     reading: はかどる
     meaning: tiến bộ; tiến thẳng về phía trước (với công việc); thăng tiến
 
-### 斗 (Oát)
+### 幹 (Cán)
+
+level: N1
+meaningVi: Cán bộ
+hanViet: Cán
+onyomi: ["カン"]
+kunyomi: ["みき"]
+strokeCount: 13
+writingHint: 20 ngày ( ) người ( )uống hết can ( ) rượu là cán bộ ( )幹 2 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 幹
+    reading: かん
+    meaning: (cây) thân cây
+  - word: 幹線
+    reading: かんせん
+    meaning: đường chính; đường trục
+  - word: 幹部
+    reading: かんぶ
+    meaning: quản lý; (điều hành) nhân viên; lãnh đạo
+
+### 斡 (Oát)
 
 level: N1
 meaningVi: Môi giới
 hanViet: Oát
-onyomi: ["ト", "トウ"]
-kunyomi: []
-strokeCount: 4
+onyomi: ["アツ", "カン", "ワツ"]
+kunyomi: ["めぐ.る", "めぐ.らす"]
+strokeCount: 14
 writingHint: 20 ngày ( ) người ( ) dân đấu ( ) tranh với môi giới ( )斡 2 9
 sourcePages: []
 sources:
@@ -9450,43 +11826,19 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Oát maps to 6 KANJIDIC2 candidates; kept extracted 斗
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 韋 (Hàn)
+### 韓 (Hàn)
 
 level: N1
 meaningVi: Hàn quốc
 hanViet: Hàn
-onyomi: ["イ"]
-kunyomi: ["そむ.く"]
-strokeCount: 10
+onyomi: ["カン"]
+kunyomi: ["から", "いげた"]
+strokeCount: 18
 writingHint: 20 ngày ( ) đều mặc áo da ( ) Hàn Quốc ( ) 韓 2 9
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hàn maps to 59 KANJIDIC2 candidates; kept extracted 韋
-  - examples missing; fill from ebook/manual pass later
-examples:
-  - none
-
-### 朝 (Miếu)
-
-level: N1
-meaningVi: Lăng miếu
-hanViet: Miếu
-onyomi: ["チョウ"]
-kunyomi: ["あさ"]
-strokeCount: 12
-writingHint: Ra mái hiên ( ) từ sáng ( ) để đi lăng miếu ( ) 廟 1
 sourcePages: []
 sources:
   level: ebook
@@ -9496,7 +11848,81 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Miếu maps to 20 KANJIDIC2 candidates; kept extracted 朝
+  - none
+examples:
+  - word: 韓国
+    reading: かんこく
+    hanViet: hàn quốc
+    meaning: Hàn Quốc
+
+### 廟 (Miếu)
+
+level: N1
+meaningVi: Lăng miếu
+hanViet: Miếu
+onyomi: ["ビョウ", "ミョウ"]
+kunyomi: ["たまや", "みたまや", "やしろ"]
+strokeCount: 15
+writingHint: Ra mái hiên ( ) từ sáng ( ) để đi lăng miếu ( ) 廟 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 潮 (Triều)
+
+level: N1
+meaningVi: Thủy triều
+hanViet: Triều
+onyomi: ["チョウ"]
+kunyomi: ["しお", "うしお"]
+strokeCount: 15
+writingHint: Nước ( ) buổi sáng ( ) dâng lên thành thủy triều ( ) 潮 1 5 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 潮
+    reading: うしお
+    meaning: thủy triều
+  - word: 潮
+    reading: うしお
+    meaning: thủy triều
+
+### 朝 (Trào)
+
+level: N1
+meaningVi: Giễu cợt
+hanViet: Trào
+onyomi: ["チョウ"]
+kunyomi: ["あさ"]
+strokeCount: 12
+writingHint: Miệng ( ) sáng ( ) ngày ra đã trào phúng giễu cợt ( ) 嘲 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Trào maps to 19 KANJIDIC2 candidates; kept extracted 朝
 examples:
   - word: 朝寝坊
     reading: あさねぼう
@@ -9539,14 +11965,14 @@ examples:
     reading: たんすい
     meaning: nước ngọt
 
-### 炎 (Đàm)
+### 痰 (Đàm)
 
 level: N1
 meaningVi: Đờm
 hanViet: Đàm
-onyomi: ["エン"]
-kunyomi: ["ほのお"]
-strokeCount: 8
+onyomi: ["タン"]
+kunyomi: []
+strokeCount: 13
 writingHint: Bệnh ( ) viêm ( ) họng thường có đờm ( ) 痰 1
 sourcePages: []
 sources:
@@ -9555,22 +11981,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 炎
-    reading: ほのお
-    meaning: ngọn lửa
+  - none
 
-### 冓 (Câu)
+### 溝 (Câu)
 
 level: N1
 meaningVi: Rãnh nước
 hanViet: Câu
 onyomi: ["コウ"]
-kunyomi: ["かま.える"]
-strokeCount: 10
+kunyomi: ["みぞ"]
+strokeCount: 13
 writingHint: Nước ( ) cấu ( ) tạo nên rãnh nước ( ) 溝 5 6
 sourcePages: []
 sources:
@@ -9579,20 +12003,25 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 溝
+    reading: こう
+    meaning: 10^38;trăm undecillion (Mỹ);trăm sextillion (Anh)
+  - word: 溝
+    reading: こう
+    meaning: 10^38; trăm undecillion (Mỹ); trăm sextillion (Anh)
 
-### 日 (Hôn)
+### 昏 (Hôn)
 
 level: N1
 meaningVi: Hoàng hôn
 hanViet: Hôn
-onyomi: ["ニチ", "ジツ"]
-kunyomi: ["ひ", "-び", "-か"]
-strokeCount: 4
+onyomi: ["コン"]
+kunyomi: ["くら.い", "くれ"]
+strokeCount: 8
 writingHint: Có họ ( ) với mặt trời ( ) là hoàng hôn ( ) 昏 1
 sourcePages: []
 sources:
@@ -9601,29 +12030,43 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hôn maps to 25 KANJIDIC2 candidates; kept extracted 日
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 日の丸
-    reading: ひのまる
-    meaning: lá cờ Nhật Bản
-  - word: 日焼け
-    reading: ひやけ
-    meaning: cháy nắng
-  - word: 日向
-    reading: ひなた
-    meaning: nơi đầy nắng; dưới ánh mặt trời
+  - none
 
-### 民 (Mân)
+### 罠 (Mân)
 
 level: N1
 meaningVi: Bẫy
 hanViet: Mân
-onyomi: ["ミン"]
-kunyomi: ["たみ"]
-strokeCount: 5
+onyomi: ["ビン", "ミン"]
+kunyomi: ["わな", "あみ"]
+strokeCount: 10
 writingHint: Mắc võng ( ) dân chúng ( ) nằm bẫy ( ) chim 罠 1 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 抵 (Để)
+
+level: N1
+meaningVi: Chống lại
+hanViet: Để
+onyomi: ["テイ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Tay ( ) họ ( ) nhất ( ) định chống lại ( ) 抵 2 4
 sourcePages: []
 sources:
   level: ebook
@@ -9633,49 +12076,50 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Mân maps to 83 KANJIDIC2 candidates; kept extracted 民
+  - none
 examples:
-  - word: 民族
-    reading: みんぞく
-    meaning: con người;chủng tộc;quốc gia;phong tục chủng tộc;phong tục dân gian
-  - word: 植民地
-    reading: しょくみんち
-    meaning: thuộc địa
-  - word: 人民
-    reading: じんみん
-    meaning: mọi người; công cộng
+  - word: 抵抗
+    reading: ていこう
+    meaning: điện trở; sự phản đối
+  - word: 大抵
+    reading: たいてい
+    meaning: thông thường; nói chung
 
-### 阝 (Để)
+### 邸 (Để)
 
 level: N1
 meaningVi: Lâu đài
 hanViet: Để
-onyomi: []
-kunyomi: ["こざと"]
-strokeCount: 3
+onyomi: ["テイ"]
+kunyomi: ["やしき"]
+strokeCount: 8
 writingHint: Họ ( ) nhất ( ) định để Bồ ( ) trong lâu đài ( ) 邸 1
 sourcePages: []
 sources:
   level: ebook
   hanViet: ebook_text
   meaningVi: ebook_text
-  readings: mixed_ebook_kanjidic2
+  readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Để maps to 107 KANJIDIC2 candidates; kept extracted 阝
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 邸宅
+    reading: ていたく
+    meaning: biệt thự; nơi ở
+  - word: 邸宅
+    reading: ていたく
+    meaning: biệt thự; nơi ở
 
-### 愛 (Ái)
+### 曖 (Ái)
 
 level: N1
 meaningVi: Mộ
 hanViet: Ái
 onyomi: ["アイ"]
-kunyomi: ["いと.しい", "かな.しい", "め.でる", "お.しむ", "まな"]
-strokeCount: 13
+kunyomi: ["くら.い"]
+strokeCount: 17
 writingHint: Ở Nhật ( ) tình yêu ( ) rất mập mờ ( ) 曖 5
 sourcePages: []
 sources:
@@ -9688,24 +12132,21 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 可愛らしい
-    reading: かわいらしい
-    meaning: đáng yêu; ngọt ngào
-  - word: 可愛い
-    reading: かわいい
-    meaning: xinh đẹp;dễ thương;đáng yêu;duyên dáng;thân yêu;cưng;thú cưng
-  - word: 愛でたい
-    reading: めでたい
-    meaning: tốt lành
+  - word: 曖昧
+    reading: あいまい
+    meaning: mơ hồ; mơ hồ
+  - word: 曖昧
+    reading: あいまい
+    meaning: mơ hồ; không rõ ràng
 
-### 有 (Hối)
+### 賄 (Hối)
 
 level: N1
 meaningVi: Hối lộ
 hanViet: Hối
-onyomi: ["ユウ", "ウ"]
-kunyomi: ["あ.る"]
-strokeCount: 6
+onyomi: ["ワイ"]
+kunyomi: ["まかな.う"]
+strokeCount: 13
 writingHint: Bảo bối ( ) có ( ) nhiều mang đi hối lộ ( ) 賄 8
 sourcePages: []
 sources:
@@ -9716,17 +12157,88 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hối maps to 62 KANJIDIC2 candidates; kept extracted 有
+  - none
 examples:
-  - word: 国有
-    reading: こくゆう
-    meaning: quyền sở hữu quốc gia
-  - word: 有機
-    reading: ゆうき
-    meaning: hữu cơ
-  - word: 私有
-    reading: しゆう
-    meaning: sở hữu tư nhân
+  - word: 賄う
+    reading: まかなう
+    meaning: cung cấp chỗ ở; cung cấp bữa ăn; trả tiền
+  - word: 賄う
+    reading: まかなう
+    meaning: cung cấp chỗ ở; cung cấp bữa ăn; trả tiền
+
+### 髄 (Tủy)
+
+level: N1
+meaningVi: Xương tủy
+hanViet: Tủy
+onyomi: ["ズイ"]
+kunyomi: []
+strokeCount: 19
+writingHint: Đau xương ( ) có ( ) khi đi xa ( ) vào bên trong tủy ( ) 髄 2 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 随 (Tùy)
+
+level: N1
+meaningVi: Tùy tùng
+hanViet: Tùy
+onyomi: ["ズイ"]
+kunyomi: ["まにま.に", "したが.う"]
+strokeCount: 12
+writingHint: Bồ ( ) có ( ) khi đi xa ( ) sẽ dẫn theo tùy tùng ( ) 随 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 随筆
+    reading: ずいひつ
+    meaning: tiểu luận, bài viết khác
+  - word: 随筆
+    reading: ずいひつ
+    meaning: tùy bút; tạp văn
+  - word: 随分
+    reading: ずいぶん
+    meaning: cực kỳ
+
+### 堕 (Đọa)
+
+level: N1
+meaningVi: Sa đọa, rơi
+hanViet: Đọa
+onyomi: ["ダ"]
+kunyomi: ["お.ちる", "くず.す", "くず.れる"]
+strokeCount: 12
+writingHint: Bồ ( ) có ( ) nhiều đất ( ) nên ăn chơi sa đọa ( ) 堕 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 惰 (Noạ)
 
@@ -9749,6 +12261,33 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 楕 (Thoả)
+
+level: N1
+meaningVi: Hình elip
+hanViet: Thoả
+onyomi: ["ダ", "タ"]
+kunyomi: []
+strokeCount: 13
+writingHint: Cây ( ) bên trái ( ) của Nguyệt ( ) có hình elip ( ) 楕 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 楕円
+    reading: だえん
+    meaning: hình elip
+  - word: 楕円
+    reading: だえん
+    meaning: hình elip; hình bầu dục
 
 ### 垂 (Thóa)
 
@@ -9779,6 +12318,33 @@ examples:
   - word: 垂直
     reading: すいちょく
     meaning: dọc, vuông góc
+
+### 剰 (Thặng)
+
+level: N1
+meaningVi: Thặng dư
+hanViet: Thặng
+onyomi: ["ジョウ"]
+kunyomi: ["あまつさえ", "あま.り", "あま.る"]
+strokeCount: 11
+writingHint: Thừa ( ) đao ( ) là thặng dư ( ) 剰 1 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 過剰
+    reading: かじょう
+    meaning: quá mức, quá mức-
+  - word: 過剰
+    reading: かじょう
+    meaning: quá mức; dư thừa
 
 ### 嘩 (Hoa)
 
@@ -9812,14 +12378,14 @@ examples:
     hanViet: huyên hoa
     meaning: cãi nhau, đánh nhau
 
-### 卆 (Túy)
+### 粋 (Túy)
 
 level: N1
 meaningVi: Tinh tuý
 hanViet: Túy
-onyomi: ["ソツ", "シュツ"]
-kunyomi: ["そっ.する", "お.える", "お.わる", "ついに", "にわか"]
-strokeCount: 4
+onyomi: ["スイ"]
+kunyomi: ["いき"]
+strokeCount: 10
 writingHint: Gạo ( ) để 90 ( ) năm rất tinh túy ( ) 粋 7
 sourcePages: []
 sources:
@@ -9828,21 +12394,58 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Túy maps to 42 KANJIDIC2 candidates; kept extracted 卆
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 粋
+    reading: いき
+    meaning: sang trọng; phong cách; tinh khiết; bản chất
+  - word: 粋
+    reading: いき
+    meaning: sang trọng; phong cách; tinh khiết; bản chất
+  - word: 純粋
+    reading: じゅんすい
+    meaning: tinh khiết, chân thật, chính hãng, không pha trộn
 
-### 参 (Thảm)
+### 砕 (Toái)
+
+level: N1
+meaningVi: Phá vỡ
+hanViet: Toái
+onyomi: ["サイ"]
+kunyomi: ["くだ.く", "くだ.ける"]
+strokeCount: 9
+writingHint: Đá ( ) 90 ( ) năm khó phá vỡ ( ) 砕 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 砕く
+    reading: くだく
+    meaning: đập vỡ, đập vỡ
+  - word: 砕ける
+    reading: くだける
+    meaning: phá vỡ, bị phá vỡ
+  - word: 砕く
+    reading: くだく
+    meaning: đập vỡ; nghiền nát
+
+### 惨 (Thảm)
 
 level: N1
 meaningVi: Bi thảm
 hanViet: Thảm
-onyomi: ["サン", "シン"]
-kunyomi: ["まい.る", "まい-", "まじわる", "みつ"]
-strokeCount: 8
+onyomi: ["サン", "ザン"]
+kunyomi: ["みじ.め", "いた.む", "むご.い"]
+strokeCount: 11
 writingHint: Tâm ( ) tham ( ) sẽ gặp bi thảm ( ) 惨 3 4
 sourcePages: []
 sources:
@@ -9855,15 +12458,15 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 参照
-    reading: さんしょう
-    meaning: sự tham khảo; sự tư vấn; sự tư vấn
-  - word: 参上
-    reading: さんじょう
-    meaning: kêu gọi; thăm viếng
-  - word: 参議院
-    reading: さんぎいん
-    meaning: Hạ viện
+  - word: 惨め
+    reading: みじめ
+    meaning: khốn khổ
+  - word: 悲惨
+    reading: ひさん
+    meaning: khốn khổ
+  - word: 悲惨
+    reading: ひさん
+    meaning: khốn khổ
 
 ### 疹 (Chẩn)
 
@@ -9914,14 +12517,58 @@ examples:
     reading: ゆうゆう
     meaning: thong thả; ung dung; bình tĩnh
 
-### 屯 (Độn)
+### 屯 (Đồn)
+
+level: N1
+meaningVi: Đồn điền
+hanViet: Đồn
+onyomi: ["トン"]
+kunyomi: ["たむろ"]
+strokeCount: 4
+writingHint: San bằng 7 ( ) ngọn núi ( ) làm đồn điền ( ) 屯 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 頓 (Đốn)
+
+level: N1
+meaningVi: Chỉnh đốn
+hanViet: Đốn
+onyomi: ["トン", "トツ"]
+kunyomi: ["にわか.に", "とん.と", "つまず.く", "とみ.に", "ぬかずく"]
+strokeCount: 13
+writingHint: Nghe đồn ( ) giấy ( ) tờ cần chỉnh đốn ( ) lại 頓 4 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 沌 (Độn)
 
 level: N1
 meaningVi: Hỗn độn
 hanViet: Độn
 onyomi: ["トン"]
-kunyomi: ["たむろ"]
-strokeCount: 4
+kunyomi: ["くら.い"]
+strokeCount: 7
 writingHint: Nước ( ) nghe đồn ( ) đang chuyển động hỗn độn ( ) 沌 7
 sourcePages: []
 sources:
@@ -9963,14 +12610,14 @@ examples:
     reading: じこ
     meaning: bản thân; chính mình
 
-### 巴 (Phì)
+### 肥 (Phì)
 
 level: N1
 meaningVi: Béo
 hanViet: Phì
-onyomi: ["ハ"]
-kunyomi: ["ともえ", "うずまき"]
-strokeCount: 4
+onyomi: ["ヒ"]
+kunyomi: ["こ.える", "こえ", "こ.やす", "こ.やし", "ふと.る"]
+strokeCount: 8
 writingHint: Nguyệt ( ) vòng ba ( ) bị béo phì ( ) 肥 2
 sourcePages: []
 sources:
@@ -9979,22 +12626,53 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phì maps to 66 KANJIDIC2 candidates; kept extracted 巴
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 肥料
+    reading: ひりょう
+    meaning: phân bón; phân bón
+  - word: 肥料
+    reading: ひりょう
+    meaning: phân bón
 
-### 彳 (Từ)
+### 把 (Bả)
 
 level: N1
-meaningVi: Từ từ
-hanViet: Từ
-onyomi: ["テキ"]
-kunyomi: ["たたず.む"]
-strokeCount: 3
-writingHint: Từ từ ( )! 2 người ( ) đang làm việc dư thừa ( ) 余 1 4
+meaningVi: Cầm
+hanViet: Bả
+onyomi: ["ハ", "ワ"]
+kunyomi: []
+strokeCount: 7
+writingHint: Tay ( ) ba ( ) cầm bả ( ) 把 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 把握
+    reading: はあく
+    meaning: nắm bắt; nắm bắt; hiểu biết
+  - word: 把握
+    reading: はあく
+    meaning: nắm bắt; hiểu biết
+
+### 芭 (Ba)
+
+level: N1
+meaningVi: Chuối
+hanViet: Ba
+onyomi: ["バ", "ハ"]
+kunyomi: []
+strokeCount: 7
+writingHint: Cô Thảo ( ) ăn ba ( ) quả chuối ( ) 芭 2 3
 sourcePages: []
 sources:
   level: ebook
@@ -10004,10 +12682,39 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Từ maps to 168 KANJIDIC2 candidates; kept extracted 彳
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 余 (Từ)
+
+level: N1
+meaningVi: Từ từ
+hanViet: Từ
+onyomi: ["ヨ"]
+kunyomi: ["あま.る", "あま.り", "あま.す", "あんま.り"]
+strokeCount: 7
+writingHint: Từ từ ( )! 2 người ( ) đang làm việc dư thừa ( ) 余 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Từ maps to 168 KANJIDIC2 candidates; kept extracted 余
+examples:
+  - word: 余程
+    reading: よっぽど
+    meaning: rất, rất nhiều, nhiều, ở mức độ lớn, khá
+  - word: 余地
+    reading: よち
+    meaning: địa điểm;phòng;lề;phạm vi
+  - word: 余所見
+    reading: よそみ
+    meaning: nhìn đi chỗ khác; nhìn sang một bên
 
 ### 叙 (Tự)
 
@@ -10031,44 +12738,14 @@ openGaps:
 examples:
   - none
 
-### 余 (Đồ)
-
-level: N1
-meaningVi: Sơn
-hanViet: Đồ
-onyomi: ["ヨ"]
-kunyomi: ["あま.る", "あま.り", "あま.す", "あんま.り"]
-strokeCount: 7
-writingHint: Khi sơn ( ) tường, nước ( ) dư thừa ( ) bắn xuống đất ( ) 土 1 4 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đồ maps to 63 KANJIDIC2 candidates; kept extracted 余
-examples:
-  - word: 余程
-    reading: よっぽど
-    meaning: rất, rất nhiều, nhiều, ở mức độ lớn, khá
-  - word: 余地
-    reading: よち
-    meaning: địa điểm;phòng;lề;phạm vi
-  - word: 余所見
-    reading: よそみ
-    meaning: nhìn đi chỗ khác; nhìn sang một bên
-
-### 子 (Lí)
+### 李 (Lí)
 
 level: N1
 meaningVi: Cây mận
 hanViet: Lí
-onyomi: ["シ", "ス", "ツ"]
-kunyomi: ["こ", "-こ", "ね"]
-strokeCount: 3
+onyomi: ["リ"]
+kunyomi: ["すもも"]
+strokeCount: 7
 writingHint: Trèo lên cây ( ) trẻ con ( ) hái mận ( ) 李 2
 sourcePages: []
 sources:
@@ -10077,28 +12754,21 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lí maps to 50 KANJIDIC2 candidates; kept extracted 子
+  - target kanji ambiguous: Hán-Việt heading Lí maps to 50 KANJIDIC2 candidates; kept extracted 李
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 子息
-    reading: しそく
-    meaning: con trai
-  - word: 捻子
-    reading: ねじ
-    meaning: vít;xoắn ốc;xoắn ốc
-  - word: 梯子
-    reading: ていし
-    meaning: thang; cầu thang
+  - none
 
-### 委 (Nuy)
+### 萎 (Nuy)
 
 level: N1
 meaningVi: Héo
 hanViet: Nuy
 onyomi: ["イ"]
-kunyomi: ["ゆだ.ねる"]
-strokeCount: 8
+kunyomi: ["な", "しお.れる", "しな.びる", "しぼ.む", "な.える"]
+strokeCount: 11
 writingHint: Cỏ ( ) của ủy viên ( ) bị héo ( ) 萎 2 3
 sourcePages: []
 sources:
@@ -10109,26 +12779,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nuy maps to 5 KANJIDIC2 candidates; kept extracted 委
+  - none
 examples:
-  - word: 委託
-    reading: いたく
-    meaning: giao phó (hàng hóa (để bán) cho một công ty); ủy thác (người với cái gì đó); cam kết
-  - word: 委託
-    reading: いたく
-    meaning: giao phó (hàng hóa (để bán) cho một công ty); ủy thác (người với cái gì đó); cam kết
-  - word: 委員
-    reading: いいん
-    meaning: thành viên ủy ban
+  - word: 萎む
+    reading: しぼむ
+    meaning: héo; tàn lụi (mất dần); héo mòn; héo mòn
+  - word: 萎びる
+    reading: しなびる
+    meaning: héo; phai nhạt
+  - word: 萎びる
+    reading: しなびる
+    meaning: héo; phai nhạt
 
-### 利 (Lị)
+### 痢 (Lị)
 
 level: N1
 meaningVi: Bệnh lỵ
 hanViet: Lị
 onyomi: ["リ"]
-kunyomi: ["き.く"]
-strokeCount: 7
+kunyomi: []
+strokeCount: 12
 writingHint: Bệnh ( ) không có lợi ( ) là bệnh lỵ ( ) 痢 1
 sourcePages: []
 sources:
@@ -10139,27 +12809,24 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lị maps to 50 KANJIDIC2 candidates; kept extracted 利
+  - none
 examples:
-  - word: 利根
-    reading: りこん
-    meaning: trí thông minh
-  - word: 利点
-    reading: りてん
-    meaning: lợi thế; có lợi cho
-  - word: 砂利
-    reading: じゃり
-    meaning: sỏi; dằn; sỏi
+  - word: 下痢
+    reading: げり
+    meaning: tiêu chảy
+  - word: 下痢
+    reading: げり
+    meaning: tiêu chảy
 
-### 秋 (Thu)
+### 愁 (Sầu)
 
 level: N1
-meaningVi: Hoa hagi
-hanViet: Thu
+meaningVi: U sầu
+hanViet: Sầu
 onyomi: ["シュウ"]
-kunyomi: ["あき", "とき"]
-strokeCount: 9
-writingHint: Cô Thảo ( ) mùa thu ( ) đi hái hoa Hagi ( ) 萩 2 3
+kunyomi: ["うれ.える", "うれ.い"]
+strokeCount: 13
+writingHint: Mùa thu ( ) trái tim ( ) rất u sầu ( ) 愁 1 8
 sourcePages: []
 sources:
   level: ebook
@@ -10171,27 +12838,22 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 秋葉原
-    reading: あきはばら
-    hanViet: thu diệp nguyên
-    meaning: Akihabara (khu phố điện tử ở Tokyo)
-  - word: 秋
-    reading: あき
-    meaning: mùa thu
-  - word: 秋
-    reading: あき
-    hanViet: thu
-    meaning: mùa thu
+  - word: 郷愁
+    reading: きょうしゅう
+    meaning: nỗi nhớ; nỗi nhớ nhà
+  - word: 郷愁
+    reading: きょうしゅう
+    meaning: nỗi nhớ; nỗi nhớ nhà
 
-### 茣 (Thán)
+### 萩 (Thu)
 
 level: N1
-meaningVi: Ca thán
-hanViet: Thán
-onyomi: ["ゴ"]
-kunyomi: []
-strokeCount: 10
-writingHint: Miệng ( ) học chữ Hán ( ) luôn ca thán ( ) 嘆 5 6
+meaningVi: Hoa hagi
+hanViet: Thu
+onyomi: ["シュウ"]
+kunyomi: ["はぎ"]
+strokeCount: 12
+writingHint: Cô Thảo ( ) mùa thu ( ) đi hái hoa Hagi ( ) 萩 2 3
 sourcePages: []
 sources:
   level: ebook
@@ -10201,19 +12863,45 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thán maps to 53 KANJIDIC2 candidates; kept extracted 茣
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 菫 (Cẩn)
+### 嘆 (Thán)
+
+level: N1
+meaningVi: Ca thán
+hanViet: Thán
+onyomi: ["タン"]
+kunyomi: ["なげかわしい", "なげく"]
+strokeCount: 14
+writingHint: Miệng ( ) học chữ Hán ( ) luôn ca thán ( ) 嘆 5 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thán maps to 53 KANJIDIC2 candidates; kept extracted 嘆
+examples:
+  - word: 嘆く
+    reading: なげく
+    meaning: thở dài; than thở; đau buồn
+  - word: 嘆く
+    reading: なげく
+    meaning: thở dài; than thở; đau buồn
+
+### 謹 (Cẩn)
 
 level: N1
 meaningVi: Cẩn thận
 hanViet: Cẩn
 onyomi: ["キン"]
-kunyomi: ["すみれ"]
-strokeCount: 11
+kunyomi: ["つつしむ"]
+strokeCount: 18
 writingHint: Nói ( ) với người bị cận ( ) hãy nhìn cẩn thận ( ) 謹 1 9 10
 sourcePages: []
 sources:
@@ -10224,9 +12912,40 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
+  - target kanji ambiguous: Hán-Việt heading Cẩn maps to 79 KANJIDIC2 candidates; kept extracted 謹
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 僅 (Cận)
+
+level: N1
+meaningVi: Ít
+hanViet: Cận
+onyomi: ["キン", "ゴン"]
+kunyomi: ["わず.か"]
+strokeCount: 12
+writingHint: Người ( ) bị cận ( ) không ít ( ) 僅 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 僅
+    reading: きん
+    meaning: một ít; số lượng nhỏ
+  - word: 僅
+    reading: きん
+    meaning: một ít; số lượng nhỏ
+  - word: 僅か
+    reading: わずか
+    meaning: chỉ; một ít; số lượng nhỏ
 
 ### 予 (Mâu)
 
@@ -10258,14 +12977,14 @@ examples:
     reading: かねごと
     meaning: sự đoán trước; lời hứa; sự tiên đoán
 
-### 務 (Vụ)
+### 霧 (Vụ)
 
 level: N1
 meaningVi: Sương mù
 hanViet: Vụ
-onyomi: ["ム"]
-kunyomi: ["つと.める"]
-strokeCount: 11
+onyomi: ["ム", "ボウ", "ブ"]
+kunyomi: ["きり"]
+strokeCount: 19
 writingHint: Mưa ( ) tạo ra vụ ( ) sương mù ( ) 霧 1
 sourcePages: []
 sources:
@@ -10278,15 +12997,39 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 職務
-    reading: しょくむ
-    meaning: nhiệm vụ chuyên môn
-  - word: 業務
-    reading: ぎょうむ
-    meaning: kinh doanh; công việc; nhiệm vụ; công việc
-  - word: 任務
-    reading: にんむ
-    meaning: nhiệm vụ;chức năng;văn phòng;sứ mệnh;nhiệm vụ
+  - word: 霧
+    reading: きり
+    meaning: sương mù
+
+### 是 (Thị)
+
+level: N1
+meaningVi: Thị phi
+hanViet: Thị
+onyomi: ["ゼ", "シ"]
+kunyomi: ["これ", "この", "ここ"]
+strokeCount: 9
+writingHint: Cả ngày ( ) hạ ( ) nhân ( ) gây thị phi ( ) 是 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 是非とも
+    reading: ぜひとも
+    meaning: bằng mọi cách (với ý thức không chấp nhận câu trả lời là không)
+  - word: 是正
+    reading: ぜせい
+    meaning: sửa lại; sửa đổi
+  - word: 是正
+    reading: ぜせい
+    meaning: sửa lại; sửa đổi
 
 ### 堤 (Đê)
 
@@ -10345,44 +13088,14 @@ examples:
     reading: ていけい
     meaning: hợp tác; liên kết; liên kết kinh doanh; liên kết
 
-### 是 (Thi)
-
-level: N1
-meaningVi: Cái thìa
-hanViet: Thi
-onyomi: ["ゼ", "シ"]
-kunyomi: ["これ", "この", "ここ"]
-strokeCount: 9
-writingHint: Câu chuyện thị phi ( ) về cái thìa ( ) => ( )匙 2 11
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - none
-examples:
-  - word: 是非とも
-    reading: ぜひとも
-    meaning: bằng mọi cách (với ý thức không chấp nhận câu trả lời là không)
-  - word: 是正
-    reading: ぜせい
-    meaning: sửa lại; sửa đổi
-  - word: 是正
-    reading: ぜせい
-    meaning: sửa lại; sửa đổi
-
-### 高 (Cảo)
+### 稿 (Cảo)
 
 level: N1
 meaningVi: Bản thảo
 hanViet: Cảo
 onyomi: ["コウ"]
-kunyomi: ["たか.い", "たか", "-だか", "たか.まる", "たか.める"]
-strokeCount: 10
+kunyomi: ["わら", "したがき"]
+strokeCount: 15
 writingHint: Hòa ( ) rất cao ( ) tay làm trong bản thảo ( ) 稿 1 6
 sourcePages: []
 sources:
@@ -10395,15 +13108,39 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 名高い
-    reading: なだかい
-    meaning: nổi tiếng; nổi tiếng; nổi tiếng
-  - word: 高まる
-    reading: たかまる
-    meaning: nổi lên; sưng lên; được thăng chức
-  - word: 高原
-    reading: こうげん
-    meaning: cao nguyên; cao nguyên
+  - word: 原稿
+    reading: げんこう
+    meaning: bản thảo, bản sao
+  - word: 原稿
+    reading: げんこう
+    meaning: bản thảo; bản viết
+
+### 縞 (Cảo)
+
+level: N1
+meaningVi: Kẻ sọc
+hanViet: Cảo
+onyomi: ["コウ"]
+kunyomi: ["しま", "しろぎぬ"]
+strokeCount: 16
+writingHint: Tơ ( ) cao ( ) cấp có kẻ ngang kẻ sọc ( )縞 1 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 縞
+    reading: しま
+    meaning: sọc
+  - word: 縞
+    reading: しま
+    meaning: sọc; vằn
 
 ### 嵩 (Tung)
 
@@ -10435,6 +13172,33 @@ examples:
     reading: かさばる
     meaning: trở nên cồng kềnh; trở nên đồ sộ
 
+### 藁 (Cảo)
+
+level: N1
+meaningVi: Rơm
+hanViet: Cảo
+onyomi: ["コウ"]
+kunyomi: ["わら"]
+strokeCount: 17
+writingHint: Cỏ ( ) cao ( ) cây ( ) là rơm ( )藁 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 藁
+    reading: わら
+    meaning: rơm rạ
+  - word: 藁
+    reading: わら
+    meaning: rơm rạ
+
 ### 膏 (Cao)
 
 level: N1
@@ -10457,15 +13221,15 @@ openGaps:
 examples:
   - none
 
-### 艹 (Kiều)
+### 喬 (Kiểu)
 
 level: N1
-meaningVi: Kiều mạch
-hanViet: Kiều
-onyomi: ["ソウ"]
-kunyomi: ["くさかんむり"]
-strokeCount: 4
-writingHint: Kiều mạch ( ) là loại cỏ ( ) của trời cao ( )喬 2 3
+meaningVi: Nắn thẳng
+hanViet: Kiểu
+onyomi: ["キョウ"]
+kunyomi: ["たか.い"]
+strokeCount: 12
+writingHint: Nắn thẳng ( ) mũi tên ( ) bắn lên trời cao ( ) 喬 6
 sourcePages: []
 sources:
   level: ebook
@@ -10475,19 +13239,45 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Kiều maps to 46 KANJIDIC2 candidates; kept extracted 艹
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 巾 (Điếu)
+### 仙 (Tiên)
+
+level: N1
+meaningVi: Thần tiên
+hanViet: Tiên
+onyomi: ["セン", "セント"]
+kunyomi: []
+strokeCount: 5
+writingHint: Người đứng ( ) trên núi ( ) là thần tiên ( ) 仙 1 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 仙
+    reading: せん
+    meaning: ẩn sĩ; pháp sư
+  - word: 仙
+    reading: せん
+    meaning: ẩn sĩ; pháp sư
+
+### 吊 (Điếu)
 
 level: N1
 meaningVi: Treo lên
 hanViet: Điếu
-onyomi: ["キン", "フク"]
-kunyomi: ["おお.い", "ちきり", "きれ"]
-strokeCount: 3
+onyomi: ["チョウ"]
+kunyomi: ["つ.る", "つる.す"]
+strokeCount: 6
 writingHint: Miệng ( ) ngậm khăn ( ) để treo lên ( ) 吊 2
 sourcePages: []
 sources:
@@ -10498,17 +13288,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Điếu maps to 92 KANJIDIC2 candidates; kept extracted 巾
+  - none
 examples:
-  - word: 布巾
-    reading: ふきん
-    meaning: khăn trà; khăn lau bát đĩa
-  - word: 布巾
-    reading: ふきん
-    meaning: khăn trà; khăn lau bát đĩa
-  - word: 雑巾
-    reading: ぞうきん
-    meaning: vải lau nhà, vải lau bụi
+  - word: 吊るす
+    reading: つるす
+    meaning: treo
+  - word: 吊り革
+    reading: つりかわ
+    meaning: dây đeo
+  - word: 吊り革
+    reading: つりかわ
+    meaning: dây đeo
 
 ### 希 (Hi)
 
@@ -10564,14 +13354,59 @@ openGaps:
 examples:
   - none
 
-### 風 (Táp)
+### 凧 (Diều)
+
+level: N1
+meaningVi: Con diều
+hanViet: Diều
+onyomi: []
+kunyomi: ["いかのぼり", "たこ"]
+strokeCount: 5
+writingHint: Ngồi ghế ( ) quàng khăn ( ) thả diều ( ) 凧 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: mixed_ebook_kanjidic2
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 凪 (Lạng)
+
+level: N1
+meaningVi: Yên lặng
+hanViet: Lạng
+onyomi: []
+kunyomi: ["なぎ", "な.ぐ"]
+strokeCount: 6
+writingHint: Người ngồi trên ghế ( ) chỉ ( ) yên lặng ( ) 凪 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: mixed_ebook_kanjidic2
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Lạng maps to 51 KANJIDIC2 candidates; kept extracted 凪
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 颯 (Táp)
 
 level: N1
 meaningVi: Nhanh chóng
 hanViet: Táp
-onyomi: ["フウ", "フ"]
-kunyomi: ["かぜ", "かざ-"]
-strokeCount: 9
+onyomi: ["サツ", "ソウ"]
+kunyomi: ["さっ.と"]
+strokeCount: 14
 writingHint: Đứng ( ) đối đầu với phong ( ) ba bão táp ( ) 颯 1 7
 sourcePages: []
 sources:
@@ -10580,19 +13415,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Táp maps to 37 KANJIDIC2 candidates; kept extracted 風
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 風習
-    reading: ふうしゅう
-    meaning: tùy chỉnh
-  - word: 気風
-    reading: きふう
-    meaning: tính cách; đặc điểm; đạo đức
-  - word: 洋風
-    reading: ようふう
-    meaning: phong cách phương Tây
+  - none
 
 ### 此 (Thử)
 
@@ -10624,15 +13451,15 @@ examples:
     reading: この
     meaning: cái này
 
-### 定 (Điến)
+### 雌 (Thư)
 
 level: N1
-meaningVi: Ứ đọng
-hanViet: Điến
-onyomi: ["テイ", "ジョウ"]
-kunyomi: ["さだ.める", "さだ.まる", "さだ.か"]
-strokeCount: 8
-writingHint: Nước ( ) bị cố định ( ) do ứ đọng ( ) 淀 1 4
+meaningVi: Giống cái
+hanViet: Thư
+onyomi: ["シ"]
+kunyomi: ["め-", "めす", "めん"]
+strokeCount: 14
+writingHint: Đây ( ) là con chim ( ) giống cái ( ) 雌 6 7 9
 sourcePages: []
 sources:
   level: ebook
@@ -10642,54 +13469,24 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Điến maps to 74 KANJIDIC2 candidates; kept extracted 定
+  - none
 examples:
-  - word: 定義
-    reading: ていぎ
-    meaning: độ nét
-  - word: 確定
-    reading: かくてい
-    meaning: định nghĩa (toán học); quyết định; giải quyết
-  - word: 定まる
-    reading: さだまる
-    meaning: trở nên ổn định; được cố định
+  - word: 雌
+    reading: めす
+    meaning: con cái (động vật)
+  - word: 雌
+    reading: めす
+    meaning: con cái (động vật)
 
-### 卯 (Ngưỡng)
+### 砦 (Trại)
 
 level: N1
-meaningVi: Ngưỡng mộ
-hanViet: Ngưỡng
-onyomi: ["ボウ", "モウ"]
-kunyomi: ["う"]
-strokeCount: 5
-writingHint: Người ( ) ra CD ( ) được ngưỡng mộ ( ) 仰 1 3
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ngưỡng maps to 3 KANJIDIC2 candidates; kept extracted 卯
-examples:
-  - word: 卯
-    reading: ぼう
-    meaning: cung hoàng đạo thứ tư của Trung Quốc (Thỏ 5 giờ sáng-7 giờ sáng phía đông tháng 2)
-  - word: 卯
-    reading: ぼう
-    meaning: cung hoàng đạo thứ tư của Trung Quốc (Thỏ 5 giờ sáng-7 giờ sáng phía đông tháng 2)
-
-### 曽 (Tăng)
-
-level: N1
-meaningVi: Tăng lữ
-hanViet: Tăng
-onyomi: ["ソウ", "ソ", "ゾウ"]
-kunyomi: ["かつ", "かつて", "すなわち"]
+meaningVi: Thành trì
+hanViet: Trại
+onyomi: ["サイ"]
+kunyomi: ["とりで"]
 strokeCount: 11
-writingHint: Người ( ) cháu ( ) là tăng lữ ( )憎 1 3 4
+writingHint: Đây ( ) là đá ( ) để xây thành trì ( ) 砦 1 6
 sourcePages: []
 sources:
   level: ebook
@@ -10702,6 +13499,295 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 淀 (Điến)
+
+level: N1
+meaningVi: Ứ đọng
+hanViet: Điến
+onyomi: ["テン", "デン"]
+kunyomi: ["よど.む"]
+strokeCount: 11
+writingHint: Nước ( ) bị cố định ( ) do ứ đọng ( ) 淀 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 錠 (Đĩnh)
+
+level: N1
+meaningVi: Cái khóa
+hanViet: Đĩnh
+onyomi: ["ジョウ"]
+kunyomi: []
+strokeCount: 16
+writingHint: Cất vàng ( ) vào nơi cố định ( ) rồi khóa ( ) lại錠 1 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 手錠
+    reading: てじょう
+    meaning: còng tay; còng tay
+  - word: 手錠
+    reading: てじょう
+    meaning: còng tay
+
+### 綻 (Trán)
+
+level: N1
+meaningVi: Đường khâu
+hanViet: Trán
+onyomi: ["タン"]
+kunyomi: ["ほころ.びる"]
+strokeCount: 14
+writingHint: Sợi tơ ( ) cố định ( ) trên trán là đường khâu ( ) 綻 1 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 綻びる
+    reading: ほころびる
+    meaning: tách ra ở các đường nối; bắt đầu mở ra; mỉm cười rộng rãi
+  - word: 綻びる
+    reading: ほころびる
+    meaning: tách ra ở các đường nối; bắt đầu mở ra; mỉm cười rộng rãi
+
+### 礎 (Sở)
+
+level: N1
+meaningVi: Cơ sở
+hanViet: Sở
+onyomi: ["ソ"]
+kunyomi: ["いしずえ"]
+strokeCount: 18
+writingHint: Hang đá ( ) trong rừng ( ) được hạ ( ) nhân ( ) dùng làm cơ sở ( ) 礎 7 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 基礎
+    reading: きそ
+    meaning: nền tảng, cơ sở
+  - word: 基礎
+    reading: きそ
+    meaning: nền tảng; cơ sở
+
+### 仰 (Ngưỡng)
+
+level: N1
+meaningVi: Ngưỡng mộ
+hanViet: Ngưỡng
+onyomi: ["ギョウ", "コウ"]
+kunyomi: ["あお.ぐ", "おお.せ", "お.っしゃる", "おっしゃ.る"]
+strokeCount: 6
+writingHint: Người ( ) ra CD ( ) được ngưỡng mộ ( ) 仰 1 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 仰ぐ
+    reading: あおぐ
+    meaning: ngước lên (với);tôn trọng;dựa vào;yêu cầu;tìm kiếm;tôn kính;uống;nhận
+  - word: 仰っしゃる
+    reading: おっしゃる
+    meaning: nói; nói; kể; nói chuyện
+  - word: 仰ぐ
+    reading: あおぐ
+    meaning: ngước lên (với); tôn trọng; dựa vào; yêu cầu; tìm kiếm; tôn kính; uống; nhận
+
+### 抑 (Ức)
+
+level: N1
+meaningVi: Ức chế
+hanViet: Ức
+onyomi: ["ヨク"]
+kunyomi: ["おさ.える"]
+strokeCount: 7
+writingHint: Tay ( ) đó xem CD ( ) nhiều nên ức chế ( ) 抑 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 抑制
+    reading: よくせい
+    meaning: đàn áp
+  - word: 抑圧
+    reading: よくあつ
+    meaning: kiểm tra;kiềm chế;áp bức;đàn áp
+  - word: 抑圧
+    reading: よくあつ
+    meaning: kiểm tra; kiềm chế; áp bức; đàn áp
+
+### 卩 (Khấu)
+
+level: N1
+meaningVi: Gõ
+hanViet: Khấu
+onyomi: ["セツ"]
+kunyomi: ["わりふ"]
+strokeCount: 2
+writingHint: Gõ ( ) vào mồm ( ) là phọt tiết ( ) ra 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Khấu maps to 17 KANJIDIC2 candidates; kept extracted 卩
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 卯 (Mão)
+
+level: N1
+meaningVi: Năm mão
+hanViet: Mão
+onyomi: ["ボウ", "モウ"]
+kunyomi: ["う"]
+strokeCount: 5
+writingHint: Giải (g) phóng ( ) vào năm Mão ( ) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 卯
+    reading: ぼう
+    meaning: cung hoàng đạo thứ tư của Trung Quốc (Thỏ 5 giờ sáng-7 giờ sáng phía đông tháng 2)
+  - word: 卯
+    reading: ぼう
+    meaning: cung hoàng đạo thứ tư của Trung Quốc (Thỏ 5 giờ sáng-7 giờ sáng phía đông tháng 2)
+
+### 柳 (Liễu)
+
+level: N1
+meaningVi: Cây liễu
+hanViet: Liễu
+onyomi: ["リュウ"]
+kunyomi: ["やなぎ"]
+strokeCount: 9
+writingHint: Cây ( ) giải phóng ( ) ra nhiều oxy là cây liễu ( )柳 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 憎 (Tăng)
+
+level: N1
+meaningVi: Tăng lữ
+hanViet: Tăng
+onyomi: ["ゾウ"]
+kunyomi: ["にくい", "にくしみ", "にくむ", "にくらしい"]
+strokeCount: 15
+writingHint: Người ( ) cháu ( ) là tăng lữ ( )憎 1 3 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Tăng maps to 45 KANJIDIC2 candidates; kept extracted 憎
+examples:
+  - word: 愛憎
+    reading: あいにく
+    meaning: thích và không thích
+  - word: 憎しみ
+    reading: にくしみ
+    meaning: hận thù
+  - word: 愛憎
+    reading: あいにく
+    meaning: yêu ghét; thiện cảm và ác cảm
+
+### 噌 (Tằng)
+
+level: N1
+meaningVi: Ầm ĩ
+hanViet: Tằng
+onyomi: ["ソウ", "ショウ", "ソ"]
+kunyomi: ["かまびす.しい"]
+strokeCount: 14
+writingHint: Mồm ( ) cháu ( ) kêu ầm ĩ ( )噌 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 味噌
+    reading: みそ
+    meaning: đậu dán
 
 ### 促 (Xúc)
 
@@ -10733,14 +13819,14 @@ examples:
     reading: うながす
     meaning: thúc giục; gây áp lực; gợi ý; yêu cầu; kích thích; tăng tốc; xúi giục; kêu gọi (chú ý đến)
 
-### 足 (Tróc)
+### 捉 (Tróc)
 
 level: N1
 meaningVi: Nắm chặt
 hanViet: Tróc
-onyomi: ["ソク"]
-kunyomi: ["あし", "た.りる", "た.る", "た.す"]
-strokeCount: 7
+onyomi: ["ソク", "サク"]
+kunyomi: ["とら.える"]
+strokeCount: 10
 writingHint: Tay ( ) chân ( ) nắm chặt ( )捉 2 5
 sourcePages: []
 sources:
@@ -10749,19 +13835,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tróc maps to 3 KANJIDIC2 candidates; kept extracted 足
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 足し算
-    reading: たしざん
-    meaning: phép cộng
-  - word: 補足
-    reading: ほそく
-    meaning: sự bổ sung; sự bổ sung
-  - word: 駆け足
-    reading: かけあし
-    meaning: chạy nhanh; gấp đôi thời gian
+  - none
 
 ### 辰 (Thần)
 
@@ -10785,14 +13863,41 @@ openGaps:
 examples:
   - none
 
-### 口 (Thần)
+### 娠 (Chẩn)
+
+level: N1
+meaningVi: Náo nhiệt
+hanViet: Chẩn
+onyomi: ["シン"]
+kunyomi: []
+strokeCount: 10
+writingHint: Các bảo bối ( ) của thần ( ) tạo ra không khí náo nhiệt ( )娠 2 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Chẩn maps to 46 KANJIDIC2 candidates; kept extracted 娠
+examples:
+  - word: 妊娠
+    reading: にんしん
+    meaning: sự thụ thai; mang thai
+  - word: 妊娠
+    reading: にんしん
+    meaning: sự thụ thai; mang thai
+
+### 唇 (Thần)
 
 level: N1
 meaningVi: Cái môi
 hanViet: Thần
-onyomi: ["コウ", "ク"]
-kunyomi: ["くち"]
-strokeCount: 3
+onyomi: ["シン"]
+kunyomi: ["くちびる"]
+strokeCount: 10
 writingHint: Thần ( ) thái của miệng ( ) thể hiện rõ trên môi ( ) 唇 1
 sourcePages: []
 sources:
@@ -10803,17 +13908,71 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thần maps to 53 KANJIDIC2 candidates; kept extracted 口
+  - none
 examples:
-  - word: 甘口
-    reading: あまくち
-    meaning: hương vị ngọt ngào; sự dịu dàng; sự xu nịnh; sự ngu ngốc
-  - word: 入口
-    reading: いりくち
-    meaning: lối vào;cổng;sự tiếp cận;miệng
-  - word: 口述
-    reading: こうじゅつ
-    meaning: tuyên bố bằng lời nói
+  - word: 唇
+    reading: くちびる
+    meaning: đôi môi
+  - word: 唇
+    reading: くちびる
+    meaning: môi
+
+### 辱 (Nhục)
+
+level: N1
+meaningVi: Nhục nhã
+hanViet: Nhục
+onyomi: ["ジョク"]
+kunyomi: ["はずかし.める"]
+strokeCount: 10
+writingHint: Thần ( ) thái mà bị thốn ( ) thì đúng là nhục ( ) 辱 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 侮辱
+    reading: ぶじょく
+    meaning: xúc phạm; khinh thường; khinh thường
+  - word: 侮辱
+    reading: ぶじょく
+    meaning: xúc phạm; khinh thường
+
+### 子 (Khổng)
+
+level: N1
+meaningVi: Khổng tử
+hanViet: Khổng
+onyomi: ["シ", "ス", "ツ"]
+kunyomi: ["こ", "-こ", "ね"]
+strokeCount: 3
+writingHint: Trẻ con ( ) Luôn (L) thích Khổng Tử ( ) 孔 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Khổng maps to 12 KANJIDIC2 candidates; kept extracted 子
+examples:
+  - word: 子息
+    reading: しそく
+    meaning: con trai
+  - word: 捻子
+    reading: ねじ
+    meaning: vít;xoắn ốc;xoắn ốc
+  - word: 梯子
+    reading: ていし
+    meaning: thang; cầu thang
 
 ### 踪 (Tung)
 
@@ -10837,15 +13996,37 @@ openGaps:
 examples:
   - none
 
-### 宗 (Tống)
+### 綜 (Tống)
 
 level: N1
 meaningVi: Tổng hợp
 hanViet: Tống
-onyomi: ["シュウ", "ソウ"]
-kunyomi: ["むね"]
-strokeCount: 8
+onyomi: ["ソウ"]
+kunyomi: ["おさ.める", "す.べる"]
+strokeCount: 14
 writingHint: Tơ ( ) tạo ra tông ( ) tổng hợp ( )綜 1 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 崇 (Sùng)
+
+level: N1
+meaningVi: Sùng bái
+hanViet: Sùng
+onyomi: ["スウ"]
+kunyomi: ["あが.める"]
+strokeCount: 11
+writingHint: Dưới núi ( ) tôn giáo ( ) được sùng bái ( ) 崇 1 3
 sourcePages: []
 sources:
   level: ebook
@@ -10857,22 +14038,21 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 宗教
-    reading: しゅうきょう
-    meaning: tôn giáo
-  - word: 宗教
-    reading: しゅうきょう
-    hanViet: Giáo
-    meaning: tôn giáo
+  - word: 崇拝
+    reading: すうはい
+    meaning: tôn thờ; tôn thờ; ngưỡng mộ; sùng bái
+  - word: 崇拝
+    reading: すうはい
+    meaning: tôn thờ; ngưỡng mộ; sùng bái
 
-### 扌 (Nại)
+### 奈 (Nại)
 
 level: N1
 meaningVi: Đóng dấu
 hanViet: Nại
-onyomi: ["シュ"]
-kunyomi: []
-strokeCount: 3
+onyomi: ["ナ", "ナイ", "ダイ"]
+kunyomi: ["いかん", "からなし"]
+strokeCount: 8
 writingHint: Đóng dấu ( ) lăn tay ( ) để khiếu nại ( ) 奈 2 5
 sourcePages: []
 sources:
@@ -10883,33 +14063,117 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nại maps to 23 KANJIDIC2 candidates; kept extracted 扌
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 亻 (Biểu)
+### 斎 (Trai)
+
+level: N1
+meaningVi: Ăn chay
+hanViet: Trai
+onyomi: ["サイ"]
+kunyomi: ["とき", "つつし.む", "ものいみ", "い.む", "いわ.う", "いつ.く"]
+strokeCount: 11
+writingHint: Nước Tề ( ) từ nhỏ ( ) đã ăn chay ( ) 斎 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 書斎
+    reading: しょさい
+    meaning: học tập
+
+### 尉 (Úy)
+
+level: N1
+meaningVi: Đại úy
+hanViet: Úy
+onyomi: ["イ", "ジョウ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Xác chết ( ) ra chỉ thị ( ) thốn ( ) là đại úy ( ) 尉 1 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 尉
+    reading: じょう
+    meaning: cai ngục; ông già; cấp bậc; sĩ quan công ty
+  - word: 尉
+    reading: じょう
+    meaning: cai ngục; ông già; cấp bậc; sĩ quan công ty
+
+### 慰 (Úy)
+
+level: N1
+meaningVi: An ủi
+hanViet: Úy
+onyomi: ["イ"]
+kunyomi: ["なぐさ.める", "なぐさ.む"]
+strokeCount: 15
+writingHint: Đại úy ( ) trái tim ( ) cũng cần an ủi ( ) 慰 1 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 慰める
+    reading: なぐさめる
+    meaning: an ủi, an ủi
+  - word: 慰める
+    reading: なぐさめる
+    meaning: an ủi; dỗ dành
+
+### 表 (Biểu)
 
 level: N1
 meaningVi: Bao
 hanViet: Biểu
-onyomi: []
-kunyomi: []
-strokeCount: 2
+onyomi: ["ヒョウ"]
+kunyomi: ["おもて", "-おもて", "あらわ.す", "あらわ.れる", "あら.わす"]
+strokeCount: 8
 writingHint: Tặng bao ( ) gạo cho người đứng ( ) phát biểu ( ) 表 4
 sourcePages: []
 sources:
   level: ebook
   hanViet: ebook_text
   meaningVi: ebook_text
-  readings: supplement
+  readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Biểu maps to 14 KANJIDIC2 candidates; kept extracted 亻
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 時刻表
+    reading: じこくひょう
+    meaning: bảng;sơ đồ;biểu đồ;thời gian biểu;lịch trình
+  - word: 時刻表
+    reading: じこくひょう
+    meaning: bảng; sơ đồ; biểu đồ; thời gian biểu; lịch trình
+  - word: 図表
+    reading: ずひょう
+    meaning: biểu đồ, sơ đồ, đồ thị
 
 ### 征 (Chinh)
 
@@ -10938,45 +14202,15 @@ examples:
     reading: せいふく
     meaning: chinh phục; vượt qua
 
-### 延 (Tiên)
+### 涎 (Tiên)
 
 level: N1
 meaningVi: Nước dãi
 hanViet: Tiên
-onyomi: ["エン"]
-kunyomi: ["の.びる", "の.べる", "の.べ", "の.ばす"]
-strokeCount: 8
+onyomi: ["セン", "エン"]
+kunyomi: ["よだれ"]
+strokeCount: 10
 writingHint: Nước ( ) có thể kéo dài ( ) là nước dãi ( )涎 4
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tiên maps to 87 KANJIDIC2 candidates; kept extracted 延
-examples:
-  - word: 延いては
-    reading: ひいては
-    meaning: không chỉ...mà còn;ngoài ra;do đó
-  - word: 延べ
-    reading: のべ
-    meaning: tương lai;tín dụng (mua);kéo dài;tổng cộng
-  - word: 延べ
-    reading: のべ
-    meaning: tương lai; tín dụng (mua); kéo dài; tổng cộng
-
-### 吾 (Ngộ)
-
-level: N1
-meaningVi: Giác ngộ
-hanViet: Ngộ
-onyomi: ["ゴ"]
-kunyomi: ["われ", "わが-", "あ-"]
-strokeCount: 7
-writingHint: Trái tim ( ) ta ( ) đã giác ngộ ( )悟 3 4
 sourcePages: []
 sources:
   level: ebook
@@ -10990,15 +14224,15 @@ openGaps:
 examples:
   - none
 
-### 部 (Bồi)
+### 悟 (Ngộ)
 
 level: N1
-meaningVi: Bồi thẩm đoàn
-hanViet: Bồi
-onyomi: ["ブ"]
-kunyomi: ["-べ"]
-strokeCount: 11
-writingHint: Bồ ( ) làm cùng bộ phận ( ) trong bồi thẩm đoàn ( )陪 1 4
+meaningVi: Giác ngộ
+hanViet: Ngộ
+onyomi: ["ゴ"]
+kunyomi: ["さと.る"]
+strokeCount: 10
+writingHint: Trái tim ( ) ta ( ) đã giác ngộ ( )悟 3 4
 sourcePages: []
 sources:
   level: ebook
@@ -11008,17 +14242,93 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Bồi maps to 41 KANJIDIC2 candidates; kept extracted 部
+  - none
 examples:
-  - word: 部下
-    reading: ぶか
-    meaning: người cấp dưới
-  - word: 一部分
-    reading: いちぶぶん
-    meaning: một phần
-  - word: 一部
-    reading: いちぶ
-    meaning: 1. một bản sao, ví dụ: của một tài liệu; 2. một phần;một phần;một phần
+  - word: 悟る
+    reading: さとる
+    meaning: đạt được sự giác ngộ; nhận thức được; hiểu được; phân biệt được
+  - word: 悟る
+    reading: さとる
+    meaning: đạt được sự giác ngộ; nhận thức được; hiểu được; phân biệt được
+  - word: 覚悟
+    reading: かくご
+    meaning: quyết tâm; từ chức; sự sẵn sàng; sự chuẩn bị
+
+### 陪 (Bồi)
+
+level: N1
+meaningVi: Bồi thẩm đoàn
+hanViet: Bồi
+onyomi: ["バイ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Bồ ( ) làm cùng bộ phận ( ) trong bồi thẩm đoàn ( )陪 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 培 (Bồi)
+
+level: N1
+meaningVi: Bồi dưỡng
+hanViet: Bồi
+onyomi: ["バイ"]
+kunyomi: ["つちか.う"]
+strokeCount: 11
+writingHint: Đất ( ) là bộ phận ( ) cần bồi dưỡng ( ) 培 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 栽培
+    reading: さいばい
+    meaning: trồng trọt
+  - word: 栽培
+    reading: さいばい
+    meaning: trồng trọt
+
+### 賠 (Bồi)
+
+level: N1
+meaningVi: Bồi thường
+hanViet: Bồi
+onyomi: ["バイ"]
+kunyomi: []
+strokeCount: 15
+writingHint: Bảo bối ( ) được bộ phận ( ) mang đi bồi thường ( ) 賠 2 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 賠償
+    reading: ばいしょう
+    meaning: sự bồi thường; sự bồi thường; sự đền bù
+  - word: 賠償
+    reading: ばいしょう
+    meaning: sự bồi thường; sự đền bù
 
 ### 菩 (Bồ)
 
@@ -11041,6 +14351,30 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 刈 (Ngải)
+
+level: N1
+meaningVi: Cắt cỏ
+hanViet: Ngải
+onyomi: ["ガイ", "カイ"]
+kunyomi: ["か.る"]
+strokeCount: 4
+writingHint: Mê ( ) đao ( ) là cắt ( ) 刈 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 刈る
+    reading: かる
+    meaning: cắt tóc; cắt cỏ; thu hoạch
 
 ### 壮 (Tráng)
 
@@ -11069,6 +14403,28 @@ examples:
     reading: そうだい
     meaning: tráng lệ; hùng vĩ
 
+### 酎 (Trữu)
+
+level: N1
+meaningVi: Rượu nặng
+hanViet: Trữu
+onyomi: ["チュウ", "チュ"]
+kunyomi: ["かも.す"]
+strokeCount: 10
+writingHint: Giờ Dậu ( ) vẫn thốn ( ) do uống rượu nặng ( ) 酎 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 肘 (Trửu)
 
 level: N1
@@ -11096,14 +14452,14 @@ examples:
     reading: ひじ
     meaning: khuỷu tay
 
-### 付 (Phụ)
+### 附 (Phụ)
 
 level: N1
 meaningVi: Phụ lục
 hanViet: Phụ
 onyomi: ["フ"]
-kunyomi: ["つ.ける", "-つ.ける", "-づ.ける", "つ.け", "つ.け-", "-つ.け", "-づ.け", "-づけ"]
-strokeCount: 5
+kunyomi: ["つ.ける", "つ.く"]
+strokeCount: 8
 writingHint: Bồ ( ) được giao phó ( ) làm phụ lục ( ) 附 1 4 7
 sourcePages: []
 sources:
@@ -11114,17 +14470,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phụ maps to 112 KANJIDIC2 candidates; kept extracted 付
+  - none
 examples:
-  - word: 備え付ける
-    reading: そなえつける
-    meaning: cung cấp; cung cấp; trang bị; lắp đặt
-  - word: 結び付く
-    reading: むすびつく
-    meaning: được kết nối hoặc liên quan; tham gia với nhau
-  - word: 受け付ける
-    reading: うけつける
-    meaning: được chấp nhận; được nhận (đơn xin việc)
+  - word: 附属
+    reading: ふぞく
+    meaning: gắn liền, thuộc về, liên kết
+  - word: 附属
+    reading: ふぞく
+    meaning: phụ thuộc; trực thuộc; đính kèm
 
 ### 腐 (Hủ)
 
@@ -11177,36 +14530,6 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
-
-### 南 (Hiến)
-
-level: N1
-meaningVi: Hiến dân
-hanViet: Hiến
-onyomi: ["ナン", "ナ"]
-kunyomi: ["みなみ"]
-strokeCount: 9
-writingHint: Hiến dâng ( ) đất phía Nam ( ) để nuôi chó ( )犬 2 11
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hiến maps to 34 KANJIDIC2 candidates; kept extracted 南
-examples:
-  - word: 南
-    reading: なん
-    meaning: miền nam
-  - word: 南
-    reading: なん
-    meaning: miền nam
-  - word: 南極
-    reading: なんきょく
-    meaning: cực nam, Nam Cực
 
 ### 彦 (Ngạn)
 
@@ -11306,6 +14629,58 @@ examples:
     reading: ふえ
     meaning: sáo; ống
 
+### 抽 (Trừu)
+
+level: N1
+meaningVi: Trừu tượng
+hanViet: Trừu
+onyomi: ["チュウ"]
+kunyomi: ["ひき-"]
+strokeCount: 8
+writingHint: Tay ( ) tự do ( ) trừu tượng ( ) 抽 2 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 抽選
+    reading: ちゅうせん
+    meaning: xổ số; xổ số; xổ số (lô)
+  - word: 抽選
+    reading: ちゅうせん
+    meaning: xổ số; xổ số (lô)
+  - word: 抽象
+    reading: ちゅうしょう
+    meaning: trừu tượng
+
+### 柚 (Dữu)
+
+level: N1
+meaningVi: Cây quất
+hanViet: Dữu
+onyomi: ["ユ", "ユウ", "ジク"]
+kunyomi: ["ゆず"]
+strokeCount: 9
+writingHint: Cây ( ) mọc tự do ( ) là cây quất ( )柚 2 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 八 (Dần)
 
 level: N1
@@ -11389,15 +14764,15 @@ examples:
     hanViet: huyền quan
     meaning: cửa vào, sảnh vào nhà
 
-### 舟 (Huyền)
+### 眩 (Huyễn)
 
 level: N1
-meaningVi: Mạn thuyền
-hanViet: Huyền
-onyomi: ["シュウ"]
-kunyomi: ["ふね", "ふな-", "-ぶね"]
-strokeCount: 6
-writingHint: Ngồi tựa mạn ( ) thuyền ( ) cùng em Huyền ( )玄 1 7
+meaningVi: Hoa mắt
+hanViet: Huyễn
+onyomi: ["ゲン", "カン"]
+kunyomi: ["げん.す", "くるめ.く", "まぶ.しい", "くら.む", "まど.う", "めま.い", "まばゆ.い", "くれ.る"]
+strokeCount: 10
+writingHint: Mắt ( ) Huyền ( ) bị hoa mắt ( ) 眩 6
 sourcePages: []
 sources:
   level: ebook
@@ -11407,11 +14782,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Huyền maps to 56 KANJIDIC2 candidates; kept extracted 舟
+  - none
 examples:
-  - word: 舟
-    reading: ふね
-    meaning: tàu
+  - word: 眩しい
+    reading: まぶしい
+    meaning: rực rỡ; rực rỡ
+  - word: 目眩
+    reading: めまい
+    meaning: chóng mặt; choáng váng
+  - word: 眩しい
+    reading: まぶしい
+    meaning: rực rỡ
 
 ### 畜 (Súc)
 
@@ -11613,15 +14994,127 @@ openGaps:
 examples:
   - none
 
-### 咼 (Oa)
+### 鍋 (Oa)
 
 level: N1
 meaningVi: Cái nồi
 hanViet: Oa
-onyomi: ["カイ", "ケ", "クウ", "カ"]
-kunyomi: ["よこしま", "くちがゆがむ", "ゆが.む"]
-strokeCount: 9
+onyomi: ["カ"]
+kunyomi: ["なべ"]
+strokeCount: 17
 writingHint: Kim loại ( ) qua ( ) tinh luyện thành cái nồi ( )鍋 1 2 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 鍋
+    reading: なべ
+    meaning: cái chảo; cái nồi
+  - word: 鍋
+    reading: なべ
+    hanViet: oa
+    meaning: cái nồi
+
+### 叶 (Diệp)
+
+level: N1
+meaningVi: Đáp ứng
+hanViet: Diệp
+onyomi: ["キョウ"]
+kunyomi: ["かな.える", "かな.う"]
+strokeCount: 5
+writingHint: Miệng ( ) nói 10 ( ) lần sẽ được đáp ứng ( ) 叶 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Diệp maps to 43 KANJIDIC2 candidates; kept extracted 叶
+examples:
+  - word: 叶う
+    reading: かなう
+    meaning: trở thành hiện thực (điều ước)
+  - word: 叶える
+    reading: かなえる
+    meaning: ban cho (yêu cầu điều ước)
+  - word: 叶う
+    reading: かなう
+    meaning: trở thành hiện thực (điều ước)
+
+### 辻 (Tử)
+
+level: N1
+meaningVi: Khớp
+hanViet: Tử
+onyomi: []
+kunyomi: ["つじ"]
+strokeCount: 5
+writingHint: 10 ( ) vị trí đi xa ( ) không còn ăn khớp ( ) 辻 3 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: mixed_ebook_kanjidic2
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Tử maps to 168 KANJIDIC2 candidates; kept extracted 辻
+examples:
+  - word: 辻褄
+    reading: つじつま
+    meaning: sự mạch lạc; sự nhất quán
+  - word: 辻褄
+    reading: つじつま
+    meaning: sự mạch lạc; sự nhất quán
+
+### 迅 (Tấn)
+
+level: N1
+meaningVi: Nhanh chóng
+hanViet: Tấn
+onyomi: ["ジン"]
+kunyomi: []
+strokeCount: 6
+writingHint: Sườn núi ngược ( ) mà 10 ( ) người đi xa ( ) một cách nhanh chóng ( ) 迅 4 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 迅速
+    reading: じんそく
+    meaning: nhanh;nhanh;nhanh;nhanh;nhắc nhở
+  - word: 迅速
+    reading: じんそく
+    meaning: nhanh; nhắc nhở
+
+### 訊 (Tấn)
+
+level: N1
+meaningVi: Hỏi
+hanViet: Tấn
+onyomi: ["ジン", "シュン", "シン"]
+kunyomi: ["き.く", "と.う", "たず.ねる"]
+strokeCount: 10
+writingHint: Nói ( ) nhìn thấy sườn núi ngược ( ) mà 10 ( ) người vẫn cứ hỏi ( 訊) 1 8
 sourcePages: []
 sources:
   level: ebook
@@ -11635,15 +15128,100 @@ openGaps:
 examples:
   - none
 
-### 袁 (Viên)
+### 猿 (Viên)
 
 level: N1
 meaningVi: Con khỉ
 hanViet: Viên
-onyomi: ["エン", "オン"]
-kunyomi: []
-strokeCount: 10
+onyomi: ["エン"]
+kunyomi: ["さる"]
+strokeCount: 13
 writingHint: Chó ( ) ở công viên ( ) nhìn giống con khỉ ( ) 猿 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 猿
+    reading: さる
+    meaning: khỉ
+  - word: 猿
+    reading: さる
+    hanViet: rô
+    meaning: con khỉ
+
+### 還 (Hoàn)
+
+level: N1
+meaningVi: Hoàn trả
+hanViet: Hoàn
+onyomi: ["カン"]
+kunyomi: ["かえ.る"]
+strokeCount: 16
+writingHint: Võng ( ) mượn ở công viên ( ) phải đi xa ( ) để hoàn trả( 還) 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 返還
+    reading: へんかん
+    meaning: trở lại; phục hồi
+  - word: 還元
+    reading: かんげん
+    meaning: giải quyết;giảm bớt;trở lại nguồn gốc
+  - word: 還暦
+    reading: かんれき
+    meaning: sinh nhật lần thứ 60
+
+### 亜 (Hồ)
+
+level: N1
+meaningVi: Bình, chum
+hanViet: Hồ
+onyomi: ["ア"]
+kunyomi: ["つ.ぐ"]
+strokeCount: 7
+writingHint: Bình ( ) rượu chon dưới đất ( ) trùm khăn ( ) là của người châu Á ( )亜 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Hồ maps to 81 KANJIDIC2 candidates; kept extracted 亜
+examples:
+  - word: 亜科
+    reading: あか
+    meaning: phân họ; phân họ
+  - word: 亜科
+    reading: あか
+    meaning: phân họ
+
+### 栗 (Lật)
+
+level: N1
+meaningVi: Hạt dẻ
+hanViet: Lật
+onyomi: ["リツ", "リ"]
+kunyomi: ["くり", "おののく"]
+strokeCount: 10
+writingHint: Phía tây ( ) trồng cây ( ) hạt dẻ ( )栗 1
 sourcePages: []
 sources:
   level: ebook
@@ -11705,36 +15283,6 @@ examples:
   - word: 漂う
     reading: ただよう
     meaning: trôi đi; lơ lửng; lơ lửng trong không khí
-
-### 票 (Phiếu)
-
-level: N1
-meaningVi: Cướp bóc
-hanViet: Phiếu
-onyomi: ["ヒョウ"]
-kunyomi: []
-strokeCount: 11
-writingHint: Cướp bóc ( ) phiếu ( ) bằng đao ( ) 刂 13
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - none
-examples:
-  - word: 票
-    reading: ひょう
-    meaning: nhãn; lá phiếu; vé; ký tên
-  - word: 票
-    reading: ひょう
-    meaning: nhãn; lá phiếu; vé; ký tên
-  - word: 投票
-    reading: とうひょう
-    meaning: bỏ phiếu; thăm dò ý kiến
 
 ### 瓢 (Biều)
 
@@ -11864,14 +15412,118 @@ openGaps:
 examples:
   - none
 
-### 冊 (Sách)
+### 繭 (Kiển)
+
+level: N1
+meaningVi: Kén tằm
+hanViet: Kiển
+onyomi: ["ケン"]
+kunyomi: ["まゆ", "きぬ"]
+strokeCount: 18
+writingHint: Cô Thảo ( ) ở biên giới ( ) dùng 1 (l) sợi tơ ( ) của côn trùng ( ) để kén tằm ( 繭) 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 濁 (Trọc)
+
+level: N1
+meaningVi: Đục nước
+hanViet: Trọc
+onyomi: ["ダク", "ジョク"]
+kunyomi: ["にご.る", "にご.す"]
+strokeCount: 16
+writingHint: Nước ( ) mắt từ võng ( ) bao ( ) nhiêu côn trùng ( ) rớt xuống làm đục nước ( 濁) 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 清濁
+    reading: せいだく
+    meaning: thiện và ác; sự tinh khiết và tạp chất
+  - word: 清濁
+    reading: せいだく
+    meaning: thiện và ác; sự tinh khiết và tạp chất
+  - word: 濁る
+    reading: にごる
+    meaning: trở nên lầy lội, trở nên ô uế
+
+### 虫 (Chúc)
+
+level: N1
+meaningVi: Nến
+hanViet: Chúc
+onyomi: ["チュウ", "キ"]
+kunyomi: ["むし"]
+strokeCount: 6
+writingHint: Nến ( ) lửa ( ) đốt cháy võng ( ), bao ( ) nhiêu côn trùng ( ) chết 3 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Chúc maps to 23 KANJIDIC2 candidates; kept extracted 虫
+examples:
+  - word: 昆虫
+    reading: こんちゅう
+    meaning: côn trùng; sâu bọ
+  - word: 昆虫
+    reading: こんちゅう
+    meaning: côn trùng; sâu bọ
+  - word: 虫歯
+    reading: むしば
+    meaning: sâu răng
+
+### 囚 (Tù)
+
+level: N1
+meaningVi: Tù nhân
+hanViet: Tù
+onyomi: ["シュウ"]
+kunyomi: ["とら.われる"]
+strokeCount: 5
+writingHint: 4 bức tường vây quanh ( ) người ( ) tù nhân ( ) 囚 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 柵 (Sách)
 
 level: N1
 meaningVi: Hàng rào
 hanViet: Sách
-onyomi: ["サツ", "サク"]
-kunyomi: ["ふみ"]
-strokeCount: 5
+onyomi: ["サク", "サン"]
+kunyomi: ["しがら.む", "しがらみ", "とりで", "やらい"]
+strokeCount: 9
 writingHint: Ngồi dưới gốc cây ( ) đọc sách ( ) cạnh hàng rào ( ) 柵 2 6
 sourcePages: []
 sources:
@@ -11884,12 +15536,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 冊
-    reading: さつ
-    meaning: quầy sách
-  - word: 冊
-    reading: さつ
-    meaning: quầy sách
+  - word: 柵
+    reading: さく
+    meaning: hàng rào; hàng rào
+  - word: 柵
+    reading: さく
+    meaning: hàng rào
 
 ### 珊 (San)
 
@@ -11913,14 +15565,14 @@ openGaps:
 examples:
   - none
 
-### 侖 (Luân)
+### 倫 (Luân)
 
 level: N1
 meaningVi: Luân lý
 hanViet: Luân
-onyomi: ["リン", "ロン"]
-kunyomi: ["おも.う"]
-strokeCount: 8
+onyomi: ["リン"]
+kunyomi: []
+strokeCount: 10
 writingHint: Người đứng ( ) trên núi Côn Lôn ( ) bàn về luân lý ( ) 倫 1 3
 sourcePages: []
 sources:
@@ -11931,7 +15583,6 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Luân maps to 11 KANJIDIC2 candidates; kept extracted 侖
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -11957,6 +15608,90 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 遍 (Biến)
+
+level: N1
+meaningVi: Phổ biến
+hanViet: Biến
+onyomi: ["ヘン"]
+kunyomi: ["あまね.く"]
+strokeCount: 12
+writingHint: Muốn làm biển ( ) hiệu cần đi xa ( ) là phổ biến ( )遍 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 普遍
+    reading: ふへん
+    meaning: tính phổ quát; tính có mặt khắp nơi; tính toàn diện
+  - word: 普遍
+    reading: ふへん
+    meaning: tính phổ quát; tính có mặt khắp nơi; tính toàn diện
+
+### 偏 (Thiên)
+
+level: N1
+meaningVi: Thiên vị
+hanViet: Thiên
+onyomi: ["ヘン"]
+kunyomi: ["かたよ.る"]
+strokeCount: 11
+writingHint: Người đứng ( ) cạnh biển ( ) hiệu được thiên vị ( ) 偏 1 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 偏る
+    reading: かたよる
+    meaning: thiên vị; thiên về; thiên vị; thiên vị; thiên vị; thiên vị
+  - word: 偏
+    reading: へん
+    meaning: bên;căn bản bên trái của một nhân vật;nghiêng;nghiêng về phía;thiên vị
+  - word: 偏見
+    reading: へんけん
+    meaning: thành kiến; cái nhìn hạn hẹp
+
+### 煎 (Tiên)
+
+level: N1
+meaningVi: Rang
+hanViet: Tiên
+onyomi: ["セン"]
+kunyomi: ["せん.じる", "い.る", "に.る"]
+strokeCount: 13
+writingHint: Trước ( ) tiên đốt lửa ( ) để rang ( ) 煎 1 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 煎る
+    reading: いる
+    meaning: làm khô, chiên
+  - word: 煎る
+    reading: いる
+    meaning: rang; sao; chiên
 
 ### 揃 (Tiễn)
 
@@ -11988,15 +15723,39 @@ examples:
     reading: そろう
     meaning: trở nên hoàn chỉnh, bình đẳng, có mặt tất cả, tập hợp
 
-### 兪 (Du)
+### 愉 (Du)
 
 level: N1
 meaningVi: Vui vẻ
 hanViet: Du
 onyomi: ["ユ"]
-kunyomi: ["しかり"]
-strokeCount: 9
+kunyomi: ["たの.しい", "たの.しむ"]
+strokeCount: 12
 writingHint: Trái tim ( ) được đi du ( ) lịch nên rất vui ( ) 愉 3 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 愉快
+    reading: ゆかい
+    meaning: dễ chịu; hạnh phúc
+
+### 諭 (Dụ)
+
+level: N1
+meaningVi: Dạy bảo
+hanViet: Dụ
+onyomi: ["ユ"]
+kunyomi: ["さと.す"]
+strokeCount: 16
+writingHint: Lời nói ( ) của hướng dẫn viên du ( ) lịch như dạy bảo ( ) 諭 1 8 9
 sourcePages: []
 sources:
   level: ebook
@@ -12010,14 +15769,66 @@ openGaps:
 examples:
   - none
 
-### 並 (Linh)
+### 喩 (Dụ)
+
+level: N1
+meaningVi: Ẩn dụ
+hanViet: Dụ
+onyomi: ["ユ"]
+kunyomi: ["たと.える", "さと.す"]
+strokeCount: 12
+writingHint: Miệng ( ) hướng dẫn viên du ( ) lịch nói ẩn dụ ( ) 喩 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 心 (Dũ)
+
+level: N1
+meaningVi: Chữa lành
+hanViet: Dũ
+onyomi: ["シン"]
+kunyomi: ["こころ", "-ごころ"]
+strokeCount: 4
+writingHint: Chữa lành ( ) bệnh ( ) tật bằng du ( ) lịch tâm ( ) linh心 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Dũ maps to 103 KANJIDIC2 candidates; kept extracted 心
+examples:
+  - word: 心掛ける
+    reading: こころがける
+    meaning: ghi nhớ; nhằm mục đích làm
+  - word: 下心
+    reading: したごころ
+    meaning: ý định bí mật; động cơ
+  - word: 心強い
+    reading: こころづよい
+    meaning: khích lệ; trấn an
+
+### 霊 (Linh)
 
 level: N1
 meaningVi: Linh hồn
 hanViet: Linh
-onyomi: ["ヘイ", "ホウ"]
-kunyomi: ["な.み", "なみ", "なら.べる", "なら.ぶ", "なら.びに"]
-strokeCount: 8
+onyomi: ["レイ", "リョウ"]
+kunyomi: ["たま"]
+strokeCount: 15
 writingHint: Dưới mưa ( ) đang xếp hàng ( ) là các linh hồn ( ) 霊 1
 sourcePages: []
 sources:
@@ -12028,17 +15839,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Linh maps to 46 KANJIDIC2 candidates; kept extracted 並
+  - none
 examples:
-  - word: 並み
-    reading: なみ
-    meaning: trung bình;trung bình;thông thường;bình thường
-  - word: 月並み
-    reading: つきなみ
-    meaning: hàng tháng; thông thường
-  - word: 並列
-    reading: へいれつ
-    meaning: sắp xếp; song song; ngang nhau
+  - word: 幽霊
+    reading: ゆうれい
+    meaning: bóng ma;bóng ma;hiện hình;bóng ma
+  - word: 幽霊
+    reading: ゆうれい
+    meaning: bóng ma; hiện hình
 
 ### 顕 (Hiển)
 
@@ -12067,14 +15875,36 @@ examples:
     reading: けんびきょう
     meaning: kính hiển vi
 
-### 亡 (Manh)
+### 妄 (Vọng)
+
+level: N1
+meaningVi: Vọng tưởng
+hanViet: Vọng
+onyomi: ["モウ", "ボウ"]
+kunyomi: ["みだ.りに"]
+strokeCount: 6
+writingHint: Vong ( ) hồn người phụ nữ ( ) vẫn vọng tưởng ( ) 妄 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 目 (Manh)
 
 level: N1
 meaningVi: Mù
 hanViet: Manh
-onyomi: ["ボウ", "モウ"]
-kunyomi: ["な.い", "な.き-", "ほろ.びる", "ほろ.ぶ", "ほろ.ぼす"]
-strokeCount: 3
+onyomi: ["モク", "ボク"]
+kunyomi: ["め", "-め", "ま-"]
+strokeCount: 5
 writingHint: Bị mù ( ) chết ( ) không nhắm mắt ( ) 目 1
 sourcePages: []
 sources:
@@ -12085,17 +15915,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Manh maps to 19 KANJIDIC2 candidates; kept extracted 亡
+  - target kanji ambiguous: Hán-Việt heading Manh maps to 19 KANJIDIC2 candidates; kept extracted 目
 examples:
-  - word: 逃亡
-    reading: とうぼう
-    meaning: trốn thoát
-  - word: 滅亡
-    reading: めつぼう
-    meaning: sự sụp đổ; sự đổ nát; sự sụp đổ; sự hủy diệt
-  - word: 逃亡
-    reading: とうぼう
-    meaning: trốn thoát
+  - word: 目覚める
+    reading: めざめる
+    meaning: thức dậy
+  - word: 出鱈目
+    reading: でたらめ
+    meaning: lời phát biểu vô trách nhiệm; vô nghĩa; vô nghĩa; ngẫu nhiên; bừa bãi; không có hệ thống
+  - word: 目方
+    reading: めかた
+    meaning: trọng lượng
 
 ### 網 (Võng)
 
@@ -12128,45 +15958,15 @@ examples:
     hanViet: võng bằng
     meaning: giá lưới (để hành lý trên tàu)
 
-### 冬 (Kính)
+### 径 (Kính)
 
 level: N1
 meaningVi: Bán kính
 hanViet: Kính
-onyomi: ["トウ"]
-kunyomi: ["ふゆ"]
-strokeCount: 5
+onyomi: ["ケイ"]
+kunyomi: ["みち", "こみち", "さしわたし", "ただちに"]
+strokeCount: 8
 writingHint: 2 người đứng ( ) với Thánh ( ) để đo bán kính ( ) 径 1 4
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Kính maps to 39 KANJIDIC2 candidates; kept extracted 冬
-examples:
-  - word: 冬眠
-    reading: とうみん
-    meaning: ngủ đông; ngủ đông
-  - word: 冬眠
-    reading: とうみん
-    meaning: ngủ đông
-  - word: 冬
-    reading: ふゆ
-    meaning: mùa đông
-
-### 農 (Nồng)
-
-level: N1
-meaningVi: Mủ
-hanViet: Nồng
-onyomi: ["ノウ"]
-kunyomi: []
-strokeCount: 13
-writingHint: Nguyệt ( ) làm nông nghiệp ( ) nên chân bị mưng mủ ( ) 膿 7 8
 sourcePages: []
 sources:
   level: ebook
@@ -12178,24 +15978,134 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 酪農
-    reading: らくのう
-    meaning: sữa (trang trại)
-  - word: 農地
-    reading: のうち
-    meaning: đất nông nghiệp
-  - word: 農耕
-    reading: のうこう
-    meaning: nông nghiệp; nông nghiệp
+  - word: 直径
+    reading: ちょっけい
+    meaning: đường kính
+  - word: 半径
+    reading: はんけい
+    meaning: bán kính
+  - word: 直径
+    reading: ちょっけい
+    meaning: đường kính
 
-### 色 (Diễm)
+### 怪 (Quái)
+
+level: N1
+meaningVi: Yêu quái
+hanViet: Quái
+onyomi: ["カイ", "ケ"]
+kunyomi: ["あや.しい", "あや.しむ"]
+strokeCount: 8
+writingHint: Trái tim ( ) Thánh ( ) ghét nhất yêu quái ( ) 怪 3 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 怪獣
+    reading: かいじゅう
+    meaning: quái vật
+  - word: 怪獣
+    reading: かいじゅう
+    meaning: quái vật
+  - word: 怪しい
+    reading: あやしい
+    meaning: đáng ngờ, đáng ngờ, đáng ngờ
+
+### 茎 (Hành)
+
+level: N1
+meaningVi: Cuống
+hanViet: Hành
+onyomi: ["ケイ", "キョウ"]
+kunyomi: ["くき"]
+strokeCount: 8
+writingHint: Cô Thảo ( ) và Thánh ( ) đều thích ăn Cuống hành ( ) 茎 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 茎
+    reading: くき
+    meaning: thân cây
+  - word: 茎
+    reading: くき
+    meaning: thân cây
+
+### 典 (Điển)
+
+level: N1
+meaningVi: Từ điển
+hanViet: Điển
+onyomi: ["テン", "デン"]
+kunyomi: ["ふみ", "のり"]
+strokeCount: 8
+writingHint: Ca khúc ( ) số 8 ( ) có tên trong từ điển ( )典 3 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 百科事典
+    reading: ひゃっかじてん
+    meaning: bách khoa toàn thư
+  - word: 原典
+    reading: げんてん
+    meaning: bản gốc (văn bản)
+  - word: 百科辞典
+    reading: ひゃっかじてん
+    meaning: bách khoa toàn thư
+
+### 膿 (Nồng)
+
+level: N1
+meaningVi: Mủ
+hanViet: Nồng
+onyomi: ["ノウ", "ドウ"]
+kunyomi: ["う.む", "うみ"]
+strokeCount: 17
+writingHint: Nguyệt ( ) làm nông nghiệp ( ) nên chân bị mưng mủ ( ) 膿 7 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Nồng maps to 8 KANJIDIC2 candidates; kept extracted 膿
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 艶 (Diễm)
 
 level: N1
 meaningVi: Diễm lệ
 hanViet: Diễm
-onyomi: ["ショク", "シキ"]
-kunyomi: ["いろ"]
-strokeCount: 6
+onyomi: ["エン"]
+kunyomi: ["つや", "なま.めかしい", "あで.やか", "つや.めく", "なま.めく"]
+strokeCount: 19
 writingHint: Cảnh vật phong phú ( ) màu sắc ( ) diễm lệ ( ) 艶 3 4
 sourcePages: []
 sources:
@@ -12206,17 +16116,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Diễm maps to 57 KANJIDIC2 candidates; kept extracted 色
+  - none
 examples:
-  - word: 脚色
-    reading: きゃくしょく
-    meaning: kịch hóa (ví dụ: phim)
-  - word: 色彩
-    reading: しきさい
-    meaning: màu sắc; sắc thái; sắc thái
-  - word: 着色
-    reading: ちゃくしょく
-    meaning: tô màu; tô màu
+  - word: 艶
+    reading: えん
+    meaning: quyến rũ; lôi cuốn; khêu gợi
+  - word: 艶
+    reading: えん
+    meaning: quyến rũ; lôi cuốn; khêu gợi
+  - word: 艶
+    reading: つや
+    meaning: bóng, men
 
 ### 乃 (Nãi)
 
@@ -12269,6 +16179,36 @@ examples:
     reading: ゆうしゅう
     meaning: sự vượt trội; sự xuất sắc
 
+### 透 (Thấu)
+
+level: N1
+meaningVi: Thấu suốt
+hanViet: Thấu
+onyomi: ["トウ"]
+kunyomi: ["す.く", "す.かす", "す.ける", "とう.る", "とう.す"]
+strokeCount: 10
+writingHint: Người ưu tú ( ) đi xa ( ) càng thấu suốt ( ) 透 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 透き通る
+    reading: すきとおる
+    meaning: trở nên (đến) minh bạch
+  - word: 透明
+    reading: とうめい
+    meaning: minh bạch, sạch sẽ
+  - word: 透き通る
+    reading: すきとおる
+    meaning: trong suốt
+
 ### 莫 (Mạc)
 
 level: N1
@@ -12292,6 +16232,36 @@ examples:
   - word: 莫大
     reading: ばくだい
     meaning: to lớn; rộng lớn
+
+### 模 (Mô)
+
+level: N1
+meaningVi: Mô hình
+hanViet: Mô
+onyomi: ["モ", "ボ"]
+kunyomi: []
+strokeCount: 14
+writingHint: Dùng cây ( ) ở sa mạc ( ) làm mô hình ( ) 模 2 6 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 模型
+    reading: もけい
+    meaning: mô hình; hình nộm; mô hình
+  - word: 模範
+    reading: もはん
+    meaning: mẫu mực;sự ví dụ;ví dụ;mô hình;ví dụ
+  - word: 模索
+    reading: もさく
+    meaning: mò mẫm (cho)
 
 ### 摸 (Mạc)
 
@@ -12319,6 +16289,123 @@ examples:
   - word: 掏摸
     reading: すり
     meaning: kẻ móc túi
+
+### 漠 (Mạc)
+
+level: N1
+meaningVi: Sờ
+hanViet: Mạc
+onyomi: ["バク"]
+kunyomi: []
+strokeCount: 13
+writingHint: Nước ( ) + mạc ( ) = Sa mạc nước ( ) 漠 2 5 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 漠然
+    reading: ばくぜん
+    meaning: mơ hồ; mơ hồ; mập mờ
+  - word: 漠然
+    reading: ばくぜん
+    meaning: mơ hồ; mập mờ
+  - word: 砂漠
+    reading: さばく
+    meaning: sa mạc
+
+### 墓 (Mộ)
+
+level: N1
+meaningVi: Ngôi mộ
+hanViet: Mộ
+onyomi: ["ボ"]
+kunyomi: ["はか"]
+strokeCount: 13
+writingHint: Ở sa mạc ( ) lấy đất ( ) xây mộ ( ) 墓 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 墓地
+    reading: はかち
+    meaning: nghĩa trang; nghĩa địa
+  - word: 墓地
+    reading: はかち
+    meaning: nghĩa trang; nghĩa địa
+  - word: 墓
+    reading: はか
+    meaning: mộ; ngôi mộ
+
+### 慕 (Mộ)
+
+level: N1
+meaningVi: Hâm mộ
+hanViet: Mộ
+onyomi: ["ボ"]
+kunyomi: ["した.う"]
+strokeCount: 14
+writingHint: Vẻ đẹp của sa mạc ( ) trái tim ( ) rất hâm mộ ( ) 慕 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 慕う
+    reading: したう
+    meaning: khao khát; nhớ nhung; ngưỡng mộ; yêu tha thiết
+  - word: 慕う
+    reading: したう
+    meaning: khao khát; nhớ nhung; ngưỡng mộ; yêu tha thiết
+
+### 幕 (Mạc)
+
+level: N1
+meaningVi: Màn, rèm
+hanViet: Mạc
+onyomi: ["マク", "バク"]
+kunyomi: ["とばり"]
+strokeCount: 13
+writingHint: Ở sa mạc ( ) dùng khăn ( ) để làm rèm ( ) 幕 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 幕
+    reading: とばり
+    meaning: rèm; cờ đuôi nheo; diễn (trong vở kịch)
+  - word: 幕
+    reading: とばり
+    meaning: rèm; cờ đuôi nheo; diễn (trong vở kịch)
+  - word: 幕
+    reading: まく
+    meaning: rèm; cờ đuôi nheo; diễn (trong vở kịch)
 
 ### 其 (Kì)
 
@@ -12377,14 +16464,44 @@ examples:
     reading: しょうぎ
     meaning: cờ shogi
 
-### 欠 (Khi)
+### 碁 (Kì)
+
+level: N1
+meaningVi: Cờ vây
+hanViet: Kì
+onyomi: ["ゴ"]
+kunyomi: []
+strokeCount: 13
+writingHint: Kì ( ) lạ dùng đá ( ) làm cờ vây ( )碁 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Kì maps to 115 KANJIDIC2 candidates; kept extracted 碁
+examples:
+  - word: 碁盤
+    reading: ごばん
+    meaning: Lên tàu
+  - word: 碁盤
+    reading: ごばん
+    meaning: Lên tàu
+  - word: 碁
+    reading: ご
+    meaning: Cờ vây (board game chiếm lãnh thổ)
+
+### 欺 (Khi)
 
 level: N1
 meaningVi: Lừa đảo
 hanViet: Khi
-onyomi: ["ケツ", "ケン"]
-kunyomi: ["か.ける", "か.く"]
-strokeCount: 4
+onyomi: ["ギ"]
+kunyomi: ["あざむ.く"]
+strokeCount: 12
 writingHint: Khi đến kì ( ) hạn mà thiếu ( ) nợ là lừa đảo ( ) 欺 3 9
 sourcePages: []
 sources:
@@ -12395,26 +16512,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khi maps to 24 KANJIDIC2 candidates; kept extracted 欠
+  - none
 examples:
-  - word: 不可欠
-    reading: ふかけつ
-    meaning: không thể thiếu; cần thiết
-  - word: 欠く
-    reading: かく
-    meaning: thiếu; gãy; nứt; sứt mẻ
-  - word: 欠乏
-    reading: けつぼう
-    meaning: muốn; thiếu thốn; nạn đói
+  - word: 欺く
+    reading: あざむく
+    meaning: lừa dối
+  - word: 詐欺
+    reading: さぎ
+    meaning: sự lừa đảo; sự lừa gạt
+  - word: 欺く
+    reading: あざむく
+    meaning: lừa dối
 
-### 井 (Tắc)
+### 塞 (Tắc)
 
 level: N1
 meaningVi: Tắc nghẽn
 hanViet: Tắc
-onyomi: ["セイ", "ショウ"]
-kunyomi: ["い"]
-strokeCount: 4
+onyomi: ["ソク", "サイ"]
+kunyomi: ["ふさ.ぐ", "とりで", "み.ちる"]
+strokeCount: 13
 writingHint: Dưới mái nhà ( ) chỗ cái giếng ( ) có 18 ( ー儿) đống đất (土) gây tắc nghẽn (塞) 1
 sourcePages: []
 sources:
@@ -12425,26 +16542,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tắc maps to 29 KANJIDIC2 candidates; kept extracted 井
+  - none
 examples:
-  - word: 伊井
-    reading: いい
-    meaning: cái đó; Ý
-  - word: 天井
-    reading: てんじょう
-    meaning: trần; giá trần
-  - word: 伊井
-    reading: いい
-    meaning: cái đó; Ý
+  - word: 塞がる
+    reading: ふさがる
+    meaning: bị cắm điện, bịt miệng
+  - word: 塞ぐ
+    reading: ふさぐ
+    meaning: dừng lại, chặn lại, chặn lại (lên)
+  - word: 塞がる
+    reading: ふさがる
+    meaning: bị tắc; bị đóng kín
 
-### 匹 (Thậm)
+### 甚 (Thậm)
 
 level: N1
 meaningVi: Rất, lắm
 hanViet: Thậm
-onyomi: ["ヒツ"]
-kunyomi: ["ひき"]
-strokeCount: 4
+onyomi: ["ジン"]
+kunyomi: ["はなは.だ", "はなは.だしい"]
+strokeCount: 9
 writingHint: Mùa này người trồng cam ( ) thất ( ) bát rất ( ) nhiều甚 2 3
 sourcePages: []
 sources:
@@ -12455,37 +16572,7 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thậm maps to 56 KANJIDIC2 candidates; kept extracted 匹
-examples:
-  - word: 匹
-    reading: ひき
-    meaning: đầu; quầy con vật nhỏ; cuộn vải
-  - word: 匹敵
-    reading: ひってき
-    meaning: so sánh với;khớp;đối thủ;bằng
-  - word: 匹
-    reading: ひき
-    meaning: đầu; quầy con vật nhỏ; cuộn vải
-
-### 甚 (Kham)
-
-level: N1
-meaningVi: Chịu đựng
-hanViet: Kham
-onyomi: ["ジン"]
-kunyomi: ["はなは.だ", "はなは.だしい"]
-strokeCount: 9
-writingHint: Đất ( ) đai nhiều quá rất ( ) khó kham ( ) nổi堪 5 6
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Kham maps to 32 KANJIDIC2 candidates; kept extracted 甚
+  - none
 examples:
   - word: 甚だ
     reading: はなはだ
@@ -12497,14 +16584,44 @@ examples:
     reading: はなはだしい
     meaning: cực độ, quá mức, khủng khiếp
 
-### 力 (Khám)
+### 堪 (Kham)
+
+level: N1
+meaningVi: Chịu đựng
+hanViet: Kham
+onyomi: ["カン", "タン"]
+kunyomi: ["た.える", "たま.る", "こら.える", "こた.える"]
+strokeCount: 12
+writingHint: Đất ( ) đai nhiều quá rất ( ) khó kham ( ) nổi堪 5 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 堪える
+    reading: こたえる
+    meaning: chịu đựng, đứng vững, chịu đựng, chịu đựng, hỗ trợ, chịu đựng, chống lại, dũng cảm, phù hợp với;t
+  - word: 堪らない
+    reading: たまらない
+    meaning: không thể chịu nổi; không thể chịu nổi; không thể chịu nổi
+  - word: 堪える
+    reading: こたえる
+    meaning: chịu đựng, đứng vững, chịu đựng, chịu đựng, hỗ trợ, chịu đựng, chống lại, dũng cảm, phù hợp với; t
+
+### 勘 (Khám)
 
 level: N1
 meaningVi: Trực giác
 hanViet: Khám
-onyomi: ["リョク", "リキ", "リイ"]
-kunyomi: ["ちから"]
-strokeCount: 2
+onyomi: ["カン"]
+kunyomi: []
+strokeCount: 11
 writingHint: Rất ( ) có năng lực ( ) về trực giác ( ) 勘 2 3 11
 sourcePages: []
 sources:
@@ -12515,17 +16632,126 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khám maps to 32 KANJIDIC2 candidates; kept extracted 力
+  - none
 examples:
-  - word: 浮力
-    reading: ふりょく
-    meaning: sức nổi; sức nổi
-  - word: 武力
-    reading: ぶりょく
-    meaning: sức mạnh vũ trang;sức mạnh quân sự;thanh kiếm;lực lượng
-  - word: 労力
-    reading: ろうりょく
-    meaning: lao động; nỗ lực; cực nhọc; rắc rối
+  - word: 勘弁
+    reading: かんべん
+    meaning: sự tha thứ; sự tha thứ; sự khoan dung
+  - word: 勘弁
+    reading: かんべん
+    meaning: sự tha thứ; sự khoan dung
+  - word: 勘違い
+    reading: かんちがい
+    meaning: hiểu lầm, đoán sai
+
+### 炊 (Xúy)
+
+level: N1
+meaningVi: Đun nấu
+hanViet: Xúy
+onyomi: ["スイ"]
+kunyomi: ["た.く", "-だ.き"]
+strokeCount: 8
+writingHint: Lửa ( ) thiếu ( ) thì không thể đun nấu ( ) 炊 3 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 炊く
+    reading: たく
+    meaning: đun sôi, nấu ăn
+  - word: 炊事
+    reading: すいじ
+    meaning: nấu ăn, nghệ thuật ẩm thực
+  - word: 炊事
+    reading: すいじ
+    meaning: nấu nướng; việc bếp núc
+
+### 諮 (Tư)
+
+level: N1
+meaningVi: Tư vấn
+hanViet: Tư
+onyomi: ["シ"]
+kunyomi: ["はか.る"]
+strokeCount: 16
+writingHint: Lời nói ( ) tiếp theo ( ) từ miệng ( ) người tư vấn ( ) 諮 1 8 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 諮る
+    reading: はかる
+    meaning: bàn bạc với; trao đổi với
+  - word: 諮る
+    reading: はかる
+    meaning: bàn bạc với; trao đổi với
+
+### 恣 (Tứ)
+
+level: N1
+meaningVi: Ích kỷ
+hanViet: Tứ
+onyomi: ["シ"]
+kunyomi: ["ほしいまま"]
+strokeCount: 10
+writingHint: Lần yêu tiếp theo ( ) trái tim ( ) sẽ trở nên ích kỷ ( )恣 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 羨 (Tiện)
+
+level: N1
+meaningVi: Ghen tị
+hanViet: Tiện
+onyomi: ["セン", "エン"]
+kunyomi: ["うらや.む", "あまり"]
+strokeCount: 13
+writingHint: Dê ( ) uống nước ( ) thấy thiếu ( ) nên vẫn ghen tị ( ) 羨 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 羨ましい
+    reading: うらやましい
+    meaning: ghen tị, đáng ghen tị
+  - word: 羨む
+    reading: うらやむ
+    meaning: ghen tị
+  - word: 羨ましい
+    reading: うらやましい
+    meaning: ghen tị; đáng thèm muốn
 
 ### 款 (Khoản)
 
@@ -12549,15 +16775,15 @@ openGaps:
 examples:
   - none
 
-### 夆 (Phong)
+### 逢 (Phùng)
 
 level: N1
-meaningVi: Con ong
-hanViet: Phong
-onyomi: ["ホウ", "フ", "バ"]
-kunyomi: ["さか.らう", "ひ.く", "あ.う", "あつ.い"]
-strokeCount: 7
-writingHint: Các loại côn trùng ( ) trùng phùng ( ) với con ong ( ) 蜂 7 8
+meaningVi: Trùng phùng
+hanViet: Phùng
+onyomi: ["ホウ"]
+kunyomi: ["あ.う", "むか.える"]
+strokeCount: 10
+writingHint: Phùng ( ) đi xa ( ) để trùng phùng ( ) 逢 8 1 2
 sourcePages: []
 sources:
   level: ebook
@@ -12570,6 +16796,85 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 縫 (Phùng)
+
+level: N1
+meaningVi: Khâu vá
+hanViet: Phùng
+onyomi: ["ホウ"]
+kunyomi: ["ぬ.う"]
+strokeCount: 16
+writingHint: Khâu vá ( ) quần áo tơ ( ) lụa cho ngày trùng phùng ( ) 縫 1 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 裁縫
+    reading: さいほう
+    meaning: khâu vá
+  - word: 縫う
+    reading: ぬう
+    meaning: may
+  - word: 裁縫
+    reading: さいほう
+    meaning: may vá
+
+### 夆 (Phong)
+
+level: N1
+meaningVi: Đỉnh núi
+hanViet: Phong
+onyomi: ["ホウ", "フ", "バ"]
+kunyomi: ["さか.らう", "ひ.く", "あ.う", "あつ.い"]
+strokeCount: 7
+writingHint: Lên đỉnh ( ) núi ( ) để trùng phùng ( ) 夆 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 蜂 (Phong)
+
+level: N1
+meaningVi: Con ong
+hanViet: Phong
+onyomi: ["ホウ"]
+kunyomi: ["はち"]
+strokeCount: 13
+writingHint: Các loại côn trùng ( ) trùng phùng ( ) với con ong ( ) 蜂 7 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 蜂蜜
+    reading: はちみつ
+    meaning: em yêu
+  - word: 蜂蜜
+    reading: はちみつ
+    meaning: em yêu
 
 ### 且 (Thả)
 
@@ -12597,6 +16902,58 @@ examples:
   - word: 且つ
     reading: かつ
     meaning: chưa; và
+
+### 粗 (Thô)
+
+level: N1
+meaningVi: Thô bạo
+hanViet: Thô
+onyomi: ["ソ"]
+kunyomi: ["あら.い", "あら-"]
+strokeCount: 11
+writingHint: Bao gạo ( ) bị thả ( ) một cách thô bạo ( ) 粗 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 粗筋
+    reading: あらすじ
+    meaning: phác thảo; tóm tắt
+  - word: 粗筋
+    reading: あらすじ
+    meaning: phác thảo; tóm tắt
+  - word: 粗い
+    reading: あらい
+    meaning: thô, thô
+
+### 租 (Tô)
+
+level: N1
+meaningVi: Tô thuế
+hanViet: Tô
+onyomi: ["ソ"]
+kunyomi: []
+strokeCount: 10
+writingHint: Được trồng lúa ( ) thả ( ) ga nhưng vẫn phải nộp tô thuế ( ) 租 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 狙 (Thư)
 
@@ -12628,15 +16985,45 @@ examples:
     reading: ねらい
     meaning: mục tiêu; ý định
 
-### 宜 (Nghị)
+### 阻 (Trở)
 
 level: N1
-meaningVi: Hữu nghị
-hanViet: Nghị
+meaningVi: Cản trở
+hanViet: Trở
+onyomi: ["ソ"]
+kunyomi: ["はば.む"]
+strokeCount: 8
+writingHint: Bồ ( ) thả ( ) ra gây cản trở ( )阻 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 阻止
+    reading: そし
+    meaning: cản trở;kiểm tra;cản trở;ngăn chặn;ngăn chặn
+  - word: 阻む
+    reading: はばむ
+    meaning: ngăn chặn ai đó làm gì; ngăn chặn; ngăn chặn; kiểm tra; cản trở; cản trở; phản đối; cản trở
+  - word: 阻止
+    reading: そし
+    meaning: cản trở; kiểm tra; ngăn chặn
+
+### 宜 (Nghi)
+
+level: N1
+meaningVi: Tiện nghi
+hanViet: Nghi
 onyomi: ["ギ"]
 kunyomi: ["よろ.しい", "よろ.しく"]
 strokeCount: 8
-writingHint: Nói chuyện ( ) không nghi ( ) ngời mới là tình hữu nghị ( )誼 1 8
+writingHint: Vào nhà ( ) cơ thể được thả ( ) lỏng vì có đầy đủ tiện nghi ( )宜 1
 sourcePages: []
 sources:
   level: ebook
@@ -12657,6 +17044,28 @@ examples:
   - word: 宜しく
     reading: よろしく
     meaning: à, đúng cách, phù hợp, trân trọng, xin hãy nhớ đến tôi
+
+### 誼 (Nghị)
+
+level: N1
+meaningVi: Hữu nghị
+hanViet: Nghị
+onyomi: ["ギ"]
+kunyomi: ["よしみ", "よい"]
+strokeCount: 15
+writingHint: Nói chuyện ( ) không nghi ( ) ngời mới là tình hữu nghị ( )誼 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 拘 (Câu)
 
@@ -12710,14 +17119,14 @@ openGaps:
 examples:
   - none
 
-### 敬 (Kinh)
+### 馬 (Kinh)
 
 level: N1
 meaningVi: Kinh ngạc
 hanViet: Kinh
-onyomi: ["ケイ", "キョウ"]
-kunyomi: ["うやま.う"]
-strokeCount: 12
+onyomi: ["バ"]
+kunyomi: ["うま", "うま-", "ま"]
+strokeCount: 10
 writingHint: Kinh ngạc ( ) trước sự kính trọng ( ) của con ngựa ( )馬 2 3 9
 sourcePages: []
 sources:
@@ -12728,17 +17137,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - none
+  - target kanji ambiguous: Hán-Việt heading Kinh maps to 39 KANJIDIC2 candidates; kept extracted 馬
 examples:
-  - word: 敬具
-    reading: けいぐ
-    meaning: Trân trọng của bạn
-  - word: 敬具
-    reading: けいぐ
-    meaning: Trân trọng của bạn
-  - word: 敬う
-    reading: うやまう
-    meaning: để thể hiện sự tôn trọng, tôn vinh
+  - word: 馬鹿馬鹿しい
+    reading: ばかばかしい
+    meaning: ngu ngốc
+  - word: 馬鹿らしい
+    reading: ばからしい
+    meaning: vô lý
+  - word: 馬鹿馬鹿しい
+    reading: ばかばかしい
+    meaning: ngu ngốc
 
 ### 崖 (Nhai)
 
@@ -12789,14 +17198,14 @@ openGaps:
 examples:
   - none
 
-### 圭 (Giai)
+### 佳 (Giai)
 
 level: N1
 meaningVi: Giai nhân
 hanViet: Giai
-onyomi: ["ケイ", "ケ"]
+onyomi: ["カ"]
 kunyomi: []
-strokeCount: 6
+strokeCount: 8
 writingHint: Người ( ) tên Ngọc Khuê ( ) là giai nhân ( ) 佳 1 4
 sourcePages: []
 sources:
@@ -12805,12 +17214,16 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Giai maps to 30 KANJIDIC2 candidates; kept extracted 圭
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 佳句
+    reading: かく
+    meaning: đoạn văn hay
+  - word: 佳句
+    reading: かく
+    meaning: đoạn văn hay
 
 ### 罫 (Quải)
 
@@ -12900,15 +17313,15 @@ openGaps:
 examples:
   - none
 
-### 同 (Đồng)
+### 同 (Đỗng)
 
 level: N1
-meaningVi: Ngô đồng
-hanViet: Đồng
+meaningVi: Cơ thể
+hanViet: Đỗng
 onyomi: ["ドウ"]
 kunyomi: ["おな.じ"]
 strokeCount: 6
-writingHint: Ngô đồng ( ) cây ( ) nào cũng giống nhau ( ) 2
+writingHint: Cơ thể ( ) Nguyệt ( ) 3 vòng đều giống nhau ( )同 2
 sourcePages: []
 sources:
   level: ebook
@@ -13259,6 +17672,107 @@ examples:
     hanViet: cay
     meaning: ho
 
+### 該 (Cai)
+
+level: N1
+meaningVi: Cai quản
+hanViet: Cai
+onyomi: ["ガイ"]
+kunyomi: []
+strokeCount: 13
+writingHint: Nói ( ) với con lợn ( ) để cai quản ( ) 該 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 該当
+    reading: がいとう
+    meaning: tương ứng;trả lời;đi theo
+  - word: 該当
+    reading: がいとう
+    meaning: tương ứng; trả lời; đi theo
+
+### 骸 (Hài)
+
+level: N1
+meaningVi: Hài cốt
+hanViet: Hài
+onyomi: ["ガイ", "カイ"]
+kunyomi: ["むくろ"]
+strokeCount: 16
+writingHint: Bộ xương ( ) con lợn ( ) là hài cốt ( ) 骸 2 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 劾 (Hặc)
+
+level: N1
+meaningVi: Luận tội
+hanViet: Hặc
+onyomi: ["ガイ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Con lợn ( ) dùng sức lực ( ) thì phải luận tội ( ) 劾 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 復 (Phúc)
+
+level: N1
+meaningVi: Che đậy
+hanViet: Phúc
+onyomi: ["フク"]
+kunyomi: ["また"]
+strokeCount: 12
+writingHint: Che đậy ( ) chuyện phương Tây ( ) sắp phục hồi ( ) 復 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 復旧
+    reading: ふくきゅう
+    meaning: sự phục hồi; sự phục hồi; sự phục hồi
+  - word: 復興
+    reading: ふっこう
+    meaning: sự hồi sinh; sự phục hưng; sự tái thiết
+  - word: 復活
+    reading: ふっかつ
+    meaning: sự hồi sinh (ví dụ: âm nhạc); sự phục hồi
+
 ### 履 (Lí)
 
 level: N1
@@ -13289,14 +17803,66 @@ examples:
     reading: ぞうり
     meaning: Zoori (giày dép Nhật Bản), dép xăng đan
 
-### 最 (Toát)
+### 趣 (Thú)
+
+level: N1
+meaningVi: Hứng thú
+hanViet: Thú
+onyomi: ["シュ"]
+kunyomi: ["おもむき", "おもむ.く"]
+strokeCount: 15
+writingHint: Chạy ( ) đi lấy ( ) hứng thú ( ) 趣 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 趣旨
+    reading: しゅし
+    meaning: đối tượng; ý nghĩa
+  - word: 趣
+    reading: おもむき
+    meaning: ý nghĩa;giọng nam cao;ý chính;tác dụng;ngoại hình;hương vị;duyên dáng;quyến rũ;sự tinh tế
+  - word: 趣
+    reading: おもむき
+    meaning: ý nghĩa; giọng nam cao; ý chính; tác dụng; ngoại hình; hương vị; duyên dáng; quyến rũ; sự tinh tế
+
+### 娶 (Thú)
+
+level: N1
+meaningVi: Lấy vợ
+hanViet: Thú
+onyomi: ["シュ"]
+kunyomi: ["めと.る", "めあわ.せる"]
+strokeCount: 11
+writingHint: Lấy ( ) phụ nữ ( ) là lấy vợ ( )娶 1 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 撮 (Toát)
 
 level: N1
 meaningVi: Chụp ảnh
 hanViet: Toát
-onyomi: ["サイ", "シュ"]
-kunyomi: ["もっと.も", "つま"]
-strokeCount: 12
+onyomi: ["サツ"]
+kunyomi: ["と.る", "つま.む", "-ど.り"]
+strokeCount: 15
 writingHint: Tay ( ) vào chỗ tối ( ) để chụp ảnh ( ) 撮 2 5
 sourcePages: []
 sources:
@@ -13307,26 +17873,27 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Toát maps to 3 KANJIDIC2 candidates; kept extracted 最
+  - none
 examples:
-  - word: 最善
-    reading: さいぜん
-    meaning: điều tuyệt vời nhất
-  - word: 最早
-    reading: もはや
-    meaning: đã; bây giờ
-  - word: 最善
-    reading: さいぜん
-    meaning: điều tuyệt vời nhất
+  - word: 撮影
+    reading: さつえい
+    meaning: chụp ảnh
+  - word: 撮影
+    reading: さつえい
+    meaning: chụp ảnh; quay phim
+  - word: 撮影
+    reading: さつえい
+    hanViet: Toát
+    meaning: bức ảnh
 
-### 思 (Ti)
+### 偲 (Ti)
 
 level: N1
 meaningVi: Tưởng nhớ
 hanViet: Ti
-onyomi: ["シ"]
-kunyomi: ["おも.う", "おもえら.く", "おぼ.す"]
-strokeCount: 9
+onyomi: ["サイ", "シ"]
+kunyomi: ["しの.ぶ"]
+strokeCount: 11
 writingHint: Người đứng ( ) suy nghĩ ( ) là tưởng nhớ ( ) 偲 1
 sourcePages: []
 sources:
@@ -13335,28 +17902,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ti maps to 114 KANJIDIC2 candidates; kept extracted 思
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 思考
-    reading: しこう
-    meaning: suy nghĩ
-  - word: 片思い
-    reading: かたおもい
-    meaning: tình yêu đơn phương
-  - word: 思い付き
-    reading: おもいつき
-    meaning: kế hoạch; ý tưởng; đề nghị
+  - none
 
-### 恵 (Tuệ)
+### 穂 (Tuệ)
 
 level: N1
 meaningVi: Bông lúa
 hanViet: Tuệ
-onyomi: ["ケイ", "エ"]
-kunyomi: ["めぐ.む", "めぐ.み"]
-strokeCount: 10
+onyomi: ["スイ"]
+kunyomi: ["ほ"]
+strokeCount: 15
 writingHint: Hòa ( ) đền đáp ân huệ ( ) bằng bông lúa ( ) 穂 1 11
 sourcePages: []
 sources:
@@ -13367,17 +17926,124 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tuệ maps to 12 KANJIDIC2 candidates; kept extracted 恵
+  - none
 examples:
-  - word: 恵み
-    reading: めぐみ
-    meaning: phước lành
-  - word: 恵む
-    reading: めぐむ
-    meaning: ban phước; thể hiện lòng thương xót đối với
-  - word: 恵み
-    reading: めぐみ
-    meaning: phước lành
+  - word: 穂
+    reading: ほ
+    meaning: tai (của cây); đầu (của cây)
+  - word: 穂
+    reading: ほ
+    meaning: tai (của cây); đầu (của cây)
+
+### 塁 (Lũy)
+
+level: N1
+meaningVi: Thành lũy
+hanViet: Lũy
+onyomi: ["ルイ", "ライ", "スイ"]
+kunyomi: ["とりで"]
+strokeCount: 12
+writingHint: Ruộng ( ) phun nước (> <) thuộc đất ( ) của thành lũy ( )塁 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Lũy maps to 30 KANJIDIC2 candidates; kept extracted 塁
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 由 (Ti)
+
+level: N1
+meaningVi: Ti tiện
+hanViet: Ti
+onyomi: ["ユ", "ユウ", "ユイ"]
+kunyomi: ["よし", "よ.る"]
+strokeCount: 5
+writingHint: 1 mảnh ruộng ( ) 4 (4v) người tranh nhau là đồ ti tiện ( ) 卑 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Ti maps to 114 KANJIDIC2 candidates; kept extracted 由
+examples:
+  - word: 経由
+    reading: けいゆ
+    meaning: nhân tiện; đi qua
+  - word: 不自由
+    reading: ふじゆう
+    meaning: khó chịu; khuyết tật; bất tiện; cơ cực
+  - word: 自由
+    reading: じゆう
+    meaning: sự tự do
+
+### 卑 (Bi)
+
+level: N1
+meaningVi: Bia
+hanViet: Bi
+onyomi: ["ヒ"]
+kunyomi: ["いや.しむ", "いや.しい", "いや.しめる"]
+strokeCount: 8
+writingHint: Bia ( ) đá ( ) không dành cho kẻ ti tiện ( ) 卑 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Bi maps to 78 KANJIDIC2 candidates; kept extracted 卑
+examples:
+  - word: 卑しい
+    reading: いやしい
+    meaning: tham lam; thô tục; tồi tàn; khiêm tốn; hèn hạ; hèn hạ; hèn hạ
+  - word: 卑しい
+    reading: いやしい
+    meaning: tham lam; thô tục; tồi tàn; khiêm tốn; hèn hạ
+  - word: 卑怯
+    reading: ひきょう
+    meaning: hèn nhát, hèn hạ, bất công
+
+### 苗 (Miêu)
+
+level: N1
+meaningVi: Cây non
+hanViet: Miêu
+onyomi: ["ビョウ", "ミョウ"]
+kunyomi: ["なえ", "なわ-"]
+strokeCount: 8
+writingHint: Cỏ ( ) trên ruộng ( ) mọc thành cây non ( ) 苗 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 苗
+    reading: なえ
+    meaning: cây lúa
+  - word: 苗
+    reading: なえ
+    meaning: cây lúa
 
 ### 描 (Miêu)
 
@@ -13409,14 +18075,14 @@ examples:
     reading: えがく
     meaning: vẽ; phác họa; mô tả; miêu tả
 
-### 苗 (Miêu)
+### 錨 (Miêu)
 
 level: N1
 meaningVi: Mỏ neo
 hanViet: Miêu
 onyomi: ["ビョウ", "ミョウ"]
-kunyomi: ["なえ", "なわ-"]
-strokeCount: 8
+kunyomi: ["いかり"]
+strokeCount: 16
 writingHint: Kim loại ( ) bọc cây non ( ) làm thành mỏ neo ( ) 錨 1 10 11
 sourcePages: []
 sources:
@@ -13425,16 +18091,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 苗
-    reading: なえ
-    meaning: cây lúa
-  - word: 苗
-    reading: なえ
-    meaning: cây lúa
+  - none
 
 ### 縛 (Phược)
 
@@ -13454,7 +18115,7 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji repaired from OCR/text component 専 to 縛 by Hán-Việt heading
+  - none
 examples:
   - word: 束縛
     reading: そくばく
@@ -13493,15 +18154,45 @@ examples:
     reading: めいりょう
     meaning: sự rõ ràng
 
-### 厶 (Quỷ)
+### 小 (Khích)
 
 level: N1
-meaningVi: Con quỷ
-hanViet: Quỷ
-onyomi: ["シ", "ボウ", "ム"]
-kunyomi: ["わたくし", "ござ.る"]
-strokeCount: 2
-writingHint: 1 mảnh ruộng ( ) có dấu chân ( ) của 4 ( ) con quỷ ( ) 鬼 1
+meaningVi: Lỗ hổng
+hanViet: Khích
+onyomi: ["ショウ"]
+kunyomi: ["ちい.さい", "こ-", "お-", "さ-"]
+strokeCount: 3
+writingHint: Lỗ hổng ( ) kiến thức của em Bồ ( ) nhỏ ( ) ngày ( ) càng nhỏ ( ) đi 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Khích maps to 7 KANJIDIC2 candidates; kept extracted 小
+examples:
+  - word: 小銭
+    reading: こぜに
+    meaning: tiền xu; tiền lẻ
+  - word: 小切手
+    reading: こぎって
+    meaning: séc; séc
+  - word: 小柄
+    reading: こがら
+    meaning: ngắn (xây dựng)
+
+### 竜 (Long)
+
+level: N1
+meaningVi: Con rồng
+hanViet: Long
+onyomi: ["リュウ", "リョウ", "ロウ"]
+kunyomi: ["たつ", "いせ"]
+strokeCount: 10
+writingHint: Đứng ( ) cả ngày ( ) vẫy đuôi Là (L) con rồng ( )竜 1
 sourcePages: []
 sources:
   level: ebook
@@ -13511,10 +18202,60 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Quỷ maps to 65 KANJIDIC2 candidates; kept extracted 厶
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 俺 (Yêm)
+
+level: N1
+meaningVi: Tôi, tao
+hanViet: Yêm
+onyomi: ["エン"]
+kunyomi: ["おれ", "われ"]
+strokeCount: 10
+writingHint: Người ( ) lớn ( ) lên ở Nhật ( ) Là (L) tôi ( ) 俺 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 俺
+    reading: おれ
+    meaning: Tôi (cái tôi) (đại từ nhân xưng ngôi thứ nhất khoe khoang)
+  - word: 俺
+    reading: おれ
+    meaning: Tôi (cái tôi) (đại từ nhân xưng ngôi thứ nhất khoe khoang)
+
+### 鬼 (Quỷ)
+
+level: N1
+meaningVi: Con quỷ
+hanViet: Quỷ
+onyomi: ["キ"]
+kunyomi: ["おに", "おに-"]
+strokeCount: 10
+writingHint: 1 mảnh ruộng ( ) có dấu chân ( ) của 4 ( ) con quỷ ( ) 鬼 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 鬼
+    reading: おに
+    meaning: yêu tinh; quỷ; nó (tức là trong trò chơi đuổi bắt)
 
 ### 醜 (Xú)
 
@@ -13543,14 +18284,44 @@ examples:
     reading: みにくい
     meaning: xấu xí
 
-### 天 (Tấu)
+### 春 (Xuân)
+
+level: N1
+meaningVi: Cây hoa trà
+hanViet: Xuân
+onyomi: ["シュン"]
+kunyomi: ["はる"]
+strokeCount: 9
+writingHint: Hoa trà ( ) là cây ( ) chuyên nở vào mùa xuân ( ) 春 2 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 青春
+    reading: せいしゅん
+    meaning: tuổi trẻ;mùa xuân của cuộc đời;tuổi thanh xuân
+  - word: 青春
+    reading: せいしゅん
+    meaning: tuổi trẻ; mùa xuân của cuộc đời; tuổi thanh xuân
+  - word: 春
+    reading: はる
+    meaning: mùa xuân
+
+### 奏 (Tấu)
 
 level: N1
 meaningVi: Diễn tấu
 hanViet: Tấu
-onyomi: ["テン"]
-kunyomi: ["あまつ", "あめ", "あま-"]
-strokeCount: 4
+onyomi: ["ソウ"]
+kunyomi: ["かな.でる"]
+strokeCount: 9
 writingHint: 3 người ( ) lên Thiên ( ) đình diễn tấu ( ) 奏 4
 sourcePages: []
 sources:
@@ -13561,26 +18332,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tấu maps to 18 KANJIDIC2 candidates; kept extracted 天
+  - none
 examples:
-  - word: 天災
-    reading: てんさい
-    meaning: thiên tai; thảm họa
-  - word: 天
-    reading: あまつ
-    meaning: thiên đường; hoàng gia
-  - word: 天皇
-    reading: すめらぎ
-    meaning: Hoàng đế Nhật Bản
+  - word: 吹奏
+    reading: すいそう
+    meaning: chơi nhạc cụ hơi
+  - word: 吹奏
+    reading: すいそう
+    meaning: chơi nhạc cụ hơi
+  - word: 演奏
+    reading: えんそう
+    meaning: biểu diễn âm nhạc
 
-### 水 (Thái)
+### 泰 (Thái)
 
 level: N1
 meaningVi: Thái bình
 hanViet: Thái
-onyomi: ["スイ"]
-kunyomi: ["みず", "みず-"]
-strokeCount: 4
+onyomi: ["タイ"]
+kunyomi: []
+strokeCount: 10
 writingHint: 3 người ( ) lãnh đạo nên đất nước ( ) thái bình ( ) 泰 4
 sourcePages: []
 sources:
@@ -13589,19 +18360,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thái maps to 38 KANJIDIC2 candidates; kept extracted 水
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 洪水
-    reading: こうずい
-    meaning: lũ lụt
-  - word: 水洗
-    reading: すいせん
-    meaning: xả nước
-  - word: 大水
-    reading: おおみず
-    meaning: lũ lụt
+  - none
 
 ### 夫 (Phụng)
 
@@ -13633,15 +18396,37 @@ examples:
     reading: くふう
     meaning: người lao động, công nhân
 
-### 奉 (Bổng)
+### 俸 (Bổng)
 
 level: N1
 meaningVi: Lương bổng
 hanViet: Bổng
-onyomi: ["ホウ", "ブ"]
-kunyomi: ["たてまつ.る", "まつ.る", "ほう.ずる"]
-strokeCount: 8
+onyomi: ["ホウ"]
+kunyomi: []
+strokeCount: 10
 writingHint: Người ( ) phụng mệnh ( ) sẽ được nhận lương bổng ( ) 俸 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 捧 (Phủng)
+
+level: N1
+meaningVi: Hiến dâng
+hanViet: Phủng
+onyomi: ["ホウ"]
+kunyomi: ["ささ.げる"]
+strokeCount: 11
+writingHint: Tay ( ) phụng mệnh ( ) hiến dâng ( ) 捧 2 7
 sourcePages: []
 sources:
   level: ebook
@@ -13653,24 +18438,21 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 奉る
-    reading: たてまつる
-    meaning: dâng hiến; trình bày; tôn kính; làm một cách kính trọng
-  - word: 奉仕
-    reading: ほうし
-    meaning: sự tham dự; dịch vụ
-  - word: 奉る
-    reading: たてまつる
-    meaning: dâng hiến; trình bày; tôn kính; làm một cách kính trọng
+  - word: 捧げる
+    reading: ささげる
+    meaning: nâng lên;cho đi;dâng lên;dâng hiến;dâng hiến;hy sinh;dành hiến
+  - word: 捧げる
+    reading: ささげる
+    meaning: nâng lên; cho đi; dâng lên; dâng hiến; hy sinh; dành hiến
 
-### 察 (Sát)
+### 擦 (Sát)
 
 level: N1
 meaningVi: Ma sát
 hanViet: Sát
 onyomi: ["サツ"]
-kunyomi: []
-strokeCount: 14
+kunyomi: ["す.る", "す.れる", "-ず.れ", "こす.る", "こす.れる"]
+strokeCount: 17
 writingHint: Tay ( ) của Cảnh sát ( ) có ma sát ( ) 擦 2 4
 sourcePages: []
 sources:
@@ -13683,24 +18465,24 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 視察
-    reading: しさつ
-    meaning: sự kiểm tra; sự quan sát
-  - word: 察する
-    reading: さっする
-    meaning: đoán;cảm nhận;cho rằng;đánh giá;thông cảm với
-  - word: 察する
-    reading: さっする
-    meaning: đoán; cảm nhận; cho rằng; đánh giá; thông cảm với
+  - word: 擦る
+    reading: かする
+    meaning: chạm nhẹ; lấy phần trăm (từ)
+  - word: 擦れ違い
+    reading: すれちがい
+    meaning: cơ hội gặp gỡ
+  - word: 擦れる
+    reading: すれる
+    meaning: chà xát; làm phiền; mặc; trở nên sành điệu
 
-### 甘 (Cam)
+### 柑 (Cam)
 
 level: N1
 meaningVi: Cây quýt
 hanViet: Cam
-onyomi: ["カン"]
-kunyomi: ["あま.い", "あま.える", "あま.やかす", "うま.い"]
-strokeCount: 5
+onyomi: ["コン", "カン"]
+kunyomi: []
+strokeCount: 9
 writingHint: Cây ( ) + cam ( ) = Cây quýt ( ) 柑 2 6 7
 sourcePages: []
 sources:
@@ -13713,24 +18495,41 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 甘口
-    reading: あまくち
-    meaning: hương vị ngọt ngào; sự dịu dàng; sự xu nịnh; sự ngu ngốc
-  - word: 甘い
-    reading: うまい
-    meaning: thơm ngon
-  - word: 甘える
-    reading: あまえる
-    meaning: cư xử như một đứa trẻ hư hỏng; xu nịnh
+  - word: 蜜柑
+    reading: みかん
+    hanViet: mật đàn
+    meaning: quýt
 
-### 某 (Mưu)
+### 某 (Mỗ)
+
+level: N1
+meaningVi: Nào đó
+hanViet: Mỗ
+onyomi: ["ボウ"]
+kunyomi: ["それがし", "なにがし"]
+strokeCount: 9
+writingHint: Cam ( ) là cây ( ) nào đó ( ) 某 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 謀 (Mưu)
 
 level: N1
 meaningVi: Mưu mô
 hanViet: Mưu
-onyomi: ["ボウ"]
-kunyomi: ["それがし", "なにがし"]
-strokeCount: 9
+onyomi: ["ボウ", "ム"]
+kunyomi: ["はか.る", "たばか.る", "はかりごと"]
+strokeCount: 16
 writingHint: Lời nói ( ) của người nào đó ( ) đầy mưu mô ( ) 謀 1 9 10
 sourcePages: []
 sources:
@@ -13741,7 +18540,6 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Mưu maps to 3 KANJIDIC2 candidates; kept extracted 某
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -13755,6 +18553,28 @@ onyomi: ["バイ"]
 kunyomi: ["なこうど"]
 strokeCount: 12
 writingHint: Người phụ nữ ( ) được người nào đó ( ) môi giới ( ) lấy chồng nước ngoài 5 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 煤 (Môi)
+
+level: N1
+meaningVi: Nhọ nồi
+hanViet: Môi
+onyomi: ["バイ", "マイ"]
+kunyomi: ["すす"]
+strokeCount: 13
+writingHint: Lửa ( ) đốt nồi nào đó ( ) thành nhọ nồi ( ) 煤 3 6 7
 sourcePages: []
 sources:
   level: ebook
@@ -13813,14 +18633,14 @@ openGaps:
 examples:
   - none
 
-### 巻 (Quyển)
+### 圏 (Quyển)
 
 level: N1
 meaningVi: Khí quyền
 hanViet: Quyển
-onyomi: ["カン", "ケン"]
-kunyomi: ["ま.く", "まき", "ま.き"]
-strokeCount: 9
+onyomi: ["ケン"]
+kunyomi: ["かこ.い"]
+strokeCount: 12
 writingHint: Vây quanh ( ) quyển sách ( ) là bầu khí quyển ( ) 圏 2
 sourcePages: []
 sources:
@@ -13833,15 +18653,34 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 巻
-    reading: まき
-    meaning: khối lượng
-  - word: 取り巻く
-    reading: とりまく
-    meaning: bao quanh; bao quanh; bao quanh
-  - word: 取り巻く
-    reading: とりまく
-    meaning: bao quanh
+  - word: 圏
+    reading: けん
+    meaning: hình cầu; hình tròn; phạm vi
+  - word: 圏
+    reading: けん
+    meaning: hình cầu; hình tròn; phạm vi
+
+### 倦 (Quyện)
+
+level: N1
+meaningVi: Mệt mỏi
+hanViet: Quyện
+onyomi: ["ケン"]
+kunyomi: ["あき.る", "あぐ.む", "あぐ.ねる", "う.む", "つか.れる"]
+strokeCount: 11
+writingHint: Người đứng ( ) lâu đọc quyển sách ( ) cũng mệt mỏi ( ) 倦 7 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 捲 (Quyển)
 
@@ -13941,14 +18780,14 @@ openGaps:
 examples:
   - none
 
-### 馬 (Đằng)
+### 騰 (Đằng)
 
 level: N1
 meaningVi: Tăng giá
 hanViet: Đằng
-onyomi: ["バ"]
-kunyomi: ["うま", "うま-", "ま"]
-strokeCount: 10
+onyomi: ["トウ"]
+kunyomi: ["あが.る", "のぼ.る"]
+strokeCount: 20
 writingHint: Nguyệt ( ) đốt 2 ngọn lửa ( ) ăn mừng khi ngựa ( ) tăng giá ( ) 騰 2 5 9 6
 sourcePages: []
 sources:
@@ -13959,17 +18798,40 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đằng maps to 89 KANJIDIC2 candidates; kept extracted 馬
+  - none
 examples:
-  - word: 馬鹿馬鹿しい
-    reading: ばかばかしい
-    meaning: ngu ngốc
-  - word: 馬鹿らしい
-    reading: ばからしい
-    meaning: vô lý
-  - word: 馬鹿馬鹿しい
-    reading: ばかばかしい
-    meaning: ngu ngốc
+  - word: 沸騰
+    reading: ふっとう
+    meaning: sôi sục; sôi sục
+  - word: 沸騰
+    reading: ふっとう
+    meaning: sôi sục
+  - word: 沸騰
+    reading: ふっとう
+    hanViet: phí đằng
+    meaning: sôi sục
+
+### 渓 (Khê)
+
+level: N1
+meaningVi: Thung lũng
+hanViet: Khê
+onyomi: ["ケイ"]
+kunyomi: ["たに", "たにがわ"]
+strokeCount: 11
+writingHint: Nước ( ) rửa móng tay ( ) chồng ( ) lấy từ thung lũng ( ) 渓 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 扶 (Phù)
 
@@ -13998,14 +18860,14 @@ examples:
     reading: ふよう
     meaning: hỗ trợ; bảo trì
 
-### 皆 (Hài)
+### 諧 (Hài)
 
 level: N1
 meaningVi: Hài hòa
 hanViet: Hài
 onyomi: ["カイ"]
-kunyomi: ["みな", "みんな"]
-strokeCount: 9
+kunyomi: ["かな.う", "やわ.らぐ"]
+strokeCount: 16
 writingHint: Nói chuyện ( ) với mọi người ( ) phải hài hòa ( )諧 11
 sourcePages: []
 sources:
@@ -14014,28 +18876,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hài maps to 23 KANJIDIC2 candidates; kept extracted 皆
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 皆
-    reading: みんな
-    meaning: tất cả; mọi người
-  - word: 皆
-    reading: みな
-    meaning: mọi người
-  - word: 皆さん
-    reading: みなさん
-    meaning: mọi người
+  - none
 
-### 比 (Côn)
+### 昆 (Côn)
 
 level: N1
 meaningVi: Côn trùng
 hanViet: Côn
-onyomi: ["ヒ"]
-kunyomi: ["くら.べる"]
-strokeCount: 4
+onyomi: ["コン"]
+kunyomi: []
+strokeCount: 8
 writingHint: Ở Nhật ( ) có tỉ ( ) con côn trùng ( )昆 2
 sourcePages: []
 sources:
@@ -14046,17 +18900,36 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Côn maps to 30 KANJIDIC2 candidates; kept extracted 比
+  - none
 examples:
-  - word: 対比
-    reading: たいひ
-    meaning: sự tương phản; sự so sánh
-  - word: 比率
-    reading: ひりつ
-    meaning: tỷ lệ; tỉ lệ; phần trăm
-  - word: 比重
-    reading: ひじゅう
-    meaning: trọng lượng riêng
+  - word: 昆虫
+    reading: こんちゅう
+    meaning: côn trùng; sâu bọ
+  - word: 昆虫
+    reading: こんちゅう
+    meaning: côn trùng; sâu bọ
+
+### 帝 (Đế)
+
+level: N1
+meaningVi: Hoàng đế
+hanViet: Đế
+onyomi: ["テイ"]
+kunyomi: ["みかど"]
+strokeCount: 9
+writingHint: Người đứng ( ) trùm ( ) khăn ( ) là Hoàng Đế ( ) 帝 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 締 (Đế)
 
@@ -14118,14 +18991,14 @@ examples:
     reading: あきらめる
     meaning: từ bỏ
 
-### 帝 (Đề)
+### 蹄 (Đề)
 
 level: N1
 meaningVi: Móng chân
 hanViet: Đề
 onyomi: ["テイ"]
-kunyomi: ["みかど"]
-strokeCount: 9
+kunyomi: ["ひづめ"]
+strokeCount: 16
 writingHint: Chân ( ) Hoàng Đế ( ) cũng có móng ( ) 蹄 8
 sourcePages: []
 sources:
@@ -14162,15 +19035,67 @@ openGaps:
 examples:
   - none
 
-### 豆 (Đậu)
+### 力 (Hiếp)
+
+level: N1
+meaningVi: Ăn hiếp 3 anh lực cứ gặp chị Nguyệt là ăn hiếp
+hanViet: Hiếp
+onyomi: ["リョク", "リキ", "リイ"]
+kunyomi: ["ちから"]
+strokeCount: 2
+writingHint: 2 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Hiếp maps to 31 KANJIDIC2 candidates; kept extracted 力
+examples:
+  - word: 浮力
+    reading: ふりょく
+    meaning: sức nổi; sức nổi
+  - word: 武力
+    reading: ぶりょく
+    meaning: sức mạnh vũ trang;sức mạnh quân sự;thanh kiếm;lực lượng
+  - word: 労力
+    reading: ろうりょく
+    meaning: lao động; nỗ lực; cực nhọc; rắc rối
+
+### 痘 (Đậu)
 
 level: N1
 meaningVi: Đậu mùa
 hanViet: Đậu
-onyomi: ["トウ", "ズ"]
-kunyomi: ["まめ", "まめ-"]
-strokeCount: 7
+onyomi: ["トウ"]
+kunyomi: []
+strokeCount: 12
 writingHint: Bệnh ( ) đậu ( ) mùa ( ) 痘 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 澄 (Trừng)
+
+level: N1
+meaningVi: Làm sạch
+hanViet: Trừng
+onyomi: ["チョウ"]
+kunyomi: ["す.む", "す.ます", "-す.ます"]
+strokeCount: 15
+writingHint: Nước ( ) được đăng ký ( ) làm sạch ( ) 澄 1 4 6
 sourcePages: []
 sources:
   level: ebook
@@ -14182,23 +19107,25 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 豆
-    reading: まめ
-    meaning: đậu; đậu Hà Lan
-  - word: 伊豆
-    reading: いず
-    hanViet: y đậu
-    meaning: Bán đảo Izu
+  - word: 澄ます
+    reading: すます
+    meaning: tỏ ra rõ ràng;làm cho rõ ràng;không hề bối rối;trông có vẻ không quan tâm;có vẻ đoan trang;có vẻ nghiêm nghị;làm ra vẻ lạnh lùng
+  - word: 澄ます
+    reading: すます
+    meaning: tỏ ra rõ ràng; làm cho rõ ràng; không hề bối rối; trông có vẻ không quan tâm; có vẻ đoan trang; có vẻ nghiêm nghị; làm ra vẻ lạnh lùng
+  - word: 澄む
+    reading: すむ
+    meaning: làm trong suốt (ví dụ thời tiết), trở nên trong suốt
 
-### 登 (Trừng)
+### 橙 (Chanh)
 
 level: N1
-meaningVi: Làm sạch
-hanViet: Trừng
-onyomi: ["トウ", "ト", "ドウ", "ショウ", "チョウ"]
-kunyomi: ["のぼ.る", "あ.がる"]
-strokeCount: 12
-writingHint: Nước ( ) được đăng ký ( ) làm sạch ( ) 澄 1 4 6
+meaningVi: Cây cam
+hanViet: Chanh
+onyomi: ["トウ"]
+kunyomi: ["だいだい"]
+strokeCount: 16
+writingHint: Cây ( ) đăng ký ( ) mua là cây cam ( ) 橙 2 5 7
 sourcePages: []
 sources:
   level: ebook
@@ -14206,19 +19133,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trừng maps to 24 KANJIDIC2 candidates; kept extracted 登
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 登録
-    reading: とうろく
-    meaning: đăng ký;đăng ký;nhập cảnh;hồ sơ
-  - word: 登校
-    reading: とうこう
-    meaning: sự có mặt (ở trường)
-  - word: 登校
-    reading: とうこう
-    meaning: sự có mặt (ở trường)
+  - none
 
 ### 嬉 (Hi)
 
@@ -14369,6 +19288,58 @@ examples:
     reading: ふろ
     meaning: tắm
 
+### 侶 (Lữ)
+
+level: N1
+meaningVi: Bạn
+hanViet: Lữ
+onyomi: ["リョ", "ロ"]
+kunyomi: ["とも"]
+strokeCount: 9
+writingHint: Người đứng ( ) trong bồn tắm ( ) cùng bạn ( ) 侶 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 宮 (Cung)
+
+level: N1
+meaningVi: Cung điện
+hanViet: Cung
+onyomi: ["キュウ", "グウ", "ク", "クウ"]
+kunyomi: ["みや"]
+strokeCount: 10
+writingHint: Dưới mái nhà ( ) có nhiều bồn tắm ( ) là cung điện ( ) 宮 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 宮殿
+    reading: きゅうでん
+    meaning: cung điện
+  - word: お宮
+    reading: おみや
+    meaning: Đền thờ Thần đạo
+  - word: お宮
+    reading: おみや
+    meaning: Đền thờ Thần đạo
+
 ### 丑 (Sửu)
 
 level: N1
@@ -14390,6 +19361,34 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 紐 (Nữu)
+
+level: N1
+meaningVi: Sợi dây
+hanViet: Nữu
+onyomi: ["チュウ", "ジュウ"]
+kunyomi: ["ひも"]
+strokeCount: 10
+writingHint: Sợi tơ ( ) xỏ mũi con bò ( ) chắc như sợi dây ( )紐 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 紐
+    reading: ひも
+    meaning: dây; dây buộc; ma cô
+  - word: 紐
+    reading: ひも
+    hanViet: néo
+    meaning: sợi dây
 
 ### 䒑 (Từ)
 
@@ -14414,15 +19413,15 @@ openGaps:
 examples:
   - none
 
-### 幾 (Ki)
+### 磁 (Từ)
 
 level: N1
-meaningVi: Ghềnh đá
-hanViet: Ki
-onyomi: ["キ"]
-kunyomi: ["いく-", "いく.つ", "いく.ら"]
-strokeCount: 12
-writingHint: Đá ( ) qua bao nhiêu ( ) năm tích tụ tạo thành ghềnh đá ( ) 磯 15
+meaningVi: Từ trường
+hanViet: Từ
+onyomi: ["ジ"]
+kunyomi: []
+strokeCount: 14
+writingHint: Viên đá ( ) bên cạnh đám cỏ ( ) và 2 con yêu ( 幺幺) có từ trường (磁) mạnh 6 7
 sourcePages: []
 sources:
   level: ebook
@@ -14434,15 +19433,59 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 幾多
-    reading: いくた
-    meaning: nhiều; vô số
-  - word: 幾多
-    reading: いくた
-    meaning: nhiều; vô số
-  - word: 幾分
-    reading: いくぶん
-    meaning: phần nào
+  - word: 磁気
+    reading: じき
+    meaning: từ tính
+  - word: 磁器
+    reading: じき
+    meaning: sứ; đồ sứ
+  - word: 磁気
+    reading: じき
+    meaning: từ tính
+
+### 滋 (Tư)
+
+level: N1
+meaningVi: Dinh dưỡng
+hanViet: Tư
+onyomi: ["ジ", "シ"]
+kunyomi: []
+strokeCount: 12
+writingHint: Nước ( ) tưới cho ( ) bởi 2 con yêu yêu (幺幺) rất nhiều dinh dưỡng (滋) 1 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 磯 (Ki)
+
+level: N1
+meaningVi: Ghềnh đá
+hanViet: Ki
+onyomi: ["キ"]
+kunyomi: ["いそ"]
+strokeCount: 17
+writingHint: Đá ( ) qua bao nhiêu ( ) năm tích tụ tạo thành ghềnh đá ( ) 磯 15
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 畿 (Kì)
 
@@ -14489,14 +19532,41 @@ openGaps:
 examples:
   - none
 
-### 処 (Cứ)
+### 几 (Cơ)
+
+level: N1
+meaningVi: Đói
+hanViet: Cơ
+onyomi: ["キ"]
+kunyomi: ["きにょう"]
+strokeCount: 2
+writingHint: Đói ( ) ăn ( ) cả ghế ( ) 几 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Cơ maps to 83 KANJIDIC2 candidates; kept extracted 几
+examples:
+  - word: 几帳面
+    reading: きちょうめん
+    meaning: có phương pháp; đúng giờ; ổn định
+  - word: 几帳面
+    reading: きちょうめん
+    meaning: có phương pháp; đúng giờ; ổn định
+
+### 拠 (Cứ)
 
 level: N1
 meaningVi: Chứng cứ
 hanViet: Cứ
-onyomi: ["ショ"]
-kunyomi: ["ところ", "-こ", "お.る"]
-strokeCount: 5
+onyomi: ["キョ", "コ"]
+kunyomi: ["よ.る"]
+strokeCount: 8
 writingHint: Tay ( ) xử lý ( ) vì đã có chứng cứ ( ) 拠 2
 sourcePages: []
 sources:
@@ -14507,26 +19577,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Cứ maps to 116 KANJIDIC2 candidates; kept extracted 処
+  - none
 examples:
-  - word: 処置
-    reading: しょち
-    meaning: điều trị
-  - word: 其処ら
-    reading: そこら
-    meaning: ở mọi nơi; ở đâu đó; khoảng; khu vực đó; xung quanh đó
-  - word: 何処か
-    reading: どこか
-    meaning: ở đâu đó; ở bất cứ đâu; ở một khía cạnh nào đó
+  - word: 証拠
+    reading: しょうこ
+    meaning: bằng chứng; bằng chứng
+  - word: 根拠
+    reading: こんきょ
+    meaning: cơ sở; nền tảng
+  - word: 根拠
+    reading: こんきょ
+    meaning: cơ sở; nền tảng
 
-### 几 (Kháng)
+### 抗 (Kháng)
 
 level: N1
 meaningVi: Kháng cự
 hanViet: Kháng
-onyomi: ["キ"]
-kunyomi: ["きにょう"]
-strokeCount: 2
+onyomi: ["コウ"]
+kunyomi: ["あらが.う"]
+strokeCount: 7
 writingHint: Tay ( ) ôm đầu ( ) cầm ghế ( ) kháng cự ( ) 抗 2 4
 sourcePages: []
 sources:
@@ -14537,24 +19607,49 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Kháng maps to 27 KANJIDIC2 candidates; kept extracted 几
+  - none
 examples:
-  - word: 几帳面
-    reading: きちょうめん
-    meaning: có phương pháp; đúng giờ; ổn định
-  - word: 几帳面
-    reading: きちょうめん
-    meaning: có phương pháp; đúng giờ; ổn định
+  - word: 抗争
+    reading: こうそう
+    meaning: tranh chấp; phản kháng
+  - word: 抗議
+    reading: こうぎ
+    meaning: phản đối; phản đối
+  - word: 対抗
+    reading: たいこう
+    meaning: sự phản đối; sự đối kháng
+
+### 杭 (Hàng)
+
+level: N1
+meaningVi: Cái cọc
+hanViet: Hàng
+onyomi: ["コウ"]
+kunyomi: ["くい"]
+strokeCount: 8
+writingHint: Trồng cây ( ) đầu ( ) tiên xong ngồi ghế ( ) đóng cọc ( ) 杭 2 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 凡 (Phàm)
 
 level: N1
-meaningVi: Cánh buồm
+meaningVi: Phi phàm
 hanViet: Phàm
 onyomi: ["ボン", "ハン"]
 kunyomi: ["およ.そ", "おうよ.そ", "すべ.て"]
 strokeCount: 3
-writingHint: Dùng khăn ( ) phi phàm ( ) làm cánh buồm ( ) 帆 3
+writingHint: Cái ghế ( ) của ông chủ ( ) rất phi phàm ( ) 凡 2
 sourcePages: []
 sources:
   level: ebook
@@ -14575,6 +19670,102 @@ examples:
   - word: 凡ゆる
     reading: あらゆる
     meaning: tất cả; mọi
+
+### 帆 (Phàm)
+
+level: N1
+meaningVi: Cánh buồm
+hanViet: Phàm
+onyomi: ["ハン"]
+kunyomi: ["ほ"]
+strokeCount: 6
+writingHint: Dùng khăn ( ) phi phàm ( ) làm cánh buồm ( ) 帆 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 汎 (Phiếm)
+
+level: N1
+meaningVi: Phù phiếm
+hanViet: Phiếm
+onyomi: ["ハン", "ブ", "フウ", "ホウ", "ホン"]
+kunyomi: ["ただよ.う", "ひろ.い"]
+strokeCount: 6
+writingHint: Đất nước ( ) phi phàm ( ) không làm chuyện phù phiếm ( ) 汎 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 筑 (Trúc)
+
+level: N1
+meaningVi: Trúc
+hanViet: Trúc
+onyomi: ["チク"]
+kunyomi: []
+strokeCount: 12
+writingHint: Trúc ( ) có công ( ) lực phi phàm ( ) vẫn là trúc ( ) 筑 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 伏 (Phục)
+
+level: N1
+meaningVi: Phục kích
+hanViet: Phục
+onyomi: ["フク"]
+kunyomi: ["ふ.せる", "ふ.す"]
+strokeCount: 6
+writingHint: Người ( ) dẫn chó ( ) đi phục kích ( ) 伏 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 降伏
+    reading: こうふく
+    meaning: sự đầu hàng; sự đầu hàng; sự phục tùng
+  - word: 起伏
+    reading: きふく
+    meaning: gợn sóng
+  - word: 起伏
+    reading: きふく
+    meaning: gợn sóng
 
 ### 獄 (Ngục)
 
@@ -14603,6 +19794,58 @@ examples:
     reading: じごく
     meaning: địa ngục
 
+### 獣 (Thú)
+
+level: N1
+meaningVi: Thú vật
+hanViet: Thú
+onyomi: ["ジュウ"]
+kunyomi: ["けもの", "けだもの"]
+strokeCount: 16
+writingHint: 3 (" ') tiếng kêu dưới ruộng ( ) từ 1 ( ) cái miệng ( ) con chó ( ) như thú vật ( 獣) 3 14
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 獣
+    reading: けだもの
+    meaning: con thú; kẻ vũ phu
+  - word: 怪獣
+    reading: かいじゅう
+    meaning: quái vật
+  - word: 怪獣
+    reading: かいじゅう
+    meaning: quái vật
+
+### 覇 (Bá)
+
+level: N1
+meaningVi: Bá chủ
+hanViet: Bá
+onyomi: ["ハ", "ハク"]
+kunyomi: ["はたがしら"]
+strokeCount: 19
+writingHint: Phương Tây ( ) tìm cách ( ) để Nguyệt ( ) làm bá chủ ( ) 覇 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 撚 (Niên)
 
 level: N1
@@ -14625,14 +19868,14 @@ openGaps:
 examples:
   - none
 
-### 勿 (Vẫn)
+### 吻 (Vẫn)
 
 level: N1
 meaningVi: Mép
 hanViet: Vẫn
-onyomi: ["モチ", "ブツ", "ボツ"]
-kunyomi: ["なか.れ", "なし"]
-strokeCount: 4
+onyomi: ["フン", "ブン"]
+kunyomi: ["くちわき", "くちさき"]
+strokeCount: 7
 writingHint: Miệng ( ) con vật ( ) nào cũng có mép ( ) 吻 4
 sourcePages: []
 sources:
@@ -14641,27 +19884,21 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Vẫn maps to 72 KANJIDIC2 candidates; kept extracted 勿
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 勿論
-    reading: もちろん
-    meaning: tất nhiên
-  - word: 勿論
-    reading: もちろん
-    hanViet: vật luận
-    meaning: tất nhiên
+  - none
 
 ### 忽 (Hốt)
 
 level: N1
-meaningVi: Hoảng hốt
+meaningVi: Sao nhãng
 hanViet: Hốt
 onyomi: ["コツ"]
 kunyomi: ["たちま.ち", "ゆるが.せ"]
 strokeCount: 8
-writingHint: Tâm ( ) + hốt ( ) = Hoảng hốt ( ) 惚 3 4
+writingHint: Con vật ( ) trong tâm ( ) hay sao nhãng ( ) 忽 1
 sourcePages: []
 sources:
   level: ebook
@@ -14679,6 +19916,167 @@ examples:
   - word: 忽ち
     reading: たちまち
     meaning: ngay lập tức; trong giây lát; đột nhiên; tất cả cùng một lúc
+
+### 惚 (Hốt)
+
+level: N1
+meaningVi: Hoảng hốt
+hanViet: Hốt
+onyomi: ["コツ"]
+kunyomi: ["ほけ.る", "ぼ.ける", "ほ.れる"]
+strokeCount: 11
+writingHint: Tâm ( ) + hốt ( ) = Hoảng hốt ( ) 惚 3 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 自惚れ
+    reading: うぬぼれ
+    meaning: kiêu căng; tự phụ; ngạo mạn
+  - word: 自惚れ
+    reading: うぬぼれ
+    meaning: kiêu căng; tự phụ; ngạo mạn
+
+### 易 (Tứ)
+
+level: N1
+meaningVi: Ban cho
+hanViet: Tứ
+onyomi: ["エキ", "イ"]
+kunyomi: ["やさ.しい", "やす.い"]
+strokeCount: 8
+writingHint: Ban cho ( ) bảo bối ( ) một cách dễ dàng ( ) 易 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Tứ maps to 168 KANJIDIC2 candidates; kept extracted 易
+examples:
+  - word: 易い
+    reading: やすい
+    meaning: dễ dàng
+  - word: 簡易
+    reading: かんい
+    meaning: sự đơn giản; sự dễ dàng; gần như-
+  - word: 容易い
+    reading: たやすい
+    meaning: dễ dàng, đơn giản, nhẹ nhàng
+
+### 錫 (Tích)
+
+level: N1
+meaningVi: Thiếc
+hanViet: Tích
+onyomi: ["セキ", "シャク"]
+kunyomi: ["すず", "たま.う"]
+strokeCount: 16
+writingHint: Kim loại ( ) dễ dàng ( ) tích tụ là thiếc ( ) 錫 1 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 罵 (Mạ)
+
+level: N1
+meaningVi: Lăng mạ
+hanViet: Mạ
+onyomi: ["バ"]
+kunyomi: ["ののし.る"]
+strokeCount: 15
+writingHint: Mắc võng ( ) ngựa ( ) nằm nhìn với ánh mắt lăng mạ ( ) 罵 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 罵る
+    reading: ののしる
+    meaning: nói xấu; lạm dụng
+  - word: 罵る
+    reading: ののしる
+    meaning: nói xấu; lạm dụng
+
+### 篤 (Đốc)
+
+level: N1
+meaningVi: Đôn đốc
+hanViet: Đốc
+onyomi: ["トク"]
+kunyomi: ["あつ.い"]
+strokeCount: 16
+writingHint: Dùng cây trúc ( ) đánh vào mông ngựa ( ) để đôn đốc ( ) 篤 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 危篤
+    reading: きとく
+    hanViet: nguy đốc
+    meaning: hấp hối, bệnh nặng
+
+### 架 (Giá)
+
+level: N1
+meaningVi: Giá đỡ
+hanViet: Giá
+onyomi: ["カ"]
+kunyomi: ["か.ける", "か.かる"]
+strokeCount: 9
+writingHint: Gia tăng ( ) thêm cây ( ) làm giá đỡ ( ) 架 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 担架
+    reading: たんか
+    meaning: cáng; rác
+  - word: 担架
+    reading: たんか
+    meaning: cáng; rác
+  - word: 架空
+    reading: かくう
+    meaning: trên không, trên không, viễn tưởng, huyền ảo
 
 ### 賀 (Hạ)
 
@@ -14711,6 +20109,28 @@ examples:
     hanViet: nên hạ trạng
     meaning: thiệp mừng năm mới
 
+### 駕 (Giá)
+
+level: N1
+meaningVi: Kiệu,cáng
+hanViet: Giá
+onyomi: ["カ", "ガ"]
+kunyomi: ["かご", "が.する", "しのぐ", "のる"]
+strokeCount: 15
+writingHint: Gia tăng ( ) thêm ngựa ( ) để rước kiệu ( ) 駕 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 焚 (Phần)
 
 level: N1
@@ -14741,15 +20161,37 @@ examples:
     reading: たく
     meaning: đốt, nhóm lên, nhóm lửa
 
-### 林 (Lâm)
+### 淋 (Lâm)
 
 level: N1
 meaningVi: Cô đơn
 hanViet: Lâm
 onyomi: ["リン"]
-kunyomi: ["はやし"]
-strokeCount: 8
+kunyomi: ["さび.しい", "さみ.しい"]
+strokeCount: 11
 writingHint: Ở dưới nước ( ) hay trên rừng ( ) nếu cô đơn ( ) 淋 5 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 麻 (Ma)
+
+level: N1
+meaningVi: Ma túy
+hanViet: Ma
+onyomi: ["マ", "マア"]
+kunyomi: ["あさ"]
+strokeCount: 11
+writingHint: Dưới mái hiên ( ) có rừng ( ) ma túy ( ) 麻 1
 sourcePages: []
 sources:
   level: ebook
@@ -14761,24 +20203,141 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 林業
-    reading: りんぎょう
-    meaning: lâm nghiệp
-  - word: 林業
-    reading: りんぎょう
-    meaning: lâm nghiệp
-  - word: 山林
-    reading: さんりん
-    meaning: rừng núi, núi và rừng
+  - word: 麻
+    reading: あさ
+    meaning: lanh; lanh; cây gai dầu
+  - word: 麻痺
+    reading: まひ
+    meaning: tê liệt; tê liệt; tê liệt; sững sờ
+  - word: 麻酔
+    reading: ますい
+    meaning: gây mê
 
-### 禁 (Khâm)
+### 摩 (Ma)
+
+level: N1
+meaningVi: Ma sát
+hanViet: Ma
+onyomi: ["マ"]
+kunyomi: ["ま.する", "さす.る", "す.る"]
+strokeCount: 15
+writingHint: Ma ( ) dùng tay ( ) tạo ra ma sát ( ) 摩 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 摩擦
+    reading: まさつ
+    meaning: ma sát, cọ xát, chà xát, chà xát
+  - word: 摩擦
+    reading: まさつ
+    meaning: ma sát; cọ xát
+
+### 磨 (Ma)
+
+level: N1
+meaningVi: Mài
+hanViet: Ma
+onyomi: ["マ"]
+kunyomi: ["みが.く", "す.る"]
+strokeCount: 16
+writingHint: Ma ( ) dùng đá ( ) để mài ( ) 磨 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 歯磨
+    reading: はみがき
+    meaning: kem đánh răng; kem đánh răng
+  - word: 歯磨
+    reading: はみがき
+    meaning: kem đánh răng
+  - word: 歯磨き
+    reading: はみがき
+    meaning: kem đánh răng, kem đánh răng
+
+### 魔 (Ma)
+
+level: N1
+meaningVi: Ma quỷ
+hanViet: Ma
+onyomi: ["マ"]
+kunyomi: []
+strokeCount: 21
+writingHint: Ma ( ) + quỷ ( ) = Ma quỷ ( ) 魔 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 誤魔化す
+    reading: ごまかす
+    meaning: lừa gạt; xuyên tạc; xuyên tạc
+  - word: お邪魔します
+    reading: おじゃまします
+    meaning: Xin lỗi vì đã làm phiền (làm gián đoạn) bạn
+  - word: お邪魔します
+    reading: おじゃまします
+    meaning: Xin lỗi vì đã làm phiền (làm gián đoạn) bạn
+
+### 暦 (Lịch)
+
+level: N1
+meaningVi: Tấm lịch
+hanViet: Lịch
+onyomi: ["レキ", "リャク"]
+kunyomi: ["こよみ"]
+strokeCount: 14
+writingHint: Dưới sườn núi ( ) vào rừng ( ) cả ngày ( ) xem lịch ( ) 暦 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 還暦
+    reading: かんれき
+    meaning: sinh nhật lần thứ 60
+  - word: 暦
+    reading: こよみ
+    meaning: lịch; niên giám
+  - word: 還暦
+    reading: かんれき
+    meaning: sinh nhật lần thứ 60
+
+### 襟 (Khâm)
 
 level: N1
 meaningVi: Cổ áo
 hanViet: Khâm
 onyomi: ["キン"]
-kunyomi: []
-strokeCount: 13
+kunyomi: ["えり"]
+strokeCount: 18
 writingHint: Y phục ( ) cấm ( ) hở cổ áo ( ) 襟 7 11
 sourcePages: []
 sources:
@@ -14789,26 +20348,23 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khâm maps to 32 KANJIDIC2 candidates; kept extracted 禁
+  - none
 examples:
-  - word: 禁ずる
-    reading: きんずる
-    meaning: ngăn cấm; đàn áp
-  - word: 禁じる
-    reading: きんじる
-    meaning: cấm
-  - word: 禁物
-    reading: きんもつ
-    meaning: điều cấm kỵ; điều cấm kỵ
+  - word: 襟
+    reading: えり
+    meaning: cổ; cổ áo; ve áo; dây đeo cổ
+  - word: 襟
+    reading: えり
+    meaning: cổ; cổ áo; ve áo; dây đeo cổ
 
-### 賛 (Tán)
+### 讃 (Tán)
 
 level: N1
 meaningVi: Tán dương
 hanViet: Tán
 onyomi: ["サン"]
-kunyomi: ["たす.ける", "たた.える"]
-strokeCount: 15
+kunyomi: ["ほ.める", "たた.える"]
+strokeCount: 22
 writingHint: Nói ( ) tán thành ( ) cũng là tán dương ( ) 讃 10 14
 sourcePages: []
 sources:
@@ -14817,19 +20373,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 賛美
-    reading: さんび
-    meaning: khen ngợi; tôn thờ; tôn vinh
-  - word: 賛成
-    reading: さんせい
-    meaning: sự chấp thuận;sự đồng ý;ủng hộ;ủng hộ
-  - word: 賛成
-    reading: さんせい
-    meaning: sự chấp thuận; sự đồng ý; ủng hộ
+  - none
 
 ### 潜 (Tiềm)
 
@@ -14884,15 +20432,15 @@ openGaps:
 examples:
   - none
 
-### 世 (Điệp)
+### 蝶 (Điệp)
 
 level: N1
-meaningVi: Nói chuyện
+meaningVi: Con bướm
 hanViet: Điệp
-onyomi: ["セイ", "セ", "ソウ"]
-kunyomi: ["よ"]
-strokeCount: 5
-writingHint: Nói chuyện ( ) bằng miệng ( ) với thế giới ( ) cây ( ) 木 5 6
+onyomi: ["チョウ"]
+kunyomi: []
+strokeCount: 15
+writingHint: Côn trùng ( ) trong thế giới ( ) cây ( ) là con bướm ( ) 蝶 8 9
 sourcePages: []
 sources:
   level: ebook
@@ -14902,26 +20450,23 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Điệp maps to 43 KANJIDIC2 candidates; kept extracted 世
+  - none
 examples:
-  - word: 世辞
-    reading: せじ
-    meaning: tâng bốc; khen ngợi
-  - word: 出世
-    reading: しゅっせ
-    meaning: sự thăng tiến; sự nghiệp thành công; sự nổi tiếng
-  - word: 世
-    reading: よ
-    meaning: thế giới;xã hội;tuổi;thế hệ
+  - word: 蝶
+    reading: ちょう
+    meaning: bướm
+  - word: 蝶
+    reading: ちょう
+    meaning: bướm
 
-### 因 (Nhân)
+### 姻 (Nhân)
 
 level: N1
 meaningVi: Hôn nhân
 hanViet: Nhân
 onyomi: ["イン"]
-kunyomi: ["よ.る", "ちな.む"]
-strokeCount: 6
+kunyomi: []
+strokeCount: 9
 writingHint: Người phụ nữ ( ) là nguyên nhân ( ) dẫn đến hôn nhân ( ) 姻 1 5
 sourcePages: []
 sources:
@@ -14930,29 +20475,43 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 要因
-    reading: よういん
-    meaning: yếu tố chính; nguyên nhân chính
-  - word: 要因
-    reading: よういん
-    meaning: yếu tố chính; nguyên nhân chính
-  - word: 因る
-    reading: よる
-    meaning: đến từ
+  - none
 
-### 致 (Trí)
+### 咽 (Yết)
 
 level: N1
-meaningVi: Tỉ mỉ
-hanViet: Trí
-onyomi: ["チ"]
-kunyomi: ["いた.す"]
-strokeCount: 10
-writingHint: Dệt tơ ( ) nhất trí ( ) phải tỉ mỉ ( ) 緻 1 7 13
+meaningVi: Cổ họng
+hanViet: Yết
+onyomi: ["イン", "エン", "エツ"]
+kunyomi: ["むせ.ぶ", "むせ.る", "のど", "の.む"]
+strokeCount: 9
+writingHint: Há miệng ( ) để tìm nguyên nhân ( ) đau cổ họng ( ) 咽 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 冒 (Mạo)
+
+level: N1
+meaningVi: Mạo hiểm
+hanViet: Mạo
+onyomi: ["ボウ"]
+kunyomi: ["おか.す"]
+strokeCount: 9
+writingHint: Để mặt trời ( ) chiếu thẳng vào mắt ( ) rất mạo hiểm ( ) 冒 2
 sourcePages: []
 sources:
   level: ebook
@@ -14964,25 +20523,47 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 雅致
-    reading: がち
-    meaning: tính nghệ thuật; hương vị tốt; sang trọng; duyên dáng
-  - word: 合致
-    reading: がっち
-    meaning: sự đồng ý; sự đồng tình; phù hợp với
-  - word: 雅致
-    reading: がち
-    meaning: tính nghệ thuật; hương vị tốt; sang trọng; duyên dáng
+  - word: 冒頭
+    reading: ぼうとう
+    meaning: sự bắt đầu; sự khởi đầu; sự khởi đầu
+  - word: 冒頭
+    reading: ぼうとう
+    meaning: sự bắt đầu; sự khởi đầu
+  - word: 冒険
+    reading: ぼうけん
+    meaning: rủi ro; mạo hiểm; phiêu lưu
+
+### 緻 (Trí)
+
+level: N1
+meaningVi: Tỉ mỉ
+hanViet: Trí
+onyomi: ["チ"]
+kunyomi: ["こまか.い"]
+strokeCount: 16
+writingHint: Dệt tơ ( ) nhất trí ( ) phải tỉ mỉ ( ) 緻 1 7 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 至 (Điệt)
 
 level: N1
-meaningVi: Con đĩa
+meaningVi: Cháu gái
 hanViet: Điệt
 onyomi: ["シ"]
 kunyomi: ["いた.る"]
 strokeCount: 6
-writingHint: Côn trùng ( ) đang hút máu Chí ( ) Phèo là con đỉa ( ) 蛭 4 7
+writingHint: Cháu ( ) gái ( ) Chí ( ) Phèo 至 1 4
 sourcePages: []
 sources:
   level: ebook
@@ -15004,15 +20585,15 @@ examples:
     reading: いたって
     meaning: rất nhiều; cực kỳ
 
-### 夛 (Tẩm)
+### 蛭 (Điệt)
 
 level: N1
-meaningVi: Ngâm
-hanViet: Tẩm
-onyomi: ["タ"]
-kunyomi: ["おお.い", "まさ.に", "まさ.る"]
-strokeCount: 6
-writingHint: Dưới nước ( ) cô Tấm ( ) đang ngâm ( ) mình 浸 1 4
+meaningVi: Con đĩa
+hanViet: Điệt
+onyomi: ["シツ", "チツ"]
+kunyomi: ["ひる"]
+strokeCount: 12
+writingHint: Côn trùng ( ) đang hút máu Chí ( ) Phèo là con đỉa ( ) 蛭 4 7
 sourcePages: []
 sources:
   level: ebook
@@ -15022,20 +20603,19 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tẩm maps to 55 KANJIDIC2 candidates; kept extracted 夛
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 疑 (Nghĩ)
+### 窒 (Trất)
 
 level: N1
-meaningVi: Phỏng theo
-hanViet: Nghĩ
-onyomi: ["ギ"]
-kunyomi: ["うたが.う"]
-strokeCount: 14
-writingHint: Tay ( ) vẫn nghi ngờ ( ) nên cần nghĩ ( ) thêm擬 5
+meaningVi: Chất đạm
+hanViet: Trất
+onyomi: ["チツ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Lỗ ( ) trên người Chí ( ) Phèo thải ra chất đạm ( ) 窒 1
 sourcePages: []
 sources:
   level: ebook
@@ -15047,15 +20627,118 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 質疑
-    reading: しつぎ
-    meaning: câu hỏi
-  - word: 疑惑
-    reading: ぎわく
-    meaning: sự nghi ngờ; sự nghi ngờ; sự nghi ngờ; sự nghi ngờ
-  - word: 疑惑
-    reading: ぎわく
-    meaning: sự nghi ngờ
+  - word: 窒息
+    reading: ちっそく
+    meaning: sự nghẹt thở
+  - word: 窒息
+    reading: ちっそく
+    meaning: sự nghẹt thở
+
+### 尋 (Tầm)
+
+level: N1
+meaningVi: Tìm, hỏi
+hanViet: Tầm
+onyomi: ["ジン"]
+kunyomi: ["たず.ねる", "ひろ"]
+strokeCount: 12
+writingHint: Em ( ) công nhân ( ) mồm ( ) thốn ( ) rất hay hỏi ( ) 尋 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 尋ねる
+    reading: たずねる
+    meaning: hỏi
+
+### 浸 (Tẩm)
+
+level: N1
+meaningVi: Ngâm
+hanViet: Tẩm
+onyomi: ["シン"]
+kunyomi: ["ひた.す", "ひた.る", "つ.かる"]
+strokeCount: 10
+writingHint: Dưới nước ( ) cô Tấm ( ) đang ngâm ( ) mình 浸 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 浸す
+    reading: ひたす
+    meaning: ngâm; nhúng; làm ướt
+  - word: 浸す
+    reading: ひたす
+    meaning: ngâm; nhúng; làm ướt
+  - word: 浸ける
+    reading: つける
+    meaning: nhúng vào, ngâm mình
+
+### 擬 (Nghĩ)
+
+level: N1
+meaningVi: Phỏng theo
+hanViet: Nghĩ
+onyomi: ["ギ"]
+kunyomi: ["まが.い", "もど.き"]
+strokeCount: 17
+writingHint: Tay ( ) vẫn nghi ngờ ( ) nên cần nghĩ ( ) thêm擬 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 凝 (Ngưng)
+
+level: N1
+meaningVi: Ngưng đọng
+hanViet: Ngưng
+onyomi: ["ギョウ"]
+kunyomi: ["こ.る", "こ.らす", "こご.らす", "こご.らせる", "こご.る"]
+strokeCount: 16
+writingHint: Băng ( ) nghi ngờ ( ) bị ngưng đọng ( ) 凝 4 3 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 凝る
+    reading: こごる
+    meaning: đông lại; đóng băng
+  - word: 凝らす
+    reading: こごらす
+    meaning: đóng băng; làm đông lại
+  - word: 凝らす
+    reading: こごらす
+    meaning: đóng băng; làm đông lại
 
 ### 轄 (Hạt)
 
@@ -15078,6 +20761,36 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 善 (Thiện)
+
+level: N1
+meaningVi: Sửa chữa
+hanViet: Thiện
+onyomi: ["ゼン"]
+kunyomi: ["よ.い", "い.い", "よ.く", "よし.とする"]
+strokeCount: 12
+writingHint: Sửa chữa ( ) áo tơ ( ) lụa mang đi từ thiện ( ) 善 7 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 最善
+    reading: さいぜん
+    meaning: điều tuyệt vời nhất
+  - word: 親善
+    reading: しんぜん
+    meaning: tình bạn
+  - word: 善し悪し
+    reading: よしあし
+    meaning: tốt hay xấu; ưu điểm hay nhược điểm; chất lượng; sự phù hợp
 
 ### 衡 (Hành)
 
@@ -15106,14 +20819,14 @@ examples:
     reading: きんこう
     meaning: sự cân bằng
 
-### 行 (Hành)
+### 桁 (Hành)
 
 level: N1
 meaningVi: Chữ số
 hanViet: Hành
-onyomi: ["コウ", "ギョウ", "アン"]
-kunyomi: ["い.く", "ゆ.く", "-ゆ.き", "-ゆき", "-い.き", "-いき", "おこな.う", "おこ.なう"]
-strokeCount: 6
+onyomi: ["コウ"]
+kunyomi: ["けた"]
+strokeCount: 10
 writingHint: Cây ( ) hành ( ) có đánh chữ số ( )桁 2 5 8
 sourcePages: []
 sources:
@@ -15126,15 +20839,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 行き違い
-    reading: いきちがい
-    meaning: sự hiểu lầm;sự ghẻ lạnh;sự bất đồng;đi qua mà không gặp nhau;đi lạc
-  - word: 現行
-    reading: げんこう
-    meaning: hiện tại; hiện hành; đang hoạt động
-  - word: 行為
-    reading: こうい
-    meaning: hành động; hành động; hành động
+  - word: 桁
+    reading: けた
+    meaning: cột, chùm, chữ số
+  - word: 桁
+    reading: けた
+    meaning: cột; dầm; chữ số
 
 ### 酬 (Thù)
 
@@ -15163,14 +20873,14 @@ examples:
     reading: ほうしゅう
     meaning: tiền công; thù lao; phần thưởng; phí
 
-### 川 (Tuần)
+### 馴 (Tuần)
 
 level: N1
 meaningVi: Quen
 hanViet: Tuần
-onyomi: ["セン"]
-kunyomi: ["かわ"]
-strokeCount: 3
+onyomi: ["ジュン", "シュン", "クン"]
+kunyomi: ["な.れる", "な.らす", "したが.う"]
+strokeCount: 13
 writingHint: Ngựa ( ) đi tuần ở sông ( ) quen ( )馴 2 12 13
 sourcePages: []
 sources:
@@ -15181,17 +20891,39 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tuần maps to 40 KANJIDIC2 candidates; kept extracted 川
+  - none
 examples:
-  - word: 河川
-    reading: かせん
-    meaning: sông
-  - word: 河川
-    reading: かせん
-    meaning: sông
-  - word: 川
-    reading: かわ
-    meaning: con sông
+  - word: 馴れ馴れしい
+    reading: なれなれしい
+    meaning: quá quen thuộc
+  - word: 馴らす
+    reading: ならす
+    meaning: thuần hóa; thuần hóa
+  - word: 馴らす
+    reading: ならす
+    meaning: thuần hóa
+
+### 硫 (Lưu)
+
+level: N1
+meaningVi: Lưu huỳnh
+hanViet: Lưu
+onyomi: ["リュウ"]
+kunyomi: []
+strokeCount: 12
+writingHint: Đá ( ) đầu ( ) tư ( ) vào dòng sông ( ) để sản xuất lưu huỳnh ( )硫 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 荒 (Hoang)
 
@@ -15253,6 +20985,28 @@ examples:
     reading: あわただしい
     meaning: bận rộn; vội vã; bối rối
 
+### 暁 (Hiểu)
+
+level: N1
+meaningVi: Bình minh
+hanViet: Hiểu
+onyomi: ["ギョウ", "キョウ"]
+kunyomi: ["あかつき", "さと.る"]
+strokeCount: 12
+writingHint: Mặt trời ( ) mọc qua 10 ( ) hàng rào ( ), chân chạy ( ) đón bình minh ( 暁) 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 疎 (Sơ)
 
 level: N1
@@ -15283,14 +21037,107 @@ examples:
     reading: おろそか
     meaning: sự lơ là; sự cẩu thả
 
-### 瓜 (Hồ)
+### 辣 (Lạt)
+
+level: N1
+meaningVi: Gian ác
+hanViet: Lạt
+onyomi: ["ラツ"]
+kunyomi: ["から.い"]
+strokeCount: 14
+writingHint: Ăn cay ( ) còn thúc ( ) giục là gian ác ( ) 辣 1 12
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 嗽 (Thấu)
+
+level: N1
+meaningVi: Ho có đờm
+hanViet: Thấu
+onyomi: ["ソウ", "シュウ", "ソク"]
+kunyomi: ["すす.ぐ", "ゆす.ぐ", "くちすす.ぐ", "うがい"]
+strokeCount: 14
+writingHint: Miệng ( ) sư thúc ( ) bị khiếm khuyết ( ) nên ho có đờm ( ) 嗽 8 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 含嗽
+    reading: うがい
+    meaning: súc miệng; súc miệng
+  - word: 含嗽
+    reading: うがい
+    meaning: súc miệng
+
+### 勅 (Sắc)
+
+level: N1
+meaningVi: Sắc lệnh
+hanViet: Sắc
+onyomi: ["チョク"]
+kunyomi: ["いまし.める", "みことのり"]
+strokeCount: 9
+writingHint: Thúc ( ) giục làm việc cật lực ( ) theo sắc lệnh ( ) 勅 5 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 瓜 (Qua)
+
+level: N1
+meaningVi: Dưa
+hanViet: Qua
+onyomi: ["カ", "ケ"]
+kunyomi: ["うり"]
+strokeCount: 6
+writingHint: Dùng móng tay ( ) gõ ( ) qua qua vào quả dưa ( ) 瓜 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 狐 (Hồ)
 
 level: N1
 meaningVi: Hồ ly, cáo
 hanViet: Hồ
-onyomi: ["カ", "ケ"]
-kunyomi: ["うり"]
-strokeCount: 6
+onyomi: ["コ"]
+kunyomi: ["きつね"]
+strokeCount: 9
 writingHint: Chó ( ) ăn dưa ( ) biến thành hồ ly ( ) 狐 1 4
 sourcePages: []
 sources:
@@ -15301,10 +21148,96 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hồ maps to 81 KANJIDIC2 candidates; kept extracted 瓜
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 孤 (Cô)
+
+level: N1
+meaningVi: Cô độc
+hanViet: Cô
+onyomi: ["コ"]
+kunyomi: []
+strokeCount: 9
+writingHint: Đứa trẻ ( ) ăn dưa ( ) trong cô độc ( ) 孤 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 孤児
+    reading: こじ
+    meaning: mồ côi
+  - word: 孤独
+    reading: こどく
+    meaning: sự cô lập; sự cô đơn; sự cô đơn
+  - word: 孤立
+    reading: こりつ
+    meaning: sự cô lập; sự bất lực
+
+### 弧 (Hồ)
+
+level: N1
+meaningVi: Cung tròn
+hanViet: Hồ
+onyomi: ["コ"]
+kunyomi: []
+strokeCount: 9
+writingHint: Bắn cung ( ) qua ( ) hồ ( ) 弧 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 括弧
+    reading: かっこ
+    meaning: dấu ngoặc đơn, dấu ngoặc đơn
+  - word: 括弧
+    reading: かっこ
+    meaning: dấu ngoặc
+
+### 派 (Phái)
+
+level: N1
+meaningVi: Phái đoàn
+hanViet: Phái
+onyomi: ["ハ"]
+kunyomi: []
+strokeCount: 9
+writingHint: Đất nước ( ) có 3 người ( ) thuộc phái đoàn ( ) 派 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 派遣
+    reading: はけん
+    meaning: gửi đi; gửi đi
+  - word: 特派
+    reading: とくは
+    meaning: cử đặc phái viên; phái viên đặc biệt
+  - word: 派
+    reading: は
+    meaning: bè phái; phe phái; trường học
 
 ### 赦 (Xá)
 
@@ -15350,6 +21283,115 @@ openGaps:
 examples:
   - none
 
+### 火 (Diệc)
+
+level: N1
+meaningVi: Hơn nữa
+hanViet: Diệc
+onyomi: ["カ"]
+kunyomi: ["ひ", "-び", "ほ-"]
+strokeCount: 4
+writingHint: Lưu Diệc Phi ( ) đầu ( ) bốc lửa ( ) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Diệc maps to 3 KANJIDIC2 candidates; kept extracted 火
+examples:
+  - word: 下火
+    reading: したび
+    meaning: cháy thấp; tàn lụi; suy tàn
+  - word: 防火
+    reading: ぼうか
+    meaning: phòng cháy, chữa cháy, chữa cháy
+  - word: 火燵
+    reading: こたつ
+    meaning: bàn có lò sưởi; (orig) lò than trong giếng sàn
+
+### 蛮 (Man)
+
+level: N1
+meaningVi: Dã man
+hanViet: Man
+onyomi: ["バン"]
+kunyomi: ["えびす"]
+strokeCount: 12
+writingHint: Lưu Diệc Phi ( ) sợ côn trùng ( ) dã man ( ) 蛮 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 衷 (Trung)
+
+level: N1
+meaningVi: Trung thực
+hanViet: Trung
+onyomi: ["チュウ"]
+kunyomi: []
+strokeCount: 9
+writingHint: 10 ( ) cái miệng ( ) nói y ( ) như là trung thực ( ) 衷 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 折衷
+    reading: せっちゅう
+    meaning: thỏa hiệp;chéo;pha trộn;chủ nghĩa chiết trung
+  - word: 折衷
+    reading: せっちゅう
+    meaning: thỏa hiệp; chéo; pha trộn; chủ nghĩa chiết trung
+
+### 哀 (Ai)
+
+level: N1
+meaningVi: Bi ai
+hanViet: Ai
+onyomi: ["アイ"]
+kunyomi: ["あわ.れ", "あわ.れむ", "かな.しい"]
+strokeCount: 9
+writingHint: Mặc y phục ( ) rách rưới, miệng ( ) gào khóc bi ai ( ) 哀 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 可哀想
+    reading: かわいそう
+    meaning: đáng thương; đáng thương; đáng thương
+  - word: 可哀想
+    reading: かわいそう
+    meaning: đáng thương
+  - word: 哀れ
+    reading: あわれ
+    meaning: bất lực; thương hại; đau buồn
+
 ### 衰 (Suy)
 
 level: N1
@@ -15380,6 +21422,55 @@ examples:
     reading: おとろえる
     meaning: trở nên yếu đuối; suy tàn; hao mòn; suy yếu; héo mòn
 
+### 喪 (Tang)
+
+level: N1
+meaningVi: Tang lễ
+hanViet: Tang
+onyomi: ["ソウ"]
+kunyomi: ["も"]
+strokeCount: 12
+writingHint: 10 ( ) 2 cái miệng ( ) gào khóc y ( ) như tang lễ ( ) 喪 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 畏 (Úy)
+
+level: N1
+meaningVi: Sợ
+hanViet: Úy
+onyomi: ["イ"]
+kunyomi: ["おそ.れる", "かしこま.る", "かしこ", "かしこ.し"]
+strokeCount: 9
+writingHint: Đại úy ra ruộng ( ) thấy bộ y phục mất đầu ( ) nên sợ ( ) hãi 畏 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 畏まりました
+    reading: かしこまりました
+    meaning: chắc chắn rồi!
+  - word: 畏まりました
+    reading: かしこまりました
+    meaning: chắc chắn rồi!
+
 ### 隈 (Ôi)
 
 level: N1
@@ -15402,14 +21493,14 @@ openGaps:
 examples:
   - none
 
-### 畏 (Ổi)
+### 猥 (Ổi)
 
 level: N1
 meaningVi: Bì ổi
 hanViet: Ổi
-onyomi: ["イ"]
-kunyomi: ["おそ.れる", "かしこま.る", "かしこ", "かしこ.し"]
-strokeCount: 9
+onyomi: ["ワイ"]
+kunyomi: ["みだ.ら", "みだり.に"]
+strokeCount: 12
 writingHint: Đến chó ( ) cũng sợ ( ) người bỉ ổi ( ) 猥 2 1 5
 sourcePages: []
 sources:
@@ -15418,25 +21509,20 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ổi maps to 24 KANJIDIC2 candidates; kept extracted 畏
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 畏まりました
-    reading: かしこまりました
-    meaning: chắc chắn rồi!
-  - word: 畏まりました
-    reading: かしこまりました
-    meaning: chắc chắn rồi!
+  - none
 
-### 裏 (Nương)
+### 嬢 (Nương)
 
 level: N1
 meaningVi: Cô nương
 hanViet: Nương
-onyomi: ["リ"]
-kunyomi: ["うら"]
-strokeCount: 13
+onyomi: ["ジョウ"]
+kunyomi: ["むすめ"]
+strokeCount: 16
 writingHint: Cô gái ( ) + nương ( ) = Cô nương ( ) 嬢 4
 sourcePages: []
 sources:
@@ -15447,17 +21533,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nương maps to 5 KANJIDIC2 candidates; kept extracted 裏
+  - none
 examples:
-  - word: 裏返し
-    reading: うらがえし
-    meaning: từ trong ra ngoài; lộn ngược
-  - word: 裏返し
-    reading: うらがえし
-    meaning: từ trong ra ngoài; lộn ngược
-  - word: 裏口
-    reading: うらぐち
-    meaning: cửa sau, lối vào phía sau
+  - word: 嬢
+    reading: じょう
+    meaning: người phụ nữ trẻ
+  - word: 嬢
+    reading: じょう
+    meaning: người phụ nữ trẻ
+  - word: お嬢さん
+    reading: おじょうさん
+    meaning: cô gái trẻ
 
 ### 譲 (Nhượng)
 
@@ -15489,15 +21575,15 @@ examples:
     reading: ゆずる
     meaning: chuyển giao; giao lại
 
-### 朋 (Bằng)
+### 壌 (Nhưỡng)
 
 level: N1
-meaningVi: Cái giá
-hanViet: Bằng
-onyomi: ["ホウ"]
-kunyomi: ["とも"]
-strokeCount: 8
-writingHint: Cây ( ) mất 2 tháng ( ) làm thành cái giá ( ) 棚 2 6 10
+meaningVi: Thổ nhưỡng
+hanViet: Nhưỡng
+onyomi: ["ジョウ"]
+kunyomi: ["つち"]
+strokeCount: 16
+writingHint: Đất ( ) của cô nương ( ) rất giàu thổ nhưỡng ( ) 壌 4
 sourcePages: []
 sources:
   level: ebook
@@ -15510,6 +21596,58 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 醸 (Nhưỡng)
+
+level: N1
+meaningVi: Lên men
+hanViet: Nhưỡng
+onyomi: ["ジョウ"]
+kunyomi: ["かも.す"]
+strokeCount: 20
+writingHint: Giờ Dậu ( ) cô nương ( ) lên men ( ) rượu 醸 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 棚 (Bằng)
+
+level: N1
+meaningVi: Cái giá
+hanViet: Bằng
+onyomi: ["ホウ"]
+kunyomi: ["たな", "-だな"]
+strokeCount: 12
+writingHint: Cây ( ) mất 2 tháng ( ) làm thành cái giá ( ) 棚 2 6 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 戸棚
+    reading: とだな
+    meaning: tủ, tủ đựng đồ, tủ quần áo, tủ quần áo
+  - word: 戸棚
+    reading: とだな
+    meaning: tủ; tủ chén; tủ quần áo
+  - word: 棚
+    reading: たな
+    meaning: kệ
 
 ### 尸 (Xích)
 
@@ -15534,15 +21672,69 @@ openGaps:
 examples:
   - none
 
-### 尺 (Thích)
+### 釈 (Thích)
 
 level: N1
 meaningVi: Giải thích
 hanViet: Thích
 onyomi: ["シャク", "セキ"]
+kunyomi: ["とく", "す.てる", "ゆる.す"]
+strokeCount: 11
+writingHint: 1 ( ) hạt gạo ( ) bị xích ( ) lại không cần giải thích ( ) 釈 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 解釈
+    reading: かいしゃく
+    meaning: sự giải thích
+
+### 択 (Trạch)
+
+level: N1
+meaningVi: Lựa chọn
+hanViet: Trạch
+onyomi: ["タク"]
+kunyomi: ["えら.ぶ"]
+strokeCount: 7
+writingHint: Tay ( ) bị xích ( ) lại không còn lựa chọn ( ) 択 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Trạch maps to 30 KANJIDIC2 candidates; kept extracted 択
+examples:
+  - word: 採択
+    reading: さいたく
+    meaning: sự nhận nuôi; sự lựa chọn; sự lựa chọn
+  - word: 採択
+    reading: さいたく
+    meaning: sự nhận nuôi; sự lựa chọn
+  - word: 選択
+    reading: せんたく
+    meaning: sự lựa chọn
+
+### 尺 (Tận)
+
+level: N1
+meaningVi: Tận lực
+hanViet: Tận
+onyomi: ["シャク", "セキ"]
 kunyomi: ["さし"]
 strokeCount: 4
-writingHint: 1 ( ) hạt gạo ( ) bị xích ( ) lại không cần giải thích ( ) 釈 1
+writingHint: Tận lực ( ) để phá xích ( ) băng ( ) ゛ 1
 sourcePages: []
 sources:
   level: ebook
@@ -15552,7 +21744,29 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thích maps to 28 KANJIDIC2 candidates; kept extracted 尺
+  - target kanji ambiguous: Hán-Việt heading Tận maps to 84 KANJIDIC2 candidates; kept extracted 尺
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 剛 (Cương)
+
+level: N1
+meaningVi: Cứng
+hanViet: Cương
+onyomi: ["ゴウ"]
+kunyomi: []
+strokeCount: 10
+writingHint: Kim cương ( ) dùng làm đao ( ) thì rất cứng ( ) 剛 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -15584,14 +21798,14 @@ examples:
     reading: てっこう
     meaning: sắt thép
 
-### 岡 (Cương)
+### 綱 (Cương)
 
 level: N1
 meaningVi: Dây thừng
 hanViet: Cương
 onyomi: ["コウ"]
-kunyomi: ["おか"]
-strokeCount: 8
+kunyomi: ["つな"]
+strokeCount: 14
 writingHint: Sợi tơ ( ) gắn kim cương ( ) thì đắt hơn dây thừng ( )綱 1
 sourcePages: []
 sources:
@@ -15600,11 +21814,19 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 横綱
+    reading: よこづな
+    meaning: nhà vô địch sumo
+  - word: 横綱
+    reading: よこづな
+    meaning: nhà vô địch sumo
+  - word: 綱
+    reading: つな
+    meaning: dây thừng
 
 ### 牙 (Nha)
 
@@ -15685,6 +21907,58 @@ examples:
     reading: さえる
     meaning: rõ ràng; thanh thản; lạnh lùng; khéo léo
 
+### 邪 (Tà)
+
+level: N1
+meaningVi: Tà ma
+hanViet: Tà
+onyomi: ["ジャ"]
+kunyomi: ["よこし.ま"]
+strokeCount: 8
+writingHint: Răng nanh ( ) của Bồ ( ) nhìn rất tà ma ( ) 邪 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: お邪魔します
+    reading: おじゃまします
+    meaning: Xin lỗi vì đã làm phiền (làm gián đoạn) bạn
+  - word: 無邪気
+    reading: むじゃき
+    meaning: sự ngây thơ; sự ngây thơ
+  - word: お邪魔します
+    reading: おじゃまします
+    meaning: Xin lỗi vì đã làm phiền (làm gián đoạn) bạn
+
+### 穿 (Xuyên)
+
+level: N1
+meaningVi: Xuyên qua
+hanViet: Xuyên
+onyomi: ["セン"]
+kunyomi: ["うが.つ", "は.く"]
+strokeCount: 10
+writingHint: Lỗ ( ) sâu răng ( ) có thể nhìn xuyên qua ( ) 穿 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 旡 (Kí)
 
 level: N1
@@ -15708,14 +21982,14 @@ openGaps:
 examples:
   - none
 
-### 既 (Khái)
+### 慨 (Khái)
 
 level: N1
 meaningVi: Khẳng khái
 hanViet: Khái
-onyomi: ["キ"]
-kunyomi: ["すでに"]
-strokeCount: 12
+onyomi: ["ガイ"]
+kunyomi: []
+strokeCount: 14
 writingHint: Trái tim ( ) đã ( ) trở nên khẳng khái ( )慨 3
 sourcePages: []
 sources:
@@ -15726,17 +22000,47 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Khái maps to 31 KANJIDIC2 candidates; kept extracted 既
+  - target kanji ambiguous: Hán-Việt heading Khái maps to 31 KANJIDIC2 candidates; kept extracted 慨
 examples:
-  - word: 既婚
-    reading: きこん
-    meaning: kết hôn; kết hôn
-  - word: 既婚
-    reading: きこん
-    meaning: kết hôn
-  - word: 既に
-    reading: すでに
-    meaning: đã quá muộn rồi
+  - word: 感慨
+    reading: かんがい
+    meaning: cảm xúc mạnh mẽ; cảm xúc sâu sắc
+  - word: 憤慨
+    reading: ふんがい
+    meaning: sự phẫn nộ; sự oán giận
+  - word: 感慨
+    reading: かんがい
+    meaning: cảm xúc mạnh mẽ; cảm xúc sâu sắc
+
+### 概 (Khái)
+
+level: N1
+meaningVi: Khái niệm
+hanViet: Khái
+onyomi: ["ガイ"]
+kunyomi: ["おおむ.ね"]
+strokeCount: 14
+writingHint: Cây ( ) đã ( ) có khái niệm ( )概 2 5 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 概念
+    reading: がいねん
+    meaning: ý tưởng chung; khái niệm; quan niệm
+  - word: 概略
+    reading: がいりゃく
+    meaning: đề cương;tóm tắt;ý chính;tóm tắt
+  - word: 概説
+    reading: がいせつ
+    meaning: tuyên bố chung; phác thảo
 
 ### 郡 (Quận)
 
@@ -15786,6 +22090,34 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 餌 (Nhị)
+
+level: N1
+meaningVi: Mồi
+hanViet: Nhị
+onyomi: ["ジ", "ニ"]
+kunyomi: ["え", "えば", "えさ", "もち"]
+strokeCount: 14
+writingHint: Ăn ( ) nem tai ( ) là mồi nhậu ( ) 餌 1 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 餌
+    reading: えさ
+    meaning: thức ăn; mồi
+  - word: 餌
+    reading: えさ
+    hanViet: nhị
+    meaning: mồi, thức ăn cho động vật
 
 ### 摂 (Nhiếp)
 
@@ -15840,6 +22172,102 @@ examples:
     reading: あえて
     meaning: dám làm; cố ý; cả gan
 
+### 誇 (Khoa)
+
+level: N1
+meaningVi: Khoa trương
+hanViet: Khoa
+onyomi: ["コ"]
+kunyomi: ["ほこ.る"]
+strokeCount: 13
+writingHint: Nói ( ) to ( ) 15 ( 一ち) lần là khoa trương (誇) 1 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 誇張
+    reading: こちょう
+    meaning: cường điệu
+  - word: 誇る
+    reading: ほこる
+    meaning: tự hào về; tự hào về
+  - word: 誇張
+    reading: こちょう
+    meaning: cường điệu
+
+### 袴 (Khố)
+
+level: N1
+meaningVi: Cái khố
+hanViet: Khố
+onyomi: ["コ", "ク"]
+kunyomi: ["はかま", "ずぼん"]
+strokeCount: 11
+writingHint: Y phục ( ) to ( ) gấp 15 ( 一ち) lần là cái khố (袴) 1 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 愕 (Ngạc)
+
+level: N1
+meaningVi: Ngạc nhiên
+hanViet: Ngạc
+onyomi: ["ガク"]
+kunyomi: ["おどろ.く"]
+strokeCount: 12
+writingHint: Trái tim ( ) nhìn thấy 2 miệng ( ) to gấp 15 ( 一ち) lần thì ngạc nhiên (愕) 3 5 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 鰐 (Ngạc)
+
+level: N1
+meaningVi: Cá sấu
+hanViet: Ngạc
+onyomi: ["ガク"]
+kunyomi: ["わに"]
+strokeCount: 20
+writingHint: Cá ( ) có 2 miệng ( ) to gấp 15 ( 一ち) lần là cá sấu (鰐) 1 2 13 16
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 妖 (Yêu)
 
 level: N1
@@ -15849,6 +22277,28 @@ onyomi: ["ヨウ"]
 kunyomi: ["あや.しい", "なま.めく", "わざわ.い"]
 strokeCount: 7
 writingHint: Nữ ( ) yêu ( ) quái ( ) 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 沃 (Ốc)
+
+level: N1
+meaningVi: Màu mỡ
+hanViet: Ốc
+onyomi: ["ヨウ", "ヨク", "オク"]
+kunyomi: ["そそ.ぐ"]
+strokeCount: 7
+writingHint: Đất nước ( ) của yêu ( ) quái rất màu mỡ ( ) 沃 1 4
 sourcePages: []
 sources:
   level: ebook
@@ -15892,6 +22342,57 @@ examples:
     reading: そう
     meaning: đi cùng; kết hôn; tuân theo
 
+### 呑 (Thôn)
+
+level: N1
+meaningVi: Nuốt
+hanViet: Thôn
+onyomi: ["トン", "ドン"]
+kunyomi: ["の.む"]
+strokeCount: 7
+writingHint: Yêu ( ) quái mở miệng ( ) nuốt ( ) 呑 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 呑気
+    reading: のんき
+    meaning: vô tư, lạc quan, bất cẩn, liều lĩnh, thiếu chú ý
+  - word: 呑気
+    reading: のんき
+    meaning: vô tư; lạc quan; cẩu thả
+
+### 狂 (Cuồng)
+
+level: N1
+meaningVi: Điên cuồng
+hanViet: Cuồng
+onyomi: ["キョウ"]
+kunyomi: ["くる.う", "くる.おしい", "くるお.しい"]
+strokeCount: 7
+writingHint: Chó ( ) đẹp khiến vua ( ) phát cuồng ( ) 狂 2 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 狂う
+    reading: くるう
+    meaning: nổi điên; mất trật tự
+
 ### 旺 (Vượng)
 
 level: N1
@@ -15913,6 +22414,33 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 班 (Ban)
+
+level: N1
+meaningVi: Nhóm
+hanViet: Ban
+onyomi: ["ハン"]
+kunyomi: []
+strokeCount: 10
+writingHint: 2 ông vua ( ) dùng đao ( ) phân chia ban nhóm ( )班 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 班
+    reading: はん
+    meaning: nhóm;đảng;phần (triệu)
+  - word: 班
+    reading: はん
+    meaning: nhóm; đảng; phần (triệu)
 
 ### 斑 (Ban)
 
@@ -15941,14 +22469,14 @@ examples:
     reading: ぶち
     meaning: đốm; lốm đốm
 
-### 全 (Xuyên)
+### 栓 (Xuyên)
 
 level: N1
 meaningVi: Nút chai
 hanViet: Xuyên
-onyomi: ["ゼン"]
-kunyomi: ["まった.く", "すべ.て"]
-strokeCount: 6
+onyomi: ["セン"]
+kunyomi: []
+strokeCount: 10
 writingHint: Cây ( ) toàn ( ) dùng làm nút chai ( )栓 2 5
 sourcePages: []
 sources:
@@ -15959,17 +22487,40 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Xuyên maps to 15 KANJIDIC2 candidates; kept extracted 全
+  - none
 examples:
-  - word: 全滅
-    reading: ぜんめつ
-    meaning: sự hủy diệt
-  - word: 健全
-    reading: けんぜん
-    meaning: sức khỏe; sự khỏe mạnh; lành mạnh
-  - word: 全盛
-    reading: ぜんせい
-    meaning: đỉnh cao thịnh vượng
+  - word: 栓
+    reading: せん
+    meaning: nút chai, nút chai, khóa vòi
+  - word: 栓
+    reading: せん
+    meaning: nút; nút bấc; van
+  - word: 栓抜き
+    reading: せんぬき
+    hanViet: thoen bạt
+    meaning: cái mở nắp chai
+
+### 詮 (Thuyên)
+
+level: N1
+meaningVi: Kỹ càng
+hanViet: Thuyên
+onyomi: ["セン"]
+kunyomi: ["せん.ずる", "かい", "あき.らか"]
+strokeCount: 13
+writingHint: Nói ( ) toàn ( ) chuyện luyên thuyên ( )詮 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 厄 (Ách)
 
@@ -16025,15 +22576,42 @@ examples:
     reading: きはん
     meaning: mô hình; tiêu chuẩn; chuẩn mực; tiêu chí; ví dụ
 
-### 已 (Phiếm)
+### 氾 (Phiếm)
 
 level: N1
 meaningVi: Tràn lan
 hanViet: Phiếm
-onyomi: ["イ"]
-kunyomi: ["や.む", "すで.に", "のみ", "はなはだ"]
-strokeCount: 3
+onyomi: ["ハン"]
+kunyomi: ["ひろ.がる"]
+strokeCount: 5
 writingHint: Nước ( ) C ( ) sủi tràn lan ( ) 氾 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 氾濫
+    reading: はんらん
+    meaning: tràn; lũ lụt
+  - word: 氾濫
+    reading: はんらん
+    meaning: tràn; lũ lụt
+
+### 怨 (Oán)
+
+level: N1
+meaningVi: Oán giận
+hanViet: Oán
+onyomi: ["エン", "オン", "ウン"]
+kunyomi: ["うら.む", "うらみ", "うら.めしい"]
+strokeCount: 9
+writingHint: Ta ( ) phải ăn C ( ) trong tim ( ) oán giận ( )怨 1
 sourcePages: []
 sources:
   level: ebook
@@ -16043,7 +22621,6 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phiếm maps to 6 KANJIDIC2 candidates; kept extracted 已
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -16051,12 +22628,12 @@ examples:
 ### 宛 (Oản)
 
 level: N1
-meaningVi: Bát đá
+meaningVi: Bát gỗ
 hanViet: Oản
 onyomi: ["エン"]
 kunyomi: ["あ.てる", "-あて", "-づつ", "あたか.も"]
 strokeCount: 8
-writingHint: Bát ( ) đá ( ) của Uyên ( ) 6
+writingHint: Bát ( ) gỗ ( ) của Uyên ( ) 宛 2 5
 sourcePages: []
 sources:
   level: ebook
@@ -16077,6 +22654,61 @@ examples:
   - word: 宛
     reading: あて
     meaning: gửi tới
+
+### 誉 (Dự)
+
+level: N1
+meaningVi: Danh dự
+hanViet: Dự
+onyomi: ["ヨ"]
+kunyomi: ["ほま.れ", "ほ.める"]
+strokeCount: 13
+writingHint: 3 người 18 tuổi ( ) nói ( ) lời thề danh dự ( ) 誉 1 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 名誉
+    reading: めいよ
+    meaning: danh dự;tín dụng;uy tín
+  - word: 名誉
+    reading: めいよ
+    meaning: danh dự; tín dụng; uy tín
+
+### 逮 (Đãi)
+
+level: N1
+meaningVi: Bắt
+hanViet: Đãi
+onyomi: ["タイ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Em Thủy ( ) trốn đi xa ( ) vẫn bị bắt ( ) 逮 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 逮捕
+    reading: たいほ
+    meaning: bắt giữ
+  - word: 逮捕
+    reading: たいほ
+    hanViet: Đãi
+    meaning: bắt giữ
 
 ### 隷 (Lệ)
 
@@ -16167,14 +22799,44 @@ openGaps:
 examples:
   - none
 
-### 玉 (Bích)
+### 避 (Tị)
+
+level: N1
+meaningVi: Tị nạn
+hanViet: Tị
+onyomi: ["ヒ"]
+kunyomi: ["さ.ける", "よ.ける"]
+strokeCount: 16
+writingHint: Tích ( ) trữ tiền để đi xa ( ) tị nạn ( ) 避 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 避難
+    reading: ひなん
+    meaning: nương náu; tìm nơi trú ẩn
+  - word: 避難
+    reading: ひなん
+    meaning: nương náu; tìm nơi trú ẩn
+  - word: 避ける
+    reading: さける
+    meaning: (1) tránh (tiếp xúc vật lý); (2) tránh xa; ngăn chặn
+
+### 璧 (Bích)
 
 level: N1
 meaningVi: Ngọc bích
 hanViet: Bích
-onyomi: ["ギョク"]
-kunyomi: ["たま", "たま-", "-だま"]
-strokeCount: 5
+onyomi: ["ヘキ"]
+kunyomi: ["たま"]
+strokeCount: 18
 writingHint: Tích ( ) trữ ngọc ( ) bích ( ) 璧 1 7
 sourcePages: []
 sources:
@@ -16185,26 +22847,23 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Bích maps to 10 KANJIDIC2 candidates; kept extracted 玉
+  - none
 examples:
-  - word: 玉
-    reading: ぎょく
-    meaning: vua (shogi)
-  - word: 玉
-    reading: ぎょく
-    meaning: vua (shogi)
-  - word: 玉
-    reading: たま
-    meaning: quả bóng; quả cầu; đồng xu
+  - word: 完璧
+    reading: かんぺき
+    meaning: sự hoàn hảo; sự trọn vẹn; hoàn hảo
+  - word: 完璧
+    reading: かんぺき
+    meaning: sự hoàn hảo; sự trọn vẹn; hoàn hảo
 
-### 辟 (Phích)
+### 癖 (Phích)
 
 level: N1
 meaningVi: Thói quen
 hanViet: Phích
-onyomi: ["ヘキ", "ヒ"]
-kunyomi: ["きみ", "ひら.く", "め.す"]
-strokeCount: 13
+onyomi: ["ヘキ"]
+kunyomi: ["くせ", "くせ.に"]
+strokeCount: 18
 writingHint: Bệnh ( ) tích ( ) tụ lâu thành thói quen ( ) xấu 癖 1
 sourcePages: []
 sources:
@@ -16217,52 +22876,19 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 辟易
-    reading: へきえき
-    meaning: nhăn nhó; co rúm lại; khuất phục; sợ hãi; bối rối
-  - word: 辟易
-    reading: へきえき
-    meaning: nhăn nhó; co rúm lại; khuất phục; sợ hãi; bối rối
+  - word: 癖
+    reading: くせ
+    meaning: một thói quen (thường là một thói quen xấu); sự đặc biệt
 
-### 品 (Lâm)
+### 臨 (Lâm)
 
 level: N1
 meaningVi: Lâm thời 𠂉
 hanViet: Lâm
-onyomi: ["ヒン", "ホン"]
-kunyomi: ["しな"]
-strokeCount: 9
+onyomi: ["リン"]
+kunyomi: ["のぞ.む"]
+strokeCount: 18
 writingHint: Thần ( ) nằm ( ) ngắm sản phẩm ( ) lâm thời ( ) 臨 8
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lâm maps to 52 KANJIDIC2 candidates; kept extracted 品
-examples:
-  - word: 骨董品
-    reading: こっとうひん
-    meaning: đồ cổ
-  - word: 下品
-    reading: かひん
-    meaning: bài viết kém hơn
-  - word: 用品
-    reading: ようひん
-    meaning: vật phẩm; vật tư; bộ phận
-
-### 将 (Tương)
-
-level: N1
-meaningVi: Xì dầu
-hanViet: Tương
-onyomi: ["ショウ", "ソウ"]
-kunyomi: ["まさ.に", "はた", "まさ", "ひきい.る", "もって"]
-strokeCount: 10
-writingHint: Loại xì dầu ( ) tương lai ( ) sẽ ra mắt vào giờ Dậu ( ) 酉 1 4
 sourcePages: []
 sources:
   level: ebook
@@ -16274,15 +22900,162 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 将棋
-    reading: しょうぎ
-    meaning: cờ vua nhật bản
-  - word: 将棋
-    reading: しょうぎ
-    meaning: cờ shogi
-  - word: 将来
-    reading: しょうらい
-    meaning: tương lai, triển vọng
+  - word: 臨む
+    reading: のぞむ
+    meaning: trông chừng; đối mặt; giải quyết; tham dự (chức năng)
+  - word: 臨む
+    reading: のぞむ
+    meaning: trông chừng; đối mặt; giải quyết; tham dự (chức năng)
+  - word: 臨時
+    reading: りんじ
+    meaning: tạm thời, đặc biệt, phi thường
+
+### 品 (Âu)
+
+level: N1
+meaningVi: Ca ngợi
+hanViet: Âu
+onyomi: ["ヒン", "ホン"]
+kunyomi: ["しな"]
+strokeCount: 9
+writingHint: Ca ngợi ( ) hết lời ( ) về tủ đựng ( ) sản phẩm ( ) mang thương hiệu Châu Âu 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Âu maps to 29 KANJIDIC2 candidates; kept extracted 品
+examples:
+  - word: 骨董品
+    reading: こっとうひん
+    meaning: đồ cổ
+  - word: 下品
+    reading: かひん
+    meaning: bài viết kém hơn
+  - word: 用品
+    reading: ようひん
+    meaning: vật phẩm; vật tư; bộ phận
+
+### 山 (Nham)
+
+level: N1
+meaningVi: Ung thư
+hanViet: Nham
+onyomi: ["サン", "セン"]
+kunyomi: ["やま"]
+strokeCount: 3
+writingHint: Ung thư ( ) là bệnh ( ) có dùng sản phẩm ( ) thuốc trên núi ( ) cũng không khỏi 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Nham maps to 29 KANJIDIC2 candidates; kept extracted 山
+examples:
+  - word: 山脈
+    reading: さんみゃく
+    meaning: dãy núi
+  - word: 鉱山
+    reading: こうざん
+    meaning: mỏ (quặng)
+  - word: 山岳
+    reading: さんがく
+    meaning: núi
+
+### 繰 (Sào)
+
+level: N1
+meaningVi: Quấn
+hanViet: Sào
+onyomi: ["ソウ"]
+kunyomi: ["く.る"]
+strokeCount: 19
+writingHint: Dùng sợi tơ ( ) quấn sản phẩm ( ) vào cây ( ) sào ( ) 繰 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 引っ繰り返る
+    reading: ひっくりかえる
+    meaning: bị lật đổ, bị đảo lộn, bị lật đổ, bị đảo ngược
+  - word: 引っ繰り返す
+    reading: ひっくりかえす
+    meaning: lật lại,lật đổ,đánh đổ,làm đảo lộn,lật từ trong ra ngoài
+  - word: 引っ繰り返す
+    reading: ひっくりかえす
+    meaning: lật ngược; làm đổ; đảo lộn; lộn trái
+
+### 藻 (Tảo)
+
+level: N1
+meaningVi: Rong tảo
+hanViet: Tảo
+onyomi: ["ソウ"]
+kunyomi: ["も"]
+strokeCount: 19
+writingHint: Cỏ ( ) dưới nước ( ) tạo ra sản phẩm ( ) là cây ( ) tảo ( ) 藻 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 藻掻く
+    reading: もがく
+    meaning: vùng vẫy; quằn quại; thiếu kiên nhẫn
+  - word: 藻掻く
+    reading: もがく
+    meaning: vùng vẫy; quằn quại; thiếu kiên nhẫn
+
+### 奨 (Tưởng)
+
+level: N1
+meaningVi: Thưởng
+hanViet: Tưởng
+onyomi: ["ショウ", "ソウ"]
+kunyomi: ["すす.める"]
+strokeCount: 13
+writingHint: Tương lai ( )vào đại ( ) học sẽ được thưởng ( ) 奨 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 奨励
+    reading: しょうれい
+    meaning: khuyến khích;khuyến mãi;tin nhắn;địa chỉ
+  - word: 奨励
+    reading: しょうれい
+    meaning: khuyến khích; khuyến mãi; tin nhắn; địa chỉ
+  - word: 奨学金
+    reading: しょうがくきん
+    meaning: học bổng
 
 ### 窮 (Cùng)
 
@@ -16366,14 +23139,14 @@ examples:
     reading: かみそり
     meaning: dao cạo
 
-### 弟 (Thê)
+### 梯 (Thê)
 
 level: N1
 meaningVi: Cái thang
 hanViet: Thê
-onyomi: ["テイ", "ダイ", "デ"]
-kunyomi: ["おとうと"]
-strokeCount: 7
+onyomi: ["テイ", "タイ"]
+kunyomi: ["はしご"]
+strokeCount: 11
 writingHint: Cây ( ) được em trai ( ) dùng làm thang ( ) 梯 6
 sourcePages: []
 sources:
@@ -16384,17 +23157,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thê maps to 53 KANJIDIC2 candidates; kept extracted 弟
+  - none
 examples:
-  - word: 弟
-    reading: おと
-    meaning: em trai
-  - word: 弟
-    reading: おと
-    meaning: em trai
-  - word: 従兄弟
-    reading: いとこ
-    meaning: anh họ (nam)
+  - word: 梯子
+    reading: ていし
+    meaning: thang; cầu thang
+  - word: 梯子
+    reading: ていし
+    meaning: thang; cầu thang
+  - word: 梯子
+    reading: はしご
+    meaning: thang, cầu thang
 
 ### 沸 (Phí)
 
@@ -16426,14 +23199,14 @@ examples:
     reading: わかす
     meaning: đun sôi, đun nóng
 
-### 弱 (Nịch)
+### 溺 (Nịch)
 
 level: N1
 meaningVi: Chết đuối
 hanViet: Nịch
-onyomi: ["ジャク"]
-kunyomi: ["よわ.い", "よわ.る", "よわ.まる", "よわ.める"]
-strokeCount: 10
+onyomi: ["デキ", "ジョウ", "ニョウ"]
+kunyomi: ["いばり", "おぼ.れる"]
+strokeCount: 13
 writingHint: Nước ( ) yếu ( ) cũng có thể chết đuối ( ) 溺 1 4 9
 sourcePages: []
 sources:
@@ -16444,17 +23217,88 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nịch maps to 3 KANJIDIC2 candidates; kept extracted 弱
+  - none
 examples:
-  - word: 貧弱
-    reading: ひんじゃく
-    meaning: nghèo nàn; ít ỏi; không đáng kể
-  - word: 薄弱
-    reading: はくじゃく
-    meaning: sự yếu đuối; sự yếu đuối; yếu đuối
-  - word: 弱る
-    reading: よわる
-    meaning: suy yếu; bối rối; chán nản; hốc hác; chán nản; bối rối; làm suy yếu
+  - word: 溺れる
+    reading: おぼれる
+    meaning: bị chết đuối; để đắm chìm trong
+
+### 鰯 (Mòi)
+
+level: N1
+meaningVi: Cá mòi
+hanViet: Mòi
+onyomi: []
+kunyomi: ["いわし"]
+strokeCount: 21
+writingHint: Cá ( ) yếu ( ) nhất là cá mòi ( ) 鰯 1 12 17
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: mixed_ebook_kanjidic2
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Mòi maps to 19 KANJIDIC2 candidates; kept extracted 鰯
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 那 (Na)
+
+level: N1
+meaningVi: Nhiều
+hanViet: Na
+onyomi: ["ナ", "ダ"]
+kunyomi: ["なに", "なんぞ", "いかん"]
+strokeCount: 7
+writingHint: Giơ đao ( ) tuyên bố chia tay 2 ( ) em Bồ ( ) ở China ( )那 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 旦那
+    reading: だんな
+    meaning: chủ (nhà); chồng (không chính thức)
+  - word: 旦那
+    reading: だんな
+    meaning: chủ (nhà); chồng (không chính thức)
+
+### 邦 (Bang)
+
+level: N1
+meaningVi: Liên bang
+hanViet: Bang
+onyomi: ["ホウ"]
+kunyomi: ["くに"]
+strokeCount: 7
+writingHint: Có 31 ( ) Bộ ( ) tộc tạo thành 1 bang ( ) 邦 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 連邦
+    reading: れんぽう
+    meaning: khối thịnh vượng chung; liên bang các bang
+  - word: 連邦
+    reading: れんぽう
+    meaning: khối thịnh vượng chung; liên bang các bang
 
 ### 寿 (Thọ)
 
@@ -16486,6 +23330,28 @@ examples:
     reading: おすし
     hanViet: thọ ti
     meaning: món Sushi
+
+### 鋳 (Chú)
+
+level: N1
+meaningVi: Đúc
+hanViet: Chú
+onyomi: ["チュウ", "イ", "シュ", "シュウ"]
+kunyomi: ["い.る"]
+strokeCount: 15
+writingHint: Vàng ( ) muốn giữ tuổi thọ ( ) lâu phải đúc ( )鋳 1 12
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 怯 (Khiếp)
 
@@ -16544,6 +23410,36 @@ examples:
     reading: かえって
     meaning: ngược lại; trái lại; thậm chí hơn
 
+### 蓋 (Cái)
+
+level: N1
+meaningVi: Cái vung
+hanViet: Cái
+onyomi: ["ガイ", "カイ", "コウ"]
+kunyomi: ["ふた", "けだ.し", "おお.う", "かさ", "かこう"]
+strokeCount: 13
+writingHint: Cô Thảo ( ) trong quá khứ ( ) dùng đĩa ( ) làm cái vung ( )蓋 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 目蓋
+    reading: まぶた
+    meaning: mí mắt
+  - word: 蓋
+    reading: がい
+    meaning: nắp; nắp; nắp
+  - word: 蓋
+    reading: がい
+    meaning: nắp
+
 ### 弁 (Biện)
 
 level: N1
@@ -16574,6 +23470,33 @@ examples:
     reading: だいべん
     meaning: thanh toán bằng proxy; hành động cho người khác; nói thay cho người khác
 
+### 弄 (Lộng)
+
+level: N1
+meaningVi: Lộng hành
+hanViet: Lộng
+onyomi: ["ロウ", "ル"]
+kunyomi: ["いじく.る", "ろう.する", "いじ.る", "ひねく.る", "たわむ.れる", "もてあそ.ぶ"]
+strokeCount: 7
+writingHint: Vua ( ) chắp tay ( ) lộng hành ( ) 弄 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 弄る
+    reading: いじる
+    meaning: chạm vào; làm xáo trộn
+  - word: 弄る
+    reading: いじる
+    meaning: chạm vào; làm xáo trộn
+
 ### 奔 (Bôn)
 
 level: N1
@@ -16592,6 +23515,29 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 廾 (Thăng)
+
+level: N1
+meaningVi: Lên
+hanViet: Thăng
+onyomi: ["キョウ", "ク"]
+kunyomi: ["にじゅう"]
+strokeCount: 3
+writingHint: Chắp tay ( ) đưa lên ( )升 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thăng maps to 52 KANJIDIC2 candidates; kept extracted 廾
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -16626,15 +23572,15 @@ examples:
     reading: しにょう
     meaning: phân; nước thải thô; chất thải của con người; đất đen
 
-### 七 (Ni)
+### 尾 (Vĩ)
 
 level: N1
-meaningVi: Ni cô
-hanViet: Ni
-onyomi: ["シチ"]
-kunyomi: ["なな", "なな.つ", "なの"]
-strokeCount: 2
-writingHint: Xác chết ( ) cười hihi ( ) khi nhìn thấy ni cô ( )尼 1
+meaningVi: Cái đuôi
+hanViet: Vĩ
+onyomi: ["ビ"]
+kunyomi: ["お"]
+strokeCount: 7
+writingHint: Xác chết ( ) mọc lông ( ) đuôi ( )尾 1
 sourcePages: []
 sources:
   level: ebook
@@ -16644,17 +23590,69 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ni maps to 20 KANJIDIC2 candidates; kept extracted 七
+  - none
 examples:
-  - word: 七日
-    reading: なぬか
-    meaning: bảy ngày; ngày thứ bảy (trong tháng)
-  - word: 七日
-    reading: なぬか
-    meaning: bảy ngày; ngày thứ bảy (trong tháng)
-  - word: 七
-    reading: しち
-    meaning: bảy
+  - word: 尻尾
+    reading: しっぽ
+    meaning: đuôi (động vật)
+  - word: 尾
+    reading: お
+    meaning: đuôi; sườn núi
+  - word: 尾
+    reading: お
+    meaning: đuôi; sườn núi
+
+### 尻 (Khảo)
+
+level: N1
+meaningVi: Cái mông
+hanViet: Khảo
+onyomi: ["コウ"]
+kunyomi: ["しり"]
+strokeCount: 5
+writingHint: Xác chết ( ) hở 9 ( ) cái mông ( ) 尻 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 尻尾
+    reading: しっぽ
+    meaning: đuôi (động vật)
+  - word: 尻尾
+    reading: しっぽ
+    meaning: đuôi (động vật)
+  - word: 尻
+    reading: しり
+    meaning: mông; đáy
+
+### 尼 (Ni)
+
+level: N1
+meaningVi: Ni cô
+hanViet: Ni
+onyomi: ["ニ"]
+kunyomi: ["あま"]
+strokeCount: 5
+writingHint: Xác chết ( ) cười hihi ( ) khi nhìn thấy ni cô ( )尼 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 炉 (Lô)
 
@@ -16824,15 +23822,37 @@ examples:
     reading: しんさ
     meaning: xét xử;kiểm tra;kiểm tra;điều tra
 
-### 六 (Minh)
+### 冥 (Minh)
 
 level: N1
 meaningVi: U tối
 hanViet: Minh
-onyomi: ["ロク", "リク"]
-kunyomi: ["む", "む.つ", "むっ.つ", "むい"]
-strokeCount: 4
+onyomi: ["メイ", "ミョウ"]
+kunyomi: ["くら.い"]
+strokeCount: 10
 writingHint: Trùm khăn ( ) che mặt trời ( ) nên 6 ( ) ngày u tối ( )冥 1 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 瞑 (Minh)
+
+level: N1
+meaningVi: Nhắm mắt
+hanViet: Minh
+onyomi: ["メイ", "ベン", "ミョウ", "ミン", "メン"]
+kunyomi: ["めい.する", "つぶ.る", "つむ.る", "くら.い"]
+strokeCount: 15
+writingHint: Nhắm ( ) mắt ( ) thấy u tối ( ) 瞑 2 6 7
 sourcePages: []
 sources:
   level: ebook
@@ -16842,17 +23862,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Minh maps to 17 KANJIDIC2 candidates; kept extracted 六
+  - none
 examples:
-  - word: 六
-    reading: む
-    meaning: (số) sáu
-  - word: 六
-    reading: む
-    meaning: (số) sáu
-  - word: 六つ
-    reading: むっつ
-    meaning: sáu
+  - word: 瞑る
+    reading: つぶる
+    meaning: nhắm mắt lại
+  - word: 瞑る
+    reading: つぶる
+    meaning: nhắm mắt lại
 
 ### 罷 (Bãi)
 
@@ -16875,36 +23892,6 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
-
-### 能 (Hùng)
-
-level: N1
-meaningVi: Con gấu
-hanViet: Hùng
-onyomi: ["ノウ"]
-kunyomi: ["よ.く", "あた.う"]
-strokeCount: 10
-writingHint: Con gấu ( ) có năng lực ( ) phun ra lửa ( ) 灬 1 8
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hùng maps to 18 KANJIDIC2 candidates; kept extracted 能
-examples:
-  - word: 本能
-    reading: ほんのう
-    meaning: bản năng
-  - word: 放射能
-    reading: ほうしゃのう
-    meaning: tính phóng xạ
-  - word: 万能
-    reading: ばんのう
-    meaning: toàn năng; toàn năng; toàn năng
 
 ### 属 (Thuộc)
 
@@ -16936,14 +23923,36 @@ examples:
     reading: しょぞく
     meaning: gắn liền với; thuộc về
 
-### 呉 (Ngu)
+### 嘱 (Chúc)
+
+level: N1
+meaningVi: Giao phó
+hanViet: Chúc
+onyomi: ["ショク"]
+kunyomi: ["しょく.する", "たの.む"]
+strokeCount: 15
+writingHint: Miệng ( ) đọc thuộc ( ) di chúc ( ) 嘱 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 娯 (Ngu)
 
 level: N1
 meaningVi: Giải trí
 hanViet: Ngu
 onyomi: ["ゴ"]
-kunyomi: ["く.れる", "くれ"]
-strokeCount: 7
+kunyomi: []
+strokeCount: 10
 writingHint: Phụ nữ ( ) nước Ngô ( ) chỉ lo vui chơi giải trí ( ) 娯 1 5
 sourcePages: []
 sources:
@@ -16954,17 +23963,36 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Ngu maps to 32 KANJIDIC2 candidates; kept extracted 呉
+  - none
 examples:
-  - word: 呉れ呉れも
-    reading: くれぐれも
-    meaning: nhiều lần; chân thành; tha thiết
-  - word: 呉れる
-    reading: くれる
-    meaning: cho; để cho một người có; làm cho một người; được cho
-  - word: 呉れ呉れも
-    reading: くれぐれも
-    meaning: nhiều lần; chân thành; tha thiết
+  - word: 娯楽
+    reading: ごらく
+    meaning: niềm vui, sự giải trí
+  - word: 娯楽
+    reading: ごらく
+    meaning: giải trí; vui chơi
+
+### 虞 (Ngu)
+
+level: N1
+meaningVi: Sợ hãi
+hanViet: Ngu
+onyomi: ["グ"]
+kunyomi: ["おそれ", "おもんぱか.る", "はか.る", "うれ.える", "あざむ.く", "あやま.る", "のぞ.む", "たの.しむ"]
+strokeCount: 13
+writingHint: Hổ ( ) ăn ngô ( ) trong sợ hãi ( ) 虞 1 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 汰 (Thải)
 
@@ -16996,14 +24024,14 @@ examples:
     reading: ごぶさた
     meaning: không viết hoặc liên lạc trong một thời gian
 
-### 太 (Đà)
+### 駄 (Đà)
 
 level: N1
 meaningVi: Thồ hàng
 hanViet: Đà
-onyomi: ["タイ", "タ"]
-kunyomi: ["ふと.い", "ふと.る"]
-strokeCount: 4
+onyomi: ["ダ", "タ"]
+kunyomi: []
+strokeCount: 14
 writingHint: Ngựa ( ) béo ( ) để thồ hàng ( ) 駄 2 12
 sourcePages: []
 sources:
@@ -17014,26 +24042,26 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đà maps to 64 KANJIDIC2 candidates; kept extracted 太
+  - none
 examples:
-  - word: 太鼓
-    reading: たいこ
-    meaning: trống, lục lạc
-  - word: 太鼓
-    reading: たいこ
-    meaning: trống; trống tambourine
-  - word: 太陽
-    reading: たいよう
-    meaning: mặt trời
+  - word: 駄作
+    reading: ださく
+    meaning: công việc tồi tệ; rác rưởi
+  - word: 無駄遣い
+    reading: むだづかい
+    meaning: lãng phí tiền bạc vào, phung phí tiền vào, đánh chết một con ngựa
+  - word: 駄作
+    reading: ださく
+    meaning: công việc tồi tệ; rác rưởi
 
-### 賢 (Kiên)
+### 鰹 (Kiên)
 
 level: N1
 meaningVi: Cá ngừ vằn
 hanViet: Kiên
 onyomi: ["ケン"]
-kunyomi: ["かしこ.い"]
-strokeCount: 16
+kunyomi: ["かつお"]
+strokeCount: 23
 writingHint: Cá ( ) kiên cố ( ) là cá ngừ vằn ( ) 鰹 1
 sourcePages: []
 sources:
@@ -17042,28 +24070,42 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Kiên maps to 52 KANJIDIC2 candidates; kept extracted 賢
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 賢明
-    reading: けんめい
-    meaning: sự khôn ngoan; sự thông minh; sự khôn ngoan
-  - word: 賢明
-    reading: けんめい
-    meaning: sự khôn ngoan; sự thông minh
-  - word: 賢い
-    reading: かしこい
-    meaning: khôn ngoan; thông minh
+  - none
 
-### 殳 (Hủy)
+### 腎 (Thận)
+
+level: N1
+meaningVi: Quả thần
+hanViet: Thận
+onyomi: ["ジン"]
+kunyomi: []
+strokeCount: 13
+writingHint: Đại thần ( ) quay lại ( ) viện hàng tháng ( ) để chạy thân ( ) 腎 2 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 毀 (Hủy)
 
 level: N1
 meaningVi: Phá hủy
 hanViet: Hủy
-onyomi: ["シュ"]
-kunyomi: ["また", "ほこ"]
-strokeCount: 4
+onyomi: ["キ"]
+kunyomi: ["こぼ.つ", "こわ.す", "こぼ.れる", "こわ.れる", "そし.る", "やぶ.る"]
+strokeCount: 13
 writingHint: Cối ( ) đất ( ) bị kẻ thù ( ) phá hủy ( ) 毀 1 11
 sourcePages: []
 sources:
@@ -17074,20 +24116,19 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hủy maps to 31 KANJIDIC2 candidates; kept extracted 殳
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 臼 (Nghễ)
+### 臼 (Thử)
 
 level: N1
-meaningVi: Liếc, lườm
-hanViet: Nghễ
+meaningVi: Con chuột
+hanViet: Thử
 onyomi: ["キュウ", "グ"]
 kunyomi: ["うす", "うすづ.く"]
 strokeCount: 6
-writingHint: Liếc ( ) mắt ( ) nhìn ngạo nghễ cái cối ( ) có chân ( ) 儿 6
+writingHint: Dưới cối xay ( ) thấy 4 hạt gạo (= =) và 3 cái đuôi ( ししし) chuột (鼠) 1 4
 sourcePages: []
 sources:
   level: ebook
@@ -17097,20 +24138,20 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nghễ maps to 29 KANJIDIC2 candidates; kept extracted 臼
+  - target kanji ambiguous: Hán-Việt heading Thử maps to 122 KANJIDIC2 candidates; kept extracted 臼
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 来 (Giáp)
+### 興 (Hưng)
 
 level: N1
-meaningVi: Gò má
-hanViet: Giáp
-onyomi: ["ライ", "タイ"]
-kunyomi: ["く.る", "きた.る", "きた.す", "き.たす", "き.たる", "き", "こ"]
-strokeCount: 7
-writingHint: Gò má ( ) hẹp ( ) như tờ giấy ( ) 頁 5
+meaningVi: Hưng phấn
+hanViet: Hưng
+onyomi: ["コウ", "キョウ"]
+kunyomi: ["おこ.る", "おこ.す"]
+strokeCount: 16
+writingHint: Cối ( ) đồng ( ) 18 ( 一八) người khênh rất hưng phấn (興) 1 6
 sourcePages: []
 sources:
   level: ebook
@@ -17120,7 +24161,67 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Giáp maps to 21 KANJIDIC2 candidates; kept extracted 来
+  - none
+examples:
+  - word: 興じる
+    reading: きょうじる
+    meaning: tự giải trí; làm vui vẻ
+  - word: 振興
+    reading: しんこう
+    meaning: sự khuyến khích; sự khuyến khích
+  - word: 復興
+    reading: ふっこう
+    meaning: sự hồi sinh; sự phục hưng; sự tái thiết
+
+### 一 (Dư)
+
+level: N1
+meaningVi: Kiệu
+hanViet: Dư
+onyomi: ["イチ", "イツ"]
+kunyomi: ["ひと-", "ひと.つ"]
+strokeCount: 1
+writingHint: Trên kiệu ( ) có cái cối ( ) và xe ( ) cần 18 ( 一八) người khênh 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Dư maps to 103 KANJIDIC2 candidates; kept extracted 一
+examples:
+  - word: 一挙に
+    reading: いっきょに
+    meaning: một cú sà xuống; bằng một cú sà xuống
+  - word: 一部分
+    reading: いちぶぶん
+    meaning: một phần
+  - word: 一人
+    reading: いちにん
+    meaning: một người
+
+### 来 (Hiệp)
+
+level: N1
+meaningVi: Kẹp
+hanViet: Hiệp
+onyomi: ["ライ", "タイ"]
+kunyomi: ["く.る", "きた.る", "きた.す", "き.たす", "き.たる", "き", "こ"]
+strokeCount: 7
+writingHint: Kẹp ( ) tay ( ) ở chỗ hẹp ( ) 来 2 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Hiệp maps to 31 KANJIDIC2 candidates; kept extracted 来
 examples:
   - word: 為来り
     reading: しきたり
@@ -17189,45 +24290,15 @@ examples:
     reading: ぎぞう
     meaning: sự giả mạo
 
-### 曲 (Tào)
+### 曹 (Tào)
 
 level: N1
-meaningVi: Tào tháo
+meaningVi: Cái máng
 hanViet: Tào
-onyomi: ["キョク"]
-kunyomi: ["ま.がる", "ま.げる", "くま"]
-strokeCount: 6
-writingHint: Tào Tháo ( ) có 1 ( ) ca khúc ( ) mà hát cả ngày ( ) 日 4 5
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tào maps to 47 KANJIDIC2 candidates; kept extracted 曲
-examples:
-  - word: 曲がる
-    reading: まがる
-    meaning: uốn cong; uốn cong
-  - word: 戯曲
-    reading: ぎきょく
-    meaning: vở kịch; vở kịch
-  - word: 曲
-    reading: きょく
-    meaning: giai điệu; đoạn nhạc
-
-### 曹 (Tao)
-
-level: N1
-meaningVi: Bắt gặp
-hanViet: Tao
 onyomi: ["ソウ", "ゾウ"]
 kunyomi: []
 strokeCount: 11
-writingHint: Bắt gặp ( ) Tào Tháo ( ) đi xa ( ) 辶 4 5
+writingHint: Cái máng ( ) gỗ ( ) của Tào Tháo ( ) 曹 8 9
 sourcePages: []
 sources:
   level: ebook
@@ -17240,6 +24311,33 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 漕 (Tào)
+
+level: N1
+meaningVi: Chèo thuyền
+hanViet: Tào
+onyomi: ["ソウ"]
+kunyomi: ["こ.ぐ", "はこ.ぶ"]
+strokeCount: 14
+writingHint: Dưới nước ( ) Tào Tháo ( ) đang chèo thuyền ( ) 漕 7 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 漕ぐ
+    reading: こぐ
+    meaning: chèo thuyền; chèo thuyền; đạp
+  - word: 漕ぐ
+    reading: こぐ
+    meaning: chèo thuyền; đạp
 
 ### 后 (Hậu)
 
@@ -17263,15 +24361,15 @@ openGaps:
 examples:
   - none
 
-### 久 (Mẫu)
+### 垢 (Cấu)
 
 level: N1
-meaningVi: Mẫu ruộng
-hanViet: Mẫu
-onyomi: ["キュウ", "ク"]
-kunyomi: ["ひさ.しい"]
-strokeCount: 3
-writingHint: Từ đầu ( ) bờ ruộng ( ) cửu ( ) vạn cày cả mẫu ruộng ( ) 畝 1 8
+meaningVi: Cáu bẩn
+hanViet: Cấu
+onyomi: ["コウ", "ク"]
+kunyomi: ["あか", "はじ"]
+strokeCount: 9
+writingHint: Đất ( ) dính lên hoàng hậu ( ) bị cáu bẩn ( ) 垢 4
 sourcePages: []
 sources:
   level: ebook
@@ -17281,26 +24379,45 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Mẫu maps to 39 KANJIDIC2 candidates; kept extracted 久
+  - none
 examples:
-  - word: 久しい
-    reading: ひさしい
-    meaning: dài;tiếp tục;cũ (truyện)
-  - word: 久し振り
-    reading: ひさしぶり
-    meaning: sau một thời gian dài
-  - word: 久しい
-    reading: ひさしい
-    meaning: dài; tiếp tục; cũ (truyện)
+  - word: 垢
+    reading: あか
+    meaning: sự bẩn thỉu; sự bẩn thỉu
+  - word: 垢
+    reading: あか
+    meaning: sự bẩn thỉu
 
-### 妻 (Thê)
+### 畝 (Mẫu)
+
+level: N1
+meaningVi: Mẫu ruộng
+hanViet: Mẫu
+onyomi: ["ボウ", "ホ", "モ", "ム"]
+kunyomi: ["せ", "うね"]
+strokeCount: 10
+writingHint: Từ đầu ( ) bờ ruộng ( ) cửu ( ) vạn cày cả mẫu ruộng ( ) 畝 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 凄 (Thê)
 
 level: N1
 meaningVi: Kinh khủng
 hanViet: Thê
-onyomi: ["サイ"]
-kunyomi: ["つま"]
-strokeCount: 8
+onyomi: ["セイ", "サイ"]
+kunyomi: ["さむ.い", "すご.い", "すさ.まじい"]
+strokeCount: 10
 writingHint: Mặt lạnh như băng ( ) vửa vợ ( ) thật kinh khủng ( ) 凄 7
 sourcePages: []
 sources:
@@ -17313,38 +24430,154 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 夫妻
-    reading: ふさい
-    meaning: người đàn ông và vợ, cặp vợ chồng
-  - word: 夫妻
-    reading: ふさい
-    meaning: vợ chồng
-  - word: 妻
-    reading: つま
-    meaning: (khiêm tốn) vợ
+  - word: 物凄い
+    reading: ものすごい
+    meaning: làm rung chuyển trái đất, đáng kinh ngạc, ở một mức độ rất lớn
+  - word: 物凄い
+    reading: ものすごい
+    meaning: cực kỳ; khủng khiếp; dữ dội
+  - word: 凄い
+    reading: すごい
+    meaning: tuyệt vời
 
-### 关 (Trẫm)
+### 鉛 (Duyên)
+
+level: N1
+meaningVi: Chất chì
+hanViet: Duyên
+onyomi: ["エン"]
+kunyomi: ["なまり"]
+strokeCount: 13
+writingHint: Kim loại ( ) đi qua 8 ( ) cửa khẩu ( ) là chât chì ( )鉛 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 鉛
+    reading: なまり
+    meaning: chì (kim loại)
+  - word: 鉛
+    reading: なまり
+    meaning: chì (kim loại)
+  - word: 鉛筆
+    reading: えんぴつ
+    meaning: bút chì
+
+### 朕 (Trẫm)
 
 level: N1
 meaningVi: Xưng vua
 hanViet: Trẫm
-onyomi: []
+onyomi: ["チン"]
 kunyomi: []
-strokeCount: 6
+strokeCount: 10
 writingHint: Cho Nguyệt ( ) làm quan ( ) là lệnh của trẫm ( ) 朕 2 5 6
 sourcePages: []
 sources:
   level: ebook
   hanViet: ebook_text
   meaningVi: ebook_text
-  readings: supplement
+  readings: kanjidic2_supplement
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trẫm maps to 28 KANJIDIC2 candidates; kept extracted 关
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 皇 (Hoàng)
+
+level: N1
+meaningVi: Hoàng đế
+hanViet: Hoàng
+onyomi: ["コウ", "オウ"]
+kunyomi: []
+strokeCount: 9
+writingHint: Da trắng ( ) như vua ( ) là hoàng đế ( ) 皇 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 天皇
+    reading: すめらぎ
+    meaning: Hoàng đế Nhật Bản
+  - word: 皇居
+    reading: こうきょ
+    meaning: Cung điện Hoàng gia
+  - word: 皇居
+    reading: こうきょ
+    meaning: Cung điện Hoàng gia
+
+### 呈 (Trình)
+
+level: N1
+meaningVi: Trình bày
+hanViet: Trình
+onyomi: ["テイ"]
+kunyomi: []
+strokeCount: 7
+writingHint: Miệng ( ) vua ( ) đang trình bày ( ) 呈 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 進呈
+    reading: しんてい
+    meaning: trình bày
+  - word: 進呈
+    reading: しんてい
+    meaning: trình bày
+
+### 唱 (Xướng)
+
+level: N1
+meaningVi: Ca xướng
+hanViet: Xướng
+onyomi: ["ショウ"]
+kunyomi: ["とな.える"]
+strokeCount: 11
+writingHint: Miệng ( ) ngày ( ) qua ngày ( ) ca xướng ( ) 唱 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 合唱
+    reading: がっしょう
+    meaning: đồng ca; hát đồng ca
+  - word: 唱える
+    reading: となえる
+    meaning: đọc thuộc lòng; tụng kinh; kêu gọi
+  - word: 合唱
+    reading: がっしょう
+    meaning: đồng ca; hát đồng ca
 
 ### 娼 (Xướng)
 
@@ -17368,14 +24601,14 @@ openGaps:
 examples:
   - none
 
-### 直 (Thực)
+### 殖 (Thực)
 
 level: N1
 meaningVi: Thực dân
 hanViet: Thực
-onyomi: ["チョク", "ジキ", "ジカ"]
-kunyomi: ["ただ.ちに", "なお.す", "-なお.す", "なお.る", "なお.き", "す.ぐ"]
-strokeCount: 8
+onyomi: ["ショク"]
+kunyomi: ["ふ.える", "ふ.やす"]
+strokeCount: 12
 writingHint: Xấu xa ( ) trực tiếp ( ) là thực dân ( ) 殖 6
 sourcePages: []
 sources:
@@ -17386,17 +24619,47 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thực maps to 37 KANJIDIC2 candidates; kept extracted 直
+  - none
 examples:
-  - word: 率直
-    reading: そっちょく
-    meaning: sự thẳng thắn; thẳng thắn; cởi mở
-  - word: 直感
-    reading: ちょっかん
-    meaning: trực giác
-  - word: 出直し
-    reading: でなおし
-    meaning: điều chỉnh; chỉnh sửa
+  - word: 繁殖
+    reading: はんしょく
+    meaning: sinh sản; nhân lên; tăng trưởng; nhân giống
+  - word: 繁殖
+    reading: はんしょく
+    meaning: sinh sản; nhân lên; tăng trưởng; nhân giống
+  - word: 殖やす
+    reading: ふやす
+    meaning: tăng thêm, thêm vào, tăng thêm
+
+### 剥 (Bác)
+
+level: N1
+meaningVi: Bóc, gọt
+hanViet: Bác
+onyomi: ["ハク", "ホク"]
+kunyomi: ["へ.ぐ", "へず.る", "む.く", "む.ける", "は.がれる", "は.ぐ", "は.げる", "は.がす"]
+strokeCount: 10
+writingHint: Em Thủy ( ) dùng đao ( ) để gọt ( )剥 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 剥がす
+    reading: はがす
+    meaning: xé; lột; lột; lột; lột da; lột; cởi quần áo; tước bỏ; tách ra;t
+  - word: 剥ぐ
+    reading: はぐ
+    meaning: xé; lột; lột; lột; lột da; lột; cởi quần áo; tước bỏ
+  - word: 剥げる
+    reading: はげる
+    meaning: bong ra; mòn đi; phai màu; phai màu
 
 ### 隶 (Lộc)
 
@@ -17421,15 +24684,15 @@ openGaps:
 examples:
   - none
 
-### 盾 (Tuần)
+### 盾 (Thuẫn)
 
 level: N1
-meaningVi: Tuần hoàn
-hanViet: Tuần
+meaningVi: Mâu thuẫn
+hanViet: Thuẫn
 onyomi: ["ジュン"]
 kunyomi: ["たて"]
 strokeCount: 9
-writingHint: 2 người ( ) cần đè nén những mâu thuẫn ( ) để cuộc sống tuần hoàn ( )循 1 4
+writingHint: Dưới sườn núi ( ) có 10 ( ) mắt ( ) nhìn nhau do mâu thuẫn ( ) 盾 1
 sourcePages: []
 sources:
   level: ebook
@@ -17439,7 +24702,7 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tuần maps to 40 KANJIDIC2 candidates; kept extracted 盾
+  - none
 examples:
   - word: 盾
     reading: たて
@@ -17450,6 +24713,33 @@ examples:
   - word: 矛盾
     reading: むじゅん
     meaning: sự mâu thuẫn, sự không nhất quán
+
+### 循 (Tuần)
+
+level: N1
+meaningVi: Tuần hoàn
+hanViet: Tuần
+onyomi: ["ジュン"]
+kunyomi: []
+strokeCount: 12
+writingHint: 2 người ( ) cần đè nén những mâu thuẫn ( ) để cuộc sống tuần hoàn ( )循 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 循環
+    reading: じゅんかん
+    meaning: tuần hoàn, luân chuyển, chu kỳ
+  - word: 循環
+    reading: じゅんかん
+    meaning: tuần hoàn; vòng quay; chu kỳ
 
 ### 甲 (Giáp)
 
@@ -17505,6 +24795,77 @@ examples:
     reading: みさき
     meaning: mũi đất
 
+### 巫 (Vu)
+
+level: N1
+meaningVi: Vu nữ
+hanViet: Vu
+onyomi: ["フ"]
+kunyomi: ["みこ", "かんなぎ"]
+strokeCount: 7
+writingHint: Công nhân ( ) đứng giữa 2 người ( ) Vu nữ ( ) 巫 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 囃 (Tạp)
+
+level: N1
+meaningVi: Tán dương
+hanViet: Tạp
+onyomi: ["サツ", "ソウ"]
+kunyomi: ["はや.す", "はやし"]
+strokeCount: 21
+writingHint: Miệng ( ) nói lần đầu ( ) 2 người ( ) trồng cây ( ) nuôi chim ( 隹) đã thành công thật đáng tán dương (囃) 4 16
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 伐 (Phạt)
+
+level: N1
+meaningVi: Chinh phạt
+hanViet: Phạt
+onyomi: ["バツ", "ハツ", "カ", "ボチ"]
+kunyomi: ["き.る", "そむ.く", "う.つ"]
+strokeCount: 6
+writingHint: Người ( ) đi qua ( ) thôi cũng bị phạt ( ) 伐 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 伐
+    reading: ばつ
+    meaning: đình công; tấn công; trừng phạt
+  - word: 伐
+    reading: ばつ
+    meaning: đình công; tấn công; trừng phạt
+
 ### 箋 (Tiên)
 
 level: N1
@@ -17532,15 +24893,15 @@ examples:
     reading: びんせん
     meaning: giấy viết thư
 
-### 我 (Nga)
+### 我 (Ngạ)
 
 level: N1
-meaningVi: Con ngỗng
-hanViet: Nga
+meaningVi: đói
+hanViet: Ngạ
 onyomi: ["ガ"]
 kunyomi: ["われ", "わ", "わ.が-", "わが-"]
 strokeCount: 7
-writingHint: Con ngỗng ( ) ngã ( ) vào con chim ( ) 鳥 1 5 7
+writingHint: Đói ( ) ăn ( ) là ngã ( ) 我 13
 sourcePages: []
 sources:
   level: ebook
@@ -17562,14 +24923,74 @@ examples:
     reading: じが
     meaning: cái tôi
 
-### 宅 (Sá)
+### 鳥 (Nga)
+
+level: N1
+meaningVi: Con ngỗng
+hanViet: Nga
+onyomi: ["チョウ"]
+kunyomi: ["とり"]
+strokeCount: 11
+writingHint: Con ngỗng ( ) ngã ( ) vào con chim ( ) 鳥 1 5 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Nga maps to 17 KANJIDIC2 candidates; kept extracted 鳥
+examples:
+  - word: 鳥居
+    reading: とりい
+    meaning: torii (cổng vòm của đền thờ Thần đạo)
+  - word: 渡り鳥
+    reading: わたりどり
+    meaning: chim di trú; chim đi qua
+  - word: 鳥居
+    reading: とりい
+    meaning: torii (cổng vòm của đền thờ Thần đạo)
+
+### 言 (Thác)
+
+level: N1
+meaningVi: Ủy thác
+hanViet: Thác
+onyomi: ["ゲン", "ゴン"]
+kunyomi: ["い.う", "こと"]
+strokeCount: 7
+writingHint: Nói ( ) 17 ( ) lần để ủy thác ( ) 託 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thác maps to 28 KANJIDIC2 candidates; kept extracted 言
+examples:
+  - word: 伝言
+    reading: つてごと
+    meaning: tin nhắn bằng lời nói; tin đồn; lời nói
+  - word: 発言
+    reading: はつげん
+    meaning: lời nói; lời phát biểu; lời đề nghị
+  - word: 証言
+    reading: しょうげん
+    meaning: bằng chứng; lời chứng
+
+### 詫 (Sá)
 
 level: N1
 meaningVi: Xin lỗi
 hanViet: Sá
-onyomi: ["タク"]
-kunyomi: []
-strokeCount: 6
+onyomi: ["タ"]
+kunyomi: ["わび", "わび.しい", "かこつ", "わ.びる", "わび.る"]
+strokeCount: 13
 writingHint: Nói ( ) với cả nhà ( ) lời xin lỗi ( )詫 1 8
 sourcePages: []
 sources:
@@ -17580,17 +25001,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Sá maps to 27 KANJIDIC2 candidates; kept extracted 宅
+  - none
 examples:
-  - word: 社宅
-    reading: しゃたく
-    meaning: nhà thuộc quyền sở hữu của công ty
-  - word: 邸宅
-    reading: ていたく
-    meaning: biệt thự; nơi ở
-  - word: 社宅
-    reading: しゃたく
-    meaning: nhà thuộc quyền sở hữu của công ty
+  - word: 詫び
+    reading: わび
+    meaning: lời xin lỗi
+  - word: 詫び
+    reading: わび
+    meaning: lời xin lỗi
+  - word: 詫びる
+    reading: わびる
+    meaning: xin lỗi
 
 ### 托 (Thác)
 
@@ -17614,14 +25035,36 @@ openGaps:
 examples:
   - none
 
-### 帛 (Cẩm)
+### 羞 (Tu)
+
+level: N1
+meaningVi: Nhút nhát
+hanViet: Tu
+onyomi: ["シュウ"]
+kunyomi: ["はじ.る", "すすめ.る", "は.ずかしい"]
+strokeCount: 11
+writingHint: Người đẻ năm dê ( ) và năm sửu ( ) thường nhút nhát ( ) 羞 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 錦 (Cẩm)
 
 level: N1
 meaningVi: Thổ cẩm
 hanViet: Cẩm
-onyomi: ["ハク"]
-kunyomi: ["きぬ"]
-strokeCount: 8
+onyomi: ["キン"]
+kunyomi: ["にしき"]
+strokeCount: 16
 writingHint: Dùng kim loại ( ) gắn vào khăn trắng ( ) thổ cẩm ( ) 錦 9
 sourcePages: []
 sources:
@@ -17632,7 +25075,6 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Cẩm maps to 40 KANJIDIC2 candidates; kept extracted 帛
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -17667,14 +25109,14 @@ examples:
     reading: かわら
     meaning: ngói
 
-### 并 (Bính)
+### 餅 (Bính)
 
 level: N1
 meaningVi: Bánh dày
 hanViet: Bính
 onyomi: ["ヘイ", "ヒョウ"]
-kunyomi: ["あわ.せる", "なら.ぶ"]
-strokeCount: 6
+kunyomi: ["もち", "もちい"]
+strokeCount: 14
 writingHint: Ăn ( ) trộm của yêu tinh ( ) cái bánh dày ( ) 餅 1 10 11
 sourcePages: []
 sources:
@@ -17683,11 +25125,16 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 餅
+    reading: もち
+    meaning: bánh nếp
+  - word: 餅
+    reading: もち
+    meaning: bánh mochi
 
 ### 併 (Tinh)
 
@@ -17716,14 +25163,94 @@ examples:
     reading: がっぺい
     meaning: sự kết hợp; sự hợp nhất; sáp nhập; sự liên minh; sự liên kết
 
-### 正 (Oai)
+### 并 (Biên)
+
+level: N1
+meaningVi: Tường rào
+hanViet: Biên
+onyomi: ["ヘイ", "ヒョウ"]
+kunyomi: ["あわ.せる", "なら.ぶ"]
+strokeCount: 6
+writingHint: Ở tường rào ( ) đất ( ) có xác chết ( ) con yêu tinh ( ) 并 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Biên maps to 73 KANJIDIC2 candidates; kept extracted 并
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 暇 (Hạ)
+
+level: N1
+meaningVi: Nhàn hạ
+hanViet: Hạ
+onyomi: ["カ"]
+kunyomi: ["ひま", "いとま"]
+strokeCount: 13
+writingHint: Cả ngày ( ) xác chết ( ) 2 ( ) cô ( ) chỉ đi lại ( ) khá nhàn hạ ( ) 暇 5 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 暇
+    reading: いとま
+    meaning: thời gian rảnh rỗi; sự giải trí; sự ra đi; thời gian rảnh rỗi; chia tay
+  - word: 余暇
+    reading: よか
+    meaning: sự nhàn rỗi; thời gian rảnh rỗi; thời gian rảnh rỗi
+  - word: 暇
+    reading: いとま
+    meaning: thời gian rảnh rỗi; sự giải trí; sự ra đi; chia tay
+
+### 霞 (Hà)
+
+level: N1
+meaningVi: Sương mờ
+hanViet: Hà
+onyomi: ["カ", "ゲ"]
+kunyomi: ["かすみ", "かす.む"]
+strokeCount: 17
+writingHint: Mưa ( ) lên xác chết ( ) 2 ( ) cô ( ) lại ( ) tạo nên làn sương mờ ( ) 霞 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 霞む
+    reading: かすむ
+    meaning: trở nên mù mịt; trở nên mù mịt
+  - word: 霞む
+    reading: かすむ
+    meaning: trở nên mù mịt
+
+### 歪 (Oai)
 
 level: N1
 meaningVi: Méo, cong
 hanViet: Oai
-onyomi: ["セイ", "ショウ"]
-kunyomi: ["ただ.しい", "ただ.す", "まさ", "まさ.に"]
-strokeCount: 5
+onyomi: ["ワイ", "エ"]
+kunyomi: ["いが.む", "いびつ", "ひず.む", "ゆが.む"]
+strokeCount: 9
 writingHint: Làm việc bất ( ) chính ( ) mà vẫn oai ( ) 歪 1
 sourcePages: []
 sources:
@@ -17734,26 +25261,53 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Oai maps to 5 KANJIDIC2 candidates; kept extracted 正
+  - none
 examples:
-  - word: 正当
-    reading: せいとう
-    meaning: công bằng;chính đáng;đúng đắn;đúng đắn;đúng đắn;công bằng;hợp lý;hợp pháp;hợp pháp
-  - word: 正規
-    reading: せいき
-    meaning: thường xuyên; hợp pháp; chính thức; được thành lập; hợp pháp
-  - word: 正に
-    reading: まさに
-    meaning: chính xác; chắc chắn
+  - word: 歪む
+    reading: いがむ
+    meaning: làm cong; làm lệch; làm chệch hướng; bị uốn cong; bị bóp méo; bị uốn cong; nghiêng; nghiêng; bị biến dạng
+  - word: 歪む
+    reading: いがむ
+    meaning: làm cong; làm lệch; làm chệch hướng; bị uốn cong; bị bóp méo; nghiêng; bị biến dạng
 
-### 勇 (Dũng)
+### 男 (Sanh)
+
+level: N1
+meaningVi: Cháu trai
+hanViet: Sanh
+onyomi: ["ダン", "ナン"]
+kunyomi: ["おとこ", "お"]
+strokeCount: 7
+writingHint: Cháu trai ( ) mới sinh ( ) tên Nam ( ) 男 3 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Sanh maps to 30 KANJIDIC2 candidates; kept extracted 男
+examples:
+  - word: 長男
+    reading: ちょうなん
+    meaning: con trai cả
+  - word: 長男
+    reading: ちょうなん
+    meaning: con trai cả
+  - word: 男の人
+    reading: おとこのひと
+    meaning: người đàn ông
+
+### 湧 (Dũng)
 
 level: N1
 meaningVi: Sôi sục
 hanViet: Dũng
-onyomi: ["ユウ"]
-kunyomi: ["いさ.む"]
-strokeCount: 9
+onyomi: ["ユウ", "ヨウ", "ユ"]
+kunyomi: ["わ.く"]
+strokeCount: 12
 writingHint: Nước ( ) tăng lực làm dũng ( ) khí sôi sục ( ),湧 1 4
 sourcePages: []
 sources:
@@ -17766,15 +25320,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 勇敢
-    reading: ゆうかん
-    meaning: lòng dũng cảm; chủ nghĩa anh hùng; sự dũng cảm
-  - word: 勇敢
-    reading: ゆうかん
-    meaning: lòng dũng cảm; chủ nghĩa anh hùng; sự dũng cảm
-  - word: 勇ましい
-    reading: いさましい
-    meaning: dũng cảm, dũng cảm, dũng cảm, dũng cảm
+  - word: 湧く
+    reading: わく
+    meaning: sôi lên, nóng lên, phấn khích, trào ra
+  - word: 湧く
+    reading: わく
+    meaning: sôi lên; trào ra; hào hứng
 
 ### 溜 (Lựu)
 
@@ -17806,15 +25357,37 @@ examples:
     reading: ためる
     meaning: tích lũy, tích lũy
 
-### 留 (Lưu)
+### 瑠 (Lưu)
 
 level: N1
 meaningVi: Ngọc lưu ly
 hanViet: Lưu
+onyomi: ["ル", "リュウ"]
+kunyomi: []
+strokeCount: 14
+writingHint: Vua ( ) lưu lại ( ) rất nhiều ngọc lưu ly ( ) 瑠 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 留 (Lựu)
+
+level: N1
+meaningVi: Cái bướu
+hanViet: Lựu
 onyomi: ["リュウ", "ル"]
 kunyomi: ["と.める", "と.まる", "とど.める", "とど.まる", "るうぶる"]
 strokeCount: 10
-writingHint: Vua ( ) lưu lại ( ) rất nhiều ngọc lưu ly ( ) 瑠 5
+writingHint: Cái bướu ( ) được bệnh ( ) viện lưu lại ( ) 留 1
 sourcePages: []
 sources:
   level: ebook
@@ -17835,29 +25408,6 @@ examples:
   - word: 加留多
     reading: かるた
     meaning: (pt:) (n) chơi bài (pt: carta)
-
-### 疒 (Lựu)
-
-level: N1
-meaningVi: Cái bướu
-hanViet: Lựu
-onyomi: ["ダク", "ニャク", "ソウ", "ジョウ", "シツ"]
-kunyomi: ["や.む"]
-strokeCount: 5
-writingHint: Cái bướu ( ) được bệnh ( ) viện lưu lại ( ) 留 1
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lựu maps to 53 KANJIDIC2 candidates; kept extracted 疒
-  - examples missing; fill from ebook/manual pass later
-examples:
-  - none
 
 ### 緯 (Vĩ)
 
@@ -17889,15 +25439,37 @@ examples:
     reading: いど
     meaning: vĩ độ (điều hướng)
 
-### 市 (Thị)
+### 柿 (Thị)
 
 level: N1
 meaningVi: Cây hồng
 hanViet: Thị
 onyomi: ["シ"]
-kunyomi: ["いち"]
-strokeCount: 5
+kunyomi: ["かき"]
+strokeCount: 9
 writingHint: Cây ( ) trồng nhiều ở thành phố ( ) là cây hồng ( ) 柿 2 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 肺 (Phế)
+
+level: N1
+meaningVi: Phổi
+hanViet: Phế
+onyomi: ["ハイ"]
+kunyomi: []
+strokeCount: 9
+writingHint: Nguyệt ( ) ra thành phố ( ) chữa bệnh phổi ( ) 肺 5
 sourcePages: []
 sources:
   level: ebook
@@ -17909,15 +25481,12 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 市
-    reading: いち
-    meaning: thị trường; công bằng
-  - word: 市街
-    reading: しがい
-    meaning: khu đô thị; đường phố; thị trấn; thành phố
-  - word: 市
-    reading: いち
-    meaning: thị trường; công bằng
+  - word: 肺
+    reading: はい
+    meaning: phổi
+  - word: 肺
+    reading: はい
+    meaning: phổi
 
 ### 択 (Xách)
 
@@ -17998,14 +25567,14 @@ examples:
     reading: さかのぼる
     meaning: truy ngược; đi ngược dòng; áp dụng hồi tố
 
-### 夂 (Tuấn)
+### 俊 (Tuấn)
 
 level: N1
 meaningVi: Tuấn tú
 hanViet: Tuấn
-onyomi: ["チ"]
-kunyomi: ["しゅう"]
-strokeCount: 3
+onyomi: ["シュン"]
+kunyomi: []
+strokeCount: 9
 writingHint: Người đứng ( ) mà có 4 ( ) chân chạy ( ) phía sau ( ) là người tuấn tú ( ) 俊 3
 sourcePages: []
 sources:
@@ -18016,20 +25585,41 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tuấn maps to 40 KANJIDIC2 candidates; kept extracted 夂
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 官 (Quan)
+### 唆 (Toa)
 
 level: N1
-meaningVi: Quan tài
-hanViet: Quan
-onyomi: ["カン"]
-kunyomi: []
-strokeCount: 8
-writingHint: Cây ( ) được quan ( ) làm thành quan tài ( ) 棺 2 5
+meaningVi: Xúi giục
+hanViet: Toa
+onyomi: ["サ"]
+kunyomi: ["そそ.る", "そそのか.す"]
+strokeCount: 10
+writingHint: Miệng ( ) và 4 ( ) chân chạy ( ) phía sau ( ) xúi giục ( ) 唆 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 酸 (Toan)
+
+level: N1
+meaningVi: Chua
+hanViet: Toan
+onyomi: ["サン"]
+kunyomi: ["す.い"]
+strokeCount: 14
+writingHint: Giờ Dậu ( ) 4 ( ) chân chạy ( ) phía sau ( ) mua giấm chua ( ) 酸 8
 sourcePages: []
 sources:
   level: ebook
@@ -18041,15 +25631,81 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 官僚
-    reading: かんりょう
-    meaning: quan chức; bộ máy quan liêu
-  - word: 器官
-    reading: きかん
-    meaning: cơ quan (của cơ thể); dụng cụ
-  - word: 長官
-    reading: ちょうかん
-    meaning: chánh văn phòng; (chính phủ) thư ký
+  - word: 酸っぱい
+    reading: すっぱい
+    meaning: chua; axit
+  - word: 酸化
+    reading: さんか
+    meaning: quá trình oxy hóa
+  - word: 酸
+    reading: さん
+    meaning: axit
+
+### 駿 (Tuấn)
+
+level: N1
+meaningVi: Tuấn mã
+hanViet: Tuấn
+onyomi: ["シュン", "スン"]
+kunyomi: ["すぐ.れる"]
+strokeCount: 17
+writingHint: Con ngựa ( ) 4 ( ) chân chạy ( ) phía sau ( ) là tuấn mã ( ) 駿 2 11 12
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 竣 (Thuân)
+
+level: N1
+meaningVi: Xong việc
+hanViet: Thuân
+onyomi: ["ドウ", "シュン"]
+kunyomi: ["わらわ", "わらべ", "おわ.る"]
+strokeCount: 12
+writingHint: Đứng ( ) đợi 4 ( ) chân chạy ( ) phía sau ( ) đến khi xong việc ( ) 竣 6 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 棺 (Quan)
+
+level: N1
+meaningVi: Quan tài
+hanViet: Quan
+onyomi: ["カン"]
+kunyomi: []
+strokeCount: 12
+writingHint: Cây ( ) được quan ( ) làm thành quan tài ( ) 棺 2 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 遣 (Khiển)
 
@@ -18081,14 +25737,44 @@ examples:
     reading: はけん
     meaning: gửi đi; gửi đi
 
-### 阜 (Phụ)
+### 追 (Chùy)
+
+level: N1
+meaningVi: Búa
+hanViet: Chùy
+onyomi: ["ツイ"]
+kunyomi: ["お.う"]
+strokeCount: 9
+writingHint: Cầm búa ( ) gỗ ( ) đi truy đuổi ( ) 追 2 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Chùy maps to 39 KANJIDIC2 candidates; kept extracted 追
+examples:
+  - word: 追及
+    reading: ついきゅう
+    meaning: đạt được; thực hiện; giải quyết (tội phạm)
+  - word: 追い込む
+    reading: おいこむ
+    meaning: đi theo đàn; vào góc; lái xe
+  - word: 追跡
+    reading: ついせき
+    meaning: theo đuổi
+
+### 埠 (Phụ)
 
 level: N1
 meaningVi: Bến tàu
 hanViet: Phụ
-onyomi: ["フ", "フウ"]
-kunyomi: []
-strokeCount: 8
+onyomi: ["フ", "ホ"]
+kunyomi: ["つか", "はとば"]
+strokeCount: 11
 writingHint: Đất ( ) ở tỉnh Gifu ( ) có bến tàu ( ) 埠 4
 sourcePages: []
 sources:
@@ -18126,45 +25812,15 @@ openGaps:
 examples:
   - none
 
-### 師 (Sư)
+### 獅 (Sư)
 
 level: N1
 meaningVi: Con sư tử
 hanViet: Sư
 onyomi: ["シ"]
-kunyomi: ["いくさ"]
-strokeCount: 10
+kunyomi: ["しし"]
+strokeCount: 13
 writingHint: Con chó ( ) của giáo sư ( ) to như con sư tử ( ) 獅 1 4 10
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: existing_vocab_supplement
-openGaps:
-  - none
-examples:
-  - word: 牧師
-    reading: ぼくし
-    meaning: mục sư; mục sư; mục sư
-  - word: 牧師
-    reading: ぼくし
-    meaning: mục sư
-  - word: 講師
-    reading: こうし
-    meaning: giảng viên
-
-### 匕 (Chỉ)
-
-level: N1
-meaningVi: Ý chí
-hanViet: Chỉ
-onyomi: ["ヒ"]
-kunyomi: ["さじ"]
-strokeCount: 2
-writingHint: Chỉ ( ) cười hihi ( ) cả ngày ( ) 日 2 1
 sourcePages: []
 sources:
   level: ebook
@@ -18174,7 +25830,6 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Chỉ maps to 105 KANJIDIC2 candidates; kept extracted 匕
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -18209,14 +25864,14 @@ examples:
     reading: ようし
     meaning: ý chính, những điều cần thiết, tóm tắt, những điều cơ bản
 
-### 感 (Hám)
+### 憾 (Hám)
 
 level: N1
 meaningVi: Hối tiếc
 hanViet: Hám
 onyomi: ["カン"]
-kunyomi: []
-strokeCount: 13
+kunyomi: ["うら.む"]
+strokeCount: 16
 writingHint: Trái tim ( ) cảm thấy ( ) hối tiếc ( ) 憾 10 12
 sourcePages: []
 sources:
@@ -18225,19 +25880,56 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hám maps to 66 KANJIDIC2 candidates; kept extracted 感
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 鈍感
-    reading: どんかん
-    meaning: sự cứng đầu; sự cứng nhắc
-  - word: 直感
-    reading: ちょっかん
-    meaning: trực giác
-  - word: 感慨
-    reading: かんがい
-    meaning: cảm xúc mạnh mẽ; cảm xúc sâu sắc
+  - none
+
+### 咸 (Châm)
+
+level: N1
+meaningVi: Châm cứu
+hanViet: Châm
+onyomi: ["カン", "ゲン"]
+kunyomi: []
+strokeCount: 9
+writingHint: Châm cứu ( ) bằng kim ( ) giúp giảm ( ) đau 咸 1 17
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Châm maps to 27 KANJIDIC2 candidates; kept extracted 咸
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 勾 (Câu)
+
+level: N1
+meaningVi: Móc câu
+hanViet: Câu
+onyomi: ["コウ", "ク"]
+kunyomi: ["かぎ", "ま.がる"]
+strokeCount: 4
+writingHint: Bao ( ) đựng 4 ( ) cái móc câu ( ) 勾 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 匂 (Mùi)
 
@@ -18313,6 +26005,33 @@ openGaps:
 examples:
   - none
 
+### 刃 (Nhận)
+
+level: N1
+meaningVi: Sắc nhọn
+hanViet: Nhận
+onyomi: ["ジン", "ニン"]
+kunyomi: ["は", "やいば", "き.る"]
+strokeCount: 3
+writingHint: Đao ( ) bị xước ( ) những vẫn sắc nhọn ( ) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 刃
+    reading: は
+    meaning: lưỡi (của một thanh kiếm)
+  - word: 刃
+    reading: は
+    meaning: lưỡi (của một thanh kiếm)
+
 ### 忍 (Nhẫn)
 
 level: N1
@@ -18357,6 +26076,60 @@ openGaps:
 examples:
   - none
 
+### 隠 (Ẩn)
+
+level: N1
+meaningVi: Ở ẩn
+hanViet: Ẩn
+onyomi: ["イン", "オン"]
+kunyomi: ["かく.す", "かく.し", "かく.れる", "よ.る"]
+strokeCount: 14
+writingHint: Bồ ( ) dùng móng tay ( ) Em ( ) đặt lên tâm ( ) quyết ở ẩn ( ) 隠 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 隠居
+    reading: いんきょ
+    meaning: người về hưu; người về hưu
+  - word: 隠居
+    reading: いんきょ
+    meaning: người về hưu
+  - word: 隠す
+    reading: かくす
+    meaning: che giấu
+
+### 穏 (Ổn)
+
+level: N1
+meaningVi: Yên ổn
+hanViet: Ổn
+onyomi: ["オン"]
+kunyomi: ["おだ.やか"]
+strokeCount: 16
+writingHint: Hòa ( ) dùng móng tay ( ) Em ( ) đặt lên tâm ( ) thấy yên ổn ( ) 穏 1 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 穏やか
+    reading: おだやか
+    meaning: bình tĩnh; nhẹ nhàng; yên tĩnh
+
 ### 痩 (Sấu)
 
 level: N1
@@ -18385,6 +26158,60 @@ examples:
     hanViet: sấu
     meaning: gầy đi
 
+### 申 (Sáp)
+
+level: N1
+meaningVi: Sáp nhập
+hanViet: Sáp
+onyomi: ["シン"]
+kunyomi: ["もう.す", "もう.し-", "さる"]
+strokeCount: 5
+writingHint: Sáp nhập ( ) bằng tay ( ) 2 ( ) thứ thân ( ) thuộc nhất 2 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Sáp maps to 27 KANJIDIC2 candidates; kept extracted 申
+examples:
+  - word: 申し込み
+    reading: もうしこみ
+    meaning: đơn đăng ký;sự gia nhập;yêu cầu;đăng ký;đề nghị;đề xuất;khởi động;thách thức
+  - word: 申し出る
+    reading: もうしでる
+    meaning: báo cáo;nói;đề nghị;gửi;yêu cầu;đưa ra lời đề nghị;đưa ra thông tin
+  - word: 申出
+    reading: もうしで
+    meaning: đề nghị;yêu cầu;yêu cầu;báo cáo;thông báo
+
+### 縄 (Thằng)
+
+level: N1
+meaningVi: Dây thừng
+hanViet: Thằng
+onyomi: ["ジョウ"]
+kunyomi: ["なわ", "ただ.す"]
+strokeCount: 15
+writingHint: Sợi tơ ( ) 2 ngày ( ) nối Là (L) thành dây thừng ( ) 縄 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 縄
+    reading: なわ
+    meaning: dây thừng; cây gai dầu
+
 ### 陥 (Hãm)
 
 level: N1
@@ -18409,14 +26236,14 @@ examples:
     reading: けっかん
     meaning: khiếm khuyết; thiếu sót
 
-### 旧 (Đạo)
+### 稲 (Đạo)
 
 level: N1
 meaningVi: Bông lúa
 hanViet: Đạo
-onyomi: ["キュウ"]
-kunyomi: ["ふる.い", "もと"]
-strokeCount: 5
+onyomi: ["トウ", "テ"]
+kunyomi: ["いね", "いな-"]
+strokeCount: 14
 writingHint: Hòa ( ) sơn lại móng tay ( ) 18 ( ) lần vì phải cắt lúa ( ) 稲 6
 sourcePages: []
 sources:
@@ -18427,26 +26254,48 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đạo maps to 95 KANJIDIC2 candidates; kept extracted 旧
+  - none
 examples:
-  - word: 旧事
-    reading: くじ
-    meaning: sự kiện đã qua; chuyện đã qua
-  - word: 復旧
-    reading: ふくきゅう
-    meaning: sự phục hồi; sự phục hồi; sự phục hồi
-  - word: 旧知
-    reading: きゅうち
-    meaning: bạn cũ; tình bạn cũ
+  - word: 稲光
+    reading: いなびかり
+    meaning: (tia chớp) tia chớp
+  - word: 稲光
+    reading: いなびかり
+    meaning: (tia chớp) tia chớp
+  - word: 稲
+    reading: いね
+    meaning: cây lúa
 
-### 発 (Phế)
+### 葵 (Quỳ)
+
+level: N1
+meaningVi: Hoa thục quỳ
+hanViet: Quỳ
+onyomi: ["キ"]
+kunyomi: ["あおい"]
+strokeCount: 12
+writingHint: Cô Thảo ( ) cầm bát ( ) ra ngoài trời ( ) hái hoa thục quỳ ( ) 葵 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 廃 (Phế)
 
 level: N1
 meaningVi: Tàn phế
 hanViet: Phế
-onyomi: ["ハツ", "ホツ"]
-kunyomi: ["た.つ", "あば.く", "おこ.る", "つか.わす", "はな.つ"]
-strokeCount: 9
+onyomi: ["ハイ"]
+kunyomi: ["すた.れる", "すた.る"]
+strokeCount: 12
 writingHint: Dưới mái hiên ( ) phát ( ) bệnh tàn phế ( ) 廃 1
 sourcePages: []
 sources:
@@ -18457,26 +26306,83 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phế maps to 17 KANJIDIC2 candidates; kept extracted 発
+  - none
 examples:
-  - word: 発作
-    reading: ほっさ
-    meaning: phù hợp; co thắt
-  - word: 発言
-    reading: はつげん
-    meaning: lời nói; lời phát biểu; lời đề nghị
-  - word: 発芽
-    reading: はつが
-    meaning: đang phát triển
+  - word: 荒廃
+    reading: こうはい
+    meaning: hủy hoại
+  - word: 廃止
+    reading: はいし
+    meaning: bãi bỏ; bãi bỏ
+  - word: 廃れる
+    reading: すたれる
+    meaning: không còn sử dụng nữa; trở nên lỗi thời; chết đi; lỗi thời
 
-### 成 (Thành)
+### 庶 (Thứ)
+
+level: N1
+meaningVi: Thứ dân
+hanViet: Thứ
+onyomi: ["ショ"]
+kunyomi: []
+strokeCount: 11
+writingHint: Dưới mái hiên ( ) uống cốc nước ( ) ngồi đốt lửa ( ) cùng thứ dân ( )庶 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 庶務
+    reading: しょむ
+    meaning: công việc chung
+  - word: 庶民
+    reading: しょみん
+    meaning: quần chúng; dân thường
+  - word: 庶民
+    reading: しょみん
+    meaning: quần chúng; dân thường
+
+### 遮 (Già)
+
+level: N1
+meaningVi: Che, chắn
+hanViet: Già
+onyomi: ["シャ"]
+kunyomi: ["さえぎ.る"]
+strokeCount: 14
+writingHint: Thứ dân ( ) đi xa ( ) cần che chắn ( ) 遮 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 遮る
+    reading: さえぎる
+    meaning: làm gián đoạn; ngăn chặn; cản trở
+  - word: 遮る
+    reading: さえぎる
+    meaning: làm gián đoạn; ngăn chặn; cản trở
+
+### 誠 (Thành)
 
 level: N1
 meaningVi: Thành thực
 hanViet: Thành
-onyomi: ["セイ", "ジョウ"]
-kunyomi: ["な.る", "な.す", "-な.す"]
-strokeCount: 6
+onyomi: ["セイ"]
+kunyomi: ["まこと"]
+strokeCount: 13
 writingHint: Lời nói ( ) của người thành công ( ) rất thành thực ( ) 誠 1 11 13
 sourcePages: []
 sources:
@@ -18489,25 +26395,25 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 結成
-    reading: けっせい
-    meaning: sự hình thành
-  - word: 行き成り
-    reading: いきなり
-    meaning: đột nhiên
-  - word: 成果
-    reading: せいか
-    meaning: kết quả; hoa quả
+  - word: 誠実
+    reading: せいじつ
+    meaning: chân thành; thành thật; chung thủy
+  - word: 誠
+    reading: まこと
+    meaning: sự thật;sự tin tưởng;sự trung thành;sự chân thành;sự tin tưởng;sự tự tin;sự tin cậy;sự tận tâm
+  - word: 誠実
+    reading: せいじつ
+    meaning: chân thành; thành thật; chung thủy
 
-### 二 (Nhị)
+### 斉 (Tề)
 
 level: N1
-meaningVi: Số 2
-hanViet: Nhị
-onyomi: ["ニ", "ジ"]
-kunyomi: ["ふた", "ふた.つ", "ふたたび"]
-strokeCount: 2
-writingHint: 1 ( ) tên giặc ( ) gọi 2 ( ) tiểu nhị ( ) 弐 5
+meaningVi: Ngang bằng
+hanViet: Tề
+onyomi: ["セイ", "サイ"]
+kunyomi: ["そろ.う", "ひと.しい", "ひと.しく", "あたる", "はやい"]
+strokeCount: 8
+writingHint: Học văn ( ) Nguyệt thiếu ( ) sự chỉnh tề ( ) 斉 1
 sourcePages: []
 sources:
   level: ebook
@@ -18519,15 +26425,261 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 二人
-    reading: ににん
-    meaning: hai người;hai người;cặp;cặp đôi
-  - word: 真っ二つ
-    reading: まっぷたつ
-    meaning: thành hai phần bằng nhau
-  - word: 二人
-    reading: ににん
-    meaning: hai người; cặp; cặp đôi
+  - word: 一斉
+    reading: いっせい
+    meaning: đồng thời, tất cả cùng một lúc
+  - word: 一斉
+    reading: いっせい
+    meaning: đồng loạt; cùng một lúc
+
+### 弐 (Nhị)
+
+level: N1
+meaningVi: Số 2
+hanViet: Nhị
+onyomi: ["ニ", "ジ"]
+kunyomi: ["ふた.つ", "そえ"]
+strokeCount: 6
+writingHint: 1 ( ) tên giặc ( ) gọi 2 ( ) tiểu nhị ( ) 弐 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Nhị maps to 62 KANJIDIC2 candidates; kept extracted 弐
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 武 (Phú)
+
+level: N1
+meaningVi: Đánh thuế
+hanViet: Phú
+onyomi: ["ブ", "ム"]
+kunyomi: ["たけ", "たけ.し"]
+strokeCount: 8
+writingHint: Đánh thuế ( ) bảo bối ( ) và vũ khí ( ) 武 14 15
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Phú maps to 112 KANJIDIC2 candidates; kept extracted 武
+examples:
+  - word: 武力
+    reading: ぶりょく
+    meaning: sức mạnh vũ trang;sức mạnh quân sự;thanh kiếm;lực lượng
+  - word: 武装
+    reading: ぶそう
+    meaning: vũ khí; vũ khí; vũ trang
+  - word: 武装
+    reading: ぶそう
+    meaning: vũ khí; vũ trang
+
+### 戒 (Giới)
+
+level: N1
+meaningVi: Cảnh giới
+hanViet: Giới
+onyomi: ["カイ"]
+kunyomi: ["いまし.める"]
+strokeCount: 7
+writingHint: Chắp tay ( ) bước qua ( ) cảnh giới ( ) mới 戒 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 警戒
+    reading: けいかい
+    meaning: cảnh cáo; khuyên răn; cảnh giác
+  - word: 警戒
+    reading: けいかい
+    meaning: cảnh cáo; khuyên răn; cảnh giác
+
+### 賊 (Tặc)
+
+level: N1
+meaningVi: Hải tặc
+hanViet: Tặc
+onyomi: ["ゾク"]
+kunyomi: []
+strokeCount: 13
+writingHint: Bảo bối ( ) đã qua ( ) tay 10 ( ) hải tặc ( ) 賊 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 式 (Thức)
+
+level: N1
+meaningVi: Lau chùi
+hanViet: Thức
+onyomi: ["シキ"]
+kunyomi: []
+strokeCount: 6
+writingHint: Lau chùi ( ) bằng tay ( ) rất hình thức ( ) 式 2 8 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 株式
+    reading: かぶしき
+    meaning: cổ phiếu (công ty)
+  - word: 方式
+    reading: ほうしき
+    meaning: hình thức;phương pháp;hệ thống
+  - word: 様式
+    reading: ようしき
+    meaning: phong cách; hình thức; mẫu mực
+
+### 或 (Hoặc)
+
+level: N1
+meaningVi: Hoặc
+hanViet: Hoặc
+onyomi: ["ワク", "コク", "イキ"]
+kunyomi: ["あ.る", "あるい", "あるいは"]
+strokeCount: 8
+writingHint: Nói qua ( ) miệng ( ) nhất ( ) định vẫn còn nghi hoặc ( ) 或 6 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 或いは
+    reading: あるいは
+    meaning: hoặc; có thể
+  - word: 或る
+    reading: ある
+    meaning: một số...; một số...
+  - word: 或る
+    reading: ある
+    meaning: một số...
+
+### 惑 (Hoặc)
+
+level: N1
+meaningVi: Mê hoặc
+hanViet: Hoặc
+onyomi: ["ワク"]
+kunyomi: ["まど.う"]
+strokeCount: 12
+writingHint: Hoặc ( ) là dùng trái tim ( ) mê hoặc ( ) 惑 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 惑星
+    reading: わくせい
+    meaning: hành tinh
+  - word: 誘惑
+    reading: ゆうわく
+    meaning: sự cám dỗ; sự quyến rũ; dụ dỗ
+  - word: 疑惑
+    reading: ぎわく
+    meaning: sự nghi ngờ; sự nghi ngờ; sự nghi ngờ; sự nghi ngờ
+
+### 栽 (Tài)
+
+level: N1
+meaningVi: Trồng trọt
+hanViet: Tài
+onyomi: ["サイ"]
+kunyomi: []
+strokeCount: 10
+writingHint: 10 ( ) cây ( ) lớn lên qua ( ) tài trồng trọt ( ) 栽 2 8 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 栽培
+    reading: さいばい
+    meaning: trồng trọt
+  - word: 栽培
+    reading: さいばい
+    meaning: trồng trọt
+
+### 載 (Tải)
+
+level: N1
+meaningVi: Đăng tải
+hanViet: Tải
+onyomi: ["サイ"]
+kunyomi: ["の.せる", "の.る"]
+strokeCount: 13
+writingHint: 10 ( ) xe ( ) đi qua ( ) là xe tải ( ) 載 2 11 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 掲載
+    reading: けいさい
+    meaning: sự xuất hiện (ví dụ: bài viết trên giấy)
+  - word: 記載
+    reading: きさい
+    meaning: đề cập đến; mục nhập
+  - word: 記載
+    reading: きさい
+    meaning: đề cập đến; mục nhập
 
 ### 戴 (Đái)
 
@@ -18668,14 +26820,41 @@ examples:
     reading: ほろびる
     meaning: bị hủy hoại; bị chìm xuống; bị diệt vong; bị phá hủy
 
-### 戊 (Mậu)
+### 蔑 (Miệt)
+
+level: N1
+meaningVi: Khinh miệt
+hanViet: Miệt
+onyomi: ["ベツ"]
+kunyomi: ["ないがしろ", "なみ.する", "くらい", "さげす.む"]
+strokeCount: 14
+writingHint: Cô Thảo ( ) lái xe đánh võng ( ) vào giờ Tuất ( ) nên bị khinh miệt ( 蔑) 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 軽蔑
+    reading: けいべつ
+    meaning: khinh thường; khinh thường
+  - word: 軽蔑
+    reading: けいべつ
+    meaning: khinh thường
+
+### 茂 (Mậu)
 
 level: N1
 meaningVi: Um tùm
 hanViet: Mậu
-onyomi: ["ボ", "ボウ"]
-kunyomi: ["つちのえ"]
-strokeCount: 5
+onyomi: ["モ"]
+kunyomi: ["しげ.る"]
+strokeCount: 8
 writingHint: Cỏ ( ) tết Mậu Thân ( ) mọc um tùm ( ) 茂 3
 sourcePages: []
 sources:
@@ -18684,44 +26863,26 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
-
-### 业 (Hư)
-
-level: N1
-meaningVi: Hư không
-hanViet: Hư
-onyomi: []
-kunyomi: []
-strokeCount: null
-writingHint: Hổ ( ) không chịu xếp hàng ( ) là hư ( ) 虚 1
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hư maps to 52 KANJIDIC2 candidates; kept extracted 业
-  - examples missing; fill from ebook/manual pass later
 examples:
-  - none
+  - word: 茂る
+    reading: しげる
+    meaning: trở nên dày đặc, trở nên sang trọng, sang trọng
+  - word: 茂る
+    reading: しげる
+    meaning: mọc um tùm; sum suê
 
 ### 虚 (Hư)
 
 level: N1
-meaningVi: Nói dối
+meaningVi: Hư không
 hanViet: Hư
 onyomi: ["キョ", "コ"]
 kunyomi: ["むな.しい", "うつ.ろ"]
 strokeCount: 11
-writingHint: Miệng ( ) hư ( ) hay nói dối ( )嘘 4 5
+writingHint: Hổ ( ) không chịu xếp hàng ( ) là hư ( ) 虚 1
 sourcePages: []
 sources:
   level: ebook
@@ -18739,6 +26900,36 @@ examples:
   - word: 謙虚
     reading: けんきょ
     meaning: khiêm tốn; nhún nhường
+
+### 嘘 (Hư)
+
+level: N1
+meaningVi: Nói dối
+hanViet: Hư
+onyomi: ["キョ", "コ"]
+kunyomi: ["うそ", "ふ.く"]
+strokeCount: 14
+writingHint: Miệng ( ) hư ( ) hay nói dối ( )嘘 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 嘘つき
+    reading: うそつき
+    meaning: kẻ nói dối (đôi khi được nói không mấy nghiêm túc); bịa đặt
+  - word: 嘘つき
+    reading: うそつき
+    meaning: kẻ nói dối (đôi khi được nói không mấy nghiêm túc); bịa đặt
+  - word: 嘘
+    reading: うそ
+    meaning: nói dối; sự giả dối; sự thật không chính xác; không phù hợp
 
 ### 戯 (Hí)
 
@@ -18849,14 +27040,14 @@ openGaps:
 examples:
   - none
 
-### 男 (Lỗ)
+### 虜 (Lỗ)
 
 level: N1
 meaningVi: Tù binh
 hanViet: Lỗ
-onyomi: ["ダン", "ナン"]
-kunyomi: ["おとこ", "お"]
-strokeCount: 7
+onyomi: ["リョ"]
+kunyomi: ["とりこ"]
+strokeCount: 12
 writingHint: Hổ ( ) bị đàn ông ( ) bắt làm tù binh ( )虜 1 2
 sourcePages: []
 sources:
@@ -18867,17 +27058,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Lỗ maps to 49 KANJIDIC2 candidates; kept extracted 男
+  - target kanji ambiguous: Hán-Việt heading Lỗ maps to 49 KANJIDIC2 candidates; kept extracted 虜
 examples:
-  - word: 長男
-    reading: ちょうなん
-    meaning: con trai cả
-  - word: 長男
-    reading: ちょうなん
-    meaning: con trai cả
-  - word: 男の人
-    reading: おとこのひと
-    meaning: người đàn ông
+  - word: 捕虜
+    reading: ほりょ
+    meaning: tù nhân (chiến tranh)
+  - word: 捕虜
+    reading: ほりょ
+    meaning: tù nhân (chiến tranh)
 
 ### 虐 (Ngược)
 
@@ -18970,14 +27158,14 @@ openGaps:
 examples:
   - none
 
-### 尊 (Tôn)
+### 樽 (Tôn)
 
 level: N1
 meaningVi: Thùng
 hanViet: Tôn
 onyomi: ["ソン"]
-kunyomi: ["たっと.い", "とうと.い", "たっと.ぶ", "とうと.ぶ"]
-strokeCount: 12
+kunyomi: ["たる"]
+strokeCount: 16
 writingHint: Gỗ ( ) + tôn ( ) = Thùng ( )樽 6
 sourcePages: []
 sources:
@@ -18986,19 +27174,11 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 自尊心
-    reading: じそんしん
-    meaning: lòng tự trọng; sự tự phụ
-  - word: 尊い
-    reading: たっとい
-    meaning: quý giá; có giá trị; vô giá; cao quý; cao cả; thiêng liêng
-  - word: 尊ぶ
-    reading: たっとぶ
-    meaning: coi trọng; đánh giá cao; đánh giá cao
+  - none
 
 ### 噂 (Đồn)
 
@@ -19045,6 +27225,36 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 旦 (Đán)
+
+level: N1
+meaningVi: Nguyên đán
+hanViet: Đán
+onyomi: ["タン", "ダン"]
+kunyomi: ["あき.らか", "あきら", "ただし", "あさ", "あした"]
+strokeCount: 5
+writingHint: Ngày ( ) mồng 1 ( ) Tết Nguyên Đán ( ) 旦 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 旦那
+    reading: だんな
+    meaning: chủ (nhà); chồng (không chính thức)
+  - word: 旦那
+    reading: だんな
+    meaning: chủ (nhà); chồng (không chính thức)
+  - word: 一旦
+    reading: いったん
+    meaning: một lần, một lúc, một buổi sáng, tạm thời
 
 ### 但 (Đãn)
 
@@ -19100,15 +27310,15 @@ examples:
     reading: だいたん
     meaning: táo bạo
 
-### 回 (Đàn)
+### 宣 (Tuyên)
 
 level: N1
-meaningVi: Bệ, bục
-hanViet: Đàn
-onyomi: ["カイ", "エ"]
-kunyomi: ["まわ.る", "-まわ.る", "-まわ.り", "まわ.す", "-まわ.す", "まわ.し-", "-まわ.し", "もとお.る"]
-strokeCount: 6
-writingHint: Lập đàn ( ) ở đất ( ) đầu ( ) hồi ( ) vào dịp Tết Nguyên Đán ( ) 旦 4
+meaningVi: Tuyên truyền
+hanViet: Tuyên
+onyomi: ["セン"]
+kunyomi: ["のたま.う"]
+strokeCount: 9
+writingHint: Dưới mái nhà ( ) 2 ngày ( ) đi tuyên truyền ( ) 宣 1
 sourcePages: []
 sources:
   level: ebook
@@ -19118,39 +27328,17 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đàn maps to 92 KANJIDIC2 candidates; kept extracted 回
-examples:
-  - word: 回送
-    reading: かいそう
-    meaning: chuyển tiếp
-  - word: 手回し
-    reading: てまわし
-    meaning: sự chuẩn bị; sự sắp xếp
-  - word: 遠回り
-    reading: とおまわり
-    meaning: đường vòng; đường vòng
-
-### 亘 (Tuyên)
-
-level: N1
-meaningVi: Tuyên truyền
-hanViet: Tuyên
-onyomi: ["コウ", "カン", "セン"]
-kunyomi: ["わた.る", "もと.める"]
-strokeCount: 6
-writingHint: Dưới mái nhà ( ) 2 ngày ( ) đi tuyên truyền ( ) 宣 1
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - examples missing; fill from ebook/manual pass later
-examples:
   - none
+examples:
+  - word: 宣教
+    reading: せんきょう
+    meaning: sứ mệnh tôn giáo
+  - word: 宣言
+    reading: せんげん
+    meaning: lời tuyên bố; lời tuyên bố; sự thông báo
+  - word: 宣教
+    reading: せんきょう
+    meaning: sứ mệnh tôn giáo
 
 ### 喧 (Huyên)
 
@@ -19182,15 +27370,37 @@ examples:
     reading: けんか
     meaning: cãi vã; đánh nhau (say rượu); thất bại
 
-### 丸 (Tiết)
+### 恒 (Hằng)
 
 level: N1
-meaningVi: Tục tỉu
-hanViet: Tiết
-onyomi: ["ガン"]
-kunyomi: ["まる", "まる.める", "まる.い"]
-strokeCount: 3
-writingHint: Lúc đầu ( ) tiên sinh ( ) chân đất ( ) đi trong vòng tròn ( ) mặc y phục ( 衣) nhìn tục tĩu (褻) 1
+meaningVi: Vĩnh hằng
+hanViet: Hằng
+onyomi: ["コウ"]
+kunyomi: ["つね", "つねに"]
+strokeCount: 9
+writingHint: Trái tim ( ) 2 ngày ( ) đã đi vào cõi vĩnh hằng ( ) 恒 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 垣 (Viên)
+
+level: N1
+meaningVi: Hàng rào
+hanViet: Viên
+onyomi: ["エン"]
+kunyomi: ["かき"]
+strokeCount: 9
+writingHint: Đắp đất ( ) 2 ngày ( ) ra khuôn viên hàng rào ( ) 垣 2 4
 sourcePages: []
 sources:
   level: ebook
@@ -19200,26 +27410,143 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tiết maps to 30 KANJIDIC2 candidates; kept extracted 丸
+  - none
 examples:
-  - word: 日の丸
-    reading: ひのまる
-    meaning: lá cờ Nhật Bản
-  - word: 丸で
-    reading: まるで
-    meaning: hoàn toàn;hoàn toàn;hoàn toàn;chẳng hề;như thể;như thể;có thể nói như vậy
-  - word: 真ん丸い
-    reading: まんまるい
-    meaning: hình tròn hoàn hảo
+  - word: 垣根
+    reading: かきね
+    meaning: hàng rào
+  - word: 垣根
+    reading: かきね
+    meaning: hàng rào cây
 
-### 臣 (Cơ)
+### 褻 (Tiết)
+
+level: N1
+meaningVi: Tục tỉu
+hanViet: Tiết
+onyomi: ["セツ"]
+kunyomi: ["けが.れる", "な.れる"]
+strokeCount: 17
+writingHint: Lúc đầu ( ) tiên sinh ( ) chân đất ( ) đi trong vòng tròn ( ) mặc y phục ( 衣) nhìn tục tĩu (褻) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 睦 (Mục)
+
+level: N1
+meaningVi: Thân thiện
+hanViet: Mục
+onyomi: ["ボク", "モク"]
+kunyomi: ["むつ.まじい", "むつ.む", "むつ.ぶ"]
+strokeCount: 13
+writingHint: Mắt ( ) của tiên sinh ( ) chân đất ( ) nhìn rất thân thiện ( ) 睦 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 陵 (Lăng)
+
+level: N1
+meaningVi: Lăng mộ
+hanViet: Lăng
+onyomi: ["リョウ"]
+kunyomi: ["みささぎ"]
+strokeCount: 11
+writingHint: Bồ ( ) của tiên sinh ( ) sau ( ) khi chết được xây mộ ( ) 陵 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 丘陵
+    reading: きゅうりょう
+    meaning: đồi núi
+  - word: 丘陵
+    reading: きゅうりょう
+    meaning: đồi núi
+
+### 凌 (Lăng)
+
+level: N1
+meaningVi: Vượt qua
+hanViet: Lăng
+onyomi: ["リョウ"]
+kunyomi: ["しの.ぐ"]
+strokeCount: 10
+writingHint: Đóng băng ( ) tiên sinh ( ) sau ( ) đó vượt qua ( ) 凌 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 凌ぐ
+    reading: しのぐ
+    meaning: vượt qua, vượt qua, chịu đựng, tránh (mưa), ngăn chặn, vượt qua, vượt qua, thách thức
+  - word: 凌ぐ
+    reading: しのぐ
+    meaning: vượt qua, vượt qua, chịu đựng, tránh (mưa), ngăn chặn, vượt qua, vượt qua, thách thức
+
+### 喚 (Hoán)
+
+level: N1
+meaningVi: Hô hoán
+hanViet: Hoán
+onyomi: ["カン"]
+kunyomi: ["わめ.く"]
+strokeCount: 12
+writingHint: Miệng ( ) bị móc ( )) tứ ( ) đại ( ) mỹ nhân hô hoán ( ) 喚 4 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 姫 (Cơ)
 
 level: N1
 meaningVi: Chúng chúa
 hanViet: Cơ
-onyomi: ["シン", "ジン"]
-kunyomi: []
-strokeCount: 7
+onyomi: ["キ"]
+kunyomi: ["ひめ", "ひめ-"]
+strokeCount: 10
 writingHint: Nữ ( ) thần ( ) là công chúa ( ) 姫 1 5
 sourcePages: []
 sources:
@@ -19230,27 +27557,22 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Cơ maps to 83 KANJIDIC2 candidates; kept extracted 臣
+  - target kanji ambiguous: Hán-Việt heading Cơ maps to 83 KANJIDIC2 candidates; kept extracted 姫
 examples:
-  - word: 総理大臣
-    reading: そうりだいじん
-    meaning: Thủ tướng
-  - word: 総理大臣
-    reading: そうりだいじん
-    meaning: thủ tướng
-  - word: 大臣
-    reading: だいじん
-    meaning: bộ trưởng nội các
+  - word: お姫様
+    reading: おひめさま
+    hanViet: cơ dạng
+    meaning: công chúa
 
-### 監 (Hạm)
+### 監 (Giám)
 
 level: N1
-meaningVi: Chiến hạm
-hanViet: Hạm
+meaningVi: Giám đốc 𠂉
+hanViet: Giám
 onyomi: ["カン"]
 kunyomi: []
 strokeCount: 15
-writingHint: Thuyền ( ) của giám đốc ( ) là chiếm hạm ( ) 艦 1 14
+writingHint: Đại thần ( ) nằm ( ) 1 ( ) mình trên đĩa ( ) là giám đốc ( ) 監 2 8
 sourcePages: []
 sources:
   level: ebook
@@ -19260,7 +27582,7 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hạm maps to 66 KANJIDIC2 candidates; kept extracted 監
+  - none
 examples:
   - word: 監視
     reading: かんし
@@ -19271,6 +27593,114 @@ examples:
   - word: 監督
     reading: かんとく
     meaning: sự giám sát; sự kiểm soát
+
+### 艦 (Hạm)
+
+level: N1
+meaningVi: Chiến hạm
+hanViet: Hạm
+onyomi: ["カン"]
+kunyomi: []
+strokeCount: 21
+writingHint: Thuyền ( ) của giám đốc ( ) là chiếm hạm ( ) 艦 1 14
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 軍艦
+    reading: ぐんかん
+    meaning: tàu chiến; tàu chiến
+  - word: 軍艦
+    reading: ぐんかん
+    meaning: tàu chiến
+
+### 藍 (Lam)
+
+level: N1
+meaningVi: Xanh lam
+hanViet: Lam
+onyomi: ["ラン"]
+kunyomi: ["あい"]
+strokeCount: 18
+writingHint: Cỏ ( ) của giám đốc ( ) có màu xanh ( ) 藍 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 藍褸
+    reading: ぼろ
+    meaning: giẻ rách;mảnh vụn;quần áo rách nát;lỗi (đặc biệt là giả vờ);khiếm khuyết;xuống cấp hoặc tồi tàn
+  - word: 藍褸
+    reading: ぼろ
+    meaning: giẻ rách; mảnh vụn; quần áo rách nát; lỗi (đặc biệt là giả vờ); khiếm khuyết; xuống cấp hoặc tồi tàn
+
+### 濫 (Lạm)
+
+level: N1
+meaningVi: Lạm dụng
+hanViet: Lạm
+onyomi: ["ラン"]
+kunyomi: ["みだ.りに", "みだ.りがましい"]
+strokeCount: 18
+writingHint: Thủy ( ) bị giám đốc ( ) lạm dụng ( ) 濫 1 5 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 濫用
+    reading: らんよう
+    meaning: sự lạm dụng;sự lạm dụng;sự lạm dụng;sự lạm dụng quá mức
+  - word: 氾濫
+    reading: はんらん
+    meaning: tràn; lũ lụt
+  - word: 氾濫
+    reading: はんらん
+    meaning: tràn; lũ lụt
+
+### 徳 (Đức)
+
+level: N1
+meaningVi: Đạo đức
+hanViet: Đức
+onyomi: ["トク"]
+kunyomi: []
+strokeCount: 14
+writingHint: 2 người đứng ( ) bán 10 ( ) cái võng ( ) rất tận tâm ( ) đạo đức ( ) 徳 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 道徳
+    reading: どうとく
+    meaning: đạo đức
 
 ### 聴 (Thính)
 
@@ -19352,15 +27782,107 @@ openGaps:
 examples:
   - none
 
-### 曼 (Mạn)
+### 乏 (Phạp)
+
+level: N1
+meaningVi: Nghèo
+hanViet: Phạp
+onyomi: ["ボウ"]
+kunyomi: ["とぼ.しい", "とも.しい"]
+strokeCount: 4
+writingHint: Tài phiệt ( ) chi ( ) tiền giúp người nghèo ( ) 乏 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 貧乏
+    reading: びんぼう
+    meaning: sự nghèo khó; cơ cực; nghèo nàn
+  - word: 乏しい
+    reading: とぼしい
+    meaning: Ít ỏi; khan hiếm; hạn chế; cơ cực; khó khăn; ít ỏi; nghèo nàn
+  - word: 窮乏
+    reading: きゅうぼう
+    meaning: nghèo đói
+
+### 慢 (Mạn)
 
 level: N1
 meaningVi: Ngạo mạn
 hanViet: Mạn
-onyomi: ["マン", "バン"]
-kunyomi: ["なが.い"]
-strokeCount: 11
+onyomi: ["マン"]
+kunyomi: []
+strokeCount: 14
 writingHint: Con tim ( ) suy nghĩ miên man ( ) rồi trở nên ngạo mạn ( ) 慢 3 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 怠慢
+    reading: たいまん
+    meaning: sự cẩu thả; sự chần chừ; sự bất cẩn
+  - word: 怠慢
+    reading: たいまん
+    meaning: sự cẩu thả; sự chần chừ; sự bất cẩn
+  - word: 自慢
+    reading: じまん
+    meaning: tự hào; khoe khoang
+
+### 漫 (Mạn)
+
+level: N1
+meaningVi: Lãng mạn
+hanViet: Mạn
+onyomi: ["マン"]
+kunyomi: ["みだり.に", "そぞ.ろ"]
+strokeCount: 14
+writingHint: Thủy ( ) suy nghĩ miên man ( ) về chuyện tình lãng mạn ( ) 漫 1 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 漫画
+    reading: まんが
+    meaning: truyện tranh
+  - word: 漫画
+    reading: まんが
+    hanViet: man hoạ
+    meaning: truyện tranh
+  - word: 漫画
+    reading: まんが
+    hanViet: man hoạ
+    meaning: truyện tranh
+
+### 蔓 (Mạn)
+
+level: N1
+meaningVi: Dây leo
+hanViet: Mạn
+onyomi: ["マン", "バン"]
+kunyomi: ["はびこ.る", "つる"]
+strokeCount: 14
+writingHint: Cỏ ( ) dài miên man ( ) là dây leo ( ) 蔓 2 3
 sourcePages: []
 sources:
   level: ebook
@@ -19373,6 +27895,58 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 鰻 (Man)
+
+level: N1
+meaningVi: Con lươn
+hanViet: Man
+onyomi: ["マン", "バン"]
+kunyomi: ["うなぎ"]
+strokeCount: 22
+writingHint: Cá ( ) dài miên man ( ) là con lươn ( ) 鰻 1 2 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 称 (Xưng)
+
+level: N1
+meaningVi: Xưng tên 𠂉
+hanViet: Xưng
+onyomi: ["ショウ"]
+kunyomi: ["たた.える", "とな.える", "あ.げる", "かな.う", "はか.り", "はか.る", "ほめ.る"]
+strokeCount: 10
+writingHint: Hòa ( ) thượng nằm ( ) còn chú tiểu ( ) xưng tên ( ) 称 1 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 称する
+    reading: しょうする
+    meaning: giả vờ; lấy tên; giả vờ; có ý định
+  - word: 名称
+    reading: めいしょう
+    meaning: tên
+  - word: 称する
+    reading: しょうする
+    meaning: giả vờ; lấy tên; có ý định
 
 ### 弥 (Di)
 
@@ -19395,6 +27969,63 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 貴 (Quý)
+
+level: N1
+meaningVi: Quý tộc
+hanViet: Quý
+onyomi: ["キ"]
+kunyomi: ["たっと.い", "とうと.い", "たっと.ぶ", "とうと.ぶ"]
+strokeCount: 12
+writingHint: Ở trung tâm ( ) có 1 ( ) bảo bối ( ) quý ( ) 貴 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 貴族
+    reading: きぞく
+    meaning: quý tộc; quý tộc
+  - word: 貴女
+    reading: あなた
+    meaning: bạn; quý cô
+  - word: 貴い
+    reading: たっとい
+    meaning: quý giá; có giá trị; vô giá; cao quý; cao cả; thiêng liêng
+
+### 遺 (Di)
+
+level: N1
+meaningVi: Di chúc
+hanViet: Di
+onyomi: ["イ", "ユイ"]
+kunyomi: ["のこ.す"]
+strokeCount: 15
+writingHint: Quý tộc ( ) sắp đi xa ( ) để lại di chúc ( ) 遺 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 遺跡
+    reading: いせき
+    meaning: di tích lịch sử (còn lại là di tích)
+  - word: 遺跡
+    reading: いせき
+    meaning: di tích lịch sử (còn lại là di tích)
 
 ### 潰 (Hội)
 
@@ -19426,15 +28057,42 @@ examples:
     reading: つぶす
     meaning: nghiền nát; làm hỏng; lãng phí
 
-### 賁 (Phẫn)
+### 憤 (Phẫn)
 
 level: N1
 meaningVi: Phẫn nộ
 hanViet: Phẫn
-onyomi: ["フン", "ヒ", "ホン"]
-kunyomi: []
-strokeCount: 12
+onyomi: ["フン"]
+kunyomi: ["いきどお.る"]
+strokeCount: 15
 writingHint: Trái tim ( ) bị tranh mất phần ( ) nên phẫn nộ ( ) 憤 3 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 憤慨
+    reading: ふんがい
+    meaning: sự phẫn nộ; sự oán giận
+  - word: 憤慨
+    reading: ふんがい
+    meaning: sự phẫn nộ; sự oán giận
+
+### 墳 (Phần)
+
+level: N1
+meaningVi: Phần mộ
+hanViet: Phần
+onyomi: ["フン"]
+kunyomi: []
+strokeCount: 15
+writingHint: Đất ( ) phần ( ) mộ ( ) 墳 5
 sourcePages: []
 sources:
   level: ebook
@@ -19475,14 +28133,14 @@ examples:
     reading: ぼうちょう
     meaning: mở rộng; sưng tấy; tăng trưởng
 
-### 骨 (Hoạt)
+### 滑 (Hoạt)
 
 level: N1
 meaningVi: Linh hoạt
 hanViet: Hoạt
-onyomi: ["コツ"]
-kunyomi: ["ほね"]
-strokeCount: 10
+onyomi: ["カツ", "コツ"]
+kunyomi: ["すべ.る", "なめ.らか"]
+strokeCount: 13
 writingHint: Nước ( ) làm xương cốt ( ) trơn tru linh hoạt ( ) 滑 1 5
 sourcePages: []
 sources:
@@ -19493,27 +28151,27 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Hoạt maps to 10 KANJIDIC2 candidates; kept extracted 骨
+  - none
 examples:
-  - word: 骨
-    reading: こつ
-    meaning: sở trường; kỹ năng
-  - word: 骨董品
-    reading: こっとうひん
-    meaning: đồ cổ
-  - word: 露骨
-    reading: ろこつ
-    meaning: 1. thẳng thắn;thẳng thắn;thẳng thắn;thẳng thắn; 2. dễ thấy; lộ liễu; 3. rộng rãi; gợi ý
+  - word: 円滑
+    reading: えんかつ
+    meaning: sự hài hòa; sự êm dịu
+  - word: 滑稽
+    reading: こっけい
+    meaning: hài hước;buồn cười;buồn cười;buồn cười;buồn cười;buồn cười
+  - word: 滑らか
+    reading: なめらか
+    meaning: sự trơn tru; sự trong trẻo
 
-### 享 (Thuần)
+### 享 (Hưởng)
 
 level: N1
-meaningVi: Rượu ngon
-hanViet: Thuần
+meaningVi: Hưởng thụ
+hanViet: Hưởng
 onyomi: ["キョウ", "コウ"]
 kunyomi: ["う.ける"]
 strokeCount: 8
-writingHint: Giờ Dậu ( ) hưởng thụ ( ) rượu ngon ( ) 醇 8
+writingHint: Đầu ( ) tiên miệng ( ) dạy trẻ con ( ) hưởng thụ ( ) 享 1
 sourcePages: []
 sources:
   level: ebook
@@ -19523,7 +28181,7 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Thuần maps to 26 KANJIDIC2 candidates; kept extracted 享
+  - none
 examples:
   - word: 享受
     reading: きょうじゅ
@@ -19531,6 +28189,107 @@ examples:
   - word: 享受
     reading: きょうじゅ
     meaning: sự tiếp nhận; sự chấp nhận; sự hưởng thụ; được cho
+
+### 郭 (Quách)
+
+level: N1
+meaningVi: Thành quách
+hanViet: Quách
+onyomi: ["カク"]
+kunyomi: ["くるわ"]
+strokeCount: 11
+writingHint: Hưởng thụ ( ) cùng Bồ ( ) trong thành quách ( ) 郭 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 熟 (Thục)
+
+level: N1
+meaningVi: Thuần thục
+hanViet: Thục
+onyomi: ["ジュク"]
+kunyomi: ["う.れる"]
+strokeCount: 15
+writingHint: Hưởng ( ) tròn ( ) vẹn bếp lửa ( ) giúp nấu ăn thuần thục ( ) 熟 1 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 未熟
+    reading: みじゅく
+    meaning: thiếu kinh nghiệm;chưa trưởng thành;thô sơ;không có kỹ năng;chưa trưởng thành;thiếu kinh nghiệm
+  - word: 成熟
+    reading: せいじゅく
+    meaning: sự trưởng thành; sự chín muồi
+  - word: 成熟
+    reading: せいじゅく
+    meaning: sự trưởng thành; sự chín muồi
+
+### 醇 (Thuần)
+
+level: N1
+meaningVi: Rượu ngon
+hanViet: Thuần
+onyomi: ["ジュン", "シュン"]
+kunyomi: ["もっぱら", "こい", "あつい"]
+strokeCount: 15
+writingHint: Giờ Dậu ( ) hưởng thụ ( ) rượu ngon ( ) 醇 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 倉 (Thương)
+
+level: N1
+meaningVi: Nhà kho
+hanViet: Thương
+onyomi: ["ソウ"]
+kunyomi: ["くら"]
+strokeCount: 10
+writingHint: Người ( ) hay đến cửa ( ) khẩu ( ) là thương ( ) gia 倉 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 倉庫
+    reading: そうこ
+    meaning: nhà kho, nhà kho, godown
+  - word: 倉庫
+    reading: そうこ
+    meaning: kho; nhà kho
 
 ### 創 (Sáng)
 
@@ -19562,14 +28321,14 @@ examples:
     reading: どくそう
     meaning: tính độc đáo
 
-### 倉 (Thương)
+### 槍 (Thương)
 
 level: N1
 meaningVi: Cây giáo
 hanViet: Thương
-onyomi: ["ソウ"]
-kunyomi: ["くら"]
-strokeCount: 10
+onyomi: ["ソウ", "ショウ"]
+kunyomi: ["やり"]
+strokeCount: 14
 writingHint: Cây ( ) thương ( ) là cây giáo ( ) 槍 2 5
 sourcePages: []
 sources:
@@ -19578,26 +28337,43 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - none
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 倉庫
-    reading: そうこ
-    meaning: nhà kho, nhà kho, godown
-  - word: 倉庫
-    reading: そうこ
-    meaning: kho; nhà kho
+  - none
 
-### 般 (Bàn)
+### 蒼 (Thương)
 
 level: N1
-meaningVi: Địa bàn
-hanViet: Bàn
-onyomi: ["ハン"]
-kunyomi: []
-strokeCount: 10
-writingHint: Địa bàn ( ) này bình thường ( ) bán bát đĩa ( ) 皿 1 8
+meaningVi: Cỏ xanh
+hanViet: Thương
+onyomi: ["ソウ"]
+kunyomi: ["あお.い"]
+strokeCount: 13
+writingHint: Cỏ ( ) trong nhà kho ( ) là cỏ xanh ( ) 蒼 2 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 没 (Một)
+
+level: N1
+meaningVi: Chết chìm
+hanViet: Một
+onyomi: ["ボツ", "モツ"]
+kunyomi: ["おぼ.れる", "しず.む", "ない"]
+strokeCount: 7
+writingHint: Nước ( ) làm kẻ thù ( ) chết chìm ( ) 没 5
 sourcePages: []
 sources:
   level: ebook
@@ -19609,15 +28385,119 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 全般
-    reading: ぜんぱん
-    meaning: (the) toàn bộ, toàn bộ, toàn bộ, tổng quát
-  - word: 全般
-    reading: ぜんぱん
-    meaning: toàn bộ; tổng quát; chung
-  - word: 一般
-    reading: いっぱん
-    meaning: chung; tự do; phổ quát; bình thường; trung bình
+  - word: 没落
+    reading: ぼつらく
+    meaning: sự đổ nát; sự sụp đổ; sự sụp đổ
+  - word: 沈没
+    reading: ちんぼつ
+    meaning: chìm; chìm
+  - word: 没収
+    reading: ぼっしゅう
+    meaning: bị mất
+
+### 股 (Cổ)
+
+level: N1
+meaningVi: Bẹn,háng
+hanViet: Cổ
+onyomi: ["コ"]
+kunyomi: ["また", "もも"]
+strokeCount: 8
+writingHint: Nguyệt ( ) bị kẻ thù ( ) đá vào bẹn ( )股 2 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 股
+    reading: また
+    meaning: háng; háng; đùi
+  - word: 股
+    reading: また
+    meaning: háng; đùi
+
+### 殳 (Dịch)
+
+level: N1
+meaningVi: Dịch bệnh
+hanViet: Dịch
+onyomi: ["シュ"]
+kunyomi: ["また", "ほこ"]
+strokeCount: 4
+writingHint: Dịch ( ) bệnh ( ) là kẻ thù ( ) của con người 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Dịch maps to 65 KANJIDIC2 candidates; kept extracted 殳
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 殻 (Xác)
+
+level: N1
+meaningVi: Vỏ
+hanViet: Xác
+onyomi: ["カク", "コク", "バイ"]
+kunyomi: ["から", "がら"]
+strokeCount: 11
+writingHint: Binh sĩ ( ) trùm khăn ( ) cầm ghế ( ) đập kẻ thù ( ) bay xác ( ) 殻 2 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 貝殻
+    reading: かいがら
+    meaning: vỏ
+  - word: 貝殻
+    reading: かいがら
+    meaning: vỏ
+  - word: 殻
+    reading: から
+    meaning: vỏ, trấu, vỏ, trấu
+
+### 穀 (Cốc)
+
+level: N1
+meaningVi: Ngũ cốc
+hanViet: Cốc
+onyomi: ["コク"]
+kunyomi: []
+strokeCount: 15
+writingHint: Binh sĩ ( ) trùm khăn ( ) lên lúa ( ) để tránh kẻ thù ( ) trộm ngũ cốc ( 穀) 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Cốc maps to 12 KANJIDIC2 candidates; kept extracted 穀
+examples:
+  - word: 穀物
+    reading: こくもつ
+    meaning: ngũ cốc; ngô
 
 ### 鍛 (Đoán)
 
@@ -19646,14 +28526,102 @@ examples:
     reading: きたえる
     meaning: rèn luyện; kỷ luật
 
-### 它 (Đà)
+### 刹 (Sát)
+
+level: N1
+meaningVi: Chốc lạt
+hanViet: Sát
+onyomi: ["セチ", "セツ", "サツ"]
+kunyomi: []
+strokeCount: 8
+writingHint: Mê ( ) cây ( ) cầm đao ( ) sát phạt trong chốc lát ( ) 刹 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 壱 (Nhất)
+
+level: N1
+meaningVi: Số 1
+hanViet: Nhất
+onyomi: ["イチ", "イツ"]
+kunyomi: ["ひとつ"]
+strokeCount: 7
+writingHint: Binh sĩ ( ) trùm khăn ( ) cười hihi ( ) là sướng nhất ( ) 壱 2
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 庇 (Tí)
+
+level: N1
+meaningVi: Che chở
+hanViet: Tí
+onyomi: ["ヒ"]
+kunyomi: ["ひさし", "おお.う", "かば.う"]
+strokeCount: 7
+writingHint: Dưới mái hiên ( ) có tỉ ( ) che chở ( ) 庇 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 它 (Xà)
+
+level: N1
+meaningVi: Con rắn
+hanViet: Xà
+onyomi: ["タ"]
+kunyomi: ["へび"]
+strokeCount: 5
+writingHint: Con rắn ( ) to ăn côn trùng ( ) là mãng xà ( ) 它 4 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 陀 (Đà)
 
 level: N1
 meaningVi: A di đà phật
 hanViet: Đà
-onyomi: ["タ"]
-kunyomi: ["へび"]
-strokeCount: 5
+onyomi: ["タ", "ダ", "イ", "チ", "ジ"]
+kunyomi: ["けわ.しい", "ななめ"]
+strokeCount: 8
 writingHint: Bồ ( ) của mãng xà ( ) niệm A Di Đà Phật ( ) 陀 1 4
 sourcePages: []
 sources:
@@ -19664,19 +28632,18 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Đà maps to 64 KANJIDIC2 candidates; kept extracted 它
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
 
-### 需 (Nho)
+### 儒 (Nho)
 
 level: N1
 meaningVi: Nho giáo
 hanViet: Nho
 onyomi: ["ジュ"]
 kunyomi: []
-strokeCount: 14
+strokeCount: 16
 writingHint: Người ( ) có nhu cầu ( ) học chữ Nho ( ) 儒 1 3
 sourcePages: []
 sources:
@@ -19685,29 +28652,21 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: existing_vocab_supplement
+  examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Nho maps to 6 KANJIDIC2 candidates; kept extracted 需
+  - examples missing; fill from ebook/manual pass later
 examples:
-  - word: 必需品
-    reading: ひつじゅひん
-    meaning: vật dụng cần thiết, vật dụng cần thiết, vật dụng cần thiết, thiết yếu
-  - word: 必需品
-    reading: ひつじゅひん
-    meaning: nhu yếu phẩm; đồ cần thiết
-  - word: 需要
-    reading: じゅよう
-    meaning: yêu cầu
+  - none
 
-### 而 (Suyển)
+### 濡 (Nhu)
 
 level: N1
-meaningVi: Hen suyễn
-hanViet: Suyển
-onyomi: ["ジ", "ニ"]
-kunyomi: ["しこ.うして", "しか.して", "しか.も", "しか.れども", "すなわち", "なんじ", "しかるに"]
-strokeCount: 6
-writingHint: Ở gần miệng ( ) núi ( ) lửa thiếu nhi ( ) dễ mắc bệnh hen suyễn ( ),喘 4 6
+meaningVi: Ướt
+hanViet: Nhu
+onyomi: ["ジュ", "ニュ"]
+kunyomi: ["ぬれ.る", "ぬら.す", "ぬ.れる", "ぬ.らす", "うるお.い", "うるお.う", "うるお.す"]
+strokeCount: 17
+writingHint: Dùng nước ( ) khi có nhu cầu ( ) làm ướt ( ) 濡 1 4
 sourcePages: []
 sources:
   level: ebook
@@ -19717,7 +28676,64 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Suyển maps to 5 KANJIDIC2 candidates; kept extracted 而
+  - none
+examples:
+  - word: ずぶ濡れ
+    reading: ずぶぬれ
+    meaning: ướt sũng, ướt sũng
+  - word: ずぶ濡れ
+    reading: ずぶぬれ
+    meaning: ướt sũng, ướt sũng
+  - word: 濡らす
+    reading: ぬらす
+    meaning: làm ướt, ngâm, nhúng
+
+### 耐 (Nại)
+
+level: N1
+meaningVi: Nhẫn nại
+hanViet: Nại
+onyomi: ["タイ"]
+kunyomi: ["た.える"]
+strokeCount: 9
+writingHint: Thiếu nhi ( ) nghịch rất thốn ( ) cần nhẫn nại ( ) 耐 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 耐える
+    reading: たえる
+    meaning: chịu đựng; chịu đựng
+  - word: 耐える
+    reading: たえる
+    meaning: chịu đựng
+
+### 而 (Thụy)
+
+level: N1
+meaningVi: Thụy điển
+hanViet: Thụy
+onyomi: ["ジ", "ニ"]
+kunyomi: ["しこ.うして", "しか.して", "しか.も", "しか.れども", "すなわち", "なんじ", "しかるに"]
+strokeCount: 6
+writingHint: Ở Thụy Điển ( ) vua ( ) cũng leo núi ( ) cùng thiếu nhi ( )而 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thụy maps to 29 KANJIDIC2 candidates; kept extracted 而
 examples:
   - word: 而も
     reading: しかも
@@ -19725,6 +28741,58 @@ examples:
   - word: 而も
     reading: しかも
     meaning: hơn nữa; tuy nhiên
+
+### 喘 (Suyển)
+
+level: N1
+meaningVi: Hen suyễn
+hanViet: Suyển
+onyomi: ["ゼン", "セン"]
+kunyomi: ["あえ.ぐ", "せき"]
+strokeCount: 12
+writingHint: Ở gần miệng ( ) núi ( ) lửa thiếu nhi ( ) dễ mắc bệnh hen suyễn ( ),喘 4 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 煩 (Phiền)
+
+level: N1
+meaningVi: Phiền não
+hanViet: Phiền
+onyomi: ["ハン", "ボン"]
+kunyomi: ["わずら.う", "わずら.わす", "うるさ.がる", "うるさ.い"]
+strokeCount: 13
+writingHint: Lửa ( ) cháy giấy tờ ( ) thật phiền não ( ) 煩 3 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 煩わしい
+    reading: わずらわしい
+    meaning: rắc rối; khó chịu; phức tạp
+  - word: 煩わしい
+    reading: わずらわしい
+    meaning: rắc rối; khó chịu; phức tạp
+  - word: 煩い
+    reading: うるさい
+    meaning: ồn ào, khó chịu
 
 ### 須 (Tu)
 
@@ -19748,15 +28816,45 @@ openGaps:
 examples:
   - none
 
-### 缶 (Dao)
+### 謡 (Dao)
 
 level: N1
 meaningVi: Ca dao
 hanViet: Dao
+onyomi: ["ヨウ"]
+kunyomi: ["うた.い", "うた.う"]
+strokeCount: 16
+writingHint: Vừa nói ( ) móng tay ( ) vừa gõ vào lon ( ) để sáng tác ca dao ( 謡) 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 民謡
+    reading: みんよう
+    meaning: dân ca, bài hát dân gian
+  - word: 歌謡
+    reading: かよう
+    meaning: bài hát, bản ballad
+  - word: 歌謡
+    reading: かよう
+    meaning: ca khúc; bài hát đại chúng
+
+### 缶 (Dao)
+
+level: N1
+meaningVi: Dao động
+hanViet: Dao
 onyomi: ["カン"]
 kunyomi: ["かま"]
 strokeCount: 6
-writingHint: Vừa nói ( ) móng tay ( ) vừa gõ vào lon ( ) để sáng tác ca dao ( 謡) 1 8
+writingHint: Tay ( ) dùng móng ( ) bật lon ( ) tạo ra dao động 2 4
 sourcePages: []
 sources:
   level: ebook
@@ -19777,6 +28875,58 @@ examples:
   - word: 缶詰
     reading: かんづめ
     meaning: đóng hộp; đồ hộp; lon
+
+### 陶 (Đào)
+
+level: N1
+meaningVi: Đồ gốm
+hanViet: Đào
+onyomi: ["トウ"]
+kunyomi: ["すえ"]
+strokeCount: 11
+writingHint: Bồ ( ) dùng bao ( ) đất cho vào lon ( ) để làm đồ gốm ( ) 陶 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 陶器
+    reading: とうき
+    meaning: đồ gốm; đồ gốm
+  - word: 鬱陶しい
+    reading: うっとうしい
+    meaning: ảm đạm; chán nản
+  - word: 鬱陶しい
+    reading: うっとうしい
+    meaning: ảm đạm; chán nản
+
+### 淘 (Đào)
+
+level: N1
+meaningVi: Đào thải
+hanViet: Đào
+onyomi: ["トウ"]
+kunyomi: ["よな.げる"]
+strokeCount: 11
+writingHint: Nước ( ) bao ( ) quanh cái lon ( ) bị đào thải ( ) 淘 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 迭 (Điệt)
 
@@ -19803,12 +28953,12 @@ examples:
 ### 侯 (Hầu)
 
 level: N1
-meaningVi: Cổ họng
+meaningVi: Tước hầu
 hanViet: Hầu
 onyomi: ["コウ"]
 kunyomi: []
 strokeCount: 9
-writingHint: Miệng ( ) tước hầu ( ) bị đau cổ họng ( ) 喉 4 6
+writingHint: Người đứng ( ) bắn 1 ( ) mũi tên ( ) là tước hầu ( ) 侯 1 3
 sourcePages: []
 sources:
   level: ebook
@@ -19821,6 +28971,38 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 喉 (Hầu)
+
+level: N1
+meaningVi: Cổ họng
+hanViet: Hầu
+onyomi: ["コウ"]
+kunyomi: ["のど"]
+strokeCount: 12
+writingHint: Miệng ( ) tước hầu ( ) bị đau cổ họng ( ) 喉 4 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 喉
+    reading: のど
+    meaning: cổ họng
+  - word: 喉が渇きました
+    reading: のどがかわきました
+    hanViet: hầu khát
+    meaning: khát nước
+  - word: 喉
+    reading: のど
+    hanViet: hầu
+    meaning: họng, cổ họng
 
 ### 蟹 (Giải)
 
@@ -19871,14 +29053,14 @@ examples:
     reading: きれい
     meaning: đẹp; sạch sẽ; tốt đẹp; gọn gàng; công bằng
 
-### 鹿 (Lộc)
+### 麓 (Lộc)
 
 level: N1
 meaningVi: Chân núi
 hanViet: Lộc
 onyomi: ["ロク"]
-kunyomi: ["しか", "か"]
-strokeCount: 11
+kunyomi: ["ふもと"]
+strokeCount: 19
 writingHint: Từ trên rừng ( ) con hươu ( ) đi xuống chân núi ( )麓 6
 sourcePages: []
 sources:
@@ -19891,25 +29073,22 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 馬鹿馬鹿しい
-    reading: ばかばかしい
-    meaning: ngu ngốc
-  - word: 馬鹿らしい
-    reading: ばからしい
-    meaning: vô lý
-  - word: 馬鹿馬鹿しい
-    reading: ばかばかしい
-    meaning: ngu ngốc
+  - word: 麓
+    reading: ふもと
+    meaning: chân, đáy, chân (núi)
+  - word: 麓
+    reading: ふもと
+    meaning: chân núi; phần đáy
 
-### 叔 (Thục)
+### 薦 (Tiến)
 
 level: N1
-meaningVi: Hiền thục
-hanViet: Thục
-onyomi: ["シュク"]
-kunyomi: []
-strokeCount: 8
-writingHint: Khi uống nước ( ) nhìn thúc ( ) thật hiền thục ( ) 淑 1 4
+meaningVi: Tiến cử
+hanViet: Tiến
+onyomi: ["セン"]
+kunyomi: ["すす.める"]
+strokeCount: 16
+writingHint: Cô Thảo ( ) từ mái hiên ( ) ra hàng rào ( ) bắt 5 ( ) con gà nướng ( ) mang đi tiến cử ( ) 薦 2 3
 sourcePages: []
 sources:
   level: ebook
@@ -19921,25 +29100,46 @@ sources:
 openGaps:
   - none
 examples:
-  - word: 叔母さん
-    reading: おばさん
-    meaning: (1) dì, (2) bà trung niên
-  - word: 叔父さん
-    reading: おじさん
-    meaning: quý ông trung niên, chú
-  - word: 叔父さん
-    reading: おじさん
-    meaning: chú/cậu/bác; người đàn ông trung niên
+  - word: 推薦
+    reading: すいせん
+    meaning: khuyến nghị
 
-### 卜 (Phó)
+### 慶 (Khánh)
 
 level: N1
-meaningVi: Tới nhận chức
-hanViet: Phó
-onyomi: ["ボク"]
-kunyomi: ["うらな.う", "うらない"]
-strokeCount: 2
-writingHint: Chạy ( ) bước to ( ) tới nhận thức ( ) 赴 2 8
+meaningVi: Mừng, quốc khánh
+hanViet: Khánh
+onyomi: ["ケイ"]
+kunyomi: ["よろこ.び"]
+strokeCount: 15
+writingHint: Từ mái hiên ( ) ra hàng rào ( ) lấy khăn trùm ( ) có hình trái tim ( 心) để sau (夂) đó ăn mừng quốc khánh (慶) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 慶び
+    reading: よろこび
+    meaning: (n) (a) niềm vui,(a) vui mừng, hân hoan, hân hoan, hài lòng, hân hoan, chúc mừng, khen ngợi
+  - word: 慶び
+    reading: よろこび
+    meaning: niềm vui; lời chúc mừng
+
+### 攵 (Triệt)
+
+level: N1
+meaningVi: Triệt bỏ
+hanViet: Triệt
+onyomi: ["ホク"]
+kunyomi: []
+strokeCount: 4
+writingHint: Phải triệt bỏ ( ) mấy tay ( ) giáo dục ( ) bằng cách đánh ( ) đập 2 4 12
 sourcePages: []
 sources:
   level: ebook
@@ -19949,7 +29149,305 @@ sources:
   writingHint: ebook_text
   examples: supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Phó maps to 31 KANJIDIC2 candidates; kept extracted 卜
+  - target kanji ambiguous: Hán-Việt heading Triệt maps to 16 KANJIDIC2 candidates; kept extracted 攵
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 棄 (Khí)
+
+level: N1
+meaningVi: Bỏ
+hanViet: Khí
+onyomi: ["キ"]
+kunyomi: ["す.てる"]
+strokeCount: 13
+writingHint: Đầu ( ) tư ( ) hẳn 1 ( ) ngọn núi ( ) để trồng cây ( ) nhưng rồi cũng bỏ ( ) 棄 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 放棄
+    reading: ほうき
+    meaning: sự từ bỏ; sự từ bỏ; sự từ bỏ (quyền chịu trách nhiệm)
+  - word: 破棄
+    reading: はき
+    meaning: thu hồi; hủy bỏ; vi phạm (ví dụ: hiệp ước)
+  - word: 棄権
+    reading: きけん
+    meaning: bỏ phiếu trắng; từ bỏ quyền
+
+### 又 (Thúc)
+
+level: N1
+meaningVi: Chú
+hanViet: Thúc
+onyomi: ["ユウ"]
+kunyomi: ["また", "また-", "また.の-"]
+strokeCount: 2
+writingHint: Thúc ( ) là bề trên ( ) của thằng nhỏ ( ) đang đi lại ( ) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Thúc maps to 37 KANJIDIC2 candidates; kept extracted 又
+examples:
+  - word: 又は
+    reading: または
+    meaning: hoặc, nếu không
+  - word: 又は
+    reading: または
+    meaning: hoặc; hay là
+  - word: 又
+    reading: また
+    meaning: một lần nữa; và
+
+### 淑 (Thục)
+
+level: N1
+meaningVi: Hiền thục
+hanViet: Thục
+onyomi: ["シュク"]
+kunyomi: ["しと.やか"]
+strokeCount: 11
+writingHint: Khi uống nước ( ) nhìn thúc ( ) thật hiền thục ( ) 淑 1 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 寂 (Tịch)
+
+level: N1
+meaningVi: Lặng yên
+hanViet: Tịch
+onyomi: ["ジャク", "セキ"]
+kunyomi: ["さび", "さび.しい", "さび.れる", "さみ.しい"]
+strokeCount: 11
+writingHint: Dưới mái nhà ( ) thúc ( ) chỉ ngồi lặng yên ( ) 寂 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 寂しい
+    reading: さびしい
+    meaning: cô đơn
+  - word: 寂しい
+    reading: さびしい
+    hanViet: tịch
+    meaning: buồn, cô đơn
+
+### 督 (Đốc)
+
+level: N1
+meaningVi: Đốc thúc
+hanViet: Đốc
+onyomi: ["トク"]
+kunyomi: []
+strokeCount: 13
+writingHint: Thúc ( ) liếc mắt ( ) nhìn để đốc thúc ( ) 督 1 2 7
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 監督
+    reading: かんとく
+    meaning: sự giám sát; sự kiểm soát
+
+### 戚 (Thích)
+
+level: N1
+meaningVi: Thân thích
+hanViet: Thích
+onyomi: ["ソク", "セキ"]
+kunyomi: ["いた.む", "うれ.える", "みうち"]
+strokeCount: 11
+writingHint: Tết Mậu Thân ( ) người bề trên ( ) lạc mất đứa nhỏ ( ) thân thích ( ) 戚 9 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 親戚
+    reading: しんせき
+    meaning: tương đối
+
+### 赴 (Phó)
+
+level: N1
+meaningVi: Tới nhận chức
+hanViet: Phó
+onyomi: ["フ"]
+kunyomi: ["おもむ.く"]
+strokeCount: 9
+writingHint: Chạy ( ) bước to ( ) tới nhận thức ( ) 赴 2 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 赴く
+    reading: おもむく
+    meaning: đi; tiếp tục; sửa chữa; trở thành
+  - word: 赴任
+    reading: ふにん
+    meaning: (tiến hành) cuộc hẹn mới
+  - word: 赴く
+    reading: おもむく
+    meaning: đi; tiếp tục; sửa chữa; trở thành
+
+### 訃 (Phó)
+
+level: N1
+meaningVi: Cáo phó
+hanViet: Phó
+onyomi: ["フ"]
+kunyomi: ["しらせ"]
+strokeCount: 9
+writingHint: Nói ( ) to ( ) trong lễ cáo phó ( ) 訃 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 豹 (Báo)
+
+level: N1
+meaningVi: Con báo
+hanViet: Báo
+onyomi: ["ヒョウ", "ホウ"]
+kunyomi: []
+strokeCount: 10
+writingHint: Con sâu ( ) chui vào 1 cái bao ( ) khi nhìn thấy con báo ( ) 豹 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 貌 (Mạo)
+
+level: N1
+meaningVi: Dung mạo
+hanViet: Mạo
+onyomi: ["ボウ", "バク"]
+kunyomi: ["かたち", "かたどる"]
+strokeCount: 14
+writingHint: Con sâu ( ) màu trắng ( ) khi chân chạy ( ) dung mạo ( ) rất đẹp 貌 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 墾 (Khẩn)
+
+level: N1
+meaningVi: Khai khẩn
+hanViet: Khẩn
+onyomi: ["コン"]
+kunyomi: ["は.る", "ひら.く"]
+strokeCount: 16
+writingHint: Sâu ( ) không tốt ( ) cho đất ( ) khai khẩn ( ) 墾 1 8
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 懇 (Khẩn)
+
+level: N1
+meaningVi: Khẩn khoản
+hanViet: Khẩn
+onyomi: ["コン"]
+kunyomi: ["ねんご.ろ"]
+strokeCount: 17
+writingHint: Sâu ( ) mọt không tốt ( ) làm trái tim ( ) khẩn khoản ( ) 懇 8 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
@@ -20007,6 +29505,50 @@ openGaps:
 examples:
   - none
 
+### 寵 (Sủng)
+
+level: N1
+meaningVi: Sủng ái
+hanViet: Sủng
+onyomi: ["チョウ"]
+kunyomi: ["めぐ.み", "めぐ.む"]
+strokeCount: 19
+writingHint: Dưới mái nhà ( ) con rồng ( ) được sủng ái ( )寵 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 聾 (Lung)
+
+level: N1
+meaningVi: Điếc
+hanViet: Lung
+onyomi: ["ロウ"]
+kunyomi: ["ろう.する", "つんぼ", "みみしい"]
+strokeCount: 22
+writingHint: Con rồng ( ) tai ( ) bị điếc ( )聾 1 11 10
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 懲 (Trừng)
 
 level: N1
@@ -20034,15 +29576,82 @@ examples:
     reading: こりる
     meaning: học bằng kinh nghiệm; chán ghét
 
-### 鳥 (Cưu)
+### 鳩 (Cưu)
 
 level: N1
 meaningVi: Chim bồ câu
 hanViet: Cưu
-onyomi: ["チョウ"]
-kunyomi: ["とり"]
-strokeCount: 11
+onyomi: ["キュウ", "ク"]
+kunyomi: ["はと", "あつ.める"]
+strokeCount: 13
 writingHint: 9 ( ) con chim ( ) bồ câu ( ) 鳩 3
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 鴨 (Áp)
+
+level: N1
+meaningVi: Con vịt
+hanViet: Áp
+onyomi: ["オウ"]
+kunyomi: ["かも", "あひる"]
+strokeCount: 16
+writingHint: Mặc áo giáp ( ) vào con chim ( ) biến thành con vịt ( ) 鴨 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 冖 (Hạc)
+
+level: N1
+meaningVi: Con hạc
+hanViet: Hạc
+onyomi: ["ベキ"]
+kunyomi: []
+strokeCount: 2
+writingHint: Trùm khăn ( ) lên 2 con chim ( 鳥 隹) biến thành con hạc (鶴) 3 11
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Hạc maps to 21 KANJIDIC2 candidates; kept extracted 冖
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 鶏 (Kê)
+
+level: N1
+meaningVi: Con gà
+hanViet: Kê
+onyomi: ["ケイ"]
+kunyomi: ["にわとり", "とり"]
+strokeCount: 19
+writingHint: Dùng móng tay ( ) chồng ( ) vặt lông chim ( ), lông gà ( ) 鶏 1 9
 sourcePages: []
 sources:
   level: ebook
@@ -20052,17 +29661,34 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Cưu maps to 43 KANJIDIC2 candidates; kept extracted 鳥
+  - target kanji ambiguous: Hán-Việt heading Kê maps to 31 KANJIDIC2 candidates; kept extracted 鶏
 examples:
-  - word: 鳥居
-    reading: とりい
-    meaning: torii (cổng vòm của đền thờ Thần đạo)
-  - word: 渡り鳥
-    reading: わたりどり
-    meaning: chim di trú; chim đi qua
-  - word: 鳥居
-    reading: とりい
-    meaning: torii (cổng vòm của đền thờ Thần đạo)
+  - word: 鶏肉
+    reading: とりにく
+    hanViet: kê nhục
+    meaning: thịt gà
+
+### 鷹 (Ưng)
+
+level: N1
+meaningVi: Chim ưng
+hanViet: Ưng
+onyomi: ["ヨウ", "オウ"]
+kunyomi: ["たか"]
+strokeCount: 24
+writingHint: Dưới mái hiên ( ) người đứng ( ) ngắm 2 con chim ( 隹 鳥) ưng (鷹) 1
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
 
 ### 鷲 (Thứu)
 
@@ -20086,14 +29712,14 @@ openGaps:
 examples:
   - none
 
-### 耒 (Canh)
+### 井 (Canh)
 
 level: N1
 meaningVi: Canh tác
 hanViet: Canh
-onyomi: ["ライ", "ルイ"]
-kunyomi: ["き", "く", "すき"]
-strokeCount: 6
+onyomi: ["セイ", "ショウ"]
+kunyomi: ["い"]
+strokeCount: 4
 writingHint: Canh tác ( ) cày ( ) bừa dùng nước giếng ( ) 井 4 10
 sourcePages: []
 sources:
@@ -20102,12 +29728,19 @@ sources:
   meaningVi: ebook_text
   readings: kanjidic2_supplement
   writingHint: ebook_text
-  examples: supplement
+  examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Canh maps to 43 KANJIDIC2 candidates; kept extracted 耒
-  - examples missing; fill from ebook/manual pass later
+  - target kanji ambiguous: Hán-Việt heading Canh maps to 43 KANJIDIC2 candidates; kept extracted 井
 examples:
-  - none
+  - word: 伊井
+    reading: いい
+    meaning: cái đó; Ý
+  - word: 天井
+    reading: てんじょう
+    meaning: trần; giá trần
+  - word: 伊井
+    reading: いい
+    meaning: cái đó; Ý
 
 ### 耗 (Háo)
 
@@ -20182,6 +29815,36 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 吃 (Cật)
+
+level: N1
+meaningVi: Nói lắp
+hanViet: Cật
+onyomi: ["キツ"]
+kunyomi: ["ども.る"]
+strokeCount: 6
+writingHint: Miệng ( ) ăn xin ( ) nói lắp ( ) 吃 4
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 吃逆
+    reading: しゃっくり
+    meaning: nấc; nấc
+  - word: 吃驚
+    reading: びっくり
+    meaning: ngạc nhiên; kinh ngạc; kinh ngạc; kinh ngạc
+  - word: 吃逆
+    reading: しゃっくり
+    meaning: nấc
 
 ### 桑 (Tang)
 
@@ -20288,14 +29951,36 @@ examples:
     reading: しへい
     meaning: tiền giấy, giấy bạc, hóa đơn
 
-### 敝 (Tế)
+### 弊 (Tệ)
+
+level: N1
+meaningVi: Tệ hại
+hanViet: Tệ
+onyomi: ["ヘイ"]
+kunyomi: []
+strokeCount: 15
+writingHint: Tệ ( ) nhất là chắp tay ( ) cầu xin nhìn thật tệ hại ( ) 弊 1 3 9
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 蔽 (Tế)
 
 level: N1
 meaningVi: Che giấu
 hanViet: Tế
-onyomi: ["ヘイ"]
-kunyomi: ["やぶ.れる"]
-strokeCount: 12
+onyomi: ["ヘイ", "ヘツ", "フツ"]
+kunyomi: ["おお.う", "おお.い"]
+strokeCount: 15
 writingHint: Cô Thảo ( ) có chuyện tệ ( ) nhất vẫn đang che giấu ( )蔽 2 3
 sourcePages: []
 sources:
@@ -20354,29 +30039,6 @@ openGaps:
 examples:
   - none
 
-### 巛 (Tuần)
-
-level: N1
-meaningVi: Tuần tra
-hanViet: Tuần
-onyomi: ["セン"]
-kunyomi: ["かわ"]
-strokeCount: 3
-writingHint: Tuần tra ( ) trên sông ( ) phải đi xa ( )辶 4 1 2 3
-sourcePages: []
-sources:
-  level: ebook
-  hanViet: ebook_text
-  meaningVi: ebook_text
-  readings: kanjidic2_supplement
-  writingHint: ebook_text
-  examples: supplement
-openGaps:
-  - target kanji ambiguous: Hán-Việt heading Tuần maps to 40 KANJIDIC2 candidates; kept extracted 巛
-  - examples missing; fill from ebook/manual pass later
-examples:
-  - none
-
 ### 拶 (Tạt)
 
 level: N1
@@ -20405,6 +30067,29 @@ examples:
     hanViet: ai tạt
     meaning: lời chào, chào hỏi
 
+### 璃 (Li)
+
+level: N1
+meaningVi: Pha lê
+hanViet: Li
+onyomi: ["リ"]
+kunyomi: []
+strokeCount: 15
+writingHint: Vua ( ) cầm chiếc li ( ) pha lê ( ) 璃 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Li maps to 50 KANJIDIC2 candidates; kept extracted 璃
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
 ### 禽 (Cầm)
 
 level: N1
@@ -20427,14 +30112,66 @@ openGaps:
 examples:
   - none
 
-### 皮 (Trứu)
+### 檎 (Cấm)
+
+level: N1
+meaningVi: Quả táo
+hanViet: Cấm
+onyomi: ["キン", "ゴン", "ゴ"]
+kunyomi: []
+strokeCount: 17
+writingHint: Cây ( ) gia cầm ( ) thích ăn là táo ( )檎 2 5 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 林檎
+    reading: りんご
+    hanViet: lâm cầm
+    meaning: táo
+
+### 雛 (Sồ)
+
+level: N1
+meaningVi: Chim con
+hanViet: Sồ
+onyomi: ["スウ", "ス", "ジュ"]
+kunyomi: ["ひな", "ひよこ"]
+strokeCount: 18
+writingHint: Mang 2 bao ( ) mầm non ( ) cho chim ( ) con ( ) ăn雛 1 11 13
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 雛
+    reading: ひな
+    meaning: chim non;gà con;búp bê
+  - word: 雛
+    reading: ひな
+    meaning: chim non; gà con; búp bê
+
+### 皺 (Trứu)
 
 level: N1
 meaningVi: Nếp nhăn
 hanViet: Trứu
-onyomi: ["ヒ"]
-kunyomi: ["かわ"]
-strokeCount: 5
+onyomi: ["シュウ", "スウ"]
+kunyomi: ["しわ", "しぼ"]
+strokeCount: 15
 writingHint: Ăn hết 2 bao ( ) mầm non ( ) da ( ) sẽ hết nếp nhăn ( ) 皺 1 13
 sourcePages: []
 sources:
@@ -20445,17 +30182,14 @@ sources:
   writingHint: ebook_text
   examples: existing_vocab_supplement
 openGaps:
-  - target kanji ambiguous: Hán-Việt heading Trứu maps to 21 KANJIDIC2 candidates; kept extracted 皮
+  - none
 examples:
-  - word: 毛皮
-    reading: けがわ
-    meaning: lông, da, tấm da
-  - word: 皮膚
-    reading: ひふ
-    meaning: da
-  - word: 皮肉
-    reading: ひにく
-    meaning: sự giễu cợt, sự mỉa mai
+  - word: 皺
+    reading: しわ
+    meaning: nếp nhăn; nếp nhăn
+  - word: 皺
+    reading: しわ
+    meaning: nếp nhăn
 
 ### 乂 (Sảng)
 
@@ -20501,6 +30235,112 @@ openGaps:
   - examples missing; fill from ebook/manual pass later
 examples:
   - none
+
+### 鬱 (Uất)
+
+level: N1
+meaningVi: Uất ức
+hanViet: Uất
+onyomi: ["ウツ"]
+kunyomi: ["うっ.する", "ふさ.ぐ", "しげ.る"]
+strokeCount: 29
+writingHint: Buổi trưa ( ) lên núi ( ) vào rừng ( ) trùm khăn ( ) xõa tóc ( ) chuồn chuồn (※) bay vào mồm ( ) Thơ hay vậy! mà vẫn bị cười hihi ( 匕) thật uất ức (鬱) 8 12
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 憂鬱
+    reading: ゆううつ
+    meaning: trầm cảm; u sầu; chán nản; u ám
+  - word: 鬱陶しい
+    reading: うっとうしい
+    meaning: ảm đạm; chán nản
+  - word: 鬱陶しい
+    reading: うっとうしい
+    meaning: ảm đạm; chán nản
+
+### 漆 (Tất)
+
+level: N1
+meaningVi: Cây sơn
+hanViet: Tất
+onyomi: ["シツ"]
+kunyomi: ["うるし"]
+strokeCount: 14
+writingHint: Nước ( ) trên cây gỗ ( ) người ( ) dùng quét là nước ( ) sơn ( )漆 5
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: supplement
+openGaps:
+  - examples missing; fill from ebook/manual pass later
+examples:
+  - none
+
+### 膝 (Tất)
+
+level: N1
+meaningVi: Đầu gối
+hanViet: Tất
+onyomi: ["シツ"]
+kunyomi: ["ひざ"]
+strokeCount: 15
+writingHint: Nguyệt ( ) leo lên cây ( ) người ( ) vẫn bị ngập nước ( ) đến đầu gối ( )膝 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - none
+examples:
+  - word: 膝
+    reading: ひざ
+    meaning: đầu gối; đùi
+
+### 水 (Lê)
+
+level: N1
+meaningVi: Bình minh
+hanViet: Lê
+onyomi: ["スイ"]
+kunyomi: ["みず", "みず-"]
+strokeCount: 4
+writingHint: Bình minh ( ) đi cắt lúa ( ) mang theo 1 ( ) con đao ( ) người ( ) bắt đầu xuống nước ( 水) 1 6
+sourcePages: []
+sources:
+  level: ebook
+  hanViet: ebook_text
+  meaningVi: ebook_text
+  readings: kanjidic2_supplement
+  writingHint: ebook_text
+  examples: existing_vocab_supplement
+openGaps:
+  - target kanji ambiguous: Hán-Việt heading Lê maps to 59 KANJIDIC2 candidates; kept extracted 水
+examples:
+  - word: 洪水
+    reading: こうずい
+    meaning: lũ lụt
+  - word: 水洗
+    reading: すいせん
+    meaning: xả nước
+  - word: 大水
+    reading: おおみず
+    meaning: lũ lụt
 
 ### 姦 (Gian)
 

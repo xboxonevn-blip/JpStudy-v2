@@ -85,6 +85,11 @@ function cjkChars(value) {
     .map((match) => match[0]);
 }
 
+function cjkSequences(value) {
+  return Array.from(String(value || '').matchAll(/[\u3400-\u9fff\uf900-\ufaff]+/gu))
+    .map((match) => match[0]);
+}
+
 function kanaTokens(value) {
   return Array.from(
     String(value || '').matchAll(/[ぁ-んァ-ンー][ぁ-んァ-ンー・.]*/gu),
@@ -269,6 +274,22 @@ function isWritingGridHeader(line) {
   return /^[A-ZÀ-ỸĐ\s'-]+$/.test(trimmed) && /[A-ZÀ-ỸĐ]{2}/.test(trimmed);
 }
 
+function chooseWritingGridTarget(blockLines) {
+  const firstLineChars = cjkChars(blockLines[0] || '');
+  if (firstLineChars.length === 1) return firstLineChars[0];
+
+  const hintChars = cjkChars(blockLines.slice(1, 4).join('\n'));
+  if (firstLineChars.length > 1 && hintChars.length > 0) {
+    const hintSequences = cjkSequences(blockLines.slice(1, 4).join('\n'));
+    const lastSequence = hintSequences[hintSequences.length - 1] || '';
+    return Array.from(lastSequence)[0] || hintChars[hintChars.length - 1];
+  }
+
+  const dominant = countCandidates(cjkChars(blockLines.join('\n')))[0];
+  if (dominant && dominant[1] >= 3) return dominant[0];
+  return firstLineChars[firstLineChars.length - 1] || '';
+}
+
 function parseWritingGridText(text, context = {}) {
   const lines = String(text || '').split(/\r?\n/);
   const headerIndices = [];
@@ -283,11 +304,7 @@ function parseWritingGridText(text, context = {}) {
     const blockLines = lines.slice(start + 1, end).filter((line) => normalizeSpaces(line));
     if (blockLines.length === 0) continue;
     const firstLine = blockLines[0];
-    const dominant = countCandidates(cjkChars(blockLines.join('\n')))[0];
-    const firstLineChars = cjkChars(firstLine);
-    const kanji = dominant && dominant[1] >= 3
-      ? dominant[0]
-      : firstLineChars[firstLineChars.length - 1];
+    const kanji = chooseWritingGridTarget(blockLines);
     if (!kanji) continue;
     const meaningVi = normalizeSpaces(
       firstLine
@@ -552,14 +569,15 @@ function textForPdf(pdf, outFile) {
   return fs.readFileSync(outFile, 'utf8');
 }
 
-function ocrPdf(pdf, cacheDir, sourceId) {
+function ocrPdf(pdf, cacheDir, sourceId, options = {}) {
   ensureDir(cacheDir);
   const pageCount = pdfPageCount(pdf);
-  const renderedFlag = path.join(cacheDir, `${sourceId}.rendered`);
+  const dpi = options.dpi || 150;
+  const renderedFlag = path.join(cacheDir, `${sourceId}-${dpi}dpi.rendered`);
   if (!fs.existsSync(renderedFlag)) {
     runCommand(path.join(popplerBin, 'pdftoppm.exe'), [
       '-r',
-      '150',
+      String(dpi),
       '-png',
       pdf,
       path.join(cacheDir, sourceId),
@@ -575,7 +593,7 @@ function ocrPdf(pdf, cacheDir, sourceId) {
     const textBase = path.join(cacheDir, `${sourceId}-${suffix}`);
     const textFile = `${textBase}.txt`;
     if (fs.existsSync(image) && !fs.existsSync(textFile)) {
-      runCommand(tesseractExe, [image, textBase, '-l', 'vie+jpn+eng', '--psm', '6'], {
+      runCommand(tesseractExe, [image, textBase, '-l', 'vie+jpn+eng', '--psm', options.psm || '6'], {
         env: { TESSDATA_PREFIX: tessdataDir },
       });
     }
@@ -653,9 +671,34 @@ function parseSourceForLevel(level, options = {}) {
   const cacheRoot = options.cacheRoot || path.join(repoRoot, 'tmp/kanji_ebook_full');
   let entries = [];
   if (source.family === 'writing-grid') {
-    const textPath = path.join(cacheRoot, `${level}.txt`);
-    const text = textForPdf(source.pdf, textPath);
-    entries = parseWritingGridText(text, { level, sourceId: level });
+    if (options.visionOnly) {
+      const visionCacheDir = options.visionCacheDir || path.join(repoRoot, 'tmp/kanji_ebook_card_ocr');
+      const combinedVisionText = path.join(visionCacheDir, `${level}.txt`);
+      if (fs.existsSync(combinedVisionText)) {
+        entries = parseWritingGridText(fs.readFileSync(combinedVisionText, 'utf8'), {
+          level,
+          sourceId: `${level} vision-ocr combined cache`,
+        });
+      } else {
+        const pages = ocrPdf(source.pdf, cacheRoot, `${level.toLowerCase()}-vision200`, {
+          dpi: 200,
+          psm: '6',
+        });
+        for (const page of pages) {
+          entries.push(
+            ...parseWritingGridText(page.text, {
+              level,
+              page: page.page,
+              sourceId: `${level} vision-ocr page ${page.page}`,
+            }),
+          );
+        }
+      }
+    } else {
+      const textPath = path.join(cacheRoot, `${level}.txt`);
+      const text = textForPdf(source.pdf, textPath);
+      entries = parseWritingGridText(text, { level, sourceId: level });
+    }
   } else if (level === 'N2') {
     for (const part of source.parts) {
       const cards = ocrLargeCardPdf(part.pdf, cacheRoot, part.id.toLowerCase());
@@ -755,6 +798,8 @@ function parseArgs(argv) {
     levels: ['N5', 'N4', 'N3', 'N2', 'N1'],
     outDir: path.join(repoRoot, 'docs/research/canonical'),
     cacheRoot: path.join(repoRoot, 'tmp/kanji_ebook_full'),
+    visionCacheDir: path.join(repoRoot, 'tmp/kanji_ebook_card_ocr'),
+    visionOnly: false,
   };
   for (let i = 0; i < argv.length; i++) {
     const item = argv[i];
@@ -762,6 +807,8 @@ function parseArgs(argv) {
     if (item === '--levels') args.levels = next().split(',').map((level) => level.trim().toUpperCase());
     else if (item === '--out-dir') args.outDir = path.resolve(next());
     else if (item === '--cache-root') args.cacheRoot = path.resolve(next());
+    else if (item === '--vision-cache-dir') args.visionCacheDir = path.resolve(next());
+    else if (item === '--vision-only') args.visionOnly = true;
     else if (item === '--help' || item === '-h') args.help = true;
     else throw new Error(`Unknown argument ${item}`);
   }
@@ -772,6 +819,7 @@ function printHelp() {
   console.log(`Usage:
   node tool/research/extract_canonical_kanji_ebooks.js --levels N5
   node tool/research/extract_canonical_kanji_ebooks.js --levels N5,N4,N3,N2,N1
+  node tool/research/extract_canonical_kanji_ebooks.js --levels N4,N1 --vision-only
 `);
 }
 
@@ -783,7 +831,11 @@ function main() {
   }
   ensureDir(args.outDir);
   for (const level of args.levels) {
-    const entries = parseSourceForLevel(level, { cacheRoot: args.cacheRoot });
+    const entries = parseSourceForLevel(level, {
+      cacheRoot: args.cacheRoot,
+      visionCacheDir: args.visionCacheDir,
+      visionOnly: args.visionOnly,
+    });
     const markdown = formatCanonicalMarkdown(level, entries);
     const outFile = path.join(args.outDir, `kanji-${level.toLowerCase()}.md`);
     fs.writeFileSync(outFile, markdown);
@@ -804,6 +856,7 @@ module.exports = {
   formatCanonicalMarkdown,
   parseLargeCardOcr,
   parseWritingGridText,
+  chooseWritingGridTarget,
   loadKanjidic2Index,
   buildKanjidicVietnamIndex,
   supplementEntry,

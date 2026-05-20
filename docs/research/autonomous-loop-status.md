@@ -1098,3 +1098,13 @@
 - Live proof after deploy: VI N5/N4/N3/N2/N1 Grammar hub -> first detail -> examples -> `Luyện tập để hiểu` all reached `Câu 1/5`, with no empty due state and no manual learned copy; rendered transformation option keys were unique after punctuation normalization. `main.dart.js` returned `200/no-cache`; unexpected console warnings/errors and unexpected failed requests were `0`.
 - Artifacts: `output/playwright/live-qaa008-qaa031-grammar-proof.json` plus `output/playwright/live-qaa008-*-practice-gate.png`.
 - QA-B-003 logged for later content enrichment: authored grammar practice bank is empty, but generated coverage is complete, so this no longer blocks QA-A-008.
+
+## 2026-05-20 QA-A-026 Kanji Level Audit Phase 0
+
+- Paused the older JA-locale dirty batch in `stash@{0}` before touching the new P0 kanji work.
+- Repaired an accidental local `package.json` npm dependency dump back to `HEAD`; no app/code/data changes were kept from that leak.
+- Added the new owner kanji taxonomy P0 row to `docs/research/quality-backlog.md` at the top of the queue. The ID collides with the already-fixed historical search QA-A-026 row; the backlog row notes the collision.
+- Generated `docs/research/kanji-level-audit-2026-05-20.md` for Phase 0 only. No kanji JSON files were edited.
+- Current app scan: `929` kanji entries, `638` unique characters. Candidate canonical scan after owner spot-check overrides: `2495` unique characters.
+- Audit counts under the candidate policy: MOVE `479`, DUPLICATE `196`, MISSING `1872`, EXTRA `15`.
+- Important blocker before Phase 1 data rewrite: the supplied PDFs are vector-glyph PDFs and not text-extractable, and visual inspection/public JLPT tables conflict with the owner's expected labels for `海`, `帰`, `銀`, `重`, and `議`. The audit doc therefore requires owner approval of the override policy before implementing MOVE/DEDUPE/MISSING changes or hard-coding canonical guards.

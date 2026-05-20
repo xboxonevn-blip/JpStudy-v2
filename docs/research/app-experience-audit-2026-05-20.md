@@ -17,6 +17,8 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Mistakes / JLPT support / Weakness Radar copy | Audited slice | Static audit found internal 1-3-7 labels leaking as `D1/D3/D7`; replaced with learner-facing day labels; live bundle scan found no `D1 `/`D3 `/`D7 ` leaks. |
 | Foundations hub / Kana detail copy | Audited slice | Live route-matrix text + widget audit found `Open`, `yoon`, `rules`, `strokes`, and `clear` leaking; localized/removed; live proof verified hub/grid/sheet/quiz. |
 | Vocab detail conjugation panel | Audited slice | Code audit found suffix-guessed forms in `_conjugationLines`; logged QA-C-002 and designed JMdict POS-backed replacement under QA-C-001. |
+| Conjugation DB metadata | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_lemma` + indexes and `lemmas.json` is `200/no-cache` with `3907` JMdict_e rows. |
+| Onboarding language | Defect found | Fresh live browser at 1366x768 selected `Tiếng Việt`, but the analytics consent banner left no visible `language_continue` CTA; logged QA-A-025. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -30,8 +32,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-022 | Kana | Kana sheet allowed untested self-attestation via `Tôi đã thuộc`. | Fixed + deployed |
 | QA-A-023 | Copy/internal labels | Mistakes, JLPT support, and Home Weakness Radar exposed `D1/D3/D7` checkpoint labels. | Fixed + deployed |
 | QA-A-024 | Foundations copy/internal labels | Foundations hub and Kana sheet exposed `Open`, `yoon`, `rules`, `strokes`, and `clear`. | Fixed + deployed |
+| QA-A-025 | Onboarding | Fresh language onboarding can hide the continue CTA behind/under the analytics consent banner after selecting a language. | Pending |
 | QA-B-001-G-N4-L46-L50 | Grammar content | N4 lessons 46-50 needed source verification plus full detail/example/practice proof. | Fixed + deployed |
-| QA-C-001 | Conjugation feature | Phase 0 design required before implementation. | Fixed locally |
+| QA-C-001 | Conjugation feature | Content DB lemma table now seeds active-level JMdict-backed lemma metadata. | Fixed + deployed |
 | QA-C-002 | Vocab detail conjugation | Vocab detail exposes generated-looking but suffix-guessed forms and generic grammar CTA. | Pending |
 
 ## Live Proof Artifacts
@@ -51,6 +54,8 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-conjugation-phase0-home-smoke.png`
 - `output/playwright/live-conjugation-engine-home-smoke.png`
 - `live-conjugation-lemmas-home-smoke.png`
+- `output/playwright/live-conjugation-db-home.png`
+- `output/playwright/live-conjugation-db-after-vi-click.png`
 
 ## Notes For Next Sweep
 

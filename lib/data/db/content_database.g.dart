@@ -3374,6 +3374,995 @@ class UserProgressCompanion extends UpdateCompanion<UserProgressData> {
   }
 }
 
+class $ConjugationLemmaTable extends ConjugationLemma
+    with TableInfo<$ConjugationLemmaTable, ConjugationLemmaData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $ConjugationLemmaTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _contentVocabIdMeta = const VerificationMeta(
+    'contentVocabId',
+  );
+  @override
+  late final GeneratedColumn<int> contentVocabId = GeneratedColumn<int>(
+    'content_vocab_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES vocab (id)',
+    ),
+  );
+  static const VerificationMeta _contentEntryIdMeta = const VerificationMeta(
+    'contentEntryId',
+  );
+  @override
+  late final GeneratedColumn<String> contentEntryId = GeneratedColumn<String>(
+    'content_entry_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _termMeta = const VerificationMeta('term');
+  @override
+  late final GeneratedColumn<String> term = GeneratedColumn<String>(
+    'term',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _readingMeta = const VerificationMeta(
+    'reading',
+  );
+  @override
+  late final GeneratedColumn<String> reading = GeneratedColumn<String>(
+    'reading',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _dictionaryFormMeta = const VerificationMeta(
+    'dictionaryForm',
+  );
+  @override
+  late final GeneratedColumn<String> dictionaryForm = GeneratedColumn<String>(
+    'dictionary_form',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _dictionaryReadingMeta = const VerificationMeta(
+    'dictionaryReading',
+  );
+  @override
+  late final GeneratedColumn<String> dictionaryReading =
+      GeneratedColumn<String>(
+        'dictionary_reading',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _conjugationClassMeta = const VerificationMeta(
+    'conjugationClass',
+  );
+  @override
+  late final GeneratedColumn<String> conjugationClass = GeneratedColumn<String>(
+    'conjugation_class',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _posTagsJsonMeta = const VerificationMeta(
+    'posTagsJson',
+  );
+  @override
+  late final GeneratedColumn<String> posTagsJson = GeneratedColumn<String>(
+    'pos_tags_json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _jmdictEntrySeqMeta = const VerificationMeta(
+    'jmdictEntrySeq',
+  );
+  @override
+  late final GeneratedColumn<String> jmdictEntrySeq = GeneratedColumn<String>(
+    'jmdict_entry_seq',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _sourceVocabIdMeta = const VerificationMeta(
+    'sourceVocabId',
+  );
+  @override
+  late final GeneratedColumn<String> sourceVocabId = GeneratedColumn<String>(
+    'source_vocab_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _sourceSenseIdMeta = const VerificationMeta(
+    'sourceSenseId',
+  );
+  @override
+  late final GeneratedColumn<String> sourceSenseId = GeneratedColumn<String>(
+    'source_sense_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  @override
+  late final GeneratedColumn<String> level = GeneratedColumn<String>(
+    'level',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _seriesMeta = const VerificationMeta('series');
+  @override
+  late final GeneratedColumn<String> series = GeneratedColumn<String>(
+    'series',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
+  @override
+  late final GeneratedColumn<int> lessonId = GeneratedColumn<int>(
+    'lesson_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _matchMethodMeta = const VerificationMeta(
+    'matchMethod',
+  );
+  @override
+  late final GeneratedColumn<String> matchMethod = GeneratedColumn<String>(
+    'match_method',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    contentVocabId,
+    contentEntryId,
+    term,
+    reading,
+    dictionaryForm,
+    dictionaryReading,
+    kind,
+    conjugationClass,
+    posTagsJson,
+    jmdictEntrySeq,
+    sourceVocabId,
+    sourceSenseId,
+    level,
+    series,
+    lessonId,
+    matchMethod,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'conjugation_lemma';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<ConjugationLemmaData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('content_vocab_id')) {
+      context.handle(
+        _contentVocabIdMeta,
+        contentVocabId.isAcceptableOrUnknown(
+          data['content_vocab_id']!,
+          _contentVocabIdMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_contentVocabIdMeta);
+    }
+    if (data.containsKey('content_entry_id')) {
+      context.handle(
+        _contentEntryIdMeta,
+        contentEntryId.isAcceptableOrUnknown(
+          data['content_entry_id']!,
+          _contentEntryIdMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_contentEntryIdMeta);
+    }
+    if (data.containsKey('term')) {
+      context.handle(
+        _termMeta,
+        term.isAcceptableOrUnknown(data['term']!, _termMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_termMeta);
+    }
+    if (data.containsKey('reading')) {
+      context.handle(
+        _readingMeta,
+        reading.isAcceptableOrUnknown(data['reading']!, _readingMeta),
+      );
+    }
+    if (data.containsKey('dictionary_form')) {
+      context.handle(
+        _dictionaryFormMeta,
+        dictionaryForm.isAcceptableOrUnknown(
+          data['dictionary_form']!,
+          _dictionaryFormMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_dictionaryFormMeta);
+    }
+    if (data.containsKey('dictionary_reading')) {
+      context.handle(
+        _dictionaryReadingMeta,
+        dictionaryReading.isAcceptableOrUnknown(
+          data['dictionary_reading']!,
+          _dictionaryReadingMeta,
+        ),
+      );
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('conjugation_class')) {
+      context.handle(
+        _conjugationClassMeta,
+        conjugationClass.isAcceptableOrUnknown(
+          data['conjugation_class']!,
+          _conjugationClassMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_conjugationClassMeta);
+    }
+    if (data.containsKey('pos_tags_json')) {
+      context.handle(
+        _posTagsJsonMeta,
+        posTagsJson.isAcceptableOrUnknown(
+          data['pos_tags_json']!,
+          _posTagsJsonMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_posTagsJsonMeta);
+    }
+    if (data.containsKey('jmdict_entry_seq')) {
+      context.handle(
+        _jmdictEntrySeqMeta,
+        jmdictEntrySeq.isAcceptableOrUnknown(
+          data['jmdict_entry_seq']!,
+          _jmdictEntrySeqMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_jmdictEntrySeqMeta);
+    }
+    if (data.containsKey('source_vocab_id')) {
+      context.handle(
+        _sourceVocabIdMeta,
+        sourceVocabId.isAcceptableOrUnknown(
+          data['source_vocab_id']!,
+          _sourceVocabIdMeta,
+        ),
+      );
+    }
+    if (data.containsKey('source_sense_id')) {
+      context.handle(
+        _sourceSenseIdMeta,
+        sourceSenseId.isAcceptableOrUnknown(
+          data['source_sense_id']!,
+          _sourceSenseIdMeta,
+        ),
+      );
+    }
+    if (data.containsKey('level')) {
+      context.handle(
+        _levelMeta,
+        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_levelMeta);
+    }
+    if (data.containsKey('series')) {
+      context.handle(
+        _seriesMeta,
+        series.isAcceptableOrUnknown(data['series']!, _seriesMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_seriesMeta);
+    }
+    if (data.containsKey('lesson_id')) {
+      context.handle(
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_lessonIdMeta);
+    }
+    if (data.containsKey('match_method')) {
+      context.handle(
+        _matchMethodMeta,
+        matchMethod.isAcceptableOrUnknown(
+          data['match_method']!,
+          _matchMethodMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_matchMethodMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  ConjugationLemmaData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return ConjugationLemmaData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      contentVocabId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}content_vocab_id'],
+      )!,
+      contentEntryId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}content_entry_id'],
+      )!,
+      term: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}term'],
+      )!,
+      reading: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}reading'],
+      ),
+      dictionaryForm: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}dictionary_form'],
+      )!,
+      dictionaryReading: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}dictionary_reading'],
+      ),
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      conjugationClass: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}conjugation_class'],
+      )!,
+      posTagsJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}pos_tags_json'],
+      )!,
+      jmdictEntrySeq: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}jmdict_entry_seq'],
+      )!,
+      sourceVocabId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}source_vocab_id'],
+      ),
+      sourceSenseId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}source_sense_id'],
+      ),
+      level: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}level'],
+      )!,
+      series: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}series'],
+      )!,
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lesson_id'],
+      )!,
+      matchMethod: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}match_method'],
+      )!,
+    );
+  }
+
+  @override
+  $ConjugationLemmaTable createAlias(String alias) {
+    return $ConjugationLemmaTable(attachedDatabase, alias);
+  }
+}
+
+class ConjugationLemmaData extends DataClass
+    implements Insertable<ConjugationLemmaData> {
+  final int id;
+  final int contentVocabId;
+  final String contentEntryId;
+  final String term;
+  final String? reading;
+  final String dictionaryForm;
+  final String? dictionaryReading;
+  final String kind;
+  final String conjugationClass;
+  final String posTagsJson;
+  final String jmdictEntrySeq;
+  final String? sourceVocabId;
+  final String? sourceSenseId;
+  final String level;
+  final String series;
+  final int lessonId;
+  final String matchMethod;
+  const ConjugationLemmaData({
+    required this.id,
+    required this.contentVocabId,
+    required this.contentEntryId,
+    required this.term,
+    this.reading,
+    required this.dictionaryForm,
+    this.dictionaryReading,
+    required this.kind,
+    required this.conjugationClass,
+    required this.posTagsJson,
+    required this.jmdictEntrySeq,
+    this.sourceVocabId,
+    this.sourceSenseId,
+    required this.level,
+    required this.series,
+    required this.lessonId,
+    required this.matchMethod,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['content_vocab_id'] = Variable<int>(contentVocabId);
+    map['content_entry_id'] = Variable<String>(contentEntryId);
+    map['term'] = Variable<String>(term);
+    if (!nullToAbsent || reading != null) {
+      map['reading'] = Variable<String>(reading);
+    }
+    map['dictionary_form'] = Variable<String>(dictionaryForm);
+    if (!nullToAbsent || dictionaryReading != null) {
+      map['dictionary_reading'] = Variable<String>(dictionaryReading);
+    }
+    map['kind'] = Variable<String>(kind);
+    map['conjugation_class'] = Variable<String>(conjugationClass);
+    map['pos_tags_json'] = Variable<String>(posTagsJson);
+    map['jmdict_entry_seq'] = Variable<String>(jmdictEntrySeq);
+    if (!nullToAbsent || sourceVocabId != null) {
+      map['source_vocab_id'] = Variable<String>(sourceVocabId);
+    }
+    if (!nullToAbsent || sourceSenseId != null) {
+      map['source_sense_id'] = Variable<String>(sourceSenseId);
+    }
+    map['level'] = Variable<String>(level);
+    map['series'] = Variable<String>(series);
+    map['lesson_id'] = Variable<int>(lessonId);
+    map['match_method'] = Variable<String>(matchMethod);
+    return map;
+  }
+
+  ConjugationLemmaCompanion toCompanion(bool nullToAbsent) {
+    return ConjugationLemmaCompanion(
+      id: Value(id),
+      contentVocabId: Value(contentVocabId),
+      contentEntryId: Value(contentEntryId),
+      term: Value(term),
+      reading: reading == null && nullToAbsent
+          ? const Value.absent()
+          : Value(reading),
+      dictionaryForm: Value(dictionaryForm),
+      dictionaryReading: dictionaryReading == null && nullToAbsent
+          ? const Value.absent()
+          : Value(dictionaryReading),
+      kind: Value(kind),
+      conjugationClass: Value(conjugationClass),
+      posTagsJson: Value(posTagsJson),
+      jmdictEntrySeq: Value(jmdictEntrySeq),
+      sourceVocabId: sourceVocabId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(sourceVocabId),
+      sourceSenseId: sourceSenseId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(sourceSenseId),
+      level: Value(level),
+      series: Value(series),
+      lessonId: Value(lessonId),
+      matchMethod: Value(matchMethod),
+    );
+  }
+
+  factory ConjugationLemmaData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return ConjugationLemmaData(
+      id: serializer.fromJson<int>(json['id']),
+      contentVocabId: serializer.fromJson<int>(json['contentVocabId']),
+      contentEntryId: serializer.fromJson<String>(json['contentEntryId']),
+      term: serializer.fromJson<String>(json['term']),
+      reading: serializer.fromJson<String?>(json['reading']),
+      dictionaryForm: serializer.fromJson<String>(json['dictionaryForm']),
+      dictionaryReading: serializer.fromJson<String?>(
+        json['dictionaryReading'],
+      ),
+      kind: serializer.fromJson<String>(json['kind']),
+      conjugationClass: serializer.fromJson<String>(json['conjugationClass']),
+      posTagsJson: serializer.fromJson<String>(json['posTagsJson']),
+      jmdictEntrySeq: serializer.fromJson<String>(json['jmdictEntrySeq']),
+      sourceVocabId: serializer.fromJson<String?>(json['sourceVocabId']),
+      sourceSenseId: serializer.fromJson<String?>(json['sourceSenseId']),
+      level: serializer.fromJson<String>(json['level']),
+      series: serializer.fromJson<String>(json['series']),
+      lessonId: serializer.fromJson<int>(json['lessonId']),
+      matchMethod: serializer.fromJson<String>(json['matchMethod']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'contentVocabId': serializer.toJson<int>(contentVocabId),
+      'contentEntryId': serializer.toJson<String>(contentEntryId),
+      'term': serializer.toJson<String>(term),
+      'reading': serializer.toJson<String?>(reading),
+      'dictionaryForm': serializer.toJson<String>(dictionaryForm),
+      'dictionaryReading': serializer.toJson<String?>(dictionaryReading),
+      'kind': serializer.toJson<String>(kind),
+      'conjugationClass': serializer.toJson<String>(conjugationClass),
+      'posTagsJson': serializer.toJson<String>(posTagsJson),
+      'jmdictEntrySeq': serializer.toJson<String>(jmdictEntrySeq),
+      'sourceVocabId': serializer.toJson<String?>(sourceVocabId),
+      'sourceSenseId': serializer.toJson<String?>(sourceSenseId),
+      'level': serializer.toJson<String>(level),
+      'series': serializer.toJson<String>(series),
+      'lessonId': serializer.toJson<int>(lessonId),
+      'matchMethod': serializer.toJson<String>(matchMethod),
+    };
+  }
+
+  ConjugationLemmaData copyWith({
+    int? id,
+    int? contentVocabId,
+    String? contentEntryId,
+    String? term,
+    Value<String?> reading = const Value.absent(),
+    String? dictionaryForm,
+    Value<String?> dictionaryReading = const Value.absent(),
+    String? kind,
+    String? conjugationClass,
+    String? posTagsJson,
+    String? jmdictEntrySeq,
+    Value<String?> sourceVocabId = const Value.absent(),
+    Value<String?> sourceSenseId = const Value.absent(),
+    String? level,
+    String? series,
+    int? lessonId,
+    String? matchMethod,
+  }) => ConjugationLemmaData(
+    id: id ?? this.id,
+    contentVocabId: contentVocabId ?? this.contentVocabId,
+    contentEntryId: contentEntryId ?? this.contentEntryId,
+    term: term ?? this.term,
+    reading: reading.present ? reading.value : this.reading,
+    dictionaryForm: dictionaryForm ?? this.dictionaryForm,
+    dictionaryReading: dictionaryReading.present
+        ? dictionaryReading.value
+        : this.dictionaryReading,
+    kind: kind ?? this.kind,
+    conjugationClass: conjugationClass ?? this.conjugationClass,
+    posTagsJson: posTagsJson ?? this.posTagsJson,
+    jmdictEntrySeq: jmdictEntrySeq ?? this.jmdictEntrySeq,
+    sourceVocabId: sourceVocabId.present
+        ? sourceVocabId.value
+        : this.sourceVocabId,
+    sourceSenseId: sourceSenseId.present
+        ? sourceSenseId.value
+        : this.sourceSenseId,
+    level: level ?? this.level,
+    series: series ?? this.series,
+    lessonId: lessonId ?? this.lessonId,
+    matchMethod: matchMethod ?? this.matchMethod,
+  );
+  ConjugationLemmaData copyWithCompanion(ConjugationLemmaCompanion data) {
+    return ConjugationLemmaData(
+      id: data.id.present ? data.id.value : this.id,
+      contentVocabId: data.contentVocabId.present
+          ? data.contentVocabId.value
+          : this.contentVocabId,
+      contentEntryId: data.contentEntryId.present
+          ? data.contentEntryId.value
+          : this.contentEntryId,
+      term: data.term.present ? data.term.value : this.term,
+      reading: data.reading.present ? data.reading.value : this.reading,
+      dictionaryForm: data.dictionaryForm.present
+          ? data.dictionaryForm.value
+          : this.dictionaryForm,
+      dictionaryReading: data.dictionaryReading.present
+          ? data.dictionaryReading.value
+          : this.dictionaryReading,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      conjugationClass: data.conjugationClass.present
+          ? data.conjugationClass.value
+          : this.conjugationClass,
+      posTagsJson: data.posTagsJson.present
+          ? data.posTagsJson.value
+          : this.posTagsJson,
+      jmdictEntrySeq: data.jmdictEntrySeq.present
+          ? data.jmdictEntrySeq.value
+          : this.jmdictEntrySeq,
+      sourceVocabId: data.sourceVocabId.present
+          ? data.sourceVocabId.value
+          : this.sourceVocabId,
+      sourceSenseId: data.sourceSenseId.present
+          ? data.sourceSenseId.value
+          : this.sourceSenseId,
+      level: data.level.present ? data.level.value : this.level,
+      series: data.series.present ? data.series.value : this.series,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
+      matchMethod: data.matchMethod.present
+          ? data.matchMethod.value
+          : this.matchMethod,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ConjugationLemmaData(')
+          ..write('id: $id, ')
+          ..write('contentVocabId: $contentVocabId, ')
+          ..write('contentEntryId: $contentEntryId, ')
+          ..write('term: $term, ')
+          ..write('reading: $reading, ')
+          ..write('dictionaryForm: $dictionaryForm, ')
+          ..write('dictionaryReading: $dictionaryReading, ')
+          ..write('kind: $kind, ')
+          ..write('conjugationClass: $conjugationClass, ')
+          ..write('posTagsJson: $posTagsJson, ')
+          ..write('jmdictEntrySeq: $jmdictEntrySeq, ')
+          ..write('sourceVocabId: $sourceVocabId, ')
+          ..write('sourceSenseId: $sourceSenseId, ')
+          ..write('level: $level, ')
+          ..write('series: $series, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('matchMethod: $matchMethod')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    contentVocabId,
+    contentEntryId,
+    term,
+    reading,
+    dictionaryForm,
+    dictionaryReading,
+    kind,
+    conjugationClass,
+    posTagsJson,
+    jmdictEntrySeq,
+    sourceVocabId,
+    sourceSenseId,
+    level,
+    series,
+    lessonId,
+    matchMethod,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is ConjugationLemmaData &&
+          other.id == this.id &&
+          other.contentVocabId == this.contentVocabId &&
+          other.contentEntryId == this.contentEntryId &&
+          other.term == this.term &&
+          other.reading == this.reading &&
+          other.dictionaryForm == this.dictionaryForm &&
+          other.dictionaryReading == this.dictionaryReading &&
+          other.kind == this.kind &&
+          other.conjugationClass == this.conjugationClass &&
+          other.posTagsJson == this.posTagsJson &&
+          other.jmdictEntrySeq == this.jmdictEntrySeq &&
+          other.sourceVocabId == this.sourceVocabId &&
+          other.sourceSenseId == this.sourceSenseId &&
+          other.level == this.level &&
+          other.series == this.series &&
+          other.lessonId == this.lessonId &&
+          other.matchMethod == this.matchMethod);
+}
+
+class ConjugationLemmaCompanion extends UpdateCompanion<ConjugationLemmaData> {
+  final Value<int> id;
+  final Value<int> contentVocabId;
+  final Value<String> contentEntryId;
+  final Value<String> term;
+  final Value<String?> reading;
+  final Value<String> dictionaryForm;
+  final Value<String?> dictionaryReading;
+  final Value<String> kind;
+  final Value<String> conjugationClass;
+  final Value<String> posTagsJson;
+  final Value<String> jmdictEntrySeq;
+  final Value<String?> sourceVocabId;
+  final Value<String?> sourceSenseId;
+  final Value<String> level;
+  final Value<String> series;
+  final Value<int> lessonId;
+  final Value<String> matchMethod;
+  const ConjugationLemmaCompanion({
+    this.id = const Value.absent(),
+    this.contentVocabId = const Value.absent(),
+    this.contentEntryId = const Value.absent(),
+    this.term = const Value.absent(),
+    this.reading = const Value.absent(),
+    this.dictionaryForm = const Value.absent(),
+    this.dictionaryReading = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.conjugationClass = const Value.absent(),
+    this.posTagsJson = const Value.absent(),
+    this.jmdictEntrySeq = const Value.absent(),
+    this.sourceVocabId = const Value.absent(),
+    this.sourceSenseId = const Value.absent(),
+    this.level = const Value.absent(),
+    this.series = const Value.absent(),
+    this.lessonId = const Value.absent(),
+    this.matchMethod = const Value.absent(),
+  });
+  ConjugationLemmaCompanion.insert({
+    this.id = const Value.absent(),
+    required int contentVocabId,
+    required String contentEntryId,
+    required String term,
+    this.reading = const Value.absent(),
+    required String dictionaryForm,
+    this.dictionaryReading = const Value.absent(),
+    required String kind,
+    required String conjugationClass,
+    required String posTagsJson,
+    required String jmdictEntrySeq,
+    this.sourceVocabId = const Value.absent(),
+    this.sourceSenseId = const Value.absent(),
+    required String level,
+    required String series,
+    required int lessonId,
+    required String matchMethod,
+  }) : contentVocabId = Value(contentVocabId),
+       contentEntryId = Value(contentEntryId),
+       term = Value(term),
+       dictionaryForm = Value(dictionaryForm),
+       kind = Value(kind),
+       conjugationClass = Value(conjugationClass),
+       posTagsJson = Value(posTagsJson),
+       jmdictEntrySeq = Value(jmdictEntrySeq),
+       level = Value(level),
+       series = Value(series),
+       lessonId = Value(lessonId),
+       matchMethod = Value(matchMethod);
+  static Insertable<ConjugationLemmaData> custom({
+    Expression<int>? id,
+    Expression<int>? contentVocabId,
+    Expression<String>? contentEntryId,
+    Expression<String>? term,
+    Expression<String>? reading,
+    Expression<String>? dictionaryForm,
+    Expression<String>? dictionaryReading,
+    Expression<String>? kind,
+    Expression<String>? conjugationClass,
+    Expression<String>? posTagsJson,
+    Expression<String>? jmdictEntrySeq,
+    Expression<String>? sourceVocabId,
+    Expression<String>? sourceSenseId,
+    Expression<String>? level,
+    Expression<String>? series,
+    Expression<int>? lessonId,
+    Expression<String>? matchMethod,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (contentVocabId != null) 'content_vocab_id': contentVocabId,
+      if (contentEntryId != null) 'content_entry_id': contentEntryId,
+      if (term != null) 'term': term,
+      if (reading != null) 'reading': reading,
+      if (dictionaryForm != null) 'dictionary_form': dictionaryForm,
+      if (dictionaryReading != null) 'dictionary_reading': dictionaryReading,
+      if (kind != null) 'kind': kind,
+      if (conjugationClass != null) 'conjugation_class': conjugationClass,
+      if (posTagsJson != null) 'pos_tags_json': posTagsJson,
+      if (jmdictEntrySeq != null) 'jmdict_entry_seq': jmdictEntrySeq,
+      if (sourceVocabId != null) 'source_vocab_id': sourceVocabId,
+      if (sourceSenseId != null) 'source_sense_id': sourceSenseId,
+      if (level != null) 'level': level,
+      if (series != null) 'series': series,
+      if (lessonId != null) 'lesson_id': lessonId,
+      if (matchMethod != null) 'match_method': matchMethod,
+    });
+  }
+
+  ConjugationLemmaCompanion copyWith({
+    Value<int>? id,
+    Value<int>? contentVocabId,
+    Value<String>? contentEntryId,
+    Value<String>? term,
+    Value<String?>? reading,
+    Value<String>? dictionaryForm,
+    Value<String?>? dictionaryReading,
+    Value<String>? kind,
+    Value<String>? conjugationClass,
+    Value<String>? posTagsJson,
+    Value<String>? jmdictEntrySeq,
+    Value<String?>? sourceVocabId,
+    Value<String?>? sourceSenseId,
+    Value<String>? level,
+    Value<String>? series,
+    Value<int>? lessonId,
+    Value<String>? matchMethod,
+  }) {
+    return ConjugationLemmaCompanion(
+      id: id ?? this.id,
+      contentVocabId: contentVocabId ?? this.contentVocabId,
+      contentEntryId: contentEntryId ?? this.contentEntryId,
+      term: term ?? this.term,
+      reading: reading ?? this.reading,
+      dictionaryForm: dictionaryForm ?? this.dictionaryForm,
+      dictionaryReading: dictionaryReading ?? this.dictionaryReading,
+      kind: kind ?? this.kind,
+      conjugationClass: conjugationClass ?? this.conjugationClass,
+      posTagsJson: posTagsJson ?? this.posTagsJson,
+      jmdictEntrySeq: jmdictEntrySeq ?? this.jmdictEntrySeq,
+      sourceVocabId: sourceVocabId ?? this.sourceVocabId,
+      sourceSenseId: sourceSenseId ?? this.sourceSenseId,
+      level: level ?? this.level,
+      series: series ?? this.series,
+      lessonId: lessonId ?? this.lessonId,
+      matchMethod: matchMethod ?? this.matchMethod,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (contentVocabId.present) {
+      map['content_vocab_id'] = Variable<int>(contentVocabId.value);
+    }
+    if (contentEntryId.present) {
+      map['content_entry_id'] = Variable<String>(contentEntryId.value);
+    }
+    if (term.present) {
+      map['term'] = Variable<String>(term.value);
+    }
+    if (reading.present) {
+      map['reading'] = Variable<String>(reading.value);
+    }
+    if (dictionaryForm.present) {
+      map['dictionary_form'] = Variable<String>(dictionaryForm.value);
+    }
+    if (dictionaryReading.present) {
+      map['dictionary_reading'] = Variable<String>(dictionaryReading.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (conjugationClass.present) {
+      map['conjugation_class'] = Variable<String>(conjugationClass.value);
+    }
+    if (posTagsJson.present) {
+      map['pos_tags_json'] = Variable<String>(posTagsJson.value);
+    }
+    if (jmdictEntrySeq.present) {
+      map['jmdict_entry_seq'] = Variable<String>(jmdictEntrySeq.value);
+    }
+    if (sourceVocabId.present) {
+      map['source_vocab_id'] = Variable<String>(sourceVocabId.value);
+    }
+    if (sourceSenseId.present) {
+      map['source_sense_id'] = Variable<String>(sourceSenseId.value);
+    }
+    if (level.present) {
+      map['level'] = Variable<String>(level.value);
+    }
+    if (series.present) {
+      map['series'] = Variable<String>(series.value);
+    }
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<int>(lessonId.value);
+    }
+    if (matchMethod.present) {
+      map['match_method'] = Variable<String>(matchMethod.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ConjugationLemmaCompanion(')
+          ..write('id: $id, ')
+          ..write('contentVocabId: $contentVocabId, ')
+          ..write('contentEntryId: $contentEntryId, ')
+          ..write('term: $term, ')
+          ..write('reading: $reading, ')
+          ..write('dictionaryForm: $dictionaryForm, ')
+          ..write('dictionaryReading: $dictionaryReading, ')
+          ..write('kind: $kind, ')
+          ..write('conjugationClass: $conjugationClass, ')
+          ..write('posTagsJson: $posTagsJson, ')
+          ..write('jmdictEntrySeq: $jmdictEntrySeq, ')
+          ..write('sourceVocabId: $sourceVocabId, ')
+          ..write('sourceSenseId: $sourceSenseId, ')
+          ..write('level: $level, ')
+          ..write('series: $series, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('matchMethod: $matchMethod')
+          ..write(')'))
+        .toString();
+  }
+}
+
 class $KanjiTable extends Kanji with TableInfo<$KanjiTable, KanjiData> {
   @override
   final GeneratedDatabase attachedDatabase;
@@ -4206,6 +5195,9 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
   late final $MockTestQuestionMapTable mockTestQuestionMap =
       $MockTestQuestionMapTable(this);
   late final $UserProgressTable userProgress = $UserProgressTable(this);
+  late final $ConjugationLemmaTable conjugationLemma = $ConjugationLemmaTable(
+    this,
+  );
   late final $KanjiTable kanji = $KanjiTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
@@ -4220,6 +5212,7 @@ abstract class _$ContentDatabase extends GeneratedDatabase {
     mockTestSection,
     mockTestQuestionMap,
     userProgress,
+    conjugationLemma,
     kanji,
   ];
 }
@@ -4270,6 +5263,30 @@ final class $$VocabTableReferences
     ).filter((f) => f.vocabId.id.sqlEquals($_itemColumn<int>('id')!));
 
     final cache = $_typedResult.readTableOrNull(_userProgressRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+
+  static MultiTypedResultKey<$ConjugationLemmaTable, List<ConjugationLemmaData>>
+  _conjugationLemmaRefsTable(_$ContentDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.conjugationLemma,
+        aliasName: $_aliasNameGenerator(
+          db.vocab.id,
+          db.conjugationLemma.contentVocabId,
+        ),
+      );
+
+  $$ConjugationLemmaTableProcessedTableManager get conjugationLemmaRefs {
+    final manager = $$ConjugationLemmaTableTableManager(
+      $_db,
+      $_db.conjugationLemma,
+    ).filter((f) => f.contentVocabId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(
+      _conjugationLemmaRefsTable($_db),
+    );
     return ProcessedTableManager(
       manager.$state.copyWith(prefetchedData: cache),
     );
@@ -4356,6 +5373,31 @@ class $$VocabTableFilterComposer
           }) => $$UserProgressTableFilterComposer(
             $db: $db,
             $table: $db.userProgress,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+
+  Expression<bool> conjugationLemmaRefs(
+    Expression<bool> Function($$ConjugationLemmaTableFilterComposer f) f,
+  ) {
+    final $$ConjugationLemmaTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.conjugationLemma,
+      getReferencedColumn: (t) => t.contentVocabId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$ConjugationLemmaTableFilterComposer(
+            $db: $db,
+            $table: $db.conjugationLemma,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
             $removeJoinBuilderFromRootComposer:
@@ -4503,6 +5545,31 @@ class $$VocabTableAnnotationComposer
     );
     return f(composer);
   }
+
+  Expression<T> conjugationLemmaRefs<T extends Object>(
+    Expression<T> Function($$ConjugationLemmaTableAnnotationComposer a) f,
+  ) {
+    final $$ConjugationLemmaTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.conjugationLemma,
+      getReferencedColumn: (t) => t.contentVocabId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$ConjugationLemmaTableAnnotationComposer(
+            $db: $db,
+            $table: $db.conjugationLemma,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
 class $$VocabTableTableManager
@@ -4518,7 +5585,10 @@ class $$VocabTableTableManager
           $$VocabTableUpdateCompanionBuilder,
           (VocabData, $$VocabTableReferences),
           VocabData,
-          PrefetchHooks Function({bool userProgressRefs})
+          PrefetchHooks Function({
+            bool userProgressRefs,
+            bool conjugationLemmaRefs,
+          })
         > {
   $$VocabTableTableManager(_$ContentDatabase db, $VocabTable table)
     : super(
@@ -4589,35 +5659,63 @@ class $$VocabTableTableManager
                     (e.readTable(table), $$VocabTableReferences(db, table, e)),
               )
               .toList(),
-          prefetchHooksCallback: ({userProgressRefs = false}) {
-            return PrefetchHooks(
-              db: db,
-              explicitlyWatchedTables: [if (userProgressRefs) db.userProgress],
-              addJoins: null,
-              getPrefetchedDataCallback: (items) async {
-                return [
-                  if (userProgressRefs)
-                    await $_getPrefetchedData<
-                      VocabData,
-                      $VocabTable,
-                      UserProgressData
-                    >(
-                      currentTable: table,
-                      referencedTable: $$VocabTableReferences
-                          ._userProgressRefsTable(db),
-                      managerFromTypedResult: (p0) => $$VocabTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).userProgressRefs,
-                      referencedItemsForCurrentItem: (item, referencedItems) =>
-                          referencedItems.where((e) => e.vocabId == item.id),
-                      typedResults: items,
-                    ),
-                ];
+          prefetchHooksCallback:
+              ({userProgressRefs = false, conjugationLemmaRefs = false}) {
+                return PrefetchHooks(
+                  db: db,
+                  explicitlyWatchedTables: [
+                    if (userProgressRefs) db.userProgress,
+                    if (conjugationLemmaRefs) db.conjugationLemma,
+                  ],
+                  addJoins: null,
+                  getPrefetchedDataCallback: (items) async {
+                    return [
+                      if (userProgressRefs)
+                        await $_getPrefetchedData<
+                          VocabData,
+                          $VocabTable,
+                          UserProgressData
+                        >(
+                          currentTable: table,
+                          referencedTable: $$VocabTableReferences
+                              ._userProgressRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$VocabTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).userProgressRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.vocabId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
+                      if (conjugationLemmaRefs)
+                        await $_getPrefetchedData<
+                          VocabData,
+                          $VocabTable,
+                          ConjugationLemmaData
+                        >(
+                          currentTable: table,
+                          referencedTable: $$VocabTableReferences
+                              ._conjugationLemmaRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$VocabTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).conjugationLemmaRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.contentVocabId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
+                    ];
+                  },
+                );
               },
-            );
-          },
         ),
       );
 }
@@ -4634,7 +5732,7 @@ typedef $$VocabTableProcessedTableManager =
       $$VocabTableUpdateCompanionBuilder,
       (VocabData, $$VocabTableReferences),
       VocabData,
-      PrefetchHooks Function({bool userProgressRefs})
+      PrefetchHooks Function({bool userProgressRefs, bool conjugationLemmaRefs})
     >;
 typedef $$GrammarPointTableCreateCompanionBuilder =
     GrammarPointCompanion Function({
@@ -6500,6 +7598,578 @@ typedef $$UserProgressTableProcessedTableManager =
       UserProgressData,
       PrefetchHooks Function({bool vocabId})
     >;
+typedef $$ConjugationLemmaTableCreateCompanionBuilder =
+    ConjugationLemmaCompanion Function({
+      Value<int> id,
+      required int contentVocabId,
+      required String contentEntryId,
+      required String term,
+      Value<String?> reading,
+      required String dictionaryForm,
+      Value<String?> dictionaryReading,
+      required String kind,
+      required String conjugationClass,
+      required String posTagsJson,
+      required String jmdictEntrySeq,
+      Value<String?> sourceVocabId,
+      Value<String?> sourceSenseId,
+      required String level,
+      required String series,
+      required int lessonId,
+      required String matchMethod,
+    });
+typedef $$ConjugationLemmaTableUpdateCompanionBuilder =
+    ConjugationLemmaCompanion Function({
+      Value<int> id,
+      Value<int> contentVocabId,
+      Value<String> contentEntryId,
+      Value<String> term,
+      Value<String?> reading,
+      Value<String> dictionaryForm,
+      Value<String?> dictionaryReading,
+      Value<String> kind,
+      Value<String> conjugationClass,
+      Value<String> posTagsJson,
+      Value<String> jmdictEntrySeq,
+      Value<String?> sourceVocabId,
+      Value<String?> sourceSenseId,
+      Value<String> level,
+      Value<String> series,
+      Value<int> lessonId,
+      Value<String> matchMethod,
+    });
+
+final class $$ConjugationLemmaTableReferences
+    extends
+        BaseReferences<
+          _$ContentDatabase,
+          $ConjugationLemmaTable,
+          ConjugationLemmaData
+        > {
+  $$ConjugationLemmaTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $VocabTable _contentVocabIdTable(_$ContentDatabase db) =>
+      db.vocab.createAlias(
+        $_aliasNameGenerator(db.conjugationLemma.contentVocabId, db.vocab.id),
+      );
+
+  $$VocabTableProcessedTableManager get contentVocabId {
+    final $_column = $_itemColumn<int>('content_vocab_id')!;
+
+    final manager = $$VocabTableTableManager(
+      $_db,
+      $_db.vocab,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_contentVocabIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$ConjugationLemmaTableFilterComposer
+    extends Composer<_$ContentDatabase, $ConjugationLemmaTable> {
+  $$ConjugationLemmaTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get contentEntryId => $composableBuilder(
+    column: $table.contentEntryId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get term => $composableBuilder(
+    column: $table.term,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get reading => $composableBuilder(
+    column: $table.reading,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get dictionaryForm => $composableBuilder(
+    column: $table.dictionaryForm,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get dictionaryReading => $composableBuilder(
+    column: $table.dictionaryReading,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get conjugationClass => $composableBuilder(
+    column: $table.conjugationClass,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get posTagsJson => $composableBuilder(
+    column: $table.posTagsJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get jmdictEntrySeq => $composableBuilder(
+    column: $table.jmdictEntrySeq,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sourceVocabId => $composableBuilder(
+    column: $table.sourceVocabId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sourceSenseId => $composableBuilder(
+    column: $table.sourceSenseId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get series => $composableBuilder(
+    column: $table.series,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get matchMethod => $composableBuilder(
+    column: $table.matchMethod,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$VocabTableFilterComposer get contentVocabId {
+    final $$VocabTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.contentVocabId,
+      referencedTable: $db.vocab,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$VocabTableFilterComposer(
+            $db: $db,
+            $table: $db.vocab,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$ConjugationLemmaTableOrderingComposer
+    extends Composer<_$ContentDatabase, $ConjugationLemmaTable> {
+  $$ConjugationLemmaTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get contentEntryId => $composableBuilder(
+    column: $table.contentEntryId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get term => $composableBuilder(
+    column: $table.term,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get reading => $composableBuilder(
+    column: $table.reading,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get dictionaryForm => $composableBuilder(
+    column: $table.dictionaryForm,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get dictionaryReading => $composableBuilder(
+    column: $table.dictionaryReading,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get conjugationClass => $composableBuilder(
+    column: $table.conjugationClass,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get posTagsJson => $composableBuilder(
+    column: $table.posTagsJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get jmdictEntrySeq => $composableBuilder(
+    column: $table.jmdictEntrySeq,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sourceVocabId => $composableBuilder(
+    column: $table.sourceVocabId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sourceSenseId => $composableBuilder(
+    column: $table.sourceSenseId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get series => $composableBuilder(
+    column: $table.series,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get matchMethod => $composableBuilder(
+    column: $table.matchMethod,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$VocabTableOrderingComposer get contentVocabId {
+    final $$VocabTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.contentVocabId,
+      referencedTable: $db.vocab,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$VocabTableOrderingComposer(
+            $db: $db,
+            $table: $db.vocab,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$ConjugationLemmaTableAnnotationComposer
+    extends Composer<_$ContentDatabase, $ConjugationLemmaTable> {
+  $$ConjugationLemmaTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get contentEntryId => $composableBuilder(
+    column: $table.contentEntryId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get term =>
+      $composableBuilder(column: $table.term, builder: (column) => column);
+
+  GeneratedColumn<String> get reading =>
+      $composableBuilder(column: $table.reading, builder: (column) => column);
+
+  GeneratedColumn<String> get dictionaryForm => $composableBuilder(
+    column: $table.dictionaryForm,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get dictionaryReading => $composableBuilder(
+    column: $table.dictionaryReading,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<String> get conjugationClass => $composableBuilder(
+    column: $table.conjugationClass,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get posTagsJson => $composableBuilder(
+    column: $table.posTagsJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get jmdictEntrySeq => $composableBuilder(
+    column: $table.jmdictEntrySeq,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get sourceVocabId => $composableBuilder(
+    column: $table.sourceVocabId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get sourceSenseId => $composableBuilder(
+    column: $table.sourceSenseId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get level =>
+      $composableBuilder(column: $table.level, builder: (column) => column);
+
+  GeneratedColumn<String> get series =>
+      $composableBuilder(column: $table.series, builder: (column) => column);
+
+  GeneratedColumn<int> get lessonId =>
+      $composableBuilder(column: $table.lessonId, builder: (column) => column);
+
+  GeneratedColumn<String> get matchMethod => $composableBuilder(
+    column: $table.matchMethod,
+    builder: (column) => column,
+  );
+
+  $$VocabTableAnnotationComposer get contentVocabId {
+    final $$VocabTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.contentVocabId,
+      referencedTable: $db.vocab,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$VocabTableAnnotationComposer(
+            $db: $db,
+            $table: $db.vocab,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$ConjugationLemmaTableTableManager
+    extends
+        RootTableManager<
+          _$ContentDatabase,
+          $ConjugationLemmaTable,
+          ConjugationLemmaData,
+          $$ConjugationLemmaTableFilterComposer,
+          $$ConjugationLemmaTableOrderingComposer,
+          $$ConjugationLemmaTableAnnotationComposer,
+          $$ConjugationLemmaTableCreateCompanionBuilder,
+          $$ConjugationLemmaTableUpdateCompanionBuilder,
+          (ConjugationLemmaData, $$ConjugationLemmaTableReferences),
+          ConjugationLemmaData,
+          PrefetchHooks Function({bool contentVocabId})
+        > {
+  $$ConjugationLemmaTableTableManager(
+    _$ContentDatabase db,
+    $ConjugationLemmaTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$ConjugationLemmaTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$ConjugationLemmaTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$ConjugationLemmaTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> contentVocabId = const Value.absent(),
+                Value<String> contentEntryId = const Value.absent(),
+                Value<String> term = const Value.absent(),
+                Value<String?> reading = const Value.absent(),
+                Value<String> dictionaryForm = const Value.absent(),
+                Value<String?> dictionaryReading = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<String> conjugationClass = const Value.absent(),
+                Value<String> posTagsJson = const Value.absent(),
+                Value<String> jmdictEntrySeq = const Value.absent(),
+                Value<String?> sourceVocabId = const Value.absent(),
+                Value<String?> sourceSenseId = const Value.absent(),
+                Value<String> level = const Value.absent(),
+                Value<String> series = const Value.absent(),
+                Value<int> lessonId = const Value.absent(),
+                Value<String> matchMethod = const Value.absent(),
+              }) => ConjugationLemmaCompanion(
+                id: id,
+                contentVocabId: contentVocabId,
+                contentEntryId: contentEntryId,
+                term: term,
+                reading: reading,
+                dictionaryForm: dictionaryForm,
+                dictionaryReading: dictionaryReading,
+                kind: kind,
+                conjugationClass: conjugationClass,
+                posTagsJson: posTagsJson,
+                jmdictEntrySeq: jmdictEntrySeq,
+                sourceVocabId: sourceVocabId,
+                sourceSenseId: sourceSenseId,
+                level: level,
+                series: series,
+                lessonId: lessonId,
+                matchMethod: matchMethod,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int contentVocabId,
+                required String contentEntryId,
+                required String term,
+                Value<String?> reading = const Value.absent(),
+                required String dictionaryForm,
+                Value<String?> dictionaryReading = const Value.absent(),
+                required String kind,
+                required String conjugationClass,
+                required String posTagsJson,
+                required String jmdictEntrySeq,
+                Value<String?> sourceVocabId = const Value.absent(),
+                Value<String?> sourceSenseId = const Value.absent(),
+                required String level,
+                required String series,
+                required int lessonId,
+                required String matchMethod,
+              }) => ConjugationLemmaCompanion.insert(
+                id: id,
+                contentVocabId: contentVocabId,
+                contentEntryId: contentEntryId,
+                term: term,
+                reading: reading,
+                dictionaryForm: dictionaryForm,
+                dictionaryReading: dictionaryReading,
+                kind: kind,
+                conjugationClass: conjugationClass,
+                posTagsJson: posTagsJson,
+                jmdictEntrySeq: jmdictEntrySeq,
+                sourceVocabId: sourceVocabId,
+                sourceSenseId: sourceSenseId,
+                level: level,
+                series: series,
+                lessonId: lessonId,
+                matchMethod: matchMethod,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$ConjugationLemmaTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({contentVocabId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (contentVocabId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.contentVocabId,
+                                referencedTable:
+                                    $$ConjugationLemmaTableReferences
+                                        ._contentVocabIdTable(db),
+                                referencedColumn:
+                                    $$ConjugationLemmaTableReferences
+                                        ._contentVocabIdTable(db)
+                                        .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$ConjugationLemmaTableProcessedTableManager =
+    ProcessedTableManager<
+      _$ContentDatabase,
+      $ConjugationLemmaTable,
+      ConjugationLemmaData,
+      $$ConjugationLemmaTableFilterComposer,
+      $$ConjugationLemmaTableOrderingComposer,
+      $$ConjugationLemmaTableAnnotationComposer,
+      $$ConjugationLemmaTableCreateCompanionBuilder,
+      $$ConjugationLemmaTableUpdateCompanionBuilder,
+      (ConjugationLemmaData, $$ConjugationLemmaTableReferences),
+      ConjugationLemmaData,
+      PrefetchHooks Function({bool contentVocabId})
+    >;
 typedef $$KanjiTableCreateCompanionBuilder =
     KanjiCompanion Function({
       Value<int> id,
@@ -6892,6 +8562,8 @@ class $ContentDatabaseManager {
       $$MockTestQuestionMapTableTableManager(_db, _db.mockTestQuestionMap);
   $$UserProgressTableTableManager get userProgress =>
       $$UserProgressTableTableManager(_db, _db.userProgress);
+  $$ConjugationLemmaTableTableManager get conjugationLemma =>
+      $$ConjugationLemmaTableTableManager(_db, _db.conjugationLemma);
   $$KanjiTableTableManager get kanji =>
       $$KanjiTableTableManager(_db, _db.kanji);
 }

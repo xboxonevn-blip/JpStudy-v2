@@ -17,6 +17,7 @@ const _kanjiSeedRevision = 70;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
+const _conjugationLemmaAssetPath = 'assets/data/content/conjugation/lemmas.json';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
     level: 'N2',
@@ -422,6 +423,7 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     MockTestSection,
     MockTestQuestionMap,
     UserProgress,
+    ConjugationLemma,
     Kanji,
   ],
 )
@@ -432,7 +434,7 @@ class ContentDatabase extends _$ContentDatabase {
   Future<bool>? _kanjiContentCurrentFuture;
 
   @override
-  int get schemaVersion => 35;
+  int get schemaVersion => 36;
 
   @override
   MigrationStrategy get migration {
@@ -441,6 +443,7 @@ class ContentDatabase extends _$ContentDatabase {
         await m.createAll();
         await _seedMinnaVocabularyForActiveLevel();
         await _seedHajimeteVocabularyForActiveLevel();
+        await _seedConjugationLemmasForActiveLevel();
         await _seedMinnaGrammarForActiveLevel();
         await _markContentRevision(
           _grammarSeedRevisionKey,
@@ -559,6 +562,11 @@ class ContentDatabase extends _$ContentDatabase {
         if (from < 35) {
           await _reseedMinnaKanji();
         }
+        if (from < 36) {
+          await m.createTable(conjugationLemma);
+          await _createContentIndexes();
+          await _seedConjugationLemmasForActiveLevel();
+        }
       },
       beforeOpen: (details) async {
         await _ensureKanjiContentCurrent();
@@ -570,6 +578,7 @@ class ContentDatabase extends _$ContentDatabase {
           _ensureHajimeteVocabularySeededForActiveLevel(),
           _ensureMinnaGrammarSeededForActiveLevel(),
         ]);
+        await _ensureConjugationLemmasSeededForActiveLevel();
       },
     );
   }
@@ -821,6 +830,167 @@ class ContentDatabase extends _$ContentDatabase {
   Future<void> _reseedHajimeteVocab() async {
     await (delete(vocab)..where((tbl) => tbl.series.equals('hajimete'))).go();
     await _seedHajimeteVocabulary();
+  }
+
+  Future<void> _ensureConjugationLemmasSeededForActiveLevel() async {
+    final activeLevel = await _activeStudyLevelLabel();
+    final countExpr = conjugationLemma.id.count();
+    final row =
+        await (selectOnly(conjugationLemma)
+              ..addColumns([countExpr])
+              ..where(conjugationLemma.level.equals(activeLevel)))
+            .getSingle();
+    final count = row.read(countExpr) ?? 0;
+    if (count == 0) {
+      await _seedConjugationLemmasForActiveLevel();
+    }
+  }
+
+  Future<void> _seedConjugationLemmasForActiveLevel() async {
+    final activeLevel = await _activeStudyLevelLabel();
+    await _seedConjugationLemmasForLevel(activeLevel);
+  }
+
+  Future<void> _seedConjugationLemmasForLevel(String level) async {
+    final normalizedLevel = level.trim().toUpperCase();
+    if (_contentSeedSpecForLevel(normalizedLevel) == null) return;
+
+    final entries = await _loadConjugationLemmaRowsForLevel(normalizedLevel);
+    if (entries.isEmpty) return;
+
+    final vocabRows =
+        await (select(vocab)..where((tbl) => tbl.level.equals(normalizedLevel)))
+            .get();
+    if (vocabRows.isEmpty) return;
+
+    final bySourcePair = <String, VocabData>{};
+    final bySourceVocabId = <String, VocabData>{};
+    final byTermReading = <String, VocabData>{};
+    for (final row in vocabRows) {
+      final sourceVocabId = row.sourceVocabId?.trim();
+      final sourceSenseId = row.sourceSenseId?.trim();
+      if (sourceVocabId != null && sourceVocabId.isNotEmpty) {
+        if (sourceSenseId != null && sourceSenseId.isNotEmpty) {
+          bySourcePair['$sourceVocabId|$sourceSenseId'] = row;
+        }
+        bySourceVocabId.putIfAbsent(sourceVocabId, () => row);
+      }
+      byTermReading.putIfAbsent(
+        '${row.term}|${row.reading?.trim() ?? ''}|${row.series}',
+        () => row,
+      );
+    }
+
+    final companions = <ConjugationLemmaCompanion>[];
+    for (final entry in entries) {
+      final vocabRow = _resolveConjugationLemmaVocab(
+        entry: entry,
+        bySourcePair: bySourcePair,
+        bySourceVocabId: bySourceVocabId,
+        byTermReading: byTermReading,
+      );
+      if (vocabRow == null) continue;
+
+      final id = _readInt(entry, 'id');
+      final contentEntryId = _readText(entry, 'contentEntryId');
+      final term = _readText(entry, 'term');
+      final dictionaryForm = _readText(entry, 'dictionaryForm');
+      final kind = _readText(entry, 'kind');
+      final conjugationClass = _readText(entry, 'conjugationClass');
+      final jmdictEntrySeq = _readText(entry, 'jmdictEntrySeq');
+      final lessonId = _readInt(entry, 'lessonId');
+      final matchMethod = _readText(entry, 'matchMethod');
+      if (id == null ||
+          contentEntryId.isEmpty ||
+          term.isEmpty ||
+          dictionaryForm.isEmpty ||
+          kind.isEmpty ||
+          conjugationClass.isEmpty ||
+          jmdictEntrySeq.isEmpty ||
+          lessonId == null ||
+          matchMethod.isEmpty) {
+        continue;
+      }
+
+      companions.add(
+        ConjugationLemmaCompanion.insert(
+          id: Value(id),
+          contentVocabId: vocabRow.id,
+          contentEntryId: contentEntryId,
+          term: term,
+          reading: Value(_readNullableText(entry, 'reading')),
+          dictionaryForm: dictionaryForm,
+          dictionaryReading: Value(
+            _readNullableText(entry, 'dictionaryReading'),
+          ),
+          kind: kind,
+          conjugationClass: conjugationClass,
+          posTagsJson: json.encode(entry['posTags'] ?? const []),
+          jmdictEntrySeq: jmdictEntrySeq,
+          sourceVocabId: Value(_readNullableText(entry, 'sourceVocabId')),
+          sourceSenseId: Value(_readNullableText(entry, 'sourceSenseId')),
+          level: normalizedLevel,
+          series: _readText(entry, 'series'),
+          lessonId: lessonId,
+          matchMethod: matchMethod,
+        ),
+      );
+    }
+
+    await (delete(
+      conjugationLemma,
+    )..where((tbl) => tbl.level.equals(normalizedLevel))).go();
+    if (companions.isEmpty) return;
+    await batch((b) {
+      for (final companion in companions) {
+        b.insert(
+          conjugationLemma,
+          companion,
+          mode: InsertMode.insertOrReplace,
+        );
+      }
+    });
+  }
+
+  Future<List<Map<String, dynamic>>> _loadConjugationLemmaRowsForLevel(
+    String level,
+  ) async {
+    try {
+      final raw = await rootBundle.loadString(_conjugationLemmaAssetPath);
+      final payload = _asMap(json.decode(raw));
+      final entries = payload?['entries'];
+      if (entries is! List) return const [];
+      return [
+        for (final rawEntry in entries)
+          if (_asMap(rawEntry) case final entry?)
+            if (_readText(entry, 'level').toUpperCase() == level) entry,
+      ];
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  VocabData? _resolveConjugationLemmaVocab({
+    required Map<String, dynamic> entry,
+    required Map<String, VocabData> bySourcePair,
+    required Map<String, VocabData> bySourceVocabId,
+    required Map<String, VocabData> byTermReading,
+  }) {
+    final sourceVocabId = _readNullableText(entry, 'sourceVocabId');
+    final sourceSenseId = _readNullableText(entry, 'sourceSenseId');
+    if (sourceVocabId != null && sourceSenseId != null) {
+      final byPair = bySourcePair['$sourceVocabId|$sourceSenseId'];
+      if (byPair != null) return byPair;
+    }
+    if (sourceVocabId != null) {
+      final bySource = bySourceVocabId[sourceVocabId];
+      if (bySource != null) return bySource;
+    }
+
+    final term = _readText(entry, 'term');
+    final reading = _readText(entry, 'reading');
+    final series = _readText(entry, 'series');
+    return byTermReading['$term|$reading|$series'];
   }
 
   Future<void> _seedHajimeteLevel(_HajimeteSeedSpec spec) async {
@@ -1534,6 +1704,18 @@ class ContentDatabase extends _$ContentDatabase {
     // Grammar (content DB copy) — queried by level in JLPT mock exam builder.
     await customStatement(
       'CREATE INDEX IF NOT EXISTS idx_grammar_point_level ON grammar_point(level)',
+    );
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conjugation_lemma_vocab '
+      'ON conjugation_lemma(content_vocab_id)',
+    );
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conjugation_lemma_level '
+      'ON conjugation_lemma(level)',
+    );
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conjugation_lemma_source '
+      'ON conjugation_lemma(source_vocab_id, source_sense_id)',
     );
   }
 

@@ -967,3 +967,14 @@
 - Live proof: `https://jpstudy.web.app/assets/assets/data/content/conjugation/lemmas.json?codexFresh=conj-lemmas-20260520` returned `200`, `Cache-Control: no-cache`, `source=JMdict_e`, and `entryCount=3907`. `main.dart.js` also returned `no-cache`.
 - Live smoke: `https://jpstudy.web.app/?codexFresh=conj-lemmas-20260520#/` booted the Vietnamese shell and main nav; Playwright console had no Flutter errors/warnings. The only report was the known Google frame-ancestor report-only message from the App Check/reCAPTCHA path. Screenshot saved as `live-conjugation-lemmas-home-smoke.png`.
 - Remaining QA-C-001 work: content DB lemma table, conjugation SRS/mistakes, Vocab/Grammar/Kanji UI integration, deploy/live proof of learner flows.
+
+## 2026-05-20 QA-C-001 Conjugation Content DB Slice
+
+- TDD RED: added `test/data/content/conjugation_content_seed_test.dart`; it failed because `ConjugationRepository` and the content DB lemma plumbing did not exist.
+- GREEN: added `ConjugationLemma` to ContentDatabase schema v36, created DB indexes, seeded active-level lemma metadata from `assets/data/content/conjugation/lemmas.json`, and added repository lookups by content vocab id, source ids, level, and due content vocab ids.
+- Verified locally: focused conjugation seed test proved N5 `帰る` resolves as `godanRu`, N5 `起きる` resolves as `ichidan`, `学生` returns no lemma, source-id lookup works, and N4 remains unseeded when active level is N5.
+- Verified gates: focused conjugation suites passed, `flutter analyze lib test` clean, UI string guard `0`, content status machine/open-review `0`, `git diff --check` clean, and full `flutter test` passed `2362/2362`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: `main.dart.js?codexFresh=conj-db-20260520` returned `200/no-cache` and contained `conjugation_lemma` plus `idx_conjugation_lemma_vocab`; `lemmas.json` returned `200/no-cache`, `source=JMdict_e`, `entryCount=3907`, with `haj_n5_ch10_v033` and `haj_n5_ch01_v008` present.
+- Directive D defect logged during fresh-browser live proof: onboarding language screen at 1366x768 lets `Tiếng Việt` be selected but shows no visible continue CTA because the analytics consent banner occupies the bottom; logged QA-A-025 as next P0 before lower-priority QA-C work.
+- Remaining QA-C-001 work after QA-A-025: conjugation SRS/mistakes, Vocab/Grammar/Kanji UI integration, deploy/live proof of learner flows.

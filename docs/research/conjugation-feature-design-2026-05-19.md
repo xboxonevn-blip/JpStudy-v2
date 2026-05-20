@@ -372,12 +372,19 @@ used as a conjugation lemma.
 - Create: `lib/data/repositories/conjugation_repository.dart`
 - Test: `test/data/content/conjugation_content_seed_test.dart`
 
-- [ ] Add `ConjugationLemma` table and indexes.
-- [ ] Seed active level metadata from `assets/data/content/conjugation/lemmas.json`.
-- [ ] Add repository lookups by content vocab id, level, due skill ids, and source ids.
-- [ ] Run: `dart run build_runner build --delete-conflicting-outputs`
-- [ ] Run: `flutter test test/data/content/conjugation_content_seed_test.dart`
-- [ ] Expected: `帰る` and `起きる` keep different classes; non-conjugatable nouns do not return lemma rows.
+- [x] Add `ConjugationLemma` table and indexes.
+- [x] Seed active level metadata from `assets/data/content/conjugation/lemmas.json`.
+- [x] Add repository lookups by content vocab id, level, due skill ids, and source ids.
+- [x] Run: `dart run build_runner build --delete-conflicting-outputs`
+- [x] Run: `flutter test test/data/content/conjugation_content_seed_test.dart`
+- [x] Expected: `帰る` and `起きる` keep different classes; non-conjugatable nouns do not return lemma rows.
+
+Slice output: ContentDatabase schema v36 seeds active-level
+`ConjugationLemma` rows from the JMdict-backed asset after vocab rows exist.
+`ConjugationRepository` can resolve by content vocab id, source ids, level, and
+due content vocab ids. The N5 regression proves `帰る` remains `godanRu`,
+`起きる` remains `ichidan`, `学生` returns no lemma, and N4 stays unseeded
+when the active level is N5.
 
 ### Task 4: App DB SRS And Mistakes
 

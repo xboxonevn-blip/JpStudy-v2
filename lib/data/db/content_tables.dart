@@ -124,6 +124,32 @@ class UserProgress extends Table {
   Set<Column> get primaryKey => {vocabId};
 }
 
+class ConjugationLemma extends Table {
+  @override
+  String get tableName => 'conjugation_lemma';
+
+  IntColumn get id => integer()();
+  IntColumn get contentVocabId => integer().references(Vocab, #id)();
+  TextColumn get contentEntryId => text()();
+  TextColumn get term => text()();
+  TextColumn get reading => text().nullable()();
+  TextColumn get dictionaryForm => text()();
+  TextColumn get dictionaryReading => text().nullable()();
+  TextColumn get kind => text()();
+  TextColumn get conjugationClass => text()();
+  TextColumn get posTagsJson => text()();
+  TextColumn get jmdictEntrySeq => text()();
+  TextColumn get sourceVocabId => text().nullable()();
+  TextColumn get sourceSenseId => text().nullable()();
+  TextColumn get level => text()();
+  TextColumn get series => text()();
+  IntColumn get lessonId => integer()();
+  TextColumn get matchMethod => text()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
 class Kanji extends Table {
   @override
   String get tableName => 'kanji';

@@ -800,7 +800,7 @@ class GrammarQuestionGenerator {
     final transformed = _transformToNegative(example.japanese);
     if (transformed == null || transformed == example.japanese) return null;
 
-    final options = _uniqueShuffled([
+    final options = _uniqueTransformationOptions([
       transformed,
       example.japanese,
       _softVariant(example.japanese),
@@ -1473,6 +1473,21 @@ class GrammarQuestionGenerator {
         .where((value) => value.isNotEmpty)
         .toSet()
         .toList(growable: false);
+    list.shuffle();
+    return list;
+  }
+
+  static List<String> _uniqueTransformationOptions(List<String> values) {
+    final byKey = <String, String>{};
+    for (final value in values) {
+      final trimmed = value.trim();
+      if (trimmed.isEmpty) continue;
+      final key = _trimSentencePunctuation(
+        trimmed,
+      ).replaceAll(_whitespaceRe, ' ').trim();
+      byKey.putIfAbsent(key.isEmpty ? trimmed : key, () => trimmed);
+    }
+    final list = byKey.values.toList(growable: false);
     list.shuffle();
     return list;
   }

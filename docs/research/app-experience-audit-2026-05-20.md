@@ -31,6 +31,8 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Vocab direct route | Audited slice | Fresh VI/N5 `/#/vocab` showed a spinner after 25 seconds with no app exception. QA-A-029 now renders the hub from bundled manifests/counts and decouples first paint from review-home DB loading; live proof shows the hub plus working `Ôn ngay` and `Minna no Nihongo I` CTAs. |
 | Grammar/Kanji direct routes | Audited slice | While root-causing QA-A-029, fresh VI/N5 `/#/grammar` and `/#/kanji` also stayed in loading states after 25-45 seconds with no app exception. QA-A-030 added bounded loading panels for Grammar/Kanji DB-backed work, then live proof verified direct routes plus Grammar practice/detail and Kanji writing/Hán-Việt CTAs. |
 | P1 backlog live proof sweep | Audited slice | Rechecked old fixed-local P1 rows after the latest deploy: QA-A-002 Vocab copy/badges are learner-facing, QA-A-003 Review copy is natural and CTAs open target content, and QA-A-005 VI/N2 Home/Review no longer leaks `Minna No Nihongo 200001`. |
+| Grammar practice gate N5-N1 | Audited slice | QA-A-008 closeout live proof opened Grammar hub -> first detail -> examples -> `Luyện tập để hiểu` for VI N5/N4/N3/N2/N1; every level reached `Câu 1/5`, no empty due state, and no manual learned/self-attestation copy. |
+| Grammar transformation question quality | Audited slice | QA-A-008 live proof exposed punctuation-only duplicate options in generated transformation drills; QA-A-031 dedupes transformation choices by sentence shape and live proof confirms rendered option keys are unique. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -58,6 +60,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-002 | Vocab copy | Vocab hub/catalog leaked English/internal status copy such as `Ready now`, `Companion`, and `Catalog`. | Fixed + deployed |
 | QA-A-003 | Review copy/CTA | Review page used warehouse metaphors and needed live CTA proof. | Fixed + deployed |
 | QA-A-005 | N2 lesson label | N2 next-lesson copy could expose legacy storage id `Minna No Nihongo 200001`. | Fixed + deployed |
+| QA-A-008 | Grammar practice gate | Grammar detail needed a real practice gate/SRS path across N5-N1 instead of manual self-attestation. | Fixed + deployed |
+| QA-A-031 | Grammar question quality | Generated transformation drills could show options that differed only by sentence-final punctuation. | Fixed + deployed |
+| QA-B-003 | Grammar practice content | Authored grammar practice bank is empty; generated coverage is complete, but source-informed authored items are still content enrichment debt. | Queued |
 
 ## Live Proof Artifacts
 
@@ -138,6 +143,12 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-qaa003-review-copy.png`
 - `output/playwright/live-qaa005-n2-home.png`
 - `output/playwright/live-qaa005-n2-review.png`
+- `output/playwright/live-qaa008-qaa031-grammar-proof.json`
+- `output/playwright/live-qaa008-n5-practice-gate.png`
+- `output/playwright/live-qaa008-n4-practice-gate.png`
+- `output/playwright/live-qaa008-n3-practice-gate.png`
+- `output/playwright/live-qaa008-n2-practice-gate.png`
+- `output/playwright/live-qaa008-n1-practice-gate.png`
 
 ## Notes For Next Sweep
 

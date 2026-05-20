@@ -1153,6 +1153,94 @@ void main() {
       );
     });
 
+    test('transformation options avoid punctuation-only duplicates', () {
+      const point1 = GrammarPoint(
+        id: 83,
+        lessonId: 1,
+        grammarPoint: 'A あるいは B',
+        titleEn: 'A or B',
+        meaning: 'A hoặc B',
+        meaningEn: 'A or B',
+        meaningVi: 'A hoặc B',
+        connection: 'Phrase A + あるいは + Phrase B',
+        connectionEn: 'Phrase A + あるいは + Phrase B',
+        explanation: 'Nêu hai lựa chọn.',
+        explanationEn: 'Presents two alternatives.',
+        explanationVi: 'Nêu hai lựa chọn.',
+        jlptLevel: 'N2',
+        isLearned: false,
+      );
+      const point2 = GrammarPoint(
+        id: 84,
+        lessonId: 1,
+        grammarPoint: 'または',
+        titleEn: 'or',
+        meaning: 'hoặc',
+        meaningEn: 'or',
+        meaningVi: 'hoặc',
+        connection: 'A または B',
+        connectionEn: 'A または B',
+        explanation: 'Nêu lựa chọn.',
+        explanationEn: 'Presents a choice.',
+        explanationVi: 'Nêu lựa chọn.',
+        jlptLevel: 'N2',
+        isLearned: false,
+      );
+      const point3 = GrammarPoint(
+        id: 85,
+        lessonId: 1,
+        grammarPoint: 'もしくは',
+        titleEn: 'or else',
+        meaning: 'hoặc là',
+        meaningEn: 'or else',
+        meaningVi: 'hoặc là',
+        connection: 'A もしくは B',
+        connectionEn: 'A もしくは B',
+        explanation: 'Nêu lựa chọn trang trọng.',
+        explanationEn: 'Presents a formal choice.',
+        explanationVi: 'Nêu lựa chọn trang trọng.',
+        jlptLevel: 'N2',
+        isLearned: false,
+      );
+
+      final questions = GrammarQuestionGenerator.generateQuestions(
+        const [
+          (
+            point: point1,
+            examples: [
+              GrammarExample(
+                id: 83,
+                grammarId: 83,
+                japanese: '彼女は英語あるいはドイツ語で話すことができます。',
+                translation: 'Cô ấy có thể nói bằng tiếng Anh hoặc tiếng Đức.',
+                translationEn: 'She can speak in English or German.',
+                translationVi:
+                    'Cô ấy có thể nói bằng tiếng Anh hoặc tiếng Đức.',
+              ),
+            ],
+          ),
+        ],
+        allPoints: const [point1, point2, point3],
+        language: AppLanguage.vi,
+      );
+
+      final transformation = questions.firstWhere(
+        (q) => q.type == GrammarQuestionType.transformation,
+      );
+      final normalizedOptions = transformation.options
+          .map((value) => value.trim().replaceFirst(RegExp(r'[。！？?!]+$'), ''))
+          .toSet();
+
+      expect(transformation.options, contains(transformation.correctAnswer));
+      expect(transformation.options.length, greaterThanOrEqualTo(3));
+      expect(
+        normalizedOptions.length,
+        transformation.options.length,
+        reason:
+            'Transformation choices must not differ only by final punctuation.',
+      );
+    });
+
     test(
       'builds transformation questions for te-iru and plain-form statements',
       () {

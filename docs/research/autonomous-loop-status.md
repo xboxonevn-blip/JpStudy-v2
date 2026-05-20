@@ -1086,3 +1086,15 @@
 - QA-A-005 live proof: fresh VI/N2 Home and Review showed no `Bắt đầu Minna No Nihongo 200001` / `Minna No Nihongo 200001` storage-id leak.
 - Bundle proof: `main.dart.js` returned `200/no-cache`. Unexpected console warnings/errors and unexpected failed requests were `0`; known environment-only font/App Check/Sentry/Kaspersky network noise was ignored.
 - Artifact: `output/playwright/live-p1-backlog-cleanup-proof.json`. Screenshots: `output/playwright/live-qaa002-vocab-copy.png`, `output/playwright/live-qaa002-vocab-minna-catalog.png`, `output/playwright/live-qaa003-review-copy.png`, `output/playwright/live-qaa005-n2-home.png`, and `output/playwright/live-qaa005-n2-review.png`.
+
+## 2026-05-20 QA-A-008 Closeout + QA-A-031 Grammar Option Quality
+
+- Re-audited QA-A-008 after the P1 cleanup. Local guard confirms every runtime N5-N1 grammar point has generated practice questions; `assets/data/content/index.json` reports `grammarPractice.entries=754` and `authoredQuestions=0`.
+- Closed QA-A-008 functionally: Grammar detail no longer exposes manual self-attestation, shared generated questions come through `GrammarPracticeBank`, JLPT mock grammar also uses the shared bank, and QA-A-009 already completed shared select -> confirm answer UI.
+- Directive D live proof before the fix found a connected defect: upper-level transformation drills could show options that differed only by final punctuation. Logged and fixed this as QA-A-031.
+- TDD: RED `transformation options avoid punctuation-only duplicates` failed with normalized option count `3` vs raw option count `5`; GREEN dedupes transformation options after stripping sentence-final punctuation while keeping the correct answer.
+- Verified locally: focused grammar/JLPT bank suite passed `31/31`, `flutter analyze lib test` clean, UI string guard `0`, `git diff --check` clean, and full `flutter test` passed `2395/2395`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof after deploy: VI N5/N4/N3/N2/N1 Grammar hub -> first detail -> examples -> `Luyện tập để hiểu` all reached `Câu 1/5`, with no empty due state and no manual learned copy; rendered transformation option keys were unique after punctuation normalization. `main.dart.js` returned `200/no-cache`; unexpected console warnings/errors and unexpected failed requests were `0`.
+- Artifacts: `output/playwright/live-qaa008-qaa031-grammar-proof.json` plus `output/playwright/live-qaa008-*-practice-gate.png`.
+- QA-B-003 logged for later content enrichment: authored grammar practice bank is empty, but generated coverage is complete, so this no longer blocks QA-A-008.

@@ -3737,6 +3737,901 @@
           }
         ]
       }
+    },
+    {
+      "ruleId": "rule_rime_ac_uoc_to_aku_yaku",
+      "legacyId": "rime-ac-uoc-to-aku-yaku",
+      "section": "21",
+      "parentSection": null,
+      "category": "rime",
+      "title": "Vần -ác/-ạc/-ước/-ược",
+      "consonants": [],
+      "targetRow": "AKU/YAKU",
+      "targetKana": [
+        "く"
+      ],
+      "percentage": 66,
+      "explanation": "Các vần Hán-Việt -ác/-ạc/-ước/-ược thường khép bằng -aku/-yaku trong On'yomi.",
+      "legacyConfidence": 0.82,
+      "examples": [
+        {
+          "hanViet": "Lạc",
+          "kanji": "楽",
+          "kanjiId": 1996,
+          "assetKanjiId": "n4_canonical_l23_k006",
+          "level": "N4",
+          "onyomi": "がく",
+          "romaji": "ガク",
+          "compound": "楽",
+          "compoundKana": "らく",
+          "compoundMeaning": "thoải mái, nhàn hạ",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Dược",
+          "kanji": "薬",
+          "kanjiId": 2009,
+          "assetKanjiId": "n4_canonical_l25_k005",
+          "level": "N4",
+          "onyomi": "やく",
+          "romaji": "ヤク",
+          "compound": "薬",
+          "compoundKana": "くすり",
+          "compoundMeaning": "thuốc",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Ước",
+          "kanji": "約",
+          "kanjiId": 1667,
+          "assetKanjiId": "n3_canonical_l12_k010",
+          "level": "N3",
+          "onyomi": "やく",
+          "romaji": "ヤク",
+          "compound": "約束",
+          "compoundKana": "やくそく",
+          "compoundMeaning": "cuộc hẹn, lời hứa",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Ác",
+          "kanji": "悪",
+          "kanjiId": 1733,
+          "assetKanjiId": "n3_canonical_l18_k001",
+          "level": "N3",
+          "onyomi": "あく",
+          "romaji": "アク",
+          "compound": "悪い",
+          "compoundKana": "わるい",
+          "compoundMeaning": "tệ",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Các",
+          "kanji": "各",
+          "kanjiId": 1563,
+          "assetKanjiId": "n3_canonical_l04_k008",
+          "level": "N3",
+          "onyomi": "かく",
+          "romaji": "カク",
+          "compound": "各地",
+          "compoundKana": "かくち",
+          "compoundMeaning": "mọi nơi, nhiều nơi khác nhau",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Bắc",
+          "kanji": "北",
+          "kanjiId": 2052,
+          "assetKanjiId": "n5_canonical_l10_k003",
+          "level": "N5",
+          "onyomi": "ほく",
+          "romaji": "ホク",
+          "compound": "北",
+          "compoundKana": "きた",
+          "compoundMeaning": "phía bắc",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_rime_ac_uoc_to_aku_yaku_国",
+            "kanji": "国",
+            "kanjiId": 1903,
+            "assetKanjiId": "n4_canonical_l10_k005",
+            "hanViet": "Quốc",
+            "correct": "こく",
+            "options": [
+              "こく",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Quốc có âm cuối ac/uoc; mẫu Hán-Việt này thường về AKU/YAKU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ac_uoc_to_aku_yaku_若",
+            "kanji": "若",
+            "kanjiId": 1916,
+            "assetKanjiId": "n4_canonical_l12_k004",
+            "hanViet": "Nhược",
+            "correct": "じゃく",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "じゃく"
+            ],
+            "explanation": "Nhược có âm cuối ac/uoc; mẫu Hán-Việt này thường về AKU/YAKU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ac_uoc_to_aku_yaku_弱",
+            "kanji": "弱",
+            "kanjiId": 1963,
+            "assetKanjiId": "n4_canonical_l19_k001",
+            "hanViet": "Nhược",
+            "correct": "じゃく",
+            "options": [
+              "じん",
+              "かん",
+              "じゃく",
+              "とう"
+            ],
+            "explanation": "Nhược có âm cuối ac/uoc; mẫu Hán-Việt này thường về AKU/YAKU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ac_uoc_to_aku_yaku_特",
+            "kanji": "特",
+            "kanjiId": 1953,
+            "assetKanjiId": "n4_canonical_l17_k006",
+            "hanViet": "Đặc",
+            "correct": "とく",
+            "options": [
+              "かん",
+              "とく",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Đặc có âm cuối ac/uoc; mẫu Hán-Việt này thường về AKU/YAKU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ac_uoc_to_aku_yaku_黒",
+            "kanji": "黒",
+            "kanjiId": 1969,
+            "assetKanjiId": "n4_canonical_l19_k007",
+            "hanViet": "Hắc",
+            "correct": "こく",
+            "options": [
+              "こく",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Hắc có âm cuối ac/uoc; mẫu Hán-Việt này thường về AKU/YAKU trong On'yomi."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_rime_ich_to_eki_seki",
+      "legacyId": "rime-ich-to-eki-seki",
+      "section": "22",
+      "parentSection": null,
+      "category": "rime",
+      "title": "Vần -ịch/-ích",
+      "consonants": [],
+      "targetRow": "EKI/SEKI/TEKI",
+      "targetKana": [
+        "き"
+      ],
+      "percentage": 64,
+      "explanation": "Các vần Hán-Việt -ịch/-ích thường đi với nhịp -eki/-seki/-teki trong On'yomi.",
+      "legacyConfidence": 0.78,
+      "examples": [
+        {
+          "hanViet": "Dịch",
+          "kanji": "駅",
+          "kanjiId": 2004,
+          "assetKanjiId": "n4_canonical_l24_k007",
+          "level": "N4",
+          "onyomi": "えき",
+          "romaji": "エキ",
+          "compound": "駅",
+          "compoundKana": "えき",
+          "compoundMeaning": "trạm",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Ích",
+          "kanji": "益",
+          "kanjiId": 1224,
+          "assetKanjiId": "n2_canonical_l10_k002",
+          "level": "N2",
+          "onyomi": "えき",
+          "romaji": "エキ",
+          "compound": "利益",
+          "compoundKana": "りえき",
+          "compoundMeaning": "lợi nhuận; lợi ích (chính trị; kinh tế)",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Dịch",
+          "kanji": "易",
+          "kanjiId": 1641,
+          "assetKanjiId": "n3_canonical_l10_k010",
+          "level": "N3",
+          "onyomi": "えき",
+          "romaji": "エキ",
+          "compound": "易しい",
+          "compoundKana": "やさしい",
+          "compoundMeaning": "dễ dàng, đơn giản",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Tịch",
+          "kanji": "席",
+          "kanjiId": 1706,
+          "assetKanjiId": "n3_canonical_l15_k012",
+          "level": "N3",
+          "onyomi": "せき",
+          "romaji": "セキ",
+          "compound": "出席",
+          "compoundKana": "しゅっせき・する",
+          "compoundMeaning": "tham dự",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Tích",
+          "kanji": "昔",
+          "kanjiId": 1633,
+          "assetKanjiId": "n3_canonical_l10_k002",
+          "level": "N3",
+          "onyomi": "せき",
+          "romaji": "セキ",
+          "compound": "昔",
+          "compoundKana": "むかし",
+          "compoundMeaning": "ngày xưa",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thích",
+          "kanji": "適",
+          "kanjiId": 1438,
+          "assetKanjiId": "n2_canonical_l21_k013",
+          "level": "N2",
+          "onyomi": "てき",
+          "romaji": "テキ",
+          "compound": "適当",
+          "compoundKana": "てきとう",
+          "compoundMeaning": "sự thích hợp",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_rime_ich_to_eki_seki_歴",
+            "kanji": "歴",
+            "kanjiId": 2003,
+            "assetKanjiId": "n4_canonical_l24_k006",
+            "hanViet": "Lịch",
+            "correct": "れき",
+            "options": [
+              "れき",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Lịch có âm cuối ich; mẫu Hán-Việt này thường về EKI/SEKI/TEKI trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ich_to_eki_seki_夕",
+            "kanji": "夕",
+            "kanjiId": 2029,
+            "assetKanjiId": "n5_canonical_l05_k001",
+            "hanViet": "Tịch",
+            "correct": "せき",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "せき"
+            ],
+            "explanation": "Tịch có âm cuối ich; mẫu Hán-Việt này thường về EKI/SEKI/TEKI trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ich_to_eki_seki_赤",
+            "kanji": "赤",
+            "kanjiId": 1899,
+            "assetKanjiId": "n4_canonical_l10_k001",
+            "hanViet": "Xích",
+            "correct": "せき",
+            "options": [
+              "じん",
+              "かん",
+              "せき",
+              "とう"
+            ],
+            "explanation": "Xích có âm cuối ich; mẫu Hán-Việt này thường về EKI/SEKI/TEKI trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ich_to_eki_seki_的",
+            "kanji": "的",
+            "kanjiId": 1634,
+            "assetKanjiId": "n3_canonical_l10_k003",
+            "hanViet": "Đích",
+            "correct": "てき",
+            "options": [
+              "かん",
+              "てき",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Đích có âm cuối ich; mẫu Hán-Việt này thường về EKI/SEKI/TEKI trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_ich_to_eki_seki_積",
+            "kanji": "積",
+            "kanjiId": 1817,
+            "assetKanjiId": "n3_canonical_l24_k009",
+            "hanViet": "Tích",
+            "correct": "せき",
+            "options": [
+              "せき",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Tích có âm cuối ich; mẫu Hán-Việt này thường về EKI/SEKI/TEKI trong On'yomi."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_rime_uu_ieu_yeu_to_yuu_you",
+      "legacyId": "rime-uu-ieu-yeu-to-yuu-you",
+      "section": "23",
+      "parentSection": null,
+      "category": "rime",
+      "title": "Vần -ưu/-iêu/-yêu",
+      "consonants": [],
+      "targetRow": "YUU/YOU",
+      "targetKana": [
+        "う"
+      ],
+      "percentage": 68,
+      "explanation": "Các vần Hán-Việt -ưu/-iêu/-yêu thường chuyển sang yuu/you trong On'yomi.",
+      "legacyConfidence": 0.76,
+      "examples": [
+        {
+          "hanViet": "Hưu",
+          "kanji": "休",
+          "kanjiId": 2067,
+          "assetKanjiId": "n5_canonical_l14_k002",
+          "level": "N5",
+          "onyomi": "きゅう",
+          "romaji": "キュウ",
+          "compound": "休み",
+          "compoundKana": "やすみ",
+          "compoundMeaning": "nghỉ ngơi, nghỉ lễ",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Cửu",
+          "kanji": "九",
+          "kanjiId": 2016,
+          "assetKanjiId": "n5_canonical_l01_k005",
+          "level": "N5",
+          "onyomi": "きゅう",
+          "romaji": "キュウ",
+          "compound": "九",
+          "compoundKana": "きゅう",
+          "compoundMeaning": "Số 9",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Cứu",
+          "kanji": "究",
+          "kanjiId": 1888,
+          "assetKanjiId": "n4_canonical_l08_k005",
+          "level": "N4",
+          "onyomi": "きゅう",
+          "romaji": "キュウ",
+          "compound": "研究者",
+          "compoundKana": "けんきゅうしゃ",
+          "compoundMeaning": "nhà nghiên cứu",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Hữu",
+          "kanji": "友",
+          "kanjiId": 2044,
+          "assetKanjiId": "n5_canonical_l08_k004",
+          "level": "N5",
+          "onyomi": "ゆう",
+          "romaji": "ユウ",
+          "compound": "友",
+          "compoundKana": "とも",
+          "compoundMeaning": "bạn",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Yếu",
+          "kanji": "要",
+          "kanjiId": 1669,
+          "assetKanjiId": "n3_canonical_l12_k012",
+          "level": "N3",
+          "onyomi": "よう",
+          "romaji": "ヨウ",
+          "compound": "要る",
+          "compoundKana": "いる",
+          "compoundMeaning": "cần",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Tiểu",
+          "kanji": "小",
+          "kanjiId": 2028,
+          "assetKanjiId": "n5_canonical_l04_k004",
+          "level": "N5",
+          "onyomi": "しょう",
+          "romaji": "ショウ",
+          "compound": "小",
+          "compoundKana": "お",
+          "compoundMeaning": "nhỏ",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_rime_uu_ieu_yeu_to_yuu_you_少",
+            "kanji": "少",
+            "kanjiId": 2048,
+            "assetKanjiId": "n5_canonical_l09_k004",
+            "hanViet": "Thiểu",
+            "correct": "しょう",
+            "options": [
+              "しょう",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Thiểu có âm cuối uu/ieu/yeu; mẫu Hán-Việt này thường về YUU/YOU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_uu_ieu_yeu_to_yuu_you_牛",
+            "kanji": "牛",
+            "kanjiId": 2038,
+            "assetKanjiId": "n5_canonical_l07_k002",
+            "hanViet": "Ngưu",
+            "correct": "ぎゅう",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "ぎゅう"
+            ],
+            "explanation": "Ngưu có âm cuối uu/ieu/yeu; mẫu Hán-Việt này thường về YUU/YOU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_uu_ieu_yeu_to_yuu_you_鳥",
+            "kanji": "鳥",
+            "kanjiId": 2105,
+            "assetKanjiId": "n5_canonical_l23_k003",
+            "hanViet": "Điểu",
+            "correct": "ちょう",
+            "options": [
+              "じん",
+              "かん",
+              "ちょう",
+              "とう"
+            ],
+            "explanation": "Điểu có âm cuối uu/ieu/yeu; mẫu Hán-Việt này thường về YUU/YOU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_uu_ieu_yeu_to_yuu_you_咲",
+            "kanji": "咲",
+            "kanjiId": 1946,
+            "assetKanjiId": "n4_canonical_l16_k006",
+            "hanViet": "Tiếu",
+            "correct": "しょう",
+            "options": [
+              "かん",
+              "しょう",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Tiếu có âm cuối uu/ieu/yeu; mẫu Hán-Việt này thường về YUU/YOU trong On'yomi."
+          },
+          {
+            "itemId": "rule_rime_uu_ieu_yeu_to_yuu_you_料",
+            "kanji": "料",
+            "kanjiId": 1952,
+            "assetKanjiId": "n4_canonical_l17_k005",
+            "hanViet": "Liêu",
+            "correct": "りょう",
+            "options": [
+              "りょう",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Liêu có âm cuối uu/ieu/yeu; mẫu Hán-Việt này thường về YUU/YOU trong On'yomi."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_long_vowel_ou_from_ang_ong",
+      "legacyId": "long-vowel-ou-from-ang-ong",
+      "section": "24",
+      "parentSection": null,
+      "category": "long_vowel",
+      "title": "Trường âm OU từ -ang/-ong/-ông",
+      "consonants": [],
+      "targetRow": "OU",
+      "targetKana": [
+        "う"
+      ],
+      "percentage": 70,
+      "explanation": "Một số vần Hán-Việt -ang/-ong/-ông chuyển thành trường âm ou trong On'yomi.",
+      "legacyConfidence": 0.74,
+      "examples": [
+        {
+          "hanViet": "Phương",
+          "kanji": "方",
+          "kanjiId": 2043,
+          "assetKanjiId": "n5_canonical_l08_k003",
+          "level": "N5",
+          "onyomi": "ほう",
+          "romaji": "ホウ",
+          "compound": "方",
+          "compoundKana": "ほう",
+          "compoundMeaning": "hướng, phương",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Đông",
+          "kanji": "東",
+          "kanjiId": 2092,
+          "assetKanjiId": "n5_canonical_l20_k002",
+          "level": "N5",
+          "onyomi": "とう",
+          "romaji": "トウ",
+          "compound": "東",
+          "compoundKana": "ひがし",
+          "compoundMeaning": "phía đông",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Công",
+          "kanji": "工",
+          "kanjiId": 1842,
+          "assetKanjiId": "n4_canonical_l02_k001",
+          "level": "N4",
+          "onyomi": "こう",
+          "romaji": "コウ",
+          "compound": "工業",
+          "compoundKana": "こうぎょう",
+          "compoundMeaning": "ngành công nghiệp sản xuất",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Công",
+          "kanji": "公",
+          "kanjiId": 1857,
+          "assetKanjiId": "n4_canonical_l04_k002",
+          "level": "N4",
+          "onyomi": "こう",
+          "romaji": "コウ",
+          "compound": "公",
+          "compoundKana": "おおやけ",
+          "compoundMeaning": "công cộng",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Đang",
+          "kanji": "当",
+          "kanjiId": 1877,
+          "assetKanjiId": "n4_canonical_l07_k001",
+          "level": "N4",
+          "onyomi": "とう",
+          "romaji": "トウ",
+          "compound": "お弁当",
+          "compoundKana": "おべんとう",
+          "compoundMeaning": "bữa trưa đóng hộp",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Đường",
+          "kanji": "堂",
+          "kanjiId": 1289,
+          "assetKanjiId": "n2_canonical_l13_k011",
+          "level": "N2",
+          "onyomi": "どう",
+          "romaji": "ドウ",
+          "compound": "食堂",
+          "compoundKana": "しょくどう",
+          "compoundMeaning": "phòng ăn",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_long_vowel_ou_from_ang_ong_黄",
+            "kanji": "黄",
+            "kanjiId": 1973,
+            "assetKanjiId": "n4_canonical_l20_k004",
+            "hanViet": "Hoàng",
+            "correct": "こう",
+            "options": [
+              "こう",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Hoàng có âm cuối ang/ong; mẫu Hán-Việt này thường về OU trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ou_from_ang_ong_上",
+            "kanji": "上",
+            "kanjiId": 2023,
+            "assetKanjiId": "n5_canonical_l03_k003",
+            "hanViet": "Thượng",
+            "correct": "じょう",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "じょう"
+            ],
+            "explanation": "Thượng có âm cuối ang/ong; mẫu Hán-Việt này thường về OU trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ou_from_ang_ong_長",
+            "kanji": "長",
+            "kanjiId": 2094,
+            "assetKanjiId": "n5_canonical_l20_k004",
+            "hanViet": "Trường",
+            "correct": "ちょう",
+            "options": [
+              "じん",
+              "かん",
+              "ちょう",
+              "とう"
+            ],
+            "explanation": "Trường có âm cuối ang/ong; mẫu Hán-Việt này thường về OU trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ou_from_ang_ong_王",
+            "kanji": "王",
+            "kanjiId": 1851,
+            "assetKanjiId": "n4_canonical_l03_k003",
+            "hanViet": "Vương",
+            "correct": "おう",
+            "options": [
+              "かん",
+              "おう",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Vương có âm cuối ang/ong; mẫu Hán-Việt này thường về OU trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ou_from_ang_ong_冬",
+            "kanji": "冬",
+            "kanjiId": 1872,
+            "assetKanjiId": "n4_canonical_l06_k003",
+            "hanViet": "Đông",
+            "correct": "とう",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "せつ"
+            ],
+            "explanation": "Đông có âm cuối ang/ong; mẫu Hán-Việt này thường về OU trong On'yomi."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_long_vowel_ei_from_inh_anh",
+      "legacyId": "long-vowel-ei-from-inh-anh",
+      "section": "25",
+      "parentSection": null,
+      "category": "long_vowel",
+      "title": "Trường âm EI từ -inh/-anh/-ênh",
+      "consonants": [],
+      "targetRow": "EI",
+      "targetKana": [
+        "い"
+      ],
+      "percentage": 70,
+      "explanation": "Một số vần Hán-Việt -inh/-anh/-ênh chuyển thành trường âm ei trong On'yomi.",
+      "legacyConfidence": 0.78,
+      "examples": [
+        {
+          "hanViet": "Sanh",
+          "kanji": "生",
+          "kanjiId": 2057,
+          "assetKanjiId": "n5_canonical_l11_k004",
+          "level": "N5",
+          "onyomi": "せい",
+          "romaji": "セイ",
+          "compound": "生",
+          "compoundKana": "う",
+          "compoundMeaning": "sinh ra",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thành",
+          "kanji": "成",
+          "kanjiId": 1566,
+          "assetKanjiId": "n3_canonical_l04_k011",
+          "level": "N3",
+          "onyomi": "せい",
+          "romaji": "セイ",
+          "compound": "成",
+          "compoundKana": "なす",
+          "compoundMeaning": "trở thành",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Danh",
+          "kanji": "名",
+          "kanjiId": 2071,
+          "assetKanjiId": "n5_canonical_l15_k002",
+          "level": "N5",
+          "onyomi": "めい",
+          "romaji": "メイ",
+          "compound": "名",
+          "compoundKana": "な",
+          "compoundMeaning": "tên",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Minh",
+          "kanji": "明",
+          "kanjiId": 2091,
+          "assetKanjiId": "n5_canonical_l20_k001",
+          "level": "N5",
+          "onyomi": "めい",
+          "romaji": "メイ",
+          "compound": "明",
+          "compoundKana": "あけ",
+          "compoundMeaning": "sáng",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Bình",
+          "kanji": "平",
+          "kanjiId": 1541,
+          "assetKanjiId": "n3_canonical_l02_k011",
+          "level": "N3",
+          "onyomi": "へい",
+          "romaji": "ヘイ",
+          "compound": "平日",
+          "compoundKana": "へいじつ",
+          "compoundMeaning": "ngày trong tuần",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Chánh",
+          "kanji": "正",
+          "kanjiId": 1871,
+          "assetKanjiId": "n4_canonical_l06_k002",
+          "level": "N4",
+          "onyomi": "せい",
+          "romaji": "セイ",
+          "compound": "お正月",
+          "compoundKana": "おしょうがつ",
+          "compoundMeaning": "Tết",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_long_vowel_ei_from_inh_anh_声",
+            "kanji": "声",
+            "kanjiId": 1901,
+            "assetKanjiId": "n4_canonical_l10_k003",
+            "hanViet": "Thanh",
+            "correct": "せい",
+            "options": [
+              "せい",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Thanh có âm cuối inh/anh/enh; mẫu Hán-Việt này thường về EI trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ei_from_inh_anh_英",
+            "kanji": "英",
+            "kanjiId": 1910,
+            "assetKanjiId": "n4_canonical_l11_k005",
+            "hanViet": "Anh",
+            "correct": "えい",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "えい"
+            ],
+            "explanation": "Anh có âm cuối inh/anh/enh; mẫu Hán-Việt này thường về EI trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ei_from_inh_anh_皿",
+            "kanji": "皿",
+            "kanjiId": 1865,
+            "assetKanjiId": "n4_canonical_l05_k003",
+            "hanViet": "Mãnh",
+            "correct": "べい",
+            "options": [
+              "じん",
+              "かん",
+              "べい",
+              "とう"
+            ],
+            "explanation": "Mãnh có âm cuối inh/anh/enh; mẫu Hán-Việt này thường về EI trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ei_from_inh_anh_青",
+            "kanji": "青",
+            "kanjiId": 1906,
+            "assetKanjiId": "n4_canonical_l11_k001",
+            "hanViet": "Thanh",
+            "correct": "せい",
+            "options": [
+              "かん",
+              "せい",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Thanh có âm cuối inh/anh/enh; mẫu Hán-Việt này thường về EI trong On'yomi."
+          },
+          {
+            "itemId": "rule_long_vowel_ei_from_inh_anh_星",
+            "kanji": "星",
+            "kanjiId": 1926,
+            "assetKanjiId": "n4_canonical_l13_k007",
+            "hanViet": "Tinh",
+            "correct": "せい",
+            "options": [
+              "せい",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Tinh có âm cuối inh/anh/enh; mẫu Hán-Việt này thường về EI trong On'yomi."
+          }
+        ]
+      }
     }
   ]
 }

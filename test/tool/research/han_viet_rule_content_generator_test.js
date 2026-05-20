@@ -12,7 +12,7 @@ test('distinguishes Vietnamese D from Đ when matching initial rules', () => {
   assert.equal(firstConsonant('Giải'), 'gi');
 });
 
-test('generates first twenty rule cards with examples and practice from local kanji assets', () => {
+test('generates first twenty-five rule cards with examples and practice from local kanji assets', () => {
   const payload = generateHanVietRulesV2({ rootDir: process.cwd() });
 
   assert.equal(payload.schemaVersion, 2);
@@ -22,7 +22,7 @@ test('generates first twenty rule cards with examples and practice from local ka
   assert.equal(raw.includes('nhaikanji.com'), false);
   assert.equal(raw.includes('thocodehoctiengnhat.com'), false);
 
-  assert.equal(payload.rules.length, 20);
+  assert.equal(payload.rules.length, 25);
   assert.deepEqual(payload.rules.map((item) => item.ruleId), [
     'rule_initial_h_k_gi_c_qu_to_k',
     'rule_initial_t_th_to_t_s_sh',
@@ -44,6 +44,11 @@ test('generates first twenty rule cards with examples and practice from local ka
     'rule_rime_inh_anh_enh_to_ei',
     'rule_rime_ien_iem_yen_to_en',
     'rule_rime_ong_ung_uong_to_ou_uu',
+    'rule_rime_ac_uoc_to_aku_yaku',
+    'rule_rime_ich_to_eki_seki',
+    'rule_rime_uu_ieu_yeu_to_yuu_you',
+    'rule_long_vowel_ou_from_ang_ong',
+    'rule_long_vowel_ei_from_inh_anh',
   ]);
 
   const rule = payload.rules.find(

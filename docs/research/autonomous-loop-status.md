@@ -1137,3 +1137,10 @@
 - Blocker: validation found `284` cross-level duplicate characters, and N4/N1 writing-grid PDFs sometimes expose mnemonic components instead of the visual target kanji in the text layer. Example class: heading `DẬU` can expose `一`/`西` while the visual target is `酉`.
 - Decision: commit candidate canonical WIP and prominent blocker; do not run QA-A-026 app data MOVE/DEDUP/MISSING against these candidates yet because that would rewrite kanji levels from ambiguous source data.
 - Added the new owner QA-A-029 Kanji relationship graph P1 row to backlog. Next unblocked queue item is QA-A-028 design/implementation, then QA-A-029, unless a stronger QA-A-027 extraction path becomes available.
+
+## 2026-05-20 QA-A-028 Han-Viet Rules Redesign Phase 0
+
+- Audited current static Hán-Việt rule system: `han_viet_on_rules.json` schema v1 has `32` rules across usage/initial/final/rime/long-vowel/exception categories; `/kanji/han-viet` currently renders static ExpansionTile reference cards.
+- Audited generation inputs: kanji assets contain `929` entries with Hán-Việt and `926` with On readings; first-consonant pools are large enough for rule 1 (`H/K/Gi/C/Qu`) and most initial rules.
+- Audited integration points: existing kanji SRS uses `KanjiSrsDao`; kanji detail already has an inline Hán-Việt panel but only matches exact example kanji, not real rule applicability.
+- Added autonomous design doc `docs/research/han-viet-rules-redesign-2026-05-20.md` with v2 schema, generator policy, UI, SRS/interlink plan, DECISIONS MADE, and OPEN_QUESTIONS. No banned website was accessed.

@@ -143,3 +143,80 @@ thay đổi) vẫn áp dụng. Directive D là cách làm bao trùm.
 
 Commit thẳng `main`, dùng Conventional Commits, không tạo branch nếu owner
 không yêu cầu rõ.
+
+## Directive F - Cross-link & Exercise Density
+
+Đây là directive về chất lượng nội dung học: mật độ exercise đủ dày để
+mastery xảy ra (testing effect), distractor đủ khó để phân biệt người học thật
+với người đoán mò, và data đủ link để học một thứ kích hoạt nhớ lại thứ liên
+quan (spreading activation).
+
+### F.1 - Sàn mật độ exercise
+
+Mọi item học (grammar pattern, vocab, kanji, conjugation form) BẮT BUỘC có:
+
+- >= 10 ví dụ thật (audio + Vietnamese + source citation)
+- >= 50 exercise questions đa dạng theo F.2 + Bloom progression F.3
+
+Nếu data hiện có không đủ, bắt buộc generate thêm bằng pipeline auto-gen +
+validation pass. Không có ngoại lệ. Không giảm sàn dưới mọi lý do.
+
+Bằng chứng: Roediger-Karpicke 2006 (testing effect cần >= 4 retrievals);
+JLPT thật có 30-50 câu/section, người học cần luyện ở scale tương đương.
+
+### F.2 - Distractor JLPT-pattern (anti-trivial)
+
+- Vocab: 1 đáp án đúng + 1 phonetic trap (DL distance 1-2 trên kana) + 1
+  compound trap (kanji khác cùng reading) + 1 random same-level.
+- Grammar: 1 đúng + 3 distractor từ wrong particle (は<->が, に<->で,
+  を<->が, へ<->に), wrong tense (です<->でした, する<->した<->している),
+  wrong politeness (です<->だ, ます<->る), wrong negation
+  (ない<->ありません<->ません<->じゃない).
+- Kanji: 1 đúng + 3 visual lookalikes (湿/温, 鳥/烏, 困/因, 末/未) từ
+  pre-built lookalike corpus (KANJIVG SVG diff).
+- Conjugation: 1 đúng + 3 forms khác cùng verb (ăn nhầm 食べた vs 食べる
+  vs 食べない vs 食べたい).
+
+Validator phải reject distractor trùng correct, distractor sai grammar form,
+distractor duplicate.
+
+### F.3 - Bloom progression
+
+Mỗi item có exercise set cover đủ 4 cấp Bloom:
+
+- L1 Remember: matching, basic MCQ
+- L2 Understand: explain meaning, paraphrase
+- L3 Apply: dùng item trong câu mới (production)
+- L4 Analyze: chọn câu nào đúng grammar trong 4 option context-heavy
+
+"Mastery" chỉ unlock khi pass L4. Không cho phép tự khai sau pass L1.
+
+### F.4 - Cross-link graph (bi-directional)
+
+Mọi item detail page BẮT BUỘC có section "Liên quan" 4 sub-section:
+Grammar dùng item này / Vocab chứa item này (nếu kanji) / Kanji trong item này
+(nếu vocab) / Conjugation forms (nếu verb/adj). Link sống, không stub.
+
+### F.5 - Cross-modal SRS (anti self-attestation cứng)
+
+Một item có N FSRSState độc lập (N = số mode được luyện). Phải pass tất cả mode
+với accuracy >= 80% mới gọi "thuộc". Loại bỏ UI button "Tôi đã thuộc" tự khai.
+`SRSStore.markKnown()` deprecated, throw nếu được gọi.
+
+### F.6 - Conjugation anchor 2 vị trí
+
+- Standalone (vị trí A): Menu Grammar có card top "Bảng chia thể động từ ·
+  tính từ" -> page tổng hợp toàn bộ patterns với search/filter.
+- Inline (vị trí B): ConjugationWidget conditional - chỉ render khi lesson có
+  >= 1 verb/adj. Widget show list + button "Luyện chia thể (>=50 câu)" ->
+  drill mode.
+
+### F.7 - Reading comprehension first-class
+
+Mỗi level:
+
+- N5-N4: >= 10 passages mini 50-150 ký tự
+- N3-N1: >= 20 passages 100-300 ký tự
+
+Mỗi passage có 3-5 câu hỏi (main idea / detail / inference), tag với
+grammars/vocabs/kanjis nó dùng.

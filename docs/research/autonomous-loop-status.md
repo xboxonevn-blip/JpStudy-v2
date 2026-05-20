@@ -1,5 +1,19 @@
 # Autonomous Loop Status
 
+# 2026-05-21 — Megaprompt Phase 0 done
+
+- Created 7 design docs under `docs/design/`: IA restructure, conjugation layer, exercise engine, lesson page, responsive, interlink graph, and home redesign.
+- Appended Directive F to `docs/agent-directives.md`; current repo has no Directive E text, so F was appended after Directive D and logged as DECISION-001/OQ-001.
+- Opened mission logs: `docs/research/decisions-log-2026-05-21.md` and `docs/research/open-questions-2026-05-21.md`.
+- Acceptance check: 7/7 docs exist, Directive F grep present, `git diff --check` clean.
+
+# 2026-05-21 — Megaprompt Overhaul kickoff
+
+- Context loaded: CLAUDE.md, AGENTS.md, agent-directives, quality-backlog, loop-status, free-web-stack-reference, jlpt-exam-source-reference, upper-jlpt-sources; `docs/SHIPPING.md` absent.
+- Mission acknowledged: 8 phases, Directive F to be appended.
+- DECISIONS_MADE log opened: `docs/research/decisions-log-2026-05-21.md`.
+- OPEN_QUESTIONS log opened: `docs/research/open-questions-2026-05-21.md`.
+
 ## 2026-05-20 QA-A-029 Graph View Phase 1 MVP
 
 - Implemented `/kanji/:character/graph` using local canonical kanji assets only; no banned web sources accessed.

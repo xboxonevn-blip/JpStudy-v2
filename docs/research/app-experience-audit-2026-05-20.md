@@ -18,7 +18,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Foundations hub / Kana detail copy | Audited slice | Live route-matrix text + widget audit found `Open`, `yoon`, `rules`, `strokes`, and `clear` leaking; localized/removed; live proof verified hub/grid/sheet/quiz. |
 | Vocab detail conjugation panel | Audited slice | Code audit found suffix-guessed forms in `_conjugationLines`; logged QA-C-002 and designed JMdict POS-backed replacement under QA-C-001. |
 | Conjugation DB metadata | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_lemma` + indexes and `lemmas.json` is `200/no-cache` with `3907` JMdict_e rows. |
-| Onboarding language | Defect found | Fresh live browser at 1366x768 selected `Tiếng Việt`, but the analytics consent banner left no visible `language_continue` CTA; logged QA-A-025. |
+| Onboarding language | Audited slice | Fresh live browser at 1366x768 selected `Tiếng Việt`, clicked Continue to level, selected N5, clicked Start, and reached VI/N5 home; QA-A-025 fixed the consent banner overlap. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -32,7 +32,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-022 | Kana | Kana sheet allowed untested self-attestation via `Tôi đã thuộc`. | Fixed + deployed |
 | QA-A-023 | Copy/internal labels | Mistakes, JLPT support, and Home Weakness Radar exposed `D1/D3/D7` checkpoint labels. | Fixed + deployed |
 | QA-A-024 | Foundations copy/internal labels | Foundations hub and Kana sheet exposed `Open`, `yoon`, `rules`, `strokes`, and `clear`. | Fixed + deployed |
-| QA-A-025 | Onboarding | Fresh language onboarding can hide the continue CTA behind/under the analytics consent banner after selecting a language. | Pending |
+| QA-A-025 | Onboarding | Fresh language onboarding could hide the continue CTA behind/under the analytics consent banner after selecting a language. | Fixed + deployed |
 | QA-B-001-G-N4-L46-L50 | Grammar content | N4 lessons 46-50 needed source verification plus full detail/example/practice proof. | Fixed + deployed |
 | QA-C-001 | Conjugation feature | Content DB lemma table now seeds active-level JMdict-backed lemma metadata. | Fixed + deployed |
 | QA-C-002 | Vocab detail conjugation | Vocab detail exposes generated-looking but suffix-guessed forms and generic grammar CTA. | Pending |
@@ -56,6 +56,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `live-conjugation-lemmas-home-smoke.png`
 - `output/playwright/live-conjugation-db-home.png`
 - `output/playwright/live-conjugation-db-after-vi-click.png`
+- `output/playwright/live-onboarding-banner-fixed-before.png`
+- `output/playwright/live-onboarding-banner-fixed-level.png`
+- `output/playwright/live-onboarding-banner-fixed-home.png`
 
 ## Notes For Next Sweep
 

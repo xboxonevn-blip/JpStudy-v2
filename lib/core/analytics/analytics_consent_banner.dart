@@ -17,14 +17,18 @@ class AnalyticsConsentBanner extends ConsumerWidget {
     if (!consent.shouldShowBanner) return child;
     final language = ref.watch(appLanguageProvider);
     final palette = context.appPalette;
-    return Stack(
+    return Column(
       children: [
-        child,
-        Positioned(
-          left: AppSpacing.md,
-          right: AppSpacing.md,
-          bottom: AppSpacing.md,
+        Expanded(child: child),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(
+            AppSpacing.md,
+            0,
+            AppSpacing.md,
+            AppSpacing.md,
+          ),
           child: SafeArea(
+            top: false,
             child: Material(
               elevation: 12,
               borderRadius: BorderRadius.circular(20),

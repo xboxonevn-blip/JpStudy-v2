@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/app/navigation/app_router.dart';
+import 'package:jpstudy/core/analytics/analytics_consent_banner.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/onboarding_provider.dart';
 import 'package:jpstudy/core/shared_preferences_provider.dart';
@@ -29,6 +30,31 @@ Future<GoRouter> _pumpRouter(
     ProviderScope(
       overrides: [sharedPreferencesProvider.overrideWithValue(preferences)],
       child: MaterialApp.router(routerConfig: router),
+    ),
+  );
+  await tester.pump();
+  return router;
+}
+
+Future<GoRouter> _pumpRouterWithConsentBanner(
+  WidgetTester tester, {
+  required SharedPreferences preferences,
+  String initialLocation = AppRoutePath.home,
+}) async {
+  final router = AppRouter.createRouter(
+    preferences: preferences,
+    initialLocation: initialLocation,
+  );
+  addTearDown(router.dispose);
+
+  await tester.pumpWidget(
+    ProviderScope(
+      overrides: [sharedPreferencesProvider.overrideWithValue(preferences)],
+      child: MaterialApp.router(
+        routerConfig: router,
+        builder: (context, child) =>
+            AnalyticsConsentBanner(child: child ?? const SizedBox.shrink()),
+      ),
     ),
   );
   await tester.pump();
@@ -103,5 +129,29 @@ void main() {
 
     expect(preferences.getBool(prefOnboardingCompleted), isTrue);
     expect(preferences.getString(prefOnboardingLevel), 'n3');
+  });
+
+  testWidgets('language continue remains tappable with consent banner visible', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1366, 768);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await _pumpRouterWithConsentBanner(tester, preferences: await _prefs({}));
+
+    expect(find.text('Choose your language'), findsOneWidget);
+    expect(find.text('Help improve JpStudy'), findsOneWidget);
+
+    await tester.tap(find.text('Tiếng Việt'));
+    await tester.pump();
+    await tester.tap(
+      find.byKey(const ValueKey('language_continue')),
+      warnIfMissed: false,
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const ValueKey('level_start')), findsOneWidget);
   });
 }

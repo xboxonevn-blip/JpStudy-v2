@@ -978,3 +978,12 @@
 - Live proof: `main.dart.js?codexFresh=conj-db-20260520` returned `200/no-cache` and contained `conjugation_lemma` plus `idx_conjugation_lemma_vocab`; `lemmas.json` returned `200/no-cache`, `source=JMdict_e`, `entryCount=3907`, with `haj_n5_ch10_v033` and `haj_n5_ch01_v008` present.
 - Directive D defect logged during fresh-browser live proof: onboarding language screen at 1366x768 lets `Tiếng Việt` be selected but shows no visible continue CTA because the analytics consent banner occupies the bottom; logged QA-A-025 as next P0 before lower-priority QA-C work.
 - Remaining QA-C-001 work after QA-A-025: conjugation SRS/mistakes, Vocab/Grammar/Kanji UI integration, deploy/live proof of learner flows.
+
+## 2026-05-20 QA-A-025 Onboarding Consent Banner Fix
+
+- TDD RED: added a full router regression where a fresh 1366x768 browser shows language onboarding with the analytics consent banner; selecting `Tiếng Việt` then tapping `language_continue` failed to reach the level screen.
+- GREEN: changed `AnalyticsConsentBanner` from a bottom overlay to a bottom layout block using `Expanded(child: child)` plus a reserved banner area, so the banner cannot cover or intercept app CTAs.
+- Verified locally: focused onboarding/consent suite passed, `flutter analyze lib test` clean, UI string guard `0`, `git diff --check` clean, and full `flutter test` passed `2363/2363`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: fresh browser at `https://jpstudy.web.app/?codexFresh=onboarding-banner-20260520#/` showed the Continue button above the consent banner, selected VI, continued to `/#/onboarding/level`, selected N5, started onboarding, and reached VI/N5 home. `main.dart.js` returned `200/no-cache`; only known headless App Check 403/throttle and WebGL readback warnings appeared.
+- Next queue item returns to QA-C-001 remaining work: conjugation SRS/mistakes.

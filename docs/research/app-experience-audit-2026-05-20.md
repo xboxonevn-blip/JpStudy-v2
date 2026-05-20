@@ -30,6 +30,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Home/Library Vietnamese copy | Audited slice | Static + live copy sweep found `dọn review`, `dọn hàng đợi`, `TÍN HIỆU LEVEL`, and mixed English `level`/`lesson` in Vietnamese Home/Library flows. QA-A-028 replaced them with natural Vietnamese; live VI/N2 Home/Summary/Library proof passed after deploy. |
 | Vocab direct route | Audited slice | Fresh VI/N5 `/#/vocab` showed a spinner after 25 seconds with no app exception. QA-A-029 now renders the hub from bundled manifests/counts and decouples first paint from review-home DB loading; live proof shows the hub plus working `Ôn ngay` and `Minna no Nihongo I` CTAs. |
 | Grammar/Kanji direct routes | Audited slice | While root-causing QA-A-029, fresh VI/N5 `/#/grammar` and `/#/kanji` also stayed in loading states after 25-45 seconds with no app exception. QA-A-030 added bounded loading panels for Grammar/Kanji DB-backed work, then live proof verified direct routes plus Grammar practice/detail and Kanji writing/Hán-Việt CTAs. |
+| P1 backlog live proof sweep | Audited slice | Rechecked old fixed-local P1 rows after the latest deploy: QA-A-002 Vocab copy/badges are learner-facing, QA-A-003 Review copy is natural and CTAs open target content, and QA-A-005 VI/N2 Home/Review no longer leaks `Minna No Nihongo 200001`. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -54,6 +55,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-028 | Home/Library copy | Daily Summary, Daily Session Card, and Library roadmap exposed machine-like or mixed Vietnamese copy (`dọn review`, `dọn hàng đợi`, `level`, `lesson`, `TÍN HIỆU LEVEL`). | Fixed + deployed |
 | QA-A-029 | Vocab route | Fresh VI/N5 `/#/vocab` stayed on a spinner after 25 seconds with no Flutter exception. | Fixed + deployed |
 | QA-A-030 | Grammar/Kanji routes | Fresh VI/N5 `/#/grammar` and `/#/kanji` stayed in loading states after 25-45 seconds during cold direct-route checks. | Fixed + deployed |
+| QA-A-002 | Vocab copy | Vocab hub/catalog leaked English/internal status copy such as `Ready now`, `Companion`, and `Catalog`. | Fixed + deployed |
+| QA-A-003 | Review copy/CTA | Review page used warehouse metaphors and needed live CTA proof. | Fixed + deployed |
+| QA-A-005 | N2 lesson label | N2 next-lesson copy could expose legacy storage id `Minna No Nihongo 200001`. | Fixed + deployed |
 
 ## Live Proof Artifacts
 
@@ -128,6 +132,12 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-qaa030-kanji-write-cta.png`
 - `output/playwright/live-qaa030-kanji-hanviet-cta.png`
 - `output/playwright/live-qaa030-proof.json`
+- `output/playwright/live-p1-backlog-cleanup-proof.json`
+- `output/playwright/live-qaa002-vocab-copy.png`
+- `output/playwright/live-qaa002-vocab-minna-catalog.png`
+- `output/playwright/live-qaa003-review-copy.png`
+- `output/playwright/live-qaa005-n2-home.png`
+- `output/playwright/live-qaa005-n2-review.png`
 
 ## Notes For Next Sweep
 

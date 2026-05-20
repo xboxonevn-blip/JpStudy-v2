@@ -1077,3 +1077,12 @@
 - Live proof after deploy: VI/N5 `/#/grammar` rendered the Grammar hub; Grammar practice CTA opened a non-empty drill; Grammar detail CTA opened a non-empty point drill; VI/N5 `/#/kanji` rendered the Kanji hub; `Viết` opened writing practice; Hán-Việt CTA opened the rules screen.
 - Live artifacts: `output/playwright/live-qaa030-proof.json`, `output/playwright/live-qaa030-grammar-direct.png`, `output/playwright/live-qaa030-grammar-practice-cta.png`, `output/playwright/live-qaa030-grammar-detail-cta.png`, `output/playwright/live-qaa030-kanji-direct.png`, `output/playwright/live-qaa030-kanji-write-cta.png`, and `output/playwright/live-qaa030-kanji-hanviet-cta.png`.
 - Known environment-only live noise: headless Firebase App Check 403/throttle messages. Flutter/app failures were `0`.
+
+## 2026-05-20 P1 Backlog Live-Proof Cleanup
+
+- Rechecked old fixed-local P1 rows after the latest deploy.
+- QA-A-002 live proof: fresh VI/N5 `/#/vocab` showed `Hajimete no Nihongo Tango`, `Minna no Nihongo I`, `Sẵn sàng`, and `Bổ trợ`, with no `Ready now`, `Companion`, `14 chapter`, `Catalog`, or raw `review queue` leaks; clicking `Minna no Nihongo I` opened the populated catalog with `Bài 1` and `51 từ trong bài này`.
+- QA-A-003 live proof: fresh VI/N5 `/#/review` rendered `Ôn tập` with no warehouse copy (`Chặn hàng review trước`, `Dọn hàng kanji`, `hàng đợi đang mở`); `Mở bài học`, `Mở ôn thi JLPT`, and `Mở bài đọc` each reached target content.
+- QA-A-005 live proof: fresh VI/N2 Home and Review showed no `Bắt đầu Minna No Nihongo 200001` / `Minna No Nihongo 200001` storage-id leak.
+- Bundle proof: `main.dart.js` returned `200/no-cache`. Unexpected console warnings/errors and unexpected failed requests were `0`; known environment-only font/App Check/Sentry/Kaspersky network noise was ignored.
+- Artifact: `output/playwright/live-p1-backlog-cleanup-proof.json`. Screenshots: `output/playwright/live-qaa002-vocab-copy.png`, `output/playwright/live-qaa002-vocab-minna-catalog.png`, `output/playwright/live-qaa003-review-copy.png`, `output/playwright/live-qaa005-n2-home.png`, and `output/playwright/live-qaa005-n2-review.png`.

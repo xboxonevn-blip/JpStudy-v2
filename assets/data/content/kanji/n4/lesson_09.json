@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 9,
+  "entryCount": 8,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l09_k001",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "私",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Tư",
+        "meaningVi": "tôi",
+        "meaningViDisplay": "Tư (tôi)",
+        "meaningEn": "I, Me"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "わたくし",
+          "わたし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lúa ( ) 4 ( ) bao của tôi ( ) hết 1",
+        "en": "Grain (禾) that is mine (厶) personally."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "禾",
+          "厶"
+        ],
+        "componentNames": [
+          "Hòa (lúa)",
+          "Khư (riêng tư)"
+        ],
+        "relatedKanji": [
+          "科",
+          "利"
+        ],
+        "hanViet": "Tư"
+      },
+      "search": {
+        "hanVietNoAccent": "Tu",
+        "meaningViNoAccent": "toi",
+        "meaningEnNoAccent": "I, Me"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l50_v012",
+          "sourceSenseId": "n4_l50_s012",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l26_v067",
+          "sourceSenseId": "n4_l26_s067",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v001",
+          "sourceSenseId": "n5_l01_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tư (tôi)",
+        "onyomi": "シ",
+        "kunyomi": "わたくし, わたし"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l09_k002",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "売",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Mại",
+        "meaningVi": "bán",
+        "meaningViDisplay": "Mại (bán)",
+        "meaningEn": "Sell"
+      },
+      "readings": {
+        "onyomi": [
+          "バイ"
+        ],
+        "kunyomi": [
+          "う.る",
+          "う.れる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Binh sĩ ( ) trùm khăn ( ) chân chạy ( ) đi bán ( ) hàng 2",
+        "en": "Giving away items (貝) to others by selling."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "士",
+          "冖",
+          "儿"
+        ],
+        "componentNames": [
+          "Sĩ (kẻ sĩ)",
+          "Mịch (nắp đậy)",
+          "Nhi (chân người)"
+        ],
+        "relatedKanji": [
+          "買",
+          "読",
+          "続"
+        ],
+        "hanViet": "Mại"
+      },
+      "search": {
+        "hanVietNoAccent": "Mai",
+        "meaningViNoAccent": "ban",
+        "meaningEnNoAccent": "Sell"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l28_v056",
+          "sourceSenseId": "n4_l28_s056",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l28_v053",
+          "sourceSenseId": "n4_l28_s053",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l28_v001",
+          "sourceSenseId": "n4_l28_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Mại (bán)",
+        "onyomi": "バイ",
+        "kunyomi": "う.る, う.れる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l09_k003",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "住",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Trụ",
+        "meaningVi": "sống; cư trú; ở lại",
+        "meaningViDisplay": "Trụ (sống; cư trú; ở lại)",
+        "meaningEn": "reside, live at, dwell, lodge; stop"
+      },
+      "readings": {
+        "onyomi": [
+          "ジュウ",
+          "ヂュウ",
+          "チュウ"
+        ],
+        "kunyomi": [
+          "す.む",
+          "す.まう",
+          "-ず.まい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) làm chủ ( ) nơi cư trú ( ) 住 1 3",
+        "en": "住 means reside or dwell; 移住 is migration or immigration."
+      },
+      "decomposition": {
+        "hanViet": "Trụ",
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "主"
+        ],
+        "componentNames": [
+          "nhân/người",
+          "chủ/chính"
+        ],
+        "relatedKanji": [
+          "居",
+          "宅",
+          "移",
+          "民"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tru",
+        "meaningViNoAccent": "song; cu tru; o lai",
+        "meaningEnNoAccent": "reside, live at, dwell, lodge; stop"
+      },
+      "examples": [
+        {
+          "word": "移住",
+          "reading": "いじゅう",
+          "meaning": "di cư; chuyển nơi cư trú",
+          "meaningEn": "migration; immigration"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Trụ (sống; cư trú; ở lại)",
+        "onyomi": "ジュウ, ヂュウ, チュウ",
+        "kunyomi": "す.む, す.まう, -ず.まい"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l09_k004",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "里",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Lý",
+        "meaningVi": "Làng",
+        "meaningViDisplay": "Lý (Làng)",
+        "meaningEn": "ri; village; parent's home"
+      },
+      "readings": {
+        "onyomi": [
+          "リ"
+        ],
+        "kunyomi": [
+          "さと"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ruộng ( ) đất ( ) là của ông Lí ( ) 里 2",
+        "en": "ri; village; parent's home"
+      },
+      "decomposition": {
+        "hanViet": "Lý",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ly",
+        "meaningViNoAccent": "Lang",
+        "meaningEnNoAccent": "ri; village; parent's home"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lý (Làng)",
+        "onyomi": "リ",
+        "kunyomi": "さと"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l09_k005",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "近",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Cận",
+        "meaningVi": "Gần ⻌",
+        "meaningViDisplay": "Cận (Gần ⻌)",
+        "meaningEn": "near; early; akin"
+      },
+      "readings": {
+        "onyomi": [
+          "キン",
+          "コン"
+        ],
+        "kunyomi": [
+          "ちか.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cầm rìu ( ) bước đi ( ) để CẬN ( ) chiến 1",
+        "en": "near; early; akin"
+      },
+      "decomposition": {
+        "hanViet": "Cận",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Can",
+        "meaningViNoAccent": "Gan ⻌",
+        "meaningEnNoAccent": "near; early; akin"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cận (Gần ⻌)",
+        "onyomi": "キン, コン",
+        "kunyomi": "ちか.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l09_k006",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "低",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Đê",
+        "meaningVi": "Thấp",
+        "meaningViDisplay": "Đê (Thấp)",
+        "meaningEn": "lower; short; humble"
+      },
+      "readings": {
+        "onyomi": [
+          "テイ"
+        ],
+        "kunyomi": [
+          "ひく.い",
+          "ひく.める",
+          "ひく.まる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) họ ( ) quý nhất ( ) là người thấp ( ) nhất 低 3",
+        "en": "lower; short; humble"
+      },
+      "decomposition": {
+        "hanViet": "Đê",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "De",
+        "meaningViNoAccent": "Thap",
+        "meaningEnNoAccent": "lower; short; humble"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đê (Thấp)",
+        "onyomi": "テイ",
+        "kunyomi": "ひく.い, ひく.める, ひく.まる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l09_k007",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "利",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Lợi",
+        "meaningVi": "lợi ích; thuận lợi; lợi nhuận",
+        "meaningViDisplay": "Lợi (lợi ích; thuận lợi; lợi nhuận)",
+        "meaningEn": "profit, advantage"
+      },
+      "readings": {
+        "onyomi": [
+          "リ"
+        ],
+        "kunyomi": [
+          "き.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cắt lúa ( ) bằng đao ( ) rất tiện lợi ( ) 利 1 7",
+        "en": "Core kanji for QUARTET 21: Economy and finance."
+      },
+      "decomposition": {
+        "hanViet": "Lợi",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "益",
+          "便",
+          "得",
+          "財"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Loi",
+        "meaningViNoAccent": "loi ich; thuan loi; loi nhuan",
+        "meaningEnNoAccent": "profit, advantage"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l21_v004",
+          "sourceSenseId": "n3_l21_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Lợi (lợi ích; thuận lợi; lợi nhuận)",
+        "onyomi": "リ",
+        "kunyomi": "き.く"
+      },
+      "theme": {
+        "quartetLesson": 21,
+        "themeEn": "Economy and finance",
+        "themeVi": "Kinh tế và tài chính"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l09_k008",
+      "lessonId": 9,
+      "level": "N4",
+      "character": "走",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Tẩu",
+        "meaningVi": "chạy",
+        "meaningViDisplay": "Tẩu (chạy)",
+        "meaningEn": "Run"
+      },
+      "readings": {
+        "onyomi": [
+          "ソウ"
+        ],
+        "kunyomi": [
+          "はし.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dưới đất ( ) hạ ( ) nhân ( ) đang chạy ( ) 走 2",
+        "en": "A person on the ground (土) running fast."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "土",
+          "止"
+        ],
+        "componentNames": [
+          "Thổ (đất)",
+          "Chỉ biến thể (dừng)"
+        ],
+        "relatedKanji": [
+          "歩",
+          "止"
+        ],
+        "hanViet": "Tẩu"
+      },
+      "search": {
+        "hanVietNoAccent": "Tau",
+        "meaningViNoAccent": "chay",
+        "meaningEnNoAccent": "Run"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l18_v040",
+          "sourceSenseId": "n5_l18_s040",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l18_v041",
+          "sourceSenseId": "n5_l18_s041",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l27_v003",
+          "sourceSenseId": "n4_l27_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tẩu (chạy)",
+        "onyomi": "ソウ",
+        "kunyomi": "はし.る"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

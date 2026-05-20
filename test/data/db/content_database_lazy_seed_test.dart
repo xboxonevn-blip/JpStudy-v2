@@ -186,13 +186,13 @@ void main() {
     await _createLegacyKanjiDb(
       file,
       userVersion: 35,
-      kanjiLessonId: 17,
-      kanjiCharacter: '技',
+      kanjiLessonId: 12,
+      kanjiCharacter: '重',
       kanjiLevel: 'N3',
-      kanjiMeaning: 'kỹ',
-      kanjiMeaningEn: 'skill, art',
-      kanjiOnyomi: 'ギ',
-      kanjiKunyomi: 'わざ',
+      kanjiMeaning: 'nặng',
+      kanjiMeaningEn: 'heavy, important',
+      kanjiOnyomi: 'ジュウ',
+      kanjiKunyomi: 'おも.い',
       kanjiDecompositionJson: '{}',
       contentMetaRevision: 16,
     );
@@ -203,7 +203,7 @@ void main() {
     final row =
         await (db.select(db.kanji)
               ..where(
-                (tbl) => tbl.character.equals('技') & tbl.jlptLevel.equals('N3'),
+                (tbl) => tbl.character.equals('重') & tbl.jlptLevel.equals('N3'),
               )
               ..limit(1))
             .getSingle();
@@ -213,9 +213,9 @@ void main() {
         )
         .getSingle();
 
-    expect(row.meaning, 'Kỹ (kỹ năng; kỹ thuật; tài nghệ)');
-    expect(row.decompositionJson, contains('"hanViet":"Kỹ"'));
-    expect(revisionRow.data['value'], '70');
+    expect(row.meaning, 'Trọng (nặng; quan trọng)');
+    expect(row.decompositionJson, contains('"hanViet":"Trọng"'));
+    expect(revisionRow.data['value'], '90');
   });
 
   test('grammar seed revision reseeds current-version stale grammar', () async {
@@ -230,7 +230,7 @@ void main() {
       }
     });
     final file = File('${tempDir.path}/content.db');
-    await _createLegacyKanjiDb(file, userVersion: 35, contentMetaRevision: 70);
+    await _createLegacyKanjiDb(file, userVersion: 35, contentMetaRevision: 90);
     await _insertStaleGrammarSeed(file);
 
     final db = ContentDatabase(executor: NativeDatabase(file));
@@ -345,13 +345,13 @@ void main() {
           await (db.select(db.kanji)
                 ..where(
                   (tbl) =>
-                      tbl.character.equals('試') & tbl.jlptLevel.equals('N3'),
+                      tbl.character.equals('重') & tbl.jlptLevel.equals('N3'),
                 )
                 ..limit(1))
               .getSingle();
 
       expect(countRow.read(countExpr), _authoredKanjiCount('N3'));
-      expect(row.meaning, 'Thí (thử; kiểm tra; thi đấu)');
+      expect(row.meaning, 'Trọng (nặng; quan trọng)');
     },
   );
 
@@ -372,13 +372,13 @@ void main() {
       await _createLegacyKanjiDb(
         file,
         userVersion: 35,
-        kanjiLessonId: 17,
-        kanjiCharacter: '技',
+        kanjiLessonId: 12,
+        kanjiCharacter: '重',
         kanjiLevel: 'N3',
-        kanjiMeaning: 'kỹ',
-        kanjiMeaningEn: 'skill, art',
-        kanjiOnyomi: 'ギ',
-        kanjiKunyomi: 'わざ',
+        kanjiMeaning: 'nặng',
+        kanjiMeaningEn: 'heavy, important',
+        kanjiOnyomi: 'ジュウ',
+        kanjiKunyomi: 'おも.い',
         kanjiDecompositionJson: '{}',
         contentMetaRevision: 21,
       );
@@ -391,13 +391,13 @@ void main() {
           await (db.select(db.kanji)
                 ..where(
                   (tbl) =>
-                      tbl.character.equals('技') & tbl.jlptLevel.equals('N3'),
+                      tbl.character.equals('重') & tbl.jlptLevel.equals('N3'),
                 )
                 ..limit(1))
               .getSingle();
 
-      expect(row.meaning, 'Kỹ (kỹ năng; kỹ thuật; tài nghệ)');
-      expect(row.decompositionJson, contains('"hanViet":"Kỹ"'));
+      expect(row.meaning, 'Trọng (nặng; quan trọng)');
+      expect(row.decompositionJson, contains('"hanViet":"Trọng"'));
     },
   );
 
@@ -419,13 +419,13 @@ void main() {
         file,
         userVersion: 35,
         kanjiLessonId: 12,
-        kanjiCharacter: '技',
+        kanjiCharacter: '重',
         kanjiLevel: 'N3',
-        kanjiMeaning: 'Kỹ (kỹ năng; kỹ thuật; tài nghệ)',
-        kanjiMeaningEn: 'skill, art',
-        kanjiOnyomi: 'ギ',
-        kanjiKunyomi: 'わざ',
-        kanjiDecompositionJson: '{"hanViet":"Kỹ"}',
+        kanjiMeaning: 'Trọng (nặng; quan trọng)',
+        kanjiMeaningEn: 'heavy, important',
+        kanjiOnyomi: 'ジュウ',
+        kanjiKunyomi: 'おも.い',
+        kanjiDecompositionJson: '{"hanViet":"Trọng"}',
         contentMetaRevision: 21,
       );
       final sqlite = sqlite3.open(file.path);
@@ -435,7 +435,7 @@ INSERT INTO kanji (
   lesson_id, character, stroke_count, onyomi, kunyomi, meaning, meaning_en,
   mnemonic_vi, mnemonic_en, decomposition_json, examples_json, jlpt_level
 ) VALUES (
-  17, '技', 7, 'ギ', 'わざ', 'kỹ', 'skill, art', 'Ghi nhớ', 'Remember',
+  17, '重', 9, 'ジュウ', 'おも.い', 'nặng', 'heavy, important', 'Ghi nhớ', 'Remember',
   '{}', '[]', 'N3'
 );
 ''');
@@ -451,15 +451,15 @@ INSERT INTO kanji (
           await (db.select(db.kanji)
                 ..where(
                   (tbl) =>
-                      tbl.character.equals('技') &
+                      tbl.character.equals('重') &
                       tbl.jlptLevel.equals('N3') &
-                      tbl.lessonId.equals(17),
+                      tbl.lessonId.equals(12),
                 )
                 ..limit(1))
               .getSingle();
 
-      expect(row.meaning, 'Kỹ (kỹ năng; kỹ thuật; tài nghệ)');
-      expect(row.decompositionJson, contains('"hanViet":"Kỹ"'));
+      expect(row.meaning, 'Trọng (nặng; quan trọng)');
+      expect(row.decompositionJson, contains('"hanViet":"Trọng"'));
     },
   );
 
@@ -472,8 +472,8 @@ INSERT INTO kanji (
       addTearDown(db.close);
 
       await db.customStatement(
-        "UPDATE kanji SET meaning = 'kỹ', decomposition_json = '{}' "
-        "WHERE jlpt_level = 'N3' AND lesson_id = 17 AND character = '技'",
+        "UPDATE kanji SET meaning = 'nặng', decomposition_json = '{}' "
+        "WHERE jlpt_level = 'N3' AND lesson_id = 12 AND character = '重'",
       );
       await db.customStatement(
         "INSERT OR REPLACE INTO content_meta (key, value) "
@@ -486,15 +486,15 @@ INSERT INTO kanji (
           await (db.select(db.kanji)
                 ..where(
                   (tbl) =>
-                      tbl.character.equals('技') &
+                      tbl.character.equals('重') &
                       tbl.jlptLevel.equals('N3') &
-                      tbl.lessonId.equals(17),
+                      tbl.lessonId.equals(12),
                 )
                 ..limit(1))
               .getSingle();
 
-      expect(row.meaning, 'Kỹ (kỹ năng; kỹ thuật; tài nghệ)');
-      expect(row.decompositionJson, contains('"hanViet":"Kỹ"'));
+      expect(row.meaning, 'Trọng (nặng; quan trọng)');
+      expect(row.decompositionJson, contains('"hanViet":"Trọng"'));
       expect(repaired, isTrue);
     },
   );
@@ -507,13 +507,14 @@ INSERT INTO kanji (
       final db = ContentDatabase(executor: NativeDatabase.memory());
       addTearDown(db.close);
 
+      await db.ensureKanjiContentCurrent();
       await db.customStatement(
         "UPDATE kanji SET meaning = '__local_marker__' "
-        "WHERE jlpt_level = 'N3' AND lesson_id = 17 AND character = '科'",
+        "WHERE jlpt_level = 'N5' AND lesson_id = 1 AND character = '二'",
       );
       await db.customStatement(
         "INSERT OR REPLACE INTO content_meta (key, value) "
-        "VALUES ('kanjiSeedRevision', '70')",
+        "VALUES ('kanjiSeedRevision', '90')",
       );
 
       final repaired = await db.ensureKanjiContentCurrent();
@@ -522,9 +523,9 @@ INSERT INTO kanji (
           await (db.select(db.kanji)
                 ..where(
                   (tbl) =>
-                      tbl.character.equals('科') &
-                      tbl.jlptLevel.equals('N3') &
-                      tbl.lessonId.equals(17),
+                      tbl.character.equals('二') &
+                      tbl.jlptLevel.equals('N5') &
+                      tbl.lessonId.equals(1),
                 )
                 ..limit(1))
               .getSingle();

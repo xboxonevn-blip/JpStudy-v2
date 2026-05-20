@@ -1,66 +1,219 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 23,
-  "entryCount": 6,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l23_k001",
+      "kanjiId": "n5_canonical_l23_k001",
       "lessonId": 23,
       "level": "N5",
-      "character": "不",
-      "strokeCount": 4,
+      "character": "高",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Bất",
-        "meaningVi": "không",
-        "meaningViDisplay": "Bất (không)",
-        "meaningEn": "Not, Un-"
+        "hanViet": "Cao",
+        "meaningVi": "cao, đắt",
+        "meaningViDisplay": "Cao (cao, đắt)",
+        "meaningEn": "High, Expensive"
       },
       "readings": {
         "onyomi": [
-          "FU"
+          "コウ"
         ],
-        "kunyomi": []
+        "kunyomi": [
+          "たか.い",
+          "たか",
+          "-だか",
+          "たか.まる",
+          "たか.める"
+        ]
       },
       "mnemonic": {
-        "vi": "Hình ảnh một mầm cây chưa thể nảy mầm hẳn (khÔng).",
-        "en": "A plant not yet fully sprouted (NOT)."
+        "vi": "Hình ảnh một tòa tháp cao có mái che và cửa sổ.",
+        "en": "A tall tower with a roof and windows."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "亠",
+          "口",
+          "冂"
+        ],
+        "componentNames": [
+          "Đầu (nắp đậy)",
+          "Khẩu (miệng)",
+          "Quynh (vây quanh)"
+        ],
+        "relatedKanji": [
+          "京",
+          "景"
+        ],
+        "hanViet": "Cao"
+      },
+      "search": {
+        "hanVietNoAccent": "Cao",
+        "meaningViNoAccent": "cao, dat",
+        "meaningEnNoAccent": "High, Expensive"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l08_v074",
+          "sourceSenseId": "n5_l08_s074",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l15_v024",
+          "sourceSenseId": "n5_l15_s024",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l08_v024",
+          "sourceSenseId": "n5_l08_s024",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Cao (cao, đắt)",
+        "onyomi": "コウ",
+        "kunyomi": "たか.い, たか, -だか, たか.まる, たか.める"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l23_k002",
+      "lessonId": 23,
+      "level": "N5",
+      "character": "魚",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Ngư",
+        "meaningVi": "fish; poisson; pez",
+        "meaningViDisplay": "Ngư (fish; poisson; pez)",
+        "meaningEn": "fish; poisson; pez"
+      },
+      "readings": {
+        "onyomi": [
+          "ギョ"
+        ],
+        "kunyomi": [
+          "うお",
+          "さかな",
+          "-ざかな"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biển tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "fish; poisson; pez"
+      },
+      "decomposition": {
+        "hanViet": "Ngư",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ngu",
+        "meaningViNoAccent": "fish; poisson; pez",
+        "meaningEnNoAccent": "fish; poisson; pez"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Ngư (fish; poisson; pez)",
+        "onyomi": "ギョ",
+        "kunyomi": "うお, さかな, -ざかな"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n5_canonical_l23_k003",
+      "lessonId": 23,
+      "level": "N5",
+      "character": "鳥",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Điểu",
+        "meaningVi": "chim",
+        "meaningViDisplay": "Điểu (chim)",
+        "meaningEn": "Bird"
+      },
+      "readings": {
+        "onyomi": [
+          "チョウ"
+        ],
+        "kunyomi": [
+          "とり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Hình ảnh con chim với cái mào và đôi chân.",
+        "en": "The shape of a BIRD with a crest and legs."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "下"
-        ]
+          "鶏"
+        ],
+        "hanViet": "Điểu"
       },
       "search": {
-        "hanVietNoAccent": "bat",
-        "meaningViNoAccent": "khong",
-        "meaningEnNoAccent": "not, un-"
+        "hanVietNoAccent": "Dieu",
+        "meaningViNoAccent": "chim",
+        "meaningEnNoAccent": "Bird"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l23_v049",
-          "sourceSenseId": "n5_l23_s049",
+          "sourceVocabId": "n4_l27_v010",
+          "sourceSenseId": "n4_l27_s010",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l21_v009",
-          "sourceSenseId": "n5_l21_s009",
+          "sourceVocabId": "n4_l27_v058",
+          "sourceSenseId": "n4_l27_s058",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n4_l27_v044",
-          "sourceSenseId": "n4_l27_s044",
+          "sourceVocabId": "n4_l48_v040",
+          "sourceSenseId": "n4_l48_s040",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -68,79 +221,91 @@
         }
       ],
       "legacy": {
-        "meaning": "Bất (không)",
-        "onyomi": "FU",
-        "kunyomi": null
+        "meaning": "Điểu (chim)",
+        "onyomi": "チョウ",
+        "kunyomi": "とり"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l23_k002",
+      "kanjiId": "n5_canonical_l23_k004",
       "lessonId": 23,
       "level": "N5",
-      "character": "便",
-      "strokeCount": 9,
+      "character": "間",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Tiện",
-        "meaningVi": "tiện lợi, tin tức",
-        "meaningViDisplay": "Tiện (tiện lợi, tin tức)",
-        "meaningEn": "Convenience, Mail"
+        "hanViet": "Gian",
+        "meaningVi": "giữa",
+        "meaningViDisplay": "Gian (giữa)",
+        "meaningEn": "Between, Interval"
       },
       "readings": {
         "onyomi": [
-          "BEN",
-          "BIN"
+          "カン",
+          "ケン"
         ],
         "kunyomi": [
-          "tayo-ri"
+          "あいだ",
+          "ま",
+          "あい"
         ]
       },
       "mnemonic": {
-        "vi": "Người (Nhân 亻) dùng Gậy (Canh 更) để làm việc tiỆN lợi hơn.",
-        "en": "A person (亻) using a tool to make things CONVENIENT."
+        "vi": "Ánh sáng Mặt trời (Nhật 日) lọt qua khe Cửa (Môn 門).",
+        "en": "The sun (日) shining through the gates (門)."
       },
       "decomposition": {
-        "structure": "left-right",
+        "structure": "enclosure",
         "components": [
-          "亻",
-          "更"
+          "門",
+          "日"
         ],
         "componentNames": [
-          "Nhân (người)",
-          "Canh (đổi, thêm)"
+          "Môn (cửa)",
+          "Nhật (ngày)"
         ],
         "relatedKanji": [
-          "人",
-          "使"
-        ]
+          "門",
+          "日",
+          "聞",
+          "問",
+          "開",
+          "閉",
+          "簡"
+        ],
+        "hanViet": "Gian"
       },
       "search": {
-        "hanVietNoAccent": "tien",
-        "meaningViNoAccent": "tien loi, tin tuc",
-        "meaningEnNoAccent": "convenience, mail"
+        "hanVietNoAccent": "Gian",
+        "meaningViNoAccent": "giua",
+        "meaningEnNoAccent": "Between, Interval"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l23_v050",
-          "sourceSenseId": "n5_l23_s050",
+          "sourceVocabId": "n5_l10_v041",
+          "sourceSenseId": "n5_l10_s041",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l21_v009",
-          "sourceSenseId": "n5_l21_s009",
+          "sourceVocabId": "n5_l09_v027",
+          "sourceSenseId": "n5_l09_s027",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l11_v032",
-          "sourceSenseId": "n5_l11_s032",
+          "sourceVocabId": "n5_l11_v045",
+          "sourceSenseId": "n5_l11_s045",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -148,329 +313,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Tiện (tiện lợi, tin tức)",
-        "onyomi": "BEN, BIN",
-        "kunyomi": "tayo-ri"
+        "meaning": "Gian (giữa)",
+        "onyomi": "カン, ケン",
+        "kunyomi": "あいだ, ま, あい"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l23_k003",
-      "lessonId": 23,
-      "level": "N5",
-      "character": "利",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Lợi",
-        "meaningVi": "lợi ích",
-        "meaningViDisplay": "Lợi (lợi ích)",
-        "meaningEn": "Profit, Benefit"
-      },
-      "readings": {
-        "onyomi": [
-          "RI"
-        ],
-        "kunyomi": [
-          "ki-ku"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Dùng Dao (Đao 刂) để gặt Lúa (Hòa 禾) mang lại LỢI ích.",
-        "en": "Using a knife (刂) on grain (禾) for PROFIT."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "禾",
-          "刂"
-        ],
-        "componentNames": [
-          "Hòa (lúa)",
-          "Đao (dao)"
-        ],
-        "relatedKanji": [
-          "科",
-          "私",
-          "別"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "loi",
-        "meaningViNoAccent": "loi ich",
-        "meaningEnNoAccent": "profit, benefit"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l23_v052",
-          "sourceSenseId": "n5_l23_s052",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v009",
-          "sourceSenseId": "n5_l08_s009",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l33_v056",
-          "sourceSenseId": "n4_l33_s056",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Lợi (lợi ích)",
-        "onyomi": "RI",
-        "kunyomi": "ki-ku"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l23_k004",
-      "lessonId": 23,
-      "level": "N5",
-      "character": "有",
-      "strokeCount": 6,
-      "labels": {
-        "hanViet": "Hữu",
-        "meaningVi": "có",
-        "meaningViDisplay": "Hữu (có)",
-        "meaningEn": "Have, Exist"
-      },
-      "readings": {
-        "onyomi": [
-          "YUU"
-        ],
-        "kunyomi": [
-          "a-ru"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Tay (Hựu 又) cầm miếng thịt (Nguyệt 月) là đang CÓ thức ăn.",
-        "en": "Hand (又) holding meat (月) - you HAVE something."
-      },
-      "decomposition": {
-        "structure": "mixed",
-        "components": [
-          "ナ",
-          "月"
-        ],
-        "componentNames": [
-          "Tay (nét tay)",
-          "Nguyệt (tháng, thịt)"
-        ],
-        "relatedKanji": [
-          "友",
-          "明"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "huu",
-        "meaningViNoAccent": "co",
-        "meaningEnNoAccent": "have, exist"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l23_v053",
-          "sourceSenseId": "n5_l23_s053",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v005",
-          "sourceSenseId": "n5_l08_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Hữu (có)",
-        "onyomi": "YUU",
-        "kunyomi": "a-ru"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l23_k005",
-      "lessonId": 23,
-      "level": "N5",
-      "character": "親",
-      "strokeCount": 16,
-      "labels": {
-        "hanViet": "Thân",
-        "meaningVi": "bố mẹ, thân thiết",
-        "meaningViDisplay": "Thân (bố mẹ, thân thiết)",
-        "meaningEn": "Parent, Intimate"
-      },
-      "readings": {
-        "onyomi": [
-          "SHIN"
-        ],
-        "kunyomi": [
-          "oya",
-          "shita-shii"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Bố mẹ đứng (Lập 立) trên cây (Mộc 木) nhìn (Kiến 見) con một cách thân thương.",
-        "en": "Parents standing (立) on a tree (木) to watch (見) their child."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "立",
-          "木",
-          "見"
-        ],
-        "componentNames": [
-          "Lập (đứng)",
-          "Mộc (cây)",
-          "Kiến (nhìn)"
-        ],
-        "relatedKanji": [
-          "新",
-          "見",
-          "立"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "than",
-        "meaningViNoAccent": "bo me, than thiet",
-        "meaningEnNoAccent": "parent, intimate"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n4_l48_v017",
-          "sourceSenseId": "n4_l48_s017",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v034",
-          "sourceSenseId": "n5_l11_s034",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v006",
-          "sourceSenseId": "n5_l08_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thân (bố mẹ, thân thiết)",
-        "onyomi": "SHIN",
-        "kunyomi": "oya, shita-shii"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l23_k006",
-      "lessonId": 23,
-      "level": "N5",
-      "character": "切",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Thiết",
-        "meaningVi": "cắt",
-        "meaningViDisplay": "Thiết (cắt)",
-        "meaningEn": "Cut"
-      },
-      "readings": {
-        "onyomi": [
-          "SETSU"
-        ],
-        "kunyomi": [
-          "ki-ru"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Dùng Dao (Đao 刂) để CẮT ngấn (Thất 七).",
-        "en": "Using a blade (刂) to CUT."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "七",
-          "刀"
-        ],
-        "componentNames": [
-          "Thất (bảy)",
-          "Đao (dao)"
-        ],
-        "relatedKanji": [
-          "七",
-          "別"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thiet",
-        "meaningViNoAccent": "cat",
-        "meaningEnNoAccent": "cut"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l23_v051",
-          "sourceSenseId": "n5_l23_s051",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l17_v015",
-          "sourceSenseId": "n5_l17_s015",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v026",
-          "sourceSenseId": "n5_l11_s026",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thiết (cắt)",
-        "onyomi": "SETSU",
-        "kunyomi": "ki-ru"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

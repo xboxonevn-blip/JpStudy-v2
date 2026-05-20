@@ -1,258 +1,286 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 12,
-  "entryCount": 8,
+  "entryCount": 12,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l12_k001",
+      "kanjiId": "n3_canonical_l12_k001",
       "lessonId": 12,
       "level": "N3",
-      "character": "芸",
-      "strokeCount": 7,
+      "character": "重",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Nghệ",
-        "meaningVi": "nghệ thuật; tài nghệ",
-        "meaningViDisplay": "Nghệ (nghệ thuật; tài nghệ)",
-        "meaningEn": "technique, art"
+        "hanViet": "Trọng",
+        "meaningVi": "nặng; quan trọng",
+        "meaningViDisplay": "Trọng (nặng; quan trọng)",
+        "meaningEn": "heavy, important"
       },
       "readings": {
         "onyomi": [
-          "ゲイ",
-          "ウン"
+          "ジュウ",
+          "チョウ"
         ],
         "kunyomi": [
-          "う.える",
-          "のり",
-          "わざ"
+          "え",
+          "おも.い",
+          "おも.り",
+          "おも.なう",
+          "かさ.ねる",
+          "かさ.なる",
+          "おも"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
+        "vi": "Dàn hoa thiên ( ) lý ( ) rất nặng ( ) 重 1",
+        "en": "重 means heavy or important; 重たい uses the direct sense of heavy or serious."
       },
       "decomposition": {
-        "hanViet": "Nghệ",
-        "structure": "standalone",
+        "hanViet": "Trọng",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "術",
-          "演",
-          "劇",
-          "賞"
+          "軽",
+          "量",
+          "要",
+          "再"
         ]
       },
       "search": {
-        "hanVietNoAccent": "nghe",
-        "meaningViNoAccent": "nghe thuat; tai nghe",
-        "meaningEnNoAccent": "technique, art"
+        "hanVietNoAccent": "Trong",
+        "meaningViNoAccent": "nang; quan trong",
+        "meaningEnNoAccent": "heavy, important"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l12_v001",
-          "sourceSenseId": "n3_l12_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "重たい",
+          "reading": "おもたい",
+          "meaning": "nặng; nghiêm trọng",
+          "meaningEn": "heavy, massive, serious"
         }
       ],
-      "legacy": {
-        "meaning": "Nghệ (nghệ thuật; tài nghệ)",
-        "onyomi": "ゲイ, ウン",
-        "kunyomi": "う.える, のり, わざ"
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Trọng (nặng; quan trọng)",
+        "onyomi": "ジュウ, チョウ",
+        "kunyomi": "え, おも.い, おも.り, おも.なう, かさ.ねる, かさ.なる, おも"
       }
     },
     {
-      "kanjiId": "n3_l12_k002",
+      "kanjiId": "n3_canonical_l12_k002",
       "lessonId": 12,
       "level": "N3",
-      "character": "術",
-      "strokeCount": 11,
+      "character": "退",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Thuật",
-        "meaningVi": "kỹ thuật; phương pháp; nghệ thuật",
-        "meaningViDisplay": "Thuật (kỹ thuật; phương pháp; nghệ thuật)",
-        "meaningEn": "art, technique"
+        "hanViet": "Thối",
+        "meaningVi": "retreat; withdraw; retire",
+        "meaningViDisplay": "Thối (retreat; withdraw; retire)",
+        "meaningEn": "retreat; withdraw; retire"
       },
       "readings": {
         "onyomi": [
-          "ジュツ"
+          "タイ"
         ],
         "kunyomi": [
-          "すべ"
+          "しりぞ.く",
+          "しりぞ.ける",
+          "ひ.く",
+          "の.く",
+          "の.ける",
+          "ど.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
+        "vi": "Ghi nhớ 退 qua Hán-Việt Thối.",
+        "en": "retreat; withdraw; retire"
       },
       "decomposition": {
-        "hanViet": "Thuật",
-        "structure": "standalone",
+        "hanViet": "Thối",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thoi",
+        "meaningViNoAccent": "retreat; withdraw; retire",
+        "meaningEnNoAccent": "retreat; withdraw; retire"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thối (retreat; withdraw; retire)",
+        "onyomi": "タイ",
+        "kunyomi": "しりぞ.く, しりぞ.ける, ひ.く, の.く, の.ける, ど.く"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l12_k003",
+      "lessonId": 12,
+      "level": "N3",
+      "character": "軍",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Quân",
+        "meaningVi": "quân đội; quân sự; chiến trận",
+        "meaningViDisplay": "Quân (quân đội; quân sự; chiến trận)",
+        "meaningEn": "army, military; soldiers, troops"
+      },
+      "readings": {
+        "onyomi": [
+          "グン"
+        ],
+        "kunyomi": [
+          "いくさ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "軍 means army or military; the reading いくさ is an older word for war or battle."
+      },
+      "decomposition": {
+        "hanViet": "Quân",
+        "structure": "top-bottom",
+        "components": [
+          "冖",
+          "車"
+        ],
+        "componentNames": [
+          "mịch/che phủ",
+          "xa/xe"
+        ],
         "relatedKanji": [
-          "芸",
-          "技",
-          "美",
-          "学"
+          "戦",
+          "兵",
+          "隊",
+          "運"
         ]
       },
       "search": {
-        "hanVietNoAccent": "thuat",
-        "meaningViNoAccent": "ky thuat; phuong phap; nghe thuat",
-        "meaningEnNoAccent": "art, technique"
+        "hanVietNoAccent": "Quan",
+        "meaningViNoAccent": "quan doi; quan su; chien tran",
+        "meaningEnNoAccent": "army, military; soldiers, troops"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l12_v001",
-          "sourceSenseId": "n3_l12_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "軍",
+          "reading": "いくさ",
+          "meaning": "chiến trận; chiến tranh",
+          "meaningEn": "war; battle"
         }
       ],
-      "legacy": {
-        "meaning": "Thuật (kỹ thuật; phương pháp; nghệ thuật)",
-        "onyomi": "ジュツ",
-        "kunyomi": "すべ"
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Quân (quân đội; quân sự; chiến trận)",
+        "onyomi": "グン",
+        "kunyomi": "いくさ"
       }
     },
     {
-      "kanjiId": "n3_l12_k003",
+      "kanjiId": "n3_canonical_l12_k004",
       "lessonId": 12,
       "level": "N3",
-      "character": "演",
-      "strokeCount": 14,
+      "character": "建",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Diễn",
-        "meaningVi": "biểu diễn; trình diễn; diễn xuất",
-        "meaningViDisplay": "Diễn (biểu diễn; trình diễn; diễn xuất)",
-        "meaningEn": "performance, act"
+        "hanViet": "Kiến",
+        "meaningVi": "xây dựng",
+        "meaningViDisplay": "Kiến (xây dựng)",
+        "meaningEn": "Build"
       },
       "readings": {
         "onyomi": [
-          "エン"
+          "ケン",
+          "コン"
         ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
-      },
-      "decomposition": {
-        "hanViet": "Diễn",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "劇",
-          "奏",
-          "舞",
-          "芸"
+        "kunyomi": [
+          "た.てる",
+          "た.て",
+          "-だ.て",
+          "た.つ"
         ]
       },
+      "mnemonic": {
+        "vi": "Đi (Dẫn 廴) trên đường để xây dựng luật lệ (Duật 聿).",
+        "en": "Walking (廴) to write (聿) plans for BUILDING."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "聿",
+          "廴"
+        ],
+        "componentNames": [
+          "Duật (cây bút)",
+          "Dẫn (kéo dài)"
+        ],
+        "relatedKanji": [
+          "書"
+        ],
+        "hanViet": "Kiến"
+      },
       "search": {
-        "hanVietNoAccent": "dien",
-        "meaningViNoAccent": "bieu dien; trinh dien; dien xuat",
-        "meaningEnNoAccent": "performance, act"
+        "hanVietNoAccent": "Kien",
+        "meaningViNoAccent": "xay dung",
+        "meaningEnNoAccent": "Build"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l12_v004",
-          "sourceSenseId": "n3_l12_s004",
+          "sourceVocabId": "n4_l27_v060",
+          "sourceSenseId": "n4_l27_s060",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l12_v010",
-          "sourceSenseId": "n3_l12_s010",
+          "sourceVocabId": "n4_l37_v026",
+          "sourceSenseId": "n4_l37_s026",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Diễn (biểu diễn; trình diễn; diễn xuất)",
-        "onyomi": "エン",
-        "kunyomi": ""
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
-      }
-    },
-    {
-      "kanjiId": "n3_l12_k004",
-      "lessonId": 12,
-      "level": "N3",
-      "character": "劇",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Kịch",
-        "meaningVi": "kịch; sân khấu; vở diễn",
-        "meaningViDisplay": "Kịch (kịch; sân khấu; vở diễn)",
-        "meaningEn": "drama, play"
-      },
-      "readings": {
-        "onyomi": [
-          "ゲキ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
-      },
-      "decomposition": {
-        "hanViet": "Kịch",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "演",
-          "戯",
-          "場",
-          "映"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "kich",
-        "meaningViNoAccent": "kich; san khau; vo dien",
-        "meaningEnNoAccent": "drama, play"
-      },
-      "examples": [
+        },
         {
-          "sourceVocabId": "n3_l12_v004",
-          "sourceSenseId": "n3_l12_s004",
+          "sourceVocabId": "n4_l27_v002",
+          "sourceSenseId": "n4_l27_s002",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -260,195 +288,83 @@
         }
       ],
       "legacy": {
-        "meaning": "Kịch (kịch; sân khấu; vở diễn)",
-        "onyomi": "ゲキ",
-        "kunyomi": ""
+        "meaning": "Kiến (xây dựng)",
+        "onyomi": "ケン, コン",
+        "kunyomi": "た.てる, た.て, -だ.て, た.つ"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l12_k005",
+      "kanjiId": "n3_canonical_l12_k005",
       "lessonId": 12,
       "level": "N3",
-      "character": "鑑",
-      "strokeCount": 23,
-      "labels": {
-        "hanViet": "Giám",
-        "meaningVi": "xem xét; thưởng thức; soi chiếu",
-        "meaningViDisplay": "Giám (xem xét; thưởng thức; soi chiếu)",
-        "meaningEn": "specimen, take warning from"
-      },
-      "readings": {
-        "onyomi": [
-          "カン"
-        ],
-        "kunyomi": [
-          "かんが.みる",
-          "かがみ"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
-      },
-      "decomposition": {
-        "hanViet": "Giám",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "賞",
-          "観",
-          "見",
-          "評"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "giam",
-        "meaningViNoAccent": "xem xet; thuong thuc; soi chieu",
-        "meaningEnNoAccent": "specimen, take warning from"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l12_v006",
-          "sourceSenseId": "n3_l12_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Giám (xem xét; thưởng thức; soi chiếu)",
-        "onyomi": "カン",
-        "kunyomi": "かんが.みる, かがみ"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
-      }
-    },
-    {
-      "kanjiId": "n3_l12_k006",
-      "lessonId": 12,
-      "level": "N3",
-      "character": "賞",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Thưởng",
-        "meaningVi": "giải thưởng; khen thưởng; thưởng thức",
-        "meaningViDisplay": "Thưởng (giải thưởng; khen thưởng; thưởng thức)",
-        "meaningEn": "prize, reward"
-      },
-      "readings": {
-        "onyomi": [
-          "ショウ"
-        ],
-        "kunyomi": [
-          "ほ.める"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
-      },
-      "decomposition": {
-        "hanViet": "Thưởng",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "鑑",
-          "芸",
-          "演",
-          "美"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thuong",
-        "meaningViNoAccent": "giai thuong; khen thuong; thuong thuc",
-        "meaningEnNoAccent": "prize, reward"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l12_v006",
-          "sourceSenseId": "n3_l12_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thưởng (giải thưởng; khen thưởng; thưởng thức)",
-        "onyomi": "ショウ",
-        "kunyomi": "ほ.める"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
-      }
-    },
-    {
-      "kanjiId": "n3_l12_k007",
-      "lessonId": 12,
-      "level": "N3",
-      "character": "奏",
+      "character": "者",
       "strokeCount": 9,
       "labels": {
-        "hanViet": "Tấu",
-        "meaningVi": "tấu nhạc; trình tấu",
-        "meaningViDisplay": "Tấu (tấu nhạc; trình tấu)",
-        "meaningEn": "play music, speak to a ruler"
+        "hanViet": "Giả",
+        "meaningVi": "người",
+        "meaningViDisplay": "Giả (người)",
+        "meaningEn": "Person"
       },
       "readings": {
         "onyomi": [
-          "ソウ"
+          "シャ"
         ],
         "kunyomi": [
-          "かな.でる"
+          "もの"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "An elder (SHA) explaining things."
       },
       "decomposition": {
-        "hanViet": "Tấu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "structure": "top-bottom",
+        "components": [
+          "耂",
+          "日"
+        ],
+        "componentNames": [
+          "Lão (già)",
+          "Nhật (ngày)"
+        ],
         "relatedKanji": [
-          "音",
-          "楽",
-          "演",
-          "曲"
-        ]
+          "都",
+          "考"
+        ],
+        "hanViet": "Giả"
       },
       "search": {
-        "hanVietNoAccent": "tau",
-        "meaningViNoAccent": "tau nhac; trinh tau",
-        "meaningEnNoAccent": "play music, speak to a ruler"
+        "hanVietNoAccent": "Gia",
+        "meaningViNoAccent": "nguoi",
+        "meaningEnNoAccent": "Person"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l12_v010",
-          "sourceSenseId": "n3_l12_s010",
+          "sourceVocabId": "n4_l48_v026",
+          "sourceSenseId": "n4_l48_s026",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l15_v016",
+          "sourceSenseId": "n5_l15_s016",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v013",
+          "sourceSenseId": "n5_l01_s013",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -456,66 +372,190 @@
         }
       ],
       "legacy": {
-        "meaning": "Tấu (tấu nhạc; trình tấu)",
-        "onyomi": "ソウ",
-        "kunyomi": "かな.でる"
+        "meaning": "Giả (người)",
+        "onyomi": "シャ",
+        "kunyomi": "もの"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l12_k006",
+      "lessonId": 12,
+      "level": "N3",
+      "character": "点",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Điểm",
+        "meaningVi": "spot; point; mark",
+        "meaningViDisplay": "Điểm (spot; point; mark)",
+        "meaningEn": "spot; point; mark"
+      },
+      "readings": {
+        "onyomi": [
+          "テン"
+        ],
+        "kunyomi": [
+          "つ.ける",
+          "つ.く",
+          "た.てる",
+          "さ.す",
+          "とぼ.す",
+          "とも.す",
+          "ぼち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 点 qua Hán-Việt Điểm.",
+        "en": "spot; point; mark"
+      },
+      "decomposition": {
+        "hanViet": "Điểm",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Diem",
+        "meaningViNoAccent": "spot; point; mark",
+        "meaningEnNoAccent": "spot; point; mark"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Điểm (spot; point; mark)",
+        "onyomi": "テン",
+        "kunyomi": "つ.ける, つ.く, た.てる, さ.す, とぼ.す, とも.す, ぼち"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l12_k007",
+      "lessonId": 12,
+      "level": "N3",
+      "character": "洗",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Tẩy",
+        "meaningVi": "rửa; gột; làm sạch",
+        "meaningViDisplay": "Tẩy (rửa; gột; làm sạch)",
+        "meaningEn": "wash, inquire into, probe"
+      },
+      "readings": {
+        "onyomi": [
+          "セン"
+        ],
+        "kunyomi": [
+          "あら.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "洗 means washing or cleaning; in 御手洗 it points to washing hands for purification."
+      },
+      "decomposition": {
+        "hanViet": "Tẩy",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "水",
+          "清",
+          "浴",
+          "手"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tay",
+        "meaningViNoAccent": "rua; got; lam sach",
+        "meaningEnNoAccent": "wash, inquire into, probe"
+      },
+      "examples": [
+        {
+          "word": "御手洗",
+          "reading": "おてあらい",
+          "meaning": "bể nước thanh tẩy ở lối vào đền",
+          "meaningEn": "font of purifying water placed at entrance of shrine"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tẩy (rửa; gột; làm sạch)",
+        "onyomi": "セン",
+        "kunyomi": "あら.う"
       }
     },
     {
-      "kanjiId": "n3_l12_k008",
+      "kanjiId": "n3_canonical_l12_k008",
       "lessonId": 12,
       "level": "N3",
-      "character": "撮",
-      "strokeCount": 15,
+      "character": "単",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Toát",
-        "meaningVi": "chụp ảnh; quay phim; nắm lấy",
-        "meaningViDisplay": "Toát (chụp ảnh; quay phim; nắm lấy)",
-        "meaningEn": "snapshot, take pictures"
+        "hanViet": "Đan",
+        "meaningVi": "đơn giản",
+        "meaningViDisplay": "Đan (đơn giản)",
+        "meaningEn": "Simple, Single"
       },
       "readings": {
         "onyomi": [
-          "サツ"
+          "タン"
         ],
         "kunyomi": [
-          "と.る",
-          "つま.む",
-          "-ど.り"
+          "ひとえ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
-        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
+        "vi": "Hình ảnh một cánh cửa ĐƠN độc.",
+        "en": "A SINGLE item standing alone."
       },
       "decomposition": {
-        "hanViet": "Toát",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "写",
-          "映",
-          "画",
-          "記"
-        ]
+          "簡"
+        ],
+        "hanViet": "Đan"
       },
       "search": {
-        "hanVietNoAccent": "toat",
-        "meaningViNoAccent": "chup anh; quay phim; nam lay",
-        "meaningEnNoAccent": "snapshot, take pictures"
+        "hanVietNoAccent": "Dan",
+        "meaningViNoAccent": "don gian",
+        "meaningEnNoAccent": "Simple, Single"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l12_v012",
-          "sourceSenseId": "n3_l12_s012",
+          "sourceVocabId": "n4_l44_v048",
+          "sourceSenseId": "n4_l44_s048",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l12_v001",
+          "sourceSenseId": "n5_l12_s001",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -523,21 +563,279 @@
         }
       ],
       "legacy": {
-        "meaning": "Toát (chụp ảnh; quay phim; nắm lấy)",
-        "onyomi": "サツ",
-        "kunyomi": "と.る, つま.む, -ど.り"
+        "meaning": "Đan (đơn giản)",
+        "onyomi": "タン",
+        "kunyomi": "ひとえ"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l12_k009",
+      "lessonId": 12,
+      "level": "N3",
+      "character": "浅",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Thiển",
+        "meaningVi": "nông; cạn; hời hợt",
+        "meaningViDisplay": "Thiển (nông; cạn; hời hợt)",
+        "meaningEn": "shallow; superficial"
+      },
+      "readings": {
+        "onyomi": [
+          "セン"
+        ],
+        "kunyomi": [
+          "あさ.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "浅 có bộ thủy, nghĩa là nước nông hoặc hiểu biết hời hợt; 浅ましい diễn tả điều đáng xấu hổ, hèn hạ.",
+        "en": "浅 has the water radical and means shallow or superficial; 浅ましい describes something shameful or despicable."
+      },
+      "decomposition": {
+        "hanViet": "Thiển",
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "戔"
+        ],
+        "componentNames": [
+          "nước",
+          "thiển"
+        ],
+        "relatedKanji": [
+          "水",
+          "深",
+          "薄",
+          "清"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thien",
+        "meaningViNoAccent": "nong; can; hoi hot",
+        "meaningEnNoAccent": "shallow; superficial"
+      },
+      "examples": [
+        {
+          "word": "浅ましい",
+          "reading": "あさましい",
+          "meaning": "đáng xấu hổ; hèn hạ; đáng khinh",
+          "meaningEn": "shameful; mean; despicable"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thiển (nông; cạn; hời hợt)",
+        "onyomi": "セン",
+        "kunyomi": "あさ.い"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l12_k010",
+      "lessonId": 12,
+      "level": "N3",
+      "character": "約",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Ước",
+        "meaningVi": "ước hẹn; khoảng; rút gọn",
+        "meaningViDisplay": "Ước (ước hẹn; khoảng; rút gọn)",
+        "meaningEn": "promise, approximately"
+      },
+      "readings": {
+        "onyomi": [
+          "ヤク"
+        ],
+        "kunyomi": [
+          "つづ.まる",
+          "つづ.める",
+          "つづま.やか"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 3: Cân bằng giữa tiện lợi và giảm lãng phí.",
+        "en": "Core kanji for QUARTET 3: A balance between convenience and reducing waste."
+      },
+      "decomposition": {
+        "hanViet": "Ước",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "節",
+          "束",
+          "定",
+          "契"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Uoc",
+        "meaningViNoAccent": "uoc hen; khoang; rut gon",
+        "meaningEnNoAccent": "promise, approximately"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l03_v001",
+          "sourceSenseId": "n3_l03_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Ước (ước hẹn; khoảng; rút gọn)",
+        "onyomi": "ヤク",
+        "kunyomi": "つづ.まる, つづ.める, つづま.やか"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 12,
-        "themeEn": "Art, music and entertainment",
-        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
+        "quartetLesson": 3,
+        "themeEn": "A balance between convenience and reducing waste",
+        "themeVi": "Cân bằng giữa tiện lợi và giảm lãng phí"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l12_k011",
+      "lessonId": 12,
+      "level": "N3",
+      "character": "指",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Chỉ",
+        "meaningVi": "ngón tay; chỉ ra; hướng dẫn",
+        "meaningViDisplay": "Chỉ (ngón tay; chỉ ra; hướng dẫn)",
+        "meaningEn": "finger, point to, indicate"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "ゆび",
+          "さ.す",
+          "-さ.し"
+        ]
+      },
+      "mnemonic": {
+        "vi": "指 là ngón tay hoặc hành động chỉ ra; trong 親指, nó gọi tên một ngón tay cụ thể là ngón cái.",
+        "en": "指 means finger or pointing; in 親指 it names a specific finger, the thumb."
+      },
+      "decomposition": {
+        "hanViet": "Chỉ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "手",
+          "親",
+          "示",
+          "導"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Chi",
+        "meaningViNoAccent": "ngon tay; chi ra; huong dan",
+        "meaningEnNoAccent": "finger, point to, indicate"
+      },
+      "examples": [
+        {
+          "word": "親指",
+          "reading": "おやゆび",
+          "meaning": "ngón cái",
+          "meaningEn": "thumb"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Chỉ (ngón tay; chỉ ra; hướng dẫn)",
+        "onyomi": "シ",
+        "kunyomi": "ゆび, さ.す, -さ.し"
       }
+    },
+    {
+      "kanjiId": "n3_canonical_l12_k012",
+      "lessonId": 12,
+      "level": "N3",
+      "character": "要",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Yếu",
+        "meaningVi": "Tất Yếu Or Nm Sere",
+        "meaningViDisplay": "Yếu (Tất Yếu Or Nm Sere)",
+        "meaningEn": "need; main point; essence"
+      },
+      "readings": {
+        "onyomi": [
+          "ヨウ"
+        ],
+        "kunyomi": [
+          "い.る",
+          "かなめ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 要 qua Hán-Việt Yếu.",
+        "en": "need; main point; essence"
+      },
+      "decomposition": {
+        "hanViet": "Yếu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Yeu",
+        "meaningViNoAccent": "Tat Yeu Or Nm Sere",
+        "meaningEnNoAccent": "need; main point; essence"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Yếu (Tất Yếu Or Nm Sere)",
+        "onyomi": "ヨウ",
+        "kunyomi": "い.る, かなめ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

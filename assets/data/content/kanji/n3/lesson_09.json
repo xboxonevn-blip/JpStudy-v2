@@ -1,324 +1,220 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 9,
-  "entryCount": 8,
+  "entryCount": 12,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l09_k001",
+      "kanjiId": "n3_canonical_l09_k001",
       "lessonId": 9,
       "level": "N3",
-      "character": "新",
-      "strokeCount": 13,
-      "labels": {
-        "hanViet": "Tân",
-        "meaningVi": "mới; đổi mới",
-        "meaningViDisplay": "Tân (mới; đổi mới)",
-        "meaningEn": "new"
-      },
-      "readings": {
-        "onyomi": [
-          "シン"
-        ],
-        "kunyomi": [
-          "あたら.しい",
-          "あら.た",
-          "あら-",
-          "にい-"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
-      },
-      "decomposition": {
-        "hanViet": "Tân",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "聞",
-          "雑",
-          "誌",
-          "報"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tan",
-        "meaningViNoAccent": "moi; doi moi",
-        "meaningEnNoAccent": "new"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l09_v001",
-          "sourceSenseId": "n3_l09_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tân (mới; đổi mới)",
-        "onyomi": "シン",
-        "kunyomi": "あたら.しい, あら.た, あら-, にい-"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
-    },
-    {
-      "kanjiId": "n3_l09_k002",
-      "lessonId": 9,
-      "level": "N3",
-      "character": "聞",
-      "strokeCount": 14,
-      "labels": {
-        "hanViet": "Văn",
-        "meaningVi": "nghe; hỏi; tin tức",
-        "meaningViDisplay": "Văn (nghe; hỏi; tin tức)",
-        "meaningEn": "hear, ask"
-      },
-      "readings": {
-        "onyomi": [
-          "ブン",
-          "モン"
-        ],
-        "kunyomi": [
-          "き.く",
-          "き.こえる"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
-      },
-      "decomposition": {
-        "hanViet": "Văn",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "新",
-          "誌",
-          "報",
-          "記"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "van",
-        "meaningViNoAccent": "nghe; hoi; tin tuc",
-        "meaningEnNoAccent": "hear, ask"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l09_v001",
-          "sourceSenseId": "n3_l09_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Văn (nghe; hỏi; tin tức)",
-        "onyomi": "ブン, モン",
-        "kunyomi": "き.く, き.こえる"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
-    },
-    {
-      "kanjiId": "n3_l09_k003",
-      "lessonId": 9,
-      "level": "N3",
-      "character": "雑",
-      "strokeCount": 14,
-      "labels": {
-        "hanViet": "Tạp",
-        "meaningVi": "tạp; hỗn hợp; linh tinh",
-        "meaningViDisplay": "Tạp (tạp; hỗn hợp; linh tinh)",
-        "meaningEn": "miscellaneous"
-      },
-      "readings": {
-        "onyomi": [
-          "ザツ",
-          "ゾウ"
-        ],
-        "kunyomi": [
-          "まじ.える",
-          "まじ.る"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
-      },
-      "decomposition": {
-        "hanViet": "Tạp",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "誌",
-          "新",
-          "聞",
-          "記"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tap",
-        "meaningViNoAccent": "tap; hon hop; linh tinh",
-        "meaningEnNoAccent": "miscellaneous"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l09_v002",
-          "sourceSenseId": "n3_l09_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tạp (tạp; hỗn hợp; linh tinh)",
-        "onyomi": "ザツ, ゾウ",
-        "kunyomi": "まじ.える, まじ.る"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
-    },
-    {
-      "kanjiId": "n3_l09_k004",
-      "lessonId": 9,
-      "level": "N3",
-      "character": "誌",
-      "strokeCount": 14,
-      "labels": {
-        "hanViet": "Chí",
-        "meaningVi": "tạp chí; ghi chép",
-        "meaningViDisplay": "Chí (tạp chí; ghi chép)",
-        "meaningEn": "document, records"
-      },
-      "readings": {
-        "onyomi": [
-          "シ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
-      },
-      "decomposition": {
-        "hanViet": "Chí",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "雑",
-          "記",
-          "報",
-          "聞"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "chi",
-        "meaningViNoAccent": "tap chi; ghi chep",
-        "meaningEnNoAccent": "document, records"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l09_v002",
-          "sourceSenseId": "n3_l09_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Chí (tạp chí; ghi chép)",
-        "onyomi": "シ",
-        "kunyomi": ""
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
-    },
-    {
-      "kanjiId": "n3_l09_k005",
-      "lessonId": 9,
-      "level": "N3",
-      "character": "放",
+      "character": "幸",
       "strokeCount": 8,
       "labels": {
-        "hanViet": "Phóng",
-        "meaningVi": "phát ra; thả; phóng thích",
-        "meaningViDisplay": "Phóng (phát ra; thả; phóng thích)",
-        "meaningEn": "set free, release"
+        "hanViet": "Hạnh",
+        "meaningVi": "happiness; blessing; fortune",
+        "meaningViDisplay": "Hạnh (happiness; blessing; fortune)",
+        "meaningEn": "happiness; blessing; fortune"
       },
       "readings": {
         "onyomi": [
-          "ホウ"
+          "コウ"
         ],
         "kunyomi": [
-          "はな.す",
-          "-っぱな.し",
-          "はな.つ",
-          "はな.れる"
+          "さいわ.い",
+          "さち",
+          "しあわ.せ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "happiness; blessing; fortune"
       },
       "decomposition": {
-        "hanViet": "Phóng",
+        "hanViet": "Hạnh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hanh",
+        "meaningViNoAccent": "happiness; blessing; fortune",
+        "meaningEnNoAccent": "happiness; blessing; fortune"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hạnh (happiness; blessing; fortune)",
+        "onyomi": "コウ",
+        "kunyomi": "さいわ.い, さち, しあわ.せ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k002",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "板",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Bản",
+        "meaningVi": "Tấm Bằng - †‡1††y%%",
+        "meaningViDisplay": "Bản (Tấm Bằng - †‡1††y%%)",
+        "meaningEn": "plank; board; plate"
+      },
+      "readings": {
+        "onyomi": [
+          "ハン",
+          "バン"
+        ],
+        "kunyomi": [
+          "いた"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 板 qua Hán-Việt Bản.",
+        "en": "plank; board; plate"
+      },
+      "decomposition": {
+        "hanViet": "Bản",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ban",
+        "meaningViNoAccent": "Tam Bang - †‡1††y%%",
+        "meaningEnNoAccent": "plank; board; plate"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Bản (Tấm Bằng - †‡1††y%%)",
+        "onyomi": "ハン, バン",
+        "kunyomi": "いた"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k003",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "非",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Phi",
+        "meaningVi": "un-; mistake; negative",
+        "meaningViDisplay": "Phi (un-; mistake; negative)",
+        "meaningEn": "un-; mistake; negative"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒ"
+        ],
+        "kunyomi": [
+          "あら.ず"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 非 qua Hán-Việt Phi.",
+        "en": "un-; mistake; negative"
+      },
+      "decomposition": {
+        "hanViet": "Phi",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phi",
+        "meaningViNoAccent": "un-; mistake; negative",
+        "meaningEnNoAccent": "un-; mistake; negative"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phi (un-; mistake; negative)",
+        "onyomi": "ヒ",
+        "kunyomi": "あら.ず"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k004",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "法",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Pháp",
+        "meaningVi": "luật pháp; phương pháp; nguyên tắc",
+        "meaningViDisplay": "Pháp (luật pháp; phương pháp; nguyên tắc)",
+        "meaningEn": "method, law"
+      },
+      "readings": {
+        "onyomi": [
+          "ホウ",
+          "ハッ",
+          "ホッ",
+          "フラン"
+        ],
+        "kunyomi": [
+          "のり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ®",
+        "en": "Core kanji for QUARTET 18: Law, rules and society."
+      },
+      "decomposition": {
+        "hanViet": "Pháp",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "報",
-          "送",
-          "発",
-          "聞"
+          "律",
+          "規",
+          "則",
+          "制"
         ]
       },
       "search": {
-        "hanVietNoAccent": "phong",
-        "meaningViNoAccent": "phat ra; tha; phong thich",
-        "meaningEnNoAccent": "set free, release"
+        "hanVietNoAccent": "Phap",
+        "meaningViNoAccent": "luat phap; phuong phap; nguyen tac",
+        "meaningEnNoAccent": "method, law"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l09_v003",
-          "sourceSenseId": "n3_l09_s003",
+          "sourceVocabId": "n3_l18_v001",
+          "sourceSenseId": "n3_l18_s001",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -326,137 +222,510 @@
         }
       ],
       "legacy": {
-        "meaning": "Phóng (phát ra; thả; phóng thích)",
-        "onyomi": "ホウ",
-        "kunyomi": "はな.す, -っぱな.し, はな.つ, はな.れる"
+        "meaning": "Pháp (luật pháp; phương pháp; nguyên tắc)",
+        "onyomi": "ホウ, ハッ, ホッ, フラン",
+        "kunyomi": "のり"
+      },
+      "theme": {
+        "quartetLesson": 18,
+        "themeEn": "Law, rules and society",
+        "themeVi": "Luật pháp, quy tắc và xã hội"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l09_k006",
+      "kanjiId": "n3_canonical_l09_k005",
       "lessonId": 9,
       "level": "N3",
-      "character": "報",
-      "strokeCount": 12,
+      "character": "苦",
+      "strokeCount": 8,
       "labels": {
-        "hanViet": "Báo",
-        "meaningVi": "báo cáo; tin tức; báo đáp",
-        "meaningViDisplay": "Báo (báo cáo; tin tức; báo đáp)",
-        "meaningEn": "report, news"
+        "hanViet": "Khổ",
+        "meaningVi": "Đắng Tms Sf Ee",
+        "meaningViDisplay": "Khổ (Đắng Tms Sf Ee)",
+        "meaningEn": "suffering; trial; worry"
       },
       "readings": {
         "onyomi": [
-          "ホウ"
+          "ク"
         ],
         "kunyomi": [
-          "むく.いる"
+          "くる.しい",
+          "-ぐる.しい",
+          "くる.しむ",
+          "くる.しめる",
+          "にが.い",
+          "にが.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
+        "vi": "Ghi nhớ 苦 qua Hán-Việt Khổ.",
+        "en": "suffering; trial; worry"
       },
       "decomposition": {
-        "hanViet": "Báo",
-        "structure": "standalone",
+        "hanViet": "Khổ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Kho",
+        "meaningViNoAccent": "Dang Tms Sf Ee",
+        "meaningEnNoAccent": "suffering; trial; worry"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Khổ (Đắng Tms Sf Ee)",
+        "onyomi": "ク",
+        "kunyomi": "くる.しい, -ぐる.しい, くる.しむ, くる.しめる, にが.い, にが.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k006",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "受",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Thụ",
+        "meaningVi": "nhận; tiếp nhận; chịu",
+        "meaningViDisplay": "Thụ (nhận; tiếp nhận; chịu)",
+        "meaningEn": "receive, accept, undergo"
+      },
+      "readings": {
+        "onyomi": [
+          "ジュ"
+        ],
+        "kunyomi": [
+          "う.ける",
+          "-う.け",
+          "う.かる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "受 means to receive, accept, or undergo; in 受取 it marks the receiving side."
+      },
+      "decomposition": {
+        "hanViet": "Thụ",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "放",
-          "聞",
-          "記",
-          "誌"
+          "取",
+          "承",
+          "授",
+          "渡"
         ]
       },
       "search": {
-        "hanVietNoAccent": "bao",
-        "meaningViNoAccent": "bao cao; tin tuc; bao dap",
-        "meaningEnNoAccent": "report, news"
+        "hanVietNoAccent": "Thu",
+        "meaningViNoAccent": "nhan; tiep nhan; chiu",
+        "meaningEnNoAccent": "receive, accept, undergo"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l09_v005",
-          "sourceSenseId": "n3_l09_s005",
+          "word": "受取",
+          "reading": "うけとり",
+          "meaning": "biên nhận; việc nhận hàng",
+          "meaningEn": "receipt"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thụ (nhận; tiếp nhận; chịu)",
+        "onyomi": "ジュ",
+        "kunyomi": "う.ける, -う.け, う.かる"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k007",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "河",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Hà",
+        "meaningVi": "sông; dòng sông",
+        "meaningViDisplay": "Hà (sông; dòng sông)",
+        "meaningEn": "river"
+      },
+      "readings": {
+        "onyomi": [
+          "カ"
+        ],
+        "kunyomi": [
+          "かわ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "河 là sông; 運河 là dòng nước đào để vận chuyển, tức kênh đào.",
+        "en": "河 means river; 運河 is a constructed waterway for transport, a canal."
+      },
+      "decomposition": {
+        "hanViet": "Hà",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "川",
+          "江",
+          "海",
+          "運"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ha",
+        "meaningViNoAccent": "song; dong song",
+        "meaningEnNoAccent": "river"
+      },
+      "examples": [
+        {
+          "word": "運河",
+          "reading": "うんが",
+          "meaning": "kênh đào; đường thủy",
+          "meaningEn": "canal, waterway"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Hà (sông; dòng sông)",
+        "onyomi": "カ",
+        "kunyomi": "かわ"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k008",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "供",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Cung",
+        "meaningVi": "submit; offer; present",
+        "meaningViDisplay": "Cung (submit; offer; present)",
+        "meaningEn": "submit; offer; present"
+      },
+      "readings": {
+        "onyomi": [
+          "キョウ",
+          "ク",
+          "クウ",
+          "グ"
+        ],
+        "kunyomi": [
+          "そな.える",
+          "とも",
+          "-ども"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 供 qua Hán-Việt Cung.",
+        "en": "submit; offer; present"
+      },
+      "decomposition": {
+        "hanViet": "Cung",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cung",
+        "meaningViNoAccent": "submit; offer; present",
+        "meaningEnNoAccent": "submit; offer; present"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cung (submit; offer; present)",
+        "onyomi": "キョウ, ク, クウ, グ",
+        "kunyomi": "そな.える, とも, -ども"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k009",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "呼",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Hô",
+        "meaningVi": "gọi; hô lên; mời gọi",
+        "meaningViDisplay": "Hô (gọi; hô lên; mời gọi)",
+        "meaningEn": "call, call out to, invite"
+      },
+      "readings": {
+        "onyomi": [
+          "コ"
+        ],
+        "kunyomi": [
+          "よ.ぶ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "呼 là gọi hoặc hô lên; trong 嗚呼, chữ này dùng theo âm trong một từ cảm thán.",
+        "en": "呼 means to call; in 嗚呼 it is used phonetically in an exclamation."
+      },
+      "decomposition": {
+        "hanViet": "Hô",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "嗚",
+          "叫",
+          "吸",
+          "名"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ho",
+        "meaningViNoAccent": "goi; ho len; moi goi",
+        "meaningEnNoAccent": "call, call out to, invite"
+      },
+      "examples": [
+        {
+          "word": "嗚呼",
+          "reading": "ああ",
+          "meaning": "ôi; chao ôi; than ôi",
+          "meaningEn": "Ah!, Oh!, Alas!"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Hô (gọi; hô lên; mời gọi)",
+        "onyomi": "コ",
+        "kunyomi": "よ.ぶ"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k010",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "例",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Lệ",
+        "meaningVi": "example; custom; usage",
+        "meaningViDisplay": "Lệ (example; custom; usage)",
+        "meaningEn": "example; custom; usage"
+      },
+      "readings": {
+        "onyomi": [
+          "レイ"
+        ],
+        "kunyomi": [
+          "たと.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "example; custom; usage"
+      },
+      "decomposition": {
+        "hanViet": "Lệ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Le",
+        "meaningViNoAccent": "example; custom; usage",
+        "meaningEnNoAccent": "example; custom; usage"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lệ (example; custom; usage)",
+        "onyomi": "レイ",
+        "kunyomi": "たと.える"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k011",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "果",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Quả",
+        "meaningVi": "fruit; reward; carry out",
+        "meaningViDisplay": "Quả (fruit; reward; carry out)",
+        "meaningEn": "fruit; reward; carry out"
+      },
+      "readings": {
+        "onyomi": [
+          "カ"
+        ],
+        "kunyomi": [
+          "は.たす",
+          "はた.す",
+          "-は.たす",
+          "は.てる",
+          "-は.てる",
+          "は.て"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 果 qua Hán-Việt Quả.",
+        "en": "fruit; reward; carry out"
+      },
+      "decomposition": {
+        "hanViet": "Quả",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Qua",
+        "meaningViNoAccent": "fruit; reward; carry out",
+        "meaningEnNoAccent": "fruit; reward; carry out"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Quả (fruit; reward; carry out)",
+        "onyomi": "カ",
+        "kunyomi": "は.たす, はた.す, -は.たす, は.てる, -は.てる, は.て"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l09_k012",
+      "lessonId": 9,
+      "level": "N3",
+      "character": "実",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Thực",
+        "meaningVi": "sự thật, quả",
+        "meaningViDisplay": "Thực (sự thật, quả)",
+        "meaningEn": "Truth, Reality"
+      },
+      "readings": {
+        "onyomi": [
+          "ジツ",
+          "シツ"
+        ],
+        "kunyomi": [
+          "み",
+          "みの.る",
+          "まこと",
+          "みの",
+          "みち.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dưới mái nhà (Miên 宀) ngập tràn tiền bạc (Bối 貝) là thỰC tế giàu có.",
+        "en": "Wealth (貝) under a roof (宀) is REALITY."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "宀",
+          "大",
+          "二"
+        ],
+        "componentNames": [
+          "Miên (mái nhà)",
+          "Đại biến thể (to lớn)",
+          "Nhị (hai)"
+        ],
+        "relatedKanji": [
+          "安",
+          "確"
+        ],
+        "hanViet": "Thực"
+      },
+      "search": {
+        "hanVietNoAccent": "Thuc",
+        "meaningViNoAccent": "su that, qua",
+        "meaningEnNoAccent": "Truth, Reality"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l19_v022",
+          "sourceSenseId": "n5_l19_s022",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l09_v008",
-          "sourceSenseId": "n3_l09_s008",
+          "sourceVocabId": "n4_l47_v012",
+          "sourceSenseId": "n4_l47_s012",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Báo (báo cáo; tin tức; báo đáp)",
-        "onyomi": "ホウ",
-        "kunyomi": "むく.いる"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
-    },
-    {
-      "kanjiId": "n3_l09_k007",
-      "lessonId": 9,
-      "level": "N3",
-      "character": "記",
-      "strokeCount": 10,
-      "labels": {
-        "hanViet": "Kí",
-        "meaningVi": "ghi chép; bài viết",
-        "meaningViDisplay": "Kí (ghi chép; bài viết)",
-        "meaningEn": "scribe, account"
-      },
-      "readings": {
-        "onyomi": [
-          "キ"
-        ],
-        "kunyomi": [
-          "しる.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
-      },
-      "decomposition": {
-        "hanViet": "Kí",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "誌",
-          "報",
-          "録",
-          "文"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "ki",
-        "meaningViNoAccent": "ghi chep; bai viet",
-        "meaningEnNoAccent": "scribe, account"
-      },
-      "examples": [
+        },
         {
-          "sourceVocabId": "n3_l09_v006",
-          "sourceSenseId": "n3_l09_s006",
+          "sourceVocabId": "n5_l19_v032",
+          "sourceSenseId": "n5_l19_s032",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -464,86 +733,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Kí (ghi chép; bài viết)",
-        "onyomi": "キ",
-        "kunyomi": "しる.す"
+        "meaning": "Thực (sự thật, quả)",
+        "onyomi": "ジツ, シツ",
+        "kunyomi": "み, みの.る, まこと, みの, みち.る"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
-    },
-    {
-      "kanjiId": "n3_l09_k008",
-      "lessonId": 9,
-      "level": "N3",
-      "character": "論",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Luận",
-        "meaningVi": "bàn luận; lập luận",
-        "meaningViDisplay": "Luận (bàn luận; lập luận)",
-        "meaningEn": "argument, discourse"
-      },
-      "readings": {
-        "onyomi": [
-          "ロン"
-        ],
-        "kunyomi": [
-          "あげつら.う"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
-        "en": "Core kanji for QUARTET 9: Media and information."
-      },
-      "decomposition": {
-        "hanViet": "Luận",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "議",
-          "文",
-          "話",
-          "記"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "luan",
-        "meaningViNoAccent": "ban luan; lap luan",
-        "meaningEnNoAccent": "argument, discourse"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l09_v012",
-          "sourceSenseId": "n3_l09_s012",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Luận (bàn luận; lập luận)",
-        "onyomi": "ロン",
-        "kunyomi": "あげつら.う"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 9,
-        "themeEn": "Media and information",
-        "themeVi": "Truyền thông và thông tin"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

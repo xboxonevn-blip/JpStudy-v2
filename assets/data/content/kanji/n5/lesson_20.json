@@ -1,145 +1,315 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 20,
-  "entryCount": 3,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l20_k001",
+      "kanjiId": "n5_canonical_l20_k001",
       "lessonId": 20,
       "level": "N5",
-      "character": "止",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Chỉ",
-        "meaningVi": "dừng",
-        "meaningViDisplay": "Chỉ (dừng)",
-        "meaningEn": "Stop"
-      },
-      "readings": {
-        "onyomi": [
-          "SHI"
-        ],
-        "kunyomi": [
-          "to-maru",
-          "to-meru"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Bàn chân dẫm xuống đất để DỪng lại.",
-        "en": "A foot flat on the ground to STOP."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "歩",
-          "走",
-          "足",
-          "正"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "chi",
-        "meaningViNoAccent": "dung",
-        "meaningEnNoAccent": "stop"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l20_v035",
-          "sourceSenseId": "n5_l20_s035",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l32_v064",
-          "sourceSenseId": "n4_l32_s064",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l14_v007",
-          "sourceSenseId": "n5_l14_s007",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Chỉ (dừng)",
-        "onyomi": "SHI",
-        "kunyomi": "to-maru, to-meru"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l20_k002",
-      "lessonId": 20,
-      "level": "N5",
-      "character": "雨",
+      "character": "明",
       "strokeCount": 8,
       "labels": {
-        "hanViet": "Vũ",
-        "meaningVi": "mưa",
-        "meaningViDisplay": "Vũ (mưa)",
-        "meaningEn": "Rain"
+        "hanViet": "Minh",
+        "meaningVi": "sáng",
+        "meaningViDisplay": "Minh (sáng)",
+        "meaningEn": "Bright"
       },
       "readings": {
         "onyomi": [
-          "U"
+          "メイ",
+          "ミョウ",
+          "ミン"
         ],
         "kunyomi": [
-          "ame"
+          "あ.かり",
+          "あか.るい",
+          "あか.るむ",
+          "あか.らむ",
+          "あき.らか",
+          "あ.ける",
+          "-あ.け",
+          "あ.く",
+          "あ.くる",
+          "あ.かす"
         ]
       },
       "mnemonic": {
-        "vi": "Bầu trời với những giọt MƯA rơi xuống.",
-        "en": "Clouds with rain drops falling."
+        "vi": "Mặt trời (Nhật 日) và Mặt trăng (Nguyệt 月) cùng chiếu Sáng.",
+        "en": "The sun (日) and the moon (月) together are BRIGHT."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "日",
+          "月"
+        ],
+        "componentNames": [
+          "Nhật (mặt trời)",
+          "Nguyệt (mặt trăng)"
+        ],
+        "relatedKanji": [
+          "日",
+          "月",
+          "朝"
+        ],
+        "hanViet": "Minh"
+      },
+      "search": {
+        "hanVietNoAccent": "Minh",
+        "meaningViNoAccent": "sang",
+        "meaningEnNoAccent": "Bright"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l15_v036",
+          "sourceSenseId": "n5_l15_s036",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l16_v071",
+          "sourceSenseId": "n5_l16_s071",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l24_v007",
+          "sourceSenseId": "n5_l24_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Minh (sáng)",
+        "onyomi": "メイ, ミョウ, ミン",
+        "kunyomi": "あ.かり, あか.るい, あか.るむ, あか.らむ, あき.らか, あ.ける, -あ.け, あ.く, あ.くる, あ.かす"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l20_k002",
+      "lessonId": 20,
+      "level": "N5",
+      "character": "東",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Đông",
+        "meaningVi": "phía đông; miền Đông",
+        "meaningViDisplay": "Đông (phía đông; miền Đông)",
+        "meaningEn": "east"
+      },
+      "readings": {
+        "onyomi": [
+          "トウ"
+        ],
+        "kunyomi": [
+          "ひがし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biển tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "東 means east; the older reading あずま can refer to Eastern Japan."
+      },
+      "decomposition": {
+        "hanViet": "Đông",
+        "structure": "single",
+        "components": [
+          "木",
+          "日"
+        ],
+        "componentNames": [
+          "cây",
+          "mặt trời"
+        ],
+        "relatedKanji": [
+          "西",
+          "南",
+          "北",
+          "京"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "phia dong; mien Dong",
+        "meaningEnNoAccent": "east"
+      },
+      "examples": [
+        {
+          "word": "東",
+          "reading": "あずま",
+          "meaning": "phía đông; phía đông Nhật Bản",
+          "meaningEn": "east; Eastern Japan"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đông (phía đông; miền Đông)",
+        "onyomi": "トウ",
+        "kunyomi": "ひがし"
+      }
+    },
+    {
+      "kanjiId": "n5_canonical_l20_k003",
+      "lessonId": 20,
+      "level": "N5",
+      "character": "物",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Vật",
+        "meaningVi": "vật; đồ vật; sự vật",
+        "meaningViDisplay": "Vật (vật; đồ vật; sự vật)",
+        "meaningEn": "thing, object, matter"
+      },
+      "readings": {
+        "onyomi": [
+          "ブツ",
+          "モツ"
+        ],
+        "kunyomi": [
+          "もの",
+          "もの-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "物 là đồ vật hoặc sự vật; trong 編物, nó chỉ một món đồ được đan.",
+        "en": "物 means thing or object; in 編物 it is the knitted object."
+      },
+      "decomposition": {
+        "hanViet": "Vật",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "編",
+          "品",
+          "事",
+          "者"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vat",
+        "meaningViNoAccent": "vat; do vat; su vat",
+        "meaningEnNoAccent": "thing, object, matter"
+      },
+      "examples": [
+        {
+          "word": "編物",
+          "reading": "あみもの",
+          "meaning": "đồ đan; việc đan",
+          "meaningEn": "knitting, knitted work"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Vật (vật; đồ vật; sự vật)",
+        "onyomi": "ブツ, モツ",
+        "kunyomi": "もの, もの-"
+      }
+    },
+    {
+      "kanjiId": "n5_canonical_l20_k004",
+      "lessonId": 20,
+      "level": "N5",
+      "character": "長",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Trường",
+        "meaningVi": "dài",
+        "meaningViDisplay": "Trường (dài)",
+        "meaningEn": "Long"
+      },
+      "readings": {
+        "onyomi": [
+          "チョウ"
+        ],
+        "kunyomi": [
+          "なが.い",
+          "おさ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người có mái tóc DÀI làm thủ lĩnh.",
+        "en": "Long hair representing a leader."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "雪",
-          "雲"
-        ]
+          "短",
+          "張"
+        ],
+        "hanViet": "Trường"
       },
       "search": {
-        "hanVietNoAccent": "vu",
-        "meaningViNoAccent": "mua",
-        "meaningEnNoAccent": "rain"
+        "hanVietNoAccent": "Truong",
+        "meaningViNoAccent": "dai",
+        "meaningEnNoAccent": "Long"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l14_v042",
-          "sourceSenseId": "n5_l14_s042",
+          "sourceVocabId": "n5_l15_v041",
+          "sourceSenseId": "n5_l15_s041",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l20_v036",
-          "sourceSenseId": "n5_l20_s036",
+          "sourceVocabId": "n5_l18_v018",
+          "sourceSenseId": "n5_l18_s018",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l12_v023",
-          "sourceSenseId": "n5_l12_s023",
+          "sourceVocabId": "n5_l18_v019",
+          "sourceSenseId": "n5_l18_s019",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -147,86 +317,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Vũ (mưa)",
-        "onyomi": "U",
-        "kunyomi": "ame"
+        "meaning": "Trường (dài)",
+        "onyomi": "チョウ",
+        "kunyomi": "なが.い, おさ"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l20_k003",
-      "lessonId": 20,
-      "level": "N5",
-      "character": "雪",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Tuyết",
-        "meaningVi": "tuyết",
-        "meaningViDisplay": "Tuyết (tuyết)",
-        "meaningEn": "Snow"
-      },
-      "readings": {
-        "onyomi": [
-          "SETSU"
-        ],
-        "kunyomi": [
-          "yuki"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Mưa (Vũ 雨) rơi xuống rồi tan (Kệ 彐) tạo thành tuyẾT.",
-        "en": "Rain (雨) falling and staying on the ground as SNOW."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "雨",
-          "彐"
-        ],
-        "componentNames": [
-          "Vũ (mưa)",
-          "Kệ (tay nhỏ)"
-        ],
-        "relatedKanji": [
-          "雨"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tuyet",
-        "meaningViNoAccent": "tuyet",
-        "meaningEnNoAccent": "snow"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l12_v024",
-          "sourceSenseId": "n5_l12_s024",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l20_v037",
-          "sourceSenseId": "n5_l20_s037",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Tuyết (tuyết)",
-        "onyomi": "SETSU",
-        "kunyomi": "yuki"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

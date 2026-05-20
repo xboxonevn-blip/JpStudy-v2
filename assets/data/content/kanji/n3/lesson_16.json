@@ -1,57 +1,222 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 16,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l16_k001",
+      "kanjiId": "n3_canonical_l16_k001",
       "lessonId": 16,
       "level": "N3",
-      "character": "試",
-      "strokeCount": 13,
+      "character": "許",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Thí",
-        "meaningVi": "thử; kiểm tra; thi đấu",
-        "meaningViDisplay": "Thí (thử; kiểm tra; thi đấu)",
-        "meaningEn": "test, try"
+        "hanViet": "Hứa",
+        "meaningVi": "permit; approve; autorisation",
+        "meaningViDisplay": "Hứa (permit; approve; autorisation)",
+        "meaningEn": "permit; approve; autorisation"
       },
       "readings": {
         "onyomi": [
-          "シ"
+          "キョ"
         ],
         "kunyomi": [
-          "こころ.みる",
-          "ため.す"
+          "ゆる.す",
+          "もと"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "permit; approve; autorisation"
       },
       "decomposition": {
-        "hanViet": "Thí",
+        "hanViet": "Hứa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hua",
+        "meaningViNoAccent": "permit; approve; autorisation",
+        "meaningEnNoAccent": "permit; approve; autorisation"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hứa (permit; approve; autorisation)",
+        "onyomi": "キョ",
+        "kunyomi": "ゆる.す, もと"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k002",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "断",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Đoán",
+        "meaningVi": "Đoạn Tuyệt A Ee",
+        "meaningViDisplay": "Đoán (Đoạn Tuyệt A Ee)",
+        "meaningEn": "severance; decline; refuse"
+      },
+      "readings": {
+        "onyomi": [
+          "ダン"
+        ],
+        "kunyomi": [
+          "た.つ",
+          "ことわ.る",
+          "さだ.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 断 qua Hán-Việt Đoán.",
+        "en": "severance; decline; refuse"
+      },
+      "decomposition": {
+        "hanViet": "Đoán",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Doan",
+        "meaningViNoAccent": "Doan Tuyet A Ee",
+        "meaningEnNoAccent": "severance; decline; refuse"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đoán (Đoạn Tuyệt A Ee)",
+        "onyomi": "ダン",
+        "kunyomi": "た.つ, ことわ.る, さだ.める"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k003",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "欲",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Dục",
+        "meaningVi": "longing; covetousness; greed",
+        "meaningViDisplay": "Dục (longing; covetousness; greed)",
+        "meaningEn": "longing; covetousness; greed"
+      },
+      "readings": {
+        "onyomi": [
+          "ヨク"
+        ],
+        "kunyomi": [
+          "ほっ.する",
+          "ほ.しい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "longing; covetousness; greed"
+      },
+      "decomposition": {
+        "hanViet": "Dục",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Duc",
+        "meaningViNoAccent": "longing; covetousness; greed",
+        "meaningEnNoAccent": "longing; covetousness; greed"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Dục (longing; covetousness; greed)",
+        "onyomi": "ヨク",
+        "kunyomi": "ほっ.する, ほ.しい"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k004",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "規",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Quy",
+        "meaningVi": "quy tắc; chuẩn mực; phép đo",
+        "meaningViDisplay": "Quy (quy tắc; chuẩn mực; phép đo)",
+        "meaningEn": "standard, measure"
+      },
+      "readings": {
+        "onyomi": [
+          "キ"
+        ],
+        "kunyomi": [
+          "ノ",
+          "の",
+          "っ",
+          "と",
+          "る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 18: Law, rules and society."
+      },
+      "decomposition": {
+        "hanViet": "Quy",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "験",
-          "合",
-          "問",
-          "受"
+          "則",
+          "法",
+          "律",
+          "制"
         ]
       },
       "search": {
-        "hanVietNoAccent": "thi",
-        "meaningViNoAccent": "thu; kiem tra; thi dau",
-        "meaningEnNoAccent": "test, try"
+        "hanVietNoAccent": "Quy",
+        "meaningViNoAccent": "quy tac; chuan muc; phep do",
+        "meaningEnNoAccent": "standard, measure"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l16_v001",
-          "sourceSenseId": "n3_l16_s001",
+          "sourceVocabId": "n3_l18_v002",
+          "sourceSenseId": "n3_l18_s002",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -59,83 +224,532 @@
         }
       ],
       "legacy": {
-        "meaning": "Thí (thử; kiểm tra; thi đấu)",
-        "onyomi": "シ",
-        "kunyomi": "こころ.みる, ため.す"
+        "meaning": "Quy (quy tắc; chuẩn mực; phép đo)",
+        "onyomi": "キ",
+        "kunyomi": "ノ, の, っ, と, る"
+      },
+      "theme": {
+        "quartetLesson": 18,
+        "themeEn": "Law, rules and society",
+        "themeVi": "Luật pháp, quy tắc và xã hội"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l16_k002",
+      "kanjiId": "n3_canonical_l16_k005",
       "lessonId": 16,
       "level": "N3",
-      "character": "勝",
-      "strokeCount": 12,
+      "character": "産",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Thắng",
-        "meaningVi": "thắng lợi; chiến thắng; vượt trội",
-        "meaningViDisplay": "Thắng (thắng lợi; chiến thắng; vượt trội)",
-        "meaningEn": "victory, win"
+        "hanViet": "Sản",
+        "meaningVi": "products; bear; give birth",
+        "meaningViDisplay": "Sản (products; bear; give birth)",
+        "meaningEn": "products; bear; give birth"
       },
       "readings": {
         "onyomi": [
-          "ショウ"
+          "サン"
         ],
         "kunyomi": [
-          "か.つ",
-          "-が.ち",
-          "まさ.る",
-          "すぐ.れる"
+          "う.む",
+          "う.まれる",
+          "うぶ-",
+          "む.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
+        "vi": "Ghi nhớ 産 qua Hán-Việt Sản.",
+        "en": "products; bear; give birth"
       },
       "decomposition": {
-        "hanViet": "Thắng",
+        "hanViet": "Sản",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "San",
+        "meaningViNoAccent": "products; bear; give birth",
+        "meaningEnNoAccent": "products; bear; give birth"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Sản (products; bear; give birth)",
+        "onyomi": "サン",
+        "kunyomi": "う.む, う.まれる, うぶ-, む.す"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k006",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "副",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Phó",
+        "meaningVi": "vice-; assistant; aide",
+        "meaningViDisplay": "Phó (vice-; assistant; aide)",
+        "meaningEn": "vice-; assistant; aide"
+      },
+      "readings": {
+        "onyomi": [
+          "フク"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "vice-; assistant; aide"
+      },
+      "decomposition": {
+        "hanViet": "Phó",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Pho",
+        "meaningViNoAccent": "vice-; assistant; aide",
+        "meaningEnNoAccent": "vice-; assistant; aide"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phó (vice-; assistant; aide)",
+        "onyomi": "フク",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k007",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "捨",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Xả",
+        "meaningVi": "Thu Thập Taye",
+        "meaningViDisplay": "Xả (Thu Thập Taye)",
+        "meaningEn": "discard; throw away; abandon"
+      },
+      "readings": {
+        "onyomi": [
+          "シャ"
+        ],
+        "kunyomi": [
+          "す.てる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 捨 qua Hán-Việt Xả.",
+        "en": "discard; throw away; abandon"
+      },
+      "decomposition": {
+        "hanViet": "Xả",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Xa",
+        "meaningViNoAccent": "Thu Thap Taye",
+        "meaningEnNoAccent": "discard; throw away; abandon"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Xả (Thu Thập Taye)",
+        "onyomi": "シャ",
+        "kunyomi": "す.てる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k008",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "険",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Hiểm",
+        "meaningVi": "precipitous; inaccessible place; impregnable position",
+        "meaningViDisplay": "Hiểm (precipitous; inaccessible place; impregnable position)",
+        "meaningEn": "precipitous; inaccessible place; impregnable position"
+      },
+      "readings": {
+        "onyomi": [
+          "ケン"
+        ],
+        "kunyomi": [
+          "けわ.しい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "precipitous; inaccessible place; impregnable position"
+      },
+      "decomposition": {
+        "hanViet": "Hiểm",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hiem",
+        "meaningViNoAccent": "precipitous; inaccessible place; impregnable position",
+        "meaningEnNoAccent": "precipitous; inaccessible place; impregnable position"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hiểm (precipitous; inaccessible place; impregnable position)",
+        "onyomi": "ケン",
+        "kunyomi": "けわ.しい"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k009",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "転",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Chuyển",
+        "meaningVi": "xoay; chuyển đổi; chuyển chỗ",
+        "meaningViDisplay": "Chuyển (xoay; chuyển đổi; chuyển chỗ)",
+        "meaningEn": "turn, revolve, change, transfer"
+      },
+      "readings": {
+        "onyomi": [
+          "テン"
+        ],
+        "kunyomi": [
+          "ころ.がる",
+          "ころ.げる",
+          "ころ.がす",
+          "ころ.ぶ",
+          "まろ.ぶ",
+          "うたた",
+          "うつ.る",
+          "くる.めく"
+        ]
+      },
+      "mnemonic": {
+        "vi": "転 có trục nghĩa xoay, lăn rồi chuyển đổi; trong 移転, nó nhấn mạnh sự chuyển sang chỗ khác.",
+        "en": "転 centers on turning or rolling, then extends to change or transfer; in 移転 it marks relocation."
+      },
+      "decomposition": {
+        "hanViet": "Chuyển",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "車",
+          "移",
+          "回",
+          "変"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Chuyen",
+        "meaningViNoAccent": "xoay; chuyen doi; chuyen cho",
+        "meaningEnNoAccent": "turn, revolve, change, transfer"
+      },
+      "examples": [
+        {
+          "word": "移転",
+          "reading": "いてん",
+          "meaning": "chuyển địa điểm; chuyển giao; chuyển đi",
+          "meaningEn": "relocation, transfer"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Chuyển (xoay; chuyển đổi; chuyển chỗ)",
+        "onyomi": "テン",
+        "kunyomi": "ころ.がる, ころ.げる, ころ.がす, ころ.ぶ, まろ.ぶ, うたた, うつ.る, くる.めく"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k010",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "情",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Tình",
+        "meaningVi": "tình cảm; cảm xúc; hoàn cảnh",
+        "meaningViDisplay": "Tình (tình cảm; cảm xúc; hoàn cảnh)",
+        "meaningEn": "feelings, emotion"
+      },
+      "readings": {
+        "onyomi": [
+          "ジョウ",
+          "セイ"
+        ],
+        "kunyomi": [
+          "なさ.け"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 20: Emotions and psychology."
+      },
+      "decomposition": {
+        "hanViet": "Tình",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "負",
-          "敗",
-          "優",
-          "戦"
+          "感",
+          "心",
+          "怒",
+          "悲"
         ]
       },
       "search": {
-        "hanVietNoAccent": "thang",
-        "meaningViNoAccent": "thang loi; chien thang; vuot troi",
-        "meaningEnNoAccent": "victory, win"
+        "hanVietNoAccent": "Tinh",
+        "meaningViNoAccent": "tinh cam; cam xuc; hoan canh",
+        "meaningEnNoAccent": "feelings, emotion"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l16_v002",
-          "sourceSenseId": "n3_l16_s002",
+          "sourceVocabId": "n3_l20_v001",
+          "sourceSenseId": "n3_l20_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tình (tình cảm; cảm xúc; hoàn cảnh)",
+        "onyomi": "ジョウ, セイ",
+        "kunyomi": "なさ.け"
+      },
+      "theme": {
+        "quartetLesson": 20,
+        "themeEn": "Emotions and psychology",
+        "themeVi": "Cảm xúc và tâm lý"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k011",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "球",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Cầu",
+        "meaningVi": "ball; sphere; balle",
+        "meaningViDisplay": "Cầu (ball; sphere; balle)",
+        "meaningEn": "ball; sphere; balle"
+      },
+      "readings": {
+        "onyomi": [
+          "キュウ"
+        ],
+        "kunyomi": [
+          "たま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "ball; sphere; balle"
+      },
+      "decomposition": {
+        "hanViet": "Cầu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cau",
+        "meaningViNoAccent": "ball; sphere; balle",
+        "meaningEnNoAccent": "ball; sphere; balle"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cầu (ball; sphere; balle)",
+        "onyomi": "キュウ",
+        "kunyomi": "たま"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k012",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "救",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Cứu",
+        "meaningVi": "Cấp Cứu",
+        "meaningViDisplay": "Cứu (Cấp Cứu)",
+        "meaningEn": "salvation; save; help"
+      },
+      "readings": {
+        "onyomi": [
+          "キュウ"
+        ],
+        "kunyomi": [
+          "すく.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 救 qua Hán-Việt Cứu.",
+        "en": "salvation; save; help"
+      },
+      "decomposition": {
+        "hanViet": "Cứu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cuu",
+        "meaningViNoAccent": "Cap Cuu",
+        "meaningEnNoAccent": "salvation; save; help"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cứu (Cấp Cứu)",
+        "onyomi": "キュウ",
+        "kunyomi": "すく.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l16_k013",
+      "lessonId": 16,
+      "level": "N3",
+      "character": "袋",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Đại",
+        "meaningVi": "cái túi",
+        "meaningViDisplay": "Đại (cái túi)",
+        "meaningEn": "Bag, Sack"
+      },
+      "readings": {
+        "onyomi": [
+          "タイ",
+          "ダイ"
+        ],
+        "kunyomi": [
+          "ふくろ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Quần áo (Y 衣) được đựng trong cái TÚI (Đại 代).",
+        "en": "Clothing (衣) inside a BAG."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "代",
+          "衣"
+        ],
+        "componentNames": [
+          "Đại (thay thế)",
+          "Y (áo)"
+        ],
+        "relatedKanji": [
+          "代"
+        ],
+        "hanViet": "Đại"
+      },
+      "search": {
+        "hanVietNoAccent": "Dai",
+        "meaningViNoAccent": "cai tui",
+        "meaningEnNoAccent": "Bag, Sack"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l29_v022",
+          "sourceSenseId": "n4_l29_s022",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l16_v005",
-          "sourceSenseId": "n3_l16_s005",
+          "sourceVocabId": "n4_l41_v024",
+          "sourceSenseId": "n4_l41_s024",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l16_v006",
-          "sourceSenseId": "n3_l16_s006",
+          "sourceVocabId": "n4_l42_v027",
+          "sourceSenseId": "n4_l42_s027",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -143,423 +757,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Thắng (thắng lợi; chiến thắng; vượt trội)",
-        "onyomi": "ショウ",
-        "kunyomi": "か.つ, -が.ち, まさ.る, すぐ.れる"
+        "meaning": "Đại (cái túi)",
+        "onyomi": "タイ, ダイ",
+        "kunyomi": "ふくろ"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
-    },
-    {
-      "kanjiId": "n3_l16_k003",
-      "lessonId": 16,
-      "level": "N3",
-      "character": "負",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Phụ",
-        "meaningVi": "thua; mang; chịu trách nhiệm",
-        "meaningViDisplay": "Phụ (thua; mang; chịu trách nhiệm)",
-        "meaningEn": "defeat, negative"
-      },
-      "readings": {
-        "onyomi": [
-          "フ"
-        ],
-        "kunyomi": [
-          "ま.ける",
-          "ま.かす",
-          "お.う"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
-      },
-      "decomposition": {
-        "hanViet": "Phụ",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "勝",
-          "敗",
-          "責",
-          "借"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "phu",
-        "meaningViNoAccent": "thua; mang; chiu trach nhiem",
-        "meaningEnNoAccent": "defeat, negative"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l16_v002",
-          "sourceSenseId": "n3_l16_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Phụ (thua; mang; chịu trách nhiệm)",
-        "onyomi": "フ",
-        "kunyomi": "ま.ける, ま.かす, お.う"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
-    },
-    {
-      "kanjiId": "n3_l16_k004",
-      "lessonId": 16,
-      "level": "N3",
-      "character": "選",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Tuyển",
-        "meaningVi": "lựa chọn; tuyển chọn; bầu chọn",
-        "meaningViDisplay": "Tuyển (lựa chọn; tuyển chọn; bầu chọn)",
-        "meaningEn": "elect, select"
-      },
-      "readings": {
-        "onyomi": [
-          "セン"
-        ],
-        "kunyomi": [
-          "えら.ぶ",
-          "え.る",
-          "よ.る"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
-      },
-      "decomposition": {
-        "hanViet": "Tuyển",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "試",
-          "勝",
-          "優",
-          "決"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tuyen",
-        "meaningViNoAccent": "lua chon; tuyen chon; bau chon",
-        "meaningEnNoAccent": "elect, select"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l16_v003",
-          "sourceSenseId": "n3_l16_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tuyển (lựa chọn; tuyển chọn; bầu chọn)",
-        "onyomi": "セン",
-        "kunyomi": "えら.ぶ, え.る, よ.る"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
-    },
-    {
-      "kanjiId": "n3_l16_k005",
-      "lessonId": 16,
-      "level": "N3",
-      "character": "練",
-      "strokeCount": 14,
-      "labels": {
-        "hanViet": "Luyện",
-        "meaningVi": "luyện tập; rèn luyện; trau dồi",
-        "meaningViDisplay": "Luyện (luyện tập; rèn luyện; trau dồi)",
-        "meaningEn": "practice, gloss"
-      },
-      "readings": {
-        "onyomi": [
-          "レン"
-        ],
-        "kunyomi": [
-          "ね.る",
-          "ね.り"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
-      },
-      "decomposition": {
-        "hanViet": "Luyện",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "習",
-          "技",
-          "努",
-          "力"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "luyen",
-        "meaningViNoAccent": "luyen tap; ren luyen; trau doi",
-        "meaningEnNoAccent": "practice, gloss"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l16_v004",
-          "sourceSenseId": "n3_l16_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Luyện (luyện tập; rèn luyện; trau dồi)",
-        "onyomi": "レン",
-        "kunyomi": "ね.る, ね.り"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
-    },
-    {
-      "kanjiId": "n3_l16_k006",
-      "lessonId": 16,
-      "level": "N3",
-      "character": "優",
-      "strokeCount": 17,
-      "labels": {
-        "hanViet": "Ưu",
-        "meaningVi": "ưu tú; dịu dàng; vượt trội",
-        "meaningViDisplay": "Ưu (ưu tú; dịu dàng; vượt trội)",
-        "meaningEn": "tenderness, excel"
-      },
-      "readings": {
-        "onyomi": [
-          "ユウ",
-          "ウ"
-        ],
-        "kunyomi": [
-          "やさ.しい",
-          "すぐ.れる",
-          "まさ.る"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
-      },
-      "decomposition": {
-        "hanViet": "Ưu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "勝",
-          "良",
-          "技",
-          "人"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "uu",
-        "meaningViNoAccent": "uu tu; diu dang; vuot troi",
-        "meaningEnNoAccent": "tenderness, excel"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l16_v005",
-          "sourceSenseId": "n3_l16_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Ưu (ưu tú; dịu dàng; vượt trội)",
-        "onyomi": "ユウ, ウ",
-        "kunyomi": "やさ.しい, すぐ.れる, まさ.る"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
-    },
-    {
-      "kanjiId": "n3_l16_k007",
-      "lessonId": 16,
-      "level": "N3",
-      "character": "決",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Quyết",
-        "meaningVi": "quyết định; dứt khoát; phân định",
-        "meaningViDisplay": "Quyết (quyết định; dứt khoát; phân định)",
-        "meaningEn": "decide, fix"
-      },
-      "readings": {
-        "onyomi": [
-          "ケツ"
-        ],
-        "kunyomi": [
-          "き.める",
-          "-ぎ.め",
-          "き.まる",
-          "さ.く"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
-      },
-      "decomposition": {
-        "hanViet": "Quyết",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "定",
-          "選",
-          "勝",
-          "負"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "quyet",
-        "meaningViNoAccent": "quyet dinh; dut khoat; phan dinh",
-        "meaningEnNoAccent": "decide, fix"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l16_v006",
-          "sourceSenseId": "n3_l16_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Quyết (quyết định; dứt khoát; phân định)",
-        "onyomi": "ケツ",
-        "kunyomi": "き.める, -ぎ.め, き.まる, さ.く"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
-    },
-    {
-      "kanjiId": "n3_l16_k008",
-      "lessonId": 16,
-      "level": "N3",
-      "character": "審",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Thẩm",
-        "meaningVi": "xét xử; thẩm tra; đánh giá",
-        "meaningViDisplay": "Thẩm (xét xử; thẩm tra; đánh giá)",
-        "meaningEn": "hearing, judge"
-      },
-      "readings": {
-        "onyomi": [
-          "シン"
-        ],
-        "kunyomi": [
-          "つまび.らか",
-          "つぶさ.に"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
-        "en": "Core kanji for QUARTET 16: Sports and competition."
-      },
-      "decomposition": {
-        "hanViet": "Thẩm",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "評",
-          "試",
-          "決",
-          "問"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tham",
-        "meaningViNoAccent": "xet xu; tham tra; danh gia",
-        "meaningEnNoAccent": "hearing, judge"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l16_v011",
-          "sourceSenseId": "n3_l16_s011",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thẩm (xét xử; thẩm tra; đánh giá)",
-        "onyomi": "シン",
-        "kunyomi": "つまび.らか, つぶさ.に"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 16,
-        "themeEn": "Sports and competition",
-        "themeVi": "Thể thao và thi đấu"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

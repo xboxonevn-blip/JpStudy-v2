@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 5,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l05_k001",
+      "lessonId": 5,
+      "level": "N4",
+      "character": "乍",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Sạ",
+        "meaningVi": "Làm, sáng tạo",
+        "meaningViDisplay": "Sạ (Làm, sáng tạo)",
+        "meaningEn": "though; notwithstanding; while"
+      },
+      "readings": {
+        "onyomi": [
+          "サ",
+          "サク"
+        ],
+        "kunyomi": [
+          "-なが.ら",
+          "たちま.ち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) bị Ép ( ) sáng tác ( ) 作 3",
+        "en": "though; notwithstanding; while"
+      },
+      "decomposition": {
+        "hanViet": "Sạ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Sa",
+        "meaningViNoAccent": "Lam, sang tao",
+        "meaningEnNoAccent": "though; notwithstanding; while"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Sạ (Làm, sáng tạo)",
+        "onyomi": "サ, サク",
+        "kunyomi": "-なが.ら, たちま.ち"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l05_k002",
+      "lessonId": 5,
+      "level": "N4",
+      "character": "玉",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Ngọc",
+        "meaningVi": "Viên ngọc",
+        "meaningViDisplay": "Ngọc (Viên ngọc)",
+        "meaningEn": "jewel; ball; bijoux"
+      },
+      "readings": {
+        "onyomi": [
+          "ギョク"
+        ],
+        "kunyomi": [
+          "たま",
+          "たま-",
+          "-だま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vua ( ) là chủ ( ) viên ngọc ( ) 玉 1",
+        "en": "jewel; ball; bijoux"
+      },
+      "decomposition": {
+        "hanViet": "Ngọc",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ngoc",
+        "meaningViNoAccent": "Vien ngoc",
+        "meaningEnNoAccent": "jewel; ball; bijoux"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Ngọc (Viên ngọc)",
+        "onyomi": "ギョク",
+        "kunyomi": "たま, たま-, -だま"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l05_k003",
+      "lessonId": 5,
+      "level": "N4",
+      "character": "皿",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Mãnh",
+        "meaningVi": "Cái đĩa Có một cái bánh ở trên đĩa",
+        "meaningViDisplay": "Mãnh (Cái đĩa Có một cái bánh ở trên đĩa)",
+        "meaningEn": "dish; a helping; plate"
+      },
+      "readings": {
+        "onyomi": [
+          "ベイ"
+        ],
+        "kunyomi": [
+          "さら"
+        ]
+      },
+      "mnemonic": {
+        "vi": "2 1 3 4",
+        "en": "dish; a helping; plate"
+      },
+      "decomposition": {
+        "hanViet": "Mãnh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Manh",
+        "meaningViNoAccent": "Cai dia Co mot cai banh o tren dia",
+        "meaningEnNoAccent": "dish; a helping; plate"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Mãnh (Cái đĩa Có một cái bánh ở trên đĩa)",
+        "onyomi": "ベイ",
+        "kunyomi": "さら"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l05_k004",
+      "lessonId": 5,
+      "level": "N4",
+      "character": "白",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Bạch",
+        "meaningVi": "trắng; trong sạch; rõ ràng",
+        "meaningViDisplay": "Bạch (trắng; trong sạch; rõ ràng)",
+        "meaningEn": "white, pure, bright"
+      },
+      "readings": {
+        "onyomi": [
+          "ハク",
+          "ビャク"
+        ],
+        "kunyomi": [
+          "しろ",
+          "しら-",
+          "しろ.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Sang Nhật ( ) thì trắng ( ) 1",
+        "en": "白 means white or clear; in 明白 it reinforces the sense of obvious clarity."
+      },
+      "decomposition": {
+        "hanViet": "Bạch",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "明",
+          "赤",
+          "黒",
+          "清"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bach",
+        "meaningViNoAccent": "trang; trong sach; ro rang",
+        "meaningEnNoAccent": "white, pure, bright"
+      },
+      "examples": [
+        {
+          "word": "明白",
+          "reading": "めいはく",
+          "meaning": "rõ ràng; hiển nhiên",
+          "meaningEn": "clear, obvious"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Bạch (trắng; trong sạch; rõ ràng)",
+        "onyomi": "ハク, ビャク",
+        "kunyomi": "しろ, しら-, しろ.い"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l05_k005",
+      "lessonId": 5,
+      "level": "N4",
+      "character": "主",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Chủ",
+        "meaningVi": "chủ; chính; người đứng đầu",
+        "meaningViDisplay": "Chủ (chủ; chính; người đứng đầu)",
+        "meaningEn": "master; main; host"
+      },
+      "readings": {
+        "onyomi": [
+          "シュ",
+          "ス",
+          "シュウ"
+        ],
+        "kunyomi": [
+          "ぬし",
+          "おも",
+          "あるじ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vua ( ) là chủ ( ) thiên hạ 1",
+        "en": "主 means owner or main; 家主 is a landlord or house owner."
+      },
+      "decomposition": {
+        "hanViet": "Chủ",
+        "structure": "single",
+        "components": [
+          "主"
+        ],
+        "componentNames": [
+          "chủ/người đứng đầu"
+        ],
+        "relatedKanji": [
+          "家",
+          "君",
+          "語",
+          "権"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Chu",
+        "meaningViNoAccent": "chu; chinh; nguoi dung dau",
+        "meaningEnNoAccent": "master; main; host"
+      },
+      "examples": [
+        {
+          "word": "家主",
+          "reading": "いえぬし",
+          "meaning": "chủ nhà",
+          "meaningEn": "landlord"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Chủ (chủ; chính; người đứng đầu)",
+        "onyomi": "シュ, ス, シュウ",
+        "kunyomi": "ぬし, おも, あるじ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l05_k006",
+      "lessonId": 5,
+      "level": "N4",
+      "character": "兄",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Huynh",
+        "meaningVi": "anh trai",
+        "meaningViDisplay": "Huynh (anh trai)",
+        "meaningEn": "Older brother"
+      },
+      "readings": {
+        "onyomi": [
+          "ケイ",
+          "キョウ"
+        ],
+        "kunyomi": [
+          "あに"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Anh trai ( ) miệng ( ) nói chân chạy ( ) 儿 2",
+        "en": "A person (儿) with a mouth (口) who speaks for the family as an OLDER BROTHER."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "口",
+          "儿"
+        ],
+        "componentNames": [
+          "Khẩu (miệng)",
+          "Nhi (chân người)"
+        ],
+        "relatedKanji": [
+          "弟",
+          "見"
+        ],
+        "hanViet": "Huynh"
+      },
+      "search": {
+        "hanVietNoAccent": "Huynh",
+        "meaningViNoAccent": "anh trai",
+        "meaningEnNoAccent": "Older brother"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l11_v036",
+          "sourceSenseId": "n5_l11_s036",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v035",
+          "sourceSenseId": "n5_l11_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v037",
+          "sourceSenseId": "n5_l11_s037",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Huynh (anh trai)",
+        "onyomi": "ケイ, キョウ",
+        "kunyomi": "あに"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l05_k007",
+      "lessonId": 5,
+      "level": "N4",
+      "character": "辺",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Biên",
+        "meaningVi": "Gần, xung quanh",
+        "meaningViDisplay": "Biên (Gần, xung quanh)",
+        "meaningEn": "environs; boundary; border"
+      },
+      "readings": {
+        "onyomi": [
+          "ヘン"
+        ],
+        "kunyomi": [
+          "あた.り",
+          "ほと.り",
+          "-べ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vác đao ( ) đi xa ( ) tuần tra biên giới ( )辺 3",
+        "en": "environs; boundary; border"
+      },
+      "decomposition": {
+        "hanViet": "Biên",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Bien",
+        "meaningViNoAccent": "Gan, xung quanh",
+        "meaningEnNoAccent": "environs; boundary; border"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Biên (Gần, xung quanh)",
+        "onyomi": "ヘン",
+        "kunyomi": "あた.り, ほと.り, -べ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

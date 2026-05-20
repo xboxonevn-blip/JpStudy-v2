@@ -1,525 +1,149 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 10,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l10_k001",
+      "kanjiId": "n3_canonical_l10_k001",
       "lessonId": 10,
       "level": "N3",
-      "character": "旅",
-      "strokeCount": 10,
-      "labels": {
-        "hanViet": "Lữ",
-        "meaningVi": "du lịch; chuyến đi",
-        "meaningViDisplay": "Lữ (du lịch; chuyến đi)",
-        "meaningEn": "trip, travel"
-      },
-      "readings": {
-        "onyomi": [
-          "リョ"
-        ],
-        "kunyomi": [
-          "たび"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
-      },
-      "decomposition": {
-        "hanViet": "Lữ",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "観",
-          "交",
-          "通",
-          "宿"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "lu",
-        "meaningViNoAccent": "du lich; chuyen di",
-        "meaningEnNoAccent": "trip, travel"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l10_v001",
-          "sourceSenseId": "n3_l10_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Lữ (du lịch; chuyến đi)",
-        "onyomi": "リョ",
-        "kunyomi": "たび"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
-      }
-    },
-    {
-      "kanjiId": "n3_l10_k002",
-      "lessonId": 10,
-      "level": "N3",
-      "character": "観",
-      "strokeCount": 18,
-      "labels": {
-        "hanViet": "Quan",
-        "meaningVi": "xem; quan sát; quan điểm",
-        "meaningViDisplay": "Quan (xem; quan sát; quan điểm)",
-        "meaningEn": "outlook, look"
-      },
-      "readings": {
-        "onyomi": [
-          "カン"
-        ],
-        "kunyomi": [
-          "み.る",
-          "しめ.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
-      },
-      "decomposition": {
-        "hanViet": "Quan",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "旅",
-          "光",
-          "見",
-          "景"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "quan",
-        "meaningViNoAccent": "xem; quan sat; quan diem",
-        "meaningEnNoAccent": "outlook, look"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l10_v002",
-          "sourceSenseId": "n3_l10_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Quan (xem; quan sát; quan điểm)",
-        "onyomi": "カン",
-        "kunyomi": "み.る, しめ.す"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
-      }
-    },
-    {
-      "kanjiId": "n3_l10_k003",
-      "lessonId": 10,
-      "level": "N3",
-      "character": "交",
-      "strokeCount": 6,
-      "labels": {
-        "hanViet": "Giao",
-        "meaningVi": "giao thông; giao nhau; trao đổi",
-        "meaningViDisplay": "Giao (giao thông; giao nhau; trao đổi)",
-        "meaningEn": "mingle, mixing"
-      },
-      "readings": {
-        "onyomi": [
-          "コウ"
-        ],
-        "kunyomi": [
-          "まじ.わる",
-          "まじ.える",
-          "ま.じる",
-          "まじ.る"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
-      },
-      "decomposition": {
-        "hanViet": "Giao",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "通",
-          "流",
-          "道",
-          "旅"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "giao",
-        "meaningViNoAccent": "giao thong; giao nhau; trao doi",
-        "meaningEnNoAccent": "mingle, mixing"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l10_v003",
-          "sourceSenseId": "n3_l10_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Giao (giao thông; giao nhau; trao đổi)",
-        "onyomi": "コウ",
-        "kunyomi": "まじ.わる, まじ.える, ま.じる, まじ.る"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
-      }
-    },
-    {
-      "kanjiId": "n3_l10_k004",
-      "lessonId": 10,
-      "level": "N3",
-      "character": "通",
-      "strokeCount": 10,
-      "labels": {
-        "hanViet": "Thông",
-        "meaningVi": "đi qua; giao thông; thông suốt",
-        "meaningViDisplay": "Thông (đi qua; giao thông; thông suốt)",
-        "meaningEn": "traffic, pass through"
-      },
-      "readings": {
-        "onyomi": [
-          "ツウ",
-          "ツ"
-        ],
-        "kunyomi": [
-          "とお.る",
-          "とお.り",
-          "-とお.り",
-          "-どお.り"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
-      },
-      "decomposition": {
-        "hanViet": "Thông",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "交",
-          "道",
-          "送",
-          "駅"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thong",
-        "meaningViNoAccent": "di qua; giao thong; thong suot",
-        "meaningEnNoAccent": "traffic, pass through"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l10_v003",
-          "sourceSenseId": "n3_l10_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thông (đi qua; giao thông; thông suốt)",
-        "onyomi": "ツウ, ツ",
-        "kunyomi": "とお.る, とお.り, -とお.り, -どお.り"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
-      }
-    },
-    {
-      "kanjiId": "n3_l10_k005",
-      "lessonId": 10,
-      "level": "N3",
-      "character": "予",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Dự",
-        "meaningVi": "trước; dự tính; chuẩn bị",
-        "meaningViDisplay": "Dự (trước; dự tính; chuẩn bị)",
-        "meaningEn": "beforehand, previous"
-      },
-      "readings": {
-        "onyomi": [
-          "ヨ",
-          "シャ"
-        ],
-        "kunyomi": [
-          "あらかじ.め"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
-      },
-      "decomposition": {
-        "hanViet": "Dự",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "約",
-          "定",
-          "計",
-          "前"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "du",
-        "meaningViNoAccent": "truoc; du tinh; chuan bi",
-        "meaningEnNoAccent": "beforehand, previous"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l10_v004",
-          "sourceSenseId": "n3_l10_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Dự (trước; dự tính; chuẩn bị)",
-        "onyomi": "ヨ, シャ",
-        "kunyomi": "あらかじ.め"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
-      }
-    },
-    {
-      "kanjiId": "n3_l10_k006",
-      "lessonId": 10,
-      "level": "N3",
-      "character": "約",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Ước",
-        "meaningVi": "hẹn; khoảng; rút gọn",
-        "meaningViDisplay": "Ước (hẹn; khoảng; rút gọn)",
-        "meaningEn": "promise, approximately"
-      },
-      "readings": {
-        "onyomi": [
-          "ヤク"
-        ],
-        "kunyomi": [
-          "つづ.まる",
-          "つづ.める",
-          "つづま.やか"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
-      },
-      "decomposition": {
-        "hanViet": "Ước",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "予",
-          "束",
-          "計",
-          "時"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "uoc",
-        "meaningViNoAccent": "hen; khoang; rut gon",
-        "meaningEnNoAccent": "promise, approximately"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l10_v004",
-          "sourceSenseId": "n3_l10_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Ước (hẹn; khoảng; rút gọn)",
-        "onyomi": "ヤク",
-        "kunyomi": "つづ.まる, つづ.める, つづま.やか"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
-      }
-    },
-    {
-      "kanjiId": "n3_l10_k007",
-      "lessonId": 10,
-      "level": "N3",
-      "character": "宿",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Túc",
-        "meaningVi": "nhà trọ; nghỉ lại; chỗ ở",
-        "meaningViDisplay": "Túc (nhà trọ; nghỉ lại; chỗ ở)",
-        "meaningEn": "inn, lodging"
-      },
-      "readings": {
-        "onyomi": [
-          "シュク"
-        ],
-        "kunyomi": [
-          "やど",
-          "やど.る",
-          "やど.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
-      },
-      "decomposition": {
-        "hanViet": "Túc",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "泊",
-          "旅",
-          "屋",
-          "館"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tuc",
-        "meaningViNoAccent": "nha tro; nghi lai; cho o",
-        "meaningEnNoAccent": "inn, lodging"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l10_v005",
-          "sourceSenseId": "n3_l10_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Túc (nhà trọ; nghỉ lại; chỗ ở)",
-        "onyomi": "シュク",
-        "kunyomi": "やど, やど.る, やど.す"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
-      }
-    },
-    {
-      "kanjiId": "n3_l10_k008",
-      "lessonId": 10,
-      "level": "N3",
-      "character": "泊",
+      "character": "具",
       "strokeCount": 8,
       "labels": {
-        "hanViet": "Bạc",
-        "meaningVi": "nghỉ qua đêm; lưu trú; neo đậu",
-        "meaningViDisplay": "Bạc (nghỉ qua đêm; lưu trú; neo đậu)",
-        "meaningEn": "overnight stay, put up at"
+        "hanViet": "Cụ",
+        "meaningVi": "dụng cụ; thành phần; phương tiện",
+        "meaningViDisplay": "Cụ (dụng cụ; thành phần; phương tiện)",
+        "meaningEn": "tool; utensil; means; ingredients"
       },
       "readings": {
         "onyomi": [
-          "ハク"
+          "グ"
         ],
         "kunyomi": [
-          "と.まる",
-          "と.める"
+          "そな.える",
+          "つぶさ.に"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
-        "en": "Core kanji for QUARTET 10: Travel and transportation."
+        "vi": "具 là dụng cụ hoặc thành phần; trong 雨具, chữ này chỉ đồ dùng để đi mưa.",
+        "en": "具 means tool or equipment; in 雨具 it marks rain gear."
       },
       "decomposition": {
-        "hanViet": "Bạc",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "hanViet": "Cụ",
+        "structure": "top-bottom",
+        "components": [
+          "目",
+          "八"
+        ],
+        "componentNames": [
+          "mắt",
+          "bát"
+        ],
         "relatedKanji": [
-          "宿",
-          "旅",
-          "港",
-          "夜"
+          "道",
+          "器",
+          "用",
+          "雨"
         ]
       },
       "search": {
-        "hanVietNoAccent": "bac",
-        "meaningViNoAccent": "nghi qua dem; luu tru; neo dau",
-        "meaningEnNoAccent": "overnight stay, put up at"
+        "hanVietNoAccent": "Cu",
+        "meaningViNoAccent": "dung cu; thanh phan; phuong tien",
+        "meaningEnNoAccent": "tool; utensil; means; ingredients"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l10_v005",
-          "sourceSenseId": "n3_l10_s005",
+          "word": "雨具",
+          "reading": "あまぐ",
+          "meaning": "đồ đi mưa",
+          "meaningEn": "rain gear"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Cụ (dụng cụ; thành phần; phương tiện)",
+        "onyomi": "グ",
+        "kunyomi": "そな.える, つぶさ.に"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k002",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "昔",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Tích",
+        "meaningVi": "ngày xưa",
+        "meaningViDisplay": "Tích (ngày xưa)",
+        "meaningEn": "Old times"
+      },
+      "readings": {
+        "onyomi": [
+          "セキ",
+          "シャク"
+        ],
+        "kunyomi": [
+          "むかし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Mặt trời (Nhật 日) của những ngày XƯA cũ chất chồng lên nhau.",
+        "en": "Sun (日) covering layers of time from the PAST."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "龷",
+          "日"
+        ],
+        "componentNames": [
+          "Thảo biến thể (trên)",
+          "Nhật (ngày)"
+        ],
+        "relatedKanji": [
+          "日",
+          "借"
+        ],
+        "hanViet": "Tích"
+      },
+      "search": {
+        "hanVietNoAccent": "Tich",
+        "meaningViNoAccent": "ngay xua",
+        "meaningEnNoAccent": "Old times"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l27_v016",
+          "sourceSenseId": "n4_l27_s016",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l41_v043",
+          "sourceSenseId": "n4_l41_s043",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -527,21 +151,711 @@
         }
       ],
       "legacy": {
-        "meaning": "Bạc (nghỉ qua đêm; lưu trú; neo đậu)",
-        "onyomi": "ハク",
-        "kunyomi": "と.まる, と.める"
+        "meaning": "Tích (ngày xưa)",
+        "onyomi": "セキ, シャク",
+        "kunyomi": "むかし"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 10,
-        "themeEn": "Travel and transportation",
-        "themeVi": "Du lịch và giao thông"
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k003",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "的",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Đích",
+        "meaningVi": "Mục Đích (haa",
+        "meaningViDisplay": "Đích (Mục Đích (haa)",
+        "meaningEn": "bull's eye; mark; target"
+      },
+      "readings": {
+        "onyomi": [
+          "テキ"
+        ],
+        "kunyomi": [
+          "まと"
+        ]
+      },
+      "mnemonic": {
+        "vi": "H 1 7 H _\".. yp. ます ルー + を を を を を ¥ HH!",
+        "en": "bull's eye; mark; target"
+      },
+      "decomposition": {
+        "hanViet": "Đích",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dich",
+        "meaningViNoAccent": "Muc Dich (haa",
+        "meaningEnNoAccent": "bull's eye; mark; target"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đích (Mục Đích (haa)",
+        "onyomi": "テキ",
+        "kunyomi": "まと"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k004",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "底",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Để",
+        "meaningVi": "bottom; sole; depth",
+        "meaningViDisplay": "Để (bottom; sole; depth)",
+        "meaningEn": "bottom; sole; depth"
+      },
+      "readings": {
+        "onyomi": [
+          "テイ"
+        ],
+        "kunyomi": [
+          "そこ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "bottom; sole; depth"
+      },
+      "decomposition": {
+        "hanViet": "Để",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "De",
+        "meaningViNoAccent": "bottom; sole; depth",
+        "meaningEnNoAccent": "bottom; sole; depth"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Để (bottom; sole; depth)",
+        "onyomi": "テイ",
+        "kunyomi": "そこ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k005",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "定",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Định",
+        "meaningVi": "quyết định; cố định; ổn định",
+        "meaningViDisplay": "Định (quyết định; cố định; ổn định)",
+        "meaningEn": "decide; settle; fix"
+      },
+      "readings": {
+        "onyomi": [
+          "テイ",
+          "ジョウ"
+        ],
+        "kunyomi": [
+          "さだ.める",
+          "さだ.まる",
+          "さだ.か"
+        ]
+      },
+      "mnemonic": {
+        "vi": "定 là điều đã được định rõ hoặc ổn định; 案の定 nghĩa là đúng như đã đoán.",
+        "en": "定 means fixed or settled; 案の定 means just as expected."
+      },
+      "decomposition": {
+        "hanViet": "Định",
+        "structure": "top-bottom",
+        "components": [
+          "宀",
+          "正"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "chính/đúng"
+        ],
+        "relatedKanji": [
+          "案",
+          "安",
+          "決",
+          "確"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dinh",
+        "meaningViNoAccent": "quyet dinh; co dinh; on dinh",
+        "meaningEnNoAccent": "decide; settle; fix"
+      },
+      "examples": [
+        {
+          "word": "案の定",
+          "reading": "あんのじょう",
+          "meaning": "quả nhiên; đúng như dự đoán",
+          "meaningEn": "sure enough; as expected"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Định (quyết định; cố định; ổn định)",
+        "onyomi": "テイ, ジョウ",
+        "kunyomi": "さだ.める, さだ.まる, さだ.か"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k006",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "表",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Biểu",
+        "meaningVi": "Phát Biểu _y",
+        "meaningViDisplay": "Biểu (Phát Biểu _y)",
+        "meaningEn": "surface; table; chart"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒョウ"
+        ],
+        "kunyomi": [
+          "おもて",
+          "-おもて",
+          "あらわ.す",
+          "あらわ.れる",
+          "あら.わす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 表 qua Hán-Việt Biểu.",
+        "en": "surface; table; chart"
+      },
+      "decomposition": {
+        "hanViet": "Biểu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Bieu",
+        "meaningViNoAccent": "Phat Bieu _y",
+        "meaningEnNoAccent": "surface; table; chart"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Biểu (Phát Biểu _y)",
+        "onyomi": "ヒョウ",
+        "kunyomi": "おもて, -おもて, あらわ.す, あらわ.れる, あら.わす"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k007",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "欧",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Âu",
+        "meaningVi": "Âu; châu Âu; phương Tây",
+        "meaningViDisplay": "Âu (Âu; châu Âu; phương Tây)",
+        "meaningEn": "Europe, European, the West"
+      },
+      "readings": {
+        "onyomi": [
+          "オウ"
+        ],
+        "kunyomi": [
+          "うた.う",
+          "は.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "欧 là châu Âu hoặc phương Tây; trong 欧米, nó là phần Âu của cụm Âu Mỹ.",
+        "en": "欧 means Europe or the West; in 欧米 it is the Europe side of Europe and America."
+      },
+      "decomposition": {
+        "hanViet": "Âu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "米",
+          "西",
+          "州",
+          "英"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Au",
+        "meaningViNoAccent": "Au; chau Au; phuong Tay",
+        "meaningEnNoAccent": "Europe, European, the West"
+      },
+      "examples": [
+        {
+          "word": "欧米",
+          "reading": "おうべい",
+          "meaning": "Âu Mỹ; phương Tây",
+          "meaningEn": "Europe and America, the West"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Âu (Âu; châu Âu; phương Tây)",
+        "onyomi": "オウ",
+        "kunyomi": "うた.う, は.く"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k008",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "取",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Thủ",
+        "meaningVi": "lấy; nhận; chọn",
+        "meaningViDisplay": "Thủ (lấy; nhận; chọn)",
+        "meaningEn": "take, fetch, select"
+      },
+      "readings": {
+        "onyomi": [
+          "シュ"
+        ],
+        "kunyomi": [
+          "と.る",
+          "と.り",
+          "と.り-",
+          "とり",
+          "-ど.り"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "取 means to take or fetch; in 受取 it is the act of receiving or taking something."
+      },
+      "decomposition": {
+        "hanViet": "Thủ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "受",
+          "手",
+          "採",
+          "得"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thu",
+        "meaningViNoAccent": "lay; nhan; chon",
+        "meaningEnNoAccent": "take, fetch, select"
+      },
+      "examples": [
+        {
+          "word": "受取",
+          "reading": "うけとり",
+          "meaning": "biên nhận; việc nhận hàng",
+          "meaningEn": "receipt"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thủ (lấy; nhận; chọn)",
+        "onyomi": "シュ",
+        "kunyomi": "と.る, と.り, と.り-, とり, -ど.り"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k009",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "泥",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Nê",
+        "meaningVi": "Cây Gậy - †‡ 3 †itfrf”h#p#e",
+        "meaningViDisplay": "Nê (Cây Gậy - †‡ 3 †itfrf”h#p#e)",
+        "meaningEn": "mud; mire; adhere to"
+      },
+      "readings": {
+        "onyomi": [
+          "デイ",
+          "ナイ",
+          "デ",
+          "ニ"
+        ],
+        "kunyomi": [
+          "どろ",
+          "なず.む"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 泥 qua Hán-Việt Nê.",
+        "en": "mud; mire; adhere to"
+      },
+      "decomposition": {
+        "hanViet": "Nê",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ne",
+        "meaningViNoAccent": "Cay Gay - †‡ 3 †itfrf”h#p#e",
+        "meaningEnNoAccent": "mud; mire; adhere to"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nê (Cây Gậy - †‡ 3 †itfrf”h#p#e)",
+        "onyomi": "デイ, ナイ, デ, ニ",
+        "kunyomi": "どろ, なず.む"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k010",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "易",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Dịch",
+        "meaningVi": "dễ; đơn giản; bói dịch",
+        "meaningViDisplay": "Dịch (dễ; đơn giản; bói dịch)",
+        "meaningEn": "easy, simple, divination"
+      },
+      "readings": {
+        "onyomi": [
+          "エキ",
+          "イ"
+        ],
+        "kunyomi": [
+          "やさ.しい",
+          "やす.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "| Bangi (B) econ vt (7) dich chuyén dB ding(B) H h",
+        "en": "易 means easy or simple; in 安易 it marks an overly easy/careless approach."
+      },
+      "decomposition": {
+        "hanViet": "Dịch",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "安",
+          "簡",
+          "変",
+          "占"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dich",
+        "meaningViNoAccent": "de; don gian; boi dich",
+        "meaningEnNoAccent": "easy, simple, divination"
+      },
+      "examples": [
+        {
+          "word": "安易",
+          "reading": "あんい",
+          "meaning": "dễ dãi; đơn giản quá mức",
+          "meaningEn": "easy-going, careless"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Dịch (dễ; đơn giản; bói dịch)",
+        "onyomi": "エキ, イ",
+        "kunyomi": "やさ.しい, やす.い"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k011",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "事",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Sự",
+        "meaningVi": "việc",
+        "meaningViDisplay": "Sự (việc)",
+        "meaningEn": "Thing, Matter"
+      },
+      "readings": {
+        "onyomi": [
+          "ジ",
+          "ズ"
+        ],
+        "kunyomi": [
+          "こと",
+          "つか.う",
+          "つか.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Dealing with matters and things."
+      },
+      "decomposition": {
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "書"
+        ],
+        "hanViet": "Sự"
+      },
+      "search": {
+        "hanVietNoAccent": "Su",
+        "meaningViNoAccent": "viec",
+        "meaningEnNoAccent": "Thing, Matter"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l13_v048",
+          "sourceSenseId": "n5_l13_s048",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l13_v010",
+          "sourceSenseId": "n5_l13_s010",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l13_v047",
+          "sourceSenseId": "n5_l13_s047",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Sự (việc)",
+        "onyomi": "ジ, ズ",
+        "kunyomi": "こと, つか.う, つか.える"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k012",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "直",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Trực",
+        "meaningVi": "Trực Tiếp —~rnh*#ã",
+        "meaningViDisplay": "Trực (Trực Tiếp —~rnh*#ã)",
+        "meaningEn": "straightaway; honesty; frankness"
+      },
+      "readings": {
+        "onyomi": [
+          "チョク",
+          "ジキ",
+          "ジカ"
+        ],
+        "kunyomi": [
+          "ただ.ちに",
+          "なお.す",
+          "-なお.す",
+          "なお.る",
+          "なお.き",
+          "す.ぐ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 直 qua Hán-Việt Trực.",
+        "en": "straightaway; honesty; frankness"
+      },
+      "decomposition": {
+        "hanViet": "Trực",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Truc",
+        "meaningViNoAccent": "Truc Tiep —~rnh*#a",
+        "meaningEnNoAccent": "straightaway; honesty; frankness"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Trực (Trực Tiếp —~rnh*#ã)",
+        "onyomi": "チョク, ジキ, ジカ",
+        "kunyomi": "ただ.ちに, なお.す, -なお.す, なお.る, なお.き, す.ぐ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l10_k013",
+      "lessonId": 10,
+      "level": "N3",
+      "character": "押",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Áp",
+        "meaningVi": "áp; ấn; đẩy; đè xuống; kìm giữ",
+        "meaningViDisplay": "Áp (áp; ấn; đẩy; đè xuống; kìm giữ)",
+        "meaningEn": "push, press, stop, check, subdue"
+      },
+      "readings": {
+        "onyomi": [
+          "オウ"
+        ],
+        "kunyomi": [
+          "お.す",
+          "お.し-",
+          "お.っ-",
+          "お.さえる",
+          "おさ.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "押 là dùng tay ấn hoặc giữ lại; trong 押える, nó nhấn mạnh hành động đè xuống/kìm lại.",
+        "en": "押 means to push, press, or hold down; in 押える it focuses on restraining or pressing down."
+      },
+      "decomposition": {
+        "hanViet": "Áp",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "手",
+          "圧",
+          "足",
+          "急"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ap",
+        "meaningViNoAccent": "ap; an; day; de xuong; kim giu",
+        "meaningEnNoAccent": "push, press, stop, check, subdue"
+      },
+      "examples": [
+        {
+          "word": "押える",
+          "reading": "おさえる",
+          "meaning": "giữ lại; kìm chế; đè xuống",
+          "meaningEn": "to stop, restrain, press down"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Áp (áp; ấn; đẩy; đè xuống; kìm giữ)",
+        "onyomi": "オウ",
+        "kunyomi": "お.す, お.し-, お.っ-, お.さえる, おさ.える"
       }
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

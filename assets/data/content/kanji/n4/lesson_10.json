@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 10,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l10_k001",
+      "lessonId": 10,
+      "level": "N4",
+      "character": "赤",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Xích",
+        "meaningVi": "đỏ; màu đỏ; thâm hụt",
+        "meaningViDisplay": "Xích (đỏ; màu đỏ; thâm hụt)",
+        "meaningEn": "red"
+      },
+      "readings": {
+        "onyomi": [
+          "セキ",
+          "シャク"
+        ],
+        "kunyomi": [
+          "あか",
+          "あか-",
+          "あか.い",
+          "あか.らむ",
+          "あか.らめる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Xích ở đất ( ) bị lửa ( ) đốt cháy đỏ ( )赤 2",
+        "en": "赤 means red; in 赤字, red marks a deficit or negative balance."
+      },
+      "decomposition": {
+        "hanViet": "Xích",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "字",
+          "紅",
+          "色",
+          "白"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Xich",
+        "meaningViNoAccent": "do; mau do; tham hut",
+        "meaningEnNoAccent": "red"
+      },
+      "examples": [
+        {
+          "word": "赤字",
+          "reading": "あかじ",
+          "meaning": "thâm hụt; lỗ",
+          "meaningEn": "deficit, in the red"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Xích (đỏ; màu đỏ; thâm hụt)",
+        "onyomi": "セキ, シャク",
+        "kunyomi": "あか, あか-, あか.い, あか.らむ, あか.らめる"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l10_k002",
+      "lessonId": 10,
+      "level": "N4",
+      "character": "弟",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Đệ",
+        "meaningVi": "em trai",
+        "meaningViDisplay": "Đệ (em trai)",
+        "meaningEn": "Younger brother"
+      },
+      "readings": {
+        "onyomi": [
+          "テイ",
+          "ダイ",
+          "デ"
+        ],
+        "kunyomi": [
+          "おとうと"
+        ]
+      },
+      "mnemonic": {
+        "vi": "2 (\") lần bắn cung ( ) đều đứng số 1 (|) là em trai ( ) 1 2",
+        "en": "A younger brother playing with objects."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "弓",
+          "丿",
+          "丨"
+        ],
+        "componentNames": [
+          "Cung (cái cung)",
+          "Phiệt (nét phẩy)",
+          "Cổn (nét sổ)"
+        ],
+        "relatedKanji": [
+          "兄"
+        ],
+        "hanViet": "Đệ"
+      },
+      "search": {
+        "hanVietNoAccent": "De",
+        "meaningViNoAccent": "em trai",
+        "meaningEnNoAccent": "Younger brother"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l11_v040",
+          "sourceSenseId": "n5_l11_s040",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v035",
+          "sourceSenseId": "n5_l11_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v041",
+          "sourceSenseId": "n5_l11_s041",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Đệ (em trai)",
+        "onyomi": "テイ, ダイ, デ",
+        "kunyomi": "おとうと"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l10_k003",
+      "lessonId": 10,
+      "level": "N4",
+      "character": "声",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Thanh",
+        "meaningVi": "tiếng",
+        "meaningViDisplay": "Thanh (tiếng)",
+        "meaningEn": "Voice"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
+        "kunyomi": [
+          "こえ",
+          "こわ-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Binh sĩ ( ) thấy xác chết ( ) bị bịt miệng kêu thất thanh ( ) 2",
+        "en": "A VOICE carrying through the air."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "士",
+          "尸"
+        ],
+        "componentNames": [
+          "Sĩ (kẻ sĩ)",
+          "Thi (thi thể)"
+        ],
+        "relatedKanji": [
+          "音"
+        ],
+        "hanViet": "Thanh"
+      },
+      "search": {
+        "hanVietNoAccent": "Thanh",
+        "meaningViNoAccent": "tieng",
+        "meaningEnNoAccent": "Voice"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l27_v011",
+          "sourceSenseId": "n4_l27_s011",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l44_v053",
+          "sourceSenseId": "n4_l44_s053",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l47_v005",
+          "sourceSenseId": "n4_l47_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thanh (tiếng)",
+        "onyomi": "セイ, ショウ",
+        "kunyomi": "こえ, こわ-"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l10_k004",
+      "lessonId": 10,
+      "level": "N4",
+      "character": "社",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Xã",
+        "meaningVi": "công ty, đền",
+        "meaningViDisplay": "Xã (công ty, đền)",
+        "meaningEn": "Company, Shrine"
+      },
+      "readings": {
+        "onyomi": [
+          "シャ"
+        ],
+        "kunyomi": [
+          "やしろ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Chỉ thị ( ) cúng thổ ( ) địa cho xã hội ( ) phát triển 1 6",
+        "en": "A shrine for the land god (土). Symbols of spirit (礻) and land (土) meeting together."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "礻",
+          "土"
+        ],
+        "componentNames": [
+          "Thị (thần linh)",
+          "Thổ (đất)"
+        ],
+        "relatedKanji": [
+          "地",
+          "場"
+        ],
+        "hanViet": "Xã"
+      },
+      "search": {
+        "hanVietNoAccent": "Xa",
+        "meaningViNoAccent": "cong ty, den",
+        "meaningEnNoAccent": "Company, Shrine"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l01_v050",
+          "sourceSenseId": "n5_l01_s050",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v010",
+          "sourceSenseId": "n5_l01_s010",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v011",
+          "sourceSenseId": "n5_l01_s011",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Xã (công ty, đền)",
+        "onyomi": "シャ",
+        "kunyomi": "やしろ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l10_k005",
+      "lessonId": 10,
+      "level": "N4",
+      "character": "国",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Quốc",
+        "meaningVi": "đất nước",
+        "meaningViDisplay": "Quốc (đất nước)",
+        "meaningEn": "Country"
+      },
+      "readings": {
+        "onyomi": [
+          "コク"
+        ],
+        "kunyomi": [
+          "くに"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vây quanh ( ) bảo vệ viên ngọc ( ) quý của quốc gia ( )国 2",
+        "en": "A country with borders and a king inside."
+      },
+      "decomposition": {
+        "structure": "enclosure",
+        "components": [
+          "囗",
+          "玉"
+        ],
+        "componentNames": [
+          "Vi (vây quanh)",
+          "Ngọc (ngọc)"
+        ],
+        "relatedKanji": [
+          "四",
+          "回",
+          "困",
+          "園"
+        ],
+        "hanViet": "Quốc"
+      },
+      "search": {
+        "hanVietNoAccent": "Quoc",
+        "meaningViNoAccent": "dat nuoc",
+        "meaningEnNoAccent": "Country"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l20_v031",
+          "sourceSenseId": "n5_l20_s031",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v044",
+          "sourceSenseId": "n5_l11_s044",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l03_v021",
+          "sourceSenseId": "n5_l03_s021",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Quốc (đất nước)",
+        "onyomi": "コク",
+        "kunyomi": "くに"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l10_k006",
+      "lessonId": 10,
+      "level": "N4",
+      "character": "始",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Thủy",
+        "meaningVi": "bắt đầu",
+        "meaningViDisplay": "Thủy (bắt đầu)",
+        "meaningEn": "Begin, Start"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "はじ.める",
+          "-はじ.める",
+          "はじ.まる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người phụ nữ ( ) lên vũ đài ( ) bắt đầu ( ) phát biểu 1 4",
+        "en": "A woman (女) on a platform (台) to START a performance."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "女",
+          "台"
+        ],
+        "componentNames": [
+          "Nữ (phụ nữ)",
+          "Thai (đài)"
+        ],
+        "relatedKanji": [
+          "女",
+          "終"
+        ],
+        "hanViet": "Thủy"
+      },
+      "search": {
+        "hanVietNoAccent": "Thuy",
+        "meaningViNoAccent": "bat dau",
+        "meaningEnNoAccent": "Begin, Start"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l17_v045",
+          "sourceSenseId": "n5_l17_s045",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v047",
+          "sourceSenseId": "n5_l17_s047",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l16_v012",
+          "sourceSenseId": "n5_l16_s012",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thủy (bắt đầu)",
+        "onyomi": "シ",
+        "kunyomi": "はじ.める, -はじ.める, はじ.まる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l10_k007",
+      "lessonId": 10,
+      "level": "N4",
+      "character": "治",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Trì",
+        "meaningVi": "trị; cai trị; chữa trị; ổn định",
+        "meaningViDisplay": "Trì (trị; cai trị; chữa trị; ổn định)",
+        "meaningEn": "rule, cure, heal, calm down, govern"
+      },
+      "readings": {
+        "onyomi": [
+          "ジ",
+          "チ"
+        ],
+        "kunyomi": [
+          "おさ.める",
+          "おさ.まる",
+          "なお.る",
+          "なお.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng nước ( ) ở vũ đài ( ) để trị liệu ( ) 治 1 4",
+        "en": "治 means to rule or heal; in 治める it leans toward governing or bringing under control."
+      },
+      "decomposition": {
+        "hanViet": "Trì",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "政",
+          "療",
+          "国",
+          "平"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tri",
+        "meaningViNoAccent": "tri; cai tri; chua tri; on dinh",
+        "meaningEnNoAccent": "rule, cure, heal, calm down, govern"
+      },
+      "examples": [
+        {
+          "word": "治める",
+          "reading": "おさめる",
+          "meaning": "cai trị; quản lý; khuất phục",
+          "meaningEn": "to govern, manage, subdue"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Trì (trị; cai trị; chữa trị; ổn định)",
+        "onyomi": "ジ, チ",
+        "kunyomi": "おさ.める, おさ.まる, なお.る, なお.す"
+      }
+    }
+  ]
+}

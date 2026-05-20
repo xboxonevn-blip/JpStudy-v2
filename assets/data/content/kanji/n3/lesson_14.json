@@ -1,54 +1,64 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 14,
-  "entryCount": 8,
+  "entryCount": 12,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l14_k001",
+      "kanjiId": "n3_canonical_l14_k001",
       "lessonId": 14,
       "level": "N3",
-      "character": "族",
-      "strokeCount": 11,
+      "character": "記",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Tộc",
-        "meaningVi": "gia tộc; dân tộc; dòng họ",
-        "meaningViDisplay": "Tộc (gia tộc; dân tộc; dòng họ)",
-        "meaningEn": "tribe, family"
+        "hanViet": "Kí",
+        "meaningVi": "ghi chép; bài viết",
+        "meaningViDisplay": "Kí (ghi chép; bài viết)",
+        "meaningEn": "scribe, account"
       },
       "readings": {
         "onyomi": [
-          "ゾク"
+          "キ"
         ],
-        "kunyomi": []
+        "kunyomi": [
+          "しる.す"
+        ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
+        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
+        "en": "Core kanji for QUARTET 9: Media and information."
       },
       "decomposition": {
-        "hanViet": "Tộc",
+        "hanViet": "Kí",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "家",
-          "親",
-          "戚",
-          "婦"
+          "誌",
+          "報",
+          "録",
+          "文"
         ]
       },
       "search": {
-        "hanVietNoAccent": "toc",
-        "meaningViNoAccent": "gia toc; dan toc; dong ho",
-        "meaningEnNoAccent": "tribe, family"
+        "hanVietNoAccent": "Ki",
+        "meaningViNoAccent": "ghi chep; bai viet",
+        "meaningEnNoAccent": "scribe, account"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l14_v001",
-          "sourceSenseId": "n3_l14_s001",
+          "sourceVocabId": "n3_l09_v006",
+          "sourceSenseId": "n3_l09_s006",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -56,334 +66,176 @@
         }
       ],
       "legacy": {
-        "meaning": "Tộc (gia tộc; dân tộc; dòng họ)",
-        "onyomi": "ゾク",
-        "kunyomi": ""
+        "meaning": "Kí (ghi chép; bài viết)",
+        "onyomi": "キ",
+        "kunyomi": "しる.す"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
-      }
+        "quartetLesson": 9,
+        "themeEn": "Media and information",
+        "themeVi": "Truyền thông và thông tin"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l14_k002",
+      "kanjiId": "n3_canonical_l14_k002",
       "lessonId": 14,
       "level": "N3",
-      "character": "戚",
-      "strokeCount": 11,
+      "character": "起",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Thích",
-        "meaningVi": "họ hàng; thân thích; buồn đau",
-        "meaningViDisplay": "Thích (họ hàng; thân thích; buồn đau)",
-        "meaningEn": "grieve, relatives"
+        "hanViet": "Khởi",
+        "meaningVi": "Thức Đậy -+*+ Tea P",
+        "meaningViDisplay": "Khởi (Thức Đậy -+*+ Tea P)",
+        "meaningEn": "rouse; wake up; get up"
       },
       "readings": {
         "onyomi": [
-          "ソク",
-          "セキ"
+          "キ"
         ],
         "kunyomi": [
-          "いた.む",
-          "うれ.える",
-          "みうち"
+          "お.きる",
+          "お.こる",
+          "お.こす",
+          "おこ.す",
+          "た.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
+        "vi": "Ghi nhớ 起 qua Hán-Việt Khởi.",
+        "en": "rouse; wake up; get up"
       },
       "decomposition": {
-        "hanViet": "Thích",
-        "structure": "standalone",
+        "hanViet": "Khởi",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "親",
-          "族",
-          "家",
-          "婦"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "thich",
-        "meaningViNoAccent": "ho hang; than thich; buon dau",
-        "meaningEnNoAccent": "grieve, relatives"
+        "hanVietNoAccent": "Khoi",
+        "meaningViNoAccent": "Thuc Day -+*+ Tea P",
+        "meaningEnNoAccent": "rouse; wake up; get up"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l14_v002",
-          "sourceSenseId": "n3_l14_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Thích (họ hàng; thân thích; buồn đau)",
-        "onyomi": "ソク, セキ",
-        "kunyomi": "いた.む, うれ.える, みうち"
+        "meaning": "Khởi (Thức Đậy -+*+ Tea P)",
+        "onyomi": "キ",
+        "kunyomi": "お.きる, お.こる, お.こす, おこ.す, た.つ"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l14_k003",
+      "kanjiId": "n3_canonical_l14_k003",
       "lessonId": 14,
       "level": "N3",
-      "character": "婦",
-      "strokeCount": 11,
+      "character": "根",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Phụ",
-        "meaningVi": "phụ nữ; vợ; cô dâu",
-        "meaningViDisplay": "Phụ (phụ nữ; vợ; cô dâu)",
-        "meaningEn": "lady, woman"
+        "hanViet": "Căn",
+        "meaningVi": "Gốc Rễ -",
+        "meaningViDisplay": "Căn (Gốc Rễ -)",
+        "meaningEn": "root; radical; head (pimple)"
       },
       "readings": {
         "onyomi": [
-          "フ"
+          "コン"
         ],
         "kunyomi": [
-          "よめ"
+          "ね",
+          "-ね"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
+        "vi": "Ghi nhớ 根 qua Hán-Việt Căn.",
+        "en": "root; radical; head (pimple)"
       },
       "decomposition": {
-        "hanViet": "Phụ",
-        "structure": "standalone",
+        "hanViet": "Căn",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "夫",
-          "妻",
-          "女",
-          "婚"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "phu",
-        "meaningViNoAccent": "phu nu; vo; co dau",
-        "meaningEnNoAccent": "lady, woman"
+        "hanVietNoAccent": "Can",
+        "meaningViNoAccent": "Goc Re -",
+        "meaningEnNoAccent": "root; radical; head (pimple)"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l14_v003",
-          "sourceSenseId": "n3_l14_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Phụ (phụ nữ; vợ; cô dâu)",
-        "onyomi": "フ",
-        "kunyomi": "よめ"
+        "meaning": "Căn (Gốc Rễ -)",
+        "onyomi": "コン",
+        "kunyomi": "ね, -ね"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l14_k004",
+      "kanjiId": "n3_canonical_l14_k004",
       "lessonId": 14,
       "level": "N3",
-      "character": "育",
-      "strokeCount": 8,
+      "character": "連",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Dục",
-        "meaningVi": "nuôi dưỡng; giáo dục; lớn lên",
-        "meaningViDisplay": "Dục (nuôi dưỡng; giáo dục; lớn lên)",
-        "meaningEn": "bring up, grow up"
+        "hanViet": "Liên",
+        "meaningVi": "liên kết; nối liền; dẫn theo",
+        "meaningViDisplay": "Liên (liên kết; nối liền; dẫn theo)",
+        "meaningEn": "connect, join, take along"
       },
       "readings": {
         "onyomi": [
-          "イク"
+          "レン"
         ],
         "kunyomi": [
-          "そだ.つ",
-          "そだ.ち",
-          "そだ.てる",
-          "はぐく.む"
+          "つら.なる",
+          "つら.ねる",
+          "つ.れる",
+          "-づ.れ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
+        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
+        "en": "Core kanji for QUARTET 22: Communication and expression."
       },
       "decomposition": {
-        "hanViet": "Dục",
+        "hanViet": "Liên",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "子",
-          "親",
-          "教",
-          "成"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "duc",
-        "meaningViNoAccent": "nuoi duong; giao duc; lon len",
-        "meaningEnNoAccent": "bring up, grow up"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l14_v004",
-          "sourceSenseId": "n3_l14_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Dục (nuôi dưỡng; giáo dục; lớn lên)",
-        "onyomi": "イク",
-        "kunyomi": "そだ.つ, そだ.ち, そだ.てる, はぐく.む"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
-      }
-    },
-    {
-      "kanjiId": "n3_l14_k005",
-      "lessonId": 14,
-      "level": "N3",
-      "character": "結",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Kết",
-        "meaningVi": "kết nối; thắt buộc; kết hôn",
-        "meaningViDisplay": "Kết (kết nối; thắt buộc; kết hôn)",
-        "meaningEn": "tie, bind"
-      },
-      "readings": {
-        "onyomi": [
-          "ケツ",
-          "ケチ"
-        ],
-        "kunyomi": [
-          "むす.ぶ",
-          "ゆ.う",
-          "ゆ.わえる"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
-      },
-      "decomposition": {
-        "hanViet": "Kết",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "婚",
-          "離",
-          "約",
-          "合"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "ket",
-        "meaningViNoAccent": "ket noi; that buoc; ket hon",
-        "meaningEnNoAccent": "tie, bind"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l14_v005",
-          "sourceSenseId": "n3_l14_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Kết (kết nối; thắt buộc; kết hôn)",
-        "onyomi": "ケツ, ケチ",
-        "kunyomi": "むす.ぶ, ゆ.う, ゆ.わえる"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
-      }
-    },
-    {
-      "kanjiId": "n3_l14_k006",
-      "lessonId": 14,
-      "level": "N3",
-      "character": "離",
-      "strokeCount": 19,
-      "labels": {
-        "hanViet": "Ly",
-        "meaningVi": "rời xa; tách ra; ly hôn",
-        "meaningViDisplay": "Ly (rời xa; tách ra; ly hôn)",
-        "meaningEn": "detach, separation"
-      },
-      "readings": {
-        "onyomi": [
-          "リ"
-        ],
-        "kunyomi": [
-          "はな.れる",
-          "はな.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
-      },
-      "decomposition": {
-        "hanViet": "Ly",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
+          "絡",
+          "続",
           "結",
-          "婚",
-          "別",
-          "遠"
+          "係"
         ]
       },
       "search": {
-        "hanVietNoAccent": "ly",
-        "meaningViNoAccent": "roi xa; tach ra; ly hon",
-        "meaningEnNoAccent": "detach, separation"
+        "hanVietNoAccent": "Lien",
+        "meaningViNoAccent": "lien ket; noi lien; dan theo",
+        "meaningEnNoAccent": "connect, join, take along"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l14_v006",
-          "sourceSenseId": "n3_l14_s006",
+          "sourceVocabId": "n3_l22_v010",
+          "sourceSenseId": "n3_l22_s010",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -391,129 +243,325 @@
         }
       ],
       "legacy": {
-        "meaning": "Ly (rời xa; tách ra; ly hôn)",
-        "onyomi": "リ",
-        "kunyomi": "はな.れる, はな.す"
+        "meaning": "Liên (liên kết; nối liền; dẫn theo)",
+        "onyomi": "レン",
+        "kunyomi": "つら.なる, つら.ねる, つ.れる, -づ.れ"
+      },
+      "theme": {
+        "quartetLesson": 22,
+        "themeEn": "Communication and expression",
+        "themeVi": "Giao tiếp và diễn đạt"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l14_k007",
+      "kanjiId": "n3_canonical_l14_k005",
       "lessonId": 14,
       "level": "N3",
-      "character": "援",
-      "strokeCount": 12,
+      "character": "造",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Viện",
-        "meaningVi": "hỗ trợ; cứu giúp; tiếp viện",
-        "meaningViDisplay": "Viện (hỗ trợ; cứu giúp; tiếp viện)",
-        "meaningEn": "abet, help"
+        "hanViet": "Tạo",
+        "meaningVi": "create; make; structure",
+        "meaningViDisplay": "Tạo (create; make; structure)",
+        "meaningEn": "create; make; structure"
       },
       "readings": {
         "onyomi": [
-          "エン"
+          "ゾウ"
+        ],
+        "kunyomi": [
+          "つく.る",
+          "つく.り",
+          "-づく.り"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 造 qua Hán-Việt Tạo.",
+        "en": "create; make; structure"
+      },
+      "decomposition": {
+        "hanViet": "Tạo",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tao",
+        "meaningViNoAccent": "create; make; structure",
+        "meaningEnNoAccent": "create; make; structure"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tạo (create; make; structure)",
+        "onyomi": "ゾウ",
+        "kunyomi": "つく.る, つく.り, -づく.り"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l14_k006",
+      "lessonId": 14,
+      "level": "N3",
+      "character": "祝",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Chúc",
+        "meaningVi": "Chúc Mimg Prerp Pep R",
+        "meaningViDisplay": "Chúc (Chúc Mimg Prerp Pep R)",
+        "meaningEn": "Chúc Mimg Prerp Pep R"
+      },
+      "readings": {
+        "onyomi": [
+          "シュウ",
+          "シュク"
+        ],
+        "kunyomi": [
+          "いわう"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 祝 qua Hán-Việt Chúc.",
+        "en": "Chúc Mimg Prerp Pep R"
+      },
+      "decomposition": {
+        "hanViet": "Chúc",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chuc",
+        "meaningViNoAccent": "Chuc Mimg Prerp Pep R",
+        "meaningEnNoAccent": "Chuc Mimg Prerp Pep R"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chúc (Chúc Mimg Prerp Pep R)",
+        "onyomi": "シュウ, シュク",
+        "kunyomi": "いわう"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l14_k007",
+      "lessonId": 14,
+      "level": "N3",
+      "character": "個",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Cá",
+        "meaningVi": "individual; counter for articles; individuel",
+        "meaningViDisplay": "Cá (individual; counter for articles; individuel)",
+        "meaningEn": "individual; counter for articles; individuel"
+      },
+      "readings": {
+        "onyomi": [
+          "コ",
+          "カ"
         ],
         "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
+        "vi": "Ghi nhớ 個 qua Hán-Việt Cá.",
+        "en": "individual; counter for articles; individuel"
       },
       "decomposition": {
-        "hanViet": "Viện",
-        "structure": "standalone",
+        "hanViet": "Cá",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "助",
-          "支",
-          "救",
-          "頼"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "vien",
-        "meaningViNoAccent": "ho tro; cuu giup; tiep vien",
-        "meaningEnNoAccent": "abet, help"
+        "hanVietNoAccent": "Ca",
+        "meaningViNoAccent": "individual; counter for articles; individuel",
+        "meaningEnNoAccent": "individual; counter for articles; individuel"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l14_v011",
-          "sourceSenseId": "n3_l14_s011",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Viện (hỗ trợ; cứu giúp; tiếp viện)",
-        "onyomi": "エン",
+        "meaning": "Cá (individual; counter for articles; individuel)",
+        "onyomi": "コ, カ",
         "kunyomi": ""
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l14_k008",
+      "kanjiId": "n3_canonical_l14_k008",
       "lessonId": 14,
       "level": "N3",
-      "character": "頼",
-      "strokeCount": 16,
+      "character": "息",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Lại",
-        "meaningVi": "nhờ cậy; tin cậy; yêu cầu",
-        "meaningViDisplay": "Lại (nhờ cậy; tin cậy; yêu cầu)",
-        "meaningEn": "trust, request"
+        "hanViet": "Tức",
+        "meaningVi": "breath; respiration; son",
+        "meaningViDisplay": "Tức (breath; respiration; son)",
+        "meaningEn": "breath; respiration; son"
       },
       "readings": {
         "onyomi": [
-          "ライ"
+          "ソク"
         ],
         "kunyomi": [
-          "たの.む",
-          "たの.もしい",
-          "たよ.る"
+          "いき"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 14: Gia đình và các mối quan hệ.",
-        "en": "Core kanji for QUARTET 14: Family and relationships."
+        "vi": "Ghi nhớ 息 qua Hán-Việt Tức.",
+        "en": "breath; respiration; son"
       },
       "decomposition": {
-        "hanViet": "Lại",
+        "hanViet": "Tức",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tuc",
+        "meaningViNoAccent": "breath; respiration; son",
+        "meaningEnNoAccent": "breath; respiration; son"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tức (breath; respiration; son)",
+        "onyomi": "ソク",
+        "kunyomi": "いき"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l14_k009",
+      "lessonId": 14,
+      "level": "N3",
+      "character": "格",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Cách",
+        "meaningVi": "status; rank; capacity",
+        "meaningViDisplay": "Cách (status; rank; capacity)",
+        "meaningEn": "status; rank; capacity"
+      },
+      "readings": {
+        "onyomi": [
+          "カク",
+          "コウ",
+          "キャク",
+          "ゴウ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "status; rank; capacity"
+      },
+      "decomposition": {
+        "hanViet": "Cách",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cach",
+        "meaningViNoAccent": "status; rank; capacity",
+        "meaningEnNoAccent": "status; rank; capacity"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cách (status; rank; capacity)",
+        "onyomi": "カク, コウ, キャク, ゴウ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l14_k010",
+      "lessonId": 14,
+      "level": "N3",
+      "character": "残",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Tàn",
+        "meaningVi": "còn lại; sót lại",
+        "meaningViDisplay": "Tàn (còn lại; sót lại)",
+        "meaningEn": "remainder, leftover"
+      },
+      "readings": {
+        "onyomi": [
+          "ザン",
+          "サン"
+        ],
+        "kunyomi": [
+          "のこ.る",
+          "のこ.す",
+          "そこな.う",
+          "のこ.り"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 5: Work and occupations."
+      },
+      "decomposition": {
+        "hanViet": "Tàn",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "信",
-          "依",
-          "援",
-          "任"
+          "余",
+          "留",
+          "死",
+          "続"
         ]
       },
       "search": {
-        "hanVietNoAccent": "lai",
-        "meaningViNoAccent": "nho cay; tin cay; yeu cau",
-        "meaningEnNoAccent": "trust, request"
+        "hanVietNoAccent": "Tan",
+        "meaningViNoAccent": "con lai; sot lai",
+        "meaningEnNoAccent": "remainder, leftover"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l14_v012",
-          "sourceSenseId": "n3_l14_s012",
+          "sourceVocabId": "n3_l05_v005",
+          "sourceSenseId": "n3_l05_s005",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -521,21 +569,140 @@
         }
       ],
       "legacy": {
-        "meaning": "Lại (nhờ cậy; tin cậy; yêu cầu)",
-        "onyomi": "ライ",
-        "kunyomi": "たの.む, たの.もしい, たよ.る"
+        "meaning": "Tàn (còn lại; sót lại)",
+        "onyomi": "ザン, サン",
+        "kunyomi": "のこ.る, のこ.す, そこな.う, のこ.り"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 14,
-        "themeEn": "Family and relationships",
-        "themeVi": "Gia đình và các mối quan hệ"
+        "quartetLesson": 5,
+        "themeEn": "Work and occupations",
+        "themeVi": "Công việc và nghề nghiệp"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l14_k011",
+      "lessonId": 14,
+      "level": "N3",
+      "character": "消",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Tiêu",
+        "meaningVi": "tắt; biến mất; xóa bỏ",
+        "meaningViDisplay": "Tiêu (tắt; biến mất; xóa bỏ)",
+        "meaningEn": "extinguish, disappear, cancel"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": [
+          "き.える",
+          "け.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "消 là tắt đi, biến mất hoặc xóa bỏ; 打ち消す là xóa/phủ định một điều vừa nói.",
+        "en": "消 means to extinguish, disappear, or erase; 打ち消す is to negate or cancel out a statement."
+      },
+      "decomposition": {
+        "hanViet": "Tiêu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "水",
+          "火",
+          "打",
+          "滅"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tieu",
+        "meaningViNoAccent": "tat; bien mat; xoa bo",
+        "meaningEnNoAccent": "extinguish, disappear, cancel"
+      },
+      "examples": [
+        {
+          "word": "打ち消す",
+          "reading": "うちけす",
+          "meaning": "phủ nhận; bác bỏ; xóa bỏ",
+          "meaningEn": "to deny, to negate, to contradict"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tiêu (tắt; biến mất; xóa bỏ)",
+        "onyomi": "ショウ",
+        "kunyomi": "き.える, け.す"
       }
+    },
+    {
+      "kanjiId": "n3_canonical_l14_k012",
+      "lessonId": 14,
+      "level": "N3",
+      "character": "徒",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Đồ",
+        "meaningVi": "on foot; junior; emptiness",
+        "meaningViDisplay": "Đồ (on foot; junior; emptiness)",
+        "meaningEn": "on foot; junior; emptiness"
+      },
+      "readings": {
+        "onyomi": [
+          "ト"
+        ],
+        "kunyomi": [
+          "いたずら",
+          "あだ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "on foot; junior; emptiness"
+      },
+      "decomposition": {
+        "hanViet": "Đồ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Do",
+        "meaningViNoAccent": "on foot; junior; emptiness",
+        "meaningEnNoAccent": "on foot; junior; emptiness"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đồ (on foot; junior; emptiness)",
+        "onyomi": "ト",
+        "kunyomi": "いたずら, あだ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

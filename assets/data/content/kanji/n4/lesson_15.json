@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 15,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l15_k001",
+      "lessonId": 15,
+      "level": "N4",
+      "character": "客",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Khách",
+        "meaningVi": "Khách",
+        "meaningViDisplay": "Khách (Khách)",
+        "meaningEn": "guest; visitor; customer"
+      },
+      "readings": {
+        "onyomi": [
+          "キャク",
+          "カク"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Dưới mái nhà ( ) các ( ) vị khách ( ) đang ngồi quây dưới chiếu 1",
+        "en": "guest; visitor; customer"
+      },
+      "decomposition": {
+        "hanViet": "Khách",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Khach",
+        "meaningViNoAccent": "Khach",
+        "meaningEnNoAccent": "guest; visitor; customer"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Khách (Khách)",
+        "onyomi": "キャク, カク",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l15_k002",
+      "lessonId": 15,
+      "level": "N4",
+      "character": "便",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Tiện",
+        "meaningVi": "tiện lợi, tin tức",
+        "meaningViDisplay": "Tiện (tiện lợi, tin tức)",
+        "meaningEn": "Convenience, Mail"
+      },
+      "readings": {
+        "onyomi": [
+          "ベン",
+          "ビン"
+        ],
+        "kunyomi": [
+          "たよ.り"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) mới ( ) tiện ( ) để sai bảo 1 3",
+        "en": "A person (亻) using a tool to make things CONVENIENT."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "更"
+        ],
+        "componentNames": [
+          "Nhân (người)",
+          "Canh (đổi, thêm)"
+        ],
+        "relatedKanji": [
+          "人",
+          "使"
+        ],
+        "hanViet": "Tiện"
+      },
+      "search": {
+        "hanVietNoAccent": "Tien",
+        "meaningViNoAccent": "tien loi, tin tuc",
+        "meaningEnNoAccent": "Convenience, Mail"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l23_v050",
+          "sourceSenseId": "n5_l23_s050",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l21_v009",
+          "sourceSenseId": "n5_l21_s009",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v032",
+          "sourceSenseId": "n5_l11_s032",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tiện (tiện lợi, tin tức)",
+        "onyomi": "ベン, ビン",
+        "kunyomi": "たよ.り"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l15_k003",
+      "lessonId": 15,
+      "level": "N4",
+      "character": "乗",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Thặng",
+        "meaningVi": "Lên xe, cưỡi",
+        "meaningViDisplay": "Thặng (Lên xe, cưỡi)",
+        "meaningEn": "ride; power; multiplication"
+      },
+      "readings": {
+        "onyomi": [
+          "ジョウ",
+          "ショウ"
+        ],
+        "kunyomi": [
+          "の.る",
+          "-の.り",
+          "の.せる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Mang 1000 ( ) cỏ ( ) cây ( ) thừa lên xe ( ) 乗 1",
+        "en": "ride; power; multiplication"
+      },
+      "decomposition": {
+        "hanViet": "Thặng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thang",
+        "meaningViNoAccent": "Len xe, cuoi",
+        "meaningEnNoAccent": "ride; power; multiplication"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thặng (Lên xe, cưỡi)",
+        "onyomi": "ジョウ, ショウ",
+        "kunyomi": "の.る, -の.り, の.せる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l15_k004",
+      "lessonId": 15,
+      "level": "N4",
+      "character": "秋",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Thu",
+        "meaningVi": "Mùa thu",
+        "meaningViDisplay": "Thu (Mùa thu)",
+        "meaningEn": "autumn; automne; otoño"
+      },
+      "readings": {
+        "onyomi": [
+          "シュウ"
+        ],
+        "kunyomi": [
+          "あき",
+          "とき"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lúa ( ) chín rực lửa ( ) vào mùa thu ( ) 秋 1 8",
+        "en": "autumn; automne; otoño"
+      },
+      "decomposition": {
+        "hanViet": "Thu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thu",
+        "meaningViNoAccent": "Mua thu",
+        "meaningEnNoAccent": "autumn; automne; otono"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thu (Mùa thu)",
+        "onyomi": "シュウ",
+        "kunyomi": "あき, とき"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l15_k005",
+      "lessonId": 15,
+      "level": "N4",
+      "character": "頁",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Hiệt",
+        "meaningVi": "Chủ đề",
+        "meaningViDisplay": "Hiệt (Chủ đề)",
+        "meaningEn": "page; leaf; page"
+      },
+      "readings": {
+        "onyomi": [
+          "ケツ"
+        ],
+        "kunyomi": [
+          "ぺえじ",
+          "おおがい",
+          "かしら"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vấn đề ( ) thị phi ( ) ghi lên giấy ( ) 2 10",
+        "en": "page; leaf; page"
+      },
+      "decomposition": {
+        "hanViet": "Hiệt",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hiet",
+        "meaningViNoAccent": "Chu de",
+        "meaningEnNoAccent": "page; leaf; page"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hiệt (Chủ đề)",
+        "onyomi": "ケツ",
+        "kunyomi": "ぺえじ, おおがい, かしら"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l15_k006",
+      "lessonId": 15,
+      "level": "N4",
+      "character": "風",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Phong",
+        "meaningVi": "Gió",
+        "meaningViDisplay": "Phong (Gió)",
+        "meaningEn": "wind; air; style"
+      },
+      "readings": {
+        "onyomi": [
+          "フウ",
+          "フ"
+        ],
+        "kunyomi": [
+          "かぜ",
+          "かざ-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dưới ghế ( ) 1 ( ) con côn trùng ( ) đang nấp để tránh gió ( ) 2",
+        "en": "wind; air; style"
+      },
+      "decomposition": {
+        "hanViet": "Phong",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phong",
+        "meaningViNoAccent": "Gio",
+        "meaningEnNoAccent": "wind; air; style"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phong (Gió)",
+        "onyomi": "フウ, フ",
+        "kunyomi": "かぜ, かざ-"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l15_k007",
+      "lessonId": 15,
+      "level": "N4",
+      "character": "計",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Kế",
+        "meaningVi": "kế hoạch; tính toán",
+        "meaningViDisplay": "Kế (kế hoạch; tính toán)",
+        "meaningEn": "plot, plan"
+      },
+      "readings": {
+        "onyomi": [
+          "ケイ"
+        ],
+        "kunyomi": [
+          "はか.る",
+          "はか.らう"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Nói ( ) 10 ( ) lần là ra kế hoạch ( ) 1 9",
+        "en": "Core kanji for QUARTET 2: Making your future self from now."
+      },
+      "decomposition": {
+        "hanViet": "Kế",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "画",
+          "標",
+          "算",
+          "測"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ke",
+        "meaningViNoAccent": "ke hoach; tinh toan",
+        "meaningEnNoAccent": "plot, plan"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l02_v003",
+          "sourceSenseId": "n3_l02_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Kế (kế hoạch; tính toán)",
+        "onyomi": "ケイ",
+        "kunyomi": "はか.る, はか.らう"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 2,
+        "themeEn": "Making your future self from now",
+        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

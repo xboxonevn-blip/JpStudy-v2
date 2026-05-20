@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 13,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l13_k001",
+      "lessonId": 13,
+      "level": "N4",
+      "character": "画",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Hoạch",
+        "meaningVi": "vẽ, hoạch định",
+        "meaningViDisplay": "Hoạch (vẽ, hoạch định)",
+        "meaningEn": "brush-stroke, picture"
+      },
+      "readings": {
+        "onyomi": [
+          "ガ",
+          "カク",
+          "エ",
+          "カイ"
+        ],
+        "kunyomi": [
+          "えが.く",
+          "かく.する",
+          "かぎ.る",
+          "はかりごと",
+          "はか.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "1 ( ) khi tự do ( ) há miệng ( ) sẽ nói về kế hoạch ( ) 1",
+        "en": "Core kanji for QUARTET 2: Making your future self from now."
+      },
+      "decomposition": {
+        "hanViet": "Hoạch",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "計",
+          "標",
+          "絵",
+          "図"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Hoach",
+        "meaningViNoAccent": "ve, hoach dinh",
+        "meaningEnNoAccent": "brush-stroke, picture"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l02_v003",
+          "sourceSenseId": "n3_l02_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Hoạch (vẽ, hoạch định)",
+        "onyomi": "ガ, カク, エ, カイ",
+        "kunyomi": "えが.く, かく.する, かぎ.る, はかりごと, はか.る"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 2,
+        "themeEn": "Making your future self from now",
+        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l13_k002",
+      "lessonId": 13,
+      "level": "N4",
+      "character": "妻",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Thê",
+        "meaningVi": "Vợ",
+        "meaningViDisplay": "Thê (Vợ)",
+        "meaningEn": "wife; spouse; épouse"
+      },
+      "readings": {
+        "onyomi": [
+          "サイ"
+        ],
+        "kunyomi": [
+          "つま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lấy 10 ( ) Em ( ) gái ( ) về làm vợ ( ) 妻 5",
+        "en": "wife; spouse; épouse"
+      },
+      "decomposition": {
+        "hanViet": "Thê",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "The",
+        "meaningViNoAccent": "Vo",
+        "meaningEnNoAccent": "wife; spouse; epouse"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thê (Vợ)",
+        "onyomi": "サイ",
+        "kunyomi": "つま"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l13_k003",
+      "lessonId": 13,
+      "level": "N4",
+      "character": "姉",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Tỉ",
+        "meaningVi": "chị gái; người chị",
+        "meaningViDisplay": "Tỉ (chị gái; người chị)",
+        "meaningEn": "elder sister"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "あね",
+          "はは"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cô gái ( ) ra thành phố ( ) học là chị gái ( ) 姉 4",
+        "en": "姉 means elder sister; in 従姉妹 it contributes the female-relative sense."
+      },
+      "decomposition": {
+        "hanViet": "Tỉ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "妹",
+          "兄",
+          "弟",
+          "女"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ti",
+        "meaningViNoAccent": "chi gai; nguoi chi",
+        "meaningEnNoAccent": "elder sister"
+      },
+      "examples": [
+        {
+          "word": "従姉妹",
+          "reading": "いとこ",
+          "meaning": "chị/em họ gái",
+          "meaningEn": "female cousin"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tỉ (chị gái; người chị)",
+        "onyomi": "シ",
+        "kunyomi": "あね, はは"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l13_k004",
+      "lessonId": 13,
+      "level": "N4",
+      "character": "育",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Dục",
+        "meaningVi": "nuôi dạy",
+        "meaningViDisplay": "Dục (nuôi dạy)",
+        "meaningEn": "Raise, Grow"
+      },
+      "readings": {
+        "onyomi": [
+          "イク"
+        ],
+        "kunyomi": [
+          "そだ.つ",
+          "そだ.ち",
+          "そだ.てる",
+          "はぐく.む"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đầu ( ) tư ( ) cả tháng ( ) cho giáo dục ( ) 育 1",
+        "en": "Child developing body/flesh (月) - GROWING up."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "𠒇",
+          "月"
+        ],
+        "componentNames": [
+          "Tử biến thể (trẻ em)",
+          "Nguyệt (tháng, thịt)"
+        ],
+        "relatedKanji": [
+          "教"
+        ],
+        "hanViet": "Dục"
+      },
+      "search": {
+        "hanVietNoAccent": "Duc",
+        "meaningViNoAccent": "nuoi day",
+        "meaningEnNoAccent": "Raise, Grow"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l37_v052",
+          "sourceSenseId": "n4_l37_s052",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l42_v012",
+          "sourceSenseId": "n4_l42_s012",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l28_v048",
+          "sourceSenseId": "n4_l28_s048",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Dục (nuôi dạy)",
+        "onyomi": "イク",
+        "kunyomi": "そだ.つ, そだ.ち, そだ.てる, はぐく.む"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l13_k005",
+      "lessonId": 13,
+      "level": "N4",
+      "character": "界",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Giới",
+        "meaningVi": "Thế giới",
+        "meaningViDisplay": "Giới (Thế giới)",
+        "meaningEn": "world; boundary; monde"
+      },
+      "readings": {
+        "onyomi": [
+          "カイ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Ruộng ( ) lúa ở Việt Nam được giới thiệu ( ) ra toàn thế giới ( ) 2",
+        "en": "world; boundary; monde"
+      },
+      "decomposition": {
+        "hanViet": "Giới",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Gioi",
+        "meaningViNoAccent": "The gioi",
+        "meaningEnNoAccent": "world; boundary; monde"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Giới (Thế giới)",
+        "onyomi": "カイ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l13_k006",
+      "lessonId": 13,
+      "level": "N4",
+      "character": "科",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Khoa",
+        "meaningVi": "khoa; ngành; bộ môn; mục",
+        "meaningViDisplay": "Khoa (khoa; ngành; bộ môn; mục)",
+        "meaningEn": "department, course, section"
+      },
+      "readings": {
+        "onyomi": [
+          "カ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Lúa ( ) dùng đấu ( ) để đong rất khoa học ( ) 科 1 9",
+        "en": "科 means a department, course, or category; 亜科 is a subordinate scientific category."
+      },
+      "decomposition": {
+        "hanViet": "Khoa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "亜",
+          "学",
+          "理",
+          "部"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Khoa",
+        "meaningViNoAccent": "khoa; nganh; bo mon; muc",
+        "meaningEnNoAccent": "department, course, section"
+      },
+      "examples": [
+        {
+          "word": "亜科",
+          "reading": "あか",
+          "meaning": "phân họ; nhóm phân loại phụ",
+          "meaningEn": "subfamily, suborder"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Khoa (khoa; ngành; bộ môn; mục)",
+        "onyomi": "カ",
+        "kunyomi": ""
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l13_k007",
+      "lessonId": 13,
+      "level": "N4",
+      "character": "星",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Tinh",
+        "meaningVi": "Ngôi sao",
+        "meaningViDisplay": "Tinh (Ngôi sao)",
+        "meaningEn": "star; spot; dot"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
+        "kunyomi": [
+          "ほし",
+          "-ぼし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Mặt trời ( ) sinh ( ) ra ngôi sao ( ) 星 2",
+        "en": "star; spot; dot"
+      },
+      "decomposition": {
+        "hanViet": "Tinh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tinh",
+        "meaningViNoAccent": "Ngoi sao",
+        "meaningEnNoAccent": "star; spot; dot"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tinh (Ngôi sao)",
+        "onyomi": "セイ, ショウ",
+        "kunyomi": "ほし, -ぼし"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

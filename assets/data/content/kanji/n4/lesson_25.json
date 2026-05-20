@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 25,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l25_k001",
+      "lessonId": 25,
+      "level": "N4",
+      "character": "緑",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Lục",
+        "meaningVi": "Xanh lá",
+        "meaningViDisplay": "Lục (Xanh lá)",
+        "meaningEn": "green; vert; verde"
+      },
+      "readings": {
+        "onyomi": [
+          "リョク",
+          "ロク"
+        ],
+        "kunyomi": [
+          "みどり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Sợi tơ ( ) của Em Thủy ( ) màu xanh lá cây ( )緑 1 7",
+        "en": "green; vert; verde"
+      },
+      "decomposition": {
+        "hanViet": "Lục",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Luc",
+        "meaningViNoAccent": "Xanh la",
+        "meaningEnNoAccent": "green; vert; verde"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lục (Xanh lá)",
+        "onyomi": "リョク, ロク",
+        "kunyomi": "みどり"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l25_k002",
+      "lessonId": 25,
+      "level": "N4",
+      "character": "鳴",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Minh",
+        "meaningVi": "Hót, kêu",
+        "meaningViDisplay": "Minh (Hót, kêu)",
+        "meaningEn": "chirp; cry; bark"
+      },
+      "readings": {
+        "onyomi": [
+          "メイ"
+        ],
+        "kunyomi": [
+          "な.く",
+          "な.る",
+          "な.らす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Miệng ( ) con chim ( ) đang hót ( ) 鳴 4",
+        "en": "chirp; cry; bark"
+      },
+      "decomposition": {
+        "hanViet": "Minh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Minh",
+        "meaningViNoAccent": "Hot, keu",
+        "meaningEnNoAccent": "chirp; cry; bark"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Minh (Hót, kêu)",
+        "onyomi": "メイ",
+        "kunyomi": "な.く, な.る, な.らす"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l25_k003",
+      "lessonId": 25,
+      "level": "N4",
+      "character": "質",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Chất",
+        "meaningVi": "Chất lượng",
+        "meaningViDisplay": "Chất (Chất lượng)",
+        "meaningEn": "substance; quality; matter"
+      },
+      "readings": {
+        "onyomi": [
+          "シツ",
+          "シチ",
+          "チ"
+        ],
+        "kunyomi": [
+          "たち",
+          "ただ.す",
+          "もと",
+          "わりふ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng 2 rìu ( ) gõ vào bảo bối ( ) để kiểm tra chất lượng ( ) 1 5",
+        "en": "substance; quality; matter"
+      },
+      "decomposition": {
+        "hanViet": "Chất",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chat",
+        "meaningViNoAccent": "Chat luong",
+        "meaningEnNoAccent": "substance; quality; matter"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chất (Chất lượng)",
+        "onyomi": "シツ, シチ, チ",
+        "kunyomi": "たち, ただ.す, もと, わりふ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l25_k004",
+      "lessonId": 25,
+      "level": "N4",
+      "character": "親",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Thân",
+        "meaningVi": "cha mẹ; người thân; thân thiết",
+        "meaningViDisplay": "Thân (cha mẹ; người thân; thân thiết)",
+        "meaningEn": "parent, relative, intimacy"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
+        ],
+        "kunyomi": [
+          "おや",
+          "おや-",
+          "した.しい",
+          "した.しむ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đứng ( ) trên cây ( ) nhìn ( ) người thân *bố mẹ* ( ) 1",
+        "en": "親 means parent or intimacy; in 親指 it names the thumb as the parent finger."
+      },
+      "decomposition": {
+        "hanViet": "Thân",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "母",
+          "父",
+          "近",
+          "指"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Than",
+        "meaningViNoAccent": "cha me; nguoi than; than thiet",
+        "meaningEnNoAccent": "parent, relative, intimacy"
+      },
+      "examples": [
+        {
+          "word": "親指",
+          "reading": "おやゆび",
+          "meaning": "ngón cái",
+          "meaningEn": "thumb"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thân (cha mẹ; người thân; thân thiết)",
+        "onyomi": "シン",
+        "kunyomi": "おや, おや-, した.しい, した.しむ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l25_k005",
+      "lessonId": 25,
+      "level": "N4",
+      "character": "薬",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Dược",
+        "meaningVi": "thuốc",
+        "meaningViDisplay": "Dược (thuốc)",
+        "meaningEn": "Medicine"
+      },
+      "readings": {
+        "onyomi": [
+          "ヤク"
+        ],
+        "kunyomi": [
+          "くすり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Loại cỏ ( ) làm mình vui ( ) là thuốc ( ) quý 2 3",
+        "en": "Grass/Herbs (艹) that bring joy (楽) are MEDICINE."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "艹",
+          "楽"
+        ],
+        "componentNames": [
+          "Thảo (cỏ)",
+          "Lạc (vui)"
+        ],
+        "relatedKanji": [
+          "楽",
+          "病"
+        ],
+        "hanViet": "Dược"
+      },
+      "search": {
+        "hanVietNoAccent": "Duoc",
+        "meaningViNoAccent": "thuoc",
+        "meaningEnNoAccent": "Medicine"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l17_v033",
+          "sourceSenseId": "n5_l17_s033",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v013",
+          "sourceSenseId": "n5_l17_s013",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l42_v023",
+          "sourceSenseId": "n4_l42_s023",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Dược (thuốc)",
+        "onyomi": "ヤク",
+        "kunyomi": "くすり"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l25_k006",
+      "lessonId": 25,
+      "level": "N4",
+      "character": "館",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Quán",
+        "meaningVi": "Công quán, quán trọ",
+        "meaningViDisplay": "Quán (Công quán, quán trọ)",
+        "meaningEn": "building; mansion; large building"
+      },
+      "readings": {
+        "onyomi": [
+          "カン"
+        ],
+        "kunyomi": [
+          "やかた",
+          "たて"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ăn ( ) với quan ( ) trong quán ( ) 館 1 9",
+        "en": "building; mansion; large building"
+      },
+      "decomposition": {
+        "hanViet": "Quán",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Quan",
+        "meaningViNoAccent": "Cong quan, quan tro",
+        "meaningEnNoAccent": "building; mansion; large building"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Quán (Công quán, quán trọ)",
+        "onyomi": "カン",
+        "kunyomi": "やかた, たて"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l25_k007",
+      "lessonId": 25,
+      "level": "N4",
+      "character": "験",
+      "strokeCount": 18,
+      "labels": {
+        "hanViet": "Nghiệm",
+        "meaningVi": "kiểm nghiệm; thử nghiệm; chứng nghiệm",
+        "meaningViDisplay": "Nghiệm (kiểm nghiệm; thử nghiệm; chứng nghiệm)",
+        "meaningEn": "verification, effect"
+      },
+      "readings": {
+        "onyomi": [
+          "ケン",
+          "ゲン"
+        ],
+        "kunyomi": [
+          "あかし",
+          "しるし",
+          "ため.す",
+          "ためし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Tìm người ( ) phù hợp ( ) với ngựa ( ) để thử nghiệm ( ) tốc độ 2 11",
+        "en": "Core kanji for QUARTET 17: Science and technology."
+      },
+      "decomposition": {
+        "hanViet": "Nghiệm",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "試",
+          "実",
+          "検",
+          "証"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Nghiem",
+        "meaningViNoAccent": "kiem nghiem; thu nghiem; chung nghiem",
+        "meaningEnNoAccent": "verification, effect"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l17_v004",
+          "sourceSenseId": "n3_l17_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nghiệm (kiểm nghiệm; thử nghiệm; chứng nghiệm)",
+        "onyomi": "ケン, ゲン",
+        "kunyomi": "あかし, しるし, ため.す, ためし"
+      },
+      "theme": {
+        "quartetLesson": 17,
+        "themeEn": "Science and technology",
+        "themeVi": "Khoa học và công nghệ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

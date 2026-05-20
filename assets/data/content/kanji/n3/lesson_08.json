@@ -1,455 +1,168 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 8,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l08_k001",
+      "kanjiId": "n3_canonical_l08_k001",
       "lessonId": 8,
       "level": "N3",
-      "character": "伝",
-      "strokeCount": 6,
+      "character": "形",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Truyền",
-        "meaningVi": "truyền đạt; truyền thống",
-        "meaningViDisplay": "Truyền (truyền đạt; truyền thống)",
-        "meaningEn": "transmit, go along"
+        "hanViet": "Hình",
+        "meaningVi": "Hình Dang Srr Hhh",
+        "meaningViDisplay": "Hình (Hình Dang Srr Hhh)",
+        "meaningEn": "shape; form; style"
       },
       "readings": {
         "onyomi": [
-          "デン",
-          "テン"
+          "ケイ",
+          "ギョウ"
         ],
         "kunyomi": [
-          "つた.わる",
-          "つた.える",
-          "つた.う",
-          "つだ.う"
+          "かた",
+          "-がた",
+          "かたち",
+          "なり"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
+        "vi": "Ghi nhớ 形 qua Hán-Việt Hình.",
+        "en": "shape; form; style"
       },
       "decomposition": {
-        "hanViet": "Truyền",
-        "structure": "standalone",
+        "hanViet": "Hình",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "統",
-          "説",
-          "文",
-          "祖"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "truyen",
-        "meaningViNoAccent": "truyen dat; truyen thong",
-        "meaningEnNoAccent": "transmit, go along"
+        "hanVietNoAccent": "Hinh",
+        "meaningViNoAccent": "Hinh Dang Srr Hhh",
+        "meaningEnNoAccent": "shape; form; style"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l08_v001",
-          "sourceSenseId": "n3_l08_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Truyền (truyền đạt; truyền thống)",
-        "onyomi": "デン, テン",
-        "kunyomi": "つた.わる, つた.える, つた.う, つだ.う"
+        "meaning": "Hình (Hình Dang Srr Hhh)",
+        "onyomi": "ケイ, ギョウ",
+        "kunyomi": "かた, -がた, かたち, なり"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l08_k002",
+      "kanjiId": "n3_canonical_l08_k002",
       "lessonId": 8,
       "level": "N3",
-      "character": "統",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Thống",
-        "meaningVi": "thống nhất; quản lý; hệ thống",
-        "meaningViDisplay": "Thống (thống nhất; quản lý; hệ thống)",
-        "meaningEn": "overall, relationship"
-      },
-      "readings": {
-        "onyomi": [
-          "トウ"
-        ],
-        "kunyomi": [
-          "す.べる"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
-      },
-      "decomposition": {
-        "hanViet": "Thống",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "伝",
-          "制",
-          "治",
-          "管"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thong",
-        "meaningViNoAccent": "thong nhat; quan ly; he thong",
-        "meaningEnNoAccent": "overall, relationship"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l08_v001",
-          "sourceSenseId": "n3_l08_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thống (thống nhất; quản lý; hệ thống)",
-        "onyomi": "トウ",
-        "kunyomi": "す.べる"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
-    },
-    {
-      "kanjiId": "n3_l08_k003",
-      "lessonId": 8,
-      "level": "N3",
-      "character": "祭",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Tế",
-        "meaningVi": "lễ hội; cúng tế",
-        "meaningViDisplay": "Tế (lễ hội; cúng tế)",
-        "meaningEn": "ritual, offer prayers"
-      },
-      "readings": {
-        "onyomi": [
-          "サイ"
-        ],
-        "kunyomi": [
-          "まつ.る",
-          "まつ.り",
-          "まつり"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
-      },
-      "decomposition": {
-        "hanViet": "Tế",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "礼",
-          "神",
-          "祖",
-          "季"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "te",
-        "meaningViNoAccent": "le hoi; cung te",
-        "meaningEnNoAccent": "ritual, offer prayers"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l08_v002",
-          "sourceSenseId": "n3_l08_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tế (lễ hội; cúng tế)",
-        "onyomi": "サイ",
-        "kunyomi": "まつ.る, まつ.り, まつり"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
-    },
-    {
-      "kanjiId": "n3_l08_k004",
-      "lessonId": 8,
-      "level": "N3",
-      "character": "季",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Quý",
-        "meaningVi": "mùa; quý trong năm",
-        "meaningViDisplay": "Quý (mùa; quý trong năm)",
-        "meaningEn": "seasons"
-      },
-      "readings": {
-        "onyomi": [
-          "キ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
-      },
-      "decomposition": {
-        "hanViet": "Quý",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "節",
-          "春",
-          "夏",
-          "秋"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "quy",
-        "meaningViNoAccent": "mua; quy trong nam",
-        "meaningEnNoAccent": "seasons"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l08_v004",
-          "sourceSenseId": "n3_l08_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Quý (mùa; quý trong năm)",
-        "onyomi": "キ",
-        "kunyomi": ""
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
-    },
-    {
-      "kanjiId": "n3_l08_k005",
-      "lessonId": 8,
-      "level": "N3",
-      "character": "節",
-      "strokeCount": 13,
-      "labels": {
-        "hanViet": "Tiết",
-        "meaningVi": "mùa; tiết; giai đoạn",
-        "meaningViDisplay": "Tiết (mùa; tiết; giai đoạn)",
-        "meaningEn": "node, season"
-      },
-      "readings": {
-        "onyomi": [
-          "セツ",
-          "セチ"
-        ],
-        "kunyomi": [
-          "ふし",
-          "-ぶし",
-          "のっと"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
-      },
-      "decomposition": {
-        "hanViet": "Tiết",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "季",
-          "祭",
-          "年",
-          "時"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tiet",
-        "meaningViNoAccent": "mua; tiet; giai doan",
-        "meaningEnNoAccent": "node, season"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l08_v004",
-          "sourceSenseId": "n3_l08_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tiết (mùa; tiết; giai đoạn)",
-        "onyomi": "セツ, セチ",
-        "kunyomi": "ふし, -ぶし, のっと"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
-    },
-    {
-      "kanjiId": "n3_l08_k006",
-      "lessonId": 8,
-      "level": "N3",
-      "character": "神",
-      "strokeCount": 9,
+      "character": "臣",
+      "strokeCount": 7,
       "labels": {
         "hanViet": "Thần",
-        "meaningVi": "thần linh; tinh thần",
-        "meaningViDisplay": "Thần (thần linh; tinh thần)",
-        "meaningEn": "gods, mind"
+        "meaningVi": "retainer; subject; servant",
+        "meaningViDisplay": "Thần (retainer; subject; servant)",
+        "meaningEn": "retainer; subject; servant"
       },
       "readings": {
         "onyomi": [
           "シン",
           "ジン"
         ],
-        "kunyomi": [
-          "かみ",
-          "かん-",
-          "こう-"
-        ]
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
+        "vi": "Ghi nhớ 臣 qua Hán-Việt Thần.",
+        "en": "retainer; subject; servant"
       },
       "decomposition": {
         "hanViet": "Thần",
-        "structure": "standalone",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "祭",
-          "礼",
-          "社",
-          "心"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "than",
-        "meaningViNoAccent": "than linh; tinh than",
-        "meaningEnNoAccent": "gods, mind"
+        "hanVietNoAccent": "Than",
+        "meaningViNoAccent": "retainer; subject; servant",
+        "meaningEnNoAccent": "retainer; subject; servant"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l08_v007",
-          "sourceSenseId": "n3_l08_s007",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Thần (thần linh; tinh thần)",
+        "meaning": "Thần (retainer; subject; servant)",
         "onyomi": "シン, ジン",
-        "kunyomi": "かみ, かん-, こう-"
+        "kunyomi": ""
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l08_k007",
+      "kanjiId": "n3_canonical_l08_k003",
       "lessonId": 8,
       "level": "N3",
-      "character": "礼",
-      "strokeCount": 5,
+      "character": "投",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Lễ",
-        "meaningVi": "lễ nghi; lời cảm ơn",
-        "meaningViDisplay": "Lễ (lễ nghi; lời cảm ơn)",
-        "meaningEn": "salute, bow"
+        "hanViet": "Đầu",
+        "meaningVi": "ném; đầu tư; bỏ vào",
+        "meaningViDisplay": "Đầu (ném; đầu tư; bỏ vào)",
+        "meaningEn": "throw, invest, put in"
       },
       "readings": {
         "onyomi": [
-          "レイ",
-          "ライ"
+          "トウ"
         ],
-        "kunyomi": []
+        "kunyomi": [
+          "な.げる",
+          "-な.げ"
+        ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
+        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
+        "en": "Core kanji for QUARTET 21: Economy and finance."
       },
       "decomposition": {
-        "hanViet": "Lễ",
+        "hanViet": "Đầu",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "祭",
-          "神",
-          "祖",
-          "謝"
+          "資",
+          "入",
+          "打",
+          "捨"
         ]
       },
       "search": {
-        "hanVietNoAccent": "le",
-        "meaningViNoAccent": "le nghi; loi cam on",
-        "meaningEnNoAccent": "salute, bow"
+        "hanVietNoAccent": "Dau",
+        "meaningViNoAccent": "nem; dau tu; bo vao",
+        "meaningEnNoAccent": "throw, invest, put in"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l08_v008",
-          "sourceSenseId": "n3_l08_s008",
+          "sourceVocabId": "n3_l21_v005",
+          "sourceSenseId": "n3_l21_s005",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -457,62 +170,123 @@
         }
       ],
       "legacy": {
-        "meaning": "Lễ (lễ nghi; lời cảm ơn)",
-        "onyomi": "レイ, ライ",
-        "kunyomi": ""
+        "meaning": "Đầu (ném; đầu tư; bỏ vào)",
+        "onyomi": "トウ",
+        "kunyomi": "な.げる, -な.げ"
+      },
+      "theme": {
+        "quartetLesson": 21,
+        "themeEn": "Economy and finance",
+        "themeVi": "Kinh tế và tài chính"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l08_k008",
+      "kanjiId": "n3_canonical_l08_k004",
       "lessonId": 8,
       "level": "N3",
-      "character": "祖",
-      "strokeCount": 9,
+      "character": "役",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Tổ",
-        "meaningVi": "tổ tiên; người sáng lập",
-        "meaningViDisplay": "Tổ (tổ tiên; người sáng lập)",
-        "meaningEn": "ancestor, pioneer"
+        "hanViet": "Dịch",
+        "meaningVi": "duty; war; campaign",
+        "meaningViDisplay": "Dịch (duty; war; campaign)",
+        "meaningEn": "duty; war; campaign"
       },
       "readings": {
         "onyomi": [
-          "ソ"
+          "ヤク",
+          "エキ"
         ],
         "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
-        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
+        "vi": "Biên tập bởi thocodehoctiengnhat ®",
+        "en": "duty; war; campaign"
       },
       "decomposition": {
-        "hanViet": "Tổ",
+        "hanViet": "Dịch",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dich",
+        "meaningViNoAccent": "duty; war; campaign",
+        "meaningEnNoAccent": "duty; war; campaign"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Dịch (duty; war; campaign)",
+        "onyomi": "ヤク, エキ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k005",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "和",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Hòa",
+        "meaningVi": "hòa hợp; hòa bình; kiểu Nhật",
+        "meaningViDisplay": "Hòa (hòa hợp; hòa bình; kiểu Nhật)",
+        "meaningEn": "harmony, peace, Japanese style"
+      },
+      "readings": {
+        "onyomi": [
+          "ワ",
+          "オ",
+          "カ"
+        ],
+        "kunyomi": [
+          "やわ.らぐ",
+          "やわ.らげる",
+          "なご.む",
+          "なご.やか",
+          "あ.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 23: History and politics."
+      },
+      "decomposition": {
+        "hanViet": "Hòa",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "伝",
-          "祭",
-          "礼",
-          "先"
+          "平",
+          "協",
+          "調",
+          "日"
         ]
       },
       "search": {
-        "hanVietNoAccent": "to",
-        "meaningViNoAccent": "to tien; nguoi sang lap",
-        "meaningEnNoAccent": "ancestor, pioneer"
+        "hanVietNoAccent": "Hoa",
+        "meaningViNoAccent": "hoa hop; hoa binh; kieu Nhat",
+        "meaningEnNoAccent": "harmony, peace, Japanese style"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l08_v011",
-          "sourceSenseId": "n3_l08_s011",
+          "sourceVocabId": "n3_l23_v004",
+          "sourceSenseId": "n3_l23_s004",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -520,21 +294,567 @@
         }
       ],
       "legacy": {
-        "meaning": "Tổ (tổ tiên; người sáng lập)",
-        "onyomi": "ソ",
-        "kunyomi": ""
+        "meaning": "Hòa (hòa hợp; hòa bình; kiểu Nhật)",
+        "onyomi": "ワ, オ, カ",
+        "kunyomi": "やわ.らぐ, やわ.らげる, なご.む, なご.やか, あ.える"
+      },
+      "theme": {
+        "quartetLesson": 23,
+        "themeEn": "History and politics",
+        "themeVi": "Lịch sử và chính trị"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k006",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "念",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Niệm",
+        "meaningVi": "Kỷ Niệm",
+        "meaningViDisplay": "Niệm (Kỷ Niệm)",
+        "meaningEn": "wish; sense; idea"
+      },
+      "readings": {
+        "onyomi": [
+          "ネン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 念 qua Hán-Việt Niệm.",
+        "en": "wish; sense; idea"
+      },
+      "decomposition": {
+        "hanViet": "Niệm",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Niem",
+        "meaningViNoAccent": "Ky Niem",
+        "meaningEnNoAccent": "wish; sense; idea"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Niệm (Kỷ Niệm)",
+        "onyomi": "ネン",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k007",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "泣",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Khấp",
+        "meaningVi": "khóc",
+        "meaningViDisplay": "Khấp (khóc)",
+        "meaningEn": "Cry"
+      },
+      "readings": {
+        "onyomi": [
+          "キュウ"
+        ],
+        "kunyomi": [
+          "な.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dòng nước (Thủy 氵) của người đang đứng (Lập 立) là đang khÓC.",
+        "en": "Flowing water (氵) from a standing person (立) - CRYing."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "立"
+        ],
+        "componentNames": [
+          "Thủy (nước)",
+          "Lập (đứng)"
+        ],
+        "relatedKanji": [
+          "立",
+          "洗"
+        ],
+        "hanViet": "Khấp"
+      },
+      "search": {
+        "hanVietNoAccent": "Khap",
+        "meaningViNoAccent": "khoc",
+        "meaningEnNoAccent": "Cry"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l44_v049",
+          "sourceSenseId": "n4_l44_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l44_v053",
+          "sourceSenseId": "n4_l44_s053",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l44_v001",
+          "sourceSenseId": "n4_l44_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Khấp (khóc)",
+        "onyomi": "キュウ",
+        "kunyomi": "な.く"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k008",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "性",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Tính",
+        "meaningVi": "tính chất; bản tính; giới tính",
+        "meaningViDisplay": "Tính (tính chất; bản tính; giới tính)",
+        "meaningEn": "nature, character, sex"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
+        "kunyomi": [
+          "さが"
+        ]
+      },
+      "mnemonic": {
+        "vi": "性 là bản chất hoặc giới tính; 異性 chỉ người thuộc giới tính khác.",
+        "en": "性 is nature, character, or sex; 異性 means the opposite sex."
+      },
+      "decomposition": {
+        "hanViet": "Tính",
+        "structure": "left-right",
+        "components": [
+          "忄",
+          "生"
+        ],
+        "componentNames": [
+          "tâm/ý nghĩ",
+          "sinh/sống"
+        ],
+        "relatedKanji": [
+          "質",
+          "生",
+          "別",
+          "異"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tinh",
+        "meaningViNoAccent": "tinh chat; ban tinh; gioi tinh",
+        "meaningEnNoAccent": "nature, character, sex"
+      },
+      "examples": [
+        {
+          "word": "異性",
+          "reading": "いせい",
+          "meaning": "người khác giới; giới tính khác",
+          "meaningEn": "opposite sex"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tính (tính chất; bản tính; giới tính)",
+        "onyomi": "セイ, ショウ",
+        "kunyomi": "さが"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k009",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "彼",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Bỉ",
+        "meaningVi": "anh ấy; người kia; cái đó",
+        "meaningViDisplay": "Bỉ (anh ấy; người kia; cái đó)",
+        "meaningEn": "he; that; the"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒ"
+        ],
+        "kunyomi": [
+          "かれ",
+          "かの",
+          "か.の"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "彼 points to someone or something over there; the basic word 彼 means he or boyfriend."
+      },
+      "decomposition": {
+        "hanViet": "Bỉ",
+        "structure": "left-right",
+        "components": [
+          "彳",
+          "皮"
+        ],
+        "componentNames": [
+          "bước chân",
+          "da"
+        ],
+        "relatedKanji": [
+          "此",
+          "方",
+          "他",
+          "女"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bi",
+        "meaningViNoAccent": "anh ay; nguoi kia; cai do",
+        "meaningEnNoAccent": "he; that; the"
+      },
+      "examples": [
+        {
+          "word": "彼",
+          "reading": "かれ",
+          "meaning": "anh ấy; bạn trai",
+          "meaningEn": "he; boyfriend"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Bỉ (anh ấy; người kia; cái đó)",
+        "onyomi": "ヒ",
+        "kunyomi": "かれ, かの, か.の"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k010",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "効",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Hiệu",
+        "meaningVi": "merit; efficacy; efficiency",
+        "meaningViDisplay": "Hiệu (merit; efficacy; efficiency)",
+        "meaningEn": "merit; efficacy; efficiency"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ"
+        ],
+        "kunyomi": [
+          "き.く",
+          "ききめ",
+          "なら.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "merit; efficacy; efficiency"
+      },
+      "decomposition": {
+        "hanViet": "Hiệu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hieu",
+        "meaningViNoAccent": "merit; efficacy; efficiency",
+        "meaningEnNoAccent": "merit; efficacy; efficiency"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hiệu (merit; efficacy; efficiency)",
+        "onyomi": "コウ",
+        "kunyomi": "き.く, ききめ, なら.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k011",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "泊",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Bạc",
+        "meaningVi": "nghỉ qua đêm; lưu trú; neo đậu",
+        "meaningViDisplay": "Bạc (nghỉ qua đêm; lưu trú; neo đậu)",
+        "meaningEn": "overnight stay, put up at"
+      },
+      "readings": {
+        "onyomi": [
+          "ハク"
+        ],
+        "kunyomi": [
+          "と.まる",
+          "と.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 10: Du lịch và giao thông.",
+        "en": "Core kanji for QUARTET 10: Travel and transportation."
+      },
+      "decomposition": {
+        "hanViet": "Bạc",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "宿",
+          "旅",
+          "港",
+          "夜"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bac",
+        "meaningViNoAccent": "nghi qua dem; luu tru; neo dau",
+        "meaningEnNoAccent": "overnight stay, put up at"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l10_v005",
+          "sourceSenseId": "n3_l10_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Bạc (nghỉ qua đêm; lưu trú; neo đậu)",
+        "onyomi": "ハク",
+        "kunyomi": "と.まる, と.める"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 8,
-        "themeEn": "Traditions and seasonal events",
-        "themeVi": "Truyền thống và sự kiện theo mùa"
-      }
+        "quartetLesson": 10,
+        "themeEn": "Travel and transportation",
+        "themeVi": "Du lịch và giao thông"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k012",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "注",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Chú",
+        "meaningVi": "đặt hàng; chú ý; ghi chú",
+        "meaningViDisplay": "Chú (đặt hàng; chú ý; ghi chú)",
+        "meaningEn": "pour, irrigate"
+      },
+      "readings": {
+        "onyomi": [
+          "チュウ"
+        ],
+        "kunyomi": [
+          "そそ.ぐ",
+          "さ.す",
+          "つ.ぐ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
+        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
+      },
+      "decomposition": {
+        "hanViet": "Chú",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "文",
+          "意",
+          "記",
+          "問"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Chu",
+        "meaningViNoAccent": "dat hang; chu y; ghi chu",
+        "meaningEnNoAccent": "pour, irrigate"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l06_v001",
+          "sourceSenseId": "n3_l06_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Chú (đặt hàng; chú ý; ghi chú)",
+        "onyomi": "チュウ",
+        "kunyomi": "そそ.ぐ, さ.す, つ.ぐ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 6,
+        "themeEn": "Online shopping and consumer behavior",
+        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l08_k013",
+      "lessonId": 8,
+      "level": "N3",
+      "character": "放",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Phóng",
+        "meaningVi": "phát ra; thả; phóng thích",
+        "meaningViDisplay": "Phóng (phát ra; thả; phóng thích)",
+        "meaningEn": "set free, release"
+      },
+      "readings": {
+        "onyomi": [
+          "ホウ"
+        ],
+        "kunyomi": [
+          "はな.す",
+          "-っぱな.し",
+          "はな.つ",
+          "はな.れる",
+          "こ.く",
+          "ほう.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 9: Truyền thông và thông tin.",
+        "en": "Core kanji for QUARTET 9: Media and information."
+      },
+      "decomposition": {
+        "hanViet": "Phóng",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "報",
+          "送",
+          "発",
+          "聞"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Phong",
+        "meaningViNoAccent": "phat ra; tha; phong thich",
+        "meaningEnNoAccent": "set free, release"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l09_v003",
+          "sourceSenseId": "n3_l09_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Phóng (phát ra; thả; phóng thích)",
+        "onyomi": "ホウ",
+        "kunyomi": "はな.す, -っぱな.し, はな.つ, はな.れる, こ.く, ほう.る"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 9,
+        "themeEn": "Media and information",
+        "themeVi": "Truyền thông và thông tin"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

@@ -1,451 +1,259 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 18,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l18_k001",
+      "kanjiId": "n3_canonical_l18_k001",
       "lessonId": 18,
       "level": "N3",
-      "character": "法",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Pháp",
-        "meaningVi": "luật pháp; phương pháp; nguyên tắc",
-        "meaningViDisplay": "Pháp (luật pháp; phương pháp; nguyên tắc)",
-        "meaningEn": "method, law"
-      },
-      "readings": {
-        "onyomi": [
-          "ホウ",
-          "ハッ",
-          "ホッ",
-          "フラン"
-        ],
-        "kunyomi": [
-          "のり"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
-      },
-      "decomposition": {
-        "hanViet": "Pháp",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "律",
-          "規",
-          "則",
-          "制"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "phap",
-        "meaningViNoAccent": "luat phap; phuong phap; nguyen tac",
-        "meaningEnNoAccent": "method, law"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l18_v001",
-          "sourceSenseId": "n3_l18_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Pháp (luật pháp; phương pháp; nguyên tắc)",
-        "onyomi": "ホウ, ハッ, ホッ, フラン",
-        "kunyomi": "のり"
-      },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l18_k002",
-      "lessonId": 18,
-      "level": "N3",
-      "character": "律",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Luật",
-        "meaningVi": "luật lệ; quy tắc; nhịp điệu",
-        "meaningViDisplay": "Luật (luật lệ; quy tắc; nhịp điệu)",
-        "meaningEn": "rhythm, law"
-      },
-      "readings": {
-        "onyomi": [
-          "リツ",
-          "リチ",
-          "レツ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
-      },
-      "decomposition": {
-        "hanViet": "Luật",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "法",
-          "規",
-          "則",
-          "制"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "luat",
-        "meaningViNoAccent": "luat le; quy tac; nhip dieu",
-        "meaningEnNoAccent": "rhythm, law"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l18_v001",
-          "sourceSenseId": "n3_l18_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Luật (luật lệ; quy tắc; nhịp điệu)",
-        "onyomi": "リツ, リチ, レツ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l18_k003",
-      "lessonId": 18,
-      "level": "N3",
-      "character": "規",
+      "character": "悪",
       "strokeCount": 11,
       "labels": {
-        "hanViet": "Quy",
-        "meaningVi": "quy tắc; chuẩn mực; phép đo",
-        "meaningViDisplay": "Quy (quy tắc; chuẩn mực; phép đo)",
-        "meaningEn": "standard, measure"
+        "hanViet": "Ác",
+        "meaningVi": "xấu; ác; sai trái",
+        "meaningViDisplay": "Ác (xấu; ác; sai trái)",
+        "meaningEn": "bad, vice, evil, wrong"
       },
       "readings": {
         "onyomi": [
-          "キ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
-      },
-      "decomposition": {
-        "hanViet": "Quy",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "則",
-          "法",
-          "律",
-          "制"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "quy",
-        "meaningViNoAccent": "quy tac; chuan muc; phep do",
-        "meaningEnNoAccent": "standard, measure"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l18_v002",
-          "sourceSenseId": "n3_l18_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Quy (quy tắc; chuẩn mực; phép đo)",
-        "onyomi": "キ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l18_k004",
-      "lessonId": 18,
-      "level": "N3",
-      "character": "則",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Tắc",
-        "meaningVi": "quy tắc; noi theo; nguyên tắc",
-        "meaningViDisplay": "Tắc (quy tắc; noi theo; nguyên tắc)",
-        "meaningEn": "rule, law"
-      },
-      "readings": {
-        "onyomi": [
-          "ソク"
+          "アク",
+          "オ"
         ],
         "kunyomi": [
-          "のっと.る",
-          "のり",
-          "すなわち"
+          "わる.い",
+          "わる-",
+          "あ.し",
+          "にく.い",
+          "-にく.い",
+          "ああ",
+          "いずくに",
+          "いずくんぞ",
+          "にく.む"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
+        "vi": "悪 là xấu, ác hoặc sai trái; 悪 đọc あく khi nói chung về cái ác/sự xấu xa.",
+        "en": "悪 means bad, evil, or wrong; 悪 read あく refers to evil or wrongdoing."
       },
       "decomposition": {
-        "hanViet": "Tắc",
-        "structure": "standalone",
+        "hanViet": "Ác",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "規",
-          "法",
-          "律",
-          "制"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tac",
-        "meaningViNoAccent": "quy tac; noi theo; nguyen tac",
-        "meaningEnNoAccent": "rule, law"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l18_v002",
-          "sourceSenseId": "n3_l18_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tắc (quy tắc; noi theo; nguyên tắc)",
-        "onyomi": "ソク",
-        "kunyomi": "のっと.る, のり, すなわち"
-      },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l18_k005",
-      "lessonId": 18,
-      "level": "N3",
-      "character": "犯",
-      "strokeCount": 5,
-      "labels": {
-        "hanViet": "Phạm",
-        "meaningVi": "phạm tội; vi phạm; người phạm tội",
-        "meaningViDisplay": "Phạm (phạm tội; vi phạm; người phạm tội)",
-        "meaningEn": "crime, sin"
-      },
-      "readings": {
-        "onyomi": [
-          "ハン",
-          "ボン"
-        ],
-        "kunyomi": [
-          "おか.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
-      },
-      "decomposition": {
-        "hanViet": "Phạm",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
+          "善",
           "罪",
-          "法",
-          "裁",
-          "警"
+          "害",
+          "嫌"
         ]
       },
       "search": {
-        "hanVietNoAccent": "pham",
-        "meaningViNoAccent": "pham toi; vi pham; nguoi pham toi",
-        "meaningEnNoAccent": "crime, sin"
+        "hanVietNoAccent": "Ac",
+        "meaningViNoAccent": "xau; ac; sai trai",
+        "meaningEnNoAccent": "bad, vice, evil, wrong"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l18_v005",
-          "sourceSenseId": "n3_l18_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "悪",
+          "reading": "あく",
+          "meaning": "điều ác; sự xấu xa",
+          "meaningEn": "evil, wickedness"
         }
       ],
-      "legacy": {
-        "meaning": "Phạm (phạm tội; vi phạm; người phạm tội)",
-        "onyomi": "ハン, ボン",
-        "kunyomi": "おか.す"
-      },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
-      },
       "tags": [
-        "vi-source-verified"
-      ]
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Ác (xấu; ác; sai trái)",
+        "onyomi": "アク, オ",
+        "kunyomi": "わる.い, わる-, あ.し, にく.い, -にく.い, ああ, いずくに, いずくんぞ, にく.む"
+      }
     },
     {
-      "kanjiId": "n3_l18_k006",
+      "kanjiId": "n3_canonical_l18_k002",
       "lessonId": 18,
       "level": "N3",
-      "character": "罪",
-      "strokeCount": 13,
+      "character": "組",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Tội",
-        "meaningVi": "tội lỗi; tội phạm; trách nhiệm",
-        "meaningViDisplay": "Tội (tội lỗi; tội phạm; trách nhiệm)",
-        "meaningEn": "guilt, sin"
+        "hanViet": "Tổ",
+        "meaningVi": "Tổ Chức (fete Ee",
+        "meaningViDisplay": "Tổ (Tổ Chức (fete Ee)",
+        "meaningEn": "association; braid; plait"
       },
       "readings": {
         "onyomi": [
-          "ザイ"
+          "ソ"
         ],
         "kunyomi": [
-          "つみ"
+          "く.む",
+          "くみ",
+          "-ぐみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
+        "vi": "Ghi nhớ 組 qua Hán-Việt Tổ.",
+        "en": "association; braid; plait"
       },
       "decomposition": {
-        "hanViet": "Tội",
-        "structure": "standalone",
+        "hanViet": "Tổ",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "犯",
-          "法",
-          "裁",
-          "罰"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "toi",
-        "meaningViNoAccent": "toi loi; toi pham; trach nhiem",
-        "meaningEnNoAccent": "guilt, sin"
+        "hanVietNoAccent": "To",
+        "meaningViNoAccent": "To Chuc (fete Ee",
+        "meaningEnNoAccent": "association; braid; plait"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l18_v005",
-          "sourceSenseId": "n3_l18_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Tội (tội lỗi; tội phạm; trách nhiệm)",
-        "onyomi": "ザイ",
-        "kunyomi": "つみ"
+        "meaning": "Tổ (Tổ Chức (fete Ee)",
+        "onyomi": "ソ",
+        "kunyomi": "く.む, くみ, -ぐみ"
       },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
-      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n3_l18_k007",
+      "kanjiId": "n3_canonical_l18_k003",
       "lessonId": 18,
       "level": "N3",
-      "character": "裁",
-      "strokeCount": 12,
+      "character": "商",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Tài",
-        "meaningVi": "xét xử; phán quyết; cắt may",
-        "meaningViDisplay": "Tài (xét xử; phán quyết; cắt may)",
-        "meaningEn": "tailor, judge"
+        "hanViet": "Thương",
+        "meaningVi": "buôn bán; thương mại; thương nhân",
+        "meaningViDisplay": "Thương (buôn bán; thương mại; thương nhân)",
+        "meaningEn": "commerce, trade, merchant"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": [
+          "あきな.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "_ Đứng 2 itn (1) cân chay JL) miệng (C) gao bên Đương KẾ) ! '",
+        "en": "商 relates to commerce and trade; 商人 is a merchant."
+      },
+      "decomposition": {
+        "hanViet": "Thương",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "売",
+          "買",
+          "店",
+          "人"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thuong",
+        "meaningViNoAccent": "buon ban; thuong mai; thuong nhan",
+        "meaningEnNoAccent": "commerce, trade, merchant"
+      },
+      "examples": [
+        {
+          "word": "商人",
+          "reading": "あきうど",
+          "meaning": "thương nhân; người buôn bán",
+          "meaningEn": "merchant, trader"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thương (buôn bán; thương mại; thương nhân)",
+        "onyomi": "ショウ",
+        "kunyomi": "あきな.う"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k004",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "祭",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Tế",
+        "meaningVi": "lễ hội; cúng tế",
+        "meaningViDisplay": "Tế (lễ hội; cúng tế)",
+        "meaningEn": "ritual, offer prayers"
       },
       "readings": {
         "onyomi": [
           "サイ"
         ],
         "kunyomi": [
-          "た.つ",
-          "さば.く"
+          "まつ.る",
+          "まつ.り",
+          "まつり"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
       },
       "decomposition": {
-        "hanViet": "Tài",
+        "hanViet": "Tế",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "法",
-          "罪",
-          "審",
-          "判"
+          "礼",
+          "神",
+          "祖",
+          "季"
         ]
       },
       "search": {
-        "hanVietNoAccent": "tai",
-        "meaningViNoAccent": "xet xu; phan quyet; cat may",
-        "meaningEnNoAccent": "tailor, judge"
+        "hanVietNoAccent": "Te",
+        "meaningViNoAccent": "le hoi; cung te",
+        "meaningEnNoAccent": "ritual, offer prayers"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l18_v006",
-          "sourceSenseId": "n3_l18_s006",
+          "sourceVocabId": "n3_l08_v002",
+          "sourceSenseId": "n3_l08_s002",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -453,62 +261,411 @@
         }
       ],
       "legacy": {
-        "meaning": "Tài (xét xử; phán quyết; cắt may)",
+        "meaning": "Tế (lễ hội; cúng tế)",
         "onyomi": "サイ",
-        "kunyomi": "た.つ, さば.く"
-      },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
+        "kunyomi": "まつ.る, まつ.り, まつり"
       },
       "tags": [
-        "vi-source-verified"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 8,
+        "themeEn": "Traditions and seasonal events",
+        "themeVi": "Truyền thống và sự kiện theo mùa"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l18_k008",
+      "kanjiId": "n3_canonical_l18_k005",
       "lessonId": 18,
       "level": "N3",
-      "character": "制",
-      "strokeCount": 8,
+      "character": "探",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Chế",
-        "meaningVi": "chế độ; kiểm soát; quy định",
-        "meaningViDisplay": "Chế (chế độ; kiểm soát; quy định)",
-        "meaningEn": "system, law"
+        "hanViet": "Tham",
+        "meaningVi": "grope; search; look for",
+        "meaningViDisplay": "Tham (grope; search; look for)",
+        "meaningEn": "grope; search; look for"
       },
       "readings": {
         "onyomi": [
-          "セイ"
+          "タン"
+        ],
+        "kunyomi": [
+          "さぐ.る",
+          "さが.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "grope; search; look for"
+      },
+      "decomposition": {
+        "hanViet": "Tham",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tham",
+        "meaningViNoAccent": "grope; search; look for",
+        "meaningEnNoAccent": "grope; search; look for"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tham (grope; search; look for)",
+        "onyomi": "タン",
+        "kunyomi": "さぐ.る, さが.す"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k006",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "深",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Thâm",
+        "meaningVi": "deep; heighten; intensify",
+        "meaningViDisplay": "Thâm (deep; heighten; intensify)",
+        "meaningEn": "deep; heighten; intensify"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
+        ],
+        "kunyomi": [
+          "ふか.い",
+          "-ぶか.い",
+          "ふか.まる",
+          "ふか.める",
+          "み-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 深 qua Hán-Việt Thâm.",
+        "en": "deep; heighten; intensify"
+      },
+      "decomposition": {
+        "hanViet": "Thâm",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tham",
+        "meaningViNoAccent": "deep; heighten; intensify",
+        "meaningEnNoAccent": "deep; heighten; intensify"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thâm (deep; heighten; intensify)",
+        "onyomi": "シン",
+        "kunyomi": "ふか.い, -ぶか.い, ふか.まる, ふか.める, み-"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k007",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "術",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Thuật",
+        "meaningVi": "kỹ thuật; phương pháp; nghệ thuật",
+        "meaningViDisplay": "Thuật (kỹ thuật; phương pháp; nghệ thuật)",
+        "meaningEn": "art, technique"
+      },
+      "readings": {
+        "onyomi": [
+          "ジュツ"
+        ],
+        "kunyomi": [
+          "すべ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
+        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
+      },
+      "decomposition": {
+        "hanViet": "Thuật",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "芸",
+          "技",
+          "美",
+          "学"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thuat",
+        "meaningViNoAccent": "ky thuat; phuong phap; nghe thuat",
+        "meaningEnNoAccent": "art, technique"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l12_v001",
+          "sourceSenseId": "n3_l12_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thuật (kỹ thuật; phương pháp; nghệ thuật)",
+        "onyomi": "ジュツ",
+        "kunyomi": "すべ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 12,
+        "themeEn": "Art, music and entertainment",
+        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k008",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "訳",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Dịch",
+        "meaningVi": "dịch thuật; lý do; hoàn cảnh",
+        "meaningViDisplay": "Dịch (dịch thuật; lý do; hoàn cảnh)",
+        "meaningEn": "translate, reason"
+      },
+      "readings": {
+        "onyomi": [
+          "ヤク"
+        ],
+        "kunyomi": [
+          "わけ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
+        "en": "Core kanji for QUARTET 22: Communication and expression."
+      },
+      "decomposition": {
+        "hanViet": "Dịch",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "翻",
+          "言",
+          "語",
+          "理"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dich",
+        "meaningViNoAccent": "dich thuat; ly do; hoan canh",
+        "meaningEnNoAccent": "translate, reason"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l22_v008",
+          "sourceSenseId": "n3_l22_s008",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Dịch (dịch thuật; lý do; hoàn cảnh)",
+        "onyomi": "ヤク",
+        "kunyomi": "わけ"
+      },
+      "theme": {
+        "quartetLesson": 22,
+        "themeEn": "Communication and expression",
+        "themeVi": "Giao tiếp và diễn đạt"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k009",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "第",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Đệ",
+        "meaningVi": "Đệ Nhất Tả",
+        "meaningViDisplay": "Đệ (Đệ Nhất Tả)",
+        "meaningEn": "No.; residence; numéro"
+      },
+      "readings": {
+        "onyomi": [
+          "ダイ",
+          "テイ"
         ],
         "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
-        "en": "Core kanji for QUARTET 18: Law, rules and society."
+        "vi": "Ghi nhớ 第 qua Hán-Việt Đệ.",
+        "en": "No.; residence; numéro"
       },
       "decomposition": {
-        "hanViet": "Chế",
+        "hanViet": "Đệ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "De",
+        "meaningViNoAccent": "De Nhat Ta",
+        "meaningEnNoAccent": "No.; residence; numero"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đệ (Đệ Nhất Tả)",
+        "onyomi": "ダイ, テイ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k010",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "陸",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Lục",
+        "meaningVi": "Châu Luc 737 Pp Er Re A",
+        "meaningViDisplay": "Lục (Châu Luc 737 Pp Er Re A)",
+        "meaningEn": "land; six; continent"
+      },
+      "readings": {
+        "onyomi": [
+          "リク",
+          "ロク"
+        ],
+        "kunyomi": [
+          "おか"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 陸 qua Hán-Việt Lục.",
+        "en": "land; six; continent"
+      },
+      "decomposition": {
+        "hanViet": "Lục",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Luc",
+        "meaningViNoAccent": "Chau Luc 737 Pp Er Re A",
+        "meaningEnNoAccent": "land; six; continent"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lục (Châu Luc 737 Pp Er Re A)",
+        "onyomi": "リク, ロク",
+        "kunyomi": "おか"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k011",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "設",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Thiết",
+        "meaningVi": "thiết lập; xây dựng; bố trí",
+        "meaningViDisplay": "Thiết (thiết lập; xây dựng; bố trí)",
+        "meaningEn": "establishment, provision"
+      },
+      "readings": {
+        "onyomi": [
+          "セツ"
+        ],
+        "kunyomi": [
+          "もう.ける"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
+        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
+      },
+      "decomposition": {
+        "hanViet": "Thiết",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "法",
-          "規",
-          "則",
-          "度"
+          "備",
+          "建",
+          "築",
+          "計"
         ]
       },
       "search": {
-        "hanVietNoAccent": "che",
-        "meaningViNoAccent": "che do; kiem soat; quy dinh",
-        "meaningEnNoAccent": "system, law"
+        "hanVietNoAccent": "Thiet",
+        "meaningViNoAccent": "thiet lap; xay dung; bo tri",
+        "meaningEnNoAccent": "establishment, provision"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l18_v008",
-          "sourceSenseId": "n3_l18_s008",
+          "sourceVocabId": "n3_l15_v006",
+          "sourceSenseId": "n3_l15_s006",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -516,21 +673,174 @@
         }
       ],
       "legacy": {
-        "meaning": "Chế (chế độ; kiểm soát; quy định)",
-        "onyomi": "セイ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 18,
-        "themeEn": "Law, rules and society",
-        "themeVi": "Luật pháp, quy tắc và xã hội"
+        "meaning": "Thiết (thiết lập; xây dựng; bố trí)",
+        "onyomi": "セツ",
+        "kunyomi": "もう.ける"
       },
       "tags": [
-        "vi-source-verified"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 15,
+        "themeEn": "Housing and neighborhoods",
+        "themeVi": "Nhà ở và khu dân cư"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k012",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "測",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Trắc",
+        "meaningVi": "đo đạc",
+        "meaningViDisplay": "Trắc (đo đạc)",
+        "meaningEn": "Measure"
+      },
+      "readings": {
+        "onyomi": [
+          "ソク"
+        ],
+        "kunyomi": [
+          "はか.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng Nước (Thủy 氵) và vỏ bối (Tắc 則) để ĐO ĐẠC.",
+        "en": "Water (氵) and rules (則) used to MEASURE."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "則"
+        ],
+        "componentNames": [
+          "Thủy (nước)",
+          "Tắc (quy tắc)"
+        ],
+        "relatedKanji": [
+          "洗"
+        ],
+        "hanViet": "Trắc"
+      },
+      "search": {
+        "hanVietNoAccent": "Trac",
+        "meaningViNoAccent": "do dac",
+        "meaningEnNoAccent": "Measure"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l40_v065",
+          "sourceSenseId": "n4_l40_s065",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l40_v068",
+          "sourceSenseId": "n4_l40_s068",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l40_v002",
+          "sourceSenseId": "n4_l40_s002",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Trắc (đo đạc)",
+        "onyomi": "ソク",
+        "kunyomi": "はか.る"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l18_k013",
+      "lessonId": 18,
+      "level": "N3",
+      "character": "等",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Đẳng",
+        "meaningVi": "bình đẳng; cấp bậc; vân vân",
+        "meaningViDisplay": "Đẳng (bình đẳng; cấp bậc; vân vân)",
+        "meaningEn": "equal, rank, etc."
+      },
+      "readings": {
+        "onyomi": [
+          "トウ"
+        ],
+        "kunyomi": [
+          "ひと.しい",
+          "など",
+          "-ら"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 25: Vấn đề toàn cầu và tình nguyện.",
+        "en": "Core kanji for QUARTET 25: Global issues and volunteering."
+      },
+      "decomposition": {
+        "hanViet": "Đẳng",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "平",
+          "級",
+          "同",
+          "比"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dang",
+        "meaningViNoAccent": "binh dang; cap bac; van van",
+        "meaningEnNoAccent": "equal, rank, etc."
+      },
+      "examples": [
+        {
+          "word": "平等",
+          "reading": "びょうどう",
+          "meaning": "bình đẳng",
+          "meaningEn": "equality"
+        }
+      ],
+      "legacy": {
+        "meaning": "Đẳng (bình đẳng; cấp bậc; vân vân)",
+        "onyomi": "トウ",
+        "kunyomi": "ひと.しい, など, -ら"
+      },
+      "theme": {
+        "quartetLesson": 25,
+        "themeEn": "Global issues and volunteering",
+        "themeVi": "Vấn đề toàn cầu và tình nguyện"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

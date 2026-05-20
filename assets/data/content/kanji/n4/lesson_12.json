@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 12,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l12_k001",
+      "lessonId": 12,
+      "level": "N4",
+      "character": "夜",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Dạ",
+        "meaningVi": "đêm",
+        "meaningViDisplay": "Dạ (đêm)",
+        "meaningEn": "Night"
+      },
+      "readings": {
+        "onyomi": [
+          "ヤ"
+        ],
+        "kunyomi": [
+          "よ",
+          "よる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lần đầu ( ) nhìn thấy người ( ) cá ( ) vào buổi đêm ( ) 夜 1",
+        "en": "People resting in the evening."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "亠",
+          "亻",
+          "夕"
+        ],
+        "componentNames": [
+          "Đầu (nắp đậy)",
+          "Nhân (người)",
+          "Tịch (chiều tối)"
+        ],
+        "relatedKanji": [
+          "夕",
+          "朝",
+          "昼"
+        ],
+        "hanViet": "Dạ"
+      },
+      "search": {
+        "hanVietNoAccent": "Da",
+        "meaningViNoAccent": "dem",
+        "meaningEnNoAccent": "Night"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l04_v023",
+          "sourceSenseId": "n5_l04_s023",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l32_v035",
+          "sourceSenseId": "n4_l32_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l35_v040",
+          "sourceSenseId": "n4_l35_s040",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Dạ (đêm)",
+        "onyomi": "ヤ",
+        "kunyomi": "よ, よる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l12_k002",
+      "lessonId": 12,
+      "level": "N4",
+      "character": "味",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Vị",
+        "meaningVi": "hương vị",
+        "meaningViDisplay": "Vị (hương vị)",
+        "meaningEn": "Taste"
+      },
+      "readings": {
+        "onyomi": [
+          "ミ"
+        ],
+        "kunyomi": [
+          "あじ",
+          "あじ.わう"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng miệng ( ) vẫn chưa ( ) nếm được hương vị ( ) của rượu táo mèo 6",
+        "en": "Using the mouth (口) for something not yet (未) ripe - TASTE."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "口",
+          "未"
+        ],
+        "componentNames": [
+          "Khẩu (miệng)",
+          "Vị (chưa)"
+        ],
+        "relatedKanji": [
+          "口",
+          "妹"
+        ],
+        "hanViet": "Vị"
+      },
+      "search": {
+        "hanVietNoAccent": "Vi",
+        "meaningViNoAccent": "huong vi",
+        "meaningEnNoAccent": "Taste"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l28_v019",
+          "sourceSenseId": "n4_l28_s019",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l34_v046",
+          "sourceSenseId": "n4_l34_s046",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l47_v006",
+          "sourceSenseId": "n4_l47_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Vị (hương vị)",
+        "onyomi": "ミ",
+        "kunyomi": "あじ, あじ.わう"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l12_k003",
+      "lessonId": 12,
+      "level": "N4",
+      "character": "妹",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Muội",
+        "meaningVi": "em gái; người em nữ",
+        "meaningViDisplay": "Muội (em gái; người em nữ)",
+        "meaningEn": "younger sister"
+      },
+      "readings": {
+        "onyomi": [
+          "マイ"
+        ],
+        "kunyomi": [
+          "いもうと"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cô gái ( ) tuổi vị thành niên ( ) là em gái ( ) 6",
+        "en": "妹 means younger sister; in 従姉妹 it contributes the female-relative sense."
+      },
+      "decomposition": {
+        "hanViet": "Muội",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "姉",
+          "兄",
+          "弟",
+          "女"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Muoi",
+        "meaningViNoAccent": "em gai; nguoi em nu",
+        "meaningEnNoAccent": "younger sister"
+      },
+      "examples": [
+        {
+          "word": "従姉妹",
+          "reading": "いとこ",
+          "meaning": "chị/em họ gái",
+          "meaningEn": "female cousin"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Muội (em gái; người em nữ)",
+        "onyomi": "マイ",
+        "kunyomi": "いもうと"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l12_k004",
+      "lessonId": 12,
+      "level": "N4",
+      "character": "若",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Nhược",
+        "meaningVi": "trẻ",
+        "meaningViDisplay": "Nhược (trẻ)",
+        "meaningEn": "Young"
+      },
+      "readings": {
+        "onyomi": [
+          "ジャク",
+          "ニャク",
+          "ニャ"
+        ],
+        "kunyomi": [
+          "わか.い",
+          "わか-",
+          "も.しくわ",
+          "も.し",
+          "も.しくは",
+          "ごと.し"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cô Thảo ( ) phải ( ) trẻ ( ) 2 3",
+        "en": "A woman (女) as fresh as grass (艹) - YOUNG."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "艹",
+          "右"
+        ],
+        "componentNames": [
+          "Thảo (cỏ)",
+          "Hữu biến thể (phải)"
+        ],
+        "relatedKanji": [
+          "薬",
+          "落"
+        ],
+        "hanViet": "Nhược"
+      },
+      "search": {
+        "hanVietNoAccent": "Nhuoc",
+        "meaningViNoAccent": "tre",
+        "meaningEnNoAccent": "Young"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l37_v053",
+          "sourceSenseId": "n4_l37_s053",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l37_v056",
+          "sourceSenseId": "n4_l37_s056",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l16_v015",
+          "sourceSenseId": "n5_l16_s015",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nhược (trẻ)",
+        "onyomi": "ジャク, ニャク, ニャ",
+        "kunyomi": "わか.い, わか-, も.しくわ, も.し, も.しくは, ごと.し"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l12_k005",
+      "lessonId": 12,
+      "level": "N4",
+      "character": "歩",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Bộ",
+        "meaningVi": "bước; đi bộ; tiến triển",
+        "meaningViDisplay": "Bộ (bước; đi bộ; tiến triển)",
+        "meaningEn": "walk; counter for steps"
+      },
+      "readings": {
+        "onyomi": [
+          "ホ",
+          "ブ",
+          "フ"
+        ],
+        "kunyomi": [
+          "ある.く",
+          "あゆ.む"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Chỉ ( ) thiếu ( ) đi bộ ( ) 歩 1",
+        "en": "歩 means walking or steps; 歩み can also mean a step-by-step course of progress."
+      },
+      "decomposition": {
+        "hanViet": "Bộ",
+        "structure": "top-bottom",
+        "components": [
+          "止",
+          "少"
+        ],
+        "componentNames": [
+          "dừng/chân",
+          "ít"
+        ],
+        "relatedKanji": [
+          "走",
+          "進",
+          "道",
+          "足"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bo",
+        "meaningViNoAccent": "buoc; di bo; tien trien",
+        "meaningEnNoAccent": "walk; counter for steps"
+      },
+      "examples": [
+        {
+          "word": "歩み",
+          "reading": "あゆみ",
+          "meaning": "bước đi; tiến trình",
+          "meaningEn": "walking; progress"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Bộ (bước; đi bộ; tiến triển)",
+        "onyomi": "ホ, ブ, フ",
+        "kunyomi": "ある.く, あゆ.む"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l12_k006",
+      "lessonId": 12,
+      "level": "N4",
+      "character": "府",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Phủ",
+        "meaningVi": "phủ, tỉnh",
+        "meaningViDisplay": "Phủ (phủ, tỉnh)",
+        "meaningEn": "Prefecture"
+      },
+      "readings": {
+        "onyomi": [
+          "フ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Mái hiên ( ) được giao phó ( ) cho phủ huyện ( ) 府 1",
+        "en": "A government office (付) under a roof (广)."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "广",
+          "付"
+        ],
+        "componentNames": [
+          "Nghiễm (mái nhà lớn)",
+          "Phó (giao cho)"
+        ],
+        "relatedKanji": [
+          "広",
+          "屋"
+        ],
+        "hanViet": "Phủ"
+      },
+      "search": {
+        "hanVietNoAccent": "Phu",
+        "meaningViNoAccent": "phu, tinh",
+        "meaningEnNoAccent": "Prefecture"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l21_v052",
+          "sourceSenseId": "n5_l21_s052",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l21_v046",
+          "sourceSenseId": "n5_l21_s046",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Phủ (phủ, tỉnh)",
+        "onyomi": "フ",
+        "kunyomi": ""
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l12_k007",
+      "lessonId": 12,
+      "level": "N4",
+      "character": "油",
+      "strokeCount": 8,
+      "labels": {
+        "hanViet": "Du",
+        "meaningVi": "dầu",
+        "meaningViDisplay": "Du (dầu)",
+        "meaningEn": "Oil"
+      },
+      "readings": {
+        "onyomi": [
+          "ユ",
+          "ユウ"
+        ],
+        "kunyomi": [
+          "あぶら"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Trên mặt nước ( ) nổi tự do ( ) là dầu ( ) 油 1 6",
+        "en": "Liquid (氵) coming from a container (由) - OIL."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "由"
+        ],
+        "componentNames": [
+          "Thủy (nước)",
+          "Do (do, bởi)"
+        ],
+        "relatedKanji": [
+          "洗",
+          "消"
+        ],
+        "hanViet": "Du"
+      },
+      "search": {
+        "hanVietNoAccent": "Du",
+        "meaningViNoAccent": "dau",
+        "meaningEnNoAccent": "Oil"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l36_v052",
+          "sourceSenseId": "n4_l36_s052",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l37_v021",
+          "sourceSenseId": "n4_l37_s021",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l36_v053",
+          "sourceSenseId": "n4_l36_s053",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Du (dầu)",
+        "onyomi": "ユ, ユウ",
+        "kunyomi": "あぶら"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

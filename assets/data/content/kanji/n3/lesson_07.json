@@ -1,56 +1,67 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 7,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l07_k001",
+      "kanjiId": "n3_canonical_l07_k001",
       "lessonId": 7,
       "level": "N3",
-      "character": "健",
-      "strokeCount": 11,
+      "character": "決",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Kiện",
-        "meaningVi": "khỏe mạnh; sức khỏe",
-        "meaningViDisplay": "Kiện (khỏe mạnh; sức khỏe)",
-        "meaningEn": "healthy, health"
+        "hanViet": "Quyết",
+        "meaningVi": "quyết định; dứt khoát; phân định",
+        "meaningViDisplay": "Quyết (quyết định; dứt khoát; phân định)",
+        "meaningEn": "decide, fix"
       },
       "readings": {
         "onyomi": [
-          "ケン"
+          "ケツ"
         ],
         "kunyomi": [
-          "すこ.やか"
+          "き.める",
+          "-ぎ.め",
+          "き.まる",
+          "さ.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
+        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
+        "en": "Core kanji for QUARTET 16: Sports and competition."
       },
       "decomposition": {
-        "hanViet": "Kiện",
+        "hanViet": "Quyết",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "康",
-          "体",
-          "病",
-          "強"
+          "定",
+          "選",
+          "勝",
+          "負"
         ]
       },
       "search": {
-        "hanVietNoAccent": "kien",
-        "meaningViNoAccent": "khoe manh; suc khoe",
-        "meaningEnNoAccent": "healthy, health"
+        "hanVietNoAccent": "Quyet",
+        "meaningViNoAccent": "quyet dinh; dut khoat; phan dinh",
+        "meaningEnNoAccent": "decide, fix"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l07_v001",
-          "sourceSenseId": "n3_l07_s001",
+          "sourceVocabId": "n3_l16_v006",
+          "sourceSenseId": "n3_l16_s006",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -58,483 +69,731 @@
         }
       ],
       "legacy": {
-        "meaning": "Kiện (khỏe mạnh; sức khỏe)",
-        "onyomi": "ケン",
-        "kunyomi": "すこ.やか"
+        "meaning": "Quyết (quyết định; dứt khoát; phân định)",
+        "onyomi": "ケツ",
+        "kunyomi": "き.める, -ぎ.め, き.まる, さ.く"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
+        "quartetLesson": 16,
+        "themeEn": "Sports and competition",
+        "themeVi": "Thể thao và thi đấu"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l07_k002",
+      "kanjiId": "n3_canonical_l07_k002",
       "lessonId": 7,
       "level": "N3",
-      "character": "康",
-      "strokeCount": 11,
+      "character": "初",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Khang",
-        "meaningVi": "bình an; khỏe mạnh",
-        "meaningViDisplay": "Khang (bình an; khỏe mạnh)",
-        "meaningEn": "ease, peace"
+        "hanViet": "Sơ",
+        "meaningVi": "Sơ Cấp ?",
+        "meaningViDisplay": "Sơ (Sơ Cấp ?)",
+        "meaningEn": "first time; beginning; première fois"
       },
       "readings": {
         "onyomi": [
-          "コウ"
+          "ショ"
+        ],
+        "kunyomi": [
+          "はじ.め",
+          "はじ.めて",
+          "はつ",
+          "はつ-",
+          "うい-",
+          "-そ.める",
+          "-ぞ.め"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 初 qua Hán-Việt Sơ.",
+        "en": "first time; beginning; première fois"
+      },
+      "decomposition": {
+        "hanViet": "Sơ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "So",
+        "meaningViNoAccent": "So Cap ?",
+        "meaningEnNoAccent": "first time; beginning; premiere fois"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Sơ (Sơ Cấp ?)",
+        "onyomi": "ショ",
+        "kunyomi": "はじ.め, はじ.めて, はつ, はつ-, うい-, -そ.める, -ぞ.め"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l07_k003",
+      "lessonId": 7,
+      "level": "N3",
+      "character": "折",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Chiết",
+        "meaningVi": "bẻ, gãy",
+        "meaningViDisplay": "Chiết (bẻ, gãy)",
+        "meaningEn": "Break, Fold"
+      },
+      "readings": {
+        "onyomi": [
+          "セツ",
+          "シャク"
+        ],
+        "kunyomi": [
+          "お.る",
+          "おり",
+          "お.り",
+          "-お.り",
+          "お.れる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng Tay (Thủ 扌) cầm Rìu (Cân 斤) để chặt gãy.",
+        "en": "Using a hand (扌) and an axe (斤) to break."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "扌",
+          "斤"
+        ],
+        "componentNames": [
+          "Thủ (tay)",
+          "Cân (rìu)"
+        ],
+        "relatedKanji": [
+          "手",
+          "新",
+          "所"
+        ],
+        "hanViet": "Chiết"
+      },
+      "search": {
+        "hanVietNoAccent": "Chiet",
+        "meaningViNoAccent": "be, gay",
+        "meaningEnNoAccent": "Break, Fold"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l45_v049",
+          "sourceSenseId": "n4_l45_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l45_v045",
+          "sourceSenseId": "n4_l45_s045",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l34_v003",
+          "sourceSenseId": "n4_l34_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Chiết (bẻ, gãy)",
+        "onyomi": "セツ, シャク",
+        "kunyomi": "お.る, おり, お.り, -お.り, お.れる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l07_k004",
+      "lessonId": 7,
+      "level": "N3",
+      "character": "努",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Nỗ",
+        "meaningVi": "nỗ lực; cố gắng",
+        "meaningViDisplay": "Nỗ (nỗ lực; cố gắng)",
+        "meaningEn": "toil, diligent"
+      },
+      "readings": {
+        "onyomi": [
+          "ド"
+        ],
+        "kunyomi": [
+          "つと.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
+        "en": "Core kanji for QUARTET 2: Making your future self from now."
+      },
+      "decomposition": {
+        "hanViet": "Nỗ",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "力",
+          "勉",
+          "勤",
+          "励"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "No",
+        "meaningViNoAccent": "no luc; co gang",
+        "meaningEnNoAccent": "toil, diligent"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l02_v005",
+          "sourceSenseId": "n3_l02_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nỗ (nỗ lực; cố gắng)",
+        "onyomi": "ド",
+        "kunyomi": "つと.める"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 2,
+        "themeEn": "Making your future self from now",
+        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l07_k005",
+      "lessonId": 7,
+      "level": "N3",
+      "character": "迎",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Nghênh",
+        "meaningVi": "đón; nghênh tiếp",
+        "meaningViDisplay": "Nghênh (đón; nghênh tiếp)",
+        "meaningEn": "welcome, meet"
+      },
+      "readings": {
+        "onyomi": [
+          "ゲイ"
+        ],
+        "kunyomi": [
+          "むか.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 迎 qua Hán-Việt Nghênh.",
+        "en": "welcome, meet"
+      },
+      "decomposition": {
+        "hanViet": "Nghênh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nghenh",
+        "meaningViNoAccent": "don; nghenh tiep",
+        "meaningEnNoAccent": "welcome, meet"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nghênh (đón; nghênh tiếp)",
+        "onyomi": "ゲイ",
+        "kunyomi": "むか.える"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l07_k006",
+      "lessonId": 7,
+      "level": "N3",
+      "character": "卵",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Noãn",
+        "meaningVi": "trứng",
+        "meaningViDisplay": "Noãn (trứng)",
+        "meaningEn": "egg"
+      },
+      "readings": {
+        "onyomi": [
+          "ラン"
+        ],
+        "kunyomi": [
+          "たまご"
+        ]
+      },
+      "mnemonic": {
+        "vi": "_ wmamimm6Dmz wawms0 ' h",
+        "en": "egg"
+      },
+      "decomposition": {
+        "hanViet": "Noãn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Noan",
+        "meaningViNoAccent": "trung",
+        "meaningEnNoAccent": "egg"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Noãn (trứng)",
+        "onyomi": "ラン",
+        "kunyomi": "たまご"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l07_k007",
+      "lessonId": 7,
+      "level": "N3",
+      "character": "対",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Đối",
+        "meaningVi": "đối nhau; đối diện; so sánh/chống lại",
+        "meaningViDisplay": "Đối (đối nhau; đối diện; so sánh/chống lại)",
+        "meaningEn": "opposite, versus, compare"
+      },
+      "readings": {
+        "onyomi": [
+          "タイ",
+          "ツイ"
+        ],
+        "kunyomi": [
+          "あいて",
+          "こた.える",
+          "そろ.い",
+          "つれあ.い",
+          "なら.ぶ",
+          "むか.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "対 là hai bên đối nhau hoặc đem ra so sánh; trong 相対, nó nhấn mạnh quan hệ giữa hai phía.",
+        "en": "対 means opposition or comparison; in 相対 it marks a relation between two sides."
+      },
+      "decomposition": {
+        "hanViet": "Đối",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "相",
+          "反",
+          "比",
+          "向"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Doi",
+        "meaningViNoAccent": "doi nhau; doi dien; so sanh/chong lai",
+        "meaningEnNoAccent": "opposite, versus, compare"
+      },
+      "examples": [
+        {
+          "word": "相対",
+          "reading": "あいたい",
+          "meaning": "tương đối; quan hệ giữa hai bên",
+          "meaningEn": "relative, face-to-face, between two sides"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đối (đối nhau; đối diện; so sánh/chống lại)",
+        "onyomi": "タイ, ツイ",
+        "kunyomi": "あいて, こた.える, そろ.い, つれあ.い, なら.ぶ, むか.う"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l07_k008",
+      "lessonId": 7,
+      "level": "N3",
+      "character": "困",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Khốn",
+        "meaningVi": "gặp khó; lúng túng; khốn đốn",
+        "meaningViDisplay": "Khốn (gặp khó; lúng túng; khốn đốn)",
+        "meaningEn": "quandary, distress, trouble"
+      },
+      "readings": {
+        "onyomi": [
+          "コン"
+        ],
+        "kunyomi": [
+          "こま.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ®",
+        "en": "Core kanji for QUARTET 25: Global issues and volunteering."
+      },
+      "decomposition": {
+        "hanViet": "Khốn",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "貧",
+          "難",
+          "助",
+          "救"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Khon",
+        "meaningViNoAccent": "gap kho; lung tung; khon don",
+        "meaningEnNoAccent": "quandary, distress, trouble"
+      },
+      "examples": [
+        {
+          "word": "困る",
+          "reading": "こまる",
+          "meaning": "gặp khó; lúng túng",
+          "meaningEn": "to be troubled"
+        }
+      ],
+      "legacy": {
+        "meaning": "Khốn (gặp khó; lúng túng; khốn đốn)",
+        "onyomi": "コン",
+        "kunyomi": "こま.る"
+      },
+      "theme": {
+        "quartetLesson": 25,
+        "themeEn": "Global issues and volunteering",
+        "themeVi": "Vấn đề toàn cầu và tình nguyện"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l07_k009",
+      "lessonId": 7,
+      "level": "N3",
+      "character": "妥",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Thỏa",
+        "meaningVi": "gentle; peace; satisfactory",
+        "meaningViDisplay": "Thỏa (gentle; peace; satisfactory)",
+        "meaningEn": "gentle; peace; satisfactory"
+      },
+      "readings": {
+        "onyomi": [
+          "ダ"
         ],
         "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
+        "vi": "Biên tập bởi thocodehoctiengnhat ®",
+        "en": "gentle; peace; satisfactory"
       },
       "decomposition": {
-        "hanViet": "Khang",
-        "structure": "standalone",
+        "hanViet": "Thỏa",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "健",
-          "安",
-          "楽",
-          "体"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "khang",
-        "meaningViNoAccent": "binh an; khoe manh",
-        "meaningEnNoAccent": "ease, peace"
+        "hanVietNoAccent": "Thoa",
+        "meaningViNoAccent": "gentle; peace; satisfactory",
+        "meaningEnNoAccent": "gentle; peace; satisfactory"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l07_v001",
-          "sourceSenseId": "n3_l07_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Khang (bình an; khỏe mạnh)",
-        "onyomi": "コウ",
+        "meaning": "Thỏa (gentle; peace; satisfactory)",
+        "onyomi": "ダ",
         "kunyomi": ""
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l07_k003",
+      "kanjiId": "n3_canonical_l07_k010",
       "lessonId": 7,
       "level": "N3",
-      "character": "睡",
-      "strokeCount": 13,
+      "character": "忘",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Thụy",
-        "meaningVi": "ngủ; buồn ngủ",
-        "meaningViDisplay": "Thụy (ngủ; buồn ngủ)",
-        "meaningEn": "drowsy, sleep"
+        "hanViet": "Vong",
+        "meaningVi": "Quên ¬—.....ˆ",
+        "meaningViDisplay": "Vong (Quên ¬—.....ˆ)",
+        "meaningEn": "forget; oublier; olvidar"
       },
       "readings": {
         "onyomi": [
-          "スイ"
+          "ボウ"
         ],
         "kunyomi": [
-          "ねむ.る",
-          "ねむ.い"
+          "わす.れる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
+        "vi": "! ' ‘WU yl —, ... - = & 2 7 sảng:",
+        "en": "forget; oublier; olvidar"
       },
       "decomposition": {
-        "hanViet": "Thụy",
-        "structure": "standalone",
+        "hanViet": "Vong",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "眠",
-          "休",
-          "夜",
-          "疲"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "thuy",
-        "meaningViNoAccent": "ngu; buon ngu",
-        "meaningEnNoAccent": "drowsy, sleep"
+        "hanVietNoAccent": "Vong",
+        "meaningViNoAccent": "Quen ¬—.....ˆ",
+        "meaningEnNoAccent": "forget; oublier; olvidar"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l07_v003",
-          "sourceSenseId": "n3_l07_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Thụy (ngủ; buồn ngủ)",
-        "onyomi": "スイ",
-        "kunyomi": "ねむ.る, ねむ.い"
+        "meaning": "Vong (Quên ¬—.....ˆ)",
+        "onyomi": "ボウ",
+        "kunyomi": "わす.れる"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l07_k004",
+      "kanjiId": "n3_canonical_l07_k011",
       "lessonId": 7,
       "level": "N3",
-      "character": "眠",
-      "strokeCount": 10,
+      "character": "希",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Miên",
-        "meaningVi": "ngủ; giấc ngủ",
-        "meaningViDisplay": "Miên (ngủ; giấc ngủ)",
-        "meaningEn": "sleep, die"
+        "hanViet": "Hy",
+        "meaningVi": "hope; beg; request",
+        "meaningViDisplay": "Hy (hope; beg; request)",
+        "meaningEn": "hope; beg; request"
       },
       "readings": {
         "onyomi": [
-          "ミン"
+          "キ",
+          "ケ"
         ],
         "kunyomi": [
-          "ねむ.る",
-          "ねむ.い"
+          "まれ",
+          "こいねが.う"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "hope; beg; request"
       },
       "decomposition": {
-        "hanViet": "Miên",
-        "structure": "standalone",
+        "hanViet": "Hy",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "睡",
-          "休",
-          "夜",
-          "夢"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "mien",
-        "meaningViNoAccent": "ngu; giac ngu",
-        "meaningEnNoAccent": "sleep, die"
+        "hanVietNoAccent": "Hy",
+        "meaningViNoAccent": "hope; beg; request",
+        "meaningEnNoAccent": "hope; beg; request"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l07_v003",
-          "sourceSenseId": "n3_l07_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Miên (ngủ; giấc ngủ)",
-        "onyomi": "ミン",
-        "kunyomi": "ねむ.る, ねむ.い"
+        "meaning": "Hy (hope; beg; request)",
+        "onyomi": "キ, ケ",
+        "kunyomi": "まれ, こいねが.う"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l07_k005",
+      "kanjiId": "n3_canonical_l07_k012",
       "lessonId": 7,
       "level": "N3",
-      "character": "栄",
-      "strokeCount": 9,
+      "character": "助",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Vinh",
-        "meaningVi": "phồn vinh; vinh quang; dinh dưỡng",
-        "meaningViDisplay": "Vinh (phồn vinh; vinh quang; dinh dưỡng)",
-        "meaningEn": "flourish, prosperity"
+        "hanViet": "Trợ",
+        "meaningVi": "help; rescue; assist",
+        "meaningViDisplay": "Trợ (help; rescue; assist)",
+        "meaningEn": "help; rescue; assist"
       },
       "readings": {
         "onyomi": [
-          "エイ",
-          "ヨウ"
+          "ジョ"
         ],
         "kunyomi": [
-          "さか.える",
-          "は.え",
-          "-ば.え",
-          "は.える"
+          "たす.ける",
+          "たす.かる",
+          "す.ける",
+          "すけ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "help; rescue; assist"
       },
       "decomposition": {
-        "hanViet": "Vinh",
-        "structure": "standalone",
+        "hanViet": "Trợ",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "養",
-          "食",
-          "成",
-          "育"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "vinh",
-        "meaningViNoAccent": "phon vinh; vinh quang; dinh duong",
-        "meaningEnNoAccent": "flourish, prosperity"
+        "hanVietNoAccent": "Tro",
+        "meaningViNoAccent": "help; rescue; assist",
+        "meaningEnNoAccent": "help; rescue; assist"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l07_v004",
-          "sourceSenseId": "n3_l07_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Vinh (phồn vinh; vinh quang; dinh dưỡng)",
-        "onyomi": "エイ, ヨウ",
-        "kunyomi": "さか.える, は.え, -ば.え, は.える"
+        "meaning": "Trợ (help; rescue; assist)",
+        "onyomi": "ジョ",
+        "kunyomi": "たす.ける, たす.かる, す.ける, すけ"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l07_k006",
+      "kanjiId": "n3_canonical_l07_k013",
       "lessonId": 7,
       "level": "N3",
-      "character": "養",
-      "strokeCount": 15,
+      "character": "豆",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Dưỡng",
-        "meaningVi": "nuôi dưỡng; chăm sóc",
-        "meaningViDisplay": "Dưỡng (nuôi dưỡng; chăm sóc)",
-        "meaningEn": "foster, bring up"
+        "hanViet": "Đậu",
+        "meaningVi": "beans; pea; midget",
+        "meaningViDisplay": "Đậu (beans; pea; midget)",
+        "meaningEn": "beans; pea; midget"
       },
       "readings": {
         "onyomi": [
-          "ヨウ",
-          "リョウ"
+          "トウ",
+          "ズ"
         ],
         "kunyomi": [
-          "やしな.う"
+          "まめ",
+          "まめ-"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
+        "vi": "Ghi nhớ 豆 qua Hán-Việt Đậu.",
+        "en": "beans; pea; midget"
       },
       "decomposition": {
-        "hanViet": "Dưỡng",
-        "structure": "standalone",
+        "hanViet": "Đậu",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "栄",
-          "育",
-          "食",
-          "療"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "duong",
-        "meaningViNoAccent": "nuoi duong; cham soc",
-        "meaningEnNoAccent": "foster, bring up"
+        "hanVietNoAccent": "Dau",
+        "meaningViNoAccent": "beans; pea; midget",
+        "meaningEnNoAccent": "beans; pea; midget"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l07_v004",
-          "sourceSenseId": "n3_l07_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Dưỡng (nuôi dưỡng; chăm sóc)",
-        "onyomi": "ヨウ, リョウ",
-        "kunyomi": "やしな.う"
+        "meaning": "Đậu (beans; pea; midget)",
+        "onyomi": "トウ, ズ",
+        "kunyomi": "まめ, まめ-"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
-    },
-    {
-      "kanjiId": "n3_l07_k007",
-      "lessonId": 7,
-      "level": "N3",
-      "character": "治",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Trị",
-        "meaningVi": "chữa trị; cai trị",
-        "meaningViDisplay": "Trị (chữa trị; cai trị)",
-        "meaningEn": "reign, be at peace"
-      },
-      "readings": {
-        "onyomi": [
-          "ジ",
-          "チ"
-        ],
-        "kunyomi": [
-          "おさ.める",
-          "おさ.まる",
-          "なお.る",
-          "なお.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
-      },
-      "decomposition": {
-        "hanViet": "Trị",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "療",
-          "病",
-          "医",
-          "薬"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tri",
-        "meaningViNoAccent": "chua tri; cai tri",
-        "meaningEnNoAccent": "reign, be at peace"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l07_v006",
-          "sourceSenseId": "n3_l07_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Trị (chữa trị; cai trị)",
-        "onyomi": "ジ, チ",
-        "kunyomi": "おさ.める, おさ.まる, なお.る, なお.す"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
-    },
-    {
-      "kanjiId": "n3_l07_k008",
-      "lessonId": 7,
-      "level": "N3",
-      "character": "療",
-      "strokeCount": 17,
-      "labels": {
-        "hanViet": "Liệu",
-        "meaningVi": "chữa lành; điều trị",
-        "meaningViDisplay": "Liệu (chữa lành; điều trị)",
-        "meaningEn": "heal, cure"
-      },
-      "readings": {
-        "onyomi": [
-          "リョウ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 7: Sức khỏe và lối sống.",
-        "en": "Core kanji for QUARTET 7: Health and lifestyle."
-      },
-      "decomposition": {
-        "hanViet": "Liệu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "治",
-          "病",
-          "医",
-          "薬"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "lieu",
-        "meaningViNoAccent": "chua lanh; dieu tri",
-        "meaningEnNoAccent": "heal, cure"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l07_v006",
-          "sourceSenseId": "n3_l07_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Liệu (chữa lành; điều trị)",
-        "onyomi": "リョウ",
-        "kunyomi": ""
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 7,
-        "themeEn": "Health and lifestyle",
-        "themeVi": "Sức khỏe và lối sống"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

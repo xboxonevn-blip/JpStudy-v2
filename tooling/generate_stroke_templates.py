@@ -78,10 +78,11 @@ def _load_kanji_chars() -> Tuple[List[str], Dict[str, dict]]:
     seen = set()
 
     for level in KANJI_LEVEL_DIRS:
-        level_dir = ROOT / "assets" / "data" / "archive" / "kanji" / level
-        files = sorted(level_dir.glob("*.json"), key=_natural_key)
+        level_dir = ROOT / "assets" / "data" / "content" / "kanji" / level
+        files = sorted(level_dir.glob("lesson_*.json"), key=_natural_key)
         for file in files:
-            data = json.loads(file.read_text(encoding="utf-8"))
+            payload = json.loads(file.read_text(encoding="utf-8-sig"))
+            data = payload.get("entries", [])
             for item in data:
                 ch = item["character"]
                 if ch not in seen:
@@ -107,6 +108,7 @@ def main() -> None:
 
     ordered_chars, meta = _load_kanji_chars()
     output = []
+    emitted = set()
 
     for ch in ordered_chars:
         if ch in overrides:
@@ -118,6 +120,7 @@ def main() -> None:
             item.setdefault("targetArea", round(min(0.48, 0.24 + (meta[ch]["strokeCount"] * 0.015)), 3))
             item.setdefault("targetAspect", 0.92)
             output.append(item)
+            emitted.add(ch)
             continue
 
         if ch in preserve:
@@ -125,6 +128,7 @@ def main() -> None:
             item.setdefault("quality", "manual")
             item.setdefault("level", meta[ch]["level"])
             output.append(item)
+            emitted.add(ch)
             continue
 
         stroke_count = meta[ch]["strokeCount"]
@@ -145,6 +149,17 @@ def main() -> None:
                 "strokes": _generated_strokes(stroke_count, seed),
             }
         )
+        emitted.add(ch)
+
+    for ch, item in sorted(preserve.items()):
+        if ch not in emitted:
+            output.append(item)
+            emitted.add(ch)
+
+    for ch, item in sorted(overrides.items()):
+        if ch not in emitted:
+            output.append(item)
+            emitted.add(ch)
 
     TEMPLATE_PATH.write_text(
         json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"

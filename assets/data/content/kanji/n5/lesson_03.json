@@ -1,69 +1,77 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 3,
-  "entryCount": 3,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l03_k001",
+      "kanjiId": "n5_canonical_l03_k001",
       "lessonId": 3,
       "level": "N5",
-      "character": "山",
+      "character": "千",
       "strokeCount": 3,
       "labels": {
-        "hanViet": "Sơn",
-        "meaningVi": "núi",
-        "meaningViDisplay": "Sơn (núi)",
-        "meaningEn": "Mountain"
+        "hanViet": "Thiên",
+        "meaningVi": "nghìn",
+        "meaningViDisplay": "Thiên (nghìn)",
+        "meaningEn": "Thousand"
       },
       "readings": {
         "onyomi": [
-          "SAN"
+          "セン"
         ],
         "kunyomi": [
-          "yama"
+          "ち"
         ]
       },
       "mnemonic": {
-        "vi": "Hình chữ 山 trông giống như 3 ngọn núi đứng cạnh nhau.",
-        "en": "The character looks like three mountain peaks standing side by side."
+        "vi": "Chữ Thập (十) thêm một nét gạch chéo ở trên.",
+        "en": "A cross (十) with a stroke on top."
       },
       "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "structure": "mixed",
+        "components": [
+          "丿",
+          "十"
+        ],
+        "componentNames": [
+          "Phiệt (nét phẩy)",
+          "Thập (mười)"
+        ],
         "relatedKanji": [
-          "出",
-          "岩"
-        ]
+          "十",
+          "百",
+          "万"
+        ],
+        "hanViet": "Thiên"
       },
       "search": {
-        "hanVietNoAccent": "son",
-        "meaningViNoAccent": "nui",
-        "meaningEnNoAccent": "mountain"
+        "hanVietNoAccent": "Thien",
+        "meaningViNoAccent": "nghin",
+        "meaningEnNoAccent": "Thousand"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l08_v036",
-          "sourceSenseId": "n5_l08_s036",
+          "sourceVocabId": "n5_l03_v036",
+          "sourceSenseId": "n5_l03_s036",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l08_v055",
-          "sourceSenseId": "n5_l08_s055",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v060",
-          "sourceSenseId": "n5_l08_s060",
+          "sourceVocabId": "n5_l02_v061",
+          "sourceSenseId": "n5_l02_s061",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -71,64 +79,144 @@
         }
       ],
       "legacy": {
-        "meaning": "Sơn (núi)",
-        "onyomi": "SAN",
-        "kunyomi": "yama"
+        "meaning": "Thiên (nghìn)",
+        "onyomi": "セン",
+        "kunyomi": "ち"
       },
       "tags": [
-        "vi-human-approved"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l03_k002",
+      "lessonId": 3,
+      "level": "N5",
+      "character": "土",
+      "strokeCount": 3,
+      "labels": {
+        "hanViet": "Thổ",
+        "meaningVi": "Đất -",
+        "meaningViDisplay": "Thổ (Đất -)",
+        "meaningEn": "soil; earth; ground"
+      },
+      "readings": {
+        "onyomi": [
+          "ド",
+          "ト"
+        ],
+        "kunyomi": [
+          "つち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 土 qua Hán-Việt Thổ.",
+        "en": "soil; earth; ground"
+      },
+      "decomposition": {
+        "hanViet": "Thổ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tho",
+        "meaningViNoAccent": "Dat -",
+        "meaningEnNoAccent": "soil; earth; ground"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thổ (Đất -)",
+        "onyomi": "ド, ト",
+        "kunyomi": "つち"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n5_l03_k002",
+      "kanjiId": "n5_canonical_l03_k003",
       "lessonId": 3,
       "level": "N5",
-      "character": "川",
+      "character": "上",
       "strokeCount": 3,
       "labels": {
-        "hanViet": "Xuyên",
-        "meaningVi": "sông",
-        "meaningViDisplay": "Xuyên (sông)",
-        "meaningEn": "River"
+        "hanViet": "Thượng",
+        "meaningVi": "trên",
+        "meaningViDisplay": "Thượng (trên)",
+        "meaningEn": "Up, Above"
       },
       "readings": {
         "onyomi": [
-          "SEN"
+          "ジョウ",
+          "ショウ",
+          "シャン"
         ],
         "kunyomi": [
-          "kawa"
+          "うえ",
+          "-うえ",
+          "うわ-",
+          "かみ",
+          "あ.げる",
+          "-あ.げる",
+          "あ.がる",
+          "-あ.がる",
+          "あ.がり",
+          "-あ.がり",
+          "のぼ.る",
+          "のぼ.り",
+          "のぼ.せる",
+          "のぼ.す",
+          "たてまつ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Hình chữ 川 trông giống như 3 dòng nước chảy của một con sông.",
-        "en": "The three lines represent the flowing water of a river."
+        "vi": "Vạch kẻ chỉ hướng lên trÊN.",
+        "en": "A line pointing UPWARDS."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "三",
-          "洗"
-        ]
+          "下",
+          "止"
+        ],
+        "hanViet": "Thượng"
       },
       "search": {
-        "hanVietNoAccent": "xuyen",
-        "meaningViNoAccent": "song",
-        "meaningEnNoAccent": "river"
+        "hanVietNoAccent": "Thuong",
+        "meaningViNoAccent": "tren",
+        "meaningEnNoAccent": "Up, Above"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l13_v019",
-          "sourceSenseId": "n5_l13_s019",
+          "sourceVocabId": "n5_l10_v031",
+          "sourceSenseId": "n5_l10_s031",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l03_v054",
-          "sourceSenseId": "n5_l03_s054",
+          "sourceVocabId": "n5_l09_v005",
+          "sourceSenseId": "n5_l09_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l08_v056",
+          "sourceSenseId": "n5_l08_s056",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -136,76 +224,89 @@
         }
       ],
       "legacy": {
-        "meaning": "Xuyên (sông)",
-        "onyomi": "SEN",
-        "kunyomi": "kawa"
+        "meaning": "Thượng (trên)",
+        "onyomi": "ジョウ, ショウ, シャン",
+        "kunyomi": "うえ, -うえ, うわ-, かみ, あ.げる, -あ.げる, あ.がる, -あ.がる, あ.がり, -あ.がり, のぼ.る, のぼ.り, のぼ.せる, のぼ.す, たてまつ.る"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l03_k003",
+      "kanjiId": "n5_canonical_l03_k004",
       "lessonId": 3,
       "level": "N5",
-      "character": "日",
-      "strokeCount": 4,
+      "character": "下",
+      "strokeCount": 3,
       "labels": {
-        "hanViet": "Nhật",
-        "meaningVi": "mặt trời, ngày",
-        "meaningViDisplay": "Nhật (mặt trời, ngày)",
-        "meaningEn": "Day, Sun"
+        "hanViet": "Hạ",
+        "meaningVi": "dưới",
+        "meaningViDisplay": "Hạ (dưới)",
+        "meaningEn": "Down, Below"
       },
       "readings": {
         "onyomi": [
-          "NICHI",
-          "JITSU"
+          "カ",
+          "ゲ"
         ],
         "kunyomi": [
-          "hi",
-          "-bi"
+          "した",
+          "しも",
+          "もと",
+          "さ.げる",
+          "さ.がる",
+          "くだ.る",
+          "くだ.り",
+          "くだ.す",
+          "-くだ.す",
+          "くだ.さる",
+          "お.ろす",
+          "お.りる"
         ]
       },
       "mnemonic": {
-        "vi": "Hình dáng mặt trời hình chữ nhật với một vạch ở giữa chia đôi ngày và đêm.",
-        "en": "A rectangular sun with a line in the middle dividing day and night."
+        "vi": "Vạch kẻ chỉ hướng xuống DƯỚI.",
+        "en": "A line pointing DOWNWARDS."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "明",
-          "早",
-          "間",
-          "朝"
-        ]
+          "上",
+          "不"
+        ],
+        "hanViet": "Hạ"
       },
       "search": {
-        "hanVietNoAccent": "nhat",
-        "meaningViNoAccent": "mat troi, ngay",
-        "meaningEnNoAccent": "day, sun"
+        "hanVietNoAccent": "Ha",
+        "meaningViNoAccent": "duoi",
+        "meaningEnNoAccent": "Down, Below"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l05_v056",
-          "sourceSenseId": "n5_l05_s056",
+          "sourceVocabId": "n5_l10_v032",
+          "sourceSenseId": "n5_l10_s032",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l04_v024",
-          "sourceSenseId": "n5_l04_s024",
+          "sourceVocabId": "n5_l09_v006",
+          "sourceSenseId": "n5_l09_s006",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l19_v015",
-          "sourceSenseId": "n5_l19_s015",
+          "sourceVocabId": "n5_l05_v010",
+          "sourceSenseId": "n5_l05_s010",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -213,16 +314,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Nhật (mặt trời, ngày)",
-        "onyomi": "NICHI, JITSU",
-        "kunyomi": "hi, -bi"
+        "meaning": "Hạ (dưới)",
+        "onyomi": "カ, ゲ",
+        "kunyomi": "した, しも, もと, さ.げる, さ.がる, くだ.る, くだ.り, くだ.す, -くだ.す, くだ.さる, お.ろす, お.りる"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

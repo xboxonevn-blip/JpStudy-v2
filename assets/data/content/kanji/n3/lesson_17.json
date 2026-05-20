@@ -1,54 +1,161 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 17,
-  "entryCount": 8,
+  "entryCount": 12,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l17_k001",
+      "kanjiId": "n3_canonical_l17_k001",
       "lessonId": 17,
       "level": "N3",
-      "character": "科",
-      "strokeCount": 9,
+      "character": "授",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Khoa",
-        "meaningVi": "khoa; ngành học; môn học",
-        "meaningViDisplay": "Khoa (khoa; ngành học; môn học)",
-        "meaningEn": "department, course"
+        "hanViet": "Thụ",
+        "meaningVi": "Truyền Thụ Pde Ee Ke Ri",
+        "meaningViDisplay": "Thụ (Truyền Thụ Pde Ee Ke Ri)",
+        "meaningEn": "impart; instruct; grant"
       },
       "readings": {
         "onyomi": [
-          "カ"
+          "ジュ"
+        ],
+        "kunyomi": [
+          "さず.ける",
+          "さず.かる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 授 qua Hán-Việt Thụ.",
+        "en": "impart; instruct; grant"
+      },
+      "decomposition": {
+        "hanViet": "Thụ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thu",
+        "meaningViNoAccent": "Truyen Thu Pde Ee Ke Ri",
+        "meaningEnNoAccent": "impart; instruct; grant"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thụ (Truyền Thụ Pde Ee Ke Ri)",
+        "onyomi": "ジュ",
+        "kunyomi": "さず.ける, さず.かる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l17_k002",
+      "lessonId": 17,
+      "level": "N3",
+      "character": "翌",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Dực",
+        "meaningVi": "the following; next; suivant",
+        "meaningViDisplay": "Dực (the following; next; suivant)",
+        "meaningEn": "the following; next; suivant"
+      },
+      "readings": {
+        "onyomi": [
+          "ヨク"
         ],
         "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
+        "vi": "Ghi nhớ 翌 qua Hán-Việt Dực.",
+        "en": "the following; next; suivant"
       },
       "decomposition": {
-        "hanViet": "Khoa",
+        "hanViet": "Dực",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Duc",
+        "meaningViNoAccent": "the following; next; suivant",
+        "meaningEnNoAccent": "the following; next; suivant"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Dực (the following; next; suivant)",
+        "onyomi": "ヨク",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l17_k003",
+      "lessonId": 17,
+      "level": "N3",
+      "character": "紹",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Thiệu",
+        "meaningVi": "giới thiệu; nối tiếp; giúp đỡ",
+        "meaningViDisplay": "Thiệu (giới thiệu; nối tiếp; giúp đỡ)",
+        "meaningEn": "introduce, inherit"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
+        "en": "Core kanji for QUARTET 22: Communication and expression."
+      },
+      "decomposition": {
+        "hanViet": "Thiệu",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "技",
-          "学",
-          "理",
-          "医"
+          "介",
+          "引",
+          "継",
+          "伝"
         ]
       },
       "search": {
-        "hanVietNoAccent": "khoa",
-        "meaningViNoAccent": "khoa; nganh hoc; mon hoc",
-        "meaningEnNoAccent": "department, course"
+        "hanVietNoAccent": "Thieu",
+        "meaningViNoAccent": "gioi thieu; noi tiep; giup do",
+        "meaningEnNoAccent": "introduce, inherit"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l17_v001",
-          "sourceSenseId": "n3_l17_s001",
+          "sourceVocabId": "n3_l22_v003",
+          "sourceSenseId": "n3_l22_s003",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -56,478 +163,318 @@
         }
       ],
       "legacy": {
-        "meaning": "Khoa (khoa; ngành học; môn học)",
-        "onyomi": "カ",
+        "meaning": "Thiệu (giới thiệu; nối tiếp; giúp đỡ)",
+        "onyomi": "ショウ",
         "kunyomi": ""
       },
       "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
+        "quartetLesson": 22,
+        "themeEn": "Communication and expression",
+        "themeVi": "Giao tiếp và diễn đạt"
       },
       "tags": [
-        "vi-source-verified"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l17_k002",
+      "kanjiId": "n3_canonical_l17_k004",
       "lessonId": 17,
       "level": "N3",
-      "character": "技",
-      "strokeCount": 7,
+      "character": "移",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Kỹ",
-        "meaningVi": "kỹ năng; kỹ thuật; tài nghệ",
-        "meaningViDisplay": "Kỹ (kỹ năng; kỹ thuật; tài nghệ)",
-        "meaningEn": "skill, art"
+        "hanViet": "Di",
+        "meaningVi": "di chuyển; chuyển đổi; dời đi",
+        "meaningViDisplay": "Di (di chuyển; chuyển đổi; dời đi)",
+        "meaningEn": "change place, shift; move about"
       },
       "readings": {
         "onyomi": [
-          "ギ"
+          "イ"
         ],
         "kunyomi": [
-          "わざ"
+          "うつ.る",
+          "うつ.す"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
+        "vi": "移 là chuyển từ chỗ hoặc trạng thái này sang chỗ khác; 移行 là chuyển sang giai đoạn mới.",
+        "en": "移 means move or shift; 移行 is a transition to another state."
       },
       "decomposition": {
-        "hanViet": "Kỹ",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "hanViet": "Di",
+        "structure": "left-right",
+        "components": [
+          "禾",
+          "多"
+        ],
+        "componentNames": [
+          "hòa/lúa",
+          "đa/nhiều"
+        ],
         "relatedKanji": [
-          "科",
-          "術",
-          "能",
-          "機"
+          "動",
+          "転",
+          "行",
+          "変"
         ]
       },
       "search": {
-        "hanVietNoAccent": "ky",
-        "meaningViNoAccent": "ky nang; ky thuat; tai nghe",
-        "meaningEnNoAccent": "skill, art"
+        "hanVietNoAccent": "Di",
+        "meaningViNoAccent": "di chuyen; chuyen doi; doi di",
+        "meaningEnNoAccent": "change place, shift; move about"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l17_v002",
-          "sourceSenseId": "n3_l17_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "移行",
+          "reading": "いこう",
+          "meaning": "chuyển sang; quá trình chuyển đổi",
+          "meaningEn": "transition; migration"
         }
       ],
-      "legacy": {
-        "meaning": "Kỹ (kỹ năng; kỹ thuật; tài nghệ)",
-        "onyomi": "ギ",
-        "kunyomi": "わざ"
-      },
-      "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
-      },
       "tags": [
-        "vi-source-verified"
-      ]
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Di (di chuyển; chuyển đổi; dời đi)",
+        "onyomi": "イ",
+        "kunyomi": "うつ.る, うつ.す"
+      }
     },
     {
-      "kanjiId": "n3_l17_k003",
+      "kanjiId": "n3_canonical_l17_k005",
       "lessonId": 17,
       "level": "N3",
-      "character": "明",
-      "strokeCount": 8,
+      "character": "窓",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Minh",
-        "meaningVi": "sáng; rõ ràng; sáng tỏ",
-        "meaningViDisplay": "Minh (sáng; rõ ràng; sáng tỏ)",
-        "meaningEn": "bright, light"
+        "hanViet": "Song",
+        "meaningVi": "window; pane; fenêtre",
+        "meaningViDisplay": "Song (window; pane; fenêtre)",
+        "meaningEn": "window; pane; fenêtre"
       },
       "readings": {
         "onyomi": [
-          "メイ",
-          "ミョウ",
-          "ミン"
+          "ソウ",
+          "ス"
         ],
         "kunyomi": [
-          "あ.かり",
-          "あか.るい",
-          "あか.るむ",
-          "あか.らむ"
+          "まど",
+          "てんまど",
+          "けむだし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "window; pane; fenêtre"
       },
       "decomposition": {
-        "hanViet": "Minh",
-        "structure": "standalone",
+        "hanViet": "Song",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "日",
-          "月",
-          "暗",
-          "発"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "minh",
-        "meaningViNoAccent": "sang; ro rang; sang to",
-        "meaningEnNoAccent": "bright, light"
+        "hanVietNoAccent": "Song",
+        "meaningViNoAccent": "window; pane; fenetre",
+        "meaningEnNoAccent": "window; pane; fenetre"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l17_v003",
-          "sourceSenseId": "n3_l17_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Minh (sáng; rõ ràng; sáng tỏ)",
-        "onyomi": "メイ, ミョウ, ミン",
-        "kunyomi": "あ.かり, あか.るい, あか.るむ, あか.らむ"
+        "meaning": "Song (window; pane; fenêtre)",
+        "onyomi": "ソウ, ス",
+        "kunyomi": "まど, てんまど, けむだし"
       },
-      "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
-      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n3_l17_k004",
+      "kanjiId": "n3_canonical_l17_k006",
       "lessonId": 17,
       "level": "N3",
-      "character": "験",
-      "strokeCount": 18,
+      "character": "現",
+      "strokeCount": 11,
       "labels": {
-        "hanViet": "Nghiệm",
-        "meaningVi": "kiểm nghiệm; thử nghiệm; chứng nghiệm",
-        "meaningViDisplay": "Nghiệm (kiểm nghiệm; thử nghiệm; chứng nghiệm)",
-        "meaningEn": "verification, effect"
+        "hanViet": "Hiện",
+        "meaningVi": "hiện tại; thực tế; xuất hiện",
+        "meaningViDisplay": "Hiện (hiện tại; thực tế; xuất hiện)",
+        "meaningEn": "present; existing; actual"
       },
       "readings": {
         "onyomi": [
-          "ケン",
           "ゲン"
         ],
         "kunyomi": [
-          "あかし",
-          "しるし",
-          "ため.す",
-          "ためし"
+          "あらわ.れる",
+          "あらわ.す",
+          "うつつ",
+          "うつ.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
+        "vi": "現 là cái đang hiện ra hoặc tồn tại trong thực tế; 現われ là sự biểu hiện ra ngoài.",
+        "en": "現 means what is present or actual; 現われ is an outward manifestation."
       },
       "decomposition": {
-        "hanViet": "Nghiệm",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "hanViet": "Hiện",
+        "structure": "left-right",
+        "components": [
+          "王",
+          "見"
+        ],
+        "componentNames": [
+          "ngọc/vua",
+          "nhìn thấy"
+        ],
         "relatedKanji": [
-          "試",
+          "見",
           "実",
-          "検",
-          "証"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "nghiem",
-        "meaningViNoAccent": "kiem nghiem; thu nghiem; chung nghiem",
-        "meaningEnNoAccent": "verification, effect"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l17_v004",
-          "sourceSenseId": "n3_l17_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Nghiệm (kiểm nghiệm; thử nghiệm; chứng nghiệm)",
-        "onyomi": "ケン, ゲン",
-        "kunyomi": "あかし, しるし, ため.す, ためし"
-      },
-      "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l17_k005",
-      "lessonId": 17,
-      "level": "N3",
-      "character": "開",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Khai",
-        "meaningVi": "mở; khai mở; bắt đầu",
-        "meaningViDisplay": "Khai (mở; khai mở; bắt đầu)",
-        "meaningEn": "open, unfold"
-      },
-      "readings": {
-        "onyomi": [
-          "カイ"
-        ],
-        "kunyomi": [
-          "ひら.く",
-          "ひら.き",
-          "-びら.き",
-          "ひら.ける"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
-      },
-      "decomposition": {
-        "hanViet": "Khai",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "閉",
-          "始",
-          "発",
-          "門"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "khai",
-        "meaningViNoAccent": "mo; khai mo; bat dau",
-        "meaningEnNoAccent": "open, unfold"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l17_v006",
-          "sourceSenseId": "n3_l17_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Khai (mở; khai mở; bắt đầu)",
-        "onyomi": "カイ",
-        "kunyomi": "ひら.く, ひら.き, -びら.き, ひら.ける"
-      },
-      "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l17_k006",
-      "lessonId": 17,
-      "level": "N3",
-      "character": "発",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Phát",
-        "meaningVi": "phát ra; khởi hành; phát triển",
-        "meaningViDisplay": "Phát (phát ra; khởi hành; phát triển)",
-        "meaningEn": "departure, discharge"
-      },
-      "readings": {
-        "onyomi": [
-          "ハツ",
-          "ホツ"
-        ],
-        "kunyomi": [
-          "た.つ",
-          "あば.く",
-          "おこ.る",
-          "つか.わす"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
-      },
-      "decomposition": {
-        "hanViet": "Phát",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "開",
-          "明",
-          "達",
+          "在",
           "表"
         ]
       },
       "search": {
-        "hanVietNoAccent": "phat",
-        "meaningViNoAccent": "phat ra; khoi hanh; phat trien",
-        "meaningEnNoAccent": "departure, discharge"
+        "hanVietNoAccent": "Hien",
+        "meaningViNoAccent": "hien tai; thuc te; xuat hien",
+        "meaningEnNoAccent": "present; existing; actual"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l17_v003",
-          "sourceSenseId": "n3_l17_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n3_l17_v006",
-          "sourceSenseId": "n3_l17_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "現われ",
+          "reading": "あらわれ",
+          "meaning": "biểu hiện; sự hiện ra",
+          "meaningEn": "manifestation; appearance"
         }
       ],
-      "legacy": {
-        "meaning": "Phát (phát ra; khởi hành; phát triển)",
-        "onyomi": "ハツ, ホツ",
-        "kunyomi": "た.つ, あば.く, おこ.る, つか.わす"
-      },
-      "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
-      },
       "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l17_k007",
-      "lessonId": 17,
-      "level": "N3",
-      "character": "機",
-      "strokeCount": 16,
-      "labels": {
-        "hanViet": "Cơ",
-        "meaningVi": "máy móc; cơ chế; cơ hội",
-        "meaningViDisplay": "Cơ (máy móc; cơ chế; cơ hội)",
-        "meaningEn": "loom, mechanism"
-      },
-      "readings": {
-        "onyomi": [
-          "キ"
-        ],
-        "kunyomi": [
-          "はた"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
-      },
-      "decomposition": {
-        "hanViet": "Cơ",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "械",
-          "器",
-          "会",
-          "能"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "co",
-        "meaningViNoAccent": "may moc; co che; co hoi",
-        "meaningEnNoAccent": "loom, mechanism"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l17_v011",
-          "sourceSenseId": "n3_l17_s011",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
+      "metadataStatus": "vi-editorial-codex-pass",
       "legacy": {
-        "meaning": "Cơ (máy móc; cơ chế; cơ hội)",
-        "onyomi": "キ",
-        "kunyomi": "はた"
-      },
-      "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
+        "meaning": "Hiện (hiện tại; thực tế; xuất hiện)",
+        "onyomi": "ゲン",
+        "kunyomi": "あらわ.れる, あらわ.す, うつつ, うつ.つ"
+      }
     },
     {
-      "kanjiId": "n3_l17_k008",
+      "kanjiId": "n3_canonical_l17_k007",
       "lessonId": 17,
       "level": "N3",
-      "character": "械",
+      "character": "週",
       "strokeCount": 11,
       "labels": {
-        "hanViet": "Giới",
-        "meaningVi": "máy móc; dụng cụ; gông cùm",
-        "meaningViDisplay": "Giới (máy móc; dụng cụ; gông cùm)",
-        "meaningEn": "contraption, fetter"
+        "hanViet": "Chu",
+        "meaningVi": "Cuối Cùng = Far",
+        "meaningViDisplay": "Chu (Cuối Cùng = Far)",
+        "meaningEn": "week; semaine; semana"
       },
       "readings": {
         "onyomi": [
-          "カイ"
+          "シュウ"
         ],
         "kunyomi": [
-          "かせ"
+          "すえ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
-        "en": "Core kanji for QUARTET 17: Science and technology."
+        "vi": "! ' ' 1. 5 `...",
+        "en": "week; semaine; semana"
       },
       "decomposition": {
-        "hanViet": "Giới",
+        "hanViet": "Chu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chu",
+        "meaningViNoAccent": "Cuoi Cung = Far",
+        "meaningEnNoAccent": "week; semaine; semana"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chu (Cuối Cùng = Far)",
+        "onyomi": "シュウ",
+        "kunyomi": "すえ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l17_k008",
+      "lessonId": 17,
+      "level": "N3",
+      "character": "接",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Tiếp",
+        "meaningVi": "tiếp xúc; nối liền",
+        "meaningViDisplay": "Tiếp (tiếp xúc; nối liền)",
+        "meaningEn": "touch, contact"
+      },
+      "readings": {
+        "onyomi": [
+          "セツ",
+          "ショウ"
+        ],
+        "kunyomi": [
+          "つ.ぐ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
+        "en": "Core kanji for QUARTET 5: Work and occupations."
+      },
+      "decomposition": {
+        "hanViet": "Tiếp",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "機",
-          "器",
-          "工",
-          "技"
+          "面",
+          "連",
+          "近",
+          "触"
         ]
       },
       "search": {
-        "hanVietNoAccent": "gioi",
-        "meaningViNoAccent": "may moc; dung cu; gong cum",
-        "meaningEnNoAccent": "contraption, fetter"
+        "hanVietNoAccent": "Tiep",
+        "meaningViNoAccent": "tiep xuc; noi lien",
+        "meaningEnNoAccent": "touch, contact"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l17_v011",
-          "sourceSenseId": "n3_l17_s011",
+          "sourceVocabId": "n3_l05_v003",
+          "sourceSenseId": "n3_l05_s003",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -535,21 +482,225 @@
         }
       ],
       "legacy": {
-        "meaning": "Giới (máy móc; dụng cụ; gông cùm)",
-        "onyomi": "カイ",
-        "kunyomi": "かせ"
-      },
-      "theme": {
-        "quartetLesson": 17,
-        "themeEn": "Science and technology",
-        "themeVi": "Khoa học và công nghệ"
+        "meaning": "Tiếp (tiếp xúc; nối liền)",
+        "onyomi": "セツ, ショウ",
+        "kunyomi": "つ.ぐ"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 5,
+        "themeEn": "Work and occupations",
+        "themeVi": "Công việc và nghề nghiệp"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l17_k009",
+      "lessonId": 17,
+      "level": "N3",
+      "character": "進",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Tiến",
+        "meaningVi": "Tiến Bộ Ct Ttt #ếpi",
+        "meaningViDisplay": "Tiến (Tiến Bộ Ct Ttt #ếpi)",
+        "meaningEn": "advance; proceed; progress"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
+        ],
+        "kunyomi": [
+          "すす.む",
+          "すす.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 進 qua Hán-Việt Tiến.",
+        "en": "advance; proceed; progress"
+      },
+      "decomposition": {
+        "hanViet": "Tiến",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tien",
+        "meaningViNoAccent": "Tien Bo Ct Ttt #epi",
+        "meaningEnNoAccent": "advance; proceed; progress"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tiến (Tiến Bộ Ct Ttt #ếpi)",
+        "onyomi": "シン",
+        "kunyomi": "すす.む, すす.める"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l17_k010",
+      "lessonId": 17,
+      "level": "N3",
+      "character": "婚",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Hôn",
+        "meaningVi": "Kết Hôn. Cher # Bpe Lí Tí Đất Đế",
+        "meaningViDisplay": "Hôn (Kết Hôn. Cher # Bpe Lí Tí Đất Đế)",
+        "meaningEn": "marriage; mariage; matrimonio"
+      },
+      "readings": {
+        "onyomi": [
+          "コン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 婚 qua Hán-Việt Hôn.",
+        "en": "marriage; mariage; matrimonio"
+      },
+      "decomposition": {
+        "hanViet": "Hôn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hon",
+        "meaningViNoAccent": "Ket Hon. Cher # Bpe Li Ti Dat De",
+        "meaningEnNoAccent": "marriage; mariage; matrimonio"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hôn (Kết Hôn. Cher # Bpe Lí Tí Đất Đế)",
+        "onyomi": "コン",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l17_k011",
+      "lessonId": 17,
+      "level": "N3",
+      "character": "酔",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Túy",
+        "meaningVi": "Say -t Aar Abs © Eb",
+        "meaningViDisplay": "Túy (Say -t Aar Abs © Eb)",
+        "meaningEn": "drunk; feel sick; poisoned"
+      },
+      "readings": {
+        "onyomi": [
+          "スイ"
+        ],
+        "kunyomi": [
+          "よ.う",
+          "よ.い",
+          "よ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Wang rasa dn is Db (90) chen chumsay 「/ ' h",
+        "en": "drunk; feel sick; poisoned"
+      },
+      "decomposition": {
+        "hanViet": "Túy",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tuy",
+        "meaningViNoAccent": "Say -t Aar Abs © Eb",
+        "meaningEnNoAccent": "drunk; feel sick; poisoned"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Túy (Say -t Aar Abs © Eb)",
+        "onyomi": "スイ",
+        "kunyomi": "よ.う, よ.い, よ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l17_k012",
+      "lessonId": 17,
+      "level": "N3",
+      "character": "率",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Suất",
+        "meaningVi": "Xác Suất “esse”",
+        "meaningViDisplay": "Suất (Xác Suất “esse”)",
+        "meaningEn": "ratio; rate; proportion"
+      },
+      "readings": {
+        "onyomi": [
+          "ソツ",
+          "リツ",
+          "シュツ"
+        ],
+        "kunyomi": [
+          "ひき.いる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 率 qua Hán-Việt Suất.",
+        "en": "ratio; rate; proportion"
+      },
+      "decomposition": {
+        "hanViet": "Suất",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Suat",
+        "meaningViNoAccent": "Xac Suat “esse”",
+        "meaningEnNoAccent": "ratio; rate; proportion"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Suất (Xác Suất “esse”)",
+        "onyomi": "ソツ, リツ, シュツ",
+        "kunyomi": "ひき.いる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

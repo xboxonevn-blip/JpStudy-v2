@@ -1,65 +1,315 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 13,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l13_k001",
+      "kanjiId": "n3_canonical_l13_k001",
       "lessonId": 13,
       "level": "N3",
-      "character": "教",
-      "strokeCount": 11,
+      "character": "独",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Giáo",
-        "meaningVi": "dạy; giáo dục; giáo lý",
-        "meaningViDisplay": "Giáo (dạy; giáo dục; giáo lý)",
-        "meaningEn": "teach, faith"
+        "hanViet": "Độc",
+        "meaningVi": "single; alone; spontaneously",
+        "meaningViDisplay": "Độc (single; alone; spontaneously)",
+        "meaningEn": "single; alone; spontaneously"
       },
       "readings": {
         "onyomi": [
-          "キョウ"
+          "ドク",
+          "トク"
         ],
         "kunyomi": [
-          "おし.える",
-          "おそ.わる"
+          "ひと.り"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
+        "vi": "Ghi nhớ 独 qua Hán-Việt Độc.",
+        "en": "single; alone; spontaneously"
       },
       "decomposition": {
-        "hanViet": "Giáo",
+        "hanViet": "Độc",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Doc",
+        "meaningViNoAccent": "single; alone; spontaneously",
+        "meaningEnNoAccent": "single; alone; spontaneously"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Độc (single; alone; spontaneously)",
+        "onyomi": "ドク, トク",
+        "kunyomi": "ひと.り"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l13_k002",
+      "lessonId": 13,
+      "level": "N3",
+      "character": "査",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Tra",
+        "meaningVi": "Điều Tra ++ << # Gi",
+        "meaningViDisplay": "Tra (Điều Tra ++ << # Gi)",
+        "meaningEn": "investigate; investigation; investigar"
+      },
+      "readings": {
+        "onyomi": [
+          "サ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 査 qua Hán-Việt Tra.",
+        "en": "investigate; investigation; investigar"
+      },
+      "decomposition": {
+        "hanViet": "Tra",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tra",
+        "meaningViNoAccent": "Dieu Tra ++ << # Gi",
+        "meaningEnNoAccent": "investigate; investigation; investigar"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tra (Điều Tra ++ << # Gi)",
+        "onyomi": "サ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l13_k003",
+      "lessonId": 13,
+      "level": "N3",
+      "character": "突",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Đột",
+        "meaningVi": "đột; đâm; lao vào; đột ngột",
+        "meaningViDisplay": "Đột (đột; đâm; lao vào; đột ngột)",
+        "meaningEn": "thrust, pierce, sudden"
+      },
+      "readings": {
+        "onyomi": [
+          "トツ"
+        ],
+        "kunyomi": [
+          "つく"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "突 means to thrust or protrude; in 煙突 it suggests the chimney protruding upward."
+      },
+      "decomposition": {
+        "hanViet": "Đột",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "煙",
+          "穴",
+          "衝",
+          "進"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dot",
+        "meaningViNoAccent": "dot; dam; lao vao; dot ngot",
+        "meaningEnNoAccent": "thrust, pierce, sudden"
+      },
+      "examples": [
+        {
+          "word": "煙突",
+          "reading": "えんとつ",
+          "meaning": "ống khói",
+          "meaningEn": "chimney"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đột (đột; đâm; lao vào; đột ngột)",
+        "onyomi": "トツ",
+        "kunyomi": "つく"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l13_k004",
+      "lessonId": 13,
+      "level": "N3",
+      "character": "変",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Biến",
+        "meaningVi": "thay đổi; biến đổi; khác thường",
+        "meaningViDisplay": "Biến (thay đổi; biến đổi; khác thường)",
+        "meaningEn": "change, unusual, strange"
+      },
+      "readings": {
+        "onyomi": [
+          "ヘン"
+        ],
+        "kunyomi": [
+          "か.わる",
+          "か.わり",
+          "か.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "変 means change or unusual; 相変わらず says the state remains unchanged as before."
+      },
+      "decomposition": {
+        "hanViet": "Biến",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "化",
+          "改",
+          "異",
+          "相"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bien",
+        "meaningViNoAccent": "thay doi; bien doi; khac thuong",
+        "meaningEnNoAccent": "change, unusual, strange"
+      },
+      "examples": [
+        {
+          "word": "相変わらず",
+          "reading": "あいかわらず",
+          "meaning": "vẫn như trước; như thường lệ; không đổi",
+          "meaningEn": "as ever, as usual, unchanged"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Biến (thay đổi; biến đổi; khác thường)",
+        "onyomi": "ヘン",
+        "kunyomi": "か.わる, か.わり, か.える"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l13_k005",
+      "lessonId": 13,
+      "level": "N3",
+      "character": "飛",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Phi",
+        "meaningVi": "bay",
+        "meaningViDisplay": "Phi (bay)",
+        "meaningEn": "Fly"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒ"
+        ],
+        "kunyomi": [
+          "と.ぶ",
+          "と.ばす",
+          "-と.ばす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "テー III ane. 78t m Sap 1",
+        "en": "The shape of a bird spreading its wings to FLY."
+      },
+      "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "育",
-          "学",
-          "課",
-          "師"
-        ]
+          "鳥",
+          "羽",
+          "風",
+          "機"
+        ],
+        "hanViet": "Phi"
       },
       "search": {
-        "hanVietNoAccent": "giao",
-        "meaningViNoAccent": "day; giao duc; giao ly",
-        "meaningEnNoAccent": "teach, faith"
+        "hanVietNoAccent": "Phi",
+        "meaningViNoAccent": "bay",
+        "meaningEnNoAccent": "Fly"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l13_v001",
-          "sourceSenseId": "n3_l13_s001",
+          "sourceVocabId": "n4_l41_v074",
+          "sourceSenseId": "n4_l41_s074",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l13_v011",
-          "sourceSenseId": "n3_l13_s011",
+          "sourceVocabId": "n4_l26_v045",
+          "sourceSenseId": "n4_l26_s045",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l36_v050",
+          "sourceSenseId": "n4_l36_s050",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -67,398 +317,516 @@
         }
       ],
       "legacy": {
-        "meaning": "Giáo (dạy; giáo dục; giáo lý)",
-        "onyomi": "キョウ",
-        "kunyomi": "おし.える, おそ.わる"
+        "meaning": "Phi (bay)",
+        "onyomi": "ヒ",
+        "kunyomi": "と.ぶ, と.ばす, -と.ばす"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l13_k002",
+      "kanjiId": "n3_canonical_l13_k006",
       "lessonId": 13,
       "level": "N3",
-      "character": "育",
-      "strokeCount": 8,
+      "character": "逆",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Dục",
-        "meaningVi": "nuôi dưỡng; giáo dục; lớn lên",
-        "meaningViDisplay": "Dục (nuôi dưỡng; giáo dục; lớn lên)",
-        "meaningEn": "bring up, grow up"
+        "hanViet": "Nghịch",
+        "meaningVi": "inverted; reverse; opposite",
+        "meaningViDisplay": "Nghịch (inverted; reverse; opposite)",
+        "meaningEn": "inverted; reverse; opposite"
       },
       "readings": {
         "onyomi": [
-          "イク"
+          "ギャク",
+          "ゲキ"
         ],
         "kunyomi": [
-          "そだ.つ",
-          "そだ.ち",
-          "そだ.てる",
-          "はぐく.む"
+          "さか",
+          "さか.さ",
+          "さか.らう"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "inverted; reverse; opposite"
       },
       "decomposition": {
-        "hanViet": "Dục",
-        "structure": "standalone",
+        "hanViet": "Nghịch",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "教",
-          "学",
-          "児",
-          "成"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "duc",
-        "meaningViNoAccent": "nuoi duong; giao duc; lon len",
-        "meaningEnNoAccent": "bring up, grow up"
+        "hanVietNoAccent": "Nghich",
+        "meaningViNoAccent": "inverted; reverse; opposite",
+        "meaningEnNoAccent": "inverted; reverse; opposite"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l13_v001",
-          "sourceSenseId": "n3_l13_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Dục (nuôi dưỡng; giáo dục; lớn lên)",
-        "onyomi": "イク",
-        "kunyomi": "そだ.つ, そだ.ち, そだ.てる, はぐく.む"
+        "meaning": "Nghịch (inverted; reverse; opposite)",
+        "onyomi": "ギャク, ゲキ",
+        "kunyomi": "さか, さか.さ, さか.らう"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l13_k003",
+      "kanjiId": "n3_canonical_l13_k007",
       "lessonId": 13,
       "level": "N3",
-      "character": "課",
-      "strokeCount": 15,
+      "character": "追",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Khóa",
-        "meaningVi": "bài học; khóa học; phần bài",
-        "meaningViDisplay": "Khóa (bài học; khóa học; phần bài)",
-        "meaningEn": "chapter, lesson"
+        "hanViet": "Truy",
+        "meaningVi": "truy; đuổi theo; truy đuổi; theo sau",
+        "meaningViDisplay": "Truy (truy; đuổi theo; truy đuổi; theo sau)",
+        "meaningEn": "chase, pursue, follow"
       },
       "readings": {
         "onyomi": [
-          "カ"
+          "ツイ"
         ],
-        "kunyomi": []
+        "kunyomi": [
+          "お.う"
+        ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
+        "vi": "H 1 _ pwreaa6DeeswsmyssGD",
+        "en": "追 means to chase or follow; in 追い掛ける it is the pursuit action."
       },
       "decomposition": {
-        "hanViet": "Khóa",
-        "structure": "standalone",
+        "hanViet": "Truy",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "題",
-          "教",
-          "学",
-          "科"
+          "掛",
+          "越",
+          "逃",
+          "進"
         ]
       },
       "search": {
-        "hanVietNoAccent": "khoa",
-        "meaningViNoAccent": "bai hoc; khoa hoc; phan bai",
-        "meaningEnNoAccent": "chapter, lesson"
+        "hanVietNoAccent": "Truy",
+        "meaningViNoAccent": "truy; duoi theo; truy duoi; theo sau",
+        "meaningEnNoAccent": "chase, pursue, follow"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l13_v003",
-          "sourceSenseId": "n3_l13_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "追い掛ける",
+          "reading": "おいかける",
+          "meaning": "đuổi theo; truy đuổi",
+          "meaningEn": "to chase or run after someone, to run down, to pursue"
         }
       ],
-      "legacy": {
-        "meaning": "Khóa (bài học; khóa học; phần bài)",
-        "onyomi": "カ",
-        "kunyomi": ""
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Truy (truy; đuổi theo; truy đuổi; theo sau)",
+        "onyomi": "ツイ",
+        "kunyomi": "お.う"
       }
     },
     {
-      "kanjiId": "n3_l13_k004",
+      "kanjiId": "n3_canonical_l13_k008",
       "lessonId": 13,
       "level": "N3",
-      "character": "題",
-      "strokeCount": 18,
+      "character": "度",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Đề",
-        "meaningVi": "chủ đề; đề bài; tiêu đề",
-        "meaningViDisplay": "Đề (chủ đề; đề bài; tiêu đề)",
-        "meaningEn": "topic, subject"
+        "hanViet": "Độ",
+        "meaningVi": "mức độ; lần; đo lường",
+        "meaningViDisplay": "Độ (mức độ; lần; đo lường)",
+        "meaningEn": "degree, occurrence, time, measure"
       },
       "readings": {
         "onyomi": [
-          "ダイ"
+          "ド",
+          "ト",
+          "タク"
         ],
-        "kunyomi": []
+        "kunyomi": [
+          "たび",
+          "-た.い"
+        ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
+        "vi": "度 chỉ mức đo, độ hoặc một lần xảy ra; trong 緯度, nó là đơn vị đo vị trí địa lý.",
+        "en": "度 marks degree, measure, or occurrence; in 緯度 it is the measured coordinate."
       },
       "decomposition": {
-        "hanViet": "Đề",
-        "structure": "standalone",
+        "hanViet": "Độ",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "課",
-          "問",
-          "答",
-          "文"
+          "測",
+          "緯",
+          "温",
+          "量"
         ]
       },
       "search": {
-        "hanVietNoAccent": "de",
-        "meaningViNoAccent": "chu de; de bai; tieu de",
-        "meaningEnNoAccent": "topic, subject"
+        "hanVietNoAccent": "Do",
+        "meaningViNoAccent": "muc do; lan; do luong",
+        "meaningEnNoAccent": "degree, occurrence, time, measure"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l13_v003",
-          "sourceSenseId": "n3_l13_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "緯度",
+          "reading": "いど",
+          "meaning": "vĩ độ",
+          "meaningEn": "latitude"
         }
       ],
-      "legacy": {
-        "meaning": "Đề (chủ đề; đề bài; tiêu đề)",
-        "onyomi": "ダイ",
-        "kunyomi": ""
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Độ (mức độ; lần; đo lường)",
+        "onyomi": "ド, ト, タク",
+        "kunyomi": "たび, -た.い"
       }
     },
     {
-      "kanjiId": "n3_l13_k005",
+      "kanjiId": "n3_canonical_l13_k009",
       "lessonId": 13,
       "level": "N3",
-      "character": "績",
-      "strokeCount": 17,
+      "character": "段",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Tích",
-        "meaningVi": "thành tích; công lao; kết quả",
-        "meaningViDisplay": "Tích (thành tích; công lao; kết quả)",
-        "meaningEn": "exploits, achievements"
+        "hanViet": "Đoạn",
+        "meaningVi": "bậc; đoạn; cấp độ",
+        "meaningViDisplay": "Đoạn (bậc; đoạn; cấp độ)",
+        "meaningEn": "grade, steps, stairs, section"
       },
       "readings": {
         "onyomi": [
-          "セキ"
+          "ダン",
+          "タン"
         ],
-        "kunyomi": []
+        "kunyomi": [
+          "いた",
+          "だ",
+          "た",
+          "し",
+          "ゅ",
+          "ん",
+          "の",
+          "め"
+        ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
+        "vi": "段 chỉ bậc, nấc hoặc một đoạn; 一段と dùng khi mức độ tăng rõ rệt.",
+        "en": "段 means a step, grade, or section; 一段と describes something becoming noticeably more intense."
       },
       "decomposition": {
-        "hanViet": "Tích",
-        "structure": "standalone",
+        "hanViet": "Đoạn",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "成",
-          "評",
-          "優",
-          "卒"
+          "階",
+          "級",
+          "差",
+          "上"
         ]
       },
       "search": {
-        "hanVietNoAccent": "tich",
-        "meaningViNoAccent": "thanh tich; cong lao; ket qua",
-        "meaningEnNoAccent": "exploits, achievements"
+        "hanVietNoAccent": "Doan",
+        "meaningViNoAccent": "bac; doan; cap do",
+        "meaningEnNoAccent": "grade, steps, stairs, section"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l13_v005",
-          "sourceSenseId": "n3_l13_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "一段と",
+          "reading": "いちだんと",
+          "meaning": "hơn hẳn; càng thêm; ở mức cao hơn",
+          "meaningEn": "greater, more, further, still more"
         }
       ],
-      "legacy": {
-        "meaning": "Tích (thành tích; công lao; kết quả)",
-        "onyomi": "セキ",
-        "kunyomi": ""
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đoạn (bậc; đoạn; cấp độ)",
+        "onyomi": "ダン, タン",
+        "kunyomi": "いた, だ, た, し, ゅ, ん, の, め"
       }
     },
     {
-      "kanjiId": "n3_l13_k006",
+      "kanjiId": "n3_canonical_l13_k010",
       "lessonId": 13,
       "level": "N3",
-      "character": "席",
+      "character": "神",
       "strokeCount": 10,
       "labels": {
-        "hanViet": "Tịch",
-        "meaningVi": "chỗ ngồi; phiên; buổi",
-        "meaningViDisplay": "Tịch (chỗ ngồi; phiên; buổi)",
-        "meaningEn": "seat, mat"
+        "hanViet": "Thần",
+        "meaningVi": "thần linh; tinh thần",
+        "meaningViDisplay": "Thần (thần linh; tinh thần)",
+        "meaningEn": "gods, mind"
       },
       "readings": {
         "onyomi": [
-          "セキ"
+          "シン",
+          "ジン"
         ],
         "kunyomi": [
-          "むしろ"
+          "かみ",
+          "こう",
+          "たましい"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
+        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
+        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
       },
       "decomposition": {
-        "hanViet": "Tịch",
+        "hanViet": "Thần",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "出",
-          "欠",
-          "座",
-          "場"
+          "祭",
+          "礼",
+          "社",
+          "心"
         ]
       },
       "search": {
-        "hanVietNoAccent": "tich",
-        "meaningViNoAccent": "cho ngoi; phien; buoi",
-        "meaningEnNoAccent": "seat, mat"
+        "hanVietNoAccent": "Than",
+        "meaningViNoAccent": "than linh; tinh than",
+        "meaningEnNoAccent": "gods, mind"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l13_v006",
-          "sourceSenseId": "n3_l13_s006",
+          "sourceVocabId": "n3_l08_v007",
+          "sourceSenseId": "n3_l08_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thần (thần linh; tinh thần)",
+        "onyomi": "シン, ジン",
+        "kunyomi": "かみ, こう, たましい"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 8,
+        "themeEn": "Traditions and seasonal events",
+        "themeVi": "Truyền thống và sự kiện theo mùa"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l13_k011",
+      "lessonId": 13,
+      "level": "N3",
+      "character": "浴",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Dục",
+        "meaningVi": "Tắm. “4... Ốc",
+        "meaningViDisplay": "Dục (Tắm. “4... Ốc)",
+        "meaningEn": "bathe; be favored with; bask in"
+      },
+      "readings": {
+        "onyomi": [
+          "ヨク"
+        ],
+        "kunyomi": [
+          "あ.びる",
+          "あ.びせる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 浴 qua Hán-Việt Dục.",
+        "en": "bathe; be favored with; bask in"
+      },
+      "decomposition": {
+        "hanViet": "Dục",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Duc",
+        "meaningViNoAccent": "Tam. “4... Oc",
+        "meaningEnNoAccent": "bathe; be favored with; bask in"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Dục (Tắm. “4... Ốc)",
+        "onyomi": "ヨク",
+        "kunyomi": "あ.びる, あ.びせる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l13_k012",
+      "lessonId": 13,
+      "level": "N3",
+      "character": "容",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Dong",
+        "meaningVi": "Nội Dung Eae Re Es",
+        "meaningViDisplay": "Dong (Nội Dung Eae Re Es)",
+        "meaningEn": "contain; form; looks"
+      },
+      "readings": {
+        "onyomi": [
+          "ヨウ"
+        ],
+        "kunyomi": [
+          "い.れる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 容 qua Hán-Việt Dong.",
+        "en": "contain; form; looks"
+      },
+      "decomposition": {
+        "hanViet": "Dong",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "Noi Dung Eae Re Es",
+        "meaningEnNoAccent": "contain; form; looks"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Dong (Nội Dung Eae Re Es)",
+        "onyomi": "ヨウ",
+        "kunyomi": "い.れる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l13_k013",
+      "lessonId": 13,
+      "level": "N3",
+      "character": "員",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Viên",
+        "meaningVi": "thành viên",
+        "meaningViDisplay": "Viên (thành viên)",
+        "meaningEn": "Member"
+      },
+      "readings": {
+        "onyomi": [
+          "イン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Vỏ sò (tiền 貝) đại diện cho quyền lợi thành viên.",
+        "en": "Money (貝) related to membership."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "口",
+          "貝"
+        ],
+        "componentNames": [
+          "Khẩu (miệng)",
+          "Bối (vỏ sò, tiền)"
+        ],
+        "relatedKanji": [
+          "口",
+          "買"
+        ],
+        "hanViet": "Viên"
+      },
+      "search": {
+        "hanVietNoAccent": "Vien",
+        "meaningViNoAccent": "thanh vien",
+        "meaningEnNoAccent": "Member"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l14_v048",
+          "sourceSenseId": "n5_l14_s048",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l13_v007",
-          "sourceSenseId": "n3_l13_s007",
+          "sourceVocabId": "n5_l01_v010",
+          "sourceSenseId": "n5_l01_s010",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tịch (chỗ ngồi; phiên; buổi)",
-        "onyomi": "セキ",
-        "kunyomi": "むしろ"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
-      }
-    },
-    {
-      "kanjiId": "n3_l13_k007",
-      "lessonId": 13,
-      "level": "N3",
-      "character": "卒",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Tốt",
-        "meaningVi": "tốt nghiệp; binh lính; kết thúc",
-        "meaningViDisplay": "Tốt (tốt nghiệp; binh lính; kết thúc)",
-        "meaningEn": "graduate, soldier"
-      },
-      "readings": {
-        "onyomi": [
-          "ソツ",
-          "シュツ"
-        ],
-        "kunyomi": [
-          "そっ.する",
-          "お.える",
-          "お.わる",
-          "ついに"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
-      },
-      "decomposition": {
-        "hanViet": "Tốt",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "業",
-          "学",
-          "校",
-          "導"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tot",
-        "meaningViNoAccent": "tot nghiep; binh linh; ket thuc",
-        "meaningEnNoAccent": "graduate, soldier"
-      },
-      "examples": [
+        },
         {
-          "sourceVocabId": "n3_l13_v010",
-          "sourceSenseId": "n3_l13_s010",
+          "sourceVocabId": "n5_l01_v011",
+          "sourceSenseId": "n5_l01_s011",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -466,86 +834,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Tốt (tốt nghiệp; binh lính; kết thúc)",
-        "onyomi": "ソツ, シュツ",
-        "kunyomi": "そっ.する, お.える, お.わる, ついに"
+        "meaning": "Viên (thành viên)",
+        "onyomi": "イン",
+        "kunyomi": ""
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
-      }
-    },
-    {
-      "kanjiId": "n3_l13_k008",
-      "lessonId": 13,
-      "level": "N3",
-      "character": "導",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Đạo",
-        "meaningVi": "dẫn dắt; hướng dẫn; chỉ đạo",
-        "meaningViDisplay": "Đạo (dẫn dắt; hướng dẫn; chỉ đạo)",
-        "meaningEn": "guidance, leading"
-      },
-      "readings": {
-        "onyomi": [
-          "ドウ"
-        ],
-        "kunyomi": [
-          "みちび.く"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
-        "en": "Core kanji for QUARTET 13: Education system and school life."
-      },
-      "decomposition": {
-        "hanViet": "Đạo",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "指",
-          "教",
-          "育",
-          "道"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "dao",
-        "meaningViNoAccent": "dan dat; huong dan; chi dao",
-        "meaningEnNoAccent": "guidance, leading"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l13_v012",
-          "sourceSenseId": "n3_l13_s012",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Đạo (dẫn dắt; hướng dẫn; chỉ đạo)",
-        "onyomi": "ドウ",
-        "kunyomi": "みちび.く"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 13,
-        "themeEn": "Education system and school life",
-        "themeVi": "Hệ thống giáo dục và đời sống học đường"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

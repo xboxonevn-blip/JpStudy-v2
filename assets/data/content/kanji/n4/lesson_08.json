@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 8,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l08_k001",
+      "lessonId": 8,
+      "level": "N4",
+      "character": "糸",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Mịch",
+        "meaningVi": "Sợi tơ",
+        "meaningViDisplay": "Mịch (Sợi tơ)",
+        "meaningEn": "thread; fil; hilo"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "いと"
+        ]
+      },
+      "mnemonic": {
+        "vi": "YÊU ( ) ma đè lên chân chú TIỂU ( ) bẹp dí thành sợi tơ ( ) 1",
+        "en": "thread; fil; hilo"
+      },
+      "decomposition": {
+        "hanViet": "Mịch",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Mich",
+        "meaningViNoAccent": "Soi to",
+        "meaningEnNoAccent": "thread; fil; hilo"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Mịch (Sợi tơ)",
+        "onyomi": "シ",
+        "kunyomi": "いと"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l08_k002",
+      "lessonId": 8,
+      "level": "N4",
+      "character": "地",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Địa",
+        "meaningVi": "đất; mặt đất; vùng đất",
+        "meaningViDisplay": "Địa (đất; mặt đất; vùng đất)",
+        "meaningEn": "ground; earth"
+      },
+      "readings": {
+        "onyomi": [
+          "チ",
+          "ジ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Thổ ( ) Địa thả C ( ) xuống đất ( ) 5",
+        "en": "地 means ground or earth; 天地 combines heaven and earth for the whole world."
+      },
+      "decomposition": {
+        "hanViet": "Địa",
+        "structure": "left-right",
+        "components": [
+          "土",
+          "也"
+        ],
+        "componentNames": [
+          "đất",
+          "cũng/vậy"
+        ],
+        "relatedKanji": [
+          "天",
+          "土",
+          "場",
+          "域"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dia",
+        "meaningViNoAccent": "dat; mat dat; vung dat",
+        "meaningEnNoAccent": "ground; earth"
+      },
+      "examples": [
+        {
+          "word": "天地",
+          "reading": "あめつち",
+          "meaning": "trời đất; vũ trụ; tự nhiên",
+          "meaningEn": "heaven and earth; the universe; nature"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Địa (đất; mặt đất; vùng đất)",
+        "onyomi": "チ, ジ",
+        "kunyomi": ""
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l08_k003",
+      "lessonId": 8,
+      "level": "N4",
+      "character": "考",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Khảo",
+        "meaningVi": "suy nghĩ",
+        "meaningViDisplay": "Khảo (suy nghĩ)",
+        "meaningEn": "Think, Consider"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ"
+        ],
+        "kunyomi": [
+          "かんが.える",
+          "かんが.え"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đứng trên đất chống gậy ( ) 5 ( ) guây suy nghĩ ( ) bắt đầu 2 4",
+        "en": "An elder (耂) thinking over time."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "耂",
+          "丂"
+        ],
+        "componentNames": [
+          "Lão (già)",
+          "Khảo (uốn cong)"
+        ],
+        "relatedKanji": [
+          "者"
+        ],
+        "hanViet": "Khảo"
+      },
+      "search": {
+        "hanVietNoAccent": "Khao",
+        "meaningViNoAccent": "suy nghi",
+        "meaningEnNoAccent": "Think, Consider"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l25_v031",
+          "sourceSenseId": "n5_l25_s031",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l25_v030",
+          "sourceSenseId": "n5_l25_s030",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l25_v001",
+          "sourceSenseId": "n5_l25_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Khảo (suy nghĩ)",
+        "onyomi": "コウ",
+        "kunyomi": "かんが.える, かんが.え"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l08_k004",
+      "lessonId": 8,
+      "level": "N4",
+      "character": "同",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Đồng",
+        "meaningVi": "cùng; giống nhau; đồng thời",
+        "meaningViDisplay": "Đồng (cùng; giống nhau; đồng thời)",
+        "meaningEn": "same, similar; together with"
+      },
+      "readings": {
+        "onyomi": [
+          "ドウ"
+        ],
+        "kunyomi": [
+          "おな.じ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ở biên giới ( ) có chung 1 ( ) miệng ( ) giống nhau ( ) 2",
+        "en": "同 means same or together; 一同 refers to everyone present or concerned."
+      },
+      "decomposition": {
+        "hanViet": "Đồng",
+        "structure": "enclosure",
+        "components": [
+          "冂",
+          "一",
+          "口"
+        ],
+        "componentNames": [
+          "quynh/bao ngoài",
+          "nhất/một",
+          "khẩu/miệng"
+        ],
+        "relatedKanji": [
+          "一",
+          "共",
+          "等",
+          "会"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "cung; giong nhau; dong thoi",
+        "meaningEnNoAccent": "same, similar; together with"
+      },
+      "examples": [
+        {
+          "word": "一同",
+          "reading": "いちどう",
+          "meaning": "toàn thể; mọi người có mặt",
+          "meaningEn": "everyone present; all concerned"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đồng (cùng; giống nhau; đồng thời)",
+        "onyomi": "ドウ",
+        "kunyomi": "おな.じ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l08_k005",
+      "lessonId": 8,
+      "level": "N4",
+      "character": "究",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Cứu",
+        "meaningVi": "Nghiên cứu",
+        "meaningViDisplay": "Cứu (Nghiên cứu)",
+        "meaningEn": "research; study; recherche"
+      },
+      "readings": {
+        "onyomi": [
+          "キュウ",
+          "ク"
+        ],
+        "kunyomi": [
+          "きわ.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đào lỗ ( ) xuống cửu ( ) tuyền để nghiên cứu ( ) 究 1",
+        "en": "research; study; recherche"
+      },
+      "decomposition": {
+        "hanViet": "Cứu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cuu",
+        "meaningViNoAccent": "Nghien cuu",
+        "meaningEnNoAccent": "research; study; recherche"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cứu (Nghiên cứu)",
+        "onyomi": "キュウ, ク",
+        "kunyomi": "きわ.める"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l08_k006",
+      "lessonId": 8,
+      "level": "N4",
+      "character": "麦",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Mạch",
+        "meaningVi": "Lúa mạch",
+        "meaningViDisplay": "Mạch (Lúa mạch)",
+        "meaningEn": "barley; wheat; orge"
+      },
+      "readings": {
+        "onyomi": [
+          "バク"
+        ],
+        "kunyomi": [
+          "むぎ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ông vua lòi đầu ( ) truy ( ) tìm lúa mạch ( ) 麦 2",
+        "en": "barley; wheat; orge"
+      },
+      "decomposition": {
+        "hanViet": "Mạch",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Mach",
+        "meaningViNoAccent": "Lua mach",
+        "meaningEnNoAccent": "barley; wheat; orge"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Mạch (Lúa mạch)",
+        "onyomi": "バク",
+        "kunyomi": "むぎ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l08_k007",
+      "lessonId": 8,
+      "level": "N4",
+      "character": "谷",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Cốc",
+        "meaningVi": "Thung lũng",
+        "meaningViDisplay": "Cốc (Thung lũng)",
+        "meaningEn": "valley; vallée; valle"
+      },
+      "readings": {
+        "onyomi": [
+          "コク"
+        ],
+        "kunyomi": [
+          "たに",
+          "きわ.まる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "8 ( ) nhân ( ) khẩu ( ) sống dưới tuyệt tình cốc ( ) 谷 1 2",
+        "en": "valley; vallée; valle"
+      },
+      "decomposition": {
+        "hanViet": "Cốc",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Coc",
+        "meaningViNoAccent": "Thung lung",
+        "meaningEnNoAccent": "valley; vallee; valle"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cốc (Thung lũng)",
+        "onyomi": "コク",
+        "kunyomi": "たに, きわ.まる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

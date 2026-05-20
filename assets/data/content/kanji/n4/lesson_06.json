@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 6,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l06_k001",
+      "lessonId": 6,
+      "level": "N4",
+      "character": "矢",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Thỉ",
+        "meaningVi": "Gia tộc 𠂉",
+        "meaningViDisplay": "Thỉ (Gia tộc 𠂉)",
+        "meaningEn": "dart; arrow; fléchette"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "や"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Gia tộc ( ) nhà Phương ( ) nằm ( ) bắn tên ( ) 矢 1 5",
+        "en": "dart; arrow; fléchette"
+      },
+      "decomposition": {
+        "hanViet": "Thỉ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thi",
+        "meaningViNoAccent": "Gia toc 𠂉",
+        "meaningEnNoAccent": "dart; arrow; flechette"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thỉ (Gia tộc 𠂉)",
+        "onyomi": "シ",
+        "kunyomi": "や"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l06_k002",
+      "lessonId": 6,
+      "level": "N4",
+      "character": "正",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Chánh",
+        "meaningVi": "Đúng, chính xác",
+        "meaningViDisplay": "Chánh (Đúng, chính xác)",
+        "meaningEn": "correct; justice; righteous"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
+        "kunyomi": [
+          "ただ.しい",
+          "ただ.す",
+          "まさ",
+          "まさ.に"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Nhất ( ) định dừng lại ( ) là chính xác ( ) 1",
+        "en": "correct; justice; righteous"
+      },
+      "decomposition": {
+        "hanViet": "Chánh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chanh",
+        "meaningViNoAccent": "Dung, chinh xac",
+        "meaningEnNoAccent": "correct; justice; righteous"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chánh (Đúng, chính xác)",
+        "onyomi": "セイ, ショウ",
+        "kunyomi": "ただ.しい, ただ.す, まさ, まさ.に"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l06_k003",
+      "lessonId": 6,
+      "level": "N4",
+      "character": "冬",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Đông",
+        "meaningVi": "Kinh tế",
+        "meaningViDisplay": "Đông (Kinh tế)",
+        "meaningEn": "winter; hiver; invierno"
+      },
+      "readings": {
+        "onyomi": [
+          "トウ"
+        ],
+        "kunyomi": [
+          "ふゆ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kinh doanh ( ) tơ ( ) lụa một cách thần thánh ( ) 1",
+        "en": "winter; hiver; invierno"
+      },
+      "decomposition": {
+        "hanViet": "Đông",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "Kinh te",
+        "meaningEnNoAccent": "winter; hiver; invierno"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đông (Kinh tế)",
+        "onyomi": "トウ",
+        "kunyomi": "ふゆ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l06_k004",
+      "lessonId": 6,
+      "level": "N4",
+      "character": "世",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Thế",
+        "meaningVi": "Thế giới",
+        "meaningViDisplay": "Thế (Thế giới)",
+        "meaningEn": "generation; world; society"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "セ",
+          "ソウ"
+        ],
+        "kunyomi": [
+          "よ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cốc nước ( ) Lớn (L) nhất thế giới ( ) 2 3",
+        "en": "generation; world; society"
+      },
+      "decomposition": {
+        "hanViet": "Thế",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "The",
+        "meaningViNoAccent": "The gioi",
+        "meaningEnNoAccent": "generation; world; society"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thế (Thế giới)",
+        "onyomi": "セイ, セ, ソウ",
+        "kunyomi": "よ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l06_k005",
+      "lessonId": 6,
+      "level": "N4",
+      "character": "去",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Khứ",
+        "meaningVi": "Rời đi",
+        "meaningViDisplay": "Khứ (Rời đi)",
+        "meaningEn": "gone; past; quit"
+      },
+      "readings": {
+        "onyomi": [
+          "キョ",
+          "コ"
+        ],
+        "kunyomi": [
+          "さ.る",
+          "-さ.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Mảnh đất ( ) 4 ( ) mét đã là chuyện quá khứ ( ) 去 2",
+        "en": "gone; past; quit"
+      },
+      "decomposition": {
+        "hanViet": "Khứ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Khu",
+        "meaningViNoAccent": "Roi di",
+        "meaningEnNoAccent": "gone; past; quit"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Khứ (Rời đi)",
+        "onyomi": "キョ, コ",
+        "kunyomi": "さ.る, -さ.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l06_k006",
+      "lessonId": 6,
+      "level": "N4",
+      "character": "市",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Thị",
+        "meaningVi": "chợ; thành phố; thị trường",
+        "meaningViDisplay": "Thị (chợ; thành phố; thị trường)",
+        "meaningEn": "market, fair; city, town; trade"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "いち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đầu ( ) quàng khăn ( ) là người thành phố ( ) 市 1",
+        "en": "市 means market or city; read いち when it means a market."
+      },
+      "decomposition": {
+        "hanViet": "Thị",
+        "structure": "top-bottom",
+        "components": [
+          "亠",
+          "巾"
+        ],
+        "componentNames": [
+          "đầu/nóc",
+          "cân/khăn"
+        ],
+        "relatedKanji": [
+          "町",
+          "場",
+          "都",
+          "商"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thi",
+        "meaningViNoAccent": "cho; thanh pho; thi truong",
+        "meaningEnNoAccent": "market, fair; city, town; trade"
+      },
+      "examples": [
+        {
+          "word": "市",
+          "reading": "いち",
+          "meaning": "chợ; phiên chợ",
+          "meaningEn": "market; fair"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thị (chợ; thành phố; thị trường)",
+        "onyomi": "シ",
+        "kunyomi": "いち"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l06_k007",
+      "lessonId": 6,
+      "level": "N4",
+      "character": "光",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Quang",
+        "meaningVi": "ánh sáng; chiếu sáng; tỏa sáng",
+        "meaningViDisplay": "Quang (ánh sáng; chiếu sáng; tỏa sáng)",
+        "meaningEn": "ray; light"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ"
+        ],
+        "kunyomi": [
+          "ひか.る",
+          "ひかり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Tiểu ( ) cô nương có 1 ( ) cặp chân ( ) trắng sáng ( ) 光 1",
+        "en": "光 means light or shine; 稲光 is a flash of lightning."
+      },
+      "decomposition": {
+        "hanViet": "Quang",
+        "structure": "top-bottom",
+        "components": [
+          "小",
+          "儿"
+        ],
+        "componentNames": [
+          "tiểu/nhỏ",
+          "nhân/người"
+        ],
+        "relatedKanji": [
+          "明",
+          "照",
+          "輝",
+          "稲"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Quang",
+        "meaningViNoAccent": "anh sang; chieu sang; toa sang",
+        "meaningEnNoAccent": "ray; light"
+      },
+      "examples": [
+        {
+          "word": "稲光",
+          "reading": "いなびかり",
+          "meaning": "tia chớp; ánh chớp",
+          "meaningEn": "(flash of) lightning"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Quang (ánh sáng; chiếu sáng; tỏa sáng)",
+        "onyomi": "コウ",
+        "kunyomi": "ひか.る, ひかり"
+      }
+    }
+  ]
+}

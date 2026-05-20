@@ -1,486 +1,321 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 4,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l04_k001",
+      "kanjiId": "n3_canonical_l04_k001",
       "lessonId": 4,
       "level": "N3",
-      "character": "留",
-      "strokeCount": 10,
-      "labels": {
-        "hanViet": "Lưu",
-        "meaningVi": "ở lại; lưu giữ",
-        "meaningViDisplay": "Lưu (ở lại; lưu giữ)",
-        "meaningEn": "detain, fasten"
-      },
-      "readings": {
-        "onyomi": [
-          "リュウ",
-          "ル"
-        ],
-        "kunyomi": [
-          "と.める",
-          "と.まる",
-          "とど.める",
-          "とど.まる"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
-      },
-      "decomposition": {
-        "hanViet": "Lưu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "学",
-          "流",
-          "住",
-          "止"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "luu",
-        "meaningViNoAccent": "o lai; luu giu",
-        "meaningEnNoAccent": "detain, fasten"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l04_v001",
-          "sourceSenseId": "n3_l04_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Lưu (ở lại; lưu giữ)",
-        "onyomi": "リュウ, ル",
-        "kunyomi": "と.める, と.まる, とど.める, とど.まる"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
-      }
-    },
-    {
-      "kanjiId": "n3_l04_k002",
-      "lessonId": 4,
-      "level": "N3",
-      "character": "学",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Học",
-        "meaningVi": "học; việc học",
-        "meaningViDisplay": "Học (học; việc học)",
-        "meaningEn": "study, learning"
-      },
-      "readings": {
-        "onyomi": [
-          "ガク"
-        ],
-        "kunyomi": [
-          "まな.ぶ"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
-      },
-      "decomposition": {
-        "hanViet": "Học",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "留",
-          "文",
-          "校",
-          "生"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "hoc",
-        "meaningViNoAccent": "hoc; viec hoc",
-        "meaningEnNoAccent": "study, learning"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l04_v001",
-          "sourceSenseId": "n3_l04_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n3_l04_v009",
-          "sourceSenseId": "n3_l04_s009",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Học (học; việc học)",
-        "onyomi": "ガク",
-        "kunyomi": "まな.ぶ"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
-      }
-    },
-    {
-      "kanjiId": "n3_l04_k003",
-      "lessonId": 4,
-      "level": "N3",
-      "character": "文",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Văn",
-        "meaningVi": "văn hóa; chữ viết; văn chương",
-        "meaningViDisplay": "Văn (văn hóa; chữ viết; văn chương)",
-        "meaningEn": "sentence, literature"
-      },
-      "readings": {
-        "onyomi": [
-          "ブン",
-          "モン"
-        ],
-        "kunyomi": [
-          "ふみ",
-          "あや"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
-      },
-      "decomposition": {
-        "hanViet": "Văn",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "化",
-          "学",
-          "字",
-          "章"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "van",
-        "meaningViNoAccent": "van hoa; chu viet; van chuong",
-        "meaningEnNoAccent": "sentence, literature"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l04_v002",
-          "sourceSenseId": "n3_l04_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n3_l04_v011",
-          "sourceSenseId": "n3_l04_s011",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Văn (văn hóa; chữ viết; văn chương)",
-        "onyomi": "ブン, モン",
-        "kunyomi": "ふみ, あや"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
-      }
-    },
-    {
-      "kanjiId": "n3_l04_k004",
-      "lessonId": 4,
-      "level": "N3",
-      "character": "化",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Hóa",
-        "meaningVi": "biến đổi; -hóa",
-        "meaningViDisplay": "Hóa (biến đổi; -hóa)",
-        "meaningEn": "change, take the form of"
-      },
-      "readings": {
-        "onyomi": [
-          "カ",
-          "ケ"
-        ],
-        "kunyomi": [
-          "ば.ける",
-          "ば.かす",
-          "ふ.ける",
-          "け.する"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
-      },
-      "decomposition": {
-        "hanViet": "Hóa",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "文",
-          "変",
-          "代",
-          "花"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "hoa",
-        "meaningViNoAccent": "bien doi; -hoa",
-        "meaningEnNoAccent": "change, take the form of"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l04_v002",
-          "sourceSenseId": "n3_l04_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n3_l04_v011",
-          "sourceSenseId": "n3_l04_s011",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Hóa (biến đổi; -hóa)",
-        "onyomi": "カ, ケ",
-        "kunyomi": "ば.ける, ば.かす, ふ.ける, け.する"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
-      }
-    },
-    {
-      "kanjiId": "n3_l04_k005",
-      "lessonId": 4,
-      "level": "N3",
-      "character": "言",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Ngôn",
-        "meaningVi": "lời nói; nói",
-        "meaningViDisplay": "Ngôn (lời nói; nói)",
-        "meaningEn": "say, word"
-      },
-      "readings": {
-        "onyomi": [
-          "ゲン",
-          "ゴン"
-        ],
-        "kunyomi": [
-          "い.う",
-          "こと"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
-      },
-      "decomposition": {
-        "hanViet": "Ngôn",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "語",
-          "話",
-          "文",
-          "口"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "ngon",
-        "meaningViNoAccent": "loi noi; noi",
-        "meaningEnNoAccent": "say, word"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l04_v003",
-          "sourceSenseId": "n3_l04_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Ngôn (lời nói; nói)",
-        "onyomi": "ゲン, ゴン",
-        "kunyomi": "い.う, こと"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
-      }
-    },
-    {
-      "kanjiId": "n3_l04_k006",
-      "lessonId": 4,
-      "level": "N3",
-      "character": "語",
-      "strokeCount": 14,
-      "labels": {
-        "hanViet": "Ngữ",
-        "meaningVi": "ngôn ngữ; từ ngữ; lời nói",
-        "meaningViDisplay": "Ngữ (ngôn ngữ; từ ngữ; lời nói)",
-        "meaningEn": "word, speech"
-      },
-      "readings": {
-        "onyomi": [
-          "ゴ"
-        ],
-        "kunyomi": [
-          "かた.る",
-          "かた.らう"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
-      },
-      "decomposition": {
-        "hanViet": "Ngữ",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "言",
-          "話",
-          "文",
-          "学"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "ngu",
-        "meaningViNoAccent": "ngon ngu; tu ngu; loi noi",
-        "meaningEnNoAccent": "word, speech"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l04_v003",
-          "sourceSenseId": "n3_l04_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Ngữ (ngôn ngữ; từ ngữ; lời nói)",
-        "onyomi": "ゴ",
-        "kunyomi": "かた.る, かた.らう"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
-      }
-    },
-    {
-      "kanjiId": "n3_l04_k007",
-      "lessonId": 4,
-      "level": "N3",
-      "character": "交",
+      "character": "件",
       "strokeCount": 6,
       "labels": {
-        "hanViet": "Giao",
-        "meaningVi": "giao lưu; trao đổi; qua lại",
-        "meaningViDisplay": "Giao (giao lưu; trao đổi; qua lại)",
-        "meaningEn": "mingle, mixing"
+        "hanViet": "Kiện",
+        "meaningVi": "affair; case; matter",
+        "meaningViDisplay": "Kiện (affair; case; matter)",
+        "meaningEn": "affair; case; matter"
       },
       "readings": {
         "onyomi": [
-          "コウ"
+          "ケン"
         ],
         "kunyomi": [
-          "まじ.わる",
-          "まじ.える",
-          "ま.じる",
-          "まじ.る"
+          "くだん"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
+        "vi": "Ghi nhớ 件 qua Hán-Việt Kiện.",
+        "en": "affair; case; matter"
       },
       "decomposition": {
-        "hanViet": "Giao",
+        "hanViet": "Kiện",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Kien",
+        "meaningViNoAccent": "affair; case; matter",
+        "meaningEnNoAccent": "affair; case; matter"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Kiện (affair; case; matter)",
+        "onyomi": "ケン",
+        "kunyomi": "くだん"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k002",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "吸",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Hấp",
+        "meaningVi": "suck; imbibe; inhale",
+        "meaningViDisplay": "Hấp (suck; imbibe; inhale)",
+        "meaningEn": "suck; imbibe; inhale"
+      },
+      "readings": {
+        "onyomi": [
+          "キュウ"
+        ],
+        "kunyomi": [
+          "す.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 吸 qua Hán-Việt Hấp.",
+        "en": "suck; imbibe; inhale"
+      },
+      "decomposition": {
+        "hanViet": "Hấp",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hap",
+        "meaningViNoAccent": "suck; imbibe; inhale",
+        "meaningEnNoAccent": "suck; imbibe; inhale"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hấp (suck; imbibe; inhale)",
+        "onyomi": "キュウ",
+        "kunyomi": "す.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k003",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "全",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Toàn",
+        "meaningVi": "Toàn Bộ ⁄ /",
+        "meaningViDisplay": "Toàn (Toàn Bộ ⁄ /)",
+        "meaningEn": "whole; entire; all"
+      },
+      "readings": {
+        "onyomi": [
+          "ゼン"
+        ],
+        "kunyomi": [
+          "まった.く",
+          "すべ.て"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 全 qua Hán-Việt Toàn.",
+        "en": "whole; entire; all"
+      },
+      "decomposition": {
+        "hanViet": "Toàn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Toan",
+        "meaningViNoAccent": "Toan Bo ⁄ /",
+        "meaningEnNoAccent": "whole; entire; all"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Toàn (Toàn Bộ ⁄ /)",
+        "onyomi": "ゼン",
+        "kunyomi": "まった.く, すべ.て"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k004",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "血",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Huyết",
+        "meaningVi": "Máu Ý Ae Fo Fo",
+        "meaningViDisplay": "Huyết (Máu Ý Ae Fo Fo)",
+        "meaningEn": "blood; sang; sangre"
+      },
+      "readings": {
+        "onyomi": [
+          "ケツ"
+        ],
+        "kunyomi": [
+          "ち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 血 qua Hán-Việt Huyết.",
+        "en": "blood; sang; sangre"
+      },
+      "decomposition": {
+        "hanViet": "Huyết",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Huyet",
+        "meaningViNoAccent": "Mau Y Ae Fo Fo",
+        "meaningEnNoAccent": "blood; sang; sangre"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Huyết (Máu Ý Ae Fo Fo)",
+        "onyomi": "ケツ",
+        "kunyomi": "ち"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k005",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "仲",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Trọng",
+        "meaningVi": "go-between; relationship; relation",
+        "meaningViDisplay": "Trọng (go-between; relationship; relation)",
+        "meaningEn": "go-between; relationship; relation"
+      },
+      "readings": {
+        "onyomi": [
+          "チュウ"
+        ],
+        "kunyomi": [
+          "なか"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 仲 qua Hán-Việt Trọng.",
+        "en": "go-between; relationship; relation"
+      },
+      "decomposition": {
+        "hanViet": "Trọng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Trong",
+        "meaningViNoAccent": "go-between; relationship; relation",
+        "meaningEnNoAccent": "go-between; relationship; relation"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Trọng (go-between; relationship; relation)",
+        "onyomi": "チュウ",
+        "kunyomi": "なか"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k006",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "伝",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Vân",
+        "meaningVi": "truyền đạt; truyền thống",
+        "meaningViDisplay": "Vân (truyền đạt; truyền thống)",
+        "meaningEn": "transmit, go along"
+      },
+      "readings": {
+        "onyomi": [
+          "デン",
+          "テン"
+        ],
+        "kunyomi": [
+          "つた.わる",
+          "つた.える",
+          "つた.う",
+          "つだ.う",
+          "-づた.い",
+          "つて"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 8: Truyền thống và sự kiện theo mùa.",
+        "en": "Core kanji for QUARTET 8: Traditions and seasonal events."
+      },
+      "decomposition": {
+        "hanViet": "Vân",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "流",
-          "通",
-          "会",
-          "換"
+          "統",
+          "説",
+          "文",
+          "祖"
         ]
       },
       "search": {
-        "hanVietNoAccent": "giao",
-        "meaningViNoAccent": "giao luu; trao doi; qua lai",
-        "meaningEnNoAccent": "mingle, mixing"
+        "hanVietNoAccent": "Van",
+        "meaningViNoAccent": "truyen dat; truyen thong",
+        "meaningEnNoAccent": "transmit, go along"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l04_v004",
-          "sourceSenseId": "n3_l04_s004",
+          "sourceVocabId": "n3_l08_v001",
+          "sourceSenseId": "n3_l08_s001",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -488,68 +323,277 @@
         }
       ],
       "legacy": {
-        "meaning": "Giao (giao lưu; trao đổi; qua lại)",
-        "onyomi": "コウ",
-        "kunyomi": "まじ.わる, まじ.える, ま.じる, まじ.る"
+        "meaning": "Vân (truyền đạt; truyền thống)",
+        "onyomi": "デン, テン",
+        "kunyomi": "つた.わる, つた.える, つた.う, つだ.う, -づた.い, つて"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
+        "quartetLesson": 8,
+        "themeEn": "Traditions and seasonal events",
+        "themeVi": "Truyền thống và sự kiện theo mùa"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k007",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "争",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Tranh",
+        "meaningVi": "tranh chấp; cạnh tranh; đấu tranh",
+        "meaningViDisplay": "Tranh (tranh chấp; cạnh tranh; đấu tranh)",
+        "meaningEn": "contend, dispute, argue"
+      },
+      "readings": {
+        "onyomi": [
+          "ソウ"
+        ],
+        "kunyomi": [
+          "あらそ.う",
+          "いか.でか"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
+        "en": "Core kanji for QUARTET 23: History and politics."
+      },
+      "decomposition": {
+        "hanViet": "Tranh",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "戦",
+          "競",
+          "論",
+          "議"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tranh",
+        "meaningViNoAccent": "tranh chap; canh tranh; dau tranh",
+        "meaningEnNoAccent": "contend, dispute, argue"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l23_v003",
+          "sourceSenseId": "n3_l23_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tranh (tranh chấp; cạnh tranh; đấu tranh)",
+        "onyomi": "ソウ",
+        "kunyomi": "あらそ.う, いか.でか"
+      },
+      "theme": {
+        "quartetLesson": 23,
+        "themeEn": "History and politics",
+        "themeVi": "Lịch sử và chính trị"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k008",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "各",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Các",
+        "meaningVi": "mỗi; từng; mỗi người",
+        "meaningViDisplay": "Các (mỗi; từng; mỗi người)",
+        "meaningEn": "each, every, either"
+      },
+      "readings": {
+        "onyomi": [
+          "カク"
+        ],
+        "kunyomi": [
+          "おのおの"
+        ]
+      },
+      "mnemonic": {
+        "vi": "各 chỉ từng đơn vị riêng lẻ; 各々 nhấn mạnh mỗi người hoặc mỗi bên một cách riêng biệt.",
+        "en": "各 means each or every; 各々 emphasizes each person or item separately."
+      },
+      "decomposition": {
+        "hanViet": "Các",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "個",
+          "毎",
+          "別",
+          "皆"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Cac",
+        "meaningViNoAccent": "moi; tung; moi nguoi",
+        "meaningEnNoAccent": "each, every, either"
+      },
+      "examples": [
+        {
+          "word": "各々",
+          "reading": "おのおの",
+          "meaning": "từng người; mỗi cái; lần lượt",
+          "meaningEn": "each, every, respectively"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Các (mỗi; từng; mỗi người)",
+        "onyomi": "カク",
+        "kunyomi": "おのおの"
       }
     },
     {
-      "kanjiId": "n3_l04_k008",
+      "kanjiId": "n3_canonical_l04_k009",
       "lessonId": 4,
       "level": "N3",
-      "character": "流",
-      "strokeCount": 10,
+      "character": "汗",
+      "strokeCount": 6,
       "labels": {
-        "hanViet": "Lưu",
-        "meaningVi": "dòng chảy; lưu thông",
-        "meaningViDisplay": "Lưu (dòng chảy; lưu thông)",
-        "meaningEn": "current, a sink"
+        "hanViet": "Hãn",
+        "meaningVi": "Mồ Hôi",
+        "meaningViDisplay": "Hãn (Mồ Hôi)",
+        "meaningEn": "sweat; perspire; sueur"
       },
       "readings": {
         "onyomi": [
-          "リュウ",
-          "ル"
+          "カン"
         ],
         "kunyomi": [
-          "なが.れる",
-          "なが.れ",
-          "なが.す",
-          "-なが.す"
+          "あせ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
-        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
+        "vi": "Ghi nhớ 汗 qua Hán-Việt Hãn.",
+        "en": "sweat; perspire; sueur"
       },
       "decomposition": {
-        "hanViet": "Lưu",
-        "structure": "standalone",
+        "hanViet": "Hãn",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "交",
-          "水",
-          "留",
-          "通"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "luu",
-        "meaningViNoAccent": "dong chay; luu thong",
-        "meaningEnNoAccent": "current, a sink"
+        "hanVietNoAccent": "Han",
+        "meaningViNoAccent": "Mo Hoi",
+        "meaningEnNoAccent": "sweat; perspire; sueur"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hãn (Mồ Hôi)",
+        "onyomi": "カン",
+        "kunyomi": "あせ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k010",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "死",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Tử",
+        "meaningVi": "chết",
+        "meaningViDisplay": "Tử (chết)",
+        "meaningEn": "Death"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "し.ぬ",
+          "し.に-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Mảnh xương khô một mình - cái chẾT.",
+        "en": "The end of life - DEATH."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "歹",
+          "匕"
+        ],
+        "componentNames": [
+          "Ngạt (xương chết)",
+          "Tỷ (thìa)"
+        ],
+        "relatedKanji": [
+          "歹",
+          "亡",
+          "生",
+          "残"
+        ],
+        "hanViet": "Tử"
+      },
+      "search": {
+        "hanVietNoAccent": "Tu",
+        "meaningViNoAccent": "chet",
+        "meaningEnNoAccent": "Death"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l04_v004",
-          "sourceSenseId": "n3_l04_s004",
+          "sourceVocabId": "n4_l39_v057",
+          "sourceSenseId": "n4_l39_s057",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v061",
+          "sourceSenseId": "n4_l39_s061",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v004",
+          "sourceSenseId": "n4_l39_s004",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -557,21 +601,229 @@
         }
       ],
       "legacy": {
-        "meaning": "Lưu (dòng chảy; lưu thông)",
-        "onyomi": "リュウ, ル",
-        "kunyomi": "なが.れる, なが.れ, なが.す, -なが.す"
+        "meaning": "Tử (chết)",
+        "onyomi": "シ",
+        "kunyomi": "し.ぬ, し.に-"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k011",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "成",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Thành",
+        "meaningVi": "trở thành; hoàn thành; tạo nên",
+        "meaningViDisplay": "Thành (trở thành; hoàn thành; tạo nên)",
+        "meaningEn": "become; complete; accomplish"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "ジョウ"
+        ],
+        "kunyomi": [
+          "な.る",
+          "な.す",
+          "-な.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "成 là thành tựu hoặc hoàn thành; 達成 dùng khi đạt được một mục tiêu.",
+        "en": "成 is becoming or completing; 達成 is achieving a goal."
+      },
+      "decomposition": {
+        "hanViet": "Thành",
+        "structure": "single",
+        "components": [
+          "成"
+        ],
+        "componentNames": [
+          "thành/hoàn thành"
+        ],
+        "relatedKanji": [
+          "達",
+          "功",
+          "完",
+          "城"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thanh",
+        "meaningViNoAccent": "tro thanh; hoan thanh; tao nen",
+        "meaningEnNoAccent": "become; complete; accomplish"
+      },
+      "examples": [
+        {
+          "word": "達成",
+          "reading": "たっせい",
+          "meaning": "đạt được; hoàn thành mục tiêu",
+          "meaningEn": "achievement; accomplishment"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thành (trở thành; hoàn thành; tạo nên)",
+        "onyomi": "セイ, ジョウ",
+        "kunyomi": "な.る, な.す, -な.す"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k012",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "任",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Nhâm",
+        "meaningVi": "trách nhiệm; giao phó",
+        "meaningViDisplay": "Nhâm (trách nhiệm; giao phó)",
+        "meaningEn": "responsibility, duty"
+      },
+      "readings": {
+        "onyomi": [
+          "ニン"
+        ],
+        "kunyomi": [
+          "まか.せる",
+          "まか.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 5: Work and occupations."
+      },
+      "decomposition": {
+        "hanViet": "Nhâm",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "責",
+          "務",
+          "職",
+          "使"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Nham",
+        "meaningViNoAccent": "trach nhiem; giao pho",
+        "meaningEnNoAccent": "responsibility, duty"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l05_v008",
+          "sourceSenseId": "n3_l05_s008",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nhâm (trách nhiệm; giao phó)",
+        "onyomi": "ニン",
+        "kunyomi": "まか.せる, まか.す"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 4,
-        "themeEn": "Studying language and culture through abroad study",
-        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
-      }
+        "quartetLesson": 5,
+        "themeEn": "Work and occupations",
+        "themeVi": "Công việc và nghề nghiệp"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l04_k013",
+      "lessonId": 4,
+      "level": "N3",
+      "character": "再",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Tái",
+        "meaningVi": "lại; lần nữa",
+        "meaningViDisplay": "Tái (lại; lần nữa)",
+        "meaningEn": "again, twice"
+      },
+      "readings": {
+        "onyomi": [
+          "サイ",
+          "サ"
+        ],
+        "kunyomi": [
+          "ふたた.び"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 3: A balance between convenience and reducing waste."
+      },
+      "decomposition": {
+        "hanViet": "Tái",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "復",
+          "回",
+          "生",
+          "利"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tai",
+        "meaningViNoAccent": "lai; lan nua",
+        "meaningEnNoAccent": "again, twice"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l03_v003",
+          "sourceSenseId": "n3_l03_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tái (lại; lần nữa)",
+        "onyomi": "サイ, サ",
+        "kunyomi": "ふたた.び"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 3,
+        "themeEn": "A balance between convenience and reducing waste",
+        "themeVi": "Cân bằng giữa tiện lợi và giảm lãng phí"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

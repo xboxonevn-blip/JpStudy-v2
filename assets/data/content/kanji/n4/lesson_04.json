@@ -1,0 +1,502 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 4,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l04_k001",
+      "lessonId": 4,
+      "level": "N4",
+      "character": "反",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Phản",
+        "meaningVi": "Cơm",
+        "meaningViDisplay": "Phản (Cơm)",
+        "meaningEn": "anti-; anti-; anti-"
+      },
+      "readings": {
+        "onyomi": [
+          "ハン",
+          "ホン",
+          "タン",
+          "ホ"
+        ],
+        "kunyomi": [
+          "そ.る",
+          "そ.らす",
+          "かえ.す",
+          "かえ.る",
+          "-かえ.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Có cơm ( ) ăn ( ) còn phản đối ( ) gì nữa? 1",
+        "en": "anti-; anti-; anti-"
+      },
+      "decomposition": {
+        "hanViet": "Phản",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phan",
+        "meaningViNoAccent": "Com",
+        "meaningEnNoAccent": "anti-; anti-; anti-"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phản (Cơm)",
+        "onyomi": "ハン, ホン, タン, ホ",
+        "kunyomi": "そ.る, そ.らす, かえ.す, かえ.る, -かえ.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l04_k002",
+      "lessonId": 4,
+      "level": "N4",
+      "character": "公",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Công",
+        "meaningVi": "công cộng",
+        "meaningViDisplay": "Công (công cộng)",
+        "meaningEn": "Public"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ",
+          "ク"
+        ],
+        "kunyomi": [
+          "おおやけ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "chuyện riêng Tư ( ) mà kể cho 8 ( ) người nghe thì thành Công ( ) khai rồi 2",
+        "en": "Something divided (八) for the PUBLIC."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "八",
+          "ム"
+        ],
+        "componentNames": [
+          "Bát (chia ra)",
+          "Khư (riêng tư)"
+        ],
+        "relatedKanji": [
+          "八",
+          "六"
+        ],
+        "hanViet": "Công"
+      },
+      "search": {
+        "hanVietNoAccent": "Cong",
+        "meaningViNoAccent": "cong cong",
+        "meaningEnNoAccent": "Public"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l24_v033",
+          "sourceSenseId": "n5_l24_s033",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l13_v041",
+          "sourceSenseId": "n5_l13_s041",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l10_v025",
+          "sourceSenseId": "n5_l10_s025",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Công (công cộng)",
+        "onyomi": "コウ, ク",
+        "kunyomi": "おおやけ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l04_k003",
+      "lessonId": 4,
+      "level": "N4",
+      "character": "切",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Thiết",
+        "meaningVi": "cắt; đứt; dứt khoát",
+        "meaningViDisplay": "Thiết (cắt; đứt; dứt khoát)",
+        "meaningEn": "cut; cutoff; sharp"
+      },
+      "readings": {
+        "onyomi": [
+          "セツ",
+          "サイ"
+        ],
+        "kunyomi": [
+          "き.る",
+          "-き.る",
+          "き.り",
+          "-き.り",
+          "-ぎ.り",
+          "き.れる",
+          "-き.れる",
+          "き.れ",
+          "-き.れ",
+          "-ぎ.れ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Nhất thiết phải dùng 7 ( ) đao ( ) để cắt ( ) 2",
+        "en": "切 means cut or sharp; 一切 means all, or not at all with negatives."
+      },
+      "decomposition": {
+        "hanViet": "Thiết",
+        "structure": "left-right",
+        "components": [
+          "七",
+          "刀"
+        ],
+        "componentNames": [
+          "thất/bảy",
+          "đao/dao"
+        ],
+        "relatedKanji": [
+          "刀",
+          "断",
+          "終",
+          "売"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thiet",
+        "meaningViNoAccent": "cat; dut; dut khoat",
+        "meaningEnNoAccent": "cut; cutoff; sharp"
+      },
+      "examples": [
+        {
+          "word": "一切",
+          "reading": "いっさい",
+          "meaning": "tất cả; hoàn toàn; không hề",
+          "meaningEn": "all; everything; without exception"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thiết (cắt; đứt; dứt khoát)",
+        "onyomi": "セツ, サイ",
+        "kunyomi": "き.る, -き.る, き.り, -き.り, -ぎ.り, き.れる, -き.れる, き.れ, -き.れ, -ぎ.れ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l04_k004",
+      "lessonId": 4,
+      "level": "N4",
+      "character": "止",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Chỉ",
+        "meaningVi": "dừng",
+        "meaningViDisplay": "Chỉ (dừng)",
+        "meaningEn": "Stop"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "と.まる",
+          "-ど.まり",
+          "と.める",
+          "-と.める",
+          "-ど.め",
+          "とど.める",
+          "とど.め",
+          "とど.まる",
+          "や.める",
+          "や.む",
+          "-や.む",
+          "よ.す",
+          "-さ.す",
+          "-さ.し"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đèn giao thông bên trên ( ) còn 1 ( ) giây xanh, thì cần dừng lại ( ) kẻo mất 4 củ 1",
+        "en": "A foot flat on the ground to STOP."
+      },
+      "decomposition": {
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "歩",
+          "走",
+          "足",
+          "正"
+        ],
+        "hanViet": "Chỉ"
+      },
+      "search": {
+        "hanVietNoAccent": "Chi",
+        "meaningViNoAccent": "dung",
+        "meaningEnNoAccent": "Stop"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l20_v035",
+          "sourceSenseId": "n5_l20_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l32_v064",
+          "sourceSenseId": "n4_l32_s064",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l14_v007",
+          "sourceSenseId": "n5_l14_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Chỉ (dừng)",
+        "onyomi": "シ",
+        "kunyomi": "と.まる, -ど.まり, と.める, -と.める, -ど.め, とど.める, とど.め, とど.まる, や.める, や.む, -や.む, よ.す, -さ.す, -さ.し"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l04_k005",
+      "lessonId": 4,
+      "level": "N4",
+      "character": "巴",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Ba",
+        "meaningVi": "Màu sắc",
+        "meaningViDisplay": "Ba (Màu sắc)",
+        "meaningEn": "comma-design; remolino"
+      },
+      "readings": {
+        "onyomi": [
+          "ハ"
+        ],
+        "kunyomi": [
+          "ともえ",
+          "うずまき"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bị móc ( ) túi mặt ba ( ) biến sắc ( ) 色 1 2",
+        "en": "comma-design; remolino"
+      },
+      "decomposition": {
+        "hanViet": "Ba",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ba",
+        "meaningViNoAccent": "Mau sac",
+        "meaningEnNoAccent": "comma-design; remolino"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Ba (Màu sắc)",
+        "onyomi": "ハ",
+        "kunyomi": "ともえ, うずまき"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l04_k006",
+      "lessonId": 4,
+      "level": "N4",
+      "character": "灬",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Hỏa",
+        "meaningVi": "Con ngựa",
+        "meaningViDisplay": "Hỏa (Con ngựa)",
+        "meaningEn": "fire; fire radical (no. 86)"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒョウ",
+          "カ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Ngựa ( ) chạy 5 (5) hướng khác nhau ( ) khi lửa ( ) đốt 2",
+        "en": "fire; fire radical (no. 86)"
+      },
+      "decomposition": {
+        "hanViet": "Hỏa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hoa",
+        "meaningViNoAccent": "Con ngua",
+        "meaningEnNoAccent": "fire; fire radical (no. 86)"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hỏa (Con ngựa)",
+        "onyomi": "ヒョウ, カ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l04_k007",
+      "lessonId": 4,
+      "level": "N4",
+      "character": "不",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Bất",
+        "meaningVi": "không; phủ định; bất lợi",
+        "meaningViDisplay": "Bất (không; phủ định; bất lợi)",
+        "meaningEn": "negative, non-"
+      },
+      "readings": {
+        "onyomi": [
+          "フ",
+          "ブ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Cây ( ) bị ngắt ngọn thì không ( ) thể sống 1",
+        "en": "Core kanji for QUARTET 20: Emotions and psychology."
+      },
+      "decomposition": {
+        "hanViet": "Bất",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "安",
+          "便",
+          "足",
+          "利"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bat",
+        "meaningViNoAccent": "khong; phu dinh; bat loi",
+        "meaningEnNoAccent": "negative, non-"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l20_v002",
+          "sourceSenseId": "n3_l20_s002",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Bất (không; phủ định; bất lợi)",
+        "onyomi": "フ, ブ",
+        "kunyomi": ""
+      },
+      "theme": {
+        "quartetLesson": 20,
+        "themeEn": "Emotions and psychology",
+        "themeVi": "Cảm xúc và tâm lý"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

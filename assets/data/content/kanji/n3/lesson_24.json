@@ -1,543 +1,881 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 24,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l24_k001",
+      "kanjiId": "n3_canonical_l24_k001",
       "lessonId": 24,
       "level": "N3",
-      "character": "流",
-      "strokeCount": 10,
+      "character": "賞",
+      "strokeCount": 15,
       "labels": {
-        "hanViet": "Lưu",
-        "meaningVi": "dòng chảy; lưu hành; trôi",
-        "meaningViDisplay": "Lưu (dòng chảy; lưu hành; trôi)",
-        "meaningEn": "current, flow, circulate"
-      },
-      "readings": {
-        "onyomi": [
-          "リュウ",
-          "ル"
-        ],
-        "kunyomi": [
-          "なが.れる",
-          "なが.れ",
-          "なが.す",
-          "-なが.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
-      },
-      "decomposition": {
-        "hanViet": "Lưu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "水",
-          "川",
-          "通",
-          "行"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "luu",
-        "meaningViNoAccent": "dong chay; luu hanh; troi",
-        "meaningEnNoAccent": "current, flow, circulate"
-      },
-      "examples": [
-        {
-          "word": "流行",
-          "reading": "りゅうこう",
-          "meaning": "trào lưu; thịnh hành",
-          "meaningEn": "trend; fashion"
-        }
-      ],
-      "legacy": {
-        "meaning": "Lưu (dòng chảy; lưu hành; trôi)",
-        "onyomi": "リュウ, ル",
-        "kunyomi": "なが.れる, なが.れ, なが.す, -なが.す"
-      },
-      "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l24_k002",
-      "lessonId": 24,
-      "level": "N3",
-      "character": "行",
-      "strokeCount": 6,
-      "labels": {
-        "hanViet": "Hành",
-        "meaningVi": "đi; thực hiện; hàng lối",
-        "meaningViDisplay": "Hành (đi; thực hiện; hàng lối)",
-        "meaningEn": "going, journey, carry out"
-      },
-      "readings": {
-        "onyomi": [
-          "コウ",
-          "ギョウ",
-          "アン"
-        ],
-        "kunyomi": [
-          "い.く",
-          "ゆ.く",
-          "-ゆ.き",
-          "-ゆき"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
-      },
-      "decomposition": {
-        "hanViet": "Hành",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "流",
-          "道",
-          "動",
-          "歩"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "hanh",
-        "meaningViNoAccent": "di; thuc hien; hang loi",
-        "meaningEnNoAccent": "going, journey, carry out"
-      },
-      "examples": [
-        {
-          "word": "流行",
-          "reading": "りゅうこう",
-          "meaning": "trào lưu; thịnh hành",
-          "meaningEn": "trend; fashion"
-        }
-      ],
-      "legacy": {
-        "meaning": "Hành (đi; thực hiện; hàng lối)",
-        "onyomi": "コウ, ギョウ, アン",
-        "kunyomi": "い.く, ゆ.く, -ゆ.き, -ゆき"
-      },
-      "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l24_k003",
-      "lessonId": 24,
-      "level": "N3",
-      "character": "着",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Trước",
-        "meaningVi": "mặc; đến nơi; bám vào",
-        "meaningViDisplay": "Trước (mặc; đến nơi; bám vào)",
-        "meaningEn": "wear, arrive, attach"
-      },
-      "readings": {
-        "onyomi": [
-          "チャク",
-          "ジャク"
-        ],
-        "kunyomi": [
-          "き.る",
-          "き.せる",
-          "つ.く",
-          "つ.ける"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
-      },
-      "decomposition": {
-        "hanViet": "Trước",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "服",
-          "替",
-          "到",
-          "衣"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "truoc",
-        "meaningViNoAccent": "mac; den noi; bam vao",
-        "meaningEnNoAccent": "wear, arrive, attach"
-      },
-      "examples": [
-        {
-          "word": "着る",
-          "reading": "きる",
-          "meaning": "mặc",
-          "meaningEn": "to wear"
-        },
-        {
-          "word": "到着",
-          "reading": "とうちゃく",
-          "meaning": "đến nơi",
-          "meaningEn": "arrival"
-        }
-      ],
-      "legacy": {
-        "meaning": "Trước (mặc; đến nơi; bám vào)",
-        "onyomi": "チャク, ジャク",
-        "kunyomi": "き.る, き.せる, つ.く, つ.ける"
-      },
-      "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l24_k004",
-      "lessonId": 24,
-      "level": "N3",
-      "character": "替",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Thế",
-        "meaningVi": "thay thế; đổi; dự phòng",
-        "meaningViDisplay": "Thế (thay thế; đổi; dự phòng)",
-        "meaningEn": "exchange, substitute, spare"
-      },
-      "readings": {
-        "onyomi": [
-          "タイ"
-        ],
-        "kunyomi": [
-          "か.える",
-          "か.え-",
-          "か.わる"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
-      },
-      "decomposition": {
-        "hanViet": "Thế",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "代",
-          "換",
-          "着",
-          "服"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "the",
-        "meaningViNoAccent": "thay the; doi; du phong",
-        "meaningEnNoAccent": "exchange, substitute, spare"
-      },
-      "examples": [
-        {
-          "word": "着替える",
-          "reading": "きがえる",
-          "meaning": "thay quần áo",
-          "meaningEn": "to change clothes"
-        }
-      ],
-      "legacy": {
-        "meaning": "Thế (thay thế; đổi; dự phòng)",
-        "onyomi": "タイ",
-        "kunyomi": "か.える, か.え-, か.わる"
-      },
-      "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l24_k005",
-      "lessonId": 24,
-      "level": "N3",
-      "character": "化",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Hóa",
-        "meaningVi": "thay đổi; biến hóa; -hóa",
-        "meaningViDisplay": "Hóa (thay đổi; biến hóa; -hóa)",
-        "meaningEn": "change, take the form of, -ization"
-      },
-      "readings": {
-        "onyomi": [
-          "カ",
-          "ケ"
-        ],
-        "kunyomi": [
-          "ば.ける",
-          "ば.かす",
-          "ふ.ける",
-          "け.する"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
-      },
-      "decomposition": {
-        "hanViet": "Hóa",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "変",
-          "粧",
-          "改",
-          "成"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "hoa",
-        "meaningViNoAccent": "thay doi; bien hoa; -hoa",
-        "meaningEnNoAccent": "change, take the form of, -ization"
-      },
-      "examples": [
-        {
-          "word": "化粧",
-          "reading": "けしょう",
-          "meaning": "trang điểm",
-          "meaningEn": "makeup"
-        }
-      ],
-      "legacy": {
-        "meaning": "Hóa (thay đổi; biến hóa; -hóa)",
-        "onyomi": "カ, ケ",
-        "kunyomi": "ば.ける, ば.かす, ふ.ける, け.する"
-      },
-      "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l24_k006",
-      "lessonId": 24,
-      "level": "N3",
-      "character": "粧",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Trang",
-        "meaningVi": "trang điểm; làm đẹp; tô điểm",
-        "meaningViDisplay": "Trang (trang điểm; làm đẹp; tô điểm)",
-        "meaningEn": "cosmetics, adorn (one's person)"
+        "hanViet": "Thưởng",
+        "meaningVi": "giải thưởng; khen thưởng; thưởng thức",
+        "meaningViDisplay": "Thưởng (giải thưởng; khen thưởng; thưởng thức)",
+        "meaningEn": "prize, reward"
       },
       "readings": {
         "onyomi": [
           "ショウ"
         ],
-        "kunyomi": []
+        "kunyomi": [
+          "ほ.める"
+        ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
+        "vi": "Kanji thuộc chủ đề QUARTET 12: Nghệ thuật, âm nhạc và giải trí.",
+        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
       },
       "decomposition": {
-        "hanViet": "Trang",
+        "hanViet": "Thưởng",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "化",
-          "装",
-          "飾",
+          "鑑",
+          "芸",
+          "演",
           "美"
         ]
       },
       "search": {
-        "hanVietNoAccent": "trang",
-        "meaningViNoAccent": "trang diem; lam dep; to diem",
-        "meaningEnNoAccent": "cosmetics, adorn (one's person)"
+        "hanVietNoAccent": "Thuong",
+        "meaningViNoAccent": "giai thuong; khen thuong; thuong thuc",
+        "meaningEnNoAccent": "prize, reward"
       },
       "examples": [
         {
-          "word": "化粧",
-          "reading": "けしょう",
-          "meaning": "trang điểm",
-          "meaningEn": "makeup"
+          "sourceVocabId": "n3_l12_v006",
+          "sourceSenseId": "n3_l12_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
         }
       ],
       "legacy": {
-        "meaning": "Trang (trang điểm; làm đẹp; tô điểm)",
+        "meaning": "Thưởng (giải thưởng; khen thưởng; thưởng thức)",
         "onyomi": "ショウ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
+        "kunyomi": "ほ.める"
       },
       "tags": [
-        "vi-source-verified"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 12,
+        "themeEn": "Art, music and entertainment",
+        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l24_k007",
+      "kanjiId": "n3_canonical_l24_k002",
       "lessonId": 24,
       "level": "N3",
-      "character": "装",
-      "strokeCount": 12,
+      "character": "調",
+      "strokeCount": 15,
       "labels": {
-        "hanViet": "Trang",
-        "meaningVi": "trang phục; ăn mặc; giả trang",
-        "meaningViDisplay": "Trang (trang phục; ăn mặc; giả trang)",
-        "meaningEn": "attire, dress, disguise"
+        "hanViet": "Điều",
+        "meaningVi": "điều chỉnh; chuẩn bị; tra cứu",
+        "meaningViDisplay": "Điều (điều chỉnh; chuẩn bị; tra cứu)",
+        "meaningEn": "tune, tone"
       },
       "readings": {
         "onyomi": [
-          "ソウ",
-          "ショウ"
+          "チョウ"
         ],
         "kunyomi": [
-          "よそお.う",
-          "よそお.い"
+          "しら.べる",
+          "しら.べ",
+          "ととの.う",
+          "ととの.える"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 19: Cooking and food culture."
       },
       "decomposition": {
-        "hanViet": "Trang",
+        "hanViet": "Điều",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "粧",
-          "飾",
-          "服",
-          "着"
+          "味",
+          "理",
+          "料",
+          "保"
         ]
       },
       "search": {
-        "hanVietNoAccent": "trang",
-        "meaningViNoAccent": "trang phuc; an mac; gia trang",
-        "meaningEnNoAccent": "attire, dress, disguise"
+        "hanVietNoAccent": "Dieu",
+        "meaningViNoAccent": "dieu chinh; chuan bi; tra cuu",
+        "meaningEnNoAccent": "tune, tone"
       },
       "examples": [
         {
-          "word": "服装",
-          "reading": "ふくそう",
-          "meaning": "trang phục",
-          "meaningEn": "clothing; attire"
+          "sourceVocabId": "n3_l19_v004",
+          "sourceSenseId": "n3_l19_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
         }
       ],
       "legacy": {
-        "meaning": "Trang (trang phục; ăn mặc; giả trang)",
-        "onyomi": "ソウ, ショウ",
-        "kunyomi": "よそお.う, よそお.い"
+        "meaning": "Điều (điều chỉnh; chuẩn bị; tra cứu)",
+        "onyomi": "チョウ",
+        "kunyomi": "しら.べる, しら.べ, ととの.う, ととの.える"
       },
       "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
+        "quartetLesson": 19,
+        "themeEn": "Cooking and food culture",
+        "themeVi": "Nấu ăn và văn hóa ẩm thực"
       },
       "tags": [
-        "vi-source-verified"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l24_k008",
+      "kanjiId": "n3_canonical_l24_k003",
       "lessonId": 24,
       "level": "N3",
-      "character": "飾",
-      "strokeCount": 13,
+      "character": "選",
+      "strokeCount": 15,
       "labels": {
-        "hanViet": "Sức",
-        "meaningVi": "trang trí; đồ trang sức; tô điểm",
-        "meaningViDisplay": "Sức (trang trí; đồ trang sức; tô điểm)",
-        "meaningEn": "decorate, ornament, adorn"
+        "hanViet": "Tuyển",
+        "meaningVi": "lựa chọn; tuyển chọn; bầu chọn",
+        "meaningViDisplay": "Tuyển (lựa chọn; tuyển chọn; bầu chọn)",
+        "meaningEn": "elect, select"
       },
       "readings": {
         "onyomi": [
-          "ショク"
+          "セン"
         ],
         "kunyomi": [
-          "かざ.る",
-          "かざ.り"
+          "えら.ぶ",
+          "え.る",
+          "よ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 24: Thời trang và phong cách cá nhân.",
-        "en": "Core kanji for QUARTET 24: Fashion and personal style."
+        "vi": "Kanji thuộc chủ đề QUARTET 16: Thể thao và thi đấu.",
+        "en": "Core kanji for QUARTET 16: Sports and competition."
       },
       "decomposition": {
-        "hanViet": "Sức",
+        "hanViet": "Tuyển",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "装",
-          "粧",
-          "美",
-          "品"
+          "試",
+          "勝",
+          "優",
+          "決"
         ]
       },
       "search": {
-        "hanVietNoAccent": "suc",
-        "meaningViNoAccent": "trang tri; do trang suc; to diem",
-        "meaningEnNoAccent": "decorate, ornament, adorn"
+        "hanVietNoAccent": "Tuyen",
+        "meaningViNoAccent": "lua chon; tuyen chon; bau chon",
+        "meaningEnNoAccent": "elect, select"
       },
       "examples": [
         {
-          "word": "装飾",
-          "reading": "そうしょく",
-          "meaning": "trang trí",
-          "meaningEn": "decoration"
+          "sourceVocabId": "n3_l16_v003",
+          "sourceSenseId": "n3_l16_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
         }
       ],
       "legacy": {
-        "meaning": "Sức (trang trí; đồ trang sức; tô điểm)",
-        "onyomi": "ショク",
-        "kunyomi": "かざ.る, かざ.り"
-      },
-      "theme": {
-        "quartetLesson": 24,
-        "themeEn": "Fashion and personal style",
-        "themeVi": "Thời trang và phong cách cá nhân"
+        "meaning": "Tuyển (lựa chọn; tuyển chọn; bầu chọn)",
+        "onyomi": "セン",
+        "kunyomi": "えら.ぶ, え.る, よ.る"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 16,
+        "themeEn": "Sports and competition",
+        "themeVi": "Thể thao và thi đấu"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k004",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "確",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Xác",
+        "meaningVi": "chính xác",
+        "meaningViDisplay": "Xác (chính xác)",
+        "meaningEn": "Certain"
+      },
+      "readings": {
+        "onyomi": [
+          "カク",
+          "コウ"
+        ],
+        "kunyomi": [
+          "たし.か",
+          "たし.かめる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng Đá (Thạch 石) làm bệ để chim bay (Hạc 隺) là điều chÍnh XÁC.",
+        "en": "Finding the bird on the rock - SURE/CERTAIN."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "石",
+          "隺"
+        ],
+        "componentNames": [
+          "Thạch (đá)",
+          "Hạc (chim hạc)"
+        ],
+        "relatedKanji": [
+          "石"
+        ],
+        "hanViet": "Xác"
+      },
+      "search": {
+        "hanVietNoAccent": "Xac",
+        "meaningViNoAccent": "chinh xac",
+        "meaningEnNoAccent": "Certain"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l40_v066",
+          "sourceSenseId": "n4_l40_s066",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l16_v049",
+          "sourceSenseId": "n5_l16_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l40_v003",
+          "sourceSenseId": "n4_l40_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Xác (chính xác)",
+        "onyomi": "カク, コウ",
+        "kunyomi": "たし.か, たし.かめる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k005",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "談",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Đàm",
+        "meaningVi": "discuss; talk; discuter",
+        "meaningViDisplay": "Đàm (discuss; talk; discuter)",
+        "meaningEn": "discuss; talk; discuter"
+      },
+      "readings": {
+        "onyomi": [
+          "ダン"
+        ],
+        "kunyomi": [
+          "する",
+          "そう",
+          "に",
+          "た",
+          "じょう",
+          "だ",
+          "すす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 談 qua Hán-Việt Đàm.",
+        "en": "discuss; talk; discuter"
+      },
+      "decomposition": {
+        "hanViet": "Đàm",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dam",
+        "meaningViNoAccent": "discuss; talk; discuter",
+        "meaningEnNoAccent": "discuss; talk; discuter"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đàm (discuss; talk; discuter)",
+        "onyomi": "ダン",
+        "kunyomi": "する, そう, に, た, じょう, だ, すす"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k006",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "横",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Hoành",
+        "meaningVi": "sideways; side; horizontal",
+        "meaningViDisplay": "Hoành (sideways; side; horizontal)",
+        "meaningEn": "sideways; side; horizontal"
+      },
+      "readings": {
+        "onyomi": [
+          "オウ"
+        ],
+        "kunyomi": [
+          "よこ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "sideways; side; horizontal"
+      },
+      "decomposition": {
+        "hanViet": "Hoành",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hoanh",
+        "meaningViNoAccent": "sideways; side; horizontal",
+        "meaningEnNoAccent": "sideways; side; horizontal"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hoành (sideways; side; horizontal)",
+        "onyomi": "オウ",
+        "kunyomi": "よこ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k007",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "賛",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Tán",
+        "meaningVi": "tán thành, khen ngợi",
+        "meaningViDisplay": "Tán (tán thành, khen ngợi)",
+        "meaningEn": "approve, praise"
+      },
+      "readings": {
+        "onyomi": [
+          "サン"
+        ],
+        "kunyomi": [
+          "たす.ける",
+          "たた.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Use words and value to show approval."
+      },
+      "decomposition": {
+        "hanViet": "Tán",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "成",
+          "賞"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tan",
+        "meaningViNoAccent": "tan thanh, khen ngoi",
+        "meaningEnNoAccent": "approve, praise"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l01_v012",
+          "sourceSenseId": "n3_l01_s012",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tán (tán thành, khen ngợi)",
+        "onyomi": "サン",
+        "kunyomi": "たす.ける, たた.える"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k008",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "熱",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Nhiệt",
+        "meaningVi": "nóng, sốt",
+        "meaningViDisplay": "Nhiệt (nóng, sốt)",
+        "meaningEn": "Heat, Fever"
+      },
+      "readings": {
+        "onyomi": [
+          "ネツ"
+        ],
+        "kunyomi": [
+          "あつ.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Things getting hot over a fire (灬)."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "埶",
+          "灬"
+        ],
+        "componentNames": [
+          "Nghệ (trồng cây)",
+          "Hỏa (lửa)"
+        ],
+        "relatedKanji": [
+          "焼"
+        ],
+        "hanViet": "Nhiệt"
+      },
+      "search": {
+        "hanVietNoAccent": "Nhiet",
+        "meaningViNoAccent": "nong, sot",
+        "meaningEnNoAccent": "Heat, Fever"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l17_v020",
+          "sourceSenseId": "n5_l17_s020",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l28_v008",
+          "sourceSenseId": "n4_l28_s008",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l49_v034",
+          "sourceSenseId": "n4_l49_s034",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nhiệt (nóng, sốt)",
+        "onyomi": "ネツ",
+        "kunyomi": "あつ.い"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k009",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "積",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Tích",
+        "meaningVi": "volume; product (x*y); acreage",
+        "meaningViDisplay": "Tích (volume; product (x*y); acreage)",
+        "meaningEn": "volume; product (x*y); acreage"
+      },
+      "readings": {
+        "onyomi": [
+          "セキ"
+        ],
+        "kunyomi": [
+          "つ.む",
+          "-づ.み",
+          "つ.もる",
+          "つ.もり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "volume; product (x*y); acreage"
+      },
+      "decomposition": {
+        "hanViet": "Tích",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tich",
+        "meaningViNoAccent": "volume; product (x*y); acreage",
+        "meaningEnNoAccent": "volume; product (x*y); acreage"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tích (volume; product (x*y); acreage)",
+        "onyomi": "セキ",
+        "kunyomi": "つ.む, -づ.み, つ.もる, つ.もり"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k010",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "橋",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Kiều",
+        "meaningVi": "bridge; pont; puente",
+        "meaningViDisplay": "Kiều (bridge; pont; puente)",
+        "meaningEn": "bridge; pont; puente"
+      },
+      "readings": {
+        "onyomi": [
+          "キョウ"
+        ],
+        "kunyomi": [
+          "はし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ®",
+        "en": "bridge; pont; puente"
+      },
+      "decomposition": {
+        "hanViet": "Kiều",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Kieu",
+        "meaningViNoAccent": "bridge; pont; puente",
+        "meaningEnNoAccent": "bridge; pont; puente"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Kiều (bridge; pont; puente)",
+        "onyomi": "キョウ",
+        "kunyomi": "はし"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k011",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "頭",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Đầu",
+        "meaningVi": "đầu",
+        "meaningViDisplay": "Đầu (đầu)",
+        "meaningEn": "Head"
+      },
+      "readings": {
+        "onyomi": [
+          "トウ",
+          "ズ",
+          "ト"
+        ],
+        "kunyomi": [
+          "あたま",
+          "かしら",
+          "-がしら",
+          "かぶり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất.",
+        "en": "The head (豆) and mind (頁) combined."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "豆",
+          "頁"
+        ],
+        "componentNames": [
+          "Đậu (hạt đậu)",
+          "Hiệt (đầu, trang)"
+        ],
+        "relatedKanji": [
+          "短",
+          "顔",
+          "頼"
+        ],
+        "hanViet": "Đầu"
+      },
+      "search": {
+        "hanVietNoAccent": "Dau",
+        "meaningViNoAccent": "dau",
+        "meaningEnNoAccent": "Head"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l16_v021",
+          "sourceSenseId": "n5_l16_s021",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l16_v072",
+          "sourceSenseId": "n5_l16_s072",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l16_v056",
+          "sourceSenseId": "n5_l16_s056",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Đầu (đầu)",
+        "onyomi": "トウ, ズ, ト",
+        "kunyomi": "あたま, かしら, -がしら, かぶり"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k012",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "機",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Ky",
+        "meaningVi": "máy móc; cơ chế; cơ hội",
+        "meaningViDisplay": "Ky (máy móc; cơ chế; cơ hội)",
+        "meaningEn": "loom, mechanism"
+      },
+      "readings": {
+        "onyomi": [
+          "キ"
+        ],
+        "kunyomi": [
+          "はた"
+        ]
+      },
+      "mnemonic": {
+        "vi": ": 1 h",
+        "en": "Core kanji for QUARTET 17: Science and technology."
+      },
+      "decomposition": {
+        "hanViet": "Ky",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "械",
+          "器",
+          "会",
+          "能"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ky",
+        "meaningViNoAccent": "may moc; co che; co hoi",
+        "meaningEnNoAccent": "loom, mechanism"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l17_v011",
+          "sourceSenseId": "n3_l17_s011",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Ky (máy móc; cơ chế; cơ hội)",
+        "onyomi": "キ",
+        "kunyomi": "はた"
+      },
+      "theme": {
+        "quartetLesson": 17,
+        "themeEn": "Science and technology",
+        "themeVi": "Khoa học và công nghệ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l24_k013",
+      "lessonId": 24,
+      "level": "N3",
+      "character": "燃",
+      "strokeCount": 16,
+      "labels": {
+        "hanViet": "Nhiên",
+        "meaningVi": "Bok Ý Pp Pp",
+        "meaningViDisplay": "Nhiên (Bok Ý Pp Pp)",
+        "meaningEn": "burn; blaze; glow"
+      },
+      "readings": {
+        "onyomi": [
+          "ネン"
+        ],
+        "kunyomi": [
+          "も.える",
+          "も.やす",
+          "も.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 燃 qua Hán-Việt Nhiên.",
+        "en": "burn; blaze; glow"
+      },
+      "decomposition": {
+        "hanViet": "Nhiên",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nhien",
+        "meaningViNoAccent": "Bok Y Pp Pp",
+        "meaningEnNoAccent": "burn; blaze; glow"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nhiên (Bok Ý Pp Pp)",
+        "onyomi": "ネン",
+        "kunyomi": "も.える, も.やす, も.す"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

@@ -1,523 +1,704 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 21,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l21_k001",
+      "kanjiId": "n3_canonical_l21_k001",
       "lessonId": 21,
       "level": "N3",
-      "character": "経",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Kinh",
-        "meaningVi": "trải qua; kinh sách; kinh tuyến",
-        "meaningViDisplay": "Kinh (trải qua; kinh sách; kinh tuyến)",
-        "meaningEn": "pass through, sutra, longitude"
-      },
-      "readings": {
-        "onyomi": [
-          "ケイ",
-          "キョウ",
-          "キン"
-        ],
-        "kunyomi": [
-          "へ.る",
-          "た.つ",
-          "たていと",
-          "はか.る"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
-      },
-      "decomposition": {
-        "hanViet": "Kinh",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "済",
-          "営",
-          "験",
-          "過"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "kinh",
-        "meaningViNoAccent": "trai qua; kinh sach; kinh tuyen",
-        "meaningEnNoAccent": "pass through, sutra, longitude"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l21_v001",
-          "sourceSenseId": "n3_l21_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Kinh (trải qua; kinh sách; kinh tuyến)",
-        "onyomi": "ケイ, キョウ, キン",
-        "kunyomi": "へ.る, た.つ, たていと, はか.る"
-      },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l21_k002",
-      "lessonId": 21,
-      "level": "N3",
-      "character": "済",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Tế",
-        "meaningVi": "xong; giải quyết; cứu giúp",
-        "meaningViDisplay": "Tế (xong; giải quyết; cứu giúp)",
-        "meaningEn": "finish, settle, relieve"
-      },
-      "readings": {
-        "onyomi": [
-          "サイ",
-          "セイ"
-        ],
-        "kunyomi": [
-          "す.む",
-          "-ず.み",
-          "-ずみ",
-          "す.まない"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
-      },
-      "decomposition": {
-        "hanViet": "Tế",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "経",
-          "救",
-          "終",
-          "清"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "te",
-        "meaningViNoAccent": "xong; giai quyet; cuu giup",
-        "meaningEnNoAccent": "finish, settle, relieve"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l21_v001",
-          "sourceSenseId": "n3_l21_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tế (xong; giải quyết; cứu giúp)",
-        "onyomi": "サイ, セイ",
-        "kunyomi": "す.む, -ず.み, -ずみ, す.まない"
-      },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l21_k003",
-      "lessonId": 21,
-      "level": "N3",
-      "character": "利",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Lợi",
-        "meaningVi": "lợi ích; thuận lợi; lợi nhuận",
-        "meaningViDisplay": "Lợi (lợi ích; thuận lợi; lợi nhuận)",
-        "meaningEn": "profit, advantage"
-      },
-      "readings": {
-        "onyomi": [
-          "リ"
-        ],
-        "kunyomi": [
-          "き.く"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
-      },
-      "decomposition": {
-        "hanViet": "Lợi",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "益",
-          "便",
-          "得",
-          "財"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "loi",
-        "meaningViNoAccent": "loi ich; thuan loi; loi nhuan",
-        "meaningEnNoAccent": "profit, advantage"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l21_v004",
-          "sourceSenseId": "n3_l21_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Lợi (lợi ích; thuận lợi; lợi nhuận)",
-        "onyomi": "リ",
-        "kunyomi": "き.く"
-      },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l21_k004",
-      "lessonId": 21,
-      "level": "N3",
-      "character": "益",
-      "strokeCount": 10,
-      "labels": {
-        "hanViet": "Ích",
-        "meaningVi": "lợi ích; tăng thêm; có ích",
-        "meaningViDisplay": "Ích (lợi ích; tăng thêm; có ích)",
-        "meaningEn": "benefit, gain, profit"
-      },
-      "readings": {
-        "onyomi": [
-          "エキ",
-          "ヤク"
-        ],
-        "kunyomi": [
-          "ま.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
-      },
-      "decomposition": {
-        "hanViet": "Ích",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "利",
-          "得",
-          "増",
-          "財"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "ich",
-        "meaningViNoAccent": "loi ich; tang them; co ich",
-        "meaningEnNoAccent": "benefit, gain, profit"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l21_v004",
-          "sourceSenseId": "n3_l21_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Ích (lợi ích; tăng thêm; có ích)",
-        "onyomi": "エキ, ヤク",
-        "kunyomi": "ま.す"
-      },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l21_k005",
-      "lessonId": 21,
-      "level": "N3",
-      "character": "投",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Đầu",
-        "meaningVi": "ném; đầu tư; bỏ vào",
-        "meaningViDisplay": "Đầu (ném; đầu tư; bỏ vào)",
-        "meaningEn": "throw, invest, put in"
-      },
-      "readings": {
-        "onyomi": [
-          "トウ"
-        ],
-        "kunyomi": [
-          "な.げる",
-          "-な.げ"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
-      },
-      "decomposition": {
-        "hanViet": "Đầu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "資",
-          "入",
-          "打",
-          "捨"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "dau",
-        "meaningViNoAccent": "nem; dau tu; bo vao",
-        "meaningEnNoAccent": "throw, invest, put in"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l21_v005",
-          "sourceSenseId": "n3_l21_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Đầu (ném; đầu tư; bỏ vào)",
-        "onyomi": "トウ",
-        "kunyomi": "な.げる, -な.げ"
-      },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l21_k006",
-      "lessonId": 21,
-      "level": "N3",
-      "character": "収",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Thu",
-        "meaningVi": "thu vào; thu nhập; cất giữ",
-        "meaningViDisplay": "Thu (thu vào; thu nhập; cất giữ)",
-        "meaningEn": "income, obtain, collect"
-      },
-      "readings": {
-        "onyomi": [
-          "シュウ"
-        ],
-        "kunyomi": [
-          "おさ.める",
-          "おさ.まる"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
-      },
-      "decomposition": {
-        "hanViet": "Thu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "入",
-          "税",
-          "益",
-          "集"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thu",
-        "meaningViNoAccent": "thu vao; thu nhap; cat giu",
-        "meaningEnNoAccent": "income, obtain, collect"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l21_v006",
-          "sourceSenseId": "n3_l21_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thu (thu vào; thu nhập; cất giữ)",
-        "onyomi": "シュウ",
-        "kunyomi": "おさ.める, おさ.まる"
-      },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l21_k007",
-      "lessonId": 21,
-      "level": "N3",
-      "character": "税",
+      "character": "焼",
       "strokeCount": 12,
       "labels": {
-        "hanViet": "Thuế",
-        "meaningVi": "thuế; thuế vụ",
-        "meaningViDisplay": "Thuế (thuế; thuế vụ)",
-        "meaningEn": "tax, duty"
+        "hanViet": "Thiêu",
+        "meaningVi": "nướng, đốt",
+        "meaningViDisplay": "Thiêu (nướng, đốt)",
+        "meaningEn": "Burn, Bake"
       },
       "readings": {
         "onyomi": [
-          "ゼイ"
+          "ショウ"
+        ],
+        "kunyomi": [
+          "や.く",
+          "や.き",
+          "や.き-",
+          "-や.き",
+          "や.ける"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lửa (Hỏa 火) dùng để thiÊU nướng thức ăn cao (Nghiêu 尭).",
+        "en": "Fire (火) used to BAKE or BURN."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "火",
+          "尭"
+        ],
+        "componentNames": [
+          "Hỏa (lửa)",
+          "Nghiêu (cao)"
+        ],
+        "relatedKanji": [
+          "熱",
+          "煙"
+        ],
+        "hanViet": "Thiêu"
+      },
+      "search": {
+        "hanVietNoAccent": "Thieu",
+        "meaningViNoAccent": "nuong, dot",
+        "meaningEnNoAccent": "Burn, Bake"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l39_v058",
+          "sourceSenseId": "n4_l39_s058",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v062",
+          "sourceSenseId": "n4_l39_s062",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v049",
+          "sourceSenseId": "n4_l39_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thiêu (nướng, đốt)",
+        "onyomi": "ショウ",
+        "kunyomi": "や.く, や.き, や.き-, -や.き, や.ける"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k002",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "費",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Phí",
+        "meaningVi": "expense; cost; spend",
+        "meaningViDisplay": "Phí (expense; cost; spend)",
+        "meaningEn": "expense; cost; spend"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒ"
+        ],
+        "kunyomi": [
+          "つい.やす",
+          "つい.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "H 1 _ DSi a ety cung OR) ey bio bi Bena angpR",
+        "en": "expense; cost; spend"
+      },
+      "decomposition": {
+        "hanViet": "Phí",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phi",
+        "meaningViNoAccent": "expense; cost; spend",
+        "meaningEnNoAccent": "expense; cost; spend"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phí (expense; cost; spend)",
+        "onyomi": "ヒ",
+        "kunyomi": "つい.やす, つい.える"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k003",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "程",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Trình",
+        "meaningVi": "extent; degree; law",
+        "meaningViDisplay": "Trình (extent; degree; law)",
+        "meaningEn": "extent; degree; law"
+      },
+      "readings": {
+        "onyomi": [
+          "テイ"
+        ],
+        "kunyomi": [
+          "ほど",
+          "-ほど"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat",
+        "en": "extent; degree; law"
+      },
+      "decomposition": {
+        "hanViet": "Trình",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Trinh",
+        "meaningViNoAccent": "extent; degree; law",
+        "meaningEnNoAccent": "extent; degree; law"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Trình (extent; degree; law)",
+        "onyomi": "テイ",
+        "kunyomi": "ほど, -ほど"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k004",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "植",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Thực",
+        "meaningVi": "trồng; cây trồng; thực vật",
+        "meaningViDisplay": "Thực (trồng; cây trồng; thực vật)",
+        "meaningEn": "plant, grow"
+      },
+      "readings": {
+        "onyomi": [
+          "ショク"
+        ],
+        "kunyomi": [
+          "う.える",
+          "う.わる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "植 is planting or growing plants; in 植木 it points to cultivated garden plants."
+      },
+      "decomposition": {
+        "hanViet": "Thực",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "木",
+          "草",
+          "花",
+          "根"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thuc",
+        "meaningViNoAccent": "trong; cay trong; thuc vat",
+        "meaningEnNoAccent": "plant, grow"
+      },
+      "examples": [
+        {
+          "word": "植木",
+          "reading": "うえき",
+          "meaning": "cây cảnh; cây trồng chậu",
+          "meaningEn": "garden shrubs, trees, potted plant"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thực (trồng; cây trồng; thực vật)",
+        "onyomi": "ショク",
+        "kunyomi": "う.える, う.わる"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k005",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "無",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Vô",
+        "meaningVi": "không; không có",
+        "meaningViDisplay": "Vô (không; không có)",
+        "meaningEn": "nothingness, none"
+      },
+      "readings": {
+        "onyomi": [
+          "ム",
+          "ブ"
+        ],
+        "kunyomi": [
+          "な.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 3: A balance between convenience and reducing waste."
+      },
+      "decomposition": {
+        "hanViet": "Vô",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "有",
+          "不",
+          "駄",
+          "料"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vo",
+        "meaningViNoAccent": "khong; khong co",
+        "meaningEnNoAccent": "nothingness, none"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l03_v002",
+          "sourceSenseId": "n3_l03_s002",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Vô (không; không có)",
+        "onyomi": "ム, ブ",
+        "kunyomi": "な.い"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 3,
+        "themeEn": "A balance between convenience and reducing waste",
+        "themeVi": "Cân bằng giữa tiện lợi và giảm lãng phí"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k006",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "満",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Mãn",
+        "meaningVi": "full; fullness; enough",
+        "meaningViDisplay": "Mãn (full; fullness; enough)",
+        "meaningEn": "full; fullness; enough"
+      },
+      "readings": {
+        "onyomi": [
+          "マン",
+          "バン"
+        ],
+        "kunyomi": [
+          "み.ちる",
+          "み.つ",
+          "み.たす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "full; fullness; enough"
+      },
+      "decomposition": {
+        "hanViet": "Mãn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Man",
+        "meaningViNoAccent": "full; fullness; enough",
+        "meaningEnNoAccent": "full; fullness; enough"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Mãn (full; fullness; enough)",
+        "onyomi": "マン, バン",
+        "kunyomi": "み.ちる, み.つ, み.たす"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k007",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "貿",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Mậu",
+        "meaningVi": "trade; exchange; commerce",
+        "meaningViDisplay": "Mậu (trade; exchange; commerce)",
+        "meaningEn": "trade; exchange; commerce"
+      },
+      "readings": {
+        "onyomi": [
+          "ボウ"
         ],
         "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
+        "vi": "_ Cam chy dao (7) bio bi (FD mang8MMểNBRD ' h",
+        "en": "trade; exchange; commerce"
       },
       "decomposition": {
-        "hanViet": "Thuế",
-        "structure": "standalone",
+        "hanViet": "Mậu",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "収",
-          "財",
-          "金",
-          "課"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "thue",
-        "meaningViNoAccent": "thue; thue vu",
-        "meaningEnNoAccent": "tax, duty"
+        "hanVietNoAccent": "Mau",
+        "meaningViNoAccent": "trade; exchange; commerce",
+        "meaningEnNoAccent": "trade; exchange; commerce"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l21_v008",
-          "sourceSenseId": "n3_l21_s008",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Thuế (thuế; thuế vụ)",
-        "onyomi": "ゼイ",
+        "meaning": "Mậu (trade; exchange; commerce)",
+        "onyomi": "ボウ",
         "kunyomi": ""
       },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
-      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n3_l21_k008",
+      "kanjiId": "n3_canonical_l21_k008",
       "lessonId": 21,
       "level": "N3",
-      "character": "財",
-      "strokeCount": 10,
+      "character": "意",
+      "strokeCount": 13,
       "labels": {
-        "hanViet": "Tài",
-        "meaningVi": "tài sản; của cải; tiền bạc",
-        "meaningViDisplay": "Tài (tài sản; của cải; tiền bạc)",
-        "meaningEn": "property, money, wealth"
+        "hanViet": "Ý",
+        "meaningVi": "ý nghĩ; ý nghĩa; ý định",
+        "meaningViDisplay": "Ý (ý nghĩ; ý nghĩa; ý định)",
+        "meaningEn": "idea; mind; intention"
       },
       "readings": {
         "onyomi": [
-          "ザイ",
-          "サイ",
-          "ゾク"
+          "イ"
         ],
-        "kunyomi": [
-          "たから"
-        ]
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 21: Kinh tế và tài chính.",
-        "en": "Core kanji for QUARTET 21: Economy and finance."
+        "vi": "意 là ý trong lòng; 意気込む diễn tả tinh thần hăng hái và quyết tâm làm gì.",
+        "en": "意 is intention or thought; 意気込む describes being eager and determined."
       },
       "decomposition": {
-        "hanViet": "Tài",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "hanViet": "Ý",
+        "structure": "top-bottom",
+        "components": [
+          "音",
+          "心"
+        ],
+        "componentNames": [
+          "âm/âm thanh",
+          "tâm/trái tim"
+        ],
         "relatedKanji": [
-          "産",
-          "税",
-          "資",
-          "利"
+          "心",
+          "思",
+          "義",
+          "味"
         ]
       },
       "search": {
-        "hanVietNoAccent": "tai",
-        "meaningViNoAccent": "tai san; cua cai; tien bac",
-        "meaningEnNoAccent": "property, money, wealth"
+        "hanVietNoAccent": "Y",
+        "meaningViNoAccent": "y nghi; y nghia; y dinh",
+        "meaningEnNoAccent": "idea; mind; intention"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l21_v009",
-          "sourceSenseId": "n3_l21_s009",
+          "word": "意気込む",
+          "reading": "いきごむ",
+          "meaning": "hăng hái; quyết tâm; dồn sức",
+          "meaningEn": "be enthusiastic; be eager"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Ý (ý nghĩ; ý nghĩa; ý định)",
+        "onyomi": "イ",
+        "kunyomi": ""
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k009",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "想",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Tưởng",
+        "meaningVi": "ý nghĩ; tưởng tượng; suy tưởng",
+        "meaningViDisplay": "Tưởng (ý nghĩ; tưởng tượng; suy tưởng)",
+        "meaningEn": "idea, thought, conception"
+      },
+      "readings": {
+        "onyomi": [
+          "ソウ",
+          "ソ"
+        ],
+        "kunyomi": [
+          "おも.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "想 là ý nghĩ hoặc sự tưởng tượng; trong 愛想, chữ này góp phần tạo nghĩa thái độ/thiện cảm trong giao tiếp.",
+        "en": "想 means thought or conception; in 愛想 it helps form the idea of social feeling or friendliness."
+      },
+      "decomposition": {
+        "hanViet": "Tưởng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "思",
+          "考",
+          "意",
+          "愛"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tuong",
+        "meaningViNoAccent": "y nghi; tuong tuong; suy tuong",
+        "meaningEnNoAccent": "idea, thought, conception"
+      },
+      "examples": [
+        {
+          "word": "愛想",
+          "reading": "あいそ",
+          "meaning": "sự niềm nở; thiện cảm; phép xã giao",
+          "meaningEn": "civility, sociability, friendliness"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tưởng (ý nghĩ; tưởng tượng; suy tưởng)",
+        "onyomi": "ソウ, ソ",
+        "kunyomi": "おも.う"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k010",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "塩",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Diêm",
+        "meaningVi": "salt; sel; sal",
+        "meaningViDisplay": "Diêm (salt; sel; sal)",
+        "meaningEn": "salt; sel; sal"
+      },
+      "readings": {
+        "onyomi": [
+          "エン"
+        ],
+        "kunyomi": [
+          "しお"
+        ]
+      },
+      "mnemonic": {
+        "vi": "| Thm at nm (=) mà mig (1 mia) mui) ' h",
+        "en": "salt; sel; sal"
+      },
+      "decomposition": {
+        "hanViet": "Diêm",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Diem",
+        "meaningViNoAccent": "salt; sel; sal",
+        "meaningEnNoAccent": "salt; sel; sal"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Diêm (salt; sel; sal)",
+        "onyomi": "エン",
+        "kunyomi": "しお"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k011",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "続",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Tục",
+        "meaningVi": "tiếp tục",
+        "meaningViDisplay": "Tục (tiếp tục)",
+        "meaningEn": "Continue"
+      },
+      "readings": {
+        "onyomi": [
+          "ゾク",
+          "ショク",
+          "コウ",
+          "キョウ"
+        ],
+        "kunyomi": [
+          "つづ.く",
+          "つづ.ける",
+          "つぐ.ない"
+        ]
+      },
+      "mnemonic": {
+        "vi": "IS6WNGẶẠ.Q. ゃ —— TH HaHaAI. rrp ẽrrrrt",
+        "en": "Thread (糸) extending out to CONTINUE."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "糸",
+          "売"
+        ],
+        "componentNames": [
+          "Mịch (sợi tơ)",
+          "Mại (bán)"
+        ],
+        "relatedKanji": [
+          "糸",
+          "売",
+          "終"
+        ],
+        "hanViet": "Tục"
+      },
+      "search": {
+        "hanVietNoAccent": "Tuc",
+        "meaningViNoAccent": "tiep tuc",
+        "meaningEnNoAccent": "Continue"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l31_v050",
+          "sourceSenseId": "n4_l31_s050",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l31_v051",
+          "sourceSenseId": "n4_l31_s051",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l31_v001",
+          "sourceSenseId": "n4_l31_s001",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -525,21 +706,166 @@
         }
       ],
       "legacy": {
-        "meaning": "Tài (tài sản; của cải; tiền bạc)",
-        "onyomi": "ザイ, サイ, ゾク",
-        "kunyomi": "たから"
-      },
-      "theme": {
-        "quartetLesson": 21,
-        "themeEn": "Economy and finance",
-        "themeVi": "Kinh tế và tài chính"
+        "meaning": "Tục (tiếp tục)",
+        "onyomi": "ゾク, ショク, コウ, キョウ",
+        "kunyomi": "つづ.く, つづ.ける, つぐ.ない"
       },
       "tags": [
-        "vi-source-verified"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k012",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "辞",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Từ",
+        "meaningVi": "từ; lời nói; thuật ngữ; từ chức",
+        "meaningViDisplay": "Từ (từ; lời nói; thuật ngữ; từ chức)",
+        "meaningEn": "resign, word, term, expression"
+      },
+      "readings": {
+        "onyomi": [
+          "ジ"
+        ],
+        "kunyomi": [
+          "や.める",
+          "いな.む"
+        ]
+      },
+      "mnemonic": {
+        "vi": "辞 liên quan đến lời nói, cách diễn đạt hoặc từ chức; trong 御辞儀, chữ này nằm trong cụm chỉ lời/lễ cúi chào.",
+        "en": "辞 relates to words, expressions, or resigning; in 御辞儀 it is part of the set phrase for bowing."
+      },
+      "decomposition": {
+        "hanViet": "Từ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "言",
+          "文",
+          "説",
+          "御"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tu",
+        "meaningViNoAccent": "tu; loi noi; thuat ngu; tu chuc",
+        "meaningEnNoAccent": "resign, word, term, expression"
+      },
+      "examples": [
+        {
+          "word": "御辞儀",
+          "reading": "おじぎ",
+          "meaning": "cúi chào",
+          "meaningEn": "bow"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Từ (từ; lời nói; thuật ngữ; từ chức)",
+        "onyomi": "ジ",
+        "kunyomi": "や.める, いな.む"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l21_k013",
+      "lessonId": 21,
+      "level": "N3",
+      "character": "夢",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Mộng",
+        "meaningVi": "giấc mơ",
+        "meaningViDisplay": "Mộng (giấc mơ)",
+        "meaningEn": "Dream"
+      },
+      "readings": {
+        "onyomi": [
+          "ム",
+          "ボウ"
+        ],
+        "kunyomi": [
+          "ゆめ",
+          "ゆめ.みる",
+          "くら.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Trong bóng tối (Tịch 夕) con mắt mơ màng nhìn thấy giẤC MƠ.",
+        "en": "Eyes seeing things in the dark (夕) - a DREAM."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "艹",
+          "罒",
+          "冖",
+          "夕"
+        ],
+        "componentNames": [
+          "Thảo (cỏ)",
+          "Võng (lưới)",
+          "Mịch (nắp đậy)",
+          "Tịch (chiều tối)"
+        ],
+        "relatedKanji": [
+          "夕"
+        ],
+        "hanViet": "Mộng"
+      },
+      "search": {
+        "hanVietNoAccent": "Mong",
+        "meaningViNoAccent": "giac mo",
+        "meaningEnNoAccent": "Dream"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l27_v035",
+          "sourceSenseId": "n4_l27_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l27_v063",
+          "sourceSenseId": "n4_l27_s063",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Mộng (giấc mơ)",
+        "onyomi": "ム, ボウ",
+        "kunyomi": "ゆめ, ゆめ.みる, くら.い"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

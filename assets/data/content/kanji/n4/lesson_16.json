@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 16,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l16_k001",
+      "lessonId": 16,
+      "level": "N4",
+      "character": "前",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Tiền",
+        "meaningVi": "trước; phía trước",
+        "meaningViDisplay": "Tiền (trước; phía trước)",
+        "meaningEn": "in front; before"
+      },
+      "readings": {
+        "onyomi": [
+          "ゼン"
+        ],
+        "kunyomi": [
+          "まえ",
+          "-まえ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cỏ ( ) mọc ngày trăng ( ) dùng dao ( ) cắt bán lấy tiền ( ) 1 2",
+        "en": "前 means in front or before; in 当たり前 it contributes to the idea of something obvious or normal."
+      },
+      "decomposition": {
+        "hanViet": "Tiền",
+        "structure": "top-bottom",
+        "components": [
+          "月",
+          "刂"
+        ],
+        "componentNames": [
+          "thịt/trăng",
+          "dao"
+        ],
+        "relatedKanji": [
+          "後",
+          "先",
+          "上",
+          "下"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tien",
+        "meaningViNoAccent": "truoc; phia truoc",
+        "meaningEnNoAccent": "in front; before"
+      },
+      "examples": [
+        {
+          "word": "当たり前",
+          "reading": "あたりまえ",
+          "meaning": "bình thường; hiển nhiên; hợp lý",
+          "meaningEn": "usual; ordinary; obvious"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tiền (trước; phía trước)",
+        "onyomi": "ゼン",
+        "kunyomi": "まえ, -まえ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l16_k002",
+      "lessonId": 16,
+      "level": "N4",
+      "character": "春",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Xuân",
+        "meaningVi": "Mùa xuân",
+        "meaningViDisplay": "Xuân (Mùa xuân)",
+        "meaningEn": "springtime; spring (season); printemps"
+      },
+      "readings": {
+        "onyomi": [
+          "シュン"
+        ],
+        "kunyomi": [
+          "はる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "3 người ( ) đi chơi ngày ( ) xuân ( ) 4",
+        "en": "springtime; spring (season); printemps"
+      },
+      "decomposition": {
+        "hanViet": "Xuân",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Xuan",
+        "meaningViNoAccent": "Mua xuan",
+        "meaningEnNoAccent": "springtime; spring (season); printemps"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Xuân (Mùa xuân)",
+        "onyomi": "シュン",
+        "kunyomi": "はる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l16_k003",
+      "lessonId": 16,
+      "level": "N4",
+      "character": "室",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Thất",
+        "meaningVi": "phòng; buồng; nhà kính",
+        "meaningViDisplay": "Thất (phòng; buồng; nhà kính)",
+        "meaningEn": "room, chamber, greenhouse"
+      },
+      "readings": {
+        "onyomi": [
+          "シツ"
+        ],
+        "kunyomi": [
+          "むろ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dưới mái nhà ( ) Chí ( ) Phèo có căn phòng ( ) nhỏ 室 1",
+        "en": "室 means room or chamber; in 温室 it is the enclosed warm room, a greenhouse."
+      },
+      "decomposition": {
+        "hanViet": "Thất",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "部",
+          "屋",
+          "家",
+          "温"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "That",
+        "meaningViNoAccent": "phong; buong; nha kinh",
+        "meaningEnNoAccent": "room, chamber, greenhouse"
+      },
+      "examples": [
+        {
+          "word": "温室",
+          "reading": "おんしつ",
+          "meaning": "nhà kính",
+          "meaningEn": "greenhouse"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thất (phòng; buồng; nhà kính)",
+        "onyomi": "シツ",
+        "kunyomi": "むろ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l16_k004",
+      "lessonId": 16,
+      "level": "N4",
+      "character": "屋",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Ốc",
+        "meaningVi": "nhà, cửa hàng",
+        "meaningViDisplay": "Ốc (nhà, cửa hàng)",
+        "meaningEn": "Shop, Roof"
+      },
+      "readings": {
+        "onyomi": [
+          "オク"
+        ],
+        "kunyomi": [
+          "や"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Xác chết ( ) Chí ( ) Phèo trên cao ốc ( ) 屋 1",
+        "en": "A house/shop where people arrive (至)."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "尸",
+          "至"
+        ],
+        "componentNames": [
+          "Thi (thi thể, mái che)",
+          "Chí (đến)"
+        ],
+        "relatedKanji": [
+          "府",
+          "届"
+        ],
+        "hanViet": "Ốc"
+      },
+      "search": {
+        "hanVietNoAccent": "Oc",
+        "meaningViNoAccent": "nha, cua hang",
+        "meaningEnNoAccent": "Shop, Roof"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l39_v032",
+          "sourceSenseId": "n4_l39_s032",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l35_v016",
+          "sourceSenseId": "n4_l35_s016",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l23_v046",
+          "sourceSenseId": "n5_l23_s046",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Ốc (nhà, cửa hàng)",
+        "onyomi": "オク",
+        "kunyomi": "や"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l16_k005",
+      "lessonId": 16,
+      "level": "N4",
+      "character": "昼",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Trú",
+        "meaningVi": "buổi trưa",
+        "meaningViDisplay": "Trú (buổi trưa)",
+        "meaningEn": "Noon, Daytime"
+      },
+      "readings": {
+        "onyomi": [
+          "チュウ"
+        ],
+        "kunyomi": [
+          "ひる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bị xích ( ) trong ngày mồng 1 ( ) đến tận buổi trưa ( ) 昼 1",
+        "en": "The sun (日) high up at NOON."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "尸",
+          "旦"
+        ],
+        "componentNames": [
+          "Thi (thi thể)",
+          "Đán (bình minh)"
+        ],
+        "relatedKanji": [
+          "日",
+          "朝",
+          "夜"
+        ],
+        "hanViet": "Trú"
+      },
+      "search": {
+        "hanVietNoAccent": "Tru",
+        "meaningViNoAccent": "buoi trua",
+        "meaningEnNoAccent": "Noon, Daytime"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l04_v021",
+          "sourceSenseId": "n5_l04_s021",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l06_v014",
+          "sourceSenseId": "n5_l06_s014",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v043",
+          "sourceSenseId": "n5_l17_s043",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Trú (buổi trưa)",
+        "onyomi": "チュウ",
+        "kunyomi": "ひる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l16_k006",
+      "lessonId": 16,
+      "level": "N4",
+      "character": "咲",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Tiếu",
+        "meaningVi": "Gửi đi",
+        "meaningViDisplay": "Tiếu (Gửi đi)",
+        "meaningEn": "blossom; bloom; fleurir"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": [
+          "さ.く",
+          "-ざき"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Miệng ( ) quan ( ) cười như nở hoa ( )咲 2",
+        "en": "blossom; bloom; fleurir"
+      },
+      "decomposition": {
+        "hanViet": "Tiếu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tieu",
+        "meaningViNoAccent": "Gui di",
+        "meaningEnNoAccent": "blossom; bloom; fleurir"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tiếu (Gửi đi)",
+        "onyomi": "ショウ",
+        "kunyomi": "さ.く, -ざき"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l16_k007",
+      "lessonId": 16,
+      "level": "N4",
+      "character": "研",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Nghiên",
+        "meaningVi": "Nghiên cứu",
+        "meaningViDisplay": "Nghiên (Nghiên cứu)",
+        "meaningEn": "polish; study of; sharpen"
+      },
+      "readings": {
+        "onyomi": [
+          "ケン"
+        ],
+        "kunyomi": [
+          "と.ぐ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cầm đá ( ) chắp 1 tay ( ) nghiên cứu ( ) 研 6",
+        "en": "polish; study of; sharpen"
+      },
+      "decomposition": {
+        "hanViet": "Nghiên",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nghien",
+        "meaningViNoAccent": "Nghien cuu",
+        "meaningEnNoAccent": "polish; study of; sharpen"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nghiên (Nghiên cứu)",
+        "onyomi": "ケン",
+        "kunyomi": "と.ぐ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

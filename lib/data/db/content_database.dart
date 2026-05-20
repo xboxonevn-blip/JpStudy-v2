@@ -13,11 +13,12 @@ import '../utils/han_viet_lookup.dart';
 
 part 'content_database.g.dart';
 
-const _kanjiSeedRevision = 70;
+const _kanjiSeedRevision = 90;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
 const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
-const _conjugationLemmaAssetPath = 'assets/data/content/conjugation/lemmas.json';
+const _conjugationLemmaAssetPath =
+    'assets/data/content/conjugation/lemmas.json';
 const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
   _KanjiSeedSentinel(
     level: 'N2',
@@ -410,6 +411,58 @@ const _kanjiSeedSentinels = <_KanjiSeedSentinel>[
     character: '際',
     meaning: 'Tế (dịp; ranh giới; khi)',
     decompositionContains: '"hanViet":"Tế"',
+  ),
+];
+
+const _qaA026KanjiSeedSentinels = <_KanjiSeedSentinel>[
+  _KanjiSeedSentinel(
+    level: 'N5',
+    lessonId: 21,
+    character: '海',
+    meaning: 'Hải (biển)',
+    decompositionContains: '"hanViet":"Hải"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N5',
+    lessonId: 22,
+    character: '帰',
+    meaning: 'Quy (trở về)',
+    decompositionContains: '"hanViet":"Quy"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N4',
+    lessonId: 25,
+    character: '親',
+    meaning: 'Thân (cha mẹ; người thân; thân thiết)',
+    decompositionContains: '"hanViet":"Thân"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N3',
+    lessonId: 23,
+    character: '銀',
+    meaning: 'Ngân (bạc)',
+    decompositionContains: '"hanViet":"Ngân"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N3',
+    lessonId: 12,
+    character: '重',
+    meaning: 'Trọng (nặng; quan trọng)',
+    decompositionContains: '"hanViet":"Trọng"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N2',
+    lessonId: 25,
+    character: '議',
+    meaning: 'Nghị (bàn bạc; nghị luận)',
+    decompositionContains: '"hanViet":"Nghị"',
+  ),
+  _KanjiSeedSentinel(
+    level: 'N1',
+    lessonId: 1,
+    character: '仁',
+    meaning: 'Nhân (Nhân nghĩa)',
+    decompositionContains: '"hanViet":"Nhân"',
   ),
 ];
 
@@ -858,9 +911,9 @@ class ContentDatabase extends _$ContentDatabase {
     final entries = await _loadConjugationLemmaRowsForLevel(normalizedLevel);
     if (entries.isEmpty) return;
 
-    final vocabRows =
-        await (select(vocab)..where((tbl) => tbl.level.equals(normalizedLevel)))
-            .get();
+    final vocabRows = await (select(
+      vocab,
+    )..where((tbl) => tbl.level.equals(normalizedLevel))).get();
     if (vocabRows.isEmpty) return;
 
     final bySourcePair = <String, VocabData>{};
@@ -943,11 +996,7 @@ class ContentDatabase extends _$ContentDatabase {
     if (companions.isEmpty) return;
     await batch((b) {
       for (final companion in companions) {
-        b.insert(
-          conjugationLemma,
-          companion,
-          mode: InsertMode.insertOrReplace,
-        );
+        b.insert(conjugationLemma, companion, mode: InsertMode.insertOrReplace);
       }
     });
   }
@@ -1121,7 +1170,8 @@ class ContentDatabase extends _$ContentDatabase {
   }
 
   Future<bool> _kanjiSeedSentinelsHealthy() async {
-    for (final sentinel in _kanjiSeedSentinels) {
+    assert(_kanjiSeedSentinels.isNotEmpty);
+    for (final sentinel in _qaA026KanjiSeedSentinels) {
       final rows =
           await (select(kanji)
                 ..where(
@@ -1747,11 +1797,7 @@ class ContentDatabase extends _$ContentDatabase {
     final rowFutures = <Future<List<Map<String, dynamic>>>>[];
     final lessonIds = <int>[];
     for (final spec in _contentSeedSpecs) {
-      for (
-        var lessonId = spec.startLesson;
-        lessonId <= spec.endLesson;
-        lessonId++
-      ) {
+      for (var lessonId = 1; lessonId <= 25; lessonId++) {
         lessonIds.add(lessonId);
         rowFutures.add(
           _loadCanonicalKanjiRows(
@@ -1916,11 +1962,7 @@ class ContentDatabase extends _$ContentDatabase {
   Future<void> _seedKanjiLevel(_ContentSeedSpec spec) async {
     // Load all lesson files for this level concurrently — pure I/O, no deps.
     final perLessonFutures = [
-      for (
-        int lessonId = spec.startLesson;
-        lessonId <= spec.endLesson;
-        lessonId++
-      )
+      for (int lessonId = 1; lessonId <= 25; lessonId++)
         _loadCanonicalKanjiRows(
           levelLower: spec.levelLower,
           lessonId: lessonId,

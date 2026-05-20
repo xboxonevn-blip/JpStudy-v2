@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 20,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l20_k001",
+      "lessonId": 20,
+      "level": "N4",
+      "character": "都",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Đô",
+        "meaningVi": "đô thành",
+        "meaningViDisplay": "Đô (đô thành)",
+        "meaningEn": "Metropolis"
+      },
+      "readings": {
+        "onyomi": [
+          "ト",
+          "ツ"
+        ],
+        "kunyomi": [
+          "みやこ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Tác giả ( ) đi chơi với Bồ ( ) ở kinh đô ( )都 2 4",
+        "en": "People (者) gathered in a district (阝) to form a METROPOLIS."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "者",
+          "阝"
+        ],
+        "componentNames": [
+          "Giả (người)",
+          "Ấp (vùng đất)"
+        ],
+        "relatedKanji": [
+          "者",
+          "京"
+        ],
+        "hanViet": "Đô"
+      },
+      "search": {
+        "hanVietNoAccent": "Do",
+        "meaningViNoAccent": "do thanh",
+        "meaningEnNoAccent": "Metropolis"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l21_v053",
+          "sourceSenseId": "n5_l21_s053",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l21_v044",
+          "sourceSenseId": "n5_l21_s044",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l21_v045",
+          "sourceSenseId": "n5_l21_s045",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Đô (đô thành)",
+        "onyomi": "ト, ツ",
+        "kunyomi": "みやこ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l20_k002",
+      "lessonId": 20,
+      "level": "N4",
+      "character": "習",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Tập",
+        "meaningVi": "học tập",
+        "meaningViDisplay": "Tập (học tập)",
+        "meaningEn": "Learn"
+      },
+      "readings": {
+        "onyomi": [
+          "シュウ",
+          "ジュ"
+        ],
+        "kunyomi": [
+          "なら.う",
+          "なら.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Con chim ( ) trắng ( ) đang tập ( ) bay 習 4",
+        "en": "White (白) feathers (羽) of a young bird learning to fly."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "羽",
+          "白"
+        ],
+        "componentNames": [
+          "Vũ (lông vũ)",
+          "Bạch (trắng)"
+        ],
+        "relatedKanji": [
+          "白",
+          "集"
+        ],
+        "hanViet": "Tập"
+      },
+      "search": {
+        "hanVietNoAccent": "Tap",
+        "meaningViNoAccent": "hoc tap",
+        "meaningEnNoAccent": "Learn"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l07_v059",
+          "sourceSenseId": "n5_l07_s059",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l07_v054",
+          "sourceSenseId": "n5_l07_s054",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l07_v008",
+          "sourceSenseId": "n5_l07_s008",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tập (học tập)",
+        "onyomi": "シュウ, ジュ",
+        "kunyomi": "なら.う, なら.い"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l20_k003",
+      "lessonId": 20,
+      "level": "N4",
+      "character": "部",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Bộ",
+        "meaningVi": "bộ phận; phần; đơn vị",
+        "meaningViDisplay": "Bộ (bộ phận; phần; đơn vị)",
+        "meaningEn": "part, division, section"
+      },
+      "readings": {
+        "onyomi": [
+          "ブ"
+        ],
+        "kunyomi": [
+          "-べ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bộ phận ( ) Bồ ( ) làm việc là bộ phận ( ) giỏi nhất 1 9",
+        "en": "部 means part or division; 一部 is a part or one copy of a document."
+      },
+      "decomposition": {
+        "hanViet": "Bộ",
+        "structure": "left-right",
+        "components": [
+          "咅",
+          "阝"
+        ],
+        "componentNames": [
+          "bộ/âm phụ",
+          "ấp/vùng đất"
+        ],
+        "relatedKanji": [
+          "分",
+          "全",
+          "課",
+          "門"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bo",
+        "meaningViNoAccent": "bo phan; phan; don vi",
+        "meaningEnNoAccent": "part, division, section"
+      },
+      "examples": [
+        {
+          "word": "一部",
+          "reading": "いちぶ",
+          "meaning": "một phần; một bộ/bản",
+          "meaningEn": "part; one copy"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Bộ (bộ phận; phần; đơn vị)",
+        "onyomi": "ブ",
+        "kunyomi": "-べ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l20_k004",
+      "lessonId": 20,
+      "level": "N4",
+      "character": "黄",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Hoàng",
+        "meaningVi": "Màu vàng",
+        "meaningViDisplay": "Hoàng (Màu vàng)",
+        "meaningEn": "yellow; jaune; amarillo"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ",
+          "オウ"
+        ],
+        "kunyomi": [
+          "き",
+          "こ-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ở hàng rào ( ) cỏ mọc tự do ( ) vào tháng 8 ( ) có màu vàng ( ) 2 3",
+        "en": "yellow; jaune; amarillo"
+      },
+      "decomposition": {
+        "hanViet": "Hoàng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hoang",
+        "meaningViNoAccent": "Mau vang",
+        "meaningEnNoAccent": "yellow; jaune; amarillo"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hoàng (Màu vàng)",
+        "onyomi": "コウ, オウ",
+        "kunyomi": "き, こ-"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l20_k005",
+      "lessonId": 20,
+      "level": "N4",
+      "character": "教",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Giáo",
+        "meaningVi": "dạy; giáo dục; giáo lý",
+        "meaningViDisplay": "Giáo (dạy; giáo dục; giáo lý)",
+        "meaningEn": "teach, faith, doctrine"
+      },
+      "readings": {
+        "onyomi": [
+          "キョウ"
+        ],
+        "kunyomi": [
+          "おし.える",
+          "おそ.わる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dạy con hiếu thảo ( ) không nên đánh ( ), đó mới là giáo dục ( ) đúng cách 2 8",
+        "en": "教 means teaching or doctrine; in 教わる it marks being taught by someone."
+      },
+      "decomposition": {
+        "hanViet": "Giáo",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "学",
+          "育",
+          "授",
+          "習"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Giao",
+        "meaningViNoAccent": "day; giao duc; giao ly",
+        "meaningEnNoAccent": "teach, faith, doctrine"
+      },
+      "examples": [
+        {
+          "word": "教わる",
+          "reading": "おそわる",
+          "meaning": "được dạy",
+          "meaningEn": "to be taught"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Giáo (dạy; giáo dục; giáo lý)",
+        "onyomi": "キョウ",
+        "kunyomi": "おし.える, おそ.わる"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l20_k006",
+      "lessonId": 20,
+      "level": "N4",
+      "character": "細",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Tế",
+        "meaningVi": "Nhỏ, chi tiết",
+        "meaningViDisplay": "Tế (Nhỏ, chi tiết)",
+        "meaningEn": "dainty; get thin; taper"
+      },
+      "readings": {
+        "onyomi": [
+          "サイ"
+        ],
+        "kunyomi": [
+          "ほそ.い",
+          "ほそ.る",
+          "こま.か",
+          "こま.かい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Sợi tơ ( ) mọc trên ruộng ( ) nhỏ như tế bào ( ) 1",
+        "en": "dainty; get thin; taper"
+      },
+      "decomposition": {
+        "hanViet": "Tế",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Te",
+        "meaningViNoAccent": "Nho, chi tiet",
+        "meaningEnNoAccent": "dainty; get thin; taper"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tế (Nhỏ, chi tiết)",
+        "onyomi": "サイ",
+        "kunyomi": "ほそ.い, ほそ.る, こま.か, こま.かい"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l20_k007",
+      "lessonId": 20,
+      "level": "N4",
+      "character": "強",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Cường",
+        "meaningVi": "Mạnh",
+        "meaningViDisplay": "Cường (Mạnh)",
+        "meaningEn": "strong; fort; fuerte"
+      },
+      "readings": {
+        "onyomi": [
+          "キョウ",
+          "ゴウ"
+        ],
+        "kunyomi": [
+          "つよ.い",
+          "つよ.まる",
+          "つよ.める",
+          "し.いる",
+          "こわ.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cầm cung tên ( ) bắn 4 ( ) con côn trùng ( ) khỏe mạnh ( ) 強 4",
+        "en": "strong; fort; fuerte"
+      },
+      "decomposition": {
+        "hanViet": "Cường",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cuong",
+        "meaningViNoAccent": "Manh",
+        "meaningEnNoAccent": "strong; fort; fuerte"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cường (Mạnh)",
+        "onyomi": "キョウ, ゴウ",
+        "kunyomi": "つよ.い, つよ.まる, つよ.める, し.いる, こわ.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

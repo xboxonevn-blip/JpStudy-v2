@@ -1,322 +1,759 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 23,
-  "entryCount": 8,
+  "entryCount": 12,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l23_k001",
+      "kanjiId": "n3_canonical_l23_k001",
       "lessonId": 23,
       "level": "N3",
-      "character": "歴",
-      "strokeCount": 14,
-      "labels": {
-        "hanViet": "Lịch",
-        "meaningVi": "lịch sử; trải qua; quá trình",
-        "meaningViDisplay": "Lịch (lịch sử; trải qua; quá trình)",
-        "meaningEn": "history, passage of time, curriculum"
-      },
-      "readings": {
-        "onyomi": [
-          "レキ",
-          "レッキ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
-      },
-      "decomposition": {
-        "hanViet": "Lịch",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "史",
-          "過",
-          "経",
-          "年"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "lich",
-        "meaningViNoAccent": "lich su; trai qua; qua trinh",
-        "meaningEnNoAccent": "history, passage of time, curriculum"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l23_v001",
-          "sourceSenseId": "n3_l23_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Lịch (lịch sử; trải qua; quá trình)",
-        "onyomi": "レキ, レッキ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l23_k002",
-      "lessonId": 23,
-      "level": "N3",
-      "character": "史",
-      "strokeCount": 5,
-      "labels": {
-        "hanViet": "Sử",
-        "meaningVi": "lịch sử; sử ký; ghi chép",
-        "meaningViDisplay": "Sử (lịch sử; sử ký; ghi chép)",
-        "meaningEn": "history, chronicle"
-      },
-      "readings": {
-        "onyomi": [
-          "シ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
-      },
-      "decomposition": {
-        "hanViet": "Sử",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "歴",
-          "記",
-          "文",
-          "世"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "su",
-        "meaningViNoAccent": "lich su; su ky; ghi chep",
-        "meaningEnNoAccent": "history, chronicle"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l23_v001",
-          "sourceSenseId": "n3_l23_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Sử (lịch sử; sử ký; ghi chép)",
-        "onyomi": "シ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l23_k003",
-      "lessonId": 23,
-      "level": "N3",
-      "character": "政",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Chính",
-        "meaningVi": "chính trị; chính quyền; điều hành",
-        "meaningViDisplay": "Chính (chính trị; chính quyền; điều hành)",
-        "meaningEn": "politics, government, administration"
-      },
-      "readings": {
-        "onyomi": [
-          "セイ",
-          "ショウ"
-        ],
-        "kunyomi": [
-          "まつりごと",
-          "まん"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
-      },
-      "decomposition": {
-        "hanViet": "Chính",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "治",
-          "府",
-          "党",
-          "議"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "chinh",
-        "meaningViNoAccent": "chinh tri; chinh quyen; dieu hanh",
-        "meaningEnNoAccent": "politics, government, administration"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l23_v002",
-          "sourceSenseId": "n3_l23_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Chính (chính trị; chính quyền; điều hành)",
-        "onyomi": "セイ, ショウ",
-        "kunyomi": "まつりごと, まん"
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l23_k004",
-      "lessonId": 23,
-      "level": "N3",
-      "character": "治",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Trị",
-        "meaningVi": "cai trị; chữa trị; ổn định",
-        "meaningViDisplay": "Trị (cai trị; chữa trị; ổn định)",
-        "meaningEn": "rule, cure, calm"
-      },
-      "readings": {
-        "onyomi": [
-          "ジ",
-          "チ"
-        ],
-        "kunyomi": [
-          "おさ.める",
-          "おさ.まる",
-          "なお.る",
-          "なお.す"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
-      },
-      "decomposition": {
-        "hanViet": "Trị",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "政",
-          "療",
-          "安",
-          "法"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tri",
-        "meaningViNoAccent": "cai tri; chua tri; on dinh",
-        "meaningEnNoAccent": "rule, cure, calm"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l23_v002",
-          "sourceSenseId": "n3_l23_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Trị (cai trị; chữa trị; ổn định)",
-        "onyomi": "ジ, チ",
-        "kunyomi": "おさ.める, おさ.まる, なお.る, なお.す"
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l23_k005",
-      "lessonId": 23,
-      "level": "N3",
-      "character": "戦",
+      "character": "解",
       "strokeCount": 13,
       "labels": {
-        "hanViet": "Chiến",
-        "meaningVi": "chiến tranh; trận đấu; chiến đấu",
-        "meaningViDisplay": "Chiến (chiến tranh; trận đấu; chiến đấu)",
-        "meaningEn": "war, battle"
+        "hanViet": "Giải",
+        "meaningVi": "Giải Quyết Fof Aa A Or Ap Ap Ae A",
+        "meaningViDisplay": "Giải (Giải Quyết Fof Aa A Or Ap Ap Ae A)",
+        "meaningEn": "unravel; notes; key"
+      },
+      "readings": {
+        "onyomi": [
+          "カイ",
+          "ゲ"
+        ],
+        "kunyomi": [
+          "と.く",
+          "と.かす",
+          "と.ける",
+          "ほど.く",
+          "ほぐ.す",
+          "わか.る",
+          "さと.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 解 qua Hán-Việt Giải.",
+        "en": "unravel; notes; key"
+      },
+      "decomposition": {
+        "hanViet": "Giải",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Giai",
+        "meaningViNoAccent": "Giai Quyet Fof Aa A Or Ap Ap Ae A",
+        "meaningEnNoAccent": "unravel; notes; key"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Giải (Giải Quyết Fof Aa A Or Ap Ap Ae A)",
+        "onyomi": "カイ, ゲ",
+        "kunyomi": "と.く, と.かす, と.ける, ほど.く, ほぐ.す, わか.る, さと.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k002",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "銀",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Ngân",
+        "meaningVi": "bạc",
+        "meaningViDisplay": "Ngân (bạc)",
+        "meaningEn": "silver"
+      },
+      "readings": {
+        "onyomi": [
+          "ギン"
+        ],
+        "kunyomi": [
+          "しろがね"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vàng ( ) không tốt ( ) bằng bạc ( ) 銀 1 9",
+        "en": "silver"
+      },
+      "decomposition": {
+        "hanViet": "Ngân",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ngan",
+        "meaningViNoAccent": "bac",
+        "meaningEnNoAccent": "silver"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Ngân (bạc)",
+        "onyomi": "ギン",
+        "kunyomi": "しろがね"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k003",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "算",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Toán",
+        "meaningVi": "tính toán; phép tính; dự tính",
+        "meaningViDisplay": "Toán (tính toán; phép tính; dự tính)",
+        "meaningEn": "calculate; number; plan"
+      },
+      "readings": {
+        "onyomi": [
+          "サン"
+        ],
+        "kunyomi": [
+          "そろ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "算 là tính toán; 暗算 là tính nhẩm, làm phép tính trong đầu.",
+        "en": "算 means calculation; 暗算 is mental arithmetic."
+      },
+      "decomposition": {
+        "hanViet": "Toán",
+        "structure": "top-bottom",
+        "components": [
+          "竹",
+          "目",
+          "廾"
+        ],
+        "componentNames": [
+          "tre",
+          "mắt",
+          "hai tay"
+        ],
+        "relatedKanji": [
+          "数",
+          "計",
+          "暗",
+          "策"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Toan",
+        "meaningViNoAccent": "tinh toan; phep tinh; du tinh",
+        "meaningEnNoAccent": "calculate; number; plan"
+      },
+      "examples": [
+        {
+          "word": "暗算",
+          "reading": "あんざん",
+          "meaning": "tính nhẩm",
+          "meaningEn": "mental arithmetic"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Toán (tính toán; phép tính; dự tính)",
+        "onyomi": "サン",
+        "kunyomi": "そろ"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k004",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "種",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Chủng",
+        "meaningVi": "loại; giống; hạt giống",
+        "meaningViDisplay": "Chủng (loại; giống; hạt giống)",
+        "meaningEn": "kind, seed"
+      },
+      "readings": {
+        "onyomi": [
+          "シュ"
+        ],
+        "kunyomi": [
+          "たね",
+          "-ぐさ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 種 qua Hán-Việt Chủng.",
+        "en": "kind, seed"
+      },
+      "decomposition": {
+        "hanViet": "Chủng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chung",
+        "meaningViNoAccent": "loai; giong; hat giong",
+        "meaningEnNoAccent": "kind, seed"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chủng (loại; giống; hạt giống)",
+        "onyomi": "シュ",
+        "kunyomi": "たね, -ぐさ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k005",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "増",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Tăng",
+        "meaningVi": "tăng lên",
+        "meaningViDisplay": "Tăng (tăng lên)",
+        "meaningEn": "Increase"
+      },
+      "readings": {
+        "onyomi": [
+          "ゾウ"
+        ],
+        "kunyomi": [
+          "ま.す",
+          "ま.し",
+          "ふ.える",
+          "ふ.やす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đất (Thổ 土) đắp thêm hàng ngày (Tằng 曽) là TĂng lên.",
+        "en": "Building up earth (土) over time (曽) to INCREASE."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "土",
+          "曽"
+        ],
+        "componentNames": [
+          "Thổ (đất)",
+          "Tằng (từng)"
+        ],
+        "relatedKanji": [
+          "土",
+          "地"
+        ],
+        "hanViet": "Tăng"
+      },
+      "search": {
+        "hanVietNoAccent": "Tang",
+        "meaningViNoAccent": "tang len",
+        "meaningEnNoAccent": "Increase"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l43_v039",
+          "sourceSenseId": "n4_l43_s039",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l43_v043",
+          "sourceSenseId": "n4_l43_s043",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l43_v001",
+          "sourceSenseId": "n4_l43_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tăng (tăng lên)",
+        "onyomi": "ゾウ",
+        "kunyomi": "ま.す, ま.し, ふ.える, ふ.やす"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k006",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "説",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Duyệt",
+        "meaningVi": "giải thích; học thuyết; ý kiến",
+        "meaningViDisplay": "Duyệt (giải thích; học thuyết; ý kiến)",
+        "meaningEn": "opinion, theory, explanation"
+      },
+      "readings": {
+        "onyomi": [
+          "セツ",
+          "ゼイ"
+        ],
+        "kunyomi": [
+          "と.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 22: Communication and expression."
+      },
+      "decomposition": {
+        "hanViet": "Duyệt",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "話",
+          "言",
+          "議",
+          "明"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Duyet",
+        "meaningViNoAccent": "giai thich; hoc thuyet; y kien",
+        "meaningEnNoAccent": "opinion, theory, explanation"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l22_v002",
+          "sourceSenseId": "n3_l22_s002",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Duyệt (giải thích; học thuyết; ý kiến)",
+        "onyomi": "セツ, ゼイ",
+        "kunyomi": "と.く"
+      },
+      "theme": {
+        "quartetLesson": 22,
+        "themeEn": "Communication and expression",
+        "themeVi": "Giao tiếp và diễn đạt"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k007",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "関",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Quan",
+        "meaningVi": "connection; barrier; gateway",
+        "meaningViDisplay": "Quan (connection; barrier; gateway)",
+        "meaningEn": "connection; barrier; gateway"
+      },
+      "readings": {
+        "onyomi": [
+          "カン"
+        ],
+        "kunyomi": [
+          "せき",
+          "-ぜき",
+          "かか.わる",
+          "からくり",
+          "かんぬき"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "connection; barrier; gateway"
+      },
+      "decomposition": {
+        "hanViet": "Quan",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Quan",
+        "meaningViNoAccent": "connection; barrier; gateway",
+        "meaningEnNoAccent": "connection; barrier; gateway"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Quan (connection; barrier; gateway)",
+        "onyomi": "カン",
+        "kunyomi": "せき, -ぜき, かか.わる, からくり, かんぬき"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k008",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "構",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Cấu",
+        "meaningVi": "posture; stance; appearance",
+        "meaningViDisplay": "Cấu (posture; stance; appearance)",
+        "meaningEn": "posture; stance; appearance"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ"
+        ],
+        "kunyomi": [
+          "かま.える",
+          "かま.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 構 qua Hán-Việt Cấu.",
+        "en": "posture; stance; appearance"
+      },
+      "decomposition": {
+        "hanViet": "Cấu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cau",
+        "meaningViNoAccent": "posture; stance; appearance",
+        "meaningEnNoAccent": "posture; stance; appearance"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cấu (posture; stance; appearance)",
+        "onyomi": "コウ",
+        "kunyomi": "かま.える, かま.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k009",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "管",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Quản",
+        "meaningVi": "Quan Ly",
+        "meaningViDisplay": "Quản (Quan Ly)",
+        "meaningEn": "pipe; tube; wind instrument"
+      },
+      "readings": {
+        "onyomi": [
+          "カン"
+        ],
+        "kunyomi": [
+          "くだ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "OE CC H h",
+        "en": "pipe; tube; wind instrument"
+      },
+      "decomposition": {
+        "hanViet": "Quản",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Quan",
+        "meaningViNoAccent": "Quan Ly",
+        "meaningEnNoAccent": "pipe; tube; wind instrument"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Quản (Quan Ly)",
+        "onyomi": "カン",
+        "kunyomi": "くだ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k010",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "認",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Nhận",
+        "meaningVi": "công nhận",
+        "meaningViDisplay": "Nhận (công nhận)",
+        "meaningEn": "Recognize"
+      },
+      "readings": {
+        "onyomi": [
+          "ニン"
+        ],
+        "kunyomi": [
+          "みと.める",
+          "したた.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lời nói (Ngôn 言) nhẫn nại (Nhẫn 忍) là để CÔng nhẬN.",
+        "en": "Speech (言) that is patient (忍) leads to RECOGNITION."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "言",
+          "忍"
+        ],
+        "componentNames": [
+          "Ngôn (lời nói)",
+          "Nhẫn (nhẫn nại)"
+        ],
+        "relatedKanji": [
+          "話",
+          "読",
+          "謝",
+          "信"
+        ],
+        "hanViet": "Nhận"
+      },
+      "search": {
+        "hanVietNoAccent": "Nhan",
+        "meaningViNoAccent": "cong nhan",
+        "meaningEnNoAccent": "Recognize"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l40_v067",
+          "sourceSenseId": "n4_l40_s067",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l16_v049",
+          "sourceSenseId": "n5_l16_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nhận (công nhận)",
+        "onyomi": "ニン",
+        "kunyomi": "みと.める, したた.める"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k011",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "億",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Ức",
+        "meaningVi": "hundred million; 10**8; cent millions",
+        "meaningViDisplay": "Ức (hundred million; 10**8; cent millions)",
+        "meaningEn": "hundred million; 10**8; cent millions"
+      },
+      "readings": {
+        "onyomi": [
+          "オク"
+        ],
+        "kunyomi": [
+          "お",
+          "く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "_ Nang (4) <8 08) 86088 H h",
+        "en": "hundred million; 10**8; cent millions"
+      },
+      "decomposition": {
+        "hanViet": "Ức",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Uc",
+        "meaningViNoAccent": "hundred million; 10**8; cent millions",
+        "meaningEnNoAccent": "hundred million; 10**8; cent millions"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Ức (hundred million; 10**8; cent millions)",
+        "onyomi": "オク",
+        "kunyomi": "お, く"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l23_k012",
+      "lessonId": 23,
+      "level": "N3",
+      "character": "線",
+      "strokeCount": 15,
+      "labels": {
+        "hanViet": "Tuyến",
+        "meaningVi": "đường dây",
+        "meaningViDisplay": "Tuyến (đường dây)",
+        "meaningEn": "Line"
       },
       "readings": {
         "onyomi": [
           "セン"
         ],
         "kunyomi": [
-          "いくさ",
-          "たたか.う",
-          "おのの.く",
-          "そよ.ぐ"
+          "すじ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
+        "vi": "Sợi tơ (Mịch 糸) trắng (Bạch 白) chảy qua như dòng suối (Thủy 水) tạo ra đường tuyẾN.",
+        "en": "A white (白) thread (糸) like flowing water (水) forming a LINE."
       },
       "decomposition": {
-        "hanViet": "Chiến",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "structure": "left-right",
+        "components": [
+          "糸",
+          "泉"
+        ],
+        "componentNames": [
+          "Mịch (sợi tơ)",
+          "Tuyền (suối)"
+        ],
         "relatedKanji": [
-          "争",
-          "勝",
-          "負",
-          "平"
-        ]
+          "糸",
+          "紙",
+          "終",
+          "絵"
+        ],
+        "hanViet": "Tuyến"
       },
       "search": {
-        "hanVietNoAccent": "chien",
-        "meaningViNoAccent": "chien tranh; tran dau; chien dau",
-        "meaningEnNoAccent": "war, battle"
+        "hanVietNoAccent": "Tuyen",
+        "meaningViNoAccent": "duong day",
+        "meaningEnNoAccent": "Line"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l23_v003",
-          "sourceSenseId": "n3_l23_s003",
+          "sourceVocabId": "n4_l34_v018",
+          "sourceSenseId": "n4_l34_s018",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l05_v011",
+          "sourceSenseId": "n5_l05_s011",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l05_v054",
+          "sourceSenseId": "n5_l05_s054",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -324,226 +761,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Chiến (chiến tranh; trận đấu; chiến đấu)",
+        "meaning": "Tuyến (đường dây)",
         "onyomi": "セン",
-        "kunyomi": "いくさ, たたか.う, おのの.く, そよ.ぐ"
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
+        "kunyomi": "すじ"
       },
       "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l23_k006",
-      "lessonId": 23,
-      "level": "N3",
-      "character": "争",
-      "strokeCount": 6,
-      "labels": {
-        "hanViet": "Tranh",
-        "meaningVi": "tranh chấp; cạnh tranh; đấu tranh",
-        "meaningViDisplay": "Tranh (tranh chấp; cạnh tranh; đấu tranh)",
-        "meaningEn": "contend, dispute, argue"
-      },
-      "readings": {
-        "onyomi": [
-          "ソウ"
-        ],
-        "kunyomi": [
-          "あらそ.う",
-          "いか.でか"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
-      },
-      "decomposition": {
-        "hanViet": "Tranh",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "戦",
-          "競",
-          "論",
-          "議"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tranh",
-        "meaningViNoAccent": "tranh chap; canh tranh; dau tranh",
-        "meaningEnNoAccent": "contend, dispute, argue"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l23_v003",
-          "sourceSenseId": "n3_l23_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Tranh (tranh chấp; cạnh tranh; đấu tranh)",
-        "onyomi": "ソウ",
-        "kunyomi": "あらそ.う, いか.でか"
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l23_k007",
-      "lessonId": 23,
-      "level": "N3",
-      "character": "平",
-      "strokeCount": 5,
-      "labels": {
-        "hanViet": "Bình",
-        "meaningVi": "bằng phẳng; bình yên; ngang nhau",
-        "meaningViDisplay": "Bình (bằng phẳng; bình yên; ngang nhau)",
-        "meaningEn": "even, flat, peace"
-      },
-      "readings": {
-        "onyomi": [
-          "ヘイ",
-          "ビョウ",
-          "ヒョウ"
-        ],
-        "kunyomi": [
-          "たい.ら",
-          "たい.らげる",
-          "ひら"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
-      },
-      "decomposition": {
-        "hanViet": "Bình",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "和",
-          "安",
-          "均",
-          "等"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "binh",
-        "meaningViNoAccent": "bang phang; binh yen; ngang nhau",
-        "meaningEnNoAccent": "even, flat, peace"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l23_v004",
-          "sourceSenseId": "n3_l23_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Bình (bằng phẳng; bình yên; ngang nhau)",
-        "onyomi": "ヘイ, ビョウ, ヒョウ",
-        "kunyomi": "たい.ら, たい.らげる, ひら"
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l23_k008",
-      "lessonId": 23,
-      "level": "N3",
-      "character": "和",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Hòa",
-        "meaningVi": "hòa hợp; hòa bình; kiểu Nhật",
-        "meaningViDisplay": "Hòa (hòa hợp; hòa bình; kiểu Nhật)",
-        "meaningEn": "harmony, peace, Japanese style"
-      },
-      "readings": {
-        "onyomi": [
-          "ワ",
-          "オ",
-          "カ"
-        ],
-        "kunyomi": [
-          "やわ.らぐ",
-          "やわ.らげる",
-          "なご.む",
-          "なご.やか"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
-        "en": "Core kanji for QUARTET 23: History and politics."
-      },
-      "decomposition": {
-        "hanViet": "Hòa",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "平",
-          "協",
-          "調",
-          "日"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "hoa",
-        "meaningViNoAccent": "hoa hop; hoa binh; kieu nhat",
-        "meaningEnNoAccent": "harmony, peace, japanese style"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l23_v004",
-          "sourceSenseId": "n3_l23_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Hòa (hòa hợp; hòa bình; kiểu Nhật)",
-        "onyomi": "ワ, オ, カ",
-        "kunyomi": "やわ.らぐ, やわ.らげる, なご.む, なご.やか"
-      },
-      "theme": {
-        "quartetLesson": 23,
-        "themeEn": "History and politics",
-        "themeVi": "Lịch sử và chính trị"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

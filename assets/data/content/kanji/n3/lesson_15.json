@@ -1,204 +1,85 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 15,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l15_k001",
+      "kanjiId": "n3_canonical_l15_k001",
       "lessonId": 15,
       "level": "N3",
-      "character": "住",
-      "strokeCount": 7,
+      "character": "借",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Trú",
-        "meaningVi": "sống ở; cư trú; nơi ở",
-        "meaningViDisplay": "Trú (sống ở; cư trú; nơi ở)",
-        "meaningEn": "dwell, reside"
+        "hanViet": "Tá",
+        "meaningVi": "vay mượn",
+        "meaningViDisplay": "Tá (vay mượn)",
+        "meaningEn": "Borrow"
       },
       "readings": {
         "onyomi": [
-          "ジュウ",
-          "ヂュウ",
-          "チュウ"
+          "シャク"
         ],
         "kunyomi": [
-          "す.む",
-          "す.まう",
-          "-ず.まい"
+          "か.りる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
+        "vi": "Người (亻) của ngày Xưa (昔) thường đi vay mượn.",
+        "en": "People (亻) since ancient times (昔) have borrowed things."
       },
       "decomposition": {
-        "hanViet": "Trú",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "昔"
+        ],
+        "componentNames": [
+          "Nhân (người)",
+          "Tích (ngày xưa)"
+        ],
         "relatedKanji": [
-          "宅",
-          "家",
-          "民",
-          "所"
-        ]
+          "人",
+          "昔",
+          "貸"
+        ],
+        "hanViet": "Tá"
       },
       "search": {
-        "hanVietNoAccent": "tru",
-        "meaningViNoAccent": "song o; cu tru; noi o",
-        "meaningEnNoAccent": "dwell, reside"
+        "hanVietNoAccent": "Ta",
+        "meaningViNoAccent": "vay muon",
+        "meaningEnNoAccent": "Borrow"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l15_v001",
-          "sourceSenseId": "n3_l15_s001",
+          "sourceVocabId": "n5_l07_v056",
+          "sourceSenseId": "n5_l07_s056",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l15_v012",
-          "sourceSenseId": "n3_l15_s012",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Trú (sống ở; cư trú; nơi ở)",
-        "onyomi": "ジュウ, ヂュウ, チュウ",
-        "kunyomi": "す.む, す.まう, -ず.まい"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
-      }
-    },
-    {
-      "kanjiId": "n3_l15_k002",
-      "lessonId": 15,
-      "level": "N3",
-      "character": "宅",
-      "strokeCount": 6,
-      "labels": {
-        "hanViet": "Trạch",
-        "meaningVi": "nhà ở; nơi ở; tư gia",
-        "meaningViDisplay": "Trạch (nhà ở; nơi ở; tư gia)",
-        "meaningEn": "home, house"
-      },
-      "readings": {
-        "onyomi": [
-          "タク"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
-      },
-      "decomposition": {
-        "hanViet": "Trạch",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "住",
-          "家",
-          "帰",
-          "建"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "trach",
-        "meaningViNoAccent": "nha o; noi o; tu gia",
-        "meaningEnNoAccent": "home, house"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l15_v001",
-          "sourceSenseId": "n3_l15_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Trạch (nhà ở; nơi ở; tư gia)",
-        "onyomi": "タク",
-        "kunyomi": ""
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
-      }
-    },
-    {
-      "kanjiId": "n3_l15_k003",
-      "lessonId": 15,
-      "level": "N3",
-      "character": "築",
-      "strokeCount": 16,
-      "labels": {
-        "hanViet": "Trúc",
-        "meaningVi": "xây dựng; kiến tạo; xây đắp",
-        "meaningViDisplay": "Trúc (xây dựng; kiến tạo; xây đắp)",
-        "meaningEn": "fabricate, build"
-      },
-      "readings": {
-        "onyomi": [
-          "チク"
-        ],
-        "kunyomi": [
-          "きず.く"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
-      },
-      "decomposition": {
-        "hanViet": "Trúc",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "建",
-          "設",
-          "宅",
-          "家"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "truc",
-        "meaningViNoAccent": "xay dung; kien tao; xay dap",
-        "meaningEnNoAccent": "fabricate, build"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l15_v002",
-          "sourceSenseId": "n3_l15_s002",
+          "sourceVocabId": "n5_l07_v062",
+          "sourceSenseId": "n5_l07_s062",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l15_v010",
-          "sourceSenseId": "n3_l15_s010",
+          "sourceVocabId": "n5_l07_v006",
+          "sourceSenseId": "n5_l07_s006",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -206,334 +87,140 @@
         }
       ],
       "legacy": {
-        "meaning": "Trúc (xây dựng; kiến tạo; xây đắp)",
-        "onyomi": "チク",
-        "kunyomi": "きず.く"
+        "meaning": "Tá (vay mượn)",
+        "onyomi": "シャク",
+        "kunyomi": "か.りる"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l15_k004",
+      "kanjiId": "n3_canonical_l15_k002",
       "lessonId": 15,
       "level": "N3",
-      "character": "賃",
-      "strokeCount": 13,
+      "character": "悩",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Nhẫm",
-        "meaningVi": "tiền thuê; phí thuê; công thuê",
-        "meaningViDisplay": "Nhẫm (tiền thuê; phí thuê; công thuê)",
-        "meaningEn": "fare, fee"
+        "hanViet": "Não",
+        "meaningVi": "Phiền Nao ‡ † Pp. Đuwwim",
+        "meaningViDisplay": "Não (Phiền Nao ‡ † Pp. Đuwwim)",
+        "meaningEn": "trouble; worry; in pain"
       },
       "readings": {
         "onyomi": [
-          "チン"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
-      },
-      "decomposition": {
-        "hanViet": "Nhẫm",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "貸",
-          "借",
-          "家",
-          "費"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "nham",
-        "meaningViNoAccent": "tien thue; phi thue; cong thue",
-        "meaningEnNoAccent": "fare, fee"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l15_v004",
-          "sourceSenseId": "n3_l15_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n3_l15_v005",
-          "sourceSenseId": "n3_l15_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Nhẫm (tiền thuê; phí thuê; công thuê)",
-        "onyomi": "チン",
-        "kunyomi": ""
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
-      }
-    },
-    {
-      "kanjiId": "n3_l15_k005",
-      "lessonId": 15,
-      "level": "N3",
-      "character": "貸",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Thải",
-        "meaningVi": "cho vay; cho mượn; cho thuê",
-        "meaningViDisplay": "Thải (cho vay; cho mượn; cho thuê)",
-        "meaningEn": "lend"
-      },
-      "readings": {
-        "onyomi": [
-          "タイ"
+          "ノウ"
         ],
         "kunyomi": [
-          "か.す",
-          "か.し-",
-          "かし-"
+          "なや.む",
+          "なや.ます",
+          "なや.ましい",
+          "なやみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
+        "vi": "Ghi nhớ 悩 qua Hán-Việt Não.",
+        "en": "trouble; worry; in pain"
       },
       "decomposition": {
-        "hanViet": "Thải",
-        "structure": "standalone",
+        "hanViet": "Não",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "賃",
-          "借",
-          "返",
-          "金"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "thai",
-        "meaningViNoAccent": "cho vay; cho muon; cho thue",
-        "meaningEnNoAccent": "lend"
+        "hanVietNoAccent": "Nao",
+        "meaningViNoAccent": "Phien Nao ‡ † Pp. Duwwim",
+        "meaningEnNoAccent": "trouble; worry; in pain"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l15_v004",
-          "sourceSenseId": "n3_l15_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Thải (cho vay; cho mượn; cho thuê)",
-        "onyomi": "タイ",
-        "kunyomi": "か.す, か.し-, かし-"
+        "meaning": "Não (Phiền Nao ‡ † Pp. Đuwwim)",
+        "onyomi": "ノウ",
+        "kunyomi": "なや.む, なや.ます, なや.ましい, なやみ"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l15_k006",
+      "kanjiId": "n3_canonical_l15_k003",
       "lessonId": 15,
       "level": "N3",
-      "character": "設",
-      "strokeCount": 11,
+      "character": "倒",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Thiết",
-        "meaningVi": "thiết lập; xây dựng; bố trí",
-        "meaningViDisplay": "Thiết (thiết lập; xây dựng; bố trí)",
-        "meaningEn": "establishment, provision"
+        "hanViet": "Đảo",
+        "meaningVi": "đổ, ngã",
+        "meaningViDisplay": "Đảo (đổ, ngã)",
+        "meaningEn": "Fall down"
       },
       "readings": {
         "onyomi": [
-          "セツ"
+          "トウ"
         ],
         "kunyomi": [
-          "もう.ける"
+          "たお.れる",
+          "-だお.れ",
+          "たお.す",
+          "さかさま",
+          "さかさ",
+          "さかしま"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
+        "vi": "Người (Nhân 亻) đến (Đáo 到) đích rồi bị ngã.",
+        "en": "A person (亻) arriving (到) and falling over."
       },
       "decomposition": {
-        "hanViet": "Thiết",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "備",
-          "建",
-          "築",
-          "計"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thiet",
-        "meaningViNoAccent": "thiet lap; xay dung; bo tri",
-        "meaningEnNoAccent": "establishment, provision"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l15_v006",
-          "sourceSenseId": "n3_l15_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thiết (thiết lập; xây dựng; bố trí)",
-        "onyomi": "セツ",
-        "kunyomi": "もう.ける"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
-      }
-    },
-    {
-      "kanjiId": "n3_l15_k007",
-      "lessonId": 15,
-      "level": "N3",
-      "character": "備",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Bị",
-        "meaningVi": "chuẩn bị; trang bị; dự phòng",
-        "meaningViDisplay": "Bị (chuẩn bị; trang bị; dự phòng)",
-        "meaningEn": "equip, provision"
-      },
-      "readings": {
-        "onyomi": [
-          "ビ"
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "到"
         ],
-        "kunyomi": [
-          "そな.える",
-          "そな.わる",
-          "つぶさ.に"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
-      },
-      "decomposition": {
-        "hanViet": "Bị",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "設",
-          "準",
-          "防",
-          "用"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "bi",
-        "meaningViNoAccent": "chuan bi; trang bi; du phong",
-        "meaningEnNoAccent": "equip, provision"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l15_v006",
-          "sourceSenseId": "n3_l15_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Bị (chuẩn bị; trang bị; dự phòng)",
-        "onyomi": "ビ",
-        "kunyomi": "そな.える, そな.わる, つぶさ.に"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
-      }
-    },
-    {
-      "kanjiId": "n3_l15_k008",
-      "lessonId": 15,
-      "level": "N3",
-      "character": "民",
-      "strokeCount": 5,
-      "labels": {
-        "hanViet": "Dân",
-        "meaningVi": "người dân; dân chúng; quốc dân",
-        "meaningViDisplay": "Dân (người dân; dân chúng; quốc dân)",
-        "meaningEn": "people, nation"
-      },
-      "readings": {
-        "onyomi": [
-          "ミン"
+        "componentNames": [
+          "Nhân (người)",
+          "Đáo (đến)"
         ],
-        "kunyomi": [
-          "たみ"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 15: Nhà ở và khu dân cư.",
-        "en": "Core kanji for QUARTET 15: Housing and neighborhoods."
-      },
-      "decomposition": {
-        "hanViet": "Dân",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
         "relatedKanji": [
-          "住",
-          "国",
-          "市",
           "人"
-        ]
+        ],
+        "hanViet": "Đảo"
       },
       "search": {
-        "hanVietNoAccent": "dan",
-        "meaningViNoAccent": "nguoi dan; dan chung; quoc dan",
-        "meaningEnNoAccent": "people, nation"
+        "hanVietNoAccent": "Dao",
+        "meaningViNoAccent": "do, nga",
+        "meaningEnNoAccent": "Fall down"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l15_v012",
-          "sourceSenseId": "n3_l15_s012",
+          "sourceVocabId": "n4_l39_v056",
+          "sourceSenseId": "n4_l39_s056",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v060",
+          "sourceSenseId": "n4_l39_s060",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v002",
+          "sourceSenseId": "n4_l39_s002",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -541,21 +228,618 @@
         }
       ],
       "legacy": {
-        "meaning": "Dân (người dân; dân chúng; quốc dân)",
-        "onyomi": "ミン",
-        "kunyomi": "たみ"
+        "meaning": "Đảo (đổ, ngã)",
+        "onyomi": "トウ",
+        "kunyomi": "たお.れる, -だお.れ, たお.す, さかさま, さかさ, さかしま"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k004",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "流",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Lưu",
+        "meaningVi": "dòng chảy; lưu thông",
+        "meaningViDisplay": "Lưu (dòng chảy; lưu thông)",
+        "meaningEn": "current, a sink"
+      },
+      "readings": {
+        "onyomi": [
+          "リュウ",
+          "ル"
+        ],
+        "kunyomi": [
+          "なが.れる",
+          "なが.れ",
+          "なが.す",
+          "-なが.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
+        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
+      },
+      "decomposition": {
+        "hanViet": "Lưu",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "交",
+          "水",
+          "留",
+          "通"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Luu",
+        "meaningViNoAccent": "dong chay; luu thong",
+        "meaningEnNoAccent": "current, a sink"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l04_v004",
+          "sourceSenseId": "n3_l04_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Lưu (dòng chảy; lưu thông)",
+        "onyomi": "リュウ, ル",
+        "kunyomi": "なが.れる, なが.れ, なが.す, -なが.す"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 15,
-        "themeEn": "Housing and neighborhoods",
-        "themeVi": "Nhà ở và khu dân cư"
+        "quartetLesson": 4,
+        "themeEn": "Studying language and culture through abroad study",
+        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k005",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "恋",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Luyến",
+        "meaningVi": "romance; in love; yearn for",
+        "meaningViDisplay": "Luyến (romance; in love; yearn for)",
+        "meaningEn": "romance; in love; yearn for"
+      },
+      "readings": {
+        "onyomi": [
+          "レン"
+        ],
+        "kunyomi": [
+          "こ.う",
+          "こい",
+          "こい.しい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 恋 qua Hán-Việt Luyến.",
+        "en": "romance; in love; yearn for"
+      },
+      "decomposition": {
+        "hanViet": "Luyến",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Luyen",
+        "meaningViNoAccent": "romance; in love; yearn for",
+        "meaningEnNoAccent": "romance; in love; yearn for"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Luyến (romance; in love; yearn for)",
+        "onyomi": "レン",
+        "kunyomi": "こ.う, こい, こい.しい"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k006",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "笑",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Tiếu",
+        "meaningVi": "cười",
+        "meaningViDisplay": "Tiếu (cười)",
+        "meaningEn": "laugh"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": [
+          "わら.う",
+          "え.む"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "笑 means to laugh; あざ笑う adds the nuance of sneering at or ridiculing someone."
+      },
+      "decomposition": {
+        "hanViet": "Tiếu",
+        "structure": "top-bottom",
+        "components": [
+          "竹",
+          "夭"
+        ],
+        "componentNames": [
+          "tre",
+          "yêu; trẻ"
+        ],
+        "relatedKanji": [
+          "喜",
+          "楽",
+          "泣",
+          "顔"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tieu",
+        "meaningViNoAccent": "cuoi",
+        "meaningEnNoAccent": "laugh"
+      },
+      "examples": [
+        {
+          "word": "あざ笑う",
+          "reading": "あざわらう",
+          "meaning": "chế nhạo; cười nhạo",
+          "meaningEn": "to sneer at; to ridicule"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tiếu (cười)",
+        "onyomi": "ショウ",
+        "kunyomi": "わら.う, え.む"
       }
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k007",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "能",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Năng",
+        "meaningVi": "Nàng Lực “ff Ar A Fe Ae Fe",
+        "meaningViDisplay": "Năng (Nàng Lực “ff Ar A Fe Ae Fe)",
+        "meaningEn": "ability; talent; skill"
+      },
+      "readings": {
+        "onyomi": [
+          "ノウ"
+        ],
+        "kunyomi": [
+          "よ.く",
+          "あた.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 能 qua Hán-Việt Năng.",
+        "en": "ability; talent; skill"
+      },
+      "decomposition": {
+        "hanViet": "Năng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nang",
+        "meaningViNoAccent": "Nang Luc “ff Ar A Fe Ae Fe",
+        "meaningEnNoAccent": "ability; talent; skill"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Năng (Nàng Lực “ff Ar A Fe Ae Fe)",
+        "onyomi": "ノウ",
+        "kunyomi": "よ.く, あた.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k008",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "座",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Tọa",
+        "meaningVi": "Ngồi (ppr P Ree By",
+        "meaningViDisplay": "Tọa (Ngồi (ppr P Ree By)",
+        "meaningEn": "squat; seat; cushion"
+      },
+      "readings": {
+        "onyomi": [
+          "ザ"
+        ],
+        "kunyomi": [
+          "すわ.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 座 qua Hán-Việt Tọa.",
+        "en": "squat; seat; cushion"
+      },
+      "decomposition": {
+        "hanViet": "Tọa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Toa",
+        "meaningViNoAccent": "Ngoi (ppr P Ree By",
+        "meaningEnNoAccent": "squat; seat; cushion"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tọa (Ngồi (ppr P Ree By)",
+        "onyomi": "ザ",
+        "kunyomi": "すわ.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k009",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "差",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Soa",
+        "meaningVi": "distinction; difference; variation",
+        "meaningViDisplay": "Soa (distinction; difference; variation)",
+        "meaningEn": "distinction; difference; variation"
+      },
+      "readings": {
+        "onyomi": [
+          "サ"
+        ],
+        "kunyomi": [
+          "さ.す",
+          "さ.し"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 差 qua Hán-Việt Soa.",
+        "en": "distinction; difference; variation"
+      },
+      "decomposition": {
+        "hanViet": "Soa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Soa",
+        "meaningViNoAccent": "distinction; difference; variation",
+        "meaningEnNoAccent": "distinction; difference; variation"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Soa (distinction; difference; variation)",
+        "onyomi": "サ",
+        "kunyomi": "さ.す, さ.し"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k010",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "留",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Lưu",
+        "meaningVi": "ở lại; lưu giữ",
+        "meaningViDisplay": "Lưu (ở lại; lưu giữ)",
+        "meaningEn": "detain, fasten"
+      },
+      "readings": {
+        "onyomi": [
+          "リュウ",
+          "ル"
+        ],
+        "kunyomi": [
+          "と.める",
+          "と.まる",
+          "とど.める",
+          "とど.まる",
+          "るうぶる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 4: Học ngôn ngữ và văn hóa qua du học.",
+        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
+      },
+      "decomposition": {
+        "hanViet": "Lưu",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "学",
+          "流",
+          "住",
+          "止"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Luu",
+        "meaningViNoAccent": "o lai; luu giu",
+        "meaningEnNoAccent": "detain, fasten"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l04_v001",
+          "sourceSenseId": "n3_l04_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Lưu (ở lại; lưu giữ)",
+        "onyomi": "リュウ, ル",
+        "kunyomi": "と.める, と.まる, とど.める, とど.まる, るうぶる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 4,
+        "themeEn": "Studying language and culture through abroad study",
+        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k011",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "師",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Sư",
+        "meaningVi": "Giáo Sw 「『「『p Š & #mứp",
+        "meaningViDisplay": "Sư (Giáo Sw 「『「『p Š & #mứp)",
+        "meaningEn": "expert; teacher; master"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "いくさ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 師 qua Hán-Việt Sư.",
+        "en": "expert; teacher; master"
+      },
+      "decomposition": {
+        "hanViet": "Sư",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Su",
+        "meaningViNoAccent": "Giao Sw 「『「『p S & #mup",
+        "meaningEnNoAccent": "expert; teacher; master"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Sư (Giáo Sw 「『「『p Š & #mứp)",
+        "onyomi": "シ",
+        "kunyomi": "いくさ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k012",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "席",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Tịch",
+        "meaningVi": "chỗ ngồi; phiên; buổi",
+        "meaningViDisplay": "Tịch (chỗ ngồi; phiên; buổi)",
+        "meaningEn": "seat, mat"
+      },
+      "readings": {
+        "onyomi": [
+          "セキ"
+        ],
+        "kunyomi": [
+          "むしろ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 13: Hệ thống giáo dục và đời sống học đường.",
+        "en": "Core kanji for QUARTET 13: Education system and school life."
+      },
+      "decomposition": {
+        "hanViet": "Tịch",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "出",
+          "欠",
+          "座",
+          "場"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tich",
+        "meaningViNoAccent": "cho ngoi; phien; buoi",
+        "meaningEnNoAccent": "seat, mat"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l13_v006",
+          "sourceSenseId": "n3_l13_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n3_l13_v007",
+          "sourceSenseId": "n3_l13_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tịch (chỗ ngồi; phiên; buổi)",
+        "onyomi": "セキ",
+        "kunyomi": "むしろ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 13,
+        "themeEn": "Education system and school life",
+        "themeVi": "Hệ thống giáo dục và đời sống học đường"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l15_k013",
+      "lessonId": 15,
+      "level": "N3",
+      "character": "島",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Đảo",
+        "meaningVi": "island; île; isla",
+        "meaningViDisplay": "Đảo (island; île; isla)",
+        "meaningEn": "island; île; isla"
+      },
+      "readings": {
+        "onyomi": [
+          "トウ"
+        ],
+        "kunyomi": [
+          "しま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "island; île; isla"
+      },
+      "decomposition": {
+        "hanViet": "Đảo",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dao",
+        "meaningViNoAccent": "island; ile; isla",
+        "meaningEnNoAccent": "island; ile; isla"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đảo (island; île; isla)",
+        "onyomi": "トウ",
+        "kunyomi": "しま"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

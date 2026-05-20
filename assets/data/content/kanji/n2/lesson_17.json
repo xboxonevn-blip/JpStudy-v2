@@ -1,483 +1,592 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "vocab-derived",
-  "source": "Tanos JLPT vocabulary via Hanabira",
-  "license": "CC-BY / attribution required; see docs/credits/upper-jlpt-sources.md",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N2",
   "lessonId": 17,
-  "entryCount": 8,
+  "entryCount": 18,
   "importStatus": "source-verified",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan.",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n2_jlpt_vocab_k129",
+      "kanjiId": "n2_canonical_l17_k001",
       "lessonId": 17,
       "level": "N2",
-      "character": "宴",
-      "strokeCount": 10,
+      "character": "絶",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Yến",
-        "meaningVi": "yến; tiệc; yến tiệc; tiệc rượu",
-        "meaningViDisplay": "Yến (yến; tiệc; yến tiệc; tiệc rượu)",
-        "meaningEn": "banquet, feast, party"
+        "hanViet": "Tuyệt",
+        "meaningVi": "Tuyệt Đỉnh Ee Er",
+        "meaningViDisplay": "Tuyệt (Tuyệt Đỉnh Ee Er)",
+        "meaningEn": "discontinue; sever; cut off"
       },
       "readings": {
         "onyomi": [
-          "エン"
+          "ゼツ"
         ],
         "kunyomi": [
-          "うたげ"
+          "た.える",
+          "た.やす",
+          "た.つ"
         ]
       },
       "mnemonic": {
-        "vi": "宴 là bữa tiệc hoặc yến tiệc; trong 宴会, nó nhấn mạnh không khí đãi tiệc.",
-        "en": "宴 means a banquet or feast; in 宴会 it highlights the party/banquet setting."
+        "vi": "Ghi nhớ 絶 qua Hán-Việt Tuyệt.",
+        "en": "discontinue; sever; cut off"
       },
       "decomposition": {
-        "hanViet": "Yến",
+        "hanViet": "Tuyệt",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tuyet",
+        "meaningViNoAccent": "Tuyet Dinh Ee Er",
+        "meaningEnNoAccent": "discontinue; sever; cut off"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tuyệt (Tuyệt Đỉnh Ee Er)",
+        "onyomi": "ゼツ",
+        "kunyomi": "た.える, た.やす, た.つ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k002",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "嵐",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Lam",
+        "meaningVi": "Bảo",
+        "meaningViDisplay": "Lam (Bảo)",
+        "meaningEn": "storm; tempest; tempête"
+      },
+      "readings": {
+        "onyomi": [
+          "ラン"
+        ],
+        "kunyomi": [
+          "あらし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 嵐 qua Hán-Việt Lam.",
+        "en": "storm; tempest; tempête"
+      },
+      "decomposition": {
+        "hanViet": "Lam",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Lam",
+        "meaningViNoAccent": "Bao",
+        "meaningEnNoAccent": "storm; tempest; tempete"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lam (Bảo)",
+        "onyomi": "ラン",
+        "kunyomi": "あらし"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k003",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "証",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Chứng",
+        "meaningVi": "bằng chứng; chứng nhận; xác minh",
+        "meaningViDisplay": "Chứng (bằng chứng; chứng nhận; xác minh)",
+        "meaningEn": "evidence, proof, certificate"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": [
+          "あかし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "証 là chứng cứ hoặc sự xác nhận; đọc あかし khi dùng trực tiếp như “bằng chứng”.",
+        "en": "証 means evidence, proof, or certification; あかし is used when it directly means proof."
+      },
+      "decomposition": {
+        "hanViet": "Chứng",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "会",
-          "酒",
-          "食",
-          "楽"
+          "言",
+          "拠",
+          "明",
+          "認"
         ]
       },
       "search": {
-        "hanVietNoAccent": "Yen",
-        "meaningViNoAccent": "yen; tiec; yen tiec; tiec ruou",
-        "meaningEnNoAccent": "banquet, feast, party"
+        "hanVietNoAccent": "Chung",
+        "meaningViNoAccent": "bang chung; chung nhan; xac minh",
+        "meaningEnNoAccent": "evidence, proof, certificate"
       },
       "examples": [
         {
-          "word": "宴会",
-          "reading": "えんかい",
-          "meaning": "tiệc; yến tiệc",
-          "meaningEn": "party, banquet"
+          "word": "証",
+          "reading": "あかし",
+          "meaning": "bằng chứng",
+          "meaningEn": "proof, evidence"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
-        "n2-kanji-import",
+        "n1-kanji-import",
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
         "vi-editorial-codex-pass",
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "metadataStatus": "vi-editorial-codex-pass"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Chứng (bằng chứng; chứng nhận; xác minh)",
+        "onyomi": "ショウ",
+        "kunyomi": "あかし"
+      }
     },
     {
-      "kanjiId": "n2_jlpt_vocab_k130",
+      "kanjiId": "n2_canonical_l17_k004",
       "lessonId": 17,
       "level": "N2",
-      "character": "会",
-      "strokeCount": 6,
+      "character": "装",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Hội",
-        "meaningVi": "hội; gặp gỡ; cuộc họp; hội nhóm",
-        "meaningViDisplay": "Hội (hội; gặp gỡ; cuộc họp; hội nhóm)",
-        "meaningEn": "meeting, meet, party, association"
+        "hanViet": "Trang",
+        "meaningVi": "trang phục; trang bị; trang trí",
+        "meaningViDisplay": "Trang (trang phục; trang bị; trang trí)",
+        "meaningEn": "dress, clothes, attire; equip"
       },
       "readings": {
         "onyomi": [
-          "カイ",
-          "エ"
+          "ソウ",
+          "ショウ"
         ],
         "kunyomi": [
-          "あ.う",
-          "あ.わせる",
-          "あつ.まる"
+          "よそお.う",
+          "よそお.い"
         ]
       },
       "mnemonic": {
-        "vi": "会 là gặp nhau, cuộc họp hoặc hội nhóm; trong 宴会, nó là buổi tụ họp để dự tiệc.",
-        "en": "会 means meeting, gathering, or association; in 宴会 it is the gathering part of a banquet."
+        "vi": "装 là mặc, trang bị hoặc làm cho bề ngoài chỉnh tề; 衣装 là trang phục.",
+        "en": "装 means dress, equip, or adorn; 衣装 is clothing or costume."
       },
       "decomposition": {
-        "hanViet": "Hội",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
+        "hanViet": "Trang",
+        "structure": "top-bottom",
+        "components": [
+          "壮",
+          "衣"
+        ],
+        "componentNames": [
+          "tráng/mạnh mẽ",
+          "y/áo"
+        ],
         "relatedKanji": [
-          "宴",
-          "合",
-          "社",
-          "集"
+          "衣",
+          "服",
+          "備",
+          "飾"
         ]
       },
       "search": {
-        "hanVietNoAccent": "Hoi",
-        "meaningViNoAccent": "hoi; gap go; cuoc hop; hoi nhom",
-        "meaningEnNoAccent": "meeting, meet, party, association"
+        "hanVietNoAccent": "Trang",
+        "meaningViNoAccent": "trang phuc; trang bi; trang tri",
+        "meaningEnNoAccent": "dress, clothes, attire; equip"
       },
       "examples": [
         {
-          "word": "宴会",
-          "reading": "えんかい",
-          "meaning": "tiệc; yến tiệc",
-          "meaningEn": "party, banquet"
+          "word": "衣装",
+          "reading": "いしょう",
+          "meaning": "trang phục; y phục; đồ diễn",
+          "meaningEn": "costume; outfit"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
-        "n2-kanji-import",
+        "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
         "vi-editorial-codex-pass",
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "metadataStatus": "vi-editorial-codex-pass"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Trang (trang phục; trang bị; trang trí)",
+        "onyomi": "ソウ, ショウ",
+        "kunyomi": "よそお.う, よそお.い"
+      }
     },
     {
-      "kanjiId": "n2_jlpt_vocab_k131",
+      "kanjiId": "n2_canonical_l17_k005",
       "lessonId": 17,
       "level": "N2",
-      "character": "園",
-      "strokeCount": 13,
+      "character": "過",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Viên",
-        "meaningVi": "viên; vườn; công viên; khu vườn",
-        "meaningViDisplay": "Viên (viên; vườn; công viên; khu vườn)",
-        "meaningEn": "park, garden, yard, farm"
+        "hanViet": "Quá",
+        "meaningVi": "vượt quá; đi qua; lỗi lầm",
+        "meaningViDisplay": "Quá (vượt quá; đi qua; lỗi lầm)",
+        "meaningEn": "overdo; exceed; go beyond; error"
       },
       "readings": {
         "onyomi": [
-          "エン"
+          "カ"
         ],
         "kunyomi": [
-          "その"
+          "す.ぎる",
+          "す.ごす",
+          "あやま.ち",
+          "あやま.つ",
+          "よぎ.る",
+          "よ.ぎる"
         ]
       },
       "mnemonic": {
-        "vi": "園 là khu vườn, công viên hoặc trang trại nhỏ; trong 園芸, nó là không gian trồng cây.",
-        "en": "園 means garden, park, or yard; in 園芸 it is the garden space for growing plants."
+        "vi": "',_ \"`. DI Aww—Wrrrrrn",
+        "en": "過 means to pass or exceed; 過ち is an error after going the wrong way."
       },
       "decomposition": {
-        "hanViet": "Viên",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
+        "hanViet": "Quá",
+        "structure": "left-right",
+        "components": [
+          "辶",
+          "咼"
+        ],
+        "componentNames": [
+          "đi/chuyển động",
+          "quai/lệch"
+        ],
         "relatedKanji": [
-          "庭",
-          "公",
-          "花",
-          "芸"
+          "越",
+          "失",
+          "誤",
+          "通"
         ]
       },
       "search": {
-        "hanVietNoAccent": "Vien",
-        "meaningViNoAccent": "vien; vuon; cong vien; khu vuon",
-        "meaningEnNoAccent": "park, garden, yard, farm"
+        "hanVietNoAccent": "Qua",
+        "meaningViNoAccent": "vuot qua; di qua; loi lam",
+        "meaningEnNoAccent": "overdo; exceed; go beyond; error"
       },
       "examples": [
         {
-          "word": "園芸",
-          "reading": "えんげい",
-          "meaning": "làm vườn; nghề trồng cây cảnh",
-          "meaningEn": "horticulture, gardening"
+          "word": "過ち",
+          "reading": "あやまち",
+          "meaning": "lỗi lầm; sai sót; lỡ lầm",
+          "meaningEn": "fault; error; indiscretion"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
-        "n2-kanji-import",
+        "n1-kanji-import",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
         "vi-editorial-codex-pass",
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "metadataStatus": "vi-editorial-codex-pass"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Quá (vượt quá; đi qua; lỗi lầm)",
+        "onyomi": "カ",
+        "kunyomi": "す.ぎる, す.ごす, あやま.ち, あやま.つ, よぎ.る, よ.ぎる"
+      }
     },
     {
-      "kanjiId": "n2_jlpt_vocab_k132",
+      "kanjiId": "n2_canonical_l17_k006",
       "lessonId": 17,
       "level": "N2",
-      "character": "芸",
-      "strokeCount": 7,
+      "character": "普",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Nghệ",
-        "meaningVi": "nghệ; nghệ thuật; kỹ nghệ; kỹ thuật",
-        "meaningViDisplay": "Nghệ (nghệ; nghệ thuật; kỹ nghệ; kỹ thuật)",
-        "meaningEn": "technique, art, craft, performance"
+        "hanViet": "Phổ",
+        "meaningVi": "Phổ Thông",
+        "meaningViDisplay": "Phổ (Phổ Thông)",
+        "meaningEn": "universal; wide(ly); generally"
       },
       "readings": {
         "onyomi": [
-          "ゲイ",
-          "ウン"
+          "フ"
         ],
         "kunyomi": [
-          "う.える",
-          "のり",
-          "わざ"
+          "あまね.く",
+          "あまねし"
         ]
       },
       "mnemonic": {
-        "vi": "芸 chỉ kỹ nghệ, nghệ thuật hoặc kỹ thuật; trong 園芸, nó là kỹ thuật chăm sóc vườn cây.",
-        "en": "芸 means art, craft, or technique; in 園芸 it is the technique of gardening."
+        "vi": "Ghi nhớ 普 qua Hán-Việt Phổ.",
+        "en": "universal; wide(ly); generally"
       },
       "decomposition": {
-        "hanViet": "Nghệ",
+        "hanViet": "Phổ",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "園",
-          "技",
-          "術",
-          "才"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "Nghe",
-        "meaningViNoAccent": "nghe; nghe thuat; ky nghe; ky thuat",
-        "meaningEnNoAccent": "technique, art, craft, performance"
+        "hanVietNoAccent": "Pho",
+        "meaningViNoAccent": "Pho Thong",
+        "meaningEnNoAccent": "universal; wide(ly); generally"
       },
-      "examples": [
-        {
-          "word": "園芸",
-          "reading": "えんげい",
-          "meaning": "làm vườn; nghề trồng cây cảnh",
-          "meaningEn": "horticulture, gardening"
-        }
-      ],
+      "examples": [],
+      "legacy": {
+        "meaning": "Phổ (Phổ Thông)",
+        "onyomi": "フ",
+        "kunyomi": "あまね.く, あまねし"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n2-kanji-import",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
         "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n2_jlpt_vocab_k133",
+      "kanjiId": "n2_canonical_l17_k007",
       "lessonId": 17,
       "level": "N2",
-      "character": "演",
-      "strokeCount": 14,
+      "character": "湿",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Diễn",
-        "meaningVi": "diễn; biểu diễn; diễn xuất; trình bày",
-        "meaningViDisplay": "Diễn (diễn; biểu diễn; diễn xuất; trình bày)",
-        "meaningEn": "performance, act, play, stage"
+        "hanViet": "Chập",
+        "meaningVi": "damp; wet; moist",
+        "meaningViDisplay": "Chập (damp; wet; moist)",
+        "meaningEn": "damp; wet; moist"
       },
       "readings": {
         "onyomi": [
-          "エン"
-        ],
-        "kunyomi": [
-        ]
-      },
-      "mnemonic": {
-        "vi": "演 là biểu diễn hoặc trình bày trước người khác; trong 演劇, nó là phần diễn xuất trên sân khấu.",
-        "en": "演 means to perform or present; in 演劇 it is the act of theatrical performance."
-      },
-      "decomposition": {
-        "hanViet": "Diễn",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "劇",
-          "舞",
-          "説",
-          "表"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "Dien",
-        "meaningViNoAccent": "dien; bieu dien; dien xuat; trinh bay",
-        "meaningEnNoAccent": "performance, act, play, stage"
-      },
-      "examples": [
-        {
-          "word": "演劇",
-          "reading": "えんげき",
-          "meaning": "kịch; sân khấu",
-          "meaningEn": "theatre, drama, play"
-        }
-      ],
-      "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n2-kanji-import",
-        "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
-    },
-    {
-      "kanjiId": "n2_jlpt_vocab_k134",
-      "lessonId": 17,
-      "level": "N2",
-      "character": "劇",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Kịch",
-        "meaningVi": "kịch; sân khấu; vở kịch",
-        "meaningViDisplay": "Kịch (kịch; sân khấu; vở kịch)",
-        "meaningEn": "drama, play, theatre"
-      },
-      "readings": {
-        "onyomi": [
-          "ゲキ"
-        ],
-        "kunyomi": [
-        ]
-      },
-      "mnemonic": {
-        "vi": "劇 là kịch hoặc vở diễn; trong 演劇, nó chỉ loại hình sân khấu/kịch nghệ.",
-        "en": "劇 means drama or play; in 演劇 it marks theatrical drama."
-      },
-      "decomposition": {
-        "hanViet": "Kịch",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "演",
-          "舞",
-          "場",
-          "戯"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "Kich",
-        "meaningViNoAccent": "kich; san khau; vo kich",
-        "meaningEnNoAccent": "drama, play, theatre"
-      },
-      "examples": [
-        {
-          "word": "演劇",
-          "reading": "えんげき",
-          "meaning": "kịch; sân khấu",
-          "meaningEn": "theatre, drama, play"
-        }
-      ],
-      "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n2-kanji-import",
-        "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
-    },
-    {
-      "kanjiId": "n2_jlpt_vocab_k135",
-      "lessonId": 17,
-      "level": "N2",
-      "character": "円",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Viên",
-        "meaningVi": "viên; tròn; đồng yên; vòng tròn",
-        "meaningViDisplay": "Viên (viên; tròn; đồng yên; vòng tròn)",
-        "meaningEn": "circle, yen, round"
-      },
-      "readings": {
-        "onyomi": [
-          "エン"
-        ],
-        "kunyomi": [
-          "まる.い",
-          "まる",
-          "まど",
-          "まど.か",
-          "まろ.やか"
-        ]
-      },
-      "mnemonic": {
-        "vi": "円 là hình tròn hoặc đồng yên; trong 円周, nó là đường tròn đang được đo chu vi.",
-        "en": "円 means circle or yen; in 円周 it is the circle whose circumference is measured."
-      },
-      "decomposition": {
-        "hanViet": "Viên",
-        "structure": "unknown",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "周",
-          "丸",
-          "金",
-          "貨"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "Vien",
-        "meaningViNoAccent": "vien; tron; dong yen; vong tron",
-        "meaningEnNoAccent": "circle, yen, round"
-      },
-      "examples": [
-        {
-          "word": "円周",
-          "reading": "えんしゅう",
-          "meaning": "chu vi",
-          "meaningEn": "circumference"
-        }
-      ],
-      "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n2-kanji-import",
-        "source-unihan-kanji-metadata",
-        "unihan-kanji-checked",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
-    },
-    {
-      "kanjiId": "n2_jlpt_vocab_k136",
-      "lessonId": 17,
-      "level": "N2",
-      "character": "周",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Chu",
-        "meaningVi": "chu; chu vi; vòng quanh; xung quanh",
-        "meaningViDisplay": "Chu (chu; chu vi; vòng quanh; xung quanh)",
-        "meaningEn": "circumference, circuit, lap"
-      },
-      "readings": {
-        "onyomi": [
+          "シツ",
           "シュウ"
         ],
         "kunyomi": [
-          "まわ.り"
+          "しめ.る",
+          "しめ.す",
+          "うるお.う",
+          "うるお.す"
         ]
       },
       "mnemonic": {
-        "vi": "周 là vòng quanh hoặc chu vi; trong 円周, nó là độ dài đi quanh đường tròn.",
-        "en": "周 means around, circuit, or circumference; in 円周 it is the measure around a circle."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "damp; wet; moist"
       },
       "decomposition": {
-        "hanViet": "Chu",
+        "hanViet": "Chập",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chap",
+        "meaningViNoAccent": "damp; wet; moist",
+        "meaningEnNoAccent": "damp; wet; moist"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chập (damp; wet; moist)",
+        "onyomi": "シツ, シュウ",
+        "kunyomi": "しめ.る, しめ.す, うるお.う, うるお.す"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k008",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "募",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Mộ",
+        "meaningVi": "recruit; campaign; gather (contributions)",
+        "meaningViDisplay": "Mộ (recruit; campaign; gather (contributions))",
+        "meaningEn": "recruit; campaign; gather (contributions)"
+      },
+      "readings": {
+        "onyomi": [
+          "ボ"
+        ],
+        "kunyomi": [
+          "つの.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 募 qua Hán-Việt Mộ.",
+        "en": "recruit; campaign; gather (contributions)"
+      },
+      "decomposition": {
+        "hanViet": "Mộ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Mo",
+        "meaningViNoAccent": "recruit; campaign; gather (contributions)",
+        "meaningEnNoAccent": "recruit; campaign; gather (contributions)"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Mộ (recruit; campaign; gather (contributions))",
+        "onyomi": "ボ",
+        "kunyomi": "つの.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k009",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "畳",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Điệp",
+        "meaningVi": "Cái Chiếu Comm Rrr Ee",
+        "meaningViDisplay": "Điệp (Cái Chiếu Comm Rrr Ee)",
+        "meaningEn": "tatami mat; counter for tatami mats; fold"
+      },
+      "readings": {
+        "onyomi": [
+          "ジョウ",
+          "チョウ"
+        ],
+        "kunyomi": [
+          "たた.む",
+          "たたみ",
+          "かさ.なる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 畳 qua Hán-Việt Điệp.",
+        "en": "tatami mat; counter for tatami mats; fold"
+      },
+      "decomposition": {
+        "hanViet": "Điệp",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Diep",
+        "meaningViNoAccent": "Cai Chieu Comm Rrr Ee",
+        "meaningEnNoAccent": "tatami mat; counter for tatami mats; fold"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Điệp (Cái Chiếu Comm Rrr Ee)",
+        "onyomi": "ジョウ, チョウ",
+        "kunyomi": "たた.む, たたみ, かさ.なる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k010",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "敬",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Kính",
+        "meaningVi": "kính trọng; tôn trọng; kính cẩn",
+        "meaningViDisplay": "Kính (kính trọng; tôn trọng; kính cẩn)",
+        "meaningEn": "respect, honor, revere"
+      },
+      "readings": {
+        "onyomi": [
+          "ケイ",
+          "キョウ"
+        ],
+        "kunyomi": [
+          "うやま.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "! 1 _ CB Tho) xy) đánh (5) người Miông#ượcMhhtMBD",
+        "en": "敬 means respectful regard; 敬う is to respect or revere someone or something worthy."
+      },
+      "decomposition": {
+        "hanViet": "Kính",
         "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "円",
-          "囲",
-          "回",
-          "辺"
+          "尊",
+          "礼",
+          "慎",
+          "謙"
         ]
       },
       "search": {
-        "hanVietNoAccent": "Chu",
-        "meaningViNoAccent": "chu; chu vi; vong quanh; xung quanh",
-        "meaningEnNoAccent": "circumference, circuit, lap"
+        "hanVietNoAccent": "Kinh",
+        "meaningViNoAccent": "kinh trong; ton trong; kinh can",
+        "meaningEnNoAccent": "respect, honor, revere"
       },
       "examples": [
         {
-          "word": "円周",
-          "reading": "えんしゅう",
-          "meaning": "chu vi",
-          "meaningEn": "circumference"
+          "word": "敬う",
+          "reading": "うやまう",
+          "meaning": "kính trọng; tôn kính",
+          "meaningEn": "to respect, to honor"
         }
       ],
       "tags": [
@@ -486,16 +595,502 @@
         "source-unihan-kanji-metadata",
         "unihan-kanji-checked",
         "vi-editorial-codex-pass",
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Kính (kính trọng; tôn trọng; kính cẩn)",
+        "onyomi": "ケイ, キョウ",
+        "kunyomi": "うやま.う"
+      }
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k011",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "街",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Nhai",
+        "meaningVi": "Phố Ee",
+        "meaningViDisplay": "Nhai (Phố Ee)",
+        "meaningEn": "boulevard; street; town"
+      },
+      "readings": {
+        "onyomi": [
+          "ガイ",
+          "カイ"
+        ],
+        "kunyomi": [
+          "まち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 街 qua Hán-Việt Nhai.",
+        "en": "boulevard; street; town"
+      },
+      "decomposition": {
+        "hanViet": "Nhai",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nhai",
+        "meaningViNoAccent": "Pho Ee",
+        "meaningEnNoAccent": "boulevard; street; town"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nhai (Phố Ee)",
+        "onyomi": "ガイ, カイ",
+        "kunyomi": "まち"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k012",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "筒",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Đồng",
+        "meaningVi": "cylinder; pipe; tube",
+        "meaningViDisplay": "Đồng (cylinder; pipe; tube)",
+        "meaningEn": "cylinder; pipe; tube"
+      },
+      "readings": {
+        "onyomi": [
+          "トウ"
+        ],
+        "kunyomi": [
+          "つつ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "cylinder; pipe; tube"
+      },
+      "decomposition": {
+        "hanViet": "Đồng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "cylinder; pipe; tube",
+        "meaningEnNoAccent": "cylinder; pipe; tube"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đồng (cylinder; pipe; tube)",
+        "onyomi": "トウ",
+        "kunyomi": "つつ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k013",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "隅",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Ngung",
+        "meaningVi": "Góc 708 Op Per A",
+        "meaningViDisplay": "Ngung (Góc 708 Op Per A)",
+        "meaningEn": "corner; nook; coin"
+      },
+      "readings": {
+        "onyomi": [
+          "グウ"
+        ],
+        "kunyomi": [
+          "すみ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 隅 qua Hán-Việt Ngung.",
+        "en": "corner; nook; coin"
+      },
+      "decomposition": {
+        "hanViet": "Ngung",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ngung",
+        "meaningViNoAccent": "Goc 708 Op Per A",
+        "meaningEnNoAccent": "corner; nook; coin"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Ngung (Góc 708 Op Per A)",
+        "onyomi": "グウ",
+        "kunyomi": "すみ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k014",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "博",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Bác",
+        "meaningVi": "Dr.; command; esteem",
+        "meaningViDisplay": "Bác (Dr.; command; esteem)",
+        "meaningEn": "Dr.; command; esteem"
+      },
+      "readings": {
+        "onyomi": [
+          "ハク",
+          "バク"
+        ],
+        "kunyomi": [
+          "まく",
+          "ぶつかん",
+          "は",
+          "くら",
+          "ん",
+          "た",
+          "かい",
+          "く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 博 qua Hán-Việt Bác.",
+        "en": "Dr.; command; esteem"
+      },
+      "decomposition": {
+        "hanViet": "Bác",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Bac",
+        "meaningViNoAccent": "Dr.; command; esteem",
+        "meaningEnNoAccent": "Dr.; command; esteem"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Bác (Dr.; command; esteem)",
+        "onyomi": "ハク, バク",
+        "kunyomi": "まく, ぶつかん, は, くら, ん, た, かい, く"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k015",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "筋",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Cân",
+        "meaningVi": "gân; cơ; mạch; cốt truyện",
+        "meaningViDisplay": "Cân (gân; cơ; mạch; cốt truyện)",
+        "meaningEn": "muscle; sinew; tendon; plot"
+      },
+      "readings": {
+        "onyomi": [
+          "キン"
+        ],
+        "kunyomi": [
+          "すじ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "筋 means sinew or line; in 粗筋 it extends to the thread or plot of a story."
+      },
+      "decomposition": {
+        "hanViet": "Cân",
+        "structure": "top-bottom",
+        "components": [
+          "竹",
+          "肋"
+        ],
+        "componentNames": [
+          "tre",
+          "xương sườn/gân"
+        ],
+        "relatedKanji": [
+          "粗",
+          "肉",
+          "線",
+          "骨"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Can",
+        "meaningViNoAccent": "gan; co; mach; cot truyen",
+        "meaningEnNoAccent": "muscle; sinew; tendon; plot"
+      },
+      "examples": [
+        {
+          "word": "粗筋",
+          "reading": "あらすじ",
+          "meaning": "tóm tắt; cốt truyện khái quát",
+          "meaningEn": "outline; summary"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Cân (gân; cơ; mạch; cốt truyện)",
+        "onyomi": "キン",
+        "kunyomi": "すじ"
+      }
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k016",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "営",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Dinh",
+        "meaningVi": "điều hành; kinh doanh; doanh trại",
+        "meaningViDisplay": "Dinh (điều hành; kinh doanh; doanh trại)",
+        "meaningEn": "camp; conduct business; operate"
+      },
+      "readings": {
+        "onyomi": [
+          "エイ"
+        ],
+        "kunyomi": [
+          "いとな.む",
+          "いとな.み"
+        ]
+      },
+      "mnemonic": {
+        "vi": "営 là điều hành hoạt động hoặc kinh doanh; 営む dùng cho việc vận hành đời sống/công việc.",
+        "en": "営 means to operate or conduct; 営む means to run or carry on."
+      },
+      "decomposition": {
+        "hanViet": "Dinh",
+        "structure": "top-bottom",
+        "components": [
+          "冖",
+          "口"
+        ],
+        "componentNames": [
+          "mịch/mái che",
+          "khẩu/miệng"
+        ],
+        "relatedKanji": [
+          "業",
+          "商",
+          "経",
+          "管"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dinh",
+        "meaningViNoAccent": "dieu hanh; kinh doanh; doanh trai",
+        "meaningEnNoAccent": "camp; conduct business; operate"
+      },
+      "examples": [
+        {
+          "word": "営む",
+          "reading": "いとなむ",
+          "meaning": "kinh doanh; vận hành; tiến hành",
+          "meaningEn": "kinh doanh, vận hành, tiến hành"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Dinh (điều hành; kinh doanh; doanh trại)",
+        "onyomi": "エイ",
+        "kunyomi": "いとな.む, いとな.み"
+      }
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k017",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "援",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Viên",
+        "meaningVi": "viện; hỗ trợ; viện trợ; cứu giúp",
+        "meaningViDisplay": "Viên (viện; hỗ trợ; viện trợ; cứu giúp)",
+        "meaningEn": "aid, help, rescue, assistance"
+      },
+      "readings": {
+        "onyomi": [
+          "エン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "援 là giúp đỡ hoặc viện trợ; trong 応援, nó là phần hỗ trợ/cổ vũ dành cho người khác.",
+        "en": "援 means aid or support; in 応援 it is the support or cheering given to someone."
+      },
+      "decomposition": {
+        "hanViet": "Viên",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "応",
+          "助",
+          "救",
+          "支"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vien",
+        "meaningViNoAccent": "vien; ho tro; vien tro; cuu giup",
+        "meaningEnNoAccent": "aid, help, rescue, assistance"
+      },
+      "examples": [
+        {
+          "word": "応援",
+          "reading": "おうえん",
+          "meaning": "cổ vũ; hỗ trợ; viện trợ",
+          "meaningEn": "aid, assistance, help, reinforcement"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Viên (viện; hỗ trợ; viện trợ; cứu giúp)",
+        "onyomi": "エン",
+        "kunyomi": ""
+      }
+    },
+    {
+      "kanjiId": "n2_canonical_l17_k018",
+      "lessonId": 17,
+      "level": "N2",
+      "character": "替",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Thế",
+        "meaningVi": "thay thế; đổi; dự phòng",
+        "meaningViDisplay": "Thế (thay thế; đổi; dự phòng)",
+        "meaningEn": "exchange, substitute, spare"
+      },
+      "readings": {
+        "onyomi": [
+          "タイ"
+        ],
+        "kunyomi": [
+          "か.える",
+          "か.え-",
+          "か.わる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Core kanji for QUARTET 24: Fashion and personal style."
+      },
+      "decomposition": {
+        "hanViet": "Thế",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "代",
+          "換",
+          "着",
+          "服"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "The",
+        "meaningViNoAccent": "thay the; doi; du phong",
+        "meaningEnNoAccent": "exchange, substitute, spare"
+      },
+      "examples": [
+        {
+          "word": "着替える",
+          "reading": "きがえる",
+          "meaning": "thay quần áo",
+          "meaningEn": "to change clothes"
+        }
+      ],
+      "legacy": {
+        "meaning": "Thế (thay thế; đổi; dự phòng)",
+        "onyomi": "タイ",
+        "kunyomi": "か.える, か.え-, か.わる"
+      },
+      "theme": {
+        "quartetLesson": 24,
+        "themeEn": "Fashion and personal style",
+        "themeVi": "Thời trang và phong cách cá nhân"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "metadataSources": [
-    "KANJIDIC2 readings and English meanings",
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese",
-    "JpStudy N2 vocab context"
-  ],
-  "tags": []
+  ]
 }

@@ -1,673 +1,86 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 11,
-  "entryCount": 10,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l11_k001",
+      "kanjiId": "n5_canonical_l11_k001",
       "lessonId": 11,
       "level": "N5",
-      "character": "人",
-      "strokeCount": 2,
-      "labels": {
-        "hanViet": "Nhân",
-        "meaningVi": "người",
-        "meaningViDisplay": "Nhân (người)",
-        "meaningEn": "Person"
-      },
-      "readings": {
-        "onyomi": [
-          "JIN",
-          "NIN"
-        ],
-        "kunyomi": [
-          "hito"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Người đang đứng dang chân.",
-        "en": "A person standing on two legs."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "大",
-          "会",
-          "入"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "nhan",
-        "meaningViNoAccent": "nguoi",
-        "meaningEnNoAccent": "person"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l12_v047",
-          "sourceSenseId": "n5_l12_s047",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v015",
-          "sourceSenseId": "n5_l11_s015",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v016",
-          "sourceSenseId": "n5_l11_s016",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Nhân (người)",
-        "onyomi": "JIN, NIN",
-        "kunyomi": "hito"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k002",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "子",
-      "strokeCount": 3,
-      "labels": {
-        "hanViet": "Tử",
-        "meaningVi": "con",
-        "meaningViDisplay": "Tử (con)",
-        "meaningEn": "Child"
-      },
-      "readings": {
-        "onyomi": [
-          "SHI"
-        ],
-        "kunyomi": [
-          "ko"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Đứa trẻ đang nằm quấn tã.",
-        "en": "A baby in swaddling clothes."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "学",
-          "字",
-          "好"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tu",
-        "meaningViNoAccent": "con",
-        "meaningEnNoAccent": "child"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l11_v068",
-          "sourceSenseId": "n5_l11_s068",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v055",
-          "sourceSenseId": "n5_l11_s055",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l10_v006",
-          "sourceSenseId": "n5_l10_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tử (con)",
-        "onyomi": "SHI",
-        "kunyomi": "ko"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k003",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "女",
-      "strokeCount": 3,
-      "labels": {
-        "hanViet": "Nữ",
-        "meaningVi": "phụ nữ",
-        "meaningViDisplay": "Nữ (phụ nữ)",
-        "meaningEn": "Woman, Female"
-      },
-      "readings": {
-        "onyomi": [
-          "JO"
-        ],
-        "kunyomi": [
-          "onna"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Hình ảnh phụ nữ đang quỳ hoặc ngồi bắt chéo chân khép nép.",
-        "en": "A woman sitting or kneeling politely."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "好",
-          "安",
-          "姉",
-          "妹",
-          "始"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "nu",
-        "meaningViNoAccent": "phu nu",
-        "meaningEnNoAccent": "woman, female"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l11_v067",
-          "sourceSenseId": "n5_l11_s067",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l10_v005",
-          "sourceSenseId": "n5_l10_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l10_v007",
-          "sourceSenseId": "n5_l10_s007",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Nữ (phụ nữ)",
-        "onyomi": "JO",
-        "kunyomi": "onna"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k004",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "男",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Nam",
-        "meaningVi": "đàn ông",
-        "meaningViDisplay": "Nam (đàn ông)",
-        "meaningEn": "Man, Male"
-      },
-      "readings": {
-        "onyomi": [
-          "DAN",
-          "NAN"
-        ],
-        "kunyomi": [
-          "otoko"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Dùng Sức lực (Lực 力) để làm việc trên Ruộng (Điền 田).",
-        "en": "Using strength (力) in the field (田)."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "田",
-          "力"
-        ],
-        "componentNames": [
-          "Điền (ruộng)",
-          "Lực (sức mạnh)"
-        ],
-        "relatedKanji": [
-          "田",
-          "力"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "nam",
-        "meaningViNoAccent": "dan ong",
-        "meaningEnNoAccent": "man, male"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n4_l40_v057",
-          "sourceSenseId": "n4_l40_s057",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l10_v004",
-          "sourceSenseId": "n5_l10_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l10_v006",
-          "sourceSenseId": "n5_l10_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Nam (đàn ông)",
-        "onyomi": "DAN, NAN",
-        "kunyomi": "otoko"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k005",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "目",
+      "character": "石",
       "strokeCount": 5,
       "labels": {
-        "hanViet": "Mục",
-        "meaningVi": "mắt",
-        "meaningViDisplay": "Mục (mắt)",
-        "meaningEn": "Eye"
+        "hanViet": "Thạch",
+        "meaningVi": "đá",
+        "meaningViDisplay": "Thạch (đá)",
+        "meaningEn": "Stone"
       },
       "readings": {
         "onyomi": [
-          "MOKU"
+          "セキ",
+          "シャク",
+          "コク"
         ],
         "kunyomi": [
-          "me"
+          "いし"
         ]
       },
       "mnemonic": {
-        "vi": "Hình ảnh con mắt quay dọc.",
-        "en": "An eye turned on its side."
+        "vi": "Một vật nằm dưới vách núi (Hán 厂) có miệng (Khẩu 口) là hòn ĐÁ.",
+        "en": "Something under a cliff (厂) that looks like a mouth - a STONE."
       },
       "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "見",
-          "自",
-          "眠",
-          "真"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "muc",
-        "meaningViNoAccent": "mat",
-        "meaningEnNoAccent": "eye"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l10_v050",
-          "sourceSenseId": "n5_l10_s050",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l28_v007",
-          "sourceSenseId": "n4_l28_s007",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l16_v024",
-          "sourceSenseId": "n5_l16_s024",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Mục (mắt)",
-        "onyomi": "MOKU",
-        "kunyomi": "me"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k006",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "口",
-      "strokeCount": 3,
-      "labels": {
-        "hanViet": "Khẩu",
-        "meaningVi": "miệng",
-        "meaningViDisplay": "Khẩu (miệng)",
-        "meaningEn": "Mouth"
-      },
-      "readings": {
-        "onyomi": [
-          "KOU"
-        ],
-        "kunyomi": [
-          "kuchi"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Hình ảnh cái miệng đang mở.",
-        "en": "An open mouth."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "名",
-          "古",
-          "右",
-          "問",
-          "呼",
-          "味",
-          "加"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "khau",
-        "meaningViNoAccent": "mieng",
-        "meaningEnNoAccent": "mouth"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l16_v027",
-          "sourceSenseId": "n5_l16_s027",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l33_v021",
-          "sourceSenseId": "n4_l33_s021",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l33_v022",
-          "sourceSenseId": "n4_l33_s022",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Khẩu (miệng)",
-        "onyomi": "KOU",
-        "kunyomi": "kuchi"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k007",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "耳",
-      "strokeCount": 6,
-      "labels": {
-        "hanViet": "Nhĩ",
-        "meaningVi": "tai",
-        "meaningViDisplay": "Nhĩ (tai)",
-        "meaningEn": "Ear"
-      },
-      "readings": {
-        "onyomi": [
-          "JI"
-        ],
-        "kunyomi": [
-          "mimi"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Hình ảnh cái tai.",
-        "en": "The shape of an ear."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "聞",
-          "取"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "nhi",
-        "meaningViNoAccent": "tai",
-        "meaningEnNoAccent": "ear"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l16_v025",
-          "sourceSenseId": "n5_l16_s025",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v069",
-          "sourceSenseId": "n5_l11_s069",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Nhĩ (tai)",
-        "onyomi": "JI",
-        "kunyomi": "mimi"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k008",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "手",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Thủ",
-        "meaningVi": "tay",
-        "meaningViDisplay": "Thủ (tay)",
-        "meaningEn": "Hand"
-      },
-      "readings": {
-        "onyomi": [
-          "SHU"
-        ],
-        "kunyomi": [
-          "te"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Bàn tay với năm ngón rõ rệt.",
-        "en": "A hand with fingers."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "打",
-          "押",
-          "招"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thu",
-        "meaningViNoAccent": "tay",
-        "meaningEnNoAccent": "hand"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l07_v010",
-          "sourceSenseId": "n5_l07_s010",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v026",
-          "sourceSenseId": "n5_l11_s026",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l09_v005",
-          "sourceSenseId": "n5_l09_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thủ (tay)",
-        "onyomi": "SHU",
-        "kunyomi": "te"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l11_k009",
-      "lessonId": 11,
-      "level": "N5",
-      "character": "足",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Túc",
-        "meaningVi": "chân",
-        "meaningViDisplay": "Túc (chân)",
-        "meaningEn": "Leg, Foot"
-      },
-      "readings": {
-        "onyomi": [
-          "SOKU"
-        ],
-        "kunyomi": [
-          "ashi",
-          "ta-riru"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Một cái chân đang đứng vững chãi.",
-        "en": "A leg/foot standing firmly."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
+        "structure": "mixed",
         "components": [
-          "口",
-          "止"
+          "厂",
+          "口"
         ],
         "componentNames": [
-          "Khẩu (miệng)",
-          "Chỉ (dừng)"
+          "Hán (vách núi)",
+          "Khẩu (miệng)"
         ],
         "relatedKanji": [
-          "止",
-          "踊"
-        ]
+          "確",
+          "破"
+        ],
+        "hanViet": "Thạch"
       },
       "search": {
-        "hanVietNoAccent": "tuc",
-        "meaningViNoAccent": "chan",
-        "meaningEnNoAccent": "leg, foot"
+        "hanVietNoAccent": "Thach",
+        "meaningViNoAccent": "da",
+        "meaningEnNoAccent": "Stone"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l16_v030",
-          "sourceSenseId": "n5_l16_s030",
+          "sourceVocabId": "n4_l32_v057",
+          "sourceSenseId": "n4_l32_s057",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l11_v070",
-          "sourceSenseId": "n5_l11_s070",
+          "sourceVocabId": "n4_l37_v021",
+          "sourceSenseId": "n4_l37_s021",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l21_v003",
-          "sourceSenseId": "n5_l21_s003",
+          "sourceVocabId": "n4_l42_v055",
+          "sourceSenseId": "n4_l42_s055",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -675,74 +88,174 @@
         }
       ],
       "legacy": {
-        "meaning": "Túc (chân)",
-        "onyomi": "SOKU",
-        "kunyomi": "ashi, ta-riru"
+        "meaning": "Thạch (đá)",
+        "onyomi": "セキ, シャク, コク",
+        "kunyomi": "いし"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l11_k010",
+      "kanjiId": "n5_canonical_l11_k002",
       "lessonId": 11,
       "level": "N5",
-      "character": "力",
-      "strokeCount": 2,
+      "character": "本",
+      "strokeCount": 5,
       "labels": {
-        "hanViet": "Lực",
-        "meaningVi": "sức mạnh",
-        "meaningViDisplay": "Lực (sức mạnh)",
-        "meaningEn": "Power"
+        "hanViet": "Bổn",
+        "meaningVi": "sách, gốc",
+        "meaningViDisplay": "Bổn (sách, gốc)",
+        "meaningEn": "Book, Origin"
       },
       "readings": {
         "onyomi": [
-          "RYOKU",
-          "RIKI"
+          "ホン"
         ],
         "kunyomi": [
-          "chikara"
+          "もと"
         ]
       },
       "mnemonic": {
-        "vi": "Bắp tay đang gồng lên hoặc hình cái cày dùng sức.",
-        "en": "A flexed muscle or a plow needing strength."
+        "vi": "Đây là chữ Mộc (木 - cây), ta gạch một nét ngang ở dưới Gốc cây để đánh dấu, đó chính là căn Bản. Từ thân cây ta làm ra Sách.",
+        "en": "A tree (木) with a mark at its base (root/origin). Books are made from trees."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "木",
+          "一"
+        ],
+        "componentNames": [
+          "Mộc (cây)",
+          "Nhất (một, nét ngang gốc)"
+        ],
+        "relatedKanji": [
+          "木",
+          "体"
+        ],
+        "hanViet": "Bổn"
+      },
+      "search": {
+        "hanVietNoAccent": "Bon",
+        "meaningViNoAccent": "sach, goc",
+        "meaningEnNoAccent": "Book, Origin"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l02_v007",
+          "sourceSenseId": "n5_l02_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v038",
+          "sourceSenseId": "n5_l01_s038",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v041",
+          "sourceSenseId": "n5_l01_s041",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Bổn (sách, gốc)",
+        "onyomi": "ホン",
+        "kunyomi": "もと"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l11_k003",
+      "lessonId": 11,
+      "level": "N5",
+      "character": "立",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Lập",
+        "meaningVi": "đứng",
+        "meaningViDisplay": "Lập (đứng)",
+        "meaningEn": "Stand"
+      },
+      "readings": {
+        "onyomi": [
+          "リツ",
+          "リュウ",
+          "リットル"
+        ],
+        "kunyomi": [
+          "た.つ",
+          "-た.つ",
+          "た.ち-",
+          "た.てる",
+          "-た.てる",
+          "た.て-",
+          "たて-",
+          "-た.て",
+          "-だ.て",
+          "-だ.てる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Một người đang đứng vững chân trên mặt đất.",
+        "en": "Standing firmly on the ground."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "男",
-          "動",
-          "加"
-        ]
+          "音",
+          "新",
+          "親",
+          "泣"
+        ],
+        "hanViet": "Lập"
       },
       "search": {
-        "hanVietNoAccent": "luc",
-        "meaningViNoAccent": "suc manh",
-        "meaningEnNoAccent": "power"
+        "hanVietNoAccent": "Lap",
+        "meaningViNoAccent": "dung",
+        "meaningEnNoAccent": "Stand"
       },
       "examples": [
         {
-          "sourceVocabId": "n4_l28_v015",
-          "sourceSenseId": "n4_l28_s015",
+          "sourceVocabId": "n5_l14_v051",
+          "sourceSenseId": "n5_l14_s051",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l14_v046",
-          "sourceSenseId": "n5_l14_s046",
+          "sourceVocabId": "n5_l21_v007",
+          "sourceSenseId": "n5_l21_s007",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n4_l46_v030",
-          "sourceSenseId": "n4_l46_s030",
+          "sourceVocabId": "n5_l15_v025",
+          "sourceSenseId": "n5_l15_s025",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -750,16 +263,113 @@
         }
       ],
       "legacy": {
-        "meaning": "Lực (sức mạnh)",
-        "onyomi": "RYOKU, RIKI",
-        "kunyomi": "chikara"
+        "meaning": "Lập (đứng)",
+        "onyomi": "リツ, リュウ, リットル",
+        "kunyomi": "た.つ, -た.つ, た.ち-, た.てる, -た.てる, た.て-, たて-, -た.て, -だ.て, -だ.てる"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l11_k004",
+      "lessonId": 11,
+      "level": "N5",
+      "character": "生",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Sanh",
+        "meaningVi": "sinh ra, sống",
+        "meaningViDisplay": "Sanh (sinh ra, sống)",
+        "meaningEn": "Life, Birth"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "ショウ"
+        ],
+        "kunyomi": [
+          "い.きる",
+          "い.かす",
+          "い.ける",
+          "う.まれる",
+          "うま.れる",
+          "う.まれ",
+          "うまれ",
+          "う.む",
+          "お.う",
+          "は.える",
+          "は.やす",
+          "き",
+          "なま",
+          "なま-",
+          "な.る",
+          "な.す",
+          "む.す",
+          "-う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Hình ảnh một mầm cây đang nhú lên khỏi mặt đất (nét ngang dưới cùng), thể hiện sự SỐng và sinh sôi.",
+        "en": "A plant growing up from the ground, representing LIFE and BIRTH."
+      },
+      "decomposition": {
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "先",
+          "姓"
+        ],
+        "hanViet": "Sanh"
+      },
+      "search": {
+        "hanVietNoAccent": "Sanh",
+        "meaningViNoAccent": "sinh ra, song",
+        "meaningEnNoAccent": "Life, Birth"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l01_v049",
+          "sourceSenseId": "n5_l01_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v007",
+          "sourceSenseId": "n5_l01_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v009",
+          "sourceSenseId": "n5_l01_s009",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Sanh (sinh ra, sống)",
+        "onyomi": "セイ, ショウ",
+        "kunyomi": "い.きる, い.かす, い.ける, う.まれる, うま.れる, う.まれ, うまれ, う.む, お.う, は.える, は.やす, き, なま, なま-, な.る, な.す, む.す, -う"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

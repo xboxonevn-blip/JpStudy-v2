@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 17,
+  "entryCount": 8,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l17_k001",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "急",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Cấp",
+        "meaningVi": "khẩn cấp, vội",
+        "meaningViDisplay": "Cấp (khẩn cấp, vội)",
+        "meaningEn": "Hurry, Emergency"
+      },
+      "readings": {
+        "onyomi": [
+          "キュウ"
+        ],
+        "kunyomi": [
+          "いそ.ぐ",
+          "いそ.ぎ",
+          "せ.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Móc ( ) vào Em ( ) tâm ( ) tình trong tình huống khẩn cấp ( ) 1 2",
+        "en": "Heart (心) rushing in a hurry."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "⺈",
+          "ヨ",
+          "心"
+        ],
+        "componentNames": [
+          "Đao (dao)",
+          "Phần giữa",
+          "Tâm (trái tim)"
+        ],
+        "relatedKanji": [
+          "心"
+        ],
+        "hanViet": "Cấp"
+      },
+      "search": {
+        "hanVietNoAccent": "Cap",
+        "meaningViNoAccent": "khan cap, voi",
+        "meaningEnNoAccent": "Hurry, Emergency"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l22_v030",
+          "sourceSenseId": "n5_l22_s030",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l05_v050",
+          "sourceSenseId": "n5_l05_s050",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l05_v051",
+          "sourceSenseId": "n5_l05_s051",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Cấp (khẩn cấp, vội)",
+        "onyomi": "キュウ",
+        "kunyomi": "いそ.ぐ, いそ.ぎ, せ.く"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l17_k002",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "発",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Bát",
+        "meaningVi": "phát ra; khởi hành; phát triển",
+        "meaningViDisplay": "Bát (phát ra; khởi hành; phát triển)",
+        "meaningEn": "departure, discharge"
+      },
+      "readings": {
+        "onyomi": [
+          "ハツ",
+          "ホツ"
+        ],
+        "kunyomi": [
+          "た.つ",
+          "あば.く",
+          "おこ.る",
+          "つか.わす",
+          "はな.つ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cầm bát ( ) 2 ( ) chân ( ) xuất phát ( ) 発 3",
+        "en": "Core kanji for QUARTET 17: Science and technology."
+      },
+      "decomposition": {
+        "hanViet": "Bát",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "開",
+          "明",
+          "達",
+          "表"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Bat",
+        "meaningViNoAccent": "phat ra; khoi hanh; phat trien",
+        "meaningEnNoAccent": "departure, discharge"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l17_v003",
+          "sourceSenseId": "n3_l17_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n3_l17_v006",
+          "sourceSenseId": "n3_l17_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Bát (phát ra; khởi hành; phát triển)",
+        "onyomi": "ハツ, ホツ",
+        "kunyomi": "た.つ, あば.く, おこ.る, つか.わす, はな.つ"
+      },
+      "theme": {
+        "quartetLesson": 17,
+        "themeEn": "Science and technology",
+        "themeVi": "Khoa học và công nghệ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l17_k003",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "酒",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Tửu",
+        "meaningVi": "Rượu",
+        "meaningViDisplay": "Tửu (Rượu)",
+        "meaningEn": "sake; alcohol; saké"
+      },
+      "readings": {
+        "onyomi": [
+          "シュ"
+        ],
+        "kunyomi": [
+          "さけ",
+          "さか-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ủ men với nước ( ) tới giờ Dậu ( ) sẽ thành rượu ( ) 1 4",
+        "en": "sake; alcohol; saké"
+      },
+      "decomposition": {
+        "hanViet": "Tửu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tuu",
+        "meaningViNoAccent": "Ruou",
+        "meaningEnNoAccent": "sake; alcohol; sake"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tửu (Rượu)",
+        "onyomi": "シュ",
+        "kunyomi": "さけ, さか-"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l17_k004",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "降",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Hàng",
+        "meaningVi": "xuống, rơi",
+        "meaningViDisplay": "Hàng (xuống, rơi)",
+        "meaningEn": "Descend, Precipitate"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ",
+          "ゴ"
+        ],
+        "kunyomi": [
+          "お.りる",
+          "お.ろす",
+          "ふ.る",
+          "ふ.り",
+          "くだ.る",
+          "くだ.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bồ ( ) sau ( ) 14 ( ) năm bị giáng ( ) chức 4 5",
+        "en": "Walking down a hill (阝) - DESCEND."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "阝",
+          "夅"
+        ],
+        "componentNames": [
+          "Ấp (gò đất)",
+          "Giáng (đi xuống)"
+        ],
+        "relatedKanji": [
+          "都"
+        ],
+        "hanViet": "Hàng"
+      },
+      "search": {
+        "hanVietNoAccent": "Hang",
+        "meaningViNoAccent": "xuong, roi",
+        "meaningEnNoAccent": "Descend, Precipitate"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l37_v054",
+          "sourceSenseId": "n4_l37_s054",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l37_v057",
+          "sourceSenseId": "n4_l37_s057",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l48_v001",
+          "sourceSenseId": "n4_l48_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Hàng (xuống, rơi)",
+        "onyomi": "コウ, ゴ",
+        "kunyomi": "お.りる, お.ろす, ふ.る, ふ.り, くだ.る, くだ.す"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l17_k005",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "料",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Liêu",
+        "meaningVi": "nguyên liệu; vật liệu; phí",
+        "meaningViDisplay": "Liêu (nguyên liệu; vật liệu; phí)",
+        "meaningEn": "fee, materials"
+      },
+      "readings": {
+        "onyomi": [
+          "リョウ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Đong gạo ( ) băng đấu ( ) liệu ( ) có chuẩn? 4 10",
+        "en": "Core kanji for QUARTET 19: Cooking and food culture."
+      },
+      "decomposition": {
+        "hanViet": "Liêu",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "理",
+          "食",
+          "材",
+          "味"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Lieu",
+        "meaningViNoAccent": "nguyen lieu; vat lieu; phi",
+        "meaningEnNoAccent": "fee, materials"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l19_v001",
+          "sourceSenseId": "n3_l19_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n3_l19_v004",
+          "sourceSenseId": "n3_l19_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Liêu (nguyên liệu; vật liệu; phí)",
+        "onyomi": "リョウ",
+        "kunyomi": ""
+      },
+      "theme": {
+        "quartetLesson": 19,
+        "themeEn": "Cooking and food culture",
+        "themeVi": "Nấu ăn và văn hóa ẩm thực"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l17_k006",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "特",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Đặc",
+        "meaningVi": "đặc biệt",
+        "meaningViDisplay": "Đặc (đặc biệt)",
+        "meaningEn": "Special"
+      },
+      "readings": {
+        "onyomi": [
+          "トク"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "3 6 1 5",
+        "en": "A Cow (牛) in a Temple (寺) is EXTRA SPECIAL."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "牛",
+          "寺"
+        ],
+        "componentNames": [
+          "Ngưu (con bò)",
+          "Tự (chùa)"
+        ],
+        "relatedKanji": [
+          "待",
+          "持"
+        ],
+        "hanViet": "Đặc"
+      },
+      "search": {
+        "hanVietNoAccent": "Dac",
+        "meaningViNoAccent": "dac biet",
+        "meaningEnNoAccent": "Special"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l22_v031",
+          "sourceSenseId": "n5_l22_s031",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l05_v051",
+          "sourceSenseId": "n5_l05_s051",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l15_v020",
+          "sourceSenseId": "n5_l15_s020",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Đặc (đặc biệt)",
+        "onyomi": "トク",
+        "kunyomi": ""
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l17_k007",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "夏",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Hạ",
+        "meaningVi": "Mùa hè",
+        "meaningViDisplay": "Hạ (Mùa hè)",
+        "meaningEn": "summer; été; verano"
+      },
+      "readings": {
+        "onyomi": [
+          "カ",
+          "ガ",
+          "ゲ"
+        ],
+        "kunyomi": [
+          "なつ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Còn lại 1 ( ) mình ( ) sau ( ) mùa hạ ( ) 夏 1",
+        "en": "summer; été; verano"
+      },
+      "decomposition": {
+        "hanViet": "Hạ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ha",
+        "meaningViNoAccent": "Mua he",
+        "meaningEnNoAccent": "summer; ete; verano"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hạ (Mùa hè)",
+        "onyomi": "カ, ガ, ゲ",
+        "kunyomi": "なつ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l17_k008",
+      "lessonId": 17,
+      "level": "N4",
+      "character": "通",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Thông",
+        "meaningVi": "đi lại, thông qua",
+        "meaningViDisplay": "Thông (đi lại, thông qua)",
+        "meaningEn": "Commute, Pass"
+      },
+      "readings": {
+        "onyomi": [
+          "ツウ",
+          "ツ"
+        ],
+        "kunyomi": [
+          "とお.る",
+          "とお.り",
+          "-とお.り",
+          "-どお.り",
+          "とお.す",
+          "とお.し",
+          "-どお.し",
+          "かよ.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ma ( ) sử dụng ( ) xe đi xa ( ) nơi ách tắc giao thông ( ) 8 1",
+        "en": "Traveling (辶) through a common (用) path."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "甬",
+          "辶"
+        ],
+        "componentNames": [
+          "Dũng (cái ống)",
+          "Sước (đi)"
+        ],
+        "relatedKanji": [
+          "送",
+          "運",
+          "連",
+          "選"
+        ],
+        "hanViet": "Thông"
+      },
+      "search": {
+        "hanVietNoAccent": "Thong",
+        "meaningViNoAccent": "di lai, thong qua",
+        "meaningEnNoAccent": "Commute, Pass"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l28_v059",
+          "sourceSenseId": "n4_l28_s059",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l27_v019",
+          "sourceSenseId": "n4_l27_s019",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l28_v005",
+          "sourceSenseId": "n4_l28_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thông (đi lại, thông qua)",
+        "onyomi": "ツウ, ツ",
+        "kunyomi": "とお.る, とお.り, -とお.り, -どお.り, とお.す, とお.し, -どお.し, かよ.う"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

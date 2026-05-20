@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 18,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l18_k001",
+      "lessonId": 18,
+      "level": "N4",
+      "character": "家",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Gia",
+        "meaningVi": "nhà; gia đình; người chuyên môn",
+        "meaningViDisplay": "Gia (nhà; gia đình; người chuyên môn)",
+        "meaningEn": "house; home; family"
+      },
+      "readings": {
+        "onyomi": [
+          "カ",
+          "ケ"
+        ],
+        "kunyomi": [
+          "いえ",
+          "や",
+          "うち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dưới mái nhà ( ) lợn ( ) sống thành gia đình ( ) 家 1",
+        "en": "家 means house or family; 家出 is running away from home."
+      },
+      "decomposition": {
+        "hanViet": "Gia",
+        "structure": "top-bottom",
+        "components": [
+          "宀",
+          "豕"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "thỉ/lợn"
+        ],
+        "relatedKanji": [
+          "出",
+          "主",
+          "屋",
+          "族"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Gia",
+        "meaningViNoAccent": "nha; gia dinh; nguoi chuyen mon",
+        "meaningEnNoAccent": "house; home; family"
+      },
+      "examples": [
+        {
+          "word": "家出",
+          "reading": "いえで",
+          "meaning": "bỏ nhà đi",
+          "meaningEn": "running away from home"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Gia (nhà; gia đình; người chuyên môn)",
+        "onyomi": "カ, ケ",
+        "kunyomi": "いえ, や, うち"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l18_k002",
+      "lessonId": 18,
+      "level": "N4",
+      "character": "院",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Viện",
+        "meaningVi": "Bệnh viện",
+        "meaningViDisplay": "Viện (Bệnh viện)",
+        "meaningEn": "Inst.; institution; temple"
+      },
+      "readings": {
+        "onyomi": [
+          "イン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Bồ ( ) hoàn thành ( ) bệnh viện ( ) 院 4",
+        "en": "Inst.; institution; temple"
+      },
+      "decomposition": {
+        "hanViet": "Viện",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Vien",
+        "meaningViNoAccent": "Benh vien",
+        "meaningEnNoAccent": "Inst.; institution; temple"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Viện (Bệnh viện)",
+        "onyomi": "イン",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l18_k003",
+      "lessonId": 18,
+      "level": "N4",
+      "character": "荷",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Hà",
+        "meaningVi": "hành lý",
+        "meaningViDisplay": "Hà (hành lý)",
+        "meaningEn": "Luggage, Load"
+      },
+      "readings": {
+        "onyomi": [
+          "カ"
+        ],
+        "kunyomi": [
+          "に"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cô Thảo ( ) có cái gì ( ) trong hành lý ( ) 2 3",
+        "en": "Herbs (艹) carried by a person - LUGGAGE."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "艹",
+          "何"
+        ],
+        "componentNames": [
+          "Thảo (cỏ)",
+          "Hà (cái gì)"
+        ],
+        "relatedKanji": [
+          "何",
+          "落",
+          "薬"
+        ],
+        "hanViet": "Hà"
+      },
+      "search": {
+        "hanVietNoAccent": "Ha",
+        "meaningViNoAccent": "hanh ly",
+        "meaningEnNoAccent": "Luggage, Load"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l48_v036",
+          "sourceSenseId": "n4_l48_s036",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l07_v028",
+          "sourceSenseId": "n5_l07_s028",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Hà (hành lý)",
+        "onyomi": "カ",
+        "kunyomi": "に"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l18_k004",
+      "lessonId": 18,
+      "level": "N4",
+      "character": "病",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Bệnh",
+        "meaningVi": "ốm",
+        "meaningViDisplay": "Bệnh (ốm)",
+        "meaningEn": "Illness"
+      },
+      "readings": {
+        "onyomi": [
+          "ビョウ",
+          "ヘイ"
+        ],
+        "kunyomi": [
+          "や.む",
+          "-や.み",
+          "やまい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bị bệnh ( ) lần thứ 3 ( ) thì nên đi bệnh viện ( ) 1",
+        "en": "Being sick (Nạch 疒) and feeling heat (丙)."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "疒",
+          "丙"
+        ],
+        "componentNames": [
+          "Nạch (ốm, bệnh)",
+          "Bính (thứ ba)"
+        ],
+        "relatedKanji": [
+          "薬"
+        ],
+        "hanViet": "Bệnh"
+      },
+      "search": {
+        "hanVietNoAccent": "Benh",
+        "meaningViNoAccent": "om",
+        "meaningEnNoAccent": "Illness"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l16_v069",
+          "sourceSenseId": "n5_l16_s069",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v021",
+          "sourceSenseId": "n5_l17_s021",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l01_v017",
+          "sourceSenseId": "n5_l01_s017",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Bệnh (ốm)",
+        "onyomi": "ビョウ, ヘイ",
+        "kunyomi": "や.む, -や.み, やまい"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l18_k005",
+      "lessonId": 18,
+      "level": "N4",
+      "character": "真",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Chân",
+        "meaningVi": "thật",
+        "meaningViDisplay": "Chân (thật)",
+        "meaningEn": "True"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
+        ],
+        "kunyomi": [
+          "ま",
+          "ま-",
+          "まこと"
+        ]
+      },
+      "mnemonic": {
+        "vi": "10 ( ) cụ ( ), cụ nào cũng chân thật ( ) 2",
+        "en": "Searching for TRUTH with ten eyes."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "十",
+          "具"
+        ],
+        "componentNames": [
+          "Thập (mười)",
+          "Cụ biến thể (dụng cụ)"
+        ],
+        "relatedKanji": [
+          "目",
+          "具"
+        ],
+        "hanViet": "Chân"
+      },
+      "search": {
+        "hanVietNoAccent": "Chan",
+        "meaningViNoAccent": "that",
+        "meaningEnNoAccent": "True"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l28_v057",
+          "sourceSenseId": "n4_l28_s057",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l28_v007",
+          "sourceSenseId": "n4_l28_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l30_v037",
+          "sourceSenseId": "n4_l30_s037",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Chân (thật)",
+        "onyomi": "シン",
+        "kunyomi": "ま, ま-, まこと"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l18_k006",
+      "lessonId": 18,
+      "level": "N4",
+      "character": "紙",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Chỉ",
+        "meaningVi": "giấy",
+        "meaningViDisplay": "Chỉ (giấy)",
+        "meaningEn": "Paper"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "かみ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Chỉ ( ) thị ( ) được viết lên giấy ( )紙 1 7",
+        "en": "Using fibers (糸) for a family/clan (氏) - it's paper."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "糸",
+          "氏"
+        ],
+        "componentNames": [
+          "Mịch (sợi tơ)",
+          "Thị (dòng họ)"
+        ],
+        "relatedKanji": [
+          "糸",
+          "姉",
+          "終",
+          "線"
+        ],
+        "hanViet": "Chỉ"
+      },
+      "search": {
+        "hanVietNoAccent": "Chi",
+        "meaningViNoAccent": "giay",
+        "meaningEnNoAccent": "Paper"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l07_v024",
+          "sourceSenseId": "n5_l07_s024",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l06_v031",
+          "sourceSenseId": "n5_l06_s031",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l13_v039",
+          "sourceSenseId": "n5_l13_s039",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Chỉ (giấy)",
+        "onyomi": "シ",
+        "kunyomi": "かみ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l18_k007",
+      "lessonId": 18,
+      "level": "N4",
+      "character": "速",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Tốc",
+        "meaningVi": "nhanh",
+        "meaningViDisplay": "Tốc (nhanh)",
+        "meaningEn": "Fast"
+      },
+      "readings": {
+        "onyomi": [
+          "ソク"
+        ],
+        "kunyomi": [
+          "はや.い",
+          "はや-",
+          "はや.める",
+          "すみ.やか"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Càng thúc ( ) đi xa ( ) tốc độ ( ) càng nhanh 5",
+        "en": "Moving (辶) like a bundle (束) of arrows - FAST."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "束",
+          "辶"
+        ],
+        "componentNames": [
+          "Thúc (bó)",
+          "Sước (đi)"
+        ],
+        "relatedKanji": [
+          "束",
+          "送",
+          "通",
+          "運"
+        ],
+        "hanViet": "Tốc"
+      },
+      "search": {
+        "hanVietNoAccent": "Toc",
+        "meaningViNoAccent": "nhanh",
+        "meaningEnNoAccent": "Fast"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l48_v037",
+          "sourceSenseId": "n4_l48_s037",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v029",
+          "sourceSenseId": "n5_l11_s029",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l12_v004",
+          "sourceSenseId": "n5_l12_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tốc (nhanh)",
+        "onyomi": "ソク",
+        "kunyomi": "はや.い, はや-, はや.める, すみ.やか"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

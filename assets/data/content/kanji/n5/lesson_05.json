@@ -1,68 +1,73 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 5,
   "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l05_k001",
+      "kanjiId": "n5_canonical_l05_k001",
       "lessonId": 5,
       "level": "N5",
-      "character": "七",
-      "strokeCount": 2,
+      "character": "夕",
+      "strokeCount": 3,
       "labels": {
-        "hanViet": "Thất",
-        "meaningVi": "bảy",
-        "meaningViDisplay": "Thất (bảy)",
-        "meaningEn": "Seven"
+        "hanViet": "Tịch",
+        "meaningVi": "chiều tối",
+        "meaningViDisplay": "Tịch (chiều tối)",
+        "meaningEn": "Evening"
       },
       "readings": {
         "onyomi": [
-          "SHICHI"
+          "セキ"
         ],
         "kunyomi": [
-          "nana"
+          "ゆう"
         ]
       },
       "mnemonic": {
-        "vi": "Dạng giống số 7 lộn ngược.",
-        "en": "Looks like an upside-down number 7."
+        "vi": "Mặt trăng (Nguyệt 月) bị thiếu một nét - trăng mới lên lúc chiỀU TỐI.",
+        "en": "The moon just appearing as the sun sets."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "切"
-        ]
+          "名",
+          "外",
+          "多",
+          "夜",
+          "夢"
+        ],
+        "hanViet": "Tịch"
       },
       "search": {
-        "hanVietNoAccent": "that",
-        "meaningViNoAccent": "bay",
-        "meaningEnNoAccent": "seven"
+        "hanVietNoAccent": "Tich",
+        "meaningViNoAccent": "chieu toi",
+        "meaningEnNoAccent": "Evening"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l05_v057",
-          "sourceSenseId": "n5_l05_s057",
+          "sourceVocabId": "n5_l17_v044",
+          "sourceSenseId": "n5_l17_s044",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l05_v039",
-          "sourceSenseId": "n5_l05_s039",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l05_v058",
-          "sourceSenseId": "n5_l05_s058",
+          "sourceVocabId": "n4_l32_v036",
+          "sourceSenseId": "n4_l32_s036",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -70,145 +75,250 @@
         }
       ],
       "legacy": {
-        "meaning": "Thất (bảy)",
-        "onyomi": "SHICHI",
-        "kunyomi": "nana"
+        "meaning": "Tịch (chiều tối)",
+        "onyomi": "セキ",
+        "kunyomi": "ゆう"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l05_k002",
+      "kanjiId": "n5_canonical_l05_k002",
       "lessonId": 5,
       "level": "N5",
-      "character": "八",
-      "strokeCount": 2,
+      "character": "女",
+      "strokeCount": 3,
       "labels": {
-        "hanViet": "Bát",
-        "meaningVi": "tám",
-        "meaningViDisplay": "Bát (tám)",
-        "meaningEn": "Eight"
+        "hanViet": "Nữ",
+        "meaningVi": "phụ nữ",
+        "meaningViDisplay": "Nữ (phụ nữ)",
+        "meaningEn": "Woman, Female"
       },
       "readings": {
         "onyomi": [
-          "HACHI"
+          "ジョ",
+          "ニョ",
+          "ニョウ"
         ],
         "kunyomi": [
-          "yatsu"
+          "おんな",
+          "め"
         ]
       },
       "mnemonic": {
-        "vi": "Hai nét xòe ra như chân của số 8.",
-        "en": "Two lines spreading out like the legs of the number 8."
+        "vi": "Hình ảnh phụ nữ đang quỳ hoặc ngồi bắt chéo chân khép nép.",
+        "en": "A woman sitting or kneeling politely."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "六",
+          "好",
+          "安",
+          "姉",
+          "妹",
+          "始"
+        ],
+        "hanViet": "Nữ"
+      },
+      "search": {
+        "hanVietNoAccent": "Nu",
+        "meaningViNoAccent": "phu nu",
+        "meaningEnNoAccent": "Woman, Female"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l11_v067",
+          "sourceSenseId": "n5_l11_s067",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l10_v005",
+          "sourceSenseId": "n5_l10_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l10_v007",
+          "sourceSenseId": "n5_l10_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nữ (phụ nữ)",
+        "onyomi": "ジョ, ニョ, ニョウ",
+        "kunyomi": "おんな, め"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l05_k003",
+      "lessonId": 5,
+      "level": "N5",
+      "character": "山",
+      "strokeCount": 3,
+      "labels": {
+        "hanViet": "San",
+        "meaningVi": "núi",
+        "meaningViDisplay": "San (núi)",
+        "meaningEn": "Mountain"
+      },
+      "readings": {
+        "onyomi": [
+          "サン",
+          "セン"
+        ],
+        "kunyomi": [
+          "やま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Hình chữ 山 trông giống như 3 ngọn núi đứng cạnh nhau.",
+        "en": "The character looks like three mountain peaks standing side by side."
+      },
+      "decomposition": {
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "出",
+          "岩"
+        ],
+        "hanViet": "San"
+      },
+      "search": {
+        "hanVietNoAccent": "San",
+        "meaningViNoAccent": "nui",
+        "meaningEnNoAccent": "Mountain"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l08_v036",
+          "sourceSenseId": "n5_l08_s036",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l08_v055",
+          "sourceSenseId": "n5_l08_s055",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l08_v060",
+          "sourceSenseId": "n5_l08_s060",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "San (núi)",
+        "onyomi": "サン, セン",
+        "kunyomi": "やま"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l05_k004",
+      "lessonId": 5,
+      "level": "N5",
+      "character": "六",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Lục",
+        "meaningVi": "sáu",
+        "meaningViDisplay": "Lục (sáu)",
+        "meaningEn": "Six"
+      },
+      "readings": {
+        "onyomi": [
+          "ロク",
+          "リク"
+        ],
+        "kunyomi": [
+          "む",
+          "む.つ",
+          "むっ.つ",
+          "むい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Hình ảnh một người đang đứng dang tay và chân.",
+        "en": "A person stretching out arms and legs."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "亠",
+          "八"
+        ],
+        "componentNames": [
+          "Đầu (nắp đậy)",
+          "Bát (tám, chia ra)"
+        ],
+        "relatedKanji": [
+          "八",
           "公"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "bat",
-        "meaningViNoAccent": "tam",
-        "meaningEnNoAccent": "eight"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l05_v059",
-          "sourceSenseId": "n5_l05_s059",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l05_v040",
-          "sourceSenseId": "n5_l05_s040",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l05_v060",
-          "sourceSenseId": "n5_l05_s060",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Bát (tám)",
-        "onyomi": "HACHI",
-        "kunyomi": "yatsu"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l05_k003",
-      "lessonId": 5,
-      "level": "N5",
-      "character": "九",
-      "strokeCount": 2,
-      "labels": {
-        "hanViet": "Cửu",
-        "meaningVi": "chín",
-        "meaningViDisplay": "Cửu (chín)",
-        "meaningEn": "Nine"
-      },
-      "readings": {
-        "onyomi": [
-          "KYUU",
-          "KU"
         ],
-        "kunyomi": [
-          "kokono"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Một cái móc câu lớn.",
-        "en": "Imagine a big hook."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "丸"
-        ]
+        "hanViet": "Lục"
       },
       "search": {
-        "hanVietNoAccent": "cuu",
-        "meaningViNoAccent": "chin",
-        "meaningEnNoAccent": "nine"
+        "hanVietNoAccent": "Luc",
+        "meaningViNoAccent": "sau",
+        "meaningEnNoAccent": "Six"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l05_v061",
-          "sourceSenseId": "n5_l05_s061",
+          "sourceVocabId": "n5_l02_v054",
+          "sourceSenseId": "n5_l02_s054",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l05_v041",
-          "sourceSenseId": "n5_l05_s041",
+          "sourceVocabId": "n5_l04_v067",
+          "sourceSenseId": "n5_l04_s067",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l05_v062",
-          "sourceSenseId": "n5_l05_s062",
+          "sourceVocabId": "n5_l04_v066",
+          "sourceSenseId": "n5_l04_s066",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -216,90 +326,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Cửu (chín)",
-        "onyomi": "KYUU, KU",
-        "kunyomi": "kokono"
+        "meaning": "Lục (sáu)",
+        "onyomi": "ロク, リク",
+        "kunyomi": "む, む.つ, むっ.つ, むい"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l05_k004",
-      "lessonId": 5,
-      "level": "N5",
-      "character": "十",
-      "strokeCount": 2,
-      "labels": {
-        "hanViet": "Thập",
-        "meaningVi": "mười",
-        "meaningViDisplay": "Thập (mười)",
-        "meaningEn": "Ten"
-      },
-      "readings": {
-        "onyomi": [
-          "JUU"
-        ],
-        "kunyomi": [
-          "tou"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Một cái dấu cộng (thập tự).",
-        "en": "A simple plus sign (cross)."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "千",
-          "古",
-          "早"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thap",
-        "meaningViNoAccent": "muoi",
-        "meaningEnNoAccent": "ten"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l05_v063",
-          "sourceSenseId": "n5_l05_s063",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l05_v042",
-          "sourceSenseId": "n5_l05_s042",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l05_v043",
-          "sourceSenseId": "n5_l05_s043",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Thập (mười)",
-        "onyomi": "JUU",
-        "kunyomi": "tou"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

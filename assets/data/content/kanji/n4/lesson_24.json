@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 24,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l24_k001",
+      "lessonId": 24,
+      "level": "N4",
+      "character": "鉄",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Thiết",
+        "meaningVi": "Sắt",
+        "meaningViDisplay": "Thiết (Sắt)",
+        "meaningEn": "iron; fer; hierro"
+      },
+      "readings": {
+        "onyomi": [
+          "テツ"
+        ],
+        "kunyomi": [
+          "くろがね"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Luyện vàng ( ) thất bại ( ) ra sắt ( ) 鉄 1 12",
+        "en": "iron; fer; hierro"
+      },
+      "decomposition": {
+        "hanViet": "Thiết",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thiet",
+        "meaningViNoAccent": "Sat",
+        "meaningEnNoAccent": "iron; fer; hierro"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thiết (Sắt)",
+        "onyomi": "テツ",
+        "kunyomi": "くろがね"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l24_k002",
+      "lessonId": 24,
+      "level": "N4",
+      "character": "静",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Tĩnh",
+        "meaningVi": "yên tĩnh",
+        "meaningViDisplay": "Tĩnh (yên tĩnh)",
+        "meaningEn": "Quiet"
+      },
+      "readings": {
+        "onyomi": [
+          "セイ",
+          "ジョウ"
+        ],
+        "kunyomi": [
+          "しず-",
+          "しず.か",
+          "しず.まる",
+          "しず.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bầu trời xanh ( ) không còn chiến tranh ( ) thật tĩnh lặng ( ) 2 9",
+        "en": "Deep green/blue (青) nature brings QUIET."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "青",
+          "争"
+        ],
+        "componentNames": [
+          "Thanh (xanh)",
+          "Tranh (tranh đấu)"
+        ],
+        "relatedKanji": [
+          "青",
+          "争",
+          "清",
+          "情"
+        ],
+        "hanViet": "Tĩnh"
+      },
+      "search": {
+        "hanVietNoAccent": "Tinh",
+        "meaningViNoAccent": "yen tinh",
+        "meaningEnNoAccent": "Quiet"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l32_v069",
+          "sourceSenseId": "n4_l32_s069",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l32_v070",
+          "sourceSenseId": "n4_l32_s070",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l08_v003",
+          "sourceSenseId": "n5_l08_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tĩnh (yên tĩnh)",
+        "onyomi": "セイ, ジョウ",
+        "kunyomi": "しず-, しず.か, しず.まる, しず.める"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l24_k003",
+      "lessonId": 24,
+      "level": "N4",
+      "character": "歌",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Ca",
+        "meaningVi": "bài hát",
+        "meaningViDisplay": "Ca (bài hát)",
+        "meaningEn": "Song"
+      },
+      "readings": {
+        "onyomi": [
+          "カ"
+        ],
+        "kunyomi": [
+          "うた",
+          "うた.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Khả năng ( ) bị thiếu ( ) chính là ca hát ( ) 歌 11",
+        "en": "Two people (可) opening their mouths (欠) to sing a SONG."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "哥",
+          "欠"
+        ],
+        "componentNames": [
+          "Ca (anh, hát)",
+          "Khiếm (há miệng)"
+        ],
+        "relatedKanji": [
+          "飲",
+          "何"
+        ],
+        "hanViet": "Ca"
+      },
+      "search": {
+        "hanVietNoAccent": "Ca",
+        "meaningViNoAccent": "bai hat",
+        "meaningEnNoAccent": "Song"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l09_v013",
+          "sourceSenseId": "n5_l09_s013",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l09_v018",
+          "sourceSenseId": "n5_l09_s018",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l18_v004",
+          "sourceSenseId": "n5_l18_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Ca (bài hát)",
+        "onyomi": "カ",
+        "kunyomi": "うた, うた.う"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l24_k004",
+      "lessonId": 24,
+      "level": "N4",
+      "character": "漢",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Hán",
+        "meaningVi": "chữ Hán; Trung Hoa",
+        "meaningViDisplay": "Hán (chữ Hán; Trung Hoa)",
+        "meaningEn": "China, Han"
+      },
+      "readings": {
+        "onyomi": [
+          "カン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Nước ( ) Hán ( ) là nơi sinh ra chữ Hán ( ) 漢 6",
+        "en": "Water (氵) flowing through the land of the HAN."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "氵",
+          "𦰩"
+        ],
+        "componentNames": [
+          "Thủy (nước)",
+          "Hán phải (biến thể)"
+        ],
+        "relatedKanji": [
+          "洗",
+          "消",
+          "法"
+        ],
+        "hanViet": "Hán"
+      },
+      "search": {
+        "hanVietNoAccent": "Han",
+        "meaningViNoAccent": "chu Han; Trung Hoa",
+        "meaningEnNoAccent": "China, Han"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l09_v058",
+          "sourceSenseId": "n5_l09_s058",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l09_v021",
+          "sourceSenseId": "n5_l09_s021",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Hán (chữ Hán; Trung Hoa)",
+        "onyomi": "カン",
+        "kunyomi": ""
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l24_k005",
+      "lessonId": 24,
+      "level": "N4",
+      "character": "語",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Ngữ",
+        "meaningVi": "ngôn ngữ; từ ngữ; lời nói",
+        "meaningViDisplay": "Ngữ (ngôn ngữ; từ ngữ; lời nói)",
+        "meaningEn": "word, speech"
+      },
+      "readings": {
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かた.る",
+          "かた.らう"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lời nói ( ) của ta ( )là ngôn ngữ ( ) 語 1 8",
+        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
+      },
+      "decomposition": {
+        "hanViet": "Ngữ",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "言",
+          "話",
+          "文",
+          "学"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ngu",
+        "meaningViNoAccent": "ngon ngu; tu ngu; loi noi",
+        "meaningEnNoAccent": "word, speech"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l04_v003",
+          "sourceSenseId": "n3_l04_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Ngữ (ngôn ngữ; từ ngữ; lời nói)",
+        "onyomi": "ゴ",
+        "kunyomi": "かた.る, かた.らう"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 4,
+        "themeEn": "Studying language and culture through abroad study",
+        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l24_k006",
+      "lessonId": 24,
+      "level": "N4",
+      "character": "歴",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Lịch",
+        "meaningVi": "lịch sử; trải qua; quá trình",
+        "meaningViDisplay": "Lịch (lịch sử; trải qua; quá trình)",
+        "meaningEn": "history, passage of time, curriculum"
+      },
+      "readings": {
+        "onyomi": [
+          "レキ",
+          "レッキ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Dưới sườn núi ( ) vào rừng ( ) dừng lại ( ) xem lí lịch ( ) 1",
+        "en": "Core kanji for QUARTET 23: History and politics."
+      },
+      "decomposition": {
+        "hanViet": "Lịch",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "史",
+          "過",
+          "経",
+          "年"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Lich",
+        "meaningViNoAccent": "lich su; trai qua; qua trinh",
+        "meaningEnNoAccent": "history, passage of time, curriculum"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l23_v001",
+          "sourceSenseId": "n3_l23_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Lịch (lịch sử; trải qua; quá trình)",
+        "onyomi": "レキ, レッキ",
+        "kunyomi": ""
+      },
+      "theme": {
+        "quartetLesson": 23,
+        "themeEn": "History and politics",
+        "themeVi": "Lịch sử và chính trị"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l24_k007",
+      "lessonId": 24,
+      "level": "N4",
+      "character": "駅",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Dịch",
+        "meaningVi": "Nhà ga",
+        "meaningViDisplay": "Dịch (Nhà ga)",
+        "meaningEn": "station; gare; estación"
+      },
+      "readings": {
+        "onyomi": [
+          "エキ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Con ngựa ( ) bị xích ( ) ở nhà ga ( )駅 2 11",
+        "en": "station; gare; estación"
+      },
+      "decomposition": {
+        "hanViet": "Dịch",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dich",
+        "meaningViNoAccent": "Nha ga",
+        "meaningEnNoAccent": "station; gare; estacion"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Dịch (Nhà ga)",
+        "onyomi": "エキ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

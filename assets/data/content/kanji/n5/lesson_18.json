@@ -1,393 +1,86 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 18,
-  "entryCount": 5,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l18_k001",
+      "kanjiId": "n5_canonical_l18_k001",
       "lessonId": 18,
       "level": "N5",
-      "character": "洗",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Tẩy",
-        "meaningVi": "rửa",
-        "meaningViDisplay": "Tẩy (rửa)",
-        "meaningEn": "Wash"
-      },
-      "readings": {
-        "onyomi": [
-          "SEN"
-        ],
-        "kunyomi": [
-          "ara-u"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Dùng nước (Thủy 氵) để RỬA chân trước khi đi (Tiên 先).",
-        "en": "Using water (氵) to WASH up before moving ahead (先)."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "氵",
-          "先"
-        ],
-        "componentNames": [
-          "Thủy (nước)",
-          "Tiên (trước)"
-        ],
-        "relatedKanji": [
-          "先",
-          "消",
-          "法"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tay",
-        "meaningViNoAccent": "rua",
-        "meaningEnNoAccent": "wash"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l18_v039",
-          "sourceSenseId": "n5_l18_s039",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l19_v004",
-          "sourceSenseId": "n5_l19_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l18_v002",
-          "sourceSenseId": "n5_l18_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tẩy (rửa)",
-        "onyomi": "SEN",
-        "kunyomi": "ara-u"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l18_k002",
-      "lessonId": 18,
-      "level": "N5",
-      "character": "歌",
-      "strokeCount": 14,
-      "labels": {
-        "hanViet": "Ca",
-        "meaningVi": "bài hát",
-        "meaningViDisplay": "Ca (bài hát)",
-        "meaningEn": "Song"
-      },
-      "readings": {
-        "onyomi": [
-          "KA"
-        ],
-        "kunyomi": [
-          "uta"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Hai người (Khả 可) há miệng (Khiếm 欠) để HÁT.",
-        "en": "Two people (可) singing together."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "哥",
-          "欠"
-        ],
-        "componentNames": [
-          "Ca (anh, hát)",
-          "Khiếm (há miệng)"
-        ],
-        "relatedKanji": [
-          "飲",
-          "何"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "ca",
-        "meaningViNoAccent": "bai hat",
-        "meaningEnNoAccent": "song"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l09_v013",
-          "sourceSenseId": "n5_l09_s013",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l09_v018",
-          "sourceSenseId": "n5_l09_s018",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l18_v004",
-          "sourceSenseId": "n5_l18_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Ca (bài hát)",
-        "onyomi": "KA",
-        "kunyomi": "uta"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l18_k003",
-      "lessonId": 18,
-      "level": "N5",
-      "character": "引",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Dẫn",
-        "meaningVi": "kéo",
-        "meaningViDisplay": "Dẫn (kéo)",
-        "meaningEn": "Pull"
-      },
-      "readings": {
-        "onyomi": [
-          "IN"
-        ],
-        "kunyomi": [
-          "hi-ku"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Giương cung (Cung 弓) dùng cây gậy (Sổ 丨) để KÉO.",
-        "en": "Drawing/pulling a bow string."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "弓",
-          "丨"
-        ],
-        "componentNames": [
-          "Cung (cái cung)",
-          "Cổn (nét sổ)"
-        ],
-        "relatedKanji": [
-          "弓",
-          "張"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "dan",
-        "meaningViNoAccent": "keo",
-        "meaningEnNoAccent": "pull"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l18_v037",
-          "sourceSenseId": "n5_l18_s037",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l16_v045",
-          "sourceSenseId": "n5_l16_s045",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l23_v011",
-          "sourceSenseId": "n5_l23_s011",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Dẫn (kéo)",
-        "onyomi": "IN",
-        "kunyomi": "hi-ku"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l18_k004",
-      "lessonId": 18,
-      "level": "N5",
-      "character": "歩",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Bộ",
-        "meaningVi": "đi bộ",
-        "meaningViDisplay": "Bộ (đi bộ)",
-        "meaningEn": "Walk"
-      },
-      "readings": {
-        "onyomi": [
-          "HO",
-          "BU"
-        ],
-        "kunyomi": [
-          "aru-ku"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Chân (Chỉ 止) bước đi trên mặt đất (Thiểu 少 - bớt đi khoảng cách).",
-        "en": "Feet (止) taking steps to move."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "止",
-          "少"
-        ],
-        "componentNames": [
-          "Chỉ (dừng)",
-          "Thiểu (ít)"
-        ],
-        "relatedKanji": [
-          "止",
-          "走"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "bo",
-        "meaningViNoAccent": "di bo",
-        "meaningEnNoAccent": "walk"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l18_v038",
-          "sourceSenseId": "n5_l18_s038",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l13_v011",
-          "sourceSenseId": "n5_l13_s011",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l23_v008",
-          "sourceSenseId": "n5_l23_s008",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Bộ (đi bộ)",
-        "onyomi": "HO, BU",
-        "kunyomi": "aru-ku"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l18_k005",
-      "lessonId": 18,
-      "level": "N5",
-      "character": "走",
+      "character": "見",
       "strokeCount": 7,
       "labels": {
-        "hanViet": "Tẩu",
-        "meaningVi": "chạy",
-        "meaningViDisplay": "Tẩu (chạy)",
-        "meaningEn": "Run"
+        "hanViet": "Kiến",
+        "meaningVi": "nhìn",
+        "meaningViDisplay": "Kiến (nhìn)",
+        "meaningEn": "See, Look"
       },
       "readings": {
         "onyomi": [
-          "SOU"
+          "ケン"
         ],
         "kunyomi": [
-          "hashi-ru"
+          "み.る",
+          "み.える",
+          "み.せる"
         ]
       },
       "mnemonic": {
-        "vi": "Người đang đứng (Thổ 土) nhấc chân vung vẩy để chẠY.",
-        "en": "A person on the ground (土) running fast."
+        "vi": "Mắt (目) có chân (儿) để đi xem.",
+        "en": "An eye (目) on legs (儿) going to see."
       },
       "decomposition": {
         "structure": "top-bottom",
         "components": [
-          "土",
-          "止"
+          "目",
+          "儿"
         ],
         "componentNames": [
-          "Thổ (đất)",
-          "Chỉ biến thể (dừng)"
+          "Mục (mắt)",
+          "Nhi (chân người)"
         ],
         "relatedKanji": [
-          "歩",
-          "止"
-        ]
+          "目",
+          "親"
+        ],
+        "hanViet": "Kiến"
       },
       "search": {
-        "hanVietNoAccent": "tau",
-        "meaningViNoAccent": "chay",
-        "meaningEnNoAccent": "run"
+        "hanVietNoAccent": "Kien",
+        "meaningViNoAccent": "nhin",
+        "meaningEnNoAccent": "See, Look"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l18_v040",
-          "sourceSenseId": "n5_l18_s040",
+          "sourceVocabId": "n5_l06_v058",
+          "sourceSenseId": "n5_l06_s058",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l18_v041",
-          "sourceSenseId": "n5_l18_s041",
+          "sourceVocabId": "n5_l06_v040",
+          "sourceSenseId": "n5_l06_s040",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n4_l27_v003",
-          "sourceSenseId": "n4_l27_s003",
+          "sourceVocabId": "n5_l06_v004",
+          "sourceSenseId": "n5_l06_s004",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -395,16 +88,263 @@
         }
       ],
       "legacy": {
-        "meaning": "Tẩu (chạy)",
-        "onyomi": "SOU",
-        "kunyomi": "hashi-ru"
+        "meaning": "Kiến (nhìn)",
+        "onyomi": "ケン",
+        "kunyomi": "み.る, み.える, み.せる"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l18_k002",
+      "lessonId": 18,
+      "level": "N5",
+      "character": "足",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Túc",
+        "meaningVi": "chân",
+        "meaningViDisplay": "Túc (chân)",
+        "meaningEn": "Leg, Foot"
+      },
+      "readings": {
+        "onyomi": [
+          "ソク"
+        ],
+        "kunyomi": [
+          "あし",
+          "た.りる",
+          "た.る",
+          "た.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Một cái chân đang đứng vững chãi.",
+        "en": "A leg/foot standing firmly."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "口",
+          "止"
+        ],
+        "componentNames": [
+          "Khẩu (miệng)",
+          "Chỉ (dừng)"
+        ],
+        "relatedKanji": [
+          "止",
+          "踊"
+        ],
+        "hanViet": "Túc"
+      },
+      "search": {
+        "hanVietNoAccent": "Tuc",
+        "meaningViNoAccent": "chan",
+        "meaningEnNoAccent": "Leg, Foot"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l16_v030",
+          "sourceSenseId": "n5_l16_s030",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l11_v070",
+          "sourceSenseId": "n5_l11_s070",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l21_v003",
+          "sourceSenseId": "n5_l21_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Túc (chân)",
+        "onyomi": "ソク",
+        "kunyomi": "あし, た.りる, た.る, た.す"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l18_k003",
+      "lessonId": 18,
+      "level": "N5",
+      "character": "図",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Đồ",
+        "meaningVi": "bản đồ; sơ đồ; kế hoạch",
+        "meaningViDisplay": "Đồ (bản đồ; sơ đồ; kế hoạch)",
+        "meaningEn": "map; drawing; plan"
+      },
+      "readings": {
+        "onyomi": [
+          "ズ",
+          "ト"
+        ],
+        "kunyomi": [
+          "え",
+          "はか.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "図 là bản đồ, sơ đồ hoặc kế hoạch; 意図 là ý định phía sau hành động.",
+        "en": "図 means map, diagram, or plan; 意図 means intention."
+      },
+      "decomposition": {
+        "hanViet": "Đồ",
+        "structure": "enclosure",
+        "components": [
+          "囗",
+          "斗"
+        ],
+        "componentNames": [
+          "vi/vây quanh",
+          "đẩu/cái đấu"
+        ],
+        "relatedKanji": [
+          "地",
+          "表",
+          "意",
+          "計"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Do",
+        "meaningViNoAccent": "ban do; so do; ke hoach",
+        "meaningEnNoAccent": "map; drawing; plan"
+      },
+      "examples": [
+        {
+          "word": "意図",
+          "reading": "いと",
+          "meaning": "ý định; mục đích",
+          "meaningEn": "ý định, mục đích, kế hoạch"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đồ (bản đồ; sơ đồ; kế hoạch)",
+        "onyomi": "ズ, ト",
+        "kunyomi": "え, はか.る"
+      }
+    },
+    {
+      "kanjiId": "n5_canonical_l18_k004",
+      "lessonId": 18,
+      "level": "N5",
+      "character": "男",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Nam",
+        "meaningVi": "đàn ông",
+        "meaningViDisplay": "Nam (đàn ông)",
+        "meaningEn": "Man, Male"
+      },
+      "readings": {
+        "onyomi": [
+          "ダン",
+          "ナン"
+        ],
+        "kunyomi": [
+          "おとこ",
+          "お"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng Sức lực (Lực 力) để làm việc trên Ruộng (Điền 田).",
+        "en": "Using strength (力) in the field (田)."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "田",
+          "力"
+        ],
+        "componentNames": [
+          "Điền (ruộng)",
+          "Lực (sức mạnh)"
+        ],
+        "relatedKanji": [
+          "田",
+          "力"
+        ],
+        "hanViet": "Nam"
+      },
+      "search": {
+        "hanVietNoAccent": "Nam",
+        "meaningViNoAccent": "dan ong",
+        "meaningEnNoAccent": "Man, Male"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l40_v057",
+          "sourceSenseId": "n4_l40_s057",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l10_v004",
+          "sourceSenseId": "n5_l10_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l10_v006",
+          "sourceSenseId": "n5_l10_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nam (đàn ông)",
+        "onyomi": "ダン, ナン",
+        "kunyomi": "おとこ, お"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 7,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l07_k001",
+      "lessonId": 7,
+      "level": "N4",
+      "character": "当",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Đang",
+        "meaningVi": "trúng; đúng; phù hợp; đảm nhận",
+        "meaningViDisplay": "Đang (trúng; đúng; phù hợp; đảm nhận)",
+        "meaningEn": "hit; right; appropriate"
+      },
+      "readings": {
+        "onyomi": [
+          "トウ"
+        ],
+        "kunyomi": [
+          "あ.たる",
+          "あ.たり",
+          "あ.てる",
+          "あ.て",
+          "まさ.に",
+          "まさ.にべし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Tiểu ( ) cô nương! Em ( ) đương nhiên ( ) rất xinh đẹp! 1",
+        "en": "当 expresses hitting the mark or being appropriate; 当たり can mean a hit or nearby area."
+      },
+      "decomposition": {
+        "hanViet": "Đang",
+        "structure": "top-bottom",
+        "components": [
+          "⺌",
+          "彐"
+        ],
+        "componentNames": [
+          "nhỏ",
+          "tay"
+        ],
+        "relatedKanji": [
+          "的",
+          "適",
+          "本",
+          "前"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dang",
+        "meaningViNoAccent": "trung; dung; phu hop; dam nhan",
+        "meaningEnNoAccent": "hit; right; appropriate"
+      },
+      "examples": [
+        {
+          "word": "当たり",
+          "reading": "あたり",
+          "meaning": "sự trúng; thành công; khu vực lân cận",
+          "meaningEn": "hit; success; vicinity"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đang (trúng; đúng; phù hợp; đảm nhận)",
+        "onyomi": "トウ",
+        "kunyomi": "あ.たる, あ.たり, あ.てる, あ.て, まさ.に, まさ.にべし"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l07_k002",
+      "lessonId": 7,
+      "level": "N4",
+      "character": "吏",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Lại",
+        "meaningVi": "Sử dụng",
+        "meaningViDisplay": "Lại (Sử dụng)",
+        "meaningEn": "officer; an official; fonctionnaire"
+      },
+      "readings": {
+        "onyomi": [
+          "リ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Người ( ) được quan lại ( ) sử dụng ( ) 使 7",
+        "en": "officer; an official; fonctionnaire"
+      },
+      "decomposition": {
+        "hanViet": "Lại",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Lai",
+        "meaningViNoAccent": "Su dung",
+        "meaningEnNoAccent": "officer; an official; fonctionnaire"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lại (Sử dụng)",
+        "onyomi": "リ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l07_k003",
+      "lessonId": 7,
+      "level": "N4",
+      "character": "合",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Hợp",
+        "meaningVi": "phù hợp, gặp",
+        "meaningViDisplay": "Hợp (phù hợp, gặp)",
+        "meaningEn": "Fit, Match"
+      },
+      "readings": {
+        "onyomi": [
+          "ゴウ",
+          "ガッ",
+          "カッ"
+        ],
+        "kunyomi": [
+          "あ.う",
+          "-あ.う",
+          "あ.い",
+          "あい-",
+          "-あ.い",
+          "-あい",
+          "あ.わす",
+          "あ.わせる",
+          "-あ.わせる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) có 1 ( ) miệng ( ) là hợp ( ) lý 合 1",
+        "en": "Three people with one mouth - they MATCH."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "亼",
+          "口"
+        ],
+        "componentNames": [
+          "Tập (hội tụ)",
+          "Khẩu (miệng)"
+        ],
+        "relatedKanji": [
+          "会",
+          "答",
+          "拾"
+        ],
+        "hanViet": "Hợp"
+      },
+      "search": {
+        "hanVietNoAccent": "Hop",
+        "meaningViNoAccent": "phu hop, gap",
+        "meaningEnNoAccent": "Fit, Match"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l33_v060",
+          "sourceSenseId": "n4_l33_s060",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l32_v004",
+          "sourceSenseId": "n4_l32_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v028",
+          "sourceSenseId": "n4_l39_s028",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Hợp (phù hợp, gặp)",
+        "onyomi": "ゴウ, ガッ, カッ",
+        "kunyomi": "あ.う, -あ.う, あ.い, あい-, -あ.い, -あい, あ.わす, あ.わせる, -あ.わせる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l07_k004",
+      "lessonId": 7,
+      "level": "N4",
+      "character": "虫",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Trùng",
+        "meaningVi": "Côn trùng",
+        "meaningViDisplay": "Trùng (Côn trùng)",
+        "meaningEn": "insect; bug; temper"
+      },
+      "readings": {
+        "onyomi": [
+          "チュウ",
+          "キ"
+        ],
+        "kunyomi": [
+          "むし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Trung( ) nhất ( ) huyền ( ) Trùng ( ) 虫 4",
+        "en": "insect; bug; temper"
+      },
+      "decomposition": {
+        "hanViet": "Trùng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Trung",
+        "meaningViNoAccent": "Con trung",
+        "meaningEnNoAccent": "insect; bug; temper"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Trùng (Côn trùng)",
+        "onyomi": "チュウ, キ",
+        "kunyomi": "むし"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l07_k005",
+      "lessonId": 7,
+      "level": "N4",
+      "character": "会",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Cối",
+        "meaningVi": "hội; gặp gỡ; cuộc họp; hội nhóm",
+        "meaningViDisplay": "Cối (hội; gặp gỡ; cuộc họp; hội nhóm)",
+        "meaningEn": "meeting, meet, party, association"
+      },
+      "readings": {
+        "onyomi": [
+          "カイ",
+          "エ"
+        ],
+        "kunyomi": [
+          "あ.う",
+          "あ.わせる",
+          "あつ.まる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) suốt 24 giờ ( ) đi chơi hội ( )会 1",
+        "en": "会 means meeting, gathering, or association; in 宴会 it is the gathering part of a banquet."
+      },
+      "decomposition": {
+        "hanViet": "Cối",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "宴",
+          "合",
+          "社",
+          "集"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Coi",
+        "meaningViNoAccent": "hoi; gap go; cuoc hop; hoi nhom",
+        "meaningEnNoAccent": "meeting, meet, party, association"
+      },
+      "examples": [
+        {
+          "word": "宴会",
+          "reading": "えんかい",
+          "meaning": "tiệc; yến tiệc",
+          "meaningEn": "party, banquet"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Cối (hội; gặp gỡ; cuộc họp; hội nhóm)",
+        "onyomi": "カイ, エ",
+        "kunyomi": "あ.う, あ.わせる, あつ.まる"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l07_k006",
+      "lessonId": 7,
+      "level": "N4",
+      "character": "交",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Giao",
+        "meaningVi": "giao lưu; trao đổi; qua lại",
+        "meaningViDisplay": "Giao (giao lưu; trao đổi; qua lại)",
+        "meaningEn": "mingle, mixing"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ"
+        ],
+        "kunyomi": [
+          "まじ.わる",
+          "まじ.える",
+          "ま.じる",
+          "まじ.る",
+          "ま.ざる",
+          "ま.ぜる",
+          "-か.う",
+          "か.わす",
+          "かわ.す",
+          "こもごも"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lần đầu ( ) cùng bố ( ) vợ giao lưu ( ) 1",
+        "en": "Core kanji for QUARTET 4: Studying language and culture through abroad study."
+      },
+      "decomposition": {
+        "hanViet": "Giao",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "流",
+          "通",
+          "会",
+          "換"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Giao",
+        "meaningViNoAccent": "giao luu; trao doi; qua lai",
+        "meaningEnNoAccent": "mingle, mixing"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l04_v004",
+          "sourceSenseId": "n3_l04_s004",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Giao (giao lưu; trao đổi; qua lại)",
+        "onyomi": "コウ",
+        "kunyomi": "まじ.わる, まじ.える, ま.じる, まじ.る, ま.ざる, ま.ぜる, -か.う, か.わす, かわ.す, こもごも"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 4,
+        "themeEn": "Studying language and culture through abroad study",
+        "themeVi": "Học ngôn ngữ và văn hóa qua du học"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l07_k007",
+      "lessonId": 7,
+      "level": "N4",
+      "character": "早",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Tảo",
+        "meaningVi": "sớm",
+        "meaningViDisplay": "Tảo (sớm)",
+        "meaningEn": "Early"
+      },
+      "readings": {
+        "onyomi": [
+          "ソウ",
+          "サッ"
+        ],
+        "kunyomi": [
+          "はや.い",
+          "はや",
+          "はや-",
+          "はや.まる",
+          "はや.める",
+          "さ-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Chủ nhật ( ) dậy lúc 10 ( ) giờ vẫn là sớm ( ) 早 2",
+        "en": "The sun (日) rising early."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "日",
+          "十"
+        ],
+        "componentNames": [
+          "Nhật (mặt trời)",
+          "Thập (mười)"
+        ],
+        "relatedKanji": [
+          "日",
+          "十",
+          "草"
+        ],
+        "hanViet": "Tảo"
+      },
+      "search": {
+        "hanVietNoAccent": "Tao",
+        "meaningViNoAccent": "som",
+        "meaningEnNoAccent": "Early"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l15_v035",
+          "sourceSenseId": "n5_l15_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v051",
+          "sourceSenseId": "n4_l39_s051",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l12_v005",
+          "sourceSenseId": "n5_l12_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tảo (sớm)",
+        "onyomi": "ソウ, サッ",
+        "kunyomi": "はや.い, はや, はや-, はや.まる, はや.める, さ-"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

@@ -1,150 +1,137 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 8,
-  "entryCount": 7,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l08_k001",
+      "kanjiId": "n5_canonical_l08_k001",
       "lessonId": 8,
       "level": "N5",
-      "character": "良",
-      "strokeCount": 7,
+      "character": "火",
+      "strokeCount": 4,
       "labels": {
-        "hanViet": "Lương",
-        "meaningVi": "tốt",
-        "meaningViDisplay": "Lương (tốt)",
-        "meaningEn": "Good"
+        "hanViet": "Hỏa",
+        "meaningVi": "lửa",
+        "meaningViDisplay": "Hỏa (lửa)",
+        "meaningEn": "fire"
       },
       "readings": {
         "onyomi": [
-          "RYOU"
+          "カ"
         ],
         "kunyomi": [
-          "yo-i"
+          "ひ",
+          "-び",
+          "ほ-"
         ]
       },
       "mnemonic": {
-        "vi": "Một người đang đội mũ che nắng, cảm thấy rất Tốt/Lương thiện.",
-        "en": "A person wearing a sun hat, feeling GOOD."
+        "vi": "Ghi nhớ 火 qua Hán-Việt Hỏa.",
+        "en": "fire"
       },
       "decomposition": {
-        "structure": "standalone",
+        "hanViet": "Hỏa",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "食",
-          "娘"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "luong",
-        "meaningViNoAccent": "tot",
-        "meaningEnNoAccent": "good"
+        "hanVietNoAccent": "Hoa",
+        "meaningViNoAccent": "lua",
+        "meaningEnNoAccent": "fire"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l08_v073",
-          "sourceSenseId": "n5_l08_s073",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l35_v047",
-          "sourceSenseId": "n4_l35_s047",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v067",
-          "sourceSenseId": "n5_l08_s067",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Lương (tốt)",
-        "onyomi": "RYOU",
-        "kunyomi": "yo-i"
+        "meaning": "Hỏa (lửa)",
+        "onyomi": "カ",
+        "kunyomi": "ひ, -び, ほ-"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-human-approved"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n5_l08_k002",
+      "kanjiId": "n5_canonical_l08_k002",
       "lessonId": 8,
       "level": "N5",
-      "character": "高",
-      "strokeCount": 10,
+      "character": "中",
+      "strokeCount": 4,
       "labels": {
-        "hanViet": "Cao",
-        "meaningVi": "cao, đắt",
-        "meaningViDisplay": "Cao (cao, đắt)",
-        "meaningEn": "High, Expensive"
+        "hanViet": "Trung",
+        "meaningVi": "trong, giữa",
+        "meaningViDisplay": "Trung (trong, giữa)",
+        "meaningEn": "Inside, Middle"
       },
       "readings": {
         "onyomi": [
-          "KOU"
+          "チュウ"
         ],
         "kunyomi": [
-          "taka-i"
+          "なか",
+          "うち",
+          "あた.る"
         ]
       },
       "mnemonic": {
-        "vi": "Hình ảnh một tòa tháp cao có mái che và cửa sổ.",
-        "en": "A tall tower with a roof and windows."
+        "vi": "Một mũi tên đâm xuyên qua giỮA mục tiêu.",
+        "en": "An arrow piercing through the MIDDLE."
       },
       "decomposition": {
-        "structure": "top-bottom",
+        "structure": "mixed",
         "components": [
-          "亠",
           "口",
-          "冂"
+          "丨"
         ],
         "componentNames": [
-          "Đầu (nắp đậy)",
           "Khẩu (miệng)",
-          "Quynh (vây quanh)"
+          "Cổn (nét sổ)"
         ],
         "relatedKanji": [
-          "京",
-          "景"
-        ]
+          "申"
+        ],
+        "hanViet": "Trung"
       },
       "search": {
-        "hanVietNoAccent": "cao",
-        "meaningViNoAccent": "cao, dat",
-        "meaningEnNoAccent": "high, expensive"
+        "hanVietNoAccent": "Trung",
+        "meaningViNoAccent": "trong, giua",
+        "meaningEnNoAccent": "Inside, Middle"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l08_v074",
-          "sourceSenseId": "n5_l08_s074",
+          "sourceVocabId": "n5_l10_v037",
+          "sourceSenseId": "n5_l10_s037",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l15_v024",
-          "sourceSenseId": "n5_l15_s024",
+          "sourceVocabId": "n5_l01_v036",
+          "sourceSenseId": "n5_l01_s036",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l08_v024",
-          "sourceSenseId": "n5_l08_s024",
+          "sourceVocabId": "n4_l27_v063",
+          "sourceSenseId": "n4_l27_s063",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -152,154 +139,79 @@
         }
       ],
       "legacy": {
-        "meaning": "Cao (cao, đắt)",
-        "onyomi": "KOU",
-        "kunyomi": "taka-i"
+        "meaning": "Trung (trong, giữa)",
+        "onyomi": "チュウ",
+        "kunyomi": "なか, うち, あた.る"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l08_k003",
-      "lessonId": 8,
-      "level": "N5",
-      "character": "安",
-      "strokeCount": 6,
-      "labels": {
-        "hanViet": "An",
-        "meaningVi": "rẻ, an toàn",
-        "meaningViDisplay": "An (rẻ, an toàn)",
-        "meaningEn": "Cheap, Safe"
-      },
-      "readings": {
-        "onyomi": [
-          "AN"
-        ],
-        "kunyomi": [
-          "yasu-i"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Một người phụ nữ (Nữ 女) ở dưới mái nhà (Miên 宀) thì cảm thấy An toàn.",
-        "en": "A woman (女) under a roof (宀) feels SAFE."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "宀",
-          "女"
-        ],
-        "componentNames": [
-          "Miên (mái nhà)",
-          "Nữ (phụ nữ)"
-        ],
-        "relatedKanji": [
-          "女",
-          "字",
-          "宅"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "an",
-        "meaningViNoAccent": "re, an toan",
-        "meaningEnNoAccent": "cheap, safe"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l08_v070",
-          "sourceSenseId": "n5_l08_s070",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v068",
-          "sourceSenseId": "n5_l08_s068",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v025",
-          "sourceSenseId": "n5_l08_s025",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "An (rẻ, an toàn)",
-        "onyomi": "AN",
-        "kunyomi": "yasu-i"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l08_k004",
+      "kanjiId": "n5_canonical_l08_k003",
       "lessonId": 8,
       "level": "N5",
-      "character": "大",
-      "strokeCount": 3,
+      "character": "方",
+      "strokeCount": 4,
       "labels": {
-        "hanViet": "Đại",
-        "meaningVi": "to lớn",
-        "meaningViDisplay": "Đại (to lớn)",
-        "meaningEn": "Big"
+        "hanViet": "Phương",
+        "meaningVi": "người, vị",
+        "meaningViDisplay": "Phương (người, vị)",
+        "meaningEn": "Direction, Person (polite)"
       },
       "readings": {
         "onyomi": [
-          "DAI",
-          "TAI"
+          "ホウ"
         ],
         "kunyomi": [
-          "oo-kii"
+          "かた",
+          "-かた",
+          "-がた"
         ]
       },
       "mnemonic": {
-        "vi": "Một người đang dang rộng hai tay và hai chân để thể hiện sự To lớn.",
-        "en": "A person stretching their arms and legs to show how BIG they are."
+        "vi": "Một người (bộ Đầu 亠) đang cầm một cái cày (bộ Lực 力) quay về một Hướng nhất định để làm việc.",
+        "en": "A person (head 亠) with a tool (power 力) pointing in a specific direction."
       },
       "decomposition": {
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "人",
-          "夫",
-          "天"
-        ]
+          "万",
+          "放"
+        ],
+        "hanViet": "Phương"
       },
       "search": {
-        "hanVietNoAccent": "dai",
-        "meaningViNoAccent": "to lon",
-        "meaningEnNoAccent": "big"
+        "hanVietNoAccent": "Phuong",
+        "meaningViNoAccent": "nguoi, vi",
+        "meaningEnNoAccent": "Direction, Person (polite)"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l01_v046",
-          "sourceSenseId": "n5_l01_s046",
+          "sourceVocabId": "n4_l29_v042",
+          "sourceSenseId": "n4_l29_s042",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l04_v053",
-          "sourceSenseId": "n5_l04_s053",
+          "sourceVocabId": "n5_l14_v026",
+          "sourceSenseId": "n5_l14_s026",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l08_v011",
-          "sourceSenseId": "n5_l08_s011",
+          "sourceVocabId": "n5_l01_v005",
+          "sourceSenseId": "n5_l01_s005",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -307,156 +219,83 @@
         }
       ],
       "legacy": {
-        "meaning": "Đại (to lớn)",
-        "onyomi": "DAI, TAI",
-        "kunyomi": "oo-kii"
+        "meaning": "Phương (người, vị)",
+        "onyomi": "ホウ",
+        "kunyomi": "かた, -かた, -がた"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l08_k005",
-      "lessonId": 8,
-      "level": "N5",
-      "character": "小",
-      "strokeCount": 3,
-      "labels": {
-        "hanViet": "Tiểu",
-        "meaningVi": "nhỏ",
-        "meaningViDisplay": "Tiểu (nhỏ)",
-        "meaningEn": "Small"
-      },
-      "readings": {
-        "onyomi": [
-          "SHOU"
-        ],
-        "kunyomi": [
-          "chii-sai"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Hình ảnh một vật nhỏ bị chia làm đôi bởi một vạch ở giữa.",
-        "en": "A small object split down the middle."
-      },
-      "decomposition": {
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "大",
-          "少"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tieu",
-        "meaningViNoAccent": "nho",
-        "meaningEnNoAccent": "small"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l08_v071",
-          "sourceSenseId": "n5_l08_s071",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l27_v058",
-          "sourceSenseId": "n4_l27_s058",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v012",
-          "sourceSenseId": "n5_l08_s012",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Tiểu (nhỏ)",
-        "onyomi": "SHOU",
-        "kunyomi": "chii-sai"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l08_k006",
+      "kanjiId": "n5_canonical_l08_k004",
       "lessonId": 8,
       "level": "N5",
-      "character": "新",
-      "strokeCount": 13,
+      "character": "友",
+      "strokeCount": 4,
       "labels": {
-        "hanViet": "Tân",
-        "meaningVi": "mới",
-        "meaningViDisplay": "Tân (mới)",
-        "meaningEn": "New"
+        "hanViet": "Hữu",
+        "meaningVi": "bạn bè",
+        "meaningViDisplay": "Hữu (bạn bè)",
+        "meaningEn": "Friend"
       },
       "readings": {
         "onyomi": [
-          "SHIN"
+          "ユウ"
         ],
         "kunyomi": [
-          "atara-shii"
+          "とも"
         ]
       },
       "mnemonic": {
-        "vi": "Lập (立-đứng) trên Cây (木) cầm Rìu (Can 斤) để chặt gỗ làm nhà Mới.",
-        "en": "Standing (立) on a tree (木) with an axe (斤) to build something NEW."
+        "vi": "Hai cánh tay (Hựu 又) đan vào nhau chứng tỏ sự gắn kết bạn bè.",
+        "en": "Hands (又) joined together representing friendship."
       },
       "decomposition": {
-        "structure": "left-right",
+        "structure": "mixed",
         "components": [
-          "立",
-          "木",
-          "斤"
+          "ナ",
+          "又"
         ],
         "componentNames": [
-          "Lập (đứng)",
-          "Mộc (cây)",
-          "Cân (rìu)"
+          "Nét trên",
+          "Hựu (tay)"
         ],
         "relatedKanji": [
-          "立",
-          "木",
-          "親",
-          "所",
-          "折"
-        ]
+          "有",
+          "取"
+        ],
+        "hanViet": "Hữu"
       },
       "search": {
-        "hanVietNoAccent": "tan",
-        "meaningViNoAccent": "moi",
-        "meaningEnNoAccent": "new"
+        "hanVietNoAccent": "Huu",
+        "meaningViNoAccent": "ban be",
+        "meaningEnNoAccent": "Friend"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l08_v072",
-          "sourceSenseId": "n5_l08_s072",
+          "sourceVocabId": "n5_l07_v057",
+          "sourceSenseId": "n5_l07_s057",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l05_v011",
-          "sourceSenseId": "n5_l05_s011",
+          "sourceVocabId": "n5_l07_v055",
+          "sourceSenseId": "n5_l07_s055",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l08_v013",
-          "sourceSenseId": "n5_l08_s013",
+          "sourceVocabId": "n5_l05_v017",
+          "sourceSenseId": "n5_l05_s017",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -464,95 +303,17 @@
         }
       ],
       "legacy": {
-        "meaning": "Tân (mới)",
-        "onyomi": "SHIN",
-        "kunyomi": "atara-shii"
+        "meaning": "Hữu (bạn bè)",
+        "onyomi": "ユウ",
+        "kunyomi": "とも"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l08_k007",
-      "lessonId": 8,
-      "level": "N5",
-      "character": "古",
-      "strokeCount": 5,
-      "labels": {
-        "hanViet": "Cổ",
-        "meaningVi": "cũ",
-        "meaningViDisplay": "Cổ (cũ)",
-        "meaningEn": "Old"
-      },
-      "readings": {
-        "onyomi": [
-          "KO"
-        ],
-        "kunyomi": [
-          "furu-i"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Lời nói từ mười (Thập 十) cái miệng (Khẩu 口) truyền lại từ ngày Xưa (Cổ).",
-        "en": "Words passed down through ten (十) mouths (口) from OLD times."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "十",
-          "口"
-        ],
-        "componentNames": [
-          "Thập (mười)",
-          "Khẩu (miệng)"
-        ],
-        "relatedKanji": [
-          "十",
-          "口"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "co",
-        "meaningViNoAccent": "cu",
-        "meaningEnNoAccent": "old"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l08_v069",
-          "sourceSenseId": "n5_l08_s069",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v075",
-          "sourceSenseId": "n5_l08_s075",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l08_v014",
-          "sourceSenseId": "n5_l08_s014",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Cổ (cũ)",
-        "onyomi": "KO",
-        "kunyomi": "furu-i"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

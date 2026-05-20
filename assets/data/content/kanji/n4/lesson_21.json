@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 21,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l21_k001",
+      "lessonId": 21,
+      "level": "N4",
+      "character": "終",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Chung",
+        "meaningVi": "kết thúc",
+        "meaningViDisplay": "Chung (kết thúc)",
+        "meaningEn": "End, Finish"
+      },
+      "readings": {
+        "onyomi": [
+          "シュウ"
+        ],
+        "kunyomi": [
+          "お.わる",
+          "-お.わる",
+          "おわ.る",
+          "お.える",
+          "つい",
+          "つい.に"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Chuyện tình ta như sợi chỉ( ) đến mùa đông( ) là kết thúc ( ) 1 7 8",
+        "en": "Silk threads (糸) finished in winter (冬)."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "糸",
+          "冬"
+        ],
+        "componentNames": [
+          "Mịch (sợi tơ)",
+          "Đông (mùa đông)"
+        ],
+        "relatedKanji": [
+          "始",
+          "糸",
+          "紙",
+          "絵"
+        ],
+        "hanViet": "Chung"
+      },
+      "search": {
+        "hanVietNoAccent": "Chung",
+        "meaningViNoAccent": "ket thuc",
+        "meaningEnNoAccent": "End, Finish"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l17_v046",
+          "sourceSenseId": "n5_l17_s046",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v047",
+          "sourceSenseId": "n5_l17_s047",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v048",
+          "sourceSenseId": "n5_l17_s048",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Chung (kết thúc)",
+        "onyomi": "シュウ",
+        "kunyomi": "お.わる, -お.わる, おわ.る, お.える, つい, つい.に"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l21_k002",
+      "lessonId": 21,
+      "level": "N4",
+      "character": "済",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Tế",
+        "meaningVi": "xong; giải quyết; cứu giúp",
+        "meaningViDisplay": "Tế (xong; giải quyết; cứu giúp)",
+        "meaningEn": "finish, settle, relieve"
+      },
+      "readings": {
+        "onyomi": [
+          "サイ",
+          "セイ"
+        ],
+        "kunyomi": [
+          "す.む",
+          "-ず.み",
+          "-ずみ",
+          "す.まない",
+          "す.ます",
+          "-す.ます",
+          "すく.う",
+          "な.す",
+          "わたし",
+          "わた.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Nước ( ) Tề ( ) kinh tế ( ) rất mạnh 4",
+        "en": "Core kanji for QUARTET 21: Economy and finance."
+      },
+      "decomposition": {
+        "hanViet": "Tế",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "経",
+          "救",
+          "終",
+          "清"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Te",
+        "meaningViNoAccent": "xong; giai quyet; cuu giup",
+        "meaningEnNoAccent": "finish, settle, relieve"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l21_v001",
+          "sourceSenseId": "n3_l21_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tế (xong; giải quyết; cứu giúp)",
+        "onyomi": "サイ, セイ",
+        "kunyomi": "す.む, -ず.み, -ずみ, す.まない, す.ます, -す.ます, すく.う, な.す, わたし, わた.る"
+      },
+      "theme": {
+        "quartetLesson": 21,
+        "themeEn": "Economy and finance",
+        "themeVi": "Kinh tế và tài chính"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l21_k003",
+      "lessonId": 21,
+      "level": "N4",
+      "character": "奥",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Áo",
+        "meaningVi": "Bên trong, sâu",
+        "meaningViDisplay": "Áo (Bên trong, sâu)",
+        "meaningEn": "heart; interior; intérieur"
+      },
+      "readings": {
+        "onyomi": [
+          "オウ"
+        ],
+        "kunyomi": [
+          "おく",
+          "おく.まる",
+          "くま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Tài phiệt ( ) ở biên giới ( ) có đống gạo ( ) to ( ) cất góc trong cùng ( ) 1",
+        "en": "heart; interior; intérieur"
+      },
+      "decomposition": {
+        "hanViet": "Áo",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ao",
+        "meaningViNoAccent": "Ben trong, sau",
+        "meaningEnNoAccent": "heart; interior; interieur"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Áo (Bên trong, sâu)",
+        "onyomi": "オウ",
+        "kunyomi": "おく, おく.まる, くま"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l21_k004",
+      "lessonId": 21,
+      "level": "N4",
+      "character": "開",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Khai",
+        "meaningVi": "mở; khai mở; bắt đầu",
+        "meaningViDisplay": "Khai (mở; khai mở; bắt đầu)",
+        "meaningEn": "open, unfold"
+      },
+      "readings": {
+        "onyomi": [
+          "カイ"
+        ],
+        "kunyomi": [
+          "ひら.く",
+          "ひら.き",
+          "-びら.き",
+          "ひら.ける",
+          "あ.く",
+          "あ.ける"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đứng dưới cổng ( ) 1 ( ) người đang chắp tay ( ) mở ( ) cửa 2 6",
+        "en": "Core kanji for QUARTET 17: Science and technology."
+      },
+      "decomposition": {
+        "hanViet": "Khai",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "閉",
+          "始",
+          "発",
+          "門"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Khai",
+        "meaningViNoAccent": "mo; khai mo; bat dau",
+        "meaningEnNoAccent": "open, unfold"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l17_v006",
+          "sourceSenseId": "n3_l17_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Khai (mở; khai mở; bắt đầu)",
+        "onyomi": "カイ",
+        "kunyomi": "ひら.く, ひら.き, -びら.き, ひら.ける, あ.く, あ.ける"
+      },
+      "theme": {
+        "quartetLesson": 17,
+        "themeEn": "Science and technology",
+        "themeVi": "Khoa học và công nghệ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l21_k005",
+      "lessonId": 21,
+      "level": "N4",
+      "character": "場",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Tràng",
+        "meaningVi": "địa điểm",
+        "meaningViDisplay": "Tràng (địa điểm)",
+        "meaningEn": "Place"
+      },
+      "readings": {
+        "onyomi": [
+          "ジョウ",
+          "チョウ"
+        ],
+        "kunyomi": [
+          "ば"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Xúc đất ( ) vật vã ( ) ở công trường ( ) 5",
+        "en": "A sunny place on the ground."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "土",
+          "昜"
+        ],
+        "componentNames": [
+          "Thổ (đất)",
+          "Dương (ánh sáng)"
+        ],
+        "relatedKanji": [
+          "土",
+          "地"
+        ],
+        "hanViet": "Tràng"
+      },
+      "search": {
+        "hanVietNoAccent": "Trang",
+        "meaningViNoAccent": "dia diem",
+        "meaningEnNoAccent": "Place"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l14_v050",
+          "sourceSenseId": "n5_l14_s050",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l15_v030",
+          "sourceSenseId": "n5_l15_s030",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l18_v026",
+          "sourceSenseId": "n5_l18_s026",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Tràng (địa điểm)",
+        "onyomi": "ジョウ, チョウ",
+        "kunyomi": "ば"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l21_k006",
+      "lessonId": 21,
+      "level": "N4",
+      "character": "晩",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Hào",
+        "meaningVi": "tối",
+        "meaningViDisplay": "Hào (tối)",
+        "meaningEn": "Night, Evening"
+      },
+      "readings": {
+        "onyomi": [
+          "バン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Ngày ( ) miễn ( ) tội đi chơi đến tối ( )晩 5 6",
+        "en": "The sun has set for the EVENING."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "日",
+          "免"
+        ],
+        "componentNames": [
+          "Nhật (mặt trời)",
+          "Miễn (miễn)"
+        ],
+        "relatedKanji": [
+          "日",
+          "夕"
+        ],
+        "hanViet": "Hào"
+      },
+      "search": {
+        "hanVietNoAccent": "Hao",
+        "meaningViNoAccent": "toi",
+        "meaningEnNoAccent": "Night, Evening"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l04_v022",
+          "sourceSenseId": "n5_l04_s022",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l06_v015",
+          "sourceSenseId": "n5_l06_s015",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l04_v030",
+          "sourceSenseId": "n5_l04_s030",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Hào (tối)",
+        "onyomi": "バン",
+        "kunyomi": ""
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l21_k007",
+      "lessonId": 21,
+      "level": "N4",
+      "character": "遅",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Trì",
+        "meaningVi": "Trễ",
+        "meaningViDisplay": "Trì (Trễ)",
+        "meaningEn": "slow; late; back"
+      },
+      "readings": {
+        "onyomi": [
+          "チ"
+        ],
+        "kunyomi": [
+          "おく.れる",
+          "おく.らす",
+          "おそ.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Xe chở xác chết ( ) con dê ( ) đi xa ( ) nên đến muộn ( ) 1",
+        "en": "slow; late; back"
+      },
+      "decomposition": {
+        "hanViet": "Trì",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tri",
+        "meaningViNoAccent": "Tre",
+        "meaningEnNoAccent": "slow; late; back"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Trì (Trễ)",
+        "onyomi": "チ",
+        "kunyomi": "おく.れる, おく.らす, おそ.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

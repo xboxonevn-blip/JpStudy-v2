@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 3,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l03_k001",
+      "lessonId": 3,
+      "level": "N4",
+      "character": "天",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Thiên",
+        "meaningVi": "trời; bầu trời; thiên/hoàng gia",
+        "meaningViDisplay": "Thiên (trời; bầu trời; thiên/hoàng gia)",
+        "meaningEn": "heavens; sky; imperial"
+      },
+      "readings": {
+        "onyomi": [
+          "テン"
+        ],
+        "kunyomi": [
+          "あまつ",
+          "あめ",
+          "あま-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "1 ( ) thứ to ( ) nhất là trời ( ) 天 1",
+        "en": "天 means heaven or sky; 天地 combines it with earth for the whole world."
+      },
+      "decomposition": {
+        "hanViet": "Thiên",
+        "structure": "single",
+        "components": [
+          "天"
+        ],
+        "componentNames": [
+          "trời"
+        ],
+        "relatedKanji": [
+          "地",
+          "空",
+          "雨",
+          "日"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thien",
+        "meaningViNoAccent": "troi; bau troi; thien/hoang gia",
+        "meaningEnNoAccent": "heavens; sky; imperial"
+      },
+      "examples": [
+        {
+          "word": "天地",
+          "reading": "あめつち",
+          "meaning": "trời đất; vũ trụ; tự nhiên",
+          "meaningEn": "heaven and earth; the universe"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Thiên (trời; bầu trời; thiên/hoàng gia)",
+        "onyomi": "テン",
+        "kunyomi": "あまつ, あめ, あま-"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l03_k002",
+      "lessonId": 3,
+      "level": "N4",
+      "character": "夫",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Phu",
+        "meaningVi": "chồng",
+        "meaningViDisplay": "Phu (chồng)",
+        "meaningEn": "Husband"
+      },
+      "readings": {
+        "onyomi": [
+          "フ",
+          "フウ",
+          "ブ"
+        ],
+        "kunyomi": [
+          "おっと",
+          "それ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Chồng ( ) cao hơn trời ( ) 天 3",
+        "en": "A big man (大) with a hairpin (一) representing a HUSBAND."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "大",
+          "一"
+        ],
+        "componentNames": [
+          "Đại (to lớn)",
+          "Nhất (một, nét ngang)"
+        ],
+        "relatedKanji": [
+          "大",
+          "替"
+        ],
+        "hanViet": "Phu"
+      },
+      "search": {
+        "hanVietNoAccent": "Phu",
+        "meaningViNoAccent": "chong",
+        "meaningEnNoAccent": "Husband"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l09_v031",
+          "sourceSenseId": "n5_l09_s031",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l26_v068",
+          "sourceSenseId": "n4_l26_s068",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l42_v006",
+          "sourceSenseId": "n4_l42_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Phu (chồng)",
+        "onyomi": "フ, フウ, ブ",
+        "kunyomi": "おっと, それ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l03_k003",
+      "lessonId": 3,
+      "level": "N4",
+      "character": "王",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Vương",
+        "meaningVi": "vương; vua; hoàng gia; người cai trị",
+        "meaningViDisplay": "Vương (vương; vua; hoàng gia; người cai trị)",
+        "meaningEn": "king, ruler, royal"
+      },
+      "readings": {
+        "onyomi": [
+          "オウ",
+          "-ノウ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "1 ( ) vùng đất ( ) chỉ có một vua ( ) 王 1",
+        "en": "王 means king or royal; in 王女 it marks the royal side of a princess."
+      },
+      "decomposition": {
+        "hanViet": "Vương",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "女",
+          "国",
+          "皇",
+          "主"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vuong",
+        "meaningViNoAccent": "vuong; vua; hoang gia; nguoi cai tri",
+        "meaningEnNoAccent": "king, ruler, royal"
+      },
+      "examples": [
+        {
+          "word": "王女",
+          "reading": "おうじょ",
+          "meaning": "công chúa",
+          "meaningEn": "princess"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Vương (vương; vua; hoàng gia; người cai trị)",
+        "onyomi": "オウ, -ノウ",
+        "kunyomi": ""
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l03_k004",
+      "lessonId": 3,
+      "level": "N4",
+      "character": "文",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Văn",
+        "meaningVi": "văn chương",
+        "meaningViDisplay": "Văn (văn chương)",
+        "meaningEn": "Sentence, Literature"
+      },
+      "readings": {
+        "onyomi": [
+          "ブン",
+          "モン"
+        ],
+        "kunyomi": [
+          "ふみ",
+          "あや"
+        ]
+      },
+      "mnemonic": {
+        "vi": "1 2",
+        "en": "A person displaying their thoughts - LITERATURE."
+      },
+      "decomposition": {
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "字",
+          "語",
+          "読",
+          "書"
+        ],
+        "hanViet": "Văn"
+      },
+      "search": {
+        "hanVietNoAccent": "Van",
+        "meaningViNoAccent": "van chuong",
+        "meaningEnNoAccent": "Sentence, Literature"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l35_v051",
+          "sourceSenseId": "n4_l35_s051",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l36_v057",
+          "sourceSenseId": "n4_l36_s057",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l31_v008",
+          "sourceSenseId": "n4_l31_s008",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Văn (văn chương)",
+        "onyomi": "ブン, モン",
+        "kunyomi": "ふみ, あや"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l03_k005",
+      "lessonId": 3,
+      "level": "N4",
+      "character": "毋",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Vô",
+        "meaningVi": "Mỗi 𠂉",
+        "meaningViDisplay": "Vô (Mỗi 𠂉)",
+        "meaningEn": "do not; must not; be not"
+      },
+      "readings": {
+        "onyomi": [
+          "ブ",
+          "ム"
+        ],
+        "kunyomi": [
+          "はは",
+          "ぼ",
+          "ない",
+          "なか.れ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Con người đừng nằm ( ) vô ( ) ích mỗi ( ) ngày 毎 1",
+        "en": "do not; must not; be not"
+      },
+      "decomposition": {
+        "hanViet": "Vô",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Vo",
+        "meaningViNoAccent": "Moi 𠂉",
+        "meaningEnNoAccent": "do not; must not; be not"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Vô (Mỗi 𠂉)",
+        "onyomi": "ブ, ム",
+        "kunyomi": "はは, ぼ, ない, なか.れ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l03_k006",
+      "lessonId": 3,
+      "level": "N4",
+      "character": "心",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Tâm",
+        "meaningVi": "tim; tâm trí; tấm lòng",
+        "meaningViDisplay": "Tâm (tim; tâm trí; tấm lòng)",
+        "meaningEn": "heart; mind; spirit"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
+        ],
+        "kunyomi": [
+          "こころ",
+          "-ごころ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Một vần trăng khuyết ( ) 3 sao ( ) giữa trời là chữ tâm ( ) 3",
+        "en": "心 means heart or mind; 一心 means wholeheartedness."
+      },
+      "decomposition": {
+        "hanViet": "Tâm",
+        "structure": "single",
+        "components": [
+          "心"
+        ],
+        "componentNames": [
+          "tâm/tim"
+        ],
+        "relatedKanji": [
+          "思",
+          "意",
+          "感",
+          "情"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tam",
+        "meaningViNoAccent": "tim; tam tri; tam long",
+        "meaningEnNoAccent": "heart; mind; spirit"
+      },
+      "examples": [
+        {
+          "word": "一心",
+          "reading": "いっしん",
+          "meaning": "toàn tâm; một lòng",
+          "meaningEn": "one mind, wholeheartedness, the whole heart"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tâm (tim; tâm trí; tấm lòng)",
+        "onyomi": "シン",
+        "kunyomi": "こころ, -ごころ"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l03_k007",
+      "lessonId": 3,
+      "level": "N4",
+      "character": "云",
+      "strokeCount": 4,
+      "labels": {
+        "hanViet": "Vân",
+        "meaningVi": "Mây",
+        "meaningViDisplay": "Vân (Mây)",
+        "meaningEn": "say; decir"
+      },
+      "readings": {
+        "onyomi": [
+          "ウン"
+        ],
+        "kunyomi": [
+          "い.う",
+          "ここに"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Mây ( ) mưa ( ) suốt 24 giờ ( ) 云 1",
+        "en": "say; decir"
+      },
+      "decomposition": {
+        "hanViet": "Vân",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Van",
+        "meaningViNoAccent": "May",
+        "meaningEnNoAccent": "say; decir"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Vân (Mây)",
+        "onyomi": "ウン",
+        "kunyomi": "い.う, ここに"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

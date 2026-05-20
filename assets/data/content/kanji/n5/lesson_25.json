@@ -1,74 +1,140 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 25,
-  "entryCount": 1,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l25_k001",
+      "kanjiId": "n5_canonical_l25_k001",
       "lessonId": 25,
       "level": "N5",
-      "character": "考",
-      "strokeCount": 6,
+      "character": "電",
+      "strokeCount": 13,
       "labels": {
-        "hanViet": "Khảo",
-        "meaningVi": "suy nghĩ",
-        "meaningViDisplay": "Khảo (suy nghĩ)",
-        "meaningEn": "Think, Consider"
+        "hanViet": "Điện",
+        "meaningVi": "electricity; électricité; electricidad",
+        "meaningViDisplay": "Điện (electricity; électricité; electricidad)",
+        "meaningEn": "electricity; électricité; electricidad"
       },
       "readings": {
         "onyomi": [
-          "KOU"
+          "デン"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "| ie '\\ 10a. 1s... 42t > ' ˆ**3535334 3v vvv'",
+        "en": "electricity; électricité; electricidad"
+      },
+      "decomposition": {
+        "hanViet": "Điện",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dien",
+        "meaningViNoAccent": "electricity; electricite; electricidad",
+        "meaningEnNoAccent": "electricity; electricite; electricidad"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Điện (electricity; électricité; electricidad)",
+        "onyomi": "デン",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n5_canonical_l25_k002",
+      "lessonId": 25,
+      "level": "N5",
+      "character": "新",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Tân",
+        "meaningVi": "mới",
+        "meaningViDisplay": "Tân (mới)",
+        "meaningEn": "New"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
         ],
         "kunyomi": [
-          "kan-gaemasu"
+          "あたら.しい",
+          "あら.た",
+          "あら-",
+          "にい-"
         ]
       },
       "mnemonic": {
-        "vi": "Người già (Lão 耂) đang chống gậy (Dư 丂) để suy nghĨ.",
-        "en": "An elder (耂) leaning on a cane to THINK."
+        "vi": "Biển tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "Standing (立) on a tree (木) with an axe (斤) to build something NEW."
       },
       "decomposition": {
-        "structure": "top-bottom",
+        "structure": "left-right",
         "components": [
-          "耂",
-          "丂"
+          "立",
+          "木",
+          "斤"
         ],
         "componentNames": [
-          "Lão (già)",
-          "Khảo (uốn cong)"
+          "Lập (đứng)",
+          "Mộc (cây)",
+          "Cân (rìu)"
         ],
         "relatedKanji": [
-          "者"
-        ]
+          "立",
+          "木",
+          "親",
+          "所",
+          "折"
+        ],
+        "hanViet": "Tân"
       },
       "search": {
-        "hanVietNoAccent": "khao",
-        "meaningViNoAccent": "suy nghi",
-        "meaningEnNoAccent": "think, consider"
+        "hanVietNoAccent": "Tan",
+        "meaningViNoAccent": "moi",
+        "meaningEnNoAccent": "New"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l25_v031",
-          "sourceSenseId": "n5_l25_s031",
+          "sourceVocabId": "n5_l08_v072",
+          "sourceSenseId": "n5_l08_s072",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l25_v030",
-          "sourceSenseId": "n5_l25_s030",
+          "sourceVocabId": "n5_l05_v011",
+          "sourceSenseId": "n5_l05_s011",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l25_v001",
-          "sourceSenseId": "n5_l25_s001",
+          "sourceVocabId": "n5_l08_v013",
+          "sourceSenseId": "n5_l08_s013",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -76,16 +142,195 @@
         }
       ],
       "legacy": {
-        "meaning": "Khảo (suy nghĩ)",
-        "onyomi": "KOU",
-        "kunyomi": "kan-gaemasu"
+        "meaning": "Tân (mới)",
+        "onyomi": "シン",
+        "kunyomi": "あたら.しい, あら.た, あら-, にい-"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l25_k003",
+      "lessonId": 25,
+      "level": "N5",
+      "character": "聞",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Văn",
+        "meaningVi": "nghe",
+        "meaningViDisplay": "Văn (nghe)",
+        "meaningEn": "Hear, Listen"
+      },
+      "readings": {
+        "onyomi": [
+          "ブン",
+          "モン"
+        ],
+        "kunyomi": [
+          "き.く",
+          "き.こえる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đưa tai (Nhĩ 耳) vào khe Cửa (門) để nghe lén.",
+        "en": "Putting an ear (耳) between the gates (門) to listen."
+      },
+      "decomposition": {
+        "structure": "enclosure",
+        "components": [
+          "門",
+          "耳"
+        ],
+        "componentNames": [
+          "Môn (cửa)",
+          "Nhĩ (tai)"
+        ],
+        "relatedKanji": [
+          "門",
+          "耳",
+          "間",
+          "問",
+          "開",
+          "閉"
+        ],
+        "hanViet": "Văn"
+      },
+      "search": {
+        "hanVietNoAccent": "Van",
+        "meaningViNoAccent": "nghe",
+        "meaningEnNoAccent": "Hear, Listen"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l06_v057",
+          "sourceSenseId": "n5_l06_s057",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l02_v010",
+          "sourceSenseId": "n5_l02_s010",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l06_v005",
+          "sourceSenseId": "n5_l06_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Văn (nghe)",
+        "onyomi": "ブン, モン",
+        "kunyomi": "き.く, き.こえる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l25_k004",
+      "lessonId": 25,
+      "level": "N5",
+      "character": "読",
+      "strokeCount": 14,
+      "labels": {
+        "hanViet": "Đậu",
+        "meaningVi": "đọc",
+        "meaningViDisplay": "Đậu (đọc)",
+        "meaningEn": "Read"
+      },
+      "readings": {
+        "onyomi": [
+          "ドク",
+          "トク",
+          "トウ"
+        ],
+        "kunyomi": [
+          "よ.む",
+          "-よ.み"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng Lời nói (言) để trao đổi (Mại 賣) kiến thức từ việc Đọc.",
+        "en": "Words (言) used to sell/exchange (賣) what you read."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "言",
+          "売"
+        ],
+        "componentNames": [
+          "Ngôn (lời nói)",
+          "Mại (bán)"
+        ],
+        "relatedKanji": [
+          "言",
+          "話",
+          "売"
+        ],
+        "hanViet": "Đậu"
+      },
+      "search": {
+        "hanVietNoAccent": "Dau",
+        "meaningViNoAccent": "doc",
+        "meaningEnNoAccent": "Read"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l06_v059",
+          "sourceSenseId": "n5_l06_s059",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l06_v055",
+          "sourceSenseId": "n5_l06_s055",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l06_v006",
+          "sourceSenseId": "n5_l06_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Đậu (đọc)",
+        "onyomi": "ドク, トク, トウ",
+        "kunyomi": "よ.む, -よ.み"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

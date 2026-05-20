@@ -1,198 +1,91 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 5,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l05_k001",
+      "kanjiId": "n3_canonical_l05_k001",
       "lessonId": 5,
       "level": "N3",
-      "character": "就",
-      "strokeCount": 12,
+      "character": "守",
+      "strokeCount": 6,
       "labels": {
-        "hanViet": "Tựu",
-        "meaningVi": "đảm nhận; vào vị trí",
-        "meaningViDisplay": "Tựu (đảm nhận; vào vị trí)",
-        "meaningEn": "concerning, settle"
+        "hanViet": "Thủ",
+        "meaningVi": "bảo vệ",
+        "meaningViDisplay": "Thủ (bảo vệ)",
+        "meaningEn": "Protect"
       },
       "readings": {
         "onyomi": [
-          "シュウ",
-          "ジュ"
+          "シュ",
+          "ス"
         ],
         "kunyomi": [
-          "つ.く",
-          "つ.ける"
+          "まも.る",
+          "まも.り",
+          "もり",
+          "-もり",
+          "かみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
+        "vi": "Dưới mái nhà (Miên 宀) có một tấc (Thốn 寸) đất cần BẢO VỆ.",
+        "en": "Guarding an inch (寸) of land under a roof (宀)."
       },
       "decomposition": {
-        "hanViet": "Tựu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "職",
-          "任",
-          "業",
-          "学"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tuu",
-        "meaningViNoAccent": "dam nhan; vao vi tri",
-        "meaningEnNoAccent": "concerning, settle"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l05_v001",
-          "sourceSenseId": "n3_l05_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tựu (đảm nhận; vào vị trí)",
-        "onyomi": "シュウ, ジュ",
-        "kunyomi": "つ.く, つ.ける"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
-      }
-    },
-    {
-      "kanjiId": "n3_l05_k002",
-      "lessonId": 5,
-      "level": "N3",
-      "character": "職",
-      "strokeCount": 18,
-      "labels": {
-        "hanViet": "Chức",
-        "meaningVi": "nghề nghiệp; chức vụ",
-        "meaningViDisplay": "Chức (nghề nghiệp; chức vụ)",
-        "meaningEn": "post, employment"
-      },
-      "readings": {
-        "onyomi": [
-          "ショク",
-          "ソク"
+        "structure": "top-bottom",
+        "components": [
+          "宀",
+          "寸"
         ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
-      },
-      "decomposition": {
-        "hanViet": "Chức",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "componentNames": [
+          "Miên (mái nhà)",
+          "Thốn (tấc)"
+        ],
         "relatedKanji": [
-          "就",
-          "業",
-          "仕",
-          "任"
-        ]
+          "安",
+          "字",
+          "宅",
+          "村"
+        ],
+        "hanViet": "Thủ"
       },
       "search": {
-        "hanVietNoAccent": "chuc",
-        "meaningViNoAccent": "nghe nghiep; chuc vu",
-        "meaningEnNoAccent": "post, employment"
+        "hanVietNoAccent": "Thu",
+        "meaningViNoAccent": "bao ve",
+        "meaningEnNoAccent": "Protect"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l05_v001",
-          "sourceSenseId": "n3_l05_s001",
+          "sourceVocabId": "n4_l33_v061",
+          "sourceSenseId": "n4_l33_s061",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l05_v002",
-          "sourceSenseId": "n3_l05_s002",
+          "sourceVocabId": "n4_l33_v051",
+          "sourceSenseId": "n4_l33_s051",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Chức (nghề nghiệp; chức vụ)",
-        "onyomi": "ショク, ソク",
-        "kunyomi": ""
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
-      }
-    },
-    {
-      "kanjiId": "n3_l05_k003",
-      "lessonId": 5,
-      "level": "N3",
-      "character": "面",
-      "strokeCount": 9,
-      "labels": {
-        "hanViet": "Diện",
-        "meaningVi": "mặt; bề mặt",
-        "meaningViDisplay": "Diện (mặt; bề mặt)",
-        "meaningEn": "mask, face"
-      },
-      "readings": {
-        "onyomi": [
-          "メン",
-          "ベン"
-        ],
-        "kunyomi": [
-          "おも",
-          "おもて",
-          "つら"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
-      },
-      "decomposition": {
-        "hanViet": "Diện",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "接",
-          "顔",
-          "表",
-          "側"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "dien",
-        "meaningViNoAccent": "mat; be mat",
-        "meaningEnNoAccent": "mask, face"
-      },
-      "examples": [
+        },
         {
-          "sourceVocabId": "n3_l05_v003",
-          "sourceSenseId": "n3_l05_s003",
+          "sourceVocabId": "n4_l33_v052",
+          "sourceSenseId": "n4_l33_s052",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -200,332 +93,419 @@
         }
       ],
       "legacy": {
-        "meaning": "Diện (mặt; bề mặt)",
-        "onyomi": "メン, ベン",
-        "kunyomi": "おも, おもて, つら"
+        "meaning": "Thủ (bảo vệ)",
+        "onyomi": "シュ, ス",
+        "kunyomi": "まも.る, まも.り, もり, -もり, かみ"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l05_k004",
+      "kanjiId": "n3_canonical_l05_k002",
       "lessonId": 5,
       "level": "N3",
-      "character": "接",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Tiếp",
-        "meaningVi": "tiếp xúc; nối liền",
-        "meaningViDisplay": "Tiếp (tiếp xúc; nối liền)",
-        "meaningEn": "touch, contact"
-      },
-      "readings": {
-        "onyomi": [
-          "セツ",
-          "ショウ"
-        ],
-        "kunyomi": [
-          "つ.ぐ"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
-      },
-      "decomposition": {
-        "hanViet": "Tiếp",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "面",
-          "連",
-          "近",
-          "触"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tiep",
-        "meaningViNoAccent": "tiep xuc; noi lien",
-        "meaningEnNoAccent": "touch, contact"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l05_v003",
-          "sourceSenseId": "n3_l05_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tiếp (tiếp xúc; nối liền)",
-        "onyomi": "セツ, ショウ",
-        "kunyomi": "つ.ぐ"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
-      }
-    },
-    {
-      "kanjiId": "n3_l05_k005",
-      "lessonId": 5,
-      "level": "N3",
-      "character": "給",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Cấp",
-        "meaningVi": "lương; cấp phát; cung cấp",
-        "meaningViDisplay": "Cấp (lương; cấp phát; cung cấp)",
-        "meaningEn": "salary, wage"
-      },
-      "readings": {
-        "onyomi": [
-          "キュウ"
-        ],
-        "kunyomi": [
-          "たま.う",
-          "たも.う",
-          "-たま.え"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
-      },
-      "decomposition": {
-        "hanViet": "Cấp",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "料",
-          "金",
-          "与",
-          "職"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "cap",
-        "meaningViNoAccent": "luong; cap phat; cung cap",
-        "meaningEnNoAccent": "salary, wage"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l05_v004",
-          "sourceSenseId": "n3_l05_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Cấp (lương; cấp phát; cung cấp)",
-        "onyomi": "キュウ",
-        "kunyomi": "たま.う, たも.う, -たま.え"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
-      }
-    },
-    {
-      "kanjiId": "n3_l05_k006",
-      "lessonId": 5,
-      "level": "N3",
-      "character": "残",
-      "strokeCount": 10,
-      "labels": {
-        "hanViet": "Tàn",
-        "meaningVi": "còn lại; sót lại",
-        "meaningViDisplay": "Tàn (còn lại; sót lại)",
-        "meaningEn": "remainder, leftover"
-      },
-      "readings": {
-        "onyomi": [
-          "ザン",
-          "サン"
-        ],
-        "kunyomi": [
-          "のこ.る",
-          "のこ.す",
-          "そこな.う",
-          "のこ.り"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
-      },
-      "decomposition": {
-        "hanViet": "Tàn",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "余",
-          "留",
-          "死",
-          "続"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tan",
-        "meaningViNoAccent": "con lai; sot lai",
-        "meaningEnNoAccent": "remainder, leftover"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l05_v005",
-          "sourceSenseId": "n3_l05_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tàn (còn lại; sót lại)",
-        "onyomi": "ザン, サン",
-        "kunyomi": "のこ.る, のこ.す, そこな.う, のこ.り"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
-      }
-    },
-    {
-      "kanjiId": "n3_l05_k007",
-      "lessonId": 5,
-      "level": "N3",
-      "character": "責",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Trách",
-        "meaningVi": "trách nhiệm; trách cứ",
-        "meaningViDisplay": "Trách (trách nhiệm; trách cứ)",
-        "meaningEn": "blame, condemn"
-      },
-      "readings": {
-        "onyomi": [
-          "セキ"
-        ],
-        "kunyomi": [
-          "せ.める"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
-      },
-      "decomposition": {
-        "hanViet": "Trách",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "任",
-          "職",
-          "務",
-          "罪"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "trach",
-        "meaningViNoAccent": "trach nhiem; trach cu",
-        "meaningEnNoAccent": "blame, condemn"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l05_v008",
-          "sourceSenseId": "n3_l05_s008",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Trách (trách nhiệm; trách cứ)",
-        "onyomi": "セキ",
-        "kunyomi": "せ.める"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
-      }
-    },
-    {
-      "kanjiId": "n3_l05_k008",
-      "lessonId": 5,
-      "level": "N3",
-      "character": "任",
+      "character": "老",
       "strokeCount": 6,
       "labels": {
-        "hanViet": "Nhậm",
-        "meaningVi": "trách nhiệm; giao phó",
-        "meaningViDisplay": "Nhậm (trách nhiệm; giao phó)",
-        "meaningEn": "responsibility, duty"
+        "hanViet": "Lão",
+        "meaningVi": "Người Già",
+        "meaningViDisplay": "Lão (Người Già)",
+        "meaningEn": "old man; old age; grow old"
       },
       "readings": {
         "onyomi": [
-          "ニン"
+          "ロウ"
         ],
         "kunyomi": [
-          "まか.せる",
-          "まか.す"
+          "お.いる",
+          "ふ.ける"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 5: Công việc và nghề nghiệp.",
-        "en": "Core kanji for QUARTET 5: Work and occupations."
+        "vi": "Ghi nhớ 老 qua Hán-Việt Lão.",
+        "en": "old man; old age; grow old"
       },
       "decomposition": {
-        "hanViet": "Nhậm",
-        "structure": "standalone",
+        "hanViet": "Lão",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Lao",
+        "meaningViNoAccent": "Nguoi Gia",
+        "meaningEnNoAccent": "old man; old age; grow old"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lão (Người Già)",
+        "onyomi": "ロウ",
+        "kunyomi": "お.いる, ふ.ける"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k003",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "団",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Đoàn",
+        "meaningVi": "Doan Thé Nrimmm",
+        "meaningViDisplay": "Đoàn (Doan Thé Nrimmm)",
+        "meaningEn": "group; association; groupe"
+      },
+      "readings": {
+        "onyomi": [
+          "ダン",
+          "トン"
+        ],
+        "kunyomi": [
+          "かたまり",
+          "まる.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 団 qua Hán-Việt Đoàn.",
+        "en": "group; association; groupe"
+      },
+      "decomposition": {
+        "hanViet": "Đoàn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Doan",
+        "meaningViNoAccent": "Doan The Nrimmm",
+        "meaningEnNoAccent": "group; association; groupe"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đoàn (Doan Thé Nrimmm)",
+        "onyomi": "ダン, トン",
+        "kunyomi": "かたまり, まる.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k004",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "曲",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Khúc",
+        "meaningVi": "Ca Khúc (tt Hh A A J",
+        "meaningViDisplay": "Khúc (Ca Khúc (tt Hh A A J)",
+        "meaningEn": "bend; music; melody"
+      },
+      "readings": {
+        "onyomi": [
+          "キョク"
+        ],
+        "kunyomi": [
+          "ま.がる",
+          "ま.げる",
+          "くま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 曲 qua Hán-Việt Khúc.",
+        "en": "bend; music; melody"
+      },
+      "decomposition": {
+        "hanViet": "Khúc",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Khuc",
+        "meaningViNoAccent": "Ca Khuc (tt Hh A A J",
+        "meaningEnNoAccent": "bend; music; melody"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Khúc (Ca Khúc (tt Hh A A J)",
+        "onyomi": "キョク",
+        "kunyomi": "ま.がる, ま.げる, くま"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k005",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "次",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Thứ",
+        "meaningVi": "Tiếp Theo :. Er",
+        "meaningViDisplay": "Thứ (Tiếp Theo :. Er)",
+        "meaningEn": "next; order; sequence"
+      },
+      "readings": {
+        "onyomi": [
+          "ジ",
+          "シ"
+        ],
+        "kunyomi": [
+          "つ.ぐ",
+          "つぎ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 次 qua Hán-Việt Thứ.",
+        "en": "next; order; sequence"
+      },
+      "decomposition": {
+        "hanViet": "Thứ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thu",
+        "meaningViNoAccent": "Tiep Theo :. Er",
+        "meaningEnNoAccent": "next; order; sequence"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thứ (Tiếp Theo :. Er)",
+        "onyomi": "ジ, シ",
+        "kunyomi": "つ.ぐ, つぎ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k006",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "机",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Cơ",
+        "meaningVi": "Cái Ban Tte A Mi",
+        "meaningViDisplay": "Cơ (Cái Ban Tte A Mi)",
+        "meaningEn": "desk; table; bureau"
+      },
+      "readings": {
+        "onyomi": [
+          "キ"
+        ],
+        "kunyomi": [
+          "つくえ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 机 qua Hán-Việt Cơ.",
+        "en": "desk; table; bureau"
+      },
+      "decomposition": {
+        "hanViet": "Cơ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Co",
+        "meaningViNoAccent": "Cai Ban Tte A Mi",
+        "meaningEnNoAccent": "desk; table; bureau"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cơ (Cái Ban Tte A Mi)",
+        "onyomi": "キ",
+        "kunyomi": "つくえ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k007",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "危",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Nguy",
+        "meaningVi": "nguy hiểm; bất an; đáng lo",
+        "meaningViDisplay": "Nguy (nguy hiểm; bất an; đáng lo)",
+        "meaningEn": "dangerous; fear; uneasy"
+      },
+      "readings": {
+        "onyomi": [
+          "キ"
+        ],
+        "kunyomi": [
+          "あぶ.ない",
+          "あや.うい",
+          "あや.ぶむ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "危 là nguy hiểm hoặc cảm giác bất an; 危ぶむ là lo ngại vì thấy rủi ro.",
+        "en": "危 means danger or uneasiness; 危ぶむ means to fear or have misgivings."
+      },
+      "decomposition": {
+        "hanViet": "Nguy",
+        "structure": "top-bottom",
+        "components": [
+          "⺈",
+          "厄"
+        ],
+        "componentNames": [
+          "người cúi",
+          "ách/nạn"
+        ],
         "relatedKanji": [
-          "責",
-          "務",
-          "職",
-          "使"
+          "険",
+          "安",
+          "疑",
+          "恐"
         ]
       },
       "search": {
-        "hanVietNoAccent": "nham",
-        "meaningViNoAccent": "trach nhiem; giao pho",
-        "meaningEnNoAccent": "responsibility, duty"
+        "hanVietNoAccent": "Nguy",
+        "meaningViNoAccent": "nguy hiem; bat an; dang lo",
+        "meaningEnNoAccent": "dangerous; fear; uneasy"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l05_v008",
-          "sourceSenseId": "n3_l05_s008",
+          "word": "危ぶむ",
+          "reading": "あやぶむ",
+          "meaning": "lo ngại; nghi ngờ; không yên tâm",
+          "meaningEn": "to fear; to have misgivings"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Nguy (nguy hiểm; bất an; đáng lo)",
+        "onyomi": "キ",
+        "kunyomi": "あぶ.ない, あや.うい, あや.ぶむ"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k008",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "式",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Thức",
+        "meaningVi": "hình thức, lễ",
+        "meaningViDisplay": "Thức (hình thức, lễ)",
+        "meaningEn": "Ceremony, Style"
+      },
+      "readings": {
+        "onyomi": [
+          "シキ"
+        ],
+        "kunyomi": [
+          "チ",
+          "っ",
+          "こん",
+          "しき",
+          "ほ",
+          "いじ",
+          "た",
+          "し"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng dụng cụ công (Công 工) để bắn tên (Phát 弋) trong LỄ nghi.",
+        "en": "A ritual involving a craft (工)."
+      },
+      "decomposition": {
+        "structure": "mixed",
+        "components": [
+          "弋",
+          "工"
+        ],
+        "componentNames": [
+          "Dặc (bắn tên)",
+          "Công (dụng cụ)"
+        ],
+        "relatedKanji": [
+          "代"
+        ],
+        "hanViet": "Thức"
+      },
+      "search": {
+        "hanVietNoAccent": "Thuc",
+        "meaningViNoAccent": "hinh thuc, le",
+        "meaningEnNoAccent": "Ceremony, Style"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l31_v013",
+          "sourceSenseId": "n4_l31_s013",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l40_v063",
+          "sourceSenseId": "n4_l40_s063",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l39_v048",
+          "sourceSenseId": "n4_l39_s048",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -533,21 +513,338 @@
         }
       ],
       "legacy": {
-        "meaning": "Nhậm (trách nhiệm; giao phó)",
-        "onyomi": "ニン",
-        "kunyomi": "まか.せる, まか.す"
+        "meaning": "Thức (hình thức, lễ)",
+        "onyomi": "シキ",
+        "kunyomi": "チ, っ, こん, しき, ほ, いじ, た, し"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 5,
-        "themeEn": "Work and occupations",
-        "themeVi": "Công việc và nghề nghiệp"
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k009",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "缶",
+      "strokeCount": 6,
+      "labels": {
+        "hanViet": "Phữu",
+        "meaningVi": "Đồ Sành",
+        "meaningViDisplay": "Phữu (Đồ Sành)",
+        "meaningEn": "tin can; container; jar radical (no. 121)"
+      },
+      "readings": {
+        "onyomi": [
+          "カン"
+        ],
+        "kunyomi": [
+          "かま"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 缶 qua Hán-Việt Phữu.",
+        "en": "tin can; container; jar radical (no. 121)"
+      },
+      "decomposition": {
+        "hanViet": "Phữu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phuu",
+        "meaningViNoAccent": "Do Sanh",
+        "meaningEnNoAccent": "tin can; container; jar radical (no. 121)"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phữu (Đồ Sành)",
+        "onyomi": "カン",
+        "kunyomi": "かま"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k010",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "冷",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Lãnh",
+        "meaningVi": "lạnh, nguội",
+        "meaningViDisplay": "Lãnh (lạnh, nguội)",
+        "meaningEn": "cold, cool"
+      },
+      "readings": {
+        "onyomi": [
+          "レイ"
+        ],
+        "kunyomi": [
+          "つめ.たい",
+          "ひ.える",
+          "ひ.や",
+          "ひ.ややか",
+          "ひ.やす",
+          "ひ.やかす",
+          "さ.める",
+          "さ.ます"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Nước và lệnh làm nhiệt độ hạ xuống.",
+        "en": "Water and command make something cool down."
+      },
+      "decomposition": {
+        "hanViet": "Lãnh",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "涼",
+          "寒"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Lanh",
+        "meaningViNoAccent": "lanh, nguoi",
+        "meaningEnNoAccent": "cold, cool"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l01_v003",
+          "sourceSenseId": "n3_l01_s003",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n3_l01_v005",
+          "sourceSenseId": "n3_l01_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Lãnh (lạnh, nguội)",
+        "onyomi": "レイ",
+        "kunyomi": "つめ.たい, ひ.える, ひ.や, ひ.ややか, ひ.やす, ひ.やかす, さ.める, さ.ます"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k011",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "伸",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Thân",
+        "meaningVi": "Duỗi Thẳng 44 Nhe",
+        "meaningViDisplay": "Thân (Duỗi Thẳng 44 Nhe)",
+        "meaningEn": "expand; stretch; extend"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
+        ],
+        "kunyomi": [
+          "の.びる",
+          "の.ばす",
+          "の.べる",
+          "の.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 伸 qua Hán-Việt Thân.",
+        "en": "expand; stretch; extend"
+      },
+      "decomposition": {
+        "hanViet": "Thân",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Than",
+        "meaningViNoAccent": "Duoi Thang 44 Nhe",
+        "meaningEnNoAccent": "expand; stretch; extend"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thân (Duỗi Thẳng 44 Nhe)",
+        "onyomi": "シン",
+        "kunyomi": "の.びる, の.ばす, の.べる, の.す"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k012",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "位",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Vị",
+        "meaningVi": "vị trí; cấp bậc; địa vị",
+        "meaningViDisplay": "Vị (vị trí; cấp bậc; địa vị)",
+        "meaningEn": "throne; position, post; rank, status; seat"
+      },
+      "readings": {
+        "onyomi": [
+          "イ"
+        ],
+        "kunyomi": [
+          "くらい",
+          "ぐらい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "位 là vị trí hoặc thứ bậc; 位置 là vị trí cụ thể của người hoặc vật.",
+        "en": "位 means rank or position; 位置 is the location of something."
+      },
+      "decomposition": {
+        "hanViet": "Vị",
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "立"
+        ],
+        "componentNames": [
+          "nhân/người",
+          "lập/đứng"
+        ],
+        "relatedKanji": [
+          "置",
+          "席",
+          "階",
+          "立"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vi",
+        "meaningViNoAccent": "vi tri; cap bac; dia vi",
+        "meaningEnNoAccent": "throne; position, post; rank, status; seat"
+      },
+      "examples": [
+        {
+          "word": "位置",
+          "reading": "いち",
+          "meaning": "vị trí; chỗ đứng",
+          "meaningEn": "position; location"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Vị (vị trí; cấp bậc; địa vị)",
+        "onyomi": "イ",
+        "kunyomi": "くらい, ぐらい"
       }
+    },
+    {
+      "kanjiId": "n3_canonical_l05_k013",
+      "lessonId": 5,
+      "level": "N3",
+      "character": "技",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Kĩ",
+        "meaningVi": "kỹ năng; kỹ thuật; tài nghệ",
+        "meaningViDisplay": "Kĩ (kỹ năng; kỹ thuật; tài nghệ)",
+        "meaningEn": "skill, art"
+      },
+      "readings": {
+        "onyomi": [
+          "ギ"
+        ],
+        "kunyomi": [
+          "わざ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 17: Khoa học và công nghệ.",
+        "en": "Core kanji for QUARTET 17: Science and technology."
+      },
+      "decomposition": {
+        "hanViet": "Kĩ",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "科",
+          "術",
+          "能",
+          "機"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ki",
+        "meaningViNoAccent": "ky nang; ky thuat; tai nghe",
+        "meaningEnNoAccent": "skill, art"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l17_v002",
+          "sourceSenseId": "n3_l17_s002",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Kĩ (kỹ năng; kỹ thuật; tài nghệ)",
+        "onyomi": "ギ",
+        "kunyomi": "わざ"
+      },
+      "theme": {
+        "quartetLesson": 17,
+        "themeEn": "Science and technology",
+        "themeVi": "Khoa học và công nghệ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

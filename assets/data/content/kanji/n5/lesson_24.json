@@ -1,76 +1,85 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 24,
-  "entryCount": 6,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l24_k001",
+      "kanjiId": "n5_canonical_l24_k001",
       "lessonId": 24,
       "level": "N5",
-      "character": "兄",
-      "strokeCount": 5,
+      "character": "買",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Huynh",
-        "meaningVi": "anh trai",
-        "meaningViDisplay": "Huynh (anh trai)",
-        "meaningEn": "Older brother"
+        "hanViet": "Mãi",
+        "meaningVi": "mua",
+        "meaningViDisplay": "Mãi (mua)",
+        "meaningEn": "Buy"
       },
       "readings": {
         "onyomi": [
-          "KEI",
-          "KYOU"
+          "バイ"
         ],
         "kunyomi": [
-          "ani"
+          "か.う"
         ]
       },
       "mnemonic": {
-        "vi": "Người (Nhi 儿) có cái miệng (Khẩu 口) to để bảo ban các em là anh trai.",
-        "en": "A person (儿) with a mouth (口) who speaks for the family as an OLDER BROTHER."
+        "vi": "Dưới cái lưới (网) là tiền (Bối 貝). Dùng tiền để chuộc đồ ra (Mua).",
+        "en": "Using money (貝) under a net (网) to buy things."
       },
       "decomposition": {
         "structure": "top-bottom",
         "components": [
-          "口",
-          "儿"
+          "罒",
+          "貝"
         ],
         "componentNames": [
-          "Khẩu (miệng)",
-          "Nhi (chân người)"
+          "Võng (lưới)",
+          "Bối (vỏ sò, tiền)"
         ],
         "relatedKanji": [
-          "弟",
-          "見"
-        ]
+          "売",
+          "貸",
+          "読"
+        ],
+        "hanViet": "Mãi"
       },
       "search": {
-        "hanVietNoAccent": "huynh",
-        "meaningViNoAccent": "anh trai",
-        "meaningEnNoAccent": "older brother"
+        "hanVietNoAccent": "Mai",
+        "meaningViNoAccent": "mua",
+        "meaningEnNoAccent": "Buy"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l11_v036",
-          "sourceSenseId": "n5_l11_s036",
+          "sourceVocabId": "n5_l06_v060",
+          "sourceSenseId": "n5_l06_s060",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l11_v035",
-          "sourceSenseId": "n5_l11_s035",
+          "sourceVocabId": "n5_l06_v054",
+          "sourceSenseId": "n5_l06_s054",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l11_v037",
-          "sourceSenseId": "n5_l11_s037",
+          "sourceVocabId": "n5_l06_v008",
+          "sourceSenseId": "n5_l06_s008",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -78,159 +87,85 @@
         }
       ],
       "legacy": {
-        "meaning": "Huynh (anh trai)",
-        "onyomi": "KEI, KYOU",
-        "kunyomi": "ani"
+        "meaning": "Mãi (mua)",
+        "onyomi": "バイ",
+        "kunyomi": "か.う"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l24_k002",
-      "lessonId": 24,
-      "level": "N5",
-      "character": "弟",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Đệ",
-        "meaningVi": "em trai",
-        "meaningViDisplay": "Đệ (em trai)",
-        "meaningEn": "Younger brother"
-      },
-      "readings": {
-        "onyomi": [
-          "DAI"
-        ],
-        "kunyomi": [
-          "otouto"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Sử dụng những thanh gỗ nhỏ để chơi đùa - hình ảnh em trai.",
-        "en": "A younger brother playing with objects."
-      },
-      "decomposition": {
-        "structure": "mixed",
-        "components": [
-          "弓",
-          "丿",
-          "丨"
-        ],
-        "componentNames": [
-          "Cung (cái cung)",
-          "Phiệt (nét phẩy)",
-          "Cổn (nét sổ)"
-        ],
-        "relatedKanji": [
-          "兄"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "de",
-        "meaningViNoAccent": "em trai",
-        "meaningEnNoAccent": "younger brother"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l11_v040",
-          "sourceSenseId": "n5_l11_s040",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v035",
-          "sourceSenseId": "n5_l11_s035",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v041",
-          "sourceSenseId": "n5_l11_s041",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Đệ (em trai)",
-        "onyomi": "DAI",
-        "kunyomi": "otouto"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l24_k003",
+      "kanjiId": "n5_canonical_l24_k002",
       "lessonId": 24,
       "level": "N5",
-      "character": "姉",
-      "strokeCount": 8,
+      "character": "飲",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Tỷ",
-        "meaningVi": "chị gái",
-        "meaningViDisplay": "Tỷ (chị gái)",
-        "meaningEn": "Older sister"
+        "hanViet": "Ấm",
+        "meaningVi": "uống",
+        "meaningViDisplay": "Ấm (uống)",
+        "meaningEn": "Drink"
       },
       "readings": {
         "onyomi": [
-          "SHI"
+          "イン",
+          "オン"
         ],
         "kunyomi": [
-          "ane"
+          "の.む",
+          "-の.み"
         ]
       },
       "mnemonic": {
-        "vi": "Người phụ nữ (Nữ 女) trong Thị tộc (Thị 氏) là chỊ GÁI.",
-        "en": "A woman (女) in the family clan (氏) as an OLDER SISTER."
+        "vi": "Một người đang há miệng (Khiếm 欠) để Uống nước.",
+        "en": "A person opening their mouth (欠) to drink."
       },
       "decomposition": {
         "structure": "left-right",
         "components": [
-          "女",
-          "市"
+          "食",
+          "欠"
         ],
         "componentNames": [
-          "Nữ (phụ nữ)",
-          "Thị (thành phố)"
+          "Thực (ăn)",
+          "Khiếm (há miệng)"
         ],
         "relatedKanji": [
-          "女",
-          "妹",
-          "市"
-        ]
+          "食",
+          "歌"
+        ],
+        "hanViet": "Ấm"
       },
       "search": {
-        "hanVietNoAccent": "ty",
-        "meaningViNoAccent": "chi gai",
-        "meaningEnNoAccent": "older sister"
+        "hanVietNoAccent": "Am",
+        "meaningViNoAccent": "uong",
+        "meaningEnNoAccent": "Drink"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l11_v038",
-          "sourceSenseId": "n5_l11_s038",
+          "sourceVocabId": "n5_l06_v062",
+          "sourceSenseId": "n5_l06_s062",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n4_l38_v034",
-          "sourceSenseId": "n4_l38_s034",
+          "sourceVocabId": "n5_l09_v008",
+          "sourceSenseId": "n5_l09_s008",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l11_v039",
-          "sourceSenseId": "n5_l11_s039",
+          "sourceVocabId": "n5_l06_v002",
+          "sourceSenseId": "n5_l06_s002",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -238,235 +173,86 @@
         }
       ],
       "legacy": {
-        "meaning": "Tỷ (chị gái)",
-        "onyomi": "SHI",
-        "kunyomi": "ane"
+        "meaning": "Ấm (uống)",
+        "onyomi": "イン, オン",
+        "kunyomi": "の.む, -の.み"
       },
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l24_k004",
-      "lessonId": 24,
-      "level": "N5",
-      "character": "妹",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Muội",
-        "meaningVi": "em gái",
-        "meaningViDisplay": "Muội (em gái)",
-        "meaningEn": "Younger sister"
-      },
-      "readings": {
-        "onyomi": [
-          "MAI"
-        ],
-        "kunyomi": [
-          "imouto"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Người phụ nữ (Nữ 女) chưa (Vị 未) lớn là em GÁI.",
-        "en": "A woman (女) who is not yet (未) an adult - YOUNGER SISTER."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "女",
-          "未"
-        ],
-        "componentNames": [
-          "Nữ (phụ nữ)",
-          "Vị (chưa)"
-        ],
-        "relatedKanji": [
-          "女",
-          "姉",
-          "味"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "muoi",
-        "meaningViNoAccent": "em gai",
-        "meaningEnNoAccent": "younger sister"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l11_v042",
-          "sourceSenseId": "n5_l11_s042",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l38_v034",
-          "sourceSenseId": "n4_l38_s034",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l11_v043",
-          "sourceSenseId": "n5_l11_s043",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Muội (em gái)",
-        "onyomi": "MAI",
-        "kunyomi": "imouto"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l24_k005",
+      "kanjiId": "n5_canonical_l24_k003",
       "lessonId": 24,
       "level": "N5",
-      "character": "公",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Công",
-        "meaningVi": "công cộng",
-        "meaningViDisplay": "Công (công cộng)",
-        "meaningEn": "Public"
-      },
-      "readings": {
-        "onyomi": [
-          "KOU"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Mọi vật được chia đều (Bát 八) một cách công bằng cho mọi người.",
-        "en": "Something divided (八) for the PUBLIC."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "八",
-          "ム"
-        ],
-        "componentNames": [
-          "Bát (chia ra)",
-          "Khư (riêng tư)"
-        ],
-        "relatedKanji": [
-          "八",
-          "六"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "cong",
-        "meaningViNoAccent": "cong cong",
-        "meaningEnNoAccent": "public"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l24_v033",
-          "sourceSenseId": "n5_l24_s033",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l13_v041",
-          "sourceSenseId": "n5_l13_s041",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l10_v025",
-          "sourceSenseId": "n5_l10_s025",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Công (công cộng)",
-        "onyomi": "KOU",
-        "kunyomi": null
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l24_k006",
-      "lessonId": 24,
-      "level": "N5",
-      "character": "園",
+      "character": "暗",
       "strokeCount": 13,
       "labels": {
-        "hanViet": "Viên",
-        "meaningVi": "vườn",
-        "meaningViDisplay": "Viên (vườn)",
-        "meaningEn": "Garden, Park"
+        "hanViet": "Ám",
+        "meaningVi": "tối",
+        "meaningViDisplay": "Ám (tối)",
+        "meaningEn": "Dark"
       },
       "readings": {
         "onyomi": [
-          "EN"
+          "アン"
         ],
         "kunyomi": [
-          "sono"
+          "くら.い",
+          "くら.む",
+          "くれ.る"
         ]
       },
       "mnemonic": {
-        "vi": "Vùng đất được bao quanh (Vi 囗) dùng để trồng trọt là viÊN.",
-        "en": "An enclosed space (囗) used as a GARDEN."
+        "vi": "Mặt trời (Nhật 日) phát ra âm thanh (Âm 音) nhưng trời vẫn Tối.",
+        "en": "The sun (日) making sounds but it's still DARK."
       },
       "decomposition": {
-        "structure": "enclosure",
+        "structure": "left-right",
         "components": [
-          "囗",
-          "袁"
+          "日",
+          "音"
         ],
         "componentNames": [
-          "Vi (vây quanh)",
-          "Viên biến thể (viên)"
+          "Nhật (mặt trời)",
+          "Âm (âm thanh)"
         ],
         "relatedKanji": [
-          "国",
-          "回"
-        ]
+          "日",
+          "音",
+          "明"
+        ],
+        "hanViet": "Ám"
       },
       "search": {
-        "hanVietNoAccent": "vien",
-        "meaningViNoAccent": "vuon",
-        "meaningEnNoAccent": "garden, park"
+        "hanVietNoAccent": "Am",
+        "meaningViNoAccent": "toi",
+        "meaningEnNoAccent": "Dark"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l24_v034",
-          "sourceSenseId": "n5_l24_s034",
+          "sourceVocabId": "n5_l15_v037",
+          "sourceSenseId": "n5_l15_s037",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l13_v041",
-          "sourceSenseId": "n5_l13_s041",
+          "sourceVocabId": "n5_l16_v047",
+          "sourceSenseId": "n5_l16_s047",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l12_v051",
-          "sourceSenseId": "n5_l12_s051",
+          "sourceVocabId": "n5_l16_v019",
+          "sourceSenseId": "n5_l16_s019",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -474,16 +260,102 @@
         }
       ],
       "legacy": {
-        "meaning": "Viên (vườn)",
-        "onyomi": "EN",
-        "kunyomi": "sono"
+        "meaning": "Ám (tối)",
+        "onyomi": "アン",
+        "kunyomi": "くら.い, くら.む, くれ.る"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l24_k004",
+      "lessonId": 24,
+      "level": "N5",
+      "character": "話",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Thoại",
+        "meaningVi": "nói chuyện",
+        "meaningViDisplay": "Thoại (nói chuyện)",
+        "meaningEn": "Speak, Talk"
+      },
+      "readings": {
+        "onyomi": [
+          "ワ"
+        ],
+        "kunyomi": [
+          "はな.す",
+          "はなし"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lời nói (言) phát ra từ cái Lưỡi (Thiệt 舌).",
+        "en": "Words (言) coming from a tongue (舌)."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "言",
+          "舌"
+        ],
+        "componentNames": [
+          "Ngôn (lời nói)",
+          "Thiệt (lưỡi)"
+        ],
+        "relatedKanji": [
+          "言",
+          "読"
+        ],
+        "hanViet": "Thoại"
+      },
+      "search": {
+        "hanVietNoAccent": "Thoai",
+        "meaningViNoAccent": "noi chuyen",
+        "meaningEnNoAccent": "Speak, Talk"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l21_v035",
+          "sourceSenseId": "n5_l21_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l04_v057",
+          "sourceSenseId": "n5_l04_s057",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l03_v024",
+          "sourceSenseId": "n5_l03_s024",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thoại (nói chuyện)",
+        "onyomi": "ワ",
+        "kunyomi": "はな.す, はなし"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

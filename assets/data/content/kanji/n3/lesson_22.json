@@ -1,248 +1,115 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 22,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l22_k001",
+      "kanjiId": "n3_canonical_l22_k001",
       "lessonId": 22,
       "level": "N3",
-      "character": "説",
-      "strokeCount": 14,
+      "character": "携",
+      "strokeCount": 13,
       "labels": {
-        "hanViet": "Thuyết",
-        "meaningVi": "giải thích; học thuyết; ý kiến",
-        "meaningViDisplay": "Thuyết (giải thích; học thuyết; ý kiến)",
-        "meaningEn": "opinion, theory, explanation"
+        "hanViet": "Huề",
+        "meaningVi": "portable; carry (in hand); armed with",
+        "meaningViDisplay": "Huề (portable; carry (in hand); armed with)",
+        "meaningEn": "portable; carry (in hand); armed with"
       },
       "readings": {
         "onyomi": [
-          "セツ",
-          "ゼイ"
+          "ケイ"
         ],
         "kunyomi": [
-          "と.く"
+          "たずさ.える",
+          "たずさ.わる"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
+        "vi": "Biên tập bởi thocodehoctiengnhat ®",
+        "en": "portable; carry (in hand); armed with"
       },
       "decomposition": {
-        "hanViet": "Thuyết",
-        "structure": "standalone",
+        "hanViet": "Huề",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "話",
-          "言",
-          "議",
-          "明"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "thuyet",
-        "meaningViNoAccent": "giai thich; hoc thuyet; y kien",
-        "meaningEnNoAccent": "opinion, theory, explanation"
+        "hanVietNoAccent": "Hue",
+        "meaningViNoAccent": "portable; carry (in hand); armed with",
+        "meaningEnNoAccent": "portable; carry (in hand); armed with"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l22_v002",
-          "sourceSenseId": "n3_l22_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Thuyết (giải thích; học thuyết; ý kiến)",
-        "onyomi": "セツ, ゼイ",
-        "kunyomi": "と.く"
+        "meaning": "Huề (portable; carry (in hand); armed with)",
+        "onyomi": "ケイ",
+        "kunyomi": "たずさ.える, たずさ.わる"
       },
-      "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
-      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n3_l22_k002",
+      "kanjiId": "n3_canonical_l22_k002",
       "lessonId": 22,
       "level": "N3",
-      "character": "紹",
-      "strokeCount": 11,
+      "character": "罪",
+      "strokeCount": 13,
       "labels": {
-        "hanViet": "Thiệu",
-        "meaningVi": "giới thiệu; nối tiếp; giúp đỡ",
-        "meaningViDisplay": "Thiệu (giới thiệu; nối tiếp; giúp đỡ)",
-        "meaningEn": "introduce, inherit"
+        "hanViet": "Tội",
+        "meaningVi": "tội lỗi; tội phạm; trách nhiệm",
+        "meaningViDisplay": "Tội (tội lỗi; tội phạm; trách nhiệm)",
+        "meaningEn": "guilt, sin"
       },
       "readings": {
         "onyomi": [
-          "ショウ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
-      },
-      "decomposition": {
-        "hanViet": "Thiệu",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "介",
-          "引",
-          "継",
-          "伝"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thieu",
-        "meaningViNoAccent": "gioi thieu; noi tiep; giup do",
-        "meaningEnNoAccent": "introduce, inherit"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l22_v003",
-          "sourceSenseId": "n3_l22_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thiệu (giới thiệu; nối tiếp; giúp đỡ)",
-        "onyomi": "ショウ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l22_k003",
-      "lessonId": 22,
-      "level": "N3",
-      "character": "介",
-      "strokeCount": 4,
-      "labels": {
-        "hanViet": "Giới",
-        "meaningVi": "làm trung gian; giới thiệu; xen vào",
-        "meaningViDisplay": "Giới (làm trung gian; giới thiệu; xen vào)",
-        "meaningEn": "mediate, interpose, shellfish"
-      },
-      "readings": {
-        "onyomi": [
-          "カイ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
-      },
-      "decomposition": {
-        "hanViet": "Giới",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "紹",
-          "助",
-          "間",
-          "入"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "gioi",
-        "meaningViNoAccent": "lam trung gian; gioi thieu; xen vao",
-        "meaningEnNoAccent": "mediate, interpose, shellfish"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l22_v003",
-          "sourceSenseId": "n3_l22_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Giới (làm trung gian; giới thiệu; xen vào)",
-        "onyomi": "カイ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l22_k004",
-      "lessonId": 22,
-      "level": "N3",
-      "character": "謝",
-      "strokeCount": 17,
-      "labels": {
-        "hanViet": "Tạ",
-        "meaningVi": "cảm ơn; xin lỗi; từ chối",
-        "meaningViDisplay": "Tạ (cảm ơn; xin lỗi; từ chối)",
-        "meaningEn": "apologize, thank, refuse"
-      },
-      "readings": {
-        "onyomi": [
-          "シャ"
+          "ザイ"
         ],
         "kunyomi": [
-          "あやま.る"
+          "つみ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
+        "vi": "Kanji thuộc chủ đề QUARTET 18: Luật pháp, quy tắc và xã hội.",
+        "en": "Core kanji for QUARTET 18: Law, rules and society."
       },
       "decomposition": {
-        "hanViet": "Tạ",
+        "hanViet": "Tội",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "感",
-          "礼",
-          "罪",
-          "辞"
+          "犯",
+          "法",
+          "裁",
+          "罰"
         ]
       },
       "search": {
-        "hanVietNoAccent": "ta",
-        "meaningViNoAccent": "cam on; xin loi; tu choi",
-        "meaningEnNoAccent": "apologize, thank, refuse"
+        "hanVietNoAccent": "Toi",
+        "meaningViNoAccent": "toi loi; toi pham; trach nhiem",
+        "meaningEnNoAccent": "guilt, sin"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l22_v004",
-          "sourceSenseId": "n3_l22_s004",
+          "sourceVocabId": "n3_l18_v005",
+          "sourceSenseId": "n3_l18_s005",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -250,129 +117,78 @@
         }
       ],
       "legacy": {
-        "meaning": "Tạ (cảm ơn; xin lỗi; từ chối)",
-        "onyomi": "シャ",
-        "kunyomi": "あやま.る"
+        "meaning": "Tội (tội lỗi; tội phạm; trách nhiệm)",
+        "onyomi": "ザイ",
+        "kunyomi": "つみ"
       },
       "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
+        "quartetLesson": 18,
+        "themeEn": "Law, rules and society",
+        "themeVi": "Luật pháp, quy tắc và xã hội"
       },
       "tags": [
-        "vi-source-verified"
-      ]
-    },
-    {
-      "kanjiId": "n3_l22_k005",
-      "lessonId": 22,
-      "level": "N3",
-      "character": "議",
-      "strokeCount": 20,
-      "labels": {
-        "hanViet": "Nghị",
-        "meaningVi": "bàn bạc; thảo luận; nghị luận",
-        "meaningViDisplay": "Nghị (bàn bạc; thảo luận; nghị luận)",
-        "meaningEn": "deliberation, consultation, debate"
-      },
-      "readings": {
-        "onyomi": [
-          "ギ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
-      },
-      "decomposition": {
-        "hanViet": "Nghị",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "会",
-          "論",
-          "説",
-          "討"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "nghi",
-        "meaningViNoAccent": "ban bac; thao luan; nghi luan",
-        "meaningEnNoAccent": "deliberation, consultation, debate"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l22_v006",
-          "sourceSenseId": "n3_l22_s006",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "legacy": {
-        "meaning": "Nghị (bàn bạc; thảo luận; nghị luận)",
-        "onyomi": "ギ",
-        "kunyomi": ""
-      },
-      "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
-      },
-      "tags": [
-        "vi-source-verified"
-      ]
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l22_k006",
+      "kanjiId": "n3_canonical_l22_k003",
       "lessonId": 22,
       "level": "N3",
-      "character": "翻",
-      "strokeCount": 18,
+      "character": "感",
+      "strokeCount": 13,
       "labels": {
-        "hanViet": "Phiên",
-        "meaningVi": "lật; đảo lại; đổi ý",
-        "meaningViDisplay": "Phiên (lật; đảo lại; đổi ý)",
-        "meaningEn": "flip, turn over, change"
+        "hanViet": "Cảm",
+        "meaningVi": "cảm xúc; cảm giác; cảm nhận",
+        "meaningViDisplay": "Cảm (cảm xúc; cảm giác; cảm nhận)",
+        "meaningEn": "emotion, feeling"
       },
       "readings": {
         "onyomi": [
-          "ホン",
-          "ハン"
+          "カン"
         ],
         "kunyomi": [
-          "ひるがえ.る",
-          "ひるがえ.す"
+          "お",
+          "こ",
+          "る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
+        "vi": "Kanji thuộc chủ đề QUARTET 20: Cảm xúc và tâm lý.",
+        "en": "Core kanji for QUARTET 20: Emotions and psychology."
       },
       "decomposition": {
-        "hanViet": "Phiên",
+        "hanViet": "Cảm",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "訳",
-          "返",
-          "変",
-          "転"
+          "情",
+          "心",
+          "想",
+          "覚"
         ]
       },
       "search": {
-        "hanVietNoAccent": "phien",
-        "meaningViNoAccent": "lat; dao lai; doi y",
-        "meaningEnNoAccent": "flip, turn over, change"
+        "hanVietNoAccent": "Cam",
+        "meaningViNoAccent": "cam xuc; cam giac; cam nhan",
+        "meaningEnNoAccent": "emotion, feeling"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l22_v008",
-          "sourceSenseId": "n3_l22_s008",
+          "sourceVocabId": "n3_l20_v001",
+          "sourceSenseId": "n3_l20_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n3_l20_v004",
+          "sourceSenseId": "n3_l20_s004",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -380,132 +196,127 @@
         }
       ],
       "legacy": {
-        "meaning": "Phiên (lật; đảo lại; đổi ý)",
-        "onyomi": "ホン, ハン",
-        "kunyomi": "ひるがえ.る, ひるがえ.す"
+        "meaning": "Cảm (cảm xúc; cảm giác; cảm nhận)",
+        "onyomi": "カン",
+        "kunyomi": "お, こ, る"
       },
       "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
+        "quartetLesson": 20,
+        "themeEn": "Emotions and psychology",
+        "themeVi": "Cảm xúc và tâm lý"
       },
       "tags": [
-        "vi-source-verified"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l22_k007",
+      "kanjiId": "n3_canonical_l22_k004",
       "lessonId": 22,
       "level": "N3",
-      "character": "訳",
-      "strokeCount": 11,
+      "character": "準",
+      "strokeCount": 13,
       "labels": {
-        "hanViet": "Dịch",
-        "meaningVi": "dịch thuật; lý do; hoàn cảnh",
-        "meaningViDisplay": "Dịch (dịch thuật; lý do; hoàn cảnh)",
-        "meaningEn": "translate, reason"
+        "hanViet": "Chuẩn",
+        "meaningVi": "semi-; correspond to; proportionate to",
+        "meaningViDisplay": "Chuẩn (semi-; correspond to; proportionate to)",
+        "meaningEn": "semi-; correspond to; proportionate to"
       },
       "readings": {
         "onyomi": [
-          "ヤク"
+          "ジュン"
         ],
         "kunyomi": [
-          "わけ"
+          "じゅん.じる",
+          "じゅん.ずる",
+          "なぞら.える",
+          "のり",
+          "ひと.しい",
+          "みずもり"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
+        "vi": "Ghi nhớ 準 qua Hán-Việt Chuẩn.",
+        "en": "semi-; correspond to; proportionate to"
       },
       "decomposition": {
-        "hanViet": "Dịch",
-        "structure": "standalone",
+        "hanViet": "Chuẩn",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "翻",
-          "言",
-          "語",
-          "理"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "dich",
-        "meaningViNoAccent": "dich thuat; ly do; hoan canh",
-        "meaningEnNoAccent": "translate, reason"
+        "hanVietNoAccent": "Chuan",
+        "meaningViNoAccent": "semi-; correspond to; proportionate to",
+        "meaningEnNoAccent": "semi-; correspond to; proportionate to"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l22_v008",
-          "sourceSenseId": "n3_l22_s008",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Dịch (dịch thuật; lý do; hoàn cảnh)",
-        "onyomi": "ヤク",
-        "kunyomi": "わけ"
+        "meaning": "Chuẩn (semi-; correspond to; proportionate to)",
+        "onyomi": "ジュン",
+        "kunyomi": "じゅん.じる, じゅん.ずる, なぞら.える, のり, ひと.しい, みずもり"
       },
-      "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
-      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n3_l22_k008",
+      "kanjiId": "n3_canonical_l22_k005",
       "lessonId": 22,
       "level": "N3",
-      "character": "連",
-      "strokeCount": 10,
+      "character": "戦",
+      "strokeCount": 13,
       "labels": {
-        "hanViet": "Liên",
-        "meaningVi": "liên kết; nối liền; dẫn theo",
-        "meaningViDisplay": "Liên (liên kết; nối liền; dẫn theo)",
-        "meaningEn": "connect, join, take along"
+        "hanViet": "Khuyết",
+        "meaningVi": "chiến tranh; trận đấu; chiến đấu",
+        "meaningViDisplay": "Khuyết (chiến tranh; trận đấu; chiến đấu)",
+        "meaningEn": "war, battle"
       },
       "readings": {
         "onyomi": [
-          "レン"
+          "セン"
         ],
         "kunyomi": [
-          "つら.なる",
-          "つら.ねる",
-          "つ.れる",
-          "-づ.れ"
+          "いくさ",
+          "たたか.う",
+          "おのの.く",
+          "そよ.ぐ",
+          "わなな.く"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 22: Giao tiếp và diễn đạt.",
-        "en": "Core kanji for QUARTET 22: Communication and expression."
+        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
+        "en": "Core kanji for QUARTET 23: History and politics."
       },
       "decomposition": {
-        "hanViet": "Liên",
+        "hanViet": "Khuyết",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "絡",
-          "続",
-          "結",
-          "係"
+          "争",
+          "勝",
+          "負",
+          "平"
         ]
       },
       "search": {
-        "hanVietNoAccent": "lien",
-        "meaningViNoAccent": "lien ket; noi lien; dan theo",
-        "meaningEnNoAccent": "connect, join, take along"
+        "hanVietNoAccent": "Khuyet",
+        "meaningViNoAccent": "chien tranh; tran dau; chien dau",
+        "meaningEnNoAccent": "war, battle"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l22_v010",
-          "sourceSenseId": "n3_l22_s010",
+          "sourceVocabId": "n3_l23_v003",
+          "sourceSenseId": "n3_l23_s003",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -513,21 +324,566 @@
         }
       ],
       "legacy": {
-        "meaning": "Liên (liên kết; nối liền; dẫn theo)",
-        "onyomi": "レン",
-        "kunyomi": "つら.なる, つら.ねる, つ.れる, -づ.れ"
+        "meaning": "Khuyết (chiến tranh; trận đấu; chiến đấu)",
+        "onyomi": "セン",
+        "kunyomi": "いくさ, たたか.う, おのの.く, そよ.ぐ, わなな.く"
       },
       "theme": {
-        "quartetLesson": 22,
-        "themeEn": "Communication and expression",
-        "themeVi": "Giao tiếp và diễn đạt"
+        "quartetLesson": 23,
+        "themeEn": "History and politics",
+        "themeVi": "Lịch sử và chính trị"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k006",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "業",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Nghiệp",
+        "meaningVi": "nghề nghiệp",
+        "meaningViDisplay": "Nghiệp (nghề nghiệp)",
+        "meaningEn": "Business"
+      },
+      "readings": {
+        "onyomi": [
+          "ギョウ",
+          "ゴウ"
+        ],
+        "kunyomi": [
+          "わざ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Công việc ổn định như rễ cây đâm sâu.",
+        "en": "Deeply rooted business."
+      },
+      "decomposition": {
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "事"
+        ],
+        "hanViet": "Nghiệp"
+      },
+      "search": {
+        "hanVietNoAccent": "Nghiep",
+        "meaningViNoAccent": "nghe nghiep",
+        "meaningEnNoAccent": "Business"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l13_v051",
+          "sourceSenseId": "n5_l13_s051",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v011",
+          "sourceSenseId": "n5_l17_s011",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l30_v017",
+          "sourceSenseId": "n4_l30_s017",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Nghiệp (nghề nghiệp)",
+        "onyomi": "ギョウ, ゴウ",
+        "kunyomi": "わざ"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k007",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "愛",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Ái",
+        "meaningVi": "yêu; yêu mến; tình cảm",
+        "meaningViDisplay": "Ái (yêu; yêu mến; tình cảm)",
+        "meaningEn": "love, affection, favorite"
+      },
+      "readings": {
+        "onyomi": [
+          "アイ"
+        ],
+        "kunyomi": [
+          "いと.しい",
+          "かな.しい",
+          "め.でる",
+          "お.しむ",
+          "まな"
+        ]
+      },
+      "mnemonic": {
+        "vi": "愛 là tình yêu hoặc thiện cảm; trong 愛想, nó góp nghĩa thái độ dễ mến, niềm nở với người khác.",
+        "en": "愛 means love or affection; in 愛想 it contributes the sense of friendliness or sociability."
+      },
+      "decomposition": {
+        "hanViet": "Ái",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "恋",
+          "情",
+          "好",
+          "想"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ai",
+        "meaningViNoAccent": "yeu; yeu men; tinh cam",
+        "meaningEnNoAccent": "love, affection, favorite"
+      },
+      "examples": [
+        {
+          "word": "愛想",
+          "reading": "あいそ",
+          "meaning": "sự niềm nở; thiện cảm; phép xã giao",
+          "meaningEn": "civility, sociability, friendliness"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Ái (yêu; yêu mến; tình cảm)",
+        "onyomi": "アイ",
+        "kunyomi": "いと.しい, かな.しい, め.でる, お.しむ, まな"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k008",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "農",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Nông",
+        "meaningVi": "Nong Nghiép Come Eee Eee",
+        "meaningViDisplay": "Nông (Nong Nghiép Come Eee Eee)",
+        "meaningEn": "agriculture; farmers; agriculture"
+      },
+      "readings": {
+        "onyomi": [
+          "ノウ"
+        ],
+        "kunyomi": [
+          "く",
+          "の",
+          "うか"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 農 qua Hán-Việt Nông.",
+        "en": "agriculture; farmers; agriculture"
+      },
+      "decomposition": {
+        "hanViet": "Nông",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nong",
+        "meaningViNoAccent": "Nong Nghiep Come Eee Eee",
+        "meaningEnNoAccent": "agriculture; farmers; agriculture"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nông (Nong Nghiép Come Eee Eee)",
+        "onyomi": "ノウ",
+        "kunyomi": "く, の, うか"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k009",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "豊",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Lễ",
+        "meaningVi": "bountiful; excellent; rich",
+        "meaningViDisplay": "Lễ (bountiful; excellent; rich)",
+        "meaningEn": "bountiful; excellent; rich"
+      },
+      "readings": {
+        "onyomi": [
+          "ホウ",
+          "ブ"
+        ],
+        "kunyomi": [
+          "ゆた.か",
+          "とよ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất.",
+        "en": "bountiful; excellent; rich"
+      },
+      "decomposition": {
+        "hanViet": "Lễ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Le",
+        "meaningViNoAccent": "bountiful; excellent; rich",
+        "meaningEnNoAccent": "bountiful; excellent; rich"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lễ (bountiful; excellent; rich)",
+        "onyomi": "ホウ, ブ",
+        "kunyomi": "ゆた.か, とよ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k010",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "暖",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Noãn",
+        "meaningVi": "ấm; hơi ấm; làm ấm",
+        "meaningViDisplay": "Noãn (ấm; hơi ấm; làm ấm)",
+        "meaningEn": "warmth, warm"
+      },
+      "readings": {
+        "onyomi": [
+          "ダン",
+          "ノン"
+        ],
+        "kunyomi": [
+          "あたた.か",
+          "あたた.かい",
+          "あたた.まる",
+          "あたた.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "暖 points to warmth; 暖まる means to become warm."
+      },
+      "decomposition": {
+        "hanViet": "Noãn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "日",
+          "温",
+          "寒",
+          "暑"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Noan",
+        "meaningViNoAccent": "am; hoi am; lam am",
+        "meaningEnNoAccent": "warmth, warm"
+      },
+      "examples": [
+        {
+          "word": "暖まる",
+          "reading": "あたたまる",
+          "meaning": "ấm lên; trở nên ấm",
+          "meaningEn": "to warm up, to get warm"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Noãn (ấm; hơi ấm; làm ấm)",
+        "onyomi": "ダン, ノン",
+        "kunyomi": "あたた.か, あたた.かい, あたた.まる, あたた.める"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k011",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "禁",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Cấm",
+        "meaningVi": "nghiêm cấm",
+        "meaningViDisplay": "Cấm (nghiêm cấm)",
+        "meaningEn": "Prohibit"
+      },
+      "readings": {
+        "onyomi": [
+          "キン"
+        ],
+        "kunyomi": [
+          "し.",
+          "よう",
+          "まん",
+          "し",
+          "また",
+          "きん",
+          "えん",
+          "こち"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Trong rừng (Lâm 林) cần sự chỉ dẫn của thần linh (Thị 示) để biẾT CÁC ĐIỀU CẤM.",
+        "en": "Spirits (示) warning against entering the forest (林)."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "林",
+          "示"
+        ],
+        "componentNames": [
+          "Lâm (rừng)",
+          "Thị (bày tỏ)"
+        ],
+        "relatedKanji": [
+          "木",
+          "礼"
+        ],
+        "hanViet": "Cấm"
+      },
+      "search": {
+        "hanVietNoAccent": "Cam",
+        "meaningViNoAccent": "nghiem cam",
+        "meaningEnNoAccent": "Prohibit"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l32_v067",
+          "sourceSenseId": "n4_l32_s067",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l32_v064",
+          "sourceSenseId": "n4_l32_s064",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l33_v019",
+          "sourceSenseId": "n4_l33_s019",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Cấm (nghiêm cấm)",
+        "onyomi": "キン",
+        "kunyomi": "し., よう, まん, し, また, きん, えん, こち"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k012",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "寝",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Tẩm",
+        "meaningVi": "ngủ; nằm nghỉ; phòng ngủ",
+        "meaningViDisplay": "Tẩm (ngủ; nằm nghỉ; phòng ngủ)",
+        "meaningEn": "sleep; lie down; rest"
+      },
+      "readings": {
+        "onyomi": [
+          "シン"
+        ],
+        "kunyomi": [
+          "ね.る",
+          "ね.かす",
+          "い.ぬ",
+          "みたまや",
+          "や.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "寝 means to sleep, lie down, or rest; in 朝寝坊 it evokes sleeping past the morning alarm."
+      },
+      "decomposition": {
+        "hanViet": "Tẩm",
+        "structure": "left-right",
+        "components": [
+          "宀",
+          "爿",
+          "ヨ",
+          "又"
+        ],
+        "componentNames": [
+          "mái nhà",
+          "giường",
+          "tay",
+          "lại"
+        ],
+        "relatedKanji": [
+          "宿",
+          "眠",
+          "休",
+          "床"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tam",
+        "meaningViNoAccent": "ngu; nam nghi; phong ngu",
+        "meaningEnNoAccent": "sleep; lie down; rest"
+      },
+      "examples": [
+        {
+          "word": "朝寝坊",
+          "reading": "あさねぼう",
+          "meaning": "ngủ quên; dậy muộn",
+          "meaningEn": "oversleeping; late riser"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tẩm (ngủ; nằm nghỉ; phòng ngủ)",
+        "onyomi": "シン",
+        "kunyomi": "ね.る, ね.かす, い.ぬ, みたまや, や.める"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l22_k013",
+      "lessonId": 22,
+      "level": "N3",
+      "character": "置",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Trí",
+        "meaningVi": "placement; put; set",
+        "meaningViDisplay": "Trí (placement; put; set)",
+        "meaningEn": "placement; put; set"
+      },
+      "readings": {
+        "onyomi": [
+          "チ"
+        ],
+        "kunyomi": [
+          "お.く",
+          "-お.き"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 置 qua Hán-Việt Trí.",
+        "en": "placement; put; set"
+      },
+      "decomposition": {
+        "hanViet": "Trí",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tri",
+        "meaningViNoAccent": "placement; put; set",
+        "meaningEnNoAccent": "placement; put; set"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Trí (placement; put; set)",
+        "onyomi": "チ",
+        "kunyomi": "お.く, -お.き"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

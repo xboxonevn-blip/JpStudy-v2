@@ -1,5 +1,18 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-026 Kanji Canonical App Rewrite
+
+- Applied QA-A-027 master mapping to the app kanji assets without accessing banned sites. Final app counts now match the master exactly: `N5=103`, `N4=178`, `N3=316`, `N2=461`, `N1=1056`, total `2114`.
+- Pre-apply audit remains in `docs/research/kanji-level-audit-2026-05-20.md`: MOVE `421`, DUPLICATE `196`, MISSING `1556`, EXTRA `80`. Post-apply regeneration audit in `tmp/qaa026-regenerate-audit.md` was `MOVE=0 DUPLICATE=0 MISSING=0 EXTRA=0`.
+- Added `tool/research/apply_kanji_master_mapping.js` and guards so app assets must equal `docs/research/canonical/kanji-master-mapping-2026-05-20.json`, with no cross-level duplicate characters and no `vi-human-approved` tags in kanji assets.
+- Bumped `_kanjiSeedRevision` from `70` to `90`; seeded QA-A-026 sentinels cover `海`, `帰`, `親`, `銀`, `重`, `議`, and an N1 row so existing browsers reseed stale/partial content DBs.
+- Root-caused full-suite failures after the rewrite: the expanded canonical N5/N4 set outgrew handwriting support assets, and ebook OCR stroke counts for `社`/`漢` conflicted with KANJIDIC2/KanjiVG. Fixed by making KANJIDIC2 stroke counts win and regenerating N5/N4 stroke template/vector support from current content assets.
+- Verified locally: `npm run test:research-tooling` passed `76/76`; focused canonical/reachability/DB/upper-JLPT/stroke suites passed; `flutter analyze lib test` clean; UI string guard `0`; content VI status machine/open-review `0`; `git diff --check` clean; full `flutter test --concurrency=1` passed `2412/2412`.
+- Deployed with `node tool/deploy/hosting_deploy.js` after release build.
+- Live proof on normal production cache used the app search route with Kanji filter, matching `/kanji` search delegation: VI search/detail showed `海` and `帰` only in N5, `親` only in N4, `銀` and `重` only in N3, and `議` only in N2; wrong-level searches returned no exact result. Detail modal verification is screenshot-based because CanvasKit semantics did not expose modal body text reliably. EN/JA kanji search showed `海` with no Vietnamese/Hán-Việt leak. `main.dart.js` returned `200` with `Cache-Control: no-cache`; unexpected console warnings/errors were `0` after filtering known headless App Check/reCAPTCHA/WebGL noise.
+- Live artifact: `output/playwright/live-qaa026-kanji-taxonomy-proof.json` plus `output/playwright/live-qaa026-*.png` screenshots.
+- Next queue: resume QA-A-028 Phase 2 remaining Hán-Việt rules, then QA-A-028 Phase 3, QA-A-029, QA-A-030, QA-A-031.
+
 ## 2026-05-20 QA-A-027 Phase 1B/1C
 
 - Re-extracted canonical N4/N1 writing-grid ebooks from local pixel/OCR cache, without accessing banned sites. Parser now chooses the hint-line target kanji when the first row only exposes mnemonic components; regressions cover `酉` vs `西/一`, `光` vs `小/一/儿`, and `洒` from `洒落`.

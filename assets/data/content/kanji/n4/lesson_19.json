@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 19,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l19_k001",
+      "lessonId": 19,
+      "level": "N4",
+      "character": "弱",
+      "strokeCount": 10,
+      "labels": {
+        "hanViet": "Nhược",
+        "meaningVi": "Yếu",
+        "meaningViDisplay": "Nhược (Yếu)",
+        "meaningEn": "weak; frail; faible"
+      },
+      "readings": {
+        "onyomi": [
+          "ジャク"
+        ],
+        "kunyomi": [
+          "よわ.い",
+          "よわ.る",
+          "よわ.まる",
+          "よわ.める"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Trong cung ( ) băng ( ) giá thì trở nên yếu ( ) 弱 6",
+        "en": "weak; frail; faible"
+      },
+      "decomposition": {
+        "hanViet": "Nhược",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nhuoc",
+        "meaningViNoAccent": "Yeu",
+        "meaningEnNoAccent": "weak; frail; faible"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nhược (Yếu)",
+        "onyomi": "ジャク",
+        "kunyomi": "よわ.い, よわ.る, よわ.まる, よわ.める"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l19_k002",
+      "lessonId": 19,
+      "level": "N4",
+      "character": "問",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Vấn",
+        "meaningVi": "hỏi",
+        "meaningViDisplay": "Vấn (hỏi)",
+        "meaningEn": "Question"
+      },
+      "readings": {
+        "onyomi": [
+          "モン"
+        ],
+        "kunyomi": [
+          "と.う",
+          "と.い",
+          "とん"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đứng dưới cổng ( ) mở miệng ( ) hỏi ( ) 問 2 6",
+        "en": "Mouth (口) at the gate (門) asking a question."
+      },
+      "decomposition": {
+        "structure": "enclosure",
+        "components": [
+          "門",
+          "口"
+        ],
+        "componentNames": [
+          "Môn (cửa)",
+          "Khẩu (miệng)"
+        ],
+        "relatedKanji": [
+          "門",
+          "口",
+          "間",
+          "聞",
+          "開",
+          "閉"
+        ],
+        "hanViet": "Vấn"
+      },
+      "search": {
+        "hanVietNoAccent": "Van",
+        "meaningViNoAccent": "hoi",
+        "meaningEnNoAccent": "Question"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l14_v049",
+          "sourceSenseId": "n5_l14_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l17_v035",
+          "sourceSenseId": "n5_l17_s035",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l34_v008",
+          "sourceSenseId": "n4_l34_s008",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Vấn (hỏi)",
+        "onyomi": "モン",
+        "kunyomi": "と.う, と.い, とん"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l19_k003",
+      "lessonId": 19,
+      "level": "N4",
+      "character": "閉",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Bế",
+        "meaningVi": "đóng",
+        "meaningViDisplay": "Bế (đóng)",
+        "meaningEn": "Close"
+      },
+      "readings": {
+        "onyomi": [
+          "ヘイ"
+        ],
+        "kunyomi": [
+          "と.じる",
+          "と.ざす",
+          "し.める",
+          "し.まる",
+          "た.てる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đứng dưới cổng ( ) nói O ( ) là cổng sẽ đóng ( ) lại 閉 2 6",
+        "en": "Putting a bar across the gate (門) to CLOSE it."
+      },
+      "decomposition": {
+        "structure": "enclosure",
+        "components": [
+          "門",
+          "才"
+        ],
+        "componentNames": [
+          "Môn (cửa)",
+          "Tài (tài năng)"
+        ],
+        "relatedKanji": [
+          "門",
+          "開",
+          "間",
+          "聞",
+          "問"
+        ],
+        "hanViet": "Bế"
+      },
+      "search": {
+        "hanVietNoAccent": "Be",
+        "meaningViNoAccent": "dong",
+        "meaningEnNoAccent": "Close"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l29_v063",
+          "sourceSenseId": "n4_l29_s063",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l29_v068",
+          "sourceSenseId": "n4_l29_s068",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l29_v002",
+          "sourceSenseId": "n4_l29_s002",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Bế (đóng)",
+        "onyomi": "ヘイ",
+        "kunyomi": "と.じる, と.ざす, し.める, し.まる, た.てる"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l19_k004",
+      "lessonId": 19,
+      "level": "N4",
+      "character": "宿",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Túc",
+        "meaningVi": "nhà trọ; nghỉ lại; chỗ ở",
+        "meaningViDisplay": "Túc (nhà trọ; nghỉ lại; chỗ ở)",
+        "meaningEn": "inn, lodging"
+      },
+      "readings": {
+        "onyomi": [
+          "シュク"
+        ],
+        "kunyomi": [
+          "やど",
+          "やど.る",
+          "やど.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dưới mái nhà ( ) số người ( ) là 100 ( ) muốn thuê nhà trọ ( ) 1",
+        "en": "Core kanji for QUARTET 10: Travel and transportation."
+      },
+      "decomposition": {
+        "hanViet": "Túc",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "泊",
+          "旅",
+          "屋",
+          "館"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Tuc",
+        "meaningViNoAccent": "nha tro; nghi lai; cho o",
+        "meaningEnNoAccent": "inn, lodging"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l10_v005",
+          "sourceSenseId": "n3_l10_s005",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Túc (nhà trọ; nghỉ lại; chỗ ở)",
+        "onyomi": "シュク",
+        "kunyomi": "やど, やど.る, やど.す"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 10,
+        "themeEn": "Travel and transportation",
+        "themeVi": "Du lịch và giao thông"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l19_k005",
+      "lessonId": 19,
+      "level": "N4",
+      "character": "理",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Lý",
+        "meaningVi": "lý lẽ; logic; xử lý",
+        "meaningViDisplay": "Lý (lý lẽ; logic; xử lý)",
+        "meaningEn": "logic, arrangement"
+      },
+      "readings": {
+        "onyomi": [
+          "リ"
+        ],
+        "kunyomi": [
+          "ことわり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vua ( ) giết ông Lí ( ) là có lý do ( )理 6",
+        "en": "Core kanji for QUARTET 19: Cooking and food culture."
+      },
+      "decomposition": {
+        "hanViet": "Lý",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "料",
+          "調",
+          "食",
+          "材"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Ly",
+        "meaningViNoAccent": "ly le; logic; xu ly",
+        "meaningEnNoAccent": "logic, arrangement"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l19_v001",
+          "sourceSenseId": "n3_l19_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Lý (lý lẽ; logic; xử lý)",
+        "onyomi": "リ",
+        "kunyomi": "ことわり"
+      },
+      "theme": {
+        "quartetLesson": 19,
+        "themeEn": "Cooking and food culture",
+        "themeVi": "Nấu ăn và văn hóa ẩm thực"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l19_k006",
+      "lessonId": 19,
+      "level": "N4",
+      "character": "野",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Dã",
+        "meaningVi": "Cánh đồng, hoang dã",
+        "meaningViDisplay": "Dã (Cánh đồng, hoang dã)",
+        "meaningEn": "plains; field; rustic"
+      },
+      "readings": {
+        "onyomi": [
+          "ヤ",
+          "ショ"
+        ],
+        "kunyomi": [
+          "の",
+          "の-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ông Lí ( ) dự ( ) đoán sắp bị dã ( ) 野 2 8",
+        "en": "plains; field; rustic"
+      },
+      "decomposition": {
+        "hanViet": "Dã",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Da",
+        "meaningViNoAccent": "Canh dong, hoang da",
+        "meaningEnNoAccent": "plains; field; rustic"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Dã (Cánh đồng, hoang dã)",
+        "onyomi": "ヤ, ショ",
+        "kunyomi": "の, の-"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l19_k007",
+      "lessonId": 19,
+      "level": "N4",
+      "character": "黒",
+      "strokeCount": 11,
+      "labels": {
+        "hanViet": "Hắc",
+        "meaningVi": "Màu đen",
+        "meaningViDisplay": "Hắc (Màu đen)",
+        "meaningEn": "black; noir; negro"
+      },
+      "readings": {
+        "onyomi": [
+          "コク"
+        ],
+        "kunyomi": [
+          "くろ",
+          "くろ.ずむ",
+          "くろ.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ruộng ( ) bị Hoả ( ) thiêu chỉ còn lại mảnh Đất ( ) màu Đen ( ) 黒 2",
+        "en": "black; noir; negro"
+      },
+      "decomposition": {
+        "hanViet": "Hắc",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hac",
+        "meaningViNoAccent": "Mau den",
+        "meaningEnNoAccent": "black; noir; negro"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hắc (Màu đen)",
+        "onyomi": "コク",
+        "kunyomi": "くろ, くろ.ずむ, くろ.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    }
+  ]
+}

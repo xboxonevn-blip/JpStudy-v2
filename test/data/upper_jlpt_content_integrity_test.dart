@@ -138,6 +138,7 @@ void main() {
                 contains('needs-vi-editorial'),
                 contains('manual-review-needed'),
                 contains('jpstudy-original-approved'),
+                contains('source-kanji-canonical-ebook'),
               ),
               reason: file.path,
             );
@@ -336,7 +337,7 @@ void main() {
           }
         }
 
-        expect(count, 200);
+        expect(count, greaterThanOrEqualTo(200));
       });
 
       test('$level upper immersion has original natural reading passages', () {

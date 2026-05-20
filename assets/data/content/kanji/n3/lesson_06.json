@@ -1,58 +1,190 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 6,
-  "entryCount": 8,
+  "entryCount": 12,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l06_k001",
+      "kanjiId": "n3_canonical_l06_k001",
       "lessonId": 6,
       "level": "N3",
-      "character": "注",
-      "strokeCount": 8,
+      "character": "判",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Chú",
-        "meaningVi": "đặt hàng; chú ý; ghi chú",
-        "meaningViDisplay": "Chú (đặt hàng; chú ý; ghi chú)",
-        "meaningEn": "pour, irrigate"
+        "hanViet": "Phán",
+        "meaningVi": "Phan Đoán X**",
+        "meaningViDisplay": "Phán (Phan Đoán X**)",
+        "meaningEn": "judgement; judgment; signature"
       },
       "readings": {
         "onyomi": [
-          "チュウ"
+          "ハン",
+          "バン"
         ],
         "kunyomi": [
-          "そそ.ぐ",
-          "さ.す",
-          "つ.ぐ"
+          "わか.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
-        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
+        "vi": "Ghi nhớ 判 qua Hán-Việt Phán.",
+        "en": "judgement; judgment; signature"
       },
       "decomposition": {
-        "hanViet": "Chú",
+        "hanViet": "Phán",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phan",
+        "meaningViNoAccent": "Phan Doan X**",
+        "meaningEnNoAccent": "judgement; judgment; signature"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phán (Phan Đoán X**)",
+        "onyomi": "ハン, バン",
+        "kunyomi": "わか.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l06_k002",
+      "lessonId": 6,
+      "level": "N3",
+      "character": "良",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Lương",
+        "meaningVi": "tốt; lương thiện; phẩm chất tốt",
+        "meaningViDisplay": "Lương (tốt; lương thiện; phẩm chất tốt)",
+        "meaningEn": "good; virtuous; respectable"
+      },
+      "readings": {
+        "onyomi": [
+          "リョウ"
+        ],
+        "kunyomi": [
+          "よ.い",
+          "-よ.い",
+          "い.い",
+          "-い.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "`... ....ốố..... ng. HH 1 ! 1",
+        "en": "良 means good or virtuous; 良い is the familiar word for good."
+      },
+      "decomposition": {
+        "hanViet": "Lương",
+        "structure": "single",
+        "components": [
+          "良"
+        ],
+        "componentNames": [
+          "lương/tốt"
+        ],
+        "relatedKanji": [
+          "善",
+          "好",
+          "悪",
+          "優"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Luong",
+        "meaningViNoAccent": "tot; luong thien; pham chat tot",
+        "meaningEnNoAccent": "good; virtuous; respectable"
+      },
+      "examples": [
+        {
+          "word": "良い",
+          "reading": "いい",
+          "meaning": "tốt",
+          "meaningEn": "good"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Lương (tốt; lương thiện; phẩm chất tốt)",
+        "onyomi": "リョウ",
+        "kunyomi": "よ.い, -よ.い, い.い, -い.い"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l06_k003",
+      "lessonId": 6,
+      "level": "N3",
+      "character": "芸",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Vân",
+        "meaningVi": "nghệ thuật; tài nghệ",
+        "meaningViDisplay": "Vân (nghệ thuật; tài nghệ)",
+        "meaningEn": "technique, art"
+      },
+      "readings": {
+        "onyomi": [
+          "ゲイ",
+          "ウン"
+        ],
+        "kunyomi": [
+          "う.える",
+          "のり",
+          "わざ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "_ meozege(Semwmet h h",
+        "en": "Core kanji for QUARTET 12: Art, music and entertainment."
+      },
+      "decomposition": {
+        "hanViet": "Vân",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "文",
-          "意",
-          "記",
-          "問"
+          "術",
+          "演",
+          "劇",
+          "賞"
         ]
       },
       "search": {
-        "hanVietNoAccent": "chu",
-        "meaningViNoAccent": "dat hang; chu y; ghi chu",
-        "meaningEnNoAccent": "pour, irrigate"
+        "hanVietNoAccent": "Van",
+        "meaningViNoAccent": "nghe thuat; tai nghe",
+        "meaningEnNoAccent": "technique, art"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l06_v001",
-          "sourceSenseId": "n3_l06_s001",
+          "sourceVocabId": "n3_l12_v001",
+          "sourceSenseId": "n3_l12_s001",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -60,226 +192,178 @@
         }
       ],
       "legacy": {
-        "meaning": "Chú (đặt hàng; chú ý; ghi chú)",
-        "onyomi": "チュウ",
-        "kunyomi": "そそ.ぐ, さ.す, つ.ぐ"
+        "meaning": "Vân (nghệ thuật; tài nghệ)",
+        "onyomi": "ゲイ, ウン",
+        "kunyomi": "う.える, のり, わざ"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
-        "quartetLesson": 6,
-        "themeEn": "Online shopping and consumer behavior",
-        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
-      }
+        "quartetLesson": 12,
+        "themeEn": "Art, music and entertainment",
+        "themeVi": "Nghệ thuật, âm nhạc và giải trí"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l06_k002",
+      "kanjiId": "n3_canonical_l06_k004",
       "lessonId": 6,
       "level": "N3",
-      "character": "文",
-      "strokeCount": 4,
+      "character": "医",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Văn",
-        "meaningVi": "chữ viết; câu văn; văn chương",
-        "meaningViDisplay": "Văn (chữ viết; câu văn; văn chương)",
-        "meaningEn": "sentence, literature"
+        "hanViet": "Ế",
+        "meaningVi": "doctor; medicine; médecin",
+        "meaningViDisplay": "Ế (doctor; medicine; médecin)",
+        "meaningEn": "doctor; medicine; médecin"
       },
       "readings": {
         "onyomi": [
-          "ブン",
-          "モン"
+          "イ"
         ],
         "kunyomi": [
-          "ふみ",
-          "あや"
+          "い.やす",
+          "い.する",
+          "くすし"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
-        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "doctor; medicine; médecin"
       },
       "decomposition": {
-        "hanViet": "Văn",
-        "structure": "standalone",
+        "hanViet": "Ế",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "注",
-          "語",
-          "書",
-          "字"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "van",
-        "meaningViNoAccent": "chu viet; cau van; van chuong",
-        "meaningEnNoAccent": "sentence, literature"
+        "hanVietNoAccent": "E",
+        "meaningViNoAccent": "doctor; medicine; medecin",
+        "meaningEnNoAccent": "doctor; medicine; medecin"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l06_v001",
-          "sourceSenseId": "n3_l06_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Văn (chữ viết; câu văn; văn chương)",
-        "onyomi": "ブン, モン",
-        "kunyomi": "ふみ, あや"
+        "meaning": "Ế (doctor; medicine; médecin)",
+        "onyomi": "イ",
+        "kunyomi": "い.やす, い.する, くすし"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 6,
-        "themeEn": "Online shopping and consumer behavior",
-        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l06_k003",
+      "kanjiId": "n3_canonical_l06_k005",
       "lessonId": 6,
       "level": "N3",
-      "character": "配",
-      "strokeCount": 10,
+      "character": "身",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Phối",
-        "meaningVi": "phân phối; phân phát; sắp xếp",
-        "meaningViDisplay": "Phối (phân phối; phân phát; sắp xếp)",
-        "meaningEn": "distribute, spouse"
+        "hanViet": "Thân",
+        "meaningVi": "Bản Thân En Aw",
+        "meaningViDisplay": "Thân (Bản Thân En Aw)",
+        "meaningEn": "somebody; person; one's station in life"
       },
       "readings": {
         "onyomi": [
-          "ハイ"
+          "シン"
         ],
         "kunyomi": [
-          "くば.る"
+          "み"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
-        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
+        "vi": "Ghi nhớ 身 qua Hán-Việt Thân.",
+        "en": "somebody; person; one's station in life"
       },
       "decomposition": {
-        "hanViet": "Phối",
-        "structure": "standalone",
+        "hanViet": "Thân",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "送",
-          "品",
-          "達",
-          "給"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "phoi",
-        "meaningViNoAccent": "phan phoi; phan phat; sap xep",
-        "meaningEnNoAccent": "distribute, spouse"
+        "hanVietNoAccent": "Than",
+        "meaningViNoAccent": "Ban Than En Aw",
+        "meaningEnNoAccent": "somebody; person; one's station in life"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l06_v002",
-          "sourceSenseId": "n3_l06_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Phối (phân phối; phân phát; sắp xếp)",
-        "onyomi": "ハイ",
-        "kunyomi": "くば.る"
+        "meaning": "Thân (Bản Thân En Aw)",
+        "onyomi": "シン",
+        "kunyomi": "み"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 6,
-        "themeEn": "Online shopping and consumer behavior",
-        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l06_k004",
+      "kanjiId": "n3_canonical_l06_k006",
       "lessonId": 6,
       "level": "N3",
-      "character": "送",
-      "strokeCount": 9,
+      "character": "求",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Tống",
-        "meaningVi": "gửi đi; đưa tiễn",
-        "meaningViDisplay": "Tống (gửi đi; đưa tiễn)",
-        "meaningEn": "escort, send"
+        "hanViet": "Cầu",
+        "meaningVi": "Yêu Cầu",
+        "meaningViDisplay": "Cầu (Yêu Cầu)",
+        "meaningEn": "request; want; wish for"
       },
       "readings": {
         "onyomi": [
-          "ソウ"
+          "キュウ",
+          "グ"
         ],
         "kunyomi": [
-          "おく.る"
+          "もと.める"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
-        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
+        "vi": "Ghi nhớ 求 qua Hán-Việt Cầu.",
+        "en": "request; want; wish for"
       },
       "decomposition": {
-        "hanViet": "Tống",
-        "structure": "standalone",
+        "hanViet": "Cầu",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "配",
-          "返",
-          "達",
-          "行"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "tong",
-        "meaningViNoAccent": "gui di; dua tien",
-        "meaningEnNoAccent": "escort, send"
+        "hanVietNoAccent": "Cau",
+        "meaningViNoAccent": "Yeu Cau",
+        "meaningEnNoAccent": "request; want; wish for"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l06_v002",
-          "sourceSenseId": "n3_l06_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n3_l06_v009",
-          "sourceSenseId": "n3_l06_s009",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Tống (gửi đi; đưa tiễn)",
-        "onyomi": "ソウ",
-        "kunyomi": "おく.る"
+        "meaning": "Cầu (Yêu Cầu)",
+        "onyomi": "キュウ, グ",
+        "kunyomi": "もと.める"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 6,
-        "themeEn": "Online shopping and consumer behavior",
-        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l06_k005",
+      "kanjiId": "n3_canonical_l06_k007",
       "lessonId": 6,
       "level": "N3",
       "character": "返",
@@ -318,7 +402,7 @@
         ]
       },
       "search": {
-        "hanVietNoAccent": "phan",
+        "hanVietNoAccent": "Phan",
         "meaningViNoAccent": "tra lai; quay lai",
         "meaningEnNoAccent": "return, answer"
       },
@@ -338,68 +422,119 @@
         "kunyomi": "かえ.す, -かえ.す, かえ.る, -かえ.る"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
       "theme": {
         "quartetLesson": 6,
         "themeEn": "Online shopping and consumer behavior",
         "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
-      }
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l06_k006",
+      "kanjiId": "n3_canonical_l06_k008",
       "lessonId": 6,
       "level": "N3",
-      "character": "品",
-      "strokeCount": 9,
+      "character": "坂",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Phẩm",
-        "meaningVi": "hàng hóa; sản phẩm; phẩm chất",
-        "meaningViDisplay": "Phẩm (hàng hóa; sản phẩm; phẩm chất)",
-        "meaningEn": "goods, refinement"
+        "hanViet": "Phản",
+        "meaningVi": "slope; incline; hill",
+        "meaningViDisplay": "Phản (slope; incline; hill)",
+        "meaningEn": "slope; incline; hill"
       },
       "readings": {
         "onyomi": [
-          "ヒン",
-          "ホン"
+          "ハン"
         ],
         "kunyomi": [
-          "しな"
+          "さか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
-        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
+        "vi": "Biên tập bởi thocodehoctiengnhat ®",
+        "en": "slope; incline; hill"
       },
       "decomposition": {
-        "hanViet": "Phẩm",
+        "hanViet": "Phản",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phan",
+        "meaningViNoAccent": "slope; incline; hill",
+        "meaningEnNoAccent": "slope; incline; hill"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phản (slope; incline; hill)",
+        "onyomi": "ハン",
+        "kunyomi": "さか"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l06_k009",
+      "lessonId": 6,
+      "level": "N3",
+      "character": "材",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Tài",
+        "meaningVi": "nguyên liệu; vật liệu; gỗ",
+        "meaningViDisplay": "Tài (nguyên liệu; vật liệu; gỗ)",
+        "meaningEn": "lumber, log"
+      },
+      "readings": {
+        "onyomi": [
+          "ザイ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 19: Nấu ăn và văn hóa ẩm thực.",
+        "en": "Core kanji for QUARTET 19: Cooking and food culture."
+      },
+      "decomposition": {
+        "hanViet": "Tài",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "価",
-          "評",
-          "配",
-          "物"
+          "料",
+          "食",
+          "味",
+          "鮮"
         ]
       },
       "search": {
-        "hanVietNoAccent": "pham",
-        "meaningViNoAccent": "hang hoa; san pham; pham chat",
-        "meaningEnNoAccent": "goods, refinement"
+        "hanVietNoAccent": "Tai",
+        "meaningViNoAccent": "nguyen lieu; vat lieu; go",
+        "meaningEnNoAccent": "lumber, log"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l06_v003",
-          "sourceSenseId": "n3_l06_s003",
+          "sourceVocabId": "n3_l19_v002",
+          "sourceSenseId": "n3_l19_s002",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n3_l06_v008",
-          "sourceSenseId": "n3_l06_s008",
+          "sourceVocabId": "n3_l19_v005",
+          "sourceSenseId": "n3_l19_s005",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -407,150 +542,193 @@
         }
       ],
       "legacy": {
-        "meaning": "Phẩm (hàng hóa; sản phẩm; phẩm chất)",
-        "onyomi": "ヒン, ホン",
-        "kunyomi": "しな"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 6,
-        "themeEn": "Online shopping and consumer behavior",
-        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
-      }
-    },
-    {
-      "kanjiId": "n3_l06_k007",
-      "lessonId": 6,
-      "level": "N3",
-      "character": "評",
-      "strokeCount": 12,
-      "labels": {
-        "hanViet": "Bình",
-        "meaningVi": "đánh giá; phê bình",
-        "meaningViDisplay": "Bình (đánh giá; phê bình)",
-        "meaningEn": "evaluate, criticism"
-      },
-      "readings": {
-        "onyomi": [
-          "ヒョウ"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
-        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
-      },
-      "decomposition": {
-        "hanViet": "Bình",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "価",
-          "品",
-          "説",
-          "論"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "binh",
-        "meaningViNoAccent": "danh gia; phe binh",
-        "meaningEnNoAccent": "evaluate, criticism"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l06_v004",
-          "sourceSenseId": "n3_l06_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Bình (đánh giá; phê bình)",
-        "onyomi": "ヒョウ",
+        "meaning": "Tài (nguyên liệu; vật liệu; gỗ)",
+        "onyomi": "ザイ",
         "kunyomi": ""
       },
-      "tags": [
-        "vi-source-verified"
-      ],
       "theme": {
-        "quartetLesson": 6,
-        "themeEn": "Online shopping and consumer behavior",
-        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
-      }
+        "quartetLesson": 19,
+        "themeEn": "Cooking and food culture",
+        "themeVi": "Nấu ăn và văn hóa ẩm thực"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l06_k008",
+      "kanjiId": "n3_canonical_l06_k010",
       "lessonId": 6,
       "level": "N3",
-      "character": "価",
-      "strokeCount": 8,
+      "character": "児",
+      "strokeCount": 7,
       "labels": {
-        "hanViet": "Giá",
-        "meaningVi": "giá, giá trị",
-        "meaningViDisplay": "Giá (giá; giá trị)",
-        "meaningEn": "value, price"
+        "hanViet": "Nhi",
+        "meaningVi": "trẻ em; trẻ nhỏ; nhi đồng",
+        "meaningViDisplay": "Nhi (trẻ em; trẻ nhỏ; nhi đồng)",
+        "meaningEn": "child, newborn, young"
       },
       "readings": {
         "onyomi": [
-          "カ",
-          "ケ"
+          "ジ",
+          "ニ",
+          "ゲイ"
         ],
         "kunyomi": [
-          "あたい"
+          "こ",
+          "-こ",
+          "-っこ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 6: Mua sắm trực tuyến và hành vi tiêu dùng.",
-        "en": "Core kanji for QUARTET 6: Online shopping and consumer behavior."
+        "vi": "児 là trẻ nhỏ; trong 育児, chữ này chỉ đối tượng được chăm sóc và nuôi dạy.",
+        "en": "児 means child; in 育児 it is the child being cared for and raised."
       },
       "decomposition": {
-        "hanViet": "Giá",
-        "structure": "standalone",
+        "hanViet": "Nhi",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "品",
-          "評",
-          "値",
-          "金"
+          "子",
+          "育",
+          "幼",
+          "童"
         ]
       },
       "search": {
-        "hanVietNoAccent": "gia",
-        "meaningViNoAccent": "gia; gia tri",
-        "meaningEnNoAccent": "value, price"
+        "hanVietNoAccent": "Nhi",
+        "meaningViNoAccent": "tre em; tre nho; nhi dong",
+        "meaningEnNoAccent": "child, newborn, young"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l06_v004",
-          "sourceSenseId": "n3_l06_s004",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "育児",
+          "reading": "いくじ",
+          "meaning": "chăm sóc trẻ; nuôi dạy trẻ",
+          "meaningEn": "childcare, upbringing"
         }
       ],
-      "legacy": {
-        "meaning": "Giá (giá; giá trị)",
-        "onyomi": "カ, ケ",
-        "kunyomi": "あたい"
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "manual-han-viet-codex-pass",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 6,
-        "themeEn": "Online shopping and consumer behavior",
-        "themeVi": "Mua sắm trực tuyến và hành vi tiêu dùng"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Nhi (trẻ em; trẻ nhỏ; nhi đồng)",
+        "onyomi": "ジ, ニ, ゲイ",
+        "kunyomi": "こ, -こ, -っこ"
       }
+    },
+    {
+      "kanjiId": "n3_canonical_l06_k011",
+      "lessonId": 6,
+      "level": "N3",
+      "character": "局",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Cục",
+        "meaningVi": "bureau; board; office",
+        "meaningViDisplay": "Cục (bureau; board; office)",
+        "meaningEn": "bureau; board; office"
+      },
+      "readings": {
+        "onyomi": [
+          "キョク"
+        ],
+        "kunyomi": [
+          "つぼね"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "bureau; board; office"
+      },
+      "decomposition": {
+        "hanViet": "Cục",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Cuc",
+        "meaningViNoAccent": "bureau; board; office",
+        "meaningEnNoAccent": "bureau; board; office"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cục (bureau; board; office)",
+        "onyomi": "キョク",
+        "kunyomi": "つぼね"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l06_k012",
+      "lessonId": 6,
+      "level": "N3",
+      "character": "兵",
+      "strokeCount": 7,
+      "labels": {
+        "hanViet": "Binh",
+        "meaningVi": "soldier; private; troops",
+        "meaningViDisplay": "Binh (soldier; private; troops)",
+        "meaningEn": "soldier; private; troops"
+      },
+      "readings": {
+        "onyomi": [
+          "ヘイ",
+          "ヒョウ"
+        ],
+        "kunyomi": [
+          "つわもの"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biên tập bởi thocodehoctiengnhat ® * học kèm với bộ luyện viết để có kết quả tốt nhất",
+        "en": "soldier; private; troops"
+      },
+      "decomposition": {
+        "hanViet": "Binh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Binh",
+        "meaningViNoAccent": "soldier; private; troops",
+        "meaningEnNoAccent": "soldier; private; troops"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Binh (soldier; private; troops)",
+        "onyomi": "ヘイ, ヒョウ",
+        "kunyomi": "つわもの"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     }
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

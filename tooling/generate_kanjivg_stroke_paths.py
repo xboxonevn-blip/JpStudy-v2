@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build KanjiVG stroke-path dataset for N5/N4 kanji only.
+"""Build KanjiVG stroke-path dataset for current N5/N4 kanji only.
 
 Output:
   assets/data/support/kanji/kanjivg_stroke_paths_n5n4.json
@@ -17,7 +17,10 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 
 ROOT = Path(__file__).resolve().parents[1]
-KANJI_DIRS = [ROOT / "assets" / "data" / "archive" / "kanji" / "n5", ROOT / "assets" / "data" / "archive" / "kanji" / "n4"]
+KANJI_DIRS = [
+    ROOT / "assets" / "data" / "content" / "kanji" / "n5",
+    ROOT / "assets" / "data" / "content" / "kanji" / "n4",
+]
 OUTPUT_PATH = ROOT / "assets" / "data" / "support" / "kanji" / "kanjivg_stroke_paths_n5n4.json"
 CACHE_ZIP = ROOT / "tmp_kanjivg_master.zip"
 KANJIVG_ZIP_URL = "https://github.com/KanjiVG/kanjivg/archive/refs/heads/master.zip"
@@ -28,8 +31,9 @@ def _read_kanji_chars() -> List[str]:
     chars: List[str] = []
     seen = set()
     for level_dir in KANJI_DIRS:
-        for file in sorted(level_dir.glob("kanji_*.json")):
-            rows = json.loads(file.read_text(encoding="utf-8"))
+        for file in sorted(level_dir.glob("lesson_*.json")):
+            payload = json.loads(file.read_text(encoding="utf-8-sig"))
+            rows = payload.get("entries", [])
             for row in rows:
                 ch = str(row.get("character", "")).strip()
                 if not ch or ch in seen:

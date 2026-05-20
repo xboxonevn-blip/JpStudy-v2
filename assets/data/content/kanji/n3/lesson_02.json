@@ -1,329 +1,636 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "quartet-jmdict-kanjidic-draft",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N3",
   "lessonId": 2,
-  "entryCount": 8,
+  "entryCount": 13,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n3_l02_k001",
+      "kanjiId": "n3_canonical_l02_k001",
       "lessonId": 2,
       "level": "N3",
-      "character": "将",
-      "strokeCount": 10,
-      "labels": {
-        "hanViet": "Tướng",
-        "meaningVi": "tướng, tương lai",
-        "meaningViDisplay": "Tướng (tướng; tương lai)",
-        "meaningEn": "leader, commander"
-      },
-      "readings": {
-        "onyomi": [
-          "ショウ",
-          "ソウ"
-        ],
-        "kunyomi": [
-          "まさ.に",
-          "はた",
-          "まさ",
-          "ひきい.る"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
-      },
-      "decomposition": {
-        "hanViet": "Tướng",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "来",
-          "標",
-          "計",
-          "画"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tuong",
-        "meaningViNoAccent": "tuong, tuong lai",
-        "meaningEnNoAccent": "leader, commander"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l02_v001",
-          "sourceSenseId": "n3_l02_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Tướng (tướng; tương lai)",
-        "onyomi": "ショウ, ソウ",
-        "kunyomi": "まさ.に, はた, まさ, ひきい.る"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
-      }
-    },
-    {
-      "kanjiId": "n3_l02_k002",
-      "lessonId": 2,
-      "level": "N3",
-      "character": "来",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Lai",
-        "meaningVi": "đến, tương lai",
-        "meaningViDisplay": "Lai (đến, tương lai)",
-        "meaningEn": "come, due"
-      },
-      "readings": {
-        "onyomi": [
-          "ライ",
-          "タイ"
-        ],
-        "kunyomi": [
-          "く.る",
-          "きた.る",
-          "きた.す",
-          "き.たす"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
-      },
-      "decomposition": {
-        "hanViet": "Lai",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "将",
-          "未",
-          "行",
-          "帰"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "lai",
-        "meaningViNoAccent": "den, tuong lai",
-        "meaningEnNoAccent": "come, due"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l02_v001",
-          "sourceSenseId": "n3_l02_s001",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Lai (đến, tương lai)",
-        "onyomi": "ライ, タイ",
-        "kunyomi": "く.る, きた.る, きた.す, き.たす"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
-      }
-    },
-    {
-      "kanjiId": "n3_l02_k003",
-      "lessonId": 2,
-      "level": "N3",
-      "character": "目",
+      "character": "氷",
       "strokeCount": 5,
       "labels": {
-        "hanViet": "Mục",
-        "meaningVi": "mắt, mục",
-        "meaningViDisplay": "Mục (mắt, mục)",
-        "meaningEn": "eye, class"
-      },
-      "readings": {
-        "onyomi": [
-          "モク",
-          "ボク"
-        ],
-        "kunyomi": [
-          "め",
-          "-め",
-          "ま-"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
-      },
-      "decomposition": {
-        "hanViet": "Mục",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "標",
-          "的",
-          "見",
-          "眼"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "muc",
-        "meaningViNoAccent": "mat, muc",
-        "meaningEnNoAccent": "eye, class"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l02_v002",
-          "sourceSenseId": "n3_l02_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Mục (mắt, mục)",
-        "onyomi": "モク, ボク",
-        "kunyomi": "め, -め, ま-"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
-      }
-    },
-    {
-      "kanjiId": "n3_l02_k004",
-      "lessonId": 2,
-      "level": "N3",
-      "character": "標",
-      "strokeCount": 15,
-      "labels": {
-        "hanViet": "Tiêu",
-        "meaningVi": "mốc; dấu hiệu; mục tiêu",
-        "meaningViDisplay": "Tiêu (mốc; dấu hiệu; mục tiêu)",
-        "meaningEn": "signpost, seal"
+        "hanViet": "Băng",
+        "meaningVi": "icicle; ice; hail",
+        "meaningViDisplay": "Băng (icicle; ice; hail)",
+        "meaningEn": "icicle; ice; hail"
       },
       "readings": {
         "onyomi": [
           "ヒョウ"
         ],
         "kunyomi": [
-          "しるべ",
-          "しるし"
+          "こおり",
+          "ひ",
+          "こお.る"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
+        "vi": "Ghi nhớ 氷 qua Hán-Việt Băng.",
+        "en": "icicle; ice; hail"
       },
       "decomposition": {
-        "hanViet": "Tiêu",
-        "structure": "standalone",
+        "hanViet": "Băng",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "目",
-          "的",
-          "準",
-          "表"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "tieu",
-        "meaningViNoAccent": "moc, dau hieu, muc tieu",
-        "meaningEnNoAccent": "signpost, seal"
+        "hanVietNoAccent": "Bang",
+        "meaningViNoAccent": "icicle; ice; hail",
+        "meaningEnNoAccent": "icicle; ice; hail"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l02_v002",
-          "sourceSenseId": "n3_l02_s002",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Tiêu (mốc; dấu hiệu; mục tiêu)",
+        "meaning": "Băng (icicle; ice; hail)",
         "onyomi": "ヒョウ",
-        "kunyomi": "しるべ, しるし"
+        "kunyomi": "こおり, ひ, こお.る"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
-      }
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n3_l02_k005",
+      "kanjiId": "n3_canonical_l02_k002",
       "lessonId": 2,
       "level": "N3",
-      "character": "計",
-      "strokeCount": 9,
+      "character": "永",
+      "strokeCount": 5,
       "labels": {
-        "hanViet": "Kế",
-        "meaningVi": "kế hoạch; tính toán",
-        "meaningViDisplay": "Kế (kế hoạch; tính toán)",
-        "meaningEn": "plot, plan"
+        "hanViet": "Vĩnh",
+        "meaningVi": "Vịnh Cửu. Ja # Xi",
+        "meaningViDisplay": "Vĩnh (Vịnh Cửu. Ja # Xi)",
+        "meaningEn": "eternity; long; lengthy"
       },
       "readings": {
         "onyomi": [
-          "ケイ"
+          "エイ"
         ],
         "kunyomi": [
-          "はか.る",
-          "はか.らう"
+          "なが.い"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
+        "vi": "Ghi nhớ 永 qua Hán-Việt Vĩnh.",
+        "en": "eternity; long; lengthy"
       },
       "decomposition": {
-        "hanViet": "Kế",
+        "hanViet": "Vĩnh",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Vinh",
+        "meaningViNoAccent": "Vinh Cuu. Ja # Xi",
+        "meaningEnNoAccent": "eternity; long; lengthy"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Vĩnh (Vịnh Cửu. Ja # Xi)",
+        "onyomi": "エイ",
+        "kunyomi": "なが.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k003",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "皮",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Bì",
+        "meaningVi": "Da Rr Er",
+        "meaningViDisplay": "Bì (Da Rr Er)",
+        "meaningEn": "pelt; skin; hide"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒ"
+        ],
+        "kunyomi": [
+          "かわ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 皮 qua Hán-Việt Bì.",
+        "en": "pelt; skin; hide"
+      },
+      "decomposition": {
+        "hanViet": "Bì",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Bi",
+        "meaningViNoAccent": "Da Rr Er",
+        "meaningEnNoAccent": "pelt; skin; hide"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Bì (Da Rr Er)",
+        "onyomi": "ヒ",
+        "kunyomi": "かわ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k004",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "仕",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Sĩ",
+        "meaningVi": "Công Việc Tưng",
+        "meaningViDisplay": "Sĩ (Công Việc Tưng)",
+        "meaningEn": "attend; doing; official"
+      },
+      "readings": {
+        "onyomi": [
+          "シ",
+          "ジ"
+        ],
+        "kunyomi": [
+          "つか.える"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 仕 qua Hán-Việt Sĩ.",
+        "en": "attend; doing; official"
+      },
+      "decomposition": {
+        "hanViet": "Sĩ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Si",
+        "meaningViNoAccent": "Cong Viec Tung",
+        "meaningEnNoAccent": "attend; doing; official"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Sĩ (Công Việc Tưng)",
+        "onyomi": "シ, ジ",
+        "kunyomi": "つか.える"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k005",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "必",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Tất",
+        "meaningVi": "Tất Yêu. “yx Ih Sh",
+        "meaningViDisplay": "Tất (Tất Yêu. “yx Ih Sh)",
+        "meaningEn": "invariably; certain; inevitable"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒツ"
+        ],
+        "kunyomi": [
+          "かなら.ず"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 必 qua Hán-Việt Tất.",
+        "en": "invariably; certain; inevitable"
+      },
+      "decomposition": {
+        "hanViet": "Tất",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tat",
+        "meaningViNoAccent": "Tat Yeu. “yx Ih Sh",
+        "meaningEnNoAccent": "invariably; certain; inevitable"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tất (Tất Yêu. “yx Ih Sh)",
+        "onyomi": "ヒツ",
+        "kunyomi": "かなら.ず"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k006",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "幼",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Ấu",
+        "meaningVi": "Thơ Ấu {2 &",
+        "meaningViDisplay": "Ấu (Thơ Ấu {2 &)",
+        "meaningEn": "infancy; childhood; enfance"
+      },
+      "readings": {
+        "onyomi": [
+          "ヨウ"
+        ],
+        "kunyomi": [
+          "おさな.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "re Cố : '",
+        "en": "infancy; childhood; enfance"
+      },
+      "decomposition": {
+        "hanViet": "Ấu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Au",
+        "meaningViNoAccent": "Tho Au {2 &",
+        "meaningEnNoAccent": "infancy; childhood; enfance"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Ấu (Thơ Ấu {2 &)",
+        "onyomi": "ヨウ",
+        "kunyomi": "おさな.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k007",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "用",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Dụng",
+        "meaningVi": "dụng; dùng; sử dụng; công dụng",
+        "meaningViDisplay": "Dụng (dụng; dùng; sử dụng; công dụng)",
+        "meaningEn": "use, utilize, employ, service"
+      },
+      "readings": {
+        "onyomi": [
+          "ヨウ"
+        ],
+        "kunyomi": [
+          "もち.いる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "‘Se, i» | one. Ben al ai alt ait ait a a ee a",
+        "en": "用 means to use or apply; in 応用 it is putting knowledge to practical use."
+      },
+      "decomposition": {
+        "hanViet": "Dụng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "応",
+          "利",
+          "使",
+          "役"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dung",
+        "meaningViNoAccent": "dung; dung; su dung; cong dung",
+        "meaningEnNoAccent": "use, utilize, employ, service"
+      },
+      "examples": [
+        {
+          "word": "応用",
+          "reading": "おうよう",
+          "meaning": "ứng dụng; áp dụng thực tế",
+          "meaningEn": "application, put to practical use"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Dụng (dụng; dùng; sử dụng; công dụng)",
+        "onyomi": "ヨウ",
+        "kunyomi": "もち.いる"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k008",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "代",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Đại",
+        "meaningVi": "đại; thay thế; đời; thế hệ",
+        "meaningViDisplay": "Đại (đại; thay thế; đời; thế hệ)",
+        "meaningEn": "substitute, replace, generation, age"
+      },
+      "readings": {
+        "onyomi": [
+          "ダイ",
+          "タイ"
+        ],
+        "kunyomi": [
+          "か.わる",
+          "かわ.る",
+          "かわ.り",
+          "か.わり",
+          "-がわ.り",
+          "-が.わり",
+          "か.える",
+          "よ",
+          "しろ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "代 là thay thế hoặc một đời/thế hệ; trong お代わり, nó gợi phần thay thêm/phần nữa.",
+        "en": "代 means substitute or generation; in お代わり it suggests another serving replacing the previous one."
+      },
+      "decomposition": {
+        "hanViet": "Đại",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "替",
+          "世",
+          "時",
+          "人"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Dai",
+        "meaningViNoAccent": "dai; thay the; doi; the he",
+        "meaningEnNoAccent": "substitute, replace, generation, age"
+      },
+      "examples": [
+        {
+          "word": "お代わり",
+          "reading": "おかわり",
+          "meaning": "thêm phần nữa; thêm chén nữa",
+          "meaningEn": "second helping, another cup"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đại (đại; thay thế; đời; thế hệ)",
+        "onyomi": "ダイ, タイ",
+        "kunyomi": "か.わる, かわ.る, かわ.り, か.わり, -がわ.り, -が.わり, か.える, よ, しろ"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k009",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "可",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Khả",
+        "meaningVi": "Khả Năng Ttp Ey",
+        "meaningViDisplay": "Khả (Khả Năng Ttp Ey)",
+        "meaningEn": "can; passable; approval"
+      },
+      "readings": {
+        "onyomi": [
+          "カ",
+          "コク"
+        ],
+        "kunyomi": [
+          "-べ.き",
+          "-べ.し"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Ghi nhớ 可 qua Hán-Việt Khả.",
+        "en": "can; passable; approval"
+      },
+      "decomposition": {
+        "hanViet": "Khả",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Kha",
+        "meaningViNoAccent": "Kha Nang Ttp Ey",
+        "meaningEnNoAccent": "can; passable; approval"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Khả (Khả Năng Ttp Ey)",
+        "onyomi": "カ, コク",
+        "kunyomi": "-べ.き, -べ.し"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k010",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "未",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Vị",
+        "meaningVi": "chưa; chưa hoàn thành; tương lai",
+        "meaningViDisplay": "Vị (chưa; chưa hoàn thành; tương lai)",
+        "meaningEn": "not yet; still; sign of the ram"
+      },
+      "readings": {
+        "onyomi": [
+          "ミ",
+          "ビ"
+        ],
+        "kunyomi": [
+          "いま.だ",
+          "ま.だ",
+          "ひつじ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "未 là “chưa” hoặc điều còn ở phía trước; 未だ nghĩa là vẫn chưa hoặc cho đến nay.",
+        "en": "未 means not yet; 未だ means still not or as yet."
+      },
+      "decomposition": {
+        "hanViet": "Vị",
+        "structure": "single",
+        "components": [
+          "未"
+        ],
+        "componentNames": [
+          "vị/chưa"
+        ],
+        "relatedKanji": [
+          "末",
+          "来",
+          "今",
+          "将"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vi",
+        "meaningViNoAccent": "chua; chua hoan thanh; tuong lai",
+        "meaningEnNoAccent": "not yet; still; sign of the ram"
+      },
+      "examples": [
+        {
+          "word": "未だ",
+          "reading": "いまだ",
+          "meaning": "vẫn chưa; cho đến nay",
+          "meaningEn": "as yet; still not"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Vị (chưa; chưa hoàn thành; tương lai)",
+        "onyomi": "ミ, ビ",
+        "kunyomi": "いま.だ, ま.だ, ひつじ"
+      }
+    },
+    {
+      "kanjiId": "n3_canonical_l02_k011",
+      "lessonId": 2,
+      "level": "N3",
+      "character": "平",
+      "strokeCount": 5,
+      "labels": {
+        "hanViet": "Bình",
+        "meaningVi": "bằng phẳng; bình yên; ngang nhau",
+        "meaningViDisplay": "Bình (bằng phẳng; bình yên; ngang nhau)",
+        "meaningEn": "even, flat, peace"
+      },
+      "readings": {
+        "onyomi": [
+          "ヘイ",
+          "ビョウ",
+          "ヒョウ"
+        ],
+        "kunyomi": [
+          "たい.ら",
+          "たい.らげる",
+          "ひら"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Kanji thuộc chủ đề QUARTET 23: Lịch sử và chính trị.",
+        "en": "Core kanji for QUARTET 23: History and politics."
+      },
+      "decomposition": {
+        "hanViet": "Bình",
         "structure": "standalone",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "画",
-          "標",
-          "算",
-          "測"
+          "和",
+          "安",
+          "均",
+          "等"
         ]
       },
       "search": {
-        "hanVietNoAccent": "ke",
-        "meaningViNoAccent": "ke hoach, tinh toan",
-        "meaningEnNoAccent": "plot, plan"
+        "hanVietNoAccent": "Binh",
+        "meaningViNoAccent": "bang phang; binh yen; ngang nhau",
+        "meaningEnNoAccent": "even, flat, peace"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l02_v003",
-          "sourceSenseId": "n3_l02_s003",
+          "sourceVocabId": "n3_l23_v004",
+          "sourceSenseId": "n3_l23_s004",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -331,224 +638,162 @@
         }
       ],
       "legacy": {
-        "meaning": "Kế (kế hoạch; tính toán)",
-        "onyomi": "ケイ",
-        "kunyomi": "はか.る, はか.らう"
+        "meaning": "Bình (bằng phẳng; bình yên; ngang nhau)",
+        "onyomi": "ヘイ, ビョウ, ヒョウ",
+        "kunyomi": "たい.ら, たい.らげる, ひら"
+      },
+      "theme": {
+        "quartetLesson": 23,
+        "themeEn": "History and politics",
+        "themeVi": "Lịch sử và chính trị"
       },
       "tags": [
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
-      }
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n3_l02_k006",
+      "kanjiId": "n3_canonical_l02_k012",
       "lessonId": 2,
       "level": "N3",
-      "character": "画",
-      "strokeCount": 8,
+      "character": "打",
+      "strokeCount": 5,
       "labels": {
-        "hanViet": "Hoạch/Họa",
-        "meaningVi": "vẽ, hoạch định",
-        "meaningViDisplay": "Hoạch/Họa (vẽ; hoạch định)",
-        "meaningEn": "brush-stroke, picture"
+        "hanViet": "Đả",
+        "meaningVi": "đánh; gõ; đập",
+        "meaningViDisplay": "Đả (đánh; gõ; đập)",
+        "meaningEn": "strike, hit, knock"
       },
       "readings": {
         "onyomi": [
-          "ガ",
-          "カク",
-          "エ",
-          "カイ"
+          "ダ",
+          "ダース"
         ],
         "kunyomi": [
-          "えが.く",
-          "かく.する",
-          "かぎ.る",
-          "はかりごと"
+          "う.つ",
+          "う.ち-",
+          "ぶ.つ"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
+        "vi": "打 là đánh/gõ; trong 打合せ, nghĩa mở rộng là cùng nhau 'đánh nhịp' để bàn bạc trước.",
+        "en": "打 means to strike or hit; in 打合せ it extends to coordinating or meeting beforehand."
       },
       "decomposition": {
-        "hanViet": "Hoạch/Họa",
-        "structure": "standalone",
+        "hanViet": "Đả",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
         "relatedKanji": [
-          "計",
-          "標",
-          "絵",
-          "図"
+          "手",
+          "合",
+          "撃",
+          "投"
         ]
       },
       "search": {
-        "hanVietNoAccent": "hoach, hoa",
-        "meaningViNoAccent": "ve, hoach dinh",
-        "meaningEnNoAccent": "brush-stroke, picture"
+        "hanVietNoAccent": "Da",
+        "meaningViNoAccent": "danh; go; dap",
+        "meaningEnNoAccent": "strike, hit, knock"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l02_v003",
-          "sourceSenseId": "n3_l02_s003",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "打合せ",
+          "reading": "うちあわせ",
+          "meaning": "cuộc họp bàn; sắp xếp trước; cuộc hẹn",
+          "meaningEn": "business meeting, previous arrangement, appointment"
         }
       ],
-      "legacy": {
-        "meaning": "Hoạch/Họa (vẽ; hoạch định)",
-        "onyomi": "ガ, カク, エ, カイ",
-        "kunyomi": "えが.く, かく.する, かぎ.る, はかりごと"
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Đả (đánh; gõ; đập)",
+        "onyomi": "ダ, ダース",
+        "kunyomi": "う.つ, う.ち-, ぶ.つ"
       }
     },
     {
-      "kanjiId": "n3_l02_k007",
+      "kanjiId": "n3_canonical_l02_k013",
       "lessonId": 2,
       "level": "N3",
-      "character": "努",
-      "strokeCount": 7,
+      "character": "他",
+      "strokeCount": 5,
       "labels": {
-        "hanViet": "Nỗ",
-        "meaningVi": "nỗ lực; cố gắng",
-        "meaningViDisplay": "Nỗ (nỗ lực; cố gắng)",
-        "meaningEn": "toil, diligent"
+        "hanViet": "Tha",
+        "meaningVi": "khác; người khác",
+        "meaningViDisplay": "Tha (khác; người khác)",
+        "meaningEn": "other; another"
       },
       "readings": {
         "onyomi": [
-          "ド"
+          "タ"
         ],
         "kunyomi": [
-          "つと.める"
+          "ほか"
         ]
       },
       "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
+        "vi": "他 có bộ nhân, dùng để chỉ người/vật khác hoặc phần còn lại; 他人 là người khác, người không liên quan.",
+        "en": "他 has the person radical and means other or another; 他人 means another person or outsider."
       },
       "decomposition": {
-        "hanViet": "Nỗ",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
-        "relatedKanji": [
-          "力",
-          "勉",
-          "勤",
-          "励"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "no",
-        "meaningViNoAccent": "no luc, co gang",
-        "meaningEnNoAccent": "toil, diligent"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n3_l02_v005",
-          "sourceSenseId": "n3_l02_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Nỗ (nỗ lực; cố gắng)",
-        "onyomi": "ド",
-        "kunyomi": "つと.める"
-      },
-      "tags": [
-        "vi-source-verified"
-      ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
-      }
-    },
-    {
-      "kanjiId": "n3_l02_k008",
-      "lessonId": 2,
-      "level": "N3",
-      "character": "力",
-      "strokeCount": 2,
-      "labels": {
-        "hanViet": "Lực",
-        "meaningVi": "lực, sức",
-        "meaningViDisplay": "Lực (lực, sức)",
-        "meaningEn": "power, strength"
-      },
-      "readings": {
-        "onyomi": [
-          "リョク",
-          "リキ",
-          "リイ"
+        "hanViet": "Tha",
+        "structure": "left-right",
+        "components": [
+          "亻",
+          "也"
         ],
-        "kunyomi": [
-          "ちから"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Kanji thuộc chủ đề QUARTET 2: Tạo nên bản thân tương lai từ hiện tại.",
-        "en": "Core kanji for QUARTET 2: Making your future self from now."
-      },
-      "decomposition": {
-        "hanViet": "Lực",
-        "structure": "standalone",
-        "components": [],
-        "componentNames": [],
+        "componentNames": [
+          "người",
+          "dã/cũng"
+        ],
         "relatedKanji": [
-          "努",
-          "動",
-          "働",
-          "強"
+          "人",
+          "私",
+          "別",
+          "外"
         ]
       },
       "search": {
-        "hanVietNoAccent": "luc",
-        "meaningViNoAccent": "luc, suc",
-        "meaningEnNoAccent": "power, strength"
+        "hanVietNoAccent": "Tha",
+        "meaningViNoAccent": "khac; nguoi khac",
+        "meaningEnNoAccent": "other; another"
       },
       "examples": [
         {
-          "sourceVocabId": "n3_l02_v005",
-          "sourceSenseId": "n3_l02_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
+          "word": "他人",
+          "reading": "たにん",
+          "meaning": "người khác; người không liên quan; người ngoài",
+          "meaningEn": "another person; outsider"
         }
       ],
-      "legacy": {
-        "meaning": "Lực (lực, sức)",
-        "onyomi": "リョク, リキ, リイ",
-        "kunyomi": "ちから"
-      },
       "tags": [
-        "vi-source-verified"
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "theme": {
-        "quartetLesson": 2,
-        "themeEn": "Making your future self from now",
-        "themeVi": "Tạo nên bản thân tương lai từ hiện tại"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tha (khác; người khác)",
+        "onyomi": "タ",
+        "kunyomi": "ほか"
       }
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

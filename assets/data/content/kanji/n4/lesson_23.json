@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 2,
+  "dataset": "kanji",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
+  "level": "N4",
+  "lessonId": 23,
+  "entryCount": 7,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
+  "entries": [
+    {
+      "kanjiId": "n4_canonical_l23_k001",
+      "lessonId": 23,
+      "level": "N4",
+      "character": "着",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Khán",
+        "meaningVi": "mặc, đến",
+        "meaningViDisplay": "Khán (mặc, đến)",
+        "meaningEn": "Wear, Arrive"
+      },
+      "readings": {
+        "onyomi": [
+          "チャク",
+          "ジャク"
+        ],
+        "kunyomi": [
+          "き.る",
+          "き.せる",
+          "つ.く",
+          "つ.ける"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Con dê ( ) mắt ( ) nhìn để mặc ( ) đồ 1 2",
+        "en": "Using wool (羊) to make clothes to WEAR."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "羊",
+          "目"
+        ],
+        "componentNames": [
+          "Dương biến thể (cừu)",
+          "Mục (mắt)"
+        ],
+        "relatedKanji": [
+          "目"
+        ],
+        "hanViet": "Khán"
+      },
+      "search": {
+        "hanVietNoAccent": "Khan",
+        "meaningViNoAccent": "mac, den",
+        "meaningEnNoAccent": "Wear, Arrive"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l31_v049",
+          "sourceSenseId": "n4_l31_s049",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l40_v006",
+          "sourceSenseId": "n4_l40_s006",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l42_v077",
+          "sourceSenseId": "n4_l42_s077",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Khán (mặc, đến)",
+        "onyomi": "チャク, ジャク",
+        "kunyomi": "き.る, き.せる, つ.く, つ.ける"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l23_k002",
+      "lessonId": 23,
+      "level": "N4",
+      "character": "働",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Động",
+        "meaningVi": "Làm việc",
+        "meaningViDisplay": "Động (Làm việc)",
+        "meaningEn": "work; (kokuji); travailler"
+      },
+      "readings": {
+        "onyomi": [
+          "ドウ"
+        ],
+        "kunyomi": [
+          "はたら.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) chuyển động ( ) khi đang lao động ( ) 働 3",
+        "en": "work; (kokuji); travailler"
+      },
+      "decomposition": {
+        "hanViet": "Động",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "Lam viec",
+        "meaningEnNoAccent": "work; (kokuji); travailler"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Động (Làm việc)",
+        "onyomi": "ドウ",
+        "kunyomi": "はたら.く"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n4_canonical_l23_k003",
+      "lessonId": 23,
+      "level": "N4",
+      "character": "数",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Sác",
+        "meaningVi": "đếm, số lượng",
+        "meaningViDisplay": "Sác (đếm, số lượng)",
+        "meaningEn": "Number, Count"
+      },
+      "readings": {
+        "onyomi": [
+          "スウ",
+          "ス",
+          "サク",
+          "ソク",
+          "シュ"
+        ],
+        "kunyomi": [
+          "かず",
+          "かぞ.える",
+          "しばしば",
+          "せ.める",
+          "わずらわ.しい"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Sau khi say rượu gạo ( ) phụ nữ ( ) đánh ( ) chồng lấy có số ( ) má 4 2 10",
+        "en": "Counting rice (米) with a tool."
+      },
+      "decomposition": {
+        "structure": "left-right",
+        "components": [
+          "米",
+          "女",
+          "攵"
+        ],
+        "componentNames": [
+          "Mễ (gạo)",
+          "Nữ biến thể (phụ nữ)",
+          "Phọc (đánh)"
+        ],
+        "relatedKanji": [
+          "教"
+        ],
+        "hanViet": "Sác"
+      },
+      "search": {
+        "hanVietNoAccent": "Sac",
+        "meaningViNoAccent": "dem, so luong",
+        "meaningEnNoAccent": "Number, Count"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l40_v064",
+          "sourceSenseId": "n4_l40_s064",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l40_v062",
+          "sourceSenseId": "n4_l40_s062",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n4_l40_v001",
+          "sourceSenseId": "n4_l40_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Sác (đếm, số lượng)",
+        "onyomi": "スウ, ス, サク, ソク, シュ",
+        "kunyomi": "かず, かぞ.える, しばしば, せ.める, わずらわ.しい"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l23_k004",
+      "lessonId": 23,
+      "level": "N4",
+      "character": "園",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Viên",
+        "meaningVi": "viên; vườn; công viên; khu vườn",
+        "meaningViDisplay": "Viên (viên; vườn; công viên; khu vườn)",
+        "meaningEn": "park, garden, yard, farm"
+      },
+      "readings": {
+        "onyomi": [
+          "エン"
+        ],
+        "kunyomi": [
+          "その"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vây quanh ( ) viên ( ) là công viên ( ) 2",
+        "en": "園 means garden, park, or yard; in 園芸 it is the garden space for growing plants."
+      },
+      "decomposition": {
+        "hanViet": "Viên",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "庭",
+          "公",
+          "花",
+          "芸"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vien",
+        "meaningViNoAccent": "vien; vuon; cong vien; khu vuon",
+        "meaningEnNoAccent": "park, garden, yard, farm"
+      },
+      "examples": [
+        {
+          "word": "園芸",
+          "reading": "えんげい",
+          "meaning": "làm vườn; nghề trồng cây cảnh",
+          "meaningEn": "horticulture, gardening"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Viên (viên; vườn; công viên; khu vườn)",
+        "onyomi": "エン",
+        "kunyomi": "その"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l23_k005",
+      "lessonId": 23,
+      "level": "N4",
+      "character": "遠",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Viễn",
+        "meaningVi": "viễn; xa; xa xôi; cách xa",
+        "meaningViDisplay": "Viễn (viễn; xa; xa xôi; cách xa)",
+        "meaningEn": "distant, far, remote"
+      },
+      "readings": {
+        "onyomi": [
+          "エン",
+          "オン"
+        ],
+        "kunyomi": [
+          "とお.い"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Đến công viên ( ) còn phải đi xa ( ) xa ( )遠 2",
+        "en": "遠 means far or distant; in 遠足 it marks a trip away from the usual place."
+      },
+      "decomposition": {
+        "hanViet": "Viễn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "近",
+          "足",
+          "道",
+          "距"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Vien",
+        "meaningViNoAccent": "vien; xa; xa xoi; cach xa",
+        "meaningEnNoAccent": "distant, far, remote"
+      },
+      "examples": [
+        {
+          "word": "遠足",
+          "reading": "えんそく",
+          "meaning": "đi dã ngoại; chuyến tham quan",
+          "meaningEn": "trip, hike, picnic"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n2-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Viễn (viễn; xa; xa xôi; cách xa)",
+        "onyomi": "エン, オン",
+        "kunyomi": "とお.い"
+      }
+    },
+    {
+      "kanjiId": "n4_canonical_l23_k006",
+      "lessonId": 23,
+      "level": "N4",
+      "character": "楽",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Lạc",
+        "meaningVi": "vui, nhạc",
+        "meaningViDisplay": "Lạc (vui, nhạc)",
+        "meaningEn": "Fun, Music"
+      },
+      "readings": {
+        "onyomi": [
+          "ガク",
+          "ラク",
+          "ゴウ"
+        ],
+        "kunyomi": [
+          "たの.しい",
+          "たの.しむ",
+          "この.む"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Màu trắng ( ) phát ra (><) từ cây ( ) nhìn rất vui ( ) mắt 1",
+        "en": "Instruments made of wood (木) used for FUN MUSIC."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "白",
+          "木"
+        ],
+        "componentNames": [
+          "Bạch biến thể (trắng)",
+          "Mộc (cây)"
+        ],
+        "relatedKanji": [
+          "木",
+          "薬"
+        ],
+        "hanViet": "Lạc"
+      },
+      "search": {
+        "hanVietNoAccent": "Lac",
+        "meaningViNoAccent": "vui, nhac",
+        "meaningEnNoAccent": "Fun, Music"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n4_l35_v007",
+          "sourceSenseId": "n4_l35_s007",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l09_v012",
+          "sourceSenseId": "n5_l09_s012",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l08_v030",
+          "sourceSenseId": "n5_l08_s030",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Lạc (vui, nhạc)",
+        "onyomi": "ガク, ラク, ゴウ",
+        "kunyomi": "たの.しい, たの.しむ, この.む"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n4_canonical_l23_k007",
+      "lessonId": 23,
+      "level": "N4",
+      "character": "試",
+      "strokeCount": 13,
+      "labels": {
+        "hanViet": "Thí",
+        "meaningVi": "thử; kiểm tra; thi đấu",
+        "meaningViDisplay": "Thí (thử; kiểm tra; thi đấu)",
+        "meaningEn": "test, try"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "こころ.みる",
+          "ため.す"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Nói ( ) về hình thức ( ) tiến hành thí nghiệm ( ) 試 13",
+        "en": "Core kanji for QUARTET 16: Sports and competition."
+      },
+      "decomposition": {
+        "hanViet": "Thí",
+        "structure": "standalone",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": [
+          "験",
+          "合",
+          "問",
+          "受"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Thi",
+        "meaningViNoAccent": "thu; kiem tra; thi dau",
+        "meaningEnNoAccent": "test, try"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n3_l16_v001",
+          "sourceSenseId": "n3_l16_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thí (thử; kiểm tra; thi đấu)",
+        "onyomi": "シ",
+        "kunyomi": "こころ.みる, ため.す"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "theme": {
+        "quartetLesson": 16,
+        "themeEn": "Sports and competition",
+        "themeVi": "Thể thao và thi đấu"
+      },
+      "metadataStatus": "vi-editorial-codex-pass"
+    }
+  ]
+}

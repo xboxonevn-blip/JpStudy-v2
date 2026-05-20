@@ -1,531 +1,89 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "minna",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N5",
   "lessonId": 21,
-  "entryCount": 10,
+  "entryCount": 4,
+  "importStatus": "source-verified",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n5_l21_k001",
+      "kanjiId": "n5_canonical_l21_k001",
       "lessonId": 21,
       "level": "N5",
-      "character": "住",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Trú",
-        "meaningVi": "sống",
-        "meaningViDisplay": "Trú (sống)",
-        "meaningEn": "Live, Reside"
-      },
-      "readings": {
-        "onyomi": [
-          "JUU"
-        ],
-        "kunyomi": [
-          "su-mu"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Người (Nhân 亻) đứng cạnh cây Đèn (Chủ 主) trong nơi Trú ngụ.",
-        "en": "A person (亻) standing by a lamp (主) where they live."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "亻",
-          "主"
-        ],
-        "componentNames": [
-          "Nhân (người)",
-          "Chủ (chủ nhân)"
-        ],
-        "relatedKanji": [
-          "人",
-          "注"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "tru",
-        "meaningViNoAccent": "song",
-        "meaningEnNoAccent": "live, reside"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l21_v051",
-          "sourceSenseId": "n5_l21_s051",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l14_v022",
-          "sourceSenseId": "n5_l14_s022",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l15_v005",
-          "sourceSenseId": "n5_l15_s005",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Trú (sống)",
-        "onyomi": "JUU",
-        "kunyomi": "su-mu"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l21_k002",
-      "lessonId": 21,
-      "level": "N5",
-      "character": "所",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Sở",
-        "meaningVi": "nơi chốn",
-        "meaningViDisplay": "Sở (nơi chốn)",
-        "meaningEn": "Place"
-      },
-      "readings": {
-        "onyomi": [
-          "SHO"
-        ],
-        "kunyomi": [
-          "tokoro"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Dùng Rìu (Can 斤) mở Cửa (Hộ 戸) để tìm nơi chốn (Sở).",
-        "en": "Using an axe (斤) at the door (戸) of a PLACE."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "戸",
-          "斤"
-        ],
-        "componentNames": [
-          "Hộ (cánh cửa)",
-          "Cân (rìu)"
-        ],
-        "relatedKanji": [
-          "近",
-          "新",
-          "折"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "so",
-        "meaningViNoAccent": "noi chon",
-        "meaningEnNoAccent": "place"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l08_v039",
-          "sourceSenseId": "n5_l08_s039",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l14_v022",
-          "sourceSenseId": "n5_l14_s022",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l13_v017",
-          "sourceSenseId": "n5_l13_s017",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Sở (nơi chốn)",
-        "onyomi": "SHO",
-        "kunyomi": "tokoro"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l21_k003",
-      "lessonId": 21,
-      "level": "N5",
-      "character": "京",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Kinh",
-        "meaningVi": "kinh đô",
-        "meaningViDisplay": "Kinh (kinh đô)",
-        "meaningEn": "Capital"
-      },
-      "readings": {
-        "onyomi": [
-          "KYOU"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Ngôi nhà cao đầu tiên ở Kinh đô.",
-        "en": "A tall building in the CAPITAL city."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "亠",
-          "口",
-          "小"
-        ],
-        "componentNames": [
-          "Đầu (nắp đậy)",
-          "Khẩu (miệng)",
-          "Tiểu (nhỏ)"
-        ],
-        "relatedKanji": [
-          "高",
-          "景",
-          "都",
-          "驚"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "kinh",
-        "meaningViNoAccent": "kinh do",
-        "meaningEnNoAccent": "capital"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l21_v050",
-          "sourceSenseId": "n5_l21_s050",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v043",
-          "sourceSenseId": "n5_l21_s043",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v044",
-          "sourceSenseId": "n5_l21_s044",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Kinh (kinh đô)",
-        "onyomi": "KYOU",
-        "kunyomi": null
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l21_k004",
-      "lessonId": 21,
-      "level": "N5",
-      "character": "都",
-      "strokeCount": 11,
-      "labels": {
-        "hanViet": "Đô",
-        "meaningVi": "đô thành",
-        "meaningViDisplay": "Đô (đô thành)",
-        "meaningEn": "Metropolis"
-      },
-      "readings": {
-        "onyomi": [
-          "TO"
-        ],
-        "kunyomi": [
-          "miyako"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Mọi người (Giả 者) tập trung ở vùng đất có ranh giới (Ấp 阝) tạo nên Đô thị.",
-        "en": "People (者) gathered in a district (阝) to form a METROPOLIS."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "者",
-          "阝"
-        ],
-        "componentNames": [
-          "Giả (người)",
-          "Ấp (vùng đất)"
-        ],
-        "relatedKanji": [
-          "者",
-          "京"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "do",
-        "meaningViNoAccent": "do thanh",
-        "meaningEnNoAccent": "metropolis"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l21_v053",
-          "sourceSenseId": "n5_l21_s053",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v044",
-          "sourceSenseId": "n5_l21_s044",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v045",
-          "sourceSenseId": "n5_l21_s045",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Đô (đô thành)",
-        "onyomi": "TO",
-        "kunyomi": "miyako"
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l21_k005",
-      "lessonId": 21,
-      "level": "N5",
-      "character": "府",
-      "strokeCount": 8,
-      "labels": {
-        "hanViet": "Phủ",
-        "meaningVi": "phủ, tỉnh",
-        "meaningViDisplay": "Phủ (phủ, tỉnh)",
-        "meaningEn": "Prefecture"
-      },
-      "readings": {
-        "onyomi": [
-          "FU"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Nơi nạp (Phó 付) giấy tờ dưới mái nhà chính (Nghiễm 广) là Phủ.",
-        "en": "A government office (付) under a roof (广)."
-      },
-      "decomposition": {
-        "structure": "mixed",
-        "components": [
-          "广",
-          "付"
-        ],
-        "componentNames": [
-          "Nghiễm (mái nhà lớn)",
-          "Phó (giao cho)"
-        ],
-        "relatedKanji": [
-          "広",
-          "屋"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "phu",
-        "meaningViNoAccent": "phu, tinh",
-        "meaningEnNoAccent": "prefecture"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l21_v052",
-          "sourceSenseId": "n5_l21_s052",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v046",
-          "sourceSenseId": "n5_l21_s046",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Phủ (phủ, tỉnh)",
-        "onyomi": "FU",
-        "kunyomi": null
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l21_k006",
-      "lessonId": 21,
-      "level": "N5",
-      "character": "県",
+      "character": "音",
       "strokeCount": 9,
       "labels": {
-        "hanViet": "Huyện",
-        "meaningVi": "tỉnh",
-        "meaningViDisplay": "Huyện (tỉnh)",
-        "meaningEn": "Prefecture"
+        "hanViet": "Âm",
+        "meaningVi": "âm thanh",
+        "meaningViDisplay": "Âm (âm thanh)",
+        "meaningEn": "Sound"
       },
       "readings": {
         "onyomi": [
-          "KEN"
-        ],
-        "kunyomi": []
-      },
-      "mnemonic": {
-        "vi": "Dây buộc (Hệ 系) các con mắt (Mục 目) lại để quản lý tỉnh Huyện.",
-        "en": "Managing districts (ken)."
-      },
-      "decomposition": {
-        "structure": "top-bottom",
-        "components": [
-          "目",
-          "小"
-        ],
-        "componentNames": [
-          "Mục (mắt)",
-          "Tiểu biến thể (nhỏ)"
-        ],
-        "relatedKanji": [
-          "目",
-          "見"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "huyen",
-        "meaningViNoAccent": "tinh",
-        "meaningEnNoAccent": "prefecture"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l10_v030",
-          "sourceSenseId": "n5_l10_s030",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v057",
-          "sourceSenseId": "n5_l21_s057",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Huyện (tỉnh)",
-        "onyomi": "KEN",
-        "kunyomi": null
-      },
-      "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l21_k007",
-      "lessonId": 21,
-      "level": "N5",
-      "character": "市",
-      "strokeCount": 5,
-      "labels": {
-        "hanViet": "Thị",
-        "meaningVi": "thành phố, chợ",
-        "meaningViDisplay": "Thị (thành phố, chợ)",
-        "meaningEn": "City, Market"
-      },
-      "readings": {
-        "onyomi": [
-          "SHI"
+          "オン",
+          "イン",
+          "-ノン"
         ],
         "kunyomi": [
-          "ichi"
+          "おと",
+          "ね"
         ]
       },
       "mnemonic": {
-        "vi": "Cái khăn (Cân 巾) treo ở chợ (Thị).",
-        "en": "A towel (巾) displayed at the MARKET."
+        "vi": "Mặt trời (Nhật 日) đứng (Lập 立) trên mặt đất phát ra Âm thanh ngày mới.",
+        "en": "The sun (日) standing (立) up to make SOUND."
       },
       "decomposition": {
         "structure": "top-bottom",
         "components": [
-          "亠",
-          "巾"
+          "立",
+          "日"
         ],
         "componentNames": [
-          "Đầu (nắp đậy)",
-          "Cân (khăn)"
+          "Lập (đứng)",
+          "Nhật (ngày)"
         ],
         "relatedKanji": [
-          "布"
-        ]
+          "日",
+          "立",
+          "暗",
+          "意"
+        ],
+        "hanViet": "Âm"
       },
       "search": {
-        "hanVietNoAccent": "thi",
-        "meaningViNoAccent": "thanh pho, cho",
-        "meaningEnNoAccent": "city, market"
+        "hanVietNoAccent": "Am",
+        "meaningViNoAccent": "am thanh",
+        "meaningEnNoAccent": "Sound"
       },
       "examples": [
         {
-          "sourceVocabId": "n5_l21_v047",
-          "sourceSenseId": "n5_l21_s047",
+          "sourceVocabId": "n5_l23_v015",
+          "sourceSenseId": "n5_l23_s015",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l21_v048",
-          "sourceSenseId": "n5_l21_s048",
+          "sourceVocabId": "n5_l09_v012",
+          "sourceSenseId": "n5_l09_s012",
           "word": null,
           "reading": null,
           "meaningVi": null,
           "meaningEn": null
         },
         {
-          "sourceVocabId": "n5_l13_v017",
-          "sourceSenseId": "n5_l13_s017",
+          "sourceVocabId": "n4_l47_v004",
+          "sourceSenseId": "n4_l47_s004",
           "word": null,
           "reading": null,
           "meaningVi": null,
@@ -533,229 +91,205 @@
         }
       ],
       "legacy": {
-        "meaning": "Thị (thành phố, chợ)",
-        "onyomi": "SHI",
-        "kunyomi": "ichi"
+        "meaning": "Âm (âm thanh)",
+        "onyomi": "オン, イン, -ノン",
+        "kunyomi": "おと, ね"
       },
       "tags": [
-        "vi-human-approved"
-      ]
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
     },
     {
-      "kanjiId": "n5_l21_k008",
+      "kanjiId": "n5_canonical_l21_k002",
       "lessonId": 21,
       "level": "N5",
-      "character": "区",
-      "strokeCount": 4,
+      "character": "食",
+      "strokeCount": 9,
       "labels": {
-        "hanViet": "Khu",
-        "meaningVi": "quận",
-        "meaningViDisplay": "Khu (quận)",
-        "meaningEn": "Ward, District"
+        "hanViet": "Thực",
+        "meaningVi": "ăn",
+        "meaningViDisplay": "Thực (ăn)",
+        "meaningEn": "Eat, Food"
       },
       "readings": {
         "onyomi": [
-          "KU"
+          "ショク",
+          "ジキ"
+        ],
+        "kunyomi": [
+          "く.う",
+          "く.らう",
+          "た.べる",
+          "は.む"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Một người (Nhân 亻) đang ăn thức ăn dưới mái nhà lương thực.",
+        "en": "A person (亻) eating food under a roof."
+      },
+      "decomposition": {
+        "structure": "top-bottom",
+        "components": [
+          "亼",
+          "良"
+        ],
+        "componentNames": [
+          "Tập (nắp đậy)",
+          "Lương biến thể (tốt)"
+        ],
+        "relatedKanji": [
+          "飲",
+          "飼",
+          "飾"
+        ],
+        "hanViet": "Thực"
+      },
+      "search": {
+        "hanVietNoAccent": "Thuc",
+        "meaningViNoAccent": "an",
+        "meaningEnNoAccent": "Eat, Food"
+      },
+      "examples": [
+        {
+          "sourceVocabId": "n5_l06_v061",
+          "sourceSenseId": "n5_l06_s061",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l08_v038",
+          "sourceSenseId": "n5_l08_s038",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        },
+        {
+          "sourceVocabId": "n5_l06_v001",
+          "sourceSenseId": "n5_l06_s001",
+          "word": null,
+          "reading": null,
+          "meaningVi": null,
+          "meaningEn": null
+        }
+      ],
+      "legacy": {
+        "meaning": "Thực (ăn)",
+        "onyomi": "ショク, ジキ",
+        "kunyomi": "く.う, く.らう, た.べる, は.む"
+      },
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass"
+    },
+    {
+      "kanjiId": "n5_canonical_l21_k003",
+      "lessonId": 21,
+      "level": "N5",
+      "character": "茶",
+      "strokeCount": 9,
+      "labels": {
+        "hanViet": "Trà",
+        "meaningVi": "tea; thé; hoja de té",
+        "meaningViDisplay": "Trà (tea; thé; hoja de té)",
+        "meaningEn": "tea; thé; hoja de té"
+      },
+      "readings": {
+        "onyomi": [
+          "チャ",
+          "サ"
         ],
         "kunyomi": []
       },
       "mnemonic": {
-        "vi": "Những vật phẩm được cất giữ trong một Khu vực có vách ngăn.",
-        "en": "Dividing items into specific WARDs."
+        "vi": "Ghi nhớ 茶 qua Hán-Việt Trà.",
+        "en": "tea; thé; hoja de té"
       },
       "decomposition": {
-        "structure": "enclosure",
+        "hanViet": "Trà",
+        "structure": "unknown",
         "components": [],
         "componentNames": [],
-        "relatedKanji": [
-          "国"
-        ]
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "khu",
-        "meaningViNoAccent": "quan",
-        "meaningEnNoAccent": "ward, district"
+        "hanVietNoAccent": "Tra",
+        "meaningViNoAccent": "tea; the; hoja de te",
+        "meaningEnNoAccent": "tea; the; hoja de te"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l21_v049",
-          "sourceSenseId": "n5_l21_s049",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v054",
-          "sourceSenseId": "n5_l21_s054",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Khu (quận)",
-        "onyomi": "KU",
-        "kunyomi": null
+        "meaning": "Trà (tea; thé; hoja de té)",
+        "onyomi": "チャ, サ",
+        "kunyomi": ""
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-human-approved"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     },
     {
-      "kanjiId": "n5_l21_k009",
+      "kanjiId": "n5_canonical_l21_k004",
       "lessonId": 21,
       "level": "N5",
-      "character": "町",
-      "strokeCount": 7,
+      "character": "海",
+      "strokeCount": 10,
       "labels": {
-        "hanViet": "Đinh",
-        "meaningVi": "thị trấn",
-        "meaningViDisplay": "Đinh (thị trấn)",
-        "meaningEn": "Town"
+        "hanViet": "Hải",
+        "meaningVi": "biển",
+        "meaningViDisplay": "Hải (biển)",
+        "meaningEn": "sea"
       },
       "readings": {
         "onyomi": [
-          "CHOU"
+          "カイ"
         ],
         "kunyomi": [
-          "machi"
+          "うみ"
         ]
       },
       "mnemonic": {
-        "vi": "Cánh đồng (Điền 田) ở ven Đinh (thị trấn 丁).",
-        "en": "A rice field (田) near the street/town corner (丁)."
+        "vi": "Nước ( ) mỗi ngày ( ) chảy ra biển ( ) 海 4",
+        "en": "sea"
       },
       "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "田",
-          "丁"
-        ],
-        "componentNames": [
-          "Điền (ruộng)",
-          "Đinh (đỉnh)"
-        ],
-        "relatedKanji": [
-          "田",
-          "男",
-          "打"
-        ]
+        "hanViet": "Hải",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "dinh",
-        "meaningViNoAccent": "thi tran",
-        "meaningEnNoAccent": "town"
+        "hanVietNoAccent": "Hai",
+        "meaningViNoAccent": "bien",
+        "meaningEnNoAccent": "sea"
       },
-      "examples": [
-        {
-          "sourceVocabId": "n5_l08_v037",
-          "sourceSenseId": "n5_l08_s037",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v056",
-          "sourceSenseId": "n5_l21_s056",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
+      "examples": [],
       "legacy": {
-        "meaning": "Đinh (thị trấn)",
-        "onyomi": "CHOU",
-        "kunyomi": "machi"
+        "meaning": "Hải (biển)",
+        "onyomi": "カイ",
+        "kunyomi": "うみ"
       },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "vi-human-approved"
-      ]
-    },
-    {
-      "kanjiId": "n5_l21_k010",
-      "lessonId": 21,
-      "level": "N5",
-      "character": "村",
-      "strokeCount": 7,
-      "labels": {
-        "hanViet": "Thôn",
-        "meaningVi": "làng",
-        "meaningViDisplay": "Thôn (làng)",
-        "meaningEn": "Village"
-      },
-      "readings": {
-        "onyomi": [
-          "SON"
-        ],
-        "kunyomi": [
-          "mura"
-        ]
-      },
-      "mnemonic": {
-        "vi": "Những cái cây (Mộc 木) ở ven Thôn (Thốn 寸) làng.",
-        "en": "Trees (木) marking the boundary (寸) of a VILLAGE."
-      },
-      "decomposition": {
-        "structure": "left-right",
-        "components": [
-          "木",
-          "寸"
-        ],
-        "componentNames": [
-          "Mộc (cây)",
-          "Thốn (tấc)"
-        ],
-        "relatedKanji": [
-          "木",
-          "守"
-        ]
-      },
-      "search": {
-        "hanVietNoAccent": "thon",
-        "meaningViNoAccent": "lang",
-        "meaningEnNoAccent": "village"
-      },
-      "examples": [
-        {
-          "sourceVocabId": "n4_l31_v028",
-          "sourceSenseId": "n4_l31_s028",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n5_l21_v055",
-          "sourceSenseId": "n5_l21_s055",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        },
-        {
-          "sourceVocabId": "n4_l35_v013",
-          "sourceSenseId": "n4_l35_s013",
-          "word": null,
-          "reading": null,
-          "meaningVi": null,
-          "meaningEn": null
-        }
-      ],
-      "legacy": {
-        "meaning": "Thôn (làng)",
-        "onyomi": "SON",
-        "kunyomi": "mura"
-      },
-      "tags": [
-        "vi-human-approved"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
       ]
     }
-  ],
-  "tags": [
-    "vi-human-approved"
   ]
 }

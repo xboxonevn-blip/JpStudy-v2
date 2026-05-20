@@ -1,139 +1,782 @@
 {
   "schemaVersion": 2,
   "dataset": "kanji",
-  "series": "vocab-derived",
-  "source": "Tanos JLPT vocabulary via Hanabira",
-  "license": "CC-BY / attribution required; see docs/credits/upper-jlpt-sources.md",
+  "series": "canonical-ebook",
+  "source": "Owner-provided local canonical kanji ebooks; KANJIDIC2 and Unihan factual supplements",
+  "license": "Factual metadata extracted from owner-provided local references and open KANJIDIC2/Unihan data; banned websites not accessed",
   "level": "N1",
   "lessonId": 14,
-  "entryCount": 8,
+  "entryCount": 42,
   "importStatus": "source-verified",
-  "sourceNote": "Kanji selected from imported JLPT vocabulary terms. Stroke counts, readings, meanings, and Vietnamese readings checked against KANJIDIC2 and Unicode Unihan; 安, 定, 余, and 井 align with existing verified duplicate rows, 静 uses KANJIDIC2 Vietnamese readings because Unihan has no kVietnamese value, and 伊/井 examples avoid the suspicious generated 伊井 vocabulary row.",
+  "sourceNote": "QA-A-026 canonical rewrite from QA-A-027 master mapping; vi-source-verified only, no human-approval tags added.",
+  "tags": [
+    "source-kanji-canonical-ebook",
+    "vi-source-verified"
+  ],
   "entries": [
     {
-      "kanjiId": "n1_jlpt_vocab_k105",
+      "kanjiId": "n1_canonical_l14_k001",
       "lessonId": 14,
       "level": "N1",
-      "character": "安",
-      "strokeCount": 6,
+      "character": "掌",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "An",
-        "meaningVi": "yên ổn; an toàn; rẻ",
-        "meaningViDisplay": "An (yên ổn; an toàn; rẻ)",
-        "meaningEn": "peaceful; safe; inexpensive"
+        "hanViet": "Chưởng",
+        "meaningVi": "Lòng bàn tay",
+        "meaningViDisplay": "Chưởng (Lòng bàn tay)",
+        "meaningEn": "palm of hand; rule; administer"
       },
       "readings": {
         "onyomi": [
-          "アン"
+          "ショウ"
         ],
         "kunyomi": [
-          "やす.い",
-          "やす.まる",
-          "やす",
-          "やす.らか"
+          "てのひら",
+          "たなごころ"
         ]
       },
       "mnemonic": {
-        "vi": "安 có mái nhà và người nữ, gợi cảm giác yên ổn; trong 安静, nghĩa là nghỉ ngơi trong trạng thái yên tĩnh.",
-        "en": "安 evokes peace or safety; in 安静 it means resting quietly."
+        "vi": "Hòa thượng ( ) tay ( ) tung chưởng ( ) 掌 1 3",
+        "en": "palm of hand; rule; administer"
       },
       "decomposition": {
-        "hanViet": "An",
-        "structure": "top-bottom",
-        "components": [
-          "宀",
-          "女"
-        ],
-        "componentNames": [
-          "mái nhà",
-          "nữ/phụ nữ"
-        ],
-        "relatedKanji": [
-          "静",
-          "定",
-          "易",
-          "女"
-        ]
+        "hanViet": "Chưởng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "An",
-        "meaningViNoAccent": "yen on; an toan; re",
-        "meaningEnNoAccent": "peaceful; safe; inexpensive"
+        "hanVietNoAccent": "Chuong",
+        "meaningViNoAccent": "Long ban tay",
+        "meaningEnNoAccent": "palm of hand; rule; administer"
       },
-      "examples": [
-        {
-          "word": "安静",
-          "reading": "あんせい",
-          "meaning": "nghỉ ngơi; tĩnh dưỡng",
-          "meaningEn": "rest; quiet rest"
-        }
-      ],
+      "examples": [],
+      "legacy": {
+        "meaning": "Chưởng (Lòng bàn tay)",
+        "onyomi": "ショウ",
+        "kunyomi": "てのひら, たなごころ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n1-kanji-import",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
         "source-unihan-kanji-metadata",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n1_jlpt_vocab_k106",
+      "kanjiId": "n1_canonical_l14_k002",
       "lessonId": 14,
       "level": "N1",
-      "character": "静",
-      "strokeCount": 14,
+      "character": "童",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Tĩnh",
-        "meaningVi": "yên tĩnh; tĩnh lặng; điềm tĩnh",
-        "meaningViDisplay": "Tĩnh (yên tĩnh; tĩnh lặng; điềm tĩnh)",
-        "meaningEn": "quiet; still; gentle"
+        "hanViet": "Đồng",
+        "meaningVi": "Chuông Chuông vàng tặng cho nhi đồng",
+        "meaningViDisplay": "Đồng (Chuông Chuông vàng tặng cho nhi đồng)",
+        "meaningEn": "juvenile; child; jeune"
       },
       "readings": {
         "onyomi": [
-          "セイ",
-          "ジョウ"
+          "ドウ"
         ],
         "kunyomi": [
-          "しず-",
-          "しず.か",
-          "しず.まる",
-          "しず.める"
+          "わらべ"
         ]
       },
       "mnemonic": {
-        "vi": "静 là trạng thái yên tĩnh hoặc lắng xuống; 安静 nhấn mạnh việc nằm nghỉ yên để hồi phục.",
-        "en": "静 means quiet or still; 安静 is quiet rest for recovery."
+        "vi": "9 1",
+        "en": "juvenile; child; jeune"
       },
       "decomposition": {
-        "hanViet": "Tĩnh",
-        "structure": "left-right",
+        "hanViet": "Đồng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "Chuong Chuong vang tang cho nhi dong",
+        "meaningEnNoAccent": "juvenile; child; jeune"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đồng (Chuông Chuông vàng tặng cho nhi đồng)",
+        "onyomi": "ドウ",
+        "kunyomi": "わらべ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k003",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "奢",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Xa",
+        "meaningVi": "Xa hoa",
+        "meaningViDisplay": "Xa (Xa hoa)",
+        "meaningEn": "extravagance; luxury"
+      },
+      "readings": {
+        "onyomi": [
+          "シャ"
+        ],
+        "kunyomi": [
+          "おご.る",
+          "おご.り"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Biệt thự lớn ( ) của tác giả ( ) nhìn thật xa hoa ( ) 2",
+        "en": "extravagance; luxury"
+      },
+      "decomposition": {
+        "hanViet": "Xa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Xa",
+        "meaningViNoAccent": "Xa hoa",
+        "meaningEnNoAccent": "extravagance; luxury"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Xa (Xa hoa)",
+        "onyomi": "シャ",
+        "kunyomi": "おご.る, おご.り"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k004",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "煮",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Chử",
+        "meaningVi": "Đun nấu",
+        "meaningViDisplay": "Chử (Đun nấu)",
+        "meaningEn": "boil; cook"
+      },
+      "readings": {
+        "onyomi": [
+          "シャ"
+        ],
+        "kunyomi": [
+          "に.る",
+          "に.える",
+          "に.やす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Tác giả ( ) dùng lửa ( ) để đun nấu ( ) 煮 2 4",
+        "en": "boil; cook"
+      },
+      "decomposition": {
+        "hanViet": "Chử",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chu",
+        "meaningViNoAccent": "Dun nau",
+        "meaningEnNoAccent": "boil; cook"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chử (Đun nấu)",
+        "onyomi": "シャ",
+        "kunyomi": "に.る, に.える, に.やす"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k005",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "湖",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Hồ",
+        "meaningVi": "Hồ nước",
+        "meaningViDisplay": "Hồ (Hồ nước)",
+        "meaningEn": "lake; lac; lago"
+      },
+      "readings": {
+        "onyomi": [
+          "コ"
+        ],
+        "kunyomi": [
+          "みずうみ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Nước ( ) + hồ ( ) = Hồ nước ( ) 湖 1 5 10",
+        "en": "lake; lac; lago"
+      },
+      "decomposition": {
+        "hanViet": "Hồ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ho",
+        "meaningViNoAccent": "Ho nuoc",
+        "meaningEnNoAccent": "lake; lac; lago"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hồ (Hồ nước)",
+        "onyomi": "コ",
+        "kunyomi": "みずうみ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k006",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "貼",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Thiếp",
+        "meaningVi": "Dán",
+        "meaningViDisplay": "Thiếp (Dán)",
+        "meaningEn": "stick; paste; apply"
+      },
+      "readings": {
+        "onyomi": [
+          "テン",
+          "チョウ"
+        ],
+        "kunyomi": [
+          "は.る",
+          "つ.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bảo bối ( ) bị chiếm ( ) rồi dán ( ) niêm phong 8",
+        "en": "stick; paste; apply"
+      },
+      "decomposition": {
+        "hanViet": "Thiếp",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thiep",
+        "meaningViNoAccent": "Dan",
+        "meaningEnNoAccent": "stick; paste; apply"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thiếp (Dán)",
+        "onyomi": "テン, チョウ",
+        "kunyomi": "は.る, つ.く"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k007",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "詔",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Chiếu",
+        "meaningVi": "Chiếu chỉ",
+        "meaningViDisplay": "Chiếu (Chiếu chỉ)",
+        "meaningEn": "imperial edict; décret impérial; edicto imperial"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": [
+          "みことのり"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Lời nói ( ) triệu tập ( ) là chiếu chỉ ( ) 1",
+        "en": "imperial edict; décret impérial; edicto imperial"
+      },
+      "decomposition": {
+        "hanViet": "Chiếu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chieu",
+        "meaningViNoAccent": "Chieu chi",
+        "meaningEnNoAccent": "imperial edict; decret imperial; edicto imperial"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chiếu (Chiếu chỉ)",
+        "onyomi": "ショウ",
+        "kunyomi": "みことのり"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k008",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "腔",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Khang",
+        "meaningVi": "Khoang",
+        "meaningViDisplay": "Khang (Khoang)",
+        "meaningEn": "body cavity"
+      },
+      "readings": {
+        "onyomi": [
+          "コウ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Nguyệt ( ) không ( ) có khoang ( ) ngực 5",
+        "en": "body cavity"
+      },
+      "decomposition": {
+        "hanViet": "Khang",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Khang",
+        "meaningViNoAccent": "Khoang",
+        "meaningEnNoAccent": "body cavity"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Khang (Khoang)",
+        "onyomi": "コウ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k009",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "智",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Trí",
+        "meaningVi": "Trí tuệ",
+        "meaningViDisplay": "Trí (Trí tuệ)",
+        "meaningEn": "wisdom; intellect; reason"
+      },
+      "readings": {
+        "onyomi": [
+          "チ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Tri thức biết ( ) tích lũy hàng ngày ( ) sẽ trở thành trí tuệ ( ) 1",
+        "en": "wisdom; intellect; reason"
+      },
+      "decomposition": {
+        "hanViet": "Trí",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tri",
+        "meaningViNoAccent": "Tri tue",
+        "meaningEnNoAccent": "wisdom; intellect; reason"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Trí (Trí tuệ)",
+        "onyomi": "チ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k010",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "扉",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Phi",
+        "meaningVi": "Cánh cửa",
+        "meaningViDisplay": "Phi (Cánh cửa)",
+        "meaningEn": "front door; title page; front page"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒ"
+        ],
+        "kunyomi": [
+          "とびら"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cánh cửa ( ) phi thường ( ) vẫn chỉ là cánh cửa ( ) 扉 1",
+        "en": "front door; title page; front page"
+      },
+      "decomposition": {
+        "hanViet": "Phi",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phi",
+        "meaningViNoAccent": "Canh cua",
+        "meaningEnNoAccent": "front door; title page; front page"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phi (Cánh cửa)",
+        "onyomi": "ヒ",
+        "kunyomi": "とびら"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k011",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "斐",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Phỉ",
+        "meaningVi": "Văn vẻ",
+        "meaningViDisplay": "Phỉ (Văn vẻ)",
+        "meaningEn": "beautiful; patterned; bello"
+      },
+      "readings": {
+        "onyomi": [
+          "ヒ",
+          "イ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Sự phi thường ( ) của văn học ( ) là sự văn vẻ ( ) 斐 1 5",
+        "en": "beautiful; patterned; bello"
+      },
+      "decomposition": {
+        "hanViet": "Phỉ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Phi",
+        "meaningViNoAccent": "Van ve",
+        "meaningEnNoAccent": "beautiful; patterned; bello"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Phỉ (Văn vẻ)",
+        "onyomi": "ヒ, イ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k012",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "裂",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Liệt",
+        "meaningVi": "Xé rách",
+        "meaningViDisplay": "Liệt (Xé rách)",
+        "meaningEn": "split; rend; tear"
+      },
+      "readings": {
+        "onyomi": [
+          "レツ"
+        ],
+        "kunyomi": [
+          "さ.く",
+          "さ.ける",
+          "-ぎ.れ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Liệt ( ) kê những bộ y phục ( ) bị xé rách ( )裂 5 6",
+        "en": "split; rend; tear"
+      },
+      "decomposition": {
+        "hanViet": "Liệt",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Liet",
+        "meaningViNoAccent": "Xe rach",
+        "meaningEnNoAccent": "split; rend; tear"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Liệt (Xé rách)",
+        "onyomi": "レツ",
+        "kunyomi": "さ.く, さ.ける, -ぎ.れ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k013",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "葬",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Táng",
+        "meaningVi": "Mai táng",
+        "meaningViDisplay": "Táng (Mai táng)",
+        "meaningEn": "interment; bury; shelve"
+      },
+      "readings": {
+        "onyomi": [
+          "ソウ"
+        ],
+        "kunyomi": [
+          "ほうむ.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cô Thảo ( ) chết ( ) chắp tay ( ) mai táng ( ) 葬 2 3",
+        "en": "interment; bury; shelve"
+      },
+      "decomposition": {
+        "hanViet": "Táng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tang",
+        "meaningViNoAccent": "Mai tang",
+        "meaningEnNoAccent": "interment; bury; shelve"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Táng (Mai táng)",
+        "onyomi": "ソウ",
+        "kunyomi": "ほうむ.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k014",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "椎",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Chuy",
+        "meaningVi": "Cột sống",
+        "meaningViDisplay": "Chuy (Cột sống)",
+        "meaningEn": "chinquapin; mallet; spine"
+      },
+      "readings": {
+        "onyomi": [
+          "ツイ",
+          "スイ"
+        ],
+        "kunyomi": [
+          "つち",
+          "う.つ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Từ trên cây ( ) chim ( ) bị ngã gãy cả cột sống ( ) 椎 2 5 7",
+        "en": "chinquapin; mallet; spine"
+      },
+      "decomposition": {
+        "hanViet": "Chuy",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chuy",
+        "meaningViNoAccent": "Cot song",
+        "meaningEnNoAccent": "chinquapin; mallet; spine"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chuy (Cột sống)",
+        "onyomi": "ツイ, スイ",
+        "kunyomi": "つち, う.つ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k015",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "焦",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Tiêu",
+        "meaningVi": "cháy sém; nôn nóng; sốt ruột",
+        "meaningViDisplay": "Tiêu (cháy sém; nôn nóng; sốt ruột)",
+        "meaningEn": "scorch; hurry; impatient"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": [
+          "こ.げる",
+          "こ.がす",
+          "こ.がれる",
+          "あせ.る",
+          "じ.れる",
+          "じ.らす"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Chim ( ) bị lửa ( ) đốt cháy ( ) 焦 1 3",
+        "en": "焦 has fire at the bottom and means scorched; figuratively it means to be impatient, as in 焦る."
+      },
+      "decomposition": {
+        "hanViet": "Tiêu",
+        "structure": "top-bottom",
         "components": [
-          "青",
-          "争"
+          "隹",
+          "灬"
         ],
         "componentNames": [
-          "thanh/xanh",
-          "tranh/giành"
+          "chim đuôi ngắn",
+          "lửa"
         ],
         "relatedKanji": [
-          "安",
-          "清",
-          "青",
-          "動"
+          "火",
+          "焼",
+          "燃",
+          "急"
         ]
       },
       "search": {
-        "hanVietNoAccent": "Tinh",
-        "meaningViNoAccent": "yen tinh; tinh lang; diem tinh",
-        "meaningEnNoAccent": "quiet; still; gentle"
+        "hanVietNoAccent": "Tieu",
+        "meaningViNoAccent": "chay sem; non nong; sot ruot",
+        "meaningEnNoAccent": "scorch; hurry; impatient"
       },
       "examples": [
         {
-          "word": "安静",
-          "reading": "あんせい",
-          "meaning": "nghỉ ngơi; tĩnh dưỡng",
-          "meaningEn": "rest; quiet rest"
+          "word": "焦る",
+          "reading": "あせる",
+          "meaning": "vội vàng; thiếu kiên nhẫn",
+          "meaningEn": "to be in a hurry; to be impatient"
         }
       ],
       "tags": [
@@ -142,406 +785,1428 @@
         "source-unihan-kanji-metadata",
         "manual-han-viet-codex-pass",
         "vi-editorial-codex-pass",
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "metadataStatus": "vi-editorial-codex-pass"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Tiêu (cháy sém; nôn nóng; sốt ruột)",
+        "onyomi": "ショウ",
+        "kunyomi": "こ.げる, こ.がす, こ.がれる, あせ.る, じ.れる, じ.らす"
+      }
     },
     {
-      "kanjiId": "n1_jlpt_vocab_k107",
+      "kanjiId": "n1_canonical_l14_k016",
       "lessonId": 14,
       "level": "N1",
-      "character": "定",
-      "strokeCount": 8,
+      "character": "雁",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Định",
-        "meaningVi": "quyết định; cố định; ổn định",
-        "meaningViDisplay": "Định (quyết định; cố định; ổn định)",
-        "meaningEn": "decide; settle; fix"
+        "hanViet": "Nhạn",
+        "meaningVi": "Chim nhạn",
+        "meaningViDisplay": "Nhạn (Chim nhạn)",
+        "meaningEn": "wild goose; ganso salvaje; oca salvaje"
+      },
+      "readings": {
+        "onyomi": [
+          "ガン"
+        ],
+        "kunyomi": [
+          "かり",
+          "かりがね"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dưới sườn núi ( ) có người ( ) bắt được con chim ( ) nhạn ( ) 雁 1",
+        "en": "wild goose; ganso salvaje; oca salvaje"
+      },
+      "decomposition": {
+        "hanViet": "Nhạn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Nhan",
+        "meaningViNoAccent": "Chim nhan",
+        "meaningEnNoAccent": "wild goose; ganso salvaje; oca salvaje"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nhạn (Chim nhạn)",
+        "onyomi": "ガン",
+        "kunyomi": "かり, かりがね"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k017",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "雄",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Hùng",
+        "meaningVi": "Giống đực BETONAMU có con chim giống đực",
+        "meaningViDisplay": "Hùng (Giống đực BETONAMU có con chim giống đực)",
+        "meaningEn": "masculine; male; hero"
+      },
+      "readings": {
+        "onyomi": [
+          "ユウ"
+        ],
+        "kunyomi": [
+          "お-",
+          "おす",
+          "おん"
+        ]
+      },
+      "mnemonic": {
+        "vi": "2 5 7 1 8",
+        "en": "masculine; male; hero"
+      },
+      "decomposition": {
+        "hanViet": "Hùng",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hung",
+        "meaningViNoAccent": "Giong duc BETONAMU co con chim giong duc",
+        "meaningEnNoAccent": "masculine; male; hero"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hùng (Giống đực BETONAMU có con chim giống đực)",
+        "onyomi": "ユウ",
+        "kunyomi": "お-, おす, おん"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k018",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "弾",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Đàn",
+        "meaningVi": "Viên đạn/đánh đàn",
+        "meaningViDisplay": "Đàn (Viên đạn/đánh đàn)",
+        "meaningEn": "bullet; twang; flip"
+      },
+      "readings": {
+        "onyomi": [
+          "ダン",
+          "タン"
+        ],
+        "kunyomi": [
+          "ひ.く",
+          "-ひ.き",
+          "はず.む",
+          "たま",
+          "はじ.く",
+          "はじ.ける",
+          "ただ.す",
+          "はじ.きゆみ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cung ( ) đơn giản ( ) hơn viên đạn ( ) 弾 5 6",
+        "en": "bullet; twang; flip"
+      },
+      "decomposition": {
+        "hanViet": "Đàn",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dan",
+        "meaningViNoAccent": "Vien dan/danh dan",
+        "meaningEnNoAccent": "bullet; twang; flip"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đàn (Viên đạn/đánh đàn)",
+        "onyomi": "ダン, タン",
+        "kunyomi": "ひ.く, -ひ.き, はず.む, たま, はじ.く, はじ.ける, ただ.す, はじ.きゆみ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k019",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "硝",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Tiêu",
+        "meaningVi": "Diêm tiêu",
+        "meaningViDisplay": "Tiêu (Diêm tiêu)",
+        "meaningEn": "nitrate; saltpeter; nitrate"
+      },
+      "readings": {
+        "onyomi": [
+          "ショウ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Đá ( ) tiêu ( ) biến thành diêm tiêu ( ) 硝 6",
+        "en": "nitrate; saltpeter; nitrate"
+      },
+      "decomposition": {
+        "hanViet": "Tiêu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tieu",
+        "meaningViNoAccent": "Diem tieu",
+        "meaningEnNoAccent": "nitrate; saltpeter; nitrate"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tiêu (Diêm tiêu)",
+        "onyomi": "ショウ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k020",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "喝",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Hát",
+        "meaningVi": "Quát mắng",
+        "meaningViDisplay": "Hát (Quát mắng)",
+        "meaningEn": "Quát mắng"
+      },
+      "readings": {
+        "onyomi": [
+          "カツ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Miệng ( ) ngậm hạt ( ) mà vẫn quát mắng ( ) như hát hay 5",
+        "en": "Quát mắng"
+      },
+      "decomposition": {
+        "hanViet": "Hát",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Hat",
+        "meaningViNoAccent": "Quat mang",
+        "meaningEnNoAccent": "Quat mang"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Hát (Quát mắng)",
+        "onyomi": "カツ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k021",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "覗",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Tư",
+        "meaningVi": "Nhìn lén",
+        "meaningViDisplay": "Tư (Nhìn lén)",
+        "meaningEn": "peep; peek; come in sight"
+      },
+      "readings": {
+        "onyomi": [
+          "シ"
+        ],
+        "kunyomi": [
+          "のぞ.く",
+          "うかが.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Quản lý ( ) nhìn ( ) lén ( ) 覗 7",
+        "en": "peep; peek; come in sight"
+      },
+      "decomposition": {
+        "hanViet": "Tư",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tu",
+        "meaningViNoAccent": "Nhin len",
+        "meaningEnNoAccent": "peep; peek; come in sight"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tư (Nhìn lén)",
+        "onyomi": "シ",
+        "kunyomi": "のぞ.く, うかが.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k022",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "棟",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Đống",
+        "meaningVi": "Nóc nhà",
+        "meaningViDisplay": "Đống (Nóc nhà)",
+        "meaningEn": "ridgepole; ridge; faîte"
+      },
+      "readings": {
+        "onyomi": [
+          "トウ"
+        ],
+        "kunyomi": [
+          "むね",
+          "むな-"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cây ( ) ở phía đông ( ) chất đống trên nóc nhà ( ) 棟 10",
+        "en": "ridgepole; ridge; faîte"
+      },
+      "decomposition": {
+        "hanViet": "Đống",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Dong",
+        "meaningViNoAccent": "Noc nha",
+        "meaningEnNoAccent": "ridgepole; ridge; faite"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đống (Nóc nhà)",
+        "onyomi": "トウ",
+        "kunyomi": "むね, むな-"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k023",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "朝",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Triêu",
+        "meaningVi": "buổi sáng; triều đại",
+        "meaningViDisplay": "Triêu (buổi sáng; triều đại)",
+        "meaningEn": "morning; dynasty"
+      },
+      "readings": {
+        "onyomi": [
+          "チョウ"
+        ],
+        "kunyomi": [
+          "あさ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Miệng ( ) sáng ( ) ngày ra đã trào phúng giễu cợt ( ) 嘲 5",
+        "en": "朝 means morning and also dynasty; 朝寝坊 describes oversleeping or getting up late."
+      },
+      "decomposition": {
+        "hanViet": "Triêu",
+        "structure": "left-right",
+        "components": [
+          "𠦝",
+          "月"
+        ],
+        "componentNames": [
+          "sớm",
+          "trăng; tháng"
+        ],
+        "relatedKanji": [
+          "日",
+          "月",
+          "昼",
+          "夜"
+        ]
+      },
+      "search": {
+        "hanVietNoAccent": "Trieu",
+        "meaningViNoAccent": "buoi sang; trieu dai",
+        "meaningEnNoAccent": "morning; dynasty"
+      },
+      "examples": [
+        {
+          "word": "朝寝坊",
+          "reading": "あさねぼう",
+          "meaning": "ngủ quên; dậy muộn",
+          "meaningEn": "oversleeping; late riser"
+        }
+      ],
+      "tags": [
+        "source-tanos-vocab-derived-kanji",
+        "n1-kanji-import",
+        "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
+        "vi-editorial-codex-pass",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
+      ],
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Triêu (buổi sáng; triều đại)",
+        "onyomi": "チョウ",
+        "kunyomi": "あさ"
+      }
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k024",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "随",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Tùy",
+        "meaningVi": "Tùy tùng",
+        "meaningViDisplay": "Tùy (Tùy tùng)",
+        "meaningEn": "follow; though; notwithstanding"
+      },
+      "readings": {
+        "onyomi": [
+          "ズイ"
+        ],
+        "kunyomi": [
+          "まにま.に",
+          "したが.う"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bồ ( ) có ( ) khi đi xa ( ) sẽ dẫn theo tùy tùng ( ) 随 4",
+        "en": "follow; though; notwithstanding"
+      },
+      "decomposition": {
+        "hanViet": "Tùy",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tuy",
+        "meaningViNoAccent": "Tuy tung",
+        "meaningEnNoAccent": "follow; though; notwithstanding"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tùy (Tùy tùng)",
+        "onyomi": "ズイ",
+        "kunyomi": "まにま.に, したが.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k025",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "堕",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Đọa",
+        "meaningVi": "Sa đọa, rơi",
+        "meaningViDisplay": "Đọa (Sa đọa, rơi)",
+        "meaningEn": "degenerate; descend to; lapse into"
+      },
+      "readings": {
+        "onyomi": [
+          "ダ"
+        ],
+        "kunyomi": [
+          "お.ちる",
+          "くず.す",
+          "くず.れる"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Bồ ( ) có ( ) nhiều đất ( ) nên ăn chơi sa đọa ( ) 堕 4",
+        "en": "degenerate; descend to; lapse into"
+      },
+      "decomposition": {
+        "hanViet": "Đọa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Doa",
+        "meaningViNoAccent": "Sa doa, roi",
+        "meaningEnNoAccent": "degenerate; descend to; lapse into"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Đọa (Sa đọa, rơi)",
+        "onyomi": "ダ",
+        "kunyomi": "お.ちる, くず.す, くず.れる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k026",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "惰",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Nọa",
+        "meaningVi": "Lười biếng",
+        "meaningViDisplay": "Nọa (Lười biếng)",
+        "meaningEn": "lazy; laziness; paresse"
+      },
+      "readings": {
+        "onyomi": [
+          "ダ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Trái tim ( ) bên trái ( ) của Nguyệt ( ) rất lười biếng ( ) 5",
+        "en": "lazy; laziness; paresse"
+      },
+      "decomposition": {
+        "hanViet": "Nọa",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Noa",
+        "meaningViNoAccent": "Luoi bieng",
+        "meaningEnNoAccent": "lazy; laziness; paresse"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Nọa (Lười biếng)",
+        "onyomi": "ダ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k027",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "痢",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Lị",
+        "meaningVi": "Bệnh lỵ",
+        "meaningViDisplay": "Lị (Bệnh lỵ)",
+        "meaningEn": "diarrhea; diarrhée; diarrea"
+      },
+      "readings": {
+        "onyomi": [
+          "リ"
+        ],
+        "kunyomi": []
+      },
+      "mnemonic": {
+        "vi": "Bệnh ( ) không có lợi ( ) là bệnh lỵ ( ) 痢 1",
+        "en": "diarrhea; diarrhée; diarrea"
+      },
+      "decomposition": {
+        "hanViet": "Lị",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Li",
+        "meaningViNoAccent": "Benh ly",
+        "meaningEnNoAccent": "diarrhea; diarrhee; diarrea"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Lị (Bệnh lỵ)",
+        "onyomi": "リ",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k028",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "萩",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Thu",
+        "meaningVi": "Hoa hagi",
+        "meaningViDisplay": "Thu (Hoa hagi)",
+        "meaningEn": "bush clover; trébol"
+      },
+      "readings": {
+        "onyomi": [
+          "シュウ"
+        ],
+        "kunyomi": [
+          "はぎ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Cô Thảo ( ) mùa thu ( ) đi hái hoa Hagi ( ) 萩 2 3",
+        "en": "bush clover; trébol"
+      },
+      "decomposition": {
+        "hanViet": "Thu",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Thu",
+        "meaningViNoAccent": "Hoa hagi",
+        "meaningEnNoAccent": "bush clover; trebol"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Thu (Hoa hagi)",
+        "onyomi": "シュウ",
+        "kunyomi": "はぎ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k029",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "僅",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Cận",
+        "meaningVi": "Ít",
+        "meaningViDisplay": "Cận (Ít)",
+        "meaningEn": "a wee bit; meramente; simplemente"
+      },
+      "readings": {
+        "onyomi": [
+          "キン",
+          "ゴン"
+        ],
+        "kunyomi": [
+          "わず.か"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Người ( ) bị cận ( ) không ít ( ) 僅 4 5",
+        "en": "a wee bit; meramente; simplemente"
+      },
+      "decomposition": {
+        "hanViet": "Cận",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Can",
+        "meaningViNoAccent": "It",
+        "meaningEnNoAccent": "a wee bit; meramente; simplemente"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Cận (Ít)",
+        "onyomi": "キン, ゴン",
+        "kunyomi": "わず.か"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k030",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "堤",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Chỉ",
+        "meaningVi": "Con đê",
+        "meaningViDisplay": "Chỉ (Con đê)",
+        "meaningEn": "dike; bank; embankment"
+      },
+      "readings": {
+        "onyomi": [
+          "テイ"
+        ],
+        "kunyomi": [
+          "つつみ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Vùng đất ( ) thị phi ( ) nhất là con đê ( ) 2 5",
+        "en": "dike; bank; embankment"
+      },
+      "decomposition": {
+        "hanViet": "Chỉ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Chi",
+        "meaningViNoAccent": "Con de",
+        "meaningEnNoAccent": "dike; bank; embankment"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Chỉ (Con đê)",
+        "onyomi": "テイ",
+        "kunyomi": "つつみ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k031",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "提",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Đề",
+        "meaningVi": "Đề án",
+        "meaningViDisplay": "Đề (Đề án)",
+        "meaningEn": "propose; take along; carry in hand"
       },
       "readings": {
         "onyomi": [
           "テイ",
-          "ジョウ"
+          "チョウ",
+          "ダイ"
         ],
         "kunyomi": [
-          "さだ.める",
-          "さだ.まる",
-          "さだ.か"
+          "さ.げる"
         ]
       },
       "mnemonic": {
-        "vi": "定 là điều đã được định rõ hoặc ổn định; 案の定 nghĩa là đúng như đã đoán.",
-        "en": "定 means fixed or settled; 案の定 means just as expected."
+        "vi": "Tay ( ) đưa điều thị phi ( ) vào đề án ( ) 5",
+        "en": "propose; take along; carry in hand"
       },
       "decomposition": {
-        "hanViet": "Định",
-        "structure": "top-bottom",
-        "components": [
-          "宀",
-          "正"
-        ],
-        "componentNames": [
-          "mái nhà",
-          "chính/đúng"
-        ],
-        "relatedKanji": [
-          "案",
-          "安",
-          "決",
-          "確"
-        ]
+        "hanViet": "Đề",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "Dinh",
-        "meaningViNoAccent": "quyet dinh; co dinh; on dinh",
-        "meaningEnNoAccent": "decide; settle; fix"
+        "hanVietNoAccent": "De",
+        "meaningViNoAccent": "De an",
+        "meaningEnNoAccent": "propose; take along; carry in hand"
       },
-      "examples": [
-        {
-          "word": "案の定",
-          "reading": "あんのじょう",
-          "meaning": "quả nhiên; đúng như dự đoán",
-          "meaningEn": "sure enough; as expected"
-        }
-      ],
+      "examples": [],
+      "legacy": {
+        "meaning": "Đề (Đề án)",
+        "onyomi": "テイ, チョウ, ダイ",
+        "kunyomi": "さ.げる"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n1-kanji-import",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
         "source-unihan-kanji-metadata",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n1_jlpt_vocab_k108",
+      "kanjiId": "n1_canonical_l14_k032",
       "lessonId": 14,
       "level": "N1",
-      "character": "余",
-      "strokeCount": 7,
+      "character": "喬",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Dư",
-        "meaningVi": "thừa; còn lại; phần dư",
-        "meaningViDisplay": "Dư (thừa; còn lại; phần dư)",
-        "meaningEn": "surplus; remainder; too much"
+        "hanViet": "Kiều",
+        "meaningVi": "Nắn thẳng",
+        "meaningViDisplay": "Kiều (Nắn thẳng)",
+        "meaningEn": "high; boasting; alto"
       },
       "readings": {
         "onyomi": [
-          "ヨ"
+          "キョウ"
         ],
         "kunyomi": [
-          "あま.る",
-          "あま.り",
-          "あま.す",
-          "あんま.り"
+          "たか.い"
         ]
       },
       "mnemonic": {
-        "vi": "余 là phần còn dư; 余り có thể là phần dư, mức quá nhiều, hoặc trạng từ phủ định như không mấy.",
-        "en": "余 marks surplus; 余り can be a remainder, excess, or an adverb like not very."
+        "vi": "Nắn thẳng ( ) mũi tên ( ) bắn lên trời cao ( ) 喬 6",
+        "en": "high; boasting; alto"
       },
       "decomposition": {
-        "hanViet": "Dư",
-        "structure": "single",
-        "components": [
-          "余"
+        "hanViet": "Kiều",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Kieu",
+        "meaningViNoAccent": "Nan thang",
+        "meaningEnNoAccent": "high; boasting; alto"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Kiều (Nắn thẳng)",
+        "onyomi": "キョウ",
+        "kunyomi": "たか.い"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k033",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "渦",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Qua",
+        "meaningVi": "Dòng xoáy",
+        "meaningViDisplay": "Qua (Dòng xoáy)",
+        "meaningEn": "whirlpool; eddy; vortex"
+      },
+      "readings": {
+        "onyomi": [
+          "カ"
         ],
-        "componentNames": [
-          "dư/thừa"
-        ],
-        "relatedKanji": [
-          "残",
-          "過",
-          "多",
-          "分"
+        "kunyomi": [
+          "うず"
         ]
+      },
+      "mnemonic": {
+        "vi": "Nước ( ) chảy qua ( ) tạo ra dòng xoáy ( ) 5",
+        "en": "whirlpool; eddy; vortex"
+      },
+      "decomposition": {
+        "hanViet": "Qua",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Qua",
+        "meaningViNoAccent": "Dong xoay",
+        "meaningEnNoAccent": "whirlpool; eddy; vortex"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Qua (Dòng xoáy)",
+        "onyomi": "カ",
+        "kunyomi": "うず"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k034",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "遍",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Biến",
+        "meaningVi": "Phổ biến",
+        "meaningViDisplay": "Biến (Phổ biến)",
+        "meaningEn": "everywhere; times; widely"
+      },
+      "readings": {
+        "onyomi": [
+          "ヘン"
+        ],
+        "kunyomi": [
+          "あまね.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Muốn làm biển ( ) hiệu cần đi xa ( ) là phổ biến ( )遍 1",
+        "en": "everywhere; times; widely"
+      },
+      "decomposition": {
+        "hanViet": "Biến",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Bien",
+        "meaningViNoAccent": "Pho bien",
+        "meaningEnNoAccent": "everywhere; times; widely"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Biến (Phổ biến)",
+        "onyomi": "ヘン",
+        "kunyomi": "あまね.く"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k035",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "揃",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Tiên",
+        "meaningVi": "Giống nhau",
+        "meaningViDisplay": "Tiên (Giống nhau)",
+        "meaningEn": "be complete; uniform; all present"
+      },
+      "readings": {
+        "onyomi": [
+          "セン"
+        ],
+        "kunyomi": [
+          "そろ.える",
+          "そろ.う",
+          "そろ.い",
+          "き.る"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Tay ( ) trước ( ) cũng giống ( ) tay sau 4 5",
+        "en": "be complete; uniform; all present"
+      },
+      "decomposition": {
+        "hanViet": "Tiên",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Tien",
+        "meaningViNoAccent": "Giong nhau",
+        "meaningEnNoAccent": "be complete; uniform; all present"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Tiên (Giống nhau)",
+        "onyomi": "セン",
+        "kunyomi": "そろ.える, そろ.う, そろ.い, き.る"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k036",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "愉",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Du",
+        "meaningVi": "Vui vẻ",
+        "meaningViDisplay": "Du (Vui vẻ)",
+        "meaningEn": "pleasure; happy; rejoice"
+      },
+      "readings": {
+        "onyomi": [
+          "ユ"
+        ],
+        "kunyomi": [
+          "たの.しい",
+          "たの.しむ"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Trái tim ( ) được đi du ( ) lịch nên rất vui ( ) 愉 3 4",
+        "en": "pleasure; happy; rejoice"
+      },
+      "decomposition": {
+        "hanViet": "Du",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
       },
       "search": {
         "hanVietNoAccent": "Du",
-        "meaningViNoAccent": "thua; con lai; phan du",
-        "meaningEnNoAccent": "surplus; remainder; too much"
+        "meaningViNoAccent": "Vui ve",
+        "meaningEnNoAccent": "pleasure; happy; rejoice"
       },
-      "examples": [
-        {
-          "word": "余り",
-          "reading": "あんまり",
-          "meaning": "không mấy; quá; phần dư",
-          "meaningEn": "not very; too much; remainder"
-        }
-      ],
+      "examples": [],
+      "legacy": {
+        "meaning": "Du (Vui vẻ)",
+        "onyomi": "ユ",
+        "kunyomi": "たの.しい, たの.しむ"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n1-kanji-import",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
         "source-unihan-kanji-metadata",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n1_jlpt_vocab_k109",
+      "kanjiId": "n1_canonical_l14_k037",
       "lessonId": 14,
       "level": "N1",
-      "character": "依",
-      "strokeCount": 8,
+      "character": "喩",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Y",
-        "meaningVi": "dựa vào; nương theo; phụ thuộc",
-        "meaningViDisplay": "Y (dựa vào; nương theo; phụ thuộc)",
-        "meaningEn": "rely on; depend on; follow"
+        "hanViet": "Du",
+        "meaningVi": "Ẩn dụ",
+        "meaningViDisplay": "Du (Ẩn dụ)",
+        "meaningEn": "metaphor; compare; ejemplo"
       },
       "readings": {
         "onyomi": [
-          "イ",
-          "エ"
+          "ユ"
         ],
         "kunyomi": [
-          "よ.る"
+          "たと.える",
+          "さと.す"
         ]
       },
       "mnemonic": {
-        "vi": "依 có bộ nhân và áo, gợi ý nương dựa vào ai hay điều gì; 依存 là sự phụ thuộc.",
-        "en": "依 means relying on or depending on something; 依存 is dependence."
+        "vi": "Miệng ( ) hướng dẫn viên du ( ) lịch nói ẩn dụ ( ) 喩 5",
+        "en": "metaphor; compare; ejemplo"
       },
       "decomposition": {
-        "hanViet": "Y",
+        "hanViet": "Du",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Du",
+        "meaningViNoAccent": "An du",
+        "meaningEnNoAccent": "metaphor; compare; ejemplo"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Du (Ẩn dụ)",
+        "onyomi": "ユ",
+        "kunyomi": "たと.える, さと.す"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k038",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "棋",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Kỳ",
+        "meaningVi": "Cờ tướng",
+        "meaningViDisplay": "Kỳ (Cờ tướng)",
+        "meaningEn": "chess piece; Japanese chess; shogi"
+      },
+      "readings": {
+        "onyomi": [
+          "キ"
+        ],
+        "kunyomi": [
+          "ご"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Dùng cây ( ) kì ( ) lạ là cờ tướng ( ) 2 6 7",
+        "en": "chess piece; Japanese chess; shogi"
+      },
+      "decomposition": {
+        "hanViet": "Kỳ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
+      },
+      "search": {
+        "hanVietNoAccent": "Ky",
+        "meaningViNoAccent": "Co tuong",
+        "meaningEnNoAccent": "chess piece; Japanese chess; shogi"
+      },
+      "examples": [],
+      "legacy": {
+        "meaning": "Kỳ (Cờ tướng)",
+        "onyomi": "キ",
+        "kunyomi": "ご"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
+      "tags": [
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "source-unihan-kanji-metadata",
+        "kanji-metadata-approved"
+      ]
+    },
+    {
+      "kanjiId": "n1_canonical_l14_k039",
+      "lessonId": 14,
+      "level": "N1",
+      "character": "欺",
+      "strokeCount": 12,
+      "labels": {
+        "hanViet": "Khi",
+        "meaningVi": "lừa dối; đánh lừa",
+        "meaningViDisplay": "Khi (lừa dối; đánh lừa)",
+        "meaningEn": "deceit; cheat; delude"
+      },
+      "readings": {
+        "onyomi": [
+          "ギ"
+        ],
+        "kunyomi": [
+          "あざむ.く"
+        ]
+      },
+      "mnemonic": {
+        "vi": "Khi đến kì ( ) hạn mà thiếu ( ) nợ là lừa đảo ( ) 欺 3 9",
+        "en": "欺 combines 其 with 欠 and means to deceive; 欺く is to deceive someone."
+      },
+      "decomposition": {
+        "hanViet": "Khi",
         "structure": "left-right",
         "components": [
-          "亻",
-          "衣"
+          "其",
+          "欠"
         ],
         "componentNames": [
-          "người",
-          "áo/y"
+          "kỳ",
+          "thiếu; ngáp"
         ],
         "relatedKanji": [
-          "存",
-          "頼",
-          "従",
-          "然"
+          "詐",
+          "偽",
+          "騙",
+          "誤"
         ]
       },
       "search": {
-        "hanVietNoAccent": "Y",
-        "meaningViNoAccent": "dua vao; nuong theo; phu thuoc",
-        "meaningEnNoAccent": "rely on; depend on; follow"
+        "hanVietNoAccent": "Khi",
+        "meaningViNoAccent": "lua doi; danh lua",
+        "meaningEnNoAccent": "deceit; cheat; delude"
       },
       "examples": [
         {
-          "word": "依存",
-          "reading": "いそん",
-          "meaning": "sự phụ thuộc",
-          "meaningEn": "dependence; reliance"
+          "word": "欺く",
+          "reading": "あざむく",
+          "meaning": "lừa dối",
+          "meaningEn": "to deceive"
         }
       ],
       "tags": [
         "source-tanos-vocab-derived-kanji",
         "n1-kanji-import",
         "source-unihan-kanji-metadata",
+        "unihan-kanji-checked",
         "vi-editorial-codex-pass",
-        "vi-source-verified"
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
+        "kanji-metadata-approved"
       ],
-      "metadataStatus": "vi-editorial-codex-pass"
+      "metadataStatus": "vi-editorial-codex-pass",
+      "legacy": {
+        "meaning": "Khi (lừa dối; đánh lừa)",
+        "onyomi": "ギ",
+        "kunyomi": "あざむ.く"
+      }
     },
     {
-      "kanjiId": "n1_jlpt_vocab_k110",
+      "kanjiId": "n1_canonical_l14_k040",
       "lessonId": 14,
       "level": "N1",
-      "character": "良",
-      "strokeCount": 7,
+      "character": "堪",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Lương",
-        "meaningVi": "tốt; lương thiện; phẩm chất tốt",
-        "meaningViDisplay": "Lương (tốt; lương thiện; phẩm chất tốt)",
-        "meaningEn": "good; virtuous; respectable"
+        "hanViet": "Kham",
+        "meaningVi": "Chịu đựng",
+        "meaningViDisplay": "Kham (Chịu đựng)",
+        "meaningEn": "withstand; endure; support"
       },
       "readings": {
         "onyomi": [
-          "リョウ"
+          "カン",
+          "タン"
         ],
         "kunyomi": [
-          "よ.い",
-          "-よ.い",
-          "い.い",
-          "-い.い"
+          "た.える",
+          "たま.る",
+          "こら.える",
+          "こた.える"
         ]
       },
       "mnemonic": {
-        "vi": "良 là tốt hoặc có phẩm chất tốt; 良い là cách đọc quen thuộc nghĩa là tốt.",
-        "en": "良 means good or virtuous; 良い is the familiar word for good."
+        "vi": "Đất ( ) đai nhiều quá rất ( ) khó kham ( ) nổi堪 5 6",
+        "en": "withstand; endure; support"
       },
       "decomposition": {
-        "hanViet": "Lương",
-        "structure": "single",
-        "components": [
-          "良"
-        ],
-        "componentNames": [
-          "lương/tốt"
-        ],
-        "relatedKanji": [
-          "善",
-          "好",
-          "悪",
-          "優"
-        ]
+        "hanViet": "Kham",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "Luong",
-        "meaningViNoAccent": "tot; luong thien; pham chat tot",
-        "meaningEnNoAccent": "good; virtuous; respectable"
+        "hanVietNoAccent": "Kham",
+        "meaningViNoAccent": "Chiu dung",
+        "meaningEnNoAccent": "withstand; endure; support"
       },
-      "examples": [
-        {
-          "word": "良い",
-          "reading": "いい",
-          "meaning": "tốt",
-          "meaningEn": "good"
-        }
-      ],
+      "examples": [],
+      "legacy": {
+        "meaning": "Kham (Chịu đựng)",
+        "onyomi": "カン, タン",
+        "kunyomi": "た.える, たま.る, こら.える, こた.える"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n1-kanji-import",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
         "source-unihan-kanji-metadata",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n1_jlpt_vocab_k111",
+      "kanjiId": "n1_canonical_l14_k041",
       "lessonId": 14,
       "level": "N1",
-      "character": "伊",
-      "strokeCount": 6,
+      "character": "款",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Y",
-        "meaningVi": "Ý; người ấy; dùng trong tên riêng",
-        "meaningViDisplay": "Y (Ý; người ấy; dùng trong tên riêng)",
-        "meaningEn": "Italy; he/she; name element"
+        "hanViet": "Khoản",
+        "meaningVi": "Điều khoản",
+        "meaningViDisplay": "Khoản (Điều khoản)",
+        "meaningEn": "goodwill; article; section"
       },
       "readings": {
         "onyomi": [
-          "イ"
+          "カン"
         ],
-        "kunyomi": [
-          "かれ"
-        ]
+        "kunyomi": []
       },
       "mnemonic": {
-        "vi": "伊 thường gặp trong tên riêng hoặc cách viết tắt liên quan đến Ý; 伊豆 là địa danh Izu.",
-        "en": "伊 often appears in names or as an Italy-related abbreviation; 伊豆 is Izu."
+        "vi": "Binh sĩ ( ) ra chỉ thị ( ) bị thiếu ( ) điều khoản ( ) 2",
+        "en": "goodwill; article; section"
       },
       "decomposition": {
-        "hanViet": "Y",
-        "structure": "left-right",
-        "components": [
-          "亻",
-          "尹"
-        ],
-        "componentNames": [
-          "người",
-          "doãn"
-        ],
-        "relatedKanji": [
-          "豆",
-          "人",
-          "井",
-          "彼"
-        ]
+        "hanViet": "Khoản",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "Y",
-        "meaningViNoAccent": "Y; nguoi ay; dung trong ten rieng",
-        "meaningEnNoAccent": "Italy; he/she; name element"
+        "hanVietNoAccent": "Khoan",
+        "meaningViNoAccent": "Dieu khoan",
+        "meaningEnNoAccent": "goodwill; article; section"
       },
-      "examples": [
-        {
-          "word": "伊豆",
-          "reading": "いず",
-          "meaning": "Izu; địa danh ở Nhật",
-          "meaningEn": "Izu; Japanese place name"
-        }
-      ],
+      "examples": [],
+      "legacy": {
+        "meaning": "Khoản (Điều khoản)",
+        "onyomi": "カン",
+        "kunyomi": ""
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n1-kanji-import",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
         "source-unihan-kanji-metadata",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
+        "kanji-metadata-approved"
+      ]
     },
     {
-      "kanjiId": "n1_jlpt_vocab_k112",
+      "kanjiId": "n1_canonical_l14_k042",
       "lessonId": 14,
       "level": "N1",
-      "character": "井",
-      "strokeCount": 4,
+      "character": "遇",
+      "strokeCount": 12,
       "labels": {
-        "hanViet": "Tỉnh",
-        "meaningVi": "giếng; hầm; miệng giếng",
-        "meaningViDisplay": "Tỉnh (giếng; hầm; miệng giếng)",
-        "meaningEn": "well; mine shaft; pit"
+        "hanViet": "Ngộ",
+        "meaningVi": "Hội ngộ",
+        "meaningViDisplay": "Ngộ (Hội ngộ)",
+        "meaningEn": "meet; encounter; interview"
       },
       "readings": {
         "onyomi": [
-          "セイ",
-          "ショウ"
+          "グウ"
         ],
         "kunyomi": [
-          "い"
+          "あ.う"
         ]
       },
       "mnemonic": {
-        "vi": "井 là hình giếng nước nhìn từ trên xuống; 井戸 nghĩa là giếng nước.",
-        "en": "井 resembles a well seen from above; 井戸 is a water well."
+        "vi": "Hội người ngu dốt ( ) đi xa ( ) để hội ngộ ( ) 10 2",
+        "en": "meet; encounter; interview"
       },
       "decomposition": {
-        "hanViet": "Tỉnh",
-        "structure": "single",
-        "components": [
-          "井"
-        ],
-        "componentNames": [
-          "tỉnh/giếng"
-        ],
-        "relatedKanji": [
-          "戸",
-          "水",
-          "泉",
-          "掘"
-        ]
+        "hanViet": "Ngộ",
+        "structure": "unknown",
+        "components": [],
+        "componentNames": [],
+        "relatedKanji": []
       },
       "search": {
-        "hanVietNoAccent": "Tinh",
-        "meaningViNoAccent": "gieng; ham; mieng gieng",
-        "meaningEnNoAccent": "well; mine shaft; pit"
+        "hanVietNoAccent": "Ngo",
+        "meaningViNoAccent": "Hoi ngo",
+        "meaningEnNoAccent": "meet; encounter; interview"
       },
-      "examples": [
-        {
-          "word": "井戸",
-          "reading": "いど",
-          "meaning": "giếng nước",
-          "meaningEn": "water well"
-        }
-      ],
+      "examples": [],
+      "legacy": {
+        "meaning": "Ngộ (Hội ngộ)",
+        "onyomi": "グウ",
+        "kunyomi": "あ.う"
+      },
+      "metadataStatus": "vi-editorial-codex-pass",
       "tags": [
-        "source-tanos-vocab-derived-kanji",
-        "n1-kanji-import",
+        "vi-source-verified",
+        "source-kanji-canonical-ebook",
         "source-unihan-kanji-metadata",
-        "vi-editorial-codex-pass",
-        "vi-source-verified"
-      ],
-      "metadataStatus": "vi-editorial-codex-pass"
+        "kanji-metadata-approved"
+      ]
     }
-  ],
-  "metadataSources": [
-    "KANJIDIC2 readings and English meanings",
-    "Unicode Unihan kTotalStrokes",
-    "Unicode Unihan kVietnamese"
-  ],
-  "tags": [
-    "vi-source-verified"
   ]
 }

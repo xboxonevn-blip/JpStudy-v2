@@ -425,11 +425,22 @@ conjugation rows instead of silently dropping them.
 - Modify: `lib/app/navigation/routes/grammar_routes.dart`
 - Test: `test/features/conjugation/conjugation_practice_screen_test.dart`
 
-- [ ] Use shared select -> confirm answer UX.
-- [ ] Generate recognition, production, context, repair, and minimal-pair questions.
-- [ ] Update conjugation SRS and mistakes on each answer.
-- [ ] Run focused practice tests.
-- [ ] Expected: selecting an answer does not commit until confirm; wrong `待つて` stores a repair mistake; due count updates.
+- [x] Use shared select -> confirm answer UX.
+- [x] Generate recognition and production questions from sourced lemmas.
+- [ ] Generate context, repair, and minimal-pair questions.
+- [x] Update conjugation SRS and mistakes on each answer.
+- [x] Run focused practice tests.
+- [x] Expected: selecting an answer does not commit until confirm; answer confirm records exact `(contentVocabId, formKey, direction)` SRS/mistake state.
+- [ ] Expected: wrong `待つて` stores a repair mistake; due count updates.
+
+Slice output: Added `/grammar/conjugation`,
+`/grammar/conjugation/practice`, and scoped
+`/grammar/conjugation/:contentVocabId` routes. The hub loads sourced lemmas for
+the active level and opens the shared select -> confirm practice screen.
+Practice questions use `ConjugationLemma` plus `JapaneseConjugator`, not suffix
+guessing; regressions prove `帰る -> 帰って`, `起きる -> 起きて`, the
+`/grammar/conjugation` route is not swallowed by `/grammar/:id`, and Vietnamese
+practice prompts use learner-facing copy.
 
 ### Task 6: Connected UI Surfaces
 

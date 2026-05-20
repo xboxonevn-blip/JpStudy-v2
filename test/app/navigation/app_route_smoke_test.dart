@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/app/navigation/app_router.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/features/conjugation/screens/conjugation_hub_screen.dart';
 import 'package:jpstudy/features/learn/learn_hub_screen.dart';
 import 'package:jpstudy/features/me/me_screen.dart';
 import 'package:jpstudy/features/me/screens/data_settings_screen.dart';
@@ -48,6 +49,9 @@ void main() {
 
     await pumpSmokeRoute(tester, AppRoutePath.search);
     expect(find.byType(SearchScreen), findsOneWidget);
+
+    await pumpSmokeRoute(tester, AppRoutePath.grammarConjugation);
+    expect(find.byType(ConjugationHubScreen), findsOneWidget);
 
     await pumpSmokeRoute(tester, AppRoutePath.examCenter);
     expect(find.byType(ExamCenterHubScreen), findsOneWidget);

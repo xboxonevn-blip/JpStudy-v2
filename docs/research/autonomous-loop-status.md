@@ -997,3 +997,14 @@
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live proof: `https://jpstudy.web.app/?codexFresh=conj-srs-20260520#/mistakes` rendered the Saved Mistakes empty state cleanly, Home nav CTA returned to dashboard, console warnings/errors were `0` after route load, and `main.dart.js` returned `200/no-cache` containing `conjugation_srs_state`, `idx_conjugation_srs_due`, `idx_conjugation_srs_skill`, and `Conjugation practice`.
 - Remaining QA-C-001 work: connected conjugation hub/practice routes and Vocab/Grammar/Kanji/Daily Plan/Practice Board entry points.
+
+## 2026-05-20 QA-C-001 Conjugation Hub/Practice Slice
+
+- TDD RED: route smoke failed because `/#/grammar/conjugation` was swallowed by `/grammar/:id`; VI practice prompt regression failed because the question body still showed `Choose`.
+- GREEN: registered Grammar-owned conjugation hub/practice/scoped routes before the generic detail route; added `ConjugationHubScreen`, `ConjugationPracticeScreen`, `ConjugationPracticeArgs`, and sourced question generation from `ConjugationLemma` + `JapaneseConjugator`.
+- Directive D follow-up: localized practice prompts/options for VI, kept hub wrong-answer source as learner-facing `conjugation_practice`, and stored `dictionaryForm` in conjugation mistake context so Mistakes can render the lemma instead of a raw fallback.
+- Verified locally: focused conjugation/route suite passed `10/10`, UI string literal guard reported `0`, `git diff --check` clean, `flutter analyze lib test` clean, and full `flutter test` passed `2372/2372`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: VI/N5 `/#/grammar/conjugation` rendered `398 mục có nguồn sẵn sàng`; `Luyện chia thể` opened the practice screen; selecting an option enabled `Trả lời`; confirming recorded the review and showed `Đúng` plus `Câu tiếp`. Screenshots saved under `output/playwright/live-conjugation-*.png`.
+- Live bundle/header proof: `main.dart.js` returned `200/no-cache`, contained `grammar-conjugation` and `conjugation_practice`, and did not contain raw `conjugation_hub`; Playwright console had no app warnings/errors, only the known report-only Google frame-ancestor App Check message.
+- Remaining QA-C-001 work: Vocab detail suffix-guess deletion/QA-C-002, scoped Grammar/Kanji CTAs, Daily Plan/Practice Board due conjugation entry points, and advanced context/repair/minimal-pair question families.

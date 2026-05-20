@@ -105,6 +105,7 @@ class ConjugationSrsDao extends DatabaseAccessor<AppDatabase>
     String? conjugationClass,
     String? expectedSurface,
     int? grammarId,
+    String? dictionaryForm,
     String? prompt,
     String? correctAnswer,
     String? userAnswer,
@@ -160,6 +161,9 @@ class ConjugationSrsDao extends DatabaseAccessor<AppDatabase>
       }
       if (expectedSurface != null) {
         extra['expectedSurface'] = expectedSurface;
+      }
+      if (dictionaryForm != null) {
+        extra['dictionaryForm'] = dictionaryForm;
       }
       if (grammarId != null) {
         extra['grammarId'] = grammarId;

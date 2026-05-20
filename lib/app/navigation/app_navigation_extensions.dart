@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/app/navigation/app_route_locations.dart';
 import 'package:jpstudy/features/learn/models/learn_session_args.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/foundations/screens/kana_table_screen.dart';
 import 'package:jpstudy/features/lesson/lesson_practice_screen.dart';
 import 'package:jpstudy/features/test/models/home_mock_exam_launch_args.dart';
@@ -16,6 +17,19 @@ extension AppNavigationContext on BuildContext {
   void openGrammar() => goNamed(AppRouteName.grammar);
   void openGrammarPractice({Object? extra}) =>
       pushNamed(AppRouteName.grammarPractice, extra: extra);
+  void openConjugationHub({int? contentVocabId}) {
+    if (contentVocabId == null) {
+      pushNamed(AppRouteName.grammarConjugation);
+    } else {
+      pushNamed(
+        AppRouteName.grammarConjugationWord,
+        pathParameters: {'contentVocabId': '$contentVocabId'},
+      );
+    }
+  }
+
+  void openConjugationPractice(ConjugationPracticeArgs args) =>
+      pushNamed(AppRouteName.grammarConjugationPractice, extra: args);
   void openSearch({Object? extra}) =>
       pushNamed(AppRouteName.search, extra: extra);
   void openFoundations() => goNamed(AppRouteName.foundations);

@@ -25,6 +25,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Conjugation SRS / Mistakes | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_srs_state`, `idx_conjugation_srs_due`, `idx_conjugation_srs_skill`, and Mistakes rendered the empty state cleanly; Home nav CTA returned to dashboard. |
 | Conjugation hub / practice | Audited slice | Live VI/N5 proof opened `/#/grammar/conjugation`, saw `398 mục có nguồn sẵn sàng`, clicked `Luyện chia thể`, selected an answer, confirmed, and saw `Đúng` + `Câu tiếp`; console app errors were `0`. |
 | Onboarding language | Audited slice | Fresh live browser at 1366x768 selected `Tiếng Việt`, clicked Continue to level, selected N5, clicked Start, and reached VI/N5 home; QA-A-025 fixed the consent banner overlap. |
+| Lesson vocab flashcards / ghost grammar / lesson grammar / Practice copy | Audited slice | Static + live sweep found manual `Learned` and `Mark as Mastered` controls that updated progress without a learner gate, broken `v? d?` grammar example count copy, and machine-like Vietnamese copy. QA-A-027 removed the self-attestation controls, records ghost answers through grammar SRS, normalized learner-facing copy, deployed, and live proof confirmed the lesson/practice screens plus clean fresh CSP. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -43,6 +44,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-C-001 | Conjugation feature | Content DB lemma table, exact-skill SRS/mistakes, Grammar-owned hub/practice routes, Vocab detail, Grammar detail, Kanji example words, and due-queue entry points are deployed. | Connected entry points fixed + deployed |
 | QA-C-002 | Vocab detail conjugation | Vocab detail exposed generated-looking but suffix-guessed forms and generic grammar CTA. | Fixed + deployed |
 | QA-A-026 | Search navigation | Search top-hit cards could look tappable but fail to open detail; live `かえる` result stayed on `/#/search` after click. | Fixed + deployed |
+| QA-A-027 | Lesson vocab/ghost grammar/copy | Lesson vocab flashcard had a self-attestation checkmark that seeded SRS; ghost grammar practice had `Mark as Mastered`; lesson grammar showed `v? d?`; dashboard/practice copy had machine-like Vietnamese. | Fixed + deployed |
 
 ## Live Proof Artifacts
 
@@ -89,6 +91,11 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-kanji-n4-example-cta-question.png`
 - `output/playwright/live-practice-board-conj-due.png`
 - `output/playwright/live-practice-board-conj-due-question.png`
+- `output/playwright/live-qa-a-027-lesson-vocab.png`
+- `output/playwright/live-qa-a-027-lesson-grammar-copy.png`
+- `output/playwright/live-qa-a-027-practice-copy.png`
+- `output/playwright/live-qa-a-027-lesson-grammar-tab-copy.png`
+- `output/playwright/live-qa-a-027-fresh-csp-home.png`
 
 ## Notes For Next Sweep
 

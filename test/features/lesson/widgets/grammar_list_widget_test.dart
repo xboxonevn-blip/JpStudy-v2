@@ -50,7 +50,16 @@ const _kPointLearned = GrammarPoint(
 );
 
 // GrammarPointData has NO const constructor (plain class).
-final _kData1 = GrammarPointData(point: _kPoint, examples: []);
+const _kExample = GrammarExample(
+  id: 1,
+  grammarId: 1,
+  japanese: '食べてもいいです。',
+  translation: 'Có thể ăn.',
+  translationVi: 'Có thể ăn.',
+  translationEn: 'You may eat.',
+);
+
+final _kData1 = GrammarPointData(point: _kPoint, examples: const [_kExample]);
 final _kDataLearned = GrammarPointData(point: _kPointLearned, examples: []);
 
 // ---------------------------------------------------------------------------
@@ -272,6 +281,15 @@ void main() {
       await _pump(tester);
 
       expect(find.text('Dạng て'), findsWidgets);
+    });
+
+    testWidgets('VI locale shows natural example-count copy', (tester) async {
+      _largeViewport(tester);
+      await tester.pumpWidget(_buildHarness(language: AppLanguage.vi));
+      await _pump(tester);
+
+      expect(find.text('1 ví dụ'), findsWidgets);
+      expect(find.textContaining('v? d?'), findsNothing);
     });
 
     testWidgets('JLPT level pill visible in card', (tester) async {

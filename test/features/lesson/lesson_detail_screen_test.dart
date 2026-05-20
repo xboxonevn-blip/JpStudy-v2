@@ -134,6 +134,19 @@ void main() {
     expect(find.text(AppLanguage.en.kanjiLabel), findsWidgets);
   });
 
+  testWidgets('vocab flashcard does not expose manual learned toggle', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({'lesson.trackProgress': true});
+
+    await tester.pumpWidget(buildScreen([_term(1, '犬', 'dog')]));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.byTooltip(AppLanguage.en.learnedLabel), findsNothing);
+    expect(find.byTooltip(AppLanguage.en.starLabel), findsOneWidget);
+  });
+
   testWidgets('lesson tabs switch to grammar and kanji panels', (tester) async {
     await tester.pumpWidget(buildScreen([_term(1, '犬', 'dog')]));
     await tester.pump();

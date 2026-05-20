@@ -10,11 +10,9 @@ class _LessonCard extends StatelessWidget {
     required this.isFlipped,
     required this.trackProgress,
     required this.isStarred,
-    required this.isLearned,
     required this.onShowHintsChanged,
     required this.onFlip,
     required this.onStar,
-    required this.onLearned,
     this.onEdit,
     this.onStartLearning,
     this.emptyLabel,
@@ -28,12 +26,10 @@ class _LessonCard extends StatelessWidget {
   final bool isFlipped;
   final bool trackProgress;
   final bool isStarred;
-  final bool isLearned;
   final ValueChanged<bool> onShowHintsChanged;
   final VoidCallback? onFlip;
   final VoidCallback? onEdit;
   final VoidCallback? onStar;
-  final VoidCallback? onLearned;
   final VoidCallback? onStartLearning;
   final String? emptyLabel;
 
@@ -72,25 +68,6 @@ class _LessonCard extends StatelessWidget {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    if (onLearned != null)
-                      IconButton(
-                        onPressed: onLearned,
-                        icon: Icon(
-                          isLearned
-                              ? Icons.check_circle
-                              : Icons.check_circle_outline,
-                          color: isLearned
-                              ? palette.success
-                              : palette.ink.withValues(alpha: 0.4),
-                        ),
-                        tooltip: language.learnedLabel,
-                        padding: EdgeInsets.zero,
-                        constraints: const BoxConstraints(
-                          minWidth: AppTouchTargets.min,
-                          minHeight: AppTouchTargets.min,
-                        ),
-                      ),
-                    const SizedBox(width: 16),
                     IconButton(
                       onPressed: onStar,
                       icon: Icon(

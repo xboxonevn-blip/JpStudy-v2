@@ -52,7 +52,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
   final bool _focusMode = false;
   final Set<int> _flippedTermIds = {};
   final Set<int> _starredTermIds = {};
-  final Set<int> _learnedTermIds = {};
   Set<int> _syncedTermIds = {};
   _LessonMode _mode = _LessonMode.flashcards;
   int _currentIndex = 0;
@@ -151,8 +150,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final dueCount = dueAsync.asData?.value.length ?? 0;
     final isStarred =
         currentTerm != null && _starredTermIds.contains(currentTerm.id);
-    final isLearned =
-        currentTerm != null && _learnedTermIds.contains(currentTerm.id);
     final srsStateAsync = currentTerm == null
         ? const AsyncValue<SrsStateData?>.data(null)
         : ref.watch(srsStateProvider(currentTerm.id));
@@ -309,7 +306,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                                     isFlipped: isFlipped,
                                     trackProgress: _trackProgress,
                                     isStarred: isStarred,
-                                    isLearned: isLearned,
                                     emptyLabel: _mode == _LessonMode.review
                                         ? language.reviewEmptyLabel
                                         : null,
@@ -320,14 +316,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                                     onStar: currentTerm == null
                                         ? null
                                         : () => _toggleStar(
-                                            currentTerm,
-                                            level,
-                                            storageLessonId,
-                                          ),
-                                    onLearned:
-                                        !_trackProgress || currentTerm == null
-                                        ? null
-                                        : () => _toggleLearned(
                                             currentTerm,
                                             level,
                                             storageLessonId,
@@ -478,41 +466,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       isStarred: nextValue,
     );
     ref.invalidate(lessonMetaProvider(level.shortLabel));
-  }
-
-  Future<void> _toggleLearned(
-    UserLessonTermData term,
-    StudyLevel level,
-    int storageLessonId,
-  ) async {
-    final repo = ref.read(lessonRepositoryProvider);
-    final nextValue = !_learnedTermIds.contains(term.id);
-    setState(() {
-      if (nextValue) {
-        _learnedTermIds.add(term.id);
-      } else {
-        _learnedTermIds.remove(term.id);
-      }
-    });
-    await repo.updateTermLearned(
-      term.id,
-      lessonId: storageLessonId,
-      isLearned: nextValue,
-    );
-    if (nextValue) {
-      final now = DateTime.now();
-      await repo.upsertSrsState(
-        termId: term.id,
-        repetitions: 0,
-        stability: 1.0,
-        difficulty: 5.0,
-        nextReviewAt: now.add(const Duration(days: 1)),
-      );
-    } else {
-      await repo.deleteSrsState(term.id);
-    }
-    ref.invalidate(lessonMetaProvider(level.shortLabel));
-    ref.invalidate(lessonDueTermsProvider(storageLessonId));
   }
 
   Future<void> _reviewTerm(UserLessonTermData term, int quality) async {
@@ -690,14 +643,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         .where((term) => term.isStarred)
         .map((term) => term.id)
         .toSet();
-    final learned = terms
-        .where((term) => term.isLearned)
-        .map((term) => term.id)
-        .toSet();
     final needsSync =
         !_setsEqual(ids, _syncedTermIds) ||
-        !_setsEqual(starred, _starredTermIds) ||
-        !_setsEqual(learned, _learnedTermIds);
+        !_setsEqual(starred, _starredTermIds);
     if (!needsSync) {
       return;
     }
@@ -710,9 +658,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
         _starredTermIds
           ..clear()
           ..addAll(starred);
-        _learnedTermIds
-          ..clear()
-          ..addAll(learned);
       });
     });
   }

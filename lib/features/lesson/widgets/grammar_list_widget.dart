@@ -844,8 +844,8 @@ class _GrammarPointCardState extends State<_GrammarPointCard> {
                               _tr(
                                 widget.language,
                                 en: '${widget.data.examples.length} Examples',
-                                vi: '${widget.data.examples.length} v? d?',
-                                ja: '${widget.data.examples.length} ?',
+                                vi: '${widget.data.examples.length} ví dụ',
+                                ja: '${widget.data.examples.length}例',
                               ),
                               fg: palette.secondary,
                               bg: palette.secondary.withValues(alpha: 0.08),

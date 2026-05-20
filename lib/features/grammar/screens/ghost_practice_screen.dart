@@ -7,6 +7,7 @@ import '../../../core/accessibility/reduced_motion.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../data/db/app_database.dart';
+import '../../../data/repositories/grammar_repository.dart' as grammar_repo;
 import '../../../data/repositories/lesson_repository.dart' as lesson_repo;
 import '../../../features/grammar/grammar_providers.dart' as grammar_providers;
 import '../../../app/theme/app_theme_palette.dart';
@@ -63,17 +64,25 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
     return quizItems;
   }
 
-  void _handleAnswer(int optionIndex, _QuizItem item) {
+  Future<void> _handleAnswer(int optionIndex, _QuizItem item) async {
     if (_answered) return;
 
+    final isCorrect = item.options[optionIndex].id == item.target.id;
     setState(() {
       _answered = true;
       _selectedOptionIndex = optionIndex;
-      if (item.options[optionIndex].id == item.target.id) {
+      if (isCorrect) {
         _score++;
         _spawnParticles(); // Celebrate correct answer
       }
     });
+
+    await ref
+        .read(grammar_repo.grammarRepositoryProvider)
+        .recordReview(grammarId: item.target.id, grade: isCorrect ? 3 : 1);
+    ref.invalidate(grammar_providers.grammarDueCountProvider);
+    ref.invalidate(grammar_providers.grammarGhostCountProvider);
+    ref.invalidate(grammar_providers.grammarGhostsProvider);
   }
 
   void _spawnParticles() {
@@ -115,9 +124,6 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
   }
 
   void _showResults(int total) {
-    ref.invalidate(grammar_providers.grammarDueCountProvider);
-    ref.invalidate(grammar_providers.grammarGhostCountProvider);
-    ref.invalidate(grammar_providers.grammarGhostsProvider);
     final language = ref.read(appLanguageProvider);
     _spawnParticles(); // Bonus confetti on finish
     showDialog(
@@ -184,20 +190,6 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
         ],
       ),
     );
-  }
-
-  Future<void> _markAsMastered(int grammarId) async {
-    final language = ref.read(appLanguageProvider);
-    await ref
-        .read(lesson_repo.lessonRepositoryProvider)
-        .markGrammarAsMastered(grammarId);
-    ref.invalidate(grammar_providers.grammarGhostsProvider);
-    if (mounted) {
-      _spawnParticles();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(language.ghostPracticeMasteredToast)),
-      );
-    }
   }
 
   @override
@@ -389,16 +381,6 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                             ),
                           ),
                           const SizedBox(height: 12),
-                          TextButton.icon(
-                            onPressed: () => _markAsMastered(target.id),
-                            icon: const Icon(Icons.check_circle_outline),
-                            label: Text(
-                              language.ghostPracticeMarkMasteredLabel,
-                            ),
-                            style: TextButton.styleFrom(
-                              foregroundColor: context.appPalette.success,
-                            ),
-                          ),
                         ],
                       ),
                   ],

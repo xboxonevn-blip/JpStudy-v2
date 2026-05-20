@@ -305,9 +305,9 @@ class _GrammarHubContentState extends State<_GrammarHubContent> {
                 ),
                 caption: _tr(
                   language,
-                  en: '$learnedCount of ${points.length} points marked learned at this level.',
-                  vi: '\u0110\u00e3 \u0111\u00e1nh d\u1ea5u h\u1ecdc xong $learnedCount / ${points.length} \u0111i\u1ec3m ng\u1eef ph\u00e1p trong c\u1ea5p n\u00e0y.',
-                  ja: '\u3053\u306e\u30ec\u30fc\u30f3\u3067 ${points.length} \u9805\u76ee\u4e2d $learnedCount \u9805\u76ee\u3092\u5b66\u7fd2\u6e08\u307f\u306b\u3057\u3066\u3044\u307e\u3059\u3002',
+                  en: '$learnedCount of ${points.length} points understood after practice at this level.',
+                  vi: '\u0110\u00e3 hi\u1ec3u $learnedCount / ${points.length} \u0111i\u1ec3m ng\u1eef ph\u00e1p trong c\u1ea5p n\u00e0y sau luy\u1ec7n t\u1eadp.',
+                  ja: '\u3053\u306e\u30ec\u30fc\u30f3\u3067 ${points.length} \u9805\u76ee\u4e2d $learnedCount \u9805\u76ee\u3092\u7df4\u7fd2\u5f8c\u306b\u7406\u89e3\u6e08\u307f\u306b\u3057\u3066\u3044\u307e\u3059\u3002',
                 ),
                 actionLabel: dueCount > 0
                     ? _tr(

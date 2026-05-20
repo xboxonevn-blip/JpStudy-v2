@@ -25,6 +25,7 @@ const _kDashboard = DashboardState(
 );
 
 Widget _buildScreen({
+  AppLanguage language = AppLanguage.en,
   DashboardState dashboard = _kDashboard,
   ContinueAction? continueAction,
   List<WeaknessRadarItem> weaknessItems = const [],
@@ -33,7 +34,7 @@ Widget _buildScreen({
   return ProviderScope(
     overrides: [
       appLanguageProvider.overrideWith(
-        (ref) => AppLanguageController.test(AppLanguage.en),
+        (ref) => AppLanguageController.test(language),
       ),
       studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
       dashboardProvider.overrideWith((ref) => Stream.value(dashboard)),
@@ -96,6 +97,17 @@ void main() {
       expect(find.text('Run Recall Sprint first'), findsWidgets);
       expect(find.text('Clear due grammar'), findsAtLeastNWidgets(1));
       expect(find.text('Focus tools'), findsOneWidget);
+    });
+
+    testWidgets('Vietnamese plan caption uses natural learner copy', (
+      tester,
+    ) async {
+      await tester.pumpWidget(_buildScreen(language: AppLanguage.vi));
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('giữ trí nhớ'), findsOneWidget);
+      expect(find.textContaining('chặn rơi'), findsNothing);
+      expect(find.textContaining('vá điểm yếu'), findsNothing);
     });
 
     testWidgets('surfaces grammar ghost repair when no due queue is waiting', (

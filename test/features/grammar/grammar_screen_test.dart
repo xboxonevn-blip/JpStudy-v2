@@ -197,6 +197,21 @@ void main() {
     expect(find.text('Đã học'), findsWidgets);
   });
 
+  testWidgets('VI grammar list caption avoids manual-marking copy', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      _buildScreen(
+        language: AppLanguage.vi,
+        points: [_stubPoint, _learnedPoint],
+      ),
+    );
+    await _pump(tester);
+
+    expect(find.textContaining('Đã hiểu 1 / 2'), findsOneWidget);
+    expect(find.textContaining('Đã đánh dấu'), findsNothing);
+  });
+
   testWidgets('grammar bank search finds は by wa and topic marker', (
     tester,
   ) async {

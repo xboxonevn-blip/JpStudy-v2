@@ -1040,3 +1040,13 @@
 - Live proof: fresh VI/N4 Kanji grid opened `飼`; detail showed example words and `Luyện chia thể`; CTA opened scoped `1 mục có nguồn sẵn sàng`, then a non-empty conjugation question.
 - Live proof: after the due interval, Practice Board showed `Ôn chia thể đến hạn`, Daily Plan included the same lane, and `Mở chia thể` opened due-scoped `Câu 1/1`; `main.dart.js` returned `200/no-cache` with `grammar-conjugation`; Flutter/app exceptions were `0`, with only the known report-only Google frame-ancestor console entry.
 - Remaining QA-C-001 work: advanced context/repair/minimal-pair drills. Continue the broader Directive D full-app sweep before opening lower-priority content work.
+
+## 2026-05-20 QA-A-027 Lesson And Ghost Self-Attestation Sweep
+
+- Directive D full-app sweep found lesson vocab flashcards still exposed a manual learned checkmark that toggled `isLearned` and seeded SRS without testing the learner.
+- The same sweep found legacy ghost grammar practice exposed `Mark as Mastered` after an answer; removed it and now records each answer through `GrammarRepository.recordReview`, so correct answers clear ghost state through the SRS path and wrong answers remain due.
+- Fixed connected copy defects: lesson grammar `v? d?`, grammar hub "Đã đánh dấu..." caption, Practice "chặn rơi nhớ/vá điểm yếu", and roadmap "vá điểm yếu".
+- Verified locally: focused lesson/grammar/home/practice suites, `flutter analyze lib test`, UI string guard, `git diff --check`, and full `flutter test` passed with `2387/2387`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: VI/N5 lesson vocab flashcard shows the star action but no manual learned checkmark; lesson Grammar tab shows natural `10 ví dụ` copy instead of `v? d?`; Practice shows `Một lộ trình ngắn để giữ trí nhớ, củng cố điểm yếu...`; `main.dart.js` is `200/no-cache` and contains none of the stale `Mark as Mastered`, `Đánh dấu đã thuộc`, `Đã đánh dấu`, `v? d?`, `Dọn hàng`, `chặn rơi`, or `vá điểm yếu` strings.
+- Fresh live CSP proof: a new Chromium context loaded reCAPTCHA and Sentry CDN with no CSP violations and no Flutter/app exceptions; only the known headless App Check 403/throttle and WebGL readback warnings appeared.

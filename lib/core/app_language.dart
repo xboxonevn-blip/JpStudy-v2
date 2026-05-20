@@ -6210,28 +6210,6 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
-  String get ghostPracticeMarkMasteredLabel {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Mark as Mastered (Remove Ghost)';
-      case AppLanguage.vi:
-        return 'Đánh dấu đã thuộc (xóa Ghost)';
-      case AppLanguage.ja:
-        return '習得済みにする(ゴースト解除)';
-    }
-  }
-
-  String get ghostPracticeMasteredToast {
-    switch (this) {
-      case AppLanguage.en:
-        return 'Marked as mastered. Removed from ghosts.';
-      case AppLanguage.vi:
-        return 'Đã đánh dấu thành thạo và xóa khỏi ghost.';
-      case AppLanguage.ja:
-        return '習得済みにしてゴーストから外しました。';
-    }
-  }
-
   String get grammarConnectionLabel {
     switch (this) {
       case AppLanguage.en:

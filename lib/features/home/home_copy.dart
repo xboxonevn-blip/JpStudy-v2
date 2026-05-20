@@ -27,7 +27,7 @@ extension HomeCopyX on AppLanguage {
     AppLanguage.en =>
       dueCount > 0 ? '$dueCount reviews waiting' : 'No reviews due',
     AppLanguage.vi =>
-      dueCount > 0 ? '$dueCount lượt ôn đang chờ' : 'Hàng ôn tập đang trống',
+      dueCount > 0 ? '$dueCount lượt ôn đến hạn' : 'Chưa có lượt ôn đến hạn',
     AppLanguage.ja => dueCount > 0 ? '$dueCount件の復習が待機中' : '復習キューは空です',
   };
 
@@ -45,7 +45,7 @@ extension HomeCopyX on AppLanguage {
 
   String learningPathMomentumChipLabel(String levelCode) => switch (this) {
     AppLanguage.en => '$levelCode study rhythm',
-    AppLanguage.vi => 'Nhịp tăng lực $levelCode',
+    AppLanguage.vi => 'Nhịp học $levelCode',
     AppLanguage.ja => '$levelCode の勢いレーン',
   };
 
@@ -53,14 +53,14 @@ extension HomeCopyX on AppLanguage {
     if (dueCount > 0) {
       return switch (this) {
         AppLanguage.en => 'Clear due reviews first',
-        AppLanguage.vi => 'Dọn hàng ôn tập trước',
+        AppLanguage.vi => 'Ôn phần đến hạn trước',
         AppLanguage.ja => 'まず復習キューを片づける',
       };
     }
     if (weakCount > 0) {
       return switch (this) {
         AppLanguage.en => 'Lock in weak points today',
-        AppLanguage.vi => 'Khóa lại điểm yếu hôm nay',
+        AppLanguage.vi => 'Củng cố điểm yếu hôm nay',
         AppLanguage.ja => '今日は弱点を締め直す',
       };
     }
@@ -90,7 +90,7 @@ extension HomeCopyX on AppLanguage {
         AppLanguage.en =>
           '$weakCount weak spots are still fresh. Repair them now while memory is close.',
         AppLanguage.vi =>
-          'Còn $weakCount điểm yếu vẫn còn “nóng”. Vá ngay lúc này sẽ giữ nhớ tốt hơn.',
+          'Còn $weakCount điểm yếu vừa xuất hiện. Củng cố ngay lúc này sẽ giúp nhớ ổn hơn.',
         AppLanguage.ja => '$weakCount件の弱点がまだ新しいうちに補強すると、記憶が安定しやすくなります。',
       };
     }
@@ -316,7 +316,7 @@ extension HomeCopyX on AppLanguage {
         },
         'n5_mock_review' => switch (this) {
           AppLanguage.en => 'N5 mock exam + repair',
-          AppLanguage.vi => 'Đề N5 + vá điểm yếu',
+          AppLanguage.vi => 'Đề N5 + củng cố điểm yếu',
           AppLanguage.ja => 'N5模試 + 補強',
         },
         'n4_minna_26_37' => switch (this) {
@@ -430,7 +430,7 @@ extension HomeCopyX on AppLanguage {
         AppLanguage.en =>
           'Use mock results to choose review, writing, and weak-point repair.',
         AppLanguage.vi =>
-          'Dùng kết quả đề để chọn phần ôn, viết và vá điểm yếu.',
+          'Dùng kết quả đề để chọn phần ôn, viết và củng cố điểm yếu.',
         AppLanguage.ja => '模試結果から、復習・書き取り・弱点補強を選びます。',
       },
     _ => switch (this) {

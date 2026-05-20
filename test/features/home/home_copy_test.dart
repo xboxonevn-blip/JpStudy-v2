@@ -22,6 +22,17 @@ void main() {
     );
   });
 
+  test('Vietnamese roadmap copy avoids machine repair wording', () {
+    expect(
+      AppLanguage.vi.textbookRoadmapPhaseTitle('n5_mock_review', 'N5'),
+      'Đề N5 + củng cố điểm yếu',
+    );
+    expect(
+      AppLanguage.vi.textbookRoadmapPhaseDescription('n5_mock_review', 'N5'),
+      'Dùng kết quả đề để chọn phần ôn, viết và củng cố điểm yếu.',
+    );
+  });
+
   test('home provider route hints do not contain mojibake markers', () {
     final files = [
       File('lib/features/home/providers/daily_plan_provider.dart'),

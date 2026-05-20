@@ -270,7 +270,7 @@ class PracticeScreen extends ConsumerWidget {
     AppLanguage.en =>
       'A short sequence to protect memory, repair weak spots, and keep momentum.',
     AppLanguage.vi =>
-      'Một chuỗi ngắn để chặn rơi nhớ, vá điểm yếu, và giữ đà học tiếp.',
+      'Một lộ trình ngắn để giữ trí nhớ, củng cố điểm yếu và duy trì nhịp học.',
     AppLanguage.ja => '記憶を守り、弱点を補強し、勢いを保つための短い流れです。',
   };
 

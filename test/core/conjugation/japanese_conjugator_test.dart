@@ -36,6 +36,28 @@ void main() {
       );
       expect(ConjugationSpec.fromJmDictPos(const ['n'], lemma: '学校'), isNull);
     });
+
+    test('maps expanded JMdict POS descriptions from parsed source cache', () {
+      expect(
+        ConjugationSpec.fromJmDictPos(const [
+          "Godan verb with 'ru' ending",
+          'intransitive verb',
+        ], lemma: '帰る'),
+        const ConjugationSpec.verb(VerbClass.godanRu),
+      );
+      expect(
+        ConjugationSpec.fromJmDictPos(const [
+          "Godan verb - Iku/Yuku special class",
+        ], lemma: '行く'),
+        const ConjugationSpec.verb(VerbClass.godanIkuException),
+      );
+      expect(
+        ConjugationSpec.fromJmDictPos(const [
+          'suru verb - special class',
+        ], lemma: '勉強する'),
+        const ConjugationSpec.verb(VerbClass.suru),
+      );
+    });
   });
 
   group('JapaneseConjugator verbs', () {

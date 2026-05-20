@@ -350,11 +350,17 @@ Mistakes/Weakness:
 - Modify: `pubspec.yaml`
 - Test: `test/tool/research/conjugation_lemma_builder_test.dart`
 
-- [ ] Read curriculum vocab assets and JMdict cache.
-- [ ] Match by `sourceVocabId`/`sourceSenseId` when present, then by `(term, reading)`.
-- [ ] Emit only entries with a supported POS class.
-- [ ] Run: `flutter test test/tool/research/conjugation_lemma_builder_test.dart`
-- [ ] Expected: builder rejects suffix-only guesses and reports unmatched conjugatable-looking vocab.
+- [x] Read curriculum vocab assets and JMdict cache.
+- [x] Match by `sourceVocabId`/`sourceSenseId` when present, then by `(term, reading)`, plus source-backed generated `ます` forms for polite curriculum verbs.
+- [x] Emit only entries with a supported POS class.
+- [x] Run: `flutter test test/tool/research/conjugation_lemma_builder_test.dart`
+- [x] Expected: builder rejects suffix-only guesses and reports unmatched conjugatable-looking vocab.
+
+Slice output: `assets/data/content/conjugation/lemmas.json` contains `3907`
+source-backed lemma rows from JMdict_e. Diagnostics are retained in the asset:
+`198` unmatched conjugatable-looking rows, `183` suffix-only skips, and `153`
+ambiguous matches for later normalization/content cleanup. No suffix-only row is
+used as a conjugation lemma.
 
 ### Task 3: Content DB Lemma Table
 

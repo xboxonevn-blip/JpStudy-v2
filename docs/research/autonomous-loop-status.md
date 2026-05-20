@@ -954,3 +954,16 @@
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live smoke: `https://jpstudy.web.app/?codexFresh=conj-engine-20260520#/` booted, main nav rendered, `main.dart.js` returned `Cache-Control: no-cache`, console errors/warnings were `0`, and screenshot saved as `output/playwright/live-conjugation-engine-home-smoke.png`.
 - Remaining QA-C-001 work: source metadata builder, content DB lemma table, conjugation SRS/mistakes, Vocab/Grammar/Kanji UI integration, deploy/live proof of learner flows.
+
+## 2026-05-20 QA-C-001 Conjugation Metadata Slice
+
+- TDD RED: added `test/tool/research/conjugation_lemma_builder_test.dart`; it failed because `ConjugationLemmaBuilder` and the CLI did not exist.
+- GREEN: added `lib/core/conjugation/conjugation_lemma_builder.dart` and `tool/research/build_conjugation_lemmas.dart`.
+- Directive D follow-up: generated output showed real JMdict cache POS values are expanded descriptions such as `Godan verb with 'ru' ending`; added a RED/GREEN engine regression so godan/suru description POS maps correctly instead of silently dropping godan verbs.
+- Generated `assets/data/content/conjugation/lemmas.json` from the local JMdict_e cache. Output: `3907` source-backed rows; `365` rows matched polite curriculum `ます` forms by generating forms from JMdict POS, not by suffix guessing.
+- Diagnostics retained in the asset: `198` unmatched conjugatable-looking rows, `183` suffix-only skips, and `153` ambiguous matches for later normalization/content cleanup.
+- Verified locally: focused engine/builder suite passed `9/9`, `flutter analyze lib test` clean, UI string guard `0`, content status machine/open-review `0`, `git diff --check` clean, and full `flutter test` passed `2360/2360`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: `https://jpstudy.web.app/assets/assets/data/content/conjugation/lemmas.json?codexFresh=conj-lemmas-20260520` returned `200`, `Cache-Control: no-cache`, `source=JMdict_e`, and `entryCount=3907`. `main.dart.js` also returned `no-cache`.
+- Live smoke: `https://jpstudy.web.app/?codexFresh=conj-lemmas-20260520#/` booted the Vietnamese shell and main nav; Playwright console had no Flutter errors/warnings. The only report was the known Google frame-ancestor report-only message from the App Check/reCAPTCHA path. Screenshot saved as `live-conjugation-lemmas-home-smoke.png`.
+- Remaining QA-C-001 work: content DB lemma table, conjugation SRS/mistakes, Vocab/Grammar/Kanji UI integration, deploy/live proof of learner flows.

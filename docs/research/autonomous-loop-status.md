@@ -1,5 +1,16 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-028 Phase 2 Final
+
+- Expanded `han_viet_on_rules_v2.json` from `30` to all `32` legacy rule cards.
+- Added final usage cards for Hán-Việt-as-heuristic discipline and multiple-On-reading discipline; each has `6` examples and `5` MC practice items.
+- Phase 2 now totals `32` ready rule cards and `160` generated practice questions, all from local app kanji/vocab assets with blocked crawl domains excluded.
+- Verified locally: `node --test test/tool/research/han_viet_rule_content_generator_test.js`, `flutter test test/data/content/han_viet_on_rules_asset_test.dart`, `flutter test test/features/foundations/han_viet_reference_screen_test.dart`, `npm run test:research-tooling` (`77/77`), and `git diff --check` passed.
+- Deployed with `node tool/deploy/hosting_deploy.js`.
+- Live proof on production: live v2 asset returned `32` rules and `160` practice items with no-cache; `/kanji/han-viet` loaded in VI, filtered `nhiều âm On`, showed rule 32 practice, clicked correct `だい`, `main.dart.js` returned `200/no-cache`, unexpected console errors were `0` after known headless App Check noise filtering. Feedback text remains screenshot-backed because CanvasKit semantics omitted card text from `body.innerText` in this run.
+- Live artifact: `output/playwright/live-qaa028-hanviet-phase2-final-proof.json` plus `output/playwright/live-qaa028-hanviet-phase2-final-*.png` screenshots.
+- Next queue: QA-A-028 Phase 3 interlinks: kanji detail mini-card, personalized rule practice selection, and review queue rule cards.
+
 ## 2026-05-20 QA-A-028 Phase 2 Batch 6
 
 - Expanded `han_viet_on_rules_v2.json` from `25` to `30` ready practice cards.

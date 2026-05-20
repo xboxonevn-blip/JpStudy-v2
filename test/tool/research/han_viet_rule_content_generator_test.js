@@ -12,7 +12,7 @@ test('distinguishes Vietnamese D from Đ when matching initial rules', () => {
   assert.equal(firstConsonant('Giải'), 'gi');
 });
 
-test('generates first thirty rule cards with examples and practice from local kanji assets', () => {
+test('generates all thirty-two rule cards with examples and practice from local kanji assets', () => {
   const payload = generateHanVietRulesV2({ rootDir: process.cwd() });
 
   assert.equal(payload.schemaVersion, 2);
@@ -22,7 +22,7 @@ test('generates first thirty rule cards with examples and practice from local ka
   assert.equal(raw.includes('nhaikanji.com'), false);
   assert.equal(raw.includes('thocodehoctiengnhat.com'), false);
 
-  assert.equal(payload.rules.length, 30);
+  assert.equal(payload.rules.length, 32);
   assert.deepEqual(payload.rules.map((item) => item.ruleId), [
     'rule_initial_h_k_gi_c_qu_to_k',
     'rule_initial_t_th_to_t_s_sh',
@@ -54,6 +54,8 @@ test('generates first thirty rule cards with examples and practice from local ka
     'rule_exception_word_level_han_viet',
     'rule_exception_check_dictionary_before_drill',
     'rule_usage_kanji_compounds_use_on',
+    'rule_usage_han_viet_is_heuristic',
+    'rule_usage_multiple_on_readings',
   ]);
 
   const rule = payload.rules.find(

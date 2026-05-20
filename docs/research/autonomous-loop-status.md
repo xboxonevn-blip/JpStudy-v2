@@ -1,5 +1,14 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-029 Graph View Phase 0 Design/Audit
+
+- Audited the Kanji graph feature against current app structure without accessing banned sources.
+- Package audit: `dart pub add graphview --dry-run` resolves `graphview 1.5.1`; local package README/API show Flutter web support, `InteractiveViewer` pan/zoom, `FruchtermanReingoldAlgorithm`, `ArrowEdgeRenderer`, and `GraphViewController` fit/reset support.
+- Data audit: scanned `125` kanji lesson files with `2114` unique kanji; `250` have components, `558` have related kanji, one-hop max is `8`, depth-2 max is `34`; decided to cap rendered graph nodes at `15`.
+- Route/design decisions: use full route `/kanji/:character/graph`, full-screen graph widget, custom edge-label renderer, SRS node borders, graph cluster quiz, and `/review` mini-graph interlink.
+- Wrote `docs/research/kanji-graph-view-design-2026-05-20.md` with DECISIONS MADE and OPEN_QUESTIONS.
+- Next: commit Phase 0 doc, then implement QA-A-029 Phase 1 MVP.
+
 ## 2026-05-20 QA-A-028 Personalized Hán-Việt Practice Closeout
 
 - Finished the remaining QA-A-028 personalized sampling slice: `/kanji/han-viet` now loads SRS state for visible practice kanji and orders due kanji first, then active kanji, then untouched kanji in original asset order.

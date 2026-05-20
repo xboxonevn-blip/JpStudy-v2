@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -175,6 +177,33 @@ void main() {
     await _pump(tester);
 
     expect(find.textContaining('No grammar loaded for N5'), findsOneWidget);
+  });
+
+  testWidgets('loading bank shows bounded learner-facing fallback', (
+    tester,
+  ) async {
+    final completer = Completer<List<GrammarPoint>>();
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          appLanguageProvider.overrideWith(
+            (ref) => AppLanguageController.test(AppLanguage.vi),
+          ),
+          studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
+          grammarPointsProvider(
+            StudyLevel.n5.shortLabel,
+          ).overrideWith((_) => completer.future),
+          grammarDueCountProvider.overrideWith((_) async => 0),
+          grammarGhostCountProvider.overrideWith((_) => Stream.value(0)),
+        ],
+        child: const MaterialApp(home: GrammarScreen()),
+      ),
+    );
+    await tester.pump();
+
+    expect(find.text('Đang chuẩn bị kho ngữ pháp N5'), findsOneWidget);
+    expect(find.textContaining('đang nạp dữ liệu lần đầu'), findsOneWidget);
   });
 
   testWidgets('grammar point rows render with learned / new badges', (

@@ -125,6 +125,25 @@ class _FakeKanjiConjugationRepository extends ConjugationRepository {
   }
 }
 
+class _SlowKanjiHubLessonRepository extends _FakeKanjiHubLessonRepository {
+  _SlowKanjiHubLessonRepository({
+    required this.pendingN5Kanji,
+    required super.n5Kanji,
+    required super.n4Kanji,
+    required super.n3Kanji,
+    required super.n2Kanji,
+    required super.n1Kanji,
+  });
+
+  final Future<List<KanjiItem>> pendingN5Kanji;
+
+  @override
+  Future<List<KanjiItem>> fetchKanjiByLevel(String level) {
+    if (level == 'N5') return pendingN5Kanji;
+    return super.fetchKanjiByLevel(level);
+  }
+}
+
 Widget _buildSubject({
   required LessonRepository repo,
   AppLanguage language = AppLanguage.en,
@@ -359,6 +378,45 @@ void main() {
 
     expect(find.byKey(const ValueKey('kanji_today_loading')), findsOneWidget);
     expect(find.text("Preparing today's kanji"), findsOneWidget);
+  });
+
+  testWidgets('kanji grid shows bounded copy while level data resolves', (
+    tester,
+  ) async {
+    await _mockRadicalsAsset();
+    final completer = Completer<List<KanjiItem>>();
+    final baseRepo = _buildRepo();
+    final repo = _SlowKanjiHubLessonRepository(
+      pendingN5Kanji: completer.future,
+      n5Kanji: baseRepo.n5Kanji,
+      n4Kanji: baseRepo.n4Kanji,
+      n3Kanji: baseRepo.n3Kanji,
+      n2Kanji: baseRepo.n2Kanji,
+      n1Kanji: baseRepo.n1Kanji,
+    );
+
+    await tester.pumpWidget(
+      _buildSubject(
+        repo: repo,
+        language: AppLanguage.vi,
+        overrides: [
+          kanjiHomeSummaryProvider.overrideWith(
+            (ref) async => const KanjiHomeSummary(
+              levelCode: 'N5',
+              dueCount: 0,
+              newCount: 12,
+              exploreCount: 185,
+            ),
+          ),
+        ],
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.byKey(const ValueKey('kanji_grid_loading')), findsOneWidget);
+    expect(find.text('Đang chuẩn bị lưới kanji N5'), findsOneWidget);
+    expect(find.textContaining('đang nạp dữ liệu lần đầu'), findsOneWidget);
   });
 
   testWidgets('kanji hub shows retry card when today summary fails', (

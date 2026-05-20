@@ -29,7 +29,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | P0 backlog live proof sweep | Audited slice | Rechecked old fixed-local P0 tickets after the latest deploy: QA-A-001 now routes `/#/exam-center` -> sidebar `Hồ sơ` -> `#/me` with the profile screen, and QA-A-004 now renders VI/N2 lesson 1 as `N2 / Shin Kanzen N2 Bài 1` with loaded Vocab and non-empty Grammar. |
 | Home/Library Vietnamese copy | Audited slice | Static + live copy sweep found `dọn review`, `dọn hàng đợi`, `TÍN HIỆU LEVEL`, and mixed English `level`/`lesson` in Vietnamese Home/Library flows. QA-A-028 replaced them with natural Vietnamese; live VI/N2 Home/Summary/Library proof passed after deploy. |
 | Vocab direct route | Audited slice | Fresh VI/N5 `/#/vocab` showed a spinner after 25 seconds with no app exception. QA-A-029 now renders the hub from bundled manifests/counts and decouples first paint from review-home DB loading; live proof shows the hub plus working `Ôn ngay` and `Minna no Nihongo I` CTAs. |
-| Grammar/Kanji direct routes | Audited slice | While root-causing QA-A-029, fresh VI/N5 `/#/grammar` and `/#/kanji` also stayed in loading states after 25-45 seconds with no app exception. Logged QA-A-030 P0 as the next cold-route loading fix. |
+| Grammar/Kanji direct routes | Audited slice | While root-causing QA-A-029, fresh VI/N5 `/#/grammar` and `/#/kanji` also stayed in loading states after 25-45 seconds with no app exception. QA-A-030 added bounded loading panels for Grammar/Kanji DB-backed work, then live proof verified direct routes plus Grammar practice/detail and Kanji writing/Hán-Việt CTAs. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -53,7 +53,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-027 | Lesson vocab/ghost grammar/copy | Lesson vocab flashcard had a self-attestation checkmark that seeded SRS; ghost grammar practice had `Mark as Mastered`; lesson grammar showed `v? d?`; dashboard/practice copy had machine-like Vietnamese. | Fixed + deployed |
 | QA-A-028 | Home/Library copy | Daily Summary, Daily Session Card, and Library roadmap exposed machine-like or mixed Vietnamese copy (`dọn review`, `dọn hàng đợi`, `level`, `lesson`, `TÍN HIỆU LEVEL`). | Fixed + deployed |
 | QA-A-029 | Vocab route | Fresh VI/N5 `/#/vocab` stayed on a spinner after 25 seconds with no Flutter exception. | Fixed + deployed |
-| QA-A-030 | Grammar/Kanji routes | Fresh VI/N5 `/#/grammar` and `/#/kanji` stayed in loading states after 25-45 seconds during cold direct-route checks. | Queued |
+| QA-A-030 | Grammar/Kanji routes | Fresh VI/N5 `/#/grammar` and `/#/kanji` stayed in loading states after 25-45 seconds during cold direct-route checks. | Fixed + deployed |
 
 ## Live Proof Artifacts
 
@@ -121,6 +121,13 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-qaa029-vocab-review-cta-proof.png`
 - `output/playwright/live-qaa029-vocab-minna-cta-proof.png`
 - `output/playwright/live-qaa028-qaa029-proof.json`
+- `output/playwright/live-qaa030-grammar-direct.png`
+- `output/playwright/live-qaa030-grammar-practice-cta.png`
+- `output/playwright/live-qaa030-grammar-detail-cta.png`
+- `output/playwright/live-qaa030-kanji-direct.png`
+- `output/playwright/live-qaa030-kanji-write-cta.png`
+- `output/playwright/live-qaa030-kanji-hanviet-cta.png`
+- `output/playwright/live-qaa030-proof.json`
 
 ## Notes For Next Sweep
 

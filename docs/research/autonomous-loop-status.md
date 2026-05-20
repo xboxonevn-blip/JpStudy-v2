@@ -1067,3 +1067,13 @@
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live proof after deploy: fresh VI/N5 `/#/vocab` rendered `Hôm nay`, `Tra nhanh từ vựng`, `Học phần cốt lõi`, `Hajimete no Nihongo Tango`, `Minna no Nihongo I`, and `1,327 mục từ`; `Ôn ngay` opened `Ôn N5`; `Minna no Nihongo I` opened the lesson catalog with `Bài 1`, `51 từ trong bài này`, and progress copy.
 - Live proof after deploy: VI/N2 Home, Daily Summary, and Library copy sweep found no `dọn review`, `dọn hàng đợi`, `TÍN HIỆU LEVEL`, `level `, or `lesson ` leaks. Proof JSON: `output/playwright/live-qaa028-qaa029-proof.json`. Headless App Check 403/throttle messages were ignored as environment-only Firebase App Check noise; no Flutter app exception was observed.
+
+## 2026-05-20 QA-A-030 Grammar/Kanji Cold Direct Routes
+
+- Fixed QA-A-030: direct `/#/grammar` and `/#/kanji` no longer show spinner-only content panels during first-run DB-backed seed/fetch work.
+- Grammar now renders a bounded learner-facing loading panel for the grammar bank, examples, and practice entry points; Kanji grid now renders a bounded learner-facing loading panel while level tabs, writing practice, and Hán-Việt rules remain reachable.
+- Verified locally: targeted RED/GREEN loading tests, focused Grammar/Kanji suites `30/30`, `flutter analyze lib test` clean, UI string guard `0`, `git diff --check` clean, and full `flutter test` passed `2394/2394`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof after deploy: VI/N5 `/#/grammar` rendered the Grammar hub; Grammar practice CTA opened a non-empty drill; Grammar detail CTA opened a non-empty point drill; VI/N5 `/#/kanji` rendered the Kanji hub; `Viết` opened writing practice; Hán-Việt CTA opened the rules screen.
+- Live artifacts: `output/playwright/live-qaa030-proof.json`, `output/playwright/live-qaa030-grammar-direct.png`, `output/playwright/live-qaa030-grammar-practice-cta.png`, `output/playwright/live-qaa030-grammar-detail-cta.png`, `output/playwright/live-qaa030-kanji-direct.png`, `output/playwright/live-qaa030-kanji-write-cta.png`, and `output/playwright/live-qaa030-kanji-hanviet-cta.png`.
+- Known environment-only live noise: headless Firebase App Check 403/throttle messages. Flutter/app failures were `0`.

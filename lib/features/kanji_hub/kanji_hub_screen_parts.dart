@@ -1097,7 +1097,10 @@ class _KanjiGridPanelState extends ConsumerState<_KanjiGridPanel> {
                     future: widget.kanjiFuture,
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(child: CircularProgressIndicator());
+                        return _KanjiGridLoading(
+                          language: widget.language,
+                          levelLabel: widget.selectedLevel.shortLabel,
+                        );
                       }
                       if (snapshot.hasError) {
                         return Center(
@@ -1438,6 +1441,69 @@ class _FilterPill extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _KanjiGridLoading extends StatelessWidget {
+  const _KanjiGridLoading({required this.language, required this.levelLabel});
+
+  final AppLanguage language;
+  final String levelLabel;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Center(
+      child: AppSectionCard(
+        key: const ValueKey('kanji_grid_loading'),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              width: 22,
+              height: 22,
+              child: CircularProgressIndicator(strokeWidth: 2.4),
+            ),
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    switch (language) {
+                      AppLanguage.en => 'Preparing $levelLabel kanji grid',
+                      AppLanguage.vi => 'Đang chuẩn bị lưới kanji $levelLabel',
+                      AppLanguage.ja => '$levelLabel 漢字グリッドを準備中',
+                    },
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: palette.ink,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.xs),
+                  Text(
+                    switch (language) {
+                      AppLanguage.en =>
+                        'JpStudy is loading first-run content. Level tabs, writing practice, and Hán-Việt rules stay visible while the grid is prepared.',
+                      AppLanguage.vi =>
+                        'JpStudy đang nạp dữ liệu lần đầu. Bạn vẫn có thể chọn cấp, mở luyện viết hoặc tra quy tắc Hán-Việt trong lúc chờ.',
+                      AppLanguage.ja =>
+                        '初回データを読み込んでいます。準備中もレベル選択や書く練習はそのまま使えます。',
+                    },
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: palette.ink.withValues(alpha: 0.68),
+                      fontWeight: FontWeight.w600,
+                      height: 1.45,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

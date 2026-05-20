@@ -70,9 +70,12 @@ class GrammarScreen extends ConsumerWidget {
               ghostCount: ghostCount,
             ),
           ),
-          loading: () => const _GrammarAsyncState(
-            icon: Icons.auto_stories_rounded,
-            child: CircularProgressIndicator(),
+          loading: () => AppPageShell(
+            topPadding: AppSpacing.sm,
+            child: _GrammarLoadingFallback(
+              language: language,
+              levelLabel: levelLabel,
+            ),
           ),
           error: (err, _) => _GrammarAsyncState(
             icon: Icons.error_outline_rounded,
@@ -810,6 +813,67 @@ class _EmptyGrammarSearch extends StatelessWidget {
           color: palette.ink.withValues(alpha: 0.72),
           fontWeight: FontWeight.w700,
         ),
+      ),
+    );
+  }
+}
+
+class _GrammarLoadingFallback extends StatelessWidget {
+  const _GrammarLoadingFallback({
+    required this.language,
+    required this.levelLabel,
+  });
+
+  final AppLanguage language;
+  final String levelLabel;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return AppSectionCard(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            width: 22,
+            height: 22,
+            child: CircularProgressIndicator(strokeWidth: 2.4),
+          ),
+          const SizedBox(width: AppSpacing.md),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  _tr(
+                    language,
+                    en: 'Preparing $levelLabel grammar bank',
+                    vi: 'Đang chuẩn bị kho ngữ pháp $levelLabel',
+                    ja: '$levelLabel 文法バンクを準備中',
+                  ),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: palette.ink,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const SizedBox(height: AppSpacing.xs),
+                Text(
+                  _tr(
+                    language,
+                    en: 'JpStudy is loading first-run content. The grammar list, examples, and practice entry points will appear here instead of leaving this route blank.',
+                    vi: 'JpStudy đang nạp dữ liệu lần đầu. Kho ngữ pháp, ví dụ và lối vào bài luyện sẽ hiện tại đây thay vì để màn này trống.',
+                    ja: '初回データを読み込んでいます。文法一覧・例文・練習入口は、この画面にそのまま表示されます。',
+                  ),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: palette.ink.withValues(alpha: 0.68),
+                    fontWeight: FontWeight.w600,
+                    height: 1.45,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

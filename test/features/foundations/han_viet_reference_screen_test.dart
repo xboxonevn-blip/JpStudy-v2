@@ -132,6 +132,65 @@ const _testRuleSetV2 = HanVietRuleSetV2(
   ],
 );
 
+const _personalizedRuleSetV2 = HanVietRuleSetV2(
+  rules: [
+    HanVietRuleV2(
+      ruleId: 'rule_initial_h_k_gi_c_qu_to_k',
+      legacyId: 'initial-c-k-kh-gi-h-qu-to-k',
+      section: '1',
+      category: 'initial',
+      title: 'Âm đầu là H/K/Gi/C/Qu',
+      consonants: ['H', 'K', 'Gi', 'C', 'Qu'],
+      targetRow: 'K/G',
+      targetKana: ['か', 'き', 'く', 'け', 'こ', 'が'],
+      percentage: 90,
+      explanation:
+          "Phụ âm đầu Hán-Việt H/K/Gi/C/Qu thường chuyển sang hàng K/G trong On'yomi.",
+      examples: [
+        HanVietRuleExampleV2(
+          hanViet: 'Học',
+          kanji: '学',
+          kanjiId: 1,
+          assetKanjiId: 'n5_l01_k008',
+          level: 'N5',
+          onyomi: 'がく',
+          romaji: 'gaku',
+          compound: '学校',
+          compoundKana: 'がっこう',
+          compoundMeaning: 'trường học',
+        ),
+      ],
+      practice: HanVietRulePractice(
+        count: 2,
+        questionTemplate: 'Âm Hán-Việt {hanViet} ({kanji}) -> On\'yomi nào?',
+        status: 'ready',
+        items: [
+          HanVietRulePracticeItem(
+            itemId: 'rule_initial_h_k_gi_c_qu_to_k_学',
+            kanji: '学',
+            kanjiId: 1,
+            assetKanjiId: 'n5_l01_k008',
+            hanViet: 'Học',
+            correct: 'がく',
+            options: ['がく', 'きゅう', 'とう', 'りょう'],
+            explanation: 'Học bắt đầu bằng H, thường về hàng K/G.',
+          ),
+          HanVietRulePracticeItem(
+            itemId: 'rule_initial_h_k_gi_c_qu_to_k_旧',
+            kanji: '旧',
+            kanjiId: 2,
+            assetKanjiId: 'n3_l01_k001',
+            hanViet: 'Cựu',
+            correct: 'きゅう',
+            options: ['きゅう', 'がく', 'とう', 'りょう'],
+            explanation: 'Cựu bắt đầu bằng C, thường về hàng K/G.',
+          ),
+        ],
+      ),
+    ),
+  ],
+);
+
 Future<void> _pumpReference(
   WidgetTester tester,
   AppLanguage language,
@@ -293,9 +352,7 @@ void main() {
     expect(find.text('Đã hiểu rule'), findsOneWidget);
   });
 
-  testWidgets('passing v2 practice records rule and kanji SRS', (
-    tester,
-  ) async {
+  testWidgets('passing v2 practice records rule and kanji SRS', (tester) async {
     final db = AppDatabase(executor: NativeDatabase.memory());
     addTearDown(db.close);
 
@@ -318,7 +375,9 @@ void main() {
 
     await tester.tap(find.text('がく'));
     await tester.pumpAndSettle();
-    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 50)),
+    );
 
     final ruleState = await db.hanVietRuleSrsDao.getSrsState(
       'rule_initial_h_k_gi_c_qu_to_k',
@@ -329,5 +388,42 @@ void main() {
     expect(ruleState!.lastConfidence, 3);
     expect(kanjiState, isNotNull);
     expect(kanjiState!.lastConfidence, 3);
+  });
+
+  testWidgets('v2 practice prioritizes kanji already active in SRS', (
+    tester,
+  ) async {
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    addTearDown(db.close);
+    await db.kanjiSrsDao.initializeSrsState(2);
+
+    await tester.pumpWidget(
+      ProviderScope(
+        key: UniqueKey(),
+        overrides: [
+          appLanguageProvider.overrideWith(
+            (ref) => AppLanguageController.test(AppLanguage.vi),
+          ),
+          databaseProvider.overrideWithValue(db),
+          hanVietRulesProvider.overrideWith((ref) async => _testRuleSet),
+          hanVietRulesV2Provider.overrideWith(
+            (ref) async => _personalizedRuleSetV2,
+          ),
+        ],
+        child: const MaterialApp(home: HanVietReferenceScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 50));
+
+    final dueQuestion = find.text("Âm Hán-Việt Cựu (旧) -> On'yomi nào?");
+    final newQuestion = find.text("Âm Hán-Việt Học (学) -> On'yomi nào?");
+
+    expect(dueQuestion, findsOneWidget);
+    expect(newQuestion, findsOneWidget);
+    expect(
+      tester.getTopLeft(dueQuestion).dy,
+      lessThan(tester.getTopLeft(newQuestion).dy),
+    );
   });
 }

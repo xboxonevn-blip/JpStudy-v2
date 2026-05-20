@@ -52,6 +52,8 @@ class _HanVietReferenceScreenState
   final SearchController _searchController = SearchController();
   String _query = '';
   _HanVietCategoryFilter _categoryFilter = _HanVietCategoryFilter.all;
+  String? _practicePriorityKey;
+  Future<_HanVietPracticePriority>? _practicePriorityFuture;
 
   @override
   void dispose() {
@@ -115,31 +117,45 @@ class _HanVietReferenceScreenState
 
   Widget _buildV2List(HanVietRuleSetV2 ruleSet, AppLanguage language) {
     final filtered = _filterRulesV2(ruleSet.rules, _query);
+    final practiceKanjiIds = {
+      for (final rule in filtered)
+        for (final item in rule.practice.items) item.kanjiId,
+    }.toList(growable: false);
     return DecoratedBox(
       decoration: const BoxDecoration(color: Color(0xFFF4FAFF)),
-      child: ListView(
-        padding: const EdgeInsets.all(AppSpacing.md),
-        children: [
-          _HanVietSearchField(
-            controller: _searchController,
-            hintText: language.hanVietRulesHint,
-            onChanged: (value) => setState(() => _query = value),
-          ),
-          const SizedBox(height: AppSpacing.md),
-          SizedBox.shrink(
-            key: ValueKey('han_viet_rule_list_count_${filtered.length}'),
-          ),
-          for (final rule in filtered)
-            _HanVietRulePracticeCard(
-              rule: rule,
-              language: language,
-              answers: _practiceAnswers,
-              onAnswered: (item, answer) {
-                _answerPracticeItem(item, answer);
-                unawaited(_markRuleIfPassed(rule));
-              },
-            ),
-        ],
+      child: FutureBuilder<_HanVietPracticePriority>(
+        future: _priorityFutureFor(practiceKanjiIds),
+        builder: (context, snapshot) {
+          final priority = snapshot.data ?? _HanVietPracticePriority.empty;
+          return ListView(
+            padding: const EdgeInsets.all(AppSpacing.md),
+            children: [
+              _HanVietSearchField(
+                controller: _searchController,
+                hintText: language.hanVietRulesHint,
+                onChanged: (value) => setState(() => _query = value),
+              ),
+              const SizedBox(height: AppSpacing.md),
+              SizedBox.shrink(
+                key: ValueKey('han_viet_rule_list_count_${filtered.length}'),
+              ),
+              for (final rule in filtered)
+                _HanVietRulePracticeCard(
+                  rule: rule,
+                  language: language,
+                  answers: _practiceAnswers,
+                  items: _prioritizePracticeItems(
+                    rule.practice.items,
+                    priority,
+                  ),
+                  onAnswered: (item, answer) {
+                    _answerPracticeItem(item, answer);
+                    unawaited(_markRuleIfPassed(rule));
+                  },
+                ),
+            ],
+          );
+        },
       ),
     );
   }
@@ -160,10 +176,7 @@ class _HanVietReferenceScreenState
         .toList(growable: false);
   }
 
-  List<HanVietRuleV2> _filterRulesV2(
-    List<HanVietRuleV2> rules,
-    String query,
-  ) {
+  List<HanVietRuleV2> _filterRulesV2(List<HanVietRuleV2> rules, String query) {
     final normalized = query.trim().toLowerCase();
     return rules
         .where((rule) => _categoryFilter.matches(rule.category))
@@ -178,6 +191,48 @@ class _HanVietReferenceScreenState
 
   void _answerPracticeItem(HanVietRulePracticeItem item, String answer) {
     setState(() => _practiceAnswers[item.itemId] = answer);
+  }
+
+  Future<_HanVietPracticePriority> _priorityFutureFor(List<int> kanjiIds) {
+    final key = kanjiIds.join(',');
+    if (_practicePriorityKey == key && _practicePriorityFuture != null) {
+      return _practicePriorityFuture!;
+    }
+    _practicePriorityKey = key;
+    _practicePriorityFuture = _loadPracticePriority(kanjiIds);
+    return _practicePriorityFuture!;
+  }
+
+  Future<_HanVietPracticePriority> _loadPracticePriority(
+    List<int> kanjiIds,
+  ) async {
+    if (kanjiIds.isEmpty) return _HanVietPracticePriority.empty;
+    final states = await ref
+        .read(databaseProvider)
+        .kanjiSrsDao
+        .getStatesForIds(kanjiIds);
+    final now = DateTime.now();
+    return _HanVietPracticePriority(
+      activeKanjiIds: {for (final state in states) state.kanjiId},
+      dueKanjiIds: {
+        for (final state in states)
+          if (!state.nextReviewAt.isAfter(now)) state.kanjiId,
+      },
+    );
+  }
+
+  List<HanVietRulePracticeItem> _prioritizePracticeItems(
+    List<HanVietRulePracticeItem> items,
+    _HanVietPracticePriority priority,
+  ) {
+    final indexed = items.indexed.toList(growable: false);
+    indexed.sort((a, b) {
+      final rankA = priority.rank(a.$2.kanjiId);
+      final rankB = priority.rank(b.$2.kanjiId);
+      if (rankA != rankB) return rankA.compareTo(rankB);
+      return a.$1.compareTo(b.$1);
+    });
+    return indexed.map((entry) => entry.$2).toList(growable: false);
   }
 
   Future<void> _markRuleIfPassed(HanVietRuleV2 rule) async {
@@ -205,6 +260,27 @@ class _HanVietReferenceScreenState
     return (rule.sourceIds ?? const [])
         .map((id) => sources[id]?.domain ?? id)
         .toList(growable: false);
+  }
+}
+
+class _HanVietPracticePriority {
+  const _HanVietPracticePriority({
+    required this.activeKanjiIds,
+    required this.dueKanjiIds,
+  });
+
+  static const empty = _HanVietPracticePriority(
+    activeKanjiIds: {},
+    dueKanjiIds: {},
+  );
+
+  final Set<int> activeKanjiIds;
+  final Set<int> dueKanjiIds;
+
+  int rank(int kanjiId) {
+    if (dueKanjiIds.contains(kanjiId)) return 0;
+    if (activeKanjiIds.contains(kanjiId)) return 1;
+    return 2;
   }
 }
 
@@ -239,21 +315,23 @@ class _HanVietRulePracticeCard extends StatelessWidget {
     required this.rule,
     required this.language,
     required this.answers,
+    required this.items,
     required this.onAnswered,
   });
 
   final HanVietRuleV2 rule;
   final AppLanguage language;
   final Map<String, String> answers;
+  final List<HanVietRulePracticeItem> items;
   final void Function(HanVietRulePracticeItem item, String answer) onAnswered;
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final correctCount = rule.practice.items
+    final correctCount = items
         .where((item) => answers[item.itemId] == item.correct)
         .length;
-    final threshold = (rule.practice.items.length * 0.8).ceil().clamp(1, 5);
+    final threshold = (items.length * 0.8).ceil().clamp(1, 5);
     final understood = correctCount >= threshold;
     return Card(
       key: ValueKey('han_viet_rule_card_${rule.ruleId}'),
@@ -319,7 +397,7 @@ class _HanVietRulePracticeCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: AppSpacing.sm),
-            for (final item in rule.practice.items)
+            for (final item in items)
               _HanVietPracticeQuestion(
                 item: item,
                 template: rule.practice.questionTemplate,

@@ -1,5 +1,16 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-028 Personalized Hán-Việt Practice Closeout
+
+- Finished the remaining QA-A-028 personalized sampling slice: `/kanji/han-viet` now loads SRS state for visible practice kanji and orders due kanji first, then active kanji, then untouched kanji in original asset order.
+- Added a regression proving an already-active/due kanji practice item (`旧`) appears before a new item (`学`) on the v2 rule card.
+- Cached the SRS-priority future per visible kanji-id set so the live screen does not create a new DB future on every rebuild.
+- Verified locally: targeted RED/GREEN personalized test, full Hán-Việt reference screen suite `6/6`, `flutter analyze lib test`, UI string guard `0`, `git diff --check`, and full `flutter test --concurrency=1` passed `2415/2415`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: fresh VI/N5 `/kanji/han-viet` rendered the v2 rule card, examples, and MC options; clicking an answer produced inline feedback on the same card. `main.dart.js` returned `200/no-cache`; unexpected console warnings/errors and unexpected failed requests were `0` after filtering known headless App Check/reCAPTCHA/WebGL noise.
+- Live artifact: `output/playwright/live-qaa028-hanviet-personalized-proof.json` plus screenshots `output/playwright/live-qaa028-hanviet-personalized-initial.png` and `output/playwright/live-qaa028-hanviet-personalized-answered.png`.
+- Next queue: QA-A-029 Kanji relationship graph view Phase 0 design/audit.
+
 ## 2026-05-20 QA-A-028 Phase 3 Detail + Review Interlinks
 
 - Added a v2 Hán-Việt rule matcher for kanji detail: exact example/practice kanji wins, then Hán-Việt initial + On-yomi target-kana heuristic.

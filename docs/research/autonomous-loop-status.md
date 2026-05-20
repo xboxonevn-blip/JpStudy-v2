@@ -1128,3 +1128,12 @@
 - Rendered 3 sample pages per PDF at 150 DPI into `tmp/kanji_ebook_phase0_samples/` and ran Tesseract `vie+jpn+eng` baseline OCR into `tmp/kanji_ebook_phase0_ocr/`.
 - Sample finding: N5/N3/N2 use full large-card entries with Hán-Việt, meaning, on/kun readings, vocab examples, and writing hints; N4/N1 use compact writing-grid rows with usable text layer for Hán-Việt/meaning/writing mnemonics but no full example/readings block in sampled pages.
 - Created `docs/research/canonical/extraction-plan-2026-05-20.md` with schema, quirks, estimated entry counts, batch plan, and owner approval gate before full extraction.
+
+## 2026-05-20 QA-A-027 Autonomous Extraction WIP Blocker
+
+- Owner removed the approval gate. Ran Phase 1 candidate extraction from local PDFs only using `tool/research/extract_canonical_kanji_ebooks.js`; added tests in `test/tool/research/canonical_kanji_ebook_extractor_test.js`.
+- Generated candidate canonical files: N5 `102`, N4 `172`, N3 `335`, N2 `489`, N1 `762`.
+- Improved extraction during the run: large-card PDFs now OCR 3 cropped cards per page; missing Hán-Việt/readings/strokes are supplemented from local KANJIDIC2 and existing app source-verified rows with explicit field sources.
+- Blocker: validation found `284` cross-level duplicate characters, and N4/N1 writing-grid PDFs sometimes expose mnemonic components instead of the visual target kanji in the text layer. Example class: heading `DẬU` can expose `一`/`西` while the visual target is `酉`.
+- Decision: commit candidate canonical WIP and prominent blocker; do not run QA-A-026 app data MOVE/DEDUP/MISSING against these candidates yet because that would rewrite kanji levels from ambiguous source data.
+- Added the new owner QA-A-029 Kanji relationship graph P1 row to backlog. Next unblocked queue item is QA-A-028 design/implementation, then QA-A-029, unless a stronger QA-A-027 extraction path becomes available.

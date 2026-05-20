@@ -2,7 +2,7 @@
 
 Ticket: QA-A-027
 
-Status: Phase 0 sample/audit only. No kanji app data has been changed. Do not start full extraction or rewrite `assets/data/content/kanji/**` until owner approves this plan.
+Status: autonomous mode update. Phase 0 sample/audit was committed first, then Phase 1 candidate extraction ran without owner gate per the overnight instruction. No kanji app data has been rewritten yet.
 
 ## Source Boundary
 
@@ -167,7 +167,41 @@ The final extraction must count actual entries after parsing; page headers/foote
    - Guard cross-level duplicates, unless owner explicitly marks a duplicate as intentional.
    - Compare with current app kanji assets to prepare QA-A-026 MOVE/DEDUP/MISSING/EXTRA.
 
-## Approval Questions For Owner
+## Autonomous Update
+
+Phase 1 candidate extraction generated:
+
+| Level | Candidate file | Entries |
+| --- | --- | ---: |
+| N5 | `docs/research/canonical/kanji-n5.md` | 102 |
+| N4 | `docs/research/canonical/kanji-n4.md` | 172 |
+| N3 | `docs/research/canonical/kanji-n3.md` | 335 |
+| N2 | `docs/research/canonical/kanji-n2.md` | 489 |
+| N1 | `docs/research/canonical/kanji-n1.md` | 762 |
+
+Validation found a real blocker before using these files as the QA-A-026 app rewrite source:
+
+- Cross-level duplicates: 284 unique characters appear in more than one candidate level.
+- N4/N1 writing-grid PDFs have a usable text layer for headings/meanings, but some target kanji are vector strokes while the text layer exposes mnemonic components instead. Example: an N1 row headed `DẬU` can expose `一`/`西` from the mnemonic while the visual target is `酉`.
+- N5/N3/N2 card OCR is candidate-grade. It recovers level membership and many examples, but readings/examples contain OCR noise and need validation before source-of-truth ingestion.
+
+Result: commit these as candidate canonical/WIP only; do not apply QA-A-026 MOVE/DEDUP/MISSING to app JSON until the blocker is resolved with a more reliable extraction method.
+
+## DECISIONS MADE
+
+- Used Poppler local rendering and Tesseract local OCR only; no banned websites were accessed.
+- Switched large-card PDFs from full-page OCR to 3-card page crops to reduce card merging.
+- Supplemented missing readings/strokes/Hán-Việt from local KANJIDIC2 and existing app source-verified rows, explicitly marking field sources.
+- Added open-gaps per entry instead of silently treating noisy OCR as approved content.
+- Stopped before rewriting app kanji data because canonical candidates are not clean enough for destructive level changes.
+
+## OPEN_QUESTIONS
+
+- Whether owner wants the candidate ebook files kept as a review artifact or replaced by a stronger OCR/vision pipeline before QA-A-026.
+- Whether duplicated characters in the source PDFs are intentional teaching repeats, worksheet primitives, or extraction errors.
+- Whether N4/N1 writing-grid ebooks are intended as JLPT canonical level lists or as writing-practice sheets containing lower-level/component kanji.
+
+## Former Approval Questions
 
 1. Approve using ebook fields as source of truth for `level`, `hanViet`, `meaningVi`, and `writingHint`.
 2. Approve supplementing missing readings/examples from existing source-verified app data, KANJIDIC2, and app vocab when a local ebook layout does not contain those fields.

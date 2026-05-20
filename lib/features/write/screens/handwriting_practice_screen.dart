@@ -1601,9 +1601,15 @@ class _HandwritingPracticeScreenState
         return english.isNotEmpty ? english : target.meaning;
       case AppLanguage.ja:
         if (japanese.isNotEmpty) return japanese;
-        return english.isNotEmpty ? english : target.meaning;
+        return english.isNotEmpty ? english : _meaningUnavailable(language);
     }
   }
+
+  String _meaningUnavailable(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Meaning not available',
+    AppLanguage.vi => 'Chưa có nghĩa',
+    AppLanguage.ja => '意味未設定',
+  };
 
   Future<void> _commitReviewIfNeeded() async {
     if (_hasCommitted || _evaluation == null || _targets.isEmpty) {

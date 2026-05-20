@@ -75,19 +75,14 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
     }
   }
 
-  String _romajiLabel(JlptMockSection section) {
-    switch (section.id) {
-      case 'vocab':
-        return 'Goi';
-      case 'grammar':
-        return 'Bunpo';
-      case 'kanji':
-        return 'Kanji';
-      case 'reading':
-        return 'Dokkai';
-      default:
-        return section.title;
-    }
+  String _sectionBadgeLabel(AppLanguage language, JlptMockSection section) {
+    return _areaLabel(language, _sectionArea(section));
+  }
+
+  String _sectionHeaderLabel(AppLanguage language, JlptMockSection section) {
+    final badge = _sectionBadgeLabel(language, section);
+    final title = _sectionTitle(language, section);
+    return badge == title ? title : '$badge • $title';
   }
 
   JlptSkillArea _sectionArea(JlptMockSection section) {
@@ -526,8 +521,8 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
             eyebrow: _tr(
               language,
               'MOCK PRO • JLPT FLOW',
-              'MOCK PRO • LUỒNG THI JLPT',
-              'MOCK PRO • JLPTフロー',
+              'THI THỬ • LUỒNG THI JLPT',
+              'JLPT模試 • フロー',
             ),
             title: _title(language),
             subtitle: _intro(language),
@@ -671,7 +666,7 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
                       SizedBox(
                         width: width,
                         child: _SectionPreviewCard(
-                          eyebrow: _romajiLabel(section),
+                          eyebrow: _sectionBadgeLabel(language, section),
                           title: _sectionTitle(language, section),
                           icon: _sectionIcon(_sectionArea(section)),
                           meta:
@@ -857,8 +852,8 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
             eyebrow: _tr(
               language,
               'RESULT • JLPT MOCK PRO',
-              'KẾT QUẢ • JLPT MOCK PRO',
-              '結果 • JLPT MOCK PRO',
+              'KẾT QUẢ • THI THỬ JLPT',
+              '結果 • JLPT模試',
             ),
             title: _resultTitle(language),
             subtitle: _resultSummary(language, overall, pass, elapsed),
@@ -912,7 +907,10 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
                               SizedBox(
                                 width: width,
                                 child: _SectionResultCard(
-                                  eyebrow: _romajiLabel(section),
+                                  eyebrow: _sectionBadgeLabel(
+                                    language,
+                                    section,
+                                  ),
                                   title: _sectionTitle(language, section),
                                   icon: _sectionIcon(_sectionArea(section)),
                                   summary:
@@ -1034,8 +1032,7 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
             children: [
               _MockHero(
-                title:
-                    '${_romajiLabel(_currentSection)} • ${_sectionTitle(language, _currentSection)}',
+                title: _sectionHeaderLabel(language, _currentSection),
                 subtitle:
                     '${_sectionIndex + 1}/${_sections.length} • ${_questionIndex + 1}/${_currentSection.questions.length}',
                 icon: Icons.timer_outlined,
@@ -1079,7 +1076,7 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
                       children: _sections.asMap().entries.map((entry) {
                         final active = entry.key == _sectionIndex;
                         return _MiniSectionChip(
-                          label: _romajiLabel(entry.value),
+                          label: _sectionBadgeLabel(language, entry.value),
                           active: active,
                         );
                       }).toList(),
@@ -1144,8 +1141,7 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
     int answeredCount,
   ) {
     final palette = context.appPalette;
-    final sectionLabel =
-        '${_romajiLabel(_currentSection)} • ${_sectionTitle(language, _currentSection)}';
+    final sectionLabel = _sectionHeaderLabel(language, _currentSection);
     final questionLabel =
         '${_sectionIndex + 1}/${_sections.length} • ${_questionIndex + 1}/${_currentSection.questions.length}';
     return Padding(

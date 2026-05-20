@@ -165,6 +165,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
   }
 
   Widget _buildBack() {
+    final meaning = widget.item.displayMeaning(widget.language).trim();
     return _buildCardBase(
       color: context.appPalette.primary.withValues(alpha: 0.08),
       child: Column(
@@ -181,9 +182,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
             const SizedBox(height: 16),
           ],
           Text(
-            widget.language == AppLanguage.en
-                ? (widget.item.meaningEn ?? widget.item.meaning)
-                : widget.item.meaning,
+            meaning.isNotEmpty ? meaning : _meaningUnavailable(widget.language),
             style: Theme.of(context).textTheme.titleLarge,
             textAlign: TextAlign.center,
           ),
@@ -192,3 +191,9 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
     );
   }
 }
+
+String _meaningUnavailable(AppLanguage language) => switch (language) {
+  AppLanguage.en => 'Meaning not available',
+  AppLanguage.vi => 'Chưa có nghĩa',
+  AppLanguage.ja => '意味未設定',
+};

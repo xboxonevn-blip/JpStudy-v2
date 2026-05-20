@@ -110,23 +110,21 @@ void main() {
     },
   );
 
-  testWidgets('JA locale always uses translation field directly', (
+  testWidgets('JA locale uses English-safe fallback instead of raw VI translation', (
     tester,
   ) async {
     await tester.pumpWidget(
       _buildWidget(
         language: AppLanguage.ja,
-        translation: '食べてもいいですか？',
-        translationVi: 'Không dùng cái này.',
-        translationEn: 'Not this either.',
+        translation: 'Có được ăn không?',
+        translationVi: 'Có được ăn không?',
+        translationEn: 'Is it okay to eat?',
       ),
     );
     await _pump(tester);
 
-    // JA: always shows translation, ignores the Vi/En overrides
-    expect(find.text('食べてもいいですか？'), findsOneWidget);
-    expect(find.text('Không dùng cái này.'), findsNothing);
-    expect(find.text('Not this either.'), findsNothing);
+    expect(find.text('Is it okay to eat?'), findsOneWidget);
+    expect(find.text('Có được ăn không?'), findsNothing);
   });
 
   testWidgets(

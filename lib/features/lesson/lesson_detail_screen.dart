@@ -15,6 +15,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/utils/japanese_text.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/models/lesson_term_display.dart';
 import 'package:jpstudy/data/models/mistake_context.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/core/services/fsrs_service.dart';
@@ -156,7 +157,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final srsState = srsStateAsync.value;
     final isFlipped =
         currentTerm != null && _flippedTermIds.contains(currentTerm.id);
-    final canFlip = currentTerm?.definition.trim().isNotEmpty == true;
+    final canFlip =
+        currentTerm?.displayDefinition(language).trim().isNotEmpty == true;
     final onFlip = canFlip ? () => _toggleFlip(currentTerm) : null;
 
     // _maybeAutoSpeak removed
@@ -504,15 +506,15 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       final prompt = term.reading.isNotEmpty
           ? '${term.term} • ${term.reading}'
           : term.term;
-      final correctAnswer = language == AppLanguage.en
-          ? (term.definitionEn.isNotEmpty ? term.definitionEn : term.definition)
-          : term.definition;
+      final localizedAnswer = term.displayDefinition(language).trim();
       await mistakeRepo.addMistake(
         type: 'vocab',
         itemId: term.id,
         context: MistakeContext(
           prompt: prompt,
-          correctAnswer: correctAnswer,
+          correctAnswer: localizedAnswer.isNotEmpty
+              ? localizedAnswer
+              : term.term,
           userAnswer: quality == 1 ? 'again' : 'hard',
           source: 'lesson_review',
           extra: {'confidence': quality},
@@ -840,9 +842,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     final sampleCount = terms.length < 5 ? terms.length : 5;
     for (var i = 0; i < sampleCount; i++) {
       final term = terms[i];
-      final def = language == AppLanguage.en && term.definitionEn.isNotEmpty
-          ? term.definitionEn
-          : term.definition;
+      final def = term.displayDefinition(language);
       buffer.writeln('${i + 1}. ${term.term}\t${term.reading}\t$def');
     }
     final reportText = buffer.toString();

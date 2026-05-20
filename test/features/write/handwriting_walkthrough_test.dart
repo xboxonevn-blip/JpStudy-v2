@@ -177,6 +177,60 @@ void main() {
     expect(find.text('lửa', skipOffstage: false), findsNothing);
   });
 
+  testWidgets('JA handwriting uses neutral meaning when no JA/EN exists', (
+    tester,
+  ) async {
+    KanjiStrokeTemplateService.setDebugTemplateOverrides({
+      '\u706B': const KanjiStrokeTemplate(
+        character: '\u706B',
+        quality: 'manual',
+        strokes: [StrokeTemplate(start: Point(0.1, 0.1), end: Point(0.9, 0.9))],
+      ),
+    });
+    addTearDown(() {
+      KanjiStrokeTemplateService.setDebugTemplateOverrides(null);
+    });
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    final contentDb = ContentDatabase(executor: NativeDatabase.memory());
+    final repo = LessonRepository(db, contentDb);
+    addTearDown(() async {
+      await contentDb.close();
+      await db.close();
+    });
+    const item = KanjiItem(
+      id: 1,
+      lessonId: 1,
+      character: '\u706B',
+      strokeCount: 4,
+      meaning: 'lửa',
+      examples: [],
+      jlptLevel: 'N5',
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          appLanguageProvider.overrideWith(
+            (ref) => AppLanguageController.test(AppLanguage.ja),
+          ),
+          databaseProvider.overrideWithValue(db),
+          lessonRepositoryProvider.overrideWithValue(repo),
+        ],
+        child: const MaterialApp(
+          home: HandwritingPracticeScreen(
+            lessonTitle: 'Lesson 1',
+            items: [item],
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+
+    expect(find.text('意味未設定', skipOffstage: false), findsOneWidget);
+    expect(find.text('lửa', skipOffstage: false), findsNothing);
+  });
+
   testWidgets(
     'Handwriting walkthrough updates SRS and creates mistake on wrong answer',
     (tester) async {

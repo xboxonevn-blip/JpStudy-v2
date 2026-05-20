@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:drift/native.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/db/content_database.dart';
+import 'package:jpstudy/data/db/app_database.dart' as app_db;
+import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/practice/screens/recall_sprint_screen.dart';
 
 // ── Fixtures ─────────────────────────────────────────────────
@@ -35,9 +40,44 @@ Widget _buildScreen({List<SprintQuestion> questions = const [_q1, _q2, _q3]}) {
   );
 }
 
+class _DueTermsRepository extends LessonRepository {
+  _DueTermsRepository({
+    required AppDatabase appDb,
+    required ContentDatabase contentDb,
+    required this.dueTerms,
+  }) : super(appDb, contentDb);
+
+  final List<app_db.UserLessonTermData> dueTerms;
+
+  @override
+  Future<List<app_db.UserLessonTermData>> fetchAllDueTerms() async => dueTerms;
+}
+
+app_db.UserLessonTermData _term(
+  int id,
+  String term,
+  String definition,
+  String definitionEn,
+) => app_db.UserLessonTermData(
+  id: id,
+  lessonId: 1,
+  term: term,
+  reading: '',
+  definition: definition,
+  definitionEn: definitionEn,
+  mnemonicVi: '',
+  mnemonicEn: '',
+  kanjiMeaning: '',
+  isLearned: false,
+  isStarred: false,
+  orderIndex: id,
+);
+
 // ── Tests ────────────────────────────────────────────────────
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   group('RecallSprintScreen — empty state', () {
     testWidgets('shows not-enough-terms message when questions empty', (
       tester,
@@ -70,6 +110,50 @@ void main() {
   });
 
   group('RecallSprintScreen — question flow', () {
+    testWidgets('JA mode uses English fallback options, not Vietnamese', (
+      tester,
+    ) async {
+      final appDb = AppDatabase(executor: NativeDatabase.memory());
+      final contentDb = ContentDatabase(executor: NativeDatabase.memory());
+      addTearDown(appDb.close);
+      addTearDown(contentDb.close);
+      final repo = _DueTermsRepository(
+        appDb: appDb,
+        contentDb: contentDb,
+        dueTerms: [
+          _term(1, '愛', 'yêu', 'love'),
+          _term(2, '猫', 'mèo', 'cat'),
+          _term(3, '海', 'biển', 'sea'),
+          _term(4, '山', 'núi', 'mountain'),
+        ],
+      );
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            appLanguageProvider.overrideWith(
+              (ref) => AppLanguageController.test(AppLanguage.ja),
+            ),
+            lessonRepositoryProvider.overrideWithValue(repo),
+          ],
+          child: const MaterialApp(home: RecallSprintScreen()),
+        ),
+      );
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
+      await tester.tap(find.text('スプリント開始'));
+      await tester.pump();
+
+      expect(find.text('love'), findsOneWidget);
+      expect(find.text('cat'), findsOneWidget);
+      expect(find.text('sea'), findsOneWidget);
+      expect(find.text('mountain'), findsOneWidget);
+      expect(find.text('yêu'), findsNothing);
+      expect(find.text('mèo'), findsNothing);
+      expect(find.text('biển'), findsNothing);
+      expect(find.text('núi'), findsNothing);
+    });
+
     testWidgets('tapping Start shows first question', (tester) async {
       await tester.pumpWidget(_buildScreen());
       await tester.pump();

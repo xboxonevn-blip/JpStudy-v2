@@ -7,6 +7,7 @@ import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/models/lesson_term_display.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/practice/models/recall_sprint_strategy.dart';
@@ -32,12 +33,15 @@ class SprintQuestion {
 Future<List<SprintQuestion>> buildRecallSprintQuestions(
   LessonRepository repo, {
   RecallSprintArgs? args,
+  AppLanguage language = AppLanguage.vi,
 }) async {
   final preferredIds = args?.preferredTermIds.toSet() ?? const <int>{};
   final batchSize = args?.batchSize ?? _kBatchSize;
   final rng = Random();
 
-  final due = await repo.fetchAllDueTerms();
+  final due = (await repo.fetchAllDueTerms())
+      .where((term) => term.displayDefinition(language).trim().isNotEmpty)
+      .toList(growable: false);
   if (due.length < 4) return const [];
 
   final prioritized = <UserLessonTermData>[
@@ -59,8 +63,10 @@ Future<List<SprintQuestion>> buildRecallSprintQuestions(
         final choices = [q, ...distractors.take(3)]..shuffle(rng);
         return SprintQuestion(
           term: q.term,
-          correct: q.definition,
-          options: choices.map((t) => t.definition).toList(growable: false),
+          correct: q.displayDefinition(language).trim(),
+          options: choices
+              .map((t) => t.displayDefinition(language).trim())
+              .toList(growable: false),
         );
       })
       .toList(growable: false);
@@ -69,13 +75,15 @@ Future<List<SprintQuestion>> buildRecallSprintQuestions(
 final recallSprintQuestionsProvider =
     FutureProvider.autoDispose<List<SprintQuestion>>((ref) async {
       final repo = ref.read(lessonRepositoryProvider);
-      return buildRecallSprintQuestions(repo);
+      final language = ref.watch(appLanguageProvider);
+      return buildRecallSprintQuestions(repo, language: language);
     });
 
 final recallSprintQuestionsForArgsProvider = FutureProvider.autoDispose
     .family<List<SprintQuestion>, RecallSprintArgs>((ref, args) async {
       final repo = ref.read(lessonRepositoryProvider);
-      return buildRecallSprintQuestions(repo, args: args);
+      final language = ref.watch(appLanguageProvider);
+      return buildRecallSprintQuestions(repo, args: args, language: language);
     });
 
 // ---------------------------------------------------------------------------

@@ -6,6 +6,13 @@ Before any implementation, audit, QA, content, or live-proof task, read and
 follow `docs/agent-directives.md`. Directive D is mandatory: work connected,
 whole-flow, and learner-facing; do not verify only the field just edited.
 
+## Crawl/source ban
+
+Do not search, crawl, scrape, fetch, or browse `https://nhaikanji.com/` or
+`https://thocodehoctiengnhat.com/`. They use anti-crawl protection that can ban
+the owner's IP/account. Use only owner-provided local PDFs/files from those
+sources.
+
 ## Free web / cost-control reference
 
 Before changing hosting, Firebase usage, cloud sync, bundled content, or

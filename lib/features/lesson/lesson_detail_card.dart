@@ -205,12 +205,8 @@ class _CardContent extends StatelessWidget {
       );
     }
 
-    final showBack = isFlipped && resolvedTerm.definition.trim().isNotEmpty;
-    final hintMeaning = switch (language) {
-      AppLanguage.en => resolvedTerm.definitionEn,
-      AppLanguage.vi => resolvedTerm.definition,
-      AppLanguage.ja => resolvedTerm.definition,
-    };
+    final hintMeaning = resolvedTerm.displayDefinition(language);
+    final showBack = isFlipped && hintMeaning.trim().isNotEmpty;
     final frontHint = compactHint
         ? _compactHint(hintMeaning, resolvedTerm.id)
         : hintMeaning;

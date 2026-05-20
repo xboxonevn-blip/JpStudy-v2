@@ -1375,11 +1375,15 @@ class _KanjiTab extends StatelessWidget {
                                         fontWeight: FontWeight.w700,
                                       ),
                                 ),
-                              if (entry.meaningVi.isNotEmpty) ...[
+                              if (_hajimeteKanjiMeaning(
+                                entry,
+                                language,
+                              ).isNotEmpty) ...[
                                 const SizedBox(height: 4),
-                                Text(entry.meaningVi),
+                                Text(_hajimeteKanjiMeaning(entry, language)),
                               ],
-                              if (entry.meaningEn.isNotEmpty) ...[
+                              if (language == AppLanguage.vi &&
+                                  entry.meaningEn.isNotEmpty) ...[
                                 const SizedBox(height: 4),
                                 Text(
                                   entry.meaningEn,
@@ -1413,6 +1417,16 @@ class _KanjiTab extends StatelessWidget {
       ),
     );
   }
+}
+
+String _hajimeteKanjiMeaning(HajimeteKanjiEntry entry, AppLanguage language) {
+  final vi = entry.meaningVi.trim();
+  final en = entry.meaningEn.trim();
+  return switch (language) {
+    AppLanguage.vi => vi.isNotEmpty ? vi : en,
+    AppLanguage.en => en.isNotEmpty ? en : vi,
+    AppLanguage.ja => en,
+  };
 }
 
 class _KanjiContractCard extends StatelessWidget {

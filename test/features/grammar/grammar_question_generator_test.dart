@@ -367,6 +367,96 @@ void main() {
     );
 
     test(
+      'keeps Japanese grammar questions free of Vietnamese fallback when source JA is absent',
+      () {
+        const point1 = GrammarPoint(
+          id: 34,
+          lessonId: 20,
+          grammarPoint: '〜つもりだ',
+          titleEn: 'intend to',
+          meaning: 'Diễn tả dự định hoặc ý định của người nói.',
+          meaningEn: 'planned intention',
+          meaningVi: 'Diễn tả dự định hoặc ý định của người nói.',
+          connection: 'V辞書 / Vない + つもりだ',
+          connectionEn: 'V dictionary / Vない + つもりだ',
+          explanation: 'Diễn tả dự định hoặc ý định của người nói.',
+          explanationEn: 'Expresses the speaker\'s planned intention.',
+          explanationVi: 'Diễn tả dự định hoặc ý định của người nói.',
+          jlptLevel: 'N3',
+          isLearned: false,
+        );
+        const point2 = GrammarPoint(
+          id: 35,
+          lessonId: 20,
+          grammarPoint: '予定だ',
+          titleEn: 'be scheduled to',
+          meaning: 'dự kiến',
+          meaningEn: 'scheduled plan',
+          meaningVi: 'dự kiến',
+          connection: 'V辞書 / Nの + 予定だ',
+          connectionEn: 'V dictionary / Nの + 予定だ',
+          explanation: 'Nói về kế hoạch đã định.',
+          explanationEn: 'Describes a scheduled plan.',
+          explanationVi: 'Nói về kế hoạch đã định.',
+          jlptLevel: 'N3',
+          isLearned: false,
+        );
+        const point3 = GrammarPoint(
+          id: 36,
+          lessonId: 20,
+          grammarPoint: 'ことにする',
+          titleEn: 'decide to',
+          meaning: 'quyết định',
+          meaningEn: 'decide to do',
+          meaningVi: 'quyết định',
+          connection: 'V辞書 / Vない + ことにする',
+          connectionEn: 'V dictionary / Vない + ことにする',
+          explanation: 'Nói về quyết định của người nói.',
+          explanationEn: 'Describes a speaker decision.',
+          explanationVi: 'Nói về quyết định của người nói.',
+          jlptLevel: 'N3',
+          isLearned: false,
+        );
+
+        final questions = GrammarQuestionGenerator.generateQuestions(
+          const [
+            (
+              point: point1,
+              examples: [
+                GrammarExample(
+                  id: 34,
+                  grammarId: 34,
+                  japanese: '来年日本へ行くつもりです。',
+                  translation: 'Năm sau tôi dự định đi Nhật.',
+                  translationEn: 'I intend to go to Japan next year.',
+                  translationVi: 'Năm sau tôi dự định đi Nhật.',
+                ),
+              ],
+            ),
+          ],
+          allPoints: const [point1, point2, point3],
+          language: AppLanguage.ja,
+        );
+
+        expect(questions, isNotEmpty);
+
+        final renderedTexts = <String>[
+          for (final question in questions) question.question,
+          for (final question in questions) question.correctAnswer,
+          for (final question in questions) ...question.options,
+          for (final question in questions) question.explanation ?? '',
+          for (final question in questions) question.feedback ?? '',
+        ].join('\n');
+
+        expect(renderedTexts, isNot(contains('Diễn tả')));
+        expect(renderedTexts, isNot(contains('dự định')));
+        expect(renderedTexts, isNot(contains('Năm sau tôi')));
+        expect(renderedTexts, contains('planned intention'));
+        expect(renderedTexts, contains('I intend to go to Japan next year.'));
+      },
+    );
+
+    test(
       'skips cloze, context, replacement, and transformation drills for full exchange-style grammar prompts',
       () {
         const point1 = GrammarPoint(

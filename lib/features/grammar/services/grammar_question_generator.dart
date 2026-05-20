@@ -1518,9 +1518,13 @@ class GrammarQuestionGenerator {
           grammarPoint: point.grammarPoint,
         );
       case AppLanguage.ja:
-        return point.meaning.trim().isEmpty
-            ? point.grammarPoint
-            : point.meaning.trim();
+        return resolveEnglishGrammarMeaning(
+          meaningEn: point.meaningEn,
+          titleEn: point.titleEn,
+          connectionEn: point.connectionEn,
+          connection: point.connection,
+          grammarPoint: point.grammarPoint,
+        );
     }
   }
 
@@ -1583,7 +1587,11 @@ class GrammarQuestionGenerator {
           label: _localizedPatternLabel(point, language),
         );
       case AppLanguage.ja:
-        return point.explanation.trim();
+        return resolveEnglishGrammarExplanation(
+          explanationEn: point.explanationEn,
+          explanation: point.explanation,
+          label: _localizedPatternLabel(point, language),
+        );
     }
   }
 
@@ -1601,7 +1609,11 @@ class GrammarQuestionGenerator {
           translation: example.translation,
         );
       case AppLanguage.ja:
-        return example.translation.trim();
+        return resolveEnglishGrammarExampleTranslation(
+          japanese: example.japanese,
+          translationEn: example.translationEn,
+          translation: example.translation,
+        );
     }
   }
 

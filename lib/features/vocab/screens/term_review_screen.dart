@@ -5,6 +5,7 @@ import '../../../core/accessibility/reduced_motion.dart';
 import '../../../core/app_language.dart';
 import '../../../core/level_provider.dart';
 import '../../../core/language_provider.dart';
+import '../../../data/models/lesson_term_display.dart';
 import '../../../data/models/vocab_item.dart';
 import '../../../data/db/app_database.dart';
 import '../../../data/repositories/lesson_repository.dart';
@@ -620,15 +621,15 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen>
       final prompt = term.reading.isNotEmpty
           ? '${term.term} ? ${term.reading}'
           : term.term;
-      final correctAnswer = language == AppLanguage.en
-          ? (term.definitionEn.isNotEmpty ? term.definitionEn : term.definition)
-          : term.definition;
+      final localizedAnswer = term.displayDefinition(language).trim();
       await mistakeRepo.addMistake(
         type: 'vocab',
         itemId: term.id,
         context: MistakeContext(
           prompt: prompt,
-          correctAnswer: correctAnswer,
+          correctAnswer: localizedAnswer.isNotEmpty
+              ? localizedAnswer
+              : term.term,
           userAnswer: levelEnum.name,
           source: 'review',
           extra: {'confidence': levelEnum.name},

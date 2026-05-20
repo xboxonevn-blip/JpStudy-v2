@@ -934,6 +934,9 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
     if (language == AppLanguage.vi) {
       return fallback;
     }
+    if (language == AppLanguage.ja) {
+      return value.isNotEmpty ? value : '';
+    }
     return value.isNotEmpty ? value : fallback;
   }
 

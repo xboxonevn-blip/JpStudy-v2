@@ -28,6 +28,49 @@ String _tr(
   AppLanguage.ja => ja,
 };
 
+String _meaningUnavailable(AppLanguage language) => _tr(
+  language,
+  en: 'Meaning not available',
+  vi: 'Chưa có nghĩa',
+  ja: '意味未設定',
+);
+
+String _localizedVocabMeaning(VocabData vocab, AppLanguage language) {
+  final vi = vocab.meaning.trim();
+  final en = vocab.meaningEn?.trim() ?? '';
+  switch (language) {
+    case AppLanguage.vi:
+      return vi.isNotEmpty
+          ? vi
+          : (en.isNotEmpty ? en : _meaningUnavailable(language));
+    case AppLanguage.en:
+      return en.isNotEmpty
+          ? en
+          : (vi.isNotEmpty ? vi : _meaningUnavailable(language));
+    case AppLanguage.ja:
+      return en.isNotEmpty ? en : _meaningUnavailable(language);
+  }
+}
+
+String _localizedKanjiMeaning(KanjiData kanji, AppLanguage language) {
+  final vi = kanji.meaning.trim();
+  final en = kanji.meaningEn?.trim() ?? '';
+  final ja = kanji.meaningJa?.trim() ?? '';
+  switch (language) {
+    case AppLanguage.vi:
+      return vi.isNotEmpty
+          ? vi
+          : (en.isNotEmpty ? en : _meaningUnavailable(language));
+    case AppLanguage.en:
+      return en.isNotEmpty
+          ? en
+          : (vi.isNotEmpty ? vi : _meaningUnavailable(language));
+    case AppLanguage.ja:
+      if (ja.isNotEmpty) return ja;
+      return en.isNotEmpty ? en : _meaningUnavailable(language);
+  }
+}
+
 class VocabDetailScreen extends ConsumerWidget {
   const VocabDetailScreen({super.key, required this.vocabId});
 
@@ -211,17 +254,61 @@ class _HeroCard extends StatelessWidget {
 
   List<String> _parseTags(String? tags) {
     if (tags == null || tags.isEmpty) return const [];
-    // Tags may be comma-separated or JSON array
+    // Tags may be comma-separated or JSON array.
+    // Source/editorial tags are DB metadata, not learner-facing labels.
+    List<String> rawTags;
     if (tags.startsWith('[')) {
       try {
-        return (jsonDecode(tags) as List).cast<String>();
-      } catch (_) {}
+        rawTags = (jsonDecode(tags) as List).whereType<String>().toList(
+          growable: false,
+        );
+      } catch (_) {
+        rawTags = const [];
+      }
+    } else {
+      rawTags = tags
+          .split(',')
+          .map((t) => t.trim())
+          .where((t) => t.isNotEmpty)
+          .toList();
     }
-    return tags
-        .split(',')
-        .map((t) => t.trim())
-        .where((t) => t.isNotEmpty)
-        .toList();
+    return rawTags.where(_isLearnerFacingTag).toList(growable: false);
+  }
+
+  bool _isLearnerFacingTag(String tag) {
+    final normalized = tag.trim().toLowerCase();
+    if (normalized.isEmpty) return false;
+    if (RegExp(r'^(minna|hajimete|shinkanzen)_\d+$').hasMatch(normalized)) {
+      return false;
+    }
+    const blockedExact = {
+      'anki-import',
+      'jlpt-vocab',
+      'public-source',
+      'tanos',
+    };
+    if (blockedExact.contains(normalized)) return false;
+    const blockedFragments = [
+      'approved',
+      'codex',
+      'draft',
+      'editorial',
+      'human',
+      'import',
+      'jmdict',
+      'kanjidic',
+      'license',
+      'machine',
+      'public',
+      'review',
+      'source',
+      'unihan',
+      'verified',
+    ];
+    for (final fragment in blockedFragments) {
+      if (normalized.contains(fragment)) return false;
+    }
+    return true;
   }
 }
 
@@ -327,7 +414,8 @@ class _MeaningSection extends StatelessWidget {
               ),
             ),
           ],
-          if (vocab.kanjiMeaning != null &&
+          if (language == AppLanguage.vi &&
+              vocab.kanjiMeaning != null &&
               vocab.kanjiMeaning!.trim().isNotEmpty) ...[
             const SizedBox(height: 12),
             Container(
@@ -365,28 +453,17 @@ class _MeaningSection extends StatelessWidget {
   }
 
   String _primaryMeaning() {
-    switch (language) {
-      case AppLanguage.en:
-        return vocab.meaningEn?.trim().isNotEmpty == true
-            ? vocab.meaningEn!
-            : vocab.meaning;
-      case AppLanguage.vi:
-        return vocab.meaning;
-      case AppLanguage.ja:
-        return vocab.meaningEn?.trim().isNotEmpty == true
-            ? vocab.meaningEn!
-            : vocab.meaning;
-    }
+    return _localizedVocabMeaning(vocab, language);
   }
 
   String? _secondaryMeaning() {
     switch (language) {
       case AppLanguage.en:
-        return vocab.meaning; // Show Vietnamese as secondary
+        return null;
       case AppLanguage.vi:
         return vocab.meaningEn; // Show English as secondary
       case AppLanguage.ja:
-        return vocab.meaning; // Show Vietnamese as secondary
+        return null;
     }
   }
 }
@@ -554,14 +631,24 @@ class _MiniList extends StatelessWidget {
 
 List<String> _exampleLines(VocabData vocab, AppLanguage language) {
   final term = vocab.term;
-  final meaning = language == AppLanguage.en
-      ? (vocab.meaningEn ?? vocab.meaning)
-      : vocab.meaning;
-  return [
-    '$term を練習します。 — Luyện tập từ "$meaning".',
-    '毎日 $term を使います。 — Dùng "$meaning" mỗi ngày.',
-    '$term は${vocab.level}で大切です。 — "$meaning" là từ quan trọng ở ${vocab.level}.',
-  ];
+  final meaning = _localizedVocabMeaning(vocab, language);
+  return switch (language) {
+    AppLanguage.en => [
+      'Practice "$term" as "$meaning".',
+      'Use "$term" in a daily sentence.',
+      '$term is an important ${vocab.level} word.',
+    ],
+    AppLanguage.vi => [
+      '$term を練習します。 — Luyện tập từ "$meaning".',
+      '毎日 $term を使います。 — Dùng "$meaning" mỗi ngày.',
+      '$term là từ quan trọng ở ${vocab.level}.',
+    ],
+    AppLanguage.ja => [
+      '$term を練習します。',
+      '毎日 $term を使う文を作ります。',
+      '$term は${vocab.level}の重要語です。',
+    ],
+  };
 }
 
 List<String> _conjugationLines(
@@ -969,9 +1056,7 @@ class _KanjiRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final meaning = language == AppLanguage.en
-        ? (kanji.meaningEn ?? kanji.meaning)
-        : kanji.meaning;
+    final meaning = _localizedKanjiMeaning(kanji, language);
     final readings = <String>[];
     if (kanji.onyomi != null && kanji.onyomi!.isNotEmpty) {
       readings.add(kanji.onyomi!);
@@ -1101,9 +1186,7 @@ class _RelatedVocabSection extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           ...items.map((item) {
-            final meaning = language == AppLanguage.en
-                ? (item.meaningEn ?? item.meaning)
-                : item.meaning;
+            final meaning = _localizedVocabMeaning(item, language);
             final showRead = shouldShowReading(
               term: item.term,
               reading: item.reading,

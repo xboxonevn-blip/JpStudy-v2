@@ -44,7 +44,7 @@ class KanjiItem {
         return en != null && en.isNotEmpty ? en : vi;
       case AppLanguage.ja:
         if (ja != null && ja.isNotEmpty) return ja;
-        return en != null && en.isNotEmpty ? en : vi;
+        return en != null && en.isNotEmpty ? en : '';
     }
   }
 

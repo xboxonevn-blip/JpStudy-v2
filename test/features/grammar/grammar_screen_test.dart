@@ -345,6 +345,18 @@ void main() {
     expect(find.text('文法'), findsWidgets);
   });
 
+  testWidgets('JA locale rows use English-safe fallback subtitles', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      _buildScreen(language: AppLanguage.ja, points: [_stubPoint]),
+    );
+    await _pump(tester);
+
+    expect(find.text('is okay to do'), findsOneWidget);
+    expect(find.text('được phép làm gì'), findsNothing);
+  });
+
   testWidgets('grammar hub adapts across viewport matrix', (tester) async {
     const viewports = [
       Size(360, 800),

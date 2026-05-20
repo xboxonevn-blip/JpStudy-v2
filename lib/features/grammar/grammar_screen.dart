@@ -700,7 +700,13 @@ class _GrammarPointRow extends StatelessWidget {
         grammarPoint: point.grammarPoint,
       ),
       AppLanguage.vi => point.meaningVi ?? point.meaning,
-      AppLanguage.ja => point.meaning,
+      AppLanguage.ja => resolveEnglishGrammarMeaning(
+        meaningEn: point.meaningEn,
+        titleEn: point.titleEn,
+        connectionEn: point.connectionEn,
+        connection: point.connection,
+        grammarPoint: point.grammarPoint,
+      ),
     };
 
     return AppCompactRow(

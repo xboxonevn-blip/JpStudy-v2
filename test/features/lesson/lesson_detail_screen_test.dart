@@ -19,13 +19,14 @@ UserLessonTermData _term(
   String term,
   String definition, {
   String reading = '',
+  String? definitionEn,
 }) => UserLessonTermData(
   id: id,
   lessonId: 1,
   term: term,
   reading: reading,
   definition: definition,
-  definitionEn: definition,
+  definitionEn: definitionEn ?? definition,
   mnemonicVi: '',
   mnemonicEn: '',
   kanjiMeaning: '',
@@ -49,6 +50,7 @@ Widget buildScreen(
   List<UserLessonTermData> terms, {
   Future<List<UserLessonTermData>>? termsFuture,
   StudyLevel level = StudyLevel.n5,
+  AppLanguage language = AppLanguage.en,
   int lessonId = 1,
   String? expectedFallbackTitle,
 }) {
@@ -61,11 +63,12 @@ Widget buildScreen(
     lessonId,
   );
   final fallbackTitle =
-      expectedFallbackTitle ?? AppLanguage.en.lessonTitle(sourceLessonId);
+      expectedFallbackTitle ??
+      language.curriculumLessonTitle(level.shortLabel, sourceLessonId);
   return ProviderScope(
     overrides: [
       appLanguageProvider.overrideWith(
-        (ref) => AppLanguageController.test(AppLanguage.en),
+        (ref) => AppLanguageController.test(language),
       ),
       studyLevelProvider.overrideWith((ref) => level),
       lessonTitleProvider(
@@ -132,6 +135,38 @@ void main() {
     expect(find.text(AppLanguage.en.flashcardsAction), findsWidgets);
     expect(find.text(AppLanguage.en.grammarLabel), findsWidgets);
     expect(find.text(AppLanguage.en.kanjiLabel), findsWidgets);
+  });
+
+  testWidgets('JA lesson tabs use Japanese labels', (tester) async {
+    await tester.pumpWidget(
+      buildScreen([
+        _term(1, '愛', 'yêu', reading: 'あい', definitionEn: 'love'),
+      ], language: AppLanguage.ja),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text(AppLanguage.ja.lessonVocabTabLabel), findsWidgets);
+    expect(find.text(AppLanguage.ja.grammarLabel), findsWidgets);
+    expect(find.text(AppLanguage.ja.kanjiLabel), findsWidgets);
+    expect(find.text(AppLanguage.vi.lessonVocabTabLabel), findsNothing);
+    expect(find.text(AppLanguage.vi.grammarLabel), findsNothing);
+    expect(find.text(AppLanguage.vi.kanjiLabel), findsNothing);
+  });
+
+  testWidgets('JA lesson flashcard uses English fallback, not Vietnamese', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      buildScreen([
+        _term(1, '愛', 'yêu', reading: 'あい', definitionEn: 'love'),
+      ], language: AppLanguage.ja),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('love'), findsOneWidget);
+    expect(find.text('yêu'), findsNothing);
   });
 
   testWidgets('vocab flashcard does not expose manual learned toggle', (

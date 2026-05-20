@@ -26,7 +26,7 @@ void main() {
       expect(item.displayMeaning(AppLanguage.ja), 'cat');
     });
 
-    test('falls back to Vietnamese meaning when meaningEn is null', () {
+    test('English falls back to Vietnamese when meaningEn is null', () {
       const noEnglish = VocabItem(
         id: 2,
         term: '犬',
@@ -35,10 +35,10 @@ void main() {
         level: 'N5',
       );
       expect(noEnglish.displayMeaning(AppLanguage.en), 'chó');
-      expect(noEnglish.displayMeaning(AppLanguage.ja), 'chó');
+      expect(noEnglish.displayMeaning(AppLanguage.ja), isEmpty);
     });
 
-    test('falls back to Vietnamese meaning when meaningEn is blank', () {
+    test('English falls back to Vietnamese when meaningEn is blank', () {
       const blankEnglish = VocabItem(
         id: 3,
         term: '鳥',
@@ -48,7 +48,7 @@ void main() {
         level: 'N5',
       );
       expect(blankEnglish.displayMeaning(AppLanguage.en), 'chim');
-      expect(blankEnglish.displayMeaning(AppLanguage.ja), 'chim');
+      expect(blankEnglish.displayMeaning(AppLanguage.ja), isEmpty);
     });
   });
 

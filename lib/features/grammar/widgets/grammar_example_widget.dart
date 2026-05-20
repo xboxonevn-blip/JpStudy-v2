@@ -67,7 +67,11 @@ class GrammarExampleWidget extends StatelessWidget {
       case AppLanguage.vi:
         return (translationVi ?? translation).trim();
       case AppLanguage.ja:
-        return translation.trim();
+        return resolveEnglishGrammarExampleTranslation(
+          japanese: japanese,
+          translationEn: translationEn,
+          translation: translation,
+        );
     }
   }
 }

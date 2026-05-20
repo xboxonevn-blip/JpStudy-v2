@@ -1888,7 +1888,7 @@ class _KanjiExampleWordRow extends ConsumerWidget {
             children: [
               Expanded(
                 child: Text(
-                  _formatKanjiExample(example),
+                  _formatKanjiExample(example, language),
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: palette.ink,
                     fontWeight: FontWeight.w700,
@@ -2869,6 +2869,7 @@ class _JpStudyFlowPanel extends StatelessWidget {
                       'preview_${group.level}_${relatedItem.character}',
                     ),
                     item: relatedItem,
+                    language: language,
                     isSelected:
                         selectedPreview?.character == relatedItem.character,
                     onTap: () => onPreviewSelected(relatedItem),
@@ -2880,6 +2881,7 @@ class _JpStudyFlowPanel extends StatelessWidget {
               const SizedBox(height: 12),
               _RadicalKanjiMicroDetailPanel(
                 item: selectedPreview!,
+                language: language,
                 onSearch: () =>
                     _launchKanjiUtility(context, selectedPreview!, '/search'),
                 onFlashcard: () =>
@@ -2903,11 +2905,13 @@ class _RelatedKanjiPreviewCard extends StatelessWidget {
   const _RelatedKanjiPreviewCard({
     super.key,
     required this.item,
+    required this.language,
     required this.onTap,
     this.isSelected = false,
   });
 
   final KanjiItem item;
+  final AppLanguage language;
   final VoidCallback onTap;
   final bool isSelected;
 
@@ -2943,7 +2947,7 @@ class _RelatedKanjiPreviewCard extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             Text(
-              _previewMeaning(item),
+              _previewMeaning(item, language),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -2983,12 +2987,14 @@ class _RelatedKanjiPreviewCard extends StatelessWidget {
 class _RadicalKanjiMicroDetailPanel extends StatelessWidget {
   const _RadicalKanjiMicroDetailPanel({
     required this.item,
+    required this.language,
     required this.onSearch,
     required this.onFlashcard,
     required this.onWrite,
   });
 
   final KanjiItem item;
+  final AppLanguage language;
   final VoidCallback onSearch;
   final VoidCallback onFlashcard;
   final VoidCallback onWrite;
@@ -2996,7 +3002,7 @@ class _RadicalKanjiMicroDetailPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final palette = context.appPalette;
-    final meaning = _previewMeaning(item);
+    final meaning = _previewMeaning(item, language);
     final readings = <String>[
       if ((item.onyomi ?? '').trim().isNotEmpty) 'On: ${item.onyomi!.trim()}',
       if ((item.kunyomi ?? '').trim().isNotEmpty)
@@ -3084,7 +3090,7 @@ class _RadicalKanjiMicroDetailPanel extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 6),
                 child: Text(
-                  _formatKanjiExample(example),
+                  _formatKanjiExample(example, language),
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: palette.ink.withValues(alpha: 0.82),
                     fontWeight: FontWeight.w600,

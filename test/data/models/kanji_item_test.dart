@@ -23,9 +23,9 @@ void main() {
       expect(k.displayMeaning(AppLanguage.ja), '食べ物。食べるもの。');
     });
 
-    test('AppLanguage.ja falls back to English then Vietnamese', () {
+    test('AppLanguage.ja falls back to English but not Vietnamese', () {
       expect(kanji(meaningEn: 'food').displayMeaning(AppLanguage.ja), 'food');
-      expect(kanji().displayMeaning(AppLanguage.ja), 'thức ăn');
+      expect(kanji().displayMeaning(AppLanguage.ja), isEmpty);
     });
 
     test('AppLanguage.vi and en keep their existing meanings', () {

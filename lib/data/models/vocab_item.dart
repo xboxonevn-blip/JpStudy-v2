@@ -36,7 +36,7 @@ class VocabItem {
       case AppLanguage.en:
         return english.isNotEmpty ? english : meaning;
       case AppLanguage.ja:
-        return english.isNotEmpty ? english : meaning;
+        return english.isNotEmpty ? english : '';
     }
   }
 

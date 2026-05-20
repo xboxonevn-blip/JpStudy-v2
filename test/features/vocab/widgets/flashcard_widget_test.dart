@@ -40,6 +40,14 @@ const _kKanjiItem = VocabItem(
   level: 'N5',
 );
 
+const _kNoEnglishItem = VocabItem(
+  id: 4,
+  term: '飲む',
+  reading: 'のむ',
+  meaning: 'uống',
+  level: 'N5',
+);
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -182,6 +190,19 @@ void main() {
       // VI locale: item.meaning shown, not meaningEn
       expect(find.text('ăn'), findsOneWidget);
       expect(find.text('to eat'), findsNothing);
+    });
+
+    testWidgets('JA back face does not fall back to Vietnamese meaning', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        _buildHarness(item: _kNoEnglishItem, language: AppLanguage.ja),
+      );
+      await _pump(tester);
+
+      await _tapAndFlip(tester);
+
+      expect(find.text('uống'), findsNothing);
     });
 
     testWidgets('kana-only term: no reading row on back face', (tester) async {

@@ -1108,3 +1108,14 @@
 - Current app scan: `929` kanji entries, `638` unique characters. Candidate canonical scan after owner spot-check overrides: `2495` unique characters.
 - Audit counts under the candidate policy: MOVE `479`, DUPLICATE `196`, MISSING `1872`, EXTRA `15`.
 - Important blocker before Phase 1 data rewrite: the supplied PDFs are vector-glyph PDFs and not text-extractable, and visual inspection/public JLPT tables conflict with the owner's expected labels for `海`, `帰`, `銀`, `重`, and `議`. The audit doc therefore requires owner approval of the override policy before implementing MOVE/DEDUPE/MISSING changes or hard-coding canonical guards.
+
+## 2026-05-20 JA Locale Cleanup + Source Ban
+
+- Resumed the paused JA-locale dirty batch and completed the cross-flow cleanup so Japanese UI no longer leaks Vietnamese fallbacks across vocab, lesson, grammar, JLPT, kanji, practice, and handwriting surfaces when better localized/fallback text exists.
+- Added `LessonTermDisplay` so shared lesson/vocab/kanji surfaces choose display text by active app language instead of directly reading Vietnamese labels.
+- Added the owner-requested crawl/source ban to `AGENTS.md` and `docs/agent-directives.md`: do not search/fetch/crawl/browse `nhaikanji.com` or `thocodehoctiengnhat.com`; use local PDFs/files only.
+- Verified before deploy: focused suite passed `235/235`, `flutter analyze lib test` clean, UI string guard `0`, content VI status machine/open-review `0`, taxonomy guard passed, and full `flutter test --concurrency=1` passed `2406/2406`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof used normal browser cache: `main.dart.js` returned `200/no-cache`; JA vocab, lesson, grammar, grammar practice, kanji, kanji practice, and mock surfaces rendered without Vietnamese fallback leaks; VI control still rendered Vietnamese where expected; unexpected console/page errors were `0`.
+- Live artifacts: `output/playwright/live-ja-locale-cleanup-proof.json` and screenshots `output/playwright/live-ja-locale-*.png`.
+- Next priority after this commit: QA-A-027 Phase 0 ebook extraction plan from local PDFs only, superseding the older QA-A-026 source plan.

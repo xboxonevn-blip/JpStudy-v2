@@ -909,16 +909,7 @@ String _grammarMeaning(content.GrammarPointData point, AppLanguage language) {
 }
 
 String _kanjiMeaning(KanjiItem item, AppLanguage language) {
-  switch (language) {
-    case AppLanguage.vi:
-      return item.meaning.trim();
-    case AppLanguage.en:
-    case AppLanguage.ja:
-      final english = item.meaningEn?.trim();
-      return english != null && english.isNotEmpty
-          ? english
-          : item.meaning.trim();
-  }
+  return item.displayMeaning(language).trim();
 }
 
 final _readingSplitRe = RegExp(r'[,/、\s]+');

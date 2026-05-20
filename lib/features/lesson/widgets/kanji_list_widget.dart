@@ -45,6 +45,7 @@ class _KanjiListWidgetState extends ConsumerState<KanjiListWidget> {
             final item = items[index];
             final primaryMeaning = _primaryMeaning(item, language);
             final subtitle = _subtitle(item, language);
+            final rowOnyomi = _readingForLanguage(item.onyomi, language);
             final compounds = _compoundGuides(
               item,
               characterIndex: characterIndex,
@@ -150,12 +151,12 @@ class _KanjiListWidgetState extends ConsumerState<KanjiListWidget> {
                                             ),
                                         color: palette.accent,
                                       ),
-                                      if ((item.onyomi ?? '').trim().isNotEmpty)
+                                      if (rowOnyomi.isNotEmpty)
                                         _buildMetaPill(
                                           context,
                                           icon: Icons.graphic_eq_rounded,
                                           label:
-                                              '${language.kanjiOnyomiLabel}: ${item.onyomi!.trim()}',
+                                              '${language.kanjiOnyomiLabel}: $rowOnyomi',
                                           color: palette.primary,
                                         ),
                                     ],
@@ -223,6 +224,8 @@ class _KanjiListWidgetState extends ConsumerState<KanjiListWidget> {
     final localizedMeaning = item.displayMeaning(language);
     final mnemonic = item.displayMnemonic(language)?.trim();
     final decomp = item.decomposition;
+    final onyomi = _readingForLanguage(item.onyomi, language);
+    final kunyomi = _readingForLanguage(item.kunyomi, language);
 
     return Container(
       padding: const EdgeInsets.all(16),
@@ -290,14 +293,14 @@ class _KanjiListWidgetState extends ConsumerState<KanjiListWidget> {
                             context,
                             icon: Icons.graphic_eq_rounded,
                             label:
-                                '${language.kanjiOnyomiLabel}: ${((item.onyomi ?? '').trim().isEmpty) ? '-' : item.onyomi!.trim()}',
+                                '${language.kanjiOnyomiLabel}: ${onyomi.isEmpty ? '-' : onyomi}',
                             color: palette.primary,
                           ),
                           _buildMetaPill(
                             context,
                             icon: Icons.translate_rounded,
                             label:
-                                '${language.kanjiKunyomiLabel}: ${((item.kunyomi ?? '').trim().isEmpty) ? '-' : item.kunyomi!.trim()}',
+                                '${language.kanjiKunyomiLabel}: ${kunyomi.isEmpty ? '-' : kunyomi}',
                             color: palette.secondary,
                           ),
                           _buildMetaPill(
@@ -849,18 +852,43 @@ class _KanjiListWidgetState extends ConsumerState<KanjiListWidget> {
   }
 
   String _subtitle(KanjiItem item, AppLanguage language) {
-    final onyomi = (item.onyomi ?? '').trim();
-    final kunyomi = (item.kunyomi ?? '').trim();
+    final onyomi = _readingForLanguage(item.onyomi, language);
+    final kunyomi = _readingForLanguage(item.kunyomi, language);
     return '${language.kanjiOnyomiLabel}: ${onyomi.isNotEmpty ? onyomi : '-'}'
         ' | ${language.kanjiKunyomiLabel}: ${kunyomi.isNotEmpty ? kunyomi : '-'}';
+  }
+
+  String _readingForLanguage(String? value, AppLanguage language) {
+    final reading = (value ?? '').trim();
+    if (reading.isEmpty) {
+      return '';
+    }
+    if (language != AppLanguage.ja) {
+      return reading;
+    }
+    if (RegExp(r'[A-Za-z]').hasMatch(reading)) {
+      return '';
+    }
+    return _containsKana(reading) ? reading : '';
+  }
+
+  bool _containsKana(String value) {
+    for (final rune in value.runes) {
+      if ((rune >= 0x3040 && rune <= 0x30FF) ||
+          (rune >= 0xFF66 && rune <= 0xFF9F)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   String _exampleMeaning(KanjiExample example, AppLanguage language) {
     final fallback = example.meaning.trim();
     if (language != AppLanguage.vi) {
       final english = (example.meaningEn ?? '').trim();
-      return english.isNotEmpty
-          ? english
+      if (english.isNotEmpty) return english;
+      return language == AppLanguage.ja
+          ? '-'
           : (fallback.isNotEmpty ? fallback : '-');
     }
     return fallback.isNotEmpty ? fallback : '-';

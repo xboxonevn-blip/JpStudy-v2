@@ -15,11 +15,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 class _EmptyLessonRepository extends LessonRepository {
   _EmptyLessonRepository(super.db, super.contentDb);
 
+  List<KanjiItem> kanjiItems = const [];
+
   @override
   Future<List<VocabItem>> getVocabByLevel(String level) async => const [];
 
   @override
-  Future<List<KanjiItem>> fetchKanjiByLevel(String level) async => const [];
+  Future<List<KanjiItem>> fetchKanjiByLevel(String level) async => kanjiItems;
 }
 
 void main() {
@@ -78,6 +80,66 @@ void main() {
         ),
         isTrue,
       );
+    },
+  );
+
+  test(
+    'JA Kanji mock does not fall back to Vietnamese-only meanings',
+    () async {
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+      final appDb = AppDatabase(executor: NativeDatabase.memory());
+      final contentDb = ContentDatabase(executor: NativeDatabase.memory());
+      final repo = _EmptyLessonRepository(appDb, contentDb)
+        ..kanjiItems = const [
+          KanjiItem(
+            id: 1,
+            lessonId: 1,
+            character: '愛',
+            strokeCount: 13,
+            meaning: 'yêu',
+            examples: [],
+            jlptLevel: 'N3',
+          ),
+          KanjiItem(
+            id: 2,
+            lessonId: 1,
+            character: '空',
+            strokeCount: 8,
+            meaning: 'trời',
+            examples: [],
+            jlptLevel: 'N3',
+          ),
+          KanjiItem(
+            id: 3,
+            lessonId: 1,
+            character: '海',
+            strokeCount: 9,
+            meaning: 'biển',
+            examples: [],
+            jlptLevel: 'N3',
+          ),
+          KanjiItem(
+            id: 4,
+            lessonId: 1,
+            character: '山',
+            strokeCount: 3,
+            meaning: 'núi',
+            examples: [],
+            jlptLevel: 'N3',
+          ),
+        ];
+      addTearDown(contentDb.close);
+      addTearDown(appDb.close);
+
+      final sections = await buildJlptMockSections(
+        level: StudyLevel.n3,
+        language: AppLanguage.ja,
+        contentDb: contentDb,
+        lessonRepo: repo,
+        random: Random(3),
+      );
+
+      expect(sections.map((section) => section.id), isNot(contains('kanji')));
     },
   );
 }

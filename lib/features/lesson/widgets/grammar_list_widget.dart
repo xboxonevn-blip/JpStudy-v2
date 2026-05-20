@@ -958,7 +958,7 @@ class _GrammarPointCardState extends State<_GrammarPointCard> {
                           widget.language,
                           en: 'Drill this grammar point',
                           vi: 'Luy\u1ec7n \u0111i\u1ec3m ng\u1eef ph\u00e1p n\u00e0y',
-                          ja: '??${widget.data.examples.length}?',
+                          ja: 'この文法を練習',
                         ),
                       ),
                     ),
@@ -982,8 +982,16 @@ class _GrammarPointCardState extends State<_GrammarPointCard> {
   ) {
     final translation = switch (language) {
       AppLanguage.vi => ex.translationVi ?? ex.translation,
-      AppLanguage.en => ex.translationEn ?? ex.translation,
-      AppLanguage.ja => ex.translation,
+      AppLanguage.en => resolveEnglishGrammarExampleTranslation(
+        japanese: ex.japanese,
+        translationEn: ex.translationEn,
+        translation: ex.translation,
+      ),
+      AppLanguage.ja => resolveEnglishGrammarExampleTranslation(
+        japanese: ex.japanese,
+        translationEn: ex.translationEn,
+        translation: ex.translation,
+      ),
     };
 
     return Container(
@@ -1078,21 +1086,44 @@ class _GrammarPointCardState extends State<_GrammarPointCard> {
       case AppLanguage.vi:
         return point.meaningVi ?? point.meaning;
       case AppLanguage.en:
-        return normalizeGrammarTitleEn(point.meaningEn ?? point.meaning);
+        return resolveEnglishGrammarMeaning(
+          meaningEn: point.meaningEn,
+          titleEn: point.titleEn,
+          connectionEn: point.connectionEn,
+          connection: point.connection,
+          grammarPoint: point.grammarPoint,
+        );
       case AppLanguage.ja:
-        return point.meaning;
+        return resolveEnglishGrammarMeaning(
+          meaningEn: point.meaningEn,
+          titleEn: point.titleEn,
+          connectionEn: point.connectionEn,
+          connection: point.connection,
+          grammarPoint: point.grammarPoint,
+        );
     }
   }
 
   String _resolveStructure(GrammarPoint point) {
     switch (widget.language) {
       case AppLanguage.en:
-        return normalizeGrammarStructureEn(
-          point.connectionEn ?? point.connection,
+        return resolveEnglishGrammarConnection(
+          connectionEn: point.connectionEn,
+          connection: point.connection,
+          grammarPoint: point.grammarPoint,
+          titleEn: point.titleEn,
+          meaningEn: point.meaningEn,
         );
       case AppLanguage.vi:
-      case AppLanguage.ja:
         return point.connection;
+      case AppLanguage.ja:
+        return resolveEnglishGrammarConnection(
+          connectionEn: point.connectionEn,
+          connection: point.connection,
+          grammarPoint: point.grammarPoint,
+          titleEn: point.titleEn,
+          meaningEn: point.meaningEn,
+        );
     }
   }
 
@@ -1101,9 +1132,17 @@ class _GrammarPointCardState extends State<_GrammarPointCard> {
       case AppLanguage.vi:
         return point.explanationVi ?? point.explanation;
       case AppLanguage.en:
-        return point.explanationEn ?? point.explanation;
+        return resolveEnglishGrammarExplanation(
+          explanationEn: point.explanationEn,
+          explanation: point.explanation,
+          label: point.grammarPoint,
+        );
       case AppLanguage.ja:
-        return point.explanation;
+        return resolveEnglishGrammarExplanation(
+          explanationEn: point.explanationEn,
+          explanation: point.explanation,
+          label: point.grammarPoint,
+        );
     }
   }
 }

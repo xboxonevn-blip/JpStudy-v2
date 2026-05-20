@@ -602,6 +602,69 @@ void main() {
     expect(find.text('\u660e'), findsWidgets);
   });
 
+  testWidgets(
+    'JA related kanji previews do not show Vietnamese fallback text',
+    (tester) async {
+      tester.view.physicalSize = const Size(1600, 1400);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+
+      await _mockRadicalsAsset();
+      final repo = _FakeKanjiHubLessonRepository(
+        n5Kanji: const [
+          KanjiItem(
+            id: 20,
+            lessonId: 1,
+            character: '\u660e',
+            strokeCount: 8,
+            meaning: 'sáng',
+            meaningEn: 'bright',
+            examples: [],
+            jlptLevel: 'N5',
+            decomposition: KanjiDecomposition(relatedKanji: ['\u65e5']),
+          ),
+          KanjiItem(
+            id: 21,
+            lessonId: 1,
+            character: '\u65e5',
+            strokeCount: 4,
+            meaning: 'mặt trời',
+            examples: [
+              KanjiExample(
+                word: '\u65e5\u672c',
+                reading: '\u306b\u307b\u3093',
+                meaning: 'Nhật Bản',
+              ),
+            ],
+            jlptLevel: 'N5',
+          ),
+        ],
+        n4Kanji: const [],
+        n3Kanji: const [],
+        n2Kanji: const [],
+        n1Kanji: const [],
+      );
+      await tester.pumpWidget(
+        _buildSubject(repo: repo, language: AppLanguage.ja),
+      );
+      await _pumpKanjiHub(tester);
+
+      await tester.tap(find.text('\u660e').first);
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 1));
+
+      expect(find.text('mặt trời'), findsNothing);
+
+      await tester.tap(find.byKey(const ValueKey('preview_N5_\u65e5')));
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 1));
+
+      expect(find.text('mặt trời'), findsNothing);
+      expect(find.textContaining('Nhật Bản'), findsNothing);
+    },
+  );
+
   testWidgets('kanji hub follows async persisted level after first frame', (
     tester,
   ) async {

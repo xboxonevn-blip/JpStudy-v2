@@ -52,8 +52,9 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
       case AppLanguage.vi:
         return meaningVi;
       case AppLanguage.en:
-      case AppLanguage.ja:
         return english.isNotEmpty ? english : meaningVi;
+      case AppLanguage.ja:
+        return english.isNotEmpty ? english : '';
     }
   }
 
@@ -414,21 +415,27 @@ class _LessonMatchScreenState extends ConsumerState<LessonMatchScreen> {
     AppLanguage language,
     String level,
   ) {
-    return terms
-        .map(
-          (term) => VocabItem(
-            id: term.id,
-            term: term.term,
-            reading: term.reading,
-            meaning: _meaningForLanguage(
-              language,
-              meaningVi: term.definition,
-              meaningEn: term.definitionEn,
-            ),
-            meaningEn: term.definitionEn,
-            level: level,
-          ),
-        )
-        .toList();
+    final items = <VocabItem>[];
+    for (final term in terms) {
+      final meaning = _meaningForLanguage(
+        language,
+        meaningVi: term.definition,
+        meaningEn: term.definitionEn,
+      ).trim();
+      if (meaning.isEmpty) {
+        continue;
+      }
+      items.add(
+        VocabItem(
+          id: term.id,
+          term: term.term,
+          reading: term.reading,
+          meaning: meaning,
+          meaningEn: term.definitionEn,
+          level: level,
+        ),
+      );
+    }
+    return items;
   }
 }

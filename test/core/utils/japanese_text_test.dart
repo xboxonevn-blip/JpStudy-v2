@@ -134,8 +134,8 @@ void main() {
       expect(vocabWithBoth.displayMeaning(AppLanguage.ja), 'to eat');
     });
 
-    test('AppLanguage.ja falls back to meaning when meaningEn is null', () {
-      expect(vocabNoEn.displayMeaning(AppLanguage.ja), 'uống (VI)');
+    test('AppLanguage.ja does not fall back to VI when meaningEn is null', () {
+      expect(vocabNoEn.displayMeaning(AppLanguage.ja), isEmpty);
     });
 
     test('AppLanguage.en falls back to meaning when meaningEn is blank', () {

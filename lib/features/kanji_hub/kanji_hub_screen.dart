@@ -438,12 +438,9 @@ class _KanjiHubScreenState extends ConsumerState<KanjiHubScreen> {
   }
 }
 
-String _previewMeaning(KanjiItem item) {
-  final meaningEn = item.meaningEn?.trim();
-  if (meaningEn != null && meaningEn.isNotEmpty) {
-    return meaningEn;
-  }
-  return item.meaning;
+String _previewMeaning(KanjiItem item, AppLanguage language) {
+  final meaning = item.displayMeaning(language).trim();
+  return meaning.isNotEmpty ? meaning : '-';
 }
 
 void _launchLevelPractice(
@@ -508,12 +505,16 @@ void _launchKanjiPractice(BuildContext context, KanjiItem item) {
   );
 }
 
-String _formatKanjiExample(KanjiExample example) {
+String _formatKanjiExample(KanjiExample example, AppLanguage language) {
   final word = example.word.trim();
   final reading = example.reading.trim();
-  final meaning = (example.meaningEn?.trim().isNotEmpty ?? false)
-      ? example.meaningEn!.trim()
-      : example.meaning.trim();
+  final vi = example.meaning.trim();
+  final en = example.meaningEn?.trim() ?? '';
+  final meaning = switch (language) {
+    AppLanguage.vi => vi.isNotEmpty ? vi : en,
+    AppLanguage.en => en.isNotEmpty ? en : vi,
+    AppLanguage.ja => en,
+  };
   final parts = <String>[];
   if (word.isNotEmpty) parts.add(word);
   if (reading.isNotEmpty) parts.add('($reading)');

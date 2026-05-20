@@ -16,6 +16,13 @@ Làm theo `docs/research/quality-backlog.md` đúng thứ tự ưu tiên: P0, b�
 hoặc hỏng chức năng trước P1 trước P2; hoàn tất việc đang dở trước khi mở
 workstream mới; không nhảy vượt thứ tự ưu tiên owner đã đặt.
 
+### Crawl/source ban
+
+Không search, crawl, scrape, fetch, hoặc browse `https://nhaikanji.com/` hay
+`https://thocodehoctiengnhat.com/`. Hai site này có cơ chế chặn crawl, có thể
+ban IP/tài khoản owner. Chỉ dùng PDF/file local owner đã cung cấp từ các nguồn
+đó.
+
 ## Directive C - Gate Khớp Với Thay Đổi (Token Không Giới Hạn)
 
 Chỉ chạy phần kiểm chứng mà thay đổi đó thực sự có thể làm hỏng:

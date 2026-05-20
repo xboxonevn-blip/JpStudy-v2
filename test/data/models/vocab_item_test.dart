@@ -27,9 +27,9 @@ void main() {
 
   // ── displayMeaning(language) ──────────────────────────────────────────────
   //
-  // VI always returns the (mandatory) Vietnamese `meaning`. EN/JA prefer
-  // English, but fall back to Vietnamese when meaningEn is missing or empty.
-  // This fallback is critical — most legacy data lacks meaningEn.
+  // VI always returns the (mandatory) Vietnamese `meaning`. EN can fall back to
+  // Vietnamese for legacy data. JA must not leak Vietnamese meanings; it uses
+  // English when sourced and otherwise returns an empty neutral value.
 
   group('VocabItem.displayMeaning', () {
     test('Vietnamese language returns the VI meaning verbatim', () {
@@ -65,16 +65,15 @@ void main() {
       expect(v.displayMeaning(AppLanguage.en), 'Bệnh viện');
     });
 
-    test(
-      'Japanese language behaves like English (prefers EN, falls back to VI)',
-      () {
-        final withEn = item(meaning: 'Bệnh viện', meaningEn: 'hospital');
-        expect(withEn.displayMeaning(AppLanguage.ja), 'hospital');
+    test('Japanese language returns meaningEn when present', () {
+      final withEn = item(meaning: 'Bệnh viện', meaningEn: 'hospital');
+      expect(withEn.displayMeaning(AppLanguage.ja), 'hospital');
+    });
 
-        final noEn = item(meaning: 'Bệnh viện', meaningEn: null);
-        expect(noEn.displayMeaning(AppLanguage.ja), 'Bệnh viện');
-      },
-    );
+    test('Japanese language does not fall back to VI meaning', () {
+      final noEn = item(meaning: 'Bệnh viện', meaningEn: null);
+      expect(noEn.displayMeaning(AppLanguage.ja), isEmpty);
+    });
   });
 
   // ── displayMnemonic(language) ─────────────────────────────────────────────

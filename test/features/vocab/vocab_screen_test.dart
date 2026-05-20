@@ -1296,6 +1296,84 @@ void main() {
     expect(find.byType(EnhancedFlashcard), findsOneWidget);
   });
 
+  testWidgets('JA Hajimete kanji tab uses English fallback, not Vietnamese', (
+    tester,
+  ) async {
+    await _prefs.setString('app.locale', 'ja');
+    const detail = HajimeteChapterDetail(
+      levelCode: 'N5',
+      chapterId: 1,
+      title: 'Lesson 1',
+      entries: [
+        HajimeteChapterEntry(
+          term: '山',
+          reading: 'やま',
+          meaningVi: 'núi',
+          meaningEn: 'mountain',
+        ),
+      ],
+    );
+    const kanjiDetail = HajimeteKanjiChapterDetail(
+      levelCode: 'N5',
+      chapterId: 1,
+      title: 'Lesson 1',
+      entries: [
+        HajimeteKanjiEntry(
+          character: '山',
+          reading: 'サン ・ やま',
+          meaningVi: 'núi',
+          meaningEn: 'mountain',
+        ),
+      ],
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          sharedPreferencesProvider.overrideWithValue(_prefs),
+          lessonRepositoryProvider.overrideWithValue(
+            _FakeVocabLessonRepository(bank: const {}),
+          ),
+          hajimeteChapterDetailProvider.overrideWith(
+            (ref, arg) async => detail,
+          ),
+          hajimeteChapterItemsProvider.overrideWith(
+            (ref, arg) async => const [
+              VocabItem(
+                id: 101,
+                term: '山',
+                reading: 'やま',
+                meaning: 'núi',
+                meaningEn: 'mountain',
+                level: 'N5',
+              ),
+            ],
+          ),
+          hajimeteChapterUserTermsProvider.overrideWith(
+            (ref, arg) async => const <UserLessonTermData>[],
+          ),
+          hajimeteKanjiChapterProvider.overrideWith(
+            (ref, arg) async => kanjiDetail,
+          ),
+        ],
+        child: const MaterialApp(
+          home: HajimeteChapterDetailScreen(
+            levelCode: 'N5',
+            chapterId: 1,
+            laneTitle: 'Hajimete no Nihongo Tango',
+          ),
+        ),
+      ),
+    );
+
+    await _pumpCatalog(tester);
+    await tester.tap(find.text('漢字'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('mountain'), findsOneWidget);
+    expect(find.text('núi'), findsNothing);
+  });
+
   testWidgets(
     'Hajimete review rating advances due queue and keeps stage locked',
     (tester) async {

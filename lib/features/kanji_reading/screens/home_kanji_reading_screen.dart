@@ -70,7 +70,9 @@ class _KanjiHubBody extends ConsumerWidget {
   final String levelCode;
   final KanjiPracticeArgs? launchArgs;
 
-  bool get _hasExplicitScope => launchArgs?.kanjiIds.isNotEmpty ?? false;
+  bool get _hasExplicitScope =>
+      (launchArgs?.kanjiIds.isNotEmpty ?? false) ||
+      (launchArgs?.kanjiCharacters.isNotEmpty ?? false);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -217,8 +219,15 @@ class _KanjiHubBody extends ConsumerWidget {
 
   List<KanjiItem> _filterItems(List<KanjiItem> items) {
     final ids = launchArgs?.kanjiIds ?? const <int>[];
-    if (ids.isEmpty) return items;
-    return items.where((item) => ids.contains(item.id)).toList();
+    if (ids.isNotEmpty) {
+      return items.where((item) => ids.contains(item.id)).toList();
+    }
+    final characters = launchArgs?.kanjiCharacters ?? const <String>[];
+    if (characters.isEmpty) return items;
+    final characterSet = characters.toSet();
+    return items
+        .where((item) => characterSet.contains(item.character))
+        .toList();
   }
 
   List<KanjiItem> _resolvePrimaryItems({

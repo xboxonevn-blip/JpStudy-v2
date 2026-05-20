@@ -5,6 +5,7 @@ import 'package:jpstudy/features/foundations/screens/han_viet_reference_screen.d
 import 'package:jpstudy/features/kanji_hub/kanji_hub_screen.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
 import 'package:jpstudy/features/kanji_hub/screens/kanji_practice_hub_screen.dart';
+import 'package:jpstudy/features/kanji_hub/screens/kanji_relationship_graph_screen.dart';
 import 'package:jpstudy/features/kanji_reading/screens/home_kanji_reading_screen.dart';
 import 'package:jpstudy/features/write/screens/home_handwriting_practice_screen.dart';
 
@@ -28,6 +29,13 @@ List<RouteBase> buildKanjiRoutes() {
       name: AppRouteName.kanjiHanViet,
       builder: (context, state) =>
           const HanVietReferenceGate(fallbackPath: AppRoutePath.kanji),
+    ),
+    GoRoute(
+      path: AppRoutePath.kanjiGraph,
+      name: AppRouteName.kanjiGraph,
+      builder: (context, state) => KanjiRelationshipGraphScreen(
+        character: state.pathParameters['character'] ?? '',
+      ),
     ),
     GoRoute(
       path: AppRoutePath.kanjiPractice,

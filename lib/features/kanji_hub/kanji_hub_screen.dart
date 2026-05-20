@@ -505,6 +505,16 @@ void _launchKanjiPractice(BuildContext context, KanjiItem item) {
   );
 }
 
+void _launchKanjiGraph(BuildContext context, KanjiItem item) {
+  final level = StudyLevel.fromCode(item.jlptLevel);
+  if (level != null) {
+    final container = ProviderScope.containerOf(context, listen: false);
+    unawaited(setPersistedStudyLevelInContainer(container, level));
+  }
+  Navigator.of(context).pop();
+  context.push('/kanji/${Uri.encodeComponent(item.character)}/graph');
+}
+
 String _formatKanjiExample(KanjiExample example, AppLanguage language) {
   final word = example.word.trim();
   final reading = example.reading.trim();
@@ -568,6 +578,12 @@ String _kanjiHubSearchLabel(AppLanguage language) =>
 
 String _kanjiHubFlashcardLabel(AppLanguage language) =>
     language.kanjiPracticeThisLabel();
+
+String _kanjiGraphCtaLabel(AppLanguage language) => switch (language) {
+  AppLanguage.vi => 'Xem mạng liên quan',
+  AppLanguage.en => 'View relationship graph',
+  AppLanguage.ja => '関連グラフを見る',
+};
 
 String _kanjiTodayTitle(AppLanguage language) => language.kanjiTodayTitle();
 

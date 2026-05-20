@@ -1773,6 +1773,16 @@ class _KanjiDetailDialogState extends State<_KanjiDetailDialog> {
                 },
               ),
             ],
+            const SizedBox(height: 12),
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton.icon(
+                key: const ValueKey('kanji_detail_graph_cta'),
+                onPressed: () => _launchKanjiGraph(context, widget.item),
+                icon: const Icon(Icons.hub_rounded),
+                label: Text(_kanjiGraphCtaLabel(widget.language)),
+              ),
+            ),
             if (widget.item.examples.isNotEmpty) ...[
               const SizedBox(height: 16),
               _KanjiExampleWordsPanel(

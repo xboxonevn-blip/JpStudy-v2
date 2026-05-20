@@ -67,7 +67,8 @@ class _HomeHandwritingPracticeScreenState
     final repo = ref.read(lessonRepositoryProvider);
     final levelCode = _resolveSessionLevelCode(level);
 
-    if (widget.launchArgs case final args? when args.kanjiIds.isNotEmpty) {
+    if (widget.launchArgs case final args?
+        when args.kanjiIds.isNotEmpty || args.kanjiCharacters.isNotEmpty) {
       final scopedItems = await repo.fetchKanjiByLevel(levelCode);
       final filtered = _filterScopedItems(scopedItems, args);
       return (
@@ -188,7 +189,7 @@ class _HomeHandwritingPracticeScreenState
         ),
         randomizeSessionOrder: true,
         sessionShuffleSeed: _sessionShuffleSeed,
-        initialKanjiId: widget.launchArgs?.preferredKanjiId,
+        initialKanjiId: _preferredKanjiId(scopedFreeItems, widget.launchArgs),
       );
     }
 
@@ -244,7 +245,7 @@ class _HomeHandwritingPracticeScreenState
           lessonTitle: sessionTitle,
           items: items,
           includeCompoundWords: _shouldIncludeCompoundWords(source),
-          initialKanjiId: widget.launchArgs?.preferredKanjiId,
+          initialKanjiId: _preferredKanjiId(items, widget.launchArgs),
           headerWidget: _SessionHeader(
             language: language,
             source: source,
@@ -262,22 +263,47 @@ class _HomeHandwritingPracticeScreenState
     List<KanjiItem> items,
     KanjiPracticeArgs? args,
   ) {
-    if (args == null || args.kanjiIds.isEmpty) {
+    if (args == null ||
+        (args.kanjiIds.isEmpty && args.kanjiCharacters.isEmpty)) {
       return items;
     }
-    final itemsById = {for (final item in items) item.id: item};
     final ordered = <KanjiItem>[];
-    final seen = <int>{};
-    for (final id in args.kanjiIds) {
-      if (!seen.add(id)) {
-        continue;
+    if (args.kanjiIds.isNotEmpty) {
+      final itemsById = {for (final item in items) item.id: item};
+      final seen = <int>{};
+      for (final id in args.kanjiIds) {
+        if (!seen.add(id)) continue;
+        final item = itemsById[id];
+        if (item != null) ordered.add(item);
       }
-      final item = itemsById[id];
+      return ordered;
+    }
+    final itemsByCharacter = {for (final item in items) item.character: item};
+    final seenCharacters = <String>{};
+    for (final character in args.kanjiCharacters) {
+      if (!seenCharacters.add(character)) continue;
+      final item = itemsByCharacter[character];
       if (item != null) {
         ordered.add(item);
       }
     }
     return ordered;
+  }
+
+  int? _preferredKanjiId(List<KanjiItem> items, KanjiPracticeArgs? args) {
+    final explicitId = args?.preferredKanjiId;
+    if (explicitId != null && items.any((item) => item.id == explicitId)) {
+      return explicitId;
+    }
+    final preferredCharacter = args?.preferredKanjiCharacter?.trim();
+    if (preferredCharacter != null && preferredCharacter.isNotEmpty) {
+      for (final item in items) {
+        if (item.character == preferredCharacter) {
+          return item.id;
+        }
+      }
+    }
+    return items.isEmpty ? null : items.first.id;
   }
 
   void _syncCacheWithLevel(StudyLevel level) {
@@ -306,7 +332,9 @@ class _HomeHandwritingPracticeScreenState
         a.source == b.source &&
         a.levelCode == b.levelCode &&
         a.preferredKanjiId == b.preferredKanjiId &&
-        _hasSameKanjiIds(a.kanjiIds, b.kanjiIds);
+        a.preferredKanjiCharacter == b.preferredKanjiCharacter &&
+        _hasSameKanjiIds(a.kanjiIds, b.kanjiIds) &&
+        _hasSameKanjiCharacters(a.kanjiCharacters, b.kanjiCharacters);
   }
 
   StudyLevel? _resolveEffectiveLevel(StudyLevel? selectedLevel) {
@@ -365,6 +393,21 @@ class _HomeHandwritingPracticeScreenState
   }
 
   bool _hasSameKanjiIds(List<int> a, List<int> b) {
+    if (identical(a, b)) {
+      return true;
+    }
+    if (a.length != b.length) {
+      return false;
+    }
+    for (var i = 0; i < a.length; i++) {
+      if (a[i] != b[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  bool _hasSameKanjiCharacters(List<String> a, List<String> b) {
     if (identical(a, b)) {
       return true;
     }

@@ -1,5 +1,18 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-029 Graph View Phase 1 MVP
+
+- Implemented `/kanji/:character/graph` using local canonical kanji assets only; no banned web sources accessed.
+- Added a deterministic radial graph renderer with focus/related/component styling, directed arrows, edge labels, pan/zoom, fit/refresh/reset/fullscreen toolbar, node click navigation, and a visible graph-cluster practice CTA.
+- Linked Kanji detail modals to the graph route with `Xem mạng liên quan`.
+- Live proof first caught a cold direct-route loading defect when graph construction waited on ContentDB seeding; fixed graph data loading to parse bundled canonical kanji JSON directly.
+- Live proof also moved the practice CTA above the fold and made fullscreen graph navigation close the dialog before routing.
+- Verified locally: graph model/widget/screen suites, Kanji detail CTA suite, Kanji reading scoped practice suite, handwriting scoped practice suite, `flutter analyze lib test`, UI string guard `0`, `git diff --check`, and full `flutter test --concurrency=1` `2421/2421`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: VI direct graph rendered focus blue + related/component nodes, node click rebuilt graph around `泊`, graph practice CTA opened Kanji practice hub, `人` detail CTA opened a graph, EN/JA graph route rendered localized chrome, `main.dart.js` returned `200/no-cache`, unexpected console/failed requests were `0` after filtering known App Check/reCAPTCHA noise.
+- Artifacts: `output/playwright/live-qaa029-graph-phase1-proof.json`, `output/playwright/live-qaa029-click-proof.json`, `output/playwright/live-qaa029-final-*.png`.
+- Remaining QA-A-029: Phase 2 SRS overlay + true graph quiz/SRS updates; Phase 3 review mini-graph interlink.
+
 ## 2026-05-20 QA-A-029 Graph View Phase 0 Design/Audit
 
 - Audited the Kanji graph feature against current app structure without accessing banned sources.

@@ -186,6 +186,13 @@ Widget _buildRoutedSubject({
         builder: (context, state) =>
             const Scaffold(body: Text('han-viet route')),
       ),
+      GoRoute(
+        path: AppRoutePath.kanjiGraph,
+        name: AppRouteName.kanjiGraph,
+        builder: (context, state) => Scaffold(
+          body: Text('graph route:${state.pathParameters['character']}'),
+        ),
+      ),
     ],
   );
   return ProviderScope(
@@ -876,6 +883,32 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('han-viet route'), findsOneWidget);
+  });
+
+  testWidgets('kanji detail opens relationship graph for the selected kanji', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1200, 1400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await _mockRadicalsAsset();
+    await tester.pumpWidget(
+      _buildRoutedSubject(repo: _buildRepo(), language: AppLanguage.vi),
+    );
+    await _pumpKanjiHub(tester);
+
+    await tester.tap(find.text('\u5b66').first);
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+
+    final graphCta = find.byKey(const ValueKey('kanji_detail_graph_cta'));
+    expect(graphCta, findsOneWidget);
+    tester.widget<OutlinedButton>(graphCta).onPressed!();
+    await tester.pumpAndSettle();
+
+    expect(find.text('graph route:\u5b66'), findsOneWidget);
   });
 
   testWidgets('kanji example word opens sourced conjugation practice', (

@@ -101,3 +101,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The inline anchor is meaningful only after the lesson is known. Deferring it avoids unrelated async work during loading and preserves the conditional behavior required by Directive F.6.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-011 - Remove empty Kanji lesson tab but keep Vocab/Grammar tabs
+**Phase**: 3
+**Date**: 2026-05-21 06:21 (local)
+**Context**: Phase 3 requires deleting deceptive empty Kanji tabs while preserving working lesson grammar content.
+**Options considered**: remove all tabs immediately | keep current three-tab layout | keep Vocab/Grammar tabs and move Kanji access into term badges
+**Chosen**: keep Vocab/Grammar tabs and move Kanji access into term badges
+**Rationale**: This removes the empty/stub Kanji destination now, keeps the existing grammar panel reachable, and creates a learner-facing Kanji cross-link from the term list without a large route rewrite in the same batch.
+**Reversible**: yes
+**Owner review**: pending

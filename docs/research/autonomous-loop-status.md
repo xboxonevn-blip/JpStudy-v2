@@ -1,5 +1,14 @@
 # Autonomous Loop Status
 
+# 2026-05-21 — Megaprompt Phase 3 lesson page redesign batch 1
+
+- Removed the deceptive empty Kanji tab from lesson navigation; Vocab and Grammar tabs remain functional while Kanji access moved to term-level badges.
+- Added a `lesson_responsive_container` max-width shell (`1040`) for the lesson workspace.
+- Added a six-mode lesson picker for flashcard, MCQ, sentence sort, typing, reading, and listening entry points; the Phase 2 inline conjugation widget remains the conditional conjugation anchor.
+- Added a term list under the flashcard zone with numbered term cards, reading/meaning, Kanji cross-link badge, and practice CTA.
+- TDD: new RED tests covered no Kanji tab, mode picker keys, term-list badges, and desktop max-width; targeted lesson/nav suite passed `54/54`.
+- Gate: `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean; full `flutter test --concurrency=1` passed `2426/2426`.
+
 # 2026-05-21 — Megaprompt Phase 2 conjugation layer done
 
 - Added `tool/research/generate_conjugation_corpus.js` with validation and generated `assets/data/content/conjugation/conjugation_corpus.json`.

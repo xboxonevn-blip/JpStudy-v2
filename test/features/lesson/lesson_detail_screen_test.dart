@@ -127,14 +127,20 @@ void main() {
     expect(find.textContaining('N2 / Minna No Nihongo 1'), findsNothing);
   });
 
-  testWidgets('shows tab bar with Vocab, Grammar, Kanji tabs', (tester) async {
+  testWidgets('lesson navigation hides empty Kanji tab', (tester) async {
     await tester.pumpWidget(buildScreen([_term(1, '犬', 'dog')]));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
     expect(find.text(AppLanguage.en.lessonVocabTabLabel), findsWidgets);
     expect(find.text(AppLanguage.en.flashcardsAction), findsWidgets);
     expect(find.text(AppLanguage.en.grammarLabel), findsWidgets);
-    expect(find.text(AppLanguage.en.kanjiLabel), findsWidgets);
+    expect(
+      find.descendant(
+        of: find.byType(TabBar),
+        matching: find.text(AppLanguage.en.kanjiLabel),
+      ),
+      findsNothing,
+    );
   });
 
   testWidgets('JA lesson tabs use Japanese labels', (tester) async {
@@ -148,7 +154,13 @@ void main() {
 
     expect(find.text(AppLanguage.ja.lessonVocabTabLabel), findsWidgets);
     expect(find.text(AppLanguage.ja.grammarLabel), findsWidgets);
-    expect(find.text(AppLanguage.ja.kanjiLabel), findsWidgets);
+    expect(
+      find.descendant(
+        of: find.byType(TabBar),
+        matching: find.text(AppLanguage.ja.kanjiLabel),
+      ),
+      findsNothing,
+    );
     expect(find.text(AppLanguage.vi.lessonVocabTabLabel), findsNothing);
     expect(find.text(AppLanguage.vi.grammarLabel), findsNothing);
     expect(find.text(AppLanguage.vi.kanjiLabel), findsNothing);
@@ -165,7 +177,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
 
-    expect(find.text('love'), findsOneWidget);
+    expect(find.text('love'), findsWidgets);
     expect(find.text('yêu'), findsNothing);
   });
 
@@ -182,7 +194,7 @@ void main() {
     expect(find.byTooltip(AppLanguage.en.starLabel), findsOneWidget);
   });
 
-  testWidgets('lesson tabs switch to grammar and kanji panels', (tester) async {
+  testWidgets('lesson tabs switch to grammar panel only', (tester) async {
     await tester.pumpWidget(buildScreen([_term(1, '犬', 'dog')]));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
@@ -193,13 +205,60 @@ void main() {
       DefaultTabController.of(tester.element(find.byType(TabBar))).index,
       1,
     );
-
-    await tester.tap(find.text(AppLanguage.en.kanjiLabel));
-    await tester.pump(const Duration(milliseconds: 350));
     expect(
-      DefaultTabController.of(tester.element(find.byType(TabBar))).index,
-      2,
+      find.descendant(
+        of: find.byType(TabBar),
+        matching: find.text(AppLanguage.en.kanjiLabel),
+      ),
+      findsNothing,
     );
+  });
+
+  testWidgets('lesson workspace shows mode picker and term list badges', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      buildScreen([_term(1, '学校', 'school', reading: 'がっこう')]),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.byKey(const ValueKey('lesson_mode_picker')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_mode_flashcard')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('lesson_mode_recognition')),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(const ValueKey('lesson_mode_sentence_sort')),
+      findsOneWidget,
+    );
+    expect(find.byKey(const ValueKey('lesson_mode_typing')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_mode_reading')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_mode_listening')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_term_list')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_term_card_1')), findsOneWidget);
+    expect(find.text('学校'), findsWidgets);
+    expect(find.text('Kanji'), findsWidgets);
+    expect(find.text('Practice'), findsWidgets);
+  });
+
+  testWidgets('lesson workspace constrains desktop content width', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1600, 1000);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(buildScreen([_term(1, '犬', 'dog')]));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    final box = tester.renderObject<RenderBox>(
+      find.byKey(const ValueKey('lesson_responsive_container')),
+    );
+    expect(box.size.width, lessThanOrEqualTo(1040));
   });
 
   testWidgets('curriculum lesson menu hides user-set editing actions', (
@@ -244,7 +303,9 @@ void main() {
       AppLanguage.en.readingLabel,
       AppLanguage.en.meaningLabel,
     ]) {
-      final text = tester.widget<Text>(find.text(label).first);
+      final text = tester
+          .widgetList<Text>(find.text(label))
+          .firstWhere((text) => text.style?.color != null);
       final color = text.style?.color;
       expect(color, isNotNull, reason: label);
       expect(

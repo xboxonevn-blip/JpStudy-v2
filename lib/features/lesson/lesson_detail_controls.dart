@@ -283,8 +283,8 @@ class _ModeSwitcher extends StatelessWidget {
   }
 }
 
-class _PracticeActions extends StatelessWidget {
-  const _PracticeActions({
+class _LessonModePicker extends StatelessWidget {
+  const _LessonModePicker({
     required this.language,
     required this.lessonId,
     required this.lessonTitle,
@@ -297,29 +297,55 @@ class _PracticeActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
+      key: const ValueKey('lesson_mode_picker'),
       spacing: 10,
       runSpacing: 10,
       alignment: WrapAlignment.center,
       children: [
         _PracticeButton(
+          key: const ValueKey('lesson_mode_flashcard'),
           label: language.flashcardsAction,
           onTap: () => context.openLessonLearn(lessonId, title: lessonTitle),
         ),
         _PracticeButton(
-          label: language.testModeLabel,
+          key: const ValueKey('lesson_mode_recognition'),
+          label: _modeLabel(language, 'MCQ', 'Trắc nghiệm', '選択'),
           onTap: () => context.openLessonTest(lessonId, title: lessonTitle),
         ),
         _PracticeButton(
-          label: language.writeModeLabel,
+          key: const ValueKey('lesson_mode_sentence_sort'),
+          label: _modeLabel(language, 'Sentence sort', 'Sắp câu', '並べ替え'),
+          onTap: () => context.openLessonMatch(lessonId, title: lessonTitle),
+        ),
+        _PracticeButton(
+          key: const ValueKey('lesson_mode_typing'),
+          label: language.writeModeTypingLabel,
           onTap: () => context.openLessonWrite(lessonId, title: lessonTitle),
+        ),
+        _PracticeButton(
+          key: const ValueKey('lesson_mode_reading'),
+          label: _modeLabel(language, 'Reading', 'Đọc hiểu', '読解'),
+          onTap: context.openJlptReading,
+        ),
+        _PracticeButton(
+          key: const ValueKey('lesson_mode_listening'),
+          label: _modeLabel(language, 'Listening', 'Nghe', '聴解'),
+          onTap: () => context.openLessonTest(lessonId, title: lessonTitle),
         ),
       ],
     );
   }
+
+  String _modeLabel(AppLanguage language, String en, String vi, String ja) =>
+      switch (language) {
+        AppLanguage.en => en,
+        AppLanguage.vi => vi,
+        AppLanguage.ja => ja,
+      };
 }
 
 class _PracticeButton extends StatelessWidget {
-  const _PracticeButton({required this.label, required this.onTap});
+  const _PracticeButton({super.key, required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
@@ -338,6 +364,152 @@ class _PracticeButton extends StatelessWidget {
       child: Text(label),
     );
   }
+}
+
+class _LessonTermList extends StatelessWidget {
+  const _LessonTermList({
+    required this.language,
+    required this.terms,
+    required this.lessonId,
+    required this.lessonTitle,
+  });
+
+  final AppLanguage language;
+  final List<UserLessonTermData> terms;
+  final int lessonId;
+  final String lessonTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    if (terms.isEmpty) return const SizedBox.shrink();
+    return Column(
+      key: const ValueKey('lesson_term_list'),
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(
+          _title(language),
+          style: Theme.of(
+            context,
+          ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+        ),
+        const SizedBox(height: 10),
+        for (var index = 0; index < terms.length; index++) ...[
+          _LessonTermCard(
+            language: language,
+            term: terms[index],
+            index: index,
+            lessonId: lessonId,
+            lessonTitle: lessonTitle,
+          ),
+          if (index != terms.length - 1) const SizedBox(height: 8),
+        ],
+      ],
+    );
+  }
+
+  String _title(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Terms in this lesson',
+    AppLanguage.vi => 'Từ trong bài',
+    AppLanguage.ja => 'この課の語彙',
+  };
+}
+
+class _LessonTermCard extends StatelessWidget {
+  const _LessonTermCard({
+    required this.language,
+    required this.term,
+    required this.index,
+    required this.lessonId,
+    required this.lessonTitle,
+  });
+
+  final AppLanguage language;
+  final UserLessonTermData term;
+  final int index;
+  final int lessonId;
+  final String lessonTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    final hasKanji = RegExp(r'[\u4E00-\u9FFF]').hasMatch(term.term);
+    return Container(
+      key: ValueKey('lesson_term_card_${term.id}'),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: palette.elevated,
+        border: Border.all(color: palette.outline),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CircleAvatar(
+            radius: 15,
+            backgroundColor: palette.primary.withValues(alpha: 0.12),
+            foregroundColor: palette.primary,
+            child: Text('${index + 1}'),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  term.term,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                if (term.reading.trim().isNotEmpty) ...[
+                  const SizedBox(height: 2),
+                  Text(
+                    term.reading.trim(),
+                    style: TextStyle(
+                      color: palette.ink.withValues(alpha: 0.64),
+                    ),
+                  ),
+                ],
+                const SizedBox(height: 4),
+                Text(term.displayDefinition(language)),
+                const SizedBox(height: 8),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 6,
+                  children: [
+                    if (hasKanji)
+                      ActionChip(
+                        label: Text(_kanjiLabel(language)),
+                        avatar: const Icon(Icons.hub_outlined, size: 16),
+                        onPressed: () => context.openKanji(),
+                      ),
+                    ActionChip(
+                      label: Text(_practiceLabel(language)),
+                      avatar: const Icon(Icons.play_arrow_rounded, size: 16),
+                      onPressed: () =>
+                          context.openLessonLearn(lessonId, title: lessonTitle),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _kanjiLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Kanji',
+    AppLanguage.vi => 'Kanji',
+    AppLanguage.ja => '漢字',
+  };
+
+  String _practiceLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Practice',
+    AppLanguage.vi => 'Luyện',
+    AppLanguage.ja => '練習',
+  };
 }
 
 class _FlashcardControls extends StatelessWidget {

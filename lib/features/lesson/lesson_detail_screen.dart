@@ -22,7 +22,6 @@ import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/shared/widgets/widgets.dart';
 import 'package:jpstudy/features/conjugation/widgets/conjugation_lesson_widget.dart';
 import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
-import 'package:jpstudy/features/lesson/widgets/kanji_list_widget.dart';
 import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -165,7 +164,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
     // _maybeAutoSpeak removed
 
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
         appBar: _focusMode
             ? null
@@ -212,7 +211,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                   tabs: [
                     Tab(text: language.lessonVocabTabLabel),
                     Tab(text: language.grammarLabel),
-                    Tab(text: language.kanjiLabel),
                   ],
                 ),
               ),
@@ -240,164 +238,189 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                       20,
                       24,
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        if (!_focusMode) ...[
-                          _ModeSwitcher(
-                            language: language,
-                            mode: _mode,
-                            onModeChanged: (mode) {
-                              setState(() {
-                                _mode = mode;
-                                _currentIndex = 0;
-                                _shuffledOrder = null;
-                                if (mode == _LessonMode.review) {
-                                  _resetReviewStats();
-                                }
-                              });
-                            },
-                          ),
-                          const SizedBox(height: 12),
-                          if (!termsAsync.isLoading)
-                            _StatsRow(
-                              language: language,
-                              total: terms.length,
-                              learned: learnedCount,
-                              due: dueCount,
-                            ),
-                          if (_mode == _LessonMode.review) ...[
-                            const SizedBox(height: 8),
-                            Text(language.reviewCountLabel(totalTerms)),
-                          ],
-                          const SizedBox(height: 12),
-                          _PracticeActions(
-                            language: language,
-                            lessonId: storageLessonId,
-                            lessonTitle: title,
-                          ),
-                          if (termsAsync.asData != null) ...[
-                            const SizedBox(height: 12),
-                            ConjugationLessonWidget(
-                              levelCode: level.shortLabel,
-                              lessonId: sourceLessonId,
-                            ),
-                          ],
-                          const SizedBox(height: 20),
-                        ],
-                        Center(
-                          child: ConstrainedBox(
-                            constraints: const BoxConstraints(maxWidth: 960),
-                            child: SizedBox(
-                              height: _focusMode ? 520 : 460,
-                              child: AnimatedSwitcher(
-                                duration: reducedMotionDuration(
-                                  context,
-                                  const Duration(milliseconds: 300),
+                    child: Center(
+                      child: ConstrainedBox(
+                        key: const ValueKey('lesson_responsive_container'),
+                        constraints: const BoxConstraints(maxWidth: 1040),
+                        child: SizedBox(
+                          width: double.infinity,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              if (!_focusMode) ...[
+                                _ModeSwitcher(
+                                  language: language,
+                                  mode: _mode,
+                                  onModeChanged: (mode) {
+                                    setState(() {
+                                      _mode = mode;
+                                      _currentIndex = 0;
+                                      _shuffledOrder = null;
+                                      if (mode == _LessonMode.review) {
+                                        _resetReviewStats();
+                                      }
+                                    });
+                                  },
                                 ),
-                                transitionBuilder: (child, animation) {
-                                  final offset = Tween<Offset>(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).animate(animation);
-                                  return SlideTransition(
-                                    position: offset,
-                                    child: child,
-                                  );
-                                },
-                                child: KeyedSubtree(
-                                  key: ValueKey(currentIndex),
-                                  child: _LessonCard(
+                                const SizedBox(height: 12),
+                                if (!termsAsync.isLoading)
+                                  _StatsRow(
                                     language: language,
-                                    termsAsync: activeTermsAsync,
-                                    term: currentTerm,
-                                    showHints: _showHints,
-                                    compactHint: _mode == _LessonMode.review,
-                                    isFlipped: isFlipped,
-                                    trackProgress: _trackProgress,
-                                    isStarred: isStarred,
-                                    emptyLabel: _mode == _LessonMode.review
-                                        ? language.reviewEmptyLabel
-                                        : null,
-                                    onShowHintsChanged: (value) =>
-                                        _updateShowHints(value),
-                                    onFlip: onFlip,
-                                    onEdit: null,
-                                    onStar: currentTerm == null
-                                        ? null
-                                        : () => _toggleStar(
-                                            currentTerm,
-                                            level,
-                                            storageLessonId,
-                                          ),
-                                    onStartLearning:
-                                        (_mode == _LessonMode.review &&
-                                            activeTerms.isEmpty &&
-                                            terms.isNotEmpty &&
-                                            learnedCount == 0)
-                                        ? _startLearning
-                                        : null,
+                                    total: terms.length,
+                                    learned: learnedCount,
+                                    due: dueCount,
+                                  ),
+                                if (_mode == _LessonMode.review) ...[
+                                  const SizedBox(height: 8),
+                                  Text(language.reviewCountLabel(totalTerms)),
+                                ],
+                                const SizedBox(height: 12),
+                                _LessonModePicker(
+                                  language: language,
+                                  lessonId: storageLessonId,
+                                  lessonTitle: title,
+                                ),
+                                if (termsAsync.asData != null) ...[
+                                  const SizedBox(height: 12),
+                                  ConjugationLessonWidget(
+                                    levelCode: level.shortLabel,
+                                    lessonId: sourceLessonId,
+                                  ),
+                                ],
+                                const SizedBox(height: 20),
+                              ],
+                              Center(
+                                child: ConstrainedBox(
+                                  constraints: const BoxConstraints(
+                                    maxWidth: 960,
+                                  ),
+                                  child: SizedBox(
+                                    height: _focusMode ? 520 : 460,
+                                    child: AnimatedSwitcher(
+                                      duration: reducedMotionDuration(
+                                        context,
+                                        const Duration(milliseconds: 300),
+                                      ),
+                                      transitionBuilder: (child, animation) {
+                                        final offset = Tween<Offset>(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).animate(animation);
+                                        return SlideTransition(
+                                          position: offset,
+                                          child: child,
+                                        );
+                                      },
+                                      child: KeyedSubtree(
+                                        key: ValueKey(currentIndex),
+                                        child: _LessonCard(
+                                          language: language,
+                                          termsAsync: activeTermsAsync,
+                                          term: currentTerm,
+                                          showHints: _showHints,
+                                          compactHint:
+                                              _mode == _LessonMode.review,
+                                          isFlipped: isFlipped,
+                                          trackProgress: _trackProgress,
+                                          isStarred: isStarred,
+                                          emptyLabel:
+                                              _mode == _LessonMode.review
+                                              ? language.reviewEmptyLabel
+                                              : null,
+                                          onShowHintsChanged: (value) =>
+                                              _updateShowHints(value),
+                                          onFlip: onFlip,
+                                          onEdit: null,
+                                          onStar: currentTerm == null
+                                              ? null
+                                              : () => _toggleStar(
+                                                  currentTerm,
+                                                  level,
+                                                  storageLessonId,
+                                                ),
+                                          onStartLearning:
+                                              (_mode == _LessonMode.review &&
+                                                  activeTerms.isEmpty &&
+                                                  terms.isNotEmpty &&
+                                                  learnedCount == 0)
+                                              ? _startLearning
+                                              : null,
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
+                              const SizedBox(height: 24),
+                              if (totalTerms > 0)
+                                _FlashcardControls(
+                                  language: language,
+                                  isShuffle: _shuffle,
+                                  isAutoPlay: _isAutoPlay,
+                                  onShuffle: _toggleShuffle,
+                                  onAutoPlay: () => _toggleAutoPlay(totalTerms),
+                                  onPrev: () => _goPrev(totalTerms),
+                                  onNext: () => _goNext(totalTerms),
+                                ),
+                              if (termsAsync.asData != null) ...[
+                                const SizedBox(height: 24),
+                                _LessonTermList(
+                                  language: language,
+                                  terms: terms,
+                                  lessonId: storageLessonId,
+                                  lessonTitle: title,
+                                ),
+                              ],
+                              if (_mode == _LessonMode.review) ...[
+                                const SizedBox(height: 16),
+                                if (srsState != null)
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 8),
+                                    child: Text(
+                                      language.retrievabilityPercentLabel(
+                                        (_fsrsService.retrievability(
+                                                  stability: srsState.stability,
+                                                  lastReviewedAt:
+                                                      srsState.lastReviewedAt,
+                                                ) *
+                                                100)
+                                            .round(),
+                                      ),
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodySmall
+                                          ?.copyWith(
+                                            color: context.appPalette.ink
+                                                .withValues(alpha: 0.7),
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                _ReviewActions(
+                                  language: language,
+                                  enabled: currentTerm != null,
+                                  onRate: currentTerm == null
+                                      ? null
+                                      : (level) => _reviewTerm(
+                                          currentTerm,
+                                          level.value,
+                                        ),
+                                ),
+                                const SizedBox(height: 12),
+                                _ReviewSummary(
+                                  language: language,
+                                  reviewed: _reviewedCount,
+                                  again: _reviewAgainCount,
+                                  hard: _reviewHardCount,
+                                  good: _reviewGoodCount,
+                                  easy: _reviewEasyCount,
+                                ),
+                              ],
+                            ],
                           ),
                         ),
-                        const SizedBox(height: 24),
-                        if (totalTerms > 0)
-                          _FlashcardControls(
-                            language: language,
-                            isShuffle: _shuffle,
-                            isAutoPlay: _isAutoPlay,
-                            onShuffle: _toggleShuffle,
-                            onAutoPlay: () => _toggleAutoPlay(totalTerms),
-                            onPrev: () => _goPrev(totalTerms),
-                            onNext: () => _goNext(totalTerms),
-                          ),
-                        if (_mode == _LessonMode.review) ...[
-                          const SizedBox(height: 16),
-                          if (srsState != null)
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 8),
-                              child: Text(
-                                language.retrievabilityPercentLabel(
-                                  (_fsrsService.retrievability(
-                                            stability: srsState.stability,
-                                            lastReviewedAt:
-                                                srsState.lastReviewedAt,
-                                          ) *
-                                          100)
-                                      .round(),
-                                ),
-                                style: Theme.of(context).textTheme.bodySmall
-                                    ?.copyWith(
-                                      color: context.appPalette.ink.withValues(
-                                        alpha: 0.7,
-                                      ),
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          _ReviewActions(
-                            language: language,
-                            enabled: currentTerm != null,
-                            onRate: currentTerm == null
-                                ? null
-                                : (level) =>
-                                      _reviewTerm(currentTerm, level.value),
-                          ),
-                          const SizedBox(height: 12),
-                          _ReviewSummary(
-                            language: language,
-                            reviewed: _reviewedCount,
-                            again: _reviewAgainCount,
-                            hard: _reviewHardCount,
-                            good: _reviewGoodCount,
-                            easy: _reviewEasyCount,
-                          ),
-                        ],
-                      ],
+                      ),
                     ),
                   );
                 },
@@ -408,7 +431,6 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
               level: level.shortLabel,
               language: language,
             ),
-            KanjiListWidget(lessonId: sourceLessonId),
           ],
         ),
       ),

@@ -20,6 +20,7 @@ import 'package:jpstudy/data/models/mistake_context.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/shared/widgets/widgets.dart';
+import 'package:jpstudy/features/conjugation/widgets/conjugation_lesson_widget.dart';
 import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
 import 'package:jpstudy/features/lesson/widgets/kanji_list_widget.dart';
 import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
@@ -275,6 +276,13 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                             lessonId: storageLessonId,
                             lessonTitle: title,
                           ),
+                          if (termsAsync.asData != null) ...[
+                            const SizedBox(height: 12),
+                            ConjugationLessonWidget(
+                              levelCode: level.shortLabel,
+                              lessonId: sourceLessonId,
+                            ),
+                          ],
                           const SizedBox(height: 20),
                         ],
                         Center(

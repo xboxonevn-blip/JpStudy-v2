@@ -1,0 +1,111 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jpstudy/app/navigation/app_navigation_extensions.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/data/db/content_database.dart';
+import 'package:jpstudy/data/repositories/conjugation_repository.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
+
+class ConjugationLessonWidget extends ConsumerWidget {
+  const ConjugationLessonWidget({
+    super.key,
+    required this.levelCode,
+    required this.lessonId,
+  });
+
+  final String levelCode;
+  final int lessonId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final language = ref.watch(appLanguageProvider);
+    final repo = ref.watch(conjugationRepositoryProvider);
+    return FutureBuilder<List<ConjugationLemmaData>>(
+      future: repo.fetchByLevel(levelCode),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) return const SizedBox.shrink();
+        final lemmas = snapshot.data!
+            .where((lemma) => lemma.lessonId == lessonId)
+            .take(8)
+            .toList(growable: false);
+        if (lemmas.isEmpty) return const SizedBox.shrink();
+        final ids = lemmas
+            .map((lemma) => lemma.contentVocabId)
+            .toList(growable: false);
+        return Card(
+          key: const ValueKey('lesson_conjugation_widget'),
+          margin: EdgeInsets.zero,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  children: [
+                    const Icon(Icons.swap_horiz_rounded),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        _title(language),
+                        style: Theme.of(context).textTheme.titleMedium
+                            ?.copyWith(fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                Text(_countLabel(language, lemmas.length)),
+                const SizedBox(height: 8),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: [
+                    for (final lemma in lemmas)
+                      Chip(
+                        visualDensity: VisualDensity.compact,
+                        label: Text(lemma.dictionaryForm),
+                      ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: FilledButton.icon(
+                    icon: const Icon(Icons.school_rounded),
+                    label: Text(_practiceLabel(language)),
+                    onPressed: () => context.openConjugationPractice(
+                      ConjugationPracticeArgs(
+                        contentVocabIds: ids,
+                        targetCount: 50,
+                        source: 'lesson_conjugation_widget',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  String _title(AppLanguage language) => switch (language) {
+    AppLanguage.vi => 'Chia thể trong bài',
+    AppLanguage.en => 'Conjugation in this lesson',
+    AppLanguage.ja => 'この課の活用',
+  };
+
+  String _countLabel(AppLanguage language, int count) => switch (language) {
+    AppLanguage.vi => '$count động từ/tính từ có thể luyện ngay.',
+    AppLanguage.en => '$count verb/adjective items are ready.',
+    AppLanguage.ja => '$count語を練習できます。',
+  };
+
+  String _practiceLabel(AppLanguage language) => switch (language) {
+    AppLanguage.vi => 'Luyện chia thể 50+ câu',
+    AppLanguage.en => 'Practice 50+ forms',
+    AppLanguage.ja => '50問以上の活用練習',
+  };
+}

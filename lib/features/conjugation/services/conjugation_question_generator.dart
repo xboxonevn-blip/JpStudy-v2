@@ -39,51 +39,69 @@ class ConjugationQuestionGenerator {
     required List<ConjugationLemmaData> lemmas,
     List<String>? formKeys,
     List<String>? directions,
-    int targetCount = 5,
+    int targetCount = 50,
   }) {
     if (lemmas.isEmpty || targetCount <= 0) return const [];
     final selectedForms = (formKeys == null || formKeys.isEmpty)
-        ? const ['te', 'nai', 'ta', 'masu']
+        ? const [
+            'dictionary',
+            'masu',
+            'nai',
+            'ta',
+            'te',
+            'ba',
+            'tara',
+            'volitional',
+            'potential',
+            'passive',
+            'causative',
+            'causativePassive',
+            'imperative',
+          ]
         : formKeys;
     final selectedDirections = (directions == null || directions.isEmpty)
         ? const ['produce', 'recognize']
         : directions;
 
     final questions = <ConjugationQuestion>[];
-    for (final lemma in lemmas) {
-      final spec = _specFor(lemma);
-      if (spec == null) continue;
-      for (final formKey in selectedForms) {
-        final form = _formFor(formKey);
-        if (form == null) continue;
-        final surface = _safeForm(lemma.dictionaryForm, spec, form);
-        if (surface == null) continue;
-        for (final direction in selectedDirections) {
-          final normalizedDirection = direction.trim();
-          if (normalizedDirection == 'produce') {
-            questions.add(
-              _produceQuestion(
-                lemma: lemma,
-                spec: spec,
-                form: form,
-                formKey: formKey,
-                correctSurface: surface,
-                peerLemmas: lemmas,
-              ),
-            );
-          } else if (normalizedDirection == 'recognize') {
-            questions.add(
-              _recognizeQuestion(
-                lemma: lemma,
-                formKey: formKey,
-                correctSurface: surface,
-                availableFormKeys: selectedForms,
-              ),
-            );
+    while (questions.length < targetCount) {
+      final beforePass = questions.length;
+      for (final lemma in lemmas) {
+        final spec = _specFor(lemma);
+        if (spec == null) continue;
+        for (final formKey in selectedForms) {
+          final form = _formFor(formKey);
+          if (form == null) continue;
+          final surface = _safeForm(lemma.dictionaryForm, spec, form);
+          if (surface == null) continue;
+          for (final direction in selectedDirections) {
+            final normalizedDirection = direction.trim();
+            if (normalizedDirection == 'produce') {
+              questions.add(
+                _produceQuestion(
+                  lemma: lemma,
+                  spec: spec,
+                  form: form,
+                  formKey: formKey,
+                  correctSurface: surface,
+                  peerLemmas: lemmas,
+                ),
+              );
+            } else if (normalizedDirection == 'recognize') {
+              questions.add(
+                _recognizeQuestion(
+                  lemma: lemma,
+                  formKey: formKey,
+                  correctSurface: surface,
+                  availableFormKeys: selectedForms,
+                ),
+              );
+            }
+            if (questions.length >= targetCount) return questions;
           }
-          if (questions.length >= targetCount) return questions;
         }
       }
+      if (questions.length == beforePass) break;
     }
     return questions;
   }

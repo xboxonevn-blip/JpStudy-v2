@@ -3,7 +3,7 @@ class ConjugationPracticeArgs {
     this.contentVocabIds,
     this.formKeys,
     this.directions,
-    this.targetCount = 5,
+    this.targetCount = 50,
     this.source = 'conjugation_practice',
     this.grammarId,
   });

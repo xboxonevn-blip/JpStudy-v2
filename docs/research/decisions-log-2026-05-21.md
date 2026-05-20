@@ -81,3 +81,23 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: It satisfies IA coverage without creating dead lesson pages or misattributing existing content. QA-A-030 extraction can later populate real Mimikara lesson indexes.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-009 - Generate conjugation corpus from current lemma bank
+**Phase**: 2
+**Date**: 2026-05-21 06:21 (local)
+**Context**: Phase 2 needs a dense conjugation corpus without waiting for QA-A-030 offline source extraction.
+**Options considered**: wait for Mimikara/Minna extraction | hand-author a small seed | generate from existing JMdict-matched app lemmas plus manual irregular seed
+**Chosen**: generate from existing JMdict-matched app lemmas plus manual irregular seed
+**Rationale**: Existing app lemmas already carry verb/adjective classes, giving 1,236 verbs and 747 adjectives with full required forms. Manual irregular seed covers 30 high-risk forms without copying copyrighted prose.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-010 - Gate inline conjugation widget behind loaded lesson terms
+**Phase**: 2
+**Date**: 2026-05-21 06:21 (local)
+**Context**: A lesson loading-state test intentionally disposes the tree while lesson terms are pending. Rendering the inline conjugation widget during that state starts unrelated DB async work and leaves a pending test timer.
+**Options considered**: change the test | make the widget eager but cancelable | render the inline widget only after lesson terms resolve
+**Chosen**: render the inline widget only after lesson terms resolve
+**Rationale**: The inline anchor is meaningful only after the lesson is known. Deferring it avoids unrelated async work during loading and preserves the conditional behavior required by Directive F.6.
+**Reversible**: yes
+**Owner review**: pending

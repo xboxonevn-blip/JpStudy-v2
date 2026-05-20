@@ -1,5 +1,15 @@
 # Autonomous Loop Status
 
+# 2026-05-21 — Megaprompt Phase 2 conjugation layer done
+
+- Added `tool/research/generate_conjugation_corpus.js` with validation and generated `assets/data/content/conjugation/conjugation_corpus.json`.
+- Corpus counts: `1236` verbs, `747` adjectives, `30` manual irregular seeds, and `0` missing required forms; generation error log is empty.
+- Raised default conjugation drill density to `50` questions and added a regression for default `>=50` generation with unique options.
+- Upgraded `/grammar/conjugation` to a searchable/filterable lemma list with a `Practice 50+ forms` entry point.
+- Added the inline `ConjugationLessonWidget` after lesson practice actions; it renders only after lesson terms load and only when the lesson has verb/adjective lemmas.
+- Root-caused the full-suite fail to eager inline conjugation DB loading during the lesson loading-state test; fixed by deferring the widget until lesson terms resolve.
+- Gate: corpus validator passed; conjugation focused suites passed; failing lesson loading-state regression passed; `flutter analyze lib test` clean; UI string guard `0`; `npm run test:research-tooling` passed `83/83`; full `flutter test --concurrency=1` passed `2424/2424`.
+
 # 2026-05-21 — Megaprompt Phase 0 done
 
 - Created 7 design docs under `docs/design/`: IA restructure, conjugation layer, exercise engine, lesson page, responsive, interlink graph, and home redesign.

@@ -66,4 +66,21 @@ void main() {
       expect(questions.single.options, contains('te form'));
     },
   );
+
+  test('default drill density is at least fifty questions', () {
+    final questions = ConjugationQuestionGenerator().build(
+      lemmas: [
+        lemma(id: 1, vocabId: 10, term: '帰る', klass: 'godanRu'),
+        lemma(id: 2, vocabId: 20, term: '起きる', klass: 'ichidan'),
+        lemma(id: 3, vocabId: 30, term: '書く', klass: 'godanKu'),
+        lemma(id: 4, vocabId: 40, term: '話す', klass: 'godanSu'),
+      ],
+    );
+
+    expect(questions.length, greaterThanOrEqualTo(50));
+    expect(
+      questions.every((q) => q.options.toSet().length == q.options.length),
+      isTrue,
+    );
+  });
 }

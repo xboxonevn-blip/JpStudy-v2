@@ -26,6 +26,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Conjugation hub / practice | Audited slice | Live VI/N5 proof opened `/#/grammar/conjugation`, saw `398 mục có nguồn sẵn sàng`, clicked `Luyện chia thể`, selected an answer, confirmed, and saw `Đúng` + `Câu tiếp`; console app errors were `0`. |
 | Onboarding language | Audited slice | Fresh live browser at 1366x768 selected `Tiếng Việt`, clicked Continue to level, selected N5, clicked Start, and reached VI/N5 home; QA-A-025 fixed the consent banner overlap. |
 | Lesson vocab flashcards / ghost grammar / lesson grammar / Practice copy | Audited slice | Static + live sweep found manual `Learned` and `Mark as Mastered` controls that updated progress without a learner gate, broken `v? d?` grammar example count copy, and machine-like Vietnamese copy. QA-A-027 removed the self-attestation controls, records ghost answers through grammar SRS, normalized learner-facing copy, deployed, and live proof confirmed the lesson/practice screens plus clean fresh CSP. |
+| P0 backlog live proof sweep | Audited slice | Rechecked old fixed-local P0 tickets after the latest deploy: QA-A-001 now routes `/#/exam-center` -> sidebar `Hồ sơ` -> `#/me` with the profile screen, and QA-A-004 now renders VI/N2 lesson 1 as `N2 / Shin Kanzen N2 Bài 1` with loaded Vocab and non-empty Grammar. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -33,6 +34,8 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Ticket | Area | Finding | Status |
 | --- | --- | --- | --- |
 | QA-A-018 | App Check | Deployable web builds could miss App Check activation. | Fixed + deployed |
+| QA-A-001 | Shell navigation | After visiting `/#/exam-center`, clicking sidebar `Hồ sơ` could route to the wrong branch. | Fixed + deployed |
+| QA-A-004 | Lesson title | Upper-JLPT lesson detail could show stale Minna titles instead of Shin Kanzen curriculum labels. | Fixed + deployed |
 | QA-A-019 | Grammar examples | Upper-level grammar examples could be blank because the flat object schema was not decoded. | Fixed + deployed |
 | QA-A-020 | Sentry | Sentry CDN was not allowed by Hosting CSP. | Fixed + deployed |
 | QA-A-021 | Grammar direct links | Direct grammar detail could load before active-level seed and stay loading/not-found. | Fixed + deployed |
@@ -96,6 +99,10 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-qa-a-027-practice-copy.png`
 - `output/playwright/live-qa-a-027-lesson-grammar-tab-copy.png`
 - `output/playwright/live-qa-a-027-fresh-csp-home.png`
+- `output/playwright/live-qa-a-001-before-profile-click.png`
+- `output/playwright/live-qa-a-001-profile-after-click.png`
+- `output/playwright/live-qa-a-004-n2-lesson-title-after-wait.png`
+- `output/playwright/live-qa-a-004-n2-lesson-grammar-tab-live.png`
 
 ## Notes For Next Sweep
 

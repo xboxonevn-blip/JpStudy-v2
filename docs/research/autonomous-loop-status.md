@@ -1050,3 +1050,10 @@
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live proof: VI/N5 lesson vocab flashcard shows the star action but no manual learned checkmark; lesson Grammar tab shows natural `10 ví dụ` copy instead of `v? d?`; Practice shows `Một lộ trình ngắn để giữ trí nhớ, củng cố điểm yếu...`; `main.dart.js` is `200/no-cache` and contains none of the stale `Mark as Mastered`, `Đánh dấu đã thuộc`, `Đã đánh dấu`, `v? d?`, `Dọn hàng`, `chặn rơi`, or `vá điểm yếu` strings.
 - Fresh live CSP proof: a new Chromium context loaded reCAPTCHA and Sentry CDN with no CSP violations and no Flutter/app exceptions; only the known headless App Check 403/throttle and WebGL readback warnings appeared.
+
+## 2026-05-20 P0 Backlog Live-Proof Cleanup
+
+- Rechecked old fixed-local P0 backlog rows after the latest deploy.
+- QA-A-001 live proof: fresh VI/N5 `/#/exam-center`, then sidebar `Hồ sơ`, changed the route to `#/me`, rendered the `Cá nhân` profile screen, and did not fall back to `/#/vocab`.
+- QA-A-004 live proof: fresh VI/N2 `/#/lesson/1?level=N2` rendered `N2 / Shin Kanzen N2 Bài 1`, not the stale Minna label; after load the Vocab card showed `73` terms, and the Grammar tab rendered N2 grammar with `28 ví dụ` plus `Bắt đầu học (25 câu)`.
+- No code changes in this cleanup; docs/backlog statuses now reflect the deployed live state.

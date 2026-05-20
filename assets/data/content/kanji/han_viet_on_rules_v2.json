@@ -4632,6 +4632,902 @@
           }
         ]
       }
+    },
+    {
+      "ruleId": "rule_exception_onbin_gemination",
+      "legacyId": "exception-onbin-gemination",
+      "section": "26",
+      "parentSection": null,
+      "category": "exception",
+      "title": "Biến âm: ku/tsu -> っ",
+      "consonants": [],
+      "targetRow": "促音",
+      "targetKana": [
+        "っ"
+      ],
+      "percentage": 84,
+      "explanation": "Trong từ ghép, một số âm ku/tsu rút lại thành âm ngắt nhỏ っ trước phụ âm kế tiếp.",
+      "legacyConfidence": 0.84,
+      "examples": [
+        {
+          "hanViet": "Học",
+          "kanji": "学",
+          "kanjiId": 2088,
+          "assetKanjiId": "n5_canonical_l19_k002",
+          "level": "N5",
+          "onyomi": "がく",
+          "romaji": "ガク",
+          "compound": "学",
+          "compoundKana": "まなぶ",
+          "compoundMeaning": "học tập",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Giáo",
+          "kanji": "校",
+          "kanjiId": 2100,
+          "assetKanjiId": "n5_canonical_l22_k002",
+          "level": "N5",
+          "onyomi": "こう",
+          "romaji": "コウ",
+          "compound": "校",
+          "compoundKana": "きょう",
+          "compoundMeaning": "trường học",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhất",
+          "kanji": "一",
+          "kanjiId": 2012,
+          "assetKanjiId": "n5_canonical_l01_k001",
+          "level": "N5",
+          "onyomi": "いち",
+          "romaji": "イチ",
+          "compound": "一",
+          "compoundKana": "いち",
+          "compoundMeaning": "Số 1",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Bôi",
+          "kanji": "杯",
+          "kanjiId": 1646,
+          "assetKanjiId": "n3_canonical_l11_k002",
+          "level": "N3",
+          "onyomi": "はい",
+          "romaji": "ハイ",
+          "compound": "乾杯",
+          "compoundKana": "かんぱい",
+          "compoundMeaning": "nâng cốc, cạn ly",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Quốc",
+          "kanji": "国",
+          "kanjiId": 1903,
+          "assetKanjiId": "n4_canonical_l10_k005",
+          "level": "N4",
+          "onyomi": "こく",
+          "romaji": "コク",
+          "compound": "国",
+          "compoundKana": "くに",
+          "compoundMeaning": "quốc gia",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Gia",
+          "kanji": "家",
+          "kanjiId": 1956,
+          "assetKanjiId": "n4_canonical_l18_k001",
+          "level": "N4",
+          "onyomi": "か",
+          "romaji": "カ",
+          "compound": "家",
+          "compoundKana": "いえ",
+          "compoundMeaning": "nhà ở",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_exception_onbin_gemination_日",
+            "kanji": "日",
+            "kanjiId": 2033,
+            "assetKanjiId": "n5_canonical_l06_k001",
+            "hanViet": "Nhật",
+            "correct": "にち",
+            "options": [
+              "にち",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Nhật dùng âm On chính thức của kanji; khi ghép từ, kiểm thêm biến âm っ."
+          },
+          {
+            "itemId": "rule_exception_onbin_gemination_記",
+            "kanji": "記",
+            "kanjiId": 1683,
+            "assetKanjiId": "n3_canonical_l14_k001",
+            "hanViet": "Kí",
+            "correct": "き",
+            "options": [
+              "こ",
+              "し",
+              "か",
+              "き"
+            ],
+            "explanation": "Kí dùng âm On chính thức của kanji; khi ghép từ, kiểm thêm biến âm っ."
+          },
+          {
+            "itemId": "rule_exception_onbin_gemination_期",
+            "kanji": "期",
+            "kanjiId": 1763,
+            "assetKanjiId": "n3_canonical_l20_k005",
+            "hanViet": "Kỳ",
+            "correct": "き",
+            "options": [
+              "し",
+              "か",
+              "き",
+              "こ"
+            ],
+            "explanation": "Kỳ dùng âm On chính thức của kanji; khi ghép từ, kiểm thêm biến âm っ."
+          },
+          {
+            "itemId": "rule_exception_onbin_gemination_石",
+            "kanji": "石",
+            "kanjiId": 2054,
+            "assetKanjiId": "n5_canonical_l11_k001",
+            "hanViet": "Thạch",
+            "correct": "せき",
+            "options": [
+              "かん",
+              "せき",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Thạch dùng âm On chính thức của kanji; khi ghép từ, kiểm thêm biến âm っ."
+          },
+          {
+            "itemId": "rule_exception_onbin_gemination_赤",
+            "kanji": "赤",
+            "kanjiId": 1899,
+            "assetKanjiId": "n4_canonical_l10_k001",
+            "hanViet": "Xích",
+            "correct": "せき",
+            "options": [
+              "せき",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Xích dùng âm On chính thức của kanji; khi ghép từ, kiểm thêm biến âm っ."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_exception_kun_mixed_readings",
+      "legacyId": "exception-kun-mixed-readings",
+      "section": "27",
+      "parentSection": null,
+      "category": "exception",
+      "title": "Ngoại lệ: âm Kun hoặc đọc hỗn hợp",
+      "consonants": [],
+      "targetRow": "KUN/MIXED",
+      "targetKana": [
+        "訓",
+        "混"
+      ],
+      "percentage": 90,
+      "explanation": "Một số từ rất phổ biến dùng âm Kun hoặc cách đọc hỗn hợp, nên không ép mọi cụm Hán tự thành âm On.",
+      "legacyConfidence": 0.9,
+      "examples": [
+        {
+          "hanViet": "Thủ",
+          "kanji": "手",
+          "kanjiId": 2034,
+          "assetKanjiId": "n5_canonical_l06_k002",
+          "level": "N5",
+          "onyomi": "しゅ",
+          "romaji": "シュ",
+          "compound": "手",
+          "compoundKana": "て",
+          "compoundMeaning": "tay",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Chỉ",
+          "kanji": "紙",
+          "kanjiId": 1961,
+          "assetKanjiId": "n4_canonical_l18_k006",
+          "level": "N4",
+          "onyomi": "し",
+          "romaji": "シ",
+          "compound": "紙",
+          "compoundKana": "かみ",
+          "compoundMeaning": "giấy",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Đại",
+          "kanji": "大",
+          "kanjiId": 2026,
+          "assetKanjiId": "n5_canonical_l04_k002",
+          "level": "N5",
+          "onyomi": "だい",
+          "romaji": "ダイ",
+          "compound": "大",
+          "compoundKana": "おおいに",
+          "compoundMeaning": "to lớn",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhân",
+          "kanji": "人",
+          "kanjiId": 2018,
+          "assetKanjiId": "n5_canonical_l02_k002",
+          "level": "N5",
+          "onyomi": "じん",
+          "romaji": "ジン",
+          "compound": "人",
+          "compoundKana": "ひと",
+          "compoundMeaning": "người",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Kim",
+          "kanji": "今",
+          "kanjiId": 2039,
+          "assetKanjiId": "n5_canonical_l07_k003",
+          "level": "N5",
+          "onyomi": "こん",
+          "romaji": "コン",
+          "compound": "今週",
+          "compoundKana": "こんしゅう",
+          "compoundMeaning": "tuần này",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhật",
+          "kanji": "日",
+          "kanjiId": 2033,
+          "assetKanjiId": "n5_canonical_l06_k001",
+          "level": "N5",
+          "onyomi": "にち",
+          "romaji": "ニチ",
+          "compound": "日",
+          "compoundKana": "にち",
+          "compoundMeaning": "ngày (đếm ngày trong tháng)",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_exception_kun_mixed_readings_上",
+            "kanji": "上",
+            "kanjiId": 2023,
+            "assetKanjiId": "n5_canonical_l03_k003",
+            "hanViet": "Thượng",
+            "correct": "じょう",
+            "options": [
+              "じょう",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Thượng có âm On cần nhận biết, nhưng từ thật có thể dùng Kun hoặc đọc hỗn hợp."
+          },
+          {
+            "itemId": "rule_exception_kun_mixed_readings_下",
+            "kanji": "下",
+            "kanjiId": 2024,
+            "assetKanjiId": "n5_canonical_l03_k004",
+            "hanViet": "Hạ",
+            "correct": "か",
+            "options": [
+              "き",
+              "こ",
+              "し",
+              "か"
+            ],
+            "explanation": "Hạ có âm On cần nhận biết, nhưng từ thật có thể dùng Kun hoặc đọc hỗn hợp."
+          },
+          {
+            "itemId": "rule_exception_kun_mixed_readings_山",
+            "kanji": "山",
+            "kanjiId": 2031,
+            "assetKanjiId": "n5_canonical_l05_k003",
+            "hanViet": "San",
+            "correct": "さん",
+            "options": [
+              "じん",
+              "かん",
+              "さん",
+              "とう"
+            ],
+            "explanation": "San có âm On cần nhận biết, nhưng từ thật có thể dùng Kun hoặc đọc hỗn hợp."
+          },
+          {
+            "itemId": "rule_exception_kun_mixed_readings_水",
+            "kanji": "水",
+            "kanjiId": 2040,
+            "assetKanjiId": "n5_canonical_l07_k004",
+            "hanViet": "Thủy",
+            "correct": "すい",
+            "options": [
+              "かん",
+              "すい",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Thủy có âm On cần nhận biết, nhưng từ thật có thể dùng Kun hoặc đọc hỗn hợp."
+          },
+          {
+            "itemId": "rule_exception_kun_mixed_readings_火",
+            "kanji": "火",
+            "kanjiId": 2041,
+            "assetKanjiId": "n5_canonical_l08_k001",
+            "hanViet": "Hỏa",
+            "correct": "か",
+            "options": [
+              "か",
+              "き",
+              "こ",
+              "し"
+            ],
+            "explanation": "Hỏa có âm On cần nhận biết, nhưng từ thật có thể dùng Kun hoặc đọc hỗn hợp."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_exception_word_level_han_viet",
+      "legacyId": "exception-word-level-han-viet",
+      "section": "28",
+      "parentSection": null,
+      "category": "exception",
+      "title": "Đoán từng chữ rồi ghép âm",
+      "consonants": [],
+      "targetRow": "COMPOUND",
+      "targetKana": [
+        "熟語"
+      ],
+      "percentage": 86,
+      "explanation": "Âm Hán-Việt của cả cụm không map trực tiếp sang kana; hãy đoán từng chữ rồi áp dụng quy tắc từ ghép Nhật.",
+      "legacyConfidence": 0.86,
+      "examples": [
+        {
+          "hanViet": "Quốc",
+          "kanji": "国",
+          "kanjiId": 1903,
+          "assetKanjiId": "n4_canonical_l10_k005",
+          "level": "N4",
+          "onyomi": "こく",
+          "romaji": "コク",
+          "compound": "国",
+          "compoundKana": "くに",
+          "compoundMeaning": "quốc gia",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Gia",
+          "kanji": "家",
+          "kanjiId": 1956,
+          "assetKanjiId": "n4_canonical_l18_k001",
+          "level": "N4",
+          "onyomi": "か",
+          "romaji": "カ",
+          "compound": "家",
+          "compoundKana": "いえ",
+          "compoundMeaning": "nhà ở",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhật",
+          "kanji": "日",
+          "kanjiId": 2033,
+          "assetKanjiId": "n5_canonical_l06_k001",
+          "level": "N5",
+          "onyomi": "にち",
+          "romaji": "ニチ",
+          "compound": "日",
+          "compoundKana": "にち",
+          "compoundMeaning": "ngày (đếm ngày trong tháng)",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Kí",
+          "kanji": "記",
+          "kanjiId": 1683,
+          "assetKanjiId": "n3_canonical_l14_k001",
+          "level": "N3",
+          "onyomi": "き",
+          "romaji": "キ",
+          "compound": "日記",
+          "compoundKana": "にっき",
+          "compoundMeaning": "nhật ký",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Học",
+          "kanji": "学",
+          "kanjiId": 2088,
+          "assetKanjiId": "n5_canonical_l19_k002",
+          "level": "N5",
+          "onyomi": "がく",
+          "romaji": "ガク",
+          "compound": "学",
+          "compoundKana": "まなぶ",
+          "compoundMeaning": "học tập",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Kỳ",
+          "kanji": "期",
+          "kanjiId": 1763,
+          "assetKanjiId": "n3_canonical_l20_k005",
+          "level": "N3",
+          "onyomi": "き",
+          "romaji": "キ",
+          "compound": "短期",
+          "compoundKana": "たんき",
+          "compoundMeaning": "ngắn hạn",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_exception_word_level_han_viet_校",
+            "kanji": "校",
+            "kanjiId": 2100,
+            "assetKanjiId": "n5_canonical_l22_k002",
+            "hanViet": "Giáo",
+            "correct": "こう",
+            "options": [
+              "こう",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Giáo là một mảnh của từ ghép; nhận diện âm On từng chữ trước khi ghép."
+          },
+          {
+            "itemId": "rule_exception_word_level_han_viet_行",
+            "kanji": "行",
+            "kanjiId": 2075,
+            "assetKanjiId": "n5_canonical_l16_k002",
+            "hanViet": "Hành",
+            "correct": "こう",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "こう"
+            ],
+            "explanation": "Hành là một mảnh của từ ghép; nhận diện âm On từng chữ trước khi ghép."
+          },
+          {
+            "itemId": "rule_exception_word_level_han_viet_上",
+            "kanji": "上",
+            "kanjiId": 2023,
+            "assetKanjiId": "n5_canonical_l03_k003",
+            "hanViet": "Thượng",
+            "correct": "じょう",
+            "options": [
+              "じん",
+              "かん",
+              "じょう",
+              "とう"
+            ],
+            "explanation": "Thượng là một mảnh của từ ghép; nhận diện âm On từng chữ trước khi ghép."
+          },
+          {
+            "itemId": "rule_exception_word_level_han_viet_下",
+            "kanji": "下",
+            "kanjiId": 2024,
+            "assetKanjiId": "n5_canonical_l03_k004",
+            "hanViet": "Hạ",
+            "correct": "か",
+            "options": [
+              "し",
+              "か",
+              "き",
+              "こ"
+            ],
+            "explanation": "Hạ là một mảnh của từ ghép; nhận diện âm On từng chữ trước khi ghép."
+          },
+          {
+            "itemId": "rule_exception_word_level_han_viet_人",
+            "kanji": "人",
+            "kanjiId": 2018,
+            "assetKanjiId": "n5_canonical_l02_k002",
+            "hanViet": "Nhân",
+            "correct": "じん",
+            "options": [
+              "じん",
+              "とう",
+              "かん",
+              "せつ"
+            ],
+            "explanation": "Nhân là một mảnh của từ ghép; nhận diện âm On từng chữ trước khi ghép."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_exception_check_dictionary_before_drill",
+      "legacyId": "exception-check-dictionary-before-drill",
+      "section": "29",
+      "parentSection": null,
+      "category": "exception",
+      "title": "Luôn kiểm từ điển trước khi luyện",
+      "consonants": [],
+      "targetRow": "DICTIONARY",
+      "targetKana": [
+        "辞書"
+      ],
+      "percentage": 96,
+      "explanation": "Quy tắc Hán-Việt chỉ tạo ứng viên; bài luyện phải giữ cách đọc đã được dữ liệu chính thức xác nhận.",
+      "legacyConfidence": 0.96,
+      "examples": [
+        {
+          "hanViet": "Hành",
+          "kanji": "行",
+          "kanjiId": 2075,
+          "assetKanjiId": "n5_canonical_l16_k002",
+          "level": "N5",
+          "onyomi": "こう",
+          "romaji": "コウ",
+          "compound": "行",
+          "compoundKana": "いき",
+          "compoundMeaning": "đi",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thượng",
+          "kanji": "上",
+          "kanjiId": 2023,
+          "assetKanjiId": "n5_canonical_l03_k003",
+          "level": "N5",
+          "onyomi": "じょう",
+          "romaji": "ジョウ",
+          "compound": "上",
+          "compoundKana": "うえ",
+          "compoundMeaning": "trên",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Sanh",
+          "kanji": "生",
+          "kanjiId": 2057,
+          "assetKanjiId": "n5_canonical_l11_k004",
+          "level": "N5",
+          "onyomi": "せい",
+          "romaji": "セイ",
+          "compound": "生",
+          "compoundKana": "う",
+          "compoundMeaning": "sinh ra",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Hạ",
+          "kanji": "下",
+          "kanjiId": 2024,
+          "assetKanjiId": "n5_canonical_l03_k004",
+          "level": "N5",
+          "onyomi": "か",
+          "romaji": "カ",
+          "compound": "下",
+          "compoundKana": "した",
+          "compoundMeaning": "dưới",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhật",
+          "kanji": "日",
+          "kanjiId": 2033,
+          "assetKanjiId": "n5_canonical_l06_k001",
+          "level": "N5",
+          "onyomi": "にち",
+          "romaji": "ニチ",
+          "compound": "日",
+          "compoundKana": "にち",
+          "compoundMeaning": "ngày (đếm ngày trong tháng)",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Nhân",
+          "kanji": "人",
+          "kanjiId": 2018,
+          "assetKanjiId": "n5_canonical_l02_k002",
+          "level": "N5",
+          "onyomi": "じん",
+          "romaji": "ジン",
+          "compound": "人",
+          "compoundKana": "ひと",
+          "compoundMeaning": "người",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_exception_check_dictionary_before_drill_大",
+            "kanji": "大",
+            "kanjiId": 2026,
+            "assetKanjiId": "n5_canonical_l04_k002",
+            "hanViet": "Đại",
+            "correct": "だい",
+            "options": [
+              "だい",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Đại có nhiều khả năng đọc; chọn âm On đang được dữ liệu học xác nhận."
+          },
+          {
+            "itemId": "rule_exception_check_dictionary_before_drill_小",
+            "kanji": "小",
+            "kanjiId": 2028,
+            "assetKanjiId": "n5_canonical_l04_k004",
+            "hanViet": "Tiểu",
+            "correct": "しょう",
+            "options": [
+              "とう",
+              "じん",
+              "かん",
+              "しょう"
+            ],
+            "explanation": "Tiểu có nhiều khả năng đọc; chọn âm On đang được dữ liệu học xác nhận."
+          },
+          {
+            "itemId": "rule_exception_check_dictionary_before_drill_中",
+            "kanji": "中",
+            "kanjiId": 2042,
+            "assetKanjiId": "n5_canonical_l08_k002",
+            "hanViet": "Trung",
+            "correct": "ちゅう",
+            "options": [
+              "じん",
+              "かん",
+              "ちゅう",
+              "とう"
+            ],
+            "explanation": "Trung có nhiều khả năng đọc; chọn âm On đang được dữ liệu học xác nhận."
+          },
+          {
+            "itemId": "rule_exception_check_dictionary_before_drill_長",
+            "kanji": "長",
+            "kanjiId": 2094,
+            "assetKanjiId": "n5_canonical_l20_k004",
+            "hanViet": "Trường",
+            "correct": "ちょう",
+            "options": [
+              "かん",
+              "ちょう",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Trường có nhiều khả năng đọc; chọn âm On đang được dữ liệu học xác nhận."
+          },
+          {
+            "itemId": "rule_exception_check_dictionary_before_drill_重",
+            "kanji": "重",
+            "kanjiId": 1658,
+            "assetKanjiId": "n3_canonical_l12_k001",
+            "hanViet": "Trọng",
+            "correct": "じゅう",
+            "options": [
+              "じゅう",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Trọng có nhiều khả năng đọc; chọn âm On đang được dữ liệu học xác nhận."
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "rule_usage_kanji_compounds_use_on",
+      "legacyId": "usage-kanji-compounds-often-use-on",
+      "section": "30",
+      "parentSection": null,
+      "category": "usage",
+      "title": "Từ ghép Hán tự thường dùng âm On",
+      "consonants": [],
+      "targetRow": "ON",
+      "targetKana": [
+        "おん"
+      ],
+      "percentage": 88,
+      "explanation": "Khi nhiều kanji ghép thành một từ gốc Hán, âm On thường là điểm xuất phát tốt trước khi kiểm từ cụ thể.",
+      "legacyConfidence": 0.9,
+      "examples": [
+        {
+          "hanViet": "Học",
+          "kanji": "学",
+          "kanjiId": 2088,
+          "assetKanjiId": "n5_canonical_l19_k002",
+          "level": "N5",
+          "onyomi": "がく",
+          "romaji": "ガク",
+          "compound": "学",
+          "compoundKana": "まなぶ",
+          "compoundMeaning": "học tập",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Giáo",
+          "kanji": "校",
+          "kanjiId": 2100,
+          "assetKanjiId": "n5_canonical_l22_k002",
+          "level": "N5",
+          "onyomi": "こう",
+          "romaji": "コウ",
+          "compound": "校",
+          "compoundKana": "きょう",
+          "compoundMeaning": "trường học",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Xã",
+          "kanji": "社",
+          "kanjiId": 1902,
+          "assetKanjiId": "n4_canonical_l10_k004",
+          "level": "N4",
+          "onyomi": "しゃ",
+          "romaji": "シャ",
+          "compound": "社",
+          "compoundKana": "やしろ",
+          "compoundMeaning": "công ty",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Điện",
+          "kanji": "電",
+          "kanjiId": 2111,
+          "assetKanjiId": "n5_canonical_l25_k001",
+          "level": "N5",
+          "onyomi": "でん",
+          "romaji": "デン",
+          "compound": "電話",
+          "compoundKana": "でんわ",
+          "compoundMeaning": "điện thoại",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Thoại",
+          "kanji": "話",
+          "kanjiId": 2110,
+          "assetKanjiId": "n5_canonical_l24_k004",
+          "level": "N5",
+          "onyomi": "わ",
+          "romaji": "ワ",
+          "compound": "話",
+          "compoundKana": "はなし",
+          "compoundMeaning": "cuộc nói chuyện/câu chuyện",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Ngữ",
+          "kanji": "語",
+          "kanjiId": 2002,
+          "assetKanjiId": "n4_canonical_l24_k005",
+          "level": "N4",
+          "onyomi": "ご",
+          "romaji": "ゴ",
+          "compound": "英語",
+          "compoundKana": "えいご",
+          "compoundMeaning": "tiếng anh",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_usage_kanji_compounds_use_on_国",
+            "kanji": "国",
+            "kanjiId": 1903,
+            "assetKanjiId": "n4_canonical_l10_k005",
+            "hanViet": "Quốc",
+            "correct": "こく",
+            "options": [
+              "こく",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Quốc là kanji hay gặp trong từ ghép; ưu tiên nhận diện âm On trước."
+          },
+          {
+            "itemId": "rule_usage_kanji_compounds_use_on_家",
+            "kanji": "家",
+            "kanjiId": 1956,
+            "assetKanjiId": "n4_canonical_l18_k001",
+            "hanViet": "Gia",
+            "correct": "か",
+            "options": [
+              "き",
+              "こ",
+              "し",
+              "か"
+            ],
+            "explanation": "Gia là kanji hay gặp trong từ ghép; ưu tiên nhận diện âm On trước."
+          },
+          {
+            "itemId": "rule_usage_kanji_compounds_use_on_銀",
+            "kanji": "銀",
+            "kanjiId": 1798,
+            "assetKanjiId": "n3_canonical_l23_k002",
+            "hanViet": "Ngân",
+            "correct": "ぎん",
+            "options": [
+              "じん",
+              "かん",
+              "ぎん",
+              "とう"
+            ],
+            "explanation": "Ngân là kanji hay gặp trong từ ghép; ưu tiên nhận diện âm On trước."
+          },
+          {
+            "itemId": "rule_usage_kanji_compounds_use_on_行",
+            "kanji": "行",
+            "kanjiId": 2075,
+            "assetKanjiId": "n5_canonical_l16_k002",
+            "hanViet": "Hành",
+            "correct": "こう",
+            "options": [
+              "かん",
+              "こう",
+              "とう",
+              "じん"
+            ],
+            "explanation": "Hành là kanji hay gặp trong từ ghép; ưu tiên nhận diện âm On trước."
+          },
+          {
+            "itemId": "rule_usage_kanji_compounds_use_on_先",
+            "kanji": "先",
+            "kanjiId": 2076,
+            "assetKanjiId": "n5_canonical_l16_k003",
+            "hanViet": "Tiên",
+            "correct": "せん",
+            "options": [
+              "せん",
+              "とう",
+              "じん",
+              "かん"
+            ],
+            "explanation": "Tiên là kanji hay gặp trong từ ghép; ưu tiên nhận diện âm On trước."
+          }
+        ]
+      }
     }
   ]
 }

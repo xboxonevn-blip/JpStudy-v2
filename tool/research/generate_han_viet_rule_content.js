@@ -485,6 +485,178 @@ const RULE_SPECS = [
       "Một số vần Hán-Việt -inh/-anh/-ênh chuyển thành trường âm ei trong On'yomi.",
     priorityKanji: ['生', '成', '名', '明', '平', '正', '声', '英'],
   },
+  {
+    ruleId: 'rule_exception_onbin_gemination',
+    legacyId: 'exception-onbin-gemination',
+    section: '26',
+    category: 'exception',
+    title: 'Biến âm: ku/tsu -> っ',
+    consonants: [],
+    targetRow: '促音',
+    targetKana: ['っ'],
+    percentage: 84,
+    explanation:
+      "Trong từ ghép, một số âm ku/tsu rút lại thành âm ngắt nhỏ っ trước phụ âm kế tiếp.",
+    candidateKanji: [
+      '学',
+      '校',
+      '一',
+      '杯',
+      '国',
+      '家',
+      '日',
+      '記',
+      '期',
+      '石',
+      '赤',
+      '悪',
+      '楽',
+      '薬',
+      '的',
+      '積',
+      '出',
+    ],
+    practiceExplanation:
+      '{hanViet} dùng âm On chính thức của kanji; khi ghép từ, kiểm thêm biến âm っ.',
+  },
+  {
+    ruleId: 'rule_exception_kun_mixed_readings',
+    legacyId: 'exception-kun-mixed-readings',
+    section: '27',
+    category: 'exception',
+    title: 'Ngoại lệ: âm Kun hoặc đọc hỗn hợp',
+    consonants: [],
+    targetRow: 'KUN/MIXED',
+    targetKana: ['訓', '混'],
+    percentage: 90,
+    explanation:
+      "Một số từ rất phổ biến dùng âm Kun hoặc cách đọc hỗn hợp, nên không ép mọi cụm Hán tự thành âm On.",
+    candidateKanji: [
+      '手',
+      '紙',
+      '大',
+      '人',
+      '今',
+      '日',
+      '上',
+      '下',
+      '山',
+      '川',
+      '水',
+      '火',
+      '木',
+      '金',
+      '女',
+      '男',
+      '子',
+      '母',
+      '父',
+    ],
+    practiceExplanation:
+      '{hanViet} có âm On cần nhận biết, nhưng từ thật có thể dùng Kun hoặc đọc hỗn hợp.',
+  },
+  {
+    ruleId: 'rule_exception_word_level_han_viet',
+    legacyId: 'exception-word-level-han-viet',
+    section: '28',
+    category: 'exception',
+    title: 'Đoán từng chữ rồi ghép âm',
+    consonants: [],
+    targetRow: 'COMPOUND',
+    targetKana: ['熟語'],
+    percentage: 86,
+    explanation:
+      "Âm Hán-Việt của cả cụm không map trực tiếp sang kana; hãy đoán từng chữ rồi áp dụng quy tắc từ ghép Nhật.",
+    candidateKanji: [
+      '国',
+      '家',
+      '日',
+      '記',
+      '学',
+      '期',
+      '校',
+      '行',
+      '上',
+      '下',
+      '人',
+      '大',
+      '小',
+      '中',
+      '明',
+      '東',
+      '西',
+      '南',
+      '北',
+    ],
+    practiceExplanation:
+      '{hanViet} là một mảnh của từ ghép; nhận diện âm On từng chữ trước khi ghép.',
+  },
+  {
+    ruleId: 'rule_exception_check_dictionary_before_drill',
+    legacyId: 'exception-check-dictionary-before-drill',
+    section: '29',
+    category: 'exception',
+    title: 'Luôn kiểm từ điển trước khi luyện',
+    consonants: [],
+    targetRow: 'DICTIONARY',
+    targetKana: ['辞書'],
+    percentage: 96,
+    explanation:
+      "Quy tắc Hán-Việt chỉ tạo ứng viên; bài luyện phải giữ cách đọc đã được dữ liệu chính thức xác nhận.",
+    candidateKanji: [
+      '行',
+      '上',
+      '生',
+      '下',
+      '日',
+      '人',
+      '大',
+      '小',
+      '中',
+      '長',
+      '重',
+      '楽',
+      '明',
+      '一',
+      '分',
+      '間',
+    ],
+    practiceExplanation:
+      '{hanViet} có nhiều khả năng đọc; chọn âm On đang được dữ liệu học xác nhận.',
+  },
+  {
+    ruleId: 'rule_usage_kanji_compounds_use_on',
+    legacyId: 'usage-kanji-compounds-often-use-on',
+    section: '30',
+    category: 'usage',
+    title: 'Từ ghép Hán tự thường dùng âm On',
+    consonants: [],
+    targetRow: 'ON',
+    targetKana: ['おん'],
+    percentage: 88,
+    explanation:
+      "Khi nhiều kanji ghép thành một từ gốc Hán, âm On thường là điểm xuất phát tốt trước khi kiểm từ cụ thể.",
+    candidateKanji: [
+      '学',
+      '校',
+      '社',
+      '電',
+      '話',
+      '語',
+      '国',
+      '家',
+      '銀',
+      '行',
+      '先',
+      '生',
+      '時',
+      '間',
+      '店',
+      '駅',
+    ],
+    practiceExplanation:
+      '{hanViet} là kanji hay gặp trong từ ghép; ưu tiên nhận diện âm On trước.',
+  },
 ];
 
 function readJson(file) {
@@ -691,7 +863,7 @@ function levelRank(level) {
 }
 
 function kanjiPriority(spec, kanji) {
-  const order = spec.priorityKanji || [];
+  const order = spec.priorityKanji || spec.candidateKanji || [];
   const index = order.indexOf(kanji);
   return index === -1 ? order.length : index;
 }
@@ -834,7 +1006,11 @@ function buildPracticeItems(ruleId, spec, candidates, allEntries) {
   return candidates.slice(6, 11).map((entry, index) => {
     const options = rotateOptions(entry.onyomi, optionPoolFor(entry, allEntries), index);
     const initial = firstConsonant(entry.hanViet).toUpperCase();
-    const explanation = spec.hanVietEndings?.length
+    const explanation = spec.practiceExplanation
+      ? spec.practiceExplanation
+          .replace('{hanViet}', entry.hanViet)
+          .replace('{targetRow}', spec.targetRow)
+      : spec.hanVietEndings?.length
       ? `${entry.hanViet} có âm cuối ${spec.hanVietEndings.join(
           '/',
         )}; mẫu Hán-Việt này thường về ${spec.targetRow} trong On'yomi.`
@@ -861,6 +1037,9 @@ function normalizeRuleConsonant(value) {
 }
 
 function matchesRuleSpec(entry, spec) {
+  if (spec.candidateKanji?.length) {
+    return spec.candidateKanji.includes(entry.kanji);
+  }
   if (spec.hanVietEndings?.length && spec.onyomiEndings?.length) {
     const syllable = normalizeVietnamese(firstSyllable(entry.hanViet));
     return (

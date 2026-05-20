@@ -207,7 +207,7 @@ class DailySessionSummaryScreen extends ConsumerWidget {
         if (totalDue == 0 && totalFix == 0) {
           return 'Hàng đợi đã sạch. Ngày mai có thể bắt đầu bằng bài mới hoặc immersion sâu hơn.';
         }
-        return 'Vẫn còn mục chưa xử lý. Ngày mai hãy dọn review đến hạn trước, rồi xử lý điểm yếu.';
+        return 'Vẫn còn mục chưa xử lý. Ngày mai hãy ôn các mục đến hạn trước, rồi củng cố điểm yếu.';
     }
   }
 }

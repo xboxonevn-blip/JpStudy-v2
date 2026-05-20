@@ -1057,3 +1057,13 @@
 - QA-A-001 live proof: fresh VI/N5 `/#/exam-center`, then sidebar `Hồ sơ`, changed the route to `#/me`, rendered the `Cá nhân` profile screen, and did not fall back to `/#/vocab`.
 - QA-A-004 live proof: fresh VI/N2 `/#/lesson/1?level=N2` rendered `N2 / Shin Kanzen N2 Bài 1`, not the stale Minna label; after load the Vocab card showed `73` terms, and the Grammar tab rendered N2 grammar with `28 ví dụ` plus `Bắt đầu học (25 câu)`.
 - No code changes in this cleanup; docs/backlog statuses now reflect the deployed live state.
+
+## 2026-05-20 QA-A-028/QA-A-029 Copy And Vocab Cold-Route Batch
+
+- Completed the dirty batch from the Directive D sweep: QA-A-028 replaced Home/Library Vietnamese copy such as `dọn review`, `dọn hàng đợi`, mixed `level`/`lesson`, and live-caught `TÍN HIỆU LEVEL` with learner-facing Vietnamese copy.
+- Fixed QA-A-029: Vocab hub no longer waits for ContentDB-backed catalog/review providers before first paint. Catalog counts now come from bundled asset manifests/counts, and the screen renders a `VocabHomeSection` fallback while review-home data is loading or unavailable.
+- Connected defect logged for next queue: QA-A-030 covers the same cold direct-route loading class on fresh `/#/grammar` and `/#/kanji`.
+- Verified locally: focused copy/vocab suite passed `56/56`, `flutter analyze lib test` clean, UI string guard `0`, `git diff --check` clean, and full `flutter test` passed `2392/2392`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof after deploy: fresh VI/N5 `/#/vocab` rendered `Hôm nay`, `Tra nhanh từ vựng`, `Học phần cốt lõi`, `Hajimete no Nihongo Tango`, `Minna no Nihongo I`, and `1,327 mục từ`; `Ôn ngay` opened `Ôn N5`; `Minna no Nihongo I` opened the lesson catalog with `Bài 1`, `51 từ trong bài này`, and progress copy.
+- Live proof after deploy: VI/N2 Home, Daily Summary, and Library copy sweep found no `dọn review`, `dọn hàng đợi`, `TÍN HIỆU LEVEL`, `level `, or `lesson ` leaks. Proof JSON: `output/playwright/live-qaa028-qaa029-proof.json`. Headless App Check 403/throttle messages were ignored as environment-only Firebase App Check noise; no Flutter app exception was observed.

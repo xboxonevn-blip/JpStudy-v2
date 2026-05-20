@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -234,6 +236,7 @@ VocabItem _item(int id, String term, String level) => VocabItem(
 Widget _buildScreen({
   required LessonRepository repo,
   StudyLevel level = StudyLevel.n5,
+  Future<List<UserLessonTermData>> Function()? allDueTerms,
 }) {
   return ProviderScope(
     overrides: [
@@ -255,7 +258,11 @@ Widget _buildScreen({
           ),
         ),
       ),
-      allDueTermsProvider.overrideWith((ref) async => const []),
+      allDueTermsProvider.overrideWith(
+        (ref) => allDueTerms == null
+            ? Future.value(const <UserLessonTermData>[])
+            : allDueTerms(),
+      ),
       nextVocabReviewProvider.overrideWith((ref) => Stream.value(null)),
     ],
     child: const MaterialApp(home: VocabScreen()),
@@ -387,7 +394,7 @@ void main() {
   });
 
   test(
-    'vocabCatalogProvider counts all tracks without hydrating rows',
+    'vocabCatalogProvider builds hub catalog without opening content DB counts',
     () async {
       final repo = _FakeVocabLessonRepository(
         bank: {
@@ -426,21 +433,8 @@ void main() {
       await container.read(vocabCatalogProvider.future);
 
       expect(repo.levelSeriesCalls, isEmpty);
-      expect(
-        repo.countCalls,
-        containsAll([
-          'N5:hajimete',
-          'N4:hajimete',
-          'N3:hajimete',
-          'N2:hajimete',
-          'N1:hajimete',
-          'N3:ShinKanzen',
-          'N2:ShinKanzen',
-          'N1:ShinKanzen',
-        ]),
-      );
-      expect(repo.lessonRangeCalls, contains('N5:minna:1-25'));
-      expect(repo.lessonRangeCalls, contains('N4:minna:26-50'));
+      expect(repo.countCalls, isEmpty);
+      expect(repo.lessonRangeCalls, isEmpty);
     },
   );
 
@@ -607,6 +601,28 @@ void main() {
       find.byKey(const ValueKey('vocab_today_review_cta')),
       findsOneWidget,
     );
+  });
+
+  testWidgets('VocabScreen renders catalog while home review data is loading', (
+    tester,
+  ) async {
+    final repo = _FakeVocabLessonRepository(bank: const {});
+    final neverDueTerms = Completer<List<UserLessonTermData>>();
+
+    await tester.pumpWidget(
+      _buildScreen(repo: repo, allDueTerms: () => neverDueTerms.future),
+    );
+    await _pumpCatalog(tester);
+
+    expect(find.byKey(const ValueKey('vocab_catalog_loading')), findsNothing);
+    expect(find.byKey(const ValueKey('vocab_catalog_error')), findsNothing);
+    expect(find.byKey(const ValueKey('vocab_catalog_hero')), findsOneWidget);
+    expect(find.byKey(const ValueKey('section_n5')), findsOneWidget);
+
+    neverDueTerms.complete(const <UserLessonTermData>[]);
+    await _pumpCatalog(tester);
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.pump(const Duration(seconds: 13));
   });
 
   testWidgets('VocabScreen prioritizes Today section before catalog', (

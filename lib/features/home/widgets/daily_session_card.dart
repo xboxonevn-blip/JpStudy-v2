@@ -707,7 +707,7 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
       case AppLanguage.vi:
         return actionLabel != null && actionLabel.isNotEmpty
             ? 'Bắt đầu với $totalDue lượt ôn đến hạn. $actionLabel là nước đi nhanh nhất.'
-            : 'Bắt đầu với $totalDue lượt ôn đến hạn để dọn hàng đợi trước.';
+            : 'Bắt đầu với $totalDue lượt ôn đến hạn để xử lý phần quan trọng trước.';
       case AppLanguage.ja:
         return actionLabel != null && actionLabel.isNotEmpty
             ? 'Start with $totalDue due reviews. $actionLabel is the fastest win.'
@@ -764,7 +764,7 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
       case AppLanguage.en:
         return 'Today is complete. Next review $timing.';
       case AppLanguage.vi:
-        return 'Hôm nay đã xong. Lần review tiếp theo $timing.';
+        return 'Hôm nay đã xong. Lần ôn tiếp theo $timing.';
       case AppLanguage.ja:
         return 'Today is complete. Next review $timing.';
     }
@@ -775,7 +775,7 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
       case AppLanguage.en:
         return 'You are caught up for now. Next review $timing.';
       case AppLanguage.vi:
-        return 'Tạm thời bạn đã bắt kịp. Lần review tiếp theo $timing.';
+        return 'Tạm thời bạn đã bắt kịp. Lần ôn tiếp theo $timing.';
       case AppLanguage.ja:
         return 'You are caught up for now. Next review $timing.';
     }
@@ -1196,7 +1196,7 @@ class _WeekSummaryRow extends ConsumerWidget {
       case AppLanguage.en:
         return 'This week: ${summary.totalReviewed} reviews | ${summary.accuracy}% accuracy | ${summary.daysStudied}/7 days';
       case AppLanguage.vi:
-        return 'Tuần này: ${summary.totalReviewed} review | ${summary.accuracy}% chính xác | ${summary.daysStudied}/7 ngày';
+        return 'Tuần này: ${summary.totalReviewed} lượt ôn | ${summary.accuracy}% chính xác | ${summary.daysStudied}/7 ngày';
       case AppLanguage.ja:
         return 'This week: ${summary.totalReviewed} reviews | ${summary.accuracy}% accuracy | ${summary.daysStudied}/7 days';
     }

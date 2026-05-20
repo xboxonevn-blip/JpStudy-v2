@@ -27,6 +27,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Onboarding language | Audited slice | Fresh live browser at 1366x768 selected `Tiếng Việt`, clicked Continue to level, selected N5, clicked Start, and reached VI/N5 home; QA-A-025 fixed the consent banner overlap. |
 | Lesson vocab flashcards / ghost grammar / lesson grammar / Practice copy | Audited slice | Static + live sweep found manual `Learned` and `Mark as Mastered` controls that updated progress without a learner gate, broken `v? d?` grammar example count copy, and machine-like Vietnamese copy. QA-A-027 removed the self-attestation controls, records ghost answers through grammar SRS, normalized learner-facing copy, deployed, and live proof confirmed the lesson/practice screens plus clean fresh CSP. |
 | P0 backlog live proof sweep | Audited slice | Rechecked old fixed-local P0 tickets after the latest deploy: QA-A-001 now routes `/#/exam-center` -> sidebar `Hồ sơ` -> `#/me` with the profile screen, and QA-A-004 now renders VI/N2 lesson 1 as `N2 / Shin Kanzen N2 Bài 1` with loaded Vocab and non-empty Grammar. |
+| Home/Library Vietnamese copy | Audited slice | Static + live copy sweep found `dọn review`, `dọn hàng đợi`, `TÍN HIỆU LEVEL`, and mixed English `level`/`lesson` in Vietnamese Home/Library flows. QA-A-028 replaced them with natural Vietnamese; live VI/N2 Home/Summary/Library proof passed after deploy. |
+| Vocab direct route | Audited slice | Fresh VI/N5 `/#/vocab` showed a spinner after 25 seconds with no app exception. QA-A-029 now renders the hub from bundled manifests/counts and decouples first paint from review-home DB loading; live proof shows the hub plus working `Ôn ngay` and `Minna no Nihongo I` CTAs. |
+| Grammar/Kanji direct routes | Audited slice | While root-causing QA-A-029, fresh VI/N5 `/#/grammar` and `/#/kanji` also stayed in loading states after 25-45 seconds with no app exception. Logged QA-A-030 P0 as the next cold-route loading fix. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -48,6 +51,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-C-002 | Vocab detail conjugation | Vocab detail exposed generated-looking but suffix-guessed forms and generic grammar CTA. | Fixed + deployed |
 | QA-A-026 | Search navigation | Search top-hit cards could look tappable but fail to open detail; live `かえる` result stayed on `/#/search` after click. | Fixed + deployed |
 | QA-A-027 | Lesson vocab/ghost grammar/copy | Lesson vocab flashcard had a self-attestation checkmark that seeded SRS; ghost grammar practice had `Mark as Mastered`; lesson grammar showed `v? d?`; dashboard/practice copy had machine-like Vietnamese. | Fixed + deployed |
+| QA-A-028 | Home/Library copy | Daily Summary, Daily Session Card, and Library roadmap exposed machine-like or mixed Vietnamese copy (`dọn review`, `dọn hàng đợi`, `level`, `lesson`, `TÍN HIỆU LEVEL`). | Fixed + deployed |
+| QA-A-029 | Vocab route | Fresh VI/N5 `/#/vocab` stayed on a spinner after 25 seconds with no Flutter exception. | Fixed + deployed |
+| QA-A-030 | Grammar/Kanji routes | Fresh VI/N5 `/#/grammar` and `/#/kanji` stayed in loading states after 25-45 seconds during cold direct-route checks. | Queued |
 
 ## Live Proof Artifacts
 
@@ -103,6 +109,18 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-qa-a-001-profile-after-click.png`
 - `output/playwright/live-qa-a-004-n2-lesson-title-after-wait.png`
 - `output/playwright/live-qa-a-004-n2-lesson-grammar-tab-live.png`
+- `output/playwright/live-p1-copy-vocab-n5-after-wait.png`
+- `output/playwright/live-qaa029-direct-n5-25s.png`
+- `output/playwright/live-qaa029-route-___grammar.png`
+- `output/playwright/live-qaa029-route-___kanji.png`
+- `output/playwright/live-qaa029-grammar-45s.png`
+- `output/playwright/live-qaa028-home-copy-proof.png`
+- `output/playwright/live-qaa028-daily-summary-copy-proof.png`
+- `output/playwright/live-qaa028-library-copy-proof.png`
+- `output/playwright/live-qaa029-vocab-direct-proof.png`
+- `output/playwright/live-qaa029-vocab-review-cta-proof.png`
+- `output/playwright/live-qaa029-vocab-minna-cta-proof.png`
+- `output/playwright/live-qaa028-qaa029-proof.json`
 
 ## Notes For Next Sweep
 

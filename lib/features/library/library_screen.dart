@@ -517,7 +517,7 @@ class _HeroStats extends StatelessWidget {
           Text(
             switch (language) {
               AppLanguage.en => 'LEVEL SIGNALS',
-              AppLanguage.vi => 'TÍN HIỆU LEVEL',
+              AppLanguage.vi => 'TÍN HIỆU CẤP HỌC',
               AppLanguage.ja => 'レベル指標',
             },
             style: const TextStyle(
@@ -571,7 +571,7 @@ class _RoadmapPanel extends StatelessWidget {
               AppLanguage.en =>
                 'Decide whether this level needs review cleanup, a resume pass, or a fresh lesson.',
               AppLanguage.vi =>
-                'Quyết định level đang cần dọn review, học tiếp, hay mở lesson mới.',
+                'Quyết định cấp học đang cần ôn phần đến hạn, học tiếp, hay mở bài mới.',
               AppLanguage.ja => '復習整理・再開・新しいレッスンのどれを優先すべきかをここで決められます。',
             },
           ),

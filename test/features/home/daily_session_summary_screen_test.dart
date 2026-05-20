@@ -66,10 +66,10 @@ final _router = GoRouter(
   ],
 );
 
-Widget buildScreen() => ProviderScope(
+Widget buildScreen({AppLanguage language = AppLanguage.en}) => ProviderScope(
   overrides: [
     appLanguageProvider.overrideWith(
-      (ref) => AppLanguageController.test(AppLanguage.en),
+      (ref) => AppLanguageController.test(language),
     ),
     dashboardProvider.overrideWith((ref) => Stream.value(_kDashboard)),
     dailySessionProgressProvider.overrideWith((ref) async => _kProgress),
@@ -107,6 +107,25 @@ void main() {
       find.text("You closed 67% of today's guided session."),
       findsOneWidget,
     );
+    await tester.pumpWidget(Container());
+    await tester.pump(const Duration(milliseconds: 100));
+  });
+
+  testWidgets('Vietnamese tomorrow cue avoids mixed review wording', (
+    tester,
+  ) async {
+    await tester.pumpWidget(buildScreen(language: AppLanguage.vi));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    expect(find.textContaining('dọn review'), findsNothing);
+    expect(
+      find.text(
+        'Vẫn còn mục chưa xử lý. Ngày mai hãy ôn các mục đến hạn trước, rồi củng cố điểm yếu.',
+      ),
+      findsOneWidget,
+    );
+
     await tester.pumpWidget(Container());
     await tester.pump(const Duration(milliseconds: 100));
   });

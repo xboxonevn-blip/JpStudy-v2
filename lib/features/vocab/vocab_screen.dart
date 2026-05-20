@@ -73,7 +73,7 @@ Future<_SeriesManifestSummary> _loadShinkanzenManifestSummary(
       final fileName = (lesson['file'] ?? '').toString().trim();
       if (fileName.isEmpty) continue;
       entryCountFutures.add(
-        _loadShinkanzenEntryCount(
+        _loadVocabAssetEntryCount(
           'assets/data/content/vocab/$levelLower/ShinKanzen/$fileName',
         ),
       );
@@ -90,7 +90,7 @@ Future<_SeriesManifestSummary> _loadShinkanzenManifestSummary(
   }
 }
 
-Future<int> _loadShinkanzenEntryCount(String path) async {
+Future<int> _loadVocabAssetEntryCount(String path) async {
   try {
     final raw = await rootBundle
         .loadString(path)
@@ -106,10 +106,24 @@ Future<int> _loadShinkanzenEntryCount(String path) async {
   }
 }
 
+Future<int> _loadMinnaLessonRangeCount(
+  String levelCode, {
+  required int startLesson,
+  required int endLesson,
+}) async {
+  final levelLower = levelCode.toLowerCase();
+  final counts = await Future.wait([
+    for (var lesson = startLesson; lesson <= endLesson; lesson++)
+      _loadVocabAssetEntryCount(
+        'assets/data/content/vocab/$levelLower/minna/lesson_${lesson.toString().padLeft(2, '0')}.json',
+      ),
+  ]);
+  return counts.fold<int>(0, (sum, count) => sum + count);
+}
+
 final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
   ref,
 ) async {
-  final repo = ref.read(lessonRepositoryProvider);
   final language = ref.watch(appLanguageProvider);
 
   // Subscribe only to vocabDue — streak/XP ticks won't re-fire all 13 queries.
@@ -121,27 +135,18 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
   final nextReview = ref.watch(nextVocabReviewProvider).value;
 
   // Catalog cards need availability/counts, not full vocab row hydration.
-  // Count all real tracks so data-backed programs do not look locked merely
-  // because another JLPT level is selected.
+  // Use bundled manifests instead of opening the content DB. A fresh web DB can
+  // spend a long time seeding; the hub must still render immediately.
   Future<int> hajimeteCount(String levelCode) async {
-    final storedCount = await repo.countVocabByLevelAndSeries(
-      levelCode,
-      'hajimete',
-    );
-    if (storedCount > 0) return storedCount;
-
     try {
       final catalog = await loadHajimeteChapterCatalog(
         levelCode,
       ).timeout(const Duration(seconds: 1));
       return catalog.totalTerms;
     } catch (_) {
-      return storedCount;
+      return 0;
     }
   }
-
-  Future<int> shinkanzenCount(String levelCode) =>
-      repo.countVocabByLevelAndSeries(levelCode, 'ShinKanzen');
 
   Future<_SeriesManifestSummary> shinkanzenSummary(String levelCode) =>
       _loadShinkanzenManifestSummary(levelCode);
@@ -151,74 +156,47 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
   final n3CountFuture = hajimeteCount('N3');
   final n2CountFuture = hajimeteCount('N2');
   final n1CountFuture = hajimeteCount('N1');
-  final shinkanzenN3CountFuture = shinkanzenCount('N3');
-  final shinkanzenN2CountFuture = shinkanzenCount('N2');
-  final shinkanzenN1CountFuture = shinkanzenCount('N1');
   final shinkanzenN3SummaryFuture = shinkanzenSummary('N3');
   final shinkanzenN2SummaryFuture = shinkanzenSummary('N2');
   final shinkanzenN1SummaryFuture = shinkanzenSummary('N1');
-  final minnaN5CountFuture = repo
-      .getVocabByLessonRange(
-        'N5',
-        startLesson: 1,
-        endLesson: 25,
-        series: 'minna',
-      )
-      .then((items) => items.length);
-  final minnaN4CountFuture = repo
-      .getVocabByLessonRange(
-        'N4',
-        startLesson: 26,
-        endLesson: 50,
-        series: 'minna',
-      )
-      .then((items) => items.length);
+  final minnaN5CountFuture = _loadMinnaLessonRangeCount(
+    'N5',
+    startLesson: 1,
+    endLesson: 25,
+  );
+  final minnaN4CountFuture = _loadMinnaLessonRangeCount(
+    'N4',
+    startLesson: 26,
+    endLesson: 50,
+  );
 
-  final counts = await withVocabContentTimeout(
-    Future.wait<int>([
-      n5CountFuture,
-      n4CountFuture,
-      n3CountFuture,
-      n2CountFuture,
-      n1CountFuture,
-      shinkanzenN3CountFuture,
-      shinkanzenN2CountFuture,
-      shinkanzenN1CountFuture,
-      minnaN5CountFuture,
-      minnaN4CountFuture,
-    ]),
-    ref: ref,
-  );
-  final summaries = await withVocabContentTimeout(
-    Future.wait<_SeriesManifestSummary>([
-      shinkanzenN3SummaryFuture,
-      shinkanzenN2SummaryFuture,
-      shinkanzenN1SummaryFuture,
-    ]),
-    ref: ref,
-  );
+  final counts = await Future.wait<int>([
+    n5CountFuture,
+    n4CountFuture,
+    n3CountFuture,
+    n2CountFuture,
+    n1CountFuture,
+    minnaN5CountFuture,
+    minnaN4CountFuture,
+  ]);
+  final summaries = await Future.wait<_SeriesManifestSummary>([
+    shinkanzenN3SummaryFuture,
+    shinkanzenN2SummaryFuture,
+    shinkanzenN1SummaryFuture,
+  ]);
   final n5Count = counts[0];
   final n4Count = counts[1];
   final n3Count = counts[2];
   final n2Count = counts[3];
   final n1Count = counts[4];
-  final shinkanzenN3Count = counts[5];
-  final shinkanzenN2Count = counts[6];
-  final shinkanzenN1Count = counts[7];
-  final minnaN5Count = counts[8];
-  final minnaN4Count = counts[9];
+  final minnaN5Count = counts[5];
+  final minnaN4Count = counts[6];
   final shinkanzenN3Summary = summaries[0];
   final shinkanzenN2Summary = summaries[1];
   final shinkanzenN1Summary = summaries[2];
-  final shinkanzenN3TermCount = shinkanzenN3Summary.importedTermCount > 0
-      ? shinkanzenN3Summary.importedTermCount
-      : shinkanzenN3Count;
-  final shinkanzenN2TermCount = shinkanzenN2Summary.importedTermCount > 0
-      ? shinkanzenN2Summary.importedTermCount
-      : shinkanzenN2Count;
-  final shinkanzenN1TermCount = shinkanzenN1Summary.importedTermCount > 0
-      ? shinkanzenN1Summary.importedTermCount
-      : shinkanzenN1Count;
+  final shinkanzenN3TermCount = shinkanzenN3Summary.importedTermCount;
+  final shinkanzenN2TermCount = shinkanzenN2Summary.importedTermCount;
+  final shinkanzenN1TermCount = shinkanzenN1Summary.importedTermCount;
 
   int shinkanzenRouteCount(_SeriesManifestSummary summary) =>
       summary.routeCount > 0 ? summary.routeCount : 25;
@@ -361,6 +339,7 @@ class VocabScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
+    final selectedLevel = ref.watch(studyLevelProvider);
     final catalogAsync = ref.watch(vocabCatalogProvider);
     final homeAsync = ref.watch(vocabHomeSectionProvider);
 
@@ -370,29 +349,29 @@ class VocabScreen extends ConsumerWidget {
         body: AppPageShell(
           topPadding: AppSpacing.md,
           child: catalogAsync.when(
-            data: (sections) => homeAsync.when(
-              data: (home) => _VocabCatalogBody(
-                language: language,
+            data: (sections) {
+              final fallbackHome = _fallbackHomeSection(
                 sections: sections,
-                home: home,
-              ),
-              loading: () => const Padding(
-                key: ValueKey('vocab_catalog_loading'),
-                padding: EdgeInsets.only(top: 120),
-                child: Center(child: CircularProgressIndicator()),
-              ),
-              error: (error, stack) => AppFeatureCard(
-                key: const ValueKey('vocab_catalog_error'),
-                icon: Icons.error_outline_rounded,
-                title: _catalogErrorTitle(language),
-                subtitle: error.toString(),
-                secondaryLabel: _catalogRetryLabel(language),
-                onSecondaryTap: () {
-                  ref.invalidate(vocabCatalogProvider);
-                  ref.invalidate(vocabHomeSectionProvider);
-                },
-              ),
-            ),
+                selectedLevel: selectedLevel,
+              );
+              return homeAsync.when(
+                data: (home) => _VocabCatalogBody(
+                  language: language,
+                  sections: sections,
+                  home: home,
+                ),
+                loading: () => _VocabCatalogBody(
+                  language: language,
+                  sections: sections,
+                  home: fallbackHome,
+                ),
+                error: (error, stack) => _VocabCatalogBody(
+                  language: language,
+                  sections: sections,
+                  home: fallbackHome,
+                ),
+              );
+            },
             loading: () => const Padding(
               key: ValueKey('vocab_catalog_loading'),
               padding: EdgeInsets.only(top: 120),
@@ -411,6 +390,46 @@ class VocabScreen extends ConsumerWidget {
       ),
     );
   }
+}
+
+VocabHomeSection _fallbackHomeSection({
+  required List<_VocabCatalogSection> sections,
+  required StudyLevel? selectedLevel,
+}) {
+  final selectedLevelCode = selectedLevel?.shortLabel ?? 'N5';
+  final liveTracks = <VocabTrackSummary>[];
+  final previewTracks = <VocabTrackSummary>[];
+  for (final section in sections) {
+    for (final program in section.programs) {
+      if (!program.hasData) continue;
+      final title = program.type == _VocabProgramType.core
+          ? '${program.titleTop} ${program.titleMain}'.trim()
+          : program.titleTop;
+      final track = VocabTrackSummary(
+        key: program.key,
+        levelCode: section.levelCode,
+        title: title,
+        subtitle: program.subtitle,
+        termCount: program.termCount,
+        isInteractive: program.isInteractive,
+        isPreview: program.isPreviewOnly,
+        isCompanion: program.type == _VocabProgramType.minna,
+      );
+      if (program.isInteractive) {
+        liveTracks.add(track);
+      } else {
+        previewTracks.add(track);
+      }
+    }
+  }
+
+  return VocabHomeSection(
+    selectedLevelCode: selectedLevelCode,
+    dueCount: 0,
+    nextReview: null,
+    liveTracks: liveTracks,
+    previewTracks: previewTracks,
+  );
 }
 
 String _programBadge(_VocabProgramType type, AppLanguage language) =>

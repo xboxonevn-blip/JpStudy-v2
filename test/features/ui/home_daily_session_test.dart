@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/home/providers/backup_status_provider.dart';
@@ -267,6 +269,63 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('daily_session_cta')));
     await tester.pumpAndSettle();
     expect(find.text('route:${AppRoutePath.kanjiPractice}'), findsOneWidget);
+  });
+
+  testWidgets('Vietnamese due coach line avoids queue-cleaning wording', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          appLanguageProvider.overrideWith(
+            (_) => AppLanguageController.test(AppLanguage.vi),
+          ),
+          dashboardProvider.overrideWith(
+            (_) => Stream.value(buildDashboard(vocabDue: 2)),
+          ),
+          grammarGhostCountProvider.overrideWith((_) async* {
+            yield 0;
+          }),
+          vocabGhostCountProvider.overrideWith((_) async* {
+            yield 0;
+          }),
+          nextVocabReviewProvider.overrideWith((_) => Stream.value(null)),
+          nextKanjiReviewProvider.overrideWith((_) => Stream.value(null)),
+          nextGrammarReviewProvider.overrideWith((_) => Stream.value(null)),
+          weekSummaryProvider.overrideWith(
+            (_) async => const WeekSummary(
+              totalReviewed: 0,
+              accuracy: 0,
+              daysStudied: 0,
+            ),
+          ),
+          continueActionProvider.overrideWith(
+            (_) async => const ContinueAction(
+              type: ContinueActionType.vocabReview,
+              label: '',
+              count: 2,
+            ),
+          ),
+          dailySessionProgressProvider.overrideWith(
+            (_) async => DailySessionProgress.empty('2026-02-22'),
+          ),
+          backupStatusProvider.overrideWith(
+            (_) async => const BackupStatus(enabled: true, lastBackupAt: null),
+          ),
+        ],
+        child: MaterialApp.router(routerConfig: buildRouter()),
+      ),
+    );
+
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('dọn hàng'), findsNothing);
+    expect(
+      find.text(
+        'Bắt đầu với 2 lượt ôn đến hạn để xử lý phần quan trọng trước.',
+      ),
+      findsOneWidget,
+    );
   });
 
   testWidgets('Daily session resumes stored route when in progress', (

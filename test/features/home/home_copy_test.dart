@@ -46,4 +46,16 @@ void main() {
       expect(source, isNot(contains('Nh??m')), reason: file.path);
     }
   });
+
+  test('daily session Vietnamese copy avoids raw review wording', () {
+    final source = File(
+      'lib/features/home/widgets/daily_session_card.dart',
+    ).readAsStringSync();
+
+    expect(source, isNot(contains('Lần review')));
+    expect(
+      source,
+      isNot(contains('Tuần này: \${summary.totalReviewed} review')),
+    );
+  });
 }

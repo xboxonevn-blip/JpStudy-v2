@@ -50,12 +50,13 @@ GoRouter _router() => GoRouter(
 Widget buildLibraryScreen({
   List<LessonMeta> lessons = const [_kLesson],
   bool shouldThrow = false,
+  AppLanguage language = AppLanguage.en,
 }) {
   return ProviderScope(
     retry: (retryCount, error) => null,
     overrides: [
       appLanguageProvider.overrideWith(
-        (ref) => AppLanguageController.test(AppLanguage.en),
+        (ref) => AppLanguageController.test(language),
       ),
       studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
       lessonMetaProvider('N5').overrideWith((ref) async {
@@ -123,6 +124,21 @@ void main() {
       findsOneWidget,
     );
     expect(find.text('Roadmap'), findsOneWidget);
+  });
+
+  testWidgets('Vietnamese roadmap caption avoids mixed review wording', (
+    tester,
+  ) async {
+    await _pumpScreen(tester, buildLibraryScreen(language: AppLanguage.vi));
+    expect(find.textContaining('dọn review'), findsNothing);
+    expect(find.textContaining('LEVEL'), findsNothing);
+    expect(find.text('TÍN HIỆU CẤP HỌC'), findsOneWidget);
+    expect(
+      find.text(
+        'Quyết định cấp học đang cần ôn phần đến hạn, học tiếp, hay mở bài mới.',
+      ),
+      findsOneWidget,
+    );
   });
 
   testWidgets('shows quick access cards for vocab and grammar', (tester) async {

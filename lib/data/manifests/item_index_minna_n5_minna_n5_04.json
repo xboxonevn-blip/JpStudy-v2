@@ -1,0 +1,1073 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "minna_n5",
+  "lesson_id": "minna_n5_04",
+  "items": [
+    {
+      "item_id": "grammar:n5:minna_n5:04:Giờ_và_phút",
+      "type": "grammar",
+      "surface": "Giờ và phút",
+      "reading": "",
+      "label_ja": "Giờ và phút",
+      "label_vi": "Mẫu này dùng để nói thời gian hiện tại.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_4.json",
+        "entry_id": "Giờ và phút",
+        "key": "grammar/n5/grammar_n5_4.json#grammar:Giờ và phút"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:04:Động_từ_dạng_ます",
+      "type": "grammar",
+      "surface": "Động từ dạng ます",
+      "reading": "",
+      "label_ja": "Động từ dạng ます",
+      "label_vi": "Đây là bốn dạng lịch sự cơ bản của động từ.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_4.json",
+        "entry_id": "Động từ dạng ます",
+        "key": "grammar/n5/grammar_n5_4.json#grammar:Động từ dạng ます"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:04:N1_から_N2_まで",
+      "type": "grammar",
+      "surface": "N1 から N2 まで",
+      "reading": "",
+      "label_ja": "N1 から N2 まで",
+      "label_vi": "Mẫu này nói phạm vi từ điểm bắt đầu đến điểm kết thúc, có thể là thời gian hoặc địa điểm.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_4.json",
+        "entry_id": "N1 から N2 まで",
+        "key": "grammar/n5/grammar_n5_4.json#grammar:N1 から N2 まで"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:04:N1_と_N2",
+      "type": "grammar",
+      "surface": "N1 と N2",
+      "reading": "",
+      "label_ja": "N1 と N2",
+      "label_vi": "`と` nghĩa là “và”, dùng để nối các danh từ trong cùng một danh sách.",
+      "order": 4,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_4.json",
+        "entry_id": "N1 と N2",
+        "key": "grammar/n5/grammar_n5_4.json#grammar:N1 と N2"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:起きます",
+      "type": "vocab",
+      "surface": "起きます",
+      "reading": "おきます",
+      "label_ja": "起きます",
+      "label_vi": "thức dậy",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s001",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s001"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:寝ます",
+      "type": "vocab",
+      "surface": "寝ます",
+      "reading": "ねます",
+      "label_ja": "寝ます",
+      "label_vi": "ngủ",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s002",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s002"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:働きます",
+      "type": "vocab",
+      "surface": "働きます",
+      "reading": "はたらきます",
+      "label_ja": "働きます",
+      "label_vi": "làm việc",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s003",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s003"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:休みます",
+      "type": "vocab",
+      "surface": "休みます",
+      "reading": "やすみます",
+      "label_ja": "休みます",
+      "label_vi": "nghỉ ngơi",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s004",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s004"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:勉強します",
+      "type": "vocab",
+      "surface": "勉強します",
+      "reading": "べんきょうします",
+      "label_ja": "勉強します",
+      "label_vi": "học",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s005",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s005"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:終わります",
+      "type": "vocab",
+      "surface": "終わります",
+      "reading": "おわります",
+      "label_ja": "終わります",
+      "label_vi": "kết thúc",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s006",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s006"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:デパート",
+      "type": "vocab",
+      "surface": "デパート",
+      "reading": "でぱーと",
+      "label_ja": "デパート",
+      "label_vi": "bách hóa",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s007",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s007"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:銀行",
+      "type": "vocab",
+      "surface": "銀行",
+      "reading": "ぎんこう",
+      "label_ja": "銀行",
+      "label_vi": "ngân hàng",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s008",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s008"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:郵便局",
+      "type": "vocab",
+      "surface": "郵便局",
+      "reading": "ゆうびんきょく",
+      "label_ja": "郵便局",
+      "label_vi": "bưu điện",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s009",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s009"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:図書館",
+      "type": "vocab",
+      "surface": "図書館",
+      "reading": "としょかん",
+      "label_ja": "図書館",
+      "label_vi": "thư viện",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s010",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s010"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:美術館",
+      "type": "vocab",
+      "surface": "美術館",
+      "reading": "びじゅつかん",
+      "label_ja": "美術館",
+      "label_vi": "bảo tàng mỹ thuật",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s011",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s011"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:今",
+      "type": "vocab",
+      "surface": "今",
+      "reading": "いま",
+      "label_ja": "今",
+      "label_vi": "bây giờ",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s012",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s012"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:時",
+      "type": "vocab",
+      "surface": "時",
+      "reading": "じ",
+      "label_ja": "時",
+      "label_vi": "giờ",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s013",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s013"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:分",
+      "type": "vocab",
+      "surface": "分",
+      "reading": "ふん",
+      "label_ja": "分",
+      "label_vi": "phút",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s014",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s014"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:半",
+      "type": "vocab",
+      "surface": "半",
+      "reading": "はん",
+      "label_ja": "半",
+      "label_vi": "rưỡi (nửa)",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s015",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s015"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:何時",
+      "type": "vocab",
+      "surface": "何時",
+      "reading": "なんじ",
+      "label_ja": "何時",
+      "label_vi": "mấy giờ",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s016",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s016"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:何分",
+      "type": "vocab",
+      "surface": "何分",
+      "reading": "なんぷん",
+      "label_ja": "何分",
+      "label_vi": "mấy phút",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s017",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s017"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:午前",
+      "type": "vocab",
+      "surface": "午前",
+      "reading": "ごぜん",
+      "label_ja": "午前",
+      "label_vi": "buổi sáng (AM)",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s018",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s018"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:午後",
+      "type": "vocab",
+      "surface": "午後",
+      "reading": "ごご",
+      "label_ja": "午後",
+      "label_vi": "buổi chiều (PM)",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s019",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s019"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:朝",
+      "type": "vocab",
+      "surface": "朝",
+      "reading": "あさ",
+      "label_ja": "朝",
+      "label_vi": "buổi sáng",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s020",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s020"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:昼",
+      "type": "vocab",
+      "surface": "昼",
+      "reading": "ひる",
+      "label_ja": "昼",
+      "label_vi": "buổi trưa",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s021",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s021"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:晩",
+      "type": "vocab",
+      "surface": "晩",
+      "reading": "ばん",
+      "label_ja": "晩",
+      "label_vi": "buổi tối",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s022",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s022"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:夜",
+      "type": "vocab",
+      "surface": "夜",
+      "reading": "よる",
+      "label_ja": "夜",
+      "label_vi": "đêm, tối",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s023",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s023"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:一昨日",
+      "type": "vocab",
+      "surface": "一昨日",
+      "reading": "おととい",
+      "label_ja": "一昨日",
+      "label_vi": "hôm kia",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s024",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s024"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:昨日",
+      "type": "vocab",
+      "surface": "昨日",
+      "reading": "きのう",
+      "label_ja": "昨日",
+      "label_vi": "hôm qua",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s025",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s025"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:今日",
+      "type": "vocab",
+      "surface": "今日",
+      "reading": "きょう",
+      "label_ja": "今日",
+      "label_vi": "hôm nay",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s026",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s026"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:明日",
+      "type": "vocab",
+      "surface": "明日",
+      "reading": "あした",
+      "label_ja": "明日",
+      "label_vi": "ngày mai",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s027",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s027"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:明後日",
+      "type": "vocab",
+      "surface": "明後日",
+      "reading": "あさって",
+      "label_ja": "明後日",
+      "label_vi": "ngày kia",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s028",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s028"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:今朝",
+      "type": "vocab",
+      "surface": "今朝",
+      "reading": "けさ",
+      "label_ja": "今朝",
+      "label_vi": "sáng nay",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s029",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s029"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:今晩",
+      "type": "vocab",
+      "surface": "今晩",
+      "reading": "こんばん",
+      "label_ja": "今晩",
+      "label_vi": "tối nay",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s030",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s030"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:休み",
+      "type": "vocab",
+      "surface": "休み",
+      "reading": "やすみ",
+      "label_ja": "休み",
+      "label_vi": "nghỉ ngơi, ngày nghỉ",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s031",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s031"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:昼休み",
+      "type": "vocab",
+      "surface": "昼休み",
+      "reading": "ひるやすみ",
+      "label_ja": "昼休み",
+      "label_vi": "nghỉ trưa",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s032",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s032"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:試験",
+      "type": "vocab",
+      "surface": "試験",
+      "reading": "しけん",
+      "label_ja": "試験",
+      "label_vi": "kỳ thi, bài thi",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s033",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s033"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:会議",
+      "type": "vocab",
+      "surface": "会議",
+      "reading": "かいぎ",
+      "label_ja": "会議",
+      "label_vi": "hội nghị, cuộc họp",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s034",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s034"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:映画",
+      "type": "vocab",
+      "surface": "映画",
+      "reading": "えいが",
+      "label_ja": "映画",
+      "label_vi": "phim ảnh",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s035",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s035"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:毎朝",
+      "type": "vocab",
+      "surface": "毎朝",
+      "reading": "まいあさ",
+      "label_ja": "毎朝",
+      "label_vi": "mỗi sáng",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s036",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s036"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:毎晩",
+      "type": "vocab",
+      "surface": "毎晩",
+      "reading": "まいばん",
+      "label_ja": "毎晩",
+      "label_vi": "mỗi tối",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s037",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s037"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:毎日",
+      "type": "vocab",
+      "surface": "毎日",
+      "reading": "まいにち",
+      "label_ja": "毎日",
+      "label_vi": "hàng ngày",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s038",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s038"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:月曜日",
+      "type": "vocab",
+      "surface": "月曜日",
+      "reading": "げつようび",
+      "label_ja": "月曜日",
+      "label_vi": "thứ hai",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s039",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s039"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:火曜日",
+      "type": "vocab",
+      "surface": "火曜日",
+      "reading": "かようび",
+      "label_ja": "火曜日",
+      "label_vi": "thứ ba",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s040",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s040"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:水曜日",
+      "type": "vocab",
+      "surface": "水曜日",
+      "reading": "すいようび",
+      "label_ja": "水曜日",
+      "label_vi": "thứ tư",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s041",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s041"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:木曜日",
+      "type": "vocab",
+      "surface": "木曜日",
+      "reading": "もくようび",
+      "label_ja": "木曜日",
+      "label_vi": "thứ năm",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s042",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s042"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:金曜日",
+      "type": "vocab",
+      "surface": "金曜日",
+      "reading": "きんようび",
+      "label_ja": "金曜日",
+      "label_vi": "thứ sáu",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s043",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s043"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:土曜日",
+      "type": "vocab",
+      "surface": "土曜日",
+      "reading": "どようび",
+      "label_ja": "土曜日",
+      "label_vi": "thứ bảy",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s044",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s044"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:日曜日",
+      "type": "vocab",
+      "surface": "日曜日",
+      "reading": "にちようび",
+      "label_ja": "日曜日",
+      "label_vi": "chủ nhật",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s045",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s045"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:何曜日",
+      "type": "vocab",
+      "surface": "何曜日",
+      "reading": "なんようび",
+      "label_ja": "何曜日",
+      "label_vi": "thứ mấy",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s046",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s046"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:番号",
+      "type": "vocab",
+      "surface": "番号",
+      "reading": "ばんごう",
+      "label_ja": "番号",
+      "label_vi": "số",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s047",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s047"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:何番",
+      "type": "vocab",
+      "surface": "何番",
+      "reading": "なんばん",
+      "label_ja": "何番",
+      "label_vi": "số mấy",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s048",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s048"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:～から",
+      "type": "vocab",
+      "surface": "～から",
+      "reading": "から",
+      "label_ja": "～から",
+      "label_vi": "từ ~",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s049",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s049"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:～まで",
+      "type": "vocab",
+      "surface": "～まで",
+      "reading": "まで",
+      "label_ja": "～まで",
+      "label_vi": "đến ~",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s050",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s050"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:～と～",
+      "type": "vocab",
+      "surface": "～と～",
+      "reading": "と",
+      "label_ja": "～と～",
+      "label_vi": "và (nối danh từ)",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s051",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s051"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:そちら",
+      "type": "vocab",
+      "surface": "そちら",
+      "reading": "そちら",
+      "label_ja": "そちら",
+      "label_vi": "bên đó, phía ông (bà)",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s052",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s052"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:大変ですね",
+      "type": "vocab",
+      "surface": "大変ですね",
+      "reading": "たいへんですね",
+      "label_ja": "大変ですね",
+      "label_vi": "vất vả quá nhỉ, cực quá nhỉ",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s053",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s053"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:えーと",
+      "type": "vocab",
+      "surface": "えーと",
+      "reading": "えーと",
+      "label_ja": "えーと",
+      "label_vi": "ờ, à... (câu đệm)",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s054",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s054"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:お願いします",
+      "type": "vocab",
+      "surface": "お願いします",
+      "reading": "おねがいします",
+      "label_ja": "お願いします",
+      "label_vi": "làm ơn, nhờ ông giúp cho",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s055",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s055"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:かしこまりました",
+      "type": "vocab",
+      "surface": "かしこまりました",
+      "reading": "かしこまりました",
+      "label_ja": "かしこまりました",
+      "label_vi": "tôi đã hiểu rồi ạ",
+      "order": 56,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s056",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s056"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:電話番号",
+      "type": "vocab",
+      "surface": "電話番号",
+      "reading": "でんわばんごう",
+      "label_ja": "電話番号",
+      "label_vi": "số điện thoại",
+      "order": 57,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s057",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s057"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:ニューヨーク",
+      "type": "vocab",
+      "surface": "ニューヨーク",
+      "reading": "にゅーよーく",
+      "label_ja": "ニューヨーク",
+      "label_vi": "New York",
+      "order": 58,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s058",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s058"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:ペキン",
+      "type": "vocab",
+      "surface": "ペキン",
+      "reading": "ぺきん",
+      "label_ja": "ペキン",
+      "label_vi": "Bắc Kinh",
+      "order": 59,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s059",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s059"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:ロサンゼルス",
+      "type": "vocab",
+      "surface": "ロサンゼルス",
+      "reading": "ろさんぜるす",
+      "label_ja": "ロサンゼルス",
+      "label_vi": "Los Angeles",
+      "order": 60,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s060",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s060"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:ロンドン",
+      "type": "vocab",
+      "surface": "ロンドン",
+      "reading": "ろんどん",
+      "label_ja": "ロンドン",
+      "label_vi": "London",
+      "order": 61,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s061",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s061"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:四",
+      "type": "vocab",
+      "surface": "四",
+      "reading": "よん",
+      "label_ja": "四",
+      "label_vi": "Số 4",
+      "order": 62,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s062",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s062"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:四月",
+      "type": "vocab",
+      "surface": "四月",
+      "reading": "しがつ",
+      "label_ja": "四月",
+      "label_vi": "Tháng 4",
+      "order": 63,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s063",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s063"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:五",
+      "type": "vocab",
+      "surface": "五",
+      "reading": "ご",
+      "label_ja": "五",
+      "label_vi": "Số 5",
+      "order": 64,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s064",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s064"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:五月",
+      "type": "vocab",
+      "surface": "五月",
+      "reading": "ごがつ",
+      "label_ja": "五月",
+      "label_vi": "Tháng 5",
+      "order": 65,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s065",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s065"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:六",
+      "type": "vocab",
+      "surface": "六",
+      "reading": "ろく",
+      "label_ja": "六",
+      "label_vi": "Số 6",
+      "order": 66,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s066",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s066"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:04:六百",
+      "type": "vocab",
+      "surface": "六百",
+      "reading": "ろっぴゃく",
+      "label_ja": "六百",
+      "label_vi": "600",
+      "order": 67,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_04.json",
+        "entry_id": "n5_l04_s067",
+        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s067"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
+    }
+  ]
+}

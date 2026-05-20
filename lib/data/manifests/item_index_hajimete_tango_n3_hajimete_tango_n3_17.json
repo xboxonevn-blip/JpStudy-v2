@@ -1,0 +1,968 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "hajimete_tango_n3",
+  "lesson_id": "hajimete_tango_n3_17",
+  "items": [
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:我々",
+      "type": "vocab",
+      "surface": "我々",
+      "reading": "われわれ",
+      "label_ja": "我々",
+      "label_vi": "chúng tôi",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_001",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_001"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:評価",
+      "type": "vocab",
+      "surface": "評価",
+      "reading": "ひょうか",
+      "label_ja": "評価",
+      "label_vi": "sự định giá; sự đánh giá",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_002",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_002"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:同様",
+      "type": "vocab",
+      "surface": "同様",
+      "reading": "どうよう",
+      "label_ja": "同様",
+      "label_vi": "giống hệt; bằng; giống nhau (loại); giống như",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_003",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_003"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:隠れる",
+      "type": "vocab",
+      "surface": "隠れる",
+      "reading": "かくれる",
+      "label_ja": "隠れる",
+      "label_vi": "ẩn náu; giấu mình; biến mất",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_004",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_004"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:用心",
+      "type": "vocab",
+      "surface": "用心",
+      "reading": "ようじん",
+      "label_ja": "用心",
+      "label_vi": "chăm sóc; đề phòng",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_005",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_005"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:当たる",
+      "type": "vocab",
+      "surface": "当たる",
+      "reading": "あたる",
+      "label_ja": "当たる",
+      "label_vi": "bị đánh; thành công; tương đương với",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_006",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_006"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:波",
+      "type": "vocab",
+      "surface": "波",
+      "reading": "なみ",
+      "label_ja": "波",
+      "label_vi": "làn sóng",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_007",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_007"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:記念",
+      "type": "vocab",
+      "surface": "記念",
+      "reading": "きねん",
+      "label_ja": "記念",
+      "label_vi": "kỷ niệm; ký ức",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_008",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_008"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:ラケット",
+      "type": "vocab",
+      "surface": "ラケット",
+      "reading": "ラケット",
+      "label_ja": "ラケット",
+      "label_vi": "mái chèo; vợt",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_009",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_009"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:流行",
+      "type": "vocab",
+      "surface": "流行",
+      "reading": "りゅうこう",
+      "label_ja": "流行",
+      "label_vi": "hợp mốt; đang thịnh hành",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_010",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_010"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:木曜",
+      "type": "vocab",
+      "surface": "木曜",
+      "reading": "もくよう",
+      "label_ja": "木曜",
+      "label_vi": "thứ năm",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_011",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_011"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:ママ",
+      "type": "vocab",
+      "surface": "ママ",
+      "reading": "ママ",
+      "label_ja": "ママ",
+      "label_vi": "Mẹ",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_012",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_012"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:考え",
+      "type": "vocab",
+      "surface": "考え",
+      "reading": "かんがえ",
+      "label_ja": "考え",
+      "label_vi": "suy nghĩ; ý tưởng; ý định",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_013",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_013"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:凍る",
+      "type": "vocab",
+      "surface": "凍る",
+      "reading": "こおる",
+      "label_ja": "凍る",
+      "label_vi": "đóng băng; bị đóng băng; đông lại",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_014",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_014"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:支度",
+      "type": "vocab",
+      "surface": "支度",
+      "reading": "したく",
+      "label_ja": "支度",
+      "label_vi": "sự chuẩn bị",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_015",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_015"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:失望",
+      "type": "vocab",
+      "surface": "失望",
+      "reading": "しつぼう",
+      "label_ja": "失望",
+      "label_vi": "thất vọng; tuyệt vọng",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_016",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_016"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:画家",
+      "type": "vocab",
+      "surface": "画家",
+      "reading": "がか",
+      "label_ja": "画家",
+      "label_vi": "họa sĩ; nghệ sĩ",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_017",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_017"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:愉快",
+      "type": "vocab",
+      "surface": "愉快",
+      "reading": "ゆかい",
+      "label_ja": "愉快",
+      "label_vi": "dễ chịu; hạnh phúc",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_018",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_018"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:夕べ",
+      "type": "vocab",
+      "surface": "夕べ",
+      "reading": "ゆうべ",
+      "label_ja": "夕べ",
+      "label_vi": "buổi tối",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_019",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_019"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:失業",
+      "type": "vocab",
+      "surface": "失業",
+      "reading": "しつぎょう",
+      "label_ja": "失業",
+      "label_vi": "thất nghiệp",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_020",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_020"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:物理",
+      "type": "vocab",
+      "surface": "物理",
+      "reading": "ぶつり",
+      "label_ja": "物理",
+      "label_vi": "vật lý",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_021",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_021"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:見事",
+      "type": "vocab",
+      "surface": "見事",
+      "reading": "みごと",
+      "label_ja": "見事",
+      "label_vi": "lộng lẫy; tráng lệ; xinh đẹp; đáng ngưỡng mộ",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_022",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_022"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:案",
+      "type": "vocab",
+      "surface": "案",
+      "reading": "あん",
+      "label_ja": "案",
+      "label_vi": "kế hoạch; hậu tố ý nghĩa dự thảo",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_023",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_023"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:対",
+      "type": "vocab",
+      "surface": "対",
+      "reading": "たい",
+      "label_ja": "対",
+      "label_vi": "cặp; bộ",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_024",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_024"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:スター",
+      "type": "vocab",
+      "surface": "スター",
+      "reading": "スター",
+      "label_ja": "スター",
+      "label_vi": "ngôi sao",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_025",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_025"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:到着",
+      "type": "vocab",
+      "surface": "到着",
+      "reading": "とうちゃく",
+      "label_ja": "到着",
+      "label_vi": "sự đến",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_026",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_026"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:尊重",
+      "type": "vocab",
+      "surface": "尊重",
+      "reading": "そんちょう",
+      "label_ja": "尊重",
+      "label_vi": "kính trọng; coi trọng",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_027",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_027"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:自身",
+      "type": "vocab",
+      "surface": "自身",
+      "reading": "じしん",
+      "label_ja": "自身",
+      "label_vi": "một mình; cá nhân",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_028",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_028"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:直に",
+      "type": "vocab",
+      "surface": "直に",
+      "reading": "じかに",
+      "label_ja": "直に",
+      "label_vi": "ngay lập tức; sẵn sàng; trực tiếp",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_029",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_029"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:恋",
+      "type": "vocab",
+      "surface": "恋",
+      "reading": "こい",
+      "label_ja": "恋",
+      "label_vi": "tình yêu; niềm đam mê dịu dàng",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_030",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_030"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:一瞬",
+      "type": "vocab",
+      "surface": "一瞬",
+      "reading": "いっしゅん",
+      "label_ja": "一瞬",
+      "label_vi": "một khoảnh khắc; khoảnh khắc",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_031",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_031"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:少女",
+      "type": "vocab",
+      "surface": "少女",
+      "reading": "しょうじょ",
+      "label_ja": "少女",
+      "label_vi": "con gái; cô gái trẻ; trinh nữ; thiếu nữ; cô bé",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_032",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_032"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:影",
+      "type": "vocab",
+      "surface": "影",
+      "reading": "かげ",
+      "label_ja": "影",
+      "label_vi": "bóng râm; bóng tối; phía bên kia",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_033",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_033"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:石炭",
+      "type": "vocab",
+      "surface": "石炭",
+      "reading": "せきたん",
+      "label_ja": "石炭",
+      "label_vi": "than đá",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_034",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_034"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:現れる",
+      "type": "vocab",
+      "surface": "現れる",
+      "reading": "あらわれる",
+      "label_ja": "現れる",
+      "label_vi": "xuất hiện; hiện ra; bộc lộ bản thân",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_035",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_035"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:幅",
+      "type": "vocab",
+      "surface": "幅",
+      "reading": "はば",
+      "label_ja": "幅",
+      "label_vi": "chiều rộng",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_036",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_036"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:演説",
+      "type": "vocab",
+      "surface": "演説",
+      "reading": "えんぜつ",
+      "label_ja": "演説",
+      "label_vi": "bài phát biểu; địa chỉ",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_037",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_037"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:決まり",
+      "type": "vocab",
+      "surface": "決まり",
+      "reading": "きまり",
+      "label_ja": "決まり",
+      "label_vi": "giải quyết; kết luận; quy định; quy tắc",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_038",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_038"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:来",
+      "type": "vocab",
+      "surface": "来",
+      "reading": "らい",
+      "label_ja": "来",
+      "label_vi": "trong (10 ngày); tiếp theo (năm)",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_039",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_039"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:事務",
+      "type": "vocab",
+      "surface": "事務",
+      "reading": "じむ",
+      "label_ja": "事務",
+      "label_vi": "công việc kinh doanh; văn phòng",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_040",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_040"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:弾",
+      "type": "vocab",
+      "surface": "弾",
+      "reading": "たま",
+      "label_ja": "弾",
+      "label_vi": "viên đạn; vỏ",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_041",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_041"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:バン",
+      "type": "vocab",
+      "surface": "バン",
+      "reading": "バン",
+      "label_ja": "バン",
+      "label_vi": "bánh bun; xe van; VAN (mạng giá trị gia tăng)",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_042",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_042"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:確かめる",
+      "type": "vocab",
+      "surface": "確かめる",
+      "reading": "たしかめる",
+      "label_ja": "確かめる",
+      "label_vi": "để xác định",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_043",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_043"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:すなわち",
+      "type": "vocab",
+      "surface": "すなわち",
+      "reading": "すなわち",
+      "label_ja": "すなわち",
+      "label_vi": "nghĩa là; cụ thể là; tức là",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_044",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_044"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:不平",
+      "type": "vocab",
+      "surface": "不平",
+      "reading": "ふへい",
+      "label_ja": "不平",
+      "label_vi": "phàn nàn; bất mãn; không hài lòng",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_045",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_045"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:思想",
+      "type": "vocab",
+      "surface": "思想",
+      "reading": "しそう",
+      "label_ja": "思想",
+      "label_vi": "suy nghĩ; ý tưởng",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_046",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_046"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:被害",
+      "type": "vocab",
+      "surface": "被害",
+      "reading": "ひがい",
+      "label_ja": "被害",
+      "label_vi": "thiệt hại",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_047",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_047"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:需要",
+      "type": "vocab",
+      "surface": "需要",
+      "reading": "じゅよう",
+      "label_ja": "需要",
+      "label_vi": "yêu cầu",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_048",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_048"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:けち",
+      "type": "vocab",
+      "surface": "けち",
+      "reading": "けち",
+      "label_ja": "けち",
+      "label_vi": "tính keo kiệt",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_049",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_049"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:履く",
+      "type": "vocab",
+      "surface": "履く",
+      "reading": "はく",
+      "label_ja": "履く",
+      "label_vi": "mặc; mặc vào (thân dưới)",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_050",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_050"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:散歩",
+      "type": "vocab",
+      "surface": "散歩",
+      "reading": "さんぽ",
+      "label_ja": "散歩",
+      "label_vi": "đi bộ; đi dạo",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_051",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_051"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:歩道",
+      "type": "vocab",
+      "surface": "歩道",
+      "reading": "ほどう",
+      "label_ja": "歩道",
+      "label_vi": "lối đi bộ; lối đi; vỉa hè",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_052",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_052"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:平均",
+      "type": "vocab",
+      "surface": "平均",
+      "reading": "へいきん",
+      "label_ja": "平均",
+      "label_vi": "sự cân bằng; trung bình",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_053",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_053"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:硬貨",
+      "type": "vocab",
+      "surface": "硬貨",
+      "reading": "こうか",
+      "label_ja": "硬貨",
+      "label_vi": "đồng xu",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_054",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_054"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:トンネル",
+      "type": "vocab",
+      "surface": "トンネル",
+      "reading": "トンネル",
+      "label_ja": "トンネル",
+      "label_vi": "đường hầm",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_055",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_055"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:語学",
+      "type": "vocab",
+      "surface": "語学",
+      "reading": "ごがく",
+      "label_ja": "語学",
+      "label_vi": "học ngôn ngữ",
+      "order": 56,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_056",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_056"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:土",
+      "type": "vocab",
+      "surface": "土",
+      "reading": "つち",
+      "label_ja": "土",
+      "label_vi": "đất",
+      "order": 57,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_057",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_057"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:去る",
+      "type": "vocab",
+      "surface": "去る",
+      "reading": "さる",
+      "label_ja": "去る",
+      "label_vi": "rời đi; đi xa",
+      "order": 58,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_058",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_058"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:助ける",
+      "type": "vocab",
+      "surface": "助ける",
+      "reading": "たすける",
+      "label_ja": "助ける",
+      "label_vi": "giúp đỡ; cứu; giải cứu",
+      "order": 59,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_059",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_059"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:残す",
+      "type": "vocab",
+      "surface": "残す",
+      "reading": "のこす",
+      "label_ja": "残す",
+      "label_vi": "để lại; để dành; lưu lại",
+      "order": 60,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_060",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_060"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:悲しむ",
+      "type": "vocab",
+      "surface": "悲しむ",
+      "reading": "かなしむ",
+      "label_ja": "悲しむ",
+      "label_vi": "buồn; thương tiếc; tiếc nuối",
+      "order": 61,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_061",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_061"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:すみません",
+      "type": "vocab",
+      "surface": "すみません",
+      "reading": "（感）",
+      "label_ja": "すみません",
+      "label_vi": "xin lỗi",
+      "order": 62,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_062",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_062"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:姿",
+      "type": "vocab",
+      "surface": "姿",
+      "reading": "すがた",
+      "label_ja": "姿",
+      "label_vi": "hình dáng; vẻ ngoài",
+      "order": 63,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_063",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_063"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    },
+    {
+      "item_id": "vocab:n3:hajimete_tango_n3:17:同僚",
+      "type": "vocab",
+      "surface": "同僚",
+      "reading": "どうりょう",
+      "label_ja": "同僚",
+      "label_vi": "đồng nghiệp; cộng sự",
+      "order": 64,
+      "legacy_ref": {
+        "file": "vocab/n3/hajimete/hajimete_ch17.json",
+        "entry_id": "haj_n3_ch17_064",
+        "key": "vocab/n3/hajimete/hajimete_ch17.json#vocab:haj_n3_ch17_064"
+      },
+      "exercise_bank_ref": "exercises/n3/hajimete_tango_n3/hajimete_tango_n3_17.json"
+    }
+  ]
+}

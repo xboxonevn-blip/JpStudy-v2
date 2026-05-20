@@ -1,0 +1,1043 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "minna_n5",
+  "lesson_id": "minna_n5_06",
+  "items": [
+    {
+      "item_id": "grammar:n5:minna_n5:06:N_を_V",
+      "type": "grammar",
+      "surface": "N を V",
+      "reading": "",
+      "label_ja": "N を V",
+      "label_vi": "`を` đánh dấu đối tượng trực tiếp của hành động.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_6.json",
+        "entry_id": "N を V",
+        "key": "grammar/n5/grammar_n5_6.json#grammar:N を V"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:06:N_を_します",
+      "type": "grammar",
+      "surface": "N を します",
+      "reading": "",
+      "label_ja": "N を します",
+      "label_vi": "Dùng với danh từ chỉ hoạt động để nói “làm/chơi/thực hiện N”. Ví dụ: `サッカーをします` = chơi bóng đá.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_6.json",
+        "entry_id": "N を します",
+        "key": "grammar/n5/grammar_n5_6.json#grammar:N を します"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:06:何を_しますか",
+      "type": "grammar",
+      "surface": "何を しますか",
+      "reading": "",
+      "label_ja": "何を しますか",
+      "label_vi": "Dùng để hỏi người khác sẽ làm gì hoặc đang làm gì. Với `を`, `何` thường đọc là `なに`.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_6.json",
+        "entry_id": "何を しますか",
+        "key": "grammar/n5/grammar_n5_6.json#grammar:何を しますか"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:06:なん_(Cái_gì)",
+      "type": "grammar",
+      "surface": "なん (Cái gì)",
+      "reading": "",
+      "label_ja": "なん (Cái gì)",
+      "label_vi": "`何` có hai cách đọc chính.",
+      "order": 4,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_6.json",
+        "entry_id": "なん (Cái gì)",
+        "key": "grammar/n5/grammar_n5_6.json#grammar:なん (Cái gì)"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:06:N_(địa_điểm)_で_V",
+      "type": "grammar",
+      "surface": "N (địa điểm) で V",
+      "reading": "",
+      "label_ja": "N (địa điểm) で V",
+      "label_vi": "`で` chỉ nơi diễn ra hành động. Phân biệt với `に` chỉ nơi tồn tại và `へ` chỉ hướng di chuyển.",
+      "order": 5,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_6.json",
+        "entry_id": "N (địa điểm) で V",
+        "key": "grammar/n5/grammar_n5_6.json#grammar:N (địa điểm) で V"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:06:Vませんか_(Mời_mọc)",
+      "type": "grammar",
+      "surface": "Vませんか (Mời mọc)",
+      "reading": "",
+      "label_ja": "Vませんか (Mời mọc)",
+      "label_vi": "Dùng để mời hoặc rủ người khác làm gì đó một cách lịch sự. Có thể hiểu là “Anh/chị có muốn ... không?” hoặc “Cùng ... nhé?”.",
+      "order": 6,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_6.json",
+        "entry_id": "Vませんか (Mời mọc)",
+        "key": "grammar/n5/grammar_n5_6.json#grammar:Vませんか (Mời mọc)"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:06:Vましょう_(Đề_nghị)",
+      "type": "grammar",
+      "surface": "Vましょう (Đề nghị)",
+      "reading": "",
+      "label_ja": "Vましょう (Đề nghị)",
+      "label_vi": "Dùng để đề nghị cùng làm gì đó hoặc để đồng ý với lời mời `Vませんか`. Nghĩa gần với “chúng ta cùng ... nhé/nào”.",
+      "order": 7,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_6.json",
+        "entry_id": "Vましょう (Đề nghị)",
+        "key": "grammar/n5/grammar_n5_6.json#grammar:Vましょう (Đề nghị)"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:食べます",
+      "type": "vocab",
+      "surface": "食べます",
+      "reading": "たべます",
+      "label_ja": "食べます",
+      "label_vi": "ăn",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s001",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s001"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:飲みます",
+      "type": "vocab",
+      "surface": "飲みます",
+      "reading": "のみます",
+      "label_ja": "飲みます",
+      "label_vi": "uống",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s002",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s002"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:吸います",
+      "type": "vocab",
+      "surface": "吸います",
+      "reading": "すいます",
+      "label_ja": "吸います",
+      "label_vi": "hút (thuốc lá)",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s003",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s003"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:見ます",
+      "type": "vocab",
+      "surface": "見ます",
+      "reading": "みます",
+      "label_ja": "見ます",
+      "label_vi": "xem, nhìn, trông",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s004",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s004"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:聞きます",
+      "type": "vocab",
+      "surface": "聞きます",
+      "reading": "ききます",
+      "label_ja": "聞きます",
+      "label_vi": "nghe",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s005",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s005"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:読みます",
+      "type": "vocab",
+      "surface": "読みます",
+      "reading": "よみます",
+      "label_ja": "読みます",
+      "label_vi": "đọc",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s006",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s006"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:書きます",
+      "type": "vocab",
+      "surface": "書きます",
+      "reading": "かきます",
+      "label_ja": "書きます",
+      "label_vi": "viết, vẽ",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s007",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s007"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:買います",
+      "type": "vocab",
+      "surface": "買います",
+      "reading": "かいます",
+      "label_ja": "買います",
+      "label_vi": "mua",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s008",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s008"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:撮ります",
+      "type": "vocab",
+      "surface": "撮ります",
+      "reading": "とります",
+      "label_ja": "撮ります",
+      "label_vi": "chụp (ảnh)",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s009",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s009"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:します",
+      "type": "vocab",
+      "surface": "します",
+      "reading": "します",
+      "label_ja": "します",
+      "label_vi": "làm, chơi",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s010",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s010"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:会います",
+      "type": "vocab",
+      "surface": "会います",
+      "reading": "あいます",
+      "label_ja": "会います",
+      "label_vi": "gặp (bạn)",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s011",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s011"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:ご飯",
+      "type": "vocab",
+      "surface": "ご飯",
+      "reading": "ごはん",
+      "label_ja": "ご飯",
+      "label_vi": "cơm, bữa ăn",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s012",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s012"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:朝ご飯",
+      "type": "vocab",
+      "surface": "朝ご飯",
+      "reading": "あさごはん",
+      "label_ja": "朝ご飯",
+      "label_vi": "bữa sáng",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s013",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s013"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:昼ご飯",
+      "type": "vocab",
+      "surface": "昼ご飯",
+      "reading": "ひるごはん",
+      "label_ja": "昼ご飯",
+      "label_vi": "bữa trưa",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s014",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s014"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:晩ご飯",
+      "type": "vocab",
+      "surface": "晩ご飯",
+      "reading": "ばんごはん",
+      "label_ja": "晩ご飯",
+      "label_vi": "bữa tối",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s015",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s015"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:パン",
+      "type": "vocab",
+      "surface": "パン",
+      "reading": "ぱん",
+      "label_ja": "パン",
+      "label_vi": "bánh mì",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s016",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s016"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:卵",
+      "type": "vocab",
+      "surface": "卵",
+      "reading": "たまご",
+      "label_ja": "卵",
+      "label_vi": "trứng",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s017",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s017"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:肉",
+      "type": "vocab",
+      "surface": "肉",
+      "reading": "にく",
+      "label_ja": "肉",
+      "label_vi": "thịt",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s018",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s018"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:魚",
+      "type": "vocab",
+      "surface": "魚",
+      "reading": "さかな",
+      "label_ja": "魚",
+      "label_vi": "cá",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s019",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s019"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:野菜",
+      "type": "vocab",
+      "surface": "野菜",
+      "reading": "やさい",
+      "label_ja": "野菜",
+      "label_vi": "rau",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s020",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s020"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:果物",
+      "type": "vocab",
+      "surface": "果物",
+      "reading": "くだもの",
+      "label_ja": "果物",
+      "label_vi": "hoa quả, trái cây",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s021",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s021"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:水",
+      "type": "vocab",
+      "surface": "水",
+      "reading": "みず",
+      "label_ja": "水",
+      "label_vi": "nước",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s022",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s022"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:お茶",
+      "type": "vocab",
+      "surface": "お茶",
+      "reading": "おちゃ",
+      "label_ja": "お茶",
+      "label_vi": "trà (xanh)",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s023",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s023"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:紅茶",
+      "type": "vocab",
+      "surface": "紅茶",
+      "reading": "こうちゃ",
+      "label_ja": "紅茶",
+      "label_vi": "trà đen (hồng trà)",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s024",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s024"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:牛乳",
+      "type": "vocab",
+      "surface": "牛乳",
+      "reading": "ぎゅうにゅう",
+      "label_ja": "牛乳",
+      "label_vi": "sữa bò",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s025",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s025"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:ジュース",
+      "type": "vocab",
+      "surface": "ジュース",
+      "reading": "じゅーす",
+      "label_ja": "ジュース",
+      "label_vi": "nước trái cây",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s026",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s026"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:ビール",
+      "type": "vocab",
+      "surface": "ビール",
+      "reading": "びーる",
+      "label_ja": "ビール",
+      "label_vi": "bia",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s027",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s027"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:お酒",
+      "type": "vocab",
+      "surface": "お酒",
+      "reading": "おさけ",
+      "label_ja": "お酒",
+      "label_vi": "rượu, rượu sake",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s028",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s028"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:ビデオ",
+      "type": "vocab",
+      "surface": "ビデオ",
+      "reading": "びでお",
+      "label_ja": "ビデオ",
+      "label_vi": "video",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s029",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s029"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:映画",
+      "type": "vocab",
+      "surface": "映画",
+      "reading": "えいが",
+      "label_ja": "映画",
+      "label_vi": "phim ảnh",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s030",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s030"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:手紙",
+      "type": "vocab",
+      "surface": "手紙",
+      "reading": "てがみ",
+      "label_ja": "手紙",
+      "label_vi": "thư",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s031",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s031"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:レポート",
+      "type": "vocab",
+      "surface": "レポート",
+      "reading": "れぽーと",
+      "label_ja": "レポート",
+      "label_vi": "báo cáo",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s032",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s032"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:写真",
+      "type": "vocab",
+      "surface": "写真",
+      "reading": "しゃしん",
+      "label_ja": "写真",
+      "label_vi": "ảnh",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s033",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s033"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:店",
+      "type": "vocab",
+      "surface": "店",
+      "reading": "みせ",
+      "label_ja": "店",
+      "label_vi": "cửa hàng",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s034",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s034"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:レストラン",
+      "type": "vocab",
+      "surface": "レストラン",
+      "reading": "れすとらん",
+      "label_ja": "レストラン",
+      "label_vi": "nhà hàng",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s035",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s035"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:庭",
+      "type": "vocab",
+      "surface": "庭",
+      "reading": "にわ",
+      "label_ja": "庭",
+      "label_vi": "vườn",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s036",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s036"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:宿題",
+      "type": "vocab",
+      "surface": "宿題",
+      "reading": "しゅくだい",
+      "label_ja": "宿題",
+      "label_vi": "bài tập về nhà",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s037",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s037"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:テニス",
+      "type": "vocab",
+      "surface": "テニス",
+      "reading": "てにす",
+      "label_ja": "テニス",
+      "label_vi": "tennis",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s038",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s038"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:サッカー",
+      "type": "vocab",
+      "surface": "サッカー",
+      "reading": "さっかー",
+      "label_ja": "サッカー",
+      "label_vi": "bóng đá",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s039",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s039"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:お花見",
+      "type": "vocab",
+      "surface": "お花見",
+      "reading": "おはなみ",
+      "label_ja": "お花見",
+      "label_vi": "ngắm hoa (anh đào)",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s040",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s040"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:何",
+      "type": "vocab",
+      "surface": "何",
+      "reading": "なに",
+      "label_ja": "何",
+      "label_vi": "cái gì",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s041",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s041"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:いつも",
+      "type": "vocab",
+      "surface": "いつも",
+      "reading": "いつも",
+      "label_ja": "いつも",
+      "label_vi": "luôn luôn",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s042",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s042"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:時々",
+      "type": "vocab",
+      "surface": "時々",
+      "reading": "ときどき",
+      "label_ja": "時々",
+      "label_vi": "thỉnh thoảng",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s043",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s043"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:それから",
+      "type": "vocab",
+      "surface": "それから",
+      "reading": "それから",
+      "label_ja": "それから",
+      "label_vi": "sau đó",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s044",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s044"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:ええ",
+      "type": "vocab",
+      "surface": "ええ",
+      "reading": "ええ",
+      "label_ja": "ええ",
+      "label_vi": "vâng, ừ",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s045",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s045"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:いいですね",
+      "type": "vocab",
+      "surface": "いいですね",
+      "reading": "いいですね",
+      "label_ja": "いいですね",
+      "label_vi": "được đấy nhỉ, hay quá nhỉ",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s046",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s046"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:分かりました",
+      "type": "vocab",
+      "surface": "分かりました",
+      "reading": "わかりました",
+      "label_ja": "分かりました",
+      "label_vi": "tôi đã hiểu",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s047",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s047"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:何ですか",
+      "type": "vocab",
+      "surface": "何ですか",
+      "reading": "なんですか",
+      "label_ja": "何ですか",
+      "label_vi": "có chuyện gì vậy?, cái gì vậy?",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s048",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s048"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:じゃ、また",
+      "type": "vocab",
+      "surface": "じゃ、また",
+      "reading": "じゃまた",
+      "label_ja": "じゃ、また",
+      "label_vi": "hẹn gặp lại (ngày mai)",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s049",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s049"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:ミルク",
+      "type": "vocab",
+      "surface": "ミルク",
+      "reading": "みるく",
+      "label_ja": "ミルク",
+      "label_vi": "sữa",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s050",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s050"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:一緒に",
+      "type": "vocab",
+      "surface": "一緒に",
+      "reading": "いっしょに",
+      "label_ja": "一緒に",
+      "label_vi": "cùng nhau",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s051",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s051"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:ちょっと",
+      "type": "vocab",
+      "surface": "ちょっと",
+      "reading": "ちょっと",
+      "label_ja": "ちょっと",
+      "label_vi": "một chút, hơi",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s052",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s052"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:また明日",
+      "type": "vocab",
+      "surface": "また明日",
+      "reading": "またあした",
+      "label_ja": "また明日",
+      "label_vi": "hẹn gặp lại ngày mai",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s053",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s053"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:買い物",
+      "type": "vocab",
+      "surface": "買い物",
+      "reading": "かいもの",
+      "label_ja": "買い物",
+      "label_vi": "Mua sắm",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s054",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s054"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:読書",
+      "type": "vocab",
+      "surface": "読書",
+      "reading": "どくしょ",
+      "label_ja": "読書",
+      "label_vi": "Việc đọc sách",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s055",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s055"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:書",
+      "type": "vocab",
+      "surface": "書",
+      "reading": "がき",
+      "label_ja": "書",
+      "label_vi": "viết",
+      "order": 56,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s056",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s056"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:聞",
+      "type": "vocab",
+      "surface": "聞",
+      "reading": "きく",
+      "label_ja": "聞",
+      "label_vi": "nghe",
+      "order": 57,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s057",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s057"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:見",
+      "type": "vocab",
+      "surface": "見",
+      "reading": "みえる",
+      "label_ja": "見",
+      "label_vi": "nhìn",
+      "order": 58,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s058",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s058"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:読",
+      "type": "vocab",
+      "surface": "読",
+      "reading": "よみ",
+      "label_ja": "読",
+      "label_vi": "đọc",
+      "order": 59,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s059",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s059"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:買",
+      "type": "vocab",
+      "surface": "買",
+      "reading": "かう",
+      "label_ja": "買",
+      "label_vi": "mua",
+      "order": 60,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s060",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s060"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:食",
+      "type": "vocab",
+      "surface": "食",
+      "reading": "くう",
+      "label_ja": "食",
+      "label_vi": "ăn",
+      "order": 61,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s061",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s061"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:06:飲",
+      "type": "vocab",
+      "surface": "飲",
+      "reading": "のみ",
+      "label_ja": "飲",
+      "label_vi": "uống",
+      "order": 62,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_06.json",
+        "entry_id": "n5_l06_s062",
+        "key": "vocab/n5/minna/lesson_06.json#vocab:n5_l06_s062"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_06.json"
+    }
+  ]
+}

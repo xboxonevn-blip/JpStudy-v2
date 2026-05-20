@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "canonical_kanji_n5",
+  "lesson_id": "canonical_kanji_n5_01",
+  "items": [
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:01:一",
+      "type": "kanji",
+      "surface": "一",
+      "reading": "イチ",
+      "label_ja": "一",
+      "label_vi": "Nhất (một)",
+      "order": 1,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_01.json",
+        "entry_id": "n5_canonical_l01_k001",
+        "key": "kanji/n5/lesson_01.json#kanji:n5_canonical_l01_k001"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_01.json"
+    },
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:01:二",
+      "type": "kanji",
+      "surface": "二",
+      "reading": "ニ",
+      "label_ja": "二",
+      "label_vi": "Nhị (hai)",
+      "order": 2,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_01.json",
+        "entry_id": "n5_canonical_l01_k002",
+        "key": "kanji/n5/lesson_01.json#kanji:n5_canonical_l01_k002"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_01.json"
+    },
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:01:八",
+      "type": "kanji",
+      "surface": "八",
+      "reading": "ハチ",
+      "label_ja": "八",
+      "label_vi": "Bát (tám)",
+      "order": 3,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_01.json",
+        "entry_id": "n5_canonical_l01_k003",
+        "key": "kanji/n5/lesson_01.json#kanji:n5_canonical_l01_k003"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_01.json"
+    },
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:01:十",
+      "type": "kanji",
+      "surface": "十",
+      "reading": "ジュウ",
+      "label_ja": "十",
+      "label_vi": "Thập (mười)",
+      "order": 4,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_01.json",
+        "entry_id": "n5_canonical_l01_k004",
+        "key": "kanji/n5/lesson_01.json#kanji:n5_canonical_l01_k004"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_01.json"
+    },
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:01:九",
+      "type": "kanji",
+      "surface": "九",
+      "reading": "キュウ",
+      "label_ja": "九",
+      "label_vi": "Cửu (chín)",
+      "order": 5,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_01.json",
+        "entry_id": "n5_canonical_l01_k005",
+        "key": "kanji/n5/lesson_01.json#kanji:n5_canonical_l01_k005"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_01.json"
+    }
+  ]
+}

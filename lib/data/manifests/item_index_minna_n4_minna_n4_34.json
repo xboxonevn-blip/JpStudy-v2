@@ -1,0 +1,938 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "minna_n4",
+  "lesson_id": "minna_n4_34",
+  "items": [
+    {
+      "item_id": "grammar:n4:minna_n4:34:～とおりに_(Theo_như)",
+      "type": "grammar",
+      "surface": "～とおりに (Theo như)",
+      "reading": "",
+      "label_ja": "～とおりに (Theo như)",
+      "label_vi": "`とおりに` dùng để nói làm đúng theo lời nói, hướng dẫn, kế hoạch, mẫu hoặc cách đã thấy.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_34.json",
+        "entry_id": "～とおりに (Theo như)",
+        "key": "grammar/n4/grammar_n4_34.json#grammar:～とおりに (Theo như)"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "grammar:n4:minna_n4:34:～あとで_(Sau_khi)",
+      "type": "grammar",
+      "surface": "～あとで (Sau khi)",
+      "reading": "",
+      "label_ja": "～あとで (Sau khi)",
+      "label_vi": "`あとで` dùng để nói một việc xảy ra sau hành động hoặc sự kiện khác. So với `てから`, mẫu này nhấn mạnh “sau đó” hơn là thứ tự liền ngay.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_34.json",
+        "entry_id": "～あとで (Sau khi)",
+        "key": "grammar/n4/grammar_n4_34.json#grammar:～あとで (Sau khi)"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "grammar:n4:minna_n4:34:Vて,_Vないで_(Trạng_thái_đi_kèm)",
+      "type": "grammar",
+      "surface": "Vて, Vないで (Trạng thái đi kèm)",
+      "reading": "",
+      "label_ja": "Vて, Vないで (Trạng thái đi kèm)",
+      "label_vi": "Dùng để nói làm V2 trong trạng thái có làm hoặc không làm V1. Ví dụ: ăn có chấm xì dầu, hoặc ăn mà không chấm gì.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_34.json",
+        "entry_id": "Vて, Vないで (Trạng thái đi kèm)",
+        "key": "grammar/n4/grammar_n4_34.json#grammar:Vて, Vないで (Trạng thái đi kèm)"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "grammar:n4:minna_n4:34:〜前に",
+      "type": "grammar",
+      "surface": "〜前に",
+      "reading": "",
+      "label_ja": "〜前に",
+      "label_vi": "`前に` dùng để nói làm một việc trước một hành động, sự kiện hoặc thời điểm khác.",
+      "order": 4,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_34.json",
+        "entry_id": "〜前に",
+        "key": "grammar/n4/grammar_n4_34.json#grammar:〜前に"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:磨きます",
+      "type": "vocab",
+      "surface": "磨きます",
+      "reading": "みがきます",
+      "label_ja": "磨きます",
+      "label_vi": "đánh (răng), mài, đánh bóng",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s001",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s001"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:組み立てます",
+      "type": "vocab",
+      "surface": "組み立てます",
+      "reading": "くみたてます",
+      "label_ja": "組み立てます",
+      "label_vi": "lắp ráp",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s002",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s002"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:折ります",
+      "type": "vocab",
+      "surface": "折ります",
+      "reading": "おります",
+      "label_ja": "折ります",
+      "label_vi": "gấp, gập, bẻ",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s003",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s003"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:気がつきます",
+      "type": "vocab",
+      "surface": "気がつきます",
+      "reading": "きがつきます",
+      "label_ja": "気がつきます",
+      "label_vi": "nhận ra, để ý",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s004",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s004"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:つけます",
+      "type": "vocab",
+      "surface": "つけます",
+      "reading": "つけます",
+      "label_ja": "つけます",
+      "label_vi": "chấm (nước tương)",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s005",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s005"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:見つかります",
+      "type": "vocab",
+      "surface": "見つかります",
+      "reading": "みつかります",
+      "label_ja": "見つかります",
+      "label_vi": "được tìm thấy",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s006",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s006"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:します",
+      "type": "vocab",
+      "surface": "します",
+      "reading": "します",
+      "label_ja": "します",
+      "label_vi": "đeo (cà vạt)",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s007",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s007"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:質問します",
+      "type": "vocab",
+      "surface": "質問します",
+      "reading": "しつもんします",
+      "label_ja": "質問します",
+      "label_vi": "hỏi, đặt câu hỏi",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s008",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s008"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:細い",
+      "type": "vocab",
+      "surface": "細い",
+      "reading": "ほそい",
+      "label_ja": "細い",
+      "label_vi": "gầy, hẹp, thon nhỏ",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s009",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s009"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:太い",
+      "type": "vocab",
+      "surface": "太い",
+      "reading": "ふとい",
+      "label_ja": "太い",
+      "label_vi": "béo, to, mập",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s010",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s010"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:盆踊り",
+      "type": "vocab",
+      "surface": "盆踊り",
+      "reading": "ぼんおどり",
+      "label_ja": "盆踊り",
+      "label_vi": "múa Bon",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s011",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s011"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:スポーツクラブ",
+      "type": "vocab",
+      "surface": "スポーツクラブ",
+      "reading": "すぽーつくらぶ",
+      "label_ja": "スポーツクラブ",
+      "label_vi": "câu lạc bộ thể thao",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s012",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s012"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:家具",
+      "type": "vocab",
+      "surface": "家具",
+      "reading": "かぐ",
+      "label_ja": "家具",
+      "label_vi": "đồ gỗ, đồ đạc trong nhà",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s013",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s013"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:キー",
+      "type": "vocab",
+      "surface": "キー",
+      "reading": "きー",
+      "label_ja": "キー",
+      "label_vi": "chìa khóa",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s014",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s014"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:シートベルト",
+      "type": "vocab",
+      "surface": "シートベルト",
+      "reading": "しーとべると",
+      "label_ja": "シートベルト",
+      "label_vi": "dây an toàn",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s015",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s015"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:説明書",
+      "type": "vocab",
+      "surface": "説明書",
+      "reading": "せつめいしょ",
+      "label_ja": "説明書",
+      "label_vi": "sách hướng dẫn",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s016",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s016"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:図",
+      "type": "vocab",
+      "surface": "図",
+      "reading": "ず",
+      "label_ja": "図",
+      "label_vi": "hình vẽ, biểu đồ",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s017",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s017"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:線",
+      "type": "vocab",
+      "surface": "線",
+      "reading": "せん",
+      "label_ja": "線",
+      "label_vi": "đường kẻ, tuyến",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s018",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s018"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:矢印",
+      "type": "vocab",
+      "surface": "矢印",
+      "reading": "やじるし",
+      "label_ja": "矢印",
+      "label_vi": "dấu mũi tên",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s019",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s019"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:黒",
+      "type": "vocab",
+      "surface": "黒",
+      "reading": "くろ",
+      "label_ja": "黒",
+      "label_vi": "màu đen",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s020",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s020"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:白",
+      "type": "vocab",
+      "surface": "白",
+      "reading": "しろ",
+      "label_ja": "白",
+      "label_vi": "màu trắng",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s021",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s021"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:赤",
+      "type": "vocab",
+      "surface": "赤",
+      "reading": "あか",
+      "label_ja": "赤",
+      "label_vi": "màu đỏ",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s022",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s022"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:青",
+      "type": "vocab",
+      "surface": "青",
+      "reading": "あお",
+      "label_ja": "青",
+      "label_vi": "màu xanh",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s023",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s023"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:紺",
+      "type": "vocab",
+      "surface": "紺",
+      "reading": "こん",
+      "label_ja": "紺",
+      "label_vi": "màu xanh lam, màu chàm",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s024",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s024"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:黄色",
+      "type": "vocab",
+      "surface": "黄色",
+      "reading": "きいろ",
+      "label_ja": "黄色",
+      "label_vi": "màu vàng",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s025",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s025"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:茶色",
+      "type": "vocab",
+      "surface": "茶色",
+      "reading": "ちゃいろ",
+      "label_ja": "茶色",
+      "label_vi": "màu nâu",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s026",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s026"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:しょうゆ",
+      "type": "vocab",
+      "surface": "しょうゆ",
+      "reading": "しょうゆ",
+      "label_ja": "しょうゆ",
+      "label_vi": "nước tương",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s027",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s027"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:ソース",
+      "type": "vocab",
+      "surface": "ソース",
+      "reading": "そーす",
+      "label_ja": "ソース",
+      "label_vi": "nước sốt (sauce)",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s028",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s028"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:～か_～",
+      "type": "vocab",
+      "surface": "～か ～",
+      "reading": "か",
+      "label_ja": "～か ～",
+      "label_vi": "～ hay là ～",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s029",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s029"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:ゆうべ",
+      "type": "vocab",
+      "surface": "ゆうべ",
+      "reading": "ゆうべ",
+      "label_ja": "ゆうべ",
+      "label_vi": "tối hôm qua",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s030",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s030"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:さっき",
+      "type": "vocab",
+      "surface": "さっき",
+      "reading": "さっき",
+      "label_ja": "さっき",
+      "label_vi": "vừa rồi, vừa lúc nãy",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s031",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s031"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:茶道",
+      "type": "vocab",
+      "surface": "茶道",
+      "reading": "さどう",
+      "label_ja": "茶道",
+      "label_vi": "trà đạo",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s032",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s032"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:お茶を点てます",
+      "type": "vocab",
+      "surface": "お茶を点てます",
+      "reading": "おちゃをたてます",
+      "label_ja": "お茶を点てます",
+      "label_vi": "pha trà (trà đạo)",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s033",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s033"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:先に",
+      "type": "vocab",
+      "surface": "先に",
+      "reading": "さきに",
+      "label_ja": "先に",
+      "label_vi": "trước",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s034",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s034"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:載せます",
+      "type": "vocab",
+      "surface": "載せます",
+      "reading": "のせます",
+      "label_ja": "載せます",
+      "label_vi": "đặt lên, để lên",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s035",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s035"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:これでいいですか",
+      "type": "vocab",
+      "surface": "これでいいですか",
+      "reading": "これでいいですか",
+      "label_ja": "これでいいですか",
+      "label_vi": "Thế này có được không?",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s036",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s036"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:いかがですか",
+      "type": "vocab",
+      "surface": "いかがですか",
+      "reading": "いかがですか",
+      "label_ja": "いかがですか",
+      "label_vi": "Anh/chị thấy thế nào ạ?",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s037",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s037"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:苦い",
+      "type": "vocab",
+      "surface": "苦い",
+      "reading": "にがい",
+      "label_ja": "苦い",
+      "label_vi": "đắng",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s038",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s038"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:親子どんぶり",
+      "type": "vocab",
+      "surface": "親子どんぶり",
+      "reading": "おやこどんぶり",
+      "label_ja": "親子どんぶり",
+      "label_vi": "cơm bát tô thịt gà trứng",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s039",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s039"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:材料",
+      "type": "vocab",
+      "surface": "材料",
+      "reading": "ざいりょう",
+      "label_ja": "材料",
+      "label_vi": "nguyên liệu",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s040",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s040"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:～分",
+      "type": "vocab",
+      "surface": "～分",
+      "reading": "ぶん",
+      "label_ja": "～分",
+      "label_vi": "suất ～, phần ～",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s041",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s041"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:～グラム",
+      "type": "vocab",
+      "surface": "～グラム",
+      "reading": "ぐらむ",
+      "label_ja": "～グラム",
+      "label_vi": "～ gam",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s042",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s042"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:～個",
+      "type": "vocab",
+      "surface": "～個",
+      "reading": "こ",
+      "label_ja": "～個",
+      "label_vi": "～ cái (đếm vật nhỏ)",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s043",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s043"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:玉葱",
+      "type": "vocab",
+      "surface": "玉葱",
+      "reading": "たまねぎ",
+      "label_ja": "玉葱",
+      "label_vi": "hành tây",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s044",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s044"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:４分の１",
+      "type": "vocab",
+      "surface": "４分の１",
+      "reading": "よんぶんのいち",
+      "label_ja": "４分の１",
+      "label_vi": "1 phần 4",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s045",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s045"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:調味料",
+      "type": "vocab",
+      "surface": "調味料",
+      "reading": "ちょうみりょう",
+      "label_ja": "調味料",
+      "label_vi": "gia vị",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s046",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s046"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:鍋",
+      "type": "vocab",
+      "surface": "鍋",
+      "reading": "なべ",
+      "label_ja": "鍋",
+      "label_vi": "cái nồi",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s047",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s047"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:火",
+      "type": "vocab",
+      "surface": "火",
+      "reading": "ひ",
+      "label_ja": "火",
+      "label_vi": "lửa",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s048",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s048"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:火にかけます",
+      "type": "vocab",
+      "surface": "火にかけます",
+      "reading": "ひにかけます",
+      "label_ja": "火にかけます",
+      "label_vi": "bắc lên bếp",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s049",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s049"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:煮ます",
+      "type": "vocab",
+      "surface": "煮ます",
+      "reading": "にます",
+      "label_ja": "煮ます",
+      "label_vi": "nấu, ninh",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s050",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s050"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:煮えます",
+      "type": "vocab",
+      "surface": "煮えます",
+      "reading": "にえます",
+      "label_ja": "煮えます",
+      "label_vi": "chín (được nấu chín)",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s051",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s051"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:どんぶり",
+      "type": "vocab",
+      "surface": "どんぶり",
+      "reading": "どんぶり",
+      "label_ja": "どんぶり",
+      "label_vi": "cái bát tô",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s052",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s052"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:鶏肉",
+      "type": "vocab",
+      "surface": "鶏肉",
+      "reading": "とりにく",
+      "label_ja": "鶏肉",
+      "label_vi": "thịt gà",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s053",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s053"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:四分の１",
+      "type": "vocab",
+      "surface": "四分の１",
+      "reading": "よんぶんのいち",
+      "label_ja": "四分の１",
+      "label_vi": "một phần tư",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s054",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s054"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:以上",
+      "type": "vocab",
+      "surface": "以上",
+      "reading": "いじょう",
+      "label_ja": "以上",
+      "label_vi": "Trở lên, xin hết",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s055",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s055"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:以外",
+      "type": "vocab",
+      "surface": "以外",
+      "reading": "いがい",
+      "label_ja": "以外",
+      "label_vi": "Ngoài ra",
+      "order": 56,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s056",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s056"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:運動",
+      "type": "vocab",
+      "surface": "運動",
+      "reading": "うんどう",
+      "label_ja": "運動",
+      "label_vi": "Vận động",
+      "order": 57,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s057",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s057"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:34:以",
+      "type": "vocab",
+      "surface": "以",
+      "reading": "もって",
+      "label_ja": "以",
+      "label_vi": "lấy làm mốc",
+      "order": 58,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_34.json",
+        "entry_id": "n4_l34_s058",
+        "key": "vocab/n4/minna/lesson_34.json#vocab:n4_l34_s058"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_34.json"
+    }
+  ]
+}

@@ -61,3 +61,23 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The app is already Flutter web, and local helpers minimize dependency and build risk.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-007 - Treat kanji as supporting textbook tracks
+**Phase**: 1
+**Date**: 2026-05-21 00:00 (local)
+**Context**: Existing app kanji assets are canonical ebook buckets, not Minna/Shin Kanzen lesson rows, but Phase 1 requires zero-loss migration.
+**Options considered**: attach kanji to Minna/Shin Kanzen lessons | duplicate kanji into every textbook | create `canonical_kanji_n*` supporting tracks
+**Chosen**: create `canonical_kanji_n*` supporting tracks
+**Rationale**: This preserves every kanji item exactly once, avoids false publisher attribution, and keeps lesson pages free to hide empty Kanji tabs until true lesson-specific kanji exists.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-008 - Keep Mimikara tracks as planned until source extraction
+**Phase**: 1
+**Date**: 2026-05-21 00:00 (local)
+**Context**: The current app assets do not yet contain extracted Mimikara N1-N5 lesson rows, while the megaprompt requires Mimikara coverage in `textbook_index.json`.
+**Options considered**: fabricate empty lessons | map unrelated app items into Mimikara | include planned source-pending textbook records without lesson indexes
+**Chosen**: include planned source-pending textbook records without lesson indexes
+**Rationale**: It satisfies IA coverage without creating dead lesson pages or misattributing existing content. QA-A-030 extraction can later populate real Mimikara lesson indexes.
+**Reversible**: yes
+**Owner review**: pending

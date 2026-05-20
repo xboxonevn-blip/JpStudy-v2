@@ -1,0 +1,893 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "minna_n4",
+  "lesson_id": "minna_n4_44",
+  "items": [
+    {
+      "item_id": "grammar:n4:minna_n4:44:～すぎます_(Quá)",
+      "type": "grammar",
+      "surface": "～すぎます (Quá)",
+      "reading": "",
+      "label_ja": "～すぎます (Quá)",
+      "label_vi": "`すぎます` diễn tả mức độ vượt quá bình thường, thường mang sắc thái không tốt hoặc cần điều chỉnh. Gắn vào thân `ます` của động từ, tính từ i bỏ `い`, tính từ na bỏ `な`.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_44.json",
+        "entry_id": "～すぎます (Quá)",
+        "key": "grammar/n4/grammar_n4_44.json#grammar:～すぎます (Quá)"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "grammar:n4:minna_n4:44:～やすいです,_～にくいです_(Dễ_Khó)",
+      "type": "grammar",
+      "surface": "～やすいです, ～にくいです (Dễ/Khó)",
+      "reading": "",
+      "label_ja": "～やすいです, ～にくいです (Dễ/Khó)",
+      "label_vi": "`やすい/にくい` gắn vào thân `ます` để nói một việc dễ hoặc khó làm. Chủ ngữ thường là đồ vật, nơi chốn hoặc điều kiện khiến hành động dễ/khó.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_44.json",
+        "entry_id": "～やすいです, ～にくいです (Dễ/Khó)",
+        "key": "grammar/n4/grammar_n4_44.json#grammar:～やすいです, ～にくいです (Dễ/Khó)"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "grammar:n4:minna_n4:44:～く,_～に_します_(Làm_cho)",
+      "type": "grammar",
+      "surface": "～く, ～に します (Làm cho)",
+      "reading": "",
+      "label_ja": "～く, ～に します (Làm cho)",
+      "label_vi": "`〜く/〜にします` nói ai đó chủ động làm cho trạng thái thay đổi: làm to lên, làm sạch, hoặc chọn thành một trạng thái nào đó.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_44.json",
+        "entry_id": "～く, ～に します (Làm cho)",
+        "key": "grammar/n4/grammar_n4_44.json#grammar:～く, ～に します (Làm cho)"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "grammar:n4:minna_n4:44:〜く,_〜に_なる",
+      "type": "grammar",
+      "surface": "〜く, 〜に なる",
+      "reading": "",
+      "label_ja": "〜く, 〜に なる",
+      "label_vi": "`〜く/〜になります` nói trạng thái tự thay đổi hoặc dần trở thành như vậy. Chủ ngữ là thứ thay đổi, không nhấn mạnh người tác động.",
+      "order": 4,
+      "legacy_ref": {
+        "file": "grammar/n4/grammar_n4_44.json",
+        "entry_id": "〜く, 〜に なる",
+        "key": "grammar/n4/grammar_n4_44.json#grammar:〜く, 〜に なる"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:泣きます",
+      "type": "vocab",
+      "surface": "泣きます",
+      "reading": "なきます",
+      "label_ja": "泣きます",
+      "label_vi": "khóc",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s001",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s001"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:笑います",
+      "type": "vocab",
+      "surface": "笑います",
+      "reading": "わらいます",
+      "label_ja": "笑います",
+      "label_vi": "cười",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s002",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s002"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:眠ります",
+      "type": "vocab",
+      "surface": "眠ります",
+      "reading": "ねむります",
+      "label_ja": "眠ります",
+      "label_vi": "ngủ",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s003",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s003"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:乾きます",
+      "type": "vocab",
+      "surface": "乾きます",
+      "reading": "かわきます",
+      "label_ja": "乾きます",
+      "label_vi": "khô (áo sơ mi)",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s004",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s004"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:濡れます",
+      "type": "vocab",
+      "surface": "濡れます",
+      "reading": "ぬれます",
+      "label_ja": "濡れます",
+      "label_vi": "ướt (áo sơ mi)",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s005",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s005"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:滑ります",
+      "type": "vocab",
+      "surface": "滑ります",
+      "reading": "すべります",
+      "label_ja": "滑ります",
+      "label_vi": "trượt",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s006",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s006"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:起きます",
+      "type": "vocab",
+      "surface": "起きます",
+      "reading": "おきます",
+      "label_ja": "起きます",
+      "label_vi": "xảy ra (tai nạn)",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s007",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s007"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:調節します",
+      "type": "vocab",
+      "surface": "調節します",
+      "reading": "ちょうせつします",
+      "label_ja": "調節します",
+      "label_vi": "điều chỉnh",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s008",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s008"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:安全",
+      "type": "vocab",
+      "surface": "安全",
+      "reading": "あんぜん",
+      "label_ja": "安全",
+      "label_vi": "an toàn",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s009",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s009"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:丁寧",
+      "type": "vocab",
+      "surface": "丁寧",
+      "reading": "ていねい",
+      "label_ja": "丁寧",
+      "label_vi": "lịch sự, cẩn thận",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s010",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s010"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:細かい",
+      "type": "vocab",
+      "surface": "細かい",
+      "reading": "こまかい",
+      "label_ja": "細かい",
+      "label_vi": "nhỏ, chi tiết",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s011",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s011"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:濃い",
+      "type": "vocab",
+      "surface": "濃い",
+      "reading": "こい",
+      "label_ja": "濃い",
+      "label_vi": "đậm (vị, màu)",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s012",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s012"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:薄い",
+      "type": "vocab",
+      "surface": "薄い",
+      "reading": "うすい",
+      "label_ja": "薄い",
+      "label_vi": "nhạt (vị, màu), mỏng",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s013",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s013"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:空気",
+      "type": "vocab",
+      "surface": "空気",
+      "reading": "くうき",
+      "label_ja": "空気",
+      "label_vi": "không khí",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s014",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s014"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:涙",
+      "type": "vocab",
+      "surface": "涙",
+      "reading": "なみだ",
+      "label_ja": "涙",
+      "label_vi": "nước mắt",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s015",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s015"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:和食",
+      "type": "vocab",
+      "surface": "和食",
+      "reading": "わしょく",
+      "label_ja": "和食",
+      "label_vi": "món ăn Nhật",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s016",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s016"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:洋食",
+      "type": "vocab",
+      "surface": "洋食",
+      "reading": "ようしょく",
+      "label_ja": "洋食",
+      "label_vi": "món ăn Tây",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s017",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s017"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:おかず",
+      "type": "vocab",
+      "surface": "おかず",
+      "reading": "おかず",
+      "label_ja": "おかず",
+      "label_vi": "thức ăn (ăn với cơm)",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s018",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s018"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:量",
+      "type": "vocab",
+      "surface": "量",
+      "reading": "りょう",
+      "label_ja": "量",
+      "label_vi": "lượng",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s019",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s019"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:～倍",
+      "type": "vocab",
+      "surface": "～倍",
+      "reading": "ばい",
+      "label_ja": "～倍",
+      "label_vi": "gấp ～ lần",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s020",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s020"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:シングル",
+      "type": "vocab",
+      "surface": "シングル",
+      "reading": "しんぐる",
+      "label_ja": "シングル",
+      "label_vi": "phòng đơn",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s021",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s021"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:ツイン",
+      "type": "vocab",
+      "surface": "ツイン",
+      "reading": "ついん",
+      "label_ja": "ツイン",
+      "label_vi": "phòng đôi",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s022",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s022"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:洗濯物",
+      "type": "vocab",
+      "surface": "洗濯物",
+      "reading": "せんたくもの",
+      "label_ja": "洗濯物",
+      "label_vi": "quần áo giặt",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s023",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s023"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:DVD",
+      "type": "vocab",
+      "surface": "DVD",
+      "reading": "でぃーぶいでぃー",
+      "label_ja": "DVD",
+      "label_vi": "DVD",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s024",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s024"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:ホテル",
+      "type": "vocab",
+      "surface": "ホテル",
+      "reading": "ほてる",
+      "label_ja": "ホテル",
+      "label_vi": "khách sạn",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s025",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s025"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:どうなさいますか",
+      "type": "vocab",
+      "surface": "どうなさいますか",
+      "reading": "どうなさいますか",
+      "label_ja": "どうなさいますか",
+      "label_vi": "Chị định làm thế nào? (kính ngữ)",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s026",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s026"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:カット",
+      "type": "vocab",
+      "surface": "カット",
+      "reading": "かっと",
+      "label_ja": "カット",
+      "label_vi": "cắt tóc",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s027",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s027"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:シャンプー",
+      "type": "vocab",
+      "surface": "シャンプー",
+      "reading": "しゃんぷー",
+      "label_ja": "シャンプー",
+      "label_vi": "gội đầu, dầu gội",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s028",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s028"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:どういう風に",
+      "type": "vocab",
+      "surface": "どういう風に",
+      "reading": "どういうふうに",
+      "label_ja": "どういう風に",
+      "label_vi": "kiểu như thế nào",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s029",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s029"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:ショート",
+      "type": "vocab",
+      "surface": "ショート",
+      "reading": "しょーと",
+      "label_ja": "ショート",
+      "label_vi": "kiểu ngắn (tóc)",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s030",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s030"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:～みたいにしてください",
+      "type": "vocab",
+      "surface": "～みたいにしてください",
+      "reading": "みたいにしてください",
+      "label_ja": "～みたいにしてください",
+      "label_vi": "hãy cắt như ～",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s031",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s031"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:これでよろしいでしょうか",
+      "type": "vocab",
+      "surface": "これでよろしいでしょうか",
+      "reading": "これでよろしいでしょうか",
+      "label_ja": "これでよろしいでしょうか",
+      "label_vi": "Thế này đã được chưa ạ? (kính ngữ)",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s032",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s032"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:お疲れ様でした",
+      "type": "vocab",
+      "surface": "お疲れ様でした",
+      "reading": "おつかれさまでした",
+      "label_ja": "お疲れ様でした",
+      "label_vi": "Chị đã vất vả rồi (cảm ơn sau khi làm xong việc)",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s033",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s033"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:嫌がります",
+      "type": "vocab",
+      "surface": "嫌がります",
+      "reading": "いやがります",
+      "label_ja": "嫌がります",
+      "label_vi": "ghét, không thích",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s034",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s034"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:また",
+      "type": "vocab",
+      "surface": "また",
+      "reading": "また",
+      "label_ja": "また",
+      "label_vi": "lại, thêm nữa",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s035",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s035"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:順序",
+      "type": "vocab",
+      "surface": "順序",
+      "reading": "じゅんじょ",
+      "label_ja": "順序",
+      "label_vi": "thứ tự",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s036",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s036"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:表現",
+      "type": "vocab",
+      "surface": "表現",
+      "reading": "ひょうげん",
+      "label_ja": "表現",
+      "label_vi": "cách nói, biểu hiện",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s037",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s037"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:例えば",
+      "type": "vocab",
+      "surface": "例えば",
+      "reading": "たとえば",
+      "label_ja": "例えば",
+      "label_vi": "ví dụ",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s038",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s038"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:別れます",
+      "type": "vocab",
+      "surface": "別れます",
+      "reading": "わかれます",
+      "label_ja": "別れます",
+      "label_vi": "chia tay",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s039",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s039"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:これら",
+      "type": "vocab",
+      "surface": "これら",
+      "reading": "これら",
+      "label_ja": "これら",
+      "label_vi": "những cái này",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s040",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s040"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:縁起が悪い",
+      "type": "vocab",
+      "surface": "縁起が悪い",
+      "reading": "えんぎがわるい",
+      "label_ja": "縁起が悪い",
+      "label_vi": "điềm xấu, xui xẻo",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s041",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s041"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:倍",
+      "type": "vocab",
+      "surface": "倍",
+      "reading": "ばい",
+      "label_ja": "倍",
+      "label_vi": "lan",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s042",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s042"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:たんす",
+      "type": "vocab",
+      "surface": "たんす",
+      "reading": "たんす",
+      "label_ja": "たんす",
+      "label_vi": "tu ao",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s043",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s043"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:理由",
+      "type": "vocab",
+      "surface": "理由",
+      "reading": "りゆう",
+      "label_ja": "理由",
+      "label_vi": "ly do",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s044",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s044"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:どういうふうになさいますか",
+      "type": "vocab",
+      "surface": "どういうふうになさいますか",
+      "reading": "どういうふうになさいますか",
+      "label_ja": "どういうふうになさいますか",
+      "label_vi": "Quy khach muon nhu the nao?",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s045",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s045"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:どうもお疲れさまでした",
+      "type": "vocab",
+      "surface": "どうもお疲れさまでした",
+      "reading": "どうもおつかれさまでした",
+      "label_ja": "どうもお疲れさまでした",
+      "label_vi": "Cam on anh/chi da cho doi",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s046",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s046"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:乾",
+      "type": "vocab",
+      "surface": "乾",
+      "reading": "いぬい",
+      "label_ja": "乾",
+      "label_vi": "khô",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s047",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s047"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:単",
+      "type": "vocab",
+      "surface": "単",
+      "reading": "ひとえ",
+      "label_ja": "単",
+      "label_vi": "đơn giản",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s048",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s048"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:泣",
+      "type": "vocab",
+      "surface": "泣",
+      "reading": "なく",
+      "label_ja": "泣",
+      "label_vi": "khóc",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s049",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s049"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:眠",
+      "type": "vocab",
+      "surface": "眠",
+      "reading": "ねむい",
+      "label_ja": "眠",
+      "label_vi": "ngủ",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s050",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s050"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:笑",
+      "type": "vocab",
+      "surface": "笑",
+      "reading": "えむ",
+      "label_ja": "笑",
+      "label_vi": "cười",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s051",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s051"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:簡",
+      "type": "vocab",
+      "surface": "簡",
+      "reading": "えらぶ",
+      "label_ja": "簡",
+      "label_vi": "đơn giản",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s052",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s052"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:泣き声",
+      "type": "vocab",
+      "surface": "泣き声",
+      "reading": "なきごえ",
+      "label_ja": "泣き声",
+      "label_vi": "tiếng khóc",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s053",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s053"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:眠気",
+      "type": "vocab",
+      "surface": "眠気",
+      "reading": "ねむけ",
+      "label_ja": "眠気",
+      "label_vi": "cơn buồn ngủ",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s054",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s054"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    },
+    {
+      "item_id": "vocab:n4:minna_n4:44:笑顔",
+      "type": "vocab",
+      "surface": "笑顔",
+      "reading": "えがお",
+      "label_ja": "笑顔",
+      "label_vi": "nét mặt tươi cười",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n4/minna/lesson_44.json",
+        "entry_id": "n4_l44_s055",
+        "key": "vocab/n4/minna/lesson_44.json#vocab:n4_l44_s055"
+      },
+      "exercise_bank_ref": "exercises/n4/minna_n4/minna_n4_44.json"
+    }
+  ]
+}

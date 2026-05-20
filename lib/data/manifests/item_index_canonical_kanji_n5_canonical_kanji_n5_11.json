@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "canonical_kanji_n5",
+  "lesson_id": "canonical_kanji_n5_11",
+  "items": [
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:11:石",
+      "type": "kanji",
+      "surface": "石",
+      "reading": "セキ",
+      "label_ja": "石",
+      "label_vi": "Thạch (đá)",
+      "order": 1,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_11.json",
+        "entry_id": "n5_canonical_l11_k001",
+        "key": "kanji/n5/lesson_11.json#kanji:n5_canonical_l11_k001"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_11.json"
+    },
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:11:本",
+      "type": "kanji",
+      "surface": "本",
+      "reading": "ホン",
+      "label_ja": "本",
+      "label_vi": "Bổn (sách, gốc)",
+      "order": 2,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_11.json",
+        "entry_id": "n5_canonical_l11_k002",
+        "key": "kanji/n5/lesson_11.json#kanji:n5_canonical_l11_k002"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_11.json"
+    },
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:11:立",
+      "type": "kanji",
+      "surface": "立",
+      "reading": "リツ",
+      "label_ja": "立",
+      "label_vi": "Lập (đứng)",
+      "order": 3,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_11.json",
+        "entry_id": "n5_canonical_l11_k003",
+        "key": "kanji/n5/lesson_11.json#kanji:n5_canonical_l11_k003"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_11.json"
+    },
+    {
+      "item_id": "kanji:n5:canonical_kanji_n5:11:生",
+      "type": "kanji",
+      "surface": "生",
+      "reading": "セイ",
+      "label_ja": "生",
+      "label_vi": "Sanh (sinh ra, sống)",
+      "order": 4,
+      "legacy_ref": {
+        "file": "kanji/n5/lesson_11.json",
+        "entry_id": "n5_canonical_l11_k004",
+        "key": "kanji/n5/lesson_11.json#kanji:n5_canonical_l11_k004"
+      },
+      "exercise_bank_ref": "exercises/n5/canonical_kanji_n5/canonical_kanji_n5_11.json"
+    }
+  ]
+}

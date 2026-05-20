@@ -1,0 +1,578 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "minna_n5",
+  "lesson_id": "minna_n5_24",
+  "items": [
+    {
+      "item_id": "grammar:n5:minna_n5:24:Tặng,_Cho_(Kuremasu)",
+      "type": "grammar",
+      "surface": "Tặng, Cho (Kuremasu)",
+      "reading": "",
+      "label_ja": "Tặng, Cho (Kuremasu)",
+      "label_vi": "`くれます` dùng khi ai đó cho/tặng người nói hoặc người thân của người nói một thứ gì đó.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_24.json",
+        "entry_id": "Tặng, Cho (Kuremasu)",
+        "key": "grammar/n5/grammar_n5_24.json#grammar:Tặng, Cho (Kuremasu)"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:24:Vて_あげます_(Làm_giúp)",
+      "type": "grammar",
+      "surface": "Vて あげます (Làm giúp)",
+      "reading": "",
+      "label_ja": "Vて あげます (Làm giúp)",
+      "label_vi": "Dùng khi người nói làm giúp ai đó việc gì với thiện chí. Cần chú ý sắc thái: nếu dùng không khéo có thể nghe như đang ban ơn.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_24.json",
+        "entry_id": "Vて あげます (Làm giúp)",
+        "key": "grammar/n5/grammar_n5_24.json#grammar:Vて あげます (Làm giúp)"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:24:Vて_もらいます_(Được_làm_giúp)",
+      "type": "grammar",
+      "surface": "Vて もらいます (Được làm giúp)",
+      "reading": "",
+      "label_ja": "Vて もらいます (Được làm giúp)",
+      "label_vi": "Dùng khi người nói nhận được sự giúp đỡ từ ai đó, hoặc nhờ ai đó làm gì cho mình.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_24.json",
+        "entry_id": "Vて もらいます (Được làm giúp)",
+        "key": "grammar/n5/grammar_n5_24.json#grammar:Vて もらいます (Được làm giúp)"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "grammar:n5:minna_n5:24:Vて_くれます_(Được_làm_giúp)",
+      "type": "grammar",
+      "surface": "Vて くれます (Được làm giúp)",
+      "reading": "",
+      "label_ja": "Vて くれます (Được làm giúp)",
+      "label_vi": "Dùng khi người khác làm gì đó cho người nói hoặc người thân của người nói. Người nói là phía được hưởng lợi.",
+      "order": 4,
+      "legacy_ref": {
+        "file": "grammar/n5/grammar_n5_24.json",
+        "entry_id": "Vて くれます (Được làm giúp)",
+        "key": "grammar/n5/grammar_n5_24.json#grammar:Vて くれます (Được làm giúp)"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:くれます",
+      "type": "vocab",
+      "surface": "くれます",
+      "reading": "くれます",
+      "label_ja": "くれます",
+      "label_vi": "cho (mình)",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s001",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s001"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:連れて行きます",
+      "type": "vocab",
+      "surface": "連れて行きます",
+      "reading": "つれていきます",
+      "label_ja": "連れて行きます",
+      "label_vi": "dẫn (ai) đi",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s002",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s002"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:連れて来ます",
+      "type": "vocab",
+      "surface": "連れて来ます",
+      "reading": "つれてきます",
+      "label_ja": "連れて来ます",
+      "label_vi": "dẫn (ai) đến",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s003",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s003"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:送ります",
+      "type": "vocab",
+      "surface": "送ります",
+      "reading": "おくります",
+      "label_ja": "送ります",
+      "label_vi": "đưa đi, tiễn (ai)",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s004",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s004"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:紹介します",
+      "type": "vocab",
+      "surface": "紹介します",
+      "reading": "しょうかいします",
+      "label_ja": "紹介します",
+      "label_vi": "giới thiệu",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s005",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s005"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:案内します",
+      "type": "vocab",
+      "surface": "案内します",
+      "reading": "あんないします",
+      "label_ja": "案内します",
+      "label_vi": "hướng dẫn, dẫn đường",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s006",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s006"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:説明します",
+      "type": "vocab",
+      "surface": "説明します",
+      "reading": "せつめいします",
+      "label_ja": "説明します",
+      "label_vi": "giải thích",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s007",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s007"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:入れます",
+      "type": "vocab",
+      "surface": "入れます",
+      "reading": "いれます",
+      "label_ja": "入れます",
+      "label_vi": "pha (cà phê)",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s008",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s008"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:お爺さん",
+      "type": "vocab",
+      "surface": "お爺さん",
+      "reading": "おじいさん",
+      "label_ja": "お爺さん",
+      "label_vi": "ông, cụ già (nam)",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s009",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s009"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:お婆さん",
+      "type": "vocab",
+      "surface": "お婆さん",
+      "reading": "おばあさん",
+      "label_ja": "お婆さん",
+      "label_vi": "bà, cụ già (nữ)",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s010",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s010"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:準備",
+      "type": "vocab",
+      "surface": "準備",
+      "reading": "じゅんび",
+      "label_ja": "準備",
+      "label_vi": "sự chuẩn bị",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s011",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s011"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:意味",
+      "type": "vocab",
+      "surface": "意味",
+      "reading": "いみ",
+      "label_ja": "意味",
+      "label_vi": "ý nghĩa",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s012",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s012"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:お菓子",
+      "type": "vocab",
+      "surface": "お菓子",
+      "reading": "おかし",
+      "label_ja": "お菓子",
+      "label_vi": "bánh kẹo",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s013",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s013"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:全部",
+      "type": "vocab",
+      "surface": "全部",
+      "reading": "ぜんぶ",
+      "label_ja": "全部",
+      "label_vi": "toàn bộ, tất cả",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s014",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s014"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:自分で",
+      "type": "vocab",
+      "surface": "自分で",
+      "reading": "じぶんで",
+      "label_ja": "自分で",
+      "label_vi": "tự mình",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s015",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s015"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:ほかに",
+      "type": "vocab",
+      "surface": "ほかに",
+      "reading": "ほかに",
+      "label_ja": "ほかに",
+      "label_vi": "bên cạnh đó, ngoài ra",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s016",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s016"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:ワゴン車",
+      "type": "vocab",
+      "surface": "ワゴン車",
+      "reading": "わごんしゃ",
+      "label_ja": "ワゴン車",
+      "label_vi": "xe ô tô kiện (xe station wagon)",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s017",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s017"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:お弁当",
+      "type": "vocab",
+      "surface": "お弁当",
+      "reading": "おべんとう",
+      "label_ja": "お弁当",
+      "label_vi": "cơm hộp",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s018",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s018"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:くれます",
+      "type": "vocab",
+      "surface": "くれます",
+      "reading": "くれます",
+      "label_ja": "くれます",
+      "label_vi": "cho (tôi)",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s019",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s019"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:連れて行きます",
+      "type": "vocab",
+      "surface": "連れて行きます",
+      "reading": "つれていきます",
+      "label_ja": "連れて行きます",
+      "label_vi": "đưa ai đó đi cùng",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s020",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s020"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:連れて来ます",
+      "type": "vocab",
+      "surface": "連れて来ます",
+      "reading": "つれてきます",
+      "label_ja": "連れて来ます",
+      "label_vi": "mang ai đó đi cùng",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s021",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s021"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:送ります",
+      "type": "vocab",
+      "surface": "送ります",
+      "reading": "おくります",
+      "label_ja": "送ります",
+      "label_vi": "gửi, tiễn",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s022",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s022"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:紹介",
+      "type": "vocab",
+      "surface": "紹介",
+      "reading": "しょうかい",
+      "label_ja": "紹介",
+      "label_vi": "giới thiệu",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s023",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s023"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:案内",
+      "type": "vocab",
+      "surface": "案内",
+      "reading": "あんない",
+      "label_ja": "案内",
+      "label_vi": "hướng dẫn, thông tin",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s024",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s024"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:説明",
+      "type": "vocab",
+      "surface": "説明",
+      "reading": "せつめい",
+      "label_ja": "説明",
+      "label_vi": "giải thích",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s025",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s025"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:入れます",
+      "type": "vocab",
+      "surface": "入れます",
+      "reading": "いれます",
+      "label_ja": "入れます",
+      "label_vi": "cho vào, pha (cà phê)",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s026",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s026"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:人",
+      "type": "vocab",
+      "surface": "人",
+      "reading": "ひと",
+      "label_ja": "人",
+      "label_vi": "người",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s027",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s027"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:コーヒー",
+      "type": "vocab",
+      "surface": "コーヒー",
+      "reading": "こーひー",
+      "label_ja": "コーヒー",
+      "label_vi": "cà phê",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s028",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s028"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:おじいちゃん",
+      "type": "vocab",
+      "surface": "おじいちゃん",
+      "reading": "おじいちゃん",
+      "label_ja": "おじいちゃん",
+      "label_vi": "ông",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s029",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s029"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:おばあちゃん",
+      "type": "vocab",
+      "surface": "おばあちゃん",
+      "reading": "おばあちゃん",
+      "label_ja": "おばあちゃん",
+      "label_vi": "bà",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s030",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s030"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:他に",
+      "type": "vocab",
+      "surface": "他に",
+      "reading": "ほかに",
+      "label_ja": "他に",
+      "label_vi": "ngoài ra/ngoài ra",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s031",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s031"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:弁当",
+      "type": "vocab",
+      "surface": "弁当",
+      "reading": "べんとう",
+      "label_ja": "弁当",
+      "label_vi": "hộp cơm",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s032",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s032"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:公",
+      "type": "vocab",
+      "surface": "公",
+      "reading": "おおやけ",
+      "label_ja": "公",
+      "label_vi": "công cộng",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s033",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s033"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    },
+    {
+      "item_id": "vocab:n5:minna_n5:24:園",
+      "type": "vocab",
+      "surface": "園",
+      "reading": "その",
+      "label_ja": "園",
+      "label_vi": "vườn",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n5/minna/lesson_24.json",
+        "entry_id": "n5_l24_s034",
+        "key": "vocab/n5/minna/lesson_24.json#vocab:n5_l24_s034"
+      },
+      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_24.json"
+    }
+  ]
+}

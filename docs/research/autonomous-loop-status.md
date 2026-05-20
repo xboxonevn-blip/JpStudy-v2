@@ -7,6 +7,14 @@
 - Opened mission logs: `docs/research/decisions-log-2026-05-21.md` and `docs/research/open-questions-2026-05-21.md`.
 - Acceptance check: 7/7 docs exist, Directive F grep present, `git diff --check` clean.
 
+# 2026-05-21 — Megaprompt Phase 1 data migration done
+
+- Added `tool/migration/restructure_to_theme_lesson.js` and `tool/migration/validate_migration.js` with TDD coverage.
+- Generated `lib/data/manifests/textbook_index.json`, `lesson_index_*.json`, `item_index_*.json`, and `migration_summary.json`.
+- `textbook_index.json` covers Minna N5/N4, Hajimete Tango N5-N1, Mimikara N5-N1, Shin Kanzen N3-N1, plus canonical kanji supporting tracks.
+- Migration result: old flat reader scope `19580` items; new manifest reader `19580` items; lost `0`, orphan refs `0`, empty generated lessons `0`; generated lesson indexes `400`.
+- Gate: `node --test test/tool/research/theme_lesson_manifest_test.js` passed `3/3`; `node tool/migration/validate_migration.js --content-root assets/data/content --manifest-root lib/data/manifests` passed; `npm run test:research-tooling` passed `80/80`; `git diff --check` clean.
+
 # 2026-05-21 — Megaprompt Overhaul kickoff
 
 - Context loaded: CLAUDE.md, AGENTS.md, agent-directives, quality-backlog, loop-status, free-web-stack-reference, jlpt-exam-source-reference, upper-jlpt-sources; `docs/SHIPPING.md` absent.

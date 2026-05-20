@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "textbook_id": "shinkanzen_n2",
+  "lesson_id": "shinkanzen_n2_25",
+  "items": [
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～折には",
+      "type": "grammar",
+      "surface": "～折には",
+      "reading": "",
+      "label_ja": "～折には",
+      "label_vi": "Dùng trong lối nói trang trọng để chỉ một dịp hoặc thời điểm cụ thể khi sự việc xảy ra. Có thể hiểu là “khi có dịp”, “trong trường hợp”. Cấu trúc: Verb-dictionary form + 折には, Verb-た form + 折には, い-Adjective + 折には, な-Adjective + な折には, Noun + の折には.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～折には",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～折には"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～末",
+      "type": "grammar",
+      "surface": "～末",
+      "reading": "",
+      "label_ja": "～末",
+      "label_vi": "Dùng để nói kết quả đạt được sau một quá trình, thời gian hoặc nhiều nỗ lực. Có thể hiểu là “sau khi...”, “sau cùng”. Cấu trúc: Vた + 末(に) / N + の末(に).",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～末",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～末"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～次第",
+      "type": "grammar",
+      "surface": "～次第",
+      "reading": "",
+      "label_ja": "～次第",
+      "label_vi": "Có hai nghĩa chính: với thân động từ ます là “ngay sau khi...”; với danh từ là “tùy thuộc vào...”. Cần đọc theo cấu trúc đi kèm. Cấu trúc: Verb-ますstem + 次第, Noun + 次第.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～次第",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～次第"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～次第で",
+      "type": "grammar",
+      "surface": "～次第で",
+      "reading": "",
+      "label_ja": "～次第で",
+      "label_vi": "Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố. Có thể hiểu là “tùy vào”, “phụ thuộc vào”. Cấu trúc: Noun + 次第で.",
+      "order": 4,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～次第で",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～次第で"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～次第です",
+      "type": "grammar",
+      "surface": "～次第です",
+      "reading": "",
+      "label_ja": "～次第です",
+      "label_vi": "Dùng trong văn phong trang trọng để nói “tùy thuộc vào...” hoặc trình bày hoàn cảnh/lý do dẫn tới việc đang nói. Nghĩa “ngay khi...” thuộc mẫu Vます stem + 次第, thường không kết thúc bằng です. Cấu trúc: N + 次第です / V普通形 + 次第です.",
+      "order": 5,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～次第です",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～次第です"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～気味",
+      "type": "grammar",
+      "surface": "～気味",
+      "reading": "",
+      "label_ja": "～気味",
+      "label_vi": "Gắn sau thân động từ ます hoặc danh từ để nói hơi có xu hướng hoặc trạng thái nào đó, thường là nhẹ và không quá nghiêm trọng. Có thể hiểu là “hơi...”, “có vẻ...”. Cấu trúc: Vます bỏ ます + 気味 / N + 気味.",
+      "order": 6,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～気味",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～気味"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～限り",
+      "type": "grammar",
+      "surface": "～限り",
+      "reading": "",
+      "label_ja": "～限り",
+      "label_vi": "Dùng để nói một điều tiếp tục đúng trong phạm vi hoặc chừng mực điều kiện được nêu còn đúng. Có thể hiểu là “chừng nào còn...”, “trong phạm vi...”. Cấu trúc: Verb-casual + 限り, い-Adjective + 限り, な-Adjective + な限り, Noun + の限り.",
+      "order": 7,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～限り",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～限り"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:25:～際に",
+      "type": "grammar",
+      "surface": "～際に",
+      "reading": "",
+      "label_ja": "～際に",
+      "label_vi": "Dùng để chỉ thời điểm hoặc dịp khi một việc xảy ra, trang trọng hơn とき. Thường gặp trong hướng dẫn, thông báo, quy định. Cấu trúc: V辞書形・Vた + 際に / N + の際に.",
+      "order": 8,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_25.json",
+        "entry_id": "～際に",
+        "key": "grammar/n2/grammar_n2_25.json#grammar:～際に"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:呼び掛ける",
+      "type": "vocab",
+      "surface": "呼び掛ける",
+      "reading": "よびかける",
+      "label_ja": "呼び掛ける",
+      "label_vi": "gọi; kêu gọi; phát động",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1777",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1777"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:呼び出す",
+      "type": "vocab",
+      "surface": "呼び出す",
+      "reading": "よびだす",
+      "label_ja": "呼び出す",
+      "label_vi": "gọi ra; triệu tập",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1778",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1778"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:蘇る",
+      "type": "vocab",
+      "surface": "蘇る",
+      "reading": "よみがえる",
+      "label_ja": "蘇る",
+      "label_vi": "sống lại; hồi sinh",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1779",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1779"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:因る",
+      "type": "vocab",
+      "surface": "因る",
+      "reading": "よる",
+      "label_ja": "因る",
+      "label_vi": "do; bắt nguồn từ",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1780",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1780"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:慶び",
+      "type": "vocab",
+      "surface": "慶び",
+      "reading": "よろこび",
+      "label_ja": "慶び",
+      "label_vi": "niềm vui; lời chúc mừng",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1781",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1781"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:来日",
+      "type": "vocab",
+      "surface": "来日",
+      "reading": "らいにち",
+      "label_ja": "来日",
+      "label_vi": "đến Nhật; sang Nhật",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1783",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1783"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:落第",
+      "type": "vocab",
+      "surface": "落第",
+      "reading": "らくだい",
+      "label_ja": "落第",
+      "label_vi": "thi trượt; lưu ban",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1784",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1784"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:ラッシュアワー",
+      "type": "vocab",
+      "surface": "ラッシュアワー",
+      "reading": "ラッシュアワー",
+      "label_ja": "ラッシュアワー",
+      "label_vi": "giờ cao điểm",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1785",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1785"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:欄",
+      "type": "vocab",
+      "surface": "欄",
+      "reading": "らん",
+      "label_ja": "欄",
+      "label_vi": "cột; mục; cột văn bản",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1786",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1786"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:ランチ",
+      "type": "vocab",
+      "surface": "ランチ",
+      "reading": "ランチ",
+      "label_ja": "ランチ",
+      "label_vi": "bữa trưa; lunch",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1787",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1787"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:ランニング",
+      "type": "vocab",
+      "surface": "ランニング",
+      "reading": "ランニング",
+      "label_ja": "ランニング",
+      "label_vi": "chạy bộ; áo ba lỗ",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1788",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1788"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:乱暴",
+      "type": "vocab",
+      "surface": "乱暴",
+      "reading": "らんぼう",
+      "label_ja": "乱暴",
+      "label_vi": "thô bạo; bạo lực; cộc cằn; liều lĩnh",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1789",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1789"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:理科",
+      "type": "vocab",
+      "surface": "理科",
+      "reading": "りか",
+      "label_ja": "理科",
+      "label_vi": "môn khoa học",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1790",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1790"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:利害",
+      "type": "vocab",
+      "surface": "利害",
+      "reading": "りがい",
+      "label_ja": "利害",
+      "label_vi": "lợi hại; lợi ích liên quan",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1791",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1791"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:リズム",
+      "type": "vocab",
+      "surface": "リズム",
+      "reading": "リズム",
+      "label_ja": "リズム",
+      "label_vi": "nhịp điệu",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1792",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1792"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:リットル",
+      "type": "vocab",
+      "surface": "リットル",
+      "reading": "リットル",
+      "label_ja": "リットル",
+      "label_vi": "lít",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1793",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1793"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:リボン",
+      "type": "vocab",
+      "surface": "リボン",
+      "reading": "リボン",
+      "label_ja": "リボン",
+      "label_vi": "ruy băng",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1794",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1794"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:略す",
+      "type": "vocab",
+      "surface": "略す",
+      "reading": "りゃくす",
+      "label_ja": "略す",
+      "label_vi": "viết tắt; lược bỏ",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1795",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1795"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:流域",
+      "type": "vocab",
+      "surface": "流域",
+      "reading": "りゅういき",
+      "label_ja": "流域",
+      "label_vi": "lưu vực",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1796",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1796"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:寮",
+      "type": "vocab",
+      "surface": "寮",
+      "reading": "りょう",
+      "label_ja": "寮",
+      "label_vi": "ký túc xá",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1797",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1797"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:両側",
+      "type": "vocab",
+      "surface": "両側",
+      "reading": "りょうがわ",
+      "label_ja": "両側",
+      "label_vi": "hai bên; cả hai phía",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1798",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1798"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:漁師",
+      "type": "vocab",
+      "surface": "漁師",
+      "reading": "りょうし",
+      "label_ja": "漁師",
+      "label_vi": "ngư dân",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1799",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1799"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:領事",
+      "type": "vocab",
+      "surface": "領事",
+      "reading": "りょうじ",
+      "label_ja": "領事",
+      "label_vi": "lãnh sự",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1800",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1800"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:領収",
+      "type": "vocab",
+      "surface": "領収",
+      "reading": "りょうしゅう",
+      "label_ja": "領収",
+      "label_vi": "biên nhận; nhận tiền",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1801",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1801"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:臨時",
+      "type": "vocab",
+      "surface": "臨時",
+      "reading": "りんじ",
+      "label_ja": "臨時",
+      "label_vi": "tạm thời; đặc biệt; bất thường",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1802",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1802"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:留守番",
+      "type": "vocab",
+      "surface": "留守番",
+      "reading": "るすばん",
+      "label_ja": "留守番",
+      "label_vi": "trông nhà; người trông nhà",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1803",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1803"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:例外",
+      "type": "vocab",
+      "surface": "例外",
+      "reading": "れいがい",
+      "label_ja": "例外",
+      "label_vi": "ngoại lệ",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1804",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1804"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:零点",
+      "type": "vocab",
+      "surface": "零点",
+      "reading": "れいてん",
+      "label_ja": "零点",
+      "label_vi": "điểm không; 0 điểm",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1805",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1805"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:冷凍",
+      "type": "vocab",
+      "surface": "冷凍",
+      "reading": "れいとう",
+      "label_ja": "冷凍",
+      "label_vi": "đông lạnh; bảo quản lạnh",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1806",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1806"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:レインコート",
+      "type": "vocab",
+      "surface": "レインコート",
+      "reading": "レインコート",
+      "label_ja": "レインコート",
+      "label_vi": "áo mưa",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1807",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1807"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:レクリェーション",
+      "type": "vocab",
+      "surface": "レクリェーション",
+      "reading": "レクリェーション",
+      "label_ja": "レクリェーション",
+      "label_vi": "giải trí; hoạt động giải trí",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1808",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1808"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:レジャー",
+      "type": "vocab",
+      "surface": "レジャー",
+      "reading": "レジャー",
+      "label_ja": "レジャー",
+      "label_vi": "thời gian rảnh; giải trí",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1809",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1809"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:列島",
+      "type": "vocab",
+      "surface": "列島",
+      "reading": "れっとう",
+      "label_ja": "列島",
+      "label_vi": "quần đảo",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1810",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1810"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:レベル",
+      "type": "vocab",
+      "surface": "レベル",
+      "reading": "レベル",
+      "label_ja": "レベル",
+      "label_vi": "cấp độ; mức",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1811",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1811"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:リポート",
+      "type": "vocab",
+      "surface": "リポート",
+      "reading": "リポート",
+      "label_ja": "リポート",
+      "label_vi": "báo cáo; bài báo cáo",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1812",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1812"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:煉瓦",
+      "type": "vocab",
+      "surface": "煉瓦",
+      "reading": "れんが",
+      "label_ja": "煉瓦",
+      "label_vi": "gạch",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1813",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1813"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:連合",
+      "type": "vocab",
+      "surface": "連合",
+      "reading": "れんごう",
+      "label_ja": "連合",
+      "label_vi": "liên hợp; liên minh",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1814",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1814"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:レンズ",
+      "type": "vocab",
+      "surface": "レンズ",
+      "reading": "レンズ",
+      "label_ja": "レンズ",
+      "label_vi": "thấu kính; ống kính",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1815",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1815"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:蝋燭",
+      "type": "vocab",
+      "surface": "蝋燭",
+      "reading": "ろうそく",
+      "label_ja": "蝋燭",
+      "label_vi": "nến",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1816",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1816"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:ローマ字",
+      "type": "vocab",
+      "surface": "ローマ字",
+      "reading": "ローマじ",
+      "label_ja": "ローマ字",
+      "label_vi": "chữ La-tinh; romaji",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1817",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1817"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:録音",
+      "type": "vocab",
+      "surface": "録音",
+      "reading": "ろくおん",
+      "label_ja": "録音",
+      "label_vi": "ghi âm",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1818",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1818"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:ロッカー",
+      "type": "vocab",
+      "surface": "ロッカー",
+      "reading": "ロッカー",
+      "label_ja": "ロッカー",
+      "label_vi": "tủ khóa",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1819",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1819"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:ロビー",
+      "type": "vocab",
+      "surface": "ロビー",
+      "reading": "ロビー",
+      "label_ja": "ロビー",
+      "label_vi": "sảnh; lobby",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1820",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1820"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:論ずる",
+      "type": "vocab",
+      "surface": "論ずる",
+      "reading": "ろんずる",
+      "label_ja": "論ずる",
+      "label_vi": "bàn luận; tranh luận; thảo luận",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1821",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1821"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:和英",
+      "type": "vocab",
+      "surface": "和英",
+      "reading": "わえい",
+      "label_ja": "和英",
+      "label_vi": "Nhật-Anh; từ điển Nhật-Anh",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1822",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1822"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:分る",
+      "type": "vocab",
+      "surface": "分る",
+      "reading": "わかる",
+      "label_ja": "分る",
+      "label_vi": "được hiểu; hiểu",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1823",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1823"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:分かれる",
+      "type": "vocab",
+      "surface": "分かれる",
+      "reading": "わかれる",
+      "label_ja": "分かれる",
+      "label_vi": "chia nhánh; rẽ ra; phân tán; chia thành",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1824",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1824"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:若々しい",
+      "type": "vocab",
+      "surface": "若々しい",
+      "reading": "わかわかしい",
+      "label_ja": "若々しい",
+      "label_vi": "trẻ trung",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1825",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1825"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:湧く",
+      "type": "vocab",
+      "surface": "湧く",
+      "reading": "わく",
+      "label_ja": "湧く",
+      "label_vi": "sôi lên; trào ra; hào hứng",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1826",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1826"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:詫びる",
+      "type": "vocab",
+      "surface": "詫びる",
+      "reading": "わびる",
+      "label_ja": "詫びる",
+      "label_vi": "xin lỗi",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1827",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1827"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:和服",
+      "type": "vocab",
+      "surface": "和服",
+      "reading": "わふく",
+      "label_ja": "和服",
+      "label_vi": "trang phục Nhật; kimono",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1828",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1828"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:わりあいに",
+      "type": "vocab",
+      "surface": "わりあいに",
+      "reading": "わりあいに",
+      "label_ja": "わりあいに",
+      "label_vi": "tương đối; khá",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1829",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1829"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:割算",
+      "type": "vocab",
+      "surface": "割算",
+      "reading": "わりざん",
+      "label_ja": "割算",
+      "label_vi": "phép chia",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1830",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1830"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:割と",
+      "type": "vocab",
+      "surface": "割と",
+      "reading": "わりと",
+      "label_ja": "割と",
+      "label_vi": "tương đối; khá",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1831",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1831"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:割引",
+      "type": "vocab",
+      "surface": "割引",
+      "reading": "わりびき",
+      "label_ja": "割引",
+      "label_vi": "giảm giá; chiết khấu",
+      "order": 56,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1832",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1832"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:椀",
+      "type": "vocab",
+      "surface": "椀",
+      "reading": "わん",
+      "label_ja": "椀",
+      "label_vi": "bát súp Nhật; bát gỗ",
+      "order": 57,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1833",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1833"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:碗",
+      "type": "vocab",
+      "surface": "碗",
+      "reading": "わん",
+      "label_ja": "碗",
+      "label_vi": "bát",
+      "order": 58,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1834",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1834"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    },
+    {
+      "item_id": "vocab:n2:shinkanzen_n2:25:ワンピース",
+      "type": "vocab",
+      "surface": "ワンピース",
+      "reading": "ワンピース",
+      "label_ja": "ワンピース",
+      "label_vi": "váy liền; đầm liền",
+      "order": 59,
+      "legacy_ref": {
+        "file": "vocab/n2/ShinKanzen/tanos_n2_25.json",
+        "entry_id": "n2_tanos_1835",
+        "key": "vocab/n2/ShinKanzen/tanos_n2_25.json#vocab:n2_tanos_1835"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_25.json"
+    }
+  ]
+}

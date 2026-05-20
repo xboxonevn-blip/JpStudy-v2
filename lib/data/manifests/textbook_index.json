@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T00:00:00+07:00",
+  "source_policy": "Generated from local JpStudy assets and owner-provided source references; banned websites not accessed.",
+  "textbooks": [
+    {
+      "textbook_id": "canonical_kanji_n1",
+      "level": "N1",
+      "name_ja": "漢字 N1",
+      "name_vi": "Kanji chuẩn N1",
+      "name_en": "Canonical Kanji N1",
+      "categories": [
+        "kanji"
+      ],
+      "source_credit": "Owner-provided canonical kanji ebooks plus KANJIDIC2/Unihan facts",
+      "migration_status": "generated_from_local_assets",
+      "lesson_count": 25,
+      "item_count_total": 1056
+    },
+    {
+      "textbook_id": "canonical_kanji_n2",
+      "level": "N2",
+      "name_ja": "漢字 N2",
+      "name_vi": "Kanji chuẩn N2",
+      "name_en": "Canonical Kanji N2",
+      "categories": [
+        "kanji"
+      ],
+      "source_credit": "Owner-provided canonical kanji ebooks plus KANJIDIC2/Unihan facts",
+      "migration_status": "generated_from_local_assets",
+      "lesson_count": 25,
+      "item_count_total": 461
+    },
+    {
+      "textbook_id": "canonical_kanji_n3",
+      "level": "N3",
+      "name_ja": "漢字 N3",
+      "name_vi": "Kanji chuẩn N3",
+      "name_en": "Canonical Kanji N3",
+      "categories": [
+        "kanji"
+      ],
+      "source_credit": "Owner-provided canonical kanji ebooks plus KANJIDIC2/Unihan facts",
+      "migration_status": "generated_from_local_assets",
+      "lesson_count": 25,
+      "item_count_total": 316
+    },
+    {
+      "textbook_id": "canonical_kanji_n4",
+      "level": "N4",
+      "name_ja": "漢字 N4",
+      "name_vi": "Kanji chuẩn N4",
+      "name_en": "Canonical Kanji N4",
+      "categories": [
+        "kanji"
+      ],
+      "source_credit": "Owner-provided canonical kanji ebooks plus KANJIDIC2/Unihan facts",
+      "migration_status": "generated_from_local_assets",
+      "lesson_count": 25,
+      "item_count_total": 178
+    },
+    {
+      "textbook_id": "canonical_kanji_n5",
+      "level": "N5",
+      "name_ja": "漢字 N5",
+      "name_vi": "Kanji chuẩn N5",
+      "name_en": "Canonical Kanji N5",
+      "categories": [
+        "kanji"
+      ],
+      "source_credit": "Owner-provided canonical kanji ebooks plus KANJIDIC2/Unihan facts",
+      "migration_status": "generated_from_local_assets",
+      "lesson_count": 25,
+      "item_count_total": 103
+    },
+    {
+      "textbook_id": "hajimete_tango_n1",
+      "level": "N1",
+      "name_ja": "はじめての日本語能力試験単語 N1",
+      "name_vi": "Hajimete Tango N1",
+      "name_en": "Hajimete Tango N1",
+      "categories": [
+        "vocab"
+      ],
+      "source_credit": "ASK Publishing reference only; app data remains local-first",
+      "lesson_count": 50,
+      "item_count_total": 3463,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "hajimete_tango_n2",
+      "level": "N2",
+      "name_ja": "はじめての日本語能力試験単語 N2",
+      "name_vi": "Hajimete Tango N2",
+      "name_en": "Hajimete Tango N2",
+      "categories": [
+        "vocab"
+      ],
+      "source_credit": "ASK Publishing reference only; app data remains local-first",
+      "lesson_count": 38,
+      "item_count_total": 1793,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "hajimete_tango_n3",
+      "level": "N3",
+      "name_ja": "はじめての日本語能力試験単語 N3",
+      "name_vi": "Hajimete Tango N3",
+      "name_en": "Hajimete Tango N3",
+      "categories": [
+        "vocab"
+      ],
+      "source_credit": "ASK Publishing reference only; app data remains local-first",
+      "lesson_count": 28,
+      "item_count_total": 1784,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "hajimete_tango_n4",
+      "level": "N4",
+      "name_ja": "はじめての日本語能力試験単語 N4",
+      "name_vi": "Hajimete Tango N4",
+      "name_en": "Hajimete Tango N4",
+      "categories": [
+        "vocab"
+      ],
+      "source_credit": "ASK Publishing reference only; app data remains local-first",
+      "lesson_count": 20,
+      "item_count_total": 632,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "hajimete_tango_n5",
+      "level": "N5",
+      "name_ja": "はじめての日本語能力試験単語 N5",
+      "name_vi": "Hajimete Tango N5",
+      "name_en": "Hajimete Tango N5",
+      "categories": [
+        "vocab"
+      ],
+      "source_credit": "ASK Publishing reference only; app data remains local-first",
+      "lesson_count": 14,
+      "item_count_total": 662,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "mimikara_n1",
+      "level": "N1",
+      "name_ja": "耳から覚える N1",
+      "name_vi": "Mimikara N1",
+      "name_en": "Mimikara N1",
+      "categories": [
+        "vocab",
+        "grammar"
+      ],
+      "source_credit": "Owner-provided local files; fact extraction only",
+      "migration_status": "planned_source_pending",
+      "lesson_count": 0,
+      "item_count_total": 0
+    },
+    {
+      "textbook_id": "mimikara_n2",
+      "level": "N2",
+      "name_ja": "耳から覚える N2",
+      "name_vi": "Mimikara N2",
+      "name_en": "Mimikara N2",
+      "categories": [
+        "vocab",
+        "grammar"
+      ],
+      "source_credit": "Owner-provided local files; fact extraction only",
+      "migration_status": "planned_source_pending",
+      "lesson_count": 0,
+      "item_count_total": 0
+    },
+    {
+      "textbook_id": "mimikara_n3",
+      "level": "N3",
+      "name_ja": "耳から覚える N3",
+      "name_vi": "Mimikara N3",
+      "name_en": "Mimikara N3",
+      "categories": [
+        "vocab",
+        "grammar"
+      ],
+      "source_credit": "Owner-provided local files; fact extraction only",
+      "migration_status": "planned_source_pending",
+      "lesson_count": 0,
+      "item_count_total": 0
+    },
+    {
+      "textbook_id": "mimikara_n4",
+      "level": "N4",
+      "name_ja": "耳から覚える N4",
+      "name_vi": "Mimikara N4",
+      "name_en": "Mimikara N4",
+      "categories": [
+        "vocab",
+        "grammar"
+      ],
+      "source_credit": "Owner-provided local files; fact extraction only",
+      "migration_status": "planned_source_pending",
+      "lesson_count": 0,
+      "item_count_total": 0
+    },
+    {
+      "textbook_id": "mimikara_n5",
+      "level": "N5",
+      "name_ja": "耳から覚える N5",
+      "name_vi": "Mimikara N5",
+      "name_en": "Mimikara N5",
+      "categories": [
+        "vocab",
+        "grammar"
+      ],
+      "source_credit": "Owner-provided local files; fact extraction only",
+      "migration_status": "planned_source_pending",
+      "lesson_count": 0,
+      "item_count_total": 0
+    },
+    {
+      "textbook_id": "minna_n4",
+      "level": "N4",
+      "name_ja": "みんなの日本語 初級II",
+      "name_vi": "Minna no Nihongo Sơ cấp II",
+      "name_en": "Minna no Nihongo Elementary II",
+      "categories": [
+        "grammar",
+        "vocab"
+      ],
+      "source_credit": "3A Corporation reference only; no verbatim reproduction",
+      "lesson_count": 25,
+      "item_count_total": 1578,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "minna_n5",
+      "level": "N5",
+      "name_ja": "みんなの日本語 初級I",
+      "name_vi": "Minna no Nihongo Sơ cấp I",
+      "name_en": "Minna no Nihongo Elementary I",
+      "categories": [
+        "grammar",
+        "vocab"
+      ],
+      "source_credit": "3A Corporation reference only; no verbatim reproduction",
+      "lesson_count": 25,
+      "item_count_total": 1445,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "shinkanzen_n1",
+      "level": "N1",
+      "name_ja": "新完全マスター N1",
+      "name_vi": "Shin Kanzen Master N1",
+      "name_en": "Shin Kanzen Master N1",
+      "categories": [
+        "grammar",
+        "vocab",
+        "kanji"
+      ],
+      "source_credit": "3A Corporation publisher references; no verbatim reproduction",
+      "lesson_count": 25,
+      "item_count_total": 3721,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "shinkanzen_n2",
+      "level": "N2",
+      "name_ja": "新完全マスター N2",
+      "name_vi": "Shin Kanzen Master N2",
+      "name_en": "Shin Kanzen Master N2",
+      "categories": [
+        "grammar",
+        "vocab",
+        "kanji"
+      ],
+      "source_credit": "3A Corporation publisher references; no verbatim reproduction",
+      "lesson_count": 25,
+      "item_count_total": 1988,
+      "migration_status": "generated_from_local_assets"
+    },
+    {
+      "textbook_id": "shinkanzen_n3",
+      "level": "N3",
+      "name_ja": "新完全マスター N3",
+      "name_vi": "Shin Kanzen Master N3",
+      "name_en": "Shin Kanzen Master N3",
+      "categories": [
+        "grammar",
+        "vocab",
+        "kanji"
+      ],
+      "source_credit": "3A Corporation publisher references; no verbatim reproduction",
+      "lesson_count": 25,
+      "item_count_total": 400,
+      "migration_status": "generated_from_local_assets"
+    }
+  ]
+}

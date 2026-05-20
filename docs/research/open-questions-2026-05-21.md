@@ -29,3 +29,10 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Blocking**: no
 **Default action taken**: Prefer original JpStudy passages and paraphrased/link-only references where needed, with no official JLPT question reuse.
 **Owner answer**: pending
+
+## OQ-005 - Mimikara extraction timing
+**Phase**: 1
+**Date**: 2026-05-21 00:00
+**Blocking**: no
+**Default action taken**: Created Mimikara N1-N5 textbook records with `migration_status: planned_source_pending`; real lesson files wait for the offline canonical extraction pipeline.
+**Owner answer**: pending

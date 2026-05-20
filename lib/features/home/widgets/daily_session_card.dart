@@ -13,6 +13,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/home/providers/backup_status_provider.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
 import 'package:jpstudy/features/lesson/lesson_practice_screen.dart';
@@ -97,6 +98,7 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
     final totalDue =
         (dashboard?.vocabDue ?? 0) +
         (dashboard?.grammarDue ?? 0) +
+        (dashboard?.conjugationDue ?? 0) +
         (dashboard?.kanjiDue ?? 0);
     final totalFix = (dashboard?.totalMistakeCount ?? 0) + ghostCount;
     final deepeningTask = _resolveDeepeningTask(
@@ -507,6 +509,12 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
           );
         }
         return const _DailyRoute(route: AppRoutePath.grammar, step: 1);
+      case ContinueActionType.conjugationReview:
+        return const _DailyRoute(
+          route: AppRoutePath.grammarConjugationPractice,
+          extra: ConjugationPracticeArgs(source: 'daily_queue_due'),
+          step: 1,
+        );
       case ContinueActionType.vocabReview:
         return _DailyRoute(
           route: AppRoutePath.vocabReview,
@@ -538,6 +546,13 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
 
     if ((dashboard?.grammarDue ?? 0) > 0) {
       return const _DailyRoute(route: AppRoutePath.grammar, step: 1);
+    }
+    if ((dashboard?.conjugationDue ?? 0) > 0) {
+      return const _DailyRoute(
+        route: AppRoutePath.grammarConjugationPractice,
+        extra: ConjugationPracticeArgs(source: 'daily_queue_due'),
+        step: 1,
+      );
     }
     if ((dashboard?.vocabDue ?? 0) > 0) {
       return _DailyRoute(

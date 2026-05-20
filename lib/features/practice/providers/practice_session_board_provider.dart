@@ -6,6 +6,7 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 import 'package:jpstudy/features/home/providers/continue_provider.dart';
@@ -28,6 +29,7 @@ final practiceSessionBoardProvider = Provider<PracticeSessionBoard>((ref) {
         d?.vocabDue ?? 0,
         d?.grammarDue ?? 0,
         d?.kanjiDue ?? 0,
+        d?.conjugationDue ?? 0,
         d?.totalMistakeCount ?? 0,
       );
     }),
@@ -53,6 +55,7 @@ PracticeSessionBoard buildPracticeSessionBoard({
   required AppLanguage language,
   required StudyLevel level,
   DashboardState? dashboard,
+  int? conjugationDue,
   ContinueAction? continueAction,
   List<WeaknessRadarItem> weaknessItems = const [],
   int grammarGhostCount = 0,
@@ -60,22 +63,31 @@ PracticeSessionBoard buildPracticeSessionBoard({
   final vocabDue = dashboard?.vocabDue ?? 0;
   final grammarDue = dashboard?.grammarDue ?? 0;
   final kanjiDue = dashboard?.kanjiDue ?? 0;
-  final dueCount = vocabDue + grammarDue + kanjiDue;
+  final resolvedConjugationDue =
+      conjugationDue ?? dashboard?.conjugationDue ?? 0;
+  final dueCount = vocabDue + grammarDue + kanjiDue + resolvedConjugationDue;
   final mistakeCount = dashboard?.totalMistakeCount ?? 0;
   final repairCount = mistakeCount + grammarGhostCount;
-  final queueCount = [
+  final reviewQueueCount = [
     vocabDue,
     grammarDue,
     kanjiDue,
   ].where((count) => count > 0).length;
-  final useRecallSprint = dueCount > 0 && queueCount > 1;
+  final useRecallSprint = reviewQueueCount > 1;
 
   final specificDueAction = dueCount > 0
       ? _specificDueAction(
           language: language,
           level: level,
           dashboard: dashboard,
+          conjugationDue: resolvedConjugationDue,
           continueAction: continueAction,
+        )
+      : null;
+  final conjugationDueAction = resolvedConjugationDue > 0
+      ? _conjugationDueAction(
+          language: language,
+          conjugationDue: resolvedConjugationDue,
         )
       : null;
   final dueAction = dueCount == 0
@@ -114,6 +126,7 @@ PracticeSessionBoard buildPracticeSessionBoard({
   final steps = _uniqueActions([
     primaryAction,
     if (useRecallSprint) specificDueAction,
+    conjugationDueAction,
     weaknessAction,
     grammarGhostAction,
     mistakeBankAction,
@@ -147,9 +160,9 @@ PracticeSessionBoard buildPracticeSessionBoard({
               )
             : _l(
                 language,
-                en: '$vocabDue vocab, $grammarDue grammar, $kanjiDue kanji are live.',
-                vi: '$vocabDue từ vựng, $grammarDue ngữ pháp, $kanjiDue kanji đang mở.',
-                ja: '語彙$vocabDue、文法$grammarDue、漢字$kanjiDueが動いています。',
+                en: '$vocabDue vocab, $grammarDue grammar, $resolvedConjugationDue conjugation, $kanjiDue kanji are live.',
+                vi: '$vocabDue từ vựng, $grammarDue ngữ pháp, $resolvedConjugationDue chia thể, $kanjiDue kanji đang mở.',
+                ja: '語彙$vocabDue、文法$grammarDue、活用$resolvedConjugationDue、漢字$kanjiDueが動いています。',
               ),
         icon: Icons.schedule_rounded,
         color: const Color(0xFF2563EB),
@@ -354,6 +367,7 @@ PracticeSessionAction _specificDueAction({
   required AppLanguage language,
   required StudyLevel level,
   required DashboardState? dashboard,
+  required int conjugationDue,
   required ContinueAction? continueAction,
 }) {
   switch (continueAction?.type) {
@@ -389,6 +403,11 @@ PracticeSessionAction _specificDueAction({
           floor: 5,
           rateSeconds: 12,
         ),
+      );
+    case ContinueActionType.conjugationReview:
+      return _conjugationDueAction(
+        language: language,
+        conjugationDue: conjugationDue,
       );
     case ContinueActionType.vocabReview:
       return PracticeSessionAction(
@@ -466,6 +485,13 @@ PracticeSessionAction _specificDueAction({
       break;
   }
 
+  if (conjugationDue > 0) {
+    return _conjugationDueAction(
+      language: language,
+      conjugationDue: conjugationDue,
+    );
+  }
+
   return PracticeSessionAction(
     id: 'due_reviews',
     title: _l(
@@ -486,6 +512,46 @@ PracticeSessionAction _specificDueAction({
     color: const Color(0xFF2563EB),
     badge: _l(language, en: 'Due now', vi: 'Đến hạn', ja: '期限あり'),
     estimatedMinutes: 5,
+  );
+}
+
+PracticeSessionAction _conjugationDueAction({
+  required AppLanguage language,
+  required int conjugationDue,
+}) {
+  return PracticeSessionAction(
+    id: 'conjugation_due',
+    title: _l(
+      language,
+      en: 'Clear due conjugation',
+      vi: 'Ôn chia thể đến hạn',
+      ja: '期限の活用を片づける',
+    ),
+    subtitle: _l(
+      language,
+      en: '$conjugationDue conjugation forms are ready for a focused pass.',
+      vi: '$conjugationDue thể chia đã đến hạn và cần một lượt luyện tập trung.',
+      ja: '$conjugationDue件の活用レビューが待っています。',
+    ),
+    ctaLabel: _l(
+      language,
+      en: 'Open conjugation',
+      vi: 'Mở chia thể',
+      ja: '活用へ',
+    ),
+    route: AppRoutePath.grammarConjugationPractice,
+    extra: ConjugationPracticeArgs(
+      targetCount: conjugationDue.clamp(1, 10).toInt(),
+      source: 'practice_board_due',
+    ),
+    icon: Icons.swap_horiz_rounded,
+    color: const Color(0xFF9333EA),
+    badge: _l(language, en: 'Due now', vi: 'Đến hạn', ja: '期限あり'),
+    estimatedMinutes: _estimateMinutes(
+      conjugationDue,
+      floor: 5,
+      rateSeconds: 10,
+    ),
   );
 }
 

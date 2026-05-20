@@ -8,6 +8,7 @@ import 'package:jpstudy/data/utils/grammar_english_notation.dart';
 
 import '../../../data/db/app_database.dart';
 import '../../../data/repositories/grammar_repository.dart';
+import '../../conjugation/models/conjugation_practice_args.dart';
 import '../../common/widgets/compact_ui.dart';
 import '../widgets/grammar_example_widget.dart';
 import 'grammar_practice_screen.dart';
@@ -36,6 +37,7 @@ class GrammarDetailScreen extends ConsumerWidget {
           final meaning = _resolveMeaning(point, language);
           final connection = _resolveConnection(point, language);
           final explanation = _resolveExplanation(point, language);
+          final conjugationFormKeys = _conjugationFormKeys(point);
 
           return SingleChildScrollView(
             padding: const EdgeInsets.all(16),
@@ -63,6 +65,19 @@ class GrammarDetailScreen extends ConsumerWidget {
                       'targetCount': 5,
                     },
                   ),
+                  secondaryLabel: conjugationFormKeys.isEmpty
+                      ? null
+                      : _relatedConjugationLabel(language),
+                  onSecondaryTap: conjugationFormKeys.isEmpty
+                      ? null
+                      : () => context.openConjugationPractice(
+                          ConjugationPracticeArgs(
+                            formKeys: conjugationFormKeys,
+                            targetCount: 5,
+                            source: 'grammar_detail',
+                            grammarId: grammarId,
+                          ),
+                        ),
                 ),
                 const SizedBox(height: 10),
                 AppStatusChip(
@@ -220,6 +235,14 @@ class GrammarDetailScreen extends ConsumerWidget {
     };
   }
 
+  String _relatedConjugationLabel(AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => 'Practice related forms',
+      AppLanguage.vi => 'Luyện chia thể liên quan',
+      AppLanguage.ja => '関連する活用を練習',
+    };
+  }
+
   String _statusLabel(AppLanguage language, bool isLearned) {
     if (isLearned) {
       return switch (language) {
@@ -233,6 +256,61 @@ class GrammarDetailScreen extends ConsumerWidget {
       AppLanguage.vi => 'Đang học',
       AppLanguage.ja => '学習中',
     };
+  }
+
+  List<String> _conjugationFormKeys(GrammarPoint point) {
+    final haystack = [
+      point.grammarPoint,
+      point.connection,
+      point.connectionEn ?? '',
+      point.explanation,
+      point.explanationVi ?? '',
+      point.explanationEn ?? '',
+    ].join('\n').toLowerCase();
+    final keys = <String>[];
+    void addIf(bool condition, String key) {
+      if (condition && !keys.contains(key)) keys.add(key);
+    }
+
+    addIf(
+      haystack.contains('vて') ||
+          haystack.contains('v-て') ||
+          haystack.contains('verbて') ||
+          haystack.contains('verb-て') ||
+          haystack.contains('て形') ||
+          haystack.contains('thể `て`') ||
+          haystack.contains('te-form'),
+      'te',
+    );
+    addIf(
+      haystack.contains('vない') ||
+          haystack.contains('v-ない') ||
+          haystack.contains('verbない') ||
+          haystack.contains('verb-ない') ||
+          haystack.contains('ない形') ||
+          haystack.contains('nai-form') ||
+          haystack.contains('negative form'),
+      'nai',
+    );
+    addIf(
+      haystack.contains('vた') ||
+          haystack.contains('v-た') ||
+          haystack.contains('verbた') ||
+          haystack.contains('verb-た') ||
+          haystack.contains('た形') ||
+          haystack.contains('past form'),
+      'ta',
+    );
+    addIf(
+      haystack.contains('vます') ||
+          haystack.contains('v-ます') ||
+          haystack.contains('verbます') ||
+          haystack.contains('verb-ます') ||
+          haystack.contains('ます形') ||
+          haystack.contains('polite form'),
+      'masu',
+    );
+    return keys;
   }
 }
 

@@ -6,6 +6,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
 import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
@@ -19,6 +20,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 enum PlanStepType {
   vocabReview,
   grammarReview,
+  conjugationReview,
   kanjiReview,
   mistakeFix,
   newVocab,
@@ -101,6 +103,7 @@ final dailyPlanProvider = FutureProvider<DailyPlan>((ref) async {
         vocabDue: d.vocabDue,
         grammarDue: d.grammarDue,
         kanjiDue: d.kanjiDue,
+        conjugationDue: d.conjugationDue,
       );
     }),
   );
@@ -235,6 +238,25 @@ final dailyPlanProvider = FutureProvider<DailyPlan>((ref) async {
       ),
     );
   }
+  if (dashboardData.conjugationDue > 0) {
+    final dueIds = await db.conjugationSrsDao.getDueContentVocabIds();
+    final uniqueDueIds = dueIds.toSet().toList(growable: false);
+    final count = dashboardData.conjugationDue.clamp(1, 15).toInt();
+    steps.add(
+      PlanStep(
+        type: PlanStepType.conjugationReview,
+        count: count,
+        estimatedMinutes: (count * 0.8).ceil(),
+        route: AppRoutePath.grammarConjugationPractice,
+        extra: ConjugationPracticeArgs(
+          contentVocabIds: uniqueDueIds.isEmpty ? null : uniqueDueIds,
+          targetCount: count.clamp(1, 10).toInt(),
+          source: 'daily_plan_due',
+        ),
+        urgency: 1,
+      ),
+    );
+  }
   final remainingKanji = dashboardData.kanjiDue - criticalKanji;
   if (remainingKanji > 0) {
     final count = remainingKanji.clamp(1, 15).toInt();
@@ -260,7 +282,8 @@ final dailyPlanProvider = FutureProvider<DailyPlan>((ref) async {
   final totalDue =
       dashboardData.vocabDue +
       dashboardData.grammarDue +
-      dashboardData.kanjiDue;
+      dashboardData.kanjiDue +
+      dashboardData.conjugationDue;
   if (totalDue < 40) {
     steps.add(
       PlanStep(

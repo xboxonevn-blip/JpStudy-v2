@@ -7,6 +7,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:go_router/go_router.dart';
+import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
@@ -14,6 +16,7 @@ import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/models/kanji_item.dart';
+import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/kanji_hub/kanji_hub_screen.dart';
 import 'package:jpstudy/features/kanji_hub/providers/kanji_home_provider.dart';
@@ -90,6 +93,38 @@ class _FakeKanjiHubLessonRepository extends LessonRepository {
       fetchKanjiByLevel(level).then((items) => items.length);
 }
 
+class _FakeKanjiConjugationRepository extends ConjugationRepository {
+  _FakeKanjiConjugationRepository()
+    : super(ContentDatabase(executor: NativeDatabase.memory()));
+
+  @override
+  Future<ConjugationLemmaData?> findBySourceIds({
+    String? sourceVocabId,
+    String? sourceSenseId,
+  }) async {
+    if (sourceVocabId != 'haj_n5_ch10_v033') return null;
+    return const ConjugationLemmaData(
+      id: 1,
+      contentVocabId: 21438,
+      contentEntryId: 'haj_n5_ch10_v033',
+      term: '帰る',
+      reading: 'かえる',
+      dictionaryForm: '帰る',
+      dictionaryReading: 'かえる',
+      kind: 'verb',
+      conjugationClass: 'godanRu',
+      posTagsJson: '[]',
+      jmdictEntrySeq: '123',
+      sourceVocabId: 'haj_n5_ch10_v033',
+      sourceSenseId: null,
+      level: 'N5',
+      series: 'hajimete',
+      lessonId: 10,
+      matchMethod: 'test',
+    );
+  }
+}
+
 Widget _buildSubject({
   required LessonRepository repo,
   AppLanguage language = AppLanguage.en,
@@ -106,6 +141,37 @@ Widget _buildSubject({
       ...overrides,
     ],
     child: const MaterialApp(home: KanjiHubScreen()),
+  );
+}
+
+Widget _buildRoutedSubject({
+  required LessonRepository repo,
+  AppLanguage language = AppLanguage.vi,
+  List<Override> overrides = const [],
+}) {
+  final router = GoRouter(
+    routes: [
+      GoRoute(path: '/', builder: (context, state) => const KanjiHubScreen()),
+      GoRoute(
+        path: AppRoutePath.grammarConjugationWord,
+        name: AppRouteName.grammarConjugationWord,
+        builder: (context, state) => Scaffold(
+          body: Text('conjugation:${state.pathParameters['contentVocabId']}'),
+        ),
+      ),
+    ],
+  );
+  return ProviderScope(
+    retry: (retryCount, error) => null,
+    overrides: [
+      appLanguageProvider.overrideWith(
+        (ref) => AppLanguageController.test(language),
+      ),
+      studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
+      lessonRepositoryProvider.overrideWithValue(repo),
+      ...overrides,
+    ],
+    child: MaterialApp.router(routerConfig: router),
   );
 }
 
@@ -567,6 +633,67 @@ void main() {
       findsOneWidget,
     );
     expect(find.text('Liên tưởng mái trường khi học chữ này.'), findsOneWidget);
+  });
+
+  testWidgets('kanji example word opens sourced conjugation practice', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1200, 1400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await _mockRadicalsAsset();
+    final repo = _FakeKanjiHubLessonRepository(
+      n5Kanji: const [
+        KanjiItem(
+          id: 8,
+          lessonId: 10,
+          character: '帰',
+          strokeCount: 10,
+          meaning: 'trở về',
+          meaningEn: 'return',
+          examples: [
+            KanjiExample(
+              word: '帰る',
+              reading: 'かえる',
+              meaning: 'trở về',
+              meaningEn: 'return',
+              sourceVocabId: 'haj_n5_ch10_v033',
+            ),
+          ],
+          jlptLevel: 'N5',
+        ),
+      ],
+      n4Kanji: const [],
+      n3Kanji: const [],
+      n2Kanji: const [],
+      n1Kanji: const [],
+    );
+    await tester.pumpWidget(
+      _buildRoutedSubject(
+        repo: repo,
+        overrides: [
+          conjugationRepositoryProvider.overrideWithValue(
+            _FakeKanjiConjugationRepository(),
+          ),
+        ],
+      ),
+    );
+    await _pumpKanjiHub(tester);
+
+    await tester.ensureVisible(find.text('帰').first);
+    await tester.tap(find.text('帰').first);
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+
+    expect(find.byType(AlertDialog), findsOneWidget);
+    expect(find.textContaining('帰る'), findsOneWidget);
+    expect(find.text('Luyện chia thể'), findsOneWidget);
+    await tester.tap(find.text('Luyện chia thể'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('conjugation:21438'), findsOneWidget);
   });
 
   testWidgets('English and Japanese kanji detail hide Han-Viet aids', (

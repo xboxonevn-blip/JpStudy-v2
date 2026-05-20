@@ -152,6 +152,18 @@ extension KanjiCopy on AppLanguage {
     AppLanguage.ja => '覚え方',
   };
 
+  String kanjiDetailExamplesLabel() => switch (this) {
+    AppLanguage.en => 'Example words',
+    AppLanguage.vi => 'Từ ví dụ',
+    AppLanguage.ja => '例語',
+  };
+
+  String kanjiDetailConjugationLabel() => switch (this) {
+    AppLanguage.en => 'Practice forms',
+    AppLanguage.vi => 'Luyện chia thể',
+    AppLanguage.ja => '活用練習',
+  };
+
   String kanjiTileSemanticLabel({
     required String character,
     required String meaning,

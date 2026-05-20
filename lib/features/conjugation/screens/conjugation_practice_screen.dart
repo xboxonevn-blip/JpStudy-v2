@@ -38,9 +38,19 @@ class _ConjugationPracticeScreenState
     final repo = ref.read(conjugationRepositoryProvider);
     final level = ref.read(studyLevelProvider)?.shortLabel ?? 'N5';
     final ids = args.contentVocabIds;
-    final lemmas = ids == null || ids.isEmpty
-        ? await repo.fetchByLevel(level)
-        : await repo.fetchByContentVocabIds(ids);
+    final dueScoped =
+        ids == null &&
+        (args.source.contains('due') || args.source.contains('queue'));
+    final lemmas = ids != null && ids.isNotEmpty
+        ? await repo.fetchByContentVocabIds(ids)
+        : dueScoped
+        ? await repo.fetchByDueSkillIds(
+            await ref
+                .read(databaseProvider)
+                .conjugationSrsDao
+                .getDueContentVocabIds(),
+          )
+        : await repo.fetchByLevel(level);
     return ConjugationQuestionGenerator().build(
       lemmas: lemmas,
       formKeys: args.formKeys,

@@ -8,6 +8,7 @@ import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../core/level_provider.dart';
 import '../../../core/study_level.dart';
+import '../../conjugation/models/conjugation_practice_args.dart';
 import '../../grammar/grammar_providers.dart';
 import '../../grammar/screens/grammar_practice_screen.dart';
 import '../../kanji_hub/models/kanji_practice_args.dart';
@@ -29,10 +30,15 @@ class NextStepSuggestions extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
-    final (vocabDue, grammarDue, kanjiDue) = ref.watch(
+    final (vocabDue, grammarDue, kanjiDue, conjugationDue) = ref.watch(
       dashboardProvider.select((v) {
         final d = v.value;
-        return (d?.vocabDue ?? 0, d?.grammarDue ?? 0, d?.kanjiDue ?? 0);
+        return (
+          d?.vocabDue ?? 0,
+          d?.grammarDue ?? 0,
+          d?.kanjiDue ?? 0,
+          d?.conjugationDue ?? 0,
+        );
       }),
     );
     final grammarGhostCount = ref
@@ -45,7 +51,7 @@ class NextStepSuggestions extends ConsumerWidget {
     final continueAction = ref.watch(continueActionProvider).value;
 
     final totalGhosts = grammarGhostCount + vocabGhostCount;
-    final totalDue = vocabDue + grammarDue + kanjiDue;
+    final totalDue = vocabDue + grammarDue + kanjiDue + conjugationDue;
 
     final steps = <_Step>[];
 
@@ -92,6 +98,7 @@ class NextStepSuggestions extends ConsumerWidget {
             grammarDue: grammarDue,
             vocabDue: vocabDue,
             kanjiDue: kanjiDue,
+            conjugationDue: conjugationDue,
           ),
         ),
       );
@@ -130,6 +137,7 @@ class NextStepSuggestions extends ConsumerWidget {
     required int grammarDue,
     required int vocabDue,
     required int kanjiDue,
+    required int conjugationDue,
   }) {
     final language = ref.read(appLanguageProvider);
     final level = ref.read(studyLevelProvider) ?? StudyLevel.n5;
@@ -142,6 +150,11 @@ class NextStepSuggestions extends ConsumerWidget {
         } else {
           context.openGrammar();
         }
+        return;
+      case ContinueActionType.conjugationReview:
+        context.openConjugationPractice(
+          const ConjugationPracticeArgs(source: 'next_step_due'),
+        );
         return;
       case ContinueActionType.vocabReview:
         context.push(
@@ -174,6 +187,10 @@ class NextStepSuggestions extends ConsumerWidget {
 
     if (grammarDue > 0) {
       context.openGrammar();
+    } else if (conjugationDue > 0) {
+      context.openConjugationPractice(
+        const ConjugationPracticeArgs(source: 'next_step_due'),
+      );
     } else if (vocabDue > 0) {
       context.push(
         '/vocab/review',

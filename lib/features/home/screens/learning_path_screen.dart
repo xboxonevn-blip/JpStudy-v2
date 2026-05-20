@@ -13,6 +13,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/common/widgets/japanese_background.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
 import 'package:jpstudy/features/foundations/widgets/kana_review_due_card.dart';
 import 'package:jpstudy/features/home/home_copy.dart';
@@ -320,6 +321,11 @@ class LearningPathScreen extends ConsumerWidget {
     switch (action.type) {
       case ContinueActionType.grammarReview:
         context.openGrammarPractice(extra: action.data);
+        return;
+      case ContinueActionType.conjugationReview:
+        context.openConjugationPractice(
+          const ConjugationPracticeArgs(source: 'learning_path_due'),
+        );
         return;
       case ContinueActionType.vocabReview:
         context.push(

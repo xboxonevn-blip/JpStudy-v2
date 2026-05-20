@@ -18,6 +18,9 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | Foundations hub / Kana detail copy | Audited slice | Live route-matrix text + widget audit found `Open`, `yoon`, `rules`, `strokes`, and `clear` leaking; localized/removed; live proof verified hub/grid/sheet/quiz. |
 | Vocab detail conjugation panel | Audited slice | Live VI/N5 proof opened `帰る`, verified examples plus sourced `帰って`/`帰らない` forms, clicked `Luyện chia thể`, reached a scoped 1-item hub, answered practice, and verified noun `学生` hides conjugation UI. |
 | Search result card | Audited slice | Live VI/N5 search `かえる` returned `国へ帰るの`; QA-A-026 fixed the top-hit click so it opens the detail screen. |
+| Grammar detail connected conjugation | Audited slice | Fresh VI/N4 direct detail `/#/grammar/81` rendered examples and the related-conjugation CTA; Directive D live proof caught missing `Verb-て` detection, fixed it, then verified `Luyện chia thể liên quan` opened a non-empty form drill. |
+| Kanji detail connected conjugation | Audited slice | Fresh VI/N4 Kanji grid opened `飼`; detail showed example words and a sourced `Luyện chia thể` CTA; CTA opened a scoped `1 mục có nguồn sẵn sàng` hub and then a non-empty conjugation question. |
+| Practice Board conjugation due queue | Audited slice | A wrong conjugation answer created a due SRS card; after the due interval, Practice Board showed `Ôn chia thể đến hạn`, Daily Plan showed `Ôn chia thể đến hạn`, and `Mở chia thể` opened due-scoped `Câu 1/1` instead of a full-level fallback. |
 | Conjugation DB metadata | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_lemma` + indexes and `lemmas.json` is `200/no-cache` with `3907` JMdict_e rows. |
 | Conjugation SRS / Mistakes | Audited slice | Live proof confirmed deployed `main.dart.js` contains `conjugation_srs_state`, `idx_conjugation_srs_due`, `idx_conjugation_srs_skill`, and Mistakes rendered the empty state cleanly; Home nav CTA returned to dashboard. |
 | Conjugation hub / practice | Audited slice | Live VI/N5 proof opened `/#/grammar/conjugation`, saw `398 mục có nguồn sẵn sàng`, clicked `Luyện chia thể`, selected an answer, confirmed, and saw `Đúng` + `Câu tiếp`; console app errors were `0`. |
@@ -37,7 +40,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-024 | Foundations copy/internal labels | Foundations hub and Kana sheet exposed `Open`, `yoon`, `rules`, `strokes`, and `clear`. | Fixed + deployed |
 | QA-A-025 | Onboarding | Fresh language onboarding could hide the continue CTA behind/under the analytics consent banner after selecting a language. | Fixed + deployed |
 | QA-B-001-G-N4-L46-L50 | Grammar content | N4 lessons 46-50 needed source verification plus full detail/example/practice proof. | Fixed + deployed |
-| QA-C-001 | Conjugation feature | Content DB lemma table, exact-skill SRS/mistakes, Grammar-owned hub/practice routes, and Vocab detail entry point are deployed; connected Grammar/Kanji/Daily Plan/Practice Board entry points remain. | Partial fixed + deployed |
+| QA-C-001 | Conjugation feature | Content DB lemma table, exact-skill SRS/mistakes, Grammar-owned hub/practice routes, Vocab detail, Grammar detail, Kanji example words, and due-queue entry points are deployed. | Connected entry points fixed + deployed |
 | QA-C-002 | Vocab detail conjugation | Vocab detail exposed generated-looking but suffix-guessed forms and generic grammar CTA. | Fixed + deployed |
 | QA-A-026 | Search navigation | Search top-hit cards could look tappable but fail to open detail; live `かえる` result stayed on `/#/search` after click. | Fixed + deployed |
 
@@ -77,6 +80,15 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 - `output/playwright/live-search-kaeru-results.png`
 - `output/playwright/live-search-kaeru-top-hit-fixed-before.png`
 - `output/playwright/live-search-kaeru-top-hit-fixed-after.png`
+- `output/playwright/live-grammar81-conj-cta-fixed.png`
+- `output/playwright/live-grammar81-after-cta-click.png`
+- `output/playwright/live-grammar81-conj-wrong-srs.png`
+- `output/playwright/live-kanji-n4-grid-before-example-cta.png`
+- `output/playwright/live-kanji-n4-example-cta-dialog.png`
+- `output/playwright/live-kanji-n4-example-cta-practice.png`
+- `output/playwright/live-kanji-n4-example-cta-question.png`
+- `output/playwright/live-practice-board-conj-due.png`
+- `output/playwright/live-practice-board-conj-due-question.png`
 
 ## Notes For Next Sweep
 

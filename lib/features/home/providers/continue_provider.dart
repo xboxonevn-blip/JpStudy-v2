@@ -21,6 +21,7 @@ final continueActionProvider = FutureProvider<ContinueAction>((ref) async {
       final d = v.value!;
       return (
         grammarDue: d.grammarDue,
+        conjugationDue: d.conjugationDue,
         vocabDue: d.vocabDue,
         kanjiDue: d.kanjiDue,
         totalMistakeCount: d.totalMistakeCount,
@@ -44,6 +45,15 @@ final continueActionProvider = FutureProvider<ContinueAction>((ref) async {
       label: language.reviewGrammarLabel,
       count: due.grammarDue,
       data: dueIds,
+    );
+  }
+
+  // Priority 1b: Conjugation due — keep form SRS connected to grammar.
+  if (due.conjugationDue > 0) {
+    return ContinueAction(
+      type: ContinueActionType.conjugationReview,
+      label: _reviewConjugationLabel(language),
+      count: due.conjugationDue,
     );
   }
 
@@ -118,11 +128,20 @@ String continueLessonLabelForTesting(
 
 enum ContinueActionType {
   grammarReview,
+  conjugationReview,
   vocabReview,
   kanjiReview,
   fixMistakes,
   practiceMixed,
   nextLesson,
+}
+
+String _reviewConjugationLabel(AppLanguage language) {
+  return switch (language) {
+    AppLanguage.en => 'Review conjugation',
+    AppLanguage.vi => 'Ôn chia thể',
+    AppLanguage.ja => '活用を復習',
+  };
 }
 
 class ContinueAction {

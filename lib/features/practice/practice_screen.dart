@@ -28,18 +28,20 @@ class PracticeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider);
-    final (vocabDue, grammarDue, kanjiDue, mistakeCount) = ref.watch(
-      dashboardProvider.select((v) {
-        final d = v.value;
-        return (
-          d?.vocabDue ?? 0,
-          d?.grammarDue ?? 0,
-          d?.kanjiDue ?? 0,
-          d?.totalMistakeCount ?? 0,
+    final (vocabDue, grammarDue, kanjiDue, conjugationDue, mistakeCount) = ref
+        .watch(
+          dashboardProvider.select((v) {
+            final d = v.value;
+            return (
+              d?.vocabDue ?? 0,
+              d?.grammarDue ?? 0,
+              d?.kanjiDue ?? 0,
+              d?.conjugationDue ?? 0,
+              d?.totalMistakeCount ?? 0,
+            );
+          }),
         );
-      }),
-    );
-    final dueCount = vocabDue + grammarDue + kanjiDue;
+    final dueCount = vocabDue + grammarDue + kanjiDue + conjugationDue;
     final sessionBoard = ref.watch(practiceSessionBoardProvider);
     final grammarGhostCount = sessionBoard.grammarGhostCount;
     final repairCount = sessionBoard.repairCount;

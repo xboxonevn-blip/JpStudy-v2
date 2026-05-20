@@ -1705,6 +1705,13 @@ class _KanjiDetailDialogState extends State<_KanjiDetailDialog> {
                 },
               ),
             ],
+            if (widget.item.examples.isNotEmpty) ...[
+              const SizedBox(height: 16),
+              _KanjiExampleWordsPanel(
+                language: widget.language,
+                examples: widget.item.examples,
+              ),
+            ],
             if (widget.relatedKanjiFuture != null) ...[
               const SizedBox(height: 16),
               FutureBuilder<List<KanjiItem>>(
@@ -1736,6 +1743,111 @@ class _KanjiDetailDialogState extends State<_KanjiDetailDialog> {
             ],
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _KanjiExampleWordsPanel extends StatelessWidget {
+  const _KanjiExampleWordsPanel({
+    required this.language,
+    required this.examples,
+  });
+
+  final AppLanguage language;
+  final List<KanjiExample> examples;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Container(
+      key: const ValueKey('kanji_detail_examples_panel'),
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: palette.surface,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: palette.outline),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            language.kanjiDetailExamplesLabel(),
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: palette.primary,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+          const SizedBox(height: 8),
+          for (final example in examples)
+            _KanjiExampleWordRow(language: language, example: example),
+        ],
+      ),
+    );
+  }
+}
+
+class _KanjiExampleWordRow extends ConsumerWidget {
+  const _KanjiExampleWordRow({required this.language, required this.example});
+
+  final AppLanguage language;
+  final KanjiExample example;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final palette = context.appPalette;
+    final sourceVocabId = example.sourceVocabId?.trim();
+    final sourceSenseId = example.sourceSenseId?.trim();
+    final hasSource =
+        (sourceVocabId != null && sourceVocabId.isNotEmpty) ||
+        (sourceSenseId != null && sourceSenseId.isNotEmpty);
+    final Future<ConjugationLemmaData?> lemmaFuture = hasSource
+        ? ref
+              .watch(conjugationRepositoryProvider)
+              .findBySourceIds(
+                sourceVocabId: sourceVocabId,
+                sourceSenseId: sourceSenseId,
+              )
+        : Future<ConjugationLemmaData?>.value();
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: FutureBuilder<ConjugationLemmaData?>(
+        future: lemmaFuture,
+        builder: (context, snapshot) {
+          final lemma = snapshot.data;
+          return Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Text(
+                  _formatKanjiExample(example),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: palette.ink,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              if (lemma != null) ...[
+                const SizedBox(width: 8),
+                TextButton.icon(
+                  key: ValueKey(
+                    'kanji_example_conjugation_${lemma.contentVocabId}',
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    context.openConjugationHub(
+                      contentVocabId: lemma.contentVocabId,
+                    );
+                  },
+                  icon: const Icon(Icons.swap_horiz_rounded, size: 18),
+                  label: Text(language.kanjiDetailConjugationLabel()),
+                ),
+              ],
+            ],
+          );
+        },
       ),
     );
   }

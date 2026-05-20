@@ -253,6 +253,8 @@ class _StepRow extends StatelessWidget {
         return Icons.menu_book_rounded;
       case PlanStepType.grammarReview:
         return Icons.rule_rounded;
+      case PlanStepType.conjugationReview:
+        return Icons.swap_horiz_rounded;
       case PlanStepType.kanjiReview:
         return Icons.translate_rounded;
       case PlanStepType.mistakeFix:
@@ -285,6 +287,10 @@ class _StepRow extends StatelessWidget {
         return step.urgency >= 2 ? 'Urgent Vocab Review' : 'Vocab Review';
       case PlanStepType.grammarReview:
         return step.urgency >= 2 ? 'Urgent Grammar Review' : 'Grammar Review';
+      case PlanStepType.conjugationReview:
+        return step.urgency >= 2
+            ? 'Urgent Conjugation Review'
+            : 'Conjugation Review';
       case PlanStepType.kanjiReview:
         return step.urgency >= 2 ? 'Urgent Kanji Review' : 'Kanji Review';
       case PlanStepType.newVocab:
@@ -304,6 +310,8 @@ class _StepRow extends StatelessWidget {
         return step.urgency >= 2 ? 'Ôn từ vựng gấp' : 'Ôn từ vựng';
       case PlanStepType.grammarReview:
         return step.urgency >= 2 ? 'Ôn ngữ pháp gấp' : 'Ôn ngữ pháp';
+      case PlanStepType.conjugationReview:
+        return step.urgency >= 2 ? 'Ôn chia thể gấp' : 'Ôn chia thể';
       case PlanStepType.kanjiReview:
         return step.urgency >= 2 ? 'Ôn Kanji gấp' : 'Ôn Kanji';
       case PlanStepType.newVocab:
@@ -323,6 +331,8 @@ class _StepRow extends StatelessWidget {
         return step.urgency >= 2 ? '緊急：語彙復習' : '語彙復習';
       case PlanStepType.grammarReview:
         return step.urgency >= 2 ? '緊急：文法復習' : '文法復習';
+      case PlanStepType.conjugationReview:
+        return step.urgency >= 2 ? '緊急：活用復習' : '活用復習';
       case PlanStepType.kanjiReview:
         return step.urgency >= 2 ? '緊急：漢字復習' : '漢字復習';
       case PlanStepType.newVocab:
@@ -344,6 +354,8 @@ class _StepRow extends StatelessWidget {
           case PlanStepType.grammarReview:
           case PlanStepType.newGrammar:
             return 'points';
+          case PlanStepType.conjugationReview:
+            return 'forms';
           case PlanStepType.kanjiReview:
           case PlanStepType.newKanji:
             return 'kanji';
@@ -358,6 +370,8 @@ class _StepRow extends StatelessWidget {
           case PlanStepType.grammarReview:
           case PlanStepType.newGrammar:
             return 'điểm';
+          case PlanStepType.conjugationReview:
+            return 'thể';
           case PlanStepType.kanjiReview:
           case PlanStepType.newKanji:
             return 'chữ';
@@ -372,6 +386,8 @@ class _StepRow extends StatelessWidget {
           case PlanStepType.grammarReview:
           case PlanStepType.newGrammar:
             return '項目';
+          case PlanStepType.conjugationReview:
+            return '形';
           case PlanStepType.kanjiReview:
           case PlanStepType.newKanji:
             return '字';

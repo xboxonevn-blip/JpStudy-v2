@@ -1028,3 +1028,15 @@
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live proof: VI/N5 `/#/search`, query `かえる`, top-hit `国へ帰るの` opened the `Chi tiết từ` screen for that result. `main.dart.js` returned `200/no-cache`; console warnings/errors were `0`.
 - Remaining queue: QA-C-001 connected Grammar/Kanji/Daily Plan/Practice Board conjugation entry points, then advanced context/repair/minimal-pair drills unless a higher-priority defect appears.
+
+## 2026-05-20 QA-C-001 Connected Conjugation Entry Points
+
+- Completed the remaining connected entry-point slice: Grammar detail detects form-related patterns and opens related conjugation practice, Kanji detail example words expose sourced `Luyện chia thể`, Home/Continue/Daily Plan/Daily Session/Next Step/Progress count `conjugationDue`, and Practice Board routes due conjugation to `grammarConjugationPractice`.
+- Directive D live proof caught a detector gap: live grammar rows normalized as `Verb-て` were not matched by the original `Vて` checks. Added `Verb-て/Verb-た/Verb-ます/Verb-ない` detection and a regression.
+- Due practice now scopes `due`/`queue` sources to `conjugationSrsDao.getDueContentVocabIds()` instead of falling back to all level lemmas.
+- Verified locally: focused grammar route regression, focused conjugation/SRS suite, `flutter analyze lib test`, `git diff --check`, UI string guard `0`, and full `flutter test` passed `2381/2381`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: fresh VI/N4 `/#/grammar/81` rendered examples and `Luyện chia thể liên quan`; CTA opened a non-empty form drill; a wrong answer created `Ôn lại thể này` and a due SRS card.
+- Live proof: fresh VI/N4 Kanji grid opened `飼`; detail showed example words and `Luyện chia thể`; CTA opened scoped `1 mục có nguồn sẵn sàng`, then a non-empty conjugation question.
+- Live proof: after the due interval, Practice Board showed `Ôn chia thể đến hạn`, Daily Plan included the same lane, and `Mở chia thể` opened due-scoped `Câu 1/1`; `main.dart.js` returned `200/no-cache` with `grammar-conjugation`; Flutter/app exceptions were `0`, with only the known report-only Google frame-ancestor console entry.
+- Remaining QA-C-001 work: advanced context/repair/minimal-pair drills. Continue the broader Directive D full-app sweep before opening lower-priority content work.

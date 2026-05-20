@@ -1,17 +1,16 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/features/home/providers/daily_plan_provider.dart';
+import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
 /// Minimal [PlanStep] factory — only sets the fields the model tests care about.
-PlanStep _step({int minutes = 5}) => PlanStep(
-  type: PlanStepType.vocabReview,
-  count: 1,
-  estimatedMinutes: minutes,
-  route: '/test',
-);
+PlanStep _step({
+  int minutes = 5,
+  PlanStepType type = PlanStepType.vocabReview,
+}) => PlanStep(type: type, count: 1, estimatedMinutes: minutes, route: '/test');
 
 /// Build a [DailyPlan] with just enough to exercise the computed properties.
 DailyPlan _plan({
@@ -31,6 +30,29 @@ DailyPlan _plan({
 // ---------------------------------------------------------------------------
 
 void main() {
+  test('DashboardState totalDue includes conjugation reviews', () {
+    const dashboard = DashboardState(
+      streak: 0,
+      todayXp: 0,
+      vocabDue: 2,
+      grammarDue: 3,
+      kanjiDue: 4,
+      conjugationDue: 5,
+      vocabMistakeCount: 0,
+      grammarMistakeCount: 0,
+      kanjiMistakeCount: 0,
+      totalMistakeCount: 0,
+    );
+
+    expect(dashboard.totalDue, 14);
+  });
+
+  test('PlanStepType includes conjugation review lane', () {
+    final plan = _plan(steps: [_step(type: PlanStepType.conjugationReview)]);
+
+    expect(plan.steps.single.type, PlanStepType.conjugationReview);
+  });
+
   // ── remainingMinutes ───────────────────────────────────────────────────────
 
   group('DailyPlan.remainingMinutes', () {

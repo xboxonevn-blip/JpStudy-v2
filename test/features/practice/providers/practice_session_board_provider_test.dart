@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 import 'package:jpstudy/features/home/providers/continue_provider.dart';
 import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
@@ -189,6 +190,41 @@ void main() {
       expect(args.levelCode, 'N5');
       expect(args.mode, KanjiPracticeMode.both);
       expect(args.source, 'practice_board_due');
+    });
+
+    test('routes conjugation due reviews to conjugation practice', () {
+      final board = buildPracticeSessionBoard(
+        language: AppLanguage.vi,
+        level: StudyLevel.n5,
+        conjugationDue: 3,
+        dashboard: const DashboardState(
+          streak: 0,
+          todayXp: 0,
+          vocabDue: 0,
+          grammarDue: 0,
+          kanjiDue: 0,
+          conjugationDue: 3,
+          vocabMistakeCount: 0,
+          grammarMistakeCount: 0,
+          kanjiMistakeCount: 0,
+          totalMistakeCount: 0,
+        ),
+        continueAction: const ContinueAction(
+          type: ContinueActionType.conjugationReview,
+          label: 'Ôn chia thể',
+          count: 3,
+        ),
+      );
+
+      expect(
+        board.primaryAction.route,
+        AppRoutePath.grammarConjugationPractice,
+      );
+      expect(board.primaryAction.extra, isA<ConjugationPracticeArgs>());
+      final args = board.primaryAction.extra as ConjugationPracticeArgs;
+      expect(args.source, 'practice_board_due');
+      expect(board.primaryAction.title, 'Ôn chia thể đến hạn');
+      expect(board.dueCount, 3);
     });
 
     test('Vietnamese review board uses learner-facing copy', () {

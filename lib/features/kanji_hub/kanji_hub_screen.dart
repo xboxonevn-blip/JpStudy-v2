@@ -13,8 +13,10 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/onboarding_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/models/kanji_item.dart';
 import 'package:jpstudy/data/models/radical_item.dart';
+import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/data/repositories/radical_repository.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
@@ -515,7 +517,7 @@ String _formatKanjiExample(KanjiExample example) {
   final parts = <String>[];
   if (word.isNotEmpty) parts.add(word);
   if (reading.isNotEmpty) parts.add('($reading)');
-  if (meaning.isNotEmpty) parts.add('? $meaning');
+  if (meaning.isNotEmpty) parts.add('- $meaning');
   return parts.join(' ');
 }
 

@@ -7,6 +7,7 @@ import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
 import 'package:jpstudy/features/vocab/vocab_copy.dart';
@@ -246,6 +247,8 @@ class _ContinueButtonState extends ConsumerState<ContinueButton> {
     switch (type) {
       case ContinueActionType.grammarReview:
         return palette.accent;
+      case ContinueActionType.conjugationReview:
+        return palette.accent;
       case ContinueActionType.vocabReview:
         return palette.info;
       case ContinueActionType.kanjiReview:
@@ -263,6 +266,8 @@ class _ContinueButtonState extends ConsumerState<ContinueButton> {
     switch (type) {
       case ContinueActionType.grammarReview:
         return Icons.auto_stories_rounded;
+      case ContinueActionType.conjugationReview:
+        return Icons.swap_horiz_rounded;
       case ContinueActionType.vocabReview:
         return Icons.style_rounded;
       case ContinueActionType.kanjiReview:
@@ -280,6 +285,8 @@ class _ContinueButtonState extends ConsumerState<ContinueButton> {
     switch (type) {
       case ContinueActionType.grammarReview:
         return language.reviewGrammarLabel.toUpperCase();
+      case ContinueActionType.conjugationReview:
+        return actionConjugationLabel(language).toUpperCase();
       case ContinueActionType.vocabReview:
         return language.reviewVocabLabel.toUpperCase();
       case ContinueActionType.kanjiReview:
@@ -315,6 +322,11 @@ class _ContinueButtonState extends ConsumerState<ContinueButton> {
     switch (action.type) {
       case ContinueActionType.grammarReview:
         context.openGrammar();
+        break;
+      case ContinueActionType.conjugationReview:
+        context.openConjugationPractice(
+          const ConjugationPracticeArgs(source: 'continue_button_due'),
+        );
         break;
       case ContinueActionType.vocabReview:
         context.push(
@@ -356,3 +368,9 @@ class _ContinueButtonState extends ConsumerState<ContinueButton> {
     }
   }
 }
+
+String actionConjugationLabel(AppLanguage language) => switch (language) {
+  AppLanguage.en => 'Review conjugation',
+  AppLanguage.vi => 'Ôn chia thể',
+  AppLanguage.ja => '活用を復習',
+};

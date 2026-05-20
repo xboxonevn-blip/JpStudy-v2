@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
 import 'package:jpstudy/features/vocab/vocab_copy.dart';
@@ -30,7 +31,12 @@ final progressCoachBoardProvider = FutureProvider<ProgressCoachBoard>((
   ref.watch(
     dashboardProvider.select((v) {
       final d = v.value;
-      return (d?.vocabDue ?? 0, d?.grammarDue ?? 0, d?.kanjiDue ?? 0);
+      return (
+        d?.vocabDue ?? 0,
+        d?.grammarDue ?? 0,
+        d?.conjugationDue ?? 0,
+        d?.kanjiDue ?? 0,
+      );
     }),
   );
   final dashboard = ref.read(dashboardProvider).value;
@@ -45,6 +51,7 @@ final progressCoachBoardProvider = FutureProvider<ProgressCoachBoard>((
   final totalDue =
       (dashboard?.vocabDue ?? 0) +
       (dashboard?.grammarDue ?? 0) +
+      (dashboard?.conjugationDue ?? 0) +
       (dashboard?.kanjiDue ?? 0);
   final recentAccuracy = _recentAttemptAccuracy(attemptHistory);
   final accuracy = summary.totalQuestions == 0
@@ -337,6 +344,32 @@ ProgressCoachAction? _actionFromContinue({
         extra: extra,
         icon: Icons.auto_stories_rounded,
         color: const Color(0xFF7C3AED),
+      );
+    case ContinueActionType.conjugationReview:
+      return ProgressCoachAction(
+        id: 'continue_conjugation',
+        title: _l(
+          language,
+          en: 'Tighten conjugation forms',
+          vi: 'Siết lại chia thể',
+          ja: '活用の精度を締め直す',
+        ),
+        subtitle: _l(
+          language,
+          en: 'Use focused form practice to clear current due conjugation cards.',
+          vi: 'Dùng bài chia thể tập trung để xử lý các thẻ đến hạn.',
+          ja: '活用カードを集中練習で片付けましょう。',
+        ),
+        ctaLabel: _l(
+          language,
+          en: 'Open conjugation',
+          vi: 'Mở chia thể',
+          ja: '活用へ',
+        ),
+        route: AppRoutePath.grammarConjugationPractice,
+        extra: const ConjugationPracticeArgs(source: 'progress_due'),
+        icon: Icons.swap_horiz_rounded,
+        color: const Color(0xFF9333EA),
       );
     case ContinueActionType.fixMistakes:
       return ProgressCoachAction(
@@ -722,6 +755,11 @@ ProgressCoachSignal _buildPerformanceSignal({
         route: AppRoutePath.grammarPractice,
         extra: ids is List ? List<int>.from(ids) : null,
       );
+    case ContinueActionType.conjugationReview:
+      return (
+        route: AppRoutePath.grammarConjugationPractice,
+        extra: const ConjugationPracticeArgs(source: 'progress_due'),
+      );
     case ContinueActionType.vocabReview:
       final args = buildVocabArgs();
       return (route: AppRouteLocation.vocabReview(args: args), extra: args);
@@ -742,10 +780,20 @@ ProgressCoachSignal _buildPerformanceSignal({
   }
 
   final grammarDue = dashboard?.grammarDue ?? 0;
+  final conjugationDue = dashboard?.conjugationDue ?? 0;
   final vocabDue = dashboard?.vocabDue ?? 0;
   final kanjiDue = dashboard?.kanjiDue ?? 0;
-  if (grammarDue >= vocabDue && grammarDue >= kanjiDue && grammarDue > 0) {
+  if (grammarDue >= vocabDue &&
+      grammarDue >= conjugationDue &&
+      grammarDue >= kanjiDue &&
+      grammarDue > 0) {
     return (route: AppRoutePath.grammarPractice, extra: null);
+  }
+  if (conjugationDue > 0) {
+    return (
+      route: AppRoutePath.grammarConjugationPractice,
+      extra: const ConjugationPracticeArgs(source: 'progress_due'),
+    );
   }
   if (vocabDue >= kanjiDue && vocabDue > 0) {
     final args = buildVocabArgs();

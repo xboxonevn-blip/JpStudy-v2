@@ -17,6 +17,7 @@ final coachSessionPlanProvider = Provider<CoachSessionPlan>((ref) {
       return (
         vocabDue: s?.vocabDue ?? 0,
         grammarDue: s?.grammarDue ?? 0,
+        conjugationDue: s?.conjugationDue ?? 0,
         kanjiDue: s?.kanjiDue ?? 0,
         totalMistakeCount: s?.totalMistakeCount ?? 0,
         vocabMistakeCount: s?.vocabMistakeCount ?? 0,
@@ -35,7 +36,7 @@ final coachSessionPlanProvider = Provider<CoachSessionPlan>((ref) {
       .watch(vocabGhostCountProvider)
       .maybeWhen(data: (count) => count, orElse: () => 0);
 
-  final totalDue = d.vocabDue + d.grammarDue + d.kanjiDue;
+  final totalDue = d.vocabDue + d.grammarDue + d.conjugationDue + d.kanjiDue;
   final ghostCount = grammarGhostCount + vocabGhostCount;
   final totalFix = d.totalMistakeCount + ghostCount;
 
@@ -44,6 +45,7 @@ final coachSessionPlanProvider = Provider<CoachSessionPlan>((ref) {
       language: language,
       vocabDue: d.vocabDue,
       grammarDue: d.grammarDue,
+      conjugationDue: d.conjugationDue,
       kanjiDue: d.kanjiDue,
       totalDue: totalDue,
     ),
@@ -68,6 +70,7 @@ CoachStep _buildStep1({
   required AppLanguage language,
   required int vocabDue,
   required int grammarDue,
+  required int conjugationDue,
   required int kanjiDue,
   required int totalDue,
 }) {
@@ -87,6 +90,15 @@ CoachStep _buildStep1({
   if (grammarDue > 0) {
     parts.add(
       _l(language, en: '$grammarDue grammar', vi: '$grammarDue ngữ pháp'),
+    );
+  }
+  if (conjugationDue > 0) {
+    parts.add(
+      _l(
+        language,
+        en: '$conjugationDue conjugation',
+        vi: '$conjugationDue chia thể',
+      ),
     );
   }
   if (kanjiDue > 0) {

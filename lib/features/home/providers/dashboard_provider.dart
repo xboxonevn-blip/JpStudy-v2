@@ -13,6 +13,7 @@ final dashboardProvider = StreamProvider.autoDispose<DashboardState>((ref) {
   final srsDao = db.srsDao;
   final grammarDao = db.grammarDao;
   final kanjiSrsDao = db.kanjiSrsDao;
+  final conjugationSrsDao = db.conjugationSrsDao;
   final mistakeRepo = ref.watch(mistakeRepositoryProvider);
 
   final controller = StreamController<DashboardState>();
@@ -41,6 +42,7 @@ final dashboardProvider = StreamProvider.autoDispose<DashboardState>((ref) {
       final vocabCountFuture = srsDao.getDueReviewCount();
       final grammarCountFuture = grammarDao.getDueReviewCount();
       final kanjiCountFuture = kanjiSrsDao.getDueReviewCount();
+      final conjugationCountFuture = conjugationSrsDao.getDueReviewCount();
       // Only fetch mistake counts if the stream hasn't pushed them yet.
       // getMistakeCounts() runs a 3-row GROUP BY query instead of loading the
       // full UserMistake table — avoids N rows × full columns on every refresh.
@@ -52,6 +54,7 @@ final dashboardProvider = StreamProvider.autoDispose<DashboardState>((ref) {
       final vocabDueCount = await vocabCountFuture;
       final grammarDueCount = await grammarCountFuture;
       final kanjiDueCount = await kanjiCountFuture;
+      final conjugationDueCount = await conjugationCountFuture;
       final mc = cachedMistakeCounts ?? await mistakeCountsFuture!;
       if (!canEmit()) {
         return;
@@ -63,6 +66,7 @@ final dashboardProvider = StreamProvider.autoDispose<DashboardState>((ref) {
         vocabDue: vocabDueCount,
         grammarDue: grammarDueCount,
         kanjiDue: kanjiDueCount,
+        conjugationDue: conjugationDueCount,
         vocabMistakeCount: mc.vocab,
         grammarMistakeCount: mc.grammar,
         kanjiMistakeCount: mc.kanji,
@@ -104,6 +108,14 @@ final dashboardProvider = StreamProvider.autoDispose<DashboardState>((ref) {
   );
   subscriptions.add(
     kanjiSrsDao.watchDueReviewCount().listen((_) {
+      if (isDisposed) {
+        return;
+      }
+      unawaited(emitSnapshot());
+    }),
+  );
+  subscriptions.add(
+    conjugationSrsDao.watchDueReviewCount().listen((_) {
       if (isDisposed) {
         return;
       }
@@ -178,6 +190,7 @@ class DashboardState {
     required this.vocabDue,
     required this.grammarDue,
     required this.kanjiDue,
+    this.conjugationDue = 0,
     required this.vocabMistakeCount,
     required this.grammarMistakeCount,
     required this.kanjiMistakeCount,
@@ -189,10 +202,13 @@ class DashboardState {
   final int vocabDue;
   final int grammarDue;
   final int kanjiDue;
+  final int conjugationDue;
   final int vocabMistakeCount;
   final int grammarMistakeCount;
   final int kanjiMistakeCount;
   final int totalMistakeCount;
+
+  int get totalDue => vocabDue + grammarDue + kanjiDue + conjugationDue;
 
   @override
   bool operator ==(Object other) {
@@ -205,6 +221,7 @@ class DashboardState {
         other.vocabDue == vocabDue &&
         other.grammarDue == grammarDue &&
         other.kanjiDue == kanjiDue &&
+        other.conjugationDue == conjugationDue &&
         other.vocabMistakeCount == vocabMistakeCount &&
         other.grammarMistakeCount == grammarMistakeCount &&
         other.kanjiMistakeCount == kanjiMistakeCount &&
@@ -218,6 +235,7 @@ class DashboardState {
     vocabDue,
     grammarDue,
     kanjiDue,
+    conjugationDue,
     vocabMistakeCount,
     grammarMistakeCount,
     kanjiMistakeCount,

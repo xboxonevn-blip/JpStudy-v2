@@ -10,6 +10,8 @@ class KanjiSrsDao extends DatabaseAccessor<AppDatabase>
     with _$KanjiSrsDaoMixin {
   KanjiSrsDao(super.db);
 
+  final FsrsService _fsrsService = FsrsService();
+
   Future<KanjiSrsStateData?> getSrsState(int kanjiId) {
     return (select(
       kanjiSrsState,
@@ -69,6 +71,39 @@ class KanjiSrsDao extends DatabaseAccessor<AppDatabase>
       kanjiSrsState,
     )..where((t) => t.nextReviewAt.isSmallerOrEqualValue(now))).get();
   }
+
+  Future<void> recordReview({
+    required int kanjiId,
+    required int grade,
+    DateTime? now,
+  }) async {
+    final reviewTime = now ?? DateTime.now();
+    await initializeSrsState(kanjiId);
+    final state = await getSrsState(kanjiId);
+    if (state == null) return;
+
+    final nextGrade = grade.clamp(1, 4);
+    final result = _fsrsService.review(
+      grade: nextGrade,
+      stability: state.stability,
+      difficulty: state.difficulty,
+      lastReviewedAt: state.lastReviewedAt,
+      now: reviewTime,
+      cardState: FsrsCardState.fromDbValue(state.fsrsState),
+      step: state.fsrsStep,
+    );
+
+    await updateSrsState(
+      kanjiId: kanjiId,
+      stability: result.stability,
+      difficulty: result.difficulty,
+      lastConfidence: nextGrade,
+      nextReviewAt: result.nextReviewAt,
+      fsrsState: result.cardState,
+      fsrsStep: result.step,
+    );
+  }
+
 
   /// One-shot due count — cheaper than getDueReviews().length.
   Future<int> getDueReviewCount() async {

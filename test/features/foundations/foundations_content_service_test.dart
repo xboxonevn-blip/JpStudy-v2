@@ -24,4 +24,20 @@ void main() {
     expect(ruleSet.sources, hasLength(5));
     expect(ruleSet.rules.first.examples, isNotEmpty);
   });
+
+  test('loads han viet v2 rules with practice items', () async {
+    final service = FoundationsContentService();
+
+    final ruleSet = await service.loadHanVietRulesV2();
+
+    expect(ruleSet.rules, hasLength(1));
+    final rule = ruleSet.rules.single;
+    expect(rule.ruleId, 'rule_initial_h_k_gi_c_qu_to_k');
+    expect(rule.legacyId, 'initial-c-k-kh-gi-h-qu-to-k');
+    expect(rule.consonants, ['H', 'K', 'Gi', 'C', 'Qu']);
+    expect(rule.targetKana, containsAll(['か', 'が']));
+    expect(rule.examples, hasLength(greaterThanOrEqualTo(4)));
+    expect(rule.practice.items, hasLength(5));
+    expect(rule.practice.items.first.options, hasLength(4));
+  });
 }

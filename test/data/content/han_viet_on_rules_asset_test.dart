@@ -5,6 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final rulesAsset = File('assets/data/content/kanji/han_viet_on_rules.json');
+  final rulesV2Asset = File(
+    'assets/data/content/kanji/han_viet_on_rules_v2.json',
+  );
 
   Map<String, dynamic> loadRulesAsset() {
     return jsonDecode(rulesAsset.readAsStringSync()) as Map<String, dynamic>;
@@ -139,4 +142,45 @@ void main() {
       expect(raw, isNot(contains('nhaikanji.com')));
     },
   );
+
+  test('han viet v2 rules include reference practice for rule 1', () {
+    final asset =
+        jsonDecode(rulesV2Asset.readAsStringSync()) as Map<String, dynamic>;
+
+    expect(asset['schemaVersion'], 2);
+    expect(asset['dataset'], 'han_viet_on_rules_v2');
+
+    final raw = rulesV2Asset.readAsStringSync();
+    expect(raw, isNot(contains('thocodehoctiengnhat.com')));
+    expect(raw, isNot(contains('nhaikanji.com')));
+
+    final rules = (asset['rules'] as List<dynamic>)
+        .cast<Map<String, dynamic>>();
+    final rule = rules.singleWhere(
+      (item) => item['ruleId'] == 'rule_initial_h_k_gi_c_qu_to_k',
+    );
+    expect(rule['legacyId'], 'initial-c-k-kh-gi-h-qu-to-k');
+    expect(rule['consonants'], ['H', 'K', 'Gi', 'C', 'Qu']);
+    expect(rule['targetKana'], containsAll(['か', 'が']));
+    expect(rule['examples'], hasLength(greaterThanOrEqualTo(4)));
+
+    final practice = rule['practice'] as Map<String, dynamic>;
+    expect(practice['status'], 'ready');
+    final items = (practice['items'] as List<dynamic>)
+        .cast<Map<String, dynamic>>();
+    expect(items, hasLength(5));
+    for (final item in items) {
+      final options = (item['options'] as List<dynamic>).cast<String>();
+      expect(options, hasLength(4));
+      expect(options.toSet(), hasLength(4));
+      expect(options, contains(item['correct']));
+    }
+
+    final index =
+        jsonDecode(File('assets/data/content/index.json').readAsStringSync())
+            as Map<String, dynamic>;
+    final datasets = index['datasets'] as Map<String, dynamic>;
+    expect(datasets, contains('hanVietOnRulesV2'));
+    expect(datasets['hanVietOnRulesV2'], containsPair('rules', 1));
+  });
 }

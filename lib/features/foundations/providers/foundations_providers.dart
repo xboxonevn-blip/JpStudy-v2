@@ -22,6 +22,10 @@ final hanVietRulesProvider = FutureProvider<HanVietRuleSet>((ref) {
   return ref.watch(foundationsContentServiceProvider).loadHanVietRules();
 });
 
+final hanVietRulesV2Provider = FutureProvider<HanVietRuleSetV2>((ref) {
+  return ref.watch(foundationsContentServiceProvider).loadHanVietRulesV2();
+});
+
 final foundationsProgressProvider =
     NotifierProvider<FoundationsProgressController, FoundationsProgress>(
       FoundationsProgressController.new,

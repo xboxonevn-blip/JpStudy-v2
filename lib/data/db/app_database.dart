@@ -7,6 +7,7 @@ import '../daos/mistake_dao.dart';
 import '../daos/kanji_srs_dao.dart';
 import '../daos/kana_srs_dao.dart';
 import '../daos/conjugation_srs_dao.dart';
+import '../daos/han_viet_rule_srs_dao.dart';
 
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
@@ -17,6 +18,7 @@ import 'grammar_tables.dart';
 import 'mistake_tables.dart';
 import 'kanji_tables.dart';
 import 'conjugation_tables.dart';
+import 'han_viet_rule_tables.dart';
 import 'tables.dart';
 
 part 'app_database.g.dart';
@@ -43,6 +45,7 @@ class KanaSrsState extends Table {
     KanjiSrsState,
     KanaSrsState,
     ConjugationSrsState,
+    HanVietRuleSrsState,
     UserProgress,
     Attempt,
     AttemptAnswer,
@@ -77,13 +80,14 @@ class KanaSrsState extends Table {
     KanjiSrsDao,
     KanaSrsDao,
     ConjugationSrsDao,
+    HanVietRuleSrsDao,
   ],
 )
 class AppDatabase extends _$AppDatabase {
   AppDatabase({QueryExecutor? executor}) : super(executor ?? _openConnection());
 
   @override
-  int get schemaVersion => 32;
+  int get schemaVersion => 33;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -92,6 +96,7 @@ class AppDatabase extends _$AppDatabase {
       await _seedLessons();
       await _createPerformanceIndexes();
       await _createConjugationSrsIndexes();
+      await _createHanVietRuleSrsIndexes();
     },
     onUpgrade: (migrator, from, to) async {
       if (from < 2) {
@@ -343,6 +348,10 @@ class AppDatabase extends _$AppDatabase {
         await migrator.createTable(conjugationSrsState);
         await _createConjugationSrsIndexes();
       }
+      if (from < 33) {
+        await migrator.createTable(hanVietRuleSrsState);
+        await _createHanVietRuleSrsIndexes();
+      }
     },
     beforeOpen: (details) async {
       // Only reseed on first install or after an upgrade — on routine opens
@@ -471,6 +480,17 @@ class AppDatabase extends _$AppDatabase {
     await customStatement(
       'CREATE INDEX IF NOT EXISTS idx_conjugation_srs_skill '
       'ON conjugation_srs_state(content_vocab_id, form_key, direction)',
+    );
+  }
+
+  Future<void> _createHanVietRuleSrsIndexes() async {
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_han_viet_rule_srs_due '
+      'ON han_viet_rule_srs_state(next_review_at)',
+    );
+    await customStatement(
+      'CREATE UNIQUE INDEX IF NOT EXISTS idx_han_viet_rule_srs_rule_unique '
+      'ON han_viet_rule_srs_state(rule_id)',
     );
   }
 

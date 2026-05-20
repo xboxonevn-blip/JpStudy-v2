@@ -1144,3 +1144,15 @@
 - Audited generation inputs: kanji assets contain `929` entries with Hán-Việt and `926` with On readings; first-consonant pools are large enough for rule 1 (`H/K/Gi/C/Qu`) and most initial rules.
 - Audited integration points: existing kanji SRS uses `KanjiSrsDao`; kanji detail already has an inline Hán-Việt panel but only matches exact example kanji, not real rule applicability.
 - Added autonomous design doc `docs/research/han-viet-rules-redesign-2026-05-20.md` with v2 schema, generator policy, UI, SRS/interlink plan, DECISIONS MADE, and OPEN_QUESTIONS. No banned website was accessed.
+- Owner added QA-A-030 during QA-A-028 implementation: offline vocab/grammar canonical extraction from `C:/Users/xboxo/Desktop/PC/Tai lieu JPStudy/Tu Vung`, with copyright-safe fact extraction and the same autonomous no-gate policy. Logged it in the backlog after QA-A-029; continue current QA-A-028 work first.
+- Owner added QA-A-031 during QA-A-028 implementation: Usage Policy page with original JpStudy prose, copyright-learning-material disclaimer, `xboxonevn@gmail.com` contact/takedown email, VI/EN/JA copy, onboarding/settings/footer integration, and autonomous no-gate policy. Logged it in the backlog after QA-A-030; continue current QA-A-028 work first.
+
+## 2026-05-20 QA-A-028 Han-Viet Rules Redesign Phase 1
+
+- Implemented the reference rule `H/K/Gi/C/Qu -> K/G` as a full v2 learning card: generated examples, five MC practice questions, inline feedback, `Đã hiểu rule` threshold, rule SRS, and kanji SRS updates.
+- Added `tool/research/generate_han_viet_rule_content.js`, `assets/data/content/kanji/han_viet_on_rules_v2.json`, v2 Dart models/service/provider, Drift table/DAO for Hán-Việt rule SRS, and a `KanjiSrsDao.recordReview` helper.
+- Verified locally before live proof: generator test, focused asset/service/screen/DAO tests, `flutter analyze lib test`, UI string guard `0`, content status `0`, taxonomy/content guards, and full `flutter test --concurrency=1` passed with `2411/2411`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof on normal production cache: VI `/kanji/han-viet` rendered the v2 rule card, examples, and practice; answering the five correct options produced five `Đúng` feedbacks and `Đã hiểu rule`; `/review` loaded after the SRS write; EN/JA did not render Hán-Việt content; `main.dart.js` returned `Cache-Control: no-cache`; Flutter/app console errors were `0`.
+- Live artifacts: `output/playwright/live-qaa028-hanviet-phase1-proof.json`, `output/playwright/live-qaa028-hanviet-phase1-initial.png`, `output/playwright/live-qaa028-hanviet-phase1-answered.png`, `output/playwright/live-qaa028-hanviet-phase1-review.png`, `output/playwright/live-qaa028-hanviet-phase1-en-gate.png`, and `output/playwright/live-qaa028-hanviet-phase1-ja-gate.png`.
+- Remaining QA-A-028 work: Phase 2 scale all rules/sub-rules, then Phase 3 kanji-detail/review/personalized interlinks.

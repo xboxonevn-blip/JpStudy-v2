@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:drift/native.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/foundations/models/han_viet_rule.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
 import 'package:jpstudy/features/foundations/screens/han_viet_reference_screen.dart';
@@ -78,6 +81,57 @@ const _testRuleSet = HanVietRuleSet(
   ],
 );
 
+const _emptyRuleSetV2 = HanVietRuleSetV2(rules: []);
+
+const _testRuleSetV2 = HanVietRuleSetV2(
+  rules: [
+    HanVietRuleV2(
+      ruleId: 'rule_initial_h_k_gi_c_qu_to_k',
+      legacyId: 'initial-c-k-kh-gi-h-qu-to-k',
+      section: '1',
+      category: 'initial',
+      title: 'Âm đầu là H/K/Gi/C/Qu',
+      consonants: ['H', 'K', 'Gi', 'C', 'Qu'],
+      targetRow: 'K/G',
+      targetKana: ['か', 'き', 'く', 'け', 'こ', 'が'],
+      percentage: 90,
+      explanation:
+          "Phụ âm đầu Hán-Việt H/K/Gi/C/Qu thường chuyển sang hàng K/G trong On'yomi.",
+      examples: [
+        HanVietRuleExampleV2(
+          hanViet: 'Học',
+          kanji: '学',
+          kanjiId: 1,
+          assetKanjiId: 'n5_l01_k008',
+          level: 'N5',
+          onyomi: 'がく',
+          romaji: 'gaku',
+          compound: '学校',
+          compoundKana: 'がっこう',
+          compoundMeaning: 'trường học',
+        ),
+      ],
+      practice: HanVietRulePractice(
+        count: 1,
+        questionTemplate: 'Âm Hán-Việt {hanViet} ({kanji}) -> On\'yomi nào?',
+        status: 'ready',
+        items: [
+          HanVietRulePracticeItem(
+            itemId: 'rule_initial_h_k_gi_c_qu_to_k_学',
+            kanji: '学',
+            kanjiId: 1,
+            assetKanjiId: 'n5_l01_k008',
+            hanViet: 'Học',
+            correct: 'がく',
+            options: ['がく', 'そう', 'とう', 'りょう'],
+            explanation: 'Học bắt đầu bằng H, thường về hàng K/G.',
+          ),
+        ],
+      ),
+    ),
+  ],
+);
+
 Future<void> _pumpReference(
   WidgetTester tester,
   AppLanguage language,
@@ -91,6 +145,7 @@ Future<void> _pumpReference(
           (ref) => AppLanguageController.test(language),
         ),
         hanVietRulesProvider.overrideWith((ref) async => _testRuleSet),
+        hanVietRulesV2Provider.overrideWith((ref) async => _emptyRuleSetV2),
       ],
       child: MaterialApp(home: HanVietReferenceScreen(key: key)),
     ),
@@ -196,5 +251,83 @@ void main() {
       findsOneWidget,
     );
     expect(find.text('Phụ âm đầu L → R'), findsOneWidget);
+  });
+
+  testWidgets('renders v2 rule card and inline practice feedback', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        key: UniqueKey(),
+        overrides: [
+          appLanguageProvider.overrideWith(
+            (ref) => AppLanguageController.test(AppLanguage.vi),
+          ),
+          hanVietRulesProvider.overrideWith((ref) async => _testRuleSet),
+          hanVietRulesV2Provider.overrideWith((ref) async => _testRuleSetV2),
+        ],
+        child: const MaterialApp(home: HanVietReferenceScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 10));
+
+    expect(
+      find.byKey(
+        const ValueKey('han_viet_rule_card_rule_initial_h_k_gi_c_qu_to_k'),
+      ),
+      findsOneWidget,
+    );
+    expect(find.text('1. Âm đầu là H/K/Gi/C/Qu'), findsOneWidget);
+    expect(find.textContaining('hàng K/G'), findsWidgets);
+    expect(find.text('Ví dụ:'), findsOneWidget);
+    expect(find.textContaining('Học -> 学 (がく)'), findsOneWidget);
+    expect(find.text('Bài tập áp dụng'), findsOneWidget);
+    expect(find.text("Âm Hán-Việt Học (学) -> On'yomi nào?"), findsOneWidget);
+
+    await tester.tap(find.text('がく'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Đúng'), findsOneWidget);
+    expect(find.textContaining('thường về hàng K/G'), findsOneWidget);
+    expect(find.text('Đã hiểu rule'), findsOneWidget);
+  });
+
+  testWidgets('passing v2 practice records rule and kanji SRS', (
+    tester,
+  ) async {
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    addTearDown(db.close);
+
+    await tester.pumpWidget(
+      ProviderScope(
+        key: UniqueKey(),
+        overrides: [
+          appLanguageProvider.overrideWith(
+            (ref) => AppLanguageController.test(AppLanguage.vi),
+          ),
+          databaseProvider.overrideWithValue(db),
+          hanVietRulesProvider.overrideWith((ref) async => _testRuleSet),
+          hanVietRulesV2Provider.overrideWith((ref) async => _testRuleSetV2),
+        ],
+        child: const MaterialApp(home: HanVietReferenceScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 10));
+
+    await tester.tap(find.text('がく'));
+    await tester.pumpAndSettle();
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
+
+    final ruleState = await db.hanVietRuleSrsDao.getSrsState(
+      'rule_initial_h_k_gi_c_qu_to_k',
+    );
+    final kanjiState = await db.kanjiSrsDao.getSrsState(1);
+
+    expect(ruleState, isNotNull);
+    expect(ruleState!.lastConfidence, 3);
+    expect(kanjiState, isNotNull);
+    expect(kanjiState!.lastConfidence, 3);
   });
 }

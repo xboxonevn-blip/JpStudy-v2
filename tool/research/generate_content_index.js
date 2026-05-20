@@ -139,6 +139,24 @@ function hanVietOnRulesDataset() {
   };
 }
 
+function hanVietOnRulesV2Dataset() {
+  const payload = readJson(
+    path.join(root, 'kanji', 'han_viet_on_rules_v2.json'),
+  );
+  const rules = Array.isArray(payload.rules) ? payload.rules : [];
+  const practiceItems = rules.reduce((sum, rule) => {
+    const items = rule && rule.practice && Array.isArray(rule.practice.items)
+      ? rule.practice.items.length
+      : 0;
+    return sum + items;
+  }, 0);
+  return {
+    rules: rules.length,
+    practiceItems,
+    sourcePolicy: payload.sourcePolicy || {},
+  };
+}
+
 function grammarPracticeDataset() {
   const grammar = lessonDataset('grammar');
   const authoredPath = path.join(root, 'grammar_practice', 'authored_bank.json');
@@ -169,6 +187,7 @@ const index = {
     grammarPractice: grammarPracticeDataset(),
     immersion: immersionDataset(),
     hanVietOnRules: hanVietOnRulesDataset(),
+    hanVietOnRulesV2: hanVietOnRulesV2Dataset(),
     kana: kanaDataset(),
   },
 };

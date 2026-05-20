@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 2,
+  "dataset": "han_viet_on_rules_v2",
+  "generatedAt": "2026-05-20",
+  "sourcePolicy": {
+    "blockedDomainsExcludedCount": 2,
+    "note": "Generated from local app kanji/vocab assets and owner-provided local files only; owner-blocked crawl sources are excluded."
+  },
+  "rules": [
+    {
+      "ruleId": "rule_initial_h_k_gi_c_qu_to_k",
+      "legacyId": "initial-c-k-kh-gi-h-qu-to-k",
+      "section": "1",
+      "parentSection": null,
+      "category": "initial",
+      "title": "Âm đầu là H/K/Gi/C/Qu",
+      "consonants": [
+        "H",
+        "K",
+        "Gi",
+        "C",
+        "Qu"
+      ],
+      "targetRow": "K/G",
+      "targetKana": [
+        "か",
+        "き",
+        "く",
+        "け",
+        "こ",
+        "が",
+        "ぎ",
+        "ぐ",
+        "げ",
+        "ご"
+      ],
+      "percentage": 90,
+      "explanation": "Phụ âm đầu Hán-Việt H/K/Gi/C/Qu thường chuyển sang hàng K/G trong On'yomi.",
+      "legacyConfidence": 0.8,
+      "examples": [
+        {
+          "hanViet": "Hiệu",
+          "kanji": "校",
+          "kanjiId": 839,
+          "assetKanjiId": "n5_l12_k006",
+          "level": "N5",
+          "onyomi": "こう",
+          "romaji": "kou",
+          "compound": "校",
+          "compoundKana": "きょう",
+          "compoundMeaning": "trường học",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Học",
+          "kanji": "学",
+          "kanjiId": 429,
+          "assetKanjiId": "n3_l04_k002",
+          "level": "N3",
+          "onyomi": "がく",
+          "romaji": "ガク",
+          "compound": "学校",
+          "compoundKana": "がっこう",
+          "compoundMeaning": "trường học",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Hành",
+          "kanji": "行",
+          "kanjiId": 134,
+          "assetKanjiId": "n1_jlpt_vocab_k134",
+          "level": "N1",
+          "onyomi": "こう",
+          "romaji": "コウ",
+          "compound": "銀行",
+          "compoundKana": "ぎんこう",
+          "compoundMeaning": "ngân hàng",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Hội",
+          "kanji": "会",
+          "kanjiId": 330,
+          "assetKanjiId": "n2_jlpt_vocab_k130",
+          "level": "N2",
+          "onyomi": "かい",
+          "romaji": "カイ",
+          "compound": "会社",
+          "compoundKana": "かいしゃ",
+          "compoundMeaning": "công ty",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Hà",
+          "kanji": "何",
+          "kanjiId": 122,
+          "assetKanjiId": "n1_jlpt_vocab_k122",
+          "level": "N1",
+          "onyomi": "か",
+          "romaji": "カ",
+          "compound": "何",
+          "compoundKana": "なん/なに",
+          "compoundMeaning": "cái gì",
+          "source": "app-kanji-source-verified"
+        },
+        {
+          "hanViet": "Quốc",
+          "kanji": "国",
+          "kanjiId": 844,
+          "assetKanjiId": "n5_l13_k001",
+          "level": "N5",
+          "onyomi": "こく",
+          "romaji": "koku",
+          "compound": "国",
+          "compoundKana": "くに",
+          "compoundMeaning": "quốc gia",
+          "source": "app-kanji-source-verified"
+        }
+      ],
+      "subRuleIds": [],
+      "practice": {
+        "count": 5,
+        "questionTemplate": "Âm Hán-Việt {hanViet} ({kanji}) -> On'yomi nào?",
+        "status": "ready",
+        "items": [
+          {
+            "itemId": "rule_initial_h_k_gi_c_qu_to_k_九",
+            "kanji": "九",
+            "kanjiId": 767,
+            "assetKanjiId": "n5_l02_k009",
+            "hanViet": "Cửu",
+            "correct": "きゅう",
+            "options": [
+              "きゅう",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Cửu bắt đầu bằng Cửu; nhóm Hán-Việt này thường về hàng K/G trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_h_k_gi_c_qu_to_k_下",
+            "kanji": "下",
+            "kanjiId": 816,
+            "assetKanjiId": "n5_l10_k002",
+            "hanViet": "Hạ",
+            "correct": "か",
+            "options": [
+              "う",
+              "こ",
+              "あ",
+              "か"
+            ],
+            "explanation": "Hạ bắt đầu bằng Hạ; nhóm Hán-Việt này thường về hàng K/G trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_h_k_gi_c_qu_to_k_公",
+            "kanji": "公",
+            "kanjiId": 927,
+            "assetKanjiId": "n5_l24_k005",
+            "hanViet": "Công",
+            "correct": "こう",
+            "options": [
+              "へん",
+              "あい",
+              "こう",
+              "そう"
+            ],
+            "explanation": "Công bắt đầu bằng Công; nhóm Hán-Việt này thường về hàng K/G trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_h_k_gi_c_qu_to_k_兄",
+            "kanji": "兄",
+            "kanjiId": 923,
+            "assetKanjiId": "n5_l24_k001",
+            "hanViet": "Huynh",
+            "correct": "けい",
+            "options": [
+              "あい",
+              "けい",
+              "そう",
+              "へん"
+            ],
+            "explanation": "Huynh bắt đầu bằng Huynh; nhóm Hán-Việt này thường về hàng K/G trong On'yomi."
+          },
+          {
+            "itemId": "rule_initial_h_k_gi_c_qu_to_k_広",
+            "kanji": "広",
+            "kanjiId": 866,
+            "assetKanjiId": "n5_l15_k003",
+            "hanViet": "Quảng",
+            "correct": "こう",
+            "options": [
+              "こう",
+              "そう",
+              "へん",
+              "あい"
+            ],
+            "explanation": "Quảng bắt đầu bằng Quảng; nhóm Hán-Việt này thường về hàng K/G trong On'yomi."
+          }
+        ]
+      }
+    }
+  ]
+}

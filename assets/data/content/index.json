@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-05-18",
+  "generatedAt": "2026-05-20",
   "datasets": {
     "vocab": {
       "files": 278,
@@ -171,6 +171,14 @@
       "sourcePolicy": {
         "blockedDomainsExcludedCount": 2,
         "note": "Rules are paraphrased and normalized from allowed online learner sources. User-blocked domains were not accessed or cited. These are hints, not deterministic readings."
+      }
+    },
+    "hanVietOnRulesV2": {
+      "rules": 1,
+      "practiceItems": 5,
+      "sourcePolicy": {
+        "blockedDomainsExcludedCount": 2,
+        "note": "Generated from local app kanji/vocab assets and owner-provided local files only; owner-blocked crawl sources are excluded."
       }
     },
     "kana": {

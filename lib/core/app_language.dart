@@ -7788,6 +7788,17 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get hanVietRuleUnderstoodLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Rule understood';
+      case AppLanguage.vi:
+        return 'Đã hiểu rule';
+      case AppLanguage.ja:
+        return 'ルールを理解';
+    }
+  }
+
   String get kanaShowRomajiLabel {
     switch (this) {
       case AppLanguage.en:

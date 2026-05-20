@@ -1119,3 +1119,12 @@
 - Live proof used normal browser cache: `main.dart.js` returned `200/no-cache`; JA vocab, lesson, grammar, grammar practice, kanji, kanji practice, and mock surfaces rendered without Vietnamese fallback leaks; VI control still rendered Vietnamese where expected; unexpected console/page errors were `0`.
 - Live artifacts: `output/playwright/live-ja-locale-cleanup-proof.json` and screenshots `output/playwright/live-ja-locale-*.png`.
 - Next priority after this commit: QA-A-027 Phase 0 ebook extraction plan from local PDFs only, superseding the older QA-A-026 source plan.
+
+## 2026-05-20 QA-A-027 Canonical Ebook Extraction Phase 0
+
+- Added the new owner QA-A-027 P0 row to `docs/research/quality-backlog.md`, above the older QA-A-026 reclassification row, and added the new QA-A-028 Hán-Việt redesign P1 row queued after QA-A-027/QA-A-026.
+- Confirmed all six local PDFs exist under `C:/Users/xboxo/Desktop/PC/Tai lieu JPStudy/Ebook/`; no banned website was accessed.
+- Poppler `pdfinfo` page counts: N5 `40`, N4 `21`, N3 `126`, N2 part 1 `78`, N2 part 2 `92`, N1 `131`, total `488`.
+- Rendered 3 sample pages per PDF at 150 DPI into `tmp/kanji_ebook_phase0_samples/` and ran Tesseract `vie+jpn+eng` baseline OCR into `tmp/kanji_ebook_phase0_ocr/`.
+- Sample finding: N5/N3/N2 use full large-card entries with Hán-Việt, meaning, on/kun readings, vocab examples, and writing hints; N4/N1 use compact writing-grid rows with usable text layer for Hán-Việt/meaning/writing mnemonics but no full example/readings block in sampled pages.
+- Created `docs/research/canonical/extraction-plan-2026-05-20.md` with schema, quirks, estimated entry counts, batch plan, and owner approval gate before full extraction.

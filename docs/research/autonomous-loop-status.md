@@ -1,5 +1,15 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-028 Phase 2 Batch 4
+
+- Expanded `han_viet_on_rules_v2.json` from `15` to `20` ready practice cards.
+- Added final `-p -> OU/UU/TSU`, final `-ch -> KU/KI`, rime `-inh/-anh/-ênh -> EI`, rime `-iên/-iêm/-yên -> EN`, and rime `-ông/-ung/-ương -> OU/UU/YOU`; each has `6` examples and `5` MC practice items.
+- Verified locally: `node --test test/tool/research/han_viet_rule_content_generator_test.js`, `flutter test test/data/content/han_viet_on_rules_asset_test.dart`, `flutter test test/features/foundations/han_viet_reference_screen_test.dart`, `npm run test:research-tooling` (`77/77`), and `git diff --check` passed.
+- Deployed with `node tool/deploy/hosting_deploy.js`.
+- Live proof on production: live v2 asset returned `20` rules with no-cache; `/kanji/han-viet` loaded in VI, keyboard-scroll reached rule 20 practice, clicked correct `よう`, `main.dart.js` returned `200/no-cache`, console errors were `0`. Feedback text remains screenshot-backed because CanvasKit semantics omitted it from `body.innerText`.
+- Live artifact: `output/playwright/live-qaa028-hanviet-phase2-batch4-proof.json` plus `output/playwright/live-qaa028-hanviet-phase2-batch4-*.png` screenshots.
+- Next queue: continue QA-A-028 Phase 2 rules `21-25` (`rime-ac`, `rime-ich`, `rime-uu`, long-vowel rules).
+
 ## 2026-05-20 QA-A-028 Phase 2 Batch 3
 
 - Expanded `han_viet_on_rules_v2.json` from `10` to `15` ready practice cards.

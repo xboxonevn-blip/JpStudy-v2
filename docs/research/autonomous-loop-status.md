@@ -987,3 +987,13 @@
 - Deployed with `node tool\deploy\hosting_deploy.js`.
 - Live proof: fresh browser at `https://jpstudy.web.app/?codexFresh=onboarding-banner-20260520#/` showed the Continue button above the consent banner, selected VI, continued to `/#/onboarding/level`, selected N5, started onboarding, and reached VI/N5 home. `main.dart.js` returned `200/no-cache`; only known headless App Check 403/throttle and WebGL readback warnings appeared.
 - Next queue item returns to QA-C-001 remaining work: conjugation SRS/mistakes.
+
+## 2026-05-20 QA-C-001 Conjugation SRS/Mistakes Slice
+
+- TDD RED: `test/data/daos/conjugation_srs_dao_test.dart` failed before generated DAO/schema wiring; `test/features/mistakes/mistake_screen_test.dart` failed because `conjugation` mistakes showed fallback grammar UI and raw source context; `test/data/daos/mistake_dao_test.dart` proved conjugation rows were missing from total mistake counts.
+- GREEN: added AppDatabase schema v32 `ConjugationSrsState`, exact `(contentVocabId, formKey, direction)` SRS rows, due/stage-count DAO methods, `FsrsService` review updates, wrong-answer `conjugation` mistake logging with skill context, and learner-facing Mistakes rendering for form/direction/source with no raw `conjugation_practice` label.
+- Fixed connected count behavior: `MistakeDao.watchMistakeCounts()` and `getMistakeCounts()` keep existing vocab/grammar/kanji buckets but total now includes all types, including conjugation.
+- Verified locally: focused conjugation/mistake suites passed `36/36`, `flutter analyze lib test` clean, UI string guard `0`, `git diff --check` clean, and full `flutter test` passed `2368/2368`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: `https://jpstudy.web.app/?codexFresh=conj-srs-20260520#/mistakes` rendered the Saved Mistakes empty state cleanly, Home nav CTA returned to dashboard, console warnings/errors were `0` after route load, and `main.dart.js` returned `200/no-cache` containing `conjugation_srs_state`, `idx_conjugation_srs_due`, `idx_conjugation_srs_skill`, and `Conjugation practice`.
+- Remaining QA-C-001 work: connected conjugation hub/practice routes and Vocab/Grammar/Kanji/Daily Plan/Practice Board entry points.

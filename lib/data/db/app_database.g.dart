@@ -1886,6 +1886,680 @@ class KanaSrsStateCompanion extends UpdateCompanion<KanaSrsStateData> {
   }
 }
 
+class $ConjugationSrsStateTable extends ConjugationSrsState
+    with TableInfo<$ConjugationSrsStateTable, ConjugationSrsStateData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $ConjugationSrsStateTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _contentVocabIdMeta = const VerificationMeta(
+    'contentVocabId',
+  );
+  @override
+  late final GeneratedColumn<int> contentVocabId = GeneratedColumn<int>(
+    'content_vocab_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _formKeyMeta = const VerificationMeta(
+    'formKey',
+  );
+  @override
+  late final GeneratedColumn<String> formKey = GeneratedColumn<String>(
+    'form_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _directionMeta = const VerificationMeta(
+    'direction',
+  );
+  @override
+  late final GeneratedColumn<String> direction = GeneratedColumn<String>(
+    'direction',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _stabilityMeta = const VerificationMeta(
+    'stability',
+  );
+  @override
+  late final GeneratedColumn<double> stability = GeneratedColumn<double>(
+    'stability',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1.0),
+  );
+  static const VerificationMeta _difficultyMeta = const VerificationMeta(
+    'difficulty',
+  );
+  @override
+  late final GeneratedColumn<double> difficulty = GeneratedColumn<double>(
+    'difficulty',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(5.0),
+  );
+  static const VerificationMeta _fsrsStateMeta = const VerificationMeta(
+    'fsrsState',
+  );
+  @override
+  late final GeneratedColumn<int> fsrsState = GeneratedColumn<int>(
+    'fsrs_state',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _fsrsStepMeta = const VerificationMeta(
+    'fsrsStep',
+  );
+  @override
+  late final GeneratedColumn<int> fsrsStep = GeneratedColumn<int>(
+    'fsrs_step',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _lastConfidenceMeta = const VerificationMeta(
+    'lastConfidence',
+  );
+  @override
+  late final GeneratedColumn<int> lastConfidence = GeneratedColumn<int>(
+    'last_confidence',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _lastReviewedAtMeta = const VerificationMeta(
+    'lastReviewedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> lastReviewedAt =
+      GeneratedColumn<DateTime>(
+        'last_reviewed_at',
+        aliasedName,
+        true,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _nextReviewAtMeta = const VerificationMeta(
+    'nextReviewAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> nextReviewAt = GeneratedColumn<DateTime>(
+    'next_review_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    contentVocabId,
+    formKey,
+    direction,
+    stability,
+    difficulty,
+    fsrsState,
+    fsrsStep,
+    lastConfidence,
+    lastReviewedAt,
+    nextReviewAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'conjugation_srs_state';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<ConjugationSrsStateData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('content_vocab_id')) {
+      context.handle(
+        _contentVocabIdMeta,
+        contentVocabId.isAcceptableOrUnknown(
+          data['content_vocab_id']!,
+          _contentVocabIdMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_contentVocabIdMeta);
+    }
+    if (data.containsKey('form_key')) {
+      context.handle(
+        _formKeyMeta,
+        formKey.isAcceptableOrUnknown(data['form_key']!, _formKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_formKeyMeta);
+    }
+    if (data.containsKey('direction')) {
+      context.handle(
+        _directionMeta,
+        direction.isAcceptableOrUnknown(data['direction']!, _directionMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_directionMeta);
+    }
+    if (data.containsKey('stability')) {
+      context.handle(
+        _stabilityMeta,
+        stability.isAcceptableOrUnknown(data['stability']!, _stabilityMeta),
+      );
+    }
+    if (data.containsKey('difficulty')) {
+      context.handle(
+        _difficultyMeta,
+        difficulty.isAcceptableOrUnknown(data['difficulty']!, _difficultyMeta),
+      );
+    }
+    if (data.containsKey('fsrs_state')) {
+      context.handle(
+        _fsrsStateMeta,
+        fsrsState.isAcceptableOrUnknown(data['fsrs_state']!, _fsrsStateMeta),
+      );
+    }
+    if (data.containsKey('fsrs_step')) {
+      context.handle(
+        _fsrsStepMeta,
+        fsrsStep.isAcceptableOrUnknown(data['fsrs_step']!, _fsrsStepMeta),
+      );
+    }
+    if (data.containsKey('last_confidence')) {
+      context.handle(
+        _lastConfidenceMeta,
+        lastConfidence.isAcceptableOrUnknown(
+          data['last_confidence']!,
+          _lastConfidenceMeta,
+        ),
+      );
+    }
+    if (data.containsKey('last_reviewed_at')) {
+      context.handle(
+        _lastReviewedAtMeta,
+        lastReviewedAt.isAcceptableOrUnknown(
+          data['last_reviewed_at']!,
+          _lastReviewedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('next_review_at')) {
+      context.handle(
+        _nextReviewAtMeta,
+        nextReviewAt.isAcceptableOrUnknown(
+          data['next_review_at']!,
+          _nextReviewAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_nextReviewAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  List<Set<GeneratedColumn>> get uniqueKeys => [
+    {contentVocabId, formKey, direction},
+  ];
+  @override
+  ConjugationSrsStateData map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return ConjugationSrsStateData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      contentVocabId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}content_vocab_id'],
+      )!,
+      formKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}form_key'],
+      )!,
+      direction: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}direction'],
+      )!,
+      stability: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}stability'],
+      )!,
+      difficulty: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty'],
+      )!,
+      fsrsState: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}fsrs_state'],
+      )!,
+      fsrsStep: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}fsrs_step'],
+      ),
+      lastConfidence: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}last_confidence'],
+      )!,
+      lastReviewedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}last_reviewed_at'],
+      ),
+      nextReviewAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}next_review_at'],
+      )!,
+    );
+  }
+
+  @override
+  $ConjugationSrsStateTable createAlias(String alias) {
+    return $ConjugationSrsStateTable(attachedDatabase, alias);
+  }
+}
+
+class ConjugationSrsStateData extends DataClass
+    implements Insertable<ConjugationSrsStateData> {
+  final int id;
+  final int contentVocabId;
+  final String formKey;
+  final String direction;
+  final double stability;
+  final double difficulty;
+  final int fsrsState;
+  final int? fsrsStep;
+  final int lastConfidence;
+  final DateTime? lastReviewedAt;
+  final DateTime nextReviewAt;
+  const ConjugationSrsStateData({
+    required this.id,
+    required this.contentVocabId,
+    required this.formKey,
+    required this.direction,
+    required this.stability,
+    required this.difficulty,
+    required this.fsrsState,
+    this.fsrsStep,
+    required this.lastConfidence,
+    this.lastReviewedAt,
+    required this.nextReviewAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['content_vocab_id'] = Variable<int>(contentVocabId);
+    map['form_key'] = Variable<String>(formKey);
+    map['direction'] = Variable<String>(direction);
+    map['stability'] = Variable<double>(stability);
+    map['difficulty'] = Variable<double>(difficulty);
+    map['fsrs_state'] = Variable<int>(fsrsState);
+    if (!nullToAbsent || fsrsStep != null) {
+      map['fsrs_step'] = Variable<int>(fsrsStep);
+    }
+    map['last_confidence'] = Variable<int>(lastConfidence);
+    if (!nullToAbsent || lastReviewedAt != null) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
+    }
+    map['next_review_at'] = Variable<DateTime>(nextReviewAt);
+    return map;
+  }
+
+  ConjugationSrsStateCompanion toCompanion(bool nullToAbsent) {
+    return ConjugationSrsStateCompanion(
+      id: Value(id),
+      contentVocabId: Value(contentVocabId),
+      formKey: Value(formKey),
+      direction: Value(direction),
+      stability: Value(stability),
+      difficulty: Value(difficulty),
+      fsrsState: Value(fsrsState),
+      fsrsStep: fsrsStep == null && nullToAbsent
+          ? const Value.absent()
+          : Value(fsrsStep),
+      lastConfidence: Value(lastConfidence),
+      lastReviewedAt: lastReviewedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastReviewedAt),
+      nextReviewAt: Value(nextReviewAt),
+    );
+  }
+
+  factory ConjugationSrsStateData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return ConjugationSrsStateData(
+      id: serializer.fromJson<int>(json['id']),
+      contentVocabId: serializer.fromJson<int>(json['contentVocabId']),
+      formKey: serializer.fromJson<String>(json['formKey']),
+      direction: serializer.fromJson<String>(json['direction']),
+      stability: serializer.fromJson<double>(json['stability']),
+      difficulty: serializer.fromJson<double>(json['difficulty']),
+      fsrsState: serializer.fromJson<int>(json['fsrsState']),
+      fsrsStep: serializer.fromJson<int?>(json['fsrsStep']),
+      lastConfidence: serializer.fromJson<int>(json['lastConfidence']),
+      lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
+      nextReviewAt: serializer.fromJson<DateTime>(json['nextReviewAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'contentVocabId': serializer.toJson<int>(contentVocabId),
+      'formKey': serializer.toJson<String>(formKey),
+      'direction': serializer.toJson<String>(direction),
+      'stability': serializer.toJson<double>(stability),
+      'difficulty': serializer.toJson<double>(difficulty),
+      'fsrsState': serializer.toJson<int>(fsrsState),
+      'fsrsStep': serializer.toJson<int?>(fsrsStep),
+      'lastConfidence': serializer.toJson<int>(lastConfidence),
+      'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
+      'nextReviewAt': serializer.toJson<DateTime>(nextReviewAt),
+    };
+  }
+
+  ConjugationSrsStateData copyWith({
+    int? id,
+    int? contentVocabId,
+    String? formKey,
+    String? direction,
+    double? stability,
+    double? difficulty,
+    int? fsrsState,
+    Value<int?> fsrsStep = const Value.absent(),
+    int? lastConfidence,
+    Value<DateTime?> lastReviewedAt = const Value.absent(),
+    DateTime? nextReviewAt,
+  }) => ConjugationSrsStateData(
+    id: id ?? this.id,
+    contentVocabId: contentVocabId ?? this.contentVocabId,
+    formKey: formKey ?? this.formKey,
+    direction: direction ?? this.direction,
+    stability: stability ?? this.stability,
+    difficulty: difficulty ?? this.difficulty,
+    fsrsState: fsrsState ?? this.fsrsState,
+    fsrsStep: fsrsStep.present ? fsrsStep.value : this.fsrsStep,
+    lastConfidence: lastConfidence ?? this.lastConfidence,
+    lastReviewedAt: lastReviewedAt.present
+        ? lastReviewedAt.value
+        : this.lastReviewedAt,
+    nextReviewAt: nextReviewAt ?? this.nextReviewAt,
+  );
+  ConjugationSrsStateData copyWithCompanion(ConjugationSrsStateCompanion data) {
+    return ConjugationSrsStateData(
+      id: data.id.present ? data.id.value : this.id,
+      contentVocabId: data.contentVocabId.present
+          ? data.contentVocabId.value
+          : this.contentVocabId,
+      formKey: data.formKey.present ? data.formKey.value : this.formKey,
+      direction: data.direction.present ? data.direction.value : this.direction,
+      stability: data.stability.present ? data.stability.value : this.stability,
+      difficulty: data.difficulty.present
+          ? data.difficulty.value
+          : this.difficulty,
+      fsrsState: data.fsrsState.present ? data.fsrsState.value : this.fsrsState,
+      fsrsStep: data.fsrsStep.present ? data.fsrsStep.value : this.fsrsStep,
+      lastConfidence: data.lastConfidence.present
+          ? data.lastConfidence.value
+          : this.lastConfidence,
+      lastReviewedAt: data.lastReviewedAt.present
+          ? data.lastReviewedAt.value
+          : this.lastReviewedAt,
+      nextReviewAt: data.nextReviewAt.present
+          ? data.nextReviewAt.value
+          : this.nextReviewAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ConjugationSrsStateData(')
+          ..write('id: $id, ')
+          ..write('contentVocabId: $contentVocabId, ')
+          ..write('formKey: $formKey, ')
+          ..write('direction: $direction, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('fsrsState: $fsrsState, ')
+          ..write('fsrsStep: $fsrsStep, ')
+          ..write('lastConfidence: $lastConfidence, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('nextReviewAt: $nextReviewAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    contentVocabId,
+    formKey,
+    direction,
+    stability,
+    difficulty,
+    fsrsState,
+    fsrsStep,
+    lastConfidence,
+    lastReviewedAt,
+    nextReviewAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is ConjugationSrsStateData &&
+          other.id == this.id &&
+          other.contentVocabId == this.contentVocabId &&
+          other.formKey == this.formKey &&
+          other.direction == this.direction &&
+          other.stability == this.stability &&
+          other.difficulty == this.difficulty &&
+          other.fsrsState == this.fsrsState &&
+          other.fsrsStep == this.fsrsStep &&
+          other.lastConfidence == this.lastConfidence &&
+          other.lastReviewedAt == this.lastReviewedAt &&
+          other.nextReviewAt == this.nextReviewAt);
+}
+
+class ConjugationSrsStateCompanion
+    extends UpdateCompanion<ConjugationSrsStateData> {
+  final Value<int> id;
+  final Value<int> contentVocabId;
+  final Value<String> formKey;
+  final Value<String> direction;
+  final Value<double> stability;
+  final Value<double> difficulty;
+  final Value<int> fsrsState;
+  final Value<int?> fsrsStep;
+  final Value<int> lastConfidence;
+  final Value<DateTime?> lastReviewedAt;
+  final Value<DateTime> nextReviewAt;
+  const ConjugationSrsStateCompanion({
+    this.id = const Value.absent(),
+    this.contentVocabId = const Value.absent(),
+    this.formKey = const Value.absent(),
+    this.direction = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.fsrsState = const Value.absent(),
+    this.fsrsStep = const Value.absent(),
+    this.lastConfidence = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+    this.nextReviewAt = const Value.absent(),
+  });
+  ConjugationSrsStateCompanion.insert({
+    this.id = const Value.absent(),
+    required int contentVocabId,
+    required String formKey,
+    required String direction,
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.fsrsState = const Value.absent(),
+    this.fsrsStep = const Value.absent(),
+    this.lastConfidence = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+    required DateTime nextReviewAt,
+  }) : contentVocabId = Value(contentVocabId),
+       formKey = Value(formKey),
+       direction = Value(direction),
+       nextReviewAt = Value(nextReviewAt);
+  static Insertable<ConjugationSrsStateData> custom({
+    Expression<int>? id,
+    Expression<int>? contentVocabId,
+    Expression<String>? formKey,
+    Expression<String>? direction,
+    Expression<double>? stability,
+    Expression<double>? difficulty,
+    Expression<int>? fsrsState,
+    Expression<int>? fsrsStep,
+    Expression<int>? lastConfidence,
+    Expression<DateTime>? lastReviewedAt,
+    Expression<DateTime>? nextReviewAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (contentVocabId != null) 'content_vocab_id': contentVocabId,
+      if (formKey != null) 'form_key': formKey,
+      if (direction != null) 'direction': direction,
+      if (stability != null) 'stability': stability,
+      if (difficulty != null) 'difficulty': difficulty,
+      if (fsrsState != null) 'fsrs_state': fsrsState,
+      if (fsrsStep != null) 'fsrs_step': fsrsStep,
+      if (lastConfidence != null) 'last_confidence': lastConfidence,
+      if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
+      if (nextReviewAt != null) 'next_review_at': nextReviewAt,
+    });
+  }
+
+  ConjugationSrsStateCompanion copyWith({
+    Value<int>? id,
+    Value<int>? contentVocabId,
+    Value<String>? formKey,
+    Value<String>? direction,
+    Value<double>? stability,
+    Value<double>? difficulty,
+    Value<int>? fsrsState,
+    Value<int?>? fsrsStep,
+    Value<int>? lastConfidence,
+    Value<DateTime?>? lastReviewedAt,
+    Value<DateTime>? nextReviewAt,
+  }) {
+    return ConjugationSrsStateCompanion(
+      id: id ?? this.id,
+      contentVocabId: contentVocabId ?? this.contentVocabId,
+      formKey: formKey ?? this.formKey,
+      direction: direction ?? this.direction,
+      stability: stability ?? this.stability,
+      difficulty: difficulty ?? this.difficulty,
+      fsrsState: fsrsState ?? this.fsrsState,
+      fsrsStep: fsrsStep ?? this.fsrsStep,
+      lastConfidence: lastConfidence ?? this.lastConfidence,
+      lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
+      nextReviewAt: nextReviewAt ?? this.nextReviewAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (contentVocabId.present) {
+      map['content_vocab_id'] = Variable<int>(contentVocabId.value);
+    }
+    if (formKey.present) {
+      map['form_key'] = Variable<String>(formKey.value);
+    }
+    if (direction.present) {
+      map['direction'] = Variable<String>(direction.value);
+    }
+    if (stability.present) {
+      map['stability'] = Variable<double>(stability.value);
+    }
+    if (difficulty.present) {
+      map['difficulty'] = Variable<double>(difficulty.value);
+    }
+    if (fsrsState.present) {
+      map['fsrs_state'] = Variable<int>(fsrsState.value);
+    }
+    if (fsrsStep.present) {
+      map['fsrs_step'] = Variable<int>(fsrsStep.value);
+    }
+    if (lastConfidence.present) {
+      map['last_confidence'] = Variable<int>(lastConfidence.value);
+    }
+    if (lastReviewedAt.present) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt.value);
+    }
+    if (nextReviewAt.present) {
+      map['next_review_at'] = Variable<DateTime>(nextReviewAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ConjugationSrsStateCompanion(')
+          ..write('id: $id, ')
+          ..write('contentVocabId: $contentVocabId, ')
+          ..write('formKey: $formKey, ')
+          ..write('direction: $direction, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('fsrsState: $fsrsState, ')
+          ..write('fsrsStep: $fsrsStep, ')
+          ..write('lastConfidence: $lastConfidence, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('nextReviewAt: $nextReviewAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 class $UserProgressTable extends UserProgress
     with TableInfo<$UserProgressTable, UserProgressData> {
   @override
@@ -12245,6 +12919,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $SrsStateTable srsState = $SrsStateTable(this);
   late final $KanjiSrsStateTable kanjiSrsState = $KanjiSrsStateTable(this);
   late final $KanaSrsStateTable kanaSrsState = $KanaSrsStateTable(this);
+  late final $ConjugationSrsStateTable conjugationSrsState =
+      $ConjugationSrsStateTable(this);
   late final $UserProgressTable userProgress = $UserProgressTable(this);
   late final $AttemptTable attempt = $AttemptTable(this);
   late final $AttemptAnswerTable attemptAnswer = $AttemptAnswerTable(this);
@@ -12280,6 +12956,9 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final MistakeDao mistakeDao = MistakeDao(this as AppDatabase);
   late final KanjiSrsDao kanjiSrsDao = KanjiSrsDao(this as AppDatabase);
   late final KanaSrsDao kanaSrsDao = KanaSrsDao(this as AppDatabase);
+  late final ConjugationSrsDao conjugationSrsDao = ConjugationSrsDao(
+    this as AppDatabase,
+  );
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -12288,6 +12967,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     srsState,
     kanjiSrsState,
     kanaSrsState,
+    conjugationSrsState,
     userProgress,
     attempt,
     attemptAnswer,
@@ -13249,6 +13929,340 @@ typedef $$KanaSrsStateTableProcessedTableManager =
         BaseReferences<_$AppDatabase, $KanaSrsStateTable, KanaSrsStateData>,
       ),
       KanaSrsStateData,
+      PrefetchHooks Function()
+    >;
+typedef $$ConjugationSrsStateTableCreateCompanionBuilder =
+    ConjugationSrsStateCompanion Function({
+      Value<int> id,
+      required int contentVocabId,
+      required String formKey,
+      required String direction,
+      Value<double> stability,
+      Value<double> difficulty,
+      Value<int> fsrsState,
+      Value<int?> fsrsStep,
+      Value<int> lastConfidence,
+      Value<DateTime?> lastReviewedAt,
+      required DateTime nextReviewAt,
+    });
+typedef $$ConjugationSrsStateTableUpdateCompanionBuilder =
+    ConjugationSrsStateCompanion Function({
+      Value<int> id,
+      Value<int> contentVocabId,
+      Value<String> formKey,
+      Value<String> direction,
+      Value<double> stability,
+      Value<double> difficulty,
+      Value<int> fsrsState,
+      Value<int?> fsrsStep,
+      Value<int> lastConfidence,
+      Value<DateTime?> lastReviewedAt,
+      Value<DateTime> nextReviewAt,
+    });
+
+class $$ConjugationSrsStateTableFilterComposer
+    extends Composer<_$AppDatabase, $ConjugationSrsStateTable> {
+  $$ConjugationSrsStateTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get contentVocabId => $composableBuilder(
+    column: $table.contentVocabId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get formKey => $composableBuilder(
+    column: $table.formKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get direction => $composableBuilder(
+    column: $table.direction,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get fsrsState => $composableBuilder(
+    column: $table.fsrsState,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get fsrsStep => $composableBuilder(
+    column: $table.fsrsStep,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$ConjugationSrsStateTableOrderingComposer
+    extends Composer<_$AppDatabase, $ConjugationSrsStateTable> {
+  $$ConjugationSrsStateTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get contentVocabId => $composableBuilder(
+    column: $table.contentVocabId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get formKey => $composableBuilder(
+    column: $table.formKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get direction => $composableBuilder(
+    column: $table.direction,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get fsrsState => $composableBuilder(
+    column: $table.fsrsState,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get fsrsStep => $composableBuilder(
+    column: $table.fsrsStep,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$ConjugationSrsStateTableAnnotationComposer
+    extends Composer<_$AppDatabase, $ConjugationSrsStateTable> {
+  $$ConjugationSrsStateTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get contentVocabId => $composableBuilder(
+    column: $table.contentVocabId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get formKey =>
+      $composableBuilder(column: $table.formKey, builder: (column) => column);
+
+  GeneratedColumn<String> get direction =>
+      $composableBuilder(column: $table.direction, builder: (column) => column);
+
+  GeneratedColumn<double> get stability =>
+      $composableBuilder(column: $table.stability, builder: (column) => column);
+
+  GeneratedColumn<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get fsrsState =>
+      $composableBuilder(column: $table.fsrsState, builder: (column) => column);
+
+  GeneratedColumn<int> get fsrsStep =>
+      $composableBuilder(column: $table.fsrsStep, builder: (column) => column);
+
+  GeneratedColumn<int> get lastConfidence => $composableBuilder(
+    column: $table.lastConfidence,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => column,
+  );
+}
+
+class $$ConjugationSrsStateTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $ConjugationSrsStateTable,
+          ConjugationSrsStateData,
+          $$ConjugationSrsStateTableFilterComposer,
+          $$ConjugationSrsStateTableOrderingComposer,
+          $$ConjugationSrsStateTableAnnotationComposer,
+          $$ConjugationSrsStateTableCreateCompanionBuilder,
+          $$ConjugationSrsStateTableUpdateCompanionBuilder,
+          (
+            ConjugationSrsStateData,
+            BaseReferences<
+              _$AppDatabase,
+              $ConjugationSrsStateTable,
+              ConjugationSrsStateData
+            >,
+          ),
+          ConjugationSrsStateData,
+          PrefetchHooks Function()
+        > {
+  $$ConjugationSrsStateTableTableManager(
+    _$AppDatabase db,
+    $ConjugationSrsStateTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$ConjugationSrsStateTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$ConjugationSrsStateTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$ConjugationSrsStateTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> contentVocabId = const Value.absent(),
+                Value<String> formKey = const Value.absent(),
+                Value<String> direction = const Value.absent(),
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
+                Value<int> fsrsState = const Value.absent(),
+                Value<int?> fsrsStep = const Value.absent(),
+                Value<int> lastConfidence = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+                Value<DateTime> nextReviewAt = const Value.absent(),
+              }) => ConjugationSrsStateCompanion(
+                id: id,
+                contentVocabId: contentVocabId,
+                formKey: formKey,
+                direction: direction,
+                stability: stability,
+                difficulty: difficulty,
+                fsrsState: fsrsState,
+                fsrsStep: fsrsStep,
+                lastConfidence: lastConfidence,
+                lastReviewedAt: lastReviewedAt,
+                nextReviewAt: nextReviewAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int contentVocabId,
+                required String formKey,
+                required String direction,
+                Value<double> stability = const Value.absent(),
+                Value<double> difficulty = const Value.absent(),
+                Value<int> fsrsState = const Value.absent(),
+                Value<int?> fsrsStep = const Value.absent(),
+                Value<int> lastConfidence = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
+                required DateTime nextReviewAt,
+              }) => ConjugationSrsStateCompanion.insert(
+                id: id,
+                contentVocabId: contentVocabId,
+                formKey: formKey,
+                direction: direction,
+                stability: stability,
+                difficulty: difficulty,
+                fsrsState: fsrsState,
+                fsrsStep: fsrsStep,
+                lastConfidence: lastConfidence,
+                lastReviewedAt: lastReviewedAt,
+                nextReviewAt: nextReviewAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$ConjugationSrsStateTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $ConjugationSrsStateTable,
+      ConjugationSrsStateData,
+      $$ConjugationSrsStateTableFilterComposer,
+      $$ConjugationSrsStateTableOrderingComposer,
+      $$ConjugationSrsStateTableAnnotationComposer,
+      $$ConjugationSrsStateTableCreateCompanionBuilder,
+      $$ConjugationSrsStateTableUpdateCompanionBuilder,
+      (
+        ConjugationSrsStateData,
+        BaseReferences<
+          _$AppDatabase,
+          $ConjugationSrsStateTable,
+          ConjugationSrsStateData
+        >,
+      ),
+      ConjugationSrsStateData,
       PrefetchHooks Function()
     >;
 typedef $$UserProgressTableCreateCompanionBuilder =
@@ -19963,6 +20977,8 @@ class $AppDatabaseManager {
       $$KanjiSrsStateTableTableManager(_db, _db.kanjiSrsState);
   $$KanaSrsStateTableTableManager get kanaSrsState =>
       $$KanaSrsStateTableTableManager(_db, _db.kanaSrsState);
+  $$ConjugationSrsStateTableTableManager get conjugationSrsState =>
+      $$ConjugationSrsStateTableTableManager(_db, _db.conjugationSrsState);
   $$UserProgressTableTableManager get userProgress =>
       $$UserProgressTableTableManager(_db, _db.userProgress);
   $$AttemptTableTableManager get attempt =>

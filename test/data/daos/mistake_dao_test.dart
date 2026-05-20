@@ -328,6 +328,19 @@ void main() {
     });
   });
 
+  group('getMistakeCounts', () {
+    test('counts conjugation rows in the total mistake count', () async {
+      await dao.addMistake('conjugation', 30);
+
+      final counts = await dao.getMistakeCounts();
+
+      expect(counts.vocab, 0);
+      expect(counts.grammar, 0);
+      expect(counts.kanji, 0);
+      expect(counts.total, 1);
+    });
+  });
+
   // ---------------------------------------------------------------------------
   // watchAllMistakes
   // ---------------------------------------------------------------------------

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:drift/native.dart';
 import 'package:drift/drift.dart' show Value;
 import 'package:flutter/material.dart';
@@ -133,6 +135,42 @@ void main() {
     expect(find.textContaining('D3'), findsNothing);
     expect(find.textContaining('D7'), findsNothing);
     expect(find.textContaining('1 ngày'), findsWidgets);
+
+    await tester.pumpWidget(Container());
+    await tester.pump(const Duration(milliseconds: 100));
+    await db.close();
+    await cdb.close();
+  });
+
+  testWidgets('conjugation mistakes show learner-facing context', (
+    tester,
+  ) async {
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    final cdb = ContentDatabase(executor: NativeDatabase.memory());
+    await db.mistakeDao.addMistake(
+      'conjugation',
+      30,
+      prompt: 'Chia 帰る sang thể て.',
+      correctAnswer: '帰って',
+      userAnswer: '帰るて',
+      source: 'conjugation_practice',
+      extraJson: json.encode({
+        'dictionaryForm': '帰る',
+        'formKey': 'te',
+        'direction': 'produce',
+        'conjugationClass': 'godanRu',
+      }),
+    );
+
+    await tester.pumpWidget(buildScreen(db, cdb));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.textContaining('帰る'), findsWidgets);
+    expect(find.textContaining('te'), findsWidgets);
+    expect(find.textContaining('Produce'), findsWidgets);
+    expect(find.textContaining('Conjugation practice'), findsOneWidget);
+    expect(find.textContaining('conjugation_practice'), findsNothing);
 
     await tester.pumpWidget(Container());
     await tester.pump(const Duration(milliseconds: 100));

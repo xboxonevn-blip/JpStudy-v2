@@ -6,6 +6,7 @@ import '../daos/grammar_dao.dart';
 import '../daos/mistake_dao.dart';
 import '../daos/kanji_srs_dao.dart';
 import '../daos/kana_srs_dao.dart';
+import '../daos/conjugation_srs_dao.dart';
 
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
@@ -15,6 +16,7 @@ import 'study_tables.dart';
 import 'grammar_tables.dart';
 import 'mistake_tables.dart';
 import 'kanji_tables.dart';
+import 'conjugation_tables.dart';
 import 'tables.dart';
 
 part 'app_database.g.dart';
@@ -40,6 +42,7 @@ class KanaSrsState extends Table {
     SrsState,
     KanjiSrsState,
     KanaSrsState,
+    ConjugationSrsState,
     UserProgress,
     Attempt,
     AttemptAnswer,
@@ -73,13 +76,14 @@ class KanaSrsState extends Table {
     MistakeDao,
     KanjiSrsDao,
     KanaSrsDao,
+    ConjugationSrsDao,
   ],
 )
 class AppDatabase extends _$AppDatabase {
   AppDatabase({QueryExecutor? executor}) : super(executor ?? _openConnection());
 
   @override
-  int get schemaVersion => 31;
+  int get schemaVersion => 32;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -87,6 +91,7 @@ class AppDatabase extends _$AppDatabase {
       await migrator.createAll();
       await _seedLessons();
       await _createPerformanceIndexes();
+      await _createConjugationSrsIndexes();
     },
     onUpgrade: (migrator, from, to) async {
       if (from < 2) {
@@ -334,6 +339,10 @@ class AppDatabase extends _$AppDatabase {
       if (from < 31) {
         await _seedLessons();
       }
+      if (from < 32) {
+        await migrator.createTable(conjugationSrsState);
+        await _createConjugationSrsIndexes();
+      }
     },
     beforeOpen: (details) async {
       // Only reseed on first install or after an upgrade — on routine opens
@@ -451,6 +460,17 @@ class AppDatabase extends _$AppDatabase {
     await customStatement(
       'CREATE INDEX IF NOT EXISTS idx_attempt_answer_question_correct '
       'ON attempt_answer(question_id, is_correct)',
+    );
+  }
+
+  Future<void> _createConjugationSrsIndexes() async {
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conjugation_srs_due '
+      'ON conjugation_srs_state(next_review_at)',
+    );
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conjugation_srs_skill '
+      'ON conjugation_srs_state(content_vocab_id, form_key, direction)',
     );
   }
 

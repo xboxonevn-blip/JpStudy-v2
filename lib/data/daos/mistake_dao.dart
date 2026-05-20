@@ -115,9 +115,9 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
     return row.read(countExpr) ?? 0;
   }
 
-  /// Streams counts of mistake items grouped by type — returns a named record
-  /// (vocab, grammar, kanji, total) using a single GROUP BY query.
-  /// Transfers 3 rows instead of N full UserMistake rows — replaces the
+  /// Streams counts of mistake items grouped by type — returns known-type
+  /// buckets plus a total that includes every mistake type.
+  /// Transfers grouped count rows instead of N full UserMistake rows — replaces the
   /// watchAllMistakes() + Dart-side counting pattern in the dashboard.
   Stream<({int vocab, int grammar, int kanji, int total})>
   watchMistakeCounts() {
@@ -129,9 +129,11 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
         .watch()
         .map((rows) {
           var vocab = 0, grammar = 0, kanji = 0;
+          var total = 0;
           for (final row in rows) {
             final t = row.read(typeCol);
             final c = row.read(countExpr) ?? 0;
+            total += c;
             if (t == 'vocab') {
               vocab = c;
             } else if (t == 'grammar') {
@@ -140,12 +142,7 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
               kanji = c;
             }
           }
-          return (
-            vocab: vocab,
-            grammar: grammar,
-            kanji: kanji,
-            total: vocab + grammar + kanji,
-          );
+          return (vocab: vocab, grammar: grammar, kanji: kanji, total: total);
         });
   }
 
@@ -160,9 +157,11 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
               ..groupBy([typeCol]))
             .get();
     var vocab = 0, grammar = 0, kanji = 0;
+    var total = 0;
     for (final row in rows) {
       final t = row.read(typeCol);
       final c = row.read(countExpr) ?? 0;
+      total += c;
       if (t == 'vocab') {
         vocab = c;
       } else if (t == 'grammar') {
@@ -171,12 +170,7 @@ class MistakeDao extends DatabaseAccessor<AppDatabase> with _$MistakeDaoMixin {
         kanji = c;
       }
     }
-    return (
-      vocab: vocab,
-      grammar: grammar,
-      kanji: kanji,
-      total: vocab + grammar + kanji,
-    );
+    return (vocab: vocab, grammar: grammar, kanji: kanji, total: total);
   }
 
   /// Get all mistakes (unordered, unbounded — prefer [getTopMistakesByType] for

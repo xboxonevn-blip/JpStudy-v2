@@ -769,6 +769,31 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
       return _MistakeDisplay(title: title, subtitle: subtitle);
     }
 
+    if (mistake.type == 'conjugation') {
+      final extra = _parseExtraJson(mistake.extraJson);
+      final dictionaryForm = _extraString(extra, 'dictionaryForm');
+      final expectedSurface =
+          _extraString(extra, 'expectedSurface') ??
+          (mistake.correctAnswer ?? '').trim();
+      final formLabel = _conjugationFormLabel(
+        language,
+        _extraString(extra, 'formKey'),
+      );
+      final directionLabel = _conjugationDirectionLabel(
+        language,
+        _extraString(extra, 'direction'),
+      );
+      final title = (dictionaryForm ?? expectedSurface).isNotEmpty
+          ? (dictionaryForm ?? expectedSurface)
+          : language.mistakeItemIdLabel(mistake.itemId);
+      final subtitleParts = [
+        if (formLabel.isNotEmpty) formLabel,
+        if (directionLabel.isNotEmpty) directionLabel,
+        remainingLabel,
+      ];
+      return _MistakeDisplay(title: title, subtitle: subtitleParts.join(' - '));
+    }
+
     final grammar = details.grammar[mistake.itemId];
     final grammarPreferred = switch (language) {
       AppLanguage.vi => grammar?.meaningVi,
@@ -857,6 +882,8 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
         return language.mistakeSourceTestLabel;
       case 'grammar_practice':
         return language.mistakeSourceGrammarPracticeLabel;
+      case 'conjugation_practice':
+        return _tr(language, 'Conjugation practice', 'Luyện chia thể', '活用練習');
       case 'handwriting':
         return language.mistakeSourceHandwritingLabel;
       case 'match_game':
@@ -876,6 +903,8 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
         return Icons.menu_book_rounded;
       case 'kanji':
         return Icons.edit_rounded;
+      case 'conjugation':
+        return Icons.swap_horiz_rounded;
       default:
         return Icons.warning_amber_rounded;
     }
@@ -889,6 +918,8 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
         return palette.info;
       case 'kanji':
         return palette.secondary;
+      case 'conjugation':
+        return palette.warning;
       default:
         return palette.outline;
     }
@@ -904,6 +935,59 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
       return fallback;
     }
     return value.isNotEmpty ? value : fallback;
+  }
+
+  String? _extraString(Map<String, dynamic> extra, String key) {
+    final value = extra[key];
+    if (value == null) return null;
+    final text = value.toString().trim();
+    return text.isEmpty ? null : text;
+  }
+
+  String _conjugationFormLabel(AppLanguage language, String? formKey) {
+    final key = (formKey ?? '').trim();
+    if (key.isEmpty) return '';
+    final label = switch (key) {
+      'te' => 'te form',
+      'ta' => 'past form',
+      'nai' => 'negative form',
+      'masu' => 'polite form',
+      'dictionary' => 'dictionary form',
+      _ => '$key form',
+    };
+    switch (language) {
+      case AppLanguage.en:
+        return label;
+      case AppLanguage.vi:
+        return switch (key) {
+          'te' => 'thể て',
+          'ta' => 'thể quá khứ',
+          'nai' => 'thể phủ định',
+          'masu' => 'thể lịch sự',
+          'dictionary' => 'thể từ điển',
+          _ => 'thể $key',
+        };
+      case AppLanguage.ja:
+        return switch (key) {
+          'te' => 'て形',
+          'ta' => 'た形',
+          'nai' => 'ない形',
+          'masu' => 'ます形',
+          'dictionary' => '辞書形',
+          _ => '$key形',
+        };
+    }
+  }
+
+  String _conjugationDirectionLabel(AppLanguage language, String? direction) {
+    switch ((direction ?? '').trim()) {
+      case 'produce':
+        return _tr(language, 'Produce', 'Tự chia', '産出');
+      case 'recognize':
+        return _tr(language, 'Recognize', 'Nhận biết', '認識');
+      default:
+        return '';
+    }
   }
 }
 

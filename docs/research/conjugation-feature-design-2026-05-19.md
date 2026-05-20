@@ -395,15 +395,23 @@ when the active level is N5.
 - Create: `lib/data/daos/conjugation_srs_dao.dart`
 - Modify generated: `lib/data/db/app_database.g.dart`, `lib/data/daos/conjugation_srs_dao.g.dart`
 - Modify: `lib/features/mistakes/screens/mistake_screen.dart`
-- Modify: `lib/features/home/providers/dashboard_provider.dart`
 - Test: `test/data/daos/conjugation_srs_dao_test.dart`
-- Test: `test/features/mistakes/conjugation_mistake_screen_test.dart`
+- Test: `test/data/daos/mistake_dao_test.dart`
+- Test: `test/features/mistakes/mistake_screen_test.dart`
 
-- [ ] Add schema migration and due indexes.
-- [ ] Implement initialize/update/due-count/stage-count DAO methods.
-- [ ] Add mistake type `conjugation` to UI/providers.
-- [ ] Run focused DAO and Mistakes tests.
-- [ ] Expected: one row per `(contentVocabId, formKey, direction)`; wrong answers appear as conjugation mistakes.
+- [x] Add schema migration and due indexes.
+- [x] Implement initialize/update/due-count/stage-count DAO methods.
+- [x] Add mistake type `conjugation` to Mistakes UI and total-count providers.
+- [x] Run focused DAO and Mistakes tests.
+- [x] Expected: one row per `(contentVocabId, formKey, direction)`; wrong answers appear as conjugation mistakes.
+
+Slice output: AppDatabase schema v32 adds `ConjugationSrsState` with due and
+exact-skill indexes. `ConjugationSrsDao` initializes/reviews exact
+`contentVocabId + formKey + direction` atoms through `FsrsService`, exposes due
+and stage counts, and records wrong answers as `conjugation` mistakes with
+skill context. Mistakes now render conjugation rows with learner-facing form,
+direction, source label, icon/color, and total mistake counts include
+conjugation rows instead of silently dropping them.
 
 ### Task 5: Practice Session
 

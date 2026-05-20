@@ -5,7 +5,7 @@ const {
   generateHanVietRulesV2,
 } = require('../../../tool/research/generate_han_viet_rule_content');
 
-test('generates first five rule cards with examples and practice from local kanji assets', () => {
+test('generates first ten rule cards with examples and practice from local kanji assets', () => {
   const payload = generateHanVietRulesV2({ rootDir: process.cwd() });
 
   assert.equal(payload.schemaVersion, 2);
@@ -15,13 +15,18 @@ test('generates first five rule cards with examples and practice from local kanj
   assert.equal(raw.includes('nhaikanji.com'), false);
   assert.equal(raw.includes('thocodehoctiengnhat.com'), false);
 
-  assert.equal(payload.rules.length, 5);
+  assert.equal(payload.rules.length, 10);
   assert.deepEqual(payload.rules.map((item) => item.ruleId), [
     'rule_initial_h_k_gi_c_qu_to_k',
     'rule_initial_t_th_to_t_s_sh',
     'rule_initial_ng_ngh_to_g_gy',
     'rule_initial_l_to_r',
     'rule_initial_n_nh_to_n_j_ny',
+    'rule_initial_m_to_m',
+    'rule_initial_b_ph_to_h_f_b',
+    'rule_initial_d_gi_to_y',
+    'rule_initial_ch_tr_to_sh_ch',
+    'rule_initial_s_x_to_s_sh',
   ]);
 
   const rule = payload.rules.find(

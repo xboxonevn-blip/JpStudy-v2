@@ -39,6 +39,28 @@ const TARGET_KANA_N_J_NY = [
   'にゅ',
   'にょ',
 ];
+const TARGET_KANA_M = ['ま', 'み', 'む', 'め', 'も', 'みゃ', 'みゅ', 'みょ'];
+const TARGET_KANA_H_F_B = [
+  'は',
+  'ひ',
+  'ふ',
+  'へ',
+  'ほ',
+  'ば',
+  'び',
+  'ぶ',
+  'べ',
+  'ぼ',
+  'ひゃ',
+  'ひゅ',
+  'ひょ',
+  'びゃ',
+  'びゅ',
+  'びょ',
+];
+const TARGET_KANA_Y = ['や', 'ゆ', 'よ'];
+const TARGET_KANA_SH_CH = ['し', 'しゃ', 'しゅ', 'しょ', 'ち', 'ちゃ', 'ちゅ', 'ちょ'];
+const TARGET_KANA_S_SH = ['さ', 'し', 'す', 'せ', 'そ', 'しゃ', 'しゅ', 'しょ'];
 const INITIALS = [
   'ngh',
   'ng',
@@ -68,7 +90,7 @@ const INITIALS = [
   'x',
 ];
 
-const FIRST_BATCH_RULE_SPECS = [
+const RULE_SPECS = [
   {
     ruleId: RULE1_ID,
     legacyId: RULE1_LEGACY_ID,
@@ -138,6 +160,76 @@ const FIRST_BATCH_RULE_SPECS = [
     explanation:
       "Phụ âm đầu Hán-Việt N/Nh thường chuyển sang hàng N, J hoặc NY trong On'yomi.",
     priorityKanji: ['年', '日', '人', '入', '女', '肉', '熱', '任'],
+  },
+  {
+    ruleId: 'rule_initial_m_to_m',
+    legacyId: 'initial-m-to-m',
+    section: '6',
+    category: 'initial',
+    title: 'Âm đầu là M',
+    consonants: ['M'],
+    targetRow: 'M',
+    targetKana: TARGET_KANA_M,
+    percentage: 84,
+    explanation:
+      "Phụ âm đầu Hán-Việt M thường chuyển sang hàng M trong On'yomi.",
+    priorityKanji: ['木', '目', '門', '明', '命', '毛', '面', '務'],
+  },
+  {
+    ruleId: 'rule_initial_b_ph_to_h_f_b',
+    legacyId: 'initial-b-ph-to-h-f',
+    section: '7',
+    category: 'initial',
+    title: 'Âm đầu là B/Ph',
+    consonants: ['B', 'Ph'],
+    targetRow: 'H/F/B',
+    targetKana: TARGET_KANA_H_F_B,
+    percentage: 72,
+    explanation:
+      "Phụ âm đầu Hán-Việt B/Ph thường chuyển sang hàng H/F hoặc B trong On'yomi.",
+    priorityKanji: ['不', '分', '父', '風', '白', '百', '半', '反'],
+  },
+  {
+    ruleId: 'rule_initial_d_gi_to_y',
+    legacyId: 'initial-d-to-y',
+    section: '8',
+    category: 'initial',
+    title: 'Âm đầu là D/Gi',
+    consonants: ['D', 'Gi'],
+    targetRow: 'Y',
+    targetKana: TARGET_KANA_Y,
+    percentage: 63,
+    explanation:
+      "Một nhóm âm đầu Hán-Việt D/Gi chuyển sang hàng Y trong On'yomi.",
+    priorityKanji: ['用', '夜', '由', '友', '油', '曜', '様', '要'],
+  },
+  {
+    ruleId: 'rule_initial_ch_tr_to_sh_ch',
+    legacyId: 'initial-ch-tr-to-sh-ch',
+    section: '9',
+    category: 'initial',
+    title: 'Âm đầu là Ch/Tr',
+    consonants: ['Ch', 'Tr'],
+    targetRow: 'SH/CH',
+    targetKana: TARGET_KANA_SH_CH,
+    percentage: 68,
+    explanation:
+      "Phụ âm đầu Hán-Việt Ch/Tr thường chuyển sang hàng SH hoặc CH trong On'yomi.",
+    priorityKanji: ['中', '長', '直', '主', '正', '者', '茶', '注'],
+  },
+  {
+    ruleId: 'rule_initial_s_x_to_s_sh',
+    legacyId: 'initial-s-x-to-s-sh',
+    section: '10',
+    category: 'initial',
+    title: 'Âm đầu là S/X',
+    consonants: ['S', 'X'],
+    targetRow: 'S/SH',
+    targetKana: TARGET_KANA_S_SH,
+    percentage: 70,
+    explanation:
+      "Phụ âm đầu Hán-Việt S/X thường chuyển sang hàng S hoặc SH trong On'yomi.",
+    priorityKanji: ['山', '産', '色', '察', '散', '殺', '算', '想'],
   },
 ];
 
@@ -484,6 +576,7 @@ function rotateOptions(correct, distractors, offset) {
 function buildPracticeItems(ruleId, spec, candidates, allEntries) {
   return candidates.slice(6, 11).map((entry, index) => {
     const options = rotateOptions(entry.onyomi, optionPoolFor(entry, allEntries), index);
+    const initial = firstConsonant(entry.hanViet).toUpperCase();
     return {
       itemId: `${ruleId}_${entry.kanji}`,
       kanji: entry.kanji,
@@ -492,9 +585,7 @@ function buildPracticeItems(ruleId, spec, candidates, allEntries) {
       hanViet: entry.hanViet,
       correct: entry.onyomi,
       options,
-      explanation: `${entry.hanViet} bắt đầu bằng ${firstSyllable(
-        entry.hanViet,
-      )}; nhóm Hán-Việt này thường về hàng ${spec.targetRow} trong On'yomi.`,
+      explanation: `${entry.hanViet} bắt đầu bằng ${initial}; nhóm Hán-Việt này thường về hàng ${spec.targetRow} trong On'yomi.`,
     };
   });
 }
@@ -576,7 +667,7 @@ function generateHanVietRulesV2({ rootDir = process.cwd() } = {}) {
       note:
         'Generated from local app kanji/vocab assets and owner-provided local files only; owner-blocked crawl sources are excluded.',
     },
-    rules: FIRST_BATCH_RULE_SPECS.map((spec) =>
+    rules: RULE_SPECS.map((spec) =>
       buildRuleV2(spec, legacyById.get(spec.legacyId), entries),
     ),
   };

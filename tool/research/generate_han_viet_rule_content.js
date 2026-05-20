@@ -58,9 +58,27 @@ const TARGET_KANA_H_F_B = [
   'びゅ',
   'びょ',
 ];
-const TARGET_KANA_Y = ['や', 'ゆ', 'よ'];
+const TARGET_KANA_Y_VOWEL = ['や', 'ゆ', 'よ', 'い', 'え'];
 const TARGET_KANA_SH_CH = ['し', 'しゃ', 'しゅ', 'しょ', 'ち', 'ちゃ', 'ちゅ', 'ちょ'];
 const TARGET_KANA_S_SH = ['さ', 'し', 'す', 'せ', 'そ', 'しゃ', 'しゅ', 'しょ'];
+const TARGET_KANA_T_D = ['た', 'ち', 'つ', 'て', 'と', 'だ', 'ぢ', 'づ', 'で', 'ど'];
+const TARGET_KANA_B_M_VOWEL = [
+  'ば',
+  'び',
+  'ぶ',
+  'べ',
+  'ぼ',
+  'ま',
+  'み',
+  'む',
+  'め',
+  'も',
+  'あ',
+  'い',
+  'う',
+  'え',
+  'お',
+];
 const INITIALS = [
   'ngh',
   'ng',
@@ -196,11 +214,11 @@ const RULE_SPECS = [
     category: 'initial',
     title: 'Âm đầu là D/Gi',
     consonants: ['D', 'Gi'],
-    targetRow: 'Y',
-    targetKana: TARGET_KANA_Y,
+    targetRow: 'Y/nguyên âm',
+    targetKana: TARGET_KANA_Y_VOWEL,
     percentage: 63,
     explanation:
-      "Một nhóm âm đầu Hán-Việt D/Gi chuyển sang hàng Y trong On'yomi.",
+      "Một nhóm âm đầu Hán-Việt D/Gi chuyển sang hàng Y hoặc mở bằng nguyên âm trong On'yomi.",
     priorityKanji: ['用', '夜', '由', '友', '油', '曜', '様', '要'],
   },
   {
@@ -230,6 +248,82 @@ const RULE_SPECS = [
     explanation:
       "Phụ âm đầu Hán-Việt S/X thường chuyển sang hàng S hoặc SH trong On'yomi.",
     priorityKanji: ['山', '産', '色', '察', '散', '殺', '算', '想'],
+  },
+  {
+    ruleId: 'rule_initial_d_with_stroke_to_t_d',
+    legacyId: 'initial-d-with-stroke-to-t-d',
+    section: '11',
+    category: 'initial',
+    title: 'Âm đầu là Đ',
+    consonants: ['Đ'],
+    targetRow: 'T/D',
+    targetKana: TARGET_KANA_T_D,
+    percentage: 78,
+    explanation:
+      "Phụ âm đầu Hán-Việt Đ thường chuyển sang hàng T hoặc D trong On'yomi.",
+    priorityKanji: ['大', '同', '道', '電', '動', '東', '特', '弟'],
+  },
+  {
+    ruleId: 'rule_initial_v_to_b_m_vowel',
+    legacyId: 'initial-v-to-b-m',
+    section: '12',
+    category: 'initial',
+    title: 'Âm đầu là V',
+    consonants: ['V'],
+    targetRow: 'B/M/nguyên âm',
+    targetKana: TARGET_KANA_B_M_VOWEL,
+    percentage: 62,
+    explanation:
+      "Âm đầu Hán-Việt V thường chuyển sang hàng B, M hoặc mở bằng nguyên âm trong On'yomi.",
+    priorityKanji: ['文', '物', '万', '無', '味', '未', '院', '員'],
+  },
+  {
+    ruleId: 'rule_final_n_m_to_n',
+    legacyId: 'final-n-m-to-n',
+    section: '13',
+    category: 'final',
+    title: 'Âm cuối là -n/-m',
+    consonants: [],
+    targetRow: 'N',
+    targetKana: ['ん'],
+    hanVietEndings: ['n', 'm'],
+    onyomiEndings: ['ん'],
+    percentage: 88,
+    explanation:
+      "Âm cuối Hán-Việt -n/-m thường khép bằng âm ん trong On'yomi.",
+    priorityKanji: ['山', '三', '今', '金', '本', '南', '林', '心'],
+  },
+  {
+    ruleId: 'rule_final_c_to_ku',
+    legacyId: 'final-c-to-ku',
+    section: '14',
+    category: 'final',
+    title: 'Âm cuối là -c',
+    consonants: [],
+    targetRow: 'KU/KI',
+    targetKana: ['く', 'き'],
+    hanVietEndings: ['c'],
+    onyomiEndings: ['く', 'き'],
+    percentage: 76,
+    explanation:
+      "Âm cuối Hán-Việt -c thường chuyển thành -ku hoặc -ki trong On'yomi.",
+    priorityKanji: ['学', '国', '北', '白', '力', '直', '特', '職'],
+  },
+  {
+    ruleId: 'rule_final_t_to_tsu_chi',
+    legacyId: 'final-t-to-tsu-chi',
+    section: '15',
+    category: 'final',
+    title: 'Âm cuối là -t',
+    consonants: [],
+    targetRow: 'TSU/CHI',
+    targetKana: ['つ', 'ち'],
+    hanVietEndings: ['t'],
+    onyomiEndings: ['つ', 'ち'],
+    percentage: 74,
+    explanation:
+      "Âm cuối Hán-Việt -t thường chuyển thành -tsu hoặc -chi trong On'yomi.",
+    priorityKanji: ['日', '一', '七', '八', '月', '立', '出', '室'],
   },
 ];
 
@@ -265,8 +359,11 @@ function firstSyllable(value) {
 }
 
 function firstConsonant(value) {
-  const normalized = normalizeVietnamese(firstSyllable(value));
+  const rawSyllable = firstSyllable(value).toLowerCase().trim();
+  if (rawSyllable.startsWith('đ')) return 'đ';
+  const normalized = normalizeVietnamese(rawSyllable);
   for (const initial of INITIALS) {
+    if (initial === 'đ') continue;
     const comparable = initial === 'đ' ? 'd' : initial;
     if (normalized.startsWith(comparable)) return initial;
   }
@@ -577,6 +674,11 @@ function buildPracticeItems(ruleId, spec, candidates, allEntries) {
   return candidates.slice(6, 11).map((entry, index) => {
     const options = rotateOptions(entry.onyomi, optionPoolFor(entry, allEntries), index);
     const initial = firstConsonant(entry.hanViet).toUpperCase();
+    const explanation = spec.hanVietEndings?.length
+      ? `${entry.hanViet} có âm cuối ${spec.hanVietEndings.join(
+          '/',
+        )}; mẫu Hán-Việt này thường về ${spec.targetRow} trong On'yomi.`
+      : `${entry.hanViet} bắt đầu bằng ${initial}; nhóm Hán-Việt này thường về hàng ${spec.targetRow} trong On'yomi.`;
     return {
       itemId: `${ruleId}_${entry.kanji}`,
       kanji: entry.kanji,
@@ -585,16 +687,27 @@ function buildPracticeItems(ruleId, spec, candidates, allEntries) {
       hanViet: entry.hanViet,
       correct: entry.onyomi,
       options,
-      explanation: `${entry.hanViet} bắt đầu bằng ${initial}; nhóm Hán-Việt này thường về hàng ${spec.targetRow} trong On'yomi.`,
+      explanation,
     };
   });
 }
 
 function normalizeRuleConsonant(value) {
-  return normalizeVietnamese(value).replace(/^d$/, value === 'Đ' ? 'đ' : 'd');
+  const raw = String(value || '').trim();
+  return normalizeVietnamese(raw).replace(
+    /^d$/,
+    raw.toLowerCase() === 'đ' ? 'đ' : 'd',
+  );
 }
 
 function matchesRuleSpec(entry, spec) {
+  if (spec.hanVietEndings?.length && spec.onyomiEndings?.length) {
+    const syllable = normalizeVietnamese(firstSyllable(entry.hanViet));
+    return (
+      spec.hanVietEndings.some((ending) => syllable.endsWith(ending)) &&
+      spec.onyomiEndings.some((ending) => entry.onyomi.endsWith(ending))
+    );
+  }
   const allowedConsonants = spec.consonants.map(normalizeRuleConsonant);
   return (
     allowedConsonants.includes(normalizeRuleConsonant(entry.consonant)) &&

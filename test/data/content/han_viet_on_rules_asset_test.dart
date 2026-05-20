@@ -143,7 +143,7 @@ void main() {
     },
   );
 
-  test('han viet v2 rules include first ten reference practice cards', () {
+  test('han viet v2 rules include first fifteen reference practice cards', () {
     final asset =
         jsonDecode(rulesV2Asset.readAsStringSync()) as Map<String, dynamic>;
 
@@ -156,7 +156,7 @@ void main() {
 
     final rules = (asset['rules'] as List<dynamic>)
         .cast<Map<String, dynamic>>();
-    expect(rules, hasLength(10));
+    expect(rules, hasLength(15));
     expect(
       rules.map((rule) => rule['ruleId']),
       containsAll(<String>[
@@ -170,6 +170,11 @@ void main() {
         'rule_initial_d_gi_to_y',
         'rule_initial_ch_tr_to_sh_ch',
         'rule_initial_s_x_to_s_sh',
+        'rule_initial_d_with_stroke_to_t_d',
+        'rule_initial_v_to_b_m_vowel',
+        'rule_final_n_m_to_n',
+        'rule_final_c_to_ku',
+        'rule_final_t_to_tsu_chi',
       ]),
     );
     final rule = rules.singleWhere(
@@ -213,6 +218,6 @@ void main() {
             as Map<String, dynamic>;
     final datasets = index['datasets'] as Map<String, dynamic>;
     expect(datasets, contains('hanVietOnRulesV2'));
-    expect(datasets['hanVietOnRulesV2'], containsPair('rules', 10));
+    expect(datasets['hanVietOnRulesV2'], containsPair('rules', 15));
   });
 }

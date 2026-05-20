@@ -1,5 +1,17 @@
 # Autonomous Loop Status
 
+## 2026-05-20 QA-A-028 Phase 2 Batch 3
+
+- Expanded `han_viet_on_rules_v2.json` from `10` to `15` ready practice cards.
+- Added rules `Đ -> T/D`, `V -> B/M/nguyên âm`, final `-n/-m -> ん`, final `-c -> KU/KI`, and final `-t -> TSU/CHI`; each has `6` examples and `5` MC practice items.
+- Fixed generator matching so Vietnamese `D` and `Đ` remain distinct after accent normalization; added a regression for `Dụng`, `Đại`, and `Giải`.
+- Added final-syllable matching for final/rime rules instead of treating them as initial-consonant rules.
+- Verified locally: `node --test test/tool/research/han_viet_rule_content_generator_test.js`, `flutter test test/data/content/han_viet_on_rules_asset_test.dart`, `flutter test test/features/foundations/han_viet_reference_screen_test.dart`, `npm run test:research-tooling` (`77/77`), and `git diff --check` passed.
+- Deployed with `node tool/deploy/hosting_deploy.js`.
+- Live proof on production: live v2 asset returned `15` rules with no-cache; `/kanji/han-viet` loaded in VI, keyboard-scroll reached batch-3 final-rule practice, clicked correct `しつ` for rule 15, `main.dart.js` returned `200/no-cache`, console errors were `0`. Feedback text remains screenshot-backed because CanvasKit semantics omitted it from `body.innerText`.
+- Live artifact: `output/playwright/live-qaa028-hanviet-phase2-batch3-proof.json` plus `output/playwright/live-qaa028-hanviet-phase2-batch3-*.png` screenshots.
+- Next queue: continue QA-A-028 Phase 2 rules `16-20` (`final-p`, `final-ch`, rime groups), then remaining rime/long-vowel/exception rules.
+
 ## 2026-05-20 QA-A-028 Phase 2 Batch 2
 
 - Expanded `assets/data/content/kanji/han_viet_on_rules_v2.json` from `5` to `10` generated practice cards after the QA-A-026 canonical kanji rewrite.

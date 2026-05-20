@@ -3,9 +3,16 @@ const test = require('node:test');
 
 const {
   generateHanVietRulesV2,
+  firstConsonant,
 } = require('../../../tool/research/generate_han_viet_rule_content');
 
-test('generates first ten rule cards with examples and practice from local kanji assets', () => {
+test('distinguishes Vietnamese D from Đ when matching initial rules', () => {
+  assert.equal(firstConsonant('Dụng'), 'd');
+  assert.equal(firstConsonant('Đại'), 'đ');
+  assert.equal(firstConsonant('Giải'), 'gi');
+});
+
+test('generates first fifteen rule cards with examples and practice from local kanji assets', () => {
   const payload = generateHanVietRulesV2({ rootDir: process.cwd() });
 
   assert.equal(payload.schemaVersion, 2);
@@ -15,7 +22,7 @@ test('generates first ten rule cards with examples and practice from local kanji
   assert.equal(raw.includes('nhaikanji.com'), false);
   assert.equal(raw.includes('thocodehoctiengnhat.com'), false);
 
-  assert.equal(payload.rules.length, 10);
+  assert.equal(payload.rules.length, 15);
   assert.deepEqual(payload.rules.map((item) => item.ruleId), [
     'rule_initial_h_k_gi_c_qu_to_k',
     'rule_initial_t_th_to_t_s_sh',
@@ -27,6 +34,11 @@ test('generates first ten rule cards with examples and practice from local kanji
     'rule_initial_d_gi_to_y',
     'rule_initial_ch_tr_to_sh_ch',
     'rule_initial_s_x_to_s_sh',
+    'rule_initial_d_with_stroke_to_t_d',
+    'rule_initial_v_to_b_m_vowel',
+    'rule_final_n_m_to_n',
+    'rule_final_c_to_ku',
+    'rule_final_t_to_tsu_chi',
   ]);
 
   const rule = payload.rules.find(

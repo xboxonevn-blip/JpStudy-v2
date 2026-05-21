@@ -4668,6 +4668,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-form-l1-001",
+      "template_id": "tpl-grammar-n5-023-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ chỉ hướng đến: 学校 ___ 行きます。",
+      "answer_template": "へ",
+      "options_template": [
+        "へ",
+        "で",
+        "と",
+        "の"
+      ],
+      "distractor_strategy": "destination-he-vs-means-list-no",
+      "teaching_note": "へ đánh dấu địa điểm là hướng/đích đến.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-form-l1-002",
+      "template_id": "tpl-grammar-n5-023-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu N(địa điểm) へ 行きます?",
+      "answer_template": "東京へ行きます。",
+      "options_template": [
+        "東京へ行きます。",
+        "東京で行きます。",
+        "東京と行きます。",
+        "東京の行きます。"
+      ],
+      "distractor_strategy": "place-destination-form",
+      "teaching_note": "Địa điểm đến dùng へ trước động từ di chuyển.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-023-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "学校へ行きます nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Đi đến trường.",
+      "options_template": [
+        "Đi đến trường.",
+        "Đi bằng trường.",
+        "Trường và đi.",
+        "Từ trường đến nhà."
+      ],
+      "distractor_strategy": "destination-vs-means-list-range",
+      "teaching_note": "へ tạo mũi tên hướng tới 学校.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-023-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Phân biệt 行きます, 来ます, 帰ります trong mẫu Nへ.",
+      "answer_template": "行きます: đi; 来ます: đến về phía điểm nói/đang xét; 帰ります: trở về nhà/quê/nơi gốc.",
+      "distractor_strategy": "movement-verb-role-recall",
+      "teaching_note": "Cùng dùng へ, nhưng động từ thay đổi điểm nhìn của chuyển động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-usage-l3-005",
+      "template_id": "tpl-grammar-n5-023-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'đi đến Nhật': 日本 / へ / 行きます",
+      "answer_template": "日本へ行きます。",
+      "options_template": [
+        "日本",
+        "へ",
+        "行きます"
+      ],
+      "distractor_strategy": "destination-movement-order",
+      "teaching_note": "Địa điểm đến đứng trước へ; động từ đứng sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-usage-l3-006",
+      "template_id": "tpl-grammar-n5-023-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Tôi về nhà.' Dùng うち và 帰ります.",
+      "answer_template": "うちへ帰ります。",
+      "distractor_strategy": "return-home-production",
+      "teaching_note": "Về nhà/quê/nơi gốc dùng 帰ります, không dùng 行きます nếu nhấn 'về'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-context-l3-007",
+      "template_id": "tpl-grammar-n5-023-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn đang ở trường và nói với bạn: 'Ngày mai hãy đến trường.' Viết phần 'đến trường' lịch sự.",
+      "answer_template": "学校へ来ます",
+      "distractor_strategy": "come-to-speaker-place-context",
+      "teaching_note": "Nếu điểm nói là trường, chuyển động hướng về đây dùng 来ます.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-context-l2-008",
+      "template_id": "tpl-grammar-n5-023-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N(địa điểm) へ 行きます/来ます/帰ります?",
+      "answer_template": "Bạn nói chuyển động hướng đến một nơi cụ thể.",
+      "options_template": [
+        "Bạn nói chuyển động hướng đến một nơi cụ thể.",
+        "Bạn nói đi bằng xe buýt.",
+        "Bạn liệt kê sách và vở.",
+        "Bạn nói từ 9 giờ đến 5 giờ."
+      ],
+      "distractor_strategy": "destination-context-vs-means-list-range",
+      "teaching_note": "Mẫu này cần một địa điểm làm đích đến.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-023-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần nói đích đến là trường, chưa nói phương tiện. Câu nào đúng?",
+      "answer_template": "学校へ行きます。",
+      "options_template": [
+        "学校へ行きます。",
+        "バスで行きます。",
+        "学校で行きます。",
+        "学校と行きます。"
+      ],
+      "distractor_strategy": "destination-vs-means-list-analysis",
+      "teaching_note": "L4: へ trả lời đi đâu; で trả lời đi bằng gì.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-023-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-023-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: người nói đang ở Nhật và nói 'Anh ấy sẽ đến Nhật.' Câu nào chọn đúng điểm nhìn?",
+      "answer_template": "彼は日本へ来ます。",
+      "options_template": [
+        "彼は日本へ来ます。",
+        "彼は日本へ行きます。",
+        "彼は日本で来ます。",
+        "彼は日本から来ます。"
+      ],
+      "distractor_strategy": "iku-kuru-perspective-analysis",
+      "teaching_note": "Nếu chuyển động hướng về nơi người nói đang xét, dùng 来ます; 行きます là đi xa khỏi điểm nhìn đó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

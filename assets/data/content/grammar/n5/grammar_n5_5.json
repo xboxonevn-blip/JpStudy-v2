@@ -14,10 +14,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N (địa điểm) へ 行きます / 来ます / 帰ります",
-      "meaning": "Ý nghĩa: Mẫu này dùng để nói việc di chuyển đến một địa điểm.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "へ là trợ từ hướng, viết bằng kana he nhưng trong mẫu di chuyển đọc là e. Cấu trúc N(địa điểm) へ + 行きます/来ます/帰ります đặt địa điểm làm hướng đến, rồi động từ quyết định đi xa, đến gần, hay quay về.",
+      "hanVietBridge": "Ba động từ có cầu Hán-Việt rõ: 行 là 'hành/đi', 来 là 'lai/đến', 帰 là 'quy/trở về'. へ giống mũi tên hướng tới địa điểm, không nói phương tiện hay điểm xuất phát.",
+      "form": "Hình thức: N(địa điểm) へ 行きます / 来ます / 帰ります. Đặt へ sau nơi đến; chọn động từ theo hướng nhìn của người nói.",
+      "meaning": "Ý nghĩa: diễn tả di chuyển đến một địa điểm: đi đến, đến đây/đến nơi đang xét, hoặc về lại nơi thuộc về mình.",
+      "usage": "Sử dụng: 学校へ行きます, 日本へ来ます, うちへ帰ります. Dùng 行きます khi rời khỏi điểm nói, 来ます khi hướng về điểm nói/điểm đang xét, 帰ります khi về nhà/quê/nơi gốc.",
+      "humanMoment": "Dr. Linh lưu ý: Nへ行きます/来ます/帰ります có hai quyết định riêng: へ chỉ mũi tên đến đâu, còn động từ nói hướng đó là đi, đến, hay về. 学校へ行きます khác 学校へ来ます vì điểm nhìn của người nói khác nhau.",
+      "crossLinks": [
+        {
+          "pattern": "N( phương tiện ) で 行きます",
+          "contrast": "khác vai trò trợ từ: へ đánh dấu đích đến, còn で đánh dấu phương tiện di chuyển."
+        },
+        {
+          "pattern": "どこ[へ]も行きません",
+          "contrast": "khác cực tính: Nへ行きます nói đi đến một nơi cụ thể, còn どこへも行きません phủ định 'không đi đâu cả'."
+        },
+        {
+          "pattern": "N1 から N2 まで",
+          "contrast": "khác lượng thông tin: から...まで nêu điểm đầu và cuối, còn Nへ chỉ nêu hướng/đích đến."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

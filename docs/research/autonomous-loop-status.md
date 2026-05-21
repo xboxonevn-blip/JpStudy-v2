@@ -1528,3 +1528,9 @@
 - Extracted `docs/research/canonical/vocab/minna-2.md` with source lesson refs `Lesson 26` through `Lesson 50`, level `N4`, and `text-layer` confidence.
 - Wrote machine report `docs/research/canonical/vocab/reports/minna-2.json`; no banned website was accessed.
 - Next: run gates, commit, then continue Mimikara N3/N2/N1 extraction.
+
+## 2026-05-21 QA-A-030 Phase 1 Mimikara N3 extraction
+
+- Dry-run for `mimikara-n3` reported `12` local PDFs, `811` accepted factual rows, and `0` review rows, including loanword rows with `hanViet: null`.
+- Extracted `docs/research/canonical/vocab/mimikara-n3.md` and report `docs/research/canonical/vocab/reports/mimikara-n3.json` with unit refs `Unit 1` through `Unit 12`, level `N3`, and `text-layer` confidence.
+- No banned website was accessed. Next: run gates, commit, then continue Mimikara N2/N1.

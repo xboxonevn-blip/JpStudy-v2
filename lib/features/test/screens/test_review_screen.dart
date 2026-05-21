@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
@@ -47,25 +48,31 @@ class _TestReviewScreenState extends ConsumerState<TestReviewScreen> {
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
             child: Row(
               children: [
-                ChoiceChip(
-                  label: Text(language.reviewAllLabel),
-                  selected: _filter == ReviewFilter.all,
-                  onSelected: (_) => setState(() => _filter = ReviewFilter.all),
+                AppButton(
+                  label: language.reviewAllLabel,
+                  variant: _filter == ReviewFilter.all
+                      ? AppButtonVariant.primary
+                      : AppButtonVariant.secondary,
+                  compact: true,
+                  onPressed: () => setState(() => _filter = ReviewFilter.all),
                 ),
                 const SizedBox(width: 8),
-                ChoiceChip(
-                  label: Text(language.reviewWrongLabel),
-                  selected: _filter == ReviewFilter.wrong,
-                  onSelected: (_) =>
-                      setState(() => _filter = ReviewFilter.wrong),
+                AppButton(
+                  label: language.reviewWrongLabel,
+                  variant: _filter == ReviewFilter.wrong
+                      ? AppButtonVariant.primary
+                      : AppButtonVariant.secondary,
+                  compact: true,
+                  onPressed: () => setState(() => _filter = ReviewFilter.wrong),
                 ),
                 const Spacer(),
                 if (wrongEntries.isNotEmpty)
-                  ElevatedButton.icon(
+                  AppButton(
                     onPressed: () =>
                         _retryWrong(context, wrongEntries, language),
-                    icon: const Icon(Icons.refresh),
-                    label: Text(language.retryWrongLabel),
+                    icon: Icons.refresh,
+                    label: language.retryWrongLabel,
+                    compact: true,
                   ),
               ],
             ),
@@ -179,57 +186,54 @@ class _ReviewCard extends StatelessWidget {
     final statusColor = entry.isCorrect ? palette.success : palette.error;
     final statusIcon = entry.isCorrect ? Icons.check_circle : Icons.cancel;
 
-    return Card(
+    return AppCard(
       margin: const EdgeInsets.only(bottom: 12),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(statusIcon, color: statusColor),
-                const SizedBox(width: 8),
-                Text(
-                  '#${entry.index + 1} • $typeLabel',
-                  style: const TextStyle(fontWeight: FontWeight.w600),
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Text(
-              question.targetItem.term,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            if (question.targetItem.hasDisplayReading)
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(statusIcon, color: statusColor),
+              const SizedBox(width: 8),
               Text(
-                question.targetItem.reading!.trim(),
-                style: TextStyle(
-                  color: context.appPalette.ink.withValues(alpha: 0.55),
-                ),
+                '#${entry.index + 1} • $typeLabel',
+                style: const TextStyle(fontWeight: FontWeight.w600),
               ),
-            const SizedBox(height: 8),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Text(
+            question.targetItem.term,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          if (question.targetItem.hasDisplayReading)
             Text(
-              question.questionText,
+              question.targetItem.reading!.trim(),
               style: TextStyle(
-                color: context.appPalette.ink.withValues(alpha: 0.7),
+                color: context.appPalette.ink.withValues(alpha: 0.55),
               ),
             ),
-            const SizedBox(height: 12),
-            Text(
-              '${language.yourAnswerLabel} $userAnswer',
-              style: TextStyle(
-                color: entry.isCorrect ? palette.success : palette.error,
-                fontWeight: FontWeight.w600,
-              ),
+          const SizedBox(height: 8),
+          Text(
+            question.questionText,
+            style: TextStyle(
+              color: context.appPalette.ink.withValues(alpha: 0.7),
             ),
-            const SizedBox(height: 6),
-            Text(
-              '${language.correctAnswerLabel} $correctAnswer',
-              style: const TextStyle(fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            '${language.yourAnswerLabel} $userAnswer',
+            style: TextStyle(
+              color: entry.isCorrect ? palette.success : palette.error,
+              fontWeight: FontWeight.w600,
             ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            '${language.correctAnswerLabel} $correctAnswer',
+            style: const TextStyle(fontWeight: FontWeight.w600),
+          ),
+        ],
       ),
     );
   }

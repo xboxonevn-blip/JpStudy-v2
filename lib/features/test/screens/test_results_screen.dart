@@ -7,6 +7,7 @@ import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/analytics/analytics_provider.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import 'package:jpstudy/shared/widgets/confidence_rating.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../data/db/app_database.dart' as app_db;
@@ -497,7 +498,7 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
         SizedBox(
           width: double.infinity,
           height: 56,
-          child: ElevatedButton.icon(
+          child: AppButton(
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -508,11 +509,9 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
                 ),
               );
             },
-            icon: const Icon(Icons.visibility),
-            label: Text(
-              language.reviewAnswersLabel,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
+            icon: Icons.visibility,
+            label: language.reviewAnswersLabel,
+            expanded: true,
           ),
         ),
         if (session.weakTermIds.isNotEmpty && hasRecoveryPack) ...[
@@ -520,23 +519,11 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
           SizedBox(
             width: double.infinity,
             height: 56,
-            child: ElevatedButton.icon(
+            child: AppButton(
               onPressed: () => context.openLearnRecoveryPack(),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: context.appPalette.info,
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-              ),
-              icon: const Icon(Icons.healing_outlined),
-              label: Text(
-                _startRecoveryPackLabel(language),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
+              icon: Icons.healing_outlined,
+              label: _startRecoveryPackLabel(language),
+              expanded: true,
             ),
           ),
         ],
@@ -544,18 +531,11 @@ class _TestResultsScreenState extends ConsumerState<TestResultsScreen> {
         SizedBox(
           width: double.infinity,
           height: 56,
-          child: OutlinedButton(
+          child: AppButton(
             onPressed: () => Navigator.pop(context),
-            style: OutlinedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              side: BorderSide(color: context.appPalette.primary, width: 2),
-            ),
-            child: Text(
-              language.doneLabel,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
+            label: language.doneLabel,
+            variant: AppButtonVariant.secondary,
+            expanded: true,
           ),
         ),
       ],

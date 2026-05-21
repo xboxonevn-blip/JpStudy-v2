@@ -6,6 +6,7 @@ import '../../../app/theme/app_theme_palette.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../core/services/session_storage.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import '../../common/widgets/japanese_background.dart';
 import '../../learn/models/question_type.dart';
 import '../models/test_config.dart';
@@ -337,7 +338,6 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
                   ? language.allCountLabel(count)
                   : '$count',
               selected: _config.questionCount == count,
-              selectedColor: context.appPalette.secondary,
               onSelected: () {
                 setState(() {
                   _config = _config.copyWith(questionCount: count);
@@ -355,27 +355,16 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
       runSpacing: AppSpacing.sm,
       children: QuestionType.values.map((type) {
         final isSelected = _config.enabledTypes.contains(type);
-        return FilterChip(
-          label: Text('${type.icon} ${type.label(language)}'),
-          selected: isSelected,
-          showCheckmark: false,
-          backgroundColor: context.appPalette.base,
-          selectedColor: context.appPalette.primary.withValues(alpha: 0.14),
-          side: BorderSide(
-            color: isSelected
-                ? context.appPalette.primary.withValues(alpha: 0.24)
-                : context.appPalette.outline,
-          ),
-          labelStyle: TextStyle(
-            color: isSelected
-                ? context.appPalette.primary
-                : context.appPalette.ink,
-            fontWeight: FontWeight.w700,
-          ),
-          onSelected: (selected) {
+        return AppButton(
+          label: '${type.icon} ${type.label(language)}',
+          variant: isSelected
+              ? AppButtonVariant.primary
+              : AppButtonVariant.secondary,
+          compact: true,
+          onPressed: () {
             setState(() {
               final types = List<QuestionType>.from(_config.enabledTypes);
-              if (selected) {
+              if (!isSelected) {
                 types.add(type);
               } else if (types.length > 1) {
                 types.remove(type);
@@ -402,7 +391,6 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
         return _choiceChip(
           label: label,
           selected: isSelected,
-          selectedColor: context.appPalette.accent,
           onSelected: () {
             setState(() {
               if (minutes == 0) {
@@ -501,21 +489,24 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
           Row(
             children: [
               Expanded(
-                child: FilledButton.icon(
+                child: AppButton(
                   onPressed: widget.onResume,
-                  icon: const Icon(Icons.play_arrow_rounded),
-                  label: Text(language.resumeButtonLabel),
+                  icon: Icons.play_arrow_rounded,
+                  label: language.resumeButtonLabel,
+                  expanded: true,
                 ),
               ),
               const SizedBox(width: AppSpacing.md),
-              TextButton(
+              AppButton(
+                label: language.discardButtonLabel,
+                variant: AppButtonVariant.ghost,
+                compact: true,
                 onPressed: () async {
                   await widget.onDiscardResume?.call();
                   setState(() {
                     _resumeSnapshot = null;
                   });
                 },
-                child: Text(language.discardButtonLabel),
               ),
             ],
           ),
@@ -626,16 +617,11 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
           SizedBox(
             width: double.infinity,
             height: 56,
-            child: FilledButton.icon(
+            child: AppButton(
               onPressed: () => widget.onStart(_config),
-              icon: const Icon(Icons.play_arrow_rounded),
-              label: Text(
-                language.startTestLabel,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
+              icon: Icons.play_arrow_rounded,
+              label: language.startTestLabel,
+              expanded: true,
             ),
           ),
         ],
@@ -887,25 +873,13 @@ class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
   Widget _choiceChip({
     required String label,
     required bool selected,
-    required Color selectedColor,
     required VoidCallback onSelected,
   }) {
-    return ChoiceChip(
-      label: Text(label),
-      selected: selected,
-      showCheckmark: false,
-      backgroundColor: context.appPalette.base,
-      selectedColor: selectedColor.withValues(alpha: 0.14),
-      side: BorderSide(
-        color: selected
-            ? selectedColor.withValues(alpha: 0.24)
-            : context.appPalette.outline,
-      ),
-      labelStyle: TextStyle(
-        color: selected ? selectedColor : context.appPalette.ink,
-        fontWeight: FontWeight.w700,
-      ),
-      onSelected: (_) => onSelected(),
+    return AppButton(
+      label: label,
+      variant: selected ? AppButtonVariant.primary : AppButtonVariant.secondary,
+      compact: true,
+      onPressed: onSelected,
     );
   }
 

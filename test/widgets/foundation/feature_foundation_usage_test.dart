@@ -50,6 +50,11 @@ void main() {
       'lib/features/grammar/widgets/sentence_builder_widget.dart',
       'lib/features/learn/widgets/fill_blank_widget.dart',
       'lib/features/grammar/screens/grammar_practice_screen.dart',
+      'lib/features/test/screens/test_screen.dart',
+      'lib/features/test/screens/test_review_screen.dart',
+      'lib/features/test/screens/test_results_screen.dart',
+      'lib/features/test/screens/test_config_screen.dart',
+      'lib/features/learn/screens/learn_summary_screen.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

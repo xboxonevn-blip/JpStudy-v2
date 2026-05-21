@@ -14,6 +14,7 @@ import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/home/providers/recovery_pack_provider.dart';
 import 'package:jpstudy/features/interlink/widgets/lesson_completion_recommendations.dart';
 import 'package:jpstudy/features/me/providers/auto_cloud_upload_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import 'package:jpstudy/shared/widgets/confidence_rating.dart';
 import '../models/achievement.dart';
 import '../models/learn_config.dart';
@@ -131,9 +132,11 @@ class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
             ],
           ),
           actions: [
-            TextButton(
+            AppButton(
+              label: language.closeLabel,
+              variant: AppButtonVariant.ghost,
+              compact: true,
               onPressed: () => Navigator.pop(context),
-              child: Text(language.closeLabel),
             ),
           ],
         ),
@@ -427,7 +430,7 @@ class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
           SizedBox(
             width: double.infinity,
             height: 56,
-            child: ElevatedButton.icon(
+            child: AppButton(
               onPressed: () {
                 final weakIds = session.weakTermIds;
                 final weakItems = session.questions
@@ -456,39 +459,20 @@ class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
                   );
                 }
               },
-              icon: const Icon(Icons.replay),
-              label: Text(
-                language.practiceWeakTermsLabel,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: context.appPalette.warning,
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-              ),
+              icon: Icons.replay,
+              label: language.practiceWeakTermsLabel,
+              expanded: true,
             ),
           ),
         if (session.weakTermIds.isNotEmpty) const SizedBox(height: 12),
         SizedBox(
           width: double.infinity,
           height: 56,
-          child: OutlinedButton(
+          child: AppButton(
             onPressed: () => Navigator.pop(context),
-            style: OutlinedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              side: BorderSide(color: context.appPalette.primary, width: 2),
-            ),
-            child: Text(
-              language.doneLabel,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
+            label: language.doneLabel,
+            variant: AppButtonVariant.secondary,
+            expanded: true,
           ),
         ),
       ],

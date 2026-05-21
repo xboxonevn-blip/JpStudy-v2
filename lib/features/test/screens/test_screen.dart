@@ -15,6 +15,7 @@ import '../../../core/services/session_storage_provider.dart';
 import '../../../data/models/vocab_item.dart';
 import '../../../data/models/mistake_context.dart';
 import '../../../data/repositories/lesson_repository.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import '../../home/providers/recovery_pack_provider.dart';
 import '../../learn/models/question.dart';
 import '../../learn/models/question_type.dart';
@@ -971,23 +972,24 @@ class _TestScreenState extends ConsumerState<TestScreen> {
       child: Row(
         children: [
           Expanded(
-            child: OutlinedButton.icon(
+            child: AppButton(
               onPressed: isFirst ? null : _previousQuestion,
-              icon: const Icon(Icons.arrow_back_rounded),
-              label: Text(language.previousLabel),
+              icon: Icons.arrow_back_rounded,
+              label: language.previousLabel,
+              variant: AppButtonVariant.secondary,
+              expanded: true,
             ),
           ),
           const SizedBox(width: AppSpacing.md),
           Expanded(
             flex: 2,
-            child: FilledButton.icon(
+            child: AppButton(
               onPressed: isLast ? _showSubmitDialog : _nextQuestion,
-              icon: Icon(
-                isLast ? Icons.verified_rounded : Icons.arrow_forward_rounded,
-              ),
-              label: Text(
-                isLast ? language.submitTestLabel : language.nextLabel,
-              ),
+              icon: isLast
+                  ? Icons.verified_rounded
+                  : Icons.arrow_forward_rounded,
+              label: isLast ? language.submitTestLabel : language.nextLabel,
+              expanded: true,
             ),
           ),
         ],
@@ -1133,16 +1135,19 @@ class _TestScreenState extends ConsumerState<TestScreen> {
             ? Text(language.unansweredSubmitLabel(unanswered))
             : Text(language.submitTestTitle),
         actions: [
-          TextButton(
+          AppButton(
+            label: MaterialLocalizations.of(context).cancelButtonLabel,
+            variant: AppButtonVariant.ghost,
+            compact: true,
             onPressed: () => Navigator.pop(context),
-            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
           ),
-          ElevatedButton(
+          AppButton(
+            label: language.submitTestConfirmLabel,
+            compact: true,
             onPressed: () {
               Navigator.pop(context);
               _submitTest();
             },
-            child: Text(language.submitTestConfirmLabel),
           ),
         ],
       ),

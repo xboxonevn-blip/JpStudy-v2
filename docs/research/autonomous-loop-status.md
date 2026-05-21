@@ -2059,3 +2059,13 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: put the word you need translated before `は`, then
   put the target language before `で`. `何ですか` asks for the translation result.
+
+## 2026-05-22 Phase G Tier-1 item 038
+
+- Re-authored `grammar:n5:grammar_n5_7:003` (`N (người) に [N (vật) を]
+  あげます`) with outward giving direction, recipient/object particle roles, and
+  contrasts against `もらいます`, `くれます`, and object `を`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `あげます` views the event from the giver outward.
+  Mark the receiver with `に`, the gift with `を`; do not use it for "I receive".

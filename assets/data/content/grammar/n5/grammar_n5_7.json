@@ -102,10 +102,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N (người) に [N (vật) を] あげます",
-      "meaning": "Ý nghĩa: `あげます` nghĩa là cho/tặng.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "あげます liên hệ với あげる, thường viết 上げる khi nghĩa là 'nâng/làm lên'; trong nghĩa cho/tặng, cảm giác hướng vật ra khỏi người cho và đặt vào phía người nhận. Cấu trúc N (người) に [N (vật) を] あげます giữ hai nhãn: に cho người nhận, を cho món quà.",
+      "hanVietBridge": "Nếu viết bằng kanji liên hệ 上げる, 上 là 'thượng' trong Hán-Việt: đưa lên/đưa ra. Cầu nối nghĩa: người cho chủ động đẩy món quà ra phía người nhận, nên tiếng Việt là 'cho/tặng ai cái gì'.",
+      "form": "Hình thức: người nhận + に + vật được cho + を + あげます. Ví dụ: 友達に本をあげます, 妹に花をあげます.",
+      "meaning": "Ý nghĩa: cho/tặng ai đó một vật. Hướng chuyển động là từ người nói/nhóm của người nói ra người khác.",
+      "usage": "Sử dụng: dùng あげます khi chủ thể là người cho và người nhận không phải bản thân người nói. Nếu mình nhận từ ai đó, dùng もらいます; nếu ai đó cho mình/người nhà mình, dùng くれます.",
+      "humanMoment": "Dr. Linh lưu ý: N (người) に [N (vật) を] あげます có hai mũi tên. に chỉ người nhận, を chỉ món quà. 私にプレゼントをあげます nghe sai vì bạn tự đứng ở phía người nhận; khi tôi nhận, hãy đổi sang もらいます hoặc くれます.",
+      "crossLinks": [
+        {
+          "pattern": "N (người) に [N (vật) を] もらいます",
+          "contrast": "khác góc nhìn: あげます nhìn từ người cho ra ngoài, còn もらいます nhìn từ người nhận lấy vào."
+        },
+        {
+          "pattern": "N (người) が N (vật) を くれます",
+          "contrast": "khác hướng lợi ích: くれます dùng khi ai đó cho tôi/người thuộc phía tôi, còn あげます là tôi/ai đó cho người khác."
+        },
+        {
+          "pattern": "NをV",
+          "contrast": "`を` trong あげます đánh dấu vật được chuyển, còn người nhận phải đi với `に`."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

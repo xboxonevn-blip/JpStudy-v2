@@ -1388,3 +1388,4 @@
 - Added deterministic generated-question densification so a single grammar point can render a full `Question 1 of 50` gate even when the base generator has fewer unique authored examples.
 - Changed grammar gate pass policy from hard-coded `4/5` to `>=80%` accuracy, matching Directive F.
 - Focused widget proof: `test/features/grammar/grammar_practice_screen_test.dart` now verifies the 50-question gate and 80% threshold.
+- Deployed to Firebase Hosting and live-proved VI grammar detail -> `Luyện tập để hiểu` opens `Câu 1/50`; screenshot saved at `output/playwright/live-phase4-grammar-gate-50.png`. `main.dart.js` returned `200/no-cache`; local web resource smoke passed.

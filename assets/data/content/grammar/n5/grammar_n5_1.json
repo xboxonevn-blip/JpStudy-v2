@@ -214,10 +214,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Name + さん",
-      "meaning": "Ý nghĩa: `さん` là hậu tố xưng hô lịch sự, đặt sau tên người khác.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "さん là hậu tố kính xưng đặt sau tên người khác, có gốc gần với lối gọi lịch sự hơn như さま/様 trong hệ thống xưng hô Nhật. Về cấu trúc, nó không phải một danh từ độc lập; nó dính sau tên để hạ cái tôi của người nói và giữ khoảng cách lịch sự vừa phải.",
+      "hanVietBridge": "様 có âm Hán-Việt là dạng, nghĩa gốc liên quan đến dáng vẻ/cách thức, rồi trong tiếng Nhật dùng làm kính xưng. Người Việt có thể nhớ さん như lớp 'kính xưng' nhẹ, gần cách thêm 'anh/chị/cô/chú' trước tên khi nói lịch sự.",
+      "form": "Hình thức: Name + さん. Đặt さん ngay sau tên hoặc họ của người khác: 田中さん, マイさん.",
+      "meaning": "Ý nghĩa: hậu tố gọi người khác một cách lịch sự trung tính. Không dịch cứng thành một từ duy nhất; tùy tuổi/ngữ cảnh có thể là anh, chị, cô, chú, bạn.",
+      "usage": "Sử dụng: dùng cho người khác trong lớp học, công ty, dịch vụ. Không tự gắn さん vào tên mình khi giới thiệu; 私はマイさんです nghe như đang nói về một người khác tên Mai.",
+      "humanMoment": "Dr. Linh lưu ý: Name + さん là lịch sự hướng ra ngoài, không phải huy hiệu tự đeo. Bạn gọi 田中さん để tôn trọng Tanaka; còn tự giới thiệu thì nói 私はマイです, đừng nói マイさん.",
+      "crossLinks": [
+        {
+          "pattern": "Name + さま",
+          "contrast": "khác mức độ lịch sự: さま trang trọng hơn さん, thường gặp trong dịch vụ hoặc thư từ."
+        },
+        {
+          "pattern": "Name + ちゃん",
+          "contrast": "khác sắc thái: ちゃん thân mật/đáng yêu hơn さん, không dùng bừa trong quan hệ lịch sự."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

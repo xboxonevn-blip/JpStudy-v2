@@ -1762,3 +1762,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: N2 is the head noun; N1 only clarifies whose,
   what kind, or where from. Vietnamese usually translates the order backward.
+
+## 2026-05-22 Phase G Tier-1 item 006
+
+- Re-authored `grammar:n5:grammar_n5_1:006` (`Name + さん`) with honorific
+  suffix origin, Hán-Việt `様` bridge, and register contrasts.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `さん` is a polite suffix for other people. Use
+  it after someone else's name, not after your own name in self-introduction.

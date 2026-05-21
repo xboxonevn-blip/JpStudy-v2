@@ -1072,6 +1072,217 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-form-l1-001",
+      "template_id": "tpl-grammar-n5-006-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn cách gắn hậu tố lịch sự đúng với tên Tanaka.",
+      "answer_template": "田中さん",
+      "options_template": [
+        "田中さん",
+        "さん田中",
+        "田中はさん",
+        "田中ですさん"
+      ],
+      "distractor_strategy": "honorific-position-trap",
+      "teaching_note": "さん đứng ngay sau tên/họ, không đứng trước tên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-form-l1-002",
+      "template_id": "tpl-grammar-n5-006-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Mẫu Name + さん có hình thức nào?",
+      "answer_template": "Tên + さん",
+      "options_template": [
+        "Tên + さん",
+        "さん + tên",
+        "Tên + は + さん",
+        "Tên + の + さん"
+      ],
+      "distractor_strategy": "suffix-not-prefix",
+      "teaching_note": "さん là hậu tố, nên phải đi sau tên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-006-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "田中さん trong hội thoại lớp học nên hiểu tự nhiên là gì?",
+      "answer_template": "Anh/chị/bạn Tanaka, gọi lịch sự.",
+      "options_template": [
+        "Anh/chị/bạn Tanaka, gọi lịch sự.",
+        "Tanaka của tôi.",
+        "Tanaka cũng vậy.",
+        "Tanaka có phải không?"
+      ],
+      "distractor_strategy": "honorific-vs-other-particle-meanings",
+      "teaching_note": "さん thêm sắc thái lịch sự cho cách gọi người khác.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-006-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Name + さん dùng để biểu thị sắc thái gì?",
+      "answer_template": "Gọi người khác một cách lịch sự trung tính.",
+      "distractor_strategy": "honorific-function-recall",
+      "teaching_note": "さん không đổi nghề nghiệp/danh tính; nó đổi cách gọi người.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-usage-l3-005",
+      "template_id": "tpl-grammar-n5-006-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp cách gọi lịch sự 'Mai': さん / マイ",
+      "answer_template": "マイさん",
+      "options_template": [
+        "マイ",
+        "さん"
+      ],
+      "distractor_strategy": "honorific-suffix-order",
+      "teaching_note": "Tên đi trước, さん đi sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-usage-l3-006",
+      "template_id": "tpl-grammar-n5-006-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cách gọi lịch sự cho người họ Suzuki.",
+      "answer_template": "鈴木さん",
+      "distractor_strategy": "surname-honorific-use",
+      "teaching_note": "Có thể gắn さん sau họ: 鈴木さん.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-context-l3-007",
+      "template_id": "tpl-grammar-n5-006-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn muốn gọi lịch sự bạn học tên Lan trong lớp. Viết cách gọi bằng katakana + さん.",
+      "answer_template": "ランさん",
+      "distractor_strategy": "classmate-polite-address",
+      "teaching_note": "Trong lớp học, さん là lựa chọn an toàn cho người khác.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-context-l2-008",
+      "template_id": "tpl-grammar-n5-006-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp với Name + さん?",
+      "answer_template": "Gọi người khác lịch sự trong lớp hoặc công ty.",
+      "options_template": [
+        "Gọi người khác lịch sự trong lớp hoặc công ty.",
+        "Tự giới thiệu tên của chính mình.",
+        "Nối hai danh từ theo nghĩa sở hữu.",
+        "Biến câu thành câu hỏi."
+      ],
+      "distractor_strategy": "honorific-context-vs-self-introduction",
+      "teaching_note": "Không dùng さん cho chính mình khi tự giới thiệu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-006-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Bạn tự giới thiệu 'Tôi là Mai'. Câu nào tránh lỗi tự gắn さん?",
+      "answer_template": "私はマイです。",
+      "options_template": [
+        "私はマイです。",
+        "私はマイさんです。",
+        "マイさんは私です。",
+        "私はさんマイです。"
+      ],
+      "distractor_strategy": "self-honorific-analysis",
+      "teaching_note": "さん dành cho người khác; tự giới thiệu không gắn さん vào tên mình.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-006-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-006-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Email dịch vụ cần rất trang trọng. Cách gọi nào trang trọng hơn さん?",
+      "answer_template": "田中さま",
+      "options_template": [
+        "田中さま",
+        "田中さん",
+        "田中ちゃん",
+        "田中の"
+      ],
+      "distractor_strategy": "honorific-register-analysis",
+      "teaching_note": "さま trang trọng hơn さん; ちゃん thân mật, の là trợ từ nối danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

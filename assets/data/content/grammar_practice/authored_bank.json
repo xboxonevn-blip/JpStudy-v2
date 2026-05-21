@@ -860,6 +860,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-form-l1-001",
+      "template_id": "tpl-grammar-n5-005-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ nối hai danh từ: 私 ___ 本",
+      "answer_template": "の",
+      "options_template": [
+        "の",
+        "は",
+        "も",
+        "か"
+      ],
+      "distractor_strategy": "noun-linker-vs-topic-additive-question",
+      "teaching_note": "の nối N1 với N2 thành một cụm danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-form-l1-002",
+      "template_id": "tpl-grammar-n5-005-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Cấu trúc nào đúng với mẫu N1 の N2?",
+      "answer_template": "日本の車",
+      "options_template": [
+        "日本の車",
+        "日本は車",
+        "日本も車",
+        "日本か車"
+      ],
+      "distractor_strategy": "wrong-particle-between-nouns",
+      "teaching_note": "Giữa hai danh từ, の tạo quan hệ bổ nghĩa; は/も/か không nối cụm theo cách này.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-005-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "私の本 nghĩa tự nhiên nhất là gì?",
+      "answer_template": "quyển sách của tôi",
+      "options_template": [
+        "quyển sách của tôi",
+        "tôi là quyển sách",
+        "tôi cũng đọc sách",
+        "đây có phải sách không"
+      ],
+      "distractor_strategy": "possessive-vs-sentence-functions",
+      "teaching_note": "N2 là trung tâm: 本 là vật chính, 私 chỉ nói thuộc về ai.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-005-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1 の N2, danh từ nào là trung tâm chính?",
+      "answer_template": "N2",
+      "distractor_strategy": "head-noun-direction-trap",
+      "teaching_note": "N1 bổ nghĩa cho N2; khi dịch tiếng Việt thường đảo thành N2 của N1.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-usage-l3-005",
+      "template_id": "tpl-grammar-n5-005-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'sách của anh/chị Tanaka': 本 / の / 田中さん",
+      "answer_template": "田中さんの本",
+      "options_template": [
+        "田中さん",
+        "の",
+        "本"
+      ],
+      "distractor_strategy": "possessor-head-order",
+      "teaching_note": "Người sở hữu đứng trước の; vật được sở hữu đứng sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-usage-l3-006",
+      "template_id": "tpl-grammar-n5-005-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cụm danh từ: 'giáo viên của trường học'.",
+      "answer_template": "学校の先生",
+      "distractor_strategy": "relationship-not-possession",
+      "teaching_note": "の không chỉ sở hữu; 学校 làm rõ 先生 thuộc/ở trường nào.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-context-l3-007",
+      "template_id": "tpl-grammar-n5-005-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn cầm nhầm đồ và muốn nói 'đây là bút của tôi'. Viết cụm 'bút của tôi'.",
+      "answer_template": "私のペン",
+      "distractor_strategy": "owned-object-context",
+      "teaching_note": "Vật chính là ペン; 私 chỉ làm rõ người sở hữu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-context-l2-008",
+      "template_id": "tpl-grammar-n5-005-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp với N1 の N2?",
+      "answer_template": "Muốn nói quan hệ sở hữu hoặc thuộc tính giữa hai danh từ.",
+      "options_template": [
+        "Muốn nói quan hệ sở hữu hoặc thuộc tính giữa hai danh từ.",
+        "Muốn biến câu thành câu hỏi.",
+        "Muốn nói 'tôi cũng'.",
+        "Muốn phủ định một danh tính."
+      ],
+      "distractor_strategy": "noun-link-context-vs-other-particles",
+      "teaching_note": "の tạo cụm danh từ; か/も/じゃありません làm chức năng khác.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-005-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Bạn muốn nói 'xe Nhật', tức xe có nguồn/loại Nhật. Câu nào đúng?",
+      "answer_template": "日本の車",
+      "options_template": [
+        "日本の車",
+        "日本は車",
+        "日本も車",
+        "日本か車"
+      ],
+      "distractor_strategy": "modifier-vs-topic-additive-question-analysis",
+      "teaching_note": "の nối hai danh từ thành một cụm; は/も/か không tạo nghĩa 'xe Nhật'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-005-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-005-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào là một cụm danh từ 'A của B', không phải câu hoàn chỉnh 'A là B'?",
+      "answer_template": "私の先生",
+      "options_template": [
+        "私の先生",
+        "私は先生です",
+        "私も先生です",
+        "先生ですか"
+      ],
+      "distractor_strategy": "noun-phrase-vs-sentence-analysis",
+      "teaching_note": "私の先生 chưa phải câu hoàn chỉnh; nó là cụm danh từ có trung tâm 先生.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

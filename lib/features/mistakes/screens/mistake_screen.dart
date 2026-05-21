@@ -7,6 +7,7 @@ import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/app/navigation/app_navigation_extensions.dart';
 import 'package:jpstudy/app/theme/app_spacing.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
 import '../../../core/study_level.dart';
@@ -406,22 +407,22 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
                   ),
                 ),
               ),
-              TextButton(
+              AppButton(
+                label: _showDueOnly
+                    ? _tr(language, 'Show all', 'Hiện tất cả', 'すべて表示')
+                    : _tr(
+                        language,
+                        'Show due only',
+                        'Chỉ hiện đến hạn',
+                        '期限のみ表示',
+                      ),
+                variant: AppButtonVariant.ghost,
+                compact: true,
                 onPressed: () {
                   setState(() {
                     _showDueOnly = !_showDueOnly;
                   });
                 },
-                child: Text(
-                  _showDueOnly
-                      ? _tr(language, 'Show all', 'Hiện tất cả', 'すべて表示')
-                      : _tr(
-                          language,
-                          'Show due only',
-                          'Chỉ hiện đến hạn',
-                          '期限のみ表示',
-                        ),
-                ),
               ),
             ],
           ),
@@ -480,13 +481,11 @@ class _MistakeScreenState extends ConsumerState<MistakeScreen> {
   }) {
     return SizedBox(
       width: double.infinity,
-      child: FilledButton.icon(
+      child: AppButton(
+        label: label,
+        icon: icon,
+        expanded: true,
         onPressed: onPressed,
-        icon: Icon(icon),
-        label: Text(label),
-        style: FilledButton.styleFrom(
-          minimumSize: const Size(double.infinity, 48),
-        ),
       ),
     );
   }

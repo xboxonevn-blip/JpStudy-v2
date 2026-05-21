@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../../../app/theme/app_theme_palette.dart';
 import '../../../core/app_language.dart';
@@ -141,32 +142,26 @@ class GhostReviewBanner extends ConsumerWidget {
             children: [
               if (grammarCount > 0)
                 Expanded(
-                  child: FilledButton.icon(
+                  child: AppButton(
+                    label: 'Grammar ($grammarCount)',
+                    icon: Icons.edit_note_rounded,
+                    variant: AppButtonVariant.destructive,
+                    compact: embedded,
+                    expanded: true,
                     onPressed: () => context.push(
                       '/grammar-practice',
                       extra: GrammarPracticeMode.ghost,
-                    ),
-                    icon: const Icon(Icons.edit_note_rounded, size: 18),
-                    label: Text(
-                      'Grammar ($grammarCount)',
-                      style: TextStyle(fontSize: embedded ? 12 : 13),
-                    ),
-                    style: FilledButton.styleFrom(
-                      backgroundColor: palette.error,
-                      foregroundColor: Colors.white,
-                      padding: EdgeInsets.symmetric(
-                        vertical: embedded ? 8 : 10,
-                      ),
-                      visualDensity: embedded
-                          ? VisualDensity.compact
-                          : VisualDensity.standard,
                     ),
                   ),
                 ),
               if (grammarCount > 0 && vocabCount > 0) const SizedBox(width: 8),
               if (vocabCount > 0)
                 Expanded(
-                  child: FilledButton.icon(
+                  child: AppButton(
+                    label: 'Vocab ($vocabCount)',
+                    icon: Icons.translate_rounded,
+                    compact: embedded,
+                    expanded: true,
                     onPressed: vocabGhosts.isEmpty
                         ? null
                         : () => Navigator.of(context).push(
@@ -175,21 +170,6 @@ class GhostReviewBanner extends ConsumerWidget {
                                   VocabGhostReviewScreen(items: vocabGhosts),
                             ),
                           ),
-                    icon: const Icon(Icons.translate_rounded, size: 18),
-                    label: Text(
-                      'Vocab ($vocabCount)',
-                      style: TextStyle(fontSize: embedded ? 12 : 13),
-                    ),
-                    style: FilledButton.styleFrom(
-                      backgroundColor: palette.accent,
-                      foregroundColor: Colors.white,
-                      padding: EdgeInsets.symmetric(
-                        vertical: embedded ? 8 : 10,
-                      ),
-                      visualDensity: embedded
-                          ? VisualDensity.compact
-                          : VisualDensity.standard,
-                    ),
                   ),
                 ),
             ],

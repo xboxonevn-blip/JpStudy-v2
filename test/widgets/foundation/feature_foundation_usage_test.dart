@@ -35,6 +35,11 @@ void main() {
       'lib/features/write/screens/handwriting_practice_screen.dart',
       'lib/features/jlpt/widgets/jlpt_prep_hero.dart',
       'lib/features/jlpt/widgets/jlpt_plan_panel.dart',
+      'lib/features/mistakes/screens/mistake_screen.dart',
+      'lib/features/practice/screens/recall_sprint_screen.dart',
+      'lib/features/kanji_hub/widgets/kanji_relationship_graph.dart',
+      'lib/features/kanji_hub/widgets/kanji_graph_practice_panel.dart',
+      'lib/features/home/widgets/ghost_review_banner.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

@@ -5,6 +5,7 @@ import 'package:jpstudy/app/theme/app_spacing.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_graph_practice.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_relationship_graph.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class KanjiGraphPracticePanel extends StatefulWidget {
   const KanjiGraphPracticePanel({
@@ -131,19 +132,15 @@ class _KanjiGraphPracticePanelState extends State<KanjiGraphPracticePanel> {
               ),
             ),
           const SizedBox(height: AppSpacing.md),
-          FilledButton.icon(
+          AppButton(
             key: const ValueKey('kanji_graph_practice_next'),
+            label: _index == questions.length - 1
+                ? _finishLabel(widget.language)
+                : _nextLabel(widget.language),
+            icon: _index == questions.length - 1
+                ? Icons.check_rounded
+                : Icons.arrow_forward_rounded,
             onPressed: answered && !_submitting ? _next : null,
-            icon: Icon(
-              _index == questions.length - 1
-                  ? Icons.check_rounded
-                  : Icons.arrow_forward_rounded,
-            ),
-            label: Text(
-              _index == questions.length - 1
-                  ? _finishLabel(widget.language)
-                  : _nextLabel(widget.language),
-            ),
           ),
         ],
       ),
@@ -211,23 +208,14 @@ class _OptionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = answered && correct
-        ? const Color(0xFF15803D)
-        : answered && selected
-        ? const Color(0xFFB91C1C)
-        : null;
-    return OutlinedButton(
+    return AppButton(
       key: ValueKey('kanji_graph_practice_option_$option'),
+      label: option,
+      variant: selected || (answered && correct)
+          ? AppButtonVariant.primary
+          : AppButtonVariant.secondary,
+      compact: true,
       onPressed: enabled ? onTap : null,
-      style: OutlinedButton.styleFrom(
-        foregroundColor: color,
-        side: color == null ? null : BorderSide(color: color, width: 1.5),
-        minimumSize: const Size(64, 48),
-      ),
-      child: Text(
-        option,
-        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
-      ),
     );
   }
 }

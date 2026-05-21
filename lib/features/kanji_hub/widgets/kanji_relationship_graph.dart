@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:jpstudy/app/theme/app_spacing.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_relationship_graph.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class KanjiRelationshipGraph extends StatefulWidget {
   const KanjiRelationshipGraph({
@@ -107,11 +108,11 @@ class _KanjiRelationshipGraphState extends State<KanjiRelationshipGraph> {
               Positioned(
                 left: AppSpacing.md,
                 top: AppSpacing.md,
-                child: FilledButton.icon(
+                child: AppButton(
                   key: const ValueKey('kanji_graph_practice_cluster'),
+                  label: _practiceLabel(widget.language),
+                  icon: Icons.psychology_alt_rounded,
                   onPressed: widget.onPracticeCluster,
-                  icon: const Icon(Icons.psychology_alt_rounded),
-                  label: Text(_practiceLabel(widget.language)),
                 ),
               ),
             ],

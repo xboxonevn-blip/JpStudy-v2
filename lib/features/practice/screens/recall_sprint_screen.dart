@@ -11,6 +11,7 @@ import 'package:jpstudy/data/models/lesson_term_display.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/practice/models/recall_sprint_strategy.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 const _kBatchSize = 5;
 
@@ -297,7 +298,7 @@ class _SprintBody extends StatelessWidget {
           ),
         ),
         const SizedBox(height: AppSpacing.md),
-        FilledButton(onPressed: onStart, child: Text(_startLabel(language))),
+        AppButton(label: _startLabel(language), onPressed: onStart),
       ],
     );
   }
@@ -333,10 +334,7 @@ class _SprintBody extends StatelessWidget {
           ),
         ),
         const SizedBox(height: AppSpacing.lg),
-        FilledButton(
-          onPressed: onRestart,
-          child: Text(_restartLabel(language)),
-        ),
+        AppButton(label: _restartLabel(language), onPressed: onRestart),
       ],
     );
   }
@@ -372,31 +370,13 @@ class _SprintBody extends StatelessWidget {
         ...q.options.map(
           (option) => Padding(
             padding: const EdgeInsets.only(bottom: AppSpacing.sm),
-            child: OutlinedButton(
+            child: AppButton(
+              label: option,
+              variant: selectedAnswer == option
+                  ? AppButtonVariant.primary
+                  : AppButtonVariant.secondary,
+              expanded: true,
               onPressed: selectedAnswer == null ? () => onSelect(option) : null,
-              style: OutlinedButton.styleFrom(
-                alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 14,
-                  vertical: 14,
-                ),
-                side: BorderSide(
-                  color: selectedAnswer == option
-                      ? (option == q.correct
-                            ? palette.success
-                            : palette.primary)
-                      : palette.outline,
-                ),
-                backgroundColor: selectedAnswer == option
-                    ? (option == q.correct
-                          ? palette.success.withValues(alpha: 0.08)
-                          : palette.primary.withValues(alpha: 0.06))
-                    : null,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
-                ),
-              ),
-              child: Text(option),
             ),
           ),
         ),
@@ -442,7 +422,7 @@ class _SprintBody extends StatelessWidget {
         ],
         if (selectedAnswer != null) ...[
           const SizedBox(height: AppSpacing.lg),
-          FilledButton(onPressed: onNext, child: Text(_nextLabel(language))),
+          AppButton(label: _nextLabel(language), onPressed: onNext),
         ],
       ],
     );

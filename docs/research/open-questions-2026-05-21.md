@@ -43,3 +43,10 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Blocking**: no
 **Default action taken**: Flashcard context mode uses sourced mnemonic/context text when available and falls back to the localized meaning. Phase 4 exercise/reading assets should provide real sentence examples.
 **Owner answer**: pending
+
+## OQ-007 - Authored uniqueness threshold for generated repetitions
+**Phase**: 4
+**Date**: 2026-05-21 07:55
+**Blocking**: no
+**Default action taken**: Grammar ExerciseBank uses deterministic variants to reach >=50 exercises per item while preserving validator uniqueness by prompt/signature. Later authored/static generation should replace repeated variants where source examples allow.
+**Owner answer**: pending

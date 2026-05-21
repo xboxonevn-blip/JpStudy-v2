@@ -141,3 +141,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The Phase 2 lemma layer already maps active-level lemmas to lesson IDs, so the mode picker can stay conditional without adding a second taxonomy.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-015 - Bridge grammar practice into ExerciseBank first
+**Phase**: 4
+**Date**: 2026-05-21 07:55 (local)
+**Context**: Phase 4 requires a shared ExerciseBank API, but grammar already has the broadest generated question coverage and live practice routes.
+**Options considered**: build all item types at once | start with grammar bridge | wait for authored static JSON generation
+**Chosen**: start with grammar bridge
+**Rationale**: This gives a tested ExerciseBank contract and proves the >=50/Bloom density rule across all runtime grammar points before extending the same model to vocab, kanji, reading, and conjugation assets.
+**Reversible**: yes
+**Owner review**: pending

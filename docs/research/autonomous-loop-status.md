@@ -1365,3 +1365,11 @@
 - Live proof: VI `/kanji/han-viet` showed the first rule, search `Ng/Ngh` showed rule 3 and one answer produced `Đúng`, fresh search `N/Nh` showed rule 5, `main.dart.js` returned `Cache-Control: no-cache`, and Flutter/app console errors were `0`.
 - Live artifacts: `output/playwright/live-qaa028-hanviet-phase2-batch1-proof.json`, `output/playwright/live-qaa028-hanviet-phase2-batch1-initial.png`, `output/playwright/live-qaa028-hanviet-phase2-batch1-ng-answer.png`, and `output/playwright/live-qaa028-hanviet-phase2-batch1-nnh-search.png`.
 - Per owner's latest P0 direction, pause remaining QA-A-028 Phase 2/3 and switch to QA-A-027 blocker resolution + QA-A-026 kanji reclassification after committing this batch.
+
+## 2026-05-21 Megaprompt Phase 4 Exercise Engine Batch 1
+
+- Added the shared `Exercise`, `ExerciseType`, `BloomLevel`, `ExerciseBank`, `GeneratedExerciseBank`, and `ExerciseValidator` foundation for Directive F density checks.
+- Bridged existing generated grammar practice into `GrammarPracticeBank.buildExerciseBank`, with deterministic per-item densification to `>=50` exercises, Bloom L1-L4 coverage, and engine coverage for all six Phase 4 exercise types.
+- TDD RED/GREEN: `test/features/exercise/exercise_bank_test.dart` first failed on the missing Exercise API, then passed after implementation.
+- Added runtime guard proving every N5-N1 grammar point reaches dense ExerciseBank coverage and Bloom coverage.
+- Logged `DECISION-015` and `OQ-007` for the grammar-first bridge and repeated generated variants.

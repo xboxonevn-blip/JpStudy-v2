@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/grammar_repository.dart';
+import 'package:jpstudy/features/exercise/models/exercise.dart';
 import 'package:jpstudy/features/grammar/services/grammar_practice_bank.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -60,6 +61,63 @@ void main() {
       }
 
       expect(gaps, isEmpty);
+    },
+  );
+
+  test(
+    'every runtime grammar point has dense exercise-bank coverage',
+    () async {
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+      final db = AppDatabase(executor: NativeDatabase.memory());
+      addTearDown(db.close);
+
+      final repo = GrammarRepository(db);
+      const levels = ['N5', 'N4', 'N3', 'N2', 'N1'];
+      final densityGaps = <String>[];
+      final bloomGaps = <String>[];
+      final seenTypes = <ExerciseType>{};
+
+      for (final level in levels) {
+        final points = await repo.fetchPointsByLevel(level);
+        final examples =
+            await (db.select(db.grammarExamples)..where(
+                  (tbl) => tbl.grammarId.isIn(
+                    points.map((point) => point.id).toList(growable: false),
+                  ),
+                ))
+                .get();
+        final examplesByPoint = <int, List<GrammarExample>>{};
+        for (final example in examples) {
+          examplesByPoint.putIfAbsent(example.grammarId, () => []).add(example);
+        }
+
+        final details = [
+          for (final point in points)
+            (point: point, examples: examplesByPoint[point.id] ?? const []),
+        ];
+        final bank = GrammarPracticeBank.buildExerciseBank(
+          details: details,
+          allPoints: points,
+          language: AppLanguage.vi,
+        );
+        seenTypes.addAll(bank.allExercises.map((exercise) => exercise.type));
+
+        for (final point in points) {
+          final itemId = GrammarPracticeBank.exerciseItemId(point);
+          try {
+            await bank.ensureMinimumDensity(itemId: itemId, min: 50);
+          } catch (_) {
+            densityGaps.add('$level#${point.id}:${point.grammarPoint}');
+          }
+          if (!await bank.hasBloomCoverage(itemId: itemId)) {
+            bloomGaps.add('$level#${point.id}:${point.grammarPoint}');
+          }
+        }
+      }
+
+      expect(densityGaps, isEmpty);
+      expect(bloomGaps, isEmpty);
+      expect(seenTypes, containsAll(ExerciseType.values));
     },
   );
 

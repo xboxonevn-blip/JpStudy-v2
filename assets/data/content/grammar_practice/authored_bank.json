@@ -2134,6 +2134,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-form-l1-001",
+      "template_id": "tpl-grammar-n5-011-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn phần còn thiếu: これは本 ___、辞書 ___。",
+      "answer_template": "ですか / ですか",
+      "options_template": [
+        "ですか / ですか",
+        "です / です",
+        "じゃありません / です",
+        "の / の"
+      ],
+      "distractor_strategy": "alternative-question-ka-per-branch",
+      "teaching_note": "Câu hỏi lựa chọn cần ですか ở từng nhánh, không chỉ một dấu hỏi cuối câu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-form-l1-002",
+      "template_id": "tpl-grammar-n5-011-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu S1 ですか、S2 ですか?",
+      "answer_template": "これは本ですか、辞書ですか。",
+      "options_template": [
+        "これは本ですか、辞書ですか。",
+        "これは本です、辞書ですか。",
+        "これは本か、辞書です。",
+        "これは本の辞書です。"
+      ],
+      "distractor_strategy": "missing-copula-question-marker",
+      "teaching_note": "Mỗi lựa chọn giữ dạng lịch sự ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-011-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "これは本ですか、辞書ですか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Đây là sách hay là từ điển?",
+      "options_template": [
+        "Đây là sách hay là từ điển?",
+        "Đây là sách và từ điển.",
+        "Đây không phải sách.",
+        "Đây là sách của từ điển."
+      ],
+      "distractor_strategy": "choice-question-vs-list-negation-possession",
+      "teaching_note": "Hai vế ですか tạo câu hỏi 'A hay B', không phải danh sách 'A và B'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-011-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Với câu hỏi S1 ですか、S2 ですか, câu trả lời nên làm gì?",
+      "answer_template": "Chọn trực tiếp một phương án, ví dụ 本です hoặc 辞書です.",
+      "distractor_strategy": "alternative-answer-selection",
+      "teaching_note": "Đây là câu hỏi lựa chọn; はい/いいえ thường chưa trả lời đủ ý.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-usage-l3-005",
+      "template_id": "tpl-grammar-n5-011-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'Đây là báo hay là tạp chí?': これは / 新聞ですか / 雑誌ですか",
+      "answer_template": "これは新聞ですか、雑誌ですか。",
+      "options_template": [
+        "これは",
+        "新聞ですか",
+        "雑誌ですか"
+      ],
+      "distractor_strategy": "alternative-question-order",
+      "teaching_note": "Đặt chủ đề trước, rồi nêu hai phương án dạng ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-usage-l3-006",
+      "template_id": "tpl-grammar-n5-011-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "A hỏi: これは本ですか、辞書ですか。Vật đó là từ điển. Trả lời ngắn gọn.",
+      "answer_template": "辞書です。",
+      "distractor_strategy": "select-one-branch-answer",
+      "teaching_note": "Khi đã có hai lựa chọn, chọn nhánh đúng thay vì đáp はい.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-context-l3-007",
+      "template_id": "tpl-grammar-n5-011-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Ở cửa hàng, bạn chưa rõ món này là bánh hay kẹo. Viết câu hỏi lựa chọn.",
+      "answer_template": "これはパンですか、お菓子ですか。",
+      "distractor_strategy": "store-choice-context",
+      "teaching_note": "Ngữ cảnh có hai khả năng cụ thể, nên dùng mẫu lựa chọn với か ở từng vế.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-context-l2-008",
+      "template_id": "tpl-grammar-n5-011-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với S1 ですか、S2 ですか?",
+      "answer_template": "Bạn muốn người nghe chọn giữa hai khả năng đã nêu.",
+      "options_template": [
+        "Bạn muốn người nghe chọn giữa hai khả năng đã nêu.",
+        "Bạn chỉ muốn xác nhận một câu đúng hay sai.",
+        "Bạn muốn nối hai danh từ thành cụm sở hữu.",
+        "Bạn muốn gọi người khác lịch sự."
+      ],
+      "distractor_strategy": "alternative-context-vs-yes-no-no-honorific",
+      "teaching_note": "Mẫu này xuất hiện khi câu hỏi đã đóng khung sẵn hai lựa chọn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-011-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: これは本ですか、辞書ですか。Thực tế đó là từ điển. Câu trả lời nào phân tích đúng yêu cầu của câu hỏi?",
+      "answer_template": "辞書です。",
+      "options_template": [
+        "辞書です。",
+        "はい、そうです。",
+        "いいえ、そうじゃありません。",
+        "本です。"
+      ],
+      "distractor_strategy": "alternative-vs-yes-no-answer-analysis",
+      "teaching_note": "Vì câu hỏi đưa hai nhánh, câu trả lời phải chỉ ra nhánh đúng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-011-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-011-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần hỏi 'cà phê hay trà?', không phải hỏi đúng/sai 'đây có phải cà phê không?'. Câu nào đúng?",
+      "answer_template": "コーヒーですか、お茶ですか。",
+      "options_template": [
+        "コーヒーですか、お茶ですか。",
+        "コーヒーですか。",
+        "コーヒーとお茶です。",
+        "コーヒーの茶です。"
+      ],
+      "distractor_strategy": "choice-question-vs-yes-no-list-no-analysis",
+      "teaching_note": "L4: phân biệt mục tiêu hỏi. Hai lựa chọn cần hai vế ですか; một vế ですか chỉ là xác nhận.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

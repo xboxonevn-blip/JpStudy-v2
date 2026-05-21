@@ -174,10 +174,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: S1 です か、 S2 です か",
-      "meaning": "Ý nghĩa: Đây là câu hỏi lựa chọn giữa hai phương án.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "か là trợ từ nghi vấn cổ, mang nét 'chưa chốt'. Trong cấu trúc S1 ですか、S2 ですか, か xuất hiện ở từng nhánh để biến hai mệnh đề thành hai lựa chọn ngang hàng, khác câu hỏi đúng/sai chỉ có một か cuối câu.",
+      "hanVietBridge": "Gắn với Hán-Việt 'lựa chọn': tiếng Việt hỏi 'A hay B?', còn tiếng Nhật đánh dấu từng vế bằng か: A ですか、B ですか. Vì vậy câu trả lời nên chọn nhánh, không trả lời máy móc 'có/không'.",
+      "form": "Hình thức: S1 ですか、S2 ですか. Mỗi phương án là một câu danh từ/lịch sự đầy đủ với ですか; dấu phẩy chỉ tách hai nhánh lựa chọn.",
+      "meaning": "Ý nghĩa: hỏi người nghe chọn một trong hai phương án, tương đương 'là S1 hay là S2?'. Trọng tâm là lựa chọn, không phải xác nhận đúng/sai.",
+      "usage": "Sử dụng: dùng khi hai khả năng đã được nêu rõ, như これは本ですか、辞書ですか. Khi trả lời, nói trực tiếp 本です hoặc 辞書です; tránh はい/いいえ nếu chỉ cần chọn một nhánh.",
+      "humanMoment": "Dr. Linh lưu ý: S1 ですか、S2 ですか khác S ですか vì có hai cửa để chọn. Nếu nghe これは本ですか、辞書ですか, hãy trả lời 辞書です; nói はいだけ khiến người hỏi vẫn chưa biết bạn chọn cửa nào.",
+      "crossLinks": [
+        {
+          "pattern": "S ですか",
+          "contrast": "khác phạm vi hỏi: S ですか xác nhận một mệnh đề nên trả lời はい/いいえ, còn S1 ですか、S2 ですか yêu cầu chọn một phương án."
+        },
+        {
+          "pattern": "N1 と N2",
+          "contrast": "khác quan hệ: と liệt kê cả hai danh từ, trong khi S1 ですか、S2 ですか đặt hai khả năng để người nghe chọn một."
+        },
+        {
+          "pattern": "何ですか",
+          "contrast": "khác độ mở: 何ですか hỏi thông tin chưa biết, còn S1 ですか、S2 ですか giới hạn câu trả lời trong hai lựa chọn đã nêu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

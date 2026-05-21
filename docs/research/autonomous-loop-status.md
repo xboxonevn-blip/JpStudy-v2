@@ -1807,3 +1807,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `の` can mean "about/of the category", as in
   `英語の雑誌`. Do not force every `の` into possession.
+
+## 2026-05-22 Phase G Tier-1 item 011
+
+- Re-authored `grammar:n5:grammar_n5_2:005` (`S1 ですか、S2 ですか`) with
+  choice-question structure, repeated `か`, and no `はい/いいえ` default.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `S1 ですか、S2 ですか` asks the learner to choose a
+  branch. Answer `本です` or `辞書です`, not a bare yes/no.

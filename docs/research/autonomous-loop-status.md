@@ -2153,3 +2153,14 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `Nはどうですか` asks "how is N?" and expects an
   impression or condition. It is not a definition question.
+
+## 2026-05-22 Phase G Tier-1 item 047
+
+- Re-authored `grammar:n5:grammar_n5_9:001` (`N が あります / わかります`) with
+  existence/understanding `が`, Hán-Việt "tồn tại/lý giải" bridge, and contrasts
+  against liking/skill `が`, transitive `を`, and clause-connector `が`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: with `あります` and `わかります`, `が` marks the thing
+  that exists or becomes understood. Do not treat it as a direct object with
+  `を`.

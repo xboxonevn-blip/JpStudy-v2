@@ -9849,6 +9849,224 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-form-l1-001",
+      "template_id": "tpl-grammar-n5-047-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ đúng: 時間___あります。",
+      "answer_template": "が",
+      "options_template": [
+        "が",
+        "を",
+        "へ",
+        "と"
+      ],
+      "distractor_strategy": "ga-with-arimasu-vs-object-direction-companion",
+      "teaching_note": "あります dùng が cho thứ đang có/tồn tại.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-form-l1-002",
+      "template_id": "tpl-grammar-n5-047-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng cho 'hiểu tiếng Nhật'?",
+      "answer_template": "日本語がわかります。",
+      "options_template": [
+        "日本語がわかります。",
+        "日本語をわかります。",
+        "日本語にわかります。",
+        "日本語でわかります。"
+      ],
+      "distractor_strategy": "ga-with-wakarimasu-form",
+      "teaching_note": "わかります dùng が cho nội dung được hiểu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-047-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "お金があります nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi có tiền / có tiền.",
+      "options_template": [
+        "Tôi có tiền / có tiền.",
+        "Tôi dùng tiền.",
+        "Tôi đi đến tiền.",
+        "Tôi tặng tiền cho ai đó."
+      ],
+      "distractor_strategy": "arimasu-possession-vs-use-direction-give",
+      "teaching_note": "Nがあります nói sự tồn tại/sở hữu của N.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-047-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong Nがわかります, N là gì?",
+      "answer_template": "Nội dung/ngôn ngữ được hiểu.",
+      "distractor_strategy": "wakarimasu-ga-role-recall",
+      "teaching_note": "N không phải tân ngữ を trong mẫu N5 này.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-usage-l3-005",
+      "template_id": "tpl-grammar-n5-047-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Tôi có thời gian': 時間 / が / あります",
+      "answer_template": "時間があります。",
+      "options_template": [
+        "時間",
+        "が",
+        "あります"
+      ],
+      "distractor_strategy": "arimasu-ga-order",
+      "teaching_note": "Thứ đang có đứng trước が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-usage-l3-006",
+      "template_id": "tpl-grammar-n5-047-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi hiểu tiếng Anh.",
+      "answer_template": "英語がわかります。",
+      "distractor_strategy": "apply-ga-to-understood-language",
+      "teaching_note": "Ngôn ngữ được hiểu dùng が với わかります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-context-l3-007",
+      "template_id": "tpl-grammar-n5-047-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh: bạn muốn nói hôm nay không có thời gian. Câu nào hợp nhất?",
+      "answer_template": "今日は時間がありません。",
+      "options_template": [
+        "今日は時間がありません。",
+        "今日は時間をありません。",
+        "今日は時間でありません。",
+        "今日は時間へありません。"
+      ],
+      "distractor_strategy": "negative-arimasu-ga-context",
+      "teaching_note": "あります/ありません vẫn dùng が với thứ có/không có.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-context-l2-008",
+      "template_id": "tpl-grammar-n5-047-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào dùng Nがわかります?",
+      "answer_template": "Khi muốn nói mình hiểu N/nội dung/ngôn ngữ đó.",
+      "options_template": [
+        "Khi muốn nói mình hiểu N/nội dung/ngôn ngữ đó.",
+        "Khi muốn nói mình ăn N.",
+        "Khi muốn nói mình tặng N cho ai.",
+        "Khi muốn nói mình đi tới N."
+      ],
+      "distractor_strategy": "wakarimasu-context-vs-transitive-give-direction",
+      "teaching_note": "わかります diễn tả trạng thái hiểu, không phải hành động tác động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-047-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích 4 câu. Câu nào dùng が với trạng thái hiểu, không dùng を?",
+      "answer_template": "日本語がわかります。",
+      "options_template": [
+        "日本語がわかります。",
+        "日本語を読みます。",
+        "日本語を勉強します。",
+        "日本語で話します。"
+      ],
+      "distractor_strategy": "wakarimasu-ga-vs-transitive-o-language-de-analysis",
+      "teaching_note": "L4: 読みます/勉強します là hành động tác động nên dùng を; わかります dùng が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-047-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-047-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào đúng nếu muốn nói 'có tiền', không phải 'dùng tiền làm gì'?",
+      "answer_template": "お金があります。",
+      "options_template": [
+        "お金があります。",
+        "お金を使います。",
+        "お金で買います。",
+        "お金へ行きます。"
+      ],
+      "distractor_strategy": "existence-possession-ga-vs-use-tool-direction-analysis",
+      "teaching_note": "Nがあります nói có/tồn tại; を/で thuộc các vai hành động khác.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

@@ -14,10 +14,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N が あります / わかります",
-      "meaning": "Ý nghĩa: `が` thường đi với các từ chỉ sở hữu, năng lực, cảm giác hoặc mức độ hiểu biết.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Cấu trúc N が あります / わかります dùng が để đưa N ra làm thứ tồn tại hoặc thứ được hiểu. あります đến từ ある = có/tồn tại; わかります diễn tả trạng thái 'hiểu/nhận ra', nên N không phải vật bị tác động như を mà là nội dung hiện ra trong hiểu biết.",
+      "hanVietBridge": "Nối với Hán-Việt 'tồn tại' và 'lý giải': 時間があります = thời gian tồn tại/có; 日本語がわかります = tiếng Nhật nằm trong vùng mình lý giải được. Vì vậy が đánh dấu thứ đang có/hiểu.",
+      "form": "Hình thức: N + が + あります/わかります. Ví dụ: 時間があります, お金がありません, 日本語がわかります.",
+      "meaning": "Ý nghĩa: có/tồn tại N; hoặc hiểu N. `が` làm nổi bật thứ đang có hoặc thứ được hiểu.",
+      "usage": "Sử dụng: dùng が với あります khi nói mình có thời gian/tiền/đồ vật, và với わかります khi nói hiểu ngôn ngữ/nội dung. Không dùng を trong mẫu N5 này.",
+      "humanMoment": "Dr. Linh lưu ý: N が あります / わかります không xem N là 'nạn nhân' của hành động. 時間があります là thời gian có mặt; 日本語がわかります là tiếng Nhật sáng lên trong đầu mình. Vì vậy dùng が, không phải を.",
+      "crossLinks": [
+        {
+          "pattern": "N が 好き/嫌い/上手/下手 です",
+          "contrast": "cùng dùng が với cảm giác/năng lực; 好き/上手 đánh dấu đối tượng cảm giác/kỹ năng, còn あります/わかります đánh dấu thứ có/hiểu."
+        },
+        {
+          "pattern": "NをV",
+          "contrast": "`を` đánh dấu vật bị hành động tác động; Nがわかります không phải 'tác động lên N' mà là trạng thái hiểu N."
+        },
+        {
+          "pattern": "S1 が、 S2",
+          "contrast": "khác vị trí: Nが gắn với danh từ trong một mệnh đề, còn S1が、S2 nối hai mệnh đề."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

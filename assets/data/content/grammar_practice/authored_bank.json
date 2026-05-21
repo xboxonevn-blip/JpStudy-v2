@@ -4880,6 +4880,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-form-l1-001",
+      "template_id": "tpl-grammar-n5-024-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ tạo phủ định toàn bộ: どこへ ___ 行きません。",
+      "answer_template": "も",
+      "options_template": [
+        "も",
+        "と",
+        "の",
+        "から"
+      ],
+      "distractor_strategy": "wh-mo-total-negation-form",
+      "teaching_note": "どこへも + phủ định = không đi đâu cả.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-form-l1-002",
+      "template_id": "tpl-grammar-n5-024-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu 'không đi đâu cả'?",
+      "answer_template": "どこへも行きません。",
+      "options_template": [
+        "どこへも行きません。",
+        "どこへ行きます。",
+        "どこも行きます。",
+        "どこへと行きません。"
+      ],
+      "distractor_strategy": "negative-required-total-negation",
+      "teaching_note": "Mẫu này cần も và động từ phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-024-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "今日はどこへも行きません nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Hôm nay không đi đâu cả.",
+      "options_template": [
+        "Hôm nay không đi đâu cả.",
+        "Hôm nay đi đâu?",
+        "Hôm nay cũng đi.",
+        "Hôm nay đi đến trường."
+      ],
+      "distractor_strategy": "nowhere-vs-question-additive-destination",
+      "teaching_note": "どこへも kết hợp với 行きません để phủ định mọi điểm đến.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-024-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Từ nghi vấn + も + động từ phủ định tạo nghĩa gì?",
+      "answer_template": "Phủ định toàn bộ: không nơi nào, không gì, không ai... tùy từ nghi vấn.",
+      "distractor_strategy": "wh-mo-negative-meaning-recall",
+      "teaching_note": "も không còn chỉ 'cũng' khi đi sau từ nghi vấn trong câu phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-usage-l3-005",
+      "template_id": "tpl-grammar-n5-024-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'không đi đâu cả': どこへ / も / 行きません",
+      "answer_template": "どこへも行きません。",
+      "options_template": [
+        "どこへ",
+        "も",
+        "行きません"
+      ],
+      "distractor_strategy": "total-negation-order",
+      "teaching_note": "も bám sau どこへ; phủ định nằm ở động từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-usage-l3-006",
+      "template_id": "tpl-grammar-n5-024-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Không ăn gì cả.' Dùng 何も.",
+      "answer_template": "何も食べません。",
+      "distractor_strategy": "nani-mo-negative-production",
+      "teaching_note": "Cùng cơ chế: 何も + phủ định = không gì cả.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-context-l3-007",
+      "template_id": "tpl-grammar-n5-024-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Cuối tuần bạn ở nhà hoàn toàn. Viết câu 'Tôi không đi đâu cả.'",
+      "answer_template": "どこへも行きません。",
+      "distractor_strategy": "stay-home-nowhere-context",
+      "teaching_note": "Ngữ cảnh không có điểm đến nào hợp với どこへも行きません.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-context-l2-008",
+      "template_id": "tpl-grammar-n5-024-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với どこへも行きません?",
+      "answer_template": "Bạn phủ định mọi điểm đến: không đi đâu cả.",
+      "options_template": [
+        "Bạn phủ định mọi điểm đến: không đi đâu cả.",
+        "Bạn hỏi sẽ đi đâu.",
+        "Bạn nói đi đến Nhật.",
+        "Bạn nói đi bằng xe buýt."
+      ],
+      "distractor_strategy": "nowhere-context-vs-question-destination-means",
+      "teaching_note": "Mẫu này không hỏi, cũng không nêu đích đến cụ thể.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-024-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn nói 'không đi đâu cả', không hỏi 'đi đâu?'. Câu nào đúng?",
+      "answer_template": "どこへも行きません。",
+      "options_template": [
+        "どこへも行きません。",
+        "どこへ行きますか。",
+        "学校へ行きます。",
+        "どこへも行きます。"
+      ],
+      "distractor_strategy": "total-negation-vs-wh-question-destination-analysis",
+      "teaching_note": "L4: どこへ行きますか là câu hỏi; どこへも行きません là phủ định toàn bộ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-024-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-024-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi kế hoạch hôm nay. Bạn không đi trường, không đi ga, không đi đâu. Câu nào bao phủ toàn bộ?",
+      "answer_template": "どこへも行きません。",
+      "options_template": [
+        "どこへも行きません。",
+        "学校へ行きません。",
+        "駅へ行きません。",
+        "何も食べません。"
+      ],
+      "distractor_strategy": "total-place-negation-vs-single-place-object-negation-analysis",
+      "teaching_note": "Phủ định một nơi không bằng phủ định mọi nơi; どこへも bao phủ toàn bộ tập địa điểm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

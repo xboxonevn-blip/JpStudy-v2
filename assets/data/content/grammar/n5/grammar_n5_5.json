@@ -58,10 +58,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: どこ [へ] も 行きません",
-      "meaning": "Ý nghĩa: Dùng từ để hỏi + `も` + động từ phủ định để nói “không ...",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Cấu trúc どこ[へ]も行きません ghép どこ ('ở đâu') với も và động từ phủ định. Khi từ nghi vấn đi với も trong câu phủ định, nghĩa mở rộng thành phủ định toàn bộ: không nơi nào, không gì, không ai.",
+      "hanVietBridge": "Nhớ bằng Hán-Việt 'toàn phủ định': どこ + も + 行きません không còn là câu hỏi 'đâu?', mà phủ định toàn bộ tập địa điểm. Tiếng Việt tự nhiên là 'không đi đâu cả'.",
+      "form": "Hình thức: どこ[へ]も + V phủ định, tiêu biểu là どこへも行きません. へ có thể xuất hiện để giữ vai trò hướng đến; も đứng trước động từ phủ định.",
+      "meaning": "Ý nghĩa: 'không đi đâu cả'. Cùng logic có 何も食べません = không ăn gì cả.",
+      "usage": "Sử dụng: dùng khi muốn phủ định toàn bộ lựa chọn nơi chốn hoặc đồ vật: 今日はどこへも行きません, 何も食べません. Bắt buộc có dạng phủ định như 行きません.",
+      "humanMoment": "Dr. Linh lưu ý: どこ[へ]も行きません không phải câu hỏi どこへ行きますか. どこ mở tập địa điểm, も quét hết tập đó, rồi 行きません phủ định: kết quả là 'không đi đâu cả'.",
+      "crossLinks": [
+        {
+          "pattern": "N(địa điểm) へ 行きます",
+          "contrast": "khác độ xác định: Nへ行きます nêu một đích cụ thể, còn どこへも行きません phủ định mọi đích."
+        },
+        {
+          "pattern": "N + も",
+          "contrast": "khác môi trường: Nも trong câu khẳng định nghĩa 'cũng', còn từ nghi vấn + も + phủ định tạo 'không ... nào cả'."
+        },
+        {
+          "pattern": "Vません",
+          "contrast": "khác phạm vi: Vません chỉ phủ định hành động, còn どこへも + Vません phủ định toàn bộ nơi chốn liên quan đến hành động."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

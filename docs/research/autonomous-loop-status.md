@@ -1996,3 +1996,14 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `何をしますか` asks what activity someone will do.
   Answer with an activity, not time/place/means/companion info.
+
+## 2026-05-22 Phase G Tier-1 item 032
+
+- Re-authored `grammar:n5:grammar_n5_6:004` (`何 (なん) / 何 (なに)`) with
+  pattern-specific reading rules for `なん` vs `なに`, Hán-Việt `hà`, and
+  contrasts against `何をしますか`, `何ですか`, and `何時`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `何` keeps the same "what" meaning; the next sound
+  decides reading. Use `なん` before `です` or counters, and `なに` before `を`
+  or `が`.

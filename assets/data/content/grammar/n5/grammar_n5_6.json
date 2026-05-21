@@ -146,10 +146,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: 何 (なん) / 何 (なに)",
-      "meaning": "Ý nghĩa: `何` có hai cách đọc chính.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "何 là chữ Hán-Việt 'hà', nghĩa gốc là hỏi 'gì/cái gì'. Trong cấu trúc đọc, なん là dạng âm gọn trước d/n/t hoặc từ đếm như 何時, 何人; なに giữ âm đầy đủ khi đi với trợ từ mở như を, が trong 何を, 何が.",
+      "hanVietBridge": "何 = hà trong các cụm Hán-Việt cũ như 'hà cớ', 'hà tất' = vì sao, cớ gì. Người Việt nhớ lõi nghĩa 'hỏi cái gì/cớ gì', rồi tiếng Nhật tách thêm hai âm đọc: なん khi dính âm sau, なに khi đứng rõ trước trợ từ.",
+      "form": "Hình thức: 何 đọc なん trước âm d/n/t hoặc số lượng/từ đếm: 何ですか, 何の, 何時. Đọc なに trước を, が và khi hỏi độc lập: 何をしますか, 何が好きですか.",
+      "meaning": "Ý nghĩa: cả なん và なに đều là 'gì/cái gì'; khác nhau chủ yếu ở âm đọc theo vị trí, không phải hai nghĩa khác nhau.",
+      "usage": "Sử dụng: nhìn chữ ngay sau 何 trước khi đọc. Nếu sau đó là です, の, hoặc từ đếm, chọn なん; nếu sau đó là を/が trong câu hỏi nội dung, chọn なに.",
+      "humanMoment": "Dr. Linh lưu ý: 何 (なん) / 何 (なに) không phải hai từ vựng riêng. Hãy đọc bằng tai: 何ですか trôi thành なんですか, nhưng 何を làm gì đó thì giữ nhịp なにを; đọc なんを sẽ vấp vì を cần một âm mở phía trước.",
+      "crossLinks": [
+        {
+          "pattern": "何をしますか",
+          "contrast": "khác trọng tâm: 何をしますか dùng cách đọc なにを để hỏi hoạt động, còn bài này quyết định khi nào đọc なん hay なに."
+        },
+        {
+          "pattern": "何ですか",
+          "contrast": "khác âm sau: trước です, 何 thường đọc なん; trước を, 何 thường đọc なに."
+        },
+        {
+          "pattern": "何時",
+          "contrast": "khác loại cụm: 何時 là từ đếm/thời điểm nên đọc なんじ, không đọc なにじ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -6575,6 +6575,231 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-form-l1-001",
+      "template_id": "tpl-grammar-n5-032-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "何ですか。Trong câu này 何 đọc thế nào?",
+      "answer_template": "なん",
+      "options_template": [
+        "なん",
+        "なに",
+        "どこ",
+        "いつ"
+      ],
+      "distractor_strategy": "nan-before-desu-vs-nani",
+      "teaching_note": "Trước です, 何 thường đọc là なん.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-form-l1-002",
+      "template_id": "tpl-grammar-n5-032-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "何をしますか。Trong cụm 何を, cách đọc tự nhiên là gì?",
+      "answer_template": "なにを",
+      "options_template": [
+        "なにを",
+        "なんを",
+        "なんで",
+        "なにの"
+      ],
+      "distractor_strategy": "nani-o-vs-nan-o",
+      "teaching_note": "Trước trợ từ を, 何 thường đọc なに.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-032-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "なん và なに trong 何 khác nhau chủ yếu ở điểm nào?",
+      "answer_template": "Cùng nghĩa 'gì/cái gì', khác cách đọc theo âm hoặc từ đứng sau.",
+      "options_template": [
+        "Cùng nghĩa 'gì/cái gì', khác cách đọc theo âm hoặc từ đứng sau.",
+        "なん luôn hỏi người, なに luôn hỏi nơi chốn.",
+        "なん là quá khứ, なに là hiện tại.",
+        "なん lịch sự hơn なに trong mọi câu."
+      ],
+      "distractor_strategy": "same-meaning-reading-condition-vs-false-semantic-splits",
+      "teaching_note": "Hai cách đọc không tạo hai nghĩa riêng trong bài này.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-032-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "何人ですか。Cụm 何人 thường đọc thế nào và hỏi gì?",
+      "answer_template": "なんにん; hỏi bao nhiêu người.",
+      "distractor_strategy": "counter-reading-nannin",
+      "teaching_note": "Trước từ đếm 人, 何 đọc なん.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-usage-l3-005",
+      "template_id": "tpl-grammar-n5-032-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Chọn cách đọc đúng cho câu: これは何ですか。",
+      "answer_template": "これはなんですか。",
+      "options_template": [
+        "これはなんですか。",
+        "これはなにですか。",
+        "これはなんをですか。",
+        "これはなにをですか。"
+      ],
+      "distractor_strategy": "apply-nan-before-desu",
+      "teaching_note": "です kéo 何 về cách đọc なん.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-usage-l3-006",
+      "template_id": "tpl-grammar-n5-032-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Bạn muốn hỏi 'Bạn ăn gì?'. Chọn cách đọc đúng của 何を.",
+      "answer_template": "何を食べますか。= なにをたべますか。",
+      "options_template": [
+        "何を食べますか。= なにをたべますか。",
+        "何を食べますか。= なんをたべますか。",
+        "何です食べますか。= なんですたべますか。",
+        "何時食べますか。= なんじたべますか。"
+      ],
+      "distractor_strategy": "apply-nani-before-o-in-object-question",
+      "teaching_note": "Khi 何 đi với を để hỏi tân ngữ, đọc なにを.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-context-l3-007",
+      "template_id": "tpl-grammar-n5-032-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Nghe thấy '...ですか' ngay sau 何. Bạn chọn cách đọc nào?",
+      "answer_template": "なん",
+      "options_template": [
+        "なん",
+        "なに",
+        "なにを",
+        "どれ"
+      ],
+      "distractor_strategy": "contextual-reading-after-desu",
+      "teaching_note": "Âm d trong です là tín hiệu đọc なん.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-context-l2-008",
+      "template_id": "tpl-grammar-n5-032-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "何時ですか。Cách đọc và nghĩa đúng là gì?",
+      "answer_template": "なんじですか。= Mấy giờ?",
+      "options_template": [
+        "なんじですか。= Mấy giờ?",
+        "なにときですか。= Ngày nào?",
+        "なんをですか。= Làm gì?",
+        "なにじですか。= Ở đâu?"
+      ],
+      "distractor_strategy": "nanji-counter-time-vs-false-readings",
+      "teaching_note": "何 + 時 là cụm hỏi giờ, đọc なんじ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-032-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích 4 câu. Câu nào có cách đọc 何 hợp với phần đứng sau?",
+      "answer_template": "これは何ですか。= これはなんですか。",
+      "options_template": [
+        "これは何ですか。= これはなんですか。",
+        "何を飲みますか。= なんをのみますか。",
+        "何時ですか。= なにじですか。",
+        "何人ですか。= なににんですか。"
+      ],
+      "distractor_strategy": "analyze-reading-condition-after-nani-nan",
+      "teaching_note": "L4: kiểm tra chữ sau 何; です và từ đếm kéo về なん, を kéo về なに.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-032-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-032-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: hỏi bạn sẽ uống gì. Câu nào đúng cả mẫu lẫn cách đọc?",
+      "answer_template": "何を飲みますか。= なにをのみますか。",
+      "options_template": [
+        "何を飲みますか。= なにをのみますか。",
+        "何を飲みますか。= なんをのみますか。",
+        "何ですか。= なにですか。",
+        "何時飲みますか。= なにじのみますか。"
+      ],
+      "distractor_strategy": "object-question-vs-desu-counter-reading-analysis",
+      "teaching_note": "Hỏi 'uống gì' cần 何を + động từ, đọc なにを; không dùng なんを.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

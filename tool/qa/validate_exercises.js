@@ -1,7 +1,24 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const REQUIRED_READING_COUNTS = { N5: 10, N4: 10, N3: 20, N2: 20, N1: 20 };
+const REQUIRED_READING_COUNTS = { N5: 150, N4: 150, N3: 166, N2: 326, N1: 176 };
+const REQUIRED_READING_SCOPES = [
+  { key: 'mina-i', start: 1, end: 25 },
+  { key: 'mina-ii', start: 26, end: 50 },
+  { key: 'hajimete-n5', start: 1, end: 50 },
+  { key: 'hajimete-n4', start: 1, end: 50 },
+  { key: 'shinkanzen-n3', start: 1, end: 83 },
+  { key: 'shinkanzen-n2', start: 1, end: 163 },
+  { key: 'shinkanzen-n1', start: 1, end: 88 },
+];
+const READING_LENGTH_RANGES = {
+  N5: [50, 150],
+  N4: [100, 200],
+  N3: [150, 300],
+  N2: [200, 400],
+  N1: [250, 500],
+};
+const REQUIRED_READING_QUESTION_TYPES = ['main_idea', 'detail', 'inference'];
 
 function validatePhase4Assets({ readingPassages, phoneticTraps, kanjiLookalikes }) {
   const failures = [];
@@ -87,31 +104,67 @@ function normalizeCoverageItem(item, manifest) {
 function validateReadingPassages(payload, failures) {
   const passages = payload?.passages || [];
   const byLevel = {};
+  const byLesson = {};
+  const seenIds = new Set();
   for (const passage of passages) {
-    byLevel[passage.level] = (byLevel[passage.level] || 0) + 1;
-    const textLength = Array.from(passage.ja_text || '').length;
-    if ((passage.level === 'N5' || passage.level === 'N4') && (textLength < 50 || textLength > 150)) {
-      failures.push(`reading length out of N5/N4 range: ${passage.passage_id}`);
+    if (!passage.passage_id) {
+      failures.push('reading passage missing id');
+      continue;
     }
-    if (['N3', 'N2', 'N1'].includes(passage.level) && (textLength < 100 || textLength > 300)) {
-      failures.push(`reading length out of upper range: ${passage.passage_id}`);
+    if (seenIds.has(passage.passage_id)) {
+      failures.push(`duplicate reading passage: ${passage.passage_id}`);
+    }
+    seenIds.add(passage.passage_id);
+    byLevel[passage.level] = (byLevel[passage.level] || 0) + 1;
+    if (passage.lesson_key) {
+      byLesson[passage.lesson_key] = (byLesson[passage.lesson_key] || 0) + 1;
+    }
+    const textLength = Array.from(passage.ja_text || '').length;
+    const range = READING_LENGTH_RANGES[passage.level];
+    if (!range) {
+      failures.push(`reading level invalid: ${passage.passage_id}`);
+    } else if (textLength < range[0] || textLength > range[1]) {
+      failures.push(`reading length out of ${passage.level} range: ${passage.passage_id}`);
     }
     const questions = passage.questions || [];
     if (questions.length < 3 || questions.length > 5) {
       failures.push(`reading question count invalid: ${passage.passage_id}`);
     }
+    const questionTypes = new Set(questions.map((question) => question.type));
+    for (const type of REQUIRED_READING_QUESTION_TYPES) {
+      if (!questionTypes.has(type)) {
+        failures.push(`reading missing ${type}: ${passage.passage_id}`);
+      }
+    }
     for (const question of questions) {
       if ((question.options_vi || []).length !== 4 || (question.options_ja || []).length !== 4) {
         failures.push(`reading option count invalid: ${passage.passage_id}`);
       }
-      if (question.correct_index < 0 || question.correct_index > 3) {
+      if (!Number.isInteger(question.correct_index) || question.correct_index < 0 || question.correct_index > 3) {
         failures.push(`reading correct index invalid: ${passage.passage_id}`);
       }
+    }
+    if (passage.source_type !== 'original' || !passage.source_credit) {
+      failures.push(`reading source attribution invalid: ${passage.passage_id}`);
+    }
+    if (!String(passage.copyright_safety || '').includes('no official JLPT')) {
+      failures.push(`reading copyright safety missing: ${passage.passage_id}`);
+    }
+    if (passage.passage_index === 2 && !String(passage.human_moment_vi || '').trim()) {
+      failures.push(`reading human moment missing: ${passage.passage_id}`);
     }
   }
   for (const [level, count] of Object.entries(REQUIRED_READING_COUNTS)) {
     if ((byLevel[level] || 0) < count) {
       failures.push(`reading count ${level} below ${count}`);
+    }
+  }
+  for (const scope of REQUIRED_READING_SCOPES) {
+    for (let lesson = scope.start; lesson <= scope.end; lesson += 1) {
+      const lessonKey = `${scope.key}:lesson-${String(lesson).padStart(3, '0')}`;
+      if ((byLesson[lessonKey] || 0) < 2) {
+        failures.push(`reading lesson count below 2: ${lessonKey}`);
+      }
     }
   }
 }

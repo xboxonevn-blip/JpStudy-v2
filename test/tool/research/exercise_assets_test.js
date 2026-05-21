@@ -5,9 +5,11 @@ const {
   buildKanjiLookalikeCorpus,
   buildExerciseCoverageManifest,
   buildPhoneticTrapCorpus,
-  buildReadingPassages,
   damerauLevenshtein,
 } = require('../../../tool/research/generate_exercises');
+const {
+  buildReadingPassages,
+} = require('../../../tool/research/generate_reading_passages');
 const {
   validatePhase4Assets,
   validateExerciseCoverageManifest,
@@ -32,11 +34,12 @@ test('buildReadingPassages emits required per-level counts and questions', () =>
     return acc;
   }, {});
 
-  assert.equal(byLevel.N5, 10);
-  assert.equal(byLevel.N4, 10);
-  assert.equal(byLevel.N3, 20);
-  assert.equal(byLevel.N2, 20);
-  assert.equal(byLevel.N1, 20);
+  assert.equal(byLevel.N5, 150);
+  assert.equal(byLevel.N4, 150);
+  assert.equal(byLevel.N3, 166);
+  assert.equal(byLevel.N2, 326);
+  assert.equal(byLevel.N1, 176);
+  assert.equal(passages.passages.length, 968);
 });
 
 test('buildPhoneticTrapCorpus keeps same-length near-kana traps', () => {

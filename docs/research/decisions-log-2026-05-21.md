@@ -489,3 +489,23 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This keeps the OQ-006 feature visible in the main lesson flashcard flow while preserving SRS and lesson history.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-050 - Phase F reading corpus is original JpStudy by default
+**Phase**: Follow-up Sprint Phase F
+**Date**: 2026-05-22 01:35 (local)
+**Context**: OQ-008 allows whitelisted source use or original authoring, while Phase F needs 968 passages across Mina I/II, Hajimete N5/N4, and Shin Kanzen N3/N2/N1.
+**Options considered**: crawl whitelisted online examples | copy public-domain excerpts | generate original passages from local lesson facts
+**Chosen**: Generate original JpStudy reading passages from local vocab/grammar facts and mark each passage `source_type: "original"` with source refs to local assets.
+**Rationale**: This avoids copyright and banned-source risk, keeps per-lesson coverage deterministic, and leaves online/PD source enrichment for later quality passes when specific source attribution can be reviewed.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-051 - JLPT reading screen prefers reading_passages corpus
+**Phase**: Follow-up Sprint Phase F
+**Date**: 2026-05-22 01:45 (local)
+**Context**: The old JLPT reading bank was derived from 125 immersion lesson files, but Phase F scale lives in `reading_passages_corpus.json`.
+**Options considered**: expand immersion files to 968 articles | keep JLPT reading on immersion only | load the scaled corpus first and keep immersion as fallback
+**Chosen**: Load `reading_passages_corpus.json` first for JLPT reading, with immersion article conversion as fallback for legacy/local samples.
+**Rationale**: This makes Phase F immediately visible in the JLPT reading flow without rewriting the immersion article format, and avoids eager rendering of hundreds of cards by switching the picker to a lazy sliver grid.
+**Reversible**: yes
+**Owner review**: pending

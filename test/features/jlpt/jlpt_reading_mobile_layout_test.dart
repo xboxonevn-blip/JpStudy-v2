@@ -6,7 +6,6 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
-import 'package:jpstudy/features/jlpt/data/jlpt_reading_bank.dart';
 import 'package:jpstudy/features/jlpt/screens/jlpt_reading_screen.dart';
 
 void main() {
@@ -15,11 +14,6 @@ void main() {
   testWidgets('mobile reading CTA clears the bottom navigation area', (
     tester,
   ) async {
-    final n3Passages = (await loadJlptReadingBank())
-        .where((entry) => entry.level == 'N3')
-        .toList(growable: false);
-    expect(n3Passages, isNotEmpty);
-
     tester.view.physicalSize = const Size(390, 844);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
@@ -51,6 +45,9 @@ void main() {
     );
 
     await tester.pump();
+    await tester.runAsync(() async {
+      await Future<void>.delayed(const Duration(milliseconds: 100));
+    });
     for (var i = 0; i < 20; i++) {
       await tester.pump(const Duration(milliseconds: 200));
       if (find.byIcon(Icons.play_arrow_rounded).evaluate().isNotEmpty) {
@@ -59,11 +56,14 @@ void main() {
     }
     await tester.pump(const Duration(seconds: 2));
 
-    expect(
-      find.byIcon(Icons.play_arrow_rounded, skipOffstage: false),
-      findsAtLeastNWidgets(1),
-      reason: 'Reading set data should load before checking viewport layout.',
-    );
+    final scrollable = find.byType(CustomScrollView).first;
+    for (var i = 0; i < 6; i++) {
+      if (find.byIcon(Icons.play_arrow_rounded).evaluate().isNotEmpty) {
+        break;
+      }
+      await tester.drag(scrollable, const Offset(0, -260));
+      await tester.pump(const Duration(milliseconds: 200));
+    }
 
     expect(
       find.byIcon(Icons.play_arrow_rounded),

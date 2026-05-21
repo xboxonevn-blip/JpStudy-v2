@@ -1686,3 +1686,24 @@
   vocab/flashcard tests, `flutter analyze lib test`, and `git diff --check`
   (line-ending warnings only).
 - Logged DECISION-048 and DECISION-049. No new blocking open questions.
+
+## 2026-05-22 Phase E vocab examples shipped
+
+- Committed and pushed `feat(vocab): wire example sentences into flashcards`
+  (`56acc1be`) to `origin/main`.
+- Fresh gates before commit: migration unit tests, migration validate-only,
+  focused vocab/flashcard Flutter tests, analyzer, diff check, and diff-only
+  banned-source/owner-tag scan.
+
+## 2026-05-22 Phase F reading scale-up batch 1
+
+- Added `tool/research/generate_reading_passages.js` and regenerated
+  `reading_passages_corpus.json` to 968 original JpStudy passages.
+- Coverage now matches OQ-008: Mina I/II, Hajimete N5/N4, Shin Kanzen
+  N3/N2/N1 all have 2 passages per target lesson.
+- Updated exercise validator for Phase F counts, per-lesson coverage,
+  source attribution, length ranges, 3 question types, and human moment check.
+- JLPT reading screen now reads the scaled corpus first; immersion lesson
+  files remain legacy/local sample articles.
+- Lazy sliver grid replaced eager card rendering so 326 N2 passages do not
+  freeze mobile/widget tests.

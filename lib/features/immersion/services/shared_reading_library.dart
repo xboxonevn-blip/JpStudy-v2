@@ -7,6 +7,8 @@ import 'package:jpstudy/features/jlpt/models/jlpt_reading_models.dart';
 class SharedReadingLibrary {
   const SharedReadingLibrary();
 
+  static const _readingCorpusPath =
+      'assets/data/content/reading_passages/reading_passages_corpus.json';
   static final _closingPlanRe = RegExp(r'(たい|つもり|ようにしている|ことにしている|予定|大切にしたい)');
   static final _immersionLevelRe = RegExp(r'/immersion/(n[1-5])/');
 
@@ -59,6 +61,12 @@ class SharedReadingLibrary {
   }
 
   Future<List<JlptReadingPassage>> loadJlptPassages() async {
+    final corpusPassages = await _loadReadingCorpusPassages();
+    if (corpusPassages.isNotEmpty) {
+      corpusPassages.sort(_comparePassages);
+      return corpusPassages;
+    }
+
     final articles = await loadImmersionArticles();
     final byLevel = <String, List<ImmersionArticle>>{};
     for (final article in articles) {
@@ -84,6 +92,102 @@ class SharedReadingLibrary {
 
   Future<List<String>> _loadLessonAssetPaths() async {
     return _fallbackLessonAssetPaths();
+  }
+
+  Future<List<JlptReadingPassage>> _loadReadingCorpusPassages() async {
+    try {
+      final raw = await rootBundle.loadString(_readingCorpusPath);
+      final decoded = jsonDecode(raw);
+      if (decoded is! Map<String, dynamic>) {
+        return const [];
+      }
+      final rawPassages = decoded['passages'];
+      if (rawPassages is! List) {
+        return const [];
+      }
+      final passages = <JlptReadingPassage>[];
+      for (final item in rawPassages.whereType<Map>()) {
+        final passage = _corpusPassageFromJson(_asMap(item));
+        if (passage != null) {
+          passages.add(passage);
+        }
+      }
+      return passages;
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  JlptReadingPassage? _corpusPassageFromJson(Map<String, dynamic> json) {
+    final id = json['passage_id']?.toString() ?? json['id']?.toString() ?? '';
+    final body = json['ja_text']?.toString() ?? json['body']?.toString() ?? '';
+    final level = ImmersionArticle.normalizeOfficialLevel(
+      json['level']?.toString(),
+    );
+    final questions = _corpusQuestionsFromJson(id, json['questions']);
+    if (id.trim().isEmpty || body.trim().isEmpty || questions.isEmpty) {
+      return null;
+    }
+
+    final titleParts = <String>[
+      if ((json['textbook']?.toString().trim() ?? '').isNotEmpty)
+        json['textbook']!.toString(),
+      if ((json['lesson_label']?.toString().trim() ?? '').isNotEmpty)
+        json['lesson_label']!.toString(),
+    ];
+    final title = json['title']?.toString() ?? titleParts.join(' ');
+
+    return JlptReadingPassage(
+      id: id,
+      title: title.trim().isEmpty ? id : title,
+      level: level,
+      recommendedMinutes: _recommendedMinutesForBody(level, body),
+      body: body,
+      questions: questions,
+    );
+  }
+
+  List<JlptReadingQuestion> _corpusQuestionsFromJson(
+    String passageId,
+    Object? rawQuestions,
+  ) {
+    if (rawQuestions is! List) {
+      return const [];
+    }
+    final questions = <JlptReadingQuestion>[];
+    for (var index = 0; index < rawQuestions.length; index += 1) {
+      final rawQuestion = rawQuestions[index];
+      if (rawQuestion is! Map) {
+        continue;
+      }
+      final json = _asMap(rawQuestion);
+      final prompt =
+          json['q_ja']?.toString() ?? json['question']?.toString() ?? '';
+      final options = _stringList(json['options_ja'] ?? json['options']);
+      if (prompt.trim().isEmpty || options.length < 2) {
+        continue;
+      }
+      final rawCorrect =
+          int.tryParse(
+            '${json['correct_index'] ?? json['correctIndex'] ?? 0}',
+          ) ??
+          0;
+      final correctIndex = rawCorrect.clamp(0, options.length - 1).toInt();
+      questions.add(
+        JlptReadingQuestion(
+          id: '$passageId-q${index + 1}',
+          type: _questionTypeFromString(json['type']?.toString()),
+          prompt: prompt,
+          options: options,
+          correctIndex: correctIndex,
+          explanation:
+              json['explanation_vi']?.toString() ??
+              json['explanation']?.toString() ??
+              '',
+        ),
+      );
+    }
+    return questions;
   }
 
   List<String> _fallbackLessonAssetPaths() {
@@ -261,6 +365,28 @@ class SharedReadingLibrary {
     return base;
   }
 
+  int _recommendedMinutesForBody(String level, String body) {
+    final textLength = body.replaceAll('\n', '').runes.length;
+    final base = switch (level) {
+      'N5' => 5,
+      'N4' => 7,
+      'N3' => 9,
+      'N2' => 11,
+      'N1' => 12,
+      _ => 8,
+    };
+    if (textLength >= 420) {
+      return base + 3;
+    }
+    if (textLength >= 320) {
+      return base + 2;
+    }
+    if (textLength >= 220) {
+      return base + 1;
+    }
+    return base;
+  }
+
   List<String> _paragraphTexts(ImmersionArticle article) {
     return article.paragraphs
         .map((paragraph) => paragraph.map((token) => token.surface).join())
@@ -275,6 +401,21 @@ class SharedReadingLibrary {
 
   Map<String, dynamic> _asMap(Map item) {
     return item.map((key, value) => MapEntry('$key', value));
+  }
+
+  List<String> _stringList(Object? value) {
+    if (value is! List) {
+      return const [];
+    }
+    return value.map((item) => item.toString()).toList(growable: false);
+  }
+
+  JlptReadingQuestionType _questionTypeFromString(String? value) {
+    return switch (value) {
+      'main_idea' || 'mainIdea' => JlptReadingQuestionType.mainIdea,
+      'inference' => JlptReadingQuestionType.inference,
+      _ => JlptReadingQuestionType.detail,
+    };
   }
 
   String? _levelFromAssetPath(String path) {

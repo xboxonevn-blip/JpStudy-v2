@@ -361,187 +361,199 @@ class _JlptReadingScreenState extends ConsumerState<JlptReadingScreen> {
                             .reduce((a, b) => a < b ? a : b);
                   final compactWidth = MediaQuery.sizeOf(context).width < 600;
 
-                  return ListView(
-                    padding: const EdgeInsets.fromLTRB(
-                      AppSpacing.lg,
-                      AppSpacing.lg,
-                      AppSpacing.lg,
-                      AppSpacing.pageBottom,
-                    ),
-                    children: [
-                      _HeaderHero(
-                            eyebrow: _dojoEyebrow(language),
-                            title: _title(language),
-                            subtitle: _intro(language),
-                            hint: _seriousHint(language),
-                            icon: Icons.menu_book_rounded,
-                            compact: compactWidth,
-                            footer: Wrap(
-                              spacing: AppSpacing.sm,
-                              runSpacing: AppSpacing.sm,
-                              children: [
-                                _InfoPill(
-                                  label: _trackLabel(
-                                    language,
-                                    selectedLevel.shortLabel,
-                                  ),
-                                  color: Colors.white,
-                                ),
-                                if (visiblePassages.isNotEmpty)
-                                  _InfoPill(
-                                    label: _setsCountLabel(
-                                      language,
-                                      visiblePassages.length,
-                                    ),
-                                    color: Colors.white,
-                                  ),
-                                if (visiblePassages.isNotEmpty)
-                                  _InfoPill(
-                                    label: _perSetQuestionLabel(
-                                      language,
-                                      visiblePassages.first.questions.length,
-                                    ),
-                                    color: Colors.white,
-                                  ),
-                                if (shortestTarget > 0)
-                                  _InfoPill(
-                                    label: _targetTimeLabel(
-                                      language,
-                                      shortestTarget,
-                                    ),
-                                    color: Colors.white,
-                                  ),
-                              ],
-                            ),
-                          )
-                          .animate()
-                          .fadeIn(duration: 360.ms)
-                          .slideY(begin: 0.08, end: 0),
-                      const SizedBox(height: AppSpacing.lg),
-                      if (snapshot.connectionState == ConnectionState.waiting)
-                        const Center(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(vertical: 24),
-                            child: CircularProgressIndicator(),
-                          ),
-                        )
-                      else if (snapshot.hasError)
-                        _InlineNoticeCard(
-                          title: _tr(
-                            language,
-                            'Unable to load reading sets',
-                            'Không tải được bộ bài đọc',
-                            '読解セットを読み込めません',
-                          ),
-                          message: _tr(
-                            language,
-                            'Please try again. If the issue continues, check the immersion lesson files.',
-                            'Hãy thử lại. Nếu lỗi còn tiếp tục, cần kiểm tra các file lesson immersion.',
-                            '再試行してください。問題が続く場合は immersion lesson ファイルを確認してください。',
-                          ),
-                          actionLabel: _tr(
-                            language,
-                            'Retry',
-                            'Thử lại',
-                            '再読み込み',
-                          ),
-                          onTap: () {
-                            setState(() {
-                              _passagesFuture = loadJlptReadingBank();
-                            });
-                          },
-                        )
-                      else if (allPassages.isEmpty)
-                        _InlineNoticeCard(
-                          title: _tr(
-                            language,
-                            'No reading sets yet',
-                            'Chưa có bộ bài đọc',
-                            '読解セットはまだありません',
-                          ),
-                          message: _tr(
-                            language,
-                            'Add immersion lesson files to populate this screen.',
-                            'Hãy thêm các file lesson immersion để màn này có dữ liệu.',
-                            'immersion lesson ファイルを追加すると、この画面に表示されます。',
-                          ),
-                        )
-                      else if (visiblePassages.isEmpty)
-                        _InlineNoticeCard(
-                          title: _tr(
-                            language,
-                            'No reading sets for this level',
-                            'Chưa có bài đọc cho cấp này',
-                            'このレベルの読解セットはまだありません',
-                          ),
-                          message: _tr(
-                            language,
-                            'Switch the JLPT level or add reading passages for this level.',
-                            'Hãy đổi cấp JLPT hoặc bổ sung bài đọc cho cấp này.',
-                            'JLPTレベルを変更するか、このトラックの読解を追加してください。',
-                          ),
-                        )
-                      else ...[
-                        if (!compactWidth) ...[
-                          _InlineNoticeCard(
-                            title: _tr(
-                              language,
-                              'Choose a focused reading set',
-                              'Chọn một bài đọc phù hợp',
-                              '集中して取り組むセットを選びましょう',
-                            ),
-                            message: _pickerGuideLabel(language),
-                          ),
-                          const SizedBox(height: AppSpacing.md),
-                        ],
-                        LayoutBuilder(
-                          builder: (context, constraints) {
-                            final columns = constraints.maxWidth >= 1180
-                                ? 2
-                                : 1;
-                            final width = columns == 2
-                                ? (constraints.maxWidth - AppSpacing.md) / 2
-                                : constraints.maxWidth;
-                            return Wrap(
-                              spacing: AppSpacing.md,
-                              runSpacing: AppSpacing.md,
-                              children: [
-                                for (var i = 0; i < visiblePassages.length; i++)
-                                  SizedBox(
-                                    width: width,
-                                    child: _ReadingPassageCard(
-                                      title: visiblePassages[i].title,
-                                      level: visiblePassages[i].level,
-                                      questionCount:
-                                          visiblePassages[i].questions.length,
-                                      recommendedMinutes:
-                                          visiblePassages[i].recommendedMinutes,
-                                      preview: _passagePreview(
-                                        visiblePassages[i],
-                                      ),
-                                      language: language,
-                                      previewLabel: _previewLabel(language),
-                                      startHint: _startHintLabel(language),
-                                      questionTypes: _questionTypeTags(
-                                        language,
-                                        visiblePassages[i],
-                                      ),
-                                      buttonLabel: _startLabel(language),
-                                      onTap: () =>
-                                          _startPassage(visiblePassages[i]),
-                                    ),
-                                  ),
-                              ],
-                            );
-                          },
-                        ),
-                      ],
-                    ],
+                  return _buildPassagePicker(
+                    language: language,
+                    selectedLevel: selectedLevel,
+                    allPassages: allPassages,
+                    visiblePassages: visiblePassages,
+                    isLoading:
+                        snapshot.connectionState == ConnectionState.waiting,
+                    hasError: snapshot.hasError,
+                    compactWidth: compactWidth,
+                    shortestTarget: shortestTarget,
                   );
                 },
               )
             : _buildPassageView(context, language, passage),
       ),
+    );
+  }
+
+  Widget _buildPassagePicker({
+    required AppLanguage language,
+    required StudyLevel selectedLevel,
+    required List<JlptReadingPassage> allPassages,
+    required List<JlptReadingPassage> visiblePassages,
+    required bool isLoading,
+    required bool hasError,
+    required bool compactWidth,
+    required int shortestTarget,
+  }) {
+    final showPassageGrid =
+        !isLoading &&
+        !hasError &&
+        allPassages.isNotEmpty &&
+        visiblePassages.isNotEmpty;
+    final headerChildren = <Widget>[
+      _HeaderHero(
+        eyebrow: _dojoEyebrow(language),
+        title: _title(language),
+        subtitle: _intro(language),
+        hint: _seriousHint(language),
+        icon: Icons.menu_book_rounded,
+        compact: compactWidth,
+        footer: Wrap(
+          spacing: AppSpacing.sm,
+          runSpacing: AppSpacing.sm,
+          children: [
+            _InfoPill(
+              label: _trackLabel(language, selectedLevel.shortLabel),
+              color: Colors.white,
+            ),
+            if (visiblePassages.isNotEmpty)
+              _InfoPill(
+                label: _setsCountLabel(language, visiblePassages.length),
+                color: Colors.white,
+              ),
+            if (visiblePassages.isNotEmpty)
+              _InfoPill(
+                label: _perSetQuestionLabel(
+                  language,
+                  visiblePassages.first.questions.length,
+                ),
+                color: Colors.white,
+              ),
+            if (shortestTarget > 0)
+              _InfoPill(
+                label: _targetTimeLabel(language, shortestTarget),
+                color: Colors.white,
+              ),
+          ],
+        ),
+      ).animate().fadeIn(duration: 360.ms).slideY(begin: 0.08, end: 0),
+      const SizedBox(height: AppSpacing.lg),
+      if (isLoading)
+        const Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 24),
+            child: CircularProgressIndicator(),
+          ),
+        )
+      else if (hasError)
+        _InlineNoticeCard(
+          title: _tr(
+            language,
+            'Unable to load reading sets',
+            'Không tải được bộ bài đọc',
+            '読解セットを読み込めません',
+          ),
+          message: _tr(
+            language,
+            'Please try again. If the issue continues, check the reading corpus asset.',
+            'Hãy thử lại. Nếu lỗi còn tiếp tục, cần kiểm tra asset reading corpus.',
+            '再試行してください。問題が続く場合は reading corpus アセットを確認してください。',
+          ),
+          actionLabel: _tr(language, 'Retry', 'Thử lại', '再読み込み'),
+          onTap: () {
+            setState(() {
+              _passagesFuture = loadJlptReadingBank();
+            });
+          },
+        )
+      else if (allPassages.isEmpty)
+        _InlineNoticeCard(
+          title: _tr(
+            language,
+            'No reading sets yet',
+            'Chưa có bộ bài đọc',
+            '読解セットはまだありません',
+          ),
+          message: _tr(
+            language,
+            'Add reading corpus passages to populate this screen.',
+            'Hãy thêm corpus bài đọc để màn này có dữ liệu.',
+            'reading corpus に読解セットを追加すると、この画面に表示されます。',
+          ),
+        )
+      else if (visiblePassages.isEmpty)
+        _InlineNoticeCard(
+          title: _tr(
+            language,
+            'No reading sets for this level',
+            'Chưa có bài đọc cho cấp này',
+            'このレベルの読解セットはまだありません',
+          ),
+          message: _tr(
+            language,
+            'Switch the JLPT level or add reading passages for this level.',
+            'Hãy đổi cấp JLPT hoặc bổ sung bài đọc cho cấp này.',
+            'JLPTレベルを変更するか、このトラックの読解を追加してください。',
+          ),
+        )
+      else if (!compactWidth) ...[
+        _InlineNoticeCard(
+          title: _tr(
+            language,
+            'Choose a focused reading set',
+            'Chọn một bài đọc phù hợp',
+            '集中して取り組むセットを選びましょう',
+          ),
+          message: _pickerGuideLabel(language),
+        ),
+        const SizedBox(height: AppSpacing.md),
+      ],
+    ];
+
+    return CustomScrollView(
+      slivers: [
+        SliverPadding(
+          padding: EdgeInsets.fromLTRB(
+            AppSpacing.lg,
+            AppSpacing.lg,
+            AppSpacing.lg,
+            showPassageGrid ? AppSpacing.md : AppSpacing.pageBottom,
+          ),
+          sliver: SliverList(delegate: SliverChildListDelegate(headerChildren)),
+        ),
+        if (showPassageGrid)
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.lg,
+              0,
+              AppSpacing.lg,
+              AppSpacing.pageBottom,
+            ),
+            sliver: SliverLayoutBuilder(
+              builder: (context, constraints) {
+                final columns = constraints.crossAxisExtent >= 1180 ? 2 : 1;
+                return SliverGrid(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: columns,
+                    crossAxisSpacing: AppSpacing.md,
+                    mainAxisSpacing: AppSpacing.md,
+                    mainAxisExtent: compactWidth ? 470 : 390,
+                  ),
+                  delegate: SliverChildBuilderDelegate((context, index) {
+                    final passage = visiblePassages[index];
+                    return _ReadingPassageCard(
+                      title: passage.title,
+                      level: passage.level,
+                      questionCount: passage.questions.length,
+                      recommendedMinutes: passage.recommendedMinutes,
+                      preview: _passagePreview(passage),
+                      language: language,
+                      previewLabel: _previewLabel(language),
+                      startHint: _startHintLabel(language),
+                      questionTypes: _questionTypeTags(language, passage),
+                      buttonLabel: _startLabel(language),
+                      onTap: () => _startPassage(passage),
+                    );
+                  }, childCount: visiblePassages.length),
+                );
+              },
+            ),
+          ),
+      ],
     );
   }
 

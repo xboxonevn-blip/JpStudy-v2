@@ -13,13 +13,14 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   test(
-    'JLPT reading bank loads directly from immersion lessons without duplicate ids',
+    'JLPT reading bank loads the scaled reading corpus without duplicate ids',
     () async {
       final jlptReadingBank = await loadJlptReadingBank();
       final immersionArticles = await ImmersionService().loadLocalSamples();
 
       expect(immersionArticles, isNotEmpty);
-      expect(jlptReadingBank.length, immersionArticles.length);
+      expect(jlptReadingBank.length, 968);
+      expect(jlptReadingBank.length, greaterThan(immersionArticles.length));
 
       final ids = jlptReadingBank.map((entry) => entry.id).toList();
       expect(ids.toSet().length, ids.length);
@@ -32,12 +33,12 @@ void main() {
       expect(jlptReadingBank.any((entry) => entry.level == 'N5'), isTrue);
       expect(jlptReadingBank.any((entry) => entry.level == 'N4'), isTrue);
       expect(jlptReadingBank.any((entry) => entry.level == 'N3'), isTrue);
+      expect(jlptReadingBank.where((entry) => entry.level == 'N2').length, 326);
       expect(
         jlptReadingBank.every((entry) => entry.questions.length == 3),
         isTrue,
       );
-
-      expect(ids.toSet(), immersionIds.toSet());
+      expect(ids.toSet().intersection(immersionIds.toSet()), isEmpty);
     },
   );
 

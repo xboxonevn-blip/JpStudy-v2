@@ -6151,6 +6151,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-form-l1-001",
+      "template_id": "tpl-grammar-n5-030-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ đúng: サッカー ___ します。",
+      "answer_template": "を",
+      "options_template": [
+        "を",
+        "へ",
+        "で",
+        "と"
+      ],
+      "distractor_strategy": "activity-object-o-form",
+      "teaching_note": "サッカー là hoạt động được thực hiện với します, nên dùng を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-form-l1-002",
+      "template_id": "tpl-grammar-n5-030-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để nói 'chơi tennis'?",
+      "answer_template": "テニスをします。",
+      "options_template": [
+        "テニスをします。",
+        "テニスへします。",
+        "テニスでします。",
+        "テニスとします。"
+      ],
+      "distractor_strategy": "activity-noun-suru-form",
+      "teaching_note": "Môn chơi/hoạt động + をします.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-030-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "サッカーをします nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Chơi bóng đá.",
+      "options_template": [
+        "Chơi bóng đá.",
+        "Uống bóng đá.",
+        "Đi đến bóng đá.",
+        "Bóng đá và tennis."
+      ],
+      "distractor_strategy": "activity-suru-vs-specific-verb-destination-list",
+      "teaching_note": "Với môn thể thao, します thường dịch là 'chơi'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-030-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong Nをします, N nên là loại danh từ nào?",
+      "answer_template": "Danh từ chỉ hoạt động, môn chơi, việc làm hoặc công việc.",
+      "distractor_strategy": "activity-noun-role-recall",
+      "teaching_note": "Không phải mọi đồ vật đều đi tự nhiên với します.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-usage-l3-005",
+      "template_id": "tpl-grammar-n5-030-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'học / làm việc học': 勉強 / を / します",
+      "answer_template": "勉強をします。",
+      "options_template": [
+        "勉強",
+        "を",
+        "します"
+      ],
+      "distractor_strategy": "study-suru-order",
+      "teaching_note": "勉強 là danh từ hoạt động; します biến nó thành hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-usage-l3-006",
+      "template_id": "tpl-grammar-n5-030-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Tôi chơi bóng chày.' Dùng 野球.",
+      "answer_template": "野球をします。",
+      "distractor_strategy": "sport-suru-production",
+      "teaching_note": "Môn thể thao + をします thường dịch là chơi môn đó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-context-l3-007",
+      "template_id": "tpl-grammar-n5-030-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Cuối tuần bạn chơi tennis với bạn. Viết phần 'chơi tennis'.",
+      "answer_template": "テニスをします。",
+      "distractor_strategy": "weekend-sport-context",
+      "teaching_note": "テニス là hoạt động thể thao nên đi với をします.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-context-l2-008",
+      "template_id": "tpl-grammar-n5-030-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với Nをします?",
+      "answer_template": "Bạn nói làm/chơi một hoạt động như bóng đá, tennis, học bài.",
+      "options_template": [
+        "Bạn nói làm/chơi một hoạt động như bóng đá, tennis, học bài.",
+        "Bạn nói uống nước.",
+        "Bạn nói đi đến trường.",
+        "Bạn nói đi bằng xe buýt."
+      ],
+      "distractor_strategy": "activity-context-vs-object-destination-means",
+      "teaching_note": "Nをします ưu tiên danh từ hoạt động; đồ uống/đồ đọc thường dùng động từ cụ thể.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-030-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần nói chơi bóng đá, không nói uống nước hay đọc sách. Câu nào dùng Nをします đúng?",
+      "answer_template": "サッカーをします。",
+      "options_template": [
+        "サッカーをします。",
+        "水を飲みます。",
+        "本を読みます。",
+        "学校へ行きます。"
+      ],
+      "distractor_strategy": "activity-suru-vs-specific-object-verb-destination-analysis",
+      "teaching_note": "L4: サッカー là hoạt động nên dùng します; 水/本 cần động từ cụ thể.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-030-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-030-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: 何をしますか。Bạn định học. Câu trả lời nào đúng loại hoạt động?",
+      "answer_template": "勉強をします。",
+      "options_template": [
+        "勉強をします。",
+        "水を飲みます。",
+        "学校へ行きます。",
+        "友達と行きます。"
+      ],
+      "distractor_strategy": "what-do-answer-activity-vs-object-destination-companion-analysis",
+      "teaching_note": "何をしますか hỏi hoạt động; 勉強をします trả lời bằng danh từ hoạt động + します.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

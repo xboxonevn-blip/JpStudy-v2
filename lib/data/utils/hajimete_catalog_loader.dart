@@ -52,12 +52,14 @@ class HajimeteChapterEntry {
     required this.reading,
     required this.meaningVi,
     required this.meaningEn,
+    required this.exampleSentencesJson,
   });
 
   final String term;
   final String reading;
   final String meaningVi;
   final String meaningEn;
+  final String exampleSentencesJson;
 }
 
 class HajimeteKanjiChapterDetail {
@@ -231,6 +233,9 @@ HajimeteChapterEntry _mapChapterEntry(Map<String, dynamic> entry) {
     reading: repairPotentialMojibake((lemma['reading'] ?? '').toString()),
     meaningVi: repairPotentialMojibake((sense['meaningVi'] ?? '').toString()),
     meaningEn: repairPotentialMojibake((sense['meaningEn'] ?? '').toString()),
+    exampleSentencesJson: entry['example_sentences'] is List
+        ? json.encode(entry['example_sentences'])
+        : '[]',
   );
 }
 

@@ -15,7 +15,7 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 90;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
-const _vocabSeedRevision = 3;
+const _vocabSeedRevision = 4;
 const _vocabSeedRevisionKeyPrefix = 'vocabSeedRevision';
 const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
@@ -489,7 +489,7 @@ class ContentDatabase extends _$ContentDatabase {
   Future<bool>? _kanjiContentCurrentFuture;
 
   @override
-  int get schemaVersion => 36;
+  int get schemaVersion => 37;
 
   @override
   MigrationStrategy get migration {
@@ -622,6 +622,10 @@ class ContentDatabase extends _$ContentDatabase {
           await m.createTable(conjugationLemma);
           await _createContentIndexes();
           await _seedConjugationLemmasForActiveLevel();
+        }
+        if (from < 37) {
+          await _addColumn(m, vocab, vocab.exampleSentencesJson);
+          await _reseedVocabularyForLevel(await _activeStudyLevelLabel());
         }
       },
       beforeOpen: (details) async {
@@ -1202,6 +1206,9 @@ class ContentDatabase extends _$ContentDatabase {
             series: const Value('mimikara'),
             level: level,
             tags: Value(item['tags'] as String?),
+            exampleSentencesJson: Value(
+              item['exampleSentencesJson'] as String? ?? '[]',
+            ),
           ),
           mode: InsertMode.insertOrIgnore,
         );
@@ -1263,6 +1270,7 @@ class ContentDatabase extends _$ContentDatabase {
       'level': level,
       'series': 'mimikara',
       'tags': _joinTags([_readTags(entry['tags']), 'mimikara_$unitId']),
+      'exampleSentencesJson': _exampleSentencesJsonFromEntry(entry),
     };
   }
 
@@ -1329,6 +1337,7 @@ class ContentDatabase extends _$ContentDatabase {
       series: const Value('hajimete'),
       level: level,
       tags: Value(tags?.nullIfEmpty()),
+      exampleSentencesJson: Value(_exampleSentencesJsonFromEntry(entry)),
     );
   }
 
@@ -1625,6 +1634,9 @@ class ContentDatabase extends _$ContentDatabase {
             series: Value((item['series'] as String?) ?? 'minna'),
             level: item['level'] as String,
             tags: Value(item['tags'] as String?),
+            exampleSentencesJson: Value(
+              item['exampleSentencesJson'] as String? ?? '[]',
+            ),
           ),
           mode: InsertMode.insertOrIgnore,
         );
@@ -1732,6 +1744,7 @@ class ContentDatabase extends _$ContentDatabase {
           'level': level,
           'series': payloadSeries,
           'tags': mergedTags,
+          'exampleSentencesJson': _exampleSentencesJsonFromEntry(entry),
         });
       }
 
@@ -1766,6 +1779,7 @@ class ContentDatabase extends _$ContentDatabase {
       final sourceVocabId = _readNullableText(raw, 'sourceVocabId');
       final sourceSenseId = _readNullableText(raw, 'sourceSenseId');
       final meaningEn = _readNullableText(raw, 'meaning_en');
+      final exampleSentencesJson = _readText(raw, 'exampleSentencesJson');
       final rowLevel = _firstNonEmpty([_readText(raw, 'level'), level]);
       final series = _firstNonEmpty([
         _readText(raw, 'series'),
@@ -1787,6 +1801,9 @@ class ContentDatabase extends _$ContentDatabase {
         'level': rowLevel,
         'series': series,
         'tags': tags,
+        'exampleSentencesJson': exampleSentencesJson.isEmpty
+            ? '[]'
+            : exampleSentencesJson,
       };
 
       final key = _exactSignature(normalized);
@@ -1841,6 +1858,11 @@ class ContentDatabase extends _$ContentDatabase {
     final text = value.toString().trim();
     if (text.isEmpty) return null;
     return text;
+  }
+
+  String _exampleSentencesJsonFromEntry(Map<String, dynamic> entry) {
+    final examples = entry['example_sentences'];
+    return examples is List ? json.encode(examples) : '[]';
   }
 
   String? _readTags(Object? raw) {
@@ -2184,6 +2206,7 @@ class _SeedVocabAggregate {
     required this.meaningEn,
     required this.level,
     required this.series,
+    required this.exampleSentencesJson,
     required Iterable<String> tags,
   }) : _tags = LinkedHashSet<String>() {
     _mergeTags(tags);
@@ -2198,6 +2221,7 @@ class _SeedVocabAggregate {
   final String? meaningEn;
   final String level;
   final String series;
+  final String exampleSentencesJson;
   final LinkedHashSet<String> _tags;
 
   factory _SeedVocabAggregate.fromRow(Map<String, dynamic> row) {
@@ -2211,6 +2235,10 @@ class _SeedVocabAggregate {
       meaningEn: row['meaning_en'] as String?,
       level: row['level'] as String,
       series: (row['series'] as String?) ?? 'minna',
+      exampleSentencesJson:
+          (row['exampleSentencesJson'] as String?)?.trim().isNotEmpty == true
+          ? row['exampleSentencesJson'] as String
+          : '[]',
       tags: _splitTags(row['tags'] as String?),
     );
   }
@@ -2231,6 +2259,7 @@ class _SeedVocabAggregate {
       'level': level,
       'series': series,
       'tags': _tags.join(','),
+      'exampleSentencesJson': exampleSentencesJson,
     };
   }
 

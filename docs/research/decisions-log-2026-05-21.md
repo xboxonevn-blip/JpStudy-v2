@@ -469,3 +469,23 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: A visible fallback for a non-existent textbook is worse than missing data. The corrected catalog now matches actual product architecture and prevents learners from entering a fake Mimikara N4/N5 lane or a fake Shin Kanzen vocab lane.
 **Reversible**: yes, but only if owner later supplies a real separate product/source that changes the textbook architecture.
 **Owner review**: pending
+
+## DECISION-048 - Phase E examples corpus bootstrapped from app vocab facts
+**Phase**: Follow-up Sprint Phase E
+**Date**: 2026-05-22 00:00 (local)
+**Context**: OQ-006 requires `examples_corpus.json`, but no corpus file existed in the repo when Phase E started.
+**Options considered**: block for external corpus | browse online examples | generate original JpStudy examples from existing vocab facts
+**Chosen**: Build `assets/data/content/examples_corpus.json` from existing vocab entries with `source: "original-jpstudy"`, then wire 1 example into every vocab row via `tool/migration/wire_example_sentences.js`.
+**Rationale**: This satisfies the schema and flashcard requirement without touching banned sources or copying third-party example prose. Phase G/F can later replace top items with richer hand-authored or licensed examples.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-049 - Store examples on user lesson terms for flashcard reach
+**Phase**: Follow-up Sprint Phase E
+**Date**: 2026-05-22 00:05 (local)
+**Context**: Flashcard mode reads `UserLessonTermData` for lesson routes, so content-DB-only `example_sentences[]` would not reach existing visible flashcards.
+**Options considered**: render examples only for content catalog routes | join content DB during every flashcard load | add `exampleSentencesJson` to `user_lesson_term` and sync in place
+**Chosen**: Add `exampleSentencesJson` to `user_lesson_term`, seed it from content rows, and sync existing matched lesson terms without deleting progress.
+**Rationale**: This keeps the OQ-006 feature visible in the main lesson flashcard flow while preserving SRS and lesson history.
+**Reversible**: yes
+**Owner review**: pending

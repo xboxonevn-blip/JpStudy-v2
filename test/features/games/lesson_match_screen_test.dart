@@ -21,6 +21,7 @@ UserLessonTermData _term(int id, String term, String definition) =>
       mnemonicVi: '',
       mnemonicEn: '',
       kanjiMeaning: '',
+      exampleSentencesJson: '[]',
       isStarred: false,
       isLearned: false,
       orderIndex: id,

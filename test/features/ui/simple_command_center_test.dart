@@ -731,6 +731,7 @@ void main() {
       mnemonicVi: '',
       mnemonicEn: '',
       kanjiMeaning: '',
+      exampleSentencesJson: '[]',
       isStarred: false,
       isLearned: true,
       orderIndex: 1,

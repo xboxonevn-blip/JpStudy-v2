@@ -12,6 +12,7 @@ void main() {
     String? meaningEn,
     String? mnemonicVi,
     String? mnemonicEn,
+    List<VocabExampleSentence> exampleSentences = const [],
   }) {
     return VocabItem(
       id: 1,
@@ -21,6 +22,7 @@ void main() {
       meaningEn: meaningEn,
       mnemonicVi: mnemonicVi,
       mnemonicEn: mnemonicEn,
+      exampleSentences: exampleSentences,
       level: 'N5',
     );
   }
@@ -150,6 +152,27 @@ void main() {
     test('false when reading equals term (pure-kana redundancy)', () {
       final v = item(term: 'てがみ', reading: 'てがみ');
       expect(v.hasDisplayReading, isFalse);
+    });
+  });
+
+  group('VocabItem.exampleSentences', () {
+    test('keeps sourced bilingual examples on the vocab model', () {
+      final v = item(
+        exampleSentences: const [
+          VocabExampleSentence(
+            exampleId: 'ex-n5-001',
+            ja: '私は学生です。',
+            vi: 'Tôi là học sinh.',
+            audioUrl: 'https://example.com/audio.mp3',
+            source: 'original-jpstudy',
+          ),
+        ],
+      );
+
+      expect(v.exampleSentences, hasLength(1));
+      expect(v.exampleSentences.single.ja, '私は学生です。');
+      expect(v.exampleSentences.single.vi, 'Tôi là học sinh.');
+      expect(v.exampleSentences.single.hasAudio, isTrue);
     });
   });
 }

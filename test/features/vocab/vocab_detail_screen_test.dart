@@ -27,6 +27,7 @@ const _stubVocab = VocabData(
   meaningEn: 'to eat',
   series: 'minna',
   level: 'N5',
+  exampleSentencesJson: '[]',
 );
 
 const _godanRuVocab = VocabData(
@@ -37,6 +38,7 @@ const _godanRuVocab = VocabData(
   meaningEn: 'to return',
   series: 'hajimete',
   level: 'N5',
+  exampleSentencesJson: '[]',
 );
 
 const _godanRuLemma = ConjugationLemmaData(

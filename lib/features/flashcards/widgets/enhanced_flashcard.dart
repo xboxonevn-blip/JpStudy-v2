@@ -37,6 +37,7 @@ class EnhancedFlashcard extends StatefulWidget {
 
 class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
   bool _isFlipped = false;
+  bool _showExampleJapanese = true;
   double _dragDx = 0;
   double _dragDy = 0;
 
@@ -264,6 +265,9 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
         widget.language == AppLanguage.vi &&
         (widget.item.kanjiMeaning?.trim().isNotEmpty ?? false);
     final showMnemonic = showExtras && mnemonic != null && mnemonic.isNotEmpty;
+    final examples = showExtras
+        ? widget.item.exampleSentences.take(2).toList(growable: false)
+        : const <VocabExampleSentence>[];
 
     return Center(
       child: SingleChildScrollView(
@@ -356,6 +360,18 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
                 ),
               ),
             ],
+            if (examples.isNotEmpty) ...[
+              const SizedBox(height: 16),
+              _ExamplePanel(
+                examples: examples,
+                showJapanese: _showExampleJapanese,
+                onToggleLanguage: () {
+                  setState(() {
+                    _showExampleJapanese = !_showExampleJapanese;
+                  });
+                },
+              ),
+            ],
           ],
         ),
       ),
@@ -366,6 +382,103 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
     return language == AppLanguage.en
         ? language.meaningEnLabel
         : language.meaningLabel;
+  }
+}
+
+class _ExamplePanel extends StatelessWidget {
+  const _ExamplePanel({
+    required this.examples,
+    required this.showJapanese,
+    required this.onToggleLanguage,
+  });
+
+  final List<VocabExampleSentence> examples;
+  final bool showJapanese;
+  final VoidCallback onToggleLanguage;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    final label = showJapanese ? 'JP' : 'VI';
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: palette.primary.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: palette.primary.withValues(alpha: 0.18)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(Icons.format_quote_rounded, color: palette.primary),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'Example',
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                    color: palette.primary,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+              TextButton(
+                key: const ValueKey('flashcard_example_lang_toggle'),
+                onPressed: onToggleLanguage,
+                child: Text(label),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          for (var index = 0; index < examples.length; index++) ...[
+            _ExampleRow(example: examples[index], showJapanese: showJapanese),
+            if (index < examples.length - 1) const SizedBox(height: 8),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _ExampleRow extends StatelessWidget {
+  const _ExampleRow({required this.example, required this.showJapanese});
+
+  final VocabExampleSentence example;
+  final bool showJapanese;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (example.hasAudio) ...[
+          IconButton(
+            icon: const Icon(Icons.volume_up_rounded),
+            color: palette.secondary,
+            tooltip: 'Audio',
+            onPressed: () {
+              ScaffoldMessenger.maybeOf(context)?.showSnackBar(
+                const SnackBar(content: Text('Audio example queued')),
+              );
+            },
+          ),
+          const SizedBox(width: 4),
+        ],
+        Expanded(
+          child: Text(
+            showJapanese ? example.ja : example.vi,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: palette.ink,
+              fontWeight: FontWeight.w600,
+              height: 1.45,
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
 

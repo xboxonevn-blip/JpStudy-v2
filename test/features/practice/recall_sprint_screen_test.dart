@@ -68,6 +68,7 @@ app_db.UserLessonTermData _term(
   mnemonicVi: '',
   mnemonicEn: '',
   kanjiMeaning: '',
+  exampleSentencesJson: '[]',
   isLearned: false,
   isStarred: false,
   orderIndex: id,

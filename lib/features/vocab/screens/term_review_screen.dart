@@ -155,6 +155,9 @@ class _TermReviewScreenState extends ConsumerState<TermReviewScreen>
             meaning: currentTermData.definition,
             meaningEn: currentTermData.definitionEn,
             kanjiMeaning: currentTermData.kanjiMeaning,
+            exampleSentences: parseVocabExampleSentences(
+              currentTermData.exampleSentencesJson,
+            ),
             level: '', // Not strictly needed for flashcard display
           );
           final srsStateAsync = ref.watch(srsStateProvider(currentTermData.id));

@@ -240,6 +240,9 @@ class _HajimeteChapterDetailScreenState
           reading: detail.entries[index].reading,
           meaning: detail.entries[index].meaningVi,
           meaningEn: detail.entries[index].meaningEn,
+          exampleSentences: parseVocabExampleSentences(
+            detail.entries[index].exampleSentencesJson,
+          ),
           level: detail.levelCode,
         ),
     ];
@@ -980,6 +983,7 @@ VocabItem _maskHintsForStage(VocabItem item) {
     reading: '',
     meaning: '',
     meaningEn: '',
+    exampleSentences: item.exampleSentences,
     level: item.level,
   );
 }

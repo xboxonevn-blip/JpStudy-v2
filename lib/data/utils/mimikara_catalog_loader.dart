@@ -63,6 +63,7 @@ class MimikaraUnitEntry {
     required this.meaningVi,
     required this.meaningEn,
     required this.hanViet,
+    required this.exampleSentencesJson,
   });
 
   final String term;
@@ -70,6 +71,7 @@ class MimikaraUnitEntry {
   final String meaningVi;
   final String? meaningEn;
   final String? hanViet;
+  final String exampleSentencesJson;
 }
 
 final _catalogCache = <String, MimikaraUnitCatalog>{};
@@ -177,6 +179,9 @@ MimikaraUnitEntry _mapEntry(Map<String, dynamic> entry) {
     meaningVi: _cleanText(sense['meaningVi']),
     meaningEn: _nullIfEmpty(_cleanText(sense['meaningEn'])),
     hanViet: _nullIfEmpty(_cleanText(labels['hanViet'])),
+    exampleSentencesJson: entry['example_sentences'] is List
+        ? json.encode(entry['example_sentences'])
+        : '[]',
   );
 }
 

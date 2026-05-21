@@ -120,6 +120,18 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _exampleSentencesJsonMeta =
+      const VerificationMeta('exampleSentencesJson');
+  @override
+  late final GeneratedColumn<String> exampleSentencesJson =
+      GeneratedColumn<String>(
+        'example_sentences_json',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+        defaultValue: const Constant('[]'),
+      );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -133,6 +145,7 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
     series,
     level,
     tags,
+    exampleSentencesJson,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -224,6 +237,15 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
         tags.isAcceptableOrUnknown(data['tags']!, _tagsMeta),
       );
     }
+    if (data.containsKey('example_sentences_json')) {
+      context.handle(
+        _exampleSentencesJsonMeta,
+        exampleSentencesJson.isAcceptableOrUnknown(
+          data['example_sentences_json']!,
+          _exampleSentencesJsonMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -277,6 +299,10 @@ class $VocabTable extends Vocab with TableInfo<$VocabTable, VocabData> {
         DriftSqlType.string,
         data['${effectivePrefix}tags'],
       ),
+      exampleSentencesJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}example_sentences_json'],
+      )!,
     );
   }
 
@@ -298,6 +324,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
   final String series;
   final String level;
   final String? tags;
+  final String exampleSentencesJson;
   const VocabData({
     required this.id,
     required this.term,
@@ -310,6 +337,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     required this.series,
     required this.level,
     this.tags,
+    required this.exampleSentencesJson,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -337,6 +365,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     if (!nullToAbsent || tags != null) {
       map['tags'] = Variable<String>(tags);
     }
+    map['example_sentences_json'] = Variable<String>(exampleSentencesJson);
     return map;
   }
 
@@ -363,6 +392,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       series: Value(series),
       level: Value(level),
       tags: tags == null && nullToAbsent ? const Value.absent() : Value(tags),
+      exampleSentencesJson: Value(exampleSentencesJson),
     );
   }
 
@@ -383,6 +413,9 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       series: serializer.fromJson<String>(json['series']),
       level: serializer.fromJson<String>(json['level']),
       tags: serializer.fromJson<String?>(json['tags']),
+      exampleSentencesJson: serializer.fromJson<String>(
+        json['exampleSentencesJson'],
+      ),
     );
   }
   @override
@@ -400,6 +433,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       'series': serializer.toJson<String>(series),
       'level': serializer.toJson<String>(level),
       'tags': serializer.toJson<String?>(tags),
+      'exampleSentencesJson': serializer.toJson<String>(exampleSentencesJson),
     };
   }
 
@@ -415,6 +449,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     String? series,
     String? level,
     Value<String?> tags = const Value.absent(),
+    String? exampleSentencesJson,
   }) => VocabData(
     id: id ?? this.id,
     term: term ?? this.term,
@@ -431,6 +466,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     series: series ?? this.series,
     level: level ?? this.level,
     tags: tags.present ? tags.value : this.tags,
+    exampleSentencesJson: exampleSentencesJson ?? this.exampleSentencesJson,
   );
   VocabData copyWithCompanion(VocabCompanion data) {
     return VocabData(
@@ -451,6 +487,9 @@ class VocabData extends DataClass implements Insertable<VocabData> {
       series: data.series.present ? data.series.value : this.series,
       level: data.level.present ? data.level.value : this.level,
       tags: data.tags.present ? data.tags.value : this.tags,
+      exampleSentencesJson: data.exampleSentencesJson.present
+          ? data.exampleSentencesJson.value
+          : this.exampleSentencesJson,
     );
   }
 
@@ -467,7 +506,8 @@ class VocabData extends DataClass implements Insertable<VocabData> {
           ..write('sourceSenseId: $sourceSenseId, ')
           ..write('series: $series, ')
           ..write('level: $level, ')
-          ..write('tags: $tags')
+          ..write('tags: $tags, ')
+          ..write('exampleSentencesJson: $exampleSentencesJson')
           ..write(')'))
         .toString();
   }
@@ -485,6 +525,7 @@ class VocabData extends DataClass implements Insertable<VocabData> {
     series,
     level,
     tags,
+    exampleSentencesJson,
   );
   @override
   bool operator ==(Object other) =>
@@ -500,7 +541,8 @@ class VocabData extends DataClass implements Insertable<VocabData> {
           other.sourceSenseId == this.sourceSenseId &&
           other.series == this.series &&
           other.level == this.level &&
-          other.tags == this.tags);
+          other.tags == this.tags &&
+          other.exampleSentencesJson == this.exampleSentencesJson);
 }
 
 class VocabCompanion extends UpdateCompanion<VocabData> {
@@ -515,6 +557,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
   final Value<String> series;
   final Value<String> level;
   final Value<String?> tags;
+  final Value<String> exampleSentencesJson;
   const VocabCompanion({
     this.id = const Value.absent(),
     this.term = const Value.absent(),
@@ -527,6 +570,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     this.series = const Value.absent(),
     this.level = const Value.absent(),
     this.tags = const Value.absent(),
+    this.exampleSentencesJson = const Value.absent(),
   });
   VocabCompanion.insert({
     this.id = const Value.absent(),
@@ -540,6 +584,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     this.series = const Value.absent(),
     required String level,
     this.tags = const Value.absent(),
+    this.exampleSentencesJson = const Value.absent(),
   }) : term = Value(term),
        meaning = Value(meaning),
        level = Value(level);
@@ -555,6 +600,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     Expression<String>? series,
     Expression<String>? level,
     Expression<String>? tags,
+    Expression<String>? exampleSentencesJson,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -568,6 +614,8 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
       if (series != null) 'series': series,
       if (level != null) 'level': level,
       if (tags != null) 'tags': tags,
+      if (exampleSentencesJson != null)
+        'example_sentences_json': exampleSentencesJson,
     });
   }
 
@@ -583,6 +631,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     Value<String>? series,
     Value<String>? level,
     Value<String?>? tags,
+    Value<String>? exampleSentencesJson,
   }) {
     return VocabCompanion(
       id: id ?? this.id,
@@ -596,6 +645,7 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
       series: series ?? this.series,
       level: level ?? this.level,
       tags: tags ?? this.tags,
+      exampleSentencesJson: exampleSentencesJson ?? this.exampleSentencesJson,
     );
   }
 
@@ -635,6 +685,11 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
     if (tags.present) {
       map['tags'] = Variable<String>(tags.value);
     }
+    if (exampleSentencesJson.present) {
+      map['example_sentences_json'] = Variable<String>(
+        exampleSentencesJson.value,
+      );
+    }
     return map;
   }
 
@@ -651,7 +706,8 @@ class VocabCompanion extends UpdateCompanion<VocabData> {
           ..write('sourceSenseId: $sourceSenseId, ')
           ..write('series: $series, ')
           ..write('level: $level, ')
-          ..write('tags: $tags')
+          ..write('tags: $tags, ')
+          ..write('exampleSentencesJson: $exampleSentencesJson')
           ..write(')'))
         .toString();
   }
@@ -5230,6 +5286,7 @@ typedef $$VocabTableCreateCompanionBuilder =
       Value<String> series,
       required String level,
       Value<String?> tags,
+      Value<String> exampleSentencesJson,
     });
 typedef $$VocabTableUpdateCompanionBuilder =
     VocabCompanion Function({
@@ -5244,6 +5301,7 @@ typedef $$VocabTableUpdateCompanionBuilder =
       Value<String> series,
       Value<String> level,
       Value<String?> tags,
+      Value<String> exampleSentencesJson,
     });
 
 final class $$VocabTableReferences
@@ -5354,6 +5412,11 @@ class $$VocabTableFilterComposer
 
   ColumnFilters<String> get tags => $composableBuilder(
     column: $table.tags,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get exampleSentencesJson => $composableBuilder(
+    column: $table.exampleSentencesJson,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -5471,6 +5534,11 @@ class $$VocabTableOrderingComposer
     column: $table.tags,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<String> get exampleSentencesJson => $composableBuilder(
+    column: $table.exampleSentencesJson,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$VocabTableAnnotationComposer
@@ -5520,6 +5588,11 @@ class $$VocabTableAnnotationComposer
 
   GeneratedColumn<String> get tags =>
       $composableBuilder(column: $table.tags, builder: (column) => column);
+
+  GeneratedColumn<String> get exampleSentencesJson => $composableBuilder(
+    column: $table.exampleSentencesJson,
+    builder: (column) => column,
+  );
 
   Expression<T> userProgressRefs<T extends Object>(
     Expression<T> Function($$UserProgressTableAnnotationComposer a) f,
@@ -5614,6 +5687,7 @@ class $$VocabTableTableManager
                 Value<String> series = const Value.absent(),
                 Value<String> level = const Value.absent(),
                 Value<String?> tags = const Value.absent(),
+                Value<String> exampleSentencesJson = const Value.absent(),
               }) => VocabCompanion(
                 id: id,
                 term: term,
@@ -5626,6 +5700,7 @@ class $$VocabTableTableManager
                 series: series,
                 level: level,
                 tags: tags,
+                exampleSentencesJson: exampleSentencesJson,
               ),
           createCompanionCallback:
               ({
@@ -5640,6 +5715,7 @@ class $$VocabTableTableManager
                 Value<String> series = const Value.absent(),
                 required String level,
                 Value<String?> tags = const Value.absent(),
+                Value<String> exampleSentencesJson = const Value.absent(),
               }) => VocabCompanion.insert(
                 id: id,
                 term: term,
@@ -5652,6 +5728,7 @@ class $$VocabTableTableManager
                 series: series,
                 level: level,
                 tags: tags,
+                exampleSentencesJson: exampleSentencesJson,
               ),
           withReferenceMapper: (p0) => p0
               .map(

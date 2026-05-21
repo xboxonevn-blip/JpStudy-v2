@@ -75,6 +75,9 @@ class FlashcardModeIntegration extends ConsumerWidget {
             meaning: t.definition,
             meaningEn: t.definitionEn,
             kanjiMeaning: t.kanjiMeaning,
+            exampleSentences: parseVocabExampleSentences(
+              t.exampleSentencesJson,
+            ),
             level: levelLabel,
           ),
         )

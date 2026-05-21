@@ -84,6 +84,7 @@ UserLessonTermData _makeDueTerm(int id) => UserLessonTermData(
   mnemonicVi: '',
   mnemonicEn: '',
   kanjiMeaning: '',
+  exampleSentencesJson: '[]',
   isStarred: false,
   isLearned: false,
   orderIndex: id,

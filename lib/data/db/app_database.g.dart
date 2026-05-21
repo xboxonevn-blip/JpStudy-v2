@@ -7722,6 +7722,18 @@ class $UserLessonTermTable extends UserLessonTerm
     requiredDuringInsert: false,
     defaultValue: const Constant(''),
   );
+  static const VerificationMeta _exampleSentencesJsonMeta =
+      const VerificationMeta('exampleSentencesJson');
+  @override
+  late final GeneratedColumn<String> exampleSentencesJson =
+      GeneratedColumn<String>(
+        'example_sentences_json',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+        defaultValue: const Constant('[]'),
+      );
   static const VerificationMeta _isStarredMeta = const VerificationMeta(
     'isStarred',
   );
@@ -7775,6 +7787,7 @@ class $UserLessonTermTable extends UserLessonTerm
     mnemonicVi,
     mnemonicEn,
     kanjiMeaning,
+    exampleSentencesJson,
     isStarred,
     isLearned,
     orderIndex,
@@ -7850,6 +7863,15 @@ class $UserLessonTermTable extends UserLessonTerm
         ),
       );
     }
+    if (data.containsKey('example_sentences_json')) {
+      context.handle(
+        _exampleSentencesJsonMeta,
+        exampleSentencesJson.isAcceptableOrUnknown(
+          data['example_sentences_json']!,
+          _exampleSentencesJsonMeta,
+        ),
+      );
+    }
     if (data.containsKey('is_starred')) {
       context.handle(
         _isStarredMeta,
@@ -7913,6 +7935,10 @@ class $UserLessonTermTable extends UserLessonTerm
         DriftSqlType.string,
         data['${effectivePrefix}kanji_meaning'],
       )!,
+      exampleSentencesJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}example_sentences_json'],
+      )!,
       isStarred: attachedDatabase.typeMapping.read(
         DriftSqlType.bool,
         data['${effectivePrefix}is_starred'],
@@ -7945,6 +7971,7 @@ class UserLessonTermData extends DataClass
   final String mnemonicVi;
   final String mnemonicEn;
   final String kanjiMeaning;
+  final String exampleSentencesJson;
   final bool isStarred;
   final bool isLearned;
   final int orderIndex;
@@ -7958,6 +7985,7 @@ class UserLessonTermData extends DataClass
     required this.mnemonicVi,
     required this.mnemonicEn,
     required this.kanjiMeaning,
+    required this.exampleSentencesJson,
     required this.isStarred,
     required this.isLearned,
     required this.orderIndex,
@@ -7974,6 +8002,7 @@ class UserLessonTermData extends DataClass
     map['mnemonic_vi'] = Variable<String>(mnemonicVi);
     map['mnemonic_en'] = Variable<String>(mnemonicEn);
     map['kanji_meaning'] = Variable<String>(kanjiMeaning);
+    map['example_sentences_json'] = Variable<String>(exampleSentencesJson);
     map['is_starred'] = Variable<bool>(isStarred);
     map['is_learned'] = Variable<bool>(isLearned);
     map['order_index'] = Variable<int>(orderIndex);
@@ -7991,6 +8020,7 @@ class UserLessonTermData extends DataClass
       mnemonicVi: Value(mnemonicVi),
       mnemonicEn: Value(mnemonicEn),
       kanjiMeaning: Value(kanjiMeaning),
+      exampleSentencesJson: Value(exampleSentencesJson),
       isStarred: Value(isStarred),
       isLearned: Value(isLearned),
       orderIndex: Value(orderIndex),
@@ -8012,6 +8042,9 @@ class UserLessonTermData extends DataClass
       mnemonicVi: serializer.fromJson<String>(json['mnemonicVi']),
       mnemonicEn: serializer.fromJson<String>(json['mnemonicEn']),
       kanjiMeaning: serializer.fromJson<String>(json['kanjiMeaning']),
+      exampleSentencesJson: serializer.fromJson<String>(
+        json['exampleSentencesJson'],
+      ),
       isStarred: serializer.fromJson<bool>(json['isStarred']),
       isLearned: serializer.fromJson<bool>(json['isLearned']),
       orderIndex: serializer.fromJson<int>(json['orderIndex']),
@@ -8030,6 +8063,7 @@ class UserLessonTermData extends DataClass
       'mnemonicVi': serializer.toJson<String>(mnemonicVi),
       'mnemonicEn': serializer.toJson<String>(mnemonicEn),
       'kanjiMeaning': serializer.toJson<String>(kanjiMeaning),
+      'exampleSentencesJson': serializer.toJson<String>(exampleSentencesJson),
       'isStarred': serializer.toJson<bool>(isStarred),
       'isLearned': serializer.toJson<bool>(isLearned),
       'orderIndex': serializer.toJson<int>(orderIndex),
@@ -8046,6 +8080,7 @@ class UserLessonTermData extends DataClass
     String? mnemonicVi,
     String? mnemonicEn,
     String? kanjiMeaning,
+    String? exampleSentencesJson,
     bool? isStarred,
     bool? isLearned,
     int? orderIndex,
@@ -8059,6 +8094,7 @@ class UserLessonTermData extends DataClass
     mnemonicVi: mnemonicVi ?? this.mnemonicVi,
     mnemonicEn: mnemonicEn ?? this.mnemonicEn,
     kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
+    exampleSentencesJson: exampleSentencesJson ?? this.exampleSentencesJson,
     isStarred: isStarred ?? this.isStarred,
     isLearned: isLearned ?? this.isLearned,
     orderIndex: orderIndex ?? this.orderIndex,
@@ -8084,6 +8120,9 @@ class UserLessonTermData extends DataClass
       kanjiMeaning: data.kanjiMeaning.present
           ? data.kanjiMeaning.value
           : this.kanjiMeaning,
+      exampleSentencesJson: data.exampleSentencesJson.present
+          ? data.exampleSentencesJson.value
+          : this.exampleSentencesJson,
       isStarred: data.isStarred.present ? data.isStarred.value : this.isStarred,
       isLearned: data.isLearned.present ? data.isLearned.value : this.isLearned,
       orderIndex: data.orderIndex.present
@@ -8104,6 +8143,7 @@ class UserLessonTermData extends DataClass
           ..write('mnemonicVi: $mnemonicVi, ')
           ..write('mnemonicEn: $mnemonicEn, ')
           ..write('kanjiMeaning: $kanjiMeaning, ')
+          ..write('exampleSentencesJson: $exampleSentencesJson, ')
           ..write('isStarred: $isStarred, ')
           ..write('isLearned: $isLearned, ')
           ..write('orderIndex: $orderIndex')
@@ -8122,6 +8162,7 @@ class UserLessonTermData extends DataClass
     mnemonicVi,
     mnemonicEn,
     kanjiMeaning,
+    exampleSentencesJson,
     isStarred,
     isLearned,
     orderIndex,
@@ -8139,6 +8180,7 @@ class UserLessonTermData extends DataClass
           other.mnemonicVi == this.mnemonicVi &&
           other.mnemonicEn == this.mnemonicEn &&
           other.kanjiMeaning == this.kanjiMeaning &&
+          other.exampleSentencesJson == this.exampleSentencesJson &&
           other.isStarred == this.isStarred &&
           other.isLearned == this.isLearned &&
           other.orderIndex == this.orderIndex);
@@ -8154,6 +8196,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
   final Value<String> mnemonicVi;
   final Value<String> mnemonicEn;
   final Value<String> kanjiMeaning;
+  final Value<String> exampleSentencesJson;
   final Value<bool> isStarred;
   final Value<bool> isLearned;
   final Value<int> orderIndex;
@@ -8167,6 +8210,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.mnemonicVi = const Value.absent(),
     this.mnemonicEn = const Value.absent(),
     this.kanjiMeaning = const Value.absent(),
+    this.exampleSentencesJson = const Value.absent(),
     this.isStarred = const Value.absent(),
     this.isLearned = const Value.absent(),
     this.orderIndex = const Value.absent(),
@@ -8181,6 +8225,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     this.mnemonicVi = const Value.absent(),
     this.mnemonicEn = const Value.absent(),
     this.kanjiMeaning = const Value.absent(),
+    this.exampleSentencesJson = const Value.absent(),
     this.isStarred = const Value.absent(),
     this.isLearned = const Value.absent(),
     this.orderIndex = const Value.absent(),
@@ -8195,6 +8240,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Expression<String>? mnemonicVi,
     Expression<String>? mnemonicEn,
     Expression<String>? kanjiMeaning,
+    Expression<String>? exampleSentencesJson,
     Expression<bool>? isStarred,
     Expression<bool>? isLearned,
     Expression<int>? orderIndex,
@@ -8209,6 +8255,8 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       if (mnemonicVi != null) 'mnemonic_vi': mnemonicVi,
       if (mnemonicEn != null) 'mnemonic_en': mnemonicEn,
       if (kanjiMeaning != null) 'kanji_meaning': kanjiMeaning,
+      if (exampleSentencesJson != null)
+        'example_sentences_json': exampleSentencesJson,
       if (isStarred != null) 'is_starred': isStarred,
       if (isLearned != null) 'is_learned': isLearned,
       if (orderIndex != null) 'order_index': orderIndex,
@@ -8225,6 +8273,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     Value<String>? mnemonicVi,
     Value<String>? mnemonicEn,
     Value<String>? kanjiMeaning,
+    Value<String>? exampleSentencesJson,
     Value<bool>? isStarred,
     Value<bool>? isLearned,
     Value<int>? orderIndex,
@@ -8239,6 +8288,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
       mnemonicVi: mnemonicVi ?? this.mnemonicVi,
       mnemonicEn: mnemonicEn ?? this.mnemonicEn,
       kanjiMeaning: kanjiMeaning ?? this.kanjiMeaning,
+      exampleSentencesJson: exampleSentencesJson ?? this.exampleSentencesJson,
       isStarred: isStarred ?? this.isStarred,
       isLearned: isLearned ?? this.isLearned,
       orderIndex: orderIndex ?? this.orderIndex,
@@ -8275,6 +8325,11 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
     if (kanjiMeaning.present) {
       map['kanji_meaning'] = Variable<String>(kanjiMeaning.value);
     }
+    if (exampleSentencesJson.present) {
+      map['example_sentences_json'] = Variable<String>(
+        exampleSentencesJson.value,
+      );
+    }
     if (isStarred.present) {
       map['is_starred'] = Variable<bool>(isStarred.value);
     }
@@ -8299,6 +8354,7 @@ class UserLessonTermCompanion extends UpdateCompanion<UserLessonTermData> {
           ..write('mnemonicVi: $mnemonicVi, ')
           ..write('mnemonicEn: $mnemonicEn, ')
           ..write('kanjiMeaning: $kanjiMeaning, ')
+          ..write('exampleSentencesJson: $exampleSentencesJson, ')
           ..write('isStarred: $isStarred, ')
           ..write('isLearned: $isLearned, ')
           ..write('orderIndex: $orderIndex')
@@ -18388,6 +18444,7 @@ typedef $$UserLessonTermTableCreateCompanionBuilder =
       Value<String> mnemonicVi,
       Value<String> mnemonicEn,
       Value<String> kanjiMeaning,
+      Value<String> exampleSentencesJson,
       Value<bool> isStarred,
       Value<bool> isLearned,
       Value<int> orderIndex,
@@ -18403,6 +18460,7 @@ typedef $$UserLessonTermTableUpdateCompanionBuilder =
       Value<String> mnemonicVi,
       Value<String> mnemonicEn,
       Value<String> kanjiMeaning,
+      Value<String> exampleSentencesJson,
       Value<bool> isStarred,
       Value<bool> isLearned,
       Value<int> orderIndex,
@@ -18487,6 +18545,11 @@ class $$UserLessonTermTableFilterComposer
 
   ColumnFilters<String> get kanjiMeaning => $composableBuilder(
     column: $table.kanjiMeaning,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get exampleSentencesJson => $composableBuilder(
+    column: $table.exampleSentencesJson,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -18578,6 +18641,11 @@ class $$UserLessonTermTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get exampleSentencesJson => $composableBuilder(
+    column: $table.exampleSentencesJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<bool> get isStarred => $composableBuilder(
     column: $table.isStarred,
     builder: (column) => ColumnOrderings(column),
@@ -18660,6 +18728,11 @@ class $$UserLessonTermTableAnnotationComposer
     builder: (column) => column,
   );
 
+  GeneratedColumn<String> get exampleSentencesJson => $composableBuilder(
+    column: $table.exampleSentencesJson,
+    builder: (column) => column,
+  );
+
   GeneratedColumn<bool> get isStarred =>
       $composableBuilder(column: $table.isStarred, builder: (column) => column);
 
@@ -18734,6 +18807,7 @@ class $$UserLessonTermTableTableManager
                 Value<String> mnemonicVi = const Value.absent(),
                 Value<String> mnemonicEn = const Value.absent(),
                 Value<String> kanjiMeaning = const Value.absent(),
+                Value<String> exampleSentencesJson = const Value.absent(),
                 Value<bool> isStarred = const Value.absent(),
                 Value<bool> isLearned = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
@@ -18747,6 +18821,7 @@ class $$UserLessonTermTableTableManager
                 mnemonicVi: mnemonicVi,
                 mnemonicEn: mnemonicEn,
                 kanjiMeaning: kanjiMeaning,
+                exampleSentencesJson: exampleSentencesJson,
                 isStarred: isStarred,
                 isLearned: isLearned,
                 orderIndex: orderIndex,
@@ -18762,6 +18837,7 @@ class $$UserLessonTermTableTableManager
                 Value<String> mnemonicVi = const Value.absent(),
                 Value<String> mnemonicEn = const Value.absent(),
                 Value<String> kanjiMeaning = const Value.absent(),
+                Value<String> exampleSentencesJson = const Value.absent(),
                 Value<bool> isStarred = const Value.absent(),
                 Value<bool> isLearned = const Value.absent(),
                 Value<int> orderIndex = const Value.absent(),
@@ -18775,6 +18851,7 @@ class $$UserLessonTermTableTableManager
                 mnemonicVi: mnemonicVi,
                 mnemonicEn: mnemonicEn,
                 kanjiMeaning: kanjiMeaning,
+                exampleSentencesJson: exampleSentencesJson,
                 isStarred: isStarred,
                 isLearned: isLearned,
                 orderIndex: orderIndex,

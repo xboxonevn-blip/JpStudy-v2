@@ -118,6 +118,9 @@ class LearnModeIntegration extends ConsumerWidget {
             meaning: term.definition,
             meaningEn: term.definitionEn,
             kanjiMeaning: term.kanjiMeaning,
+            exampleSentences: parseVocabExampleSentences(
+              term.exampleSentencesJson,
+            ),
             level: levelLabel,
           ),
         )

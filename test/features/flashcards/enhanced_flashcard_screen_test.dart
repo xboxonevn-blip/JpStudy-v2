@@ -11,11 +11,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 const _kLesson = 'Lesson 1';
 
-VocabItem _item(int id, String term, String meaning) => VocabItem(
+VocabItem _item(
+  int id,
+  String term,
+  String meaning, {
+  List<VocabExampleSentence> examples = const [],
+}) => VocabItem(
   id: id,
   term: term,
   meaning: meaning,
   meaningEn: meaning,
+  exampleSentences: examples,
   level: 'N5',
 );
 
@@ -69,6 +75,42 @@ void main() {
     await tester.pump();
     // LinearProgressIndicator represents the card progress
     expect(find.byType(LinearProgressIndicator), findsOneWidget);
+  });
+
+  testWidgets('back side renders example sentences with JP/VI toggle', (
+    tester,
+  ) async {
+    final items = [
+      _item(
+        1,
+        '学生',
+        'student',
+        examples: const [
+          VocabExampleSentence(
+            exampleId: 'ex-001',
+            ja: '私は学生です。',
+            vi: 'Tôi là học sinh.',
+            audioUrl: 'https://example.com/audio.mp3',
+            source: 'original-jpstudy',
+          ),
+        ],
+      ),
+    ];
+    await tester.pumpWidget(buildFlashcardScreen(items));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(EnhancedFlashcard));
+    await tester.pumpAndSettle();
+
+    expect(find.text('私は学生です。'), findsOneWidget);
+    expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
+
+    await tester.tap(
+      find.byKey(const ValueKey('flashcard_example_lang_toggle')),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('Tôi là học sinh.'), findsOneWidget);
   });
 
   testWidgets('mobile swipe gestures move between flashcards', (tester) async {

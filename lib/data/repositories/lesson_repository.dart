@@ -129,6 +129,9 @@ final vocabSeriesTermsProvider =
             mnemonicVi: items[index].mnemonicVi ?? '',
             mnemonicEn: items[index].mnemonicEn ?? '',
             kanjiMeaning: items[index].kanjiMeaning ?? '',
+            exampleSentencesJson: encodeVocabExampleSentences(
+              items[index].exampleSentences,
+            ),
             isStarred: false,
             isLearned: false,
             orderIndex: index,
@@ -173,6 +176,7 @@ Future<List<UserLessonTermData>> _loadBundledMimikaraTerms(
           mnemonicVi: '',
           mnemonicEn: '',
           kanjiMeaning: entry.hanViet ?? '',
+          exampleSentencesJson: entry.exampleSentencesJson,
           isStarred: false,
           isLearned: false,
           orderIndex: orderIndex++,
@@ -955,6 +959,7 @@ class LessonRepository {
         reading: t.reading,
         meaning: t.definition,
         meaningEn: t.definitionEn,
+        exampleSentences: parseVocabExampleSentences(t.exampleSentencesJson),
         level: lesson?.level ?? 'N5',
       );
     }).toList();
@@ -975,6 +980,7 @@ class LessonRepository {
       meaning: item.meaning,
       meaningEn: item.meaningEn,
       kanjiMeaning: item.kanjiMeaning,
+      exampleSentences: parseVocabExampleSentences(item.exampleSentencesJson),
       level: item.level,
       tags: item.tags?.split(','),
     );
@@ -1173,6 +1179,9 @@ class LessonRepository {
             mnemonicVi: Value(item.mnemonicVi ?? ''),
             mnemonicEn: Value(item.mnemonicEn ?? ''),
             kanjiMeaning: Value(item.kanjiMeaning ?? ''),
+            exampleSentencesJson: Value(
+              encodeVocabExampleSentences(item.exampleSentences),
+            ),
             orderIndex: Value(index + 1),
           ),
         );
@@ -1275,6 +1284,7 @@ class LessonRepository {
             definitionEn: Value(v.meaningEn ?? ''),
             mnemonicVi: const Value(''),
             mnemonicEn: const Value(''),
+            exampleSentencesJson: Value(v.exampleSentencesJson),
             orderIndex: Value(i + 1),
           ),
         );
@@ -1322,12 +1332,21 @@ class LessonRepository {
 
         final nextDefinition = match.meaning.trim();
         final nextDefinitionEn = match.meaningEn?.trim() ?? '';
+        final nextExamplesJson = match.exampleSentencesJson.trim();
         final shouldUpdateDefinition =
             nextDefinition.isNotEmpty && nextDefinition != term.definition;
         final shouldUpdateDefinitionEn =
             nextDefinitionEn.isNotEmpty &&
             nextDefinitionEn != term.definitionEn;
-        if (!shouldUpdateDefinition && !shouldUpdateDefinitionEn) continue;
+        final shouldUpdateExamples =
+            nextExamplesJson.isNotEmpty &&
+            nextExamplesJson != '[]' &&
+            nextExamplesJson != term.exampleSentencesJson;
+        if (!shouldUpdateDefinition &&
+            !shouldUpdateDefinitionEn &&
+            !shouldUpdateExamples) {
+          continue;
+        }
 
         changed = true;
         batch.update(
@@ -1338,6 +1357,9 @@ class LessonRepository {
                 : const Value.absent(),
             definitionEn: shouldUpdateDefinitionEn
                 ? Value(nextDefinitionEn)
+                : const Value.absent(),
+            exampleSentencesJson: shouldUpdateExamples
+                ? Value(nextExamplesJson)
                 : const Value.absent(),
           ),
           where: (tbl) => tbl.id.equals(term.id),
@@ -1564,6 +1586,8 @@ class LessonRepository {
           series: series,
           level: currentLevelLabel.toUpperCase(),
           tags: mergedTags,
+          exampleSentencesJson:
+              _nullableLessonText(row['exampleSentencesJson']) ?? '[]',
         ),
       );
     }
@@ -1641,6 +1665,7 @@ class LessonRepository {
               String meaningVi,
               String? meaningEn,
               String? explicitHanViet,
+              String exampleSentencesJson,
               int order,
               dynamic tags,
             })
@@ -1666,6 +1691,9 @@ class LessonRepository {
           meaningVi: meaningVi,
           meaningEn: _nullableLessonText(sense['meaningEn']),
           explicitHanViet: _nullableLessonText(labels['hanViet']),
+          exampleSentencesJson: entry['example_sentences'] is List
+              ? json.encode(entry['example_sentences'])
+              : '[]',
           order: int.tryParse((entry['order'] ?? '').toString().trim()) ?? 0,
           tags: entry['tags'],
         ));
@@ -1695,6 +1723,7 @@ class LessonRepository {
           'order': p.order,
           'series': payloadSeries,
           'tags': p.tags,
+          'exampleSentencesJson': p.exampleSentencesJson,
         });
       }
       return out;

@@ -33,6 +33,7 @@ UserLessonTermData _term(
   mnemonicVi: '',
   mnemonicEn: '',
   kanjiMeaning: '',
+  exampleSentencesJson: '[]',
   isStarred: false,
   isLearned: false,
   orderIndex: id,

@@ -1671,3 +1671,18 @@
   screenshots, and documented the QA procedure.
 - Visual regression compare passed locally against release build at
   `http://127.0.0.1:54556` with decoded-pixel diff threshold `<= 1%`.
+
+## 2026-05-22 Phase E vocab examples migration in progress
+
+- Added vocab `example_sentences[]` model/DB plumbing and flashcard back-side
+  rendering with JP/VI toggle plus audio button surface.
+- Bootstrapped `assets/data/content/examples_corpus.json` because no Phase 4
+  corpus existed in repo; source marked `original-jpstudy`.
+- Ran `tool/migration/wire_example_sentences.js --rebuild-corpus`: 314 vocab
+  files wired, 19,735 vocab ids covered.
+- Validator `tool/migration/wire_example_sentences.js --validate-only` passed:
+  314 vocab files, 0 missing example rows.
+- Gates passed: Node migration tests, validator, focused Flutter
+  vocab/flashcard tests, `flutter analyze lib test`, and `git diff --check`
+  (line-ending warnings only).
+- Logged DECISION-048 and DECISION-049. No new blocking open questions.

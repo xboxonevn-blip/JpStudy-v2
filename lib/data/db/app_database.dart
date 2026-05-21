@@ -87,7 +87,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase({QueryExecutor? executor}) : super(executor ?? _openConnection());
 
   @override
-  int get schemaVersion => 33;
+  int get schemaVersion => 34;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -351,6 +351,13 @@ class AppDatabase extends _$AppDatabase {
       if (from < 33) {
         await migrator.createTable(hanVietRuleSrsState);
         await _createHanVietRuleSrsIndexes();
+      }
+      if (from < 34) {
+        await _safeAddColumn(
+          migrator,
+          userLessonTerm,
+          userLessonTerm.exampleSentencesJson,
+        );
       }
     },
     beforeOpen: (details) async {

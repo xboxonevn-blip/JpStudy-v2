@@ -16,6 +16,8 @@ class Vocab extends Table {
   TextColumn get series => text().withDefault(const Constant('minna'))();
   TextColumn get level => text()();
   TextColumn get tags => text().nullable()();
+  TextColumn get exampleSentencesJson =>
+      text().withDefault(const Constant('[]'))();
 
   @override
   Set<Column> get primaryKey => {id};

@@ -84,6 +84,8 @@ class UserLessonTerm extends Table {
   TextColumn get mnemonicEn =>
       text().withDefault(const Constant(''))(); // English Mnemonic
   TextColumn get kanjiMeaning => text().withDefault(const Constant(''))();
+  TextColumn get exampleSentencesJson =>
+      text().withDefault(const Constant('[]'))();
   BoolColumn get isStarred => boolean().withDefault(const Constant(false))();
   BoolColumn get isLearned => boolean().withDefault(const Constant(false))();
   IntColumn get orderIndex => integer().withDefault(const Constant(0))();

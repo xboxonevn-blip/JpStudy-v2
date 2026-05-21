@@ -8111,6 +8111,226 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-form-l1-001",
+      "template_id": "tpl-grammar-n5-039-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ đúng: 友達___本___もらいます。",
+      "answer_template": "に / を",
+      "options_template": [
+        "に / を",
+        "を / に",
+        "で / を",
+        "へ / と"
+      ],
+      "distractor_strategy": "giver-ni-object-o-morau-form",
+      "teaching_note": "Người cho/nguồn đi với に; vật nhận đi với を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-form-l1-002",
+      "template_id": "tpl-grammar-n5-039-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng cho 'nhận hoa từ em gái'?",
+      "answer_template": "妹に花をもらいます。",
+      "options_template": [
+        "妹に花をもらいます。",
+        "妹を花にもらいます。",
+        "花に妹をもらいます。",
+        "妹で花をもらいます。"
+      ],
+      "distractor_strategy": "moraimasu-source-object-order",
+      "teaching_note": "妹 là nguồn/người cho nên dùng に; 花 là vật nhận nên dùng を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-039-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "友達に本をもらいます nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi nhận sách từ bạn.",
+      "options_template": [
+        "Tôi nhận sách từ bạn.",
+        "Tôi tặng sách cho bạn.",
+        "Bạn nhận sách từ tôi.",
+        "Tôi đọc sách với bạn."
+      ],
+      "distractor_strategy": "receive-inward-vs-give-outward-read-with",
+      "teaching_note": "もらいます nhìn từ phía người nhận.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-039-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong Nに Nを もらいます, chủ ngữ là phía nào?",
+      "answer_template": "Phía người nhận.",
+      "distractor_strategy": "receiver-subject-recall",
+      "teaching_note": "Người cho đi với に/から; người nhận là chủ ngữ ngầm hoặc được nêu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-usage-l3-005",
+      "template_id": "tpl-grammar-n5-039-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Tôi nhận quà từ mẹ': 母 / に / プレゼント / を / もらいます",
+      "answer_template": "母にプレゼントをもらいます。",
+      "options_template": [
+        "母",
+        "に",
+        "プレゼント",
+        "を",
+        "もらいます"
+      ],
+      "distractor_strategy": "receive-source-object-order",
+      "teaching_note": "Nguồn/người cho + に, vật nhận + を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-usage-l3-006",
+      "template_id": "tpl-grammar-n5-039-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi nhận chocolate từ Tanaka.",
+      "answer_template": "田中さんにチョコレートをもらいます。",
+      "distractor_strategy": "apply-moraimasu-to-named-source",
+      "teaching_note": "田中さん là người cho/nguồn, チョコレート là vật nhận.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-context-l3-007",
+      "template_id": "tpl-grammar-n5-039-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh: người nói nhận một món từ bạn. Câu nào hợp nhất?",
+      "answer_template": "友達に花をもらいます。",
+      "options_template": [
+        "友達に花をもらいます。",
+        "友達に花をあげます。",
+        "友達が花をくれます。",
+        "友達と花を食べます。"
+      ],
+      "distractor_strategy": "speaker-receives-vs-gives-kureru-companion",
+      "teaching_note": "Khi chủ ngữ là người nhận, dùng もらいます.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-context-l2-008",
+      "template_id": "tpl-grammar-n5-039-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào dùng もらいます?",
+      "answer_template": "Khi chủ ngữ nhận một vật từ ai đó.",
+      "options_template": [
+        "Khi chủ ngữ nhận một vật từ ai đó.",
+        "Khi chủ ngữ tặng vật cho người khác.",
+        "Khi ai đó cho vật cho người nói và người cho là chủ ngữ.",
+        "Khi hỏi địa điểm hành động."
+      ],
+      "distractor_strategy": "moraimasu-context-vs-agemasu-kureru-place",
+      "teaching_note": "もらいます là nhận vào phía chủ ngữ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-039-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích góc nhìn. Bạn muốn nói 'tôi tặng sách cho bạn'. Câu nào KHÔNG đúng vì dùng hướng もらいます?",
+      "answer_template": "友達に本をもらいます。",
+      "options_template": [
+        "友達に本をもらいます。",
+        "友達に本をあげます。",
+        "私は友達に本をあげます。",
+        "友達へ本を送ります。"
+      ],
+      "distractor_strategy": "moraimasu-wrong-for-speaker-giving-analysis",
+      "teaching_note": "L4: もらいます là tôi nhận từ bạn, không phải tôi tặng cho bạn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-039-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-039-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào đúng nếu nguồn là Tanaka và vật nhận là sách?",
+      "answer_template": "田中さんに本をもらいます。",
+      "options_template": [
+        "田中さんに本をもらいます。",
+        "田中さんを本にもらいます。",
+        "田中さんに本にもらいます。",
+        "田中さんを本をもらいます。"
+      ],
+      "distractor_strategy": "analyze-ni-source-o-object-required",
+      "teaching_note": "`田中さんに` = từ Tanaka; `本を` = quyển sách được nhận.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

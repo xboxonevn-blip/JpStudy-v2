@@ -146,10 +146,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N (người) に [N (vật) を] もらいます",
-      "meaning": "Ý nghĩa: `もらいます` nghĩa là nhận.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "もらいます là dạng lịch sự của もらう, nghĩa là nhận/lấy được từ ai đó. Trong cấu trúc N (người) に [N (vật) を] もらいます, chủ ngữ là người nhận; に hoặc から đánh dấu nguồn/người cho, còn を đánh dấu vật đi vào phía người nhận.",
+      "hanVietBridge": "Mẫu kana này không có kanji thường dùng trong lớp N5; cầu nối tiếng Việt là 'nhận từ ai cái gì'. Hãy nghe hướng chuyển động: món đồ đi vào phía chủ ngữ, nên khác hẳn 'cho/tặng ra ngoài'.",
+      "form": "Hình thức: người cho + に/から + vật nhận + を + もらいます. Ví dụ: 友達に本をもらいます, 先生からプレゼントをもらいます.",
+      "meaning": "Ý nghĩa: nhận một vật từ ai đó. Người nhận là chủ ngữ của câu; người cho là mốc nguồn.",
+      "usage": "Sử dụng: dùng もらいます khi muốn nói tôi/ai đó nhận vật hoặc sự giúp đỡ. Dùng に với người cho trong hội thoại thân thuộc; dùng から khi muốn nhấn nguồn rõ hơn hoặc với tổ chức.",
+      "humanMoment": "Dr. Linh lưu ý: N (người) に [N (vật) を] もらいます kéo món quà về phía chủ ngữ. 友達に本をもらいます = tôi nhận sách từ bạn; 友達に本をあげます = tôi cho bạn sách. Chỉ đổi động từ là mũi tên đảo chiều.",
+      "crossLinks": [
+        {
+          "pattern": "N (người) に [N (vật) を] あげます",
+          "contrast": "khác hướng chuyển: あげます là cho ra ngoài, còn もらいます là nhận vào phía chủ ngữ."
+        },
+        {
+          "pattern": "N (người) が N (vật) を くれます",
+          "contrast": "khác chủ ngữ: くれます đặt người cho làm chủ ngữ khi họ cho tôi/phía tôi; もらいます đặt người nhận làm chủ ngữ."
+        },
+        {
+          "pattern": "Nから",
+          "contrast": "trong もらいます, から có thể thay に để nhấn nguồn/người cho; `を` vẫn đánh dấu vật nhận."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

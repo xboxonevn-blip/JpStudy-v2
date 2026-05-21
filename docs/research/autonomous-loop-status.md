@@ -2069,3 +2069,14 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `あげます` views the event from the giver outward.
   Mark the receiver with `に`, the gift with `を`; do not use it for "I receive".
+
+## 2026-05-22 Phase G Tier-1 item 039
+
+- Re-authored `grammar:n5:grammar_n5_7:004` (`N (người) に [N (vật) を]
+  もらいます`) with receiver-subject direction, source/object particle roles, and
+  contrasts against `あげます`, `くれます`, and `Nから`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `もらいます` views the event from the receiver inward.
+  Mark the source with `に/から`, the received item with `を`; do not use it for
+  "I give".

@@ -1922,6 +1922,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-form-l1-001",
+      "template_id": "tpl-grammar-n5-010-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ nối 'tiếng Anh' với 'tạp chí': 英語 ___ 雑誌",
+      "answer_template": "の",
+      "options_template": [
+        "の",
+        "は",
+        "も",
+        "か"
+      ],
+      "distractor_strategy": "content-linker-vs-topic-additive-question",
+      "teaching_note": "の nối hai danh từ; 英語 làm rõ nội dung/ngôn ngữ của 雑誌.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-form-l1-002",
+      "template_id": "tpl-grammar-n5-010-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Cấu trúc nào đúng với N1 の N2 khi N1 là nội dung?",
+      "answer_template": "日本語の本",
+      "options_template": [
+        "日本語の本",
+        "日本語は本",
+        "日本語も本",
+        "日本語か本"
+      ],
+      "distractor_strategy": "wrong-particle-content-link",
+      "teaching_note": "N1 の N2 tạo cụm danh từ, không phải câu chủ đề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-010-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "英語の雑誌 nghĩa tự nhiên nhất là gì?",
+      "answer_template": "tạp chí tiếng Anh / tạp chí về tiếng Anh",
+      "options_template": [
+        "tạp chí tiếng Anh / tạp chí về tiếng Anh",
+        "tiếng Anh của tạp chí",
+        "tiếng Anh cũng là tạp chí",
+        "tạp chí này"
+      ],
+      "distractor_strategy": "content-no-vs-possessive-literal",
+      "teaching_note": "雑誌 là trung tâm; 英語 cho biết nội dung/ngôn ngữ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-010-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Ngoài sở hữu, N1 の N2 có thể diễn tả quan hệ nghĩa nào?",
+      "answer_template": "Nội dung, chủ đề, loại, nguồn hoặc thuộc tính của N2.",
+      "distractor_strategy": "no-meaning-range-recall",
+      "teaching_note": "Không đóng khung の chỉ là 'của'; hãy đọc quan hệ giữa hai danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-usage-l3-005",
+      "template_id": "tpl-grammar-n5-010-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'sách tiếng Nhật': 本 / の / 日本語",
+      "answer_template": "日本語の本",
+      "options_template": [
+        "日本語",
+        "の",
+        "本"
+      ],
+      "distractor_strategy": "content-topic-order",
+      "teaching_note": "Ngôn ngữ/chủ đề đứng trước の; vật chính đứng sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-usage-l3-006",
+      "template_id": "tpl-grammar-n5-010-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cụm danh từ: 'giờ học tiếng Nhật'.",
+      "answer_template": "日本語の授業",
+      "distractor_strategy": "class-topic-no",
+      "teaching_note": "授業 là trung tâm; 日本語 làm rõ môn/nội dung lớp học.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-context-l3-007",
+      "template_id": "tpl-grammar-n5-010-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Ở thư viện, bạn muốn hỏi khu 'sách tiếng Anh'. Viết cụm 'sách tiếng Anh'.",
+      "answer_template": "英語の本",
+      "distractor_strategy": "library-topic-context",
+      "teaching_note": "Đây là の chỉ nội dung/ngôn ngữ, không phải sở hữu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-context-l2-008",
+      "template_id": "tpl-grammar-n5-010-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp với の chỉ nội dung/chủ đề?",
+      "answer_template": "Muốn nói một tạp chí thuộc mảng tiếng Anh.",
+      "options_template": [
+        "Muốn nói một tạp chí thuộc mảng tiếng Anh.",
+        "Muốn nói quyển sách thuộc về tôi.",
+        "Muốn hỏi 'đây là gì'.",
+        "Muốn gọi anh Tanaka lịch sự."
+      ],
+      "distractor_strategy": "content-vs-possession-question-honorific",
+      "teaching_note": "Nội dung/chủ đề là một nhánh của の, khác sở hữu trực tiếp.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-010-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào dịch 英語の雑誌 đúng theo quan hệ nội dung, không ép thành sở hữu?",
+      "answer_template": "tạp chí tiếng Anh",
+      "options_template": [
+        "tạp chí tiếng Anh",
+        "tiếng Anh sở hữu tạp chí",
+        "tạp chí của tôi",
+        "tạp chí này"
+      ],
+      "distractor_strategy": "content-vs-possession-analysis",
+      "teaching_note": "英語 làm rõ nội dung/ngôn ngữ của 雑誌; không phải chủ sở hữu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-010-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-010-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào là の làm rõ nội dung/chủ đề, không phải この/その/あの chỉ khoảng cách?",
+      "answer_template": "日本語の本",
+      "options_template": [
+        "日本語の本",
+        "この本",
+        "その本",
+        "あの本"
+      ],
+      "distractor_strategy": "no-topic-vs-demonstrative-analysis",
+      "teaching_note": "日本語の本 nói loại/nội dung sách; この/その/あの chỉ quyển sách nào theo khoảng cách.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

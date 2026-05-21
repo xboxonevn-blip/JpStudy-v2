@@ -1798,3 +1798,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `そう` points back to the claim in the question.
   `はい、そうです` confirms it; `いいえ、そうじゃありません` rejects it.
+
+## 2026-05-22 Phase G Tier-1 item 010
+
+- Re-authored `grammar:n5:grammar_n5_2:004` (`N1 の N2`) with focus on
+  content/topic `の`, not only ownership.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `の` can mean "about/of the category", as in
+  `英語の雑誌`. Do not force every `の` into possession.

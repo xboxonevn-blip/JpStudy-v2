@@ -6,6 +6,7 @@ import 'package:jpstudy/app/navigation/routes/home_routes.dart';
 import 'package:jpstudy/app/navigation/routes/learn_routes.dart';
 import 'package:jpstudy/app/navigation/routes/meta_routes.dart';
 import 'package:jpstudy/app/navigation/routes/review_routes.dart';
+import 'package:jpstudy/app/navigation/route_not_found_screen.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/onboarding_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
@@ -30,6 +31,8 @@ class AppRouter {
       initialLocation: initialLocation,
       redirect: (context, state) =>
           _onboardingRedirect(state.uri, preferences ?? _preferences),
+      errorBuilder: (context, state) =>
+          RouteNotFoundScreen(location: state.uri.toString()),
       routes: [
         GoRoute(
           path: AppRoutePath.onboardingLanguage,

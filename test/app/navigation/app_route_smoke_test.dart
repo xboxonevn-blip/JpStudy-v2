@@ -44,6 +44,10 @@ void main() {
     expect(AppRouter.router.routeInformationProvider.value.uri.path, '/me');
     expect(find.byType(MeScreen), findsOneWidget);
 
+    await pumpSmokeRoute(tester, AppRoutePath.profile);
+    expect(AppRouter.router.routeInformationProvider.value.uri.path, '/me');
+    expect(find.byType(MeScreen), findsOneWidget);
+
     await pumpSmokeRoute(tester, AppRoutePath.studyHub);
     expect(find.byType(StudyHubScreen), findsOneWidget);
 
@@ -195,6 +199,21 @@ void main() {
     await pumpSmokeRoute(tester, '/lesson/1/edit');
     final uri = AppRouter.router.routeInformationProvider.value.uri;
     expect(uri.path, '/lesson/1');
+
+    await disposeSmokeApp(tester);
+  });
+
+  testWidgets('missing and legacy routes resolve gracefully', (tester) async {
+    await pumpReleaseSmokeApp(tester, size: const Size(1440, 1600));
+
+    await pumpSmokeRoute(tester, '/vocab/series/minna/lesson/1');
+    var uri = AppRouter.router.routeInformationProvider.value.uri;
+    expect(uri.path, '/lesson/1');
+    expect(uri.queryParameters['level'], 'N5');
+
+    await pumpSmokeRoute(tester, '/not-a-real-route');
+    expect(find.text('Page not found'), findsOneWidget);
+    expect(find.text('Back to home'), findsOneWidget);
 
     await disposeSmokeApp(tester);
   });

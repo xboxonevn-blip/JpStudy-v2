@@ -10,6 +10,7 @@ class AppRoutePath {
   static const vocab = '/vocab';
   static const vocabReview = '/vocab/review';
   static const vocabMinna = '/vocab/minna';
+  static const legacyVocabMinnaLesson = '/vocab/series/minna/lesson/:id';
   static const vocabHajimete = '/vocab/hajimete';
   static const vocabShinkanzen = '/vocab/shinkanzen';
   static const vocabMimikara = '/vocab/mimikara';
@@ -76,6 +77,7 @@ class AppRoutePath {
   static const leaderboard = '/leaderboard';
   static const premium = '/premium';
   static const community = '/community';
+  static const profile = '/profile';
   static const me = '/me';
   static const mastery = '/mastery';
   static const meData = '/me/data';
@@ -96,6 +98,7 @@ class AppRouteName {
   static const vocab = 'vocab';
   static const vocabReview = 'vocab-review';
   static const vocabMinna = 'vocab-minna';
+  static const legacyVocabMinnaLesson = 'legacy-vocab-minna-lesson';
   static const vocabHajimete = 'vocab-hajimete';
   static const vocabShinkanzen = 'vocab-shinkanzen';
   static const vocabMimikara = 'vocab-mimikara';
@@ -162,6 +165,7 @@ class AppRouteName {
   static const leaderboard = 'leaderboard';
   static const premium = 'premium';
   static const community = 'community';
+  static const profile = 'profile';
   static const me = 'me';
   static const mastery = 'mastery';
   static const meData = 'me-data';

@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/app/navigation/app_route_builders.dart';
+import 'package:jpstudy/app/navigation/app_route_locations.dart';
 import 'package:jpstudy/features/vocab/models/vocab_match_session_args.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
 import 'package:jpstudy/features/vocab/screens/hajimete_chapter_catalog_screen.dart';
@@ -52,6 +53,14 @@ List<RouteBase> buildVocabRoutes() {
           lessonEnd: int.tryParse(query['lessonEnd'] ?? '') ?? 25,
         );
       },
+    ),
+    GoRoute(
+      path: AppRoutePath.legacyVocabMinnaLesson,
+      name: AppRouteName.legacyVocabMinnaLesson,
+      redirect: (context, state) => AppRouteLocation.minnaLesson(
+        state.pathParameters['id'] ?? '1',
+        levelCode: state.uri.queryParameters['level'] ?? 'N5',
+      ),
     ),
     GoRoute(
       path: AppRoutePath.vocabHajimete,

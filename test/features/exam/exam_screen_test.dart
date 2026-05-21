@@ -94,12 +94,20 @@ void main() {
     expect(find.text('JLPT N2'), findsOneWidget);
   });
 
-  testWidgets('shows level subtitles with timer and scoring', (tester) async {
+  testWidgets('shows level subtitles with JLPT metadata', (tester) async {
     await tester.pumpWidget(buildExamScreen());
     await tester.pump();
 
-    expect(find.text('N5 timer, scoring, and review.'), findsOneWidget);
-    expect(find.text('N4 timer, scoring, and review.'), findsOneWidget);
+    expect(
+      find.text('60 min · 95 questions · vocabulary, reading, listening'),
+      findsOneWidget,
+    );
+    expect(
+      find.text(
+        '120 min · 105 questions · vocabulary, grammar, reading, listening',
+      ),
+      findsOneWidget,
+    );
   });
 
   testWidgets('shows "Choose level" section header', (tester) async {
@@ -109,7 +117,7 @@ void main() {
     expect(find.text('Choose level'), findsOneWidget);
   });
 
-  testWidgets('shows snackbar when selected level has no terms', (
+  testWidgets('shows empty start panel when selected level has no terms', (
     tester,
   ) async {
     final repo = _FakeLessonRepository(items: const []);
@@ -118,16 +126,14 @@ void main() {
     await tester.pump();
 
     await tester.tap(find.text('JLPT N5'));
-    await tester.pump(); // dialog appears
-    await tester.pump(); // async repo returns
+    await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
-    expect(find.text(AppLanguage.en.noTermsAvailableLabel), findsOneWidget);
+    expect(find.text('No N5 exam questions yet'), findsOneWidget);
+    expect(find.byType(TestConfigScreen), findsNothing);
   });
 
-  testWidgets('shows load error snackbar when repository throws', (
-    tester,
-  ) async {
+  testWidgets('shows load error panel when repository throws', (tester) async {
     final repo = _FakeLessonRepository(items: const [], throwOnFetch: true);
 
     await tester.pumpWidget(buildExamScreen(repo: repo));
@@ -137,10 +143,11 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
+    expect(find.text('Could not prepare JLPT N5'), findsOneWidget);
     expect(find.text(AppLanguage.en.loadErrorLabel), findsOneWidget);
   });
 
-  testWidgets('navigates to TestConfigScreen when terms are available', (
+  testWidgets('renders start screen then opens TestConfigScreen', (
     tester,
   ) async {
     final repo = _FakeLessonRepository(items: const [_sampleItem]);
@@ -150,8 +157,17 @@ void main() {
     await tester.pump();
 
     await tester.tap(find.text('JLPT N5'));
-    await tester.pump(); // loading dialog
-    await tester.pump(); // async nav completes
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.text('JLPT N5 start screen'), findsOneWidget);
+    expect(find.text('1 questions'), findsWidgets);
+    expect(find.byType(TestConfigScreen), findsNothing);
+
+    await tester.drag(find.byType(ListView), const Offset(0, -260));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Start exam'));
+    await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
     expect(find.byType(TestConfigScreen), findsOneWidget);
@@ -159,5 +175,27 @@ void main() {
       find.textContaining(AppLanguage.en.mockExamTitle('N5')),
       findsWidgets,
     );
+  });
+
+  testWidgets('all JLPT level choices prepare a nonblank start state', (
+    tester,
+  ) async {
+    final repo = _FakeLessonRepository(items: const [_sampleItem]);
+    final storage = _FakeSessionStorage();
+
+    await tester.pumpWidget(buildExamScreen(repo: repo, storage: storage));
+    await tester.pump();
+
+    for (final level in ['N5', 'N4', 'N3', 'N2', 'N1']) {
+      await tester.scrollUntilVisible(
+        find.text('JLPT $level'),
+        -220,
+        scrollable: find.byType(Scrollable).first,
+      );
+      await tester.tap(find.text('JLPT $level'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300));
+      expect(find.text('JLPT $level start screen'), findsOneWidget);
+    }
   });
 }

@@ -54,6 +54,11 @@ List<RouteBase> buildProfileRoutes() {
       builder: (context, state) => const MeScreen(),
     ),
     GoRoute(
+      path: AppRoutePath.profile,
+      name: AppRouteName.profile,
+      redirect: (context, state) => AppRoutePath.me,
+    ),
+    GoRoute(
       path: AppRoutePath.community,
       name: AppRouteName.community,
       redirect: (context, state) => AppRoutePath.me,

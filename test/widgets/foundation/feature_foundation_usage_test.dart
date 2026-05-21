@@ -55,6 +55,11 @@ void main() {
       'lib/features/test/screens/test_results_screen.dart',
       'lib/features/test/screens/test_config_screen.dart',
       'lib/features/learn/screens/learn_summary_screen.dart',
+      'lib/features/foundations/screens/kana_table_screen.dart',
+      'lib/features/foundations/screens/kana_quiz_screen.dart',
+      'lib/features/foundations/screens/kana_locked_screen.dart',
+      'lib/features/foundations/screens/han_viet_reference_screen.dart',
+      'lib/features/foundations/screens/foundations_hub_screen.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

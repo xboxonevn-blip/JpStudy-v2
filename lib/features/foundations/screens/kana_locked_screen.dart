@@ -10,6 +10,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/onboarding_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class KanaLockedScreen extends ConsumerWidget {
   const KanaLockedScreen({super.key});
@@ -82,7 +83,7 @@ class KanaLockedScreen extends ConsumerWidget {
                       spacing: AppSpacing.sm,
                       runSpacing: AppSpacing.sm,
                       children: [
-                        FilledButton.icon(
+                        AppButton(
                           onPressed: () async {
                             await setPersistedStudyLevel(ref, StudyLevel.n5);
                             if (!context.mounted) {
@@ -90,15 +91,14 @@ class KanaLockedScreen extends ConsumerWidget {
                             }
                             context.go(AppRoutePath.foundations);
                           },
-                          icon: const Icon(Icons.swap_horiz_rounded),
-                          label: Text(language.kanaLockedSwitchAction),
+                          icon: Icons.swap_horiz_rounded,
+                          label: language.kanaLockedSwitchAction,
                         ),
-                        OutlinedButton.icon(
+                        AppButton(
                           onPressed: () => context.go(AppRoutePath.home),
-                          icon: const Icon(Icons.home_rounded),
-                          label: Text(
-                            language.kanaLockedBackAction(levelLabel),
-                          ),
+                          icon: Icons.home_rounded,
+                          label: language.kanaLockedBackAction(levelLabel),
+                          variant: AppButtonVariant.secondary,
                         ),
                       ],
                     ),

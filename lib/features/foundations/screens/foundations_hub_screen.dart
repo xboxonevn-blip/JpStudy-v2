@@ -9,6 +9,7 @@ import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
 import 'package:jpstudy/features/foundations/widgets/kana_review_due_card.dart';
 import 'package:jpstudy/features/foundations/screens/kana_table_screen.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class FoundationsHubScreen extends ConsumerWidget {
   const FoundationsHubScreen({super.key});
@@ -133,13 +134,13 @@ class _FoundationsHero extends StatelessWidget {
                 '${progress.studiedCount}/$foundationsKanaTotal kana (${(progress.percentComplete * 100).round()}%)',
           ),
           const SizedBox(height: AppSpacing.lg),
-          FilledButton.icon(
+          AppButton(
             onPressed: () => context.openFoundationsQuiz(
               script: KanaScript.hiragana,
               view: KanaView.base,
             ),
-            icon: const Icon(Icons.play_arrow_rounded),
-            label: Text(language.startQuizLabel),
+            icon: Icons.play_arrow_rounded,
+            label: language.startQuizLabel,
           ),
         ],
       ),

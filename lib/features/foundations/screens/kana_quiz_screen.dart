@@ -11,6 +11,7 @@ import 'package:jpstudy/features/foundations/models/kana_entry.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
 import 'package:jpstudy/features/foundations/providers/kana_review_provider.dart';
 import 'package:jpstudy/features/foundations/screens/kana_table_screen.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class KanaQuizScreen extends ConsumerStatefulWidget {
   const KanaQuizScreen({
@@ -322,15 +323,12 @@ class _QuestionView extends StatelessWidget {
                 ? 'Sai'
                 : choice,
             button: true,
-            child: FilledButton.tonal(
+            child: AppButton(
               key: ValueKey('kana_choice_$choice'),
-              style: _choiceStyle(choice),
-              onPressed: () {
-                if (!showResult) {
-                  onSelect(choice);
-                }
-              },
-              child: Text(choice),
+              label: choice,
+              variant: _choiceVariant(choice),
+              expanded: true,
+              onPressed: showResult ? null : () => onSelect(choice),
             ),
           ),
           const SizedBox(height: 10),
@@ -354,27 +352,17 @@ class _QuestionView extends StatelessWidget {
     );
   }
 
-  ButtonStyle? _choiceStyle(String choice) {
+  AppButtonVariant _choiceVariant(String choice) {
     if (!showResult) {
-      return null;
+      return AppButtonVariant.secondary;
     }
     if (choice == question.correctAnswer) {
-      return FilledButton.styleFrom(
-        backgroundColor: Colors.green.shade100,
-        foregroundColor: Colors.green.shade900,
-        side: BorderSide(color: Colors.green.shade400),
-      );
+      return AppButtonVariant.primary;
     }
     if (choice == selected) {
-      return FilledButton.styleFrom(
-        backgroundColor: Colors.red.shade100,
-        foregroundColor: Colors.red.shade900,
-        side: BorderSide(color: Colors.red.shade400),
-      );
+      return AppButtonVariant.destructive;
     }
-    return FilledButton.styleFrom(
-      side: BorderSide(color: Colors.grey.shade300),
-    );
+    return AppButtonVariant.secondary;
   }
 }
 
@@ -396,14 +384,15 @@ class _GradeActions extends StatelessWidget {
         spacing: 8,
         runSpacing: 8,
         children: [
-          FilledButton(
+          AppButton(
             key: const ValueKey('kana_auto_again_continue'),
             onPressed: () => onGrade(1),
-            child: Text(language.kanaGradeAgainLabel),
+            label: language.kanaGradeAgainLabel,
           ),
-          FilledButton.tonal(
+          AppButton(
             onPressed: () => onGrade(2),
-            child: Text(language.kanaGradeHardLabel),
+            label: language.kanaGradeHardLabel,
+            variant: AppButtonVariant.secondary,
           ),
         ],
       );
@@ -412,17 +401,19 @@ class _GradeActions extends StatelessWidget {
       spacing: 8,
       runSpacing: 8,
       children: [
-        FilledButton.tonal(
+        AppButton(
           onPressed: () => onGrade(2),
-          child: Text(language.kanaGradeHardLabel),
+          label: language.kanaGradeHardLabel,
+          variant: AppButtonVariant.secondary,
         ),
-        FilledButton(
+        AppButton(
           onPressed: () => onGrade(3),
-          child: Text(language.kanaGradeGoodLabel),
+          label: language.kanaGradeGoodLabel,
         ),
-        FilledButton.tonal(
+        AppButton(
           onPressed: () => onGrade(4),
-          child: Text(language.kanaGradeEasyLabel),
+          label: language.kanaGradeEasyLabel,
+          variant: AppButtonVariant.secondary,
         ),
       ],
     );
@@ -462,13 +453,15 @@ class KanaQuizSummaryView extends StatelessWidget {
                 const SizedBox(height: AppSpacing.md),
                 Text('$correct/$total'),
                 const SizedBox(height: AppSpacing.lg),
-                FilledButton(
+                AppButton(
                   onPressed: onReviewAgain,
-                  child: Text(appLanguage.reviewAgainLabel),
+                  label: appLanguage.reviewAgainLabel,
                 ),
-                TextButton(
+                AppButton(
                   onPressed: onDone,
-                  child: Text(appLanguage.doneLabel),
+                  label: appLanguage.doneLabel,
+                  variant: AppButtonVariant.ghost,
+                  compact: true,
                 ),
               ],
             ),

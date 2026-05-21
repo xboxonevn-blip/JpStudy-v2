@@ -9,6 +9,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/foundations/models/han_viet_rule.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class HanVietReferenceGate extends ConsumerStatefulWidget {
   const HanVietReferenceGate({super.key, required this.fallbackPath});
@@ -327,85 +328,79 @@ class _HanVietRulePracticeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
     final correctCount = items
         .where((item) => answers[item.itemId] == item.correct)
         .length;
     final threshold = (items.length * 0.8).ceil().clamp(1, 5);
     final understood = correctCount >= threshold;
-    return Card(
+    return AppCard(
       key: ValueKey('han_viet_rule_card_${rule.ruleId}'),
       margin: const EdgeInsets.only(bottom: AppSpacing.md),
-      shape: RoundedRectangleBorder(
-        side: BorderSide(color: colorScheme.primary.withValues(alpha: 0.45)),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(AppSpacing.md),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '${rule.section}. ${rule.title}',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.w900,
-                color: const Color(0xFFE25C5C),
+      borderRadius: 8,
+      padding: const EdgeInsets.all(AppSpacing.md),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '${rule.section}. ${rule.title}',
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              fontWeight: FontWeight.w900,
+              color: const Color(0xFFE25C5C),
+            ),
+          ),
+          const SizedBox(height: AppSpacing.xs),
+          Text(
+            '${rule.percentage}% được chuyển sang hàng ${rule.targetRow} (${rule.targetKana.join('・')})',
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w800,
+              color: const Color(0xFF168F87),
+            ),
+          ),
+          const SizedBox(height: AppSpacing.xs),
+          Text(rule.explanation),
+          const SizedBox(height: AppSpacing.md),
+          Text(
+            'Ví dụ:',
+            style: Theme.of(
+              context,
+            ).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w900),
+          ),
+          const SizedBox(height: AppSpacing.xs),
+          for (final example in rule.examples)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Text(
+                '${example.hanViet} -> ${example.kanji} (${example.onyomi}) ${example.romaji} -> ${example.compound} (${example.compoundKana})',
               ),
             ),
-            const SizedBox(height: AppSpacing.xs),
-            Text(
-              '${rule.percentage}% được chuyển sang hàng ${rule.targetRow} (${rule.targetKana.join('・')})',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.w800,
-                color: const Color(0xFF168F87),
-              ),
-            ),
-            const SizedBox(height: AppSpacing.xs),
-            Text(rule.explanation),
-            const SizedBox(height: AppSpacing.md),
-            Text(
-              'Ví dụ:',
-              style: Theme.of(
-                context,
-              ).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w900),
-            ),
-            const SizedBox(height: AppSpacing.xs),
-            for (final example in rule.examples)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 6),
+          const SizedBox(height: AppSpacing.md),
+          Row(
+            children: [
+              Expanded(
                 child: Text(
-                  '${example.hanViet} -> ${example.kanji} (${example.onyomi}) ${example.romaji} -> ${example.compound} (${example.compoundKana})',
+                  'Bài tập áp dụng',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w900,
+                  ),
                 ),
               ),
-            const SizedBox(height: AppSpacing.md),
-            Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'Bài tập áp dụng',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
+              if (understood)
+                AppChip(
+                  key: ValueKey('han_viet_rule_understood_${rule.ruleId}'),
+                  label: language.hanVietRuleUnderstoodLabel,
+                  tone: AppChipTone.success,
                 ),
-                if (understood)
-                  Chip(
-                    key: ValueKey('han_viet_rule_understood_${rule.ruleId}'),
-                    label: Text(language.hanVietRuleUnderstoodLabel),
-                    backgroundColor: colorScheme.primaryContainer,
-                  ),
-              ],
+            ],
+          ),
+          const SizedBox(height: AppSpacing.sm),
+          for (final item in items)
+            _HanVietPracticeQuestion(
+              item: item,
+              template: rule.practice.questionTemplate,
+              selected: answers[item.itemId],
+              onAnswered: (answer) => onAnswered(item, answer),
             ),
-            const SizedBox(height: AppSpacing.sm),
-            for (final item in items)
-              _HanVietPracticeQuestion(
-                item: item,
-                template: rule.practice.questionTemplate,
-                selected: answers[item.itemId],
-                onAnswered: (answer) => onAnswered(item, answer),
-              ),
-          ],
-        ),
+        ],
       ),
     );
   }
@@ -446,17 +441,16 @@ class _HanVietPracticeQuestion extends StatelessWidget {
             runSpacing: 8,
             children: [
               for (final option in item.options)
-                OutlinedButton(
+                AppButton(
                   key: ValueKey('han_viet_option_${item.itemId}_$option'),
                   onPressed: () => onAnswered(option),
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: selected == option
-                        ? (option == item.correct
-                              ? colorScheme.primaryContainer
-                              : colorScheme.errorContainer)
-                        : null,
-                  ),
-                  child: Text(option),
+                  label: option,
+                  variant: selected == option
+                      ? (option == item.correct
+                            ? AppButtonVariant.primary
+                            : AppButtonVariant.destructive)
+                      : AppButtonVariant.secondary,
+                  compact: true,
                 ),
             ],
           ),
@@ -524,10 +518,13 @@ class _HanVietCategoryChips extends StatelessWidget {
       runSpacing: 8,
       children: [
         for (final filter in _HanVietCategoryFilter.values)
-          FilterChip(
-            label: Text(filter.label(language)),
-            selected: selected == filter,
-            onSelected: (_) => onSelected(filter),
+          AppButton(
+            label: filter.label(language),
+            variant: selected == filter
+                ? AppButtonVariant.primary
+                : AppButtonVariant.secondary,
+            compact: true,
+            onPressed: () => onSelected(filter),
           ),
       ],
     );
@@ -549,8 +546,9 @@ class _HanVietRuleTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return AppCard(
       margin: const EdgeInsets.only(bottom: 10),
+      padding: EdgeInsets.zero,
       child: ExpansionTile(
         title: Text(rule.localizedTitle(language)),
         subtitle: Text(rule.localizedPattern(language)),
@@ -655,9 +653,11 @@ class _HanVietExampleCard extends StatelessWidget {
             ],
           ),
           actions: [
-            TextButton(
+            AppButton(
+              label: language.closeLabel,
+              variant: AppButtonVariant.ghost,
+              compact: true,
               onPressed: () => Navigator.of(context).pop(),
-              child: Text(language.closeLabel),
             ),
           ],
         );

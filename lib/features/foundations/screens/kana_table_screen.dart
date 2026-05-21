@@ -7,6 +7,7 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/features/foundations/models/kana_entry.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 enum KanaScript { hiragana, katakana }
 
@@ -328,25 +329,25 @@ class _KanaCell extends ConsumerWidget {
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     const SizedBox(height: 8),
-                    FilledButton.icon(
+                    AppButton(
                       key: ValueKey('kana_quiz_from_sheet_${entry.kana}'),
                       onPressed: () => context.openFoundationsQuiz(
                         script: script,
                         view: mode,
                       ),
-                      icon: const Icon(Icons.quiz_rounded),
-                      label: Text(language.kanaQuizTitle),
+                      icon: Icons.quiz_rounded,
+                      label: language.kanaQuizTitle,
                     ),
                     const SizedBox(height: 12),
                     Wrap(
                       spacing: 8,
                       children: [
                         if (entry.strokes != null)
-                          Chip(
-                            label: Text(_strokeLabel(language, entry.strokes!)),
+                          AppChip(
+                            label: _strokeLabel(language, entry.strokes!),
                           ),
                         if (entry.mark != null)
-                          Chip(label: Text(_markLabel(language, entry.mark!))),
+                          AppChip(label: _markLabel(language, entry.mark!)),
                       ],
                     ),
                   ],

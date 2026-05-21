@@ -982,6 +982,7 @@
       "order": 23,
       "tags": [
         "food",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1002,18 +1003,23 @@
       },
       "sense": {
         "senseId": "n5_l06_s023",
-        "meaningVi": "trà (xanh)",
+        "meaningVi": "Trà (nói chung)",
         "meaningEn": "tea / green tea"
       },
       "search": {
         "termNoAccent": "お茶",
         "readingNoAccent": "おちゃ",
-        "meaningViNoAccent": "tra (xanh)",
+        "meaningViNoAccent": "Tra (noi chung)",
         "hanVietNoAccent": "tra"
       },
       "links": {
         "sourceVocabId": "n5_l06_v023",
-        "sourceSenseId": "n5_l06_s023"
+        "sourceSenseId": "n5_l06_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trà"
@@ -1286,6 +1292,7 @@
       "order": 30,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1307,18 +1314,23 @@
       },
       "sense": {
         "senseId": "n5_l06_s030",
-        "meaningVi": "phim ảnh",
+        "meaningVi": "Phim, điện ảnh",
         "meaningEn": "movie"
       },
       "search": {
         "termNoAccent": "映画",
         "readingNoAccent": "えいか",
-        "meaningViNoAccent": "phim anh",
+        "meaningViNoAccent": "Phim, dien anh",
         "hanVietNoAccent": "anh hoa"
       },
       "links": {
         "sourceVocabId": "n5_l06_v030",
-        "sourceSenseId": "n5_l06_s030"
+        "sourceSenseId": "n5_l06_s030",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ánh hoạ"

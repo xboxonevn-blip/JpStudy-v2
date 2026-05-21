@@ -1142,8 +1142,16 @@ class LessonRepository {
         existing[1].term == '探します';
 
     if (existing.isNotEmpty && !isDummy) {
+      final refreshedDefinitions = await _syncLessonTermDefinitionsFromContent(
+        lessonId,
+        currentLevelLabel,
+        existing,
+        sourceLessonId: sourceLessonId,
+      );
+      final current = refreshedDefinitions ? await fetchTerms(lessonId) : existing;
+
       // Try to backfill missing English without destructive reset.
-      final missingEnglish = existing.any((t) => t.definitionEn.isEmpty);
+      final missingEnglish = current.any((t) => t.definitionEn.isEmpty);
       if (!missingEnglish) {
         // All terms already have English definitions — nothing to do.
         return;
@@ -1152,7 +1160,7 @@ class LessonRepository {
       await _backfillEnglishDefinitions(
         lessonId,
         currentLevelLabel,
-        existing,
+        current,
         sourceLessonId: sourceLessonId,
       );
 
@@ -1201,6 +1209,70 @@ class LessonRepository {
         );
       }
     });
+  }
+
+  Future<bool> _syncLessonTermDefinitionsFromContent(
+    int lessonId,
+    String currentLevelLabel,
+    List<UserLessonTermData> existing, {
+    int? sourceLessonId,
+  }) async {
+    final vocabList = await _fetchLessonVocabFromContent(
+      sourceLessonId ?? lessonId,
+      currentLevelLabel,
+    );
+    if (vocabList.isEmpty) {
+      return false;
+    }
+
+    final exactMap = <String, VocabData>{};
+    final termOnlyMap = <String, VocabData>{};
+    final termConflicts = <String>{};
+    for (final vocab in vocabList) {
+      exactMap[_vocabKey(vocab.term, vocab.reading)] = vocab;
+      final termKey = vocab.term.trim();
+      if (termKey.isEmpty) continue;
+      if (termOnlyMap.containsKey(termKey) &&
+          termOnlyMap[termKey]!.reading != vocab.reading) {
+        termConflicts.add(termKey);
+        termOnlyMap.remove(termKey);
+      } else if (!termConflicts.contains(termKey)) {
+        termOnlyMap[termKey] = vocab;
+      }
+    }
+
+    var changed = false;
+    await _db.batch((batch) {
+      for (final term in existing) {
+        final match =
+            exactMap[_vocabKey(term.term, term.reading)] ??
+            termOnlyMap[term.term.trim()];
+        if (match == null) continue;
+
+        final nextDefinition = match.meaning.trim();
+        final nextDefinitionEn = match.meaningEn?.trim() ?? '';
+        final shouldUpdateDefinition =
+            nextDefinition.isNotEmpty && nextDefinition != term.definition;
+        final shouldUpdateDefinitionEn =
+            nextDefinitionEn.isNotEmpty && nextDefinitionEn != term.definitionEn;
+        if (!shouldUpdateDefinition && !shouldUpdateDefinitionEn) continue;
+
+        changed = true;
+        batch.update(
+          _db.userLessonTerm,
+          UserLessonTermCompanion(
+            definition: shouldUpdateDefinition
+                ? Value(nextDefinition)
+                : const Value.absent(),
+            definitionEn: shouldUpdateDefinitionEn
+                ? Value(nextDefinitionEn)
+                : const Value.absent(),
+          ),
+          where: (tbl) => tbl.id.equals(term.id),
+        );
+      }
+    });
+    return changed;
   }
 
   Future<void> _backfillEnglishDefinitions(

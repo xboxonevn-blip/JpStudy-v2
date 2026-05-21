@@ -381,3 +381,33 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This keeps the diff actionable for QA-B-001 instead of hiding taxonomy drift behind meaning matches. Higher-level textbook reuse remains visible as source evidence in each row.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-039 - Add per-level vocab seed revision before data mutation
+**Phase**: P1 QA-A-030 Phase 3
+**Date**: 2026-05-21 16:16 (local)
+**Context**: Bundled vocab JSON edits do not reach existing browser content DBs if the level was already seeded.
+**Options considered**: rely on fresh installs | bump schema and reseed all vocab | add `vocabSeedRevision:<level>` and reseed only the active level
+**Chosen**: add `vocabSeedRevision:<level>` and reseed only the active level.
+**Rationale**: It gives returning learners the edited vocab rows without an all-level startup cost, while still allowing each level to refresh when that level is active.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-040 - Auto-apply only overlapping meaning fixes
+**Phase**: P1 QA-A-030 Phase 3
+**Date**: 2026-05-21 16:16 (local)
+**Context**: Dry-run showed exact term+reading consensus can still conflate polysemous meanings, for example a counter sense versus an adverbial sense.
+**Options considered**: apply all consensus wrong-meaning rows | require token overlap between old and canonical Vietnamese meanings | hand-edit every row
+**Chosen**: require token overlap and stop the first batch at 19 rows before visible typo/polysemy risk.
+**Rationale**: The first data mutation should improve obvious wording drift while avoiding automated sense replacement when the canonical row may be a different usage.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-041 - Sync existing lesson terms after vocab content refresh
+**Phase**: P1 QA-A-030 Phase 3
+**Date**: 2026-05-21 16:58 (local)
+**Context**: Live proof found refreshed content DB rows were not enough for returning browsers because `userLessonTerm` kept old curriculum definitions after a lesson had already been opened.
+**Options considered**: clear all lesson terms | sync matched definitions in place | leave stale lesson rows until user resets data
+**Chosen**: sync matched existing lesson definitions from content in place and preserve progress/SRS state.
+**Rationale**: This reaches the visible lesson UI without deleting learner history or forcing a full app-data reset.
+**Reversible**: yes
+**Owner review**: pending

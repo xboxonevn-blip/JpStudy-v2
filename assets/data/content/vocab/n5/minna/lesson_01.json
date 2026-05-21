@@ -187,6 +187,7 @@
       "order": 5,
       "tags": [
         "pronoun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -207,18 +208,23 @@
       },
       "sense": {
         "senseId": "n5_l01_s005",
-        "meaningVi": "người kia (lịch sự)",
+        "meaningVi": "Vị kia",
         "meaningEn": "that person (polite)"
       },
       "search": {
         "termNoAccent": "あの方",
         "readingNoAccent": "あのかた",
-        "meaningViNoAccent": "vi kia (lich su)",
+        "meaningViNoAccent": "Vi kia",
         "hanVietNoAccent": "phuong"
       },
       "links": {
         "sourceVocabId": "n5_l01_v005",
-        "sourceSenseId": "n5_l01_s005"
+        "sourceSenseId": "n5_l01_s005",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phương"

@@ -1421,6 +1421,7 @@
       "order": 33,
       "tags": [
         "food",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1441,18 +1442,23 @@
       },
       "sense": {
         "senseId": "n5_l12_s033",
-        "meaningVi": "món Sukiyaki",
+        "meaningVi": "Sukiyaki (món thịt bò nấu rau)",
         "meaningEn": "Sukiyaki (beef and vegetable hot pot)"
       },
       "search": {
         "termNoAccent": "すき焼き",
         "readingNoAccent": "すきやき",
-        "meaningViNoAccent": "mon sukiyaki",
+        "meaningViNoAccent": "Sukiyaki (mon thit bo nau rau)",
         "hanVietNoAccent": "thieu"
       },
       "links": {
         "sourceVocabId": "n5_l12_v033",
-        "sourceSenseId": "n5_l12_s033"
+        "sourceSenseId": "n5_l12_s033",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thiêu"

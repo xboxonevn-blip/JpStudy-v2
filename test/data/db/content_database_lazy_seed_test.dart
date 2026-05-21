@@ -54,6 +54,77 @@ void main() {
     expect(counts['ShinKanzen'], greaterThan(0));
   });
 
+  test(
+    'runtime vocab content ensure repairs stale active-level rows',
+    () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+      final db = ContentDatabase(executor: NativeDatabase.memory());
+      addTearDown(db.close);
+
+      await db.customStatement(
+        "UPDATE vocab SET meaning = '__stale_vocab__' "
+        "WHERE level = 'N5' AND series = 'minna' AND term = '学校'",
+      );
+      await db.customStatement(
+        "INSERT OR REPLACE INTO content_meta (key, value) "
+        "VALUES ('vocabSeedRevision:N5', '0')",
+      );
+
+      final repaired = await db.ensureVocabContentCurrentForActiveLevel();
+
+      final row =
+          await (db.select(db.vocab)
+                ..where(
+                  (tbl) =>
+                      tbl.level.equals('N5') &
+                      tbl.series.equals('minna') &
+                      tbl.term.equals('学校'),
+                )
+                ..limit(1))
+              .getSingle();
+
+      expect(repaired, isTrue);
+      expect(row.meaning, isNot('__stale_vocab__'));
+      expect(row.meaning.trim(), isNotEmpty);
+    },
+  );
+
+  test(
+    'runtime vocab content ensure upgrades first vocab revision installs',
+    () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+      final db = ContentDatabase(executor: NativeDatabase.memory());
+      addTearDown(db.close);
+
+      await db.customStatement(
+        "UPDATE vocab SET meaning = '__stale_vocab__' "
+        "WHERE level = 'N5' AND series = 'minna' AND term = '学校'",
+      );
+      await db.customStatement(
+        "INSERT OR REPLACE INTO content_meta (key, value) "
+        "VALUES ('vocabSeedRevision:N5', '1')",
+      );
+
+      final repaired = await db.ensureVocabContentCurrentForActiveLevel();
+
+      final row =
+          await (db.select(db.vocab)
+                ..where(
+                  (tbl) =>
+                      tbl.level.equals('N5') &
+                      tbl.series.equals('minna') &
+                      tbl.term.equals('学校'),
+                )
+                ..limit(1))
+              .getSingle();
+
+      expect(repaired, isTrue);
+      expect(row.meaning, isNot('__stale_vocab__'));
+    },
+  );
+
   test('seeds kanji Han-Viet labels into decomposition metadata', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});

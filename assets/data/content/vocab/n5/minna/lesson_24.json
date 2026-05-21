@@ -501,6 +501,7 @@
       "order": 12,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -522,18 +523,24 @@
       },
       "sense": {
         "senseId": "n5_l24_s012",
-        "meaningVi": "ý nghĩa",
+        "meaningVi": "Nghĩa, ý nghĩa",
         "meaningEn": "meaning"
       },
       "search": {
         "termNoAccent": "意味",
         "readingNoAccent": "いみ",
-        "meaningViNoAccent": "y nghia",
+        "meaningViNoAccent": "Nghia, y nghia",
         "hanVietNoAccent": "y vi"
       },
       "links": {
         "sourceVocabId": "n5_l24_v012",
-        "sourceSenseId": "n5_l24_s012"
+        "sourceSenseId": "n5_l24_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ý vị"

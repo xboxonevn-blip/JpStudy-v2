@@ -584,6 +584,7 @@
       "order": 14,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -604,18 +605,23 @@
       },
       "sense": {
         "senseId": "n5_l19_s014",
-        "meaningVi": "trà đạo",
+        "meaningVi": "Trà (nói chung)",
         "meaningEn": "tea ceremony"
       },
       "search": {
         "termNoAccent": "お茶",
         "readingNoAccent": "おちゃ",
-        "meaningViNoAccent": "tra dao",
+        "meaningViNoAccent": "Tra (noi chung)",
         "hanVietNoAccent": "tra"
       },
       "links": {
         "sourceVocabId": "n5_l19_v014",
-        "sourceSenseId": "n5_l19_s014"
+        "sourceSenseId": "n5_l19_s014",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trà"

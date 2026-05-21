@@ -318,6 +318,53 @@ void main() {
   });
 
   test(
+    'seedTermsIfEmpty refreshes stale existing lesson definitions from content',
+    () async {
+      const lessonId = 1;
+      await repository.ensureLesson(
+        lessonId: lessonId,
+        level: 'N5',
+        title: 'N5 stale sync test',
+      );
+      await db
+          .into(db.userLessonTerm)
+          .insert(
+            UserLessonTermCompanion.insert(
+              id: const Value(7001),
+              lessonId: lessonId,
+              term: const Value('あの方'),
+              reading: const Value('あのかた'),
+              definition: const Value('người kia (lịch sự)'),
+              definitionEn: const Value('that person'),
+              orderIndex: const Value(5),
+              isLearned: const Value(true),
+            ),
+          );
+      await contentDb
+          .into(contentDb.vocab)
+          .insert(
+            VocabCompanion.insert(
+              id: const Value(17001),
+              term: 'あの方',
+              reading: const Value('あのかた'),
+              meaning: 'Vị kia',
+              meaningEn: const Value('that person'),
+              series: const Value('minna'),
+              level: 'N5',
+              tags: const Value('minna_1,jlpt-vocab'),
+            ),
+          );
+
+      await repository.seedTermsIfEmpty(lessonId, 'N5');
+
+      final terms = await repository.fetchTerms(lessonId);
+      expect(terms.single.definition, 'Vị kia');
+      expect(terms.single.definitionEn, 'that person');
+      expect(terms.single.isLearned, isTrue);
+    },
+  );
+
+  test(
     'seedTermsIfEmpty loads canonical lesson vocab for every JLPT level',
     () async {
       const cases = [

@@ -1035,6 +1035,7 @@
       "order": 24,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1057,18 +1058,24 @@
       },
       "sense": {
         "senseId": "n5_l04_s024",
-        "meaningVi": "hôm kia",
+        "meaningVi": "Ngày hôm kia",
         "meaningEn": "the day before yesterday"
       },
       "search": {
         "termNoAccent": "一昨日",
         "readingNoAccent": "おととい",
-        "meaningViNoAccent": "hom kia",
+        "meaningViNoAccent": "Ngay hom kia",
         "hanVietNoAccent": "nhat tac nhat"
       },
       "links": {
         "sourceVocabId": "n5_l04_v024",
-        "sourceSenseId": "n5_l04_s024"
+        "sourceSenseId": "n5_l04_s024",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nhất tạc nhật"
@@ -1531,6 +1538,7 @@
       "order": 35,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1552,18 +1560,23 @@
       },
       "sense": {
         "senseId": "n5_l04_s035",
-        "meaningVi": "phim ảnh",
+        "meaningVi": "Phim, điện ảnh",
         "meaningEn": "movie"
       },
       "search": {
         "termNoAccent": "映画",
         "readingNoAccent": "えいか",
-        "meaningViNoAccent": "phim anh",
+        "meaningViNoAccent": "Phim, dien anh",
         "hanVietNoAccent": "anh hoa"
       },
       "links": {
         "sourceVocabId": "n5_l04_v035",
-        "sourceSenseId": "n5_l04_s035"
+        "sourceSenseId": "n5_l04_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ánh hoạ"

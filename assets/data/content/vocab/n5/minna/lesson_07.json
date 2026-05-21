@@ -1437,6 +1437,7 @@
       "order": 34,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1457,18 +1458,23 @@
       },
       "sense": {
         "senseId": "n5_l07_s034",
-        "meaningVi": "bố (người khác)",
+        "meaningVi": "Cha (người khác)",
         "meaningEn": "father (someone else's)"
       },
       "search": {
         "termNoAccent": "お父さん",
         "readingNoAccent": "おとうさん",
-        "meaningViNoAccent": "bo (nguoi khac)",
+        "meaningViNoAccent": "Cha (nguoi khac)",
         "hanVietNoAccent": "phu"
       },
       "links": {
         "sourceVocabId": "n5_l07_v034",
-        "sourceSenseId": "n5_l07_s034"
+        "sourceSenseId": "n5_l07_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phụ"

@@ -849,6 +849,7 @@
       "order": 20,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -869,18 +870,23 @@
       },
       "sense": {
         "senseId": "n5_l25_s020",
-        "meaningVi": "ga tàu",
+        "meaningVi": "Ga, nhà ga",
         "meaningEn": "station"
       },
       "search": {
         "termNoAccent": "駅",
         "readingNoAccent": "えき",
-        "meaningViNoAccent": "ga tau",
+        "meaningViNoAccent": "Ga, nha ga",
         "hanVietNoAccent": "dich"
       },
       "links": {
         "sourceVocabId": "n5_l25_v020",
-        "sourceSenseId": "n5_l25_s020"
+        "sourceSenseId": "n5_l25_s020",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "dịch"

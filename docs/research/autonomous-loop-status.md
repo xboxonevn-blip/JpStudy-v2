@@ -8,6 +8,18 @@
 - Logged `DECISION-038` for lowest-level canonical assignment and explicit `WRONG-LEVEL` reporting.
 - Next: gate and commit Phase 3 report-only batch, then plan first safe app vocab mutation batch from high-confidence rows.
 
+## 2026-05-21 QA-A-030 Phase 3 N5 Minna vocab fix batch 1
+
+- Added `tool/research/apply_vocab_app_diff_fixes.js` with RED/GREEN coverage for selecting consensus-only meaning fixes, rejecting obvious polysemy via Vietnamese token-overlap guard, updating `meaningVi`/search text/source tags, and writing a batch report.
+- Added per-level `vocabSeedRevision:<level>` content-meta refresh so returning browsers reseed the active vocab level after bundled JSON edits; regressions prove stale `学校` is repaired and first-revision installs upgrade to revision `2`.
+- Added lesson-term definition sync so already-opened curriculum lessons update stale `userLessonTerm` rows from refreshed content while preserving learner progress; regression covers stale `あの方`.
+- Applied the first cautious N5 Minna batch: `19` high-confidence `WRONG-MEANING` rows across lessons `01`, `04`, `05`, `06`, `07`, `09`, `11`, `12`, `14`, `17`, `19`, `23`, `24`, and `25`.
+- Batch report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-001.md`.
+- Gates: JS focused apply/diff tests `6/6`; focused content DB + lesson repository tests `27/27`; `flutter analyze lib test` clean; UI string guard `0`; content VI status `0` machine/open-review rows; full `flutter test --concurrency=1` passed `2073+` tests; `git diff --check` clean except CRLF warnings.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof on `https://jpstudy.web.app`: in the same browser that previously showed stale cache, VI `/#/lesson/1?level=N5` updated `あの方` to `Vị kia` and no longer showed `người kia (lịch sự)`; VI `/#/lesson/4?level=N5` updated `映画` to `Phim, điện ảnh`.
+- Next: commit batch, then handle owner-requested Phase 3 §7.4 Hajimete placeholder violation.
+
 # 2026-05-21 — Megaprompt Phase 7 final reverify
 
 - Re-ran Phase 7 probes after handoff and fixed two QA-tool defects: vocab samples now use level-aware Hajimete chapter routes instead of invalid numeric detail IDs, and visual regression now compares decoded pixels after waiting for route-specific content instead of comparing compressed PNG bytes or spinner baselines.

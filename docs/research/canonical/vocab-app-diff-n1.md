@@ -1,6 +1,6 @@
 # Vocab App Diff - N1
 
-Generated: 2026-05-21T09:05:40.156Z
+Generated: 2026-05-21T09:17:08.997Z
 Source boundary: owner-provided local canonical vocab markdown + bundled app vocab JSON only; banned websites not accessed.
 
 ## Summary

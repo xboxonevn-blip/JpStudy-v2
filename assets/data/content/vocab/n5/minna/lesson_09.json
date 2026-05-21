@@ -1280,6 +1280,7 @@
       "order": 30,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1301,18 +1302,24 @@
       },
       "sense": {
         "senseId": "n5_l09_s030",
-        "meaningVi": "chồng (người khác)",
+        "meaningVi": "Chồng (dùng khi nói về chồng người khác)",
         "meaningEn": "husband (someone else's)"
       },
       "search": {
         "termNoAccent": "こ主人",
         "readingNoAccent": "こしゅしん",
-        "meaningViNoAccent": "chong (nguoi khac)",
+        "meaningViNoAccent": "Chong (dung khi noi ve chong nguoi khac)",
         "hanVietNoAccent": "chua nhan"
       },
       "links": {
         "sourceVocabId": "n5_l09_v030",
-        "sourceSenseId": "n5_l09_s030"
+        "sourceSenseId": "n5_l09_s030",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "chúa nhân"
@@ -1414,6 +1421,7 @@
       "order": 33,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1434,18 +1442,23 @@
       },
       "sense": {
         "senseId": "n5_l09_s033",
-        "meaningVi": "vợ (người khác)",
+        "meaningVi": "Vợ (dùng khi nói về vợ người khác)",
         "meaningEn": "wife (someone else's)"
       },
       "search": {
         "termNoAccent": "奥さん",
         "readingNoAccent": "おくさん",
-        "meaningViNoAccent": "vo (nguoi khac)",
+        "meaningViNoAccent": "Vo (dung khi noi ve vo nguoi khac)",
         "hanVietNoAccent": "ao"
       },
       "links": {
         "sourceVocabId": "n5_l09_v033",
-        "sourceSenseId": "n5_l09_s033"
+        "sourceSenseId": "n5_l09_s033",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "áo"

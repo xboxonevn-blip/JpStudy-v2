@@ -1341,6 +1341,7 @@
       "order": 31,
       "tags": [
         "phrase",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1362,18 +1363,23 @@
       },
       "sense": {
         "senseId": "n5_l17_s031",
-        "meaningVi": "chúc mau khỏe (với người ốm)",
+        "meaningVi": "Anh/chị nhớ giữ gìn sức khỏe",
         "meaningEn": "Get well soon"
       },
       "search": {
         "termNoAccent": "お大事に",
         "readingNoAccent": "おたいしに",
-        "meaningViNoAccent": "chuc mau khoe (voi nguoi om)",
+        "meaningViNoAccent": "Anh/chi nho giu gin suc khoe",
         "hanVietNoAccent": "dai su"
       },
       "links": {
         "sourceVocabId": "n5_l17_v031",
-        "sourceSenseId": "n5_l17_s031"
+        "sourceSenseId": "n5_l17_s031",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đại sự"

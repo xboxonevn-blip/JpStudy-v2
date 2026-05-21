@@ -1,6 +1,6 @@
 # Vocab App Diff - N5
 
-Generated: 2026-05-21T09:05:40.156Z
+Generated: 2026-05-21T09:17:08.997Z
 Source boundary: owner-provided local canonical vocab markdown + bundled app vocab JSON only; banned websites not accessed.
 
 ## Summary
@@ -9,10 +9,10 @@ Source boundary: owner-provided local canonical vocab markdown + bundled app voc
 | --- | ---: |
 | App entries | 1989 |
 | Canonical entries | 1050 |
-| MATCHED-OK | 451 |
+| MATCHED-OK | 470 |
 | MATCHED-REVIEW | 45 |
 | WRONG-LEVEL | 127 |
-| WRONG-MEANING | 431 |
+| WRONG-MEANING | 412 |
 | WRONG-READING | 108 |
 | WRONG-POS | 0 |
 | MISSING-IN-APP | 128 |
@@ -22,11 +22,12 @@ Level policy: if a canonical term appears in multiple JLPT source levels, this r
 
 ## MATCHED-OK
 
-Count: 451
+Count: 470
 
 | Term | Reading | Meaning VI | Sources | App path |
 | --- | --- | --- | --- | --- |
 | あの人 | あのひと | người kia | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_01.json |
+| あの方 | あのかた | Vị kia | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_01.json |
 | いいえ | いいえ | không | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch09.json |
 | いいえ | いいえ | không | minna-1 | assets/data/content/vocab/n5/minna/lesson_01.json |
 | いいえ | いいえ | không | minna-1 | assets/data/content/vocab/n5/minna/lesson_16.json |
@@ -34,14 +35,22 @@ Count: 451
 | エレベーター | エレベーター | thang máy | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch14.json |
 | お菓子 | おかし | bánh kẹo | kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_24.json |
 | お金 | おかね | tiền | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_07.json |
+| お兄さん | おにいさん | Anh trai (dùng cho người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_11.json |
 | お祭り | おまつり | lễ hội | minna-1 | assets/data/content/vocab/n5/minna/lesson_21.json |
+| お姉さん | おねえさん | Chị gái (dùng cho người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_11.json |
+| お大事に | おだいじに | Anh/chị nhớ giữ gìn sức khỏe | kanji-vocab-n3, kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_17.json |
+| お茶 | おちゃ | Trà (nói chung) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_06.json |
+| お茶 | おちゃ | Trà (nói chung) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_19.json |
 | お土産 | おみやげ | quà lưu niệm | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_07.json |
+| お父さん | おとうさん | Cha (người khác) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_07.json |
 | お風呂 | おふろ | bồn tắm | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_17.json |
 | お腹 | おなか | bụng | kanji-vocab-n2, minna-1 | assets/data/content/vocab/n5/minna/lesson_16.json |
 | お母さん | おかあさん | mẹ (người khác) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_07.json |
 | コーヒー | コーヒー | cà phê | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch05.json |
 | ここ | ここ | ở đây | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch06.json |
 | こちらこそよろしく | こちらこそよろしく | Chính tôi mới là người mong được giúp đỡ | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
+| ご主人 | ごしゅじん | Chồng (dùng khi nói về chồng người khác) | kanji-vocab-n4, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_09.json |
+| すき焼き | すきやき | Sukiyaki (món thịt bò nấu rau) | kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/minna/lesson_12.json |
 | すみません | すみません | xin lỗi | minna-1 | assets/data/content/vocab/n5/minna/lesson_03.json |
 | すみません | すみません | xin lỗi | minna-1 | assets/data/content/vocab/n5/minna/lesson_09.json |
 | そうですか | そうですか | thế à? | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
@@ -60,29 +69,39 @@ Count: 451
 | 暗い | くらい | tối | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_16.json |
 | 暗証番号 | あんしょうばんごう | mã số bí mật, mật khẩu | kanji-vocab-n2, kanji-vocab-n4, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_16.json |
 | 意見 | いけん | ý kiến | kanji-vocab-n3, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_21.json |
+| 意味 | いみ | Nghĩa, ý nghĩa | kanji-vocab-n3, kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_24.json |
 | 医者 | いしゃ | bác sĩ | kanji-vocab-n3, kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_01.json |
 | 一 | いち | Số 1 | kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_02.json |
 | 一月 | いちがつ | tháng 1 | kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_05.json |
 | 一昨日 | おととい | ngày hôm kia | kanji-vocab-n3, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch03.json |
+| 一昨日 | おととい | Ngày hôm kia | kanji-vocab-n3, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_04.json |
 | 一緒に | いっしょに | cùng nhau | kanji-vocab-n2, kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_06.json |
 | 一緒に | いっしょに | cùng nhau | kanji-vocab-n2, kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_09.json |
 | 一人で | ひとりで | một mình | kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_05.json |
 | 一度 | いちど | một lần | kanji-vocab-n3, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_19.json |
 | 一度も | いちども | chưa lần nào | kanji-vocab-n3, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_19.json |
+| 引っ越し | ひっこし | Sự chuyển nhà | kanji-vocab-n2, kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/minna/lesson_23.json |
 | 飲み物 | のみもの | đồ uống | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch05.json |
 | 飲み物 | のみもの | đồ uống | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_09.json |
 | 飲む | のむ | uống | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch02.json |
 | 右 | みぎ | phải | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_10.json |
+| 右 | みぎ | Phải | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_14.json |
 | 雨 | あめ | mưa | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch07.json |
 | 雨 | あめ | mưa | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_12.json |
+| 雨 | あめ | Mưa | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_14.json |
+| 映画 | えいが | Phim, điện ảnh | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_04.json |
+| 映画 | えいが | Phim, điện ảnh | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_06.json |
 | 英語 | えいご | tiếng anh | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch06.json |
 | 英語 | えいご | tiếng Anh | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
+| 駅 | えき | Ga, nhà ga | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_05.json |
+| 駅 | えき | Ga, nhà ga | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_25.json |
 | 遠い | とおい | xa | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch05.json |
 | 遠い | とおい | xa | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_12.json |
 | 鉛筆 | えんぴつ | bút chì | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch13.json |
 | 鉛筆 | えんぴつ | bút chì | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
 | 塩 | しお | muối | kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch09.json |
 | 塩 | しお | muối | kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/minna/lesson_14.json |
+| 奥さん | おくさん | Vợ (dùng khi nói về vợ người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_09.json |
 | 億 | おく | một trăm triệu | kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/minna/lesson_25.json |
 | 音 | おと | âm thanh | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_23.json |
 | 音楽 | おんがく | âm nhạc | kanji-vocab-n4, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch11.json |
@@ -666,7 +685,7 @@ Count: 127
 
 ## WRONG-MEANING
 
-Count: 431
+Count: 412
 
 | Term | Reading | App meaning VI | Canonical meaning VI | Sources | App path |
 | --- | --- | --- | --- | --- | --- |
@@ -677,7 +696,6 @@ Count: 431
 | あちら | あちら | kia, phía kia (lịch sự) | Ở kia, phía kia (lịch sự) | minna-1 | assets/data/content/vocab/n5/minna/lesson_03.json |
 | あの | あの | cái đó ở đằng kia | ~ kia | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch02.json |
 | あのう | あのう | à..., ờ... (ngập ngừng) | À...ờ (ngập ngừng khi đề nghị hoặc suy nghĩ 1 vấn đề) | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
-| あの方 | あのかた | người kia (lịch sự) | Vị kia | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_01.json |
 | あれ | あれ | đó | Kia | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch01.json |
 | あれ | あれ | cái kia (xa cả hai) | Kia | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
 | いくら | いくら | bao nhiêu tiền | Bao nhiêu | minna-1 | assets/data/content/vocab/n5/minna/lesson_03.json |
@@ -686,17 +704,11 @@ Count: 431
 | お菓子 | おかし | đồ ngọt, kẹo | Bánh kẹo | kanji-vocab-n5 | assets/data/content/vocab/n5/hajimete/hajimete_ch09.json |
 | お金 | おかね | tiền bạc | Tiền | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch11.json |
 | お兄さん | おにいさん | (danh dự) anh trai | Anh trai (dùng cho người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch11.json |
-| お兄さん | おにいさん | anh trai (người khác) | Anh trai (dùng cho người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_11.json |
 | お姉さん | おねえさん | (danh dự) chị gái | Chị gái (dùng cho người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch01.json |
-| お姉さん | おねえさん | chị gái (người khác) | Chị gái (dùng cho người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_11.json |
-| お大事に | おだいじに | chúc mau khỏe (với người ốm) | Anh/chị nhớ giữ gìn sức khỏe | kanji-vocab-n3, kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_17.json |
 | お茶 | おちゃ | trà xanh | Trà (nói chung) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch04.json |
-| お茶 | おちゃ | trà (xanh) | Trà (nói chung) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_06.json |
-| お茶 | おちゃ | trà đạo | Trà (nói chung) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_19.json |
 | お釣り | おつり | tiền thừa | Tiền lẻ | minna-1 | assets/data/content/vocab/n5/minna/lesson_14.json |
 | お釣り | おつり | tiền lẻ, tiền thối | Tiền lẻ | minna-1 | assets/data/content/vocab/n5/minna/lesson_23.json |
 | お父さん | おとうさん | (danh dự) cha | Cha (người khác) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch10.json |
-| お父さん | おとうさん | bố (người khác) | Cha (người khác) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_07.json |
 | お風呂 | おふろ | tắm | Bồn tắm | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch07.json |
 | お母さん | おかあさん | (danh dự) mẹ | Mẹ (người khác) | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch05.json |
 | お名前は？ | おなまえは | tên bạn là gì? | Bạn tên gì? | minna-1 | assets/data/content/vocab/n5/minna/lesson_01.json |
@@ -708,8 +720,6 @@ Count: 431
 | これ | これ | cái này (gần người nói) | Đây | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
 | これ | これ | cái này | Đây | minna-1 | assets/data/content/vocab/n5/minna/lesson_14.json |
 | これからお世話になります | これからおせわになります | Từ nay mong được giúp đỡ | Từ nay mong được giúp | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
-| ご主人 | ごしゅじん | chồng (người khác) | Chồng (dùng khi nói về chồng người khác) | kanji-vocab-n4, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_09.json |
-| すき焼き | すきやき | món Sukiyaki | Sukiyaki (món thịt bò nấu rau) | kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/minna/lesson_12.json |
 | そう | そう | đúng vậy | Thế nào | minna-1 | assets/data/content/vocab/n5/minna/lesson_02.json |
 | そこ | そこ | nơi đó | Ở đó | minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch10.json |
 | そこ | そこ | đó, chỗ đó | Ở đó | minna-1 | assets/data/content/vocab/n5/minna/lesson_03.json |
@@ -738,27 +748,17 @@ Count: 431
 | 暗い | くらい | ảm đạm | Tối | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch13.json |
 | 案内 | あんない | hướng dẫn, thông tin | Hướng dẫn, giới thiệu, dẫn đường | kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_24.json |
 | 意味 | いみ | ý nghĩa | Nghĩa, ý nghĩa | kanji-vocab-n3, kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch07.json |
-| 意味 | いみ | ý nghĩa | Nghĩa, ý nghĩa | kanji-vocab-n3, kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_24.json |
 | 医者 | いしゃ | bác sĩ y khoa | Bác sĩ | kanji-vocab-n3, kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch14.json |
 | 一 | いち | một | Số 1 | kanji-vocab-n5 | assets/data/content/vocab/n5/hajimete/hajimete_ch12.json |
-| 一昨日 | おととい | hôm kia | Ngày hôm kia | kanji-vocab-n3, kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_04.json |
 | 一昨年 | おととし | năm trước năm ngoái | Năm kia | kanji-vocab-n3, kanji-vocab-n5, minna-2 | assets/data/content/vocab/n5/hajimete/hajimete_ch04.json |
 | 一日 | ついたち | mồng 1 | Ngày mùng 1 | kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_05.json |
 | 一杯 | いっぱい | một ly, một cốc | No, đầy | kanji-vocab-n3, kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_25.json |
-| 引っ越し | ひっこし | chuyển nhà | Sự chuyển nhà | kanji-vocab-n2, kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/minna/lesson_23.json |
 | 右 | みぎ | bên phải | Phải | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch08.json |
-| 右 | みぎ | bên phải | Phải | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_14.json |
-| 雨 | あめ | cơn mưa | Mưa | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/minna/lesson_14.json |
 | 映画 | えいが | phim | Phim, điện ảnh | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch09.json |
-| 映画 | えいが | phim ảnh | Phim, điện ảnh | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_04.json |
-| 映画 | えいが | phim ảnh | Phim, điện ảnh | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_06.json |
 | 泳ぐ | およぐ | bơi lội | Bơi | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch10.json |
 | 駅 | えき | trạm | Ga, nhà ga | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch09.json |
-| 駅 | えき | nhà ga | Ga, nhà ga | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_05.json |
-| 駅 | えき | ga tàu | Ga, nhà ga | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_25.json |
 | 円 | えん | yên (tiền Nhật) | Yên, đồng yên | kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_03.json |
 | 奥さん | おくさん | (danh dự) vợ | Vợ (dùng khi nói về vợ người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch13.json |
-| 奥さん | おくさん | vợ (người khác) | Vợ (dùng khi nói về vợ người khác) | kanji-vocab-n4, minna-1 | assets/data/content/vocab/n5/minna/lesson_09.json |
 | 押し入れ | おしいれ | tủ tường (kiểu Nhật) | Chổ để chăn gối trong một căn phòng kiểu nhật | kanji-vocab-n3, kanji-vocab-n5 | assets/data/content/vocab/n5/minna/lesson_22.json |
 | 温かい | あたたかい | ấm (cảm giác) | Ấm | kanji-vocab-n3, minna-1 | assets/data/content/vocab/n5/minna/lesson_12.json |
 | 下 | した | bên dưới | Dưới | kanji-vocab-n5, minna-1 | assets/data/content/vocab/n5/hajimete/hajimete_ch09.json |

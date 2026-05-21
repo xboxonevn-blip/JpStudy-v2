@@ -1597,6 +1597,7 @@
       "order": 37,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1617,18 +1618,23 @@
       },
       "sense": {
         "senseId": "n5_l11_s037",
-        "meaningVi": "anh trai (người khác)",
+        "meaningVi": "Anh trai (dùng cho người khác)",
         "meaningEn": "older brother (someone else's)"
       },
       "search": {
         "termNoAccent": "お兄さん",
         "readingNoAccent": "おにいさん",
-        "meaningViNoAccent": "anh trai (nguoi khac)",
+        "meaningViNoAccent": "Anh trai (dung cho nguoi khac)",
         "hanVietNoAccent": "huynh"
       },
       "links": {
         "sourceVocabId": "n5_l11_v037",
-        "sourceSenseId": "n5_l11_s037"
+        "sourceSenseId": "n5_l11_s037",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "huynh"
@@ -1685,6 +1691,7 @@
       "order": 39,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1705,18 +1712,23 @@
       },
       "sense": {
         "senseId": "n5_l11_s039",
-        "meaningVi": "chị gái (người khác)",
+        "meaningVi": "Chị gái (dùng cho người khác)",
         "meaningEn": "older sister (someone else's)"
       },
       "search": {
         "termNoAccent": "お姉さん",
         "readingNoAccent": "おねえさん",
-        "meaningViNoAccent": "chi gai (nguoi khac)",
+        "meaningViNoAccent": "Chi gai (dung cho nguoi khac)",
         "hanVietNoAccent": "ty"
       },
       "links": {
         "sourceVocabId": "n5_l11_v039",
-        "sourceSenseId": "n5_l11_s039"
+        "sourceSenseId": "n5_l11_s039",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tỷ"

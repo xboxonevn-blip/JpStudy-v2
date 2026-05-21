@@ -1646,6 +1646,7 @@
       "order": 38,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1667,18 +1668,24 @@
       },
       "sense": {
         "senseId": "n5_l23_s038",
-        "meaningVi": "chuyển nhà",
+        "meaningVi": "Sự chuyển nhà",
         "meaningEn": "moving (residence)"
       },
       "search": {
         "termNoAccent": "引っ越し",
         "readingNoAccent": "ひっこし",
-        "meaningViNoAccent": "chuyen nha",
+        "meaningViNoAccent": "Su chuyen nha",
         "hanVietNoAccent": "dan viet"
       },
       "links": {
         "sourceVocabId": "n5_l23_v038",
-        "sourceSenseId": "n5_l23_s038"
+        "sourceSenseId": "n5_l23_s038",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "dẫn việt"

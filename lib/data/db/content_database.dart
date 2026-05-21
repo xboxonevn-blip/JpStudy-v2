@@ -15,6 +15,8 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 90;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
+const _vocabSeedRevision = 2;
+const _vocabSeedRevisionKeyPrefix = 'vocabSeedRevision';
 const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
 const _conjugationLemmaAssetPath =
@@ -624,6 +626,7 @@ class ContentDatabase extends _$ContentDatabase {
       beforeOpen: (details) async {
         await _ensureKanjiContentCurrent();
         await _ensureGrammarSeedRevision();
+        await _ensureVocabSeedRevisionForActiveLevel();
         // All four checks are independent — run them concurrently so the
         // content DB is ready in the time of the single slowest check.
         await Future.wait([
@@ -642,6 +645,10 @@ class ContentDatabase extends _$ContentDatabase {
     final future = _ensureKanjiContentCurrent();
     _kanjiContentCurrentFuture = future;
     return future.whenComplete(() => _kanjiContentCurrentFuture = null);
+  }
+
+  Future<bool> ensureVocabContentCurrentForActiveLevel() {
+    return _ensureVocabSeedRevisionForActiveLevel();
   }
 
   Future<bool> _ensureKanjiContentCurrent() async {
@@ -728,6 +735,31 @@ class ContentDatabase extends _$ContentDatabase {
 
     await _seedMinnaGrammar();
     await _markContentRevision(_grammarSeedRevisionKey, _grammarSeedRevision);
+    return true;
+  }
+
+  Future<bool> _ensureVocabSeedRevisionForActiveLevel() async {
+    final activeLevel = await _activeStudyLevelLabel();
+    return _ensureVocabSeedRevisionForLevel(activeLevel);
+  }
+
+  Future<bool> _ensureVocabSeedRevisionForLevel(String level) async {
+    final normalizedLevel = level.trim().toUpperCase();
+    if (_contentSeedSpecForLevel(normalizedLevel) == null) return false;
+    await _ensureContentMetaTable();
+    final key = '$_vocabSeedRevisionKeyPrefix:$normalizedLevel';
+    final revisionRows = await customSelect(
+      "SELECT value FROM content_meta WHERE key = '$key' LIMIT 1",
+    ).get();
+    final storedRevision = revisionRows.isEmpty
+        ? null
+        : int.tryParse('${revisionRows.single.data['value']}');
+    if (storedRevision != null && storedRevision >= _vocabSeedRevision) {
+      return false;
+    }
+
+    await _reseedVocabularyForLevel(normalizedLevel);
+    await _markContentRevision(key, _vocabSeedRevision);
     return true;
   }
 
@@ -883,6 +915,21 @@ class ContentDatabase extends _$ContentDatabase {
   Future<void> _reseedHajimeteVocab() async {
     await (delete(vocab)..where((tbl) => tbl.series.equals('hajimete'))).go();
     await _seedHajimeteVocabulary();
+  }
+
+  Future<void> _reseedVocabularyForLevel(String level) async {
+    final normalizedLevel = level.trim().toUpperCase();
+    await (delete(
+      vocab,
+    )..where((tbl) => tbl.level.equals(normalizedLevel))).go();
+    final contentSpec = _contentSeedSpecForLevel(normalizedLevel);
+    final hajimeteSpecs = _hajimeteSeedSpecs.where(
+      (spec) => spec.levelLabel == normalizedLevel,
+    );
+    await Future.wait([
+      if (contentSpec != null) _seedVocabularyLevel(contentSpec),
+      ...hajimeteSpecs.map(_seedHajimeteLevel),
+    ]);
   }
 
   Future<void> _ensureConjugationLemmasSeededForActiveLevel() async {

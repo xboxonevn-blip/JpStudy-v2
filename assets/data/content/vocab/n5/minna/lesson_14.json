@@ -1759,6 +1759,7 @@
       "order": 41,
       "tags": [
         "position",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1779,18 +1780,23 @@
       },
       "sense": {
         "senseId": "n5_l14_s041",
-        "meaningVi": "bên phải",
+        "meaningVi": "Phải",
         "meaningEn": "right side"
       },
       "search": {
         "termNoAccent": "右",
         "readingNoAccent": "みき",
-        "meaningViNoAccent": "ben phai",
+        "meaningViNoAccent": "Phai",
         "hanVietNoAccent": "huu"
       },
       "links": {
         "sourceVocabId": "n5_l14_v041",
-        "sourceSenseId": "n5_l14_s041"
+        "sourceSenseId": "n5_l14_s041",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hữu"
@@ -1803,6 +1809,7 @@
       "order": 42,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1823,18 +1830,23 @@
       },
       "sense": {
         "senseId": "n5_l14_s042",
-        "meaningVi": "cơn mưa",
+        "meaningVi": "Mưa",
         "meaningEn": "rain"
       },
       "search": {
         "termNoAccent": "雨",
         "readingNoAccent": "あめ",
-        "meaningViNoAccent": "con mua",
+        "meaningViNoAccent": "Mua",
         "hanVietNoAccent": "vu"
       },
       "links": {
         "sourceVocabId": "n5_l14_v042",
-        "sourceSenseId": "n5_l14_s042"
+        "sourceSenseId": "n5_l14_s042",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "vũ"

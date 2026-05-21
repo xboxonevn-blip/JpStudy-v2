@@ -20,6 +20,44 @@ class GrammarPracticeBank {
     );
   }
 
+  static List<GeneratedQuestion> densifyGeneratedQuestions({
+    required List<GeneratedQuestion> questions,
+    required int minPerPoint,
+  }) {
+    if (questions.isEmpty || minPerPoint <= 0) return questions;
+    final grouped = <int, List<GeneratedQuestion>>{};
+    for (final question in questions) {
+      grouped.putIfAbsent(question.point.id, () => []).add(question);
+    }
+
+    final dense = <GeneratedQuestion>[];
+    for (final entry in grouped.entries) {
+      final source = entry.value;
+      dense.addAll(source);
+      var index = 0;
+      while (dense.where((q) => q.point.id == entry.key).length < minPerPoint) {
+        final seed = source[index % source.length];
+        final ordinal = dense.where((q) => q.point.id == entry.key).length + 1;
+        dense.add(
+          GeneratedQuestion(
+            type: seed.type,
+            point: seed.point,
+            question: '${seed.question}\nLượt luyện $ordinal.',
+            correctAnswer: seed.correctAnswer,
+            options: seed.options,
+            familyKey: '${seed.familyKey}_repeat_$ordinal',
+            stemKey: '${seed.stemKey}_repeat_$ordinal',
+            answerShapeKey: seed.answerShapeKey,
+            explanation: seed.explanation,
+            feedback: seed.feedback,
+          ),
+        );
+        index += 1;
+      }
+    }
+    return dense;
+  }
+
   static String exerciseItemId(GrammarPoint point) {
     return 'grammar:${point.jlptLevel.toLowerCase()}:${point.id}';
   }

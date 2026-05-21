@@ -1381,3 +1381,10 @@
 - Generated local distractor corpora from bundled assets only: phonetic traps for `15661` vocab items and kanji lookalikes for `2113` kanji.
 - Added asset bundling paths for `reading_passages/` and `exercise_distractors/`.
 - Validation output: `readingPassages=80`, `phoneticTrapItems=15661`, `kanjiLookalikeItems=2113`, failures `0`.
+
+## 2026-05-21 Megaprompt Phase 4 Exercise Engine Batch 3
+
+- Changed grammar detail practice gates from `5` to `50` questions and related conjugation practice CTAs from `5` to `50`.
+- Added deterministic generated-question densification so a single grammar point can render a full `Question 1 of 50` gate even when the base generator has fewer unique authored examples.
+- Changed grammar gate pass policy from hard-coded `4/5` to `>=80%` accuracy, matching Directive F.
+- Focused widget proof: `test/features/grammar/grammar_practice_screen_test.dart` now verifies the 50-question gate and 80% threshold.

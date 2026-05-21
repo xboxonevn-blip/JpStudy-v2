@@ -161,3 +161,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Original passages avoid copyright risk, and phonetic/lookalike corpora can be derived from bundled local vocab/kanji facts with deterministic validation.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-017 - Make grammar detail gate the first 50-question UI path
+**Phase**: 4
+**Date**: 2026-05-21 08:40 (local)
+**Context**: Owner explicitly called the old 5-question item drill too shallow, and grammar detail already has the learner-facing practice gate.
+**Options considered**: leave UI at 5 while bank is dense | make all grammar sessions 50 immediately | start with single-item detail gates at 50
+**Chosen**: start with single-item detail gates at 50
+**Rationale**: This directly fixes the visible item-gate defect without making due/quick multi-item sessions unmanageably long before Phase 5 cross-modal SRS is complete.
+**Reversible**: yes
+**Owner review**: pending

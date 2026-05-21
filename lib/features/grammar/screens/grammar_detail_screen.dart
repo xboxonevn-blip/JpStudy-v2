@@ -62,7 +62,7 @@ class GrammarDetailScreen extends ConsumerWidget {
                       'blueprint': GrammarPracticeBlueprint.quiz,
                       'goalProfile': GrammarGoalProfile.balanced,
                       'gateGrammarId': grammarId,
-                      'targetCount': 5,
+                      'targetCount': 50,
                     },
                   ),
                   secondaryLabel: conjugationFormKeys.isEmpty
@@ -73,7 +73,7 @@ class GrammarDetailScreen extends ConsumerWidget {
                       : () => context.openConjugationPractice(
                           ConjugationPracticeArgs(
                             formKeys: conjugationFormKeys,
-                            targetCount: 5,
+                            targetCount: 50,
                             source: 'grammar_detail',
                             grammarId: grammarId,
                           ),

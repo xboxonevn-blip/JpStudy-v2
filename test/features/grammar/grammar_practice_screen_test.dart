@@ -195,7 +195,7 @@ void main() {
     },
   );
 
-  testWidgets('practice gate runs a focused five-question check', (
+  testWidgets('practice gate runs a focused fifty-question check', (
     tester,
   ) async {
     final db = AppDatabase(executor: NativeDatabase.memory());
@@ -247,16 +247,37 @@ void main() {
           home: GrammarPracticeScreen(
             initialIds: [targetId],
             gateGrammarId: targetId,
-            targetCount: 5,
+            targetCount: 50,
           ),
         ),
       ),
     );
 
-    await pumpUntilFound(tester, find.text('Question 1 of 5'));
+    await pumpUntilFound(tester, find.text('Question 1 of 50'));
 
     expect(find.text('Practice check'), findsWidgets);
-    expect(find.text('Question 1 of 5'), findsOneWidget);
+    expect(find.text('Question 1 of 50'), findsOneWidget);
+  });
+
+  test('practice gate requires at least 80 percent accuracy', () {
+    expect(
+      grammarPracticeGatePassedForTesting(
+        hasGate: true,
+        timedOut: false,
+        score: 39,
+        total: 50,
+      ),
+      isFalse,
+    );
+    expect(
+      grammarPracticeGatePassedForTesting(
+        hasGate: true,
+        timedOut: false,
+        score: 40,
+        total: 50,
+      ),
+      isTrue,
+    );
   });
 
   testWidgets('practice gate pass marks the grammar point understood', (

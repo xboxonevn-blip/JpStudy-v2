@@ -28,6 +28,30 @@ enum GrammarPracticeBlueprint { learn, drill, quiz }
 
 enum GrammarGoalProfile { balanced, accuracy, speed }
 
+bool grammarPracticeGatePassedForTesting({
+  required bool hasGate,
+  required bool timedOut,
+  required int score,
+  required int total,
+}) {
+  return _grammarPracticeGatePassed(
+    hasGate: hasGate,
+    timedOut: timedOut,
+    score: score,
+    total: total,
+  );
+}
+
+bool _grammarPracticeGatePassed({
+  required bool hasGate,
+  required bool timedOut,
+  required int score,
+  required int total,
+}) {
+  if (!hasGate || timedOut || total <= 0) return false;
+  return score / total >= 0.8;
+}
+
 class GrammarSessionPlanner {
   GrammarSessionPlanner({Random? random}) : _random = random ?? Random();
 
@@ -533,6 +557,13 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           .toList(growable: false);
     }
 
+    if (widget.gateGrammarId != null) {
+      generated = GrammarPracticeBank.densifyGeneratedQuestions(
+        questions: generated,
+        minPerPoint: _sessionQuestionCount(_sessionType),
+      );
+    }
+
     if (widget.mode == GrammarPracticeMode.ghost) {
       generated.sort((a, b) {
         final aPriority = _ghostPriority(a.type);
@@ -938,8 +969,12 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
     final total = _questions.length;
     final wrong = total - _score;
     final percent = total == 0 ? 0 : ((_score / total) * 100).round();
-    final gatePassed =
-        widget.gateGrammarId != null && !timedOut && total > 0 && _score >= 4;
+    final gatePassed = _grammarPracticeGatePassed(
+      hasGate: widget.gateGrammarId != null,
+      timedOut: timedOut,
+      score: _score,
+      total: total,
+    );
 
     if (gatePassed) {
       ref
@@ -988,9 +1023,9 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
                         )
                       : _tr(
                           language,
-                          en: 'Score 4/5 or higher to mark this point Understood.',
-                          vi: 'Cần đạt từ 4/5 để đánh dấu điểm này là Đã hiểu.',
-                          ja: '理解済みにするには5問中4問以上が必要です。',
+                          en: 'Score at least 80% to mark this point Understood.',
+                          vi: 'Cần đạt ít nhất 80% để đánh dấu điểm này là Đã hiểu.',
+                          ja: '理解済みにするには80%以上の正答率が必要です。',
                         ),
                   style: TextStyle(
                     color: gatePassed ? palette.success : palette.warning,

@@ -9,6 +9,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/onboarding_provider.dart';
 import 'package:jpstudy/core/shared_preferences_provider.dart';
 import 'package:jpstudy/core/study_goal.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class GoalSelectionBanner extends ConsumerStatefulWidget {
   const GoalSelectionBanner({super.key});
@@ -97,87 +98,73 @@ class _GoalBannerContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final palette = context.appPalette;
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(14, 0, 14, 10),
-      child: Container(
-        padding: const EdgeInsets.all(AppSpacing.md),
-        decoration: BoxDecoration(
-          color: palette.elevated,
-          borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: palette.primary.withValues(alpha: 0.18)),
-          boxShadow: [
-            BoxShadow(
-              color: palette.primary.withValues(alpha: 0.08),
-              blurRadius: 18,
-              offset: const Offset(0, 8),
+    return AppCard(
+      margin: const EdgeInsets.fromLTRB(14, 0, 14, 10),
+      padding: const EdgeInsets.all(AppSpacing.md),
+      borderRadius: 18,
+      variant: AppCardVariant.accent,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final narrow = constraints.maxWidth < 620;
+          final chips = Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              _GoalChip(
+                icon: Icons.assignment_turned_in_rounded,
+                label: language.goalJlptOption,
+                onTap: () => onSelected(StudyGoal.jlpt),
+              ),
+              _GoalChip(
+                icon: Icons.auto_stories_rounded,
+                label: language.goalReadOption,
+                onTap: () => onSelected(StudyGoal.reading),
+              ),
+              _GoalChip(
+                icon: Icons.edit_note_rounded,
+                label: language.goalWriteOption,
+                onTap: () => onSelected(StudyGoal.writing),
+              ),
+            ],
+          );
+
+          final title = Text(
+            language.goalBannerTitle,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              color: palette.ink,
+              fontWeight: FontWeight.w900,
             ),
-          ],
-        ),
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            final narrow = constraints.maxWidth < 620;
-            final chips = Wrap(
-              spacing: 8,
-              runSpacing: 8,
+          );
+
+          final later = AppButton(
+            label: language.goalLaterAction,
+            variant: AppButtonVariant.ghost,
+            compact: true,
+            onPressed: onLater,
+          );
+
+          if (narrow) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _GoalChip(
-                  icon: Icons.assignment_turned_in_rounded,
-                  label: language.goalJlptOption,
-                  onTap: () => onSelected(StudyGoal.jlpt),
-                ),
-                _GoalChip(
-                  icon: Icons.auto_stories_rounded,
-                  label: language.goalReadOption,
-                  onTap: () => onSelected(StudyGoal.reading),
-                ),
-                _GoalChip(
-                  icon: Icons.edit_note_rounded,
-                  label: language.goalWriteOption,
-                  onTap: () => onSelected(StudyGoal.writing),
-                ),
+                title,
+                const SizedBox(height: 10),
+                chips,
+                const SizedBox(height: 4),
+                Align(alignment: Alignment.centerRight, child: later),
               ],
             );
+          }
 
-            final title = Text(
-              language.goalBannerTitle,
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: palette.ink,
-                fontWeight: FontWeight.w900,
-              ),
-            );
-
-            final later = TextButton(
-              onPressed: onLater,
-              style: TextButton.styleFrom(
-                foregroundColor: palette.ink.withValues(alpha: 0.68),
-                minimumSize: const Size(44, 44),
-              ),
-              child: Text(language.goalLaterAction),
-            );
-
-            if (narrow) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  title,
-                  const SizedBox(height: 10),
-                  chips,
-                  const SizedBox(height: 4),
-                  Align(alignment: Alignment.centerRight, child: later),
-                ],
-              );
-            }
-
-            return Row(
-              children: [
-                Expanded(flex: 2, child: title),
-                Expanded(flex: 4, child: chips),
-                const SizedBox(width: 8),
-                later,
-              ],
-            );
-          },
-        ),
+          return Row(
+            children: [
+              Expanded(flex: 2, child: title),
+              Expanded(flex: 4, child: chips),
+              const SizedBox(width: 8),
+              later,
+            ],
+          );
+        },
       ),
     );
   }
@@ -196,18 +183,6 @@ class _GoalChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
-    return FilledButton.icon(
-      onPressed: onTap,
-      icon: Icon(icon, size: 18),
-      label: Text(label),
-      style: FilledButton.styleFrom(
-        backgroundColor: palette.primary.withValues(alpha: 0.1),
-        foregroundColor: palette.primary,
-        minimumSize: const Size(44, 44),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        textStyle: const TextStyle(fontWeight: FontWeight.w800),
-      ),
-    );
+    return AppButton(label: label, icon: icon, compact: true, onPressed: onTap);
   }
 }

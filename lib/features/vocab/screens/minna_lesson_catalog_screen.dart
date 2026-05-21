@@ -9,6 +9,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/vocab/vocab_content_timeout.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class MinnaLessonCatalogArgs {
   const MinnaLessonCatalogArgs({
@@ -188,10 +189,13 @@ class _BackRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
     return Align(
       alignment: Alignment.centerLeft,
-      child: TextButton.icon(
+      child: AppButton(
+        label: _backLabel(language),
+        icon: Icons.arrow_back_rounded,
+        variant: AppButtonVariant.ghost,
+        compact: true,
         onPressed: () {
           if (Navigator.of(context).canPop()) {
             context.pop();
@@ -199,12 +203,6 @@ class _BackRow extends StatelessWidget {
           }
           context.openVocab();
         },
-        icon: const Icon(Icons.arrow_back_rounded),
-        label: Text(_backLabel(language)),
-        style: TextButton.styleFrom(
-          foregroundColor: palette.ink,
-          textStyle: const TextStyle(fontWeight: FontWeight.w800),
-        ),
       ),
     );
   }
@@ -628,8 +626,10 @@ class _ReviewCta extends StatelessWidget {
             ),
           ),
           const SizedBox(width: AppSpacing.lg),
-          FilledButton.icon(
+          AppButton(
             key: const ValueKey('minna_review_cta'),
+            label: _reviewButton(language),
+            icon: Icons.auto_stories_rounded,
             onPressed: () => context.openVocabReview(
               source: 'minna_catalog',
               levelCode: args.levelCode,
@@ -641,8 +641,6 @@ class _ReviewCta extends StatelessWidget {
               lessonStart: args.lessonStart,
               lessonEnd: args.lessonEnd,
             ),
-            icon: const Icon(Icons.auto_stories_rounded),
-            label: Text(_reviewButton(language)),
           ),
         ],
       ),
@@ -724,7 +722,11 @@ class _MinnaErrorState extends StatelessWidget {
             ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w700),
           ),
           const SizedBox(height: AppSpacing.md),
-          FilledButton(onPressed: onRetry, child: Text(_retryLabel(language))),
+          AppButton(
+            label: _retryLabel(language),
+            compact: true,
+            onPressed: onRetry,
+          ),
         ],
       ),
     );

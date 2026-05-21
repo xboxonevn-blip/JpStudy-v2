@@ -11,6 +11,7 @@ import '../../progress/providers/review_forecast_provider.dart';
 import '../../flashcards/widgets/enhanced_flashcard.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
 import '../../../shared/widgets/confidence_rating.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class VocabGhostReviewScreen extends ConsumerStatefulWidget {
   final List<VocabItem> items;
@@ -193,10 +194,12 @@ class _VocabGhostReviewScreenState
                   Expanded(
                     child: SizedBox(
                       height: 52,
-                      child: OutlinedButton.icon(
+                      child: AppButton(
+                        label: language.tapCardToRevealLabel,
+                        icon: Icons.touch_app_rounded,
+                        expanded: true,
+                        variant: AppButtonVariant.secondary,
                         onPressed: null,
-                        icon: const Icon(Icons.touch_app_rounded),
-                        label: Text(language.tapCardToRevealLabel),
                       ),
                     ),
                   ),
@@ -208,22 +211,12 @@ class _VocabGhostReviewScreenState
                     const SizedBox(width: 8),
                     SizedBox(
                       height: 52,
-                      child: OutlinedButton.icon(
+                      child: AppButton(
+                        label: language.mnemonicHintLabel,
+                        icon: Icons.lightbulb_outline_rounded,
+                        variant: AppButtonVariant.secondary,
+                        compact: true,
                         onPressed: () => _showHint(context),
-                        icon: Icon(
-                          Icons.lightbulb_outline_rounded,
-                          color: context.appPalette.warning,
-                        ),
-                        label: Text(
-                          language.mnemonicHintLabel,
-                          style: TextStyle(color: context.appPalette.warning),
-                        ),
-                        style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: context.appPalette.warning),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14),
-                          ),
-                        ),
                       ),
                     ),
                   ],
@@ -299,7 +292,7 @@ class _SummaryDialog extends ConsumerWidget {
         ],
       ),
       actions: [
-        FilledButton(onPressed: onDone, child: Text(language.doneLabel)),
+        AppButton(label: language.doneLabel, compact: true, onPressed: onDone),
       ],
     );
   }

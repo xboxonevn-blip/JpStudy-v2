@@ -14,6 +14,7 @@ import 'package:jpstudy/features/home/widgets/ghost_review_banner.dart';
 import 'package:jpstudy/features/home/widgets/home_surface.dart';
 import 'package:jpstudy/features/home/widgets/practice_hub.dart';
 import 'package:jpstudy/features/test/widgets/practice_test_dashboard.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class DiscoverPracticePanel extends ConsumerStatefulWidget {
   const DiscoverPracticePanel({
@@ -319,13 +320,15 @@ class _DiscoverPracticePanelState extends ConsumerState<DiscoverPracticePanel> {
                               ],
                             ),
                           ),
-                          TextButton(
+                          AppButton(
+                            label: _resetLabel(language),
+                            variant: AppButtonVariant.ghost,
+                            compact: true,
                             onPressed: () async {
                               await ref
                                   .read(practiceHubPreferencesProvider.notifier)
                                   .resetOrder();
                             },
-                            child: Text(_resetLabel(language)),
                           ),
                         ],
                       ),

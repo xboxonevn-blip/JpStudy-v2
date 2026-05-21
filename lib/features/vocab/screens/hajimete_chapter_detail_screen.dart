@@ -21,6 +21,7 @@ import 'package:jpstudy/features/learn/models/learn_session_args.dart';
 import 'package:jpstudy/features/learn/models/question_type.dart';
 import 'package:jpstudy/features/vocab/models/vocab_match_session_args.dart';
 import 'package:jpstudy/features/vocab/widgets/kanji_inline_popover.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class HajimeteChapterDetailScreen extends ConsumerStatefulWidget {
   const HajimeteChapterDetailScreen({
@@ -1116,9 +1117,9 @@ class _ReviewEmptyState extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                FilledButton(
+                AppButton(
+                  label: _startLearningLabel(language),
                   onPressed: onStartLearning,
-                  child: Text(_startLearningLabel(language)),
                 ),
               ],
             ),
@@ -1149,12 +1150,12 @@ class _CurrentTermActionBar extends StatelessWidget {
     }
     return Align(
       alignment: Alignment.centerLeft,
-      child: FilledButton.tonalIcon(
+      child: AppButton(
+        label: starred ? _savedLabel(language) : _saveThisWordLabel(language),
+        icon: starred ? Icons.star_rounded : Icons.star_border_rounded,
+        variant: AppButtonVariant.secondary,
+        compact: true,
         onPressed: onToggleStar,
-        icon: Icon(starred ? Icons.star_rounded : Icons.star_border_rounded),
-        label: Text(
-          starred ? _savedLabel(language) : _saveThisWordLabel(language),
-        ),
       ),
     );
   }

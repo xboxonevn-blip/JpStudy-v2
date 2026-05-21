@@ -15,6 +15,11 @@ void main() {
       'lib/features/flashcards/widgets/flashcard_settings_dialog.dart',
       'lib/features/learn/widgets/achievement_popup.dart',
       'lib/features/quiz/widgets/shared_answer_selection.dart',
+      'lib/features/vocab/screens/vocab_ghost_review_screen.dart',
+      'lib/features/vocab/screens/minna_lesson_catalog_screen.dart',
+      'lib/features/vocab/screens/hajimete_chapter_detail_screen.dart',
+      'lib/features/home/widgets/discover_practice_panel.dart',
+      'lib/features/home/widgets/goal_selection_banner.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

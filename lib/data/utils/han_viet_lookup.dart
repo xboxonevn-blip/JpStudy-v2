@@ -19,6 +19,15 @@ class HanVietLookup {
     String? explicitHanViet,
     String? explicitMeaningVi,
   }) async {
+    final directHanViet = explicitHanViet?.trim();
+    final directMeaningVi = explicitMeaningVi?.trim();
+    if ((directHanViet?.isNotEmpty ?? false) &&
+        (directMeaningVi?.isNotEmpty ?? false)) {
+      return HanVietLookupResult(
+        hanViet: directHanViet,
+        meaningVi: directMeaningVi,
+      );
+    }
     final data = await (_cache ??= _load());
     final override = data.termOverrides[term];
     final hanViet = _firstNonEmpty([

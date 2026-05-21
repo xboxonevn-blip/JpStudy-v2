@@ -104,7 +104,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 400));
 
     expect(find.byType(HajimeteChapterDetailScreen), findsOneWidget);
-    expect(find.text('Kanji'), findsWidgets);
+    expect(find.text('Kanji'), findsNothing);
   });
 
   testWidgets('vocab match session fallback route opens screen', (

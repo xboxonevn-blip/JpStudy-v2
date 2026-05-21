@@ -240,9 +240,9 @@ String _planCaption(AppLanguage language) => switch (language) {
 };
 
 String _planEmptyTitle(AppLanguage language) => switch (language) {
-  AppLanguage.en => 'The plan unlocks after your first timed attempt',
-  AppLanguage.vi => 'Kế hoạch sẽ mở sau lượt làm bài có bấm giờ đầu tiên',
-  AppLanguage.ja => '最初の本格ランのあとにプランが開きます',
+  AppLanguage.en => 'No personal plan yet',
+  AppLanguage.vi => 'Chưa có kế hoạch cá nhân',
+  AppLanguage.ja => '個別プランはまだありません',
 };
 
 String _planEmptyBody(AppLanguage language) => switch (language) {

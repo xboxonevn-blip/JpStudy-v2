@@ -411,3 +411,14 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This reaches the visible lesson UI without deleting learner history or forcing a full app-data reset.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-042 - DECISION-007 OVERTURNED (Kanji tab deleted)
+**Phase**: Follow-up Sprint 1 Phase A
+**Date**: 2026-05-21 18:05 (local)
+**Context**: Owner audit flagged DECISION-007 as a violation of megaprompt section 7.4 and the explicit screenshot request: the Hajimete chapter detail Kanji tab still showed placeholder text instead of useful chapter terms.
+**Options considered**: keep placeholder until Hajimete kanji assets exist | rename placeholder | remove tab and render useful inline term list
+**Chosen**: remove the Kanji tab from Hajimete chapter navigation and render the chapter term list inline with clickable kanji popovers for Hán-Việt bridge plus stroke order.
+**Rationale**: This matches the owner instruction, removes deceptive empty UI, and keeps the vocabulary flow connected to kanji learning instead of siloing a dead tab.
+**Additional action**: Placeholder sweep changed remaining UI strings away from "coming soon / will open later" wording and hid absent vocab roadmap cards unless they have interactive or preview data.
+**Reversible**: yes (Hajimete kanji asset provider remains available for a future real-data surface)
+**Owner review**: pending

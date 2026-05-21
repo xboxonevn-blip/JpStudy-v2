@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/content_database.dart';
+import 'package:jpstudy/data/models/kanji_item.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/data/utils/hajimete_catalog_loader.dart';
@@ -24,6 +26,7 @@ import 'package:jpstudy/features/vocab/screens/minna_lesson_catalog_screen.dart'
 import 'package:jpstudy/features/vocab/screens/shinkanzen_lesson_catalog_screen.dart';
 import 'package:jpstudy/features/vocab/screens/term_review_screen.dart';
 import 'package:jpstudy/features/flashcards/widgets/enhanced_flashcard.dart';
+import 'package:jpstudy/features/write/services/kanji_stroke_template_service.dart';
 import 'package:jpstudy/shared/widgets/confidence_rating.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -31,6 +34,7 @@ class _FakeVocabLessonRepository extends LessonRepository {
   _FakeVocabLessonRepository({
     required this.bank,
     this.hajimeteChapterTerms = const {},
+    this.kanjiByLevel = const {},
     Map<int, SrsStateData> srsStates = const {},
   }) : super(
          AppDatabase(executor: NativeDatabase.memory()),
@@ -41,6 +45,7 @@ class _FakeVocabLessonRepository extends LessonRepository {
 
   final Map<String, List<VocabItem>> bank;
   final Map<String, List<UserLessonTermData>> hajimeteChapterTerms;
+  final Map<String, List<KanjiItem>> kanjiByLevel;
   late final Map<int, SrsStateData> srsStates;
   final levelSeriesCalls = <String>[];
   final lessonRangeCalls = <String>[];
@@ -49,6 +54,11 @@ class _FakeVocabLessonRepository extends LessonRepository {
   @override
   Future<List<VocabItem>> getVocabByLevel(String level) async {
     return bank[level] ?? const [];
+  }
+
+  @override
+  Future<List<KanjiItem>> fetchKanjiByLevel(String level) async {
+    return kanjiByLevel[level] ?? const [];
   }
 
   @override
@@ -561,7 +571,7 @@ void main() {
     _prefs = await SharedPreferences.getInstance();
   });
 
-  testWidgets('VocabScreen shows catalog hero and all level sections', (
+  testWidgets('VocabScreen shows catalog hero and hides empty roadmap sections', (
     tester,
   ) async {
     final repo = _FakeVocabLessonRepository(
@@ -584,17 +594,17 @@ void main() {
     expect(find.byKey(const ValueKey('section_n3')), findsOneWidget);
     expect(find.byKey(const ValueKey('section_n2')), findsOneWidget);
     expect(find.byKey(const ValueKey('section_n1')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_se')), findsOneWidget);
+    expect(find.byKey(const ValueKey('section_se')), findsNothing);
     expect(find.text('N5'), findsWidgets);
     expect(find.text('N4'), findsWidgets);
     expect(find.text('N3'), findsWidgets);
     expect(find.text('N2'), findsWidgets);
     expect(find.text('N1'), findsWidgets);
-    expect(find.text('SE'), findsWidgets);
+    expect(find.text('SE'), findsNothing);
     expect(find.byKey(const ValueKey('program_n5_n5_core')), findsOneWidget);
     expect(
       find.byKey(const ValueKey('program_n1_advanced_n1')),
-      findsOneWidget,
+      findsNothing,
     );
     expect(find.byKey(const ValueKey('vocab_today_section')), findsOneWidget);
     expect(
@@ -1296,7 +1306,142 @@ void main() {
     expect(find.byType(EnhancedFlashcard), findsOneWidget);
   });
 
-  testWidgets('JA Hajimete kanji tab uses English fallback, not Vietnamese', (
+  testWidgets(
+    'Hajimete chapter renders inline term list with kanji popover instead of Kanji tab',
+    (tester) async {
+      await _prefs.setString('app.locale', 'vi');
+      KanjiStrokeTemplateService.setDebugTemplateOverrides({
+        '学': const KanjiStrokeTemplate(
+          character: '学',
+          quality: 'manual',
+          strokes: [
+            StrokeTemplate(
+              start: math.Point(0.2, 0.2),
+              end: math.Point(0.8, 0.2),
+            ),
+            StrokeTemplate(
+              start: math.Point(0.5, 0.25),
+              end: math.Point(0.5, 0.85),
+            ),
+          ],
+        ),
+      });
+      addTearDown(() {
+        KanjiStrokeTemplateService.setDebugTemplateOverrides(null);
+        KanjiStrokeTemplateService.clearCache();
+      });
+
+      const detail = HajimeteChapterDetail(
+        levelCode: 'N5',
+        chapterId: 1,
+        title: 'Trường lớp',
+        entries: [
+          HajimeteChapterEntry(
+            term: '学校',
+            reading: 'がっこう',
+            meaningVi: 'trường học',
+            meaningEn: 'school',
+          ),
+        ],
+      );
+      const item = VocabItem(
+        id: 101,
+        term: '学校',
+        reading: 'がっこう',
+        meaning: 'trường học',
+        meaningEn: 'school',
+        level: 'N5',
+      );
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWithValue(_prefs),
+            lessonRepositoryProvider.overrideWithValue(
+              _FakeVocabLessonRepository(
+                bank: const {
+                  'N5': [item],
+                },
+                kanjiByLevel: const {
+                  'N5': [
+                    KanjiItem(
+                      id: 1,
+                      lessonId: 1,
+                      character: '学',
+                      strokeCount: 8,
+                      meaning: 'học',
+                      meaningEn: 'study',
+                      decomposition: KanjiDecomposition(hanViet: 'Học'),
+                      examples: [],
+                      jlptLevel: 'N5',
+                    ),
+                  ],
+                },
+              ),
+            ),
+            hajimeteChapterDetailProvider.overrideWith(
+              (ref, arg) async => detail,
+            ),
+            hajimeteChapterItemsProvider.overrideWith(
+              (ref, arg) async => const [item],
+            ),
+            hajimeteChapterDueItemsProvider.overrideWith(
+              (ref, arg) async => const <VocabItem>[],
+            ),
+            hajimeteChapterSrsStatesProvider.overrideWith(
+              (ref, arg) async => const <int, SrsStateData>{},
+            ),
+            hajimeteChapterUserTermsProvider.overrideWith(
+              (ref, arg) async => const <UserLessonTermData>[],
+            ),
+            hajimeteKanjiChapterProvider.overrideWith((ref, arg) async => null),
+          ],
+          child: const MaterialApp(
+            home: HajimeteChapterDetailScreen(
+              levelCode: 'N5',
+              chapterId: 1,
+              laneTitle: 'Hajimete no Nihongo Tango',
+            ),
+          ),
+        ),
+      );
+
+      await _pumpCatalog(tester);
+
+      expect(find.text('Kanji'), findsNothing);
+      expect(
+        find.byKey(const ValueKey('hajimete_inline_term_list')),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(
+          of: find.byKey(const ValueKey('hajimete_inline_term_list')),
+          matching: find.text('学校'),
+        ),
+        findsOneWidget,
+      );
+
+      final kanjiChip = find.byKey(const ValueKey('kanji_inline_popover_学'));
+      await tester.ensureVisible(kanjiChip);
+      await tester.tap(
+        find.widgetWithText(ActionChip, '学'),
+        warnIfMissed: false,
+      );
+      await tester.pump();
+      await tester.runAsync(() async {
+        await Future<void>.delayed(const Duration(seconds: 1));
+      });
+      for (var i = 0; i < 8; i++) {
+        await tester.pump(const Duration(milliseconds: 150));
+      }
+
+      expect(find.text('Cầu Hán-Việt'), findsOneWidget);
+      expect(find.textContaining('Học'), findsWidgets);
+      expect(find.text('Thứ tự nét'), findsOneWidget);
+    },
+  );
+
+  testWidgets('JA Hajimete inline term list uses English fallback', (
     tester,
   ) async {
     await _prefs.setString('app.locale', 'ja');
@@ -1313,20 +1458,6 @@ void main() {
         ),
       ],
     );
-    const kanjiDetail = HajimeteKanjiChapterDetail(
-      levelCode: 'N5',
-      chapterId: 1,
-      title: 'Lesson 1',
-      entries: [
-        HajimeteKanjiEntry(
-          character: '山',
-          reading: 'サン ・ やま',
-          meaningVi: 'núi',
-          meaningEn: 'mountain',
-        ),
-      ],
-    );
-
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
@@ -1352,9 +1483,7 @@ void main() {
           hajimeteChapterUserTermsProvider.overrideWith(
             (ref, arg) async => const <UserLessonTermData>[],
           ),
-          hajimeteKanjiChapterProvider.overrideWith(
-            (ref, arg) async => kanjiDetail,
-          ),
+          hajimeteKanjiChapterProvider.overrideWith((ref, arg) async => null),
         ],
         child: const MaterialApp(
           home: HajimeteChapterDetailScreen(
@@ -1367,10 +1496,10 @@ void main() {
     );
 
     await _pumpCatalog(tester);
-    await tester.tap(find.text('漢字'));
-    await tester.pumpAndSettle();
 
-    expect(find.text('mountain'), findsOneWidget);
+    expect(find.text('漢字'), findsNothing);
+    expect(find.text('この章の語彙'), findsOneWidget);
+    expect(find.text('mountain'), findsWidgets);
     expect(find.text('núi'), findsNothing);
   });
 

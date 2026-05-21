@@ -63,16 +63,15 @@ void main() {
     expect(find.text('Basic'), findsWidgets);
   });
 
-  testWidgets('"Upgrade now" tap shows checkout snackbar', (tester) async {
+  testWidgets('checkout action is hidden until real checkout exists', (
+    tester,
+  ) async {
     await tester.pumpWidget(_buildScreen());
     await _pump(tester);
 
-    // Tap the first "Upgrade now" button (hero card primary action)
-    await tester.tap(find.text('Upgrade now').first);
-    await _pump(tester);
-
-    expect(find.byType(SnackBar), findsOneWidget);
-    expect(find.textContaining('checkout'), findsOneWidget);
+    expect(find.text('Upgrade now'), findsNothing);
+    expect(find.byType(SnackBar), findsNothing);
+    expect(find.textContaining('checkout'), findsNothing);
   });
 
   testWidgets('"Compare plans" tap does not show a snackbar', (tester) async {
@@ -116,7 +115,7 @@ void main() {
     expect(find.text('Full reading library'), findsOneWidget);
   });
 
-  testWidgets('VI locale shows Vietnamese title and upgrade label', (
+  testWidgets('VI locale shows Vietnamese title and compare label', (
     tester,
   ) async {
     await tester.pumpWidget(_buildScreen(language: AppLanguage.vi));
@@ -127,7 +126,7 @@ void main() {
     expect(find.text('So sánh gói'), findsOneWidget); // compare plans in VI
   });
 
-  testWidgets('JA locale shows Japanese upgrade label', (tester) async {
+  testWidgets('JA locale shows Japanese title', (tester) async {
     await tester.pumpWidget(_buildScreen(language: AppLanguage.ja));
     await _pump(tester);
 

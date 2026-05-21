@@ -374,9 +374,9 @@ extension VocabCopy on AppLanguage {
   };
 
   String vocabComingSoonLabel() => switch (this) {
-    AppLanguage.en => 'Coming soon',
-    AppLanguage.vi => 'Sắp ra mắt',
-    AppLanguage.ja => '近日公開',
+    AppLanguage.en => 'Unavailable',
+    AppLanguage.vi => 'Chưa có dữ liệu',
+    AppLanguage.ja => '未提供',
   };
 
   String vocabCatalogErrorTitle() => switch (this) {

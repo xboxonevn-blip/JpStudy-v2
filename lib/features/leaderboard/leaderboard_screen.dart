@@ -517,10 +517,10 @@ String _topTitle(AppLanguage language) => switch (language) {
 };
 String _topCaption(AppLanguage language) => switch (language) {
   AppLanguage.en =>
-    'Rankings reflect your XP and streak — live sync coming soon.',
+    'Rankings reflect XP, streak, and review activity on this device.',
   AppLanguage.vi =>
-    'Xếp hạng dựa trên XP và streak của bạn — đồng bộ thật sẽ sớm có.',
-  AppLanguage.ja => 'XP と streak を基にしたランキングです。ライブ同期は近日追加予定。',
+    'Xếp hạng dựa trên XP, streak và lượt ôn trên thiết bị này.',
+  AppLanguage.ja => 'XP、連続学習、復習数をこの端末の記録から表示します。',
 };
 String _rowSubtitle(AppLanguage language, int xp, int streak) =>
     switch (language) {

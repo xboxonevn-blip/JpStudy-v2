@@ -15,9 +15,12 @@ class _VocabCatalogBody extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedLevel = ref.watch(studyLevelProvider);
     final activeLevelCode = selectedLevel?.shortLabel ?? home.selectedLevelCode;
+    bool isVisibleProgram(_VocabCatalogProgram program) =>
+        program.isInteractive || program.isPreviewOnly;
+
     final totalPrograms = sections.fold<int>(
       0,
-      (sum, section) => sum + section.programs.length,
+      (sum, section) => sum + section.programs.where(isVisibleProgram).length,
     );
     final livePrograms = sections
         .expand((section) => section.programs)
@@ -36,6 +39,9 @@ class _VocabCatalogBody extends ConsumerWidget {
         .where(
           (section) =>
               !section.programs.any((program) => program.isInteractive),
+        )
+        .where(
+          (section) => section.programs.any((program) => program.isPreviewOnly),
         )
         .toList(growable: false);
 
@@ -659,6 +665,12 @@ class _VocabSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isWide = MediaQuery.of(context).size.width >= 1040;
+    final visiblePrograms = section.programs
+        .where((program) => program.isInteractive || program.isPreviewOnly)
+        .toList(growable: false);
+    if (visiblePrograms.isEmpty) {
+      return const SizedBox.shrink();
+    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -669,9 +681,9 @@ class _VocabSection extends StatelessWidget {
             spacing: AppSpacing.lg,
             runSpacing: AppSpacing.lg,
             children: [
-              for (final program in section.programs)
+              for (final program in visiblePrograms)
                 SizedBox(
-                  width: _cardWidth(section.programs.length),
+                  width: _cardWidth(visiblePrograms.length),
                   child: _ProgramCard(
                     section: section,
                     program: program,
@@ -684,7 +696,7 @@ class _VocabSection extends StatelessWidget {
         else
           Column(
             children: [
-              for (final program in section.programs) ...[
+              for (final program in visiblePrograms) ...[
                 _ProgramCard(
                   section: section,
                   program: program,

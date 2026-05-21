@@ -417,10 +417,10 @@ extension HomeCopyX on AppLanguage {
     },
     _ when phaseId.endsWith('_reading_kanji') => switch (this) {
       AppLanguage.en =>
-        'Use available reading input and kanji practice. Audio work is deferred until real audio content exists.',
+        'Use the reading input and kanji practice that are available in this plan.',
       AppLanguage.vi =>
-        'Dùng phần đọc và kanji đang có. Phần âm thanh sẽ mở sau khi có dữ liệu thật.',
-      AppLanguage.ja => '利用可能な読解入力と漢字を使います。音声データが整ってから音声学習を追加します。',
+        'Dùng phần đọc và luyện kanji đang có trong kế hoạch này.',
+      AppLanguage.ja => 'このプランで利用できる読解入力と漢字練習を使います。',
     },
     _
         when phaseId.endsWith('_mock_repair') ||

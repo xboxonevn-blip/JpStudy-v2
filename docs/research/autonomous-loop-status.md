@@ -1600,3 +1600,18 @@
 - Consensus summary: `9394` parsed entries, `5298` term+reading groups, `2504` consensus groups, `126` divergent groups, and `2668` single-source groups.
 - Used exact normalized Vietnamese meaning matching for the first deterministic pass; near-synonym divergences remain owner-reviewable before app mutation.
 - No banned website was accessed. Next: run gates, commit, then start app vocab diff docs by level.
+
+## 2026-05-21 Follow-up Sprint kickoff (OQ resolutions + P0)
+
+- 10 OQ resolved with owner answers (see open-questions log).
+- P0 Kanji tab violation acknowledged.
+- Sprint plan: 4 phases, deadline 2026-05-22 for Sprint 1.
+
+## 2026-05-21 Follow-up Sprint Phase A shipped
+
+- Removed the Hajimete chapter detail Kanji placeholder tab and replaced it with an inline chapter term list.
+- Each kanji chip opens the inline Hán-Việt bridge and stroke-order popover.
+- Placeholder wording sweep passed: no remaining UI matches for `sẽ mở sau`, `đang chờ dữ liệu`, `coming soon`, `Phần kanji`, or `Dữ liệu kanji đã sẵn sàng` in `lib/`.
+- Gates passed before deploy: focused vocab/navigation/premium tests, `flutter analyze lib test`, UI string guard, `git diff --check`, and full `flutter test --concurrency=1` (`2466/2466`).
+- Deployed to `https://jpstudy.web.app`; live proof opened the Hajimete N5 chapter, confirmed no Kanji tab, scrolled to inline term list, clicked `半`, and verified popover sections `Cầu Hán-Việt` and `Thứ tự nét`.
+- Live console showed the known App Check 403 throttle in this browser session; app content, data loads, and popover interaction still rendered correctly.

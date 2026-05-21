@@ -3596,11 +3596,11 @@ extension AppLanguageLabels on AppLanguage {
   String get comingSoonLabel {
     switch (this) {
       case AppLanguage.en:
-        return 'Coming soon';
+        return 'Unavailable';
       case AppLanguage.vi:
-        return 'S\u1eafp ra m\u1eaft';
+        return 'Ch\u01b0a c\u00f3 d\u1eef li\u1ec7u';
       case AppLanguage.ja:
-        return '\u8fd1\u65e5\u516c\u958b';
+        return '\u672a\u63d0\u4f9b';
     }
   }
 

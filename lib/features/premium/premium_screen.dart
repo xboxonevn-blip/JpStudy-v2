@@ -36,9 +36,6 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                 label: _saveBadge(language, selected.badge),
                 tone: AppStatusTone.primary,
               ),
-              primaryLabel: _upgradeLabel(language),
-              onPrimaryTap: () =>
-                  _snack(context, _checkoutSoon(language, selected.name)),
               secondaryLabel: _compareLabel(language),
               onSecondaryTap: () => Scrollable.ensureVisible(
                 _compareKey.currentContext!,
@@ -163,16 +160,7 @@ class _PlanSummaryCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AppSectionHeader(
-            title: plan.name,
-            caption: plan.price,
-            actionLabel: _ctaLabel(language),
-            onActionTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(_checkoutSoon(language, plan.name))),
-              );
-            },
-          ),
+          AppSectionHeader(title: plan.name, caption: plan.price),
           const SizedBox(height: AppSpacing.md),
           for (final point in plan.points) ...[
             Row(
@@ -554,11 +542,6 @@ String _heroSubtitle(AppLanguage language) => switch (language) {
     'Giữ nguyên cảm giác app, nhưng mở khóa đọc sâu hơn, thống kê rõ hơn và luyện thi ổn định hơn.',
   AppLanguage.ja => 'アプリの雰囲気はそのままに、読解・分析・試験対策をさらに強化します。',
 };
-String _upgradeLabel(AppLanguage language) => switch (language) {
-  AppLanguage.en => 'Upgrade now',
-  AppLanguage.vi => 'Nâng cấp ngay',
-  AppLanguage.ja => '今すぐアップグレード',
-};
 String _compareLabel(AppLanguage language) => switch (language) {
   AppLanguage.en => 'Compare plans',
   AppLanguage.vi => 'So sánh gói',
@@ -627,20 +610,10 @@ String _compareMatrixCaption(AppLanguage language) => switch (language) {
   AppLanguage.vi => 'Ma trận đơn giản giúp quyết định ngay trên màn này.',
   AppLanguage.ja => '画面を離れずに判断しやすいシンプルな比較です。',
 };
-String _ctaLabel(AppLanguage language) => switch (language) {
-  AppLanguage.en => 'Select',
-  AppLanguage.vi => 'Chọn',
-  AppLanguage.ja => '選択',
-};
 String _saveBadge(AppLanguage language, int badge) => switch (language) {
   AppLanguage.en => badge > 0 ? 'Save $badge%' : 'Entry',
   AppLanguage.vi => badge > 0 ? 'Tiết kiệm $badge%' : 'Khởi đầu',
   AppLanguage.ja => badge > 0 ? '$badge%お得' : '入門',
-};
-String _checkoutSoon(AppLanguage language, String plan) => switch (language) {
-  AppLanguage.en => '$plan checkout will be connected later.',
-  AppLanguage.vi => 'Checkout cho gói $plan sẽ được nối sau.',
-  AppLanguage.ja => '$plan の checkout は後で接続されます。',
 };
 
 class _PremiumFeature {

@@ -20,6 +20,7 @@ import 'package:jpstudy/features/flashcards/widgets/enhanced_flashcard.dart';
 import 'package:jpstudy/features/learn/models/learn_session_args.dart';
 import 'package:jpstudy/features/learn/models/question_type.dart';
 import 'package:jpstudy/features/vocab/models/vocab_match_session_args.dart';
+import 'package:jpstudy/features/vocab/widgets/kanji_inline_popover.dart';
 
 class HajimeteChapterDetailScreen extends ConsumerStatefulWidget {
   const HajimeteChapterDetailScreen({
@@ -73,7 +74,6 @@ class _HajimeteChapterDetailScreenState
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
     final language = ref.watch(appLanguageProvider);
     final args = HajimeteChapterDetailArgs(
       levelCode: widget.levelCode,
@@ -81,179 +81,151 @@ class _HajimeteChapterDetailScreenState
       laneTitle: widget.laneTitle,
     );
     final detailAsync = ref.watch(hajimeteChapterDetailProvider(args));
-    final kanjiAsync = ref.watch(hajimeteKanjiChapterProvider(args));
     final itemsAsync = ref.watch(hajimeteChapterItemsProvider(args));
     final dueItemsAsync = ref.watch(hajimeteChapterDueItemsProvider(args));
     final srsStatesAsync = ref.watch(hajimeteChapterSrsStatesProvider(args));
     final userTermsAsync = ref.watch(hajimeteChapterUserTermsProvider(args));
 
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 64,
-          automaticallyImplyLeading: false,
-          titleSpacing: 16,
-          title: Row(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.chevron_left),
-                onPressed: () => context.pop(),
-              ),
-              const SizedBox(width: 4),
-              Expanded(
-                child: Text(
-                  '${widget.levelCode} / ${widget.laneTitle}',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ],
-          ),
-          actions: [
-            userTermsAsync.when(
-              data: (userTerms) {
-                _maybeSyncStarFlags(userTerms);
-                final isSaved =
-                    userTerms.isNotEmpty &&
-                    _starredTermIds.length == userTerms.length;
-                return _SavedPill(
-                  label: _savedLabel(language),
-                  active: isSaved,
-                  onTap: userTerms.isEmpty
-                      ? null
-                      : () => _toggleSaved(userTerms, args),
-                );
-              },
-              loading: () => _SavedPill(
-                label: _savedLabel(language),
-                active: false,
-                onTap: null,
-              ),
-              error: (_, _) => _SavedPill(
-                label: _savedLabel(language),
-                active: false,
-                onTap: null,
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 64,
+        automaticallyImplyLeading: false,
+        titleSpacing: 16,
+        title: Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.chevron_left),
+              onPressed: () => context.pop(),
+            ),
+            const SizedBox(width: 4),
+            Expanded(
+              child: Text(
+                '${widget.levelCode} / ${widget.laneTitle}',
+                overflow: TextOverflow.ellipsis,
               ),
             ),
-            const SizedBox(width: 12),
           ],
-          bottom: TabBar(
-            labelColor: palette.primary,
-            unselectedLabelColor: palette.ink.withValues(alpha: 0.55),
-            indicatorColor: palette.primary,
-            tabs: [
-              Tab(text: _vocabTabLabel(language)),
-              Tab(text: _kanjiTabLabel(language)),
-            ],
+        ),
+        actions: [
+          userTermsAsync.when(
+            data: (userTerms) {
+              _maybeSyncStarFlags(userTerms);
+              final isSaved =
+                  userTerms.isNotEmpty &&
+                  _starredTermIds.length == userTerms.length;
+              return _SavedPill(
+                label: _savedLabel(language),
+                active: isSaved,
+                onTap: userTerms.isEmpty
+                    ? null
+                    : () => _toggleSaved(userTerms, args),
+              );
+            },
+            loading: () => _SavedPill(
+              label: _savedLabel(language),
+              active: false,
+              onTap: null,
+            ),
+            error: (_, _) => _SavedPill(
+              label: _savedLabel(language),
+              active: false,
+              onTap: null,
+            ),
           ),
-        ),
-        body: detailAsync.when(
-          data: (detail) {
-            if (detail == null) {
-              return _EmptyState(language: language);
-            }
-            final rawItems = itemsAsync.value ?? _toVocabItems(detail);
-            final items = _orderedItems(rawItems);
-            final dueItems = dueItemsAsync.value ?? const <VocabItem>[];
-            final srsStates =
-                srsStatesAsync.value ?? const <int, SrsStateData>{};
-            final userTerms =
-                userTermsAsync.value ?? const <UserLessonTermData>[];
-            _maybeSyncStarFlags(userTerms);
-            final userTermsByItemId = mapHajimeteUserTermsByItemId(
-              items,
-              userTerms,
-            );
-            final learnedCount = srsStates.length;
-            final total = items.length;
-            final currentIndex = total == 0
-                ? 0
-                : _currentIndex.clamp(0, total - 1);
-            final currentItem = total == 0 ? null : items[currentIndex];
-            final dueCount = dueItems.length;
-            final reviewIndex = dueCount == 0
-                ? 0
-                : _reviewIndex.clamp(0, dueCount - 1);
-            final currentDueItem = dueCount == 0 ? null : dueItems[reviewIndex];
-            final currentUserTerm = currentItem == null
+          const SizedBox(width: 12),
+        ],
+      ),
+      body: detailAsync.when(
+        data: (detail) {
+          if (detail == null) {
+            return _EmptyState(language: language);
+          }
+          final rawItems = itemsAsync.value ?? _toVocabItems(detail);
+          final items = _orderedItems(rawItems);
+          final dueItems = dueItemsAsync.value ?? const <VocabItem>[];
+          final srsStates = srsStatesAsync.value ?? const <int, SrsStateData>{};
+          final userTerms =
+              userTermsAsync.value ?? const <UserLessonTermData>[];
+          _maybeSyncStarFlags(userTerms);
+          final userTermsByItemId = mapHajimeteUserTermsByItemId(
+            items,
+            userTerms,
+          );
+          final learnedCount = srsStates.length;
+          final total = items.length;
+          final currentIndex = total == 0
+              ? 0
+              : _currentIndex.clamp(0, total - 1);
+          final currentItem = total == 0 ? null : items[currentIndex];
+          final dueCount = dueItems.length;
+          final reviewIndex = dueCount == 0
+              ? 0
+              : _reviewIndex.clamp(0, dueCount - 1);
+          final currentDueItem = dueCount == 0 ? null : dueItems[reviewIndex];
+          final currentUserTerm = currentItem == null
+              ? null
+              : userTermsByItemId[currentItem.id];
+          final currentDueUserTerm = currentDueItem == null
+              ? null
+              : userTermsByItemId[currentDueItem.id];
+          final currentRetrievability = currentDueItem == null
+              ? null
+              : hajimeteRetrievabilityForItem(currentDueItem, srsStates);
+          return _VocabTabView(
+            language: language,
+            mode: _mode,
+            total: total,
+            learnedCount: learnedCount,
+            dueCount: dueCount,
+            detailTitle: detail.title,
+            items: items,
+            rawItems: rawItems,
+            currentItem: currentItem,
+            currentDueItem: currentDueItem,
+            currentUserTerm: currentUserTerm,
+            currentDueUserTerm: currentDueUserTerm,
+            currentRetrievability: currentRetrievability,
+            starredTermIds: _starredTermIds,
+            showHints: _showHints,
+            shuffle: _shuffle,
+            autoPlay: _autoPlay,
+            reviewedCount: _reviewedCount,
+            againCount: _againCount,
+            hardCount: _hardCount,
+            goodCount: _goodCount,
+            easyCount: _easyCount,
+            onModeChanged: (mode) => setState(() => _mode = mode),
+            onLearn: () => _openLearn(items, detail.title),
+            onTest: () => _openTest(items, detail.title),
+            onMatch: () => _openMatch(items, detail.title),
+            onWrite: () => _openWrite(items, detail.title),
+            onToggleCurrentStar:
+                (_mode == _ChapterStudyMode.review
+                        ? currentDueUserTerm
+                        : currentUserTerm) ==
+                    null
                 ? null
-                : userTermsByItemId[currentItem.id];
-            final currentDueUserTerm = currentDueItem == null
+                : () => _toggleStar(
+                    _mode == _ChapterStudyMode.review
+                        ? currentDueUserTerm!
+                        : currentUserTerm!,
+                    args,
+                  ),
+            onShowHintsChanged: (value) => setState(() => _showHints = value),
+            onToggleShuffle: _toggleShuffle,
+            onToggleAutoPlay: () => _toggleAutoPlay(total),
+            onPrev: () => _goPrev(total),
+            onNext: () => _goNext(total),
+            onStartLearning: () => _startReviewLearning(rawItems, args),
+            onReviewRate: currentDueItem == null
                 ? null
-                : userTermsByItemId[currentDueItem.id];
-            final currentRetrievability = currentDueItem == null
-                ? null
-                : hajimeteRetrievabilityForItem(currentDueItem, srsStates);
-            return TabBarView(
-              children: [
-                _VocabTabView(
-                  language: language,
-                  mode: _mode,
-                  total: total,
-                  learnedCount: learnedCount,
-                  dueCount: dueCount,
-                  detailTitle: detail.title,
-                  items: items,
-                  rawItems: rawItems,
-                  currentItem: currentItem,
-                  currentDueItem: currentDueItem,
-                  currentUserTerm: currentUserTerm,
-                  currentDueUserTerm: currentDueUserTerm,
-                  currentRetrievability: currentRetrievability,
-                  starredTermIds: _starredTermIds,
-                  showHints: _showHints,
-                  shuffle: _shuffle,
-                  autoPlay: _autoPlay,
-                  reviewedCount: _reviewedCount,
-                  againCount: _againCount,
-                  hardCount: _hardCount,
-                  goodCount: _goodCount,
-                  easyCount: _easyCount,
-                  onModeChanged: (mode) => setState(() => _mode = mode),
-                  onLearn: () => _openLearn(items, detail.title),
-                  onTest: () => _openTest(items, detail.title),
-                  onMatch: () => _openMatch(items, detail.title),
-                  onWrite: () => _openWrite(items, detail.title),
-                  onToggleCurrentStar:
-                      (_mode == _ChapterStudyMode.review
-                              ? currentDueUserTerm
-                              : currentUserTerm) ==
-                          null
-                      ? null
-                      : () => _toggleStar(
-                          _mode == _ChapterStudyMode.review
-                              ? currentDueUserTerm!
-                              : currentUserTerm!,
-                          args,
-                        ),
-                  onShowHintsChanged: (value) =>
-                      setState(() => _showHints = value),
-                  onToggleShuffle: _toggleShuffle,
-                  onToggleAutoPlay: () => _toggleAutoPlay(total),
-                  onPrev: () => _goPrev(total),
-                  onNext: () => _goNext(total),
-                  onStartLearning: () => _startReviewLearning(rawItems, args),
-                  onReviewRate: currentDueItem == null
-                      ? null
-                      : (level) => _handleReviewRating(
-                          currentDueItem,
-                          level.value,
-                          args,
-                        ),
-                ),
-                _KanjiTab(
-                  language: language,
-                  chapterTitle: detail.title,
-                  levelCode: detail.levelCode,
-                  kanjiAsync: kanjiAsync,
-                ),
-              ],
-            );
-          },
-          loading: () => const Center(child: CircularProgressIndicator()),
-          error: (error, _) =>
-              _ErrorState(language: language, message: error.toString()),
-        ),
+                : (level) =>
+                      _handleReviewRating(currentDueItem, level.value, args),
+          );
+        },
+        loading: () => const Center(child: CircularProgressIndicator()),
+        error: (error, _) =>
+            _ErrorState(language: language, message: error.toString()),
       ),
     );
   }
@@ -691,10 +663,182 @@ class _VocabTabView extends StatelessWidget {
               easy: easyCount,
             ),
           ],
+          const SizedBox(height: 24),
+          _TermListSection(language: language, items: rawItems),
         ],
       ),
     );
   }
+}
+
+class _TermListSection extends StatelessWidget {
+  const _TermListSection({required this.language, required this.items});
+
+  final AppLanguage language;
+  final List<VocabItem> items;
+
+  @override
+  Widget build(BuildContext context) {
+    if (items.isEmpty) {
+      return const SizedBox.shrink();
+    }
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 960),
+      child: AppSectionCard(
+        key: const ValueKey('hajimete_inline_term_list'),
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  Icons.format_list_bulleted_rounded,
+                  color: context.appPalette.primary,
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  _termListTitle(language),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 6),
+            Text(
+              _termListSubtitle(language),
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: context.appPalette.ink.withValues(alpha: 0.68),
+              ),
+            ),
+            const SizedBox(height: 14),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: items.length,
+              separatorBuilder: (_, _) => const SizedBox(height: 10),
+              itemBuilder: (context, index) {
+                final item = items[index];
+                return _TermListRow(
+                  language: language,
+                  index: index + 1,
+                  item: item,
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _TermListRow extends StatelessWidget {
+  const _TermListRow({
+    required this.language,
+    required this.index,
+    required this.item,
+  });
+
+  final AppLanguage language;
+  final int index;
+  final VocabItem item;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: palette.surface,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: palette.outline),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 30,
+            child: Text(
+              '$index',
+              style: TextStyle(
+                color: palette.ink.withValues(alpha: 0.52),
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  spacing: 10,
+                  runSpacing: 8,
+                  children: [
+                    Text(
+                      item.term,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    ..._kanjiChars(item.term).map(
+                      (char) => KanjiInlinePopover(
+                        key: ValueKey('kanji_inline_popover_$char'),
+                        character: char,
+                        language: language,
+                      ),
+                    ),
+                  ],
+                ),
+                if ((item.reading ?? '').trim().isNotEmpty) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    item.reading!.trim(),
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: palette.info,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+                const SizedBox(height: 6),
+                Text(_displayTermMeaning(item, language)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+List<String> _kanjiChars(String value) {
+  final chars = <String>[];
+  for (final rune in value.runes) {
+    final char = String.fromCharCode(rune);
+    if (_isCjkKanji(char)) {
+      chars.add(char);
+    }
+  }
+  return chars;
+}
+
+bool _isCjkKanji(String char) {
+  if (char.isEmpty) return false;
+  final code = char.runes.first;
+  return code >= 0x4E00 && code <= 0x9FFF;
+}
+
+String _displayTermMeaning(VocabItem item, AppLanguage language) {
+  final vi = item.meaning.trim();
+  final en = item.meaningEn?.trim() ?? '';
+  return switch (language) {
+    AppLanguage.en => en.isNotEmpty ? en : vi,
+    AppLanguage.ja => en.isNotEmpty ? en : vi,
+    AppLanguage.vi => vi,
+  };
 }
 
 class _StudyStagePanel extends StatelessWidget {
@@ -1289,232 +1433,6 @@ class _FlashcardControls extends StatelessWidget {
   }
 }
 
-class _KanjiTab extends StatelessWidget {
-  const _KanjiTab({
-    required this.language,
-    required this.chapterTitle,
-    required this.levelCode,
-    required this.kanjiAsync,
-  });
-
-  final AppLanguage language;
-  final String chapterTitle;
-  final String levelCode;
-  final AsyncValue<HajimeteKanjiChapterDetail?> kanjiAsync;
-
-  @override
-  Widget build(BuildContext context) {
-    return kanjiAsync.when(
-      data: (detail) {
-        if (detail == null || detail.entries.isEmpty) {
-          return SingleChildScrollView(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _KanjiContractCard(
-                  language: language,
-                  chapterTitle: chapterTitle,
-                  levelCode: levelCode,
-                ),
-                const SizedBox(height: 16),
-                AppFeatureCard(
-                  icon: Icons.grid_view_rounded,
-                  title: _kanjiComingSoonTitle(language),
-                  subtitle: _kanjiComingSoonSubtitle(
-                    language,
-                    levelCode,
-                    chapterTitle,
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-
-        return SingleChildScrollView(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _KanjiSummaryCard(language: language, detail: detail),
-              const SizedBox(height: 20),
-              ListView.separated(
-                key: const ValueKey('hajimete_kanji_list'),
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: detail.entries.length,
-                separatorBuilder: (_, _) => const SizedBox(height: 12),
-                itemBuilder: (context, index) {
-                  final entry = detail.entries[index];
-                  return AppSectionCard(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 72,
-                          child: Text(
-                            entry.character.isEmpty ? '—' : entry.character,
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headlineMedium
-                                ?.copyWith(fontWeight: FontWeight.w900),
-                          ),
-                        ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              if (entry.reading.isNotEmpty)
-                                Text(
-                                  entry.reading,
-                                  style: Theme.of(context).textTheme.bodyMedium
-                                      ?.copyWith(
-                                        color: context.appPalette.info,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                ),
-                              if (_hajimeteKanjiMeaning(
-                                entry,
-                                language,
-                              ).isNotEmpty) ...[
-                                const SizedBox(height: 4),
-                                Text(_hajimeteKanjiMeaning(entry, language)),
-                              ],
-                              if (language == AppLanguage.vi &&
-                                  entry.meaningEn.isNotEmpty) ...[
-                                const SizedBox(height: 4),
-                                Text(
-                                  entry.meaningEn,
-                                  style: Theme.of(context).textTheme.bodySmall
-                                      ?.copyWith(
-                                        color: context.appPalette.ink
-                                            .withValues(alpha: 0.65),
-                                      ),
-                                ),
-                              ],
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
-        );
-      },
-      loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, _) => SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
-        child: AppFeatureCard(
-          icon: Icons.error_outline_rounded,
-          title: _kanjiLoadErrorTitle(language),
-          subtitle: error.toString(),
-        ),
-      ),
-    );
-  }
-}
-
-String _hajimeteKanjiMeaning(HajimeteKanjiEntry entry, AppLanguage language) {
-  final vi = entry.meaningVi.trim();
-  final en = entry.meaningEn.trim();
-  return switch (language) {
-    AppLanguage.vi => vi.isNotEmpty ? vi : en,
-    AppLanguage.en => en.isNotEmpty ? en : vi,
-    AppLanguage.ja => en,
-  };
-}
-
-class _KanjiContractCard extends StatelessWidget {
-  const _KanjiContractCard({
-    required this.language,
-    required this.chapterTitle,
-    required this.levelCode,
-  });
-
-  final AppLanguage language;
-  final String chapterTitle;
-  final String levelCode;
-
-  @override
-  Widget build(BuildContext context) {
-    return AppSectionCard(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            _kanjiContractTitle(language),
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900),
-          ),
-          const SizedBox(height: 8),
-          Text(_kanjiContractSubtitle(language, levelCode, chapterTitle)),
-          const SizedBox(height: 12),
-          Text(
-            'assets/data/content/kanji/${levelCode.toLowerCase()}/hajimete/hajimete_ch${chapterTitle.isNotEmpty ? '' : ''}XX.json',
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: context.appPalette.ink.withValues(alpha: 0.68),
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _KanjiSummaryCard extends StatelessWidget {
-  const _KanjiSummaryCard({required this.language, required this.detail});
-
-  final AppLanguage language;
-  final HajimeteKanjiChapterDetail detail;
-
-  @override
-  Widget build(BuildContext context) {
-    return AppSectionCard(
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  _kanjiLiveTitle(language),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900),
-                ),
-                const SizedBox(height: 8),
-                Text(_kanjiLiveSubtitle(language, detail.entries.length)),
-              ],
-            ),
-          ),
-          const SizedBox(width: 16),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              color: context.appPalette.surface,
-              border: Border.all(color: context.appPalette.outline),
-            ),
-            child: Text(
-              '${detail.entries.length}',
-              style: Theme.of(
-                context,
-              ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class _EmptyState extends StatelessWidget {
   const _EmptyState({required this.language});
 
@@ -1616,18 +1534,6 @@ String _savedLabel(AppLanguage language) => switch (language) {
   AppLanguage.en => 'Saved',
 };
 
-String _vocabTabLabel(AppLanguage language) => switch (language) {
-  AppLanguage.vi => 'Từ vựng',
-  AppLanguage.ja => '語彙',
-  AppLanguage.en => 'Vocab',
-};
-
-String _kanjiTabLabel(AppLanguage language) => switch (language) {
-  AppLanguage.vi => 'Kanji',
-  AppLanguage.ja => '漢字',
-  AppLanguage.en => 'Kanji',
-};
-
 String _flashcardsLabel(AppLanguage language) => switch (language) {
   AppLanguage.vi => 'Thẻ ghi nhớ',
   AppLanguage.ja => 'フラッシュカード',
@@ -1700,61 +1606,18 @@ String _showHintsLabel(AppLanguage language) => switch (language) {
   AppLanguage.en => 'Show hints',
 };
 
-String _kanjiComingSoonTitle(AppLanguage language) => switch (language) {
-  AppLanguage.vi => 'Phần kanji sẽ mở sau',
-  AppLanguage.ja => '漢字タブは後で接続します',
-  AppLanguage.en => 'Kanji tab will be connected later',
+String _termListTitle(AppLanguage language) => switch (language) {
+  AppLanguage.vi => 'Từ trong chương',
+  AppLanguage.ja => 'この章の語彙',
+  AppLanguage.en => 'Terms in this chapter',
 };
 
-String _kanjiLoadErrorTitle(AppLanguage language) => switch (language) {
-  AppLanguage.vi => 'Không tải được phần kanji',
-  AppLanguage.ja => '漢字タブを読み込めませんでした',
-  AppLanguage.en => 'Could not load the Kanji tab',
-};
-
-String _kanjiContractTitle(AppLanguage language) => switch (language) {
-  AppLanguage.vi => 'Dữ liệu kanji đã sẵn sàng',
-  AppLanguage.ja => '漢字データの契約は準備済みです',
-  AppLanguage.en => 'The Kanji data contract is ready',
-};
-
-String _kanjiContractSubtitle(
-  AppLanguage language,
-  String levelCode,
-  String chapterTitle,
-) => switch (language) {
+String _termListSubtitle(AppLanguage language) => switch (language) {
   AppLanguage.vi =>
-    'Phần kanji của $levelCode / $chapterTitle đang chờ dữ liệu Hajimete. Khi có dữ liệu đúng cấu trúc, màn này sẽ hiển thị ngay.',
-  AppLanguage.ja =>
-    '$levelCode / $chapterTitle の漢字タブは Hajimete のアセット待ちです。正しい形式のファイルを追加すればこの UI にそのまま表示されます。',
+    'Chạm từng chữ Hán trong từ để xem cầu Hán-Việt và nét viết. Học từ trước, rồi nhìn chữ như một mỏ neo trí nhớ.',
+  AppLanguage.ja => '語の中の漢字を押すと、漢越音の手がかりと筆順を確認できます。',
   AppLanguage.en =>
-    'The Kanji tab for $levelCode / $chapterTitle is waiting for Hajimete assets. Once you add a file in the expected format, this UI can use it directly.',
-};
-
-String _kanjiLiveTitle(AppLanguage language) => switch (language) {
-  AppLanguage.vi => 'Kanji của chương đã sẵn sàng',
-  AppLanguage.ja => 'このチャプターの漢字が利用可能です',
-  AppLanguage.en => 'Kanji for this chapter is live',
-};
-
-String _kanjiLiveSubtitle(AppLanguage language, int count) =>
-    switch (language) {
-      AppLanguage.vi => '$count mục kanji đã được nạp vào phần này.',
-      AppLanguage.ja => '$count 件の漢字がこのタブに読み込まれました。',
-      AppLanguage.en => '$count Kanji entries are loaded into this tab.',
-    };
-
-String _kanjiComingSoonSubtitle(
-  AppLanguage language,
-  String levelCode,
-  String chapterTitle,
-) => switch (language) {
-  AppLanguage.vi =>
-    'Phần kanji cho $levelCode / $chapterTitle đã được chuẩn bị. Khi dữ liệu Hajimete có kanji, nội dung sẽ hiện ở đây.',
-  AppLanguage.ja =>
-    '$levelCode / $chapterTitle 用に漢字タブを準備しています。Hajimete の漢字データが追加されたらここへ接続します。',
-  AppLanguage.en =>
-    'The Kanji tab is reserved for $levelCode / $chapterTitle. Once you add Hajimete kanji data, it can plug in here directly.',
+    'Tap a kanji inside a term to see its Sino-Vietnamese bridge and stroke order.',
 };
 
 String _emptyTitle(AppLanguage language) => switch (language) {

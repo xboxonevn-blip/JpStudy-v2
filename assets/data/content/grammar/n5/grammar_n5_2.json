@@ -14,10 +14,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: これ / それ / あれ は N です",
-      "meaning": "Ý nghĩa: Các từ chỉ vật, dùng khi chưa nói ngay tên đồ vật.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "これ/それ/あれ thuộc hệ ko-so-a của tiếng Nhật: こ gần người nói, そ gần người nghe hoặc gần điều vừa nhắc, あ xa cả hai. Về cấu trúc, các từ này đứng như một danh từ độc lập, rồi は N です mới định danh vật đang được chỉ.",
+      "hanVietBridge": "Có thể nối với Hán-Việt 'chỉ định': chỉ = trỏ, định = xác định. これ/それ/あれ là cách tiếng Nhật xác định vật theo khoảng cách hội thoại, giống tiếng Việt phân biệt này/đó/kia.",
+      "form": "Hình thức: これ / それ / あれ は N です. これ/それ/あれ là chủ đề chỉ vật; N trước です là tên hoặc loại của vật đó.",
+      "meaning": "Ý nghĩa: 'cái này/cái đó/cái kia là N'. Khác biệt chính nằm ở khoảng cách với người nói và người nghe.",
+      "usage": "Sử dụng: dùng khi chỉ một vật mà chưa nêu tên ngay. Chọn これ nếu gần mình, それ nếu gần người nghe, あれ nếu xa cả hai.",
+      "humanMoment": "Dr. Linh lưu ý: これ/それ/あれ は N です giống ba cái chỉ tay trong lớp học. Quyển sách trên tay bạn là これ, trên bàn người đối diện là それ, ngoài cửa sổ là あれ; sau đó は N です mới gọi tên vật.",
+      "crossLinks": [
+        {
+          "pattern": "この / その / あの + N",
+          "contrast": "khác vị trí: これ/それ/あれ đứng một mình như danh từ, còn この/その/あの phải đứng trước một danh từ."
+        },
+        {
+          "pattern": "N1 は N2 です",
+          "contrast": "khác phần chủ đề: N1 thường là danh từ cụ thể, còn これ/それ/あれ là đại từ chỉ vật theo khoảng cách."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

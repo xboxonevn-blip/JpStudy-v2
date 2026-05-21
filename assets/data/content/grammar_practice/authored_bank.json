@@ -1283,6 +1283,219 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-form-l1-001",
+      "template_id": "tpl-grammar-n5-007-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn từ chỉ vật gần người nói: ___ は本です。",
+      "answer_template": "これ",
+      "options_template": [
+        "これ",
+        "それ",
+        "あれ",
+        "この"
+      ],
+      "distractor_strategy": "ko-so-a-distance-and-kono-form",
+      "teaching_note": "これ đứng độc lập để chỉ vật gần người nói.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-form-l1-002",
+      "template_id": "tpl-grammar-n5-007-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng với mẫu これ/それ/あれ は N です?",
+      "answer_template": "これは本です。",
+      "options_template": [
+        "これは本です。",
+        "このは本です。",
+        "これは本のです。",
+        "これ本ですは。"
+      ],
+      "distractor_strategy": "standalone-demonstrative-vs-adnominal",
+      "teaching_note": "これ có thể đứng làm chủ đề; この phải đi trước danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-007-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "それは辞書です。 Nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Cái đó là từ điển.",
+      "options_template": [
+        "Cái đó là từ điển.",
+        "Cái này là từ điển.",
+        "Từ điển kia ở xa cả hai.",
+        "Từ điển của tôi."
+      ],
+      "distractor_strategy": "demonstrative-distance-meaning",
+      "teaching_note": "それ thường chỉ vật gần người nghe hoặc vừa được nhắc.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-007-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong これ/それ/あれ, từ nào chỉ vật xa cả người nói và người nghe?",
+      "answer_template": "あれ",
+      "distractor_strategy": "a-distance-recall",
+      "teaching_note": "あ là vùng xa cả hai trong hệ ko-so-a.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-usage-l3-005",
+      "template_id": "tpl-grammar-n5-007-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Cái này là máy tính': パソコン / は / これ / です",
+      "answer_template": "これはパソコンです",
+      "options_template": [
+        "これ",
+        "は",
+        "パソコン",
+        "です"
+      ],
+      "distractor_strategy": "demonstrative-identity-order",
+      "teaching_note": "これ làm chủ đề; パソコン là tên vật trước です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-usage-l3-006",
+      "template_id": "tpl-grammar-n5-007-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Cái kia là trường học' khi vật ở xa cả hai người.",
+      "answer_template": "あれは学校です",
+      "distractor_strategy": "far-from-both-selection",
+      "teaching_note": "Xa cả người nói và người nghe -> あれ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-context-l3-007",
+      "template_id": "tpl-grammar-n5-007-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn cầm một quyển sách trên tay và giới thiệu với bạn học. Viết 'Cái này là sách'.",
+      "answer_template": "これは本です",
+      "distractor_strategy": "speaker-near-object-context",
+      "teaching_note": "Vật ở gần người nói nên dùng これ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-context-l2-008",
+      "template_id": "tpl-grammar-n5-007-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp với それはNです?",
+      "answer_template": "Bạn chỉ vật đang ở gần người nghe.",
+      "options_template": [
+        "Bạn chỉ vật đang ở gần người nghe.",
+        "Bạn chỉ vật đang trên tay mình.",
+        "Bạn chỉ vật xa cả hai người.",
+        "Bạn bổ nghĩa danh từ ngay sau từ chỉ định."
+      ],
+      "distractor_strategy": "sore-context-vs-kore-are-kono",
+      "teaching_note": "それ thường thuộc vùng của người nghe.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-007-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Vật nằm trên bàn người nghe. Câu nào đúng nhất?",
+      "answer_template": "それはノートです。",
+      "options_template": [
+        "それはノートです。",
+        "これはノートです。",
+        "あれはノートです。",
+        "このはノートです。"
+      ],
+      "distractor_strategy": "distance-and-form-analysis",
+      "teaching_note": "Gần người nghe -> それ; この không đứng một mình trước は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-007-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-007-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào dùng đúng đại từ chỉ vật độc lập, không dùng nhầm この/その/あの trước は?",
+      "answer_template": "これはペンです。",
+      "options_template": [
+        "これはペンです。",
+        "このはペンです。",
+        "そのはペンです。",
+        "あのはペンです。"
+      ],
+      "distractor_strategy": "kore-vs-kono-analysis",
+      "teaching_note": "これ/それ/あれ đứng độc lập; この/その/あの phải có danh từ theo sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

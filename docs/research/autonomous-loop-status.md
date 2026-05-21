@@ -1771,3 +1771,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `さん` is a polite suffix for other people. Use
   it after someone else's name, not after your own name in self-introduction.
+
+## 2026-05-22 Phase G Tier-1 item 007
+
+- Re-authored `grammar:n5:grammar_n5_2:001` (`これ/それ/あれ は N です`)
+  with ko-so-a distance logic and contrasts against `この/その/あの`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `これ/それ/あれ` are standalone pointers: near me,
+  near you, far from both. `この/その/あの` cannot stand before `は` alone.

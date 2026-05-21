@@ -1513,3 +1513,11 @@
 - Added `docs/research/offline-resources-inventory-2026-05-20.md` with file-tree summary, source mapping, page counts, representative parse samples, schema, extraction plan, validation gates, DECISIONS MADE, and OPEN_QUESTIONS.
 - Logged `DECISION-033` through `DECISION-035` and `OQ-011` through `OQ-013`; no banned website was accessed.
 - Next: commit Phase 0 doc, then implement `tool/research/extract_offline_vocab_canonical.js` and extract Minna I canonical vocab first.
+
+## 2026-05-21 QA-A-030 Phase 1 Minna I extraction
+
+- Added `tool/research/extract_offline_vocab_canonical.js` with source-profile detection, text-layer PDF extraction, nested-parenthesis row parsing, source-page tracking, markdown formatting, and JSON extraction reports.
+- Added RED/GREEN parser coverage for standard Hán-Việt rows, loanword/no-Hán-Việt rows, nested reading parentheses, Minna/kanji-vocab path mapping, page tracking, and canonical markdown output.
+- Extracted `docs/research/canonical/vocab/minna-1.md` from `25` local Minna I PDFs: `737` factual vocab rows, `0` review rows, source lesson refs `Lesson 1` through `Lesson 25`.
+- Wrote machine report `docs/research/canonical/vocab/reports/minna-1.json`; no banned website was accessed.
+- Next: run gates, commit, then extract Minna II (`minna-2`) for N4 lesson alignment.

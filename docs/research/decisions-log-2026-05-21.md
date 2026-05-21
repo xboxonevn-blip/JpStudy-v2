@@ -351,3 +351,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: It avoids polluting canonical vocab with link/contact content while preserving the file in the inventory for later review.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-036 - Store canonical markdown plus machine report
+**Phase**: P1 QA-A-030 Phase 1
+**Date**: 2026-05-21 15:40 (local)
+**Context**: Phase 1 needs owner-readable canonical vocab files and repeatable validation counts for later app diffing.
+**Options considered**: markdown only | JSON only | markdown canonical plus JSON extraction report
+**Chosen**: markdown canonical plus JSON extraction report
+**Rationale**: Markdown is reviewable by the owner, while JSON preserves accepted/review/source-file counts for tooling and later consensus/diff stages.
+**Reversible**: yes
+**Owner review**: pending

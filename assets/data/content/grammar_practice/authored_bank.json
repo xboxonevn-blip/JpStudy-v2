@@ -433,6 +433,220 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-form-l1-001",
+      "template_id": "tpl-grammar-n5-003-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ cuối câu để biến 学生です thành câu hỏi.",
+      "answer_template": "か",
+      "options_template": [
+        "か",
+        "は",
+        "を",
+        "に"
+      ],
+      "distractor_strategy": "question-particle-vs-case-particles",
+      "teaching_note": "か đứng cuối câu để đánh dấu nghi vấn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-form-l1-002",
+      "template_id": "tpl-grammar-n5-003-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Vị trí đúng của か trong câu lịch sự là vị trí nào?",
+      "answer_template": "Cuối câu: 学生ですか。",
+      "options_template": [
+        "Cuối câu: 学生ですか。",
+        "Giữa danh từ và です: 学生かです。",
+        "Trước chủ đề: か私は学生です。",
+        "Thay cho です: 学生か。"
+      ],
+      "distractor_strategy": "misplaced-question-particle",
+      "teaching_note": "Ở mẫu N5 lịch sự, thân câu giữ nguyên rồi thêm か cuối câu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-003-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "学生ですか。 Nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Bạn/anh/chị có phải là sinh viên không?",
+      "options_template": [
+        "Bạn/anh/chị có phải là sinh viên không?",
+        "Tôi là sinh viên.",
+        "Sinh viên không có ở đây.",
+        "Hãy học đi."
+      ],
+      "distractor_strategy": "question-vs-statement-command",
+      "teaching_note": "か biến câu danh từ lịch sự thành câu hỏi xác nhận.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-003-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong S + か, か có chức năng gì?",
+      "answer_template": "Đánh dấu cả câu là câu hỏi.",
+      "distractor_strategy": "ka-as-vocabulary-word-trap",
+      "teaching_note": "か không thay đổi nghĩa từ vựng trong câu; nó đổi lực câu thành câu hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-usage-l3-005",
+      "template_id": "tpl-grammar-n5-003-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'Bạn có phải sinh viên không?': あなた / は / 学生 / です / か",
+      "answer_template": "あなたは学生ですか",
+      "options_template": [
+        "あなた",
+        "は",
+        "学生",
+        "です",
+        "か"
+      ],
+      "distractor_strategy": "question-final-order",
+      "teaching_note": "か luôn đi sau です trong câu hỏi lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-usage-l3-006",
+      "template_id": "tpl-grammar-n5-003-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu hỏi lịch sự: 'Bạn có phải người Việt Nam không?'",
+      "answer_template": "あなたはベトナム人ですか",
+      "distractor_strategy": "missing-final-ka",
+      "teaching_note": "Nếu thiếu か, câu chỉ là lời khẳng định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-context-l3-007",
+      "template_id": "tpl-grammar-n5-003-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn đứng trước một phòng và muốn hỏi 'Đây có phải thư viện không?' Viết câu với か.",
+      "answer_template": "ここは図書館ですか",
+      "distractor_strategy": "location-identification-question",
+      "teaching_note": "ここは図書館です là thân câu; thêm か để hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-context-l2-008",
+      "template_id": "tpl-grammar-n5-003-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào cần S + か?",
+      "answer_template": "Muốn xác nhận người đối diện có phải giáo viên không.",
+      "options_template": [
+        "Muốn xác nhận người đối diện có phải giáo viên không.",
+        "Muốn nói tôi không phải giáo viên.",
+        "Muốn nói giáo viên ở phòng bên.",
+        "Muốn mời giáo viên uống trà."
+      ],
+      "distractor_strategy": "question-function-context",
+      "teaching_note": "S + か dùng cho hỏi/xác nhận, không phải phủ định hay mời.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-003-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Bạn cần hỏi, không khẳng định. Câu nào đúng?",
+      "answer_template": "田中さんは先生ですか。",
+      "options_template": [
+        "田中さんは先生ですか。",
+        "田中さんは先生です。",
+        "田中さんを先生ですか。",
+        "田中さんは先生じゃありません。"
+      ],
+      "distractor_strategy": "question-vs-statement-negative-analysis",
+      "teaching_note": "か cuối câu là dấu hiệu hỏi; không có か thì câu là khẳng định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-003-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-003-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn đã biết đối tượng là người, chỉ muốn xác nhận họ có phải sinh viên không. Câu nào hợp hơn câu hỏi 'cái gì'?",
+      "answer_template": "学生ですか。",
+      "options_template": [
+        "学生ですか。",
+        "何ですか。",
+        "学生です。",
+        "学生じゃありません。"
+      ],
+      "distractor_strategy": "yes-no-question-vs-wh-question",
+      "teaching_note": "学生ですか xác nhận danh tính; 何ですか hỏi bản thân vật/người là gì.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

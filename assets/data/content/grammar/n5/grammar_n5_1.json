@@ -94,10 +94,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: S + か",
-      "meaning": "Ý nghĩa: Thêm `か` vào cuối câu để biến câu trần thuật thành câu hỏi.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "か là trợ từ nghi vấn đặt ở cuối câu: nó không đổi trật tự câu như tiếng Việt hay tiếng Anh, mà gắn một dấu hỏi ngữ pháp vào cả mệnh đề trước nó. Vì thế câu Nhật giữ phần thân S gần như nguyên vẹn, rồi để か làm tín hiệu hỏi ở cuối.",
+      "hanVietBridge": "Có thể nối với Hán-Việt 'nghi vấn': nghi = ngờ, vấn = hỏi. か chính là dấu nghi vấn bằng ngữ pháp; nó không phải từ 'không' trong câu hỏi tiếng Việt.",
+      "form": "Hình thức: S + か. Trước か phải là một câu hoặc cụm đã đủ khung lịch sự như です/ます; か đứng cuối để biến cả câu thành câu hỏi.",
+      "meaning": "Ý nghĩa: thêm か để hỏi thông tin hoặc xác nhận. Trong văn lịch sự, chỉ cần đặt か cuối câu, không cần đảo trật tự chủ-vị.",
+      "usage": "Sử dụng: hợp với câu hỏi lớp học, dịch vụ, tự giới thiệu: 学生ですか, ベトナム人ですか. Người Việt hay thêm 'không' ở giữa câu; tiếng Nhật đặt dấu hỏi ở cuối bằng か.",
+      "humanMoment": "Dr. Linh lưu ý: S + か giống một dấu chấm hỏi được nói thành tiếng. 学生ですか không phải 'sinh viên là không'; thân câu vẫn là 学生です, còn か chỉ bật đèn hỏi ở cuối.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 です",
+          "contrast": "bỏ か thì câu là khẳng định; thêm か cuối câu thì thành câu hỏi."
+        },
+        {
+          "pattern": "何（なん）ですか",
+          "contrast": "何 thêm từ hỏi 'cái gì', còn か chỉ đánh dấu toàn câu là câu hỏi."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

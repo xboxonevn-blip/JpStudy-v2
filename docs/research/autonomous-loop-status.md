@@ -1735,3 +1735,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: the topic frame stays `N1 は`; only the ending
   changes from `です` to `じゃありません`. This denies identity, not existence.
+
+## 2026-05-22 Phase G Tier-1 item 003
+
+- Re-authored `grammar:n5:grammar_n5_1:003` (`S + か`) with sentence-final
+  question-particle guidance and contrasts against statement/wh-question use.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: keep the sentence body intact, then add `か` at
+  the end to ask. `か` is the grammar question mark, not Vietnamese "không".

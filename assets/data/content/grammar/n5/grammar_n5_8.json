@@ -234,10 +234,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N は どうですか",
-      "meaning": "Ý nghĩa: Dùng để hỏi cảm nhận, tình trạng hoặc đặc điểm của một người, vật, địa điểm hay sự việc.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Cấu trúc N は どうですか đặt N làm chủ đề bằng は, rồi dùng どう để hỏi 'như thế nào/ra sao' và ですか để biến thành câu hỏi lịch sự. Khác với hỏi tên hay loại, どう mở chỗ cho nhận xét, cảm nhận, tình trạng.",
+      "hanVietBridge": "Có thể nối với Hán-Việt 'trạng thái' và 'cảm nhận'. Tiếng Việt hỏi 'N thế nào?'; tiếng Nhật giữ trật tự topic-comment: về N thì, trạng thái/cảm nhận ra sao?",
+      "form": "Hình thức: N + は + どうですか. Ví dụ: 日本語はどうですか, この店はどうですか, 試験はどうでしたか.",
+      "meaning": "Ý nghĩa: hỏi cảm nhận, chất lượng, tình trạng, hoặc đánh giá chung về N: thế nào, ra sao.",
+      "usage": "Sử dụng: dùng khi muốn nghe nhận xét mở. Nếu muốn hỏi 'loại N như thế nào' trước danh từ, dùng どんなNですか; nếu muốn hỏi bản dịch, dùng 何ですか.",
+      "humanMoment": "Dr. Linh lưu ý: N は どうですか không hỏi 'N là cái gì' mà hỏi 'trải nghiệm với N ra sao'. 日本語はどうですか mời người học nói 難しいです, おもしろいです; còn 日本語は何ですか lại hỏi định nghĩa/tên.",
+      "crossLinks": [
+        {
+          "pattern": "どんな N ですか",
+          "contrast": "どんなN hỏi loại/tính chất trước danh từ; Nはどうですか hỏi nhận xét tổng thể về N."
+        },
+        {
+          "pattern": "\"～\" は 〇〇語で何ですか",
+          "contrast": "何ですか hỏi 'là gì/bản dịch gì', còn どうですか hỏi cảm nhận/tình trạng như thế nào."
+        },
+        {
+          "pattern": "N1 は N2 です",
+          "contrast": "N1はN2です trả lời bằng danh tính/loại; Nはどうですか thường trả lời bằng tính từ hoặc nhận xét."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -9631,6 +9631,224 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-form-l1-001",
+      "template_id": "tpl-grammar-n5-046-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn mẫu đúng để hỏi 'tiếng Nhật thế nào?'",
+      "answer_template": "日本語はどうですか。",
+      "options_template": [
+        "日本語はどうですか。",
+        "日本語をどうですか。",
+        "日本語でどうですか。",
+        "日本語にどうですか。"
+      ],
+      "distractor_strategy": "topic-wa-dou-desu-ka-form",
+      "teaching_note": "N cần được nêu làm chủ đề bằng は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-form-l1-002",
+      "template_id": "tpl-grammar-n5-046-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để hỏi cảm nhận về quán này?",
+      "answer_template": "この店はどうですか。",
+      "options_template": [
+        "この店はどうですか。",
+        "この店をどうですか。",
+        "この店は何をですか。",
+        "この店で何ですか。"
+      ],
+      "distractor_strategy": "dou-desu-ka-topic-form-vs-object-what",
+      "teaching_note": "どうですか hỏi nhận xét chung về chủ đề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-046-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "日本語はどうですか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tiếng Nhật thế nào?",
+      "options_template": [
+        "Tiếng Nhật thế nào?",
+        "Tiếng Nhật là gì?",
+        "Tiếng Nhật ở đâu?",
+        "Bạn nói tiếng Nhật không?"
+      ],
+      "distractor_strategy": "how-is-topic-vs-what-where-ability",
+      "teaching_note": "どう hỏi cảm nhận/tình trạng, không hỏi định nghĩa.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-046-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Nはどうですか thường cần câu trả lời kiểu gì?",
+      "answer_template": "Một nhận xét/tính từ về N, như 難しいです hoặc おいしいです.",
+      "distractor_strategy": "dou-answer-type-recall",
+      "teaching_note": "Câu trả lời thường là đánh giá hoặc trạng thái.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-usage-l3-005",
+      "template_id": "tpl-grammar-n5-046-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'bài thi thế nào?': 試験 / は / どうですか",
+      "answer_template": "試験はどうですか。",
+      "options_template": [
+        "試験",
+        "は",
+        "どうですか"
+      ],
+      "distractor_strategy": "dou-desu-ka-order",
+      "teaching_note": "Chủ đề + は đứng trước どうですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-usage-l3-006",
+      "template_id": "tpl-grammar-n5-046-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu hỏi: Trường mới thế nào?",
+      "answer_template": "新しい学校はどうですか。",
+      "distractor_strategy": "apply-dou-desu-ka-to-modified-noun",
+      "teaching_note": "Cả cụm 新しい学校 làm chủ đề trước は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-context-l3-007",
+      "template_id": "tpl-grammar-n5-046-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn muốn hỏi bạn học cảm nhận về giáo viên mới. Câu nào hợp nhất?",
+      "answer_template": "新しい先生はどうですか。",
+      "options_template": [
+        "新しい先生はどうですか。",
+        "新しい先生は何ですか。",
+        "新しい先生をどうですか。",
+        "新しい先生で何ですか。"
+      ],
+      "distractor_strategy": "impression-question-context-vs-definition-object-translation",
+      "teaching_note": "Hỏi cảm nhận dùng どうですか, không dùng 何ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-context-l2-008",
+      "template_id": "tpl-grammar-n5-046-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào dùng Nはどうですか?",
+      "answer_template": "Khi muốn hỏi nhận xét, tình trạng hoặc cảm nhận về N.",
+      "options_template": [
+        "Khi muốn hỏi nhận xét, tình trạng hoặc cảm nhận về N.",
+        "Khi muốn hỏi bản dịch của một từ.",
+        "Khi muốn hỏi danh từ thuộc loại nào trước N.",
+        "Khi muốn phủ định một tính từ."
+      ],
+      "distractor_strategy": "dou-context-vs-translation-donna-negative",
+      "teaching_note": "どうですか là câu hỏi mở về trạng thái/cảm nhận.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-046-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích 4 câu. Câu nào hỏi cảm nhận, không hỏi định nghĩa/bản dịch?",
+      "answer_template": "日本語はどうですか。",
+      "options_template": [
+        "日本語はどうですか。",
+        "日本語は何ですか。",
+        "\"hello\" は日本語で何ですか。",
+        "どんな日本語ですか。"
+      ],
+      "distractor_strategy": "dou-vs-nani-translation-donna-analysis",
+      "teaching_note": "L4: どうですか hỏi 'thế nào'; 何ですか hỏi 'là gì'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-046-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-046-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu hỏi: この店はどうですか。Câu trả lời nào đúng loại thông tin?",
+      "answer_template": "おいしいですが、ちょっと高いです。",
+      "options_template": [
+        "おいしいですが、ちょっと高いです。",
+        "レストランです。",
+        "\"店\" は英語で shop です。",
+        "駅の前です。"
+      ],
+      "distractor_strategy": "answer-type-impression-vs-category-translation-location",
+      "teaching_note": "どうですか cần nhận xét/cảm nhận, không phải loại, bản dịch, hay vị trí.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

@@ -569,3 +569,23 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The manifest already encodes lesson counts, item counts, levels, categories, and migration status. Using it avoids DB-seed races, fixes the 10-program count deterministically, and prevents invalid Mimikara N5/N4 cards.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-058 - Desktop chrome is full-bleed; content remains bounded
+**Phase**: Urgent live audit P2 M1-M8
+**Date**: 2026-05-22 13:35 (local)
+**Context**: The live audit found a "chrome flush" gap: sidebar and header controls floated inside a capped shell, while page content still needed readable max widths.
+**Options considered**: keep the capped shell and only widen content | make every surface full width | make app chrome full-bleed while keeping page content on adaptive max-width rails
+**Chosen**: Return `double.infinity` for shell width, remove the desktop shell `AppResponsiveFrame`, set the desktop top bar padding to zero, and keep content bounded through `AppResponsiveMetrics.contentMaxWidth` at 1040/1280/1440/1600.
+**Rationale**: Navigation chrome should align to viewport edges at desktop sizes, but learning content still needs scan-friendly line lengths. This fixes the visible empty bands without turning lesson/detail content into unreadably wide rows.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-059 - Foundations suggestion becomes a dismissible banner
+**Phase**: Urgent live audit P2 M8
+**Date**: 2026-05-22 13:40 (local)
+**Context**: The old foundations/kana recommendation opened a modal dialog on first visit, blocking grammar/vocab/kanji browsing.
+**Options considered**: remove the recommendation entirely | keep the first-visit modal | convert it to a non-blocking banner with the same dismissal preference
+**Chosen**: Render the suggestion as a bottom safe-area banner, gated by N5/null level, under-30% foundations progress, and a persisted dismissal flag.
+**Rationale**: Early kana guidance remains visible for learners who need it, but it no longer interrupts the main route or causes a first-visit modal trap.
+**Reversible**: yes
+**Owner review**: pending

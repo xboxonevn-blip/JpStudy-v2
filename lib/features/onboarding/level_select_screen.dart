@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpstudy/app/layout/app_responsive_frame.dart';
 import 'package:jpstudy/app/navigation/app_route_constants.dart';
+import 'package:jpstudy/app/theme/app_breakpoints.dart';
 import 'package:jpstudy/app/theme/app_spacing.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
@@ -54,69 +56,159 @@ class _LevelSelectScreenState extends ConsumerState<LevelSelectScreen> {
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
-    final palette = context.appPalette;
 
     return Scaffold(
       body: JapaneseBackground(
         child: SafeArea(
           child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 560),
-              child: Padding(
-                padding: const EdgeInsets.all(AppSpacing.lg),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const Spacer(),
-                    Text(
-                      language.chooseLevelTitle,
-                      style: TextStyle(
-                        color: palette.ink,
-                        fontSize: 28,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                    const SizedBox(height: AppSpacing.sm),
-                    Text(
-                      language.chooseLevelSubtitle,
-                      style: TextStyle(
-                        color: palette.ink.withValues(alpha: 0.62),
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const SizedBox(height: AppSpacing.xl),
-                    for (final level in StudyLevel.values)
-                      _LevelOptionTile(
-                        level: level,
-                        tagline: _taglineFor(language, level),
-                        selected: _selectedLevel == level,
-                        onTap: () => setState(() => _selectedLevel = level),
-                      ),
-                    const Spacer(),
-                    ElevatedButton(
-                      key: const ValueKey('level_start'),
-                      onPressed: _selectedLevel == null || _isSaving
-                          ? null
-                          : _start,
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: const Size.fromHeight(52),
-                        backgroundColor: palette.primary,
-                        foregroundColor: Colors.white,
-                        disabledBackgroundColor: palette.outline,
-                        disabledForegroundColor: palette.ink.withValues(
-                          alpha: 0.45,
+            child: AppResponsiveFrame(
+              minHorizontalPadding: AppSpacing.lg,
+              child: SizedBox(
+                key: const ValueKey('level_select_adaptive_frame'),
+                width: double.infinity,
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final wide = constraints.maxWidth >= AppBreakpoints.desktop;
+                    final intro = _LevelIntro(
+                      title: language.chooseLevelTitle,
+                      subtitle: language.chooseLevelSubtitle,
+                    );
+                    final options = _LevelOptions(
+                      language: language,
+                      selectedLevel: _selectedLevel,
+                      isSaving: _isSaving,
+                      onSelect: (level) =>
+                          setState(() => _selectedLevel = level),
+                      onStart: _start,
+                    );
+
+                    if (wide) {
+                      return Padding(
+                        padding: const EdgeInsets.all(AppSpacing.xl),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(child: intro),
+                            const SizedBox(width: AppSpacing.xxxl),
+                            Expanded(
+                              child: Align(
+                                alignment: Alignment.centerRight,
+                                child: ConstrainedBox(
+                                  constraints: const BoxConstraints(
+                                    maxWidth: 680,
+                                  ),
+                                  child: options,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
+                      );
+                    }
+
+                    return Padding(
+                      padding: const EdgeInsets.all(AppSpacing.lg),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          const Spacer(),
+                          intro,
+                          const SizedBox(height: AppSpacing.xl),
+                          options,
+                          const Spacer(),
+                        ],
                       ),
-                      child: Text(language.levelStartAction),
-                    ),
-                  ],
+                    );
+                  },
                 ),
               ),
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class _LevelIntro extends StatelessWidget {
+  const _LevelIntro({required this.title, required this.subtitle});
+
+  final String title;
+  final String subtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            color: palette.ink,
+            fontSize: 32,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.sm),
+        Text(
+          subtitle,
+          style: TextStyle(
+            color: palette.ink.withValues(alpha: 0.62),
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            height: 1.45,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _LevelOptions extends StatelessWidget {
+  const _LevelOptions({
+    required this.language,
+    required this.selectedLevel,
+    required this.isSaving,
+    required this.onSelect,
+    required this.onStart,
+  });
+
+  final AppLanguage language;
+  final StudyLevel? selectedLevel;
+  final bool isSaving;
+  final ValueChanged<StudyLevel> onSelect;
+  final VoidCallback onStart;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        for (final level in StudyLevel.values)
+          _LevelOptionTile(
+            level: level,
+            tagline: _taglineFor(language, level),
+            selected: selectedLevel == level,
+            onTap: () => onSelect(level),
+          ),
+        const SizedBox(height: AppSpacing.md),
+        ElevatedButton(
+          key: const ValueKey('level_start'),
+          onPressed: selectedLevel == null || isSaving ? null : onStart,
+          style: ElevatedButton.styleFrom(
+            minimumSize: const Size.fromHeight(52),
+            backgroundColor: palette.primary,
+            foregroundColor: Colors.white,
+            disabledBackgroundColor: palette.outline,
+            disabledForegroundColor: palette.ink.withValues(alpha: 0.45),
+          ),
+          child: Text(language.levelStartAction),
+        ),
+      ],
     );
   }
 

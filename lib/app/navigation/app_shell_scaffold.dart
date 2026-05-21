@@ -65,31 +65,21 @@ class AppShellScaffold extends ConsumerWidget {
                   const GlobalTopBar(),
                   _SemanticNavigationLandmarks(items: items),
                   Expanded(
-                    child: AppResponsiveFrame(
-                      maxWidth: AppResponsiveMetrics.shellMaxWidth(
-                        constraints.maxWidth,
-                      ),
-                      desktopHorizontalPadding: AppResponsiveMetrics.pageGutter(
-                        constraints.maxWidth,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 14, 0, 14),
-                        child: Row(
-                          children: [
-                            _Sidebar(
-                              language: language,
-                              items: items,
-                              currentIndex: currentBranchIndex,
-                              onTap: (item) => _goToBranch(context, item),
-                            ),
-                            const SizedBox(width: 18),
-                            Expanded(
-                              child: _ShellBody(
-                                navigationShell: navigationShell,
-                              ),
-                            ),
-                          ],
-                        ),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 14, 0, 14),
+                      child: Row(
+                        children: [
+                          _Sidebar(
+                            language: language,
+                            items: items,
+                            currentIndex: currentBranchIndex,
+                            onTap: (item) => _goToBranch(context, item),
+                          ),
+                          const SizedBox(width: 18),
+                          Expanded(
+                            child: _ShellBody(navigationShell: navigationShell),
+                          ),
+                        ],
                       ),
                     ),
                   ),

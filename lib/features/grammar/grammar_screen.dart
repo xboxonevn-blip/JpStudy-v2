@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jpstudy/app/navigation/app_navigation_extensions.dart';
+import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/app/navigation/app_route_locations.dart';
 import 'package:jpstudy/app/theme/app_spacing.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
@@ -90,9 +91,14 @@ class GrammarScreen extends ConsumerWidget {
 }
 
 String? _queryLevelLabel(BuildContext context) {
-  final raw = GoRouter.maybeOf(
-    context,
-  )?.routeInformationProvider.value.uri.queryParameters['level'];
+  String? raw;
+  try {
+    raw = GoRouterState.of(context).uri.queryParameters['level'];
+  } on Object {
+    raw = GoRouter.maybeOf(
+      context,
+    )?.routeInformationProvider.value.uri.queryParameters['level'];
+  }
   if (raw == null) return null;
   final normalized = raw.trim().toUpperCase();
   return StudyLevel.values.any((level) => level.shortLabel == normalized)
@@ -135,6 +141,8 @@ class _GrammarHubContentState extends State<_GrammarHubContent> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        _GrammarLevelSelector(language: language, selectedLevel: levelLabel),
+        const SizedBox(height: AppSpacing.md),
         _GrammarHeroCard(
           language: language,
           levelLabel: levelLabel,
@@ -464,6 +472,60 @@ String _normalizeGrammarSearch(String input) {
     buffer.write(index >= 0 ? to[index] : char);
   }
   return buffer.toString();
+}
+
+class _GrammarLevelSelector extends StatelessWidget {
+  const _GrammarLevelSelector({
+    required this.language,
+    required this.selectedLevel,
+  });
+
+  final AppLanguage language;
+  final String selectedLevel;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Wrap(
+      spacing: AppSpacing.sm,
+      runSpacing: AppSpacing.sm,
+      children: [
+        for (final level in StudyLevel.values)
+          ChoiceChip(
+            key: ValueKey('grammar_level_chip_${level.shortLabel}'),
+            label: Text(level.shortLabel),
+            selected: level.shortLabel == selectedLevel,
+            tooltip: _tr(
+              language,
+              en: 'Show ${level.shortLabel} grammar',
+              vi: 'Xem ngữ pháp ${level.shortLabel}',
+              ja: '${level.shortLabel} 文法を表示',
+            ),
+            onSelected: (_) {
+              final uri = Uri(
+                path: AppRoutePath.grammar,
+                queryParameters: {'level': level.shortLabel},
+              );
+              context.go(uri.toString());
+            },
+            selectedColor: palette.primary.withValues(alpha: 0.14),
+            backgroundColor: palette.elevated,
+            side: BorderSide(
+              color: level.shortLabel == selectedLevel
+                  ? palette.primary.withValues(alpha: 0.32)
+                  : palette.outline,
+            ),
+            labelStyle: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: level.shortLabel == selectedLevel
+                  ? palette.primary
+                  : palette.ink.withValues(alpha: 0.72),
+              fontWeight: FontWeight.w900,
+            ),
+            materialTapTargetSize: MaterialTapTargetSize.padded,
+          ),
+      ],
+    );
+  }
 }
 
 class _GrammarHeroCard extends StatelessWidget {

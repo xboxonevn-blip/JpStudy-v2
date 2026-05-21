@@ -80,4 +80,22 @@ void main() {
     expect(host.prefs.getBool(prefOnboardingCompleted), isTrue);
     expect(find.text('home-route'), findsOneWidget);
   });
+
+  testWidgets('wide level onboarding uses adaptive desktop width', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1920, 1080);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final host = await buildApp();
+    await tester.pumpWidget(host.app);
+    await tester.pumpAndSettle();
+
+    final frame = find.byKey(const ValueKey('level_select_adaptive_frame'));
+    expect(frame, findsOneWidget);
+    expect(tester.getSize(frame).width, greaterThanOrEqualTo(1200));
+    expect(tester.getSize(frame).width, lessThanOrEqualTo(1600));
+  });
 }

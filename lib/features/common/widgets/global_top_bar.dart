@@ -26,7 +26,7 @@ class GlobalTopBar extends ConsumerWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final compact = constraints.maxWidth < AppBreakpoints.tablet;
-        final horizontalPadding = compact ? 12.0 : AppSpacing.lg;
+        final horizontalPadding = compact ? 12.0 : 0.0;
         final controlGap = compact ? 8.0 : 16.0;
         final showMascot = constraints.maxWidth >= 420;
 
@@ -90,7 +90,7 @@ class GlobalTopBar extends ConsumerWidget {
                                   ?.copyWith(
                                     fontWeight: FontWeight.w900,
                                     color: palette.ink,
-                                    letterSpacing: -0.5,
+                                    letterSpacing: 0,
                                   ),
                         ),
                       ),

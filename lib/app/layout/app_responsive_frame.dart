@@ -17,26 +17,26 @@ abstract final class AppResponsiveMetrics {
   }
 
   static double contentMaxWidth(double viewportWidth) {
-    if (viewportWidth >= 1600) {
-      return 1320;
+    if (viewportWidth >= 1920) {
+      return 1600;
     }
-    if (viewportWidth >= AppBreakpoints.desktop) {
-      return 1240;
+    if (viewportWidth >= 1600) {
+      return 1440;
+    }
+    if (viewportWidth >= 1280) {
+      return 1280;
+    }
+    if (viewportWidth >= 1024) {
+      return 1040;
     }
     if (viewportWidth >= AppBreakpoints.tablet) {
-      return 1100;
+      return 960;
     }
     return double.infinity;
   }
 
   static double shellMaxWidth(double viewportWidth) {
-    if (viewportWidth >= 1680) {
-      return 1540;
-    }
-    if (viewportWidth >= 1440) {
-      return 1480;
-    }
-    return 1400;
+    return double.infinity;
   }
 }
 

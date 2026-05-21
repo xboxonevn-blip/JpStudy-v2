@@ -2250,3 +2250,17 @@
   `vocab_screen_test`/`vocab_home_provider_test`.
 - Continuing P2 next: chrome flush, adaptive widths, grammar level switcher,
   exam metadata, exercise desktop tightening, and kana modal behavior.
+
+## 2026-05-22 P2 medium UX polish
+
+- M1/M3: desktop chrome now spans the viewport while inner content uses adaptive
+  max widths 1040/1280/1440/1600, including 1600px at 1920+.
+- M2: level onboarding uses the same adaptive desktop width instead of a narrow
+  560px column; the selected level keeps a visible primary CTA state.
+- M4/M5/M6/M7/M8: grammar has N5-N1 query chips, exam metadata was already
+  realistic and tested, duplicate grammar connection rendering remains removed,
+  grammar answer spacing is tighter, and the kana/foundations suggestion is now
+  a dismissible non-blocking banner.
+- Gates passed: focused `flutter analyze`, responsive/grammar/foundations/
+  onboarding/multiple-choice Flutter tests, and `flutter build web --release`.
+- Continuing P3 next: review label cleanup and onboarding selected-state polish.

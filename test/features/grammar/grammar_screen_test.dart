@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
@@ -189,6 +190,49 @@ void main() {
 
     expect(find.text('Grammar (N1)'), findsOneWidget);
     expect(find.text('Total points'), findsOneWidget);
+  });
+
+  testWidgets('level selector chips update the grammar level query', (
+    tester,
+  ) async {
+    final router = GoRouter(
+      initialLocation: '${AppRoutePath.grammar}?level=N5',
+      routes: [
+        GoRoute(
+          path: AppRoutePath.grammar,
+          builder: (context, state) => const GrammarScreen(),
+        ),
+      ],
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          appLanguageProvider.overrideWith(
+            (ref) => AppLanguageController.test(AppLanguage.en),
+          ),
+          studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
+          for (final level in StudyLevel.values)
+            grammarPointsProvider(
+              level.shortLabel,
+            ).overrideWith((_) async => const [_stubPoint]),
+          grammarDueCountProvider.overrideWith((_) async => 0),
+          grammarGhostCountProvider.overrideWith((_) => Stream.value(0)),
+        ],
+        child: MaterialApp.router(routerConfig: router),
+      ),
+    );
+    await _pump(tester);
+
+    expect(find.byKey(const ValueKey('grammar_level_chip_N3')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('grammar_level_chip_N3')));
+    await tester.pumpAndSettle();
+
+    expect(
+      router.routeInformationProvider.value.uri.queryParameters['level'],
+      'N3',
+    );
+    expect(find.text('Grammar (N3)'), findsOneWidget);
   });
 
   testWidgets('empty bank renders no-content placeholder', (tester) async {

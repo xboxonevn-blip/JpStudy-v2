@@ -133,28 +133,19 @@ void main() {
       ),
     );
 
-    expect(
-      tester
-          .widget<FilledButton>(
-            find.byKey(const ValueKey('grammar_mc_confirm')),
-          )
-          .onPressed,
-      isNull,
+    final confirmButton = find.descendant(
+      of: find.byKey(const ValueKey('grammar_mc_confirm')),
+      matching: find.byType(FilledButton),
     );
+
+    expect(tester.widget<FilledButton>(confirmButton).onPressed, isNull);
 
     await tester.tap(find.byKey(const ValueKey('grammar_mc_option_0')));
     await tester.pump();
 
     expect(answers, isEmpty);
     expect(find.byIcon(Icons.radio_button_checked_rounded), findsOneWidget);
-    expect(
-      tester
-          .widget<FilledButton>(
-            find.byKey(const ValueKey('grammar_mc_confirm')),
-          )
-          .onPressed,
-      isNotNull,
-    );
+    expect(tester.widget<FilledButton>(confirmButton).onPressed, isNotNull);
 
     await tester.tap(find.byKey(const ValueKey('grammar_mc_confirm')));
     await tester.pump();

@@ -92,7 +92,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
         children: [
           promptWidget,
           if (!compact) ...[
-            const SizedBox(height: 14),
+            const SizedBox(height: 10),
             _buildSupportHint(context, isRepairQuestion: repairPrompt != null),
           ],
         ],
@@ -125,7 +125,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                 },
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
             Expanded(
               flex: optionsFlex,
               child: SharedAnswerSelection(
@@ -144,7 +144,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                 forceCompact: !useGrid,
                 keyPrefix: 'grammar_mc',
                 confirmLabel: _confirmLabel(widget.language),
-                confirmMinHeight: 52,
+                confirmMinHeight: useGrid ? 48 : 52,
                 onConfirm: _confirmSelection,
                 optionBuilder: (context, option) => GrammarOptionTile(
                   key: option.key,

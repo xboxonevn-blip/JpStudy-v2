@@ -8,6 +8,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
+import 'package:jpstudy/features/interlink/widgets/related_section.dart';
 
 class ConjugationHubScreen extends ConsumerStatefulWidget {
   const ConjugationHubScreen({super.key, this.contentVocabId});
@@ -149,6 +150,17 @@ class _ConjugationHubScreenState extends ConsumerState<ConjugationHubScreen> {
                     );
                   },
                 ),
+                if (widget.contentVocabId != null && lemmas.length == 1) ...[
+                  const SizedBox(height: 12),
+                  RelatedSection.lookup(
+                    type: 'conjugation',
+                    level: lemmas.single.level,
+                    lookupId:
+                        'conjugation:${lemmas.single.level.toLowerCase()}:${lemmas.single.id}',
+                    label: lemmas.single.dictionaryForm,
+                    language: language,
+                  ),
+                ],
                 const SizedBox(height: 12),
                 Text(
                   _tr(

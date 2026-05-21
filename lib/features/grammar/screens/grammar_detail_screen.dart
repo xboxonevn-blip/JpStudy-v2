@@ -10,6 +10,7 @@ import '../../../data/db/app_database.dart';
 import '../../../data/repositories/grammar_repository.dart';
 import '../../conjugation/models/conjugation_practice_args.dart';
 import '../../common/widgets/compact_ui.dart';
+import '../../interlink/widgets/related_section.dart';
 import '../widgets/grammar_example_widget.dart';
 import 'grammar_practice_screen.dart';
 
@@ -102,6 +103,15 @@ class GrammarDetailScreen extends ConsumerWidget {
                 _buildSectionTitle(context, language.grammarExamplesLabel),
                 const SizedBox(height: 8),
                 _buildExamples(examples, language),
+                const SizedBox(height: 24),
+                RelatedSection.lookup(
+                  type: 'grammar',
+                  level: point.jlptLevel,
+                  lookupId:
+                      'grammar:${point.jlptLevel.toLowerCase()}:$grammarId',
+                  label: point.grammarPoint,
+                  language: language,
+                ),
               ],
             ),
           );

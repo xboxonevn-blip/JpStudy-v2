@@ -15,6 +15,7 @@ import 'package:jpstudy/core/utils/japanese_text.dart';
 import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/common/widgets/error_state_widget.dart';
+import 'package:jpstudy/features/interlink/widgets/related_section.dart';
 import 'package:jpstudy/features/vocab/providers/vocab_detail_provider.dart';
 
 String _tr(
@@ -175,6 +176,15 @@ class _VocabDetailBody extends StatelessWidget {
               language: language,
               palette: palette,
             ),
+          const SizedBox(height: 16),
+
+          RelatedSection.lookup(
+            type: 'vocab',
+            level: vocab.level,
+            lookupId: 'vocab:${vocab.level.toLowerCase()}:${vocab.id}',
+            label: vocab.term,
+            language: language,
+          ),
         ],
       ),
     );

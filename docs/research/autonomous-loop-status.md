@@ -1409,3 +1409,11 @@
 - Graph counts: nodes `21643` (`grammar=754`, `vocab=16712`, `kanji=2114`, `conjugation=1983`, `reading=80`), bidirectional edges `52112`, validation failures `0`.
 - Edges cover vocab-contained kanji, kanji component/related links, vocab-conjugation lemma links, and reading-passage kanji links with reverse edges enforced by the validator.
 - Added pubspec asset bundling for `assets/data/content/interlink_graph/`.
+
+## 2026-05-21 Megaprompt Phase 5 Cross-link Graph Batch 2
+
+- Added the Flutter interlink graph model/provider and a reusable localized `RelatedSection` widget.
+- Wired `Liên quan` sections into Vocab detail, Grammar detail, Kanji detail dialog, and scoped Conjugation view using exact node IDs first, then type/level/label semantic fallback for current DB-vs-asset ID gaps.
+- Kept dialog rendering stable by using a non-fluid related-section frame inside `AlertDialog`.
+- TDD RED/GREEN: Vocab, Grammar, Kanji, and scoped Conjugation detail tests first failed with missing `Liên quan`; semantic lookup test first failed because `RelatedSection.lookup` did not exist.
+- Gate: focused interlink/detail suite passed `44/44`; `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean.

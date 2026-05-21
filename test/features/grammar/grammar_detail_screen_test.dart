@@ -10,6 +10,8 @@ import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/repositories/grammar_repository.dart';
 import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_detail_screen.dart';
+import 'package:jpstudy/features/interlink/models/interlink_graph.dart';
+import 'package:jpstudy/features/interlink/providers/interlink_graph_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ---------------------------------------------------------------------------
@@ -78,6 +80,7 @@ Widget _buildScreen({
   AppLanguage language = AppLanguage.en,
   _GrammarDetailRecord? detail,
   GrammarRepository? repo,
+  InterlinkGraph? interlinkGraph,
 }) {
   final overrides = <Override>[
     appLanguageProvider.overrideWith(
@@ -85,6 +88,8 @@ Widget _buildScreen({
     ),
     grammarDetailProvider(_kGrammarId).overrideWith((_) async => detail),
     if (repo != null) grammarRepositoryProvider.overrideWithValue(repo),
+    if (interlinkGraph != null)
+      interlinkGraphProvider.overrideWith((_) async => interlinkGraph),
   ];
 
   return ProviderScope(
@@ -268,5 +273,35 @@ void main() {
     await _pump(tester);
 
     expect(find.text('文法ポイント'), findsOneWidget);
+  });
+
+  testWidgets('renders interlink related section for grammar detail', (
+    tester,
+  ) async {
+    final graph = InterlinkGraph.fromJson(const {
+      'nodeFields': ['id', 'type', 'level', 'label', 'route'],
+      'edgeRelTypes': ['uses_vocab'],
+      'edgeEvidenceTypes': ['test'],
+      'nodes': [
+        ['grammar:n5:minna_1_1', 'grammar', 'N5', 'てもいい', '/grammar'],
+        ['vocab:n5:taberu', 'vocab', 'N5', '食べる', '/vocab'],
+      ],
+      'edges': [
+        [0, 1, 0, 1.0, 0],
+      ],
+    });
+
+    await tester.pumpWidget(
+      _buildScreen(
+        language: AppLanguage.vi,
+        detail: (point: _stubPoint, examples: const [_stubExample]),
+        interlinkGraph: graph,
+      ),
+    );
+    await _pump(tester);
+
+    expect(find.text('Liên quan'), findsOneWidget);
+    expect(find.text('Từ vựng chứa mục này'), findsOneWidget);
+    expect(find.text('食べる'), findsOneWidget);
   });
 }

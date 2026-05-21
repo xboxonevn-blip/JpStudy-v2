@@ -6,6 +6,8 @@ import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/db/content_database.dart';
+import 'package:jpstudy/features/interlink/models/interlink_graph.dart';
+import 'package:jpstudy/features/interlink/providers/interlink_graph_provider.dart';
 import 'package:jpstudy/features/vocab/providers/vocab_detail_provider.dart';
 import 'package:jpstudy/features/vocab/screens/vocab_detail_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -76,6 +78,7 @@ const _stubKanji = KanjiData(
 Widget _buildRouterScreen({
   required VocabDetail? detail,
   AppLanguage language = AppLanguage.en,
+  InterlinkGraph? interlinkGraph,
 }) {
   final router = GoRouter(
     initialLocation: '/',
@@ -98,9 +101,7 @@ Widget _buildRouterScreen({
         name: AppRouteName.grammarConjugationWord,
         builder: (context, state) => Scaffold(
           body: Center(
-            child: Text(
-              'CONJ=${state.pathParameters['contentVocabId']}',
-            ),
+            child: Text('CONJ=${state.pathParameters['contentVocabId']}'),
           ),
         ),
       ),
@@ -113,6 +114,8 @@ Widget _buildRouterScreen({
         (ref) => AppLanguageController.test(language),
       ),
       vocabDetailProvider(_kVocabId).overrideWith((_) async => detail),
+      if (interlinkGraph != null)
+        interlinkGraphProvider.overrideWith((_) async => interlinkGraph),
     ],
     child: MaterialApp.router(routerConfig: router),
   );
@@ -201,9 +204,7 @@ void main() {
     expect(find.text('KANJI_ID=$_kKanjiId'), findsOneWidget);
   });
 
-  testWidgets('renders study pack examples and collocations', (
-    tester,
-  ) async {
+  testWidgets('renders study pack examples and collocations', (tester) async {
     const detail = VocabDetail(
       vocab: _stubVocab,
       kanjiList: [_stubKanji],
@@ -261,6 +262,41 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('CONJ=$_kVocabId'), findsOneWidget);
+  });
+
+  testWidgets('renders interlink related section for vocab detail', (
+    tester,
+  ) async {
+    final graph = InterlinkGraph.fromJson(const {
+      'nodeFields': ['id', 'type', 'level', 'label', 'route'],
+      'edgeRelTypes': ['contains_kanji'],
+      'edgeEvidenceTypes': ['test'],
+      'nodes': [
+        ['vocab:n5:taberu', 'vocab', 'N5', '食べる', '/vocab'],
+        ['kanji:n5:k1', 'kanji', 'N5', '食', '/kanji/%E9%A3%9F/graph'],
+      ],
+      'edges': [
+        [0, 1, 0, 1.0, 0],
+      ],
+    });
+    const detail = VocabDetail(
+      vocab: _stubVocab,
+      kanjiList: [],
+      relatedVocab: [],
+    );
+
+    await tester.pumpWidget(
+      _buildRouterScreen(
+        detail: detail,
+        language: AppLanguage.vi,
+        interlinkGraph: graph,
+      ),
+    );
+    await _pump(tester);
+
+    expect(find.text('Liên quan'), findsOneWidget);
+    expect(find.text('Kanji trong mục này'), findsOneWidget);
+    expect(find.text('食'), findsOneWidget);
   });
 
   testWidgets('VI locale shows Vietnamese app bar title', (tester) async {

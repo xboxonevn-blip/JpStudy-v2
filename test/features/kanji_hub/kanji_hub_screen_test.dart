@@ -22,6 +22,8 @@ import 'package:jpstudy/features/kanji_hub/kanji_hub_screen.dart';
 import 'package:jpstudy/features/kanji_hub/providers/kanji_home_provider.dart';
 import 'package:jpstudy/features/foundations/models/han_viet_rule.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
+import 'package:jpstudy/features/interlink/models/interlink_graph.dart';
+import 'package:jpstudy/features/interlink/providers/interlink_graph_provider.dart';
 
 class _FakeKanjiHubLessonRepository extends LessonRepository {
   _FakeKanjiHubLessonRepository({
@@ -909,6 +911,44 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('graph route:\u5b66'), findsOneWidget);
+  });
+
+  testWidgets('kanji detail renders interlink related section', (tester) async {
+    tester.view.physicalSize = const Size(1200, 1400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await _mockRadicalsAsset();
+    final graph = InterlinkGraph.fromJson(const {
+      'nodeFields': ['id', 'type', 'level', 'label', 'route'],
+      'edgeRelTypes': ['contained_in_vocab'],
+      'edgeEvidenceTypes': ['test'],
+      'nodes': [
+        ['kanji:n5:gaku', 'kanji', 'N5', '\u5b66', '/kanji/%E5%AD%A6/graph'],
+        ['vocab:n5:gakkou', 'vocab', 'N5', '\u5b66\u6821', '/vocab'],
+      ],
+      'edges': [
+        [0, 1, 0, 1.0, 0],
+      ],
+    });
+
+    await tester.pumpWidget(
+      _buildRoutedSubject(
+        repo: _buildRepo(),
+        language: AppLanguage.vi,
+        overrides: [interlinkGraphProvider.overrideWith((ref) async => graph)],
+      ),
+    );
+    await _pumpKanjiHub(tester);
+
+    await tester.tap(find.text('\u5b66').first);
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+
+    expect(find.text('Liên quan'), findsOneWidget);
+    expect(find.text('Từ vựng chứa mục này'), findsOneWidget);
+    expect(find.text('\u5b66\u6821'), findsOneWidget);
   });
 
   testWidgets('kanji example word opens sourced conjugation practice', (

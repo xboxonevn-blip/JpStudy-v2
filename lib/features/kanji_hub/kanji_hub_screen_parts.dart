@@ -1783,6 +1783,19 @@ class _KanjiDetailDialogState extends State<_KanjiDetailDialog> {
                 label: Text(_kanjiGraphCtaLabel(widget.language)),
               ),
             ),
+            const SizedBox(height: 16),
+            SizedBox(
+              width: 520,
+              child: RelatedSection.lookup(
+                type: 'kanji',
+                level: widget.item.jlptLevel,
+                lookupId:
+                    'kanji:${widget.item.jlptLevel.toLowerCase()}:${widget.item.id}',
+                label: widget.item.character,
+                language: widget.language,
+                useFluidCard: false,
+              ),
+            ),
             if (widget.item.examples.isNotEmpty) ...[
               const SizedBox(height: 16),
               _KanjiExampleWordsPanel(

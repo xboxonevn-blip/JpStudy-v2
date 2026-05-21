@@ -23,6 +23,7 @@ import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
 import 'package:jpstudy/features/foundations/widgets/foundations_soft_suggest_gate.dart';
 import 'package:jpstudy/features/foundations/widgets/han_viet_inline_panel.dart';
+import 'package:jpstudy/features/interlink/widgets/related_section.dart';
 import 'package:jpstudy/features/kanji_hub/kanji_copy.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
 import 'package:jpstudy/features/kanji_hub/models/radical_detail_support.dart';

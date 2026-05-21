@@ -201,3 +201,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The generated graph reaches 21,643 nodes and 52,112 edges while staying about 2.4 MB raw, preserving local-first/offline behavior without a backend.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-021 - Resolve related sections by semantic label fallback
+**Phase**: 5
+**Date**: 2026-05-21 10:05 (local)
+**Context**: App detail screens often know DB numeric IDs, while the compact graph stores stable asset/semantic IDs for vocab, grammar, kanji, and conjugation nodes.
+**Options considered**: require DB ID migration first | render no related links until IDs match | resolve by exact node ID first, then type+level+label fallback
+**Chosen**: resolve by exact node ID first, then type+level+label fallback
+**Rationale**: This keeps the graph asset stable and lets every existing detail surface render live learner links now. Later DB/asset ID convergence can tighten routing without changing the widget contract.
+**Reversible**: yes
+**Owner review**: pending

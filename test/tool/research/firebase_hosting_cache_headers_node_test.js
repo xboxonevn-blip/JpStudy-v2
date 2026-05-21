@@ -20,6 +20,7 @@ function cacheControlFor(source) {
 test('Flutter web shell and content assets revalidate while stable runtime files use bounded cache', () => {
   for (const source of [
     'index.html',
+    '/',
     'flutter_service_worker.js',
     'version.json',
   ]) {
@@ -31,6 +32,8 @@ test('Flutter web shell and content assets revalidate while stable runtime files
 
   for (const source of [
     'main.dart.js',
+    'main.dart.mjs',
+    'main.dart.wasm',
     'flutter_bootstrap.js',
     'flutter.js',
     'assets/assets/data/content/**',

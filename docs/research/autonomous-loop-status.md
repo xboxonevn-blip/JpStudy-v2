@@ -1,5 +1,33 @@
 # Autonomous Loop Status
 
+# 2026-05-21 — Megaprompt Phase 7 final reverify
+
+- Re-ran Phase 7 probes after handoff and fixed two QA-tool defects: vocab samples now use level-aware Hajimete chapter routes instead of invalid numeric detail IDs, and visual regression now compares decoded pixels after waiting for route-specific content instead of comparing compressed PNG bytes or spinner baselines.
+- Fresh gates: Phase 7 probe unit suite `18/18`, random sample E2E `25/25`, visual regression `PASS` after regenerating content-ready baselines, persona flows `PASS`, Lighthouse thresholds `PASS`, `flutter analyze lib test` clean, UI string guard `0`, `npm run test:research-tooling` `105/105`, `flutter test --concurrency=1` `2459/2459`.
+- No owner-only approval tag or banned source-domain additions in the final diff; only existing legacy content still contains older tags.
+
+# 2026-05-21 — Megaprompt Phase 7 live proof + acceptance
+
+- Added Phase 7 acceptance probe tooling for random sample E2E, visual regression, persona flows, and Lighthouse threshold evaluation.
+- Random sample E2E passed `25/25` across grammar, vocab, kanji, conjugation, and reading comprehension.
+- Visual regression passed across mobile/tablet/desktop after resetting baseline for the intentional JS -> Wasm renderer switch.
+- Persona flows passed for new learner, returning learner, and power user.
+- Switched production deploy to Flutter web Wasm, deferred cloud bootstrap after first frame, added a Phase 7 Lighthouse QA seed, and added `llms.txt`.
+- Lighthouse final JSON passed thresholds: mobile `100/100/100/100`; desktop `89/100/100/100`.
+- Deployed with `node tool\deploy\hosting_deploy.js`; live headers prove `/`, `main.dart.wasm`, `main.dart.mjs`, and `flutter_bootstrap.js` cache policy is correct.
+- Live telemetry proof observed Wasm runtime, App Check monitoring/reCAPTCHA exchange, anonymous Auth, Sentry ingest, and GA4 page-view requests; App Check enforcement was not enabled.
+- Gate artifacts: `docs/research/phase7-random-sample-e2e-2026-05-21.md`, `docs/research/phase7-visual-regression-2026-05-21.md`, `docs/research/phase7-persona-flows-2026-05-21.md`, `docs/research/lighthouse-mobile-2026-05-21.json`, `docs/research/lighthouse-desktop-2026-05-21.json`, `docs/research/phase7-live-verify-2026-05-21.md`.
+
+# 2026-05-21 — Megaprompt Overhaul COMPLETE
+
+- All 8 phases done (see per-phase entries above).
+- Acceptance gate: all checkboxes green.
+- Live verified: https://jpstudy.web.app
+- Owner review pending.
+- DECISIONS_MADE: 31 entries.
+- OPEN_QUESTIONS: 10 entries (pending owner review).
+- Rollback safe: migrations have dual-read/static fallback; deploy remains a conventional Firebase Hosting release.
+
 # 2026-05-21 — Megaprompt Phase 3 lesson page redesign batch 3
 
 - Added flashcard progress, content/context toggle, direction toggle, and visible shortcut hints to the lesson workspace.

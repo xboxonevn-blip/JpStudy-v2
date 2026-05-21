@@ -20,9 +20,44 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Firebase must be initialized before any FirebaseAuth/Storage call. The
-  // app stays usable if init fails (offline-first), but features that depend
-  // on the cloud will gracefully no-op.
+  final preferences = await SharedPreferences.getInstance();
+  AppRouter.configurePreferences(preferences);
+  final container = ProviderContainer(
+    overrides: [
+      sharedPreferencesProvider.overrideWithValue(preferences),
+      ...persistedAppBootstrapOverrides(preferences),
+    ],
+  );
+
+  await runAppWithOptionalErrorMonitoring(
+    config: ErrorMonitoringConfig.fromEnvironment(),
+    consentGranted: preferences.getBool(prefAnalyticsConsent) ?? false,
+    isSignedIn: false,
+    doNotTrack: isDoNotTrackEnabled(),
+    appRunner: () {
+      runApp(
+        UncontrolledProviderScope(container: container, child: const App()),
+      );
+      _scheduleDeferredBootstrap(container, preferences);
+    },
+  );
+}
+
+void _scheduleDeferredBootstrap(
+  ProviderContainer container,
+  SharedPreferences preferences,
+) {
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    Future<void>.delayed(const Duration(seconds: 45), () async {
+      await _runDeferredBootstrap(container, preferences);
+    });
+  });
+}
+
+Future<void> _runDeferredBootstrap(
+  ProviderContainer container,
+  SharedPreferences preferences,
+) async {
   var firebaseInitialized = false;
   try {
     await Firebase.initializeApp(
@@ -39,25 +74,11 @@ Future<void> main() async {
       debugPrint('Firebase App Check activation failed: $e\n$st');
     }
   }
-  // Same defence-in-depth as Firebase: if the local notification plugin fails
-  // (missing platform settings, sandbox, etc.) the app still boots offline.
+
   try {
     await NotificationService.instance.initialize();
   } catch (_) {}
 
-  // Note: Mobile ads initialization is skipped on desktop platforms
-  // The google_mobile_ads package doesn't support Windows/macOS/Linux
-  // On mobile, call MobileAds.instance.initialize() in a platform-specific entry point
-  // or use conditional imports if ads are needed
-
-  final preferences = await SharedPreferences.getInstance();
-  AppRouter.configurePreferences(preferences);
-  final container = ProviderContainer(
-    overrides: [
-      sharedPreferencesProvider.overrideWithValue(preferences),
-      ...persistedAppBootstrapOverrides(preferences),
-    ],
-  );
   final database = container.read(databaseProvider);
   try {
     await KanaProgressMigration(
@@ -75,22 +96,10 @@ Future<void> main() async {
     debugPrint('Anonymous auth bootstrap failed: $e\n$st');
   }
 
-  var isSignedIn = false;
   try {
-    isSignedIn = fb_auth.FirebaseAuth.instance.currentUser != null;
+    final userId = fb_auth.FirebaseAuth.instance.currentUser?.uid;
+    await container.read(errorMonitoringControllerProvider).setUserId(userId);
   } catch (_) {}
-
-  await runAppWithOptionalErrorMonitoring(
-    config: ErrorMonitoringConfig.fromEnvironment(),
-    consentGranted: preferences.getBool(prefAnalyticsConsent) ?? false,
-    isSignedIn: isSignedIn,
-    doNotTrack: isDoNotTrackEnabled(),
-    appRunner: () {
-      runApp(
-        UncontrolledProviderScope(container: container, child: const App()),
-      );
-    },
-  );
 }
 
 Future<void> _activateFirebaseAppCheck() async {

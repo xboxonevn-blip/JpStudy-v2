@@ -16,6 +16,24 @@ test('Firebase preload includes the App Check web SDK module', () => {
   assert.match(preload, /window\.firebase_app_check\s*=\s*firebaseAppCheck/);
 });
 
+test('preload seeds Phase 7 Lighthouse prefs before Flutter bootstrap', () => {
+  const preload = fs.readFileSync(
+    path.join(repoRoot, 'web', 'preload.js'),
+    'utf8',
+  );
+
+  assert.match(preload, /jpstudy_qa/);
+  assert.match(preload, /phase7_lighthouse/);
+  assert.match(preload, /flutter\.onboarding\.completed/);
+  assert.match(preload, /scheduleFirebaseSdkPreload/);
+  assert.match(preload, /setTimeout\(run, 30000\)/);
+  assert.ok(
+    preload.indexOf('loadFlutterBootstrap();') <
+      preload.indexOf('scheduleFirebaseSdkPreload();'),
+    'Flutter bootstrap should not wait for Firebase SDK preload',
+  );
+});
+
 test('Firebase Hosting CSP allows reCAPTCHA scripts for App Check', () => {
   const firebaseConfig = fs.readFileSync(
     path.join(repoRoot, 'firebase.json'),
@@ -71,6 +89,7 @@ test('hosting deploy helper requires App Check key and injects deploy dart-defin
     'web',
     '--release',
     '--base-href=/',
+    '--wasm',
     '--dart-define=JPSTUDY_RECAPTCHA_SITE_KEY=site-key',
     '--dart-define=JPSTUDY_SENTRY_DSN=dsn',
     '--dart-define=JPSTUDY_SENTRY_ENVIRONMENT=production',
@@ -143,4 +162,16 @@ test('main warns instead of silently skipping missing web App Check key', () => 
   assert.match(source, /App Check disabled: JPSTUDY_RECAPTCHA_SITE_KEY/);
   assert.match(source, /Firebase App Check activation failed:/);
   assert.doesNotMatch(source, /if \(siteKey\.isEmpty\) return;/);
+});
+
+test('main renders app before deferred Firebase and App Check bootstrap', () => {
+  const source = fs.readFileSync(path.join(repoRoot, 'lib', 'main.dart'), 'utf8');
+
+  assert.match(source, /_scheduleDeferredBootstrap\(container, preferences\)/);
+  assert.match(source, /addPostFrameCallback/);
+  assert.match(source, /Duration\(seconds: 45\)/);
+  assert.ok(
+    source.indexOf('runApp(') < source.indexOf('_runDeferredBootstrap'),
+    'runApp should be reachable before deferred cloud bootstrap starts',
+  );
 });

@@ -32,6 +32,7 @@ function buildPlan({ env = process.env } = {}) {
     'web',
     '--release',
     '--base-href=/',
+    '--wasm',
     `--dart-define=JPSTUDY_RECAPTCHA_SITE_KEY=${siteKey}`,
   ];
 

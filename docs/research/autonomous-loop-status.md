@@ -1951,3 +1951,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: vehicles use `Nで`; walking uses `歩いて`. Add `へ`
   separately only when naming the destination.
+
+## 2026-05-22 Phase G Tier-1 item 027
+
+- Re-authored `grammar:n5:grammar_n5_5:005` (`N(人/動物) と V`) with companion
+  `と` logic and contrast against noun-list `と` plus means `で`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `友達と行きます` means doing the action with a person;
+  `本とノート` is only a noun list.

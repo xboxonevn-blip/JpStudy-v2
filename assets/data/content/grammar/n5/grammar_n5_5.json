@@ -190,10 +190,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N (người/động vật) と V",
-      "meaning": "Ý nghĩa: `と` chỉ người hoặc con vật cùng thực hiện hành động với mình.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "と trong cấu trúc N(người/động vật) と V là trợ từ đồng hành: N là người hoặc con vật cùng tham gia hành động. Đây là nhánh khác với と nối danh từ trong 本とノート; ở đây と gắn người bạn đồng hành vào động từ.",
+      "hanVietBridge": "Nhớ bằng Hán-Việt 'đồng hành': 友達と行きます là đi cùng bạn. Nếu không có ai đi cùng, tiếng Nhật dùng 一人で, nghĩa là một mình, không dùng と.",
+      "form": "Hình thức: N(người/động vật) と + V. N đứng trước と là bạn đồng hành hoặc đối tượng cùng làm hành động.",
+      "meaning": "Ý nghĩa: làm gì cùng ai/con gì: đi với bạn, ăn với mẹ, chơi với chó...",
+      "usage": "Sử dụng: 友達と行きます, 母と食べます, 犬と遊びます. Dùng với người/động vật có thể cùng tham gia; đồ vật/phương tiện thường dùng で.",
+      "humanMoment": "Dr. Linh lưu ý: N(人/動物) と V là 'cùng ai làm gì', khác N1 と N2 chỉ liệt kê danh từ. 友達と行きます có hành động đi với bạn; 本とノート chỉ là sách và vở.",
+      "crossLinks": [
+        {
+          "pattern": "N1 と N2",
+          "contrast": "khác chức năng: N1 と N2 liệt kê danh từ, còn N(người/động vật) と V gắn bạn đồng hành vào hành động."
+        },
+        {
+          "pattern": "N( phương tiện ) で 行きます",
+          "contrast": "khác vai trò: で chỉ phương tiện, còn と chỉ người/động vật cùng làm hành động."
+        },
+        {
+          "pattern": "一人で",
+          "contrast": "khác ý nghĩa: 一人で nghĩa là một mình, nên không dùng と vì không có bạn đồng hành."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

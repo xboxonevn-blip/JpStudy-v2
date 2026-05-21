@@ -2768,6 +2768,217 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-form-l1-001",
+      "template_id": "tpl-grammar-n5-014-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn từ lịch sự chỉ 'phía này/vị này': ___ は受付です。",
+      "answer_template": "こちら",
+      "options_template": [
+        "こちら",
+        "ここ",
+        "これ",
+        "この"
+      ],
+      "distractor_strategy": "polite-direction-vs-place-object-adnominal",
+      "teaching_note": "こちら lịch sự hơn ここ và có thể chỉ phía/nơi/người.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-form-l1-002",
+      "template_id": "tpl-grammar-n5-014-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu こちら/そちら/あちら は N です?",
+      "answer_template": "こちらは会議室です。",
+      "options_template": [
+        "こちらは会議室です。",
+        "こちら会議室ですか。",
+        "このは会議室です。",
+        "これ会議室です。"
+      ],
+      "distractor_strategy": "polite-direction-topic-form",
+      "teaching_note": "Dùng こちら + は + N + です để giới thiệu phía/nơi lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-014-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "こちらは田中さんです nghĩa tự nhiên trong giới thiệu lịch sự là gì?",
+      "answer_template": "Đây là anh/chị Tanaka.",
+      "options_template": [
+        "Đây là anh/chị Tanaka.",
+        "Chỗ này là anh/chị Tanaka.",
+        "Cái này là anh/chị Tanaka.",
+        "Anh/chị Tanaka ở đâu?"
+      ],
+      "distractor_strategy": "polite-person-reference-vs-place-object-question",
+      "teaching_note": "こちら có thể chỉ người một cách lịch sự, không chỉ địa điểm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-014-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "こちら/そちら/あちら khác ここ/そこ/あそこ ở điểm nào?",
+      "answer_template": "Lịch sự hơn, có thể chỉ hướng/phía, địa điểm hoặc người.",
+      "distractor_strategy": "polite-range-recall",
+      "teaching_note": "Đừng dịch cứng thành 'chỗ'; hãy xét ngữ cảnh hướng, nơi, hay người.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-usage-l3-005",
+      "template_id": "tpl-grammar-n5-014-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói lịch sự 'Phía này là quầy tiếp tân': こちらは / 受付です",
+      "answer_template": "こちらは受付です。",
+      "options_template": [
+        "こちらは",
+        "受付です"
+      ],
+      "distractor_strategy": "polite-place-topic-order",
+      "teaching_note": "Trong dịch vụ, こちら làm câu nghe lịch sự và định hướng hơn ここ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-usage-l3-006",
+      "template_id": "tpl-grammar-n5-014-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Giới thiệu lịch sự người bên cạnh bạn: 'Đây là cô Suzuki.'",
+      "answer_template": "こちらは鈴木さんです。",
+      "distractor_strategy": "polite-person-introduction",
+      "teaching_note": "Khi giới thiệu người, こちら tương đương 'vị này/đây là' lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-context-l3-007",
+      "template_id": "tpl-grammar-n5-014-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Nhân viên khách sạn chỉ thang máy ở phía xa và nói lịch sự 'Phía kia là thang máy'. Viết câu.",
+      "answer_template": "あちらはエレベーターです。",
+      "distractor_strategy": "polite-far-direction-context",
+      "teaching_note": "Phía xa trong lời nói lịch sự dùng あちら.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-context-l2-008",
+      "template_id": "tpl-grammar-n5-014-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với こちら/そちら/あちら は N です?",
+      "answer_template": "Lễ tân chỉ đường hoặc giới thiệu một người cho khách.",
+      "options_template": [
+        "Lễ tân chỉ đường hoặc giới thiệu một người cho khách.",
+        "Bạn chỉ một cây bút trên bàn.",
+        "Bạn hỏi một vật là gì.",
+        "Bạn nói 'sách của tôi'."
+      ],
+      "distractor_strategy": "polite-service-context-vs-object-wh-possession",
+      "teaching_note": "Bộ こちら/そちら/あちら thường xuất hiện khi cần lịch sự hoặc định hướng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-014-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: nhân viên tiếp khách cần nói lịch sự 'Phía này là phòng họp'. Câu nào hợp nhất?",
+      "answer_template": "こちらは会議室です。",
+      "options_template": [
+        "こちらは会議室です。",
+        "ここは会議室です。",
+        "これは会議室です。",
+        "この会議室です。"
+      ],
+      "distractor_strategy": "polite-direction-vs-basic-place-object-analysis",
+      "teaching_note": "L4: ここ đúng về địa điểm nhưng kém lịch sự/định hướng hơn こちら trong bối cảnh tiếp khách.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-014-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-014-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn giới thiệu người đứng cạnh mình với khách: 'Đây là anh Yamada.' Câu nào tránh nhầm người thành đồ vật/nơi?",
+      "answer_template": "こちらは山田さんです。",
+      "options_template": [
+        "こちらは山田さんです。",
+        "ここは山田さんです。",
+        "これは山田さんです。",
+        "この山田さんです。"
+      ],
+      "distractor_strategy": "polite-person-vs-place-object-analysis",
+      "teaching_note": "こちら có thể chỉ người lịch sự; ここ là nơi, これ là vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

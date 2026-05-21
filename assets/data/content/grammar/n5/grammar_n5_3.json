@@ -58,10 +58,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: こちら / そちら / あちら は N (địa điểm / người) です",
-      "meaning": "Ý nghĩa: Các từ này lịch sự hơn `ここ・そこ・あそこ`.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "こちら・そちら・あちら có cấu trúc từ gốc ko-so-a cộng phần ちら mang sắc thái 'phía/bên'. Vì vậy chúng mở rộng từ chỉ chỗ thành chỉ hướng, địa điểm hoặc người, đồng thời lịch sự hơn ここ・そこ・あそこ trong giao tiếp dịch vụ.",
+      "hanVietBridge": "Nhớ bằng Hán-Việt 'phương' và 'vị': こちら là 'phía/vị này', そちら là 'phía/vị đó', あちら là 'phía/vị kia'. Khi giới thiệu người, dịch mềm thành 'vị này/vị đó', không ép thành 'chỗ này'.",
+      "form": "Hình thức: こちら/そちら/あちら は N です. N có thể là địa điểm, hướng, hoặc người; chọn từ theo khoảng cách và mức lịch sự.",
+      "meaning": "Ý nghĩa: 'phía này/phía đó/phía kia là N' hoặc 'vị này/vị đó/vị kia là N'. Đây là bản lịch sự và rộng nghĩa hơn ここ/そこ/あそこ.",
+      "usage": "Sử dụng: dùng trong lễ tân, chỉ đường, giới thiệu người: こちらは受付です, そちらは会議室です, こちらは田中さんです. Với bạn bè thân mật, ここ/そこ/あそこ thường đủ.",
+      "humanMoment": "Dr. Linh lưu ý: こちら/そちら/あちら は N です không chỉ là 'chỗ này'. Khác ここ/そこ/あそこ, こちら có thể lịch sự đưa tay về một hướng hoặc giới thiệu một người: こちらは田中さんです.",
+      "crossLinks": [
+        {
+          "pattern": "ここ/そこ/あそこ は N です",
+          "contrast": "khác sắc thái và phạm vi: ここ/そこ/あそこ chỉ địa điểm cơ bản, còn こちら/そちら/あちら lịch sự hơn và có thể chỉ hướng/người."
+        },
+        {
+          "pattern": "これ/それ/あれ は N です",
+          "contrast": "khác đối tượng: これ/それ/あれ chỉ vật, trong khi こちら/そちら/あちら có thể chỉ phía, nơi hoặc người."
+        },
+        {
+          "pattern": "N は どこ/どちら ですか",
+          "contrast": "khác chiều hỏi-đáp: どちら hỏi 'ở/phía nào', còn こちら/そちら/あちら là câu trả lời hoặc chỉ định phía cụ thể."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

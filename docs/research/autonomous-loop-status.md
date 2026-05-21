@@ -1834,3 +1834,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `ここ/そこ/あそこ` points to places, not objects.
   Use `ここは教室です` for "this place is a classroom"; use `これは...` for things.
+
+## 2026-05-22 Phase G Tier-1 item 014
+
+- Re-authored `grammar:n5:grammar_n5_3:002` (`こちら/そちら/あちら は N です`)
+  with polite direction/place/person usage and contrasts against `ここ`/`これ`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `こちら` can mean "this way/place/person" politely.
+  Use it at reception or when introducing people; do not reduce it to `ここ`.

@@ -25,6 +25,7 @@ function validateExerciseCoverageManifest(manifest) {
   const items = rawItems.map((item) => normalizeCoverageItem(item, manifest));
   if (items.length === 0) failures.push('exercise coverage manifest is empty');
   const seen = new Set();
+  const globalExerciseTypes = new Set();
   for (const item of items) {
     if (!item.item_id) failures.push('coverage item missing id');
     if (seen.has(item.item_id)) failures.push(`duplicate coverage item: ${item.item_id}`);
@@ -38,6 +39,21 @@ function validateExerciseCoverageManifest(manifest) {
     }
     if ((item.exercise_types || []).length === 0) {
       failures.push(`missing exercise types: ${item.item_id}`);
+    }
+    for (const exerciseType of item.exercise_types || []) {
+      globalExerciseTypes.add(exerciseType);
+    }
+  }
+  for (const exerciseType of [
+    'recognition',
+    'production',
+    'recall',
+    'readingComp',
+    'listening',
+    'conjugationDrill',
+  ]) {
+    if (!globalExerciseTypes.has(exerciseType)) {
+      failures.push(`missing exercise type ${exerciseType}`);
     }
   }
   return {

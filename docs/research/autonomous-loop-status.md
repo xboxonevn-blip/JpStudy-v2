@@ -1396,3 +1396,9 @@
 - Extended `tool/research/generate_exercises.js` and `tool/qa/validate_exercises.js` so Phase 4 validation proves every manifest item has `>=50` exercises, Bloom L1-L4, and at least one supported exercise type without materializing the full question payload in the web bundle.
 - Added compact-manifest guard in `test/tool/research/exercise_assets_test.js`; kept generated proof asset about `1.6 MB` raw instead of about `10 MB`.
 - Verified: `node --test test\tool\research\exercise_assets_test.js`, `node tool\qa\validate_exercises.js`, `npm run test:research-tooling -- --runInBand`, `flutter test test\features\exercise\exercise_bank_test.dart`, `flutter analyze lib test`, UI string guard `0`, and `git diff --check`.
+
+## 2026-05-21 Megaprompt Phase 4 Exercise Engine Batch 5
+
+- Added deterministic Phase 4 sample-review tooling and report at `docs/reports/phase4-exercise-distractor-sample-review-2026-05-21.md`: 20 samples across reading, phonetic traps, kanji lookalikes, and exercise coverage all passed.
+- Tightened the kanji lookalike corpus after the first sample surfaced weak stroke-only pairs; regenerated lookalikes from `2113` broad candidates down to `558` stronger known/shared-component distractor targets.
+- Extended the exercise validator so the coverage manifest must prove all six Phase 4 exercise types globally: recognition, production, recall, readingComp, listening, and conjugationDrill.

@@ -64,6 +64,15 @@ test('buildKanjiLookalikeCorpus includes known visual pairs', () => {
   assert.equal(corpus.lookalikes['湿'].every((item) => item.character !== '湿'), true);
 });
 
+test('buildKanjiLookalikeCorpus rejects stroke-only weak pairs', () => {
+  const corpus = buildKanjiLookalikeCorpus([
+    kanji('radical', 'N5', '刂', 2, []),
+    kanji('plain', 'N5', '丁', 2, []),
+  ]);
+
+  assert.equal(corpus.lookalikes['刂'], undefined);
+});
+
 test('validatePhase4Assets accepts generated reading and distractor corpora', () => {
   const readingPassages = buildReadingPassages({
     levels: ['N5', 'N4', 'N3', 'N2', 'N1'],
@@ -128,6 +137,20 @@ test('buildExerciseCoverageManifest uses compact entries for bundle size', () =>
     JSON.stringify(manifest).length < 1400,
     true,
   );
+});
+
+test('validateExerciseCoverageManifest requires all six exercise types globally', () => {
+  const report = validateExerciseCoverageManifest({
+    minimumExerciseCount: 50,
+    bloomLevels: ['L1', 'L2', 'L3', 'L4'],
+    typeExerciseTypes: {
+      grammar: ['recognition'],
+    },
+    items: [['grammar', 'N5', 'grammar:n5:1']],
+  });
+
+  assert.equal(report.passed, false);
+  assert.match(report.failures.join('\n'), /missing exercise type listening/);
 });
 
 function vocab(vocabId, level, term, reading) {

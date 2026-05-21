@@ -176,8 +176,8 @@ function buildKanjiLookalikeCorpus(kanjiEntries, { generatedAt = new Date().toIS
       if (candidate.character === entry.character) continue;
       const overlap = componentOverlap(entry.components, candidate.components);
       const strokeGap = Math.abs(entry.strokeCount - candidate.strokeCount);
-      if (overlap === 0 && strokeGap > 1) continue;
-      candidates.push(toLookalike(candidate, overlap > 0 ? 'shared_components' : 'stroke_neighbor', strokeGap - overlap));
+      if (overlap === 0) continue;
+      candidates.push(toLookalike(candidate, 'shared_components', strokeGap - overlap));
     }
     const deduped = dedupeBy(candidates, (item) => item.character)
       .sort((a, b) => a.score - b.score || a.character.localeCompare(b.character))

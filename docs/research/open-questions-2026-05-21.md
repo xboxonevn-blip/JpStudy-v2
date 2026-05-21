@@ -57,3 +57,10 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Blocking**: no
 **Default action taken**: Shipped original JpStudy reading passages with level-length validation and 3-question sets per passage; mark owner review pending for pedagogical nuance, not copyright clearance.
 **Owner answer**: pending
+
+## OQ-009 - Full KANJIVG diff for upper-level lookalikes
+**Phase**: 4
+**Date**: 2026-05-21 09:12
+**Blocking**: no
+**Default action taken**: Used bundled kanji decomposition plus known visual pairs, rejected stroke-only pairs, and kept the report owner-reviewable. A later quality pass can import full KANJIVG vectors for N3-N1 if owner wants pixel-distance lookalike ranking.
+**Owner answer**: pending

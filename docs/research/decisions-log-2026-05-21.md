@@ -181,3 +181,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The compact manifest validates 21,563 items while keeping the new asset about 1.6 MB raw instead of about 10 MB. Dynamic generators remain deterministic and validator-backed.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-019 - Reject stroke-only kanji distractor pairs
+**Phase**: 4
+**Date**: 2026-05-21 09:12 (local)
+**Context**: The first deterministic sample review exposed weak kanji distractors such as radical/stroke-neighbor pairs that were technically distinct but not useful visual traps.
+**Options considered**: keep broad stroke-neighbor corpus | manually whitelist every pair | require known visual pairs or shared component evidence
+**Chosen**: require known visual pairs or shared component evidence
+**Rationale**: This lowers corpus size but removes weak distractors, matching Directive F's anti-trivial quality bar better than maximizing coverage count.
+**Reversible**: yes
+**Owner review**: pending

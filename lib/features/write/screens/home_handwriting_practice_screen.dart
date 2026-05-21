@@ -12,6 +12,7 @@ import 'package:jpstudy/data/models/kanji_item.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import 'handwriting_practice_screen.dart';
 
@@ -497,23 +498,12 @@ class _SessionHeader extends ConsumerWidget {
           ),
           if (onFreePractice != null &&
               source != _HandwritingSessionSource.free)
-            TextButton(
+            AppButton(
               key: const ValueKey('handwriting_free_practice_cta'),
+              label: language.handwritingFreePracticeLabel,
+              variant: AppButtonVariant.ghost,
+              compact: true,
               onPressed: onFreePractice,
-              style: TextButton.styleFrom(
-                foregroundColor: palette.ink,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.sm,
-                  vertical: AppSpacing.xs,
-                ),
-                minimumSize: const Size(
-                  AppTouchTargets.min,
-                  AppTouchTargets.min,
-                ),
-                tapTargetSize: MaterialTapTargetSize.padded,
-                textStyle: const TextStyle(fontSize: 12),
-              ),
-              child: Text(language.handwritingFreePracticeLabel),
             ),
         ],
       ),
@@ -558,10 +548,10 @@ class _AllCaughtUpScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: AppSpacing.lg),
-              FilledButton.icon(
+              AppButton(
+                label: language.handwritingFreePracticeLabel,
+                icon: Icons.shuffle_rounded,
                 onPressed: onFreePractice,
-                icon: const Icon(Icons.shuffle_rounded),
-                label: Text(language.handwritingFreePracticeLabel),
               ),
             ],
           ),

@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/accessibility/reduced_motion.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import 'package:path_drawing/path_drawing.dart';
 
 import '../../../core/app_language.dart';
@@ -331,13 +332,14 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
                     children: [
                       Tooltip(
                         message: animationButtonLabel,
-                        child: FilledButton.tonal(
+                        child: AppButton(
+                          label: animationButtonLabel,
+                          icon: _isPlaying
+                              ? Icons.pause_rounded
+                              : Icons.play_arrow_rounded,
+                          compact: true,
+                          variant: AppButtonVariant.secondary,
                           onPressed: _playOrPause,
-                          child: Icon(
-                            _isPlaying
-                                ? Icons.pause_rounded
-                                : Icons.play_arrow_rounded,
-                          ),
                         ),
                       ),
                       IconButton.outlined(
@@ -370,12 +372,13 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
 
             return Row(
               children: [
-                FilledButton.tonalIcon(
+                AppButton(
+                  label: animationButtonLabel,
+                  icon: _isPlaying
+                      ? Icons.pause_rounded
+                      : Icons.play_arrow_rounded,
+                  variant: AppButtonVariant.secondary,
                   onPressed: _playOrPause,
-                  icon: Icon(
-                    _isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
-                  ),
-                  label: Text(animationButtonLabel),
                 ),
                 const SizedBox(width: 8),
                 IconButton.outlined(
@@ -413,20 +416,20 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
         const SizedBox(height: 8),
         Align(
           alignment: Alignment.centerLeft,
-          child: TextButton.icon(
+          child: AppButton(
+            label: _showAdvancedOptions
+                ? widget.language.handwritingHideAdvancedOptionsLabel
+                : widget.language.handwritingAdvancedOptionsLabel,
+            icon: _showAdvancedOptions
+                ? Icons.tune_rounded
+                : Icons.tune_outlined,
+            variant: AppButtonVariant.ghost,
+            compact: true,
             onPressed: () {
               setState(() {
                 _showAdvancedOptions = !_showAdvancedOptions;
               });
             },
-            icon: Icon(
-              _showAdvancedOptions ? Icons.tune_rounded : Icons.tune_outlined,
-            ),
-            label: Text(
-              _showAdvancedOptions
-                  ? widget.language.handwritingHideAdvancedOptionsLabel
-                  : widget.language.handwritingAdvancedOptionsLabel,
-            ),
           ),
         ),
         if (_showAdvancedOptions)
@@ -444,33 +447,50 @@ class _KanjiStrokeAnimatorState extends State<KanjiStrokeAnimator>
                 ),
               ),
               for (final speed in _speedOptions)
-                ChoiceChip(
-                  label: Text(_speedLabel(speed)),
-                  selected: _speedMultiplier == speed,
-                  onSelected: (_) => _setSpeed(speed),
+                AppButton(
+                  label: _speedLabel(speed),
+                  compact: true,
+                  variant: _speedMultiplier == speed
+                      ? AppButtonVariant.primary
+                      : AppButtonVariant.secondary,
+                  onPressed: () => _setSpeed(speed),
                 ),
-              FilterChip(
-                label: Text(widget.language.handwritingShowNumbersLabel),
-                selected: _showStrokeNumbers,
-                onSelected: (value) {
+              AppButton(
+                label: widget.language.handwritingShowNumbersLabel,
+                icon: _showStrokeNumbers
+                    ? Icons.check_circle_rounded
+                    : Icons.radio_button_unchecked_rounded,
+                compact: true,
+                variant: _showStrokeNumbers
+                    ? AppButtonVariant.primary
+                    : AppButtonVariant.secondary,
+                onPressed: () {
                   setState(() {
-                    _showStrokeNumbers = value;
+                    _showStrokeNumbers = !_showStrokeNumbers;
                   });
                 },
               ),
-              FilterChip(
-                label: Text(widget.language.handwritingHighlightRadicalLabel),
-                selected: _highlightRadical,
-                onSelected: _hasRadicalData
-                    ? (value) {
-                        setState(() {
-                          _highlightRadical = value;
-                        });
-                      }
-                    : null,
-                tooltip: _hasRadicalData
+              Tooltip(
+                message: _hasRadicalData
                     ? widget.language.handwritingHighlightRadicalLabel
                     : widget.language.handwritingNoRadicalDataLabel,
+                child: AppButton(
+                  label: widget.language.handwritingHighlightRadicalLabel,
+                  icon: _highlightRadical
+                      ? Icons.check_circle_rounded
+                      : Icons.radio_button_unchecked_rounded,
+                  compact: true,
+                  variant: _highlightRadical
+                      ? AppButtonVariant.primary
+                      : AppButtonVariant.secondary,
+                  onPressed: _hasRadicalData
+                      ? () {
+                          setState(() {
+                            _highlightRadical = !_highlightRadical;
+                          });
+                        }
+                      : null,
+                ),
               ),
             ],
           ),

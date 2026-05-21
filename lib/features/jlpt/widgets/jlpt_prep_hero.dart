@@ -6,6 +6,7 @@ import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/jlpt/models/jlpt_coach_models.dart';
 import 'package:jpstudy/features/jlpt/widgets/jlpt_coach_shared.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class JlptPrepHero extends StatelessWidget {
   const JlptPrepHero({
@@ -178,25 +179,16 @@ class JlptPrepHero extends StatelessWidget {
                       spacing: AppSpacing.sm,
                       runSpacing: AppSpacing.sm,
                       children: [
-                        FilledButton.icon(
+                        AppButton(
+                          label: _startFullMockLabel(language),
+                          icon: Icons.play_arrow_rounded,
                           onPressed: onPrimaryTap,
-                          style: FilledButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            foregroundColor: palette.primary,
-                          ),
-                          icon: const Icon(Icons.play_arrow_rounded),
-                          label: Text(_startFullMockLabel(language)),
                         ),
-                        OutlinedButton.icon(
+                        AppButton(
+                          label: _startReadingLabel(language),
+                          icon: Icons.menu_book_rounded,
+                          variant: AppButtonVariant.secondary,
                           onPressed: onSecondaryTap,
-                          style: OutlinedButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            side: BorderSide(
-                              color: Colors.white.withValues(alpha: 0.28),
-                            ),
-                          ),
-                          icon: const Icon(Icons.menu_book_rounded),
-                          label: Text(_startReadingLabel(language)),
                         ),
                       ],
                     ),

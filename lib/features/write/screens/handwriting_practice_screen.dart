@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jpstudy/app/navigation/app_navigation_extensions.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../app/theme/app_spacing.dart';
@@ -439,21 +440,19 @@ class _HandwritingPracticeScreenState
     AppLanguage language,
     _ProgressStats progressStats,
   ) {
-    final palette = context.appPalette;
     final completedTargetCount = _checked ? (_currentIndex + 1) : _currentIndex;
     final remaining = max(0, _targets.length - completedTargetCount);
-    final weakButton = FilledButton.tonalIcon(
-      style: FilledButton.styleFrom(
-        backgroundColor: palette.accent.withValues(alpha: 0.12),
-        foregroundColor: palette.accent,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      ),
+    final weakButton = AppButton(
+      label: language.handwritingPracticeWeakSetLabel(10),
+      icon: Icons.fitness_center_rounded,
+      variant: AppButtonVariant.secondary,
+      compact: true,
       onPressed: progressStats.weakItems <= 0
           ? null
           : () => _practiceWeakItems(limit: 10),
-      icon: const Icon(Icons.fitness_center_rounded, size: 18),
-      label: Text(language.handwritingPracticeWeakSetLabel(10)),
     );
+
+    final palette = context.appPalette;
 
     return Container(
       padding: const EdgeInsets.all(AppSpacing.md),
@@ -889,34 +888,34 @@ class _HandwritingPracticeScreenState
           runSpacing: AppSpacing.sm,
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
-            FilledButton.tonalIcon(
+            AppButton(
+              label: language.handwritingShowGuideLabel,
+              icon: _showGuide
+                  ? Icons.visibility_rounded
+                  : Icons.visibility_off_rounded,
+              variant: _showGuide
+                  ? AppButtonVariant.primary
+                  : AppButtonVariant.secondary,
+              compact: true,
               onPressed: () {
                 setState(() {
                   _showGuide = !_showGuide;
                 });
               },
-              style: FilledButton.styleFrom(
-                backgroundColor: _showGuide
-                    ? palette.secondary.withValues(alpha: 0.14)
-                    : palette.elevated,
-                foregroundColor: _showGuide ? palette.secondary : palette.ink,
-              ),
-              icon: Icon(
-                _showGuide
-                    ? Icons.visibility_rounded
-                    : Icons.visibility_off_rounded,
-              ),
-              label: Text(language.handwritingShowGuideLabel),
             ),
-            OutlinedButton.icon(
+            AppButton(
+              label: language.handwritingUndoLabel,
+              icon: Icons.undo_rounded,
+              variant: AppButtonVariant.secondary,
+              compact: true,
               onPressed: _strokes.isEmpty ? null : _undoStroke,
-              icon: const Icon(Icons.undo_rounded),
-              label: Text(language.handwritingUndoLabel),
             ),
-            OutlinedButton.icon(
+            AppButton(
+              label: language.handwritingClearLabel,
+              icon: Icons.delete_outline_rounded,
+              variant: AppButtonVariant.secondary,
+              compact: true,
               onPressed: _strokes.isEmpty ? null : _clearCanvas,
-              icon: const Icon(Icons.delete_outline_rounded),
-              label: Text(language.handwritingClearLabel),
             ),
           ],
         ),
@@ -1009,13 +1008,15 @@ class _HandwritingPracticeScreenState
           ],
           if (!_showScoringDetails) ...[
             const SizedBox(height: AppSpacing.sm),
-            TextButton(
+            AppButton(
+              label: language.handwritingShowScoringDetailsLabel,
+              variant: AppButtonVariant.ghost,
+              compact: true,
               onPressed: () {
                 setState(() {
                   _showScoringDetails = true;
                 });
               },
-              child: Text(language.handwritingShowScoringDetailsLabel),
             ),
           ] else ...[
             const SizedBox(height: AppSpacing.sm),
@@ -1037,13 +1038,15 @@ class _HandwritingPracticeScreenState
             ),
             Align(
               alignment: Alignment.centerLeft,
-              child: TextButton(
+              child: AppButton(
+                label: language.handwritingHideScoringDetailsLabel,
+                variant: AppButtonVariant.ghost,
+                compact: true,
                 onPressed: () {
                   setState(() {
                     _showScoringDetails = false;
                   });
                 },
-                child: Text(language.handwritingHideScoringDetailsLabel),
               ),
             ),
           ],
@@ -1059,12 +1062,14 @@ class _HandwritingPracticeScreenState
               ),
             ),
             const SizedBox(height: AppSpacing.xs + 2),
-            FilledButton.tonalIcon(
+            AppButton(
+              label: language.handwritingRetryWrongCharactersLabel,
+              icon: Icons.refresh_rounded,
+              variant: AppButtonVariant.secondary,
+              compact: true,
               onPressed: () {
                 _practiceWrongCharacters(retryableIds);
               },
-              icon: const Icon(Icons.refresh_rounded),
-              label: Text(language.handwritingRetryWrongCharactersLabel),
             ),
           ],
         ],
@@ -1073,22 +1078,14 @@ class _HandwritingPracticeScreenState
   }
 
   Widget _buildActionButtons(AppLanguage language) {
-    final palette = context.appPalette;
     if (!_checked) {
       return SizedBox(
         width: double.infinity,
         height: 52,
-        child: FilledButton.icon(
+        child: AppButton(
+          label: language.handwritingCheckLabel,
+          icon: Icons.check_circle_outline,
           onPressed: _strokes.isEmpty ? null : _checkAnswer,
-          icon: const Icon(Icons.check_circle_outline),
-          label: Text(language.handwritingCheckLabel),
-          style: FilledButton.styleFrom(
-            backgroundColor: palette.primary,
-            foregroundColor: palette.elevated,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
-            ),
-          ),
         ),
       );
     }
@@ -1099,40 +1096,28 @@ class _HandwritingPracticeScreenState
     return Row(
       children: [
         Expanded(
-          child: OutlinedButton.icon(
+          child: AppButton(
+            label: language.retryLabel,
+            icon: Icons.refresh,
+            variant: AppButtonVariant.secondary,
+            expanded: true,
             onPressed: _retry,
-            icon: const Icon(Icons.refresh),
-            label: Text(language.retryLabel),
-            style: OutlinedButton.styleFrom(
-              foregroundColor: palette.ink,
-              side: BorderSide(color: palette.outline),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
-              ),
-            ),
           ),
         ),
         const SizedBox(width: AppSpacing.md),
         Expanded(
-          child: FilledButton.icon(
+          child: AppButton(
+            label: hasWrongQueue
+                ? language.handwritingPracticeWrongFirstLabel
+                : language.nextLabel,
+            icon: hasWrongQueue
+                ? Icons.priority_high_rounded
+                : Icons.arrow_forward_rounded,
+            variant: hasWrongQueue
+                ? AppButtonVariant.destructive
+                : AppButtonVariant.primary,
+            expanded: true,
             onPressed: _next,
-            icon: Icon(
-              hasWrongQueue
-                  ? Icons.priority_high_rounded
-                  : Icons.arrow_forward_rounded,
-            ),
-            label: Text(
-              hasWrongQueue
-                  ? language.handwritingPracticeWrongFirstLabel
-                  : language.nextLabel,
-            ),
-            style: FilledButton.styleFrom(
-              backgroundColor: hasWrongQueue ? palette.error : palette.primary,
-              foregroundColor: palette.elevated,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
-              ),
-            ),
           ),
         ),
       ],
@@ -1795,11 +1780,12 @@ class _HandwritingPracticeScreenState
           ],
         ),
         actions: [
-          TextButton(
+          AppButton(
+            label: language.doneLabel,
+            variant: AppButtonVariant.ghost,
             onPressed: () {
               Navigator.of(dialogContext).pop();
             },
-            child: Text(language.doneLabel),
           ),
         ],
       ),
@@ -2622,38 +2608,20 @@ class _StrokeGuidePanel extends StatelessWidget {
                                       i < target.characterGuides.length;
                                       i++
                                     )
-                                      ChoiceChip(
-                                        label: Text(
-                                          '${i + 1}. ${target.characterGuides[i].character}',
-                                        ),
-                                        selected: i == safeSelectedIndex,
-                                        backgroundColor: palette.base,
-                                        selectedColor: palette.primary
-                                            .withValues(alpha: 0.12),
-                                        side: BorderSide(
-                                          color: i == safeSelectedIndex
-                                              ? palette.primary.withValues(
-                                                  alpha: 0.30,
-                                                )
-                                              : palette.outline,
-                                        ),
-                                        labelStyle: TextStyle(
-                                          color: i == safeSelectedIndex
-                                              ? palette.primary
-                                              : palette.ink,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                        onSelected: onGuideIndexChanged == null
-                                            ? null
-                                            : (_) => onGuideIndexChanged!(i),
-                                        avatar:
+                                      AppButton(
+                                        label:
+                                            '${i + 1}. ${target.characterGuides[i].character}',
+                                        icon:
                                             highlightedGuideIndexes.contains(i)
-                                            ? Icon(
-                                                Icons.priority_high_rounded,
-                                                size: 16,
-                                                color: palette.error,
-                                              )
+                                            ? Icons.priority_high_rounded
                                             : null,
+                                        variant: i == safeSelectedIndex
+                                            ? AppButtonVariant.primary
+                                            : AppButtonVariant.secondary,
+                                        compact: true,
+                                        onPressed: onGuideIndexChanged == null
+                                            ? null
+                                            : () => onGuideIndexChanged!(i),
                                       ),
                                   ],
                                 ),

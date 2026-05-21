@@ -8,6 +8,7 @@ import 'package:jpstudy/features/home/widgets/home_surface.dart';
 import 'package:jpstudy/features/jlpt/models/jlpt_coach_models.dart';
 import 'package:jpstudy/features/jlpt/models/jlpt_plan_playbook.dart';
 import 'package:jpstudy/features/jlpt/widgets/jlpt_coach_shared.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class JlptPlanPanel extends StatelessWidget {
   const JlptPlanPanel({
@@ -211,13 +212,14 @@ class _PlanCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: AppSpacing.md),
-          OutlinedButton.icon(
+          AppButton(
+            label: presentation.actionLabel,
+            icon: jlptIconForArea(item.area),
+            variant: AppButtonVariant.secondary,
             onPressed: () => context.push(
               presentation.launchTarget.route,
               extra: presentation.launchTarget.extra,
             ),
-            icon: Icon(jlptIconForArea(item.area), color: accent),
-            label: Text(presentation.actionLabel),
           ),
         ],
       ),

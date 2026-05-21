@@ -7,14 +7,14 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Date**: 2026-05-21 00:00
 **Blocking**: no
 **Default action taken**: Appended Directive F after the existing directive block and did not fabricate Directive E.
-**Owner answer**: pending
+**Owner answer**: RESOLVED 2026-05-21 — Owner asked Claude to author Directive E (Pedagogy & Human Voice). Directive E now lives in `docs/agent-directives.md` between Directive D and Directive F. Codex's default action (skip without fabricating) was the correct safe choice. Apply Directive E to all future explanation/mnemonic/etymology content per the persona Dr. Linh-Phan-Trần and 7 sub-rules E.1-E.7.
 
 ## OQ-002 - Exact publisher lesson/theme names
 **Phase**: 1
 **Date**: 2026-05-21 00:00
 **Blocking**: no
 **Default action taken**: Use conservative textbook labels from existing app/source references, mark unclear titles as `needs-owner-title-review`, and preserve old lesson IDs during dual-read.
-**Owner answer**: pending
+**Owner answer**: CONFIRMED 2026-05-21 — Default action approved. Keep `needs-owner-title-review` tag on uncertain titles; owner will batch-review and correct them once canonical extraction (QA-A-030) surfaces the authoritative publisher names from owner-provided PDFs.
 
 ## OQ-003 - Legal clearance for owner-provided textbook facts
 **Phase**: 1
@@ -28,7 +28,7 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Date**: 2026-05-21 00:00
 **Blocking**: no
 **Default action taken**: Prefer original JpStudy passages and paraphrased/link-only references where needed, with no official JLPT question reuse.
-**Owner answer**: pending
+**Owner answer**: CONFIRMED 2026-05-21 — Original JpStudy passages + paraphrased/link-only references is the correct policy. Never reuse official JLPT exam questions (copyright + leak risk). NHK Easy News allowed via paraphrase + link-only, never verbatim. Per Directive E.5 Research Ladder, escalate to owner only when both original-authoring and licensed paraphrase fail.
 
 ## OQ-005 - Mimikara extraction timing
 **Phase**: 1

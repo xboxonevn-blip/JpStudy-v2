@@ -6,8 +6,26 @@
 ## Agent directives
 
 Read and follow `docs/agent-directives.md` before starting any implementation,
-audit, QA, content, or live-proof work. Directive D is mandatory and requires
-connected, whole-flow audit/verification instead of siloed field-only fixes.
+audit, QA, content, or live-proof work. All six directives apply in parallel:
+
+- **A** (commit batch) — ~5 items per commit
+- **B** (priority queue + crawl ban) — no `nhaikanji.com` /
+  `thocodehoctiengnhat.com`
+- **C** (gate match changes) — token unlimited, focused verification
+- **D** (connected work) — whole-flow audit, no silo field-only fixes
+- **E** (pedagogy + human voice) — Dr. Linh-Phan-Trần persona, Hán-Việt
+  bridge, etymology-first, Research Ladder, Teaching Test
+- **F** (cross-link + exercise density) — ≥ 50 questions/item, ≥ 10
+  examples, JLPT distractor patterns, bi-directional graph, cross-modal SRS
+
+For autonomous overnight runs, also read:
+
+- `docs/codex-megaprompt-2026-05-21-jpstudy-overhaul.md` — 8-phase IA +
+  conjugation + exercise + responsive overhaul plan
+- `docs/research/decisions-log-2026-05-21.md` — DECISIONS log for the
+  overnight run (owner-reviewable)
+- `docs/research/open-questions-2026-05-21.md` — OPEN_QUESTIONS log
+  (Codex skips blocking OQs, owner answers async)
 
 ## Hosting sites (primary + disabled default)
 
@@ -192,9 +210,13 @@ Active workstream status (as of 2026-05-17):
   Current audit reports N5/N4 launch-tier and N3/N2/N1 launch-tier quality
   with user spot-check still pending for the upper-level samples. The latest
   owner spot-check defects fixed duplicated N3 vocab glosses and N1 kanji
-  compound-sourced meanings such as `稲`. Machine-draft and open-review counts
-  are `0` across all levels. Codex must not add `vi-human-approved`; only the
-  user can add that after item-level review.
+  compound-sourced meanings such as `稲`. As of 2026-05-21, owner has
+  manually added `vi-human-approved` to 451 content files across `assets/
+  data/content/` (rooted at the 2026-05-15 editorial pass commit `32e7fc75`
+  on N5 grammar lessons 1-5 and follow-on owner reviews). Codex must still
+  not add `vi-human-approved`; only owner adds it after item-level review.
+  Machine-draft and open-review counts remain `0` — owner reviews are
+  the source of `vi-human-approved` additions.
 - Remaining blockers are operational/legal proofs: legal approval,
   Sentry DSN + first issue, first executed deletion proof, GA4 UI retention
   proof, and later App Check enforcement proof. GA4 BigQuery learning-event

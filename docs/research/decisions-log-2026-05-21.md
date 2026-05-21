@@ -371,3 +371,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Accent/case/punctuation normalization catches obvious same-meaning rows while keeping divergent rows owner-reviewable instead of silently merging near-synonyms.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-038 - Report vocab level drift explicitly
+**Phase**: P1 QA-A-030 Phase 3
+**Date**: 2026-05-21 16:03 (local)
+**Context**: The app can contain an exact term+reading+meaning match in a higher JLPT level than the local canonical sources, especially inherited public-source upper-level vocab files.
+**Options considered**: treat exact matches as OK | duplicate canonical rows across every source level | assign canonical level to the lowest JLPT source and report exact higher-level matches as `WRONG-LEVEL`
+**Chosen**: assign canonical level to the lowest JLPT source and report exact higher-level matches as `WRONG-LEVEL`
+**Rationale**: This keeps the diff actionable for QA-B-001 instead of hiding taxonomy drift behind meaning matches. Higher-level textbook reuse remains visible as source evidence in each row.
+**Reversible**: yes
+**Owner review**: pending

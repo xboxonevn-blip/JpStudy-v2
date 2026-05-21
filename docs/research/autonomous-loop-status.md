@@ -1,5 +1,13 @@
 # Autonomous Loop Status
 
+## 2026-05-21 QA-A-030 Phase 3 Vocab app diff reports
+
+- Added `tool/research/build_vocab_app_diff.js` with RED/GREEN coverage for bundled app vocab parsing, term+reading matching, wrong meaning/reading/POS, missing, extra, and explicit `WRONG-LEVEL` drift.
+- Generated `docs/research/canonical/vocab-app-diff-n1.md` through `vocab-app-diff-n5.md` from owner-provided local canonical markdown plus bundled app vocab JSON only; banned websites were not accessed.
+- Diff summary: N5 `ok=451 wrong=666 missing=128 extra=827`; N4 `ok=209 wrong=951 missing=171 extra=904`; N3 `ok=53 wrong=1158 missing=168 extra=846`; N2 `ok=65 wrong=1155 missing=730 extra=2342`; N1 `ok=29 wrong=2016 missing=228 extra=4864`.
+- Logged `DECISION-038` for lowest-level canonical assignment and explicit `WRONG-LEVEL` reporting.
+- Next: gate and commit Phase 3 report-only batch, then plan first safe app vocab mutation batch from high-confidence rows.
+
 # 2026-05-21 — Megaprompt Phase 7 final reverify
 
 - Re-ran Phase 7 probes after handoff and fixed two QA-tool defects: vocab samples now use level-aware Hajimete chapter routes instead of invalid numeric detail IDs, and visual regression now compares decoded pixels after waiting for route-specific content instead of comparing compressed PNG bytes or spinner baselines.

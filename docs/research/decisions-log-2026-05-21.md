@@ -231,3 +231,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Copying legacy rows into `flashcard` mode proves no-loss migration and gives a stable schema/tool without risking a large DB rewrite mid-Phase 5. Future batches can move individual review flows onto the cross-modal store incrementally.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-024 - Start Phase 6 with local responsive helpers
+**Phase**: 6
+**Date**: 2026-05-21 11:20 (local)
+**Context**: Phase 6 requires four breakpoints plus home-page overview widgets, while the app already has custom Flutter layout code and no dedicated responsive dependency.
+**Options considered**: add a responsive package | duplicate width checks inside each screen | add a small local `lib/responsive` helper and reuse it from home widgets
+**Chosen**: add a small local `lib/responsive` helper and reuse it from home widgets
+**Rationale**: The local helper keeps breakpoint policy testable and avoids adding a package for four fixed thresholds. The home overview grid can then adapt columns consistently across mobile, tablet, and desktop.
+**Reversible**: yes
+**Owner review**: pending

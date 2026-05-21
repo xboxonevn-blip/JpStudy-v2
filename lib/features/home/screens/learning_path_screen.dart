@@ -25,6 +25,7 @@ import 'package:jpstudy/features/home/widgets/daily_plan_card.dart';
 import 'package:jpstudy/features/home/widgets/daily_session_card.dart';
 import 'package:jpstudy/features/home/widgets/discover_practice_panel.dart';
 import 'package:jpstudy/features/home/widgets/goal_selection_banner.dart';
+import 'package:jpstudy/features/home/widgets/home_overview_grid.dart';
 import 'package:jpstudy/features/home/widgets/mini_dashboard.dart';
 import 'package:jpstudy/features/home/widgets/weakness_radar_card.dart';
 import 'package:jpstudy/features/home/widgets/weekly_challenge_card.dart';
@@ -110,6 +111,15 @@ class LearningPathScreen extends ConsumerWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14),
       child: _TextbookRoadmapPanel(language: language, level: level),
     );
+    final overviewGrid = Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 14),
+      child: HomeOverviewGrid(
+        language: language,
+        level: level,
+        dashboard: dashboard,
+        continueAction: continueAction,
+      ),
+    );
 
     return JapaneseBackground(
       child: SafeArea(
@@ -158,6 +168,8 @@ class LearningPathScreen extends ConsumerWidget {
                           const SizedBox(height: 10),
                         ],
                         hero,
+                        const SizedBox(height: 10),
+                        overviewGrid,
                         const SizedBox(height: 10),
                         const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 14),
@@ -225,6 +237,8 @@ class LearningPathScreen extends ConsumerWidget {
                         const SizedBox(height: 10),
                       ],
                       hero,
+                      const SizedBox(height: 10),
+                      overviewGrid,
                       const SizedBox(height: 10),
                       const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 14),

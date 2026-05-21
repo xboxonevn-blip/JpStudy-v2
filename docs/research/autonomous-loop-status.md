@@ -1440,3 +1440,11 @@
 - Lesson completion now shows three graph-backed next actions after a completed Learn session.
 - Cross-modal SRS migration schema/tool exists; legacy state copies into `flashcard` mode without data loss; `markKnown()` throws and UI calls are guarded at test time.
 - Acceptance-focused gate passed: `node --test test\tool\research\interlink_graph_test.js` `2/2`; focused Flutter interlink/detail/learn/SRS suite `54/54`; UI string guard `0`.
+
+## 2026-05-21 Megaprompt Phase 6 Responsive Home Batch 1
+
+- Added shared responsive breakpoint helpers for mobile, tablet portrait, tablet landscape, and desktop widths.
+- Added the Phase 6 home overview grid with four learner-facing widgets: today plan, level progress, streak, and last context.
+- Wired the overview grid into both mobile and wide home layouts below the hero, before existing review/path cards.
+- TDD coverage: breakpoint threshold guard and home overview grid widget tests cover required widget presence and 1/4-column responsive behavior.
+- Gate: focused home/responsive tests, UI string guard, `flutter analyze lib test`, and `git diff --check` run before commit.

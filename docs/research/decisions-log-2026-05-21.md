@@ -211,3 +211,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This keeps the graph asset stable and lets every existing detail surface render live learner links now. Later DB/asset ID convergence can tighten routing without changing the widget contract.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-022 - Keep lesson-complete recommendations graph-first
+**Phase**: 5
+**Date**: 2026-05-21 10:30 (local)
+**Context**: Phase 5 requires three actionable suggestions after lesson completion, but the existing summary widget only used broad due/ghost state and did not intersect the just-learned item cluster.
+**Options considered**: keep generic next-step widget | block on full DB-to-graph ID migration | add a graph-backed recommendation engine with semantic lookup from learned vocab labels
+**Chosen**: add a graph-backed recommendation engine with semantic lookup from learned vocab labels
+**Rationale**: The new engine ranks due related graph nodes first, keeps the next textbook lesson in the list, and fills with curriculum-graph links or safe fallbacks. This gives a real post-lesson path now while preserving future DB/asset ID tightening.
+**Reversible**: yes
+**Owner review**: pending

@@ -20,6 +20,8 @@ import 'package:jpstudy/features/home/providers/continue_provider.dart';
 import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/home/providers/recovery_pack_provider.dart';
 import 'package:jpstudy/features/home/providers/weakness_radar_provider.dart';
+import 'package:jpstudy/features/interlink/models/interlink_graph.dart';
+import 'package:jpstudy/features/interlink/providers/interlink_graph_provider.dart';
 import 'package:jpstudy/features/learn/models/learn_config.dart';
 import 'package:jpstudy/features/learn/models/learn_session.dart' as learn;
 import 'package:jpstudy/features/learn/models/question.dart';
@@ -145,6 +147,20 @@ const _continueAction = ContinueAction(
 
 late SharedPreferences _prefs;
 
+final _interlinkGraph = InterlinkGraph.fromJson({
+  'nodes': [
+    ['vocab:n5:mina:01:水', 'vocab', 'N5', '水', '/vocab/1'],
+    ['kanji:n5:k001', 'kanji', 'N5', '水', '/kanji/%E6%B0%B4/graph'],
+    ['reading:n5:001', 'reading', 'N5', '水の店', '/jlpt/reading'],
+  ],
+  'edgeRelTypes': ['contains_kanji', 'reading_uses_kanji'],
+  'edgeEvidenceTypes': ['test'],
+  'edges': [
+    [0, 1, 0, 1.0, 0],
+    [0, 2, 1, 0.6, 0],
+  ],
+});
+
 AutoCloudUploadCoordinator _autoUpload({
   required _FakeCloudStorageSyncService storage,
   AuthUser? user,
@@ -183,6 +199,7 @@ Widget buildScreen(
       yield 0;
     }),
     vocabGhostsProvider.overrideWith((ref) async => const []),
+    interlinkGraphProvider.overrideWith((ref) async => _interlinkGraph),
   ],
   child: MaterialApp(
     home: LearnSummaryScreen(
@@ -277,5 +294,20 @@ void main() {
 
     expect(fakeAnalytics.events, contains('session_quality_rated'));
     expect(fakeAnalytics.params.last, {'mode': 'learn', 'rating': 4});
+  });
+
+  testWidgets('shows three graph-backed recommendations after lesson', (
+    tester,
+  ) async {
+    final db = app_db.AppDatabase(executor: NativeDatabase.memory());
+    addTearDown(db.close);
+
+    await tester.pumpWidget(buildScreen(db));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    expect(find.text('Recommended after this lesson'), findsOneWidget);
+    expect(find.text('Next lesson'), findsOneWidget);
+    expect(find.text('水の店'), findsOneWidget);
   });
 }

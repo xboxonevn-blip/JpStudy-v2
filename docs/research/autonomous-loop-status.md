@@ -1417,3 +1417,10 @@
 - Kept dialog rendering stable by using a non-fluid related-section frame inside `AlertDialog`.
 - TDD RED/GREEN: Vocab, Grammar, Kanji, and scoped Conjugation detail tests first failed with missing `Liên quan`; semantic lookup test first failed because `RelatedSection.lookup` did not exist.
 - Gate: focused interlink/detail suite passed `44/44`; `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean.
+
+## 2026-05-21 Megaprompt Phase 5 Cross-link Graph Batch 3
+
+- Added `RecommendationEngine.afterLessonComplete` for three post-lesson actions: due related graph nodes, next textbook lesson, then graph/fallback actions.
+- Replaced generic learn-summary suggestions with `LessonCompletionRecommendations`, mapping completed-session vocab labels into graph nodes and prioritizing weak-item clusters.
+- TDD RED/GREEN: pure engine test first failed on missing API; summary widget test first failed on missing post-lesson recommendation section.
+- Gate so far: `flutter test test\features\interlink\recommendation_engine_test.dart test\features\learn\learn_summary_screen_test.dart` passed `7/7`.

@@ -12,7 +12,7 @@ import 'package:jpstudy/data/daos/achievement_dao.dart';
 import 'package:jpstudy/data/daos/learn_dao.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/home/providers/recovery_pack_provider.dart';
-import 'package:jpstudy/features/home/widgets/next_step_suggestions.dart';
+import 'package:jpstudy/features/interlink/widgets/lesson_completion_recommendations.dart';
 import 'package:jpstudy/features/me/providers/auto_cloud_upload_provider.dart';
 import 'package:jpstudy/shared/widgets/confidence_rating.dart';
 import '../models/achievement.dart';
@@ -197,8 +197,8 @@ class _LearnSummaryScreenState extends ConsumerState<LearnSummaryScreen> {
 
               const SizedBox(height: 32),
 
-              // Next step suggestions
-              const NextStepSuggestions(),
+              // Graph-backed next-step suggestions
+              LessonCompletionRecommendations(session: session),
 
               const SizedBox(height: 32),
 

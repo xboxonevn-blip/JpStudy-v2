@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/features/foundations/models/han_viet_rule.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class HanVietInlinePanel extends StatelessWidget {
   const HanVietInlinePanel({
@@ -30,16 +31,17 @@ class HanVietInlinePanel extends StatelessWidget {
     final preview = (filterActive ? matched : rules.take(3))
         .take(3)
         .toList(growable: false);
-    return Card(
+    return AppCard(
+      padding: EdgeInsets.zero,
       child: ExpansionTile(
         key: const ValueKey('han_viet_inline_panel'),
         title: Row(
           children: [
             Expanded(child: Text(language.hanVietInlinePanelTitle)),
             if (filterActive)
-              Chip(
-                visualDensity: VisualDensity.compact,
-                label: Text(language.hanVietPanelMatchedBadge),
+              AppChip(
+                label: language.hanVietPanelMatchedBadge,
+                tone: AppChipTone.info,
               ),
           ],
         ),
@@ -54,10 +56,12 @@ class HanVietInlinePanel extends StatelessWidget {
             ),
           Align(
             alignment: Alignment.centerLeft,
-            child: TextButton.icon(
+            child: AppButton(
+              label: language.commonMoreAction,
+              icon: Icons.open_in_new_rounded,
+              variant: AppButtonVariant.ghost,
+              compact: true,
               onPressed: () => context.push(AppRoutePath.foundationsHanViet),
-              icon: const Icon(Icons.open_in_new_rounded),
-              label: Text(language.commonMoreAction),
             ),
           ),
         ],
@@ -150,8 +154,12 @@ class HanVietRuleMiniPanel extends StatelessWidget {
           const SizedBox(height: 8),
           Align(
             alignment: Alignment.centerLeft,
-            child: TextButton.icon(
+            child: AppButton(
               key: const ValueKey('han_viet_rule_mini_open_full'),
+              label: language.commonMoreAction,
+              icon: Icons.open_in_new_rounded,
+              variant: AppButtonVariant.ghost,
+              compact: true,
               onPressed: () {
                 final router = GoRouter.of(context);
                 Navigator.of(context, rootNavigator: true).pop();
@@ -159,8 +167,6 @@ class HanVietRuleMiniPanel extends StatelessWidget {
                   router.push(AppRoutePath.kanjiHanViet);
                 });
               },
-              icon: const Icon(Icons.open_in_new_rounded),
-              label: Text(language.commonMoreAction),
             ),
           ),
         ],

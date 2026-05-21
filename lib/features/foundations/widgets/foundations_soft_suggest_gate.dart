@@ -8,6 +8,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/features/foundations/providers/foundations_providers.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum FoundationsSoftSuggestSurface { vocab, grammar, kanji }
@@ -73,20 +74,23 @@ class _FoundationsSoftSuggestGateState
         title: Text(language.softSuggestFoundationsTitle),
         content: Text(language.softSuggestFoundationsBody),
         actions: [
-          TextButton(
+          AppButton(
+            label: language.softSuggestGoFoundationsLabel,
+            compact: true,
             onPressed: () async {
               await prefs.setBool(key, true);
               if (dialogContext.mounted) Navigator.of(dialogContext).pop();
               if (mounted) context.openFoundations();
             },
-            child: Text(language.softSuggestGoFoundationsLabel),
           ),
-          TextButton(
+          AppButton(
+            label: language.softSuggestContinueLabel,
+            variant: AppButtonVariant.ghost,
+            compact: true,
             onPressed: () async {
               await prefs.setBool(key, true);
               if (dialogContext.mounted) Navigator.of(dialogContext).pop();
             },
-            child: Text(language.softSuggestContinueLabel),
           ),
         ],
       ),

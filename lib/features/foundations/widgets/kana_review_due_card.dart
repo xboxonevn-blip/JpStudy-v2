@@ -7,6 +7,7 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/foundations/providers/kana_review_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class KanaReviewDueCard extends ConsumerWidget {
   const KanaReviewDueCard({super.key});
@@ -40,9 +41,10 @@ class KanaReviewDueCard extends ConsumerWidget {
               ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
             ),
           ),
-          FilledButton(
+          AppButton(
+            compact: true,
             onPressed: () => context.openFoundationsQuiz(fromDue: true),
-            child: Text(language.kanaQuizTitle),
+            label: language.kanaQuizTitle,
           ),
         ],
       ),

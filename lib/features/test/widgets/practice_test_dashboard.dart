@@ -9,6 +9,7 @@ import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/test/screens/test_config_screen.dart';
 import 'package:jpstudy/features/test/screens/test_screen.dart';
 import 'package:jpstudy/core/services/session_storage_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import '../models/test_config.dart';
 
 class PracticeTestDashboard extends ConsumerWidget {
@@ -70,81 +71,62 @@ class PracticeTestDashboard extends ConsumerWidget {
     AppLanguage language, {
     required bool embedded,
   }) {
-    return Card(
+    final textTheme = Theme.of(context).textTheme;
+    final foreground = Theme.of(context).colorScheme.onSurface;
+    return AppCard(
       margin: embedded
           ? EdgeInsets.zero
           : const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-      elevation: embedded ? 0 : 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(embedded ? 16 : 20),
-      ),
-      child: InkWell(
-        onTap: () => _startLevelTest(context, ref, level, language),
-        borderRadius: BorderRadius.circular(embedded ? 16 : 20),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(embedded ? 16 : 20),
-            gradient: LinearGradient(
-              colors: [color.withValues(alpha: 0.85), color],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+      variant: embedded ? AppCardVariant.surface : AppCardVariant.elevated,
+      borderRadius: embedded ? 16 : 20,
+      padding: EdgeInsets.all(embedded ? 12 : 20),
+      onTap: () => _startLevelTest(context, ref, level, language),
+      child: Row(
+        children: [
+          Container(
+            padding: EdgeInsets.all(embedded ? 8 : 12),
+            decoration: BoxDecoration(
+              color: color.withValues(alpha: 0.14),
+              shape: BoxShape.circle,
+              border: Border.all(color: color.withValues(alpha: 0.22)),
             ),
-            boxShadow: [
-              BoxShadow(
-                color: color.withValues(alpha: 0.3),
-                blurRadius: 8,
-                offset: const Offset(0, 4),
-              ),
-            ],
+            child: Icon(
+              Icons.school_rounded,
+              size: embedded ? 24 : 32,
+              color: color,
+            ),
           ),
-          padding: EdgeInsets.all(embedded ? 12 : 20),
-          child: Row(
-            children: [
-              Container(
-                padding: EdgeInsets.all(embedded ? 8 : 12),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.2),
-                  shape: BoxShape.circle,
+          SizedBox(width: embedded ? 12 : 16),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  language.mockExamTitle(level),
+                  style: textTheme.titleMedium?.copyWith(
+                    fontSize: embedded ? 15.5 : 20,
+                    fontWeight: FontWeight.bold,
+                    color: foreground,
+                  ),
                 ),
-                child: Icon(
-                  Icons.school_rounded,
-                  size: embedded ? 24 : 32,
-                  color: Colors.white,
+                SizedBox(height: embedded ? 2 : 4),
+                Text(
+                  language.mockExamSubtitle,
+                  style: textTheme.bodySmall?.copyWith(
+                    color: foreground.withValues(alpha: 0.66),
+                    fontSize: embedded ? 11.5 : 13,
+                  ),
                 ),
-              ),
-              SizedBox(width: embedded ? 12 : 16),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      language.mockExamTitle(level),
-                      style: TextStyle(
-                        fontSize: embedded ? 15.5 : 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: embedded ? 2 : 4),
-                    Text(
-                      language.mockExamSubtitle,
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: embedded ? 11.5 : 13,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: Colors.white70,
-                size: embedded ? 16 : 24,
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
+          Icon(
+            Icons.arrow_forward_ios_rounded,
+            color: foreground.withValues(alpha: 0.54),
+            size: embedded ? 16 : 24,
+          ),
+        ],
       ),
     );
   }

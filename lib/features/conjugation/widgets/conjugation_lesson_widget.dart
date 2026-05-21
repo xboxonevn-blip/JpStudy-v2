@@ -6,6 +6,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class ConjugationLessonWidget extends ConsumerWidget {
   const ConjugationLessonWidget({
@@ -33,58 +34,58 @@ class ConjugationLessonWidget extends ConsumerWidget {
         final ids = lemmas
             .map((lemma) => lemma.contentVocabId)
             .toList(growable: false);
-        return Card(
+        return AppCard(
           key: const ValueKey('lesson_conjugation_widget'),
           margin: EdgeInsets.zero,
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Row(
-                  children: [
-                    const Icon(Icons.swap_horiz_rounded),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        _title(language),
-                        style: Theme.of(context).textTheme.titleMedium
-                            ?.copyWith(fontWeight: FontWeight.w700),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 8),
-                Text(_countLabel(language, lemmas.length)),
-                const SizedBox(height: 8),
-                Wrap(
-                  spacing: 8,
-                  runSpacing: 8,
-                  children: [
-                    for (final lemma in lemmas)
-                      Chip(
-                        visualDensity: VisualDensity.compact,
-                        label: Text(lemma.dictionaryForm),
-                      ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: FilledButton.icon(
-                    icon: const Icon(Icons.school_rounded),
-                    label: Text(_practiceLabel(language)),
-                    onPressed: () => context.openConjugationPractice(
-                      ConjugationPracticeArgs(
-                        contentVocabIds: ids,
-                        targetCount: 50,
-                        source: 'lesson_conjugation_widget',
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  const Icon(Icons.swap_horiz_rounded),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      _title(language),
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Text(_countLabel(language, lemmas.length)),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final lemma in lemmas)
+                    AppChip(
+                      label: lemma.dictionaryForm,
+                      tone: AppChipTone.info,
+                    ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: AppButton(
+                  icon: Icons.school_rounded,
+                  label: _practiceLabel(language),
+                  compact: true,
+                  onPressed: () => context.openConjugationPractice(
+                    ConjugationPracticeArgs(
+                      contentVocabIds: ids,
+                      targetCount: 50,
+                      source: 'lesson_conjugation_widget',
+                    ),
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },

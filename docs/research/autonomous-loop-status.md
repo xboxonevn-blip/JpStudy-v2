@@ -2028,3 +2028,13 @@
 - Teaching Test paraphrase: `Vませんか` looks negative but works as a soft
   invitation because `か` asks before committing the listener. Use `Vましょう`
   when the group is already moving toward the action.
+
+## 2026-05-22 Phase G Tier-1 item 035
+
+- Re-authored `grammar:n5:grammar_n5_7:001` (`N (công cụ) で V`) with
+  tool/means `で`, Vietnamese "bằng..." bridge, and contrasts against place
+  `で`, transport `で`, and object `を`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: N before tool `で` answers "by what means?" Use
+  `はしで食べます` for the tool and keep the object separate as `ご飯を`.

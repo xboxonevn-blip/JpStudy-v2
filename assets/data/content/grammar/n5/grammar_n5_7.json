@@ -14,10 +14,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N (công cụ) で V",
-      "meaning": "Ý nghĩa: `で` chỉ công cụ hoặc phương tiện dùng để thực hiện hành động: ăn bằng đũa, viết bằng bút chì, nói bằng tiếng Nhật...",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "で là trợ từ đánh dấu 'khung thực hiện' của động từ. Trong cấu trúc N (công cụ) で V, N là thứ người nói dùng để làm hành động: はしで食べます, 鉛筆で書きます, 日本語で話します.",
+      "hanVietBridge": "Công cụ tương ứng gần với Hán-Việt 'công cụ', 'phương tiện'. Tiếng Việt nói 'bằng đũa/bằng bút/bằng tiếng Nhật'; tiếng Nhật đặt danh từ đó trước で để chỉ phương tiện thực hiện.",
+      "form": "Hình thức: N công cụ/phương tiện + で + động từ. Ví dụ: はしで食べます, ペンで書きます, 日本語で話します.",
+      "meaning": "Ý nghĩa: cho biết dùng gì hoặc bằng phương tiện/ngôn ngữ nào để làm hành động. Câu trả lời cho 'bằng gì?' là Nで.",
+      "usage": "Sử dụng: chọn NでV khi danh từ trước で là công cụ, phương tiện, vật liệu, hoặc ngôn ngữ. Nếu danh từ là nơi hành động xảy ra, đó là địa điểm で; nếu là đích đến, dùng へ.",
+      "humanMoment": "Dr. Linh lưu ý: N (công cụ) で V là câu hỏi 'tay mình cầm gì để làm?'. はしで食べます = ăn bằng đũa; 学校で食べます = ăn ở trường. Cùng là で, nhưng một bên là dụng cụ, một bên là sân khấu.",
+      "crossLinks": [
+        {
+          "pattern": "N (địa điểm) で V",
+          "contrast": "cùng trợ từ `で` nhưng khác vai trò N: địa điểm で trả lời 'ở đâu?', công cụ で trả lời 'bằng gì?'."
+        },
+        {
+          "pattern": "N( phương tiện ) で 行きます/来ます/帰ります",
+          "contrast": "gần nghĩa phương tiện nhưng hẹp hơn cho di chuyển; N công cụ で V dùng rộng cho ăn, viết, nói, làm."
+        },
+        {
+          "pattern": "NをV",
+          "contrast": "khác vai trò danh từ: `を` đánh dấu vật bị tác động, còn `で` đánh dấu dụng cụ dùng để tác động."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

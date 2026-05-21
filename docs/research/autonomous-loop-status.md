@@ -1969,3 +1969,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `いつ` asks when an action happens. Answer with a
   time like `明日`, not a place, vehicle, or companion.
+
+## 2026-05-22 Phase G Tier-1 item 029
+
+- Re-authored `grammar:n5:grammar_n5_6:001` (`NをV`) with direct-object `を`
+  logic and contrast against destination `へ` plus `Nをします`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `を` marks what the action hits: `本を読みます`,
+  `水を飲みます`; destinations use `へ`.

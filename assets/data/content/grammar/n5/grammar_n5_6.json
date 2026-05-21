@@ -14,10 +14,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N を V (tha động từ)",
-      "meaning": "Ý nghĩa: `を` đánh dấu đối tượng trực tiếp của hành động.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "を là trợ từ tân ngữ, viết bằng kana wo nhưng trong tiếng Nhật hiện đại thường đọc là o. Cấu trúc NをV đặt N vào vị trí chịu tác động trực tiếp của tha động từ: đọc sách, uống nước, ăn cơm.",
+      "hanVietBridge": "Nhớ bằng Hán-Việt 'tân ngữ' và 'tha động': 本を読みます nghĩa là hành động đọc tác động lên 本. Tiếng Việt thường không cần một từ tương đương を, nhưng tiếng Nhật cần đánh dấu rõ đối tượng.",
+      "form": "Hình thức: N を V(tha động từ). N là đối tượng trực tiếp; V là hành động tác động lên N.",
+      "meaning": "Ý nghĩa: làm hành động V lên N: đọc sách, uống nước, ăn cơm, viết thư...",
+      "usage": "Sử dụng: 本を読みます, 水を飲みます, ご飯を食べます. Không dùng を để đánh dấu đích đến; đích đến dùng へ.",
+      "humanMoment": "Dr. Linh lưu ý: NをV là mũi tên hành động bắn vào đối tượng. 本を読みます nghĩa là đọc tác động lên sách; 学校へ行きます lại là mũi tên đi tới trường, nên dùng へ chứ không dùng を trong mẫu N5 này.",
+      "crossLinks": [
+        {
+          "pattern": "Nをします",
+          "contrast": "khác loại N: Nをします dùng danh từ hoạt động như サッカー, còn NをV dùng đối tượng trực tiếp với động từ cụ thể như 本を読みます."
+        },
+        {
+          "pattern": "何をしますか",
+          "contrast": "khác chiều hỏi-đáp: 何を asks for the object/action, while NをV supplies the object directly."
+        },
+        {
+          "pattern": "N(địa điểm) へ 行きます",
+          "contrast": "khác vai trò trợ từ: を đánh dấu đối tượng chịu tác động, còn へ đánh dấu đích đến."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -5939,6 +5939,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-form-l1-001",
+      "template_id": "tpl-grammar-n5-029-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ tân ngữ: 本 ___ 読みます。",
+      "answer_template": "を",
+      "options_template": [
+        "を",
+        "へ",
+        "で",
+        "と"
+      ],
+      "distractor_strategy": "object-o-vs-destination-means-companion",
+      "teaching_note": "本 là đối tượng của hành động đọc, nên dùng を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-form-l1-002",
+      "template_id": "tpl-grammar-n5-029-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để nói 'uống nước'?",
+      "answer_template": "水を飲みます。",
+      "options_template": [
+        "水を飲みます。",
+        "水へ飲みます。",
+        "水で飲みます。",
+        "水と飲みます。"
+      ],
+      "distractor_strategy": "direct-object-form",
+      "teaching_note": "Nước là thứ được uống, nên đánh dấu bằng を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-029-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "本を読みます nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Đọc sách.",
+      "options_template": [
+        "Đọc sách.",
+        "Đi đến sách.",
+        "Đọc bằng sách.",
+        "Sách và đọc."
+      ],
+      "distractor_strategy": "object-vs-destination-means-list",
+      "teaching_note": "を đặt sách làm đối tượng trực tiếp của 読みます.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-029-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong NをV, を đánh dấu vai trò gì?",
+      "answer_template": "Đối tượng trực tiếp/tân ngữ chịu tác động của hành động V.",
+      "distractor_strategy": "direct-object-role-recall",
+      "teaching_note": "Hỏi 'V tác động lên cái gì?' để tìm Nを.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-usage-l3-005",
+      "template_id": "tpl-grammar-n5-029-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'ăn cơm': ご飯 / を / 食べます",
+      "answer_template": "ご飯を食べます。",
+      "options_template": [
+        "ご飯",
+        "を",
+        "食べます"
+      ],
+      "distractor_strategy": "object-verb-order",
+      "teaching_note": "Đối tượng đứng trước を; động từ đứng sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-usage-l3-006",
+      "template_id": "tpl-grammar-n5-029-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Tôi viết thư.' Dùng 手紙 và 書きます.",
+      "answer_template": "手紙を書きます。",
+      "distractor_strategy": "write-letter-object-production",
+      "teaching_note": "Thư là thứ được viết, nên dùng 手紙を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-context-l3-007",
+      "template_id": "tpl-grammar-n5-029-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Trong thư viện, bạn nói 'Tôi đọc tạp chí'. Viết câu.",
+      "answer_template": "雑誌を読みます。",
+      "distractor_strategy": "library-reading-object-context",
+      "teaching_note": "Tạp chí là đối tượng của 読みます.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-context-l2-008",
+      "template_id": "tpl-grammar-n5-029-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với NをV?",
+      "answer_template": "Bạn nói hành động tác động trực tiếp lên một vật/người.",
+      "options_template": [
+        "Bạn nói hành động tác động trực tiếp lên một vật/người.",
+        "Bạn nói đi đến một địa điểm.",
+        "Bạn nói đi bằng xe buýt.",
+        "Bạn nói đi cùng bạn."
+      ],
+      "distractor_strategy": "object-context-vs-destination-means-companion",
+      "teaching_note": "を dành cho đối tượng bị làm gì đó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-029-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần nói 'đọc sách', không nói 'đi đến trường'. Câu nào chọn đúng trợ từ theo vai trò?",
+      "answer_template": "本を読みます。",
+      "options_template": [
+        "本を読みます。",
+        "学校へ行きます。",
+        "本へ読みます。",
+        "学校を行きます。"
+      ],
+      "distractor_strategy": "object-vs-destination-particle-analysis",
+      "teaching_note": "L4: を là đối tượng hành động; へ là đích đến của chuyển động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-029-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-029-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào là NをV với động từ cụ thể tác động lên đối tượng, không phải danh từ hoạt động + します?",
+      "answer_template": "水を飲みます。",
+      "options_template": [
+        "水を飲みます。",
+        "サッカーをします。",
+        "勉強をします。",
+        "テニスをします。"
+      ],
+      "distractor_strategy": "specific-transitive-verb-vs-suru-action-noun-analysis",
+      "teaching_note": "水を飲みます dùng động từ cụ thể 飲みます; các lựa chọn します dùng danh từ hoạt động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

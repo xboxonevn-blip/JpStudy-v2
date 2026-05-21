@@ -8979,6 +8979,223 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-form-l1-001",
+      "template_id": "tpl-grammar-n5-043-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn cụm đúng với Aい + N.",
+      "answer_template": "高い山",
+      "options_template": [
+        "高い山",
+        "高な山",
+        "高です山",
+        "高く山"
+      ],
+      "distractor_strategy": "i-adjective-noun-modifier-form",
+      "teaching_note": "Aい đứng trực tiếp trước danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-form-l1-002",
+      "template_id": "tpl-grammar-n5-043-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn cụm đúng với Aな + N.",
+      "answer_template": "便利な店",
+      "options_template": [
+        "便利な店",
+        "便利い店",
+        "便利店な",
+        "便利です店"
+      ],
+      "distractor_strategy": "na-adjective-noun-modifier-form",
+      "teaching_note": "Aな cần な trước danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-043-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "新しい車 nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Xe mới.",
+      "options_template": [
+        "Xe mới.",
+        "Xe không mới.",
+        "Tôi mới lái xe.",
+        "Xe đã đến rồi."
+      ],
+      "distractor_strategy": "adjective-noun-meaning-vs-negative-verb",
+      "teaching_note": "新しい bổ nghĩa trực tiếp cho 車.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-043-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Aな + N / Aい + N dùng để làm gì?",
+      "answer_template": "Để tính từ bổ nghĩa trực tiếp cho danh từ.",
+      "distractor_strategy": "adjective-noun-modification-function-recall",
+      "teaching_note": "Kết quả là một cụm danh từ có tính chất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-usage-l3-005",
+      "template_id": "tpl-grammar-n5-043-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'quyển sách thú vị': おもしろい / 本",
+      "answer_template": "おもしろい本",
+      "options_template": [
+        "おもしろい",
+        "本"
+      ],
+      "distractor_strategy": "i-adjective-before-noun-production",
+      "teaching_note": "おもしろい là Aい nên đặt trực tiếp trước 本.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-usage-l3-006",
+      "template_id": "tpl-grammar-n5-043-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cụm 'người nổi tiếng' với 有名 và 人.",
+      "answer_template": "有名な人",
+      "distractor_strategy": "apply-na-adjective-noun-modification",
+      "teaching_note": "有名 là Aな, cần な trước 人.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-context-l3-007",
+      "template_id": "tpl-grammar-n5-043-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn muốn nói 'căn phòng sạch đẹp'. きれい là Aな. Cụm nào đúng?",
+      "answer_template": "きれいな部屋",
+      "options_template": [
+        "きれいな部屋",
+        "きれいい部屋",
+        "きれい部屋",
+        "きれいです部屋"
+      ],
+      "distractor_strategy": "kirei-na-before-noun-context",
+      "teaching_note": "きれい trông có い nhưng là Aな; trước danh từ cần な.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-context-l2-008",
+      "template_id": "tpl-grammar-n5-043-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào dùng Aな + N / Aい + N?",
+      "answer_template": "Khi tính từ đứng ngay trước danh từ để miêu tả danh từ đó.",
+      "options_template": [
+        "Khi tính từ đứng ngay trước danh từ để miêu tả danh từ đó.",
+        "Khi phủ định tính từ cuối câu.",
+        "Khi nói đã làm xong.",
+        "Khi đánh dấu công cụ bằng で."
+      ],
+      "distractor_strategy": "adjective-noun-context-vs-negative-completion-tool",
+      "teaching_note": "Mẫu này tạo cụm danh từ, không phải phủ định hay câu hoàn tất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-043-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích 4 cụm. Cụm nào đúng với Aな trước danh từ nhưng sai nếu đặt cuối câu?",
+      "answer_template": "静かな町",
+      "options_template": [
+        "静かな町",
+        "静かなです",
+        "静かい町",
+        "静かを町"
+      ],
+      "distractor_strategy": "na-before-noun-vs-predicate-analysis",
+      "teaching_note": "L4: な chỉ dùng khi Aな bổ nghĩa danh từ; cuối câu là 静かです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-043-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-043-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Cặp nào đúng khi cả hai đều bổ nghĩa danh từ?",
+      "answer_template": "高い山 / 便利な店",
+      "options_template": [
+        "高い山 / 便利な店",
+        "高な山 / 便利店",
+        "高くない山 / 便利じゃありません店",
+        "高いです山 / 便利です店"
+      ],
+      "distractor_strategy": "analyze-i-na-noun-modification-pair",
+      "teaching_note": "Aい đứng thẳng trước N; Aな cần な. Dạng phủ định/cuối câu không đứng trước danh từ như vậy.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

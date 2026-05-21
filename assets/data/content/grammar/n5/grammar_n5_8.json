@@ -102,10 +102,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Aな + N / Aい + N",
-      "meaning": "Ý nghĩa: Dùng khi tính từ bổ nghĩa trực tiếp cho danh từ.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Cấu trúc Aい + N cho phép tính từ i bám thẳng vào danh từ vì đuôi い đã mang đủ tính chất bổ nghĩa. Cấu trúc Aな + N dùng な như chiếc cầu nối cho nhóm tính chất gần danh từ, nên 静か phải thành 静かな町 trước khi chạm vào danh từ.",
+      "hanVietBridge": "Hán-Việt 'bổ nghĩa' nghĩa là thêm nghĩa cho danh từ chính. Trong tiếng Việt nói 'thành phố yên tĩnh'; tiếng Nhật cần biết tính từ thuộc loại nào để đặt cầu nối: 高い山 nhưng 静かな町.",
+      "form": "Hình thức: Aい + N giữ nguyên tính từ i: 高い山, 新しい車. Aな + N thêm な: 静かな町, 便利な店.",
+      "meaning": "Ý nghĩa: biến danh từ thành một cụm danh từ có tính chất: núi cao, cửa hàng tiện lợi, căn phòng đẹp.",
+      "usage": "Sử dụng: dùng khi tính từ đứng ngay trước danh từ. Nếu tính từ đứng cuối câu, Aな không giữ な: 静かです, không phải 静かなです.",
+      "humanMoment": "Dr. Linh lưu ý: Aな + N / Aい + N là lúc tính từ phải 'nắm tay' danh từ. 高い tự nắm được: 高い山. 静か cần chiếc móc な: 静かな町. Nhưng khi không có danh từ phía sau, bỏ móc đó: 静かです.",
+      "crossLinks": [
+        {
+          "pattern": "Aい (tính từ i) / Aな (tính từ na)",
+          "contrast": "bài phân loại cho biết tính từ thuộc nhóm nào; A+N dùng kết quả đó để gắn tính từ vào danh từ."
+        },
+        {
+          "pattern": "Aい -> Aくないです / Aな -> Aじゃありません",
+          "contrast": "A+N là bổ nghĩa danh từ; phủ định tính từ là biến đổi vị ngữ/cuối câu."
+        },
+        {
+          "pattern": "N1 の N2",
+          "contrast": "NのN nối hai danh từ, còn Aな/Aい + N dùng tính từ để miêu tả danh từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

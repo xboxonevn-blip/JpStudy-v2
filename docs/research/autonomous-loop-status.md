@@ -2111,3 +2111,14 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: Aい negates by changing `い` to `くないです`; Aな
   negates like a noun with `じゃありません`. Classify first, then negate.
+
+## 2026-05-22 Phase G Tier-1 item 043
+
+- Re-authored `grammar:n5:grammar_n5_8:003` (`Aな + N / Aい + N`) with
+  noun-modification structure, Hán-Việt "bổ nghĩa" bridge, and contrasts
+  against adjective class, adjective negation, and `N1 の N2`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: when an adjective stands before a noun, Aい attaches
+  directly (`高い山`) and Aな needs `な` (`便利な店`). The `な` disappears at the
+  end of a sentence.

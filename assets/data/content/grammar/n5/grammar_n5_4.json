@@ -14,10 +14,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: 今、～時～分 です",
-      "meaning": "Ý nghĩa: Mẫu này dùng để nói thời gian hiện tại.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "今・時・分 là ba chữ Hán-Việt rất rõ: 今 là 'kim/bây giờ', 時 là 'thời/giờ', 分 là 'phân/chia nhỏ'. Cấu trúc 今、～時～分です ghép 'bây giờ' + số giờ + số phút để chốt thời điểm hiện tại.",
+      "hanVietBridge": "Nhớ theo nhịp Hán-Việt kim-thời-phân: 今 đặt mốc 'hiện tại', 時 là đơn vị giờ, 分 là phần phút được chia từ một giờ. Tiếng Việt nói 'bây giờ là 7 giờ 15 phút'; tiếng Nhật giữ đúng thứ tự giờ rồi phút.",
+      "form": "Hình thức: 今、[số]時[phút]分です. Nếu không cần phút, có thể nói 今、七時です; khi có phút, đặt 分 sau số phút.",
+      "meaning": "Ý nghĩa: nói giờ hiện tại: 'Bây giờ là ... giờ ... phút'. Mẫu này thông báo thời điểm, không nói khoảng thời gian kéo dài.",
+      "usage": "Sử dụng: dùng khi xem đồng hồ, thông báo giờ học, giờ tàu, hoặc trả lời 今、何時ですか. Chú ý thứ tự: giờ trước, phút sau.",
+      "humanMoment": "Dr. Linh lưu ý: 今、～時～分です là câu đọc đồng hồ theo trục giờ-phút. Khác N1 から N2 まで, mẫu này chỉ một thời điểm như 今、八時二十分です, không phải một khoảng từ giờ này đến giờ kia.",
+      "crossLinks": [
+        {
+          "pattern": "今、何時ですか",
+          "contrast": "khác chiều hỏi-đáp: 何時ですか hỏi giờ, còn 今、～時～分です trả lời giờ hiện tại."
+        },
+        {
+          "pattern": "N1 から N2 まで",
+          "contrast": "khác loại thời gian: から...まで nói khoảng bắt đầu-kết thúc, còn 今、～時～分です nói một mốc giờ."
+        },
+        {
+          "pattern": "N は どこ/どちら ですか",
+          "contrast": "khác thông tin: どこ/どちら hỏi vị trí, còn 今、～時～分です cung cấp thời gian."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

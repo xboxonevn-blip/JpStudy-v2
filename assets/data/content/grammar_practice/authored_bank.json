@@ -3824,6 +3824,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-form-l1-001",
+      "template_id": "tpl-grammar-n5-019-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn chữ chỉ 'giờ' trong câu giờ hiện tại: 今、七 ___ です。",
+      "answer_template": "時",
+      "options_template": [
+        "時",
+        "分",
+        "国",
+        "何"
+      ],
+      "distractor_strategy": "hour-kanji-vs-minute-country-wh",
+      "teaching_note": "時 đi sau số giờ; 分 đi sau số phút.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-form-l1-002",
+      "template_id": "tpl-grammar-n5-019-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để nói 'Bây giờ là 9 giờ 10 phút'?",
+      "answer_template": "今、九時十分です。",
+      "options_template": [
+        "今、九時十分です。",
+        "今、十分九時です。",
+        "九分十時です。",
+        "今、九時十国です。"
+      ],
+      "distractor_strategy": "hour-minute-order",
+      "teaching_note": "Thứ tự là 今 + giờ時 + phút分 + です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-019-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "今、三時十五分です nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Bây giờ là 3 giờ 15 phút.",
+      "options_template": [
+        "Bây giờ là 3 giờ 15 phút.",
+        "Từ 3 giờ đến 15 phút.",
+        "3 giờ ở đâu?",
+        "3 giờ là quốc gia nào?"
+      ],
+      "distractor_strategy": "current-time-vs-range-location-country",
+      "teaching_note": "Mẫu này nói một mốc giờ hiện tại, không phải khoảng thời gian.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-019-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong 今、～時～分です, 時 và 分 lần lượt đánh dấu gì?",
+      "answer_template": "時 đánh dấu giờ; 分 đánh dấu phút.",
+      "distractor_strategy": "hour-minute-unit-recall",
+      "teaching_note": "Đọc theo cặp đơn vị: số + 時, số + 分.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-usage-l3-005",
+      "template_id": "tpl-grammar-n5-019-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Bây giờ là 8 giờ 20 phút': 今、 / 八時 / 二十分です",
+      "answer_template": "今、八時二十分です。",
+      "options_template": [
+        "今、",
+        "八時",
+        "二十分です"
+      ],
+      "distractor_strategy": "current-time-sequencing",
+      "teaching_note": "今 đứng đầu để neo vào hiện tại; giờ trước phút.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-usage-l3-006",
+      "template_id": "tpl-grammar-n5-019-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Bây giờ là 6 giờ 30 phút.'",
+      "answer_template": "今、六時三十分です。",
+      "distractor_strategy": "time-production-6-30",
+      "teaching_note": "30 phút là 三十分; vẫn đặt sau 六時.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-context-l3-007",
+      "template_id": "tpl-grammar-n5-019-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn nhìn đồng hồ ở ga tàu: 10:05. Viết câu 'Bây giờ là 10 giờ 5 phút.'",
+      "answer_template": "今、十時五分です。",
+      "distractor_strategy": "station-clock-current-time",
+      "teaching_note": "05 phút vẫn dùng 五分 sau 十時.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-context-l2-008",
+      "template_id": "tpl-grammar-n5-019-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với 今、～時～分です?",
+      "answer_template": "Bạn đang thông báo giờ hiện tại theo đồng hồ.",
+      "options_template": [
+        "Bạn đang thông báo giờ hiện tại theo đồng hồ.",
+        "Bạn đang hỏi quốc gia của người nghe.",
+        "Bạn đang nói từ 9 giờ đến 5 giờ.",
+        "Bạn đang hỏi nhà vệ sinh ở đâu."
+      ],
+      "distractor_strategy": "current-time-context-vs-country-range-location",
+      "teaching_note": "今 neo câu vào hiện tại; から...まで mới nói khoảng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-019-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần nói một mốc giờ hiện tại là 9:00, không nói khoảng làm việc từ 9 đến 5. Câu nào đúng?",
+      "answer_template": "今、九時です。",
+      "options_template": [
+        "今、九時です。",
+        "九時から五時までです。",
+        "九時はどこですか。",
+        "九時の五時です。"
+      ],
+      "distractor_strategy": "time-point-vs-range-location-no-analysis",
+      "teaching_note": "L4: 今、九時です là mốc giờ; から...まで là khoảng thời gian.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-019-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-019-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Đồng hồ chỉ 2:30. Câu nào giữ đúng trật tự giờ trước, phút sau?",
+      "answer_template": "今、二時三十分です。",
+      "options_template": [
+        "今、二時三十分です。",
+        "今、三十分二時です。",
+        "今、二分三十時です。",
+        "今、二時三十時です。"
+      ],
+      "distractor_strategy": "hour-minute-order-analysis",
+      "teaching_note": "Giờ luôn nhận 時; phút luôn nhận 分. Đừng đảo đơn vị.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

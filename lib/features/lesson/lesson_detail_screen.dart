@@ -248,6 +248,37 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               if (!_focusMode) ...[
+                                _LessonBreadcrumbBar(
+                                  levelCode: level.shortLabel,
+                                  lessonTitle: title,
+                                ),
+                                const SizedBox(height: 10),
+                                _LessonHeader(
+                                  language: language,
+                                  title: title,
+                                  canGoPrevious: widget.lessonId > 1,
+                                  onPrevious: widget.lessonId > 1
+                                      ? () => context.openLesson(
+                                          widget.lessonId - 1,
+                                          levelCode: level.shortLabel,
+                                        )
+                                      : null,
+                                  onNext: () => context.openLesson(
+                                    widget.lessonId + 1,
+                                    levelCode: level.shortLabel,
+                                  ),
+                                  onReport: () => _reportLesson(
+                                    language,
+                                    level,
+                                    title,
+                                    terms,
+                                  ),
+                                  onWrite: () => context.openLessonWrite(
+                                    storageLessonId,
+                                    title: title,
+                                  ),
+                                ),
+                                const SizedBox(height: 16),
                                 _ModeSwitcher(
                                   language: language,
                                   mode: _mode,

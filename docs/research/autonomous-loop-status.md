@@ -9,6 +9,13 @@
 - TDD: new RED tests covered no Kanji tab, mode picker keys, term-list badges, and desktop max-width; targeted lesson/nav suite passed `54/54`.
 - Gate: `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean; full `flutter test --concurrency=1` passed `2426/2426`.
 
+# 2026-05-21 — Megaprompt Phase 3 lesson page redesign batch 2
+
+- Added in-page breadcrumb and lesson header below the app bar with previous/next lesson actions, `Góp ý`/report action, and writing-practice action.
+- Header actions reuse existing live lesson detail/write/report flows; no placeholder route was added.
+- TDD: new RED test covered breadcrumb/header/action keys; targeted lesson/nav suite passed `55/55`.
+- Gate: `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean; full `flutter test --concurrency=1` passed `2427/2427`.
+
 # 2026-05-21 — Megaprompt Phase 2 conjugation layer done
 
 - Added `tool/research/generate_conjugation_corpus.js` with validation and generated `assets/data/content/conjugation/conjugation_corpus.json`.

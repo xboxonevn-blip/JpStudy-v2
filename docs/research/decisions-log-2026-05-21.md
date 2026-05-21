@@ -111,3 +111,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This removes the empty/stub Kanji destination now, keeps the existing grammar panel reachable, and creates a learner-facing Kanji cross-link from the term list without a large route rewrite in the same batch.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-012 - Reuse existing lesson routes for header actions
+**Phase**: 3
+**Date**: 2026-05-21 06:21 (local)
+**Context**: Phase 3 calls for previous/next, feedback, and writing actions before the full Phase 4 exercise route overhaul exists.
+**Options considered**: add new placeholder routes | hide actions until Phase 4 | reuse existing lesson detail/write/report flows
+**Chosen**: reuse existing lesson detail/write/report flows
+**Rationale**: Existing routes are live and tested, so header actions are functional now without adding dead UI or new route debt.
+**Reversible**: yes
+**Owner review**: pending

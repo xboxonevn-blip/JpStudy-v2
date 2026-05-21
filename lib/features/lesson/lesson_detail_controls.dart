@@ -117,6 +117,123 @@ class _ReviewSummary extends StatelessWidget {
   }
 }
 
+class _LessonBreadcrumbBar extends StatelessWidget {
+  const _LessonBreadcrumbBar({
+    required this.levelCode,
+    required this.lessonTitle,
+  });
+
+  final String levelCode;
+  final String lessonTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        '$levelCode / $lessonTitle',
+        key: const ValueKey('lesson_breadcrumb_bar'),
+        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+          color: palette.ink.withValues(alpha: 0.64),
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+    );
+  }
+}
+
+class _LessonHeader extends StatelessWidget {
+  const _LessonHeader({
+    required this.language,
+    required this.title,
+    required this.canGoPrevious,
+    required this.onPrevious,
+    required this.onNext,
+    required this.onReport,
+    required this.onWrite,
+  });
+
+  final AppLanguage language;
+  final String title;
+  final bool canGoPrevious;
+  final VoidCallback? onPrevious;
+  final VoidCallback onNext;
+  final VoidCallback onReport;
+  final VoidCallback onWrite;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      key: const ValueKey('lesson_header'),
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(
+          title,
+          style: Theme.of(
+            context,
+          ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800),
+        ),
+        const SizedBox(height: 10),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            OutlinedButton.icon(
+              key: const ValueKey('lesson_prev_button'),
+              onPressed: canGoPrevious ? onPrevious : null,
+              icon: const Icon(Icons.chevron_left_rounded),
+              label: Text(_previousLabel(language)),
+            ),
+            OutlinedButton.icon(
+              key: const ValueKey('lesson_next_button'),
+              onPressed: onNext,
+              icon: const Icon(Icons.chevron_right_rounded),
+              label: Text(_nextLabel(language)),
+            ),
+            OutlinedButton.icon(
+              key: const ValueKey('lesson_report_button'),
+              onPressed: onReport,
+              icon: const Icon(Icons.flag_outlined),
+              label: Text(_reportLabel(language)),
+            ),
+            FilledButton.icon(
+              key: const ValueKey('lesson_write_button'),
+              onPressed: onWrite,
+              icon: const Icon(Icons.edit_note_rounded),
+              label: Text(_writeLabel(language)),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  String _previousLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Previous',
+    AppLanguage.vi => 'Bài trước',
+    AppLanguage.ja => '前へ',
+  };
+
+  String _nextLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Next',
+    AppLanguage.vi => 'Bài tiếp',
+    AppLanguage.ja => '次へ',
+  };
+
+  String _reportLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Report',
+    AppLanguage.vi => 'Góp ý',
+    AppLanguage.ja => '報告',
+  };
+
+  String _writeLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Writing',
+    AppLanguage.vi => 'Luyện viết',
+    AppLanguage.ja => '書く',
+  };
+}
+
 class _SummaryChip extends StatelessWidget {
   const _SummaryChip({required this.label, required this.value});
 

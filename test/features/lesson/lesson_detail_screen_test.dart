@@ -123,8 +123,26 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
 
-    expect(find.textContaining('N2 / Shin Kanzen N2 Lesson 1'), findsOneWidget);
+    expect(find.textContaining('N2 / Shin Kanzen N2 Lesson 1'), findsWidgets);
     expect(find.textContaining('N2 / Minna No Nihongo 1'), findsNothing);
+  });
+
+  testWidgets('lesson workspace renders breadcrumb and header actions', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      buildScreen([_term(1, '犬', 'dog')], expectedFallbackTitle: 'Unit One'),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.byKey(const ValueKey('lesson_breadcrumb_bar')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_header')), findsOneWidget);
+    expect(find.textContaining('N5 /'), findsWidgets);
+    expect(find.byKey(const ValueKey('lesson_prev_button')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_next_button')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_report_button')), findsOneWidget);
+    expect(find.byKey(const ValueKey('lesson_write_button')), findsOneWidget);
   });
 
   testWidgets('lesson navigation hides empty Kanji tab', (tester) async {
@@ -275,7 +293,7 @@ void main() {
     expect(find.text(AppLanguage.en.addTermLabel), findsNothing);
     expect(find.text(AppLanguage.en.combineSetLabel), findsNothing);
     expect(find.text(AppLanguage.en.resetProgressLabel), findsOneWidget);
-    expect(find.text(AppLanguage.en.reportLabel), findsOneWidget);
+    expect(find.text(AppLanguage.en.reportLabel), findsWidgets);
   });
 
   testWidgets('does not show zero totals while lesson terms are loading', (

@@ -31,6 +31,7 @@ import 'package:jpstudy/features/home/widgets/weakness_radar_card.dart';
 import 'package:jpstudy/features/home/widgets/weekly_challenge_card.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
 import 'package:jpstudy/features/vocab/vocab_copy.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class LearningPathScreen extends ConsumerWidget {
   const LearningPathScreen({super.key});
@@ -486,10 +487,10 @@ class _FoundationsFeaturedCard extends StatelessWidget {
               const SizedBox(height: 12),
               Align(
                 alignment: Alignment.centerLeft,
-                child: FilledButton.icon(
+                child: AppButton(
+                  label: _foundationsCtaLabel(language),
+                  icon: Icons.play_arrow_rounded,
                   onPressed: context.openFoundations,
-                  icon: const Icon(Icons.play_arrow_rounded),
-                  label: Text(_foundationsCtaLabel(language)),
                 ),
               ),
             ],
@@ -686,23 +687,11 @@ class _TextbookResourceChip extends StatelessWidget {
     final displayLabel = optionalLabel == null
         ? label
         : '$label · $optionalLabel';
-    return Material(
-      color: Colors.transparent,
-      child: ActionChip(
-        onPressed: () => context.go(destination),
-        visualDensity: VisualDensity.compact,
-        side: BorderSide(color: color.withValues(alpha: 0.18)),
-        backgroundColor: color.withValues(alpha: 0.08),
-        label: Text(
-          displayLabel,
-          style: TextStyle(
-            color: color,
-            fontSize: 10.5,
-            fontWeight: FontWeight.w800,
-            height: 1.15,
-          ),
-        ),
-      ),
+    return AppButton(
+      label: displayLabel,
+      variant: AppButtonVariant.secondary,
+      compact: true,
+      onPressed: () => context.go(destination),
     );
   }
 }
@@ -930,43 +919,18 @@ class _DojoHeroCard extends StatelessWidget {
                     spacing: 8,
                     runSpacing: 8,
                     children: [
-                      FilledButton.icon(
+                      AppButton(
+                        label: _primaryLabel(language),
+                        icon: Icons.play_arrow_rounded,
+                        compact: true,
                         onPressed: onPrimaryTap,
-                        style: FilledButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          foregroundColor: const Color(0xFF12324B),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 10,
-                          ),
-                          textStyle: const TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w800,
-                          ),
-                          visualDensity: VisualDensity.compact,
-                        ),
-                        icon: const Icon(Icons.play_arrow_rounded, size: 18),
-                        label: Text(_primaryLabel(language)),
                       ),
-                      OutlinedButton.icon(
+                      AppButton(
+                        label: _secondaryLabel(language),
+                        icon: Icons.quiz_rounded,
+                        variant: AppButtonVariant.secondary,
+                        compact: true,
                         onPressed: onSecondaryTap,
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.white,
-                          side: BorderSide(
-                            color: Colors.white.withValues(alpha: 0.32),
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 10,
-                          ),
-                          textStyle: const TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w800,
-                          ),
-                          visualDensity: VisualDensity.compact,
-                        ),
-                        icon: const Icon(Icons.quiz_rounded, size: 18),
-                        label: Text(_secondaryLabel(language)),
                       ),
                     ],
                   ),

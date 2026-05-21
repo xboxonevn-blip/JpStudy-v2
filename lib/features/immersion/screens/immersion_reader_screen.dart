@@ -12,6 +12,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/utils/japanese_text.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/common/widgets/japanese_background.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../models/immersion_article.dart';
 import '../providers/immersion_providers.dart';
@@ -277,9 +278,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
           ],
         ),
         actions: [
-          FilledButton(
+          AppButton(
+            label: language.doneLabel,
             onPressed: () => Navigator.of(context).pop(),
-            child: Text(language.doneLabel),
           ),
         ],
       ),
@@ -979,7 +980,9 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                       spacing: 8,
                       runSpacing: 8,
                       children: [
-                        FilledButton.icon(
+                        AppButton(
+                          label: _unknownQueueAddAllLabel(language),
+                          icon: Icons.library_add_check_rounded,
                           onPressed: entries.isEmpty
                               ? null
                               : () async {
@@ -987,10 +990,11 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                                   if (!mounted) return;
                                   setSheetState(() {});
                                 },
-                          icon: const Icon(Icons.library_add_check_rounded),
-                          label: Text(_unknownQueueAddAllLabel(language)),
                         ),
-                        OutlinedButton.icon(
+                        AppButton(
+                          label: _unknownQueueClearLabel(language),
+                          icon: Icons.delete_sweep_rounded,
+                          variant: AppButtonVariant.secondary,
                           onPressed: entries.isEmpty
                               ? null
                               : () {
@@ -998,8 +1002,6 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                                   if (!mounted) return;
                                   setSheetState(() {});
                                 },
-                          icon: const Icon(Icons.delete_sweep_rounded),
-                          label: Text(_unknownQueueClearLabel(language)),
                         ),
                       ],
                     ),
@@ -1440,7 +1442,12 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
               const SizedBox(height: AppSpacing.lg),
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton.icon(
+                child: AppButton(
+                  label: isSaved
+                      ? language.immersionAlreadyAddedLabel
+                      : language.immersionAddSrsLabel,
+                  icon: Icons.add_rounded,
+                  expanded: true,
                   onPressed: isSaved
                       ? null
                       : () async {
@@ -1448,12 +1455,6 @@ class _ImmersionReaderScreenState extends ConsumerState<ImmersionReaderScreen> {
                           if (!context.mounted) return;
                           Navigator.pop(context);
                         },
-                  icon: const Icon(Icons.add_rounded),
-                  label: Text(
-                    isSaved
-                        ? language.immersionAlreadyAddedLabel
-                        : language.immersionAddSrsLabel,
-                  ),
                 ),
               ),
             ],
@@ -1906,15 +1907,16 @@ class _UnknownQueueCard extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              FilledButton.icon(
+              AppButton(
+                label: reviewLabel,
+                icon: Icons.visibility_rounded,
                 onPressed: onReview,
-                icon: const Icon(Icons.visibility_rounded),
-                label: Text(reviewLabel),
               ),
-              OutlinedButton.icon(
+              AppButton(
+                label: addAllLabel,
+                icon: Icons.library_add_check_rounded,
+                variant: AppButtonVariant.secondary,
                 onPressed: onAddAll,
-                icon: const Icon(Icons.library_add_check_rounded),
-                label: Text(addAllLabel),
               ),
             ],
           ),
@@ -2024,20 +2026,29 @@ class _ImmersionQuizCard extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              ChoiceChip(
-                label: Text(filterDayLabel),
-                selected: selectedFilter == _QuizHistoryFilter.day,
-                onSelected: (_) => onFilterChanged(_QuizHistoryFilter.day),
+              AppButton(
+                label: filterDayLabel,
+                compact: true,
+                variant: selectedFilter == _QuizHistoryFilter.day
+                    ? AppButtonVariant.primary
+                    : AppButtonVariant.secondary,
+                onPressed: () => onFilterChanged(_QuizHistoryFilter.day),
               ),
-              ChoiceChip(
-                label: Text(filterWeekLabel),
-                selected: selectedFilter == _QuizHistoryFilter.week,
-                onSelected: (_) => onFilterChanged(_QuizHistoryFilter.week),
+              AppButton(
+                label: filterWeekLabel,
+                compact: true,
+                variant: selectedFilter == _QuizHistoryFilter.week
+                    ? AppButtonVariant.primary
+                    : AppButtonVariant.secondary,
+                onPressed: () => onFilterChanged(_QuizHistoryFilter.week),
               ),
-              ChoiceChip(
-                label: Text(filterAllLabel),
-                selected: selectedFilter == _QuizHistoryFilter.all,
-                onSelected: (_) => onFilterChanged(_QuizHistoryFilter.all),
+              AppButton(
+                label: filterAllLabel,
+                compact: true,
+                variant: selectedFilter == _QuizHistoryFilter.all
+                    ? AppButtonVariant.primary
+                    : AppButtonVariant.secondary,
+                onPressed: () => onFilterChanged(_QuizHistoryFilter.all),
               ),
             ],
           ),
@@ -2193,16 +2204,17 @@ class _ImmersionQuizCard extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.w900, color: palette.ink),
             ),
             const SizedBox(height: 8),
-            OutlinedButton.icon(
+            AppButton(
+              label: retryLabel,
+              icon: Icons.restart_alt_rounded,
+              variant: AppButtonVariant.secondary,
               onPressed: onRetry,
-              icon: const Icon(Icons.restart_alt_rounded),
-              label: Text(retryLabel),
             ),
           ] else
-            FilledButton.icon(
+            AppButton(
+              label: submitLabel,
+              icon: Icons.task_alt_rounded,
               onPressed: onSubmit,
-              icon: const Icon(Icons.task_alt_rounded),
-              label: Text(submitLabel),
             ),
         ],
       ),

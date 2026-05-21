@@ -27,6 +27,7 @@ import 'package:jpstudy/features/home/providers/recovery_pack_provider.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/core/models/streak_milestone.dart';
 import 'package:jpstudy/features/home/widgets/home_surface.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import 'package:jpstudy/features/home/providers/coach_session_provider.dart';
 
@@ -76,7 +77,6 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
     final language = ref.watch(appLanguageProvider);
     final dashboard = ref.watch(dashboardProvider).value;
     final grammarGhostCount = ref
@@ -223,8 +223,13 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
                 const SizedBox(width: 12),
                 SizedBox(
                   height: widget.compact ? 42 : 46,
-                  child: FilledButton.icon(
+                  child: AppButton(
                     key: const ValueKey('daily_session_cta'),
+                    label: ctaLabel,
+                    icon: isComplete
+                        ? Icons.insights_rounded
+                        : Icons.play_arrow_rounded,
+                    compact: widget.compact,
                     onPressed: () async {
                       if (isComplete) {
                         context.openTodaySessionSummary();
@@ -238,21 +243,6 @@ class _DailySessionCardState extends ConsumerState<DailySessionCard>
                         progress: progress,
                       );
                     },
-                    icon: Icon(
-                      isComplete
-                          ? Icons.insights_rounded
-                          : Icons.play_arrow_rounded,
-                    ),
-                    label: Text(ctaLabel),
-                    style: FilledButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: palette.ink,
-                      textStyle: const TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w800,
-                      ),
-                      padding: const EdgeInsets.symmetric(horizontal: 14),
-                    ),
                   ),
                 ),
               ],

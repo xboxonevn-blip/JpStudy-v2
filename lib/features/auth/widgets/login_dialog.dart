@@ -8,6 +8,7 @@ import 'package:jpstudy/core/auth/auth_provider.dart';
 import 'package:jpstudy/core/auth/auth_service.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/features/legal/legal_document_screen.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 /// Login dialog wired to Firebase Auth via [AuthService].
 class LoginDialog extends ConsumerStatefulWidget {
@@ -247,33 +248,13 @@ class _LoginDialogState extends ConsumerState<LoginDialog> {
                 const SizedBox(height: AppSpacing.lg),
                 SizedBox(
                   height: 48,
-                  child: ElevatedButton(
+                  child: AppButton(
+                    label: language.loginSubmitLabel,
+                    icon: Icons.login_rounded,
+                    expanded: true,
                     onPressed: _busy
                         ? null
                         : () => _handleEmailSubmit(language),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: palette.info,
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      textStyle: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    child: _busy
-                        ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(
-                              strokeWidth: 2.5,
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                Colors.white,
-                              ),
-                            ),
-                          )
-                        : Text(language.loginSubmitLabel),
                   ),
                 ),
                 const SizedBox(height: AppSpacing.md),
@@ -347,34 +328,43 @@ class _GoogleSignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final enabled = onPressed != null;
     return SizedBox(
       height: 48,
-      child: OutlinedButton(
-        onPressed: onPressed,
-        style: OutlinedButton.styleFrom(
-          backgroundColor: palette.elevated,
-          foregroundColor: palette.ink,
-          side: BorderSide(color: palette.outline),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const _GoogleGlyph(),
-            const SizedBox(width: 10),
-            Flexible(
-              child: Text(
-                label,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
-                overflow: TextOverflow.ellipsis,
-              ),
+      child: Material(
+        color: enabled
+            ? palette.elevated
+            : palette.outlineSoft.withValues(alpha: 0.45),
+        borderRadius: BorderRadius.circular(10),
+        child: InkWell(
+          onTap: onPressed,
+          borderRadius: BorderRadius.circular(10),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: palette.outline),
             ),
-          ],
+            alignment: Alignment.center,
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const _GoogleGlyph(),
+                const SizedBox(width: 10),
+                Flexible(
+                  child: Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: palette.ink.withValues(alpha: enabled ? 1 : 0.42),
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

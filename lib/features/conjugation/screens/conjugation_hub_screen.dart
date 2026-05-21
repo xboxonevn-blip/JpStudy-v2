@@ -9,6 +9,7 @@ import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/interlink/widgets/related_section.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class ConjugationHubScreen extends ConsumerStatefulWidget {
   const ConjugationHubScreen({super.key, this.contentVocabId});
@@ -100,42 +101,47 @@ class _ConjugationHubScreenState extends ConsumerState<ConjugationHubScreen> {
                   spacing: 8,
                   runSpacing: 8,
                   children: [
-                    FilterChip(
+                    AppButton(
                       key: const ValueKey('conjugation_filter_all'),
-                      selected: _filter == _ConjugationKindFilter.all,
-                      label: Text(_tr(language, 'All', 'Tất cả', 'すべて')),
-                      onSelected: (_) =>
+                      label: _tr(language, 'All', 'Tất cả', 'すべて'),
+                      variant: _filter == _ConjugationKindFilter.all
+                          ? AppButtonVariant.primary
+                          : AppButtonVariant.secondary,
+                      compact: true,
+                      onPressed: () =>
                           setState(() => _filter = _ConjugationKindFilter.all),
                     ),
-                    FilterChip(
+                    AppButton(
                       key: const ValueKey('conjugation_filter_verb'),
-                      selected: _filter == _ConjugationKindFilter.verb,
-                      label: Text(_tr(language, 'Verbs', 'Động từ', '動詞')),
-                      onSelected: (_) =>
+                      label: _tr(language, 'Verbs', 'Động từ', '動詞'),
+                      variant: _filter == _ConjugationKindFilter.verb
+                          ? AppButtonVariant.primary
+                          : AppButtonVariant.secondary,
+                      compact: true,
+                      onPressed: () =>
                           setState(() => _filter = _ConjugationKindFilter.verb),
                     ),
-                    FilterChip(
+                    AppButton(
                       key: const ValueKey('conjugation_filter_adjective'),
-                      selected: _filter == _ConjugationKindFilter.adjective,
-                      label: Text(
-                        _tr(language, 'Adjectives', 'Tính từ', '形容詞'),
-                      ),
-                      onSelected: (_) => setState(
+                      label: _tr(language, 'Adjectives', 'Tính từ', '形容詞'),
+                      variant: _filter == _ConjugationKindFilter.adjective
+                          ? AppButtonVariant.primary
+                          : AppButtonVariant.secondary,
+                      compact: true,
+                      onPressed: () => setState(
                         () => _filter = _ConjugationKindFilter.adjective,
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 12),
-                FilledButton.icon(
-                  icon: const Icon(Icons.swap_horiz_rounded),
-                  label: Text(
-                    _tr(
-                      language,
-                      'Practice 50+ forms',
-                      'Luyện chia thể 50+ câu',
-                      '50問以上の活用練習',
-                    ),
+                AppButton(
+                  icon: Icons.swap_horiz_rounded,
+                  label: _tr(
+                    language,
+                    'Practice 50+ forms',
+                    'Luyện chia thể 50+ câu',
+                    '50問以上の活用練習',
                   ),
                   onPressed: () {
                     context.pushNamed(

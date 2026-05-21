@@ -137,7 +137,7 @@ class _VocabCatalogBody extends ConsumerWidget {
                 Text(_chapterSummaryLabel(program.chapterCount!, language)),
               ],
               const SizedBox(height: 12),
-              Text(_previewDialogBody(language, program)),
+              Text(_previewDialogBody(language)),
             ],
           ),
           actions: [
@@ -153,7 +153,7 @@ class _VocabCatalogBody extends ConsumerWidget {
     // Core hajimete catalog — no StudyLevel required, works for all levels
     if (program.type == _VocabProgramType.core) {
       context.openHajimeteCatalog(
-        levelCode: section.levelCode,
+        levelCode: program.levelCode,
         title: '${program.titleTop} ${program.titleMain}'.trim(),
         subtitle: _localizedProgramSubtitle(program, language),
       );
@@ -161,14 +161,14 @@ class _VocabCatalogBody extends ConsumerWidget {
     }
 
     // Review path needs StudyLevel (for scoping queue to level)
-    final level = StudyLevel.fromCode(section.levelCode);
+    final level = StudyLevel.fromCode(program.levelCode);
     if (level == null) return;
     unawaited(setPersistedStudyLevel(ref, level));
 
-    final minnaRange = _minnaLessonRange(section.levelCode, program.type);
+    final minnaRange = _minnaLessonRange(program.levelCode, program.type);
     if (minnaRange != null) {
       context.openMinnaCatalog(
-        levelCode: section.levelCode,
+        levelCode: program.levelCode,
         title: program.titleTop,
         subtitle: _localizedProgramSubtitle(program, language),
         lessonStart: minnaRange.$1,
@@ -179,7 +179,7 @@ class _VocabCatalogBody extends ConsumerWidget {
 
     if (program.type == _VocabProgramType.shinkanzen) {
       context.openShinkanzenCatalog(
-        levelCode: section.levelCode,
+        levelCode: program.levelCode,
         title: '${program.titleTop} ${program.titleMain}'.trim(),
         subtitle: _localizedProgramSubtitle(program, language),
       );
@@ -188,7 +188,7 @@ class _VocabCatalogBody extends ConsumerWidget {
 
     if (program.type == _VocabProgramType.mimikara) {
       context.openMimikaraCatalog(
-        levelCode: section.levelCode,
+        levelCode: program.levelCode,
         title: '${program.titleTop} ${program.titleMain}'.trim(),
         subtitle: _localizedProgramSubtitle(program, language),
       );
@@ -199,7 +199,7 @@ class _VocabCatalogBody extends ConsumerWidget {
       '/vocab/review',
       extra: VocabReviewArgs(
         source: 'catalog',
-        levelCode: section.levelCode,
+        levelCode: program.levelCode,
         title: '${program.titleTop} ${program.titleMain}'.trim(),
         subtitle: _localizedProgramSubtitle(program, language),
       ),
@@ -960,6 +960,25 @@ class _CoreProgramCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: AppSpacing.sm),
+                Wrap(
+                  runSpacing: AppSpacing.sm,
+                  spacing: AppSpacing.sm,
+                  children: [
+                    if (program.chapterCount != null)
+                      _MetaPill(
+                        icon: Icons.menu_book_rounded,
+                        label: _chapterSummaryLabel(
+                          program.chapterCount!,
+                          language,
+                        ),
+                      ),
+                    _MetaPill(
+                      icon: Icons.insights_rounded,
+                      label: _programProgressLabel(language, 0),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: AppSpacing.sm),
                 Text(
                   _localizedProgramSubtitle(program, language),
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -1192,6 +1211,25 @@ class _CompanionProgramCard extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 8),
+                    Wrap(
+                      runSpacing: 8,
+                      spacing: 8,
+                      children: [
+                        if (program.chapterCount != null)
+                          _FooterMetaPill(
+                            label: _chapterSummaryLabel(
+                              program.chapterCount!,
+                              language,
+                            ),
+                            foreground: footerForeground,
+                          ),
+                        _FooterMetaPill(
+                          label: _programProgressLabel(language, 0),
+                          foreground: footerForeground,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
                     Text(
                       _programFooterHint(program.type, language),
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -1407,6 +1445,32 @@ class _MetaPill extends StatelessWidget {
   }
 }
 
+class _FooterMetaPill extends StatelessWidget {
+  const _FooterMetaPill({required this.label, required this.foreground});
+
+  final String label;
+  final Color foreground;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+      decoration: BoxDecoration(
+        color: foreground.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(999),
+        border: Border.all(color: foreground.withValues(alpha: 0.24)),
+      ),
+      child: Text(
+        label,
+        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+          color: foreground,
+          fontWeight: FontWeight.w800,
+        ),
+      ),
+    );
+  }
+}
+
 class _VocabCatalogSection {
   const _VocabCatalogSection({
     required this.key,
@@ -1436,6 +1500,7 @@ enum _VocabProgramType {
 class _VocabCatalogProgram {
   const _VocabCatalogProgram({
     required this.key,
+    required this.levelCode,
     required this.titleTop,
     required this.titleMain,
     required this.termCount,
@@ -1443,18 +1508,17 @@ class _VocabCatalogProgram {
     required this.type,
     required this.isInteractive,
     this.chapterCount,
-    this.previewBody,
     this.isComingSoon = false,
     this.badgeText,
   });
 
   final String key;
+  final String levelCode;
   final String titleTop;
   final String titleMain;
   final int termCount;
   final int? chapterCount;
   final String subtitle;
-  final String? previewBody;
   final _VocabProgramType type;
   final bool isInteractive;
   final bool isComingSoon;
@@ -1462,75 +1526,6 @@ class _VocabCatalogProgram {
 
   bool get hasData => termCount > 0;
   bool get isPreviewOnly => hasData && !isInteractive;
-}
-
-_VocabCatalogSection _buildJlptSection({
-  required AppLanguage language,
-  required String levelCode,
-  required int liveCount,
-  required int dueCount,
-  required DateTime? nextReview,
-  required Color accent,
-  required String companionTitle,
-  required String companionSubtitle,
-  required _VocabProgramType companionType,
-  int? companionCountOverride,
-  int? companionStructureCount,
-  String? companionPreviewBody,
-  required bool isInteractive,
-  List<_VocabCatalogProgram> extraPrograms = const [],
-}) {
-  final chapterCount = _chapterCountForLevel(levelCode);
-  final coreInteractive = isInteractive && liveCount > 0;
-  final coreBadge = dueCount > 0
-      ? _formatDueBadge(language, dueCount, nextReview)
-      : _formatReviewTiming(language, nextReview);
-  final companionTermCount = companionCountOverride ?? 0;
-  final companionInteractive =
-      isInteractive &&
-      companionTermCount > 0 &&
-      (companionType == _VocabProgramType.shinkanzen ||
-          companionType == _VocabProgramType.mimikara ||
-          _minnaLessonRange(levelCode, companionType) != null);
-
-  return _VocabCatalogSection(
-    key: levelCode.toLowerCase(),
-    levelCode: levelCode,
-    subtitle: 'JLPT $levelCode vocabulary path',
-    accent: accent,
-    programs: [
-      _VocabCatalogProgram(
-        key: '${levelCode.toLowerCase()}_core',
-        titleTop: 'Hajimete no Nihongo Tango',
-        titleMain: levelCode,
-        termCount: liveCount,
-        chapterCount: chapterCount,
-        subtitle:
-            'Chapter-based Hajimete study path for $levelCode vocabulary.',
-        type: _VocabProgramType.core,
-        isInteractive: coreInteractive,
-        isComingSoon: liveCount == 0,
-        badgeText: coreInteractive ? coreBadge : null,
-      ),
-      _VocabCatalogProgram(
-        key: '${levelCode.toLowerCase()}_companion',
-        titleTop: companionTitle,
-        titleMain: levelCode,
-        termCount: companionTermCount,
-        chapterCount: companionStructureCount,
-        subtitle: companionSubtitle,
-        previewBody: companionPreviewBody,
-        type: companionType,
-        isInteractive: companionInteractive,
-        isComingSoon: companionTermCount == 0,
-        badgeText:
-            companionTermCount > 0 && companionType != _VocabProgramType.minna
-            ? _programBadge(companionType, language)
-            : null,
-      ),
-      ...extraPrograms,
-    ],
-  );
 }
 
 class _VocabSearchCard extends ConsumerStatefulWidget {

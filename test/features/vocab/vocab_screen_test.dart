@@ -517,16 +517,16 @@ void main() {
       };
 
       for (final key in const [
-        'n5_core',
-        'n5_companion',
-        'n4_core',
-        'n4_companion',
-        'n3_core',
-        'n3_companion',
-        'n2_core',
-        'n2_companion',
-        'n1_core',
-        'n1_companion',
+        'hajimete_tango_n5',
+        'minna_n5',
+        'hajimete_tango_n4',
+        'minna_n4',
+        'hajimete_tango_n3',
+        'mimikara_n3',
+        'hajimete_tango_n2',
+        'mimikara_n2',
+        'hajimete_tango_n1',
+        'mimikara_n1',
       ]) {
         final dynamic program = programsByKey[key];
         expect(program, isNotNull, reason: key);
@@ -572,12 +572,12 @@ void main() {
       };
 
       for (final key in const [
-        'n3_core',
-        'n3_companion',
-        'n2_core',
-        'n2_companion',
-        'n1_core',
-        'n1_companion',
+        'hajimete_tango_n3',
+        'mimikara_n3',
+        'hajimete_tango_n2',
+        'mimikara_n2',
+        'hajimete_tango_n1',
+        'mimikara_n1',
       ]) {
         final dynamic program = programsByKey[key];
         expect(program, isNotNull, reason: key);
@@ -614,11 +614,11 @@ void main() {
 
       expect(find.byKey(const ValueKey('vocab_catalog_error')), findsNothing);
       expect(find.byKey(const ValueKey('vocab_catalog_hero')), findsOneWidget);
-      expect(find.byKey(const ValueKey('section_n5')), findsOneWidget);
-      expect(find.byKey(const ValueKey('section_n4')), findsOneWidget);
-      expect(find.byKey(const ValueKey('section_n3')), findsOneWidget);
-      expect(find.byKey(const ValueKey('section_n2')), findsOneWidget);
-      expect(find.byKey(const ValueKey('section_n1')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_hajimete')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_minna')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_mimikara')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_mimikara')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_mimikara')), findsOneWidget);
       expect(find.byKey(const ValueKey('section_se')), findsNothing);
       expect(find.text('N5'), findsWidgets);
       expect(find.text('N4'), findsWidgets);
@@ -626,7 +626,10 @@ void main() {
       expect(find.text('N2'), findsWidgets);
       expect(find.text('N1'), findsWidgets);
       expect(find.text('SE'), findsNothing);
-      expect(find.byKey(const ValueKey('program_n5_n5_core')), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('program_hajimete_hajimete_tango_n5')),
+        findsOneWidget,
+      );
       expect(
         find.byKey(const ValueKey('program_n1_advanced_n1')),
         findsNothing,
@@ -638,6 +641,45 @@ void main() {
       );
     },
   );
+
+  testWidgets('VocabScreen renders textbook index groups and 10 programs', (
+    tester,
+  ) async {
+    final repo = _FakeVocabLessonRepository(bank: const {});
+
+    await tester.pumpWidget(_buildScreen(repo: repo));
+    await _pumpCatalog(tester);
+
+    expect(find.byKey(const ValueKey('section_hajimete')), findsOneWidget);
+    expect(find.byKey(const ValueKey('section_minna')), findsOneWidget);
+    expect(find.byKey(const ValueKey('section_mimikara')), findsOneWidget);
+
+    for (final key in const [
+      'program_hajimete_hajimete_tango_n5',
+      'program_hajimete_hajimete_tango_n4',
+      'program_hajimete_hajimete_tango_n3',
+      'program_hajimete_hajimete_tango_n2',
+      'program_hajimete_hajimete_tango_n1',
+      'program_minna_minna_n5',
+      'program_minna_minna_n4',
+      'program_mimikara_mimikara_n3',
+      'program_mimikara_mimikara_n2',
+      'program_mimikara_mimikara_n1',
+    ]) {
+      expect(find.byKey(ValueKey(key)), findsOneWidget, reason: key);
+    }
+
+    expect(
+      find.byKey(const ValueKey('program_mimikara_mimikara_n5')),
+      findsNothing,
+    );
+    expect(
+      find.byKey(const ValueKey('program_mimikara_mimikara_n4')),
+      findsNothing,
+    );
+    expect(find.textContaining('chapters ready'), findsWidgets);
+    expect(find.text('0% progress'), findsWidgets);
+  });
 
   testWidgets('VocabScreen renders catalog while home review data is loading', (
     tester,
@@ -653,7 +695,7 @@ void main() {
     expect(find.byKey(const ValueKey('vocab_catalog_loading')), findsNothing);
     expect(find.byKey(const ValueKey('vocab_catalog_error')), findsNothing);
     expect(find.byKey(const ValueKey('vocab_catalog_hero')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_n5')), findsOneWidget);
+    expect(find.byKey(const ValueKey('section_hajimete')), findsOneWidget);
 
     neverDueTerms.complete(const <UserLessonTermData>[]);
     await _pumpCatalog(tester);
@@ -745,11 +787,11 @@ void main() {
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(
-      find.byKey(const ValueKey('program_n5_n5_companion')),
+      find.byKey(const ValueKey('program_minna_minna_n5')),
     );
     await _pumpCatalog(tester);
 
-    await tester.tap(find.byKey(const ValueKey('program_n5_n5_companion')));
+    await tester.tap(find.byKey(const ValueKey('program_minna_minna_n5')));
     await _pumpCatalog(tester);
 
     expect(find.text('Minna N5'), findsOneWidget);
@@ -776,7 +818,7 @@ void main() {
     await tester.pumpWidget(_buildRouterScreen(repo: repo));
     await _pumpCatalog(tester);
     await tester.ensureVisible(
-      find.byKey(const ValueKey('program_n5_n5_companion')),
+      find.byKey(const ValueKey('program_minna_minna_n5')),
     );
     await _pumpCatalog(tester);
 
@@ -801,11 +843,11 @@ void main() {
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(
-      find.byKey(const ValueKey('program_n5_n5_companion')),
+      find.byKey(const ValueKey('program_minna_minna_n5')),
     );
     await _pumpCatalog(tester);
 
-    await tester.tap(find.byKey(const ValueKey('program_n5_n5_companion')));
+    await tester.tap(find.byKey(const ValueKey('program_minna_minna_n5')));
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(find.byKey(const ValueKey('minna_lesson_1')));
@@ -831,11 +873,11 @@ void main() {
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(
-      find.byKey(const ValueKey('program_n5_n5_companion')),
+      find.byKey(const ValueKey('program_minna_minna_n5')),
     );
     await _pumpCatalog(tester);
 
-    await tester.tap(find.byKey(const ValueKey('program_n5_n5_companion')));
+    await tester.tap(find.byKey(const ValueKey('program_minna_minna_n5')));
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(find.byKey(const ValueKey('minna_review_cta')));
@@ -934,11 +976,13 @@ void main() {
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(
-      find.byKey(const ValueKey('program_n2_n2_core')),
+      find.byKey(const ValueKey('program_hajimete_hajimete_tango_n2')),
     );
     await _pumpCatalog(tester);
 
-    await tester.tap(find.byKey(const ValueKey('program_n2_n2_core')));
+    await tester.tap(
+      find.byKey(const ValueKey('program_hajimete_hajimete_tango_n2')),
+    );
     await _pumpCatalog(tester);
 
     expect(find.byType(HajimeteChapterCatalogScreen), findsOneWidget);
@@ -963,11 +1007,13 @@ void main() {
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(
-      find.byKey(const ValueKey('program_n1_n1_core')),
+      find.byKey(const ValueKey('program_hajimete_hajimete_tango_n1')),
     );
     await _pumpCatalog(tester);
 
-    await tester.tap(find.byKey(const ValueKey('program_n1_n1_core')));
+    await tester.tap(
+      find.byKey(const ValueKey('program_hajimete_hajimete_tango_n1')),
+    );
     await _pumpCatalog(tester);
 
     expect(find.byType(HajimeteChapterCatalogScreen), findsOneWidget);
@@ -990,11 +1036,13 @@ void main() {
     await _pumpCatalog(tester);
 
     await tester.ensureVisible(
-      find.byKey(const ValueKey('program_n3_n3_companion')),
+      find.byKey(const ValueKey('program_mimikara_mimikara_n3')),
     );
     await _pumpCatalog(tester);
 
-    final companionCard = find.byKey(const ValueKey('program_n3_n3_companion'));
+    final companionCard = find.byKey(
+      const ValueKey('program_mimikara_mimikara_n3'),
+    );
     expect(
       find.descendant(of: companionCard, matching: find.text('Mimikara')),
       findsWidgets,
@@ -1017,17 +1065,17 @@ void main() {
     for (final caseData in const [
       (
         level: StudyLevel.n3,
-        cardKey: 'program_n3_n3_companion',
+        cardKey: 'program_mimikara_mimikara_n3',
         text: 'Unit 01',
       ),
       (
         level: StudyLevel.n2,
-        cardKey: 'program_n2_n2_companion',
+        cardKey: 'program_mimikara_mimikara_n2',
         text: 'Unit 01',
       ),
       (
         level: StudyLevel.n1,
-        cardKey: 'program_n1_n1_companion',
+        cardKey: 'program_mimikara_mimikara_n1',
         text: 'Unit 01',
       ),
     ]) {
@@ -1112,11 +1160,13 @@ void main() {
       await _pumpCatalog(tester);
 
       await tester.ensureVisible(
-        find.byKey(const ValueKey('program_n5_n5_core')),
+        find.byKey(const ValueKey('program_hajimete_hajimete_tango_n5')),
       );
       await _pumpCatalog(tester);
 
-      await tester.tap(find.byKey(const ValueKey('program_n5_n5_core')));
+      await tester.tap(
+        find.byKey(const ValueKey('program_hajimete_hajimete_tango_n5')),
+      );
       await _pumpCatalog(tester);
 
       expect(find.byType(HajimeteChapterCatalogScreen), findsOneWidget);
@@ -1463,10 +1513,7 @@ void main() {
 
       final kanjiChip = find.byKey(const ValueKey('kanji_inline_popover_学'));
       await tester.ensureVisible(kanjiChip);
-      await tester.tap(
-        find.widgetWithText(ActionChip, '学'),
-        warnIfMissed: false,
-      );
+      await tester.tap(kanjiChip, warnIfMissed: false);
       await tester.pump();
       await tester.runAsync(() async {
         await Future<void>.delayed(const Duration(seconds: 1));

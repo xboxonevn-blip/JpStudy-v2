@@ -559,3 +559,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This preserves practice coverage and 50-question density while removing the trivial substring-answer failure mode.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-057 - Vocab catalog uses textbook_index as display truth
+**Phase**: Urgent live audit P1 H6
+**Date**: 2026-05-22 12:55 (local)
+**Context**: Live audit found the vocab catalog under-represented available textbook programs and the old provider depended on hard-coded JLPT-level sections plus scattered asset loaders.
+**Options considered**: keep JLPT sections and patch missing cards | query the content database for every track | use `textbook_index.json` as the catalog source of truth and group by publisher
+**Chosen**: Bundle `lib/data/manifests/textbook_index.json` as a Flutter asset, filter to vocab textbooks, and render exactly Hajimete N5-N1, Minna N5/N4, and Mimikara N3/N2/N1 grouped by publisher.
+**Rationale**: The manifest already encodes lesson counts, item counts, levels, categories, and migration status. Using it avoids DB-seed races, fixes the 10-program count deterministically, and prevents invalid Mimikara N5/N4 cards.
+**Reversible**: yes
+**Owner review**: pending

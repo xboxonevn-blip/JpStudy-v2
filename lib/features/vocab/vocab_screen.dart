@@ -16,12 +16,9 @@ import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/core/utils/kana_romaji.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
-import 'package:jpstudy/data/utils/hajimete_catalog_loader.dart';
-import 'package:jpstudy/data/utils/mimikara_catalog_loader.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/content_quality/widgets/content_draft_quality_note.dart';
 import 'package:jpstudy/features/foundations/widgets/foundations_soft_suggest_gate.dart';
-import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
 import 'package:jpstudy/features/vocab/vocab_copy.dart';
 import 'package:jpstudy/features/vocab/vocab_content_timeout.dart';
@@ -29,271 +26,206 @@ import 'package:jpstudy/features/vocab/providers/vocab_home_provider.dart';
 
 part 'vocab_screen_parts.dart';
 
-class _SeriesManifestSummary {
-  const _SeriesManifestSummary({
-    required this.routeCount,
-    required this.readyRouteCount,
-    required this.importedTermCount,
+class _TextbookIndexEntry {
+  const _TextbookIndexEntry({
+    required this.id,
+    required this.levelCode,
+    required this.nameJa,
+    required this.nameVi,
+    required this.nameEn,
+    required this.categories,
+    required this.lessonCount,
+    required this.itemCount,
   });
 
-  const _SeriesManifestSummary.empty()
-    : routeCount = 0,
-      readyRouteCount = 0,
-      importedTermCount = 0;
+  final String id;
+  final String levelCode;
+  final String nameJa;
+  final String nameVi;
+  final String nameEn;
+  final List<String> categories;
+  final int lessonCount;
+  final int itemCount;
 
-  final int routeCount;
-  final int readyRouteCount;
-  final int importedTermCount;
-}
+  bool get isVocab => categories.contains('vocab');
 
-Future<_SeriesManifestSummary> _loadMimikaraManifestSummary(
-  String levelCode,
-) async {
-  try {
-    final catalog = await loadMimikaraUnitCatalog(
-      levelCode,
-    ).timeout(const Duration(seconds: 1));
-    return _SeriesManifestSummary(
-      routeCount: catalog.units.length,
-      readyRouteCount: catalog.units.where((unit) => unit.termCount > 0).length,
-      importedTermCount: catalog.totalTerms,
+  _VocabProgramType? get programType {
+    if (id.startsWith('hajimete_tango_')) return _VocabProgramType.core;
+    if (id.startsWith('minna_')) return _VocabProgramType.minna;
+    if (id.startsWith('mimikara_')) return _VocabProgramType.mimikara;
+    return null;
+  }
+
+  String get publisherKey {
+    return switch (programType) {
+      _VocabProgramType.core => 'hajimete',
+      _VocabProgramType.minna => 'minna',
+      _VocabProgramType.mimikara => 'mimikara',
+      _ => 'other',
+    };
+  }
+
+  static _TextbookIndexEntry? fromJson(Object? raw) {
+    if (raw is! Map) return null;
+    final map = raw.map((key, value) => MapEntry(key.toString(), value));
+    final id = _manifestText(map['textbook_id']);
+    final level = _manifestText(map['level']).toUpperCase();
+    if (id.isEmpty || level.isEmpty) return null;
+    return _TextbookIndexEntry(
+      id: id,
+      levelCode: level,
+      nameJa: _manifestText(map['name_ja']),
+      nameVi: _manifestText(map['name_vi']),
+      nameEn: _manifestText(map['name_en']),
+      categories: [
+        for (final category
+            in map['categories'] is List
+                ? map['categories'] as List
+                : const <Object?>[])
+          _manifestText(category),
+      ].where((category) => category.isNotEmpty).toList(growable: false),
+      lessonCount: _manifestInt(map['lesson_count']),
+      itemCount: _manifestInt(map['item_count_total']),
     );
-  } catch (_) {
-    return const _SeriesManifestSummary.empty();
   }
-}
-
-Future<int> _loadVocabAssetEntryCount(String path) async {
-  try {
-    final raw = await rootBundle
-        .loadString(path)
-        .timeout(const Duration(seconds: 1));
-    final payload = json.decode(raw);
-    if (payload is! Map) return 0;
-    final entryCount = payload['entryCount'];
-    if (entryCount is int) return entryCount;
-    final entries = payload['entries'];
-    return entries is List ? entries.length : 0;
-  } catch (_) {
-    return 0;
-  }
-}
-
-Future<int> _loadMinnaLessonRangeCount(
-  String levelCode, {
-  required int startLesson,
-  required int endLesson,
-}) async {
-  final levelLower = levelCode.toLowerCase();
-  final counts = await Future.wait([
-    for (var lesson = startLesson; lesson <= endLesson; lesson++)
-      _loadVocabAssetEntryCount(
-        'assets/data/content/vocab/$levelLower/minna/lesson_${lesson.toString().padLeft(2, '0')}.json',
-      ),
-  ]);
-  return counts.fold<int>(0, (sum, count) => sum + count);
 }
 
 final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
   ref,
 ) async {
   final language = ref.watch(appLanguageProvider);
-
-  // Subscribe only to vocabDue — streak/XP ticks won't re-fire all 13 queries.
-  final dueCount = ref.watch(
-    dashboardProvider.select((v) => v.value?.vocabDue ?? 0),
+  final raw = await rootBundle.loadString(
+    'lib/data/manifests/textbook_index.json',
   );
-  // Use current stream value; null while stream hasn't emitted yet (fine since
-  // nextReview is nullable). Provider re-runs when stream emits a new value.
-  final nextReview = ref.watch(nextVocabReviewProvider).value;
+  final payload = json.decode(raw);
+  final textbooks = payload is Map && payload['textbooks'] is List
+      ? payload['textbooks'] as List
+      : const <Object?>[];
+  final entries = textbooks
+      .map(_TextbookIndexEntry.fromJson)
+      .whereType<_TextbookIndexEntry>()
+      .where((entry) => entry.isVocab && entry.programType != null)
+      .where((entry) {
+        if (entry.programType != _VocabProgramType.mimikara) return true;
+        return const {'N3', 'N2', 'N1'}.contains(entry.levelCode);
+      })
+      .toList(growable: false);
 
-  // Catalog cards need availability/counts, not full vocab row hydration.
-  // Use bundled manifests instead of opening the content DB. A fresh web DB can
-  // spend a long time seeding; the hub must still render immediately.
-  Future<int> hajimeteCount(String levelCode) async {
-    try {
-      final catalog = await loadHajimeteChapterCatalog(
-        levelCode,
-      ).timeout(const Duration(seconds: 1));
-      return catalog.totalTerms;
-    } catch (_) {
-      return 0;
-    }
+  List<_VocabCatalogProgram> programsFor(String publisherKey) {
+    final programs = entries
+        .where((entry) => entry.publisherKey == publisherKey)
+        .map((entry) => _programFromTextbook(entry, language))
+        .toList(growable: false);
+    programs.sort(
+      (left, right) => _levelSortIndex(
+        left.levelCode,
+      ).compareTo(_levelSortIndex(right.levelCode)),
+    );
+    return programs;
   }
 
-  Future<_SeriesManifestSummary> mimikaraSummary(String levelCode) =>
-      _loadMimikaraManifestSummary(levelCode);
-
-  final n5CountFuture = hajimeteCount('N5');
-  final n4CountFuture = hajimeteCount('N4');
-  final n3CountFuture = hajimeteCount('N3');
-  final n2CountFuture = hajimeteCount('N2');
-  final n1CountFuture = hajimeteCount('N1');
-  final mimikaraN3SummaryFuture = mimikaraSummary('N3');
-  final mimikaraN2SummaryFuture = mimikaraSummary('N2');
-  final mimikaraN1SummaryFuture = mimikaraSummary('N1');
-  final minnaN5CountFuture = _loadMinnaLessonRangeCount(
-    'N5',
-    startLesson: 1,
-    endLesson: 25,
-  );
-  final minnaN4CountFuture = _loadMinnaLessonRangeCount(
-    'N4',
-    startLesson: 26,
-    endLesson: 50,
-  );
-
-  final counts = await Future.wait<int>([
-    n5CountFuture,
-    n4CountFuture,
-    n3CountFuture,
-    n2CountFuture,
-    n1CountFuture,
-    minnaN5CountFuture,
-    minnaN4CountFuture,
-  ]);
-  final summaries = await Future.wait<_SeriesManifestSummary>([
-    mimikaraN3SummaryFuture,
-    mimikaraN2SummaryFuture,
-    mimikaraN1SummaryFuture,
-  ]);
-  final n5Count = counts[0];
-  final n4Count = counts[1];
-  final n3Count = counts[2];
-  final n2Count = counts[3];
-  final n1Count = counts[4];
-  final minnaN5Count = counts[5];
-  final minnaN4Count = counts[6];
-  final mimikaraN3Summary = summaries[0];
-  final mimikaraN2Summary = summaries[1];
-  final mimikaraN1Summary = summaries[2];
-  int mimikaraRouteCount(_SeriesManifestSummary summary) => summary.routeCount;
-
   return [
-    _buildJlptSection(
-      language: language,
-      levelCode: 'N5',
-      liveCount: n5Count,
-      dueCount: dueCount,
-      nextReview: nextReview,
+    _VocabCatalogSection(
+      key: 'hajimete',
+      levelCode: 'Hajimete',
+      subtitle: _publisherSubtitle(language, 'hajimete'),
       accent: AppThemePalette.light.warning,
-      companionTitle: 'Minna no Nihongo I',
-      companionSubtitle: _courseSubtitle(
-        language,
-        _VocabProgramType.minna,
-        'N5',
-      ),
-      companionType: _VocabProgramType.minna,
-      companionCountOverride: minnaN5Count,
-      isInteractive: true,
-    ),
-    _buildJlptSection(
-      language: language,
-      levelCode: 'N4',
-      liveCount: n4Count,
-      dueCount: dueCount,
-      nextReview: nextReview,
-      accent: AppThemePalette.light.primary,
-      companionTitle: 'Minna no Nihongo II',
-      companionSubtitle: _courseSubtitle(
-        language,
-        _VocabProgramType.minna,
-        'N4',
-      ),
-      companionType: _VocabProgramType.minna,
-      companionCountOverride: minnaN4Count,
-      isInteractive: true,
-    ),
-    _buildJlptSection(
-      language: language,
-      levelCode: 'N3',
-      liveCount: n3Count,
-      dueCount: dueCount,
-      nextReview: nextReview,
-      accent: AppThemePalette.light.success,
-      companionTitle: 'Mimikara',
-      companionSubtitle: _courseSubtitle(
-        language,
-        _VocabProgramType.mimikara,
-        'N3',
-      ),
-      companionType: _VocabProgramType.mimikara,
-      companionCountOverride: mimikaraN3Summary.importedTermCount,
-      companionStructureCount: mimikaraRouteCount(mimikaraN3Summary),
-      isInteractive: true,
-    ),
-    _buildJlptSection(
-      language: language,
-      levelCode: 'N2',
-      liveCount: n2Count,
-      dueCount: dueCount,
-      nextReview: nextReview,
-      accent: AppThemePalette.light.error,
-      companionTitle: 'Mimikara',
-      companionSubtitle: _courseSubtitle(
-        language,
-        _VocabProgramType.mimikara,
-        'N2',
-      ),
-      companionType: _VocabProgramType.mimikara,
-      companionCountOverride: mimikaraN2Summary.importedTermCount,
-      companionStructureCount: mimikaraRouteCount(mimikaraN2Summary),
-      isInteractive: true,
-    ),
-    _buildJlptSection(
-      language: language,
-      levelCode: 'N1',
-      liveCount: n1Count,
-      dueCount: dueCount,
-      nextReview: nextReview,
-      accent: AppThemePalette.light.info,
-      companionTitle: 'Mimikara',
-      companionSubtitle: _courseSubtitle(
-        language,
-        _VocabProgramType.mimikara,
-        'N1',
-      ),
-      companionType: _VocabProgramType.mimikara,
-      companionCountOverride: mimikaraN1Summary.importedTermCount,
-      companionStructureCount: mimikaraRouteCount(mimikaraN1Summary),
-      extraPrograms: [
-        const _VocabCatalogProgram(
-          key: 'advanced_n1',
-          titleTop: 'Advanced Vocabulary Lab',
-          titleMain: 'N1+',
-          termCount: 0,
-          subtitle:
-              'Extended nuance, formal usage, and dense reading support are planned next.',
-          type: _VocabProgramType.advanced,
-          isInteractive: false,
-          isComingSoon: true,
-          badgeText: 'Advanced',
-        ),
-      ],
-      isInteractive: true,
+      programs: programsFor('hajimete'),
     ),
     _VocabCatalogSection(
-      key: 'se',
-      levelCode: 'SE',
-      subtitle: 'Workplace Japanese for software teams',
-      accent: AppThemePalette.light.ink,
-      programs: const [
-        _VocabCatalogProgram(
-          key: 'se_track',
-          titleTop: 'Technical Japanese',
-          titleMain: 'SE',
-          termCount: 0,
-          subtitle:
-              'Product, engineering, meetings, specs, and workplace Japanese.',
-          type: _VocabProgramType.specialized,
-          isInteractive: false,
-          isComingSoon: true,
-          badgeText: 'Specialized',
-        ),
-      ],
+      key: 'minna',
+      levelCode: 'Minna',
+      subtitle: _publisherSubtitle(language, 'minna'),
+      accent: AppThemePalette.light.primary,
+      programs: programsFor('minna'),
     ),
-  ];
+    _VocabCatalogSection(
+      key: 'mimikara',
+      levelCode: 'Mimikara',
+      subtitle: _publisherSubtitle(language, 'mimikara'),
+      accent: AppThemePalette.light.success,
+      programs: programsFor('mimikara'),
+    ),
+  ].where((section) => section.programs.isNotEmpty).toList(growable: false);
 });
+
+_VocabCatalogProgram _programFromTextbook(
+  _TextbookIndexEntry entry,
+  AppLanguage language,
+) {
+  final type = entry.programType!;
+  final titleTop = switch (type) {
+    _VocabProgramType.core => _textbookName(entry, language),
+    _VocabProgramType.minna => _minnaTextbookName(entry.levelCode),
+    _VocabProgramType.mimikara => 'Mimikara',
+    _ => _textbookName(entry, language),
+  };
+  return _VocabCatalogProgram(
+    key: entry.id,
+    levelCode: entry.levelCode,
+    titleTop: titleTop,
+    titleMain: entry.levelCode,
+    termCount: entry.itemCount,
+    chapterCount: entry.lessonCount,
+    subtitle: _courseSubtitle(language, type, entry.levelCode),
+    type: type,
+    isInteractive: entry.itemCount > 0,
+    isComingSoon: entry.itemCount == 0,
+    badgeText: type == _VocabProgramType.mimikara
+        ? _programBadge(type, language)
+        : null,
+  );
+}
+
+String _textbookName(_TextbookIndexEntry entry, AppLanguage language) {
+  return switch (language) {
+    AppLanguage.vi => entry.nameVi.isNotEmpty ? entry.nameVi : entry.nameEn,
+    AppLanguage.ja => entry.nameJa.isNotEmpty ? entry.nameJa : entry.nameEn,
+    AppLanguage.en => entry.nameEn.isNotEmpty ? entry.nameEn : entry.nameVi,
+  };
+}
+
+String _minnaTextbookName(String levelCode) {
+  return switch (levelCode) {
+    'N5' => 'Minna no Nihongo I',
+    'N4' => 'Minna no Nihongo II',
+    _ => 'Minna no Nihongo',
+  };
+}
+
+String _publisherSubtitle(AppLanguage language, String publisherKey) {
+  return switch ((language, publisherKey)) {
+    (AppLanguage.vi, 'hajimete') =>
+      '5 hướng Hajimete Tango từ N5 đến N1, ưu tiên nhớ nghĩa và cách dùng.',
+    (AppLanguage.ja, 'hajimete') => 'N5〜N1のはじめて単語トラックをまとめて選べます。',
+    (AppLanguage.en, 'hajimete') =>
+      'Five Hajimete Tango paths from N5 through N1.',
+    (AppLanguage.vi, 'minna') =>
+      'Hai giáo trình sơ cấp: quyển I cho N5, quyển II cho N4.',
+    (AppLanguage.ja, 'minna') => '初級IはN5、初級IIはN4に対応します。',
+    (AppLanguage.en, 'minna') =>
+      'Two elementary textbook companions: I for N5, II for N4.',
+    (AppLanguage.vi, 'mimikara') =>
+      'Mimikara chỉ mở cho N3, N2, N1; không hiển thị sai ở N5/N4.',
+    (AppLanguage.ja, 'mimikara') => '耳から覚えるはN3・N2・N1のみ表示します。',
+    (AppLanguage.en, 'mimikara') => 'Mimikara appears only for N3, N2, and N1.',
+    _ => '',
+  };
+}
+
+int _levelSortIndex(String levelCode) {
+  const order = ['N5', 'N4', 'N3', 'N2', 'N1'];
+  final index = order.indexOf(levelCode);
+  return index == -1 ? order.length : index;
+}
+
+String _manifestText(Object? raw) => '${raw ?? ''}'.trim();
+
+int _manifestInt(Object? raw) {
+  if (raw is int) return raw;
+  if (raw is num) return raw.toInt();
+  return int.tryParse(_manifestText(raw)) ?? 0;
+}
 
 class VocabScreen extends ConsumerWidget {
   const VocabScreen({super.key});
@@ -369,7 +301,7 @@ VocabHomeSection _fallbackHomeSection({
           : program.titleTop;
       final track = VocabTrackSummary(
         key: program.key,
-        levelCode: section.levelCode,
+        levelCode: program.levelCode,
         title: title,
         subtitle: program.subtitle,
         termCount: program.termCount,
@@ -408,15 +340,6 @@ String _programBadge(_VocabProgramType type, AppLanguage language) =>
       ),
       _ => language.vocabProgramTypeLabel('core'),
     };
-
-int? _chapterCountForLevel(String levelCode) => switch (levelCode) {
-  'N5' => 14,
-  'N4' => 20,
-  'N3' => 28,
-  'N2' => 38,
-  'N1' => 50,
-  _ => null,
-};
 
 (int, int)? _minnaLessonRange(String levelCode, _VocabProgramType type) {
   if (type != _VocabProgramType.minna) return null;
@@ -498,6 +421,14 @@ String _previewCatalogCaption(AppLanguage language) =>
 String _chapterSummaryLabel(int chapterCount, AppLanguage language) =>
     language.vocabChapterSummaryLabel(chapterCount);
 
+String _programProgressLabel(AppLanguage language, int percent) {
+  return switch (language) {
+    AppLanguage.en => '$percent% progress',
+    AppLanguage.vi => 'Tiến độ $percent%',
+    AppLanguage.ja => '進捗 $percent%',
+  };
+}
+
 String _formatReviewTiming(AppLanguage language, DateTime? nextReview) {
   if (nextReview == null) {
     return switch (language) {
@@ -531,24 +462,18 @@ String _formatReviewTiming(AppLanguage language, DateTime? nextReview) {
   };
 }
 
-String _formatDueBadge(
-  AppLanguage language,
-  int dueCount,
-  DateTime? nextReview,
-) {
-  final timing = _formatReviewTiming(language, nextReview);
-  return switch (language) {
-    AppLanguage.en => '$dueCount due - $timing',
-    AppLanguage.vi => '$dueCount mục đến hạn - $timing',
-    AppLanguage.ja => '$dueCount件期限 - $timing',
-  };
-}
-
 String _localizedSectionSubtitle(
   _VocabCatalogSection section,
   AppLanguage language,
-) =>
-    language.vocabLocalizedSectionSubtitle(section.levelCode, section.subtitle);
+) {
+  if (!section.levelCode.startsWith('N') && section.levelCode != 'SE') {
+    return section.subtitle;
+  }
+  return language.vocabLocalizedSectionSubtitle(
+    section.levelCode,
+    section.subtitle,
+  );
+}
 
 String _localizedProgramSubtitle(
   _VocabCatalogProgram program,
@@ -635,10 +560,7 @@ String _previewDialogTitle(AppLanguage language) =>
 String _previewDialogClose(AppLanguage language) =>
     language.vocabPreviewDialogClose();
 
-String _previewDialogBody(AppLanguage language, _VocabCatalogProgram program) {
-  if (program.previewBody != null && program.previewBody!.trim().isNotEmpty) {
-    return program.previewBody!;
-  }
+String _previewDialogBody(AppLanguage language) {
   return language.vocabDefaultPreviewDialogBody();
 }
 

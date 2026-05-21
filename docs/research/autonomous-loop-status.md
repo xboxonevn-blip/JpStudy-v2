@@ -2233,3 +2233,20 @@
 - Gates passed: `grammar_question_generator_test`,
   `grammar_practice_bank_guard_test`, and `grammar_practice_screen_test`.
 - Continuing P1 H6 next: vocab catalog renders all valid textbook programs.
+
+## 2026-05-22 P1 H6 vocab catalog textbook coverage
+
+- Vocab catalog now reads `lib/data/manifests/textbook_index.json` as a bundled
+  Flutter asset and builds textbook cards from manifest truth instead of
+  hard-coded level sections.
+- Catalog groups the 10 vocab programs by publisher: Hajimete Tango N5-N1,
+  Minna no Nihongo N5/N4, and Mimikara N3/N2/N1. Mimikara N5/N4 cards are
+  intentionally absent.
+- Existing catalog routes now use per-program level metadata, so publisher
+  grouping does not break Hajimete, Minna, or Mimikara navigation.
+- Updated the stale inline-kanji test tap target after the H.3 foundation
+  migration changed the chip from `ActionChip` to keyed `AppButton`.
+- Gates passed: focused vocab `flutter analyze` and
+  `vocab_screen_test`/`vocab_home_provider_test`.
+- Continuing P2 next: chrome flush, adaptive widths, grammar level switcher,
+  exam metadata, exercise desktop tightening, and kana modal behavior.

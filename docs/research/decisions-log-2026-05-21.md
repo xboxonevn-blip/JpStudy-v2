@@ -171,3 +171,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This directly fixes the visible item-gate defect without making due/quick multi-item sessions unmanageably long before Phase 5 cross-modal SRS is complete.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-018 - Store exercise coverage as a compact manifest
+**Phase**: 4
+**Date**: 2026-05-21 09:00 (local)
+**Context**: Phase 4 needs every grammar/vocab/kanji/conjugation item to prove >=50 exercise coverage, but materializing full per-item questions or verbose proof objects would add large raw JSON payloads.
+**Options considered**: materialize all questions | store verbose per-item proof objects | store compact per-item tuples plus shared generator policy
+**Chosen**: store compact per-item tuples plus shared generator policy
+**Rationale**: The compact manifest validates 21,563 items while keeping the new asset about 1.6 MB raw instead of about 10 MB. Dynamic generators remain deterministic and validator-backed.
+**Reversible**: yes
+**Owner review**: pending

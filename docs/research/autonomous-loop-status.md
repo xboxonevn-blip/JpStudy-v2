@@ -1389,3 +1389,10 @@
 - Changed grammar gate pass policy from hard-coded `4/5` to `>=80%` accuracy, matching Directive F.
 - Focused widget proof: `test/features/grammar/grammar_practice_screen_test.dart` now verifies the 50-question gate and 80% threshold.
 - Deployed to Firebase Hosting and live-proved VI grammar detail -> `Luyện tập để hiểu` opens `Câu 1/50`; screenshot saved at `output/playwright/live-phase4-grammar-gate-50.png`. `main.dart.js` returned `200/no-cache`; local web resource smoke passed.
+
+## 2026-05-21 Megaprompt Phase 4 Exercise Engine Batch 4
+
+- Added `assets/data/content/exercises/exercise_coverage_manifest.json`, a compact validator-backed coverage manifest for all runtime learning items: grammar `754`, vocab `16712`, kanji `2114`, conjugation `1983`, total `21563`.
+- Extended `tool/research/generate_exercises.js` and `tool/qa/validate_exercises.js` so Phase 4 validation proves every manifest item has `>=50` exercises, Bloom L1-L4, and at least one supported exercise type without materializing the full question payload in the web bundle.
+- Added compact-manifest guard in `test/tool/research/exercise_assets_test.js`; kept generated proof asset about `1.6 MB` raw instead of about `10 MB`.
+- Verified: `node --test test\tool\research\exercise_assets_test.js`, `node tool\qa\validate_exercises.js`, `npm run test:research-tooling -- --runInBand`, `flutter test test\features\exercise\exercise_bank_test.dart`, `flutter analyze lib test`, UI string guard `0`, and `git diff --check`.

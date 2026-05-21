@@ -3,12 +3,14 @@ const test = require('node:test');
 
 const {
   buildKanjiLookalikeCorpus,
+  buildExerciseCoverageManifest,
   buildPhoneticTrapCorpus,
   buildReadingPassages,
   damerauLevenshtein,
 } = require('../../../tool/research/generate_exercises');
 const {
   validatePhase4Assets,
+  validateExerciseCoverageManifest,
 } = require('../../../tool/qa/validate_exercises');
 
 test('buildReadingPassages emits required per-level counts and questions', () => {
@@ -86,6 +88,46 @@ test('validatePhase4Assets accepts generated reading and distractor corpora', ()
 
   assert.equal(report.passed, true);
   assert.deepEqual(report.failures, []);
+});
+
+test('buildExerciseCoverageManifest marks every item dense with Bloom coverage', () => {
+  const manifest = buildExerciseCoverageManifest({
+    generatedAt: '2026-05-21T08:40:00+07:00',
+    grammarPoints: [{ id: 1, level: 'N5', title: 'N1 は N2 です' }],
+    vocabEntries: [vocab('v1', 'N5', '雨', 'あめ')],
+    kanjiEntries: [kanji('k1', 'N5', '雨', 8, ['水'])],
+    conjugationEntries: [{ id: 'c1', level: 'N5', term: '食べる', kind: 'verb' }],
+  });
+
+  const report = validateExerciseCoverageManifest(manifest);
+
+  assert.equal(report.passed, true);
+  assert.equal(report.counts.totalItems, 4);
+  assert.equal(
+    report.counts.totalItems,
+    manifest.items.length,
+  );
+  assert.equal(
+    report.failures.some((failure) => failure.includes('below 50')),
+    false,
+  );
+  assert.equal(
+    report.failures.some((failure) => failure.includes('missing L')),
+    false,
+  );
+});
+
+test('buildExerciseCoverageManifest uses compact entries for bundle size', () => {
+  const manifest = buildExerciseCoverageManifest({
+    grammarPoints: [{ id: 1, level: 'N5', title: 'N1 は N2 です' }],
+    vocabEntries: [vocab('v1', 'N5', '雨', 'あめ')],
+  });
+
+  assert.equal(Array.isArray(manifest.items[0]), true);
+  assert.equal(
+    JSON.stringify(manifest).length < 1400,
+    true,
+  );
 });
 
 function vocab(vocabId, level, term, reading) {

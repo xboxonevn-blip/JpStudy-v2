@@ -19,6 +19,55 @@ function validatePhase4Assets({ readingPassages, phoneticTraps, kanjiLookalikes 
   };
 }
 
+function validateExerciseCoverageManifest(manifest) {
+  const failures = [];
+  const rawItems = manifest?.items || [];
+  const items = rawItems.map((item) => normalizeCoverageItem(item, manifest));
+  if (items.length === 0) failures.push('exercise coverage manifest is empty');
+  const seen = new Set();
+  for (const item of items) {
+    if (!item.item_id) failures.push('coverage item missing id');
+    if (seen.has(item.item_id)) failures.push(`duplicate coverage item: ${item.item_id}`);
+    seen.add(item.item_id);
+    if ((item.exercise_count || 0) < 50) {
+      failures.push(`exercise count below 50: ${item.item_id}`);
+    }
+    const bloom = new Set(item.bloom_levels || []);
+    for (const level of ['L1', 'L2', 'L3', 'L4']) {
+      if (!bloom.has(level)) failures.push(`missing ${level}: ${item.item_id}`);
+    }
+    if ((item.exercise_types || []).length === 0) {
+      failures.push(`missing exercise types: ${item.item_id}`);
+    }
+  }
+  return {
+    passed: failures.length === 0,
+    failures,
+    counts: {
+      totalItems: items.length,
+      grammar: items.filter((item) => item.item_type === 'grammar').length,
+      vocab: items.filter((item) => item.item_type === 'vocab').length,
+      kanji: items.filter((item) => item.item_type === 'kanji').length,
+      conjugation: items.filter((item) => item.item_type === 'conjugation').length,
+    },
+  };
+}
+
+function normalizeCoverageItem(item, manifest) {
+  if (Array.isArray(item)) {
+    const [itemType, level, itemId] = item;
+    return {
+      item_id: itemId,
+      item_type: itemType,
+      level,
+      exercise_count: manifest?.minimumExerciseCount || 0,
+      bloom_levels: manifest?.bloomLevels || [],
+      exercise_types: manifest?.typeExerciseTypes?.[itemType] || [],
+    };
+  }
+  return item || {};
+}
+
 function validateReadingPassages(payload, failures) {
   const passages = payload?.passages || [];
   const byLevel = {};
@@ -89,11 +138,19 @@ function validateKanjiLookalikes(payload, failures) {
 function validateDefaultAssets({
   contentRoot = path.join(process.cwd(), 'assets', 'data', 'content'),
 } = {}) {
-  return validatePhase4Assets({
+  const assetReport = validatePhase4Assets({
     readingPassages: readJson(path.join(contentRoot, 'reading_passages', 'reading_passages_corpus.json')),
     phoneticTraps: readJson(path.join(contentRoot, 'exercise_distractors', 'phonetic_traps.json')),
     kanjiLookalikes: readJson(path.join(contentRoot, 'exercise_distractors', 'kanji_lookalikes.json')),
   });
+  const coverageReport = validateExerciseCoverageManifest(
+    readJson(path.join(contentRoot, 'exercises', 'exercise_coverage_manifest.json')),
+  );
+  return {
+    passed: assetReport.passed && coverageReport.passed,
+    failures: [...assetReport.failures, ...coverageReport.failures],
+    counts: { ...assetReport.counts, ...coverageReport.counts },
+  };
 }
 
 function readJson(file) {
@@ -107,6 +164,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  validateExerciseCoverageManifest,
   validateDefaultAssets,
   validatePhase4Assets,
 };

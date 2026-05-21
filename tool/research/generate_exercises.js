@@ -188,6 +188,82 @@ function buildKanjiLookalikeCorpus(kanjiEntries, { generatedAt = new Date().toIS
   return { schemaVersion: 1, generatedAt, lookalikes };
 }
 
+function buildExerciseCoverageManifest({
+  generatedAt = new Date().toISOString(),
+  grammarPoints = [],
+  vocabEntries = [],
+  kanjiEntries = [],
+  conjugationEntries = [],
+} = {}) {
+  const items = [
+    ...grammarPoints.map((entry) =>
+      coverageItem({
+        itemType: 'grammar',
+        itemId: `grammar:${normalizeLevel(entry.level)}:${entry.id || slug(entry.title)}`,
+        level: entry.level,
+        exerciseTypes: [
+          'recognition',
+          'production',
+          'recall',
+          'readingComp',
+          'listening',
+          'conjugationDrill',
+        ],
+      }),
+    ),
+    ...vocabEntries.map((entry) =>
+      coverageItem({
+        itemType: 'vocab',
+        itemId: `vocab:${normalizeLevel(entry.level)}:${entry.vocabId || entry.entryId || slug(entry.term)}`,
+        level: entry.level,
+        exerciseTypes: ['recognition', 'production', 'recall', 'readingComp', 'listening'],
+      }),
+    ),
+    ...kanjiEntries.map((entry) =>
+      coverageItem({
+        itemType: 'kanji',
+        itemId: `kanji:${normalizeLevel(entry.level)}:${entry.kanjiId || entry.character}`,
+        level: entry.level,
+        exerciseTypes: ['recognition', 'production', 'recall', 'readingComp'],
+      }),
+    ),
+    ...conjugationEntries.map((entry) =>
+      coverageItem({
+        itemType: 'conjugation',
+        itemId: `conjugation:${normalizeLevel(entry.level)}:${entry.id || slug(entry.term)}`,
+        level: entry.level,
+        exerciseTypes: ['conjugationDrill', 'recognition', 'recall', 'production'],
+      }),
+    ),
+  ];
+  return {
+    schemaVersion: 2,
+    generatedAt,
+    policy:
+      'Coverage manifest declares deterministic on-demand generators; raw per-item questions are not fully materialized to protect web payload size.',
+    minimumExerciseCount: 50,
+    bloomLevels: ['L1', 'L2', 'L3', 'L4'],
+    typeExerciseTypes: {
+      grammar: [
+        'recognition',
+        'production',
+        'recall',
+        'readingComp',
+        'listening',
+        'conjugationDrill',
+      ],
+      vocab: ['recognition', 'production', 'recall', 'readingComp', 'listening'],
+      kanji: ['recognition', 'production', 'recall', 'readingComp'],
+      conjugation: ['conjugationDrill', 'recognition', 'recall', 'production'],
+    },
+    items,
+  };
+}
+
+function coverageItem({ itemType, itemId, level }) {
+  return [itemType, normalizeLevel(level).toUpperCase(), itemId];
+}
+
 function readVocabEntries(contentRoot) {
   const entries = [];
   for (const file of walk(path.join(contentRoot, 'vocab'))) {
@@ -227,17 +303,63 @@ function readKanjiEntries(contentRoot) {
   return entries;
 }
 
+function readGrammarPoints(contentRoot) {
+  const entries = [];
+  for (const file of walk(path.join(contentRoot, 'grammar'))) {
+    if (!file.endsWith('.json')) continue;
+    const json = readJson(file);
+    if (!Array.isArray(json)) continue;
+    for (let index = 0; index < json.length; index += 1) {
+      const item = json[index];
+      entries.push({
+        id: `${path.basename(file, '.json')}_${index + 1}`,
+        level: item.level,
+        title: item.title || item.structure,
+      });
+    }
+  }
+  return entries;
+}
+
+function readConjugationEntries(contentRoot) {
+  const file = path.join(contentRoot, 'conjugation', 'conjugation_corpus.json');
+  if (!fs.existsSync(file)) return [];
+  const corpus = readJson(file);
+  const entries = [];
+  for (const bucket of ['verbs', 'i_adjectives', 'na_adjectives']) {
+    for (const [term, entry] of Object.entries(corpus[bucket] || {})) {
+      entries.push({
+        id: `${bucket}:${term}`,
+        term,
+        kind: bucket,
+        level: entry.level || 'N5',
+      });
+    }
+  }
+  return entries;
+}
+
 function writePhase4Assets({
   contentRoot = path.join(process.cwd(), 'assets', 'data', 'content'),
   generatedAt = new Date().toISOString(),
 } = {}) {
   const readingPassages = buildReadingPassages({ generatedAt });
-  const phoneticTraps = buildPhoneticTrapCorpus(readVocabEntries(contentRoot), { generatedAt });
-  const kanjiLookalikes = buildKanjiLookalikeCorpus(readKanjiEntries(contentRoot), { generatedAt });
+  const vocabEntries = readVocabEntries(contentRoot);
+  const kanjiEntries = readKanjiEntries(contentRoot);
+  const phoneticTraps = buildPhoneticTrapCorpus(vocabEntries, { generatedAt });
+  const kanjiLookalikes = buildKanjiLookalikeCorpus(kanjiEntries, { generatedAt });
+  const coverageManifest = buildExerciseCoverageManifest({
+    generatedAt,
+    grammarPoints: readGrammarPoints(contentRoot),
+    vocabEntries,
+    kanjiEntries,
+    conjugationEntries: readConjugationEntries(contentRoot),
+  });
   writeJson(path.join(contentRoot, 'reading_passages', 'reading_passages_corpus.json'), readingPassages);
   writeJson(path.join(contentRoot, 'exercise_distractors', 'phonetic_traps.json'), phoneticTraps);
   writeJson(path.join(contentRoot, 'exercise_distractors', 'kanji_lookalikes.json'), kanjiLookalikes);
-  return { readingPassages, phoneticTraps, kanjiLookalikes };
+  writeJson(path.join(contentRoot, 'exercises', 'exercise_coverage_manifest.json'), coverageManifest);
+  return { readingPassages, phoneticTraps, kanjiLookalikes, coverageManifest };
 }
 
 function damerauLevenshtein(a, b) {
@@ -277,6 +399,18 @@ function damerauLevenshtein(a, b) {
 
 function normalizeKana(value) {
   return String(value || '').trim().replace(/\s+/g, '');
+}
+
+function normalizeLevel(value) {
+  return String(value || 'N5').trim().toLowerCase();
+}
+
+function slug(value) {
+  return String(value || 'item')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_')
+    .replace(/[^\p{L}\p{N}_:-]/gu, '');
 }
 
 function extractKanji(value) {
@@ -340,15 +474,19 @@ if (require.main === module) {
       readingPassages: result.readingPassages.passages.length,
       phoneticTrapItems: Object.keys(result.phoneticTraps.traps).length,
       kanjiLookalikeItems: Object.keys(result.kanjiLookalikes.lookalikes).length,
+      coverageItems: result.coverageManifest.items.length,
     }),
   );
 }
 
 module.exports = {
+  buildExerciseCoverageManifest,
   buildKanjiLookalikeCorpus,
   buildPhoneticTrapCorpus,
   buildReadingPassages,
   damerauLevenshtein,
+  readConjugationEntries,
+  readGrammarPoints,
   readKanjiEntries,
   readVocabEntries,
   writePhase4Assets,

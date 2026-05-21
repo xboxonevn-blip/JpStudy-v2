@@ -1521,3 +1521,10 @@
 - Extracted `docs/research/canonical/vocab/minna-1.md` from `25` local Minna I PDFs: `737` factual vocab rows, `0` review rows, source lesson refs `Lesson 1` through `Lesson 25`.
 - Wrote machine report `docs/research/canonical/vocab/reports/minna-1.json`; no banned website was accessed.
 - Next: run gates, commit, then extract Minna II (`minna-2`) for N4 lesson alignment.
+
+## 2026-05-21 QA-A-030 Phase 1 Minna II extraction
+
+- Reused the offline vocab extractor for `minna-2` after a dry-run reported `25` source PDFs, `1082` accepted factual rows, and `0` review rows.
+- Extracted `docs/research/canonical/vocab/minna-2.md` with source lesson refs `Lesson 26` through `Lesson 50`, level `N4`, and `text-layer` confidence.
+- Wrote machine report `docs/research/canonical/vocab/reports/minna-2.json`; no banned website was accessed.
+- Next: run gates, commit, then continue Mimikara N3/N2/N1 extraction.

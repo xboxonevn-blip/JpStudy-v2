@@ -269,6 +269,10 @@ TextbookRoadmap _upperRoadmap({
         durationKey: 'upper_grammar_hours',
         resources: [
           TextbookRoadmapResource(
+            key: 'shin_kanzen_${levelCode}_grammar',
+            destination: AppRoutePath.grammar,
+          ),
+          TextbookRoadmapResource(
             key: 'grammar_$levelCode',
             destination: AppRoutePath.grammar,
           ),

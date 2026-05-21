@@ -1448,3 +1448,22 @@
 - Wired the overview grid into both mobile and wide home layouts below the hero, before existing review/path cards.
 - TDD coverage: breakpoint threshold guard and home overview grid widget tests cover required widget presence and 1/4-column responsive behavior.
 - Gate: focused home/responsive tests, UI string guard, `flutter analyze lib test`, and `git diff --check` run before commit.
+
+## 2026-05-21 Megaprompt Phase 6 Mobile Patterns Batch 2
+
+- Changed the lesson practice mode picker to a bottom sheet on mobile while keeping inline mode buttons on tablet/desktop.
+- Added horizontal swipe support to enhanced flashcards: swipe left advances, swipe right goes back.
+- Added long-press practice marking for flashcards, storing marked terms in `needPracticeTermIds` for the summary instead of treating them as known.
+- Added mobile compact flashcard chrome: settings action hides on mobile and the card runs edge-to-edge.
+- Added pull-to-refresh on the home learning path; refresh invalidates dashboard, continue-action, and foundations progress providers.
+- Tightened the home overview grid proof so a 1280px desktop viewport still renders 4 columns even inside page padding.
+- Full-suite gate also surfaced a pre-existing Phase 5 literal-route fallback in `RecommendationEngine`; fixed it to use `AppRoutePath`.
+- Gate: focused Phase 6 suite passed `39/39`; `flutter test --concurrency=1 --reporter json` passed `2459/2459`; UI string guard `0`; `flutter analyze lib test` clean; `git diff --check` clean except CRLF warnings.
+
+## 2026-05-21 Megaprompt Phase 6 Acceptance
+
+- 4 breakpoints are covered by `test/responsive/breakpoints_test.dart`.
+- Home page four widgets render and adapt 1/2/4 columns across 390/768/1024/1280 viewports.
+- Mobile mode picker opens as a bottom sheet.
+- Enhanced flashcards support swipe left/right, tap-to-flip remains intact, long press marks a card for more practice, and mobile layout is edge-to-edge with compact app bar actions.
+- Home supports pull-to-refresh for SRS count reload.

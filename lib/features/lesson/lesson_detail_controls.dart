@@ -417,6 +417,52 @@ class _LessonModePicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final breakpoint = Breakpoints.fromWidth(MediaQuery.sizeOf(context).width);
+    if (breakpoint == Breakpoint.mobile) {
+      return Align(
+        alignment: Alignment.centerLeft,
+        child: FilledButton.icon(
+          key: const ValueKey('lesson_mode_picker_sheet_trigger'),
+          onPressed: () => _openModeSheet(context),
+          icon: const Icon(Icons.tune_rounded),
+          label: Text(_practiceModesLabel(language)),
+        ),
+      );
+    }
+    return _buildModeOptions(context);
+  }
+
+  void _openModeSheet(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      builder: (sheetContext) {
+        return SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
+            child: SingleChildScrollView(
+              child: Column(
+                key: const ValueKey('lesson_mode_picker_sheet'),
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    _practiceModesLabel(language),
+                    style: Theme.of(sheetContext).textTheme.titleMedium
+                        ?.copyWith(fontWeight: FontWeight.w800),
+                  ),
+                  const SizedBox(height: 14),
+                  _buildModeOptions(context),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildModeOptions(BuildContext context) {
     return Wrap(
       key: const ValueKey('lesson_mode_picker'),
       spacing: 10,
@@ -462,6 +508,12 @@ class _LessonModePicker extends StatelessWidget {
       ],
     );
   }
+
+  String _practiceModesLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Practice modes',
+    AppLanguage.vi => 'Chế độ luyện tập',
+    AppLanguage.ja => '練習モード',
+  };
 
   String _modeLabel(AppLanguage language, String en, String vi, String ja) =>
       switch (language) {

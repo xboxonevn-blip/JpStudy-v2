@@ -241,3 +241,23 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The local helper keeps breakpoint policy testable and avoids adding a package for four fixed thresholds. The home overview grid can then adapt columns consistently across mobile, tablet, and desktop.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-025 - Treat mobile flashcards as gesture-first
+**Phase**: 6
+**Date**: 2026-05-21 11:55 (local)
+**Context**: Phase 6 calls for mobile flashcards that feel fullscreen and gesture-driven, while desktop still benefits from visible settings and large controls.
+**Options considered**: keep one shared desktop layout everywhere | create a separate mobile screen | adapt the existing enhanced flashcard screen by viewport
+**Chosen**: adapt the existing enhanced flashcard screen by viewport
+**Rationale**: The viewport branch keeps one source of truth for session state and summary behavior, but removes horizontal padding and settings chrome on mobile. Swipe/long-press gestures are added to the shared card widget so nested gestures do not block navigation.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-026 - Use viewport width for padded responsive grids
+**Phase**: 6
+**Date**: 2026-05-21 12:05 (local)
+**Context**: A grid nested under page padding can see less than the actual viewport width, which would make a 1280px desktop viewport render as tablet layout.
+**Options considered**: lower desktop threshold | remove page padding | keep canonical thresholds and evaluate home overview columns from `MediaQuery`
+**Chosen**: keep canonical thresholds and evaluate home overview columns from `MediaQuery`
+**Rationale**: The breakpoint values remain exactly as specified, and widgets embedded in padded layouts still satisfy the 1280px desktop acceptance gate.
+**Reversible**: yes
+**Owner review**: pending

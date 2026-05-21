@@ -310,6 +310,42 @@ void main() {
     expect(find.text('Practice'), findsWidgets);
   });
 
+  testWidgets('mobile lesson mode picker opens practice modes in a sheet', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(390, 844);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(
+      buildScreen([_term(1, '学校', 'school', reading: 'がっこう')]),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(
+      find.byKey(const ValueKey('lesson_mode_picker_sheet_trigger')),
+      findsOneWidget,
+    );
+    expect(find.byKey(const ValueKey('lesson_mode_recognition')), findsNothing);
+
+    await tester.tap(
+      find.byKey(const ValueKey('lesson_mode_picker_sheet_trigger')),
+    );
+    await tester.pumpAndSettle();
+
+    expect(
+      find.byKey(const ValueKey('lesson_mode_picker_sheet')),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(const ValueKey('lesson_mode_recognition')),
+      findsOneWidget,
+    );
+    expect(find.byKey(const ValueKey('lesson_mode_typing')), findsOneWidget);
+  });
+
   testWidgets('flashcard zone shows progress toggles and keyboard hints', (
     tester,
   ) async {

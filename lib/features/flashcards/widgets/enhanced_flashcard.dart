@@ -13,13 +13,21 @@ class EnhancedFlashcard extends StatefulWidget {
     required this.item,
     required this.language,
     this.onFlip,
+    this.onSwipeNext,
+    this.onSwipePrevious,
+    this.onMarkDifficult,
     this.showTermFirst = true,
+    this.edgeToEdge = false,
     this.retrievability,
   });
 
   final VocabItem item;
   final VoidCallback? onFlip;
+  final VoidCallback? onSwipeNext;
+  final VoidCallback? onSwipePrevious;
+  final VoidCallback? onMarkDifficult;
   final bool showTermFirst;
+  final bool edgeToEdge;
   final AppLanguage language;
   final double? retrievability;
 
@@ -29,11 +37,16 @@ class EnhancedFlashcard extends StatefulWidget {
 
 class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
   bool _isFlipped = false;
+  double _dragDx = 0;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _handleTap,
+      onHorizontalDragStart: (_) => _dragDx = 0,
+      onHorizontalDragUpdate: (details) => _dragDx += details.delta.dx,
+      onHorizontalDragEnd: _handleHorizontalDragEnd,
+      onLongPress: widget.onMarkDifficult,
       child: Container(color: Colors.transparent, child: _buildCard(context)),
     );
   }
@@ -43,6 +56,20 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
       _isFlipped = !_isFlipped;
     });
     widget.onFlip?.call();
+  }
+
+  void _handleHorizontalDragEnd(DragEndDetails details) {
+    final velocity = details.primaryVelocity ?? 0;
+    final resolvedDx = _dragDx;
+    _dragDx = 0;
+    if (velocity.abs() < 220 && resolvedDx.abs() < 64) {
+      return;
+    }
+    if (velocity < 0 || resolvedDx < 0) {
+      widget.onSwipeNext?.call();
+    } else {
+      widget.onSwipePrevious?.call();
+    }
   }
 
   Widget _buildCard(BuildContext context) {
@@ -64,14 +91,14 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
     return Container(
       width: double.infinity,
       height: 500,
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      margin: EdgeInsets.symmetric(horizontal: widget.edgeToEdge ? 0 : 20),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [palette.base, palette.elevated],
         ),
-        borderRadius: BorderRadius.circular(28),
+        borderRadius: BorderRadius.circular(widget.edgeToEdge ? 0 : 28),
         border: Border.all(color: palette.outline, width: 1.4),
         boxShadow: [
           BoxShadow(

@@ -1,3 +1,5 @@
+import 'package:jpstudy/app/navigation/app_route_constants.dart';
+
 import '../models/interlink_graph.dart';
 
 enum RecommendationType { srsDue, nextLesson, related, fallback }
@@ -91,19 +93,19 @@ class RecommendationEngine {
     LearningRecommendation(
       type: RecommendationType.fallback,
       label: '',
-      route: '/review',
+      route: AppRoutePath.review,
       score: 10,
     ),
     LearningRecommendation(
       type: RecommendationType.fallback,
       label: '',
-      route: '/immersion',
+      route: AppRoutePath.immersion,
       score: 9,
     ),
     LearningRecommendation(
       type: RecommendationType.fallback,
       label: '',
-      route: '/kanji/practice',
+      route: AppRoutePath.kanjiPractice,
       score: 8,
     ),
   ];

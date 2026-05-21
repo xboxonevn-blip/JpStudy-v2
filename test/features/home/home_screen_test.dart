@@ -220,6 +220,15 @@ void main() {
       await cleanUp(tester);
     });
 
+    testWidgets('home supports pull-to-refresh for SRS counts', (tester) async {
+      configureMobileView(tester);
+      await tester.pumpWidget(buildScreen(onboardingDone: true));
+      await pumpAndSettle(tester);
+
+      expect(find.byType(RefreshIndicator), findsOneWidget);
+      await cleanUp(tester);
+    });
+
     testWidgets('mobile home uses the same learning path screen for non-N5', (
       tester,
     ) async {

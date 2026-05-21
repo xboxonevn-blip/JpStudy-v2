@@ -124,42 +124,121 @@ class LearningPathScreen extends ConsumerWidget {
     return JapaneseBackground(
       child: SafeArea(
         top: false,
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(0, 100, 0, AppSpacing.pageBottom),
-          children: [
-            AppResponsiveFrame(
-              maxWidth: 1240,
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  final useDesktopGrid =
-                      constraints.maxWidth >= AppBreakpoints.desktop;
+        child: RefreshIndicator(
+          onRefresh: () => _refreshHome(ref),
+          child: ListView(
+            physics: const AlwaysScrollableScrollPhysics(),
+            padding: const EdgeInsets.fromLTRB(
+              0,
+              100,
+              0,
+              AppSpacing.pageBottom,
+            ),
+            children: [
+              AppResponsiveFrame(
+                maxWidth: 1240,
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final useDesktopGrid =
+                        constraints.maxWidth >= AppBreakpoints.desktop;
 
-                  final hero =
-                      Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 14),
-                            child: _DojoHeroCard(
-                              language: language,
-                              level: level,
-                              streak: streak,
-                              todayXp: todayXp,
-                              dueCount: dueCount,
-                              weakCount: weakCount,
-                              hasStartedToday: hasStartedToday,
-                              missionLabel: continueAction?.label,
-                              onPrimaryTap: () => _openContinueAction(
-                                context,
-                                continueAction,
+                    final hero =
+                        Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 14,
+                              ),
+                              child: _DojoHeroCard(
                                 language: language,
                                 level: level,
+                                streak: streak,
+                                todayXp: todayXp,
+                                dueCount: dueCount,
+                                weakCount: weakCount,
+                                hasStartedToday: hasStartedToday,
+                                missionLabel: continueAction?.label,
+                                onPrimaryTap: () => _openContinueAction(
+                                  context,
+                                  continueAction,
+                                  language: language,
+                                  level: level,
+                                ),
+                                onSecondaryTap: () => context.openJlptCoach(),
                               ),
-                              onSecondaryTap: () => context.openJlptCoach(),
-                            ),
-                          )
-                          .animate()
-                          .fadeIn(duration: 360.ms)
-                          .slideY(begin: 0.08, end: 0);
+                            )
+                            .animate()
+                            .fadeIn(duration: 360.ms)
+                            .slideY(begin: 0.08, end: 0);
 
-                  if (!useDesktopGrid) {
+                    if (!useDesktopGrid) {
+                      return Column(
+                        children: [
+                          const GoalSelectionBanner(),
+                          if (showFoundationsCard) ...[
+                            foundationsCard,
+                            const SizedBox(height: 10),
+                          ],
+                          hero,
+                          const SizedBox(height: 10),
+                          overviewGrid,
+                          const SizedBox(height: 10),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 14),
+                            child: KanaReviewDueCard(),
+                          ),
+                          const SizedBox(height: 10),
+                          const DailyPlanCard()
+                              .animate(delay: 60.ms)
+                              .fadeIn(duration: 340.ms)
+                              .slideY(begin: 0.06, end: 0),
+                          const SizedBox(height: 10),
+                          textbookRoadmapPanel
+                              .animate(delay: 90.ms)
+                              .fadeIn(duration: 320.ms),
+                          const SizedBox(height: 10),
+                          const DailySessionCard(compact: true)
+                              .animate(delay: 120.ms)
+                              .fadeIn(duration: 340.ms)
+                              .slideY(begin: 0.06, end: 0),
+                          const SizedBox(height: 10),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                            child: const MiniDashboard(compact: true),
+                          ).animate(delay: 140.ms).fadeIn(duration: 320.ms),
+                          const SizedBox(height: 10),
+                          const WeeklyChallengeCard(
+                            compact: true,
+                          ).animate(delay: 180.ms).fadeIn(duration: 320.ms),
+                          const SizedBox(height: 10),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                            child: _LearningLanesPanel(
+                              language: language,
+                              level: level,
+                              dueCount: dueCount,
+                              weakCount: weakCount,
+                            ),
+                          ).animate(delay: 220.ms).fadeIn(duration: 340.ms),
+                          const SizedBox(height: 10),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                            child: const WeaknessRadarCard(compact: true),
+                          ).animate(delay: 280.ms).fadeIn(duration: 320.ms),
+                          const SizedBox(height: 10),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                            child: const DiscoverPracticePanel(
+                              initiallyExpanded: false,
+                              dense: true,
+                            ),
+                          ).animate(delay: 340.ms).fadeIn(duration: 360.ms),
+                          const SizedBox(height: 6),
+                          studyPromptCard
+                              .animate(delay: 400.ms)
+                              .fadeIn(duration: 320.ms),
+                        ],
+                      );
+                    }
+
                     return Column(
                       children: [
                         const GoalSelectionBanner(),
@@ -178,148 +257,89 @@ class LearningPathScreen extends ConsumerWidget {
                         const SizedBox(height: 10),
                         const DailyPlanCard()
                             .animate(delay: 60.ms)
-                            .fadeIn(duration: 340.ms)
-                            .slideY(begin: 0.06, end: 0),
-                        const SizedBox(height: 10),
+                            .fadeIn(duration: 340.ms),
+                        const SizedBox(height: 12),
                         textbookRoadmapPanel
-                            .animate(delay: 90.ms)
+                            .animate(delay: 80.ms)
                             .fadeIn(duration: 320.ms),
-                        const SizedBox(height: 10),
-                        const DailySessionCard(compact: true)
-                            .animate(delay: 120.ms)
-                            .fadeIn(duration: 340.ms)
-                            .slideY(begin: 0.06, end: 0),
-                        const SizedBox(height: 10),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 14),
-                          child: const MiniDashboard(compact: true),
-                        ).animate(delay: 140.ms).fadeIn(duration: 320.ms),
-                        const SizedBox(height: 10),
-                        const WeeklyChallengeCard(
-                          compact: true,
-                        ).animate(delay: 180.ms).fadeIn(duration: 320.ms),
-                        const SizedBox(height: 10),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 14),
-                          child: _LearningLanesPanel(
-                            language: language,
-                            level: level,
-                            dueCount: dueCount,
-                            weakCount: weakCount,
-                          ),
-                        ).animate(delay: 220.ms).fadeIn(duration: 340.ms),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 12),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Expanded(
+                              flex: 8,
+                              child: DailySessionCard(compact: true),
+                            ),
+                            const SizedBox(width: AppSpacing.md),
+                            Expanded(
+                              flex: 5,
+                              child: Column(
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 14,
+                                    ),
+                                    child: MiniDashboard(compact: true),
+                                  ),
+                                  SizedBox(height: 10),
+                                  WeeklyChallengeCard(compact: true),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ).animate(delay: 80.ms).fadeIn(duration: 340.ms),
+                        const SizedBox(height: 12),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              flex: 8,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 14,
+                                ),
+                                child: _LearningLanesPanel(
+                                  language: language,
+                                  level: level,
+                                  dueCount: dueCount,
+                                  weakCount: weakCount,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: AppSpacing.md),
+                            Expanded(flex: 5, child: studyPromptCard),
+                          ],
+                        ).animate(delay: 180.ms).fadeIn(duration: 340.ms),
+                        const SizedBox(height: 12),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 14),
                           child: const WeaknessRadarCard(compact: true),
-                        ).animate(delay: 280.ms).fadeIn(duration: 320.ms),
-                        const SizedBox(height: 10),
+                        ).animate(delay: 260.ms).fadeIn(duration: 320.ms),
+                        const SizedBox(height: 12),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 14),
                           child: const DiscoverPracticePanel(
                             initiallyExpanded: false,
                             dense: true,
                           ),
-                        ).animate(delay: 340.ms).fadeIn(duration: 360.ms),
-                        const SizedBox(height: 6),
-                        studyPromptCard
-                            .animate(delay: 400.ms)
-                            .fadeIn(duration: 320.ms),
+                        ).animate(delay: 320.ms).fadeIn(duration: 320.ms),
                       ],
                     );
-                  }
-
-                  return Column(
-                    children: [
-                      const GoalSelectionBanner(),
-                      if (showFoundationsCard) ...[
-                        foundationsCard,
-                        const SizedBox(height: 10),
-                      ],
-                      hero,
-                      const SizedBox(height: 10),
-                      overviewGrid,
-                      const SizedBox(height: 10),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 14),
-                        child: KanaReviewDueCard(),
-                      ),
-                      const SizedBox(height: 10),
-                      const DailyPlanCard()
-                          .animate(delay: 60.ms)
-                          .fadeIn(duration: 340.ms),
-                      const SizedBox(height: 12),
-                      textbookRoadmapPanel
-                          .animate(delay: 80.ms)
-                          .fadeIn(duration: 320.ms),
-                      const SizedBox(height: 12),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Expanded(
-                            flex: 8,
-                            child: DailySessionCard(compact: true),
-                          ),
-                          const SizedBox(width: AppSpacing.md),
-                          Expanded(
-                            flex: 5,
-                            child: Column(
-                              children: const [
-                                Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 14),
-                                  child: MiniDashboard(compact: true),
-                                ),
-                                SizedBox(height: 10),
-                                WeeklyChallengeCard(compact: true),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ).animate(delay: 80.ms).fadeIn(duration: 340.ms),
-                      const SizedBox(height: 12),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            flex: 8,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 14,
-                              ),
-                              child: _LearningLanesPanel(
-                                language: language,
-                                level: level,
-                                dueCount: dueCount,
-                                weakCount: weakCount,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: AppSpacing.md),
-                          Expanded(flex: 5, child: studyPromptCard),
-                        ],
-                      ).animate(delay: 180.ms).fadeIn(duration: 340.ms),
-                      const SizedBox(height: 12),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 14),
-                        child: const WeaknessRadarCard(compact: true),
-                      ).animate(delay: 260.ms).fadeIn(duration: 320.ms),
-                      const SizedBox(height: 12),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 14),
-                        child: const DiscoverPracticePanel(
-                          initiallyExpanded: false,
-                          dense: true,
-                        ),
-                      ).animate(delay: 320.ms).fadeIn(duration: 320.ms),
-                    ],
-                  );
-                },
+                  },
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
+  }
+
+  static Future<void> _refreshHome(WidgetRef ref) async {
+    ref.invalidate(dashboardProvider);
+    ref.invalidate(continueActionProvider);
+    ref.invalidate(foundationsProgressProvider);
+    await Future<void>.delayed(Duration.zero);
   }
 
   static void _openContinueAction(

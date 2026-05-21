@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
+import 'package:jpstudy/responsive/breakpoints.dart';
 
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
@@ -9,6 +10,7 @@ import '../../../data/models/vocab_item.dart';
 import '../../../data/repositories/lesson_repository.dart';
 import '../models/flashcard_session.dart';
 import '../models/flashcard_settings.dart';
+import '../models/swipe_action.dart';
 import '../widgets/enhanced_flashcard.dart';
 import '../widgets/flashcard_settings_dialog.dart';
 import '../widgets/flashcard_summary.dart';
@@ -36,6 +38,8 @@ class _EnhancedFlashcardScreenState
   late List<VocabItem> _displayItems;
   FlashcardSettings _settings = const FlashcardSettings();
   final Set<int> _flippedIndices = {};
+  final Set<int> _needPracticeTermIds = {};
+  SwipeAction? _lastAction;
   late final DateTime _sessionStart;
   // FsrsService is stateless — create once in state rather than on every build.
   final FsrsService _fsrsService = FsrsService();
@@ -68,47 +72,62 @@ class _EnhancedFlashcardScreenState
       },
     );
     final progress = (_currentIndex + 1) / _displayItems.length;
+    final isMobile =
+        Breakpoints.fromWidth(MediaQuery.sizeOf(context).width) ==
+        Breakpoint.mobile;
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.lessonTitle),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.settings_rounded),
-            onPressed: _showSettings,
-            tooltip: language.settingsLabel,
-          ),
-        ],
+        actions: isMobile
+            ? null
+            : [
+                IconButton(
+                  icon: const Icon(Icons.settings_rounded),
+                  onPressed: _showSettings,
+                  tooltip: language.settingsLabel,
+                ),
+              ],
       ),
-      body: Column(
-        children: [
-          // Progress bar
-          _buildProgressBar(progress),
+      body: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onHorizontalDragEnd: _handleHorizontalDragEnd,
+        onLongPress: _markCurrentNeedPractice,
+        child: Column(
+          children: [
+            // Progress bar
+            _buildProgressBar(progress),
 
-          // Flashcard
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: EnhancedFlashcard(
-                key: ValueKey(currentItem.id),
-                item: currentItem,
-                showTermFirst: _settings.showTermFirst,
-                language: language,
-                onFlip: () =>
-                    setState(() => _flippedIndices.add(_currentIndex)),
-                retrievability: retrievability,
+            // Flashcard
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(isMobile ? 0 : 16),
+                child: EnhancedFlashcard(
+                  key: ValueKey(currentItem.id),
+                  item: currentItem,
+                  showTermFirst: _settings.showTermFirst,
+                  edgeToEdge: isMobile,
+                  language: language,
+                  onFlip: () =>
+                      setState(() => _flippedIndices.add(_currentIndex)),
+                  onSwipeNext: _goNextOrSummary,
+                  onSwipePrevious: _handlePrevious,
+                  onMarkDifficult: _markCurrentNeedPractice,
+                  retrievability: retrievability,
+                ),
               ),
             ),
-          ),
 
-          // Bottom navigation
-          _buildBottomControls(),
+            // Bottom navigation
+            if (_lastAction != null) _buildGestureStatus(),
+            _buildBottomControls(),
 
-          // Card counter
-          _buildCardCounter(),
+            // Card counter
+            _buildCardCounter(),
 
-          const SizedBox(height: 16),
-        ],
+            const SizedBox(height: 16),
+          ],
+        ),
       ),
     );
   }
@@ -181,6 +200,34 @@ class _EnhancedFlashcardScreenState
     );
   }
 
+  Widget _buildGestureStatus() {
+    final action = _lastAction;
+    if (action == null) {
+      return const SizedBox.shrink();
+    }
+    final palette = context.appPalette;
+    final color = action == SwipeAction.needPractice
+        ? palette.warning
+        : palette.primary;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(24, 0, 24, 4),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: color.withValues(alpha: 0.24)),
+        ),
+        child: Text(
+          action.label,
+          textAlign: TextAlign.center,
+          style: TextStyle(color: color, fontWeight: FontWeight.w800),
+        ),
+      ),
+    );
+  }
+
   void _handleNext() {
     setState(() {
       if (_currentIndex < _displayItems.length - 1) {
@@ -193,6 +240,37 @@ class _EnhancedFlashcardScreenState
     setState(() {
       if (_currentIndex > 0) {
         _currentIndex--;
+      }
+    });
+  }
+
+  void _handleHorizontalDragEnd(DragEndDetails details) {
+    final velocity = details.primaryVelocity ?? 0;
+    if (velocity.abs() < 220) {
+      return;
+    }
+    if (velocity < 0) {
+      _goNextOrSummary();
+      return;
+    }
+    _handlePrevious();
+  }
+
+  void _goNextOrSummary() {
+    if (_currentIndex < _displayItems.length - 1) {
+      _handleNext();
+    } else {
+      _showSummary();
+    }
+  }
+
+  void _markCurrentNeedPractice() {
+    final item = _displayItems[_currentIndex];
+    setState(() {
+      _needPracticeTermIds.add(item.id);
+      _lastAction = SwipeAction.needPractice;
+      if (_currentIndex < _displayItems.length - 1) {
+        _currentIndex++;
       }
     });
   }
@@ -213,6 +291,8 @@ class _EnhancedFlashcardScreenState
                 : List.from(widget.items);
             _currentIndex = 0;
             _flippedIndices.clear();
+            _needPracticeTermIds.clear();
+            _lastAction = null;
           }
         });
       },
@@ -222,9 +302,14 @@ class _EnhancedFlashcardScreenState
   void _showSummary() {
     final flippedItems = _flippedIndices
         .map((i) => _displayItems[i].id)
+        .where((id) => !_needPracticeTermIds.contains(id))
         .toList();
     final skippedItems = List.generate(_displayItems.length, (i) => i)
-        .where((i) => !_flippedIndices.contains(i))
+        .where(
+          (i) =>
+              !_flippedIndices.contains(i) &&
+              !_needPracticeTermIds.contains(_displayItems[i].id),
+        )
         .map((i) => _displayItems[i].id)
         .toList();
 
@@ -234,6 +319,7 @@ class _EnhancedFlashcardScreenState
       startedAt: _sessionStart,
       completedAt: DateTime.now(),
       knownTermIds: flippedItems,
+      needPracticeTermIds: _needPracticeTermIds.toList(),
       skippedTermIds: skippedItems,
     );
 

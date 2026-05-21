@@ -26,6 +26,7 @@ import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.da
 import 'package:jpstudy/features/conjugation/widgets/conjugation_lesson_widget.dart';
 import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
 import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
+import 'package:jpstudy/responsive/breakpoints.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'lesson_detail_controls.dart';

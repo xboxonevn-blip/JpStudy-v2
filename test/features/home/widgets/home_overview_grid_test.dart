@@ -54,18 +54,21 @@ void main() {
   });
 
   testWidgets('uses one column on mobile and four on desktop', (tester) async {
-    Future<int> columnsFor(double width) async {
+    Future<int> columnsFor(double width, {bool padded = false}) async {
       tester.view.physicalSize = Size(width, 800);
       tester.view.devicePixelRatio = 1;
       await tester.pumpWidget(
-        const MaterialApp(
+        MaterialApp(
           home: Scaffold(
             body: SizedBox.expand(
-              child: HomeOverviewGrid(
-                language: AppLanguage.en,
-                level: StudyLevel.n5,
-                dashboard: dashboard,
-                continueAction: action,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: padded ? 14 : 0),
+                child: const HomeOverviewGrid(
+                  language: AppLanguage.en,
+                  level: StudyLevel.n5,
+                  dashboard: dashboard,
+                  continueAction: action,
+                ),
               ),
             ),
           ),
@@ -84,6 +87,9 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
 
     expect(await columnsFor(390), 1);
+    expect(await columnsFor(768), 2);
+    expect(await columnsFor(1024), 2);
     expect(await columnsFor(1280), 4);
+    expect(await columnsFor(1280, padded: true), 4);
   });
 }

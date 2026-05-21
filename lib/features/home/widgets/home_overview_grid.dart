@@ -22,61 +22,60 @@ class HomeOverviewGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BreakpointBuilder(
-      builder: (context, breakpoint) {
-        final columns = switch (breakpoint) {
-          Breakpoint.mobile => 1,
-          Breakpoint.tabletPortrait => 2,
-          Breakpoint.tabletLandscape => 2,
-          Breakpoint.desktop => 4,
-        };
-        return GridView(
-          key: const ValueKey('home_overview_grid'),
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: columns,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            childAspectRatio: columns == 1 ? 3.0 : 1.35,
-            mainAxisExtent: columns == 1 ? 118 : 154,
-          ),
-          children: [
-            _OverviewCard(
-              key: const ValueKey('home_today_plan_widget'),
-              icon: Icons.today_rounded,
-              color: context.appPalette.primary,
-              title: _todayPlanTitle(language),
-              value: '${dashboard?.totalDue ?? 0}',
-              subtitle: _todayPlanSubtitle(language, dashboard?.totalDue ?? 0),
-            ),
-            _OverviewCard(
-              key: const ValueKey('home_level_progress_widget'),
-              icon: Icons.stacked_bar_chart_rounded,
-              color: context.appPalette.secondary,
-              title: _levelProgressTitle(language),
-              value: level.shortLabel,
-              subtitle: _levelProgressSubtitle(language, level),
-            ),
-            _OverviewCard(
-              key: const ValueKey('home_streak_widget'),
-              icon: Icons.local_fire_department_rounded,
-              color: context.appPalette.accent,
-              title: _streakTitle(language),
-              value: '${dashboard?.streak ?? 0}',
-              subtitle: _streakSubtitle(language, dashboard?.todayXp ?? 0),
-            ),
-            _OverviewCard(
-              key: const ValueKey('home_last_context_widget'),
-              icon: Icons.history_edu_rounded,
-              color: context.appPalette.success,
-              title: _lastContextTitle(language),
-              value: _lastContextValue(language),
-              subtitle: continueAction?.label ?? _lastContextFallback(language),
-            ),
-          ],
-        );
-      },
+    final breakpoint = Breakpoints.fromWidth(MediaQuery.sizeOf(context).width);
+    final columns = switch (breakpoint) {
+      Breakpoint.mobile => 1,
+      Breakpoint.tabletPortrait => 2,
+      Breakpoint.tabletLandscape => 2,
+      Breakpoint.desktop => 4,
+    };
+    return GridView(
+      key: const ValueKey('home_overview_grid'),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: columns,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        childAspectRatio: columns == 1 ? 3.0 : 1.35,
+        mainAxisExtent: columns == 1 ? 118 : 154,
+      ),
+      children: [
+        _OverviewCard(
+          key: const ValueKey('home_today_plan_widget'),
+          icon: Icons.today_rounded,
+          color: context.appPalette.primary,
+          title: _todayPlanTitle(language),
+          value: '${dashboard?.totalDue ?? 0}',
+          subtitle: _todayPlanSubtitle(language, dashboard?.totalDue ?? 0),
+        ),
+        _OverviewCard(
+          key: const ValueKey('home_level_progress_widget'),
+          icon: Icons.stacked_bar_chart_rounded,
+          color: context.appPalette.secondary,
+          title: _levelProgressTitle(language),
+          value: level.shortLabel,
+          subtitle: _levelProgressSubtitle(language, level),
+        ),
+        _OverviewCard(
+          key: const ValueKey('home_streak_widget'),
+          icon: Icons.local_fire_department_rounded,
+          color: context.appPalette.accent,
+          title: _streakTitle(language),
+          value: '${dashboard?.streak ?? 0}',
+          subtitle: _streakSubtitle(language, dashboard?.todayXp ?? 0),
+        ),
+        _OverviewCard(
+          key: const ValueKey('home_last_context_widget'),
+          icon: Icons.history_edu_rounded,
+          color: context.appPalette.success,
+          title: _lastContextTitle(language),
+          value: _lastContextValue(language),
+          subtitle: continueAction == null
+              ? _lastContextFallback(language)
+              : _lastContextSubtitle(language, continueAction!.count ?? 0),
+        ),
+      ],
     );
   }
 }
@@ -217,3 +216,12 @@ String _lastContextFallback(AppLanguage language) => switch (language) {
   AppLanguage.vi => 'Mở bước học phù hợp tiếp theo',
   AppLanguage.ja => '次に役立つ学習へ',
 };
+
+String _lastContextSubtitle(AppLanguage language, int count) =>
+    switch (language) {
+      AppLanguage.en => count == 1
+          ? 'One queue item is ready'
+          : 'Your queue is ready for review',
+      AppLanguage.vi => '$count mục sẵn sàng trong hàng đợi',
+      AppLanguage.ja => 'キューに$count件',
+    };

@@ -1565,3 +1565,10 @@
 - Dry-run for `kanji-vocab-n3` reported `19` local PDFs, `1358` accepted factual rows, and `0` review rows.
 - Extracted `docs/research/canonical/vocab/kanji-vocab-n3.md` and report `docs/research/canonical/vocab/reports/kanji-vocab-n3.json` with level `N3` and `text-layer` confidence.
 - No banned website was accessed. Next: run gates, commit, then continue kanji-vocab N2.
+
+## 2026-05-21 QA-A-030 Phase 1 Kanji-vocab N2 extraction
+
+- Dry-run for `kanji-vocab-n2` reported `25` local PDFs, `2068` accepted factual rows, and `0` review rows.
+- Extracted `docs/research/canonical/vocab/kanji-vocab-n2.md` and report `docs/research/canonical/vocab/reports/kanji-vocab-n2.json` with level `N2` and `text-layer` confidence.
+- Phase 1 vocab extraction now covers all source folders found in `Tu Vung`: Minna I/II, Mimikara N1/N2/N3, and kanji-vocab N5/N4/N3/N2. No N1 kanji-vocab folder exists in this root; OQ-012 remains non-blocking.
+- No banned website was accessed. Next: run gates, commit, then start Phase 2 cross-source consensus.

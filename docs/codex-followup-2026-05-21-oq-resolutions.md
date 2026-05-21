@@ -33,9 +33,10 @@
 | 1 | B | Mimikara N1-N3 lessons live (scope corrected from N1-N5) | OQ-005 (revised) | **2026-05-22 EOD** |
 | 1 | C | Fill 4 missing Mimikara units (OQ-011) | OQ-011 | with Sprint 1 |
 | 1 | D | Grammar fallback Tae Kim integration (OQ-013) | OQ-013 | with Sprint 1 |
-| 2 | E | Vocab `example_sentences[]` field + flashcard wire-up (OQ-006) | OQ-006 | 2026-05-23 |
-| 3 | F | Reading comp scale-up ~888 passages (OQ-008) | OQ-008 | 2026-05-25 |
-| 4 | G | Hand-crafted exercise templates (b1 refined: Top-200 Tier1 + 21K Tier2) | OQ-007 | 2026-05-28 |
+| 2 | **H** | **UI System refactor + home redesign + responsive polish** (owner request 2026-05-21) | owner audit ảnh trang chủ | **2026-05-26** |
+| 2 | E | Vocab `example_sentences[]` field + flashcard wire-up (OQ-006) | OQ-006 | 2026-05-27 (parallel with H tail) |
+| 3 | F | Reading comp scale-up ~888 passages (OQ-008) | OQ-008 | 2026-05-30 |
+| 4 | G | Hand-crafted exercise templates (b1 refined: Top-200 Tier1 + 21K Tier2) | OQ-007 | 2026-06-03 |
 
 ## 2. NEW DIRECTIVE E REMINDER
 
@@ -327,7 +328,168 @@ lieu JPStudy/`. Owner authorizes Tae Kim Grammar Guide (CC-BY-NC-SA)
 - [ ] Every grammar item has 1 human moment per E.4
 - [ ] Attribution present for Tae Kim-sourced content
 
-## 4. SPRINT 2 — 2026-05-23
+## 4. SPRINT 2 — 2026-05-23 → 2026-05-27 (Phase H priority)
+
+### Phase H — UI System refactor + home redesign + responsive polish
+
+**Source**: Owner audit 2026-05-21 sau khi xem live trang chủ. Phase 6
+megaprompt §10 spec gap: max-width 1040 fix cứng → desktop wide-screen
+phí 2 bên. Plus mobile responsive chưa verified. Owner chọn **"Polish +
+UI System refactor"** scope (largest option).
+
+7 sub-phase tuần tự, deadline Sprint 2 EOD 2026-05-26.
+
+#### H.1 — UI Audit (Day 1)
+
+1. Inventory tất cả custom widgets trong `lib/widgets/` + `lib/features/*/widgets/`
+2. Identify duplicates (same purpose, slight visual variation)
+3. Detect ad-hoc styling: hardcoded color/padding/margin/font-size không qua theme
+4. List in `docs/research/ui-audit-2026-05-22.md`:
+   - Component name + location + usage count
+   - Style violations
+   - Recommended dedupe targets
+5. Apply Directive D (connected work): không chỉ audit lib/widgets, phải
+   audit cả lib/features/*/screens for inline styling
+
+#### H.2 — Design Tokens (Day 1-2)
+
+Codify design system trong `lib/theme/tokens/`:
+
+1. `spacing_tokens.dart`: 4/8/12/16/20/24/32/40/48/64 px scale
+2. `color_tokens.dart`: semantic palette
+   - Primary (brand green)
+   - Surface (background layers)
+   - Text (high/medium/low contrast)
+   - Semantic (success/warning/danger/info)
+   - Level colors (N5=red, N4=orange, N3=yellow, N2=green, N1=blue per JLPT convention)
+3. `typography_tokens.dart`: type scale
+   - Display (32/40/48px)
+   - Heading (20/24/28px)
+   - Body (14/16/18px)
+   - Caption (12/13px)
+   - Font family (Inter or Be Vietnam Pro for VI)
+4. `elevation_tokens.dart`: 0/1/2/4/8 dp shadows
+5. `motion_tokens.dart`: durations + easings (snap, smooth, bounce)
+6. `radius_tokens.dart`: 4/8/12/16/24 px corner radii
+
+Export via `lib/theme/app_theme.dart` để Material `ThemeData` consume.
+
+#### H.3 — Component Library Refactor (Day 2-3)
+
+1. Tạo `lib/widgets/foundation/` chứa primitives đã dedupe:
+   - `AppCard` (replace ad-hoc Card variations)
+   - `AppButton` (primary/secondary/ghost/destructive variants)
+   - `AppChip` (status chip variants)
+   - `AppBadge` (level/streak/count badge)
+   - `AppIcon` (semantic icon wrapper)
+   - `AppDivider` (horizontal/vertical với spacing tokens)
+   - `AppSection` (titled section wrapper)
+   - `AppEmptyState` (consistent empty placeholder — KHÔNG "sẽ mở sau")
+2. Refactor existing widgets to use foundation primitives
+3. Delete deprecated duplicates
+4. Update unit tests + visual regression baseline
+
+Apply Directive D: refactor batch theo Directive A (~5 file/commit).
+
+#### H.4 — Home Page Redesign (Day 3-4)
+
+Match owner's screenshot pain points:
+
+1. **Adaptive max-width container**:
+   - ≤ 1280px viewport: max-width 1040 (existing)
+   - 1281-1600px viewport: max-width 1280
+   - 1601-1920px viewport: max-width 1440
+   - ≥ 1920px viewport: max-width 1600
+   ```dart
+   double adaptiveMaxWidth(double viewportWidth) {
+     if (viewportWidth <= 1280) return 1040;
+     if (viewportWidth <= 1600) return 1280;
+     if (viewportWidth <= 1920) return 1440;
+     return 1600;
+   }
+   ```
+
+2. **2-column top section** (≥ 1280px):
+   - Left col: "Nền tảng - Bảng chữ Hiragana/Katakana/Hán Việt" card
+   - Right col: "DOJO HÔM NAY" banner
+   - On smaller viewports: stack vertically
+
+3. **Sidebar improvement**:
+   - Add weekly streak mini-widget at bottom of sidebar
+   - Add "Lessons due today" count chip
+   - Collapsible toggle (⬅) khi user click, save preference
+
+4. **Add new home widget**: "Featured this week" (top widget)
+   - Suggest 1 grammar pattern + 1 vocab cluster + 1 kanji per week
+   - Curated by frequency rank + SRS due intersection
+   - CTA "Khám phá tuần này"
+
+5. **Vertical fill on desktop**:
+   - Move 4 existing widgets (Kế hoạch/Tiến độ/Chuỗi/Đang dở) up
+   - Add "Hoạt động gần đây" timeline widget below (last 7 days activity)
+
+6. **Visual polish**:
+   - Use design tokens H.2
+   - Use foundation components H.3
+   - Smooth transitions per motion_tokens
+
+#### H.5 — Responsive Polish (Day 4-5)
+
+1. Implement 4 breakpoints properly (per megaprompt §10.1):
+   - Mobile: < 768px
+   - Tablet portrait: 768-1023px
+   - Tablet landscape: 1024-1279px
+   - Desktop: ≥ 1280px
+2. Mobile patterns:
+   - Bottom sheet mode picker on lesson page
+   - Fullscreen flashcard (edge-to-edge)
+   - Swipe gesture: trái/phải = prev/next, lên/xuống = next/prev card
+   - Tap = lật thẻ, long-press = mark difficult
+   - Sticky header gọn (chỉ ← Back + title)
+3. Tablet portrait: 1-col rich layout
+4. Tablet landscape: 2-col layout
+5. Desktop: full adaptive max-width per H.4
+
+Live test mọi page across 4 viewports:
+- Home, Lesson, Vocab list, Grammar list, Kanji graph, Exam, Profile
+
+#### H.6 — Style Guide Doc (Day 5)
+
+`docs/design-system-v3.md`:
+- Token documentation (spacing, colors, typography, elevation, motion, radii)
+- Component catalog (with Storybook-style usage examples)
+- Layout patterns (1-col, 2-col, 4-col, sidebar, modal, sheet)
+- Responsive guidelines (breakpoint usage rules)
+- Accessibility checklist (WCAG AA targets, contrast ratios, focus rings)
+- Anti-patterns (don't do this)
+- Brand voice cross-reference (link to Directive E persona Dr. Linh-Phan-Trần)
+
+Existing `docs/design-system-v2.md` archive, không xóa.
+
+#### H.7 — Visual Regression Lock (Day 5-6)
+
+1. Update Playwright config (`tool/qa/visual_regression.config.js`):
+   - 4 viewports (360 / 768 / 1024 / 1280) — already exists per Phase 7
+   - **Add 1600 and 1920 viewports** for ultra-wide coverage
+2. Re-baseline all pages after H.4/H.5 changes
+3. CI integration: fail if pixel diff > 1% on any viewport
+4. Document baseline procedure in `docs/qa/visual-regression-procedure.md`
+
+#### Acceptance Phase H (DEADLINE 2026-05-26 EOD)
+
+- [ ] H.1: `docs/research/ui-audit-2026-05-22.md` listing all components + violations
+- [ ] H.2: 6 token files in `lib/theme/tokens/`, integrated into Material ThemeData
+- [ ] H.3: `lib/widgets/foundation/` with ≥ 8 primitive components, used across app
+- [ ] H.4: Home page renders with adaptive max-width, 2-col top, sidebar improvement,
+      "Featured" widget, "Hoạt động gần đây" timeline
+- [ ] H.5: 4 breakpoints work cleanly, mobile patterns verified
+- [ ] H.6: `docs/design-system-v3.md` published
+- [ ] H.7: Visual regression baseline locked at 6 viewports (added 1600+1920)
+- [ ] Live verify on jpstudy.web.app: home page on 1920x1080 desktop shows
+      full-width content (no large empty bands on sides)
+- [ ] Live verify on mobile (Chrome DevTools 360x640): no overflow, gestures
+      work, bottom sheet mode picker functional
+- [ ] DECISION logged
 
 ### Phase E — Vocab `example_sentences[]` field migration (OQ-006 hybrid a+c)
 
@@ -559,16 +721,19 @@ Same whitelist. Reminder:
 - [ ] Phase C: 4 missing units filled with online whitelist, deduped
 - [ ] Phase D: Grammar fallback Tae Kim integrated
 
-### Sprint 2 acceptance (by EOD 2026-05-23)
+### Sprint 2 acceptance (by EOD 2026-05-26 + EOD 2026-05-27)
+- [ ] **Phase H: UI System refactor + home redesign + responsive polish**
+      (6 sub-phase H.1-H.7, deadline 2026-05-26)
 - [ ] Phase E: Vocab example_sentences[] populated, flashcard back side
-      renders inline
+      renders inline (deadline 2026-05-27, parallel with H tail)
 
-### Sprint 3 acceptance (by EOD 2026-05-25)
+### Sprint 3 acceptance (by EOD 2026-05-30)
 - [ ] Phase F: ~888 new reading passages, 2+/lesson for Mina/Hajimete/
       Shin Kanzen
 
-### Sprint 4 acceptance (by EOD 2026-05-28)
-- [ ] Phase G: ~21,563 items × ≥ 10 hand-crafted templates
+### Sprint 4 acceptance (by EOD 2026-06-03)
+- [ ] Phase G: Top-200 Tier1 (≥10 hand-crafted/item) + ~21K Tier2
+      (≥3 seed + variant fill to 50)
 
 ### Cross-cutting acceptance
 - [ ] All non-negotiable rules respected
@@ -598,10 +763,12 @@ Final entry `autonomous-loop-status.md`:
    other phases. Delete Mimikara N4/N5 bogus + restructure Shin Kanzen
    to Bunpou-only 83/163/88 lessons
 4. Then Phase A (Kanji tab fix) — quickest visible defect
-5. Then Phase B-D in parallel (Sprint 1)
-6. Then Phase E (Sprint 2)
-7. Then Phase F (Sprint 3)
-8. Then Phase G (Sprint 4)
+5. Then Phase B-D in parallel (Sprint 1, deadline 2026-05-22 EOD)
+6. **Then Phase H (UI System refactor) — Sprint 2 priority, owner-flagged
+   2026-05-21 after seeing live home page wide-screen waste**
+7. Then Phase E (Sprint 2, parallel with H tail)
+8. Then Phase F (Sprint 3)
+9. Then Phase G (Sprint 4)
 
 KHÔNG hỏi owner trong sprint. Tự quyết theo Decision Matrix §14 megaprompt.
 Log mọi DECISIONS + OQs. Skip blocking OQ và làm phase khác. Run đến

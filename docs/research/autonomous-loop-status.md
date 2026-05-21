@@ -1897,3 +1897,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: ask two questions for every polite verb form:
   affirmative or negative, then past or non-past.
+
+## 2026-05-22 Phase G Tier-1 item 021
+
+- Re-authored `grammar:n5:grammar_n5_4:003` (`N1 から N2 まで`) with
+  start/end range logic for time and place.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `から...まで` builds a span from start to finish,
+  unlike a single clock time or a simple list with `と`.

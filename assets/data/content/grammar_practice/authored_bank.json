@@ -4243,6 +4243,219 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-form-l1-001",
+      "template_id": "tpl-grammar-n5-021-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn cặp trợ từ đúng: 九時 ___ 五時 ___",
+      "answer_template": "から / まで",
+      "options_template": [
+        "から / まで",
+        "まで / から",
+        "と / と",
+        "の / の"
+      ],
+      "distractor_strategy": "from-to-particle-pair",
+      "teaching_note": "から đặt sau điểm bắt đầu; まで đặt sau điểm kết thúc.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-form-l1-002",
+      "template_id": "tpl-grammar-n5-021-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu/cụm nào đúng để nói 'từ Tokyo đến Kyoto'?",
+      "answer_template": "東京から京都まで",
+      "options_template": [
+        "東京から京都まで",
+        "東京まで京都から",
+        "東京と京都まで",
+        "東京の京都"
+      ],
+      "distractor_strategy": "place-range-order",
+      "teaching_note": "Điểm đi + から, điểm đến + まで.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-021-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "九時から五時まで nghĩa tự nhiên nhất là gì?",
+      "answer_template": "từ 9 giờ đến 5 giờ",
+      "options_template": [
+        "từ 9 giờ đến 5 giờ",
+        "bây giờ là 9 giờ 5 phút",
+        "9 giờ và 5 giờ",
+        "5 giờ từ 9 giờ"
+      ],
+      "distractor_strategy": "range-vs-time-point-list-reversal",
+      "teaching_note": "から...まで tạo khoảng thời gian có đầu và cuối.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-021-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1 から N2 まで, から và まで lần lượt đánh dấu gì?",
+      "answer_template": "から đánh dấu điểm bắt đầu; まで đánh dấu điểm kết thúc/giới hạn.",
+      "distractor_strategy": "range-particle-role-recall",
+      "teaching_note": "Không học rời: から và まで tạo thành một cặp đầu-cuối.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-usage-l3-005",
+      "template_id": "tpl-grammar-n5-021-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'từ nhà đến trường': うち / から / 学校 / まで",
+      "answer_template": "うちから学校まで",
+      "options_template": [
+        "うち",
+        "から",
+        "学校",
+        "まで"
+      ],
+      "distractor_strategy": "home-school-range-order",
+      "teaching_note": "Địa điểm bắt đầu là うち; đích cuối là 学校.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-usage-l3-006",
+      "template_id": "tpl-grammar-n5-021-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cụm 'từ thứ Hai đến thứ Sáu'.",
+      "answer_template": "月曜日から金曜日まで",
+      "distractor_strategy": "weekday-range-production",
+      "teaching_note": "Ngày bắt đầu nhận から; ngày kết thúc nhận まで.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-context-l3-007",
+      "template_id": "tpl-grammar-n5-021-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Biển thông báo ghi giờ mở cửa từ 9 giờ đến 5 giờ. Viết cụm giờ.",
+      "answer_template": "九時から五時まで",
+      "distractor_strategy": "business-hours-range-context",
+      "teaching_note": "Giờ mở cửa là một khoảng, nên dùng から...まで.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-context-l2-008",
+      "template_id": "tpl-grammar-n5-021-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N1 から N2 まで?",
+      "answer_template": "Bạn cần nói phạm vi từ điểm bắt đầu đến điểm kết thúc.",
+      "options_template": [
+        "Bạn cần nói phạm vi từ điểm bắt đầu đến điểm kết thúc.",
+        "Bạn cần nối hai danh từ ngang hàng bằng 'và'.",
+        "Bạn cần đọc giờ hiện tại trên đồng hồ.",
+        "Bạn cần hỏi quốc gia của người nghe."
+      ],
+      "distractor_strategy": "range-context-vs-list-current-time-country",
+      "teaching_note": "Mẫu này luôn có hướng đầu-cuối, dù là thời gian hay địa điểm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-021-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần nói khoảng làm việc từ 9 giờ đến 5 giờ, không nói bây giờ là 9:05. Câu/cụm nào đúng?",
+      "answer_template": "九時から五時まで",
+      "options_template": [
+        "九時から五時まで",
+        "今、九時五分です",
+        "九時と五時",
+        "九時の五時"
+      ],
+      "distractor_strategy": "range-vs-current-time-list-no-analysis",
+      "teaching_note": "L4: から...まで là khoảng; 今、...時...分です là một mốc giờ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-021-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-021-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn mô tả hành trình từ Tokyo đến Kyoto, không chỉ liệt kê hai thành phố. Cụm nào đúng?",
+      "answer_template": "東京から京都まで",
+      "options_template": [
+        "東京から京都まで",
+        "東京と京都",
+        "東京の京都",
+        "京都から東京まで"
+      ],
+      "distractor_strategy": "journey-range-vs-list-possession-reversal-analysis",
+      "teaching_note": "東京と京都 chỉ là danh sách; から...まで cho biết hướng đi từ Tokyo đến Kyoto.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

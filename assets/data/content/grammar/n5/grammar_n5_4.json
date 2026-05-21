@@ -102,10 +102,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 (Thời gian / Địa điểm) から N2 まで",
-      "meaning": "Ý nghĩa: Mẫu này nói phạm vi từ điểm bắt đầu đến điểm kết thúc, có thể là thời gian hoặc địa điểm.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "から đánh dấu điểm xuất phát, còn まで đánh dấu giới hạn cuối. Cấu trúc N1 から N2 まで tạo một đoạn có đầu và cuối rõ ràng, dùng được cho thời gian như 九時から五時まで và địa điểm như 東京から京都まで.",
+      "hanVietBridge": "Nhớ bằng Hán-Việt 'khởi điểm' và 'hạn điểm': から là điểm khởi, まで là điểm hạn. Tiếng Việt tương ứng 'từ N1 đến N2', nên đừng dịch まで thành một điểm đơn lẻ.",
+      "form": "Hình thức: N1(thời gian/địa điểm) から N2 まで. N1 là điểm bắt đầu; N2 là điểm kết thúc.",
+      "meaning": "Ý nghĩa: diễn tả phạm vi từ N1 đến N2, có thể là khoảng thời gian hoặc quãng đường/địa điểm.",
+      "usage": "Sử dụng: dùng cho giờ làm việc, lịch học, hành trình, phạm vi di chuyển: 九時から五時まで, 月曜日から金曜日まで, うちから学校まで.",
+      "humanMoment": "Dr. Linh lưu ý: N1 から N2 まで luôn dựng một cây cầu từ đầu đến cuối. Khác 今、九時です chỉ một mốc giờ, 九時から五時まで nói cả đoạn thời gian từ 9 giờ đến 5 giờ.",
+      "crossLinks": [
+        {
+          "pattern": "今、～時～分です",
+          "contrast": "khác phạm vi: 今、～時～分です nói một mốc giờ, còn N1 から N2 まで nói một khoảng."
+        },
+        {
+          "pattern": "N1 と N2",
+          "contrast": "khác quan hệ: と liệt kê hai danh từ ngang hàng, còn から...まで tạo hướng từ điểm đầu đến điểm cuối."
+        },
+        {
+          "pattern": "N(địa điểm) へ 行きます",
+          "contrast": "khác mức chi tiết: へ chỉ đích đến, còn から...まで nêu cả điểm đi và điểm đến."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

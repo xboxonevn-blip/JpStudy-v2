@@ -2557,6 +2557,217 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-form-l1-001",
+      "template_id": "tpl-grammar-n5-013-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn từ chỉ 'chỗ này' gần người nói: ___ は教室です。",
+      "answer_template": "ここ",
+      "options_template": [
+        "ここ",
+        "これ",
+        "この",
+        "さん"
+      ],
+      "distractor_strategy": "place-demonstrative-vs-object-adnominal-honorific",
+      "teaching_note": "ここ chỉ địa điểm gần người nói; これ chỉ đồ vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-form-l1-002",
+      "template_id": "tpl-grammar-n5-013-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để nói 'Chỗ này là quầy tiếp tân'?",
+      "answer_template": "ここは受付です。",
+      "options_template": [
+        "ここは受付です。",
+        "これは受付です。",
+        "このは受付です。",
+        "ここ受付ですか。"
+      ],
+      "distractor_strategy": "place-topic-form",
+      "teaching_note": "Nơi/chỗ dùng ここ/そこ/あそこ + は + địa điểm + です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-013-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "あそこは図書館です nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Chỗ kia là thư viện.",
+      "options_template": [
+        "Chỗ kia là thư viện.",
+        "Cái kia là thư viện.",
+        "Thư viện này.",
+        "Thư viện của tôi."
+      ],
+      "distractor_strategy": "place-vs-object-adnominal-possession",
+      "teaching_note": "あそこ là nơi xa cả người nói và người nghe.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-013-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Phân biệt nhanh ここ, そこ, あそこ theo khoảng cách.",
+      "answer_template": "ここ: gần người nói; そこ: gần người nghe hoặc điểm vừa nhắc; あそこ: xa cả hai.",
+      "distractor_strategy": "ko-so-a-place-distance-recall",
+      "teaching_note": "Đây là trục không gian cho địa điểm, không phải trục đồ vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-usage-l3-005",
+      "template_id": "tpl-grammar-n5-013-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Chỗ này là phòng học': ここは / 教室です",
+      "answer_template": "ここは教室です。",
+      "options_template": [
+        "ここは",
+        "教室です"
+      ],
+      "distractor_strategy": "place-topic-order",
+      "teaching_note": "Đặt nơi được chỉ làm chủ đề bằng は, rồi nêu địa điểm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-usage-l3-006",
+      "template_id": "tpl-grammar-n5-013-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Bạn đang đứng ở thư viện và muốn nói 'Chỗ này là thư viện'. Viết câu.",
+      "answer_template": "ここは図書館です。",
+      "distractor_strategy": "near-speaker-place-production",
+      "teaching_note": "Người nói đang ở địa điểm đó, nên dùng ここ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-context-l3-007",
+      "template_id": "tpl-grammar-n5-013-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn chỉ một điểm xa cả bạn và người nghe trên bản đồ: 'Chỗ kia là nhà ga'. Viết câu.",
+      "answer_template": "あそこは駅です。",
+      "distractor_strategy": "far-from-both-map-context",
+      "teaching_note": "Điểm xa cả hai bên dùng あそこ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-context-l2-008",
+      "template_id": "tpl-grammar-n5-013-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với ここ/そこ/あそこ は N です?",
+      "answer_template": "Bạn muốn xác định một chỗ là lớp học, thư viện, quầy tiếp tân.",
+      "options_template": [
+        "Bạn muốn xác định một chỗ là lớp học, thư viện, quầy tiếp tân.",
+        "Bạn muốn nói cái bút này là bút.",
+        "Bạn muốn hỏi đây là cái gì.",
+        "Bạn muốn gọi anh Tanaka lịch sự."
+      ],
+      "distractor_strategy": "place-context-vs-object-wh-honorific",
+      "teaching_note": "Mẫu này giới thiệu địa điểm, không chỉ vật hay người.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-013-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: bạn đứng trong phòng học và muốn nói 'Chỗ này là phòng học', không phải 'cái này là phòng học'. Câu nào đúng?",
+      "answer_template": "ここは教室です。",
+      "options_template": [
+        "ここは教室です。",
+        "これは教室です。",
+        "この教室です。",
+        "ここは教室ですか。"
+      ],
+      "distractor_strategy": "place-vs-object-demonstrative-analysis",
+      "teaching_note": "L4: mục tiêu là nơi, nên dùng ここ; これ biến câu thành chỉ đồ vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-013-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-013-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn nói với bạn học về quầy tiếp tân gần người nghe. Câu nào chọn đúng khoảng cách?",
+      "answer_template": "そこは受付です。",
+      "options_template": [
+        "そこは受付です。",
+        "ここは受付です。",
+        "あそこは受付です。",
+        "それは受付です。"
+      ],
+      "distractor_strategy": "ko-so-a-distance-analysis",
+      "teaching_note": "Nếu địa điểm gần người nghe, dùng そこ; それ lại chỉ vật chứ không chỉ nơi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

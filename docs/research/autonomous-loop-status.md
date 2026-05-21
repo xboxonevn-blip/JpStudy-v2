@@ -1825,3 +1825,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `何ですか` asks for the missing noun. Answer with
   `辞書です` or `ペンです`, not with `はい/いいえ`.
+
+## 2026-05-22 Phase G Tier-1 item 013
+
+- Re-authored `grammar:n5:grammar_n5_3:001` (`ここ/そこ/あそこ は N です`)
+  with ko-so-a place logic and contrast against object demonstratives.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `ここ/そこ/あそこ` points to places, not objects.
+  Use `ここは教室です` for "this place is a classroom"; use `これは...` for things.

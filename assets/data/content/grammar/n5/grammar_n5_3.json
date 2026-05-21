@@ -14,10 +14,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: ここ / そこ / あそこ は N (địa điểm) です",
-      "meaning": "Ý nghĩa: Các từ chỉ địa điểm, dùng để nói “chỗ này/chỗ đó/chỗ kia”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "ここ・そこ・あそこ thuộc hệ ko-so-a: gốc こ chỉ gần người nói, そ chỉ phía người nghe hoặc vùng đã nhắc, あ chỉ xa cả hai. Thành phần cuối tạo cảm giác 'nơi/chỗ', nên bộ này chỉ địa điểm chứ không thay cho đồ vật.",
+      "hanVietBridge": "Có thể nhớ bằng ba vòng không gian Hán-Việt: cận-ngã cho ここ, cận-nhĩ cho そこ, viễn cho あそこ. Tiếng Việt nói 'chỗ này/chỗ đó/chỗ kia'; tiếng Nhật chọn từ theo vị trí của người nói và người nghe.",
+      "form": "Hình thức: ここ/そこ/あそこ は N です. Từ chỉ nơi đứng trước は, sau đó là danh từ địa điểm như 教室, 受付, 図書館.",
+      "meaning": "Ý nghĩa: nói 'chỗ này/chỗ đó/chỗ kia là N'. ここ gần người nói, そこ gần người nghe hoặc điểm vừa nhắc, あそこ xa cả hai.",
+      "usage": "Sử dụng: dùng để giới thiệu hoặc xác định một địa điểm: ここは教室です, そこは受付です, あそこは図書館です. Không dùng bộ này để chỉ đồ vật cầm trên tay.",
+      "humanMoment": "Dr. Linh lưu ý: ここ/そこ/あそこ は N です là bản đồ không gian, khác これ/それ/あれ は N です là chỉ đồ vật. Nếu muốn nói 'chỗ này là lớp học', dùng ここ; nếu nói 'cái này là sách', dùng これ.",
+      "crossLinks": [
+        {
+          "pattern": "これ/それ/あれ は N です",
+          "contrast": "khác đối tượng: これ/それ/あれ chỉ vật, còn ここ/そこ/あそこ chỉ nơi/chỗ."
+        },
+        {
+          "pattern": "こちら/そちら/あちら は N です",
+          "contrast": "khác sắc thái: こちら/そちら/あちら lịch sự hơn và có thể chỉ hướng/người, trong khi ここ/そこ/あそこ là địa điểm cơ bản."
+        },
+        {
+          "pattern": "N1 は N2 (địa điểm) です",
+          "contrast": "khác trọng tâm: N1 は N2 です nói một người/vật ở đâu; ここ/そこ/あそこ は N です đặt chính địa điểm làm chủ đề."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

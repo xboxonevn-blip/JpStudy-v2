@@ -82,9 +82,10 @@ function parseVocabLine(line) {
   if (!headMatch) return null;
 
   const term = normalizeSpaces(headMatch[1]);
-  const reading = normalizeSpaces(headMatch[2]).replace(/\s+/g, '');
+  const reading = normalizeSpaces(headMatch[2]).replace(/\s+/g, '') || null;
   let tail = normalizeSpaces(split[2]);
-  if (!term || !reading || !tail) return null;
+  if (!term || !tail) return null;
+  const notes = reading === null ? ['missing-reading-in-source'] : [];
 
   if (/^[-–—]\s*/.test(tail)) {
     tail = normalizeSpaces(tail.replace(/^[-–—]\s*/, ''));
@@ -93,7 +94,7 @@ function parseVocabLine(line) {
       reading,
       hanViet: null,
       meaningVi: tail,
-      notes: ['no-han-viet-in-source'],
+      notes: [...notes, 'no-han-viet-in-source'],
     };
   }
 
@@ -108,7 +109,7 @@ function parseVocabLine(line) {
       reading,
       hanViet: segments[0],
       meaningVi: segments.slice(1).join(' - '),
-      notes: [],
+      notes,
     };
   }
 
@@ -117,7 +118,7 @@ function parseVocabLine(line) {
     reading,
     hanViet: null,
     meaningVi: segments[0] || tail,
-    notes: ['no-han-viet-in-source'],
+    notes: [...notes, 'no-han-viet-in-source'],
   };
 }
 

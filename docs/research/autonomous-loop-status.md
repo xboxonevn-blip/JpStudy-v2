@@ -1546,3 +1546,10 @@
 - Dry-run for `mimikara-n1` reported `12` local PDFs, `864` accepted factual rows, and `0` review rows. Local folder still lacks units `6` and `10`; OQ-011 remains non-blocking.
 - Extracted `docs/research/canonical/vocab/mimikara-n1.md` and report `docs/research/canonical/vocab/reports/mimikara-n1.json` with level `N1` and `text-layer` confidence.
 - No banned website was accessed. Next: run gates, commit, then continue kanji-vocab N5/N4/N3/N2 extraction.
+
+## 2026-05-21 QA-A-030 Phase 1 Kanji-vocab N5 extraction
+
+- Added parser support for source rows with empty reading parentheses, preserving the entry with `reading: null` and `missing-reading-in-source` for later JMdict/app diff repair.
+- Dry-run for `kanji-vocab-n5` reported `12` local PDFs, `656` accepted factual rows, and `0` review rows.
+- Extracted `docs/research/canonical/vocab/kanji-vocab-n5.md` and report `docs/research/canonical/vocab/reports/kanji-vocab-n5.json` with level `N5` and `text-layer` confidence.
+- No banned website was accessed. Next: run gates, commit, then continue kanji-vocab N4/N3/N2.

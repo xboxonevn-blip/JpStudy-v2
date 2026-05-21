@@ -45,6 +45,16 @@ test('parseVocabLine handles nested reading parentheses and empty han-viet marke
   assert.deepEqual(adverb.notes, ['no-han-viet-in-source']);
 });
 
+test('parseVocabLine keeps rows with missing reading for later review', () => {
+  const entry = parseVocabLine('自分で () - TỰ PHÂN - Tự (mình)');
+
+  assert.equal(entry.term, '自分で');
+  assert.equal(entry.reading, null);
+  assert.equal(entry.hanViet, 'TỰ PHÂN');
+  assert.equal(entry.meaningVi, 'Tự (mình)');
+  assert.deepEqual(entry.notes, ['missing-reading-in-source']);
+});
+
 test('detectSourceProfile maps Minna and kanji-vocab paths', () => {
   assert.deepEqual(
     detectSourceProfile('Tu Vung Mina 1/bai7_mina_[local].pdf'),

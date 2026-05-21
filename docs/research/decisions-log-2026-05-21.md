@@ -221,3 +221,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The new engine ranks due related graph nodes first, keeps the next textbook lesson in the list, and fills with curriculum-graph links or safe fallbacks. This gives a real post-lesson path now while preserving future DB/asset ID tightening.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-023 - Migrate SRS by exportable cross-modal snapshots first
+**Phase**: 5
+**Date**: 2026-05-21 10:50 (local)
+**Context**: Directive F.5 requires per-mode SRS state, but the current app already has several stable SRS tables for vocab, grammar, kanji, kana, conjugation, and Hán-Việt rules.
+**Options considered**: rewrite all Drift SRS tables immediately | add a parallel cross-modal snapshot/migration layer | defer SRS migration
+**Chosen**: add a parallel cross-modal snapshot/migration layer
+**Rationale**: Copying legacy rows into `flashcard` mode proves no-loss migration and gives a stable schema/tool without risking a large DB rewrite mid-Phase 5. Future batches can move individual review flows onto the cross-modal store incrementally.
+**Reversible**: yes
+**Owner review**: pending

@@ -9,6 +9,7 @@ import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/conjugation/services/conjugation_question_generator.dart';
 import 'package:jpstudy/features/quiz/widgets/shared_answer_selection.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class ConjugationPracticeScreen extends ConsumerStatefulWidget {
   const ConjugationPracticeScreen({super.key, this.args});
@@ -153,10 +154,7 @@ class _ConjugationPracticeScreenState
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       const SizedBox(height: 8),
-                      FilledButton(
-                        onPressed: _next,
-                        child: Text(_tr(language, 'Next', 'Câu tiếp', '次へ')),
-                      ),
+                      AppButton(label: language.nextLabel, onPressed: _next),
                     ],
                   ],
                 ),

@@ -20,6 +20,11 @@ void main() {
       'lib/features/vocab/screens/hajimete_chapter_detail_screen.dart',
       'lib/features/home/widgets/discover_practice_panel.dart',
       'lib/features/home/widgets/goal_selection_banner.dart',
+      'lib/features/common/widgets/error_state_widget.dart',
+      'lib/features/common/widgets/compact_ui.dart',
+      'lib/features/flashcards/screens/enhanced_flashcard_screen.dart',
+      'lib/features/conjugation/screens/conjugation_practice_screen.dart',
+      'lib/features/grammar/widgets/cloze_test_widget.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

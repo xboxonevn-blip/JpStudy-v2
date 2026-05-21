@@ -5,6 +5,7 @@ import '../../../app/theme/app_spacing.dart';
 import '../../../app/theme/app_theme_palette.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class ErrorStateWidget extends ConsumerWidget {
   const ErrorStateWidget({
@@ -71,17 +72,12 @@ class ErrorStateWidget extends ConsumerWidget {
             ),
             if (onRetry != null) ...[
               SizedBox(height: compact ? AppSpacing.md : AppSpacing.lg),
-              TextButton.icon(
+              AppButton(
+                label: language.retryLabel,
+                icon: Icons.refresh_rounded,
+                variant: AppButtonVariant.ghost,
+                compact: true,
                 onPressed: onRetry,
-                icon: const Icon(Icons.refresh_rounded, size: 16),
-                label: Text(language.retryLabel),
-                style: TextButton.styleFrom(
-                  foregroundColor: palette.info,
-                  textStyle: const TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
               ),
             ],
           ],

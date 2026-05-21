@@ -187,7 +187,12 @@ class AppSectionHeader extends StatelessWidget {
           ),
         ),
         if (actionLabel != null && onActionTap != null)
-          TextButton(onPressed: onActionTap, child: Text(actionLabel!)),
+          AppButton(
+            label: actionLabel!,
+            variant: AppButtonVariant.ghost,
+            compact: true,
+            onPressed: onActionTap,
+          ),
       ],
     );
   }

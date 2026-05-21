@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/responsive/breakpoints.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
@@ -120,7 +121,7 @@ class _EnhancedFlashcardScreenState
 
             // Bottom navigation
             if (_lastAction != null) _buildGestureStatus(),
-            _buildBottomControls(),
+            _buildBottomControls(language),
 
             // Card counter
             _buildCardCounter(),
@@ -147,43 +148,28 @@ class _EnhancedFlashcardScreenState
     );
   }
 
-  Widget _buildBottomControls() {
+  Widget _buildBottomControls(AppLanguage language) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Prev Button
-          ElevatedButton(
+          AppButton(
+            label: _previousLabel(language),
+            icon: Icons.arrow_back_rounded,
+            variant: AppButtonVariant.secondary,
             onPressed: _currentIndex > 0 ? _handlePrevious : null,
-            style: ElevatedButton.styleFrom(
-              shape: const CircleBorder(),
-              padding: const EdgeInsets.all(20),
-              backgroundColor: context.appPalette.elevated,
-              foregroundColor: context.appPalette.primary,
-              elevation: 4,
-            ),
-            child: const Icon(Icons.arrow_back_rounded, size: 32),
           ),
-
-          // Next Button
-          ElevatedButton(
+          AppButton(
+            label: _currentIndex < _displayItems.length - 1
+                ? language.nextLabel
+                : _doneLabel(language),
+            icon: _currentIndex < _displayItems.length - 1
+                ? Icons.arrow_forward_rounded
+                : Icons.check_rounded,
             onPressed: _currentIndex < _displayItems.length - 1
                 ? _handleNext
                 : _showSummary,
-            style: ElevatedButton.styleFrom(
-              shape: const CircleBorder(),
-              padding: const EdgeInsets.all(20),
-              backgroundColor: context.appPalette.primary,
-              foregroundColor: Colors.white,
-              elevation: 4,
-            ),
-            child: Icon(
-              _currentIndex < _displayItems.length - 1
-                  ? Icons.arrow_forward_rounded
-                  : Icons.check_rounded,
-              size: 32,
-            ),
           ),
         ],
       ),
@@ -334,3 +320,15 @@ class _EnhancedFlashcardScreenState
     );
   }
 }
+
+String _previousLabel(AppLanguage language) => switch (language) {
+  AppLanguage.en => 'Previous',
+  AppLanguage.vi => 'Trước',
+  AppLanguage.ja => '前へ',
+};
+
+String _doneLabel(AppLanguage language) => switch (language) {
+  AppLanguage.en => 'Done',
+  AppLanguage.vi => 'Xong',
+  AppLanguage.ja => '完了',
+};

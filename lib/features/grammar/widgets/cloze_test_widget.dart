@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/accessibility/reduced_motion.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import 'grammar_practice_surfaces.dart';
 
@@ -146,18 +147,16 @@ class _ClozeTestWidgetState extends State<ClozeTestWidget> {
           ),
         ),
         const SizedBox(height: 12),
-        FilledButton(
-          key: const ValueKey('grammar_cloze_check'),
-          onPressed: _selectedOption == null || _isCorrect != null
-              ? null
-              : _check,
-          style: FilledButton.styleFrom(
-            minimumSize: const Size.fromHeight(56),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
+        SizedBox(
+          height: 56,
+          child: AppButton(
+            key: const ValueKey('grammar_cloze_check'),
+            label: _checkLabel(widget.language),
+            expanded: true,
+            onPressed: _selectedOption == null || _isCorrect != null
+                ? null
+                : _check,
           ),
-          child: Text(_checkLabel(widget.language)),
         ),
       ],
     );

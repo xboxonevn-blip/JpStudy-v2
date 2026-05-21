@@ -539,3 +539,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Kanji coverage belongs in kanji learning, not Minna vocab lessons. Series scoping prevents Hajimete N5 lesson 1 adjectives from appearing in Minna N5 lesson 1 while preserving conjugation in real Minna adjective/verb lessons.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-055 - Grammar detail renders authored Directive E assets first
+**Phase**: Urgent live audit P1 H3
+**Date**: 2026-05-22 11:45 (local)
+**Context**: Progressive disclosure needed to expose Directive E depth without repeating the template-injection problem found in the audit. The runtime grammar table does not store `directiveE` fields even though the source grammar JSON assets do.
+**Options considered**: generate generic Dr. Linh text in the UI | add a Drift schema migration for all Directive E columns | hydrate the authored JSON asset block at detail-read time
+**Chosen**: Load the authored `directiveE` block from the grammar asset matching the point's JLPT level, lesson id, and pattern/structure, then pass it through the grammar detail provider. Keep UI fallback only for legacy rows without an authored asset block.
+**Rationale**: Asset hydration avoids a database migration in the urgent UI batch, preserves real per-pattern Directive E content when available, and prevents the UI from becoming another generic content generator.
+**Reversible**: yes; a later schema migration can persist Directive E if profiling shows asset lookup overhead.
+**Owner review**: pending

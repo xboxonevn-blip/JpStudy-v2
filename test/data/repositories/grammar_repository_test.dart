@@ -192,6 +192,26 @@ void main() {
   });
 
   test(
+    'getGrammarDetail includes authored Directive E asset content',
+    () async {
+      SharedPreferences.setMockInitialValues({
+        GrammarSeeder.versionKeyForLevel('N5'): 0,
+      });
+
+      final points = await repository.fetchPointsByLevel('N5');
+      final point = points.firstWhere(
+        (p) => p.lessonId == 1 && p.grammarPoint == 'N1 は N2 です',
+      );
+      final result = await repository.getGrammarDetail(point.id);
+
+      expect(result, isNotNull);
+      expect(result!.directiveE, isNotNull);
+      expect(result.directiveE!.humanMoment, contains('đèn sân khấu'));
+      expect(result.directiveE!.crossLinks.first.pattern, 'N1 は N2 じゃありません');
+    },
+  );
+
+  test(
     'getGrammarDetail returns empty examples list when none exist',
     () async {
       await db.into(db.grammarPoints).insert(_point(id: 6, grammarPoint: '〜に'));

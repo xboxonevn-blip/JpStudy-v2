@@ -1,8 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../db/app_database.dart';
 import '../db/database_provider.dart';
+import '../models/grammar_directive_e_content.dart';
 import '../../core/services/fsrs_service.dart';
 import '../seeds/grammar_seeder.dart';
+import '../utils/grammar_directive_e_asset_lookup.dart';
 
 final grammarRepositoryProvider = Provider<GrammarRepository>((ref) {
   final db = ref.watch(databaseProvider);
@@ -12,9 +14,11 @@ final grammarRepositoryProvider = Provider<GrammarRepository>((ref) {
 class GrammarRepository {
   final AppDatabase _db;
   final FsrsService _fsrsService = FsrsService();
+  final GrammarDirectiveEAssetLookup _directiveELookup;
   AppDatabase get db => _db;
 
-  GrammarRepository(this._db);
+  GrammarRepository(this._db, {GrammarDirectiveEAssetLookup? directiveELookup})
+    : _directiveELookup = directiveELookup ?? GrammarDirectiveEAssetLookup();
 
   /// Fetch all grammar points for a specific JLPT level
   Future<List<GrammarPoint>> fetchPointsByLevel(String level) async {
@@ -43,7 +47,13 @@ class GrammarRepository {
   }
 
   /// Fetch full details for a grammar point (including examples)
-  Future<({GrammarPoint point, List<GrammarExample> examples})?>
+  Future<
+    ({
+      GrammarPoint point,
+      List<GrammarExample> examples,
+      GrammarDirectiveEContent? directiveE,
+    })?
+  >
   getGrammarDetail(int id) async {
     var point = await _db.grammarDao.getGrammarPoint(id);
     if (point == null) {
@@ -52,7 +62,8 @@ class GrammarRepository {
     }
     if (point == null) return null;
     final examples = await _db.grammarDao.getExamplesForPoint(id);
-    return (point: point, examples: examples);
+    final directiveE = await _directiveELookup.findForPoint(point);
+    return (point: point, examples: examples, directiveE: directiveE);
   }
 
   /// Record a review for a grammar point

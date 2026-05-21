@@ -7,6 +7,7 @@ import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/models/grammar_directive_e_content.dart';
 import 'package:jpstudy/data/repositories/grammar_repository.dart';
 import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_detail_screen.dart';
@@ -70,10 +71,53 @@ const _stubExample = GrammarExample(
   translationEn: 'May I eat?',
 );
 
+const _stubDirectiveE = GrammarDirectiveEContent(
+  form: 'Hình thức: V-て + もいい',
+  meaning: 'Ý nghĩa: được phép làm hành động V.',
+  usage: 'Sử dụng: hỏi hoặc nói về sự cho phép trong tình huống cụ thể.',
+  etymology: 'てもいい ghép thể て với もいい để mở cửa cho hành động phía trước.',
+  hanVietBridge: 'Cầu Hán-Việt: nhớ bằng ý cho phép, không phải dịch từng chữ.',
+  humanMoment: 'Dr. Linh lưu ý: với てもいい, cánh cửa hành động đang được mở ra.',
+  crossLinks: [
+    GrammarDirectiveECrossLink(
+      pattern: 'てはいけない',
+      contrast: 'てもいい cho phép; てはいけない cấm hành động đó.',
+    ),
+  ],
+  fallbackReference: GrammarDirectiveEFallbackReference(
+    sourceCredit: "Tae Kim's Guide to Japanese Grammar",
+    license: 'CC-BY-NC-SA 3.0',
+    sourceUrl: 'https://guidetojapanese.org/learn/grammar',
+  ),
+);
+
+List<GrammarExample> _manyExamples() {
+  return List<GrammarExample>.generate(
+    10,
+    (index) => GrammarExample(
+      id: 100 + index,
+      grammarId: _kGrammarId,
+      japanese: '例文${index + 1}です。',
+      translation: 'Câu ví dụ ${index + 1}.',
+      translationVi: 'Câu ví dụ ${index + 1}.',
+      translationEn: 'Example sentence ${index + 1}.',
+    ),
+  );
+}
+
 typedef _GrammarDetailRecord = ({
   GrammarPoint point,
   List<GrammarExample> examples,
+  GrammarDirectiveEContent? directiveE,
 });
+
+_GrammarDetailRecord _detail({
+  GrammarPoint point = _stubPoint,
+  List<GrammarExample> examples = const [],
+  GrammarDirectiveEContent? directiveE,
+}) {
+  return (point: point, examples: examples, directiveE: directiveE);
+}
 
 // ---------------------------------------------------------------------------
 Widget _buildScreen({
@@ -160,9 +204,7 @@ void main() {
   testWidgets('renders headline, JLPT badge, connection and explanation', (
     tester,
   ) async {
-    await tester.pumpWidget(
-      _buildScreen(detail: (point: _stubPoint, examples: const [])),
-    );
+    await tester.pumpWidget(_buildScreen(detail: _detail()));
     await _pump(tester);
 
     // AppBar title in EN
@@ -171,9 +213,10 @@ void main() {
     expect(find.text('N5'), findsWidgets);
     // EN headline via resolveEnglishGrammarConnection: falls back to connection
     expect(find.textContaining('V-て'), findsWidgets);
-    // Explanation section header (uppercased via .toUpperCase())
-    expect(find.textContaining('EXPLANATION'), findsOneWidget);
-    // Explanation body
+    expect(find.text('Core pattern'), findsOneWidget);
+    expect(find.text('Structure'), findsOneWidget);
+    expect(find.text('Meaning'), findsOneWidget);
+    expect(find.text('Usage'), findsOneWidget);
     expect(
       find.text('Use this pattern to express that something is allowed.'),
       findsOneWidget,
@@ -182,19 +225,71 @@ void main() {
 
   testWidgets('renders examples when list is non-empty', (tester) async {
     await tester.pumpWidget(
-      _buildScreen(detail: (point: _stubPoint, examples: const [_stubExample])),
+      _buildScreen(detail: _detail(examples: const [_stubExample])),
     );
     await _pump(tester);
 
     expect(find.text('食べてもいいですか？'), findsWidgets);
   });
 
-  testWidgets('unlearned point shows practice gate instead of manual mark', (
+  testWidgets('VI detail progressively discloses Directive E depth', (
     tester,
   ) async {
     await tester.pumpWidget(
-      _buildScreen(detail: (point: _stubPoint, examples: const [])),
+      _buildScreen(
+        language: AppLanguage.vi,
+        detail: _detail(
+          examples: const [_stubExample],
+          directiveE: _stubDirectiveE,
+        ),
+      ),
     );
+    await _pump(tester);
+
+    expect(find.text('Cấu trúc'), findsOneWidget);
+    expect(find.text('Ý nghĩa'), findsOneWidget);
+    expect(find.text('Cách dùng'), findsOneWidget);
+    expect(find.textContaining('Gốc rễ'), findsNothing);
+    expect(find.textContaining('Lưu ý từ Dr. Linh'), findsNothing);
+    expect(find.text('KẾT NỐI'), findsNothing);
+
+    await tester.ensureVisible(find.text('Tìm hiểu sâu hơn'));
+    await tester.tap(find.text('Tìm hiểu sâu hơn'));
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('Gốc rễ'), findsWidgets);
+    expect(find.textContaining('cánh cửa hành động'), findsOneWidget);
+    expect(find.textContaining('Lưu ý từ Dr. Linh'), findsWidgets);
+    expect(find.text('Mẫu liên quan'), findsOneWidget);
+    expect(find.textContaining('てもいい cho phép'), findsOneWidget);
+    expect(
+      find.textContaining("Tae Kim's Guide to Japanese Grammar"),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets('long example lists are collapsed until requested', (
+    tester,
+  ) async {
+    final examples = _manyExamples();
+    await tester.pumpWidget(_buildScreen(detail: _detail(examples: examples)));
+    await _pump(tester);
+
+    expect(find.text('Show examples'), findsOneWidget);
+    expect(find.text('例文1です。'), findsNothing);
+
+    await tester.ensureVisible(find.text('Show examples'));
+    await tester.tap(find.text('Show examples'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('例文1です。'), findsOneWidget);
+    expect(find.text('例文10です。'), findsOneWidget);
+  });
+
+  testWidgets('unlearned point shows practice gate instead of manual mark', (
+    tester,
+  ) async {
+    await tester.pumpWidget(_buildScreen(detail: _detail()));
     await _pump(tester);
 
     expect(find.text('Mark done'), findsNothing);
@@ -206,7 +301,7 @@ void main() {
     tester,
   ) async {
     await tester.pumpWidget(
-      _buildScreen(detail: (point: _learnedPoint, examples: const [])),
+      _buildScreen(detail: _detail(point: _learnedPoint)),
     );
     await _pump(tester);
 
@@ -217,10 +312,7 @@ void main() {
 
   testWidgets('VI locale shows Vietnamese app bar title', (tester) async {
     await tester.pumpWidget(
-      _buildScreen(
-        language: AppLanguage.vi,
-        detail: (point: _stubPoint, examples: const []),
-      ),
+      _buildScreen(language: AppLanguage.vi, detail: _detail()),
     );
     await _pump(tester);
 
@@ -233,7 +325,7 @@ void main() {
     await tester.pumpWidget(
       _buildRoutedScreen(
         language: AppLanguage.vi,
-        detail: (point: _stubPoint, examples: const [_stubExample]),
+        detail: _detail(examples: const [_stubExample]),
       ),
     );
     await _pump(tester);
@@ -251,7 +343,10 @@ void main() {
     await tester.pumpWidget(
       _buildRoutedScreen(
         language: AppLanguage.vi,
-        detail: (point: _verbNotationPoint, examples: const [_stubExample]),
+        detail: _detail(
+          point: _verbNotationPoint,
+          examples: const [_stubExample],
+        ),
       ),
     );
     await _pump(tester);
@@ -265,10 +360,7 @@ void main() {
 
   testWidgets('JA locale shows Japanese app bar title', (tester) async {
     await tester.pumpWidget(
-      _buildScreen(
-        language: AppLanguage.ja,
-        detail: (point: _stubPoint, examples: const []),
-      ),
+      _buildScreen(language: AppLanguage.ja, detail: _detail()),
     );
     await _pump(tester);
 
@@ -294,7 +386,7 @@ void main() {
     await tester.pumpWidget(
       _buildScreen(
         language: AppLanguage.vi,
-        detail: (point: _stubPoint, examples: const [_stubExample]),
+        detail: _detail(examples: const [_stubExample]),
         interlinkGraph: graph,
       ),
     );

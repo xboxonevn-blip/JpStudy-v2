@@ -25,6 +25,7 @@ void main() {
       'lib/features/flashcards/screens/enhanced_flashcard_screen.dart',
       'lib/features/conjugation/screens/conjugation_practice_screen.dart',
       'lib/features/grammar/widgets/cloze_test_widget.dart',
+      'lib/features/grammar/widgets/grammar_directive_e_section.dart',
       'lib/features/vocab/screens/hajimete_chapter_catalog_screen.dart',
       'lib/features/vocab/screens/shinkanzen_lesson_catalog_screen.dart',
       'lib/features/vocab/screens/mimikara_unit_catalog_screen.dart',

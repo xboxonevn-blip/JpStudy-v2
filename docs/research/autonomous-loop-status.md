@@ -2201,3 +2201,22 @@
 - Gates passed: focused `flutter analyze`, Minna vocab quality, content
   manifest, conjugation seed, conjugation widget, and lesson detail tests.
 - Continuing P1 H3 next: progressive disclosure for grammar detail Directive E.
+
+## 2026-05-22 P1 H3 grammar progressive disclosure
+
+- Added progressive grammar detail disclosure: structure, meaning, and usage stay
+  above the fold; etymology/Han-Viet bridge, Dr. Linh note, cross-links, and Tae
+  Kim fallback attribution sit behind `Tìm hiểu sâu hơn`.
+- Detail records now hydrate authored `directiveE` asset blocks by level,
+  lesson, and pattern before rendering; UI-generated fallback is only used when a
+  legacy row has no authored block.
+- Long example lists collapse behind `Ví dụ`; short example lists remain visible.
+  Duplicate `KẾT NỐI` rendering is removed.
+- Gates passed: focused `flutter analyze`, grammar repository asset hydration
+  test, grammar detail widget tests, foundation usage regression, and
+  `flutter build web --release`.
+- Local Playwright release smoke was attempted through static `build/web`, but
+  the shell hit an existing minified console error/blank content after route
+  load. Full route visual acceptance remains open for the later P0-P3 live pass.
+- Continuing P1 H4-H6 next: exercise distractors, 50-question density, and vocab
+  catalog textbook coverage.

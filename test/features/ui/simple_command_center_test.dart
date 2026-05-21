@@ -703,7 +703,8 @@ void main() {
             (ref) => AppLanguageController.test(AppLanguage.en),
           ),
           grammarDetailProvider(1).overrideWith(
-            (ref) async => (point: point, examples: const [example]),
+            (ref) async =>
+                (point: point, examples: const [example], directiveE: null),
           ),
         ],
         child: const MaterialApp(home: GrammarDetailScreen(grammarId: 1)),

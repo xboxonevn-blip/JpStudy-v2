@@ -1496,6 +1496,220 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-form-l1-001",
+      "template_id": "tpl-grammar-n5-008-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn cách nói 'quyển sách này'.",
+      "answer_template": "この本",
+      "options_template": [
+        "この本",
+        "これ本",
+        "本この",
+        "このは本"
+      ],
+      "distractor_strategy": "adnominal-demonstrative-position",
+      "teaching_note": "この phải đứng ngay trước danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-form-l1-002",
+      "template_id": "tpl-grammar-n5-008-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng với この/その/あの + N は ... です?",
+      "answer_template": "この本は私の本です。",
+      "options_template": [
+        "この本は私の本です。",
+        "このは私の本です。",
+        "これ本は私の本です。",
+        "本このは私の本です。"
+      ],
+      "distractor_strategy": "kono-needs-noun",
+      "teaching_note": "この/その/あの không đứng trơ trước は; cần danh từ ngay sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-008-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "その人は先生です。 Nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Người đó là giáo viên.",
+      "options_template": [
+        "Người đó là giáo viên.",
+        "Cái đó là giáo viên.",
+        "Người kia ở xa là giáo viên.",
+        "Giáo viên của người đó."
+      ],
+      "distractor_strategy": "adnominal-vs-standalone-and-distance",
+      "teaching_note": "その bổ nghĩa cho 人: người đó, thường gần người nghe hoặc vừa được nhắc.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-008-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong この/その/あの + N, từ nào chỉ N xa cả người nói và người nghe?",
+      "answer_template": "あの + N",
+      "distractor_strategy": "ano-distance-recall",
+      "teaching_note": "あの dùng cho danh từ ở xa cả hai phía.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-usage-l3-005",
+      "template_id": "tpl-grammar-n5-008-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Quyển từ điển này là của tôi': 辞書 / は / 私の / この / です",
+      "answer_template": "この辞書は私のです",
+      "options_template": [
+        "この",
+        "辞書",
+        "は",
+        "私の",
+        "です"
+      ],
+      "distractor_strategy": "adnominal-order-with-possessive",
+      "teaching_note": "この đứng ngay trước 辞書; cả cụm この辞書 làm chủ đề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-usage-l3-006",
+      "template_id": "tpl-grammar-n5-008-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cụm danh từ: 'ngôi trường kia' khi trường ở xa cả hai người.",
+      "answer_template": "あの学校",
+      "distractor_strategy": "far-adnominal-selection",
+      "teaching_note": "Xa cả hai -> あの; 学校 là danh từ bắt buộc đi sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-context-l3-007",
+      "template_id": "tpl-grammar-n5-008-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn chỉ quyển vở trên bàn người nghe và muốn nói 'quyển vở đó'. Viết cụm danh từ.",
+      "answer_template": "そのノート",
+      "distractor_strategy": "listener-near-adnominal-context",
+      "teaching_note": "Gần người nghe -> その; phải đi với ノート.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-context-l2-008",
+      "template_id": "tpl-grammar-n5-008-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào cần この/その/あの + N?",
+      "answer_template": "Muốn nói rõ danh từ nào: quyển sách này, người đó, trường kia.",
+      "options_template": [
+        "Muốn nói rõ danh từ nào: quyển sách này, người đó, trường kia.",
+        "Muốn thay cả danh từ bằng 'cái này'.",
+        "Muốn phủ định danh tính.",
+        "Muốn nói 'tôi cũng'."
+      ],
+      "distractor_strategy": "adnominal-context-vs-standalone",
+      "teaching_note": "この/その/あの cần danh từ sau; nếu thay cả danh từ thì dùng これ/それ/あれ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-008-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Vật gần người nói, và bạn muốn nói rõ 'cái bút này'. Câu nào đúng?",
+      "answer_template": "このペンは私のです。",
+      "options_template": [
+        "このペンは私のです。",
+        "これペンは私のです。",
+        "これはペン私のです。",
+        "このはペンです。"
+      ],
+      "distractor_strategy": "kono-vs-kore-analysis",
+      "teaching_note": "この bổ nghĩa ペン; これ thay cả 'cái này' nên không đi trực tiếp với ペン.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-008-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-008-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào dùng đúng この/その/あの để bổ nghĩa danh từ, không dùng nhầm の?",
+      "answer_template": "その人は先生です。",
+      "options_template": [
+        "その人は先生です。",
+        "それの人は先生です。",
+        "人そのは先生です。",
+        "そのは人先生です。"
+      ],
+      "distractor_strategy": "adnominal-demonstrative-vs-no-linker",
+      "teaching_note": "その trực tiếp đứng trước 人; không cần の giữa その và 人.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

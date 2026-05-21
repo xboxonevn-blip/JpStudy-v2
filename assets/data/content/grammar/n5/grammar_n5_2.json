@@ -54,10 +54,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: この / その / あの + N は ～ です",
-      "meaning": "Ý nghĩa: Các từ này luôn đứng trước danh từ để chỉ rõ “N nào”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "この/その/あの cũng thuộc hệ ko-so-a: こ gần người nói, そ gần người nghe hoặc điều vừa nhắc, あ xa cả hai. Về cấu trúc, chúng là từ bổ nghĩa đứng trước danh từ, nên không thể tự đứng một mình như これ/それ/あれ.",
+      "hanVietBridge": "Có thể nối với Hán-Việt 'chỉ định' và 'bổ nghĩa': この/その/あの chỉ định danh từ nào, rồi danh từ phía sau mới là trung tâm. Người Việt thấy giống 'quyển sách này', trong đó 'này' bám vào 'quyển sách'.",
+      "form": "Hình thức: この / その / あの + N は ... です. この/その/あの phải có danh từ ngay sau: この本, その人, あの学校.",
+      "meaning": "Ý nghĩa: 'N này/N đó/N kia'. Khác biệt nằm ở khoảng cách với người nói/người nghe, còn N phía sau cho biết vật/người cụ thể.",
+      "usage": "Sử dụng: dùng khi muốn nói rõ danh từ nào: この本は私の本です. Nếu không nói danh từ phía sau, đổi sang これ/それ/あれ.",
+      "humanMoment": "Dr. Linh lưu ý: この/その/あの + N giống tiếng Việt 'N này/đó/kia', luôn cần một N đi kèm. このは本です bị hụt vì この đang giơ tay đòi một danh từ phía sau; hãy nói この本 hoặc これは本です.",
+      "crossLinks": [
+        {
+          "pattern": "これ / それ / あれ は N です",
+          "contrast": "khác vị trí: これ/それ/あれ đứng độc lập trước は, còn この/その/あの phải bổ nghĩa cho danh từ."
+        },
+        {
+          "pattern": "N1 の N2",
+          "contrast": "khác quan hệ: の nối hai danh từ, còn この/その/あの trực tiếp chỉ định danh từ đứng sau."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

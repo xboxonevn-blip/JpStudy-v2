@@ -1780,3 +1780,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `これ/それ/あれ` are standalone pointers: near me,
   near you, far from both. `この/その/あの` cannot stand before `は` alone.
+
+## 2026-05-22 Phase G Tier-1 item 008
+
+- Re-authored `grammar:n5:grammar_n5_2:002` (`この/その/あの + N`) with
+  adnominal ko-so-a usage and contrasts against standalone `これ/それ/あれ`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `この/その/あの` must attach to a noun. Use them
+  for "this/that N"; use `これ/それ/あれ` when replacing the noun entirely.

@@ -1650,3 +1650,11 @@
 - Committed 8 foundation widgets + tests + compact_ui refactor
 - Continuing Phase H.3 tail: refactor remaining feature widgets to use foundation
 - Owner-paused mid-Phase-H.3 for audit; resume confirmed.
+
+## 2026-05-21 Phase H.3 wrap + Option C merger acknowledged
+
+- 7+ batch widget migrations committed
+- Pending test file committed
+- Option C merger noted: Phase G now bundles Directive E quality redo
+  for Tier-1 (Top-200). Validator spec in docs/codex-followup-...md §6
+- Continuing Phase H.4 home page redesign next

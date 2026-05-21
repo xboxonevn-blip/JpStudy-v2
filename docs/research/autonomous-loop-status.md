@@ -1534,3 +1534,9 @@
 - Dry-run for `mimikara-n3` reported `12` local PDFs, `811` accepted factual rows, and `0` review rows, including loanword rows with `hanViet: null`.
 - Extracted `docs/research/canonical/vocab/mimikara-n3.md` and report `docs/research/canonical/vocab/reports/mimikara-n3.json` with unit refs `Unit 1` through `Unit 12`, level `N3`, and `text-layer` confidence.
 - No banned website was accessed. Next: run gates, commit, then continue Mimikara N2/N1.
+
+## 2026-05-21 QA-A-030 Phase 1 Mimikara N2 extraction
+
+- Dry-run for `mimikara-n2` reported `11` local PDFs, `991` accepted factual rows, and `0` review rows. Local folder still lacks units `5` and `9`; OQ-011 remains non-blocking.
+- Extracted `docs/research/canonical/vocab/mimikara-n2.md` and report `docs/research/canonical/vocab/reports/mimikara-n2.json` with level `N2` and `text-layer` confidence.
+- No banned website was accessed. Next: run gates, commit, then continue Mimikara N1.

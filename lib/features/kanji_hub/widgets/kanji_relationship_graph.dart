@@ -12,12 +12,14 @@ class KanjiRelationshipGraph extends StatefulWidget {
     required this.onNodeSelected,
     required this.onPracticeCluster,
     this.language = AppLanguage.vi,
+    this.srsTiers = const {},
   });
 
   final KanjiRelationshipGraphData graphData;
   final ValueChanged<String> onNodeSelected;
   final VoidCallback onPracticeCluster;
   final AppLanguage language;
+  final Map<String, KanjiGraphSrsTier> srsTiers;
 
   @override
   State<KanjiRelationshipGraph> createState() => _KanjiRelationshipGraphState();
@@ -77,6 +79,9 @@ class _KanjiRelationshipGraphState extends State<KanjiRelationshipGraph> {
                           _PositionedKanjiNode(
                             node: node,
                             language: widget.language,
+                            srsTier:
+                                widget.srsTiers[node.character] ??
+                                KanjiGraphSrsTier.unseen,
                             center: layout.centerFor(node.character),
                             onTap: node.isNavigable
                                 ? () => widget.onNodeSelected(node.character)
@@ -227,12 +232,14 @@ class _PositionedKanjiNode extends StatelessWidget {
   const _PositionedKanjiNode({
     required this.node,
     required this.language,
+    required this.srsTier,
     required this.center,
     required this.onTap,
   });
 
   final KanjiGraphNode node;
   final AppLanguage language;
+  final KanjiGraphSrsTier srsTier;
   final Offset center;
   final VoidCallback? onTap;
 
@@ -247,6 +254,7 @@ class _PositionedKanjiNode extends StatelessWidget {
       child: _KanjiGraphNodeBubble(
         node: node,
         language: language,
+        srsTier: srsTier,
         onTap: onTap,
       ),
     );
@@ -310,11 +318,13 @@ class _KanjiGraphNodeBubble extends StatelessWidget {
   const _KanjiGraphNodeBubble({
     required this.node,
     required this.language,
+    required this.srsTier,
     required this.onTap,
   });
 
   final KanjiGraphNode node;
   final AppLanguage language;
+  final KanjiGraphSrsTier srsTier;
   final VoidCallback? onTap;
 
   @override
@@ -326,7 +336,7 @@ class _KanjiGraphNodeBubble extends StatelessWidget {
         key: ValueKey(
           node.type == KanjiGraphNodeType.focus
               ? 'kanji_graph_focus_${node.character}'
-              : 'kanji_graph_node_${node.character}',
+              : 'kanji_graph_node_${node.character}_${srsTier.name}',
         ),
         customBorder: const CircleBorder(),
         onTap: onTap,
@@ -335,7 +345,10 @@ class _KanjiGraphNodeBubble extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: style.fill,
-            border: Border.all(color: style.border, width: 2.4),
+            border: Border.all(
+              color: _borderForSrsTier(srsTier, fallback: style.border),
+              width: 2.6,
+            ),
             boxShadow: const [
               BoxShadow(
                 color: Color(0x22000000),
@@ -394,6 +407,15 @@ class _KanjiGraphNodeBubble extends StatelessWidget {
         border: Color(0xFF9E9E9E),
         text: Color(0xFF263238),
       ),
+    };
+  }
+
+  Color _borderForSrsTier(KanjiGraphSrsTier tier, {required Color fallback}) {
+    return switch (tier) {
+      KanjiGraphSrsTier.unseen => fallback,
+      KanjiGraphSrsTier.learning => const Color(0xFFFBC02D),
+      KanjiGraphSrsTier.due => const Color(0xFFF59E0B),
+      KanjiGraphSrsTier.stable => const Color(0xFF43A047),
     };
   }
 }

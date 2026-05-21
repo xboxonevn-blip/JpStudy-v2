@@ -6,7 +6,8 @@ import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/models/kanji_item.dart';
-import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
+import 'package:jpstudy/features/kanji_hub/models/kanji_graph_practice.dart';
+import 'package:jpstudy/features/kanji_hub/models/kanji_relationship_graph.dart';
 import 'package:jpstudy/features/kanji_hub/providers/kanji_relationship_graph_provider.dart';
 import 'package:jpstudy/features/kanji_hub/screens/kanji_relationship_graph_screen.dart';
 
@@ -34,7 +35,7 @@ void main() {
   testWidgets(
     'graph route navigates between nodes and starts cluster practice',
     (tester) async {
-      late KanjiPracticeArgs practiceArgs;
+      KanjiGraphPracticeOutcome? recordedOutcome;
       final router = GoRouter(
         initialLocation: '/kanji/校/graph',
         routes: [
@@ -44,14 +45,6 @@ void main() {
             builder: (context, state) => KanjiRelationshipGraphScreen(
               character: state.pathParameters['character']!,
             ),
-          ),
-          GoRoute(
-            path: AppRoutePath.kanjiPractice,
-            name: AppRouteName.kanjiPractice,
-            builder: (context, state) {
-              practiceArgs = state.extra! as KanjiPracticeArgs;
-              return const Scaffold(body: Text('practice route'));
-            },
           ),
         ],
       );
@@ -66,6 +59,13 @@ void main() {
             kanjiRelationshipGraphAssetLoaderProvider.overrideWithValue(
               _FakeGraphAssetLoader(),
             ),
+            kanjiGraphPracticeRecorderProvider.overrideWithValue(
+              KanjiGraphPracticeRecorder.forTesting(
+                onRecord: (graphData, outcome) async {
+                  recordedOutcome = outcome;
+                },
+              ),
+            ),
           ],
           child: MaterialApp.router(routerConfig: router),
         ),
@@ -73,28 +73,62 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.byKey(const ValueKey('kanji_graph_focus_校')), findsOneWidget);
-      expect(find.byKey(const ValueKey('kanji_graph_node_木')), findsOneWidget);
-      expect(find.byKey(const ValueKey('kanji_graph_node_学')), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('kanji_graph_node_木_unseen')),
+        findsOneWidget,
+      );
+      expect(
+        find.byKey(const ValueKey('kanji_graph_node_学_unseen')),
+        findsOneWidget,
+      );
 
       tester
-          .widget<InkWell>(find.byKey(const ValueKey('kanji_graph_node_学')))
+          .widget<InkWell>(
+            find.byKey(const ValueKey('kanji_graph_node_学_unseen')),
+          )
           .onTap!();
       await tester.pumpAndSettle();
 
       expect(find.byKey(const ValueKey('kanji_graph_focus_学')), findsOneWidget);
 
-      final practiceButton = find.byKey(
-        const ValueKey('kanji_graph_practice_cluster'),
-      );
-      tester.widget<FilledButton>(practiceButton).onPressed!();
+      tester
+          .widget<FilledButton>(
+            find.byKey(const ValueKey('kanji_graph_practice_cluster')),
+          )
+          .onPressed!();
       await tester.pumpAndSettle();
 
-      expect(find.text('practice route'), findsOneWidget);
-      expect(practiceArgs.source, 'graph_cluster');
-      expect(practiceArgs.kanjiIds, containsAll([1, 2, 3]));
-      expect(practiceArgs.kanjiCharacters, containsAll(['校', '木', '学']));
-      expect(practiceArgs.preferredKanjiId, 3);
-      expect(practiceArgs.preferredKanjiCharacter, '学');
+      expect(
+        find.byKey(const ValueKey('kanji_graph_practice_panel')),
+        findsOneWidget,
+      );
+
+      final session = KanjiGraphPracticeSession.generate(
+        graphData: KanjiRelationshipGraphBuilder.build(
+          focusCharacter: '学',
+          allKanji: await _FakeGraphAssetLoader().loadAllKanji(),
+        ),
+        language: AppLanguage.vi,
+      );
+      for (final question in session.questions) {
+        await tester.tap(
+          find
+              .byKey(
+                ValueKey(
+                  'kanji_graph_practice_option_${question.correctCharacter}',
+                ),
+              )
+              .first,
+        );
+        await tester.pump();
+        await tester.tap(
+          find.byKey(const ValueKey('kanji_graph_practice_next')),
+        );
+        await tester.pumpAndSettle();
+      }
+
+      expect(recordedOutcome, isNotNull);
+      expect(recordedOutcome!.passed, isTrue);
     },
   );
 }

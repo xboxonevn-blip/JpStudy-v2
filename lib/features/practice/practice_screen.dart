@@ -13,6 +13,9 @@ import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/home/models/practice_destination.dart';
 import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/home/widgets/home_surface.dart';
+import 'package:jpstudy/features/kanji_hub/models/kanji_relationship_graph.dart';
+import 'package:jpstudy/features/kanji_hub/providers/kanji_relationship_graph_provider.dart';
+import 'package:jpstudy/features/kanji_hub/widgets/kanji_mini_graph_thumbnail.dart';
 import 'package:jpstudy/features/practice/providers/practice_session_board_provider.dart';
 
 Color _practiceAccent(BuildContext context, Color color) {
@@ -43,6 +46,9 @@ class PracticeScreen extends ConsumerWidget {
         );
     final dueCount = vocabDue + grammarDue + kanjiDue + conjugationDue;
     final sessionBoard = ref.watch(practiceSessionBoardProvider);
+    final dueKanjiGraph = kanjiDue > 0
+        ? ref.watch(dueKanjiMiniGraphProvider).value
+        : null;
     final grammarGhostCount = sessionBoard.grammarGhostCount;
     final repairCount = sessionBoard.repairCount;
 
@@ -118,7 +124,11 @@ class PracticeScreen extends ConsumerWidget {
                   child: _SessionPlanBoard(
                     language: language,
                     board: sessionBoard,
+                    dueKanjiGraph: dueKanjiGraph,
                     onOpenAction: (action) => _openAction(context, action),
+                    onOpenGraph: (graphData) => context.push(
+                      '/kanji/${Uri.encodeComponent(graphData.focus.character)}/graph',
+                    ),
                   ),
                 ),
                 const SizedBox(height: AppSpacing.md),
@@ -941,12 +951,16 @@ class _SessionPlanBoard extends StatelessWidget {
   const _SessionPlanBoard({
     required this.language,
     required this.board,
+    required this.dueKanjiGraph,
     required this.onOpenAction,
+    required this.onOpenGraph,
   });
 
   final AppLanguage language;
   final PracticeSessionBoard board;
+  final KanjiRelationshipGraphData? dueKanjiGraph;
   final ValueChanged<PracticeSessionAction> onOpenAction;
+  final ValueChanged<KanjiRelationshipGraphData> onOpenGraph;
 
   @override
   Widget build(BuildContext context) {
@@ -958,7 +972,9 @@ class _SessionPlanBoard extends StatelessWidget {
         final main = _SessionPrimaryCard(
           language: language,
           action: board.primaryAction,
+          dueKanjiGraph: _graphForAction(board.primaryAction),
           onTap: () => onOpenAction(board.primaryAction),
+          onOpenGraph: onOpenGraph,
         );
         final side = Column(
           children: [
@@ -967,7 +983,9 @@ class _SessionPlanBoard extends StatelessWidget {
                 language: language,
                 action: followUps[index],
                 stageIndex: index + 1,
+                dueKanjiGraph: _graphForAction(followUps[index]),
                 onTap: () => onOpenAction(followUps[index]),
+                onOpenGraph: onOpenGraph,
               ),
               if (index != followUps.length - 1)
                 const SizedBox(height: AppSpacing.sm),
@@ -1015,18 +1033,26 @@ class _SessionPlanBoard extends StatelessWidget {
       },
     );
   }
+
+  KanjiRelationshipGraphData? _graphForAction(PracticeSessionAction action) {
+    return action.id == 'kanji_due' ? dueKanjiGraph : null;
+  }
 }
 
 class _SessionPrimaryCard extends StatelessWidget {
   const _SessionPrimaryCard({
     required this.language,
     required this.action,
+    required this.dueKanjiGraph,
     required this.onTap,
+    required this.onOpenGraph,
   });
 
   final AppLanguage language;
   final PracticeSessionAction action;
+  final KanjiRelationshipGraphData? dueKanjiGraph;
   final VoidCallback onTap;
+  final ValueChanged<KanjiRelationshipGraphData> onOpenGraph;
 
   @override
   Widget build(BuildContext context) {
@@ -1101,6 +1127,13 @@ class _SessionPrimaryCard extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
+          if (dueKanjiGraph case final graphData?) ...[
+            const SizedBox(height: 12),
+            KanjiMiniGraphThumbnail(
+              graphData: graphData,
+              onTap: () => onOpenGraph(graphData),
+            ),
+          ],
           const SizedBox(height: 14),
           Wrap(
             spacing: 8,
@@ -1141,13 +1174,17 @@ class _SessionStepTile extends StatelessWidget {
     required this.language,
     required this.action,
     required this.stageIndex,
+    required this.dueKanjiGraph,
     required this.onTap,
+    required this.onOpenGraph,
   });
 
   final AppLanguage language;
   final PracticeSessionAction action;
   final int stageIndex;
+  final KanjiRelationshipGraphData? dueKanjiGraph;
   final VoidCallback onTap;
+  final ValueChanged<KanjiRelationshipGraphData> onOpenGraph;
 
   @override
   Widget build(BuildContext context) {
@@ -1216,6 +1253,13 @@ class _SessionStepTile extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                if (dueKanjiGraph case final graphData?) ...[
+                  const SizedBox(height: AppSpacing.sm),
+                  KanjiMiniGraphThumbnail(
+                    graphData: graphData,
+                    onTap: () => onOpenGraph(graphData),
+                  ),
+                ],
                 const SizedBox(height: 8),
                 TextButton.icon(
                   key: ValueKey('practice_session_step_cta_${action.id}'),

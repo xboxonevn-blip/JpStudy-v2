@@ -4,6 +4,20 @@ enum KanjiGraphNodeType { focus, component, related, outsideApp }
 
 enum KanjiGraphEdgeType { componentOf, related }
 
+enum KanjiGraphSrsTier { unseen, learning, due, stable }
+
+KanjiGraphSrsTier kanjiGraphSrsTierFromState({
+  required DateTime? nextReviewAt,
+  required double stability,
+  required DateTime now,
+}) {
+  if (nextReviewAt == null) return KanjiGraphSrsTier.unseen;
+  if (!nextReviewAt.isAfter(now)) return KanjiGraphSrsTier.due;
+  return stability >= 21.0
+      ? KanjiGraphSrsTier.stable
+      : KanjiGraphSrsTier.learning;
+}
+
 class KanjiGraphNode {
   const KanjiGraphNode({
     required this.character,

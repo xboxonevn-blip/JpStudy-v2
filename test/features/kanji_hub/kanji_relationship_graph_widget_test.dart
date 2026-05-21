@@ -29,6 +29,10 @@ void main() {
         home: Scaffold(
           body: KanjiRelationshipGraph(
             graphData: graph,
+            srsTiers: const {
+              '木': KanjiGraphSrsTier.due,
+              '学': KanjiGraphSrsTier.stable,
+            },
             onNodeSelected: tapped.add,
             onPracticeCluster: () {},
           ),
@@ -39,8 +43,14 @@ void main() {
 
     expect(find.byKey(const ValueKey('kanji_graph_canvas')), findsOneWidget);
     expect(find.byKey(const ValueKey('kanji_graph_focus_校')), findsOneWidget);
-    expect(find.byKey(const ValueKey('kanji_graph_node_木')), findsOneWidget);
-    expect(find.byKey(const ValueKey('kanji_graph_node_学')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('kanji_graph_node_木_due')),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(const ValueKey('kanji_graph_node_学_stable')),
+      findsOneWidget,
+    );
     expect(find.byKey(const ValueKey('kanji_graph_fit')), findsOneWidget);
     expect(find.byKey(const ValueKey('kanji_graph_reset')), findsOneWidget);
     expect(
@@ -60,7 +70,7 @@ void main() {
     expect(tester.getTopLeft(practiceButtonFinder).dy, lessThan(40));
 
     final node = tester.widget<InkWell>(
-      find.byKey(const ValueKey('kanji_graph_node_学')),
+      find.byKey(const ValueKey('kanji_graph_node_学_stable')),
     );
     node.onTap!();
 

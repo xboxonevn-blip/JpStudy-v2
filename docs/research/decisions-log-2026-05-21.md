@@ -311,3 +311,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Browser-side decoding avoids a new dependency, measures real pixels, and prevents spinner baselines from masking the learner-facing UI.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-032 - Keep kanji graph practice inside the graph surface
+**Phase**: P1 QA-A-029 Phase 2/3
+**Date**: 2026-05-21 15:22 (local)
+**Context**: The Phase 1 graph CTA opened the generic Kanji practice hub, which broke the owner-requested graph -> cluster practice -> SRS loop.
+**Options considered**: keep routing to Kanji practice | add a separate graph drill route | open an in-graph bottom-sheet quiz and record SRS there
+**Chosen**: open an in-graph bottom-sheet quiz and record SRS there
+**Rationale**: The bottom sheet keeps the learner in the current visual cluster, can await the SRS write before showing completion, and lets Review mini-graph cards reuse the same graph route for the reverse link.
+**Reversible**: yes
+**Owner review**: pending

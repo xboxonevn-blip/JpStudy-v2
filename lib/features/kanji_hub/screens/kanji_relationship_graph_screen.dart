@@ -5,10 +5,11 @@ import 'package:jpstudy/app/navigation/app_route_constants.dart';
 import 'package:jpstudy/app/theme/app_spacing.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
-import 'package:jpstudy/features/kanji_hub/models/kanji_practice_args.dart';
 import 'package:jpstudy/features/kanji_hub/models/kanji_relationship_graph.dart';
 import 'package:jpstudy/features/kanji_hub/providers/kanji_relationship_graph_provider.dart';
+import 'package:jpstudy/features/kanji_hub/widgets/kanji_graph_practice_panel.dart';
 import 'package:jpstudy/features/kanji_hub/widgets/kanji_relationship_graph.dart';
 
 class KanjiRelationshipGraphScreen extends ConsumerWidget {
@@ -22,6 +23,9 @@ class KanjiRelationshipGraphScreen extends ConsumerWidget {
     final decodedCharacter = _decodeRouteCharacter(character);
     final graphAsync = ref.watch(
       kanjiRelationshipGraphProvider(decodedCharacter),
+    );
+    final tierAsync = ref.watch(
+      kanjiRelationshipGraphSrsTiersProvider(decodedCharacter),
     );
 
     return Scaffold(
@@ -47,13 +51,19 @@ class KanjiRelationshipGraphScreen extends ConsumerWidget {
                 data: (graphData) => KanjiRelationshipGraph(
                   graphData: graphData,
                   language: language,
+                  srsTiers: tierAsync.value ?? const {},
                   onNodeSelected: (nextCharacter) {
                     context.go(
                       '/kanji/${Uri.encodeComponent(nextCharacter)}/graph',
                     );
                   },
-                  onPracticeCluster: () =>
-                      _openClusterPractice(context, graphData),
+                  onPracticeCluster: () => _openClusterPractice(
+                    context,
+                    ref,
+                    graphData,
+                    language,
+                    decodedCharacter,
+                  ),
                 ),
                 loading: () => const Center(
                   child: CircularProgressIndicator(strokeWidth: 2),
@@ -79,27 +89,30 @@ class KanjiRelationshipGraphScreen extends ConsumerWidget {
 
   void _openClusterPractice(
     BuildContext context,
+    WidgetRef ref,
     KanjiRelationshipGraphData graphData,
+    AppLanguage language,
+    String decodedCharacter,
   ) {
-    final ids = <int>{
-      for (final node in graphData.nodes)
-        if (node.item != null) node.item!.id,
-    }.toList();
-    final characters = <String>{
-      for (final node in graphData.nodes)
-        if (node.item != null) node.character,
-    }.toList();
-    if (ids.isEmpty && characters.isEmpty) return;
-    context.push(
-      AppRoutePath.kanjiPractice,
-      extra: KanjiPracticeArgs(
-        mode: KanjiPracticeMode.both,
-        source: 'graph_cluster',
-        levelCode: graphData.focus.item?.jlptLevel,
-        kanjiIds: ids,
-        kanjiCharacters: characters,
-        preferredKanjiId: graphData.focus.item?.id ?? ids.first,
-        preferredKanjiCharacter: graphData.focus.character,
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      builder: (sheetContext) => SingleChildScrollView(
+        child: KanjiGraphPracticePanel(
+          graphData: graphData,
+          language: language,
+          onCompleted: (outcome) async {
+            await ref
+                .read(kanjiGraphPracticeRecorderProvider)
+                .record(graphData: graphData, outcome: outcome);
+            ref
+              ..invalidate(
+                kanjiRelationshipGraphSrsTiersProvider(decodedCharacter),
+              )
+              ..invalidate(dashboardProvider);
+          },
+        ),
       ),
     );
   }

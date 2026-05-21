@@ -1495,3 +1495,13 @@
 - Mobile mode picker opens as a bottom sheet.
 - Enhanced flashcards support swipe left/right, tap-to-flip remains intact, long press marks a card for more practice, and mobile layout is edge-to-edge with compact app bar actions.
 - Home supports pull-to-refresh for SRS count reload.
+
+## 2026-05-21 QA-A-029 Kanji Graph Phase 2/3
+
+- Completed QA-A-029 Phase 2/3: graph nodes now show SRS tier borders, `Luyện cụm này` opens an in-graph 5-question quiz, completion awaits the kanji SRS write, and Review/Practice due-kanji cards show a mini graph thumbnail that opens the full graph.
+- Added deterministic graph quiz model/panel tests and review mini-graph widget coverage.
+- Verified locally: focused graph/practice suite `13/13`, `flutter analyze lib test` clean, UI string guard `0`, `git diff --check` clean except CRLF warnings, and full `flutter test --concurrency=1` passed `2462/2462`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: VI `/#/kanji/校/graph` rendered graph nodes/toolbar, node click rebuilt around `学`, graph quiz completed `5/5` with `Đã cập nhật SRS`; a failed quiz run became due after the FSRS learning step and Review rendered mini graph `学 ⺍ 冖 子 字`, whose tap opened `Mạng kanji 学`.
+- EN/JA graph routes rendered localized chrome without Vietnamese Hán-Việt leak. `main.dart.js` returned `200/no-cache`; unexpected console/failed requests were `0`.
+- Live artifact: `output/playwright/live-qaa029-phase23-proof.json` plus screenshots `output/playwright/live-qaa029-phase23-*.png`.

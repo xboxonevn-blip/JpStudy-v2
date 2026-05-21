@@ -10,6 +10,9 @@ import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/home/providers/dashboard_provider.dart';
 import 'package:jpstudy/features/home/providers/continue_provider.dart';
 import 'package:jpstudy/features/home/providers/weakness_radar_provider.dart';
+import 'package:jpstudy/data/models/kanji_item.dart';
+import 'package:jpstudy/features/kanji_hub/models/kanji_relationship_graph.dart';
+import 'package:jpstudy/features/kanji_hub/providers/kanji_relationship_graph_provider.dart';
 import 'package:jpstudy/features/practice/practice_screen.dart';
 
 const _kDashboard = DashboardState(
@@ -52,6 +55,7 @@ Widget _buildScreen({
       grammarGhostCountProvider.overrideWith((ref) async* {
         yield grammarGhostCount;
       }),
+      dueKanjiMiniGraphProvider.overrideWith((ref) async => _dueKanjiGraph()),
     ],
     child: const MaterialApp(home: PracticeScreen()),
   );
@@ -178,5 +182,78 @@ void main() {
       expect(size.width, greaterThanOrEqualTo(AppTouchTargets.min));
       expect(size.height, greaterThanOrEqualTo(AppTouchTargets.min));
     });
+
+    testWidgets('shows a due-kanji mini graph on the review plan', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        _buildScreen(
+          dashboard: const DashboardState(
+            streak: 0,
+            todayXp: 0,
+            vocabDue: 0,
+            grammarDue: 0,
+            kanjiDue: 3,
+            vocabMistakeCount: 0,
+            grammarMistakeCount: 0,
+            kanjiMistakeCount: 0,
+            totalMistakeCount: 0,
+          ),
+          continueAction: const ContinueAction(
+            type: ContinueActionType.kanjiReview,
+            label: 'Review kanji',
+            count: 3,
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(
+        find.byKey(const ValueKey('kanji_mini_graph_thumbnail')),
+        findsOneWidget,
+      );
+      expect(find.text('校'), findsWidgets);
+      expect(find.text('学'), findsWidgets);
+    });
   });
+}
+
+KanjiRelationshipGraphData _dueKanjiGraph() {
+  return KanjiRelationshipGraphBuilder.build(
+    focusCharacter: '校',
+    allKanji: [
+      _kanji(
+        id: 1,
+        character: '校',
+        hanViet: 'Giáo',
+        components: ['木', '交'],
+        relatedKanji: ['学'],
+      ),
+      _kanji(id: 2, character: '木', hanViet: 'Mộc'),
+      _kanji(id: 3, character: '学', hanViet: 'Học'),
+    ],
+  );
+}
+
+KanjiItem _kanji({
+  required int id,
+  required String character,
+  required String hanViet,
+  List<String> components = const [],
+  List<String> relatedKanji = const [],
+}) {
+  return KanjiItem(
+    id: id,
+    lessonId: 1,
+    character: character,
+    strokeCount: 1,
+    meaning: hanViet,
+    examples: const [],
+    jlptLevel: 'N5',
+    decomposition: KanjiDecomposition(
+      hanViet: hanViet,
+      components: components,
+      relatedKanji: relatedKanji,
+    ),
+  );
 }

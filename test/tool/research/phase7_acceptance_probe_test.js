@@ -10,6 +10,7 @@ const {
   isVisualReadyText,
   knownConsoleNoise,
   pixelDiffRatioFromRgba,
+  visualRegressionViewports,
 } = require('../../../tool/qa/phase7_acceptance_probe');
 
 test('buildSeededPreferences prepares an onboarded VI learner', () => {
@@ -19,6 +20,13 @@ test('buildSeededPreferences prepares an onboarded VI learner', () => {
   assert.equal(prefs['flutter.onboarding.level'], '"n3"');
   assert.equal(prefs['flutter.app.locale'], '"vi"');
   assert.equal(prefs['flutter.analytics.consent'], 'false');
+});
+
+test('visual regression config covers six H.7 viewports', () => {
+  assert.deepEqual(
+    visualRegressionViewports.map((viewport) => viewport.width),
+    [360, 768, 1024, 1280, 1600, 1920],
+  );
 });
 
 test('buildPhase7Samples selects five rows per required category', () => {

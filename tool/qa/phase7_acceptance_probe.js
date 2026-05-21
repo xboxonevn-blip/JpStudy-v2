@@ -6,6 +6,13 @@ const path = require('node:path');
 
 const repoRoot = path.resolve(__dirname, '../..');
 const defaultBaseUrl = 'https://jpstudy.web.app';
+const {
+  visualRegressionBaselineDir,
+  visualRegressionCurrentDir,
+  visualRegressionPages,
+  visualRegressionThreshold,
+  visualRegressionViewports,
+} = require('./visual_regression.config');
 const levelOrder = ['N5', 'N4', 'N3', 'N2', 'N1'];
 const requiredCategories = [
   'grammar',
@@ -13,29 +20,6 @@ const requiredCategories = [
   'kanji',
   'conjugation',
   'reading_comp',
-];
-const viewports = [
-  { width: 360, height: 640, name: 'mobile' },
-  { width: 768, height: 1024, name: 'tablet_portrait' },
-  { width: 1024, height: 768, name: 'tablet_landscape' },
-  { width: 1280, height: 800, name: 'desktop' },
-];
-const visualPages = [
-  { name: 'home', route: '/#/', ready: /Kế hoạch|Học tiếp|Ôn tập/ },
-  { name: 'level-home', route: '/#/', ready: /Kế hoạch|Học tiếp|Ôn tập/ },
-  { name: 'textbook-vocab', route: '/#/vocab', ready: /Hajimete|Minna|Từ vựng/ },
-  { name: 'lesson', route: '/#/lesson/1?level=N5', ready: /Bài 1|Flashcard|Từ vựng/ },
-  { name: 'grammar-detail', route: '/#/grammar/1', ready: /KẾT NỐI|Luyện tập|Liên quan/ },
-  { name: 'vocab-detail', route: '/#/vocab/1', ready: /Nghĩa|Gói học nhanh|Liên quan/ },
-  { name: 'kanji-graph', route: '/#/kanji/%E6%B5%B7/graph', ready: /Mạng|Luyện cụm|liên quan/i },
-  { name: 'conjugation', route: '/#/grammar/conjugation', ready: /Chia thể|động từ|tính từ/i },
-  { name: 'flashcard-mode', route: '/#/lesson/1/flashcards-enhanced?level=N5', ready: /Flashcard|Lật|Từ vựng/ },
-  { name: 'mcq-mode', route: '/#/lesson/1/practice/mcq?level=N5', ready: /Câu|Kiểm tra|Trả lời/ },
-  { name: 'matching-mode', route: '/#/lesson/1/match-mode?level=N5', ready: /Ghép|Matching|Từ vựng/ },
-  { name: 'typing-mode', route: '/#/lesson/1/write-mode?level=N5', ready: /Viết|Gõ|Từ vựng/ },
-  { name: 'writing-mode', route: '/#/practice/handwriting', ready: /Viết|Handwriting|Hán tự/ },
-  { name: 'dokkai-mode', route: '/#/jlpt/reading', ready: /Đọc hiểu|JLPT|Câu hỏi/ },
-  { name: 'conjugation-drill', route: '/#/grammar/conjugation/practice', ready: /Câu|Chia thể|Trả lời/i },
 ];
 
 function jsonValue(value) {
@@ -428,16 +412,23 @@ async function runPersonaFlow(browser, { name, baseUrl, level, steps, waitMs }) 
   };
 }
 
-async function runVisualRegression({ baseUrl = defaultBaseUrl, outputDir = path.join(repoRoot, 'output/playwright/phase7'), waitMs = 6500 } = {}) {
+async function runVisualRegression({
+  baseUrl = defaultBaseUrl,
+  baselineDir = visualRegressionBaselineDir,
+  currentDir = visualRegressionCurrentDir,
+  waitMs = 6500,
+  updateBaseline = false,
+} = {}) {
   const { chromium } = require('playwright');
   const browser = await chromium.launch({ executablePath: chromium.executablePath(), headless: true });
   const diffContext = await browser.newContext();
   const diffPage = await diffContext.newPage();
-  ensureDir(outputDir);
+  ensureDir(baselineDir);
+  ensureDir(currentDir);
   const screenshots = [];
   try {
-    for (const viewport of viewports) {
-      for (const pageSpec of visualPages) {
+    for (const viewport of visualRegressionViewports) {
+      for (const pageSpec of visualRegressionPages) {
         const context = await browser.newContext({ locale: 'vi-VN', viewport: { width: viewport.width, height: viewport.height } });
         await context.addInitScript((prefs) => {
           localStorage.clear();
@@ -447,24 +438,29 @@ async function runVisualRegression({ baseUrl = defaultBaseUrl, outputDir = path.
         }, buildSeededPreferences({ level: 'N5', locale: 'vi' }));
         const page = await context.newPage();
         const safeName = `${viewport.name}-${pageSpec.name}.png`;
-        const baselinePath = path.join(outputDir, 'baseline', safeName);
-        const currentPath = path.join(outputDir, 'current', safeName);
+        const baselinePath = path.join(baselineDir, safeName);
+        const currentPath = path.join(currentDir, safeName);
         ensureDir(path.dirname(baselinePath));
         ensureDir(path.dirname(currentPath));
         let loadError = null;
         try {
           await page.goto(`${baseUrl}${pageSpec.route}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
           await waitForVisualReady(page, pageSpec.ready, waitMs);
+          await page.evaluate(() => document.fonts?.ready).catch(() => {});
+          await page.waitForTimeout(4500);
           await page.screenshot({ path: currentPath, fullPage: false });
         } catch (error) {
           loadError = error?.message || String(error);
         }
         let baselineCreated = false;
+        let baselineUpdated = false;
         let diffRatio = 1;
         if (!loadError) {
-          if (!fs.existsSync(baselinePath)) {
+          const baselineExists = fs.existsSync(baselinePath);
+          if (!baselineExists || updateBaseline) {
             fs.copyFileSync(currentPath, baselinePath);
-            baselineCreated = true;
+            baselineCreated = !baselineExists;
+            baselineUpdated = baselineExists && updateBaseline;
             diffRatio = 0;
           } else {
             diffRatio = await imagePixelDiffRatio(diffPage, baselinePath, currentPath);
@@ -475,8 +471,9 @@ async function runVisualRegression({ baseUrl = defaultBaseUrl, outputDir = path.
           viewport: viewport.name,
           route: pageSpec.route,
           baselineCreated,
+          baselineUpdated,
           diffRatio,
-          pass: !loadError && diffRatio <= 0.01,
+          pass: !loadError && diffRatio <= visualRegressionThreshold,
           loadError,
           currentPath: path.relative(repoRoot, currentPath).replaceAll('\\', '/'),
           baselinePath: path.relative(repoRoot, baselinePath).replaceAll('\\', '/'),
@@ -490,7 +487,7 @@ async function runVisualRegression({ baseUrl = defaultBaseUrl, outputDir = path.
   }
   return {
     generatedAt: new Date().toISOString(),
-    threshold: 0.01,
+    threshold: visualRegressionThreshold,
     pass: screenshots.every((item) => item.pass),
     screenshots,
   };
@@ -636,8 +633,13 @@ function formatVisualRegressionMarkdown(report) {
     '|---|---|---|---|---:|---|---|',
   ];
   for (const shot of report.screenshots) {
+    const baselineNote = shot.baselineCreated
+      ? ' baseline-created'
+      : shot.baselineUpdated
+      ? ' baseline-updated'
+      : '';
     lines.push(
-      `| ${shot.viewport} | ${shot.name} | \`${shot.route}\` | ${shot.pass ? 'PASS' : 'FAIL'}${shot.baselineCreated ? ' baseline-created' : ''} | ${(shot.diffRatio * 100).toFixed(2)}% | \`${shot.baselinePath || ''}\` | \`${shot.currentPath || ''}\` |`,
+      `| ${shot.viewport} | ${shot.name} | \`${shot.route}\` | ${shot.pass ? 'PASS' : 'FAIL'}${baselineNote} | ${(shot.diffRatio * 100).toFixed(2)}% | \`${shot.baselinePath || ''}\` | \`${shot.currentPath || ''}\` |`,
     );
   }
   return `${lines.join('\n')}\n`;
@@ -673,6 +675,9 @@ function parseArgs(argv) {
     visualWaitMs: 6500,
     personaWaitMs: 6500,
     outDir: path.join(repoRoot, 'docs/research'),
+    visualBaselineDir: visualRegressionBaselineDir,
+    visualCurrentDir: visualRegressionCurrentDir,
+    updateVisualBaseline: false,
   };
   for (let i = 0; i < argv.length; i += 1) {
     const item = argv[i];
@@ -681,6 +686,9 @@ function parseArgs(argv) {
     else if (item === '--visual-wait-ms') args.visualWaitMs = Number(argv[++i]);
     else if (item === '--persona-wait-ms') args.personaWaitMs = Number(argv[++i]);
     else if (item === '--out-dir') args.outDir = path.resolve(argv[++i]);
+    else if (item === '--visual-baseline-dir') args.visualBaselineDir = path.resolve(argv[++i]);
+    else if (item === '--visual-current-dir') args.visualCurrentDir = path.resolve(argv[++i]);
+    else if (item === '--update-visual-baseline') args.updateVisualBaseline = true;
     else if (item === '--random-only') args.randomOnly = true;
     else if (item === '--visual-only') args.visualOnly = true;
     else if (item === '--persona-only') args.personaOnly = true;
@@ -694,6 +702,7 @@ function printHelp() {
   console.log(`Usage:
   node tool/qa/phase7_acceptance_probe.js
   node tool/qa/phase7_acceptance_probe.js --base-url https://jpstudy.web.app
+  node tool/qa/phase7_acceptance_probe.js --visual-only --update-visual-baseline
 `);
 }
 
@@ -717,6 +726,9 @@ async function main() {
     const visualReport = await runVisualRegression({
       baseUrl: args.baseUrl,
       waitMs: args.visualWaitMs,
+      baselineDir: args.visualBaselineDir,
+      currentDir: args.visualCurrentDir,
+      updateBaseline: args.updateVisualBaseline,
     });
     fs.writeFileSync(
       path.join(args.outDir, 'phase7-visual-regression-2026-05-21.md'),
@@ -758,4 +770,7 @@ module.exports = {
   runPersonaFlows,
   runRandomSampleE2E,
   runVisualRegression,
+  visualRegressionPages,
+  visualRegressionThreshold,
+  visualRegressionViewports,
 };

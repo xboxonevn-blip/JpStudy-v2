@@ -1658,3 +1658,16 @@
 - Option C merger noted: Phase G now bundles Directive E quality redo
   for Tier-1 (Top-200). Validator spec in docs/codex-followup-...md §6
 - Continuing Phase H.4 home page redesign next
+
+## 2026-05-21 Phase H complete
+
+- H.4 home dashboard redesign committed and pushed with adaptive max-width,
+  featured section, desktop top split, improved sidebar, and recent activity.
+- H.5 responsive polish committed and pushed with mobile flashcard fullscreen
+  gesture surface plus vertical swipe tests; lesson mobile mode picker test
+  remains green.
+- H.6 published `docs/design-system-v3.md`.
+- H.7 added six-viewport visual regression config, committed 90 baseline
+  screenshots, and documented the QA procedure.
+- Visual regression compare passed locally against release build at
+  `http://127.0.0.1:54556` with decoded-pixel diff threshold `<= 1%`.

@@ -14,10 +14,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 は N2 です",
-      "meaning": "Ý nghĩa: Mẫu câu danh từ cơ bản, dùng để nói “A là B”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "は là trợ từ chủ đề: chữ viết vẫn là は nhưng khi làm particle đọc là wa, một vết lịch sử còn giữ trong chính tả. です là copula lịch sự đặt cuối câu, không mang nghĩa hành động; nó chỉ đóng khung N1 và N2 thành một câu giới thiệu hoàn chỉnh.",
+      "hanVietBridge": "Mẫu này không có chữ Hán cố định, nhưng người Việt có thể mượn khái niệm Hán-Việt 'chủ đề' và 'định danh': N1 là đề tài được nêu ra, N2 là danh tính hoặc vai trò gán cho đề tài ấy.",
+      "form": "Hình thức: N1 は N2 です. N1 đứng trước は để làm chủ đề; N2 đứng trước です để nói danh tính, nghề nghiệp, quốc tịch hoặc vai trò.",
+      "meaning": "Ý nghĩa: dùng để giới thiệu hoặc định danh A là B trong câu lịch sự. Nghĩa gần 'A là B', nhưng は không phải chữ 'là'; phần giống 'là' nằm ở です cuối câu.",
+      "usage": "Sử dụng: hợp với tự giới thiệu, nêu nghề nghiệp, quốc tịch, quan hệ hoặc định nghĩa ngắn. Người Việt hay đặt 'là' ngay sau chủ ngữ; tiếng Nhật lại đẩy です về cuối câu.",
+      "humanMoment": "Dr. Linh lưu ý: trong N1 は N2 です, は giống đèn sân khấu chiếu vào chủ đề, còn です mới đóng câu lịch sự. Nếu nói 私は学生です, trọng tâm là 'về tôi thì: sinh viên'; đừng dịch は thành 'là'.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 じゃありません",
+          "contrast": "cùng khung N1 は N2, nhưng じゃありません phủ định danh tính còn です khẳng định."
+        },
+        {
+          "pattern": "N1 が N2 です",
+          "contrast": "が nhấn người/vật trả lời cho câu 'ai/cái nào?', còn は mở chủ đề để giới thiệu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

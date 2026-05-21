@@ -1,10 +1,225 @@
 {
-  "schemaVersion": 1,
-  "sourcePolicy": "Generated questions cover every runtime grammar point. Authored questions must be original wording, source-informed, and reachable through the shared grammar practice consumers.",
+  "schemaVersion": 2,
+  "sourcePolicy": "Generated questions cover every runtime grammar point. Authored Phase G templates are original JpStudy wording, source-informed, and reachable through shared grammar practice consumers.",
+  "templatePolicy": "Tier-1 items require at least 10 hand-crafted templates, five angles, Bloom L1-L4, one L4 analyze task, and Directive E content that passes the generic-filler validator.",
   "consumerRoutes": [
     "/grammar-practice",
     "/lesson/:id",
     "/jlpt/mock"
   ],
-  "questions": []
+  "questions": [
+    {
+      "id": "tpl-grammar-n5-001-form-l1-001",
+      "template_id": "tpl-grammar-n5-001-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ đúng: わたし ___ 学生です。",
+      "answer_template": "は",
+      "options_template": [
+        "は",
+        "が",
+        "を",
+        "に"
+      ],
+      "distractor_strategy": "topic-vs-subject-object-location",
+      "teaching_note": "は đánh dấu chủ đề; が/を/に kéo câu sang vai khác.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-form-l1-002",
+      "template_id": "tpl-grammar-n5-001-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu N1 は N2 ___ cần đuôi lịch sự nào?",
+      "answer_template": "です",
+      "options_template": [
+        "です",
+        "ます",
+        "を",
+        "で"
+      ],
+      "distractor_strategy": "copula-vs-verb-ending-particle",
+      "teaching_note": "です đóng câu danh từ lịch sự; ます dùng cho động từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-001-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "田中さんは先生です。 Nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Anh/chị Tanaka là giáo viên.",
+      "options_template": [
+        "Anh/chị Tanaka là giáo viên.",
+        "Giáo viên đi với anh/chị Tanaka.",
+        "Anh/chị Tanaka học với giáo viên.",
+        "Giáo viên hỏi anh/chị Tanaka."
+      ],
+      "distractor_strategy": "role-reversal-and-particle-confusion",
+      "teaching_note": "N2 trước です là danh tính/vai trò của N1.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-001-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1 は N2 です, phần nào gần với chữ 'là' trong tiếng Việt?",
+      "answer_template": "です",
+      "distractor_strategy": "ha-as-la-trap",
+      "teaching_note": "は mở chủ đề; です mới làm câu định danh khép lại.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-usage-l3-005",
+      "template_id": "tpl-grammar-n5-001-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Tôi là sinh viên': 学生 / は / です / 私",
+      "answer_template": "私は学生です",
+      "options_template": [
+        "私",
+        "は",
+        "学生",
+        "です"
+      ],
+      "distractor_strategy": "vietnamese-word-order-trap",
+      "teaching_note": "Tiếng Nhật để です cuối câu, không đặt sau 私.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-usage-l3-006",
+      "template_id": "tpl-grammar-n5-001-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu lịch sự: 'Đây là quyển sách' dùng mẫu N1 は N2 です.",
+      "answer_template": "これは本です",
+      "distractor_strategy": "missing-topic-or-copula",
+      "teaching_note": "これ làm N1; 本 làm N2; です kết câu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-context-l3-007",
+      "template_id": "tpl-grammar-n5-001-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Trong buổi tự giới thiệu, hãy nói 'Tôi là Mai' bằng mẫu N1 は N2 です.",
+      "answer_template": "私はマイです",
+      "distractor_strategy": "name-introduction-formality",
+      "teaching_note": "Tự giới thiệu cần chủ đề 私は và đuôi lịch sự です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-context-l2-008",
+      "template_id": "tpl-grammar-n5-001-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N1 は N2 です?",
+      "answer_template": "Giới thiệu nghề nghiệp: 私はエンジニアです。",
+      "options_template": [
+        "Giới thiệu nghề nghiệp: 私はエンジニアです。",
+        "Ra lệnh mở cửa.",
+        "Hỏi giá tiền bằng いくら.",
+        "Nối hai hành động bằng て."
+      ],
+      "distractor_strategy": "wrong-function-context",
+      "teaching_note": "Mẫu này định danh; không dùng cho mệnh lệnh hay nối hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-001-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn đang tự giới thiệu trước lớp. Câu nào tự nhiên nhất?",
+      "answer_template": "私は学生です。",
+      "options_template": [
+        "私は学生です。",
+        "私を学生です。",
+        "私は学生ます。",
+        "私に学生です。"
+      ],
+      "distractor_strategy": "particle-and-copula-analysis",
+      "teaching_note": "Với tự giới thiệu, は mở chủ đề và です đóng câu danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-001-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-001-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Thầy hỏi 'Ai là sinh viên?' Câu nào đổi trọng tâm khỏi mẫu giới thiệu N1 は N2 です?",
+      "answer_template": "私が学生です。",
+      "options_template": [
+        "私が学生です。",
+        "私は学生です。",
+        "私は学生じゃありません。",
+        "学生は私です。"
+      ],
+      "distractor_strategy": "topic-vs-focus-contrast",
+      "teaching_note": "が trả lời 'ai/cái nào'; は dùng khi mở chủ đề để giới thiệu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    }
+  ]
 }

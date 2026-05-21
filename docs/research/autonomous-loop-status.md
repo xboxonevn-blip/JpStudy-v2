@@ -1744,3 +1744,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: keep the sentence body intact, then add `か` at
   the end to ask. `か` is the grammar question mark, not Vietnamese "không".
+
+## 2026-05-22 Phase G Tier-1 item 004
+
+- Re-authored `grammar:n5:grammar_n5_1:004` (`N + も`) with additive-particle
+  guidance and contrasts against `は` topic marking plus `と` noun joining.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `も` means the same statement applies here too.
+  It often replaces `は`; learners should not write `はも`.

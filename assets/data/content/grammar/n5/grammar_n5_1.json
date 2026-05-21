@@ -134,10 +134,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N + も",
-      "meaning": "Ý nghĩa: `も` nghĩa là “cũng”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "も là trợ từ thêm-vào: nó gắn sau danh từ để nói 'cùng điều đó cũng áp dụng ở đây'. Về cấu trúc, も thường thay vị trí của は/が/を thay vì đứng thêm bên cạnh, nên 私も学生です không cần 私はも.",
+      "hanVietBridge": "Có thể nối も với ý Hán-Việt 'đồng' trong đồng dạng, đồng thời, đồng học: cùng một thuộc tính lặp lại ở người/vật khác. Đây là cầu nghĩa, không phải chữ Hán trực tiếp của も.",
+      "form": "Hình thức: N + も. Đặt も ngay sau danh từ được thêm vào nhóm đã nhắc hoặc đã hiểu trong ngữ cảnh.",
+      "meaning": "Ý nghĩa: 'cũng', 'cả ... cũng'. Mẫu này báo rằng N có cùng trạng thái/hành động/đặc điểm với một đối tượng khác.",
+      "usage": "Sử dụng: dùng khi nối người/vật mới vào cùng mệnh đề: 田中さんは学生です。私も学生です. Tránh viết はも; trong câu cơ bản, も tự đảm nhiệm vai đánh dấu phần được thêm.",
+      "humanMoment": "Dr. Linh lưu ý: N + も giống câu 'tôi cũng vậy' trong tiếng Việt. は mở một chủ đề mới, còn も nói 'chủ đề này cũng nằm trong nhóm đó'; vì vậy 私も学生です tự nhiên hơn 私はも学生です.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 です",
+          "contrast": "khác ở vai trò: は mở chủ đề để nói riêng về N1, còn も thêm N vào cùng nhận định đã có."
+        },
+        {
+          "pattern": "N1 と N2",
+          "contrast": "khác ở cấu trúc: と nối hai danh từ thành cụm 'A và B', còn も đặt sau một danh từ để nói 'A cũng...'."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

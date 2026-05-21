@@ -647,6 +647,219 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-form-l1-001",
+      "template_id": "tpl-grammar-n5-004-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ để nói 'tôi cũng': 私 ___ 学生です。",
+      "answer_template": "も",
+      "options_template": [
+        "も",
+        "は",
+        "を",
+        "に"
+      ],
+      "distractor_strategy": "additive-vs-topic-object-location",
+      "teaching_note": "も đứng sau danh từ được thêm vào cùng nhận định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-form-l1-002",
+      "template_id": "tpl-grammar-n5-004-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Cách viết nào đúng với mẫu N + も?",
+      "answer_template": "私も学生です。",
+      "options_template": [
+        "私も学生です。",
+        "私はも学生です。",
+        "私もは学生です。",
+        "私をも学生です。"
+      ],
+      "distractor_strategy": "double-particle-trap",
+      "teaching_note": "Trong câu cơ bản, も thay vị trí của は; không ghép はも.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-004-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "私も学生です。 Nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi cũng là sinh viên.",
+      "options_template": [
+        "Tôi cũng là sinh viên.",
+        "Tôi là sinh viên đầu tiên.",
+        "Tôi không phải sinh viên.",
+        "Tôi và sinh viên đi cùng nhau."
+      ],
+      "distractor_strategy": "also-vs-first-negative-and",
+      "teaching_note": "も thêm 'tôi' vào cùng nhóm đã có thuộc tính sinh viên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-004-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N + も, も thêm sắc thái nghĩa nào?",
+      "answer_template": "Cũng/cùng áp dụng.",
+      "distractor_strategy": "additive-meaning-recall",
+      "teaching_note": "も không chỉ đánh dấu chủ đề; nó báo có một đối tượng khác cùng chia sẻ nhận định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-usage-l3-005",
+      "template_id": "tpl-grammar-n5-004-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Tôi cũng là người Việt Nam': ベトナム人 / も / です / 私",
+      "answer_template": "私もベトナム人です",
+      "options_template": [
+        "私",
+        "も",
+        "ベトナム人",
+        "です"
+      ],
+      "distractor_strategy": "also-sentence-order",
+      "teaching_note": "N + も đứng đầu cụm chủ đề mới: 私も.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-usage-l3-006",
+      "template_id": "tpl-grammar-n5-004-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Anh/chị Tanaka cũng là giáo viên.'",
+      "answer_template": "田中さんも先生です",
+      "distractor_strategy": "person-also-identity",
+      "teaching_note": "Đặt も ngay sau 田中さん vì Tanaka là người được thêm vào nhóm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-context-l3-007",
+      "template_id": "tpl-grammar-n5-004-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "A nói: 私は学生です。 Bạn cũng là sinh viên. Đáp lại bằng một câu ngắn.",
+      "answer_template": "私も学生です",
+      "distractor_strategy": "contextual-me-too-response",
+      "teaching_note": "Ngữ cảnh đã có một sinh viên trước đó, nên dùng も.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-context-l2-008",
+      "template_id": "tpl-grammar-n5-004-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào cần N + も?",
+      "answer_template": "Đã biết A là sinh viên, muốn nói B cũng là sinh viên.",
+      "options_template": [
+        "Đã biết A là sinh viên, muốn nói B cũng là sinh viên.",
+        "Muốn hỏi B có phải sinh viên không.",
+        "Muốn phủ định B là sinh viên.",
+        "Muốn nói B đang ở thư viện."
+      ],
+      "distractor_strategy": "additive-context-vs-question-negative-location",
+      "teaching_note": "も cần một điểm chung đã có hoặc đang được ngầm hiểu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-004-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: 山田さんは学生です。Bạn muốn nói Tanaka cũng là sinh viên. Câu nào đúng?",
+      "answer_template": "田中さんも学生です。",
+      "options_template": [
+        "田中さんも学生です。",
+        "田中さんは学生です。",
+        "田中さんと学生です。",
+        "田中さんじゃ学生です。"
+      ],
+      "distractor_strategy": "also-vs-topic-and-broken-negative",
+      "teaching_note": "も thể hiện Tanaka được thêm vào cùng nhận định với Yamada.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-004-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-004-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào dùng も để nói 'cũng', không phải と để nối 'và'?",
+      "answer_template": "私も行きます。",
+      "options_template": [
+        "私も行きます。",
+        "私と田中さんが行きます。",
+        "私は行きます。",
+        "私は行きません。"
+      ],
+      "distractor_strategy": "mo-vs-to-analysis",
+      "teaching_note": "と nối hai danh từ; も thêm một người/vật vào cùng hành động hay trạng thái.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

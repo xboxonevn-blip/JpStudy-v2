@@ -5092,6 +5092,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-form-l1-001",
+      "template_id": "tpl-grammar-n5-025-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ chỉ phương tiện: バス ___ 行きます。",
+      "answer_template": "で",
+      "options_template": [
+        "で",
+        "へ",
+        "と",
+        "の"
+      ],
+      "distractor_strategy": "means-de-vs-destination-list-no",
+      "teaching_note": "で đứng sau phương tiện di chuyển.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-form-l1-002",
+      "template_id": "tpl-grammar-n5-025-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để nói 'đi bằng tàu điện'?",
+      "answer_template": "電車で行きます。",
+      "options_template": [
+        "電車で行きます。",
+        "電車へ行きます。",
+        "電車と行きます。",
+        "電車の行きます。"
+      ],
+      "distractor_strategy": "transport-means-form",
+      "teaching_note": "Phương tiện nhận で, không nhận へ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-025-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "バスで学校へ行きます nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Đi đến trường bằng xe buýt.",
+      "options_template": [
+        "Đi đến trường bằng xe buýt.",
+        "Đi xe buýt đến trường bằng trường.",
+        "Xe buýt và trường.",
+        "Từ xe buýt đến trường."
+      ],
+      "distractor_strategy": "means-plus-destination-meaning",
+      "teaching_note": "バスで trả lời phương tiện; 学校へ trả lời đích đến.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-025-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N( phương tiện ) で 行きます, で cho biết điều gì?",
+      "answer_template": "Phương tiện/cách thức di chuyển: đi bằng gì.",
+      "distractor_strategy": "means-role-recall",
+      "teaching_note": "Nếu câu hỏi là 'bằng gì?', tìm cụm Nで.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-usage-l3-005",
+      "template_id": "tpl-grammar-n5-025-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'đi bằng taxi': タクシー / で / 行きます",
+      "answer_template": "タクシーで行きます。",
+      "options_template": [
+        "タクシー",
+        "で",
+        "行きます"
+      ],
+      "distractor_strategy": "transport-means-order",
+      "teaching_note": "Phương tiện + で + động từ di chuyển.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-usage-l3-006",
+      "template_id": "tpl-grammar-n5-025-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: 'Tôi về nhà bằng xe buýt.' Dùng バス và 帰ります.",
+      "answer_template": "バスで帰ります。",
+      "distractor_strategy": "return-by-bus-production",
+      "teaching_note": "帰ります nói 'về'; バスで nói phương tiện.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-context-l3-007",
+      "template_id": "tpl-grammar-n5-025-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn đi đến đại học bằng tàu điện. Viết cụm 'bằng tàu điện đi đến đại học'.",
+      "answer_template": "電車で大学へ行きます。",
+      "distractor_strategy": "transport-plus-destination-context",
+      "teaching_note": "Có thể dùng cả 電車で và 大学へ trong cùng câu: phương tiện + đích đến.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-context-l2-008",
+      "template_id": "tpl-grammar-n5-025-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N( phương tiện ) で 行きます?",
+      "answer_template": "Bạn cần nói đi bằng xe buýt, tàu điện, taxi hoặc xe đạp.",
+      "options_template": [
+        "Bạn cần nói đi bằng xe buýt, tàu điện, taxi hoặc xe đạp.",
+        "Bạn cần nói đích đến là trường.",
+        "Bạn cần nói không đi đâu cả.",
+        "Bạn cần nói đi cùng bạn."
+      ],
+      "distractor_strategy": "means-context-vs-destination-negation-companion",
+      "teaching_note": "で ở đây gắn với phương tiện, không gắn với nơi đến hay người đi cùng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-025-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần nói phương tiện là xe buýt, không nói đích đến. Câu nào đúng?",
+      "answer_template": "バスで行きます。",
+      "options_template": [
+        "バスで行きます。",
+        "学校へ行きます。",
+        "バスへ行きます。",
+        "バスと行きます。"
+      ],
+      "distractor_strategy": "means-vs-destination-companion-analysis",
+      "teaching_note": "L4: で trả lời 'bằng gì'; へ trả lời 'đến đâu'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-025-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-025-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn nói 'đi bộ', không dùng tên phương tiện như xe buýt/taxi. Câu nào hợp quy ước N5?",
+      "answer_template": "歩いて行きます。",
+      "options_template": [
+        "歩いて行きます。",
+        "歩きで行きます。",
+        "足で行きます。",
+        "歩くで行きます。"
+      ],
+      "distractor_strategy": "walking-exception-vs-transport-de-analysis",
+      "teaching_note": "Đi bộ là ngoại lệ dùng 歩いて, không dùng Nで như phương tiện cơ giới.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

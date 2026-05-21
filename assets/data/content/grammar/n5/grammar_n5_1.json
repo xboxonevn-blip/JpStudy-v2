@@ -54,10 +54,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 は N2 じゃありません",
-      "meaning": "Ý nghĩa: Đây là dạng phủ định của `N1 は N2 です`, dùng để nói “A không phải là B”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "じゃありません là dạng nói gọn của ではありません: で giữ vai trò copula/linking, は nêu phạm vi phủ định, ありません là dạng lịch sự phủ định của ある. Vì thế cả cụm không chỉ là 'không'; nó là cách lịch sự nói 'không phải là N2'.",
+      "hanVietBridge": "Người Việt có sẵn khái niệm Hán-Việt 'phủ định'. Trong mẫu này, phần phủ định không nằm ở は mà nằm ở ありません; hãy nối tư duy 'khẳng định/ phủ định' với cặp です/じゃありません.",
+      "form": "Hình thức: N1 は N2 じゃありません. Giữ N1 は làm chủ đề, đặt N2 trước cụm phủ định lịch sự じゃありません.",
+      "meaning": "Ý nghĩa: dùng để nói A không phải là B trong văn lịch sự. Đây là mặt phủ định của N1 は N2 です, không phải mẫu diễn tả 'không có'.",
+      "usage": "Sử dụng: hợp khi phủ định nghề nghiệp, quốc tịch, danh tính hoặc quan hệ: 私は先生じゃありません. Tránh bỏ です/ありません theo kiểu tiếng Việt vì câu Nhật cần đuôi lịch sự rõ.",
+      "humanMoment": "Dr. Linh lưu ý: N1 は N2 じゃありません không đổi vai của は; chỉ đổi phần cuối từ です sang phủ định. 私は学生じゃありません nghĩa là 'về tôi thì: không phải sinh viên', khác với việc nói 'tôi không có sinh viên'.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 です",
+          "contrast": "cùng khung chủ đề-danh tính, nhưng です khẳng định còn じゃありません phủ định."
+        },
+        {
+          "pattern": "N1 は N2 じゃないです",
+          "contrast": "じゃないです cũng phủ định nhưng mềm/thân mật hơn; じゃありません lịch sự chuẩn hơn cho lớp học và dịch vụ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

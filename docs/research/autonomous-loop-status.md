@@ -1726,3 +1726,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `は` opens the topic; `です` closes the polite
   identity sentence. A learner should not translate `は` as Vietnamese "là".
+
+## 2026-05-22 Phase G Tier-1 item 002
+
+- Re-authored `grammar:n5:grammar_n5_1:002` (`N1 は N2 じゃありません`)
+  with `では -> じゃ` etymology, negative identity usage, and contrast links.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: the topic frame stays `N1 は`; only the ending
+  changes from `です` to `じゃありません`. This denies identity, not existence.

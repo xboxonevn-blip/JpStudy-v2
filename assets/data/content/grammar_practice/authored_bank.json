@@ -220,6 +220,219 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-form-l1-001",
+      "template_id": "tpl-grammar-n5-002-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn cụm phủ định lịch sự: 私は学生 ___。",
+      "answer_template": "じゃありません",
+      "options_template": [
+        "じゃありません",
+        "です",
+        "ます",
+        "ではあります"
+      ],
+      "distractor_strategy": "positive-vs-negative-ending",
+      "teaching_note": "じゃありません là đuôi phủ định cho câu danh từ lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-form-l1-002",
+      "template_id": "tpl-grammar-n5-002-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Mẫu phủ định đúng của N1 は N2 です là gì?",
+      "answer_template": "N1 は N2 じゃありません",
+      "options_template": [
+        "N1 は N2 じゃありません",
+        "N1 を N2 じゃありません",
+        "N1 は N2 ません",
+        "N1 に N2 です"
+      ],
+      "distractor_strategy": "wrong-particle-and-verb-negative",
+      "teaching_note": "Câu danh từ không dùng ません một mình; cần じゃありません.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-002-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "私は先生じゃありません。 Nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi không phải là giáo viên.",
+      "options_template": [
+        "Tôi không phải là giáo viên.",
+        "Tôi không có giáo viên.",
+        "Giáo viên không có tôi.",
+        "Tôi không dạy giáo viên."
+      ],
+      "distractor_strategy": "identity-negative-vs-existence-negative",
+      "teaching_note": "じゃありません phủ định danh tính, không diễn tả sự tồn tại.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-002-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1 は N2 じゃありません, phần nào tạo nghĩa phủ định?",
+      "answer_template": "じゃありません",
+      "distractor_strategy": "ha-as-negative-trap",
+      "teaching_note": "は vẫn là chủ đề; じゃありません mới làm câu thành phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-usage-l3-005",
+      "template_id": "tpl-grammar-n5-002-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Tôi không phải bác sĩ': 医者 / は / じゃありません / 私",
+      "answer_template": "私は医者じゃありません",
+      "options_template": [
+        "私",
+        "は",
+        "医者",
+        "じゃありません"
+      ],
+      "distractor_strategy": "negative-copula-word-order",
+      "teaching_note": "N2 đứng ngay trước じゃありません; は vẫn đứng sau chủ đề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-usage-l3-006",
+      "template_id": "tpl-grammar-n5-002-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu lịch sự: 'Tôi không phải người Nhật' bằng mẫu N1 は N2 じゃありません.",
+      "answer_template": "私は日本人じゃありません",
+      "distractor_strategy": "missing-topic-or-negative-ending",
+      "teaching_note": "日本人 là N2; phủ định danh tính bằng じゃありません.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-context-l3-007",
+      "template_id": "tpl-grammar-n5-002-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Ở quầy đăng ký, bạn cần nói 'Tôi không phải học sinh'. Viết câu lịch sự.",
+      "answer_template": "私は学生じゃありません",
+      "distractor_strategy": "service-counter-politeness",
+      "teaching_note": "Ngữ cảnh dịch vụ cần đuôi lịch sự じゃありません, không chỉ じゃない.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-context-l2-008",
+      "template_id": "tpl-grammar-n5-002-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N1 は N2 じゃありません?",
+      "answer_template": "Phủ định nghề nghiệp: 私は会社員じゃありません。",
+      "options_template": [
+        "Phủ định nghề nghiệp: 私は会社員じゃありません。",
+        "Mời ai đó uống nước.",
+        "Nói nơi có cái bàn.",
+        "Nối hai hành động trong quá khứ."
+      ],
+      "distractor_strategy": "wrong-function-context",
+      "teaching_note": "Mẫu này phủ định danh tính/vai trò; không dùng cho lời mời hay tồn tại.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-002-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: Người khác tưởng bạn là giáo viên. Câu nào phủ định lịch sự và đúng cấu trúc?",
+      "answer_template": "私は先生じゃありません。",
+      "options_template": [
+        "私は先生じゃありません。",
+        "私は先生です。",
+        "私を先生じゃありません。",
+        "私は先生ません。"
+      ],
+      "distractor_strategy": "positive-vs-negative-and-particle-analysis",
+      "teaching_note": "Phủ định danh tính vẫn giữ は; đuôi đúng là じゃありません.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-002-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-002-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào nghĩa là 'Tôi không phải sinh viên', không phải 'không có sinh viên'?",
+      "answer_template": "私は学生じゃありません。",
+      "options_template": [
+        "私は学生じゃありません。",
+        "学生がいません。",
+        "私は学生です。",
+        "学生は私です。"
+      ],
+      "distractor_strategy": "identity-negative-vs-existence-negative-analysis",
+      "teaching_note": "じゃありません phủ định định danh; いません nói về sự tồn tại của người/vật sống.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

@@ -7454,6 +7454,224 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-form-l1-001",
+      "template_id": "tpl-grammar-n5-036-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "行きます đổi sang lời rủ Vましょう là gì?",
+      "answer_template": "行きましょう。",
+      "options_template": [
+        "行きましょう。",
+        "行きませんか。",
+        "行きません。",
+        "行きました。"
+      ],
+      "distractor_strategy": "masu-stem-mashou-vs-invitation-negative-past",
+      "teaching_note": "Vます bỏ ます rồi thêm ましょう.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-form-l1-002",
+      "template_id": "tpl-grammar-n5-036-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng cho 'cùng học nào'.",
+      "answer_template": "勉強しましょう。",
+      "options_template": [
+        "勉強しましょう。",
+        "勉強しません。",
+        "勉強しました。",
+        "勉強しますか。"
+      ],
+      "distractor_strategy": "suru-mashou-form-vs-negative-past-question",
+      "teaching_note": "勉強します -> 勉強しましょう.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-036-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "一緒に昼ご飯を食べましょう nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Chúng ta cùng ăn trưa nhé.",
+      "options_template": [
+        "Chúng ta cùng ăn trưa nhé.",
+        "Bạn có ăn trưa không?",
+        "Tôi không ăn trưa.",
+        "Tôi đã ăn trưa."
+      ],
+      "distractor_strategy": "mashou-lets-vs-question-negative-past",
+      "teaching_note": "Vましょう là lời rủ/cùng làm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-036-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Vましょう thường biểu thị sắc thái gì?",
+      "answer_template": "Đề nghị hoặc rủ cùng làm một hành động.",
+      "distractor_strategy": "mashou-function-recall",
+      "teaching_note": "Người nói thường cũng tham gia hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-usage-l3-005",
+      "template_id": "tpl-grammar-n5-036-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'cùng đi công viên nào': 公園へ / 行き / ましょう",
+      "answer_template": "公園へ行きましょう。",
+      "options_template": [
+        "公園へ",
+        "行き",
+        "ましょう"
+      ],
+      "distractor_strategy": "mashou-suggestion-order",
+      "teaching_note": "Thân 行き + ましょう tạo lời rủ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-usage-l3-006",
+      "template_id": "tpl-grammar-n5-036-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "A: コーヒーを飲みませんか。Bạn đồng ý. Đáp lại bằng Vましょう.",
+      "answer_template": "はい、飲みましょう。",
+      "distractor_strategy": "respond-to-masenka-with-mashou",
+      "teaching_note": "Vましょう có thể dùng để đồng ý với lời mời Vませんか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-context-l3-007",
+      "template_id": "tpl-grammar-n5-036-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh: cả nhóm đã quyết định bắt đầu học. Câu nào hợp nhất?",
+      "answer_template": "勉強しましょう。",
+      "options_template": [
+        "勉強しましょう。",
+        "勉強しませんか。",
+        "勉強しません。",
+        "勉強しました。"
+      ],
+      "distractor_strategy": "group-start-context-mashou-vs-soft-invitation",
+      "teaching_note": "Khi đã nghiêng về hành động chung, Vましょう tự nhiên hơn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-context-l2-008",
+      "template_id": "tpl-grammar-n5-036-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào nên dùng Vましょう?",
+      "answer_template": "Khi đề nghị cùng làm hoặc đáp lại lời mời.",
+      "options_template": [
+        "Khi đề nghị cùng làm hoặc đáp lại lời mời.",
+        "Khi muốn nói mình không làm.",
+        "Khi muốn hỏi rất nhẹ người nghe có muốn không.",
+        "Khi kể việc đã xảy ra."
+      ],
+      "distractor_strategy": "mashou-context-vs-negative-soft-invitation-past",
+      "teaching_note": "Vましょう mạnh hơn lời mời mềm Vませんか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-036-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích sắc thái. Bạn đã nhận lời rủ đi xem phim. Câu đáp nào hợp nhất?",
+      "answer_template": "はい、見ましょう。",
+      "options_template": [
+        "はい、見ましょう。",
+        "はい、見ませんか。",
+        "はい、見ません。",
+        "はい、見ました。"
+      ],
+      "distractor_strategy": "accept-invitation-with-mashou-analysis",
+      "teaching_note": "L4: đáp lời mời bằng Vましょう để cùng bước vào hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-036-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-036-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn mời rất nhẹ người mới quen, chưa chắc họ muốn. Câu nào KHÔNG phải lựa chọn mềm nhất?",
+      "answer_template": "行きましょう。",
+      "options_template": [
+        "行きましょう。",
+        "行きませんか。",
+        "一緒に行きませんか。",
+        "コーヒーを飲みませんか。"
+      ],
+      "distractor_strategy": "mashou-stronger-than-masenka-analysis",
+      "teaching_note": "Vましょう kéo người nghe vào hành động hơn Vませんか, nên không mềm nhất với người mới quen.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

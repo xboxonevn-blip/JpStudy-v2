@@ -58,10 +58,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Aい -> Aくないです / Aな -> Aじゃありません",
-      "meaning": "Ý nghĩa: Dùng để nói một tính chất không đúng.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Cấu trúc phủ định tách theo loại tính từ. Aい tự biến đổi: bỏ い, chuyển sang thân く, rồi thêm ないです. Aな cư xử gần danh từ hơn, nên dùng cụm phủ định copula じゃありません giống N1 は N2 じゃありません.",
+      "hanVietBridge": "Hán-Việt 'phủ định' giúp nhớ mục tiêu nghĩa: nói tính chất không đúng. Nhưng tiếng Nhật không dùng một chữ 'không' chung; Aい đổi đuôi, còn Aな mượn khung danh từ `じゃありません`.",
+      "form": "Hình thức: Aい -> bỏ い + くないです: 高い -> 高くないです. Aな -> bỏ な + じゃありません: 静か -> 静かじゃありません.",
+      "meaning": "Ý nghĩa: nói một tính chất không đúng hoặc không áp dụng: không cao, không yên tĩnh, không tiện lợi.",
+      "usage": "Sử dụng: trước tiên nhận diện Aい hay Aな. Đừng tạo Aな phủ định bằng くない; cũng đừng thêm じゃありません trực tiếp vào Aい trong bài N5 cơ bản.",
+      "humanMoment": "Dr. Linh lưu ý: Aい -> Aくないです / Aな -> Aじゃありません là bài kiểm tra phân loại tính từ. 高い tự đổi đuôi thành 高くないです; 静か không có đuôi い để đổi, nên đi đường danh từ: 静かじゃありません.",
+      "crossLinks": [
+        {
+          "pattern": "Aい (tính từ i) / Aな (tính từ na)",
+          "contrast": "bài phân loại quyết định nhánh phủ định: nhận sai loại thì phủ định sai."
+        },
+        {
+          "pattern": "N1 は N2 じゃありません",
+          "contrast": "Aな dùng じゃありません giống danh từ, còn Aい không đi thẳng với じゃありません trong mẫu N5 này."
+        },
+        {
+          "pattern": "Aな + N / Aい + N",
+          "contrast": "A+N nói cách bổ nghĩa danh từ; mẫu này nói cách phủ định cuối câu của cùng hai loại tính từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

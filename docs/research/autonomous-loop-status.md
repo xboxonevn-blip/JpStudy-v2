@@ -2101,3 +2101,13 @@
 - Teaching Test paraphrase: identify adjective class before changing form.
   Aい attaches directly (`高い山`); Aな needs `な` before nouns (`静かな町`) but not
   before `です`.
+
+## 2026-05-22 Phase G Tier-1 item 042
+
+- Re-authored `grammar:n5:grammar_n5_8:002` (`Aい -> Aくないです / Aな ->
+  Aじゃありません`) with two-branch adjective negation, Hán-Việt "phủ định"
+  bridge, and contrasts against adjective class, noun negation, and A+N usage.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: Aい negates by changing `い` to `くないです`; Aな
+  negates like a noun with `じゃありません`. Classify first, then negate.

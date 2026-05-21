@@ -1852,3 +1852,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: if N2 is a place, translate the frame as "N1 is
   at/in N2". `田中さんは教室です` means Tanaka is in the classroom.
+
+## 2026-05-22 Phase G Tier-1 item 016
+
+- Re-authored `grammar:n5:grammar_n5_3:004` (`N は どこ/どちらですか`) with
+  ko-so-a-do question-word logic and `どこ` vs `どちら` register contrast.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `どこ/どちら` asks for location or direction. Ask
+  `トイレはどこですか`; answer with a place like `あそこです`.

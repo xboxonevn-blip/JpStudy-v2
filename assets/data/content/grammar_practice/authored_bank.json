@@ -3190,6 +3190,217 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-form-l1-001",
+      "template_id": "tpl-grammar-n5-016-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn từ hỏi vị trí: トイレは ___ ですか。",
+      "answer_template": "どこ",
+      "options_template": [
+        "どこ",
+        "何",
+        "の",
+        "さん"
+      ],
+      "distractor_strategy": "location-question-word-vs-what-particle-honorific",
+      "teaching_note": "どこ hỏi 'ở đâu'; 何 hỏi 'cái gì'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-form-l1-002",
+      "template_id": "tpl-grammar-n5-016-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để hỏi lịch sự 'Quầy tiếp tân ở đâu/phía nào?'",
+      "answer_template": "受付はどちらですか。",
+      "options_template": [
+        "受付はどちらですか。",
+        "受付は何ですか。",
+        "受付のどちらです。",
+        "受付どちらです。"
+      ],
+      "distractor_strategy": "polite-location-question-form",
+      "teaching_note": "どちら lịch sự hơn どこ và vẫn đứng trước ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-016-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "図書館はどこですか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Thư viện ở đâu?",
+      "options_template": [
+        "Thư viện ở đâu?",
+        "Thư viện là gì?",
+        "Đây là thư viện phải không?",
+        "Thư viện của ai?"
+      ],
+      "distractor_strategy": "where-vs-what-yesno-possession",
+      "teaching_note": "どこ yêu cầu vị trí, không yêu cầu định nghĩa hay xác nhận.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-016-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Khác biệt chính giữa どこ và どちら trong câu hỏi địa điểm là gì?",
+      "answer_template": "どこ trung tính là 'ở đâu'; どちら lịch sự hơn và có thể gợi 'phía nào'.",
+      "distractor_strategy": "doko-dochira-contrast-recall",
+      "teaching_note": "Cả hai hỏi vị trí, nhưng どちら hợp bối cảnh lịch sự/chỉ hướng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-usage-l3-005",
+      "template_id": "tpl-grammar-n5-016-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'Nhà vệ sinh ở đâu?': トイレは / どこですか",
+      "answer_template": "トイレはどこですか。",
+      "options_template": [
+        "トイレは",
+        "どこですか"
+      ],
+      "distractor_strategy": "where-question-order",
+      "teaching_note": "Đặt địa điểm cần tìm trước は, rồi hỏi どこですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-usage-l3-006",
+      "template_id": "tpl-grammar-n5-016-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Bạn là khách ở khách sạn, muốn hỏi lịch sự 'Thang máy ở đâu/phía nào?'. Viết câu.",
+      "answer_template": "エレベーターはどちらですか。",
+      "distractor_strategy": "polite-hotel-direction-question",
+      "teaching_note": "Trong bối cảnh khách-dịch vụ, どちら nghe lịch sự và tự nhiên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-context-l3-007",
+      "template_id": "tpl-grammar-n5-016-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn muốn hỏi bạn học 'Cô Maria ở đâu?'. Viết câu.",
+      "answer_template": "マリアさんはどこですか。",
+      "distractor_strategy": "person-location-question-context",
+      "teaching_note": "Người cũng có thể làm chủ đề của câu hỏi vị trí.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-context-l2-008",
+      "template_id": "tpl-grammar-n5-016-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N は どこ/どちら ですか?",
+      "answer_template": "Bạn cần hỏi vị trí của một người, phòng, quầy, hoặc đồ vật.",
+      "options_template": [
+        "Bạn cần hỏi vị trí của một người, phòng, quầy, hoặc đồ vật.",
+        "Bạn cần hỏi vật đó tên là gì.",
+        "Bạn cần nói nơi này là thư viện.",
+        "Bạn cần nối quốc gia với sản phẩm."
+      ],
+      "distractor_strategy": "where-context-vs-what-place-label-origin",
+      "teaching_note": "Mẫu này đi từ một N đã biết sang câu hỏi 'ở đâu/phía nào'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-016-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn hỏi vị trí thư viện, không hỏi thư viện là gì. Câu nào đúng mục tiêu?",
+      "answer_template": "図書館はどこですか。",
+      "options_template": [
+        "図書館はどこですか。",
+        "図書館は何ですか。",
+        "ここは図書館です。",
+        "図書館ですか。"
+      ],
+      "distractor_strategy": "where-vs-what-place-label-yesno-analysis",
+      "teaching_note": "L4: どこ hỏi vị trí; 何 hỏi định nghĩa/tên loại; ここは... là câu trả lời/định danh nơi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-016-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-016-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Trong cửa hàng, bạn hỏi nhân viên rất lịch sự 'Quầy thu ngân ở phía nào?'. Câu nào hợp nhất?",
+      "answer_template": "レジはどちらですか。",
+      "options_template": [
+        "レジはどちらですか。",
+        "レジはどこですか。",
+        "レジは何ですか。",
+        "こちらはレジです。"
+      ],
+      "distractor_strategy": "polite-dochira-vs-neutral-doko-analysis",
+      "teaching_note": "L4: どこ vẫn hiểu được, nhưng どちら hợp hơn khi hỏi đường lịch sự với nhân viên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

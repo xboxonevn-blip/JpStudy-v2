@@ -234,10 +234,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: いつ V ます か",
-      "meaning": "Ý nghĩa: `いつ` dùng để hỏi “khi nào”.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "いつ là từ nghi vấn về thời điểm, còn か ở cuối câu đánh dấu câu hỏi. Cấu trúc いつ Vますか đặt ô hỏi thời gian ở đầu câu và giữ động từ ở dạng lịch sự; vì いつ đã tự hỏi thời điểm nên không thêm に sau いつ.",
+      "hanVietBridge": "Nhớ bằng Hán-Việt 'thời điểm': いつ hỏi thời điểm của hành động. Tiếng Việt hỏi 'khi nào đi?', tiếng Nhật nói いつ行きますか, không nói いつに行きますか trong mẫu cơ bản này.",
+      "form": "Hình thức: いつ + Vます + か. いつ thường đứng trước cụm động từ; câu kết bằng か.",
+      "meaning": "Ý nghĩa: hỏi khi nào một hành động xảy ra hoặc sẽ xảy ra.",
+      "usage": "Sử dụng: いつ日本へ行きますか, いつ勉強しますか, いつ帰りますか. Câu trả lời thường là 明日, 来週, 九時, 月曜日...",
+      "humanMoment": "Dr. Linh lưu ý: いつVますか hỏi thời điểm của hành động, khác 今、何時ですか hỏi giờ hiện tại. いつ日本へ行きますか cần câu trả lời như 明日行きます, không phải chỉ đọc đồng hồ.",
+      "crossLinks": [
+        {
+          "pattern": "今、何時ですか",
+          "contrast": "khác phạm vi hỏi: 何時ですか hỏi mấy giờ, còn いつVますか hỏi khi nào hành động xảy ra."
+        },
+        {
+          "pattern": "Vます / Vません / Vました",
+          "contrast": "khác chức năng: Vます là dạng động từ lịch sự, còn いつ...か biến câu thành câu hỏi thời điểm."
+        },
+        {
+          "pattern": "N1 から N2 まで",
+          "contrast": "khác câu trả lời: から...まで có thể trả lời bằng khoảng thời gian, còn いつVますか là câu hỏi cần mốc thời gian."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

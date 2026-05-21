@@ -5727,6 +5727,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-form-l1-001",
+      "template_id": "tpl-grammar-n5-028-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn từ hỏi 'khi nào': ___ 行きますか。",
+      "answer_template": "いつ",
+      "options_template": [
+        "いつ",
+        "どこ",
+        "何",
+        "どちら"
+      ],
+      "distractor_strategy": "time-wh-vs-place-what-direction",
+      "teaching_note": "いつ hỏi thời điểm của hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-form-l1-002",
+      "template_id": "tpl-grammar-n5-028-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu いつVますか?",
+      "answer_template": "いつ日本へ行きますか。",
+      "options_template": [
+        "いつ日本へ行きますか。",
+        "いつに日本へ行きますか。",
+        "日本へいつに行きます。",
+        "いつ日本へ行きます。"
+      ],
+      "distractor_strategy": "itsu-no-ni-question-ka",
+      "teaching_note": "Không thêm に sau いつ trong mẫu cơ bản; câu hỏi kết bằng か.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-028-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "いつ日本へ行きますか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Khi nào bạn đi Nhật?",
+      "options_template": [
+        "Khi nào bạn đi Nhật?",
+        "Bạn đi Nhật ở đâu?",
+        "Bây giờ là mấy giờ?",
+        "Bạn không đi đâu cả?"
+      ],
+      "distractor_strategy": "when-vs-where-clock-total-negation",
+      "teaching_note": "いつ hỏi mốc thời gian của việc đi Nhật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-028-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Vì sao không đặt に sau いつ trong mẫu này?",
+      "answer_template": "Vì いつ đã là từ hỏi thời điểm; mẫu cơ bản dùng いつ + Vますか trực tiếp.",
+      "distractor_strategy": "itsu-ni-avoidance-recall",
+      "teaching_note": "Học nguyên khối いつVますか để tránh thêm に theo phản xạ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-usage-l3-005",
+      "template_id": "tpl-grammar-n5-028-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'Khi nào đi Nhật?': いつ / 日本へ / 行きますか",
+      "answer_template": "いつ日本へ行きますか。",
+      "options_template": [
+        "いつ",
+        "日本へ",
+        "行きますか"
+      ],
+      "distractor_strategy": "when-question-order",
+      "teaching_note": "いつ đặt trước hành động cần hỏi thời điểm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-usage-l3-006",
+      "template_id": "tpl-grammar-n5-028-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "A hỏi: いつ勉強しますか。Bạn học ngày mai. Trả lời ngắn gọn.",
+      "answer_template": "明日、勉強します。",
+      "distractor_strategy": "when-answer-production",
+      "teaching_note": "Câu trả lời cần mốc thời gian như 明日, 来週, 九時.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-context-l3-007",
+      "template_id": "tpl-grammar-n5-028-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn muốn hỏi bạn mình 'Khi nào về nhà?'. Viết câu.",
+      "answer_template": "いつ帰りますか。",
+      "distractor_strategy": "return-when-context",
+      "teaching_note": "帰ります là hành động; いつ hỏi thời điểm của hành động đó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-context-l2-008",
+      "template_id": "tpl-grammar-n5-028-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với いつVますか?",
+      "answer_template": "Bạn cần hỏi thời điểm một hành động xảy ra.",
+      "options_template": [
+        "Bạn cần hỏi thời điểm một hành động xảy ra.",
+        "Bạn cần hỏi đích đến của hành động.",
+        "Bạn cần nói không đi đâu cả.",
+        "Bạn cần nói đi bằng xe buýt."
+      ],
+      "distractor_strategy": "when-context-vs-destination-negation-means",
+      "teaching_note": "いつ hỏi khi nào, không hỏi ở đâu hay bằng gì.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-028-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn cần hỏi khi nào đi Nhật, không hỏi đi đâu. Câu nào đúng?",
+      "answer_template": "いつ日本へ行きますか。",
+      "options_template": [
+        "いつ日本へ行きますか。",
+        "どこへ行きますか。",
+        "日本へ行きます。",
+        "今、何時ですか。"
+      ],
+      "distractor_strategy": "when-vs-where-statement-clock-analysis",
+      "teaching_note": "L4: いつ hỏi thời điểm; どこ hỏi địa điểm; câu không か chỉ là phát biểu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-028-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-028-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: いつ帰りますか。Câu trả lời nào đúng loại thông tin được hỏi?",
+      "answer_template": "明日帰ります。",
+      "options_template": [
+        "明日帰ります。",
+        "うちへ帰ります。",
+        "バスで帰ります。",
+        "友達と帰ります。"
+      ],
+      "distractor_strategy": "answer-time-vs-destination-means-companion-analysis",
+      "teaching_note": "Câu hỏi いつ cần thời gian; へ là đích, で là phương tiện, と là người đi cùng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

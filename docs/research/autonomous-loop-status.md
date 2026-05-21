@@ -1960,3 +1960,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `友達と行きます` means doing the action with a person;
   `本とノート` is only a noun list.
+
+## 2026-05-22 Phase G Tier-1 item 028
+
+- Re-authored `grammar:n5:grammar_n5_5:006` (`いつVますか`) with time-question
+  structure, no-`に` guidance, and answer-type contrasts.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `いつ` asks when an action happens. Answer with a
+  time like `明日`, not a place, vehicle, or companion.

@@ -599,14 +599,27 @@ Current: 80 passages. Target: ~968 total (~888 new). Apply per-lesson
 
 ## 6. SPRINT 4 — 2026-05-25 → 2026-05-28
 
-### Phase G — Hand-crafted exercise templates (OQ-007 option b1 REFINED)
+### Phase G — Hand-crafted exercise templates + Directive E quality redo (OQ-007 b1 + Option C merger)
 
-**Source**: OQ-007 refined to (b1) — owner accepted Claude's scope-reality
-flag. Top-200 high-frequency items get full hand-crafted treatment;
-remaining ~21K items get enhanced variant (≥ 3 hand-crafted seed + variant
-fill to 50).
+**Source**: OQ-007 refined to (b1). **Option C merger added 2026-05-21**:
+owner audit 2026-05-21 found Codex's existing Directive E content (754
+items in `grammar/n3/grammar_n3_*.json` etc.) is **template injection**
+— field structure correct (form/meaning/usage/humanMoment sub-keys) but
+content is generic filler applicable to any grammar pattern (e.g. "Nếu
+câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước"). Owner chose **Option
+C**: merge Directive E quality redo INTO Phase G Tier-1 hand-crafted
+authoring. Same Top-200 scope, same quality bar, 1-pass authoring.
 
-#### Tier 1: Top-200 high-frequency items (FULL hand-crafted)
+Top-200 high-frequency items get **FULL hand-crafted treatment** for BOTH:
+1. Exercise templates (≥10/item, 5-angle × 4-Bloom)
+2. Directive E content (real Dr. Linh-Phan-Trần voice with pattern-specific
+   etymology, Hán-Việt bridge, contrast Human Moment, cross-links)
+
+Remaining ~21K items get **enhanced variant** for exercises only; their
+existing Directive E template structure is preserved (not regenerated)
+to avoid blocking Sprint 4 on quality work that can run post-beta.
+
+#### Tier 1: Top-200 high-frequency items (FULL hand-crafted + Directive E redo)
 
 Selection: top-200 by aggregate frequency across:
 - Mina I/II grammar core (high learner contact)
@@ -614,13 +627,75 @@ Selection: top-200 by aggregate frequency across:
 - Shin Kanzen N3 most-tested grammar
 - Joyo kanji N5-N4 (most-used)
 
-Template requirement per Tier-1 item:
+**Per Tier-1 item, TWO authoring tracks (1 commit batch):**
+
+**Track A: Exercise templates**
 - ≥ 10 hand-crafted templates per item
 - ≥ 1 template per angle (form / meaning / usage / context / contrast = 5 angles)
 - ≥ 1 template per Bloom L1-L4 (4 levels)
-- Validator reject if any of above missing
+- Validator reject if any missing
 
-Apply Directive E.3 Multi-Perspective + E.7 Teaching Test rigorously.
+**Track B: Directive E content redo (NEW per Option C merger)**
+
+Replace existing `directiveE` field with **real Dr. Linh-Phan-Trần voice**:
+
+```json
+"directiveE": {
+  "etymology": "...",        // E.1: 2-4 sentences pattern-specific origin
+  "hanVietBridge": "...",    // E.2: explicit Hán-Việt cognate for kanji elements
+  "form": "...",             // E.3a: structural decomposition, not just label
+  "meaning": "...",          // E.3b: nuance, formality, polarity notes
+  "usage": "...",            // E.3c: real context examples, NOT generic advice
+  "humanMoment": "...",      // E.4: PATTERN-SPECIFIC contrast with confusable
+  "crossLinks": [...],       // E.6: 1-3 confusable patterns with brief contrast
+  "fallbackReference": {...} // E.5: keep Tae Kim attribution
+}
+```
+
+**Generic-filler validator (critical):**
+
+`tool/qa/validate_directive_e_quality.js` runs heuristic test:
+
+1. **Substitution test for humanMoment**: replace pattern name in `humanMoment`
+   text with 3 other random pattern names. If text still grammatically valid
+   AND meaningful for ≥ 2 substitutions → REJECT (generic filler).
+2. **Banned phrase list**: reject if `humanMoment` contains any of:
+   - "Nếu câu khó dịch"
+   - "tách mẫu ra khỏi từ vựng"
+   - "nghĩa thường hiện rõ"
+   - "theo dõi dạng phủ định trước"
+   - "Khoảnh khắc người: Nếu" (template prefix marker)
+3. **Pattern reference required**: `humanMoment` MUST mention the actual
+   pattern (e.g. `〜ことにする`) or a confusable pattern by literal string.
+4. **Etymology length**: ≥ 80 chars, mention origin or component meaning.
+5. **Cross-links non-empty**: ≥ 1 cross-link.
+
+Items failing validator → re-author, do not commit.
+
+**Example of acceptable humanMoment for 〜ことにする:**
+
+> "Dr. Linh lưu ý: 〜ことにする và 〜ことになる nhìn giống nhau nhưng khác
+> hẳn ý chí. 〜ことにする = QUYẾT ĐỊNH CỦA TÔI: '会社をやめることにした'
+> (tôi tự quyết nghỉ việc). 〜ことになる = SỰ VIỆC XẢY RA KHÁCH QUAN:
+> '会社をやめることになった' (do hoàn cảnh, tôi sẽ nghỉ việc). Phân biệt
+> bằng câu hỏi: 'Có phải tôi tự muốn không?'"
+
+**Example of acceptable etymology for 〜ことにする:**
+
+> "こと là danh từ trừu tượng (gốc Hán 事 = 'sự'), khác với もの (vật cụ
+> thể, gốc Hán 物 = 'vật'). Khi nói 'X こと' tức là biến X thành 'việc/sự
+> kiện trừu tượng', rồi 'にする' = 'làm cho thành' → 'quyết định coi X
+> là việc sẽ làm'."
+
+**Example of acceptable hanVietBridge for 〜ことにする:**
+
+> "こと = 事 = 'sự' (Hán-Việt). Người Việt đã biết: 'sự tình', 'sự
+> nghiệp', 'sự việc' — đều là noun trừu tượng giống こと trong tiếng Nhật.
+> Khác 物 (vật) là noun cụ thể."
+
+Apply Directive E.7 Teaching Test: trước commit mỗi item, Codex tự
+paraphrase Directive E content trong 2 câu cho 1 người học mới. Nếu
+không paraphrase được → re-author.
 
 #### Tier 2: Remaining ~21K items (ENHANCED variant)
 
@@ -671,10 +746,18 @@ Template requirement per Tier-2 item:
 - [ ] Top-200 list generated + committed (`docs/research/top-200-frequency-rank-2026-05-21.md`)
 - [ ] All 200 Tier-1 items have ≥ 10 hand-crafted templates
 - [ ] All Tier-1 items pass 5-angle × 4-Bloom validator
+- [ ] **All 200 Tier-1 items have redone `directiveE` field passing
+      generic-filler validator** (substitution test + banned phrase list +
+      pattern reference + etymology length + cross-links non-empty)
 - [ ] All ~21K Tier-2 items have ≥ 3 hand-crafted seed templates
 - [ ] All Tier-2 items reach ≥ 50 total questions (seed + variant)
+- [ ] Tier-2 items KEEP existing `directiveE` template structure (no
+      regeneration in this Sprint; post-beta polish phase later)
 - [ ] Sample 30 random items (15 Tier-1 + 15 Tier-2), owner spot-check
-      happy — no "nhìn vô biết đáp án"
+      happy — no "nhìn vô biết đáp án" for exercises
+- [ ] **Sample 20 random Tier-1 items, owner spot-check Directive E
+      content — every item passes Teaching Test (paraphrase in 2 sentences
+      for a hypothetical learner)**
 - [ ] Live verify on jpstudy.web.app
 
 ## 7. NON-NEGOTIABLE RULES (per megaprompt §12)

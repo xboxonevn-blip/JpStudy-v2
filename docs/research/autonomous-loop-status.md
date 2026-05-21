@@ -2220,3 +2220,16 @@
   load. Full route visual acceptance remains open for the later P0-P3 live pass.
 - Continuing P1 H4-H6 next: exercise distractors, 50-question density, and vocab
   catalog textbook coverage.
+
+## 2026-05-22 P1 H4-H5 exercise quality and density
+
+- Fixed grammar meaning/reverse-choice generation so pattern-like meanings such
+  as `N も` no longer leak the literal answer inside the prompt.
+- Meaning-choice questions now fall back to authored explanation/usage text when
+  the meaning field is only a pattern restatement, keeping distractors semantic
+  instead of substring-matching.
+- Verified the grammar exercise bank still passes `ensureMinimumDensity(min=50)`
+  and Bloom L1-L4 coverage for every runtime grammar point.
+- Gates passed: `grammar_question_generator_test`,
+  `grammar_practice_bank_guard_test`, and `grammar_practice_screen_test`.
+- Continuing P1 H6 next: vocab catalog renders all valid textbook programs.

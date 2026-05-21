@@ -278,6 +278,98 @@ void main() {
       expect(meaningQuestion.question, isNot(contains('V-te')));
     });
 
+    test('meaning choice prompts do not leak the literal correct pattern', () {
+      const point1 = GrammarPoint(
+        id: 24,
+        lessonId: 1,
+        grammarPoint: 'N も',
+        titleEn: 'N also/too',
+        meaning: 'N も',
+        meaningEn: 'N も',
+        meaningVi: 'N も',
+        connection: 'N + も',
+        connectionEn: 'Noun + も',
+        explanation:
+            'Adds another noun to the same statement with also/too nuance.',
+        explanationEn:
+            'Adds another noun to the same statement with also/too nuance.',
+        explanationVi: 'Thêm một danh từ vào cùng nhận định với sắc thái cũng.',
+        jlptLevel: 'N5',
+        isLearned: false,
+      );
+      const point2 = GrammarPoint(
+        id: 25,
+        lessonId: 1,
+        grammarPoint: 'N は',
+        titleEn: 'topic marker',
+        meaning: 'topic marker',
+        meaningEn: 'topic marker',
+        meaningVi: 'nêu chủ đề',
+        connection: 'N + は',
+        connectionEn: 'Noun + は',
+        explanation: 'Marks the topic under discussion.',
+        explanationEn: 'Marks the topic under discussion.',
+        explanationVi: 'Đưa danh từ lên làm chủ đề.',
+        jlptLevel: 'N5',
+        isLearned: false,
+      );
+      const point3 = GrammarPoint(
+        id: 26,
+        lessonId: 1,
+        grammarPoint: 'N が',
+        titleEn: 'focus marker',
+        meaning: 'focus marker',
+        meaningEn: 'focus marker',
+        meaningVi: 'nêu trọng tâm',
+        connection: 'N + が',
+        connectionEn: 'Noun + が',
+        explanation: 'Marks focus or new information.',
+        explanationEn: 'Marks focus or new information.',
+        explanationVi: 'Đánh dấu trọng tâm hoặc thông tin mới.',
+        jlptLevel: 'N5',
+        isLearned: false,
+      );
+
+      final questions = GrammarQuestionGenerator.generateQuestions(
+        const [
+          (
+            point: point1,
+            examples: [
+              GrammarExample(
+                id: 24,
+                grammarId: 24,
+                japanese: '私も学生です。',
+                translation: 'Tôi cũng là học sinh.',
+                translationEn: 'I am also a student.',
+                translationVi: 'Tôi cũng là học sinh.',
+              ),
+            ],
+          ),
+        ],
+        allPoints: const [point1, point2, point3],
+        language: AppLanguage.vi,
+      );
+
+      final literalLeaks = questions
+          .where(
+            (question) =>
+                question.point.id == point1.id &&
+                {
+                  GrammarQuestionType.multipleChoice,
+                  GrammarQuestionType.reverseMultipleChoice,
+                }.contains(question.type),
+          )
+          .where(
+            (question) => _compact(
+              question.question,
+            ).contains(_compact(question.correctAnswer)),
+          )
+          .map((question) => '${question.type.name}: ${question.question}')
+          .toList(growable: false);
+
+      expect(literalLeaks, isEmpty);
+    });
+
     test(
       'keeps English grammar questions free of Vietnamese when old fields are polluted',
       () {
@@ -848,10 +940,17 @@ void main() {
           (q) => q.type == GrammarQuestionType.reverseMultipleChoice,
         );
 
-        expect(meaningQuestion.options, contains('so that'));
-        expect(meaningQuestion.options, contains('for using'));
-        expect(meaningQuestion.options, contains('too much'));
-        expect(meaningQuestion.options, isNot(contains('only')));
+        expect(meaningQuestion.correctAnswer, 'Expresses purpose.');
+        expect(
+          meaningQuestion.options,
+          contains('Purpose toward a resulting state.'),
+        );
+        expect(meaningQuestion.options, contains('Purpose of use.'));
+        expect(
+          meaningQuestion.options,
+          contains('Exceeds an appropriate limit.'),
+        );
+        expect(meaningQuestion.options, isNot(contains('Limits the scope.')));
 
         expect(reverseQuestion.options, contains('So that (ように)'));
         expect(reverseQuestion.options, contains('For using (のに)'));
@@ -1541,4 +1640,11 @@ void main() {
       }
     });
   });
+}
+
+String _compact(String value) {
+  return value.trim().toLowerCase().replaceAll(
+    RegExp(r'[\s\u3000+＋・、。:：`]+'),
+    '',
+  );
 }

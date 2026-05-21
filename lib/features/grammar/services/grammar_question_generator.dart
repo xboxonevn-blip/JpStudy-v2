@@ -366,6 +366,12 @@ class GrammarQuestionGenerator {
     if (allPoints == null || allPoints.isEmpty) return null;
 
     final patternLabel = _localizedPatternLabel(point, language);
+    final clue = _nonLiteralMeaningOrExplanation(
+      patternLabel: patternLabel,
+      pointMeaning: pointMeaning,
+      pointExplanation: pointExplanation,
+    );
+    if (clue == null) return null;
     final distractors = _pickRelatedGrammarPoints(
       target: point,
       pool: allPoints,
@@ -379,9 +385,9 @@ class GrammarQuestionGenerator {
 
     final questionText = _tr(
       language,
-      en: 'Which pattern matches: "$pointMeaning"?',
-      vi: 'Mẫu nào có nghĩa là: "$pointMeaning"?',
-      ja: '「$pointMeaning」に合う文型はどれですか？',
+      en: 'Which pattern best fits this usage?\n$clue',
+      vi: 'Mẫu nào phù hợp nhất với cách dùng này?\n$clue',
+      ja: 'この使い方に最も合う文型はどれですか？\n$clue',
     );
 
     return GeneratedQuestion(
@@ -396,9 +402,9 @@ class GrammarQuestionGenerator {
       explanation: pointExplanation,
       feedback: _tr(
         language,
-        en: 'Use $patternLabel when you mean: $pointMeaning.',
-        vi: 'Dùng $patternLabel để diễn đạt: $pointMeaning.',
-        ja: '$pointMeaning を表すときは $patternLabel を使います。',
+        en: 'Use $patternLabel for this usage: $clue',
+        vi: 'Dùng $patternLabel cho cách dùng này: $clue',
+        ja: 'この使い方では $patternLabel を使います: $clue',
       ),
     );
   }
@@ -413,29 +419,45 @@ class GrammarQuestionGenerator {
     if (allPoints == null || allPoints.isEmpty) return null;
 
     final patternLabel = _localizedPatternLabel(point, language);
-    final distractors = _pickRelatedGrammarPoints(
-      target: point,
-      pool: allPoints,
-      count: 3,
-      language: language,
-    ).map((p) => _localizedPointMeaning(p, language)).toList(growable: false);
+    final answerMeaning = _nonLiteralMeaningOrExplanation(
+      patternLabel: patternLabel,
+      pointMeaning: pointMeaning,
+      pointExplanation: pointExplanation,
+    );
+    if (answerMeaning == null) return null;
+    final distractors =
+        _pickRelatedGrammarPoints(
+              target: point,
+              pool: allPoints,
+              count: 3,
+              language: language,
+            )
+            .map(
+              (p) => _nonLiteralMeaningOrExplanation(
+                patternLabel: _localizedPatternLabel(p, language),
+                pointMeaning: _localizedPointMeaning(p, language),
+                pointExplanation: _localizedPointExplanation(p, language),
+              ),
+            )
+            .whereType<String>()
+            .toList(growable: false);
     if (distractors.length < 2) return null;
 
-    final options = _uniqueShuffled([pointMeaning, ...distractors]);
+    final options = _uniqueShuffled([answerMeaning, ...distractors]);
     if (options.length < 3) return null;
 
     final questionText = _tr(
       language,
-      en: 'What is the best meaning of "$patternLabel"?',
-      vi: '"$patternLabel" có nghĩa là gì?',
-      ja: '「$patternLabel」の意味として最も適切なのはどれですか？',
+      en: 'Which usage best matches "$patternLabel"?',
+      vi: '"$patternLabel" phù hợp nhất với cách dùng nào?',
+      ja: '「$patternLabel」に最も合う使い方はどれですか？',
     );
 
     return GeneratedQuestion(
       type: GrammarQuestionType.multipleChoice,
       point: point,
       question: questionText,
-      correctAnswer: pointMeaning,
+      correctAnswer: answerMeaning,
       options: options,
       familyKey: 'meaning_${point.id}',
       stemKey: _normalizeStem(questionText),
@@ -1593,6 +1615,37 @@ class GrammarQuestionGenerator {
           label: _localizedPatternLabel(point, language),
         );
     }
+  }
+
+  static String? _nonLiteralMeaningOrExplanation({
+    required String patternLabel,
+    required String pointMeaning,
+    required String pointExplanation,
+  }) {
+    for (final candidate in [pointMeaning, pointExplanation]) {
+      final trimmed = candidate.trim();
+      if (trimmed.isEmpty) continue;
+      if (!_isLiteralRestatement(patternLabel, trimmed)) {
+        return trimmed;
+      }
+    }
+    return null;
+  }
+
+  static bool _isLiteralRestatement(String patternLabel, String candidate) {
+    final patternKey = _literalQuestionKey(patternLabel);
+    final candidateKey = _literalQuestionKey(candidate);
+    if (patternKey.isEmpty || candidateKey.isEmpty) return false;
+    return patternKey == candidateKey ||
+        candidateKey.contains(patternKey) ||
+        patternKey.contains(candidateKey);
+  }
+
+  static String _literalQuestionKey(String value) {
+    return value.trim().toLowerCase().replaceAll(
+      RegExp(r"""[\s\u3000+＋・、。:：`"'「」『』()（）]+"""),
+      '',
+    );
   }
 
   static String _localizedExampleTranslation(

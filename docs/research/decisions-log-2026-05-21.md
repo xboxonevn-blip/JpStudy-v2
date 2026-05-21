@@ -549,3 +549,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Asset hydration avoids a database migration in the urgent UI batch, preserves real per-pattern Directive E content when available, and prevents the UI from becoming another generic content generator.
 **Reversible**: yes; a later schema migration can persist Directive E if profiling shows asset lookup overhead.
 **Owner review**: pending
+
+## DECISION-056 - Pattern-restatement meanings use usage clues in exercises
+**Phase**: Urgent live audit P1 H4-H5
+**Date**: 2026-05-22 12:15 (local)
+**Context**: Some grammar rows store a pattern-like label in the meaning field, so reverse/meaning multiple-choice prompts could expose the correct pattern literally.
+**Options considered**: delete all reverse/meaning questions for those rows | keep literal prompts and rely on better distractors | use explanation/usage as the clue or answer when meaning is a pattern restatement
+**Chosen**: Detect literal restatements by normalized pattern overlap. For reverse-choice prompts, use a non-literal meaning/explanation clue. For meaning-choice answers, use explanation/usage when the meaning would reveal the pattern.
+**Rationale**: This preserves practice coverage and 50-question density while removing the trivial substring-answer failure mode.
+**Reversible**: yes
+**Owner review**: pending

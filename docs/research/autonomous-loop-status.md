@@ -1707,3 +1707,13 @@
   files remain legacy/local sample articles.
 - Lazy sliver grid replaced eager card rendering so 326 N2 passages do not
   freeze mobile/widget tests.
+
+## 2026-05-22 Phase G setup started
+
+- Added TDD coverage for `tool/research/rank_item_frequency.js` and
+  `tool/qa/validate_directive_e_quality.js`.
+- Generated `docs/research/top-200-frequency-rank-2026-05-21.md` plus
+  machine JSON with 80 grammar, 80 vocab, and 40 kanji Tier-1 items.
+- Validator intentionally fails current Tier-1 grammar Directive E blocks
+  until each item is re-authored with real Dr. Linh-Phan-Trần content.
+- Logged DECISION-052. No new blocking open questions.

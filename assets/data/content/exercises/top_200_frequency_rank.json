@@ -1,0 +1,5807 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-21T18:44:43.247Z",
+  "selectionPolicy": "Phase G Option C rank: local usage facts are combined from JLPT level, textbook position, source track, lesson/order, and content type. Early N5/N4 Minna/Hajimete/kanji items and N3 grammar get priority because they carry the highest learner contact.",
+  "items": [
+    {
+      "rank": 1,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_1:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 は N2 です",
+      "meaning": "Mẫu câu danh từ cơ bản, dùng để nói “A là B”.\n* `は` đọc là `wa`, đánh dấu chủ đề của câu.\n* `です` đứng cuối câu, giúp câu lịch sự và hoàn chỉnh hơn.",
+      "lesson_id": 1,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_1.json",
+      "directive_e_path": "grammar/n5/grammar_n5_1.json#0",
+      "score": 2200,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 320,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 1",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 2,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_1:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 は N2 じゃありません",
+      "meaning": "Đây là dạng phủ định của `N1 は N2 です`, dùng để nói “A không phải là B”.",
+      "lesson_id": 1,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_1.json",
+      "directive_e_path": "grammar/n5/grammar_n5_1.json#1",
+      "score": 2198,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 320,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 1",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 3,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_1:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "S + か",
+      "meaning": "Thêm `か` vào cuối câu để biến câu trần thuật thành câu hỏi. Khi nói, thường lên giọng nhẹ ở cuối câu.",
+      "lesson_id": 1,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_1.json",
+      "directive_e_path": "grammar/n5/grammar_n5_1.json#2",
+      "score": 2196,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 320,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 1",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 4,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_1:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N + も",
+      "meaning": "`も` nghĩa là “cũng”. Dùng `も` thay cho `は` khi muốn nói một danh từ cũng có cùng đặc điểm hoặc cùng tình huống với danh từ đã nhắc trước đó.",
+      "lesson_id": 1,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_1.json",
+      "directive_e_path": "grammar/n5/grammar_n5_1.json#3",
+      "score": 2194,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 320,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 1",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 5,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_1:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 の N2",
+      "meaning": "`の` nối hai danh từ. Danh từ đứng trước `の` bổ nghĩa cho danh từ đứng sau. Ở bài này, mẫu chủ yếu dùng để nói quan hệ sở hữu: “N2 của N1”.",
+      "lesson_id": 1,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_1.json",
+      "directive_e_path": "grammar/n5/grammar_n5_1.json#4",
+      "score": 2192,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 320,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 1",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 6,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_1:006",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Name + さん",
+      "meaning": "`さん` là hậu tố xưng hô lịch sự, đặt sau tên người khác. Không dùng `さん` sau tên của chính mình.",
+      "lesson_id": 1,
+      "order": 6,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_1.json",
+      "directive_e_path": "grammar/n5/grammar_n5_1.json#5",
+      "score": 2190,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 320,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 1",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 7,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_2:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "これ / それ / あれ は N です",
+      "meaning": "Các từ chỉ vật, dùng khi chưa nói ngay tên đồ vật.\n* `これ`: cái này, ở gần người nói.\n* `それ`: cái đó, ở gần người nghe.\n* `あれ`: cái kia, ở xa cả người nói và người nghe.",
+      "lesson_id": 2,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_2.json",
+      "directive_e_path": "grammar/n5/grammar_n5_2.json#0",
+      "score": 2190,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 310,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 2",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 8,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_2:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "この / その / あの + N は ～ です",
+      "meaning": "Các từ này luôn đứng trước danh từ để chỉ rõ “N nào”.\n* `この N`: N này, ở gần người nói.\n* `その N`: N đó, ở gần người nghe.\n* `あの N`: N kia, ở xa cả hai.",
+      "lesson_id": 2,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_2.json",
+      "directive_e_path": "grammar/n5/grammar_n5_2.json#1",
+      "score": 2188,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 310,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 2",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 9,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "S ですか。 → はい、そうです / いいえ、そうじゃありません",
+      "meaning": "Cách trả lời câu hỏi đúng/sai với câu danh từ.\n* `はい、そうです`: Vâng, đúng vậy.\n* `いいえ、そうじゃありません`: Không, không phải vậy.\n* `ちがいます` cũng có thể dùng để nói “không đúng/không phải”.",
+      "lesson_id": 2,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_2.json",
+      "directive_e_path": "grammar/n5/grammar_n5_2.json#2",
+      "score": 2186,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 310,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 2",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 10,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_2:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 の N2",
+      "meaning": "`の` nối hai danh từ. Ngoài nghĩa sở hữu, `の` còn dùng để nói nội dung hoặc chủ đề của N2.\n* Sở hữu: N2 của N1.\n* Nội dung/chủ đề: `英語の雑誌` = tạp chí tiếng Anh.",
+      "lesson_id": 2,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_2.json",
+      "directive_e_path": "grammar/n5/grammar_n5_2.json#3",
+      "score": 2184,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 310,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 2",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 11,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_2:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "S1 です か、 S2 です か",
+      "meaning": "Đây là câu hỏi lựa chọn giữa hai phương án. Khi trả lời, chọn trực tiếp một phương án; không trả lời bằng `はい` hoặc `いいえ`.",
+      "lesson_id": 2,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_2.json",
+      "directive_e_path": "grammar/n5/grammar_n5_2.json#4",
+      "score": 2182,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 310,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 2",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 12,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "これ / それ / あれ は 何（なん） です か",
+      "meaning": "`何` là từ để hỏi “cái gì”. Trong mẫu này, dùng để hỏi tên gọi, loại đồ vật hoặc nội dung của một vật.",
+      "lesson_id": 2,
+      "order": 6,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_2.json",
+      "directive_e_path": "grammar/n5/grammar_n5_2.json#5",
+      "score": 2180,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 310,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 2",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 13,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_3:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "ここ / そこ / あそこ は N (địa điểm) です",
+      "meaning": "Các từ chỉ địa điểm, dùng để nói “chỗ này/chỗ đó/chỗ kia”.\n* `ここ`: chỗ này, gần người nói.\n* `そこ`: chỗ đó, gần người nghe.\n* `あそこ`: chỗ kia, xa cả người nói và người nghe.",
+      "lesson_id": 3,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_3.json",
+      "directive_e_path": "grammar/n5/grammar_n5_3.json#0",
+      "score": 2180,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 300,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 3",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 14,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_3:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "こちら / そちら / あちら は N (địa điểm / người) です",
+      "meaning": "Các từ này lịch sự hơn `ここ・そこ・あそこ`. Có thể dùng để chỉ hướng, vị trí hoặc người.\n* `こちら`: phía này / vị này.\n* `そちら`: phía đó / vị đó.\n* `あちら`: phía kia / vị kia.",
+      "lesson_id": 3,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_3.json",
+      "directive_e_path": "grammar/n5/grammar_n5_3.json#1",
+      "score": 2178,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 300,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 3",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 15,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 は N2 (địa điểm) です",
+      "meaning": "Dùng để nói N1 đang ở đâu hoặc một địa điểm nằm ở đâu. Cấu trúc cơ bản là: người/vật `は` địa điểm `です`.",
+      "lesson_id": 3,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_3.json",
+      "directive_e_path": "grammar/n5/grammar_n5_3.json#2",
+      "score": 2176,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 300,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 3",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 16,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_3:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N は どこ / どちら です か",
+      "meaning": "Từ để hỏi về địa điểm hoặc phương hướng.\n* `どこ`: ở đâu?\n* `どちら`: phía nào/ở đâu, lịch sự hơn `どこ`.",
+      "lesson_id": 3,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_3.json",
+      "directive_e_path": "grammar/n5/grammar_n5_3.json#3",
+      "score": 2174,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 300,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 3",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 17,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 (Tên Quốc gia / Công ty) の N2 (Sản phẩm)",
+      "meaning": "Dùng `の` để nói xuất xứ, nơi sản xuất hoặc nhà sản xuất của một sản phẩm.",
+      "lesson_id": 3,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_3.json",
+      "directive_e_path": "grammar/n5/grammar_n5_3.json#4",
+      "score": 2172,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 300,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 3",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 18,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "お国はどちらですか",
+      "meaning": "Câu hỏi lịch sự về quê quán hoặc quốc tịch. Tiền tố `お` trước `国` làm câu mềm và trang trọng hơn.",
+      "lesson_id": 3,
+      "order": 6,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_3.json",
+      "directive_e_path": "grammar/n5/grammar_n5_3.json#5",
+      "score": 2170,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 300,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 3",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 19,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_4:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "今、～時～分 です",
+      "meaning": "Mẫu này dùng để nói thời gian hiện tại.\n* `いま`: bây giờ.\n* `～じ`: giờ.\n* `～ふん / ぷん`: phút.",
+      "lesson_id": 4,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_4.json",
+      "directive_e_path": "grammar/n5/grammar_n5_4.json#0",
+      "score": 2170,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 290,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 4",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 20,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_4:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vます / Vません / Vました / Vませんでした",
+      "meaning": "Đây là bốn dạng lịch sự cơ bản của động từ.\n* `ます`: hiện tại hoặc tương lai, khẳng định.\n* `ません`: hiện tại hoặc tương lai, phủ định.\n* `ました`: quá khứ, khẳng định.\n* `ませんでした`: quá khứ, phủ định.",
+      "lesson_id": 4,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_4.json",
+      "directive_e_path": "grammar/n5/grammar_n5_4.json#1",
+      "score": 2168,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 290,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 4",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 21,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_4:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 (Thời gian / Địa điểm) から N2 まで",
+      "meaning": "Mẫu này nói phạm vi từ điểm bắt đầu đến điểm kết thúc, có thể là thời gian hoặc địa điểm.\n* `から`: từ, điểm bắt đầu.\n* `まで`: đến, điểm kết thúc.",
+      "lesson_id": 4,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_4.json",
+      "directive_e_path": "grammar/n5/grammar_n5_4.json#2",
+      "score": 2166,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 290,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 4",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 22,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 と N2",
+      "meaning": "`と` nghĩa là “và”, dùng để nối các danh từ trong cùng một danh sách.",
+      "lesson_id": 4,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_4.json",
+      "directive_e_path": "grammar/n5/grammar_n5_4.json#3",
+      "score": 2164,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 290,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 4",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 23,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_5:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (địa điểm) へ 行きます / 来ます / 帰ります",
+      "meaning": "Mẫu này dùng để nói việc di chuyển đến một địa điểm.\n* `へ` đọc là `e`, chỉ hướng đi.\n* `行きます`: đi, rời khỏi vị trí hiện tại.\n* `来ます`: đến, hướng về phía người nói hoặc nơi đang nói tới.\n* `帰ります`: về nhà, về quê hoặc quay lại nơi mình thuộc về.",
+      "lesson_id": 5,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_5.json",
+      "directive_e_path": "grammar/n5/grammar_n5_5.json#0",
+      "score": 2160,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 280,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 5",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 24,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_5:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "どこ [へ] も 行きません",
+      "meaning": "Dùng từ để hỏi + `も` + động từ phủ định để nói “không ... gì/cả”.\n* `どこ[へ]も行きません`: không đi đâu cả.\n* `何も食べません`: không ăn gì cả.",
+      "lesson_id": 5,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_5.json",
+      "directive_e_path": "grammar/n5/grammar_n5_5.json#1",
+      "score": 2158,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 280,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 5",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 25,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_5:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (phương tiện) で 行きます / 来ます / 帰ります",
+      "meaning": "Trợ từ `で` chỉ phương tiện hoặc cách thức di chuyển. Dùng để nói đi bằng taxi, xe buýt, tàu điện, xe đạp...",
+      "lesson_id": 5,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_5.json",
+      "directive_e_path": "grammar/n5/grammar_n5_5.json#2",
+      "score": 2156,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 280,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 5",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 26,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_5:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "歩いて (aruite) 行きます",
+      "meaning": "Khi nói đi bộ, dùng `歩いて`. Đây là cách nói riêng, không dùng trợ từ `で` sau `歩いて`.",
+      "lesson_id": 5,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_5.json",
+      "directive_e_path": "grammar/n5/grammar_n5_5.json#3",
+      "score": 2154,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 280,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 5",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 27,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_5:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (người/động vật) と V",
+      "meaning": "`と` chỉ người hoặc con vật cùng thực hiện hành động với mình. Riêng `一人で` nghĩa là “một mình”, không dùng `と`.",
+      "lesson_id": 5,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_5.json",
+      "directive_e_path": "grammar/n5/grammar_n5_5.json#4",
+      "score": 2152,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 280,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 5",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 28,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_5:006",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "いつ V ます か",
+      "meaning": "`いつ` dùng để hỏi “khi nào”. Không đặt trợ từ `に` sau `いつ`.",
+      "lesson_id": 5,
+      "order": 6,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_5.json",
+      "directive_e_path": "grammar/n5/grammar_n5_5.json#5",
+      "score": 2150,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 280,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 5",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 29,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_6:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N を V (tha động từ)",
+      "meaning": "`を` đánh dấu đối tượng trực tiếp của hành động.\n* `本を読みます`: đọc sách.\n* `水を飲みます`: uống nước.",
+      "lesson_id": 6,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_6.json",
+      "directive_e_path": "grammar/n5/grammar_n5_6.json#0",
+      "score": 2150,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 270,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 6",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 30,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_6:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N を します",
+      "meaning": "Dùng với danh từ chỉ hoạt động để nói “làm/chơi/thực hiện N”. Ví dụ: `サッカーをします` = chơi bóng đá.",
+      "lesson_id": 6,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_6.json",
+      "directive_e_path": "grammar/n5/grammar_n5_6.json#1",
+      "score": 2148,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 270,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 6",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 31,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_6:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "何を しますか",
+      "meaning": "Dùng để hỏi người khác sẽ làm gì hoặc đang làm gì. Với `を`, `何` thường đọc là `なに`.",
+      "lesson_id": 6,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_6.json",
+      "directive_e_path": "grammar/n5/grammar_n5_6.json#2",
+      "score": 2146,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 270,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 6",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 32,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_6:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "何 (なん) / 何 (なに)",
+      "meaning": "`何` có hai cách đọc chính.\n* Đọc là `なん` trước âm `d`, `n`, `t` hoặc trước từ đếm.\n* Đọc là `なに` trong nhiều trường hợp khác, đặc biệt khi đi với `を`.",
+      "lesson_id": 6,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_6.json",
+      "directive_e_path": "grammar/n5/grammar_n5_6.json#3",
+      "score": 2144,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 270,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 6",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 33,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_6:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (địa điểm) で V",
+      "meaning": "`で` chỉ nơi diễn ra hành động. Phân biệt với `に` chỉ nơi tồn tại và `へ` chỉ hướng di chuyển.",
+      "lesson_id": 6,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_6.json",
+      "directive_e_path": "grammar/n5/grammar_n5_6.json#4",
+      "score": 2142,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 270,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 6",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 34,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vませんか",
+      "meaning": "Dùng để mời hoặc rủ người khác làm gì đó một cách lịch sự. Có thể hiểu là “Anh/chị có muốn ... không?” hoặc “Cùng ... nhé?”.",
+      "lesson_id": 6,
+      "order": 6,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_6.json",
+      "directive_e_path": "grammar/n5/grammar_n5_6.json#5",
+      "score": 2140,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 270,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 6",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 35,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_7:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (công cụ) で V",
+      "meaning": "`で` chỉ công cụ hoặc phương tiện dùng để thực hiện hành động: ăn bằng đũa, viết bằng bút chì, nói bằng tiếng Nhật...",
+      "lesson_id": 7,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_7.json",
+      "directive_e_path": "grammar/n5/grammar_n5_7.json#0",
+      "score": 2140,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 260,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 7",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 36,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_6:007",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vましょう",
+      "meaning": "Dùng để đề nghị cùng làm gì đó hoặc để đồng ý với lời mời `Vませんか`. Nghĩa gần với “chúng ta cùng ... nhé/nào”.",
+      "lesson_id": 6,
+      "order": 7,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_6.json",
+      "directive_e_path": "grammar/n5/grammar_n5_6.json#6",
+      "score": 2138,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 270,
+        "order": 148,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 6",
+        "order 7"
+      ]
+    },
+    {
+      "rank": 37,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "\"～\" は 〇〇語(Tiếng ...) で 何ですか",
+      "meaning": "Dùng để hỏi một từ hoặc cụm từ được nói như thế nào trong ngôn ngữ khác.",
+      "lesson_id": 7,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_7.json",
+      "directive_e_path": "grammar/n5/grammar_n5_7.json#1",
+      "score": 2138,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 260,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 7",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 38,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_7:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (người) に [N (vật) を] あげます",
+      "meaning": "`あげます` nghĩa là cho/tặng. Người nhận đi với `に`. Không dùng `あげます` khi người nhận là bản thân người nói.",
+      "lesson_id": 7,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_7.json",
+      "directive_e_path": "grammar/n5/grammar_n5_7.json#2",
+      "score": 2136,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 260,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 7",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 39,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_7:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (người) に [N (vật) を] もらいます",
+      "meaning": "`もらいます` nghĩa là nhận. Chủ ngữ là người nhận; người cho/tặng đi với `に` hoặc `から`.",
+      "lesson_id": 7,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_7.json",
+      "directive_e_path": "grammar/n5/grammar_n5_7.json#3",
+      "score": 2134,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 260,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 7",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 40,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "もう Vました",
+      "meaning": "`もう Vました` nghĩa là “đã làm rồi”.\n* Hỏi: `もう Vましたか` = đã ... chưa?\n* Trả lời: `はい、もう Vました` = rồi; `いいえ、まだです` = chưa.",
+      "lesson_id": 7,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_7.json",
+      "directive_e_path": "grammar/n5/grammar_n5_7.json#4",
+      "score": 2132,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 260,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 7",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 41,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_8:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Aい (tính từ i) / Aな (tính từ na)",
+      "meaning": "Tính từ dùng để miêu tả sự vật, con người hoặc trạng thái.\n* Tính từ i thường kết thúc bằng `い` ở dạng từ điển.\n* Tính từ na thêm `な` khi đứng trước danh từ, nhưng không thêm `な` khi đứng cuối câu.",
+      "lesson_id": 8,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_8.json",
+      "directive_e_path": "grammar/n5/grammar_n5_8.json#0",
+      "score": 2130,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 250,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 8",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 42,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_8:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Aい -> Aくないです / Aな -> Aじゃありません",
+      "meaning": "Dùng để nói một tính chất không đúng.\n* Tính từ i: bỏ `い`, thêm `くないです`.\n* Tính từ na: dùng `じゃありません`, giống câu danh từ.",
+      "lesson_id": 8,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_8.json",
+      "directive_e_path": "grammar/n5/grammar_n5_8.json#1",
+      "score": 2128,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 250,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 8",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 43,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_8:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Aな + N / Aい + N",
+      "meaning": "Dùng khi tính từ bổ nghĩa trực tiếp cho danh từ.\n* Tính từ i: đặt nguyên dạng trước danh từ.\n* Tính từ na: thêm `な` trước danh từ.",
+      "lesson_id": 8,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_8.json",
+      "directive_e_path": "grammar/n5/grammar_n5_8.json#2",
+      "score": 2126,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 250,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 8",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 44,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "S1 が、 S2",
+      "meaning": "`が` nối hai vế câu khi vế sau đối lập hoặc khác với điều người nghe có thể đoán từ vế trước.",
+      "lesson_id": 8,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_8.json",
+      "directive_e_path": "grammar/n5/grammar_n5_8.json#3",
+      "score": 2124,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 250,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 8",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 45,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "とても A (khẳng định) / あまり A (phủ định)",
+      "meaning": "Hai phó từ chỉ mức độ thường gặp.\n* `とても`: rất, dùng với câu khẳng định.\n* `あまり`: không ... lắm, thường đi với câu phủ định.",
+      "lesson_id": 8,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_8.json",
+      "directive_e_path": "grammar/n5/grammar_n5_8.json#4",
+      "score": 2122,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 250,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 8",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 46,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_8:006",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N は どうですか",
+      "meaning": "Dùng để hỏi cảm nhận, tình trạng hoặc đặc điểm của một người, vật, địa điểm hay sự việc.",
+      "lesson_id": 8,
+      "order": 6,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_8.json",
+      "directive_e_path": "grammar/n5/grammar_n5_8.json#5",
+      "score": 2120,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 250,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 8",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 47,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_9:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N が あります / わかります",
+      "meaning": "`が` thường đi với các từ chỉ sở hữu, năng lực, cảm giác hoặc mức độ hiểu biết.\n* `あります`: có.\n* `わかります`: hiểu.",
+      "lesson_id": 9,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_9.json",
+      "directive_e_path": "grammar/n5/grammar_n5_9.json#0",
+      "score": 2120,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 240,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 9",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 48,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "どんな N ですか",
+      "meaning": "Dùng để hỏi người hoặc vật thuộc loại nào, có đặc điểm ra sao.",
+      "lesson_id": 8,
+      "order": 7,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_8.json",
+      "directive_e_path": "grammar/n5/grammar_n5_8.json#6",
+      "score": 2118,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 250,
+        "order": 148,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 8",
+        "order 7"
+      ]
+    },
+    {
+      "rank": 49,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N が 好き/嫌い/上手/下手 です",
+      "meaning": "Dùng `が` với các tính từ nói về sở thích hoặc năng lực.\n* `好き`: thích.\n* `嫌い`: ghét/không thích.\n* `上手`: giỏi.\n* `下手`: kém.",
+      "lesson_id": 9,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_9.json",
+      "directive_e_path": "grammar/n5/grammar_n5_9.json#1",
+      "score": 2118,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 240,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 9",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 50,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "どんな N が 好きですか",
+      "meaning": "Dùng để hỏi cụ thể người nghe thích loại N nào.",
+      "lesson_id": 9,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_9.json",
+      "directive_e_path": "grammar/n5/grammar_n5_9.json#2",
+      "score": 2116,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 240,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 9",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 51,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Phó từ chỉ mức độ + V",
+      "meaning": "Các phó từ chỉ mức độ.\n* `よく`: thường/xuyên hoặc khá rõ.\n* `だいたい`: đại khái, phần lớn.\n* `たくさん`: nhiều.\n* `少し`: một chút.\n* `あまり` và `全然` thường đi với câu phủ định.",
+      "lesson_id": 9,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_9.json",
+      "directive_e_path": "grammar/n5/grammar_n5_9.json#3",
+      "score": 2114,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 240,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 9",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 52,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "S1 (Lý do) から、 S2 (Kết quả)",
+      "meaning": "`から` đứng sau mệnh đề chỉ lý do, rồi nối sang kết quả phía sau. Có thể hiểu là “vì ... nên ...”.",
+      "lesson_id": 9,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_9.json",
+      "directive_e_path": "grammar/n5/grammar_n5_9.json#4",
+      "score": 2112,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 240,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 9",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 53,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N が います / あります",
+      "meaning": "Hai động từ này dùng để nói “có/tồn tại”.\n* `います`: dùng cho người và động vật.\n* `あります`: dùng cho đồ vật, cây cối và những thứ không tự di chuyển.",
+      "lesson_id": 10,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_10.json",
+      "directive_e_path": "grammar/n5/grammar_n5_10.json#0",
+      "score": 2110,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 230,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 10",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 54,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "どうして ～ か",
+      "meaning": "`どうして` dùng để hỏi lý do. Khi trả lời, câu thường kết thúc bằng `～から`.",
+      "lesson_id": 9,
+      "order": 6,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_9.json",
+      "directive_e_path": "grammar/n5/grammar_n5_9.json#5",
+      "score": 2110,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 240,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 9",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 55,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 に N2 が います/あります",
+      "meaning": "Dùng để nói ở địa điểm N1 có N2. Trợ từ `に` đánh dấu nơi tồn tại.",
+      "lesson_id": 10,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_10.json",
+      "directive_e_path": "grammar/n5/grammar_n5_10.json#1",
+      "score": 2108,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 230,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 10",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 56,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 は N2 に います/あります",
+      "meaning": "Dùng khi N1 đã là chủ đề và ta muốn nói N1 đang ở đâu.",
+      "lesson_id": 10,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_10.json",
+      "directive_e_path": "grammar/n5/grammar_n5_10.json#2",
+      "score": 2106,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 230,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 10",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 57,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 や N2",
+      "meaning": "`や` dùng để liệt kê vài ví dụ tiêu biểu, không nhất thiết kể hết toàn bộ danh sách.",
+      "lesson_id": 10,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_10.json",
+      "directive_e_path": "grammar/n5/grammar_n5_10.json#3",
+      "score": 2104,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 230,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 10",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 58,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 や N2 など",
+      "meaning": "`など` đặt sau danh từ cuối trong danh sách để diễn tả “vân vân/những thứ như vậy”.",
+      "lesson_id": 10,
+      "order": 5,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_10.json",
+      "directive_e_path": "grammar/n5/grammar_n5_10.json#4",
+      "score": 2102,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 230,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 10",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 59,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N を Số lượng từ + V",
+      "meaning": "Từ chỉ số lượng thường đứng ngay trước động từ, không cần thêm trợ từ sau số lượng.\nVí dụ: `みかんを３つ食べました` = tôi đã ăn 3 quả quýt.",
+      "lesson_id": 11,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_11.json",
+      "directive_e_path": "grammar/n5/grammar_n5_11.json#0",
+      "score": 2100,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 220,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 11",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 60,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "S (thời gian) に ～回 V",
+      "meaning": "Dùng để nói tần suất làm một việc trong một khoảng thời gian.\nVí dụ: `１か月に２回` = 2 lần trong 1 tháng.",
+      "lesson_id": 11,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_11.json",
+      "directive_e_path": "grammar/n5/grammar_n5_11.json#1",
+      "score": 2098,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 220,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 11",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 61,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "どのくらい V ますか",
+      "meaning": "`どのくらい` dùng để hỏi độ dài thời gian, số lượng ước chừng hoặc mức độ.\nVí dụ: `どのくらいかかりますか` = mất bao lâu?",
+      "lesson_id": 11,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_11.json",
+      "directive_e_path": "grammar/n5/grammar_n5_11.json#2",
+      "score": 2096,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 220,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 11",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 62,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N だけ",
+      "meaning": "`だけ` đứng sau danh từ, nghĩa là “chỉ N thôi, không có gì khác”.\nVí dụ: `休みは日曜日だけです` = ngày nghỉ chỉ có chủ nhật.",
+      "lesson_id": 11,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_11.json",
+      "directive_e_path": "grammar/n5/grammar_n5_11.json#3",
+      "score": 2094,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 220,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 11",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 63,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Aい -> Aかったです / Aな -> Aでした",
+      "meaning": "Dùng để nói một tính chất đã đúng trong quá khứ.\n* Tính từ i: bỏ `い`, thêm `かったです`.\n* Tính từ na: dùng `でした`.",
+      "lesson_id": 12,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_12.json",
+      "directive_e_path": "grammar/n5/grammar_n5_12.json#0",
+      "score": 2090,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 210,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 12",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 64,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 は N2 より A です",
+      "meaning": "Dùng để so sánh hai thứ: N1 có tính chất A hơn N2. `より` nghĩa là “hơn/so với”.",
+      "lesson_id": 12,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_12.json",
+      "directive_e_path": "grammar/n5/grammar_n5_12.json#1",
+      "score": 2088,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 210,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 12",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 65,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 (phạm vi) で 何/どこ/誰 が いちばん A ですか",
+      "meaning": "Dùng để hỏi trong một phạm vi, cái gì/nơi nào/ai là A nhất. Khi trả lời, dùng `N2 が いちばん A です`.",
+      "lesson_id": 12,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_12.json",
+      "directive_e_path": "grammar/n5/grammar_n5_12.json#2",
+      "score": 2086,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 210,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 12",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 66,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N1 と N2 と どちらが A ですか",
+      "meaning": "Dùng để hỏi giữa N1 và N2, bên nào A hơn. Câu trả lời thường là `N のほうが A です`.",
+      "lesson_id": 12,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_12.json",
+      "directive_e_path": "grammar/n5/grammar_n5_12.json#3",
+      "score": 2084,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 210,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 12",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 67,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N が ほしいです",
+      "meaning": "`ほしい` dùng để nói mình muốn có một đồ vật hoặc điều gì đó. Đây là tính từ i, nên cách chia giống tính từ i.",
+      "lesson_id": 13,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_13.json",
+      "directive_e_path": "grammar/n5/grammar_n5_13.json#0",
+      "score": 2080,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 200,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 13",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 68,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vます (bỏ ます) + たいです",
+      "meaning": "Dùng để nói muốn làm một hành động. Lấy dạng `ます`, bỏ `ます`, rồi thêm `たいです`. Tân ngữ có thể đi với `が` hoặc `を`.",
+      "lesson_id": 13,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_13.json",
+      "directive_e_path": "grammar/n5/grammar_n5_13.json#1",
+      "score": 2078,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 200,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 13",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 69,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_13:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "N (địa điểm) へ N / Vます (bỏ ます) に 行きます/来ます/帰ります",
+      "meaning": "Dùng để nói đi/đến/về một nơi nhằm làm gì đó. `に` trong mẫu này đánh dấu mục đích của việc di chuyển.",
+      "lesson_id": 13,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_13.json",
+      "directive_e_path": "grammar/n5/grammar_n5_13.json#2",
+      "score": 2076,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 200,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 13",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 70,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_13:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vます + ませんか",
+      "meaning": "Dùng để mời hoặc rủ người khác làm gì đó một cách lịch sự, giống “cùng ... nhé?” hoặc “anh/chị có muốn ... không?”.",
+      "lesson_id": 13,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_13.json",
+      "directive_e_path": "grammar/n5/grammar_n5_13.json#3",
+      "score": 2074,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 200,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 13",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 71,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_14:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vて",
+      "meaning": "Thể `て` là dạng nối rất quan trọng của động từ.\n* Nhóm I: `い・ち・り` -> `って`; `み・び・に` -> `んで`; `き` -> `いて`; `ぎ` -> `いで`; `し` -> `して`.\n* Nhóm II: bỏ `ます`, thêm `て`.\n* Nhóm III: `きます` -> `きて`; `します` -> `して`.",
+      "lesson_id": 14,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_14.json",
+      "directive_e_path": "grammar/n5/grammar_n5_14.json#0",
+      "score": 2070,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 190,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 14",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 72,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_14:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vて ください",
+      "meaning": "Dùng để yêu cầu hoặc nhờ ai đó làm gì một cách lịch sự. Ví dụ: `書いてください` = hãy viết đi / vui lòng viết.",
+      "lesson_id": 14,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_14.json",
+      "directive_e_path": "grammar/n5/grammar_n5_14.json#1",
+      "score": 2068,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 190,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 14",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 73,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_14:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vて います",
+      "meaning": "Dùng để nói một hành động đang diễn ra tại thời điểm nói.",
+      "lesson_id": 14,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_14.json",
+      "directive_e_path": "grammar/n5/grammar_n5_14.json#2",
+      "score": 2066,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 190,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 14",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 74,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_14:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vましょうか",
+      "meaning": "Dùng khi người nói đề nghị làm giúp người nghe một việc gì đó. Ví dụ: `手伝いましょうか` = để tôi giúp nhé?",
+      "lesson_id": 14,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_14.json",
+      "directive_e_path": "grammar/n5/grammar_n5_14.json#3",
+      "score": 2064,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 190,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 14",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 75,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v001",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "嫌い",
+      "reading": "きらい",
+      "meaning": "ghét",
+      "lesson_id": 1,
+      "order": 1,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2060,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 76,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_15:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vて もいいですか",
+      "meaning": "Dùng để xin phép làm gì đó.\n* `ええ、いいですよ`: được chứ.\n* `すみません、ちょっと…`: xin lỗi, hơi khó/không tiện.",
+      "lesson_id": 15,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_15.json",
+      "directive_e_path": "grammar/n5/grammar_n5_15.json#0",
+      "score": 2060,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 180,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 15",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 77,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v002",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "開ける",
+      "reading": "あける",
+      "meaning": "mở",
+      "lesson_id": 1,
+      "order": 2,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2058,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 78,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_15:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vて は いけません",
+      "meaning": "Dùng để nói không được phép làm một việc gì đó, thường trong quy tắc, nội quy hoặc luật lệ.",
+      "lesson_id": 15,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_15.json",
+      "directive_e_path": "grammar/n5/grammar_n5_15.json#1",
+      "score": 2058,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 180,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 15",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 79,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v003",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "ワイシャツ",
+      "reading": "ワイシャツ",
+      "meaning": "áo sơ mi công sở",
+      "lesson_id": 1,
+      "order": 3,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2056,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 80,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_15:003",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vて います",
+      "meaning": "`Vています` không chỉ diễn tả hành động đang làm, mà còn có thể diễn tả trạng thái kéo dài như đã kết hôn, đang biết, đang sống ở đâu hoặc đang làm nghề gì.\n* `結婚しています`: đã kết hôn.\n* `知っています`: biết.",
+      "lesson_id": 15,
+      "order": 3,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_15.json",
+      "directive_e_path": "grammar/n5/grammar_n5_15.json#2",
+      "score": 2056,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 180,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 15",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 81,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v004",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "あそこ",
+      "reading": "あそこ",
+      "meaning": "đằng kia",
+      "lesson_id": 1,
+      "order": 4,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2054,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 82,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_15:004",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "Vて + もかまいません",
+      "meaning": "Dùng để cho phép hoặc nói rằng làm việc đó cũng không sao. Sắc thái lịch sự/trang trọng hơn `Vてもいいです`.",
+      "lesson_id": 15,
+      "order": 4,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_15.json",
+      "directive_e_path": "grammar/n5/grammar_n5_15.json#3",
+      "score": 2054,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 180,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 15",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 83,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v005",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "晩御飯",
+      "reading": "ばんごはん",
+      "meaning": "bữa tối",
+      "lesson_id": 1,
+      "order": 5,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2052,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 84,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v006",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "同じ",
+      "reading": "おなじ",
+      "meaning": "giống nhau",
+      "lesson_id": 1,
+      "order": 6,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2050,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 85,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v001",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "背",
+      "reading": "せ",
+      "meaning": "chiều cao, tầm vóc",
+      "lesson_id": 2,
+      "order": 1,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2050,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 86,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_16:001",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "V1て、[V2て、] ～ ます",
+      "meaning": "Dùng thể `て` để nối các hành động xảy ra lần lượt theo thời gian. Ví dụ: sáng chạy bộ, tắm, rồi đi làm.",
+      "lesson_id": 16,
+      "order": 1,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_16.json",
+      "directive_e_path": "grammar/n5/grammar_n5_16.json#0",
+      "score": 2050,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 170,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 16",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 87,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v007",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "黄色い",
+      "reading": "きいろい",
+      "meaning": "màu vàng",
+      "lesson_id": 1,
+      "order": 7,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2048,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 148,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 7"
+      ]
+    },
+    {
+      "rank": 88,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v002",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "字引",
+      "reading": "じびき",
+      "meaning": "từ điển",
+      "lesson_id": 2,
+      "order": 2,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2048,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 89,
+      "tier": "tier1",
+      "item_id": "grammar:n5:grammar_n5_16:002",
+      "item_type": "grammar",
+      "level": "N5",
+      "label": "V1て から V2",
+      "meaning": "Dùng để nói sau khi làm V1 thì mới làm V2. Mẫu này nhấn mạnh thứ tự trước sau rõ hơn so với chỉ nối bằng thể `て`.",
+      "lesson_id": 16,
+      "order": 2,
+      "series": "minna-i",
+      "source_path": "grammar/n5/grammar_n5_16.json",
+      "directive_e_path": "grammar/n5/grammar_n5_16.json#1",
+      "score": 2048,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 360,
+        "source": 360,
+        "lesson": 170,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna core grammar",
+        "lesson 16",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 90,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v008",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "起きる",
+      "reading": "おきる",
+      "meaning": "đứng dậy",
+      "lesson_id": 1,
+      "order": 8,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2046,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 146,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 8"
+      ]
+    },
+    {
+      "rank": 91,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v003",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "茶色",
+      "reading": "ちゃいろ",
+      "meaning": "nâu",
+      "lesson_id": 2,
+      "order": 3,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2046,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 92,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v009",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "汚い",
+      "reading": "きたない",
+      "meaning": "dơ bẩn",
+      "lesson_id": 1,
+      "order": 9,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2044,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 144,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 9"
+      ]
+    },
+    {
+      "rank": 93,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v004",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "三日",
+      "reading": "みっか",
+      "meaning": "ba ngày, ngày thứ ba của tháng",
+      "lesson_id": 2,
+      "order": 4,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2044,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 94,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v010",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "なる",
+      "reading": "なる",
+      "meaning": "trở thành",
+      "lesson_id": 1,
+      "order": 10,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2042,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 142,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 10"
+      ]
+    },
+    {
+      "rank": 95,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v005",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "毎月",
+      "reading": "まいげつ/まいつき",
+      "meaning": "mỗi tháng",
+      "lesson_id": 2,
+      "order": 5,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2042,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 96,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v011",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "いつも",
+      "reading": "いつも",
+      "meaning": "luôn luôn",
+      "lesson_id": 1,
+      "order": 11,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2040,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 140,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 11"
+      ]
+    },
+    {
+      "rank": 97,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v006",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "薬",
+      "reading": "くすり",
+      "meaning": "y học",
+      "lesson_id": 2,
+      "order": 6,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2040,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 98,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v001",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "入る",
+      "reading": "はいる",
+      "meaning": "đi vào, chứa đựng",
+      "lesson_id": 3,
+      "order": 1,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2040,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 99,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v012",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "昼",
+      "reading": "ひる",
+      "meaning": "buổi trưa, ban ngày",
+      "lesson_id": 1,
+      "order": 12,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2038,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 138,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 12"
+      ]
+    },
+    {
+      "rank": 100,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v007",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "六つ",
+      "reading": "むっつ",
+      "meaning": "sáu",
+      "lesson_id": 2,
+      "order": 7,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2038,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 148,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 7"
+      ]
+    },
+    {
+      "rank": 101,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v002",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "遅い",
+      "reading": "おそい",
+      "meaning": "muộn, chậm",
+      "lesson_id": 3,
+      "order": 2,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2038,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 102,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v013",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "二日",
+      "reading": "ふつか",
+      "meaning": "hai ngày, ngày thứ hai của tháng",
+      "lesson_id": 1,
+      "order": 13,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2036,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 136,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 13"
+      ]
+    },
+    {
+      "rank": 103,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v008",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "暑い",
+      "reading": "あつい",
+      "meaning": "nóng bức",
+      "lesson_id": 2,
+      "order": 8,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2036,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 146,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 8"
+      ]
+    },
+    {
+      "rank": 104,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v003",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "食堂",
+      "reading": "しょくどう",
+      "meaning": "phòng ăn",
+      "lesson_id": 3,
+      "order": 3,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2036,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 105,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v014",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "安い",
+      "reading": "やすい",
+      "meaning": "giá rẻ",
+      "lesson_id": 1,
+      "order": 14,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2034,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 134,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 14"
+      ]
+    },
+    {
+      "rank": 106,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v009",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "立つ",
+      "reading": "たつ",
+      "meaning": "đứng",
+      "lesson_id": 2,
+      "order": 9,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2034,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 144,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 9"
+      ]
+    },
+    {
+      "rank": 107,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v004",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "カップ",
+      "reading": "カップ",
+      "meaning": "cốc",
+      "lesson_id": 3,
+      "order": 4,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2034,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 108,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v015",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "レコード",
+      "reading": "レコード",
+      "meaning": "ghi lại",
+      "lesson_id": 1,
+      "order": 15,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2032,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 132,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 15"
+      ]
+    },
+    {
+      "rank": 109,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v010",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "近く",
+      "reading": "ちかく",
+      "meaning": "gần",
+      "lesson_id": 2,
+      "order": 10,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2032,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 142,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 10"
+      ]
+    },
+    {
+      "rank": 110,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v005",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "要る",
+      "reading": "いる",
+      "meaning": "cần",
+      "lesson_id": 3,
+      "order": 5,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2032,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 111,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v016",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "四日",
+      "reading": "よっか",
+      "meaning": "bốn ngày, ngày thứ tư trong tháng",
+      "lesson_id": 1,
+      "order": 16,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2030,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 130,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 16"
+      ]
+    },
+    {
+      "rank": 112,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v011",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "レストラン",
+      "reading": "レストラン",
+      "meaning": "nhà hàng",
+      "lesson_id": 2,
+      "order": 11,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2030,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 140,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 11"
+      ]
+    },
+    {
+      "rank": 113,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v006",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "お手洗い",
+      "reading": "おてあらい",
+      "meaning": "phòng tắm",
+      "lesson_id": 3,
+      "order": 6,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2030,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 114,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v001",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "物",
+      "reading": "もの",
+      "meaning": "điều",
+      "lesson_id": 4,
+      "order": 1,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2030,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 115,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v017",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "つまらない",
+      "reading": "つまらない",
+      "meaning": "nhàm chán",
+      "lesson_id": 1,
+      "order": 17,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2028,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 128,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 17"
+      ]
+    },
+    {
+      "rank": 116,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v012",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "色",
+      "reading": "いろ",
+      "meaning": "màu sắc",
+      "lesson_id": 2,
+      "order": 12,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2028,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 138,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 12"
+      ]
+    },
+    {
+      "rank": 117,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v007",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "手紙",
+      "reading": "てがみ",
+      "meaning": "lá thư",
+      "lesson_id": 3,
+      "order": 7,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2028,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 148,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 7"
+      ]
+    },
+    {
+      "rank": 118,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v002",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "大きい",
+      "reading": "おおきい",
+      "meaning": "lớn",
+      "lesson_id": 4,
+      "order": 2,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2028,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 119,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v018",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "少ない",
+      "reading": "すくない",
+      "meaning": "một vài",
+      "lesson_id": 1,
+      "order": 18,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2026,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 126,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 18"
+      ]
+    },
+    {
+      "rank": 120,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v013",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "撮る",
+      "reading": "とる",
+      "meaning": "chụp ảnh hoặc quay phim",
+      "lesson_id": 2,
+      "order": 13,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2026,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 136,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 13"
+      ]
+    },
+    {
+      "rank": 121,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v008",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "教える",
+      "reading": "おしえる",
+      "meaning": "dạy, kể",
+      "lesson_id": 3,
+      "order": 8,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2026,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 146,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 8"
+      ]
+    },
+    {
+      "rank": 122,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v003",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "電気",
+      "reading": "でんき",
+      "meaning": "điện, đèn điện",
+      "lesson_id": 4,
+      "order": 3,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2026,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 123,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v019",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "話",
+      "reading": "はなし",
+      "meaning": "nói chuyện, câu chuyện",
+      "lesson_id": 1,
+      "order": 19,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2024,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 124,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 19"
+      ]
+    },
+    {
+      "rank": 124,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v014",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "やる",
+      "reading": "やる",
+      "meaning": "làm",
+      "lesson_id": 2,
+      "order": 14,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2024,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 134,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 14"
+      ]
+    },
+    {
+      "rank": 125,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v009",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "黒い",
+      "reading": "くろい",
+      "meaning": "màu đen",
+      "lesson_id": 3,
+      "order": 9,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2024,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 144,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 9"
+      ]
+    },
+    {
+      "rank": 126,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v004",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "りっぱ",
+      "reading": "りっぱ",
+      "meaning": "lộng lẫy",
+      "lesson_id": 4,
+      "order": 4,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2024,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 127,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v020",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "廊下",
+      "reading": "ろうか",
+      "meaning": "hành lang",
+      "lesson_id": 1,
+      "order": 20,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2022,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 122,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 20"
+      ]
+    },
+    {
+      "rank": 128,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v015",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "黒",
+      "reading": "くろ",
+      "meaning": "màu đen",
+      "lesson_id": 2,
+      "order": 15,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2022,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 132,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 15"
+      ]
+    },
+    {
+      "rank": 129,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v010",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "門",
+      "reading": "もん",
+      "meaning": "cánh cổng",
+      "lesson_id": 3,
+      "order": 10,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2022,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 142,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 10"
+      ]
+    },
+    {
+      "rank": 130,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v005",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "山",
+      "reading": "やま",
+      "meaning": "núi",
+      "lesson_id": 4,
+      "order": 5,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2022,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 131,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v021",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "ズボン",
+      "reading": "ズボン",
+      "meaning": "quần",
+      "lesson_id": 1,
+      "order": 21,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2020,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 120,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 21"
+      ]
+    },
+    {
+      "rank": 132,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v016",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "病院",
+      "reading": "びょういん",
+      "meaning": "bệnh viện",
+      "lesson_id": 2,
+      "order": 16,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2020,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 130,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 16"
+      ]
+    },
+    {
+      "rank": 133,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v011",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "七つ",
+      "reading": "ななつ",
+      "meaning": "bảy",
+      "lesson_id": 3,
+      "order": 11,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2020,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 140,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 11"
+      ]
+    },
+    {
+      "rank": 134,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v006",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "お茶",
+      "reading": "おちゃ",
+      "meaning": "trà xanh",
+      "lesson_id": 4,
+      "order": 6,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2020,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 150,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 6"
+      ]
+    },
+    {
+      "rank": 135,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch05_v001",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "店",
+      "reading": "みせ",
+      "meaning": "cửa hàng",
+      "lesson_id": 5,
+      "order": 1,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch05.json",
+      "score": 2020,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 280,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 5",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 136,
+      "tier": "tier1",
+      "item_id": "vocab:n5:n5_l01_v001",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "私",
+      "reading": "わたし",
+      "meaning": "tôi",
+      "lesson_id": 1,
+      "order": 1,
+      "series": "minna",
+      "source_path": "vocab/n5/minna/lesson_01.json",
+      "score": 2020,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 280,
+        "lesson": 320,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna lesson vocab",
+        "lesson 1",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 137,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v022",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "煩い",
+      "reading": "うるさい",
+      "meaning": "ồn ào, khó chịu",
+      "lesson_id": 1,
+      "order": 22,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2018,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 118,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 22"
+      ]
+    },
+    {
+      "rank": 138,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v017",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "八つ",
+      "reading": "やっつ",
+      "meaning": "tám",
+      "lesson_id": 2,
+      "order": 17,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2018,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 128,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 17"
+      ]
+    },
+    {
+      "rank": 139,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v012",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "ポケット",
+      "reading": "ポケット",
+      "meaning": "túi",
+      "lesson_id": 3,
+      "order": 12,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2018,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 138,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 12"
+      ]
+    },
+    {
+      "rank": 140,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v007",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "テレビ",
+      "reading": "テレビ",
+      "meaning": "truyền hình",
+      "lesson_id": 4,
+      "order": 7,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2018,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 148,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 7"
+      ]
+    },
+    {
+      "rank": 141,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch05_v002",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "曇る",
+      "reading": "くもる",
+      "meaning": "trở nên u ám, trở nên mờ mịt",
+      "lesson_id": 5,
+      "order": 2,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch05.json",
+      "score": 2018,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 280,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 5",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 142,
+      "tier": "tier1",
+      "item_id": "vocab:n5:n5_l01_v002",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "私たち",
+      "reading": "わたしたち",
+      "meaning": "chúng tôi",
+      "lesson_id": 1,
+      "order": 2,
+      "series": "minna",
+      "source_path": "vocab/n5/minna/lesson_01.json",
+      "score": 2018,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 280,
+        "lesson": 320,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna lesson vocab",
+        "lesson 1",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 143,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v023",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "先週",
+      "reading": "せんしゅう",
+      "meaning": "tuần trước",
+      "lesson_id": 1,
+      "order": 23,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2016,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 116,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 23"
+      ]
+    },
+    {
+      "rank": 144,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v018",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "西",
+      "reading": "にし",
+      "meaning": "hướng tây",
+      "lesson_id": 2,
+      "order": 18,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2016,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 126,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 18"
+      ]
+    },
+    {
+      "rank": 145,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v013",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "古い",
+      "reading": "ふるい",
+      "meaning": "cũ (không dùng cho người)",
+      "lesson_id": 3,
+      "order": 13,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2016,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 136,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 13"
+      ]
+    },
+    {
+      "rank": 146,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v008",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "ペット",
+      "reading": "ペット",
+      "meaning": "thú cưng",
+      "lesson_id": 4,
+      "order": 8,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2016,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 146,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 8"
+      ]
+    },
+    {
+      "rank": 147,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch05_v003",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "たて",
+      "reading": "たて",
+      "meaning": "chiều dài, chiều cao",
+      "lesson_id": 5,
+      "order": 3,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch05.json",
+      "score": 2016,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 280,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 5",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 148,
+      "tier": "tier1",
+      "item_id": "vocab:n5:n5_l01_v003",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "あなた",
+      "reading": "あなた",
+      "meaning": "bạn, anh, chị, ông, bà",
+      "lesson_id": 1,
+      "order": 3,
+      "series": "minna",
+      "source_path": "vocab/n5/minna/lesson_01.json",
+      "score": 2016,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 280,
+        "lesson": 320,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna lesson vocab",
+        "lesson 1",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 149,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v024",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "鳴く",
+      "reading": "なく",
+      "meaning": "tiếng động vật. để hót líu lo, gầm rú hoặc kêu v.v.",
+      "lesson_id": 1,
+      "order": 24,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2014,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 114,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 24"
+      ]
+    },
+    {
+      "rank": 150,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v019",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "甘い",
+      "reading": "あまい",
+      "meaning": "ngọt ngào",
+      "lesson_id": 2,
+      "order": 19,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2014,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 124,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 19"
+      ]
+    },
+    {
+      "rank": 151,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v014",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "熱い",
+      "reading": "あつい",
+      "meaning": "nóng khi chạm vào",
+      "lesson_id": 3,
+      "order": 14,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2014,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 134,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 14"
+      ]
+    },
+    {
+      "rank": 152,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v009",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "玄関",
+      "reading": "げんかん",
+      "meaning": "sảnh vào",
+      "lesson_id": 4,
+      "order": 9,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2014,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 144,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 9"
+      ]
+    },
+    {
+      "rank": 153,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch05_v004",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "五",
+      "reading": "ご",
+      "meaning": "năm",
+      "lesson_id": 5,
+      "order": 4,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch05.json",
+      "score": 2014,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 280,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 5",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 154,
+      "tier": "tier1",
+      "item_id": "vocab:n5:n5_l01_v004",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "あの人",
+      "reading": "あのひと",
+      "meaning": "người kia",
+      "lesson_id": 1,
+      "order": 4,
+      "series": "minna",
+      "source_path": "vocab/n5/minna/lesson_01.json",
+      "score": 2014,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 280,
+        "lesson": 320,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna lesson vocab",
+        "lesson 1",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 155,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch01_v025",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "半分",
+      "reading": "はんぶん",
+      "meaning": "nửa phút",
+      "lesson_id": 1,
+      "order": 25,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch01.json",
+      "score": 2012,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 320,
+        "order": 112,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 1",
+        "order 25"
+      ]
+    },
+    {
+      "rank": 156,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch02_v020",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "ええ",
+      "reading": "ええ",
+      "meaning": "vâng",
+      "lesson_id": 2,
+      "order": 20,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch02.json",
+      "score": 2012,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 310,
+        "order": 122,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 2",
+        "order 20"
+      ]
+    },
+    {
+      "rank": 157,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch03_v015",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "休み",
+      "reading": "やすみ",
+      "meaning": "nghỉ ngơi, nghỉ lễ",
+      "lesson_id": 3,
+      "order": 15,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch03.json",
+      "score": 2012,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 300,
+        "order": 132,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 3",
+        "order 15"
+      ]
+    },
+    {
+      "rank": 158,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch04_v010",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "書く",
+      "reading": "かく",
+      "meaning": "viết",
+      "lesson_id": 4,
+      "order": 10,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch04.json",
+      "score": 2012,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 290,
+        "order": 142,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 4",
+        "order 10"
+      ]
+    },
+    {
+      "rank": 159,
+      "tier": "tier1",
+      "item_id": "vocab:n5:haj_n5_ch05_v005",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "つける",
+      "reading": "つける",
+      "meaning": "để bật",
+      "lesson_id": 5,
+      "order": 5,
+      "series": "hajimete",
+      "source_path": "vocab/n5/hajimete/hajimete_ch05.json",
+      "score": 2012,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 320,
+        "lesson": 280,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Hajimete N5/N4 high-contact vocab",
+        "lesson 5",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 160,
+      "tier": "tier1",
+      "item_id": "vocab:n5:n5_l01_v005",
+      "item_type": "vocab",
+      "level": "N5",
+      "label": "あの方",
+      "reading": "あのかた",
+      "meaning": "Vị kia",
+      "lesson_id": 1,
+      "order": 5,
+      "series": "minna",
+      "source_path": "vocab/n5/minna/lesson_01.json",
+      "score": 2012,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 260,
+        "source": 280,
+        "lesson": 320,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Minna lesson vocab",
+        "lesson 1",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 161,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l01_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "一",
+      "reading": "イチ, イツ, ひと-, ひと.つ",
+      "meaning": "Nhất (một)",
+      "lesson_id": 1,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_01.json",
+      "score": 2000,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 320,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 1",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 162,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l01_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "二",
+      "reading": "ニ, ジ, ふた, ふた.つ, ふたたび",
+      "meaning": "Nhị (hai)",
+      "lesson_id": 1,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_01.json",
+      "score": 1998,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 320,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 1",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 163,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l01_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "八",
+      "reading": "ハチ, ハツ, や, や.つ, やっ.つ, よう",
+      "meaning": "Bát (tám)",
+      "lesson_id": 1,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_01.json",
+      "score": 1996,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 320,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 1",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 164,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l01_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "十",
+      "reading": "ジュウ, ジッ, ジュッ, とお, と, そ",
+      "meaning": "Thập (mười)",
+      "lesson_id": 1,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_01.json",
+      "score": 1994,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 320,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 1",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 165,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l01_k005",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "九",
+      "reading": "キュウ, ク, ここの, ここの.つ",
+      "meaning": "Cửu (chín)",
+      "lesson_id": 1,
+      "order": 5,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_01.json",
+      "score": 1992,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 320,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 1",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 166,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l02_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "七",
+      "reading": "シチ, なな, なな.つ, なの",
+      "meaning": "Thất (bảy)",
+      "lesson_id": 2,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_02.json",
+      "score": 1990,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 310,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 2",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 167,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l02_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "人",
+      "reading": "ジン, ニン, ひと, -り, -と",
+      "meaning": "Nhân (người)",
+      "lesson_id": 2,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_02.json",
+      "score": 1988,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 310,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 2",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 168,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l02_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "入",
+      "reading": "ニュウ, ジュ, い.る, -い.る, -い.り, い.れる, -い.れ, はい.る",
+      "meaning": "Nhập (vào; cho vào; nhận vào)",
+      "lesson_id": 2,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_02.json",
+      "score": 1986,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 310,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 2",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 169,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l02_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "三",
+      "reading": "サン, ゾウ, み, み.つ, みっ.つ",
+      "meaning": "Tam (ba)",
+      "lesson_id": 2,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_02.json",
+      "score": 1984,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 310,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 2",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 170,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l03_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "千",
+      "reading": "セン, ち",
+      "meaning": "Thiên (nghìn)",
+      "lesson_id": 3,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_03.json",
+      "score": 1980,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 300,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 3",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 171,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l03_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "土",
+      "reading": "ド, ト, つち",
+      "meaning": "Thổ (Đất -)",
+      "lesson_id": 3,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_03.json",
+      "score": 1978,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 300,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 3",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 172,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l03_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "上",
+      "reading": "ジョウ, ショウ, シャン, うえ, -うえ, うわ-, かみ, あ.げる, -あ.げる, あ.がる, -あ.がる, あ.がり, -あ.がり, のぼ.る, のぼ.り, のぼ.せる, のぼ.す, たてまつ.る",
+      "meaning": "Thượng (trên)",
+      "lesson_id": 3,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_03.json",
+      "score": 1976,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 300,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 3",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 173,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l03_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "下",
+      "reading": "カ, ゲ, した, しも, もと, さ.げる, さ.がる, くだ.る, くだ.り, くだ.す, -くだ.す, くだ.さる, お.ろす, お.りる",
+      "meaning": "Hạ (dưới)",
+      "lesson_id": 3,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_03.json",
+      "score": 1974,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 300,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 3",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 174,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l04_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "口",
+      "reading": "コウ, ク, くち",
+      "meaning": "Khẩu (miệng)",
+      "lesson_id": 4,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_04.json",
+      "score": 1970,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 290,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 4",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 175,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l04_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "大",
+      "reading": "ダイ, タイ, おお-, おお.きい, -おお.いに",
+      "meaning": "Đại (to lớn)",
+      "lesson_id": 4,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_04.json",
+      "score": 1968,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 290,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 4",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 176,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l04_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "子",
+      "reading": "シ, ス, ツ, こ, -こ, ね",
+      "meaning": "Tử (con)",
+      "lesson_id": 4,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_04.json",
+      "score": 1966,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 290,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 4",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 177,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l04_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "小",
+      "reading": "ショウ, ちい.さい, こ-, お-, さ-",
+      "meaning": "Tiểu (nhỏ)",
+      "lesson_id": 4,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_04.json",
+      "score": 1964,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 290,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 4",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 178,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l05_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "夕",
+      "reading": "セキ, ゆう",
+      "meaning": "Tịch (chiều tối)",
+      "lesson_id": 5,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_05.json",
+      "score": 1960,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 280,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 5",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 179,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l05_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "女",
+      "reading": "ジョ, ニョ, ニョウ, おんな, め",
+      "meaning": "Nữ (phụ nữ)",
+      "lesson_id": 5,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_05.json",
+      "score": 1958,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 280,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 5",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 180,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l05_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "山",
+      "reading": "サン, セン, やま",
+      "meaning": "San (núi)",
+      "lesson_id": 5,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_05.json",
+      "score": 1956,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 280,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 5",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 181,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l05_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "六",
+      "reading": "ロク, リク, む, む.つ, むっ.つ, むい",
+      "meaning": "Lục (sáu)",
+      "lesson_id": 5,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_05.json",
+      "score": 1954,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 280,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 5",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 182,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l06_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "日",
+      "reading": "ニチ, ジツ, ひ, -び, -か",
+      "meaning": "Nhật (ngày, mặt trời)",
+      "lesson_id": 6,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_06.json",
+      "score": 1950,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 270,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 6",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 183,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l06_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "手",
+      "reading": "シュ, ズ, て, て-, -て, た-",
+      "meaning": "Thủ (tay)",
+      "lesson_id": 6,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_06.json",
+      "score": 1948,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 270,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 6",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 184,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l06_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "円",
+      "reading": "エン, まる.い, まる, まど, まど.か, まろ.やか",
+      "meaning": "Viên (yên, tròn)",
+      "lesson_id": 6,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_06.json",
+      "score": 1946,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 270,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 6",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 185,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l06_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "五",
+      "reading": "ゴ, いつ, いつ.つ",
+      "meaning": "Ngũ (năm)",
+      "lesson_id": 6,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_06.json",
+      "score": 1944,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 270,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 6",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 186,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l07_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "月",
+      "reading": "ゲツ, ガツ, つき",
+      "meaning": "Nguyệt (month; moon; lune)",
+      "lesson_id": 7,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_07.json",
+      "score": 1940,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 260,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 7",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 187,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l07_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "牛",
+      "reading": "ギュウ, うし",
+      "meaning": "Ngưu (cow; vache; vaca)",
+      "lesson_id": 7,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_07.json",
+      "score": 1938,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 260,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 7",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 188,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l07_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "今",
+      "reading": "コン, キン, いま",
+      "meaning": "Kim (nay; hiện tại; bây giờ)",
+      "lesson_id": 7,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_07.json",
+      "score": 1936,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 260,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 7",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 189,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l07_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "水",
+      "reading": "スイ, みず, みず-",
+      "meaning": "Thủy (Nước L)",
+      "lesson_id": 7,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_07.json",
+      "score": 1934,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 260,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 7",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 190,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l08_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "火",
+      "reading": "カ, ひ, -び, ほ-",
+      "meaning": "Hỏa (lửa)",
+      "lesson_id": 8,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_08.json",
+      "score": 1930,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 250,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 8",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 191,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l08_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "中",
+      "reading": "チュウ, なか, うち, あた.る",
+      "meaning": "Trung (trong, giữa)",
+      "lesson_id": 8,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_08.json",
+      "score": 1928,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 250,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 8",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 192,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l08_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "方",
+      "reading": "ホウ, かた, -かた, -がた",
+      "meaning": "Phương (người, vị)",
+      "lesson_id": 8,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_08.json",
+      "score": 1926,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 250,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 8",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 193,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l08_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "友",
+      "reading": "ユウ, とも",
+      "meaning": "Hữu (bạn bè)",
+      "lesson_id": 8,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_08.json",
+      "score": 1924,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 250,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 8",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 194,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l09_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "分",
+      "reading": "ブン, フン, ブ, わ.ける, わ.け, わ.かれる, わ.かる, わ.かつ",
+      "meaning": "Phân (chia; phần; hiểu rõ)",
+      "lesson_id": 9,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_09.json",
+      "score": 1920,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 240,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 9",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 195,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l09_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "父",
+      "reading": "フ, ちち",
+      "meaning": "Phụ (bố)",
+      "lesson_id": 9,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_09.json",
+      "score": 1918,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 240,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 9",
+        "order 2"
+      ]
+    },
+    {
+      "rank": 196,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l09_k003",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "元",
+      "reading": "ゲン, ガン, もと",
+      "meaning": "Nguyên (Nguồn Gốc ~ Fr)",
+      "lesson_id": 9,
+      "order": 3,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_09.json",
+      "score": 1916,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 240,
+        "order": 156,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 9",
+        "order 3"
+      ]
+    },
+    {
+      "rank": 197,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l09_k004",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "少",
+      "reading": "ショウ, すく.ない, すこ.し",
+      "meaning": "Thiểu (ít)",
+      "lesson_id": 9,
+      "order": 4,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_09.json",
+      "score": 1914,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 240,
+        "order": 154,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 9",
+        "order 4"
+      ]
+    },
+    {
+      "rank": 198,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l09_k005",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "内",
+      "reading": "ナイ, ダイ, うち",
+      "meaning": "Nạp (bên trong)",
+      "lesson_id": 9,
+      "order": 5,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_09.json",
+      "score": 1912,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 240,
+        "order": 152,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 9",
+        "order 5"
+      ]
+    },
+    {
+      "rank": 199,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l10_k001",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "目",
+      "reading": "モク, ボク, め, -め, ま-",
+      "meaning": "Mục (mắt)",
+      "lesson_id": 10,
+      "order": 1,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_10.json",
+      "score": 1910,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 230,
+        "order": 160,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 10",
+        "order 1"
+      ]
+    },
+    {
+      "rank": 200,
+      "tier": "tier1",
+      "item_id": "kanji:n5:n5_canonical_l10_k002",
+      "item_type": "kanji",
+      "level": "N5",
+      "label": "四",
+      "reading": "シ, よ, よ.つ, よっ.つ, よん",
+      "meaning": "Tứ (bốn)",
+      "lesson_id": 10,
+      "order": 2,
+      "series": "joyo-kanji",
+      "source_path": "kanji/n5/lesson_10.json",
+      "score": 1908,
+      "score_breakdown": {
+        "level": 1000,
+        "type": 220,
+        "source": 300,
+        "lesson": 230,
+        "order": 158,
+        "usage": 0
+      },
+      "rationale": [
+        "N5 priority",
+        "Joyo N5/N4 kanji",
+        "lesson 10",
+        "order 2"
+      ]
+    }
+  ]
+}

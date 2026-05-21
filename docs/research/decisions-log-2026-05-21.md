@@ -509,3 +509,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This makes Phase F immediately visible in the JLPT reading flow without rewriting the immersion article format, and avoids eager rendering of hundreds of cards by switching the picker to a lazy sliver grid.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-052 - Phase G rank reserves grammar, vocab, and kanji scope
+**Phase**: Follow-up Sprint Phase G setup
+**Date**: 2026-05-22 01:45 (local)
+**Context**: Option C Phase G says Top-200 comes from Mina grammar, Hajimete vocab, Shin Kanzen grammar, and Joyo N5-N4 kanji. Pure score sorting over local corpus selected grammar/vocab only and excluded kanji.
+**Options considered**: keep pure score sort | hand-edit Top-200 | deterministic score sort with minimum type coverage
+**Chosen**: Keep deterministic frequency scoring, then reserve the Top-200 as 80 grammar, 80 vocab, and 40 kanji before final score ordering.
+**Rationale**: This preserves the owner's cross-domain Phase G scope without making the rank file subjective. The quota is only a selection guard; item order inside the selected set remains score-based.
+**Reversible**: yes
+**Owner review**: pending

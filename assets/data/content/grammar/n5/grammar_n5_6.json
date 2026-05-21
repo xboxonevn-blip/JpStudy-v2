@@ -102,10 +102,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: 何を しますか",
-      "meaning": "Ý nghĩa: Dùng để hỏi người khác sẽ làm gì hoặc đang làm gì.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "何 là chữ Hán-Việt 'hà', nghĩa là gì. Trong cấu trúc 何をしますか, 何 đi với を nên thường đọc là なに; を đánh dấu ô nội dung/hành động được hỏi, còn しますか biến câu thành câu hỏi lịch sự 'làm gì?'.",
+      "hanVietBridge": "Nhớ bằng 'hà sự' theo nghĩa nôm na: hỏi người nghe sẽ làm việc gì. Tiếng Việt nói 'làm gì?', tiếng Nhật giữ khung 何を + しますか để hỏi hoạt động, không hỏi thời điểm hay địa điểm.",
+      "form": "Hình thức: 何をしますか. Có thể thêm mốc thời gian như 明日、何をしますか.",
+      "meaning": "Ý nghĩa: hỏi ai đó làm gì, sẽ làm gì, hoặc đang định làm hoạt động gì.",
+      "usage": "Sử dụng: dùng để hỏi kế hoạch hoặc hoạt động: 明日、何をしますか. Câu trả lời thường là Nをします hoặc NをV, như 勉強をします, 本を読みます.",
+      "humanMoment": "Dr. Linh lưu ý: 何をしますか hỏi 'làm gì', nên câu trả lời phải là hoạt động. Nếu người hỏi 明日、何をしますか, trả lời 勉強をします; đừng trả lời 明日 hay 学校へ vì đó là thời gian/địa điểm.",
+      "crossLinks": [
+        {
+          "pattern": "Nをします",
+          "contrast": "khác chiều hỏi-đáp: 何をしますか hỏi hoạt động, còn Nをします trả lời bằng hoạt động cụ thể."
+        },
+        {
+          "pattern": "NをV",
+          "contrast": "khác độ mở: 何を asks for the object/action, while NをV already names the object."
+        },
+        {
+          "pattern": "いつVますか",
+          "contrast": "khác loại thông tin: いつ hỏi thời điểm, còn 何をしますか hỏi hoạt động."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

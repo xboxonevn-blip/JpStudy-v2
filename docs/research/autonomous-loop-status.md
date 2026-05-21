@@ -1987,3 +1987,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `Nをします` works when N is an activity such as
   soccer, tennis, or study; concrete objects usually need specific verbs.
+
+## 2026-05-22 Phase G Tier-1 item 031
+
+- Re-authored `grammar:n5:grammar_n5_6:003` (`何をしますか`) with activity-question
+  semantics, `なにを` reading, and answer-type contrasts.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `何をしますか` asks what activity someone will do.
+  Answer with an activity, not time/place/means/companion info.

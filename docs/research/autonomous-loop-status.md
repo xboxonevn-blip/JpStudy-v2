@@ -2017,3 +2017,14 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `NでV` answers where an action happens. Use `で`
   for `学校で勉強します`, but `へ` for going to school and `に` for existence.
+
+## 2026-05-22 Phase G Tier-1 item 034
+
+- Re-authored `grammar:n5:grammar_n5_6:006` (`Vませんか`) with polite negative
+  question structure, invitation pragmatics, and contrasts against `Vましょう`,
+  `Vません`, and `Vます`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `Vませんか` looks negative but works as a soft
+  invitation because `か` asks before committing the listener. Use `Vましょう`
+  when the group is already moving toward the action.

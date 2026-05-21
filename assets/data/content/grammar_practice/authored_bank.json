@@ -7018,6 +7018,224 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-form-l1-001",
+      "template_id": "tpl-grammar-n5-034-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "行きます đổi sang lời mời lịch sự Vませんか là gì?",
+      "answer_template": "行きませんか。",
+      "options_template": [
+        "行きませんか。",
+        "行きますか。",
+        "行きましょう。",
+        "行きません。"
+      ],
+      "distractor_strategy": "masu-stem-masenka-vs-question-suggestion-negative",
+      "teaching_note": "Vます bỏ す rồi thêm ませんか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-form-l1-002",
+      "template_id": "tpl-grammar-n5-034-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng để mời 'uống cà phê không?'",
+      "answer_template": "コーヒーを飲みませんか。",
+      "options_template": [
+        "コーヒーを飲みませんか。",
+        "コーヒーを飲みません。",
+        "コーヒーを飲みましたか。",
+        "コーヒーを飲みます。"
+      ],
+      "distractor_strategy": "invitation-masenka-vs-negative-past-statement",
+      "teaching_note": "Thêm か vào ません để tạo lời mời dạng câu hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-034-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "一緒に映画を見ませんか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Mình cùng xem phim nhé?",
+      "options_template": [
+        "Mình cùng xem phim nhé?",
+        "Tôi không xem phim.",
+        "Bạn đã xem phim chưa?",
+        "Đừng xem phim."
+      ],
+      "distractor_strategy": "masenka-invitation-vs-negative-past-prohibition",
+      "teaching_note": "Bề mặt phủ định hỏi, nhưng chức năng là mời.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-034-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Vませんか thường dùng để làm gì trong hội thoại?",
+      "answer_template": "Mời hoặc rủ người nghe làm gì đó một cách lịch sự.",
+      "distractor_strategy": "invitation-function-recall",
+      "teaching_note": "Vませんか là lời mời mềm, không chỉ là phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-usage-l3-005",
+      "template_id": "tpl-grammar-n5-034-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để mời 'cùng đi thư viện không?': 図書館へ / 行き / ませんか",
+      "answer_template": "図書館へ行きませんか。",
+      "options_template": [
+        "図書館へ",
+        "行き",
+        "ませんか"
+      ],
+      "distractor_strategy": "masen-ka-invitation-order",
+      "teaching_note": "行きます bỏ ます thành 行き, rồi thêm ませんか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-usage-l3-006",
+      "template_id": "tpl-grammar-n5-034-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Bạn muốn rủ bạn uống trà, dùng お茶 và 飲みます.",
+      "answer_template": "お茶を飲みませんか。",
+      "distractor_strategy": "apply-masenka-to-drink-invitation",
+      "teaching_note": "Lời mời mềm dùng 飲みませんか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-context-l3-007",
+      "template_id": "tpl-grammar-n5-034-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh: bạn muốn rủ đồng nghiệp ăn trưa, vẫn để họ có quyền từ chối. Câu nào hợp nhất?",
+      "answer_template": "昼ご飯を食べませんか。",
+      "options_template": [
+        "昼ご飯を食べませんか。",
+        "昼ご飯を食べます。",
+        "昼ご飯を食べません。",
+        "昼ご飯を食べました。"
+      ],
+      "distractor_strategy": "polite-invitation-context-vs-statements",
+      "teaching_note": "Vませんか hợp khi mời nhẹ nhàng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-context-l2-008",
+      "template_id": "tpl-grammar-n5-034-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào nên chọn Vませんか?",
+      "answer_template": "Khi muốn mời người nghe làm gì đó một cách lịch sự.",
+      "options_template": [
+        "Khi muốn mời người nghe làm gì đó một cách lịch sự.",
+        "Khi muốn nói mình chắc chắn không làm.",
+        "Khi muốn ra lệnh trực tiếp.",
+        "Khi muốn kể việc đã làm hôm qua."
+      ],
+      "distractor_strategy": "invitation-context-vs-negative-command-past",
+      "teaching_note": "Có か cuối câu, nên đây là câu hỏi-mời.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-034-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích sắc thái. Bạn mới quen người nghe và muốn mời rất nhẹ. Câu nào hợp nhất?",
+      "answer_template": "コーヒーを飲みませんか。",
+      "options_template": [
+        "コーヒーを飲みませんか。",
+        "コーヒーを飲みましょう。",
+        "コーヒーを飲みません。",
+        "コーヒーを飲みます。"
+      ],
+      "distractor_strategy": "masenka-vs-mashou-negative-statement-analysis",
+      "teaching_note": "L4: Vませんか mềm hơn Vましょう vì nó hỏi trước khi kéo người nghe vào hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-034-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-034-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_6:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào là lời mời, không phải câu phủ định thông báo?",
+      "answer_template": "行きませんか。",
+      "options_template": [
+        "行きませんか。",
+        "行きません。",
+        "行きました。",
+        "行きます。"
+      ],
+      "distractor_strategy": "question-particle-ka-turns-negative-into-invitation",
+      "teaching_note": "Có か ở cuối, 行きませんか hỏi-mời; 行きません chỉ là 'không đi'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

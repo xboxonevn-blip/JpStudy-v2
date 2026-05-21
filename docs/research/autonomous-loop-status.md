@@ -1861,3 +1861,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `どこ/どちら` asks for location or direction. Ask
   `トイレはどこですか`; answer with a place like `あそこです`.
+
+## 2026-05-22 Phase G Tier-1 item 017
+
+- Re-authored `grammar:n5:grammar_n5_3:005` (`N1(国/会社) の N2(製品)`) with
+  origin/maker `の` guidance and contrasts against possession/content `の`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: when N1 is a country/company and N2 is a product,
+  read `の` as origin or maker: `日本の車`, `ソニーのカメラ`.

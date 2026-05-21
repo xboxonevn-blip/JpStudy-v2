@@ -3401,6 +3401,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-form-l1-001",
+      "template_id": "tpl-grammar-n5-017-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ nối quốc gia với sản phẩm: 日本 ___ 車",
+      "answer_template": "の",
+      "options_template": [
+        "の",
+        "は",
+        "も",
+        "か"
+      ],
+      "distractor_strategy": "origin-no-vs-topic-additive-question",
+      "teaching_note": "の nối N1 nguồn/hãng với N2 sản phẩm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-form-l1-002",
+      "template_id": "tpl-grammar-n5-017-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Cụm nào đúng để nói 'xe Toyota'?",
+      "answer_template": "トヨタの車",
+      "options_template": [
+        "トヨタの車",
+        "トヨタは車",
+        "車のトヨタ",
+        "トヨタも車"
+      ],
+      "distractor_strategy": "maker-product-order",
+      "teaching_note": "Hãng/nguồn đứng trước の; sản phẩm chính đứng sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-017-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "イタリアのワイン nghĩa tự nhiên nhất là gì?",
+      "answer_template": "rượu vang Ý / rượu vang từ Ý",
+      "options_template": [
+        "rượu vang Ý / rượu vang từ Ý",
+        "Ý của rượu vang",
+        "Ý cũng là rượu vang",
+        "rượu vang ở đâu?"
+      ],
+      "distractor_strategy": "origin-no-vs-literal-possession-additive-question",
+      "teaching_note": "N1 chỉ xuất xứ; N2 là sản phẩm chính.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-017-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1(国/会社) の N2(製品), N1 thường cho biết điều gì?",
+      "answer_template": "Quốc gia xuất xứ, công ty, hãng, hoặc nơi sản xuất của N2.",
+      "distractor_strategy": "origin-maker-role-recall",
+      "teaching_note": "Đọc N1 theo quan hệ nguồn/hãng khi N2 là sản phẩm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-usage-l3-005",
+      "template_id": "tpl-grammar-n5-017-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'đồng hồ Nhật': 時計 / の / 日本",
+      "answer_template": "日本の時計",
+      "options_template": [
+        "日本",
+        "の",
+        "時計"
+      ],
+      "distractor_strategy": "country-product-order",
+      "teaching_note": "Quốc gia xuất xứ đứng trước の; sản phẩm đứng sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-usage-l3-006",
+      "template_id": "tpl-grammar-n5-017-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cụm 'máy ảnh Sony'.",
+      "answer_template": "ソニーのカメラ",
+      "distractor_strategy": "company-product-production",
+      "teaching_note": "Tên công ty làm rõ sản phẩm bằng の.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-context-l3-007",
+      "template_id": "tpl-grammar-n5-017-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Ở cửa hàng, nhãn ghi 'computer made by Apple'. Viết cụm 'máy tính Apple'.",
+      "answer_template": "アップルのコンピューター",
+      "distractor_strategy": "store-maker-label-context",
+      "teaching_note": "Khi đọc nhãn hàng, の nối hãng với sản phẩm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-context-l2-008",
+      "template_id": "tpl-grammar-n5-017-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N1(国/会社) の N2(製品)?",
+      "answer_template": "Bạn mô tả sản phẩm theo quốc gia xuất xứ hoặc hãng sản xuất.",
+      "options_template": [
+        "Bạn mô tả sản phẩm theo quốc gia xuất xứ hoặc hãng sản xuất.",
+        "Bạn hỏi nhà vệ sinh ở đâu.",
+        "Bạn nói Tanaka ở phòng học.",
+        "Bạn hỏi đây là cái gì."
+      ],
+      "distractor_strategy": "origin-context-vs-location-wh",
+      "teaching_note": "Cụm này thường xuất hiện khi nói hàng hóa, thương hiệu, nguồn gốc.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-017-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: bạn mô tả xe sản xuất ở Nhật, không nói chiếc xe thuộc sở hữu của nước Nhật. Cụm nào đúng?",
+      "answer_template": "日本の車",
+      "options_template": [
+        "日本の車",
+        "私の車",
+        "車の日本",
+        "日本は車です"
+      ],
+      "distractor_strategy": "origin-vs-possession-order-identity-analysis",
+      "teaching_note": "L4: の giống nhau về hình thức, nhưng quan hệ nghĩa là xuất xứ khi N1 là quốc gia và N2 là sản phẩm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-017-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-017-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_3:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào là の chỉ hãng/nhà sản xuất, không phải の chỉ nội dung/ngôn ngữ?",
+      "answer_template": "ソニーのカメラ",
+      "options_template": [
+        "ソニーのカメラ",
+        "日本語の本",
+        "英語の雑誌",
+        "私の本"
+      ],
+      "distractor_strategy": "maker-origin-vs-content-possession-analysis",
+      "teaching_note": "ソニー là hãng làm ra sản phẩm; 日本語/英語 là nội dung/ngôn ngữ, 私 là chủ sở hữu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

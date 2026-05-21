@@ -190,10 +190,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 (Tên Quốc gia / Công ty) の N2 (Sản phẩm)",
-      "meaning": "Ý nghĩa: Dùng `の` để nói xuất xứ, nơi sản xuất hoặc nhà sản xuất của một sản phẩm.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "の là trợ từ nối danh từ, nhưng cấu trúc N1(国/会社) の N2(製品) chuyên dùng để gắn nguồn gốc hoặc nhà sản xuất vào sản phẩm. N2 vẫn là danh từ chính; N1 chỉ xuất xứ, hãng, hoặc nơi làm ra N2.",
+      "hanVietBridge": "Gắn với Hán-Việt 'xuất xứ' và 'sản phẩm': 日本の車 là xe có xuất xứ Nhật, トヨタの車 là xe thuộc hãng Toyota. Tiếng Việt thường dịch thành 'xe Nhật', 'xe Toyota', không cần thêm chữ 'của'.",
+      "form": "Hình thức: N1(quốc gia/công ty) の N2(sản phẩm). N1 đứng trước の để chỉ nguồn, hãng, hoặc nơi sản xuất; N2 là món hàng chính.",
+      "meaning": "Ý nghĩa: diễn tả xuất xứ, nơi sản xuất, hoặc nhà sản xuất của N2: 日本の時計, イタリアのワイン, ソニーのカメラ.",
+      "usage": "Sử dụng: dùng khi giới thiệu hàng hóa, nhãn hiệu, nguồn gốc. Nếu N1 là quốc gia/công ty và N2 là sản phẩm, ưu tiên hiểu の là 'xuất xứ/nhà sản xuất' hơn là sở hữu cá nhân.",
+      "humanMoment": "Dr. Linh lưu ý: N1(国/会社) の N2(製品) không hỏi 'ai sở hữu ai' mà hỏi sản phẩm đến từ đâu hoặc của hãng nào. 日本の車 là 'xe Nhật'; khác 私の車, nơi の thật sự gần nghĩa sở hữu.",
+      "crossLinks": [
+        {
+          "pattern": "N1 の N2 (sở hữu)",
+          "contrast": "khác quan hệ nghĩa: 私の車 nói chủ sở hữu, còn 日本の車 nói xuất xứ/quốc gia của sản phẩm."
+        },
+        {
+          "pattern": "N1 の N2 (nội dung/chủ đề)",
+          "contrast": "khác chức năng N1: 日本語の本 nói nội dung/ngôn ngữ của sách, còn 日本の車 nói nơi/hãng gắn với sản phẩm."
+        },
+        {
+          "pattern": "N1 は N2(địa điểm) です",
+          "contrast": "khác cấu trúc: N1 は N2 です tạo câu vị trí, còn N1 の N2 tạo một cụm danh từ sản phẩm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

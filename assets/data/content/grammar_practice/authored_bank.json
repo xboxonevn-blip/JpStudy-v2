@@ -3613,6 +3613,217 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-form-l1-001",
+      "template_id": "tpl-grammar-n5-018-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn cụm lịch sự đúng: ___ はどちらですか。",
+      "answer_template": "お国",
+      "options_template": [
+        "お国",
+        "国お",
+        "この国",
+        "国の"
+      ],
+      "distractor_strategy": "honorific-prefix-country-form",
+      "teaching_note": "お đứng trước 国 để làm câu hỏi về quốc gia mềm và lịch sự hơn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-form-l1-002",
+      "template_id": "tpl-grammar-n5-018-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng nguyên mẫu hỏi lịch sự về quốc gia/quê quán?",
+      "answer_template": "お国はどちらですか。",
+      "options_template": [
+        "お国はどちらですか。",
+        "国は何ですか。",
+        "お国のどちらです。",
+        "どちらはお国ですか。"
+      ],
+      "distractor_strategy": "fixed-politeness-country-question",
+      "teaching_note": "Giữ công thức お国はどちらですか khi hỏi lịch sự người nghe đến từ đâu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-018-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "お国はどちらですか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Anh/chị đến từ nước nào?",
+      "options_template": [
+        "Anh/chị đến từ nước nào?",
+        "Nước của anh/chị ở phía nào trên bản đồ?",
+        "Đây là nước gì?",
+        "Nước này là sản phẩm của hãng nào?"
+      ],
+      "distractor_strategy": "country-origin-vs-map-location-what-origin-product",
+      "teaching_note": "Câu hỏi hướng đến quê/quốc tịch của người nghe, không hỏi vị trí bản đồ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-018-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong お国はどちらですか, tiền tố お làm gì?",
+      "answer_template": "Làm お国 nghe lịch sự/tôn trọng hơn khi hỏi quốc gia hoặc quê quán của người nghe.",
+      "distractor_strategy": "honorific-o-role-recall",
+      "teaching_note": "お không đổi nghĩa 国 thành đồ vật; nó tăng sắc thái lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-usage-l3-005",
+      "template_id": "tpl-grammar-n5-018-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp câu hỏi lịch sự: お国は / どちらですか",
+      "answer_template": "お国はどちらですか。",
+      "options_template": [
+        "お国は",
+        "どちらですか"
+      ],
+      "distractor_strategy": "fixed-country-question-order",
+      "teaching_note": "Cụm お国 làm chủ đề; どちらですか là phần hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-usage-l3-006",
+      "template_id": "tpl-grammar-n5-018-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "A hỏi: お国はどちらですか。Bạn đến từ Việt Nam. Trả lời ngắn gọn.",
+      "answer_template": "ベトナムです。",
+      "distractor_strategy": "country-answer-production",
+      "teaching_note": "Câu trả lời nêu quốc gia, không trả lời bằng địa điểm như あそこ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-context-l3-007",
+      "template_id": "tpl-grammar-n5-018-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Trong buổi giao lưu quốc tế, bạn muốn hỏi lịch sự một người mới gặp đến từ nước nào. Viết câu.",
+      "answer_template": "お国はどちらですか。",
+      "distractor_strategy": "international-exchange-polite-context",
+      "teaching_note": "Bối cảnh trang trọng/người mới gặp hợp với công thức お国はどちらですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-context-l2-008",
+      "template_id": "tpl-grammar-n5-018-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với お国はどちらですか?",
+      "answer_template": "Hỏi lịch sự quốc gia/quê quán của người nghe.",
+      "options_template": [
+        "Hỏi lịch sự quốc gia/quê quán của người nghe.",
+        "Hỏi nhà vệ sinh ở đâu.",
+        "Hỏi đây là cái gì.",
+        "Mô tả xe Nhật."
+      ],
+      "distractor_strategy": "country-origin-context-vs-place-wh-product-origin",
+      "teaching_note": "お国 làm rõ đây là câu hỏi về quốc gia của người nghe.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-018-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn gặp khách lần đầu và muốn hỏi quốc gia của họ lịch sự, không hỏi vị trí nhà vệ sinh. Câu nào hợp nhất?",
+      "answer_template": "お国はどちらですか。",
+      "options_template": [
+        "お国はどちらですか。",
+        "トイレはどこですか。",
+        "国はどこですか。",
+        "これは何ですか。"
+      ],
+      "distractor_strategy": "polite-country-origin-vs-general-location-analysis",
+      "teaching_note": "L4: お国はどちらですか là công thức xã giao; 国はどこですか nghe như hỏi vị trí quốc gia trên bản đồ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-018-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-018-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_3:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: お国はどちらですか。Câu trả lời nào đúng loại thông tin được hỏi?",
+      "answer_template": "ベトナムです。",
+      "options_template": [
+        "ベトナムです。",
+        "あそこです。",
+        "こちらです。",
+        "何ですか。"
+      ],
+      "distractor_strategy": "country-answer-vs-place-direction-wh-analysis",
+      "teaching_note": "Câu hỏi này cần quốc gia/quê quán; あそこ/こちら là chỉ nơi/phía cụ thể.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

@@ -234,10 +234,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: お国はどちらですか",
-      "meaning": "Ý nghĩa: Câu hỏi lịch sự về quê quán hoặc quốc tịch.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "お国はどちらですか có cấu trúc gồm お kính ngữ + 国 ('quốc', nước/quốc gia) + は + どちら + ですか. どちら vốn hỏi 'phía nào/đâu' lịch sự, nhưng khi đi với お国 thì câu chuyển thành hỏi quê quán hoặc quốc tịch một cách mềm.",
+      "hanVietBridge": "国 đọc Hán-Việt là 'quốc'. Thêm お giống một lớp lịch sự trước 'quốc' của người nghe; どちら giữ sắc thái trang trọng hơn どこ. Dịch tự nhiên là 'Anh/chị đến từ nước nào?' hoặc 'Quê/quốc gia của anh/chị là đâu?'.",
+      "form": "Hình thức: お国はどちらですか. Không tách お khỏi 国; cả cụm お国 là chủ đề lịch sự, どちらですか là phần hỏi.",
+      "meaning": "Ý nghĩa: hỏi lịch sự về quốc gia, quê quán, hoặc nơi xuất thân của người nghe. Câu này không hỏi vị trí vật lý của một nước trên bản đồ.",
+      "usage": "Sử dụng: dùng khi nói với người mới gặp, khách, hoặc trong bối cảnh trang trọng. Câu trả lời ngắn tự nhiên là ベトナムです, 日本です, hoặc アメリカです.",
+      "humanMoment": "Dr. Linh lưu ý: お国はどちらですか khác N は どこですか thông thường. Ở đây お国 làm câu hỏi chạm tới quê/quốc tịch của người nghe, nên trả lời ベトナムです; đừng hiểu cứng là hỏi nước đó nằm phía nào.",
+      "crossLinks": [
+        {
+          "pattern": "N は どこ/どちら ですか",
+          "contrast": "khác mức cố định: mẫu chung hỏi vị trí của N, còn お国はどちらですか là công thức lịch sự hỏi quốc gia/quê quán."
+        },
+        {
+          "pattern": "こちら/そちら/あちら",
+          "contrast": "khác vai trò: こちら/そちら/あちら chỉ phía/người cụ thể, còn どちら trong お国はどちらですか là từ hỏi lịch sự."
+        },
+        {
+          "pattern": "N1(国/会社) の N2(製品)",
+          "contrast": "khác trọng tâm quốc gia: 日本の車 nói xuất xứ sản phẩm, còn お国はどちらですか hỏi quốc gia của người nghe."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

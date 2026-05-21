@@ -1870,3 +1870,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: when N1 is a country/company and N2 is a product,
   read `の` as origin or maker: `日本の車`, `ソニーのカメラ`.
+
+## 2026-05-22 Phase G Tier-1 item 018
+
+- Re-authored `grammar:n5:grammar_n5_3:006` (`お国はどちらですか`) with お/国
+  honorific structure and contrast against generic location questions.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: this is a polite country/hometown question. Answer
+  with a country like `ベトナムです`, not a map direction like `あそこです`.

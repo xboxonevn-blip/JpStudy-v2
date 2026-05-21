@@ -49,7 +49,7 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Date**: 2026-05-21 07:55
 **Blocking**: no
 **Default action taken**: Grammar ExerciseBank uses deterministic variants to reach >=50 exercises per item while preserving validator uniqueness by prompt/signature. Later authored/static generation should replace repeated variants where source examples allow.
-**Owner answer**: OPTION (b) 2026-05-21 — Raise uniqueness threshold for ALL items, not just top 200. Codex must author hand-crafted templates FIRST (multiple genuine angles per item: form, meaning, usage, context, contrast), THEN apply variant generation only if hand-crafted templates exhaust under 50. Owner accepts longer runtime for higher per-question quality. Apply Directive E.3 Multi-Perspective to template authoring. Quality target: a learner cannot pass 50 questions by pattern-matching surface features; must actually understand the item.
+**Owner answer**: OPTION (b1) REFINED 2026-05-21 — Top-200 high-frequency items get full hand-crafted template treatment (≥10 templates per item, ≥1 per angle of form/meaning/usage/context/contrast, ≥1 per Bloom L1-L4). Remaining ~21K items get "enhanced variant" treatment (≥3 hand-crafted seed templates + variant fill to 50). Owner accepted (b1) after Claude flagged that full (b) for 21K items would require 2-4 months of continuous run, incompatible with sprint format. Pareto rationale: top-200 covers ~80% of learner exposure. Apply Directive E.3 Multi-Perspective + E.7 Teaching Test as quality gate. Quality target: a learner cannot pass 50 questions by pattern-matching surface features; must actually understand the item.
 
 ## OQ-008 - Human review depth for generated reading corpus
 **Phase**: 4

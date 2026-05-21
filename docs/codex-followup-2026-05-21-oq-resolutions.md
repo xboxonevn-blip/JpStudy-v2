@@ -314,20 +314,47 @@ Current: 80 passages. Target: ~968 total (~888 new). Apply per-lesson
 
 ## 6. SPRINT 4 — 2026-05-25 → 2026-05-28
 
-### Phase G — Hand-crafted exercise templates (OQ-007 option b)
+### Phase G — Hand-crafted exercise templates (OQ-007 option b1 REFINED)
 
-**Source**: OQ-007 owner picked (b) for ALL items, not just top 200.
+**Source**: OQ-007 refined to (b1) — owner accepted Claude's scope-reality
+flag. Top-200 high-frequency items get full hand-crafted treatment;
+remaining ~21K items get enhanced variant (≥ 3 hand-crafted seed + variant
+fill to 50).
 
-Replace deterministic variant generation với hand-crafted template-first
-approach. Each item gets multiple genuine angles (form, meaning, usage,
-context, contrast) authored before variants fill the gap to 50.
+#### Tier 1: Top-200 high-frequency items (FULL hand-crafted)
+
+Selection: top-200 by aggregate frequency across:
+- Mina I/II grammar core (high learner contact)
+- Hajimete Tango N5/N4 high-frequency vocab
+- Shin Kanzen N3 most-tested grammar
+- Joyo kanji N5-N4 (most-used)
+
+Template requirement per Tier-1 item:
+- ≥ 10 hand-crafted templates per item
+- ≥ 1 template per angle (form / meaning / usage / context / contrast = 5 angles)
+- ≥ 1 template per Bloom L1-L4 (4 levels)
+- Validator reject if any of above missing
+
+Apply Directive E.3 Multi-Perspective + E.7 Teaching Test rigorously.
+
+#### Tier 2: Remaining ~21K items (ENHANCED variant)
+
+Template requirement per Tier-2 item:
+- ≥ 3 hand-crafted seed templates per item (vs current 0)
+- Variant generation fills to 50 using seeds as anchor
+- Variants must cover ≥ 2 distinct angles
+- Variants must cover ≥ 3 Bloom levels
 
 #### Implementation
 
-1. Template schema per item:
+1. Build frequency ranker `tool/research/rank_item_frequency.js`:
+   - Input: usage logs (if any) + textbook lesson position + JLPT level
+   - Output: top-200 list
+2. Template schema per item:
    ```json
    {
      "item_id": "grammar:n5:mina:01:001",
+     "tier": "tier1|tier2",
      "templates": [
        {
          "template_id": "tpl-001",
@@ -340,26 +367,29 @@ context, contrast) authored before variants fill the gap to 50.
      ]
    }
    ```
-2. `tool/research/author_exercise_templates.js`:
-   - Per item, author N templates covering 5 angles + 4 Bloom levels
-   - Target: 10-15 hand-crafted templates per item
-   - Variants fill remaining to 50 if needed
-3. Apply Directive E.3 Multi-Perspective: each item must have at least
-   1 template per angle (form/meaning/usage)
-4. Validator: reject if templates < 10 OR Bloom L4 < 1 OR angle coverage
-   < 3 distinct angles
-5. Token budget warning: this is the heaviest phase. Codex run autonomous,
-   commit batch per 50 items (Directive A adjusted scope)
-6. Quality target: "a learner cannot pass 50 questions by pattern-matching
-   surface features; must actually understand the item"
+3. `tool/research/author_exercise_templates.js`:
+   - Mode: tier1-full | tier2-enhanced
+   - Tier1: 10-15 hand-crafted per item, 5-angle + 4-Bloom coverage
+   - Tier2: 3-5 hand-crafted seed per item, variant fill to 50
+4. Apply Directive E.3 Multi-Perspective to ALL items (Tier1 + Tier2)
+5. Validator per tier:
+   - Tier1 reject if templates < 10 OR Bloom L4 < 1 OR angle coverage < 5
+   - Tier2 reject if templates < 3 OR final question count (after variant) < 50
+6. Token budget: Tier1 ~200 items × 8 min/item = ~27 hours autonomous run;
+   Tier2 ~21K items × 1 min/item = ~350 hours autonomous run. Sprint 4
+   focuses on Tier1; Tier2 may overflow into Sprint 5 if needed
+7. Quality target: "a learner cannot pass 50 questions by pattern-matching
+   surface features"
 
 #### Acceptance Phase G
 
-- [ ] Every of ~21,563 items has ≥ 10 hand-crafted templates
-- [ ] Angle coverage: every item covers ≥ 3 of 5 angles
-- [ ] Bloom coverage: every item has ≥ 1 L4 template
-- [ ] Validator passes 21,563/21,563
-- [ ] Sample 30 random items, owner spot-check happy (no "nhìn vô biết")
+- [ ] Top-200 list generated + committed (`docs/research/top-200-frequency-rank-2026-05-21.md`)
+- [ ] All 200 Tier-1 items have ≥ 10 hand-crafted templates
+- [ ] All Tier-1 items pass 5-angle × 4-Bloom validator
+- [ ] All ~21K Tier-2 items have ≥ 3 hand-crafted seed templates
+- [ ] All Tier-2 items reach ≥ 50 total questions (seed + variant)
+- [ ] Sample 30 random items (15 Tier-1 + 15 Tier-2), owner spot-check
+      happy — no "nhìn vô biết đáp án"
 - [ ] Live verify on jpstudy.web.app
 
 ## 7. NON-NEGOTIABLE RULES (per megaprompt §12)

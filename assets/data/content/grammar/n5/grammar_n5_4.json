@@ -58,10 +58,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vます / Vません / Vました / Vませんでした",
-      "meaning": "Ý nghĩa: Đây là bốn dạng lịch sự cơ bản của động từ.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "ます là trợ động từ lịch sự gắn sau thân động từ. Cấu trúc bốn ô chia theo hai trục: khẳng định/phủ định và không-quá-khứ/quá-khứ. ません là phủ định lịch sự, ました thêm sắc thái quá khứ, ませんでした là phủ định lịch sự quá khứ.",
+      "hanVietBridge": "Nhớ bằng lưới Hán-Việt 'khẳng/phủ' và 'hiện-quá': ます = khẳng định hiện/tương lai, ません = phủ định hiện/tương lai, ました = khẳng định quá khứ, ませんでした = phủ định quá khứ.",
+      "form": "Hình thức: Vます / Vません / Vました / Vませんでした. Tất cả đều là dạng lịch sự của động từ; phần V là thân động từ trước đuôi lịch sự.",
+      "meaning": "Ý nghĩa: bốn dạng này cho biết hành động có xảy ra không và thuộc hiện-tương lai hay quá khứ. Ví dụ 行きます, 行きません, 行きました, 行きませんでした.",
+      "usage": "Sử dụng: chọn dạng theo mốc thời gian và cực tính. 明日 thường đi với ます/ません; 昨日 thường đi với ました/ませんでした.",
+      "humanMoment": "Dr. Linh lưu ý: Vます / Vません / Vました / Vませんでした là bảng bốn ô, không phải bốn từ rời. Hãy hỏi hai câu: có hay không, rồi đã qua hay chưa. 昨日なら しました/しませんでした; 明日なら します/しません.",
+      "crossLinks": [
+        {
+          "pattern": "今、～時～分です",
+          "contrast": "khác loại thời gian: 今、～時～分です đọc giờ hiện tại, còn Vました/Vませんでした đánh dấu hành động đã qua."
+        },
+        {
+          "pattern": "です / じゃありません",
+          "contrast": "khác từ loại: です xử lý danh từ/tính từ-na, còn ます/ません/ました/ませんでした là đuôi lịch sự của động từ."
+        },
+        {
+          "pattern": "Vて",
+          "contrast": "khác chức năng: Vて nối mạch hành động, còn bốn dạng ます cho biết lịch sự, thời và phủ định."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

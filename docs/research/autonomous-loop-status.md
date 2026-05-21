@@ -1888,3 +1888,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `今、～時～分です` reads a clock: now + hour + minute.
   It names one current time, not a range like `九時から五時まで`.
+
+## 2026-05-22 Phase G Tier-1 item 020
+
+- Re-authored `grammar:n5:grammar_n5_4:002` (`Vます/Vません/Vました/Vませんでした`)
+  as a four-cell polite verb matrix for time and polarity.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: ask two questions for every polite verb form:
+  affirmative or negative, then past or non-past.

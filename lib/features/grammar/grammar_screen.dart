@@ -8,6 +8,7 @@ import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
+import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/utils/grammar_english_notation.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
@@ -39,24 +40,25 @@ class GrammarScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider);
-    final levelLabel = level?.shortLabel ?? 'N5';
+    final queryLevel = _queryLevelLabel(context);
+    final levelLabel = queryLevel ?? level?.shortLabel ?? 'N5';
+    final showLevelInTitle = queryLevel != null || level != null;
     final pointsAsync = ref.watch(grammarPointsProvider(levelLabel));
     final dueCount = ref.watch(grammarDueCountProvider).value ?? 0;
     final ghostCount = ref.watch(grammarGhostCountProvider).value ?? 0;
+    final titleBase = _tr(
+      language,
+      en: 'Grammar',
+      vi: 'Ng\u1eef ph\u00e1p',
+      ja: '\u6587\u6cd5',
+    );
 
     return FoundationsSoftSuggestGate(
       surface: FoundationsSoftSuggestSurface.grammar,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            level == null
-                ? _tr(
-                    language,
-                    en: 'Grammar',
-                    vi: 'Ng\u1eef ph\u00e1p',
-                    ja: '\u6587\u6cd5',
-                  )
-                : '${_tr(language, en: 'Grammar', vi: 'Ng\u1eef ph\u00e1p', ja: '\u6587\u6cd5')} (${level.shortLabel})',
+            showLevelInTitle ? '$titleBase ($levelLabel)' : titleBase,
           ),
         ),
         body: pointsAsync.when(
@@ -85,6 +87,17 @@ class GrammarScreen extends ConsumerWidget {
       ),
     );
   }
+}
+
+String? _queryLevelLabel(BuildContext context) {
+  final raw = GoRouter.maybeOf(
+    context,
+  )?.routeInformationProvider.value.uri.queryParameters['level'];
+  if (raw == null) return null;
+  final normalized = raw.trim().toUpperCase();
+  return StudyLevel.values.any((level) => level.shortLabel == normalized)
+      ? normalized
+      : null;
 }
 
 class _GrammarHubContent extends StatefulWidget {

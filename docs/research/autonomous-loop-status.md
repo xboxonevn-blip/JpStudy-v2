@@ -2175,3 +2175,17 @@
 - Teaching Test paraphrase: `どんなNですか` asks what kind of N something is.
   It expects a type/description answer such as `おもしろい本`, not a definition or
   location.
+
+## 2026-05-22 P0 urgent audit C1-C3 fixed
+
+- C1/C2 shipped in `b6a4624b`: JLPT level click now opens a nonblank exam start
+  panel; `/profile`, legacy lesson routes, and unknown routes render friendly
+  navigation instead of leaking GoException.
+- C3 expanded Shin Kanzen grammar assets to manifest truth: N3 83 lessons, N2
+  163 lessons, N1 88 lessons, each with grammar and example files.
+- `/grammar?level=N1` now honors the query level, and content DB reseeding
+  repairs partial 25-lesson Shin Kanzen databases.
+- Gates passed: focused `flutter analyze`, route/exam/grammar/content Flutter
+  tests, and `textbook_architecture_test.js`.
+- Continuing P1 next: Minna vocab cleanup, lesson-specific conjugation,
+  grammar progressive disclosure, exercise density/distractors, vocab catalog.

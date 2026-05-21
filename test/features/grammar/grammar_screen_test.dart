@@ -82,13 +82,15 @@ Widget _buildScreen({
 Widget _buildRouterScreen({
   AppLanguage language = AppLanguage.en,
   StudyLevel? level,
+  String initialLocation = '/',
+  String? overrideLevelLabel,
   List<GrammarPoint> points = const [],
   int dueCount = 0,
   int ghostCount = 0,
 }) {
-  final levelLabel = level?.shortLabel ?? 'N5';
+  final levelLabel = overrideLevelLabel ?? level?.shortLabel ?? 'N5';
   final router = GoRouter(
-    initialLocation: '/',
+    initialLocation: initialLocation,
     routes: [
       GoRoute(path: '/', builder: (context, state) => const GrammarScreen()),
       GoRoute(
@@ -170,6 +172,23 @@ void main() {
     await _pump(tester);
 
     expect(find.text('2 weak spots'), findsWidgets);
+  });
+
+  testWidgets('URL level query overrides onboarding grammar level', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      _buildRouterScreen(
+        level: StudyLevel.n5,
+        initialLocation: '/?level=N1',
+        overrideLevelLabel: 'N1',
+        points: const [_stubPoint],
+      ),
+    );
+    await _pump(tester);
+
+    expect(find.text('Grammar (N1)'), findsOneWidget);
+    expect(find.text('Total points'), findsOneWidget);
   });
 
   testWidgets('empty bank renders no-content placeholder', (tester) async {

@@ -519,3 +519,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This preserves the owner's cross-domain Phase G scope without making the rank file subjective. The quota is only a selection guard; item order inside the selected set remains score-based.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-053 - C3 Shin Kanzen expansion uses local manifests first
+**Phase**: Urgent live audit P0 C3
+**Date**: 2026-05-22 10:20 (local)
+**Context**: Live audit found Shin Kanzen manifest counts claimed N3 83, N2 163, and N1 88 lessons while visible grammar assets only covered 25 lessons per level. Owner requested whitelist publisher catalog research plus generated content.
+**Options considered**: block on external catalog scrape | scrape publisher/site data now | use existing corrected local Shin Kanzen lesson manifests plus local grammar assets and Tae Kim attribution metadata
+**Chosen**: Generate missing lesson grammar/example JSON from the corrected local item manifests and existing local grammar rows, with original JpStudy Vietnamese guidance, source attribution metadata, and `vi-source-verified` only.
+**Rationale**: The corrected manifests already encode the required lesson counts and item surfaces. Local generation fixes the P0 blank/missing-content path deterministically without touching banned sources, copying publisher prose, or adding owner-only `vi-human-approved`. Phase G Track B remains responsible for Tier-1 real-voice Directive E rewrites.
+**Reversible**: yes
+**Owner review**: pending

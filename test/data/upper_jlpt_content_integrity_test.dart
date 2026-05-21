@@ -42,30 +42,28 @@ void main() {
     });
 
     for (final level in const ['n3', 'n2', 'n1']) {
-      test(
-        '$level grammar/examples/kanji/immersion use local lessons 1-25',
-        () {
-          final expectedLessons = Set<int>.from(
-            List.generate(25, (i) => i + 1),
-          );
+      test('$level grammar/examples use Shin Kanzen lesson counts', () {
+        final expectedGrammarLessons = _expectedGrammarLessons(level);
+        final expectedLegacyLessons = Set<int>.from(
+          List.generate(25, (i) => i + 1),
+        );
 
-          final grammarLessons = _grammarLessons(level);
-          final exampleLessons = _lessonFileIds(
-            Directory('assets/data/content/grammar_examples/$level'),
-          );
-          final kanjiLessons = _lessonFileIds(
-            Directory('assets/data/content/kanji/$level'),
-          );
-          final immersionLessons = _lessonFileIds(
-            Directory('assets/data/content/immersion/$level'),
-          );
+        final grammarLessons = _grammarLessons(level);
+        final exampleLessons = _lessonFileIds(
+          Directory('assets/data/content/grammar_examples/$level'),
+        );
+        final kanjiLessons = _lessonFileIds(
+          Directory('assets/data/content/kanji/$level'),
+        );
+        final immersionLessons = _lessonFileIds(
+          Directory('assets/data/content/immersion/$level'),
+        );
 
-          expect(grammarLessons, expectedLessons);
-          expect(exampleLessons, expectedLessons);
-          expect(kanjiLessons, expectedLessons);
-          expect(immersionLessons, expectedLessons);
-        },
-      );
+        expect(grammarLessons, expectedGrammarLessons);
+        expect(exampleLessons, expectedGrammarLessons);
+        expect(kanjiLessons, expectedLegacyLessons);
+        expect(immersionLessons, expectedLegacyLessons);
+      });
 
       test('$level content has required minimum study payload', () {
         final grammarCount = _countGrammar(level);
@@ -391,6 +389,16 @@ Set<int> _grammarLessons(String level) {
   ) {
     return _grammarLessonId(file);
   }).toSet();
+}
+
+Set<int> _expectedGrammarLessons(String level) {
+  final count = switch (level) {
+    'n3' => 83,
+    'n2' => 163,
+    'n1' => 88,
+    _ => 25,
+  };
+  return Set<int>.from(List.generate(count, (i) => i + 1));
 }
 
 int _grammarLessonId(File file) {

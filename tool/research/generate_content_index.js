@@ -169,7 +169,7 @@ function grammarPracticeDataset() {
   }
   return {
     files: grammar.files,
-    entries: grammar.entries + authoredQuestions,
+    entries: grammar.entries,
     levels: grammar.levels,
     generation: 'generated-from-grammar-assets',
     authoredQuestions,

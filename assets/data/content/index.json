@@ -3,16 +3,16 @@
   "generatedAt": "2026-05-21",
   "datasets": {
     "vocab": {
-      "files": 345,
-      "entries": 20986,
+      "files": 320,
+      "entries": 19735,
       "levels": {
         "N5": {
-          "files": 52,
-          "entries": 2533
+          "files": 39,
+          "entries": 1989
         },
         "N4": {
-          "files": 57,
-          "entries": 2817
+          "files": 45,
+          "entries": 2110
         },
         "N3": {
           "files": 67,
@@ -30,7 +30,7 @@
       "series": {
         "ShinKanzen": 5573,
         "hajimete": 8334,
-        "mimikara": 4274,
+        "mimikara": 3023,
         "minna": 2805
       }
     },
@@ -61,8 +61,8 @@
       }
     },
     "grammar": {
-      "files": 125,
-      "entries": 754,
+      "files": 384,
+      "entries": 1123,
       "levels": {
         "N5": {
           "files": 25,
@@ -73,22 +73,22 @@
           "entries": 100
         },
         "N3": {
-          "files": 25,
-          "entries": 100
+          "files": 83,
+          "entries": 158
         },
         "N2": {
-          "files": 25,
-          "entries": 191
+          "files": 163,
+          "entries": 332
         },
         "N1": {
-          "files": 25,
-          "entries": 245
+          "files": 88,
+          "entries": 415
         }
       }
     },
     "grammarExamples": {
-      "files": 125,
-      "entries": 4924,
+      "files": 384,
+      "entries": 6747,
       "levels": {
         "N5": {
           "files": 25,
@@ -99,22 +99,22 @@
           "entries": 1000
         },
         "N3": {
-          "files": 25,
-          "entries": 1000
+          "files": 83,
+          "entries": 1580
         },
         "N2": {
-          "files": 25,
-          "entries": 764
+          "files": 163,
+          "entries": 1328
         },
         "N1": {
-          "files": 25,
-          "entries": 980
+          "files": 88,
+          "entries": 1659
         }
       }
     },
     "grammarPractice": {
-      "files": 125,
-      "entries": 754,
+      "files": 384,
+      "entries": 1123,
       "levels": {
         "N5": {
           "files": 25,
@@ -125,20 +125,20 @@
           "entries": 100
         },
         "N3": {
-          "files": 25,
-          "entries": 100
+          "files": 83,
+          "entries": 158
         },
         "N2": {
-          "files": 25,
-          "entries": 191
+          "files": 163,
+          "entries": 332
         },
         "N1": {
-          "files": 25,
-          "entries": 245
+          "files": 88,
+          "entries": 415
         }
       },
       "generation": "generated-from-grammar-assets",
-      "authoredQuestions": 0
+      "authoredQuestions": 480
     },
     "immersion": {
       "files": 125,

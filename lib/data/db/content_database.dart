@@ -1422,9 +1422,10 @@ class ContentDatabase extends _$ContentDatabase {
     // One GROUP BY query replaces N sequential COUNT queries (one per level).
     final levelCol = grammarPoint.level;
     final countExpr = grammarPoint.id.count();
+    final maxLessonExpr = grammarPoint.lessonId.max();
     final rows =
         await (selectOnly(grammarPoint)
-              ..addColumns([levelCol, countExpr])
+              ..addColumns([levelCol, countExpr, maxLessonExpr])
               ..where(
                 grammarPoint.level.isIn(
                   specList.map((s) => s.levelLabel).toList(),
@@ -1435,8 +1436,15 @@ class ContentDatabase extends _$ContentDatabase {
     final counts = {
       for (final row in rows) row.read(levelCol)!: row.read(countExpr) ?? 0,
     };
+    final maxLessons = {
+      for (final row in rows) row.read(levelCol)!: row.read(maxLessonExpr) ?? 0,
+    };
     final missingSpecs = specList
-        .where((spec) => (counts[spec.levelLabel] ?? 0) == 0)
+        .where(
+          (spec) =>
+              (counts[spec.levelLabel] ?? 0) == 0 ||
+              (maxLessons[spec.levelLabel] ?? 0) < spec.endLesson,
+        )
         .toList(growable: false);
     if (missingSpecs.isNotEmpty) {
       await _seedMinnaGrammar(missingSpecs);
@@ -2321,9 +2329,9 @@ class _KanjiSeedSentinel {
 const _contentSeedSpecs = <_ContentSeedSpec>[
   _ContentSeedSpec('N5', 'n5', 1, 25, 'minna'),
   _ContentSeedSpec('N4', 'n4', 26, 50, 'minna'),
-  _ContentSeedSpec('N3', 'n3', 1, 25, 'ShinKanzen'),
-  _ContentSeedSpec('N2', 'n2', 1, 25, 'ShinKanzen'),
-  _ContentSeedSpec('N1', 'n1', 1, 25, 'ShinKanzen'),
+  _ContentSeedSpec('N3', 'n3', 1, 83, 'ShinKanzen'),
+  _ContentSeedSpec('N2', 'n2', 1, 163, 'ShinKanzen'),
+  _ContentSeedSpec('N1', 'n1', 1, 88, 'ShinKanzen'),
 ];
 
 _ContentSeedSpec? _contentSeedSpecForLevel(String level) {

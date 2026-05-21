@@ -25,6 +25,11 @@ void main() {
       'lib/features/flashcards/screens/enhanced_flashcard_screen.dart',
       'lib/features/conjugation/screens/conjugation_practice_screen.dart',
       'lib/features/grammar/widgets/cloze_test_widget.dart',
+      'lib/features/vocab/screens/hajimete_chapter_catalog_screen.dart',
+      'lib/features/vocab/screens/shinkanzen_lesson_catalog_screen.dart',
+      'lib/features/vocab/screens/mimikara_unit_catalog_screen.dart',
+      'lib/features/vocab/screens/vocab_detail_screen.dart',
+      'lib/features/kanji_reading/screens/kanji_reading_quiz_screen.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

@@ -8,6 +8,7 @@ import 'package:jpstudy/data/models/kanji_item.dart';
 import 'package:jpstudy/features/common/widgets/japanese_background.dart';
 import 'package:jpstudy/features/kanji_hub/kanji_copy.dart';
 import 'package:jpstudy/features/kanji_hub/providers/kanji_home_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import '../../../data/db/database_provider.dart';
 import '../../progress/providers/review_forecast_provider.dart';
 import '../../../core/services/fsrs_service.dart';
@@ -156,22 +157,23 @@ class _KanjiReadingQuizScreenState
           ],
         ),
         actions: [
-          TextButton(
+          AppButton(
+            label: language.doneLabel,
+            variant: AppButtonVariant.ghost,
             onPressed: () {
               Navigator.of(dialogContext).pop();
               Navigator.of(context).pop(ReadingQuizCompletion.done);
             },
-            child: Text(language.doneLabel),
           ),
           if (widget.allowContinueToWriting)
-            FilledButton(
+            AppButton(
+              label: language.kanjiPracticeWriteLabel(),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
                 Navigator.of(
                   context,
                 ).pop(ReadingQuizCompletion.continueToWriting);
               },
-              child: Text(language.kanjiPracticeWriteLabel()),
             ),
         ],
       ),
@@ -386,13 +388,11 @@ class _KanjiReadingQuizScreenState
                     SizedBox(
                       width: 160,
                       height: 48,
-                      child: FilledButton(
+                      child: AppButton(
+                        label: _isLast
+                            ? language.kanjiQuizFinishLabel()
+                            : language.kanjiQuizNextLabel(),
                         onPressed: _advance,
-                        child: Text(
-                          _isLast
-                              ? language.kanjiQuizFinishLabel()
-                              : language.kanjiQuizNextLabel(),
-                        ),
                       ),
                     )
                   else
@@ -448,21 +448,18 @@ class _SrsRatingRow extends StatelessWidget {
             _RatingButton(
               label: language.kanjiGradeHardLabel(),
               grade: 2,
-              color: palette.warning,
               onTap: onRate,
             ),
             const SizedBox(width: AppSpacing.sm),
             _RatingButton(
               label: language.kanjiGradeGoodLabel(),
               grade: 3,
-              color: palette.success,
               onTap: onRate,
             ),
             const SizedBox(width: AppSpacing.sm),
             _RatingButton(
               label: language.kanjiGradeEasyLabel(),
               grade: 4,
-              color: palette.info,
               onTap: onRate,
             ),
           ],
@@ -476,13 +473,11 @@ class _RatingButton extends StatelessWidget {
   const _RatingButton({
     required this.label,
     required this.grade,
-    required this.color,
     required this.onTap,
   });
 
   final String label;
   final int grade;
-  final Color color;
   final void Function(int grade) onTap;
 
   @override
@@ -490,20 +485,11 @@ class _RatingButton extends StatelessWidget {
     return SizedBox(
       width: 84,
       height: 44,
-      child: OutlinedButton(
+      child: AppButton(
+        label: label,
+        variant: AppButtonVariant.secondary,
+        compact: true,
         onPressed: () => onTap(grade),
-        style: OutlinedButton.styleFrom(
-          foregroundColor: color,
-          side: BorderSide(color: color, width: 1.5),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
-          ),
-          padding: EdgeInsets.zero,
-        ),
-        child: Text(
-          label,
-          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
-        ),
       ),
     );
   }

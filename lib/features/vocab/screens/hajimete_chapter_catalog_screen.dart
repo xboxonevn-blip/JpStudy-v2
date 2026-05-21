@@ -11,6 +11,7 @@ import 'package:jpstudy/data/utils/hajimete_catalog_loader.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
 import 'package:jpstudy/features/vocab/vocab_content_timeout.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class HajimeteChapterCatalogArgs {
   const HajimeteChapterCatalogArgs({
@@ -207,10 +208,12 @@ class _BackRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
     return Align(
       alignment: Alignment.centerLeft,
-      child: TextButton.icon(
+      child: AppButton(
+        label: _backLabel(language),
+        icon: Icons.arrow_back_rounded,
+        variant: AppButtonVariant.ghost,
         onPressed: () {
           if (Navigator.of(context).canPop()) {
             context.pop();
@@ -218,12 +221,6 @@ class _BackRow extends StatelessWidget {
           }
           context.openVocab();
         },
-        icon: const Icon(Icons.arrow_back_rounded),
-        label: Text(_backLabel(language)),
-        style: TextButton.styleFrom(
-          foregroundColor: palette.ink,
-          textStyle: const TextStyle(fontWeight: FontWeight.w800),
-        ),
       ),
     );
   }
@@ -313,7 +310,9 @@ class _Hero extends StatelessWidget {
             ),
           ],
           const SizedBox(height: AppSpacing.lg),
-          FilledButton.icon(
+          AppButton(
+            label: _reviewWholeLaneLabel(language),
+            icon: Icons.play_circle_fill_rounded,
             onPressed: () => context.openVocabReview(
               args: VocabReviewArgs(
                 source: 'core',
@@ -323,8 +322,6 @@ class _Hero extends StatelessWidget {
                 subtitle: args.subtitle ?? _heroSubtitle(language),
               ),
             ),
-            icon: const Icon(Icons.play_circle_fill_rounded),
-            label: Text(_reviewWholeLaneLabel(language)),
           ),
         ],
       ),
@@ -683,17 +680,15 @@ class _ChapterCard extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: AppSpacing.md),
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton.icon(
-                key: ValueKey('hajimete_chapter_open_${chapter.chapterId}'),
-                onPressed: () => context.openHajimeteChapter(
-                  levelCode: args.levelCode,
-                  chapterId: chapter.chapterId,
-                  title: args.title,
-                ),
-                icon: const Icon(Icons.menu_book_rounded),
-                label: Text(_openChapterLabel(language)),
+            AppButton(
+              key: ValueKey('hajimete_chapter_open_${chapter.chapterId}'),
+              label: _openChapterLabel(language),
+              icon: Icons.menu_book_rounded,
+              expanded: true,
+              onPressed: () => context.openHajimeteChapter(
+                levelCode: args.levelCode,
+                chapterId: chapter.chapterId,
+                title: args.title,
               ),
             ),
           ],

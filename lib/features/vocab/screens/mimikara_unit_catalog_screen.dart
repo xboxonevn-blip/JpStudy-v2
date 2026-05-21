@@ -10,6 +10,7 @@ import 'package:jpstudy/data/utils/mimikara_catalog_loader.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/vocab/vocab_content_timeout.dart';
 import 'package:jpstudy/features/vocab/vocab_copy.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class MimikaraUnitCatalogArgs {
   const MimikaraUnitCatalogArgs({
@@ -109,7 +110,10 @@ class _CatalogBody extends StatelessWidget {
       children: [
         Align(
           alignment: Alignment.centerLeft,
-          child: TextButton.icon(
+          child: AppButton(
+            label: _backLabel(language),
+            icon: Icons.arrow_back_rounded,
+            variant: AppButtonVariant.ghost,
             onPressed: () {
               if (Navigator.of(context).canPop()) {
                 context.pop();
@@ -117,8 +121,6 @@ class _CatalogBody extends StatelessWidget {
               }
               context.openVocab();
             },
-            icon: const Icon(Icons.arrow_back_rounded),
-            label: Text(_backLabel(language)),
           ),
         ),
         const SizedBox(height: AppSpacing.md),
@@ -206,7 +208,9 @@ class _Hero extends StatelessWidget {
             ],
           ),
           const SizedBox(height: AppSpacing.lg),
-          FilledButton.icon(
+          AppButton(
+            label: _reviewAllLabel(language),
+            icon: Icons.play_circle_fill_rounded,
             onPressed: catalog.totalTerms == 0
                 ? null
                 : () => context.openVocabReview(
@@ -216,8 +220,6 @@ class _Hero extends StatelessWidget {
                     title: args.title,
                     subtitle: args.subtitle ?? catalog.title,
                   ),
-            icon: const Icon(Icons.play_circle_fill_rounded),
-            label: Text(_reviewAllLabel(language)),
           ),
         ],
       ),

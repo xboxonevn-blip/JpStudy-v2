@@ -10,6 +10,7 @@ import 'package:jpstudy/data/utils/shinkanzen_catalog_loader.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/vocab/models/vocab_review_args.dart';
 import 'package:jpstudy/features/vocab/vocab_content_timeout.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class ShinkanzenLessonCatalogArgs {
   const ShinkanzenLessonCatalogArgs({
@@ -128,10 +129,12 @@ class _BackRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
     return Align(
       alignment: Alignment.centerLeft,
-      child: TextButton.icon(
+      child: AppButton(
+        label: _backLabel(language),
+        icon: Icons.arrow_back_rounded,
+        variant: AppButtonVariant.ghost,
         onPressed: () {
           if (Navigator.of(context).canPop()) {
             context.pop();
@@ -139,12 +142,6 @@ class _BackRow extends StatelessWidget {
           }
           context.openVocab();
         },
-        icon: const Icon(Icons.arrow_back_rounded),
-        label: Text(_backLabel(language)),
-        style: TextButton.styleFrom(
-          foregroundColor: palette.ink,
-          textStyle: const TextStyle(fontWeight: FontWeight.w800),
-        ),
       ),
     );
   }
@@ -215,7 +212,9 @@ class _Hero extends StatelessWidget {
             ],
           ),
           const SizedBox(height: AppSpacing.lg),
-          FilledButton.icon(
+          AppButton(
+            label: _reviewAllLabel(language),
+            icon: Icons.play_circle_fill_rounded,
             onPressed: catalog.totalTerms == 0
                 ? null
                 : () => context.openVocabReview(
@@ -227,8 +226,6 @@ class _Hero extends StatelessWidget {
                       subtitle: args.subtitle ?? catalog.title,
                     ),
                   ),
-            icon: const Icon(Icons.play_circle_fill_rounded),
-            label: Text(_reviewAllLabel(language)),
           ),
         ],
       ),

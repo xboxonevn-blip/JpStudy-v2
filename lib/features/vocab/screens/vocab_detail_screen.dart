@@ -17,6 +17,7 @@ import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/common/widgets/error_state_widget.dart';
 import 'package:jpstudy/features/interlink/widgets/related_section.dart';
 import 'package:jpstudy/features/vocab/providers/vocab_detail_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 String _tr(
   AppLanguage l, {
@@ -521,11 +522,11 @@ class _StudyUsageSection extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              ActionChip(
-                avatar: const Icon(Icons.volume_up_rounded, size: 18),
-                label: Text(
-                  _tr(language, en: 'Play audio', vi: 'Phát âm', ja: '音声'),
-                ),
+              AppButton(
+                label: _tr(language, en: 'Play audio', vi: 'Phát âm', ja: '音声'),
+                icon: Icons.volume_up_rounded,
+                variant: AppButtonVariant.secondary,
+                compact: true,
                 onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(
@@ -540,16 +541,16 @@ class _StudyUsageSection extends StatelessWidget {
                 ),
               ),
               if (canPracticeConjugation)
-                ActionChip(
-                  avatar: const Icon(Icons.swap_horiz_rounded, size: 18),
-                  label: Text(
-                    _tr(
-                      language,
-                      en: 'Practice forms',
-                      vi: 'Luyện chia thể',
-                      ja: '活用練習',
-                    ),
+                AppButton(
+                  label: _tr(
+                    language,
+                    en: 'Practice forms',
+                    vi: 'Luyện chia thể',
+                    ja: '活用練習',
                   ),
+                  icon: Icons.swap_horiz_rounded,
+                  variant: AppButtonVariant.secondary,
+                  compact: true,
                   onPressed: () =>
                       context.openConjugationHub(contentVocabId: vocab.id),
                 ),

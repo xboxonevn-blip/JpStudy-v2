@@ -2346,6 +2346,217 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-form-l1-001",
+      "template_id": "tpl-grammar-n5-012-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn từ để hỏi còn thiếu: これは ___ ですか。",
+      "answer_template": "何",
+      "options_template": [
+        "何",
+        "の",
+        "も",
+        "さん"
+      ],
+      "distractor_strategy": "wh-word-vs-particles-honorific",
+      "teaching_note": "何 là ô hỏi 'cái gì'; の/も/さん không hỏi tên đồ vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-form-l1-002",
+      "template_id": "tpl-grammar-n5-012-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng để hỏi 'Đây là cái gì?'",
+      "answer_template": "これは何ですか。",
+      "options_template": [
+        "これは何ですか。",
+        "このは何ですか。",
+        "これは何です。",
+        "これの何ですか。"
+      ],
+      "distractor_strategy": "standalone-kore-vs-adnominal-kono",
+      "teaching_note": "これ đứng một mình trước は; この phải có danh từ phía sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-012-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "それは何ですか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Cái đó là gì?",
+      "options_template": [
+        "Cái đó là gì?",
+        "Cái đó là sách phải không?",
+        "Cái đó cũng là sách.",
+        "Sách của cái đó."
+      ],
+      "distractor_strategy": "wh-question-vs-yes-no-additive-possession",
+      "teaching_note": "何ですか hỏi danh tính/loại vật, không xác nhận một mệnh đề đã nêu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-012-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong これは何ですか, 何 giữ vai trò gì?",
+      "answer_template": "Từ để hỏi 'cái gì', yêu cầu người nghe nêu tên hoặc loại của vật.",
+      "distractor_strategy": "nan-role-recall",
+      "teaching_note": "何 là chỗ thông tin còn trống; câu trả lời thường là N です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-usage-l3-005",
+      "template_id": "tpl-grammar-n5-012-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'Cái kia gần bạn là gì?': 何ですか / それは",
+      "answer_template": "それは何ですか。",
+      "options_template": [
+        "それは",
+        "何ですか"
+      ],
+      "distractor_strategy": "sore-wh-question-order",
+      "teaching_note": "それ chỉ vật gần người nghe; は đặt vật đó làm chủ đề câu hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-usage-l3-006",
+      "template_id": "tpl-grammar-n5-012-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "A hỏi: これは何ですか。Vật đó là từ điển. Trả lời ngắn gọn.",
+      "answer_template": "辞書です。",
+      "distractor_strategy": "fill-nan-with-noun-answer",
+      "teaching_note": "Trả lời bằng danh từ + です để lấp chỗ 何.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-context-l3-007",
+      "template_id": "tpl-grammar-n5-012-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Trong lớp, giáo viên giơ một đồ vật gần mình và hỏi cả lớp 'Đây là cái gì?'. Viết câu hỏi.",
+      "answer_template": "これは何ですか。",
+      "distractor_strategy": "classroom-object-near-speaker",
+      "teaching_note": "Vật gần người nói dùng これ; câu hỏi tên vật dùng 何ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-context-l2-008",
+      "template_id": "tpl-grammar-n5-012-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với これ/それ/あれ は 何ですか?",
+      "answer_template": "Bạn thấy một vật nhưng chưa biết tên hoặc loại của nó.",
+      "options_template": [
+        "Bạn thấy một vật nhưng chưa biết tên hoặc loại của nó.",
+        "Bạn muốn hỏi vật đó có phải là sách không.",
+        "Bạn muốn nói quyển sách này.",
+        "Bạn muốn gọi anh Tanaka lịch sự."
+      ],
+      "distractor_strategy": "wh-context-vs-yes-no-demonstrative-honorific",
+      "teaching_note": "Mẫu này dành cho câu hỏi mở về danh tính đồ vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-012-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: これは何ですか。Thực tế đó là bút. Câu trả lời nào phân tích đúng loại câu hỏi?",
+      "answer_template": "ペンです。",
+      "options_template": [
+        "ペンです。",
+        "はい、そうです。",
+        "いいえ、そうじゃありません。",
+        "これはペンですか。"
+      ],
+      "distractor_strategy": "wh-answer-vs-yes-no-response-analysis",
+      "teaching_note": "Vì câu hỏi có 何, câu trả lời phải nêu danh từ, không trả lời đúng/sai.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-012-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-012-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_2:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn hỏi tên vật, không phải hỏi 'có phải sách không'. Câu nào đúng mục tiêu?",
+      "answer_template": "これは何ですか。",
+      "options_template": [
+        "これは何ですか。",
+        "これは本ですか。",
+        "これは本です。",
+        "この本です。"
+      ],
+      "distractor_strategy": "open-wh-vs-yes-no-statement-fragment-analysis",
+      "teaching_note": "L4: chọn mẫu theo mục tiêu hỏi. 何ですか mở ô trả lời; 本ですか chỉ kiểm tra một giả thuyết.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

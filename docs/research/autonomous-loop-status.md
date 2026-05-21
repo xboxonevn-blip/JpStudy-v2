@@ -1816,3 +1816,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `S1 ですか、S2 ですか` asks the learner to choose a
   branch. Answer `本です` or `辞書です`, not a bare yes/no.
+
+## 2026-05-22 Phase G Tier-1 item 012
+
+- Re-authored `grammar:n5:grammar_n5_2:006` (`これ/それ/あれ は 何ですか`)
+  with 何/なん etymology, ko-so-a distance logic, and wh-question contrast.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `何ですか` asks for the missing noun. Answer with
+  `辞書です` or `ペンです`, not with `はい/いいえ`.

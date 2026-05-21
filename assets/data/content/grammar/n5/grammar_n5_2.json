@@ -218,10 +218,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: これ / それ / あれ は 何（なん） です か",
-      "meaning": "Ý nghĩa: `何` là từ để hỏi “cái gì”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "何 có âm Hán-Việt là 'hà', nghĩa gốc là 'gì/nào'. Về chữ, 何 gồm bộ nhân 亻 và phần 可, rồi phát triển thành từ nghi vấn. Trong mẫu これ/それ/あれ は 何ですか, 何 đọc là なん trước ですか để hỏi tên gọi của vật được chỉ.",
+      "hanVietBridge": "Liên hệ 'hà' trong các từ cổ như 'hà cớ': đều mang cảm giác hỏi điều chưa biết. Tiếng Việt hỏi 'Đây là cái gì?', còn tiếng Nhật dựng khung 'これ は 何 です か' với これ là vật đang chỉ và 何 là ô trống cần điền.",
+      "form": "Hình thức: これ/それ/あれ は 何ですか. Chọn これ, それ, hoặc あれ theo khoảng cách; đặt は sau vật được chỉ; dùng 何ですか để hỏi 'là gì?'.",
+      "meaning": "Ý nghĩa: hỏi tên gọi, loại đồ vật, hoặc nội dung của vật đang được chỉ: 'Đây/kia là cái gì?'. Đây là câu hỏi mở, không phải câu hỏi đúng/sai.",
+      "usage": "Sử dụng: dùng khi người nói thấy một vật nhưng chưa biết nó là gì. Trả lời bằng danh từ + です, như 本です, 辞書です, hoặc 日本語の本です.",
+      "humanMoment": "Dr. Linh lưu ý: これ/それ/あれ は 何ですか có 何 nên người hỏi đang chờ tên đồ vật. Khác これは本ですか, câu này không thể được giải quyết bằng はい; hãy lấp ô 何 bằng 本です, 辞書です, v.v.",
+      "crossLinks": [
+        {
+          "pattern": "これ/それ/あれ は N です",
+          "contrast": "khác vai trò: mẫu này trả lời bằng N, còn これ/それ/あれ は 何ですか dùng 何 để hỏi N là gì."
+        },
+        {
+          "pattern": "S ですか",
+          "contrast": "khác loại câu hỏi: S ですか xác nhận đúng/sai, trong khi 何ですか hỏi thông tin mở."
+        },
+        {
+          "pattern": "この/その/あの + N",
+          "contrast": "khác hình thức chỉ định: これ/それ/あれ đứng độc lập trước は, còn この/その/あの phải đi kèm danh từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

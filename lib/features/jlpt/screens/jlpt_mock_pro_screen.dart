@@ -11,6 +11,7 @@ import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/common/widgets/japanese_background.dart';
 import 'package:jpstudy/features/quiz/widgets/shared_answer_selection.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../data/jlpt_mock_bank.dart';
 import '../models/jlpt_coach_models.dart';
@@ -586,14 +587,12 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
             },
           ),
           const SizedBox(height: 14),
-          FilledButton.icon(
+          AppButton(
+            label: bankAsync.isLoading && sections.isEmpty
+                ? _loadingBankLabel(language)
+                : _startLabel(language),
+            icon: Icons.play_arrow_rounded,
             onPressed: sections.isEmpty ? null : () => _startExam(sections),
-            icon: const Icon(Icons.play_arrow_rounded),
-            label: Text(
-              bankAsync.isLoading && sections.isEmpty
-                  ? _loadingBankLabel(language)
-                  : _startLabel(language),
-            ),
           ),
           if (bankAsync.hasError) ...[
             const SizedBox(height: 10),
@@ -988,21 +987,19 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
             },
           ),
           const SizedBox(height: 12),
-          FilledButton.icon(
+          AppButton(
+            label: _isRefreshingBank
+                ? _tr(
+                    language,
+                    'Preparing new mock...',
+                    'Đang tạo đề mới...',
+                    '新しい模試を準備中...',
+                  )
+                : _startLabel(language),
+            icon: Icons.restart_alt_rounded,
             onPressed: _sections.isEmpty || _isRefreshingBank
                 ? null
                 : _restartExamWithFreshBank,
-            icon: const Icon(Icons.restart_alt_rounded),
-            label: Text(
-              _isRefreshingBank
-                  ? _tr(
-                      language,
-                      'Preparing new mock...',
-                      'Đang tạo đề mới...',
-                      '新しい模試を準備中...',
-                    )
-                  : _startLabel(language),
-            ),
           ),
         ],
       ),
@@ -1104,24 +1101,26 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
               Row(
                 children: [
                   Expanded(
-                    child: OutlinedButton.icon(
+                    child: AppButton(
+                      label: _finishNowLabel(language),
+                      icon: Icons.flag_rounded,
                       onPressed: _finishExam,
-                      icon: const Icon(Icons.flag_rounded),
-                      label: Text(_finishNowLabel(language)),
+                      variant: AppButtonVariant.secondary,
+                      expanded: true,
                     ),
                   ),
                   const SizedBox(width: 10),
                   Expanded(
-                    child: FilledButton.icon(
+                    child: AppButton(
+                      label:
+                          _sectionIndex == _sections.length - 1 &&
+                              _questionIndex ==
+                                  _currentSection.questions.length - 1
+                          ? _submitLabel(language)
+                          : _nextLabel(language),
+                      icon: Icons.navigate_next_rounded,
                       onPressed: _nextQuestion,
-                      icon: const Icon(Icons.navigate_next_rounded),
-                      label: Text(
-                        _sectionIndex == _sections.length - 1 &&
-                                _questionIndex ==
-                                    _currentSection.questions.length - 1
-                            ? _submitLabel(language)
-                            : _nextLabel(language),
-                      ),
+                      expanded: true,
                     ),
                   ),
                 ],
@@ -1192,20 +1191,15 @@ class _JlptMockProScreenState extends ConsumerState<JlptMockProScreen> {
                       onPressed: _finishExam,
                       icon: const Icon(Icons.flag_rounded, size: 20),
                     ),
-                    FilledButton(
-                      style: FilledButton.styleFrom(
-                        minimumSize: const Size(70, 34),
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        visualDensity: VisualDensity.compact,
-                      ),
+                    AppButton(
+                      label:
+                          _sectionIndex == _sections.length - 1 &&
+                              _questionIndex ==
+                                  _currentSection.questions.length - 1
+                          ? _submitLabel(language)
+                          : _nextLabel(language),
                       onPressed: _nextQuestion,
-                      child: Text(
-                        _sectionIndex == _sections.length - 1 &&
-                                _questionIndex ==
-                                    _currentSection.questions.length - 1
-                            ? _submitLabel(language)
-                            : _nextLabel(language),
-                      ),
+                      compact: true,
                     ),
                   ],
                 ),

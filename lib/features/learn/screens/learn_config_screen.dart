@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
@@ -162,25 +163,24 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
           Row(
             children: [
               Expanded(
-                child: ElevatedButton.icon(
+                child: AppButton(
+                  label: language.resumeButtonLabel,
+                  icon: Icons.play_arrow_rounded,
                   onPressed: widget.onResume,
-                  icon: const Icon(Icons.play_arrow_rounded),
-                  label: Text(language.resumeButtonLabel),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: palette.info,
-                    foregroundColor: Colors.white,
-                  ),
+                  expanded: true,
                 ),
               ),
               const SizedBox(width: 12),
-              TextButton(
+              AppButton(
+                label: language.discardButtonLabel,
                 onPressed: () async {
                   await widget.onDiscardResume?.call();
                   setState(() {
                     _resumeSnapshot = null;
                   });
                 },
-                child: Text(language.discardButtonLabel),
+                variant: AppButtonVariant.ghost,
+                compact: true,
               ),
             ],
           ),
@@ -201,20 +201,19 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
               .where((n) => n <= widget.maxTerms)
               .toSet()
               .map(
-                (count) => ChoiceChip(
-                  label: Text(
-                    count == widget.maxTerms
-                        ? language.allCountLabel(count)
-                        : '$count',
-                  ),
-                  selected: _config.questionCount == count,
-                  onSelected: (selected) {
-                    if (selected) {
-                      setState(() {
-                        _config = _config.copyWith(questionCount: count);
-                      });
-                    }
+                (count) => AppButton(
+                  label: count == widget.maxTerms
+                      ? language.allCountLabel(count)
+                      : '$count',
+                  onPressed: () {
+                    setState(() {
+                      _config = _config.copyWith(questionCount: count);
+                    });
                   },
+                  variant: _config.questionCount == count
+                      ? AppButtonVariant.primary
+                      : AppButtonVariant.secondary,
+                  compact: true,
                 ),
               )
               .toList(),
@@ -242,20 +241,23 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
           runSpacing: 8,
           children: QuestionType.values.map((type) {
             final isSelected = _config.enabledTypes.contains(type);
-            return FilterChip(
-              label: Text('${type.icon} ${type.label(language)}'),
-              selected: isSelected,
-              onSelected: (selected) {
+            return AppButton(
+              label: '${type.icon} ${type.label(language)}',
+              onPressed: () {
                 setState(() {
                   final types = List<QuestionType>.from(_config.enabledTypes);
-                  if (selected) {
-                    types.add(type);
-                  } else if (types.length > 1) {
+                  if (isSelected && types.length > 1) {
                     types.remove(type);
+                  } else if (!isSelected) {
+                    types.add(type);
                   }
                   _config = _config.copyWith(enabledTypes: types);
                 });
               },
+              variant: isSelected
+                  ? AppButtonVariant.primary
+                  : AppButtonVariant.secondary,
+              compact: true,
             );
           }).toList(),
         ),
@@ -314,24 +316,11 @@ class _LearnConfigScreenState extends ConsumerState<LearnConfigScreen> {
   }
 
   Widget _buildStartButton(BuildContext context, AppLanguage language) {
-    return SizedBox(
-      width: double.infinity,
-      height: 56,
-      child: ElevatedButton.icon(
-        onPressed: () => widget.onStart(_config),
-        icon: const Icon(Icons.play_arrow_rounded),
-        label: Text(
-          language.startLearningLabel,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-        ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: context.appPalette.primary,
-          foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-        ),
-      ),
+    return AppButton(
+      label: language.startLearningLabel,
+      icon: Icons.play_arrow_rounded,
+      onPressed: () => widget.onStart(_config),
+      expanded: true,
     );
   }
 }

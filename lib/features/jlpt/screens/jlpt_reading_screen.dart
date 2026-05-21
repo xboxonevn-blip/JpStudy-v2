@@ -10,6 +10,7 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/features/common/widgets/japanese_background.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../data/jlpt_reading_bank.dart';
 import '../models/jlpt_coach_models.dart';
@@ -717,7 +718,9 @@ class _JlptReadingScreenState extends ConsumerState<JlptReadingScreen> {
                 Row(
                   children: [
                     Expanded(
-                      child: OutlinedButton.icon(
+                      child: AppButton(
+                        label: _backLabel(language),
+                        icon: Icons.arrow_back_rounded,
                         onPressed: () {
                           _timer?.cancel();
                           setState(() {
@@ -726,26 +729,23 @@ class _JlptReadingScreenState extends ConsumerState<JlptReadingScreen> {
                             _snapshot = null;
                           });
                         },
-                        icon: const Icon(Icons.arrow_back_rounded),
-                        label: Text(_backLabel(language)),
+                        variant: AppButtonVariant.secondary,
+                        expanded: true,
                       ),
                     ),
                     const SizedBox(width: AppSpacing.sm),
                     Expanded(
-                      child: FilledButton.icon(
+                      child: AppButton(
+                        label: _submitted
+                            ? _restartLabel(language)
+                            : _submitLabel(language),
+                        icon: _submitted
+                            ? Icons.restart_alt_rounded
+                            : Icons.task_alt_rounded,
                         onPressed: _submitted
                             ? () => _startPassage(passage)
                             : _submit,
-                        icon: Icon(
-                          _submitted
-                              ? Icons.restart_alt_rounded
-                              : Icons.task_alt_rounded,
-                        ),
-                        label: Text(
-                          _submitted
-                              ? _restartLabel(language)
-                              : _submitLabel(language),
-                        ),
+                        expanded: true,
                       ),
                     ),
                   ],
@@ -1057,16 +1057,11 @@ class _ReadingPassageCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: AppSpacing.md),
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton.icon(
-              onPressed: onTap,
-              icon: const Icon(Icons.play_arrow_rounded),
-              label: Text(buttonLabel),
-              style: FilledButton.styleFrom(
-                minimumSize: const Size.fromHeight(48),
-              ),
-            ),
+          AppButton(
+            label: buttonLabel,
+            icon: Icons.play_arrow_rounded,
+            onPressed: onTap,
+            expanded: true,
           ),
           const SizedBox(height: AppSpacing.md),
           Container(
@@ -1844,10 +1839,11 @@ class _InlineNoticeCard extends StatelessWidget {
           ),
           if (actionLabel != null && onTap != null) ...[
             const SizedBox(height: 12),
-            OutlinedButton.icon(
+            AppButton(
+              label: actionLabel!,
+              icon: Icons.refresh_rounded,
               onPressed: onTap,
-              icon: const Icon(Icons.refresh_rounded),
-              label: Text(actionLabel!),
+              variant: AppButtonVariant.secondary,
             ),
           ],
         ],

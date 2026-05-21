@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/accessibility/reduced_motion.dart';
 import 'package:jpstudy/core/a11y_live_region.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
@@ -262,30 +263,16 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
                           ],
                         ),
                       ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 56,
-                      child: ElevatedButton(
-                        onPressed: _handleContinue,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: _isCorrect
-                              ? palette.success
-                              : palette.warning,
-                          foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                        child: Text(
-                          _isCorrect
-                              ? language.continueLabel
-                              : language.gotItLabel,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
+                    AppButton(
+                      label: _isCorrect
+                          ? language.continueLabel
+                          : language.gotItLabel,
+                      icon: Icons.navigate_next_rounded,
+                      onPressed: _handleContinue,
+                      expanded: true,
+                      variant: _isCorrect
+                          ? AppButtonVariant.primary
+                          : AppButtonVariant.secondary,
                     ),
                   ],
                 ),
@@ -424,7 +411,11 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
         if (widget.config.enableHints) ...[
           Align(
             alignment: Alignment.centerLeft,
-            child: TextButton.icon(
+            child: AppButton(
+              label: showContextHint
+                  ? language.contextualHintUsedLabel
+                  : language.contextualHintButtonLabel,
+              icon: Icons.lightbulb_outline,
               onPressed: showContextHint
                   ? null
                   : () {
@@ -432,12 +423,8 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
                         _contextHintsShown.add(question.id);
                       });
                     },
-              icon: const Icon(Icons.lightbulb_outline),
-              label: Text(
-                showContextHint
-                    ? language.contextualHintUsedLabel
-                    : language.contextualHintButtonLabel,
-              ),
+              variant: AppButtonVariant.ghost,
+              compact: true,
             ),
           ),
           if (showContextHint)

@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import '../../../core/accessibility/reduced_motion.dart';
 import '../../../core/app_language.dart';
 import '../../../core/language_provider.dart';
@@ -176,15 +177,13 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
         ),
         actions: [
           Center(
-            child: TextButton(
+            child: AppButton(
+              label: language.ghostPracticeFinishLabel,
               onPressed: () {
                 context.pop(); // Close dialog
                 context.pop(); // Close screen
               },
-              child: Text(
-                language.ghostPracticeFinishLabel,
-                style: const TextStyle(fontSize: 18),
-              ),
+              variant: AppButtonVariant.ghost,
             ),
           ),
         ],
@@ -359,26 +358,13 @@ class _GhostPracticeScreenState extends ConsumerState<GhostPracticeScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          ElevatedButton(
+                          AppButton(
+                            label: _currentIndex < quizItems.length - 1
+                                ? language.ghostPracticeNextQuestionLabel
+                                : language.ghostPracticeFinishLabel,
+                            icon: Icons.navigate_next_rounded,
                             onPressed: () => _nextQuestion(quizItems.length),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: context.appPalette.primary,
-                              foregroundColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              elevation: 0,
-                            ),
-                            child: Text(
-                              _currentIndex < quizItems.length - 1
-                                  ? language.ghostPracticeNextQuestionLabel
-                                  : language.ghostPracticeFinishLabel,
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                            expanded: true,
                           ),
                           const SizedBox(height: 12),
                         ],

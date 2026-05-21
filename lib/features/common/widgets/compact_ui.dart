@@ -4,6 +4,7 @@ import 'package:jpstudy/app/layout/app_responsive_frame.dart';
 import 'package:jpstudy/app/theme/app_spacing.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/features/common/widgets/japanese_background.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 enum AppStatusTone { primary, success, warning, neutral }
 
@@ -33,27 +34,6 @@ class AppPageShell extends StatelessWidget {
   }
 }
 
-class _AmbientOrb extends StatelessWidget {
-  const _AmbientOrb({required this.size, required this.colors});
-
-  final double size;
-  final List<Color> colors;
-
-  @override
-  Widget build(BuildContext context) {
-    return IgnorePointer(
-      child: Container(
-        width: size,
-        height: size,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: RadialGradient(colors: colors),
-        ),
-      ),
-    );
-  }
-}
-
 class AppSectionCard extends StatelessWidget {
   const AppSectionCard({
     super.key,
@@ -66,7 +46,6 @@ class AppSectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
     return LayoutBuilder(
       builder: (context, constraints) {
         final width = constraints.maxWidth.isFinite
@@ -75,29 +54,9 @@ class AppSectionCard extends StatelessWidget {
         final resolvedPadding = padding == const EdgeInsets.all(AppSpacing.xl)
             ? AppFluidMetrics.sectionPaddingFor(width)
             : padding;
-        return Container(
+        return AppCard(
+          variant: AppCardVariant.elevated,
           padding: resolvedPadding,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [palette.elevated, palette.base],
-            ),
-            borderRadius: BorderRadius.circular(28),
-            border: Border.all(color: palette.outline.withValues(alpha: 0.95)),
-            boxShadow: [
-              BoxShadow(
-                color: palette.primary.withValues(alpha: 0.08),
-                blurRadius: 28,
-                offset: const Offset(0, 14),
-              ),
-              BoxShadow(
-                color: palette.ink.withValues(alpha: 0.04),
-                blurRadius: 10,
-                offset: const Offset(0, 2),
-              ),
-            ],
-          ),
           child: child,
         );
       },
@@ -246,42 +205,13 @@ class AppStatusChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = context.appPalette;
-    final colors = switch (tone) {
-      AppStatusTone.primary => (
-        palette.primary.withValues(alpha: 0.12),
-        palette.primary,
-      ),
-      AppStatusTone.success => (
-        palette.success.withValues(alpha: 0.14),
-        palette.success,
-      ),
-      AppStatusTone.warning => (
-        palette.warning.withValues(alpha: 0.16),
-        palette.warning,
-      ),
-      AppStatusTone.neutral => (
-        palette.outlineSoft,
-        palette.ink.withValues(alpha: 0.72),
-      ),
+    final chipTone = switch (tone) {
+      AppStatusTone.primary => AppChipTone.primary,
+      AppStatusTone.success => AppChipTone.success,
+      AppStatusTone.warning => AppChipTone.warning,
+      AppStatusTone.neutral => AppChipTone.neutral,
     };
-
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 7),
-      decoration: BoxDecoration(
-        color: colors.$1,
-        borderRadius: BorderRadius.circular(AppSpacing.radiusPill),
-        border: Border.all(color: colors.$2.withValues(alpha: 0.18)),
-      ),
-      child: Text(
-        label,
-        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-          color: colors.$2,
-          fontWeight: FontWeight.w800,
-          letterSpacing: 0.2,
-        ),
-      ),
-    );
+    return AppChip(label: label, tone: chipTone);
   }
 }
 
@@ -361,100 +291,60 @@ class AppFeatureCard extends StatelessWidget {
     final palette = context.appPalette;
     return AppSectionCard(
       padding: EdgeInsets.all(compact ? AppSpacing.lg : AppSpacing.xl),
-      child: Stack(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Positioned(
-            top: -34,
-            right: -22,
-            child: _AmbientOrb(
-              size: compact ? 120 : 150,
-              colors: [
-                palette.accent.withValues(alpha: 0.16),
-                palette.accent.withValues(alpha: 0.02),
-              ],
-            ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Row(
             children: [
-              Row(
-                children: [
-                  Container(
-                    width: compact ? 46 : 54,
-                    height: compact ? 46 : 54,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [palette.primary, palette.secondary],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                    child: Icon(
-                      icon,
-                      color: Colors.white,
-                      size: compact ? 22 : 26,
-                    ),
-                  ),
-                  const SizedBox(width: AppSpacing.md),
-                  Expanded(
-                    child: Text(
-                      title,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontSize: compact ? 18 : 24,
-                        fontWeight: FontWeight.w900,
-                        color: palette.ink,
-                        height: 1.15,
-                      ),
-                    ),
-                  ),
-                  if (status != null) ...[
-                    const SizedBox(width: AppSpacing.sm),
-                    status!,
-                  ],
-                ],
+              AppIcon(
+                icon: icon,
+                color: palette.primary,
+                size: compact ? 46 : 54,
               ),
-              const SizedBox(height: AppSpacing.md),
-              Container(
-                width: 56,
-                height: 4,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(999),
-                  gradient: LinearGradient(
-                    colors: [palette.accent, palette.secondary],
+              const SizedBox(width: AppSpacing.md),
+              Expanded(
+                child: Text(
+                  title,
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontSize: compact ? 18 : 24,
+                    fontWeight: FontWeight.w900,
+                    color: palette.ink,
+                    height: 1.15,
                   ),
                 ),
               ),
-              const SizedBox(height: AppSpacing.md),
-              Text(
-                subtitle,
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  height: 1.55,
-                  color: palette.ink.withValues(alpha: 0.76),
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              if (primaryLabel != null || secondaryLabel != null) ...[
-                const SizedBox(height: AppSpacing.lg),
-                Wrap(
-                  spacing: AppSpacing.sm,
-                  runSpacing: AppSpacing.sm,
-                  children: [
-                    if (primaryLabel != null && onPrimaryTap != null)
-                      FilledButton(
-                        onPressed: onPrimaryTap,
-                        child: Text(primaryLabel!),
-                      ),
-                    if (secondaryLabel != null && onSecondaryTap != null)
-                      OutlinedButton(
-                        onPressed: onSecondaryTap,
-                        child: Text(secondaryLabel!),
-                      ),
-                  ],
-                ),
+              if (status != null) ...[
+                const SizedBox(width: AppSpacing.sm),
+                status!,
               ],
             ],
           ),
+          const AppDivider(spacing: AppSpacing.md),
+          Text(
+            subtitle,
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              height: 1.55,
+              color: palette.ink.withValues(alpha: 0.76),
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          if (primaryLabel != null || secondaryLabel != null) ...[
+            const SizedBox(height: AppSpacing.lg),
+            Wrap(
+              spacing: AppSpacing.sm,
+              runSpacing: AppSpacing.sm,
+              children: [
+                if (primaryLabel != null && onPrimaryTap != null)
+                  AppButton(label: primaryLabel!, onPressed: onPrimaryTap),
+                if (secondaryLabel != null && onSecondaryTap != null)
+                  AppButton(
+                    label: secondaryLabel!,
+                    onPressed: onSecondaryTap,
+                    variant: AppButtonVariant.secondary,
+                  ),
+              ],
+            ),
+          ],
         ],
       ),
     );

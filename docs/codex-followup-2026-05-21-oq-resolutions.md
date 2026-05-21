@@ -28,13 +28,14 @@
 
 | Sprint | Phase | Item | Source | Deadline |
 |---|---|---|---|---|
-| 1 | A | Fix Kanji tab placeholder (P0) | audit 2026-05-21 | ASAP today |
-| 1 | B | Mimikara N1-N5 lessons live (OQ-005) | OQ-005 | **2026-05-22 EOD** |
+| 1 | **A0** | **Architecture correction (BLOCKING all)** — delete Mimikara N4/N5 bogus, restructure Shin Kanzen to Bunpou-only 83/163/88 | OQ-014 + OQ-015 | **FIRST, before A** |
+| 1 | A | Fix Kanji tab placeholder (P0) | audit 2026-05-21 | after A0 |
+| 1 | B | Mimikara N1-N3 lessons live (scope corrected from N1-N5) | OQ-005 (revised) | **2026-05-22 EOD** |
 | 1 | C | Fill 4 missing Mimikara units (OQ-011) | OQ-011 | with Sprint 1 |
 | 1 | D | Grammar fallback Tae Kim integration (OQ-013) | OQ-013 | with Sprint 1 |
 | 2 | E | Vocab `example_sentences[]` field + flashcard wire-up (OQ-006) | OQ-006 | 2026-05-23 |
 | 3 | F | Reading comp scale-up ~888 passages (OQ-008) | OQ-008 | 2026-05-25 |
-| 4 | G | Hand-crafted exercise templates per-item, variant fallback (OQ-007) | OQ-007 | 2026-05-28 |
+| 4 | G | Hand-crafted exercise templates (b1 refined: Top-200 Tier1 + 21K Tier2) | OQ-007 | 2026-05-28 |
 
 ## 2. NEW DIRECTIVE E REMINDER
 
@@ -50,6 +51,124 @@ Tài liệu reference: Heisig RTK, Henshall, Hadamitzky-Spahn, Krashen,
 Paivio, Roediger-Karpicke, Craik-Lockhart, Sweller.
 
 ## 3. SPRINT 1 — Day 1 (Today + 2026-05-22)
+
+### Phase A0 — Architecture correction (P0, BLOCKING all other phases)
+
+**Source**: Owner correction 2026-05-21 + OQ-014 DELETE + OQ-015 default action.
+
+Owner clarified textbook architecture is **product-catalog-by-category**,
+not "all textbooks at every level". Megaprompt §5.1 (Claude error) wrongly
+listed Mimikara N5/N4 and gave Shin Kanzen wrong scope. Codex followed
+spec, so this is a Claude-spec bug being corrected NOW.
+
+#### Correct architecture (single source of truth)
+
+**VOCAB textbooks**:
+| Textbook | Levels | Lessons | Status |
+|---|---|---|---|
+| Hajimete Tango | N5, N4, N3, N2, N1 | 14/20/28/38/50 | KEEP — already correct |
+| Minna no Nihongo | N5, N4 | 25/25 | KEEP — vocab+grammar dual category OK |
+| Mimikara | N3, N2, N1 | 12/13/14 | KEEP — already correct |
+| ~~Mimikara N5/N4~~ | DOES NOT EXIST | 0 | **DELETE** (bogus data) |
+
+**GRAMMAR textbooks**:
+| Textbook | Levels | Lessons | Status |
+|---|---|---|---|
+| Minna no Nihongo Bunpou | N5, N4 | 25/25 | KEEP via Minna `grammar,vocab` tag |
+| Shin Kanzen Master Bunpou | N3, N2, N1 | **83/163/88** | **RESTRUCTURE** (was 25/25/25 grammar+vocab+kanji) |
+
+**KANJI**: canonical_kanji_n5-n1 unchanged.
+
+**STANDALONE**: Bảng chia thể (Directive F.6) unchanged.
+
+#### Implementation
+
+**A0.1 — DELETE bogus Mimikara N4/N5**
+
+1. Delete directories:
+   - `assets/data/content/vocab/n4/mimikara/` (entire tree)
+   - `assets/data/content/vocab/n5/mimikara/` (entire tree)
+2. Remove from `lib/data/manifests/textbook_index.json`:
+   - `mimikara_n4` entry
+   - `mimikara_n5` entry
+3. Audit `assets/data/content/interlink_graph/interlink_graph.json`:
+   - Find all nodes with `textbook: "mimikara"` AND `level: "N4"` or `"N5"`
+   - Remove these nodes AND remove all edges that reference them (both `from` and `to`)
+   - Re-run interlink graph builder to validate 0 orphan edges
+4. Audit `assets/data/content/exercises/exercise_coverage_manifest.json`:
+   - Remove items where `textbook_id` matches `mimikara_n4` or `mimikara_n5`
+5. Search-and-destroy:
+   ```
+   grep -rln "mimikara_n4\|mimikara_n5\|source-gap-fallback-OQ014" lib/ assets/ tool/
+   ```
+   Remove ALL references; if a reference is essential for backward compat,
+   replace with neutral fallback or comment explaining removal.
+6. UI verify: Mimikara card ONLY renders for N1/N2/N3 in vocab section.
+
+**A0.2 — RESTRUCTURE Shin Kanzen Bunpou**
+
+1. Update `textbook_index.json` entries `shinkanzen_n3/n2/n1`:
+   - Change `name_ja` to "新完全マスター 文法 N3" (etc.)
+   - Change `name_vi` to "Shin Kanzen Master 文法 N3" (etc.)
+   - Change `categories` from `["grammar","vocab","kanji"]` to `["grammar"]`
+   - Change `lesson_count`: N3 → 83, N2 → 163, N1 → 88
+   - Add `source_credit` per OQ-015 default
+2. Lesson scaffolding per OQ-015 default action:
+   - Scrape publisher catalog metadata (whitelist only) for authoritative
+     lesson titles + grammar patterns covered per Shin Kanzen book
+   - Build `lesson_index_shinkanzen_n3.json` with 83 entries (theme, patterns)
+   - Build `lesson_index_shinkanzen_n2.json` with 163 entries
+   - Build `lesson_index_shinkanzen_n1.json` with 88 entries
+3. Content authoring:
+   - For each lesson, author 5-10 grammar patterns
+   - Source: Tae Kim Grammar Guide (CC-BY-NC-SA, attribution required) +
+     existing app grammar data + Directive E.5 Research Ladder fallback
+   - Apply Directive E.3 (form/meaning/usage Multi-Perspective)
+   - Apply Directive E.4 (1 Human Moment per lesson — Dr. Linh-Phan-Trần
+     style anecdote about pattern usage in Japanese-Vietnamese contrast)
+   - Apply Directive E.7 (Teaching Test before commit)
+4. Existing 25-lesson Shin Kanzen data preservation:
+   - Migrate existing items into Shin Kanzen lesson structure where match
+   - Items that don't fit Shin Kanzen lesson structure → migrate to a
+     "JpStudy curated grammar" supplementary track (don't delete)
+5. Cross-link Shin Kanzen patterns to vocab + kanji per Directive F.4
+
+**A0.3 — VERIFY Minna grammar+vocab dual categorization**
+
+1. Check `textbook_index.json` `minna_n5` + `minna_n4` entries:
+   - `categories` should contain BOTH `"grammar"` AND `"vocab"`
+   - This is CORRECT — Minna textbook teaches both
+2. Verify UI renders Minna in:
+   - Vocab section (vocab N5 / vocab N4 list)
+   - Grammar section (grammar N5 / grammar N4 list)
+3. Backend: same lesson_id maps to vocab + grammar views (no duplication)
+
+**A0.4 — VERIFY Hajimete vocab data**
+
+1. `textbook_index.json` shows hajimete_tango_n5 (14 lessons), n4 (20), n3 (28), n2 (38), n1 (50)
+2. Verify lesson files exist:
+   - `assets/data/content/vocab/n*/hajimete/hajimete_ch*.json`
+   - Count must match `lesson_count`
+3. Verify cross-link edges in `interlink_graph.json` resolve to Hajimete items
+4. If any lesson count mismatch → log DECISION + sync
+
+#### Acceptance Phase A0 (BLOCKING)
+
+- [ ] `grep -rln "mimikara_n4\|mimikara_n5" lib/ assets/ tool/` → 0 matches
+- [ ] `textbook_index.json` has 18 entries (down from 20: removed Mimikara N4/N5)
+- [ ] Shin Kanzen N3/N2/N1 entries show 83/163/88 lessons, grammar only category
+- [ ] `lesson_index_shinkanzen_n3.json` exists with 83 lesson entries
+- [ ] `lesson_index_shinkanzen_n2.json` exists with 163 lesson entries
+- [ ] `lesson_index_shinkanzen_n1.json` exists with 88 lesson entries
+- [ ] Interlink graph orphan audit: 0 broken edges
+- [ ] DECISION logged in `decisions-log-2026-05-21.md`:
+      "Mimikara N4/N5 deleted, Shin Kanzen restructured to Bunpou grammar-only"
+- [ ] Live verify on jpstudy.web.app: Vocab section shows correct textbooks
+      per level; Grammar section shows Minna N5/N4 + Shin Kanzen N3/N2/N1
+      with correct lesson counts
+
+**Phase A0 BLOCKS Phase A, B, C, D, E, F, G**. Architecture must be
+correct before any other content work.
 
 ### Phase A — Fix Kanji tab placeholder (P0)
 
@@ -101,34 +220,38 @@ Owner explicit complaint trong screenshot session 2026-05-21 turn 1:
 - [ ] DECISION-007 OVERTURNED logged
 - [ ] Live verify trên jpstudy.web.app
 
-### Phase B — Mimikara N1-N5 lessons live (OQ-005 deadline 2026-05-22)
+### Phase B — Mimikara N1-N3 lessons live (OQ-005 deadline 2026-05-22)
 
 **Source**: OQ-005 confirmed with hard deadline **2026-05-22 EOD**.
+**Scope corrected**: Per OQ-014 DELETE, Mimikara only exists at N3, N2, N1
+(NOT N5/N4 — those were bogus). Phase A0 already deletes N5/N4 records.
 
-Hiện tại Mimikara textbook records có `migration_status: planned_source_pending`.
-Phải đổi sang `live` với lessons populated.
+Hiện tại Mimikara N3/N2/N1 textbook records có `migration_status: live`
+(per textbook_index check). Verify chất lượng + acceptance.
 
 #### Implementation
 
-1. Verify QA-A-030 vocab extraction đã cover Mimikara N1/N2/N3 (xong)
-2. Extract Mimikara N4 + N5 nếu có local PDFs:
-   ```
-   ls "C:/Users/xboxo/Desktop/PC/Tai lieu JPStudy/Tu Vung/" | grep -i mimikara
-   ```
-   Nếu không có N4/N5 PDFs → log OQ-014 (Mimikara N4/N5 source gap) +
-   dùng online whitelist (OQ-011 pattern)
-3. Build lesson manifests cho Mimikara N1-N5
-4. Update `textbook_index.json`: `migration_status: live` cho Mimikara
-5. Wire lesson detail pages cho Mimikara routes
-6. Add cross-link edges trong `interlink_graph.json` cho Mimikara vocab
-7. Apply Directive E.2 (Hán-Việt Bridge) + E.4 (Human Moment) cho mọi
+1. Verify QA-A-030 vocab extraction đã cover Mimikara N1/N2/N3 (xong per
+   loop-status entries 2026-05-21 Phase 1)
+2. Skip step "extract Mimikara N4/N5" — they don't exist (Phase A0 deletes)
+3. Validate lesson manifests for Mimikara N1/N2/N3:
+   - `lesson_index_mimikara_n1.json` should have 14 lesson entries
+   - `lesson_index_mimikara_n2.json` should have 13 lesson entries
+   - `lesson_index_mimikara_n3.json` should have 12 lesson entries
+4. `migration_status: live` confirmed (already in textbook_index)
+5. Wire lesson detail pages for Mimikara routes if not done
+6. Add cross-link edges in `interlink_graph.json` for Mimikara vocab
+7. Apply Directive E.2 (Hán-Việt Bridge) + E.4 (Human Moment) for all
    Mimikara content explanation
 
 #### Acceptance Phase B (DEADLINE 2026-05-22 EOD)
 
-- [ ] Mimikara N1-N5 hiển thị trong textbook list của level tương ứng
-- [ ] Click Mimikara N1 → 14 units (hoặc số units thực tế) hiện ra
-- [ ] Click unit → vocab list của unit đó
+- [ ] Mimikara N1/N2/N3 hiển thị trong vocab section của level tương ứng
+- [ ] Mimikara KHÔNG hiển thị cho N5/N4 (xóa từ Phase A0)
+- [ ] Click Mimikara N1 → 14 units hiện ra
+- [ ] Click Mimikara N2 → 13 units
+- [ ] Click Mimikara N3 → 12 units
+- [ ] Click unit → vocab list của unit đó với explanation per Directive E
 - [ ] Cross-link: vocab Mimikara link tới grammar/kanji liên quan
 - [ ] Live verify trên jpstudy.web.app
 - [ ] DECISION logged
@@ -430,8 +553,9 @@ Same whitelist. Reminder:
 ## 10. ACCEPTANCE GATE — Sprint 1-4 đầy đủ
 
 ### Sprint 1 acceptance (by EOD 2026-05-22)
+- [ ] **Phase A0: Architecture corrected — Mimikara N4/N5 deleted, Shin Kanzen restructured to Bunpou 83/163/88**
 - [ ] Phase A: Kanji tab placeholder removed, audit-wide sweep clean
-- [ ] Phase B: Mimikara N1-N5 live, lessons + units populated
+- [ ] Phase B: Mimikara N1-N3 live (NOT N4/N5), lessons + units populated
 - [ ] Phase C: 4 missing units filled with online whitelist, deduped
 - [ ] Phase D: Grammar fallback Tae Kim integrated
 
@@ -467,13 +591,17 @@ Final entry `autonomous-loop-status.md`:
 
 ## 11. INITIAL ACTION — start NOW
 
-1. Read CLAUDE.md, agent-directives.md (Directive E + F), OQ log
+1. Read CLAUDE.md, agent-directives.md (Directive E + F), OQ log (including
+   NEW OQ-014 DELETE + OQ-015 Shin Kanzen restructure)
 2. Append kickoff entry to autonomous-loop-status.md
-3. Start Phase A (Kanji tab fix) FIRST — quickest, most-visible owner-flagged defect
-4. Then Phase B-D in parallel (Sprint 1)
-5. Then Phase E (Sprint 2)
-6. Then Phase F (Sprint 3)
-7. Then Phase G (Sprint 4)
+3. **Start Phase A0 (Architecture correction) FIRST** — this BLOCKS all
+   other phases. Delete Mimikara N4/N5 bogus + restructure Shin Kanzen
+   to Bunpou-only 83/163/88 lessons
+4. Then Phase A (Kanji tab fix) — quickest visible defect
+5. Then Phase B-D in parallel (Sprint 1)
+6. Then Phase E (Sprint 2)
+7. Then Phase F (Sprint 3)
+8. Then Phase G (Sprint 4)
 
 KHÔNG hỏi owner trong sprint. Tự quyết theo Decision Matrix §14 megaprompt.
 Log mọi DECISIONS + OQs. Skip blocking OQ và làm phase khác. Run đến

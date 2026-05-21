@@ -101,3 +101,25 @@ Scope estimate: Mina I (25 × 2 = 50) + Mina II (25 × 2 = 50) + Hajimete N5 (50
 **Blocking**: no
 **Default action taken**: Proceed vocab-first for Phase 1. If grammar facts are not present in these files, run a separate local-folder inventory before grammar app mutation.
 **Owner answer**: FALLBACK 2026-05-21 — Claude verified `C:/Users/xboxo/Desktop/PC/Tai lieu JPStudy/` root and confirmed NO dedicated grammar folder exists (only `Ebook`, `Kanji`, `Tu Vung`, `Trick tai tai lieu bi khoa`). Owner authorizes Codex to use: (1) existing app grammar data, (2) Tae Kim Grammar Guide (CC-BY-NC-SA, attribution required) as the grammar reference fallback per Directive E.5 Research Ladder. Apply Directive E.3 Multi-Perspective to grammar explanations (form / meaning / usage angles).
+
+## OQ-014 - Mimikara N4/N5 source gap
+**Phase**: Follow-up Sprint 1 Phase B
+**Date**: 2026-05-21 18:30
+**Blocking**: no
+**Default action taken**: No local Mimikara N4/N5 PDFs were found under `C:/Users/xboxo/Desktop/PC/Tai lieu JPStudy/Tu Vung`. To meet OQ-005's live-lane deadline without fabricating a source, Codex generated Mimikara N4/N5 as a visibly live fallback from owner-provided local kanji-vocab factual rows. These rows are tagged `source-gap-fallback-OQ014`; owner can replace them when a dedicated Mimikara N4/N5 source arrives.
+**Owner answer**: DELETE 2026-05-21 — Owner clarified architecture: Mimikara series (耳から覚える 語彙) ONLY exists for N3, N2, N1. There is NO Mimikara N4 or N5 product. Megaprompt §5.1 (authored by Claude) wrongly listed Mimikara N5/N4; Codex correctly flagged gap via OQ-014 but the fallback should not have shipped. Action: (1) delete `assets/data/content/vocab/n4/mimikara/` and `n5/mimikara/` directories, (2) remove `mimikara_n4` + `mimikara_n5` entries from `lib/data/manifests/textbook_index.json`, (3) audit `interlink_graph.json` for orphan edges pointing to deleted Mimikara N4/N5 nodes, (4) live verify Mimikara card only renders for N1/N2/N3.
+
+## OQ-015 - Shin Kanzen Master Bunpou lesson source
+**Phase**: Follow-up Sprint 1 Architecture Correction
+**Date**: 2026-05-21 (Claude flagged)
+**Blocking**: no
+**Context**: Owner clarified Shin Kanzen Master scope is grammar only (Bunpou): N3 = 83 lessons, N2 = 163 lessons, N1 = 88 lessons. Current `shinkanzen_n3/n2/n1` textbook entries incorrectly carry categories `grammar,vocab,kanji` with 25 lessons each. Local search `C:/Users/xboxo/Desktop/PC/Tai lieu JPStudy/` returned 0 Shin Kanzen Bunpou PDFs.
+**Default action**: (1) Restructure `shinkanzen_n3/n2/n1` to category `grammar` only with correct lesson counts 83/163/88. (2) For lesson scaffolding, scrape Shin Kanzen Bunpou publisher catalog metadata (whitelist: official publisher website link-only, Wikipedia, Tofugu, MEXT registry) to get authoritative lesson titles + grammar patterns covered. (3) Author lesson content from Tae Kim Grammar Guide (CC-BY-NC-SA, per OQ-013) + existing app grammar data + Directive E.5 Research Ladder fallback chain. (4) Apply Directive E.3 Multi-Perspective + E.4 Human Moment + E.7 Teaching Test. (5) Existing 25 grammar lessons per level (n3/n2/n1 currently in `assets/data/content/grammar/`) preserved as "JpStudy curated grammar" track or merged into Shin Kanzen as best-fit; do not delete existing content. Owner can override default if Shin Kanzen Bunpou PDFs become available.
+**Owner answer**: pending (default action acceptable to proceed; OQ remains open in case owner finds PDFs)
+
+## OQ-D-001 - Grammar Directive E UI rendering
+**Phase**: Follow-up Sprint 1 Phase D
+**Date**: 2026-05-21 19:35
+**Blocking**: no
+**Default action taken**: Grammar assets now carry `directiveE.form`, `directiveE.meaning`, `directiveE.usage`, and `directiveE.humanMoment` plus Tae Kim fallback attribution. Sprint 1 kept DB schema stable and did not yet decide whether grammar detail should render these as tabs or a compact study card.
+**Owner answer**: pending

@@ -1,0 +1,1418 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T18:30:00+07:00",
+  "textbook_id": "mimikara_n1",
+  "lesson_id": "mimikara_n1_01",
+  "items": [
+    {
+      "item_id": "vocab:n1:mimikara:01:青春",
+      "type": "vocab",
+      "surface": "青春",
+      "reading": "せいしゅん",
+      "label_ja": "青春",
+      "label_vi": "tuổi trẻ;mùa xuân của cuộc đời;tuổi thanh xuân",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_001",
+        "key": "vocab/n1/mimikara/unit_01.json#青春"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:晩年",
+      "type": "vocab",
+      "surface": "晩年",
+      "reading": "ばんねん",
+      "label_ja": "晩年",
+      "label_vi": "Cuối đời",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_002",
+        "key": "vocab/n1/mimikara/unit_01.json#晩年"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:葬式",
+      "type": "vocab",
+      "surface": "葬式",
+      "reading": "そうしき",
+      "label_ja": "葬式",
+      "label_vi": "Đám tang",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_003",
+        "key": "vocab/n1/mimikara/unit_01.json#葬式"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:世帯",
+      "type": "vocab",
+      "surface": "世帯",
+      "reading": "せたい",
+      "label_ja": "世帯",
+      "label_vi": "hộ gia đình",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_004",
+        "key": "vocab/n1/mimikara/unit_01.json#世帯"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:世間",
+      "type": "vocab",
+      "surface": "世間",
+      "reading": "せけん",
+      "label_ja": "世間",
+      "label_vi": "Thế giới",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_005",
+        "key": "vocab/n1/mimikara/unit_01.json#世間"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:庶民",
+      "type": "vocab",
+      "surface": "庶民",
+      "reading": "しょみん",
+      "label_ja": "庶民",
+      "label_vi": "quần chúng; dân thường",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_006",
+        "key": "vocab/n1/mimikara/unit_01.json#庶民"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:片言",
+      "type": "vocab",
+      "surface": "片言",
+      "reading": "かたこと",
+      "label_ja": "片言",
+      "label_vi": "nói lảng vảng; nói như trẻ con; nói ngập ngừng",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_007",
+        "key": "vocab/n1/mimikara/unit_01.json#片言"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:夜更かし",
+      "type": "vocab",
+      "surface": "夜更かし",
+      "reading": "よふかし",
+      "label_ja": "夜更かし",
+      "label_vi": "thức khuya; thức khuya; thức khuya; diều hâu",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_008",
+        "key": "vocab/n1/mimikara/unit_01.json#夜更かし"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:家出",
+      "type": "vocab",
+      "surface": "家出",
+      "reading": "いえで",
+      "label_ja": "家出",
+      "label_vi": "bỏ nhà đi; bỏ nhà đi",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_009",
+        "key": "vocab/n1/mimikara/unit_01.json#家出"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:戸締り",
+      "type": "vocab",
+      "surface": "戸締り",
+      "reading": "とじまり",
+      "label_ja": "戸締り",
+      "label_vi": "đóng lại; đóng chặt các cánh cửa",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_010",
+        "key": "vocab/n1/mimikara/unit_01.json#戸締り"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:顔つき",
+      "type": "vocab",
+      "surface": "顔つき",
+      "reading": "かおつき",
+      "label_ja": "顔つき",
+      "label_vi": "Biểu cảm",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_011",
+        "key": "vocab/n1/mimikara/unit_01.json#顔つき"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:身なり",
+      "type": "vocab",
+      "surface": "身なり",
+      "reading": "みなり",
+      "label_ja": "身なり",
+      "label_vi": "ngoại hình cá nhân",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_012",
+        "key": "vocab/n1/mimikara/unit_01.json#身なり"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:身の回り",
+      "type": "vocab",
+      "surface": "身の回り",
+      "reading": "みのまわり",
+      "label_ja": "身の回り",
+      "label_vi": "Việc thường ngày",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_013",
+        "key": "vocab/n1/mimikara/unit_01.json#身の回り"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:身振り",
+      "type": "vocab",
+      "surface": "身振り",
+      "reading": "みぶり",
+      "label_ja": "身振り",
+      "label_vi": "cử chỉ",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_014",
+        "key": "vocab/n1/mimikara/unit_01.json#身振り"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:良心",
+      "type": "vocab",
+      "surface": "良心",
+      "reading": "りょうしん",
+      "label_ja": "良心",
+      "label_vi": "lương tâm",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_015",
+        "key": "vocab/n1/mimikara/unit_01.json#良心"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:素質",
+      "type": "vocab",
+      "surface": "素質",
+      "reading": "そしつ",
+      "label_ja": "素質",
+      "label_vi": "Tố chất",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_016",
+        "key": "vocab/n1/mimikara/unit_01.json#素質"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:好意",
+      "type": "vocab",
+      "surface": "好意",
+      "reading": "こうい",
+      "label_ja": "好意",
+      "label_vi": "thiện chí; ân huệ; lịch sự",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_017",
+        "key": "vocab/n1/mimikara/unit_01.json#好意"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:ため息",
+      "type": "vocab",
+      "surface": "ため息",
+      "reading": "ためいき",
+      "label_ja": "ため息",
+      "label_vi": "Thở dài",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_018",
+        "key": "vocab/n1/mimikara/unit_01.json#ため息"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:ど忘れ",
+      "type": "vocab",
+      "surface": "ど忘れ",
+      "reading": "どわすれ",
+      "label_ja": "ど忘れ",
+      "label_vi": "Chợt quên",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_019",
+        "key": "vocab/n1/mimikara/unit_01.json#ど忘れ"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:用心",
+      "type": "vocab",
+      "surface": "用心",
+      "reading": "ようじん",
+      "label_ja": "用心",
+      "label_vi": "Cẩn trọng",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_020",
+        "key": "vocab/n1/mimikara/unit_01.json#用心"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:予感",
+      "type": "vocab",
+      "surface": "予感",
+      "reading": "よかん",
+      "label_ja": "予感",
+      "label_vi": "điềm báo; điềm báo",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_021",
+        "key": "vocab/n1/mimikara/unit_01.json#予感"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:視線",
+      "type": "vocab",
+      "surface": "視線",
+      "reading": "しせん",
+      "label_ja": "視線",
+      "label_vi": "Ánh nhìn",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_022",
+        "key": "vocab/n1/mimikara/unit_01.json#視線"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:迷信",
+      "type": "vocab",
+      "surface": "迷信",
+      "reading": "めいしん",
+      "label_ja": "迷信",
+      "label_vi": "Mê tín",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_023",
+        "key": "vocab/n1/mimikara/unit_01.json#迷信"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:縁",
+      "type": "vocab",
+      "surface": "縁",
+      "reading": "えん",
+      "label_ja": "縁",
+      "label_vi": "cơ hội;số phận;số phận;mối quan hệ;sự ràng buộc;kết nối;nghiệp chướng",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_024",
+        "key": "vocab/n1/mimikara/unit_01.json#縁"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:使い捨て",
+      "type": "vocab",
+      "surface": "使い捨て",
+      "reading": "つかいすて",
+      "label_ja": "使い捨て",
+      "label_vi": "Dùng một lần",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_025",
+        "key": "vocab/n1/mimikara/unit_01.json#使い捨て"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:下取り",
+      "type": "vocab",
+      "surface": "下取り",
+      "reading": "したどり",
+      "label_ja": "下取り",
+      "label_vi": "trao đổi; trao đổi một phần",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_026",
+        "key": "vocab/n1/mimikara/unit_01.json#下取り"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:倹約",
+      "type": "vocab",
+      "surface": "倹約",
+      "reading": "けんやく",
+      "label_ja": "倹約",
+      "label_vi": "sự tiết kiệm; nền kinh tế; sự tằn tiện",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_027",
+        "key": "vocab/n1/mimikara/unit_01.json#倹約"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:出費",
+      "type": "vocab",
+      "surface": "出費",
+      "reading": "しゅっぴ",
+      "label_ja": "出費",
+      "label_vi": "chi phí; các khoản chi tiêu",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_028",
+        "key": "vocab/n1/mimikara/unit_01.json#出費"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:会計",
+      "type": "vocab",
+      "surface": "会計",
+      "reading": "かいけい",
+      "label_ja": "会計",
+      "label_vi": "Kế toán",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_029",
+        "key": "vocab/n1/mimikara/unit_01.json#会計"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:所得",
+      "type": "vocab",
+      "surface": "所得",
+      "reading": "しょとく",
+      "label_ja": "所得",
+      "label_vi": "thu nhập; thu nhập",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_030",
+        "key": "vocab/n1/mimikara/unit_01.json#所得"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:採用",
+      "type": "vocab",
+      "surface": "採用",
+      "reading": "さいよう",
+      "label_ja": "採用",
+      "label_vi": "sử dụng; áp dụng",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_031",
+        "key": "vocab/n1/mimikara/unit_01.json#採用"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:雇用",
+      "type": "vocab",
+      "surface": "雇用",
+      "reading": "こよう",
+      "label_ja": "雇用",
+      "label_vi": "việc làm (dài hạn); thuê",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_032",
+        "key": "vocab/n1/mimikara/unit_01.json#雇用"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:所属",
+      "type": "vocab",
+      "surface": "所属",
+      "reading": "しょぞく",
+      "label_ja": "所属",
+      "label_vi": "gắn liền với; thuộc về",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_033",
+        "key": "vocab/n1/mimikara/unit_01.json#所属"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:待遇",
+      "type": "vocab",
+      "surface": "待遇",
+      "reading": "たいぐう",
+      "label_ja": "待遇",
+      "label_vi": "điều trị; tiếp nhận",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_034",
+        "key": "vocab/n1/mimikara/unit_01.json#待遇"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:派遣",
+      "type": "vocab",
+      "surface": "派遣",
+      "reading": "はけん",
+      "label_ja": "派遣",
+      "label_vi": "gửi đi; gửi đi",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_035",
+        "key": "vocab/n1/mimikara/unit_01.json#派遣"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:赴任",
+      "type": "vocab",
+      "surface": "赴任",
+      "reading": "ふにん",
+      "label_ja": "赴任",
+      "label_vi": "(tiến hành) cuộc hẹn mới",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_036",
+        "key": "vocab/n1/mimikara/unit_01.json#赴任"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:地元",
+      "type": "vocab",
+      "surface": "地元",
+      "reading": "じもと",
+      "label_ja": "地元",
+      "label_vi": "địa phương",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_037",
+        "key": "vocab/n1/mimikara/unit_01.json#地元"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:現役",
+      "type": "vocab",
+      "surface": "現役",
+      "reading": "げんえき",
+      "label_ja": "現役",
+      "label_vi": "Đương chức",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_038",
+        "key": "vocab/n1/mimikara/unit_01.json#現役"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:指図",
+      "type": "vocab",
+      "surface": "指図",
+      "reading": "さしず",
+      "label_ja": "指図",
+      "label_vi": "sự hướng dẫn; sự ủy nhiệm",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_039",
+        "key": "vocab/n1/mimikara/unit_01.json#指図"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:操縦",
+      "type": "vocab",
+      "surface": "操縦",
+      "reading": "そうじゅう",
+      "label_ja": "操縦",
+      "label_vi": "quản lý;xử lý;kiểm soát;thao túng",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_040",
+        "key": "vocab/n1/mimikara/unit_01.json#操縦"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:主食",
+      "type": "vocab",
+      "surface": "主食",
+      "reading": "しゅしょく",
+      "label_ja": "主食",
+      "label_vi": "thực phẩm chủ yếu",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_041",
+        "key": "vocab/n1/mimikara/unit_01.json#主食"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:食物",
+      "type": "vocab",
+      "surface": "食物",
+      "reading": "しょくもつ",
+      "label_ja": "食物",
+      "label_vi": "Đồ ăn",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_042",
+        "key": "vocab/n1/mimikara/unit_01.json#食物"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:穀物",
+      "type": "vocab",
+      "surface": "穀物",
+      "reading": "こくもつ",
+      "label_ja": "穀物",
+      "label_vi": "Ngũ cốc",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_043",
+        "key": "vocab/n1/mimikara/unit_01.json#穀物"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:豊作",
+      "type": "vocab",
+      "surface": "豊作",
+      "reading": "ほうさく",
+      "label_ja": "豊作",
+      "label_vi": "mùa màng bội thu; vụ mùa bội thu",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_044",
+        "key": "vocab/n1/mimikara/unit_01.json#豊作"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:例年",
+      "type": "vocab",
+      "surface": "例年",
+      "reading": "れいねん",
+      "label_ja": "例年",
+      "label_vi": "Hàng năm",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_045",
+        "key": "vocab/n1/mimikara/unit_01.json#例年"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:種",
+      "type": "vocab",
+      "surface": "種",
+      "reading": "たね",
+      "label_ja": "種",
+      "label_vi": "Hạt",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_046",
+        "key": "vocab/n1/mimikara/unit_01.json#種"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:毒",
+      "type": "vocab",
+      "surface": "毒",
+      "reading": "どく",
+      "label_ja": "毒",
+      "label_vi": "Độc",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_047",
+        "key": "vocab/n1/mimikara/unit_01.json#毒"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:桁",
+      "type": "vocab",
+      "surface": "桁",
+      "reading": "けた",
+      "label_ja": "桁",
+      "label_vi": "Chữ số",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_048",
+        "key": "vocab/n1/mimikara/unit_01.json#桁"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:単位",
+      "type": "vocab",
+      "surface": "単位",
+      "reading": "たんい",
+      "label_ja": "単位",
+      "label_vi": "Đơn vị",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_049",
+        "key": "vocab/n1/mimikara/unit_01.json#単位"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:一括",
+      "type": "vocab",
+      "surface": "一括",
+      "reading": "いっかつ",
+      "label_ja": "一括",
+      "label_vi": "tất cả cùng nhau;đợt;một cục;một bó;tổng hợp lại",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_050",
+        "key": "vocab/n1/mimikara/unit_01.json#一括"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:固まり",
+      "type": "vocab",
+      "surface": "固まり",
+      "reading": "かたまり",
+      "label_ja": "固まり",
+      "label_vi": "Cục, miếng",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_051",
+        "key": "vocab/n1/mimikara/unit_01.json#固まり"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:丈",
+      "type": "vocab",
+      "surface": "丈",
+      "reading": "たけ",
+      "label_ja": "丈",
+      "label_vi": "chiều cao, tầm vóc, chiều dài, số đo, tất cả (một người có)",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_052",
+        "key": "vocab/n1/mimikara/unit_01.json#丈"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:欄",
+      "type": "vocab",
+      "surface": "欄",
+      "reading": "らん",
+      "label_ja": "欄",
+      "label_vi": "Cột",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_053",
+        "key": "vocab/n1/mimikara/unit_01.json#欄"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:隅",
+      "type": "vocab",
+      "surface": "隅",
+      "reading": "すみ",
+      "label_ja": "隅",
+      "label_vi": "Góc",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_054",
+        "key": "vocab/n1/mimikara/unit_01.json#隅"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:分裂",
+      "type": "vocab",
+      "surface": "分裂",
+      "reading": "ぶんれつ",
+      "label_ja": "分裂",
+      "label_vi": "chia tay; chia tay; chia tay",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_055",
+        "key": "vocab/n1/mimikara/unit_01.json#分裂"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:振動",
+      "type": "vocab",
+      "surface": "振動",
+      "reading": "しんどう",
+      "label_ja": "振動",
+      "label_vi": "sự dao động; sự dao động",
+      "order": 56,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_056",
+        "key": "vocab/n1/mimikara/unit_01.json#振動"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:沸騰",
+      "type": "vocab",
+      "surface": "沸騰",
+      "reading": "ふっとう",
+      "label_ja": "沸騰",
+      "label_vi": "sôi sục; sôi sục",
+      "order": 57,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_057",
+        "key": "vocab/n1/mimikara/unit_01.json#沸騰"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:循環",
+      "type": "vocab",
+      "surface": "循環",
+      "reading": "じゅんかん",
+      "label_ja": "循環",
+      "label_vi": "Tuần hoàn",
+      "order": 58,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_058",
+        "key": "vocab/n1/mimikara/unit_01.json#循環"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:回収",
+      "type": "vocab",
+      "surface": "回収",
+      "reading": "かいしゅう",
+      "label_ja": "回収",
+      "label_vi": "sự thu thập; sự phục hồi",
+      "order": 59,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_059",
+        "key": "vocab/n1/mimikara/unit_01.json#回収"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:獲得",
+      "type": "vocab",
+      "surface": "獲得",
+      "reading": "かくとく",
+      "label_ja": "獲得",
+      "label_vi": "sự mua lại; sự sở hữu",
+      "order": 60,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_060",
+        "key": "vocab/n1/mimikara/unit_01.json#獲得"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:区間",
+      "type": "vocab",
+      "surface": "区間",
+      "reading": "くかん",
+      "label_ja": "区間",
+      "label_vi": "phần (của đường ray, v.v.)",
+      "order": 61,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_061",
+        "key": "vocab/n1/mimikara/unit_01.json#区間"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:施設",
+      "type": "vocab",
+      "surface": "施設",
+      "reading": "しせつ",
+      "label_ja": "施設",
+      "label_vi": "cơ quan; cơ sở; cơ sở; kỹ sư (quân đội)",
+      "order": 62,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_062",
+        "key": "vocab/n1/mimikara/unit_01.json#施設"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:運営",
+      "type": "vocab",
+      "surface": "運営",
+      "reading": "うんえい",
+      "label_ja": "運営",
+      "label_vi": "sự quản lý; sự quản lý; sự vận hành",
+      "order": 63,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_063",
+        "key": "vocab/n1/mimikara/unit_01.json#運営"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:面会",
+      "type": "vocab",
+      "surface": "面会",
+      "reading": "めんかい",
+      "label_ja": "面会",
+      "label_vi": "phỏng vấn",
+      "order": 64,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_064",
+        "key": "vocab/n1/mimikara/unit_01.json#面会"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:返却",
+      "type": "vocab",
+      "surface": "返却",
+      "reading": "へんきゃく",
+      "label_ja": "返却",
+      "label_vi": "Trả lại",
+      "order": 65,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_065",
+        "key": "vocab/n1/mimikara/unit_01.json#返却"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:投書",
+      "type": "vocab",
+      "surface": "投書",
+      "reading": "とうしょ",
+      "label_ja": "投書",
+      "label_vi": "Thư bạn đọc",
+      "order": 66,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_066",
+        "key": "vocab/n1/mimikara/unit_01.json#投書"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:検索",
+      "type": "vocab",
+      "surface": "検索",
+      "reading": "けんさく",
+      "label_ja": "検索",
+      "label_vi": "Tìm kiếm",
+      "order": 67,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_067",
+        "key": "vocab/n1/mimikara/unit_01.json#検索"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:負傷",
+      "type": "vocab",
+      "surface": "負傷",
+      "reading": "ふしょう",
+      "label_ja": "負傷",
+      "label_vi": "vết thương; vết thương",
+      "order": 68,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_068",
+        "key": "vocab/n1/mimikara/unit_01.json#負傷"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:感染",
+      "type": "vocab",
+      "surface": "感染",
+      "reading": "かんせん",
+      "label_ja": "感染",
+      "label_vi": "sự lây nhiễm; sự lây nhiễm",
+      "order": 69,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_069",
+        "key": "vocab/n1/mimikara/unit_01.json#感染"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:作用",
+      "type": "vocab",
+      "surface": "作用",
+      "reading": "さよう",
+      "label_ja": "作用",
+      "label_vi": "hành động; hoạt động; tác dụng; chức năng",
+      "order": 70,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_070",
+        "key": "vocab/n1/mimikara/unit_01.json#作用"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:依存",
+      "type": "vocab",
+      "surface": "依存",
+      "reading": "いそん",
+      "label_ja": "依存",
+      "label_vi": "sự phụ thuộc; sự phụ thuộc; sự phụ thuộc",
+      "order": 71,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_071",
+        "key": "vocab/n1/mimikara/unit_01.json#依存"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:解消",
+      "type": "vocab",
+      "surface": "解消",
+      "reading": "かいしょう",
+      "label_ja": "解消",
+      "label_vi": "Giải trừ",
+      "order": 72,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_072",
+        "key": "vocab/n1/mimikara/unit_01.json#解消"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:促進",
+      "type": "vocab",
+      "surface": "促進",
+      "reading": "そくしん",
+      "label_ja": "促進",
+      "label_vi": "khuyến khích;tăng tốc;khuyến khích;tạo điều kiện thuận lợi;thúc đẩy",
+      "order": 73,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_073",
+        "key": "vocab/n1/mimikara/unit_01.json#促進"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:意向",
+      "type": "vocab",
+      "surface": "意向",
+      "reading": "いこう",
+      "label_ja": "意向",
+      "label_vi": "ý định; ý tưởng; khuynh hướng",
+      "order": 74,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_074",
+        "key": "vocab/n1/mimikara/unit_01.json#意向"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:意図",
+      "type": "vocab",
+      "surface": "意図",
+      "reading": "いと",
+      "label_ja": "意図",
+      "label_vi": "ý định;mục tiêu;thiết kế",
+      "order": 75,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_075",
+        "key": "vocab/n1/mimikara/unit_01.json#意図"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:向上",
+      "type": "vocab",
+      "surface": "向上",
+      "reading": "こうじょう",
+      "label_ja": "向上",
+      "label_vi": "sự thăng tiến; sự thăng tiến; sự tiến bộ; sự tiến bộ",
+      "order": 76,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_076",
+        "key": "vocab/n1/mimikara/unit_01.json#向上"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:活気",
+      "type": "vocab",
+      "surface": "活気",
+      "reading": "かっき",
+      "label_ja": "活気",
+      "label_vi": "Náo nhiệt",
+      "order": 77,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_077",
+        "key": "vocab/n1/mimikara/unit_01.json#活気"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:迫力",
+      "type": "vocab",
+      "surface": "迫力",
+      "reading": "はくりょく",
+      "label_ja": "迫力",
+      "label_vi": "Lôi cuốn",
+      "order": 78,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_078",
+        "key": "vocab/n1/mimikara/unit_01.json#迫力"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:勝利",
+      "type": "vocab",
+      "surface": "勝利",
+      "reading": "しょうり",
+      "label_ja": "勝利",
+      "label_vi": "chiến thắng;chiến thắng;chinh phục;thành công;chiến thắng",
+      "order": 79,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_079",
+        "key": "vocab/n1/mimikara/unit_01.json#勝利"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:適応",
+      "type": "vocab",
+      "surface": "適応",
+      "reading": "てきおう",
+      "label_ja": "適応",
+      "label_vi": "sự thích nghi; sự thích nghi; sự phù hợp",
+      "order": 80,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_080",
+        "key": "vocab/n1/mimikara/unit_01.json#適応"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:調和",
+      "type": "vocab",
+      "surface": "調和",
+      "reading": "ちょうわ",
+      "label_ja": "調和",
+      "label_vi": "sự hòa hợp",
+      "order": 81,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_081",
+        "key": "vocab/n1/mimikara/unit_01.json#調和"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:権力",
+      "type": "vocab",
+      "surface": "権力",
+      "reading": "けんりょうく",
+      "label_ja": "権力",
+      "label_vi": "Quyền lực",
+      "order": 82,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_082",
+        "key": "vocab/n1/mimikara/unit_01.json#権力"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:権威",
+      "type": "vocab",
+      "surface": "権威",
+      "reading": "けんい",
+      "label_ja": "権威",
+      "label_vi": "quyền lực; quyền lực; ảnh hưởng",
+      "order": 83,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_083",
+        "key": "vocab/n1/mimikara/unit_01.json#権威"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:圧迫",
+      "type": "vocab",
+      "surface": "圧迫",
+      "reading": "あっぱく",
+      "label_ja": "圧迫",
+      "label_vi": "áp lực; sự ép buộc; áp bức",
+      "order": 84,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_084",
+        "key": "vocab/n1/mimikara/unit_01.json#圧迫"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:強制",
+      "type": "vocab",
+      "surface": "強制",
+      "reading": "きょうせい",
+      "label_ja": "強制",
+      "label_vi": "nghĩa vụ;sự ép buộc;sự ép buộc;sự ép buộc",
+      "order": 85,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_085",
+        "key": "vocab/n1/mimikara/unit_01.json#強制"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:規制",
+      "type": "vocab",
+      "surface": "規制",
+      "reading": "きせい",
+      "label_ja": "規制",
+      "label_vi": "quy định",
+      "order": 86,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_086",
+        "key": "vocab/n1/mimikara/unit_01.json#規制"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:拒否",
+      "type": "vocab",
+      "surface": "拒否",
+      "reading": "きょひ",
+      "label_ja": "拒否",
+      "label_vi": "phủ nhận; phủ quyết; bác bỏ; từ chối",
+      "order": 87,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_087",
+        "key": "vocab/n1/mimikara/unit_01.json#拒否"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:対抗",
+      "type": "vocab",
+      "surface": "対抗",
+      "reading": "たいこう",
+      "label_ja": "対抗",
+      "label_vi": "sự phản đối; sự đối kháng",
+      "order": 88,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_088",
+        "key": "vocab/n1/mimikara/unit_01.json#対抗"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:抗議",
+      "type": "vocab",
+      "surface": "抗議",
+      "reading": "こうぎ",
+      "label_ja": "抗議",
+      "label_vi": "phản đối; phản đối",
+      "order": 89,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_089",
+        "key": "vocab/n1/mimikara/unit_01.json#抗議"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:革新",
+      "type": "vocab",
+      "surface": "革新",
+      "reading": "かくしん",
+      "label_ja": "革新",
+      "label_vi": "cải cách; đổi mới",
+      "order": 90,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_090",
+        "key": "vocab/n1/mimikara/unit_01.json#革新"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:原則",
+      "type": "vocab",
+      "surface": "原則",
+      "reading": "げんそく",
+      "label_ja": "原則",
+      "label_vi": "nguyên tắc; quy tắc chung",
+      "order": 91,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_091",
+        "key": "vocab/n1/mimikara/unit_01.json#原則"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:経過",
+      "type": "vocab",
+      "surface": "経過",
+      "reading": "けいか",
+      "label_ja": "経過",
+      "label_vi": "quá trình; hết hạn; tiến triển",
+      "order": 92,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_092",
+        "key": "vocab/n1/mimikara/unit_01.json#経過"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:中継",
+      "type": "vocab",
+      "surface": "中継",
+      "reading": "ちゅうけい",
+      "label_ja": "中継",
+      "label_vi": "tiếp sức; nối tiếp",
+      "order": 93,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_093",
+        "key": "vocab/n1/mimikara/unit_01.json#中継"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    },
+    {
+      "item_id": "vocab:n1:mimikara:01:規模",
+      "type": "vocab",
+      "surface": "規模",
+      "reading": "きぼ",
+      "label_ja": "規模",
+      "label_vi": "quy mô;phạm vi;kế hoạch;cấu trúc",
+      "order": 94,
+      "legacy_ref": {
+        "file": "vocab/n1/mimikara/unit_01.json",
+        "entry_id": "mimi_n1_u01_094",
+        "key": "vocab/n1/mimikara/unit_01.json#規模"
+      },
+      "exercise_bank_ref": "exercises/n1/mimikara/mimikara_n1_01.json"
+    }
+  ]
+}

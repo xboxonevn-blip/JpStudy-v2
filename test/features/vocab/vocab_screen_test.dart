@@ -23,6 +23,7 @@ import 'package:jpstudy/features/vocab/screens/hajimete_chapter_catalog_screen.d
 import 'package:jpstudy/features/vocab/screens/hajimete_chapter_detail_screen.dart';
 import 'package:jpstudy/features/vocab/screens/hajimete_chapter_detail_support.dart';
 import 'package:jpstudy/features/vocab/screens/minna_lesson_catalog_screen.dart';
+import 'package:jpstudy/features/vocab/screens/mimikara_unit_catalog_screen.dart';
 import 'package:jpstudy/features/vocab/screens/shinkanzen_lesson_catalog_screen.dart';
 import 'package:jpstudy/features/vocab/screens/term_review_screen.dart';
 import 'package:jpstudy/features/flashcards/widgets/enhanced_flashcard.dart';
@@ -234,6 +235,30 @@ class _FakeVocabLessonRepository extends LessonRepository {
   }
 }
 
+class _BlockingMimikaraRepository extends _FakeVocabLessonRepository {
+  _BlockingMimikaraRepository() : super(bank: const {});
+
+  final mimikaraRangeCompleter = Completer<List<VocabItem>>();
+
+  @override
+  Future<List<VocabItem>> getVocabByLevelSeriesChapterRange(
+    String level, {
+    required String series,
+    required int startChapter,
+    required int endChapter,
+  }) {
+    if (series == 'mimikara') {
+      return mimikaraRangeCompleter.future;
+    }
+    return super.getVocabByLevelSeriesChapterRange(
+      level,
+      series: series,
+      startChapter: startChapter,
+      endChapter: endChapter,
+    );
+  }
+}
+
 VocabItem _item(int id, String term, String level) => VocabItem(
   id: id,
   term: term,
@@ -313,6 +338,14 @@ Widget _buildRouterScreen({
         builder: (context, state) => ShinkanzenLessonCatalogScreen(
           levelCode: state.uri.queryParameters['level'] ?? 'N3',
           title: state.uri.queryParameters['title'] ?? 'Shin Kanzen Master',
+          subtitle: state.uri.queryParameters['subtitle'],
+        ),
+      ),
+      GoRoute(
+        path: '/vocab/mimikara',
+        builder: (context, state) => MimikaraUnitCatalogScreen(
+          levelCode: state.uri.queryParameters['level'] ?? 'N5',
+          title: state.uri.queryParameters['title'] ?? 'Mimikara',
           subtitle: state.uri.queryParameters['subtitle'],
         ),
       ),
@@ -494,14 +527,19 @@ void main() {
       for (final key in const [
         'n5_core',
         'n5_companion',
+        'n5_mimikara',
         'n4_core',
         'n4_companion',
+        'n4_mimikara',
         'n3_core',
         'n3_companion',
+        'n3_mimikara',
         'n2_core',
         'n2_companion',
+        'n2_mimikara',
         'n1_core',
         'n1_companion',
+        'n1_mimikara',
       ]) {
         final dynamic program = programsByKey[key];
         expect(program, isNotNull, reason: key);
@@ -549,10 +587,13 @@ void main() {
       for (final key in const [
         'n3_core',
         'n3_companion',
+        'n3_mimikara',
         'n2_core',
         'n2_companion',
+        'n2_mimikara',
         'n1_core',
         'n1_companion',
+        'n1_mimikara',
       ]) {
         final dynamic program = programsByKey[key];
         expect(program, isNotNull, reason: key);
@@ -571,47 +612,48 @@ void main() {
     _prefs = await SharedPreferences.getInstance();
   });
 
-  testWidgets('VocabScreen shows catalog hero and hides empty roadmap sections', (
-    tester,
-  ) async {
-    final repo = _FakeVocabLessonRepository(
-      bank: {
-        'N5': List.generate(6, (i) => _item(i + 1, 'n5_$i', 'N5')),
-        'N4': List.generate(7, (i) => _item(i + 11, 'n4_$i', 'N4')),
-        'N3': List.generate(8, (i) => _item(i + 21, 'n3_$i', 'N3')),
-        'N2': List.generate(3, (i) => _item(i + 31, 'n2_$i', 'N2')),
-        'N1': List.generate(2, (i) => _item(i + 41, 'n1_$i', 'N1')),
-      },
-    );
+  testWidgets(
+    'VocabScreen shows catalog hero and hides empty roadmap sections',
+    (tester) async {
+      final repo = _FakeVocabLessonRepository(
+        bank: {
+          'N5': List.generate(6, (i) => _item(i + 1, 'n5_$i', 'N5')),
+          'N4': List.generate(7, (i) => _item(i + 11, 'n4_$i', 'N4')),
+          'N3': List.generate(8, (i) => _item(i + 21, 'n3_$i', 'N3')),
+          'N2': List.generate(3, (i) => _item(i + 31, 'n2_$i', 'N2')),
+          'N1': List.generate(2, (i) => _item(i + 41, 'n1_$i', 'N1')),
+        },
+      );
 
-    await tester.pumpWidget(_buildScreen(repo: repo));
-    await _pumpCatalog(tester);
+      await tester.pumpWidget(_buildScreen(repo: repo));
+      await _pumpCatalog(tester);
 
-    expect(find.byKey(const ValueKey('vocab_catalog_error')), findsNothing);
-    expect(find.byKey(const ValueKey('vocab_catalog_hero')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_n5')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_n4')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_n3')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_n2')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_n1')), findsOneWidget);
-    expect(find.byKey(const ValueKey('section_se')), findsNothing);
-    expect(find.text('N5'), findsWidgets);
-    expect(find.text('N4'), findsWidgets);
-    expect(find.text('N3'), findsWidgets);
-    expect(find.text('N2'), findsWidgets);
-    expect(find.text('N1'), findsWidgets);
-    expect(find.text('SE'), findsNothing);
-    expect(find.byKey(const ValueKey('program_n5_n5_core')), findsOneWidget);
-    expect(
-      find.byKey(const ValueKey('program_n1_advanced_n1')),
-      findsNothing,
-    );
-    expect(find.byKey(const ValueKey('vocab_today_section')), findsOneWidget);
-    expect(
-      find.byKey(const ValueKey('vocab_today_review_cta')),
-      findsOneWidget,
-    );
-  });
+      expect(find.byKey(const ValueKey('vocab_catalog_error')), findsNothing);
+      expect(find.byKey(const ValueKey('vocab_catalog_hero')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_n5')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_n4')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_n3')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_n2')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_n1')), findsOneWidget);
+      expect(find.byKey(const ValueKey('section_se')), findsNothing);
+      expect(find.text('N5'), findsWidgets);
+      expect(find.text('N4'), findsWidgets);
+      expect(find.text('N3'), findsWidgets);
+      expect(find.text('N2'), findsWidgets);
+      expect(find.text('N1'), findsWidgets);
+      expect(find.text('SE'), findsNothing);
+      expect(find.byKey(const ValueKey('program_n5_n5_core')), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('program_n1_advanced_n1')),
+        findsNothing,
+      );
+      expect(find.byKey(const ValueKey('vocab_today_section')), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('vocab_today_review_cta')),
+        findsOneWidget,
+      );
+    },
+  );
 
   testWidgets('VocabScreen renders catalog while home review data is loading', (
     tester,
@@ -1760,6 +1802,56 @@ void main() {
 
       expect(find.text('6 terms due'), findsWidgets);
       expect(find.text('Hajimete no Nihongo Tango N5'), findsWidgets);
+    },
+  );
+
+  testWidgets(
+    'Mimikara unit review loads bundled terms without waiting for content DB',
+    (tester) async {
+      final repo = _BlockingMimikaraRepository();
+      final router = GoRouter(
+        initialLocation: '/vocab/review',
+        routes: [
+          GoRoute(
+            path: '/vocab/review',
+            builder: (context, state) => const TermReviewScreen(
+              reviewArgs: VocabReviewArgs(
+                source: 'mimikara_unit',
+                levelCode: 'N3',
+                series: 'mimikara',
+                lessonStart: 1,
+                lessonEnd: 1,
+                title: 'Mimikara N3 Unit 01',
+              ),
+              sessionTitle: 'Mimikara N3 Unit 01',
+              lessonStart: 1,
+              lessonEnd: 1,
+            ),
+          ),
+        ],
+      );
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWithValue(_prefs),
+            studyLevelProvider.overrideWith((ref) => StudyLevel.n3),
+            lessonRepositoryProvider.overrideWithValue(repo),
+            allDueTermsProvider.overrideWith(
+              (ref) async => const <UserLessonTermData>[],
+            ),
+            nextVocabReviewProvider.overrideWith((ref) => Stream.value(null)),
+          ],
+          child: MaterialApp.router(routerConfig: router),
+        ),
+      );
+
+      await _pumpCatalog(tester);
+
+      expect(repo.mimikaraRangeCompleter.isCompleted, isFalse);
+      expect(find.byType(CircularProgressIndicator), findsNothing);
+      expect(find.text('Mimikara N3 Unit 01'), findsWidgets);
+      expect(find.text('120 terms due'), findsWidgets);
     },
   );
 }

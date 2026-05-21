@@ -12,7 +12,20 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-human-approved"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: Aい -> Aかったです / Aな -> Aでした",
+      "meaning": "Ý nghĩa: Dùng để nói một tính chất đã đúng trong quá khứ.",
+      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
+      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "state-of-being"
+      }
+    }
   },
   {
     "lessonId": 12,
@@ -27,7 +40,20 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-human-approved"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: N1 は N2 より A です",
+      "meaning": "Ý nghĩa: Dùng để so sánh hai thứ: N1 có tính chất A hơn N2.",
+      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
+      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "state-of-being"
+      }
+    }
   },
   {
     "lessonId": 12,
@@ -42,7 +68,20 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-human-approved"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: N1 (phạm vi) で 何/どこ/誰 が いちばん A ですか",
+      "meaning": "Ý nghĩa: Dùng để hỏi trong một phạm vi, cái gì/nơi nào/ai là A nhất.",
+      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
+      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "state-of-being"
+      }
+    }
   },
   {
     "lessonId": 12,
@@ -57,6 +96,19 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-human-approved"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: N1 と N2 と どちらが A ですか",
+      "meaning": "Ý nghĩa: Dùng để hỏi giữa N1 và N2, bên nào A hơn.",
+      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
+      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "state-of-being"
+      }
+    }
   }
 ]

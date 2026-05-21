@@ -17,6 +17,7 @@ import 'package:jpstudy/core/utils/kana_romaji.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/data/utils/hajimete_catalog_loader.dart';
+import 'package:jpstudy/data/utils/mimikara_catalog_loader.dart';
 import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/content_quality/widgets/content_draft_quality_note.dart';
 import 'package:jpstudy/features/foundations/widgets/foundations_soft_suggest_gate.dart';
@@ -90,6 +91,23 @@ Future<_SeriesManifestSummary> _loadShinkanzenManifestSummary(
   }
 }
 
+Future<_SeriesManifestSummary> _loadMimikaraManifestSummary(
+  String levelCode,
+) async {
+  try {
+    final catalog = await loadMimikaraUnitCatalog(
+      levelCode,
+    ).timeout(const Duration(seconds: 1));
+    return _SeriesManifestSummary(
+      routeCount: catalog.units.length,
+      readyRouteCount: catalog.units.where((unit) => unit.termCount > 0).length,
+      importedTermCount: catalog.totalTerms,
+    );
+  } catch (_) {
+    return const _SeriesManifestSummary.empty();
+  }
+}
+
 Future<int> _loadVocabAssetEntryCount(String path) async {
   try {
     final raw = await rootBundle
@@ -150,6 +168,8 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
 
   Future<_SeriesManifestSummary> shinkanzenSummary(String levelCode) =>
       _loadShinkanzenManifestSummary(levelCode);
+  Future<_SeriesManifestSummary> mimikaraSummary(String levelCode) =>
+      _loadMimikaraManifestSummary(levelCode);
 
   final n5CountFuture = hajimeteCount('N5');
   final n4CountFuture = hajimeteCount('N4');
@@ -159,6 +179,11 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
   final shinkanzenN3SummaryFuture = shinkanzenSummary('N3');
   final shinkanzenN2SummaryFuture = shinkanzenSummary('N2');
   final shinkanzenN1SummaryFuture = shinkanzenSummary('N1');
+  final mimikaraN5SummaryFuture = mimikaraSummary('N5');
+  final mimikaraN4SummaryFuture = mimikaraSummary('N4');
+  final mimikaraN3SummaryFuture = mimikaraSummary('N3');
+  final mimikaraN2SummaryFuture = mimikaraSummary('N2');
+  final mimikaraN1SummaryFuture = mimikaraSummary('N1');
   final minnaN5CountFuture = _loadMinnaLessonRangeCount(
     'N5',
     startLesson: 1,
@@ -183,6 +208,11 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
     shinkanzenN3SummaryFuture,
     shinkanzenN2SummaryFuture,
     shinkanzenN1SummaryFuture,
+    mimikaraN5SummaryFuture,
+    mimikaraN4SummaryFuture,
+    mimikaraN3SummaryFuture,
+    mimikaraN2SummaryFuture,
+    mimikaraN1SummaryFuture,
   ]);
   final n5Count = counts[0];
   final n4Count = counts[1];
@@ -194,12 +224,18 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
   final shinkanzenN3Summary = summaries[0];
   final shinkanzenN2Summary = summaries[1];
   final shinkanzenN1Summary = summaries[2];
+  final mimikaraN5Summary = summaries[3];
+  final mimikaraN4Summary = summaries[4];
+  final mimikaraN3Summary = summaries[5];
+  final mimikaraN2Summary = summaries[6];
+  final mimikaraN1Summary = summaries[7];
   final shinkanzenN3TermCount = shinkanzenN3Summary.importedTermCount;
   final shinkanzenN2TermCount = shinkanzenN2Summary.importedTermCount;
   final shinkanzenN1TermCount = shinkanzenN1Summary.importedTermCount;
 
   int shinkanzenRouteCount(_SeriesManifestSummary summary) =>
       summary.routeCount > 0 ? summary.routeCount : 25;
+  int mimikaraRouteCount(_SeriesManifestSummary summary) => summary.routeCount;
 
   return [
     _buildJlptSection(
@@ -217,6 +253,14 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
       ),
       companionType: _VocabProgramType.minna,
       companionCountOverride: minnaN5Count,
+      extraPrograms: [
+        _mimikaraProgram(
+          language: language,
+          levelCode: 'N5',
+          summary: mimikaraN5Summary,
+          structureCount: mimikaraRouteCount(mimikaraN5Summary),
+        ),
+      ],
       isInteractive: true,
     ),
     _buildJlptSection(
@@ -234,6 +278,14 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
       ),
       companionType: _VocabProgramType.minna,
       companionCountOverride: minnaN4Count,
+      extraPrograms: [
+        _mimikaraProgram(
+          language: language,
+          levelCode: 'N4',
+          summary: mimikaraN4Summary,
+          structureCount: mimikaraRouteCount(mimikaraN4Summary),
+        ),
+      ],
       isInteractive: true,
     ),
     _buildJlptSection(
@@ -254,6 +306,14 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
       companionStructureCount: shinkanzenRouteCount(shinkanzenN3Summary),
       companionPreviewBody:
           'Shin Kanzen N3 vocabulary is ready for study: ${shinkanzenN3Summary.readyRouteCount}/${shinkanzenRouteCount(shinkanzenN3Summary)} sections and $shinkanzenN3TermCount terms are available.',
+      extraPrograms: [
+        _mimikaraProgram(
+          language: language,
+          levelCode: 'N3',
+          summary: mimikaraN3Summary,
+          structureCount: mimikaraRouteCount(mimikaraN3Summary),
+        ),
+      ],
       isInteractive: true,
     ),
     _buildJlptSection(
@@ -274,6 +334,14 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
       companionStructureCount: shinkanzenRouteCount(shinkanzenN2Summary),
       companionPreviewBody:
           'Shin Kanzen N2 vocabulary is ready for study: ${shinkanzenN2Summary.readyRouteCount}/${shinkanzenRouteCount(shinkanzenN2Summary)} sections and $shinkanzenN2TermCount terms are available.',
+      extraPrograms: [
+        _mimikaraProgram(
+          language: language,
+          levelCode: 'N2',
+          summary: mimikaraN2Summary,
+          structureCount: mimikaraRouteCount(mimikaraN2Summary),
+        ),
+      ],
       isInteractive: true,
     ),
     _buildJlptSection(
@@ -294,8 +362,14 @@ final vocabCatalogProvider = FutureProvider<List<_VocabCatalogSection>>((
       companionStructureCount: shinkanzenRouteCount(shinkanzenN1Summary),
       companionPreviewBody:
           'Shin Kanzen N1 vocabulary is ready for study: ${shinkanzenN1Summary.readyRouteCount}/${shinkanzenRouteCount(shinkanzenN1Summary)} sections and $shinkanzenN1TermCount terms are available.',
-      extraPrograms: const [
-        _VocabCatalogProgram(
+      extraPrograms: [
+        _mimikaraProgram(
+          language: language,
+          levelCode: 'N1',
+          summary: mimikaraN1Summary,
+          structureCount: mimikaraRouteCount(mimikaraN1Summary),
+        ),
+        const _VocabCatalogProgram(
           key: 'advanced_n1',
           titleTop: 'Advanced Vocabulary Lab',
           titleMain: 'N1+',
@@ -436,6 +510,7 @@ String _programBadge(_VocabProgramType type, AppLanguage language) =>
     switch (type) {
       _VocabProgramType.minna => language.vocabProgramTypeLabel('minna'),
       _VocabProgramType.shinkanzen => 'Shin Kanzen',
+      _VocabProgramType.mimikara => 'Mimikara',
       _VocabProgramType.listening => language.vocabProgramTypeLabel(
         'listening',
       ),
@@ -454,6 +529,32 @@ int? _chapterCountForLevel(String levelCode) => switch (levelCode) {
   'N1' => 50,
   _ => null,
 };
+
+_VocabCatalogProgram _mimikaraProgram({
+  required AppLanguage language,
+  required String levelCode,
+  required _SeriesManifestSummary summary,
+  required int structureCount,
+}) {
+  return _VocabCatalogProgram(
+    key: '${levelCode.toLowerCase()}_mimikara',
+    titleTop: 'Mimikara',
+    titleMain: levelCode,
+    termCount: summary.importedTermCount,
+    chapterCount: structureCount > 0 ? structureCount : null,
+    subtitle: _courseSubtitle(language, _VocabProgramType.mimikara, levelCode),
+    previewBody: [
+      'Mimikara $levelCode vocabulary is ready:',
+      '${summary.readyRouteCount}/${summary.routeCount} units and',
+      summary.importedTermCount,
+      'terms are available.',
+    ].join(' '),
+    type: _VocabProgramType.mimikara,
+    isInteractive: summary.importedTermCount > 0,
+    isComingSoon: summary.importedTermCount == 0,
+    badgeText: 'Mimikara',
+  );
+}
 
 (int, int)? _minnaLessonRange(String levelCode, _VocabProgramType type) {
   if (type != _VocabProgramType.minna) return null;
@@ -700,6 +801,7 @@ String? _programScopeNote(_VocabProgramType type, AppLanguage language) =>
     switch (type) {
       _VocabProgramType.minna => language.vocabCatalogMinnaNote,
       _VocabProgramType.shinkanzen => language.vocabCatalogShinKanzenNote,
+      _VocabProgramType.mimikara => language.vocabCatalogMimikaraNote,
       _ => null,
     };
 

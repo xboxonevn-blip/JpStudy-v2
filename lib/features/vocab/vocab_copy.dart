@@ -128,6 +128,11 @@ extension VocabCopy on AppLanguage {
             : levelCode == 'N4'
             ? '教科書の第26課〜50課に沿って語彙順で学ぶ補助トラックです。'
             : '教科書の進度と語彙順に合わせた補助トラックです。',
+      (AppLanguage.en, 'mimikara') =>
+        'Unit-based vocabulary path for quick recognition and review.',
+      (AppLanguage.vi, 'mimikara') =>
+        'Hướng từ vựng theo unit, hợp để nhận diện nhanh rồi đưa thẳng vào ôn tập.',
+      (AppLanguage.ja, 'mimikara') => 'ユニット単位で認識練習から復習へつなげる語彙トラックです。',
       (AppLanguage.en, 'listening') =>
         'Listening-first training to reinforce vocabulary through audio context.',
       (AppLanguage.vi, 'listening') =>
@@ -260,6 +265,7 @@ extension VocabCopy on AppLanguage {
           AppLanguage.vi => 'Hướng học',
           AppLanguage.ja => 'トラック',
         },
+        (_, 'mimikara') => 'Mimikara',
         (_, 'core') => vocabTrackLabel(),
         (_, _) => switch (this) {
           AppLanguage.en => 'Path',
@@ -273,6 +279,9 @@ extension VocabCopy on AppLanguage {
         (AppLanguage.en, 'minna') => 'Textbook-paced path',
         (AppLanguage.vi, 'minna') => 'Đi theo nhịp giáo trình',
         (AppLanguage.ja, 'minna') => '教科書の進度で学ぶ',
+        (AppLanguage.en, 'mimikara') => 'Unit-based vocabulary review',
+        (AppLanguage.vi, 'mimikara') => 'Ôn theo unit từ vựng',
+        (AppLanguage.ja, 'mimikara') => 'ユニット別語彙復習',
         (AppLanguage.en, 'listening') => 'Audio-context reinforcement',
         (AppLanguage.vi, 'listening') => 'Củng cố bằng ngữ cảnh nghe',
         (AppLanguage.ja, 'listening') => '音声コンテキストで定着',

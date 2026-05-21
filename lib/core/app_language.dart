@@ -7365,6 +7365,17 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get vocabCatalogMimikaraNote {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Mimikara is split into unit-based vocabulary review.';
+      case AppLanguage.vi:
+        return 'Mimikara chia theo unit để ôn từ vựng có nhịp rõ ràng.';
+      case AppLanguage.ja:
+        return '耳から系語彙はユニット単位で復習できます。';
+    }
+  }
+
   String radicalGroupStrokeHeader(int count) {
     switch (this) {
       case AppLanguage.en:

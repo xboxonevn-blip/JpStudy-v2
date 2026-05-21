@@ -52,6 +52,7 @@ void main() {
 
     expect(counts['hajimete'], greaterThan(0));
     expect(counts['ShinKanzen'], greaterThan(0));
+    expect(counts['mimikara'], greaterThan(0));
   });
 
   test(

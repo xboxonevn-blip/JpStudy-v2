@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "dataset": "vocab",
+  "series": "mimikara",
+  "textbookId": "mimikara_n3",
+  "level": "N3",
+  "generatedAt": "2026-05-21T18:30:00+07:00",
+  "sourceMode": "owner-local-mimikara",
+  "sourceCredit": "Owner-provided local Mimikara facts; no prose copied.",
+  "copyrightPolicy": "Factual fields only; no long examples, explanations, or mnemonics copied.",
+  "units": [
+    {
+      "unitId": 1,
+      "lessonId": 1,
+      "title": "Unit 01",
+      "termCount": 120,
+      "file": "unit_01.json",
+      "previewTerms": [
+        "男性",
+        "女性",
+        "高齢",
+        "年上"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 2,
+      "lessonId": 2,
+      "title": "Unit 02",
+      "termCount": 98,
+      "file": "unit_02.json",
+      "previewTerms": [
+        "渇く",
+        "嗅ぐ",
+        "叩く",
+        "殴る"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 3,
+      "lessonId": 3,
+      "title": "Unit 03",
+      "termCount": 78,
+      "file": "unit_03.json",
+      "previewTerms": [
+        "飾り",
+        "遊び",
+        "集まり",
+        "教え"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 4,
+      "lessonId": 4,
+      "title": "Unit 04",
+      "termCount": 112,
+      "file": "unit_04.json",
+      "previewTerms": [
+        "温まる",
+        "温める",
+        "高まる",
+        "高める"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 5,
+      "lessonId": 5,
+      "title": "Unit 05",
+      "termCount": 104,
+      "file": "unit_05.json",
+      "previewTerms": [
+        "届く",
+        "届ける",
+        "掻く",
+        "掴む"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 6,
+      "lessonId": 6,
+      "title": "Unit 06",
+      "termCount": 40,
+      "file": "unit_06.json",
+      "previewTerms": [
+        "クラスメート",
+        "グループ",
+        "チーム",
+        "プロフェッショナル"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 7,
+      "lessonId": 7,
+      "title": "Unit 07",
+      "termCount": 34,
+      "file": "unit_07.json",
+      "previewTerms": [
+        "濃い",
+        "薄い",
+        "酸っぱい",
+        "臭い"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 8,
+      "lessonId": 8,
+      "title": "Unit 08",
+      "termCount": 14,
+      "file": "unit_08.json",
+      "previewTerms": [
+        "非常に",
+        "大変に",
+        "大体",
+        "大分"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 9,
+      "lessonId": 9,
+      "title": "Unit 09",
+      "termCount": 80,
+      "file": "unit_09.json",
+      "previewTerms": [
+        "読書",
+        "演奏",
+        "芸術",
+        "検査"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 10,
+      "lessonId": 10,
+      "title": "Unit 10",
+      "termCount": 78,
+      "file": "unit_10.json",
+      "previewTerms": [
+        "上る",
+        "下る",
+        "進む",
+        "進める"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 11,
+      "lessonId": 11,
+      "title": "Unit 11",
+      "termCount": 40,
+      "file": "unit_11.json",
+      "previewTerms": [
+        "パートナ",
+        "リーダー",
+        "ボランティア",
+        "コミュニケーション"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 12,
+      "lessonId": 12,
+      "title": "Unit 12",
+      "termCount": 13,
+      "file": "unit_12.json",
+      "previewTerms": [
+        "別々に",
+        "互いに",
+        "直接",
+        "本当に"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    }
+  ]
+}

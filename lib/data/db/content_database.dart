@@ -15,7 +15,7 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 90;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
-const _vocabSeedRevision = 2;
+const _vocabSeedRevision = 3;
 const _vocabSeedRevisionKeyPrefix = 'vocabSeedRevision';
 const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
@@ -498,6 +498,7 @@ class ContentDatabase extends _$ContentDatabase {
         await m.createAll();
         await _seedMinnaVocabularyForActiveLevel();
         await _seedHajimeteVocabularyForActiveLevel();
+        await _seedMimikaraVocabularyForActiveLevel();
         await _seedConjugationLemmasForActiveLevel();
         await _seedMinnaGrammarForActiveLevel();
         await _markContentRevision(
@@ -632,6 +633,7 @@ class ContentDatabase extends _$ContentDatabase {
         await Future.wait([
           _ensureMinnaVocabularySeededForActiveLevel(),
           _ensureHajimeteVocabularySeededForActiveLevel(),
+          _ensureMimikaraVocabularySeededForActiveLevel(),
           _ensureMinnaGrammarSeededForActiveLevel(),
         ]);
         await _ensureConjugationLemmasSeededForActiveLevel();
@@ -912,6 +914,40 @@ class ContentDatabase extends _$ContentDatabase {
     );
   }
 
+  Future<void> _ensureMimikaraVocabularySeededForActiveLevel() async {
+    final activeLevel = await _activeStudyLevelLabel();
+    final specs = _mimikaraSeedSpecs.where((s) => s.levelLabel == activeLevel);
+    final levelCol = vocab.level;
+    final countExpr = vocab.id.count();
+    final rows =
+        await (selectOnly(vocab)
+              ..addColumns([levelCol, countExpr])
+              ..where(
+                vocab.series.equals('mimikara') &
+                    vocab.level.isIn(specs.map((s) => s.levelLabel).toList()),
+              )
+              ..groupBy([levelCol]))
+            .get();
+    final counts = {
+      for (final row in rows) row.read(levelCol)!: row.read(countExpr) ?? 0,
+    };
+    final missingSpecs = specs
+        .where((s) => (counts[s.levelLabel] ?? 0) == 0)
+        .toList();
+    if (missingSpecs.isNotEmpty) {
+      await Future.wait(missingSpecs.map(_seedMimikaraLevel));
+    }
+  }
+
+  Future<void> _seedMimikaraVocabularyForActiveLevel() async {
+    final activeLevel = await _activeStudyLevelLabel();
+    await Future.wait(
+      _mimikaraSeedSpecs
+          .where((s) => s.levelLabel == activeLevel)
+          .map(_seedMimikaraLevel),
+    );
+  }
+
   Future<void> _reseedHajimeteVocab() async {
     await (delete(vocab)..where((tbl) => tbl.series.equals('hajimete'))).go();
     await _seedHajimeteVocabulary();
@@ -929,6 +965,9 @@ class ContentDatabase extends _$ContentDatabase {
     await Future.wait([
       if (contentSpec != null) _seedVocabularyLevel(contentSpec),
       ...hajimeteSpecs.map(_seedHajimeteLevel),
+      ..._mimikaraSeedSpecs
+          .where((spec) => spec.levelLabel == normalizedLevel)
+          .map(_seedMimikaraLevel),
     ]);
   }
 
@@ -1118,6 +1157,113 @@ class ContentDatabase extends _$ContentDatabase {
         }
       }
     });
+  }
+
+  Future<void> _seedMimikaraLevel(_MimikaraSeedSpec spec) async {
+    final level = spec.levelLabel;
+    final indexPath =
+        'assets/data/content/vocab/${spec.levelLower}/mimikara/index.json';
+    List<Map<String, dynamic>> units;
+    try {
+      final raw = await rootBundle.loadString(indexPath);
+      final payload = _asMap(json.decode(raw));
+      final rawUnits = payload?['units'];
+      units = [
+        if (rawUnits is List)
+          for (final rawUnit in rawUnits) ?_asMap(rawUnit),
+      ];
+    } catch (_) {
+      return;
+    }
+    if (units.isEmpty) return;
+
+    final perUnitRows = await Future.wait([
+      for (final unit in units) _loadMimikaraUnitRows(spec, unit),
+    ]);
+    final rows = <Map<String, dynamic>>[];
+    for (final unitRows in perUnitRows) {
+      rows.addAll(unitRows);
+    }
+    final collapsedRows = _collapseExactDuplicateRows(rows);
+    if (collapsedRows.isEmpty) return;
+
+    await batch((b) {
+      for (final item in collapsedRows) {
+        b.insert(
+          vocab,
+          VocabCompanion.insert(
+            term: item['term'] as String,
+            reading: Value(item['reading'] as String?),
+            kanjiMeaning: Value(item['kanjiMeaning'] as String?),
+            sourceVocabId: Value(item['sourceVocabId'] as String?),
+            sourceSenseId: Value(item['sourceSenseId'] as String?),
+            meaning: item['meaning_vi'] as String,
+            meaningEn: Value(item['meaning_en'] as String?),
+            series: const Value('mimikara'),
+            level: level,
+            tags: Value(item['tags'] as String?),
+          ),
+          mode: InsertMode.insertOrIgnore,
+        );
+      }
+    });
+  }
+
+  Future<List<Map<String, dynamic>>> _loadMimikaraUnitRows(
+    _MimikaraSeedSpec spec,
+    Map<String, dynamic> unit,
+  ) async {
+    final fileName = _readText(unit, 'file');
+    final unitId = _readInt(unit, 'unitId') ?? 0;
+    if (fileName.isEmpty || unitId <= 0) return const [];
+    final path =
+        'assets/data/content/vocab/${spec.levelLower}/mimikara/$fileName';
+    try {
+      final raw = await rootBundle.loadString(path);
+      final payload = _asMap(json.decode(raw));
+      final entries = payload?['entries'];
+      if (entries is! List) return const [];
+      return [
+        for (final rawEntry in entries)
+          ?_mimikaraEntryRow(rawEntry, spec.levelLabel, unitId),
+      ];
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  Map<String, dynamic>? _mimikaraEntryRow(
+    dynamic rawEntry,
+    String level,
+    int unitId,
+  ) {
+    final entry = _asMap(rawEntry);
+    final lemma = _asMap(entry?['lemma']);
+    final sense = _asMap(entry?['sense']);
+    final links = _asMap(entry?['links']);
+    if (entry == null || lemma == null || sense == null) return null;
+    final term = _readText(lemma, 'term');
+    final meaningVi = _readText(sense, 'meaningVi');
+    if (term.isEmpty || meaningVi.isEmpty) return null;
+    final labels = _asMap(lemma['labels']);
+    return {
+      'term': term,
+      'reading': _readNullableText(lemma, 'reading'),
+      'kanjiMeaning': labels == null
+          ? _readNullableText(entry, 'kanjiMeaning')
+          : _readNullableText(labels, 'hanViet'),
+      'sourceVocabId': links == null
+          ? _readNullableText(entry, 'sourceVocabId')
+          : _readNullableText(links, 'sourceVocabId'),
+      'sourceSenseId': links == null
+          ? _readNullableText(entry, 'sourceSenseId')
+          : _readNullableText(links, 'sourceSenseId'),
+      'meaning_vi': meaningVi,
+      'meaning_en': _readNullableText(sense, 'meaningEn'),
+      'level': level,
+      'series': 'mimikara',
+      'tags': _joinTags([_readTags(entry['tags']), 'mimikara_$unitId']),
+    };
   }
 
   Future<List<dynamic>?> _tryLoadHajimeteChapterEntries(
@@ -2175,6 +2321,21 @@ const _hajimeteSeedSpecs = <_HajimeteSeedSpec>[
   _HajimeteSeedSpec('N3', 'n3', 28),
   _HajimeteSeedSpec('N2', 'n2', 38),
   _HajimeteSeedSpec('N1', 'n1', 50),
+];
+
+class _MimikaraSeedSpec {
+  const _MimikaraSeedSpec(this.levelLabel, this.levelLower);
+
+  final String levelLabel;
+  final String levelLower;
+}
+
+const _mimikaraSeedSpecs = <_MimikaraSeedSpec>[
+  _MimikaraSeedSpec('N5', 'n5'),
+  _MimikaraSeedSpec('N4', 'n4'),
+  _MimikaraSeedSpec('N3', 'n3'),
+  _MimikaraSeedSpec('N2', 'n2'),
+  _MimikaraSeedSpec('N1', 'n1'),
 ];
 
 extension _StringNullIfEmpty on String {

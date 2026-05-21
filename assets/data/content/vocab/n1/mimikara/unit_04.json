@@ -1,0 +1,5946 @@
+{
+  "schemaVersion": 2,
+  "dataset": "vocab",
+  "series": "mimikara",
+  "level": "N1",
+  "unitId": 4,
+  "lessonId": 4,
+  "unitTitle": "Unit 04",
+  "entryCount": 99,
+  "sourceMode": "owner-local-mimikara",
+  "entries": [
+    {
+      "entryId": "mimi_n1_u04_001",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 1,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v001",
+        "term": "内心",
+        "reading": "ないしん",
+        "kanji": [
+          "内",
+          "心"
+        ],
+        "labels": {
+          "hanViet": "Nội Tâm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s001",
+        "meaningVi": "Nội tâm, đáy lòng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "内心",
+        "readingNoAccent": "ないしん",
+        "meaningViNoAccent": "Noi tam, day long",
+        "hanVietNoAccent": "Noi Tam"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v001",
+        "sourceSenseId": "mimi_n1_u04_s001",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 1,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Nội Tâm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "001",
+        "rangeEnd": "001",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_002",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 2,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v002",
+        "term": "やる気",
+        "reading": "やるき",
+        "kanji": [
+          "気"
+        ],
+        "labels": {
+          "hanViet": "Khí"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s002",
+        "meaningVi": "Động lực, sẵn sàng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "やる気",
+        "readingNoAccent": "やるき",
+        "meaningViNoAccent": "Dong luc, san sang",
+        "hanVietNoAccent": "Khi"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v002",
+        "sourceSenseId": "mimi_n1_u04_s002",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 2,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Khí"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "002",
+        "rangeEnd": "002",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_003",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 3,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v003",
+        "term": "優越感",
+        "reading": "ゆうえつかん",
+        "kanji": [
+          "優",
+          "越",
+          "感"
+        ],
+        "labels": {
+          "hanViet": "Ưu Việt Cảm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s003",
+        "meaningVi": "Ưu việt, phức tạp",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "優越感",
+        "readingNoAccent": "ゆうえつかん",
+        "meaningViNoAccent": "Uu viet, phuc tap",
+        "hanVietNoAccent": "Uu Viet Cam"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v003",
+        "sourceSenseId": "mimi_n1_u04_s003",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 3,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Ưu Việt Cảm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "003",
+        "rangeEnd": "003",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_004",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 4,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v004",
+        "term": "誇り",
+        "reading": "ほこり",
+        "kanji": [
+          "誇"
+        ],
+        "labels": {
+          "hanViet": "Khoa"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s004",
+        "meaningVi": "Niềm tự hào, kiêu hãnh",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "誇り",
+        "readingNoAccent": "ほこり",
+        "meaningViNoAccent": "Niem tu hao, kieu hanh",
+        "hanVietNoAccent": "Khoa"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v004",
+        "sourceSenseId": "mimi_n1_u04_s004",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 4,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Khoa"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "004",
+        "rangeEnd": "004",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_005",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 5,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v005",
+        "term": "決断",
+        "reading": "けつだん",
+        "kanji": [
+          "決",
+          "断"
+        ],
+        "labels": {
+          "hanViet": "Quyết Đoạn"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s005",
+        "meaningVi": "quyết định; sự quyết tâm",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "決断",
+        "readingNoAccent": "けつだん",
+        "meaningViNoAccent": "quyet dinh; su quyet tam",
+        "hanVietNoAccent": "Quyet Doan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v005",
+        "sourceSenseId": "mimi_n1_u04_s005",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 5,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Quyết Đoạn"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "005",
+        "rangeEnd": "005",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_006",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 6,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v006",
+        "term": "苦心",
+        "reading": "くしん",
+        "kanji": [
+          "苦",
+          "心"
+        ],
+        "labels": {
+          "hanViet": "Khổ Tâm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s006",
+        "meaningVi": "Khó lòng, lao tâm khổ tứ",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "苦心",
+        "readingNoAccent": "くしん",
+        "meaningViNoAccent": "Kho long, lao tam kho tu",
+        "hanVietNoAccent": "Kho Tam"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v006",
+        "sourceSenseId": "mimi_n1_u04_s006",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 6,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Khổ Tâm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "006",
+        "rangeEnd": "006",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_007",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 7,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v007",
+        "term": "嫉妬",
+        "reading": "しっと",
+        "kanji": [
+          "嫉",
+          "妬"
+        ],
+        "labels": {
+          "hanViet": "Tật Đố"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s007",
+        "meaningVi": "sự ghen tị",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "嫉妬",
+        "readingNoAccent": "しっと",
+        "meaningViNoAccent": "su ghen ti",
+        "hanVietNoAccent": "Tat Do"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v007",
+        "sourceSenseId": "mimi_n1_u04_s007",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 7,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tật Đố"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "007",
+        "rangeEnd": "007",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_008",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 8,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v008",
+        "term": "絶望",
+        "reading": "ぜつぼう",
+        "kanji": [
+          "絶",
+          "望"
+        ],
+        "labels": {
+          "hanViet": "Tuyệt Vọng"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s008",
+        "meaningVi": "sự tuyệt vọng; sự tuyệt vọng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "絶望",
+        "readingNoAccent": "ぜつぼう",
+        "meaningViNoAccent": "su tuyet vong; su tuyet vong",
+        "hanVietNoAccent": "Tuyet Vong"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v008",
+        "sourceSenseId": "mimi_n1_u04_s008",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 8,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tuyệt Vọng"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "008",
+        "rangeEnd": "008",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_009",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 9,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v009",
+        "term": "通関",
+        "reading": "つうかん",
+        "kanji": [
+          "通",
+          "関"
+        ],
+        "labels": {
+          "hanViet": "Thông Quan"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s009",
+        "meaningVi": "Nhận ra rõ ràng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "通関",
+        "readingNoAccent": "つうかん",
+        "meaningViNoAccent": "Nhan ra ro rang",
+        "hanVietNoAccent": "Thong Quan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v009",
+        "sourceSenseId": "mimi_n1_u04_s009",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 9,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thông Quan"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "009",
+        "rangeEnd": "009",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_010",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 10,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v010",
+        "term": "先入観",
+        "reading": "せんにゅうかん",
+        "kanji": [
+          "先",
+          "入",
+          "観"
+        ],
+        "labels": {
+          "hanViet": "Tiên Nhập Quan"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s010",
+        "meaningVi": "Thành kiến",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "先入観",
+        "readingNoAccent": "せんにゅうかん",
+        "meaningViNoAccent": "Thanh kien",
+        "hanVietNoAccent": "Tien Nhap Quan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v010",
+        "sourceSenseId": "mimi_n1_u04_s010",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 10,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tiên Nhập Quan"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "010",
+        "rangeEnd": "010",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_011",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 11,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v011",
+        "term": "過ち",
+        "reading": "あやまち",
+        "kanji": [
+          "過"
+        ],
+        "labels": {
+          "hanViet": "Quá"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s011",
+        "meaningVi": "lỗi lầm; lỗi lầm; sự bừa bãi",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "過ち",
+        "readingNoAccent": "あやまち",
+        "meaningViNoAccent": "loi lam; loi lam; su bua bai",
+        "hanVietNoAccent": "Qua"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v011",
+        "sourceSenseId": "mimi_n1_u04_s011",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 11,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Quá"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "011",
+        "rangeEnd": "011",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_012",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 12,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v012",
+        "term": "欲",
+        "reading": "よく",
+        "kanji": [
+          "欲"
+        ],
+        "labels": {
+          "hanViet": "Dục"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s012",
+        "meaningVi": "Ham muốn, tham lam",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "欲",
+        "readingNoAccent": "よく",
+        "meaningViNoAccent": "Ham muon, tham lam",
+        "hanVietNoAccent": "Duc"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v012",
+        "sourceSenseId": "mimi_n1_u04_s012",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 12,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Dục"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "012",
+        "rangeEnd": "012",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_013",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 13,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v013",
+        "term": "恥",
+        "reading": "はじ",
+        "kanji": [
+          "恥"
+        ],
+        "labels": {
+          "hanViet": "Sỉ"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s013",
+        "meaningVi": "sự xấu hổ; sự xấu hổ",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "恥",
+        "readingNoAccent": "はじ",
+        "meaningViNoAccent": "su xau ho; su xau ho",
+        "hanVietNoAccent": "Si"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v013",
+        "sourceSenseId": "mimi_n1_u04_s013",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 13,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Sỉ"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "013",
+        "rangeEnd": "013",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_014",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 14,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v014",
+        "term": "罰",
+        "reading": "ばつ",
+        "kanji": [
+          "罰"
+        ],
+        "labels": {
+          "hanViet": "Phạt"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s014",
+        "meaningVi": "Phạt",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "罰",
+        "readingNoAccent": "ばつ",
+        "meaningViNoAccent": "Phat",
+        "hanVietNoAccent": "Phat"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v014",
+        "sourceSenseId": "mimi_n1_u04_s014",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 14,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phạt"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "014",
+        "rangeEnd": "014",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_015",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 15,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v015",
+        "term": "念",
+        "reading": "ねん",
+        "kanji": [
+          "念"
+        ],
+        "labels": {
+          "hanViet": "Niệm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s015",
+        "meaningVi": "giác quan;ý tưởng;suy nghĩ;cảm giác;mong muốn;quan tâm;chú ý;quan tâm",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "念",
+        "readingNoAccent": "ねん",
+        "meaningViNoAccent": "giac quan;y tuong;suy nghi;cam giac;mong muon;quan tam;chu y;quan tam",
+        "hanVietNoAccent": "Niem"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v015",
+        "sourceSenseId": "mimi_n1_u04_s015",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 15,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Niệm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "015",
+        "rangeEnd": "015",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_016",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 16,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v016",
+        "term": "本音",
+        "reading": "ほんね",
+        "kanji": [
+          "本",
+          "音"
+        ],
+        "labels": {
+          "hanViet": "Bản Âm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s016",
+        "meaningVi": "ý định thực sự; động cơ",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "本音",
+        "readingNoAccent": "ほんね",
+        "meaningViNoAccent": "y dinh thuc su; dong co",
+        "hanVietNoAccent": "Ban Am"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v016",
+        "sourceSenseId": "mimi_n1_u04_s016",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 16,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Bản Âm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "016",
+        "rangeEnd": "016",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_017",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 17,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v017",
+        "term": "弁解",
+        "reading": "べんかい",
+        "kanji": [
+          "弁",
+          "解"
+        ],
+        "labels": {
+          "hanViet": "Biện Giải"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s017",
+        "meaningVi": "lời giải thích; sự bào chữa; bào chữa; bào chữa",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "弁解",
+        "readingNoAccent": "べんかい",
+        "meaningViNoAccent": "loi giai thich; su bao chua; bao chua; bao chua",
+        "hanVietNoAccent": "Bien Giai"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v017",
+        "sourceSenseId": "mimi_n1_u04_s017",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 17,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Biện Giải"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "017",
+        "rangeEnd": "017",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_018",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 18,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v018",
+        "term": "沈黙",
+        "reading": "ちんもく",
+        "kanji": [
+          "沈",
+          "黙"
+        ],
+        "labels": {
+          "hanViet": "Trầm Mặc"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s018",
+        "meaningVi": "sự im lặng; sự dè dặt",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "沈黙",
+        "readingNoAccent": "ちんもく",
+        "meaningViNoAccent": "su im lang; su de dat",
+        "hanVietNoAccent": "Tram Mac"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v018",
+        "sourceSenseId": "mimi_n1_u04_s018",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 18,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Trầm Mặc"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "018",
+        "rangeEnd": "018",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_019",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 19,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v019",
+        "term": "没頭",
+        "reading": "ぼっとう",
+        "kanji": [
+          "没",
+          "頭"
+        ],
+        "labels": {
+          "hanViet": "Một Đầu"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s019",
+        "meaningVi": "Chìm đắm",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "没頭",
+        "readingNoAccent": "ぼっとう",
+        "meaningViNoAccent": "Chim dam",
+        "hanVietNoAccent": "Mot Dau"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v019",
+        "sourceSenseId": "mimi_n1_u04_s019",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 19,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Một Đầu"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "019",
+        "rangeEnd": "019",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_020",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 20,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v020",
+        "term": "専念",
+        "reading": "せんねん",
+        "kanji": [
+          "専",
+          "念"
+        ],
+        "labels": {
+          "hanViet": "Chuyên Niệm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s020",
+        "meaningVi": "Say mê, miệt mài",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "専念",
+        "readingNoAccent": "せんねん",
+        "meaningViNoAccent": "Say me, miet mai",
+        "hanVietNoAccent": "Chuyen Niem"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v020",
+        "sourceSenseId": "mimi_n1_u04_s020",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 20,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Chuyên Niệm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "020",
+        "rangeEnd": "020",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_021",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 21,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v021",
+        "term": "充実",
+        "reading": "じゅうじつ",
+        "kanji": [
+          "充",
+          "実"
+        ],
+        "labels": {
+          "hanViet": "Sung Thực"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s021",
+        "meaningVi": "sự viên mãn;sự hoàn thành;sự hoàn hảo;sự thực chất;sự phong phú",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "充実",
+        "readingNoAccent": "じゅうじつ",
+        "meaningViNoAccent": "su vien man;su hoan thanh;su hoan hao;su thuc chat;su phong phu",
+        "hanVietNoAccent": "Sung Thuc"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v021",
+        "sourceSenseId": "mimi_n1_u04_s021",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 21,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Sung Thực"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "021",
+        "rangeEnd": "021",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_022",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 22,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v022",
+        "term": "自立",
+        "reading": "じりつ",
+        "kanji": [
+          "自",
+          "立"
+        ],
+        "labels": {
+          "hanViet": "Tự Lập"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s022",
+        "meaningVi": "sự độc lập; sự tự chủ",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "自立",
+        "readingNoAccent": "じりつ",
+        "meaningViNoAccent": "su doc lap; su tu chu",
+        "hanVietNoAccent": "Tu Lap"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v022",
+        "sourceSenseId": "mimi_n1_u04_s022",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 22,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tự Lập"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "022",
+        "rangeEnd": "022",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_023",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 23,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v023",
+        "term": "愛称",
+        "reading": "あいしょう",
+        "kanji": [
+          "愛",
+          "称"
+        ],
+        "labels": {
+          "hanViet": "Ái Xưng"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s023",
+        "meaningVi": "Hợp nhau",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "愛称",
+        "readingNoAccent": "あいしょう",
+        "meaningViNoAccent": "Hop nhau",
+        "hanVietNoAccent": "Ai Xung"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v023",
+        "sourceSenseId": "mimi_n1_u04_s023",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 23,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Ái Xưng"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "023",
+        "rangeEnd": "023",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_024",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 24,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v024",
+        "term": "教官",
+        "reading": "きょうかん",
+        "kanji": [
+          "教",
+          "官"
+        ],
+        "labels": {
+          "hanViet": "Giáo Quan"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s024",
+        "meaningVi": "Đồng cảm",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "教官",
+        "readingNoAccent": "きょうかん",
+        "meaningViNoAccent": "Dong cam",
+        "hanVietNoAccent": "Giao Quan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v024",
+        "sourceSenseId": "mimi_n1_u04_s024",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 24,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Giáo Quan"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "024",
+        "rangeEnd": "024",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_025",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 25,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v025",
+        "term": "協調",
+        "reading": "きょうちょう",
+        "kanji": [
+          "協",
+          "調"
+        ],
+        "labels": {
+          "hanViet": "Hiệp Điều"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s025",
+        "meaningVi": "hợp tác; hòa giải; hòa hợp; giọng điệu chắc chắn (thị trường)",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "協調",
+        "readingNoAccent": "きょうちょう",
+        "meaningViNoAccent": "hop tac; hoa giai; hoa hop; giong dieu chac chan (thi truong)",
+        "hanVietNoAccent": "Hiep Dieu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v025",
+        "sourceSenseId": "mimi_n1_u04_s025",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 25,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Hiệp Điều"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "025",
+        "rangeEnd": "025",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_026",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 26,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v026",
+        "term": "共同",
+        "reading": "きょうどう",
+        "kanji": [
+          "共",
+          "同"
+        ],
+        "labels": {
+          "hanViet": "Cộng Đồng"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s026",
+        "meaningVi": "Dùng chung",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "共同",
+        "readingNoAccent": "きょうどう",
+        "meaningViNoAccent": "Dung chung",
+        "hanVietNoAccent": "Cong Dong"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v026",
+        "sourceSenseId": "mimi_n1_u04_s026",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 26,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Cộng Đồng"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "026",
+        "rangeEnd": "026",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_027",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 27,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v027",
+        "term": "激励",
+        "reading": "げきれい",
+        "kanji": [
+          "激",
+          "励"
+        ],
+        "labels": {
+          "hanViet": "Kích Lệ"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s027",
+        "meaningVi": "sự khuyến khích",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "激励",
+        "readingNoAccent": "げきれい",
+        "meaningViNoAccent": "su khuyen khich",
+        "hanVietNoAccent": "Kich Le"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v027",
+        "sourceSenseId": "mimi_n1_u04_s027",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 27,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Kích Lệ"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "027",
+        "rangeEnd": "027",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_028",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 28,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v028",
+        "term": "支援",
+        "reading": "しえん",
+        "kanji": [
+          "支",
+          "援"
+        ],
+        "labels": {
+          "hanViet": "Chi Viện"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s028",
+        "meaningVi": "Hỗ trợ",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "支援",
+        "readingNoAccent": "しえん",
+        "meaningViNoAccent": "Ho tro",
+        "hanVietNoAccent": "Chi Vien"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v028",
+        "sourceSenseId": "mimi_n1_u04_s028",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 28,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Chi Viện"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "028",
+        "rangeEnd": "028",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_029",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 29,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v029",
+        "term": "指摘",
+        "reading": "してき",
+        "kanji": [
+          "指",
+          "摘"
+        ],
+        "labels": {
+          "hanViet": "Chỉ Trích"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s029",
+        "meaningVi": "chỉ ra; nhận dạng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "指摘",
+        "readingNoAccent": "してき",
+        "meaningViNoAccent": "chi ra; nhan dang",
+        "hanVietNoAccent": "Chi Trich"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v029",
+        "sourceSenseId": "mimi_n1_u04_s029",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 29,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Chỉ Trích"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "029",
+        "rangeEnd": "029",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_030",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 30,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v030",
+        "term": "了解",
+        "reading": "りょうかい",
+        "kanji": [
+          "了",
+          "解"
+        ],
+        "labels": {
+          "hanViet": "Liễu Giải"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s030",
+        "meaningVi": "hiểu; sự đồng ý; sự hiểu biết; roger (trên đài phát thanh)",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "了解",
+        "readingNoAccent": "りょうかい",
+        "meaningViNoAccent": "hieu; su dong y; su hieu biet; roger (tren dai phat thanh)",
+        "hanVietNoAccent": "Lieu Giai"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v030",
+        "sourceSenseId": "mimi_n1_u04_s030",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 30,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Liễu Giải"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "030",
+        "rangeEnd": "030",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_031",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 31,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v031",
+        "term": "承諾",
+        "reading": "しょうだく",
+        "kanji": [
+          "承",
+          "諾"
+        ],
+        "labels": {
+          "hanViet": "Thừa Nặc"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s031",
+        "meaningVi": "sự đồng ý; sự đồng ý; sự đồng ý",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "承諾",
+        "readingNoAccent": "しょうだく",
+        "meaningViNoAccent": "su dong y; su dong y; su dong y",
+        "hanVietNoAccent": "Thua Nac"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v031",
+        "sourceSenseId": "mimi_n1_u04_s031",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 31,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thừa Nặc"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "031",
+        "rangeEnd": "031",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_032",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 32,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v032",
+        "term": "嫌がらせ",
+        "reading": "いやがらせ",
+        "kanji": [
+          "嫌"
+        ],
+        "labels": {
+          "hanViet": "Hiềm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s032",
+        "meaningVi": "Biị ghét, lạm dụng, quấy rối",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "嫌がらせ",
+        "readingNoAccent": "いやがらせ",
+        "meaningViNoAccent": "Bii ghet, lam dung, quay roi",
+        "hanVietNoAccent": "Hiem"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v032",
+        "sourceSenseId": "mimi_n1_u04_s032",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 32,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Hiềm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "032",
+        "rangeEnd": "032",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_033",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 33,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v033",
+        "term": "妨害",
+        "reading": "ぼうがい",
+        "kanji": [
+          "妨",
+          "害"
+        ],
+        "labels": {
+          "hanViet": "Phương Hại"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s033",
+        "meaningVi": "sự xáo trộn; sự cản trở; sự cản trở; sự gây nhiễu; sự can thiệp",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "妨害",
+        "readingNoAccent": "ぼうがい",
+        "meaningViNoAccent": "su xao tron; su can tro; su can tro; su gay nhieu; su can thiep",
+        "hanVietNoAccent": "Phuong Hai"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v033",
+        "sourceSenseId": "mimi_n1_u04_s033",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 33,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phương Hại"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "033",
+        "rangeEnd": "033",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_034",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 34,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v034",
+        "term": "説得",
+        "reading": "せっとく",
+        "kanji": [
+          "説",
+          "得"
+        ],
+        "labels": {
+          "hanViet": "Thuyết Đắc"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s034",
+        "meaningVi": "sự thuyết phục",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "説得",
+        "readingNoAccent": "せっとく",
+        "meaningViNoAccent": "su thuyet phuc",
+        "hanVietNoAccent": "Thuyet Dac"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v034",
+        "sourceSenseId": "mimi_n1_u04_s034",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 34,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thuyết Đắc"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "034",
+        "rangeEnd": "034",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_035",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 35,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v035",
+        "term": "理屈",
+        "reading": "りくつ",
+        "kanji": [
+          "理",
+          "屈"
+        ],
+        "labels": {
+          "hanViet": "Lý Khuất"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s035",
+        "meaningVi": "lý thuyết; lý do",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "理屈",
+        "readingNoAccent": "りくつ",
+        "meaningViNoAccent": "ly thuyet; ly do",
+        "hanVietNoAccent": "Ly Khuat"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v035",
+        "sourceSenseId": "mimi_n1_u04_s035",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 35,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Lý Khuất"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "035",
+        "rangeEnd": "035",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_036",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 36,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v036",
+        "term": "論理",
+        "reading": "ろんり",
+        "kanji": [
+          "論",
+          "理"
+        ],
+        "labels": {
+          "hanViet": "Luận Lý"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s036",
+        "meaningVi": "logic",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "論理",
+        "readingNoAccent": "ろんり",
+        "meaningViNoAccent": "logic",
+        "hanVietNoAccent": "Luan Ly"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v036",
+        "sourceSenseId": "mimi_n1_u04_s036",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 36,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Luận Lý"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "036",
+        "rangeEnd": "036",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_037",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 37,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v037",
+        "term": "推理",
+        "reading": "すいり",
+        "kanji": [
+          "推",
+          "理"
+        ],
+        "labels": {
+          "hanViet": "Suy Lý"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s037",
+        "meaningVi": "lý luận; suy luận; thể loại bí ẩn hoặc trinh thám (tiểu thuyết phim, v.v.)",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "推理",
+        "readingNoAccent": "すいり",
+        "meaningViNoAccent": "ly luan; suy luan; the loai bi an hoac trinh tham (tieu thuyet phim, v.v.)",
+        "hanVietNoAccent": "Suy Ly"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v037",
+        "sourceSenseId": "mimi_n1_u04_s037",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 37,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Suy Lý"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "037",
+        "rangeEnd": "037",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_038",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 38,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v038",
+        "term": "根拠",
+        "reading": "こんきょ",
+        "kanji": [
+          "根",
+          "拠"
+        ],
+        "labels": {
+          "hanViet": "Căn Cứ"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s038",
+        "meaningVi": "cơ sở; nền tảng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "根拠",
+        "readingNoAccent": "こんきょ",
+        "meaningViNoAccent": "co so; nen tang",
+        "hanVietNoAccent": "Can Cu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v038",
+        "sourceSenseId": "mimi_n1_u04_s038",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 38,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Căn Cứ"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "038",
+        "rangeEnd": "038",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_039",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 39,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v039",
+        "term": "誇張",
+        "reading": "こちょう",
+        "kanji": [
+          "誇",
+          "張"
+        ],
+        "labels": {
+          "hanViet": "Khoa Trương"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s039",
+        "meaningVi": "cường điệu",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "誇張",
+        "readingNoAccent": "こちょう",
+        "meaningViNoAccent": "cuong dieu",
+        "hanVietNoAccent": "Khoa Truong"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v039",
+        "sourceSenseId": "mimi_n1_u04_s039",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 39,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Khoa Trương"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "039",
+        "rangeEnd": "039",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_040",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 40,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v040",
+        "term": "暗示",
+        "reading": "あんじ",
+        "kanji": [
+          "暗",
+          "示"
+        ],
+        "labels": {
+          "hanViet": "Ám Thị"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s040",
+        "meaningVi": "gợi ý; gợi ý",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "暗示",
+        "readingNoAccent": "あんじ",
+        "meaningViNoAccent": "goi y; goi y",
+        "hanVietNoAccent": "Am Thi"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v040",
+        "sourceSenseId": "mimi_n1_u04_s040",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 40,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Ám Thị"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "040",
+        "rangeEnd": "040",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_041",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 41,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v041",
+        "term": "錯覚",
+        "reading": "さっかく",
+        "kanji": [
+          "錯",
+          "覚"
+        ],
+        "labels": {
+          "hanViet": "Thác Giác"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s041",
+        "meaningVi": "ảo ảnh quang học; ảo giác",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "錯覚",
+        "readingNoAccent": "さっかく",
+        "meaningViNoAccent": "ao anh quang hoc; ao giac",
+        "hanVietNoAccent": "Thac Giac"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v041",
+        "sourceSenseId": "mimi_n1_u04_s041",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 41,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thác Giác"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "041",
+        "rangeEnd": "041",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_042",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 42,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v042",
+        "term": "視野",
+        "reading": "しや",
+        "kanji": [
+          "視",
+          "野"
+        ],
+        "labels": {
+          "hanViet": "Thị Dã"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s042",
+        "meaningVi": "tầm nhìn; tầm nhìn",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "視野",
+        "readingNoAccent": "しや",
+        "meaningViNoAccent": "tam nhin; tam nhin",
+        "hanVietNoAccent": "Thi Da"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v042",
+        "sourceSenseId": "mimi_n1_u04_s042",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 42,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thị Dã"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "042",
+        "rangeEnd": "042",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_043",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 43,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v043",
+        "term": "空白",
+        "reading": "くうはく",
+        "kanji": [
+          "空",
+          "白"
+        ],
+        "labels": {
+          "hanViet": "Không Bạch"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s043",
+        "meaningVi": "Trống không",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "空白",
+        "readingNoAccent": "くうはく",
+        "meaningViNoAccent": "Trong khong",
+        "hanVietNoAccent": "Khong Bach"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v043",
+        "sourceSenseId": "mimi_n1_u04_s043",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 43,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Không Bạch"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "043",
+        "rangeEnd": "043",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_044",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 44,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v044",
+        "term": "接触",
+        "reading": "せっしょく",
+        "kanji": [
+          "接",
+          "触"
+        ],
+        "labels": {
+          "hanViet": "Tiếp Xúc"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s044",
+        "meaningVi": "chạm; liên lạc",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "接触",
+        "readingNoAccent": "せっしょく",
+        "meaningViNoAccent": "cham; lien lac",
+        "hanVietNoAccent": "Tiep Xuc"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v044",
+        "sourceSenseId": "mimi_n1_u04_s044",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 44,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tiếp Xúc"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "044",
+        "rangeEnd": "044",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_045",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 45,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v045",
+        "term": "交渉",
+        "reading": "こうしょう",
+        "kanji": [
+          "交",
+          "渉"
+        ],
+        "labels": {
+          "hanViet": "Giao Thiệp"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s045",
+        "meaningVi": "đàm phán; thảo luận; kết nối",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "交渉",
+        "readingNoAccent": "こうしょう",
+        "meaningViNoAccent": "dam phan; thao luan; ket noi",
+        "hanVietNoAccent": "Giao Thiep"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v045",
+        "sourceSenseId": "mimi_n1_u04_s045",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 45,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Giao Thiệp"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "045",
+        "rangeEnd": "045",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_046",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 46,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v046",
+        "term": "妥協",
+        "reading": "だきょう",
+        "kanji": [
+          "妥",
+          "協"
+        ],
+        "labels": {
+          "hanViet": "Thỏa Hiệp"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s046",
+        "meaningVi": "thỏa hiệp; nhượng bộ",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "妥協",
+        "readingNoAccent": "だきょう",
+        "meaningViNoAccent": "thoa hiep; nhuong bo",
+        "hanVietNoAccent": "Thoa Hiep"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v046",
+        "sourceSenseId": "mimi_n1_u04_s046",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 46,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thỏa Hiệp"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "046",
+        "rangeEnd": "046",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_047",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 47,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v047",
+        "term": "更新",
+        "reading": "こうしん",
+        "kanji": [
+          "更",
+          "新"
+        ],
+        "labels": {
+          "hanViet": "Canh Tân"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s047",
+        "meaningVi": "Cách tân, cải tạo",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "更新",
+        "readingNoAccent": "こうしん",
+        "meaningViNoAccent": "Cach tan, cai tao",
+        "hanVietNoAccent": "Canh Tan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v047",
+        "sourceSenseId": "mimi_n1_u04_s047",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 47,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Canh Tân"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "047",
+        "rangeEnd": "047",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_048",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 48,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v048",
+        "term": "清算",
+        "reading": "せいさん",
+        "kanji": [
+          "清",
+          "算"
+        ],
+        "labels": {
+          "hanViet": "Thanh Toán"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s048",
+        "meaningVi": "thanh lý; thanh toán",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "清算",
+        "readingNoAccent": "せいさん",
+        "meaningViNoAccent": "thanh ly; thanh toan",
+        "hanVietNoAccent": "Thanh Toan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v048",
+        "sourceSenseId": "mimi_n1_u04_s048",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 48,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thanh Toán"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "048",
+        "rangeEnd": "048",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_049",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 49,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v049",
+        "term": "損害",
+        "reading": "そんがい",
+        "kanji": [
+          "損",
+          "害"
+        ],
+        "labels": {
+          "hanViet": "Tổn Hại"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s049",
+        "meaningVi": "Tổn hại",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "損害",
+        "readingNoAccent": "そんがい",
+        "meaningViNoAccent": "Ton hai",
+        "hanVietNoAccent": "Ton Hai"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v049",
+        "sourceSenseId": "mimi_n1_u04_s049",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 49,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tổn Hại"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "049",
+        "rangeEnd": "049",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_050",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 50,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v050",
+        "term": "利害",
+        "reading": "りがい",
+        "kanji": [
+          "利",
+          "害"
+        ],
+        "labels": {
+          "hanViet": "Lợi Hại"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s050",
+        "meaningVi": "Lợi hại",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "利害",
+        "readingNoAccent": "りがい",
+        "meaningViNoAccent": "Loi hai",
+        "hanVietNoAccent": "Loi Hai"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v050",
+        "sourceSenseId": "mimi_n1_u04_s050",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 50,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Lợi Hại"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "050",
+        "rangeEnd": "050",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_051",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 51,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v051",
+        "term": "後継",
+        "reading": "こうけい",
+        "kanji": [
+          "後",
+          "継"
+        ],
+        "labels": {
+          "hanViet": "Hậu Kế"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s051",
+        "meaningVi": "Quang cảnh",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "後継",
+        "readingNoAccent": "こうけい",
+        "meaningViNoAccent": "Quang canh",
+        "hanVietNoAccent": "Hau Ke"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v051",
+        "sourceSenseId": "mimi_n1_u04_s051",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 51,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Hậu Kế"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "051",
+        "rangeEnd": "051",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_052",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 52,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v052",
+        "term": "報道",
+        "reading": "ほうどう",
+        "kanji": [
+          "報",
+          "道"
+        ],
+        "labels": {
+          "hanViet": "Báo Đạo"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s052",
+        "meaningVi": "thông tin;báo cáo",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "報道",
+        "readingNoAccent": "ほうどう",
+        "meaningViNoAccent": "thong tin;bao cao",
+        "hanVietNoAccent": "Bao Dao"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v052",
+        "sourceSenseId": "mimi_n1_u04_s052",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 52,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Báo Đạo"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "052",
+        "rangeEnd": "052",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_053",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 53,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v053",
+        "term": "破壊",
+        "reading": "はかい",
+        "kanji": [
+          "破",
+          "壊"
+        ],
+        "labels": {
+          "hanViet": "Phá Hoại"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s053",
+        "meaningVi": "sự phá hủy",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "破壊",
+        "readingNoAccent": "はかい",
+        "meaningViNoAccent": "su pha huy",
+        "hanVietNoAccent": "Pha Hoai"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v053",
+        "sourceSenseId": "mimi_n1_u04_s053",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 53,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phá Hoại"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "053",
+        "rangeEnd": "053",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_054",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 54,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v054",
+        "term": "破棄",
+        "reading": "はき",
+        "kanji": [
+          "破",
+          "棄"
+        ],
+        "labels": {
+          "hanViet": "Phá Khí"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s054",
+        "meaningVi": "thu hồi; hủy bỏ; vi phạm (ví dụ: hiệp ước)",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "破棄",
+        "readingNoAccent": "はき",
+        "meaningViNoAccent": "thu hoi; huy bo; vi pham (vi du: hiep uoc)",
+        "hanVietNoAccent": "Pha Khi"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v054",
+        "sourceSenseId": "mimi_n1_u04_s054",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 54,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phá Khí"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "054",
+        "rangeEnd": "054",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_055",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 55,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v055",
+        "term": "対応",
+        "reading": "たいおう",
+        "kanji": [
+          "対",
+          "応"
+        ],
+        "labels": {
+          "hanViet": "Đối Ứng"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s055",
+        "meaningVi": "sự tương tác;sự tương tác;đối phó với;đối phó với",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "対応",
+        "readingNoAccent": "たいおう",
+        "meaningViNoAccent": "su tuong tac;su tuong tac;doi pho voi;doi pho voi",
+        "hanVietNoAccent": "Doi Ung"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v055",
+        "sourceSenseId": "mimi_n1_u04_s055",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 55,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Đối Ứng"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "055",
+        "rangeEnd": "055",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_056",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 56,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v056",
+        "term": "対処",
+        "reading": "たいしょ",
+        "kanji": [
+          "対",
+          "処"
+        ],
+        "labels": {
+          "hanViet": "Đối Xử"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s056",
+        "meaningVi": "đối phó với; đối phó",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "対処",
+        "readingNoAccent": "たいしょ",
+        "meaningViNoAccent": "doi pho voi; doi pho",
+        "hanVietNoAccent": "Doi Xu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v056",
+        "sourceSenseId": "mimi_n1_u04_s056",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 56,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Đối Xử"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "056",
+        "rangeEnd": "056",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_057",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 57,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v057",
+        "term": "取引",
+        "reading": "とりひき",
+        "kanji": [
+          "取",
+          "引"
+        ],
+        "labels": {
+          "hanViet": "Thủ Dẫn"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s057",
+        "meaningVi": "Kinh doanh, doanh nghiệp",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "取引",
+        "readingNoAccent": "とりひき",
+        "meaningViNoAccent": "Kinh doanh, doanh nghiep",
+        "hanVietNoAccent": "Thu Dan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v057",
+        "sourceSenseId": "mimi_n1_u04_s057",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 57,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thủ Dẫn"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "057",
+        "rangeEnd": "057",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_058",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 58,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v058",
+        "term": "独占",
+        "reading": "どくせん",
+        "kanji": [
+          "独",
+          "占"
+        ],
+        "labels": {
+          "hanViet": "Độc Chiêm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s058",
+        "meaningVi": "độc quyền",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "独占",
+        "readingNoAccent": "どくせん",
+        "meaningViNoAccent": "doc quyen",
+        "hanVietNoAccent": "Doc Chiem"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v058",
+        "sourceSenseId": "mimi_n1_u04_s058",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 58,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Độc Chiêm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "058",
+        "rangeEnd": "058",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_059",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 59,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v059",
+        "term": "進出",
+        "reading": "しんしゅつ",
+        "kanji": [
+          "進",
+          "出"
+        ],
+        "labels": {
+          "hanViet": "Tiến Xuất"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s059",
+        "meaningVi": "tiến lên; bước về phía trước",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "進出",
+        "readingNoAccent": "しんしゅつ",
+        "meaningViNoAccent": "tien len; buoc ve phia truoc",
+        "hanVietNoAccent": "Tien Xuat"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v059",
+        "sourceSenseId": "mimi_n1_u04_s059",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 59,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tiến Xuất"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "059",
+        "rangeEnd": "059",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_060",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 60,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v060",
+        "term": "進化",
+        "reading": "しんか",
+        "kanji": [
+          "進",
+          "化"
+        ],
+        "labels": {
+          "hanViet": "Tiến Hóa"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s060",
+        "meaningVi": "sự tiến hóa; sự tiến bộ",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "進化",
+        "readingNoAccent": "しんか",
+        "meaningViNoAccent": "su tien hoa; su tien bo",
+        "hanVietNoAccent": "Tien Hoa"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v060",
+        "sourceSenseId": "mimi_n1_u04_s060",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 60,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tiến Hóa"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "060",
+        "rangeEnd": "060",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_061",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 61,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v061",
+        "term": "一切",
+        "reading": "いっさい",
+        "kanji": [
+          "一",
+          "切"
+        ],
+        "labels": {
+          "hanViet": "Nhất Thiết"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s061",
+        "meaningVi": "tất cả;tất cả;không có ngoại lệ;toàn bộ;hoàn toàn;hoàn toàn",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "一切",
+        "readingNoAccent": "いっさい",
+        "meaningViNoAccent": "tat ca;tat ca;khong co ngoai le;toan bo;hoan toan;hoan toan",
+        "hanVietNoAccent": "Nhat Thiet"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v061",
+        "sourceSenseId": "mimi_n1_u04_s061",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 61,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Nhất Thiết"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "061",
+        "rangeEnd": "061",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_062",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 62,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v062",
+        "term": "加減",
+        "reading": "かげん",
+        "kanji": [
+          "加",
+          "減"
+        ],
+        "labels": {
+          "hanViet": "Gia Giảm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s062",
+        "meaningVi": "Trạng thái",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "加減",
+        "readingNoAccent": "かげん",
+        "meaningViNoAccent": "Trang thai",
+        "hanVietNoAccent": "Gia Giam"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v062",
+        "sourceSenseId": "mimi_n1_u04_s062",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 62,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Gia Giảm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "062",
+        "rangeEnd": "062",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_063",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 63,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v063",
+        "term": "削減",
+        "reading": "さくげん",
+        "kanji": [
+          "削",
+          "減"
+        ],
+        "labels": {
+          "hanViet": "Tước Giảm"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s063",
+        "meaningVi": "cắt giảm; cắt giảm; cắt giảm",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "削減",
+        "readingNoAccent": "さくげん",
+        "meaningViNoAccent": "cat giam; cat giam; cat giam",
+        "hanVietNoAccent": "Tuoc Giam"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v063",
+        "sourceSenseId": "mimi_n1_u04_s063",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 63,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Tước Giảm"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "063",
+        "rangeEnd": "063",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_064",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 64,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v064",
+        "term": "余分",
+        "reading": "よぶん",
+        "kanji": [
+          "余",
+          "分"
+        ],
+        "labels": {
+          "hanViet": "Dư Phân"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s064",
+        "meaningVi": "Thừa",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "余分",
+        "readingNoAccent": "よぶん",
+        "meaningViNoAccent": "Thua",
+        "hanVietNoAccent": "Du Phan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v064",
+        "sourceSenseId": "mimi_n1_u04_s064",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 64,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Dư Phân"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "064",
+        "rangeEnd": "064",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_065",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 65,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v065",
+        "term": "余地",
+        "reading": "よち",
+        "kanji": [
+          "余",
+          "地"
+        ],
+        "labels": {
+          "hanViet": "Dư Địa"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s065",
+        "meaningVi": "địa điểm;phòng;lề;phạm vi",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "余地",
+        "readingNoAccent": "よち",
+        "meaningViNoAccent": "dia diem;phong;le;pham vi",
+        "hanVietNoAccent": "Du Dia"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v065",
+        "sourceSenseId": "mimi_n1_u04_s065",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 65,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Dư Địa"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "065",
+        "rangeEnd": "065",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_066",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 66,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v066",
+        "term": "発言",
+        "reading": "はつげん",
+        "kanji": [
+          "発",
+          "言"
+        ],
+        "labels": {
+          "hanViet": "Phát Ngôn"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s066",
+        "meaningVi": "lời nói; lời phát biểu; lời đề nghị",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "発言",
+        "readingNoAccent": "はつげん",
+        "meaningViNoAccent": "loi noi; loi phat bieu; loi de nghi",
+        "hanVietNoAccent": "Phat Ngon"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v066",
+        "sourceSenseId": "mimi_n1_u04_s066",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 66,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phát Ngôn"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "066",
+        "rangeEnd": "066",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_067",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 67,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v067",
+        "term": "発行",
+        "reading": "はっこう",
+        "kanji": [
+          "発",
+          "行"
+        ],
+        "labels": {
+          "hanViet": "Phát Hành"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s067",
+        "meaningVi": "Phát hành",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "発行",
+        "readingNoAccent": "はっこう",
+        "meaningViNoAccent": "Phat hanh",
+        "hanVietNoAccent": "Phat Hanh"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v067",
+        "sourceSenseId": "mimi_n1_u04_s067",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 67,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phát Hành"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "067",
+        "rangeEnd": "067",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_068",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 68,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v068",
+        "term": "発信",
+        "reading": "はっしん",
+        "kanji": [
+          "発",
+          "信"
+        ],
+        "labels": {
+          "hanViet": "Phát Tín"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s068",
+        "meaningVi": "Truyền tải",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "発信",
+        "readingNoAccent": "はっしん",
+        "meaningViNoAccent": "Truyen tai",
+        "hanVietNoAccent": "Phat Tin"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v068",
+        "sourceSenseId": "mimi_n1_u04_s068",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 68,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phát Tín"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "068",
+        "rangeEnd": "068",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_069",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 69,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v069",
+        "term": "発送",
+        "reading": "はっそう",
+        "kanji": [
+          "発",
+          "送"
+        ],
+        "labels": {
+          "hanViet": "Phát Tống"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s069",
+        "meaningVi": "Gửi đi",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "発送",
+        "readingNoAccent": "はっそう",
+        "meaningViNoAccent": "Gui di",
+        "hanVietNoAccent": "Phat Tong"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v069",
+        "sourceSenseId": "mimi_n1_u04_s069",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 69,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phát Tống"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "069",
+        "rangeEnd": "069",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_070",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 70,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v070",
+        "term": "発酵",
+        "reading": "はっこう",
+        "kanji": [
+          "発",
+          "酵"
+        ],
+        "labels": {
+          "hanViet": "Phát Diếu"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s070",
+        "meaningVi": "Lên men",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "発酵",
+        "readingNoAccent": "はっこう",
+        "meaningViNoAccent": "Len men",
+        "hanVietNoAccent": "Phat Dieu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v070",
+        "sourceSenseId": "mimi_n1_u04_s070",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 70,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phát Diếu"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "070",
+        "rangeEnd": "070",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_071",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 71,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v071",
+        "term": "発育",
+        "reading": "はついく",
+        "kanji": [
+          "発",
+          "育"
+        ],
+        "labels": {
+          "hanViet": "Phát Dục"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s071",
+        "meaningVi": "(thể chất) sự phát triển; sự phát triển",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "発育",
+        "readingNoAccent": "はついく",
+        "meaningViNoAccent": "(the chat) su phat trien; su phat trien",
+        "hanVietNoAccent": "Phat Duc"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v071",
+        "sourceSenseId": "mimi_n1_u04_s071",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 71,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phát Dục"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "071",
+        "rangeEnd": "071",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_072",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 72,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v072",
+        "term": "発足",
+        "reading": "ほっそく",
+        "kanji": [
+          "発",
+          "足"
+        ],
+        "labels": {
+          "hanViet": "Phát Túc"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s072",
+        "meaningVi": "Tung ra, giới thiệu",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "発足",
+        "readingNoAccent": "ほっそく",
+        "meaningViNoAccent": "Tung ra, gioi thieu",
+        "hanVietNoAccent": "Phat Tuc"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v072",
+        "sourceSenseId": "mimi_n1_u04_s072",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 72,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phát Túc"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "072",
+        "rangeEnd": "072",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_073",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 73,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v073",
+        "term": "確定",
+        "reading": "かくてい",
+        "kanji": [
+          "確",
+          "定"
+        ],
+        "labels": {
+          "hanViet": "Xác Định"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s073",
+        "meaningVi": "định nghĩa (toán học); quyết định; giải quyết",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "確定",
+        "readingNoAccent": "かくてい",
+        "meaningViNoAccent": "dinh nghia (toan hoc); quyet dinh; giai quyet",
+        "hanVietNoAccent": "Xac Dinh"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v073",
+        "sourceSenseId": "mimi_n1_u04_s073",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 73,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Xác Định"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "073",
+        "rangeEnd": "073",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_074",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 74,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v074",
+        "term": "確保",
+        "reading": "かくほ",
+        "kanji": [
+          "確",
+          "保"
+        ],
+        "labels": {
+          "hanViet": "Xác Bảo"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s074",
+        "meaningVi": "đảm bảo;đảm bảo;duy trì;đảm bảo;an toàn",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "確保",
+        "readingNoAccent": "かくほ",
+        "meaningViNoAccent": "dam bao;dam bao;duy tri;dam bao;an toan",
+        "hanVietNoAccent": "Xac Bao"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v074",
+        "sourceSenseId": "mimi_n1_u04_s074",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 74,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Xác Bảo"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "074",
+        "rangeEnd": "074",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_075",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 75,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v075",
+        "term": "確立",
+        "reading": "かくりつ",
+        "kanji": [
+          "確",
+          "立"
+        ],
+        "labels": {
+          "hanViet": "Xác Lập"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s075",
+        "meaningVi": "thành lập",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "確立",
+        "readingNoAccent": "かくりつ",
+        "meaningViNoAccent": "thanh lap",
+        "hanVietNoAccent": "Xac Lap"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v075",
+        "sourceSenseId": "mimi_n1_u04_s075",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 75,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Xác Lập"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "075",
+        "rangeEnd": "075",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_076",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 76,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v076",
+        "term": "反応",
+        "reading": "はんのう",
+        "kanji": [
+          "反",
+          "応"
+        ],
+        "labels": {
+          "hanViet": "Phản Ứng"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s076",
+        "meaningVi": "phản ứng; phản ứng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "反応",
+        "readingNoAccent": "はんのう",
+        "meaningViNoAccent": "phan ung; phan ung",
+        "hanVietNoAccent": "Phan Ung"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v076",
+        "sourceSenseId": "mimi_n1_u04_s076",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 76,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phản Ứng"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "076",
+        "rangeEnd": "076",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_077",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 77,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v077",
+        "term": "反射",
+        "reading": "はんしゃ",
+        "kanji": [
+          "反",
+          "射"
+        ],
+        "labels": {
+          "hanViet": "Phản Xạ"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s077",
+        "meaningVi": "sự phản xạ; tiếng vang",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "反射",
+        "readingNoAccent": "はんしゃ",
+        "meaningViNoAccent": "su phan xa; tieng vang",
+        "hanVietNoAccent": "Phan Xa"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v077",
+        "sourceSenseId": "mimi_n1_u04_s077",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 77,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phản Xạ"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "077",
+        "rangeEnd": "077",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_078",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 78,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v078",
+        "term": "反発",
+        "reading": "はんぱつ",
+        "kanji": [
+          "反",
+          "発"
+        ],
+        "labels": {
+          "hanViet": "Phản Phát"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s078",
+        "meaningVi": "đẩy lùi; phục hồi; phục hồi; phản đối",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "反発",
+        "readingNoAccent": "はんぱつ",
+        "meaningViNoAccent": "day lui; phuc hoi; phuc hoi; phan doi",
+        "hanVietNoAccent": "Phan Phat"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v078",
+        "sourceSenseId": "mimi_n1_u04_s078",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 78,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phản Phát"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "078",
+        "rangeEnd": "078",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_079",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 79,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v079",
+        "term": "反映",
+        "reading": "はんえい",
+        "kanji": [
+          "反",
+          "映"
+        ],
+        "labels": {
+          "hanViet": "Phản Ánh"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s079",
+        "meaningVi": "Phản ánh, ảnh hưởng",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "反映",
+        "readingNoAccent": "はんえい",
+        "meaningViNoAccent": "Phan anh, anh huong",
+        "hanVietNoAccent": "Phan Anh"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v079",
+        "sourceSenseId": "mimi_n1_u04_s079",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 79,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phản Ánh"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "079",
+        "rangeEnd": "079",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_080",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 80,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v080",
+        "term": "反則",
+        "reading": "はんそく",
+        "kanji": [
+          "反",
+          "則"
+        ],
+        "labels": {
+          "hanViet": "Phản Tắc"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s080",
+        "meaningVi": "Lỗi",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "反則",
+        "readingNoAccent": "はんそく",
+        "meaningViNoAccent": "Loi",
+        "hanVietNoAccent": "Phan Tac"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v080",
+        "sourceSenseId": "mimi_n1_u04_s080",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 80,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phản Tắc"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "080",
+        "rangeEnd": "080",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_081",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 81,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v081",
+        "term": "特許",
+        "reading": "とっきょ",
+        "kanji": [
+          "特",
+          "許"
+        ],
+        "labels": {
+          "hanViet": "Đặc Hứa"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s081",
+        "meaningVi": "sự cho phép đặc biệt; bằng sáng chế",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "特許",
+        "readingNoAccent": "とっきょ",
+        "meaningViNoAccent": "su cho phep dac biet; bang sang che",
+        "hanVietNoAccent": "Dac Hua"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v081",
+        "sourceSenseId": "mimi_n1_u04_s081",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 81,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Đặc Hứa"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "081",
+        "rangeEnd": "081",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_082",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 82,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v082",
+        "term": "特有",
+        "reading": "とくゆう",
+        "kanji": [
+          "特",
+          "有"
+        ],
+        "labels": {
+          "hanViet": "Đặc Hữu"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s082",
+        "meaningVi": "đặc trưng (của); đặc biệt (với)",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "特有",
+        "readingNoAccent": "とくゆう",
+        "meaningViNoAccent": "dac trung (cua); dac biet (voi)",
+        "hanVietNoAccent": "Dac Huu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v082",
+        "sourceSenseId": "mimi_n1_u04_s082",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 82,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Đặc Hữu"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "082",
+        "rangeEnd": "082",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_083",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 83,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v083",
+        "term": "特定",
+        "reading": "とくてい",
+        "kanji": [
+          "特",
+          "定"
+        ],
+        "labels": {
+          "hanViet": "Đặc Định"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s083",
+        "meaningVi": "Đặc định, đặc quyền",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "特定",
+        "readingNoAccent": "とくてい",
+        "meaningViNoAccent": "Dac dinh, dac quyen",
+        "hanVietNoAccent": "Dac Dinh"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v083",
+        "sourceSenseId": "mimi_n1_u04_s083",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 83,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Đặc Định"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "083",
+        "rangeEnd": "083",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_084",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 84,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v084",
+        "term": "復帰",
+        "reading": "ふっき",
+        "kanji": [
+          "復",
+          "帰"
+        ],
+        "labels": {
+          "hanViet": "Phục Quy"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s084",
+        "meaningVi": "Quay lại",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "復帰",
+        "readingNoAccent": "ふっき",
+        "meaningViNoAccent": "Quay lai",
+        "hanVietNoAccent": "Phuc Quy"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v084",
+        "sourceSenseId": "mimi_n1_u04_s084",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 84,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phục Quy"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "084",
+        "rangeEnd": "084",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_085",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 85,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v085",
+        "term": "復旧",
+        "reading": "ふっきゅう",
+        "kanji": [
+          "復",
+          "旧"
+        ],
+        "labels": {
+          "hanViet": "Phục Cựu"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s085",
+        "meaningVi": "Phục hồi",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "復旧",
+        "readingNoAccent": "ふっきゅう",
+        "meaningViNoAccent": "Phuc hoi",
+        "hanVietNoAccent": "Phuc Cuu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v085",
+        "sourceSenseId": "mimi_n1_u04_s085",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 85,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phục Cựu"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "085",
+        "rangeEnd": "085",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_086",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 86,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v086",
+        "term": "復興",
+        "reading": "ふっこう",
+        "kanji": [
+          "復",
+          "興"
+        ],
+        "labels": {
+          "hanViet": "Phục Hưng"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s086",
+        "meaningVi": "sự hồi sinh; sự phục hưng; sự tái thiết",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "復興",
+        "readingNoAccent": "ふっこう",
+        "meaningViNoAccent": "su hoi sinh; su phuc hung; su tai thiet",
+        "hanVietNoAccent": "Phuc Hung"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v086",
+        "sourceSenseId": "mimi_n1_u04_s086",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 86,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Phục Hưng"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "086",
+        "rangeEnd": "086",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_087",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 87,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v087",
+        "term": "追及",
+        "reading": "ついきゅう",
+        "kanji": [
+          "追",
+          "及"
+        ],
+        "labels": {
+          "hanViet": "Truy Cập"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s087",
+        "meaningVi": "đạt được; thực hiện; giải quyết (tội phạm)",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "追及",
+        "readingNoAccent": "ついきゅう",
+        "meaningViNoAccent": "dat duoc; thuc hien; giai quyet (toi pham)",
+        "hanVietNoAccent": "Truy Cap"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v087",
+        "sourceSenseId": "mimi_n1_u04_s087",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 87,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Truy Cập"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "087",
+        "rangeEnd": "087",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_088",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 88,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v088",
+        "term": "追求",
+        "reading": "ついきゅう",
+        "kanji": [
+          "追",
+          "求"
+        ],
+        "labels": {
+          "hanViet": "Truy Cầu"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s088",
+        "meaningVi": "Theo đuổi",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "追求",
+        "readingNoAccent": "ついきゅう",
+        "meaningViNoAccent": "Theo duoi",
+        "hanVietNoAccent": "Truy Cau"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v088",
+        "sourceSenseId": "mimi_n1_u04_s088",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 88,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Truy Cầu"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "088",
+        "rangeEnd": "088",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_089",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 89,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v089",
+        "term": "追究",
+        "reading": "ついきゅう",
+        "kanji": [
+          "追",
+          "究"
+        ],
+        "labels": {
+          "hanViet": "Truy Cứu"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s089",
+        "meaningVi": "Yêu cầu, điều tra",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "追究",
+        "readingNoAccent": "ついきゅう",
+        "meaningViNoAccent": "Yeu cau, dieu tra",
+        "hanVietNoAccent": "Truy Cuu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v089",
+        "sourceSenseId": "mimi_n1_u04_s089",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 89,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Truy Cứu"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "089",
+        "rangeEnd": "089",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_090",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 90,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v090",
+        "term": "追跡",
+        "reading": "ついせき",
+        "kanji": [
+          "追",
+          "跡"
+        ],
+        "labels": {
+          "hanViet": "Truy Tích"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s090",
+        "meaningVi": "theo đuổi",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "追跡",
+        "readingNoAccent": "ついせき",
+        "meaningViNoAccent": "theo duoi",
+        "hanVietNoAccent": "Truy Tich"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v090",
+        "sourceSenseId": "mimi_n1_u04_s090",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 90,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Truy Tích"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "090",
+        "rangeEnd": "090",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_091",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 91,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v091",
+        "term": "手本",
+        "reading": "てほん",
+        "kanji": [
+          "手",
+          "本"
+        ],
+        "labels": {
+          "hanViet": "Thủ Bản"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s091",
+        "meaningVi": "mô hình; kiểu mẫu",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "手本",
+        "readingNoAccent": "てほん",
+        "meaningViNoAccent": "mo hinh; kieu mau",
+        "hanVietNoAccent": "Thu Ban"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v091",
+        "sourceSenseId": "mimi_n1_u04_s091",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 91,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thủ Bản"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "091",
+        "rangeEnd": "091",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_092",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 92,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v092",
+        "term": "手がかり",
+        "reading": "てがかり",
+        "kanji": [
+          "手"
+        ],
+        "labels": {
+          "hanViet": "Thủ"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s092",
+        "meaningVi": "Dấu vết",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "手がかり",
+        "readingNoAccent": "てがかり",
+        "meaningViNoAccent": "Dau vet",
+        "hanVietNoAccent": "Thu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v092",
+        "sourceSenseId": "mimi_n1_u04_s092",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 92,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thủ"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "092",
+        "rangeEnd": "092",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_093",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 93,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v093",
+        "term": "手分け",
+        "reading": "てわけ",
+        "kanji": [
+          "手",
+          "分"
+        ],
+        "labels": {
+          "hanViet": "Thủ Phân"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s093",
+        "meaningVi": "phân công lao động",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "手分け",
+        "readingNoAccent": "てわけ",
+        "meaningViNoAccent": "phan cong lao dong",
+        "hanVietNoAccent": "Thu Phan"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v093",
+        "sourceSenseId": "mimi_n1_u04_s093",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 93,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thủ Phân"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "093",
+        "rangeEnd": "093",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_094",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 94,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v094",
+        "term": "手配",
+        "reading": "てはい",
+        "kanji": [
+          "手",
+          "配"
+        ],
+        "labels": {
+          "hanViet": "Thủ Phối"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s094",
+        "meaningVi": "sắp xếp; tìm kiếm (bởi cảnh sát)",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "手配",
+        "readingNoAccent": "てはい",
+        "meaningViNoAccent": "sap xep; tim kiem (boi canh sat)",
+        "hanVietNoAccent": "Thu Phoi"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v094",
+        "sourceSenseId": "mimi_n1_u04_s094",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 94,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thủ Phối"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "094",
+        "rangeEnd": "094",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_095",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 95,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v095",
+        "term": "手探り",
+        "reading": "てさぐり",
+        "kanji": [
+          "手",
+          "探"
+        ],
+        "labels": {
+          "hanViet": "Thủ Thám"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s095",
+        "meaningVi": "Lần mò",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "手探り",
+        "readingNoAccent": "てさぐり",
+        "meaningViNoAccent": "Lan mo",
+        "hanVietNoAccent": "Thu Tham"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v095",
+        "sourceSenseId": "mimi_n1_u04_s095",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 95,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thủ Thám"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "095",
+        "rangeEnd": "095",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_096",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 96,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v096",
+        "term": "手際",
+        "reading": "てぎわ",
+        "kanji": [
+          "手",
+          "際"
+        ],
+        "labels": {
+          "hanViet": "Thủ Tế"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s096",
+        "meaningVi": "sự biểu diễn; kỹ năng; sự khéo léo",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "手際",
+        "readingNoAccent": "てぎわ",
+        "meaningViNoAccent": "su bieu dien; ky nang; su kheo leo",
+        "hanVietNoAccent": "Thu Te"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v096",
+        "sourceSenseId": "mimi_n1_u04_s096",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 96,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Thủ Tế"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "096",
+        "rangeEnd": "096",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_097",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 97,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v097",
+        "term": "人手",
+        "reading": "ひとで",
+        "kanji": [
+          "人",
+          "手"
+        ],
+        "labels": {
+          "hanViet": "Nhân Thủ"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s097",
+        "meaningVi": "Người lao động",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "人手",
+        "readingNoAccent": "ひとで",
+        "meaningViNoAccent": "Nguoi lao dong",
+        "hanVietNoAccent": "Nhan Thu"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v097",
+        "sourceSenseId": "mimi_n1_u04_s097",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 97,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Nhân Thủ"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "097",
+        "rangeEnd": "097",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_098",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 98,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v098",
+        "term": "人目",
+        "reading": "ひとめ",
+        "kanji": [
+          "人",
+          "目"
+        ],
+        "labels": {
+          "hanViet": "Nhân Mục"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s098",
+        "meaningVi": "Cái nhìn xã hội",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "人目",
+        "readingNoAccent": "ひとめ",
+        "meaningViNoAccent": "Cai nhin xa hoi",
+        "hanVietNoAccent": "Nhan Muc"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v098",
+        "sourceSenseId": "mimi_n1_u04_s098",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 98,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Nhân Mục"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "098",
+        "rangeEnd": "098",
+        "officialLabel": "Unit 4"
+      }
+    },
+    {
+      "entryId": "mimi_n1_u04_099",
+      "lessonId": 4,
+      "unitId": 4,
+      "level": "N1",
+      "order": 99,
+      "tags": [
+        "mimikara",
+        "source-owner-local-mimikara",
+        "vi-source-verified"
+      ],
+      "classification": {
+        "script": "mixed",
+        "hasKanji": true,
+        "origin": "mimikara"
+      },
+      "lemma": {
+        "vocabId": "mimi_n1_u04_v099",
+        "term": "人気",
+        "reading": "ひとけ",
+        "kanji": [
+          "人",
+          "気"
+        ],
+        "labels": {
+          "hanViet": "Nhân Khí"
+        }
+      },
+      "sense": {
+        "senseId": "mimi_n1_u04_s099",
+        "meaningVi": "Có người",
+        "meaningEn": null
+      },
+      "search": {
+        "termNoAccent": "人気",
+        "readingNoAccent": "ひとけ",
+        "meaningViNoAccent": "Co nguoi",
+        "hanVietNoAccent": "Nhan Khi"
+      },
+      "links": {
+        "sourceVocabId": "mimi_n1_u04_v099",
+        "sourceSenseId": "mimi_n1_u04_s099",
+        "sourceBook": "Mimikara N1",
+        "sourceUnit": 4,
+        "sourceOrder": 99,
+        "sourceMode": "owner-local-mimikara"
+      },
+      "legacy": {
+        "kanjiMeaning": "Nhân Khí"
+      },
+      "lessonRoute": {
+        "series": "mimikara",
+        "routeType": "unit",
+        "routeOrder": 4,
+        "categoryTitle": "Mimikara N1",
+        "rangeStart": "099",
+        "rangeEnd": "099",
+        "officialLabel": "Unit 4"
+      }
+    }
+  ]
+}

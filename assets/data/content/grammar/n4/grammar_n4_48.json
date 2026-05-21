@@ -12,7 +12,20 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-source-verified"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: 使役形",
+      "meaning": "Ý nghĩa: Thể sai khiến dùng để nói “bắt/cho phép ai làm gì”.",
+      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
+      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "general-grammar-fallback"
+      }
+    }
   },
   {
     "lessonId": 48,
@@ -27,7 +40,20 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-source-verified"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: N1は + N2を/に + V使役",
+      "meaning": "Ý nghĩa: Mẫu sai khiến nói N1 bắt, sai, cho phép hoặc để N2 làm việc gì.",
+      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
+      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "particles"
+      }
+    }
   },
   {
     "lessonId": 48,
@@ -42,7 +68,20 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-source-verified"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: V使役て形 + いただけませんか",
+      "meaning": "Ý nghĩa: `〜させていただけませんか` là cách xin phép rất lịch sự: “có thể cho tôi được ...",
+      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
+      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "state-of-being"
+      }
+    }
   },
   {
     "lessonId": 48,
@@ -57,6 +96,19 @@
     "tags": [
       "vi-editorial-codex-pass",
       "vi-source-verified"
-    ]
+    ],
+    "directiveE": {
+      "form": "Hình thức: V使役て形 + ください",
+      "meaning": "Ý nghĩa: `〜させてください` dùng để xin phép: “hãy cho tôi được...”.",
+      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
+      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "fallbackReference": {
+        "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
+        "sourceUrl": "https://guidetojapanese.org/learn/grammar",
+        "license": "CC-BY-NC-SA 3.0",
+        "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
+        "guideSection": "state-of-being"
+      }
+    }
   }
 ]

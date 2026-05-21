@@ -1615,3 +1615,23 @@
 - Gates passed before deploy: focused vocab/navigation/premium tests, `flutter analyze lib test`, UI string guard, `git diff --check`, and full `flutter test --concurrency=1` (`2466/2466`).
 - Deployed to `https://jpstudy.web.app`; live proof opened the Hajimete N5 chapter, confirmed no Kanji tab, scrolled to inline term list, clicked `半`, and verified popover sections `Cầu Hán-Việt` and `Thứ tự nét`.
 - Live console showed the known App Check 403 throttle in this browser session; app content, data loads, and popover interaction still rendered correctly.
+
+## 2026-05-21 Follow-up Sprint Phase B/C Mimikara assets
+
+- Generated sanitized live Mimikara static assets and lesson/item manifests for N1-N5: N5 12 units/656 terms, N4 11 units/827 terms, N3 12 units/811 terms, N2 13 units/1171 terms, N1 14 units/1044 terms.
+- Filled OQ-011 missing units with deduped current-app/JMdict-compatible factual rows; wrote fill markdown docs for N1 units 06/10 and N2 units 05/09 when source gaps existed.
+- Logged DECISION-043 and OQ-014; no banned website was accessed and learner-facing assets do not contain banned source names.
+
+## 2026-05-21 Follow-up Sprint Phase B/C/D status
+
+- Rebuilt Mimikara after level-local normalized term+reading dedupe: N5 12 units/544 terms, N4 11 units/707 terms, N3 12 units/811 terms, N2 13 units/1171 terms, N1 14 units/1041 terms.
+- Rebuilt interlink graph with Mimikara vocab nodes: 25,917 nodes, 65,694 edges, validator passed.
+- Added Tae Kim fallback importer and applied Directive E blocks to 754 grammar items; grammar gap audit now reports 754 missing Directive E sections before import and 0 after.
+- Logged DECISION-044, DECISION-045, and non-blocking OQ-D-001.
+
+## 2026-05-21 Follow-up Sprint Phase B/C/D live-blocker fix
+
+- Live proof found Mimikara unit review could stay on a spinner because the review route waited on DB-backed content seeding while the catalog route already read bundled assets directly.
+- Added a RED/GREEN regression: Mimikara unit review must render bundled terms even when the content DB path never resolves.
+- Changed `vocabSeriesTermsProvider` so `series=mimikara` loads bundled unit JSON directly with stable negative review ids, preserving the DB-backed path for other textbook series.
+- Sanitized legacy kana/kanji learner assets that leaked banned source names during the Sprint 1 brand audit; logged DECISION-046.

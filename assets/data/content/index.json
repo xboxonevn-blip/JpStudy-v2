@@ -1,35 +1,36 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-05-20",
+  "generatedAt": "2026-05-21",
   "datasets": {
     "vocab": {
-      "files": 278,
-      "entries": 16712,
+      "files": 345,
+      "entries": 20986,
       "levels": {
         "N5": {
-          "files": 39,
-          "entries": 1989
+          "files": 52,
+          "entries": 2533
         },
         "N4": {
-          "files": 45,
-          "entries": 2110
+          "files": 57,
+          "entries": 2817
         },
         "N3": {
-          "files": 54,
-          "entries": 2084
+          "files": 67,
+          "entries": 2895
         },
         "N2": {
-          "files": 64,
-          "entries": 3590
+          "files": 78,
+          "entries": 4761
         },
         "N1": {
-          "files": 76,
-          "entries": 6939
+          "files": 91,
+          "entries": 7980
         }
       },
       "series": {
         "ShinKanzen": 5573,
         "hajimete": 8334,
+        "mimikara": 4274,
         "minna": 2805
       }
     },

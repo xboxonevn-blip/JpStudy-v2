@@ -148,6 +148,18 @@ extension AppNavigationContext on BuildContext {
     ),
   );
 
+  void openMimikaraCatalog({
+    required String levelCode,
+    required String title,
+    String? subtitle,
+  }) => push(
+    AppRouteLocation.mimikaraCatalog(
+      levelCode: levelCode,
+      title: title,
+      subtitle: subtitle,
+    ),
+  );
+
   void openHajimeteChapter({
     required String levelCode,
     required int chapterId,

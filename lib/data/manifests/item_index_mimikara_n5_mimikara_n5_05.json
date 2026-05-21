@@ -1,0 +1,668 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T18:30:00+07:00",
+  "textbook_id": "mimikara_n5",
+  "lesson_id": "mimikara_n5_05",
+  "items": [
+    {
+      "item_id": "vocab:n5:mimikara:05:今",
+      "type": "vocab",
+      "surface": "今",
+      "reading": "いま",
+      "label_ja": "今",
+      "label_vi": "bây giờ",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_001",
+        "key": "vocab/n5/mimikara/unit_05.json#今"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今朝",
+      "type": "vocab",
+      "surface": "今朝",
+      "reading": "けさ",
+      "label_ja": "今朝",
+      "label_vi": "sáng nay",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_002",
+        "key": "vocab/n5/mimikara/unit_05.json#今朝"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今晩",
+      "type": "vocab",
+      "surface": "今晩",
+      "reading": "こんばん",
+      "label_ja": "今晩",
+      "label_vi": "tối nay",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_003",
+        "key": "vocab/n5/mimikara/unit_05.json#今晩"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今週",
+      "type": "vocab",
+      "surface": "今週",
+      "reading": "こんしゅう",
+      "label_ja": "今週",
+      "label_vi": "tuần này",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_004",
+        "key": "vocab/n5/mimikara/unit_05.json#今週"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今度",
+      "type": "vocab",
+      "surface": "今度",
+      "reading": "こんど",
+      "label_ja": "今度",
+      "label_vi": "Lần tới",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_005",
+        "key": "vocab/n5/mimikara/unit_05.json#今度"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今の電車",
+      "type": "vocab",
+      "surface": "今の電車",
+      "reading": "いまのでんしゃ",
+      "label_ja": "今の電車",
+      "label_vi": "Đoàn tàu vừa rồi",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_006",
+        "key": "vocab/n5/mimikara/unit_05.json#今の電車"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今夜",
+      "type": "vocab",
+      "surface": "今夜",
+      "reading": "こんや",
+      "label_ja": "今夜",
+      "label_vi": "Tối nay, đêm nay",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_007",
+        "key": "vocab/n5/mimikara/unit_05.json#今夜"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今では",
+      "type": "vocab",
+      "surface": "今では",
+      "reading": "いまでは",
+      "label_ja": "今では",
+      "label_vi": "Bây giờ (thì)",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_008",
+        "key": "vocab/n5/mimikara/unit_05.json#今では"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今でも",
+      "type": "vocab",
+      "surface": "今でも",
+      "reading": "いまでも",
+      "label_ja": "今でも",
+      "label_vi": "Ngay cả bây giờ",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_009",
+        "key": "vocab/n5/mimikara/unit_05.json#今でも"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:今にも",
+      "type": "vocab",
+      "surface": "今にも",
+      "reading": "いまにも",
+      "label_ja": "今にも",
+      "label_vi": "(có vẻ, sắp) ~ đến nơi",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_010",
+        "key": "vocab/n5/mimikara/unit_05.json#今にも"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:たった今",
+      "type": "vocab",
+      "surface": "たった今",
+      "reading": "たったいま",
+      "label_ja": "たった今",
+      "label_vi": "Vừa mới rồi",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_011",
+        "key": "vocab/n5/mimikara/unit_05.json#たった今"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:米",
+      "type": "vocab",
+      "surface": "米",
+      "reading": "こめ",
+      "label_ja": "米",
+      "label_vi": "Gạo",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_012",
+        "key": "vocab/n5/mimikara/unit_05.json#米"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:米国",
+      "type": "vocab",
+      "surface": "米国",
+      "reading": "べいこく",
+      "label_ja": "米国",
+      "label_vi": "Nước mỹ",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_013",
+        "key": "vocab/n5/mimikara/unit_05.json#米国"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:来る",
+      "type": "vocab",
+      "surface": "来る",
+      "reading": "くる",
+      "label_ja": "来る",
+      "label_vi": "đến",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_014",
+        "key": "vocab/n5/mimikara/unit_05.json#来る"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:来週",
+      "type": "vocab",
+      "surface": "来週",
+      "reading": "らいしゅう",
+      "label_ja": "来週",
+      "label_vi": "tuần tới",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_015",
+        "key": "vocab/n5/mimikara/unit_05.json#来週"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:出来る",
+      "type": "vocab",
+      "surface": "出来る",
+      "reading": "できる",
+      "label_ja": "出来る",
+      "label_vi": "Được hoàn thành, được làm, có thể",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_016",
+        "key": "vocab/n5/mimikara/unit_05.json#出来る"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:将来",
+      "type": "vocab",
+      "surface": "将来",
+      "reading": "しょうらい",
+      "label_ja": "将来",
+      "label_vi": "Tương lai",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_017",
+        "key": "vocab/n5/mimikara/unit_05.json#将来"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:出来事",
+      "type": "vocab",
+      "surface": "出来事",
+      "reading": "できごと",
+      "label_ja": "出来事",
+      "label_vi": "Sự việc",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_018",
+        "key": "vocab/n5/mimikara/unit_05.json#出来事"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:再来週",
+      "type": "vocab",
+      "surface": "再来週",
+      "reading": "さらいしゅう",
+      "label_ja": "再来週",
+      "label_vi": "Tuần sau nữa",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_019",
+        "key": "vocab/n5/mimikara/unit_05.json#再来週"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:木",
+      "type": "vocab",
+      "surface": "木",
+      "reading": "き",
+      "label_ja": "木",
+      "label_vi": "cây, gỗ",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_020",
+        "key": "vocab/n5/mimikara/unit_05.json#木"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:林",
+      "type": "vocab",
+      "surface": "林",
+      "reading": "はやし",
+      "label_ja": "林",
+      "label_vi": "Rừng thưa",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_021",
+        "key": "vocab/n5/mimikara/unit_05.json#林"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:森",
+      "type": "vocab",
+      "surface": "森",
+      "reading": "もり",
+      "label_ja": "森",
+      "label_vi": "Rừng rậm",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_022",
+        "key": "vocab/n5/mimikara/unit_05.json#森"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:休む",
+      "type": "vocab",
+      "surface": "休む",
+      "reading": "やすむ",
+      "label_ja": "休む",
+      "label_vi": "nghỉ ngơi",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_023",
+        "key": "vocab/n5/mimikara/unit_05.json#休む"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:休み",
+      "type": "vocab",
+      "surface": "休み",
+      "reading": "やすみ",
+      "label_ja": "休み",
+      "label_vi": "nghỉ ngơi, nghỉ lễ",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_024",
+        "key": "vocab/n5/mimikara/unit_05.json#休み"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:昼休み",
+      "type": "vocab",
+      "surface": "昼休み",
+      "reading": "ひるやすみ",
+      "label_ja": "昼休み",
+      "label_vi": "nghỉ trưa",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_025",
+        "key": "vocab/n5/mimikara/unit_05.json#昼休み"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:休憩する",
+      "type": "vocab",
+      "surface": "休憩する",
+      "reading": "きゅうけいする",
+      "label_ja": "休憩する",
+      "label_vi": "Nghỉ, giải lao",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_026",
+        "key": "vocab/n5/mimikara/unit_05.json#休憩する"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:連休",
+      "type": "vocab",
+      "surface": "連休",
+      "reading": "れんきゅう",
+      "label_ja": "連休",
+      "label_vi": "Ngày nghỉ liền nhau",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_027",
+        "key": "vocab/n5/mimikara/unit_05.json#連休"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:本",
+      "type": "vocab",
+      "surface": "本",
+      "reading": "ほん",
+      "label_ja": "本",
+      "label_vi": "cuốn sách",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_028",
+        "key": "vocab/n5/mimikara/unit_05.json#本"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:本屋",
+      "type": "vocab",
+      "surface": "本屋",
+      "reading": "ほんや",
+      "label_ja": "本屋",
+      "label_vi": "hiệu sách",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_029",
+        "key": "vocab/n5/mimikara/unit_05.json#本屋"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:本当",
+      "type": "vocab",
+      "surface": "本当",
+      "reading": "ほんとう",
+      "label_ja": "本当",
+      "label_vi": "thật, thực sự",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_030",
+        "key": "vocab/n5/mimikara/unit_05.json#本当"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:本棚",
+      "type": "vocab",
+      "surface": "本棚",
+      "reading": "ほんだな",
+      "label_ja": "本棚",
+      "label_vi": "giá sách",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_031",
+        "key": "vocab/n5/mimikara/unit_05.json#本棚"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:本社",
+      "type": "vocab",
+      "surface": "本社",
+      "reading": "ほんしゃ",
+      "label_ja": "本社",
+      "label_vi": "Trụ sở chính",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_032",
+        "key": "vocab/n5/mimikara/unit_05.json#本社"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:本々",
+      "type": "vocab",
+      "surface": "本々",
+      "reading": "もともと",
+      "label_ja": "本々",
+      "label_vi": "Vốn là, nguyên là (trang trọng hơn 元々)",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_033",
+        "key": "vocab/n5/mimikara/unit_05.json#本々"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:本物",
+      "type": "vocab",
+      "surface": "本物",
+      "reading": "ほんもの",
+      "label_ja": "本物",
+      "label_vi": "Đồ thật",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_034",
+        "key": "vocab/n5/mimikara/unit_05.json#本物"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:絵本",
+      "type": "vocab",
+      "surface": "絵本",
+      "reading": "えほん",
+      "label_ja": "絵本",
+      "label_vi": "Quyển truyện tranh",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_035",
+        "key": "vocab/n5/mimikara/unit_05.json#絵本"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:体",
+      "type": "vocab",
+      "surface": "体",
+      "reading": "からだ",
+      "label_ja": "体",
+      "label_vi": "cơ thể",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_036",
+        "key": "vocab/n5/mimikara/unit_05.json#体"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:体に良い",
+      "type": "vocab",
+      "surface": "体に良い",
+      "reading": "からだにいい",
+      "label_ja": "体に良い",
+      "label_vi": "Tốt cho sức khỏe",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_037",
+        "key": "vocab/n5/mimikara/unit_05.json#体に良い"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:体育館",
+      "type": "vocab",
+      "surface": "体育館",
+      "reading": "たいいくかん",
+      "label_ja": "体育館",
+      "label_vi": "Nhà tập, nhà thi đấu thể thao",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_038",
+        "key": "vocab/n5/mimikara/unit_05.json#体育館"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:体温計",
+      "type": "vocab",
+      "surface": "体温計",
+      "reading": "たいおんけい",
+      "label_ja": "体温計",
+      "label_vi": "Máy đo nhiệt độ cơ thể",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_039",
+        "key": "vocab/n5/mimikara/unit_05.json#体温計"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:音",
+      "type": "vocab",
+      "surface": "音",
+      "reading": "おと",
+      "label_ja": "音",
+      "label_vi": "âm thanh",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_040",
+        "key": "vocab/n5/mimikara/unit_05.json#音"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:音楽",
+      "type": "vocab",
+      "surface": "音楽",
+      "reading": "おんがく",
+      "label_ja": "音楽",
+      "label_vi": "âm nhạc",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_041",
+        "key": "vocab/n5/mimikara/unit_05.json#音楽"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:発音",
+      "type": "vocab",
+      "surface": "発音",
+      "reading": "はつおん",
+      "label_ja": "発音",
+      "label_vi": "Phát âm",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_042",
+        "key": "vocab/n5/mimikara/unit_05.json#発音"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:音楽家",
+      "type": "vocab",
+      "surface": "音楽家",
+      "reading": "おんがくか",
+      "label_ja": "音楽家",
+      "label_vi": "Nhạc sĩ",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_043",
+        "key": "vocab/n5/mimikara/unit_05.json#音楽家"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    },
+    {
+      "item_id": "vocab:n5:mimikara:05:録音",
+      "type": "vocab",
+      "surface": "録音",
+      "reading": "ろくおん",
+      "label_ja": "録音",
+      "label_vi": "Ghi âm",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n5/mimikara/unit_05.json",
+        "entry_id": "mimi_n5_u05_044",
+        "key": "vocab/n5/mimikara/unit_05.json#録音"
+      },
+      "exercise_bank_ref": "exercises/n5/mimikara/mimikara_n5_05.json"
+    }
+  ]
+}

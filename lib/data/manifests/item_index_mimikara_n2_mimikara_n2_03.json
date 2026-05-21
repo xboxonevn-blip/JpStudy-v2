@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T18:30:00+07:00",
+  "textbook_id": "mimikara_n2",
+  "lesson_id": "mimikara_n2_03",
+  "items": [
+    {
+      "item_id": "vocab:n2:mimikara:03:有難い",
+      "type": "vocab",
+      "surface": "有難い",
+      "reading": "ありがたい",
+      "label_ja": "有難い",
+      "label_vi": "biết ơn, biết ơn, chào đón, đánh giá cao, gợi lên lòng biết ơn",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_001",
+        "key": "vocab/n2/mimikara/unit_03.json#有難い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:申し訳ない",
+      "type": "vocab",
+      "surface": "申し訳ない",
+      "reading": "もうしわけない",
+      "label_ja": "申し訳ない",
+      "label_vi": "không thể tha thứ được",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_002",
+        "key": "vocab/n2/mimikara/unit_03.json#申し訳ない"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:幸い",
+      "type": "vocab",
+      "surface": "幸い",
+      "reading": "さいわい[な]",
+      "label_ja": "幸い",
+      "label_vi": "Hạnh phúc",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_003",
+        "key": "vocab/n2/mimikara/unit_03.json#幸い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:恋しい",
+      "type": "vocab",
+      "surface": "恋しい",
+      "reading": "こいしい",
+      "label_ja": "恋しい",
+      "label_vi": "(1) em yêu, em yêu, (2) khao khát",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_004",
+        "key": "vocab/n2/mimikara/unit_03.json#恋しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:懐かしい",
+      "type": "vocab",
+      "surface": "懐かしい",
+      "reading": "なつかしい",
+      "label_ja": "懐かしい",
+      "label_vi": "thân yêu, mong muốn, bỏ lỡ",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_005",
+        "key": "vocab/n2/mimikara/unit_03.json#懐かしい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:幼い",
+      "type": "vocab",
+      "surface": "幼い",
+      "reading": "おさない",
+      "label_ja": "幼い",
+      "label_vi": "Non nớt, bé bỏng",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_006",
+        "key": "vocab/n2/mimikara/unit_03.json#幼い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:心細い",
+      "type": "vocab",
+      "surface": "心細い",
+      "reading": "こころぼそい",
+      "label_ja": "心細い",
+      "label_vi": "Cô đơn, mất đi niềm tin, hy vọng",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_007",
+        "key": "vocab/n2/mimikara/unit_03.json#心細い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:気の毒",
+      "type": "vocab",
+      "surface": "気の毒",
+      "reading": "きのどく[な]",
+      "label_ja": "気の毒",
+      "label_vi": "Đáng tiếc, đáng thương",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_008",
+        "key": "vocab/n2/mimikara/unit_03.json#気の毒"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:貧しい",
+      "type": "vocab",
+      "surface": "貧しい",
+      "reading": "まずしい",
+      "label_ja": "貧しい",
+      "label_vi": "Nghèo",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_009",
+        "key": "vocab/n2/mimikara/unit_03.json#貧しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:惜しい",
+      "type": "vocab",
+      "surface": "惜しい",
+      "reading": "おしい",
+      "label_ja": "惜しい",
+      "label_vi": "đáng tiếc, đáng thất vọng, quý giá",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_010",
+        "key": "vocab/n2/mimikara/unit_03.json#惜しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:残念",
+      "type": "vocab",
+      "surface": "残念",
+      "reading": "ざんねん",
+      "label_ja": "残念",
+      "label_vi": "Đáng tiếc (kết quả xấu, đáng tiếc)",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_011",
+        "key": "vocab/n2/mimikara/unit_03.json#残念"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:悔しい",
+      "type": "vocab",
+      "surface": "悔しい",
+      "reading": "くやしい",
+      "label_ja": "悔しい",
+      "label_vi": "đáng tiếc, đáng xấu hổ, khó chịu",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_012",
+        "key": "vocab/n2/mimikara/unit_03.json#悔しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:仕方がない",
+      "type": "vocab",
+      "surface": "仕方がない",
+      "reading": "しかた（が）ない",
+      "label_ja": "仕方がない",
+      "label_vi": "Bó tay, chọn cái này, chỉ còn cách này thôi",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_013",
+        "key": "vocab/n2/mimikara/unit_03.json#仕方がない"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:やむを得ない",
+      "type": "vocab",
+      "surface": "やむを得ない",
+      "reading": "やむをえない",
+      "label_ja": "やむを得ない",
+      "label_vi": "Không tránh khỏi (mang tính ép buộc cao hơn)",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_014",
+        "key": "vocab/n2/mimikara/unit_03.json#やむを得ない"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:面倒くさい",
+      "type": "vocab",
+      "surface": "面倒くさい",
+      "reading": "めんどうくさい",
+      "label_ja": "面倒くさい",
+      "label_vi": "Phiền toái",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_015",
+        "key": "vocab/n2/mimikara/unit_03.json#面倒くさい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:煙い",
+      "type": "vocab",
+      "surface": "煙い",
+      "reading": "けむい",
+      "label_ja": "煙い",
+      "label_vi": "có khói",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_016",
+        "key": "vocab/n2/mimikara/unit_03.json#煙い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:邪魔",
+      "type": "vocab",
+      "surface": "邪魔",
+      "reading": "じゃま[な]",
+      "label_ja": "邪魔",
+      "label_vi": "Vướng víu",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_017",
+        "key": "vocab/n2/mimikara/unit_03.json#邪魔"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:騒々しい",
+      "type": "vocab",
+      "surface": "騒々しい",
+      "reading": "そうぞうしい",
+      "label_ja": "騒々しい",
+      "label_vi": "ồn ào, huyên náo",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_018",
+        "key": "vocab/n2/mimikara/unit_03.json#騒々しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:慌ただしい",
+      "type": "vocab",
+      "surface": "慌ただしい",
+      "reading": "あわただしい",
+      "label_ja": "慌ただしい",
+      "label_vi": "Bận rộn (nhiều thứ linh tinh phải xử lý)",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_019",
+        "key": "vocab/n2/mimikara/unit_03.json#慌ただしい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:忙しい",
+      "type": "vocab",
+      "surface": "忙しい",
+      "reading": "いそがしい",
+      "label_ja": "忙しい",
+      "label_vi": "Thường để diễn tả mức độ bận rộn của 1 việc đã biết",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_020",
+        "key": "vocab/n2/mimikara/unit_03.json#忙しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:慌てる",
+      "type": "vocab",
+      "surface": "慌てる",
+      "reading": "あわてる",
+      "label_ja": "慌てる",
+      "label_vi": "Luống cuống (hành động)",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_021",
+        "key": "vocab/n2/mimikara/unit_03.json#慌てる"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:焦る",
+      "type": "vocab",
+      "surface": "焦る",
+      "reading": "あせる",
+      "label_ja": "焦る",
+      "label_vi": "Nóng ruột, nôn nóng (tâm trạng)",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_022",
+        "key": "vocab/n2/mimikara/unit_03.json#焦る"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:思いがけない",
+      "type": "vocab",
+      "surface": "思いがけない",
+      "reading": "おもいがけない",
+      "label_ja": "思いがけない",
+      "label_vi": "Không ngờ đến",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_023",
+        "key": "vocab/n2/mimikara/unit_03.json#思いがけない"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:何気ない",
+      "type": "vocab",
+      "surface": "何気ない",
+      "reading": "なにげない",
+      "label_ja": "何気ない",
+      "label_vi": "Ngẫu nhiên, tình cờ, không cố ý",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_024",
+        "key": "vocab/n2/mimikara/unit_03.json#何気ない"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:小賢しい",
+      "type": "vocab",
+      "surface": "小賢しい",
+      "reading": "こざかしい",
+      "label_ja": "小賢しい",
+      "label_vi": "Tinh ranh, khôn lỏi những thứ nhỏ nhặt",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_025",
+        "key": "vocab/n2/mimikara/unit_03.json#小賢しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:狡い",
+      "type": "vocab",
+      "surface": "狡い",
+      "reading": "ずるい",
+      "label_ja": "狡い",
+      "label_vi": "ranh mãnh, xảo quyệt",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_026",
+        "key": "vocab/n2/mimikara/unit_03.json#狡い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:卑怯",
+      "type": "vocab",
+      "surface": "卑怯",
+      "reading": "ひきょう",
+      "label_ja": "卑怯",
+      "label_vi": "hèn nhát, hèn hạ, bất công",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_027",
+        "key": "vocab/n2/mimikara/unit_03.json#卑怯"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:最低",
+      "type": "vocab",
+      "surface": "最低",
+      "reading": "さいてい",
+      "label_ja": "最低",
+      "label_vi": "Tồi nhất, tệ nhất (mức độ xấu nhất)",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_028",
+        "key": "vocab/n2/mimikara/unit_03.json#最低"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:憎らしい",
+      "type": "vocab",
+      "surface": "憎らしい",
+      "reading": "にくらしい",
+      "label_ja": "憎らしい",
+      "label_vi": "đáng ghét, đáng ghét",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_029",
+        "key": "vocab/n2/mimikara/unit_03.json#憎らしい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:憎い",
+      "type": "vocab",
+      "surface": "憎い",
+      "reading": "にくい",
+      "label_ja": "憎い",
+      "label_vi": "đáng ghét, đáng ghét, đáng ghét, đáng ghét",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_030",
+        "key": "vocab/n2/mimikara/unit_03.json#憎い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:険しい",
+      "type": "vocab",
+      "surface": "険しい",
+      "reading": "けわしい",
+      "label_ja": "険しい",
+      "label_vi": "nơi khó tiếp cận, đôi mắt sắc bén",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_031",
+        "key": "vocab/n2/mimikara/unit_03.json#険しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:辛い",
+      "type": "vocab",
+      "surface": "辛い",
+      "reading": "からい",
+      "label_ja": "辛い",
+      "label_vi": "Cay",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_032",
+        "key": "vocab/n2/mimikara/unit_03.json#辛い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:緩い",
+      "type": "vocab",
+      "surface": "緩い",
+      "reading": "ゆるい",
+      "label_ja": "緩い",
+      "label_vi": "lỏng lẻo, khoan dung, chậm rãi",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_033",
+        "key": "vocab/n2/mimikara/unit_03.json#緩い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:鈍い",
+      "type": "vocab",
+      "surface": "鈍い",
+      "reading": "にぶい",
+      "label_ja": "鈍い",
+      "label_vi": "đần độn (ví dụ như một con dao), đần độn, chậm chạp (ngược lại với nhanh), ngu ngốc",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_034",
+        "key": "vocab/n2/mimikara/unit_03.json#鈍い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:鋭い",
+      "type": "vocab",
+      "surface": "鋭い",
+      "reading": "するどい",
+      "label_ja": "鋭い",
+      "label_vi": "Sắc, sắc sảo",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_035",
+        "key": "vocab/n2/mimikara/unit_03.json#鋭い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:荒い",
+      "type": "vocab",
+      "surface": "荒い",
+      "reading": "あらい",
+      "label_ja": "荒い",
+      "label_vi": "thô bạo, thô lỗ, hoang dã",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_036",
+        "key": "vocab/n2/mimikara/unit_03.json#荒い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:粗い",
+      "type": "vocab",
+      "surface": "粗い",
+      "reading": "あらい",
+      "label_ja": "粗い",
+      "label_vi": "thô, thô",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_037",
+        "key": "vocab/n2/mimikara/unit_03.json#粗い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:強引",
+      "type": "vocab",
+      "surface": "強引",
+      "reading": "ごういん[な]",
+      "label_ja": "強引",
+      "label_vi": "Cưỡng bức, bắt buộc",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_038",
+        "key": "vocab/n2/mimikara/unit_03.json#強引"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:勝手",
+      "type": "vocab",
+      "surface": "勝手",
+      "reading": "かって[な]",
+      "label_ja": "勝手",
+      "label_vi": "Tự ý, tự tiện",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_039",
+        "key": "vocab/n2/mimikara/unit_03.json#勝手"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:強気",
+      "type": "vocab",
+      "surface": "強気",
+      "reading": "つよき[な]",
+      "label_ja": "強気",
+      "label_vi": "Kiên định, vững vàng",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_040",
+        "key": "vocab/n2/mimikara/unit_03.json#強気"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:頑固",
+      "type": "vocab",
+      "surface": "頑固",
+      "reading": "がんこ[な]",
+      "label_ja": "頑固",
+      "label_vi": "Bảo thủ, cố chấp",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_041",
+        "key": "vocab/n2/mimikara/unit_03.json#頑固"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:過剰",
+      "type": "vocab",
+      "surface": "過剰",
+      "reading": "かじょう[な]",
+      "label_ja": "過剰",
+      "label_vi": "Vượt quá, thái quá (không đếm được) (phản ứng)",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_042",
+        "key": "vocab/n2/mimikara/unit_03.json#過剰"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:重大",
+      "type": "vocab",
+      "surface": "重大",
+      "reading": "じゅうたい[な]",
+      "label_ja": "重大",
+      "label_vi": "Trọng đại (liên quan đến tính mạng, bệnh tình, tin tức, sự",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_043",
+        "key": "vocab/n2/mimikara/unit_03.json#重大"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:重要",
+      "type": "vocab",
+      "surface": "重要",
+      "reading": "じゅうよう",
+      "label_ja": "重要",
+      "label_vi": "Trọng yếu (nhân vật, tài liệu, địa vị quan trọng)",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_044",
+        "key": "vocab/n2/mimikara/unit_03.json#重要"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:主要",
+      "type": "vocab",
+      "surface": "主要",
+      "reading": "しゅよう",
+      "label_ja": "主要",
+      "label_vi": "Chủ yếu (quan trọng nhất)",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_045",
+        "key": "vocab/n2/mimikara/unit_03.json#主要"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:深刻",
+      "type": "vocab",
+      "surface": "深刻",
+      "reading": "しんこく[な]",
+      "label_ja": "深刻",
+      "label_vi": "Nghiêm trọng",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_046",
+        "key": "vocab/n2/mimikara/unit_03.json#深刻"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:気楽",
+      "type": "vocab",
+      "surface": "気楽",
+      "reading": "きらく[な]",
+      "label_ja": "気楽",
+      "label_vi": "Thoải mái, nhàn hạ",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_047",
+        "key": "vocab/n2/mimikara/unit_03.json#気楽"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:03:安易",
+      "type": "vocab",
+      "surface": "安易",
+      "reading": "あんい[な]",
+      "label_ja": "安易",
+      "label_vi": "Dễ dàng, đơn giản (suy nghĩ)",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_03.json",
+        "entry_id": "mimi_n2_u03_048",
+        "key": "vocab/n2/mimikara/unit_03.json#安易"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_03.json"
+    }
+  ]
+}

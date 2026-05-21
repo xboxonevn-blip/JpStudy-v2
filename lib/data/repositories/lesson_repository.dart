@@ -21,6 +21,7 @@ import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/models/kanji_item.dart';
 import 'package:jpstudy/data/seeds/grammar_seeder.dart';
 import 'package:jpstudy/data/utils/hajimete_catalog_loader.dart';
+import 'package:jpstudy/data/utils/mimikara_catalog_loader.dart';
 import 'package:jpstudy/data/utils/grammar_english_notation.dart';
 import 'package:jpstudy/data/utils/han_viet_lookup.dart';
 
@@ -103,15 +104,19 @@ final vocabSeriesTermsProvider =
       ref,
       args,
     ) async {
+      final series = args.series.trim().toLowerCase();
+      if (series == 'mimikara') {
+        return _loadBundledMimikaraTerms(args);
+      }
       final repo = ref.watch(lessonRepositoryProvider);
       final items = args.hasLessonRange
           ? await repo.getVocabByLevelSeriesChapterRange(
               args.level,
-              series: args.series,
+              series: series,
               startChapter: args.startLesson!,
               endChapter: args.endLesson!,
             )
-          : await repo.getVocabByLevelAndSeries(args.level, args.series);
+          : await repo.getVocabByLevelAndSeries(args.level, series);
       return [
         for (var index = 0; index < items.length; index++)
           UserLessonTermData(
@@ -130,6 +135,65 @@ final vocabSeriesTermsProvider =
           ),
       ];
     });
+
+Future<List<UserLessonTermData>> _loadBundledMimikaraTerms(
+  VocabSeriesTermsArgs args,
+) async {
+  final level = args.level.trim().toUpperCase();
+  final details = <MimikaraUnitDetail>[];
+
+  if (args.hasLessonRange) {
+    for (var unitId = args.startLesson!; unitId <= args.endLesson!; unitId++) {
+      final detail = await loadMimikaraUnitDetail(level, unitId);
+      if (detail != null) details.add(detail);
+    }
+  } else {
+    final catalog = await loadMimikaraUnitCatalog(level);
+    final loaded = await Future.wait([
+      for (final unit in catalog.units)
+        loadMimikaraUnitDetail(level, unit.unitId),
+    ]);
+    details.addAll(loaded.whereType<MimikaraUnitDetail>());
+  }
+
+  details.sort((left, right) => left.unitId.compareTo(right.unitId));
+  final terms = <UserLessonTermData>[];
+  var orderIndex = 0;
+  for (final detail in details) {
+    for (var entryIndex = 0; entryIndex < detail.entries.length; entryIndex++) {
+      final entry = detail.entries[entryIndex];
+      terms.add(
+        UserLessonTermData(
+          id: _mimikaraReviewTermId(level, detail.unitId, entryIndex + 1),
+          lessonId: detail.unitId,
+          term: entry.term,
+          reading: entry.reading ?? '',
+          definition: entry.meaningVi,
+          definitionEn: entry.meaningEn ?? '',
+          mnemonicVi: '',
+          mnemonicEn: '',
+          kanjiMeaning: entry.hanViet ?? '',
+          isStarred: false,
+          isLearned: false,
+          orderIndex: orderIndex++,
+        ),
+      );
+    }
+  }
+  return terms;
+}
+
+int _mimikaraReviewTermId(String level, int unitId, int order) {
+  final levelOrdinal = switch (level) {
+    'N5' => 5,
+    'N4' => 4,
+    'N3' => 3,
+    'N2' => 2,
+    'N1' => 1,
+    _ => 9,
+  };
+  return -800000000 - (levelOrdinal * 1000000) - (unitId * 1000) - order;
+}
 
 /// Returns the nearest future vocab review date, refreshing whenever SRS state changes.
 final nextVocabReviewProvider = StreamProvider.autoDispose<DateTime?>((
@@ -783,7 +847,12 @@ class LessonRepository {
     required int endChapter,
   }) async {
     if (series != 'hajimete') {
-      return getVocabByLevelAndSeries(level, series);
+      return getVocabByLessonRange(
+        level,
+        startLesson: startChapter,
+        endLesson: endChapter,
+        series: series,
+      );
     }
 
     final catalog = await loadHajimeteChapterCatalog(level);
@@ -1148,7 +1217,9 @@ class LessonRepository {
         existing,
         sourceLessonId: sourceLessonId,
       );
-      final current = refreshedDefinitions ? await fetchTerms(lessonId) : existing;
+      final current = refreshedDefinitions
+          ? await fetchTerms(lessonId)
+          : existing;
 
       // Try to backfill missing English without destructive reset.
       final missingEnglish = current.any((t) => t.definitionEn.isEmpty);
@@ -1254,7 +1325,8 @@ class LessonRepository {
         final shouldUpdateDefinition =
             nextDefinition.isNotEmpty && nextDefinition != term.definition;
         final shouldUpdateDefinitionEn =
-            nextDefinitionEn.isNotEmpty && nextDefinitionEn != term.definitionEn;
+            nextDefinitionEn.isNotEmpty &&
+            nextDefinitionEn != term.definitionEn;
         if (!shouldUpdateDefinition && !shouldUpdateDefinitionEn) continue;
 
         changed = true;

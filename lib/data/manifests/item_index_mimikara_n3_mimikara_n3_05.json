@@ -1,0 +1,1568 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T18:30:00+07:00",
+  "textbook_id": "mimikara_n3",
+  "lesson_id": "mimikara_n3_05",
+  "items": [
+    {
+      "item_id": "vocab:n3:mimikara:05:届く",
+      "type": "vocab",
+      "surface": "届く",
+      "reading": "とどく",
+      "label_ja": "届く",
+      "label_vi": "để đạt được",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_001",
+        "key": "vocab/n3/mimikara/unit_05.json#届く"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:届ける",
+      "type": "vocab",
+      "surface": "届ける",
+      "reading": "とどける",
+      "label_ja": "届ける",
+      "label_vi": "Giao đến",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_002",
+        "key": "vocab/n3/mimikara/unit_05.json#届ける"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:掻く",
+      "type": "vocab",
+      "surface": "掻く",
+      "reading": "かく",
+      "label_ja": "掻く",
+      "label_vi": "Gãi",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_003",
+        "key": "vocab/n3/mimikara/unit_05.json#掻く"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:掴む",
+      "type": "vocab",
+      "surface": "掴む",
+      "reading": "つかむ",
+      "label_ja": "掴む",
+      "label_vi": "bắt lấy; tóm lấy",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_004",
+        "key": "vocab/n3/mimikara/unit_05.json#掴む"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:握る",
+      "type": "vocab",
+      "surface": "握る",
+      "reading": "にぎる",
+      "label_ja": "握る",
+      "label_vi": "nắm; nặn sushi",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_005",
+        "key": "vocab/n3/mimikara/unit_05.json#握る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:抑える",
+      "type": "vocab",
+      "surface": "抑える",
+      "reading": "おさえる",
+      "label_ja": "抑える",
+      "label_vi": "Giữ",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_006",
+        "key": "vocab/n3/mimikara/unit_05.json#抑える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:近づく",
+      "type": "vocab",
+      "surface": "近づく",
+      "reading": "ちかづく",
+      "label_ja": "近づく",
+      "label_vi": "Lại gần",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_007",
+        "key": "vocab/n3/mimikara/unit_05.json#近づく"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:近づける",
+      "type": "vocab",
+      "surface": "近づける",
+      "reading": "ちかづける",
+      "label_ja": "近づける",
+      "label_vi": "Mang đến gần",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_008",
+        "key": "vocab/n3/mimikara/unit_05.json#近づける"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:合う",
+      "type": "vocab",
+      "surface": "合う",
+      "reading": "あう",
+      "label_ja": "合う",
+      "label_vi": "Gặp",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_009",
+        "key": "vocab/n3/mimikara/unit_05.json#合う"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:合わせる",
+      "type": "vocab",
+      "surface": "合わせる",
+      "reading": "あわせる",
+      "label_ja": "合わせる",
+      "label_vi": "ghép lại; kết hợp; điều chỉnh; làm cho khớp",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_010",
+        "key": "vocab/n3/mimikara/unit_05.json#合わせる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:当たる",
+      "type": "vocab",
+      "surface": "当たる",
+      "reading": "あたる",
+      "label_ja": "当たる",
+      "label_vi": "bị đánh; thành công; tương đương với",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_011",
+        "key": "vocab/n3/mimikara/unit_05.json#当たる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:当てる",
+      "type": "vocab",
+      "surface": "当てる",
+      "reading": "あてる",
+      "label_ja": "当てる",
+      "label_vi": "đánh; dán một miếng vá",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_012",
+        "key": "vocab/n3/mimikara/unit_05.json#当てる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:比べる",
+      "type": "vocab",
+      "surface": "比べる",
+      "reading": "くらべる",
+      "label_ja": "比べる",
+      "label_vi": "So sánh",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_013",
+        "key": "vocab/n3/mimikara/unit_05.json#比べる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:似合う",
+      "type": "vocab",
+      "surface": "似合う",
+      "reading": "にあう",
+      "label_ja": "似合う",
+      "label_vi": "phù hợp; trở thành; giống như",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_014",
+        "key": "vocab/n3/mimikara/unit_05.json#似合う"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:似る",
+      "type": "vocab",
+      "surface": "似る",
+      "reading": "にる",
+      "label_ja": "似る",
+      "label_vi": "Giống",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_015",
+        "key": "vocab/n3/mimikara/unit_05.json#似る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:似せる",
+      "type": "vocab",
+      "surface": "似せる",
+      "reading": "にせる",
+      "label_ja": "似せる",
+      "label_vi": "Bắt chước",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_016",
+        "key": "vocab/n3/mimikara/unit_05.json#似せる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:分かれる",
+      "type": "vocab",
+      "surface": "分かれる",
+      "reading": "わかれる",
+      "label_ja": "分かれる",
+      "label_vi": "Được chia ra",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_017",
+        "key": "vocab/n3/mimikara/unit_05.json#分かれる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:分ける",
+      "type": "vocab",
+      "surface": "分ける",
+      "reading": "わける",
+      "label_ja": "分ける",
+      "label_vi": "chia; tách",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_018",
+        "key": "vocab/n3/mimikara/unit_05.json#分ける"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:足す",
+      "type": "vocab",
+      "surface": "足す",
+      "reading": "たす",
+      "label_ja": "足す",
+      "label_vi": "Cộng, thêm vào",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_019",
+        "key": "vocab/n3/mimikara/unit_05.json#足す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:引く",
+      "type": "vocab",
+      "surface": "引く",
+      "reading": "ひく",
+      "label_ja": "引く",
+      "label_vi": "Kéo, trừ",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_020",
+        "key": "vocab/n3/mimikara/unit_05.json#引く"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:増える",
+      "type": "vocab",
+      "surface": "増える",
+      "reading": "ふえる",
+      "label_ja": "増える",
+      "label_vi": "Tăng lên",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_021",
+        "key": "vocab/n3/mimikara/unit_05.json#増える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:増やす",
+      "type": "vocab",
+      "surface": "増やす",
+      "reading": "ふやす",
+      "label_ja": "増やす",
+      "label_vi": "Làm tăng lên",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_022",
+        "key": "vocab/n3/mimikara/unit_05.json#増やす"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:減る",
+      "type": "vocab",
+      "surface": "減る",
+      "reading": "へる",
+      "label_ja": "減る",
+      "label_vi": "giảm (về kích thước hoặc số lượng); giảm bớt",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_023",
+        "key": "vocab/n3/mimikara/unit_05.json#減る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:減らす",
+      "type": "vocab",
+      "surface": "減らす",
+      "reading": "へらす",
+      "label_ja": "減らす",
+      "label_vi": "giảm bớt; giảm đi; rút ngắn lại",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_024",
+        "key": "vocab/n3/mimikara/unit_05.json#減らす"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:変わる",
+      "type": "vocab",
+      "surface": "変わる",
+      "reading": "かわる",
+      "label_ja": "変わる",
+      "label_vi": "Thay đổi",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_025",
+        "key": "vocab/n3/mimikara/unit_05.json#変わる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:変える",
+      "type": "vocab",
+      "surface": "変える",
+      "reading": "かえる",
+      "label_ja": "変える",
+      "label_vi": "Làm thay đổi",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_026",
+        "key": "vocab/n3/mimikara/unit_05.json#変える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:代わる",
+      "type": "vocab",
+      "surface": "代わる",
+      "reading": "かわる",
+      "label_ja": "代わる",
+      "label_vi": "Thay",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_027",
+        "key": "vocab/n3/mimikara/unit_05.json#代わる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:替わる",
+      "type": "vocab",
+      "surface": "替わる",
+      "reading": "かわる",
+      "label_ja": "替わる",
+      "label_vi": "Thay",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_028",
+        "key": "vocab/n3/mimikara/unit_05.json#替わる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:換わる",
+      "type": "vocab",
+      "surface": "換わる",
+      "reading": "かわる",
+      "label_ja": "換わる",
+      "label_vi": "Thay",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_029",
+        "key": "vocab/n3/mimikara/unit_05.json#換わる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:代える",
+      "type": "vocab",
+      "surface": "代える",
+      "reading": "かえる",
+      "label_ja": "代える",
+      "label_vi": "Đổi",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_030",
+        "key": "vocab/n3/mimikara/unit_05.json#代える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:替える",
+      "type": "vocab",
+      "surface": "替える",
+      "reading": "かえる",
+      "label_ja": "替える",
+      "label_vi": "trao đổi; thay thế",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_031",
+        "key": "vocab/n3/mimikara/unit_05.json#替える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:換える",
+      "type": "vocab",
+      "surface": "換える",
+      "reading": "かえる",
+      "label_ja": "換える",
+      "label_vi": "trao đổi; thay thế",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_032",
+        "key": "vocab/n3/mimikara/unit_05.json#換える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:返る",
+      "type": "vocab",
+      "surface": "返る",
+      "reading": "かえる",
+      "label_ja": "返る",
+      "label_vi": "Được trả lại",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_033",
+        "key": "vocab/n3/mimikara/unit_05.json#返る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:返す",
+      "type": "vocab",
+      "surface": "返す",
+      "reading": "かえす",
+      "label_ja": "返す",
+      "label_vi": "Trả lại",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_034",
+        "key": "vocab/n3/mimikara/unit_05.json#返す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:譲る",
+      "type": "vocab",
+      "surface": "譲る",
+      "reading": "ゆずる",
+      "label_ja": "譲る",
+      "label_vi": "chuyển giao; giao lại",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_035",
+        "key": "vocab/n3/mimikara/unit_05.json#譲る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:助かる",
+      "type": "vocab",
+      "surface": "助かる",
+      "reading": "たすかる",
+      "label_ja": "助かる",
+      "label_vi": "Được giúp",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_036",
+        "key": "vocab/n3/mimikara/unit_05.json#助かる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:助ける",
+      "type": "vocab",
+      "surface": "助ける",
+      "reading": "たすける",
+      "label_ja": "助ける",
+      "label_vi": "giúp đỡ; cứu; giải cứu",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_037",
+        "key": "vocab/n3/mimikara/unit_05.json#助ける"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:虐める",
+      "type": "vocab",
+      "surface": "虐める",
+      "reading": "いじめる",
+      "label_ja": "虐める",
+      "label_vi": "Bắt nạt",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_038",
+        "key": "vocab/n3/mimikara/unit_05.json#虐める"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:騙す",
+      "type": "vocab",
+      "surface": "騙す",
+      "reading": "だます",
+      "label_ja": "騙す",
+      "label_vi": "Lừa bịp",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_039",
+        "key": "vocab/n3/mimikara/unit_05.json#騙す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:盗む",
+      "type": "vocab",
+      "surface": "盗む",
+      "reading": "ぬすむ",
+      "label_ja": "盗む",
+      "label_vi": "Lấy cắp",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_040",
+        "key": "vocab/n3/mimikara/unit_05.json#盗む"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:刺さる",
+      "type": "vocab",
+      "surface": "刺さる",
+      "reading": "ささる",
+      "label_ja": "刺さる",
+      "label_vi": "Bị đâm",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_041",
+        "key": "vocab/n3/mimikara/unit_05.json#刺さる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:刺す",
+      "type": "vocab",
+      "surface": "刺す",
+      "reading": "さす",
+      "label_ja": "刺す",
+      "label_vi": "Đâm",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_042",
+        "key": "vocab/n3/mimikara/unit_05.json#刺す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:殺す",
+      "type": "vocab",
+      "surface": "殺す",
+      "reading": "ころす",
+      "label_ja": "殺す",
+      "label_vi": "giết",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_043",
+        "key": "vocab/n3/mimikara/unit_05.json#殺す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:隠れる",
+      "type": "vocab",
+      "surface": "隠れる",
+      "reading": "かくれる",
+      "label_ja": "隠れる",
+      "label_vi": "ẩn náu; giấu mình; biến mất",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_044",
+        "key": "vocab/n3/mimikara/unit_05.json#隠れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:隠す",
+      "type": "vocab",
+      "surface": "隠す",
+      "reading": "かくす",
+      "label_ja": "隠す",
+      "label_vi": "che giấu",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_045",
+        "key": "vocab/n3/mimikara/unit_05.json#隠す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:埋まる",
+      "type": "vocab",
+      "surface": "埋まる",
+      "reading": "うまる",
+      "label_ja": "埋まる",
+      "label_vi": "Bị chôn",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_046",
+        "key": "vocab/n3/mimikara/unit_05.json#埋まる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:埋める",
+      "type": "vocab",
+      "surface": "埋める",
+      "reading": "うめる",
+      "label_ja": "埋める",
+      "label_vi": "Chôn",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_047",
+        "key": "vocab/n3/mimikara/unit_05.json#埋める"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:囲む",
+      "type": "vocab",
+      "surface": "囲む",
+      "reading": "かこむ",
+      "label_ja": "囲む",
+      "label_vi": "bao quanh; vây quanh",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_048",
+        "key": "vocab/n3/mimikara/unit_05.json#囲む"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:詰まる",
+      "type": "vocab",
+      "surface": "詰まる",
+      "reading": "つまる",
+      "label_ja": "詰まる",
+      "label_vi": "Đầy, chặt",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_049",
+        "key": "vocab/n3/mimikara/unit_05.json#詰まる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:詰める",
+      "type": "vocab",
+      "surface": "詰める",
+      "reading": "つめる",
+      "label_ja": "詰める",
+      "label_vi": "đóng gói; rút ngắn; giải quyết (chi tiết)",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_050",
+        "key": "vocab/n3/mimikara/unit_05.json#詰める"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:開く",
+      "type": "vocab",
+      "surface": "開く",
+      "reading": "ひらく",
+      "label_ja": "開く",
+      "label_vi": "Mở",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_051",
+        "key": "vocab/n3/mimikara/unit_05.json#開く"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:閉じる",
+      "type": "vocab",
+      "surface": "閉じる",
+      "reading": "とじる",
+      "label_ja": "閉じる",
+      "label_vi": "đóng (ví dụ: sách; mắt); nhắm lại",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_052",
+        "key": "vocab/n3/mimikara/unit_05.json#閉じる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:飛ぶ",
+      "type": "vocab",
+      "surface": "飛ぶ",
+      "reading": "とぶ",
+      "label_ja": "飛ぶ",
+      "label_vi": "Bay",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_053",
+        "key": "vocab/n3/mimikara/unit_05.json#飛ぶ"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:飛ばす",
+      "type": "vocab",
+      "surface": "飛ばす",
+      "reading": "とばす",
+      "label_ja": "飛ばす",
+      "label_vi": "bỏ qua",
+      "order": 54,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_054",
+        "key": "vocab/n3/mimikara/unit_05.json#飛ばす"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:振る",
+      "type": "vocab",
+      "surface": "振る",
+      "reading": "ふる",
+      "label_ja": "振る",
+      "label_vi": "(1) vẫy; lắc; đung đưa; (2) rắc; (3) ném (diễn viên); phân bổ (công việc)",
+      "order": 55,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_055",
+        "key": "vocab/n3/mimikara/unit_05.json#振る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:めくる",
+      "type": "vocab",
+      "surface": "めくる",
+      "reading": "めくる",
+      "label_ja": "めくる",
+      "label_vi": "Lật lên",
+      "order": 56,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_056",
+        "key": "vocab/n3/mimikara/unit_05.json#めくる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:見かける",
+      "type": "vocab",
+      "surface": "見かける",
+      "reading": "みかける",
+      "label_ja": "見かける",
+      "label_vi": "Tình cờ thấy",
+      "order": 57,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_057",
+        "key": "vocab/n3/mimikara/unit_05.json#見かける"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:確かめる",
+      "type": "vocab",
+      "surface": "確かめる",
+      "reading": "たしかめる",
+      "label_ja": "確かめる",
+      "label_vi": "để xác định",
+      "order": 58,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_058",
+        "key": "vocab/n3/mimikara/unit_05.json#確かめる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:試す",
+      "type": "vocab",
+      "surface": "試す",
+      "reading": "ためす",
+      "label_ja": "試す",
+      "label_vi": "để thử; để kiểm tra",
+      "order": 59,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_059",
+        "key": "vocab/n3/mimikara/unit_05.json#試す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:繰り返す",
+      "type": "vocab",
+      "surface": "繰り返す",
+      "reading": "くりかえす",
+      "label_ja": "繰り返す",
+      "label_vi": "lặp lại; làm lại điều gì đó",
+      "order": 60,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_060",
+        "key": "vocab/n3/mimikara/unit_05.json#繰り返す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:訳す",
+      "type": "vocab",
+      "surface": "訳す",
+      "reading": "やくす",
+      "label_ja": "訳す",
+      "label_vi": "Dịch",
+      "order": 61,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_061",
+        "key": "vocab/n3/mimikara/unit_05.json#訳す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:行う",
+      "type": "vocab",
+      "surface": "行う",
+      "reading": "おこなう",
+      "label_ja": "行う",
+      "label_vi": "Tổ chức",
+      "order": 62,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_062",
+        "key": "vocab/n3/mimikara/unit_05.json#行う"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:間違う",
+      "type": "vocab",
+      "surface": "間違う",
+      "reading": "まちがう",
+      "label_ja": "間違う",
+      "label_vi": "Bị sai",
+      "order": 63,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_063",
+        "key": "vocab/n3/mimikara/unit_05.json#間違う"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:間違える",
+      "type": "vocab",
+      "surface": "間違える",
+      "reading": "まちがえる",
+      "label_ja": "間違える",
+      "label_vi": "Làm sai",
+      "order": 64,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_064",
+        "key": "vocab/n3/mimikara/unit_05.json#間違える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:許す",
+      "type": "vocab",
+      "surface": "許す",
+      "reading": "ゆるす",
+      "label_ja": "許す",
+      "label_vi": "cho phép; chấp thuận",
+      "order": 65,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_065",
+        "key": "vocab/n3/mimikara/unit_05.json#許す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:慣れる",
+      "type": "vocab",
+      "surface": "慣れる",
+      "reading": "なれる",
+      "label_ja": "慣れる",
+      "label_vi": "Quen",
+      "order": 66,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_066",
+        "key": "vocab/n3/mimikara/unit_05.json#慣れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:慣らす",
+      "type": "vocab",
+      "surface": "慣らす",
+      "reading": "ならす",
+      "label_ja": "慣らす",
+      "label_vi": "Làm cho quen",
+      "order": 67,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_067",
+        "key": "vocab/n3/mimikara/unit_05.json#慣らす"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:立つ",
+      "type": "vocab",
+      "surface": "立つ",
+      "reading": "たつ",
+      "label_ja": "立つ",
+      "label_vi": "Đứng",
+      "order": 68,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_068",
+        "key": "vocab/n3/mimikara/unit_05.json#立つ"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:立てる",
+      "type": "vocab",
+      "surface": "立てる",
+      "reading": "たてる",
+      "label_ja": "立てる",
+      "label_vi": "Dựng lên",
+      "order": 69,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_069",
+        "key": "vocab/n3/mimikara/unit_05.json#立てる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:建つ",
+      "type": "vocab",
+      "surface": "建つ",
+      "reading": "たつ",
+      "label_ja": "建つ",
+      "label_vi": "Được xây",
+      "order": 70,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_070",
+        "key": "vocab/n3/mimikara/unit_05.json#建つ"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:建てる",
+      "type": "vocab",
+      "surface": "建てる",
+      "reading": "たてる",
+      "label_ja": "建てる",
+      "label_vi": "Xây",
+      "order": 71,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_071",
+        "key": "vocab/n3/mimikara/unit_05.json#建てる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:育つ",
+      "type": "vocab",
+      "surface": "育つ",
+      "reading": "そだつ",
+      "label_ja": "育つ",
+      "label_vi": "được nuôi lớn; lớn lên; trưởng thành",
+      "order": 72,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_072",
+        "key": "vocab/n3/mimikara/unit_05.json#育つ"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:育てる",
+      "type": "vocab",
+      "surface": "育てる",
+      "reading": "そだてる",
+      "label_ja": "育てる",
+      "label_vi": "Nuôi, dạy",
+      "order": 73,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_073",
+        "key": "vocab/n3/mimikara/unit_05.json#育てる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:生える",
+      "type": "vocab",
+      "surface": "生える",
+      "reading": "はえる",
+      "label_ja": "生える",
+      "label_vi": "Mọc",
+      "order": 74,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_074",
+        "key": "vocab/n3/mimikara/unit_05.json#生える"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:生やす",
+      "type": "vocab",
+      "surface": "生やす",
+      "reading": "はやす",
+      "label_ja": "生やす",
+      "label_vi": "Nuôi(râu)",
+      "order": 75,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_075",
+        "key": "vocab/n3/mimikara/unit_05.json#生やす"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:汚れる",
+      "type": "vocab",
+      "surface": "汚れる",
+      "reading": "よごれる",
+      "label_ja": "汚れる",
+      "label_vi": "Bị bẩn",
+      "order": 76,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_076",
+        "key": "vocab/n3/mimikara/unit_05.json#汚れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:汚す",
+      "type": "vocab",
+      "surface": "汚す",
+      "reading": "よごす",
+      "label_ja": "汚す",
+      "label_vi": "Làm bẩn",
+      "order": 77,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_077",
+        "key": "vocab/n3/mimikara/unit_05.json#汚す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:壊れる",
+      "type": "vocab",
+      "surface": "壊れる",
+      "reading": "こわれる",
+      "label_ja": "壊れる",
+      "label_vi": "Bị hỏng",
+      "order": 78,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_078",
+        "key": "vocab/n3/mimikara/unit_05.json#壊れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:壊す",
+      "type": "vocab",
+      "surface": "壊す",
+      "reading": "こわす",
+      "label_ja": "壊す",
+      "label_vi": "Làm hỏng",
+      "order": 79,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_079",
+        "key": "vocab/n3/mimikara/unit_05.json#壊す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:割れる",
+      "type": "vocab",
+      "surface": "割れる",
+      "reading": "われる",
+      "label_ja": "割れる",
+      "label_vi": "Bị vỡ",
+      "order": 80,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_080",
+        "key": "vocab/n3/mimikara/unit_05.json#割れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:割る",
+      "type": "vocab",
+      "surface": "割る",
+      "reading": "わる",
+      "label_ja": "割る",
+      "label_vi": "chia; cắt; bẻ; chia đôi",
+      "order": 81,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_081",
+        "key": "vocab/n3/mimikara/unit_05.json#割る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:折れる",
+      "type": "vocab",
+      "surface": "折れる",
+      "reading": "おれる",
+      "label_ja": "折れる",
+      "label_vi": "Bị gãy",
+      "order": 82,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_082",
+        "key": "vocab/n3/mimikara/unit_05.json#折れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:折る",
+      "type": "vocab",
+      "surface": "折る",
+      "reading": "おる",
+      "label_ja": "折る",
+      "label_vi": "Làm gãy",
+      "order": 83,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_083",
+        "key": "vocab/n3/mimikara/unit_05.json#折る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:破れる",
+      "type": "vocab",
+      "surface": "破れる",
+      "reading": "やぶれる",
+      "label_ja": "破れる",
+      "label_vi": "Bị rách",
+      "order": 84,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_084",
+        "key": "vocab/n3/mimikara/unit_05.json#破れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:破る",
+      "type": "vocab",
+      "surface": "破る",
+      "reading": "やぶる",
+      "label_ja": "破る",
+      "label_vi": "xé nát; xâm phạm; đánh bại; đập vỡ; tiêu diệt",
+      "order": 85,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_085",
+        "key": "vocab/n3/mimikara/unit_05.json#破る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:曲がる",
+      "type": "vocab",
+      "surface": "曲がる",
+      "reading": "まがる",
+      "label_ja": "曲がる",
+      "label_vi": "Gập, cong",
+      "order": 86,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_086",
+        "key": "vocab/n3/mimikara/unit_05.json#曲がる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:曲げる",
+      "type": "vocab",
+      "surface": "曲げる",
+      "reading": "まげる",
+      "label_ja": "曲げる",
+      "label_vi": "Bẻ, uốn",
+      "order": 87,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_087",
+        "key": "vocab/n3/mimikara/unit_05.json#曲げる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:外れる",
+      "type": "vocab",
+      "surface": "外れる",
+      "reading": "はずれる",
+      "label_ja": "外れる",
+      "label_vi": "Bị rời ra",
+      "order": 88,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_088",
+        "key": "vocab/n3/mimikara/unit_05.json#外れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:外す",
+      "type": "vocab",
+      "surface": "外す",
+      "reading": "はずす",
+      "label_ja": "外す",
+      "label_vi": "tháo ra",
+      "order": 89,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_089",
+        "key": "vocab/n3/mimikara/unit_05.json#外す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:揺れる",
+      "type": "vocab",
+      "surface": "揺れる",
+      "reading": "ゆれる",
+      "label_ja": "揺れる",
+      "label_vi": "Bị rung",
+      "order": 90,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_090",
+        "key": "vocab/n3/mimikara/unit_05.json#揺れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:揺らす",
+      "type": "vocab",
+      "surface": "揺らす",
+      "reading": "ゆらす",
+      "label_ja": "揺らす",
+      "label_vi": "Đung đưa",
+      "order": 91,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_091",
+        "key": "vocab/n3/mimikara/unit_05.json#揺らす"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:流れる",
+      "type": "vocab",
+      "surface": "流れる",
+      "reading": "ながれる",
+      "label_ja": "流れる",
+      "label_vi": "chảy; trôi; bị cuốn trôi",
+      "order": 92,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_092",
+        "key": "vocab/n3/mimikara/unit_05.json#流れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:流す",
+      "type": "vocab",
+      "surface": "流す",
+      "reading": "ながす",
+      "label_ja": "流す",
+      "label_vi": "chảy ra; trôi đi; đổ ra (máu; nước mắt); đi du lịch (ví dụ: taxi)",
+      "order": 93,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_093",
+        "key": "vocab/n3/mimikara/unit_05.json#流す"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:濡れる",
+      "type": "vocab",
+      "surface": "濡れる",
+      "reading": "ぬれる",
+      "label_ja": "濡れる",
+      "label_vi": "bị ướt",
+      "order": 94,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_094",
+        "key": "vocab/n3/mimikara/unit_05.json#濡れる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:濡らす",
+      "type": "vocab",
+      "surface": "濡らす",
+      "reading": "ぬらす",
+      "label_ja": "濡らす",
+      "label_vi": "Làm ướt",
+      "order": 95,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_095",
+        "key": "vocab/n3/mimikara/unit_05.json#濡らす"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:迷う",
+      "type": "vocab",
+      "surface": "迷う",
+      "reading": "まよう",
+      "label_ja": "迷う",
+      "label_vi": "Lạc đường",
+      "order": 96,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_096",
+        "key": "vocab/n3/mimikara/unit_05.json#迷う"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:悩む",
+      "type": "vocab",
+      "surface": "悩む",
+      "reading": "なやむ",
+      "label_ja": "悩む",
+      "label_vi": "lo lắng; bối rối",
+      "order": 97,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_097",
+        "key": "vocab/n3/mimikara/unit_05.json#悩む"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:慌てる",
+      "type": "vocab",
+      "surface": "慌てる",
+      "reading": "あわてる",
+      "label_ja": "慌てる",
+      "label_vi": "Vội vàng",
+      "order": 98,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_098",
+        "key": "vocab/n3/mimikara/unit_05.json#慌てる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:覚める",
+      "type": "vocab",
+      "surface": "覚める",
+      "reading": "さめる",
+      "label_ja": "覚める",
+      "label_vi": "thức dậy",
+      "order": 99,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_099",
+        "key": "vocab/n3/mimikara/unit_05.json#覚める"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:覚ます",
+      "type": "vocab",
+      "surface": "覚ます",
+      "reading": "さます",
+      "label_ja": "覚ます",
+      "label_vi": "đánh thức",
+      "order": 100,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_100",
+        "key": "vocab/n3/mimikara/unit_05.json#覚ます"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:眠る",
+      "type": "vocab",
+      "surface": "眠る",
+      "reading": "ねむる",
+      "label_ja": "眠る",
+      "label_vi": "Ngủ",
+      "order": 101,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_101",
+        "key": "vocab/n3/mimikara/unit_05.json#眠る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:祈る",
+      "type": "vocab",
+      "surface": "祈る",
+      "reading": "いのる",
+      "label_ja": "祈る",
+      "label_vi": "Cầu, khấn",
+      "order": 102,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_102",
+        "key": "vocab/n3/mimikara/unit_05.json#祈る"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:祝う",
+      "type": "vocab",
+      "surface": "祝う",
+      "reading": "いわう",
+      "label_ja": "祝う",
+      "label_vi": "để chúc mừng; ăn mừng",
+      "order": 103,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_103",
+        "key": "vocab/n3/mimikara/unit_05.json#祝う"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    },
+    {
+      "item_id": "vocab:n3:mimikara:05:感じる",
+      "type": "vocab",
+      "surface": "感じる",
+      "reading": "かんじる",
+      "label_ja": "感じる",
+      "label_vi": "cảm nhận; trải nghiệm",
+      "order": 104,
+      "legacy_ref": {
+        "file": "vocab/n3/mimikara/unit_05.json",
+        "entry_id": "mimi_n3_u05_104",
+        "key": "vocab/n3/mimikara/unit_05.json#感じる"
+      },
+      "exercise_bank_ref": "exercises/n3/mimikara/mimikara_n3_05.json"
+    }
+  ]
+}

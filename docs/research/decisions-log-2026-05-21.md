@@ -422,3 +422,40 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Additional action**: Placeholder sweep changed remaining UI strings away from "coming soon / will open later" wording and hid absent vocab roadmap cards unless they have interactive or preview data.
 **Reversible**: yes (Hajimete kanji asset provider remains available for a future real-data surface)
 **Owner review**: pending
+
+## DECISION-043 - Mimikara N1-N5 live assets use sanitized factual fields
+**Phase**: Follow-up Sprint 1 Phase B/C
+**Date**: 2026-05-21 18:30 (local)
+**Context**: OQ-005 requires Mimikara N1-N5 live by 2026-05-22, while local owner files contain Mimikara N1-N3 only and four N1/N2 units are missing.
+**Options considered**: keep planned placeholders | copy source filenames/prose | generate sanitized factual assets from canonical markdown plus OQ-011 fill
+**Chosen**: generate static Mimikara assets/manifests from factual fields only, strip banned source filenames/brands, fill missing N1/N2 units from current-app/JMdict-compatible factual rows, and keep N4/N5 live via local kanji-vocab fallback while logging OQ-014.
+**Rationale**: This removes dead UI, keeps copyright-safe fact extraction, avoids banned sites, and gives beta learners a usable Mimikara lane today.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-044 - Mimikara assets dedupe by normalized term+reading
+**Phase**: Follow-up Sprint 1 Phase C
+**Date**: 2026-05-21 19:20 (local)
+**Context**: The first Mimikara fill pass exposed duplicate term+reading rows across N1/N2 unit output after OQ-011 fill.
+**Chosen**: Before writing level assets, keep the first source row for each normalized `term|reading` key and drop later duplicates.
+**Rationale**: Mimikara unit review must not show repeated cards; first-row-wins preserves the owner-local extraction order and keeps online-fill rows from overriding existing local rows.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-045 - Tae Kim fallback stored as Directive E metadata
+**Phase**: Follow-up Sprint 1 Phase D
+**Date**: 2026-05-21 19:35 (local)
+**Context**: OQ-013 authorizes Tae Kim Grammar Guide as fallback because no dedicated offline grammar folder exists.
+**Chosen**: Add `directiveE` blocks to grammar JSON files with form/meaning/usage/humanMoment and a Tae Kim fallback attribution object; do not alter content DB schema in Sprint 1.
+**Rationale**: This makes the whole grammar corpus Directive E-ready without risking a DB migration during the visible Sprint 1 fixes. Existing grammar detail UI can opt into the richer block later.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-046 - Sanitize legacy source-brand leaks from learner assets
+**Phase**: Follow-up Sprint 1 gate hardening
+**Date**: 2026-05-21 20:20 (local)
+**Context**: Sprint 1 brand-leak audit for Mimikara assets exposed older kana/kanji learner JSON strings containing banned source brand names. These were not new Mimikara rows, but they can still leak to the learner UI.
+**Chosen**: Strip banned source names from `assets/data/content/kana` file labels and clear legacy kanji mnemonic strings whose only content was source-brand boilerplate.
+**Rationale**: The app must not display banned source branding or crawler-sensitive names. Empty mnemonic is preferable to a deceptive boilerplate note until QA-A-027/QA-A-026 canonical kanji metadata replaces those rows.
+**Reversible**: yes
+**Owner review**: pending

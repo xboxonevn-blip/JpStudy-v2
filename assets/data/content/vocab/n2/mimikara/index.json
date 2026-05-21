@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "dataset": "vocab",
+  "series": "mimikara",
+  "textbookId": "mimikara_n2",
+  "level": "N2",
+  "generatedAt": "2026-05-21T18:30:00+07:00",
+  "sourceMode": "owner-local-mimikara",
+  "sourceCredit": "Owner-provided local Mimikara facts; no prose copied.",
+  "copyrightPolicy": "Factual fields only; no long examples, explanations, or mnemonics copied.",
+  "units": [
+    {
+      "unitId": 1,
+      "lessonId": 1,
+      "title": "Unit 01",
+      "termCount": 98,
+      "file": "unit_01.json",
+      "previewTerms": [
+        "人生",
+        "人間",
+        "人",
+        "祖先"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 2,
+      "lessonId": 2,
+      "title": "Unit 02",
+      "termCount": 115,
+      "file": "unit_02.json",
+      "previewTerms": [
+        "好む",
+        "嫌う",
+        "願う",
+        "甘える"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 3,
+      "lessonId": 3,
+      "title": "Unit 03",
+      "termCount": 48,
+      "file": "unit_03.json",
+      "previewTerms": [
+        "有難い",
+        "申し訳ない",
+        "幸い",
+        "恋しい"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 4,
+      "lessonId": 4,
+      "title": "Unit 04",
+      "termCount": 191,
+      "file": "unit_04.json",
+      "previewTerms": [
+        "運",
+        "勘",
+        "勘違い",
+        "感覚"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 5,
+      "lessonId": 5,
+      "title": "Unit 05",
+      "termCount": 90,
+      "file": "unit_05.json",
+      "previewTerms": [
+        "形容動詞",
+        "御無沙汰",
+        "交通機関",
+        "四捨五入"
+      ],
+      "sourceMode": "app-jmdict-whitelist-fill-OQ011"
+    },
+    {
+      "unitId": 6,
+      "lessonId": 6,
+      "title": "Unit 06",
+      "termCount": 40,
+      "file": "unit_06.json",
+      "previewTerms": [
+        "最も",
+        "相当",
+        "割に",
+        "割と"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 7,
+      "lessonId": 7,
+      "title": "Unit 07",
+      "termCount": 101,
+      "file": "unit_07.json",
+      "previewTerms": [
+        "食料",
+        "食糧",
+        "粒",
+        "栽培"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 8,
+      "lessonId": 8,
+      "title": "Unit 08",
+      "termCount": 111,
+      "file": "unit_08.json",
+      "previewTerms": [
+        "映る",
+        "映す",
+        "浮かぶ",
+        "浮かべる"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 9,
+      "lessonId": 9,
+      "title": "Unit 09",
+      "termCount": 90,
+      "file": "unit_09.json",
+      "previewTerms": [
+        "為替",
+        "移転",
+        "緯度",
+        "井戸"
+      ],
+      "sourceMode": "app-jmdict-whitelist-fill-OQ011"
+    },
+    {
+      "unitId": 10,
+      "lessonId": 10,
+      "title": "Unit 10",
+      "termCount": 53,
+      "file": "unit_10.json",
+      "previewTerms": [
+        "単純",
+        "純粋",
+        "透明",
+        "爽やか"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 11,
+      "lessonId": 11,
+      "title": "Unit 11",
+      "termCount": 101,
+      "file": "unit_11.json",
+      "previewTerms": [
+        "人物",
+        "者",
+        "各自",
+        "気分"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 12,
+      "lessonId": 12,
+      "title": "Unit 12",
+      "termCount": 102,
+      "file": "unit_12.json",
+      "previewTerms": [
+        "編む",
+        "縫う",
+        "指す",
+        "示す"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    },
+    {
+      "unitId": 13,
+      "lessonId": 13,
+      "title": "Unit 13",
+      "termCount": 31,
+      "file": "unit_13.json",
+      "previewTerms": [
+        "実に",
+        "思い切り",
+        "何となく",
+        "何だか"
+      ],
+      "sourceMode": "owner-local-mimikara"
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T18:30:00+07:00",
+  "textbook_id": "mimikara_n2",
+  "lesson_id": "mimikara_n2_10",
+  "items": [
+    {
+      "item_id": "vocab:n2:mimikara:10:単純",
+      "type": "vocab",
+      "surface": "単純",
+      "reading": "たんじゅん[な]",
+      "label_ja": "単純",
+      "label_vi": "Đơn giản",
+      "order": 1,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_001",
+        "key": "vocab/n2/mimikara/unit_10.json#単純"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:純粋",
+      "type": "vocab",
+      "surface": "純粋",
+      "reading": "じゅんすい[な]",
+      "label_ja": "純粋",
+      "label_vi": "Trong sáng, nguyên chất",
+      "order": 2,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_002",
+        "key": "vocab/n2/mimikara/unit_10.json#純粋"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:透明",
+      "type": "vocab",
+      "surface": "透明",
+      "reading": "とうめい[な]",
+      "label_ja": "透明",
+      "label_vi": "Trong suốt",
+      "order": 3,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_003",
+        "key": "vocab/n2/mimikara/unit_10.json#透明"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:爽やか",
+      "type": "vocab",
+      "surface": "爽やか",
+      "reading": "さわやか[な]",
+      "label_ja": "爽やか",
+      "label_vi": "Sảng khoái, tươi",
+      "order": 4,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_004",
+        "key": "vocab/n2/mimikara/unit_10.json#爽やか"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:素直",
+      "type": "vocab",
+      "surface": "素直",
+      "reading": "すなお[な]",
+      "label_ja": "素直",
+      "label_vi": "Vâng lời, dịu dàng, ôn hòa",
+      "order": 5,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_005",
+        "key": "vocab/n2/mimikara/unit_10.json#素直"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:率直",
+      "type": "vocab",
+      "surface": "率直",
+      "reading": "そっちょく[な]",
+      "label_ja": "率直",
+      "label_vi": "Trực tính, thẳng thắn",
+      "order": 6,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_006",
+        "key": "vocab/n2/mimikara/unit_10.json#率直"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:誠実",
+      "type": "vocab",
+      "surface": "誠実",
+      "reading": "せいじつ[な]",
+      "label_ja": "誠実",
+      "label_vi": "Thật thà",
+      "order": 7,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_007",
+        "key": "vocab/n2/mimikara/unit_10.json#誠実"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:謙虚",
+      "type": "vocab",
+      "surface": "謙虚",
+      "reading": "けんきょ[な]",
+      "label_ja": "謙虚",
+      "label_vi": "Khiêm tốn",
+      "order": 8,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_008",
+        "key": "vocab/n2/mimikara/unit_10.json#謙虚"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:賢い",
+      "type": "vocab",
+      "surface": "賢い",
+      "reading": "かしこい",
+      "label_ja": "賢い",
+      "label_vi": "Thông minh, khôn ngoan",
+      "order": 9,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_009",
+        "key": "vocab/n2/mimikara/unit_10.json#賢い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:慎重",
+      "type": "vocab",
+      "surface": "慎重",
+      "reading": "しんちょう[な]",
+      "label_ja": "慎重",
+      "label_vi": "Thận trọng",
+      "order": 10,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_010",
+        "key": "vocab/n2/mimikara/unit_10.json#慎重"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:穏やか",
+      "type": "vocab",
+      "surface": "穏やか",
+      "reading": "おだやか[な]",
+      "label_ja": "穏やか",
+      "label_vi": "Điềm tĩnh, yên lặng",
+      "order": 11,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_011",
+        "key": "vocab/n2/mimikara/unit_10.json#穏やか"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:真剣",
+      "type": "vocab",
+      "surface": "真剣",
+      "reading": "しんけん[な]",
+      "label_ja": "真剣",
+      "label_vi": "Nghiêm túc, nghiêm trọng",
+      "order": 12,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_012",
+        "key": "vocab/n2/mimikara/unit_10.json#真剣"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:正式",
+      "type": "vocab",
+      "surface": "正式",
+      "reading": "せいしき[な]",
+      "label_ja": "正式",
+      "label_vi": "Chính thức, trang trọng",
+      "order": 13,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_013",
+        "key": "vocab/n2/mimikara/unit_10.json#正式"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:主",
+      "type": "vocab",
+      "surface": "主",
+      "reading": "おも[な]",
+      "label_ja": "主",
+      "label_vi": "Chính, chủ yếu",
+      "order": 14,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_014",
+        "key": "vocab/n2/mimikara/unit_10.json#主"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:主要",
+      "type": "vocab",
+      "surface": "主要",
+      "reading": "しゅよう[な]",
+      "label_ja": "主要",
+      "label_vi": "Chủ yếu, chính, thường ghép với từ khác",
+      "order": 15,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_015",
+        "key": "vocab/n2/mimikara/unit_10.json#主要"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:貴重",
+      "type": "vocab",
+      "surface": "貴重",
+      "reading": "きちょう[な]",
+      "label_ja": "貴重",
+      "label_vi": "Quý giá",
+      "order": 16,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_016",
+        "key": "vocab/n2/mimikara/unit_10.json#貴重"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:偉大",
+      "type": "vocab",
+      "surface": "偉大",
+      "reading": "いだい[な]",
+      "label_ja": "偉大",
+      "label_vi": "Vĩ đại",
+      "order": 17,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_017",
+        "key": "vocab/n2/mimikara/unit_10.json#偉大"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:偉い",
+      "type": "vocab",
+      "surface": "偉い",
+      "reading": "えらい",
+      "label_ja": "偉い",
+      "label_vi": "tuyệt vời, nổi tiếng, nổi tiếng, khủng khiếp, khủng khiếp, nổi tiếng, đáng chú ý, xuất sắc",
+      "order": 18,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_018",
+        "key": "vocab/n2/mimikara/unit_10.json#偉い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:独特",
+      "type": "vocab",
+      "surface": "独特",
+      "reading": "どくとく[な]",
+      "label_ja": "独特",
+      "label_vi": "Độc nhất, đặc biệt, riêng bản thân có thôi",
+      "order": 19,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_019",
+        "key": "vocab/n2/mimikara/unit_10.json#独特"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:特殊",
+      "type": "vocab",
+      "surface": "特殊",
+      "reading": "とくしゅ[な]",
+      "label_ja": "特殊",
+      "label_vi": "Độc đáo, đặc biệt",
+      "order": 20,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_020",
+        "key": "vocab/n2/mimikara/unit_10.json#特殊"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:奇妙",
+      "type": "vocab",
+      "surface": "奇妙",
+      "reading": "きみょう[な]",
+      "label_ja": "奇妙",
+      "label_vi": "Kỳ lạ",
+      "order": 21,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_021",
+        "key": "vocab/n2/mimikara/unit_10.json#奇妙"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:妙",
+      "type": "vocab",
+      "surface": "妙",
+      "reading": "みょう[な]",
+      "label_ja": "妙",
+      "label_vi": "Lạ, tò mò",
+      "order": 22,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_022",
+        "key": "vocab/n2/mimikara/unit_10.json#妙"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:怪しい",
+      "type": "vocab",
+      "surface": "怪しい",
+      "reading": "あやしい",
+      "label_ja": "怪しい",
+      "label_vi": "đáng ngờ, đáng ngờ, đáng ngờ",
+      "order": 23,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_023",
+        "key": "vocab/n2/mimikara/unit_10.json#怪しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:異常",
+      "type": "vocab",
+      "surface": "異常",
+      "reading": "いじょう[な]",
+      "label_ja": "異常",
+      "label_vi": "Bất thường",
+      "order": 24,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_024",
+        "key": "vocab/n2/mimikara/unit_10.json#異常"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:高度",
+      "type": "vocab",
+      "surface": "高度",
+      "reading": "こうど[な]",
+      "label_ja": "高度",
+      "label_vi": "Độ chính xác cao",
+      "order": 25,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_025",
+        "key": "vocab/n2/mimikara/unit_10.json#高度"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:新た",
+      "type": "vocab",
+      "surface": "新た",
+      "reading": "あらた[な]",
+      "label_ja": "新た",
+      "label_vi": "Mới, được làm mới",
+      "order": 26,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_026",
+        "key": "vocab/n2/mimikara/unit_10.json#新た"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:合理的",
+      "type": "vocab",
+      "surface": "合理的",
+      "reading": "ごうりてき[な]",
+      "label_ja": "合理的",
+      "label_vi": "Hợp lý",
+      "order": 27,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_027",
+        "key": "vocab/n2/mimikara/unit_10.json#合理的"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:器用",
+      "type": "vocab",
+      "surface": "器用",
+      "reading": "きよう[な]",
+      "label_ja": "器用",
+      "label_vi": "Lanh tay, tài giỏi, khéo léo",
+      "order": 28,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_028",
+        "key": "vocab/n2/mimikara/unit_10.json#器用"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:手軽",
+      "type": "vocab",
+      "surface": "手軽",
+      "reading": "てがる[な]",
+      "label_ja": "手軽",
+      "label_vi": "Nhẹ nhàng, đơn giản",
+      "order": 29,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_029",
+        "key": "vocab/n2/mimikara/unit_10.json#手軽"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:手ごろ",
+      "type": "vocab",
+      "surface": "手ごろ",
+      "reading": "てごろ[な]",
+      "label_ja": "手ごろ",
+      "label_vi": "Hợp lý, phù hợp",
+      "order": 30,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_030",
+        "key": "vocab/n2/mimikara/unit_10.json#手ごろ"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:高価",
+      "type": "vocab",
+      "surface": "高価",
+      "reading": "こうか[な]",
+      "label_ja": "高価",
+      "label_vi": "Đắt",
+      "order": 31,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_031",
+        "key": "vocab/n2/mimikara/unit_10.json#高価"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:質素",
+      "type": "vocab",
+      "surface": "質素",
+      "reading": "しっそ",
+      "label_ja": "質素",
+      "label_vi": "Đạm bạc, giản dị (phong cách sống)",
+      "order": 32,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_032",
+        "key": "vocab/n2/mimikara/unit_10.json#質素"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:豪華",
+      "type": "vocab",
+      "surface": "豪華",
+      "reading": "ごうか[な]",
+      "label_ja": "豪華",
+      "label_vi": "Hào hoa",
+      "order": 33,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_033",
+        "key": "vocab/n2/mimikara/unit_10.json#豪華"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:高級",
+      "type": "vocab",
+      "surface": "高級",
+      "reading": "こうきゅう[な]",
+      "label_ja": "高級",
+      "label_vi": "Chất lượng cao, đắt",
+      "order": 34,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_034",
+        "key": "vocab/n2/mimikara/unit_10.json#高級"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:上等",
+      "type": "vocab",
+      "surface": "上等",
+      "reading": "じょうとう[な]",
+      "label_ja": "上等",
+      "label_vi": "Thượng đẳng, đủ tốt",
+      "order": 35,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_035",
+        "key": "vocab/n2/mimikara/unit_10.json#上等"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:上品",
+      "type": "vocab",
+      "surface": "上品",
+      "reading": "じょうひん[な]",
+      "label_ja": "上品",
+      "label_vi": "Sản phẩm tốt",
+      "order": 36,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_036",
+        "key": "vocab/n2/mimikara/unit_10.json#上品"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:適度[な]",
+      "type": "vocab",
+      "surface": "適度[な]",
+      "reading": "てきど[な]",
+      "label_ja": "適度[な]",
+      "label_vi": "Mức độ thích hợp, điều độ",
+      "order": 37,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_037",
+        "key": "vocab/n2/mimikara/unit_10.json#適度[な]"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:適切",
+      "type": "vocab",
+      "surface": "適切",
+      "reading": "てきせつ[な]",
+      "label_ja": "適切",
+      "label_vi": "Thích hợp (cách xử lý, cách sử dụng,v.v)",
+      "order": 38,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_038",
+        "key": "vocab/n2/mimikara/unit_10.json#適切"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:快適",
+      "type": "vocab",
+      "surface": "快適",
+      "reading": "かいてき[な]",
+      "label_ja": "快適",
+      "label_vi": "Dễ chịu, sảng khoái",
+      "order": 39,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_039",
+        "key": "vocab/n2/mimikara/unit_10.json#快適"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:快い",
+      "type": "vocab",
+      "surface": "快い",
+      "reading": "こころよい",
+      "label_ja": "快い",
+      "label_vi": "Hài lòng, dễ chịu",
+      "order": 40,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_040",
+        "key": "vocab/n2/mimikara/unit_10.json#快い"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:順調",
+      "type": "vocab",
+      "surface": "順調",
+      "reading": "じゅんちょう[な]",
+      "label_ja": "順調",
+      "label_vi": "Thuận lợi, tốt, trôi chảy",
+      "order": 41,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_041",
+        "key": "vocab/n2/mimikara/unit_10.json#順調"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:活発",
+      "type": "vocab",
+      "surface": "活発",
+      "reading": "かっぱつ[な]",
+      "label_ja": "活発",
+      "label_vi": "Hoạt bát, sôi nổi (thiên về tính cách con người)",
+      "order": 42,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_042",
+        "key": "vocab/n2/mimikara/unit_10.json#活発"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:活気",
+      "type": "vocab",
+      "surface": "活気",
+      "reading": "かっき",
+      "label_ja": "活気",
+      "label_vi": "Náo nhiệt (thiên về trạng thái của khu vực, thành phố)",
+      "order": 43,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_043",
+        "key": "vocab/n2/mimikara/unit_10.json#活気"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:的確",
+      "type": "vocab",
+      "surface": "的確",
+      "reading": "てきかく[な]",
+      "label_ja": "的確",
+      "label_vi": "Chính xác",
+      "order": 44,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_044",
+        "key": "vocab/n2/mimikara/unit_10.json#的確"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:確実",
+      "type": "vocab",
+      "surface": "確実",
+      "reading": "かくじつ[な]",
+      "label_ja": "確実",
+      "label_vi": "Thật（sự thật, người thật）",
+      "order": 45,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_045",
+        "key": "vocab/n2/mimikara/unit_10.json#確実"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:明らか",
+      "type": "vocab",
+      "surface": "明らか",
+      "reading": "あきらか[な]",
+      "label_ja": "明らか",
+      "label_vi": "Rõ ràng",
+      "order": 46,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_046",
+        "key": "vocab/n2/mimikara/unit_10.json#明らか"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:曖昧",
+      "type": "vocab",
+      "surface": "曖昧",
+      "reading": "あいまい[な]",
+      "label_ja": "曖昧",
+      "label_vi": "Mơ hồ, không rõ ràng",
+      "order": 47,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_047",
+        "key": "vocab/n2/mimikara/unit_10.json#曖昧"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:具体的",
+      "type": "vocab",
+      "surface": "具体的",
+      "reading": "ぐたいてき[な]",
+      "label_ja": "具体的",
+      "label_vi": "Cụ thể",
+      "order": 48,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_048",
+        "key": "vocab/n2/mimikara/unit_10.json#具体的"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:抽象的",
+      "type": "vocab",
+      "surface": "抽象的",
+      "reading": "ちゅうしょうてき[な]",
+      "label_ja": "抽象的",
+      "label_vi": "Trừu tượng",
+      "order": 49,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_049",
+        "key": "vocab/n2/mimikara/unit_10.json#抽象的"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:等しい",
+      "type": "vocab",
+      "surface": "等しい",
+      "reading": "ひとしい",
+      "label_ja": "等しい",
+      "label_vi": "Giống nhau",
+      "order": 50,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_050",
+        "key": "vocab/n2/mimikara/unit_10.json#等しい"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:平等",
+      "type": "vocab",
+      "surface": "平等",
+      "reading": "びょうどう[な]",
+      "label_ja": "平等",
+      "label_vi": "Bình đẳng (người ngoài cuộc nhìn nhận)",
+      "order": 51,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_051",
+        "key": "vocab/n2/mimikara/unit_10.json#平等"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:公平",
+      "type": "vocab",
+      "surface": "公平",
+      "reading": "こうへい[な]",
+      "label_ja": "公平",
+      "label_vi": "Công bằng (người trong cuộc nhìn nhận)",
+      "order": 52,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_052",
+        "key": "vocab/n2/mimikara/unit_10.json#公平"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    },
+    {
+      "item_id": "vocab:n2:mimikara:10:不平",
+      "type": "vocab",
+      "surface": "不平",
+      "reading": "ふへい",
+      "label_ja": "不平",
+      "label_vi": "Bất bình",
+      "order": 53,
+      "legacy_ref": {
+        "file": "vocab/n2/mimikara/unit_10.json",
+        "entry_id": "mimi_n2_u10_053",
+        "key": "vocab/n2/mimikara/unit_10.json#不平"
+      },
+      "exercise_bank_ref": "exercises/n2/mimikara/mimikara_n2_10.json"
+    }
+  ]
+}

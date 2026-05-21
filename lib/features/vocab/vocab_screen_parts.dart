@@ -186,6 +186,15 @@ class _VocabCatalogBody extends ConsumerWidget {
       return;
     }
 
+    if (program.type == _VocabProgramType.mimikara) {
+      context.openMimikaraCatalog(
+        levelCode: section.levelCode,
+        title: '${program.titleTop} ${program.titleMain}'.trim(),
+        subtitle: _localizedProgramSubtitle(program, language),
+      );
+      return;
+    }
+
     context.push(
       '/vocab/review',
       extra: VocabReviewArgs(
@@ -818,6 +827,7 @@ class _ProgramCard extends StatelessWidget {
       ),
       _VocabProgramType.minna ||
       _VocabProgramType.shinkanzen ||
+      _VocabProgramType.mimikara ||
       _VocabProgramType.listening => _CompanionProgramCard(
         section: section,
         program: program,
@@ -1417,6 +1427,7 @@ enum _VocabProgramType {
   core,
   minna,
   shinkanzen,
+  mimikara,
   listening,
   advanced,
   specialized,

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../models/flashcard_settings.dart';
 
@@ -92,16 +93,19 @@ class _FlashcardSettingsDialogState
         ),
       ),
       actions: [
-        TextButton(
+        AppButton(
+          label: ref.watch(appLanguageProvider).cancelLabel,
+          variant: AppButtonVariant.ghost,
+          compact: true,
           onPressed: () => Navigator.of(context).pop(),
-          child: Text(ref.watch(appLanguageProvider).cancelLabel),
         ),
-        ElevatedButton(
+        AppButton(
+          label: ref.watch(appLanguageProvider).saveLabel,
+          compact: true,
           onPressed: () {
             widget.onSave(_settings);
             Navigator.of(context).pop();
           },
-          child: Text(ref.watch(appLanguageProvider).saveLabel),
         ),
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 typedef SharedAnswerOptionBuilder =
     Widget Function(BuildContext context, SharedAnswerOption option);
@@ -135,14 +136,14 @@ class _SharedAnswerSelectionState extends State<SharedAnswerSelection> {
             else
               _buildShrinkWrapOptions(optionTiles, useGrid),
             SizedBox(height: widget.spacing),
-            FilledButton(
-              key: ValueKey('${widget.keyPrefix}_confirm'),
-              style: FilledButton.styleFrom(
-                minimumSize: Size.fromHeight(widget.confirmMinHeight),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            SizedBox(
+              height: widget.confirmMinHeight,
+              child: AppButton(
+                key: ValueKey('${widget.keyPrefix}_confirm'),
+                label: widget.confirmLabel,
+                expanded: true,
+                onPressed: canConfirm ? _confirm : null,
               ),
-              onPressed: canConfirm ? _confirm : null,
-              child: Text(widget.confirmLabel),
             ),
           ],
         );

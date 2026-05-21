@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../../../data/models/vocab_item.dart';
 import '../../../features/home/widgets/next_step_suggestions.dart';
@@ -196,53 +197,26 @@ class FlashcardSummaryScreen extends ConsumerWidget {
     return Column(
       children: [
         if (hasPracticeItems)
-          SizedBox(
-            width: double.infinity,
-            height: 56,
-            child: ElevatedButton.icon(
-              onPressed: () => Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (_) => EnhancedFlashcardScreen(
-                    items: practiceItems!,
-                    lessonId: session.lessonId,
-                    lessonTitle: lessonTitle ?? '',
-                  ),
-                ),
-              ),
-              icon: const Icon(Icons.replay_rounded),
-              label: Text(
-                language.practiceAgainLabel,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: context.appPalette.warning,
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+          AppButton(
+            label: language.practiceAgainLabel,
+            icon: Icons.replay_rounded,
+            expanded: true,
+            onPressed: () => Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (_) => EnhancedFlashcardScreen(
+                  items: practiceItems!,
+                  lessonId: session.lessonId,
+                  lessonTitle: lessonTitle ?? '',
                 ),
               ),
             ),
           ),
         if (hasPracticeItems) const SizedBox(height: 12),
-        SizedBox(
-          width: double.infinity,
-          height: 56,
-          child: OutlinedButton(
-            onPressed: onDone ?? () => Navigator.of(context).pop(),
-            style: OutlinedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              side: BorderSide(color: context.appPalette.primary, width: 2),
-            ),
-            child: Text(
-              language.doneLabel,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-          ),
+        AppButton(
+          label: language.doneLabel,
+          variant: AppButtonVariant.secondary,
+          expanded: true,
+          onPressed: onDone ?? () => Navigator.of(context).pop(),
         ),
       ],
     );

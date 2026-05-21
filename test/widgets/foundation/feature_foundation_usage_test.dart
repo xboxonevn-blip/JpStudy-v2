@@ -10,6 +10,11 @@ void main() {
       'lib/features/foundations/widgets/foundations_soft_suggest_gate.dart',
       'lib/features/conjugation/widgets/conjugation_lesson_widget.dart',
       'lib/features/test/widgets/practice_test_dashboard.dart',
+      'lib/features/vocab/widgets/kanji_inline_popover.dart',
+      'lib/features/flashcards/widgets/flashcard_summary.dart',
+      'lib/features/flashcards/widgets/flashcard_settings_dialog.dart',
+      'lib/features/learn/widgets/achievement_popup.dart',
+      'lib/features/quiz/widgets/shared_answer_selection.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

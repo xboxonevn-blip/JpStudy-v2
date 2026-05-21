@@ -10,6 +10,7 @@ import 'package:jpstudy/features/foundations/widgets/han_viet_inline_panel.dart'
 import 'package:jpstudy/features/write/services/kanji_stroke_template_service.dart';
 import 'package:jpstudy/features/write/services/kanji_stroke_vector_service.dart';
 import 'package:jpstudy/features/write/widgets/kanji_stroke_animator.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class KanjiInlinePopover extends ConsumerWidget {
   const KanjiInlinePopover({
@@ -23,15 +24,10 @@ class KanjiInlinePopover extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final palette = context.appPalette;
-    return ActionChip(
-      visualDensity: VisualDensity.compact,
-      label: Text(
-        character,
-        style: const TextStyle(fontWeight: FontWeight.w900),
-      ),
-      side: BorderSide(color: palette.primary.withValues(alpha: 0.28)),
-      backgroundColor: palette.primary.withValues(alpha: 0.08),
+    return AppButton(
+      label: character,
+      variant: AppButtonVariant.secondary,
+      compact: true,
       onPressed: () {
         showDialog<void>(
           context: context,

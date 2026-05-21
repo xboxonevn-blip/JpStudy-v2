@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../models/achievement.dart';
 
@@ -95,23 +96,11 @@ class AchievementPopup extends StatelessWidget {
             const SizedBox(height: 24),
 
             // Dismiss button
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: onDismiss ?? () => Navigator.of(context).pop(),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: achievement.type.color,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: const Text(
-                  'Awesome!',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
-              ),
+            AppButton(
+              label: 'Awesome!',
+              variant: AppButtonVariant.secondary,
+              expanded: true,
+              onPressed: onDismiss ?? () => Navigator.of(context).pop(),
             ),
           ],
         ),

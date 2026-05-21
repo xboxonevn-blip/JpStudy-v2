@@ -1,22 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/theme/tokens/color_tokens.dart';
+import 'package:jpstudy/theme/tokens/elevation_tokens.dart';
+import 'package:jpstudy/theme/tokens/motion_tokens.dart';
+import 'package:jpstudy/theme/tokens/radius_tokens.dart';
+import 'package:jpstudy/theme/tokens/spacing_tokens.dart';
+import 'package:jpstudy/theme/tokens/typography_tokens.dart';
 
 class AppTheme {
   // Component palette (used by ClayButton, ClayCard, grammar widgets, etc.)
-  static const Color primary = Color(0xFF17324D);
-  static const Color secondary = Color(0xFF20675B);
-  static const Color tertiary = Color(0xFFA64926);
-  static const Color error = Color(0xFF9B3440);
-  static const Color neutral = Color(0xFFE5D7C4);
-  static const Color surface = Color(0xFFFCF7F0);
-  static const Color textMain = Color(0xFF15202B);
-  static const Color textSub = Color(0xFF61707F);
-  static const String latinFontFamily = 'Manrope';
-  static const String japanesePrimaryFontFamily = 'Yu Gothic UI';
-  static const String vietnameseFallbackFontFamily = 'Noto Sans';
-  static const String japaneseFallbackFontFamily = 'Noto Sans JP';
-  static const String emojiFallbackFontFamily = 'Noto Color Emoji';
+  static const Color primary = AppColorTokens.lightPrimary;
+  static const Color secondary = AppColorTokens.lightSecondary;
+  static const Color tertiary = AppColorTokens.lightAccent;
+  static const Color error = AppColorTokens.lightDanger;
+  static const Color neutral = AppColorTokens.lightOutline;
+  static const Color surface = AppColorTokens.lightBase;
+  static const Color textMain = AppColorTokens.lightTextHigh;
+  static const Color textSub = AppColorTokens.lightTextMedium;
+  static const String latinFontFamily =
+      AppTypographyTokens.vietnameseFontFamily;
+  static const String bundledLatinFontFamily =
+      AppTypographyTokens.bundledLatinFontFamily;
+  static const String japanesePrimaryFontFamily =
+      AppTypographyTokens.japanesePrimaryFontFamily;
+  static const String vietnameseFallbackFontFamily =
+      AppTypographyTokens.vietnameseFallbackFontFamily;
+  static const String japaneseFallbackFontFamily =
+      AppTypographyTokens.japaneseFallbackFontFamily;
+  static const String emojiFallbackFontFamily =
+      AppTypographyTokens.emojiFallbackFontFamily;
   static const List<String> vietnameseFontFallbacks = <String>[
     vietnameseFallbackFontFamily,
     japaneseFallbackFontFamily,
@@ -26,6 +39,7 @@ class AppTheme {
     japanesePrimaryFontFamily,
     japaneseFallbackFontFamily,
     vietnameseFallbackFontFamily,
+    bundledLatinFontFamily,
     emojiFallbackFontFamily,
   ];
 
@@ -35,17 +49,18 @@ class AppTheme {
   }
 
   static ThemeData light([AppLanguage language = AppLanguage.en]) {
+    const colors = AppColorTokens.light;
     final palette = AppThemePalette.light;
     final typography = _typographyFor(language);
 
     final colorScheme = ColorScheme.light(
-      primary: palette.primary,
-      secondary: palette.secondary,
-      surface: palette.surface,
+      primary: colors.primary,
+      secondary: colors.secondary,
+      surface: colors.surface,
       onPrimary: const Color(0xFFFFFFFF),
-      onSurface: palette.ink,
-      error: palette.error,
-      tertiary: palette.accent,
+      onSurface: colors.textHigh,
+      error: colors.danger,
+      tertiary: colors.accent,
     );
 
     return ThemeData(
@@ -62,7 +77,7 @@ class AppTheme {
         titleTextStyle: _textStyle(
           typography,
           display: true,
-          fontSize: 24,
+          fontSize: AppTypographyTokens.headingMd,
           fontWeight: FontWeight.w800,
           color: palette.ink,
         ),
@@ -84,56 +99,68 @@ class AppTheme {
       ),
       cardTheme: CardThemeData(
         color: colorScheme.surface,
-        elevation: 0,
+        elevation: AppElevationTokens.dp0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(28),
+          borderRadius: BorderRadius.circular(AppRadiusTokens.xxl),
           side: BorderSide(color: palette.outline, width: 1.1),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          elevation: 0,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          animationDuration: AppMotionTokens.smooth,
+          elevation: AppElevationTokens.dp0,
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacingTokens.xxl,
+            vertical: AppSpacingTokens.lg,
+          ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.circular(AppRadiusTokens.lg),
           ),
           backgroundColor: palette.primary,
           foregroundColor: Colors.white,
           textStyle: _textStyle(
             typography,
             fontWeight: FontWeight.w800,
-            fontSize: 16,
+            fontSize: AppTypographyTokens.bodyMd,
           ),
         ),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          elevation: 0,
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          animationDuration: AppMotionTokens.smooth,
+          elevation: AppElevationTokens.dp0,
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacingTokens.xl,
+            vertical: AppSpacingTokens.lg,
+          ),
           backgroundColor: palette.primary,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.circular(AppRadiusTokens.lg),
           ),
           textStyle: _textStyle(
             typography,
             fontWeight: FontWeight.w800,
-            fontSize: 15.5,
+            fontSize: AppTypographyTokens.bodyMd,
           ),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
+          animationDuration: AppMotionTokens.smooth,
           foregroundColor: palette.ink,
           side: BorderSide(color: palette.outline),
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacingTokens.xl,
+            vertical: AppSpacingTokens.lg,
+          ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.circular(AppRadiusTokens.lg),
           ),
           textStyle: _textStyle(
             typography,
             fontWeight: FontWeight.w700,
-            fontSize: 15,
+            fontSize: AppTypographyTokens.bodyMd,
           ),
         ),
       ),
@@ -141,15 +168,15 @@ class AppTheme {
         filled: true,
         fillColor: palette.elevated,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(AppRadiusTokens.xxl),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(AppRadiusTokens.xxl),
           borderSide: BorderSide(color: palette.outline),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(AppRadiusTokens.xxl),
           borderSide: BorderSide(color: palette.primary, width: 2),
         ),
         hintStyle: _textStyle(
@@ -157,34 +184,39 @@ class AppTheme {
           color: palette.ink.withValues(alpha: 0.68),
         ),
         contentPadding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 16,
+          horizontal: AppSpacingTokens.xl,
+          vertical: AppSpacingTokens.lg,
         ),
       ),
       textTheme: TextTheme(
         displayLarge: _textStyle(
           typography,
           display: true,
+          fontSize: AppTypographyTokens.displayLg,
           fontWeight: FontWeight.w900,
           color: palette.ink,
         ),
         titleLarge: _textStyle(
           typography,
           display: true,
+          fontSize: AppTypographyTokens.headingLg,
           fontWeight: FontWeight.w800,
           color: palette.ink,
         ),
         titleMedium: _textStyle(
           typography,
+          fontSize: AppTypographyTokens.headingMd,
           fontWeight: FontWeight.w800,
           color: palette.ink,
         ),
         bodyLarge: _textStyle(
           typography,
+          fontSize: AppTypographyTokens.bodyLg,
           color: palette.ink.withValues(alpha: 0.88),
         ),
         bodyMedium: _textStyle(
           typography,
+          fontSize: AppTypographyTokens.bodyMd,
           color: palette.ink.withValues(alpha: 0.74),
         ),
       ),
@@ -193,11 +225,7 @@ class AppTheme {
   }
 
   static ThemeData dark([AppLanguage language = AppLanguage.en]) {
-    const primaryColor = Color(0xFF8FAED0);
-    const secondaryColor = Color(0xFF4FA98B);
-    const accentColor = Color(0xFFF9735B);
-    const scaffoldBg = Color(0xFF0F172A);
-    const cardBg = Color(0xFF1B2636);
+    const colors = AppColorTokens.dark;
     final typography = _typographyFor(language);
 
     return ThemeData(
@@ -206,41 +234,49 @@ class AppTheme {
       extensions: const [AppThemePalette.dark],
       fontFamily: typography.bodyFontFamily,
       colorScheme: const ColorScheme.dark(
-        primary: primaryColor,
-        secondary: secondaryColor,
-        tertiary: accentColor,
-        surface: cardBg,
+        primary: AppColorTokens.darkPrimary,
+        secondary: AppColorTokens.darkSecondary,
+        tertiary: AppColorTokens.darkAccent,
+        surface: AppColorTokens.darkSurface,
         onPrimary: Colors.white,
       ),
-      scaffoldBackgroundColor: scaffoldBg,
+      scaffoldBackgroundColor: colors.background,
       appBarTheme: AppBarTheme(
-        backgroundColor: scaffoldBg,
-        elevation: 0,
+        backgroundColor: colors.background,
+        elevation: AppElevationTokens.dp0,
         centerTitle: false,
         titleTextStyle: _textStyle(
           typography,
           display: true,
-          fontSize: 24,
+          fontSize: AppTypographyTokens.headingMd,
           fontWeight: FontWeight.w800,
           color: Colors.white,
         ),
       ),
       cardTheme: CardThemeData(
-        color: cardBg,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        color: colors.surface,
+        elevation: AppElevationTokens.dp0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppRadiusTokens.xxl),
+        ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: primaryColor,
+          animationDuration: AppMotionTokens.smooth,
+          elevation: AppElevationTokens.dp0,
+          backgroundColor: colors.primary,
           foregroundColor: Colors.white,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacingTokens.xxl,
+            vertical: AppSpacingTokens.lg,
+          ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(AppRadiusTokens.xxl),
           ),
           textStyle: _textStyle(
             typography,
             fontWeight: FontWeight.w800,
-            fontSize: 16,
+            fontSize: AppTypographyTokens.bodyMd,
           ),
         ),
       ),
@@ -248,22 +284,33 @@ class AppTheme {
         displayLarge: _textStyle(
           typography,
           display: true,
+          fontSize: AppTypographyTokens.displayLg,
           fontWeight: FontWeight.w900,
           color: Colors.white,
         ),
         titleLarge: _textStyle(
           typography,
           display: true,
+          fontSize: AppTypographyTokens.headingLg,
           fontWeight: FontWeight.w800,
           color: Colors.white,
         ),
         titleMedium: _textStyle(
           typography,
+          fontSize: AppTypographyTokens.headingMd,
           fontWeight: FontWeight.w800,
           color: Colors.white,
         ),
-        bodyLarge: _textStyle(typography, color: const Color(0xFFCBD5E1)),
-        bodyMedium: _textStyle(typography, color: const Color(0xFF94A3B8)),
+        bodyLarge: _textStyle(
+          typography,
+          fontSize: AppTypographyTokens.bodyLg,
+          color: colors.textMedium,
+        ),
+        bodyMedium: _textStyle(
+          typography,
+          fontSize: AppTypographyTokens.bodyMd,
+          color: colors.textLow,
+        ),
       ),
     );
   }
@@ -277,6 +324,7 @@ class AppTheme {
           japaneseFallbackFontFamily,
           vietnameseFallbackFontFamily,
           emojiFallbackFontFamily,
+          bundledLatinFontFamily,
           latinFontFamily,
         ],
       );

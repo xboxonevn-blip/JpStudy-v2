@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/app/theme/app_theme.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/theme/tokens/radius_tokens.dart';
 
 double _contrast(Color foreground, Color background) {
   final resolvedForeground = foreground.a < 1
@@ -235,13 +236,13 @@ void main() {
     test('light theme card shape uses rounded border radius', () {
       final theme = AppTheme.light(AppLanguage.en);
       final shape = theme.cardTheme.shape as RoundedRectangleBorder;
-      expect(shape.borderRadius, BorderRadius.circular(28));
+      expect(shape.borderRadius, BorderRadius.circular(AppRadiusTokens.xxl));
     });
 
     test('dark theme card shape uses rounded border radius', () {
       final theme = AppTheme.dark(AppLanguage.en);
       final shape = theme.cardTheme.shape as RoundedRectangleBorder;
-      expect(shape.borderRadius, BorderRadius.circular(24));
+      expect(shape.borderRadius, BorderRadius.circular(AppRadiusTokens.xxl));
     });
 
     test('light elevated buttons use primary color background', () {

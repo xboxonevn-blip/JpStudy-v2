@@ -13,6 +13,7 @@ import '../../../data/db/app_database.dart';
 import '../../../data/models/mistake_context.dart';
 import '../../../data/repositories/grammar_repository.dart';
 import '../../mistakes/repositories/mistake_repository.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 import '../grammar_providers.dart' as grammar_providers;
 import '../services/grammar_practice_bank.dart';
 import '../services/grammar_question_generator.dart';
@@ -1059,26 +1060,28 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
           actions: [
             if (_wrongPointIds.isNotEmpty &&
                 _blueprint != GrammarPracticeBlueprint.quiz)
-              TextButton(
+              AppButton(
+                label: _tr(
+                  language,
+                  en: 'Practice Weak Now',
+                  vi: 'Luyện lại ngay',
+                  ja: '弱点を今すぐ練習',
+                ),
+                variant: AppButtonVariant.ghost,
+                compact: true,
                 onPressed: () {
                   Navigator.of(context).pop();
                   _startWeakDrill();
                 },
-                child: Text(
-                  _tr(
-                    language,
-                    en: 'Practice Weak Now',
-                    vi: 'Luyện lại ngay',
-                    ja: '弱点を今すぐ練習',
-                  ),
-                ),
               ),
-            TextButton(
+            AppButton(
+              label: language.doneLabel,
+              variant: AppButtonVariant.ghost,
+              compact: true,
               onPressed: () {
                 Navigator.of(context).pop();
                 context.pop();
               },
-              child: Text(language.doneLabel),
             ),
           ],
         );

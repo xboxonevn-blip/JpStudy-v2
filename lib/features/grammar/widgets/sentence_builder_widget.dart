@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/accessibility/reduced_motion.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import 'grammar_practice_surfaces.dart';
 
@@ -303,44 +304,31 @@ class _SentenceBuilderWidgetState extends State<SentenceBuilderWidget> {
                 Row(
                   children: [
                     Expanded(
-                      child: OutlinedButton.icon(
+                      child: AppButton(
                         onPressed: _reset,
-                        icon: const Icon(Icons.refresh_rounded),
-                        label: Text(
-                          _tr(
-                            widget.language,
-                            en: 'Reset',
-                            vi: 'Làm lại',
-                            ja: 'リセット',
-                          ),
+                        icon: Icons.refresh_rounded,
+                        label: _tr(
+                          widget.language,
+                          en: 'Reset',
+                          vi: 'Làm lại',
+                          ja: 'リセット',
                         ),
-                        style: OutlinedButton.styleFrom(
-                          minimumSize: const Size.fromHeight(54),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18),
-                          ),
-                        ),
+                        variant: AppButtonVariant.secondary,
+                        expanded: true,
                       ),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: FilledButton.icon(
+                      child: AppButton(
                         onPressed: _selectedWords.isEmpty ? null : _check,
-                        icon: const Icon(Icons.check_circle_rounded),
-                        label: Text(
-                          _tr(
-                            widget.language,
-                            en: 'Check',
-                            vi: 'Kiểm tra',
-                            ja: '確認',
-                          ),
+                        icon: Icons.check_circle_rounded,
+                        label: _tr(
+                          widget.language,
+                          en: 'Check',
+                          vi: 'Kiểm tra',
+                          ja: '確認',
                         ),
-                        style: FilledButton.styleFrom(
-                          minimumSize: const Size.fromHeight(54),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18),
-                          ),
-                        ),
+                        expanded: true,
                       ),
                     ),
                   ],

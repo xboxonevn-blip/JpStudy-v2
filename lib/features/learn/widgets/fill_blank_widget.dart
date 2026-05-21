@@ -5,6 +5,7 @@ import '../../../app/theme/app_theme_palette.dart';
 import '../../../core/app_language.dart';
 import '../models/question.dart';
 import 'question_surface.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 /// Fill in the blank question widget
 class FillBlankWidget extends StatefulWidget {
@@ -161,7 +162,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
             widget.question.hint != null) ...[
           Align(
             alignment: Alignment.centerLeft,
-            child: OutlinedButton.icon(
+            child: AppButton(
               onPressed: _showHint
                   ? null
                   : () {
@@ -169,12 +170,12 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                         _showHint = true;
                       });
                     },
-              icon: Icon(
-                _showHint
-                    ? Icons.lightbulb_rounded
-                    : Icons.lightbulb_outline_rounded,
-              ),
-              label: Text(widget.language.showHintLabel),
+              icon: _showHint
+                  ? Icons.lightbulb_rounded
+                  : Icons.lightbulb_outline_rounded,
+              label: widget.language.showHintLabel,
+              variant: AppButtonVariant.secondary,
+              compact: true,
             ),
           ),
           if (_showHint) ...[
@@ -203,19 +204,11 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
         const SizedBox(height: AppSpacing.lg),
 
         if (!widget.showResult)
-          FilledButton.icon(
+          AppButton(
             onPressed: () => widget.onSubmit(_controller.text),
-            icon: const Icon(Icons.arrow_forward_rounded),
-            label: Text(
-              widget.language.checkAnswerLabel,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
-            ),
-            style: FilledButton.styleFrom(
-              minimumSize: const Size.fromHeight(54),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
-              ),
-            ),
+            icon: Icons.arrow_forward_rounded,
+            label: widget.language.checkAnswerLabel,
+            expanded: true,
           ),
       ],
     );

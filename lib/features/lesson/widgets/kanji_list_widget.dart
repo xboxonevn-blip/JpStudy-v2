@@ -10,6 +10,7 @@ import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/data/models/kanji_item.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/write/screens/handwriting_practice_screen.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class KanjiListWidget extends ConsumerStatefulWidget {
   const KanjiListWidget({super.key, required this.lessonId});
@@ -635,18 +636,9 @@ class _KanjiListWidgetState extends ConsumerState<KanjiListWidget> {
           const SizedBox(height: 10),
           Align(
             alignment: Alignment.centerLeft,
-            child: FilledButton.icon(
-              style: FilledButton.styleFrom(
-                backgroundColor: palette.primary,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 12,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14),
-                ),
-              ),
+            child: AppButton(
+              label: language.kanjiPracticeWritingLabel,
+              icon: Icons.draw_rounded,
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -661,8 +653,6 @@ class _KanjiListWidgetState extends ConsumerState<KanjiListWidget> {
                   ),
                 );
               },
-              icon: const Icon(Icons.draw_rounded),
-              label: Text(language.kanjiPracticeWritingLabel),
             ),
           ),
         ],

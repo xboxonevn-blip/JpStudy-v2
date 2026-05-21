@@ -12,6 +12,7 @@ import 'package:jpstudy/data/utils/grammar_english_notation.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
 import 'package:jpstudy/features/grammar/services/grammar_question_generator.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 enum _GrammarLessonViewMode { learn, drill, quiz }
 
@@ -443,20 +444,16 @@ class _GrammarLessonHeader extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        SizedBox(
-          width: double.infinity,
-          child: FilledButton.icon(
-            onPressed: onStartMastery,
-            icon: const Icon(Icons.school_rounded),
-            label: Text(
-              _tr(
-                language,
-                en: 'Start Guided Practice (25)',
-                vi: 'Bắt đầu học (25 câu)',
-                ja: 'ガイド練習開始（25）',
-              ),
-            ),
+        AppButton(
+          expanded: true,
+          icon: Icons.school_rounded,
+          label: _tr(
+            language,
+            en: 'Start Guided Practice (25)',
+            vi: 'Bắt đầu học (25 câu)',
+            ja: 'ガイド練習開始（25）',
           ),
+          onPressed: onStartMastery,
         ),
       ],
     );
@@ -467,53 +464,53 @@ class _GrammarLessonHeader extends StatelessWidget {
       spacing: 8,
       runSpacing: 8,
       children: [
-        OutlinedButton.icon(
+        AppButton(
           onPressed: onStartDrillSentence,
-          icon: const Icon(Icons.sort_by_alpha_rounded),
-          label: Text(
-            _tr(
-              language,
-              en: 'Sentence + Transform',
-              vi: 'Ghép câu + Biến đổi',
-              ja: '並び替え + 変換',
-            ),
+          icon: Icons.sort_by_alpha_rounded,
+          label: _tr(
+            language,
+            en: 'Sentence + Transform',
+            vi: 'Ghép câu + Biến đổi',
+            ja: '並び替え + 変換',
           ),
+          variant: AppButtonVariant.secondary,
+          compact: true,
         ),
-        OutlinedButton.icon(
+        AppButton(
           onPressed: onStartDrillContext,
-          icon: const Icon(Icons.auto_stories_rounded),
-          label: Text(
-            _tr(
-              language,
-              en: 'Context + Contrast',
-              vi: 'Chọn theo ngữ cảnh',
-              ja: '文脈 + 対比',
-            ),
+          icon: Icons.auto_stories_rounded,
+          label: _tr(
+            language,
+            en: 'Context + Contrast',
+            vi: 'Chọn theo ngữ cảnh',
+            ja: '文脈 + 対比',
           ),
+          variant: AppButtonVariant.secondary,
+          compact: true,
         ),
-        OutlinedButton.icon(
+        AppButton(
           onPressed: onStartDrillFix,
-          icon: const Icon(Icons.build_circle_outlined),
-          label: Text(
-            _tr(
-              language,
-              en: 'Fix + Reason Drill',
-              vi: 'Tìm lỗi + Giải thích',
-              ja: '修正 + 理由ドリル',
-            ),
+          icon: Icons.build_circle_outlined,
+          label: _tr(
+            language,
+            en: 'Fix + Reason Drill',
+            vi: 'Tìm lỗi + Giải thích',
+            ja: '修正 + 理由ドリル',
           ),
+          variant: AppButtonVariant.secondary,
+          compact: true,
         ),
-        OutlinedButton.icon(
+        AppButton(
           onPressed: onStartGhostDrill,
-          icon: const Icon(Icons.warning_amber_rounded),
-          label: Text(
-            _tr(
-              language,
-              en: 'Weak Items ($ghostCount)',
-              vi: 'Luyện điểm yếu ($ghostCount)',
-              ja: '弱点項目 ($ghostCount)',
-            ),
+          icon: Icons.warning_amber_rounded,
+          label: _tr(
+            language,
+            en: 'Weak Items ($ghostCount)',
+            vi: 'Luyện điểm yếu ($ghostCount)',
+            ja: '弱点項目 ($ghostCount)',
           ),
+          variant: AppButtonVariant.secondary,
+          compact: true,
         ),
       ],
     );
@@ -765,14 +762,9 @@ class _GrammarPointCardState extends State<_GrammarPointCard> {
     final explanation = _resolveExplanation(point);
     final mastery = point.isLearned ? 1.0 : 0.25;
 
-    return Card(
-      elevation: 0,
-      color: palette.elevated,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: palette.outline),
-      ),
-      clipBehavior: Clip.antiAlias,
+    return AppCard(
+      padding: EdgeInsets.zero,
+      borderRadius: 16,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -948,19 +940,16 @@ class _GrammarPointCardState extends State<_GrammarPointCard> {
                         ),
                   ],
                   const SizedBox(height: 6),
-                  SizedBox(
-                    width: double.infinity,
-                    child: FilledButton.tonalIcon(
-                      onPressed: widget.onPracticePoint,
-                      icon: const Icon(Icons.fitness_center_rounded),
-                      label: Text(
-                        _tr(
-                          widget.language,
-                          en: 'Drill this grammar point',
-                          vi: 'Luy\u1ec7n \u0111i\u1ec3m ng\u1eef ph\u00e1p n\u00e0y',
-                          ja: 'この文法を練習',
-                        ),
-                      ),
+                  AppButton(
+                    expanded: true,
+                    variant: AppButtonVariant.secondary,
+                    onPressed: widget.onPracticePoint,
+                    icon: Icons.fitness_center_rounded,
+                    label: _tr(
+                      widget.language,
+                      en: 'Drill this grammar point',
+                      vi: 'Luy\u1ec7n \u0111i\u1ec3m ng\u1eef ph\u00e1p n\u00e0y',
+                      ja: 'この文法を練習',
                     ),
                   ),
                 ],

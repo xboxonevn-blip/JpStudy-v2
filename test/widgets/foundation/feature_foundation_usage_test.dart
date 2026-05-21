@@ -45,11 +45,17 @@ void main() {
       'lib/features/home/widgets/daily_session_card.dart',
       'lib/features/home/screens/learning_path_screen.dart',
       'lib/features/immersion/screens/immersion_reader_screen.dart',
+      'lib/features/lesson/widgets/kanji_list_widget.dart',
+      'lib/features/lesson/widgets/grammar_list_widget.dart',
+      'lib/features/grammar/widgets/sentence_builder_widget.dart',
+      'lib/features/learn/widgets/fill_blank_widget.dart',
+      'lib/features/grammar/screens/grammar_practice_screen.dart',
     ];
 
     final rawPrimitivePattern = RegExp(
       r'\b(Card|ElevatedButton|OutlinedButton|TextButton|FilledButton|'
-      r'Chip|ActionChip|FilterChip|ChoiceChip)\s*\(',
+      r'Chip|ActionChip|FilterChip|ChoiceChip)\s*\(|'
+      r'\b(FilledButton|OutlinedButton|ElevatedButton|TextButton)\.',
     );
 
     for (final path in batchOneFiles) {

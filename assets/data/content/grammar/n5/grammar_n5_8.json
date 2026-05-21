@@ -146,10 +146,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: S1 が、 S2",
-      "meaning": "Ý nghĩa: `が` nối hai vế câu khi vế sau đối lập hoặc khác với điều người nghe có thể đoán từ vế trước.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Cấu trúc S1 が、S2 dùng が ở ranh giới hai mệnh đề, khác với が đánh dấu chủ ngữ. Ở vị trí sau một câu nhỏ, が mở cửa cho vế sau điều chỉnh kỳ vọng: 'đúng là S1, nhưng/nhẹ nhàng nói thêm S2'.",
+      "hanVietBridge": "Có thể nối với Hán-Việt 'chuyển ý' và 'tương phản'. Tiếng Việt hay dùng 'nhưng/tuy nhiên'; tiếng Nhật dùng が sau vế 1 để chuyển sang vế 2, thường mềm hơn một chữ 'nhưng' rất mạnh.",
+      "form": "Hình thức: câu/vế 1 + が、+ câu/vế 2. Ví dụ: この店は高いですが、おいしいです. 日本語は難しいですが、おもしろいです.",
+      "meaning": "Ý nghĩa: nối hai vế khi vế sau đối lập, giảm nhẹ, hoặc khác với điều người nghe có thể đoán từ vế trước.",
+      "usage": "Sử dụng: dùng giữa hai mệnh đề lịch sự/trung tính. Đừng nhầm với が sau danh từ/chủ ngữ như 雨が降ります; ở đây が nối cả vế câu.",
+      "humanMoment": "Dr. Linh lưu ý: S1 が、S2 là cú bẻ lái mềm. この店は高いですが、おいしいです nghĩa là 'quán này đắt, nhưng ngon'. が không đứng về phe chủ ngữ; nó đứng ở khúc cua giữa hai ý.",
+      "crossLinks": [
+        {
+          "pattern": "S1 けど、 S2",
+          "contrast": "cùng nghĩa 'nhưng', nhưng けど thân mật/văn nói hơn; S1 が、S2 lịch sự và gọn cho N5."
+        },
+        {
+          "pattern": "N が あります / わかります",
+          "contrast": "khác vị trí: Nが đánh dấu danh từ/chủ thể trong câu, còn S1 が、S2 nối hai mệnh đề."
+        },
+        {
+          "pattern": "そして",
+          "contrast": "そして nối tiếp cùng chiều 'và/rồi', còn が báo vế sau trái kỳ vọng hoặc chuyển hướng."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

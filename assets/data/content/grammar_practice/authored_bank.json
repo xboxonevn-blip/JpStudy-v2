@@ -9196,6 +9196,224 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-form-l1-001",
+      "template_id": "tpl-grammar-n5-044-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn mẫu đúng để nối hai vế trái kỳ vọng.",
+      "answer_template": "S1 が、S2",
+      "options_template": [
+        "S1 が、S2",
+        "S1 を、S2",
+        "S1 に、S2",
+        "S1 で、S2"
+      ],
+      "distractor_strategy": "clause-connector-ga-vs-particles",
+      "teaching_note": "が sau một vế câu có thể nối ý tương phản/chuyển ý.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-form-l1-002",
+      "template_id": "tpl-grammar-n5-044-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đặt が ở ranh giới hai vế?",
+      "answer_template": "高いですが、おいしいです。",
+      "options_template": [
+        "高いですが、おいしいです。",
+        "高いを、おいしいです。",
+        "高いに、おいしいです。",
+        "高いで、おいしいです。"
+      ],
+      "distractor_strategy": "ga-after-clause-form",
+      "teaching_note": "が đứng sau vế 高いです để nối sang vế sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-044-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "この店は高いですが、おいしいです nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Quán này đắt nhưng ngon.",
+      "options_template": [
+        "Quán này đắt nhưng ngon.",
+        "Quán này đắt và vì thế không ngon.",
+        "Quán này không đắt.",
+        "Quán này ở nơi ngon."
+      ],
+      "distractor_strategy": "contrast-ga-meaning-vs-cause-negative-place",
+      "teaching_note": "が nối vế sau trái kỳ vọng nhẹ với vế trước.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-044-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "S1 が、S2 thường báo quan hệ nghĩa gì giữa hai vế?",
+      "answer_template": "Tương phản, chuyển ý, hoặc vế sau trái kỳ vọng.",
+      "distractor_strategy": "ga-clause-contrast-function-recall",
+      "teaching_note": "Không phải が nào cũng là chủ ngữ; ở đây nó nối vế câu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-usage-l3-005",
+      "template_id": "tpl-grammar-n5-044-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Tiếng Nhật khó nhưng thú vị': 日本語は難しいです / が / おもしろいです",
+      "answer_template": "日本語は難しいですが、おもしろいです。",
+      "options_template": [
+        "日本語は難しいです",
+        "が",
+        "おもしろいです"
+      ],
+      "distractor_strategy": "ga-clause-connector-order",
+      "teaching_note": "Vế 1 + が、+ vế 2.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-usage-l3-006",
+      "template_id": "tpl-grammar-n5-044-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Hôm nay trời lạnh nhưng đẹp.",
+      "answer_template": "今日は寒いですが、いい天気です。",
+      "distractor_strategy": "apply-ga-to-weather-contrast",
+      "teaching_note": "寒いです trái kỳ vọng với いい天気です nên nối bằng が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-context-l3-007",
+      "template_id": "tpl-grammar-n5-044-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh: món này ngon nhưng hơi đắt. Câu nào hợp nhất?",
+      "answer_template": "おいしいですが、ちょっと高いです。",
+      "options_template": [
+        "おいしいですが、ちょっと高いです。",
+        "おいしいを、ちょっと高いです。",
+        "おいしいです。そして安いです。",
+        "おいしいに、ちょっと高いです。"
+      ],
+      "distractor_strategy": "context-contrast-ga-vs-particles-and-addition",
+      "teaching_note": "Ngon nhưng đắt là quan hệ tương phản nhẹ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-context-l2-008",
+      "template_id": "tpl-grammar-n5-044-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào dùng S1 が、S2?",
+      "answer_template": "Khi vế sau chuyển hướng hoặc trái kỳ vọng so với vế trước.",
+      "options_template": [
+        "Khi vế sau chuyển hướng hoặc trái kỳ vọng so với vế trước.",
+        "Khi đánh dấu vật được ăn.",
+        "Khi đánh dấu người nhận quà.",
+        "Khi nói một việc đã xong."
+      ],
+      "distractor_strategy": "ga-clause-context-vs-object-recipient-completion",
+      "teaching_note": "が nối ý, không đánh dấu tân ngữ/người nhận trong mẫu này.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-044-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích 4 câu. Câu nào dùng が để nối mệnh đề, không phải đánh dấu chủ thể?",
+      "answer_template": "日本語は難しいですが、おもしろいです。",
+      "options_template": [
+        "日本語は難しいですが、おもしろいです。",
+        "雨が降ります。",
+        "本があります。",
+        "日本語がわかります。"
+      ],
+      "distractor_strategy": "clause-connector-ga-vs-subject-existence-ability-analysis",
+      "teaching_note": "L4: が sau 難しいです nối hai vế; các câu còn lại が gắn với danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-044-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-044-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_8:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn nói 'đắt nhưng tiện lợi', không phải 'đắt và tiện lợi cùng chiều'. Câu nào đúng nhất?",
+      "answer_template": "高いですが、便利です。",
+      "options_template": [
+        "高いですが、便利です。",
+        "高いです。そして便利です。",
+        "高いを便利です。",
+        "高いに便利です。"
+      ],
+      "distractor_strategy": "contrast-ga-vs-additive-soshite-analysis",
+      "teaching_note": "`そして` chỉ nối thêm cùng chiều; `が` báo cú bẻ ý 'đắt nhưng tiện'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

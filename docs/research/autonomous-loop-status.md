@@ -2122,3 +2122,14 @@
 - Teaching Test paraphrase: when an adjective stands before a noun, Aい attaches
   directly (`高い山`) and Aな needs `な` (`便利な店`). The `な` disappears at the
   end of a sentence.
+
+## 2026-05-22 Phase G Tier-1 item 044
+
+- Re-authored `grammar:n5:grammar_n5_8:004` (`S1 が、 S2`) with clause-boundary
+  contrast `が`, Hán-Việt "chuyển ý/tương phản" bridge, and contrasts against
+  `けど`, noun-attached `が`, and additive `そして`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `S1 が、S2` puts `が` at the turn between two
+  clauses: vế 1 is true, but vế 2 bends expectation. Do not confuse it with
+  noun + `が`.

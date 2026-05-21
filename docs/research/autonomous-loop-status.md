@@ -2090,3 +2090,14 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `もうVました` marks a task as already finished. Ask
   `もうVましたか`; answer `はい、もうVました` if done, `いいえ、まだです` if not.
+
+## 2026-05-22 Phase G Tier-1 item 041
+
+- Re-authored `grammar:n5:grammar_n5_8:001` (`Aい (tính từ i) / Aな (tính từ
+  na)`) with adjective class logic, Hán-Việt "hình dung từ" bridge, and
+  contrasts against A+N, adjective negation, and noun-style predicates.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: identify adjective class before changing form.
+  Aい attaches directly (`高い山`); Aな needs `な` before nouns (`静かな町`) but not
+  before `です`.

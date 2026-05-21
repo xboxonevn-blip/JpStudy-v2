@@ -278,10 +278,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: どんな N ですか",
-      "meaning": "Ý nghĩa: Dùng để hỏi người hoặc vật thuộc loại nào, có đặc điểm ra sao.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Cấu trúc どんな N ですか dùng どんな như từ hỏi đứng trước danh từ để hỏi loại/đặc điểm của chính N. Về chức năng, どんな hoạt động như một bộ lọc trước danh từ: không hỏi 'N ở đâu' hay 'N là gì', mà hỏi 'N kiểu nào'.",
+      "hanVietBridge": "Có thể nối với Hán-Việt 'loại' và 'đặc tính'. Tiếng Việt hỏi 'loại người nào/quyển sách kiểu gì'; tiếng Nhật đặt どんな ngay trước danh từ: どんな人, どんな本.",
+      "form": "Hình thức: どんな + danh từ + ですか. Ví dụ: どんな本ですか, どんな人ですか, どんな町ですか.",
+      "meaning": "Ý nghĩa: hỏi N thuộc kiểu/loại nào, có đặc điểm ra sao.",
+      "usage": "Sử dụng: dùng khi danh từ cần được phân loại hoặc mô tả. Nếu muốn hỏi cảm nhận chung về một N đã biết, dùng Nはどうですか.",
+      "humanMoment": "Dr. Linh lưu ý: どんな N ですか đặt kính lúp trước danh từ. どんな本ですか không hỏi 'sách là gì', mà hỏi loại sách: おもしろい本, 日本語の本, 難しい本. Nếu hỏi trải nghiệm sau khi đọc, đổi sang 本はどうですか.",
+      "crossLinks": [
+        {
+          "pattern": "N は どうですか",
+          "contrast": "どうですか hỏi nhận xét chung về N đã nêu; どんなNですか hỏi loại/đặc điểm của danh từ N."
+        },
+        {
+          "pattern": "Aな + N / Aい + N",
+          "contrast": "câu trả lời cho どんなN thường dùng A+N như おもしろい本 hoặc 静かな町."
+        },
+        {
+          "pattern": "\"～\" は 〇〇語で何ですか",
+          "contrast": "何ですか hỏi 'là gì/bản dịch gì', còn どんなNですか hỏi 'loại N nào/đặc điểm gì'."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

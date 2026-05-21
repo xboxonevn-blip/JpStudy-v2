@@ -2164,3 +2164,14 @@
 - Teaching Test paraphrase: with `あります` and `わかります`, `が` marks the thing
   that exists or becomes understood. Do not treat it as a direct object with
   `を`.
+
+## 2026-05-22 Phase G Tier-1 item 048
+
+- Re-authored `grammar:n5:grammar_n5_8:007` (`どんな N ですか`) with
+  kind/type-question structure, Hán-Việt "loại/đặc tính" bridge, and contrasts
+  against `Nはどうですか`, A+N answers, and `何ですか`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `どんなNですか` asks what kind of N something is.
+  It expects a type/description answer such as `おもしろい本`, not a definition or
+  location.

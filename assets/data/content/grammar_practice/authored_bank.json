@@ -10067,6 +10067,224 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-form-l1-001",
+      "template_id": "tpl-grammar-n5-048-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn mẫu đúng để hỏi 'loại sách nào?'",
+      "answer_template": "どんな本ですか。",
+      "options_template": [
+        "どんな本ですか。",
+        "どう本ですか。",
+        "何本ですか。",
+        "どこ本ですか。"
+      ],
+      "distractor_strategy": "donna-before-noun-form-vs-dou-nani-doko",
+      "teaching_note": "どんな đứng ngay trước danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-form-l1-002",
+      "template_id": "tpl-grammar-n5-048-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền đúng: ___ 人ですか。",
+      "answer_template": "どんな",
+      "options_template": [
+        "どんな",
+        "どう",
+        "どこ",
+        "いつ"
+      ],
+      "distractor_strategy": "donna-prenominal-question-word",
+      "teaching_note": "Hỏi kiểu người/loại người dùng どんな人.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-048-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "どんな町ですか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Đó là thành phố/thị trấn như thế nào?",
+      "options_template": [
+        "Đó là thành phố/thị trấn như thế nào?",
+        "Thành phố ở đâu?",
+        "Thành phố là mấy giờ?",
+        "Bạn có đi thành phố không?"
+      ],
+      "distractor_strategy": "what-kind-of-town-vs-where-time-go",
+      "teaching_note": "どんな hỏi đặc điểm/loại của danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-048-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "どんなNですか yêu cầu câu trả lời kiểu gì?",
+      "answer_template": "Một mô tả/loại của N, thường bằng A+N hoặc nhận xét.",
+      "distractor_strategy": "donna-answer-type-recall",
+      "teaching_note": "Câu trả lời thường nêu đặc điểm: おもしろい本, 静かな町.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-usage-l3-005",
+      "template_id": "tpl-grammar-n5-048-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'đó là người như thế nào?': どんな / 人 / ですか",
+      "answer_template": "どんな人ですか。",
+      "options_template": [
+        "どんな",
+        "人",
+        "ですか"
+      ],
+      "distractor_strategy": "donna-n-desu-ka-order",
+      "teaching_note": "どんな + N + ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-usage-l3-006",
+      "template_id": "tpl-grammar-n5-048-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu hỏi: Đó là phim kiểu gì?",
+      "answer_template": "どんな映画ですか。",
+      "distractor_strategy": "apply-donna-to-movie-kind-question",
+      "teaching_note": "映画 là danh từ nên đặt sau どんな.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-context-l3-007",
+      "template_id": "tpl-grammar-n5-048-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn nghe bạn nói về một quyển sách, muốn hỏi sách kiểu gì. Câu nào hợp nhất?",
+      "answer_template": "どんな本ですか。",
+      "options_template": [
+        "どんな本ですか。",
+        "本はどうですか。",
+        "本はどこですか。",
+        "\"本\" は英語で何ですか。"
+      ],
+      "distractor_strategy": "kind-question-context-vs-impression-location-translation",
+      "teaching_note": "Hỏi loại sách dùng どんな本.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-context-l2-008",
+      "template_id": "tpl-grammar-n5-048-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào dùng どんなNですか?",
+      "answer_template": "Khi muốn hỏi loại/đặc điểm của danh từ N.",
+      "options_template": [
+        "Khi muốn hỏi loại/đặc điểm của danh từ N.",
+        "Khi muốn hỏi cảm nhận chung sau trải nghiệm.",
+        "Khi muốn hỏi bản dịch của từ.",
+        "Khi muốn nói không có tiền."
+      ],
+      "distractor_strategy": "donna-context-vs-dou-translation-arimasu",
+      "teaching_note": "どんな đứng trước danh từ cần phân loại.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-048-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích câu hỏi. Bạn muốn hỏi loại phim trước khi xem, không hỏi cảm nhận sau khi xem. Câu nào đúng?",
+      "answer_template": "どんな映画ですか。",
+      "options_template": [
+        "どんな映画ですか。",
+        "映画はどうですか。",
+        "映画は何ですか。",
+        "映画がわかりますか。"
+      ],
+      "distractor_strategy": "donna-vs-dou-nani-wakarimasu-analysis",
+      "teaching_note": "L4: trước khi xem, hỏi loại phim bằng どんな映画; sau khi xem mới hỏi 映画はどうですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-048-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-048-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_8:007",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu hỏi: どんな本ですか。Câu trả lời nào đúng loại thông tin?",
+      "answer_template": "おもしろい本です。",
+      "options_template": [
+        "おもしろい本です。",
+        "図書館で読みます。",
+        "\"book\" は日本語で本です。",
+        "もう読みました。"
+      ],
+      "distractor_strategy": "answer-type-kind-description-vs-place-translation-completion",
+      "teaching_note": "どんな本 cần mô tả loại sách, không hỏi nơi đọc, bản dịch, hay đã đọc chưa.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

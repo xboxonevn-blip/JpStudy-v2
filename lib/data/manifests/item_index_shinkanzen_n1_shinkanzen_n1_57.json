@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_57",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:57:Verb_てみせる",
+      "type": "grammar",
+      "surface": "Verb てみせる",
+      "reading": "",
+      "label_ja": "Verb てみせる",
+      "label_vi": "Dùng để nói sẽ làm cho người khác thấy, chứng minh bằng hành động hoặc quyết tâm nhất định làm được. Cấu trúc: Verb-て form + みせる.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb てみせる",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb てみせる"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_57.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:57:～ながらの_Noun",
+      "type": "grammar",
+      "surface": "～ながらの Noun",
+      "reading": "",
+      "label_ja": "～ながらの Noun",
+      "label_vi": "Dùng để bổ nghĩa cho danh từ bằng ý nghĩa hai việc hoặc hai trạng thái diễn ra đồng thời. Có thể hiểu là “vừa... vừa...”. Cấu trúc: Verb-ますstem (or plain minus る) + ながら + の + Noun.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "～ながらの Noun",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:～ながらの Noun"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_57.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:57:Noun_のいかんでは",
+      "type": "grammar",
+      "surface": "Noun のいかんでは",
+      "reading": "",
+      "label_ja": "Noun のいかんでは",
+      "label_vi": "Dùng để nói tùy vào Noun mà kết quả có thể thay đổi. Sắc thái trang trọng, gần với “tùy theo”. Cấu trúc: Noun + のいかんでは.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "Noun のいかんでは",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:Noun のいかんでは"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_57.json"
+    }
+  ]
+}

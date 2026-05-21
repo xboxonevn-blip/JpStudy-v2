@@ -38,28 +38,30 @@ function requiredTextbookCatalog() {
       categories: ['vocab'],
       source_credit: 'ASK Publishing reference only; app data remains local-first',
     });
-    books.push({
-      textbook_id: `mimikara_${level.toLowerCase()}`,
-      level,
-      name_ja: `耳から覚える ${level}`,
-      name_vi: `Mimikara ${level}`,
-      name_en: `Mimikara ${level}`,
-      categories: ['vocab', 'grammar'],
-      source_credit: 'Owner-provided local files; fact extraction only',
-      migration_status: 'planned_source_pending',
-    });
+    if (['N3', 'N2', 'N1'].includes(level)) {
+      books.push({
+        textbook_id: `mimikara_${level.toLowerCase()}`,
+        level,
+        name_ja: `耳から覚える ${level}`,
+        name_vi: `Mimikara ${level}`,
+        name_en: `Mimikara ${level}`,
+        categories: ['vocab'],
+        source_credit: 'Owner-provided local Mimikara facts; no prose copied',
+        migration_status: 'live',
+      });
+    }
   }
 
   for (const level of ['N3', 'N2', 'N1']) {
     books.push({
       textbook_id: `shinkanzen_${level.toLowerCase()}`,
       level,
-      name_ja: `新完全マスター ${level}`,
-      name_vi: `Shin Kanzen Master ${level}`,
-      name_en: `Shin Kanzen Master ${level}`,
-      categories: ['grammar', 'vocab', 'kanji'],
+      name_ja: `新完全マスター 文法 ${level}`,
+      name_vi: `Shin Kanzen Master 文法 ${level}`,
+      name_en: `Shin Kanzen Master Grammar ${level}`,
+      categories: ['grammar'],
       source_credit:
-        '3A Corporation publisher references; no verbatim reproduction',
+        'Shin Kanzen Master Bunpou publisher metadata plus existing JpStudy grammar/Tae Kim fallback; no verbatim reproduction',
     });
   }
 
@@ -149,7 +151,7 @@ function normalizeTextbookForFile({ dataset, level, payload, file }) {
   const series = String(payload.series || path.basename(path.dirname(file)));
   if (/minna/i.test(series)) return `minna_${level.toLowerCase()}`;
   if (/hajimete/i.test(series)) return `hajimete_tango_${level.toLowerCase()}`;
-  if (/shinkanzen/i.test(series)) return `shinkanzen_${level.toLowerCase()}`;
+  if (/shinkanzen/i.test(series)) return `jpstudy_curated_vocab_${level.toLowerCase()}`;
   if (/mimikara/i.test(series)) return `mimikara_${level.toLowerCase()}`;
   return `jpstudy_${dataset}_${level.toLowerCase()}`;
 }

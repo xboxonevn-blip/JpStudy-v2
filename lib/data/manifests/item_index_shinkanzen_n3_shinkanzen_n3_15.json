@@ -1,246 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_15",
   "items": [
     {
-      "item_id": "grammar:n3:shinkanzen_n3:15:〜てほしい",
+      "item_id": "grammar:n3:shinkanzen_n3:15:〜さ",
       "type": "grammar",
-      "surface": "〜てほしい",
+      "surface": "〜さ",
       "reading": "",
-      "label_ja": "〜てほしい",
-      "label_vi": "Diễn tả mong muốn ai đó làm cho mình điều gì.",
+      "label_ja": "〜さ",
+      "label_vi": "Biến tính từ thành danh từ để nói về mức độ hoặc tính chất.",
       "order": 1,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_15.json",
-        "entry_id": "〜てほしい",
-        "key": "grammar/n3/grammar_n3_15.json#grammar:〜てほしい"
+        "file": "grammar/n3/grammar_n3_12.json",
+        "entry_id": "〜さ",
+        "key": "grammar/n3/grammar_n3_12.json#grammar:〜さ"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:15:〜てもらいたい",
+      "item_id": "grammar:n3:shinkanzen_n3:15:〜によれば",
       "type": "grammar",
-      "surface": "〜てもらいたい",
+      "surface": "〜によれば",
       "reading": "",
-      "label_ja": "〜てもらいたい",
-      "label_vi": "Diễn tả mong muốn ai đó làm gì cho mình, sắc thái mềm hơn.",
+      "label_ja": "〜によれば",
+      "label_vi": "Gần nghĩa với によると nhưng thiên về văn viết, thông báo, bản tin hoặc văn phong trang trọng hơn.",
       "order": 2,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_15.json",
-        "entry_id": "〜てもらいたい",
-        "key": "grammar/n3/grammar_n3_15.json#grammar:〜てもらいたい"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:15:〜てくれると助かる",
-      "type": "grammar",
-      "surface": "〜てくれると助かる",
-      "reading": "",
-      "label_ja": "〜てくれると助かる",
-      "label_vi": "Diễn tả yêu cầu nhẹ nhàng: nếu ai đó làm thì sẽ rất giúp ích.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_15.json",
-        "entry_id": "〜てくれると助かる",
-        "key": "grammar/n3/grammar_n3_15.json#grammar:〜てくれると助かる"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:15:〜てもらう",
-      "type": "grammar",
-      "surface": "〜てもらう",
-      "reading": "",
-      "label_ja": "〜てもらう",
-      "label_vi": "Diễn tả nhận sự giúp đỡ từ ai đó.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_15.json",
-        "entry_id": "〜てもらう",
-        "key": "grammar/n3/grammar_n3_15.json#grammar:〜てもらう"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:サイレン",
-      "type": "vocab",
-      "surface": "サイレン",
-      "reading": "",
-      "label_ja": "サイレン",
-      "label_vi": "còi báo động",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:サイン",
-      "type": "vocab",
-      "surface": "サイン",
-      "reading": "",
-      "label_ja": "サイン",
-      "label_vi": "dấu hiệu",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:作業",
-      "type": "vocab",
-      "surface": "作業",
-      "reading": "さぎょう",
-      "label_ja": "作業",
-      "label_vi": "công việc",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:作品",
-      "type": "vocab",
-      "surface": "作品",
-      "reading": "さくひん",
-      "label_ja": "作品",
-      "label_vi": "công việc",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:撮影",
-      "type": "vocab",
-      "surface": "撮影",
-      "reading": "さつえい",
-      "label_ja": "撮影",
-      "label_vi": "bức ảnh",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:騒ぎ",
-      "type": "vocab",
-      "surface": "騒ぎ",
-      "reading": "さわぎ",
-      "label_ja": "騒ぎ",
-      "label_vi": "sự ồn ào; náo động",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:参加",
-      "type": "vocab",
-      "surface": "参加",
-      "reading": "さんか",
-      "label_ja": "参加",
-      "label_vi": "sự tham gia",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:産業",
-      "type": "vocab",
-      "surface": "産業",
-      "reading": "さんぎょう",
-      "label_ja": "産業",
-      "label_vi": "ngành công nghiệp",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:残業",
-      "type": "vocab",
-      "surface": "残業",
-      "reading": "ざんぎょう",
-      "label_ja": "残業",
-      "label_vi": "làm thêm giờ",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:参考",
-      "type": "vocab",
-      "surface": "参考",
-      "reading": "さんこう",
-      "label_ja": "参考",
-      "label_vi": "thẩm quyền giải quyết",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:賛成",
-      "type": "vocab",
-      "surface": "賛成",
-      "reading": "さんせい",
-      "label_ja": "賛成",
-      "label_vi": "hiệp định",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:15:産地",
-      "type": "vocab",
-      "surface": "産地",
-      "reading": "さんち",
-      "label_ja": "産地",
-      "label_vi": "Khu vực sản xuất",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json",
-        "entry_id": "n3_l15_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_15_nouns_general_1_0224_0237.json#vocab:n3_l15_s012"
+        "file": "grammar/n3/grammar_n3_9.json",
+        "entry_id": "〜によれば",
+        "key": "grammar/n3/grammar_n3_9.json#grammar:〜によれば"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_15.json"
     }

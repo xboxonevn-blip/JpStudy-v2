@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_29",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:29:Noun_を経て",
+      "type": "grammar",
+      "surface": "Noun を経て",
+      "reading": "",
+      "label_ja": "Noun を経て",
+      "label_vi": "Dùng để nói đi qua một giai đoạn, quá trình, nơi chốn hoặc bước trung gian trước khi đến kết quả hiện tại. Có thể hiểu là “thông qua”, “trải qua”. Cấu trúc: Noun + を経て.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Noun を経て",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Noun を経て"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_29.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:29:Noun_からする",
+      "type": "grammar",
+      "surface": "Noun からする",
+      "reading": "",
+      "label_ja": "Noun からする",
+      "label_vi": "Dùng để đưa ra đánh giá hoặc suy luận dựa trên một khía cạnh, lập trường hoặc con số cụ thể. Có thể hiểu là “xét từ”, “nhìn từ”. Cấu trúc: Noun + からする.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_2.json",
+        "entry_id": "Noun からする",
+        "key": "grammar/n1/grammar_n1_2.json#grammar:Noun からする"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_29.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:29:Noun_なくして～はない",
+      "type": "grammar",
+      "surface": "Noun なくして～はない",
+      "reading": "",
+      "label_ja": "Noun なくして～はない",
+      "label_vi": "Dùng để nhấn mạnh rằng nếu không có Noun thì không thể có kết quả phía sau. Sắc thái trang trọng, thường dùng trong lập luận. Cấu trúc: Noun + なくして + Sentence ～はない.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_5.json",
+        "entry_id": "Noun なくして～はない",
+        "key": "grammar/n1/grammar_n1_5.json#grammar:Noun なくして～はない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_29.json"
+    }
+  ]
+}

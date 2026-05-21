@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_49",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:49:Verb_たら_きりがない",
+      "type": "grammar",
+      "surface": "Verb たら きりがない",
+      "reading": "",
+      "label_ja": "Verb たら きりがない",
+      "label_vi": "Dùng để nói nếu bắt đầu làm, kể hoặc nghĩ về điều gì thì sẽ không có điểm dừng. Cấu trúc: Verb-た form + ら + きりがない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb たら きりがない",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb たら きりがない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_49.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:49:～とはいえ",
+      "type": "grammar",
+      "surface": "～とはいえ",
+      "reading": "",
+      "label_ja": "～とはいえ",
+      "label_vi": "Dùng để thừa nhận X nhưng sau đó nêu điều trái với kỳ vọng từ X. Có thể hiểu là “dù nói là”, “tuy là”. Cấu trúc: Noun + とはいえ, な-Adjective + だとはいえ, い-Adjective + とはいえ, Verb-casual + とはいえ.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "～とはいえ",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:～とはいえ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_49.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:49:Noun_に言わせれば",
+      "type": "grammar",
+      "surface": "Noun に言わせれば",
+      "reading": "",
+      "label_ja": "Noun に言わせれば",
+      "label_vi": "Dùng để nêu ý kiến theo cách nhìn của Noun: “nếu hỏi Noun thì”. Sắc thái cho thấy nhận định này thuộc về người hoặc nhóm đó. Cấu trúc: Noun + に言わせれば.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun に言わせれば",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun に言わせれば"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_49.json"
+    }
+  ]
+}

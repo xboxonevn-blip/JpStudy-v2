@@ -459,3 +459,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The app must not display banned source branding or crawler-sensitive names. Empty mnemonic is preferable to a deceptive boilerplate note until QA-A-027/QA-A-026 canonical kanji metadata replaces those rows.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-047 - Mimikara N4/N5 deleted, Shin Kanzen restructured to Bunpou grammar-only
+**Phase**: Follow-up Sprint 1 Phase A0
+**Date**: 2026-05-21 20:45 (local)
+**Context**: Owner clarified OQ-014/OQ-015 architecture: Mimikara vocabulary exists only for N3/N2/N1, and Shin Kanzen Master scope in this product is Bunpou grammar-only with N3/N2/N1 lesson counts 83/163/88.
+**Options considered**: keep fallback N4/N5 Mimikara until source arrives | hide N4/N5 but keep assets | delete bogus tracks and rebuild manifests around real textbook scope
+**Chosen**: Delete N4/N5 Mimikara assets/manifests, remove `mimikara_n4`/`mimikara_n5` catalog entries, route N3-N1 vocab roadmap/catalog to Mimikara, and restructure `shinkanzen_n3/n2/n1` to grammar-only lesson indexes with 83/163/88 lessons.
+**Rationale**: A visible fallback for a non-existent textbook is worse than missing data. The corrected catalog now matches actual product architecture and prevents learners from entering a fake Mimikara N4/N5 lane or a fake Shin Kanzen vocab lane.
+**Reversible**: yes, but only if owner later supplies a real separate product/source that changes the textbook architecture.
+**Owner review**: pending

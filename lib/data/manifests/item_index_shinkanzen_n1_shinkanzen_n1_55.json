@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_55",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:55:Verb_ては_Verb",
+      "type": "grammar",
+      "surface": "Verb ては Verb",
+      "reading": "",
+      "label_ja": "Verb ては Verb",
+      "label_vi": "Dùng để nói một hành động được lặp lại theo chu kỳ: làm X rồi lại làm Y. Tùy ngữ cảnh có thể mang sắc thái thói quen hoặc phiền toái. Cấu trúc: Verb-て form + は + Verb.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb ては Verb",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb ては Verb"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_55.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:55:～と言わんばかりの_Noun",
+      "type": "grammar",
+      "surface": "～と言わんばかりの Noun",
+      "reading": "",
+      "label_ja": "～と言わんばかりの Noun",
+      "label_vi": "Dùng để bổ nghĩa cho danh từ theo nghĩa “như thể muốn nói rằng...”. Thường mô tả ánh mắt, thái độ, vẻ mặt hoặc cử chỉ. Cấu trúc: Verb-plain form + と言わんばかりの Noun.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "～と言わんばかりの Noun",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:～と言わんばかりの Noun"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_55.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:55:～ぬく",
+      "type": "grammar",
+      "surface": "～ぬく",
+      "reading": "",
+      "label_ja": "～ぬく",
+      "label_vi": "Dùng sau thân ます để nói làm một việc đến cùng, làm trọn vẹn hoặc vượt qua đến cuối. Sắc thái nhấn mạnh sự kiên trì hoặc hoàn tất. Cấu trúc: Verb-stem + ぬく.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "～ぬく",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:～ぬく"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_55.json"
+    }
+  ]
+}

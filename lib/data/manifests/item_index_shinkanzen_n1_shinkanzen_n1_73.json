@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_73",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:73:Verb_ようにも",
+      "type": "grammar",
+      "surface": "Verb ようにも",
+      "reading": "",
+      "label_ja": "Verb ようにも",
+      "label_vi": "Dùng khi muốn làm X nhưng không thể vì có lý do cản trở. Thường đi với vế sau nêu lý do hoặc dạng phủ định khả năng. Cấu trúc: Verb-volitional form + にも + (reason/potential negative, etc.).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_16.json",
+        "entry_id": "Verb ようにも",
+        "key": "grammar/n1/grammar_n1_16.json#grammar:Verb ようにも"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_73.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:73:～ぶった",
+      "type": "grammar",
+      "surface": "～ぶった",
+      "reading": "",
+      "label_ja": "～ぶった",
+      "label_vi": "Dùng để nói ai đó tỏ vẻ, làm ra vẻ hoặc giả bộ có tính chất nào đó; thường mang sắc thái phê bình. Đây là dạng quá khứ của ぶる. Cấu trúc: Noun/Adjective + ぶる → ぶった (past tense), e.g., 偉そうぶった, 大人ぶった.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_24.json",
+        "entry_id": "～ぶった",
+        "key": "grammar/n1/grammar_n1_24.json#grammar:～ぶった"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_73.json"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_70",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:70:Verb_ようが_Verb_るまいが",
+      "type": "grammar",
+      "surface": "Verb ようが Verb るまいが",
+      "reading": "",
+      "label_ja": "Verb ようが Verb るまいが",
+      "label_vi": "Dùng để nói dù có làm hay không làm X thì kết quả hoặc thái độ vẫn không thay đổi. Cấu trúc: Verb-volitional form + が + Verb-negative volitional form + が.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_16.json",
+        "entry_id": "Verb ようが Verb るまいが",
+        "key": "grammar/n1/grammar_n1_16.json#grammar:Verb ようが Verb るまいが"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_70.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:70:～ば～ものを",
+      "type": "grammar",
+      "surface": "～ば～ものを",
+      "reading": "",
+      "label_ja": "～ば～ものを",
+      "label_vi": "Dùng để bày tỏ tiếc nuối hoặc trách nhẹ: nếu đã làm X thì đã tốt hơn, vậy mà đã không làm. Cấu trúc: Verb-ば + Verb-past + ものを, い-Adjective + ければ + ものを, な-Adjective/Noun + であれば + ものを, etc.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_24.json",
+        "entry_id": "～ば～ものを",
+        "key": "grammar/n1/grammar_n1_24.json#grammar:～ば～ものを"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_70.json"
+    }
+  ]
+}

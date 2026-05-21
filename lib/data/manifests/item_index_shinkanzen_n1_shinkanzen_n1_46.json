@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_46",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:46:Verb_たが最後",
+      "type": "grammar",
+      "surface": "Verb たが最後",
+      "reading": "",
+      "label_ja": "Verb たが最後",
+      "label_vi": "Dùng để nói một khi đã xảy ra hoặc đã làm X thì không thể quay lại, thường dẫn đến hậu quả xấu. Cấu trúc: Verb-casual, past (た form) + が最後.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb たが最後",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb たが最後"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_46.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:46:～となると",
+      "type": "grammar",
+      "surface": "～となると",
+      "reading": "",
+      "label_ja": "～となると",
+      "label_vi": "Dùng khi nêu một hoàn cảnh, chủ đề hoặc cấp độ rồi nói tình hình sẽ khác đi. Có thể hiểu là “khi nói đến”, “nếu thành ra”. Cấu trúc: Verb-casual + となると / い-Adjective + となると / な-Adjective + だとなると / Noun + だとなると.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～となると",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～となると"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_46.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:46:Noun_に先駆けて",
+      "type": "grammar",
+      "surface": "Noun に先駆けて",
+      "reading": "",
+      "label_ja": "Noun に先駆けて",
+      "label_vi": "Dùng để nói một việc diễn ra trước người khác, nơi khác hoặc thời điểm thông thường. Sắc thái “đi trước”, “mở đầu”. Cấu trúc: Noun + に先駆けて.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun に先駆けて",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun に先駆けて"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_46.json"
+    }
+  ]
+}

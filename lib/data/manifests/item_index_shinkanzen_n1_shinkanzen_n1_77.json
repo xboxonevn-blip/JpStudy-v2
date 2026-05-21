@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_77",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:77:Verbる_が早いか",
+      "type": "grammar",
+      "surface": "Verbる が早いか",
+      "reading": "",
+      "label_ja": "Verbる が早いか",
+      "label_vi": "Dùng để nói ngay khi hành động X xảy ra thì hành động Y xảy ra gần như lập tức. Mẫu này trang trọng và nhấn mạnh tốc độ. Cấu trúc: Verb-dictionary form + が早いか.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_16.json",
+        "entry_id": "Verbる が早いか",
+        "key": "grammar/n1/grammar_n1_16.json#grammar:Verbる が早いか"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_77.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:77:～までだ",
+      "type": "grammar",
+      "surface": "～までだ",
+      "reading": "",
+      "label_ja": "～までだ",
+      "label_vi": "Dùng để nói chỉ đến mức X mà thôi, hoặc nếu cần thì chỉ việc làm X. Tùy ngữ cảnh có thể là giới hạn hoặc quyết tâm đơn giản. Cấu trúc: Verb (dictionary/ない form) + までだ, い-Adjective + までだ, Noun + までだ.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_24.json",
+        "entry_id": "～までだ",
+        "key": "grammar/n1/grammar_n1_24.json#grammar:～までだ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_77.json"
+    }
+  ]
+}

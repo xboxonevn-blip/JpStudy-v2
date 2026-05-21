@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_75",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:75:Verb_ようもない",
+      "type": "grammar",
+      "surface": "Verb ようもない",
+      "reading": "",
+      "label_ja": "Verb ようもない",
+      "label_vi": "Dùng để nói hoàn toàn không có cách nào để làm X. Sắc thái tương tự ようがない nhưng thường nhấn mạnh mạnh hơn. Cấu trúc: Verb-ます stem + ようもない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_16.json",
+        "entry_id": "Verb ようもない",
+        "key": "grammar/n1/grammar_n1_16.json#grammar:Verb ようもない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_75.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:75:～ぶり",
+      "type": "grammar",
+      "surface": "～ぶり",
+      "reading": "",
+      "label_ja": "～ぶり",
+      "label_vi": "Dùng sau mốc thời gian để nói đã lâu kể từ lần cuối làm hoặc xảy ra việc gì. Có thể hiểu là “sau ... mới lại”. Cấu trúc: Time expression + ぶり.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_24.json",
+        "entry_id": "～ぶり",
+        "key": "grammar/n1/grammar_n1_24.json#grammar:～ぶり"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_75.json"
+    }
+  ]
+}

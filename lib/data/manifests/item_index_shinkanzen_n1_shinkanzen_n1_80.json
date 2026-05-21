@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_80",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:80:Verbる_ことのないように",
+      "type": "grammar",
+      "surface": "Verbる ことのないように",
+      "reading": "",
+      "label_ja": "Verbる ことのないように",
+      "label_vi": "Dùng để nói cố gắng hoặc chú ý để tránh xảy ra X. Có thể hiểu là “để không...”. Cấu trúc: Verb-dictionary form + ことのないように.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_17.json",
+        "entry_id": "Verbる ことのないように",
+        "key": "grammar/n1/grammar_n1_17.json#grammar:Verbる ことのないように"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_80.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:80:～んがために",
+      "type": "grammar",
+      "surface": "～んがために",
+      "reading": "",
+      "label_ja": "～んがために",
+      "label_vi": "Dùng để nhấn mạnh mục đích mạnh mẽ “để làm X”, thường mang sắc thái trang trọng, quyết tâm. Cấu trúc: Verb-negative stem + んがために.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～んがために",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～んがために"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_80.json"
+    }
+  ]
+}

@@ -1,246 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_16",
   "items": [
     {
-      "item_id": "grammar:n3:shinkanzen_n3:16:〜ようとする",
+      "item_id": "grammar:n3:shinkanzen_n3:16:〜ばかりか",
       "type": "grammar",
-      "surface": "〜ようとする",
+      "surface": "〜ばかりか",
       "reading": "",
-      "label_ja": "〜ようとする",
-      "label_vi": "Diễn tả cố gắng làm gì hoặc chuẩn bị làm gì thì một việc khác xảy ra.",
+      "label_ja": "〜ばかりか",
+      "label_vi": "Diễn tả không chỉ A mà còn cả B; vế sau thường thêm thông tin nổi bật hơn.",
       "order": 1,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_16.json",
-        "entry_id": "〜ようとする",
-        "key": "grammar/n3/grammar_n3_16.json#grammar:〜ようとする"
+        "file": "grammar/n3/grammar_n3_12.json",
+        "entry_id": "〜ばかりか",
+        "key": "grammar/n3/grammar_n3_12.json#grammar:〜ばかりか"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:16:〜続ける",
+      "item_id": "grammar:n3:shinkanzen_n3:16:〜そうだ（伝聞）",
       "type": "grammar",
-      "surface": "〜続ける",
+      "surface": "〜そうだ（伝聞）",
       "reading": "",
-      "label_ja": "〜続ける",
-      "label_vi": "Diễn tả tiếp tục duy trì hành động trong một khoảng thời gian.",
+      "label_ja": "〜そうだ（伝聞）",
+      "label_vi": "Diễn tả nội dung nghe kể lại từ người khác hoặc nguồn khác, khác với そうだ chỉ vẻ ngoài.",
       "order": 2,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_16.json",
-        "entry_id": "〜続ける",
-        "key": "grammar/n3/grammar_n3_16.json#grammar:〜続ける"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:16:〜きる",
-      "type": "grammar",
-      "surface": "〜きる",
-      "reading": "",
-      "label_ja": "〜きる",
-      "label_vi": "Diễn tả hoàn thành đến cùng, làm hết mức hoặc hết sạch.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_16.json",
-        "entry_id": "〜きる",
-        "key": "grammar/n3/grammar_n3_16.json#grammar:〜きる"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:16:〜抜く",
-      "type": "grammar",
-      "surface": "〜抜く",
-      "reading": "",
-      "label_ja": "〜抜く",
-      "label_vi": "Diễn tả làm đến cùng dù khó khăn.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_16.json",
-        "entry_id": "〜抜く",
-        "key": "grammar/n3/grammar_n3_16.json#grammar:〜抜く"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:資源",
-      "type": "vocab",
-      "surface": "資源",
-      "reading": "しげん",
-      "label_ja": "資源",
-      "label_vi": "tài nguyên",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:事件",
-      "type": "vocab",
-      "surface": "事件",
-      "reading": "じけん",
-      "label_ja": "事件",
-      "label_vi": "sự cố",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:指示",
-      "type": "vocab",
-      "surface": "指示",
-      "reading": "しじ",
-      "label_ja": "指示",
-      "label_vi": "chỉ thị; hướng dẫn",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:事実",
-      "type": "vocab",
-      "surface": "事実",
-      "reading": "じじつ",
-      "label_ja": "事実",
-      "label_vi": "sự thật",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:事情",
-      "type": "vocab",
-      "surface": "事情",
-      "reading": "じじょう",
-      "label_ja": "事情",
-      "label_vi": "trường hợp",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:自信",
-      "type": "vocab",
-      "surface": "自信",
-      "reading": "じしん",
-      "label_ja": "自信",
-      "label_vi": "sự tự tin",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:時速",
-      "type": "vocab",
-      "surface": "時速",
-      "reading": "じそく",
-      "label_ja": "時速",
-      "label_vi": "mỗi giờ",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:支度",
-      "type": "vocab",
-      "surface": "支度",
-      "reading": "したく",
-      "label_ja": "支度",
-      "label_vi": "Sự chuẩn bị",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:失業",
-      "type": "vocab",
-      "surface": "失業",
-      "reading": "しつぎょう",
-      "label_ja": "失業",
-      "label_vi": "nạn thất nghiệp",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:実際",
-      "type": "vocab",
-      "surface": "実際",
-      "reading": "じっさい",
-      "label_ja": "実際",
-      "label_vi": "thật sự",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:実力",
-      "type": "vocab",
-      "surface": "実力",
-      "reading": "じつりょく",
-      "label_ja": "実力",
-      "label_vi": "khả năng thực sự",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:16:支店",
-      "type": "vocab",
-      "surface": "支店",
-      "reading": "してん",
-      "label_ja": "支店",
-      "label_vi": "chi nhánh",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json",
-        "entry_id": "n3_l16_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_16_nouns_general_2_0238_0260.json#vocab:n3_l16_s012"
+        "file": "grammar/n3/grammar_n3_9.json",
+        "entry_id": "〜そうだ（伝聞）",
+        "key": "grammar/n3/grammar_n3_9.json#grammar:〜そうだ（伝聞）"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_16.json"
     }

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_52",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:52:Verb_てからというもの",
+      "type": "grammar",
+      "surface": "Verb てからというもの",
+      "reading": "",
+      "label_ja": "Verb てからというもの",
+      "label_vi": "Dùng để nói kể từ sau một sự kiện, một trạng thái hoặc thói quen đã tiếp tục kéo dài đến hiện tại. Cấu trúc: Verb-て form + からというもの.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb てからというもの",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb てからというもの"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_52.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:52:～とみると",
+      "type": "grammar",
+      "surface": "～とみると",
+      "reading": "",
+      "label_ja": "～とみると",
+      "label_vi": "Dùng khi nhìn nhận một sự việc theo hướng X rồi đưa ra đánh giá hoặc hành động dựa trên cách nhìn đó. Cấu trúc: Verb-casual + とみると, い-Adjective + とみると, な-Adjective + だとみると, Noun + だとみると.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "～とみると",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:～とみると"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_52.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:52:Noun_に限る",
+      "type": "grammar",
+      "surface": "Noun に限る",
+      "reading": "",
+      "label_ja": "Noun に限る",
+      "label_vi": "Dùng để nói Noun là lựa chọn tốt nhất hoặc phù hợp nhất trong tình huống đó. Có thể hiểu là “không gì bằng Noun”. Cấu trúc: Noun + に限る.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "Noun に限る",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:Noun に限る"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_52.json"
+    }
+  ]
+}

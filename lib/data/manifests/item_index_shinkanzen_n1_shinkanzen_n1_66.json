@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_66",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:66:Verb_もしないで",
+      "type": "grammar",
+      "surface": "Verb もしないで",
+      "reading": "",
+      "label_ja": "Verb もしないで",
+      "label_vi": "Dùng để phê bình việc thậm chí không làm một hành động tối thiểu. Có thể hiểu là “không buồn làm”, “ngay cả... cũng không”. Cấu trúc: Verb (masu stem) + もしないで.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb もしないで",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb もしないで"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_66.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:66:～に至った",
+      "type": "grammar",
+      "surface": "～に至った",
+      "reading": "",
+      "label_ja": "～に至った",
+      "label_vi": "Dùng để nói một quá trình cuối cùng dẫn đến kết quả hoặc điểm đến X. Sắc thái trang trọng, thường dùng trong tường thuật. Cấu trúc: Verb-てform + に至った or Noun / Verb-dictionary + に至る (more general).",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～に至った",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～に至った"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_66.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:66:Noun_の_至り",
+      "type": "grammar",
+      "surface": "Noun の 至り",
+      "reading": "",
+      "label_ja": "Noun の 至り",
+      "label_vi": "Dùng để diễn tả mức độ cực điểm của cảm xúc hoặc trạng thái, thường trong cách nói trang trọng như 光栄の至り. Cấu trúc: Noun + の至り.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun の 至り",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun の 至り"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_66.json"
+    }
+  ]
+}

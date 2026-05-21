@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_53",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:53:Verb_てこそ",
+      "type": "grammar",
+      "surface": "Verb てこそ",
+      "reading": "",
+      "label_ja": "Verb てこそ",
+      "label_vi": "Dùng để nhấn mạnh chỉ bằng cách làm X thì mới có thể đạt được, hiểu được hoặc chứng minh điều phía sau. Cấu trúc: Verb-て form + こそ.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb てこそ",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb てこそ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_53.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:53:どんなに～うが",
+      "type": "grammar",
+      "surface": "どんなに～うが",
+      "reading": "",
+      "label_ja": "どんなに～うが",
+      "label_vi": "Dùng để nói dù mức độ X có lớn đến đâu thì kết quả phía sau vẫn không thay đổi. Sắc thái trang trọng, nhấn mạnh “dù thế nào đi nữa”. Cấu trúc: どんなに + Verb-volitional + うが, どんなに + い-Adjective(～かろう) + が, どんなに + な-Adjective + だろうが.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "どんなに～うが",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:どんなに～うが"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_53.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:53:Noun_ぬいた_Noun",
+      "type": "grammar",
+      "surface": "Noun ぬいた Noun",
+      "reading": "",
+      "label_ja": "Noun ぬいた Noun",
+      "label_vi": "Dùng để nói một danh từ đã được loại trừ khỏi tổng thể hoặc khỏi danh sách đang xét. Mẫu này tương đương “trừ Noun ra”. Cấu trúc: Noun1 + をぬいた + Noun2.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "Noun ぬいた Noun",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:Noun ぬいた Noun"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_53.json"
+    }
+  ]
+}

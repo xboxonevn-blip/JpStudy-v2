@@ -1635,3 +1635,12 @@
 - Added a RED/GREEN regression: Mimikara unit review must render bundled terms even when the content DB path never resolves.
 - Changed `vocabSeriesTermsProvider` so `series=mimikara` loads bundled unit JSON directly with stable negative review ids, preserving the DB-backed path for other textbook series.
 - Sanitized legacy kana/kanji learner assets that leaked banned source names during the Sprint 1 brand audit; logged DECISION-046.
+
+## 2026-05-21 Follow-up Sprint Phase A0 correction
+
+- Applied owner architecture correction after OQ-014/OQ-015: deleted bogus Mimikara N4/N5 asset directories and manifests.
+- Textbook catalog now has 18 entries; Mimikara remains live only for N3/N2/N1 with 12/13/14 units.
+- Shin Kanzen Master is now Bunpou grammar-only in manifests: N3 83 lessons, N2 163 lessons, N1 88 lessons.
+- Vocab roadmap/catalog now sends N3-N1 vocabulary learners to Mimikara instead of the old Shin Kanzen vocabulary lane.
+- Rebuilt interlink graph after deletion: 24,666 nodes, 61,490 edges, validator passed.
+- Logged DECISION-047.

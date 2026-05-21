@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_36",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:36:Verb_こそすれ",
+      "type": "grammar",
+      "surface": "Verb こそすれ",
+      "reading": "",
+      "label_ja": "Verb こそすれ",
+      "label_vi": "Dùng để nhấn mạnh “có thể làm X, nhưng tuyệt đối không làm Y”. Vế sau thường là phủ định hoặc điều trái ngược. Cấu trúc: Verb-ますstem + こそすれ、(絶対に)～ない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Verb こそすれ",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Verb こそすれ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_36.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:36:～といったらありはしない",
+      "type": "grammar",
+      "surface": "～といったらありはしない",
+      "reading": "",
+      "label_ja": "～といったらありはしない",
+      "label_vi": "Dùng để cảm thán mức độ cực kỳ mạnh của một trạng thái, thường là tiêu cực. Có thể hiểu là “không thể tả nổi”. Cấu trúc: Noun + といったらありはしない / な-Adjective + といったらありはしない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～といったらありはしない",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～といったらありはしない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_36.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:36:Noun_に_Noun_を重ねて",
+      "type": "grammar",
+      "surface": "Noun に Noun を重ねて",
+      "reading": "",
+      "label_ja": "Noun に Noun を重ねて",
+      "label_vi": "Dùng để diễn tả hành động hoặc trạng thái lặp đi lặp lại, chồng chất theo thời gian. Thường dùng với các danh từ như 努力, 練習, 失敗. Cấu trúc: Noun に Noun を重ねて.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun に Noun を重ねて",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun に Noun を重ねて"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_36.json"
+    }
+  ]
+}

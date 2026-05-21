@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_30",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:30:Noun_を踏まえて",
+      "type": "grammar",
+      "surface": "Noun を踏まえて",
+      "reading": "",
+      "label_ja": "Noun を踏まえて",
+      "label_vi": "Dùng khi đưa ra quyết định, nhận xét hoặc hành động dựa trên Noun đã được xem xét. Có thể hiểu là “dựa trên”, “xét đến”. Cấu trúc: Noun + を踏まえて.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Noun を踏まえて",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Noun を踏まえて"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_30.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:30:～つもりだ",
+      "type": "grammar",
+      "surface": "～つもりだ",
+      "reading": "",
+      "label_ja": "～つもりだ",
+      "label_vi": "Dùng để diễn tả dự định hoặc ý định của người nói. Ở N1, cần chú ý sắc thái cũng có thể là “tự cho là” trong một số ngữ cảnh. Cấu trúc: Verb-dictionary form + つもりだ.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～つもりだ",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～つもりだ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_30.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:30:Noun_なしでは～ない",
+      "type": "grammar",
+      "surface": "Noun なしでは～ない",
+      "reading": "",
+      "label_ja": "Noun なしでは～ない",
+      "label_vi": "Dùng để nói điều phía sau không thể xảy ra nếu thiếu Noun. Có thể hiểu là “không có Noun thì không...”. Cấu trúc: Noun + なしでは～ない.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_5.json",
+        "entry_id": "Noun なしでは～ない",
+        "key": "grammar/n1/grammar_n1_5.json#grammar:Noun なしでは～ない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_30.json"
+    }
+  ]
+}

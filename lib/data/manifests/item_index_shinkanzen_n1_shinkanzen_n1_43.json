@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_43",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:43:Verb_そうにない",
+      "type": "grammar",
+      "surface": "Verb そうにない",
+      "reading": "",
+      "label_ja": "Verb そうにない",
+      "label_vi": "Dùng để nói một việc có vẻ khó xảy ra hoặc không có dấu hiệu sẽ xảy ra. Cảm giác dự đoán dựa trên tình hình hiện tại. Cấu trúc: Verb-ますstem + そうにない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb そうにない",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb そうにない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_43.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:43:～とすると",
+      "type": "grammar",
+      "surface": "～とすると",
+      "reading": "",
+      "label_ja": "～とすると",
+      "label_vi": "Dùng để giả định một tình huống rồi suy ra kết luận phía sau. Có thể hiểu là “nếu vậy”, “giả sử là”. Cấu trúc: Verb-casual + とすると / い-Adjective + とすると / な-Adjective + だとすると / Noun + だとすると.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～とすると",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～とすると"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_43.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:43:Noun_にひきかえ_Noun_は",
+      "type": "grammar",
+      "surface": "Noun にひきかえ Noun は",
+      "reading": "",
+      "label_ja": "Noun にひきかえ Noun は",
+      "label_vi": "Dùng để đối chiếu hai sự vật hoặc hai người, nhấn mạnh sự khác biệt rõ rệt giữa A và B. Thường dùng khi một bên tốt hơn hoặc tệ hơn bên kia. Cấu trúc: Noun 1 + にひきかえ + Noun 2 + は.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun にひきかえ Noun は",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun にひきかえ Noun は"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_43.json"
+    }
+  ]
+}

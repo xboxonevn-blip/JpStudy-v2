@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_40",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:40:Verb_ずとも",
+      "type": "grammar",
+      "surface": "Verb ずとも",
+      "reading": "",
+      "label_ja": "Verb ずとも",
+      "label_vi": "Dùng để nói dù không làm X thì Y vẫn xảy ra hoặc vẫn có thể làm được. Sắc thái trang trọng, gần với なくても. Cấu trúc: Verb-negative stem + ずとも.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb ずとも",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb ずとも"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_40.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:40:～ところを",
+      "type": "grammar",
+      "surface": "～ところを",
+      "reading": "",
+      "label_ja": "～ところを",
+      "label_vi": "Dùng khi một hành động xảy ra đúng lúc người khác đang ở trong một tình huống, thường là lúc bất tiện hoặc đáng lẽ không nên làm phiền. Có thể hiểu là “đúng lúc...”. Cấu trúc: Verb-ている + ところを / Noun + の + ところを / い-Adjective + ところを / な-Adjective + な + ところを.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～ところを",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～ところを"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_40.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:40:Noun_にして初めて",
+      "type": "grammar",
+      "surface": "Noun にして初めて",
+      "reading": "",
+      "label_ja": "Noun にして初めて",
+      "label_vi": "Dùng để nói chỉ sau khi đạt đến Noun hoặc ở hoàn cảnh Noun thì lần đầu tiên mới nhận ra, hiểu được hoặc xảy ra điều gì. Cấu trúc: Noun + にして初めて.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun にして初めて",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun にして初めて"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_40.json"
+    }
+  ]
+}

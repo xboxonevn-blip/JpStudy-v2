@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_86",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:86:Verbる_にはあたらない",
+      "type": "grammar",
+      "surface": "Verbる にはあたらない",
+      "reading": "",
+      "label_ja": "Verbる にはあたらない",
+      "label_vi": "Dùng để nói không cần thiết phải làm X hoặc không đáng để làm X. Sắc thái trang trọng, thường dùng trong đánh giá. Cấu trúc: Verb-dictionary form + にはあたらない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_17.json",
+        "entry_id": "Verbる にはあたらない",
+        "key": "grammar/n1/grammar_n1_17.json#grammar:Verbる にはあたらない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_86.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:86:～足りない",
+      "type": "grammar",
+      "surface": "～足りない",
+      "reading": "",
+      "label_ja": "～足りない",
+      "label_vi": "Dùng để nói không đủ về số lượng, mức độ hoặc điều kiện. Có thể dùng với danh từ hoặc mệnh đề chỉ mức cần thiết. Cấu trúc: Noun + (が) 足りない, Verb-casual + ほど/だけ + (が) 足りない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～足りない",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～足りない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_86.json"
+    }
+  ]
+}

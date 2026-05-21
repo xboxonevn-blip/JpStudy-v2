@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_85",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:85:Verbる_にとどまらず～も",
+      "type": "grammar",
+      "surface": "Verbる にとどまらず～も",
+      "reading": "",
+      "label_ja": "Verbる にとどまらず～も",
+      "label_vi": "Dùng để nói phạm vi không chỉ dừng ở việc X mà còn mở rộng sang điều khác. Có thể hiểu là “không chỉ... mà còn...”. Cấu trúc: Noun / Verb-dictionary form + にとどまらず + も/ほかのこと.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_17.json",
+        "entry_id": "Verbる にとどまらず～も",
+        "key": "grammar/n1/grammar_n1_17.json#grammar:Verbる にとどまらず～も"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_85.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:85:～極まる",
+      "type": "grammar",
+      "surface": "～極まる",
+      "reading": "",
+      "label_ja": "～極まる",
+      "label_vi": "Dùng để nói một trạng thái đạt đến mức cực điểm. Mẫu này thường đi với từ mang sắc thái tiêu cực hoặc cảm xúc mạnh. Cấu trúc: な-Adjective（語幹）+ 極まる, い-Adjective（連用形）+ こと + 極まる, etc.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～極まる",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～極まる"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_85.json"
+    }
+  ]
+}

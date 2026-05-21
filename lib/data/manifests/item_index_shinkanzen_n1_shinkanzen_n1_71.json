@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_71",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:71:Verb_ようがない",
+      "type": "grammar",
+      "surface": "Verb ようがない",
+      "reading": "",
+      "label_ja": "Verb ようがない",
+      "label_vi": "Dùng để nói không có cách nào để làm việc đó, vì thiếu phương tiện, điều kiện hoặc khả năng. Cấu trúc: Verb (masu stem) + ようがない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_16.json",
+        "entry_id": "Verb ようがない",
+        "key": "grammar/n1/grammar_n1_16.json#grammar:Verb ようがない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_71.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:71:～びた",
+      "type": "grammar",
+      "surface": "～びた",
+      "reading": "",
+      "label_ja": "～びた",
+      "label_vi": "Dùng như hậu tố để nói có vẻ, mang dáng dấp hoặc màu sắc của một tính chất nào đó. Thường tạo tính từ bổ nghĩa cho danh từ như 大人びた. Cấu trúc: [Noun/Adjective stem] + びた (forms a 連体形 modifier, e.g., 大人びた人 “an adult-like person”).",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_24.json",
+        "entry_id": "～びた",
+        "key": "grammar/n1/grammar_n1_24.json#grammar:～びた"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_71.json"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_60",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:60:Verb_ないではすまない",
+      "type": "grammar",
+      "surface": "Verb ないではすまない",
+      "reading": "",
+      "label_ja": "Verb ないではすまない",
+      "label_vi": "Dùng để nói không thể không làm vì trách nhiệm, đạo lý hoặc áp lực xã hội. Có thể hiểu là “buộc phải”, “không làm thì không xong”. Cấu trúc: Verb-ない form + ではすまない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb ないではすまない",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb ないではすまない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_60.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:60:～なくもない",
+      "type": "grammar",
+      "surface": "～なくもない",
+      "reading": "",
+      "label_ja": "～なくもない",
+      "label_vi": "Dùng để nói cũng không hẳn là không X, tức khả năng vẫn tồn tại nhưng không mạnh. Sắc thái mềm và dè dặt. Cấu trúc: Verb-ないform + なくもない, い-Adjective－い + くもない, な-Adjective + でもない, Noun + でもない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～なくもない",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～なくもない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_60.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:60:Noun_のいかんによらず",
+      "type": "grammar",
+      "surface": "Noun のいかんによらず",
+      "reading": "",
+      "label_ja": "Noun のいかんによらず",
+      "label_vi": "Dùng để nói kết quả không thay đổi dù Noun ở trạng thái nào. Sắc thái trang trọng, thường dùng trong văn bản chính thức. Cấu trúc: Noun + のいかんによらず.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun のいかんによらず",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun のいかんによらず"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_60.json"
+    }
+  ]
+}

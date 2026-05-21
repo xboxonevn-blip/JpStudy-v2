@@ -1490,6 +1490,7 @@ _VocabCatalogSection _buildJlptSection({
       isInteractive &&
       companionTermCount > 0 &&
       (companionType == _VocabProgramType.shinkanzen ||
+          companionType == _VocabProgramType.mimikara ||
           _minnaLessonRange(levelCode, companionType) != null);
 
   return _VocabCatalogSection(

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_82",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:82:Verbる_ともなく_Verb",
+      "type": "grammar",
+      "surface": "Verbる ともなく Verb",
+      "reading": "",
+      "label_ja": "Verbる ともなく Verb",
+      "label_vi": "Dùng để nói làm X một cách vô thức, không có ý định rõ ràng, rồi dẫn đến hành động hoặc trạng thái phía sau. Cấu trúc: Verb-dictionary form + ともなく + Verb.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_17.json",
+        "entry_id": "Verbる ともなく Verb",
+        "key": "grammar/n1/grammar_n1_17.json#grammar:Verbる ともなく Verb"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_82.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:82:～差し支えない",
+      "type": "grammar",
+      "surface": "～差し支えない",
+      "reading": "",
+      "label_ja": "～差し支えない",
+      "label_vi": "Dùng để nói không có trở ngại, không sao nếu làm X, hoặc có thể xem là ổn. Sắc thái lịch sự, trang trọng. Cấu trúc: Verb-て form + も差し支えない, Noun + が差し支えない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～差し支えない",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～差し支えない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_82.json"
+    }
+  ]
+}

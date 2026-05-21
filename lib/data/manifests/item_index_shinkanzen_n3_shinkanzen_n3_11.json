@@ -1,39 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_11",
   "items": [
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:11:〜せいで",
-      "type": "grammar",
-      "surface": "〜せいで",
-      "reading": "",
-      "label_ja": "〜せいで",
-      "label_vi": "Diễn tả nguyên nhân dẫn đến kết quả xấu, khó chịu hoặc đáng tiếc. Người nói thường hàm ý phàn nàn.",
-      "order": 1,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_11.json",
-        "entry_id": "〜せいで",
-        "key": "grammar/n3/grammar_n3_11.json#grammar:〜せいで"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:11:〜おかげで",
-      "type": "grammar",
-      "surface": "〜おかげで",
-      "reading": "",
-      "label_ja": "〜おかげで",
-      "label_vi": "Diễn tả nguyên nhân tốt dẫn đến kết quả tích cực. Thường mang sắc thái biết ơn hoặc đánh giá tốt.",
-      "order": 2,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_11.json",
-        "entry_id": "〜おかげで",
-        "key": "grammar/n3/grammar_n3_11.json#grammar:〜おかげで"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
     {
       "item_id": "grammar:n3:shinkanzen_n3:11:〜ため（理由）",
       "type": "grammar",
@@ -41,7 +11,7 @@
       "reading": "",
       "label_ja": "〜ため（理由）",
       "label_vi": "Diễn tả lý do một cách trang trọng và khách quan, thường thấy trong thông báo, bản tin, hướng dẫn. Trung tính hơn せいで và không mang sắc thái biết ơn như おかげで.",
-      "order": 3,
+      "order": 1,
       "legacy_ref": {
         "file": "grammar/n3/grammar_n3_11.json",
         "entry_id": "〜ため（理由）",
@@ -50,197 +20,17 @@
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:11:〜可能性がある",
+      "item_id": "grammar:n3:shinkanzen_n3:11:〜らしい",
       "type": "grammar",
-      "surface": "〜可能性がある",
+      "surface": "〜らしい",
       "reading": "",
-      "label_ja": "〜可能性がある",
-      "label_vi": "Diễn tả có khả năng một sự việc xảy ra theo cách trung tính, khách quan hơn các mẫu phỏng đoán cảm tính.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_11.json",
-        "entry_id": "〜可能性がある",
-        "key": "grammar/n3/grammar_n3_11.json#grammar:〜可能性がある"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:欠席",
-      "type": "vocab",
-      "surface": "欠席",
-      "reading": "けっせき",
-      "label_ja": "欠席",
-      "label_vi": "sự vắng mặt",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:決定",
-      "type": "vocab",
-      "surface": "決定",
-      "reading": "けってい",
-      "label_ja": "決定",
-      "label_vi": "phán quyết",
+      "label_ja": "〜らしい",
+      "label_vi": "Diễn tả thông tin nghe được từ nguồn khác, hoặc nét đặc trưng “đúng chất, rất giống” của người hay sự vật.",
       "order": 2,
       "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:欠点",
-      "type": "vocab",
-      "surface": "欠点",
-      "reading": "けってん",
-      "label_ja": "欠点",
-      "label_vi": "nhược điểm",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:結論",
-      "type": "vocab",
-      "surface": "結論",
-      "reading": "けつろん",
-      "label_ja": "結論",
-      "label_vi": "Phần kết luận",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:券",
-      "type": "vocab",
-      "surface": "券",
-      "reading": "けん",
-      "label_ja": "券",
-      "label_vi": "vé; phiếu",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:見学",
-      "type": "vocab",
-      "surface": "見学",
-      "reading": "けんがく",
-      "label_ja": "見学",
-      "label_vi": "thăm nom",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:研修",
-      "type": "vocab",
-      "surface": "研修",
-      "reading": "けんしゅう",
-      "label_ja": "研修",
-      "label_vi": "đào tạo",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:建設",
-      "type": "vocab",
-      "surface": "建設",
-      "reading": "けんせつ",
-      "label_ja": "建設",
-      "label_vi": "sự thi công",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:建築",
-      "type": "vocab",
-      "surface": "建築",
-      "reading": "けんちく",
-      "label_ja": "建築",
-      "label_vi": "ngành kiến ​​​​trúc",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:憲法",
-      "type": "vocab",
-      "surface": "憲法",
-      "reading": "けんぽう",
-      "label_ja": "憲法",
-      "label_vi": "cấu tạo",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:権利",
-      "type": "vocab",
-      "surface": "権利",
-      "reading": "けんり",
-      "label_ja": "権利",
-      "label_vi": "Phải",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:11:原料",
-      "type": "vocab",
-      "surface": "原料",
-      "reading": "げんりょう",
-      "label_ja": "原料",
-      "label_vi": "nguyên liệu thô",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json",
-        "entry_id": "n3_l11_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_11_nouns_general_1_0160_0175.json#vocab:n3_l11_s012"
+        "file": "grammar/n3/grammar_n3_8.json",
+        "entry_id": "〜らしい",
+        "key": "grammar/n3/grammar_n3_8.json#grammar:〜らしい"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_11.json"
     }

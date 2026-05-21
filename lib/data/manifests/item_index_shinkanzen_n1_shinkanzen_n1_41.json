@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_41",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:41:Verb_ずにはおかない",
+      "type": "grammar",
+      "surface": "Verb ずにはおかない",
+      "reading": "",
+      "label_ja": "Verb ずにはおかない",
+      "label_vi": "Dùng để nói điều gì chắc chắn sẽ xảy ra hoặc chắc chắn khiến ai đó làm gì. Sắc thái mạnh: “không thể không”, “nhất định sẽ”. Cấu trúc: Verb-ない form (remove ない) + ずにはおかない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb ずにはおかない",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb ずにはおかない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_41.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:41:～とされる",
+      "type": "grammar",
+      "surface": "～とされる",
+      "reading": "",
+      "label_ja": "～とされる",
+      "label_vi": "Dùng để nói điều gì được xem là, được cho là hoặc được thừa nhận rộng rãi là như vậy. Sắc thái khách quan, thường dùng trong văn viết. Cấu trúc: Verb-casual + とされる / い-Adjective + とされる / な-Adjective + だとされる / Noun + だとされる.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～とされる",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～とされる"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_41.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:41:Noun_にすら",
+      "type": "grammar",
+      "surface": "Noun にすら",
+      "reading": "",
+      "label_ja": "Noun にすら",
+      "label_vi": "Dùng để nhấn mạnh “ngay cả Noun cũng”, thường nhằm cho thấy mức độ bất ngờ hoặc cực đoan. Sắc thái trang trọng hơn にも. Cấu trúc: Noun + にすら.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun にすら",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun にすら"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_41.json"
+    }
+  ]
+}

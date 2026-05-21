@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_32",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:32:Noun_並み",
+      "type": "grammar",
+      "surface": "Noun 並み",
+      "reading": "",
+      "label_ja": "Noun 並み",
+      "label_vi": "Dùng để nói mức độ tương đương hoặc ngang với Noun. Có thể mang nghĩa “như”, “cỡ”, “ngang tầm”. Cấu trúc: Noun + 並み.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Noun 並み",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Noun 並み"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_32.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:32:～ではすまない",
+      "type": "grammar",
+      "surface": "～ではすまない",
+      "reading": "",
+      "label_ja": "～ではすまない",
+      "label_vi": "Dùng để nói chỉ X thôi thì không đủ để giải quyết, kết thúc hoặc bù đắp vấn đề. Thường hàm ý cần hành động thêm hoặc phải chịu trách nhiệm. Cấu trúc: Verb-dictionary form + ではすまない / い-Adjective + ではすまない / な-Adjective + ではすまない / Noun + ではすまない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～ではすまない",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～ではすまない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_32.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:32:Noun_ならいざ知らず",
+      "type": "grammar",
+      "surface": "Noun ならいざ知らず",
+      "reading": "",
+      "label_ja": "Noun ならいざ知らず",
+      "label_vi": "Dùng để nói “nếu là Noun thì còn hiểu được, nhưng trường hợp này thì không”. Mẫu này thường dùng để phê bình hoặc nhấn mạnh sự không phù hợp. Cấu trúc: Noun1 + ならいざ知らず + Noun2 (comment).",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun ならいざ知らず",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun ならいざ知らず"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_32.json"
+    }
+  ]
+}

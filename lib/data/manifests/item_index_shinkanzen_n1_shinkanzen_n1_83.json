@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_83",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:83:Verbる_ともなしに_Verb",
+      "type": "grammar",
+      "surface": "Verbる ともなしに Verb",
+      "reading": "",
+      "label_ja": "Verbる ともなしに Verb",
+      "label_vi": "Dùng để nói làm X một cách lơ đãng hoặc không chủ ý. Mẫu này thường dùng với các động từ như 見る, 聞く, 考える. Cấu trúc: Verb-dictionary form + ともなしに + Verb.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_17.json",
+        "entry_id": "Verbる ともなしに Verb",
+        "key": "grammar/n1/grammar_n1_17.json#grammar:Verbる ともなしに Verb"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_83.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:83:～折に",
+      "type": "grammar",
+      "surface": "～折に",
+      "reading": "",
+      "label_ja": "～折に",
+      "label_vi": "Dùng để chỉ thời điểm hoặc dịp khi một việc xảy ra. Sắc thái lịch sự, trang trọng hơn とき. Cấu trúc: Verb-dictionary form + 折に, Verb-た形 + 折に, Noun + の折に.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～折に",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～折に"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_83.json"
+    }
+  ]
+}

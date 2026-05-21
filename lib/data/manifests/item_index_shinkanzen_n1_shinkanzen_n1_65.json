@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_65",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:65:Verb_ば_きりがない",
+      "type": "grammar",
+      "surface": "Verb ば きりがない",
+      "reading": "",
+      "label_ja": "Verb ば きりがない",
+      "label_vi": "Dùng để nói nếu bắt đầu làm, nói hoặc liệt kê X thì sẽ không có điểm dừng. Cấu trúc: Verb-conditional form (ば) + きりがない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb ば きりがない",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb ば きりがない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_65.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:65:～に耐える",
+      "type": "grammar",
+      "surface": "～に耐える",
+      "reading": "",
+      "label_ja": "～に耐える",
+      "label_vi": "Dùng để nói chịu đựng hoặc chống chọi được với Noun, như áp lực, đau đớn, thử thách. Cấu trúc: Noun + に耐える.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～に耐える",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～に耐える"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_65.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:65:Noun_の極み",
+      "type": "grammar",
+      "surface": "Noun の極み",
+      "reading": "",
+      "label_ja": "Noun の極み",
+      "label_vi": "Dùng để nói Noun đạt đến mức tột cùng, thường với các danh từ chỉ cảm xúc như 感激, 光栄, 無念. Sắc thái trang trọng. Cấu trúc: Noun + の極み.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun の極み",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun の極み"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_65.json"
+    }
+  ]
+}

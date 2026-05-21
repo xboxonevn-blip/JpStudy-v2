@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_48",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:48:Verb_たら_Verb_たで",
+      "type": "grammar",
+      "surface": "Verb たら Verb たで",
+      "reading": "",
+      "label_ja": "Verb たら Verb たで",
+      "label_vi": "Dùng để nói nếu X xảy ra thì lại có vấn đề hoặc tình huống riêng của X; dù xảy ra hay không cũng có điều phải tính. Cấu trúc: Verb-た form + ら + (same Verb-た form) + で.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb たら Verb たで",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb たら Verb たで"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_48.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:48:～とのことだ",
+      "type": "grammar",
+      "surface": "～とのことだ",
+      "reading": "",
+      "label_ja": "～とのことだ",
+      "label_vi": "Dùng để truyền đạt lại thông tin đã nghe, được báo hoặc được nói. Có thể hiểu là “nghe nói”, “được cho biết là”. Cấu trúc: Simplified phrase + とのことだ.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～とのことだ",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～とのことだ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_48.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:48:Noun_に即して_Verb",
+      "type": "grammar",
+      "surface": "Noun に即して Verb",
+      "reading": "",
+      "label_ja": "Noun に即して Verb",
+      "label_vi": "Dùng khi hành động được thực hiện dựa trên hoặc phù hợp với Noun. Có thể hiểu là “theo”, “bám sát”. Cấu trúc: Noun + に即して + Verb.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun に即して Verb",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun に即して Verb"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_48.json"
+    }
+  ]
+}

@@ -1,246 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_04",
   "items": [
     {
-      "item_id": "grammar:n3:shinkanzen_n3:04:〜うちに",
+      "item_id": "grammar:n3:shinkanzen_n3:04:〜ことにしている",
       "type": "grammar",
-      "surface": "〜うちに",
+      "surface": "〜ことにしている",
       "reading": "",
-      "label_ja": "〜うちに",
-      "label_vi": "Diễn tả làm việc gì khi trạng thái còn tiếp diễn hoặc trước khi thay đổi.",
+      "label_ja": "〜ことにしている",
+      "label_vi": "Diễn tả thói quen do bản thân quyết định duy trì.",
       "order": 1,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_4.json",
-        "entry_id": "〜うちに",
-        "key": "grammar/n3/grammar_n3_4.json#grammar:〜うちに"
+        "file": "grammar/n3/grammar_n3_1.json",
+        "entry_id": "〜ことにしている",
+        "key": "grammar/n3/grammar_n3_1.json#grammar:〜ことにしている"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:04:〜たばかり",
+      "item_id": "grammar:n3:shinkanzen_n3:04:〜ことはない",
       "type": "grammar",
-      "surface": "〜たばかり",
+      "surface": "〜ことはない",
       "reading": "",
-      "label_ja": "〜たばかり",
-      "label_vi": "Diễn tả hành động vừa mới xảy ra gần đây.",
+      "label_ja": "〜ことはない",
+      "label_vi": "Diễn tả không cần thiết phải làm việc gì.",
       "order": 2,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_4.json",
-        "entry_id": "〜たばかり",
-        "key": "grammar/n3/grammar_n3_4.json#grammar:〜たばかり"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:04:〜ところだ",
-      "type": "grammar",
-      "surface": "〜ところだ",
-      "reading": "",
-      "label_ja": "〜ところだ",
-      "label_vi": "Diễn tả đúng thời điểm trước, trong hoặc ngay sau hành động.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_4.json",
-        "entry_id": "〜ところだ",
-        "key": "grammar/n3/grammar_n3_4.json#grammar:〜ところだ"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:04:〜間に",
-      "type": "grammar",
-      "surface": "〜間に",
-      "reading": "",
-      "label_ja": "〜間に",
-      "label_vi": "Diễn tả việc xảy ra trong khoảng thời gian một hành động hoặc trạng thái đang tiếp diễn.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_4.json",
-        "entry_id": "〜間に",
-        "key": "grammar/n3/grammar_n3_4.json#grammar:〜間に"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:おしゃべり",
-      "type": "vocab",
-      "surface": "おしゃべり",
-      "reading": "",
-      "label_ja": "おしゃべり",
-      "label_vi": "trò chuyện",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:落とし物",
-      "type": "vocab",
-      "surface": "落とし物",
-      "reading": "おとしもの",
-      "label_ja": "落とし物",
-      "label_vi": "đồ bị thất lạc",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:思い出",
-      "type": "vocab",
-      "surface": "思い出",
-      "reading": "おもいで",
-      "label_ja": "思い出",
-      "label_vi": "ký ức; kỷ niệm",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:オリンピック",
-      "type": "vocab",
-      "surface": "オリンピック",
-      "reading": "",
-      "label_ja": "オリンピック",
-      "label_vi": "Olympic",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:カード",
-      "type": "vocab",
-      "surface": "カード",
-      "reading": "",
-      "label_ja": "カード",
-      "label_vi": "thẻ",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:開会",
-      "type": "vocab",
-      "surface": "開会",
-      "reading": "かいかい",
-      "label_ja": "開会",
-      "label_vi": "khai mạc",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:解決",
-      "type": "vocab",
-      "surface": "解決",
-      "reading": "かいけつ",
-      "label_ja": "解決",
-      "label_vi": "giải pháp",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:外出",
-      "type": "vocab",
-      "surface": "外出",
-      "reading": "がいしゅつ",
-      "label_ja": "外出",
-      "label_vi": "đi chơi",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:改正",
-      "type": "vocab",
-      "surface": "改正",
-      "reading": "かいせい",
-      "label_ja": "改正",
-      "label_vi": "Sửa đổi",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:解説",
-      "type": "vocab",
-      "surface": "解説",
-      "reading": "かいせつ",
-      "label_ja": "解説",
-      "label_vi": "Giải thích",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:回転",
-      "type": "vocab",
-      "surface": "回転",
-      "reading": "かいてん",
-      "label_ja": "回転",
-      "label_vi": "quay",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:04:ガイドブック",
-      "type": "vocab",
-      "surface": "ガイドブック",
-      "reading": "",
-      "label_ja": "ガイドブック",
-      "label_vi": "sách hướng dẫn",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json",
-        "entry_id": "n3_l04_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_04_nouns_general_1_0048_0063.json#vocab:n3_l04_s012"
+        "file": "grammar/n3/grammar_n3_6.json",
+        "entry_id": "〜ことはない",
+        "key": "grammar/n3/grammar_n3_6.json#grammar:〜ことはない"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_04.json"
     }

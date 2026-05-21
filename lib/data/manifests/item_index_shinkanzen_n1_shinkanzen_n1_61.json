@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_61",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:61:Verb_ないまでも",
+      "type": "grammar",
+      "surface": "Verb ないまでも",
+      "reading": "",
+      "label_ja": "Verb ないまでも",
+      "label_vi": "Dùng để nói dù chưa đến mức X, nhưng ít nhất cũng đạt mức gần đó hoặc có điều tương tự. Cấu trúc: Verb-ない form + までも.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb ないまでも",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb ないまでも"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_61.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:61:～なら～なりに",
+      "type": "grammar",
+      "surface": "～なら～なりに",
+      "reading": "",
+      "label_ja": "～なら～なりに",
+      "label_vi": "Dùng để nói nếu là X thì có cách, giá trị hoặc vấn đề theo kiểu của X. Mẫu này nhấn mạnh đặc điểm riêng của từng trường hợp. Cấu trúc: Noun/Adjective + なら + (same Noun/Adjective) + なりに.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～なら～なりに",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～なら～なりに"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_61.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:61:Noun_のごとき_Noun",
+      "type": "grammar",
+      "surface": "Noun のごとき Noun",
+      "reading": "",
+      "label_ja": "Noun のごとき Noun",
+      "label_vi": "Dùng để so sánh danh từ phía sau với Noun theo nghĩa “như”, “tựa như”. Sắc thái văn chương hoặc trang trọng hơn のような. Cấu trúc: Noun1 + のごとき + Noun2.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun のごとき Noun",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun のごとき Noun"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_61.json"
+    }
+  ]
+}

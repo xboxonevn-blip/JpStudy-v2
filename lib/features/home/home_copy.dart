@@ -335,14 +335,14 @@ extension HomeCopyX on AppLanguage {
           AppLanguage.ja => 'N4模試 + 読解練習',
         },
         'n1_vocab_grammar' => switch (this) {
-          AppLanguage.en => 'Shin Kanzen N1 vocabulary first',
-          AppLanguage.vi => 'Shin Kanzen N1: ưu tiên từ vựng',
-          AppLanguage.ja => '新完全マスターN1語彙から開始',
+          AppLanguage.en => 'Mimikara N1 vocabulary first',
+          AppLanguage.vi => 'Mimikara N1: ưu tiên từ vựng',
+          AppLanguage.ja => '耳から覚えるN1語彙から開始',
         },
         _ when phaseId.endsWith('_vocab') => switch (this) {
-          AppLanguage.en => 'Shin Kanzen $levelCode vocabulary first',
-          AppLanguage.vi => 'Shin Kanzen $levelCode: ưu tiên từ vựng',
-          AppLanguage.ja => '新完全マスター$levelCode語彙から開始',
+          AppLanguage.en => 'Mimikara $levelCode vocabulary first',
+          AppLanguage.vi => 'Mimikara $levelCode: ưu tiên từ vựng',
+          AppLanguage.ja => '耳から覚える$levelCode語彙から開始',
         },
         _ when phaseId.endsWith('_grammar') => switch (this) {
           AppLanguage.en => '$levelCode grammar after vocabulary',
@@ -403,10 +403,10 @@ extension HomeCopyX on AppLanguage {
     },
     _ when phaseId.endsWith('_vocab') => switch (this) {
       AppLanguage.en =>
-        'Start with the live Shin Kanzen vocabulary catalog. Use Hajimete only as an optional supplement.',
+        'Start with the live Mimikara vocabulary catalog. Use Hajimete only as an optional supplement.',
       AppLanguage.vi =>
-        'Bắt đầu bằng danh sách từ vựng Shin Kanzen đang tải được. Hajimete chỉ là phần bổ trợ tùy chọn.',
-      AppLanguage.ja => '読み込める新完全マスター語彙から始め、はじめては任意補助にします。',
+        'Bắt đầu bằng danh sách từ vựng Mimikara đang tải được. Hajimete chỉ là phần bổ trợ tùy chọn.',
+      AppLanguage.ja => '読み込める耳から覚える語彙から始め、はじめては任意補助にします。',
     },
     _ when phaseId.endsWith('_grammar') => switch (this) {
       AppLanguage.en =>
@@ -459,6 +459,7 @@ extension HomeCopyX on AppLanguage {
       'minna_ii_l26_37' => 'Minna II L26-37',
       'minna_ii_l38_50' => 'Minna II L38-50',
       _ when resourceKey.startsWith('hajimete_') => 'Hajimete $levelCode',
+      _ when resourceKey.startsWith('mimikara_') => 'Mimikara $levelCode',
       _ when resourceKey.startsWith('grammar_') => switch (this) {
         AppLanguage.en => '$levelCode grammar',
         AppLanguage.vi => 'Ngữ pháp $levelCode',

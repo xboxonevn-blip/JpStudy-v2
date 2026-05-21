@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_67",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:67:Verb_やしない",
+      "type": "grammar",
+      "surface": "Verb やしない",
+      "reading": "",
+      "label_ja": "Verb やしない",
+      "label_vi": "Dùng để phủ định mạnh trong văn nói: “chẳng đời nào”, “không hề”. Sắc thái thân mật, đôi khi gay gắt. Cấu trúc: Verb (masu stem) + やしない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb やしない",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb やしない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_67.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:67:～に越したことはない",
+      "type": "grammar",
+      "surface": "～に越したことはない",
+      "reading": "",
+      "label_ja": "～に越したことはない",
+      "label_vi": "Dùng để nói nếu có thể thì X là tốt nhất, không gì hơn X. Mẫu này thường đưa ra lời khuyên thận trọng. Cấu trúc: Verb (dictionary form) + に越したことはない, い-Adjective + に越したことはない, な-Adjective/Noun + である + に越したことはない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～に越したことはない",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～に越したことはない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_67.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:67:Noun_はいざ知らず",
+      "type": "grammar",
+      "surface": "Noun はいざ知らず",
+      "reading": "",
+      "label_ja": "Noun はいざ知らず",
+      "label_vi": "Dùng để nói “Noun thì còn có thể hiểu, nhưng trường hợp này thì...”, thường để thể hiện sự bất ngờ hoặc không chấp nhận. Cấu trúc: Noun + はいざ知らず, Noun + とは/なんて/しかし etc.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun はいざ知らず",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun はいざ知らず"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_67.json"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_31",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:31:Noun_を限りに",
+      "type": "grammar",
+      "surface": "Noun を限りに",
+      "reading": "",
+      "label_ja": "Noun を限りに",
+      "label_vi": "Dùng để chỉ Noun là mốc kết thúc hoặc mốc thay đổi của một hoạt động, trạng thái hay quan hệ. Noun thường là ngày tháng, sự kiện hoặc lần cuối. Cấu trúc: Noun + を限りに.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Noun を限りに",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Noun を限りに"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_31.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:31:～つもりで",
+      "type": "grammar",
+      "surface": "～つもりで",
+      "reading": "",
+      "label_ja": "～つもりで",
+      "label_vi": "Dùng để nói làm một việc với ý định, tâm thế hoặc giả định như X. Có thể hiểu là “với ý định”, “coi như”. Cấu trúc: Verb-dictionary form + つもりで.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～つもりで",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～つもりで"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_31.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:31:Noun_なしには～ない",
+      "type": "grammar",
+      "surface": "Noun なしには～ない",
+      "reading": "",
+      "label_ja": "Noun なしには～ない",
+      "label_vi": "Dùng để nói rằng nếu không có Noun thì điều phía sau không thể xảy ra. Mẫu này nhấn mạnh tính không thể thiếu của Noun trong điều kiện hoặc kết quả. Cấu trúc: Noun + なしには + Verb-negative.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun なしには～ない",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun なしには～ない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_31.json"
+    }
+  ]
+}

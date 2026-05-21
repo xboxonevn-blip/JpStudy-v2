@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_38",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:38:Verb_ざるを得ない",
+      "type": "grammar",
+      "surface": "Verb ざるを得ない",
+      "reading": "",
+      "label_ja": "Verb ざるを得ない",
+      "label_vi": "Dùng để nói không còn lựa chọn nào khác ngoài việc phải làm. Sắc thái trang trọng hơn しなければならない. Cấu trúc: Verb-dictionary form + ざるを得ない (する → せざるを得ない).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Verb ざるを得ない",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Verb ざるを得ない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_38.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:38:～といったらない",
+      "type": "grammar",
+      "surface": "～といったらない",
+      "reading": "",
+      "label_ja": "～といったらない",
+      "label_vi": "Dùng để nhấn mạnh một cảm xúc hoặc trạng thái đạt mức rất cao, gần như không gì hơn được. Có thể dịch linh hoạt là “vô cùng”, “cực kỳ”. Cấu trúc: い-Adjective + といったらない / な-Adjective + だといったらない / Noun + だといったらない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～といったらない",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～といったらない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_38.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:38:Noun_にあるまじき_Noun",
+      "type": "grammar",
+      "surface": "Noun にあるまじき Noun",
+      "reading": "",
+      "label_ja": "Noun にあるまじき Noun",
+      "label_vi": "Dùng để nói một hành vi hoặc thái độ không phù hợp với vị trí, tư cách hoặc vai trò Noun. Thường mang sắc thái phê phán mạnh. Cấu trúc: Noun1 にあるまじき Noun2.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun にあるまじき Noun",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun にあるまじき Noun"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_38.json"
+    }
+  ]
+}

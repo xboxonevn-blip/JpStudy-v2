@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_81",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:81:Verbる_ときりがない",
+      "type": "grammar",
+      "surface": "Verbる ときりがない",
+      "reading": "",
+      "label_ja": "Verbる ときりがない",
+      "label_vi": "Dùng để nói nếu bắt đầu làm, kể hoặc nghĩ về X thì sẽ không có điểm dừng. Cấu trúc: Verb-casual + と + きりがない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_17.json",
+        "entry_id": "Verbる ときりがない",
+        "key": "grammar/n1/grammar_n1_17.json#grammar:Verbる ときりがない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_81.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:81:～んばかりに",
+      "type": "grammar",
+      "surface": "～んばかりに",
+      "reading": "",
+      "label_ja": "～んばかりに",
+      "label_vi": "Dùng để nói trạng thái như sắp làm X hoặc thái độ như muốn nói X, dù chưa thực sự xảy ra. Cấu trúc: Verb-negative stem + ん + ばかりに.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～んばかりに",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～んばかりに"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_81.json"
+    }
+  ]
+}

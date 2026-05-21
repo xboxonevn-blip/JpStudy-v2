@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_07",
   "items": [
     {
-      "item_id": "grammar:n3:shinkanzen_n3:07:〜おそれがある",
+      "item_id": "grammar:n3:shinkanzen_n3:07:〜ていく",
       "type": "grammar",
-      "surface": "〜おそれがある",
+      "surface": "〜ていく",
       "reading": "",
-      "label_ja": "〜おそれがある",
-      "label_vi": "Diễn tả nguy cơ hoặc khả năng xảy ra điều không mong muốn trong văn viết hoặc trang trọng.",
+      "label_ja": "〜ていく",
+      "label_vi": "Diễn tả sự biến đổi tiếp diễn từ hiện tại về sau.",
       "order": 1,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_7.json",
-        "entry_id": "〜おそれがある",
-        "key": "grammar/n3/grammar_n3_7.json#grammar:〜おそれがある"
+        "file": "grammar/n3/grammar_n3_10.json",
+        "entry_id": "〜ていく",
+        "key": "grammar/n3/grammar_n3_10.json#grammar:〜ていく"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
     },
@@ -31,216 +31,6 @@
         "file": "grammar/n3/grammar_n3_7.json",
         "entry_id": "〜に違いない",
         "key": "grammar/n3/grammar_n3_7.json#grammar:〜に違いない"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:07:〜そうにない",
-      "type": "grammar",
-      "surface": "〜そうにない",
-      "reading": "",
-      "label_ja": "〜そうにない",
-      "label_vi": "Diễn tả nhìn vào tình hình thì khả năng thấp.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_7.json",
-        "entry_id": "〜そうにない",
-        "key": "grammar/n3/grammar_n3_7.json#grammar:〜そうにない"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:07:〜ないようにする",
-      "type": "grammar",
-      "surface": "〜ないようにする",
-      "reading": "",
-      "label_ja": "〜ないようにする",
-      "label_vi": "Diễn tả cố gắng tránh một hành động.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_7.json",
-        "entry_id": "〜ないようにする",
-        "key": "grammar/n3/grammar_n3_7.json#grammar:〜ないようにする"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:感想",
-      "type": "vocab",
-      "surface": "感想",
-      "reading": "かんそう",
-      "label_ja": "感想",
-      "label_vi": "cảm tưởng; nhận xét",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:感動",
-      "type": "vocab",
-      "surface": "感動",
-      "reading": "かんどう",
-      "label_ja": "感動",
-      "label_vi": "Ấn tượng",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:乾杯",
-      "type": "vocab",
-      "surface": "乾杯",
-      "reading": "かんぱい",
-      "label_ja": "乾杯",
-      "label_vi": "chúc mừng",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:管理",
-      "type": "vocab",
-      "surface": "管理",
-      "reading": "かんり",
-      "label_ja": "管理",
-      "label_vi": "quản lý",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:関連",
-      "type": "vocab",
-      "surface": "関連",
-      "reading": "かんれん",
-      "label_ja": "関連",
-      "label_vi": "sự liên quan",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:機会",
-      "type": "vocab",
-      "surface": "機会",
-      "reading": "きかい",
-      "label_ja": "機会",
-      "label_vi": "cơ hội",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:効きめ",
-      "type": "vocab",
-      "surface": "効きめ",
-      "reading": "ききめ",
-      "label_ja": "効きめ",
-      "label_vi": "hiệu quả; công dụng",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:帰国",
-      "type": "vocab",
-      "surface": "帰国",
-      "reading": "きこく",
-      "label_ja": "帰国",
-      "label_vi": "Trở về Nhật Bản",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:記事",
-      "type": "vocab",
-      "surface": "記事",
-      "reading": "きじ",
-      "label_ja": "記事",
-      "label_vi": "bài báo",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:技術",
-      "type": "vocab",
-      "surface": "技術",
-      "reading": "ぎじゅつ",
-      "label_ja": "技術",
-      "label_vi": "công nghệ",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:期待",
-      "type": "vocab",
-      "surface": "期待",
-      "reading": "きたい",
-      "label_ja": "期待",
-      "label_vi": "mong đợi",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:07:帰宅",
-      "type": "vocab",
-      "surface": "帰宅",
-      "reading": "きたく",
-      "label_ja": "帰宅",
-      "label_vi": "về nhà",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json",
-        "entry_id": "n3_l07_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_07_nouns_general_1_0096_0111.json#vocab:n3_l07_s012"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_07.json"
     }

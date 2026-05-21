@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_88",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:88:Verbる_にも_Verb_れない",
+      "type": "grammar",
+      "surface": "Verbる にも Verb れない",
+      "reading": "",
+      "label_ja": "Verbる にも Verb れない",
+      "label_vi": "Dùng để nói dù muốn làm X cũng không thể làm được. Mẫu này nhấn mạnh tình thế mắc kẹt hoặc bất lực. Cấu trúc: Verb-volitional + にも + Verb-potential negative.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_18.json",
+        "entry_id": "Verbる にも Verb れない",
+        "key": "grammar/n1/grammar_n1_18.json#grammar:Verbる にも Verb れない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_88.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:88:～限りだ",
+      "type": "grammar",
+      "surface": "～限りだ",
+      "reading": "",
+      "label_ja": "～限りだ",
+      "label_vi": "Dùng để bộc lộ cảm xúc ở mức rất mạnh, thường là vui, buồn, tiếc, vinh dự. Có thể hiểu là “vô cùng”, “hết sức”. Cấu trúc: い-Adjective + 限りだ, な-Adjective + な/である + 限りだ, Noun + の + 限りだ.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～限りだ",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～限りだ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_88.json"
+    }
+  ]
+}

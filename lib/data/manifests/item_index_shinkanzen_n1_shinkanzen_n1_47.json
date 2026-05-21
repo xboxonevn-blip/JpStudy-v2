@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_47",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:47:Verb_たことにしてください",
+      "type": "grammar",
+      "surface": "Verb たことにしてください",
+      "reading": "",
+      "label_ja": "Verb たことにしてください",
+      "label_vi": "Dùng để yêu cầu người khác xem như một việc đã xảy ra hoặc chấp nhận một giả định. Có thể hiểu là “hãy coi như đã...”. Cấu trúc: Verb (past, casual) + ことにしてください.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb たことにしてください",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb たことにしてください"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_47.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:47:～となれば",
+      "type": "grammar",
+      "surface": "～となれば",
+      "reading": "",
+      "label_ja": "～となれば",
+      "label_vi": "Dùng để nói nếu tình huống đã đến mức X thì điều phía sau là tự nhiên hoặc cần thiết. Sắc thái giả định trang trọng. Cấu trúc: Verb-casual + となれば, い-Adjective + となれば, な-Adjective + だとなれば, Noun + だとなれば.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～となれば",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～となれば"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_47.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:47:Noun_に即した_Noun",
+      "type": "grammar",
+      "surface": "Noun に即した Noun",
+      "reading": "",
+      "label_ja": "Noun に即した Noun",
+      "label_vi": "Dùng để bổ nghĩa cho danh từ theo nghĩa “dựa trên”, “phù hợp với”, “bám sát” Noun. Mẫu này hay gặp trong văn bản chính sách, nghiên cứu hoặc hướng dẫn. Cấu trúc: Noun1 + に即した + Noun2.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun に即した Noun",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun に即した Noun"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_47.json"
+    }
+  ]
+}

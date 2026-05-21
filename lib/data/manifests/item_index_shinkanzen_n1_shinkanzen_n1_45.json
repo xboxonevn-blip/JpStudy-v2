@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_45",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:45:Verb_そばから",
+      "type": "grammar",
+      "surface": "Verb そばから",
+      "reading": "",
+      "label_ja": "Verb そばから",
+      "label_vi": "Dùng để nói ngay sau khi làm xong một việc thì việc khác xảy ra, thường là việc làm mất tác dụng của hành động trước. Hay mang sắc thái bực bội. Cấu trúc: Verb-ますstem + そばから.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb そばから",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb そばから"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_45.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:45:～となったら",
+      "type": "grammar",
+      "surface": "～となったら",
+      "reading": "",
+      "label_ja": "～となったら",
+      "label_vi": "Dùng để nói nếu sự việc chuyển thành tình huống X thì sẽ có kết quả hoặc phản ứng phía sau. Sắc thái gần với “một khi đã thành...”. Cấu trúc: Verb-casual + となったら / Noun + となったら.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～となったら",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～となったら"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_45.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:45:Noun_によらず",
+      "type": "grammar",
+      "surface": "Noun によらず",
+      "reading": "",
+      "label_ja": "Noun によらず",
+      "label_vi": "Dùng để nói không bị phụ thuộc hoặc không phân biệt theo Noun. Có thể hiểu là “bất kể”, “không kể”. Cấu trúc: Noun + によらず.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun によらず",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun によらず"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_45.json"
+    }
+  ]
+}

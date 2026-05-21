@@ -1,246 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_10",
   "items": [
     {
-      "item_id": "grammar:n3:shinkanzen_n3:10:〜によって",
+      "item_id": "grammar:n3:shinkanzen_n3:10:〜おかげで",
       "type": "grammar",
-      "surface": "〜によって",
+      "surface": "〜おかげで",
       "reading": "",
-      "label_ja": "〜によって",
-      "label_vi": "Diễn tả sự khác nhau tùy theo điều kiện hoặc chỉ phương tiện, tác nhân.",
+      "label_ja": "〜おかげで",
+      "label_vi": "Diễn tả nguyên nhân tốt dẫn đến kết quả tích cực. Thường mang sắc thái biết ơn hoặc đánh giá tốt.",
       "order": 1,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_10.json",
-        "entry_id": "〜によって",
-        "key": "grammar/n3/grammar_n3_10.json#grammar:〜によって"
+        "file": "grammar/n3/grammar_n3_11.json",
+        "entry_id": "〜おかげで",
+        "key": "grammar/n3/grammar_n3_11.json#grammar:〜おかげで"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:10:〜に対して",
+      "item_id": "grammar:n3:shinkanzen_n3:10:〜ようだ",
       "type": "grammar",
-      "surface": "〜に対して",
+      "surface": "〜ようだ",
       "reading": "",
-      "label_ja": "〜に対して",
-      "label_vi": "Diễn tả đối tượng hướng đến hoặc sự đối lập so sánh.",
+      "label_ja": "〜ようだ",
+      "label_vi": "Diễn tả suy đoán dựa trên quan sát, dấu hiệu cụ thể hoặc cách sự việc biểu hiện ra bên ngoài. Trang trọng và khách quan hơn みたいだ.",
       "order": 2,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_10.json",
-        "entry_id": "〜に対して",
-        "key": "grammar/n3/grammar_n3_10.json#grammar:〜に対して"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:10:〜ていく",
-      "type": "grammar",
-      "surface": "〜ていく",
-      "reading": "",
-      "label_ja": "〜ていく",
-      "label_vi": "Diễn tả sự biến đổi tiếp diễn từ hiện tại về sau.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_10.json",
-        "entry_id": "〜ていく",
-        "key": "grammar/n3/grammar_n3_10.json#grammar:〜ていく"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:10:〜に応じて",
-      "type": "grammar",
-      "surface": "〜に応じて",
-      "reading": "",
-      "label_ja": "〜に応じて",
-      "label_vi": "Diễn tả thay đổi tùy theo điều kiện hoặc đối tượng.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_10.json",
-        "entry_id": "〜に応じて",
-        "key": "grammar/n3/grammar_n3_10.json#grammar:〜に応じて"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:具合",
-      "type": "vocab",
-      "surface": "具合",
-      "reading": "ぐあい",
-      "label_ja": "具合",
-      "label_vi": "tình trạng",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:工夫",
-      "type": "vocab",
-      "surface": "工夫",
-      "reading": "くふう",
-      "label_ja": "工夫",
-      "label_vi": "Ngây thơ",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:区別",
-      "type": "vocab",
-      "surface": "区別",
-      "reading": "くべつ",
-      "label_ja": "区別",
-      "label_vi": "sự phân biệt",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:クリーニング",
-      "type": "vocab",
-      "surface": "クリーニング",
-      "reading": "",
-      "label_ja": "クリーニング",
-      "label_vi": "dọn dẹp",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:クリック",
-      "type": "vocab",
-      "surface": "クリック",
-      "reading": "",
-      "label_ja": "クリック",
-      "label_vi": "bấm vào",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:苦労",
-      "type": "vocab",
-      "surface": "苦労",
-      "reading": "くろう",
-      "label_ja": "苦労",
-      "label_vi": "khó khăn",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:経営",
-      "type": "vocab",
-      "surface": "経営",
-      "reading": "けいえい",
-      "label_ja": "経営",
-      "label_vi": "sự quản lý",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:敬語",
-      "type": "vocab",
-      "surface": "敬語",
-      "reading": "けいご",
-      "label_ja": "敬語",
-      "label_vi": "ngôn ngữ kính trọng",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:掲示",
-      "type": "vocab",
-      "surface": "掲示",
-      "reading": "けいじ",
-      "label_ja": "掲示",
-      "label_vi": "niêm yết; thông báo",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:景色",
-      "type": "vocab",
-      "surface": "景色",
-      "reading": "けしき",
-      "label_ja": "景色",
-      "label_vi": "phong cảnh",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:結果",
-      "type": "vocab",
-      "surface": "結果",
-      "reading": "けっか",
-      "label_ja": "結果",
-      "label_vi": "kết quả",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:10:決心",
-      "type": "vocab",
-      "surface": "決心",
-      "reading": "けっしん",
-      "label_ja": "決心",
-      "label_vi": "sự quyết tâm",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json",
-        "entry_id": "n3_l10_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_10_nouns_general_1_0144_0159.json#vocab:n3_l10_s012"
+        "file": "grammar/n3/grammar_n3_8.json",
+        "entry_id": "〜ようだ",
+        "key": "grammar/n3/grammar_n3_8.json#grammar:〜ようだ"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_10.json"
     }

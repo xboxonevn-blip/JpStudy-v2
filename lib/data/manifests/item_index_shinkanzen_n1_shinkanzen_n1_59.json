@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_59",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:59:Verb_ないではおかない",
+      "type": "grammar",
+      "surface": "Verb ないではおかない",
+      "reading": "",
+      "label_ja": "Verb ないではおかない",
+      "label_vi": "Dùng để nói điều gì chắc chắn sẽ khiến một hành động hoặc phản ứng xảy ra; không thể để yên mà không làm. Cấu trúc: Verb-ない form + ではおかない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb ないではおかない",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb ないではおかない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_59.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:59:～なくはない",
+      "type": "grammar",
+      "surface": "～なくはない",
+      "reading": "",
+      "label_ja": "～なくはない",
+      "label_vi": "Dùng để nói không phải là hoàn toàn không X; vẫn có một mức độ hoặc khả năng nhất định. Sắc thái dè dặt, không khẳng định mạnh. Cấu trúc: Verb-ないform + なくはない, い-Adjective－い + くはない, な-Adjective + ではなくはない, Noun + ではなくはない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～なくはない",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～なくはない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_59.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:59:Noun_のいかんによっては",
+      "type": "grammar",
+      "surface": "Noun のいかんによっては",
+      "reading": "",
+      "label_ja": "Noun のいかんによっては",
+      "label_vi": "Dùng để nói tùy vào Noun mà có thể xảy ra một kết quả khác, thường là kết quả đáng chú ý hoặc cần lưu ý. Cấu trúc: Noun + のいかんによっては.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "Noun のいかんによっては",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:Noun のいかんによっては"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_59.json"
+    }
+  ]
+}

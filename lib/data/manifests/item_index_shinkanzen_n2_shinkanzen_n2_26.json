@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n2",
+  "lesson_id": "shinkanzen_n2_26",
+  "items": [
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:26:～ではないか",
+      "type": "grammar",
+      "surface": "～ではないか",
+      "reading": "",
+      "label_ja": "～ではないか",
+      "label_vi": "Dùng ở cuối câu để nhấn mạnh ý kiến hoặc đặt câu hỏi tu từ, hàm ý người nói cho rằng điều đó đúng. Có thể hiểu là “chẳng phải là... sao?”, “đúng không?”. Cấu trúc: Noun + ではないか / い-Adjective + ではないか / な-Adjective + ではないか / Verb-casual + ではないか.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_12.json",
+        "entry_id": "～ではないか",
+        "key": "grammar/n2/grammar_n2_12.json#grammar:～ではないか"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_26.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:26:～そうにない",
+      "type": "grammar",
+      "surface": "～そうにない",
+      "reading": "",
+      "label_ja": "～そうにない",
+      "label_vi": "Dùng khi nhìn tình hình hiện tại và thấy một việc có vẻ khó xảy ra. Có thể hiểu là “có vẻ không...”, “không chắc sẽ...”. Cấu trúc: Verb-stem + そうにない / い-Adjective (drop い) + そうにない / な-Adjective + そうにない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_9.json",
+        "entry_id": "～そうにない",
+        "key": "grammar/n2/grammar_n2_9.json#grammar:～そうにない"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_26.json"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_01",
   "items": [
@@ -20,227 +20,17 @@
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:01:〜ようにする",
+      "item_id": "grammar:n3:shinkanzen_n3:01:〜はずがない",
       "type": "grammar",
-      "surface": "〜ようにする",
+      "surface": "〜はずがない",
       "reading": "",
-      "label_ja": "〜ようにする",
-      "label_vi": "Diễn tả nỗ lực duy trì một thói quen hoặc cố tránh điều gì đó.",
+      "label_ja": "〜はずがない",
+      "label_vi": "Phủ định mạnh một khả năng dựa trên lý lẽ.",
       "order": 2,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_1.json",
-        "entry_id": "〜ようにする",
-        "key": "grammar/n3/grammar_n3_1.json#grammar:〜ようにする"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:01:〜つもりだ",
-      "type": "grammar",
-      "surface": "〜つもりだ",
-      "reading": "",
-      "label_ja": "〜つもりだ",
-      "label_vi": "Diễn tả dự định hoặc ý định của người nói.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_1.json",
-        "entry_id": "〜つもりだ",
-        "key": "grammar/n3/grammar_n3_1.json#grammar:〜つもりだ"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:01:〜ことにしている",
-      "type": "grammar",
-      "surface": "〜ことにしている",
-      "reading": "",
-      "label_ja": "〜ことにしている",
-      "label_vi": "Diễn tả thói quen do bản thân quyết định duy trì.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_1.json",
-        "entry_id": "〜ことにしている",
-        "key": "grammar/n3/grammar_n3_1.json#grammar:〜ことにしている"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:愛",
-      "type": "vocab",
-      "surface": "愛",
-      "reading": "あい",
-      "label_ja": "愛",
-      "label_vi": "yêu",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:愛情",
-      "type": "vocab",
-      "surface": "愛情",
-      "reading": "あいじょう",
-      "label_ja": "愛情",
-      "label_vi": "yêu",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:アイデア_アイディア",
-      "type": "vocab",
-      "surface": "アイデア/アイディア",
-      "reading": "",
-      "label_ja": "アイデア/アイディア",
-      "label_vi": "ý tưởng/ý tưởng",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:握手",
-      "type": "vocab",
-      "surface": "握手",
-      "reading": "あくしゅ",
-      "label_ja": "握手",
-      "label_vi": "cái bắt tay",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:アクセス",
-      "type": "vocab",
-      "surface": "アクセス",
-      "reading": "",
-      "label_ja": "アクセス",
-      "label_vi": "truy cập",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:アクセント",
-      "type": "vocab",
-      "surface": "アクセント",
-      "reading": "",
-      "label_ja": "アクセント",
-      "label_vi": "giọng",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:あちらこちら",
-      "type": "vocab",
-      "surface": "あちらこちら",
-      "reading": "",
-      "label_ja": "あちらこちら",
-      "label_vi": "ở đây và ở đó",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:集まり",
-      "type": "vocab",
-      "surface": "集まり",
-      "reading": "あつまり",
-      "label_ja": "集まり",
-      "label_vi": "tụ tập",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:宛名",
-      "type": "vocab",
-      "surface": "宛名",
-      "reading": "あてな",
-      "label_ja": "宛名",
-      "label_vi": "Địa chỉ",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:後片付け",
-      "type": "vocab",
-      "surface": "後片付け",
-      "reading": "あとかたづけ",
-      "label_ja": "後片付け",
-      "label_vi": "Dọn dẹp sau khi chính bạn",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:アドバイス",
-      "type": "vocab",
-      "surface": "アドバイス",
-      "reading": "",
-      "label_ja": "アドバイス",
-      "label_vi": "khuyên bảo",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:01:穴",
-      "type": "vocab",
-      "surface": "穴",
-      "reading": "あな",
-      "label_ja": "穴",
-      "label_vi": "lỗ; hốc",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json",
-        "entry_id": "n3_l01_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_01_nouns_general_1_0001_0015.json#vocab:n3_l01_s012"
+        "file": "grammar/n3/grammar_n3_5.json",
+        "entry_id": "〜はずがない",
+        "key": "grammar/n3/grammar_n3_5.json#grammar:〜はずがない"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_01.json"
     }

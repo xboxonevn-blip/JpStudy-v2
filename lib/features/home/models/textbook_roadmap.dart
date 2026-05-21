@@ -180,10 +180,10 @@ TextbookRoadmap textbookRoadmapForLevel(StudyLevel level) {
           durationKey: 'upper_vocab_hours',
           resources: [
             TextbookRoadmapResource(
-              key: 'shin_kanzen_n1_vocab',
-              destination: AppRouteLocation.shinkanzenCatalog(
+              key: 'mimikara_n1_vocab',
+              destination: AppRouteLocation.mimikaraCatalog(
                 levelCode: 'N1',
-                title: 'Shin Kanzen Master N1',
+                title: 'Mimikara N1',
               ),
             ),
             TextbookRoadmapResource(
@@ -248,10 +248,10 @@ TextbookRoadmap _upperRoadmap({
         durationKey: 'upper_vocab_hours',
         resources: [
           TextbookRoadmapResource(
-            key: 'shin_kanzen_${levelCode}_vocab',
-            destination: AppRouteLocation.shinkanzenCatalog(
+            key: 'mimikara_${levelCode}_vocab',
+            destination: AppRouteLocation.mimikaraCatalog(
               levelCode: level.shortLabel,
-              title: 'Shin Kanzen Master ${level.shortLabel}',
+              title: 'Mimikara ${level.shortLabel}',
             ),
           ),
           TextbookRoadmapResource(

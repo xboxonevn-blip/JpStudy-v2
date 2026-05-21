@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_62",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:62:Verb_ないものだろうか",
+      "type": "grammar",
+      "surface": "Verb ないものだろうか",
+      "reading": "",
+      "label_ja": "Verb ないものだろうか",
+      "label_vi": "Dùng để bày tỏ mong muốn hoặc trăn trở “không có cách nào để... sao?”. Thường dùng khi người nói hy vọng có giải pháp. Cấu trúc: Verb-negative (often negative potential) + ものだろうか.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb ないものだろうか",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb ないものだろうか"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_62.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:62:～には及ばない",
+      "type": "grammar",
+      "surface": "～には及ばない",
+      "reading": "",
+      "label_ja": "～には及ばない",
+      "label_vi": "Dùng để nói không cần phải làm đến mức X, hoặc X là không cần thiết. Sắc thái trang trọng, thường dùng trong phản hồi lịch sự. Cấu trúc: Verb-dictionary form + には及ばない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～には及ばない",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～には及ばない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_62.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:62:Noun_のことだから",
+      "type": "grammar",
+      "surface": "Noun のことだから",
+      "reading": "",
+      "label_ja": "Noun のことだから",
+      "label_vi": "Dùng khi dự đoán hoặc giải thích dựa trên tính cách, thói quen hoặc đặc điểm đã biết của Noun. Có thể hiểu là “vì là Noun nên hẳn là...”. Cấu trúc: Noun + のことだから.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun のことだから",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun のことだから"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_62.json"
+    }
+  ]
+}

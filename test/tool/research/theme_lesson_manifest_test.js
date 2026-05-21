@@ -129,8 +129,6 @@ test('requiredTextbookCatalog covers the phase-one required tracks', () => {
       'hajimete_tango_n3',
       'hajimete_tango_n2',
       'hajimete_tango_n1',
-      'mimikara_n5',
-      'mimikara_n4',
       'mimikara_n3',
       'mimikara_n2',
       'mimikara_n1',
@@ -140,6 +138,8 @@ test('requiredTextbookCatalog covers the phase-one required tracks', () => {
     ].every((id) => ids.includes(id)),
     true,
   );
+  assert.equal(ids.includes('mimikara_n5'), false);
+  assert.equal(ids.includes('mimikara_n4'), false);
 });
 
 test('buildManifests groups flat content without losing legacy items', () => {

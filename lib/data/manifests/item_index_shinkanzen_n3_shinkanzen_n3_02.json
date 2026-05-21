@@ -1,246 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_02",
   "items": [
     {
-      "item_id": "grammar:n3:shinkanzen_n3:02:〜ことになる",
+      "item_id": "grammar:n3:shinkanzen_n3:02:〜ようにする",
       "type": "grammar",
-      "surface": "〜ことになる",
+      "surface": "〜ようにする",
       "reading": "",
-      "label_ja": "〜ことになる",
-      "label_vi": "Diễn tả quyết định do tổ chức, quy định hoặc hoàn cảnh đưa ra.",
+      "label_ja": "〜ようにする",
+      "label_vi": "Diễn tả nỗ lực duy trì một thói quen hoặc cố tránh điều gì đó.",
       "order": 1,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_2.json",
-        "entry_id": "〜ことになる",
-        "key": "grammar/n3/grammar_n3_2.json#grammar:〜ことになる"
+        "file": "grammar/n3/grammar_n3_1.json",
+        "entry_id": "〜ようにする",
+        "key": "grammar/n3/grammar_n3_1.json#grammar:〜ようにする"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:02:〜ようになる",
+      "item_id": "grammar:n3:shinkanzen_n3:02:〜すぎる",
       "type": "grammar",
-      "surface": "〜ようになる",
+      "surface": "〜すぎる",
       "reading": "",
-      "label_ja": "〜ようになる",
-      "label_vi": "Diễn tả sự thay đổi về khả năng, thói quen hoặc trạng thái.",
+      "label_ja": "〜すぎる",
+      "label_vi": "Diễn tả mức độ vượt quá giới hạn thích hợp: quá nhiều, quá mức.",
       "order": 2,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_2.json",
-        "entry_id": "〜ようになる",
-        "key": "grammar/n3/grammar_n3_2.json#grammar:〜ようになる"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:02:〜ことになっている",
-      "type": "grammar",
-      "surface": "〜ことになっている",
-      "reading": "",
-      "label_ja": "〜ことになっている",
-      "label_vi": "Diễn tả quy tắc, lịch trình hoặc sự sắp xếp đã được định sẵn.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_2.json",
-        "entry_id": "〜ことになっている",
-        "key": "grammar/n3/grammar_n3_2.json#grammar:〜ことになっている"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:02:〜ようになっている",
-      "type": "grammar",
-      "surface": "〜ようになっている",
-      "reading": "",
-      "label_ja": "〜ようになっている",
-      "label_vi": "Diễn tả cơ chế hoặc trạng thái được thiết kế sẵn.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_2.json",
-        "entry_id": "〜ようになっている",
-        "key": "grammar/n3/grammar_n3_2.json#grammar:〜ようになっている"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:余り",
-      "type": "vocab",
-      "surface": "余り",
-      "reading": "あまり",
-      "label_ja": "余り",
-      "label_vi": "phần còn lại; số dư",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:アンケート",
-      "type": "vocab",
-      "surface": "アンケート",
-      "reading": "",
-      "label_ja": "アンケート",
-      "label_vi": "bảng câu hỏi",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:いたずら",
-      "type": "vocab",
-      "surface": "いたずら",
-      "reading": "",
-      "label_ja": "いたずら",
-      "label_vi": "sự tinh quái",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:一部",
-      "type": "vocab",
-      "surface": "一部",
-      "reading": "いちぶ",
-      "label_ja": "一部",
-      "label_vi": "phần",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:一瞬",
-      "type": "vocab",
-      "surface": "一瞬",
-      "reading": "いっしゅん",
-      "label_ja": "一瞬",
-      "label_vi": "trong giây lát",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:違反",
-      "type": "vocab",
-      "surface": "違反",
-      "reading": "いはん",
-      "label_ja": "違反",
-      "label_vi": "vi phạm",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:イベント",
-      "type": "vocab",
-      "surface": "イベント",
-      "reading": "",
-      "label_ja": "イベント",
-      "label_vi": "sự kiện",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:イメージ",
-      "type": "vocab",
-      "surface": "イメージ",
-      "reading": "",
-      "label_ja": "イメージ",
-      "label_vi": "hình ảnh",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:印刷",
-      "type": "vocab",
-      "surface": "印刷",
-      "reading": "いんさつ",
-      "label_ja": "印刷",
-      "label_vi": "in ấn",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:印象",
-      "type": "vocab",
-      "surface": "印象",
-      "reading": "いんしょう",
-      "label_ja": "印象",
-      "label_vi": "ấn tượng",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:インタビュー",
-      "type": "vocab",
-      "surface": "インタビュー",
-      "reading": "",
-      "label_ja": "インタビュー",
-      "label_vi": "phỏng vấn",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:02:うそ",
-      "type": "vocab",
-      "surface": "うそ",
-      "reading": "",
-      "label_ja": "うそ",
-      "label_vi": "nói dối",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json",
-        "entry_id": "n3_l02_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_02_nouns_general_1_0016_0031.json#vocab:n3_l02_s012"
+        "file": "grammar/n3/grammar_n3_6.json",
+        "entry_id": "〜すぎる",
+        "key": "grammar/n3/grammar_n3_6.json#grammar:〜すぎる"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_02.json"
     }

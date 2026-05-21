@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_54",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:54:Verb_ては",
+      "type": "grammar",
+      "surface": "Verb ては",
+      "reading": "",
+      "label_ja": "Verb ては",
+      "label_vi": "Dùng để diễn tả một hành động lặp đi lặp lại rồi dẫn đến kết quả không mong muốn hoặc gây phiền. Có thể hiểu là “cứ mỗi lần... thì...”. Cấu trúc: Verb-て form + は.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb ては",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb ては"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_54.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:54:～と言わんばかりに",
+      "type": "grammar",
+      "surface": "～と言わんばかりに",
+      "reading": "",
+      "label_ja": "～と言わんばかりに",
+      "label_vi": "Dùng để mô tả hành động, thái độ hoặc vẻ mặt như thể đang nói ra một thông điệp nào đó, dù không nói trực tiếp. Cấu trúc: Verb-volitional + と言わんばかりに, い-Adjective + と言わんばかりに, な-Adjective + だと言わんばかりに, Noun + だと言わんばかりに.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "～と言わんばかりに",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:～と言わんばかりに"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_54.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:54:Noun_+_ぬいて（nuite)",
+      "type": "grammar",
+      "surface": "Noun + ぬいて（nuite)",
+      "reading": "",
+      "label_ja": "Noun + ぬいて（nuite)",
+      "label_vi": "Dùng để nói ngoại trừ Noun, không tính Noun vào phạm vi đang xét. Có thể hiểu là “không kể”, “trừ”. Cấu trúc: Noun + ぬいて.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "Noun + ぬいて（nuite)",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:Noun + ぬいて（nuite)"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_54.json"
+    }
+  ]
+}

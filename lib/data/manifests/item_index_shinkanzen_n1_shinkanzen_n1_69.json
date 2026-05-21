@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_69",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:69:Verb_ようか_Verbるまいか",
+      "type": "grammar",
+      "surface": "Verb ようか Verbるまいか",
+      "reading": "",
+      "label_ja": "Verb ようか Verbるまいか",
+      "label_vi": "Dùng để diễn tả sự phân vân có nên làm hay không làm một việc. Mẫu này trang trọng hơn cách nói しようかどうか. Cấu trúc: Verb-volitional form + か + Verb-volitional negative form (まい) + か.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_16.json",
+        "entry_id": "Verb ようか Verbるまいか",
+        "key": "grammar/n1/grammar_n1_16.json#grammar:Verb ようか Verbるまいか"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_69.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:69:～のは_Noun_ぐらいのものだ",
+      "type": "grammar",
+      "surface": "～のは Noun ぐらいのものだ",
+      "reading": "",
+      "label_ja": "～のは Noun ぐらいのものだ",
+      "label_vi": "Dùng để nói chỉ có Noun là đáng kể hoặc là trường hợp duy nhất, những thứ khác gần như không có. Có thể hiểu là “chỉ khoảng Noun mà thôi”. Cấu trúc: Verb-casual + のは + Noun + ぐらいのものだ, い-Adjective + のは + Noun + ぐらいのものだ, etc.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_24.json",
+        "entry_id": "～のは Noun ぐらいのものだ",
+        "key": "grammar/n1/grammar_n1_24.json#grammar:～のは Noun ぐらいのものだ"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_69.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:69:Noun_はおろか～まで",
+      "type": "grammar",
+      "surface": "Noun はおろか～まで",
+      "reading": "",
+      "label_ja": "Noun はおろか～まで",
+      "label_vi": "Dùng để nói không chỉ A mà đến cả B cũng vậy, trong đó B thường là mức độ xa hơn hoặc bất ngờ hơn. Cấu trúc: Noun1 + はおろか + Noun2 + まで.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun はおろか～まで",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun はおろか～まで"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_69.json"
+    }
+  ]
+}

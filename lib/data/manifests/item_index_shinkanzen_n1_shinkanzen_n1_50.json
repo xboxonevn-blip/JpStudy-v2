@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_50",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:50:Verb_たら最後",
+      "type": "grammar",
+      "surface": "Verb たら最後",
+      "reading": "",
+      "label_ja": "Verb たら最後",
+      "label_vi": "Dùng để nói một khi đã làm X thì tình huống sẽ chuyển sang hướng không thể cứu vãn, thường là tiêu cực. Cấu trúc: Verb-た form + ら最後.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb たら最後",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb たら最後"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_50.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:50:～とみえて",
+      "type": "grammar",
+      "surface": "～とみえて",
+      "reading": "",
+      "label_ja": "～とみえて",
+      "label_vi": "Dùng để suy đoán dựa trên dấu hiệu quan sát được: “có vẻ như”, “chắc là”. Mẫu này thường nêu nguyên nhân ngay trước một hiện tượng. Cấu trúc: Verb-casual + とみえて, い-Adjective + とみえて, な-Adjective + だとみえて, Noun + だとみえて.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "～とみえて",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:～とみえて"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_50.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:50:Noun_に限ったことではない",
+      "type": "grammar",
+      "surface": "Noun に限ったことではない",
+      "reading": "",
+      "label_ja": "Noun に限ったことではない",
+      "label_vi": "Dùng để nói vấn đề hoặc hiện tượng không chỉ giới hạn ở Noun. Có thể hiểu là “không riêng gì Noun”. Cấu trúc: Noun + に限ったことではない.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "Noun に限ったことではない",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:Noun に限ったことではない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_50.json"
+    }
+  ]
+}

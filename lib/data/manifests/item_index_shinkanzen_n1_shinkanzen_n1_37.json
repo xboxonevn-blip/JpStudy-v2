@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_37",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:37:Verb_させられる",
+      "type": "grammar",
+      "surface": "Verb させられる",
+      "reading": "",
+      "label_ja": "Verb させられる",
+      "label_vi": "Dùng để diễn tả bị ép, bị bắt hoặc bị khiến phải làm một việc. Đây là dạng sai khiến bị động của động từ. Cấu trúc: Verb-casual (non-past) + させられる.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Verb させられる",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Verb させられる"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_37.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:37:～といったらありゃしない",
+      "type": "grammar",
+      "surface": "～といったらありゃしない",
+      "reading": "",
+      "label_ja": "～といったらありゃしない",
+      "label_vi": "Dùng trong văn nói để nhấn mạnh mức độ cực đoan: “khỏi phải nói là... đến mức nào”. Sắc thái thân mật hơn ありはしない. Cấu trúc: Verb-casual + といったらありゃしない / い-Adjective + といったらありゃしない / な-Adjective + だ + といったらありゃしない / Noun + だ + といったらありゃしない.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～といったらありゃしない",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～といったらありゃしない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_37.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:37:Noun_にあっては",
+      "type": "grammar",
+      "surface": "Noun にあっては",
+      "reading": "",
+      "label_ja": "Noun にあっては",
+      "label_vi": "Dùng để nêu một hoàn cảnh, môi trường hoặc lập trường đặc biệt, trong đó điều phía sau xảy ra hoặc được xem là đúng. Sắc thái trang trọng, văn viết. Cấu trúc: Noun + にあっては.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun にあっては",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun にあっては"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_37.json"
+    }
+  ]
+}

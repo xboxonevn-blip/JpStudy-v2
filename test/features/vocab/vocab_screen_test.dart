@@ -24,7 +24,6 @@ import 'package:jpstudy/features/vocab/screens/hajimete_chapter_detail_screen.da
 import 'package:jpstudy/features/vocab/screens/hajimete_chapter_detail_support.dart';
 import 'package:jpstudy/features/vocab/screens/minna_lesson_catalog_screen.dart';
 import 'package:jpstudy/features/vocab/screens/mimikara_unit_catalog_screen.dart';
-import 'package:jpstudy/features/vocab/screens/shinkanzen_lesson_catalog_screen.dart';
 import 'package:jpstudy/features/vocab/screens/term_review_screen.dart';
 import 'package:jpstudy/features/flashcards/widgets/enhanced_flashcard.dart';
 import 'package:jpstudy/features/write/services/kanji_stroke_template_service.dart';
@@ -334,14 +333,6 @@ Widget _buildRouterScreen({
         ),
       ),
       GoRoute(
-        path: '/vocab/shinkanzen',
-        builder: (context, state) => ShinkanzenLessonCatalogScreen(
-          levelCode: state.uri.queryParameters['level'] ?? 'N3',
-          title: state.uri.queryParameters['title'] ?? 'Shin Kanzen Master',
-          subtitle: state.uri.queryParameters['subtitle'],
-        ),
-      ),
-      GoRoute(
         path: '/vocab/mimikara',
         builder: (context, state) => MimikaraUnitCatalogScreen(
           levelCode: state.uri.queryParameters['level'] ?? 'N5',
@@ -527,19 +518,14 @@ void main() {
       for (final key in const [
         'n5_core',
         'n5_companion',
-        'n5_mimikara',
         'n4_core',
         'n4_companion',
-        'n4_mimikara',
         'n3_core',
         'n3_companion',
-        'n3_mimikara',
         'n2_core',
         'n2_companion',
-        'n2_mimikara',
         'n1_core',
         'n1_companion',
-        'n1_mimikara',
       ]) {
         final dynamic program = programsByKey[key];
         expect(program, isNotNull, reason: key);
@@ -587,13 +573,10 @@ void main() {
       for (final key in const [
         'n3_core',
         'n3_companion',
-        'n3_mimikara',
         'n2_core',
         'n2_companion',
-        'n2_mimikara',
         'n1_core',
         'n1_companion',
-        'n1_mimikara',
       ]) {
         final dynamic program = programsByKey[key];
         expect(program, isNotNull, reason: key);
@@ -988,7 +971,7 @@ void main() {
     expect(find.byType(HajimeteChapterCatalogScreen), findsOneWidget);
   });
 
-  testWidgets('Shin Kanzen companion cards show the canonical N3 track', (
+  testWidgets('Mimikara companion cards show the canonical N3 track', (
     tester,
   ) async {
     final repo = _FakeVocabLessonRepository(
@@ -1011,12 +994,12 @@ void main() {
 
     final companionCard = find.byKey(const ValueKey('program_n3_n3_companion'));
     expect(
-      find.descendant(of: companionCard, matching: find.text('Shin Kanzen')),
-      findsOneWidget,
+      find.descendant(of: companionCard, matching: find.text('Mimikara')),
+      findsWidgets,
     );
   });
 
-  testWidgets('Shin Kanzen companion tracks open indexed non-empty catalogs', (
+  testWidgets('Mimikara companion tracks open indexed non-empty catalogs', (
     tester,
   ) async {
     final repo = _FakeVocabLessonRepository(
@@ -1033,10 +1016,18 @@ void main() {
       (
         level: StudyLevel.n3,
         cardKey: 'program_n3_n3_companion',
-        text: 'Nouns - General 1',
+        text: 'Unit 01',
       ),
-      (level: StudyLevel.n2, cardKey: 'program_n2_n2_companion', text: '1-74'),
-      (level: StudyLevel.n1, cardKey: 'program_n1_n1_companion', text: '1-140'),
+      (
+        level: StudyLevel.n2,
+        cardKey: 'program_n2_n2_companion',
+        text: 'Unit 01',
+      ),
+      (
+        level: StudyLevel.n1,
+        cardKey: 'program_n1_n1_companion',
+        text: 'Unit 01',
+      ),
     ]) {
       await tester.pumpWidget(
         _buildRouterScreen(repo: repo, level: caseData.level),
@@ -1048,7 +1039,7 @@ void main() {
       await tester.tap(find.byKey(ValueKey(caseData.cardKey)));
       await _pumpCatalog(tester);
 
-      expect(find.byType(ShinkanzenLessonCatalogScreen), findsOneWidget);
+      expect(find.byType(MimikaraUnitCatalogScreen), findsOneWidget);
       expect(find.textContaining(caseData.text), findsWidgets);
       expect(find.text('0 terms'), findsNothing);
     }

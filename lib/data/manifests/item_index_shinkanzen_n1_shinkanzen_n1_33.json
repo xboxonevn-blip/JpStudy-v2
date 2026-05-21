@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_33",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:33:Noun_+_前提で",
+      "type": "grammar",
+      "surface": "Noun + 前提で",
+      "reading": "",
+      "label_ja": "Noun + 前提で",
+      "label_vi": "Dùng để nêu điều kiện hoặc giả định cần có trước khi thực hiện việc phía sau. Có thể hiểu là “với tiền đề là”. Cấu trúc: Noun + 前提で.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Noun + 前提で",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Noun + 前提で"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_33.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:33:～とあって",
+      "type": "grammar",
+      "surface": "～とあって",
+      "reading": "",
+      "label_ja": "～とあって",
+      "label_vi": "Dùng để nêu một hoàn cảnh đặc biệt làm nguyên nhân cho tình trạng phía sau. Thường gặp trong tin tức, mô tả sự kiện. Cấu trúc: Noun + とあって / (Sometimes Verb + とあって, depending on context).",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～とあって",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～とあって"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_33.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:33:Noun_+_ならでは",
+      "type": "grammar",
+      "surface": "Noun + ならでは",
+      "reading": "",
+      "label_ja": "Noun + ならでは",
+      "label_vi": "Dùng để nói một đặc điểm, giá trị hoặc khả năng chỉ có ở Noun. Có thể hiểu là “chỉ Noun mới có”, “đúng chất Noun”. Cấu trúc: Noun + ならでは.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun + ならでは",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun + ならでは"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_33.json"
+    }
+  ]
+}

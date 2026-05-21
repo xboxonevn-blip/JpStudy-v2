@@ -1,331 +1,1063 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n1",
+  "source_policy": "Corrected Sprint 1 A0 architecture: Shin Kanzen Master Bunpou is grammar-only. Existing JpStudy grammar points are distributed as scaffolding until publisher-title review.",
   "lessons": [
     {
       "lesson_id": "shinkanzen_n1_01",
-      "lesson_number_ja": "N1 01",
-      "lesson_number_vi": "Mục 1",
-      "theme_ja": "grammar_n1_1",
-      "theme_vi": "grammar_n1_1",
+      "lesson_number_ja": "N1 文法 01",
+      "lesson_number_vi": "Mục văn pháp 1",
+      "theme_ja": "文法パターン 01",
+      "theme_vi": "Cụm mẫu ngữ pháp 1",
       "item_counts": {
-        "grammar": 9,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_02",
-      "lesson_number_ja": "N1 02",
-      "lesson_number_vi": "Mục 2",
-      "theme_ja": "grammar_n1_2",
-      "theme_vi": "grammar_n1_2",
+      "lesson_number_ja": "N1 文法 02",
+      "lesson_number_vi": "Mục văn pháp 2",
+      "theme_ja": "文法パターン 02",
+      "theme_vi": "Cụm mẫu ngữ pháp 2",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_03",
-      "lesson_number_ja": "N1 03",
-      "lesson_number_vi": "Mục 3",
-      "theme_ja": "grammar_n1_3",
-      "theme_vi": "grammar_n1_3",
+      "lesson_number_ja": "N1 文法 03",
+      "lesson_number_vi": "Mục văn pháp 3",
+      "theme_ja": "文法パターン 03",
+      "theme_vi": "Cụm mẫu ngữ pháp 3",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_04",
-      "lesson_number_ja": "N1 04",
-      "lesson_number_vi": "Mục 4",
-      "theme_ja": "grammar_n1_4",
-      "theme_vi": "grammar_n1_4",
+      "lesson_number_ja": "N1 文法 04",
+      "lesson_number_vi": "Mục văn pháp 4",
+      "theme_ja": "文法パターン 04",
+      "theme_vi": "Cụm mẫu ngữ pháp 4",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_05",
-      "lesson_number_ja": "N1 05",
-      "lesson_number_vi": "Mục 5",
-      "theme_ja": "grammar_n1_5",
-      "theme_vi": "grammar_n1_5",
+      "lesson_number_ja": "N1 文法 05",
+      "lesson_number_vi": "Mục văn pháp 5",
+      "theme_ja": "文法パターン 05",
+      "theme_vi": "Cụm mẫu ngữ pháp 5",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_06",
-      "lesson_number_ja": "N1 06",
-      "lesson_number_vi": "Mục 6",
-      "theme_ja": "grammar_n1_6",
-      "theme_vi": "grammar_n1_6",
+      "lesson_number_ja": "N1 文法 06",
+      "lesson_number_vi": "Mục văn pháp 6",
+      "theme_ja": "文法パターン 06",
+      "theme_vi": "Cụm mẫu ngữ pháp 6",
       "item_counts": {
-        "grammar": 9,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_07",
-      "lesson_number_ja": "N1 07",
-      "lesson_number_vi": "Mục 7",
-      "theme_ja": "grammar_n1_7",
-      "theme_vi": "grammar_n1_7",
+      "lesson_number_ja": "N1 文法 07",
+      "lesson_number_vi": "Mục văn pháp 7",
+      "theme_ja": "文法パターン 07",
+      "theme_vi": "Cụm mẫu ngữ pháp 7",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_08",
-      "lesson_number_ja": "N1 08",
-      "lesson_number_vi": "Mục 8",
-      "theme_ja": "grammar_n1_8",
-      "theme_vi": "grammar_n1_8",
+      "lesson_number_ja": "N1 文法 08",
+      "lesson_number_vi": "Mục văn pháp 8",
+      "theme_ja": "文法パターン 08",
+      "theme_vi": "Cụm mẫu ngữ pháp 8",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_09",
-      "lesson_number_ja": "N1 09",
-      "lesson_number_vi": "Mục 9",
-      "theme_ja": "grammar_n1_9",
-      "theme_vi": "grammar_n1_9",
+      "lesson_number_ja": "N1 文法 09",
+      "lesson_number_vi": "Mục văn pháp 9",
+      "theme_ja": "文法パターン 09",
+      "theme_vi": "Cụm mẫu ngữ pháp 9",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_10",
-      "lesson_number_ja": "N1 10",
-      "lesson_number_vi": "Mục 10",
-      "theme_ja": "grammar_n1_10",
-      "theme_vi": "grammar_n1_10",
+      "lesson_number_ja": "N1 文法 10",
+      "lesson_number_vi": "Mục văn pháp 10",
+      "theme_ja": "文法パターン 10",
+      "theme_vi": "Cụm mẫu ngữ pháp 10",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_11",
-      "lesson_number_ja": "N1 11",
-      "lesson_number_vi": "Mục 11",
-      "theme_ja": "grammar_n1_11",
-      "theme_vi": "grammar_n1_11",
+      "lesson_number_ja": "N1 文法 11",
+      "lesson_number_vi": "Mục văn pháp 11",
+      "theme_ja": "文法パターン 11",
+      "theme_vi": "Cụm mẫu ngữ pháp 11",
       "item_counts": {
-        "grammar": 9,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_12",
-      "lesson_number_ja": "N1 12",
-      "lesson_number_vi": "Mục 12",
-      "theme_ja": "grammar_n1_12",
-      "theme_vi": "grammar_n1_12",
+      "lesson_number_ja": "N1 文法 12",
+      "lesson_number_vi": "Mục văn pháp 12",
+      "theme_ja": "文法パターン 12",
+      "theme_vi": "Cụm mẫu ngữ pháp 12",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_13",
-      "lesson_number_ja": "N1 13",
-      "lesson_number_vi": "Mục 13",
-      "theme_ja": "grammar_n1_13",
-      "theme_vi": "grammar_n1_13",
+      "lesson_number_ja": "N1 文法 13",
+      "lesson_number_vi": "Mục văn pháp 13",
+      "theme_ja": "文法パターン 13",
+      "theme_vi": "Cụm mẫu ngữ pháp 13",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_14",
-      "lesson_number_ja": "N1 14",
-      "lesson_number_vi": "Mục 14",
-      "theme_ja": "grammar_n1_14",
-      "theme_vi": "grammar_n1_14",
+      "lesson_number_ja": "N1 文法 14",
+      "lesson_number_vi": "Mục văn pháp 14",
+      "theme_ja": "文法パターン 14",
+      "theme_vi": "Cụm mẫu ngữ pháp 14",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_15",
-      "lesson_number_ja": "N1 15",
-      "lesson_number_vi": "Mục 15",
-      "theme_ja": "grammar_n1_15",
-      "theme_vi": "grammar_n1_15",
+      "lesson_number_ja": "N1 文法 15",
+      "lesson_number_vi": "Mục văn pháp 15",
+      "theme_ja": "文法パターン 15",
+      "theme_vi": "Cụm mẫu ngữ pháp 15",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_16",
-      "lesson_number_ja": "N1 16",
-      "lesson_number_vi": "Mục 16",
-      "theme_ja": "grammar_n1_16",
-      "theme_vi": "grammar_n1_16",
+      "lesson_number_ja": "N1 文法 16",
+      "lesson_number_vi": "Mục văn pháp 16",
+      "theme_ja": "文法パターン 16",
+      "theme_vi": "Cụm mẫu ngữ pháp 16",
       "item_counts": {
-        "grammar": 9,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_17",
-      "lesson_number_ja": "N1 17",
-      "lesson_number_vi": "Mục 17",
-      "theme_ja": "grammar_n1_17",
-      "theme_vi": "grammar_n1_17",
+      "lesson_number_ja": "N1 文法 17",
+      "lesson_number_vi": "Mục văn pháp 17",
+      "theme_ja": "文法パターン 17",
+      "theme_vi": "Cụm mẫu ngữ pháp 17",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_18",
-      "lesson_number_ja": "N1 18",
-      "lesson_number_vi": "Mục 18",
-      "theme_ja": "grammar_n1_18",
-      "theme_vi": "grammar_n1_18",
+      "lesson_number_ja": "N1 文法 18",
+      "lesson_number_vi": "Mục văn pháp 18",
+      "theme_ja": "文法パターン 18",
+      "theme_vi": "Cụm mẫu ngữ pháp 18",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_19",
-      "lesson_number_ja": "N1 19",
-      "lesson_number_vi": "Mục 19",
-      "theme_ja": "grammar_n1_19",
-      "theme_vi": "grammar_n1_19",
+      "lesson_number_ja": "N1 文法 19",
+      "lesson_number_vi": "Mục văn pháp 19",
+      "theme_ja": "文法パターン 19",
+      "theme_vi": "Cụm mẫu ngữ pháp 19",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_20",
-      "lesson_number_ja": "N1 20",
-      "lesson_number_vi": "Mục 20",
-      "theme_ja": "grammar_n1_20",
-      "theme_vi": "grammar_n1_20",
+      "lesson_number_ja": "N1 文法 20",
+      "lesson_number_vi": "Mục văn pháp 20",
+      "theme_ja": "文法パターン 20",
+      "theme_vi": "Cụm mẫu ngữ pháp 20",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_21",
-      "lesson_number_ja": "N1 21",
-      "lesson_number_vi": "Mục 21",
-      "theme_ja": "grammar_n1_21",
-      "theme_vi": "grammar_n1_21",
+      "lesson_number_ja": "N1 文法 21",
+      "lesson_number_vi": "Mục văn pháp 21",
+      "theme_ja": "文法パターン 21",
+      "theme_vi": "Cụm mẫu ngữ pháp 21",
       "item_counts": {
-        "grammar": 9,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_22",
-      "lesson_number_ja": "N1 22",
-      "lesson_number_vi": "Mục 22",
-      "theme_ja": "grammar_n1_22",
-      "theme_vi": "grammar_n1_22",
+      "lesson_number_ja": "N1 文法 22",
+      "lesson_number_vi": "Mục văn pháp 22",
+      "theme_ja": "文法パターン 22",
+      "theme_vi": "Cụm mẫu ngữ pháp 22",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_23",
-      "lesson_number_ja": "N1 23",
-      "lesson_number_vi": "Mục 23",
-      "theme_ja": "grammar_n1_23",
-      "theme_vi": "grammar_n1_23",
+      "lesson_number_ja": "N1 文法 23",
+      "lesson_number_vi": "Mục văn pháp 23",
+      "theme_ja": "文法パターン 23",
+      "theme_vi": "Cụm mẫu ngữ pháp 23",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_24",
-      "lesson_number_ja": "N1 24",
-      "lesson_number_vi": "Mục 24",
-      "theme_ja": "grammar_n1_24",
-      "theme_vi": "grammar_n1_24",
+      "lesson_number_ja": "N1 文法 24",
+      "lesson_number_vi": "Mục văn pháp 24",
+      "theme_ja": "文法パターン 24",
+      "theme_vi": "Cụm mẫu ngữ pháp 24",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 140
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
       "prerequisites": []
     },
     {
       "lesson_id": "shinkanzen_n1_25",
-      "lesson_number_ja": "N1 25",
-      "lesson_number_vi": "Mục 25",
-      "theme_ja": "grammar_n1_25",
-      "theme_vi": "grammar_n1_25",
+      "lesson_number_ja": "N1 文法 25",
+      "lesson_number_vi": "Mục văn pháp 25",
+      "theme_ja": "文法パターン 25",
+      "theme_vi": "Cụm mẫu ngữ pháp 25",
       "item_counts": {
-        "grammar": 10,
-        "vocab": 116
+        "grammar": 3
       },
-      "est_minutes": 30,
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_26",
+      "lesson_number_ja": "N1 文法 26",
+      "lesson_number_vi": "Mục văn pháp 26",
+      "theme_ja": "文法パターン 26",
+      "theme_vi": "Cụm mẫu ngữ pháp 26",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_27",
+      "lesson_number_ja": "N1 文法 27",
+      "lesson_number_vi": "Mục văn pháp 27",
+      "theme_ja": "文法パターン 27",
+      "theme_vi": "Cụm mẫu ngữ pháp 27",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_28",
+      "lesson_number_ja": "N1 文法 28",
+      "lesson_number_vi": "Mục văn pháp 28",
+      "theme_ja": "文法パターン 28",
+      "theme_vi": "Cụm mẫu ngữ pháp 28",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_29",
+      "lesson_number_ja": "N1 文法 29",
+      "lesson_number_vi": "Mục văn pháp 29",
+      "theme_ja": "文法パターン 29",
+      "theme_vi": "Cụm mẫu ngữ pháp 29",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_30",
+      "lesson_number_ja": "N1 文法 30",
+      "lesson_number_vi": "Mục văn pháp 30",
+      "theme_ja": "文法パターン 30",
+      "theme_vi": "Cụm mẫu ngữ pháp 30",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_31",
+      "lesson_number_ja": "N1 文法 31",
+      "lesson_number_vi": "Mục văn pháp 31",
+      "theme_ja": "文法パターン 31",
+      "theme_vi": "Cụm mẫu ngữ pháp 31",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_32",
+      "lesson_number_ja": "N1 文法 32",
+      "lesson_number_vi": "Mục văn pháp 32",
+      "theme_ja": "文法パターン 32",
+      "theme_vi": "Cụm mẫu ngữ pháp 32",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_33",
+      "lesson_number_ja": "N1 文法 33",
+      "lesson_number_vi": "Mục văn pháp 33",
+      "theme_ja": "文法パターン 33",
+      "theme_vi": "Cụm mẫu ngữ pháp 33",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_34",
+      "lesson_number_ja": "N1 文法 34",
+      "lesson_number_vi": "Mục văn pháp 34",
+      "theme_ja": "文法パターン 34",
+      "theme_vi": "Cụm mẫu ngữ pháp 34",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_35",
+      "lesson_number_ja": "N1 文法 35",
+      "lesson_number_vi": "Mục văn pháp 35",
+      "theme_ja": "文法パターン 35",
+      "theme_vi": "Cụm mẫu ngữ pháp 35",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_36",
+      "lesson_number_ja": "N1 文法 36",
+      "lesson_number_vi": "Mục văn pháp 36",
+      "theme_ja": "文法パターン 36",
+      "theme_vi": "Cụm mẫu ngữ pháp 36",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_37",
+      "lesson_number_ja": "N1 文法 37",
+      "lesson_number_vi": "Mục văn pháp 37",
+      "theme_ja": "文法パターン 37",
+      "theme_vi": "Cụm mẫu ngữ pháp 37",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_38",
+      "lesson_number_ja": "N1 文法 38",
+      "lesson_number_vi": "Mục văn pháp 38",
+      "theme_ja": "文法パターン 38",
+      "theme_vi": "Cụm mẫu ngữ pháp 38",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_39",
+      "lesson_number_ja": "N1 文法 39",
+      "lesson_number_vi": "Mục văn pháp 39",
+      "theme_ja": "文法パターン 39",
+      "theme_vi": "Cụm mẫu ngữ pháp 39",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_40",
+      "lesson_number_ja": "N1 文法 40",
+      "lesson_number_vi": "Mục văn pháp 40",
+      "theme_ja": "文法パターン 40",
+      "theme_vi": "Cụm mẫu ngữ pháp 40",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_41",
+      "lesson_number_ja": "N1 文法 41",
+      "lesson_number_vi": "Mục văn pháp 41",
+      "theme_ja": "文法パターン 41",
+      "theme_vi": "Cụm mẫu ngữ pháp 41",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_42",
+      "lesson_number_ja": "N1 文法 42",
+      "lesson_number_vi": "Mục văn pháp 42",
+      "theme_ja": "文法パターン 42",
+      "theme_vi": "Cụm mẫu ngữ pháp 42",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_43",
+      "lesson_number_ja": "N1 文法 43",
+      "lesson_number_vi": "Mục văn pháp 43",
+      "theme_ja": "文法パターン 43",
+      "theme_vi": "Cụm mẫu ngữ pháp 43",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_44",
+      "lesson_number_ja": "N1 文法 44",
+      "lesson_number_vi": "Mục văn pháp 44",
+      "theme_ja": "文法パターン 44",
+      "theme_vi": "Cụm mẫu ngữ pháp 44",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_45",
+      "lesson_number_ja": "N1 文法 45",
+      "lesson_number_vi": "Mục văn pháp 45",
+      "theme_ja": "文法パターン 45",
+      "theme_vi": "Cụm mẫu ngữ pháp 45",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_46",
+      "lesson_number_ja": "N1 文法 46",
+      "lesson_number_vi": "Mục văn pháp 46",
+      "theme_ja": "文法パターン 46",
+      "theme_vi": "Cụm mẫu ngữ pháp 46",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_47",
+      "lesson_number_ja": "N1 文法 47",
+      "lesson_number_vi": "Mục văn pháp 47",
+      "theme_ja": "文法パターン 47",
+      "theme_vi": "Cụm mẫu ngữ pháp 47",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_48",
+      "lesson_number_ja": "N1 文法 48",
+      "lesson_number_vi": "Mục văn pháp 48",
+      "theme_ja": "文法パターン 48",
+      "theme_vi": "Cụm mẫu ngữ pháp 48",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_49",
+      "lesson_number_ja": "N1 文法 49",
+      "lesson_number_vi": "Mục văn pháp 49",
+      "theme_ja": "文法パターン 49",
+      "theme_vi": "Cụm mẫu ngữ pháp 49",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_50",
+      "lesson_number_ja": "N1 文法 50",
+      "lesson_number_vi": "Mục văn pháp 50",
+      "theme_ja": "文法パターン 50",
+      "theme_vi": "Cụm mẫu ngữ pháp 50",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_51",
+      "lesson_number_ja": "N1 文法 51",
+      "lesson_number_vi": "Mục văn pháp 51",
+      "theme_ja": "文法パターン 51",
+      "theme_vi": "Cụm mẫu ngữ pháp 51",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_52",
+      "lesson_number_ja": "N1 文法 52",
+      "lesson_number_vi": "Mục văn pháp 52",
+      "theme_ja": "文法パターン 52",
+      "theme_vi": "Cụm mẫu ngữ pháp 52",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_53",
+      "lesson_number_ja": "N1 文法 53",
+      "lesson_number_vi": "Mục văn pháp 53",
+      "theme_ja": "文法パターン 53",
+      "theme_vi": "Cụm mẫu ngữ pháp 53",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_54",
+      "lesson_number_ja": "N1 文法 54",
+      "lesson_number_vi": "Mục văn pháp 54",
+      "theme_ja": "文法パターン 54",
+      "theme_vi": "Cụm mẫu ngữ pháp 54",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_55",
+      "lesson_number_ja": "N1 文法 55",
+      "lesson_number_vi": "Mục văn pháp 55",
+      "theme_ja": "文法パターン 55",
+      "theme_vi": "Cụm mẫu ngữ pháp 55",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_56",
+      "lesson_number_ja": "N1 文法 56",
+      "lesson_number_vi": "Mục văn pháp 56",
+      "theme_ja": "文法パターン 56",
+      "theme_vi": "Cụm mẫu ngữ pháp 56",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_57",
+      "lesson_number_ja": "N1 文法 57",
+      "lesson_number_vi": "Mục văn pháp 57",
+      "theme_ja": "文法パターン 57",
+      "theme_vi": "Cụm mẫu ngữ pháp 57",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_58",
+      "lesson_number_ja": "N1 文法 58",
+      "lesson_number_vi": "Mục văn pháp 58",
+      "theme_ja": "文法パターン 58",
+      "theme_vi": "Cụm mẫu ngữ pháp 58",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_59",
+      "lesson_number_ja": "N1 文法 59",
+      "lesson_number_vi": "Mục văn pháp 59",
+      "theme_ja": "文法パターン 59",
+      "theme_vi": "Cụm mẫu ngữ pháp 59",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_60",
+      "lesson_number_ja": "N1 文法 60",
+      "lesson_number_vi": "Mục văn pháp 60",
+      "theme_ja": "文法パターン 60",
+      "theme_vi": "Cụm mẫu ngữ pháp 60",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_61",
+      "lesson_number_ja": "N1 文法 61",
+      "lesson_number_vi": "Mục văn pháp 61",
+      "theme_ja": "文法パターン 61",
+      "theme_vi": "Cụm mẫu ngữ pháp 61",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_62",
+      "lesson_number_ja": "N1 文法 62",
+      "lesson_number_vi": "Mục văn pháp 62",
+      "theme_ja": "文法パターン 62",
+      "theme_vi": "Cụm mẫu ngữ pháp 62",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_63",
+      "lesson_number_ja": "N1 文法 63",
+      "lesson_number_vi": "Mục văn pháp 63",
+      "theme_ja": "文法パターン 63",
+      "theme_vi": "Cụm mẫu ngữ pháp 63",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_64",
+      "lesson_number_ja": "N1 文法 64",
+      "lesson_number_vi": "Mục văn pháp 64",
+      "theme_ja": "文法パターン 64",
+      "theme_vi": "Cụm mẫu ngữ pháp 64",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_65",
+      "lesson_number_ja": "N1 文法 65",
+      "lesson_number_vi": "Mục văn pháp 65",
+      "theme_ja": "文法パターン 65",
+      "theme_vi": "Cụm mẫu ngữ pháp 65",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_66",
+      "lesson_number_ja": "N1 文法 66",
+      "lesson_number_vi": "Mục văn pháp 66",
+      "theme_ja": "文法パターン 66",
+      "theme_vi": "Cụm mẫu ngữ pháp 66",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_67",
+      "lesson_number_ja": "N1 文法 67",
+      "lesson_number_vi": "Mục văn pháp 67",
+      "theme_ja": "文法パターン 67",
+      "theme_vi": "Cụm mẫu ngữ pháp 67",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_68",
+      "lesson_number_ja": "N1 文法 68",
+      "lesson_number_vi": "Mục văn pháp 68",
+      "theme_ja": "文法パターン 68",
+      "theme_vi": "Cụm mẫu ngữ pháp 68",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_69",
+      "lesson_number_ja": "N1 文法 69",
+      "lesson_number_vi": "Mục văn pháp 69",
+      "theme_ja": "文法パターン 69",
+      "theme_vi": "Cụm mẫu ngữ pháp 69",
+      "item_counts": {
+        "grammar": 3
+      },
+      "est_minutes": 20,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_70",
+      "lesson_number_ja": "N1 文法 70",
+      "lesson_number_vi": "Mục văn pháp 70",
+      "theme_ja": "文法パターン 70",
+      "theme_vi": "Cụm mẫu ngữ pháp 70",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_71",
+      "lesson_number_ja": "N1 文法 71",
+      "lesson_number_vi": "Mục văn pháp 71",
+      "theme_ja": "文法パターン 71",
+      "theme_vi": "Cụm mẫu ngữ pháp 71",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_72",
+      "lesson_number_ja": "N1 文法 72",
+      "lesson_number_vi": "Mục văn pháp 72",
+      "theme_ja": "文法パターン 72",
+      "theme_vi": "Cụm mẫu ngữ pháp 72",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_73",
+      "lesson_number_ja": "N1 文法 73",
+      "lesson_number_vi": "Mục văn pháp 73",
+      "theme_ja": "文法パターン 73",
+      "theme_vi": "Cụm mẫu ngữ pháp 73",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_74",
+      "lesson_number_ja": "N1 文法 74",
+      "lesson_number_vi": "Mục văn pháp 74",
+      "theme_ja": "文法パターン 74",
+      "theme_vi": "Cụm mẫu ngữ pháp 74",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_75",
+      "lesson_number_ja": "N1 文法 75",
+      "lesson_number_vi": "Mục văn pháp 75",
+      "theme_ja": "文法パターン 75",
+      "theme_vi": "Cụm mẫu ngữ pháp 75",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_76",
+      "lesson_number_ja": "N1 文法 76",
+      "lesson_number_vi": "Mục văn pháp 76",
+      "theme_ja": "文法パターン 76",
+      "theme_vi": "Cụm mẫu ngữ pháp 76",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_77",
+      "lesson_number_ja": "N1 文法 77",
+      "lesson_number_vi": "Mục văn pháp 77",
+      "theme_ja": "文法パターン 77",
+      "theme_vi": "Cụm mẫu ngữ pháp 77",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_78",
+      "lesson_number_ja": "N1 文法 78",
+      "lesson_number_vi": "Mục văn pháp 78",
+      "theme_ja": "文法パターン 78",
+      "theme_vi": "Cụm mẫu ngữ pháp 78",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_79",
+      "lesson_number_ja": "N1 文法 79",
+      "lesson_number_vi": "Mục văn pháp 79",
+      "theme_ja": "文法パターン 79",
+      "theme_vi": "Cụm mẫu ngữ pháp 79",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_80",
+      "lesson_number_ja": "N1 文法 80",
+      "lesson_number_vi": "Mục văn pháp 80",
+      "theme_ja": "文法パターン 80",
+      "theme_vi": "Cụm mẫu ngữ pháp 80",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_81",
+      "lesson_number_ja": "N1 文法 81",
+      "lesson_number_vi": "Mục văn pháp 81",
+      "theme_ja": "文法パターン 81",
+      "theme_vi": "Cụm mẫu ngữ pháp 81",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_82",
+      "lesson_number_ja": "N1 文法 82",
+      "lesson_number_vi": "Mục văn pháp 82",
+      "theme_ja": "文法パターン 82",
+      "theme_vi": "Cụm mẫu ngữ pháp 82",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_83",
+      "lesson_number_ja": "N1 文法 83",
+      "lesson_number_vi": "Mục văn pháp 83",
+      "theme_ja": "文法パターン 83",
+      "theme_vi": "Cụm mẫu ngữ pháp 83",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_84",
+      "lesson_number_ja": "N1 文法 84",
+      "lesson_number_vi": "Mục văn pháp 84",
+      "theme_ja": "文法パターン 84",
+      "theme_vi": "Cụm mẫu ngữ pháp 84",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_85",
+      "lesson_number_ja": "N1 文法 85",
+      "lesson_number_vi": "Mục văn pháp 85",
+      "theme_ja": "文法パターン 85",
+      "theme_vi": "Cụm mẫu ngữ pháp 85",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_86",
+      "lesson_number_ja": "N1 文法 86",
+      "lesson_number_vi": "Mục văn pháp 86",
+      "theme_ja": "文法パターン 86",
+      "theme_vi": "Cụm mẫu ngữ pháp 86",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_87",
+      "lesson_number_ja": "N1 文法 87",
+      "lesson_number_vi": "Mục văn pháp 87",
+      "theme_ja": "文法パターン 87",
+      "theme_vi": "Cụm mẫu ngữ pháp 87",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
+      "prerequisites": []
+    },
+    {
+      "lesson_id": "shinkanzen_n1_88",
+      "lesson_number_ja": "N1 文法 88",
+      "lesson_number_vi": "Mục văn pháp 88",
+      "theme_ja": "文法パターン 88",
+      "theme_vi": "Cụm mẫu ngữ pháp 88",
+      "item_counts": {
+        "grammar": 2
+      },
+      "est_minutes": 16,
       "prerequisites": []
     }
   ]

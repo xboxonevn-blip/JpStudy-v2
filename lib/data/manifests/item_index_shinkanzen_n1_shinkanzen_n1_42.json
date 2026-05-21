@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_42",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:42:Verb_ずにはすまない",
+      "type": "grammar",
+      "surface": "Verb ずにはすまない",
+      "reading": "",
+      "label_ja": "Verb ずにはすまない",
+      "label_vi": "Dùng để nói không thể kết thúc mà không làm việc đó, thường vì trách nhiệm, đạo lý hoặc hoàn cảnh bắt buộc. Cấu trúc: Verb-ない form (remove ない) + ずにはすまない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb ずにはすまない",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb ずにはすまない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_42.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:42:～としたところで",
+      "type": "grammar",
+      "surface": "～としたところで",
+      "reading": "",
+      "label_ja": "～としたところで",
+      "label_vi": "Dùng để nói ngay cả giả sử X xảy ra thì kết quả cũng không thay đổi hoặc không có nhiều ý nghĩa. Sắc thái thường là phủ định khả năng. Cấu trúc: Verb-casual + としたところで / い-Adjective + としたところで / な-Adjective + だとしたところで / Noun + だとしたところで.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～としたところで",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～としたところで"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_42.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:42:Noun_にとどまらず～も",
+      "type": "grammar",
+      "surface": "Noun にとどまらず～も",
+      "reading": "",
+      "label_ja": "Noun にとどまらず～も",
+      "label_vi": "Dùng để nói phạm vi không dừng lại ở Noun mà còn lan sang điều khác. Có thể hiểu là “không chỉ Noun mà còn...”. Cấu trúc: Noun + にとどまらず + Noun + も.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun にとどまらず～も",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun にとどまらず～も"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_42.json"
+    }
+  ]
+}

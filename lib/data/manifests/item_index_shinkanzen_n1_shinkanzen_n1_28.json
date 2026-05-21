@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_28",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:28:Noun_を禁じ得ない",
+      "type": "grammar",
+      "surface": "Noun を禁じ得ない",
+      "reading": "",
+      "label_ja": "Noun を禁じ得ない",
+      "label_vi": "Dùng để nói không thể kìm nén một cảm xúc hoặc phản ứng trước Noun. Thường đi với các danh từ cảm xúc như 驚き, 怒り, 同情. Cấu trúc: Noun + を禁じ得ない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_11.json",
+        "entry_id": "Noun を禁じ得ない",
+        "key": "grammar/n1/grammar_n1_11.json#grammar:Noun を禁じ得ない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_28.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:28:Noun_からある",
+      "type": "grammar",
+      "surface": "Noun からある",
+      "reading": "",
+      "label_ja": "Noun からある",
+      "label_vi": "Dùng sau số lượng, độ dài hoặc trọng lượng để nhấn mạnh con số lớn: “có tới”, “không dưới”. Người nói thường muốn gây ấn tượng về quy mô. Cấu trúc: Number + Counter + からある.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_2.json",
+        "entry_id": "Noun からある",
+        "key": "grammar/n1/grammar_n1_2.json#grammar:Noun からある"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_28.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:28:Noun_と相まって",
+      "type": "grammar",
+      "surface": "Noun と相まって",
+      "reading": "",
+      "label_ja": "Noun と相まって",
+      "label_vi": "Dùng khi Noun kết hợp với yếu tố khác làm cho kết quả mạnh hơn hoặc rõ hơn. Có thể hiểu là “cùng với”, “kết hợp với”. Cấu trúc: Noun + と相まって.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_5.json",
+        "entry_id": "Noun と相まって",
+        "key": "grammar/n1/grammar_n1_5.json#grammar:Noun と相まって"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_28.json"
+    }
+  ]
+}

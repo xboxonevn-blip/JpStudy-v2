@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_39",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:39:Verb_ずじまい",
+      "type": "grammar",
+      "surface": "Verb ずじまい",
+      "reading": "",
+      "label_ja": "Verb ずじまい",
+      "label_vi": "Dùng khi cuối cùng đã không làm được điều định làm hoặc lẽ ra nên làm, thường kèm cảm giác tiếc nuối. Có thể hiểu là “rốt cuộc không...”. Cấu trúc: Verb-ない form (remove ない) + ずじまい.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb ずじまい",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb ずじまい"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_39.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:39:～ときている",
+      "type": "grammar",
+      "surface": "～ときている",
+      "reading": "",
+      "label_ja": "～ときている",
+      "label_vi": "Dùng để nêu một tình trạng đã ở mức đáng chú ý hoặc nghiêm trọng, thường kèm sắc thái không hài lòng. Có thể hiểu là “lại còn...”. Cấu trúc: Verb-casual / い-Adjective / な-Adjective（＋だ） / Noun（＋だ） + ときている.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～ときている",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～ときている"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_39.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:39:Noun_にして",
+      "type": "grammar",
+      "surface": "Noun にして",
+      "reading": "",
+      "label_ja": "Noun にして",
+      "label_vi": "Dùng để nhấn mạnh “ngay cả ở mức Noun mà...” hoặc “chỉ đến Noun mới...”, tùy ngữ cảnh. Mẫu này trang trọng và thường dùng để đánh giá mức độ đặc biệt. Cấu trúc: Noun + にして.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun にして",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun にして"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_39.json"
+    }
+  ]
+}

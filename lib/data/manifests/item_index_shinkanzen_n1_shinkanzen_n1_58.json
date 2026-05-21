@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_58",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:58:Verb_てやまない",
+      "type": "grammar",
+      "surface": "Verb てやまない",
+      "reading": "",
+      "label_ja": "Verb てやまない",
+      "label_vi": "Dùng với các động từ cảm xúc để nói cảm xúc đó luôn mạnh mẽ và không dứt. Thường gặp trong lời chúc, kính ngữ hoặc văn trang trọng. Cấu trúc: Verb-て form + やまない (common with certain verbs).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_14.json",
+        "entry_id": "Verb てやまない",
+        "key": "grammar/n1/grammar_n1_14.json#grammar:Verb てやまない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_58.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:58:～ながらも",
+      "type": "grammar",
+      "surface": "～ながらも",
+      "reading": "",
+      "label_ja": "～ながらも",
+      "label_vi": "Dùng để nói dù đang ở trạng thái X hoặc dù có tính chất X, điều phía sau vẫn xảy ra trái với kỳ vọng. Cấu trúc: Verb stem + ながらも, い-Adjective + ながらも, な-Adjective/Noun + ながらも.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_22.json",
+        "entry_id": "～ながらも",
+        "key": "grammar/n1/grammar_n1_22.json#grammar:～ながらも"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_58.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:58:Noun_のいかんにかかわらず",
+      "type": "grammar",
+      "surface": "Noun のいかんにかかわらず",
+      "reading": "",
+      "label_ja": "Noun のいかんにかかわらず",
+      "label_vi": "Dùng để nói không phụ thuộc vào Noun, bất kể Noun như thế nào. Mẫu này rất trang trọng. Cấu trúc: Noun + のいかんにかかわらず.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_8.json",
+        "entry_id": "Noun のいかんにかかわらず",
+        "key": "grammar/n1/grammar_n1_8.json#grammar:Noun のいかんにかかわらず"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_58.json"
+    }
+  ]
+}

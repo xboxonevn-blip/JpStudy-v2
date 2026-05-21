@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n2",
+  "lesson_id": "shinkanzen_n2_28",
+  "items": [
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:28:～てまで",
+      "type": "grammar",
+      "surface": "～てまで",
+      "reading": "",
+      "label_ja": "～てまで",
+      "label_vi": "Dùng để nhấn mạnh mức độ sẵn sàng làm đến cả A để đạt mục đích B, đôi khi hàm ý người nói thấy hành động đó quá mức. Có thể hiểu là “đến mức...”, “thậm chí phải...”. Cấu trúc: Verb-て form + まで.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_12.json",
+        "entry_id": "～てまで",
+        "key": "grammar/n2/grammar_n2_12.json#grammar:～てまで"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_28.json"
+    },
+    {
+      "item_id": "grammar:n2:shinkanzen_n2:28:～たきり",
+      "type": "grammar",
+      "surface": "～たきり",
+      "reading": "",
+      "label_ja": "～たきり",
+      "label_vi": "Dùng khi một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài. Có thể hiểu là “kể từ khi... thì mãi...”. Cấu trúc: Verb-past + きり.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n2/grammar_n2_9.json",
+        "entry_id": "～たきり",
+        "key": "grammar/n2/grammar_n2_9.json#grammar:～たきり"
+      },
+      "exercise_bank_ref": "exercises/n2/shinkanzen_n2/shinkanzen_n2_28.json"
+    }
+  ]
+}

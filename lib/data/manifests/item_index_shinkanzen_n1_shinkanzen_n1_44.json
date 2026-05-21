@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_44",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:44:Verb_そうもない",
+      "type": "grammar",
+      "surface": "Verb そうもない",
+      "reading": "",
+      "label_ja": "Verb そうもない",
+      "label_vi": "Dùng để nói dường như không thể hoặc không có khả năng làm được việc gì. Sắc thái phủ định khả năng mạnh hơn そうにない trong nhiều ngữ cảnh. Cấu trúc: Verb-ますstem + そうもない.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_13.json",
+        "entry_id": "Verb そうもない",
+        "key": "grammar/n1/grammar_n1_13.json#grammar:Verb そうもない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_44.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:44:～とすれば",
+      "type": "grammar",
+      "surface": "～とすれば",
+      "reading": "",
+      "label_ja": "～とすれば",
+      "label_vi": "Dùng khi đặt giả định “nếu đúng là X” để đưa ra suy luận, nhận xét hoặc điều kiện phía sau. Cấu trúc: Verb-casual + とすれば / い-Adjective + とすれば / な-Adjective + だとすれば / Noun + だとすれば.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_21.json",
+        "entry_id": "～とすれば",
+        "key": "grammar/n1/grammar_n1_21.json#grammar:～とすれば"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_44.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:44:Noun_にもまして",
+      "type": "grammar",
+      "surface": "Noun にもまして",
+      "reading": "",
+      "label_ja": "Noun にもまして",
+      "label_vi": "Dùng để nói điều phía sau vượt hơn Noun về mức độ. Có thể hiểu là “hơn cả”, “còn hơn”. Cấu trúc: Noun + にもまして.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_7.json",
+        "entry_id": "Noun にもまして",
+        "key": "grammar/n1/grammar_n1_7.json#grammar:Noun にもまして"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_44.json"
+    }
+  ]
+}

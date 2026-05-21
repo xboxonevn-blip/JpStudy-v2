@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_34",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:34:Verbる___Noun(である)_+_限り(は)_(kagiri_(wa))",
+      "type": "grammar",
+      "surface": "Verbる / Noun(である) + 限り(は) (kagiri (wa))",
+      "reading": "",
+      "label_ja": "Verbる / Noun(である) + 限り(は) (kagiri (wa))",
+      "label_vi": "Dùng để nói trong phạm vi điều kiện đó còn đúng thì kết luận phía sau vẫn đúng. Có thể hiểu là “chừng nào còn”, “miễn là”. Cấu trúc: Verb-dictionary form + 限り(は) Noun(である) + 限り(は).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Verbる / Noun(である) + 限り(は) (kagiri (wa))",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Verbる / Noun(である) + 限り(は) (kagiri (wa))"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_34.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:34:～とあれば",
+      "type": "grammar",
+      "surface": "～とあれば",
+      "reading": "",
+      "label_ja": "～とあれば",
+      "label_vi": "Dùng để nói nếu đúng là hoàn cảnh X thì người nói sẵn sàng làm hoặc điều phía sau là đương nhiên. Cấu trúc: Verb-casual + とあれば / い-Adjective + とあれば / な-Adjective + だとあれば / Noun + だとあれば.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～とあれば",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～とあれば"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_34.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:34:Noun_なり_Noun_なり",
+      "type": "grammar",
+      "surface": "Noun なり Noun なり",
+      "reading": "",
+      "label_ja": "Noun なり Noun なり",
+      "label_vi": "Dùng để nêu vài lựa chọn cùng loại và gợi ý người nghe chọn một trong số đó. Sắc thái là “A hay B chẳng hạn”. Cấu trúc: Noun + なり + Noun + なり.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun なり Noun なり",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun なり Noun なり"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_34.json"
+    }
+  ]
+}

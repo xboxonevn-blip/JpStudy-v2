@@ -13,18 +13,18 @@ void main() {
     expect(roadmap.phases[2].resourceKeys, contains('hajimete_n5_optional'));
   });
 
-  test('N3 roadmap sequences Shin Kanzen vocab before grammar', () {
+  test('N3 roadmap sequences Mimikara vocab before grammar', () {
     final roadmap = textbookRoadmapForLevel(StudyLevel.n3);
     final allResources = roadmap.phases
         .expand((phase) => phase.resourceKeys)
         .toSet();
 
-    expect(allResources, contains('shin_kanzen_n3_vocab'));
+    expect(allResources, contains('mimikara_n3_vocab'));
     expect(allResources, contains('hajimete_n3_optional'));
     expect(allResources, contains('grammar_n3'));
     expect(allResources, contains('kanji_n3'));
     expect(allResources, contains('immersion_n3'));
-    expect(roadmap.phases[0].resourceKeys, contains('shin_kanzen_n3_vocab'));
+    expect(roadmap.phases[0].resourceKeys, contains('mimikara_n3_vocab'));
     expect(roadmap.phases[1].resourceKeys, contains('grammar_n3'));
     expect(roadmap.phases[0].resources.last.optional, isTrue);
   });

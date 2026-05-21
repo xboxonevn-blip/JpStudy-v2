@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_35",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:35:Verb_がてら",
+      "type": "grammar",
+      "surface": "Verb がてら",
+      "reading": "",
+      "label_ja": "Verb がてら",
+      "label_vi": "Dùng khi nhân tiện làm một hành động thì làm thêm hành động khác trong cùng dịp. Sắc thái “tiện thể”, thường đi với hoạt động di chuyển hoặc ghé qua. Cấu trúc: Verb (dictionary or -ます stem) + がてら.",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_12.json",
+        "entry_id": "Verb がてら",
+        "key": "grammar/n1/grammar_n1_12.json#grammar:Verb がてら"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_35.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:35:～といえども",
+      "type": "grammar",
+      "surface": "～といえども",
+      "reading": "",
+      "label_ja": "～といえども",
+      "label_vi": "Dùng để nói dù là X, dù được gọi là X, thì vẫn có điều ngoại lệ hoặc hạn chế. Sắc thái trang trọng hơn ても. Cấu trúc: Noun + といえども / Verb-plain form + といえども / Adjective + といえども.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_20.json",
+        "entry_id": "～といえども",
+        "key": "grammar/n1/grammar_n1_20.json#grammar:～といえども"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_35.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:35:Noun_なりとも",
+      "type": "grammar",
+      "surface": "Noun なりとも",
+      "reading": "",
+      "label_ja": "Noun なりとも",
+      "label_vi": "Dùng để nói “dù chỉ là Noun cũng được”, nhấn mạnh một mức tối thiểu hoặc một lượng nhỏ vẫn có giá trị. Cấu trúc: Noun + なりとも.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_6.json",
+        "entry_id": "Noun なりとも",
+        "key": "grammar/n1/grammar_n1_6.json#grammar:Noun なりとも"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_35.json"
+    }
+  ]
+}

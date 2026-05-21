@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_87",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:87:Verbる_にも",
+      "type": "grammar",
+      "surface": "Verbる にも",
+      "reading": "",
+      "label_ja": "Verbる にも",
+      "label_vi": "Dùng khi muốn làm X nhưng khó hoặc không thể vì một lý do nào đó. Thường đi với vế sau nêu trở ngại. Cấu trúc: Verb-dictionary form + にも + (reason it cant be done).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_17.json",
+        "entry_id": "Verbる にも",
+        "key": "grammar/n1/grammar_n1_17.json#grammar:Verbる にも"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_87.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:87:～足る_Noun",
+      "type": "grammar",
+      "surface": "～足る Noun",
+      "reading": "",
+      "label_ja": "～足る Noun",
+      "label_vi": "Dùng để nói đủ tư cách, đủ giá trị hoặc xứng đáng để được xem là Noun. Sắc thái trang trọng, văn viết. Cấu trúc: Noun/Verb-dictionary form + に足る + Noun.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_25.json",
+        "entry_id": "～足る Noun",
+        "key": "grammar/n1/grammar_n1_25.json#grammar:～足る Noun"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_87.json"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_68",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:68:Verb_よう",
+      "type": "grammar",
+      "surface": "Verb よう",
+      "reading": "",
+      "label_ja": "Verb よう",
+      "label_vi": "Dùng để nói cách thức làm một việc hoặc mục đích/định hướng hành động, tùy cấu trúc đi kèm như ようにする. Cấu trúc: Verb (dictionary or negative form) + ように (する / etc.).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_15.json",
+        "entry_id": "Verb よう",
+        "key": "grammar/n1/grammar_n1_15.json#grammar:Verb よう"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_68.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:68:～に難くない",
+      "type": "grammar",
+      "surface": "～に難くない",
+      "reading": "",
+      "label_ja": "～に難くない",
+      "label_vi": "Dùng để nói không khó để tưởng tượng, hiểu hoặc đoán ra điều gì. Mẫu này trang trọng và thường đi với 想像する, 理解する, 察する. Cấu trúc: Verb-dictionary form + に難くない (commonly with 想像する, 理解する, 察する, etc.).",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_23.json",
+        "entry_id": "～に難くない",
+        "key": "grammar/n1/grammar_n1_23.json#grammar:～に難くない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_68.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:68:Noun_はおろか～すら",
+      "type": "grammar",
+      "surface": "Noun はおろか～すら",
+      "reading": "",
+      "label_ja": "Noun はおろか～すら",
+      "label_vi": "Dùng để nhấn mạnh “đừng nói đến A, ngay cả B cũng...”. B thường là điều dễ hơn hoặc tối thiểu hơn A. Cấu trúc: Noun1 はおろか, Noun2 すら/さえ ～.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_9.json",
+        "entry_id": "Noun はおろか～すら",
+        "key": "grammar/n1/grammar_n1_9.json#grammar:Noun はおろか～すら"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_68.json"
+    }
+  ]
+}

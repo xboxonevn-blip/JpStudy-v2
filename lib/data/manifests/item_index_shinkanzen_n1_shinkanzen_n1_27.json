@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_27",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:27:Noun_を皮切りにして",
+      "type": "grammar",
+      "surface": "Noun を皮切りにして",
+      "reading": "",
+      "label_ja": "Noun を皮切りにして",
+      "label_vi": "Dùng để nói Noun là điểm mở đầu cho nhiều hành động hoặc sự kiện diễn ra sau đó. Sắc thái thường gặp trong báo chí và văn viết. Cấu trúc: Noun + を皮切りに (して).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_11.json",
+        "entry_id": "Noun を皮切りにして",
+        "key": "grammar/n1/grammar_n1_11.json#grammar:Noun を皮切りにして"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_27.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:27:Noun_がてら",
+      "type": "grammar",
+      "surface": "Noun がてら",
+      "reading": "",
+      "label_ja": "Noun がてら",
+      "label_vi": "Dùng khi nhân tiện làm A thì làm luôn B, hoặc kết hợp hai việc trong cùng một dịp. Sắc thái nhẹ hơn かたがた và gần với “tiện thể”. Cấu trúc: Noun + がてら.",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_2.json",
+        "entry_id": "Noun がてら",
+        "key": "grammar/n1/grammar_n1_2.json#grammar:Noun がてら"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_27.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:27:Noun_ともなれば",
+      "type": "grammar",
+      "surface": "Noun ともなれば",
+      "reading": "",
+      "label_ja": "Noun ともなれば",
+      "label_vi": "Dùng để giả định hoặc nêu hoàn cảnh khi đạt đến Noun, từ đó kéo theo một kết quả tự nhiên. Gần nghĩa với ともなると nhưng thiên về điều kiện hơn. Cấu trúc: Noun + ともなれば.",
+      "order": 3,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_5.json",
+        "entry_id": "Noun ともなれば",
+        "key": "grammar/n1/grammar_n1_5.json#grammar:Noun ともなれば"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_27.json"
+    }
+  ]
+}

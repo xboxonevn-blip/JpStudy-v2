@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-21T20:45:00+07:00",
+  "textbook_id": "shinkanzen_n1",
+  "lesson_id": "shinkanzen_n1_74",
+  "items": [
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:74:Verb_ようにも_Verb_れない",
+      "type": "grammar",
+      "surface": "Verb ようにも Verb れない",
+      "reading": "",
+      "label_ja": "Verb ようにも Verb れない",
+      "label_vi": "Dùng để nói dù muốn hoặc cố làm X cũng không thể làm được. Mẫu này nhấn mạnh sự bất lực do hoàn cảnh. Cấu trúc: Verb-volitional form + にも + (potential negative form / reason).",
+      "order": 1,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_16.json",
+        "entry_id": "Verb ようにも Verb れない",
+        "key": "grammar/n1/grammar_n1_16.json#grammar:Verb ようにも Verb れない"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_74.json"
+    },
+    {
+      "item_id": "grammar:n1:shinkanzen_n1:74:～ぶって",
+      "type": "grammar",
+      "surface": "～ぶって",
+      "reading": "",
+      "label_ja": "～ぶって",
+      "label_vi": "Dùng để nối ý với nghĩa làm ra vẻ, giả bộ là X. Sắc thái thường không thiện cảm, như “ra vẻ”. Cấu trúc: Noun/Adjective + ぶる → ぶって (te-form).",
+      "order": 2,
+      "legacy_ref": {
+        "file": "grammar/n1/grammar_n1_24.json",
+        "entry_id": "～ぶって",
+        "key": "grammar/n1/grammar_n1_24.json#grammar:～ぶって"
+      },
+      "exercise_bank_ref": "exercises/n1/shinkanzen_n1/shinkanzen_n1_74.json"
+    }
+  ]
+}

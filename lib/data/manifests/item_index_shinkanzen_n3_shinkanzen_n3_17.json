@@ -1,246 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-21T00:00:00+07:00",
+  "generated_at": "2026-05-21T20:45:00+07:00",
   "textbook_id": "shinkanzen_n3",
   "lesson_id": "shinkanzen_n3_17",
   "items": [
     {
-      "item_id": "grammar:n3:shinkanzen_n3:17:〜という",
+      "item_id": "grammar:n3:shinkanzen_n3:17:〜ことがある",
       "type": "grammar",
-      "surface": "〜という",
+      "surface": "〜ことがある",
       "reading": "",
-      "label_ja": "〜という",
-      "label_vi": "Dùng để giải thích tên gọi, nội dung được gọi là gì, hoặc khái niệm.",
+      "label_ja": "〜ことがある",
+      "label_vi": "Diễn tả việc thỉnh thoảng xảy ra, có lúc làm hoặc có lúc không làm gì.",
       "order": 1,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_17.json",
-        "entry_id": "〜という",
-        "key": "grammar/n3/grammar_n3_17.json#grammar:〜という"
+        "file": "grammar/n3/grammar_n3_13.json",
+        "entry_id": "〜ことがある",
+        "key": "grammar/n3/grammar_n3_13.json#grammar:〜ことがある"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
     },
     {
-      "item_id": "grammar:n3:shinkanzen_n3:17:〜といわれている",
+      "item_id": "grammar:n3:shinkanzen_n3:17:〜とのことだ",
       "type": "grammar",
-      "surface": "〜といわれている",
+      "surface": "〜とのことだ",
       "reading": "",
-      "label_ja": "〜といわれている",
-      "label_vi": "Diễn tả điều được nói chung, được xem là thông tin phổ biến.",
+      "label_ja": "〜とのことだ",
+      "label_vi": "Diễn tả nội dung thông báo, liên lạc hay lời nhắn được truyền đạt lại. Sắc thái thường trang trọng hoặc “theo thông tin nhận được”.",
       "order": 2,
       "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_17.json",
-        "entry_id": "〜といわれている",
-        "key": "grammar/n3/grammar_n3_17.json#grammar:〜といわれている"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:17:〜ことから",
-      "type": "grammar",
-      "surface": "〜ことから",
-      "reading": "",
-      "label_ja": "〜ことから",
-      "label_vi": "Diễn tả suy luận dựa trên dấu hiệu hoặc dùng để nêu xuất phát điểm lý do.",
-      "order": 3,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_17.json",
-        "entry_id": "〜ことから",
-        "key": "grammar/n3/grammar_n3_17.json#grammar:〜ことから"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "grammar:n3:shinkanzen_n3:17:〜とされている",
-      "type": "grammar",
-      "surface": "〜とされている",
-      "reading": "",
-      "label_ja": "〜とされている",
-      "label_vi": "Diễn tả điều được xã hội hoặc tài liệu xem là như vậy.",
-      "order": 4,
-      "legacy_ref": {
-        "file": "grammar/n3/grammar_n3_17.json",
-        "entry_id": "〜とされている",
-        "key": "grammar/n3/grammar_n3_17.json#grammar:〜とされている"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:指導",
-      "type": "vocab",
-      "surface": "指導",
-      "reading": "しどう",
-      "label_ja": "指導",
-      "label_vi": "chỉ đạo; hướng dẫn",
-      "order": 1,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s001",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s001"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:事務",
-      "type": "vocab",
-      "surface": "事務",
-      "reading": "じむ",
-      "label_ja": "事務",
-      "label_vi": "Công việc văn phòng",
-      "order": 2,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s002",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s002"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:締め切り",
-      "type": "vocab",
-      "surface": "締め切り",
-      "reading": "しめきり",
-      "label_ja": "締め切り",
-      "label_vi": "thời hạn",
-      "order": 3,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s003",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s003"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:じゃま",
-      "type": "vocab",
-      "surface": "じゃま",
-      "reading": "",
-      "label_ja": "じゃま",
-      "label_vi": "Trên đường đi",
-      "order": 4,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s004",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s004"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:じゃんけん",
-      "type": "vocab",
-      "surface": "じゃんけん",
-      "reading": "",
-      "label_ja": "じゃんけん",
-      "label_vi": "Đá; giấy; kéo",
-      "order": 5,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s005",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s005"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:集会",
-      "type": "vocab",
-      "surface": "集会",
-      "reading": "しゅうかい",
-      "label_ja": "集会",
-      "label_vi": "tụ tập",
-      "order": 6,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s006",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s006"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:宗教",
-      "type": "vocab",
-      "surface": "宗教",
-      "reading": "しゅうきょう",
-      "label_ja": "宗教",
-      "label_vi": "tôn giáo",
-      "order": 7,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s007",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s007"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:集合",
-      "type": "vocab",
-      "surface": "集合",
-      "reading": "しゅうごう",
-      "label_ja": "集合",
-      "label_vi": "bộ",
-      "order": 8,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s008",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s008"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:就職",
-      "type": "vocab",
-      "surface": "就職",
-      "reading": "しゅうしょく",
-      "label_ja": "就職",
-      "label_vi": "tìm việc",
-      "order": 9,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s009",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s009"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:集中",
-      "type": "vocab",
-      "surface": "集中",
-      "reading": "しゅうちゅう",
-      "label_ja": "集中",
-      "label_vi": "sự tập trung",
-      "order": 10,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s010",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s010"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:充電",
-      "type": "vocab",
-      "surface": "充電",
-      "reading": "じゅうでん",
-      "label_ja": "充電",
-      "label_vi": "sạc",
-      "order": 11,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s011",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s011"
-      },
-      "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
-    },
-    {
-      "item_id": "vocab:n3:shinkanzen_n3:17:修理",
-      "type": "vocab",
-      "surface": "修理",
-      "reading": "しゅうり",
-      "label_ja": "修理",
-      "label_vi": "Sửa chữa",
-      "order": 12,
-      "legacy_ref": {
-        "file": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json",
-        "entry_id": "n3_l17_s012",
-        "key": "vocab/n3/ShinKanzen/shinkanzen_n3_17_nouns_general_2_0261_0276.json#vocab:n3_l17_s012"
+        "file": "grammar/n3/grammar_n3_9.json",
+        "entry_id": "〜とのことだ",
+        "key": "grammar/n3/grammar_n3_9.json#grammar:〜とのことだ"
       },
       "exercise_bank_ref": "exercises/n3/shinkanzen_n3/shinkanzen_n3_17.json"
     }

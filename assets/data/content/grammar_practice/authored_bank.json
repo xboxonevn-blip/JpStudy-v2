@@ -7672,6 +7672,225 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-form-l1-001",
+      "template_id": "tpl-grammar-n5-037-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn mẫu đúng để hỏi 'water tiếng Nhật là gì?'",
+      "answer_template": "\"water\" は日本語で何ですか。",
+      "options_template": [
+        "\"water\" は日本語で何ですか。",
+        "\"water\" を日本語で何ですか。",
+        "\"water\" は日本語を何ですか。",
+        "\"water\" で日本語は何ですか。"
+      ],
+      "distractor_strategy": "quote-topic-language-de-nan-desu-ka-form",
+      "teaching_note": "Từ cần hỏi + は, ngôn ngữ đích + で, rồi 何ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-form-l1-002",
+      "template_id": "tpl-grammar-n5-037-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền trợ từ đúng: \"ありがとう\" ___ 英語で何ですか。",
+      "answer_template": "は",
+      "options_template": [
+        "は",
+        "を",
+        "で",
+        "へ"
+      ],
+      "distractor_strategy": "topic-wa-for-quoted-expression",
+      "teaching_note": "Cụm cần dịch là chủ đề, nên dùng は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-037-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "\"ありがとう\" は英語で何ですか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "\"ありがとう\" tiếng Anh là gì?",
+      "options_template": [
+        "\"ありがとう\" tiếng Anh là gì?",
+        "Bạn có biết tiếng Anh không?",
+        "Cảm ơn bằng tiếng Anh rồi.",
+        "Tiếng Anh có phải là cảm ơn không?"
+      ],
+      "distractor_strategy": "translation-question-meaning-vs-ability-statement",
+      "teaching_note": "〇〇語で chỉ ngôn ngữ muốn dịch sang.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-037-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong \"～\" は 〇〇語で何ですか, 〇〇語で có vai trò gì?",
+      "answer_template": "Chỉ ngôn ngữ đích: bằng tiếng gì.",
+      "distractor_strategy": "language-de-role-recall",
+      "teaching_note": "`で` đánh dấu ngôn ngữ như phương tiện diễn đạt.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-usage-l3-005",
+      "template_id": "tpl-grammar-n5-037-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'book tiếng Nhật là gì?': \"book\" / は / 日本語で / 何ですか",
+      "answer_template": "\"book\" は日本語で何ですか。",
+      "options_template": [
+        "\"book\"",
+        "は",
+        "日本語で",
+        "何ですか"
+      ],
+      "distractor_strategy": "translation-question-word-order",
+      "teaching_note": "Khung câu là quote + は + languageで + 何ですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-usage-l3-006",
+      "template_id": "tpl-grammar-n5-037-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Bạn muốn hỏi 'xin chào tiếng Việt là gì?' Dùng ベトナム語.",
+      "answer_template": "\"こんにちは\" はベトナム語で何ですか。",
+      "distractor_strategy": "apply-language-de-translation-question",
+      "teaching_note": "ベトナム語で = bằng tiếng Việt.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-context-l3-007",
+      "template_id": "tpl-grammar-n5-037-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn quên cách nói 'station' bằng tiếng Nhật. Câu nào nên hỏi?",
+      "answer_template": "\"station\" は日本語で何ですか。",
+      "options_template": [
+        "\"station\" は日本語で何ですか。",
+        "\"station\" は日本語を何ですか。",
+        "日本語は\"station\"で何ですか。",
+        "\"station\" を日本語へ何ですか。"
+      ],
+      "distractor_strategy": "context-translation-question-particle-order",
+      "teaching_note": "Cụm cần dịch đứng trước は; ngôn ngữ đích đứng trước で.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-context-l2-008",
+      "template_id": "tpl-grammar-n5-037-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với \"～\" は 〇〇語で何ですか?",
+      "answer_template": "Bạn muốn hỏi một từ/cụm được nói thế nào trong ngôn ngữ khác.",
+      "options_template": [
+        "Bạn muốn hỏi một từ/cụm được nói thế nào trong ngôn ngữ khác.",
+        "Bạn muốn nói mình đang học ngoại ngữ.",
+        "Bạn muốn hỏi người kia đi đâu.",
+        "Bạn muốn nói mình nói được tiếng Nhật."
+      ],
+      "distractor_strategy": "translation-question-context-vs-study-ability-direction",
+      "teaching_note": "Mẫu này hỏi bản dịch/cách nói, không hỏi năng lực.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-037-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích 4 câu. Câu nào hỏi bản dịch sang tiếng Nhật đúng cấu trúc?",
+      "answer_template": "\"milk\" は日本語で何ですか。",
+      "options_template": [
+        "\"milk\" は日本語で何ですか。",
+        "日本語は\"milk\"で何ですか。",
+        "\"milk\" を日本語で何ですか。",
+        "\"milk\" は日本語に何ですか。"
+      ],
+      "distractor_strategy": "analyze-topic-language-de-vs-particle-swaps",
+      "teaching_note": "L4: は gắn với từ cần dịch; で gắn với ngôn ngữ đích.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-037-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-037-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_7:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn hỏi 'cảm ơn tiếng Anh là gì?', không hỏi 'bạn nói tiếng Anh không'. Câu nào đúng?",
+      "answer_template": "\"ありがとう\" は英語で何ですか。",
+      "options_template": [
+        "\"ありがとう\" は英語で何ですか。",
+        "英語を話しますか。",
+        "英語で話しますか。",
+        "\"ありがとう\" は英語を話しますか。"
+      ],
+      "distractor_strategy": "translation-question-vs-language-ability-analysis",
+      "teaching_note": "Mẫu có 何ですか hỏi kết quả dịch; 話しますか hỏi năng lực/hành động nói.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

@@ -2049,3 +2049,13 @@
 - Teaching Test paraphrase: `Vましょう` means "let's..." and assumes shared
   motion toward the action. Use it to propose or accept; use `Vませんか` for a
   softer invitation.
+
+## 2026-05-22 Phase G Tier-1 item 037
+
+- Re-authored `grammar:n5:grammar_n5_7:002` (`"～" は 〇〇語で何ですか`) with
+  quote-topic structure, 語/`ngữ` bridge, language-as-medium `で`, and
+  contrasts against tool `で`, `何ですか`, and `N1 は N2 です`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: put the word you need translated before `は`, then
+  put the target language before `で`. `何ですか` asks for the translation result.

@@ -1789,3 +1789,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `この/その/あの` must attach to a noun. Use them
   for "this/that N"; use `これ/それ/あれ` when replacing the noun entirely.
+
+## 2026-05-22 Phase G Tier-1 item 009
+
+- Re-authored `grammar:n5:grammar_n5_2:003` (`S ですか -> はい、そうです /
+  いいえ、そうじゃありません`) with answer-polarity logic and `そう` reference.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `そう` points back to the claim in the question.
+  `はい、そうです` confirms it; `いいえ、そうじゃありません` rejects it.

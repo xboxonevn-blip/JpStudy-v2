@@ -1710,6 +1710,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-form-l1-001",
+      "template_id": "tpl-grammar-n5-009-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu trả lời khẳng định đúng cho câu hỏi: 学生ですか。",
+      "answer_template": "はい、そうです。",
+      "options_template": [
+        "はい、そうです。",
+        "はい、そうじゃありません。",
+        "いいえ、そうです。",
+        "はい、学生か。"
+      ],
+      "distractor_strategy": "yes-no-polarity-mismatch",
+      "teaching_note": "はい đi với そうです khi xác nhận mệnh đề vừa hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-form-l1-002",
+      "template_id": "tpl-grammar-n5-009-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu trả lời phủ định lịch sự đúng.",
+      "answer_template": "いいえ、そうじゃありません。",
+      "options_template": [
+        "いいえ、そうじゃありません。",
+        "いいえ、そうです。",
+        "はい、そうじゃありません。",
+        "いいえ、そうか。"
+      ],
+      "distractor_strategy": "negative-response-form",
+      "teaching_note": "いいえ đi với そうじゃありません khi bác bỏ mệnh đề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-009-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "A: これは本ですか。B: はい、そうです。 B muốn nói gì?",
+      "answer_template": "Đúng vậy, đó là sách.",
+      "options_template": [
+        "Đúng vậy, đó là sách.",
+        "Không, đó không phải sách.",
+        "Đó là sách của tôi.",
+        "Cái này cũng là sách."
+      ],
+      "distractor_strategy": "affirmation-vs-negation-possession-additive",
+      "teaching_note": "そう thay cho mệnh đề これは本です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-009-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong はい、そうです, そう thay cho phần nào?",
+      "answer_template": "Mệnh đề/nội dung vừa được hỏi.",
+      "distractor_strategy": "sou-reference-recall",
+      "teaching_note": "そう không phải tên vật; nó nhắc lại toàn bộ điều vừa hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-usage-l3-005",
+      "template_id": "tpl-grammar-n5-009-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp câu trả lời 'Không, không phải vậy': そう / じゃありません / いいえ",
+      "answer_template": "いいえ、そうじゃありません",
+      "options_template": [
+        "いいえ",
+        "そう",
+        "じゃありません"
+      ],
+      "distractor_strategy": "negative-response-order",
+      "teaching_note": "いいえ mở câu phủ định; そうじゃありません phủ định điều vừa hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-usage-l3-006",
+      "template_id": "tpl-grammar-n5-009-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Trả lời khẳng định lịch sự cho câu hỏi: あれは学校ですか。",
+      "answer_template": "はい、そうです",
+      "distractor_strategy": "affirmative-answer-production",
+      "teaching_note": "Không cần lặp lại あれは学校です nếu dùng そうです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-context-l3-007",
+      "template_id": "tpl-grammar-n5-009-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn được hỏi '田中さんは先生ですか'. Thực tế Tanaka không phải giáo viên. Trả lời phủ định lịch sự.",
+      "answer_template": "いいえ、そうじゃありません",
+      "distractor_strategy": "contextual-denial-response",
+      "teaching_note": "Bác bỏ mệnh đề 'Tanaka là giáo viên' bằng いいえ、そうじゃありません.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-context-l2-008",
+      "template_id": "tpl-grammar-n5-009-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp với はい、そうです / いいえ、そうじゃありません?",
+      "answer_template": "Trả lời câu hỏi đúng/sai như 'これは本ですか'.",
+      "options_template": [
+        "Trả lời câu hỏi đúng/sai như 'これは本ですか'.",
+        "Nối hai danh từ thành 'sách của tôi'.",
+        "Chỉ vật gần người nói.",
+        "Gọi người khác lịch sự bằng tên."
+      ],
+      "distractor_strategy": "yes-no-response-context",
+      "teaching_note": "Cặp này dùng sau câu hỏi xác nhận, không tạo cụm danh từ hay chỉ vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-009-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: これは辞書ですか。Vật đó đúng là từ điển. Câu nào khớp ngữ cảnh?",
+      "answer_template": "はい、そうです。",
+      "options_template": [
+        "はい、そうです。",
+        "いいえ、そうじゃありません。",
+        "はい、そうじゃありません。",
+        "いいえ、辞書です。"
+      ],
+      "distractor_strategy": "polarity-consistency-analysis",
+      "teaching_note": "Nếu mệnh đề đúng, dùng はい、そうです; đừng trộn はい với phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-009-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-009-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_2:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: あの人は学生ですか。Thực tế người đó là giáo viên. Câu nào vừa phủ định vừa sửa thông tin tự nhiên?",
+      "answer_template": "いいえ、そうじゃありません。先生です。",
+      "options_template": [
+        "いいえ、そうじゃありません。先生です。",
+        "はい、そうです。先生です。",
+        "いいえ、そうです。先生です。",
+        "はい、そうじゃありません。学生です。"
+      ],
+      "distractor_strategy": "negative-correction-analysis",
+      "teaching_note": "Trước hết phủ định mệnh đề sai, rồi nêu thông tin đúng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

@@ -16,6 +16,7 @@ import 'package:jpstudy/features/common/widgets/compact_ui.dart';
 import 'package:jpstudy/features/home/providers/cloud_sync_status_provider.dart';
 import 'package:jpstudy/features/legal/legal_document_screen.dart';
 import 'package:jpstudy/features/me/providers/data_settings_controller.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 class DataSettingsScreen extends ConsumerStatefulWidget {
   const DataSettingsScreen({super.key});
@@ -197,54 +198,63 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
                 spacing: AppSpacing.sm,
                 runSpacing: AppSpacing.sm,
                 children: [
-                  OutlinedButton.icon(
+                  AppButton(
+                    label: controller.cloudSyncChooseFileLabel(language),
+                    icon: Icons.folder_open_outlined,
                     onPressed: settings.isReady
                         ? () => controller.linkExistingCloudSyncFile(
                             context,
                             language,
                           )
                         : null,
-                    icon: const Icon(Icons.folder_open_outlined),
-                    label: Text(controller.cloudSyncChooseFileLabel(language)),
+                    variant: AppButtonVariant.secondary,
+                    compact: true,
                   ),
-                  OutlinedButton.icon(
+                  AppButton(
+                    label: controller.cloudSyncCreateFileLabel(language),
+                    icon: Icons.note_add_outlined,
                     onPressed: settings.isReady
                         ? () =>
                               controller.createCloudSyncFile(context, language)
                         : null,
-                    icon: const Icon(Icons.note_add_outlined),
-                    label: Text(controller.cloudSyncCreateFileLabel(language)),
+                    variant: AppButtonVariant.secondary,
+                    compact: true,
                   ),
-                  FilledButton.icon(
+                  AppButton(
+                    label: controller.cloudSyncUploadLabel(language),
+                    icon: Icons.cloud_upload_outlined,
                     onPressed: settings.isReady && status.isLinked
                         ? () => _runUpload(
                             controller: controller,
                             language: language,
                           )
                         : null,
-                    icon: const Icon(Icons.cloud_upload_outlined),
-                    label: Text(controller.cloudSyncUploadLabel(language)),
+                    compact: true,
                   ),
-                  OutlinedButton.icon(
+                  AppButton(
+                    label: controller.cloudSyncDownloadLabel(language),
+                    icon: Icons.cloud_download_outlined,
                     onPressed: settings.isReady && status.isLinked
                         ? () => _runDownload(
                             controller: controller,
                             language: language,
                           )
                         : null,
-                    icon: const Icon(Icons.cloud_download_outlined),
-                    label: Text(controller.cloudSyncDownloadLabel(language)),
+                    variant: AppButtonVariant.secondary,
+                    compact: true,
                   ),
                   if (status.isLinked)
-                    OutlinedButton.icon(
+                    AppButton(
+                      label: controller.cloudSyncUnlinkLabel(language),
+                      icon: Icons.link_off_outlined,
                       onPressed: settings.isReady
                           ? () => controller.unlinkCloudSyncFile(
                               context,
                               language,
                             )
                           : null,
-                      icon: const Icon(Icons.link_off_outlined),
-                      label: Text(controller.cloudSyncUnlinkLabel(language)),
+                      variant: AppButtonVariant.secondary,
+                      compact: true,
                     ),
                 ],
               ),
@@ -348,35 +358,40 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
               spacing: AppSpacing.sm,
               runSpacing: AppSpacing.sm,
               children: [
-                FilledButton.icon(
+                AppButton(
+                  label: language.firebaseStorageUploadLabel,
+                  icon: Icons.cloud_sync_outlined,
                   onPressed: settings.isReady
                       ? () => _runFirebaseUpload(
                           controller: controller,
                           language: language,
                         )
                       : null,
-                  icon: const Icon(Icons.cloud_sync_outlined),
-                  label: Text(language.firebaseStorageUploadLabel),
+                  compact: true,
                 ),
-                OutlinedButton.icon(
+                AppButton(
+                  label: language.firebaseStorageDownloadLabel,
+                  icon: Icons.cloud_download_outlined,
                   onPressed: settings.isReady
                       ? () => _runFirebaseDownload(
                           controller: controller,
                           language: language,
                         )
                       : null,
-                  icon: const Icon(Icons.cloud_download_outlined),
-                  label: Text(language.firebaseStorageDownloadLabel),
+                  variant: AppButtonVariant.secondary,
+                  compact: true,
                 ),
-                OutlinedButton.icon(
+                AppButton(
+                  label: language.firebaseStorageDeleteLabel,
+                  icon: Icons.delete_outline,
                   onPressed: settings.isReady
                       ? () => _runFirebaseDelete(
                           controller: controller,
                           language: language,
                         )
                       : null,
-                  icon: const Icon(Icons.delete_outline),
-                  label: Text(language.firebaseStorageDeleteLabel),
+                  variant: AppButtonVariant.destructive,
+                  compact: true,
                 ),
               ],
             ),
@@ -466,13 +481,17 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
         title: Text(language.analyticsResetConfirmTitle),
         content: Text(language.analyticsResetConfirmBody),
         actions: [
-          TextButton(
+          AppButton(
+            label: MaterialLocalizations.of(context).cancelButtonLabel,
             onPressed: () => Navigator.of(context).pop(false),
-            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+            variant: AppButtonVariant.ghost,
+            compact: true,
           ),
-          FilledButton(
+          AppButton(
+            label: language.analyticsResetConfirmLabel,
             onPressed: () => Navigator.of(context).pop(true),
-            child: Text(language.analyticsResetConfirmLabel),
+            variant: AppButtonVariant.destructive,
+            compact: true,
           ),
         ],
       ),
@@ -630,13 +649,17 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
         title: Text(language.firebaseStorageDeleteConfirmTitle),
         content: Text(language.firebaseStorageDeleteConfirmBody),
         actions: [
-          TextButton(
+          AppButton(
+            label: MaterialLocalizations.of(context).cancelButtonLabel,
             onPressed: () => Navigator.of(context).pop(false),
-            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+            variant: AppButtonVariant.ghost,
+            compact: true,
           ),
-          FilledButton(
+          AppButton(
+            label: language.firebaseStorageDeleteLabel,
             onPressed: () => Navigator.of(context).pop(true),
-            child: Text(language.firebaseStorageDeleteLabel),
+            variant: AppButtonVariant.destructive,
+            compact: true,
           ),
         ],
       ),
@@ -677,20 +700,25 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
       builder: (context) => AlertDialog(
         title: Text(language.encryptBackupPromptTitle),
         actions: [
-          TextButton(
+          AppButton(
+            label: MaterialLocalizations.of(context).cancelButtonLabel,
             onPressed: () =>
                 Navigator.of(context).pop(_ExportEncryptionMode.cancel),
-            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+            variant: AppButtonVariant.ghost,
+            compact: true,
           ),
-          TextButton(
+          AppButton(
+            label: language.encryptNoLabel,
             onPressed: () =>
                 Navigator.of(context).pop(_ExportEncryptionMode.plain),
-            child: Text(language.encryptNoLabel),
+            variant: AppButtonVariant.secondary,
+            compact: true,
           ),
-          ElevatedButton(
+          AppButton(
+            label: language.encryptYesLabel,
             onPressed: () =>
                 Navigator.of(context).pop(_ExportEncryptionMode.encrypt),
-            child: Text(language.encryptYesLabel),
+            compact: true,
           ),
         ],
       ),
@@ -746,13 +774,16 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
                     ],
                   ),
                   actions: [
-                    TextButton(
+                    AppButton(
+                      label: MaterialLocalizations.of(
+                        context,
+                      ).cancelButtonLabel,
                       onPressed: () => Navigator.of(context).pop(null),
-                      child: Text(
-                        MaterialLocalizations.of(context).cancelButtonLabel,
-                      ),
+                      variant: AppButtonVariant.ghost,
+                      compact: true,
                     ),
-                    ElevatedButton(
+                    AppButton(
+                      label: MaterialLocalizations.of(context).okButtonLabel,
                       onPressed: () {
                         if (passController.text.isEmpty) {
                           setStateDialog(() {
@@ -768,9 +799,7 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
                         }
                         Navigator.of(context).pop(passController.text);
                       },
-                      child: Text(
-                        MaterialLocalizations.of(context).okButtonLabel,
-                      ),
+                      compact: true,
                     ),
                   ],
                 );
@@ -802,13 +831,16 @@ class _DataSettingsScreenState extends ConsumerState<DataSettingsScreen> {
             decoration: InputDecoration(labelText: language.passphraseLabel),
           ),
           actions: [
-            TextButton(
+            AppButton(
+              label: MaterialLocalizations.of(context).cancelButtonLabel,
               onPressed: () => Navigator.of(context).pop(null),
-              child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+              variant: AppButtonVariant.ghost,
+              compact: true,
             ),
-            ElevatedButton(
+            AppButton(
+              label: MaterialLocalizations.of(context).okButtonLabel,
               onPressed: () => Navigator.of(context).pop(controller.text),
-              child: Text(MaterialLocalizations.of(context).okButtonLabel),
+              compact: true,
             ),
           ],
         ),
@@ -1168,10 +1200,10 @@ class _LinkedSyncNextStepCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 14),
-          FilledButton.icon(
+          AppButton(
+            label: recommendation.actionLabel,
+            icon: recommendation.icon,
             onPressed: enabled ? onTap : null,
-            icon: Icon(recommendation.icon),
-            label: Text(recommendation.actionLabel),
           ),
         ],
       ),

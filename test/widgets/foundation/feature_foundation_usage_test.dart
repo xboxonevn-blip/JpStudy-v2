@@ -65,6 +65,7 @@ void main() {
       'lib/features/grammar/screens/ghost_practice_screen.dart',
       'lib/features/jlpt/screens/jlpt_reading_screen.dart',
       'lib/features/jlpt/screens/jlpt_mock_pro_screen.dart',
+      'lib/features/me/screens/data_settings_screen.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

@@ -50,3 +50,10 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Blocking**: no
 **Default action taken**: Grammar ExerciseBank uses deterministic variants to reach >=50 exercises per item while preserving validator uniqueness by prompt/signature. Later authored/static generation should replace repeated variants where source examples allow.
 **Owner answer**: pending
+
+## OQ-008 - Human review depth for generated reading corpus
+**Phase**: 4
+**Date**: 2026-05-21 08:20
+**Blocking**: no
+**Default action taken**: Shipped original JpStudy reading passages with level-length validation and 3-question sets per passage; mark owner review pending for pedagogical nuance, not copyright clearance.
+**Owner answer**: pending

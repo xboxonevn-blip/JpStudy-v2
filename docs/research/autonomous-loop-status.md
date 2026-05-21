@@ -1373,3 +1373,11 @@
 - TDD RED/GREEN: `test/features/exercise/exercise_bank_test.dart` first failed on the missing Exercise API, then passed after implementation.
 - Added runtime guard proving every N5-N1 grammar point reaches dense ExerciseBank coverage and Bloom coverage.
 - Logged `DECISION-015` and `OQ-007` for the grammar-first bridge and repeated generated variants.
+
+## 2026-05-21 Megaprompt Phase 4 Exercise Engine Batch 2
+
+- Added `tool/research/generate_exercises.js` and `tool/qa/validate_exercises.js`.
+- Generated original JpStudy reading-comprehension corpus with required counts: N5 `10`, N4 `10`, N3 `20`, N2 `20`, N1 `20`.
+- Generated local distractor corpora from bundled assets only: phonetic traps for `15661` vocab items and kanji lookalikes for `2113` kanji.
+- Added asset bundling paths for `reading_passages/` and `exercise_distractors/`.
+- Validation output: `readingPassages=80`, `phoneticTrapItems=15661`, `kanjiLookalikeItems=2113`, failures `0`.

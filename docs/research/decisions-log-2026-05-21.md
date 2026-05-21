@@ -151,3 +151,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This gives a tested ExerciseBank contract and proves the >=50/Bloom density rule across all runtime grammar points before extending the same model to vocab, kanji, reading, and conjugation assets.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-016 - Generate original reading and distractor corpora locally
+**Phase**: 4
+**Date**: 2026-05-21 08:20 (local)
+**Context**: Phase 4 requires reading-comprehension coverage plus phonetic and kanji-lookalike distractor banks without importing copyrighted JLPT/book/site exercises.
+**Options considered**: scrape public reading sites | copy official/sample questions | generate original JpStudy passages and local distractor corpora
+**Chosen**: generate original JpStudy passages and local distractor corpora
+**Rationale**: Original passages avoid copyright risk, and phonetic/lookalike corpora can be derived from bundled local vocab/kanji facts with deterministic validation.
+**Reversible**: yes
+**Owner review**: pending

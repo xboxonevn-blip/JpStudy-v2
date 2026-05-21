@@ -1942,3 +1942,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `で` answers "by what means"; `へ` answers "to
   where". Walking stays special: `歩いて行きます`.
+
+## 2026-05-22 Phase G Tier-1 item 026
+
+- Re-authored `grammar:n5:grammar_n5_5:004` (`歩いて行きます`) with 歩/て-form
+  walking logic and contrast against transport `Nで`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: vehicles use `Nで`; walking uses `歩いて`. Add `へ`
+  separately only when naming the destination.

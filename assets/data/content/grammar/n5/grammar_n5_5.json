@@ -146,10 +146,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: 歩いて (aruite) 行きます",
-      "meaning": "Ý nghĩa: Khi nói đi bộ, dùng `歩いて`.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "歩 là chữ Hán-Việt 'bộ', nghĩa là bước đi. 歩いて là dạng て của 歩きます, dùng như cách thức 'bằng việc đi bộ'. Cấu trúc 歩いて行きます là ngoại lệ so với phương tiện Nで行きます.",
+      "hanVietBridge": "Nhớ bằng 'bộ hành': đi bằng chính bước chân thì dùng 歩いて, không xem 'chân' như phương tiện để gắn で. Vì vậy nói 歩いて行きます, không nói 歩きで行きます.",
+      "form": "Hình thức: 歩いて行きます. Có thể thêm đích đến: 学校へ歩いて行きます hoặc 歩いて学校へ行きます.",
+      "meaning": "Ý nghĩa: đi bộ đến đâu đó, đi bằng chân thay vì dùng xe buýt, tàu, taxi...",
+      "usage": "Sử dụng: dùng khi muốn nói quãng đường được đi bằng cách đi bộ: 駅まで歩いて行きます, 学校へ歩いて行きます.",
+      "humanMoment": "Dr. Linh lưu ý: 歩いて行きます là lối nói riêng cho 'đi bộ'. Khác バスで行きます, ở đây không dùng で vì đi bộ được đóng gói bằng dạng て của động từ 歩きます.",
+      "crossLinks": [
+        {
+          "pattern": "N( phương tiện ) で 行きます",
+          "contrast": "khác hình thức: xe buýt/taxi/tàu dùng Nで, còn đi bộ dùng 歩いて."
+        },
+        {
+          "pattern": "N(địa điểm) へ 行きます",
+          "contrast": "khác vai trò: へ đánh dấu đích đến, còn 歩いて đánh dấu cách di chuyển."
+        },
+        {
+          "pattern": "Vて",
+          "contrast": "khác mức cụ thể: Vて là dạng nối/chỉ cách rộng hơn, còn 歩いて行きます là cụm cố định N5 để nói đi bộ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

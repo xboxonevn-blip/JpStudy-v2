@@ -40,6 +40,11 @@ void main() {
       'lib/features/kanji_hub/widgets/kanji_relationship_graph.dart',
       'lib/features/kanji_hub/widgets/kanji_graph_practice_panel.dart',
       'lib/features/home/widgets/ghost_review_banner.dart',
+      'lib/features/auth/widgets/login_dialog.dart',
+      'lib/features/conjugation/screens/conjugation_hub_screen.dart',
+      'lib/features/home/widgets/daily_session_card.dart',
+      'lib/features/home/screens/learning_path_screen.dart',
+      'lib/features/immersion/screens/immersion_reader_screen.dart',
     ];
 
     final rawPrimitivePattern = RegExp(

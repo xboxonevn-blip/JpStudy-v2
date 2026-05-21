@@ -102,10 +102,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 は N2 (địa điểm) です",
-      "meaning": "Ý nghĩa: Dùng để nói N1 đang ở đâu hoặc một địa điểm nằm ở đâu.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Cấu trúc N1 は N2 です vốn là khung chủ đề-vị ngữ: は nêu N1, です chốt N2 như thông tin chính. Khi N2 là địa điểm như 教室, 受付, あそこ, vị ngữ không còn là 'là ai/cái gì' mà là 'ở đâu'.",
+      "hanVietBridge": "Liên hệ Hán-Việt 'địa điểm' và 'vị trí': N2 là điểm đặt của N1. Vì tiếng Việt dùng 'ở', người học nên dịch theo chức năng địa điểm: 田中さんは教室です = anh Tanaka ở phòng học.",
+      "form": "Hình thức: N1 は N2(địa điểm) です. N1 là người/vật/địa điểm cần định vị; N2 là nơi, tầng, phòng, quầy, hoặc từ chỉ chỗ.",
+      "meaning": "Ý nghĩa: diễn tả N1 đang ở đâu hoặc một địa điểm nằm ở đâu. Đây là câu vị trí, không nhất thiết là câu định danh 'N1 là N2'.",
+      "usage": "Sử dụng: dùng với câu như 田中さんは教室です, トイレはあそこです, 受付は一階です. Khi N2 là nơi, dịch tự nhiên bằng 'ở/tại'.",
+      "humanMoment": "Dr. Linh lưu ý: N1 は N2(địa điểm) です nhìn giống N1 は N2 です, nhưng N2 là nơi nên nghĩa đổi sang vị trí. 田中さんは教室です không biến Tanaka thành phòng học; nó nói Tanaka đang ở phòng học.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 です",
+          "contrast": "khác loại vị ngữ: nếu N2 là danh tính/nghề nghiệp thì dịch 'là', còn nếu N2 là địa điểm thì dịch 'ở/tại'."
+        },
+        {
+          "pattern": "ここ/そこ/あそこ は N です",
+          "contrast": "khác trọng tâm: ここ/そこ/あそこ は N です định danh một chỗ, còn N1 は N2(địa điểm) です định vị N1."
+        },
+        {
+          "pattern": "N は どこ/どちら ですか",
+          "contrast": "khác chiều hỏi-đáp: どこ/どちら hỏi vị trí, còn N1 は N2(địa điểm) です trả lời vị trí đó."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

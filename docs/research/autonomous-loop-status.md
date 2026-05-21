@@ -1843,3 +1843,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `こちら` can mean "this way/place/person" politely.
   Use it at reception or when introducing people; do not reduce it to `ここ`.
+
+## 2026-05-22 Phase G Tier-1 item 015
+
+- Re-authored `grammar:n5:grammar_n5_3:003` (`N1 は N2(địa điểm) です`)
+  with location-predicate reading and contrasts against identity sentences.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: if N2 is a place, translate the frame as "N1 is
+  at/in N2". `田中さんは教室です` means Tanaka is in the classroom.

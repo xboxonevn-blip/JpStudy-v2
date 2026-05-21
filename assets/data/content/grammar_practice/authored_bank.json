@@ -2979,6 +2979,217 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-form-l1-001",
+      "template_id": "tpl-grammar-n5-015-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ đúng: 田中さん ___ 教室です。",
+      "answer_template": "は",
+      "options_template": [
+        "は",
+        "の",
+        "も",
+        "か"
+      ],
+      "distractor_strategy": "topic-location-predicate-particle",
+      "teaching_note": "は đặt người/vật cần định vị làm chủ đề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-form-l1-002",
+      "template_id": "tpl-grammar-n5-015-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu N1 は N2(địa điểm) です?",
+      "answer_template": "トイレはあそこです。",
+      "options_template": [
+        "トイレはあそこです。",
+        "トイレのあそこです。",
+        "トイレもあそこか。",
+        "トイレあそこですか。"
+      ],
+      "distractor_strategy": "location-topic-form",
+      "teaching_note": "N1 は N2 です vẫn giữ khung chủ đề + vị ngữ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-015-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "マリアさんは会議室です nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Chị Maria ở phòng họp.",
+      "options_template": [
+        "Chị Maria ở phòng họp.",
+        "Chị Maria là phòng họp.",
+        "Phòng họp của chị Maria.",
+        "Chị Maria cũng là phòng họp."
+      ],
+      "distractor_strategy": "location-predicate-vs-identity-possession-additive",
+      "teaching_note": "Khi vị ngữ là địa điểm, tiếng Việt dịch bằng 'ở'.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-015-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1 は N2(địa điểm) です, N2 cho biết điều gì?",
+      "answer_template": "N2 cho biết vị trí/nơi của N1.",
+      "distractor_strategy": "location-predicate-role-recall",
+      "teaching_note": "N2 là địa điểm, không phải danh tính của N1.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-usage-l3-005",
+      "template_id": "tpl-grammar-n5-015-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'Nhà vệ sinh ở đằng kia': トイレは / あそこです",
+      "answer_template": "トイレはあそこです。",
+      "options_template": [
+        "トイレは",
+        "あそこです"
+      ],
+      "distractor_strategy": "location-answer-order",
+      "teaching_note": "Địa điểm trả lời cho vị trí của N1 đứng sau は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-usage-l3-006",
+      "template_id": "tpl-grammar-n5-015-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Bạn muốn nói 'Anh Tanaka ở văn phòng'. Viết câu.",
+      "answer_template": "田中さんは事務室です。",
+      "distractor_strategy": "person-location-production",
+      "teaching_note": "Ở bài này, địa điểm có thể làm vị ngữ với です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-context-l3-007",
+      "template_id": "tpl-grammar-n5-015-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Bạn chỉ bản đồ trường và nói 'Thư viện ở tầng hai'. Viết câu.",
+      "answer_template": "図書館は二階です。",
+      "distractor_strategy": "facility-floor-context",
+      "teaching_note": "Tầng/phòng cũng là địa điểm nên đứng sau は trong mẫu này.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-context-l2-008",
+      "template_id": "tpl-grammar-n5-015-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N1 は N2(địa điểm) です?",
+      "answer_template": "Bạn cần nói một người, phòng, quầy, hoặc nhà vệ sinh ở đâu.",
+      "options_template": [
+        "Bạn cần nói một người, phòng, quầy, hoặc nhà vệ sinh ở đâu.",
+        "Bạn cần hỏi tên một đồ vật.",
+        "Bạn cần giới thiệu nghề nghiệp của Tanaka.",
+        "Bạn cần nối hai danh từ bằng の."
+      ],
+      "distractor_strategy": "location-context-vs-wh-identity-no",
+      "teaching_note": "Mấu chốt là vị trí; nếu N2 không phải nơi, nghĩa chuyển sang định danh.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-015-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Ngữ cảnh: A hỏi Tanaka ở đâu. Tanaka đang trong lớp học. Câu nào phân tích đúng nghĩa vị trí?",
+      "answer_template": "田中さんは教室です。",
+      "options_template": [
+        "田中さんは教室です。",
+        "田中さんは先生です。",
+        "田中さんの教室です。",
+        "田中さんも教室ですか。"
+      ],
+      "distractor_strategy": "location-vs-identity-possession-question-analysis",
+      "teaching_note": "L4: cùng khung は...です nhưng 教室 là địa điểm, còn 先生 là danh tính/nghề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-015-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-015-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_3:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn muốn trả lời câu hỏi 'トイレはどこですか'. Câu nào là câu trả lời vị trí, không phải câu hỏi mới?",
+      "answer_template": "トイレはあそこです。",
+      "options_template": [
+        "トイレはあそこです。",
+        "トイレはどこですか。",
+        "あそこはトイレです。",
+        "これはトイレですか。"
+      ],
+      "distractor_strategy": "answer-location-vs-question-place-identity-analysis",
+      "teaching_note": "N は どこですか hỏi vị trí; N は địa điểmです trả lời vị trí đó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

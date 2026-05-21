@@ -589,3 +589,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Early kana guidance remains visible for learners who need it, but it no longer interrupts the main route or causes a first-visit modal trap.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-060 - Minna fallback labels hide storage ids
+**Phase**: Urgent live audit P3 L1-L2
+**Date**: 2026-05-22 14:05 (local)
+**Context**: The review page could show a next-lesson label such as `Bắt đầu Minna No Nihongo -905014`, exposing an internal lesson storage id from seeded textbook rows.
+**Options considered**: patch only the review card copy | strip every digit from next-lesson labels | make the curriculum title fallback source-aware for N5/N4 Minna I/II
+**Chosen**: Format N5/N4 curriculum fallbacks as `Minna no Nihongo I/II — Lesson/Bài n`, clamp out-of-range internal ids to the first visible lesson, and stop shortening next-lesson labels to digit-only text in the continue button.
+**Rationale**: This removes internal ids wherever the shared continue/next-lesson label is reused, while preserving real lesson titles for the learner.
+**Reversible**: yes
+**Owner review**: pending

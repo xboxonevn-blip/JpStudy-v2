@@ -397,7 +397,33 @@ extension AppLanguageLabels on AppLanguage {
           return '\u65b0\u5b8c\u5168\u30de\u30b9\u30bf\u30fc $normalized $number';
       }
     }
+    if (normalized == 'N5') {
+      final lessonNumber = number >= 1 && number <= 25 ? number : 1;
+      return _minnaLessonTitle(series: 'I', lessonNumber: lessonNumber);
+    }
+    if (normalized == 'N4') {
+      final lessonNumber = number >= 26 && number <= 50
+          ? number - 25
+          : number >= 1 && number <= 25
+          ? number
+          : 1;
+      return _minnaLessonTitle(series: 'II', lessonNumber: lessonNumber);
+    }
     return lessonTitle(number);
+  }
+
+  String _minnaLessonTitle({
+    required String series,
+    required int lessonNumber,
+  }) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Minna no Nihongo $series — Lesson $lessonNumber';
+      case AppLanguage.vi:
+        return 'Minna no Nihongo $series — Bài $lessonNumber';
+      case AppLanguage.ja:
+        return 'みんなの日本語 $series $lessonNumber課';
+    }
   }
 
   String lessonSubtitle(int termCount) {

@@ -10,4 +10,23 @@ void main() {
       'Shin Kanzen N2 Bài 1',
     );
   });
+
+  test('Minna next lesson labels hide internal storage ids', () {
+    expect(
+      continueLessonLabelForTesting(AppLanguage.vi, StudyLevel.n5, 1),
+      'Minna no Nihongo I — Bài 1',
+    );
+    expect(
+      continueLessonLabelForTesting(AppLanguage.vi, StudyLevel.n4, 26),
+      'Minna no Nihongo II — Bài 1',
+    );
+
+    final leaked = continueLessonLabelForTesting(
+      AppLanguage.vi,
+      StudyLevel.n5,
+      -905014,
+    );
+    expect(leaked, 'Minna no Nihongo I — Bài 1');
+    expect(leaked, isNot(contains('905014')));
+  });
 }

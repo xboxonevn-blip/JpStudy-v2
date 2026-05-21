@@ -22,8 +22,6 @@ class ContinueButton extends ConsumerStatefulWidget {
 }
 
 class _ContinueButtonState extends ConsumerState<ContinueButton> {
-  static final _nonDigitRe = RegExp(r'[^0-9]');
-
   ContinueAction? _lastAction;
 
   @override
@@ -302,10 +300,6 @@ class _ContinueButtonState extends ConsumerState<ContinueButton> {
 
   String _getLabel(ContinueAction action, AppLanguage language) {
     if (action.type == ContinueActionType.nextLesson) {
-      final number = action.label.replaceAll(_nonDigitRe, '');
-      if (number.isNotEmpty) {
-        return '${language.lessonLabel} $number';
-      }
       return action.label;
     }
     if (action.count != null && action.count! > 0) {

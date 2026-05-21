@@ -2264,3 +2264,14 @@
 - Gates passed: focused `flutter analyze`, responsive/grammar/foundations/
   onboarding/multiple-choice Flutter tests, and `flutter build web --release`.
 - Continuing P3 next: review label cleanup and onboarding selected-state polish.
+
+## 2026-05-22 P3 low polish defects
+
+- L1: next-lesson/review labels no longer expose internal storage IDs such as
+  `-905014`; N5/N4 fallbacks render as Minna no Nihongo I/II lesson titles.
+- L2: level onboarding already had a selected-card state; P2 made the enabled
+  start CTA visibly primary and kept regression coverage.
+- Gates passed: focused `flutter analyze`, continue/onboarding Flutter tests,
+  and `flutter build web --release`.
+- Urgent P0-P3 code fixes are committed; final live Playwright acceptance pass
+  remains next.

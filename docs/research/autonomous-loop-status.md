@@ -1559,3 +1559,9 @@
 - Dry-run for `kanji-vocab-n4` reported `11` local PDFs, `827` accepted factual rows, and `0` review rows.
 - Extracted `docs/research/canonical/vocab/kanji-vocab-n4.md` and report `docs/research/canonical/vocab/reports/kanji-vocab-n4.json` with level `N4` and `text-layer` confidence.
 - No banned website was accessed. Next: run gates, commit, then continue kanji-vocab N3/N2.
+
+## 2026-05-21 QA-A-030 Phase 1 Kanji-vocab N3 extraction
+
+- Dry-run for `kanji-vocab-n3` reported `19` local PDFs, `1358` accepted factual rows, and `0` review rows.
+- Extracted `docs/research/canonical/vocab/kanji-vocab-n3.md` and report `docs/research/canonical/vocab/reports/kanji-vocab-n3.json` with level `N3` and `text-layer` confidence.
+- No banned website was accessed. Next: run gates, commit, then continue kanji-vocab N2.

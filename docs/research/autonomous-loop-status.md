@@ -1540,3 +1540,9 @@
 - Dry-run for `mimikara-n2` reported `11` local PDFs, `991` accepted factual rows, and `0` review rows. Local folder still lacks units `5` and `9`; OQ-011 remains non-blocking.
 - Extracted `docs/research/canonical/vocab/mimikara-n2.md` and report `docs/research/canonical/vocab/reports/mimikara-n2.json` with level `N2` and `text-layer` confidence.
 - No banned website was accessed. Next: run gates, commit, then continue Mimikara N1.
+
+## 2026-05-21 QA-A-030 Phase 1 Mimikara N1 extraction
+
+- Dry-run for `mimikara-n1` reported `12` local PDFs, `864` accepted factual rows, and `0` review rows. Local folder still lacks units `6` and `10`; OQ-011 remains non-blocking.
+- Extracted `docs/research/canonical/vocab/mimikara-n1.md` and report `docs/research/canonical/vocab/reports/mimikara-n1.json` with level `N1` and `text-layer` confidence.
+- No banned website was accessed. Next: run gates, commit, then continue kanji-vocab N5/N4/N3/N2 extraction.

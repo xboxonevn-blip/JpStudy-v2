@@ -1906,3 +1906,12 @@
   contrast, and Bloom L1-L4.
 - Teaching Test paraphrase: `から...まで` builds a span from start to finish,
   unlike a single clock time or a simple list with `と`.
+
+## 2026-05-22 Phase G Tier-1 item 022
+
+- Re-authored `grammar:n5:grammar_n5_4:004` (`N1 と N2`) with closed noun-list
+  logic and removed banned template-injection filler.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `と` lists nouns as equals. `東京と京都` is a list;
+  `東京から京都まで` is a route/range.

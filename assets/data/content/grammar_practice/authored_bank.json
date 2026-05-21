@@ -4456,6 +4456,218 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-form-l1-001",
+      "template_id": "tpl-grammar-n5-022-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trợ từ nối hai danh từ thành 'sách và vở': 本 ___ ノート",
+      "answer_template": "と",
+      "options_template": [
+        "と",
+        "の",
+        "から",
+        "まで"
+      ],
+      "distractor_strategy": "noun-list-to-vs-no-range-particles",
+      "teaching_note": "と đứng giữa hai danh từ ngang hàng trong danh sách.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-form-l1-002",
+      "template_id": "tpl-grammar-n5-022-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Cụm nào đúng mẫu N1 と N2?",
+      "answer_template": "先生と学生",
+      "options_template": [
+        "先生と学生",
+        "先生の学生",
+        "先生から学生まで",
+        "先生も学生"
+      ],
+      "distractor_strategy": "list-vs-modifier-range-additive",
+      "teaching_note": "と liệt kê giáo viên và học sinh như hai mục ngang hàng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-022-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "パンとコーヒー nghĩa tự nhiên nhất là gì?",
+      "answer_template": "bánh mì và cà phê",
+      "options_template": [
+        "bánh mì và cà phê",
+        "cà phê của bánh mì",
+        "từ bánh mì đến cà phê",
+        "bánh mì cũng là cà phê"
+      ],
+      "distractor_strategy": "and-vs-possession-range-additive",
+      "teaching_note": "と nối hai danh từ trong cùng danh sách ăn/uống.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-022-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1 と N2, quan hệ giữa N1 và N2 là gì?",
+      "answer_template": "Hai danh từ ngang hàng trong một danh sách đóng: N1 và N2.",
+      "distractor_strategy": "noun-list-role-recall",
+      "teaching_note": "と không biến danh từ trước thành bổ nghĩa cho danh từ sau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-usage-l3-005",
+      "template_id": "tpl-grammar-n5-022-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'sách và từ điển': 本 / と / 辞書",
+      "answer_template": "本と辞書",
+      "options_template": [
+        "本",
+        "と",
+        "辞書"
+      ],
+      "distractor_strategy": "noun-list-order",
+      "teaching_note": "Danh từ thứ nhất + と + danh từ thứ hai.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-usage-l3-006",
+      "template_id": "tpl-grammar-n5-022-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết cụm 'mẹ và bố'.",
+      "answer_template": "母と父",
+      "distractor_strategy": "family-noun-list-production",
+      "teaching_note": "Cả 母 và 父 là danh từ, nên nối bằng と.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-context-l3-007",
+      "template_id": "tpl-grammar-n5-022-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recall",
+      "prompt_template": "Danh sách mua đồ có sữa và bánh mì. Viết cụm 'sữa và bánh mì'.",
+      "answer_template": "牛乳とパン",
+      "distractor_strategy": "shopping-list-context",
+      "teaching_note": "Danh sách mua đồ là ngữ cảnh điển hình của と.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-context-l2-008",
+      "template_id": "tpl-grammar-n5-022-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với N1 と N2?",
+      "answer_template": "Bạn cần liệt kê hai danh từ cùng nhóm.",
+      "options_template": [
+        "Bạn cần liệt kê hai danh từ cùng nhóm.",
+        "Bạn cần nói từ Tokyo đến Kyoto.",
+        "Bạn cần nói xe của Nhật.",
+        "Bạn cần nói Tanaka cũng là học sinh."
+      ],
+      "distractor_strategy": "list-context-vs-range-origin-additive",
+      "teaching_note": "と là danh sách; から...まで là phạm vi; の là quan hệ bổ nghĩa.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-022-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Bạn chỉ muốn liệt kê Tokyo và Kyoto, không mô tả hành trình từ Tokyo đến Kyoto. Cụm nào đúng?",
+      "answer_template": "東京と京都",
+      "options_template": [
+        "東京と京都",
+        "東京から京都まで",
+        "東京の京都",
+        "東京も京都"
+      ],
+      "distractor_strategy": "list-vs-range-modifier-additive-analysis",
+      "teaching_note": "L4: と không có hướng đi; から...まで mới có đầu-cuối.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-022-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-022-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_4:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào dùng と để nối hai danh từ ngang hàng, không dùng の để biến danh từ trước thành bổ nghĩa?",
+      "answer_template": "日本語と英語",
+      "options_template": [
+        "日本語と英語",
+        "日本語の本",
+        "日本の車",
+        "私の本"
+      ],
+      "distractor_strategy": "to-list-vs-no-modifier-origin-possession-analysis",
+      "teaching_note": "日本語と英語 là hai mục ngang hàng; các cụm の có danh từ sau làm trung tâm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

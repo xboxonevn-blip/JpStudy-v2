@@ -8,10 +8,13 @@ import 'package:jpstudy/core/app_language.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
+import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/lesson/lesson_detail_screen.dart';
+import 'package:drift/native.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 UserLessonTermData _term(
@@ -35,6 +38,40 @@ UserLessonTermData _term(
   orderIndex: id,
 );
 
+class _FakeConjugationRepository extends ConjugationRepository {
+  _FakeConjugationRepository(this.lemmas, this._contentDb) : super(_contentDb);
+
+  final List<ConjugationLemmaData> lemmas;
+  final ContentDatabase _contentDb;
+
+  @override
+  Future<List<ConjugationLemmaData>> fetchByLevel(String level) async => lemmas;
+
+  Future<void> close() => _contentDb.close();
+}
+
+ConjugationLemmaData _lemma(int id, String term, int lessonId) {
+  return ConjugationLemmaData(
+    id: id,
+    contentVocabId: id,
+    contentEntryId: 'entry_$id',
+    term: term,
+    reading: null,
+    dictionaryForm: term,
+    dictionaryReading: null,
+    kind: 'verb',
+    conjugationClass: 'godanRu',
+    posTagsJson: '[]',
+    jmdictEntrySeq: '$id',
+    sourceVocabId: 'src_$id',
+    sourceSenseId: 'sense_$id',
+    level: 'N5',
+    series: 'test',
+    lessonId: lessonId,
+    matchMethod: 'test',
+  );
+}
+
 double _contrast(Color foreground, Color background) {
   final resolvedForeground = foreground.a < 1
       ? Color.alphaBlend(foreground, background)
@@ -53,6 +90,7 @@ Widget buildScreen(
   AppLanguage language = AppLanguage.en,
   int lessonId = 1,
   String? expectedFallbackTitle,
+  ConjugationRepository? conjugationRepository,
 }) {
   final sourceLessonId = LessonRepository.curriculumSourceLessonId(
     level.shortLabel,
@@ -92,6 +130,8 @@ Widget buildScreen(
         storageLessonId,
       ).overrideWith((ref) async => const <UserLessonTermData>[]),
       srsStateProvider(1).overrideWith((ref) async => null),
+      if (conjugationRepository != null)
+        conjugationRepositoryProvider.overrideWithValue(conjugationRepository),
     ],
     child: MaterialApp(
       home: LessonDetailScreen(lessonId: lessonId, levelCode: level.shortLabel),
@@ -217,7 +257,12 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
 
-    await tester.tap(find.text(AppLanguage.en.grammarLabel));
+    await tester.tap(
+      find.descendant(
+        of: find.byType(TabBar),
+        matching: find.text(AppLanguage.en.grammarLabel),
+      ),
+    );
     await tester.pump(const Duration(milliseconds: 350));
     expect(
       DefaultTabController.of(tester.element(find.byType(TabBar))).index,
@@ -258,7 +303,63 @@ void main() {
     expect(find.byKey(const ValueKey('lesson_term_card_1')), findsOneWidget);
     expect(find.text('学校'), findsWidgets);
     expect(find.text('Kanji'), findsWidgets);
+    expect(
+      find.byKey(const ValueKey('lesson_term_grammar_badge_1')),
+      findsOneWidget,
+    );
     expect(find.text('Practice'), findsWidgets);
+  });
+
+  testWidgets('flashcard zone shows progress toggles and keyboard hints', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      buildScreen([
+        _term(1, '犬', 'dog', reading: 'いぬ'),
+        _term(2, '猫', 'cat', reading: 'ねこ'),
+      ]),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(
+      find.byKey(const ValueKey('lesson_flashcard_progress')),
+      findsOneWidget,
+    );
+    expect(find.byKey(const ValueKey('lesson_content_toggle')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('lesson_direction_toggle')),
+      findsOneWidget,
+    );
+    expect(find.byKey(const ValueKey('lesson_shortcut_hints')), findsOneWidget);
+    expect(find.textContaining('1 / 2'), findsOneWidget);
+  });
+
+  testWidgets('mode picker includes conjugation only for conjugable lessons', (
+    tester,
+  ) async {
+    final contentDb = ContentDatabase(executor: NativeDatabase.memory());
+    final repo = _FakeConjugationRepository([
+      _lemma(10, '帰る', 1),
+      _lemma(11, '走る', 2),
+    ], contentDb);
+
+    await tester.pumpWidget(
+      buildScreen([
+        _term(1, '帰る', 'return', reading: 'かえる'),
+      ], conjugationRepository: repo),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(
+      find.byKey(const ValueKey('lesson_mode_conjugation')),
+      findsOneWidget,
+    );
+
+    await tester.pumpWidget(Container());
+    await tester.pump(const Duration(milliseconds: 100));
+    await repo.close();
   });
 
   testWidgets('lesson workspace constrains desktop content width', (

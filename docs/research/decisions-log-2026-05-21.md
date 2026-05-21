@@ -121,3 +121,23 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Existing routes are live and tested, so header actions are functional now without adding dead UI or new route debt.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-013 - Keep lesson page cross-links in the current routes
+**Phase**: 3
+**Date**: 2026-05-21 07:14 (local)
+**Context**: Phase 3 needs term-level cross-link badges before the Phase 5 interlink graph exists.
+**Options considered**: wait for Phase 5 graph | add inert badges | link to current Kanji and Grammar destinations
+**Chosen**: link to current Kanji and Grammar destinations
+**Rationale**: Existing routes are live and learner-facing. This gives useful navigation now, while Phase 5 can replace the badge targets with item-specific graph links.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-014 - Use lesson conjugation lemmas for conditional mode
+**Phase**: 3
+**Date**: 2026-05-21 07:14 (local)
+**Context**: The lesson mode picker needs a seventh conjugation mode only when the lesson has verbs/adjectives.
+**Options considered**: always show conjugation | hide until Phase 4 | reuse the existing conjugation lemma lookup
+**Chosen**: reuse the existing conjugation lemma lookup
+**Rationale**: The Phase 2 lemma layer already maps active-level lemmas to lesson IDs, so the mode picker can stay conditional without adding a second taxonomy.
+**Reversible**: yes
+**Owner review**: pending

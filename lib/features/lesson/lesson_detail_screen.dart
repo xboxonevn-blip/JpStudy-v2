@@ -15,11 +15,14 @@ import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/utils/japanese_text.dart';
 import 'package:jpstudy/core/study_level.dart';
 import 'package:jpstudy/data/db/app_database.dart';
+import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/models/lesson_term_display.dart';
 import 'package:jpstudy/data/models/mistake_context.dart';
+import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/core/services/fsrs_service.dart';
 import 'package:jpstudy/shared/widgets/widgets.dart';
+import 'package:jpstudy/features/conjugation/models/conjugation_practice_args.dart';
 import 'package:jpstudy/features/conjugation/widgets/conjugation_lesson_widget.dart';
 import 'package:jpstudy/features/lesson/widgets/grammar_list_widget.dart';
 import 'package:jpstudy/features/mistakes/repositories/mistake_repository.dart';
@@ -49,6 +52,8 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
 
   bool _shuffle = false;
   bool _isAutoPlay = false;
+  bool _showExampleMode = false;
+  bool _frontShowsJapanese = true;
 
   final bool _focusMode = false;
   final Set<int> _flippedTermIds = {};
@@ -306,19 +311,30 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                                   Text(language.reviewCountLabel(totalTerms)),
                                 ],
                                 const SizedBox(height: 12),
-                                _LessonModePicker(
+                                _ConjugationAwareModeBlock(
                                   language: language,
-                                  lessonId: storageLessonId,
+                                  levelCode: level.shortLabel,
+                                  lessonId: sourceLessonId,
+                                  storageLessonId: storageLessonId,
                                   lessonTitle: title,
+                                  termsLoaded: termsAsync.asData != null,
                                 ),
-                                if (termsAsync.asData != null) ...[
-                                  const SizedBox(height: 12),
-                                  ConjugationLessonWidget(
-                                    levelCode: level.shortLabel,
-                                    lessonId: sourceLessonId,
-                                  ),
-                                ],
                                 const SizedBox(height: 20),
+                              ],
+                              if (totalTerms > 0) ...[
+                                _FlashcardStudyToolbar(
+                                  language: language,
+                                  current: currentIndex + 1,
+                                  total: totalTerms,
+                                  showExampleMode: _showExampleMode,
+                                  frontShowsJapanese: _frontShowsJapanese,
+                                  onShowExampleModeChanged: (value) =>
+                                      setState(() => _showExampleMode = value),
+                                  onDirectionChanged: (value) => setState(
+                                    () => _frontShowsJapanese = value,
+                                  ),
+                                ),
+                                const SizedBox(height: 12),
                               ],
                               Center(
                                 child: ConstrainedBox(
@@ -351,6 +367,9 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                                           showHints: _showHints,
                                           compactHint:
                                               _mode == _LessonMode.review,
+                                          showExampleMode: _showExampleMode,
+                                          frontShowsJapanese:
+                                              _frontShowsJapanese,
                                           isFlipped: isFlipped,
                                           trackProgress: _trackProgress,
                                           isStarred: isStarred,

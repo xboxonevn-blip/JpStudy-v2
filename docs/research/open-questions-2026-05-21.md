@@ -36,3 +36,10 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Blocking**: no
 **Default action taken**: Created Mimikara N1-N5 textbook records with `migration_status: planned_source_pending`; real lesson files wait for the offline canonical extraction pipeline.
 **Owner answer**: pending
+
+## OQ-006 - Lesson rows do not have a dedicated example field
+**Phase**: 3
+**Date**: 2026-05-21 07:14
+**Blocking**: no
+**Default action taken**: Flashcard context mode uses sourced mnemonic/context text when available and falls back to the localized meaning. Phase 4 exercise/reading assets should provide real sentence examples.
+**Owner answer**: pending

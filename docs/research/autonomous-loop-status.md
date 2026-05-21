@@ -1,5 +1,13 @@
 # Autonomous Loop Status
 
+# 2026-05-21 — Megaprompt Phase 3 lesson page redesign batch 3
+
+- Added flashcard progress, content/context toggle, direction toggle, and visible shortcut hints to the lesson workspace.
+- Added conditional seventh `Chia thể` mode to the mode picker when the current lesson has conjugation lemmas; it opens the existing 50-question conjugation drill.
+- Added a term-level Grammar badge beside Kanji and Practice badges so terms can jump to the lesson grammar panel before Phase 5 item-specific interlink graph lands.
+- TDD: RED tests first failed for missing grammar badge, flashcard controls, and conditional conjugation mode; GREEN focused lesson test passed `15/15`.
+- Gate: broader lesson/conjugation/nav suite passed `58/58`; `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean; full `flutter test --concurrency=1` passed `2429/2429`.
+
 # 2026-05-21 — Megaprompt Phase 3 lesson page redesign batch 1
 
 - Removed the deceptive empty Kanji tab from lesson navigation; Vocab and Grammar tabs remain functional while Kanji access moved to term-level badges.

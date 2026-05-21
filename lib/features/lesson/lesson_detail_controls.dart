@@ -405,11 +405,15 @@ class _LessonModePicker extends StatelessWidget {
     required this.language,
     required this.lessonId,
     required this.lessonTitle,
+    required this.hasConjugation,
+    this.onConjugationTap,
   });
 
   final AppLanguage language;
   final int lessonId;
   final String lessonTitle;
+  final bool hasConjugation;
+  final VoidCallback? onConjugationTap;
 
   @override
   Widget build(BuildContext context) {
@@ -449,6 +453,12 @@ class _LessonModePicker extends StatelessWidget {
           label: _modeLabel(language, 'Listening', 'Nghe', '聴解'),
           onTap: () => context.openLessonTest(lessonId, title: lessonTitle),
         ),
+        if (hasConjugation)
+          _PracticeButton(
+            key: const ValueKey('lesson_mode_conjugation'),
+            label: _modeLabel(language, 'Conjugation', 'Chia thể', '活用'),
+            onTap: onConjugationTap ?? () {},
+          ),
       ],
     );
   }
@@ -459,6 +469,73 @@ class _LessonModePicker extends StatelessWidget {
         AppLanguage.vi => vi,
         AppLanguage.ja => ja,
       };
+}
+
+class _ConjugationAwareModeBlock extends ConsumerWidget {
+  const _ConjugationAwareModeBlock({
+    required this.language,
+    required this.levelCode,
+    required this.lessonId,
+    required this.storageLessonId,
+    required this.lessonTitle,
+    required this.termsLoaded,
+  });
+
+  final AppLanguage language;
+  final String levelCode;
+  final int lessonId;
+  final int storageLessonId;
+  final String lessonTitle;
+  final bool termsLoaded;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    if (!termsLoaded) {
+      return _LessonModePicker(
+        language: language,
+        lessonId: storageLessonId,
+        lessonTitle: lessonTitle,
+        hasConjugation: false,
+      );
+    }
+    final repo = ref.watch(conjugationRepositoryProvider);
+    return FutureBuilder<List<ConjugationLemmaData>>(
+      future: repo.fetchByLevel(levelCode),
+      builder: (context, snapshot) {
+        final lemmas = (snapshot.data ?? const <ConjugationLemmaData>[])
+            .where((lemma) => lemma.lessonId == lessonId)
+            .take(8)
+            .toList(growable: false);
+        final ids = lemmas
+            .map((lemma) => lemma.contentVocabId)
+            .toList(growable: false);
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            _LessonModePicker(
+              language: language,
+              lessonId: storageLessonId,
+              lessonTitle: lessonTitle,
+              hasConjugation: lemmas.isNotEmpty,
+              onConjugationTap: lemmas.isEmpty
+                  ? null
+                  : () => context.openConjugationPractice(
+                      ConjugationPracticeArgs(
+                        contentVocabIds: ids,
+                        targetCount: 50,
+                        source: 'lesson_mode_picker',
+                      ),
+                    ),
+            ),
+            if (lemmas.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              ConjugationLessonWidget(levelCode: levelCode, lessonId: lessonId),
+            ],
+          ],
+        );
+      },
+    );
+  }
 }
 
 class _PracticeButton extends StatelessWidget {
@@ -601,6 +678,13 @@ class _LessonTermCard extends StatelessWidget {
                         onPressed: () => context.openKanji(),
                       ),
                     ActionChip(
+                      key: ValueKey('lesson_term_grammar_badge_${term.id}'),
+                      label: Text(_grammarLabel(language)),
+                      avatar: const Icon(Icons.account_tree_outlined, size: 16),
+                      onPressed: () =>
+                          DefaultTabController.of(context).animateTo(1),
+                    ),
+                    ActionChip(
                       label: Text(_practiceLabel(language)),
                       avatar: const Icon(Icons.play_arrow_rounded, size: 16),
                       onPressed: () =>
@@ -622,10 +706,170 @@ class _LessonTermCard extends StatelessWidget {
     AppLanguage.ja => '漢字',
   };
 
+  String _grammarLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Grammar',
+    AppLanguage.vi => 'Ngữ pháp',
+    AppLanguage.ja => '文法',
+  };
+
   String _practiceLabel(AppLanguage language) => switch (language) {
     AppLanguage.en => 'Practice',
     AppLanguage.vi => 'Luyện',
     AppLanguage.ja => '練習',
+  };
+}
+
+class _FlashcardStudyToolbar extends StatelessWidget {
+  const _FlashcardStudyToolbar({
+    required this.language,
+    required this.current,
+    required this.total,
+    required this.showExampleMode,
+    required this.frontShowsJapanese,
+    required this.onShowExampleModeChanged,
+    required this.onDirectionChanged,
+  });
+
+  final AppLanguage language;
+  final int current;
+  final int total;
+  final bool showExampleMode;
+  final bool frontShowsJapanese;
+  final ValueChanged<bool> onShowExampleModeChanged;
+  final ValueChanged<bool> onDirectionChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    final progress = total <= 0 ? 0.0 : current / total;
+    return Container(
+      key: const ValueKey('lesson_flashcard_toolbar'),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: palette.elevated,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: palette.outline),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: LinearProgressIndicator(
+                  key: const ValueKey('lesson_flashcard_progress'),
+                  value: progress.clamp(0.0, 1.0),
+                  minHeight: 8,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Text(
+                '$current / $total',
+                style: const TextStyle(fontWeight: FontWeight.w700),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              SegmentedButton<bool>(
+                key: const ValueKey('lesson_content_toggle'),
+                segments: [
+                  ButtonSegment(
+                    value: false,
+                    label: Text(_termLabel(language)),
+                  ),
+                  ButtonSegment(
+                    value: true,
+                    label: Text(_contextLabel(language)),
+                  ),
+                ],
+                selected: {showExampleMode},
+                onSelectionChanged: (selection) =>
+                    onShowExampleModeChanged(selection.first),
+              ),
+              SegmentedButton<bool>(
+                key: const ValueKey('lesson_direction_toggle'),
+                segments: [
+                  ButtonSegment(
+                    value: true,
+                    label: Text(_japaneseFirstLabel(language)),
+                  ),
+                  ButtonSegment(
+                    value: false,
+                    label: Text(_meaningFirstLabel(language)),
+                  ),
+                ],
+                selected: {frontShowsJapanese},
+                onSelectionChanged: (selection) =>
+                    onDirectionChanged(selection.first),
+              ),
+              _ShortcutHintPill(language: language),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _termLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Term',
+    AppLanguage.vi => 'Từ đơn',
+    AppLanguage.ja => '語',
+  };
+
+  String _contextLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Context',
+    AppLanguage.vi => 'Ngữ cảnh',
+    AppLanguage.ja => '文脈',
+  };
+
+  String _japaneseFirstLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'JP -> meaning',
+    AppLanguage.vi => 'JP -> nghĩa',
+    AppLanguage.ja => '日本語 -> 意味',
+  };
+
+  String _meaningFirstLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Meaning -> JP',
+    AppLanguage.vi => 'Nghĩa -> JP',
+    AppLanguage.ja => '意味 -> 日本語',
+  };
+}
+
+class _ShortcutHintPill extends StatelessWidget {
+  const _ShortcutHintPill({required this.language});
+
+  final AppLanguage language;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    return Container(
+      key: const ValueKey('lesson_shortcut_hints'),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+      decoration: BoxDecoration(
+        color: palette.primary.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        _label(language),
+        style: TextStyle(
+          color: palette.ink.withValues(alpha: 0.72),
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
+  }
+
+  String _label(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Space: flip | Arrows: move',
+    AppLanguage.vi => 'Space: lật | Mũi tên: chuyển',
+    AppLanguage.ja => 'Space:反転 | 矢印:移動',
   };
 }
 

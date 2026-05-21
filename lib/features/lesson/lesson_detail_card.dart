@@ -7,6 +7,8 @@ class _LessonCard extends StatelessWidget {
     required this.term,
     required this.showHints,
     required this.compactHint,
+    required this.showExampleMode,
+    required this.frontShowsJapanese,
     required this.isFlipped,
     required this.trackProgress,
     required this.isStarred,
@@ -23,6 +25,8 @@ class _LessonCard extends StatelessWidget {
   final UserLessonTermData? term;
   final bool showHints;
   final bool compactHint;
+  final bool showExampleMode;
+  final bool frontShowsJapanese;
   final bool isFlipped;
   final bool trackProgress;
   final bool isStarred;
@@ -118,6 +122,8 @@ class _LessonCard extends StatelessWidget {
                   term: term,
                   showHints: showHints,
                   compactHint: compactHint,
+                  showExampleMode: showExampleMode,
+                  frontShowsJapanese: frontShowsJapanese,
                   isFlipped: isFlipped,
                   emptyLabel: emptyLabel,
                   onStartLearning: onStartLearning,
@@ -141,6 +147,8 @@ class _CardContent extends StatelessWidget {
     required this.term,
     required this.showHints,
     required this.compactHint,
+    required this.showExampleMode,
+    required this.frontShowsJapanese,
     required this.isFlipped,
     required this.emptyLabel,
     this.onStartLearning,
@@ -151,6 +159,8 @@ class _CardContent extends StatelessWidget {
   final UserLessonTermData? term;
   final bool showHints;
   final bool compactHint;
+  final bool showExampleMode;
+  final bool frontShowsJapanese;
   final bool isFlipped;
   final String? emptyLabel;
   final VoidCallback? onStartLearning;
@@ -206,129 +216,54 @@ class _CardContent extends StatelessWidget {
     }
 
     final hintMeaning = resolvedTerm.displayDefinition(language);
+    final contextHint = _contextHint(resolvedTerm, language, hintMeaning);
     final showBack = isFlipped && hintMeaning.trim().isNotEmpty;
+    final hintSource = showExampleMode ? contextHint : hintMeaning;
     final frontHint = compactHint
-        ? _compactHint(hintMeaning, resolvedTerm.id)
-        : hintMeaning;
+        ? _compactHint(hintSource, resolvedTerm.id)
+        : hintSource;
     final showReading = shouldShowReading(
       term: resolvedTerm.term,
       reading: resolvedTerm.reading,
     );
 
-    final front = _CardFace(
-      key: const ValueKey(false),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            language.termLabel,
-            style: TextStyle(
-              fontSize: 12,
-              color: palette.ink.withValues(alpha: 0.64),
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            resolvedTerm.term,
-            style: TextStyle(
-              fontSize: 36,
-              fontWeight: FontWeight.w700,
-              color: palette.ink,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          if (showReading) ...[
-            const SizedBox(height: 20),
-            Text(
-              language.readingLabel,
-              style: TextStyle(
-                fontSize: 12,
-                color: palette.ink.withValues(alpha: 0.64),
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              resolvedTerm.reading.trim(),
-              style: TextStyle(
-                fontSize: 18,
-                color: palette.ink.withValues(alpha: 0.64),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ],
-          if (showHints && frontHint.trim().isNotEmpty) ...[
-            const SizedBox(height: 20),
-            Text(
-              language.meaningLabel,
-              style: TextStyle(
-                fontSize: 12,
-                color: palette.ink.withValues(alpha: 0.64),
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              frontHint,
-              style: TextStyle(
-                fontSize: 16,
-                color: palette.ink.withValues(alpha: 0.7),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ],
-      ),
-    );
-
     final backMeaning = hintMeaning;
 
-    final backContent = Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          language == AppLanguage.en
-              ? language.meaningEnLabel
-              : language.meaningLabel,
-          style: TextStyle(
-            fontSize: 12,
-            color: palette.ink.withValues(alpha: 0.64),
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        const SizedBox(height: 12),
-        Text(
-          backMeaning.trim().isEmpty ? '-' : backMeaning,
-          style: TextStyle(fontSize: 18, color: palette.ink),
-          textAlign: TextAlign.center,
-        ),
-        if (language == AppLanguage.vi &&
-            resolvedTerm.kanjiMeaning.trim().isNotEmpty) ...[
-          const SizedBox(height: 20),
-          Text(
-            language.kanjiMeaningLabel,
-            style: TextStyle(
-              fontSize: 12,
-              color: palette.ink.withValues(alpha: 0.64),
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            resolvedTerm.kanjiMeaning,
-            style: TextStyle(
-              fontSize: 16,
-              color: palette.ink.withValues(alpha: 0.7),
-              fontStyle: FontStyle.italic,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ],
-    );
+    final front = frontShowsJapanese
+        ? _japaneseFace(
+            key: ValueKey('front_japanese_$showExampleMode'),
+            language: language,
+            palette: palette,
+            term: resolvedTerm,
+            showReading: showReading,
+            showHints: showHints,
+            hint: frontHint,
+          )
+        : _meaningFace(
+            key: ValueKey('front_meaning_$showExampleMode'),
+            language: language,
+            palette: palette,
+            meaning: frontHint,
+            kanjiMeaning: resolvedTerm.kanjiMeaning,
+          );
 
-    final back = _CardFace(key: const ValueKey(true), child: backContent);
+    final back = frontShowsJapanese
+        ? _meaningFace(
+            key: ValueKey('back_meaning_$showExampleMode'),
+            language: language,
+            palette: palette,
+            meaning: backMeaning,
+            kanjiMeaning: resolvedTerm.kanjiMeaning,
+          )
+        : _japaneseFace(
+            key: ValueKey('back_japanese_$showExampleMode'),
+            language: language,
+            palette: palette,
+            term: resolvedTerm,
+            showReading: showReading,
+            showHints: false,
+            hint: '',
+          );
 
     return AnimatedSwitcher(
       duration: reducedMotionDuration(
@@ -367,6 +302,150 @@ class _CardContent extends StatelessWidget {
       },
       child: showBack ? back : front,
     );
+  }
+
+  Widget _japaneseFace({
+    required Key key,
+    required AppLanguage language,
+    required AppThemePalette palette,
+    required UserLessonTermData term,
+    required bool showReading,
+    required bool showHints,
+    required String hint,
+  }) {
+    return _CardFace(
+      key: key,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            language.termLabel,
+            style: TextStyle(
+              fontSize: 12,
+              color: palette.ink.withValues(alpha: 0.64),
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            term.term,
+            style: TextStyle(
+              fontSize: 36,
+              fontWeight: FontWeight.w700,
+              color: palette.ink,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          if (showReading) ...[
+            const SizedBox(height: 20),
+            Text(
+              language.readingLabel,
+              style: TextStyle(
+                fontSize: 12,
+                color: palette.ink.withValues(alpha: 0.64),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              term.reading.trim(),
+              style: TextStyle(
+                fontSize: 18,
+                color: palette.ink.withValues(alpha: 0.64),
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+          if (showHints && hint.trim().isNotEmpty) ...[
+            const SizedBox(height: 20),
+            Text(
+              language.meaningLabel,
+              style: TextStyle(
+                fontSize: 12,
+                color: palette.ink.withValues(alpha: 0.64),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              hint,
+              style: TextStyle(
+                fontSize: 16,
+                color: palette.ink.withValues(alpha: 0.7),
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _meaningFace({
+    required Key key,
+    required AppLanguage language,
+    required AppThemePalette palette,
+    required String meaning,
+    required String kanjiMeaning,
+  }) {
+    return _CardFace(
+      key: key,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            language == AppLanguage.en
+                ? language.meaningEnLabel
+                : language.meaningLabel,
+            style: TextStyle(
+              fontSize: 12,
+              color: palette.ink.withValues(alpha: 0.64),
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            meaning.trim().isEmpty ? '-' : meaning,
+            style: TextStyle(fontSize: 18, color: palette.ink),
+            textAlign: TextAlign.center,
+          ),
+          if (language == AppLanguage.vi && kanjiMeaning.trim().isNotEmpty) ...[
+            const SizedBox(height: 20),
+            Text(
+              language.kanjiMeaningLabel,
+              style: TextStyle(
+                fontSize: 12,
+                color: palette.ink.withValues(alpha: 0.64),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              kanjiMeaning,
+              style: TextStyle(
+                fontSize: 16,
+                color: palette.ink.withValues(alpha: 0.7),
+                fontStyle: FontStyle.italic,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  String _contextHint(
+    UserLessonTermData term,
+    AppLanguage language,
+    String fallback,
+  ) {
+    final mnemonic = switch (language) {
+      AppLanguage.vi => term.mnemonicVi,
+      AppLanguage.en || AppLanguage.ja => term.mnemonicEn,
+    };
+    final clean = mnemonic.trim();
+    return clean.isEmpty ? fallback : clean;
   }
 
   String _compactHint(String meaning, int seed) {

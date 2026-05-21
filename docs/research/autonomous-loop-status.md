@@ -1432,3 +1432,11 @@
 - Added `SrsStore.markKnown()` shim that throws, plus a guard proving UI/source code does not call markKnown self-attestation.
 - TDD RED/GREEN: cross-modal tests first failed on missing API; guard then passed after the throwing shim existed.
 - Gate: `flutter test test\core\srs\cross_modal_srs_test.dart test\core\srs\self_attestation_guard_test.dart` passed `3/3`; `flutter analyze lib test` clean; `dart analyze tool\migration\migrate_srs_to_cross_modal.dart` clean; UI string guard `0`; `git diff --check` clean.
+
+## 2026-05-21 Megaprompt Phase 5 Acceptance
+
+- `interlink_graph.json` exists with `21643` nodes and `52112` bidirectional edges.
+- `Liên quan` renders on vocab, grammar, kanji detail, and scoped conjugation surfaces.
+- Lesson completion now shows three graph-backed next actions after a completed Learn session.
+- Cross-modal SRS migration schema/tool exists; legacy state copies into `flashcard` mode without data loss; `markKnown()` throws and UI calls are guarded at test time.
+- Acceptance-focused gate passed: `node --test test\tool\research\interlink_graph_test.js` `2/2`; focused Flutter interlink/detail/learn/SRS suite `54/54`; UI string guard `0`.

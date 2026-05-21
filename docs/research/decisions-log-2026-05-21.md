@@ -321,3 +321,33 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The bottom sheet keeps the learner in the current visual cluster, can await the SRS write before showing completion, and lets Review mini-graph cards reuse the same graph route for the reverse link.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-033 - Use text-layer-first offline vocab extraction
+**Phase**: P1 QA-A-030 Phase 0
+**Date**: 2026-05-21 15:32 (local)
+**Context**: The owner expected many local PDFs may need OCR, but the Phase 0 scan of `Tu Vung` found structured `pdftotext -layout -enc UTF-8` rows across all 152 PDFs.
+**Options considered**: OCR every page | text-layer first with OCR fallback | manual transcription
+**Chosen**: text-layer first with OCR fallback
+**Rationale**: Text extraction is faster, deterministic, and preserves structured factual rows. OCR remains available for pages/files whose text layer is empty or malformed.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-034 - Treat Minna lesson PDFs as first vocab alignment source
+**Phase**: P1 QA-A-030 Phase 0
+**Date**: 2026-05-21 15:32 (local)
+**Context**: QA-B-001 needs N5/N4 vocab lesson alignment, and the local Minna I/II folders contain complete lesson files for `bai1-bai50`.
+**Options considered**: start with Mimikara | start with kanji-vocab folders | start with Minna I/II
+**Chosen**: start with Minna I/II
+**Rationale**: Minna I/II directly map to app N5/N4 lesson structures and provide the highest immediate value for vocab lesson diffing.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-035 - Keep the N2 Quizlet DOCX supplemental
+**Phase**: P1 QA-A-030 Phase 0
+**Date**: 2026-05-21 15:32 (local)
+**Context**: The only DOCX sample content was a Quizlet link/contact note, not a table of vocab facts.
+**Options considered**: parse DOCX as canonical | ignore permanently | keep as supplemental until a deeper pass finds facts
+**Chosen**: keep as supplemental until a deeper pass finds facts
+**Rationale**: It avoids polluting canonical vocab with link/contact content while preserving the file in the inventory for later review.
+**Reversible**: yes
+**Owner review**: pending

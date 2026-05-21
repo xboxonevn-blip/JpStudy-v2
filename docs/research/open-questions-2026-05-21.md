@@ -71,3 +71,24 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Blocking**: no
 **Default action taken**: Graph nodes use stable semantic IDs and route to existing non-empty hub/detail-capable surfaces (`/vocab`, `/grammar`, `/kanji/:char/graph`, `/grammar/conjugation`, `/jlpt/reading`). Later UI loaders can resolve semantic IDs to DB numeric detail ids once ContentDB is ready.
 **Owner answer**: pending
+
+## OQ-011 - Missing Mimikara unit files in local folder
+**Phase**: P1 QA-A-030 Phase 0
+**Date**: 2026-05-21 15:32
+**Blocking**: no
+**Default action taken**: Extract only local files that exist. N1 currently lacks units `6` and `10`; N2 currently lacks units `5` and `9`. Log gaps in the canonical report rather than fabricating rows.
+**Owner answer**: pending
+
+## OQ-012 - No N1 kanji-vocab folder in `Tu Vung`
+**Phase**: P1 QA-A-030 Phase 0
+**Date**: 2026-05-21 15:32
+**Blocking**: no
+**Default action taken**: Do not create `kanji-vocab-n1.md` from another source. Use Mimikara N1 and existing app vocab first, then JMdict fallback only where needed.
+**Owner answer**: pending
+
+## OQ-013 - Grammar source coverage in `Tu Vung` root
+**Phase**: P1 QA-A-030 Phase 0
+**Date**: 2026-05-21 15:32
+**Blocking**: no
+**Default action taken**: Proceed vocab-first for Phase 1. If grammar facts are not present in these files, run a separate local-folder inventory before grammar app mutation.
+**Owner answer**: pending

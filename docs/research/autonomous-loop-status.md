@@ -1505,3 +1505,11 @@
 - Live proof: VI `/#/kanji/校/graph` rendered graph nodes/toolbar, node click rebuilt around `学`, graph quiz completed `5/5` with `Đã cập nhật SRS`; a failed quiz run became due after the FSRS learning step and Review rendered mini graph `学 ⺍ 冖 子 字`, whose tap opened `Mạng kanji 学`.
 - EN/JA graph routes rendered localized chrome without Vietnamese Hán-Việt leak. `main.dart.js` returned `200/no-cache`; unexpected console/failed requests were `0`.
 - Live artifact: `output/playwright/live-qaa029-phase23-proof.json` plus screenshots `output/playwright/live-qaa029-phase23-*.png`.
+
+## 2026-05-21 QA-A-030 Offline Vocab/Grammar Phase 0
+
+- Inventoried `C:/Users/xboxo/Desktop/PC/Tai lieu JPStudy/Tu Vung`: `153` files total (`152` PDF, `1` DOCX) across Mimikara N1/N2/N3, Minna I/II, and kanji-vocab N5-N2 folders.
+- Poppler scan covered `1005` PDF pages. `pdftotext -layout -enc UTF-8` returned usable structured text on first-page samples for all `152/152` PDFs, so Phase 1 will use text-layer-first extraction with 200-DPI OCR fallback only for malformed/empty pages.
+- Added `docs/research/offline-resources-inventory-2026-05-20.md` with file-tree summary, source mapping, page counts, representative parse samples, schema, extraction plan, validation gates, DECISIONS MADE, and OPEN_QUESTIONS.
+- Logged `DECISION-033` through `DECISION-035` and `OQ-011` through `OQ-013`; no banned website was accessed.
+- Next: commit Phase 0 doc, then implement `tool/research/extract_offline_vocab_canonical.js` and extract Minna I canonical vocab first.

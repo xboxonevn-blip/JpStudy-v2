@@ -361,3 +361,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Markdown is reviewable by the owner, while JSON preserves accepted/review/source-file counts for tooling and later consensus/diff stages.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-037 - Use exact normalized meaning for first consensus pass
+**Phase**: P1 QA-A-030 Phase 2
+**Date**: 2026-05-21 15:56 (local)
+**Context**: Cross-source consensus needs a deterministic rule before app vocab mutation; fuzzy Vietnamese synonym matching can over-merge different glosses.
+**Options considered**: exact raw meaning | exact normalized meaning | fuzzy synonym merge
+**Chosen**: exact normalized meaning
+**Rationale**: Accent/case/punctuation normalization catches obvious same-meaning rows while keeping divergent rows owner-reviewable instead of silently merging near-synonyms.
+**Reversible**: yes
+**Owner review**: pending

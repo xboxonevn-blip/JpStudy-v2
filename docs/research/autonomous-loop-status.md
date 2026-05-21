@@ -1572,3 +1572,11 @@
 - Extracted `docs/research/canonical/vocab/kanji-vocab-n2.md` and report `docs/research/canonical/vocab/reports/kanji-vocab-n2.json` with level `N2` and `text-layer` confidence.
 - Phase 1 vocab extraction now covers all source folders found in `Tu Vung`: Minna I/II, Mimikara N1/N2/N3, and kanji-vocab N5/N4/N3/N2. No N1 kanji-vocab folder exists in this root; OQ-012 remains non-blocking.
 - No banned website was accessed. Next: run gates, commit, then start Phase 2 cross-source consensus.
+
+## 2026-05-21 QA-A-030 Phase 2 Vocab consensus report
+
+- Added `tool/research/build_vocab_consensus.js` and tests for canonical markdown parsing, consensus/divergent/single-source grouping, and report formatting.
+- Generated `docs/research/canonical/vocab-cross-source-consensus.md` from all `9` extracted canonical vocab files.
+- Consensus summary: `9394` parsed entries, `5298` term+reading groups, `2504` consensus groups, `126` divergent groups, and `2668` single-source groups.
+- Used exact normalized Vietnamese meaning matching for the first deterministic pass; near-synonym divergences remain owner-reviewable before app mutation.
+- No banned website was accessed. Next: run gates, commit, then start app vocab diff docs by level.

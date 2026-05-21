@@ -2133,3 +2133,13 @@
 - Teaching Test paraphrase: `S1 が、S2` puts `が` at the turn between two
   clauses: vế 1 is true, but vế 2 bends expectation. Do not confuse it with
   noun + `が`.
+
+## 2026-05-22 Phase G Tier-1 item 045
+
+- Re-authored `grammar:n5:grammar_n5_8:005` (`とても A (khẳng định) / あまり A
+  (phủ định)`) with degree-adverb polarity, Hán-Việt "mức độ/phủ định" bridge,
+  and contrasts against adjective negation, degree adverbs, and `とても`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `とても` strengthens an affirmative adjective.
+  `あまり` means "not very" only when the adjective tail is negative.

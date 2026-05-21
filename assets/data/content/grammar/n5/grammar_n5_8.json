@@ -190,10 +190,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: とても A (khẳng định) / あまり A (phủ định)",
-      "meaning": "Ý nghĩa: Hai phó từ chỉ mức độ thường gặp.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Cấu trúc とても A đặt とても trước tính từ để đẩy mức độ lên cao: rất A. Cấu trúc あまり A phủ định dùng あまり như 'không đến mức nhiều', nên cần đuôi phủ định như くないです hoặc じゃありません để thành 'không ... lắm'.",
+      "hanVietBridge": "Hán-Việt 'mức độ' và 'phủ định' giúp nhớ cặp này: とても là tăng cường độ trong câu khẳng định, あまり chỉ giảm cường độ nhưng phải khóa bằng phủ định phía sau.",
+      "form": "Hình thức: とても + A khẳng định: とても高いです. あまり + A phủ định: あまり高くないです, あまり静かじゃありません.",
+      "meaning": "Ý nghĩa: とても = rất; あまり + phủ định = không ... lắm/không mấy.",
+      "usage": "Sử dụng: dùng とても với tính từ khẳng định. Dùng あまり với dạng phủ định; nếu câu sau vẫn khẳng định, nghĩa N5 sẽ sai hoặc thiếu tự nhiên.",
+      "humanMoment": "Dr. Linh lưu ý: とても A (khẳng định) / あまり A (phủ định) là cặp công tắc. とても高いです = rất đắt. あまり高くないです = không đắt lắm. あまり giống nhấn nửa phanh, nhưng phanh chỉ ăn khi cuối câu có phủ định.",
+      "crossLinks": [
+        {
+          "pattern": "Aい -> Aくないです / Aな -> Aじゃありません",
+          "contrast": "あまり cần nhánh phủ định tính từ này ở phía sau: あまり高くないです, あまり便利じゃありません."
+        },
+        {
+          "pattern": "よく, だいたい, たくさん, 少し, 全然",
+          "contrast": "cùng nhóm phó từ mức độ; 全然 cũng thường đi với phủ định nhưng mạnh hơn あまり."
+        },
+        {
+          "pattern": "とても",
+          "contrast": "とても đi với khẳng định để tăng mức độ; あまり đi với phủ định để nói mức độ không cao."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

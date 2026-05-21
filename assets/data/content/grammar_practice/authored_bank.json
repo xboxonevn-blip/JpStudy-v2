@@ -9414,6 +9414,223 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-form-l1-001",
+      "template_id": "tpl-grammar-n5-045-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng với とても.",
+      "answer_template": "とても高いです。",
+      "options_template": [
+        "とても高いです。",
+        "とても高くないです。",
+        "あまり高いです。",
+        "あまり高いでした。"
+      ],
+      "distractor_strategy": "totemo-affirmative-vs-amari-negative",
+      "teaching_note": "とても thường đi với tính từ khẳng định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-form-l1-002",
+      "template_id": "tpl-grammar-n5-045-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng với あまり.",
+      "answer_template": "あまり高くないです。",
+      "options_template": [
+        "あまり高くないです。",
+        "あまり高いです。",
+        "とても高くないです。",
+        "あまり高いでしょう。"
+      ],
+      "distractor_strategy": "amari-requires-negative-tail",
+      "teaching_note": "あまり cần phủ định phía sau để nghĩa là không...lắm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-045-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "この店はあまり高くないです nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Cửa hàng này không đắt lắm.",
+      "options_template": [
+        "Cửa hàng này không đắt lắm.",
+        "Cửa hàng này rất đắt.",
+        "Cửa hàng này đã đắt rồi.",
+        "Cửa hàng này không tồn tại."
+      ],
+      "distractor_strategy": "amari-negative-meaning-vs-very-completion-existence",
+      "teaching_note": "あまり + phủ định = không ... lắm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-045-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "とても và あまり khác nhau thế nào ở N5?",
+      "answer_template": "とても đi với khẳng định = rất; あまり đi với phủ định = không...lắm.",
+      "distractor_strategy": "degree-adverb-contrast-recall",
+      "teaching_note": "Cặp này khác ở cực khẳng định/phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-usage-l3-005",
+      "template_id": "tpl-grammar-n5-045-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để nói 'rất ngon': とても / おいしいです",
+      "answer_template": "とてもおいしいです。",
+      "options_template": [
+        "とても",
+        "おいしいです"
+      ],
+      "distractor_strategy": "totemo-before-adjective-order",
+      "teaching_note": "Phó từ mức độ đứng trước tính từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-usage-l3-006",
+      "template_id": "tpl-grammar-n5-045-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu 'không yên tĩnh lắm' với 静か.",
+      "answer_template": "あまり静かじゃありません。",
+      "distractor_strategy": "apply-amari-to-na-adjective-negative",
+      "teaching_note": "静か là Aな nên phủ định là 静かじゃありません.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-context-l3-007",
+      "template_id": "tpl-grammar-n5-045-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn muốn khen phim 'rất thú vị'. Câu nào hợp nhất?",
+      "answer_template": "とてもおもしろいです。",
+      "options_template": [
+        "とてもおもしろいです。",
+        "あまりおもしろいです。",
+        "あまりおもしろくないです。",
+        "とてもおもしろくないです。"
+      ],
+      "distractor_strategy": "positive-praise-totemo-vs-amari-negative",
+      "teaching_note": "Khen mạnh dùng とても + khẳng định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-context-l2-008",
+      "template_id": "tpl-grammar-n5-045-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Khi nào dùng あまり?",
+      "answer_template": "Khi muốn nói mức độ không cao và phía sau là phủ định.",
+      "options_template": [
+        "Khi muốn nói mức độ không cao và phía sau là phủ định.",
+        "Khi muốn nói rất mạnh trong câu khẳng định.",
+        "Khi nối hai vế tương phản.",
+        "Khi nói đã làm xong."
+      ],
+      "distractor_strategy": "amari-context-vs-totemo-ga-mou",
+      "teaching_note": "あまり không tự đủ nghĩa N5 nếu thiếu phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-045-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích 4 câu. Câu nào đúng nếu người nói muốn nói 'không tiện lắm'?",
+      "answer_template": "あまり便利じゃありません。",
+      "options_template": [
+        "あまり便利じゃありません。",
+        "とても便利です。",
+        "あまり便利です。",
+        "とても便利じゃありません。"
+      ],
+      "distractor_strategy": "amari-na-negative-vs-totemo-positive-analysis",
+      "teaching_note": "L4: あまり cần phủ định; 便利 là Aな nên dùng じゃありません.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-045-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-045-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_8:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Cặp nào đúng về cực nghĩa?",
+      "answer_template": "とても高いです = rất đắt / あまり高くないです = không đắt lắm",
+      "options_template": [
+        "とても高いです = rất đắt / あまり高くないです = không đắt lắm",
+        "とても高いです = không đắt lắm / あまり高くないです = rất đắt",
+        "あまり高いです = rất đắt / とても高くないです = hơi đắt",
+        "とても高くないです = câu khen mạnh / あまり高いです = câu phủ định"
+      ],
+      "distractor_strategy": "analyze-degree-adverb-polarity-pair",
+      "teaching_note": "とても tăng khẳng định; あまり giảm mức độ bằng phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

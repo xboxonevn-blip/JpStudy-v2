@@ -190,10 +190,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: もう Vました",
-      "meaning": "Ý nghĩa: `もう Vました` nghĩa là “đã làm rồi”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "もう là phó từ báo mốc đã đạt tới hoặc trạng thái đã chuyển xong; Vました là dạng lịch sự quá khứ/hoàn tất của động từ. Cấu trúc もう Vました đặt もう trước hành động để nói việc đó đã xong trước thời điểm đang hỏi/nói.",
+      "hanVietBridge": "Không có kanji trong もう, nhưng có thể bắc cầu bằng Hán-Việt 'hoàn tất/hoàn thành'. Tiếng Việt nói 'đã làm rồi'; tiếng Nhật tách thành もう = rồi/đã, Vました = hành động đã hoàn tất.",
+      "form": "Hình thức: もう + động từ dạng ました. Câu hỏi: もうVましたか. Trả lời: はい、もうVました hoặc いいえ、まだです.",
+      "meaning": "Ý nghĩa: đã làm rồi, đã hoàn tất. Trong câu hỏi, người nói kiểm tra xem việc đó xong chưa.",
+      "usage": "Sử dụng: dùng khi có kỳ vọng một việc sẽ hoàn thành: もう宿題をしましたか. Nếu chưa xong, trả lời いいえ、まだです thay vì dùng もう.",
+      "humanMoment": "Dr. Linh lưu ý: もう Vました giống đóng dấu 'xong rồi' lên việc. もう昼ご飯を食べましたか hỏi bữa trưa đã xong chưa; nếu chưa, câu trả lời tự nhiên là いいえ、まだです. Đừng dịch もう thành 'nữa' trong mẫu này.",
+      "crossLinks": [
+        {
+          "pattern": "まだです",
+          "contrast": "khác trạng thái hoàn tất: もう Vました = đã xong, まだです = chưa xong/chưa làm."
+        },
+        {
+          "pattern": "Vました",
+          "contrast": "Vました chỉ quá khứ/hoàn tất; thêm もう nhấn mạnh việc đã hoàn thành so với kỳ vọng."
+        },
+        {
+          "pattern": "Vます / Vません / Vました / Vませんでした",
+          "contrast": "bảng V lịch sự cho biết thời và phủ định; もう Vました dùng ô quá khứ khẳng định để trả lời 'đã... chưa?'."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

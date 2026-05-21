@@ -2080,3 +2080,13 @@
 - Teaching Test paraphrase: `もらいます` views the event from the receiver inward.
   Mark the source with `に/から`, the received item with `を`; do not use it for
   "I give".
+
+## 2026-05-22 Phase G Tier-1 item 040
+
+- Re-authored `grammar:n5:grammar_n5_7:005` (`もう Vました`) with completion
+  semantics, question/answer patterns, and contrasts against `まだです`,
+  bare `Vました`, and the polite verb tense table.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `もうVました` marks a task as already finished. Ask
+  `もうVましたか`; answer `はい、もうVました` if done, `いいえ、まだです` if not.

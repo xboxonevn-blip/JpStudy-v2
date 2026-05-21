@@ -8331,6 +8331,224 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-form-l1-001",
+      "template_id": "tpl-grammar-n5-040-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn mẫu đúng để nói 'đã ăn rồi'.",
+      "answer_template": "もう食べました。",
+      "options_template": [
+        "もう食べました。",
+        "まだ食べました。",
+        "もう食べます。",
+        "まだ食べますか。"
+      ],
+      "distractor_strategy": "mou-vmashita-form-vs-mada-present",
+      "teaching_note": "`もう` đi với Vました để nói việc đã xong.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-form-l1-002",
+      "template_id": "tpl-grammar-n5-040-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu hỏi 'đã làm bài tập chưa?' dùng mẫu nào?",
+      "answer_template": "もう宿題をしましたか。",
+      "options_template": [
+        "もう宿題をしましたか。",
+        "まだ宿題をしましたか。",
+        "もう宿題をします。",
+        "宿題をしませんか。"
+      ],
+      "distractor_strategy": "mou-vmashita-ka-question-form",
+      "teaching_note": "Câu hỏi thêm か: もうVましたか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-040-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "もう昼ご飯を食べました nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi đã ăn trưa rồi.",
+      "options_template": [
+        "Tôi đã ăn trưa rồi.",
+        "Tôi chưa ăn trưa.",
+        "Tôi sẽ ăn trưa.",
+        "Tôi rủ bạn ăn trưa."
+      ],
+      "distractor_strategy": "already-done-vs-not-yet-future-invitation",
+      "teaching_note": "もう + Vました nhấn hoàn tất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-040-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "もうVましたか hỏi điều gì?",
+      "answer_template": "Hỏi việc đó đã hoàn tất/chưa làm xong chưa.",
+      "distractor_strategy": "already-question-function-recall",
+      "teaching_note": "Câu hỏi kiểm tra trạng thái xong hay chưa.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-usage-l3-005",
+      "template_id": "tpl-grammar-n5-040-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp để hỏi 'Bạn đã xem phim này chưa?': もう / この映画を / 見ましたか",
+      "answer_template": "もうこの映画を見ましたか。",
+      "options_template": [
+        "もう",
+        "この映画を",
+        "見ましたか"
+      ],
+      "distractor_strategy": "mou-vmashita-ka-order",
+      "teaching_note": "`もう` đứng trước cụm động từ đã hoàn tất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-usage-l3-006",
+      "template_id": "tpl-grammar-n5-040-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "A hỏi: もう宿題をしましたか。Bạn đã làm rồi. Trả lời ngắn.",
+      "answer_template": "はい、もうしました。",
+      "distractor_strategy": "answer-already-done-with-hai-mou",
+      "teaching_note": "Khi đã xong, trả lời はい、もうVました/しました.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-context-l3-007",
+      "template_id": "tpl-grammar-n5-040-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh: bạn muốn kiểm tra bạn mình đã ăn sáng xong chưa. Câu nào hợp nhất?",
+      "answer_template": "もう朝ご飯を食べましたか。",
+      "options_template": [
+        "もう朝ご飯を食べましたか。",
+        "まだ朝ご飯を食べましたか。",
+        "朝ご飯を食べませんか。",
+        "朝ご飯を食べましょう。"
+      ],
+      "distractor_strategy": "completion-check-context-vs-invitation-suggestion",
+      "teaching_note": "Kiểm tra đã xong chưa dùng もうVましたか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-context-l2-008",
+      "template_id": "tpl-grammar-n5-040-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Ngữ cảnh nào hợp nhất với もうVました?",
+      "answer_template": "Một việc dự kiến đã hoàn thành.",
+      "options_template": [
+        "Một việc dự kiến đã hoàn thành.",
+        "Một việc chưa làm.",
+        "Một lời mời mềm.",
+        "Một đề nghị cùng làm."
+      ],
+      "distractor_strategy": "already-complete-context-vs-not-yet-invitation-suggestion",
+      "teaching_note": "もうVました đánh dấu trạng thái hoàn tất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-040-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "A hỏi: もう宿題をしましたか。Bạn chưa làm. Câu trả lời nào đúng trạng thái?",
+      "answer_template": "いいえ、まだです。",
+      "options_template": [
+        "いいえ、まだです。",
+        "はい、もうしました。",
+        "はい、しましょう。",
+        "いいえ、しました。"
+      ],
+      "distractor_strategy": "already-vs-not-yet-answer-analysis",
+      "teaching_note": "L4: chưa xong thì trả lời まだです, không dùng もうしました.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-040-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-040-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_7:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào nói 'đã xem rồi', không phải lời mời xem?",
+      "answer_template": "もう見ました。",
+      "options_template": [
+        "もう見ました。",
+        "見ませんか。",
+        "見ましょう。",
+        "まだです。"
+      ],
+      "distractor_strategy": "already-done-vs-invitation-suggestion-not-yet-analysis",
+      "teaching_note": "`もう見ました` báo hoàn tất; `見ませんか` là mời, `見ましょう` là rủ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
     }
   ]
 }

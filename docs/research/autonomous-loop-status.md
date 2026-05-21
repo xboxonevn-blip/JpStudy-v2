@@ -1644,3 +1644,9 @@
 - Vocab roadmap/catalog now sends N3-N1 vocabulary learners to Mimikara instead of the old Shin Kanzen vocabulary lane.
 - Rebuilt interlink graph after deletion: 24,666 nodes, 61,490 edges, validator passed.
 - Logged DECISION-047.
+
+## 2026-05-21 Phase H.3 foundation primitives shipped (resume)
+
+- Committed 8 foundation widgets + tests + compact_ui refactor
+- Continuing Phase H.3 tail: refactor remaining feature widgets to use foundation
+- Owner-paused mid-Phase-H.3 for audit; resume confirmed.

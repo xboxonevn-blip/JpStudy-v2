@@ -7,6 +7,8 @@
 - Added a term-level Grammar badge beside Kanji and Practice badges so terms can jump to the lesson grammar panel before Phase 5 item-specific interlink graph lands.
 - TDD: RED tests first failed for missing grammar badge, flashcard controls, and conditional conjugation mode; GREEN focused lesson test passed `15/15`.
 - Gate: broader lesson/conjugation/nav suite passed `58/58`; `flutter analyze lib test` clean; UI string guard `0`; `git diff --check` clean; full `flutter test --concurrency=1` passed `2429/2429`.
+- Deployed with `node tool\deploy\hosting_deploy.js`.
+- Live proof: VI `/#/lesson/1?level=N5`, `N4`, `N3`, `N2`, and `N1` rendered the redesigned lesson workspace on production. N5 showed the conditional `Chia thể` mode + 50-question conjugation widget; N1 correctly omitted `Chia thể` when lesson 1 had no conjugation lemmas. Screenshots: `output/playwright/live-phase3-lesson-*.png`; proof JSON: `output/playwright/live-phase3-lesson-proof.json`; `main.dart.js` returned `200/no-cache`; unexpected console/page errors `0`.
 
 # 2026-05-21 — Megaprompt Phase 3 lesson page redesign batch 1
 

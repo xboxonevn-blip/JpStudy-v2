@@ -2007,3 +2007,13 @@
 - Teaching Test paraphrase: `何` keeps the same "what" meaning; the next sound
   decides reading. Use `なん` before `です` or counters, and `なに` before `を`
   or `が`.
+
+## 2026-05-22 Phase G Tier-1 item 033
+
+- Re-authored `grammar:n5:grammar_n5_6:005` (`N (địa điểm) で V`) with
+  place-of-action `で`, stage-vs-arrow contrast, and links to `へ`, `に`, and
+  instrument `で`.
+- Added 10 hand-crafted templates covering form, meaning, usage, context,
+  contrast, and Bloom L1-L4.
+- Teaching Test paraphrase: `NでV` answers where an action happens. Use `で`
+  for `学校で勉強します`, but `へ` for going to school and `に` for existence.

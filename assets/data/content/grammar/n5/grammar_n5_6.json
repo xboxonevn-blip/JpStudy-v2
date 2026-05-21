@@ -190,10 +190,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N (địa điểm) で V",
-      "meaning": "Ý nghĩa: `で` chỉ nơi diễn ra hành động.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "で là trợ từ đặt một khung thực hiện cho hành động: nơi, phương tiện, hoặc vật liệu. Trong cấu trúc N (địa điểm) で V, thành phần N không phải đích đến mà là 'sàn diễn' nơi động từ xảy ra, như 学校で勉強します.",
+      "hanVietBridge": "Địa điểm trong mẫu này nên hiểu như 'trường sở' của hành động: hành động diễn ra tại đó. Tiếng Việt nói 'học ở trường', còn tiếng Nhật dùng `学校で勉強します` để gắn nơi xảy ra hành động bằng で.",
+      "form": "Hình thức: N địa điểm + で + động từ hành động. Ví dụ: 学校で勉強します, レストランで食べます, 図書館で本を読みます.",
+      "meaning": "Ý nghĩa: cho biết hành động xảy ra ở đâu. `で` trả lời 'ở đâu làm việc đó?', không trả lời 'đi tới đâu?' hay 'tồn tại ở đâu?'.",
+      "usage": "Sử dụng: dùng NでV khi phía sau là hành động như 食べます, 勉強します, 読みます. Nếu là điểm đến của 行きます/来ます, dùng へ; nếu là nơi tồn tại với あります/います, thường dùng に.",
+      "humanMoment": "Dr. Linh lưu ý: N (địa điểm) で V giống đặt một tấm thảm dưới hành động. 学校で勉強します = việc học diễn ra ở trường; 学校へ行きます = hướng đi tới trường. Một bên là sân khấu, một bên là mũi tên.",
+      "crossLinks": [
+        {
+          "pattern": "Nへ行きます",
+          "contrast": "khác vai trò địa điểm: `へ` đánh dấu hướng/đích đi tới, còn NでV đánh dấu nơi hành động xảy ra."
+        },
+        {
+          "pattern": "Nにあります",
+          "contrast": "khác loại động từ: `に` đi với tồn tại/vị trí, còn `で` đi với hành động như 勉強します hoặc 食べます."
+        },
+        {
+          "pattern": "N (công cụ) で V",
+          "contrast": "cùng trợ từ `で` nhưng khác danh từ trước nó: địa điểm で = ở đâu làm, công cụ で = bằng gì làm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -1402,3 +1402,10 @@
 - Added deterministic Phase 4 sample-review tooling and report at `docs/reports/phase4-exercise-distractor-sample-review-2026-05-21.md`: 20 samples across reading, phonetic traps, kanji lookalikes, and exercise coverage all passed.
 - Tightened the kanji lookalike corpus after the first sample surfaced weak stroke-only pairs; regenerated lookalikes from `2113` broad candidates down to `558` stronger known/shared-component distractor targets.
 - Extended the exercise validator so the coverage manifest must prove all six Phase 4 exercise types globally: recognition, production, recall, readingComp, listening, and conjugationDrill.
+
+## 2026-05-21 Megaprompt Phase 5 Cross-link Graph Batch 1
+
+- Added `tool/research/build_interlink_graph.js` and generated `assets/data/content/interlink_graph/interlink_graph.json`.
+- Graph counts: nodes `21643` (`grammar=754`, `vocab=16712`, `kanji=2114`, `conjugation=1983`, `reading=80`), bidirectional edges `52112`, validation failures `0`.
+- Edges cover vocab-contained kanji, kanji component/related links, vocab-conjugation lemma links, and reading-passage kanji links with reverse edges enforced by the validator.
+- Added pubspec asset bundling for `assets/data/content/interlink_graph/`.

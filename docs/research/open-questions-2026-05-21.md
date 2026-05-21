@@ -64,3 +64,10 @@ Autonomous overnight mission log. Blocking questions are skipped around when pos
 **Blocking**: no
 **Default action taken**: Used bundled kanji decomposition plus known visual pairs, rejected stroke-only pairs, and kept the report owner-reviewable. A later quality pass can import full KANJIVG vectors for N3-N1 if owner wants pixel-distance lookalike ranking.
 **Owner answer**: pending
+
+## OQ-010 - Static graph detail routes for vocab and grammar ids
+**Phase**: 5
+**Date**: 2026-05-21 09:25
+**Blocking**: no
+**Default action taken**: Graph nodes use stable semantic IDs and route to existing non-empty hub/detail-capable surfaces (`/vocab`, `/grammar`, `/kanji/:char/graph`, `/grammar/conjugation`, `/jlpt/reading`). Later UI loaders can resolve semantic IDs to DB numeric detail ids once ContentDB is ready.
+**Owner answer**: pending

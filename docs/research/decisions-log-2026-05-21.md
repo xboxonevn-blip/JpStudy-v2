@@ -191,3 +191,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This lowers corpus size but removes weak distractors, matching Directive F's anti-trivial quality bar better than maximizing coverage count.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-020 - Build Phase 5 graph as compact indexed JSON
+**Phase**: 5
+**Date**: 2026-05-21 09:25 (local)
+**Context**: Phase 5 needs a static interlink graph with at least 50,000 bidirectional edges, but verbose JSON would create a large web payload.
+**Options considered**: verbose edge objects | database-only graph | compact node rows plus indexed edge relation/evidence tables
+**Chosen**: compact node rows plus indexed edge relation/evidence tables
+**Rationale**: The generated graph reaches 21,643 nodes and 52,112 edges while staying about 2.4 MB raw, preserving local-first/offline behavior without a backend.
+**Reversible**: yes
+**Owner review**: pending

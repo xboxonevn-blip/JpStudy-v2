@@ -50,6 +50,30 @@ class ConjugationRepository {
     return query.get();
   }
 
+  Future<List<ConjugationLemmaData>> fetchByLesson(
+    String level,
+    int lessonId, {
+    String? series,
+    int? limit,
+  }) {
+    final query = _db.select(_db.conjugationLemma)
+      ..where(
+        (tbl) =>
+            tbl.level.equals(level.trim().toUpperCase()) &
+            tbl.lessonId.equals(lessonId),
+      )
+      ..orderBy([
+        (tbl) => OrderingTerm.asc(tbl.term),
+        (tbl) => OrderingTerm.asc(tbl.contentVocabId),
+      ]);
+    final normalizedSeries = series?.trim();
+    if (normalizedSeries != null && normalizedSeries.isNotEmpty) {
+      query.where((tbl) => tbl.series.equals(normalizedSeries));
+    }
+    if (limit != null) query.limit(limit);
+    return query.get();
+  }
+
   Future<ConjugationLemmaData?> findBySourceIds({
     String? sourceVocabId,
     String? sourceSenseId,

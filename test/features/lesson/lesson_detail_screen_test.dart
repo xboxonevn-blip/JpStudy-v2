@@ -48,6 +48,28 @@ class _FakeConjugationRepository extends ConjugationRepository {
   @override
   Future<List<ConjugationLemmaData>> fetchByLevel(String level) async => lemmas;
 
+  @override
+  Future<List<ConjugationLemmaData>> fetchByLesson(
+    String level,
+    int lessonId, {
+    String? series,
+    int? limit,
+  }) async {
+    final normalizedSeries = series?.trim();
+    final filtered = lemmas
+        .where(
+          (lemma) =>
+              lemma.level == level.trim().toUpperCase() &&
+              lemma.lessonId == lessonId &&
+              (normalizedSeries == null ||
+                  normalizedSeries.isEmpty ||
+                  lemma.series == normalizedSeries),
+        )
+        .toList(growable: false);
+    if (limit == null || filtered.length <= limit) return filtered;
+    return filtered.take(limit).toList(growable: false);
+  }
+
   Future<void> close() => _contentDb.close();
 }
 
@@ -67,7 +89,7 @@ ConjugationLemmaData _lemma(int id, String term, int lessonId) {
     sourceVocabId: 'src_$id',
     sourceSenseId: 'sense_$id',
     level: 'N5',
-    series: 'test',
+    series: 'minna',
     lessonId: lessonId,
     matchMethod: 'test',
   );

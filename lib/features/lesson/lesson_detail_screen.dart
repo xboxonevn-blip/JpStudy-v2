@@ -36,6 +36,11 @@ enum _LessonMode { flashcards, review }
 
 enum _MenuAction { reset, report }
 
+String _curriculumConjugationSeries(String levelCode) {
+  final normalized = levelCode.trim().toUpperCase();
+  return normalized == 'N5' || normalized == 'N4' ? 'minna' : 'ShinKanzen';
+}
+
 class LessonDetailScreen extends ConsumerStatefulWidget {
   const LessonDetailScreen({super.key, required this.lessonId, this.levelCode});
 
@@ -108,6 +113,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
       level.shortLabel,
       widget.lessonId,
     );
+    final conjugationSeries = _curriculumConjugationSeries(level.shortLabel);
     final storageLessonId = LessonRepository.curriculumStorageLessonId(
       level.shortLabel,
       widget.lessonId,
@@ -315,6 +321,7 @@ class _LessonDetailScreenState extends ConsumerState<LessonDetailScreen> {
                                 _ConjugationAwareModeBlock(
                                   language: language,
                                   levelCode: level.shortLabel,
+                                  series: conjugationSeries,
                                   lessonId: sourceLessonId,
                                   storageLessonId: storageLessonId,
                                   lessonTitle: title,

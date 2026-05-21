@@ -13,23 +13,27 @@ class ConjugationLessonWidget extends ConsumerWidget {
     super.key,
     required this.levelCode,
     required this.lessonId,
+    this.series,
   });
 
   final String levelCode;
   final int lessonId;
+  final String? series;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(appLanguageProvider);
     final repo = ref.watch(conjugationRepositoryProvider);
     return FutureBuilder<List<ConjugationLemmaData>>(
-      future: repo.fetchByLevel(levelCode),
+      future: repo.fetchByLesson(
+        levelCode,
+        lessonId,
+        series: series,
+        limit: 8,
+      ),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return const SizedBox.shrink();
-        final lemmas = snapshot.data!
-            .where((lemma) => lemma.lessonId == lessonId)
-            .take(8)
-            .toList(growable: false);
+        final lemmas = snapshot.data!;
         if (lemmas.isEmpty) return const SizedBox.shrink();
         final ids = lemmas
             .map((lemma) => lemma.contentVocabId)

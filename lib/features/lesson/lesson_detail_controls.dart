@@ -527,6 +527,7 @@ class _ConjugationAwareModeBlock extends ConsumerWidget {
   const _ConjugationAwareModeBlock({
     required this.language,
     required this.levelCode,
+    required this.series,
     required this.lessonId,
     required this.storageLessonId,
     required this.lessonTitle,
@@ -535,6 +536,7 @@ class _ConjugationAwareModeBlock extends ConsumerWidget {
 
   final AppLanguage language;
   final String levelCode;
+  final String series;
   final int lessonId;
   final int storageLessonId;
   final String lessonTitle;
@@ -552,12 +554,14 @@ class _ConjugationAwareModeBlock extends ConsumerWidget {
     }
     final repo = ref.watch(conjugationRepositoryProvider);
     return FutureBuilder<List<ConjugationLemmaData>>(
-      future: repo.fetchByLevel(levelCode),
+      future: repo.fetchByLesson(
+        levelCode,
+        lessonId,
+        series: series,
+        limit: 8,
+      ),
       builder: (context, snapshot) {
-        final lemmas = (snapshot.data ?? const <ConjugationLemmaData>[])
-            .where((lemma) => lemma.lessonId == lessonId)
-            .take(8)
-            .toList(growable: false);
+        final lemmas = snapshot.data ?? const <ConjugationLemmaData>[];
         final ids = lemmas
             .map((lemma) => lemma.contentVocabId)
             .toList(growable: false);
@@ -581,7 +585,11 @@ class _ConjugationAwareModeBlock extends ConsumerWidget {
             ),
             if (lemmas.isNotEmpty) ...[
               const SizedBox(height: 12),
-              ConjugationLessonWidget(levelCode: levelCode, lessonId: lessonId),
+              ConjugationLessonWidget(
+                levelCode: levelCode,
+                lessonId: lessonId,
+                series: series,
+              ),
             ],
           ],
         );

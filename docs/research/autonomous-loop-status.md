@@ -2189,3 +2189,15 @@
   tests, and `textbook_architecture_test.js`.
 - Continuing P1 next: Minna vocab cleanup, lesson-specific conjugation,
   grammar progressive disclosure, exercise density/distractors, vocab catalog.
+
+## 2026-05-22 P1 H1-H2 data/widget cleanup
+
+- H1 removed 270 `generated_coverage` / `kanji-coverage` rows from Minna N5/N4
+  vocab. Minna N5 lesson 1 now keeps lesson words and drops orphan kanji glosses
+  such as `社`, `生`, and `来`.
+- H2 moved conjugation lookup to a lesson+series scoped repository query.
+  Minna N5 lesson 1 now hides conjugation; Minna N5 lesson 8 exposes the first 8
+  scoped conjugable adjective/verb lemmas.
+- Gates passed: focused `flutter analyze`, Minna vocab quality, content
+  manifest, conjugation seed, conjugation widget, and lesson detail tests.
+- Continuing P1 H3 next: progressive disclosure for grammar detail Directive E.

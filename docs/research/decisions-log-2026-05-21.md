@@ -529,3 +529,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The corrected manifests already encode the required lesson counts and item surfaces. Local generation fixes the P0 blank/missing-content path deterministically without touching banned sources, copying publisher prose, or adding owner-only `vi-human-approved`. Phase G Track B remains responsible for Tier-1 real-voice Directive E rewrites.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-054 - Minna vocab and conjugation scope by source series
+**Phase**: Urgent live audit P1 H1-H2
+**Date**: 2026-05-22 11:05 (local)
+**Context**: Minna lesson vocab had generated kanji coverage rows mixed into learner lesson lists, and lesson-level conjugation could leak items from another N5 source track sharing the same lesson number.
+**Options considered**: keep generated kanji coverage in vocab lessons | hide only obvious bad strings | delete all `generated_coverage`/`kanji-coverage` rows from Minna N5/N4 and scope conjugation by level+series+lesson
+**Chosen**: Remove generated kanji coverage rows from Minna N5/N4 lesson vocab JSON, keep existing lesson-tagged words untouched, and query conjugation lemmas by level, source series, and lesson id.
+**Rationale**: Kanji coverage belongs in kanji learning, not Minna vocab lessons. Series scoping prevents Hajimete N5 lesson 1 adjectives from appearing in Minna N5 lesson 1 while preserving conjugation in real Minna adjective/verb lessons.
+**Reversible**: yes
+**Owner review**: pending

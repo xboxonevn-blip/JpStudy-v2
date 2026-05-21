@@ -63,6 +63,26 @@ void main() {
     );
     expect(n4, isEmpty);
   });
+
+  test('lesson-scoped lookup hides non-conjugable lessons', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+    final db = ContentDatabase(executor: NativeDatabase.memory());
+    addTearDown(db.close);
+    final repo = ConjugationRepository(db);
+
+    final lesson1 = await repo.fetchByLesson('N5', 1, series: 'minna', limit: 8);
+    final lesson8 = await repo.fetchByLesson('N5', 8, series: 'minna', limit: 8);
+
+    expect(lesson1, isEmpty);
+    expect(lesson8, hasLength(8));
+    expect(lesson8.every((entry) => entry.level == 'N5'), isTrue);
+    expect(lesson8.every((entry) => entry.lessonId == 8), isTrue);
+    expect(
+      lesson8.map((entry) => entry.kind),
+      everyElement(isIn({'verb', 'i_adjective', 'na_adjective'})),
+    );
+  });
 }
 
 Future<VocabData> _vocabBySourceId(ContentDatabase db, String sourceVocabId) {

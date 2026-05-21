@@ -79,6 +79,7 @@ class _EnhancedFlashcardScreenState
 
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: isMobile ? 52 : null,
         title: Text(widget.lessonTitle),
         actions: isMobile
             ? null
@@ -93,6 +94,7 @@ class _EnhancedFlashcardScreenState
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onHorizontalDragEnd: _handleHorizontalDragEnd,
+        onVerticalDragEnd: _handleVerticalDragEnd,
         onLongPress: _markCurrentNeedPractice,
         child: Column(
           children: [
@@ -121,12 +123,14 @@ class _EnhancedFlashcardScreenState
 
             // Bottom navigation
             if (_lastAction != null) _buildGestureStatus(),
-            _buildBottomControls(language),
+            if (!isMobile) ...[
+              _buildBottomControls(language),
 
-            // Card counter
-            _buildCardCounter(),
+              // Card counter
+              _buildCardCounter(),
 
-            const SizedBox(height: 16),
+              const SizedBox(height: 16),
+            ],
           ],
         ),
       ),
@@ -231,6 +235,18 @@ class _EnhancedFlashcardScreenState
   }
 
   void _handleHorizontalDragEnd(DragEndDetails details) {
+    final velocity = details.primaryVelocity ?? 0;
+    if (velocity.abs() < 220) {
+      return;
+    }
+    if (velocity < 0) {
+      _goNextOrSummary();
+      return;
+    }
+    _handlePrevious();
+  }
+
+  void _handleVerticalDragEnd(DragEndDetails details) {
     final velocity = details.primaryVelocity ?? 0;
     if (velocity.abs() < 220) {
       return;

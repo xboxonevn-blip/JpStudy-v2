@@ -96,6 +96,33 @@ void main() {
     expect(find.text('食べる'), findsOneWidget);
   });
 
+  testWidgets('mobile vertical swipe gestures move between flashcards', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(390, 844);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final items = [_item(1, '食べる', 'to eat'), _item(2, '飲む', 'to drink')];
+    await tester.pumpWidget(buildFlashcardScreen(items));
+    await tester.pumpAndSettle();
+
+    await tester.drag(
+      find.byType(EnhancedFlashcardScreen),
+      const Offset(0, -320),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('飲む'), findsOneWidget);
+
+    await tester.drag(
+      find.byType(EnhancedFlashcardScreen),
+      const Offset(0, 320),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('食べる'), findsOneWidget);
+  });
+
   testWidgets('long press marks current flashcard for practice', (
     tester,
   ) async {
@@ -124,5 +151,25 @@ void main() {
 
     expect(find.byIcon(Icons.settings_rounded), findsNothing);
     expect(tester.getTopLeft(find.byType(EnhancedFlashcard)).dx, 0);
+  });
+
+  testWidgets('mobile flashcard uses fullscreen gesture surface', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(390, 844);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final items = [_item(1, '食べる', 'to eat'), _item(2, '飲む', 'to drink')];
+    await tester.pumpWidget(buildFlashcardScreen(items));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Previous'), findsNothing);
+    expect(find.text('Next'), findsNothing);
+    expect(
+      tester.getSize(find.byType(EnhancedFlashcard)).height,
+      greaterThan(700),
+    );
   });
 }

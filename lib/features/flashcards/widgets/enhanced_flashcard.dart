@@ -38,6 +38,7 @@ class EnhancedFlashcard extends StatefulWidget {
 class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
   bool _isFlipped = false;
   double _dragDx = 0;
+  double _dragDy = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +47,9 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
       onHorizontalDragStart: (_) => _dragDx = 0,
       onHorizontalDragUpdate: (details) => _dragDx += details.delta.dx,
       onHorizontalDragEnd: _handleHorizontalDragEnd,
+      onVerticalDragStart: (_) => _dragDy = 0,
+      onVerticalDragUpdate: (details) => _dragDy += details.delta.dy,
+      onVerticalDragEnd: _handleVerticalDragEnd,
       onLongPress: widget.onMarkDifficult,
       child: Container(color: Colors.transparent, child: _buildCard(context)),
     );
@@ -66,6 +70,20 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
       return;
     }
     if (velocity < 0 || resolvedDx < 0) {
+      widget.onSwipeNext?.call();
+    } else {
+      widget.onSwipePrevious?.call();
+    }
+  }
+
+  void _handleVerticalDragEnd(DragEndDetails details) {
+    final velocity = details.primaryVelocity ?? 0;
+    final resolvedDy = _dragDy;
+    _dragDy = 0;
+    if (velocity.abs() < 220 && resolvedDy.abs() < 64) {
+      return;
+    }
+    if (velocity < 0 || resolvedDy < 0) {
       widget.onSwipeNext?.call();
     } else {
       widget.onSwipePrevious?.call();

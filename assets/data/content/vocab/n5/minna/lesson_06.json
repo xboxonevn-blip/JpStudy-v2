@@ -1845,6 +1845,7 @@
       "order": 34,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1865,18 +1866,23 @@
       },
       "sense": {
         "senseId": "n5_l06_s034",
-        "meaningVi": "cửa hàng",
+        "meaningVi": "Cửa hàng, tiệm",
         "meaningEn": "shop / store"
       },
       "search": {
         "termNoAccent": "店",
         "readingNoAccent": "みせ",
-        "meaningViNoAccent": "cua hang",
+        "meaningViNoAccent": "Cua hang, tiem",
         "hanVietNoAccent": "diem"
       },
       "links": {
         "sourceVocabId": "n5_l06_v034",
-        "sourceSenseId": "n5_l06_s034"
+        "sourceSenseId": "n5_l06_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "điếm"

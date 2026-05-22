@@ -835,3 +835,9 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 - Decision: Apply five N5 Minna rows where the canonical gloss improves clarity and preserves role nuance: `資料`, `次に`, `自動車`, `主人`, and `趣味`.
 - Rationale: `主人` keeps the self-spouse note, while the other rows add alternate common Vietnamese terms or smoother sequencing/vehicle wording.
 - Verification: `node --test test/tool/research/vocab_app_diff_test.js test/tool/research/vocab_app_diff_apply_test.js test/tool/qa/validate_example_quality_test.js`; `node tool/qa/validate_example_quality.js`; `node tool/migration/wire_example_sentences.js --validate-only`; `flutter analyze lib/data/db/content_database.dart assets/data/content/vocab/n5/minna`; `flutter test test/data/db/content_database_lazy_seed_test.dart test/data/repositories/lesson_repository_test.dart --reporter expanded`; `git diff --check`.
+
+## DECISION-089 - Batch 009 skips canonical typo rows
+- Date: 2026-05-22
+- Decision: Apply five N5 Minna rows for counters/locations/shops/answers while skipping canonical rows that still contain obvious Vietnamese typos such as `Đặt biệt là`.
+- Rationale: Source-backed automation must not import OCR/spelling defects into learner-facing app content. Typo-bearing rows need canonical cleanup before app application.
+- Verification: `node --test test/tool/research/vocab_app_diff_test.js test/tool/research/vocab_app_diff_apply_test.js test/tool/qa/validate_example_quality_test.js`; `node tool/qa/validate_example_quality.js`; `node tool/migration/wire_example_sentences.js --validate-only`; `flutter analyze lib/data/db/content_database.dart assets/data/content/vocab/n5/minna`; `flutter test test/data/db/content_database_lazy_seed_test.dart test/data/repositories/lesson_repository_test.dart --reporter expanded`; `git diff --check`.

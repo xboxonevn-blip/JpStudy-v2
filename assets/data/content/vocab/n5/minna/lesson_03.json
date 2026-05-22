@@ -669,6 +669,7 @@
       "order": 13,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -690,18 +691,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s013",
-        "meaningVi": "quầy lễ tân",
+        "meaningVi": "Quầy tiếp tân",
         "meaningEn": "reception desk"
       },
       "search": {
         "termNoAccent": "受付",
         "readingNoAccent": "うけつけ",
-        "meaningViNoAccent": "quay le tan",
+        "meaningViNoAccent": "Quay tiep tan",
         "hanVietNoAccent": "thu pho"
       },
       "links": {
         "sourceVocabId": "n5_l03_v013",
-        "sourceSenseId": "n5_l03_s013"
+        "sourceSenseId": "n5_l03_s013",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thụ phó"

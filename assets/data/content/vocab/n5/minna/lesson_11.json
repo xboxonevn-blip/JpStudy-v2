@@ -1777,6 +1777,7 @@
       "order": 33,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1798,18 +1799,23 @@
       },
       "sense": {
         "senseId": "n5_l11_s033",
-        "meaningVi": "gửi đường biển",
+        "meaningVi": "Gửi bằng đường biển",
         "meaningEn": "sea mail"
       },
       "search": {
         "termNoAccent": "船便",
         "readingNoAccent": "ふなひん",
-        "meaningViNoAccent": "gui duong bien",
+        "meaningViNoAccent": "Gui bang duong bien",
         "hanVietNoAccent": "thuyen tien"
       },
       "links": {
         "sourceVocabId": "n5_l11_v033",
-        "sourceSenseId": "n5_l11_s033"
+        "sourceSenseId": "n5_l11_s033",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thuyền tiện"

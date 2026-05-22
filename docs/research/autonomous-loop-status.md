@@ -2624,3 +2624,9 @@
 - Applied 5 curated consensus repairs for Minna N5 `資料`, `次に`, `自動車`, `主人`, and `趣味`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-008.md`.
 - Bumped vocab seed revision to 13 so installed DBs refresh this seventh N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 009
+- Applied 5 curated consensus repairs for Minna N5 `受付`, `船便`, `定食`, `店`, and `答え`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-009.md`.
+- Skipped canonical typo candidates until their source rows are cleaned.
+- Bumped vocab seed revision to 14 so installed DBs refresh this eighth N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

@@ -1901,6 +1901,7 @@
       "order": 35,
       "tags": [
         "food",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1922,18 +1923,24 @@
       },
       "sense": {
         "senseId": "n5_l13_s035",
-        "meaningVi": "cơm suất",
+        "meaningVi": "Cơm suất, cơm phần",
         "meaningEn": "set meal"
       },
       "search": {
         "termNoAccent": "定食",
         "readingNoAccent": "ていしょく",
-        "meaningViNoAccent": "com suat",
+        "meaningViNoAccent": "Com suat, com phan",
         "hanVietNoAccent": "dinh thuc"
       },
       "links": {
         "sourceVocabId": "n5_l13_v035",
-        "sourceSenseId": "n5_l13_s035"
+        "sourceSenseId": "n5_l13_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "định thực"

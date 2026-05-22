@@ -388,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Number + Counter + からある",
-      "meaning": "Ý nghĩa: Dùng sau số lượng, độ dài hoặc trọng lượng để nhấn mạnh con số lớn: “có tới”, “không dưới”.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Về cấu trúc, から đặt một mốc bắt đầu, ある nói “có/tồn tại”. Sau số lượng, 〜からある biến con số thành mốc tối thiểu gây ấn tượng: có từ mức ấy trở lên.",
+      "hanVietBridge": "から là từ, ある là có. 500個からある gần “có tới/không dưới 500 cái”, nhấn con số lớn.",
+      "form": "Hình thức: số lượng + đơn vị đếm + からある.",
+      "meaning": "Ý nghĩa: Có tới ít nhất A; không dưới A, với cảm giác con số lớn.",
+      "usage": "Sử dụng: Dùng với số lượng, chiều dài, trọng lượng, tiền bạc khi người nói muốn nhấn quy mô đáng kể.",
+      "humanMoment": "Dr. Linh lưu ý: 〜からある khác 〜以上ある. 以上ある chỉ “từ A trở lên”; からある thêm cảm giác người nói thấy con số rất lớn.",
+      "crossLinks": [
+        {
+          "pattern": "〜以上ある",
+          "contrast": "Khác 〜からある: 〜以上ある trung tính; 〜からある nhấn quy mô lớn/đáng kể."
+        },
+        {
+          "pattern": "〜もある",
+          "contrast": "〜もある cũng nhấn nhiều; 〜からある nhấn ít nhất đạt tới mốc lớn ấy."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -422,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + からする",
-      "meaning": "Ý nghĩa: Dùng để đưa ra đánh giá hoặc suy luận dựa trên một khía cạnh, lập trường hoặc con số cụ thể.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "から đặt điểm xuất phát cho suy luận, する biến điểm ấy thành cơ sở đánh giá. Trong câu thực tế thường hiện thành からすると/からすれば: xét từ A thì...",
+      "hanVietBridge": "から là từ/xét từ; する là làm/lấy làm. Nからすると dịch tự nhiên là xét từ N, nhìn từ N.",
+      "form": "Hình thức: danh từ + からすると / からすれば + nhận định.",
+      "meaning": "Ý nghĩa: Xét từ A thì có thể suy ra/đánh giá B.",
+      "usage": "Sử dụng: Dùng với bằng chứng, thái độ, số liệu, lập trường. Không dùng để nêu nguyên nhân trực tiếp như から.",
+      "humanMoment": "Dr. Linh lưu ý: Nからすると khác Nから. Nから chỉ nguồn/lý do rộng; からすると biến N thành căn cứ để suy luận.",
+      "crossLinks": [
+        {
+          "pattern": "Nから",
+          "contrast": "Khác Nからすると: Nから có thể là nguồn/lý do; Nからすると là xét từ N để suy luận."
+        },
+        {
+          "pattern": "Nによると",
+          "contrast": "Nによると dẫn nguồn thông tin; Nからすると dùng N làm căn cứ phán đoán."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

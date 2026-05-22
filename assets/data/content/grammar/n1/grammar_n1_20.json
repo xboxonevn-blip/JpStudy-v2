@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + つもりだ",
-      "meaning": "Ý nghĩa: Dùng để diễn tả dự định hoặc ý định của người nói.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "つもり bắt nguồn từ ý “tính toán/dự định trong lòng”. Về cấu trúc, động từ trước つもりだ không chỉ nói lịch trình mà nói người nói đang giữ ý định hoặc tự nhận thức như vậy.",
+      "hanVietBridge": "つもり gần “ý định/tâm tính”. するつもりだ dịch là định làm; Nのつもりだ có thể là tự cho là mình ở trạng thái N.",
+      "form": "Hình thức: động từ từ điển/ない-form + つもりだ; danh từ + の + つもりだ khi nói tự cho là.",
+      "meaning": "Ý nghĩa: Định A; có ý định A; trong một số ngữ cảnh là tự cho là A.",
+      "usage": "Sử dụng: Phân biệt dự định thật với “tưởng/tự cho là”. N1 thường khai thác nghĩa tự nhận thức lệch thực tế.",
+      "humanMoment": "Dr. Linh lưu ý: 〜つもりだ khác 〜予定だ. 予定だ là lịch/kế hoạch bên ngoài; つもりだ là ý định hoặc cách người nói tự nghĩ.",
+      "crossLinks": [
+        {
+          "pattern": "〜予定だ",
+          "contrast": "Khác 〜つもりだ: 〜予定だ thiên về lịch trình đã định; 〜つもりだ thiên về ý định/tự nhận thức."
+        },
+        {
+          "pattern": "〜つもりで",
+          "contrast": "〜つもりだ kết thúc câu bằng ý định; 〜つもりで dùng ý định/tâm thế ấy để làm hành động sau."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + つもりで",
-      "meaning": "Ý nghĩa: Dùng để nói làm một việc với ý định, tâm thế hoặc giả định như X.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "つもり là ý định/tâm thế, còn で biến ý định ấy thành trạng thái đi kèm hành động sau. Cấu trúc 〜つもりで trả lời “làm B với tâm thế A nào?”.",
+      "hanVietBridge": "で là bằng/với tư cách trạng thái. 旅行するつもりで貯金する là tiết kiệm với ý định đi du lịch.",
+      "form": "Hình thức: động từ từ điển/ない-form + つもりで + hành động; danh từ + の + つもりで.",
+      "meaning": "Ý nghĩa: Với ý định/tâm thế/coi như A mà làm B.",
+      "usage": "Sử dụng: Vế sau là hành động được thực hiện dựa trên ý định hoặc giả định ở vế trước.",
+      "humanMoment": "Dr. Linh lưu ý: 〜つもりで khác 〜ために. ために nhấn mục đích khách quan; つもりで nhấn tâm thế/ý định người làm mang theo.",
+      "crossLinks": [
+        {
+          "pattern": "〜ために",
+          "contrast": "Khác 〜つもりで: 〜ために là để đạt mục đích; 〜つもりで là với tâm thế/ý định A khi làm B."
+        },
+        {
+          "pattern": "〜つもりだ",
+          "contrast": "〜つもりだ nêu ý định như vị ngữ; 〜つもりで dùng ý định ấy làm trạng thái cho hành động sau."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + ではすまない / い-Adjective + ではすまない / な-Adjective + ではすまない / Noun + ではすまない",
-      "meaning": "Ý nghĩa: Dùng để nói chỉ X thôi thì không đủ để giải quyết, kết thúc hoặc bù đắp vấn đề.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "済む là xong, kết thúc ổn. ではすまない phủ định việc “chỉ với A mà xong được”, nên cấu trúc hàm ý còn trách nhiệm, bồi thường, hành động hoặc hậu quả tiếp theo.",
+      "hanVietBridge": "済 là tế/xong xuôi. Aではすまない dịch tự nhiên: chỉ A thôi thì không xong/không đủ.",
+      "form": "Hình thức: động từ/danh từ/tính từ + ではすまない; rất hay gặp với だけではすまない.",
+      "meaning": "Ý nghĩa: Chỉ A thôi thì không đủ để giải quyết/kết thúc vấn đề.",
+      "usage": "Sử dụng: Dùng khi hậu quả nghiêm trọng hơn mức A có thể xử lý: xin lỗi, tiền, nhắc nhở, lời nói.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ではすまない khác 〜だけでは足りない. 足りない nói thiếu lượng; ではすまない nói vấn đề chưa thể kết thúc vì trách nhiệm/hậu quả.",
+      "crossLinks": [
+        {
+          "pattern": "〜だけでは足りない",
+          "contrast": "Khác 〜ではすまない: 足りない là chưa đủ về lượng/mức; ではすまない nhấn chưa thể xong chuyện."
+        },
+        {
+          "pattern": "〜ないではすまない",
+          "contrast": "〜ないではすまない là không làm A thì không xong; 〜ではすまない là chỉ A/trạng thái A thì không xong."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

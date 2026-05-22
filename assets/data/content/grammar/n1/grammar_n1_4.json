@@ -344,8 +344,20 @@
     "directiveE": {
       "form": "Hình thức: Noun1 という Noun2",
       "meaning": "Ý nghĩa: Dùng để gọi tên, xác định hoặc giải thích danh từ phía sau bằng danh từ phía trước.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: Noun1 là tên, nhãn, nội dung hoặc cách gọi; Noun2 là loại danh từ được xác định. Dùng để giới thiệu “N2 tên/gọi là N1”.",
+      "etymology": "Gốc cấu trúc: と trích dẫn tên/nhãn, いう là “nói/gọi”, rồi Noun2 là vật/người được gọi. Noun1 という Noun2 nghĩa là “Noun2 mà người ta gọi là Noun1”.",
+      "hanVietBridge": "言う = nói/gọi. 東京という都市 = thành phố gọi là Tokyo.",
+      "humanMoment": "Lưu ý từ Dr. Linh: という Noun là nhãn dán. Hãy hỏi danh từ sau là loại gì, danh từ trước là tên/nội dung nào dán lên nó.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + というもの",
+          "contrast": "Khác というもの: というN xác định một vật/người cụ thể; というもの nói về bản chất của cả loại N."
+        },
+        {
+          "pattern": "〜っていう",
+          "contrast": "っていう là khẩu ngữ; という là dạng trung tính/trang trọng hơn để gọi tên hoặc giải thích."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -378,8 +390,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + というところだ",
       "meaning": "Ý nghĩa: Dùng để ước lượng hoặc đánh giá ở mức xấp xỉ.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: Đặt sau con số, mức độ hoặc nhận định để ước lượng: khoảng đó, cỡ đó, cùng lắm là mức đó. Giọng đánh giá dè chừng.",
+      "etymology": "Gốc cấu trúc: という đóng khung mức được nêu, ところ là điểm/vị trí. というところだ đặt nhận định vào một “điểm” trên thang đo, nên nghĩa là khoảng/tầm mức ấy.",
+      "hanVietBridge": "所 = sở/chỗ, điểm. 半数というところだ = ở điểm khoảng một nửa.",
+      "humanMoment": "Lưu ý từ Dr. Linh: というところだ không chốt số tuyệt đối. Nó là bàn tay đặt mốc gần đúng trên thước đo.",
+      "crossLinks": [
+        {
+          "pattern": "〜ぐらいだ",
+          "contrast": "Khác ぐらいだ: ぐらいだ ước lượng rộng; というところだ nghe như đánh giá kết luận sau khi cân nhắc."
+        },
+        {
+          "pattern": "〜にすぎない",
+          "contrast": "にすぎない hạ thấp “chỉ là”; というところだ chỉ đặt mức xấp xỉ, không nhất thiết xem nhẹ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -412,8 +436,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + というもの",
       "meaning": "Ý nghĩa: Dùng để nói về Noun như một khái niệm chung, nhấn mạnh bản chất hoặc phạm vi của loại sự vật đó.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "usage": "Cách dùng: Dùng khi nói về N như một khái niệm hoặc bản chất chung, không phải một cá thể riêng. Thường đi với nhận xét khái quát.",
+      "etymology": "Gốc cấu trúc: という gọi tên/định danh, もの là “vật/thứ/khái niệm”. Noun + というもの biến N thành “thứ gọi là N” để bàn về tính chất chung của nó.",
+      "hanVietBridge": "物 = vật/thứ. 別れというもの = thứ gọi là chia ly, chuyện chia ly nói chung.",
+      "humanMoment": "Lưu ý từ Dr. Linh: というもの mở ống kính rộng. Người nói không nói một N cụ thể, mà nói về bản chất của cả loại N.",
+      "crossLinks": [
+        {
+          "pattern": "Noun という Noun",
+          "contrast": "Khác というN: というN đặt tên cho một danh từ cụ thể; というもの bàn về khái niệm chung của N."
+        },
+        {
+          "pattern": "〜とは",
+          "contrast": "とは thường định nghĩa/chủ đề hóa; というもの có sắc thái nói về bản chất hoặc quy luật chung của N."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

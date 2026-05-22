@@ -3003,3 +3003,9 @@
 - Replaced early lesson-4 template filler with formal even-focus, rhetorical assertion, rejected-assumption, dual-role, and paired-aspect guidance.
 - Global Directive E validator progress is now `315/1123`; next failure starts at `grammar:n1:grammar_n1_4:008`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 048
+- Re-authored N1 rows `Noun という Noun`, `Noun というところだ`, `Noun + というもの`, `Verb ずとも`, and `〜ところを`.
+- Repaired `ずとも` examples so each uses a verb-negative stem instead of noun `なくとも` examples.
+- Global Directive E validator progress is now `320/1123`; next failure starts at `grammar:n1:grammar_n1_40:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-negative stem + ずとも",
       "meaning": "Ý nghĩa: Dùng để nói dù không làm X thì Y vẫn xảy ra hoặc vẫn có thể làm được",
-      "usage": "Cách dùng: Với Verb ずとも, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ずとも, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-negative stem + ずとも thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ずとも không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau thân phủ định cổ của động từ để nói không cần làm X mà Y vẫn được/đúng. Sắc thái trang trọng hơn なくても.",
+      "etymology": "Gốc cấu trúc: ず là phủ định cổ của động từ, とも thêm nghĩa “dù”. Verb ずとも nghĩa là dù không làm V, điều sau vẫn đứng; trọng tâm nằm ở sự không cần thiết của hành động V.",
+      "hanVietBridge": "ず = không; とも = dù. 食べずとも = dù không ăn.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ずとも tháo một điều kiện ra khỏi câu. Người nói bảo: không làm V cũng không sao, kết quả Y vẫn đi tiếp.",
       "crossLinks": [
         {
-          "pattern": "Verbる べくもない",
-          "contrast": "Verb ずとも cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜なくても",
+          "contrast": "Khác なくても: nghĩa gần nhau, nhưng ずとも trang trọng/cổ hơn và thường dùng trong văn viết."
+        },
+        {
+          "pattern": "Verb ざるを得ない",
+          "contrast": "ざるを得ない là không thể không làm; ずとも là dù không làm vẫn được."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ている + ところを / Noun + の + ところを / い-Adjective + ところを / な-Adjective + な + ところを",
       "meaning": "Ý nghĩa: Dùng khi một hành động xảy ra đúng lúc người khác đang ở trong một tình huống, thường là lúc bất tiện hoặc đáng lẽ không nên làm phiền",
-      "usage": "Cách dùng: Với ～ところを, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ところを, lõi ところ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ている + ところを / Noun + の + ところを / い-Adjective + ところを / な-Adjective + な + ところを thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ところを không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước là đúng khoảnh khắc/tình huống đang diễn ra; vế sau là hành động chen vào, bắt gặp, làm phiền hoặc xảy ra trái lúc.",
+      "etymology": "Gốc cấu trúc: ところ là điểm/khoảnh khắc/tình huống, を đánh dấu khoảnh khắc ấy như nơi hành động sau tác động vào. ところを vì vậy thường có cảm giác “đúng lúc đang... thì...”.",
+      "hanVietBridge": "所 = sở/chỗ, điểm. お忙しいところを = ngay lúc anh/chị đang bận mà...",
+      "humanMoment": "Lưu ý từ Dr. Linh: ところを là camera bắt đúng khoảnh khắc. Hãy nhìn xem hành động sau chen vào, phá ngang, hay được cảm ơn/xin lỗi vì động vào khoảnh khắc ấy.",
       "crossLinks": [
         {
-          "pattern": "Noun というところだ",
-          "contrast": "～ところを cần đọc theo chức năng riêng của mẫu; Noun というところだ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ところに",
+          "contrast": "Khác ところに: ところに nêu việc xảy đến tại thời điểm ấy; ところを nhấn hành động sau tác động vào khoảnh khắc/tình huống đó."
+        },
+        {
+          "pattern": "〜最中に",
+          "contrast": "最中に chỉ đang giữa lúc; ところを có thêm sắc thái bị chen vào/bắt gặp/làm phiền."
         }
       ],
       "fallbackReference": {

@@ -603,9 +603,9 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 ## DECISION-061 - Upper grammar renders Shin Kanzen lesson roadmap
 **Phase**: Urgent live audit P0 C3 addendum
 **Date**: 2026-05-22 17:15 (local)
-**Context**: Live verification after deploy showed `/grammar?level=N1` loaded the generated N1 grammar content, but the page exposed only pattern totals (`245`) rather than the requested Shin Kanzen lesson count (`88`). N3/N2 had the same mismatch between manifest lesson counts and grammar-bank UI.
-**Options considered**: leave the pattern bank only | build a separate lesson-detail route | render a lesson roadmap above the grammar bank using existing `lessonId` grouping and known manifest counts
-**Chosen**: Add an upper-JLPT Shin Kanzen roadmap section for N3/N2/N1 that renders every expected lesson slot (83/163/88), groups loaded grammar points by `lessonId`, and links each populated lesson to its first grammar pattern.
-**Rationale**: This satisfies the live acceptance wording without destabilizing the existing grammar bank, practice routes, or generated content. The section makes the manifest count visible while keeping the full pattern list for search and practice.
+**Context**: Live verification after deploy showed `/grammar?level=N1` loaded generated N1 grammar content, but the page exposed only pattern totals (`245`) rather than the requested Shin Kanzen lesson count (`88`). Existing browser IndexedDB also retained the pre-expansion 25-lesson seed because the grammar data version had not been bumped.
+**Options considered**: leave the pattern bank only | build a separate lesson-detail route | render a lesson roadmap above the grammar bank using existing `lessonId` grouping and known manifest counts, then force reseed with a grammar data-version bump
+**Chosen**: Add an upper-JLPT Shin Kanzen roadmap section for N3/N2/N1 that renders every expected lesson slot (83/163/88), groups loaded grammar points by `lessonId`, links each populated lesson to its first grammar pattern, and bump `GrammarSeeder.kGrammarDataVersion` to 30.
+**Rationale**: This satisfies the live acceptance wording without destabilizing the existing grammar bank, practice routes, or generated content. The section makes the manifest count visible while the version bump ensures existing browsers load the expanded C3 lesson files.
 **Reversible**: yes
 **Owner review**: pending

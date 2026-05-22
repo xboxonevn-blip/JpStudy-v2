@@ -2282,8 +2282,11 @@
   pass showed the public bundle was stale versus `main`.
 - Added an upper-JLPT Shin Kanzen grammar roadmap on `/grammar?level=N3/N2/N1`
   so the UI renders the expected manifest lesson counts: N3 83, N2 163, N1 88.
+- Bumped `GrammarSeeder.kGrammarDataVersion` to force existing browser
+  IndexedDB caches to reseed the expanded upper-JLPT grammar lesson files.
 - Gates passed: focused grammar `flutter analyze`,
-  `grammar_screen_test`, and `flutter build web --release`.
+  `grammar_screen_test`, `upper_jlpt_content_integrity_test`, and
+  `flutter build web --release`.
 - Live spot checks after deploy confirmed `/profile` redirects to `/me`,
   friendly 404 renders, JLPT N5 exam start renders, grammar detail uses
   progressive disclosure, vocab catalog shows 10 programs, and Mimikara is

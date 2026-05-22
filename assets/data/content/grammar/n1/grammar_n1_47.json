@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (past, casual) + ことにしてください",
       "meaning": "Ý nghĩa: Dùng để yêu cầu người khác xem như một việc đã xảy ra hoặc chấp nhận một giả định",
-      "usage": "Cách dùng: Với Verb たことにしてください, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb たことにしてください, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (past, casual) + ことにしてください thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb たことにしてください không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Yêu cầu người nghe xem một sự việc đã xảy ra như một sự thật quy ước, dù thực tế có thể khác. Thường dùng khi muốn giả vờ, giữ bí mật hoặc xử lý hồ sơ/câu chuyện.",
+      "etymology": "Gốc cấu trúc: こと biến hành động quá khứ thành “việc/chuyện”, にする là đặt thành trạng thái, ください là yêu cầu lịch sự. たことにしてください nghĩa là “xin hãy đặt chuyện đó thành việc đã xảy ra”.",
+      "hanVietBridge": "事 = sự/việc. 忘れたことにしてください = xin hãy xem như đã quên chuyện đó.",
+      "humanMoment": "Lưu ý từ Dr. Linh: たことにしてください là câu chỉnh hồ sơ thực tại. Người nói không kể sự thật mới; họ xin người nghe cùng chấp nhận một phiên bản “coi như đã V”.",
       "crossLinks": [
         {
-          "pattern": "Noun もさることながら Noun も",
-          "contrast": "Verb たことにしてください cần đọc theo chức năng riêng của mẫu; Noun もさることながら Noun も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ことにする",
+          "contrast": "Khác ことにする: ことにする là tự quyết/xem như; たことにしてください là yêu cầu người khác xem như đã xảy ra."
+        },
+        {
+          "pattern": "〜ということにする",
+          "contrast": "ということにする cũng đặt một quy ước; たことにしてください lịch sự hơn và nhấn hành động quá khứ đã được coi là thật."
         }
       ],
       "fallbackReference": {

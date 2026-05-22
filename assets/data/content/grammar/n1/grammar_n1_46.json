@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual, past (た form) + が最後",
       "meaning": "Ý nghĩa: Dùng để nói một khi đã xảy ra hoặc đã làm X thì không thể quay lại, thường dẫn đến hậu quả xấu",
-      "usage": "Cách dùng: Với Verb たが最後, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb たが最後, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual, past (た form) + が最後 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb たが最後 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau động từ dạng た để nói một khi X xảy ra thì mọi chuyện coi như chấm dứt hoặc không thể cứu vãn. Vế sau thường là hậu quả xấu/không thể quay lại.",
+      "etymology": "Gốc cấu trúc: 最後 là điểm cuối cùng. Verb たが最後 biến hành động đã xảy ra thành “điểm cuối”; sau điểm ấy, người nói xem cục diện đã khóa lại và hậu quả đi theo.",
+      "hanVietBridge": "最後 = tối hậu/sau cùng. 怒ったが最後 = đã nổi giận thì coi như hết đường ngăn.",
+      "humanMoment": "Lưu ý từ Dr. Linh: たが最後 là cửa một chiều. Khi đọc 始めたが最後, hãy nghe cảnh báo: bước vào rồi thì khó rút chân ra.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb たが最後 cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たら最後",
+          "contrast": "Khác rất nhẹ: たら最後 gần nghĩa hơn trong khẩu ngữ; たが最後 nghe văn viết/cứng hơn."
+        },
+        {
+          "pattern": "〜たとたん",
+          "contrast": "たとたん chỉ ngay sau khoảnh khắc; たが最後 nhấn hậu quả không quay lại."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + となると / い-Adjective + となると / な-Adjective + だとなると / Noun + だとなると",
       "meaning": "Ý nghĩa: Dùng khi nêu một hoàn cảnh, chủ đề hoặc cấp độ rồi nói tình hình sẽ khác đi",
-      "usage": "Cách dùng: Với ～となると, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～となると, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + となると / い-Adjective + となると / な-Adjective + だとなると / Noun + だとなると thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～となると không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Nêu một tình huống/chủ đề/cấp độ rồi nói nếu đã thành chuyện đó thì điều kiện, thái độ hoặc lựa chọn sẽ đổi. Hay dịch theo ngữ cảnh là “khi nói đến/đến mức X thì”.",
+      "etymology": "Gốc cấu trúc: と gọi tên trạng thái, なる là trở thành, と mở hệ quả tự nhiên. ～となると đặt X như ngưỡng đã thành hình, rồi hỏi hệ quả nào phát sinh từ ngưỡng ấy.",
+      "hanVietBridge": "成 = thành. 試験となると = hễ thành chuyện thi cử thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: となると là điểm đổi chế độ. Bình thường thì được, nhưng 試験となると hay 東京へ引っ越すとなると, bài toán lập tức khác.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～となると cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜となったら",
+          "contrast": "Khác となったら: となったら giả định chuyện đã xảy ra; となると nhấn hệ quả khi vấn đề chuyển sang X."
+        },
+        {
+          "pattern": "〜とすれば",
+          "contrast": "とすれば dựng giả thuyết để suy luận; となると nêu ngưỡng/tình huống làm điều kiện đổi khác."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + に先駆けて",
       "meaning": "Ý nghĩa: Dùng để nói một việc diễn ra trước người khác, nơi khác hoặc thời điểm thông thường",
-      "usage": "Cách dùng: Với Noun に先駆けて, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun に先駆けて, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に先駆けて thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun に先駆けて không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt mốc/người/nhóm trước に先駆けて để nói chủ thể làm gì trước mốc đó, thường với sắc thái đi trước, tiên phong hoặc ra mắt sớm.",
+      "etymology": "Gốc cấu trúc: 先 là trước, 駆ける là chạy/lao đi. 先駆ける vốn là chạy lên trước đội hình; に先駆けて giữ hình ảnh “đi trước N” trong thời gian hoặc thứ tự công bố.",
+      "hanVietBridge": "先駆 = tiên khu/tiên phong. 日本に先駆けて = trước Nhật Bản, đi trước mốc Nhật.",
+      "humanMoment": "Lưu ý từ Dr. Linh: に先駆けて không chỉ là “trước”. Nó có dáng người mở đường: 発売に先駆けて là ra tay trước mốc công bố/chính thức.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun に先駆けて cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜に先立って",
+          "contrast": "Khác に先立って: cả hai là trước mốc, nhưng に先駆けて nhấn sắc thái đi đầu/tiên phong hơn."
+        },
+        {
+          "pattern": "〜より前に",
+          "contrast": "より前に chỉ thứ tự thời gian trung tính; に先駆けて trang trọng và có cảm giác ra trước người khác."
         }
       ],
       "fallbackReference": {

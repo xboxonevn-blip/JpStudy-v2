@@ -204,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun/Adjective + ぶる → ぶった (past tense), e.g., 偉そうぶった, 大人ぶった",
-      "meaning": "Ý nghĩa: Dùng để nói ai đó tỏ vẻ, làm ra vẻ hoặc giả bộ có tính chất nào đó; thường mang sắc thái phê bình.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc hậu tố ぶる nghĩa là làm ra vẻ X; ぶった là dạng quá khứ/連体 của động từ ấy, thường đứng trước danh từ như 態度・口調・言い方. Cấu trúc này phê bình vẻ giả tạo đã hiện ra thành thái độ.",
+      "hanVietBridge": "ぶる gần “làm bộ/ra vẻ”. 大人ぶった口調 là giọng điệu ra vẻ người lớn; 偉そうぶった態度 là thái độ ra vẻ ta đây.",
+      "form": "Hình thức: N/adj stem + ぶった + N; hay gặp 大人ぶった, 偉そうぶった, 知ったかぶった.",
+      "meaning": "Ý nghĩa: Mang vẻ giả tạo/ra vẻ X, thường để chê thái độ hoặc cách nói.",
+      "usage": "Sử dụng: Chủ yếu bổ nghĩa danh từ. Đừng lẫn với ぶった là quá khứ của ぶつ/打つ “đánh”.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ぶった khác 〜ぶって. ぶった thường dính vào danh từ như 態度; ぶって nối sang hành động sau bằng thể て.",
+      "crossLinks": [
+        {
+          "pattern": "〜ぶって",
+          "contrast": "Khác 〜ぶった: ぶった bổ nghĩa danh từ; ぶって là thể て nối hành động ra vẻ với hành động sau."
+        },
+        {
+          "pattern": "〜ふりをする",
+          "contrast": "〜ふりをする trung tính hơn về giả vờ; 〜ぶる/ぶった thường có sắc thái chê “ra vẻ”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun/Adjective + ぶる → ぶって (te-form)",
-      "meaning": "Ý nghĩa: Dùng để nối ý với nghĩa làm ra vẻ, giả bộ là X.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc hậu tố ぶる là làm ra vẻ X; ぶって là thể て nên nối thái độ giả tạo ấy với hành động hoặc trạng thái sau. Vì là て-form, mẫu này thường giải thích cách người đó nói, ra lệnh, im lặng hoặc cư xử.",
+      "hanVietBridge": "ぶって gần “ra vẻ X rồi.../với vẻ X”. 偉そうぶって指図する là ra vẻ quan trọng rồi chỉ đạo người khác.",
+      "form": "Hình thức: N/adj stem + ぶって + hành động; hay gặp 知ったかぶって, 偉そうぶって, 大人ぶって.",
+      "meaning": "Ý nghĩa: Làm ra vẻ X rồi hành động; giả bộ X trong cách cư xử.",
+      "usage": "Sử dụng: Vế sau phải là hành động/thái độ nối tiếp. Sắc thái thường phê bình, không phải khen tự nhiên.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ぶって khác 〜ぶった. ぶって là cây cầu sang động từ sau; ぶった biến vẻ giả tạo thành tính chất của danh từ.",
+      "crossLinks": [
+        {
+          "pattern": "〜ぶった",
+          "contrast": "Khác 〜ぶって: ぶった sửa danh từ; ぶって nối sang hành động bằng thể て."
+        },
+        {
+          "pattern": "〜ふりをして",
+          "contrast": "〜ふりをして chỉ giả vờ làm như X; 〜ぶって thường chê thái độ ra vẻ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -272,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Time expression + ぶり",
-      "meaning": "Ý nghĩa: Dùng sau mốc thời gian để nói đã lâu kể từ lần cuối làm hoặc xảy ra việc gì.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc ぶり sau mốc thời gian đánh dấu khoảng trống kể từ lần trước. Trong 三年ぶり, ba năm không phải thời lượng hành động mà là khoảng cách từ lần cuối đến lần hiện tại.",
+      "hanVietBridge": "ぶり gần “sau một quãng... mới lại”. 三年ぶりに会う là sau ba năm mới gặp lại.",
+      "form": "Hình thức: khoảng thời gian + ぶりに + hành động; khoảng thời gian + ぶりの + N.",
+      "meaning": "Ý nghĩa: Lần đầu sau một khoảng thời gian; đã lâu kể từ lần trước.",
+      "usage": "Sử dụng: Mốc thời gian phải đo khoảng cách từ lần cuối: 三年ぶり, 一週間ぶり, 五年ぶり. Không dùng cho thời lượng đang làm liên tục.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ぶり khác 〜間. 三年ぶり là sau ba năm mới lại xảy ra; 三年間 là suốt ba năm.",
+      "crossLinks": [
+        {
+          "pattern": "〜間",
+          "contrast": "Khác 〜ぶり: 〜間 là suốt khoảng thời gian; 〜ぶり là khoảng cách từ lần trước đến lần này."
+        },
+        {
+          "pattern": "久しぶり",
+          "contrast": "久しぶり là cụm cố định “lâu rồi”; số thời gian + ぶり nêu khoảng cụ thể."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -306,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun / (Adjective stem) + ぶる",
-      "meaning": "Ý nghĩa: Dùng để nói giả vờ, làm ra vẻ hoặc tỏ ra mình có tính chất nào đó, thường với sắc thái chê trách.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc hậu tố ぶる biến danh từ/tính chất thành động từ “làm ra vẻ X”. Nó thường đi với nhóm từ cố định như 学者ぶる, 大人ぶる, 偉そうぶる, 知ったかぶる và mang sắc thái giả tạo.",
+      "hanVietBridge": "ぶる gần “làm bộ/ra vẻ”. 学者ぶる là làm ra vẻ học giả; 大人ぶる là làm ra vẻ người lớn.",
+      "form": "Hình thức: N/adj stem + ぶる; biến dạng thường gặp: ぶって, ぶった, ぶらない.",
+      "meaning": "Ý nghĩa: Giả vờ/tỏ ra mình là X hoặc có tính chất X, thường với sắc thái chê.",
+      "usage": "Sử dụng: Dùng cho thái độ không thật hoặc làm màu. Không gắn tự do với mọi danh từ; ưu tiên cụm quen thuộc.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ぶる khác 〜っぽい. っぽい nói có vẻ X; ぶる nói người đó cố tình tỏ ra X, thường bị người nói chê.",
+      "crossLinks": [
+        {
+          "pattern": "〜っぽい",
+          "contrast": "Khác 〜ぶる: っぽい là có vẻ; ぶる là làm ra vẻ/cố tỏ ra."
+        },
+        {
+          "pattern": "〜ふりをする",
+          "contrast": "〜ふりをする là giả vờ rộng; 〜ぶる nhấn thái độ ra vẻ và thường chê."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -340,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb (dictionary/ない form) + までだ, い-Adjective + までだ, Noun + までだ",
-      "meaning": "Ý nghĩa: Dùng để nói chỉ đến mức X mà thôi, hoặc nếu cần thì chỉ việc làm X.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc まで đánh dấu giới hạn/điểm cuối, だ chốt “chỉ đến đó”. 〜までだ có hai hướng: giới hạn đến mức A, hoặc nếu điều kiện xấu xảy ra thì chỉ còn việc A là điểm cuối hành động.",
+      "hanVietBridge": "まで là “đến mức/đến điểm”. 友達までだ là chỉ đến mức bạn bè; 一人でやるまでだ là cùng lắm thì tự làm.",
+      "form": "Hình thức: N + までだ; V辞書形 + までだ; Vないなら/だめなら + V辞書形 + までだ.",
+      "meaning": "Ý nghĩa: Chỉ đến mức A mà thôi; hoặc nếu cần thì chỉ việc A, không có gì hơn.",
+      "usage": "Sử dụng: Phân biệt giới hạn khách quan với quyết tâm dự phòng. Với V辞書形, thường dịch “cùng lắm thì/chỉ việc...”.",
+      "humanMoment": "Dr. Linh lưu ý: 〜までだ khác 〜だけだ. だけだ chỉ “chỉ”; までだ vẽ một đường giới hạn hoặc điểm cuối hành động: đến đó là hết.",
+      "crossLinks": [
+        {
+          "pattern": "〜だけだ",
+          "contrast": "Khác 〜までだ: だけだ trung tính; までだ nhấn giới hạn cuối hoặc phương án cuối cùng."
+        },
+        {
+          "pattern": "〜しかない",
+          "contrast": "〜しかない nói không còn lựa chọn khác; Vるまでだ nghe bình thản/quyết tâm hơn: chỉ việc làm V."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

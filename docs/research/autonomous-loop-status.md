@@ -2769,3 +2769,9 @@
 - Corrected `〜させられる` structure to causative-passive form and replaced non-verb `なくとも` examples under `〜ずとも` with real verb `ずとも` examples.
 - Global Directive E validator progress is now `120/1123`; next failure starts at `grammar:n1:grammar_n1_13:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 009
+- Re-authored N1 rows `〜ずにはおかない`, `〜ずにはすまない`, `〜そうにない`, `〜そうもない`, and `〜そばから`.
+- Corrected `〜そばから` structure from masu-stem to dictionary/た-form and repaired two `〜そうにない` examples for natural attachment.
+- Global Directive E validator progress is now `125/1123`; next failure starts at `grammar:n1:grammar_n1_13:008`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

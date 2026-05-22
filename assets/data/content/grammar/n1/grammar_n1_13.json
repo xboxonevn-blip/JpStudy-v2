@@ -112,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ない form (remove ない) + ずにはおかない",
-      "meaning": "Ý nghĩa: Dùng để nói điều gì chắc chắn sẽ xảy ra hoặc chắc chắn khiến ai đó làm gì.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc của 〜ずにはおかない gồm ず, phủ định cổ, に, は, và 置かない: không để yên. Nghĩa là không để sự việc trôi qua trong trạng thái không làm A.",
+      "hanVietBridge": "置 có âm Hán-Việt là trí/đặt trong an trí. おかない là không đặt yên, không để yên; ghép với ず thành không để mà không A.",
+      "form": "Hình thức: động từ gốc ない bỏ ない + ずにはおかない. Ví dụ 助けずにはおかない, 変えずにはおかない.",
+      "meaning": "Ý nghĩa: Nhất định sẽ A, chắc chắn khiến A xảy ra, không thể để yên mà không A. Sắc thái ý chí/áp lực rất mạnh.",
+      "usage": "Sử dụng: Chủ thể có thể là người quyết tâm làm A hoặc sự việc chắc chắn gây tác động: この映画は観客を泣かせずにはおかない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ずにはおかない khác 〜ずにはすまない. おかない là không để yên nên sẽ làm/gây ra; すまない là không xong nếu không làm vì trách nhiệm.",
+      "crossLinks": [
+        {
+          "pattern": "〜ずにはすまない",
+          "contrast": "Khác 〜ずにはおかない: 〜ずにはすまない nhấn trách nhiệm/đạo lý; 〜ずにはおかない nhấn ý chí hoặc lực gây tác động."
+        },
+        {
+          "pattern": "〜ずにはいられない",
+          "contrast": "〜ずにはいられない là không kìm được bản thân; 〜ずにはおかない có thể là quyết tâm hoặc một nguyên nhân chắc chắn gây kết quả."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -146,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ない form (remove ない) + ずにはすまない",
-      "meaning": "Ý nghĩa: Dùng để nói không thể kết thúc mà không làm việc đó, thường vì trách nhiệm, đạo lý hoặc hoàn cảnh bắt buộc.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc của 〜ずにはすまない là ず phủ định cổ cộng 済む/すむ: xong, ổn, qua chuyện. Không làm A thì chuyện không xong, không thể coi là ổn.",
+      "hanVietBridge": "済 có âm Hán-Việt là tế trong cứu tế, nhưng ở đây nên nhớ nghĩa Nhật: xong việc/qua chuyện. すまない là không xong được.",
+      "form": "Hình thức: động từ gốc ない bỏ ない + ずにはすまない. Ví dụ 謝らずにはすまない, 報告せずにはすまない.",
+      "meaning": "Ý nghĩa: Không thể không A vì trách nhiệm, đạo lý, quy tắc hoặc hoàn cảnh; nếu không A thì không thể kết thúc ổn thỏa.",
+      "usage": "Sử dụng: Dùng nhiều với 謝る, 弁償する, 説明する, 報告する. Nếu chỉ là thôi thúc cảm xúc, ずにはいられない hợp hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ずにはすまない khác 〜ざるを得ない. ざるを得ない là hết lựa chọn; ずにはすまない là món nợ trách nhiệm khiến chuyện chưa thể xong.",
+      "crossLinks": [
+        {
+          "pattern": "〜ざるを得ない",
+          "contrast": "Khác 〜ずにはすまない: 〜ざるを得ない nhấn không còn lựa chọn; 〜ずにはすまない nhấn trách nhiệm khiến không thể bỏ qua."
+        },
+        {
+          "pattern": "〜ずにはおかない",
+          "contrast": "〜ずにはおかない nhấn chắc chắn làm/gây ra; 〜ずにはすまない nhấn không xong nếu không làm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -180,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ますstem + そうにない",
-      "meaning": "Ý nghĩa: Dùng để nói một việc có vẻ khó xảy ra hoặc không có dấu hiệu sẽ xảy ra.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜そうにない là そう: vẻ ngoài/dấu hiệu, cộng にない để phủ định trạng thái có vẻ ấy. Người nói nhìn hiện trạng rồi kết luận khó xảy ra.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là trông không có vẻ sẽ A. Chữ vẻ giữ phần そう, chữ không giữ phần ない.",
+      "form": "Hình thức: động từ gốc ます + そうにない. Ví dụ 終わりそうにない, 降りそうにない, 間に合いそうにない.",
+      "meaning": "Ý nghĩa: Có vẻ sẽ không A, không thấy dấu hiệu A xảy ra. Đây là dự đoán từ tình hình trước mắt, không phải phủ định ý chí.",
+      "usage": "Sử dụng: Hợp với nhận xét dựa trên dấu hiệu hiện tại: 雲が厚くて晴れそうにない. Nếu muốn phủ định khả năng mạnh hơn, そうもない có lực nặng hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜そうにない khác 〜そうもない. そうにない là nhìn có vẻ không; そうもない thêm も làm cảm giác gần như không có cửa xảy ra.",
+      "crossLinks": [
+        {
+          "pattern": "〜そうもない",
+          "contrast": "Khác 〜そうにない: 〜そうもない phủ định khả năng mạnh hơn, còn 〜そうにない chỉ nói không có vẻ sẽ xảy ra."
+        },
+        {
+          "pattern": "〜そうではない",
+          "contrast": "〜そうではない phủ định vẻ ngoài/tính chất rộng hơn; 〜そうにない chuyên nói việc có vẻ không xảy ra."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -214,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ますstem + そうもない",
-      "meaning": "Ý nghĩa: Dùng để nói dường như không thể hoặc không có khả năng làm được việc gì.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜そうもない là そう: dấu hiệu/có vẻ, thêm も để nhấn ngay cả dấu hiệu ấy cũng không có. Vì vậy sắc thái mạnh hơn そうにない.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là đến cả vẻ sẽ A cũng không có. Chữ cả giúp nhớ lực nhấn của も.",
+      "form": "Hình thức: động từ gốc ます + そうもない. Ví dụ 終わりそうもない, 助かりそうもない, 解決しそうもない.",
+      "meaning": "Ý nghĩa: Hầu như không có khả năng A, trông không đời nào A xảy ra. Sắc thái bi quan/mạnh hơn そうにない.",
+      "usage": "Sử dụng: Dùng khi dấu hiệu hiện tại rất xấu hoặc khả năng thấp: この量は今日中に終わりそうもない. Tránh dùng nếu chỉ dự đoán nhẹ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜そうもない khác 〜そうにない ở hạt も. も làm câu như nói đến cả dấu hiệu nhỏ nhất cũng không thấy.",
+      "crossLinks": [
+        {
+          "pattern": "〜そうにない",
+          "contrast": "Khác 〜そうもない: 〜そうにない nhẹ hơn; 〜そうもない nhấn khả năng gần như không có."
+        },
+        {
+          "pattern": "〜見込みがない",
+          "contrast": "〜見込みがない là đánh giá triển vọng trực tiếp; 〜そうもない vẫn dựa vào vẻ/dấu hiệu nhìn thấy."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -231,9 +279,9 @@
     "lessonId": 13,
     "title": "Verb そばから",
     "titleEn": "Expresses that as soon as one action finishes, another begins immediately",
-    "structure": "Verb-ますstem + そばから",
-    "structureEn": "Verb-ますstem + そばから",
-    "explanation": "Dùng để nói ngay sau khi làm xong một việc thì việc khác xảy ra, thường là việc làm mất tác dụng của hành động trước. Hay mang sắc thái bực bội. Cấu trúc: Verb-ますstem + そばから.",
+    "structure": "Verb-dictionary / Verb-た form + そばから",
+    "structureEn": "Verb-dictionary / Verb-た form + そばから",
+    "explanation": "Dùng để nói ngay sau khi làm xong một việc thì việc khác xảy ra, thường là việc làm mất tác dụng của hành động trước. Hay mang sắc thái bực bội. Cấu trúc: Verb-dictionary / Verb-た form + そばから.",
     "explanationEn": "The 〜そばから grammar point is used to indicate that right after a certain action is completed, another action takes place—often suggesting a repetitive or frustrating cycle",
     "level": "N1",
     "tags": [
@@ -248,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ますstem + そばから",
-      "meaning": "Ý nghĩa: Dùng để nói ngay sau khi làm xong một việc thì việc khác xảy ra, thường là việc làm mất tác dụng của hành động trước.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜そばから là 側/そば: ngay bên cạnh. Từ ý gần sát về không gian, mẫu chuyển thành ngay sát sau hành động A thì B xảy ra.",
+      "hanVietBridge": "側 có thể nhớ là trắc/bên cạnh. そばから đặt B ngay bên cạnh A trên dòng thời gian: A vừa xong, B đã áp sát tới.",
+      "form": "Hình thức: động từ thể từ điển hoặc thể た + そばから + việc xảy ra ngay sau đó. Ví dụ 覚えるそばから忘れる.",
+      "meaning": "Ý nghĩa: Vừa A xong là B xảy ra ngay, thường B làm mất tác dụng của A hoặc tạo vòng lặp gây bực.",
+      "usage": "Sử dụng: Vế sau thường là chuyện lặp lại ngoài ý muốn: 片付けるそばから散らかす. Nếu chỉ ngay sau một lần trung tính, するとすぐに đủ hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜そばから khác 〜たとたん. そばから thường có vòng lặp và cảm giác bực; たとたん chỉ nhấn khoảnh khắc ngay sau.",
+      "crossLinks": [
+        {
+          "pattern": "〜たとたん",
+          "contrast": "Khác 〜そばから: 〜たとたん nhấn ngay sau một lần; 〜そばから thường nhấn lặp lại hoặc B phá tác dụng của A."
+        },
+        {
+          "pattern": "〜次第",
+          "contrast": "〜次第 dùng cho ngay khi A xong thì chủ động làm B; 〜そばから hay là B tự xảy ra ngoài ý muốn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

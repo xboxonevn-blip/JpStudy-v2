@@ -3231,3 +3231,10 @@
 - Repaired `だけあって` and `だけましだ` examples for natural attachment and lesser-bad context.
 - Global Directive E validator progress is now `505/1123`; next failure starts at `grammar:n2:grammar_n2_10:004`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-23 Urgent fix #25 Phase E example quality
+- Rejected vocab example-sentence template fillers globally, including `を使う文を`, `文を一つ作り`, `を使った文`, `Trong giờ học, tôi dùng`, `với nghĩa`, and article-placeholder frames like `記事では...具体例`.
+- Rebuilt `examples_corpus.json` with source policy `wire_real_context_examples`: Tatoeba CC-BY 2.0 first, owner-local textbook cache when present, JpStudy-authored contextual fallback last.
+- Rewired all vocab `example_sentences[]`; resulting corpus source mix is `19364 total / 5786 Tatoeba / 13578 authored`.
+- Live local verify: Minna N5 Bài 1 flashcard `私`, context mode, flipped card showed `私の番？ / Đến lượt tôi chưa?`, not template filler.
+- Gates passed: validator unit tests, `node tool/qa/validate_example_quality.js`, migration validate-only, research wrapper validate-only, hard banned-phrase scan, Flutter content DB/lesson repository tests, targeted analyze, `flutter build web`, and `git diff --check`.

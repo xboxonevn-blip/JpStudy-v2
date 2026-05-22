@@ -14,6 +14,7 @@ const BANNED_JA_PATTERNS = [
   /を使う文を/,
   /文を一つ作り/,
   /を使った文/,
+  /記事では[^。"\n]+が具体例として取り上げられました。?/,
   /今日の練習に入れます/,
   /この場面では「[^」]+」と言えます/,
   /授業で「[^」]+」/,
@@ -36,6 +37,7 @@ const BANNED_VI_PATTERNS = [
   /Trong giờ học,\s*tôi dùng/i,
   /với nghĩa/i,
   /trong một câu ngắn/i,
+  /Bài viết đã nêu .+ như một ví dụ cụ thể\.?/i,
 ];
 
 const CONTENT_SCAN_PATTERNS = [
@@ -124,6 +126,9 @@ function validateExample(example, options = {}) {
       normalized.ja.includes(`${term}は日本語を勉強しています`)
     ) {
       errors.push('non-pronoun authored study frame');
+    }
+    if (/residual context/i.test(normalized.source_detail)) {
+      errors.push('residual authored context');
     }
   }
 

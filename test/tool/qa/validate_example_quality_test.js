@@ -1,8 +1,12 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
 const test = require('node:test');
 
 const {
   validateExample,
+  validateAllContentTemplates,
   validateCorpus,
 } = require('../../../tool/qa/validate_example_quality');
 
@@ -165,6 +169,59 @@ test('rejects broad authored fallback frames that survive word swaps', () => {
 
   assert.equal(results.every((result) => !result.ok), true);
   assert.match(results.flatMap((result) => result.errors).join('\n'), /template|fallback/i);
+});
+
+test('rejects article-specific example placeholder frames', () => {
+  const result = validateExample(
+    {
+      example_id: 'ex-haj_n1_ch01_v010-001',
+      ja: '記事では組み合わせが具体例として取り上げられました。',
+      vi: 'Bài viết đã nêu sự kết hợp như một ví dụ cụ thể.',
+      audio_url: '',
+      source: 'jpstudy-authored-contextual',
+      source_detail: 'JpStudy-authored residual context for 組み合わせ',
+      license: 'JpStudy authored',
+    },
+    {
+      entry: {
+        entryId: 'haj_n1_ch01_010',
+        lemma: { vocabId: 'haj_n1_ch01_v010', term: '組み合わせ', reading: 'くみあわせ' },
+        sense: { meaningVi: 'sự kết hợp', meaningEn: 'combination' },
+      },
+    },
+  );
+
+  assert.equal(result.ok, false);
+  assert.match(result.errors.join('\n'), /template|residual|banned/i);
+});
+
+test('content scan catches placeholder frames inside json files', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'jpstudy-example-scan-'));
+  try {
+    fs.writeFileSync(
+      path.join(tmp, 'lesson.json'),
+      JSON.stringify({
+        entries: [
+          {
+            example_sentences: [
+              {
+                ja: '記事では組み合わせが具体例として取り上げられました。',
+                vi: 'Bài viết đã nêu sự kết hợp như một ví dụ cụ thể.',
+              },
+            ],
+          },
+        ],
+      }),
+      'utf8',
+    );
+
+    const result = validateAllContentTemplates(tmp);
+
+    assert.equal(result.ok, false);
+    assert.equal(result.failures.length, 1);
+  } finally {
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
 });
 
 test('validateCorpus reports exact failing vocab ids', () => {

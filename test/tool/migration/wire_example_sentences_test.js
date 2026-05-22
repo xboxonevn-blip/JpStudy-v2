@@ -247,6 +247,29 @@ test('buildExampleCorpus authors specific fallback contexts for uncovered N1 ite
   assert.equal(corpus.items.haj_n1_ch01_v022[0].ja, '空港で外貨を両替しました。');
 });
 
+test('buildExampleCorpus does not author residual article placeholder contexts', () => {
+  const corpus = buildExampleCorpus([
+    {
+      filePath: 'assets/data/content/vocab/n1/hajimete/hajimete_ch01.json',
+      payload: {
+        entries: [
+          {
+            entryId: 'haj_n1_ch01_010',
+            lemma: { vocabId: 'haj_n1_ch01_v010', term: '組み合わせ', reading: 'くみあわせ' },
+            sense: { meaningVi: 'sự kết hợp', meaningEn: 'combination' },
+          },
+        ],
+      },
+    },
+  ]);
+
+  const row = corpus.items.haj_n1_ch01_v010[0];
+  assert.match(row.ja, /組み合わせ/);
+  assert.doesNotMatch(row.ja, /記事では|具体例/);
+  assert.doesNotMatch(row.vi, /như một ví dụ cụ thể/);
+  assert.doesNotMatch(row.source_detail, /residual/);
+});
+
 test('buildExampleCorpus authors true interjection context for single kana あ', () => {
   const corpus = buildExampleCorpus([
     {

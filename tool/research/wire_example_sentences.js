@@ -1,5 +1,7 @@
-const { main } = require('../migration/wire_example_sentences');
+const migration = require('../migration/wire_example_sentences');
 
 if (require.main === module) {
-  process.exitCode = main();
+  process.exitCode = migration.main();
 }
+
+module.exports = migration;

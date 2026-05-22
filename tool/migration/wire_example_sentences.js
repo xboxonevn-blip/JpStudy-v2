@@ -335,11 +335,7 @@ function authoredContextualExample(entry) {
   }
   const morphology = morphologyContext(term, meaningVi);
   if (morphology) return morphology;
-  return {
-    ja: `記事では${term}が具体例として取り上げられました。`,
-    vi: `Bài viết đã nêu ${primaryGloss(meaningVi)} như một ví dụ cụ thể.`,
-    sourceDetail: `JpStudy-authored residual context for ${term}`,
-  };
+  return contextualLastResort(term, { meaningVi, meaningEn, haystack });
 }
 
 function semanticContext(term, { meaningVi, meaningEn, haystack }) {
@@ -361,6 +357,107 @@ function semanticContext(term, { meaningVi, meaningEn, haystack }) {
       ja: exact[term][0],
       vi: exact[term][1],
       sourceDetail: `JpStudy-authored term-specific context for ${term}`,
+    };
+  }
+
+  if (contextHas(haystack, {
+    words: ['combination', 'mix', 'pairing'],
+    phrases: ['kết hợp', 'phối hợp'],
+  })) {
+    return {
+      ja: `色の${term}を変えると、部屋の印象が明るくなりました。`,
+      vi: `Khi đổi ${vi} màu sắc, ấn tượng của căn phòng trở nên sáng hơn.`,
+      sourceDetail: `JpStudy-authored combination context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['assistant', 'help', 'rescue'],
+    phrases: ['giúp đỡ', 'cứu', 'trợ lý'],
+  })) {
+    return {
+      ja: `避難所で多くの人が${term}を求めていました。`,
+      vi: `Ở nơi sơ tán, nhiều người đang cần ${vi}.`,
+      sourceDetail: `JpStudy-authored help/rescue context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['fitness', 'suitability', 'appropriate'],
+    phrases: ['phù hợp', 'thích hợp'],
+  })) {
+    return {
+      ja: `この仕事には経験に${term}した判断が必要です。`,
+      vi: `Công việc này cần phán đoán ${vi} với kinh nghiệm.`,
+      sourceDetail: `JpStudy-authored suitability context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['viewpoint', 'point of view', 'perspective', 'standpoint'],
+    phrases: ['quan điểm', 'góc nhìn', 'lập trường'],
+  })) {
+    return {
+      ja: `別の${term}から問題を見直しました。`,
+      vi: `Tôi xem lại vấn đề từ một ${vi} khác.`,
+      sourceDetail: `JpStudy-authored viewpoint context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['concept', 'notion', 'idea', 'principle'],
+    phrases: ['khái niệm', 'ý tưởng', 'nguyên tắc'],
+  })) {
+    return {
+      ja: `授業で新しい${term}を図にして整理しました。`,
+      vi: `Trong lớp, tôi hệ thống hóa ${vi} mới thành sơ đồ.`,
+      sourceDetail: `JpStudy-authored concept context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['contrast', 'comparison', 'analogy', 'relation', 'relationship'],
+    phrases: ['so sánh', 'tương phản', 'quan hệ', 'liên hệ'],
+  })) {
+    return {
+      ja: `二つの資料の${term}を表にまとめました。`,
+      vi: `Tôi tóm tắt ${vi} của hai tài liệu thành bảng.`,
+      sourceDetail: `JpStudy-authored relation/contrast context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['arrangement', 'plan', 'programme', 'preparation', 'schedule'],
+    phrases: ['sắp xếp', 'kế hoạch', 'chương trình', 'chuẩn bị'],
+  })) {
+    return {
+      ja: `出発前に旅行の${term}を確認しました。`,
+      vi: `Trước khi xuất phát, tôi xác nhận ${vi} của chuyến đi.`,
+      sourceDetail: `JpStudy-authored arrangement context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['management', 'administration', 'operation', 'control'],
+    phrases: ['quản lý', 'vận hành', 'điều hành', 'kiểm soát'],
+  })) {
+    return {
+      ja: `新しい担当者が店の${term}を任されました。`,
+      vi: `Người phụ trách mới được giao ${vi} cửa hàng.`,
+      sourceDetail: `JpStudy-authored management context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['recognition', 'perception', 'awareness', 'understanding'],
+    phrases: ['nhận biết', 'nhận thức', 'công nhận', 'hiểu biết'],
+  })) {
+    return {
+      ja: `調査のあとで危険への${term}が高まりました。`,
+      vi: `Sau cuộc khảo sát, ${vi} về nguy cơ đã tăng lên.`,
+      sourceDetail: `JpStudy-authored awareness context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['duplication', 'repetition', 'overlap', 'redundancy'],
+    phrases: ['trùng lặp', 'lặp lại', 'dư thừa'],
+  })) {
+    return {
+      ja: `名簿に名前の${term}がないか確認しました。`,
+      vi: `Tôi kiểm tra xem danh sách có ${vi} tên hay không.`,
+      sourceDetail: `JpStudy-authored duplication context for ${term}`,
     };
   }
 
@@ -552,6 +649,85 @@ function morphologyContext(term, meaningVi) {
     }
   }
   return null;
+}
+
+function contextualLastResort(term, { meaningVi, meaningEn, haystack }) {
+  const vi = primaryGloss(meaningVi);
+  if (contextHas(haystack, {
+    words: ['flag', 'symbol', 'mark', 'title', 'name', 'sign'],
+    phrases: ['cờ', 'biểu tượng', 'tiêu đề', 'tên', 'dấu hiệu'],
+  })) {
+    return {
+      ja: `入口の案内板に${term}が大きく書かれていました。`,
+      vi: `Trên bảng hướng dẫn ở lối vào có viết lớn ${vi}.`,
+      sourceDetail: `JpStudy-authored sign/name context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['cane', 'blade', 'edge', 'pot', 'bottle', 'cage', 'tool', 'object'],
+    phrases: ['gậy', 'lưỡi', 'nồi', 'chai', 'lồng', 'dụng cụ', 'vật'],
+  })) {
+    return {
+      ja: `物置から古い${term}を取り出しました。`,
+      vi: `Tôi lấy ${vi} cũ từ nhà kho ra.`,
+      sourceDetail: `JpStudy-authored tangible-object context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['shock', 'sympathy', 'flattery', 'compliment', 'selfishness', 'emotion'],
+    phrases: ['cú sốc', 'cảm thông', 'tâng bốc', 'khen', 'ích kỷ', 'cảm xúc'],
+  })) {
+    return {
+      ja: `その一言に強い${term}を覚えました。`,
+      vi: `Tôi cảm thấy ${vi} mạnh trước câu nói đó.`,
+      sourceDetail: `JpStudy-authored reaction context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['very', 'completely', 'firmly', 'tightly', 'awfully', 'exceedingly'],
+    phrases: ['rất', 'hoàn toàn', 'chắc chắn', 'chặt chẽ', 'quá mức'],
+  })) {
+    return {
+      ja: `雨の日は足元を${term}確かめて歩きます。`,
+      vi: `Ngày mưa, tôi kiểm tra bước chân ${vi} rồi đi.`,
+      sourceDetail: `JpStudy-authored adverbial-manner context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['ordinal', 'same', 'at', 'in', 'on', 'moreover', 'nevertheless'],
+    phrases: ['thứ tự', 'giống nhau', 'tại', 'trong', 'hơn nữa', 'tuy nhiên'],
+  })) {
+    return {
+      ja: `契約書では${term}の形で前の内容を受けています。`,
+      vi: `Trong hợp đồng, ${vi} nối lại nội dung phía trước.`,
+      sourceDetail: `JpStudy-authored function-word context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['room', 'space', 'residence', 'house', 'location'],
+    phrases: ['phòng', 'không gian', 'cư trú', 'nhà', 'nơi'],
+  })) {
+    return {
+      ja: `家族は静かな${term}で夕食を食べました。`,
+      vi: `Gia đình ăn tối trong ${vi} yên tĩnh.`,
+      sourceDetail: `JpStudy-authored room/space context for ${term}`,
+    };
+  }
+  if (contextHas(haystack, {
+    words: ['number', 'odd', 'three', 'cycle', 'period', 'rate'],
+    phrases: ['số', 'ba', 'chu kỳ', 'tỷ lệ'],
+  })) {
+    return {
+      ja: `表の${term}を見て、数値の変化を確認しました。`,
+      vi: `Tôi nhìn ${vi} trong bảng và kiểm tra sự thay đổi số liệu.`,
+      sourceDetail: `JpStudy-authored numeric/table context for ${term}`,
+    };
+  }
+  return {
+    ja: `現場で聞いた${term}の背景を、担当者にもう一度確認しました。`,
+    vi: `Tôi hỏi lại người phụ trách về bối cảnh của ${vi} nghe được tại hiện trường.`,
+    sourceDetail: `JpStudy-authored contextual last-resort for ${term}`,
+  };
 }
 
 function contextHas(haystack, { words = [], phrases = [] } = {}) {

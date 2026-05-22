@@ -296,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を皮切りに / を皮切りにして",
-      "meaning": "Ý nghĩa: Dùng để nêu sự kiện đầu tiên mở ra một chuỗi sự kiện tiếp theo.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc của 〜を皮切りに nằm ở 皮切り: nhát cắt đầu tiên vào da, rồi mở rộng thành bước mở màn cho một chuỗi. を đánh dấu sự kiện đầu tiên, に biến nó thành điểm xuất phát.",
+      "hanVietBridge": "皮 = bì/da, 切 = thiết/cắt. Hình ảnh Hán-Việt là nhát cắt mở đầu: một sự kiện đầu tiên rạch đường để loạt sự kiện sau nối tiếp.",
+      "form": "Hình thức: danh từ sự kiện/mốc đầu tiên + を皮切りに / を皮切りにして + chuỗi hành động/sự kiện tiếp theo.",
+      "meaning": "Ý nghĩa: Bắt đầu bằng A, mở màn bằng A, rồi nhiều việc tương tự hoặc liên quan tiếp tục xảy ra sau đó.",
+      "usage": "Sử dụng: Vế sau nên có cảm giác chuỗi: 全国で開催される, 次々に発表された, 多くの支店を開いた. Nếu chỉ đổi trạng thái một lần, を機にして hoặc を境にして thường tự nhiên hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を皮切りに khác 〜を機にして. 皮切り phải nghe được tiếng domino đầu tiên của một chuỗi; 機 chỉ là dịp/cơ hội để bắt đầu một thay đổi.",
+      "crossLinks": [
+        {
+          "pattern": "〜を機にして",
+          "contrast": "Khác 〜を皮切りに: 〜を機にして nhấn dịp bắt đầu; 〜を皮切りに cần một chuỗi sự kiện sau mốc đầu."
+        },
+        {
+          "pattern": "〜を始めとして",
+          "contrast": "〜を始めとして liệt kê đại diện đầu tiên trong nhóm; 〜を皮切りに nhấn sự kiện đầu tiên mở màn theo thời gian."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -330,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を皮切りに (して)",
-      "meaning": "Ý nghĩa: Dùng để nói Noun là điểm mở đầu cho nhiều hành động hoặc sự kiện diễn ra sau đó.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜を皮切りにして vẫn là 皮切り, nhát cắt đầu tiên. Dạng にして làm rõ thao tác lấy A làm điểm mở màn để các sự kiện cùng dòng bắt đầu lan ra.",
+      "hanVietBridge": "皮 là bì/da, 切 là thiết/cắt. Nhớ 皮切りにして như nhát cắt đầu tiên trên bề mặt: sau nó, đường rạch tiếp tục mở rộng.",
+      "form": "Hình thức: danh từ sự kiện/mốc + を皮切りにして + chuỗi sự kiện tiếp nối. Danh từ thường là 東京公演, 発表, 開店, 受賞, 事件.",
+      "meaning": "Ý nghĩa: Lấy A làm điểm mở đầu cho một loạt hoạt động hoặc diễn biến cùng loại. Văn viết, báo chí, thông cáo rất hay dùng.",
+      "usage": "Sử dụng: Dùng khi vế sau có nhiều điểm nối tiếp: 東京を皮切りにして全国で公演する. Không dùng cho một thói quen đơn lẻ nếu không có chuỗi theo sau.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を皮切りにして không chỉ là từ ngày đó. Nó đòi hỏi mốc A là phát súng mở màn, sau đó có loạt việc cùng hướng chạy tiếp.",
+      "crossLinks": [
+        {
+          "pattern": "〜を皮切りに",
+          "contrast": "Cùng nghĩa với 〜を皮切りにして; dạng して nối câu rõ hơn, còn dạng ngắn thường gọn và báo chí hơn."
+        },
+        {
+          "pattern": "〜を境にして",
+          "contrast": "〜を境にして nhấn ranh giới trước/sau; 〜を皮切りにして nhấn sự kiện đầu tiên mở chuỗi sau đó."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -364,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を禁じ得ない",
-      "meaning": "Ý nghĩa: Dùng để nói không thể kìm nén một cảm xúc hoặc phản ứng trước Noun.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜を禁じ得ない là 禁じる: cấm, kìm lại, ngăn lại; 得ない là không thể làm được. Ghép lại thành không thể tự cấm/kìm cảm xúc A trong lòng.",
+      "hanVietBridge": "禁 = cấm, 得 = đắc/được. 禁じ得ない có thể nhớ là không đắc lực để cấm cảm xúc ấy lại: 驚き, 怒り, 同情, 涙.",
+      "form": "Hình thức: danh từ cảm xúc/phản ứng + を禁じ得ない. Thường gặp 驚き, 怒り, 同情, 涙, 笑い, 感動.",
+      "meaning": "Ý nghĩa: Không thể kìm nén A, không khỏi A. Sắc thái trang trọng, thường viết về cảm xúc mạnh trước sự kiện đáng chú ý.",
+      "usage": "Sử dụng: Đặt danh từ cảm xúc trước を: 彼の行動には怒りを禁じ得ない. Không dùng mẫu này cho hành động tùy ý như 勉強を禁じ得ない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を禁じ得ない khác 〜ずにはいられない. 禁じ得ない là cảm xúc bị dâng lên trong văn viết; ずにはいられない là thôi thúc phải hành động.",
+      "crossLinks": [
+        {
+          "pattern": "〜ずにはいられない",
+          "contrast": "Khác 〜を禁じ得ない: 〜ずにはいられない đi với động từ và nói không thể không làm; を禁じ得ない đi với danh từ cảm xúc."
+        },
+        {
+          "pattern": "〜てたまらない",
+          "contrast": "〜てたまらない nói cảm giác mạnh trong lời nói thường ngày hơn; 〜を禁じ得ない trang trọng và viết nhiều hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を経て",
-      "meaning": "Ý nghĩa: Dùng để nói đi qua một giai đoạn, quá trình, nơi chốn hoặc bước trung gian trước khi đến kết quả hiện tại.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜を経て là 経る: đi qua, trải qua, kinh qua một tuyến hoặc giai đoạn. を đánh dấu con đường/quá trình trung gian trước khi tới kết quả.",
+      "hanVietBridge": "経 có âm Hán-Việt là kinh trong kinh qua, kinh nghiệm, kinh tuyến. Nhớ を経て như đã đi qua một đường kinh/trạm trung gian rồi mới đến hiện tại.",
+      "form": "Hình thức: danh từ nơi chốn/giai đoạn/quá trình + を経て + kết quả phía sau. Danh từ thường là 期間, 過程, 手続き, 訓練, ニューヨーク.",
+      "meaning": "Ý nghĩa: Thông qua A, trải qua A, đi qua A rồi đạt tới trạng thái/kết quả sau đó.",
+      "usage": "Sử dụng: Vế sau thường là kết quả sau hành trình: 長い議論を経て決定した. Nếu nhấn phương tiện giao tiếp rộng, を通じて có thể hợp hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を経て khác 〜を通して. 経て có cảm giác đi qua từng chặng để tới kết quả; 通して nhấn kênh, phương tiện hoặc suốt phạm vi.",
+      "crossLinks": [
+        {
+          "pattern": "〜を通して",
+          "contrast": "Khác 〜を経て: 〜を通して nhấn kênh/phương tiện hoặc xuyên suốt; を経て nhấn chặng trung gian trước kết quả."
+        },
+        {
+          "pattern": "〜を踏まえて",
+          "contrast": "〜を踏まえて lấy dữ kiện làm căn cứ quyết định; 〜を経て nói đã trải qua quá trình hoặc tuyến đường."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を踏まえて",
-      "meaning": "Ý nghĩa: Dùng khi đưa ra quyết định, nhận xét hoặc hành động dựa trên Noun đã được xem xét.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜を踏まえて đến từ 踏まえる: đặt chân lên, đứng trên một nền rồi xét. Nghĩa trừu tượng là lấy dữ kiện A làm nền để quyết định hoặc nhận định.",
+      "hanVietBridge": "踏 có nghĩa là đạp/giẫm. Hình ảnh dễ nhớ: trước khi kết luận, người nói đặt chân lên dữ kiện A để đứng vững rồi mới bước tiếp.",
+      "form": "Hình thức: danh từ dữ kiện/tình hình/ý kiến/kết quả + を踏まえて + quyết định/nhận xét/hành động.",
+      "meaning": "Ý nghĩa: Dựa trên A sau khi đã xem xét A, xét đến A, tính đến A. Sắc thái thận trọng, hợp báo cáo, họp, chính sách.",
+      "usage": "Sử dụng: Dùng với dữ liệu có trọng lượng: 調査結果を踏まえて方針を決める. Không phải tiền đề giả định; A thường là điều đã biết hoặc đã quan sát.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を踏まえて khác 〜を前提として. 踏まえて đứng trên dữ kiện đã xét; 前提として đặt một giả định nền có thể đúng hoặc chưa chắc đúng.",
+      "crossLinks": [
+        {
+          "pattern": "〜に基づいて",
+          "contrast": "Khác 〜を踏まえて: 〜に基づいて nhấn căn cứ chính thức; 〜を踏まえて thêm cảm giác đã xem xét nhiều mặt trước khi hành động."
+        },
+        {
+          "pattern": "〜を前提として",
+          "contrast": "Khác 〜を踏まえて: 〜を前提として là giả định/tiền đề; 〜を踏まえて là dựa trên dữ kiện hoặc tình hình đã được cân nhắc."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

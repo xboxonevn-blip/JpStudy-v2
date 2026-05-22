@@ -2751,3 +2751,9 @@
 - Tightened contrast guidance around forced-result noun frames, tiền đề, ranh giới, and cơ hội so these are no longer generic `て`/condition advice.
 - Global Directive E validator progress is now `105/1123`; next failure starts at `grammar:n1:grammar_n1_11:007`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 006
+- Re-authored N1 rows `〜を皮切りに / を皮切りにして`, `〜を皮切りにして`, `〜を禁じ得ない`, `〜を経て`, and `〜を踏まえて`.
+- Fixed connected `〜を皮切りにして` example debt so examples show a real sequence opener, not a single habit-start frame.
+- Global Directive E validator progress is now `110/1123`; next failure starts at `grammar:n1:grammar_n1_12:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

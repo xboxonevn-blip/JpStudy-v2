@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + 前提で",
       "meaning": "Ý nghĩa: Dùng để nêu điều kiện hoặc giả định cần có trước khi thực hiện việc phía sau",
-      "usage": "Cách dùng: Với Noun + 前提で, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun + 前提で, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + 前提で thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun + 前提で không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun/cụm trước là điều đã được coi là nền để lập kế hoạch, nhận việc, ký kết hoặc đánh giá. Nếu tiền đề sai, vế sau cần xét lại.",
+      "etymology": "Gốc cấu trúc: 前 là trước, 提 là nêu/đưa ra; 前提 là điều được đặt ra trước. で biến tiền đề ấy thành điều kiện nền cho hành động phía sau.",
+      "hanVietBridge": "前提 là tiền đề. 成功する前提で進める = tiến hành với tiền đề rằng sẽ thành công.",
+      "humanMoment": "Lưu ý từ Dr. Linh: 前提で không chỉ là “nếu”. Nó nói người nói đang đặt một viên gạch nền trước khi xây kế hoạch.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Noun + 前提で cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ものとして",
+          "contrast": "Gần nghĩa giả định, nhưng ものとして xem A như tiền đề xử lý; 前提で nhấn điều kiện nền đã đặt trước."
+        },
+        {
+          "pattern": "〜と仮定して",
+          "contrast": "と仮定して nói giả định rõ; 前提で thường dùng trong kế hoạch/quy định như điều kiện phải có."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + とあって / (Sometimes Verb + とあって, depending on context)",
       "meaning": "Ý nghĩa: Dùng để nêu một hoàn cảnh đặc biệt làm nguyên nhân cho tình trạng phía sau",
-      "usage": "Cách dùng: Với ～とあって, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とあって, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + とあって / (Sometimes Verb + とあって, depending on context) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とあって không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước là hoàn cảnh đáng chú ý như ngày khai trương, trước kỳ thi, kỳ nghỉ; vế sau là phản ứng tự nhiên vì hoàn cảnh ấy.",
+      "etymology": "Gốc cấu trúc: と trích hoàn cảnh, あって là “có/tồn tại” hoàn cảnh ấy. 〜とあって nghĩa là vì đang có tình huống đặc biệt A nên B xảy ra.",
+      "hanVietBridge": "ある là có. 開店日とあって = vì có hoàn cảnh là ngày khai trương.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とあって cần một bối cảnh nổi bật. Nó hợp giọng tường thuật: vì là ngày đặc biệt nên đám đông/hành động phía sau mới dễ hiểu.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～とあって cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ので",
+          "contrast": "Khác とあって: ので chỉ nguyên nhân chung; とあって nêu hoàn cảnh đặc biệt, thường trong tin tức/mô tả sự kiện."
+        },
+        {
+          "pattern": "〜とあれば",
+          "contrast": "とあれば là nếu/đã là hoàn cảnh A thì sẽ hành động; とあって là vì thực tế có A nên B xảy ra."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + ならでは",
       "meaning": "Ý nghĩa: Dùng để nói một đặc điểm, giá trị hoặc khả năng chỉ có ở Noun",
-      "usage": "Cách dùng: Với Noun + ならでは, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun + ならでは, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + ならでは thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun + ならでは không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đi trước の/もの/味/魅力/技術 để khen hoặc nêu giá trị độc đáo chỉ thuộc về Noun.",
+      "etymology": "Gốc cấu trúc: なら đặt điều kiện “nếu là N”, では giữ phạm vi ấy; toàn cụm phát triển thành ý “chỉ trong trường hợp N mới có”. Noun ならでは đánh dấu tính độc quyền/đúng chất.",
+      "hanVietBridge": "Cầu nối tiếng Việt: “chỉ N mới có”, “đúng chất N”. 日本ならではの風景 = cảnh sắc rất riêng của Nhật.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ならでは là lời khen về bản sắc. Nếu chỉ nói “có ở N”, chưa đủ; phải có cảm giác N tạo ra giá trị riêng.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Noun + ならでは cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜しかない",
+          "contrast": "しかない chỉ không có lựa chọn khác; ならでは nhấn giá trị/đặc điểm độc đáo chỉ N mới có."
+        },
+        {
+          "pattern": "〜特有の",
+          "contrast": "特有の trung tính là đặc hữu; ならでは thường mang sắc thái đánh giá tích cực/đúng chất."
         }
       ],
       "fallbackReference": {

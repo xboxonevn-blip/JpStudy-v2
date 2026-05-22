@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + ではすまない / い-Adjective + ではすまない / な-Adjective + ではすまない / Noun + ではすまない",
       "meaning": "Ý nghĩa: Dùng để nói chỉ X thôi thì không đủ để giải quyết, kết thúc hoặc bù đắp vấn đề",
-      "usage": "Cách dùng: Với ～ではすまない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ではすまない, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + ではすまない / い-Adjective + ではすまない / な-Adjective + ではすまない / Noun + ではすまない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ではすまない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước là hành động/biện pháp/trạng thái chưa đủ để khép lại vấn đề. Vế sau thường nêu cần hành động thêm, trách nhiệm, đền bù hoặc hậu quả.",
+      "etymology": "Gốc cấu trúc: 済む là xong/ổn thỏa, 済まない là không xong. では đặt X làm điều kiện; 〜ではすまない nghĩa là “với chỉ X thì chuyện không thể kết thúc”.",
+      "hanVietBridge": "済む = xong/ổn. 謝るだけではすまない = chỉ xin lỗi thì không xong.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ではすまない là câu kéo hậu quả trở lại. Người nói đang bảo: chuyện này chưa khép lại bằng X đâu.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "～ではすまない cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜だけではすまない",
+          "contrast": "Gần nghĩa; だけではすまない nêu rõ “chỉ X”, còn ではすまない có thể dùng rộng hơn với X làm điều kiện chưa đủ."
+        },
+        {
+          "pattern": "〜では足りない",
+          "contrast": "では足りない nói thiếu lượng/điều kiện; ではすまない nhấn vấn đề không được giải quyết hoặc hậu quả chưa xong."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun1 + ならいざ知らず + Noun2 (comment)",
       "meaning": "Ý nghĩa: Dùng để nói “nếu là Noun thì còn hiểu được, nhưng trường hợp này thì không”",
-      "usage": "Cách dùng: Với Noun ならいざ知らず, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun ならいざ知らず, lõi Noun ならいざ知らず là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 + ならいざ知らず + Noun2 (comment) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun ならいざ知らず không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun1 là trường hợp còn chấp nhận/hiểu được; Noun2 là trường hợp người nói bác bỏ, phê bình hoặc thấy quá mức.",
+      "etymology": "Gốc cấu trúc: なら đặt giả định, いざ知らず là lối nói cổ “thì chưa bàn/không biết sao”, rồi vế sau đưa trường hợp thật sự bị bác. Noun ならいざ知らず dựng bậc so sánh chấp nhận-không chấp nhận.",
+      "hanVietBridge": "知らず = không biết/chưa bàn. Aならいざ知らずB = A thì còn chưa nói, chứ B thì không.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ならいざ知らず luôn có hai nấc. Nấc đầu còn thông cảm được; nấc sau là nơi người nói lắc đầu.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun ならいざ知らず cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ならともかく",
+          "contrast": "Gần nghĩa, nhưng ならいざ知らず trang trọng/cứng hơn và thường phê bình trường hợp sau mạnh hơn."
+        },
+        {
+          "pattern": "〜はともかく",
+          "contrast": "はともかく chỉ tạm gác A; ならいざ知らず so A chấp nhận được với B không chấp nhận được."
         }
       ],
       "fallbackReference": {

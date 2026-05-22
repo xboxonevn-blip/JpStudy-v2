@@ -2967,3 +2967,9 @@
 - Replaced generic labels with indispensable-absence, endpoint-limit, intention-stance, strong absence condition, and level-equivalence guidance.
 - Global Directive E validator progress is now `285/1123`; next failure starts at `grammar:n1:grammar_n1_32:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 042
+- Re-authored N1 rows `〜ではすまない`, `Noun ならいざ知らず`, `Noun + 前提で`, `〜とあって`, and `Noun + ならでは`.
+- Repaired one `ではすまない` example so the Japanese naturally marks "only X is not enough" with `だけではすまない`.
+- Global Directive E validator progress is now `290/1123`; next failure starts at `grammar:n1:grammar_n1_34:001`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

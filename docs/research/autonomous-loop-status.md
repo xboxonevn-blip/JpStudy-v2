@@ -2901,3 +2901,9 @@
 - Repaired malformed examples for concessive `ながらも`, double-negative `なくはない`/`なくもない`, and sentence boundary issues in `には及ばない`.
 - Global Directive E validator progress is now `230/1123`; next failure starts at `grammar:n1:grammar_n1_23:005`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 031
+- Re-authored N1 rows `〜に堪えない`, `〜に堪える`, `〜に耐える`, `〜に至った`, and `〜に越したことはない`.
+- Repaired one `〜に至った` example so the process reaches a natural endpoint.
+- Global Directive E validator progress is now `235/1123`; next failure starts at `grammar:n1:grammar_n1_23:010`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

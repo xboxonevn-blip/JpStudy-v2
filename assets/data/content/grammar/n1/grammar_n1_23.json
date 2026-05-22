@@ -204,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + に堪えない, Noun + に堪えない",
-      "meaning": "Ý nghĩa: Dùng để nói không chịu nổi, không đáng để xem/nghe, hoặc quá xúc động không kìm được, tùy danh từ/động từ đi kèm.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc chữ 堪える là chịu đựng/đủ sức chịu đánh giá. Gắn với 見る・聞く・読む rồi phủ định thành 〜に堪えない, cấu trúc nói “không chịu nổi để xem/nghe/đọc”; với danh từ cảm xúc như 感謝 thì là cảm xúc tràn không kìm được.",
+      "hanVietBridge": "堪 là kham/chịu nổi. 見るに堪えない gần “không kham nổi khi nhìn”; 感謝に堪えない là “không kìm nổi lòng biết ơn”.",
+      "form": "Hình thức: V辞書形 + に堪えない; N + に堪えない. Hay gặp 見るに堪えない, 聞くに堪えない, 感謝に堪えない.",
+      "meaning": "Ý nghĩa: Không chịu nổi/không đáng xem nghe đọc; hoặc cảm xúc quá mạnh không kìm được.",
+      "usage": "Sử dụng: Với 見る・聞く・読む thường là đánh giá tiêu cực. Với 感謝・哀惜・同情 lại là cảm xúc sâu, không phải “không đáng”.",
+      "humanMoment": "Dr. Linh lưu ý: 〜に堪えない khác 〜に耐えない. 堪えない đánh giá “không chịu nổi để xem/nghe” hoặc cảm xúc tràn; 耐える là chịu đựng áp lực/đau đớn.",
+      "crossLinks": [
+        {
+          "pattern": "〜に堪える",
+          "contrast": "Khác 〜に堪えない: に堪える là đáng/đủ sức chịu đánh giá; に堪えない là không chịu nổi hoặc cảm xúc tràn."
+        },
+        {
+          "pattern": "〜に耐える",
+          "contrast": "〜に耐える dùng cho chịu áp lực/đau khổ; に堪えない dùng cho giá trị xem nghe đọc hoặc cảm xúc mạnh."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + に堪える, Noun + に堪える",
-      "meaning": "Ý nghĩa: Dùng để nói một việc đáng để làm hoặc đủ sức chịu được sự đánh giá, thử thách.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc chữ 堪える là kham nổi, đủ sức chịu. Trong 〜に堪える, に đánh dấu hoạt động đánh giá như 見る・聞く・読む hoặc danh mục như 参考; cả cụm nói thứ đó đủ chất lượng để chịu được việc xem/nghe/tham khảo.",
+      "hanVietBridge": "堪 là kham. 読むに堪える nghĩa là “kham được việc đọc”, tự nhiên hơn là “đáng đọc/đủ đọc”.",
+      "form": "Hình thức: V辞書形 + に堪える; N + に堪える. Hay gặp 読むに堪える, 見るに堪える, 参考に堪える.",
+      "meaning": "Ý nghĩa: Đáng để xem/nghe/đọc; đủ sức chịu được đánh giá hoặc thử thách.",
+      "usage": "Sử dụng: Dùng trong đánh giá chất lượng. Không dùng như “chịu đau” thông thường; trường hợp đó dùng 耐える.",
+      "humanMoment": "Dr. Linh lưu ý: 〜に堪える khác 〜に耐える. 堪える hỏi “có đáng/đủ chất lượng không”; 耐える hỏi “có chịu nổi áp lực không”.",
+      "crossLinks": [
+        {
+          "pattern": "〜に堪えない",
+          "contrast": "Khác 〜に堪える: に堪える là đáng/đủ chịu đánh giá; に堪えない là không đáng/không chịu nổi hoặc cảm xúc tràn."
+        },
+        {
+          "pattern": "〜に耐える",
+          "contrast": "〜に耐える chịu hardship vật lý/tâm lý; 〜に堪える chịu sự xem xét/đánh giá."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -272,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + に耐える",
-      "meaning": "Ý nghĩa: Dùng để nói chịu đựng hoặc chống chọi được với Noun, như áp lực, đau đớn, thử thách.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc chữ 耐える là chịu đựng, chống chọi. Trong Nに耐える, に đánh dấu lực hoặc hoàn cảnh tác động vào người/vật: áp lực, đau đớn, gió mạnh, động đất. Đây là sức bền trước tác động, không phải giá trị đáng xem.",
+      "hanVietBridge": "耐 là nại/chịu đựng. 地震に耐える là chịu được động đất; 苦しみに耐える là chịu nỗi đau.",
+      "form": "Hình thức: N + に耐える; dạng khả năng thường là Nに耐えられる.",
+      "meaning": "Ý nghĩa: Chịu đựng/chống chọi được với N, thường là áp lực, đau đớn, thiên tai, thử thách.",
+      "usage": "Sử dụng: Chủ ngữ có thể là người, vật, kết cấu. N phía trước là điều gây sức ép, không phải hoạt động đánh giá như đọc/nghe.",
+      "humanMoment": "Dr. Linh lưu ý: 〜に耐える khác 〜に堪える. 耐える là trụ trước sức ép; 堪える là đủ đáng để xem/nghe/đọc hoặc đủ chịu đánh giá.",
+      "crossLinks": [
+        {
+          "pattern": "〜に堪える",
+          "contrast": "Khác 〜に耐える: 堪える liên quan giá trị/đánh giá; 耐える liên quan chịu áp lực hoặc đau đớn."
+        },
+        {
+          "pattern": "〜に耐えられない",
+          "contrast": "〜に耐えられない là không chịu nổi hardship; 〜に堪えない thường là không đáng xem/nghe hoặc cảm xúc quá mạnh."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -306,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-てform + に至った or Noun / Verb-dictionary + に至る (more general)",
-      "meaning": "Ý nghĩa: Dùng để nói một quá trình cuối cùng dẫn đến kết quả hoặc điểm đến X.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc chữ 至る là đạt tới/đi đến điểm cuối. 〜に至った đặt kết quả sau に như đích mà cả quá trình trước đó cuối cùng chạm tới; sắc thái thường là tường thuật, báo cáo, diễn biến.",
+      "hanVietBridge": "至 là chí/đến. 結論に至った là “đi đến kết luận”; 対立に至った là “dẫn tới đối lập”.",
+      "form": "Hình thức: N + に至った; V辞書形 + に至った khi nói đạt tới mức phải làm/xảy ra hành động đó.",
+      "meaning": "Ý nghĩa: Sau một quá trình, cuối cùng đi đến kết quả/trạng thái A.",
+      "usage": "Sử dụng: Vế trước thường là điều tra, thất bại, thảo luận, diễn biến; vế sau là kết luận, quyết định, xung đột, thành công.",
+      "humanMoment": "Dr. Linh lưu ý: 〜に至った khác 〜になった. になった chỉ trở thành; に至った buộc người đọc thấy một quá trình dẫn đến điểm cuối.",
+      "crossLinks": [
+        {
+          "pattern": "〜になった",
+          "contrast": "Khác 〜に至った: になった nêu thay đổi; に至った nhấn quá trình đi đến kết quả."
+        },
+        {
+          "pattern": "〜に至るまで",
+          "contrast": "〜に至るまで nói phạm vi đến tận điểm cuối; 〜に至った nói kết quả đã đạt tới."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -340,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb (dictionary form) + に越したことはない, い-Adjective + に越したことはない, な-Adjective/Noun + である + に越したことはない",
-      "meaning": "Ý nghĩa: Dùng để nói nếu có thể thì X là tốt nhất, không gì hơn X.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc chữ 越す là vượt qua. Trong 〜に越したことはない, “không có việc nào vượt hơn A” trở thành lời khuyên: nếu có thể thì A là tốt nhất/an toàn nhất, dù không phải điều kiện bắt buộc.",
+      "hanVietBridge": "越 là việt/vượt. 早いに越したことはない gần “không gì vượt hơn việc sớm”, tự nhiên là “sớm vẫn là tốt nhất”.",
+      "form": "Hình thức: V辞書形 + に越したことはない; い-adj + に越したことはない; N/な-adj + であるに越したことはない hoặc Nに越したことはない.",
+      "meaning": "Ý nghĩa: A là lựa chọn tốt nhất/đáng mong muốn nhất nếu làm được.",
+      "usage": "Sử dụng: Hay dùng trong lời khuyên thận trọng: chuẩn bị sớm, an toàn, khỏe mạnh, có kinh nghiệm, xác nhận trước.",
+      "humanMoment": "Dr. Linh lưu ý: 〜に越したことはない khác 〜べきだ. べきだ ép nghĩa “nên/phải”; に越したことはない mềm hơn: A là tốt nhất nếu có thể.",
+      "crossLinks": [
+        {
+          "pattern": "〜べきだ",
+          "contrast": "Khác 〜に越したことはない: べきだ là nên/phải; に越したことはない là lựa chọn tối ưu nhưng không ép buộc."
+        },
+        {
+          "pattern": "〜に限る",
+          "contrast": "〜に限る mạnh như “chỉ A là nhất”; に越したことはない thận trọng và khách quan hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

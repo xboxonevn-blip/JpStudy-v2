@@ -1723,6 +1723,7 @@
       "order": 32,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1744,18 +1745,24 @@
       },
       "sense": {
         "senseId": "n5_l09_s032",
-        "meaningVi": "chồng (mình)",
+        "meaningVi": "Chồng (dùng khi nói về chồng mình)",
         "meaningEn": "husband (one's own)"
       },
       "search": {
         "termNoAccent": "主人",
         "readingNoAccent": "しゅしん",
-        "meaningViNoAccent": "chong (minh)",
+        "meaningViNoAccent": "Chong (dung khi noi ve chong minh)",
         "hanVietNoAccent": "chua nhan"
       },
       "links": {
         "sourceVocabId": "n5_l09_v032",
-        "sourceSenseId": "n5_l09_s032"
+        "sourceSenseId": "n5_l09_s032",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "chúa nhân"

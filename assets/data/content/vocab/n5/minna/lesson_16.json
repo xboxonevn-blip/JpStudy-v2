@@ -3196,6 +3196,7 @@
       "order": 59,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3216,18 +3217,23 @@
       },
       "sense": {
         "senseId": "n5_l16_s059",
-        "meaningVi": "Kế tiếp",
+        "meaningVi": "Tiếp theo, sau đó",
         "meaningEn": "next"
       },
       "search": {
         "termNoAccent": "次に",
         "readingNoAccent": "つきに",
-        "meaningViNoAccent": "ke tiep",
+        "meaningViNoAccent": "Tiep theo, sau do",
         "hanVietNoAccent": "thu"
       },
       "links": {
         "sourceVocabId": "n5_l16_v059",
-        "sourceSenseId": "n5_l16_s059"
+        "sourceSenseId": "n5_l16_s059",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thứ"

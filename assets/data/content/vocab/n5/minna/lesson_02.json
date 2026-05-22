@@ -1522,6 +1522,7 @@
       "order": 29,
       "tags": [
         "vehicle",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1544,18 +1545,24 @@
       },
       "sense": {
         "senseId": "n5_l02_s029",
-        "meaningVi": "ô tô",
+        "meaningVi": "Ô tô, xe hơi",
         "meaningEn": "automobile"
       },
       "search": {
         "termNoAccent": "自動車",
         "readingNoAccent": "しとうしゃ",
-        "meaningViNoAccent": "o to",
+        "meaningViNoAccent": "O to, xe hoi",
         "hanVietNoAccent": "tu dong xa"
       },
       "links": {
         "sourceVocabId": "n5_l02_v029",
-        "sourceSenseId": "n5_l02_s029"
+        "sourceSenseId": "n5_l02_s029",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự động xa"

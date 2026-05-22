@@ -454,6 +454,7 @@
       "order": 9,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -475,18 +476,24 @@
       },
       "sense": {
         "senseId": "n5_l15_s009",
-        "meaningVi": "tài liệu",
+        "meaningVi": "Tài liệu, tư liệu",
         "meaningEn": "materials / data"
       },
       "search": {
         "termNoAccent": "資料",
         "readingNoAccent": "しりょう",
-        "meaningViNoAccent": "tai lieu",
+        "meaningViNoAccent": "Tai lieu, tu lieu",
         "hanVietNoAccent": "tu lieu"
       },
       "links": {
         "sourceVocabId": "n5_l15_v009",
-        "sourceSenseId": "n5_l15_s009"
+        "sourceSenseId": "n5_l15_s009",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tư liệu"

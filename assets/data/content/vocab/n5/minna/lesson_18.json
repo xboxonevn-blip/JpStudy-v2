@@ -782,6 +782,7 @@
       "order": 15,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -803,18 +804,23 @@
       },
       "sense": {
         "senseId": "n5_l18_s015",
-        "meaningVi": "sở thích",
+        "meaningVi": "Sở thích, thú vui",
         "meaningEn": "hobby"
       },
       "search": {
         "termNoAccent": "趣味",
         "readingNoAccent": "しゅみ",
-        "meaningViNoAccent": "so thich",
+        "meaningViNoAccent": "So thich, thu vui",
         "hanVietNoAccent": "thu vi"
       },
       "links": {
         "sourceVocabId": "n5_l18_v015",
-        "sourceSenseId": "n5_l18_s015"
+        "sourceSenseId": "n5_l18_s015",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thú vị"

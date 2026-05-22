@@ -2619,3 +2619,8 @@
 - Applied 5 curated consensus repairs for Minna N5 `高校`, `妻`, `昨日`, `刺身`, and `市役所`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-007.md`.
 - Bumped vocab seed revision to 12 so installed DBs refresh this sixth N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 008
+- Applied 5 curated consensus repairs for Minna N5 `資料`, `次に`, `自動車`, `主人`, and `趣味`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-008.md`.
+- Bumped vocab seed revision to 13 so installed DBs refresh this seventh N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

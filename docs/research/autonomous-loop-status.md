@@ -3189,3 +3189,9 @@
 - Repaired examples for possible `いかん` branches, prevention targets, literary purpose, and endless listing.
 - Global Directive E validator progress is now `470/1123`; next failure starts at `grammar:n1:grammar_n1_81:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 079
+- Re-authored N1 rows `～んばかりに`, `Verbる ともなく Verb`, `～差し支えない`, `Verbる ともなしに Verb`, and `～折に`.
+- Corrected `差し支えない` structure and repaired weak examples around near-action gesture, absentminded action, formal permission, and formal occasion.
+- Global Directive E validator progress is now `475/1123`; next failure starts at `grammar:n1:grammar_n1_84:001`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

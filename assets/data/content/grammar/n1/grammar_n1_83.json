@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + ともなしに + Verb",
       "meaning": "Ý nghĩa: Dùng để nói làm X một cách lơ đãng hoặc không chủ ý",
-      "usage": "Cách dùng: Với Verbる ともなしに Verb, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる ともなしに Verb, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + ともなしに + Verb thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる ともなしに Verb không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: hay đi với 見る, 聞く, 考える, 歩く; hành động đầu là lơ đãng, rồi trạng thái/hành động sau xảy ra theo dòng đó.",
+      "etymology": "Gốc rễ: ともなし phủ định ý định gọi tên hành động, に biến cụm thành trạng ngữ. Vì vậy 見るともなしに見ていた là đang nhìn mà không có mục tiêu rõ.",
+      "hanVietBridge": "なし là “không có”; に biến cụm thành cách thức. Verbる ともなしに Verb = làm X trong trạng thái không chủ tâm.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verbる ともなしに Verb nhẹ như ánh mắt trôi. Khác ともなく, ともなしに dễ làm trạng ngữ mở đường cho việc tình cờ nhận ra điều sau.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Verbる ともなしに Verb cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verbる ともなく Verb",
+          "contrast": "Gần Verbる ともなしに Verb, nhưng ともなしに thường rõ vai trạng ngữ “trong lúc lơ đãng X”."
+        },
+        {
+          "pattern": "Verbながら",
+          "contrast": "Khác ながら: ながら chỉ đồng thời hai hành động, còn ともなしに thêm sắc thái không chủ ý."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + 折に, Verb-た形 + 折に, Noun + の折に",
       "meaning": "Ý nghĩa: Dùng để chỉ thời điểm hoặc dịp khi một việc xảy ra",
-      "usage": "Cách dùng: Với ～折に, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～折に, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + 折に, Verb-た形 + 折に, Noun + の折に thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～折に không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng trong thư từ, thông báo, lời nhắn lịch sự: ご来社の折に, お近くへお越しの折には, 出張した折に.",
+      "etymology": "Gốc rễ: 折 là nếp gấp/thời điểm gập lại của sự việc, rồi mở rộng thành “dịp/cơ hội”. に đánh dấu thời điểm ấy làm mốc cho hành động.",
+      "hanVietBridge": "折 có Hán-Việt “chiết” trong gấp/khúc. ～折に là “vào khúc/dịp ấy”, nên trang trọng hơn とき.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～折に là tiếng lịch sự của email và thông báo. Khác とき, nó biến thời điểm thành một dịp có lễ độ.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～折に cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～ときに",
+          "contrast": "Khác ～折に: ときに trung tính, còn 折に trang trọng và hợp thư từ/hoàn cảnh lịch sự."
+        },
+        {
+          "pattern": "～際に",
+          "contrast": "So với 際に cũng trang trọng, 折に mềm hơn và mang sắc thái “nhân dịp”."
         }
       ],
       "fallbackReference": {

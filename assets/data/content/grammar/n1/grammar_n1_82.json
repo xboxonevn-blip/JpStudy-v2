@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + ともなく + Verb",
       "meaning": "Ý nghĩa: Dùng để nói làm X một cách vô thức, không có ý định rõ ràng, rồi dẫn đến hành động hoặc trạng thái phía sau",
-      "usage": "Cách dùng: Với Verbる ともなく Verb, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる ともなく Verb, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + ともなく + Verb thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる ともなく Verb không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: thường lặp cùng động từ tri giác hoặc suy nghĩ: 見るともなく見る, 聞くともなく聞く, 考えるともなく考える.",
+      "etymology": "Gốc rễ: と đưa hành động ra như một mục tiêu gọi tên, もなく phủ định cả ý định ấy. Vì vậy 見るともなく見る là nhìn mà không thật sự định nhìn.",
+      "hanVietBridge": "なく là “không có”; ともなく có cảm giác “không đến mức gọi là cố ý X”. Verbる ともなく Verb = làm X lơ đãng, không chủ đích.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verbる ともなく Verb rất hợp với nhìn/nghe/nghĩ vu vơ. Khác つもりなく, nó không chỉ phủ định ý định mà diễn tả trạng thái lơ đãng đang trôi.",
       "crossLinks": [
         {
-          "pattern": "Verbる べくもない",
-          "contrast": "Verbる ともなく Verb cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verbる ともなしに Verb",
+          "contrast": "Gần Verbる ともなく Verb, nhưng ともなしに thiên về trạng thái lơ đãng làm nền cho hành động sau."
+        },
+        {
+          "pattern": "Verbる つもりなく",
+          "contrast": "Khác ともなく: つもりなく chỉ “không có ý định”, còn ともなく gợi hành động vô thức/lơ đãng đang diễn ra."
         }
       ],
       "fallbackReference": {
@@ -48,9 +53,9 @@
     "lessonId": 82,
     "title": "～差し支えない",
     "titleEn": "Indicates no problem or obstacle; it’s fine if..., there’s no issue",
-    "structure": "Verb-て form + も差し支えない, Noun + が差し支えない",
-    "structureEn": "Verb-て form + も差し支えない, Noun + が差し支えない",
-    "explanation": "Dùng để nói không có trở ngại, không sao nếu làm X, hoặc có thể xem là ổn. Sắc thái lịch sự, trang trọng. Cấu trúc: Verb-て form + も差し支えない, Noun + が差し支えない.",
+    "structure": "Verb-て form + も差し支えない, Noun + でも/で差し支えない",
+    "structureEn": "Verb-て form + も差し支えない, Noun + でも/de mo sashitsukaenai",
+    "explanation": "Dùng để nói không có trở ngại, không sao nếu làm X, hoặc có thể xem là ổn. Sắc thái lịch sự, trang trọng. Cấu trúc: Verb-て form + も差し支えない, Noun + でも/で差し支えない.",
     "explanationEn": "The ～差し支えない grammar point expresses that doing something (or something occurring) is not a problem and causes no inconvenience. It’s often used in polite or formal situations",
     "level": "N1",
     "tags": [
@@ -69,15 +74,20 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-て form + も差し支えない, Noun + が差し支えない",
+      "form": "Cấu trúc: Verb-て form + も差し支えない, Noun + でも/で差し支えない",
       "meaning": "Ý nghĩa: Dùng để nói không có trở ngại, không sao nếu làm X, hoặc có thể xem là ổn",
-      "usage": "Cách dùng: Với ～差し支えない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～差し支えない, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + も差し支えない, Noun + が差し支えない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～差し支えない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng trong xin phép, thông báo, quy định: ここに記入しても差し支えありません, 明日でも差し支えありません.",
+      "etymology": "Gốc rễ: 差し支え là sự vướng mắc/trở ngại; ない phủ định trở ngại. Mẫu này không nói thích hay muốn, mà nói hành động không gây vấn đề.",
+      "hanVietBridge": "支 có Hán-Việt “chi” trong hỗ trợ/chi nhánh; 差し支えない hãy nhớ là “không có vướng trở”, nên lịch sự hơn いいです.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～差し支えない là câu của môi trường công sở/giấy tờ. Khác かまわない thân mật hơn, 差し支えない kiểm tra xem có gây trở ngại không.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～差し支えない cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～てもかまわない",
+          "contrast": "Khác ～差し支えない: かまわない đời thường hơn, còn 差し支えない lịch sự và nhấn không có trở ngại."
+        },
+        {
+          "pattern": "～ても問題ない",
+          "contrast": "So với 問題ない trung tính, 差し支えない mềm và trang trọng hơn trong xin phép/thông báo."
         }
       ],
       "fallbackReference": {

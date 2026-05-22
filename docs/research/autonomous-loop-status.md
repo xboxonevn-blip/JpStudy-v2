@@ -2949,3 +2949,9 @@
 - Replaced generic source/particle filler with route-process, evidence-judgment, indispensable-condition, source-modifier, and perspective-speech guidance.
 - Global Directive E validator progress is now `270/1123`; next failure starts at `grammar:n1:grammar_n1_3:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 039
+- Re-authored N1 rows `Noun + ぐるみ`, `Noun こそあれ`, `Noun こそ〜が`, `Noun こそすれ`, and `Noun ごとき / Noun ごとく`.
+- Replaced generic filler with whole-group, concessive, emphatic-contrast, X-not-Y, and literary-simile guidance.
+- Global Directive E validator progress is now `275/1123`; next failure starts at `grammar:n1:grammar_n1_3:008`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

@@ -112,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: ぐるみ liên hệ với ý “bao trùm/cả khối”, như một nhóm được cuốn chung vào hành động hoặc trạng thái. Noun + ぐるみ không nói từng cá nhân rời rạc, mà nói toàn bộ đơn vị cùng tham gia.",
+      "hanVietBridge": "Cầu nối tiếng Việt: “cả/toàn bộ”. 家族ぐるみ = cả gia đình như một khối, không chỉ vài người trong nhà.",
       "form": "Hình thức: Noun + ぐるみ",
       "meaning": "Ý nghĩa: Dùng để nói toàn bộ một nhóm, tổ chức, gia đình hoặc khu vực cùng tham gia hay bị bao trùm trong một việc.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Hay đi với 家族, 町, 会社, 国, 組織 để nói cả nhóm/cả vùng/cả tổ chức cùng hành động hoặc bị ảnh hưởng.",
+      "humanMoment": "Dr. Linh lưu ý: ぐるみ biến danh từ trước thành một khối. 会社ぐるみの不正 là gian lận cấp công ty, không phải lỗi của một nhân viên riêng lẻ.",
+      "crossLinks": [
+        {
+          "pattern": "〜全体で",
+          "contrast": "Gần nghĩa “toàn bộ”, nhưng ぐるみ gắn thành hậu tố và nhấn cả khối bị cuốn vào việc."
+        },
+        {
+          "pattern": "〜まるごと",
+          "contrast": "〜まるごと nói trọn vẹn một vật/khối; ぐるみ thường nói nhóm người/tổ chức/khu vực cùng tham gia."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -146,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: こそ nhấn mạnh A, あれ là dạng trang trọng/cổ của ある trong khung nhượng bộ. Noun こそあれ nghĩa là “A thì có thật đấy, nhưng...”, rồi giữ ý chính phía sau.",
+      "hanVietBridge": "ある là “có”; こそあれ có thể nối sang tiếng Việt: “có A thật, nhưng không vì thế mà...”.",
       "form": "Hình thức: Noun + こそあれ + (result/continuation)",
       "meaning": "Ý nghĩa: Dùng để thừa nhận có A, nhưng điều đó không dẫn đến kết luận tiêu cực hoặc không phủ định ý chính phía sau.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Vế trước thường là rủi ro, bất an, khuyết điểm; vế sau phủ nhận việc A làm hỏng đánh giá chính. Văn viết/trang trọng.",
+      "humanMoment": "Dr. Linh lưu ý: こそあれ là nhượng bộ có kiểm soát. 欠点こそあれ không phủ nhận khuyết điểm; nó nói khuyết điểm có, nhưng kết luận chính vẫn đứng.",
+      "crossLinks": [
+        {
+          "pattern": "〜とはいえ",
+          "contrast": "Gần nghĩa nhượng bộ, nhưng こそあれ nhấn danh từ A mạnh hơn và văn viết hơn."
+        },
+        {
+          "pattern": "〜こそすれ",
+          "contrast": "こそすれ thường đối lập X với Y bị phủ định; こそあれ chỉ thừa nhận A rồi chuyển sang ý chính."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -180,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: こそ kéo Noun ra làm điểm nhấn “chính N”, còn が mở vế đối lập/bổ sung. Noun こそ〜が vì vậy vừa nâng trọng tâm, vừa giữ cửa cho điều kiện hoặc hạn chế phía sau.",
+      "hanVietBridge": "こそ = chính là/đúng là; が = nhưng. Noun こそ〜が gần “chính N thì..., nhưng...”.",
       "form": "Hình thức: Noun + こそ + (statement) + が + (contrasting/additional statement)",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh chính Noun là điều đáng nói, rồi sau đó thêm một điểm đối lập hoặc bổ sung.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Vế đầu nêu điều người nói muốn đặt lên trước, vế sau bằng が chỉnh lại phạm vi, hạn chế hoặc điểm cần cân bằng.",
+      "humanMoment": "Dr. Linh lưu ý: こそ〜が không chỉ là “nhưng”. Nó nói “đúng là trọng tâm nằm ở A”, rồi mới kéo người nghe sang phần phải cân nhắc.",
+      "crossLinks": [
+        {
+          "pattern": "〜こそあれ",
+          "contrast": "Khác こそ〜が: こそあれ thừa nhận danh từ A tồn tại; こそ〜が nhấn một phát biểu rồi nối với vế đối lập bằng が."
+        },
+        {
+          "pattern": "〜が",
+          "contrast": "〜が thường chỉ đối lập; こそ〜が thêm lực nhấn “chính là A” trước khi đối lập."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -214,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: こそ nhấn mạnh hành động/trạng thái X, すれ là dạng giả định/trang trọng của する. Noun こそすれ dựng khung “X thì có thể/đúng là X, nhưng Y thì không”.",
+      "hanVietBridge": "する là “làm”; こそすれ nối sang tiếng Việt như “có X thì có, chứ Y thì không”.",
       "form": "Hình thức: Noun + こそすれ + (negative or contrasting statement)",
       "meaning": "Ý nghĩa: Dùng trong cấu trúc nhấn mạnh “có thể là X, nhưng tuyệt đối không phải Y”.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Vế sau thường phủ định hoặc bác bỏ điều trái hướng: 感謝こそすれ、非難できない. Văn viết, lập luận, đánh giá mạnh.",
+      "humanMoment": "Dr. Linh lưu ý: こそすれ là cú bẻ lái rất rõ. Người nói cho phép X tồn tại, nhưng khóa cửa với Y: 感謝こそすれ、非難はしない.",
+      "crossLinks": [
+        {
+          "pattern": "〜こそあれ",
+          "contrast": "Khác こそすれ: こそあれ thừa nhận A rồi tiếp tục; こそすれ thường đặt X đối lập với Y bị phủ định."
+        },
+        {
+          "pattern": "〜どころか",
+          "contrast": "どころか đảo kỳ vọng mạnh; こそすれ trang trọng hơn và giữ cấu trúc “X thì có, Y thì không”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -248,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: ごとき/ごとく viết từ 如き/如く, 如 mang nghĩa “như”. ごとき nghiêng về bổ nghĩa danh từ, ごとく nghiêng về trạng ngữ/cách thức, đều có sắc thái cổ/trang trọng.",
+      "hanVietBridge": "如 là như. 天使のごとく = như thiên thần; 悪魔のごとき行為 = hành vi như ác quỷ.",
       "form": "Hình thức: Noun + ごとき, Noun + ごとく, Verb-casual + ごとく, い-Adjective + ごとく",
       "meaning": "Ý nghĩa: Dùng để so sánh theo nghĩa “như”, “tựa như”, thường mang sắc thái văn chương hoặc trang trọng.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: ごとき thường đứng trước danh từ; ごとく thường bổ nghĩa hành động/tính chất. Hợp văn viết, văn chương, diễn đạt trang trọng hoặc hơi cổ.",
+      "humanMoment": "Dr. Linh lưu ý: ごとき/ごとく không phải よう bình thường. Nó kéo câu sang giọng văn chương; dùng sai trong hội thoại nhẹ sẽ nghe quá kịch.",
+      "crossLinks": [
+        {
+          "pattern": "〜ような / 〜ように",
+          "contrast": "Gần nghĩa “như”, nhưng よう tự nhiên hơn; ごとき/ごとく trang trọng, cổ và giàu sắc thái văn chương."
+        },
+        {
+          "pattern": "〜みたいな",
+          "contrast": "みたいな thân mật; ごとき/ごとく là văn viết/trang trọng, không thay qua lại trong register thường ngày."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

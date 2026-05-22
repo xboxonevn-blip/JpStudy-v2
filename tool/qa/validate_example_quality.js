@@ -17,6 +17,10 @@ const BANNED_JA_PATTERNS = [
   /今日の練習に入れます/,
   /この場面では「[^」]+」と言えます/,
   /授業で「[^」]+」/,
+  /^ニュースで.+について読みました。?$/,
+  /^午後、.+で友だちに会います。?$/,
+  /^会議で.+について話しました。?$/,
+  /^困ったときは、すぐにあきらめず.+こともあります。?$/,
 ];
 
 const BANNED_VI_PATTERNS = [
@@ -102,6 +106,16 @@ function validateExample(example, options = {}) {
     if (!normalized.source_detail) {
       errors.push('authored example missing source_detail');
     }
+    if (/pronoun context/i.test(normalized.source_detail) && !isPronounEntry(entry)) {
+      errors.push('authored pronoun context used for non-pronoun entry');
+    }
+    if (
+      term &&
+      !isPronounEntry(entry) &&
+      normalized.ja.includes(`${term}は日本語を勉強しています`)
+    ) {
+      errors.push('non-pronoun authored study frame');
+    }
   }
 
   if (isSubstitutionTemplate(normalized, term)) {
@@ -111,22 +125,71 @@ function validateExample(example, options = {}) {
   return { ok: errors.length === 0, errors, example: normalized };
 }
 
+function isPronounEntry(entry) {
+  if (!entry) return false;
+  const lemma = asObject(entry.lemma);
+  const term = text(lemma.term);
+  const tags = Array.isArray(entry.tags)
+    ? entry.tags.map((tag) => text(tag).toLowerCase())
+    : [];
+  if (tags.includes('pronoun')) return true;
+  const sense = asObject(entry.sense);
+  const meaningEn = text(sense.meaningEn || sense.meaning_en).toLowerCase();
+  const meaningVi = text(sense.meaningVi || sense.meaning_vi).toLowerCase();
+  const compactEn = meaningEn.replace(/\([^)]*\)/g, '').trim();
+  if (
+    inferredPronounTerms().has(term) &&
+    ['i', 'me', 'we', 'us', 'you', 'he', 'she', 'they', 'them', 'everyone', 'that person'].includes(compactEn)
+  ) {
+    return true;
+  }
+  const firstVi = meaningVi.split(/[;,/]+/)[0]?.trim() ?? '';
+  return inferredPronounTerms().has(term) && ['tôi', 'chúng tôi', 'bạn', 'người kia', 'vị kia', 'mọi người'].includes(firstVi);
+}
+
 function containsTerm(ja, term, reading) {
   if (!term) return true;
   if (ja.includes(term)) return true;
+  if (term.includes('～')) {
+    const stem = term.replace(/～/g, '');
+    if (stem && ja.includes(stem)) return true;
+  }
   if (reading && reading !== term && ja.includes(reading)) return true;
   return false;
+}
+
+function inferredPronounTerms() {
+  return new Set([
+    '私',
+    '私たち',
+    'あなた',
+    'あの人',
+    'あの方',
+    '皆さん',
+    '誰',
+    '俺',
+    '貴女',
+    '君',
+    '皆',
+    '僕',
+    'この～',
+    'その～',
+    'あの～',
+  ]);
 }
 
 function isSubstitutionTemplate(example, term) {
   const ja = example.ja;
   if (!term) return false;
-  if (ja.includes(`「${term}」`)) return true;
+  if (ja.includes(`「${term}」`) && /(使う|文|意味|言えます|練習に入れます)/.test(ja)) {
+    return true;
+  }
   const escaped = escapeRegExp(term);
   const genericFrames = [
-    new RegExp(`^.*${escaped}.*練習.*$`),
+    new RegExp(`^.*${escaped}.*練習に入れます.*$`),
     new RegExp(`^.*${escaped}.*言えます。?$`),
-    new RegExp(`^.*${escaped}.*文.*$`),
+    new RegExp(`^.*${escaped}.*文を(一つ)?(作|書).*$`),
+    new RegExp(`^.*${escaped}.*使う文.*$`),
   ];
   return genericFrames.some((pattern) => pattern.test(ja));
 }
@@ -310,6 +373,7 @@ module.exports = {
   BANNED_VI_PATTERNS,
   entriesByVocabId,
   normalizeExample,
+  isPronounEntry,
   validateAllContentTemplates,
   validateCorpus,
   validateExample,

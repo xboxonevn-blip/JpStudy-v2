@@ -2647,3 +2647,11 @@
 - Applied 5 curated consensus repairs for Minna N5 `小さい`, `少し`, `上着`, `乗り場`, and `食べ物`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-012.md`.
 - Bumped vocab seed revision to 17 so installed DBs refresh this eleventh N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 Urgent fix #25 hardening follow-up
+- Rebuilt Tatoeba seed from official sentence/link exports: 9,880 linked JP-VI rows across 2,997 terms; corpus now wires 5,838 Tatoeba-backed examples before authored fallback.
+- Fixed homophone drift by keying Tatoeba rows by `vocabId` and removing reading-only lookup; restored curated `私` row `私の番？`.
+- Hardened `validate_example_quality` against old template phrases, non-pronoun study frames, broad fallback frames, and loose pronoun inference (`US`, embedded `bạn`).
+- Bumped vocab seed revision to 18 so stale installs refresh regenerated example sentences.
+- Gates passed: Node example/Tatoeba/vocab diff tests, example validator, wiring validate-only, focused Flutter analyzer, DB/repository/vocab/flashcard tests, `flutter build web --release`, and `git diff --check`.
+- Local release proof: browser-fetched `assets/data/content/vocab/n5/minna/lesson_01.json` shows `私` example `私の番？` / `Đến lượt tôi chưa?`, source `tatoeba-cc-by-2.0`; old `Trong giờ học...` template absent.

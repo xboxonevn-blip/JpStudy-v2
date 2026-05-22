@@ -44,6 +44,109 @@ test('accepts real contextual bilingual examples with source license', () => {
   assert.equal(result.ok, true, result.errors.join('\n'));
 });
 
+test('accepts real Tatoeba quoted dialogue that contains the term', () => {
+  const result = validateExample(
+    {
+      example_id: 'tat-5278-vie-5899',
+      ja: '「ありがとう」「どういたしまして」',
+      vi: '"Cám ơn." "Không có chi."',
+      audio_url: '',
+      source: 'tatoeba-cc-by-2.0',
+      source_detail: 'Tatoeba sentence 5278; translation 5899',
+      license: 'CC-BY 2.0',
+    },
+    {
+      entry: {
+        entryId: 'n5_l05_s053',
+        lemma: { vocabId: 'n5_l05_v053', term: 'どういたしまして', reading: 'どういたしまして' },
+        sense: { meaningVi: 'không có chi', meaningEn: "You're welcome" },
+        tags: ['phrase'],
+      },
+    },
+  );
+
+  assert.equal(result.ok, true, result.errors.join('\n'));
+});
+
+test('rejects authored pronoun-study frame for non-pronoun entries', () => {
+  const result = validateExample(
+    {
+      example_id: 'ex-haj_n1_ch01_v001-001',
+      ja: '藻掻くは日本語を勉強しています。',
+      vi: 'Vùng vẫy; quằn quại; thiếu kiên nhẫn đang học tiếng Nhật.',
+      audio_url: '',
+      source: 'jpstudy-authored-contextual',
+      source_detail: 'JpStudy-authored pronoun context for 藻掻く',
+      license: 'JpStudy authored',
+    },
+    {
+      entry: {
+        entryId: 'haj_n1_ch01_001',
+        lemma: { vocabId: 'haj_n1_ch01_v001', term: '藻掻く', reading: 'もがく' },
+        sense: {
+          meaningVi: 'vùng vẫy; quằn quại; thiếu kiên nhẫn',
+          meaningEn: 'to struggle;to wriggle;to be impatient',
+        },
+        tags: ['public-source', 'tanos', 'anki-import'],
+      },
+    },
+  );
+
+  assert.equal(result.ok, false);
+  assert.match(result.errors.join('\n'), /pronoun|study frame|substitution/i);
+});
+
+test('does not treat words like restroom or thank you as pronouns', () => {
+  const result = validateExample(
+    {
+      example_id: 'ex-haj_n1_ch03_v036-001',
+      ja: '御手洗いは日本語を勉強しています。',
+      vi: 'Nhà vệ sinh đang học tiếng Nhật.',
+      audio_url: '',
+      source: 'jpstudy-authored-contextual',
+      source_detail: 'JpStudy-authored pronoun context for 御手洗い',
+      license: 'JpStudy authored',
+    },
+    {
+      entry: {
+        entryId: 'haj_n1_ch03_036',
+        lemma: { vocabId: 'haj_n1_ch03_v036', term: '御手洗い', reading: 'おてあらい' },
+        sense: {
+          meaningVi: 'nhà vệ sinh; phòng tắm (Mỹ)',
+          meaningEn: 'toilet;restroom;lavatory;bathroom (US)',
+        },
+      },
+    },
+  );
+
+  assert.equal(result.ok, false);
+  assert.match(result.errors.join('\n'), /non-pronoun|pronoun/i);
+});
+
+test('rejects broad authored fallback frames that survive word swaps', () => {
+  const result = validateExample(
+    {
+      example_id: 'ex-haj_n1_ch01_v006-001',
+      ja: 'ニュースで結成について読みました。',
+      vi: 'Tôi đọc tin tức về sự hình thành.',
+      audio_url: '',
+      source: 'jpstudy-authored-contextual',
+      source_detail: 'JpStudy-authored noun/context sentence for 結成',
+      license: 'JpStudy authored',
+    },
+    {
+      entry: {
+        entryId: 'haj_n1_ch01_006',
+        lemma: { vocabId: 'haj_n1_ch01_v006', term: '結成', reading: 'けっせい' },
+        sense: { meaningVi: 'sự hình thành', meaningEn: 'formation' },
+      },
+    },
+  );
+
+  assert.equal(result.ok, false);
+  assert.match(result.errors.join('\n'), /template|fallback/i);
+});
+
 test('validateCorpus reports exact failing vocab ids', () => {
   const result = validateCorpus(
     {

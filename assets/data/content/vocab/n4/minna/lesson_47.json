@@ -52,11 +52,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v001-001",
-          "ja": "集まりますは日本語を勉強しています。",
-          "vi": "Tập trung (người) đang học tiếng Nhật.",
+          "ja": "集まりますは会議室にいます。",
+          "vi": "Tập trung (người) đang ở phòng họp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 集まります",
+          "source_detail": "JpStudy-authored people/role context for 集まります",
           "license": "JpStudy authored"
         }
       ]
@@ -107,11 +107,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v002-001",
-          "ja": "別れますは日本語を勉強しています。",
-          "vi": "Chia tay (người), chia rẽ đang học tiếng Nhật.",
+          "ja": "別れますは会議室にいます。",
+          "vi": "Chia tay (người), chia rẽ đang ở phòng họp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 別れます",
+          "source_detail": "JpStudy-authored people/role context for 別れます",
           "license": "JpStudy authored"
         }
       ]
@@ -163,11 +163,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v003-001",
-          "ja": "長生きしますは日本語を勉強しています。",
-          "vi": "Sống lâu đang học tiếng Nhật.",
+          "ja": "受付で「長生きします」と丁寧に言いました。",
+          "vi": "Ở quầy tiếp tân, tôi nói lịch sự: \"sống lâu\".",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 長生きします",
+          "source_detail": "JpStudy-authored polite-phrase context for 長生きします",
           "license": "JpStudy authored"
         }
       ]
@@ -218,11 +218,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v004-001",
-          "ja": "音は日本語を勉強しています。",
-          "vi": "Âm thanh, tiếng động đang học tiếng Nhật.",
+          "ja": "資料には音の説明が載っています。",
+          "vi": "Trong tài liệu có phần giải thích về âm thanh, tiếng động.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 音",
+          "source_detail": "JpStudy-authored noun/context sentence for 音",
           "license": "JpStudy authored"
         }
       ]
@@ -273,11 +273,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v005-001",
-          "ja": "声は日本語を勉強しています。",
-          "vi": "Giọng nói, tiếng (người, động vật) đang học tiếng Nhật.",
+          "ja": "声は会議室にいます。",
+          "vi": "Giọng nói, tiếng (người, động vật) đang ở phòng họp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 声",
+          "source_detail": "JpStudy-authored people/role context for 声",
           "license": "JpStudy authored"
         }
       ]
@@ -328,11 +328,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v006-001",
-          "ja": "味は日本語を勉強しています。",
-          "vi": "Mùi vị đang học tiếng Nhật.",
+          "ja": "資料には味の説明が載っています。",
+          "vi": "Trong tài liệu có phần giải thích về mùi vị.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 味",
+          "source_detail": "JpStudy-authored noun/context sentence for 味",
           "license": "JpStudy authored"
         }
       ]
@@ -382,13 +382,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v007-001",
-          "ja": "匂いは日本語を勉強しています。",
-          "vi": "Mùi, hương thơm đang học tiếng Nhật.",
+          "example_id": "tat-77909-vie-8978284",
+          "ja": "猟犬たちはキツネの匂いの跡をたどった。",
+          "vi": "Những con chó săn đã lần theo mùi của con cáo.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 匂い",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 77909; translation 8978284",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -435,13 +435,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v008-001",
-          "ja": "しますは日本語を勉強しています。",
-          "vi": "Có (tiếng, mùi, vị) đang học tiếng Nhật.",
+          "example_id": "tat-4731-vie-5679",
+          "ja": "あなたの勉強を邪魔しないようにします。",
+          "vi": "Tôi sẽ cố không quấy rầy bạn học hành.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for します",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 4731; translation 5679",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -490,13 +490,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v009-001",
-          "ja": "厳しいは日本語を勉強しています。",
-          "vi": "Nghiêm khắc đang học tiếng Nhật.",
+          "example_id": "tat-1130806-vie-8956875",
+          "ja": "世間は厳しい。",
+          "vi": "Cuộc đời là một thứ khắc nghiệt.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 厳しい",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 1130806; translation 8956875",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -546,11 +546,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v010-001",
-          "ja": "酷いは日本語を勉強しています。",
-          "vi": "Tồi tệ, khủng khiếp đang học tiếng Nhật.",
+          "ja": "今日は少し酷いです。",
+          "vi": "Hôm nay hơi tồi tệ, khủng khiếp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 酷い",
+          "source_detail": "JpStudy-authored adjective context for 酷い",
           "license": "JpStudy authored"
         }
       ]
@@ -600,13 +600,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v011-001",
-          "ja": "恐いは日本語を勉強しています。",
-          "vi": "Sợ, đáng sợ đang học tiếng Nhật.",
+          "example_id": "tat-90252-vie-8902552",
+          "ja": "彼女は犬がとても恐い。",
+          "vi": "Cô ấy rất sợ chó.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 恐い",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 90252; translation 8902552",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -657,11 +657,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v012-001",
-          "ja": "実験は日本語を勉強しています。",
-          "vi": "Thực nghiệm, thí nghiệm đang học tiếng Nhật.",
+          "ja": "資料には実験の説明が載っています。",
+          "vi": "Trong tài liệu có phần giải thích về thực nghiệm, thí nghiệm.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 実験",
+          "source_detail": "JpStudy-authored noun/context sentence for 実験",
           "license": "JpStudy authored"
         }
       ]
@@ -709,13 +709,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v013-001",
-          "ja": "データは日本語を勉強しています。",
-          "vi": "Dữ liệu, số liệu (data) đang học tiếng Nhật.",
+          "example_id": "tat-76372-vie-8993759",
+          "ja": "リストのデータは、自動集計機能を使って簡単に集計することができます。",
+          "vi": "Dữ liệu list có thể dễ dàng được tổng hợp bằng cách sử dụng chức năng tổng hợp tự động.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for データ",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 76372; translation 8993759",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -765,13 +765,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v014-001",
-          "ja": "人口は日本語を勉強しています。",
-          "vi": "Dân số đang học tiếng Nhật.",
+          "example_id": "tat-122575-vie-8973833",
+          "ja": "日本の人口はカナダよりも多い。",
+          "vi": "Dân số Nhật Bản nhiều hơn dân số Canada.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 人口",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 122575; translation 8973833",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -818,13 +818,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v015-001",
-          "ja": "ニュースは日本語を勉強しています。",
-          "vi": "Tin tức (news) đang học tiếng Nhật.",
+          "example_id": "tat-140811-vie-2639148",
+          "ja": "全国民がそのニュースを聞いて喜んだ。",
+          "vi": "Toàn thể dân tộc vui mừng khi nghe tin ấy.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for ニュース",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 140811; translation 2639148",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -874,13 +874,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v016-001",
-          "ja": "科学は日本語を勉強しています。",
-          "vi": "Khoa học đang học tiếng Nhật.",
+          "example_id": "tat-5164-vie-9715738",
+          "ja": "創造説は擬似科学だ。",
+          "vi": "Thuyết tạo hóa là phản khoa học.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 科学",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 5164; translation 9715738",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -931,11 +931,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v017-001",
-          "ja": "医学は日本語を勉強しています。",
-          "vi": "Y học đang học tiếng Nhật.",
+          "ja": "資料には医学の説明が載っています。",
+          "vi": "Trong tài liệu có phần giải thích về y học.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 医学",
+          "source_detail": "JpStudy-authored noun/context sentence for 医学",
           "license": "JpStudy authored"
         }
       ]
@@ -986,13 +986,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v018-001",
-          "ja": "文学は日本語を勉強しています。",
-          "vi": "Văn học đang học tiếng Nhật.",
+          "example_id": "tat-109615-vie-1759692",
+          "ja": "彼は英文学を専攻している。",
+          "vi": "Anh ta chuyên môn Anh Văn.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 文学",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 109615; translation 1759692",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1039,13 +1039,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v019-001",
-          "ja": "パトカーは日本語を勉強しています。",
-          "vi": "Xe cảnh sát đang học tiếng Nhật.",
+          "example_id": "tat-166236-vie-9007241",
+          "ja": "私たちはパトカーが全速力で走っているのを見た。",
+          "vi": "Chúng tôi đã nhìn thấy một chiếc xe cảnh sát phóng nhanh hết tốc độ.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for パトカー",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 166236; translation 9007241",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1096,13 +1096,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v020-001",
-          "ja": "救急車は日本語を勉強しています。",
-          "vi": "Xe cứu thương đang học tiếng Nhật.",
+          "example_id": "tat-182411-vie-9808227",
+          "ja": "救急車を呼んでくれ。",
+          "vi": "Gọi xe cứu thương đi.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 救急車",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 182411; translation 9808227",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1152,13 +1152,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v021-001",
-          "ja": "賛成は日本語を勉強しています。",
-          "vi": "Tán thành, đồng ý đang học tiếng Nhật.",
+          "example_id": "tat-112500-vie-8962752",
+          "ja": "彼はその提案に賛成票を投じた。",
+          "vi": "Anh ấy đã bỏ phiếu nhất trí đề xuất đó.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 賛成",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 112500; translation 8962752",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1208,13 +1208,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v022-001",
-          "ja": "反対は日本語を勉強しています。",
-          "vi": "Phản đối đang học tiếng Nhật.",
+          "example_id": "tat-78007-vie-8887162",
+          "ja": "両親は私が留学することに反対した。",
+          "vi": "Bố mẹ phản đối việc tôi đi du học.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 反対",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 78007; translation 8887162",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1265,13 +1265,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v023-001",
-          "ja": "大統領は日本語を勉強しています。",
-          "vi": "Tổng thống đang học tiếng Nhật.",
+          "example_id": "tat-114805-vie-8951105",
+          "ja": "彼はアメリカ大統領候補者の一人である。",
+          "vi": "Anh ấy là một ứng cử viên tổng thống Mỹ.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 大統領",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 114805; translation 8951105",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1319,11 +1319,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v024-001",
-          "ja": "～によるとは日本語を勉強しています。",
-          "vi": "Theo ～ thì (nguồn tin) đang học tiếng Nhật.",
+          "ja": "資料には～によるとの説明が載っています。",
+          "vi": "Trong tài liệu có phần giải thích về theo ～ thì (nguồn tin).",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for ～によると",
+          "source_detail": "JpStudy-authored noun/context sentence for ～によると",
           "license": "JpStudy authored"
         }
       ]
@@ -1375,11 +1375,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v025-001",
-          "ja": "婚約しますは日本語を勉強しています。",
-          "vi": "Đính hôn đang học tiếng Nhật.",
+          "ja": "婚約しますの入口で友だちに会いました。",
+          "vi": "Tôi đã gặp bạn ở lối vào đính hôn.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 婚約します",
+          "source_detail": "JpStudy-authored place context for 婚約します",
           "license": "JpStudy authored"
         }
       ]
@@ -1427,13 +1427,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v026-001",
-          "ja": "どうもは日本語を勉強しています。",
-          "vi": "Hình như, có vẻ như đang học tiếng Nhật.",
+          "example_id": "tat-111704-vie-9814534",
+          "ja": "彼はどうも失敗しやしないかと思う。",
+          "vi": "Tôi e là anh ta sẽ thất bại.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for どうも",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 111704; translation 9814534",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1483,13 +1483,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v027-001",
-          "ja": "恋人は日本語を勉強しています。",
-          "vi": "Người yêu đang học tiếng Nhật.",
+          "example_id": "tat-2624165-vie-9053802",
+          "ja": "トムとは友達以上恋人未満の関係です。",
+          "vi": "Tom với tôi có mối quan hệ trên tình bạn dưới tình yêu.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 恋人",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 2624165; translation 9053802",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1539,13 +1539,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v028-001",
-          "ja": "相手は日本語を勉強しています。",
-          "vi": "Đối phương, người kia đang học tiếng Nhật.",
+          "example_id": "tat-76715-vie-1706018",
+          "ja": "これは私の血ではない。すべて相手の返り血だ。私の身体には傷ひとつない。",
+          "vi": "Đây không phải là máu của tôi mà là của đối thủ. Trên người tôi không có một vết thương nào cả.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 相手",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 76715; translation 1706018",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1596,11 +1596,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v029-001",
-          "ja": "知り合いますは日本語を勉強しています。",
-          "vi": "Quen biết đang học tiếng Nhật.",
+          "ja": "毎朝、家を出る前に知り合います。",
+          "vi": "Mỗi sáng, trước khi ra khỏi nhà, tôi quen biết.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 知り合います",
+          "source_detail": "JpStudy-authored verb context for 知り合います",
           "license": "JpStudy authored"
         }
       ]
@@ -1651,13 +1651,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v030-001",
-          "ja": "化粧は日本語を勉強しています。",
-          "vi": "Trang điểm đang học tiếng Nhật.",
+          "example_id": "tat-93578-vie-8993879",
+          "ja": "彼女は２０分で化粧を済ませた。",
+          "vi": "Cô ấy đã trang điểm xong trong 20 phút.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 化粧",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 93578; translation 8993879",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1708,11 +1708,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v031-001",
-          "ja": "世話をしますは日本語を勉強しています。",
-          "vi": "Chăm sóc đang học tiếng Nhật.",
+          "ja": "世話をしますで学校へ行きます。",
+          "vi": "Tôi đi học bằng chăm sóc.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 世話をします",
+          "source_detail": "JpStudy-authored transport context for 世話をします",
           "license": "JpStudy authored"
         }
       ]
@@ -1763,13 +1763,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v032-001",
-          "ja": "女性は日本語を勉強しています。",
-          "vi": "Nữ giới đang học tiếng Nhật.",
+          "example_id": "tat-5198-vie-8892082",
+          "ja": "男性が好きなのになぜ女性と結婚するの？",
+          "vi": "Cậu thích con trai mà, sao cậu lại kết hôn với một đứa con gái?",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 女性",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 5198; translation 8892082",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1819,13 +1819,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v033-001",
-          "ja": "男性は日本語を勉強しています。",
-          "vi": "Nam giới đang học tiếng Nhật.",
+          "example_id": "tat-5198-vie-8892082",
+          "ja": "男性が好きなのになぜ女性と結婚するの？",
+          "vi": "Cậu thích con trai mà, sao cậu lại kết hôn với một đứa con gái?",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 男性",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 5198; translation 8892082",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1875,13 +1875,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v034-001",
-          "ja": "長生きは日本語を勉強しています。",
-          "vi": "Sống thọ đang học tiếng Nhật.",
+          "example_id": "tat-147285-vie-2652527",
+          "ja": "女王様が長生きされますように。",
+          "vi": "Đức nữ hoàng muôn năm !",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 長生き",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 147285; translation 2652527",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1931,13 +1931,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v035-001",
-          "ja": "理由は日本語を勉強しています。",
-          "vi": "Lý do đang học tiếng Nhật.",
+          "example_id": "tat-74642-vie-8956961",
+          "ja": "サタンのこうした行いを神がなぜ許しているのか、その理由は聖書のヨブ記で説明されている。",
+          "vi": "Lý do vì sao Chúa tha thứ cho những hành động đó của Satan được lý giải trong sách Job của Kinh Thánh.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 理由",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 74642; translation 8956961",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -1987,13 +1987,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v036-001",
-          "ja": "関係は日本語を勉強しています。",
-          "vi": "Quan hệ đang học tiếng Nhật.",
+          "example_id": "tat-75158-vie-8987380",
+          "ja": "中学生が英語を学ぶ際の最難関の一つが関係代名詞です。",
+          "vi": "Một trong những rào cản lớn nhất của học sinh cấp hai trong việc học tiếng Anh là các \"Đại từ quan hệ\".",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 関係",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 75158; translation 8987380",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -2043,11 +2043,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v037-001",
-          "ja": "音がしますは日本語を勉強しています。",
-          "vi": "Co tieng đang học tiếng Nhật.",
+          "ja": "受付で「音がします」と丁寧に言いました。",
+          "vi": "Ở quầy tiếp tân, tôi nói lịch sự: \"co tieng\".",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 音がします",
+          "source_detail": "JpStudy-authored polite-phrase context for 音がします",
           "license": "JpStudy authored"
         }
       ]
@@ -2098,11 +2098,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v038-001",
-          "ja": "傘は日本語を勉強しています。",
-          "vi": "O đang học tiếng Nhật.",
+          "ja": "資料には傘の説明が載っています。",
+          "vi": "Trong tài liệu có phần giải thích về o.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 傘",
+          "source_detail": "JpStudy-authored noun/context sentence for 傘",
           "license": "JpStudy authored"
         }
       ]
@@ -2152,13 +2152,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v039-001",
-          "ja": "怖いは日本語を勉強しています。",
-          "vi": "Dang so đang học tiếng Nhật.",
+          "example_id": "tat-157505-vie-8947124",
+          "ja": "私は熊が怖い。",
+          "vi": "Tôi sợ gấu.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 怖い",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 157505; translation 8947124",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -2211,11 +2211,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v040-001",
-          "ja": "天気予報は日本語を勉強しています。",
-          "vi": "Du bao thoi tiet đang học tiếng Nhật.",
+          "ja": "資料には天気予報の説明が載っています。",
+          "vi": "Trong tài liệu có phần giải thích về du bao thoi tiet.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 天気予報",
+          "source_detail": "JpStudy-authored noun/context sentence for 天気予報",
           "license": "JpStudy authored"
         }
       ]
@@ -2267,13 +2267,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "ex-n4_l47_v041-001",
-          "ja": "化粧品は日本語を勉強しています。",
-          "vi": "My pham đang học tiếng Nhật.",
+          "example_id": "tat-188203-vie-8939519",
+          "ja": "化粧品にかぶれました。",
+          "vi": "Tôi bị viêm da do mỹ phẩm.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 化粧品",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 188203; translation 8939519",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -2323,11 +2323,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v042-001",
-          "ja": "喜びますは日本語を勉強しています。",
-          "vi": "Vui mừng đang học tiếng Nhật.",
+          "ja": "毎朝、家を出る前に喜びます。",
+          "vi": "Mỗi sáng, trước khi ra khỏi nhà, tôi Vui mừng.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 喜びます",
+          "source_detail": "JpStudy-authored verb context for 喜びます",
           "license": "JpStudy authored"
         }
       ]
@@ -2378,11 +2378,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v043-001",
-          "ja": "驚きますは日本語を勉強しています。",
-          "vi": "Ngạc nhiên đang học tiếng Nhật.",
+          "ja": "毎朝、家を出る前に驚きます。",
+          "vi": "Mỗi sáng, trước khi ra khỏi nhà, tôi Ngạc nhiên.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 驚きます",
+          "source_detail": "JpStudy-authored verb context for 驚きます",
           "license": "JpStudy authored"
         }
       ]
@@ -2433,11 +2433,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v044-001",
-          "ja": "怒りますは日本語を勉強しています。",
-          "vi": "Tức giận đang học tiếng Nhật.",
+          "ja": "毎朝、家を出る前に怒ります。",
+          "vi": "Mỗi sáng, trước khi ra khỏi nhà, tôi Tức giận.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored pronoun context for 怒ります",
+          "source_detail": "JpStudy-authored verb context for 怒ります",
           "license": "JpStudy authored"
         }
       ]

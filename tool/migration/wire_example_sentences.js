@@ -76,7 +76,7 @@ function buildExampleForEntry(entry, options = {}) {
   if (!vocabId || !term || !meaningVi) return null;
 
   const tatoeba = findTatoebaRow(
-    { term, reading: text(lemma.reading) },
+    { vocabId, term, reading: text(lemma.reading) },
     options.tatoebaIndex,
   );
   if (tatoeba) {
@@ -116,11 +116,13 @@ function buildExampleForEntry(entry, options = {}) {
 function buildTatoebaIndex(rows) {
   const index = new Map();
   for (const row of rows) {
+    const vocabId = text(row.vocabId || row.vocab_id);
     const term = text(row.term);
     const reading = text(row.reading);
     if (!term || !text(row.ja) || !text(row.vi)) continue;
     const normalized = {
       ...row,
+      vocabId,
       term,
       reading,
       ja: text(row.ja),
@@ -128,14 +130,18 @@ function buildTatoebaIndex(rows) {
       sentenceId: row.sentenceId ?? row.sentence_id ?? row.id,
       translationId: row.translationId ?? row.translation_id ?? row.transId,
     };
-    index.set(term, normalized);
-    if (reading) index.set(reading, normalized);
+    if (vocabId && !index.has(`vocab:${vocabId}`)) {
+      index.set(`vocab:${vocabId}`, normalized);
+    }
+    if (!index.has(`term:${term}`)) {
+      index.set(`term:${term}`, normalized);
+    }
   }
   return index;
 }
 
 function findTatoebaRow(lemma, index = new Map()) {
-  return index.get(lemma.term) || index.get(lemma.reading) || null;
+  return index.get(`vocab:${lemma.vocabId}`) || index.get(`term:${lemma.term}`) || null;
 }
 
 function authoredContextualExample(entry) {
@@ -153,7 +159,7 @@ function authoredContextualExample(entry) {
   const exact = exactContext(term);
   if (exact) return exact;
 
-  if (tags.includes('pronoun') || /(i|we|you|tôi|chúng tôi|bạn|pronoun)/i.test(haystack)) {
+  if (isPronounEntry(entry)) {
     return {
       ja: `${term}は日本語を勉強しています。`,
       vi: `${capitalizeVi(meaningVi)} đang học tiếng Nhật.`,
@@ -167,10 +173,17 @@ function authoredContextualExample(entry) {
       sourceDetail: `JpStudy-authored people/role context for ${term}`,
     };
   }
+  if (/い$/.test(term)) {
+    return {
+      ja: `今日は少し${term}です。`,
+      vi: `Hôm nay hơi ${meaningVi}.`,
+      sourceDetail: `JpStudy-authored adjective context for ${term}`,
+    };
+  }
   if (/(school|university|hospital|station|bank|company|office|hotel|place|trường|đại học|bệnh viện|ga|ngân hàng|công ty|văn phòng|khách sạn|địa phương)/i.test(haystack)) {
     return {
-      ja: `午後、${term}で友だちに会います。`,
-      vi: `Chiều nay tôi gặp bạn ở ${meaningVi}.`,
+      ja: `${term}の入口で友だちに会いました。`,
+      vi: `Tôi đã gặp bạn ở lối vào ${meaningVi}.`,
       sourceDetail: `JpStudy-authored place context for ${term}`,
     };
   }
@@ -190,8 +203,8 @@ function authoredContextualExample(entry) {
   }
   if (/(money|price|cost|business|meeting|work|company|tiền|giá|chi phí|kinh doanh|cuộc họp|công việc)/i.test(haystack)) {
     return {
-      ja: `会議で${term}について話しました。`,
-      vi: `Trong cuộc họp, chúng tôi bàn về ${meaningVi}.`,
+      ja: `会議では${term}が重要な論点になりました。`,
+      vi: `Trong cuộc họp, ${meaningVi} trở thành điểm cần bàn kỹ.`,
       sourceDetail: `JpStudy-authored work/business context for ${term}`,
     };
   }
@@ -204,8 +217,15 @@ function authoredContextualExample(entry) {
   }
   if (/します$/.test(term)) {
     return {
-      ja: `明日の会議で${term}。`,
-      vi: `Ngày mai tôi sẽ ${meaningVi} trong cuộc họp.`,
+      ja: `受付で「${term}」と丁寧に言いました。`,
+      vi: `Ở quầy tiếp tân, tôi nói lịch sự: "${meaningVi}".`,
+      sourceDetail: `JpStudy-authored polite-phrase context for ${term}`,
+    };
+  }
+  if (/する$/.test(term)) {
+    return {
+      ja: `週末に${term}予定です。`,
+      vi: `Cuối tuần tôi dự định ${meaningVi}.`,
       sourceDetail: `JpStudy-authored suru-verb context for ${term}`,
     };
   }
@@ -218,23 +238,57 @@ function authoredContextualExample(entry) {
   }
   if (/[うくぐすつぬぶむる]$/.test(term)) {
     return {
-      ja: `駅まで急いで${term}。`,
-      vi: `Tôi ${meaningVi} thật nhanh đến ga.`,
+      ja: `彼は最後まで${term}姿勢を見せました。`,
+      vi: `Anh ấy cho thấy thái độ ${meaningVi} đến cùng.`,
       sourceDetail: `JpStudy-authored dictionary-verb context for ${term}`,
     };
   }
-  if (/い$/.test(term)) {
-    return {
-      ja: `今日は${term}朝です。`,
-      vi: `Sáng nay thật ${meaningVi}.`,
-      sourceDetail: `JpStudy-authored adjective context for ${term}`,
-    };
-  }
   return {
-    ja: `ニュースで${term}について読みました。`,
-    vi: `Tôi đọc tin tức về ${meaningVi}.`,
+    ja: `資料には${term}の説明が載っています。`,
+    vi: `Trong tài liệu có phần giải thích về ${meaningVi}.`,
     sourceDetail: `JpStudy-authored noun/context sentence for ${term}`,
   };
+}
+
+function isPronounEntry(entry) {
+  const lemma = asObject(entry.lemma);
+  const term = text(lemma.term);
+  const tags = Array.isArray(entry.tags)
+    ? entry.tags.map((tag) => text(tag).toLowerCase())
+    : [];
+  if (tags.includes('pronoun')) return true;
+  const sense = asObject(entry.sense);
+  const meaningEn = text(sense.meaningEn || sense.meaning_en).toLowerCase();
+  const meaningVi = text(sense.meaningVi || sense.meaning_vi).toLowerCase();
+  const compactEn = meaningEn.replace(/\([^)]*\)/g, '').trim();
+  if (
+    inferredPronounTerms().has(term) &&
+    ['i', 'me', 'we', 'us', 'you', 'he', 'she', 'they', 'them', 'everyone', 'that person'].includes(compactEn)
+  ) {
+    return true;
+  }
+  const firstVi = meaningVi.split(/[;,/]+/)[0]?.trim() ?? '';
+  return inferredPronounTerms().has(term) && ['tôi', 'chúng tôi', 'bạn', 'người kia', 'vị kia', 'mọi người'].includes(firstVi);
+}
+
+function inferredPronounTerms() {
+  return new Set([
+    '私',
+    '私たち',
+    'あなた',
+    'あの人',
+    'あの方',
+    '皆さん',
+    '誰',
+    '俺',
+    '貴女',
+    '君',
+    '皆',
+    '僕',
+    'この～',
+    'その～',
+    'あの～',
+  ]);
 }
 
 function exactContext(term) {
@@ -261,6 +315,9 @@ function exactContext(term) {
     '何歳': ['妹は何歳ですか。', 'Em gái bạn bao nhiêu tuổi?'],
     'はい': ['はい、私は学生です。', 'Vâng, tôi là học sinh.'],
     'いいえ': ['いいえ、医者ではありません。', 'Không, tôi không phải bác sĩ.'],
+    'この～': ['この本は私のです。', 'Quyển sách này là của tôi.'],
+    'その～': ['その辞書は先生のです。', 'Cuốn từ điển đó là của giáo viên.'],
+    'あの～': ['あの建物は大学です。', 'Tòa nhà kia là trường đại học.'],
   };
   const row = rows[term];
   if (!row) return null;

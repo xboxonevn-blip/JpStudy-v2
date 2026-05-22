@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ます stem + ようもない",
       "meaning": "Ý nghĩa: Dùng để nói hoàn toàn không có cách nào để làm X",
-      "usage": "Cách dùng: Với Verb ようもない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ようもない, lõi よう là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ます stem + ようもない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ようもない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn ようもない vào thân ます để nói ngay cả một cách làm cũng không tồn tại: 解きようもない, 直しようもない.",
+      "etymology": "Gốc rễ: よう là 様, “cách/dạng”; も trong ようもない nhấn “ngay cả cách ấy cũng không”. Mẫu này làm bất khả năng mạnh hơn ようがない trong nhiều ngữ cảnh.",
+      "hanVietBridge": "様 là Hán-Việt “dạng”. Verb ようもない là “đến một dạng/cách để V cũng không có”, nên nghĩa là hoàn toàn vô phương.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ようもない nhấn bế tắc rất mạnh. Khác ようがない, chữ も làm cảm giác “một cách cũng không”.",
       "crossLinks": [
         {
-          "pattern": "Verb よう",
-          "contrast": "Verb ようもない cần đọc theo chức năng riêng của mẫu; Verb よう có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ようがない",
+          "contrast": "Khác Verb ようもない: ようがない là không có cách, còn ようもない nhấn cả một cách cũng không có."
+        },
+        {
+          "pattern": "Verb すべがない",
+          "contrast": "So với すべがない văn viết, ようもない gắn trực tiếp vào thân động từ để nói vô phương V."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Time expression + ぶり",
       "meaning": "Ý nghĩa: Dùng sau mốc thời gian để nói đã lâu kể từ lần cuối làm hoặc xảy ra việc gì",
-      "usage": "Cách dùng: Với ～ぶり, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ぶり, lõi ～ぶり là mảnh giữ nhịp ngữ pháp. Hãy tách Time expression + ぶり thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ぶり không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt khoảng thời gian trước ぶり để nói sau ngần ấy thời gian mới lại xảy ra/làm việc đó: 三年ぶりに会う, 十年ぶりの雪.",
+      "etymology": "Gốc rễ: ぶり ở đây là hậu tố chỉ trạng thái sau một khoảng cách thời gian. Nó nhìn từ lần trước tới lần hiện tại, không chỉ đo độ dài.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “tái sau N thời gian”. ～ぶり luôn có lần trước bị ngầm hiểu và lần hiện tại vừa quay lại.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～ぶり không phải “trong N thời gian”. Khác 間, ぶり cần một sự kiện trở lại sau khoảng vắng.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～ぶり cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Time expression + 間",
+          "contrast": "Khác ～ぶり: 間 đo khoảng thời gian kéo dài, còn ぶり nói sự kiện xảy ra lại sau khoảng đó."
+        },
+        {
+          "pattern": "Time expression + 以来",
+          "contrast": "So với 以来 là kể từ mốc, ぶり nhấn lần trở lại sau khoảng cách."
         }
       ],
       "fallbackReference": {

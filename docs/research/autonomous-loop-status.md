@@ -2877,3 +2877,9 @@
 - Fixed two `〜といったらない` examples so nominalized degree phrases attach without stray `だ`.
 - Global Directive E validator progress is now `210/1123`; next failure starts at `grammar:n1:grammar_n1_21:004`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 027
+- Re-authored N1 rows `〜とすると`, `〜とすれば`, `〜となったら`, `〜となると`, and `〜となれば`.
+- Separated assumption-for-inference, possibility-setting, situation-transition, natural consequence, and threshold-condition readings.
+- Global Directive E validator progress is now `215/1123`; next failure starts at `grammar:n1:grammar_n1_21:009`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

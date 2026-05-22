@@ -3129,3 +3129,9 @@
 - Repaired examples for skipped exam study, formal `の至り`, and `に越したことはない` adjective/noun attachment.
 - Global Directive E validator progress is now `420/1123`; next failure starts at `grammar:n1:grammar_n1_67:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 069
+- Re-authored N1 rows `Noun はいざ知らず`, `Verb よう`, `～に難くない`, `Noun はおろか～すら`, and `Verb ようか Verbるまいか`.
+- Repaired one `はおろか～すら` example so the lower-bound noun explicitly uses `すら`.
+- Global Directive E validator progress is now `425/1123`; next failure starts at `grammar:n1:grammar_n1_69:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (dictionary or negative form) + ように (する / etc.)",
       "meaning": "Ý nghĩa: Dùng để nói cách thức làm một việc hoặc mục đích/định hướng hành động, tùy cấu trúc đi kèm như ようにする",
-      "usage": "Cách dùng: Với Verb よう, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb よう, lõi よう là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (dictionary or negative form) + ように (する / etc.) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb よう không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng Verb ように khi muốn đưa một hành động/trạng thái thành đích, cách thức, hoặc tiêu chuẩn: 忘れないようにする, 彼が言ったように.",
+      "etymology": "Gốc rễ: よう bắt nguồn từ 様, nghĩa là dáng vẻ/cách thức. に biến “dáng/cách ấy” thành trạng ngữ, nên Verb ように nối hành động với mục tiêu hoặc cách làm.",
+      "hanVietBridge": "様 là Hán-Việt “dạng”. Verb ように là “theo dạng/cách để V”, vì vậy tiếng Việt tự nhiên đổi theo ngữ cảnh: để, sao cho, như cách.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ように không phải lúc nào cũng dịch “để”. Khác ために nhấn mục đích chủ ý, ように thường nhìn về trạng thái đạt được hoặc cách thức.",
       "crossLinks": [
         {
+          "pattern": "Verb ために",
+          "contrast": "Khác Verb ように: ために thường dùng với mục đích chủ ý, còn ように hay dùng cho trạng thái/mục tiêu cần đạt."
+        },
+        {
           "pattern": "Verb ようか Verbるまいか",
-          "contrast": "Verb よう cần đọc theo chức năng riêng của mẫu; Verb ようか Verbるまいか có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "So với ようか...まいか là phân vân có làm hay không, Verb ように chỉ hướng hành động về một cách/trạng thái."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + に難くない (commonly with 想像する, 理解する, 察する, etc.)",
       "meaning": "Ý nghĩa: Dùng để nói không khó để tưởng tượng, hiểu hoặc đoán ra điều gì",
-      "usage": "Cách dùng: Với ～に難くない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に難くない, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + に難くない (commonly with 想像する, 理解する, 察する, etc.) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に難くない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn に難くない sau động từ tri nhận như 想像する, 理解する, 察する để nói điều đó không khó hình dung/hiểu/đoán trong văn trang trọng.",
+      "etymology": "Gốc rễ: 難い nghĩa là khó làm; ない phủ định độ khó. に đánh dấu việc tri nhận làm điểm đánh giá, nên 想像に難くない là “không khó ở việc tưởng tượng”.",
+      "hanVietBridge": "難 là Hán-Việt “nan”. ～に難くない = “bất nan ở việc V”, tức không khó để hiểu/tưởng tượng/chẩn đoán điều đang nói.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～に難くない nghe như văn bình luận. Khác 難しくない đời thường, に難くない thường đi với 想像・理解・察する để suy luận từ dấu hiệu.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～に難くない cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb にくい",
+          "contrast": "Khác ～に難くない: にくい nói việc khó làm trong đời thường, còn に難くない phủ định độ khó trong suy luận/trang trọng."
+        },
+        {
+          "pattern": "難しい",
+          "contrast": "So với 難しい/難しくない, に難くない là mẫu văn viết gắn trực tiếp với hành vi tri nhận."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun1 はおろか, Noun2 すら/さえ ～",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh “đừng nói đến A, ngay cả B cũng",
-      "usage": "Cách dùng: Với Noun はおろか～すら, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun はおろか～すら, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 はおろか, Noun2 すら/さえ ～ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun はおろか～すら không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt A là mức cao/đáng nói trước はおろか, rồi đặt B là mức tối thiểu trước すら/さえ để nhấn rằng ngay cả B cũng không/khó.",
+      "etymology": "Gốc rễ: おろか mang ý “chưa cần nói tới”. は gác A ra ngoài bàn luận; すら/さえ kéo B xuống mức tối thiểu, làm câu thành thang nhấn mạnh.",
+      "hanVietBridge": "Cầu Hán-Việt: đọc như “A bất cập luận, chí B cũng...”. Noun はおろか～すら buộc A và B cùng nằm trên một thang mức độ.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun はおろか～すら cần B thấp hơn A. Khác まで có thể mở rộng bất ngờ, すら nhấn mức tối thiểu mà vẫn không đạt.",
       "crossLinks": [
         {
           "pattern": "Noun はおろか～も",
-          "contrast": "Noun はおろか～すら cần đọc theo chức năng riêng của mẫu; Noun はおろか～も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác Noun はおろか～すら: ～も trung tính hơn, còn すら/さえ nhấn “ngay cả mức tối thiểu”."
+        },
+        {
+          "pattern": "Noun はおろか～まで",
+          "contrast": "So với ～まで mở rộng tới mức bất ngờ, ～すら thường dùng để nói mức thấp nhất cũng không đạt."
         }
       ],
       "fallbackReference": {

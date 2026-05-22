@@ -2578,3 +2578,9 @@
 - Minna N5 Bài 1 `私` now uses a Tatoeba CC-BY example instead of the old classroom template.
 - Added content/user-lesson repair guards so stale local installs at vocab seed revision 5 or 6 are reseeded when template example fragments remain.
 - Local Playwright release proof: Minna N5 Bài 1 `私` context/flip shows `私の番？` / `Đến lượt tôi chưa?`; no old `Trong giờ học...` template remains. Evidence: `docs/research/qa-live-2026-05-22-example25-minna-card.png`.
+
+## 2026-05-22 Route acceptance + foundation chip follow-up
+- Re-ran default local release route matrix against `http://127.0.0.1:5175` after the #25 batch: N4-N1 core routes passed with no N5 fallback.
+- Found a focused route-smoke regression: search proof was checking a desktop-wide-only label, and a long foundation status chip overflowed by 2.7px in bounded content.
+- Fixed `AppChip` to truncate long labels inside finite constraints and added a narrow-chip regression test.
+- Gates passed: focused analyzer, foundation/route smoke tests, full route/exam focused group, Node example/content/Phase-G validators, `flutter build web --release`, and `docs/research/local-route-matrix-2026-05-22.md`.

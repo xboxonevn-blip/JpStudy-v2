@@ -84,4 +84,23 @@ void main() {
     expect(find.byType(AppButton), findsOneWidget);
     expect(find.byType(AppIcon), findsOneWidget);
   });
+
+  testWidgets('AppChip truncates long labels inside narrow constraints', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      _wrap(
+        const SizedBox(
+          width: 140,
+          child: AppChip(
+            icon: Icons.timer_rounded,
+            label: 'Very long status label that must not overflow',
+          ),
+        ),
+      ),
+    );
+
+    expect(tester.takeException(), isNull);
+    expect(find.byType(AppChip), findsOneWidget);
+  });
 }

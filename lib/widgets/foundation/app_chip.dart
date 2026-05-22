@@ -19,32 +19,44 @@ class AppChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final palette = context.appPalette;
     final colors = _colorsFor(palette);
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacingTokens.md,
-        vertical: AppSpacingTokens.sm,
+    final labelText = Text(
+      label,
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
+      softWrap: false,
+      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+        color: colors.$2,
+        fontWeight: FontWeight.w800,
       ),
-      decoration: BoxDecoration(
-        color: colors.$1,
-        borderRadius: BorderRadius.circular(AppRadiusTokens.pill),
-        border: Border.all(color: colors.$2.withValues(alpha: 0.18)),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (icon != null) ...[
-            Icon(icon, size: 15, color: colors.$2),
-            const SizedBox(width: AppSpacingTokens.xs),
-          ],
-          Text(
-            label,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: colors.$2,
-              fontWeight: FontWeight.w800,
-            ),
+    );
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacingTokens.md,
+            vertical: AppSpacingTokens.sm,
           ),
-        ],
-      ),
+          decoration: BoxDecoration(
+            color: colors.$1,
+            borderRadius: BorderRadius.circular(AppRadiusTokens.pill),
+            border: Border.all(color: colors.$2.withValues(alpha: 0.18)),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (icon != null) ...[
+                Icon(icon, size: 15, color: colors.$2),
+                const SizedBox(width: AppSpacingTokens.xs),
+              ],
+              if (constraints.maxWidth.isFinite)
+                Flexible(child: labelText)
+              else
+                labelText,
+            ],
+          ),
+        );
+      },
     );
   }
 

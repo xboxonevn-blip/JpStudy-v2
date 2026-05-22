@@ -3105,3 +3105,9 @@
 - Repaired malformed `なくもない` examples and tightened `すまない`/policy examples around duty and non-dependence.
 - Global Directive E validator progress is now `400/1123`; next failure starts at `grammar:n1:grammar_n1_61:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 065
+- Re-authored N1 rows `Verb ないまでも`, `～なら～なりに`, `Noun のごとき Noun`, `Verb ないものだろうか`, and `～には及ばない`.
+- Repaired one `ないまでも` example that had drifted into `にしても`.
+- Global Directive E validator progress is now `405/1123`; next failure starts at `grammar:n1:grammar_n1_62:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

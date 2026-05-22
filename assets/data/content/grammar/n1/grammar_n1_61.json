@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ない form + までも",
       "meaning": "Ý nghĩa: Dùng để nói dù chưa đến mức X, nhưng ít nhất cũng đạt mức gần đó hoặc có điều tương tự",
-      "usage": "Cách dùng: Với Verb ないまでも, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ないまでも, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ない form + までも thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ないまでも không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt mức cao/đích lý tưởng ở Verb-ないまでも, rồi nêu mức thấp hơn nhưng vẫn đáng kể ở vế sau. Nghĩa là “dù chưa đến mức V, ít nhất cũng...”.",
+      "etymology": "Gốc rễ: ない phủ định việc đạt tới hành động/mức V; まで là “đến tận mức”; も thêm sắc thái nhượng bộ. Verb ないまでも vì vậy dựng một vạch cao rồi lùi xuống mức tối thiểu chấp nhận được.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “vị chí cực điểm” - chưa tới mức cao nhất. 全てを理解しないまでも là chưa hiểu hết, nhưng vẫn cần nắm phần cơ bản.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ないまでも luôn có hai bậc thang. Khác までもない là “không cần tới mức làm”, ないまでも là “chưa tới mức đó, nhưng vẫn có mức dưới”.",
       "crossLinks": [
         {
           "pattern": "Verbる までもない",
-          "contrast": "Verb ないまでも cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác Verb ないまでも: までもない phủ nhu cầu làm đến mức V, còn ないまでも thừa nhận chưa đạt V nhưng vẫn có mức thấp hơn."
+        },
+        {
+          "pattern": "Verb なくても",
+          "contrast": "So với なくても trung tính, ないまでも đặt ra một thang mức độ rõ ràng hơn."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun/Adjective + なら + (same Noun/Adjective) + なりに",
       "meaning": "Ý nghĩa: Dùng để nói nếu là X thì có cách, giá trị hoặc vấn đề theo kiểu của X",
-      "usage": "Cách dùng: Với ～なら～なりに, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～なら～なりに, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun/Adjective + なら + (same Noun/Adjective) + なりに thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～なら～なりに không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: lặp cùng Noun/Adjective theo XならXなりに để nói “nếu là X thì theo cách/điều kiện riêng của X”. Sắc thái thường là chấp nhận giới hạn mà vẫn nhìn thấy giá trị.",
+      "etymology": "Gốc rễ: なら đặt điều kiện “nếu là X”; なりに mang ý “theo đúng dạng/mức của X”; に biến nó thành cách thức. XならXなりに nghĩa là đi theo con đường vừa với bản chất X.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “tùy phận/tùy cách”. 小さいなら小さいなりに không chê nhỏ, mà nói cái nhỏ có cách vui riêng của nó.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～なら～なりに có lòng rộng lượng trong câu. Khác それなりに chỉ “ở mức tương ứng”, dạng lặp XならXなりに làm rõ điều kiện X đang được chấp nhận.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～なら～なりに cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "それなりに",
+          "contrast": "Khác ～なら～なりに: それなりに nói mức tương ứng chung, còn XならXなりに nêu rõ điều kiện X và cách riêng của X."
+        },
+        {
+          "pattern": "Noun なりとも",
+          "contrast": "So với なりとも là mức tối thiểu “dù chỉ N”, なりに là cách thức phù hợp với chính X."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun1 + のごとき + Noun2",
       "meaning": "Ý nghĩa: Dùng để so sánh danh từ phía sau với Noun theo nghĩa “như”, “tựa như”",
-      "usage": "Cách dùng: Với Noun のごとき Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun のごとき Noun, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 + のごとき + Noun2 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun のごとき Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt hình ảnh so sánh ở Noun1 のごとき trước danh từ chính Noun2. Mẫu văn chương/trang trọng hơn のような, thường tạo cảm giác mạnh hoặc cổ kính: 神のごとき存在.",
+      "etymology": "Gốc rễ: ごとき viết 如き, dạng cổ của “như/tựa như”. の nối hình ảnh so sánh Noun1 với Noun2, còn き làm cụm ấy bổ nghĩa cho danh từ phía sau.",
+      "hanVietBridge": "如 là Hán-Việt “như”. Noun のごとき Noun vì vậy có thể nhớ là “N2 như N1”, nhưng giọng văn trang trọng hơn “như” hằng ngày.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のごとき Noun không chỉ so sánh, nó nâng tông văn lên. Khác のような trung tính, ごとき làm câu nghe như văn viết, diễn văn, hoặc miêu tả mạnh.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "Noun のごとき Noun cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun のような Noun",
+          "contrast": "Khác Noun のごとき Noun: のような trung tính và thông dụng hơn, のごとき cổ/trang trọng hơn."
+        },
+        {
+          "pattern": "Noun みたいな Noun",
+          "contrast": "So với みたいな hội thoại, のごとき thuộc văn viết và tạo sắc thái nghiêm hoặc cường điệu."
         }
       ],
       "fallbackReference": {

@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-negative (often negative potential) + ものだろうか",
       "meaning": "Ý nghĩa: Dùng để bày tỏ mong muốn hoặc trăn trở “không có cách nào để",
-      "usage": "Cách dùng: Với Verb ないものだろうか, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ないものだろうか, lõi もの là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-negative (often negative potential) + ものだろうか thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ないものだろうか không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng dạng phủ định, thường là phủ định khả năng như 解決できない, rồi thêm ものだろうか để bày tỏ mong có cách. Câu không chỉ hỏi thông tin mà còn có tiếng thở dài hy vọng.",
+      "etymology": "Gốc rễ: もの danh hóa khả năng/sự việc như một “điều”; だろうか là tự hỏi mềm. Verb ないものだろうか ghép phủ định với tự vấn, tạo nghĩa “liệu không có cách V sao?”.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “khả hữu chăng?”. 解決できないものだろうか là mong tìm khả năng giải quyết, không phải khẳng định là không giải quyết được.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ないものだろうか có đôi mắt đang tìm lối ra. Khác ないかな thân mật hơn, ないものだろうか trang trọng và trăn trở hơn.",
       "crossLinks": [
         {
-          "pattern": "Verbる ものとする",
-          "contrast": "Verb ないものだろうか cần đọc theo chức năng riêng của mẫu; Verbる ものとする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ないかな",
+          "contrast": "Khác Verb ないものだろうか: ないかな thân mật/gọn, còn ないものだろうか trăn trở và trang trọng hơn."
+        },
+        {
+          "pattern": "Verb ことはできないだろうか",
+          "contrast": "So với ことはできないだろうか hỏi khả năng trực tiếp, ないものだろうか thêm sắc thái mong mỏi."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + には及ばない",
       "meaning": "Ý nghĩa: Dùng để nói không cần phải làm đến mức X, hoặc X là không cần thiết",
-      "usage": "Cách dùng: Với ～には及ばない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～には及ばない, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + には及ばない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～には及ばない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt Verb-dictionary form trước には及ばない để nói không cần đi xa đến mức làm V. Mẫu trang trọng, hay dùng để từ chối lịch sự hoặc hạ mức xử lý: 心配するには及ばない.",
+      "etymology": "Gốc rễ: 及ぶ là “vươn tới/đạt tới”; ない phủ định việc chạm tới mức đó. には đánh dấu hành động V như một điểm xa trên thang mức độ, rồi nói không cần vươn tới điểm ấy.",
+      "hanVietBridge": "及 là Hán-Việt “cập” trong “đề cập/đạt cập”: chạm tới. ～には及ばない nghĩa là chưa cần chạm tới mức V, nên dịch “không cần đến mức...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～には及ばない là bàn tay kéo bạn lùi khỏi phản ứng quá mức. Khác までもない rất gần nghĩa, には及ばない trang trọng và lịch sự hơn.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～には及ばない cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verbる までもない",
+          "contrast": "Khác ～には及ばない chủ yếu ở sắc thái: までもない thẳng hơn, には及ばない trang trọng/lịch sự hơn."
+        },
+        {
+          "pattern": "Verbる 必要はない",
+          "contrast": "So với 必要はない trung tính, には及ばない gợi hành động V là mức quá xa hoặc quá nặng."
         }
       ],
       "fallbackReference": {

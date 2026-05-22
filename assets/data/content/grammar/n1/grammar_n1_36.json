@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ますstem + こそすれ、(絶対に)～ない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh “có thể làm X, nhưng tuyệt đối không làm Y”",
-      "usage": "Cách dùng: Với Verb こそすれ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb こそすれ, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ますstem + こそすれ、(絶対に)～ない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb こそすれ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau thân ます để thừa nhận X rất có thể xảy ra, rồi vế sau phủ định mạnh Y. X và Y thường là hai hướng trái nhau.",
+      "etymology": "Gốc cấu trúc: こそ là trợ từ nhấn mạnh “chính là”, すれ là dạng cổ/giả định của する. Trong Verb こそすれ, người nói kéo X lên làm lựa chọn duy nhất có thể, rồi khóa Y bằng phủ định.",
+      "hanVietBridge": "こそ = chính/đúng là; すれ nối sang nhượng bộ. 助けこそすれ = có giúp thì có, chứ...",
+      "humanMoment": "Lưu ý từ Dr. Linh: こそすれ luôn cần một vế bị gạt ra. Nếu câu chỉ có X mà không bác Y, người học chưa nghe được lưỡi dao của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb こそすれ cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun こそすれ",
+          "contrast": "Khác ở hình thái đứng trước: Verb こそすれ dùng thân ます, còn Noun こそすれ nhấn danh từ rồi bác hướng khác."
+        },
+        {
+          "pattern": "〜こそあれ",
+          "contrast": "こそあれ thừa nhận một trạng thái rồi chuyển ý; こそすれ thường đi với hành động X đối lập Y phủ định."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + といったらありはしない / な-Adjective + といったらありはしない",
       "meaning": "Ý nghĩa: Dùng để cảm thán mức độ cực kỳ mạnh của một trạng thái, thường là tiêu cực",
-      "usage": "Cách dùng: Với ～といったらありはしない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～といったらありはしない, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + といったらありはしない / な-Adjective + といったらありはしない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～といったらありはしない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng sau danh từ hoá hoặc tính từ na để cảm thán mức độ cực đoan, thường là quá tốt, quá tệ, quá khó chịu hoặc quá đáng.",
+      "etymology": "Gốc cấu trúc: といったら là “nếu nói đến X”, ありはしない là phủ định nhấn mạnh “không hề có”. Cả cụm đẩy X lên mức “nói ra cũng không có gì sánh/không tả nổi”.",
+      "hanVietBridge": "言う = nói, ある = có. 美しさといったらありはしない = nói đến vẻ đẹp ấy thì không gì bằng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: といったらありはしない là cảm thán có biên độ lớn. Đừng dùng cho mức “hơi”; nó dành cho cảm giác vượt thước đo bình thường.",
       "crossLinks": [
         {
-          "pattern": "Noun はおろか～も",
-          "contrast": "～といったらありはしない cần đọc theo chức năng riêng của mẫu; Noun はおろか～も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜といったらありゃしない",
+          "contrast": "Khác về khẩu khí: ありはしない trang trọng/viết hơn, còn ありゃしない là văn nói rút gọn."
+        },
+        {
+          "pattern": "〜極まりない",
+          "contrast": "極まりない đánh giá cực độ trực tiếp; といったらありはしない có giọng cảm thán “nói đến X thì không tả nổi”."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun に Noun を重ねて",
       "meaning": "Ý nghĩa: Dùng để diễn tả hành động hoặc trạng thái lặp đi lặp lại, chồng chất theo thời gian",
-      "usage": "Cách dùng: Với Noun に Noun を重ねて, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun に Noun を重ねて, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun に Noun を重ねて thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun に Noun を重ねて không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Lặp cùng một danh từ để nói sự việc tích tụ hết lần này đến lần khác. Thường dùng cho 努力, 練習, 失敗, 苦労, 問題.",
+      "etymology": "Gốc cấu trúc: 重ねる là chồng/lớp lên. Noun に đặt lớp nền đã có, Noun を đưa lớp mới đặt lên; vì cùng danh từ lặp lại, câu tạo hình ảnh chồng chất liên tục.",
+      "hanVietBridge": "重 = trọng/chồng nặng; 重ねる = chồng thêm. 失敗に失敗を重ねて = thất bại chồng thất bại.",
+      "humanMoment": "Lưu ý từ Dr. Linh: に...を重ねて không chỉ là “nhiều”. Nó cho người học thấy từng lớp N được đặt lên nhau đến khi tạo hậu quả.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun に Noun を重ねて cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜を重ねる",
+          "contrast": "Khác dạng thường を重ねる chỉ nói lặp/tích lũy; NにNを重ねて nhấn lớp này chồng lên chính lớp cùng loại."
+        },
+        {
+          "pattern": "Noun ずくめ",
+          "contrast": "ずくめ nói toàn là N trong một trạng thái; に...を重ねて nói quá trình tích tụ qua nhiều lần."
         }
       ],
       "fallbackReference": {

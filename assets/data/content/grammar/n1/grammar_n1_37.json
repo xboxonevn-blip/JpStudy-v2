@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual (non-past) + させられる",
       "meaning": "Ý nghĩa: Dùng để diễn tả bị ép, bị bắt hoặc bị khiến phải làm một việc",
-      "usage": "Cách dùng: Với Verb させられる, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb させられる, lõi Verb させられる là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual (non-past) + させられる thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb させられる không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Chủ ngữ là người bị đặt vào việc phải làm. Tác nhân ép/bắt thường đi với に; sắc thái thường khó chịu hoặc trái ý.",
+      "etymology": "Gốc cấu trúc: させる là sai khiến “làm cho ai làm”, られる là bị động. Ghép lại thành させられる: người nói không tự chọn hành động, mà bị ai/điều gì khiến phải làm.",
+      "hanVietBridge": "させる = khiến làm, られる = bị. 勉強させられる = bị bắt học.",
+      "humanMoment": "Lưu ý từ Dr. Linh: させられる có hai lực cùng lúc: ai đó đẩy hành động tới mình, và mình chịu nó. Dịch “bị bắt” thường đúng vì có cảm giác mất quyền chọn.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb させられる cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜させる",
+          "contrast": "Khác させる: させる nhìn từ người gây hành động; させられる nhìn từ người bị buộc làm."
+        },
+        {
+          "pattern": "〜られる",
+          "contrast": "られる chỉ bị động/khả năng/kính ngữ; させられる thêm tầng sai khiến nên mang nghĩa bị bắt làm."
         }
       ],
       "fallbackReference": {

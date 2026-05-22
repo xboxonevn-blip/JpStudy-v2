@@ -11397,6 +11397,1120 @@
         "映画はどうですか。— 忙しいですから。",
         "何時ですか。— 忙しいですから。"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-form-l1-001",
+      "template_id": "tpl-grammar-n5-054-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn đúng cho người: 先生が ___.",
+      "answer_template": "います",
+      "distractor_strategy": "animate-existence-imasu",
+      "teaching_note": "Người/động vật dùng います.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "います",
+        "あります",
+        "です",
+        "ます"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-form-l1-002",
+      "template_id": "tpl-grammar-n5-054-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn đúng cho vật: 本が ___.",
+      "answer_template": "あります",
+      "distractor_strategy": "inanimate-existence-arimasu",
+      "teaching_note": "Đồ vật dùng あります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "あります",
+        "います",
+        "行きます",
+        "好きです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-054-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "猫がいます nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Có một con mèo.",
+      "distractor_strategy": "existence-meaning",
+      "teaching_note": "います nói sự hiện diện của sinh vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Có một con mèo.",
+        "Mèo là giáo viên.",
+        "Tôi thích mèo.",
+        "Mèo đi học."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-054-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong Nがいます/あります, が đánh dấu gì?",
+      "answer_template": "Người/vật đang tồn tại.",
+      "distractor_strategy": "ga-existing-thing",
+      "teaching_note": "が đưa N ra làm thứ có mặt.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-usage-l3-005",
+      "template_id": "tpl-grammar-n5-054-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: có một cái bàn — 机 / が / あります",
+      "answer_template": "机があります。",
+      "distractor_strategy": "arimasu-production",
+      "teaching_note": "Bàn là vật nên dùng あります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "机",
+        "が",
+        "あります"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-usage-l3-006",
+      "template_id": "tpl-grammar-n5-054-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Có một học sinh.",
+      "answer_template": "学生がいます。",
+      "distractor_strategy": "student-exists-production",
+      "teaching_note": "学生 là người nên dùng います.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-context-l3-007",
+      "template_id": "tpl-grammar-n5-054-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn nhìn thấy chó trong công viên. Câu nào đúng?",
+      "answer_template": "犬がいます。",
+      "distractor_strategy": "dog-context",
+      "teaching_note": "Chó là động vật sống.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "犬がいます。",
+        "犬があります。",
+        "犬がです。",
+        "犬をいます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-context-l2-008",
+      "template_id": "tpl-grammar-n5-054-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nói có sách, không nói sách ở đâu?",
+      "answer_template": "本があります。",
+      "distractor_strategy": "existence-only-context",
+      "teaching_note": "本があります chỉ báo có sách.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本があります。",
+        "本は机にあります。",
+        "机に本があります。",
+        "本を読みます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-054-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: chọn động từ tồn tại đúng cho 花.",
+      "answer_template": "花があります。",
+      "distractor_strategy": "plant-arimasu-analysis",
+      "teaching_note": "L4: cây/hoa dùng あります trong N5.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "花があります。",
+        "花がいます。",
+        "花をあります。",
+        "花にいます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-054-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-054-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_10:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào sai vì dùng あります với người?",
+      "answer_template": "先生があります。",
+      "distractor_strategy": "animate-inanimate-analysis",
+      "teaching_note": "Người không dùng あります trong mẫu tồn tại cơ bản.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "先生があります。",
+        "先生がいます。",
+        "本があります。",
+        "猫がいます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-form-l1-001",
+      "template_id": "tpl-grammar-n5-055-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền địa điểm: 教室 ___ 先生がいます。",
+      "answer_template": "に",
+      "distractor_strategy": "location-ni-existence",
+      "teaching_note": "Nơi tồn tại dùng に.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "に",
+        "で",
+        "を",
+        "と"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-form-l1-002",
+      "template_id": "tpl-grammar-n5-055-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng: trên bàn có sách.",
+      "answer_template": "机の上に本があります。",
+      "distractor_strategy": "place-ni-thing-ga",
+      "teaching_note": "PlaceにThingがあります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "机の上に本があります。",
+        "机の上で本があります。",
+        "本に机の上があります。",
+        "机の上を本があります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-055-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "公園に子どもがいます nghĩa là gì?",
+      "answer_template": "Ở công viên có trẻ em.",
+      "distractor_strategy": "place-has-person-meaning",
+      "teaching_note": "に đánh dấu nơi; が đánh dấu người có mặt.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Ở công viên có trẻ em.",
+        "Trẻ em là công viên.",
+        "Trẻ em đi công viên.",
+        "Công viên thích trẻ em."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-055-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1にN2がいます, N1 là gì?",
+      "answer_template": "Địa điểm/nơi tồn tại.",
+      "distractor_strategy": "place-role-recall",
+      "teaching_note": "N1 trước に là nơi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-usage-l3-005",
+      "template_id": "tpl-grammar-n5-055-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Trong phòng có ghế — 部屋 / に / いす / が / あります",
+      "answer_template": "部屋にいすがあります。",
+      "distractor_strategy": "room-chair-production",
+      "teaching_note": "Nơi + に, vật + が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "部屋",
+        "に",
+        "いす",
+        "が",
+        "あります"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-usage-l3-006",
+      "template_id": "tpl-grammar-n5-055-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Ở trường có giáo viên.",
+      "answer_template": "学校に先生がいます。",
+      "distractor_strategy": "school-teacher-production",
+      "teaching_note": "Giáo viên là người nên います.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-context-l3-007",
+      "template_id": "tpl-grammar-n5-055-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn mô tả ảnh: trên bàn có máy tính. Câu nào hợp?",
+      "answer_template": "机の上にパソコンがあります。",
+      "distractor_strategy": "photo-location-context",
+      "teaching_note": "Vật tồn tại ở nơi dùng に.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "机の上にパソコンがあります。",
+        "机の上でパソコンがあります。",
+        "パソコンを机の上にあります。",
+        "机の上はパソコンです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-context-l2-008",
+      "template_id": "tpl-grammar-n5-055-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào bắt đầu từ nơi rồi nói có gì trong đó?",
+      "answer_template": "教室に学生がいます。",
+      "distractor_strategy": "place-first-context",
+      "teaching_note": "PlaceにEntityが = trong nơi có entity.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "教室に学生がいます。",
+        "学生は教室にいます。",
+        "学生が教室です。",
+        "教室で学生を読みます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-055-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: cần nói “ở thư viện có sách”, không nói “sách ở thư viện”.",
+      "answer_template": "図書館に本があります。",
+      "distractor_strategy": "place-first-analysis",
+      "teaching_note": "L4: bắt đầu từ nơi dùng NにNがあります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "図書館に本があります。",
+        "本は図書館にあります。",
+        "本を図書館で読みます。",
+        "図書館は本です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-055-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-055-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_10:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào sai vì dùng で cho nơi tồn tại?",
+      "answer_template": "教室で先生がいます。",
+      "distractor_strategy": "ni-vs-de-analysis",
+      "teaching_note": "で dùng cho hành động; tồn tại dùng に.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "教室で先生がいます。",
+        "教室に先生がいます。",
+        "教室で勉強します。",
+        "先生は教室にいます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-form-l1-001",
+      "template_id": "tpl-grammar-n5-056-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền đúng: 田中さん ___ 事務所にいます。",
+      "answer_template": "は",
+      "distractor_strategy": "topic-location-ha",
+      "teaching_note": "Người đã biết làm chủ đề với は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "は",
+        "が",
+        "を",
+        "で"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-form-l1-002",
+      "template_id": "tpl-grammar-n5-056-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng: sách ở trên bàn.",
+      "answer_template": "本は机の上にあります。",
+      "distractor_strategy": "known-thing-location",
+      "teaching_note": "Known thingはPlaceにあります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本は机の上にあります。",
+        "本が机の上です。",
+        "本を机の上にあります。",
+        "本は机の上であります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-056-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "先生は教室にいます nghĩa là gì?",
+      "answer_template": "Giáo viên ở trong lớp.",
+      "distractor_strategy": "topic-location-meaning",
+      "teaching_note": "は chọn giáo viên làm chủ đề; に là vị trí.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Giáo viên ở trong lớp.",
+        "Trong lớp có giáo viên.",
+        "Giáo viên là lớp học.",
+        "Giáo viên thích lớp học."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-056-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1はN2にいます, câu trả lời chính là gì?",
+      "answer_template": "N1 đang ở đâu.",
+      "distractor_strategy": "topic-location-recall",
+      "teaching_note": "Mẫu nói vị trí của N1.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-usage-l3-005",
+      "template_id": "tpl-grammar-n5-056-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Mẹ ở nhà — 母 / は / 家 / に / います",
+      "answer_template": "母は家にいます。",
+      "distractor_strategy": "mother-home-production",
+      "teaching_note": "Người dùng います.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "母",
+        "は",
+        "家",
+        "に",
+        "います"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-usage-l3-006",
+      "template_id": "tpl-grammar-n5-056-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Chìa khóa ở trong túi.",
+      "answer_template": "鍵はかばんの中にあります。",
+      "distractor_strategy": "key-bag-production",
+      "teaching_note": "Vật dùng あります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-context-l3-007",
+      "template_id": "tpl-grammar-n5-056-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn được hỏi “田中さんはどこですか”. Câu nào trả lời hợp?",
+      "answer_template": "田中さんは会議室にいます。",
+      "distractor_strategy": "where-answer-context",
+      "teaching_note": "Hỏi vị trí của Tanaka -> TanakaはPlaceにいます.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "田中さんは会議室にいます。",
+        "会議室に田中さんがいます。",
+        "田中さんが好きです。",
+        "会議室で田中さんをします。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-context-l2-008",
+      "template_id": "tpl-grammar-n5-056-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nói vị trí của vật đã biết?",
+      "answer_template": "本は机の上にあります。",
+      "distractor_strategy": "known-object-context",
+      "teaching_note": "は đặt vật đã biết làm chủ đề.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本は机の上にあります。",
+        "机の上に本があります。",
+        "本を読みます。",
+        "机は本です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-056-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: người nghe hỏi “quyển sách ở đâu?”. Chọn câu trả lời đúng điểm nhìn.",
+      "answer_template": "本は机の上にあります。",
+      "distractor_strategy": "topic-vs-place-first-analysis",
+      "teaching_note": "L4: hỏi quyển sách -> dùng 本は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "本は机の上にあります。",
+        "机の上に本があります。",
+        "本が好きです。",
+        "本は先生です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-056-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-056-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_10:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào sai vì hiểu は như “là”?",
+      "answer_template": "猫は部屋にいます = Con mèo ở trong phòng, không phải “mèo là phòng”.",
+      "distractor_strategy": "ha-not-la-analysis",
+      "teaching_note": "L4: は chỉ chủ đề; vị trí nằm ở にいます/あります.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "猫は部屋にいます = Con mèo ở trong phòng, không phải “mèo là phòng”.",
+        "猫は動物です = mèo là động vật.",
+        "部屋に猫がいます = trong phòng có mèo.",
+        "本は机にあります = sách ở bàn."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-form-l1-001",
+      "template_id": "tpl-grammar-n5-057-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền trợ từ liệt kê mở: 本 ___ ノートがあります。",
+      "answer_template": "や",
+      "distractor_strategy": "ya-open-list-form",
+      "teaching_note": "や nối ví dụ trong danh sách mở.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "や",
+        "と",
+        "も",
+        "を"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-form-l1-002",
+      "template_id": "tpl-grammar-n5-057-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu dùng danh sách chưa kể hết.",
+      "answer_template": "机やいすがあります。",
+      "distractor_strategy": "open-list-choice",
+      "teaching_note": "や = A, B chẳng hạn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "机やいすがあります。",
+        "机といすがあります。",
+        "机もいすがあります。",
+        "机をいすがあります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-057-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "本やノートがあります nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Có sách, vở và những thứ tương tự.",
+      "distractor_strategy": "ya-meaning",
+      "teaching_note": "や để danh sách mở.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Có sách, vở và những thứ tương tự.",
+        "Chỉ có sách và vở.",
+        "Sách cũng là vở.",
+        "Sách đọc vở."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-057-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "や khác と ở điểm nào?",
+      "answer_template": "や nêu ví dụ và để mở; と đóng danh sách hơn.",
+      "distractor_strategy": "ya-vs-to-recall",
+      "teaching_note": "と = A và B; や = A, B chẳng hạn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-usage-l3-005",
+      "template_id": "tpl-grammar-n5-057-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: có bàn, ghế chẳng hạn — 机 / や / いす / が / あります",
+      "answer_template": "机やいすがあります。",
+      "distractor_strategy": "ya-production",
+      "teaching_note": "や nối hai danh từ ví dụ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "机",
+        "や",
+        "いす",
+        "が",
+        "あります"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-usage-l3-006",
+      "template_id": "tpl-grammar-n5-057-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi mua bánh mì, sữa chẳng hạn.",
+      "answer_template": "パンや牛乳を買います。",
+      "distractor_strategy": "buy-open-list-production",
+      "teaching_note": "Danh sách món mua chưa cần đầy đủ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-context-l3-007",
+      "template_id": "tpl-grammar-n5-057-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn không nhớ hết đồ trong phòng, chỉ kể vài ví dụ. Câu nào hợp?",
+      "answer_template": "部屋に机やいすがあります。",
+      "distractor_strategy": "partial-room-list-context",
+      "teaching_note": "や phù hợp khi không kể hết.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "部屋に机やいすがあります。",
+        "部屋に机といすがあります。",
+        "部屋に机をいすがあります。",
+        "部屋は机です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-context-l2-008",
+      "template_id": "tpl-grammar-n5-057-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nghe như danh sách ví dụ, không phải danh sách đóng?",
+      "answer_template": "本やノートがあります。",
+      "distractor_strategy": "open-vs-closed-context",
+      "teaching_note": "や mở danh sách.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本やノートがあります。",
+        "本とノートがあります。",
+        "本もノートです。",
+        "本をノートにあります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-057-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: nếu trong túi còn bút, tẩy ngoài sách và vở, câu nào tự nhiên hơn?",
+      "answer_template": "本やノートがあります。",
+      "distractor_strategy": "open-list-analysis",
+      "teaching_note": "L4: danh sách chưa hết -> や.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "本やノートがあります。",
+        "本とノートがあります。",
+        "本はノートです。",
+        "本をノートがあります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-057-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-057-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_10:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào sai vì dùng と khi muốn nói “chẳng hạn” rõ?",
+      "answer_template": "本とノートなどがあります。",
+      "distractor_strategy": "to-nado-mismatch-analysis",
+      "teaching_note": "など hợp với danh sách mở や hơn là danh sách đóng と.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "本とノートなどがあります。",
+        "本やノートがあります。",
+        "本やノートなどがあります。",
+        "本とノートがあります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-form-l1-001",
+      "template_id": "tpl-grammar-n5-058-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền cuối danh sách: 本やノート ___ があります。",
+      "answer_template": "など",
+      "distractor_strategy": "nado-list-ending",
+      "teaching_note": "など đứng sau danh từ cuối.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "など",
+        "と",
+        "も",
+        "を"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-form-l1-002",
+      "template_id": "tpl-grammar-n5-058-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng cho “sách, vở, v.v.”",
+      "answer_template": "本やノートなど",
+      "distractor_strategy": "ya-nado-form",
+      "teaching_note": "や nối ví dụ; など đặt cuối.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本やノートなど",
+        "本とノートなど",
+        "本などやノート",
+        "本をノートなど"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-058-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "机やいすなど nghĩa là gì?",
+      "answer_template": "Bàn, ghế, v.v.; những thứ như bàn ghế.",
+      "distractor_strategy": "nado-meaning",
+      "teaching_note": "など gom các ví dụ cùng nhóm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Bàn, ghế, v.v.; những thứ như bàn ghế.",
+        "Chỉ đúng bàn và ghế.",
+        "Bàn cũng là ghế.",
+        "Bàn ở trên ghế."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-058-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "など thêm sắc thái gì sau N1やN2?",
+      "answer_template": "Nhấn “vân vân/những thứ cùng loại”.",
+      "distractor_strategy": "nado-recall",
+      "teaching_note": "など báo danh sách còn mở.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-usage-l3-005",
+      "template_id": "tpl-grammar-n5-058-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Có sách, vở, v.v. — 本 / や / ノート / など / が / あります",
+      "answer_template": "本やノートなどがあります。",
+      "distractor_strategy": "ya-nado-production",
+      "teaching_note": "など sau danh từ cuối của danh sách.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本",
+        "や",
+        "ノート",
+        "など",
+        "が",
+        "あります"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-usage-l3-006",
+      "template_id": "tpl-grammar-n5-058-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi thích phim, âm nhạc, v.v.",
+      "answer_template": "映画や音楽などが好きです。",
+      "distractor_strategy": "likes-examples-production",
+      "teaching_note": "や...など liệt kê ví dụ mở.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-context-l3-007",
+      "template_id": "tpl-grammar-n5-058-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn muốn nói trong phòng có nhiều đồ, kể vài ví dụ. Câu nào hợp nhất?",
+      "answer_template": "部屋に机やいすなどがあります。",
+      "distractor_strategy": "room-examples-context",
+      "teaching_note": "など nhấn còn đồ khác cùng loại.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "部屋に机やいすなどがあります。",
+        "部屋に机といすだけがあります。",
+        "部屋は机です。",
+        "机をいすなどあります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-context-l2-008",
+      "template_id": "tpl-grammar-n5-058-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào không khẳng định danh sách chỉ có hai món?",
+      "answer_template": "本やノートなどがあります。",
+      "distractor_strategy": "not-only-two-context",
+      "teaching_note": "や...など mở danh sách.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本やノートなどがあります。",
+        "本とノートがあります。",
+        "本はノートです。",
+        "本もノートです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-058-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: bảng liệt kê lớp học có sách, vở, bút, tẩy. Câu nào tóm tắt tốt?",
+      "answer_template": "本やノートなどがあります。",
+      "distractor_strategy": "summary-open-list-analysis",
+      "teaching_note": "L4: dùng や...など để đại diện nhóm đồ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "本やノートなどがあります。",
+        "本とノートだけがあります。",
+        "本はノートです。",
+        "本をノートがあります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-058-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-058-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_10:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng と và や...など?",
+      "answer_template": "と đóng danh sách hơn; や...など nêu ví dụ và để mở.",
+      "distractor_strategy": "to-vs-ya-nado-analysis",
+      "teaching_note": "L4: contrast trọng tâm là danh sách đóng/mở.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "と đóng danh sách hơn; や...など nêu ví dụ và để mở.",
+        "と và や...など luôn giống nhau.",
+        "など chỉ dùng cho người sống.",
+        "や bắt buộc kể hết danh sách."
+      ]
     }
   ]
 }

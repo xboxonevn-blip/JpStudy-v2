@@ -2377,3 +2377,24 @@
   validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
   --check` (line-ending warnings only). Global Directive E validator is now
   `53/80` Tier-1 grammar items passed; 27 expected failures remain.
+
+## 2026-05-22 Phase G Tier-1 items 054-058
+
+- Re-authored `grammar:n5:grammar_n5_10:001-005` with pattern-specific
+  Directive E content for `います/あります`, existence-location `に`, topic
+  location, open-list `や`, and `や...など`.
+- Added 50 hand-crafted templates: 10 per item, covering form, meaning, usage,
+  context, contrast, and Bloom L1-L4.
+- Teaching Test paraphrases:
+  - `Nがいます/あります`: choose the existence verb by animacy; `が` marks what
+    is present.
+  - `N1にN2がいます/あります`: start from the place, then say who/what is there.
+  - `N1はN2にいます/あります`: start from the known person/object, then answer
+    where it is.
+  - `N1やN2`: list examples and keep the list open, unlike closed `と`.
+  - `N1やN2など`: add an explicit “v.v./things like these” marker to the open
+    list.
+- Gates passed: item-scoped Directive E validator, Phase G template validator,
+  validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
+  --check` (line-ending warnings only). Global Directive E validator is now
+  `58/80` Tier-1 grammar items passed; 22 expected failures remain.

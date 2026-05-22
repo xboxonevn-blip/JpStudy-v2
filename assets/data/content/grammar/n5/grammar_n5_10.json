@@ -14,16 +14,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N が います / あります",
-      "meaning": "Ý nghĩa: Hai động từ này dùng để nói “có/tồn tại”.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Về cấu trúc, N が います / あります chia động từ tồn tại theo tính sống: いる/います dùng cho người và động vật, ある/あります dùng cho đồ vật, cây cối, địa điểm, sự kiện. Trợ từ が đánh dấu chính N đang hiện diện, giống đưa vật/người ấy vào khung “có mặt”.",
+      "hanVietBridge": "Có thể nối với Hán-Việt “tồn tại” và “sinh vật/vô tri”. います dành cho bên có sự sống/chuyển động, còn あります dành cho vật hoặc thứ không tự hành động.",
+      "form": "Hình thức: N が います / あります. Đặt N trước が, rồi chọn います nếu N là người/động vật, あります nếu N là vật/cây/sự việc.",
+      "meaning": "Ý nghĩa: có N, N tồn tại. Đây là câu nói sự hiện diện, chưa nhất thiết nói N đang ở đâu.",
+      "usage": "Sử dụng: dùng khi trả lời “có ai/cái gì không?”: 猫がいます, 本があります. Đừng dùng あります cho người trong mẫu chuẩn N5.",
+      "humanMoment": "Dr. Linh lưu ý: N が います / あります bắt người học quyết định N có “hơi thở” không. 犬がいます vì chó sống; 本があります vì sách chỉ nằm đó. Sai います/あります nghe như chọn sai hệ sinh thái.",
+      "crossLinks": [
+        {
+          "pattern": "N1 に N2 が います/あります",
+          "contrast": "khác ở độ đầy đủ: mẫu này chỉ nói N tồn tại; N1にN2が thêm nơi tồn tại."
+        },
+        {
+          "pattern": "N1 は N2 に います/あります",
+          "contrast": "khác ở điểm nhìn: Nが đưa N ra làm thứ hiện diện; Nは nói vị trí của một N đã biết."
+        },
+        {
+          "pattern": "N が あります / わかります",
+          "contrast": "あります giống nhau về “có”, nhưng わかります nói hiểu; います không dùng cho hiểu biết."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "existence-and-particles"
       }
     }
   },
@@ -42,16 +58,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 に N2 が います/あります",
-      "meaning": "Ý nghĩa: Dùng để nói ở địa điểm N1 có N2.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Về cấu trúc, n1 に N2 が います/あります dùng に như một cái ghim vị trí: N1 là nơi, N2 là thứ/người xuất hiện trong nơi ấy. が đánh dấu nhân vật chính được tìm thấy; います/あります vẫn chia theo sống hoặc không sống.",
+      "hanVietBridge": "Nối với Hán-Việt “vị trí” và “tồn tại”: に là mốc vị trí, が đưa vật/người tồn tại vào mốc đó. Người Việt nói “ở lớp có giáo viên”; tiếng Nhật nói “lớp に giáo viên が います”.",
+      "form": "Hình thức: N1(place) に N2 が います/あります. Địa điểm trước に; người/vật tồn tại trước が; cuối câu chọn います hoặc あります.",
+      "meaning": "Ý nghĩa: ở N1 có N2. Mẫu này mở bằng nơi chốn rồi báo cái gì/ai đang có mặt ở đó.",
+      "usage": "Sử dụng: dùng khi mô tả phòng, lớp, công viên, nhà ga: 教室に先生がいます, 机の上に本があります.",
+      "humanMoment": "Dr. Linh lưu ý: N1 に N2 が います/あります giống lia camera vào một nơi rồi chỉ ra thứ xuất hiện. 教室に先生がいます = trong lớp có giáo viên; đừng đảo thành “giáo viên là lớp”.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 に います/あります",
+          "contrast": "khác điểm nhìn: N1にN2が bắt đầu từ nơi; N1はN2に bắt đầu từ người/vật đã biết."
+        },
+        {
+          "pattern": "N (địa điểm) で V",
+          "contrast": "khác loại sự kiện: で là nơi hành động xảy ra; に trong mẫu này là nơi tồn tại."
+        },
+        {
+          "pattern": "ここ/そこ/あそこ は N です",
+          "contrast": "khác chức năng: ここはNです định danh nơi; NにNがいます nói trong nơi đó có gì."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "location-particles"
       }
     }
   },
@@ -70,16 +102,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 は N2 に います/あります",
-      "meaning": "Ý nghĩa: Dùng khi N1 đã là chủ đề và ta muốn nói N1 đang ở đâu.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Về cấu trúc, n1 は N2 に います/あります đổi điểm nhìn từ “ở đâu có gì” sang “N1 ở đâu”. は đặt N1 làm chủ đề đã biết, に ghim vị trí N2, còn います/あります nói cách N1 tồn tại theo sống hoặc không sống.",
+      "hanVietBridge": "Nối với Hán-Việt “chủ đề” và “vị trí”. は đưa chủ đề lên bàn; に gắn chủ đề ấy vào vị trí. Đây là câu “N1 thì ở N2”, không phải câu định danh “N1 là N2”.",
+      "form": "Hình thức: N1 は N2(place) に います/あります. N1 là người/vật đã biết; N2 là nơi; động từ tồn tại đứng cuối.",
+      "meaning": "Ý nghĩa: N1 đang ở N2. Với người/động vật dùng います; với vật dùng あります.",
+      "usage": "Sử dụng: dùng khi người nghe đã biết N1 và bạn trả lời vị trí: 田中さんは事務所にいます, 本は机の上にあります.",
+      "humanMoment": "Dr. Linh lưu ý: N1 は N2 に います/あります không nói “N1 là N2”. は chỉ kéo N1 lên làm đề tài; phần thật sự trả lời là N2にいます/あります: ở đâu.",
+      "crossLinks": [
+        {
+          "pattern": "N1 に N2 が います/あります",
+          "contrast": "khác điểm nhìn: N1は hỏi/nói vị trí của vật đã biết; N1にN2が mô tả trong nơi có gì."
+        },
+        {
+          "pattern": "N1 は N2 です",
+          "contrast": "khác nghĩa: NはNです định danh; NはNにいます/あります nói vị trí tồn tại."
+        },
+        {
+          "pattern": "N は どこ/どちらですか",
+          "contrast": "câu hỏi vị trí thường được trả lời bằng NはNにいます/あります."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "topic-and-location"
       }
     }
   },
@@ -98,16 +146,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 や N2",
-      "meaning": "Ý nghĩa: `や` dùng để liệt kê vài ví dụ tiêu biểu, không nhất thiết kể hết toàn bộ danh sách.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Về cấu trúc, や là trợ từ liệt kê mở: nó nối vài danh từ như ví dụ tiêu biểu, rồi để danh sách còn khoảng trống. Khác と, や không đóng cửa danh sách; người nghe hiểu còn những thứ tương tự chưa kể ra.",
+      "hanVietBridge": "Có thể nối với ý Hán-Việt “liệt kê” và “ví dụ”. や không có chữ Hán cố định trong mẫu này, nhưng chức năng giống nói “A, B chẳng hạn” hơn là “A và B hết danh sách”.",
+      "form": "Hình thức: N1 や N2. Đặt や giữa các danh từ được nêu làm ví dụ.",
+      "meaning": "Ý nghĩa: N1, N2 và những thứ tương tự. Danh sách không cần đầy đủ.",
+      "usage": "Sử dụng: dùng khi kể vài món trong phòng, vài hoạt động, vài đồ vật: 本やノートがあります. Nếu muốn danh sách đóng, dùng と.",
+      "humanMoment": "Dr. Linh lưu ý: N1 や N2 giống câu tiếng Việt “sách, vở chẳng hạn”. や cố tình để ngỏ. Nếu dùng と, người nghe có cảm giác danh sách đã đóng: chỉ A và B.",
+      "crossLinks": [
+        {
+          "pattern": "N1 と N2",
+          "contrast": "khác độ đóng: と liệt kê đầy đủ/đóng, còn や nêu ví dụ và để mở."
+        },
+        {
+          "pattern": "N1 や N2 など",
+          "contrast": "など làm cảm giác “vân vân” rõ hơn; や một mình đã là liệt kê mở."
+        },
+        {
+          "pattern": "N + も",
+          "contrast": "も thêm một mục vào cùng nhận định; や nối các danh từ thành danh sách ví dụ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   },
@@ -126,16 +190,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 や N2 など",
-      "meaning": "Ý nghĩa: `など` đặt sau danh từ cuối trong danh sách để diễn tả “vân vân/những thứ như vậy”.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Về cấu trúc, など thường viết bằng kana nhưng tương ứng ý 等 = đẳng/loại, nghĩa là “những thứ cùng hạng như vậy”. Trong N1 や N2 など, や mở danh sách ví dụ, など đặt cuối để nói rõ còn các mục cùng loại chưa nêu.",
+      "hanVietBridge": "等 là “đẳng” trong bình đẳng, đồng đẳng: cùng hạng/cùng nhóm. Vì vậy など không chỉ là “v.v.” máy móc; nó gom N1, N2 vào một nhóm ví dụ cùng loại.",
+      "form": "Hình thức: N1 や N2 など. や nối các ví dụ; など đứng sau danh từ cuối.",
+      "meaning": "Ý nghĩa: N1, N2, vân vân; những thứ như N1 và N2. Sắc thái là liệt kê ví dụ, không kể hết.",
+      "usage": "Sử dụng: hợp khi nói trong phòng có bàn, ghế, v.v.; hoặc thích phim, nhạc, v.v. Không dùng など để đóng danh sách chính xác.",
+      "humanMoment": "Dr. Linh lưu ý: N1 や N2 など là bản “mở danh sách có biển v.v.”. 本やノートなど nghĩa là sách, vở và đồ cùng loại; nếu chỉ có đúng hai món, と tự nhiên hơn や...など.",
+      "crossLinks": [
+        {
+          "pattern": "N1 や N2",
+          "contrast": "khác độ nhấn: や đã mở danh sách, còn など nói rõ “vân vân/những thứ cùng loại”."
+        },
+        {
+          "pattern": "N1 と N2",
+          "contrast": "khác độ đóng: と là A và B; や...など là A, B, v.v."
+        },
+        {
+          "pattern": "N + も",
+          "contrast": "も thêm một mục vào cùng câu; など gom các mục làm nhóm ví dụ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   }

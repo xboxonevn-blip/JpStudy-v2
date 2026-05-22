@@ -823,3 +823,9 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 - Decision: For QA-A-030 batch 006, apply five clear source-backed repairs for time, drink, shipping, and lexical labels while continuing to skip rows where the current gloss is already pedagogically richer.
 - Rationale: The goal is not to churn capitalization or shorten good explanations. Batch 006 only changes rows where the canonical wording adds clarity or removes awkward phrasing.
 - Verification: `node --test test/tool/research/vocab_app_diff_test.js test/tool/research/vocab_app_diff_apply_test.js test/tool/qa/validate_example_quality_test.js`; `node tool/qa/validate_example_quality.js`; `node tool/migration/wire_example_sentences.js --validate-only`; `flutter analyze lib/data/db/content_database.dart assets/data/content/vocab/n5/minna`; `flutter test test/data/db/content_database_lazy_seed_test.dart test/data/repositories/lesson_repository_test.dart --reporter expanded`; `git diff --check`.
+
+## DECISION-087 - Batch 007 keeps specificity where canonical improves it
+- Date: 2026-05-22
+- Decision: Apply five N5 Minna rows where the canonical gloss adds a useful register, category, or context note: `高校`, `妻`, `昨日`, `刺身`, and `市役所`.
+- Rationale: These rows improve learner-facing precision without flattening an important grammar or social contrast. Spouse self-reference remains explicit in `妻`.
+- Verification: `node --test test/tool/research/vocab_app_diff_test.js test/tool/research/vocab_app_diff_apply_test.js test/tool/qa/validate_example_quality_test.js`; `node tool/qa/validate_example_quality.js`; `node tool/migration/wire_example_sentences.js --validate-only`; `flutter analyze lib/data/db/content_database.dart assets/data/content/vocab/n5/minna`; `flutter test test/data/db/content_database_lazy_seed_test.dart test/data/repositories/lesson_repository_test.dart --reporter expanded`; `git diff --check`.

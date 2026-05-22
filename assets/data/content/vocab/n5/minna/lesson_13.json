@@ -904,6 +904,7 @@
       "order": 17,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -926,18 +927,24 @@
       },
       "sense": {
         "senseId": "n5_l13_s017",
-        "meaningVi": "văn phòng hành chính thành phố",
+        "meaningVi": "Tòa thị chính",
         "meaningEn": "city hall"
       },
       "search": {
         "termNoAccent": "市役所",
         "readingNoAccent": "しやくしょ",
-        "meaningViNoAccent": "van phong hanh chinh thanh pho",
+        "meaningViNoAccent": "Toa thi chinh",
         "hanVietNoAccent": "thi dich so"
       },
       "links": {
         "sourceVocabId": "n5_l13_v017",
-        "sourceSenseId": "n5_l13_s017"
+        "sourceSenseId": "n5_l13_s017",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thị dịch sở"

@@ -1852,6 +1852,7 @@
       "order": 34,
       "tags": [
         "food",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1873,18 +1874,24 @@
       },
       "sense": {
         "senseId": "n5_l12_s034",
-        "meaningVi": "món Sashimi",
+        "meaningVi": "Sashimi (món gỏi cá sống)",
         "meaningEn": "Sashimi (sliced raw fish)"
       },
       "search": {
         "termNoAccent": "刺身",
         "readingNoAccent": "さしみ",
-        "meaningViNoAccent": "mon sashimi",
+        "meaningViNoAccent": "Sashimi (mon goi ca song)",
         "hanVietNoAccent": "thich than"
       },
       "links": {
         "sourceVocabId": "n5_l12_v034",
-        "sourceSenseId": "n5_l12_s034"
+        "sourceSenseId": "n5_l12_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thích thân"

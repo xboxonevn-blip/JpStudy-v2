@@ -2614,3 +2614,8 @@
 - Continued skipping rows where the current app gloss is more contrast-aware than the flattened canonical summary.
 - Bumped vocab seed revision to 11 so installed DBs refresh this fifth N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 007
+- Applied 5 curated consensus repairs for Minna N5 `高校`, `妻`, `昨日`, `刺身`, and `市役所`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-007.md`.
+- Bumped vocab seed revision to 12 so installed DBs refresh this sixth N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

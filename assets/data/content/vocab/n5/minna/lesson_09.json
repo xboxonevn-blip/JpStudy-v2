@@ -1840,6 +1840,7 @@
       "order": 34,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1860,18 +1861,23 @@
       },
       "sense": {
         "senseId": "n5_l09_s034",
-        "meaningVi": "vợ (mình)",
+        "meaningVi": "Vợ (dùng khi nói về vợ mình)",
         "meaningEn": "wife (one's own)"
       },
       "search": {
         "termNoAccent": "妻",
         "readingNoAccent": "つま",
-        "meaningViNoAccent": "vo (minh)",
+        "meaningViNoAccent": "Vo (dung khi noi ve vo minh)",
         "hanVietNoAccent": "the"
       },
       "links": {
         "sourceVocabId": "n5_l09_v034",
-        "sourceSenseId": "n5_l09_s034"
+        "sourceSenseId": "n5_l09_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thê"

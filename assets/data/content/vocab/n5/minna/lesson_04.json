@@ -1364,6 +1364,7 @@
       "order": 25,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1385,18 +1386,24 @@
       },
       "sense": {
         "senseId": "n5_l04_s025",
-        "meaningVi": "hôm qua",
+        "meaningVi": "Ngày hôm qua",
         "meaningEn": "yesterday"
       },
       "search": {
         "termNoAccent": "昨日",
         "readingNoAccent": "きのう",
-        "meaningViNoAccent": "hom qua",
+        "meaningViNoAccent": "Ngay hom qua",
         "hanVietNoAccent": "tac nhat"
       },
       "links": {
         "sourceVocabId": "n5_l04_v025",
-        "sourceSenseId": "n5_l04_s025"
+        "sourceSenseId": "n5_l04_s025",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tạc nhật"

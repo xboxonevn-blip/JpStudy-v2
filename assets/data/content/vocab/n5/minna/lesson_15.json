@@ -1282,6 +1282,7 @@
       "order": 24,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1303,18 +1304,23 @@
       },
       "sense": {
         "senseId": "n5_l15_s024",
-        "meaningVi": "trường cấp 3",
+        "meaningVi": "Trường trung học phổ thông, trường cấp 3",
         "meaningEn": "high school"
       },
       "search": {
         "termNoAccent": "高校",
         "readingNoAccent": "こうこう",
-        "meaningViNoAccent": "truong cap 3",
+        "meaningViNoAccent": "Truong trung hoc pho thong, truong cap 3",
         "hanVietNoAccent": "cao hieu"
       },
       "links": {
         "sourceVocabId": "n5_l15_v024",
-        "sourceSenseId": "n5_l15_s024"
+        "sourceSenseId": "n5_l15_s024",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "cao hiệu"

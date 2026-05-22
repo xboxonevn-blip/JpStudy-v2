@@ -3195,3 +3195,9 @@
 - Corrected `差し支えない` structure and repaired weak examples around near-action gesture, absentminded action, formal permission, and formal occasion.
 - Global Directive E validator progress is now `475/1123`; next failure starts at `grammar:n1:grammar_n1_84:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-23 Phase G Directive E redo batch 080
+- Re-authored N1 rows `Verbる なり`, `～極まりない`, `Verbる にとどまらず～も`, `～極まる`, and `Verbる にはあたらない`.
+- Repaired examples around immediate succession, formal extreme judgment, scope expansion, reached extremes, and no-need reaction.
+- Global Directive E validator progress is now `480/1123`; next failure starts at `grammar:n1:grammar_n1_86:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

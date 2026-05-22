@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + なり",
       "meaning": "Ý nghĩa: Dùng để nói ngay khi làm X thì lập tức Y xảy ra",
-      "usage": "Cách dùng: Với Verbる なり, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる なり, lõi Verbる なり là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + なり thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる なり không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng Verbる なり để kể việc Y xảy ra gần như ngay sau X, thường trong văn kể chuyện: 帰るなり寝た, 入るなり怒鳴った.",
+      "etymology": "Gốc rễ: なり gắn vào khoảnh khắc X vừa thành sự thật rồi kéo thẳng sang Y. Cấu trúc này không chỉ nói “khi”, mà nhấn khoảng cách gần như bằng không giữa hai việc.",
+      "hanVietBridge": "なり không cần ép Hán-Việt; hãy nhớ như “vừa X là Y”. Verbる なり đặt người học vào đúng khoảnh khắc chuyển cảnh tức thì.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verbる なり có nhịp rất nhanh. Khác たら trung tính, なり làm người nghe thấy Y bật ra ngay khi X vừa xảy ra.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verbる なり cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verbる が早いか",
+          "contrast": "Gần Verbる なり nhưng が早いか còn nhấn tốc độ tức khắc mạnh hơn, thường trang trọng/văn viết hơn."
+        },
+        {
+          "pattern": "Verbた とたんに",
+          "contrast": "Khác Verbる なり: とたんに hay nêu kết quả bất ngờ, còn なり kể hành động kế tiếp xảy ra ngay."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: な-Adjective（語幹）+ 極まりない, い-Adjective（連用形）+ こと + 極まりない, Noun + の極まりない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh mức độ cực kỳ của một trạng thái, thường là tính chất tiêu cực hoặc cảm xúc mạnh",
-      "usage": "Cách dùng: Với ～極まりない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～極まりない, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách な-Adjective（語幹）+ 極まりない, い-Adjective（連用形）+ こと + 極まりない, Noun + の極まりない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～極まりない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn sau thân tính từ na hoặc cụm danh từ đánh giá: 危険極まりない, 失礼極まりない, 不愉快極まりない.",
+      "etymology": "Gốc rễ: 極まる là đi đến cực điểm; 極まりない phủ định “không có chỗ cực điểm nào đủ”, nên tạo nghĩa cực kỳ, quá mức, thường để phê phán.",
+      "hanVietBridge": "極 là Hán-Việt “cực”. ～極まりない = cực đến mức không có giới hạn; tiếng Việt tự nhiên là “cực kỳ/quá mức”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～極まりない là búa phê phán trong văn trang trọng. Khác とても, nó không tăng mức nhẹ nhàng mà đẩy đánh giá tới cực điểm.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～極まりない cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～極まる",
+          "contrast": "Gần ～極まりない, nhưng 極まりない có sắc thái “không giới hạn cực điểm”, còn 極まる nghe như đạt tới cực điểm."
+        },
+        {
+          "pattern": "～の極み",
+          "contrast": "Khác ～極まりない: の極み là danh từ “đỉnh cao của X”, còn 極まりない trực tiếp đánh giá tính chất."
         }
       ],
       "fallbackReference": {

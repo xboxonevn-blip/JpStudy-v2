@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun / Verb-dictionary form + にとどまらず + も/ほかのこと",
       "meaning": "Ý nghĩa: Dùng để nói phạm vi không chỉ dừng ở việc X mà còn mở rộng sang điều khác",
-      "usage": "Cách dùng: Với Verbる にとどまらず～も, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる にとどまらず～も, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Noun / Verb-dictionary form + にとどまらず + も/ほかのこと thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる にとどまらず～も không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt phạm vi ban đầu trước にとどまらず, rồi nêu phạm vi mở rộng với も/まで: 国内にとどまらず海外にも.",
+      "etymology": "Gốc rễ: とどまる là dừng lại/lưu lại; とどまらず là không dừng ở X. に đánh dấu phạm vi X, rồi câu mở rộng sang Y.",
+      "hanVietBridge": "とどまる = dừng lại. Noun/Verb にとどまらず nghĩa sát là “không dừng ở X”, nên tiếng Việt là “không chỉ X mà còn Y”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: にとどまらず luôn cần cảm giác phạm vi lan rộng. Khác だけでなく, nó nghe trang trọng hơn và có hình ảnh vượt khỏi ranh giới X.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Verbる にとどまらず～も cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun だけでなく",
+          "contrast": "Khác にとどまらず: だけでなく trung tính hơn, còn にとどまらず nhấn phạm vi không dừng ở X."
+        },
+        {
+          "pattern": "Noun に限らず",
+          "contrast": "So với に限らず phủ định giới hạn, にとどまらず thường kéo phạm vi phát triển sang Y rõ hơn."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: な-Adjective（語幹）+ 極まる, い-Adjective（連用形）+ こと + 極まる, etc",
       "meaning": "Ý nghĩa: Dùng để nói một trạng thái đạt đến mức cực điểm",
-      "usage": "Cách dùng: Với ～極まる, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～極まる, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách な-Adjective（語幹）+ 極まる, い-Adjective（連用形）+ こと + 極まる, etc thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～極まる không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng với tính từ/danh từ đánh giá mạnh, thường tiêu cực: 失礼極まる言動, 非常識極まる態度, 遺憾極まる事態.",
+      "etymology": "Gốc rễ: 極まる nghĩa là đạt tới cực điểm. Khi gắn sau từ đánh giá, nó nói tính chất ấy đã đi đến mức cuối cùng, thường có giọng phê phán.",
+      "hanVietBridge": "極 là Hán-Việt “cực”. ～極まる = đạt tới cực điểm của tính chất X, nên dịch “cực kỳ/đến cùng cực”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～極まる nghe cứng và văn viết. Khác 極まりない, 極まる như đóng dấu “đã tới cực điểm” lên một hành vi hoặc tình trạng.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～極まる cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～極まりない",
+          "contrast": "Gần ～極まる, nhưng 極まりない nhấn không có giới hạn cực điểm, còn 極まる nhấn đạt tới cực điểm."
+        },
+        {
+          "pattern": "～の極み",
+          "contrast": "Khác ～の極み: の極み là danh từ “đỉnh cao”, còn 極まる hoạt động như vị ngữ/bổ nghĩa đánh giá."
         }
       ],
       "fallbackReference": {

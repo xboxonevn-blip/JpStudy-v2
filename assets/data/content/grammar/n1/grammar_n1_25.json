@@ -434,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: 限り là “giới hạn/phạm vi tối đa”; gắn だ sau tính từ/cảm xúc để nói cảm xúc đã chạm hết biên độ. 〜限りだ vì vậy là lời bộc lộ mạnh, không phải giới hạn điều kiện.",
+      "hanVietBridge": "限 là hạn/giới hạn. 嬉しい限りだ gần “vui đến hết mức”, tức vô cùng vui.",
       "form": "Hình thức: い-Adjective + 限りだ, な-Adjective + な/である + 限りだ, Noun + の + 限りだ",
       "meaning": "Ý nghĩa: Dùng để bộc lộ cảm xúc ở mức rất mạnh, thường là vui, buồn, tiếc, vinh dự.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "usage": "Sử dụng: Chủ yếu đi với từ chỉ cảm xúc/đánh giá của người nói như 嬉しい, 残念, 光栄, 驚き. Không dùng để nói giới hạn vật lý như ここまで.",
+      "humanMoment": "Dr. Linh lưu ý: 〜限りだ là câu cảm xúc đã đầy tới mép. Nếu sau 限り còn điều kiện hành động, đó thường là mẫu 〜限り khác.",
+      "crossLinks": [
+        {
+          "pattern": "〜限り",
+          "contrast": "Khác 〜限りだ: 〜限り có thể là “chừng nào/miễn là”; 〜限りだ bộc lộ cảm xúc cực độ."
+        },
+        {
+          "pattern": "〜極まりない",
+          "contrast": "〜極まりない thường phê bình/đánh giá tiêu cực; 〜限りだ hay dùng cho cảm xúc cá nhân như vui, tiếc, vinh dự."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

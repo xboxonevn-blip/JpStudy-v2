@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + を皮切りに / を皮切りにして",
       "meaning": "Ý nghĩa: Dùng để nêu sự kiện đầu tiên mở ra một chuỗi sự kiện tiếp theo",
-      "usage": "Cách dùng: Với Noun を皮切りに / を皮切りにして, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun を皮切りに / を皮切りにして, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + を皮切りに / を皮切りにして thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun を皮切りに / を皮切りにして không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun phải là mốc mở màn đủ rõ; vế sau thường là chuỗi sự kiện lan ra, tiếp diễn hoặc mở rộng. Hợp báo chí, kế hoạch, lịch trình.",
+      "etymology": "Gốc cấu trúc: 皮切り vốn là “vết cắt đầu tiên trên da”, rồi chuyển nghĩa thành “màn mở đầu”. を đánh dấu mốc khởi phát, に/にして biến mốc ấy thành điểm bắt đầu của chuỗi sau.",
+      "hanVietBridge": "皮 là bì, 切 là thiết/cắt. を皮切りに nhớ là “nhát cắt mở đầu”, không phải một lần bắt đầu đơn lẻ.",
+      "humanMoment": "Lưu ý từ Dr. Linh: を皮切りに cần có đà phía sau. Nếu chỉ nói “bắt đầu học lúc 7 giờ”, dùng 始める; nếu từ một sự kiện kéo ra nhiều việc, dùng 皮切りに.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun を皮切りに / を皮切りにして cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜をはじめとして",
+          "contrast": "Khác を皮切りに: をはじめとして liệt kê đại diện; を皮切りに nhấn mốc đầu tiên mở ra chuỗi."
+        },
+        {
+          "pattern": "〜から始めて",
+          "contrast": "〜から始めて chỉ bắt đầu từ A; を皮切りに hàm ý các sự kiện tiếp theo nối tiếp hoặc lan rộng."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + かたがた",
       "meaning": "Ý nghĩa: Dùng khi làm một việc chính A đồng thời nhân đó làm thêm việc B",
-      "usage": "Cách dùng: Với Noun かたがた, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun かたがた, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + かたがた thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun かたがた không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng với danh từ hành động xã giao như 挨拶, お礼, お見舞い, 報告. Việc A là lý do chính; việc B được làm nhân cùng dịp.",
+      "etymology": "Gốc cấu trúc: かたがた bắt nguồn từ 方々, cảm giác “các hướng/các mục đích cùng lúc”. Trong mẫu này, một chuyến đi hoặc lời liên hệ gánh hai mục đích, thường rất trang trọng.",
+      "hanVietBridge": "方 có Hán-Việt là phương/hướng. かたがた hãy nhớ “một dịp đi theo hai hướng mục đích”, xã giao hơn がてら.",
+      "humanMoment": "Lưu ý từ Dr. Linh: かたがた không phải “vừa A vừa B” đời thường. Nó hợp câu lịch sự kiểu お礼かたがた伺う, nghe như có nghi thức.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun かたがた cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜がてら",
+          "contrast": "Khác かたがた: がてら thân mật hơn, dùng cho tiện thể sinh hoạt; かたがた trang trọng/xã giao."
+        },
+        {
+          "pattern": "〜ついでに",
+          "contrast": "〜ついでに là nhân tiện làm thêm; かたがた làm A và B cùng có trọng lượng xã giao hơn."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + ともなると",
       "meaning": "Ý nghĩa: Dùng khi nói đến giai đoạn, địa vị hoặc mức độ Noun thì tình hình thay đổi đáng kể",
-      "usage": "Cách dùng: Với Noun ともなると, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun ともなると, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + ともなると thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun ともなると không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun thường là mùa, cấp bậc, vai trò, tuổi, trình độ. Vế sau nêu thay đổi tự nhiên/đáng kể khi mốc N ấy được đạt tới.",
+      "etymology": "Gốc cấu trúc: と đánh dấu kết quả “trở thành N”, も thêm sắc thái “đến cả mức ấy”, なると mở điều kiện khi tình huống đã chuyển trạng thái. Vì vậy ともなると luôn có cảm giác ngưỡng.",
+      "hanVietBridge": "なる là “thành”; ともなると gần “một khi đã thành/đến mức N thì...”. Hãy nghe chữ “mức” trong tiếng Việt.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ともなると không chỉ là “khi”. Nó nói đến ngưỡng đổi luật chơi: N1ともなると thì cách học, áp lực, lỗi sai đều khác.",
       "crossLinks": [
         {
-          "pattern": "Verbる べくもない",
-          "contrast": "Noun ともなると cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜となると",
+          "contrast": "Gần nghĩa, nhưng ともなると nhấn mức/giai đoạn đáng kể hơn; となると có thể chỉ điều kiện chuyển tình huống."
+        },
+        {
+          "pattern": "〜ともなれば",
+          "contrast": "ともなれば thiên về giả định/ngưỡng nếu đã là N; ともなると thiên về khi thực tế đạt ngưỡng ấy."
         }
       ],
       "fallbackReference": {

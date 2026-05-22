@@ -2931,3 +2931,9 @@
 - Replaced generic の/negative filler with pattern-specific etymology, Hán-Việt bridge, Dr. Linh guidance, and contrast links.
 - Global Directive E validator progress is now `255/1123`; next failure starts at `grammar:n1:grammar_n1_25:010`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 036
+- Re-authored N1 rows `〜限りだ`, `Noun を皮切りに / を皮切りにして`, `Noun かたがた`, `Noun ともなると`, and `Noun を皮切りにして`.
+- Repaired one `ともなると` example so it teaches a noun threshold rather than a clause.
+- Global Directive E validator progress is now `260/1123`; next failure starts at `grammar:n1:grammar_n1_27:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

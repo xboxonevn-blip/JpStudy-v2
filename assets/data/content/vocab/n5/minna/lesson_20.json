@@ -1591,6 +1591,7 @@
       "order": 30,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1612,18 +1613,24 @@
       },
       "sense": {
         "senseId": "n5_l20_s030",
-        "meaningVi": "từ/ngôn ngữ",
+        "meaningVi": "Từ, tiếng",
         "meaningEn": "word / language"
       },
       "search": {
         "termNoAccent": "言葉",
         "readingNoAccent": "ことは",
-        "meaningViNoAccent": "tu/ngon ngu",
+        "meaningViNoAccent": "Tu, tieng",
         "hanVietNoAccent": "ngon diep"
       },
       "links": {
         "sourceVocabId": "n5_l20_v030",
-        "sourceSenseId": "n5_l20_s030"
+        "sourceSenseId": "n5_l20_s030",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ngôn diệp"

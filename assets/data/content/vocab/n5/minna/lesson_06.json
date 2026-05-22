@@ -1285,6 +1285,7 @@
       "order": 24,
       "tags": [
         "food",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1306,18 +1307,24 @@
       },
       "sense": {
         "senseId": "n5_l06_s024",
-        "meaningVi": "trà đen (hồng trà)",
+        "meaningVi": "Trà đen",
         "meaningEn": "black tea"
       },
       "search": {
         "termNoAccent": "紅茶",
         "readingNoAccent": "こうちゃ",
-        "meaningViNoAccent": "tra den (hong tra)",
+        "meaningViNoAccent": "Tra den",
         "hanVietNoAccent": "hong tra"
       },
       "links": {
         "sourceVocabId": "n5_l06_v024",
-        "sourceSenseId": "n5_l06_s024"
+        "sourceSenseId": "n5_l06_s024",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hồng trà"

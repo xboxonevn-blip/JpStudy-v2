@@ -2608,3 +2608,9 @@
 - Skipped family-member rows that would lose self/other nuance; those remain for a contrast-aware review pass.
 - Bumped vocab seed revision to 10 so installed DBs refresh this fourth N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 006
+- Applied 5 curated consensus repairs for Minna N5 `言葉`, `午後`, `午前`, `紅茶`, and `航空便`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-006.md`.
+- Continued skipping rows where the current app gloss is more contrast-aware than the flattened canonical summary.
+- Bumped vocab seed revision to 11 so installed DBs refresh this fifth N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

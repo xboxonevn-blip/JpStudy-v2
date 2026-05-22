@@ -956,6 +956,7 @@
       "order": 18,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -977,18 +978,23 @@
       },
       "sense": {
         "senseId": "n5_l04_s018",
-        "meaningVi": "buổi sáng (AM)",
+        "meaningVi": "Sáng (trước 12 giờ)",
         "meaningEn": "a.m. / morning"
       },
       "search": {
         "termNoAccent": "午前",
         "readingNoAccent": "こせん",
-        "meaningViNoAccent": "buoi sang (am)",
+        "meaningViNoAccent": "Sang (truoc 12 gio)",
         "hanVietNoAccent": "ngo tien"
       },
       "links": {
         "sourceVocabId": "n5_l04_v018",
-        "sourceSenseId": "n5_l04_s018"
+        "sourceSenseId": "n5_l04_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ngọ tiền"
@@ -1012,6 +1018,7 @@
       "order": 19,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1033,18 +1040,23 @@
       },
       "sense": {
         "senseId": "n5_l04_s019",
-        "meaningVi": "buổi chiều (PM)",
+        "meaningVi": "Chiều (sau 12 giờ)",
         "meaningEn": "p.m. / afternoon"
       },
       "search": {
         "termNoAccent": "午後",
         "readingNoAccent": "ここ",
-        "meaningViNoAccent": "buoi chieu (pm)",
+        "meaningViNoAccent": "Chieu (sau 12 gio)",
         "hanVietNoAccent": "ngo hau"
       },
       "links": {
         "sourceVocabId": "n5_l04_v019",
-        "sourceSenseId": "n5_l04_s019"
+        "sourceSenseId": "n5_l04_s019",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ngọ hậu"

@@ -1713,6 +1713,7 @@
       "order": 32,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1735,18 +1736,24 @@
       },
       "sense": {
         "senseId": "n5_l11_s032",
-        "meaningVi": "gửi đường hàng không",
+        "meaningVi": "Gửi bằng đường hàng không",
         "meaningEn": "airmail"
       },
       "search": {
         "termNoAccent": "航空便",
         "readingNoAccent": "こうくうひん",
-        "meaningViNoAccent": "gui duong hang khong",
+        "meaningViNoAccent": "Gui bang duong hang khong",
         "hanVietNoAccent": "hang khong tien"
       },
       "links": {
         "sourceVocabId": "n5_l11_v032",
-        "sourceSenseId": "n5_l11_s032"
+        "sourceSenseId": "n5_l11_s032",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hàng không tiện"

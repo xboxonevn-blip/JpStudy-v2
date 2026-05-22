@@ -160,8 +160,20 @@
     "directiveE": {
       "form": "Hình thức: Noun1 + をぬいた + Noun2",
       "meaning": "Ý nghĩa: Dùng để nói một danh từ đã được loại trừ khỏi tổng thể hoặc khỏi danh sách đang xét.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt thứ bị loại trước をぬいた, rồi đặt danh từ còn lại sau đó: 砂糖をぬいたコーヒー là cà phê đã bỏ đường.",
+      "etymology": "Gốc rễ: 抜く là rút, nhổ, lấy ra. Trong Noun1 + をぬいた + Noun2, を đánh dấu phần bị rút khỏi tổng thể, còn た biến kết quả loại trừ thành cụm bổ nghĩa cho Noun2.",
+      "hanVietBridge": "抜 không có Hán-Việt thông dụng trong tiếng Việt học đường, hãy nhớ bằng ý “rút/bỏ ra”: N1 をぬいた N2 = N2 đã được bỏ N1 ra.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Với Noun1 + をぬいた + Noun2, đừng dịch ぬいた như quá khứ độc lập; nó mô tả trạng thái của N2 sau khi N1 bị bỏ ra, khác Noun + をぬいて đứng trước cả mệnh đề.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + をぬいて",
+          "contrast": "Khác Noun1 + をぬいた + Noun2: をぬいて nối sang cả câu sau, còn をぬいた trực tiếp bổ nghĩa cho Noun2."
+        },
+        {
+          "pattern": "Noun 抜きで",
+          "contrast": "So với 抜きで đời thường hơn, をぬいた + Noun nhấn kết quả đã loại trừ trong danh từ đang nói."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -192,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + ぬいて",
+      "form": "Hình thức: Noun + をぬいて",
       "meaning": "Ý nghĩa: Dùng để nói ngoại trừ Noun, không tính Noun vào phạm vi đang xét.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: dùng Noun + をぬいて trước một nhận định về phần còn lại: 税金をぬいて一万円 là một vạn yên khi không tính thuế.",
+      "etymology": "Gốc rễ: 抜く là lấy ra; て nối hành động loại trừ với mệnh đề sau. Noun + をぬいて nghĩa là rút N khỏi phép tính hoặc nhóm trước khi nhận xét phần còn lại.",
+      "hanVietBridge": "Hãy nối 抜く với ý “rút ra”. Noun + をぬいて = rút N ra khỏi phạm vi đang tính, nên tiếng Việt tự nhiên là “không kể/trừ N”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun + をぬいて thường là động tác tinh thần trong phép tính phạm vi. Khác Noun1 + をぬいた + Noun2, nó chưa tạo một danh từ mới mà mở đường cho câu sau.",
+      "crossLinks": [
+        {
+          "pattern": "Noun1 + をぬいた + Noun2",
+          "contrast": "Khác Noun + をぬいて: をぬいた bổ nghĩa cho danh từ ngay sau, còn をぬいて đặt điều kiện loại trừ cho cả mệnh đề."
+        },
+        {
+          "pattern": "Noun を除いて",
+          "contrast": "So với を除いて trang trọng và trung tính hơn, をぬいて có cảm giác rút khỏi nhóm/phép tính."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -228,8 +252,20 @@
     "directiveE": {
       "form": "Hình thức: Verb-stem + ぬく",
       "meaning": "Ý nghĩa: Dùng sau thân ます để nói làm một việc đến cùng, làm trọn vẹn hoặc vượt qua đến cuối.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: gắn ぬく sau thân ます của động từ có quá trình: やりぬく, 走りぬく, 守りぬく. Sắc thái là bền bỉ đến cuối.",
+      "etymology": "Gốc rễ: 抜く vốn là xuyên qua hoặc rút ra khỏi một vật. Khi đứng sau thân động từ, ぬく chuyển thành ý “đi xuyên hết quá trình” nên nhấn hoàn tất bằng sức bền.",
+      "hanVietBridge": "Nghĩ ぬく như “xuyên suốt”. Verb-stem + ぬく không phải bỏ N ra, mà là đi xuyên từ đầu đến cuối một hành động.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb-stem + ぬく có mồ hôi trong đó. Khác Verbきる chỉ chốt “xong hết”, ぬく làm người học nghe thấy sự chịu đựng để đi đến cuối.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-stem + きる",
+          "contrast": "Khác Verb-stem + ぬく: きる nhấn hoàn tất sạch, còn ぬく nhấn vượt qua cả quá trình đến cuối."
+        },
+        {
+          "pattern": "Verb-stem + とおす",
+          "contrast": "So với とおす cũng nói làm xuyên suốt, ぬく thường nặng sắc thái nỗ lực/khó khăn hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -260,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + のいかんだ/Noun + のいかんでは",
+      "form": "Hình thức: Noun + のいかんで / のいかんだ",
       "meaning": "Ý nghĩa: Dùng để nói kết quả phụ thuộc vào nội dung, tình trạng hoặc mức độ của Noun.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: đặt một danh từ chỉ kết quả, tình hình, phản ứng hoặc mức độ trước のいかんで để nói quyết định/kết quả phía sau tùy vào nó.",
+      "etymology": "Gốc rễ: いかん viết là 如何, nghĩa là “như thế nào”. の nối danh từ với trạng thái “như thế nào” ấy; で biến trạng thái thành căn cứ quyết định cho vế sau.",
+      "hanVietBridge": "如何 là Hán-Việt “như hà”. Noun のいかんで nghĩa sát là “theo N như thế nào”, nên tiếng Việt tự nhiên là “tùy kết quả/tình hình N”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun + のいかんで nghe như văn bản hành chính: quyết định chưa chốt vì còn đợi N “ra sao”. Khác によって, のいかんで trang trọng và nặng tính điều kiện đánh giá.",
+      "crossLinks": [
+        {
+          "pattern": "Noun によって",
+          "contrast": "Khác Noun のいかんで: によって trung tính hơn, còn のいかんで trang trọng và nhấn kết quả phụ thuộc vào tình trạng N."
+        },
+        {
+          "pattern": "Noun のいかんでは",
+          "contrast": "So với のいかんでは, のいかんで nói phụ thuộc nói chung; では thường mở khả năng xảy ra một hệ quả đặc biệt."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -296,8 +344,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + のいかんでは",
       "meaning": "Ý nghĩa: Dùng để nói tùy vào Noun mà kết quả có thể thay đổi.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: dùng のいかんでは khi một kết quả đáng chú ý có thể xảy ra tùy tình hình: 審査結果のいかんでは、再申請が必要になる.",
+      "etymology": "Gốc rễ: 如何 là “như thế nào”; の gắn danh từ với trạng thái ấy, còn では biến toàn bộ cụm thành khung điều kiện, thường hàm ý có nhánh kết quả cần lưu ý.",
+      "hanVietBridge": "如何 = “như hà”. Noun のいかんでは là “nếu N ra sao đó thì...”, hợp với tiếng Việt “tùy N mà có thể...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のいかんでは thường báo trước một nhánh hậu quả. Khác のいかんにかかわらず, nó còn phụ thuộc vào N chứ không bỏ qua N.",
+      "crossLinks": [
+        {
+          "pattern": "Noun のいかんで",
+          "contrast": "Khác Noun のいかんでは: のいかんで nói phụ thuộc nói chung, còn では nhấn một khả năng/hậu quả có thể phát sinh."
+        },
+        {
+          "pattern": "Noun のいかんにかかわらず",
+          "contrast": "Đối lập với のいかんでは: にかかわらず nói bất kể N ra sao, còn では nói kết quả thay đổi tùy N."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

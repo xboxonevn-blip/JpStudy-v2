@@ -3177,3 +3177,9 @@
 - Repaired weak `ことなしに` and `ものとして` examples and broadened `に限る` structure.
 - Global Directive E validator progress is now `460/1123`; next failure starts at `grammar:n1:grammar_n1_8:004`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 077
+- Re-authored N1 rows `Noun1 + をぬいた + Noun2`, `Noun + をぬいて`, `Verb-stem + ぬく`, `Noun + のいかんで`, and `Noun + のいかんでは`.
+- Repaired malformed exclusion examples, unnatural `ぬく` completive verbs, and invalid `のいかん` dependency clauses.
+- Global Directive E validator progress is now `465/1123`; next failure starts at `grammar:n1:grammar_n1_8:009`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

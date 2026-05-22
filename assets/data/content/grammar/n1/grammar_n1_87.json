@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + にも + (reason it cant be done)",
       "meaning": "Ý nghĩa: Dùng khi muốn làm X nhưng khó hoặc không thể vì một lý do nào đó",
-      "usage": "Cách dùng: Với Verbる にも, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる にも, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + にも + (reason it cant be done) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる にも không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Verbる にも đưa hành động X ra làm “việc muốn/định làm”, rồi vế sau nêu điều kiện hoặc trở ngại: 受けるにもお金が足りない.",
+      "etymology": "Gốc rễ: に đánh dấu hướng/đích của hành động, も thêm sắc thái “ngay cả để X”. Vì vậy Verbる にも không phải “để làm X” trung tính, mà là “ngay cả muốn X thì cũng vướng điều kiện Y”.",
+      "hanVietBridge": "Mẫu Verbる にも không có kanji lõi; cầu nối là cấu trúc: に = đích/hướng, も = cũng/ngay cả. Người Việt nên đọc là “ngay cả để X”.",
+      "humanMoment": "Lưu ý từ Dr. Linh: Verbる にも thường mở một nút thắt thực tế. Sau にも hãy tìm vật cản cụ thể: tiền, thời gian, giấy tờ, sức lực hay liên lạc.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Verbる にも cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-volitional + にも + Verb-potential negative",
+          "contrast": "Verbる にも nêu điều kiện/trở ngại; ようにも...れない nhấn đã muốn/cố X nhưng năng lực hoặc hoàn cảnh khóa lại."
+        },
+        {
+          "pattern": "Verbる のに",
+          "contrast": "のに chỉ mục đích/điều kiện trung tính hơn; にも thêm sắc thái “ngay cả để làm X cũng...”."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun/Verb-dictionary form + に足る + Noun",
       "meaning": "Ý nghĩa: Dùng để nói đủ tư cách, đủ giá trị hoặc xứng đáng để được xem là Noun",
-      "usage": "Cách dùng: Với ～足る Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～足る Noun, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun/Verb-dictionary form + に足る + Noun thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～足る Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: ～に足る đứng trước danh từ đánh giá: 信頼に足る人物, 検討に足る資料. Sắc thái trang trọng, thường trong nhận xét, báo cáo, phê bình.",
+      "etymology": "Gốc rễ: 足る là dạng văn viết/cổ hơn của 足りる, nghĩa là đủ. に足る biến danh từ hoặc động từ trước nó thành tiêu chuẩn: đủ để tin, đủ để đọc, đủ để xem xét.",
+      "hanVietBridge": "足 là “túc” trong sung túc. ～に足る Noun = đủ/túc mức để thành Noun đáng tin, đáng đọc, đáng xét; không phải chỉ “thiếu/đủ” số lượng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ～に足る Noun nghe như một con dấu thẩm định. Khi thấy 信頼に足る, hãy đọc là “đủ tư cách để được tin”, không phải “niềm tin đủ”.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～足る Noun cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～足りない",
+          "contrast": "Khác ～足りない nói chưa đủ mức, ～に足る nói đạt đủ giá trị/tư cách để được đánh giá như Noun sau."
+        },
+        {
+          "pattern": "Noun に値する",
+          "contrast": "So với に値する nói đáng nhận một đánh giá/hành động, に足る thường bổ nghĩa trực tiếp cho danh từ như 人物, 資料, 作品."
         }
       ],
       "fallbackReference": {

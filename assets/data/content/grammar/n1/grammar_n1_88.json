@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-volitional + にも + Verb-potential negative",
       "meaning": "Ý nghĩa: Dùng để nói dù muốn làm X cũng không thể làm được",
-      "usage": "Cách dùng: Với Verbる にも Verb れない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる にも Verb れない, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-volitional + にも + Verb-potential negative thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる にも Verb れない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đưa cùng một động từ vào dạng ý chí rồi dạng khả năng phủ định: 帰ろうにも帰れない, 言おうにも言えない. Mẫu nhấn tình thế bị khóa.",
+      "etymology": "Gốc rễ: dạng ý chí như 帰ろう diễn tả lực muốn/định làm; にも thêm “ngay cả như vậy”; dạng khả năng phủ định 帰れない chặn lực ấy lại. Hai nửa kéo ngược nhau nên tạo cảm giác bất lực.",
+      "hanVietBridge": "Mẫu này không có kanji lõi; cầu nối là cấu trúc ý chí + khả năng phủ định. Dịch tự nhiên: “dù muốn/cố X cũng không X được”.",
+      "humanMoment": "Lưu ý từ Dr. Linh: Verb-volitional + にも + Verb-potential negative luôn có một cánh cửa đóng lại. Tìm cánh cửa đó trước khi dịch.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Verbる にも Verb れない cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verbる にも",
+          "contrast": "Khác Verbる にも thường nêu điều kiện cần để làm X, ようにも...れない nhấn bản thân hành động X bị chặn dù muốn làm."
+        },
+        {
+          "pattern": "Verb ようがない",
+          "contrast": "So với ようがない nói không có cách làm, ようにも...れない nói có ý muốn nhưng hoàn cảnh/năng lực vẫn khóa hành động."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: い-Adjective + 限りだ, な-Adjective + な/である + 限りだ, Noun + の + 限りだ",
       "meaning": "Ý nghĩa: Dùng để bộc lộ cảm xúc ở mức rất mạnh, thường là vui, buồn, tiếc, vinh dự",
-      "usage": "Cách dùng: Với ～限りだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～限りだ, lõi 限り là mảnh giữ nhịp ngữ pháp. Hãy tách い-Adjective + 限りだ, な-Adjective + な/である + 限りだ, Noun + の + 限りだ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～限りだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: ～限りだ đi sau từ cảm xúc/đánh giá của người nói: うれしい限りだ, 残念な限りだ, 光栄の限りです. Sắc thái trang trọng hơn とても.",
+      "etymology": "Gốc rễ: 限り nghĩa là ranh giới, giới hạn. Khi gắn với cảm xúc trong ～限りだ, người nói đặt cảm xúc tới tận giới hạn của nó: vui hết mức, tiếc hết mức, vinh dự hết mức.",
+      "hanVietBridge": "限 có Hán-Việt “hạn” trong giới hạn. ～限りだ = cảm xúc đi tới tận hạn/biên độ cao nhất, nên dịch là vô cùng, hết sức.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ～限りだ không chỉ tăng cường độ; nó làm câu nghe chững chạc và hơi nghi lễ. Hợp 光栄の限りです hơn là chuyện quá đời thường.",
       "crossLinks": [
         {
           "pattern": "Noun を限りに",
-          "contrast": "～限りだ cần đọc theo chức năng riêng của mẫu; Noun を限りに có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác ～限りだ nói cảm xúc đạt giới hạn, を限りに lấy Noun làm mốc kết thúc hoặc chuyển trạng thái."
+        },
+        {
+          "pattern": "Noun の極み",
+          "contrast": "So với の極み danh từ hóa cực điểm cảm xúc/trạng thái, ～限りだ là vị ngữ trực tiếp bộc lộ cảm xúc của người nói."
         }
       ],
       "fallbackReference": {

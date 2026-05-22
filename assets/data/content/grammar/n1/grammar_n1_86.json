@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + (が) 足りない, Verb-casual + ほど/だけ + (が) 足りない",
       "meaning": "Ý nghĩa: Dùng để nói không đủ về số lượng, mức độ hoặc điều kiện",
-      "usage": "Cách dùng: Với ～足りない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～足りない, lõi ほど là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + (が) 足りない, Verb-casual + ほど/だけ + (が) 足りない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～足りない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: ～足りない đặt phần thiếu làm chủ đề: 時間が足りない, 説明が足りない. Với ほど/だけ, nó nói chưa đạt mức cần để làm việc đó.",
+      "etymology": "Gốc rễ: 足りる là “đủ, đạt mức cần”, còn 足りない là phủ định trực tiếp của 足りる. Trong ～ほど足りない, ほど dựng mốc đo; câu nói năng lực, thời gian hoặc dữ kiện chưa chạm mốc ấy.",
+      "hanVietBridge": "足 có Hán-Việt “túc”, gặp trong sung túc. ～足りない = chưa đủ/túc số; khác thiếu cảm giác mơ hồ, nó chỉ rõ thứ nào chưa đạt mức.",
+      "humanMoment": "Lưu ý từ Dr. Linh: với ～足りない, đừng dịch trôi thành “không đủ” rồi bỏ qua chủ thể thiếu. Hỏi ngay: thiếu cái gì, thiếu tới mốc nào?",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～足りない cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun/Verb + に足る + Noun",
+          "contrast": "Khác ～足りない nói chưa đủ mức, に足る nói đủ giá trị/xứng đáng để được gọi hoặc xem xét."
+        },
+        {
+          "pattern": "不足している",
+          "contrast": "So với 不足している trung tính hơn, ～足りない tự nhiên hơn trong nhận xét đời thường như 時間が足りない."
         }
       ],
       "fallbackReference": {

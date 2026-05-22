@@ -121,10 +121,10 @@
     },
     {
       "grammarPoint": "Verb ないまでも",
-      "sentence": "毎日は無理にしても、週に一度くらいはジョギングを続けたい。",
-      "translation": "Dù không thể mỗi ngày, tôi vẫn muốn duy trì chạy bộ khoảng một lần mỗi tuần.",
+      "sentence": "毎日走れないまでも、週に一度くらいはジョギングを続けたい。",
+      "translation": "Dù không chạy được mỗi ngày, tôi vẫn muốn duy trì chạy bộ khoảng một lần mỗi tuần.",
       "translationEn": "Even if I cant do it every day, I want to at least keep jogging once a week",
-      "romaji": "Mainichi wa muri ni shite mo, shū ni ichido kurai wa jogingu o tsuzuketai.",
+      "romaji": "Mainichi hashirenai made mo, shū ni ichido kurai wa jogingu o tsuzuketai.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -198,10 +198,10 @@
     },
     {
       "grammarPoint": "Verb ないものでもない",
-      "sentence": "彼の言ったこと全部が間違いないものでもない。",
-      "translation": "Không phải mọi điều anh ấy nói đều hoàn toàn đúng.",
-      "translationEn": "Its not that everything he said is completely free from mistakes",
-      "romaji": "Kare no itta koto zenbu ga machigai nai mono demo nai.",
+      "sentence": "彼の意見に賛成できないものでもない。",
+      "translation": "Không phải là tôi hoàn toàn không thể đồng ý với ý kiến của anh ấy.",
+      "translationEn": "Its not that I cannot agree with his opinion at all",
+      "romaji": "Kare no iken ni sansei dekinai mono demo nai.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -230,7 +230,7 @@
       ]
     },
     {
-      "grammarPoint": "Verb の ない Noun",
+      "grammarPoint": "Noun の ない Noun",
       "sentence": "笑いのない人生は、つまらない。",
       "translation": "Cuộc đời không có tiếng cười thì nhàm chán.",
       "translationEn": "A life without laughter is boring",
@@ -241,7 +241,7 @@
       ]
     },
     {
-      "grammarPoint": "Verb の ない Noun",
+      "grammarPoint": "Noun の ない Noun",
       "sentence": "水のない場所には、人は住めない。",
       "translation": "Con người không thể sống ở nơi không có nước.",
       "translationEn": "People cannot live in a place without water",
@@ -252,7 +252,7 @@
       ]
     },
     {
-      "grammarPoint": "Verb の ない Noun",
+      "grammarPoint": "Noun の ない Noun",
       "sentence": "言葉のない世界は、想像するのが難しい。",
       "translation": "Thật khó tưởng tượng một thế giới không có ngôn từ.",
       "translationEn": "Its hard to imagine a world without words",
@@ -263,7 +263,7 @@
       ]
     },
     {
-      "grammarPoint": "Verb の ない Noun",
+      "grammarPoint": "Noun の ない Noun",
       "sentence": "愛のない結婚は、長続きしない。",
       "translation": "Hôn nhân không có tình yêu sẽ không bền lâu.",
       "translationEn": "A marriage without love will not last",

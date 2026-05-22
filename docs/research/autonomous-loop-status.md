@@ -2991,3 +2991,9 @@
 - Repaired awkward `といったら` examples in lessons 37 and 38 so the degree phrase attaches naturally.
 - Global Directive E validator progress is now `305/1123`; next failure starts at `grammar:n1:grammar_n1_39:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 046
+- Re-authored N1 rows `Verb ずじまい`, `〜ときている`, `Noun にして`, `Noun たりとも〜ない`, and `Noun たる Noun`.
+- Replaced early lesson-4 template fields with full Directive E etymology, Hán-Việt bridge, Dr. Linh note, and cross-links.
+- Global Directive E validator progress is now `310/1123`; next failure starts at `grammar:n1:grammar_n1_4:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

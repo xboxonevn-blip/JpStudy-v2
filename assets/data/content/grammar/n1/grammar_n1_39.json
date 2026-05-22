@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ない form (remove ない) + ずじまい",
       "meaning": "Ý nghĩa: Dùng khi cuối cùng đã không làm được điều định làm hoặc lẽ ra nên làm, thường kèm cảm giác tiếc nuối",
-      "usage": "Cách dùng: Với Verb ずじまい, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ずじまい, lõi Verb ずじまい là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ない form (remove ない) + ずじまい thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ずじまい không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng cho việc định làm, có cơ hội làm, hoặc lẽ ra nên làm nhưng cuối cùng không xảy ra. Thường mang cảm giác tiếc, hụt dịp, bỏ lỡ.",
+      "etymology": "Gốc cấu trúc: ず là phủ định cổ tương đương ない, じまい đến từ しまい/kết thúc. Verb ずじまい nghĩa là câu chuyện kết thúc trong trạng thái “không làm V”.",
+      "hanVietBridge": "ず = không; 仕舞い = kết thúc. 見ずじまい = kết thúc mà không được thấy.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ずじまい luôn có tiếng thở dài sau lưng. Không chỉ là “không làm”, mà là “đến cuối vẫn không làm được”.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb ずじまい cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ないまま",
+          "contrast": "Khác ないまま: ないまま chỉ trạng thái không làm tiếp tục; ずじまい nhấn kết cục cuối cùng kèm tiếc nuối."
+        },
+        {
+          "pattern": "〜そびれる",
+          "contrast": "そびれる là lỡ dịp làm; ずじまい rộng hơn, nói kết thúc cả sự việc trong trạng thái chưa làm."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual / い-Adjective / な-Adjective（＋だ） / Noun（＋だ） + ときている",
       "meaning": "Ý nghĩa: Dùng để nêu một tình trạng đã ở mức đáng chú ý hoặc nghiêm trọng, thường kèm sắc thái không hài lòng",
-      "usage": "Cách dùng: Với ～ときている, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ときている, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual / い-Adjective / な-Adjective（＋だ） / Noun（＋だ） + ときている thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ときている không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Nêu một tình trạng đã đến mức đáng chú ý, thường xấu hoặc phiền, rồi vế sau phản ứng theo tình trạng đó. Hay đi với うえに, だけに, から.",
+      "etymology": "Gốc cấu trúc: と đóng khung tình trạng được nêu, きている là “đã đi tới/đang đến mức”. ときている làm người nghe thấy hoàn cảnh đã dồn tới một mức rõ ràng nên kết luận sau dễ hiểu.",
+      "hanVietBridge": "来る = đến. 忙しいときている = tình trạng đã đến mức bận như thế.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ときている nghe như người nói đặt một sự thật khó chịu lên bàn: đã thế này rồi, nên phản ứng sau không lạ.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～ときている cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜とあって",
+          "contrast": "Khác とあって: とあって nêu hoàn cảnh đặc biệt khách quan; ときている nhấn tình trạng đã đến mức đáng nói, thường có phàn nàn."
+        },
+        {
+          "pattern": "〜うえに",
+          "contrast": "うえに chỉ cộng thêm yếu tố; ときている gói một tình trạng nổi bật rồi dẫn tới nhận xét/phản ứng."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + にして",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh “ngay cả ở mức Noun mà",
-      "usage": "Cách dùng: Với Noun にして, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun にして, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + にして thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun にして không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng với danh từ chỉ địa vị, tuổi, trình độ hoặc mốc để nêu điều bất ngờ: ngay cả ở mức N mà còn/đã như vậy.",
+      "etymology": "Gốc cấu trúc: に đặt chủ thể vào trạng thái/vị trí N, して từ する làm thành khung “ở tư cách/mức N”. Noun にして vì vậy biến N thành chuẩn so sánh cho nhận xét bất ngờ.",
+      "hanVietBridge": "にして = ở mức/tư cách N. 医者にして = ngay cả là bác sĩ/ở tư cách bác sĩ.",
+      "humanMoment": "Lưu ý từ Dr. Linh: にして đặt một chuẩn cao trước mắt. Câu sau gây bất ngờ vì người ở chuẩn N vẫn không như ta đoán.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun にして cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun ですら",
+          "contrast": "Khác ですら: ですら chỉ “ngay cả N”; にして thường đặt N như một chuẩn/địa vị rồi đánh giá điều bất ngờ."
+        },
+        {
+          "pattern": "Noun として",
+          "contrast": "として nói với tư cách N trung tính hơn; にして thường thêm sắc thái bất ngờ hoặc mức đặc biệt."
         }
       ],
       "fallbackReference": {

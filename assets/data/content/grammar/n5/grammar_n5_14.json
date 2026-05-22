@@ -14,10 +14,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて",
-      "meaning": "Ý nghĩa: Thể `て` là dạng nối rất quan trọng của động từ.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc: て là dạng nối của động từ, giống cái bản lề để móc động từ với yêu cầu, trạng thái đang diễn ra, chuỗi hành động hoặc lý do. Quy tắc đổi âm của nhóm I giữ nhịp phát âm tự nhiên trước て.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ 'liên kết'. Thể て không có một nghĩa Việt cố định; nó là cầu nối để câu sau quyết định nghĩa: 書いてください, 読んでいます.",
+      "form": "Hình thức: Vて. Nhóm I đổi âm như 書きます -> 書いて; 読みます -> 読んで. Nhóm II bỏ ます thêm て.",
+      "meaning": "Ý nghĩa: dạng nối nền tảng của động từ, dùng để tạo nhiều mẫu sau nó.",
+      "usage": "Sử dụng: học theo cụm sau て; てください là yêu cầu, ています là đang làm, còn riêng Vて có thể nối chuỗi hành động.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Vて giống một khớp nối, không phải lúc nào cũng dịch là 'và'. Nhìn phần sau Vて trước khi dịch: ください, います, hay một động từ khác.",
+      "crossLinks": [
+        {
+          "pattern": "Vて ください",
+          "contrast": "Phân biệt: Vて chỉ là dạng nối; thêm ください mới thành lời yêu cầu."
+        },
+        {
+          "pattern": "Vて います",
+          "contrast": "Khác: Vています dùng thể て cộng います để nói hành động đang diễn ra hoặc trạng thái kết quả."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -42,10 +54,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて ください",
-      "meaning": "Ý nghĩa: Dùng để yêu cầu hoặc nhờ ai đó làm gì một cách lịch sự.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc: Vて là dạng nối, ください xuất phát từ động từ 'cho/tặng xuống' trong lịch sự ngữ. Ghép lại, người nói nhờ người nghe 'làm V cho tôi/cho tình huống này'.",
+      "hanVietBridge": "Cầu Hán-Việt: hiểu như 'xin/vui lòng'. 書いてください không chỉ là 'viết và cho', mà là lời nhờ lịch sự: vui lòng viết.",
+      "form": "Hình thức: Vて + ください. Ví dụ: 書いてください, 見てください.",
+      "meaning": "Ý nghĩa: yêu cầu hoặc nhờ ai đó làm V một cách lịch sự.",
+      "usage": "Sử dụng: dùng trong lớp học, cửa hàng, chỉ dẫn; vẫn là yêu cầu nên cần chú ý quan hệ lịch sự.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: てください mềm hơn mệnh lệnh trần, nhưng vẫn là nhờ/yêu cầu. Khác với ませんか, nó không phải lời rủ cùng làm.",
+      "crossLinks": [
+        {
+          "pattern": "Vます + ませんか",
+          "contrast": "Phân biệt: ませんか là lời mời; てください là yêu cầu người nghe làm."
+        },
+        {
+          "pattern": "Vて",
+          "contrast": "Khác: Vて là nền chia động từ; thêm ください mới có chức năng nhờ vả."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -70,10 +94,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて います",
-      "meaning": "Ý nghĩa: Dùng để nói một hành động đang diễn ra tại thời điểm nói.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc: Vて nối hành động với います, động từ tồn tại cho sinh vật. Ý gốc là 'đang ở trong trạng thái sau khi làm V', nên N5 dùng nhiều nhất để nói hành động đang diễn ra.",
+      "hanVietBridge": "Cầu Hán-Việt: liên hệ 'tiến hành'. 食べています là đang ở trong quá trình ăn; 座っています có thể là đang ngồi, trạng thái sau hành động ngồi xuống.",
+      "form": "Hình thức: Vて + います. Ví dụ: 今、本を読んでいます.",
+      "meaning": "Ý nghĩa: nói hành động đang diễn ra tại thời điểm nói; một số động từ còn chỉ trạng thái kết quả.",
+      "usage": "Sử dụng: dùng với 今, いま, hoặc tình huống đang quan sát; đừng nhầm với thói quen đơn giản Vます.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Vています là 'đang ở trong V', không chỉ thêm chữ 'đang' máy móc. 読んでいます là đang đọc, khác với 読みます nói đọc theo thói quen/lịch.",
+      "crossLinks": [
+        {
+          "pattern": "Vます",
+          "contrast": "Phân biệt: Vます nói hiện tại/tương lai hoặc thói quen; Vています nhấn hành động đang diễn ra."
+        },
+        {
+          "pattern": "Vて",
+          "contrast": "Khác: Vて là dạng nối; thêm います mới thành mẫu đang làm/trạng thái."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

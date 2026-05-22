@@ -2443,3 +2443,24 @@
   validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
   --check` (line-ending warnings only). Global Directive E validator is now
   `68/80` Tier-1 grammar items passed; 12 expected failures remain.
+
+## 2026-05-22 Phase G Tier-1 items 069-073
+
+- Re-authored `grammar:n5:grammar_n5_13:003-004` and
+  `grammar:n5:grammar_n5_14:001-003` with pattern-specific Directive E content
+  for purpose `に`, invitation `ませんか`, te-form, `てください`, and
+  `ています`.
+- Added 50 hand-crafted templates: 10 per item, covering form, meaning, usage,
+  context, contrast, and Bloom L1-L4.
+- Teaching Test paraphrases:
+  - `場所へ目的に行きます`: movement plus purpose; the second `に` says why the
+    movement happens.
+  - `Vませんか`: polite invitation by negative question, softer than a request.
+  - `Vて`: hinge form; suffix after `て` decides request, progressive, sequence,
+    or other function.
+  - `Vてください`: request/help frame; not an invitation.
+  - `Vています`: ongoing action or result state; not the same as plain `Vます`.
+- Gates passed: item-scoped Directive E validator, Phase G template validator,
+  validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
+  --check` (line-ending warnings only). Global Directive E validator is now
+  `73/80` Tier-1 grammar items passed; 7 expected failures remain.

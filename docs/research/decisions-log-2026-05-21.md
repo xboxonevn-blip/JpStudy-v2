@@ -669,3 +669,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: These patterns pass only when learners distinguish question vs statement, two-choice vs many-choice, and wanting a noun vs wanting an action.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-068 - Te-form batch teaches suffix-driven function
+**Phase**: Phase G Option C Tier-1
+**Date**: 2026-05-22 12:05 (Asia/Saigon)
+**Context**: Batch 069-073 moves from desire into purpose `に`, invitations, and the first te-form family. The same Vて stem changes meaning depending on what follows.
+**Options considered**: teach Vて as a standalone translation | split te-form mechanics into a separate non-content commit | keep mechanics, request, and progressive together with contrast drills
+**Chosen**: Author `Vて`, `Vてください`, and `Vています` together, with L4 templates that make learners inspect the suffix after て.
+**Rationale**: The learner must not memorize Vて as only "and"; suffix-aware contrast prevents confusing request, invitation, and progressive states.
+**Reversible**: yes
+**Owner review**: pending
